@@ -16,18 +16,18 @@ ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 136e42463049a557098224f0ce7be19da0399ae0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7450e2e64d7054749aa4b980e1e36b7cf09ff022
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542985"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions と FetchOptions プロパティの例 (VBScript)
 > [!IMPORTANT]
 >  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
- 次のコードを設定する方法を示しています、 [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)と[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)デザイン時プロパティです。 場合は、未設定のまま**ExecuteOptions**の既定値は**adcExecSync**します。 この設定をすることを示します、 **rds.更新**メソッドが呼び出されると、現在の呼び出し元スレッドで実行される、つまり、同期的にします。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**ExecuteOptionsDesignVBS.asp**します。  
+ 次のコードを設定する方法を示しています、 [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)と[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)デザイン時プロパティです。 場合は、未設定のまま**ExecuteOptions**の既定値は**adcExecSync**します。 この設定をすることを示します、 **rds.更新**メソッドが呼び出されると、現在の呼び出し元スレッドで実行されるは、同期的にします。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**ExecuteOptionsDesignVBS.asp**します。  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  

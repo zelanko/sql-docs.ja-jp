@@ -16,12 +16,12 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ece0ae1eee2ed1cc944504af87a74609cba0fe
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350446"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538158"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory サービス
 Active Directory サービス インターフェイス (ADSI) プロバイダーが ADSI による異種ディレクトリ サービスに接続するための ADO を許可します。 これにより、ADO アプリケーションは Microsoft Windows NT 4.0 および Microsoft Windows 2000 directory services のすべての LDAP 準拠ディレクトリ サービスと Novell Directory Services だけでなくに読み取り専用アクセスできるようにします。 ADO アプリケーションがシームレスにアクセスできる、新しいプロバイダー アクセス権を付与する別のディレクトリがある場合、ADSI はプロバイダー モデルに基づきます。 ADSI プロバイダーは、フリー スレッドし、Unicode に対応します。  
@@ -65,7 +65,7 @@ ADSDSOObject
 |*Root*|示す、 **ADsPath**オブジェクトを使用する (つまり、検索のルート) の検索を開始します。|  
 |*Assert*|RFC 1960 形式で検索フィルターを示します。|  
 |*Attributes*|返される属性のコンマ区切りの一覧を示します。|  
-|*Scope*|任意。 **文字列**検索のスコープを指定します 次のいずれかになります。<br /><br /> - Base -は、基本オブジェクト (検索のルート) のみを検索します。<br />- OneLevel-は、1 レベルのみを検索します<br />- Subtree -は、サブツリー全体を検索します。|  
+|*Scope*|任意。 **文字列**検索のスコープを指定します 次のいずれかになります。<br /><br /> ベースでは、ベース オブジェクト (検索のルート) のみを検索します。<br />-OneLevel では、1 レベルのみを検索します。<br />サブツリーには、サブツリー全体を検索します。|  
   
  以下に例を示します。  
   

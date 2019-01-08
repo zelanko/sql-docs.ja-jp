@@ -16,12 +16,12 @@ ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 641ec96632e2976ea56f1607b2076d4d01734523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac7a8f813aa884cc4267c73fbcedc88eecfb0a36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166360"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542301"
 ---
 # <a name="choose-and-map-model-testing-data"></a>モデルのテスト データの選択およびマップ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で精度チャートを作成するには、モデルのテストに使用されるデータを選択し、データをモデルにマップする必要があります。  
@@ -76,7 +76,7 @@ ms.locfileid: "48166360"
   
 3.  **[入力の選択]** タブの **[精度チャートに使用するデータセットの選択]** で、 **[別のデータセットを指定する]** を選択します。  
   
-4.  参照ボタン ( **[...]** ) をクリックしてダイアログ ボックスを開き、外部データ セットの定義を作成します。  
+4.  [参照] ボタンをクリックします **([...])。** をダイアログ ボックスを開き、外部データ セットの定義を作成します。  
   
 5.  **[マイニング構造の選択]** ダイアログ ボックスで、操作するモデルを含んでいるマイニング構造を選択し、 **[OK]** をクリックします。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48166360"
   
 4.  **[精度チャートに使用するデータセットの選択]** で、 **[別のデータセットを指定する]** を選択します。  
   
-5.  参照ボタン ( **[...]** ) をクリックしてダイアログ ボックスを開き、外部データ ソースの定義を作成します。  
+5.  [参照] ボタンをクリックします **([...])。** をダイアログ ボックスを開き、外部データ ソースの定義を作成します。  
   
 6.  **[列マッピングの指定]** ダイアログ ボックスで、 **[ケース テーブルの選択]** をクリックします。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48166360"
   
      **[列マッピングの指定]** ダイアログ ボックスに、新しい列マッピングが表示されます。 2 つの列を結ぶ線を選択して &lt;localizedText&gt;Del&lt;/localizedText&gt; キーを押すと、マッピングを削除できます。 **[マイニング構造]** テーブルで列を選択し、 **[入力テーブルの選択]** テーブルの対応する列にドラッグすると、新しい接続を作成できます。  
   
-## <a name="see-also"></a>関連項目  
- [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+## <a name="see-also"></a>参照  
+ [テスト、検証タスク、および操作方法 &#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

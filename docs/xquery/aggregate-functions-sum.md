@@ -16,12 +16,12 @@ ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8806b2c00a839e11d5d3ff7be1d4c3cbbdcc059c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f626eb9f5c1b654428175dc456910b183fe0c3c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662214"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420503"
 ---
 # <a name="aggregate-functions---sum"></a>集計関数 - sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ProductModelID Name                 TotalLaborHours
   
 -   基本データ型の境界を超えて複数の型が混在するシーケンスはサポートされません。  
   
--   sum((xs:double(“INF”), xs:double(“-INF”))) ではドメイン エラーが発生します。  
+-   Sum((xs:double("INF") xs:double("-INF"))) では、ドメイン エラーが発生します。  
   
 ## <a name="see-also"></a>参照  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  

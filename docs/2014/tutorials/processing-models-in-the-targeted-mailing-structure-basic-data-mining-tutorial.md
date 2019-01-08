@@ -11,12 +11,12 @@ ms.assetid: 9d8233bb-117e-4563-9302-8a5a8ad1fae2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06e8e220f5ab51a3dbc2ca4248023918879956d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba5f339987c42c79c3d982d64d37879a7c3e2d6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101350"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402577"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>絞り込みメール配信構造でのモデルの処理 (基本的なデータ マイニング チュートリアル)
   作成したマイニング モデルを参照したり操作したりする前に、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを配置し、マイニング構造とマイニング モデルを処理する必要があります。  
@@ -47,7 +47,7 @@ ms.locfileid: "48101350"
 4.  入力`12`の**HoldoutSeed**します。  
   
 ## <a name="deploying-and-processing-the-models"></a>モデルの配置と処理  
- データ マイニング デザイナーで、モデルまたは基になるデータに対して加えた変更の範囲に応じて、どのオブジェクトを処理するかを決定できます:  
+ データ マイニング デザイナーでは、どのオブジェクトをモデルまたは基になるデータに加えた変更のスコープに応じて、処理を決定できます。  
   
  ここでは、既存の設定に変更を加えるのではなく、新しいデータと新しいモデルを使用するため、構造とすべてのモデルを同時に処理します。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48101350"
  [ターゲット メーリングの構造に新しいモデルの追加&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 4: 絞り込みモデルの検証&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
+ [レッスン 4:メーリング対象モデルの検証&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [処理の要件および注意事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [処理の要件および注意事項 &#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

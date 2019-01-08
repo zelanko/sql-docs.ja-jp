@@ -13,12 +13,12 @@ ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7686f2db3e033fa6d38e0f7a7f9616d93c11a1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048782"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528943"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>ディメンション デザイナー (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーを使用すると、ディメンションに含まれるデータを参照したり、既存のディメンションの属性、階層、レベル、属性リレーションシップ、および翻訳などの各種プロパティを変更したりできます。  
@@ -29,14 +29,14 @@ ms.locfileid: "48048782"
   
     -   ディメンションを右クリックし、 **[開く]** または **[ビュー デザイナー]** をクリックします。  
   
-         — または —  
+         - または -  
   
     -   ディメンションをダブルクリックします。  
   
-## <a name="pages"></a>ページ  
+## <a name="pages"></a>ページ数  
  ディメンション デザイナーには、次のページがあります。  
   
- [ディメンションの構造体](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  
+ [[ディメンション構造]](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  
  このページは、ディメンションの属性、階層、およびレベルを表示および変更するために使用します。  
   
  [属性リレーションシップ](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  

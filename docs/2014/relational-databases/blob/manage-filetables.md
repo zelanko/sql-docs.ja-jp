@@ -13,17 +13,17 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76a4c29d0fba58eb941bf26781b052966a0bd5b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfb5fa710122df0e467b27a99c08d75cc2897adf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186742"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416723"
 ---
 # <a name="manage-filetables"></a>FileTable の管理
   FileTable を管理するための一般的な管理タスクについて説明します。  
   
-##  <a name="HowToEnumerate"></a> 方法: FileTable と関連オブジェクトの一覧を取得する  
+##  <a name="HowToEnumerate"></a> 操作方法：FileTable と関連オブジェクトの一覧を取得する  
  FileTable の一覧を取得するには、次のいずれかのカタログ ビューに対してクエリを実行します。  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -79,7 +79,7 @@ GO
   
 -   FILESTREAM がインスタンス レベルで無効化された場合、そのインスタンスのデータベース レベルのディレクトリはすべて表示されません。  
   
-###  <a name="HowToDisable"></a> 方法: データベース レベルで非トランザクション アクセスを無効化および再有効化する  
+###  <a name="HowToDisable"></a> 操作方法：データベース レベルで非トランザクション アクセスを無効化および再有効化する  
  詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)」を参照してください。  
   
  **完全な非トランザクション アクセスを無効化するには**  
@@ -106,7 +106,7 @@ ALTER DATABASE database_name
 GO  
 ```  
   
-###  <a name="visible"></a> 方法: データベースの FileTable が必ず表示されるようにする  
+###  <a name="visible"></a> 操作方法：データベースの Filetable の可視性を確認します。  
  以下のすべての条件が満たされる場合、データベース レベルのディレクトリとその下の FileTable ディレクトリは表示状態になります。  
   
 1.  インスタンス レベルで FILESTREAM が有効になっている。  
@@ -138,7 +138,7 @@ GO
   
 -   FileTable ディレクトリと、それに含まれているファイルおよびディレクトリは、ファイル システムに表示され、ファイル I/O アクセスに使用できるようになります。  
   
-###  <a name="HowToEnableNS"></a> 方法: テーブル レベルで FileTable 名前空間を無効化および再有効化する  
+###  <a name="HowToEnableNS"></a> 操作方法：テーブル レベルで FileTable 名前空間を無効化および再有効化する  
  **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** オプションを指定して ALTER TABLE ステートメントを呼び出します。  
   
  **FileTable 名前空間を無効にするには**  
@@ -161,7 +161,7 @@ GO
 > [!WARNING]  
 >  開いているファイル ハンドルを終了すると、保存されていないデータをユーザーが失う可能性があります。 この動作は、ファイル システム自体の動作と一致しています。  
   
-###  <a name="HowToListOpen"></a> 方法: FileTable に関連付けられた開いているファイル ハンドルの一覧を取得する  
+###  <a name="HowToListOpen"></a> 操作方法：FileTable に関連付けられている開いているファイル ハンドルの一覧を取得します。  
  カタログ ビュー [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) に対してクエリを実行します。  
   
 ```tsql  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> 方法: FileTable に関連付けられた開いているファイル ハンドルを終了する  
+###  <a name="HowToKill"></a> 操作方法：FileTable に関連付けられた開いているファイル ハンドルを終了する  
  データベースまたは FileTable のすべての開いているファイル ハンドルを終了するか、特定のハンドルを終了するための適切な引数を指定して、[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles) ストアド プロシージャを呼び出します。  
   
 ```  
@@ -188,7 +188,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> 方法: FileTable によって保持されているロックを識別する  
+###  <a name="HowToIdentifyLocks"></a> 操作方法：ロックを識別 Filetable によって保持されています。  
  FileTable によって取得されるほとんどのロックは、アプリケーションによって開かれたファイルに対応します。  
   
  **開いているファイルおよび関連付けられているロックを識別するには**  

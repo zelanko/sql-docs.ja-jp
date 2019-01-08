@@ -12,12 +12,12 @@ ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 310ab71162dedf64e12ae28c8ffedf3465f1fc14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 506f074a8693e54bdc51882ab08b19e9ea3e1994
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130902"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517871"
 ---
 # <a name="connect-to-windows-azure-storage-restore"></a>Windows Azure ストレージへの接続 (復元)
   このダイアログ ボックスを使用すると、Windows Azure ストレージ アカウントのファイル ストレージを取得するために、Windows Azure ストレージ アカウント情報への接続を指定できます。 必要な情報を指定した後、 **[接続]** をクリックして Windows Azure ストレージへの接続を確立します。  

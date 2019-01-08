@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6b838766e7a6d6bfb9a68bb832cd7a8feb3c9960
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: eec9e3e211c68b7f56fe6829a70064317b96e646
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696620"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519575"
 ---
 # <a name="determine-polling-frequency"></a>ポーリング間隔を決定します。
 この記事では、Analytics Platform System appliance のアラートのポーリング頻度を決定する方法について説明します。  
@@ -22,13 +22,13 @@ ms.locfileid: "51696620"
 ## <a name="to-determine-the-polling-frequency"></a>ポーリングの頻度を決定するには  
 PDW は現在サポートしていないためプロアクティブな通知アラートが発生したときに、監視ソリューションを継続的に、アプライアンスの Dll をポーリングする必要があります。  内部的には、PDW では、さまざまな間隔で、コンポーネントをポーリングします。  
   
--   クラスター-60 秒  
+-   クラスター - 60 秒  
   
--   ハートビート-60 秒  
+-   ハートビート - 60 秒  
   
--   他のすべてコンポーネント – 5 分  
+-   すべての他のコンポーネント - 5 分  
   
--   3 秒のパフォーマンス カウンター  
+-   パフォーマンス カウンター - 3 秒  
   
 System Center によっても使用される一般的なアラートをポーリングする間隔は**15 分ごと**します。  当然ながら、多くの場合より小さいかを照会することが 6 時間未満ごとにポーリングをお勧めできません。  
   

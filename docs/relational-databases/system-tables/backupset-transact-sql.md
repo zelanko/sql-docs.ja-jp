@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5bf5ce20678845111a1f410739674c50c7bb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596161"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402857"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47596161"
 |**last_media_number**|**smallint**|バックアップ セットの最終メディアのメディア番号。 NULL にすることができます。|  
 |**catalog_family_number**|**tinyint**|バックアップ セット ディレクトリの先頭を含むメディアのファミリ番号。 NULL にすることができます。|  
 |**catalog_media_number**|**smallint**|バックアップ セット ディレクトリの先頭を含むメディアのメディア番号。 NULL にすることができます。|  
-|**位置**|**int**|復元操作で、該当するバックアップ セットとファイルを検出するために使用されるバックアップ セットの位置。 NULL にすることができます。 詳細については、ファイルを参照して[バックアップ&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)します。|  
+|**position**|**int**|復元操作で、該当するバックアップ セットとファイルを検出するために使用されるバックアップ セットの位置。 NULL にすることができます。 詳細については、ファイルを参照して[バックアップ&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)します。|  
 |**expiration_date**|**datetime**|バックアップ セットの期限が切れる日付と時刻。 NULL にすることができます。|  
 |**software_vendor_id**|**int**|バックアップ メディア ヘッダーを記述するソフトウェア ベンダーの識別番号。 NULL にすることができます。|  
 |**name**|**nvarchar(128)**|バックアップ セットの名前。 NULL にすることができます。|  
@@ -74,7 +74,7 @@ ms.locfileid: "47596161"
 |**database_name**|**nvarchar(128)**|バックアップ操作に関係するデータベース名。 NULL にすることができます。|  
 |**server_name**|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップ操作を実行しているサーバー名。 NULL にすることができます。|  
 |**machine_name**|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているコンピューターの名前。 NULL にすることができます。|  
-|**flags**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、**フラグ**列は非推奨し、次のビット列で置き換えられます。<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> NULL にすることができます。<br /><br /> 以前のバージョンからのバックアップ セットで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ビット フラグを設定します。<br />1 = バックアップには最小限のログ データが含まれている。 <br />2 = WITH SNAPSHOT が使用された。 <br />4 = データベースがバックアップ時に読み取り専用だった。<br />8 = バックアップ時、データベースはシングル ユーザー モードであった。|  
+|**flags**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、**フラグ**列は非推奨し、次のビット列で置き換えられます。<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> NULL にすることができます。<br /><br /> 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成されたバックアップ セットでは、フラグ ビットは次のようになります。<br />1 = バックアップには最小限のログ データが含まれている。 <br />2 = WITH SNAPSHOT が使用された。 <br />4 = データベースがバックアップ時に読み取り専用だった。<br />8 = バックアップ時、データベースはシングル ユーザー モードであった。|  
 |**unicode_locale**|**int**|Unicode ロケール。 NULL にすることができます。|  
 |**unicode_compare_style**|**int**|Unicode の比較形式。 NULL にすることができます。|  
 |**collation_name**|**nvarchar(128)**|照合順序名。 NULL にすることができます。|  
@@ -100,7 +100,7 @@ ms.locfileid: "47596161"
 |**compressed_backup_size**|**Numeric(20,0)**|ディスクに格納されたバックアップの総バイト数。<br /><br /> 圧縮比率を計算するには使用**backup_size**と**backup_size**します。<br /><br /> 中に、 **msdb**アップグレードすると、この値は NULL に設定するされます。 これは圧縮されていないバックアップを示します。|  
 |**key_algorithm**|**nvarchar(32)**|バックアップの暗号化に使用される暗号化アルゴリズム。 値が NO_Encryption である場合、バックアップが暗号化されていないことを示します。|  
 |**encryptor_thumbprint**|**varbinary(20)**|データベースに保存されている証明書や非対称キーを検索するために使用される暗号化機能の拇印。 バックアップが暗号化されていない場合、この値は NULL です。|  
-|**encryptor_type**|**nvarchar(32)**|使用される暗号化機能の種類 (証明書または非対称キー)。 . バックアップが暗号化されていない場合、この値は NULL です。|  
+|**encryptor_type**|**nvarchar(32)**|使用される暗号化の種類:証明書キーまたは非対称キー。 . バックアップが暗号化されていない場合、この値は NULL です。|  
   
 ## <a name="remarks"></a>コメント  
  RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY の列に設定します、 **backupmediaset**メディア セット ヘッダーから適切な値を持つテーブル。  

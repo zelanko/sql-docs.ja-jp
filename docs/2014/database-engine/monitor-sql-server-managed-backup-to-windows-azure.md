@@ -10,12 +10,12 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3406468961dcd5817fb88b5a30098177ec6ac67
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7b7b6cc8127b339a45a5f651af6db4d0b595b80
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073242"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529956"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>Windows Azure への SQL Server マネージド バックアップの監視
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、バックアップ プロセス中に問題やエラーを特定し、可能な限り修正措置によって解消するための方法が組み込まれています。  ただし、ユーザーの介入が必要になる場合もあります。 このトピックでは、バックアップの全体的な正常性状態を判定し、解決する必要があるエラーを特定するために使用できるツールについて説明します。  
@@ -125,15 +125,15 @@ GO
   
  **通知のアーキテクチャ:**  
   
--   **ポリシー ベースの管理:** バックアップの正常性を監視する 2 つのポリシーが設定されます: **Smart Admin システム正常性ポリシー**、および**Smart Admin ユーザー操作正常性ポリシー**します。 Smart Admin システム正常性ポリシーは、重大なエラー (SQL 資格情報が存在しない、無効な SQL 資格情報、接続エラーなど) を評価して、システムの正常性を報告します。 これらは、通常、根本的な問題を修正するために手動による操作を必要とします。 Smart Admin ユーザー操作正常性ポリシーは、バックアップの破損などの警告を評価します。  これらは、操作を必要とせず、単なる警告だけの場合もあります。 このような問題は [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] エージェントによって自動的に対処されることが予想されます。  
+-   **ポリシー ベースの管理。** バックアップの正常性を監視する 2 つのポリシーが設定されます。**Smart Admin システム正常性ポリシー**、および**Smart Admin ユーザー操作ヘルス ポリシー**します。 Smart Admin システム正常性ポリシーは、重大なエラー (SQL 資格情報が存在しない、無効な SQL 資格情報、接続エラーなど) を評価して、システムの正常性を報告します。 これらは、通常、根本的な問題を修正するために手動による操作を必要とします。 Smart Admin ユーザー操作正常性ポリシーは、バックアップの破損などの警告を評価します。  これらは、操作を必要とせず、単なる警告だけの場合もあります。 このような問題は [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] エージェントによって自動的に対処されることが予想されます。  
   
--   **SQL Server エージェント**ジョブ: 次の 3 つのジョブ ステップが含まれる SQL Server エージェント ジョブを使用して、通知を実行します。 最初のジョブ ステップでは、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]がデータベースまたはインスタンスに対して構成されているかどうかが検出されます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が有効であり構成済みであることが検出されると、2 番目のステップが実行されます。これにより、SQL Server ポリシー ベースの管理ポリシーを評価して正常性状態を判断する PowerShell コマンドレットが実行されます。 エラーまたは警告が検出されると失敗になり、これによって 3 番目の手順が開始されます。3 番目の手順では、エラー/警告レポートが含まれた電子メール通知が送信されます。  ただし、この SQL Server エージェント ジョブは、既定では有効になっていません。 電子メール通知ジョブを有効にするには使用、 **smart_admin.sp_set_backup_parameter**システム ストアド プロシージャ。  手順については、次で詳しく説明します。  
+-   **SQL Server エージェント**ジョブ。通知は、次の 3 つのジョブ ステップが含まれる SQL Server エージェント ジョブを使用して実行されます。 最初のジョブ ステップでは、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]がデータベースまたはインスタンスに対して構成されているかどうかが検出されます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が有効であり構成済みであることが検出されると、2 番目のステップが実行されます。これにより、SQL Server ポリシー ベースの管理ポリシーを評価して正常性状態を判断する PowerShell コマンドレットが実行されます。 エラーまたは警告が検出されると、しは失敗し、3 番目の手順をトリガーします。3 番目の手順は、エラー/警告レポートを電子メールで通知を送信します。  ただし、この SQL Server エージェント ジョブは、既定では有効になっていません。 電子メール通知ジョブを有効にするには使用、 **smart_admin.sp_set_backup_parameter**システム ストアド プロシージャ。  手順については、次で詳しく説明します。  
   
 ##### <a name="enabling-email-notification"></a>電子メール通知を有効にする  
   
 1.  データベース メールが構成されていない場合は、記載された手順を使用して[データベース メールの構成](../relational-databases/database-mail/configure-database-mail.md)します。  
   
-2.  SQL Server 警告システム用のメール システムとして設定データベース: を右クリックして**SQL Server エージェント**を選択します**警告システム**、確認、**メール プロファイルを有効にする**ボックス、を選択します**データベース メール**として、**メール システム**、以前に作成したメール プロファイルを選択します。  
+2.  SQL Server 警告システムのメール システムとしてデータベースを設定します。右クリックして**SQL Server エージェント**を選択します**警告システム**、確認、**メール プロファイルを有効にする**ボックス、選択**データベース メール**として**メール システム**、以前に作成したメール プロファイルを選択します。  
   
 3.  クエリ ウィンドウで次のクエリを実行し、通知の送信先となる電子メール アドレスを指定します。  
   
@@ -199,7 +199,7 @@ EXEC msdb.smart_admin.sp_set_parameter
 ### <a name="using-powershell-to-setup-custom-health-monitoring"></a>PowerShell を使用してカスタムの正常性状態の監視を設定する  
  **Test-sqlsmartadmin**コマンドレットは、カスタムの正常性の監視を作成するために使用できます。 たとえば、前のセクションで説明した通知オプションは、インスタンス レベルで構成できます。  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を使用するよう構成された SQL Server インスタンスが複数ある場合は、PowerShell コマンドレットを使用して、すべてのインスタンスのバックアップの状態と正常性を収集するためのスクリプトを作成できます。  
   
- **Test-sqlsmartadmin**コマンドレットは、エラーと警告の SQL Server ポリシー ベースの管理ポリシーによって返されるを評価し、ロール アップ状態が報告されます。  既定では、このコマンドレットはシステム ポリシーを使用します。 カスタム ポリシーを含めるには、`–AllowUserPolicies` パラメーターを使用します。  
+ **Test-sqlsmartadmin**コマンドレットは、エラーと警告の SQL Server ポリシー ベースの管理ポリシーによって返されるを評価し、ロール アップ状態が報告されます。  既定では、このコマンドレットはシステム ポリシーを使用します。 カスタム ポリシーを含めるには、`-AllowUserPolicies` パラメーターを使用します。  
   
  システム ポリシーと作成されたユーザー ポリシーに基づいてエラーと警告のレポートを返す PowerShell のサンプル スクリプトを次に示します。  
   
@@ -250,16 +250,16 @@ smart_backup_files;
   
  返される各種状態の詳細を以下に示します。  
   
--   **利用可能 - a:** これは通常のバックアップ ファイルです。 バックアップが完了し、Windows Azure ストレージで利用できることが確認されました。  
+-   **使用可能な - a:** これは、通常のバックアップ ファイルです。 バックアップが完了し、Windows Azure ストレージで利用できることが確認されました。  
   
--   **コピーが進行中 – b:** この状態は、可用性グループ データベース専用にします。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、バックアップ ログ チェーンの中断を検出すると、バックアップ チェーンの中断の原因になったと考えられるバックアップの特定をまず試みます。 バックアップ ファイルが見つかると、Windows Azure ストレージにファイルがコピーされます。 コピー プロセスの実行中にこの状態が表示されます。  
+-   **進行中のコピー-b:** この状態では、可用性グループ データベース専用にします。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、バックアップ ログ チェーンの中断を検出すると、バックアップ チェーンの中断の原因になったと考えられるバックアップの特定をまず試みます。 バックアップ ファイルが見つかると、Windows Azure ストレージにファイルがコピーされます。 コピー プロセスの実行中にこの状態が表示されます。  
   
--   **失敗 – f: をコピー**と同様に Copy In Progress、これは、固有の状態の可用性グループのデータベース。 コピー プロセスが失敗した場合、状態は F としてマークされます。  
+-   **コピーに失敗しました - f:** コピーの進行状況と同様に、これは t の特定の可用性グループのデータベースをします。 コピー プロセスが失敗した場合、状態は F としてマークされます。  
   
--   **破損 – c:** 場合[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が複数回試行した後も復元 HEADER_ONLY コマンドを実行することによって記憶域にバックアップ ファイルを確認することができません、このファイルとしてマーク破損しています。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、破損したファイルによってバックアップ チェーンが中断されないように、バックアップをスケジュールします。  
+-   **破損しています - c:** 場合[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が複数回試行した後も復元 HEADER_ONLY コマンドを実行することによって記憶域にバックアップ ファイルを確認することができません、このファイルとしてマーク破損しています。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、破損したファイルによってバックアップ チェーンが中断されないように、バックアップをスケジュールします。  
   
--   **削除する – d:** Windows Azure ストレージに対応するファイルが見つかりません。 ファイルの削除によってバックアップ チェーンが中断された場合、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]はバックアップをスケジュールします。  
+-   **削除 - d:** Windows Azure ストレージに対応するファイルが見つかりません。 ファイルの削除によってバックアップ チェーンが中断された場合、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]はバックアップをスケジュールします。  
   
--   **不明-u:** をこの状態が示される[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]がまだできていないファイルの存在と Windows Azure ストレージにそのプロパティを確認します。 プロセスが次回実行されたときに (約 15 分間隔)、この状態が更新されます。  
+-   **[不明]-u:** この状態が示されるを[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]がまだできていないファイルの存在と Windows Azure ストレージにそのプロパティを確認します。 プロセスが次回実行されたときに (約 15 分間隔)、この状態が更新されます。  
   
   

@@ -18,12 +18,12 @@ ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61097f1cee2616e18199edcd662db2b7344b04c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7410371f7d96f9770536a129de3a916b5f297a74
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596440"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517026"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ sp_cursoropen cursor OUTPUT, stmt
  FETCH 操作を実行中です。  
   
  A  
- このカーソルがによって割り当て解除されて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は使用できません。  
+ このカーソルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当て解除されており、使用できません。  
   
  エラーが発生した場合は、一貫性のない値が返される可能性があるため、値の正確さは保証されません。  
   
@@ -146,7 +146,7 @@ sp_cursoropen cursor OUTPUT, stmt
  高速順方向カーソルが自動的に閉じられました。  
   
 > [!NOTE]  
->  sp_cursoropen プロシージャの実行が成功すると、RPC の戻りパラメーターと TDS の列形式の情報 (0xa0 メッセージと 0xa1 メッセージ) を含む結果セットが送信されます。 失敗した場合は、1 つ以上の TDS エラー メッセージが送信されます。 いずれの場合も、行のデータは返されません、*完了*メッセージ数が 0 になります。 バージョンを使用している場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0 よりも前 0xa0 と 0xa1 (SELECT ステートメントの標準) が返されます 0xa5 および 0xa4 のトークン ストリームと共にします。 使用する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0 では、0x81、0xa5 および 0xa4 のトークン ストリームと共に (SELECT ステートメントの標準) が返されます。  
+>  sp_cursoropen プロシージャの実行が成功すると、RPC の戻りパラメーターと TDS の列形式の情報 (0xa0 メッセージと 0xa1 メッセージ) を含む結果セットが送信されます。 失敗した場合は、1 つ以上の TDS エラー メッセージが送信されます。 いずれの場合も、行のデータは返されません、*完了*メッセージ数が 0 になります。 7.0 より前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用している場合は、0xa0 と 0xa1 (SELECT ステートメントの標準) が 0xa5 および 0xa4 のトークン ストリームと共に返されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 を使用している場合は、0x81 (SELECT ステートメントの標準) が 0xa5 および 0xa4 のトークン ストリームと共に返されます。  
   
 ## <a name="remarks"></a>コメント  
   
@@ -157,7 +157,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
 -   ALLOW_DIRECT が指定されていない場合、いずれかを[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT ステートメントまたは EXECUTE ステートメントを呼び出す単一の SELECT ステートメントを含むストアド プロシージャを使用する必要があります。 さらに、SELECT ステートメントがカーソル; として修飾する必要があります。つまり、SELECT INTO または FOR BROWSE キーワードを含めることはできません。  
   
--   これが原因で、1 つまたは複数 ALLOW_DIRECT が指定されている場合[!INCLUDE[tsql](../../includes/tsql-md.md)]を含む複数のステートメントで他のストアド プロシージャを実行するステートメント。 SELECT 以外のステートメントや、キーワード SELECT INTO または FOR BROWSE を含む SELECT ステートメントは、単純に実行され、カーソルは作成されません。 複数のステートメントのバッチに含まれている SELECT ステートメントについても同様です。 カーソルのみに関連する句が SELECT ステートメントに含まれている場合、それらの句は無視されます。 たとえばの値*ccopt*が 0x2002 の場合、これは、要求。  
+-   ALLOW_DIRECT が指定されている場合は、1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント (複数のステートメントを含む他のストアド プロシージャを実行するものを含む) が実行される可能性があります。 SELECT 以外のステートメントや、キーワード SELECT INTO または FOR BROWSE を含む SELECT ステートメントは、単純に実行され、カーソルは作成されません。 複数のステートメントのバッチに含まれている SELECT ステートメントについても同様です。 カーソルのみに関連する句が SELECT ステートメントに含まれている場合、それらの句は無視されます。 たとえばの値*ccopt*が 0x2002 の場合、これは、要求。  
   
     -   スクロール ロックを使用するカーソル (カーソルの条件を満たしている単一の SELECT ステートメントだけがある場合)。  
   

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 050269e2c7183c8b4c318749bc3adc93be056119
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664831"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414079"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51664831"
   
  **SQLColumns**静的サーバー カーソルで実行できます。 実行しようとすると、 **SQLColumns**更新可能な (動的またはキーセット) カーソルでは、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO を返します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、リンク サーバー上のテーブルに関する情報のレポートをサポートの 2 つの部分名をそのまま使用して、 *CatalogName*パラメーター: *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、リンク サーバー上のテーブルに関する情報のレポートをサポートの 2 つの部分名をそのまま使用して、 *CatalogName*パラメーター。*Linked_Server_Name.Catalog_Name*します。  
   
  ODBC 2。*x*でワイルドカードを使用していないアプリケーション*TableName*、 **SQLColumns**テーブルの名前が一致をに関する情報を返します*TableName*、現在のユーザーによって所有されているとします。 現在のユーザーに名前が一致するテーブルが所有していないかどうか、 *TableName*パラメーター、 **SQLColumns**テーブル名が一致する他のユーザーによって所有されているすべてのテーブルに関する情報を返します、 *TableName*パラメーター。 ODBC 2。*x* 、ワイルドカードを使用してアプリケーション**SQLColumns**すべて名前と一致するテーブルを返します*TableName*します。 ODBC 3。*x*アプリケーション**SQLColumns**すべて名前と一致するテーブルを返します*TableName*所有者またはワイルドカードを使用するかどうかに関係なく。  
   

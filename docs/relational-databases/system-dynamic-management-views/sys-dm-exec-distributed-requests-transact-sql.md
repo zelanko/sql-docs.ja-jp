@@ -23,19 +23,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c02ea165ceec8af546d092d955e9275dcc96b240
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 78604c723c4c19e68a6c29fd3113de3d69d36d44
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661189"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532795"
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   現在または最近アクティブになっている PolyBase クエリのすべての要求に関する情報を保持します。 これには、要求/クエリごとに 1 行が一覧表示します。  
   
- セッションに基づいており、要求 ID、ユーザーことができますし、取得、実際の分散要求を実行する – sys.dm_exec_distributed_requests を使用して生成されました。 たとえば、正規 SQL および SQL テーブルの外部に関連するクエリに分解し、さまざまなステートメントおよび要求のさまざまなコンピューティング ノード間で実行します。 すべてのコンピューティング ノード間で分散の手順を追跡するために、'global' の実行 ID のそれぞれの 1 つの特定の要求と演算子に関連付けられている計算ノード上のすべての操作を追跡するために使用できるについて紹介します。  
+ セッションに基づいており、要求 ID、ユーザーことができますし、取得、実際の分散要求 sys.dm_exec_distributed_requests を使用して、実行するために生成します。 たとえば、正規 SQL および SQL テーブルの外部に関連するクエリに分解し、さまざまなステートメントおよび要求のさまざまなコンピューティング ノード間で実行します。 すべてのコンピューティング ノード間で分散の手順を追跡するには、それぞれ 1 つの特定の要求と演算子に関連付けられているコンピューティング ノードのすべての操作を追跡するために使用できる 'global' の実行 ID を紹介します。  
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
@@ -45,7 +45,7 @@ ms.locfileid: "51661189"
 |error_id|**nvarchar(36)**|存在する場合は、要求に関連付けられているエラーの一意の id。|エラーが発生していない場合は、NULL に設定します。|  
 |start_time|**datetime**|要求の実行が開始された時刻。|キューに置かれた要求の場合は 0それ以外の場合、有効な datetime 以下に、現在の時刻。|  
 |end_time|**datetime**|エンジンが、要求のコンパイルを完了した時刻。|キューに置かれた、またはアクティブな要求の場合は nullそれ以外の場合、現在の時刻に以下の有効な datetime です。|  
-|total_elapsed_time|**int**|(ミリ秒単位)、要求を開始してから、実行の経過時間です。|0 ～ start_time と end_time の違いです。Total_elapsed_time では、整数の最大値を超えると、total_elapsed_time 引き続き、最大値になります。 この状態が「、最大値を超過しました」警告を生成します。 最大値をミリ秒単位は 24.8 日に相当します。|  
+|total_elapsed_time|**int**|(ミリ秒単位)、要求を開始してから、実行の経過時間です。|0 ～ start_time と end_time の違いです。Total_elapsed_time では、整数の最大値を超えると、total_elapsed_time 引き続き、最大値になります。 この状態が"、最大値を超過しました"警告を生成します。 最大値をミリ秒単位は 24.8 日に相当します。|  
   
 ## <a name="see-also"></a>参照  
  [PolyBase 動的管理ビューでのトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

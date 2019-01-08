@@ -16,12 +16,12 @@ ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c3688bcd713eab1fed94efab0a5c88f41b7c529
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758840"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538775"
 ---
 # <a name="record-object-ado"></a>Record オブジェクト (ADO)
 行を表す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)またはデータ プロバイダー、あるいはファイルやディレクトリなどの半構造化データ プロバイダーによって返されるオブジェクト。  
@@ -60,7 +60,7 @@ ms.locfileid: "47758840"
   
 -   現在の状態を示す、**レコード**で、[状態](../../../ado/reference/ado-api/state-property-ado.md)プロパティ。  
   
--   種類を示す**レコード**—*単純*、*コレクション*、または*構造化ドキュメント*-で、 [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)プロパティ。  
+-   種類を示す**レコード** - *単純*、*コレクション*、または*構造化ドキュメント*- で、 [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)プロパティ。  
   
 -   使用して、非同期操作の実行を停止、[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)メソッド。  
   

@@ -13,15 +13,15 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39d8a1bdbc3a56cc03710bc6982b708235c47c45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762430"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508751"
 ---
 # <a name="working-with-recordsets"></a>レコードセットの操作
-**Recordset**オブジェクトが組み込みの機能を指定する条件に基づいて、特定のレコードを検索して、インデックスを使用してこれらの検索操作を最適化するためにも、結果セット内のデータの順序を変更することができます。 これらの機能を使用できるかどうかは、プロバイダーによって異なります: などの[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティ — データ ソース自体の構造体。  
+**Recordset**オブジェクトが組み込みの機能を指定する条件に基づいて、特定のレコードを検索して、インデックスを使用してこれらの検索操作を最適化するためにも、結果セット内のデータの順序を変更することができます。 これらの機能が使用できるかどうかによって異なります、プロバイダーなどの場合によって、[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティ - データ ソース自体の構造体。  
   
 ## <a name="arranging-data"></a>データの整列  
  内のデータの並べ替えに多くの場合、最も効率的な方法、 **Recordset**に結果を返すために使用する SQL コマンドで ORDER BY 句を指定することです。 ただしのデータの順序を変更する必要があります、 **Recordset**を既に作成されています。 使用することができます、**並べ替え**プロパティの行の順序を確立するために、**レコード セット**が走査されます。 さらに、**フィルター**プロパティを指定する行の行をトラバースするときにアクセスできます。  
@@ -43,7 +43,7 @@ ms.locfileid: "47762430"
 ## <a name="finding-a-specific-record"></a>特定のレコードを検索  
  ADO の提供、[検索](../../../ado/reference/ado-api/find-method-ado.md)と[シーク](../../../ado/reference/ado-api/seek-method.md)の特定のレコードを検索するためのメソッド、**レコード セット**します。 **検索**メソッドのさまざまなプロバイダーでサポートされてが 1 つの検索条件に制限されています。 **シーク**メソッドは、複数の条件で検索をサポートしてが、多くのプロバイダーでサポートされていません。  
   
- フィールドのインデックスのパフォーマンスが向上、**検索**メソッドと**並べ替え**と**フィルター**のプロパティ、 **Recordset**オブジェクト。 内部のインデックスを作成することができます、**フィールド**オブジェクト、動的に設定して[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティ。 この動的プロパティに追加されます、**プロパティ**のコレクション、**フィールド**オブジェクトを設定すると、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**. このインデックスは、ADO 内部ことに注意してください: アクセスを防ぐことまたはその他の目的に使用することはできません。 また、このインデックスは異なる、[インデックス](../../../ado/reference/ado-api/index-property.md)のプロパティ、 **Recordset**オブジェクト。  
+ フィールドのインデックスのパフォーマンスが向上、**検索**メソッドと**並べ替え**と**フィルター**のプロパティ、 **Recordset**オブジェクト。 内部のインデックスを作成することができます、**フィールド**オブジェクト、動的に設定して[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティ。 この動的プロパティに追加されます、**プロパティ**のコレクション、**フィールド**オブジェクトを設定すると、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**. このインデックスは、ADO 内部こと - アクセスを防ぐことまたはその他の目的に使用することはできませんに注意してください。 また、このインデックスは異なる、[インデックス](../../../ado/reference/ado-api/index-property.md)のプロパティ、 **Recordset**オブジェクト。  
   
  **検索**メソッド内の列 (フィールド) の値を迅速に特定する、 **Recordset**します。 多くの場合の速度を向上することができます、**検索**メソッドを使用して列を**最適化**プロパティをインデックスを作成します。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47762430"
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|最後に影響を受けるレコードのみを表示するためのフィルター**削除**、**再同期**、 **UpdateBatch**、または**CancelBatch**呼び出します。|  
 |**adFilterConflictingRecords**|最後のバッチ更新が失敗したレコードを表示するためのフィルター。|  
-|**adFilterFetchedRecords**|現在のキャッシュ内のレコードを表示するためのフィルター-つまり、データベースからレコードを取得するには、最後の呼び出しの結果。|  
+|**adFilterFetchedRecords**|フィルターの現在のキャッシュ内のレコードを表示するため、データベースからレコードを取得するには、最後の呼び出しの結果は、します。|  
 |**adFilterNone**|現在のフィルターを削除し、表示するためのすべてのレコードを復元します。|  
 |**adFilterPendingRecords**|変更されたが、サーバーにまだ送信されていないレコードだけを表示するためのフィルター。 バッチ更新モードにのみ適用できます。|  
   

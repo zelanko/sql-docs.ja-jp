@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
@@ -16,12 +16,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef49a4bee27339849cd7b2ec0f5d64701804284a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120304"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757584"
 ---
 # <a name="column-properties-visual-database-tools"></a>[列のプロパティ] \(Visual Database Tools)
   列のプロパティのセットには、テーブル デザイナーの **[列のプロパティ]** タブに表示される完全なセット ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースでのみ使用可能) と、サーバー エクスプローラーで [プロパティ] ウィンドウに表示されるサブセットの 2 種類があります。  
@@ -111,7 +111,7 @@ ms.locfileid: "48120304"
  展開すると、その他のプロパティが表示されます。  
   
  **[照合順序]**  
- 選択した列における照合順序の設定が表示されます。 この設定を変更するには、 **[照合順序]** をクリックした後、値の右側にある **[...]** をクリックします  
+ 選択した列における照合順序の設定が表示されます。 この設定を変更するには、**[照合順序]** をクリックした後、値の右側にある **[...]** をクリックします  
   
  **[計算列の指定] カテゴリ**  
  展開すると、 **[式]** と **[永続化されている]** のプロパティが表示されます。 列が計算列である場合、式も表示されます。 式を編集するには、このカテゴリを展開して、 **[式]** プロパティで式を編集します。  

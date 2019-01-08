@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 3b36e720cc390311c851eef55d09a74cc5e5d6ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601822"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503279"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>エンタープライズを評価し、DMA で評価レポートの統合
 
@@ -218,7 +218,7 @@ DMA レポートを使用するには、スライサーを使用してフィル�
 このセクションでは、インスタンスのデータベースの準備状態を表示すると、レポートの主な部分です。 このレポートには、ドリル ダウン階層があります。
 - InstanceDatabase
 - ChangeCategory
-- [タイトル]
+- タイトル
 - ObjectType
 - ImpactedObjectName
 

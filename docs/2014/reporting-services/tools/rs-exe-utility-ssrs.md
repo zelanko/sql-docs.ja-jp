@@ -19,12 +19,12 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ebd18967f892d0f40e5d5b0e3b15e1196935af8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141842"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505641"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe ユーティリティは入力ファイル内に指定したスクリプトを処理します。 このユーティリティを使用して、レポート サーバーの配置と管理タスクを自動化します。  
@@ -75,7 +75,7 @@ ms.locfileid: "48141842"
  (省略可) レポート サーバーへの接続に使用するユーザー アカウントを指定します。 `-u` および `-p` を省略した場合、現在の Windows ユーザー アカウントが使用されます。  
   
  `-p` *パスワード*  
- (必要な場合`-u`を指定) で使用するパスワードを指定します、`-u`引数。 この値は、大文字と小文字が区別されます。  
+ (`-u` を指定した場合は必須) `-u` 引数で使用するパスワードを指定します。 この値は、大文字と小文字が区別されます。  
   
  `-e`  
  (省略可) スクリプトを実行する SOAP エンドポイントを指定します。 有効な値は次のとおりです。  
@@ -88,16 +88,16 @@ ms.locfileid: "48141842"
   
 -   Exec2005  
   
- 値が指定されていない場合は、Mgmt2005 エンドポイントが使用されます。 SOAP エンドポイントの詳細については、次を参照してください。[レポート サーバー Web サービスのエンドポイント](../report-server-web-service/methods/report-server-web-service-endpoints.md)します。  
+ 値が指定されていない場合は、Mgmt2005 エンドポイントが使用されます。 SOAP エンドポイントの詳細については、「 [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md)」を参照してください。  
   
  `-l` *time_out*  
  (省略可) サーバーへの接続がタイムアウトするまでの期間を秒数で指定します。既定値は 60 秒です。 タイムアウト値を指定しない場合、既定値が使用されます。 値が `0` の場合は、接続はタイムアウトしません。  
   
  **-b**  
- (省略可) スクリプト ファイル内のコマンドをバッチで実行します。 いずれかのコマンドが失敗すると、バッチはロールバックされます。 バッチで実行できないコマンドがありますが、それらのコマンドは通常どおり実行されます。 スクリプト内でスローされるが処理されない例外だけが、ロールバックされます。 スクリプトによって例外が処理されから返る`Main`、バッチはコミットされます。 このパラメーターを省略した場合、バッチを作成せずにコマンドが実行されます。 詳細については、次を参照してください。 [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md)します。  
+ (省略可) スクリプト ファイル内のコマンドをバッチで実行します。 いずれかのコマンドが失敗すると、バッチはロールバックされます。 バッチで実行できないコマンドがありますが、それらのコマンドは通常どおり実行されます。 スクリプト内でスローされるが処理されない例外だけが、ロールバックされます。 スクリプトによって例外が処理され、`Main` から正常に値が返された場合、バッチはコミットされます。 このパラメーターを省略した場合、バッチを作成せずにコマンドが実行されます。 詳細については、「 [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md)」をご参照ください。  
   
  `-v` *globalvar*  
- (省略可) スクリプト内で使用するグローバル変数を指定します。 スクリプトでグローバル変数を使用する場合は、この引数を指定する必要があります。 .rss ファイルで定義したグローバル変数に対して有効な値を指定する必要があります。 **–v** 引数ごとに 1 つのグローバル変数を指定できます。  
+ (省略可) スクリプト内で使用するグローバル変数を指定します。 スクリプトでグローバル変数を使用する場合は、この引数を指定する必要があります。 .rss ファイルで定義したグローバル変数に対して有効な値を指定する必要があります。 **-v** 引数ごとに 1 つのグローバル変数を指定できます。  
   
  `-v` 引数はコマンド ラインで指定され、ユーザーのスクリプトに定義されているグローバル変数の値を実行時に設定するために使用されます。 たとえば、スクリプトに *parentFolder*という名前の変数が含まれている場合、そのフォルダーの名前をコマンド ラインで指定することができます。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48141842"
  次の例では、実行する [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET スクリプト、および Web サービス メソッドを含むスクリプト ファイルの指定方法を示しています。  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
  詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
@@ -125,7 +125,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  その他の例については、「[Reporting Services スクリプト ファイルを実行する](run-a-reporting-services-script-file.md)」を参照してください。  
   
 ## <a name="remarks"></a>コメント  
- スクリプトを定義して、システム プロパティの設定、レポートのパブリッシュなどが行えます。 作成したスクリプトには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API の任意のメソッドを含めることができます。 メソッドとプロパティを使用する詳細については、次を参照してください。[レポート サーバー Web サービス](../report-server-web-service/report-server-web-service.md)します。  
+ スクリプトを定義して、システム プロパティの設定、レポートのパブリッシュなどが行えます。 作成したスクリプトには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API の任意のメソッドを含めることができます。 使用可能なメソッドおよびプロパティの詳細については、「 [Report Server Web Service](../report-server-web-service/report-server-web-service.md)」を参照してください。  
   
  スクリプトは、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET のコードで記述し、.rss ファイル名拡張子が付いた Unicode または UTF-8 テキスト ファイルとして保存する必要があります。 **rs** ユーティリティを使用して、スクリプトをデバッグすることはできません。 スクリプトをデバッグするには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]内でコードを実行します。  
   
@@ -133,9 +133,9 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 >  詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services スクリプト ファイルを実行します。](run-a-reporting-services-script-file.md)   
+ [Reporting Services スクリプト ファイルを実行する](run-a-reporting-services-script-file.md)   
  [配置タスクおよび管理タスクのスクリプト作成](script-deployment-and-administrative-tasks.md)   
- [Rs.exe ユーティリティと Web サービスのスクリプト](script-with-the-rs-exe-utility-and-the-web-service.md)   
- [レポート サーバーのコマンド プロンプト ユーティリティ&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
+ [rs.exe ユーティリティと Web サービスを使用したスクリプト](script-with-the-rs-exe-utility-and-the-web-service.md)   
+ [レポート サーバーのコマンド プロンプト ユーティリティ &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
   
   

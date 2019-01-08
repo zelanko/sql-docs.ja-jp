@@ -22,17 +22,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f77ccdfc7c236d1f009ff872712991a4c104fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3fac82c2fd669bb1a7dd3f45b5a614738fdf189
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779690"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529894"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  このカタログ ビューには、ワード ブレーカーに登録されている言語ごとに 1 行が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 各行には、LCID と言語の名前が表示されます。 言語のワード ブレーカーを登録すると、他の言語リソース (ステミング機能、ノイズ ワード (ストップワード)、および類義語辞典ファイル) をフルテキスト インデックス/クエリ操作で使用できるようになります。 値**名前**または**lcid** 、フルテキスト クエリとフルテキスト インデックスで指定できます[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
+  このカタログ ビューには、ワード ブレーカーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録された言語ごとに 1 行のデータが格納されます。 各行には、LCID と言語の名前が表示されます。 言語、その他の言語リソースのステミング機能、ノイズ ワード (ストップ ワード)、および類義語辞典のファイルになるのワード ブレーカーの登録時に、フルテキスト インデックス/クエリ操作に使用できます。 値**名前**または**lcid** 、フルテキスト クエリとフルテキスト インデックスで指定できます[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
    
 |[列]|データ型|説明|  
 |------------|---------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "47779690"
 ## <a name="values-returned-for-default-languages"></a>既定の言語の戻り値  
  次の表に、ワード ブレーカーが既定で登録されている言語の値を示します。  
   
-|[言語]|LCID (LCID)|  
+|言語|LCID (LCID)|  
 |--------------|----------|  
 |アラビア語|1025|  
 |ベンガル語 (インド)|1093|  

@@ -14,12 +14,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f9eddf5cb58b18651acd77afe44758a47b1fd8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602851"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537894"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  *query_param_type*  
  クエリのパラメーターの型です。 *query_param_type*は、 **tinyint**します。 有効な値は次のとおりです。  
   
--   NULL – 既定値は 0  
+-   NULL の既定値は 0  
   
--   0 ～ なし  
+-   0 - なし  
   
--   1 – ユーザー  
+-   1-ユーザー  
   
--   2 – 簡単です  
+-   2-シンプルです  
   
--   3 – 強制  
+-   3-強制  
   
 ## <a name="columns-returned"></a>返される列  
  次の表では、列を sys.fn_stmt_sql_handle_from_sql_stmt を返します。  
@@ -61,7 +61,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 |列名|型|説明|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|SQL ハンドルです。|  
-|**query_sql_text**|**nvarchar(max)**|テキスト、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。|  
+|**query_sql_text**|**nvarchar(max)**|テキスト、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。|  
 |**query_parameterization_type**|**tinyint**|クエリのパラメーター化の種類。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -73,7 +73,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  必要があります、 **EXECUTE** 、データベースに対する権限と**削除**クエリ ストアのカタログ ビューに対する権限。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、ステートメントを実行しを使用して、`sys.fn_stmt_sql_handle_from_sql_stmt`そのステートメントの SQL ハンドルを返します。  
+ 次の例は、ステートメントを実行し、次を使用して `sys.fn_stmt_sql_handle_from_sql_stmt` ステートメントの SQL ハンドルを返します。  
   
 ```  
 SELECT * FROM sys.databases;   

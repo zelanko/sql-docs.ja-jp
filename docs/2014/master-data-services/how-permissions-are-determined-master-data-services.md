@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
@@ -13,12 +12,12 @@ ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f640fb20e950dc576c57e0faad71dcad0cd55a09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b138dd1cf07ccfccefb9e1556c743f3c0a45abd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217828"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747414"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>権限の決定方法 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でセキュリティを構成する最も簡単な方法は、ユーザーが属しているグループにモデル オブジェクト権限を割り当てることです。  
@@ -36,7 +35,7 @@ ms.locfileid: "48217828"
   
  ![mds_conc_security_no_overlap](../../2014/master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>ステップ 1: 有効な属性の権限が決定される。  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>手順 1:有効な属性の権限が決定されます。  
  有効な属性の権限は、次のように決定されます。  
   
 -   モデル オブジェクトに割り当てられた権限によって、ユーザーがアクセスできる属性が決まる。  
@@ -51,7 +50,7 @@ ms.locfileid: "48217828"
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>ステップ 2: 階層メンバーの権限が割り当てられた場合、有効なメンバーの権限が決定される。  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>手順 2:階層メンバーの権限が割り当てられている場合は、有効なメンバー権限が決定されます。  
  有効な階層メンバーの権限は、次のように決定されます。  
   
 -   階層ノードに割り当てられた権限によって、ユーザーがアクセスできるメンバーが決まる。  
@@ -66,7 +65,7 @@ ms.locfileid: "48217828"
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
-### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>ステップ 3: 属性とメンバーの権限の共通部分が決定される。  
+### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>手順 3:属性とメンバーのアクセス許可の積集合が決定されます。  
  有効な属性の権限が有効なメンバーの権限とは異なる場合、個々の属性値ごとに権限を決定する必要があります。 詳細については、「[モデル権限とメンバー権限の重複 (マスター データ サービス)](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)」を参照してください。  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>複数のグループに割り当てられた権限  
@@ -74,10 +73,10 @@ ms.locfileid: "48217828"
   
  ![mds_conc_security_group_overlap](../../2014/master-data-services/media/mds-conc-security-group-overlap.gif "mds_conc_security_group_overlap")  
   
- この場合に、モデル オブジェクトと階層メンバーの権限を比較するには、ユーザーとグループでの権限の重複を解決する必要があります。 詳細については、「[ユーザー権限とグループ権限の重複 (マスター データ サービス)](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)」を参照してください。  
+ この場合に、モデル オブジェクトと階層メンバーの権限を比較するには、ユーザーとグループでの権限の重複を解決する必要があります。 詳細については、「 [ユーザー権限とグループ権限の重複 (マスター データ サービス)](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ユーザーとグループ権限の重複&#40;マスター データ サービス&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
- [モデル アクセス許可とメンバー アクセス許可の重複 (マスター データ サービス)](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [ユーザー権限とグループ権限の重複 (マスター データ サービス)](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+ [モデル権限とメンバー権限の重複 (マスター データ サービス)](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676341"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524908"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの iSCSI - SQL Server on Linux を構成します。
 
@@ -93,7 +93,7 @@ Linux ベースの iSCSI ターゲットを使用する場合、FCI ノードの
 6.  ISCSI 接続ディスクをチェックします。
 
     ```bash
-    sudo grep “Attached SCSI” /var/log/messages
+    sudo grep "Attached SCSI" /var/log/messages
     ```
     ![30-iSCSIattachedDisks][7]
 
@@ -187,7 +187,7 @@ Linux ベースの iSCSI ターゲットを使用する場合、FCI ノードの
    *    既存の SQL Server データ ディレクトリからファイルを削除します。 成功した場合は、すべての受信確認は受信しません。
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    ファイルが削除されたことを確認します。 次の図は、h での c からシーケンス全体の例を示します。
@@ -337,7 +337,7 @@ Linux ベースの iSCSI ターゲットを使用する場合、FCI ノードの
 14. その唯一の Pacemaker は、ボリューム グループをアクティブ化できるように、サーバーを構成します。
 
     ```bash
-    sudo lvmconf --enable-halvm --services –startstopservices
+    sudo lvmconf --enable-halvm --services -startstopservices
     ```
  
 15. サーバー上のボリューム グループの一覧を生成します。 何も表示されている iSCSI ディスクではないなどが使用、システムによって OS ディスクについてはします。
@@ -367,7 +367,7 @@ Linux ベースの iSCSI ターゲットを使用する場合、FCI ノードの
 
 18. サーバーを再起動します。
 
-19. FCI に参加する別のサーバーでは、手順 1-6 を実行します。 これにより、SQL Server に iSCSI ターゲットが表示されます。 
+19. FCI に参加する別のサーバーでは、手順 1 - 6 を実行します。 これにより、SQL Server に iSCSI ターゲットが表示されます。 
  
 20. サーバー上のボリューム グループの一覧を生成します。 これにより、先ほど作成したボリューム グループが表示されます。 
 
@@ -387,7 +387,7 @@ Linux ベースの iSCSI ターゲットを使用する場合、FCI ノードの
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-25. FCI に参加する他のサーバーで手順 1 ~ 6 を繰り返します。
+25. FCI に参加する他のサーバーで手順 1. ~ 6. を繰り返します。
 
 FCI を構成する準備が整いました。
 

@@ -15,12 +15,12 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e2d83f77f8bb9227daab996e425d1880d1bfabd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 35e9da17a9c3980470cfd3dcbb22b4069afec640
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674418"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501750"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro セットアップ ダイアログ ボックス
 **ODBC Visual FoxPro セットアップ**ダイアログ ボックスでは、Visual FoxPro データ ソースの変更を追加することができます。  
@@ -60,7 +60,7 @@ ms.locfileid: "51674418"
  このチェック ボックスがオンの場合、データ ソースを使用してデータにアクセスするときにのみ、ドライバー、Visual FoxPro データベースが開きます。 他のユーザーは、データベースが排他的に開かれたときに、データベースまたはデータベース内のテーブル アクセスできません。 排他的に開かれているデータベース内のテーブルは、共有として開かれます。 排他的にテーブルを開くには、使用、[排他設定](../../odbc/microsoft/set-exclusive-command.md)コマンド。 このチェック ボックスが無効になっているときに**データベースの種類**に設定されている**無料テーブル ディレクトリ**します。  
   
  **Null**  
- ALTER TABLE と CREATE TABLE で作成される列が null 値を許容するかどうかを判断します。 Null に設定すると、INSERT-SQL は挿入 – SQL に含まれていない任意の列に null 値を挿入しています.VALUE 句。 Null が OFF の場合は空白が挿入されます。 次のコードのように渡された接続文字列で、このオプションを制御することもできます。  
+ ALTER TABLE と CREATE TABLE で作成される列が null 値を許容するかどうかを判断します。 Null に設定すると、ある場合、INSERT - SQL は INSERT - SQL に含まれていない任意の列に null 値を挿入しています.VALUE 句。 Null が OFF の場合は空白が挿入されます。 次のコードのように渡された接続文字列で、このオプションを制御することもできます。  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  

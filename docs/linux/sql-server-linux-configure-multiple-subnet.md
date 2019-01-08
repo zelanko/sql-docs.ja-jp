@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0952390e21d174d4d10e99f53904de4d11be6230
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 595add5d077136c4093776fae8e3a2f7ab04bb26
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637476"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396175"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>複数のサブネット Always On 可用性グループおよびフェールオーバー クラスター インスタンスを構成します。
 
@@ -24,7 +24,7 @@ Always On 可用性グループ (AG で) またはフェールオーバー ク�
 
 ## <a name="vlan-based-solution"></a>VLAN ベースのソリューション
  
-**前提条件となる**: の VLAN ベースのソリューション、AG または FCI に参加する各サーバーように必要があります 2 つのネットワーク カード (Nic) (デュアル ポート NIC は、1 つの物理サーバーに障害点になります) 適切な可用性のために割り当てられた IP アドレスことがありますネイティブのサブネットだけでなく、VLAN の 1 つ。 これは、iSCSI も、独自のネットワークを必要とするなどの他のネットワーク ニーズです。
+**前提条件となる**:VLAN ベースのソリューションでは、各サーバー、AG または FCI に参加している必要があります (デュアル ポート NIC は、1 つの物理サーバーに障害点になります) 適切な可用性のための 2 つのネットワーク カード (Nic)、ネイティブのサブネットと 1 つ上の IP アドレスが割り当てられますことができます。VLAN です。 これは、iSCSI も、独自のネットワークを必要とするなどの他のネットワーク ニーズです。
 
 AG または FCI の IP アドレスの作成は、VLAN で行われます。 次の例では、VLAN は 192.168.3 のサブネットが。*x*ので、AG または FCI 用に作成された IP アドレスは 192.168.3.104 します。 何も追加は、AG または FCI に割り当てられている単一の IP アドレスがあるため、構成する必要があります。
 

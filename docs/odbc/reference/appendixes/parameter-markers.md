@@ -15,12 +15,12 @@ ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ac59cddb24d5e08e3b620c178f40e206460eb7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 833e2740e54f07701fb66a894bb5e4798c4a42e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835420"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516400"
 ---
 # <a name="parameter-markers"></a>パラメーター マーカー
 SQL 92 の仕様に従って、アプリケーションは、次の場所にパラメーター マーカーを配置できません。 詳細な一覧は、SQL 92 仕様を参照してください。  
@@ -37,7 +37,7 @@ SQL 92 の仕様に従って、アプリケーションは、次の場所にパ�
   
 -   式との最初の値の両方として、 **IN**操作  
   
--   単項演算子のオペランドとして + または – の操作  
+-   単項演算子のオペランドとして + または - 操作  
   
 -   引数として、*セットの参照関数*  
   

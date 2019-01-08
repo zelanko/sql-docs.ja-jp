@@ -20,19 +20,19 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f92e05d76fc3d3c585667045261649f91ce303d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183702"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532511"
 ---
 # <a name="delete-a-data-tier-application"></a>データ層アプリケーションの削除
   データ層アプリケーションの削除ウィザードまたは Windows PowerShell スクリプトを使用して、データ層アプリケーションを削除できます。 関連付けられたデータベースの保持、デタッチ、または削除を指定することができます。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **作業を開始する準備:**[制限事項と制約](#LimitationsRestrictions)、[アクセス許可](#Permissions)  
   
--   **DAC のアップグレード:**  [データ層アプリケーションの登録ウィザードの使用](#UsingDeleteDACWizard)、 [PowerShell の使用](#DeleteDACPowerShell)  
+-   **DAC のアップグレードに使用します。**[データ層アプリケーションの登録ウィザード](#UsingDeleteDACWizard)、 [PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>はじめに  
  データ層アプリケーション (DAC) インスタンスを削除する場合、3 つのオプションのいずれかを選択して、データ層アプリケーションに関連付けられたデータベースの処理を指定します。 どのオプションを選択した場合も、DAC 定義のメタデータが削除されます。 各オプションは、データ層アプリケーションに関連付けられたデータベースの処理方法が異なります。 DAC またはデータベースに関連付けられたインスタンスレベルのオブジェクト (ログインなど) が、ウィザードによって削除されることはありません。  
@@ -67,7 +67,7 @@ ms.locfileid: "48183702"
   
 3.  **[データ層アプリケーション]** ノードを展開します。  
   
-4.  削除する DAC を右クリックし、 **[データ層アプリケーションの削除]** をクリックします。  
+4.  削除する DAC を右クリックし、**[データ層アプリケーションの削除]** をクリックします。  
   
 5.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -132,22 +132,22 @@ ms.locfileid: "48183702"
   
 1.  SMO サーバー オブジェクトを作成し、削除する DAC を含んだインスタンスに設定します。  
   
-2.  開く、`ServerConnection`オブジェクトし、同じインスタンスに接続します。  
+2.  `ServerConnection` オブジェクトを開いて、同じインスタンスに接続します。  
   
-3.  使用`add_DacActionStarted`と`add_DacActionFinished`DAC アップグレード イベントをサブスクライブします。  
+3.  `add_DacActionStarted` および `add_DacActionFinished` を使用して、DAC アップグレード イベントをサブスクライブします。  
   
 4.  削除する DAC を指定します。  
   
 5.  どの削除オプションが適しているかによって、これらの 3 つのコードのいずれかを使用します。  
   
-    -   DAC の登録の削除をデータベースをそのまま使用して、`Unmanage()`メソッド。  
+    -   DAC 登録を削除し、データベースをそのままにするには、`Unmanage()` メソッドを使用します。  
   
     -   DAC 登録を削除し、データベースをデタッチするには、`Uninstall()` メソッドを使用し、`DetachDatabase` を指定します。  
   
-    -   DAC 登録を削除し、データベースを削除するには使用、`Uninstall()`メソッドを指定して`DropDatabase`します。  
+    -   DAC 登録を削除し、データベースを削除するには、`Uninstall()` メソッドを使用し、`DropDatabase` を指定します。  
   
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>DAC のみ削除してデータベースはそのまま残す例 (PowerShell)  
- 次の例は、MyApplication を使用してという名前の DAC を削除、`Unmanage()`メソッドを DAC を削除するデータベースをそのままです。  
+ 次の例では、MyApplication という DAC を削除します。`Unmanage()` メソッドを使用して DAC のみ削除し、データベースはそのままにします。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -171,7 +171,7 @@ $dacstore.Unmanage($dacName)
 ```  
   
 ### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>DAC を削除してデータベースをデタッチする例 (PowerShell)  
- 次の例は、MyApplication を使用してという名前の DAC を削除、`Uninstall()`メソッドを DAC を削除し、データベースをデタッチします。  
+ 次の例では、MyApplication という DAC を削除します。`Uninstall()` メソッドを使用して DAC を削除し、データベースをデタッチします。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -219,8 +219,8 @@ $dacName  = "MyApplication"
 ```  
   
 ## <a name="see-also"></a>参照  
- [データ層アプリケーション](data-tier-applications.md)   
- [データ層アプリケーション](data-tier-applications.md)   
+ [[データ層アプリケーション]](data-tier-applications.md)   
+ [[データ層アプリケーション]](data-tier-applications.md)   
  [データ層アプリケーションの配置](deploy-a-data-tier-application.md)   
  [データベースを DAC として登録する方法](register-a-database-as-a-dac.md)   
  [SQL Server データベースのバックアップと復元](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   

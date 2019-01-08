@@ -27,12 +27,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 089ced09d718b0716f0c19d4553e52ff02c3d505
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07aae4f4e619e38d41cd16a08e1e8f7267f5ed29
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665581"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533555"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>エディションと SQL Server 2017 on Linux のサポートされる機能
 
@@ -58,7 +58,7 @@ Linux で使用できない SQL Server 機能の一覧は、次を参照して�
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|定義|  
 |---------------------------------------|----------------|  
 |Enterprise|Premium オファリング[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]Enterprise edition は、ミッション クリティカルなワークロードの高度なサービス レベルを有効にすると、超高速パフォーマンスを包括的なハイエンド データ センター機能を提供します。|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition は、部門や小規模組織がアプリケーションを実行するための基本的なデータ管理を提供し、オンプレミスおよびクラウド用の一般的な開発ツールのサポート-最小限の IT リソースで効果的なデータベース管理を有効にします。|  
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition では、部門や小規模組織がアプリケーションを実行するための基本的なデータ管理を実現し、オンプレミスとクラウドの最小限の IT リソースで効果的なデータベース管理を有効にする一般的な開発ツールをサポートします。|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition は、大小さまざまな規模の Web 資産に対応できるスケーラビリティ、経済性、および管理性を備えた、Web ホスティング企業および Web VAP 向けの総保有コストの低いオプションです。|  
 |Developer|開発者は、[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上で動作するあらゆる種類のアプリケーションを開発できます。 このエディションには Enterprise Edition の機能がすべて含まれていますが、実稼動サーバーとして使用するのではなく、開発およびテスト システムとしての利用に対してライセンスが供与されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer は、アプリケーションを作成し、テストするユーザーに適しています。|  
 |Express Edition|Express Edition はエントリレベルの無料のデータベースで、学習や、デスクトップおよび小規模サーバー データ ドリブン アプリケーションの構築などに適しています。 このエディションは、独立系ソフトウェア ベンダー、開発者、クライアント アプリケーションを趣味で開発する開発者などに最適です。 さらに高度なデータベース機能が必要な場合には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の他の上位バージョンにシームレスにアップグレードできます。|  
@@ -78,7 +78,7 @@ Linux 上の SQL Server 2017 には、SQL Server データベース エンジン
 **Developer、Enterprise Core、および Evaluation edition**  
 Developer、Enterprise Core、および Evaluation edition でサポートされる機能では、次の表に、SQL Server Enterprise edition の機能を参照してください。
 
-Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed-replay/sql-server-distributed-replay.md) のクライアントを 1 つだけサポートします。 
+Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md) のクライアントを 1 つだけサポートします。 
   
 ##  <a name="Cross-BoxScaleLimits"></a> スケールの制限  
   

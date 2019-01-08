@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5553072dcea3ed64ef8454019892ac5790c7a142
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: db90ecbc083a887a9845542b73e50bae6bf61e1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600112"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534744"
 ---
 # <a name="namespaces"></a>名前空間
 ADO での XML 永続化形式は、次の 4 つの名前空間を使用します。  
@@ -38,7 +38,7 @@ ADO での XML 永続化形式は、次の 4 つの名前空間を使用しま�
 > [!IMPORTANT]
 >  スキーマ タグの ID は"RowsetSchema、"である必要があり。、現在の行セットのスキーマを参照するために使用する名前空間が"#RowsetSchema" をポイントする必要があります。  
   
- 注意してください名前空間のプレフィックス: コロンと等号 (=) の間の一部 — は任意です。  
+ コロンと等号 (=) 間の部分の-名前空間のプレフィックスは任意でことに注意してください。  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  

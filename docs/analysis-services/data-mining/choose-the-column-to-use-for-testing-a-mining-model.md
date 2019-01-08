@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルのテストに使用する列の選択 |Microsoft ドキュメント
+title: マイニング モデルのテストに使用する列の選択 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7bb77d40ee2635d210346e459dcfbd9aed619ed4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bcfe927f3b58787ab316a637d0c1d493f73c104a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016619"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511422"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>マイニング モデルのテストに使用する列の選択
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "34016619"
   
  次の一覧では、テストに使用する予測可能な属性を選択する際のいくつかの追加の考慮事項について説明します。  
   
--   一部の種類のデータ マイニング モデルでは、複数の属性を予測できます。たとえば、ニューラル ネットワークでは、多くの属性間の関係を調べることができます。  
+-   データ マイニング モデルの種類によっては、複数の属性などのニューラル ネットワークは、多くの属性間の関係を調べることができますとしてを予測できます。  
   
--   クラスター モデルなど、他の種類のマイニング モデルには、予測可能な属性がなくてもかまいません。 予測可能な属性がない場合、クラスター モデルはテストできません。  
+-   他の種類のマイニング モデルなどのクラスタ リング モデルはでは、予測可能な属性がある必須ではありません。 予測可能な属性がない場合、クラスター モデルはテストできません。  
   
 -   散布図を作成するか、回帰モデルの精度を測定するには、連続する予測可能な属性を結果として選択する必要があります。 その場合、対象の値は指定できません。 散布図以外のものを作成する場合は、基になるマイニング構造列のコンテンツの種類も、 **[不連続]** または **[分離]** である必要があります。  
   
--   不連続属性を予測可能な結果として選択した場合は、対象の値を指定することも、 **[予測値]** フィールドを空のままにすることもできます。 **予測値**を含める場合、グラフは対象の値の予測でのモデルの効果だけを測定します。 対象となる結果を指定しない場合、モデルはすべての結果の予測で精度が測定されます。  
+-   不連続属性を予測可能な結果として選択した場合は、対象の値を指定することも、 **[予測値]** フィールドを空のままにすることもできます。 含める場合は、**予測値**、グラフは対象の値を予測でモデルの効果だけを測定します。 対象となる結果を指定しない場合、モデルはすべての結果の予測で精度が測定されます。  
   
 -   複数のモデルを含めて、それらを 1 つの精度チャートで比較する場合、すべてのモデルは同じ予測可能列を使用する必要があります。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "34016619"
 5.  モデルのリフト値を指定する場合は、 **[予測値]** の一覧から、測定する特定の結果値を選択する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [選択し、モデルのテスト データのマップ](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [精度チャートの種類と設定を選択してグラフのオプション](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [モデルのテスト データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
+ [精度チャートの種類の選択とグラフのオプションの設定](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

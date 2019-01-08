@@ -18,17 +18,17 @@ ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33fadfcf8230ab4f60f783c3d0d6172518b8c7b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25aae75151ada9ac38b35324f7c82d98f77d580b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652976"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535797"
 ---
 # <a name="spcatalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定したリンク サーバーにあるカタログの一覧を返します。 これは、データベース内に相当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  指定したリンク サーバーにあるカタログの一覧を返します。 これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内にあるデータベースと一致します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +40,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@server_name =**] **'***linked_svr***'**  
+ [  **@server_name =**] **'**_linked_svr_**'**  
  リンク サーバーの名前を指定します。 *linked_svr*は**sysname**、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  

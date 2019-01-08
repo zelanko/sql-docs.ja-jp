@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2eb7bfae0c4fcbc82995c120ef588fdfd4710af
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 03752c2f1d7259f29f634473efdfe570c55b89ee
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980585"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405397"
 ---
 # <a name="use-power-pivot-gallery"></a>Power Pivot ギャラリーを使用する
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "38980585"
 >  Power Pivot ギャラリーには、Microsoft Silverlight が必要です。  Microsoft Edge ブラウザーでは、Silverlight がサポートされていません。   
 > Edge でライブラリ コンテンツを表示するには、Power Pivot ギャラリーの **[ライブラリ]** タブをクリックして、ドキュメント ライブラリ ビューを **[すべてのドキュメント]** に変更します。    
 > 既定のビューを変更するには、 **[ライブラリ]** タブをクリックしてから、[ビューの変更] をクリックします。 [このビューを既定のビューにする] をクリックし、[OK] をクリックして既定のビューを保存します。  
->  Microsoft Edge のサポート対象について詳しくは、Windows ブログ「 [過去からの離別、第 2 部: ActiveX、VBScript... に別れを告げる](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)」をご覧ください。  
+>  Edge のサポート対象の詳細については、Windows のブログを参照してください。[以前は、第 2 部からの離別。ActiveX、VBScript に別れを取得しています.](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  すべての前提条件の一覧については、「 [Create and Customize Power Pivot Gallery](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)」をご覧ください。  
   
@@ -68,13 +68,13 @@ ms.locfileid: "38980585"
   
 1.  ファイルを保存します。  
   
-2.  1.  **Excel 2010**: [ファイル] メニューの **[保存して送信]** をクリックします。  
+2.  1.  **Excel 2010 の場合:**[ファイル] メニューで、次のようにクリックします。**保存と送信**します。  
   
     2.  **[SharePoint に保存]** をクリックします。  
   
     3.  パブリッシュする個々のシートまたはパラメーターを [Excel Services のオプション] を使用して選択する場合は、 **[発行オプション]** をクリックします。 たとえば、[Excel Services のオプション] の [パラメーター] タブでは、パブリッシュしたブックに表示するスライサーを選択できます。  
   
-    1.  **Excel 2013:**  [ファイル] メニューの **[上書き保存]** をクリックします。  
+    1.  **Excel 2013 の場合:**[ファイル] メニューで、次のようにクリックします。**保存**します。  
   
     2.  パブリッシュする個々のシートまたはパラメーターを [Excel Services のオプション] を使用して選択する場合は、 **[ブラウザー ビュー オプション]** をクリックします。 たとえば、[Excel Services のオプション] の [パラメーター] タブでは、パブリッシュしたブックに表示するスライサーを選択できます。  
   
@@ -153,16 +153,16 @@ ms.locfileid: "38980585"
 ### <a name="document-type-is-not-supported"></a>ドキュメントの種類がサポートされていません  
  コンテンツの種類 " **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー ドキュメント** " はサポートされていません。 ドキュメント ライブラリに対してコンテンツの種類 " **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー ドキュメント** " を有効にし、その種類の新しいドキュメントを作成しようとすると、次のようなエラー メッセージが表示されます。  
   
--   新しいドキュメントを作成するには、Microsoft SharePoint Foundation 互換のアプリケーションおよび Web ブラウザーが必要です このドキュメント ライブラリにドキュメントを追加するには、[ドキュメントのアップロード] ボタンをクリックします。  
+-   新しいドキュメントでは、Microsoft Sharepoint Foundation 互換のアプリケーションと web ブラウザーが必要です。 このドキュメント ライブラリにドキュメントを追加するには、ドキュメントのアップロード ボタンをクリックします。  
   
--   インターネット アドレス 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' は無効です。ファイル 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' にアクセスできません。 さまざまな原因が考えられます。  
+-   "インターネット アドレス 'http://[server 名]/testSite/Gallery/reportgallery/forms/template.xlsx'' が無効です""。Microsoft Excel ファイルにアクセスできません ' http://[server 名]/testSite/Gallery/reportgallery/forms/template.xlsx' '。 さまざまな原因が考えられます。  
   
  コンテンツの種類 " **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー ドキュメント** " は、ドキュメント ライブラリに自動的に追加されません。サポートされていないコンテンツの種類を手動で有効にしない限り、この問題は発生しません。  
   
 ## <a name="see-also"></a>参照  
  [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Power Pivot ギャラリーの削除](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
- [作成し、Power Pivot ギャラリーのカスタマイズ](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [データ更新 (Power Pivot for SharePoint) のスケジュールします。](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
+ [Create and Customize Power Pivot Gallery](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [データ更新のスケジュール (Power Pivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   

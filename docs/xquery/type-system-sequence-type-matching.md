@@ -16,12 +16,12 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e4532e52bb2efe190d962bfcfc50e65c441b5575
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3df2ef3f14cb8ca4fd7e7bcf5799b6966c16dc10
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668651"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511452"
 ---
 # <a name="type-system---sequence-type-matching"></a>型システム - シーケンス型の照合
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51668651"
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>式から返されるアトミック値の型の比較  
  式からアトミック値のシーケンスが返される場合、シーケンス内の値の型を確認することが必要な場合があります。 次の例は、シーケンス型の構文を使用して式から返されるアトミック値の型を評価する方法を示しています。  
   
-### <a name="example-determining-whether-a-sequence-is-empty"></a>例 : シーケンスが空であるかどうかの判断  
+### <a name="example-determining-whether-a-sequence-is-empty"></a>例:シーケンスが空かどうかを判断します。  
  **Empty()** シーケンスの種類は、指定された式で返されるシーケンスが空のシーケンスであるかどうかを確認するシーケンス型の式で使用できます。  
   
  次の例の XML スキーマでは、<`root`> 要素を NULL にできます。  
@@ -71,7 +71,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
-### <a name="example-determining-the-type-of-an-attribute-value"></a>例 : 属性値の型の判断  
+### <a name="example-determining-the-type-of-an-attribute-value"></a>例:属性値の型を決定します。  
  場合によっては、式から返されるシーケンス型を処理前に評価することが必要なことがあります。 たとえば、ノードが union 型として定義されている XML スキーマを使用している場合です。 次の例では、コレクションの XML スキーマで、値を小数型または文字列型にすることができる union 型として属性 `a` を定義しています。  
   
 ```  
@@ -112,7 +112,7 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:string')
 GO  
 ```  
   
-### <a name="example-cardinality-in-sequence-expressions"></a>例 : シーケンス式のカーディナリティ  
+### <a name="example-cardinality-in-sequence-expressions"></a>例:シーケンス式のカーディナリティ  
  この例は、シーケンス式のカーディナリティの効果を示しています。 次の XML スキーマでは、バイト型で NULL にできる <`root`> 要素を定義しています。  
   
 ```  
@@ -160,7 +160,7 @@ GO
   
  どちらにも該当する場合、`instance of` 式から True が返されます。  
   
-### <a name="example-querying-against-an-xml-type-column"></a>例 : xml 型列に対するクエリの実行  
+### <a name="example-querying-against-an-xml-type-column"></a>例:Xml 型の列に対するクエリを実行します。  
  次の例では、クエリがの Instructions 列に対して指定されて**xml**で入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。 Instructions 列にはスキーマが関連付けられているので、この列は型指定された XML 列です。 XML スキーマで整数型の `LocationID` 属性が定義されます。 そのため、シーケンス式で、 `instance of xs:integer?` True を返します。  
   
 ```  
@@ -174,19 +174,19 @@ WHERE ProductModelID = 7
 ## <a name="comparing-the-node-type-returned-by-an-expression"></a>式から返されるノードの型の比較  
  式からノードのシーケンスが返される場合、シーケンス内のノードの型を確認することが必要な場合があります。 次の例は、シーケンス型の構文を使用して、式から返されるノードの型を評価する方法を示しています。 次のシーケンス型を使用できます。  
   
--   **item()** –、シーケンス内の任意の項目に一致します。  
+-   **item()** -シーケンス内の任意の項目に一致します。  
   
--   **node()** –、シーケンスがノードであるかどうかを決定します。  
+-   **node()** -シーケンスがノードであるかどうかを決定します。  
   
--   **processing-instruction()** –、式が処理命令を返すかどうかを決定します。  
+-   **processing-instruction()** -式が処理命令を返すかどうかを決定します。  
   
--   **comment()** –、式がコメントを返すかどうかを決定します。  
+-   **comment()** -式がコメントを返すかどうかを決定します。  
   
--   **document-node()** –、式がドキュメント ノードを返すかどうかを決定します。  
+-   **document-node()** -式がドキュメント ノードを返すかどうかを決定します。  
   
  次の例は、これらのシーケンス型を示しています。  
   
-### <a name="example-using-sequence-types"></a>例 : シーケンス型の使用  
+### <a name="example-using-sequence-types"></a>例:シーケンス型の使用  
  この例では、型指定されていない XML 変数に対して複数のクエリを実行しています。 これらのクエリは、シーケンス型の使用方法を示しています。  
   
 ```  

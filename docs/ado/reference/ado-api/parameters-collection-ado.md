@@ -18,12 +18,12 @@ ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28832f7e96ddbb149db5561654d55ef0003551cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dbfff2a8db4405e19eb448e7bd7db5c8ac236f8
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657851"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321798"
 ---
 # <a name="parameters-collection-ado"></a>Parameters コレクション (ADO)
 すべてが含まれています、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)のオブジェクトを[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。  
@@ -45,7 +45,7 @@ ms.locfileid: "47657851"
   
 2.  パラメーターとパラメーターを明示的に追加することをストアド プロシージャを呼び出すときに、**パラメーター**コレクション**追加**、戻り値の出力パラメーターが、に追加される**パラメーター**コレクション。 戻り値にまず追加する必要があります、**パラメーター**コレクション。 使用**Append**に他のパラメーターを追加する、**パラメーター**定義の順序のコレクション。 たとえば、ストアド プロシージャ SPWithParam では、2 つのパラメーターがあります。 最初のパラメーターでは、*で*、adVarChar (20) として定義されている入力パラメーターと 2 番目のパラメーターは、 *OutParam*adVarChar (20) として定義されている出力パラメーターです。 次のコードで戻り値の出力パラメーターを取得することができます。  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  
@@ -55,7 +55,7 @@ ms.locfileid: "47657851"
   
     ccmd.parameters.Append ccmd.CreateParameter(, adInteger, adParamReturnValue, , NULL)   ' return value  
     ccmd.parameters.Append ccmd.CreateParameter("InParam", adVarChar, adParamInput, 20, "hello world")   ' input parameter  
-    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOuput, 20, NULL)   ' output parameter  
+    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOutput, 20, NULL)   ' output parameter  
   
     ccmd.execute()  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47657851"
   
 3.  パラメーターと呼び出すことによって、パラメーターの構成を使用してストアド プロシージャを呼び出すときに、**項目**メソッドを**パラメーター**コレクション、ストアド プロシージャの戻り値の出力パラメーターのことができます取得する、**パラメーター**コレクション。 たとえば、ストアド プロシージャ SPWithParam では、2 つのパラメーターがあります。 最初のパラメーターでは、*で*、adVarChar (20) として定義されている入力パラメーターと 2 番目のパラメーターは、 *OutParam*adVarChar (20) として定義されている出力パラメーターです。 次のコードで戻り値の出力パラメーターを取得することができます。  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  

@@ -13,22 +13,22 @@ ms.assetid: 5b9b2d93-0798-4bac-bbd3-c657e09d9883
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06943ba0892799275fa6c1c479f9066d2e34f3e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 116a9c05069d59e3ae458e232f7451be04411794
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054382"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507863"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>[カスタム メンバー式の作成] (ビジネス インテリジェンス ウィザード)
-  **[カスタム メンバー式の作成]** ページを使用すると、指定したディメンションの属性をカスタム メンバー式列に関連付けることができます。この列には、属性のメンバー値を定義する多元式 (MDX) ステートメントが含まれています。  
+  使用して、**カスタム メンバー式の作成**に指定したディメンションの属性を関連付けるカスタム メンバー式列の列のメンバーの値を定義する多次元式 (MDX) ステートメントを含むページその属性です。  
   
 ## <a name="options"></a>および  
  **属性**  
  カスタム メンバー式に関連付ける属性を選択します。  
   
  **変換元列**  
- **[...]** ボタンをクリックすると、 **[列の選択]** ダイアログ ボックスが表示され、属性に関連付けるカスタム メンバー式列を選択できます。  
+ 参照 をクリックして (**.**) ボタンをクリックする、**列を選択して** ダイアログ ボックスを属性に関連付けるカスタム メンバー式列を選択します。  
   
 ## <a name="see-also"></a>参照  
  [ビジネス インテリジェンス ウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)   

@@ -15,12 +15,12 @@ ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6d91fef3e12a26d7082defa5b579e00dbae4ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09805ab73af76bc55890222fc1ffd0e1857d0f33
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531242"
 ---
 # <a name="batches-of-sql-statements"></a>SQL ステートメントのバッチ
 SQL ステートメントのバッチは、2 つ以上の SQL ステートメントまたは 2 つ以上の SQL ステートメントのグループと同じ効果を 1 つの SQL ステートメントのグループです。 一部の実装で、結果は利用する前にバッチ全体ステートメントを実行します。 これは多くの場合、ネットワーク トラフィックが低下することができ、データ ソースは、SQL ステートメントのバッチの実行を最適化できる場合がありますので、ステートメントを個別に送信するよりも効率的です。 呼び出す他の実装で**SQLMoreResults**バッチの次のステートメントの実行をトリガーします。 ODBC では、次の種類のバッチがサポートされています。  
@@ -40,7 +40,7 @@ SQL ステートメントのバッチは、2 つ以上の SQL ステートメン
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **プロシージャ**プロシージャには、複数の SQL ステートメントが含まれている場合に SQL ステートメントのバッチと見なされます。 たとえば、次の SQL Server 固有のステートメントは、顧客とその顧客の開いているすべての販売注文を含む結果セットに関する情報を含む結果セットを返すプロシージャを作成します。  
+-   **プロシージャ**プロシージャには、複数の SQL ステートメントが含まれている場合に SQL ステートメントのバッチと見なされます。 たとえば、次の SQL Server に固有のステートメントは、顧客とその顧客の開いているすべての販売注文を含む結果セットに関する情報を含む結果セットを返すプロシージャを作成します。  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2d8eb879d23a344e5de6bad3c9fb6042fdadb3e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad3d0d06016fe8684cacaf73286b229a423aa7c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985398"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533662"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,18 +37,18 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="remarks"></a>コメント  
  **ClusterDistance**関数が、入力したケースとその入力したケースの確率の高いクラスターとの間の距離を返します。  
   
- K-Means クラスタリングの場合、どのケースも所属できるのは、メンバーシップの重みが 1.0 のクラスター 1 つだけなので、クラスターの距離は常に 0 になります。 ただし、K-Means では、各クラスターに重心があると想定されています。 マイニング モデル コンテンツ内の入れ子になったテーブル NODE_DISTRIBUTION をクエリしたり参照したりして、重心の値を取得できます。 詳細については、「[クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)」を参照してください。  
+ K-Means クラスタリングの場合、どのケースも所属できるのは、メンバーシップの重みが 1.0 のクラスター 1 つだけなので、クラスターの距離は常に 0 になります。 ただし、K-Means では、各クラスターに重心があると想定されています。 マイニング モデル コンテンツ内の入れ子になったテーブル NODE_DISTRIBUTION をクエリしたり参照したりして、重心の値を取得できます。 詳細については、「 [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)」を参照してください。  
   
  既定の EM クラスタリング手法の場合、クラスター内のすべてのポイントは同程度であると見なされるため、仕様上、クラスターには重心がありません。 値**ClusterDistance**特定のケースと特定のクラスター間*N*は次のように計算されます。  
   
- ClusterDistance(N) =1–(membershipWeight(N))  
+ ClusterDistance(N) =1-(membershipWeight(N))  
   
  または。  
   
- ClusterDistance(N) = 1 – ClusterProbability (N))  
+ ClusterDistance(N) = 1 ClusterProbability (N))  
   
 ## <a name="related-prediction-functions"></a>関連する予測関数  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クラスタ リング モデルを照会するためには、次の追加機能を提供します。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、クラスター モデルに対してクエリを実行するために、次に示す追加の関数が用意されています。  
   
 -   使用して、[クラスター &#40;DMX&#41; ](../dmx/cluster-dmx.md)関数可能性が最も高いクラスターを返します。  
   
@@ -58,7 +58,7 @@ ClusterDistance([<ClusterID expression>])
   
 -   使用して、 [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md)関数を入力したケース可能性を示す 1、0 からメジャーが考慮すると、モデルが存在するが返されませんが、アルゴリズムによって学習します。  
   
-## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>例 1: 最も可能性の高いクラスターまでのクラスターの距離の取得  
+## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>例 1:最も可能性の高いクラスターにクラスターの距離を取得します。  
  次の例は、指定したケースから、そのケースが最も所属している可能性の高いクラスターまでの距離を返します。  
   
 ```  
@@ -88,7 +88,7 @@ NATURAL PREDICTION JOIN
 |--------------|  
 |クラスター 6|  
   
-## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>例 2: 指定したクラスターまでの距離の取得  
+## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>例 2:指定したクラスターまでの距離を取得します。  
  次の構文では、マイニング モデル コンテンツ スキーマ行セットを使用して、マイニング モデル内のクラスターのノードの ID とノードのキャプションの一覧を返します。 クラスター id の引数としてノードのキャプションを使用することができますし、 **ClusterDistance**関数。  
   
 ```  
@@ -129,6 +129,6 @@ NATURAL PREDICTION JOIN
  [クラスター &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [クラスタ リング モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

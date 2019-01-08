@@ -11,12 +11,12 @@ ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e0e98af473babc84863c8e0a1610107843ca76d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f69addfdda05b00ff1f322b526bb656c2c9b317
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128272"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518623"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>スケジュールされたポリシーの複数インスタンスへの配置
   登録済みサーバーを使用すると、スケジュールされたポリシーを集中管理された場所からマネージド サーバーに配置できます。 スケジュールされたポリシーは、ローカル サーバー グループまたは中央管理サーバーから配置できます。  
@@ -94,7 +94,7 @@ ms.locfileid: "48128272"
  このチュートリアルでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 1 つ以上のインスタンスに対して、ベスト プラクティス ポリシーの評価を要求時および定期的に実行する方法について学習しました。  
   
 ## <a name="next"></a>Next  
- このチュートリアルはこれで終了です。 先頭に戻り、次を参照してください。[チュートリアル: ポリシー ベースの管理でのベスト プラクティスの評価](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)します。  
+ このチュートリアルはこれで終了です。 先頭に戻り、次を参照してください。[チュートリアル。ポリシー ベースの管理を使用して、ベスト プラクティスの評価](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)します。  
   
  一覧を表示する[!INCLUDE[ssDE](../includes/ssde-md.md)]チュートリアルでは、クリックして[データベース エンジンのチュートリアル](../relational-databases/database-engine-tutorials.md)します。  
   

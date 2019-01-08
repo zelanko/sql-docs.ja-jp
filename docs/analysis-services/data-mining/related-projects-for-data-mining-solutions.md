@@ -1,5 +1,5 @@
 ---
-title: データ マイニング ソリューションの関連プロジェクト |Microsoft ドキュメント
+title: データ マイニング ソリューションの関連プロジェクト |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f884a7d70447771769ba2d6ff8928234095c7cae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e7a1934a207beebca88e3939a211667e94be976
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019459"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415609"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>データ マイニング ソリューションの関連プロジェクト
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34019459"
  [セマンティック インデックスの作成](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]コンポーネントとデータの準備とトレーニング データ マイニング プロジェクトのフェーズに必要な機能を提供します。 さまざまなデータ クレンジング タスクやデータ準備タスクには、スクリプトをはじめとする他のツールを使用することもできますが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ マイニングに関して多数の利点があります。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ マイニング プロジェクトのデータ準備とトレーニングのフェーズに必要なコンポーネントと機能が用意されています。 さまざまなデータ クレンジング タスクやデータ準備タスクには、スクリプトをはじめとする他のツールを使用することもできますが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ マイニングに関して多数の利点があります。  
   
 -   繰り返し、自動化、分岐、および拡張が可能なワークフローの一部としてタスクを表現できます。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "34019459"
   
  DMX クエリで Reporting Services をデータ ソースとして使用する方法の詳細については、以下のリンクを参照してください。  
   
- [データ マイニング モデル (&) #40";"DMX"&"#41; からのデータを取得します。& #40 です。SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [データ マイニング モデル &#40;DMX&#41; からデータを取得する &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
- [Analysis Services DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
+ [Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [DMX & #40; analysis Services 接続の種類SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [DMX のための Analysis Services の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  ただし、DMX をデータ ソースとして使用する必要はありません。 データ マイニング用の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントでは、予測クエリの結果をリレーショナル データベースに保存することもできます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用して、モデルを更新するためのワークフローを確立している場合は、予測をはじめとするデータ マイニング クエリの結果を SQL Server で保持することで、レポート用の [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] や、DMX とやり取りしないその他のツールを使用できます。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019459"
   
  詳細については、「 [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
   
- フルテキスト インデックスの作成後に保存される単語のバージョンは、圧縮形式のトークンです。 フルテキスト インデックスに対する後続のクエリにより、その言語のルールに基づいて特定の単語の変化形が複数生成されるため、あいまい一致も漏らさず照合されます。 たとえば、格納されているトークンが "run" であっても、クエリ エンジンは "running"、"ran"、および "runner" の各用語も検索します。これらは、原形の単語 "run" からルールどおりに派生した変化形であるためです。  
+ フルテキスト インデックスの作成後に保存される単語のバージョンは、圧縮形式のトークンです。 フルテキスト インデックスに対する後続のクエリにより、その言語のルールに基づいて特定の単語の変化形が複数生成されるため、あいまい一致も漏らさず照合されます。 たとえばが格納されているトークンが"run"、クエリ エンジンも検索用語を"running"、"ran"、および"runner"これらは、定期的に派生原形の単語"run"のため、します。  
   
  ユーザー類義語辞典を作成および構築して、シノニムの格納、検索結果の精度の向上、用語の分類を行うこともできます。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。 詳細については、「 [フルテキスト検索に使用する類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)」を参照してください。  
   

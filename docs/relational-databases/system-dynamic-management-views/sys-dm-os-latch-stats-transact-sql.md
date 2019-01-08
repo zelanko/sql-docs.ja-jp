@@ -19,15 +19,15 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fe8a78047be763aecb898a48a882b8f08d3bfb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734033"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407149"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   すべてのラッチ待機に関する情報を、クラスごとに返します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47734033"
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|ラッチ クラスの名前。|  
 |waiting_requests_count|**bigint**|クラス内のラッチに対する待機数。 このカウンターは、ラッチ待機の開始時に増加します。|  
-|wait_time_ms|**bigint**|クラス内のラッチに対する合計待機時間 (ミリ秒単位)。<br /><br /> **注:** この列が、ラッチ待機中に、ラッチ待機の最後に、5 分ごとに更新されます。|  
+|wait_time_ms|**bigint**|クラス内のラッチに対する合計待機時間 (ミリ秒単位)。<br /><br /> **注:** この列は、ラッチの待機中、5 分ごとに更新されます。またラッチ待機の終了時にも更新されます。|  
 |max_wait_time_ms|**bigint**|メモリ オブジェクトがラッチを待機した最大時間。 この値が著しく大きい場合、内部デッドロックを示している可能性があります。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47734033"
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
   
 ## <a name="remarks"></a>コメント  
- sys.dm_os_latch_stats を使用すると、別のラッチ クラスの待機数や待機時間を相対的に確認することにより、ラッチの競合の発生源を特定できます。 状況によっては、ラッチの競合を自分で解決または緩和できます。 ただし、状況もあります。 が必要になることにお問い合わせください[!INCLUDE[msCoName](../../includes/msconame-md.md)]カスタマー サポート サービス。  
+ sys.dm_os_latch_stats を使用すると、別のラッチ クラスの待機数や待機時間を相対的に確認することにより、ラッチの競合の発生源を特定できます。 状況によっては、ラッチの競合を自分で解決または緩和できます。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービスへの連絡が必要になる場合もあります。  
   
  次のように `DBCC SQLPERF` を使用すると、sys.dm_os_latch_stats の内容をリセットできます。  
   
@@ -60,7 +60,7 @@ GO
  これは、すべてのカウンターを 0 にリセットします。  
   
 > [!NOTE]  
->  これらの統計は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動されると保存されません。 すべてのデータが、前回の統計がリセットされた後、または累積的な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開始されました。  
+>  これらの統計は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動されると保存されません。 すべてのデータは、統計を最後にリセットした後に累積したものか、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動後に累積したものです。  
   
 ## <a name="latches"></a>ラッチ  
  ラッチとは、さまざまな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントで使用される軽量の同期オブジェクトです。 ラッチは、主にデータベース ページを同期するために使用されます。 各ラッチは、1 つのアロケーション ユニットに関連付けられています。  
@@ -166,14 +166,14 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|内部使用のみです。|  
 |SERVICE_BROKER_HOST_NAME|内部使用のみです。|  
 |SERVICE_BROKER_READ_CACHE|内部使用のみです。|  
-|SERVICE_BROKER_WAITFOR_MANAGER| 待機キューのインスタンス レベルのマップを同期するために使用します。 データベースの ID、データベースのバージョン、およびキューの ID の組ごとに 1 つのキューが存在します。 多くの接続が場合に、このクラスのラッチの競合が発生する可能性が:、WAITFOR(RECEIVE) で待ち状態です。呼び出し元 WAITFOR(RECEIVE);WAITFOR タイムアウト。メッセージの受信コミットまたは WAITFOR(RECEIVE); を含むトランザクションをロールバックします。WAITFOR(RECEIVE) 待機状態のスレッドの数を減らすことでの競合を減らすことができます。 |  
+|SERVICE_BROKER_WAITFOR_MANAGER| 待機キューのインスタンス レベルのマップを同期するために使用します。 データベースの ID、データベースのバージョン、およびキューの ID の組ごとに 1 つのキューが存在します。 このクラスのラッチの競合は、多くの接続が場合に発生します。WAITFOR(RECEIVE) で待ち状態です。呼び出し元 WAITFOR(RECEIVE);WAITFOR タイムアウト。メッセージの受信コミットまたは WAITFOR(RECEIVE); を含むトランザクションをロールバックします。WAITFOR(RECEIVE) 待機状態のスレッドの数を減らすことでの競合を減らすことができます。 |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|内部使用のみです。|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|内部使用のみです。|  
 |SERVICE_BROKER_TRANSPORT|内部使用のみです。|  
 |SERVICE_BROKER_MIRROR_ROUTE|内部使用のみです。|  
 |TRACE_ID|内部使用のみです。|  
 |TRACE_AUDIT_ID|内部使用のみです。|  
-|TRACE|内部使用のみです。|  
+|trace|内部使用のみです。|  
 |TRACE_CONTROLLER|内部使用のみです。|  
 |TRACE_EVENT_QUEUE|内部使用のみです。|  
 |TRANSACTION_DISTRIBUTED_MARK|内部使用のみです。|  

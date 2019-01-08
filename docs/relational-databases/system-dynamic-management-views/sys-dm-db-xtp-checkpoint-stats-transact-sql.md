@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 216b04e58d741d3c44cd187ba94eaac7ee791762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdb255570febc6d37bef824958c15422b6fae733
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837800"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503191"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -67,15 +67,15 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |last_closed_checkpoint_ts|**bigint**|終了した前回のチェックポイントのタイムスタンプです。|  
 |hardened_recovery_lsn|**numeric(38)**|回復は、この LSN から開始されます。|  
 |hardened_root_file_guid|**uniqueidentifier**|完了した最後のチェックポイントの結果として書き込まれたルート ファイルの GUID です。|  
-|hardened_root_file_watermark|**bigint**|**内部のみ**します。 どれが最大ルート ファイルの読み取りに有効な (これは、内部的に関連する型にのみ – BSN と呼ばれます)。|  
+|hardened_root_file_watermark|**bigint**|**内部のみ**します。 どの程度が最大ルート ファイルの読み取りに有効な (これは、内部的に関連する型のみ - BSN と呼ばれます)。|  
 |hardened_truncation_lsn|**numeric(38)**|切り捨てのポイントの LSN です。|  
 |log_bytes_since_last_close|**bigint**|最後からのバイトは、ログの現在の末尾を閉じます。|  
 |time_since_last_close_in_ms|**bigint**|以降、チェックポイントの最後の終了時刻。|  
-|current_checkpoint_id|**bigint**|新しい現在のセグメントは、このチェックポイントに割り当てられているされます。 チェックポイントのシステムは、パイプラインです。 現在のチェックポイントはログからのセグメントに割り当てられている中です。 これが、制限に達すると、チェックポイントは、コント ローラーと、新しいものを現在作成して解放されます。|  
+|current_checkpoint_id|**bigint**|新しい現在のセグメントは、このチェックポイントに割り当てられているされます。 チェックポイントのシステムは、パイプラインです。 現在のチェックポイントはログからのセグメントに割り当てられている中です。 制限に達するとそれが、チェックポイントは、コント ローラーと新しいものを現在作成して解放されます。|  
 |current_checkpoint_segment_count|**bigint**|現在のチェックポイントのセグメントの数。|  
 |recovery_lsn_candidate|**bigint**|**内部でのみ**します。 Current_checkpoint_id を閉じるときに、recoverylsn として選択されるように候補。|  
 |outstanding_checkpoint_count|**bigint**|終了するを待機しているパイプラインでのチェックポイントの数。|  
-|closing_checkpoint_id|**bigint**|終了のチェックポイントの ID です。<br /><br /> シリアライザーは、並列で作業しているため、いったんフィールドが完了し、チェックポイントはスレッドを終了して、終了する候補です。 閉じるスレッドは 1 つずつを閉じるだけことができ、終了のチェックポイントが閉じるスレッドが実行されている 1 つであるため順番にあります。|  
+|closing_checkpoint_id|**bigint**|終了のチェックポイントの ID です。<br /><br /> シリアライザーが並列で作業しているため、完了したら、チェックポイントはスレッドを終了して、終了する候補です。 閉じるスレッドは 1 つずつを閉じるだけことができ、終了のチェックポイントが閉じるスレッドが実行されている 1 つであるため順番にあります。|  
 |recovery_checkpoint_id|**bigint**|回復に使用されるチェックポイントの ID です。|  
 |recovery_checkpoint_ts|**bigint**|チェックポイントの復旧のタイムスタンプ。|  
 |bootstrap_recovery_lsn|**numeric(38)**|ブートス トラップの LSN を回復します。|  

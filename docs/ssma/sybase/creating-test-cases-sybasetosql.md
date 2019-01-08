@@ -12,18 +12,18 @@ ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 95a6724ab836fb3dddb54fadc82821ad68f29e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fd443ff2ad58aa503fac2960016cb55f35b8a7f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746360"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514946"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>テスト ケースの作成 (SybaseToSQL)
 テストを作成するのにには、テスト_ケースのウィザードを使用します。 このウィザードを使用して、テストおよび検証オブジェクトを選択し、テストのパラメーターを指定して、テスト_ケースを作成できます。  
   
 ## <a name="starting-the-test-case-wizard"></a>テスト_ケースのウィザードを開始します。  
-テスト_ケースのウィザードを起動する**新しいテスト_ケース.** **テスター**メニュー。  
+テスト_ケースのウィザードを起動する**新しいテスト_ケース.** から、**テスター**メニュー。  
   
 起動すると、ウィザードは、データベース ssmatester2005db または元の Sybase サーバーで (プロジェクトの種類に応じて ssmatester2008db を検索します。 テスト担当者拡張機能のスキーマの補助オブジェクトの格納に使用することをお勧めします。 テスト_ケースが見つかりません。 ssmatester2005db または ssmatester2008db、テスト担当者の拡張機能のデータベースを作成することを提案する ダイアログ ウィンドウが表示されます。 (そのような状況通常発生 SSMA テスターの最初の実行中にします。)  
   

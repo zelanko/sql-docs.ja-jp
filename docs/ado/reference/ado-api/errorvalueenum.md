@@ -16,23 +16,23 @@ ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6ccf5a83cd53b953a9b43c252e90a6e13f1e3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635870"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542598"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO の実行時エラーの種類を指定します。  
   
  エラー番号の 3 つのフォームが表示されます。  
   
--   正の 10 進数、10 進数形式で完全な数の下位 2 バイト。 この数は、既定の Visual Basic エラー メッセージ ダイアログ ボックスに表示されます。 たとえば、実行時エラー '3707' です。  
+-   正 10 進数、2 つの下位バイト 10 進数形式で完全な数。 この数は、既定の Visual Basic エラー メッセージ ダイアログ ボックスに表示されます。 たとえば、実行時エラー '3707' です。  
   
--   負の 10 進 — 完全なエラー番号を 10 進数に変換します。  
+-   負の完全なエラーの数の 10 進数の 10 進数の変換。  
   
--   16 進数、完全なエラー番号の 16 進数表現。 Windows 機能のコードは 4 桁です。 ADO エラー番号の機能のコードは*A*します。例: 0x800***A***0e7b がその例です。  
+-   完全なエラー番号の 16 進数、16 進数表現。 Windows 機能のコードは 4 桁です。 ADO エラー番号の機能のコードは*A*します。以下に例を示します。0x800***A***0e7b がその例です。  
   
 > [!NOTE]
 >  OLE DB エラーは、ADO アプリケーションに渡すことがあります。 これらを識別しての Windows 機能のコードで通常、 *4*します。 たとえば、0x800***4***します。  

@@ -10,23 +10,23 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: bf1d3b2b494377eb964f4a30ea97a48bd1dfcff7
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 37cd2269d6d8fe413b730a111ad0a5f604ed8994
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269526"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408879"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: moniker range="= sql-server-2017 || = sqlallproducts-allversions"
-SQL Server は SQL Server 2017 以降では、Linux で実行されます。 同じ SQL Server データベース エンジンです。オペレーティング システムに関係なく、類似した多くの機能とサービスを備えています。
+SQL Server は SQL Server 2017 以降では、Linux で実行されます。 同じ SQL Server データベース エンジンのような多くの機能と、オペレーティング システムに関係なくサービスにすることをお勧めします。
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-SQL Server 2019 プレビューは、Linux で実行されます。 同じ SQL Server データベース エンジンです。オペレーティング システムに関係なく、類似した多くの機能とサービスを備えています。 このリリースに関する詳細については、次を参照してください。[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)します。
+SQL Server 2019 プレビューは、Linux で実行されます。 同じ SQL Server データベース エンジンのような多くの機能と、オペレーティング システムに関係なくサービスにすることをお勧めします。 このリリースに関する詳細については、次を参照してください。[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)します。
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"

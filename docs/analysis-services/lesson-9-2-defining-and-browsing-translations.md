@@ -1,5 +1,5 @@
 ---
-title: 定義と翻訳の表示 |Microsoft ドキュメント
+title: 定義と翻訳の表示 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a63fd44d7ec62b9033f4371e7e2d38306757c647
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8d5e7cd1d1696624ebb6fe919cfa3b1ba6ee5c7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018919"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535013"
 ---
-# <a name="lesson-9-2---defining-and-browsing-translations"></a>レッスン 9-2-の定義と翻訳の表示
+# <a name="lesson-9-2---defining-and-browsing-translations"></a>レッスン 9-2-定義と翻訳の表示
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 翻訳とは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のオブジェクトの名前を特定の言語で表現することです。 オブジェクトには、メジャー グループ、メジャー、ディメンション、属性、階層、KPI、アクション、計算されるメンバーなどがあります。 翻訳によって、複数言語を使用するクライアント アプリケーションをサーバーがサポートできるようになります。 この場合、クライアントは、ロケール識別子 (LCID) を [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスに渡します。 のインスタンスはこの LCID に基づいて、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトにメタデータを提供する際に使用する翻訳セットを判別します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトにその言語の翻訳が含まれていない場合、または特定のオブジェクトの翻訳が含まれていない場合は、オブジェクトのメタデータがクライアントに送り返される際に既定の言語が使用されます。 たとえば、フランスのビジネス ユーザーが、フランス語にロケール設定されたワークステーションからキューブにアクセスした場合、該当する項目がフランス語に翻訳されているのであれば、メンバー キャプションとメンバー プロパティ値がフランス語で表示されます。 一方、ドイツのビジネス ユーザーが、ドイツ語にロケール設定されたワークステーションから同じキューブにアクセスすると、メンバー キャプションとメンバー プロパティ値はドイツ語で表示されます。 詳しくは、「 [Dimension Translations](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)」(ディメンションの翻訳)、「 [キューブの翻訳](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)」、「 [Analysis Services での翻訳のサポート](../analysis-services/translation-support-in-analysis-services.md)」を参照してください。  
@@ -45,9 +45,9 @@ ms.locfileid: "34018919"
   
 6.  **Month Name** 属性の **Caption** オブジェクトの行で、 **[スペイン語 (スペイン)]** 翻訳列に「 **Mes del Año** 」と入力し、 **[フランス語 (フランス)]** 翻訳列に「 **Mois d'Année** 」と入力します。  
   
-    これらの翻訳を入力すると、参照ボタン (**[...]**) が表示されます。 この参照ボタンをクリックすると、属性階層の各メンバーの翻訳を入力する基になるテーブルの列を指定できます。  
+    これらの翻訳を省略記号を入力すると (**.**) が表示されます。 この参照ボタンをクリックすると、属性階層の各メンバーの翻訳を入力する基になるテーブルの列を指定できます。  
   
-7.  **Month Name**属性の **[スペイン語 (スペイン)]** 翻訳に表示される参照ボタン ( **[...]** ) をクリックします。  
+7.  省略記号をクリックします (**.**) の**スペイン語 (スペイン)** の翻訳、 **Month Name**属性。  
   
     **[属性データの翻訳]** ダイアログ ボックスが表示されます。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34018919"
   
     ![属性データの翻訳 ダイアログ ボックス](../analysis-services/media/l9-translations-4.gif "属性データの翻訳 ダイアログ ボックス")  
   
-9. **[OK]** をクリックします。次に、**Month Name**属性の **[フランス語 (フランス)]** 翻訳に表示される参照ボタン ( **[...]** ) をクリックします。  
+9. をクリックして**OK**、クリックして、省略記号 (**...**) の**フランス語 (フランス)** の翻訳、 **Month Name**属性。  
   
 10. **[翻訳列]** ボックスの一覧で **[FrenchMonthName]** をクリックして、 **[OK]** をクリックします。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34018919"
   
     次の図のように、各キューブ オブジェクトの既定の言語でメタデータが表示されます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブの既定の言語は英語です。  
   
-    ![既定の言語の翻訳 タブで](../analysis-services/media/l9-translations-5.gif "既定の言語の翻訳 タブの")  
+    ![既定の言語の翻訳 タブで](../analysis-services/media/l9-translations-5.gif "既定の言語の翻訳 タブ")  
   
 2.  **[翻訳]** タブのツール バーで **[新しい翻訳]** ボタンをクリックします。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34018919"
   
     メタデータ ペインのアイテムが再設定されます。 メタデータ ペインのアイテムが再設定されると、Internet Sales-Sales Amount メジャーが [Internet Sales] 表示フォルダーに表示されなくなります。 その代わり、次の図のように **[Ventas del lnternet]** という新しい表示フォルダーにスペイン語で表示されます。  
   
-    ![メタデータ ペインに Repopulated](../analysis-services/media/l9-translations-6.gif "Repopulated メタデータ ペイン")  
+    ![メタデータ ペインの Repopulated](../analysis-services/media/l9-translations-6.gif "Repopulated メタデータ ペイン")  
   
 6.  メタデータ ペインで、 **[Cantidad de las Ventas del Internet]** を右クリックし、 **[クエリに追加]** をクリックします。  
   
@@ -117,14 +117,14 @@ ms.locfileid: "34018919"
   
     次の図のように、月の名前がスペイン語で表示されます。  
   
-    ![月の名前をスペイン語のデータ ペインで](../analysis-services/media/l9-translations-7.gif "スペイン語のデータ ペインでの月の名前")  
+    ![月の名前をスペイン語でデータ ペインで](../analysis-services/media/l9-translations-7.gif "データ ペインにスペイン語で月の名前")  
   
 10. ツール バーの **[言語]** ボックスの一覧で **[フランス語 (フランス)]** をクリックします。  
   
     月の名前がフランス語で表示され、メジャー名もフランス語で表示されます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 10: 管理ロールの定義](../analysis-services/lesson-10-defining-administrative-roles.md)  
+[レッスン 10:管理ロールの定義](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>参照  
 [Dimension Translations](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  

@@ -19,19 +19,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3c4b57cd20addca8091bfef2bf3ecaf6e157817
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844670"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409739"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   キャッシュされた関数のパフォーマンス統計が集計を返します。 ビューには、各キャッシュされている関数のプランの 1 つの行が返され、行の有効期間は、関数が残っている限りキャッシュします。 関数がキャッシュから削除されると、対応する行はこのビューから削除します。 その時点では、パフォーマンス統計 SQL トレース イベントが発生するのような**sys.dm_exec_query_stats**します。 メモリ内の関数と CLR のスカラー関数を含む、スカラー関数に関する情報を返します。 テーブル値関数についての情報は返しません。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、動的管理ビューは、データベースの包含に影響を与えるまたはユーザーがアクセスを他のデータベースに関する情報が公開される情報を公開できません。 この情報が公開されないように、接続されたテナントに属していないデータを含む行はすべてフィルターで除外されます。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、動的管理ビューでデータベースの包含に影響を与える情報を公開することや、ユーザーがアクセスできる他のデータベースに関する情報を公開することはできません。 この情報を公開することを避けるため、接続されているテナントに属していないデータが含まれるすべての行はフィルターで除外します。  
   
 > [!NOTE]
 > 最初のクエリの**sys.dm_exec_function_stats**サーバーで現在実行中のワークロードがある場合、不正確な結果を生成可能性があります。 クエリを再実行すると、より正確な結果を確認できます。  
@@ -41,8 +41,8 @@ ms.locfileid: "47844670"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|関数が存在するデータベースの ID。|  
 |**object_id**|**int**|関数のオブジェクト id 番号。|  
-|**type**|**char(2)**|オブジェクトの型: FN = スカラー値関数|  
-|**type_desc**|**nvarchar(60)**|オブジェクトの種類の説明: SQL_SCALAR_FUNCTION|  
+|**type**|**char(2)**|次のいずれかのオブジェクトの種類。 FN = スカラー値関数|  
+|**type_desc**|**nvarchar(60)**|オブジェクトの種類の説明です。SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|これでのクエリと関連付けるために使用できる**sys.dm_exec_query_stats**するは、この関数内から実行されました。|  
 |**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値で使用できる、 **sys.dm_exec_cached_plans**動的管理ビュー。<br /><br /> 0x000 ときに、ネイティブ コンパイルの関数のクエリがメモリ最適化テーブルは常になります。|  
 |**cached_time**|**datetime**|関数がキャッシュに追加された時刻です。|  

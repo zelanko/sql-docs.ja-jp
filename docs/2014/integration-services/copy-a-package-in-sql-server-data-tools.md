@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], copying
@@ -16,12 +15,12 @@ ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 023ffdb16c16c54093190a370c3d8a52c068104b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fe21560f7cf765c6e4af10353535576dca3b5df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229322"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754774"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>SQL Server Data Tools でのパッケージのコピー
   このトピックでは、既存のパッケージをコピーして新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを作成する方法、および新しいパッケージの `Name` プロパティと `GUID` プロパティを更新する方法について説明します。  
@@ -54,7 +53,7 @@ ms.locfileid: "48229322"
 11. **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックし、新しいパッケージを保存します。  
   
 ## <a name="see-also"></a>参照  
- [パッケージのコピーを保存します。](../../2014/integration-services/save-a-copy-of-a-package.md)   
+ [パッケージのコピーを保存する](../../2014/integration-services/save-a-copy-of-a-package.md)   
  [SQL Server データ ツールでのパッケージの作成](create-packages-in-sql-server-data-tools.md)   
  [Integration Services &#40;SSIS&#41; パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)  
   

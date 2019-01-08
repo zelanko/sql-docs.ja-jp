@@ -14,12 +14,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90bc2c9f6f268bf03904d768fd25b25b3ade3fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157993"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518258"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server のクラウド アダプター
   クラウド アダプター サービスは、Windows Azure 仮想マシン上で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を準備する一環として作成されます。 クラウド アダプター サービスは、最初の実行時に自己署名 SSL 証明書を生成し、 **Local System** アカウントとして実行されます。 その際に、自身を構成するために使用される構成ファイルを生成します。 クラウド アダプターは、Windows ファイアウォール ルールを作成し、既定のポート 11435 で着信する TCP 接続を許可します。  
@@ -33,7 +33,7 @@ ms.locfileid: "48157993"
   
 -   クラウド アダプター Web サービスは **ローカル システム** アカウントとして実行され、タスクを実行する前にクライアントの資格情報を確認します。 クライアントによって指定された資格情報は、ローカルのメンバーであるアカウントに属する必要があります**管理者**リモート コンピューターでグループ化します。  
   
--   クラウド アダプターでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証のみがサポートされます。  
+-   クラウド アダプターでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証のみがサポートされます。  
   
 -   クラウド アダプターは、ローカル コンピューター上のコマンドを実行するために sa アカウントではなく仮想マシンのローカル管理者アカウントを使用します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48157993"
 ## <a name="cloud-adapter-configuration-settings"></a>クラウド アダプター構成の設定  
  クラウド アダプターの設定を変更するには、クラウド アダプターの構成の詳細を使用します。  
   
--   **構成ファイルの既定のパス**– C:\Program files \microsoft SQL server \120\tools\cloudadapter\  
+-   **構成ファイルの既定のパス**-C:\Program files \microsoft SQL server \120\tools\cloudadapter\  
   
 -   **構成ファイルのパラメーター** -  
   
@@ -62,9 +62,9 @@ ms.locfileid: "48157993"
   
     -   \<設定 >  
   
--   **構成の詳細** – 証明書の値は次のとおりです。  
+-   **証明書の詳細**-証明書が、次の値。  
   
-    -   サブジェクト:"CN = CloudAdapter\<VMName >、DC = SQL Server, DC = Microsoft"  
+    -   件名に"CN = CloudAdapter\<VMName >、DC = SQL Server, DC = Microsoft"  
   
     -   証明書ではサーバー認証 EKU のみを有効にします。  
   
@@ -72,20 +72,20 @@ ms.locfileid: "48157993"
   
  **構成ファイルの値**:  
   
-|設定|値|既定|コメント|  
+|設定|値|既定値|コメント|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|指定しない場合、11435 が使用されます。|  
 |WebServiceCertificate|Thumbprint|空|空の場合、新しい自己署名証明書が生成されます。|  
 |ExposeExceptionDetails|True/False|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>クラウド アダプターのトラブルシューティング  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクラウド アダプターのトラブルシューティングを行うには、次の情報を使用します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のクラウド アダプターのトラブルシューティングを行うには、次の情報を使用します。  
   
--   **エラー処理とログ記録** : エラーと状態メッセージがアプリケーション イベント ログに書き込まれます。  
+-   **エラー処理とログ記録**-はエラーと状態メッセージ アプリケーション イベント ログに書き込まれます。  
   
--   **トレース、イベント** : すべてのイベントがアプリケーション イベント ログに書き込まれます。  
+-   **トレース、イベント**-すべてのイベントには、アプリケーション イベント ログが書き込まれます。  
   
--   **コントロール、構成**– である構成ファイルを使用します。 C:\Program files \microsoft SQL Server\120\Tools\CloudAdapter\\します。  
+-   **コントロール、構成**-である構成ファイルを使用します。C:\Program files \microsoft SQL Server\120\Tools\CloudAdapter\\します。  
   
 |[エラー]|エラー ID|原因|解決策|  
 |-----------|--------------|-----------|----------------|  

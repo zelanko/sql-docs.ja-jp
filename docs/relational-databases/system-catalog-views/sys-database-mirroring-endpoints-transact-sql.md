@@ -23,31 +23,31 @@ ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4a791f5d47382e78ce9bbfe34d939cffc273515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa757203ba82794a0564e50c715134e502c6ac1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734600"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538074"
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベースのインスタンスのミラーリング エンドポイントの 1 つの行を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのデータベース ミラーリング エンドポイントごとに 1 行のデータを格納します。  
   
 > [!NOTE]  
 >  データベース ミラーリング エンドポイントには、ミラーリング監視サーバーとデータベース ミラーリング パートナー間のセッションと Always On 可用性グループのプライマリ レプリカとセカンダリ レプリカ間のセッションの両方がサポートしています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<列を継承 >**|—|列を継承**sys.endpoints** (詳細については、次を参照してください。 [sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md))。|  
-|**role**|**tinyint**|ミラーリング ロール。次のいずれかになります。<br /><br /> **0** = なし<br /><br /> **1**パートナーを =<br /><br /> **2** = ミラーリング監視サーバー<br /><br /> **3** = all<br /><br /> 注: この値はデータベース ミラーリングのみ関連します。|  
-|**role_desc**|**nvarchar(60)**|ミラーリング ロールの説明。次のいずれかになります。<br /><br /> **NONE**<br /><br /> **パートナー**<br /><br /> **ミラーリング監視サーバー**<br /><br /> **ALL**<br /><br /> 注: この値はデータベース ミラーリングのみ関連します。|  
+|**\<列を継承 >**|-|列を継承**sys.endpoints** (詳細については、次を参照してください。 [sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md))。|  
+|**role**|**tinyint**|ミラーリング ロール。次のいずれかになります。<br /><br /> **0** = なし<br /><br /> **1**パートナーを =<br /><br /> **2** = ミラーリング監視サーバー<br /><br /> **3** = all<br /><br /> 注:この値は、データベース ミラーリングのみに有効です。|  
+|**role_desc**|**nvarchar(60)**|ミラーリング ロールの説明。次のいずれかになります。<br /><br /> **NONE**<br /><br /> **パートナー**<br /><br /> **ミラーリング監視サーバー**<br /><br /> **ALL**<br /><br /> 注:この値は、データベース ミラーリングのみに有効です。|  
 |**is_encryption_enabled**|**bit**|**1**その暗号化が有効になっていることを意味します。<br /><br /> **0**その暗号化が無効になっていることを意味します。|  
 |**connection_auth**|**tinyint**|エンドポイントへの接続に必要な接続認証の種類。次のいずれかになります。<br /><br /> **1** - NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -ネゴシエート<br /><br /> **4** -証明書<br /><br /> **5** -NTLM、CERTIFICATE<br /><br /> **6** -KERBEROS、CERTIFICATE<br /><br /> **7** -NEGOTIATE、CERTIFICATE<br /><br /> **8** -CERTIFICATE、NTLM<br /><br /> **9** -証明書、KERBEROS<br /><br /> **10** -CERTIFICATE、NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|エンドポイントへの接続に必要な認証の種類の説明。次のいずれかになります。<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE|  
 |**certificate_id**|**int**|認証で使用される証明書の ID (存在する場合)。<br /><br /> 0 = Windows 認証が使用されます。|  
-|**encryption_algorithm**|**tinyint**|暗号化アルゴリズム。次のいずれかになります。<br /><br /> **0** – NONE<br /><br /> **1** – RC4<br /><br /> **2** – AES<br /><br /> **3** – NONE、RC4<br /><br /> **4** – NONE、AES<br /><br /> **5** – RC4、AES<br /><br /> **6** – AES、RC4<br /><br /> **7** – NONE、RC4、AES<br /><br /> **8** – NONE、AES、RC4|  
+|**encryption_algorithm**|**tinyint**|暗号化アルゴリズム。次のいずれかになります。<br /><br /> **0** -なし<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -NONE、RC4<br /><br /> **4** -NONE、AES<br /><br /> **5** -RC4、AES<br /><br /> **6** -AES、RC4<br /><br /> **7** -NONE、RC4、AES<br /><br /> **8** -NONE、AES、RC4|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|暗号化アルゴリズムの説明。次のいずれかになります。<br /><br /> なし<br /><br /> RC4<br /><br /> AES<br /><br /> NONE、RC4<br /><br /> NONE、AES<br /><br /> RC4、AES<br /><br /> AES、RC4<br /><br /> NONE、RC4、AES<br /><br /> NONE、AES、RC4|  
   
 ## <a name="remarks"></a>コメント  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072066"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400635"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -69,7 +69,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit NOT NULL**|この列が、参照情報のために追加された余分な列で、実際に結果セットには表示されないかどうかを示します。|  
-|**column_ordinal**|**int NOT NULL**|結果セット内の列の位置を示す序数を格納します。 最初の列の位置は 1 で指定されます。|  
+|**column_ordinal**|**int NOT NULL**|結果セット内の列の位置を示す序数を格納します。 最初の列の位置は 1 として指定されます。|  
 |**name**|**sysname NULL**|列の名前を確認できる場合は、その名前を格納します。 それ以外の場合、NULL が格納されます。|  
 |**is_nullable**|**bit NOT NULL**|列が NULL を許可する場合は 1、NULL を許可しない場合は 0、NULL を許可するかどうかを特定できない場合は 1 を格納します。|  
 |**system_type_id**|**int NOT NULL**|Sys.types で指定された列のデータ型の system_type_id を格納します。 CLR 型の場合は、system_type_name 列が NULL を返しても、この列は値 240 を返します。|  
@@ -259,7 +259,7 @@ ELSE
     SELECT a FROM t2;  
 ```  
   
- 結果: エラー、型の不一致 (**int**と**smallint**)。  
+ 結果:エラー、型の不一致 (**int**と**smallint**)。  
   
 #### <a name="column-name-cannot-be-determined"></a>列名の特定不可  
  考えられる最初の結果セットの間で、列の同じ可変長型の長さ、NULL 値の許容属性、列名が異なります。  
@@ -301,7 +301,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 結果: エラー、型の不一致 (**varchar (10)** と**nvarchar (10)**)。  
+ 結果:エラー、型の不一致 (**varchar (10)** と**nvarchar (10)**)。  
   
 #### <a name="result-set-can-return-an-error"></a>結果セットがエラーを返す  
  最初の結果セットがエラーまたは結果セットです。  
@@ -355,7 +355,7 @@ IF(1=1)
 EXEC(@SQL); '  
 ```  
   
- 結果: エラー。 動的 SQL のため、結果を検出できません。  
+ 結果:エラー状態。 動的 SQL のため、結果を検出できません。  
   
 #### <a name="result-set-specified-by-user"></a>ユーザー指定の結果セット  
  最初の結果セットがユーザーにより手動で指定されています。  
@@ -373,7 +373,7 @@ EXEC(@SQL)
     ); '  
 ```  
   
- 結果: Column1 **bigint NOT NULL**  
+ 結果:Column1 **bigint NOT NULL**  
   
 #### <a name="error-caused-by-a-ambiguous-result-set"></a>あいまいな結果セットによるエラー  
  この例では、user1 という名前の別のユーザーが列を含む既定のスキーマ s1 内の t1 という名前のテーブル (、 **int NOT NULL**)。  
@@ -387,7 +387,7 @@ N'
 , @params = N'@p int'  
 ```  
   
- 結果: エラー。 t1 は dbo.t1 または s1.t1、それぞれの列の数が異なるかを指定できます。  
+ 結果:エラー状態。 t1 は dbo.t1 または s1.t1、それぞれの列の数が異なるかを指定できます。  
   
 #### <a name="result-even-with-ambiguous-result-set"></a>あいまいな結果セットによる結果  
  前の例と同じ前提を使用します。  

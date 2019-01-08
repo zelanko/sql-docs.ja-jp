@@ -18,17 +18,17 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86ddad2fe62bcd84c55cd97d3765dc898db8e39f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3647937630b259d60670cc470bbd1014dd288404
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108252"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513340"
 ---
 # <a name="use-the-sqlcmd-utility"></a>sqlcmd ユーティリティの使用
   `sqlcmd` ユーティリティは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびスクリプトを対話形式でアドホック実行したり、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト タスクを自動化したりするためのコマンドライン ユーティリティです。 `sqlcmd` を対話形式で使用したり、`sqlcmd` を使用して実行できるスクリプト ファイルを作成したりするには、ユーザーが [!INCLUDE[tsql](../../includes/tsql-md.md)] を理解している必要があります。 `sqlcmd` ユーティリティは一般的に次のように使用されます。  
   
--   コマンド プロンプトでの操作と同様、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを対話形式で入力します。 結果はコマンド プロンプトに表示されます。 コマンド プロンプト ウィンドウを開くには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントします。次に **[アクセサリ]** をポイントし、 **[コマンド プロンプト]** をクリックします。 コマンド プロンプトで「`sqlcmd`必要なオプション リストが続きます。 サポートされているオプションの完全な一覧については`sqlcmd`を参照してください[sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)します。  
+-   コマンド プロンプトでの操作と同様、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを対話形式で入力します。 結果はコマンド プロンプトに表示されます。 コマンド プロンプト ウィンドウを開くには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントします。次に **[アクセサリ]** をポイントし、 **[コマンド プロンプト]** をクリックします。 コマンド プロンプトで「`sqlcmd`」と入力し、その後に必要なオプションのリストを入力します。 サポートされているオプションの完全な一覧については`sqlcmd`を参照してください[sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)します。  
   
 -   実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを 1 つ指定するか、実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの入ったテキスト ファイルをユーティリティに指定して、`sqlcmd` ジョブを実行します。 出力先はコマンド プロンプトにすることもできますが、通常はテキスト ファイルに出力されます。  
   
@@ -110,9 +110,9 @@ ms.locfileid: "48108252"
   
  入力ファイルやクエリを指定せずにこのコマンドを実行すると、`sqlcmd` は指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続した後、新しい行に `1>` と表示し、その隣でアンダースコアを点滅させます。これを `sqlcmd` プロンプトと呼びます。 `1` は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの最初の行であることを示します。この `sqlcmd` プロンプトが [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの入力開始位置になります。  
   
- `sqlcmd` プロンプトでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと、`sqlcmd` や `GO` などの `EXIT` コマンドの両方を入力できます。 各 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、ステートメント キャッシュと呼ばれるバッファーに格納されます。 これらのステートメントに送信される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を入力した後、`GO`コマンドし、ENTER キーを押します。 終了する`sqlcmd`、型`EXIT`または`QUIT`新しい行の先頭。  
+ `sqlcmd` プロンプトでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと、`sqlcmd` や `GO` などの `EXIT` コマンドの両方を入力できます。 各 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、ステートメント キャッシュと呼ばれるバッファーに格納されます。 `GO` コマンドを入力し、Enter キーを押すと、これらのステートメントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信されます。 終了する`sqlcmd`、型`EXIT`または`QUIT`新しい行の先頭。  
   
- ステートメント キャッシュをクリアするには、入力`:RESET`します。 入力`^C`により`sqlcmd`を終了します。 `^C` は、`GO` コマンドが実行された後に、ステートメント キャッシュの実行を停止するためにも使用できます。  
+ ステートメント キャッシュをクリアするには、「`:RESET`」と入力します。 入力`^C`により`sqlcmd`を終了します。 `^C` は、`GO` コマンドが実行された後に、ステートメント キャッシュの実行を停止するためにも使用できます。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 入力して、対話型セッションでは、入力したステートメントを編集できる、 **: ED**コマンドと`sqlcmd`プロンプト。 起動したエディターで [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを編集して、エディターを終了すると、変更された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがコマンド ウィンドウに表示されます。 入力`GO`therevised を実行する[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48108252"
   
  これは、フォルダー `C:\` が現在のフォルダーであり、ファイル名を指定すると Windows によってそのフォルダー内のファイルが検索されることを意味します。  
   
- 型`sqlcmd`の既定のインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカル コンピューターでコマンド プロンプトのコンテンツ ウィンドウになります。  
+ 「`sqlcmd`」と入力して、ローカル コンピューターの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスに接続します。コマンド プロンプト ウィンドウの内容は次のようになります。  
   
  `C:\>sqlcmd`  
   
@@ -511,21 +511,21 @@ ms.locfileid: "48108252"
  Windows 資格情報を使用して接続し、通信を暗号化する:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Windows 資格情報を使用して接続し、サーバーの証明書を信頼する:  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  Windows 資格情報を使用して接続し、通信を暗号化して、サーバーの証明書を信頼する:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -534,28 +534,28 @@ SQLCMD –E –N –C
  Windows 資格情報を使用して接続し、通信を暗号化して、サーバーの証明書を信頼する:  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  Windows 資格情報を使用して接続し、通信を暗号化して、サーバーの証明書を信頼する:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Windows 資格情報を使用して接続し、通信を暗号化して、サーバーの証明書を信頼する:  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -T  
   
 ```  
   
  Windows 資格情報を使用して接続し、通信を暗号化して、サーバーの証明書を信頼する:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

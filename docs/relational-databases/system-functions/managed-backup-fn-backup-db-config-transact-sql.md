@@ -21,17 +21,17 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d731c5fbb7a90e69b7e1b1502411f57e80219892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae0d84ba18a350adb47ca9a9aeeaf966a90af2a8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687230"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409579"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  0、1 つ以上の行を返す[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成設定。 指定されたデータベースに対して 1 行を返すか、インスタンス上で [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]によって構成されたすべてのデータベースの情報を返します。  
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の構成設定を含む 0 行または 1 行以上の行を返します。 指定されたデータベースに対して 1 行を返すか、インスタンス上で [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]によって構成されたすべてのデータベースの情報を返します。  
   
  このストアド プロシージャを使用すると、SQL Server のインスタンス上の特定のデータベースまたはすべてのデータベースの現在の [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の構成設定を確認または決定することができます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47687230"
 ## <a name="syntax"></a>構文  
   
 ```sql  
-managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)  
+managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
 ##  <a name="Arguments"></a> 引数  
@@ -56,11 +56,11 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |is_availability_database|BIT|データベースが可用性グループに参加しているかどうか。 値が 1 の場合は、データベースが可用性データベースであることを示します。0 の場合は、可用性データベースではないことを示します。|  
 |is_dropped|BIT|値が 1 の場合は、削除されたデータベースであることを示します。|  
 |credential_name|SYSNAME|ストレージ アカウントへの認証に使用された SQL 資格情報の名前。 NULL 値は、SQL 資格情報が設定されていないことを示します。|  
-|retention_days|INT|現在の保有期間 (日数)。 NULL 値が示す[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]このデータベース用に構成されたことはありません。|  
-|is_managed_backup_enabled|INT|示すかどうか[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]このデータベースが現在有効です。 値 1 では、ことを示します[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]現在有効になって 0 の値と[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]はこのデータベースを無効になります。|  
+|retention_days|INT|現在の保有期間 (日数)。 NULL 値は、このデータベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が構成されていないことを示します。|  
+|is_managed_backup_enabled|INT|このデータベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が現在有効になっているかどうかを示します。 値が 1 の場合は、このデータベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が現在有効であることを示します。0 の場合は、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が無効であることを示します。|  
 |storage_url|NVARCHAR (1024)|ストレージ アカウントの URL。|  
 |Encryption_algorithm|NCHAR (20) 型|バックアップを暗号化するときに使用する、現在の暗号化アルゴリズムを返します。|  
-|Encryptor_type|NCHAR(15)|暗号化機能の設定 (証明書または非対称キー) を返します。|  
+|Encryptor_type|NCHAR(15)|暗号化機能の設定が返されます。証明書キーまたは非対称キー。|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|証明書または非対称キーの名前。|  
   
 ## <a name="security"></a>セキュリティ  
@@ -69,7 +69,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
  メンバーシップが必要です、 **db_backupoperator**を持つデータベース ロール**ALTER ANY CREDENTIAL**アクセス許可。 ユーザーが拒否されていない必要があります**VIEW ANY DEFINITION**アクセス許可。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、"TestDB" の [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の構成が返されます。  
+ 次の例を返します、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 'TestDB' の構成  
   
  各コードでは、言語属性フィールドで "tsql" を選択します。  
   
@@ -79,7 +79,7 @@ GO
 SELECT * FROM managed_backup.fn_backup_db_config('TestDB')  
 ```  
   
- 次の例を返します、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]で実行される SQL Server のインスタンス上のすべてのデータベースに構成します。  
+ 次の例では、実行されている SQL Server のインスタンス上にあるすべてのデータベースの [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の構成が返されます。  
   
 ```  
 Use msdb  

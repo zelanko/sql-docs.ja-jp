@@ -13,12 +13,12 @@ ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 70ebcc5773d17f6f0f6fe714367f4bf487f3a0db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c718dd14e1c7d2fc508efa403a9abfbcbae100d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686270"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205811"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out でパッケージを実行する
 Integration Services サーバーにパッケージを配置すると、次のいずれかの方法を使用して Scale Out でそれらのパッケージを実行できます。
@@ -33,7 +33,7 @@ Integration Services サーバーにパッケージを配置すると、次の�
 
 1. [Scale Out でパッケージを実行] ダイアログ ボックスを開きます。
 
-    [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] で、Integration Services サーバーに接続します。 オブジェクト エクスプローラーで、ツリーを展開し、 **[Integration Services カタログ]** のノードを表示します。 **SSISDB** ノード、プロジェクト、または実行するパッケージを右クリックし、 **[Execute in Scale Out (Scale Out で実行)]** をクリックします。
+    [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]で、Integration Services サーバーに接続します。 オブジェクト エクスプローラーで、ツリーを展開し、 **[Integration Services カタログ]** のノードを表示します。 **SSISDB** ノード、プロジェクト、または実行するパッケージを右クリックし、 **[Execute in Scale Out (Scale Out で実行)]** をクリックします。
 
 2. パッケージを選択してオプションを設定します。
 
@@ -117,7 +117,7 @@ Scale Out でパッケージを実行するには、次のアクセス許可の�
 
 この既定の実行モードを設定したら、`[catalog].[create_execution]` ストアド プロシージャを呼び出すときに、**@runinscaleout** パラメーターを指定する必要がなくなります。 パッケージは、Scale Out で自動的に実行されます。 
 
-![実行モード](media\exe-mode.PNG)
+![実行モード](media/exe-mode.PNG)
 
 パッケージが既定で Scale Out モードで実行されなくなるように、既定の実行モードを元に戻すには、**[サーバー全体の既定の実行モード]** を **[サーバー]** に設定します。
 

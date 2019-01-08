@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cf7c48e09fc0ade7db65e2d67984be07914df90d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 71fee8fa84355217ca7cf3099272c4cf2aa8a487
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664072"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397595"
 ---
 # <a name="sysdmpdwsqlrequests-transact-sql"></a>sys.dm_pdw_sql_requests (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "51664072"
 |error_id|**nvarchar(36)**|エラーの一意識別子は、存在する場合に、このクエリの配布に関連付けられました。|Error_id を参照してください。 [sys.dm_pdw_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)します。 エラーが発生していない場合は、NULL に設定します。|  
 |start_time|**datetime**|クエリでは、配布は実行を開始した時刻。|このクエリの分布が属している小さいまたは現在の時刻に等しいと大きいまたは等しい start_time のクエリのステップ|  
 |end_time|**datetime**|このクエリの分布の実行完了したが取り消された場合、または失敗したの時間です。|以上の開始時刻、またはクエリの分布が継続的なまたはキューに置かれた場合は NULL に設定します。|  
-|total_elapsed_time|**int**|クエリの配布が実行されている、ミリ秒単位で時間を表します。|大きいまたは 0 を設定します。 Start_time のデルタに等しいと end_time 完了済み、失敗、またはクエリの分布が取り消されました。<br /><br /> Total_elapsed_time では、整数の最大値を超えると、total_elapsed_time 引き続き、最大値になります。 この状態が「、最大値を超過しました」警告を生成します。<br /><br /> 最大値をミリ秒単位は 24.8 日に相当します。|  
+|total_elapsed_time|**int**|クエリの配布が実行されている、ミリ秒単位で時間を表します。|大きいまたは 0 を設定します。 Start_time のデルタに等しいと end_time 完了済み、失敗、またはクエリの分布が取り消されました。<br /><br /> Total_elapsed_time では、整数の最大値を超えると、total_elapsed_time 引き続き、最大値になります。 この状態が"、最大値を超過しました"警告を生成します。<br /><br /> 最大値をミリ秒単位は 24.8 日に相当します。|  
 |row_count|**bigint**|行の数は、変更されたか、このクエリの分布を読み取りません。|CREATE TABLE や DROP TABLE などのデータを取得または変更しない操作の場合は-1。|  
 |spid|**int**|クエリの配布を実行している SQL Server インスタンス上のセッション id です。||  
 |command|**nvarchar (4000)**|このクエリの配布用のコマンドの完全なテキスト。|有効なクエリまたは要求文字列。|  

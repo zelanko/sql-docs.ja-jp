@@ -1,5 +1,5 @@
 ---
-title: 不規則階層 |Microsoft ドキュメント
+title: 不規則階層 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c5eb53a8ae3ff25b7c0b4d390d9c5ffc896e542
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cf8844188330a408c29c8b959994637e097f7043
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023099"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529345"
 ---
-# <a name="user-defined-hierarchies---ragged-hierarchies"></a>ユーザー定義階層の不規則階層
+# <a name="user-defined-hierarchies---ragged-hierarchies"></a>ユーザー定義階層 - 不規則階層
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   不規則階層はユーザー定義の階層で、不均一な数のレベルが含まれています。 一般的な例として、部門の管理者と管理者以外のメンバーの両方が直属の部下として上級管理者に属している組織図や、国 - 地域 - 市から構成される地理的な階層 (ワシントン D.C.、バチカン、ニューデリーなど、親となる州や省などを持たない市がいくつかあります) などを挙げることができます。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34023099"
   
 -   レベル メンバーを明示的に管理する親子階層を作成します。 この技法の図解については、「 [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)」(SSAS での不規則階層 (ブログ投稿)) をご覧ください。 詳しくは、オンライン ブックの「 [親子ディメンション](../../analysis-services/multidimensional-models/parent-child-dimension.md)」をご覧ください。 親子階層を作成する際の問題点は、ディメンションごとに 1 つの階層があるので、中間レベルのメンバーを集計する場合のパフォーマンスが一般的に低下することです。  
   
- ディメンションに複数の不規則階層が含まれている場合は、第 1 の方法である、 **HideMemberIf**の設定を使用してください。 不規則階層の操作について実践的な経験がある BI 開発者であれば、さらに、物理データ テーブルへの追加の変更を提案したり、レベルごとの個別のテーブルを作成したりすることができます。 この方法の詳細については、「 [SSAS Financial Cube–Part 1a–Ragged Hierarchies](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 」(SSAS 財務キューブ – パート 1a – 不規則階層 (Martin Mason のブログ)) をご覧ください。  
+ ディメンションに複数の不規則階層が含まれている場合は、第 1 の方法である、 **HideMemberIf**の設定を使用してください。 不規則階層の操作について実践的な経験がある BI 開発者であれば、さらに、物理データ テーブルへの追加の変更を提案したり、レベルごとの個別のテーブルを作成したりすることができます。 参照してください[Martin Mason の SSAS 財務キューブ パート 1a 不規則階層 (ブログ)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/)この方法の詳細について。  
   
 ##  <a name="bkmk_Hide"></a> HideMemberIf を設定して標準階層のメンバーを非表示にする  
  不規則なディメンションのテーブルでは、論理的に欠落しているメンバーはさまざまな方法で表されます。 テーブルのセルに NULL または空の文字列を含めたり、親と同じ値を含めてプレースホルダーとして使用できます。 プレースホルダーの表示は、子メンバーのプレースホルダーのステータス、 **HideMemberIf** プロパティ、クライアント アプリケーションの **MDX Compatibility** 接続文字列プロパティによって決まります。  
@@ -52,7 +52,7 @@ ms.locfileid: "34023099"
   
 2.  階層内のメンバーを右クリックし、 **[プロパティ]** をクリックします。 **HideMemberIf** を、次に説明する値のいずれかに設定します。  
   
-    |HideMemberIf の設定値|Description|  
+    |HideMemberIf の設定値|説明|  
     |--------------------------|-----------------|  
     |**Never**|レベル メンバーがすべて表示されます。 これが既定値です。|  
     |**OnlyChildWithNoName**|レベル メンバーは、その親の唯一の子で、その名前が null または空の文字列である場合、表示されません。|  
@@ -63,7 +63,7 @@ ms.locfileid: "34023099"
 ##  <a name="bkmk_Mdx"></a> MDX の互換性を設定してクライアント アプリケーションでのプレースホルダーの表示方法を指定する  
  階層レベルで **HideMemberIf** を設定したら、クライアント アプリケーションから送信される接続文字列の **MDX Compatibility** プロパティも設定する必要があります。 **MDX Compatibility** の設定によって、 **HideMemberIf** が使用されるかどうかが決まります。  
   
-|MDX Compatibility の設定|Description|使用方法|  
+|MDX Compatibility の設定|説明|使用方法|  
 |-------------------------------|-----------------|-----------|  
 |**1**|プレースホルダーの値を表示します。|この値は、Excel、SSDT、SSMS で既定で使用される値です。 この値は、サーバーに対して、不規則階層で空のレベルがドリル ダウンされた場合にプレースホルダーの値を返すように指示します。 プレースホルダーの値をクリックすると、ドリル ダウンを継続して、子 (リーフ) ノードを取得できます。<br /><br /> Excel には Analysis Services に接続する際に使用される接続文字列があり、この接続文字列では、新しく接続を行うたびに **MDX Compatibility** が必ず 1 に設定されます。 この動作は、旧バージョンとの互換性のために保持されています。|  
 |**2**|プレースホルダーの値 (null 値または親レベルの複製) を非表示にします。ただし、関連する値を持つ他のレベルとノードは表示します。|不規則階層では、通常、**MDX Compatibility**=2 が優先される設定として示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートと一部のサードパーティのクライアント アプリケーションでは、この設定を保存できます。|  
@@ -72,6 +72,6 @@ ms.locfileid: "34023099"
  [ユーザー定義階層の作成](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [ユーザー階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [親子ディメンション](../../analysis-services/multidimensional-models/parent-child-dimension.md)   
- [接続文字列のプロパティ & #40 です。Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [接続文字列プロパティ &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

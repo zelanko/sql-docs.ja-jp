@@ -18,12 +18,12 @@ ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 409f3ea2229b57ef36b1e7e47f1684c914d5e50d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e23684e04d8e49d1a6456185f94ad74b71b1604c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659930"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537931"
 ---
 # <a name="spaddremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @remoteserver **=** ] **'***remoteserver***'**  
+ [ @remoteserver **=** ] **'**_remoteserver_**'**  
  リモート ログインが適用されるリモート サーバーの名前を指定します。 *remoteserver*は**sysname**、既定値はありません。 だけの場合*remoteserver*が指定されているすべてのユーザーに*remoteserver*ローカル サーバーに同じ名前の既存のログインにマップされます。 このサーバーは、ローカル サーバーが認識している必要があります。 Sp_addserver を使用してこれを追加します。 ときにユーザーに*remoteserver*を実行しているローカル サーバーに接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で自分のログインと一致するローカル ログインとして接続するリモート ストアド プロシージャを実行する*remoteserver*. *remoteserver*はリモート プロシージャ呼び出しを開始するサーバーです。  
   
- [ @loginame **=** ] **'***ログイン***'**  
+ [ @loginame **=** ] **'**_ログイン_**'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンス上のユーザーのログイン ID を指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。 *ログイン*のローカル インスタンスに既に存在する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 場合*ログイン*が指定されているすべてのユーザーに*remoteserver*特定ローカル ログインにマップされます。 ときにユーザーに*remoteserver*のローカル インスタンスに接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]として接続するリモート ストアド プロシージャを実行する*ログイン*します。  
   
- [ @remotename **=** ] **'***remote_name***'**  
+ [ @remotename **=** ] **'**_remote_name_**'**  
  リモート サーバーにおけるユーザーのログイン ID を指定します。 *remote_name*は**sysname**、既定値は NULL です。 *remote_name*上に存在する必要があります*remoteserver*します。 場合*remote_name*が指定されている特定のユーザー *remote_name*にマップされて*ログイン*ローカル サーバーにします。 ときに*remote_name*で*remoteserver*のローカル インスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]としてリモート ストアド プロシージャを実行する接続*ログイン*します。 ログイン ID *remote_name* 、リモート サーバー上のログイン ID と異なっていてもかまいません*ログイン*します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -68,7 +68,7 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-mapping-one-to-one"></a>A. 一対一でマップする  
- 次の例では、リモート名をマップするローカル名の場合に、リモート サーバー`ACCOUNTS`と同じユーザー ログインを持つローカルのサーバー。  
+ 次の例では、リモート サーバー `ACCOUNTS` とローカル サーバーが同じユーザー ログインを持つ場合、リモート名をローカル名にマップします。  
   
 ```  
 EXEC sp_addremotelogin 'ACCOUNTS';  
@@ -82,7 +82,7 @@ EXEC sp_addremotelogin 'ACCOUNTS', 'Albert';
 ```  
   
 ### <a name="c-using-explicit-one-to-one-mapping"></a>C. 明示的に一対一でマップする  
- 次の例は、リモート ユーザーからのリモート ログインをマップ`Chris`、リモート サーバーで`ACCOUNTS`がローカル ユーザーに`salesmgr`します。  
+ 次の例では、リモート サーバー `Chris` のリモート ユーザー `ACCOUNTS` からローカル ユーザー `salesmgr` に、リモート ログインをマップします。  
   
 ```  
 EXEC sp_addremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 21034e0e7ae4e84d245d12b631c96c41760c46c4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 94d5aa81e6d9da31593f03b867a1f25b5ecc85b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658814"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401897"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Linux 上の SQL Server を mssql-conf ツールを構成します。
 
@@ -590,8 +590,8 @@ accepteulaml = Y
 |オプション |説明 |
 |--- |--- |
 |**network.forceencryption** |1 の場合、し[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]強制的にすべての接続を暗号化します。 既定では、このオプションには 0 です。 |
-|**network.tlscert** |ファイルを証明書への絶対パス[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](TLS) を使用します。 例:`/etc/ssl/certs/mssql.pem`証明書ファイルは、mssql アカウントによってアクセス可能である必要があります。 Microsoft を使用して、ファイルへのアクセスを制限することをお勧め`chown mssql:mssql <file>; chmod 400 <file>`します。 |
-|**network.tlskey** |ファイルの秘密キーへの絶対パス[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](TLS) を使用します。 例:`/etc/ssl/private/mssql.key`証明書ファイルは、mssql アカウントによってアクセス可能である必要があります。 Microsoft を使用して、ファイルへのアクセスを制限することをお勧め`chown mssql:mssql <file>; chmod 400 <file>`します。 |
+|**network.tlscert** |ファイルを証明書への絶対パス[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](TLS) を使用します。 例: `/etc/ssl/certs/mssql.pem`  証明書ファイルは、mssql アカウントによってアクセス可能である必要があります。 Microsoft を使用して、ファイルへのアクセスを制限することをお勧め`chown mssql:mssql <file>; chmod 400 <file>`します。 |
+|**network.tlskey** |ファイルの秘密キーへの絶対パス[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](TLS) を使用します。 例:`/etc/ssl/private/mssql.key`  証明書ファイルは、mssql アカウントによってアクセス可能である必要があります。 Microsoft を使用して、ファイルへのアクセスを制限することをお勧め`chown mssql:mssql <file>; chmod 400 <file>`します。 |
 |**network.tlsprotocols** |SQL Server でどの TLS のプロトコルが許可されているコンマ区切りリスト。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 常に許可されている最も強力なプロトコルをネゴシエートましょう。 クライアントが、許可されている任意のプロトコルをサポートしていない場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]接続の試行を拒否します。  互換性のため、(1.2、1.1, 1.0) の既定ですべてのサポートされているプロトコルを許可します。  クライアントが TLS 1.2 をサポートしている場合、TLS 1.2 のみを許可することをお勧めします。 |
 |**network.tlsciphers** |許可されている暗号を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (TLS)。 この文字列の書式を設定ごと[OpenSSL の暗号一覧形式](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)します。 一般に、このオプションを変更する必要はありません。 <br /> 既定では、次の暗号は使用できます。 <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Kerberos keytab ファイルへのパス |

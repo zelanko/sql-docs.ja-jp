@@ -12,12 +12,12 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 574614976a9d24f6c9cedbfede2fd5a150211416
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148435"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525796"
 ---
 # <a name="understanding-the-tabular-object-model"></a>テーブル オブジェクト モデルについて
   テーブル モデルは、テーブル、リレーションシップ、階層、パースペクティブ、メジャー、および主要業績に関する論理的表現です。 ここでは、AMO を使用した内部実装について説明します。 参照してください[Analysis Management Objects を使用した開発&#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)までに AMO を使用していない場合。  
@@ -57,7 +57,7 @@ ms.locfileid: "50148435"
   
  参照してください[階層表現&#40;Tabular&#41; ](tables-hierarchy-representation.md)を作成して階層表現を操作する方法の詳細についてはします。  
   
-### <a name="key-performance-indicator-kpi--representation"></a>主要業績評価指標 (KPI) 表現  
+### <a name="key-performance-indicator--kpi--representation"></a>主要業績評価指標の KPI の表現  
  KPI は、対象の値に対するベース メジャーによって定義される値のパフォーマンスの測定に使用されます。 AMO オブジェクトでは、KPI 表現は一対多マッピングのリレーションシップを持ちます。 KPI は、必要な主要オブジェクトである次の AMO オブジェクトを使用して表現されます。<xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> および <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>。  これは上記の AMO オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
   
 > [!NOTE]  

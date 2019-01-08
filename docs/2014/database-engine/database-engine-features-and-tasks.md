@@ -14,15 +14,15 @@ ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 433d67076130747fe0baa3ba1b01592bbb9f5dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 880546e50479de28c8b3aa98bb0439e54bd594b9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131552"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524549"
 ---
 # <a name="database-engine-features-and-tasks"></a>データベース エンジンの機能とタスク
-  以下のトピックには、デザイナー、開発者、アナリスト、管理者など、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースを構築する必要のあるあらゆるユーザーを対象とした情報が記載されています。  
+  そのすべてのユーザー デザイナー、開発者、アナリスト、または管理者に情報を検索-ビルドに必要な[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベース。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [データベース エンジンのインスタンス &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  

@@ -20,18 +20,18 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e46b6102f71e4ffcc00c4dd1367ab3beaa68732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d318b73feaec0cfb48548b05ba6d7c06a697c6ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818570"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503521"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 関数
 **準拠**  
- バージョンで導入されました ODBC 2.0 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 2.0 の規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLBindParameter**バッファーを SQL ステートメントでパラメーター マーカーにバインドします。 **SQLBindParameter**基になるドライバーが Unicode データをサポートしていない場合でも、Unicode の C データ型へのバインドをサポートしています。  
   
 > [!NOTE]  
@@ -112,14 +112,14 @@ SQLRETURN SQLBindParameter(
 |HY104|有効桁数または小数点以下桁数の値が無効です。|引数が指定された値*ColumnSize*または*DecimalDigits*がで指定された SQL データ型の列のデータ ソースによってサポートされる値の範囲外の*ParameterType*引数。|  
 |HY105|無効なパラメーターの型|引数に指定された値 (DM) *InputOutputType*が無効です。 (「コメントです」を参照してください)|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
-|HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースは、引数に指定された値の組み合わせで指定された変換をサポートしていません*ValueType*引数が指定されたドライバー固有の値と*ParameterType*.<br /><br /> 引数が指定された値*ParameterType* ODBC SQL データ型の有効な識別子が ODBC のバージョンのドライバーをサポートしていますが、ドライバーまたはデータ ソースでサポートされていませんでした。<br /><br /> ドライバーには、ODBC 2 のみがサポートしています。*x*と引数*ValueType*が、次のいずれか。<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 間隔 C のすべてのデータ型と[C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d: データ型。<br /><br /> ドライバーのみ、3.50 と引数の前に ODBC バージョンをサポートする*ValueType* SQL_C_GUID でした。|  
+|HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースは、引数に指定された値の組み合わせで指定された変換をサポートしていません*ValueType*引数が指定されたドライバー固有の値と*ParameterType*.<br /><br /> 引数が指定された値*ParameterType* ODBC SQL データ型の有効な識別子が ODBC のバージョンのドライバーをサポートしていますが、ドライバーまたはデータ ソースでサポートされていませんでした。<br /><br /> ドライバーには、ODBC 2 のみがサポートしています。*x*と引数*ValueType*が、次のいずれか。<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 間隔 C のすべてのデータ型と[C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d:データ型。<br /><br /> ドライバーのみ、3.50 と引数の前に ODBC バージョンをサポートする*ValueType* SQL_C_GUID でした。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
   
 ## <a name="comments"></a>コメント  
  アプリケーションを呼び出す**SQLBindParameter** SQL ステートメント内の各パラメーター マーカーをバインドします。 バインドは、アプリケーションが有効になります**SQLBindParameter** 、もう一度呼び出す**SQLFreeStmt** SQL_RESET_PARAMS オプション、または呼び出し**SQLSetDescField**にAPD の SQL_DESC_COUNT ヘッダー フィールドを 0 に設定します。  
   
- パラメーターの詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)します。 パラメーターのデータ型とパラメーター マーカーの詳細については、次を参照してください。[パラメーターのデータ型](../../../odbc/reference/appendixes/parameter-data-types.md)と[パラメーター マーカー](../../../odbc/reference/appendixes/parameter-markers.md)付録 c: SQL の文法でします。  
+ パラメーターの詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)します。 パラメーターのデータ型とパラメーター マーカーの詳細については、次を参照してください[パラメーターのデータ型](../../../odbc/reference/appendixes/parameter-data-types.md)と[パラメーター マーカー](../../../odbc/reference/appendixes/parameter-markers.md)付録 c:。SQL 文法。  
   
 ## <a name="parameternumber-argument"></a>ParameterNumber 引数  
  場合*ParameterNumber*への呼び出しで**SQLBindParameter** SQL_DESC_COUNT の値よりも大きい**SQLSetDescField** SQL_DESC_ の価値を高めるために呼び出されるカウント*ParameterNumber*します。  
@@ -166,11 +166,11 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_E
 >  ドライバーは、ストリーム出力パラメーターまたは入出力パラメーターをアプリケーションがバインド時に、どの SQL 型が許可されますを決める必要があります。 ドライバー マネージャーでは、無効な SQL 型のエラーは生成されません。  
   
 ## <a name="valuetype-argument"></a>ValueType 引数  
- *ValueType*引数のパラメーターの C データ型を指定します。 この引数は、APD の SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE、および SQL_DESC_DATETIME_INTERVAL_CODE フィールドを設定します。 内の値のいずれかにあるこの必要があります、 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d: データ型のセクション。  
+ *ValueType*引数のパラメーターの C データ型を指定します。 この引数は、APD の SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE、および SQL_DESC_DATETIME_INTERVAL_CODE フィールドを設定します。 内の値のいずれかにあるこの必要があります、 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d: のセクションデータ型。  
   
- 場合、 *ValueType*引数は、間隔のデータ型の SQL_DESC_TYPE フィールドの 1 つ、 *ParameterNumber* SQL_INTERVAL に APD のレコードが設定されている、APD の SQL_DESC_CONCISE_TYPE フィールドに設定されます簡潔な間隔のデータ型との SQL_DESC_DATETIME_INTERVAL_CODE フィールド、 *ParameterNumber*レコードが特定の間隔のデータ型のサブコードに設定されます。 (を参照してください[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md))。既定の間隔、APD の SQL_DESC_DATETIME_INTERVAL_PRECISION および SQL_DESC_PRECISION のフィールドで設定されている有効桁数 (2) と既定の間隔の秒の有効桁数 (6) をそれぞれ、先頭は、データに使用されます。 いずれかの既定の精度が適切でない場合、アプリケーションする必要があります明示的に設定記述子フィールドへの呼び出しによって**SQLSetDescField**または**SQLSetDescRec**します。  
+ 場合、 *ValueType*引数は、間隔のデータ型の SQL_DESC_TYPE フィールドの 1 つ、 *ParameterNumber* SQL_INTERVAL に APD のレコードが設定されている、APD の SQL_DESC_CONCISE_TYPE フィールドに設定されます簡潔な間隔のデータ型との SQL_DESC_DATETIME_INTERVAL_CODE フィールド、 *ParameterNumber*レコードが特定の間隔のデータ型のサブコードに設定されます。 (を参照してください[付録 d:データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md))。既定の間隔、APD の SQL_DESC_DATETIME_INTERVAL_PRECISION および SQL_DESC_PRECISION のフィールドで設定されている有効桁数 (2) と既定の間隔の秒の有効桁数 (6) をそれぞれ、先頭は、データに使用されます。 いずれかの既定の精度が適切でない場合、アプリケーションする必要があります明示的に設定記述子フィールドへの呼び出しによって**SQLSetDescField**または**SQLSetDescRec**します。  
   
- 場合、 *ValueType*引数は、datetime データ型の SQL_DESC_TYPE フィールドの 1 つ、 *ParameterNumber* APD のレコードが SQL_DATETIME、のSQL_DESC_CONCISE_TYPEフィールドに設定されている*ParameterNumber* APD のレコードが、簡潔な datetime C データ型との SQL_DESC_DATETIME_INTERVAL_CODE フィールドに設定されている、 *ParameterNumber*レコードが特定の日時のサブコードに設定されています。データを入力します。 (を参照してください[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md))。  
+ 場合、 *ValueType*引数は、datetime データ型の SQL_DESC_TYPE フィールドの 1 つ、 *ParameterNumber* APD のレコードが SQL_DATETIME、のSQL_DESC_CONCISE_TYPEフィールドに設定されている*ParameterNumber* APD のレコードが、簡潔な datetime C データ型との SQL_DESC_DATETIME_INTERVAL_CODE フィールドに設定されている、 *ParameterNumber*レコードが特定の日時のサブコードに設定されています。データを入力します。 (を参照してください[付録 d:データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md))。  
   
  場合、 *ValueType*引数は SQL_C_NUMERIC データ型、(これは、ドライバーで定義) の既定の精度であり (0)、既定の小数点として、APD の SQL_DESC_PRECISION および SQL_DESC_SCALE のフィールド セットはデータに使用します。 アプリケーションがへの呼び出しで記述子フィールドを設定する必要があります明示的に既定の有効桁数または小数点が適切でない場合**SQLSetDescField**または**SQLSetDescRec**します。  
   
@@ -178,10 +178,10 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_E
   
  拡張の C データ型を指定することもできます。 詳細については、次を参照してください。 [ODBC における C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)します。  
   
- 詳細については、次を参照してください。 [C データ型の既定の](../../../odbc/reference/appendixes/default-c-data-types.md)、 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)、および[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)付録 d: データ型。  
+ 詳細については、次を参照してください[C データ型の既定の](../../../odbc/reference/appendixes/default-c-data-types.md)、 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)、および[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)付録 d:。データ型。  
   
 ## <a name="parametertype-argument"></a>ParameterType 引数  
- 記載した値のいずれかにあるこの必要があります、 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型、またはそのセクションでは、ドライバー固有の値である必要があります。 この引数は、IPD の SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE、および SQL_DESC_DATETIME_INTERVAL_CODE フィールドを設定します。  
+ 記載した値のいずれかにあるこの必要があります、 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: のセクションデータ型、またはそれには、ドライバー固有の値がある場合があります。 この引数は、IPD の SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE、および SQL_DESC_DATETIME_INTERVAL_CODE フィールドを設定します。  
   
  場合、 *ParameterType*引数は、datetime 識別子のいずれか、SQL_DATETIME に IPD の SQL_DESC_TYPE フィールドが設定されている、IPD の SQL_DESC_CONCISE_TYPE フィールド簡潔な datetime の SQL データ型と、SQL_DESC_ に設定されますDATETIME_INTERVAL_CODE フィールドは、適切な datetime サブコード値に設定されます。  
   
@@ -189,12 +189,12 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_E
   
  場合、 *ValueType*引数が SQL_NUMERIC データ型、既定の有効桁数 (これは、ドライバーで定義) と既定スケール (0)、IPD の SQL_DESC_PRECISION および SQL_DESC_SCALE のフィールド セットとして、データに使用します。 アプリケーションがへの呼び出しで記述子フィールドを設定する必要があります明示的に既定の有効桁数または小数点が適切でない場合**SQLSetDescField**または**SQLSetDescRec**します。  
   
- データを変換する方法については、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)と[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)付録 d: データ型。  
+ データを変換する方法については、次を参照してください[C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)と[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)付録 d:。データ型。  
   
 ## <a name="columnsize-argument"></a>ColumnSize 引数  
  *ColumnSize*引数が列またはパラメーター マーカー、そのデータ、または両方の長さに対応する式のサイズを指定します。 この引数は、SQL データ型に応じて、IPD のさまざまなフィールドを設定します。 (、 *ParameterType*引数)。 このマッピングに、次の規則が適用されます。  
   
--   場合*ParameterType* SQL_CHAR、SQL_VARCHAR、SQL_LONGVARCHAR、SQL_BINARY、SQL_VARBINARY、SQL_LONGVARBINARY、またはの値に設定されている、簡潔なSQLdatetimeまたは間隔、データ型のIPDのSQL_DESC_LENGTHフィールド*ColumnSize*します。 (詳細については、次を参照してください、[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型」セクション。)。  
+-   場合*ParameterType* SQL_CHAR、SQL_VARCHAR、SQL_LONGVARCHAR、SQL_BINARY、SQL_VARBINARY、SQL_LONGVARBINARY、またはの値に設定されている、簡潔なSQLdatetimeまたは間隔、データ型のIPDのSQL_DESC_LENGTHフィールド*ColumnSize*します。 (詳細については、次を参照してください、[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: セクション。データ型です。)  
   
 -   場合*ParameterType* SQL_DECIMAL、SQL_NUMERIC、使用できます、SQL_REAL、または SQL_DOUBLE、IPD の SQL_DESC_PRECISION フィールドの値に設定されます*ColumnSize*します。  
   
@@ -242,7 +242,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_E
   
 -   SQL_DEFAULT_PARAM します。 プロシージャでは、アプリケーションから取得した値ではなく、パラメーターの既定値を使用します。 この値は ODBC 標準構文で呼び出されるプロシージャでのみ有効ですし、場合にのみ、 *InputOutputType*引数は SQL_PARAM_INPUT、SQL_PARAM_INPUT_OUTPUT、または SQL_PARAM_INPUT_OUTPUT_STREAM します。 ときに\* *StrLen_or_IndPtr* SQL_DEFAULT_PARAM には、 *ValueType*、 *ParameterType*、 *ColumnSize*、 *DecimalDigits*、 *BufferLength*、および*ParameterValuePtr*引数は、入力パラメーターは無視され、入力、出力パラメーター値の定義にのみ使用/出力パラメーター。  
   
--   結果の SQL_LEN_DATA_AT_EXEC (*長さ*) マクロです。 パラメーターのデータに送信**SQLPutData**します。 場合、 *ParameterType*引数は SQL_LONGVARBINARY、SQL_LONGVARCHAR、または long のデータ ソース固有のデータ型であり、ドライバーで SQL_NEED_LONG_DATA_LEN 情報の種類に"Y"を返します**SQLGetInfo**、*長さ*; パラメーターに送信されるデータのバイト数は、それ以外の場合、*長さ*負以外の値を指定する必要があり、無視されます。 詳細については、「を渡すパラメーターの値、」このセクションの後半を参照してください。  
+-   結果の SQL_LEN_DATA_AT_EXEC (*長さ*) マクロです。 パラメーターのデータに送信**SQLPutData**します。 場合、 *ParameterType*引数は SQL_LONGVARBINARY、SQL_LONGVARCHAR、または long のデータ ソースに固有のデータ型であり、ドライバーで SQL_NEED_LONG_DATA_LEN 情報の種類に"Y"を返します**SQLGetInfo**、*長さ*; パラメーターに送信されるデータのバイト数は、それ以外の場合、*長さ*負以外の値を指定する必要があり、無視されます。 詳細については、「を渡すパラメーターの値、」このセクションの後半を参照してください。  
   
      たとえば、データのバイト数を 10,000 で送信されることを指定する**SQLPutData** SQL_LONGVARCHAR パラメーターでは、1 つまたは複数の呼び出しでは、アプリケーション設定 **StrLen_or_IndPtr*を SQL_LEN_DATA_AT_EXEC (10000)。  
   
@@ -281,7 +281,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_E
     > [!NOTE]  
     >  値がによって返される実行時データ パラメーターには、実行時データ列が似ています、 **SQLParamData**はそれぞれ異なります。 実行時データ パラメーターは、SQL ステートメントでデータを送信でパラメーター **SQLPutData**でステートメントを実行すると**SQLExecDirect**または**SQLExecute**. バインドされている**SQLBindParameter**します。 によって返される値**SQLParamData**にポインター値が渡される**SQLBindParameter**で、 *ParameterValuePtr*引数。 実行時データ列は列のデータを送信行セットで**SQLPutData**行が更新または追加**SQLBulkOperations**またはで更新された**SQLSetPos**. バインドされている**SQLBindCol**します。 によって返される値**SQLParamData**内の行のアドレスは、**TargetValuePtr*バッファー (への呼び出しで設定**SQLBindCol**) が処理されています。  
   
-5.  呼び出し**SQLPutData**パラメーターのデータを送信する 1 つ以上の時間。 データ値がより大きい場合は、複数の呼び出しが必要な\* *ParameterValuePtr*で指定されたバッファー **SQLPutData**; を複数回呼び出す**SQLPutData**文字、バイナリ、またはデータ ソース固有のデータ型の列に文字データを送信するときにのみ、または列が文字、バイナリ、C のバイナリ データを送信するときに、同じパラメーターは許可されているか、データ ソース固有のデータ型します。  
+5.  呼び出し**SQLPutData**パラメーターのデータを送信する 1 つ以上の時間。 データ値がより大きい場合は、複数の呼び出しが必要な\* *ParameterValuePtr*で指定されたバッファー **SQLPutData**; を複数回呼び出す**SQLPutData**文字、バイナリ、またはデータのソースに固有のデータ型の列に文字データを送信するときにのみ、または列が文字、バイナリ、C のバイナリ データを送信するときに、同じパラメーターは許可されているか、データ ソースに固有のデータ型します。  
   
 6.  呼び出し**SQLParamData**パラメーターのすべてのデータが送信されたことを通知するには、もう一度です。  
   
@@ -296,7 +296,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_E
  アプリケーションを呼び出す場合**SQLCancel**ドライバーがステートメントの実行をキャンセルして、ドライバーでは、実行時データ パラメーターのデータが引き続き必要があります、中には、アプリケーションが呼び出すことができますし、 **SQLExecute**または**SQLExecDirect**もう一度です。  
   
 ## <a name="retrieving-streamed-output-parameters"></a>ストリーミングされる出力パラメーターを取得します。  
- アプリケーションの設定と*InputOutputType* SQL_PARAM_INPUT_OUTPUT_STREAM または SQL_PARAM_OUTPUT_STREAM、1 つまたは複数の呼び出しで出力パラメーターの値を取得する必要があります**SQLGetData**します。 次の関数の呼び出しに応答 SQL_PARAM_DATA_AVAILABLE が返されます、ドライバー、アプリケーションに返されるストリームの出力パラメーター値が: **SQLMoreResults**、 **SQLExecute**、および**SQLExecDirect**します。 アプリケーションを呼び出す**SQLParamData**パラメーター値が使用可能なを判断します。  
+ アプリケーションの設定と*InputOutputType* SQL_PARAM_INPUT_OUTPUT_STREAM または SQL_PARAM_OUTPUT_STREAM、1 つまたは複数の呼び出しで出力パラメーターの値を取得する必要があります**SQLGetData**します。 ドライバーは、アプリケーションに戻るにストリーミングされる出力パラメーターの値を持つ、ときに、SQL_PARAM_DATA_AVAILABLE を次の関数の呼び出しに応答返します。**SQLMoreResults**、 **SQLExecute**、および**SQLExecDirect**します。 アプリケーションを呼び出す**SQLParamData**パラメーター値が使用可能なを判断します。  
   
  SQL_PARAM_DATA_AVAILABLE とストリーミングされる出力パラメーターの詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)します。  
   
@@ -305,7 +305,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_E
   
  パラメーターの配列が処理されるときに、個々 の結果セットや行の数 (パラメーターのセットごとに 1 つ) が使用可能または結果セット/行カウントを 1 つにロール アップできます。 オプション、SQL_PARAM_ARRAY_ROW_COUNTS **SQLGetInfo**行カウントが (SQL_PARC_BATCH) のパラメーターのセットごとに利用可能なか、1 つだけの行の数が使用可能な (SQL_PARC_NO_BATCH) かどうかを示します。  
   
- オプション、SQL_PARAM_ARRAY_SELECTS **SQLGetInfo**パラメーター (SQL_PAS_BATCH) のセットごとに結果セットがあるか、1 つの結果セットが使用可能な (SQL_PAS_NO_BATCH) かどうかを示します。 ドライバーでは、結果セットの生成 – ステートメント パラメーターの配列を使用して実行することはできません、SQL_PARAM_ARRAY_SELECTS は SQL_PAS_NO_SELECT を返します。  
+ オプション、SQL_PARAM_ARRAY_SELECTS **SQLGetInfo**パラメーター (SQL_PAS_BATCH) のセットごとに結果セットがあるか、1 つの結果セットが使用可能な (SQL_PAS_NO_BATCH) かどうかを示します。 ドライバーがパラメーターの配列を実行するときに、結果セットを生成するステートメントを許可していない場合、SQL_PARAM_ARRAY_SELECTS は SQL_PAS_NO_SELECT を返します。  
   
  詳細については、次を参照してください。 [SQLGetInfo 関数](../../../odbc/reference/syntax/sqlgetinfo-function.md)します。  
   
@@ -411,7 +411,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_E
   
 -   SQL_PARAM_PROCEED はヘッダー ファイルで 0 として定義されます。  
   
- アプリケーションは、IRD の SQL_DESC_ARRAY_STATUS_PTR フィールドのフィールドと同じ配列を指す APD の指す SQL_DESC_ARRAY_STATUS_PTR を設定できます。 これは、機能は、パラメーターを行のデータにバインドする場合に便利です。 パラメーターは、行データの状態に応じて、無視されます。 SQL_PARAM_IGNORE、だけでなく、次のコードで発生するパラメーターが無視される SQL ステートメント: SQL_ROW_DELETED、SQL_ROW_ERROR、SQL_ROW_UPDATED、します。 続行する SQL ステートメントが発生する、次のコードだけでなく、SQL_PARAM_PROCEED: SQL_ROW_SUCCESS、SQL_ROW_SUCCESS_WITH_INFO、および SQL_ROW_ADDED します。  
+ アプリケーションは、IRD の SQL_DESC_ARRAY_STATUS_PTR フィールドのフィールドと同じ配列を指す APD の指す SQL_DESC_ARRAY_STATUS_PTR を設定できます。 これは、機能は、パラメーターを行のデータにバインドする場合に便利です。 パラメーターは、行データの状態に応じて、無視されます。 SQL_PARAM_IGNORE、だけでなく、次のコードは無視される SQL ステートメントのパラメーターが発生します。SQL_ROW_DELETED、SQL_ROW_UPDATED、および SQL_ROW_ERROR です。 SQL_PARAM_PROCEED、だけでなくは、次のコードは、続行する SQL ステートメントを発生します。SQL_ROW_SUCCESS、SQL_ROW_SUCCESS_WITH_INFO、および SQL_ROW_ADDED です。  
   
 ## <a name="rebinding-parameters"></a>パラメーターを再バインド  
  アプリケーションは、バインディングを変更する 2 つの操作のいずれかを実行できます。  

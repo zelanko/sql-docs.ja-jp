@@ -13,12 +13,12 @@ ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 277575fdd10231300bcfa6726f35aa648f75d7e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42ac066ede8be2af8f08106ed358e63821a92c54
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172802"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533937"
 ---
 # <a name="source-database-files"></a>[転送元のデータベース ファイル]
   **[転送元のデータベース ファイル]** ダイアログ ボックスを使用すると、ソース サーバーのデータベース ファイルの名前と場所を表示したり、データベース転送タスクのネットワーク ファイル共有の場所を指定したりできます。 このタスクの詳細については、「 [データベース転送タスク](control-flow/transfer-database-task.md)」を参照してください。  
@@ -35,13 +35,13 @@ ms.locfileid: "48172802"
  **[ネットワーク ファイル共有]**  
  データベース ファイルの転送元となるソース サーバーのネットワーク共有フォルダーです。 **[ネットワーク ファイル共有]** は、データベースをオフライン モードで転送する場合に使用します。 **[データベース転送タスク エディター]** ダイアログ ボックスの **[データベース]** ページの **[Method]** に、 **[DatabaseOffline]** を指定します。  
   
- ネットワーク ファイル共有の場所を入力するか、 **[...]** をクリックしてネットワーク ファイル共有の場所を見つけます。  
+ ネットワーク ファイル共有の場所を入力するか、参照ボタン **([...])** をクリックしてネットワーク ファイル共有の場所を見つけます。  
   
  オフライン モードでデータベースを転送すると、データベースは転送先サーバーに転送される前に、転送元サーバーの **[ネットワーク ファイル共有]** の場所にコピーされます。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [データベース転送タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [データベース転送タスク エディター&#40;データベース ページ&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [[データベース転送タスク エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [[データベース転送タスク エディター] &#40;[データベース] ページ&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e46075e55aa14784e967b3620de5855a47c4bd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d835e7d541f69c6a84129d3d6c1c8128f748a23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676620"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541909"
 ---
 # <a name="types-of-applications"></a>アプリケーションの種類
 ODBC アプリケーションは、次のように分類できます。  
@@ -42,7 +42,7 @@ ODBC アプリケーションは、次のように分類できます。
 -   **純粋な ODBC 2。**  
      ***x* Unicode アプリケーション**純粋な ODBC 2 *。x* Unicode 準拠し、SQL_WCHAR データ型を使用するアプリケーションを再コンパイルします。  
   
--   **純粋なグループと ISO**–**ODBC に準拠したアプリケーション**32 ビット アプリケーションです。  
+-   **純粋なグループと ISO**-**ODBC に準拠したアプリケーション**32 ビット アプリケーションです。  
   
     -   グループを開くまたは ISO CLI 標準で定義された関数を呼び出します。 (これらの関数は、非推奨の 3.0 関数を含めることができます)  
   

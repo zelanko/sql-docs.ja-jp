@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f1a3a5403c4549205c226f25d6c925ef81d4b10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 768fb39cdf26b01d55ffaf175ec07e181d265b52
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856520"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522749"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "47856520"
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|メモリ コンシューマーの ID (内部)。|  
 |memory_consumer_type|**int**|メモリ コンシューマーの種類。<br /><br /> 0=集計  (複数のコンシューマーのメモリ使用量を集計します。 表示することはできません)<br /><br /> 2=VARHEAP (可変長ヒープのメモリ使用量を追跡します)<br /><br /> 3=HASH (インデックスのメモリ使用量を追跡します)<br /><br /> 5=DB ページ プール (実行時の操作に使用するデータベース ページ プールのメモリ使用量を追跡します。 たとえば、テーブル変数および一部のシリアル化可能なスキャンが対象になります。 この種類のメモリ コンシューマーは 1 つのデータベースに 1 つだけ存在します)|  
-|memory_consumer_type_desc|**nvarchar(64)**|メモリ コンシューマーの種類: VARHEAP、HASH、PGPOOL。<br /><br /> 0 - (表示することはできません)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|メモリ コンシューマー インスタンスの説明。<br /><br /> VARHEAP: <br />データベース ヒープ。 データベース (行) のユーザー データを割り当てるために使用します。<br />データベース システム ヒープ。 メモリ ダンプに含められ、ユーザー データを含まないデータベース データを割り当てるために使用します。<br />範囲インデックス ヒープ。 BW ページを割り当てるために範囲インデックスによって使用されるプライベート ヒープ。<br /><br /> ハッシュ: object_id のため、説明ないことを示します、テーブル、index_id はハッシュ インデックスそのものです。<br /><br /> PGPOOL。 データベースが 1 つだけのページ プールは Database 64 K ページ プールです。|  
+|memory_consumer_type_desc|**nvarchar(64)**|メモリ コンシューマーの種類:VARHEAP、HASH、または PGPOOL。<br /><br /> 0 - (これは表示されません)。<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**nvarchar(64)**|メモリ コンシューマー インスタンスの説明。<br /><br /> VARHEAP: <br />データベース ヒープ。 データベース (行) のユーザー データを割り当てるために使用します。<br />データベース システム ヒープ。 メモリ ダンプに含められ、ユーザー データを含まないデータベース データを割り当てるために使用します。<br />範囲インデックス ヒープ。 BW ページを割り当てるために範囲インデックスによって使用されるプライベート ヒープ。<br /><br /> ハッシュ:object_id はテーブルを示し、index_id はハッシュ インデックスそのものを示すため、説明はありません。<br /><br /> PGPOOL。データベース用のページ プールは Database 64K ページ プールのみです。|  
 |object_id|**bigint**|割り当てられたメモリに関連するオブジェクト ID。 システム オブジェクトに対しては負の値になります。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルのオブジェクトの ID。|  
 |index_id|**int**|コンシューマーのインデックス ID (存在する場合)。 ベース テーブルに対しては NULL になります。|  

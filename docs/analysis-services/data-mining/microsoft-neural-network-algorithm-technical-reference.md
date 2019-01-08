@@ -1,5 +1,5 @@
 ---
-title: Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+title: Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e71ae9c0ceb236c49df8e7fc8ec67713ef3e76
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a9895eb3e52c83c1ee3594b40fa7257fc53fd4d0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018249"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525494"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワークでは、最大 3 層のニューロンまたは*パーセプトロン*で構成される*多層パーセプトロン* ネットワーク (*バックプロパゲーション デルタ ルール ネットワーク*とも呼ばれる) を使用します。 これらの層は、入力層、オプションの非表示層、および出力層です。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワークでは、最大 3 層のニューロンまたは *パーセプトロン* で構成される *多層パーセプトロン*ネットワーク ( *バックプロパゲーション デルタ ルール ネットワーク*とも呼ばれる) を使用します。 これらの層は、入力層、オプションの非表示層、および出力層です。  
   
- 多層パーセプトロン ニューラル ネットワークの詳細については、このマニュアルでは扱いません。 このトピックでは、入力値および出力値を正規化するために使用する方法や属性の基数を減らすために使用する機能選択方法など、アルゴリズムの基本的な実装について説明します。 このトピックでは、アルゴリズムの動作をカスタマイズするために使用できるパラメーターおよびその他の設定について説明します。モデルのクエリに関する追加情報へのリンクも示します。  
+ 多層パーセプトロン ニューラル ネットワークの詳細については、このマニュアルでは扱いません。 このトピックでは、入力値および出力値を正規化するために使用する方法や属性のカーディナリティを減らすために使用する機能選択方法など、アルゴリズムの基本的な実装について説明します。 このトピックでは、アルゴリズムの動作をカスタマイズするために使用できるパラメーターおよびその他の設定について説明します。モデルのクエリに関する追加情報へのリンクも示します。  
   
 ## <a name="implementation-of-the-microsoft-neural-network-algorithm"></a>Microsoft ニューラル ネットワーク アルゴリズムの実装  
  多層パーセプトロン ニューラル ネットワークでは、各ニューロンは 1 つまたは複数の入力を受け取り、1 つまたは複数の同一の出力を生成します。 各出力は、ニューロンへの入力の合計の単純な非線形関数です。 入力は入力層のノードから非表示層のノードに送られ、次に非表示層から出力層に渡されます。層内のニューロン間は接続されていません。 ロジスティック回帰モデルのように、非表示層が含まれていない場合、入力は入力層のノードから出力層のノードに直接渡されます。  
@@ -84,7 +84,7 @@ ms.locfileid: "34018249"
   
  **不連続値**  
   
- `μ = p` – 状態の前の確率  
+ `μ = p` -前の状態の確率  
   
  `StdDev  = sqrt(p(1-p))`  
   
@@ -174,7 +174,7 @@ ms.locfileid: "34018249"
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。  
   
-|列|コンテンツの種類|  
+|[列]|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Discrete、Discretized、Key、Table、Ordered|  
 |予測可能な属性|Continuous、Cyclical、Discrete、Discretized、Ordered|  
@@ -184,7 +184,7 @@ ms.locfileid: "34018249"
   
 ## <a name="see-also"></a>参照  
  [Microsoft ニューラル ネットワーク アルゴリズム](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [ニューラル ネットワーク モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [ニューラル ネットワーク モデルのクエリ例](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

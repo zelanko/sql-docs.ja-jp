@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2bf94fb04bd6f96de019c7e8543b8a626cebe439
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699124"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524469"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Analytics Platform System のウイルス対策ソフトウェア
 データ センターには、ウイルス対策ソフトウェアが必要とする場合は、次のガイドラインを使用して、Analytics Platform System にウイルス対策ソフトウェアをインストールします。 データ センターの確実な要件である場合を除き、ウイルス対策ソフトウェアをインストールしないことをお勧めします。  
@@ -46,13 +46,13 @@ ms.locfileid: "51699124"
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>仮想マシン (Vm) の除外リスト  
 Vm 上のウイルス対策ソフトウェアをインストールするには、ディレクトリおよびファイルの次の一覧を除外します。 これらは、ウイルス対策ソフトウェアによってスキャンされませんする必要があります。  
   
-***PDW_region*-CTL01**  
+**_PDW_region_-CTL01**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-***appliance_domain *-AD01**と ***appliance_domain *-AD02**  
+**_appliance_domain_-AD01**と **_appliance_domain_-AD02**  
   
 -   制限なし  
   
@@ -62,15 +62,15 @@ Vm 上のウイルス対策ソフトウェアをインストールするには�
   
 -   G:\  
   
-***appliance_domain *-VMM**  
+**_appliance_domain_VMM**  
   
 -   制限なし  
   
-***appliance_domain *-WDS**  
+**_appliance_domain_-WDS**  
   
 -   制限なし  
   
-***appliance_domain*-ISCSI01**  
+**_appliance_domain_-ISCSI01**  
   
 -   C:\iscsitarget  
   

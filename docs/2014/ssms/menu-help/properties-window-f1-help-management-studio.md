@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - .SPID
@@ -23,12 +23,12 @@ ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77b678508867f39a37acbf640eb159a61a4f3727
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122332"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754264"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>[プロパティ] ウィンドウの F1 ヘルプ (Management Studio)
   **[プロパティ]** ウィンドウを使用すると、選択した要素のプロパティを表示できます。 また、 **[プロパティ]** ウィンドウでは、ファイル、プロジェクト、およびソリューションのプロパティを表示することもできます。 **[プロパティ]** ウィンドウは、 **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックすると表示されます。  

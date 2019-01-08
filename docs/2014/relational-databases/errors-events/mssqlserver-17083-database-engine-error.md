@@ -12,12 +12,12 @@ ms.assetid: 6c83737d-0531-4fd9-88f6-2da5a150532d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08d0918ed0638f73d5dcdfde979cb938abc5496a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c04d010a690d99d90ea3a18ae7f70d33ed39f24b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060552"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416743"
 ---
 # <a name="mssqlserver17083"></a>MSSQLSERVER_17083
     
@@ -39,7 +39,7 @@ ms.locfileid: "48060552"
  ネイティブ コンパイル ストアド プロシージャには ATOMIC ブロックが必要です。 以下に例を示します。  
   
 ```  
-BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N’us_english’)  
+BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  
 ```  
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  

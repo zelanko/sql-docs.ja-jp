@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3e9e6dad97bbfb2010f71e9e056da8a0912a4506
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 20084c0fadbccab9c920cb81b29cf30cb2cf739c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643810"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392625"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Data Migration Assistant で SQL Server ログインを移行します。
 
@@ -54,4 +54,4 @@ ms.locfileid: "49643810"
 
 [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 
-[Data Migration Assistant: 構成の設定](../dma/dma-configurationsettings.md)
+[Data Migration Assistant:構成設定](../dma/dma-configurationsettings.md)

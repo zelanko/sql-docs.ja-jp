@@ -15,12 +15,12 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab9f381706aaf5fe2f87051e1aada23ccf6dea16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc229e2bef69069ba1fc5f8cb3077e592d959a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668350"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521931"
 ---
 # <a name="explicit-data-type-conversion-function"></a>データ型の明示的な変換用関数
 SQL データ型の定義では、明示的なデータ型の変換を指定します。  
@@ -29,7 +29,7 @@ SQL データ型の定義では、明示的なデータ型の変換を指定し�
   
  形式、**変換**関数は。  
   
- **変換 (** *value_exp*、 *data_type * * *)**  
+ **変換 (** *value_exp*、 _data_type_**)**  
   
  指定された値を返します*value_exp*を指定した変換*data_type*ここで、 *data_type*は、次のキーワードの 1 つです。  
   
@@ -65,7 +65,7 @@ SQL データ型の定義では、明示的なデータ型の変換を指定し�
   
  CURDATE スカラー関数の出力を文字列に変換します。  
   
- ODBC からの戻り値のデータ型を必要としませんので、スカラー関数 (関数は、データ ソース固有では多くの場合) ため、アプリケーションは、データ型の変換を強制的に可能な限りの CONVERT スカラー関数を使用する必要があります。  
+ ODBC からの戻り値のデータ型を必要としませんので、スカラー関数 (関数は、データ ソースに固有では多くの場合) ため、アプリケーションは、データ型の変換を強制的に可能な限りの CONVERT スカラー関数を使用する必要があります。  
   
  次の 2 つの例の使用方法を示します、**変換**関数。 これらの例は、型 SQL_SMALLINT の EMPNO 列および SQL_CHAR 型の EMPNAME 列で、従業員をという名前のテーブルの存在を想定しています。  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b0a49925ec0d0592adfd131e0ab994e5e8356f95
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 94c8d399f7b6ba36b48b4c5aa7f35bbd67ce6909
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527809"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop 内の外部データにアクセスするように PolyBase を構成する
 
@@ -24,10 +24,10 @@ ms.locfileid: "50236938"
 
 PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (CDH) の 2 つの Hadoop プロバイダーをサポートしています。 Hadoop では、新規リリースについて "Major.Minor.Version" パターンを採用しており、サポートされているメジャーおよびマイナー リリース内のすべてのバージョンがサポートされています。 次の Hadoop プロバイダーがサポートされています。
  - Linux/Windows Server 上の Hortonworks HDP 1.3  
- - Linux 上の Hortonworks HDP 2.1 ～ 2.6
+ - Linux 上の Hortonworks HDP 2.1 2.6
  - Windows Server 上の Hortonworks HDP 2.1 - 2.3  
  - Linux 上の Cloudera CDH 4.3  
- - Linux 上の Cloudera CDH 5.1 – 5.5、5.9 - 5.13
+ - Cloudera CDH 5.1-5.5、5.9-5.13 on Linux
 
 ### <a name="configure-hadoop-connectivity"></a>Hadoop 接続を構成する
 

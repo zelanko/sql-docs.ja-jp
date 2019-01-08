@@ -11,12 +11,12 @@ ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a7851a9da990c36b813d5281cfbf6c174f3086f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 430ac56191fcfc2c601c50f9f31de128d5d58368
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081542"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523328"
 ---
 # <a name="modifying-the-product-dimension"></a>Product ディメンションの変更
   このトピックの実習では、名前付き計算を使用して製品ラインにわかりやすい名前を指定し、Product ディメンションに階層を定義して、その階層の (All) メンバー名を指定します。 また、属性をグループ化して別々の表示フォルダーに格納します。  
@@ -58,7 +58,7 @@ ms.locfileid: "48081542"
   
 2.  **[ディメンション構造]** タブの **[属性]** ペインで、 **[Product Line]** をクリックします。  
   
-3.  画面右側の [プロパティ] ウィンドウで、ウィンドウの下部にある **[NameColumn]** プロパティ フィールドをクリックし、参照ボタン (**[...]**) をクリックして、 **[名前列]** ダイアログ ボックスを開きます (場合によっては、画面右側の **[プロパティ]** タブをクリックして、[プロパティ] ウィンドウを開く必要があります)。  
+3.  画面の右側にある プロパティ ウィンドウで、 **NameColumn**プロパティ ウィンドウの下部にあるフィールドし、クリックし、参照 (**.**) ボタンをクリックする、**名前列** ダイアログ ボックス。 (場合によっては、画面右側の **[プロパティ]** タブをクリックして、[プロパティ] ウィンドウを開く必要があります)。  
   
 4.  選択`ProductLineName`の下部にある、**基になる列**ボックスの一覧をクリックして**OK**。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48081542"
   
 5.  **[ディメンション構造]** タブの **[属性]** ペインで、 **[Product Key]** をクリックします。  
   
-6.  [プロパティ] ウィンドウで、 **[NameColumn]** プロパティ フィールドをクリックし、参照ボタン (**[...]**) をクリックして、 **[名前列]** ダイアログ ボックスを開きます。  
+6.  プロパティ ウィンドウ、 **NameColumn**プロパティ フィールドし、参照ボタンをクリックし (**.**) ボタンをクリックする、**名前列** ダイアログ ボックス。  
   
 7.  **[基になる列]** ボックスの一覧で **[EnglishProductName]** を選択し、 **[OK]** をクリックします。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48081542"
 9. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="defining-attribute-relationships"></a>属性リレーションシップの定義  
- 基になるデータで属性リレーションシップがサポートされる場合、属性間の属性リレーションシップを定義する必要があります。 属性リレーションシップを定義すると、ディメンション、パーティション、およびクエリの処理速度が上がります。 詳細については、「[属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md)」および「[属性リレーションシップ](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
+ 基になるデータで属性リレーションシップがサポートされる場合、属性間の属性リレーションシップを定義する必要があります。 属性リレーションシップを定義すると、ディメンション、パーティション、およびクエリの処理速度が上がります。 詳細については、「 [属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md) 」および「 [属性リレーションシップ](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
   
 #### <a name="to-define-attribute-relationships"></a>属性リレーションシップを定義するには  
   
@@ -183,8 +183,8 @@ ms.locfileid: "48081542"
  [Date ディメンションの変更](lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>参照  
- [データ ソース ビューで名前付き計算の定義&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [ユーザー定義階層を作成します。](multidimensional-models/user-defined-hierarchies-create.md)   
- [構成、&#40;すべて&#41;属性階層のレベル](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [データ ソース ビューでの名前付き計算の定義 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [ユーザー定義階層の作成](multidimensional-models/user-defined-hierarchies-create.md)   
+ [属性階層の &#40;All&#41; レベルの構成](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

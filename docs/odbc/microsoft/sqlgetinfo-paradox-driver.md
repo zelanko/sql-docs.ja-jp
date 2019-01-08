@@ -14,12 +14,12 @@ ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1e8025af41a876926273c3134deebf46766fb9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76517ac2ded567877d542be688aa47abeca21c1c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752892"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528932"
 ---
 # <a name="sqlgetinfo-paradox-driver"></a>SQLGetInfo (Paradox ドライバー)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47752892"
   
  **SQLGetInfo** SQL_FILE_USAGE 情報の種類をサポートしています。 返される値は、ドライバーが直接データ ソース内のファイルを処理する方法を示す 16 ビット整数を示します。  
   
--   SQL_FILE_NOT_SUPPORTED-ドライバーは、1 階層のドライバーではありません。  
+-   SQL_FILE_NOT_SUPPORTED - ドライバーは、1 階層のドライバーではありません。  
   
--   SQL_FILE_TABLE — 1 階層のドライバーは、テーブルとしてデータ ソース内のファイルを扱います。  
+-   SQL_FILE_TABLE - 1 階層のドライバーは、テーブルとしてデータ ソース内のファイルを扱います。  
   
--   SQL_FILE_QUALIFIER — 1 階層のドライバーは、修飾子としてデータ ソース内のファイルを扱います。  
+-   SQL_FILE_QUALIFIER - 1 階層のドライバーは、修飾子としてデータ ソース内のファイルを扱います。  
   
  ODBC ドライバーは、各ファイルがテーブルであるために、SQL_FILE_TABLE を返します。  
   

@@ -15,12 +15,12 @@ ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b833e41e4fbce47b892bba5d2b3792eeb2771b14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92624d18c0e8aae6a549f0769277e5fd4fdd0c34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068762"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524358"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>属性の KeyColumns プロパティの変更
   属性の **KeyColumns** プロパティは変更できます。 たとえば、単一キーではなく複合キーをその属性のキーとして指定する場合があります。  
@@ -33,7 +33,7 @@ ms.locfileid: "48068762"
   
     -   **ソリューション エクスプローラー**では、 **[ディメンション]** フォルダー内のディメンションを右クリックし、 **[開く]** または **[デザイナーの表示]** をクリックします。  
   
-         — または —  
+         - または -  
   
     -   キューブ デザイナーの上、**キューブ構造** タブで、キューブ ディメンションを展開し、**ディメンション**ウィンドウをクリックします**編集\<ディメンション >**。  
   

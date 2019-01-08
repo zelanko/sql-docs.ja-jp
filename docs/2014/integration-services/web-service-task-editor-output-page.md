@@ -15,12 +15,12 @@ ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e2a0c1639352b8c5aaad9be4bd6740eceacb6cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce05c73dadd133bafcea0f9bd505868b9dd0dc65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132012"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542648"
 ---
 # <a name="web-service-task-editor-output-page"></a>[Web サービス タスク エディター] ([出力] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[出力]** ページを使用すると、Web メソッドから返された結果を格納する場所を指定できます。  
@@ -40,20 +40,20 @@ ms.locfileid: "48132012"
   
 ### <a name="outputtype--file-connection"></a>[OutputType] = [ファイル接続]  
  **[最近使ったファイル]**  
- ファイル接続マネージャーを一覧から選択するか、[\<**新しい接続…**>] をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、\<[**新しい接続...>]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
+ **関連項目:**[ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="outputtype--variable"></a>[OutputType] = [変数]  
  **変数**  
- 一覧で変数を選択するか、[\<**新しい変数…**>] をクリックして新しい変数を作成します。  
+ 一覧で変数を選択するか、\<[**新しい変数...>]** をクリックして新しい変数を作成します。  
   
- **関連項目:** [Integration Services (SSIS) の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連項目:**[Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Web サービス タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [Web サービス タスク エディター &#40;[入力] ページ&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [Web サービス タスク エディター ([全般] ページ)](general-page-of-integration-services-designers-options.md)   
+ [[Web サービス タスク エディター] ([入力] ページ)](../../2014/integration-services/web-service-task-editor-input-page.md)   
  [[式] ページ](expressions/expressions-page.md)  
   
   

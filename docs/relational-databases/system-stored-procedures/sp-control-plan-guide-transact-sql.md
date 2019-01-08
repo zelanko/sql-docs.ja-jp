@@ -18,12 +18,12 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a3ea4ac63a0ace769af174bbdbf433ad63b433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29fbce7f3e8fee200384f6162b28576d96593b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700530"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502978"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +58,19 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  指定されたプラン ガイドを削除*plan_guide_name*します。 プラン ガイドの削除後は、そのプラン ガイドに以前一致していたクエリを実行しても、そのプラン ガイドによる影響は受けません。  
   
  DROP ALL  
- 現在のデータベースのすべてのプラン ガイドを削除します。 **N' * * * plan_guide_name* DROP ALL が指定されると指定することはできません。  
+ 現在のデータベースのすべてのプラン ガイドを削除します。 **N'**_plan_guide_name_ DROP ALL が指定されると指定することはできません。  
   
  DISABLE  
  指定したプラン ガイドを無効にします。 *plan_guide_name*します。 プラン ガイドが無効になった後は、そのプラン ガイドに以前一致していたクエリを実行しても、そのプラン ガイドによる影響は受けません。  
   
  DISABLE ALL  
- 現在のデータベースのすべてのプラン ガイドを無効にします。 **N' * * * plan_guide_name* DISABLE ALL が指定されると指定することはできません。  
+ 現在のデータベースのすべてのプラン ガイドを無効にします。 **N'**_plan_guide_name_ DISABLE ALL が指定されると指定することはできません。  
   
  ENABLE  
  指定したプラン ガイドを有効*plan_guide_name*します。 プラン ガイドが有効になった後は、そのプラン ガイドを適切なクエリと照合できます。 既定では、プラン ガイドは作成時に有効になります。  
   
  ENABLE ALL  
- 現在のデータベースのすべてのプラン ガイドを有効にします。 **N'***plan_guide_name***'** ENABLE ALL を指定すると指定することはできません。  
+ 現在のデータベースのすべてのプラン ガイドを有効にします。 **N'**_plan_guide_name_**'** ENABLE ALL を指定すると指定することはできません。  
   
 ## <a name="remarks"></a>コメント  
  有効、無効にする場合のどちらでも、そのプラン ガイドで参照されている関数、ストアド プロシージャ、または DML トリガーを削除または変更しようとすると、エラーが発生します。  

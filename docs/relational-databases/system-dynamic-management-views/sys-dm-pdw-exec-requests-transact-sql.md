@@ -13,17 +13,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c2a1978aeea7ec69ea45bc088bbdff432de3c9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed96138b4808448fef815fad90342e671f37ed5f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621870"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409595"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  現在または最近アクティブになってすべての要求に関する情報を保持[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。 これには、要求/クエリごとに 1 行が一覧表示します。  
+  現在または最近アクティブになっているすべての要求に関する情報を保持して [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。 これには、要求/クエリごとに 1 行が一覧表示します。  
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
@@ -34,7 +34,7 @@ ms.locfileid: "47621870"
 |start_time|**datetime**|要求の実行が開始された時刻。|キューに置かれた要求の場合は NULLそれ以外の場合、有効な**datetime**小さいまたは現在の時刻と同じです。|  
 |end_compile_time|**datetime**|エンジンが、要求のコンパイルを完了した時刻。|まだコンパイルされていない要求の場合は NULLそれ以外の場合、有効な**datetime** start_time よりも小さいと、現在の時刻。|
 |end_time|**datetime**|時間を要求の実行完了、失敗したか、取り消されました。|キューまたはアクティブな要求の場合は nullそれ以外の場合、有効な**datetime**小さいまたは現在の時刻と同じです。|  
-|total_elapsed_time|**int**|(ミリ秒単位)、要求を開始してから、実行の経過時間です。|0 ~ start_time と end_time の違い範囲。<br /><br /> Total_elapsed_time では、整数の最大値を超えると、total_elapsed_time 引き続き、最大値になります。 この状態が「、最大値を超過しました」警告を生成します。<br /><br /> 最大値をミリ秒単位は 24.8 日に相当します。|  
+|total_elapsed_time|**int**|(ミリ秒単位)、要求を開始してから、実行の経過時間です。|0 ~ start_time と end_time の違い範囲。<br /><br /> Total_elapsed_time では、整数の最大値を超えると、total_elapsed_time 引き続き、最大値になります。 この状態が"、最大値を超過しました"警告を生成します。<br /><br /> 最大値をミリ秒単位は 24.8 日に相当します。|  
 |ラベル●らべる○|**nvarchar (255)**|(省略可能) ラベル文字列がいくつかのクエリの SELECT ステートメントに関連付けられています。|任意の文字列を含む ' a ～ z'、' A ～ Z'、' 0-9'、'_' です。|  
 |error_id|**nvarchar(36)**|存在する場合は、要求に関連付けられているエラーの一意の id。|参照してください[sys.dm_pdw_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); エラーが発生していない場合は NULL に設定します。|  
 |database_id|**int**|コンテキストの明示的な (使用 DB_X など) によって使用されるデータベースの識別子です。|内の id を参照してください。 [sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)します。|  

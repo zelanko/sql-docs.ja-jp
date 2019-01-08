@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afphivetask.f1
@@ -14,12 +13,12 @@ ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4729cdb4bfb9e2bdef3a8915d808b82453cf87d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef43e6539840e6c5eec68ad4911f72930d28591d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057712"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749494"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Azure HDInsight Pig Task
 Azure HDInsight クラスターで Hive スクリプトを実行するには、 **Azure HDInsight Hive Task** を使用します。
@@ -38,8 +37,8 @@ Azure HDInsight クラスターで Hive スクリプトを実行するには、 
   
 5.  実行する Hive スクリプトを指定するには、次の 2 つの方法があります。
   
-    1.  **インライン スクリプト**: **[スクリプトの入力]** ダイアログ ボックスに実行するスクリプトをインラインで入力して、**[Script]** フィールドを指定します。
+    1.  **インライン スクリプト**:指定、**スクリプト**」と入力してのフィールドでスクリプトをインラインで実行する、**入力スクリプト** ダイアログ ボックス。
   
-    2.  **スクリプト ファイル**: Azure Blob Storage にスクリプト ファイルをアップロードして、**[BlobName]** フィールドを指定します。 BLOB が HDInsight クラスターに関連付けられている既定のストレージ アカウントまたはコンテナーにない場合は、**[ExternalStorageAccountName]** と **[ExternalBlobContainer]** フィールドを指定する必要があります。 外部 BLOB の場合は、パブリックにアクセス可能として構成されていることを確認します。  
+    2.  **スクリプト ファイル**:スクリプト ファイルを Azure Blob Storage にアップロードし、指定、 **BlobName**フィールド。 BLOB が HDInsight クラスターに関連付けられている既定のストレージ アカウントまたはコンテナーにない場合は、**[ExternalStorageAccountName]** と **[ExternalBlobContainer]** フィールドを指定する必要があります。 外部 BLOB の場合は、パブリックにアクセス可能として構成されていることを確認します。  
   
      両方が指定されている場合、スクリプト ファイルが使用され、インライン スクリプトは無視されます。

@@ -1,5 +1,5 @@
 ---
-title: データ マイニング ソリューション |Microsoft ドキュメント
+title: データ マイニング ソリューション |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e52afe834120b661bd885be4e00491385b8b917
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4668afcd31c7eb97e398772587866636ff155459
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015169"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543006"
 ---
 # <a name="data-mining-solutions"></a>データ マイニング ソリューション
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34015169"
   
  このセクションの各トピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用した統合データ マイニング ソリューションの設計と実装の方法について説明します。 データ マイニング デザイン プロセスおよび関連ツールの概要については、「 [データ マイニングの概念](../../analysis-services/data-mining/data-mining-concepts.md)」を参照してください。  
   
- データ マイニングに利用できるその他のプロジェクト タイプの詳細については、「[データ マイニング ソリューションの関連プロジェクト](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)」を参照してください。  
+ データ マイニングに利用できるその他のプロジェクト タイプの詳細については、「 [データ マイニング ソリューションの関連プロジェクト](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)」を参照してください。  
   
  [リレーショナル データ ソースとします。多次元ソリューション](#bkmk_RelMD)  
   
@@ -30,8 +30,8 @@ ms.locfileid: "34015169"
   
  [ソリューションのチュートリアル](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a>リレーショナル データ ソースとします。多次元ソリューションの比較  
- データ マイニング ソリューションには、多次元データ (既存のキューブ) のほか、純粋なリレーショナル データ (データ ウェアハウス内のテーブルやビュー)、テキスト ファイル、Excel ブック、さらには、外部データ ソースを使用することもできます。  
+##  <a name="bkmk_RelMD"></a> リレーショナル データ ソースとします。多次元ソリューションの比較  
+ データ マイニング ソリューションは、多次元データのいずれかに基づく-既存のキューブは、または data warehouse では、ビュー、テーブルなどの純粋なリレーショナル データまたはテキスト ファイルでは、Excel ブック、またはその他の外部データ ソース。  
   
 -   既存の多次元データベース ソリューション内でデータ マイニング オブジェクトを作成できます。  
   
@@ -53,10 +53,10 @@ ms.locfileid: "34015169"
 ##  <a name="bkmk_Walkthru"></a> ソリューションのチュートリアル  
  データ マイニング ウィザードを使用してデータ マイニング ソリューションを作成する方法の概要について説明します。  
   
- [リレーショナル マイニング構造を作成します。](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
+ [リレーショナル マイニング構造の作成](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
  マイニング構造は、リレーショナル データやテキスト ファイルのほか、データ ソース ビューに組み込むことのできる各種のソースから作成できます。  
   
- [OLAP マイニング構造を作成します。](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
+ [OLAP マイニング構造の作成](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
  OLAP キューブのデータを基にマイニング構造を作成します。 OLAP データから作成したモデルは、データ マイニング ディメンションとして保存できるほか、データ セットやモデルを新しいキューブとして保存することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -77,11 +77,11 @@ ms.locfileid: "34015169"
 |-----------|------------|  
 |作成するモデルのテスト、トレーニング データの質の検証、データ マイニング モデルの精度を表すグラフの作成|[テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |構造および関連モデルにデータを取り込むことによるモデルのトレーニング (新しいデータでのモデルの更新と拡張)|[データ マイニング オブジェクトの処理](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|マイニング モデルのカスタマイズ (トレーニング データへのフィルターの適用、異なるアルゴリズムの選択、高度なアルゴリズム パラメーターの設定)|[マイニング モデルおよび構造体をカスタマイズします。](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
-|モデルのトレーニング用データにフィルターを適用することによるマイニング モデルのカスタマイズ|[マイニング モデル構造体 & #40; を追加します。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|マイニング モデルのカスタマイズ (トレーニング データへのフィルターの適用、異なるアルゴリズムの選択、高度なアルゴリズム パラメーターの設定)|[マイニング モデルとマイニング構造のカスタマイズ](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
+|モデルのトレーニング用データにフィルターを適用することによるマイニング モデルのカスタマイズ|[マイニング モデルを構造に追加する &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |データ マイニング ソリューションの更新と管理|Link TBD|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニングのチュートリアル & #40 です。Analysis Services & #41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+ [データ マイニングのチュートリアル &#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   

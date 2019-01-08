@@ -13,12 +13,12 @@ ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2652dd6ababc37a3883eef0cf385914a880ebdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157632"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519086"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>どのような&#39;マイニング Office 用アドインのデータに含まれる s
   Office 2013 用データ マイニング アドインをインストールし、すべてのインストール オプションを選択して、ときに、次のツールバーとテンプレートが追加されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "48157632"
   
 -   [Excel 用データ マイニング クライアント&#40;SQL Server データ マイニング アドイン&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
-     このアドインは、データのクリーニングとサンプリングをはじめ、モデルの構築、モデルの精度のテスト、クロス検証の実行にいたるまで、ほぼすべての必要なデータ マイニング タスクのためのツールです。 また、モデルの管理と文書作成、テンプレートからの DMX クエリの作成もできます。  
+     このアドインでは、クリーニングとサンプリングのモデルの作成を実行する、モデルの精度をテストおよびクロス検証を実行する、データから - 必要なすべてのデータ マイニング タスクのツールを提供します。 また、モデルの管理と文書作成、テンプレートからの DMX クエリの作成もできます。  
   
      経験豊富なデータ マイニング担当者は、モデルのインポートとエクスポート、予測クエリおよびコンテンツ クエリを含め、SQL Server のデータ マイニングで使用できるすべてのツールにアクセスして活用することができます。  
   

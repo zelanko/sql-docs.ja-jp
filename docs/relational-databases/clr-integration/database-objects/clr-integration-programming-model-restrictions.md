@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c39bb3499302ef1b60744a4332c665506c7fd21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809040"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538526"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 統合プログラミング モデルの制限事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "47809040"
  コード アセンブリは、実行時に次の条件をチェックされます。 これらの条件のいずれかが見つからなかった場合、マネージド コードの実行が失敗し、例外がスローされます。  
   
 ### <a name="unsafe"></a>UNSAFE  
- アセンブリの読み込み-いずれかに明示的に呼び出して、 **System.Reflection.Assembly.Load()** メソッドからバイト配列、またはを使用して暗黙的に**Reflection.Emit**名前空間-は許可されていません。  
+ 呼び出すことによって、アセンブリを明示的に読み込み、 **System.Reflection.Assembly.Load()** メソッドからバイト配列、またはを使用して暗黙的に**Reflection.Emit**名前空間-は許可されていません。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  すべて**UNSAFE**条件がチェックされます。  

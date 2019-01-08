@@ -1,5 +1,5 @@
 ---
-title: 予測クエリ (データ マイニング) |Microsoft ドキュメント
+title: 予測クエリ (データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a8bc3dac0b76adc326b5beab8444475fb76af8d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19d555e988ecc1093388d751ea9f66a720b21def
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017849"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506042"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "34017849"
 ###  <a name="bkmk_PredFunc"></a> 予測関数の追加  
  予測クエリをカスタマイズすると、値を予測するだけでなく、その予測に関連するさまざまな種類の情報を取得することができます。 たとえば、予測によりある顧客に推奨する製品の一覧を作成する場合、各予測が当たる確率を取得するのも良いでしょう。各予測をランク付けし、上位の推奨品だけをその顧客に勧めます。  
   
- これを行うには、クエリに *予測関数* を追加します。 サポートされる関数は、モデルやクエリの種類ごとに決まっています。 たとえばクラスター モデルでは、モデルによって作成されたクラスターに関する追加情報を提供する特殊な予測関数がサポートされています。一方、タイム シリーズ モデルには、時間経過に伴って生じる違いを計算する関数があります。 ほぼすべての種類のモデルで使用できる汎用の予測関数もあります。 さまざまな種類のクエリでサポートされる予測関数の一覧については、DMX リファレンスの「[一般的な予測関数 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)」をご覧ください。  
+ これを行うには、クエリに *予測関数* を追加します。 サポートされる関数は、モデルやクエリの種類ごとに決まっています。 たとえばクラスター モデルでは、モデルによって作成されたクラスターに関する追加情報を提供する特殊な予測関数がサポートされています。一方、タイム シリーズ モデルには、時間経過に伴って生じる違いを計算する関数があります。 ほぼすべての種類のモデルで使用できる汎用の予測関数もあります。 さまざまな種類のクエリでサポートされる予測関数の一覧は、このトピックの「DMX リファレンスを参照してください。[一般的な予測関数&#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)します。  
   
 ###  <a name="bkmk_SingletonQuery"></a> 単一予測クエリの作成  
  単一予測クエリは、予測をリアルタイムですぐに作成する場合に便利です。 一般的な使用手順としては、Web サイトのフォームを使用して顧客から情報を取得し、そのデータを入力として単一予測クエリに提出します。 たとえば、顧客が一覧から製品を選択すると、その選択内容を、お勧め製品を予測するクエリの入力として使用できます。  
@@ -68,7 +68,7 @@ ms.locfileid: "34017849"
  単一予測クエリには、入力を格納する独立したテーブルは必要ありません。 代わりに、入力として 1 行以上の値をモデルに提供し、1 件以上の予測をリアルタイムに取得します。  
   
 > [!WARNING]  
->  単一予測クエリでは、その名前にかかわらず、単一クエリのみが生成されるわけではありません。入力セットごとに複数の予測を生成できます。 入力ケースごとに SELECT ステートメントを作成し、それらを UNION 演算子で組み合わせて、複数の入力ケースを指定します。  
+>  名前にかかわらず、単一予測クエリだけしないで 1 つの予測の入力セットごとの複数の予測を生成することができます。 入力ケースごとに SELECT ステートメントを作成し、それらを UNION 演算子で組み合わせて、複数の入力ケースを指定します。  
   
  単一予測クエリを作成するときには、新しいデータを PREDICTION JOIN の形式でモデルに渡す必要があります。 したがって、実際のテーブルにマップするわけではなくても、新しいデータをマイニング モデルの既存の列に必ず一致させる必要があります。 新しいデータ列と新しいデータが完全に一致する場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によってそれらの列が自動的にマップされます。 これを *NATURAL PREDICTION JOIN*と呼びます。 一方、列が一致しない場合 (モデルに含まれているのと同じ種類および量のデータが新しいデータに含まれていない場合) は、モデルのどの列を新しいデータにマップするのかを指定するか、不足値を指定する必要があります。  
   
@@ -148,7 +148,7 @@ FROM
  階層的な行セットを処理できないプロバイダーを使用している場合は、予測クエリ内で FLATTEN キーワードを使用して結果をフラット化することができます。 フラットな行セットの例などの詳細については、「[SELECT &#40;DMX&#41;](../../dmx/select-dmx.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [コンテンツ クエリ (&) #40 です。 データ マイニング (&) #41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [データ定義クエリ (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [コンテンツ クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [データ定義クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   

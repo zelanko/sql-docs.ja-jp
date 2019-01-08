@@ -1,5 +1,5 @@
 ---
-title: タイム シリーズ モデルのクエリ例 |Microsoft ドキュメント
+title: タイム シリーズ モデルのクエリ例 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fb280c856b6e7231c078bf830be4a10f9ecc4723
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f839b7e108f6398f96c302016cfc45c82a110c6d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018929"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526501"
 ---
-# <a name="time-series-model-query-examples"></a>タイム シリーズ モデルのクエリ例
+# <a name="time-series-model-query-examples"></a>Time Series Model Query Examples
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、時系列モデルでコンテンツ クエリを使用すると、検出された周期的構造に関する追加情報を取得できます。一方、予測クエリを使用すると、次の 5 ～ 10 のタイム スライスの予測などを取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "34018929"
 ## <a name="getting-information-about-a-time-series-model"></a>時系列モデルに関する情報の取得  
  モデル コンテンツのクエリを使用すると、モデルに関する基本的な情報を取得できます (モデルの作成時に使用されたパラメーターや、モデルが最後に処理された時間など)。 以下の例は、データ マイニング スキーマ行セットを使用してモデル コンテンツのクエリを実行するための基本構文を示しています。  
   
-###  <a name="bkmk_Query1"></a> サンプル クエリ 1 : モデルの周期性のヒントを取得する  
+###  <a name="bkmk_Query1"></a> サンプル クエリ 1:モデルの周期性のヒントを取得する  
  時系列内で検出された周期性は、ARIMA ツリーや ARTXP ツリーに対してクエリを実行することによって取得できます。 しかし、完成したモデルの周期性は、モデルの作成時にヒントとして指定した周期性と同じであるとは限りません。 モデルの作成時にパラメーターとして指定されたヒントを取得するには、次の DMX ステートメントを使用して、マイニング モデル コンテンツ スキーマ行セットに対してクエリを実行します。  
   
 ```  
@@ -56,7 +56,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY 0.1、MINIMUM_SUPPORT の = = 10、PERIODICITY_HINT ={1,3}、.|  
+|COMPLEXITY_PENALTY = 0.1、MINIMUM_SUPPORT = 10、PERIODICITY_HINT ={1,3}、.|  
   
  既定の周期性のヒントである {1} は、すべてのモデルで表示されます。このサンプル モデルでは、そのほかにもう 1 つ追加のヒントが作成時に使用されています。これは、最終的なモデルには存在しない可能性があります。  
   
@@ -64,7 +64,7 @@ WHERE MODEL_NAME = '<model name>'
 >  ここでは、読みやすくするために結果が切り捨てられています。  
   
   
-###  <a name="bkmk_Query2"></a> サンプル クエリ 2 : ARIMA モデルの式を取得する  
+###  <a name="bkmk_Query2"></a> サンプル クエリ 2:ARIMA モデルの式を取得する  
  ARIMA モデルの式を取得するには、個々のツリーの任意のノードに対してクエリを実行します。 ARIMA モデル内の各ツリーは、それぞれ異なる周期性を表します。また、複数のデータ系列がある場合は、データ系列ごとに固有の周期性ツリーのセットがあります。 したがって、特定のデータ系列の式を取得するには、まずそのツリーを特定する必要があります。  
   
  たとえば、TA プレフィックスはノードが ARIMA ツリーの一部であることを示します。一方、TS プレフィックスは ARTXP ツリーで使用されます。 モデル コンテンツにクエリを実行して NODE_TYPE 値が 27 のノードを検索することで、すべての ARIMA ルート ツリーを見つけることができます。 また、ATTRIBUTE_NAME の値を使用して、特定のデータ系列の ARIMA ルート ノードを検索することもできます。 次のクエリ例は、ヨーロッパ地域における R250 モデルの販売数量を表す ARIMA ノードを検索します。  
@@ -88,17 +88,17 @@ WHERE NODE_NAME = 'TA00000007'
   
  例の結果を次に示します。  
   
-|Short equation|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|Short equation|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24.|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
- この情報の意味の詳細については、「[タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)」を参照してください。  
+ この情報の意味の詳細については、「 [タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)」を参照してください。  
   
   
-###  <a name="bkmk_Query3"></a> サンプル クエリ 3 : ARTXP モデルの式を取得する  
- ARTxp モデルでは、ツリーの各レベルにさまざまな情報が格納されます。 ARTxp モデルの構造と式の意味の詳細については、「[タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)」を参照してください。  
+###  <a name="bkmk_Query3"></a> サンプル クエリ 3:ARTXP モデルの式を取得します。  
+ ARTxp モデルでは、ツリーの各レベルにさまざまな情報が格納されます。 ARTxp モデルの構造と式の意味の詳細については、「 [タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)」を参照してください。  
   
  次の DMX ステートメントは、ヨーロッパにおける R250 モデルの販売数量を表す ARTxp ツリーの情報の一部を取得します。  
   
@@ -115,7 +115,7 @@ WHERE NODE_ATTRIBUTE_NAME = 'R250 Europe:Quantity'
 AND NODE_TYPE = 15  
 ```  
   
- この情報の意味の詳細については、「[タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)」を参照してください。  
+ この情報の意味の詳細については、「 [タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)」を参照してください。  
   
   
 ## <a name="creating-predictions-on-a-time-series-model"></a>時系列モデルでの予測の作成  
@@ -128,13 +128,13 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_ReplaceExtend"></a> 置換および拡張操作の動作について  
  時系列モデルに新しいデータを追加するときは、トレーニング データを拡張するか置換するかを指定できます。  
   
--   **拡張:** データ系列を拡張すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって新しいデータが既存のトレーニング データの末尾に追加されます。 トレーニング ケースの数も増加します。  
+-   **拡張します。** データ系列を拡張すると[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]既存のトレーニング データの最後に、新しいデータを追加します。 トレーニング ケースの数も増加します。  
   
      モデル ケースの拡張は、新しいデータを使用して継続的にモデルを更新するときに便利です。 たとえば、トレーニング セットを時間の経過と共に成長させるには、単にモデルを拡張します。  
   
      データを拡張するには、時系列モデルに **PREDICTION JOIN** を作成し、新しいデータのソースを指定し、 **EXTEND_MODEL_CASES** 引数を使用します。  
   
--   **置換:** データ系列のデータを置換すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によってトレーニング済みのモデルは保持されますが、既存のトレーニング ケースの一部または全部が新しいデータ値で置換されます。 このためトレーニング データのサイズは変わりませんが、ケース自体は継続的に新しいデータに置換されます。 新しいデータを十分に提供すれば、まったく新しい系列でトレーニング データを置換できます。  
+-   **置き換えます。** データ系列のデータを置き換えるときに[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]がトレーニング済みのモデルのままで新しいデータ値を使用して、既存のトレーニング ケースの一部またはすべてを置き換えます。 このためトレーニング データのサイズは変わりませんが、ケース自体は継続的に新しいデータに置換されます。 新しいデータを十分に提供すれば、まったく新しい系列でトレーニング データを置換できます。  
   
      1 セットのケースでモデルをトレーニングし、そのモデルを別のデータ系列に適用するときは、モデル ケースの置換が便利です。  
   
@@ -205,19 +205,19 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |予測関数|使用方法|  
-|[Lag & #40";"DMX"&"#41;](../../dmx/lag-dmx.md)|現在のケースの日付とトレーニング セットの最後の日付の間のタイム スライス数を返します。<br /><br /> この関数の一般的な使用方法は、最近のトレーニング ケースに関する詳細なデータを取得できるように、そのようなケースを判別することです。|  
-|[PredictNodeId & #40";"DMX"&"#41;](../../dmx/predictnodeid-dmx.md)|指定した予測可能列のノードの ID を返します。<br /><br /> この関数の一般的な使用目的は、特定の予測値を生成したノードを識別して、そのノードに関連付けられているケースの表示や、式などの詳細の取得ができるようにすることです。|  
-|[PredictStdev & #40";"DMX"&"#41;](../../dmx/predictstdev-dmx.md)|指定した予測可能列の予測の標準偏差を返します。<br /><br /> この関数を、時系列モデルでサポートされない INCLUDE_STATISTICS 引数の代わりに使用できます。|  
-|[PredictVariance & #40";"DMX"&"#41;](../../dmx/predictvariance-dmx.md)|指定した予測可能列の予測の分散を返します。<br /><br /> この関数を、時系列モデルでサポートされない INCLUDE_STATISTICS 引数の代わりに使用できます。|  
-|[PredictTimeSeries (&) #40";"DMX"&"#41;](../../dmx/predicttimeseries-dmx.md)|時系列の予測される履歴値または将来の予測値を返します。<br /><br /> 汎用の予測関数である [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md) を使用して、時系列モデルに対するクエリを実行することもできます。|  
+|[Lag &#40;DMX&#41;](../../dmx/lag-dmx.md)|現在のケースの日付とトレーニング セットの最後の日付の間のタイム スライス数を返します。<br /><br /> この関数の一般的な使用方法は、最近のトレーニング ケースに関する詳細なデータを取得できるように、そのようなケースを判別することです。|  
+|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|指定した予測可能列のノードの ID を返します。<br /><br /> この関数の一般的な使用目的は、特定の予測値を生成したノードを識別して、そのノードに関連付けられているケースの表示や、式などの詳細の取得ができるようにすることです。|  
+|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|指定した予測可能列の予測の標準偏差を返します。<br /><br /> この関数を、時系列モデルでサポートされない INCLUDE_STATISTICS 引数の代わりに使用できます。|  
+|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|指定した予測可能列の予測の分散を返します。<br /><br /> この関数を、時系列モデルでサポートされない INCLUDE_STATISTICS 引数の代わりに使用できます。|  
+|[PredictTimeSeries &#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)|時系列の予測される履歴値または将来の予測値を返します。<br /><br /> 汎用の予測関数である [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md) を使用して、時系列モデルに対するクエリを実行することもできます。|  
   
- すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通の関数の一覧については、「[一般的な予測関数 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 (DMX) 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
+ すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通の関数の一覧については、「[一般的な予測関数 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 &#40;DMX&#41; 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
   
   
 ## <a name="see-also"></a>参照  
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft タイム シリーズ アルゴリズム](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [タイム シリーズ モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルにフィルターを適用 |Microsoft ドキュメント
+title: マイニング モデルにフィルターを適用 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a3e192718ed0e1c3597f4e0f76c951a96530c6c7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5430aa0125e621a574d8fb9cc6b28f6b73794b46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014599"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519254"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>マイニング モデルへのフィルターの適用
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  モデルを選択し、右クリックしてショートカット メニューを開きます。  
   
-     または  
+     - または -  
   
      モデルを選択します。 次に、 **[マイニング モデル]** メニューの **[モデル フィルターの設定]** をクリックします。  
   
@@ -81,7 +81,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>マイニング モデルの入れ子になったテーブルにフィルターを追加するには  
   
-1.  **\<名 > モデル フィルター**  ダイアログ ボックスで、下のグリッドの空の行をクリックして**マイニング構造列**です。  
+1.  **\<名 > モデル フィルター**  ダイアログ ボックスで、下のグリッドで空の行をクリックします。**マイニング構造列**します。  
   
 2.  ドロップダウン リストから、入れ子になったテーブルの名前を選択します。  
   
@@ -91,7 +91,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      ケース テーブルでは入れ子になったテーブルの特定の値を含むケースのみに制限しているため、 **[モデル フィルター]** ダイアログ ボックスで入れ子になったテーブルに対して選択できる条件はこれだけです。 次の手順で入れ子になったテーブルの条件に値を設定します。  
   
-4.  **[値]** ボックスをクリックし、(**[...]**) ボタンをクリックして式を作成します。  
+4.  をクリックして、**値**ボックスをクリックして、 **([...])** ボタン式を作成します。  
   
      **\<名 > フィルター**  ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、現在のテーブルにのみ条件を設定できます。ここでは、入れ子になったテーブルです。  
   
@@ -120,8 +120,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  フィルター式の一部を手動で変更すると、グリッドが無効になり、その後はテキスト編集モードでしかフィルター式を操作できなくなります。 グリッド編集モードに戻すには、フィルター式を消去して最初からやり直す必要があります。  
   
 ## <a name="see-also"></a>参照  
- [フィルターをマイニング モデルと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [マイニング モデルのフィルター (Analysis Services - データ マイニング)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [マイニング モデル タスクと操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [マイニング モデルからフィルターを削除します。](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
+ [マイニング モデルからのフィルターの削除](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   

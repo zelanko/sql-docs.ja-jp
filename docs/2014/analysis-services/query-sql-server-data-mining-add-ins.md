@@ -16,12 +16,12 @@ ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b23083870b2f60e3d844d921705f4612ecc975f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b596612d711925687087a2263013fdf13a0c491e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079422"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418463"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>クエリ (SQL Server データ マイニング アドイン)
   ![クエリ モデル ボタン、データ マイニング リボン](media/dmc-query.gif "モデルのクエリ ボタン、データ マイニング リボン")  
@@ -30,7 +30,7 @@ ms.locfileid: "48079422"
   
  **クエリ**作成またはデータ マイニング モデルを変更するため、カスタムのクエリを生成するため、または入れ子になったデータセットなど、他のツールでサポートされていない構造を操作するためにウィザードが高度なエディターにも提供します。  
   
--   テキスト エディターを使用して、他の場所で作成したデータ マイニング拡張機能 (DMX) ステートメントを入力し貼り付けます。  
+-   テキスト エディターを使用して、他の場所で作成したデータ マイニング拡張機能 (DMX) ステートメントに入力または貼り付けます。  
   
 -   対話的なクエリ ビルダーを使用して、テンプレートとダイアログ ボックスの助けを借りて、カスタム DMX ステートメントを作成します。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48079422"
   
  いつでもでもクリックできます **[詳細設定]** に切り替える、**データ マイニング詳細クエリ エディター**、DMX ステートメントの各部分をより詳細に制御ができます。 高度なクエリを編集ツールを使用する方法の詳細については、次を参照してください。[高度なデータ マイニングのクエリ エディター](advanced-data-mining-query-editor.md)します。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  使用する、**クエリ**ウィザードのインスタンスに接続する必要がある必要があります[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 また、サーバーに適切な種類のデータ マイニング モデルが少なくとも 1 つ保存されている必要があります。 使用できるモデルが 1 つもない場合は、Excel 用のデータ マイニング クライアントのウィザードを使用して作成できます。 ウィザードを使用して、新しいマイニング モデルを作成する方法については、次を参照してください。[データ マイニング モデルを作成する](creating-a-data-mining-model.md)します。  
   
 ## <a name="see-also"></a>参照  

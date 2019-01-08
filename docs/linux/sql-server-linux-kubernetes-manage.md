@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1760256333abad2c6ae32d0aa2a94e1deaebd551
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ad4f310ce6c0e200d5e658b3d5814131000d0004
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518492"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>SQL Server Always On 可用性グループの Kubernetes を管理します。
 
@@ -37,7 +37,7 @@ Always On 可用性グループで Kubernetes を管理するには、マニフ�
 
   環境内のファイルを更新します。
 
-  - 置換`<containerName>`期待される可用性グループのターゲットの名前に置き換えます。
+  - 置換`<containerName>`で期待される可用性グループのターゲットのポッド名 (例: mssql2-0)。
   - 可用性グループが含まれていない場合、`ag1`名前空間、置き換える`ag1`名前空間を持つ。
 
   このファイルは、という名前のフェールオーバー ジョブを定義します。`manual-failover`します。
@@ -63,7 +63,7 @@ Always On 可用性グループで Kubernetes を管理するには、マニフ�
   次の例は、という名前のジョブの状態を返します`manual-failover`します。
 
   ```azurecli
-  kubectl describe jobs/manual-failover -–namespace ag1
+  kubectl describe jobs/manual-failover --namespace ag1
   ```
 
 1. 手動のフェールオーバー ジョブを削除します。 
@@ -76,7 +76,7 @@ Always On 可用性グループで Kubernetes を管理するには、マニフ�
   次のコマンドは、ジョブを削除します。
 
   ```azurecli
-  kubectl delete jobs manual-failover -–namespace ag1
+  kubectl delete jobs manual-failover --namespace ag1
   ```
 
 ## <a name="rotate-credentials"></a>資格情報を交換します。
@@ -127,7 +127,7 @@ kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --f
 
   Kubernetes は、マスター _ キーを更新し、 `sa` SQL Server の可用性グループ内の 1 つのインスタンスのパスワード。
 
-1. ジョブが完了したことを確認します。 次のコマンドを実行しますジョブが完了したことを確認するには、実行。 
+1. ジョブが完了したことを確認します。 次のコマンドを実行します。ジョブが完了したことを確認するに次のように実行します。 
 
   ```azcli
   kubectl describe job rotate-creds --namespace ag1

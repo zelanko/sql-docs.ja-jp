@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ea15a8fc5eaf066b5a64cf73192f64dd0078434e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699447"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534081"
 ---
 # <a name="transparent-data-encryption"></a>透過的なデータ暗号化
 データベースをセキュリティで保護するために、安全なシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの予防策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープ) などが盗まれるシナリオで悪意のあるパーティできますだけ復元またはデータベースをアタッチし、データを参照します。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
@@ -56,7 +56,7 @@ TDE を使用するには、次の手順を実行します。 最初の 3 つの
   
 次の例の暗号化、`AdventureWorksPDW2012`という証明書を使用してデータベース`MyServerCert`SQL Server PDW で作成された。  
   
-**: 最初に、SQL Server PDW で TDE を有効にします。** このアクションは、1 回でのみ必要です。  
+**まずは：SQL Server PDW で TDE を有効にします。** このアクションは、1 回でのみ必要です。  
   
 ```sql  
 USE master;  
@@ -75,7 +75,7 @@ GO
 EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
 ```  
   
-**: 2 つ目は、作成し、master データベース内の証明書をバックアップします。** このアクションは、のみ 1 回必要です。 (推奨)、データベースごとに別の証明書をも、1 つの証明書で複数のデータベースを保護することができます。  
+**1 秒:作成し、master データベース内の証明書をバックアップします。** このアクションは、のみ 1 回必要です。 (推奨)、データベースごとに別の証明書をも、1 つの証明書で複数のデータベースを保護することができます。  
   
 ```sql  
 -- Create certificate in master  
@@ -93,7 +93,7 @@ BACKUP CERTIFICATE MyServerCert
 GO  
 ```  
   
-**最後: は、DEK を作成し、ユーザー データベースを暗号化する ALTER DATABASE を使用します。** このアクションは、TDE で保護されているデータベースごとに繰り返されます。  
+**前の：DEK を作成し、ユーザー データベースを暗号化する ALTER DATABASE を使用します。** このアクションは、TDE で保護されているデータベースごとに繰り返されます。  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -118,7 +118,7 @@ TDE の証明書を次に示すステートメントで処理できるように�
   
 次の表に、TDE のコマンドと関数の説明とリンクを示します。  
   
-|コマンドまたは関数|用途|  
+|コマンドまたは関数|目的|  
 |-----------------------|-----------|  
 |[データベース暗号化キーを作成します。](../t-sql/statements/create-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを作成します。|  
 |[データベース暗号化キーを変更します](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを変更します。|  
@@ -128,7 +128,7 @@ TDE の証明書を次に示すステートメントで処理できるように�
 ## <a name="catalog-views-and-dynamic-management-views"></a>カタログ ビューと動的管理ビュー  
 次の表に、TDE のカタログ ビューと動的管理ビューを示します。  
   
-|カタログ ビューまたは動的管理ビュー|用途|  
+|カタログ ビューまたは動的管理ビュー|目的|  
 |-------------------------------------------|-----------|  
 |[sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|データベース情報を表示するカタログ ビュー|  
 |[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|データベース内の証明書を表示するカタログ ビュー|  
@@ -238,11 +238,11 @@ DMK がアップグレードまたは置換の VM が実行されたアプライ
   
 アップグレード アクションの例です。 置換`**********`DMK パスワードを使用します。  
   
-`setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
   
 仮想マシンを置換するアクションの例です。  
   
-`setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
   
 アップグレード中に、ユーザー データベースが暗号化されており、DMK パスワードが指定されていない場合、アップグレード アクションは失敗します。 置換、中に、DMK が存在する場合は、正しいパスワードが指定されていない操作がその DMK 復旧手順をスキップします。 その他のすべての手順は、アクションを追加の手順が必要なことを示すために、最後にエラーが報告されますが、置換 VM アクションの最後に完了できません。 セットアップ ログで (である**\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< タイムスタンプ > \Detail-Setup**)、末尾付近に次の警告が表示されます。  
   

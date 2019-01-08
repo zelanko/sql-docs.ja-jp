@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsplitter.f1
@@ -13,12 +12,12 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03f677f8214fb086f3feb6077608fed83d7089d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd69d23338510b08a450504c477c23d076ffaf1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086258"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754694"
 ---
 # <a name="cdc-splitter"></a>CDC スプリッター
   CDC スプリッターは、CDC ソース データの変更行の単一フローを、挿入、更新、削除の各操作のための個別のデータ フローに分割します。 データベースは、必須の列 `__$operation` と、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブル内のその標準の値に基づいて分割されます。  
@@ -41,11 +40,11 @@ ms.locfileid: "48086258"
   
  コンポーネントのエラー出力には、次の出力列があります。  
   
--   **エラー コード**: 1 に設定されます。  
+-   **エラー コード**:1 に設定します。  
   
--   **エラー列**: (変換エラーの) エラーの原因となるソース列。  
+-   **エラー列**:(変換エラー) エラーを原因となるソース列。  
   
--   **エラー行の列**: エラーの原因となった行の入力列。  
+-   **エラー行の列**:エラーが発生した行の入力列。  
   
 ## <a name="configuring-the-cdc-splitter"></a>CDC スプリッターの構成  
  CDC スプリッターに構成可能なプロパティはありません。  

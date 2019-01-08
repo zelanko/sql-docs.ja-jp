@@ -15,12 +15,12 @@ ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23eef4c33afbbfd287bb9be083cfe0990a6dd6a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729032"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512192"
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL ステートメントで使用される要素
 次の要素は、前の表に、SQL ステートメントで使用されます。  
@@ -52,9 +52,9 @@ ms.locfileid: "47729032"
   
  *動的パラメーター* :: = でしょうか。  
   
- *式*:: = 用語 &#124; 式 {+ &#124; –} 用語  
+ *式*:: = 用語&#124;式 {0} +&#124;-} 用語  
   
- *係数*:: = [*+*&#124;*–*]*プライマリ*  
+ *係数*:: = [*+*&#124;*-*]*プライマリ*  
   
  *挿入値*:: =  
   

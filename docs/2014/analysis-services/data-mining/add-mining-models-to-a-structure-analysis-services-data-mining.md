@@ -15,12 +15,12 @@ ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c47b8d7d33626fbba240611f31b1c064e6b91c7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06a5b4261ecde623dc8c31c7b8045042513a8da2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218602"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509968"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>マイニング モデルを構造に追加する (Analysis Services - データ マイニング)
   1 つのマイニング構造で複数のマイニング モデルをサポートできるようになっています。 そのため、ウィザードの完了後、構造を開いて新しいマイニング モデルを追加できます。 作成した各モデルで、別のアルゴリズムの使用、パラメーターの変更、または別のデータのサブセットを使用するためのフィルターの適用が可能です。  
@@ -29,7 +29,7 @@ ms.locfileid: "48218602"
  データ マイニング ウィザードを使用して新しいマイニング モデルを作成する場合、既定では、まずマイニング構造を作成する必要があります。 次に、ウィザードにより、構造に初期マイニング モデルを追加するためのオプションが示されます。 ただし、モデルをすぐに作成する必要はありません。 構造のみを作成する場合は、予測可能な属性として使用する列や、具体的なモデルにおけるデータの使用方法について、決定する必要がありません。 将来使用するために一般的なデータ構造のみを設定しておくと、後で [データ マイニング デザイナー](data-mining-designer.md) を使用して、構造に基づく新しいマイニング モデルを追加できます。  
   
 > [!NOTE]  
->  DMX の CREATE MINING MODEL ステートメントは、マイニング モデルから始まります。 つまり、ユーザーがマイニング モデルを定義すると、基になる構造が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって自動的に生成されます。 後で ALTER STRUCTURE ... ADD MODEL ステートメントを使用すると、その構造に新しいマイニング モデルを引き続き追加できます。  
+>  DMX の CREATE MINING MODEL ステートメントは、マイニング モデルから始まります。 つまり、ユーザーがマイニング モデルを定義すると、基になる構造が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって自動的に生成されます。 後で ALTER STRUCTURE を使用して、その構造に新しいマイニング モデルを追加することができます.ADD MODEL ステートメントを使用すると、その構造に新しいマイニング モデルを引き続き追加できます。  
   
 ## <a name="choosing-an-algorithm"></a>アルゴリズムの選択  
  既存の構造に新しいモデルを追加する場合、最初にすることは、そのモデルで使用するデータ マイニング アルゴリズムの選択です。 各アルゴリズムは異なる種類の解析を実行し、異なる要件を持つため、アルゴリズムの選択は重要です。  
@@ -59,8 +59,8 @@ ms.locfileid: "48218602"
  一部の列に対しては、 *列のコンテンツ*も指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ マイニングでは、各データ列の Content Type プロパティによって、その列のデータの処理方法をアルゴリズムに指示します。 たとえば、Income 列がデータにある場合、コンテンツの種類を Continuous に設定することによって、連続する数値が列に含まれていることを示す必要があります。 一方、コンテンツの種類を Discretized に設定し、必要に応じて正確なバケット数を指定することによって、Income 列内の数値を複数のバケットにグループ化するよう指定することもできます。 列の処理方法が異なる複数のモデルを作成できます。たとえば、あるモデルでは顧客を 3 つの年齢層のバケットに分け、別のモデルでは顧客を 10 の年齢層のバケットに分けることができます。  
   
 ## <a name="see-also"></a>参照  
- [マイニング構造&#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
- [リレーショナル マイニング構造を作成します。](create-a-relational-mining-structure.md)   
+ [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
+ [リレーショナル マイニング構造の作成](create-a-relational-mining-structure.md)   
  [マイニング モデルのプロパティ](mining-model-properties.md)   
  [マイニング モデル列](mining-model-columns.md)  
   

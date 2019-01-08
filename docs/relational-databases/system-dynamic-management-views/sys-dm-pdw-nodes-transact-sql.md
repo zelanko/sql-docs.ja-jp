@@ -13,17 +13,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ff3f6c31389622dc424c42e06bfa78477c70cde2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b2a17f1fd57b70dbee056e66a76c0416b0a25c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769370"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533570"
 ---
 # <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  内のノードのすべてに関する情報を保持[!INCLUDE[ssAPS](../../includes/ssaps-md.md)]します。 アプライアンス内のノードごとに 1 行が一覧表示します。  
+  すべてのノードの情報を保持して [!INCLUDE[ssAPS](../../includes/ssaps-md.md)]です。 アプライアンス内のノードごとに 1 行が一覧表示します。  
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
@@ -31,7 +31,7 @@ ms.locfileid: "47769370"
 |type|**nvarchar(32)**|ノードの型。|' COMPUTE'、'コントロール'、'管理'|  
 |NAME|**nvarchar(32)**|ノードの論理名です。|適切な長さの任意の文字列。|  
 |address|**nvarchar(32)**|このノードの IP アドレス。|0 ～ 255 の形式。0 ～ 255 です。0 ～ 255 です。0 ～ 255 です。|  
-|is_passive|**int**|Node を実行する仮想マシンが割り当てられているサーバーで実行されているかは予備のサーバーにフェールオーバーするかどうかを示します。|0 ～ ノード VM は、元のサーバーで実行されているとします。<br /><br /> 1 – ノードの VM は、予備のサーバーで実行されています。|  
+|is_passive|**int**|Node を実行する仮想マシンが割り当てられているサーバーで実行されているかは予備のサーバーにフェールオーバーするかどうかを示します。|0 - ノード VM は元のサーバーで実行されています。<br /><br /> 1-ノード VM は、予備のサーバーで実行しています。|  
 |領域 (region)|**nvarchar(32)**|ノードが実行されている地域です。|' PDW'、'HDINSIGHT'|  
   
 ## <a name="see-also"></a>参照  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a06dfa03442cfbcff2f8815f9c946afbd9ff771c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 127f39075a1b84b1250a27003efeb28083d1adbd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513189"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux 上の Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法
 
@@ -101,7 +101,7 @@ sudo firewall-cmd --reload
 
 ## <a name="configure-port-routing"></a>ポートのルーティングを構成します。
 
-Linux サーバーのルーティング テーブルを構成するのには、SQL Server のポート 135 で RPC 通信がリダイレクトされるように**network.rpcport**します。 Iptable の規則は可能性があります、次のコマンドは、再起動後に、ルールを復元するための手順を指定するため、再起動中に保持されません。
+Linux サーバーのルーティング テーブルを構成するのには、SQL Server のポート 135 で RPC 通信がリダイレクトされるように**network.rpcport**します。 異なるディストリビューション上のポート転送の構成メカニズムが異なる場合があります。 Firewalld サービスを使用しないディストリビューションでは、iptable の規則は、これを実現する、効率的なメカニズムです。 このような distrubution の例は、Ubuntu 16.04 および SUSE Enterprise Linux v12 です。 Iptable の規則は可能性があります、次のコマンドは、再起動後に、ルールを復元するための手順を指定するため、再起動中に保持されません。
 
 1. ポート 135 のルーティング規則を作成します。 次の例では、ポート 135 は、前のセクションで定義されている RPC ポート 13500 に送られます。 置換`<ipaddress>`サーバーの IP アドレスを使用します。
 
@@ -132,10 +132,16 @@ Linux サーバーのルーティング テーブルを構成するのには、S
    iptables-restore < /etc/iptables.conf
    ```
 
-**Iptables 保存**と**iptables 復元**コマンドは、保存し、iptables エントリを復元する基本的なメカニズムを提供します。 使用可能なオプションの自動化によっては、Linux ディストリビューションにある可能性があるより高度なこともできます。 たとえば、Ubuntu の代替は、 **iptables 永続的な**永続的なエントリを作成するパッケージ。 かまたは Red Hat Enterprise linux、firewalld サービスを使用することがあります (– ファイアウォール cmd 構成ユーティリティを使用して追加-転送-ポートまたは同様のオプション) 永続的なポートの転送 iptables を使用する代わりにルールを作成します。
+**Iptables 保存**と**iptables 復元**コマンドは、保存し、iptables エントリを復元する基本的なメカニズムを提供します。 使用可能なオプションの自動化によっては、Linux ディストリビューションにある可能性があるより高度なこともできます。 たとえば、Ubuntu の代替は、 **iptables 永続的な**永続的なエントリを作成するパッケージ。 
+
+Firewalld サービスを使用するディストリビューションでは、両方のサーバーと内部ポート転送ポートを開くため、同じサービスを使用できます。 たとえば、Red Hat Enterprise linux、する必要がありますサービスを使用する firewalld (-ファイアウォール cmd 構成ユーティリティを使用して追加-転送-ポートまたは同様のオプション) を作成し、永続的なポートの転送 iptables を使用する代わりにルールを管理します。
+
+```bash
+firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
+```
 
 > [!IMPORTANT]
-> 前の手順では、固定の IP アドレスと仮定します。 (手動による介入や DHCP) のため、SQL Server インスタンスの IP アドレスが変更された場合は、削除し、ルーティング ルールを再作成する必要があります。 再作成または既存のルーティング規則を削除する必要がある場合、次のコマンドを使用して古いを削除することができます`RpcEndPointMapper`規則。
+> 前の手順では、固定の IP アドレスと仮定します。 (手動による介入や DHCP) のため、SQL Server インスタンスの IP アドレスが変更された場合は、削除、iptables を使用して作成された場合は、ルーティング規則を再作成する必要があります。 再作成または既存のルーティング規則を削除する必要がある場合、次のコマンドを使用して古いを削除することができます`RpcEndPointMapper`規則。
 > 
 > ```bash
 > iptables -S -t nat | grep "RpcEndPointMapper" | sed 's/^-A //' | while read rule; do iptables -t nat -D $rule; done

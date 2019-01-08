@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 83ba28d09e32f043c58bdc1c63837f5b465312f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72945aca048d322ee03c8a1d88b76650ddd1db16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723490"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392695"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47723490"
 |max_worker_percent|**decimal(5,2)**|データベースのサービス層の限度に対する割合で表した最大同時実行ワーカー (要求)。<br /><br /> 最大値を現在の同時実行ワーカー数の 15 秒サンプルに基づいた、5 分間隔を計算します。|  
 |max_session_percent|**decimal(5,2)**|データベースのサービス層の限度に対する割合で表した最大同時セッション数。<br /><br /> 最大値は現在の同時セッション数の 15 秒サンプルに基づいた、5 分間隔の計算されます。|  
 |dtu_limit|**int**|現在データベースの最大 DTU このデータベースの設定この間隔中にします。 |  
-|allocated_storage_in_megabytes|**float**|量では、ファイルの空き領域 (mb) のデータベースのデータを格納するために使用できる書式設定されます。 書式設定されたファイル領域は、"割り当てられているデータ領域"とも呼ばれます。  詳細については、次を参照してください: [SQL DB 内のファイル領域管理。](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|量では、ファイルの空き領域 (mb) のデータベースのデータを格納するために使用できる書式設定されます。 書式設定されたファイル領域は、"割り当てられているデータ領域"とも呼ばれます。  詳細については、以下をご覧ください。[SQL DB でのファイル領域の管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  これらの制限とサービス レベルに関する詳細なコンテキスト、トピックを参照してください。[サービス階層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)します。  

@@ -11,12 +11,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3940f7c214ab3f9d5d48e83acef5ed2237ceeac3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206532"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515455"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>予測の作成 (基本的なデータ マイニング チュートリアル)
   予測クエリ ビルダーを使用して予測を生成できますし、マイニング モデルの精度をテストし、結果に満足していることにしましたが後、**マイニング モデル予測**データ マイニング モデル タブデザイナー。  
@@ -157,7 +157,7 @@ ms.locfileid: "48206532"
   
         2.  クエリの結果が保存されるテーブルの名前を入力します。  
   
-        3.  オプションを使用**DSV に追加**テーブルを作成すると、既存のデータ ソース ビューに追加します。 これは、モデルのすべての関連テーブル (トレーニング データ、予測ソース データ、クエリ結果など) を同じデータ ソース ビューで保持する場合に便利です。  
+        3.  オプションを使用**DSV に追加**テーブルを作成すると、既存のデータ ソース ビューに追加します。 これは、すべての関連テーブルを保持する場合、モデルなどのトレーニング データ、予測ソース データ、およびクエリ結果で、同じデータ ソース ビューに便利です。  
   
         4.  オプションを使用**場合は上書きが存在する**、最新の結果で、既存のテーブルを更新します。  
   

@@ -11,12 +11,12 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85fbcf7fdf8a15f9705c9b27ba838b41911f31db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91cc8740dfaeddcf489f3274b6766cdb803b1321
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113592"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416933"
 ---
 # <a name="use-powerpivot-gallery"></a>PowerPivot ギャラリーの使用
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーは、特殊な用途の SharePoint ドキュメント ライブラリです。PowerPivot データを含むパブリッシュ済みの Excel ブックおよび Reporting Services レポートを対象とする、豊富なプレビュー機能とドキュメント管理機能を提供します。  
@@ -50,7 +50,7 @@ ms.locfileid: "48113592"
 >  Power Pivot ギャラリーには、Microsoft Silverlight が必要です。  Microsoft Edge ブラウザーでは、Silverlight がサポートされていません。   
 > Edge でライブラリ コンテンツを表示するには、Power Pivot ギャラリーの **[ライブラリ]** タブをクリックして、ドキュメント ライブラリ ビューを **[すべてのドキュメント]** に変更します。    
 > 既定のビューを変更するには、 **[ライブラリ]** タブをクリックしてから、[ビューの変更] をクリックします。 [このビューを既定のビューにする] をクリックし、[OK] をクリックして既定のビューを保存します。  
->  Microsoft Edge のサポート対象について詳しくは、Windows ブログ「 [過去からの離別、第 2 部: ActiveX、VBScript... に別れを告げる](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)」をご覧ください。  
+>  Edge のサポート対象の詳細については、Windows のブログを参照してください。[以前は、第 2 部からの離別。ActiveX、VBScript に別れを取得しています.](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  前提条件の一覧については、次を参照してください。 [PowerPivot ギャラリーのカスタマイズの作成と](create-and-customize-power-pivot-gallery.md)します。  
   
@@ -70,13 +70,13 @@ ms.locfileid: "48113592"
   
 1.  ファイルを保存します。  
   
-2.  1.  **Excel 2010**: [ファイル] メニューの **[保存して送信]** をクリックします。  
+2.  1.  **Excel 2010 の場合:**[ファイル] メニューで、次のようにクリックします。**保存と送信**します。  
   
     2.  **[SharePoint に保存]** をクリックします。  
   
     3.  パブリッシュする個々のシートまたはパラメーターを [Excel Services のオプション] を使用して選択する場合は、 **[発行オプション]** をクリックします。 たとえば、[Excel Services のオプション] の [パラメーター] タブでは、パブリッシュしたブックに表示するスライサーを選択できます。  
   
-    1.  **Excel 2013:**  [ファイル] メニューの **[上書き保存]** をクリックします。  
+    1.  **Excel 2013 の場合:**[ファイル] メニューで、次のようにクリックします。**保存**します。  
   
     2.  パブリッシュする個々のシートまたはパラメーターを [Excel Services のオプション] を使用して選択する場合は、 **[ブラウザー ビュー オプション]** をクリックします。 たとえば、[Excel Services のオプション] の [パラメーター] タブでは、パブリッシュしたブックに表示するスライサーを選択できます。  
   
@@ -155,9 +155,9 @@ ms.locfileid: "48113592"
 ### <a name="document-type-is-not-supported"></a>ドキュメントの種類がサポートされていません  
  コンテンツの種類 " **PowerPivot ギャラリー ドキュメント** " はサポートされていません。 ドキュメント ライブラリに対してコンテンツの種類 " **PowerPivot ギャラリー ドキュメント** " を有効にし、その種類の新しいドキュメントを作成しようとすると、次のようなエラー メッセージが表示されます。  
   
--   新しいドキュメントを作成するには、Microsoft SharePoint Foundation 互換のアプリケーションおよび Web ブラウザーが必要です このドキュメント ライブラリにドキュメントを追加するには、[ドキュメントのアップロード] ボタンをクリックします。  
+-   新しいドキュメントでは、Microsoft Sharepoint Foundation 互換のアプリケーションと web ブラウザーが必要です。 このドキュメント ライブラリにドキュメントを追加するには、ドキュメントのアップロード ボタンをクリックします。  
   
--   インターネット アドレス 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' は無効です。ファイル 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' にアクセスできません。 さまざまな原因が考えられます。  
+-   "インターネット アドレス 'http://[server 名]/testSite/Gallery/reportgallery/forms/template.xlsx'' が無効です""。Microsoft Excel ファイルにアクセスできません ' http://[server 名]/testSite/Gallery/reportgallery/forms/template.xlsx' '。 さまざまな原因が考えられます。  
   
  コンテンツの種類 " **PowerPivot ギャラリー ドキュメント** " は、ドキュメント ライブラリに自動的に追加されません。サポートされていないコンテンツの種類を手動で有効にしない限り、この問題は発生しません。  
   

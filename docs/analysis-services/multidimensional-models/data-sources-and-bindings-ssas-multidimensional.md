@@ -1,5 +1,5 @@
 ---
-title: データ ソースとバインド (SSAS 多次元) |Microsoft ドキュメント
+title: データ ソースとバインド (SSAS 多次元) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2461bbdc3707ed30e130aaa32e117f24f9fe379d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 76afbfcd2cd7668cfc65fc5078a1015ac33bc964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025042"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529109"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>データ ソースとバインド (SSAS 多次元)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,24 +26,24 @@ ms.locfileid: "34025042"
   
  データ ソースを表す方法は、データ ソースの種類によって異なります。 たとえば、リレーショナル データ ソースは接続文字列によって区別されます。 使用できるデータ ソースの詳細については、「 [多次元モデルのデータ ソース](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)」を参照してください。  
   
- 使用しているデータ ソースにかかわらず、データ ソース ビュー (DSV) にはデータ ソースのメタデータが含まれています。 したがって、キューブまたは他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのバインドは DSV へのバインドとして表されます。 これらのバインドに、論理オブジェクト (ビュー、計算列、データ ソースに物理的に存在しないリレーションシップなど) へのバインドが含まれる場合もあります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、式をカプセル化する計算列を DSV に追加し、対応する OLAP メジャーを DSV のその列にバインドします。 DSV の詳細については、「 [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)」を参照してください。  
+ 使用しているデータ ソースにかかわらず、データ ソース ビュー (DSV) にはデータ ソースのメタデータが含まれています。 したがって、キューブまたは他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのバインドは DSV へのバインドとして表されます。 これらのバインドは、ビュー、計算列、およびデータ ソースに物理的に存在しないリレーションシップなどの論理オブジェクトのオブジェクトへのバインドを含めることができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、式をカプセル化する計算列を DSV に追加し、対応する OLAP メジャーを DSV のその列にバインドします。 DSV の詳細については、「 [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)」を参照してください。  
   
  データ ソースへのバインド方法は各 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトによって異なります。 また、これらのオブジェクトのデータ バインドとデータ ソースの定義は、データバインド オブジェクト (ディメンションなど) の定義と共にインラインで提供することも、個別の定義セットとして不一致で提供することも可能です。  
   
 ## <a name="analysis-services-data-types"></a>Analysis Services のデータ型  
  バインドで使用されるデータ型は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でサポートされているデータ型と一致する必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では次のデータ型が定義されています。  
   
-|Analysis Services のデータ型|Description|  
+|Analysis Services のデータ型|説明|  
 |---------------------------------|-----------------|  
 |BigInt|64 ビットの符号付き整数です。 このデータ型は、Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int64 データ型と、OLE DB の DBTYPE_I8 データ型にマップされます。|  
-|Bool|ブール値です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Boolean データ型と、OLE DB の DBTYPE_BOOL データ型にマップされます。|  
+|Bool|ブール値。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Boolean データ型と、OLE DB の DBTYPE_BOOL データ型にマップされます。|  
 |通貨|通貨単位の 1 万分の 1 までの精度を持つ -263 (-922,337,203,685,477.5808) ～ 263-1 (+922,337,203,685,477.5807) の通貨の値です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Decimal データ型と、OLE DB の DBTYPE_CY データ型にマップされます。|  
-|日付|倍精度浮動小数点数として保存される日付データです。 整数部分は 1899 年 12 月 30 日からの日数で、小数部分は日の端数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の DateTime データ型と、OLE DB の DBTYPE_DATE データ型にマップされます。|  
+|date|倍精度浮動小数点数として保存される日付データです。 整数部分は 1899 年 12 月 30 日からの日数で、小数部分は日の端数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の DateTime データ型と、OLE DB の DBTYPE_DATE データ型にマップされます。|  
 |Double|-1.79E +308 ～ 1.79E +308 の範囲の倍精度浮動小数点数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Double データ型と、OLE DB の DBTYPE_R8 データ型にマップされます。|  
 |Integer|32 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int32 データ型と、OLE DB の DBTYPE_I4 データ型にマップされます。|  
 |単一|-3.40E +38 ～ 3.40E +38 の範囲の単精度浮動小数点数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Single データ型と、OLE DB の DBTYPE_R4 データ型にマップされます。|  
 |SmallInt|16 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int16 データ型と、OLE DB の DBTYPE_I2 データ型にマップされます。|  
-|TinyInt|8 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の SByte データ型と、OLE DB の DBTYPE_I1 データ型にマップされます。<br /><br /> 注: データ ソースに tinyint データ型のフィールドが含まれ、AutoIncrement プロパティが True に設定されている場合、それらのフィールドはデータ ソース ビューで整数に変換されます。|  
+|TinyInt|8 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の SByte データ型と、OLE DB の DBTYPE_I1 データ型にマップされます。<br /><br /> 注:データ ソースに tinyint データ型のフィールドが含まれ、AutoIncrement プロパティが True に設定されている場合、それらのフィールドはデータ ソース ビューで整数に変換されます。|  
 |UnsignedBigInt|64 ビットの符号なし整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の UInt64 データ型と、OLE DB の DBTYPE_UI8 データ型にマップされます。|  
 |UnsignedInt|32 ビットの符号なし整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の UInt32 データ型と、OLE DB の DBTYPE_UI4 データ型にマップされます。|  
 |UnsignedSmallInt|16 ビットの符号なし整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の UInt16 データ型と、OLE DB の DBTYPE_UI2 データ型にマップされます。|  
@@ -52,7 +52,7 @@ ms.locfileid: "34025042"
  データ ソースから受け取るデータはすべて、(通常は処理中に) バインドで指定された [!INCLUDE[ssAS](../../includes/ssas-md.md)] の型に変換されます。 変換を実行できない場合 (たとえば、String から Int への変換など) はエラーが発生します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、バインドのデータ型は、通常、データ ソース内の変換元の型に最も適しているデータ型に設定されます。 たとえば、SQL 型の DateTime、SmallDateTime、DateTime2、DateTimeOffset は [!INCLUDE[ssAS](../../includes/ssas-md.md)] 型の Date にマップされ、SQL 型の Time は String にマップされます。  
   
 ## <a name="bindings-for-dimensions"></a>ディメンションのバインド  
- ディメンションの各属性は DSV の列にバインドされます。 ディメンションの属性はすべて 1 つのデータ ソースに基づいている必要がありますが、 バインドできるテーブルの列はさまざまです。 テーブル間のリレーションシップは DSV で定義されます。 同じテーブルにリレーションシップの複数のセットがある場合は、DSV で '別名' テーブルとして機能する名前付きクエリを使用する場合もあります。 式とフィルターは、DSV で名前付き計算と名前付きクエリを使用して定義されます。  
+ ディメンションの各属性は DSV の列にバインドされます。 ディメンションの属性はすべて 1 つのデータ ソースに基づいている必要がありますが、 バインドできるテーブルの列はさまざまです。 テーブル間のリレーションシップは DSV で定義されます。 リレーションシップの 1 つ以上のセットが同じテーブルに存在する場合は、'別名' テーブルとして機能する、DSV で名前付きクエリを紹介するために必要な場合があります。 式とフィルターは、DSV で名前付き計算と名前付きクエリを使用して定義されます。  
   
 ## <a name="bindings-for-measuregroups-measures-and-partitions"></a>メジャー グループ、メジャー、およびパーティションのバインド  
  各メジャー グループには次の既定のバインドがあります。  
@@ -145,18 +145,18 @@ ms.locfileid: "34025042"
   
  不一致バインドは、処理コマンドと共にオプションの **Bindings** コレクション オブジェクトを含めることで指定します。 オプションの **Bindings** コレクションには次の要素が含まれています。  
   
-|プロパティ|Cardinality|型|Description|  
+|プロパティ|Cardinality|型|説明|  
 |--------------|-----------------|----------|-----------------|  
-|**バインド**|0-n|**Binding**|新しいバインドのコレクションを提供します。|  
+|**Binding**|0-n|**Binding**|新しいバインドのコレクションを提供します。|  
 |**DataSource**|0-1|**DataSource**|サーバーの使用された **DataSource** を置き換えます。|  
 |**DataSourceView**|0-1|**DataSourceView**|使用されているサーバーから **DataSourceView**<br /><br /> を置き換えます。|  
   
  不一致バインドに関連する要素はすべてオプションです。 指定されていない要素については、ASSL では持続オブジェクトの DDL に含まれている指定が使用されます。 **Process** コマンドの **DataSource** または **DataSourceView** は省略可能です。 **DataSource** または **DataSourceView** が指定されている場合は、インスタンス化されず、 **Process** コマンドの完了後は持続しません。  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>不一致バインド型の定義  
- ASSL では、不一致 **Bindings** コレクション内で、複数のオブジェクトのバインドのコレクションである、各 **Binding**を使用できます。 各 **Binding** には拡張オブジェクト参照があります。これはオブジェクト参照に似ていますが、マイナー オブジェクト (たとえばディメンション属性やメジャー グループ属性) の参照も可能です。 このオブジェクトは特有のフラット形式、**オブジェクト**内の要素**プロセス**いる点を除き、コマンド、 \<*オブジェクト*> \< *オブジェクト/*> タグはありません。  
+ ASSL では、不一致 **Bindings** コレクション内で、複数のオブジェクトのバインドのコレクションである、各 **Binding**を使用できます。 各 **Binding** には拡張オブジェクト参照があります。これはオブジェクト参照に似ていますが、マイナー オブジェクト (たとえばディメンション属性やメジャー グループ属性) の参照も可能です。 このオブジェクトは特有のフラット形式、**オブジェクト**要素**プロセス**いる点を除き、コマンド、 \<*オブジェクト*> \< */オブジェクト*> タグはありません。  
   
- バインドが指定されている各オブジェクトは、フォームの XML 要素によって識別\<*オブジェクト*> ID (たとえば、 **DimensionID**)。 オブジェクトを識別したらできるだけ具体的にフォームの\<*オブジェクト*> ID、これは通常のバインドが指定されている、要素を識別し、**ソース**. 一般に、属性の列バインドの場合のように、 **Source** は **DataItem**のプロパティです。 この場合は、 **DataItem** タグを指定しないで、バインドする列に直接存在するかのように **Source** プロパティを指定するだけです。  
+ バインドが指定されている各オブジェクトが、フォームの XML 要素によって識別される\<*オブジェクト*> ID (たとえば、 **DimensionID**)。 オブジェクトを識別したら、フォームで具体的にできるだけ\<*オブジェクト*> ID は、通常、バインドされているが指定されている、要素を識別する**ソース**. 一般に、属性の列バインドの場合のように、 **Source** は **DataItem**のプロパティです。 この場合は、 **DataItem** タグを指定しないで、バインドする列に直接存在するかのように **Source** プロパティを指定するだけです。  
   
  **KeyColumns** は、 **KeyColumns** コレクション内の順序によって識別されます。 たとえば、属性の最初と 3 番目のキー列のみを指定することはできません。2 番目のキー列がスキップされることを示す方法がないからです。 不一致バインドでは、ディメンション属性のキー列のすべてが存在する必要があります。  
   

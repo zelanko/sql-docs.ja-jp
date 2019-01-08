@@ -20,18 +20,18 @@ ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc2ab4b2e97b9e1a83e0b00404010195b08f0dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654930"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502546"
 ---
 # <a name="sqlrowcount-function"></a>SQLRowCount 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLRowCount**によって影響を受ける行の数を返します、 **UPDATE**、**挿入**、または**削除**ステートメントでは、SQL_ADD、SQL_UPDATE_BY_BOOKMARK、または sql _DELETE_BY_BOOKMARK 操作**SQLBulkOperations**; SQL_UPDATE または SQL_DELETE 操作または**SQLSetPos**します。  
   
 ## <a name="syntax"></a>構文  
@@ -48,7 +48,7 @@ SQLRETURN SQLRowCount(
  [入力]ステートメント ハンドルです。  
   
  *RowCountPtr*  
- [出力]行の数を返すバッファーへのポインター。 **更新**、**挿入**、および**削除**SQL_ADD、SQL_UPDATE_BY_BOOKMARK、および SQL_DELETE_BY_BOOKMARK 操作のステートメント、 **SQLBulkOperations**、およびで SQL_UPDATE または SQL_DELETE 操作**SQLSetPos**で返される値 **RowCountPtr*か影響を受ける行の数が、要求または影響を受けた行の数がない場合は-1。  
+ [出力]行の数を返すバッファーへのポインター。 **更新**、**挿入**、および**削除**SQL_ADD、SQL_UPDATE_BY_BOOKMARK、および SQL_DELETE_BY_BOOKMARK 操作のステートメント、 **SQLBulkOperations**、およびで SQL_UPDATE または SQL_DELETE 操作**SQLSetPos**で返される値 **RowCountPtr*か影響を受ける行の数が、要求または影響を受けた行の数が利用できない場合は-1。  
   
  ときに**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、 **SQLSetPos、または SQLMoreResults**が呼び出され、SQL_DIAG_ROW_COUNT診断データの構造体のフィールドが行の数に設定され、行の数が、実装に依存する方法にキャッシュされます。 **SQLRowCount**キャッシュされた行の数の値を返します。 キャッシュされた行の数の値が有効では、ステートメント ハンドルが 準備済みまたは割り当て済みの状態になるまで、ステートメントを再実行または**SQLCloseCursor**が呼び出されます。 SQL_DIAG_ROW_COUNT フィールドが設定されているため、関数が呼び出された場合、によって値を返すに注意してください**SQLRowCount** SQL_DIAG_ROW_COUNT フィールドをリセットするために SQL_DIAG_ROW_COUNT フィールドの値と異なる可能性があります。任意の関数呼び出しで 0 に設定します。  
   

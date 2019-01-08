@@ -1,5 +1,5 @@
 ---
-title: コンテンツ クエリ (データ マイニング) |Microsoft ドキュメント
+title: コンテンツ クエリ (データ マイニング) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a308427ec839c316dbf0e3b215ea6d1506b1fa1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 20d730ed2fd975d800b27882ecc218f7ce1868b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015379"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529048"
 ---
 # <a name="content-queries-data-mining"></a>コンテンツ クエリ (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "34015379"
   
  ここでは、アルゴリズムの選択がモデルに保存されている情報の種類にどのように影響するかを、例を使用して説明します。 マイニング モデル コンテンツ、および各種のモデルに特有のコンテンツの詳細については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
-###  <a name="bkmk_Assoc"></a> 例 1: アソシエーション モデルに対するコンテンツ クエリ  
+###  <a name="bkmk_Assoc"></a> 例 1:アソシエーション モデルに対するコンテンツ クエリ  
  `SELECT FROM <model>.CONTENT`ステートメントは、クエリの対象となるモデルの種類に応じてさまざまな種類の情報を返します。 アソシエーション モデルの場合、重要な情報は *ノード型*です。 ノードは、モデル コンテンツの情報のコンテナーのようなものです。 アソシエーション モデルでは、ルールを表すノードは NODE_TYPE の値が 8 で、アイテムセットを表すノードは NODE_TYPE の値が 7 です。  
   
  したがって、次のクエリでは、サポートで順位付けされた (既定の順序) 上位 10 個のアイテムセットが返されます。  
@@ -144,7 +144,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- 次のクエリはこの情報に対して構築されます。 このクエリでは、ノードの ID、完全なルール、およびアイテムセットの右辺の製品 (アイテムセットの一部として他の製品と関連すると予測された製品) の 3 つの列が返されます。  
+ 次のクエリはこの情報に対して構築されます。 クエリは 3 つの列を返します: ノード、完全なルール、およびアイテム セットの右側にある製品の ID のアイテム セットの一部として他の製品に関連する予測された製品は、します。  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -166,7 +166,7 @@ ORDER BY NODE_SUPPORT DESC
   
  例については、「 [結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)」を参照してください。  
   
-###  <a name="bkmk_DecTree"></a> 例 2: デシジョン ツリー モデルに対するコンテンツ クエリ  
+###  <a name="bkmk_DecTree"></a> 例 2:デシジョン ツリー モデルに対するコンテンツ クエリ  
  デシジョン ツリー モデルは、予測や分類のために使用できます。  この例では、結果を予測するためにモデルを使用していますが、結果の分類に使用できる要因またはルールを見つけることもできます。  
   
  デシジョン ツリー モデルでは、ノードはツリーとリーフ ノードの両方を表すために使用されます。 各ノードのキャプションに結果へのパスの説明が含まれています。 したがって、特定の結果のパスをトレースするには、そのパスを含むノードを識別して、そのノードの詳細を取得する必要があります。  
@@ -196,7 +196,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  階層的な行セットの操作方法の詳細については、MSDN で OLEDB の仕様を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [DMX の Select ステートメントを理解します](../../dmx/understanding-the-dmx-select-statement.md)   
+ [DMX 選択ステートメントについて](../../dmx/understanding-the-dmx-select-statement.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

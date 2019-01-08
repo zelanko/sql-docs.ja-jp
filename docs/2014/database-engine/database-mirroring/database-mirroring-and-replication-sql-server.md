@@ -13,12 +13,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e3df0527e02bd69bfbb198888e82045d067a61a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3141146842bd568336033073f07b41c636129ee7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091622"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543580"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>データベース ミラーリングとレプリケーション (SQL Server)
   データベース ミラーリングとレプリケーションを組み合わせて使用すると、パブリケーション データベースの可用性を高めることができます。 データベース ミラーリングでは単一データベースの 2 つのコピーを使用します。通常、これらのコピーは異なるコンピューターに配置されます。 クライアントが任意の時点において使用できるデータベースのコピーは 1 つだけです。 このコピーはプリンシパル データベースと呼ばれます。 クライアントがプリンシパル データベースに対して加えた更新は、ミラー データベースと呼ばれるもう一方のコピー データベースに適用されます。 プリンシパル データベースに対して行われた挿入、更新、および削除はすべてトランザクション ログに記録され、ミラーリングによってこのトランザクション ログがミラー データベースに適用されます。  
@@ -75,7 +75,7 @@ ms.locfileid: "48091622"
   
     -   **@working_directory** パラメーターの値にプリンシパルで使用するスナップショット フォルダーを設定します。  
   
-4.  **–PublisherFailoverPartner** エージェント パラメーターの値にミラー名を指定します。 フェールオーバーの後、以下のエージェントでミラーを特定する場合にこのエージェント パラメーターが必要になります。  
+4.  **-PublisherFailoverPartner** エージェント パラメーターの値にミラー名を指定します。 フェールオーバーの後、以下のエージェントでミラーを特定する場合にこのエージェント パラメーターが必要になります。  
   
     -   スナップショット エージェント (すべてのパブリケーション用)  
   
@@ -95,9 +95,9 @@ ms.locfileid: "48091622"
   
     -   [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [レプリケーション エージェント実行可能ファイルの概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     **–PublisherFailoverPartner** をエージェント プロファイルに追加して、プロファイルにミラー名を指定することをお勧めします。 たとえば、ストアド プロシージャを使用してレプリケーションを構成する場合、以下のように指定します。  
+     **-PublisherFailoverPartner** をエージェント プロファイルに追加して、プロファイルにミラー名を指定することをお勧めします。 たとえば、ストアド プロシージャを使用してレプリケーションを構成する場合、以下のように指定します。  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

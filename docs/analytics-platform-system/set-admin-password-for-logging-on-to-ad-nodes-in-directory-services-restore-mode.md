@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cd116bbb0305f56302f679881ef0a2a795739eb3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 277f2b8195aa4238a490d37faaf81abdafc0008c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641399"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538739"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>ディレクトリ サービスで AD ノードへのログオンの復元モード (DSRM) - Analytics Platform System の管理者パスワードの設定します。
 ディレクトリ サービス復元モード (DSRM) では、修復、または Active Directory Domain Services (AD DS) の復元のブート モードです。 AD DS が失敗した後、または AD DS を復元する必要がある場合、アプライアンス AD ノードにログオンに使用されます。 DSRM のパスワードは、ハードウェア ベンダーのサイトのアプライアンスのセットアップ時に初期化されており、アプライアンス管理者によって変更する必要があります。 Analytics Platform System が 2 つの AD DS (ドメイン コント ローラー) **_appliance_domain_-AD01**と **_appliance_domain_-AD02**します。 各アプライアンス AD ノードには、次の手順を使用して、DSRM パスワードを変更します。  
   
 ## <a name="HowToDSRM"></a>管理者のパスワードをリセットするには  
   
-1.  アプライアンス AD ノードでコマンド プロンプト ウィンドウを開きます***appliance_domain *– AD*xx***仮想マシン。  
+1.  アプライアンス AD ノードでコマンド プロンプト ウィンドウを開きます***appliance_domain*AD*xx***仮想マシン。  
   
 2.  コマンド プロンプトで、「`ntdsutil`」と入力します。  
   

@@ -11,12 +11,12 @@ ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb2d3f6ead3482a9f36807883f685eaed4225f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55bf692e1b24bb0184f9b126a0bde5c0ee7e0657
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178122"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513266"
 ---
 # <a name="modifying-the-customer-dimension"></a>Customer ディメンションの変更
   キューブのディメンションの使いやすさと機能性を向上させる方法は数多くあります。 このトピックの実習では、Customer ディメンションを変更します。  
@@ -32,11 +32,11 @@ ms.locfileid: "48178122"
   
 3.  同様に、次の属性の名前も変更します。  
   
-    -   **English Education**属性-変更 `Education`  
+    -   **English Education**属性 - 変更 `Education`  
   
-    -   **English Occupation**属性-変更 `Occupation`  
+    -   **English Occupation**属性 - 変更 `Occupation`  
   
-    -   **State Province Name**属性-変更 `State-Province`  
+    -   **State Province Name**属性 - 変更 `State-Province`  
   
 4.  **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48178122"
   
 4.  **名前**プロパティ フィールドに「`Full Name`します。  
   
-5.  下部の **[NameColumn]** プロパティ フィールド内をクリックし、参照ボタン (**[…]**) をクリックして、 **[名前列]** ダイアログ ボックスを開きます。  
+5.  をクリックして、 **NameColumn**プロパティは、下部にあるフィールドし、クリックし、参照 (**.**) ボタンをクリックする、**名前列** ダイアログ ボックス。  
   
 6.  選択`FullName`の下部にある、**基になる列**ボックスの一覧をクリックして**OK**。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "48178122"
 8.  **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="defining-attribute-relationships"></a>属性リレーションシップの定義  
- 基になるデータで属性リレーションシップがサポートされる場合、属性間の属性リレーションシップを定義する必要があります。 属性リレーションシップを定義すると、ディメンション、パーティション、およびクエリの処理速度が上がります。 詳細については、「[属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md)」および「[属性リレーションシップ](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
+ 基になるデータで属性リレーションシップがサポートされる場合、属性間の属性リレーションシップを定義する必要があります。 属性リレーションシップを定義すると、ディメンション、パーティション、およびクエリの処理速度が上がります。 詳細については、「 [属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md) 」および「 [属性リレーションシップ](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
   
 #### <a name="to-define-attribute-relationships"></a>属性リレーションシップを定義するには  
   
@@ -265,10 +265,10 @@ ms.locfileid: "48178122"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [Product ディメンションの変更](lesson-3-3-modifying-the-product-dimension.md)  
   
-## <a name="see-also"></a>関連項目  
- [ディメンション属性のプロパティの参照](multidimensional-models/dimension-attribute-properties-reference.md)   
+## <a name="see-also"></a>参照  
+ [ディメンションの属性のプロパティの参照](multidimensional-models/dimension-attribute-properties-reference.md)   
  [ディメンションから属性を削除します。](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
  [属性名の変更します。](multidimensional-models/attribute-properties-rename-an-attribute.md)   
- [データ ソース ビューで名前付き計算の定義&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューでの名前付き計算の定義 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

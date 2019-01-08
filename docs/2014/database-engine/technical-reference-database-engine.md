@@ -14,12 +14,12 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 882764275d2455f63cadaa4f72dbfd33b85fb833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052512"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533299"
 ---
 # <a name="technical-reference-database-engine"></a>テクニカル リファレンス (データベース エンジン)
   [!INCLUDE[ssDE](../includes/ssde-md.md)] の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]には、ツール、言語、および管理プログラミングのリファレンス ドキュメントがあります。  

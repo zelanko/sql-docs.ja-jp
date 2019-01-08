@@ -18,12 +18,12 @@ ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ab8c72a9b3b4dc3771705a1bccc89bb44a3905c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b99e16505cf6f7a08503a98f37ced7bedcdb12
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641753"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520813"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@loginame =** ] **'***login***'**  
+ [  **@loginame =** ] **'**_ログイン_**'**  
  ログイン名です。 *ログイン*は**sysname**、既定値はありません。 *ログイン*既存できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ユーザーまたはグループ。  
   
- [  **@language =** ] **'***言語***'**  
+ [  **@language =** ] **'**_言語_**'**  
  ログインの既定の言語を指定します。 *言語*は**sysname**、既定値は NULL です。 *言語*サーバー上で有効な言語である必要があります。 場合*言語*が指定されていない*言語*、サーバーの既定言語に設定されている既定の言語がによって定義されている、 **sp_configure**構成変数**既定の言語**します。 サーバーの既定の言語を変更しても、既存のログインに対する既定の言語は変わりません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 1: 新しい表形式モデル プロジェクトを作成する |Microsoft Docs'
+title: レッスン 1:新しい表形式モデル プロジェクトの作成 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 61ac5b1a0bac9647e6163a13afd0bce6b251ac03
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040860"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410778"
 ---
-# <a name="lesson-1-create-a-new-tabular-model-project"></a>レッスン 1: 新しいテーブル モデル プロジェクトの作成
+# <a name="lesson-1-create-a-new-tabular-model-project"></a>レッスン 1:新しいテーブル モデル プロジェクトの作成
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このレッスンでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]に新しい空のテーブル モデル プロジェクトを作成します。 新しいプロジェクトが作成されたら、テーブルのインポート ウィザードを使用して、データの追加を開始できます。 このレッスンはオーサリング環境 SSDT で表形式モデルの概要も示します。  
   
-このレッスンの推定所要時間: **10 分**  
+このレッスンを完了するまでに時間を推定するには。**10 分**  
   
 ## <a name="prerequisites"></a>前提条件  
 このトピックは、テーブル モデル作成チュートリアルの最初のレッスンです。 このレッスンを完了するには、SQL Server インスタンスにインストールされている、AdventureWorksDW サンプル データベースが必要です。 詳細についてを参照してください。[テーブル モデリング&#40;Adventure Works チュートリアル&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)します。  
@@ -50,7 +50,7 @@ ms.locfileid: "38040860"
       
     SQL Server 2016 RTM (1200) Compatibility level リスト ボックス内に表示されない場合は、SQL Server Data Tools の最新バージョンを使用していません。 最新バージョンの入手については、「 [SQL Server Data Tools のインストール](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)」を参照してください。  
 
-    最新バージョンの SSDT を使用している場合は、SQL Server 2017 も選択できます (1400)。 ただしに完全なレッスン 13: デプロイ、SQL Server 2017 または Azure サーバーを展開する必要があります。
+    最新バージョンの SSDT を使用している場合は、SQL Server 2017 も選択できます (1400)。 ただし、完全なレッスン 13: に展開を展開するには、SQL Server 2017 または Azure サーバーを必要があります。
       
     以前の互換性レベルを選択するで以前のバージョンの SQL Server を実行している別の Analysis Services インスタンスに完了した表形式モデルをデプロイする場合のみ推奨します。 統合ワークスペースは、以前の互換性レベルはサポートされていません。 詳しくは、「 [互換性レベル](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)」を参照してください。   
   
@@ -82,12 +82,12 @@ SSDT をインストールしたときに、いくつかの新しいメニュー
 いくつかのダイアログや場所を表示して、テーブル モデルの作成に関連する各種の機能を調べてみてください。 まだアクティブにならない項目もありますが、テーブル モデル作成環境の使用感を確認できます。  
 
 
-## <a name="additional-resources"></a>その他のリソース
+## <a name="additional-resources"></a>その他の技術情報
 テーブル モデル プロジェクトのさまざまな種類の詳細については、次を参照してください。[表形式モデル プロジェクト](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)します。 表形式モデル オーサリング環境についての詳細についてを参照してください。 [Tabular Model Designer](../analysis-services/tabular-models/tabular-model-designer-ssas.md)します。  
   
 
 ## <a name="whats-next"></a>次の操作
-次のレッスンに移動:[レッスン 2: データを追加する](../analysis-services/lesson-2-add-data.md)します。
+次のレッスンに移動します。[レッスン 2:データを追加する](../analysis-services/lesson-2-add-data.md)します。
 
   
   

@@ -14,12 +14,12 @@ ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3eb100042c36d86d604d48e716023dc0c0c4b04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679970"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538048"
 ---
 # <a name="records-and-provider-supplied-fields"></a>レコードとプロバイダーが指定したフィールド
 ときに、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトを開くと、そのソースは、オープンの現在の行を指定できます[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)、絶対 URL または相対 URL を開くと組み合わせて[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト.  
@@ -41,7 +41,7 @@ ms.locfileid: "47679970"
 ## <a name="special-fields-for-document-source-providers"></a>ドキュメントの特別なフィールドのソース プロバイダー  
  特殊なクラスと呼ばれるプロバイダーの*ソース プロバイダーのドキュメント*フォルダーを管理および文書化します。 ときに、**レコード**オブジェクトが表す文書または**レコード セット**オブジェクトは、ドキュメントのフォルダーを表し、ドキュメントのソース プロバイダーがそれらのオブジェクトを記述するフィールドの一意のセットを設定します特性のドキュメントの代わりに、実際のドキュメント自体にします。 通常、1 つのフィールドへの参照が含まれます。、 **Stream**ドキュメントを表します。  
   
- これらのフィールドを構成して、リソース**レコード**または**レコード セット**でそれらをサポートする特定のプロバイダーの一覧表示と[付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)します。  
+ これらのフィールドを構成して、リソース**レコード**または**recordset**でそれらをサポートする特定のプロバイダーの一覧表示と[付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)します。  
   
  2 つの定数のインデックス、**フィールド**リソースのコレクション**レコード**または**レコード セット**をよく使用されるフィールドのペアを取得します。 **フィールド**オブジェクト[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティは、目的のコンテンツを返します。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47679970"
 |RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|読み取り専用です。 PARENTNAME、PARSENAME を連結したものであると、リソースの絶対 URL を示します。|  
 |RESOURCE_ISHIDDEN|adBoolean|リソースが非表示の場合は true。 行セットを明示的に作成するコマンドが RESOURCE_ISHIDDEN が True である行を選択しない限り、行は返されません。|  
 |RESOURCE_ISREADONLY|adBoolean|リソースが読み取り専用である場合は true。 開こうとして DBBINDFLAG_WRITE されのこのリソースは、DB_E_READONLY で失敗します。 読み取り専用リソースで開かれた場合でも、このプロパティを編集できます。|  
-|RESOURCE_CONTENTTYPE|AdVarWChar|ドキュメントの使用方法を示します: たとえば、弁護士の簡単な。 これは、ドキュメントの作成に使用した Office テンプレートに対応可能性があります。|  
+|RESOURCE_CONTENTTYPE|AdVarWChar|ドキュメントの使用方法を示します-たとえば、弁護士の簡単な。 これは、ドキュメントの作成に使用した Office テンプレートに対応可能性があります。|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|などの形式を示す、ドキュメントの MIME の種類を示す"`text/html`"。|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|コンテンツが格納されている言語を示します。|  
 |RESOURCE_CREATIONTIME|adFileTime|読み取り専用です。 リソースが作成された時刻を格納する FILETIME 構造体を示します。 時刻は世界協定時刻 (UTC) 形式で報告されます。|  
@@ -79,4 +79,4 @@ ms.locfileid: "47679970"
   
 ## <a name="see-also"></a>参照  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

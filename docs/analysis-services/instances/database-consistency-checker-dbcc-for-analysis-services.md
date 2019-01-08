@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697012"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413089"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services 用 database Consistency Checker (DBCC)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   DBCC には、Analysis Services インスタンスの多次元および表形式データベース向けに、オンデマンドのデータベース検証機能が用意されています。 SQL Server Management Studio (SSMS) の MDX または XMLA クエリ ウィンドウで DBCC を実行し、SSMS の SQL Server Profiler または xEvent セッションで DBCC 出力をトレースできます。  
-このコマンドはオブジェクト定義を受け取り、空の結果セットを返します。オブジェクトが破損している場合は詳細なエラー情報を返します。   この記事では、コマンドの実行方法、結果の解釈方法、発生した問題に対処する方法について説明します。  
+このコマンドはオブジェクト定義を受け取り、空の結果セットを返します。オブジェクトが破損している場合は詳細なエラー情報を返します。   この記事では、コマンドを実行して、結果を解釈する方法について説明し、発生した問題に対処します。  
   
  表形式データベースの場合、DBCC で実行する整合性チェックは、データベースの再読み込み、同期、復元のたびに自動実行される組み込みの検証と同等です。  対照的に、多次元データベースの整合性チェックは、オンデマンドで DBCC を実行した場合にのみ実行されます。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "51697012"
  データベースが SQL Server 2016 インスタンス上で実行されている限り、Analysis Services 用 DBCC はあらゆる互換性レベルのあらゆる Analysis Services データベースで実行されます。 各データベースの種類に合わせた適切なコマンド構文を使用する点にのみ気を付けてください。  
   
 > [!NOTE]  
->  [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md) を使い慣れている場合、Analysis Services の DBCC のスコープがかなり狭いことに気づくでしょう。 Analysis Services の DBCC は、データベース全体、または個々のオブジェクトでデータの破損が発生した場合にのみ、レポートする単一のコマンドです。 情報収集など、他のタスクも考慮している場合は、AMO PowerShell または XMLA スクリプトを代わりに使用してください。
+>  慣れている場合[DBCC &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)、Analysis Services での DBCC により狭いスコープに簡単にわかります。 Analysis Services の DBCC は、データベース全体、または個々のオブジェクトでデータの破損が発生した場合にのみ、レポートする単一のコマンドです。 情報収集など、他のタスクも考慮している場合は、AMO PowerShell または XMLA スクリプトを代わりに使用してください。
   
 ## <a name="permission-requirements"></a>権限の要件  
  コマンドを実行するには、Analysis Services データベース管理者またはサーバー管理者 (サーバー ロールのメンバー) の権限が必要です。 手順については、「[Grant database permissions (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)」(データベース アクセス許可を付与する (Analysis Services)) または「[Grant server admin rights to an  Analysis Services instance](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)」(Analysis Services インスタンスにサーバー管理者権限を付与する) を参照してください。  
@@ -72,7 +72,7 @@ ms.locfileid: "51697012"
   
 ```  
   
- オブジェクト チェーンよりも上位のオブジェクトに対して DBCC を実行するには、不要な下位の ID 要素を削除します。  
+ で、オブジェクトのチェーンの上位のオブジェクトを DBCC を実行するには、不要な下位レベルのオブジェクト ID 要素を削除します。  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -200,7 +200,7 @@ Execution complete
   
      エラー メッセージを以下に示します。  
   
-## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>参照: 多次元データベースの整合性チェックとエラー  
+## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>参照:多次元データベースの整合性チェックとエラー  
  多次元データベースの場合、パターン インデックスのみが検証されます。  DBCC は、実行中に各パーティションの一時インデックスを構築し、ディスクに保存されたインデックスと比較します。  一時インデックスの構築には、ディスク上にあるパーティション データのすべてのデータを読み取ってから、比較のために一時インデックスをメモリに保持する必要があります。 追加のワークロードがあると、DBCC の実行中のディスク IO とメモリ消費量が大幅に増える可能性があります。  
   
  多次元インデックス破損の検出には、次のチェックが含まれます。 この表のエラーは、オブジェクト レベルのエラーが発生した場合に xEvent または Profiler トレースに出現します。  
@@ -212,7 +212,7 @@ Execution complete
 |パーティション インデックス|メタデータを検証します。<br /><br /> 一時インデックスの各メンバーが、ディスクのセグメントのインデックス ヘッダー ファイルに含まれることを検証します。|パーティション セグメントが破損しています。|  
 |パーティション インデックス|セグメントをスキャンして、物理的な破損を検索します。<br /><br /> 一時インデックスの各メンバーについて、ディスク上のインデックス ファイルを読み取り、インデックス レコードのサイズが一致することを検証し、同じデータ ページが、現在のメンバーと同じレコードを持っているというフラグが付けられていることを検証します。|パーティション セグメントが破損しています。|  
   
-## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>参照: 表形式データベースの整合性チェックとエラー  
+## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>参照:表形式データベースの整合性チェックとエラー  
  次の表は、表形式オブジェクトで実行されるすべての整合性チェックと、チェックの結果が破損だった場合に発生するエラーの一覧です。 この表のエラーは、オブジェクト レベルのエラーが発生した場合に xEvent または Profiler トレースに出現します。  
   
 ||||  

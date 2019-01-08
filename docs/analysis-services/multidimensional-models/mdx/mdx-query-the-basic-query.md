@@ -1,5 +1,5 @@
 ---
-title: MDX の基本的なクエリ (MDX) |Microsoft ドキュメント
+title: MDX の基本的なクエリ (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7f3a1610f19bc99ce063d815f74906f10ddc2c7f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 61975b6b24cda25454d10eb1eeb5b452cad0f1ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026609"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529208"
 ---
-# <a name="mdx-query---the-basic-query"></a>MDX クエリの基本的なクエリ
+# <a name="mdx-query---the-basic-query"></a>MDX クエリ - 基本的なクエリ
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  多次元式 (MDX) の基本的なクエリは SELECT ステートメントであり、これは MDX で最も頻繁に使用するクエリでもあります。 MDX の SELECT ステートメントで結果セットを指定する方法や、SELECT ステートメントの構文と、SELECT ステートメントによる簡単なクエリ作成を学習すれば、MDX を使用して多次元データに対するクエリを実行する方法を理解できます。  
+  基本的な多次元式 (MDX) クエリは、MDX の SELECT ステートメント、最もよく使用されるクエリです。 MDX の SELECT ステートメントで結果セットを指定する方法や、SELECT ステートメントの構文と、SELECT ステートメントによる簡単なクエリ作成を学習すれば、MDX を使用して多次元データに対するクエリを実行する方法を理解できます。  
   
 ## <a name="specifying-a-result-set"></a>結果セットの指定  
  MDX の SELECT ステートメントでは、キューブから返された多次元データのサブセットを格納した結果セットが指定されます。 結果セットを指定するには、MDX クエリに次の情報を含める必要があります。  
@@ -103,7 +103,7 @@ WHERE ( [Sales Territory].[Southwest] )
  詳細な例については、「[クエリ軸の内容の指定 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)」および「[スライサー軸の内容の指定 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [MDX & #40; の主な概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [SELECT ステートメント & #40 です。MDX と #41 です。](../../../mdx/mdx-data-manipulation-select.md)  
+ [MDX の主な概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [SELECT ステートメント (MDX)](../../../mdx/mdx-data-manipulation-select.md)  
   
   

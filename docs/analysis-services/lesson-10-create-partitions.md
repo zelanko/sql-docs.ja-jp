@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 10: パーティションの作成 |Microsoft Docs'
+title: レッスン 10:パーティションの作成 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ce1bc8aa83b376aecdf5bd80a180a4777044bce
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: d43432a53eb2321c3707f4034e244752a5c368ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791933"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416404"
 ---
-# <a name="lesson-10-create-partitions"></a>レッスン 10: パーティションを作成します。
+# <a name="lesson-10-create-partitions"></a>レッスン 10:パーティションの作成
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-このレッスンではパーティションを作成するより小さな論理部分を処理できる、FactInternetSales テーブルに分割 (更新) 他のパーティションに依存しません。 既定では、モデルに含めるすべてのテーブルにはパーティションが 1 つあり、テーブルのすべての列と行がその中に含まれます。 FactInternetSales テーブルで年間でデータを分割します。各テーブルの 5 年間の 1 つのパーティション。 これにより、各パーティションを個別に処理できるようにします。 詳細については、「 [[パーティション]](../analysis-services/tabular-models/partitions-ssas-tabular.md)」を参照してください。  
+このレッスンではパーティションを作成するより小さな論理部分を処理できる、FactInternetSales テーブルに分割 (更新) 他のパーティションに依存しません。 既定では、すべてのテーブル モデルに含めることは、すべてのテーブルの列と行が含まれる 1 つのパーティションを持っています。 FactInternetSales テーブルで年間でデータを分割します。各テーブルの 5 年間の 1 つのパーティション。 これにより、各パーティションを個別に処理できるようにします。 詳細については、「 [[パーティション]](../analysis-services/tabular-models/partitions-ssas-tabular.md)」を参照してください。  
   
-このレッスンの推定所要時間: **15 分**  
+このレッスンを完了するまでに時間を推定するには。**15 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
-このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 9: 階層の作成](../analysis-services/lesson-9-create-hierarchies.md)です。  
+## <a name="prerequisites"></a>前提条件  
+このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 9:階層を作成する](../analysis-services/lesson-9-create-hierarchies.md)します。  
   
 ## <a name="create-partitions"></a>パーティションの作成  
   
@@ -144,4 +144,4 @@ Partition manager での**Last Processed**新しいの各列には、これら�
     ![-テーブル-lesson10-プロセス-完了](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>次の操作
-次のレッスンに移動:[レッスン 11: ロールの作成](../analysis-services/lesson-11-create-roles.md)です。 
+次のレッスンに移動します。[レッスン 11:ロールを作成](../analysis-services/lesson-11-create-roles.md)です。 

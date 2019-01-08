@@ -16,12 +16,12 @@ ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d77393b3289c00ad88925711287b2ef789bc093d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1116cc2e1040326237a31039fa2b52618c3f559e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090332"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408229"
 ---
 # <a name="create-and-map-a-server-environment"></a>サーバー環境の作成とマップ
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置したプロジェクトに含まれるパッケージに合わせたランタイム値を指定するためのサーバー環境を作成します。 特定のパッケージ、エントリ ポイント パッケージ、または特定のプロジェクト内のすべてのパッケージに対して、環境変数をパラメーターにマップできるようになります。 エントリ ポイント パッケージは、通常、子パッケージを実行する親パッケージです。  
@@ -68,7 +68,7 @@ ms.locfileid: "48090332"
 7.  環境のスクリプトを作成するには、 **[スクリプト]** をクリックします。 既定では、新しいクエリ エディター ウィンドウにスクリプトが表示されます。  
   
     > [!TIP]  
-    >  スクリプトを作成した後、または変数を追加するなど環境プロパティを変更した後に **[スクリプト]** をクリックしてから、 **[環境のプロパティ]** ダイアログ ボックスで **[OK]** をクリックする必要があります。 このようにしないと、スクリプトは生成されません。  
+    >  スクリプトを作成した後、または変数を追加するなど環境プロパティを変更した後に **[スクリプト]** をクリックしてから、**[環境のプロパティ]** ダイアログ ボックスで **[OK]** をクリックする必要があります。 このようにしないと、スクリプトは生成されません。  
   
 8.  **[OK]** をクリックして、変更を環境プロパティに保存します。  
   

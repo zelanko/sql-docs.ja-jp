@@ -11,12 +11,12 @@ ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d40854ecff0b138fa854103650dda9691be94a41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145102"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515971"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>SharePoint への PowerPivot ソリューションの配置
   SharePoint Server 2010 環境に PowerPivot 機能を追加する 2 つのソリューション パッケージを手動で配置するには、次の手順に従います。 ソリューションの配置は、SharePoint 2010 サーバー上で PowerPivot for SharePoint を構成するために必要な手順です。 必要な手順の完全な一覧を表示するには、次を参照してください。[サーバーの全体管理で PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)します。  
@@ -27,19 +27,19 @@ ms.locfileid: "48145102"
   
  このトピックには、次のセクションが含まれます。  
   
- [前提条件: Web アプリケーションでクラシック モード認証が使用されていることを確認する](#bkmk_classic)  
+ [前提条件:Web アプリケーションがクラシック モード認証を使用することを確認します。](#bkmk_classic)  
   
- [手順 1: ファーム ソリューションの配置](#bkmk_farm)  
+ [ステップ 1: ファーム ソリューションを配置します。](#bkmk_farm)  
   
- [手順 2: サーバーの全体管理への PowerPivot Web アプリケーション ソリューションを配置します。](#deployCA)  
+ [手順 2:サーバーの全体管理の PowerPivot Web アプリケーション ソリューションを配置します。](#deployCA)  
   
- [手順 3: 他の Web アプリケーションへの PowerPivot Web アプリケーション ソリューションを配置します。](#deployUI)  
+ [手順 3:他の Web アプリケーションに PowerPivot Web アプリケーション ソリューションを配置します。](#deployUI)  
   
  [ソリューションの再配置または取り消し](#retract)  
   
  [PowerPivot ソリューションの概要](#intro)  
   
-##  <a name="bkmk_classic"></a> 前提条件: Web アプリケーションでクラシック モード認証が使用されていることを確認する  
+##  <a name="bkmk_classic"></a> 前提条件:Web アプリケーションでクラシック モード認証が使用されていることを確認する  
  PowerPivot for SharePoint は、Windows クラシック モード認証を使用する Web アプリケーションでのみサポートされます。 アプリケーションがクラシック モードを使用しているかどうかを確認するから次の PowerShell コマンドレットを実行、 **SharePoint 2010 管理シェル**、 `http://<top-level site name>` SharePoint サイトの名前に置き換えます。  
   
 ```  
@@ -48,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  戻り値が **false**になる必要があります。 場合は**true**、この web アプリケーションでの PowerPivot データにアクセスすることはできません。  
   
-##  <a name="bkmk_farm"></a> 手順 1: ファーム ソリューションの配置  
+##  <a name="bkmk_farm"></a> 手順 1:ファーム ソリューションを配置します。  
  このセクションでは、PowerShell を使用したソリューションの配置方法を紹介しますが、同じタスクを PowerPivot 構成ツールを使用して実行することもできます。 詳細については、次を参照してください。[構成または修復の PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;](../configure-repair-powerpivot-sharepoint-2010.md)します。  
   
  このタスクは、PowerPivot for SharePoint をインストールした後で、一度だけ実行する必要があります。  
@@ -58,7 +58,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  次のコマンドレットを実行してファーム ソリューションを追加します。  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      コマンドレットにより、ソリューション名、ソリューション ID、および Deployed=False が返されます。 次の手順では、ソリューションを配置します。  
@@ -66,10 +66,10 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  次のコマンドレットを実行してファーム ソリューションを配置します。  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> 手順 2: サーバーの全体管理への PowerPivot Web アプリケーション ソリューションを配置します。  
+##  <a name="deployCA"></a> 手順 2:サーバーの全体管理の PowerPivot Web アプリケーション ソリューションを配置します。  
  ファーム ソリューションを配置した後で、サーバーの全体管理に Web アプリケーション ソリューションを配置する必要があります。 この手順によって、サーバーの全体管理に PowerPivot 管理ダッシュボードが追加されます。  
   
 1.  **[管理者として実行]** オプションを使用して SharePoint 2010 管理シェルを開きます。  
@@ -83,7 +83,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  次のコマンドレットを実行してファーム ソリューションを追加します。  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      コマンドレットにより、ソリューション名、ソリューション ID、および Deployed=False が返されます。 次の手順では、ソリューションを配置します。  
@@ -96,7 +96,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  これで Web アプリケーション ソリューションがサーバーの全体管理に配置されたので、残りのすべての構成手順は、サーバーの全体管理を使用して実行できます。  
   
-##  <a name="deployUI"></a> 手順 3: 他の Web アプリケーションへの PowerPivot Web アプリケーション ソリューションを配置します。  
+##  <a name="deployUI"></a> 手順 3:他の Web アプリケーションに PowerPivot Web アプリケーション ソリューションを配置します。  
  前のタスクでは、Powerpivotwebapp.wsp をサーバーの全体管理に配置しました。 ここでは、PowerPivot データ アクセスをサポートする既存の各 Web アプリケーションに powerpivotwebapp.wsp を配置します。 後でさらに Web アプリケーションを追加する場合は、それらの追加の Web アプリケーションに対して、この手順を繰り返してください。  
   
 1.  サーバーの全体管理で、[システム設定] の **[ファーム ソリューションの管理]** をクリックします。  

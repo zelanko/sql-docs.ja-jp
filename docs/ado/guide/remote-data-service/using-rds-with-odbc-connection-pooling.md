@@ -13,12 +13,12 @@ ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a65472e57d5ecc15f0e7302aa2f0b7972e5e7c78
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559599"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506349"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>RDS での ODBC 接続プールの使用
 ODBC データ ソースを使用している場合は、クライアントの負荷の処理を高パフォーマンスを実現するために、接続オプションでは、インターネット インフォメーション サービス (IIS) のプールを使用できます。 接続プールは、頻繁に使用される接続の開いている状態を維持する接続は、リソース マネージャーです。  
@@ -49,7 +49,7 @@ ODBC データ ソースを使用している場合は、クライアントの�
   
 2.  続行を 2 回クリックします。  
   
-3.  Microsoft SQL Server で、オプション ダイアログ ボックスは、ネットワーク サポートの変更を選択し、し、続行 をクリックします。  
+3.  Microsoft SQL Server でのオプション ダイアログ ボックスは、ネットワーク サポートの変更を選択し、し、続行 をクリックします。  
   
 4.  TCP/IP ソケットのチェック ボックスが選択されているかどうかを確認し、[ok] をクリックします。  
   

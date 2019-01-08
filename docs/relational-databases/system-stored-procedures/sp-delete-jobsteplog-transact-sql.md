@@ -18,12 +18,12 @@ ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a27efabaa838ed4b93fc7c17eeb67f721c8aa634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 719038f8ce72bdb05ad9dbf3c3585c377abb3a75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630160"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526236"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,26 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_id =**] **'***job_id***'**  
+ [  **@job_id =**] **'**_job_id_**'**  
  削除するジョブ ステップ ログを含むジョブのジョブ識別番号を指定します。 *job_id*は**int**、既定値は NULL です。  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'**_job_name_**'**  
  ジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
-> **注:** か*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
+> **注:** いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
  [ **@step_id =**] *step_id*  
  ジョブ ステップ ログを削除するジョブ ステップの識別番号を指定します。 ジョブ内のすべてのジョブ ステップ ログを削除する場合を除き、含まれない場合、 **@older_than**または**@larger_than**が指定されています。 *step_id*は**int**、既定値は NULL です。  
   
- [ **@step_name =**] **'***step_name***'**  
+ [  **@step_name =**] **'**_step_name_**'**  
  ジョブ ステップ ログを削除するジョブ ステップの名前を指定します。 *step_name*は**sysname**、既定値は NULL です。  
   
-> **注:** か*step_id*または*step_name*指定できますが両方指定することはできません。  
+> **注:** いずれか*step_id*または*step_name*指定できますが、両方を指定することはできません。  
   
- [  **@older_than =**] **'***日付***'**  
+ [  **@older_than =**] **'**_日付_**'**  
  保持しておく一番古いジョブ ステップ ログの日時を指定します。 この日時より前のジョブ ステップ ログはすべて削除されます。 *日付*は**datetime**、既定値は NULL です。 両方**@older_than**と**@larger_than**を指定できます。  
   
- [ **@larger_than =**] **'***size_in_bytes***'**  
+ [  **@larger_than =**] **'**_size_in_bytes_**'**  
  保持するジョブ ステップ ログの最大サイズをバイト単位で指定します。 このサイズより大きいすべてのジョブ ステップ ログは、削除されます。 両方**@larger_than**と**@older_than**を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -93,7 +93,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-removing-all-job-step-logs-from-a-job"></a>A. ジョブからすべてのジョブ ステップ ログを削除する  
- 次の例は、ジョブのすべてのジョブ ステップ ログを削除`Weekly Sales Data Backup`します。  
+ 次の例では、ジョブ `Weekly Sales Data Backup` のすべてのジョブ ステップ ログを削除します。  
   
 ```  
 USE msdb ;  
@@ -118,7 +118,7 @@ GO
 ```  
   
 ### <a name="c-removing-all-job-step-logs-based-on-age-and-size"></a>C. 有効期間とサイズに基づいてすべてのジョブ ステップ ログを削除する  
- 次の例は、2005 年 10 月 25 日の正午までより古いと、ジョブから 100 メガバイト (MB) より大きいすべてのジョブ ステップ ログを削除する`Weekly Sales Data Backup`します。  
+ 次の例では、ジョブ `Weekly Sales Data Backup` から、2005 年 10 月 25 日の昼より前の、100 MB より大きいすべてのジョブ ステップ ログを削除します。  
   
 ```  
 USE msdb ;  

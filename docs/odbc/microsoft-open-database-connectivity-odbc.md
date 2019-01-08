@@ -11,17 +11,17 @@ ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5d3fcc03b588cd5d014a23a291e04ff9c32f205
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 53e9fdb135b46cedaad6e79fa4ff12c06a4c3ea8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662978"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503943"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 Microsoft Open Database Connectivity (ODBC) インターフェイスには、アプリケーションのさまざまなデータベース管理システム (Dbms) からデータにアクセスできるようにする C プログラミング言語インターフェイスです。 ODBC は、リレーショナル データ ストア向けに設計されている、高パフォーマンスの低レベル インターフェイスです。  
   
- ODBC インターフェイスにより、相互運用性: アプリケーションは 1 つのインターフェイスを通じてさまざまな Dbms でのデータにアクセスします。 さらに、そのアプリケーションは、元のデータにアクセスする任意の DBMS に依存しないになります。 アプリケーションのユーザーには、ドライバーで、アプリケーションと特定の DBMS の間のインターフェイスと呼ばれるソフトウェア コンポーネントを追加できます。  
+ ODBC インターフェイスにより、アプリケーションの相互運用性を最大は単一のインターフェイスを通じてさまざまな Dbms でのデータにアクセスできます。 さらに、そのアプリケーションは、元のデータにアクセスする任意の DBMS に依存しないになります。 アプリケーションのユーザーには、ドライバーで、アプリケーションと特定の DBMS の間のインターフェイスと呼ばれるソフトウェア コンポーネントを追加できます。  
   
 ## <a name="documentation"></a>ドキュメント  
  [ODBC プログラマー リファレンス](../odbc/reference/odbc-programmer-s-reference.md)  

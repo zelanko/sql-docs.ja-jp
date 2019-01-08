@@ -21,12 +21,12 @@ ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b83edd4ce5bfafcd8413683abad50918cc47d3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d82fde382bf3ed92f400dbbe234790ccd510cc93
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512458"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 関数と Visual FoxPro ODBC ドライバー
 このセクションのトピックでは、ODBC API 関数の簡単な概要と、Visual FoxPro 固有の詳細情報を提供します。  
@@ -34,7 +34,7 @@ ms.locfileid: "47782680"
 > [!NOTE]  
 >  ODBC 関数については、次を参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)"ODBC プログラマ ガイド 』 を参照します。  
   
- ODBC API 関数は、ここで次の 3 つの主なカテゴリに分けられています: コア レベル API 関数、レベル 1 API 関数、およびレベル 2 API 関数。  
+ ODBC API 関数は、ここで次の 3 つの主なカテゴリに分けられています。コア レベル API 関数、レベル 1 API 関数、およびレベル 2 API 関数。  
   
 > [!NOTE]  
 >  いくつかの関数の動作は、データ ソースがのディレクトリへの接続として定義されているかどうかによって異なります[テーブルを無料](../../odbc/microsoft/visual-foxpro-terminology.md)(.dbf ファイル) または Visual foxpro[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)(.dbc ファイル)。 特定の操作は、データベース接続に対してのみサポートされます。  

@@ -1,5 +1,5 @@
 ---
-title: Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+title: Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ffe5299530f75706a5d7c348bd39d5cc2e883641
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a07998d0b0e1fd5b9123c553f650f00e23e22223
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017019"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530181"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "34017019"
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Microsoft ロジスティック回帰アルゴリズムの実装  
  予測可能列に状態が 2 つしか含まれていない場合に、予測可能列に特定の状態が含められる確率と入力列を関連付けて、回帰分析を実行する必要があるとします。 次の図は、予測可能列の状態に 1 と 0 を割り当て、この列に特定の状態が含められる確率を計算し、入力変数に対する線形回帰を実行した場合に得られる結果を示しています。  
   
- ![不十分な線形回帰を使用してデータをモデル化](../../analysis-services/data-mining/media/logistic-linear-regression.gif "が不十分な線形回帰を使用してデータをモデル化")  
+ ![線形回帰を使用してデータをモデル化が不十分な](../../analysis-services/data-mining/media/logistic-linear-regression.gif "が不十分な線形回帰を使用してデータをモデル化")  
   
  x 軸には入力列の値が表示されます。 y 軸には、予測可能列が特定の状態またはもう一方の状態になる確率が表示されます。 この場合の問題は、列の最大値と最小値が 0 と 1 であっても、線形回帰によって列が 0 と 1 の間に制限されないことです。 この問題を解決するには、ロジスティック回帰を実行します。 ロジスティック回帰分析では、直線を作成するのではなく、制約の最大値と最小値を含んでいる "S" 字型曲線が作成されます。 たとえば、次の図は、前の例で使用したのと同じデータに対してロジスティック回帰を実行した場合に得られる結果を示しています。  
   
- ![ロジスティック回帰を使用して、データがモデル化](../../analysis-services/data-mining/media/logistic-regression.gif "ロジスティック回帰を使用して、データがモデル化")  
+ ![ロジスティック回帰を使用してデータがモデル化](../../analysis-services/data-mining/media/logistic-regression.gif "ロジスティック回帰を使用してデータがモデル化")  
   
  曲線が 0 ～ 1 の範囲を超えていないことに注目してください。 ロジスティック回帰を使用して、予測可能列の状態の決定に重要な役割を果たす入力列を特定できます。  
   
@@ -37,13 +37,13 @@ ms.locfileid: "34017019"
 ### <a name="scoring-inputs"></a>入力のスコアリング  
  ニューラル ネットワーク モデルまたはロジスティック回帰モデルのコンテキストにおける "*スコアリング* " とは、データに存在する値を同じ尺度を使用する値のセットに変換して相互に比較できるようにするプロセスを意味します。 たとえば、Income に対する入力の範囲が 0 ～ 100,000 であるのに対し、[Number of Children] に対する入力の範囲は 0 ～ 5 であるとします。 この変換プロセスによって、値の違いに関係なく、各入力の重要性を比較できます。  
   
- トレーニング セットに表示されている状態ごとに、モデルは 1 つの入力を生成します。 不連続な入力または分離された入力の場合、Missing 状態がトレーニング セットに 1 回以上表示されると、Missing 状態を表す追加の入力が作成されます。 連続する入力では、最大 2 つの入力ノードが作成されます。1 つはトレーニング データに存在する場合の Missing 値用の入力ノードで、もう 1 つはすべての既存の値 (Null 以外の値) 用の入力ノードです。 各入力は、z スコア正規化法 `(x – μ)\StdDev`を使用して数値書式にスケーリングされます。  
+ トレーニング セットに表示されている状態ごとに、モデルは 1 つの入力を生成します。 不連続な入力または分離された入力の場合、Missing 状態がトレーニング セットに 1 回以上表示されると、Missing 状態を表す追加の入力が作成されます。 連続する入力では、最大 2 つの入力ノードが作成されます。1 つはトレーニング データに存在する場合の Missing 値用の入力ノードで、もう 1 つはすべての既存の値 (Null 以外の値) 用の入力ノードです。 各入力は、z スコア正規化法 `(x - μ)\StdDev`を使用して数値書式にスケーリングされます。  
   
  z スコア正規化中に、トレーニング セット全体の平均 (μ) と標準偏差が取得されます。  
   
  **連続値**  
   
- 値が存在する:   `(X – μ)/σ ` (X はエンコードされている実際の値)  
+ 値が存在します。 `(X - μ)/σ ` (X はエンコードされている実際の値)  
   
  値が存在しない:    `-   μ/σ `  (負のミューをシグマで除算)  
   
@@ -53,9 +53,9 @@ ms.locfileid: "34017019"
   
  StdDev  `= sqrt(p\(1-p))`  
   
- 値が存在する:     `\(1 – μ)/σ` (1 からミューを引いた値をシグマで除算)  
+ 値が存在します。   `\(1 - μ)/σ` (1 つからミューをシグマで除算を引いた)  
   
- 値が存在しない:     `(– μ)/σ` (負のミューをシグマで除算)  
+ 値が存在しない:     `(- μ)/σ` (負のミューをシグマで除算)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>ロジスティック回帰係数について  
  統計学の文献にはロジスティック回帰を実行するためのさまざまな方法が記されていますが、どの方法でも重要なのはモデルの適合性を評価する部分です。 適合度統計の中でも、オッズ比と共変量パターンを扱うものについて、さまざまな提案がなされています。 モデルの適合性を測定する方法についてはこのトピックでは扱いませんが、モデルの係数の値を取得し、それらの係数を使用して独自に適合性の測定方法を設計できます。  
@@ -73,9 +73,9 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- このクエリは、出力値ごとに、係数と、関連の入力ノードを指す ID を返します。 また、出力と切片の値を含む行も返します。 各入力 X には独自の係数 (Ci) が含まれますが、入れ子になったテーブルには、次の式に従って計算された "空き" 係数 (Co) も含まれます。  
+ このクエリは、出力値ごとに、係数と、関連の入力ノードを指す ID を返します。 また、出力と切片の値を含む行も返します。 各入力 X が独自の係数 (Ci) が、入れ子になったテーブルには、次の式に従って計算された「空き」係数 (Co) も含まれています。  
   
- `F(X) = X1*C1 + X2*C2 + … +Xn*Cn + X0`  
+ `F(X) = X1*C1 + X2*C2 + ... +Xn*Cn + X0`  
   
  アクティベーション: `exp(F(X)) / (1 + exp(F(X)) )`  
   
@@ -128,7 +128,7 @@ WHERE NODE_TYPE = 23
  マイニング構造列に適用されます。  
   
  MODEL_EXISTENCE_ONLY  
- 列が、 **Missing** および **Existing**の 2 つの可能な状態を持つ列として扱われることを示します。 NULL は Missing 値になります。  
+ 列が、次の 2 つの可能な状態を持つ列として扱われることを示します。**不足している**と**既存**します。 NULL は Missing 値になります。  
   
  マイニング モデル列に適用されます。  
   
@@ -138,7 +138,7 @@ WHERE NODE_TYPE = 23
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  次の表のように、[!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムでは、特定の入力列のコンテンツの種類、予測可能列のコンテンツの種類、およびモデリング フラグがサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-types-data-mining.md)」を参照してください。  
   
-|列|コンテンツの種類|  
+|[列]|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Discrete、Discretized、Key、Table|  
 |予測可能な属性|Continuous、Discrete、Discretized|  
@@ -146,7 +146,7 @@ WHERE NODE_TYPE = 23
 ## <a name="see-also"></a>参照  
  [Microsoft ロジスティック回帰アルゴリズム](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [線形回帰モデルのクエリ例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [ロジスティック回帰モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [ロジスティック回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Microsoft ニューラル ネットワーク アルゴリズム](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

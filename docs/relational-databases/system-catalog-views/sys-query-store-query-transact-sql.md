@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_query (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7fc3462eae5ca53d1c1b0b2ef4ad65c9579569e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4b428c87da7180869cb3b0c51f4a8fb118a351
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726790"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711853"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>sys.query_store_query (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   クエリとその関連する全体的な集計のランタイム実行の統計に関する情報が含まれています。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47726790"
 |**batch_sql_handle**|**varbinary(64)**|ステートメントのバッチ、クエリの ID では、一部です。 クエリが一時テーブルまたはテーブル変数を参照する場合にのみ設定されます。|  
 |**query_hash**|**binary(8)**|論理クエリ ツリーに基づいて、個々 のクエリの MD5 ハッシュ。 オプティマイザー ヒントが含まれています。|  
 |**is_internal_query**|**bit**|クエリは、内部的に生成されました。|  
-|**query_parameterization_type**|**tinyint**|パラメーター化の種類。<br /><br /> 0 ～ なし<br /><br /> 1 – ユーザー<br /><br /> 2 – 簡単です<br /><br /> 3 – 強制|  
+|**query_parameterization_type**|**tinyint**|パラメーター化の種類。<br /><br /> 0 - なし<br /><br /> 1-ユーザー<br /><br /> 2-シンプルです<br /><br /> 3-強制|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|パラメーター化の種類の説明テキストです。|  
 |**initial_compile_start_time**|**datetimeoffset**|開始時刻をコンパイルします。|  
 |**last_compile_start_time**|**datetimeoffset**|開始時刻をコンパイルします。|  
@@ -65,7 +65,7 @@ ms.locfileid: "47726790"
 |**avg_compile_memory_kb**|**float**|メモリ統計情報をコンパイルします。|  
 |**last_compile_memory_kb**|**bigint**|メモリ統計情報をコンパイルします。|  
 |**max_compile_memory_kb**|**bigint**|メモリ統計情報をコンパイルします。|  
-|**is_clouddb_internal_query**|**bit**|常に 0 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンプレミスです。|  
+|**is_clouddb_internal_query**|**bit**|常に 0 で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部設置型です。|  
   
 ## <a name="permissions"></a>アクセス許可  
  必要があります、 **VIEW DATABASE STATE**権限。  

@@ -1,5 +1,5 @@
 ---
-title: データ ソース (SSAS 多次元) を作成 |Microsoft ドキュメント
+title: データ ソース (SSAS 多次元) を作成する |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c461f38e7e2d0cf43cf206fee0c474f6fd74d35a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027049"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410319"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>データ ソースの作成 (SSAS 多次元)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34027049"
  [モデルへの複数のデータ ソースの追加](#bkmk_multipleDS)  
   
 ##  <a name="bkmk_provider"></a> データ プロバイダーの選択  
- マネージ [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework またはネイティブ OLE DB プロバイダーを使用して接続できます。 SQL Server データ ソースでは、通常、SQL Server Native Client を使用するとパフォーマンスが向上するため、このデータ プロバイダーを使用することをお勧めします。  
+ マネージド [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework またはネイティブ OLE DB プロバイダーを使用して接続できます。 SQL Server データ ソースでは、通常、SQL Server Native Client を使用するとパフォーマンスが向上するため、このデータ プロバイダーを使用することをお勧めします。  
   
  Oracle や他のサードパーティのデータ ソースの場合、そのサードパーティがネイティブ OLE DB プロバイダーを提供しているかどうかを確認し、まずそのプロバイダーを使用してみます。 エラーが発生した場合は、接続マネージャーで一覧に示されている他の .NET プロバイダーまたはネイティブ OLE DB プロバイダーを試してみます。 使用するデータ プロバイダーが、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションの開発と実行に使用するすべてのコンピューターにインストールされていることを確認してください。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "34027049"
   
 3.  **[接続の定義方法を選択します]** ページで **[既存の接続または新しい接続に基づいてデータ ソースを作成する]** を選択し、次に **[新規作成]** をクリックして **接続マネージャー**を開きます。  
   
-     新しい接続は、接続マネージャーで作成されます。 接続マネージャーでは、プロバイダーを選択し、そのプロバイダーが基になるデータに接続するために使用する接続文字列プロパティを指定します。 必要な情報は選択したプロバイダーによって異なりますが、通常は、サーバーまたはサービス インスタンス、サーバーまたはサービス インスタンスへのログオン情報、データベース名またはファイル名、その他のプロバイダー固有の設定を指定します。 以降の手順では、SQL Server データベース接続を前提とします。  
+     新しい接続は、接続マネージャーで作成されます。 接続マネージャーでは、プロバイダーを選択し、そのプロバイダーが基になるデータに接続するために使用する接続文字列プロパティを指定します。 必要な情報は選択したプロバイダーによって異なりますが、通常は、サーバーまたはサービス インスタンス、サーバーまたはサービス インスタンスへのログオン情報、データベース名またはファイル名、その他のプロバイダー固有の設定を指定します。 この手順の残りの部分、SQL Server データベースの接続をものとします。  
   
 4.  接続に使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework またはネイティブ OLE DB プロバイダーを選択します。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34027049"
   
 5.  選択したプロバイダーから要求される情報を入力して、基になるデータ ソースに接続します。 **[ネイティブ OLE DB\SQL Server Native Client]** プロバイダーを選択した場合は、次の情報を入力します。  
   
-    1.  **[サーバー名]** は、データベース エンジン インスタンスのネットワーク名です。 IP アドレス、コンピューターの NETBIOS 名、または完全修飾ドメイン名として指定できます。 サーバーが名前付きインスタンスとしてインストールされている場合は、インスタンス名を含める必要があります (たとえば、 \<computername >\\< instancename\>)。  
+    1.  **[サーバー名]** は、データベース エンジン インスタンスのネットワーク名です。 IP アドレス、コンピューターの NETBIOS 名、または完全修飾ドメイン名として指定できます。 場合は、サーバーを名前付きインスタンスとしてインストールすると、インスタンス名を含める必要があります (たとえば、 \<computername >\\< instancename\>)。  
   
     2.  **[サーバー ログオン]** は、接続の認証方法を指定します。 **[Windows 認証を使用する]** では、Windows 認証が使用されます。 **[SQL Server 認証を使用する]** では、Windows Azure SQL データベース、または混合モード認証をサポートする SQL Server インスタンスのデータベース ユーザー ログインを指定します。  
   
@@ -165,6 +165,6 @@ ms.locfileid: "34027049"
   
 ## <a name="see-also"></a>参照  
  [サポートされるデータ ソース &#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

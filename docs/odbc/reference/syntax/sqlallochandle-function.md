@@ -20,18 +20,18 @@ ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12fe4ceda2a6ee219763b2d07b23e73508e84363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778370"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538886"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLAllocHandle**環境、接続、ステートメント、または記述子ハンドルを割り当てます。  
   
 > [!NOTE]  
@@ -79,7 +79,7 @@ SQLRETURN SQLAllocHandle(
   
  場合は、ドライバー マネージャーのメモリを割り当てることができません *\*OutputHandlePtr*とき**SQLAllocHandle**で、 *HandleType* sql_handle_env としてが呼び出されると、またはアプリケーションの null ポインターを提供する*OutputHandlePtr*、 **SQLAllocHandle** SQL_ERROR を返します。 ドライバー マネージャーの設定 **OutputHandlePtr* SQL_NULL_HENV に (ない場合、アプリケーションには、null ポインターの SQL_ERROR を返しますが提供されます)。 ハンドルに関連付ける追加の診断情報はありません。  
   
- ドライバー マネージャーは、アプリケーションがドライバー レベルの環境ハンドルの割り当て関数を呼び出しません**SQLConnect**、 **SQLBrowseConnect**、または**SQLDriverConnect**. ドライバー レベルでエラーが発生した場合**SQLAllocHandle**関数では、そのドライバー マネージャー – レベル**SQLConnect**、 **SQLBrowseConnect**、または**SQLDriverConnect**関数は SQL_ERROR を返します。 診断データの構造には、SQLSTATE IM004 が含まれています (ドライバーの**SQLAllocHandle**できませんでした)。 接続ハンドルでは、エラーが返されます。  
+ ドライバー マネージャーは、アプリケーションがドライバー レベルの環境ハンドルの割り当て関数を呼び出しません**SQLConnect**、 **SQLBrowseConnect**、または**SQLDriverConnect**. ドライバー レベルでエラーが発生した場合**SQLAllocHandle**関数では、そのドライバー マネージャー レベル**SQLConnect**、 **SQLBrowseConnect**、または**SQLDriverConnect**関数は SQL_ERROR を返します。 診断データの構造には、SQLSTATE IM004 が含まれています (ドライバーの**SQLAllocHandle**できませんでした)。 接続ハンドルでは、エラーが返されます。  
   
  ドライバー マネージャーとドライバーの間の関数呼び出しのフローの詳細については、次を参照してください。 [SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)します。  
   
@@ -96,7 +96,7 @@ SQLRETURN SQLAllocHandle(
 |HY010|関数のシーケンス エラー|(DM)、 *HandleType*引数が sql_handle_dbc として、および**SQLSetEnvAttr** SQL_ODBC_VERSION 環境属性を設定するが呼び出されていません。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された、 **InputHandle**ときに実行されていると、 **SQLAllocHandle**で関数が呼び出された**HandleType**設定sql_handle_stmt としてまたは SQL_HANDLE_DESC します。|  
 |HY013|メモリ管理エラー|*HandleType*引数が sql_handle_dbc として、sql_handle_stmt として、または SQL_HANDLE_DESC; と基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした条件。|  
 |HY014|超過ハンドルの数を制限します。|によって示されるハンドルの型を割り当てることができるハンドルの数のドライバーの定義済みの制限、 *HandleType*引数に達しています。|  
-|HY092|無効な属性またはオプション識別子|(DM)、 *HandleType*引数がありませんでした: sql_handle_env として、sql_handle_dbc として、sql_handle_stmt として、または SQL_HANDLE_DESC します。|  
+|HY092|無効な属性またはオプション識別子|(DM)、 *HandleType*引数がありませんでした。Sql_handle_env として、sql_handle_dbc として、sql_handle_stmt として、または SQL_HANDLE_DESC します。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|*HandleType*引数 SQL_HANDLE_DESC、ドライバーは ODBC 2 をでした *。x*ドライバー。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  

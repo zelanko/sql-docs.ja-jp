@@ -18,17 +18,17 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8b3f01c833e725fc807de11c15e39142509626
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b5ba2a19505d0d7a1493b997eda7d12f3a588f7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668330"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524106"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  インスタンスに新しいユーザー定義エラー メッセージを格納、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 使用して格納されているメッセージ**sp_addmessage**を使用して表示できます、 **sys.messages**カタログ ビューです。  
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスの新しいユーザー定義エラー メッセージを保存します。 使用して格納されているメッセージ**sp_addmessage**を使用して表示できます、 **sys.messages**カタログ ビューです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,10 +49,10 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  [ **@severity =** ]*severity*  
  エラーの重大度レベルを指定します。 *重大度*は**smallint**既定値は NULL です。 有効なレベルは 1 ～ 25 です。 重大度レベルの詳細については、「 [データベース エンジン エラーの重大度](../../relational-databases/errors-events/database-engine-error-severities.md)」を参照してください。  
   
- [ **@msgtext =** ] **'***msg***'**  
+ [  **@msgtext =** ] **'**_msg_**'**  
  エラー メッセージのテキストを指定します。 *msg*は**nvarchar (255)** 既定値は NULL です。  
   
- [  **@lang =** ] **'***言語***'**  
+ [  **@lang =** ] **'**_言語_**'**  
  このメッセージの言語を指定します。 *言語*は**sysname**既定値は NULL です。 複数の言語を同じサーバーにインストールできる*言語*各メッセージを記述する言語を指定します。 ときに*言語*は省略すると、言語が既定の言語のセッション。  
   
  [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
@@ -61,7 +61,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  Windows のアプリケーション ログにメッセージを書き込む場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のエラー ログ ファイルにも同じ内容が書き込まれます。  
   
- [ **@replace** *=* ] **'***置換***'**  
+ [ **@replace** *=* ] **'**_置換_**'**  
  文字列として指定されている場合*置換*、既存のエラー メッセージが新しいメッセージ テキストと重大度レベルで上書きされます。 *置換*は**varchar (7)** 既定値は NULL です。 場合、このオプションを指定する必要があります*msg_id*既に存在します。 英語版のすべてのメッセージが同じであるその他のすべての言語の英語版のメッセージ重大度レベルが置き換えられます*msg_id*します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0926afa9cb434f105dfbd817f5c6bac9663fa5d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9f8ded0dfc540ab695342fc1765bf53e880ec0e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644151"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538064"
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
  指定した名前のテーブルを現在のユーザーが所有している場合は、そのテーブルの列が返されます。 場合*table_owner*が指定されていない、現在のユーザーが、指定したテーブルを所有していない*table_name*、sp_column privileges、指定したテーブル*table_name*データベース所有者が所有します。 存在する場合は、そのテーブルの列が返されます。  
   
  [ @table_qualifier=] '*table_qualifier*'  
- テーブル識別子の名前です。 *table_qualifier*は*sysname*、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
+ テーブル識別子の名前です。 *table_qualifier*は*sysname*、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (_修飾子_**.**_所有者_**.**_名前_)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列はデータベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
   
  [ @column_name=] '*列*'  
  カタログ情報を 1 列だけ取得する場合に使用する 1 つの列を指定します。 *列*は**nvarchar (** 384 **)**、既定値は NULL です。 場合*列*が指定されていないすべての列が返されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、*列*sys.columns テーブルに表示される、列名を表します。 *列*基になる DBMS のワイルドカード パターンを使用して、ワイルドカード文字を含めることができます。 相互運用性を最大にするため、ゲートウェイのクライアントでは、ISO 標準のパターン (% と _ のワイルドカード文字) のみを使用してください。  

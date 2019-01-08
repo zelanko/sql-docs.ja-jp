@@ -22,12 +22,12 @@ ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2e0075fed6695ffa106891843c4f42106e1bfc74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 839e471e8861f081762f6129dff731e66bed77a7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625710"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403487"
 ---
 # <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47625710"
 |**listener_id**|**nvarchar(36)**|クラスター リソース ID からの GUID。|  
 |**dns_name**|**nvarchar(63)**|可用性グループ リスナーの構成されたネットワーク名 (ホスト名)。|  
 |**port**|**int**|可用性グループ リスナーに対して構成された TCP ポート番号。<br /><br /> NULL = リスナーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部で構成され、そのポート番号が可用性グループに追加されていません。 ポート、pleaseuse の MODIFY LISTENER オプションを追加する、 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。|  
-|**is_conformant**|**bit**|この IP 構成が準拠しているかどうか。次のいずれかになります。<br /><br /> 1 = リスナーは準拠しています。 インターネット プロトコル (IP) アドレスの間には、"OR" リレーションのみが存在します。 *準拠する*はすべてによって作成された IP 構成、 [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 また場合の外部で作成された IP 構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などで、WSFC フェールオーバー クラスター マネージャーを使用して、変更することができます、ALTER AVAILABILITY GROUP tsql ステートメントでは、準拠と見なされる IP 構成。<br /><br /> 0 = リスナーは準拠していません。 通常、IP アドレスを使用して構成できませんでしたがこれを示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コマンドし、代わりに、WSFC クラスターで直接定義されました。|  
+|**is_conformant**|**bit**|この IP 構成が準拠しているかどうか。次のいずれかになります。<br /><br /> 1 = リスナーは準拠しています。 唯一の"OR"リレーションは、そのインターネット プロトコル (IP) アドレスの間に存在します。 *準拠する*はすべてによって作成された IP 構成、 [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部で (たとえば、WSFC フェールオーバー クラスター マネージャーを使用して) 作成された IP 構成でも、ALTER AVAILABILITY GROUP TSQL ステートメントで変更できる場合、その IP 構成は準拠していると見なされます。<br /><br /> 0 = リスナーは準拠していません。 通常、これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドを使用して構成できなかった IP アドレスが WSFC クラスターで直接定義されたことを示します。|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|このリスナーのクラスター IP 構成文字列 (存在する場合)。 NULL = リスナーには仮想 IP アドレスがありません。 以下に例を示します。<br /><br /> IPv4 アドレス: `65.55.39.10`<br /><br /> IPv6 アドレス: `2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   
 ## <a name="security"></a>セキュリティ  

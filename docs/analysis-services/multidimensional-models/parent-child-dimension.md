@@ -1,5 +1,5 @@
 ---
-title: 親子ディメンション |Microsoft ドキュメント
+title: 親子ディメンション |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a9f9cda883822d093db624a4580a94093120ba41
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6f9990103da1de5107ceaf3432f4da2a9a4486c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021429"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510214"
 ---
 # <a name="parent-child-dimension"></a>親子ディメンション
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34021429"
   
  ただし、親子ディメンションは、ディメンション メイン テーブルに格納されているデータを調べ、テーブル内のレコード間の親子リレーションシップを評価することにより、親子階層を構築します。 親子階層の詳細については、「 [ユーザー階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)」を参照してください。  
   
- 親子階層内のレベルの名前は、階層の作成に使用された属性からは派生しません。 親子ディメンションでは、名前付けテンプレート (属性が属性階層を生成する方法を制御する、親属性のレベルで指定できる文字列式) の使用により、レベル名が自動的に作成されます。 親属性用の名前付けテンプレートの設定方法の詳細については、「 [属性と属性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)」を参照してください。  
+ 親子階層内のレベルの名前は、階層の作成に使用された属性からは派生しません。 これらのディメンションがレベル名を作成する代わりに、自動的に名前付けテンプレート文字列式を使用して指定できます、属性が属性階層がどのように生成するかを制御する親属性のレベル。 親属性用の名前付けテンプレートの設定方法の詳細については、「 [属性と属性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)」を参照してください。  
   
 ## <a name="data-members"></a>データ メンバー  
  通常、ディメンションのリーフ メンバーには基になるデータ ソースから直接派生したデータが含まれ、非リーフ メンバーには子メンバーに対して実行した集計から派生したデータが含まれます。  
@@ -42,7 +42,7 @@ ms.locfileid: "34021429"
  ただし、親子階層では、一部の非リーフ メンバーに、子メンバーから集計されたデータだけでなく、基になるデータ ソースから派生したデータも含まれている場合があります。 親子階層の非リーフ メンバーの場合、基になるファクト テーブル データを含む特殊なシステム生成の子メンバーを作成できます。 *データ メンバー*と呼ばれるこれらの特殊な子メンバーには、非リーフ メンバーに直接関係付けられた、非リーフ メンバーの子孫から計算される集計値に依存しない値が含まれます。 データ メンバーの詳細については、「 [親子階層の属性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [親子階層内の属性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)   
- [データベース ディメンションのプロパティ](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
+ [親子階層の属性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)   
+ [データベース ディメンション プロパティ](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   
   

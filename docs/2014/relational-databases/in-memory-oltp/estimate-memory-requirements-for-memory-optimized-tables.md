@@ -10,15 +10,15 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3471abb7a551de576dfdf01de2a5fcf980b60527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061272"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509229"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>メモリ最適化テーブルのメモリ必要量の推定
-  新しいメモリ最適化テーブルを作成するか、既存のディスク ベース テーブルを [!INCLUDE[hek_2](../../includes/hek-2-md.md)] メモリ最適化テーブルに移行するかに関係なく、各テーブルのメモリ必要量に関する適切な推定を実施することは重要であり、その結果、サーバーで十分なメモリを準備することができます。 ここでは、メモリ最適化テーブルのデータを保持するために必要とされるメモリの量を推定する方法について説明します。  
+  かどうかを作成する新しい[!INCLUDE[hek_2](../../includes/hek-2-md.md)]メモリ最適化テーブルまたは既存のディスク ベース テーブルをメモリ最適化テーブルに移行するための十分な使用して、サーバーをプロビジョニングするために各テーブルのメモリ必要量に関する適切に推定を理解しておくことはメモリ。 ここでは、メモリ最適化テーブルのデータを保持するために必要とされるメモリの量を推定する方法について説明します。  
   
  ディスク ベース テーブルをメモリ最適化テーブルに移行することを検討している場合は、このトピックを読み進める前に、どのテーブルを移行するのが最善であるかを示す「 [テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 」というトピックを参照してください。 「 [インメモリ OLTP への移行](migrating-to-in-memory-oltp.md) 」に掲載されているすべてのトピックには、ディスク ベース テーブルからメモリ最適化テーブルへの移行に関するガイダンスが掲載されています。  
   
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] メモリ最適化テーブル内でのハッシュ インデックスの動作方法の詳細については、「 [Hash Indexes](../../database-engine/hash-indexes.md)」(ハッシュ インデックス) を参照してください。  
   
- **注:** 実行時に、ハッシュ インデックスの配列サイズを変更することはできません。 ハッシュ インデックスの配列サイズを変更するには、テーブルを削除して bucket_count の値を変更し、そのテーブルを再作成する必要があります。  
+ **注:** ハッシュ インデックスの配列サイズを即座に変更することはできません。 ハッシュ インデックスの配列サイズを変更するには、テーブルを削除して bucket_count の値を変更し、そのテーブルを再作成する必要があります。  
   
  **ハッシュ インデックスの配列サイズの設定**  
   

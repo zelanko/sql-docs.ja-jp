@@ -11,12 +11,12 @@ ms.assetid: 6f1da295-d9b7-4948-99d3-ebd3587337c6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bed7c8b14faef5116b1032451016708e341562d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c5036763ba4cbc48a00e604c4498b8dc277e155
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118032"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417383"
 ---
 # <a name="microsoft-sharepoint-2007-is-installed-upgrade-advisor"></a>Microsoft SharePoint 2007 がインストールされている (アップグレード アドバイザー)
   アップグレード アドバイザーによって、サポートされないバージョンの SharePoint 製品およびテクノロジが検出されました。  
@@ -34,7 +34,7 @@ ms.locfileid: "48118032"
 ## <a name="corrective-action"></a>修正措置  
  アップグレードを続行するには、SharePoint 2007 をアンインストールするか、SharePoint 2007 を SharePoint 2010 製品にアップグレードする必要があります。 SharePoint のインストールを更新した後、アップグレード アドバイザーを再実行して、他にアップグレードに関する問題がないことを確認します。  
   
- SharePoint 2007 から SharePoint 2013 に直接アップグレードすることはできません。 ただし、"ダブルホップ" データベース アタッチを行って、Office SharePoint Server 2007 から SharePoint Server 2010 にアップグレードし、その後 SharePoint Server 2010 から SharePoint Server 2013 にアップグレードすることはできます。  
+ SharePoint 2007 から SharePoint 2013 に直接アップグレードすることはできません。 「ダブルホップ」データベースとして、SharePoint Server 2010 を Office SharePoint Server 2007 と SharePoint Server 2013 の SharePoint Server 2010 にアップグレードするアタッチに行うことができます。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services のアップグレードに関する問題&#40;アップグレード アドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

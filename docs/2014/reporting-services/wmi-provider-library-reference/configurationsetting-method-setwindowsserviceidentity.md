@@ -19,12 +19,12 @@ ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d2cee56a3aa15e00e2de72761eb872f6e297b680
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aff708a3455c98ae0671b4970cd654d54f7dda36
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067312"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399305"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>SetWindowsServiceIdentity メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバーの Windows サービスを指定された Windows ユーザーとして実行させ、レポート サーバーを運用できるファイル システム権限をこのアカウントに与えます。  
@@ -66,7 +66,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
   
  指定されたアカウント、*アカウント*パラメーターが必要です`LogonAsService`Windows での権限。 このメソッドは、指定されたアカウントにこの権限を与えます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

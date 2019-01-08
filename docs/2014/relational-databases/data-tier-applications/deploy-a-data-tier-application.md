@@ -22,19 +22,19 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad76099b7cc6386e20b8c46f300298a13492f32b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104932"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529545"
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
   ウィザードまたは PowerShell スクリプトを使用して、データ層アプリケーション (DAC) パッケージから[!INCLUDE[ssDE](../../includes/ssde-md.md)]または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の既存のインスタンスに DAC を配置できます。 配置プロセスでは、 **msdb** システム データベース (**では** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース) に DAC 定義を格納することで DAC インスタンスを登録し、データベースを作成して、DAC で定義されたすべてのデータベース オブジェクトをそのデータベースに設定します。  
   
--   **作業を開始する準備:**  [SQL Server ユーティリティ](#SQLUtility)、 [データベースのオプションと設定](#DBOptSettings)、 [制限事項と制約事項](#LimitationsRestrictions)、 [前提条件](#Prerequisites)、 [セキュリティ](#Security)、 [権限](#Permissions)  
+-   **作業を開始する準備:**[SQL Server ユーティリティ](#SQLUtility)、[オプションと設定をデータベース](#DBOptSettings)、[事項と制約事項](#LimitationsRestrictions)、[の前提条件](#Prerequisites)、[セキュリティ](#Security)、[アクセス許可](#Permissions)  
   
--   **DAC の配置に使用する:**[データ層アプリケーションの配置ウィザード](#UsingDeployDACWizard)、 [PowerShell  ](#DeployDACPowerShell)  
+-   **DAC の配置に使用します。**[データ層アプリケーションのウィザードの展開](#UsingDeployDACWizard)、 [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> はじめに  
  同じ DAC パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] の単一のインスタンスに複数回配置することはできますが、配置は一度に 1 つずつ実行する必要があります。 各配置に指定される DAC インスタンス名は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンス内で一意である必要があります。  
@@ -68,7 +68,7 @@ ms.locfileid: "48104932"
   
 1.  **オブジェクト エクスプローラー**で、DAC を配置するインスタンスのノードを展開します。  
   
-2.  **[データベース]** ノードを右クリックし、 **[データ層アプリケーションの配置]** をクリックします。  
+2.  **[データベース]** ノードを右クリックし、**[データ層アプリケーションの配置]** をクリックします。  
   
 3.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -189,9 +189,9 @@ ms.locfileid: "48104932"
   
 1.  SMO サーバー オブジェクトを作成し、DAC を配置するインスタンスに設定します。  
   
-2.  開く、`ServerConnection`オブジェクトし、同じインスタンスに接続します。  
+2.  `ServerConnection` オブジェクトを開いて、同じインスタンスに接続します。  
   
-3.  使用`System.IO.File`DAC パッケージ ファイルを読み込めません。  
+3.  `System.IO.File` を使用して、DAC パッケージ ファイルを読み込みます。  
   
 4.  `add_DacActionStarted` および `add_DacActionFinished` を使用して、DAC 配置イベントをサブスクライブします。  
   
@@ -231,8 +231,8 @@ $dacstore.Install($dacType, $deployProperties, $evaluateTSPolicy)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データ層アプリケーション](data-tier-applications.md)   
+## <a name="see-also"></a>参照  
+ [[データ層アプリケーション]](data-tier-applications.md)   
  [データベースからの DAC の抽出](extract-a-dac-from-a-database.md)   
  [データベース識別子](../databases/database-identifiers.md)  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1716b3b6e5794d8dbb8d9ee0195ed642db6df054
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 37c313484b2ee7ff87668cbfdd0b87ed52cdaf98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981104"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523971"
 ---
 # <a name="import-data-by-using-a-native-query"></a>ネイティブ クエリを使用したデータのインポート
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "37981104"
 2. **クエリ エディター**、 をクリックして**クエリ** > **新しいクエリ** > **空のクエリ**
 3. 数式バーに次のように入力します。
     ```
-    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM …")
+    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM ...")
     ```
 4. テーブルを作成する**クエリ**、クエリを右クリックし、**新しいテーブルの作成**です。 新しいテーブルのクエリと同じ名前になります。
 
@@ -57,7 +57,7 @@ ms.locfileid: "37981104"
 ![[クエリ エディター]](media/ssas-import-query-example-table.png)
 
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Value.NativeQuery](https://msdn.microsoft.com/library/mt736917.aspx)   
  [権限借用](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
 

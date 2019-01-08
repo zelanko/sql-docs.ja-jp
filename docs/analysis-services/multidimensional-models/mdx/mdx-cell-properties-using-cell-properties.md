@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 49cf92537bf0289765dca7b3a04c76fe0bf50fd8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145307"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418703"
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>MDX セル プロパティ - セル プロパティの使用
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ SELECT [<axis_specification>
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|**ACTION_TYPE**|セルに対するアクションの種類を示すビットマスク。 このプロパティの値は、次のいずれか 1 つです。<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注: WHERE 句内にセットを含むクエリの場合、ドリルスルー アクションは含まれません。|  
+|**ACTION_TYPE**|セルに対するアクションの種類を示すビットマスク。 このプロパティの値は、次のいずれか 1 つです。<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注:WHERE 句内にセットを含むクエリの場合、ドリルスルー アクションは含まれません。|  
 |**BACK_COLOR**|**VALUE** または **FORMATTED_VALUE** プロパティを表示するときの背景色。 詳しくは、「[FORE_COLOR および BACK_COLOR の内容 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)」をご覧ください。|  
 |**CELL_ORDINAL**|データセット内のセルの序数。|  
 |**FONT_FLAGS**|フォントの詳細な文字飾りを示すビットマスク。 この値は、次の 1 つ以上の定数に対するビットごとの OR 演算の結果です。<br /><br /> **MDFF_BOLD** = 1<br /><br /> **MDFF_ITALIC** = 2<br /><br /> **MDFF_UNDERLINE** = 4<br /><br /> **MDFF_STRIKEOUT** = 8<br /><br /> <br /><br /> たとえば、値 5 は、太字の (**MDFF_BOLD**) フォントと下線付きの (**MDFF_UNDERLINE**) フォントの文字飾りの組み合わせを表します。|  
@@ -62,7 +62,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_ENABLED_WITH_UPDATE** (0x00000002)   セルは UPDATE ステートメントによって更新可能です。 書き込み可能でないリーフ セルが更新される場合、UPDATE は失敗する可能性があります。|  
 ||**CELL_UPDATE_NOT_ENABLED_FORMULA** (0x10000001)   セルの座標の中に計算されるメンバーが含まれているため、セルを更新できません。WHERE 句内のセットと共にセルが取得されました。 数式がセルの値に影響を与える、あるいは計算されるセルが集計パス上にあるとしても、セルの更新は行われます。 この場合、結果が計算に影響されるため、セルの最終的な値は更新後の値にならない可能性があります。|  
 ||**CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE** (0x10000002)   合計でないメジャー (カウント数、最小値、最大値、個別カウント、および準加法) は更新できないため、セルは更新できません。|  
-||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003)   セルが存在しない (メジャーと、そのメジャーが属するメジャー グループとは無関係なディメンション メンバーの交差部分にセルがある) ため、セルは更新できません。|  
+||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003) セルは、メジャーの交差部分には、メジャーのメジャー グループには無関係なディメンション メンバー、セルが存在しないため、更新できません。|  
 ||**CELL_UPDATE_NOT_ENABLED_SECURE** (0x10000005)    セルが保護されているため、セルは更新できません。|  
 ||**CELL_UPDATE_NOT_ENABLED_CALCLEVEL** (0x10000006)   将来の使用のために予約されています。|  
 ||**CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE** (0x10000007)   内部的な理由のため、セルは更新できません。|  

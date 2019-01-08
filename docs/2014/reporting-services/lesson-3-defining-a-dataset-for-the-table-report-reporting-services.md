@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3 : テーブル レポートのデータセットの定義 (Reporting Services) | Microsoft Docs'
+title: 'レッスン 3: データセット テーブル レポート (Reporting Services) の定義 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3b300b51acf83f79b54b12341299ebe9a8d82c17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33a91c27f78e3bbf2dfec3aeb71f2f2230c9376d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086542"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528231"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>レッスン 3 : テーブル レポートのデータセットの定義 (Reporting Services)
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>レッスン 3: データセット テーブル レポート (Reporting Services) の定義
   データ ソースを定義した後、データセットを定義する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、レポートで使用するデータは *データセット*に格納されます。 データセットには、データ ソースへのポインターと、レポートで使用されるクエリ、および計算フィールドと変数が含まれています。  
   
  レポート デザイナーでクエリ デザイナーを使用すると、クエリをデザインできます。 このチュートリアルから販売注文情報を取得するクエリを作成する、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008**データベース。  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>レポート データ用に Transact-SQL クエリを定義するには  
   
-1.  **レポート データ** ペインで、 **[新規作成]** をクリックし、 **[データセット]** をクリックします。 **[データセットのプロパティ]** ダイアログ ボックスが表示されます。  
+1.  **レポート データ** ペインで、**[新規]** をクリックし、**[データセット]** をクリックします。**[データセットのプロパティ]** ダイアログ ボックスが表示されます。  
   
 2.  **[名前]** ボックスに「 **AdventureWorksDataset**」と入力します。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48086542"
   
 6.  (省略可能) **[クエリ デザイナー]** ボタンをクリックします。 クエリは、テキスト ベースのクエリ デザイナーに表示されます。 **[テキストとして編集]** をクリックすると、グラフィカル クエリ デザイナーに切り替えることができます。 実行 をクリックして、クエリの結果を表示 **(!)** クエリ デザイナーのツールバーのボタンをクリックします。  
   
-     6 つのフィールドの 4 つの異なるテーブルからデータを参照してください、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。 クエリでは、エイリアスなど Transact-SQL の機能が利用されます。 たとえば、SalesOrderHeader テーブルは soh と呼ばれます。  
+     [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースの 4 つの異なるテーブルの 6 個のフィールドから取得したデータが表示されます。 クエリでは、エイリアスなど Transact-SQL の機能が利用されます。 たとえば、SalesOrderHeader テーブルは soh と呼ばれます。  
   
      **[OK]** をクリックしてクエリ デザイナーを終了します。  
   
@@ -69,11 +69,11 @@ ms.locfileid: "48086542"
      レポート データ ペインに **AdventureWorksDataset** データセットとフィールドが表示されます。  
   
 ## <a name="next-task"></a>次の作業  
- これで、レポートのデータを取得するクエリを指定できました。 次に、レポートのレイアウトを作成します。 「[レッスン 4: レポートへのテーブルの追加 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)」を参照してください。  
+ これで、レポートのデータを取得するクエリを指定できました。 次に、レポートのレイアウトを作成します。 参照してください[レッスン 4。レポートにテーブルを追加する&#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)します。  
   
 ## <a name="see-also"></a>参照  
  [クエリ デザイン ツールでレポート デザイナーの SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [SQL Server の接続の種類 &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
- [チュートリアル: Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [チュートリアル:TRANSACT-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

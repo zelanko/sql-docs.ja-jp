@@ -15,12 +15,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f29dc88bf6298aebea60591034f0c7abc6765185
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3d2581f2f086f8db5f9408502185c132a5866af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167012"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513222"
 ---
 # <a name="modify-views"></a>ビューの変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、ビューの定義後にビューの削除や再作成を行わずに、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ビューの名前または定義を変更できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "48167012"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48167012"
   
     1.  追加または削除する要素のチェック ボックスをオンまたはオフにします。  
   
-    2.  ダイアグラム ペイン内で右クリックし、 **[テーブルの追加]** を選択します。次に、 **[テーブルの追加]** ダイアログ ボックスで、ビューに追加する列を選択します。  
+    2.  ダイアグラム ペイン内で右クリックし、**[テーブルの追加]** を選択します。次に、**[テーブルの追加]** ダイアログ ボックスで、ビューに追加する列を選択します。  
   
     3.  削除するテーブルのタイトル バーを右クリックし、 **[削除]** をクリックします。  
   

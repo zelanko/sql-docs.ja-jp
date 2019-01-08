@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e13b3cde8681c4f717f0fa12d7426eea58d0caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135892"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752085"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell パスの移動
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell プロバイダーは、ファイル パスと同様の構造で、SQL Server のインスタンス内のオブジェクトのセットを公開します。 Windows PowerShell コマンドレットを使用することで、プロバイダー パスを移動し、カスタム ドライブを作成して、入力するパスを短くすることができます。  
@@ -115,9 +114,9 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>カスタム ドライブの作成  
  **カスタム ドライブの作成と使用**  
   
-1.  `New-PSDrive` を使用して、カスタム ドライブを定義します。 使用して、`Root`カスタム ドライブ名で表されるパスを指定するパラメーター。  
+1.  `New-PSDrive` を使用して、カスタム ドライブを定義します。 `Root` パラメーターを使用して、カスタム ドライブ名で表されるパスを指定します。  
   
-2.  などのパス移動コマンドレットでカスタム ドライブ名参照`Set-Location`します。  
+2.  `Set-Location` などのパス移動コマンドレットでカスタム ドライブ名を参照します。  
   
 ### <a name="custom-drive-example-powershell"></a>カスタム ドライブの例 (PowerShell)  
  この例では、配置された AdventureWorks2012 サンプル データベースのコピーのノードにマップする AWDB という名前の仮想ドライブを作成します。 仮想ドライブを使用して、データベース内のテーブルに移動します。  
@@ -131,7 +130,7 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
  [SQL Server PowerShell パスの操作](work-with-sql-server-powershell-paths.md)   
  [URN から SQL Server プロバイダー パスへの変換](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

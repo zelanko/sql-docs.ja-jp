@@ -16,12 +16,12 @@ ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b851f631535008d1655a35c4b4af5321c8c4534
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159992"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512638"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>マイニング モデルへのフィルターの適用
   入れ子になったテーブルがマイニング構造に含まれている場合は、ケース テーブル、入れ子になったテーブル、またはその両方にフィルターを適用できます。  
@@ -47,7 +47,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  モデルを選択し、右クリックしてショートカット メニューを開きます。  
   
-     または  
+     - または -  
   
      モデルを選択します。 次に、 **[マイニング モデル]** メニューの **[モデル フィルターの設定]** をクリックします。  
   
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  **[値]** ボックスをクリックし、ボックスに値を入力します。  
   
-     たとえば、選択`Income`選択、列と、大きい演算子 (>) と入力しより`30000`します。  
+     たとえば、列に `Income` を選択して、"次の値より大きい" 演算子 (>) を選択し、「`30000`」と入力します。  
   
 9. グリッドの次の行をクリックします。  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. 演算子を選択し、手順 7. と手順 8. に示したように値を入力します。  
   
-     たとえば、 `Income` 、もう一度列として小なり演算子 (<) を選択し、入力`40000`します。  
+     たとえば、列に再度 `Income` を選択して、"次の値より小さい" 演算子 (<) を選択し、「`40000`」と入力します。  
   
 12. グリッドの次の行をクリックします。  
   
@@ -97,7 +97,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      ケース テーブルでは入れ子になったテーブルの特定の値を含むケースのみに制限しているため、 **[モデル フィルター]** ダイアログ ボックスで入れ子になったテーブルに対して選択できる条件はこれだけです。 次の手順で入れ子になったテーブルの条件に値を設定します。  
   
-4.  **[値]** ボックスをクリックし、( **[...]** ) ボタンをクリックして式を作成します。  
+4.  をクリックして、**値**ボックスをクリックして、 **([...])** ボタン式を作成します。  
   
      **\<名 > フィルター**  ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、現在のテーブルにのみ条件を設定できます。ここでは、入れ子になったテーブルです。  
   
@@ -127,7 +127,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
   
 ## <a name="see-also"></a>参照  
- [マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)   
+ [マイニング モデルのフィルター (Analysis Services - データ マイニング)](mining-models-analysis-services-data-mining.md)   
  [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
  [マイニング モデルからのフィルターの削除](delete-a-filter-from-a-mining-model.md)  
   

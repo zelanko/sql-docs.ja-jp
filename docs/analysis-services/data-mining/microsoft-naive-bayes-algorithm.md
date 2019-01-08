@@ -1,5 +1,5 @@
 ---
-title: Microsoft Naive Bayes アルゴリズム |Microsoft ドキュメント
+title: Microsoft Naive Bayes アルゴリズム |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b3cbe50437011bc97ba4f4e1e246ee85e89495c1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7c55ffcb48d6c079c942d9bdffec0a1dc1c1d8f9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017239"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411309"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes アルゴリズム
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、Bayes の定理に基づく分類アルゴリズムであり、探索および予測モデリングで使用できます。 Naive Bayes (単純ベイズ) という名前の単純 (Naive) という部分は、このアルゴリズムで Bayes の技法が使用されているものの、存在する可能性のある依存関係が考慮されないことに由来しています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、Bayes の定理に基づく分類アルゴリズムであり探索および予測の両方のモデリングに使用することができます。 Naive Bayes (単純ベイズ) という名前の単純 (Naive) という部分は、このアルゴリズムで Bayes の技法が使用されているものの、存在する可能性のある依存関係が考慮されないことに由来しています。  
   
  このアルゴリズムは、他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムよりも計算量が少ないので、入力列と予測可能列のリレーションシップを見つけるためのマイニング モデルを短時間で生成できます。 このアルゴリズムを使用してデータの初期調査を行った後、この結果を適用して、計算量が多く精度が高い他のアルゴリズムを使用して追加のマイニング モデルを作成できます。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34017239"
   
  このしくみを理解するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Naive Bayes ビューアー (次の図) を使用すると、アルゴリズムによる状態の分布状況を視覚的に把握できます。  
   
- ![Naive bayes 分布で状態の](../../analysis-services/data-mining/media/naive-bayes.gif "Naive bayes 分布の状態")  
+ ![Naive bayes 分布の状態で](../../analysis-services/data-mining/media/naive-bayes.gif "Naive bayes 分布での状態")  
   
  予測可能列の各状態を指定すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ビューアーには、データセットの各入力列が一覧表示され、各列の状態の分布状況が表示されます。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34017239"
   
  データ マイニング モデルに対するクエリの作成方法については、 [「データ マイニング クエリ」](../../analysis-services/data-mining/data-mining-queries.md)を参照してください。 Naive Bayes モデルでクエリを使用する方法の例については、 [「Naive Bayes モデルのクエリ例」](../../analysis-services/data-mining/naive-bayes-model-query-examples.md).を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 -   Predictive Model Markup Language (PMML) を使用したマイニング モデルの作成がサポートされています。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "34017239"
   
 ## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [機能の選択 (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
- [Naive Bayes モデルのクエリ例](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
- [Naive Bayes モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [機能の選択 &#40;データ マイニング&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
+ [「Naive Bayes モデルのクエリ例」](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
+ [Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Microsoft Naive Bayes アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 645e2603af6d0447aae22bc7c29b5413501b722f
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168900"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509316"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>DNS フォワーダーを使用して、Analytics Platform System で非アプライアンス DNS 名を解決するのには
 Active Directory ドメイン サービス ノードで DNS フォワーダーを構成することができます (**_アプライアンス\_ドメイン_-AD01**と**_アプライアンス\_ドメイン_-AD02**) のスクリプトとソフトウェア アプリケーションの外部サーバーへのアクセスを許可する、Analytics Platform System appliance。  
@@ -36,7 +36,7 @@ Analytics Platform System appliance では、アプライアンスではあり�
   
 6.  名前解決を提供する外部の DNS サーバーの IP アドレスを入力します。 Vm と、アプライアンス内のサーバー (ホスト) は、完全修飾ドメイン名を使用して外部のサーバーに接続されます。  
   
-7.  手順 1 ~ 6 を繰り返します、 **_アプライアンス\_ドメイン_-AD02**ノード  
+7.  手順 1. ~ 6. を繰り返します、 **_アプライアンス\_ドメイン_-AD02**ノード  
   
 **Windows PowerShell を使用して、DNS フォワーダーを作成するには**  
   

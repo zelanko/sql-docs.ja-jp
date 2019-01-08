@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf9299896fb03ea8eb947b5fb5ab9f1967e7d7c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfd6485955cbdee7bece7ae8ab18c5138a5529f3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649207"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403537"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "47649207"
 |**last_elapsed_time**|**bigint**|このトリガーの前回の実行完了までの経過時間 (マイクロ秒単位)。|  
 |**min_elapsed_time**|**bigint**|このトリガーの実行を完了する任意のマイクロ秒単位で、最小経過時間。|  
 |**max_elapsed_time**|**bigint**|このトリガーの実行を完了する任意のマイクロ秒単位で、最大経過時間。| 
-|**total_spills**|**bigint**|コンパイルされた後に、このトリガーの実行によって書き込まれたページの合計数。<br /><br /> **適用される**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**last_spills**|**bigint**|ページの数には、トリガーが実行された最終時刻が書き込まれます。<br /><br /> **適用される**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**min_spills**|**bigint**|このトリガーが 1 回の実行中に書き込まれたことがこれまでのページの最小数。<br /><br /> **適用される**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**max_spills**|**bigint**|このトリガーが 1 回の実行中に書き込まれたことがこれまでのページの最大数。<br /><br /> **適用される**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**total_spills**|**bigint**|コンパイルされた後に、このトリガーの実行によって書き込まれたページの合計数。<br /><br /> **適用対象**:以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**last_spills**|**bigint**|ページの数には、トリガーが実行された最終時刻が書き込まれます。<br /><br /> **適用対象**:以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**min_spills**|**bigint**|このトリガーが 1 回の実行中に書き込まれたことがこれまでのページの最小数。<br /><br /> **適用対象**:以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**max_spills**|**bigint**|このトリガーが 1 回の実行中に書き込まれたことがこれまでのページの最大数。<br /><br /> **適用対象**:以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
   
 ## <a name="remarks"></a>コメント  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、動的管理ビューは、データベースの包含に影響を与えるまたはユーザーがアクセスを他のデータベースに関する情報が公開される情報を公開できません。 この情報が公開されないように、接続されたテナントに属していないデータを含む行はすべてフィルターで除外されます。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]では、動的管理ビューでデータベースの包含に影響を与える情報を公開することや、ユーザーがアクセスできる他のデータベースに関する情報を公開することはできません。 この情報を公開することを避けるため、接続されているテナントに属していないデータが含まれるすべての行はフィルターで除外します。  
 
 ビュー内の統計は、クエリが完了したときに更新されます。  
   

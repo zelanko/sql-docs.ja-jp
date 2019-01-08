@@ -1,5 +1,5 @@
 ---
-title: 子 (MDX) |Microsoft ドキュメント
+title: 子 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d61eb168b01e9b6d48c4c003ba28d0f977026906
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 03c96a1c90f7ca0a18bd49c371a2ec90582b38f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533414"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 
@@ -43,7 +43,7 @@ SELECT [Geography].[Geography].[Country].&[United States].Children ON 0
 FROM [Adventure Works]  
 ```  
   
- 次の例は、すべてのメンバーを返します、**メジャー**ディメンションで列の軸が含まれますすべての計算されるメンバー、およびすべての子のセット、`[Product].[Model Name]`属性階層からの行軸、 **Adventure Works**キューブ。  
+ 次の例は、すべてのメンバーを返します、**メジャー**ディメンション列軸で、すべての計算されるメンバーとのすべての子のセットを含みます、`[Product].[Model Name]`行軸上の階層の属性、を**Adventure Works**キューブ。  
   
 ```  
 SELECT  
@@ -56,9 +56,9 @@ FROM
   
 |リリース|履歴|  
 |-------------|-------------|  
-|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**変更内容:**<br /> わかりやすくするための向上に構文および引数を更新します。<br /><br /> -更新された例を追加しました。|  
+|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**変更内容:**<br /> -わかりやすくするための向上に構文および引数を更新します。<br /><br /> -更新された例を追加しました。|  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

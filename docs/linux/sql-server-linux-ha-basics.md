@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 85ea90343ebf1cac9ba04a4b9252a6dd9fb748bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665677"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533072"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイの SQL Server 可用性の基礎
 
@@ -39,15 +39,15 @@ Linux では、多くのコマンドは、管理者として Windows Server で�
 2. 処理を実行する詳細について共通とセキュリティ意識の高い方法は、使用する`sudo`何も実行する前にします。 この例の多くの記事使用`sudo`します。
 
 オンライン、各種のスイッチがあり、オプションのそれぞれの一般的なコマンドを調査することができます。
--   `cd` – ディレクトリを変更
--   `chmod` – ファイルまたはディレクトリのアクセス許可の変更
--   `chown` – ファイルまたはディレクトリの所有権を変更します。
--   `ls` – ディレクトリの内容を表示します。
--   `mkdir` – ドライブ上のフォルダー (ディレクトリ) の作成
--   `mv` – 1 つの場所からファイルを移動
--   `ps` – すべての作業プロセスを表示します。
--   `rm` – サーバーのローカル ファイルを削除
--   `rmdir` – フォルダー (ディレクトリ) の削除
+-   `cd` -ディレクトリを変更
+-   `chmod` -ファイルまたはディレクトリのアクセス許可の変更
+-   `chown` -ファイルまたはディレクトリの所有権を変更します。
+-   `ls` -ディレクトリの内容を表示します。
+-   `mkdir` -ドライブ上のフォルダー (ディレクトリ) の作成
+-   `mv` -1 つの場所からファイルを移動
+-   `ps` -すべての作業プロセスを表示します。
+-   `rm` -サーバーのローカル ファイルを削除
+-   `rmdir` -フォルダー (ディレクトリ) の削除
 -   `systemctl` -開始、停止、またはサービスを有効にします。
 -   テキスト エディター コマンド。 Linux では、vi、emacs などのさまざまなテキスト エディター オプションがあります。
 
@@ -68,7 +68,7 @@ Linux および Windows ベースのインストール、アクセス許可の�
 scp MyAGCert.cer username@servername:/folder/subfolder
 ```
 
-MyAGCert.cer ファイルを他のサーバーで指定されたフォルダーにコピーします。 注: アクセス許可と可能性がありますので、コピーするファイルの所有: されている必要があります`chown`コピーする前に使用する必要もあります。 同様に、受信側では、適切なユーザーと、ファイルを操作するアクセスが必要です。 たとえば、その証明書ファイルを復元するため、`mssql`ユーザーがアクセスできる必要があります。
+MyAGCert.cer ファイルを他のサーバーで指定されたフォルダーにコピーします。 アクセス許可 - と可能性があるため、コピーするファイルの所有権のされている必要がありますに注意してください`chown`コピーする前に使用する必要もあります。 同様に、受信側では、適切なユーザーと、ファイルを操作するアクセスが必要です。 たとえば、その証明書ファイルを復元するため、`mssql`ユーザーがアクセスできる必要があります。
 
 サーバー メッセージ ブロック (SMB) の Linux バリアントには、samba がなどの UNC パスからアクセスする共有を作成することもでき`\\SERVERNAME\SHARE`します。 Samba の構成の詳細については、各ディストリビューションは、次のリンクで情報を参照してください。
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
@@ -86,27 +86,27 @@ Windows と同様に、Linux ディストリビューションには、組み込
 
 | [ポート番号] | 型     | 説明                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
-| 135         | TCP      | 使用する場合に samba – エンドポイント マッパー                                                                                          |
-| 137         | UDP      | 使用する場合に samba – NetBIOS ネーム サービス                                                                                      |
-| 138         | UDP      | 使用する場合に samba – NetBIOS データグラム                                                                                          |
-| 139         | TCP      | 使用する場合に samba – NetBIOS セッション                                                                                           |
-| 445         | TCP      | 使用する場合に samba – TCP 経由で SMB                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 既定のポートです。必要な場合で変更できます。 `mssql-conf set network.tcpport <portnumber>`                       |
+| 111         | TCP/UDP  | NFS- `rpcbind/sunrpc`                                                                                                    |
+| 135         | TCP      | 使用する場合に samba にエンドポイント マッパー                                                                                          |
+| 137         | UDP      | 使用する場合に samba - NetBIOS 名のサービス                                                                                      |
+| 138         | UDP      | 使用する場合に samba - NetBIOS データグラム                                                                                          |
+| 139         | TCP      | 使用する場合に samba - NetBIOS セッション                                                                                           |
+| 445         | TCP      | 使用する場合に samba - TCP 経由で SMB                                                                                              |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -既定のポートです。必要な場合で変更できます。 `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP、UDP | NFS (使用) する場合                                                                                                               |
-| 2224        | TCP      | 使用される – pacemaker `pcsd`                                                                                                |
-| 3121        | TCP      | Pacemaker-Pacemaker リモート ノードがあるかどうかに必要な                                                                    |
-| 3260        | TCP      | 変更できる iSCSI イニシエーター (使用) する場合は – `/etc/iscsi/iscsid.config` (RHEL)、iSCSI ターゲットのポートに一致する必要がありますが、 |
+| 2224        | TCP      | Pacemaker の使用 `pcsd`                                                                                                |
+| 3121        | TCP      | Pacemaker - Pacemaker リモート ノードがあるかどうかに必要な                                                                    |
+| 3260        | TCP      | 変更できます (使用) する場合は、イニシエーターの iSCSI `/etc/iscsi/iscsid.config` (RHEL)、iSCSI ターゲットのポートに一致する必要がありますが、 |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -既定のポートを AG エンドポイント; の使用エンドポイントを作成するときに変更することができます。                                |
 | 5403        | TCP      | Pacemaker                                                                                                                   |
-| 5404        | UDP      | Pacemaker – UDP マルチキャストを使用する場合は、Corosync で必要                                                                     |
-| 5405        | UDP      | Pacemaker – Corosync で必要                                                                                            |
-| 21064       | TCP      | Pacemaker – DLM を使用してリソースに必要な                                                                                 |
+| 5404        | UDP      | Pacemaker - UDP マルチキャストを使用する場合は、Corosync で必要                                                                     |
+| 5405        | UDP      | Pacemaker - Corosync で必要                                                                                            |
+| 21064       | TCP      | Pacemaker - DLM を使用してリソースに必要な                                                                                 |
 | 変数    | TCP      | 可用性グループのエンドポイント ポート。既定値は 5022                                                                                           |
-| 変数    | TCP      | ポートの NFS – `LOCKD_TCPPORT` (で見つかった`/etc/sysconfig/nfs`on RHEL)                                              |
-| 変数    | UDP      | ポートの NFS – `LOCKD_UDPPORT` (で見つかった`/etc/sysconfig/nfs`on RHEL)                                              |
-| 変数    | TCP/UDP  | ポートの NFS – `MOUNTD_PORT` (で見つかった`/etc/sysconfig/nfs`on RHEL)                                                |
-| 変数    | TCP/UDP  | ポートの NFS – `STATD_PORT` (で見つかった`/etc/sysconfig/nfs`on RHEL)                                                 |
+| 変数    | TCP      | NFS のポートを`LOCKD_TCPPORT`(で見つかった`/etc/sysconfig/nfs`on RHEL)                                              |
+| 変数    | UDP      | NFS のポートを`LOCKD_UDPPORT`(で見つかった`/etc/sysconfig/nfs`on RHEL)                                              |
+| 変数    | TCP/UDP  | NFS のポートを`MOUNTD_PORT`(で見つかった`/etc/sysconfig/nfs`on RHEL)                                                |
+| 変数    | TCP/UDP  | NFS のポートを`STATD_PORT`(で見つかった`/etc/sysconfig/nfs`on RHEL)                                                 |
 
 Samba を使用できる追加のポートでは、次を参照してください。 [Samba ポートの使用状況](https://wiki.samba.org/index.php/Samba_Port_Usage)します。
 
@@ -121,7 +121,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>インストール[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]可用性のためのパッケージ
-Windows ベースの[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]インストールでは、他のユーザーは、基本的なエンジンのインストールにもいくつかのコンポーネントがインストールされます。 Linux のみで、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]エンジンがインストール プロセスの一部としてインストールされます。 他のすべては省略可能です。 高可用性[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux では、インスタンス、2 つのパッケージをインストールする必要があります[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]:[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]エージェント (*mssql server エージェント*) と高可用性 (HA) パッケージ (*mssql server-ha*)。 中に[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]エージェントは、技術的には省略可能な[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]のジョブのスケジューラと、ログ配布に必要なインストールをお勧めします。 Windows ベースのインストールで[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]エージェントは省略できません。
+Windows ベースの[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]インストールでは、他のユーザーは、基本的なエンジンのインストールにもいくつかのコンポーネントがインストールされます。 Linux のみで、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]エンジンがインストール プロセスの一部としてインストールされます。 他のすべては省略可能です。 高可用性[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux では、インスタンス、2 つのパッケージをインストールする必要があります[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]:[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] エージェント (*mssql server エージェント*) と高可用性 (HA) パッケージ (*mssql server-ha*)。 中に[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]エージェントは、技術的には省略可能な[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]のジョブのスケジューラと、ログ配布に必要なインストールをお勧めします。 Windows ベースのインストールで[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]エージェントは省略できません。
 
 >[!NOTE]
 >初めての人の[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]エージェントが[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]の組み込みのジョブ スケジューラ。 これは、バックアップやその他のスケジュールを設定する一般的な方法[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]メンテナンスします。 Windows ベースのインストールとは異なり[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]場所[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]エージェントは、Linux 上のまったく異なるサービス[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]のコンテキストでエージェントが実行される[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]自体。
@@ -134,12 +134,12 @@ Windows ベースの構成に Ag または Fci を構成すると、クラスタ
 以前のように注意して、現在 Ag および Fci の Microsoft でサポートされている唯一のクラスタ リング メカニズムが Corosync と Pacemaker。 ここでは、ソリューション、および計画および展開にする方法について理解する基本的な情報[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]構成します。
 
 ### <a name="ha-add-onextension-basics"></a>HA アドオンの/拡張機能の基礎
-現在サポートされているディストリビューション全体は出荷、高可用性アドオン-の/拡張機能、Pacemaker のスタックをクラスタ リングに基づいています。 このスタックには 2 つの主要コンポーネントが組み込まれています: Pacemaker と Corosync します。 スタックのすべてのコンポーネントは次のとおりです。
--   Pacemaker – コアのクラスター化されたマシン間で座標のような処理を実行するには、コンポーネントをクラスタ リングします。
--   Corosync – フレームワークとクォーラム、プロセスの再起動に失敗しましたなどの機能などが提供する Api のセット。
--   libQB – 提供などのログ記録をします。
--   リソース エージェント – 特定の機能が提供されるため、アプリケーションは、Pacemaker を統合できます。
--   エージェント – スクリプト/ノードを特定するを支援し、それらの問題が生じている場合、対処する機能を柵します。
+現在サポートされているディストリビューション全体は出荷、高可用性アドオン-の/拡張機能、Pacemaker のスタックをクラスタ リングに基づいています。 このスタックには、2 つの主要コンポーネントが組み込まれています。Pacemaker と Corosync します。 スタックのすべてのコンポーネントは次のとおりです。
+-   Pacemaker - クラスター化されたマシン間で座標のような処理を実行するには、コンポーネントをクラスタ リングのコア。
+-   Corosync のフレームワークとクォーラム、プロセスの再起動に失敗しましたなどの機能などが提供する Api のセット。
+-   libQB - ログ記録のようなものを提供します。
+-   リソース エージェント - 特定の機能が提供されるため、アプリケーションは、Pacemaker を統合できます。
+-   エージェント - スクリプト/ノードを特定するを支援し、それらの問題が生じている場合、対処する機能を柵します。
     
 > [!NOTE]
 > クラスター スタックは、Linux の世界で Pacemaker とも呼ばれます。
@@ -169,7 +169,7 @@ WSFC と Pacemaker クラスターの両方のリソースの概念がありま�
 
 Pacemaker には、standard、およびクローンのリソースがあります。 複製のリソースは、すべてのノードで同時に実行されるものです。 例は、負荷分散のための複数のノードで実行されている IP アドレスになります。 Fci 用に作成されるすべてのリソースは、1 つのノードは、特定の時点、FCI をホストできるため、標準のリソースを使用します。
 
-AG が作成されたときに、特殊な形式の複数の状態のリソースと呼ばれる複製リソースが必要です。 AG では、1 つのプライマリ レプリカのみが、AG 自体を実行しているすべてのノードで、作業するように構成し、読み取り専用アクセスなどを許可する可能性があることができます。 これは、ノードの「ライブ」の使用であるため、リソースが 2 つの状態の概念をある: マスターおよびスレーブします。 詳細については、次を参照してください。[マルチ リソース: リソースを複数のモードを持つ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html)します。
+AG が作成されたときに、特殊な形式の複数の状態のリソースと呼ばれる複製リソースが必要です。 AG では、1 つのプライマリ レプリカのみが、AG 自体を実行しているすべてのノードで、作業するように構成し、読み取り専用アクセスなどを許可する可能性があることができます。 これは、ノードの「ライブ」の使用であるため、リソースが 2 つの状態の概念をある: マスターおよびスレーブします。 詳細については、次を参照してください。[リソースの複数の状態。複数のモードが存在するリソース](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html)します。
 
 #### <a name="resource-groupssets"></a>リソース グループ/セット
 WSFC 内のロールと同様に、Pacemaker クラスターには、リソース グループの概念があります。 (SLES のセットと呼ばれます) のリソース グループとは、共に機能して、1 つの単位として別に 1 つのノードからフェールオーバーできるリソースのコレクションです。 リソース グループは、マスター/スレーブ; として構成されているリソースを含めることはできません。したがって、Ag を使用できません。 リソース グループは、Fci を使用できますは一般に推奨される構成です。
@@ -200,7 +200,7 @@ Wsfc は、参加しているノードの状態を監視し、問題が発生し
 #### <a name="cluster-log-location"></a>クラスター ログの場所
 Pacemaker クラスターのログの場所は、ディストリビューションによって異なります。
 -   RHEL および SLES- `/var/log/cluster/corosync.log`
--   Ubuntu – `/var/log/corosync/corosync.log`
+-   -Ubuntu `/var/log/corosync/corosync.log`
 
 既定のログ ファイルの場所を変更する変更`corosync.conf`します。
 
@@ -213,8 +213,8 @@ Linux ベースのデプロイに仮想マシンを使用して[!INCLUDE[ssnover
 Ag を Fci での仮想化に関しては、アンチ アフィニティが、特定の Pacemaker クラスターのノードに対して設定されていることを確認します。 ホストする Vm を高可用性の AG または FCI の構成では、構成されている場合[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]同じハイパーバイザー ホスト上で実行されることはありません。 たとえば、2 つのノードの FCI が展開されている場合は必要があります*少なくとも*など Live の 3 つのハイパーバイザー ホストになるようにホストの障害が発生した場合に、ノードをホストする Vm のいずれかの機能を使用する場合に特に移行や vmotion を使用します。
 
 詳細についてを参照してください。
--   Hyper V のドキュメント-[ゲスト クラスタ リングの高可用性を使用します。](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   ホワイト ペーパーで記述された Windows ベースの展開がまだ概念のほとんどを適用) –[計画高可用性、ミッション クリティカルな SQL Server の展開では、VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   Hyper V のドキュメント -[ゲスト クラスタ リングの高可用性を使用します。](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
+-   ホワイト ペーパーで記述された Windows ベースの展開がまだ概念のほとんどを適用) -[計画高可用性、ミッション クリティカルな SQL Server の展開では、VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >STONITH を使用した Pacemaker クラスターと RHEL が HYPER-V でまだサポートされていません。 詳細と、更新、サポートされてまでを参照してください[RHEL 高可用性クラスターのサポート ポリシー](https://access.redhat.com/articles/29440#3physical_host_mixing)します。
