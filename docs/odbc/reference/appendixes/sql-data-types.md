@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b932b7f102e304ad110e5073005d2623cee2693c
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324595"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507503"
 ---
 # <a name="sql-data-types"></a>SQL データ型
 各 DBMS は、独自の SQL 型を定義します。 各 ODBC ドライバーでは、関連付けられている DBMS 定義 SQL データ型のみを公開します。 SQL の ODBC で定義された型の識別子にドライバーをマップする方法については DBMS SQL 型し、独自ドライバー固有の SQL 型識別子に、ドライバーが DBMS SQL 型をマップする方法を呼び出すことによって返される**SQLGetTypeInfo**します。 ドライバーは、列との呼び出しを通じてパラメーターのデータ型を記述するときにも、SQL データ型を返します**SQLColAttribute**、 **SQLColumns**、 **SQLDescribeCol**、**SQLDescribeParam**、 **SQLProcedureColumns**、および**SQLSpecialColumns**します。  
@@ -39,23 +39,23 @@ ms.locfileid: "49324595"
 |------------------------------|------------------------------------|------------------------------|  
 |SQL_CHAR|CHAR (*n*)|文字の固定文字列長の文字列*n*します。|  
 |SQL_VARCHAR|VARCHAR (*n*)|文字列の最大長の可変長文字列*n*します。|  
-|SQL_LONGVARCHAR|LONG VARCHAR|可変長文字データ。 最大長は、データ ソースによって異なります。[9]|  
+|SQL_LONGVARCHAR|LONG VARCHAR|可変長文字データ。 最大長は、データ ソースに依存します。[9]|  
 |SQL_WCHAR|WCHAR (*n*)|固定文字列長の Unicode 文字の文字列*n*|  
 |SQL_WVARCHAR|VARWCHAR (*n*)|文字列の最大長を Unicode 文字の可変長文字列*n*|  
-|SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode の可変長文字データです。 最大長は、データ ソースによって異なります|  
+|SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode の可変長文字データです。 最大長は、データ ソースに依存しますです。|  
 |SQL_DECIMAL|10 進数 (*p*、*s*)|署名、有効桁数の数値の正確な値には少なくとも*p*有効桁数と小数点*秒。* (最大有効桁数はドライバーの定義) です。(1 < = *p* < = 15;*s* <= *p*). [4]|  
 |SQL_NUMERIC|数値 (*p*、*s*)|署名済み、有効桁数を持つの正確な数値値*p*有効桁数と小数点*s* (1 < = *p* < = 15;*s* <= *p*). [4]|  
-|SQL_SMALLINT|SMALLINT|固定精度が 5 の数値と桁数が 0 (符号付き: – 32,768 < = *n* < = 32,767、符号なし: 0 < = *n* < = 65,535) [3]。|  
-|SQL_INTEGER|INTEGER|固定精度が 10 の数値と桁数が 0 (符号付き: – 2 [31] < = *n* < = 2 [31] – 1、符号なし: 0 < = *n* < = 2 [32] – 1) [3]。|  
-|SQL_REAL|real|バイナリ精度が 24 の符号付き概数数値 (0、または絶対値が 10 [–38] 10[38]) します。|  
+|SQL_SMALLINT|SMALLINT|固定精度が 5 の数値と桁数が 0 (署名:-32,768 < = *n* < = 32,767、符号なし。0 < = *n* < = 65,535) [3]。|  
+|SQL_INTEGER|INTEGER|固定精度が 10 の数値と桁数が 0 (署名:-2 [31] < = *n* < = 2 [31] - 1、符号なし。0 < = *n* < = 2 [32] - 1) [3]。|  
+|SQL_REAL|real|バイナリ精度が 24 の符号付き概数数値 (0、または絶対値が 10 [-38] 10[38]) します。|  
 |SQL_FLOAT|FLOAT (*p*)|署名済み、バイナリの有効桁数を持つ概数数値には少なくとも*p*します。 (最大有効桁数はドライバーの定義) です。[5]|  
-|SQL_DOUBLE|DOUBLE PRECISION|バイナリ精度が 53 の符号付き概数数値 (0、または絶対値が 10 [– 308] 10[308]) します。|  
+|SQL_DOUBLE|DOUBLE PRECISION|バイナリ精度が 53 の符号付き概数数値 (0、または絶対値が 10 [-308] 10[308]) します。|  
 |SQL_BIT|BIT|1 つのビットのバイナリ データ。[8]|  
-|SQL_TINYINT|TINYINT|固定精度が 3 で数値および桁数が 0 (符号付き: – 128 < = *n* < = 127、符号なし: 0 < = *n* < = 255) [3]。|  
-|SQL_BIGINT|bigint|正確な数値有効桁数 19 (符号付き) の場合または 20 (符号なし) の場合、桁数が 0 (符号付き: – 2 [63] < = *n* < = 2 [63] – 1、符号なし: 0 < = *n* < = 2 [64] – 1) [3] [9]。|  
+|SQL_TINYINT|TINYINT|固定精度が 3 で数値および桁数が 0 (署名:-128 < = *n* < = 127、符号なし。0 < = *n* < = 255) [3]。|  
+|SQL_BIGINT|bigint|正確な数値有効桁数 19 (符号付き) の場合または 20 (符号なし) の場合、桁数が 0 (署名:-2 [63] < = *n* < = 2 [63] - 1、符号なし。0 < = *n* < = 2 [64] - 1) [3] [9]。|  
 |SQL_BINARY|バイナリ (*n*)|固定長のバイナリ データ*n*[。9]|  
 |SQL_VARBINARY|VARBINARY (*n*)|最大長の可変長バイナリ データ*n*します。 最大値は、ユーザーによって設定されます。[9]|  
-|SQL_LONGVARBINARY|長い VARBINARY|可変長バイナリ データ。 最大長は、データ ソースによって異なります。[9]|  
+|SQL_LONGVARBINARY|長い VARBINARY|可変長バイナリ データ。 最大長は、データ ソースに依存します。[9]|  
 |SQL_TYPE_DATE [6]|[DATE]|年、月、および日フィールド、グレゴリオ暦の規則に準拠します。 (を参照してください[グレゴリオ暦の制約](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)、この付録で後述します)。|  
 |SQL_TYPE_TIME [6]|時間 (*p*)|1 時間、分、および 2 番目のフィールド、00 ~ 59 の分を 00 ~ 23 の有効な値の時間の有効な値と 61 を 00 の秒の有効な値。 有効桁数*p*秒の有効桁数を示します。|  
 |SQL_TYPE_TIMESTAMP [6]|タイムスタンプ (*p*)|年、月、日、時間、分、および、日付と時刻のデータ型に対して定義されている有効な値を持つ 2 つ目のフィールド。|  
@@ -78,7 +78,7 @@ ms.locfileid: "49324595"
   
  [1] これは、DATA_TYPE 列への呼び出しによって返される値**SQLGetTypeInfo**します。  
   
- [2] これは、名前とパラメーターの作成の列への呼び出しによって返される値**SQLGetTypeInfo**します。 [名前] 列の表記を返します: たとえば、CHAR-作成 PARAMS 列は、有効桁数、小数点、および長さなどの作成パラメーターのコンマ区切りの一覧を返しますが。  
+ [2] これは、名前とパラメーターの作成の列への呼び出しによって返される値**SQLGetTypeInfo**します。 [名前] 列の表記を返します-たとえば、CHAR-作成 PARAMS 列は、有効桁数、小数点、および長さなどの作成パラメーターのコンマ区切りの一覧を返しますが、します。  
   
  [3]、アプリケーションを使用して**SQLGetTypeInfo**または**SQLColAttribute**かどうか、特定のデータ型または特定の結果セット列が署名されていないかを判断します。  
   

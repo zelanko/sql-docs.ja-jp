@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d2d2f8fce7b70c760707bd0d384ffa9b72f7a1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751773"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516990"
 ---
 # <a name="operation-of-parameterized-commands"></a>パラメーター化コマンドの操作
 大規模な子を使用する場合**レコード セット**、特に、親のサイズと比較**レコード セット**、いくつかの子章のみにアクセスする必要がある場合がありますを使用する方が効率的、パラメーター化されたコマンド。  
@@ -53,7 +53,7 @@ SHAPE {SELECT * FROM customer}
   
 5.  取得した子の行への参照 (子の章では、**レコード セット**) は、親の現在の行のチャプター列に配置されます**レコード セット**します。  
   
-6.  別の行のチャプター列にアクセスする場合は、手順 3 ~ 5 が繰り返されます。  
+6.  別の行のチャプター列にアクセスする場合は、3 ~ 5 の手順が繰り返されます。  
   
  **子行をキャッシュ**動的プロパティに設定されて**True**既定。 キャッシュの動作は、クエリのパラメーターの値によって異なります。 子の 1 つのパラメーターを持つクエリで**Recordset**その値を持つ子に対する要求間で特定のパラメーターの値がキャッシュされます。 次のコードでは、これを示しています。  
   

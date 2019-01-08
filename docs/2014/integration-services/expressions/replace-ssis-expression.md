@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - replacing string expression
@@ -14,12 +13,12 @@ ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dabde936354e052a7a670b0235b994edf26093f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee88a12261d44c5090ae8d8f6ecac9f4b4ee216b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178292"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754414"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (SSIS 式)
   式に含まれている文字列を別の文字列または空の文字列で置き換えた文字式を返します。  
@@ -78,7 +77,7 @@ REPLACE((DT_WSTR,8)DaysToManufacture,"6","5")
 ```  
   
 ## <a name="see-also"></a>参照  
- [部分文字列&#40;SSIS 式&#41;](substring-ssis-expression.md)   
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+ [SUBSTRING &#40;SSIS 式&#41;](substring-ssis-expression.md)   
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f4bd21ab1463d40b0eb9b83e5686951e43dee885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145657"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542204"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -58,7 +58,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
 ## <a name="examples"></a>使用例  
  SSMS の MDX クエリ ウィンドウで Adventure Works キューブを使用して以下の例を試すことができます。  
   
- **例 1-最小構文をデモします。**  
+ **例 1 - 最小構文をデモします。**  
   
  最初の例では、最小構文**DrilldownLevel**します。 唯一必要な引数は、セット式です。 このクエリを実行するとなる、親のすべてのカテゴリと、次のレベルのメンバーに注意してください。 [アクセサリ]、[Bikes]、具合にします。 この例は、単純な基本的な目的を示しています、 **DrilldownLevel**関数で、下のレベルをドリルダウンします。  
   
@@ -79,7 +79,7 @@ FROM [Adventure Works]
   
  前のクエリと同じ結果セットが返されることに注意してください。 一般に、特定のレベルからドリルダウンする場合を除き、インデックス レベルを設定する必要はありません。 インデックス値に 1 を設定して前のクエリを再実行し、次に 2 を設定して再実行します。 インデックス値を 1 に設定した場合は、階層の第 2 レベルからドリルダウンされます。 インデックス値を 2 に設定した場合は、この例の最高レベル、第 3 レベルからドリルダウンされます。 数値式を大きくするほど、インデックス レベルは高くなります。  
   
- **例 3-レベル式をデモします。**  
+ **例 3 - レベル式をデモします。**  
   
  次の例は、レベル式の使用方法を示しています。 階層構造を表すセットの場合は、レベル式を使用して、ドリルダウンを開始する階層のレベルを選択できます。  
   
@@ -98,7 +98,7 @@ SELECT [Measures].[Internet Sales Amount] ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
- **例 4-計算されるメンバーを含む**  
+ **例 4 - 計算されるメンバーを含む**  
   
  計算されるメンバーが含まれ、結果の下に表示される設定を追加すると、最後の例に示す、 **include_calculated_members**フラグ。 このフラグは 4 つ目のパラメーターとして指定することに注意してください。  
   
