@@ -11,19 +11,19 @@ ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 95b59bf6b406a4dcbaabc956147f4216cfdda0e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8afbe5f3bd711aac8ac1d7a0dd3d3258a6d4305d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095382"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522381"
 ---
 # <a name="glossary-report-builder"></a>用語集 (レポート ビルダー)
   
   
 |項目|定義|  
 |----------|----------------|  
-|.NET Framework|次世代のアプリケーションおよび Web サービスの構築、配置、および実行をサポートするために不可欠な Windows コンポーネント。 .NET Framework は、既存の資産を次世代のアプリケーションやサービスに統合できるように、標準ベースで生産性が高い多言語環境を提供するほか、インターネット スケールのアプリケーションの配置や運用の課題を解決するためのアジリティも提供します。 .NET Framework を構成する主要な要素には、共通言語ランタイム、階層的な統合クラス ライブラリ、および ASP のコンポーネント化バージョン (ASP.NET) の 3 つがあります。 「ASP.NET」、「共通言語ランタイム」、「.NET Framework クラス ライブラリ」も参照。|  
+|.NET Framework|次世代のアプリケーションおよび Web サービスの構築、配置、および実行をサポートするために不可欠な Windows コンポーネント。 .NET Framework は、既存の資産を次世代のアプリケーションやサービスに統合できるように、標準ベースで生産性が高い多言語環境を提供するほか、インターネット スケールのアプリケーションの配置や運用の課題を解決するためのアジリティも提供します。 .NET Framework を構成する主要な要素には、共通言語ランタイム、階層的な統合クラス ライブラリ、および ASP のコンポーネント化バージョン (ASP.NET) の 3 つがあります。 関連項目:ASP.NET、共通言語ランタイム、.NET Framework クラス ライブラリ。|  
 |ActiveX データ オブジェクト (ActiveX Data Objects)|データ ソースへのアクセスを提供するコンポーネント オブジェクト モデル オブジェクト。 OLE DB とプログラミング言語 (Visual Basic、Visual Basic for Applications、Active Server Pages、Microsoft Internet Explorer Visual Basic Scripting など) との間にレイヤーを提供する API です。|  
 |アドホック レポート (ad hoc report)|レポート モデルにアクセスする、レポート ビルダー 1.0 で作成された .rdl レポート。|  
 |修飾 (adornment)|ツール バーやルーラーなど、ペインまたはウィンドウの枠に付いているコントロールまたはステータスの領域。|  
@@ -169,7 +169,7 @@ ms.locfileid: "48095382"
 |ヒート マップ (heat map)|各多角形の色濃度が関連する分析データに対応する、マップ表示の一種。 たとえば、範囲内の低い温度を表す小さな値は青色で表され、高い温度を表す大きな値は赤色で表されます。|  
 |階層 (hierarchy)|各メンバーに対し 1 つの親メンバーと 0 個以上の子メンバーが存在するディメンションのメンバーから構成される論理的なツリー構造。|  
 |高可用性 (high availability)|サービスを中断する障害がほとんど発生することなく、リソースがほぼ常に動作していて、クライアントが使用できる状態。|  
-|HTML (HTML)|「ハイパーテキスト マークアップ言語 (Hypertext Markup Language)」を参照。|  
+|HTML (HTML)|次を参照: ハイパーテキスト マークアップ言語 (Hypertext Markup Language)|  
 |HTML ビューアー|レポート ツール バーなど、レポート操作用のナビゲーション要素で構成されるユーザー インターフェイス。|  
 |ハイパーテキスト マークアップ言語 (Hypertext Markup Language)|Web 向けドキュメントを作成するためのテキスト マークアップ言語。 各種のタグや属性によって、Web ドキュメントの構造およびレイアウトが定義されます。|  
 |識別子 (identifier)|データベース内のオブジェクトの名前。|  
@@ -180,16 +180,16 @@ ms.locfileid: "48095382"
 |インスタンス (instance)|1.コンピューターで実行されている SQL Server のコピー。 2. レポート パーツ、サブレポート、動的メンバー、またはグループなどのレポート アイテムの特定のコピー。|  
 |整数 (integer)|数値データ型のカテゴリの 1 つ。bigint 型、int 型、smallint 型、tinyint 型があります。|  
 |インターネット プロトコル セキュリティ (Internet Protocol security)|コンピューターが暗号化セキュリティ サービスを使用してインターネット プロトコル (IP) ネットワーク経由のセキュリティで保護されたプライベート通信を提供する際に従う規則。|  
-|IPsec (IPsec)|「インターネット プロトコル セキュリティ (Internet Protocol security)」を参照。|  
+|IPsec (IPsec)|次を参照: インターネット プロトコル セキュリティ (Internet Protocol security)|  
 |ISO|国際データ通信規格を制定する 2 つの国際標準機関の 1 つ。 ISO (国際標準化機構) は IEC (国際電気技術標準機関) と密接に連携して、コンピューター関連の規格を制定します。 ISO と IEC は共同で SQL に関する ISO/IEC SQL-92 規格を発表しました。|  
 |アイテムレベルのロールの割り当て (item-level role assignment)|レポート サーバー フォルダーにあるアイテムに適用されるセキュリティ ポリシー。|  
 |アイテムレベルのロールの定義 (item-level role definition)|レポート サーバー フォルダーの名前空間にあるアイテムへのアクセスや対話の制御に使用されるロールを定義するセキュリティ テンプレート。|  
 |主要業績評価指標 (key performance indicator)|(KPI) 定量化可能で標準化された指標。一定期間にわたって追跡された、業務の重要な変動要素 (市場シェアなど) を反映します。|  
-|キーワード (keyword)|データベース オブジェクトの定義、操作、アクセスなど、特定の機能を持つ SQL Server の予約語。 たとえば、SELECT、FROM、AND などです。|  
+|キーワード (keyword)|データベース オブジェクトの定義、操作、アクセスなど、特定の機能を持つ SQL Server の予約語。 以下に例を示します。SELECT と。|  
 |KPI (KPI)|「主要業績評価指標 (key performance indicator)」を参照。|  
 |ラベル フィールド (label field)|対応するキー フィールドのラベルを識別するレポート データセット フィールド。 パラメーターとデータ領域には、値の代わりにキー フィールドのラベルを表示できます。|  
 |待機時間 (latency)|あるサーバーでデータ変更が完了して、その変更が他のサーバーに反映されるまでの経過時間。|  
-|緯度 (latitude)|世界測地システム (WGS 84) データで、度分の間に小数点を入れた度分秒単位で表した緯度座標。 有効な範囲は –90.0 ～ +90.0 です。|  
+|緯度 (latitude)|世界測地システム (WGS 84) データで、度分の間に小数点を入れた度分秒単位で表した緯度座標。 有効な範囲は -90.0 ～ +90.0 です。|  
 |レイヤー (layer)|マップ レポート アイテムで、レイヤーは 1 種類の空間データの型と表示を指定します。 マップ レポート アイテムは複数のレイヤーのコンテナーです。|  
 |LCID (LCID)|Windows ベースのロケールを識別する番号。|  
 |凡例 (legend)|レポート グラフ、マップ、またはゲージ データ領域で、データと基になるデータ値の表示と表現を示す要素。|  
@@ -202,7 +202,7 @@ ms.locfileid: "48095382"
 |ログ ファイル (log file)|データベースで行われた変更が記録されているファイルまたはファイルのセット。|  
 |論理名 (logical name)|ファイルを識別するために SQL Server が使用する名前。|  
 |論理演算子 (logical operators)|演算子 AND、OR、および NOT。 WHERE 句の検索条件を連結するために使用します。|  
-|経度 (longitude)|世界測地システム (WGS 84) データで、度分の間に小数点を入れた度分秒単位で表した座標。 有効な範囲は –180.0 ～ +180.0 です。|  
+|経度 (longitude)|世界測地システム (WGS 84) データで、度分の間に小数点を入れた度分秒単位で表した座標。 有効な範囲は -180.0 ～ +180.0 です。|  
 |多対多のリレーションシップ (many-to-many relationship)|各テーブルの行が、関連付けられたテーブルの複数の行と一致するような、2 つのテーブル間のリレーションシップ。 たとえば、各販売請求書には複数の製品を記載できますが、各製品は複数の販売請求書に記載できます。|  
 |多対一のリレーションシップ (many-to-one relationship)|あるテーブルの 1 つの行が別のテーブルの複数の行に関連付けられるような、2 つのテーブル間のリレーションシップ。|  
 |マップ (map)|タイトル、さまざまな種類の凡例、マップ レイヤーのコンテナーであるレポート アイテム。|  
@@ -213,7 +213,7 @@ ms.locfileid: "48095382"
 |master ファイル (master file)|旧バージョンの SQL Server でインストールされるファイル。master、model、および tempdb システム データベースとトランザクション ログの格納に使用します。さらに、pubs サンプル データベースとトランザクション ログも格納します。|  
 |対応フィールド (match fields)|分析データと空間データ間の関係を構築するために使用される一連のフィールド。|  
 |マトリックス データ領域 (matrix data region)|クロス集計表や PivotTable レポートと同様の機能があるレポート レイアウト上のデータ領域。 実行時にレポート データとデータ領域が組み合わされると、マトリックスはページ上で縦横に拡大します。 マトリックス セルには、そのセルが所属する行グループと列グループの交差部分にスコープを設定した集計値が表示されます。|  
-|MDX (MDX)|「多次元式 (MDX) (Multidimensional Expressions (MDX))」を参照。|  
+|MDX (MDX)|次を参照: 多次元式 (MDX) (Multidimensional Expressions (MDX))|  
 |メルカトル図法 (Mercator projection)|マップ レポート アイテムで、1569 年にゲラルドゥス メルカトルにより考案された円筒マップ投影法。|  
 |メタデータ (metadata)|列に格納されるデータの型 (numeric、text など) や列の長さなど、データのプロパティに関する情報。タイトル、説明、作成日、最終変更日など、ファイルに関する情報。または、データの構造に関する情報のほか、オブジェクト (キューブ、ディメンションなど) のデザインを指定する情報。|  
 |メソッド|SQL-DMO、OLE DB、および ADO (ActiveX データ オブジェクト) のように、COM オブジェクトを使用して操作を実行する関数。|  
@@ -264,7 +264,7 @@ ms.locfileid: "48095382"
 |プロトコル (protocol)|コンピューターどうしで情報を交換できるようにするための、標準的な形式とプロシージャのセット。|  
 |provider|1.OLE DB プロバイダー。 2. データベースへのアクセスを提供するインプロセス DLL (ダイナミック リンク ライブラリ)。|  
 |クエリ パラメーター (query parameters)|Transact-SQL クエリなどのデータセット クエリで指定されるパラメーター。|  
-|RDL (RDL)|「レポート定義言語 (Report Definition Language)」を参照。|  
+|RDL (RDL)|次を参照: レポート定義言語 (Report Definition Language)|  
 |レコード (record)|関連する情報についてのフィールド (列) のグループ。1 つの単位として扱われます。 リレーショナル データベースでは、通常、レコードのことを行と呼びます。|  
 |四角形 (rectangle)|複数のレポート アイテムのコンテナーとして、またはレポート上のグラフィカル要素として使用できるレポート アイテム。|  
 |再帰型階層 (recursive hierarchy)|1.組織階層内のマネージャーと従業員のリレーションシップを表す上司/部下構造など、階層構造内の複数の階層レベルから成る単一のレポート データセットのデータの階層。 2. Master Data Services で、再帰リレーションシップを含む派生階層。 再帰リレーションシップは、エンティティ自体に基づくドメイン ベースの属性がエンティティにある場合に存在します。|  
@@ -332,12 +332,12 @@ ms.locfileid: "48095382"
 |SKU (SKU)|特定の製品のさまざまなエディションを識別する方法。"Stock Keeping Unit" の頭字語です (一般的なビジネス用語)。|  
 |スライス (slice)|1 つ以上のディメンションをディメンションのメンバーに基づいて制限することで得られるキューブ内のデータのサブセット。|  
 |スマート タグ (smart tag)|スマート タグは、Visual Studio 2005 のデザイン時の生産性全体を高めるために、主要な構成をデザイン画面に直接公開します。|  
-|SMDL (SMDL)|「セマンティック モデル定義言語 (Semantic Model Definition Language)」を参照。|  
+|SMDL (SMDL)|次を参照: SMDL (セマンティック モデル定義言語) (Semantic Model Definition Language)|  
 |スナップショット (snapshot)|「レポート スナップショット (report snapshot)」を参照。|  
 |並べ替え順 (sort order)|照合順序の規則のセット。比較操作での文字の評価方法や、文字を並べ替える順序を定義しています。|  
 |空間データ (spatial data)|平坦表面または曲線表面のオブジェクトの特定の位置を指定するデータ。 空間データには、ポイント、線、または多角形があります。|  
 |空間データ型 (spatial data types)|geometry (平面) または geography (測地) 情報を表すデータを指定します。|  
-|SQL|「構造化照会言語 (Structured Query Language)」を参照。|  
+|SQL|次を参照: 構造化照会言語 (SQL) (Structured Query Language) (SQL)|  
 |SQL クエリ (SQL query)|SQL ステートメント。SELECT、INSERT、UPDATE、DELETE、CREATE TABLE など。|  
 |SQL Server 認証 (SQL Server Authentication)|SQL Server インスタンスへの接続の試行を検証するメカニズム。接続するには、ユーザーは SQL Server ログイン ID とパスワードを指定する必要があります。|  
 |SQL Server ログイン (SQL Server login)|SQL Server に保存されるアカウント。ユーザーは、このアカウントを使用して SQL Server に接続できます。|  
@@ -366,11 +366,11 @@ ms.locfileid: "48095382"
 |Windows Management Instrumentation (Windows Management Instrumentation)|マネージド環境のオブジェクトに関する情報を提供するインターフェイス。|  
 |WKB (WKB)|Open Geospatial Consortium (OGC) で指定された Well Known Binary データ表現。|  
 |WKT (WKT)|Open Geospatial Consortium (OGC) で指定された Well Known Text データ表現。|  
-|WMI (WMI)|「Windows Management Instrumentation (Windows Management Instrumentation)」を参照。|  
+|WMI (WMI)|次を参照: Windows Management Instrumentation (Windows Management Instrumentation)|  
 |x 軸 (x-axis)|「カテゴリ (x) 軸 (category (x) axis)」を参照。|  
 |y 軸 (y-axis)|「値 (y) 軸 (value (y) axis)」を参照。|  
   
 ## <a name="see-also"></a>参照  
- [レポート作成の概念&#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [レポート作成の概念 (レポート ビルダーおよび SSRS)](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

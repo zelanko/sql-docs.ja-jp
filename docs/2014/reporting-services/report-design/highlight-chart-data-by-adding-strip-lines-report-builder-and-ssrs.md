@@ -11,12 +11,12 @@ ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6a0318d041a43e96246931015ef35edaf7fd74a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aae805b154d8c8876766f98e4d17c277a034764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162872"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528253"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>ストリップ ラインの追加によるグラフのデータの強調表示 (レポート ビルダーおよび SSRS)
   ストリップ ライン (ストリップ) は、一定の間隔またはカスタムの間隔でグラフの背景を網掛け表示にする、横方向または縦方向の帯です。 ストリップ ラインを使用すると、次のことが可能になります。  
@@ -50,7 +50,7 @@ ms.locfileid: "48162872"
   
      軸のプロパティが [プロパティ] ウィンドウに表示されます。  
   
-2.  [プロパティ] ウィンドウの **[外観]** セクションで、StripLines プロパティのコレクションの編集ボタン ([...]) をクリックし、 **ChartStripLine コレクション エディター**を開きます。  
+2.  [プロパティ] ウィンドウの **[外観]** セクションで、StripLines プロパティのコレクションの編集ボタン [...] をクリックし、**ChartStripLine コレクション エディター**を開きます。  
   
 3.  **[追加]** をクリックし、新しいストリップ ラインをコレクションに追加します。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "48162872"
 > [!NOTE]  
 >  既定では、Interval は Auto に設定されます。つまり、グラフでは、カスタム ストリップ ラインの間隔が計算されません。 グラフでは、間隔値が設定されている場合のみ、ストリップ ラインの間隔が計算されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [移動平均をグラフに追加&#40;レポート ビルダーおよび SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [グラフへの移動平均の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

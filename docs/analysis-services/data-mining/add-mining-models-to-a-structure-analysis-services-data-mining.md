@@ -1,5 +1,5 @@
 ---
-title: 構造にマイニング モデルを追加 (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: 構造体へのマイニング モデルの追加 (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c32140e639a0e79b8736036392104f593a305b30
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a3647ff06d00aebc4b5feb735d5a69b0b8db79e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014439"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524578"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>マイニング モデルを構造に追加する (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34014439"
  データ マイニング ウィザードを使用して新しいマイニング モデルを作成する場合、既定では、まずマイニング構造を作成する必要があります。 次に、ウィザードにより、構造に初期マイニング モデルを追加するためのオプションが示されます。 ただし、モデルをすぐに作成する必要はありません。 構造のみを作成する場合は、予測可能な属性として使用する列や、具体的なモデルにおけるデータの使用方法について、決定する必要がありません。 将来使用するために一般的なデータ構造のみを設定しておくと、後で [データ マイニング デザイナー](../../analysis-services/data-mining/data-mining-designer.md) を使用して、構造に基づく新しいマイニング モデルを追加できます。  
   
 > [!NOTE]  
->  DMX の CREATE MINING MODEL ステートメントは、マイニング モデルから始まります。 つまり、ユーザーがマイニング モデルを定義すると、基になる構造が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって自動的に生成されます。 後で ALTER STRUCTURE ... ADD MODEL ステートメントを使用すると、その構造に新しいマイニング モデルを引き続き追加できます。  
+>  DMX の CREATE MINING MODEL ステートメントは、マイニング モデルから始まります。 つまり、ユーザーがマイニング モデルを定義すると、基になる構造が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって自動的に生成されます。 後で ALTER STRUCTURE を使用して、その構造に新しいマイニング モデルを追加することができます.ADD MODEL ステートメントを使用すると、その構造に新しいマイニング モデルを引き続き追加できます。  
   
 ## <a name="choosing-an-algorithm"></a>アルゴリズムの選択  
  既存の構造に新しいモデルを追加する場合、最初にすることは、そのモデルで使用するデータ マイニング アルゴリズムの選択です。 各アルゴリズムは異なる種類の解析を実行し、異なる要件を持つため、アルゴリズムの選択は重要です。  
@@ -54,8 +54,8 @@ ms.locfileid: "34014439"
  一部の列に対しては、 *列のコンテンツ*も指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ マイニングでは、各データ列の Content Type プロパティによって、その列のデータの処理方法をアルゴリズムに指示します。 たとえば、Income 列がデータにある場合、コンテンツの種類を Continuous に設定することによって、連続する数値が列に含まれていることを示す必要があります。 一方、コンテンツの種類を Discretized に設定し、必要に応じて正確なバケット数を指定することによって、Income 列内の数値を複数のバケットにグループ化するよう指定することもできます。 列の処理方法が異なる複数のモデルを作成できます。たとえば、あるモデルでは顧客を 3 つの年齢層のバケットに分け、別のモデルでは顧客を 10 の年齢層のバケットに分けることができます。  
   
 ## <a name="see-also"></a>参照  
- [マイニング構造と #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [リレーショナル マイニング構造を作成します。](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
+ [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [リレーショナル マイニング構造の作成](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [マイニング モデルのプロパティ](../../analysis-services/data-mining/mining-model-properties.md)   
  [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)  
   

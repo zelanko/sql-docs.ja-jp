@@ -17,12 +17,12 @@ ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0eb14757ba0b327d478f287e425ad5124a239043
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7ea7b0f79dac89188599854c73279ee8d8c2f5c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187112"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390879"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、分類アルゴリズム、Bayes の定理に基づくし、によって提供される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]予測モデリングで使用します。 Naive Bayes (単純ベイズ) という名前の単純 (Naive) という部分は、このアルゴリズムで Bayes の技法が使用されているものの、存在する可能性のある依存関係が考慮されないことに由来しています。  
@@ -93,10 +93,10 @@ ms.locfileid: "48187112"
 -   OLAP マイニング モデルの使用がサポートされています。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [機能の選択&#40;データ マイニング&#41;](feature-selection-data-mining.md)   
- [Naive Bayes モデルのクエリ例](naive-bayes-model-query-examples.md)   
- [Naive Bayes モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [機能の選択 &#40;データ マイニング&#41;](feature-selection-data-mining.md)   
+ [「Naive Bayes モデルのクエリ例」](naive-bayes-model-query-examples.md)   
+ [Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Microsoft Naive Bayes アルゴリズム テクニカル リファレンス](microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

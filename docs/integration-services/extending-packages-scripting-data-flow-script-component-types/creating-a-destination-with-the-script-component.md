@@ -17,12 +17,12 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77bb9538c24be9fac285ab94b77d46ab85a29907
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 390f2734b36cfb956abd33ad2e5175ecd2320c34
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541945"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210831"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>スクリプト コンポーネントによる変換先の作成
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フロー内では、変換先コンポーネントを使用して、上流の変換元や変換から受け取ったデータをデータ ソースに保存します。 通常、変換先コンポーネントをデータ ソースに接続するには、既存の接続マネージャーを使用します。  
@@ -69,7 +69,7 @@ ms.locfileid: "52541945"
 ### <a name="adding-variables"></a>変数の追加  
  スクリプトで既存の変数を使用する場合は、**[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドに追加できます。  
   
- プロパティ フィールドに複数の変数を追加する場合は、各変数名をコンマで区切ります。 また、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドの横にある省略記号 (**[...]**) ボタンをクリックしてから、**[変数の選択]** ダイアログ ボックスで変数を選択することで、複数の変数を選択することもできます。  
+ プロパティ フィールドに複数の変数を追加する場合は、各変数名をコンマで区切ります。 また、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックしてから、**[変数の選択]** ダイアログ ボックスで変数を選択することで、複数の変数を選択することもできます。  
   
  スクリプト コンポーネントで変数を使用する方法に関する一般情報については、「[スクリプト コンポーネントでの変数の使用](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "52541945"
 ## <a name="examples"></a>使用例  
  次の例では、変換先コンポーネントを作成するために **ScriptMain** クラスで必要なコードを示します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  これらの例では、**AdventureWorks** サンプル データベースの **Person.Address** テーブルを使用して、その第 1 列および第 4 列、つまり、**int*AddressID*** 列および **nvarchar(30)City** 列をデータ フローにそのまま渡します。 このセクションの変換元、変換、および変換先の例でも、同じデータが使用されます。 他の前提条件および仮定条件については、それぞれの例で説明します。  
   
 ### <a name="adonet-destination-example"></a>ADO.NET 変換先の例  

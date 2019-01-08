@@ -17,12 +17,12 @@ ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195562"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395805"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>ニューラル ネットワーク構造およびモデルの作成 (中級者向けデータ マイニング チュートリアル)
   データ マイニング モデルを作成するには、まずデータ マイニング ウィザードを使用して、新しいデータ ソース ビューに基づく新しいマイニング構造を作成する必要があります。 ここでは、ウィザードを使用してマイニング構造を作成し、同時に、[!INCLUDE[msCoName](../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムに基づく関連マイニング モデルを作成します。  
@@ -78,7 +78,7 @@ ms.locfileid: "48195562"
     |Calls|入力|  
     |DateKey|使用しない|  
     |DayOfWeek|入力|  
-    |FactCallCenterID|Key|  
+    |FactCallCenterID|キー|  
     |IssuesRaised|入力|  
     |LevelOneOperators|[入力]/[予測]|  
     |LevelTwoOperators|入力|  
@@ -88,7 +88,7 @@ ms.locfileid: "48195562"
     |TotalOperators|使用しない|  
     |WageType|入力|  
   
-     予測可能列が複数選択されていることに注意してください。 ニューラル ネットワーク アルゴリズムには、入力属性と出力属性のあらゆる組み合わせを分析できるという利点があります。 データ セットが大きい場合は、処理時間が指数関数的に長くなる可能性があるため、この処理は適していません。  
+     予測可能列が複数選択されていることに注意してください。 ニューラル ネットワーク アルゴリズムには、入力属性と出力属性のあらゆる組み合わせを分析できるという利点があります。 処理時間を指数関数的に増える可能性がありますは、この大規模なデータ セットに対して行う必要はありません.  
   
 12. **指定列のコンテンツおよびデータ型** ページで、グリッドには、列、コンテンツの種類、および次の表に示すように、データ型が含まれていることを確認してをクリックし、**次**します。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48195562"
     |AverageTimePerIssue|Continuous|Long|  
     |Calls|Continuous|Long|  
     |DayOfWeek|Discrete|テキスト|  
-    |FactCallCenterID|Key|Long|  
+    |FactCallCenterID|キー|Long|  
     |IssuesRaised|Continuous|Long|  
     |LevelOneOperators|Continuous|Long|  
     |LevelTwoOperators|Continuous|Long|  
@@ -122,9 +122,9 @@ ms.locfileid: "48195562"
   
  ![サービス グレード値の分布](../../2014/tutorials/media/skt-service-grade-valuesc.gif "サービス グレード値の分布")  
   
- その結果、モデルを処理したときに、その出力が期待どおりにグループ化されないことがあります。 たとえば、値の最適なグループを識別するためにクラスタ リングを使用する場合、アルゴリズムの値で除算 ServiceGrade この 0.09716216215: 0.0748051948 - 0.09716216215 します。 この分類は数学的には正確ですが、このような範囲がビジネス ユーザーにとって有意なものではない場合もあります。  
+ その結果、モデルを処理したときに、その出力が期待どおりにグループ化されないことがあります。 たとえば、値の最適なグループを識別するためにクラスタ リングを使用する場合、アルゴリズムによってような範囲に ServiceGrade の値が分かれています。0.0748051948 - 0.09716216215 します。 この分類は数学的には正確ですが、このような範囲がビジネス ユーザーにとって有意なものではない場合もあります。  
   
- この手順では、結果をより直感的にわかりやすくするために、数値データ列のコピーを作成し、さまざまな方法で数値をグループ化します。  
+ この手順より直感的な結果をグループ化します数値異なる方法で数値データ列のコピーを作成します。  
   
 ### <a name="how-discretization-works"></a>分離のしくみ  
  Analysis Services には、数値データのビン分割や処理のためのさまざまな方法が用意されています。 次の表は、出力属性 ServiceGrade を次の 3 とおりの方法で処理した場合の結果の違いを示しています。  
@@ -283,7 +283,7 @@ ms.locfileid: "48195562"
     |AverageTimePerIssue|Predict|Predict|  
     |Calls|入力|入力|  
     |DayOfWeek|入力|入力|  
-    |FactCallCenterID|Key|Key|  
+    |FactCallCenterID|キー|キー|  
     |IssuesRaised|入力|入力|  
     |LevelOneOperators|入力|入力|  
     |LevelTwoOperators|入力|入力|  
@@ -321,6 +321,6 @@ ms.locfileid: "48195562"
  [コール センター モデルの検証&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [マイニング構造&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [マイニング構造 (Analysis Services - データ マイニング)](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

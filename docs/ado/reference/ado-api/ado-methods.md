@@ -14,12 +14,12 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb7cf0945eb15d0f741e5b5fcba6c6e28fbe4955
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660590"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530241"
 ---
 # <a name="ado-methods"></a>ADO メソッド
 |||  
@@ -27,7 +27,7 @@ ms.locfileid: "47660590"
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|更新可能なに対して新しいレコードを作成します。 **Recordset**オブジェクト。|  
 |[追加](../../../ado/reference/ado-api/append-method-ado.md)|コレクションにオブジェクトを追加します。 コレクションが場合**フィールド**、新しい**フィールド**それをコレクションに追加する前に、オブジェクトを作成することがあります。|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|大きなテキストまたはバイナリ データにデータを追加します。**フィールド**、または、**パラメーター**オブジェクト。|  
-|[BeginTrans、CommitTrans、および rollbacktrans の例](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|内のトランザクション処理の管理、**接続**オブジェクトの次のようにします。<br /><br /> **BeginTrans** -新しいトランザクションを開始します。<br /><br /> **CommitTrans** : 変更を保存し、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。<br /><br /> **RollbackTrans** -すべての変更をキャンセルし、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。|  
+|[BeginTrans、CommitTrans、および rollbacktrans の例](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|内のトランザクション処理の管理、**接続**オブジェクトの次のようにします。<br /><br /> **BeginTrans** -新しいトランザクションを開始します。<br /><br /> **CommitTrans** - 変更を保存し、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。<br /><br /> **RollbackTrans** - 変更内容をキャンセルし、現在のトランザクションを終了します。 新しいトランザクションを開始する場合もします。|  
 |[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)|実行をキャンセルする保留中、非同期メソッド呼び出し。|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|保留中のバッチ更新をキャンセルします。|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|現在のまたは新しい行に加えられた変更内容をキャンセル、**レコード セット**オブジェクト、または**フィールド**のコレクションを**レコード**オブジェクトを呼び出す前に、 **Update**メソッド。|  
@@ -85,7 +85,7 @@ ms.locfileid: "47660590"
  [ADO のコレクション](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO の列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [付録 b:ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO イベント](../../../ado/reference/ado-api/ado-events.md)   
  [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO オブジェクトとインターフェイス](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   

@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_runtime_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48e9993ecacc1365f961255b99c24eb7f456e0d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b53020f747b84c824ae8cd816c3b7ba1975df80b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710850"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712433"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   クエリのランタイム実行の統計情報についてを説明します。  
   
@@ -39,8 +39,8 @@ ms.locfileid: "47710850"
 |**runtime_stats_id**|**bigint**|ランタイム実行統計情報を表す行の識別子、 **plan_id**、 **execution_type**と**runtime_stats_interval_id**します。 過去の実行時統計の間隔でののみ一意です。 現在アクティブな間隔のある可能性があります複数の行によって参照されるプランのランタイム統計情報を表す**plan_id**、によって表される実行の種類と**execution_type**します。 通常、1 つの行を表しますフラッシュされたランタイム統計情報をディスクに、その他 (s) がメモリ内状態を表します。 そのため、すべての間隔の実際の状態を取得する必要がある集計メトリックでグループ化する**plan_id**、 **execution_type**と**runtime_stats_interval_id**します。 |  
 |**plan_id**|**bigint**|外部キーです。 結合[sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)します。|  
 |**runtime_stats_interval_id**|**bigint**|外部キーです。 結合[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)します。|  
-|**execution_type**|**tinyint**|クエリの実行の種類を決定します。<br /><br /> 0 ～ 通常の実行 (が正常に完了)<br /><br /> 3 – クライアントによって起動される実行を中止します。<br /><br /> 4-例外は、実行を中止します。|  
-|**execution_type_desc**|**nvarchar(128)**|実行の種類のフィールドの説明テキスト。<br /><br /> 0 – 標準<br /><br /> 3 – が中止されました<br /><br /> 4-例外|  
+|**execution_type**|**tinyint**|クエリの実行の種類を決定します。<br /><br /> 0 - 通常の実行 (が正常に完了)<br /><br /> 3-クライアントによる実行を中止<br /><br /> 4-例外は、実行を中止します。|  
+|**execution_type_desc**|**nvarchar(128)**|実行の種類のフィールドの説明テキスト。<br /><br /> 0 - 標準<br /><br /> 3-中止<br /><br /> 4-例外|  
 |**first_execution_time**|**datetimeoffset**|クエリの最初の実行時間は、集計間隔に含まれる予定です。|  
 |**last_execution_time**|**datetimeoffset**|クエリの最後の実行時間は、集計間隔に含まれる予定です。|  
 |**count_executions**|**bigint**|集計間隔内でクエリ プランの実行回数の合計数。|  

@@ -23,12 +23,12 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bf10f8ef0b748582aeef2e790207dcb287d3bdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01d506f8db09b8bc30b5587d6d98ecec793adab9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167288"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398875"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>配置タスクおよび管理タスクのスクリプト作成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、スクリプトを使用した日常的なインストール、配置、および管理タスクの自動化をサポートします。 レポート サーバーの配置は複数の段階を伴うプロセスです。 配置を構成するためには複数のツールとプロセスを使用する必要があります。すべての作業を自動化する単一のプログラムやアプローチは存在しません。  
@@ -70,7 +70,7 @@ ms.locfileid: "48167288"
   
 -   既存のコンテンツを再構築したり、レポート サーバーからレポート サーバーに移動したりするためのカスタム コードを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で作成し、レポート サーバーのスクリプト ホスト ツール (rs.exe) で実行できます。 このアプローチでは、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]でスクリプトを作成して .rss ファイルとして保存し、そのスクリプトを rs.exe を使用して、対象レポート サーバー上で実行します。 作成するスクリプトでは、レポート サーバー Web サービスに対する SOAP インターフェイスを呼び出すことができます。 配置スクリプトは、レポート サーバー フォルダーの名前空間および内容の再作成や、ロールベースのセキュリティの再作成を可能にするため、このアプローチで作成します。  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースでは、SharePoint 統合モード用の PowerShell コマンドレットが導入されました。 PowerShell を使用して、SharePoint 統合を構成および管理することができます。  詳細については、次を参照してください。 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)します。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースでは、SharePoint 統合モード用の PowerShell コマンドレットが導入されました。 PowerShell を使用して、SharePoint 統合を構成および管理することができます。  詳細については、「 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」をご覧ください。  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>スクリプトを使用したレポート サーバー コンテンツとフォルダーの移行  
  レポート サーバー環境を別のレポート サーバー インスタンスに複製するためのスクリプトを作成できます。 配置スクリプトは、一般的には [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で作成し、レポート サーバーのスクリプト ホスト ユーティリティで処理します。  
@@ -94,10 +94,10 @@ ms.locfileid: "48167288"
 > [!NOTE]  
 >  スクリプトは、資格情報を明示的に設定しない限り、スクリプトを実行しているユーザーの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 資格情報を使用して実行されます。  
   
- 書式を設定してスクリプト ファイルを実行する方法の詳細については、次を参照してください。[ユーティリティと Web サービスを、rs.exe とスクリプト](script-with-the-rs-exe-utility-and-the-web-service.md)します。  
+ スクリプト ファイルのフォーマットおよび実行方法の詳細については、「 [rs.exe ユーティリティと Web サービスを使用したスクリプト](script-with-the-rs-exe-utility-and-the-web-service.md)」を参照してください。  
   
 ## <a name="using-scripts-to-set-server-properties"></a>スクリプトを使用したサーバー プロパティの設定  
- レポート サーバーのシステム プロパティを設定するスクリプトを作成できます。 次の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET スクリプトは、プロパティを設定する 1 つの方法を示しています。 この例には、RSClientPrint ActiveX コントロールが無効にしますが、置き換えることができます`EnableClientPrinting`と`False`任意の有効なプロパティの名前と値を使用します。 サーバーのプロパティの完全な一覧を表示するのを参照してください。[レポート サーバーのシステム プロパティ](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)します。  
+ レポート サーバーのシステム プロパティを設定するスクリプトを作成できます。 次の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET スクリプトは、プロパティを設定する 1 つの方法を示しています。 この例では RSClientPrint ActiveX コントロールを無効にしていますが、`EnableClientPrinting` および `False` を有効なプロパティ名と値に置き換えることができます。 サーバーのプロパティの完全な一覧については、「 [レポート サーバーのシステム プロパティ](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)」を参照してください。  
   
  スクリプトを使用するには、.rss 拡張子を持つファイルにスクリプトを保存し、rs.exe コマンド プロンプト ユーティリティを使用してレポート サーバー上でファイルを実行します。 スクリプトはコンパイルされないので [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]のインストールは不要です。 この例では、レポート サーバーをホストするローカル コンピューターに対する権限を持っていることを前提としています。 権限があるアカウントでログオンしていない場合は、追加のコマンド ライン引数を使用してアカウント情報を指定する必要があります。 詳細については、「[RS.exe ユーティリティ (SSRS)](rs-exe-utility-ssrs.md)」を参照してください。  
   
@@ -109,7 +109,7 @@ Public Sub Main()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  
@@ -122,13 +122,13 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [GenerateDatabaseCreationScript メソッド&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
- [GenerateDatabaseRightsScript メソッド&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
- [GenerateDatabaseUpgradeScript メソッド&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
+ [GenerateDatabaseCreationScript メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
+ [GenerateDatabaseRightsScript メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
+ [GenerateDatabaseUpgradeScript メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
  [コマンド プロンプトから SQL Server 2014 をインストールします。](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [Reporting Services ネイティブ モード レポート サーバーをインストールします。](../install-windows/install-reporting-services-native-mode-report-server.md)   
+ [Reporting Services ネイティブ モードのレポート サーバーのインストール](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](../report-server/reporting-services-report-server-native-mode.md)   
- [レポート サーバーのコマンド プロンプト ユーティリティ&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [レポート サーバーのコマンド プロンプト ユーティリティ &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Reporting Services ツール](reporting-services-tools.md)  
   

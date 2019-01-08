@@ -14,17 +14,17 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd35a8bd0e2a9280d16614a3979dc2af05487e42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35f1ce877d6ed8a390bb6425a4d7f33a5d6947d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619610"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513990"
 ---
 # <a name="outer-joins"></a>外部結合
 ODBC は、sql-92 左、右、および完全外部結合の構文をサポートします。 外部結合のエスケープ シーケンスします。  
   
- **{oj** *外部-結合 * * *}**  
+ **{oj** _外部結合_**}**  
   
  場所*外部結合*は  
   
@@ -32,7 +32,7 @@ ODBC は、sql-92 左、右、および完全外部結合の構文をサポー�
   
  *テーブル参照*テーブル名を指定し、*検索条件*間の結合条件を指定します、*テーブル参照*。  
   
- 外部結合要求が後に表示する必要があります、 **FROM**キーワードとする前に、**場所**句 (存在する場合。 完全な構文については、次を参照してください。[外部結合エスケープ シーケンス](../../../odbc/reference/appendixes/outer-join-escape-sequence.md)付録 c: SQL の文法でします。  
+ 外部結合要求が後に表示する必要があります、 **FROM**キーワードとする前に、**場所**句 (存在する場合。 完全な構文については、次を参照してください[外部結合エスケープ シーケンス](../../../odbc/reference/appendixes/outer-join-escape-sequence.md)付録 c:。SQL 文法。  
   
  たとえば、次の SQL ステートメントは、すべての顧客の一覧に未処理注文が表示されるのと同じ結果セットを作成します。 最初のステートメントでは、エスケープ シーケンス構文を使用します。 2 番目のステートメントでは、Oracle のネイティブの構文を使用して、相互運用可能なではありません。  
   
