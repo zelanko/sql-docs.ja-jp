@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d1afb4913b758397d4d072859c3fb80879f2e46
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0999d5011df80bae97c767ac910b2a5fd810127c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643049"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211811"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>クエリ エディターによる SQLCMD スクリプトの編集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "51643049"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターは、環境変数をサポートしており、また SQLCMD スクリプトの一部として定義されている変数もサポートしています。ただし、組み込みの SQLCMD 変数や **osql** 変数はサポートしていません。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で処理される SQLCMD では、変数の大文字と小文字が区別されます。 たとえば、PRINT '$(COMPUTERNAME)' では正しい結果になりますが、PRINT '$(ComputerName)' ではエラーが返されます。  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、標準モードと SQLCMD モードの実行に [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient を使用します。 コマンド ラインから SQLCMD を実行する場合は、OLE DB プロバイダーを使用することになります。 同じクエリでも、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の SQLCMD モードで実行する場合と SQLCMD ユーティリティで実行する場合とでは、適用される既定のオプションが異なるので、動作も異なる可能性があります。  
   
 ## <a name="supported-sqlcmd-syntax"></a>サポートされている SQLCMD 構文  

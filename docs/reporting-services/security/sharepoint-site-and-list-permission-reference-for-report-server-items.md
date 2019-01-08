@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b164b167de39a8a465e19b1f751ab22c9295c6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a51a863a36562d7be1ef242ca9ad680e9149c73b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725950"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213051"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス
   ここでは、SharePoint 統合モードで動作するレポート サーバーに関して、レポート サーバー処理に対するアクセスの許可に使用できる、SharePoint の権限のリファレンス情報を提供します。 このトピックは、カスタム権限レベルを作成する場合に使用する権限を選択するのに役立ちます。  
@@ -37,7 +37,7 @@ ms.locfileid: "47725950"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード &#124; SharePoint 2010 と SharePoint 2013|  
+| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード &#124; SharePoint 2010 と SharePoint 2013|  
   
 ## <a name="list-permissions"></a>リスト権限  
  ユーザーがレポート サーバー アイテムにアクセスする方法は、それらのアイテムが格納されているライブラリに設定した権限によって決まります。  
@@ -68,7 +68,7 @@ ms.locfileid: "47725950"
 |権限の一覧|Web サイト、リスト、フォルダー、ドキュメント、またはリスト アイテムに対する権限を一覧表示します。|×|||すべてのレポート サーバー アイテムに対する権限を読み取ります。 モデル アイテム セキュリティ設定を含むレポート モデルが使用されているクリックスルー レポートを表示します。|  
 |警告の管理|Web サイトのすべてのユーザーに対して通知を管理します。|×|||サイトのサブスクリプションの作成、変更、および削除を行います。|  
 |リモート インターフェイスの使用|SOAP、Web DAV、または SharePoint デザイナー インターフェイスを使用して Web サイトにアクセスします。|×|×|×|レポート サーバーに対する URL プロキシ エンドポイントを呼び出すために使用します。|  
-|開く|Web サイト、リスト、またはフォルダーを開き、これらのコンテナー内のアイテムにアクセスします。|×|×|×|スケジュールおよびアイテム プロパティを読み取ります。|  
+|[ファイル]|Web サイト、リスト、またはフォルダーを開き、これらのコンテナー内のアイテムにアクセスします。|×|×|×|スケジュールおよびアイテム プロパティを読み取ります。|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Reporting Services と SharePoint グループの役割とタスクの比較とアクセス許可](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
