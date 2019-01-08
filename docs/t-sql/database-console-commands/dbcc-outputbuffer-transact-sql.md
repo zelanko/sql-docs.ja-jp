@@ -56,7 +56,7 @@ FROM sys.dm_exec_requests
 WHERE session_id = @@spid;  
 ```  
   
- のすべてのメンションを  
+ WITH  
  オプションの指定を許可します。  
   
  NO_INFOMSGS  

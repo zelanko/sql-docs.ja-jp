@@ -58,7 +58,7 @@ SELECT request_id
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
-のすべてのメンションを  
+WITH  
 オプションを指定可能にします。  
   
 NO_INFOMSGS  
