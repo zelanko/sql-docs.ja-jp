@@ -23,12 +23,12 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 761e0c000666fc413c060bf4f01ea24b307d3fbd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 413a9519cbfcb036c5e7242889c4eaf4ec89d413
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665401"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515393"
 ---
 # <a name="quantified-expressions-xquery"></a>量化式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51665401"
  XQuery では、次の形式の量化式がサポートされます。  
   
 ```  
-( some | every ) <variable> in <Expression> (,…) satisfies <Expression>  
+( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
  これらの式をクエリで使用して、存在量化または全称量化を明示的に式の 1 つ以上のシーケンスに適用できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、`satisfies` 句の式の結果が、ノード シーケンス、空のシーケンス、ブール値のいずれかになる必要があります。 この式の結果の有効なブール値が、量化に使用されます。 使用する存在量化**一部**真の結果を式では、量化子によりバインドされた値の少なくとも 1 つの場合は True を返します。 使用する全称**すべて**量化子によりバインドされたすべての値の True である必要があります。  

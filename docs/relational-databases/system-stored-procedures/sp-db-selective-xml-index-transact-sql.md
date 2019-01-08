@@ -18,12 +18,12 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07145e608c850a877a984c7467da6b8974f0d151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8978c40141d0cd6031b9569ab0daa945666e7e85
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744600"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415159"
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47744600"
  選択的 XML インデックスを有効または無効にするデータベースの名前。 場合*db_name*が null の場合、現在のデータベースが想定されます。  
   
  [  **@action =** ] **'***アクション***'**  
- インデックスを有効にするか無効にするかを決定します。 on、true、off、または false 以外の別の値を渡すと、エラーが発生します。  
+ インデックスを有効にするか無効にするかを決定します。 別の値を 'on'、'true'、'off' または 'false' が渡される点を除いて、エラーが生成されます。  
   
 ```  
   

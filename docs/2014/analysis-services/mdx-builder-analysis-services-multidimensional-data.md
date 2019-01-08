@@ -15,15 +15,15 @@ ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a023065ad0e2a72036fe5fbdebd72682ceb6546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3121646cbcfee823be71b575349b814fbf36c1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121473"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512491"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX ビルダー (Analysis Services - 多次元データ)
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[MDX ビルダー]** ダイアログ ボックスを使用すると、多次元式 (MDX) を作成できます。 **[MDX ビルダー]** ダイアログ ボックスを表示するには、 **ロール デザイナー** の **[セル データ]** ページで、 **[キューブ コンテンツの読み取りを許可する]** オプション、 **[セルのセキュリティでセル コンテンツの条件の読み取りを許可する]** オプション、または **[キューブ コンテンツの読み取りと書き込みを許可する]** オプションの **[MDX の編集]** の参照ボタン ( **[...]**) をクリックします。  
+  **または** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [MDX ビルダー] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、多次元式 (MDX) を作成できます。 表示することができます、 **MDX ビルダー** ] ダイアログ ボックスをクリックして、 **MDX の編集**省略記号ボタン (**.**) の**キューブ コンテンツの読み取りを許可する**オプション、**臨時セルのセキュリティでセル コンテンツの読み取りを許可する**オプション、または**読み取りを許可して[キューブ コンテンツの書き込みが**オプションを**セル データ**のページ**ロール デザイナー**します。  
   
 ## <a name="options"></a>および  
   

@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1eced8802504704506402d2ffb75609a096cb51a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40437cd27af345aff91314f07888c66e2bdff2d0
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689220"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321748"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,14 +66,13 @@ sp_addextendedproperty
  有効な値は、ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、PLAN GUIDE、および NULL です。  
   
 > [!IMPORTANT]  
->  レベル 1 の種類のオブジェクトの拡張プロパティで、USER をレベル 0 の種類として指定できる機能は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除されます。 代わりに、レベル 0 の種類として SCHEMA を使用してください。 たとえば、テーブルで拡張プロパティを定義するときに、ユーザー名の代わりにテーブルのスキーマを指定します。 レベル 0 の種類として TYPE を指定できる機能は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除されます。 TYPE については、レベル 0 の種類として SCHEMA、レベル 1 の種類として TYPE を使用してください。  
+>  レベル 1 の種類のオブジェクトの拡張プロパティで、USER をレベル 0 の種類として指定できる機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の将来のバージョンで削除されます。 代わりに、レベル 0 の種類として SCHEMA を使用してください。 たとえば、テーブルで拡張プロパティを定義するときに、ユーザー名の代わりにテーブルのスキーマを指定します。 レベル 0 の種類として TYPE を指定できる機能は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除されます。 TYPE については、レベル 0 の種類として SCHEMA、レベル 1 の種類として TYPE を使用してください。  
   
  [ @level0name=] {'*level0_object_name*'}  
  指定したレベル 0 のオブジェクトの種類の名前です。 *level0_object_name*は**sysname**既定値は NULL です。  
   
  [ @level1type=] {'*level1_object_type*'}  
- レベル 1 のオブジェクトの種類です。 *level1_object_type*は**varchar (128)**、既定値は NULL です。 有効な値は、AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION、および NULL です。  
-  
+ レベル 1 のオブジェクトの種類です。 *level1_object_type*は**varchar (128)**、既定値は NULL です。 有効な入力値は、集計、既定値、関数、論理ファイル名、プロシージャ、キュー、ルール、シーケンス、シノニム、テーブル、TABLE_TYPE、型、ビュー、XML スキーマ コレクション、および NULL です。    
  [ @level1name=] {'*level1_object_name*'}  
  指定したレベル 1 のオブジェクトの種類の名前です。 *level1_object_name*は**sysname**、既定値は NULL です。  
   
@@ -87,7 +86,7 @@ sp_addextendedproperty
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- 内のオブジェクトの拡張プロパティを指定するため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース 3 つのレベルに分類されます。 0、1、および 2 です。 レベル 0 は、データベース スコープに含まれる最上位レベルのオブジェクトとして定義されます。 レベル 1 のオブジェクトはスキーマ スコープまたはユーザー スコープに含まれ、レベル 2 のオブジェクトはレベル 1 のオブジェクトに含まれます。 これら、どのレベルのオブジェクトに対しても、拡張プロパティを定義できます。  
+ 内のオブジェクトの拡張プロパティを指定するため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース 3 つのレベルに分類されます。0、1、および 2 です。 レベル 0 は、データベース スコープに含まれる最上位レベルのオブジェクトとして定義されます。 レベル 1 のオブジェクトはスキーマ スコープまたはユーザー スコープに含まれ、レベル 2 のオブジェクトはレベル 1 のオブジェクトに含まれます。 これら、どのレベルのオブジェクトに対しても、拡張プロパティを定義できます。  
   
  1 つのレベルにあるオブジェクトを参照する場合は、そのオブジェクトを所有または格納する上位レベルのオブジェクトの名前で修飾する必要があります。 たとえば、拡張プロパティをテーブル列 (レベル 2) に追加する場合、その列を含むテーブル名 (レベル 1) とそのテーブルを含むスキーマ (レベル 0) も指定する必要があります。  
   

@@ -16,12 +16,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0dda9622ec6b5faa753310861557961ca54b4971
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06b97ac4bf58b933f55c4b53bfeacfbc9a736f28
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063162"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516216"
 ---
 # <a name="create-clustered-indexes"></a>クラスター化インデックスの作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルにクラスター化インデックスを作成できます。 クラスター化インデックスは、いくつかの例外を除くすべてのテーブルに必要です。 クラスター化インデックスは、クエリ パフォーマンスを向上するだけではなく、必要に応じて再構築または再構成してテーブルの断片化を制御することができます。 また、クラスター化インデックスをビューに作成することもできます。 (クラスター化インデックスの定義は「 [クラスター化インデックスと非クラスター化インデックスの概念](clustered-and-nonclustered-indexes-described.md)」にあります。)  
@@ -42,7 +42,7 @@ ms.locfileid: "48063162"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Implementations"></a> 一般的な実装  
  クラスター化インデックスは、次のように実装されます。  
@@ -80,11 +80,11 @@ ms.locfileid: "48063162"
   
 1.  オブジェクト エクスプローラーで、クラスター化インデックスを作成するテーブルを展開します。  
   
-2.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]** をポイントし、 **[クラスター化インデックス]** を選択します。  
+2.  **[インデックス]** フォルダーを右クリックし、**[新しいインデックス]** をポイントして、**[クラスター化インデックス...]** を選択します。  
   
 3.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
-4.  **[インデックス キー列]** で、 **[追加]** をクリックします。  
+4.  **[インデックス キー列]** で、**[追加]** をクリックします。  
   
 5.  *[<テーブル名> から列を選択]* ダイアログ ボックスで、クラスター化インデックスに追加するテーブル列のチェック ボックスをオンにします。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48063162"
   
 1.  オブジェクト エクスプローラーで、クラスター化インデックスを含むテーブルを作成するデータベースを展開します。  
   
-2.  **[テーブル]** フォルダーを右クリックし、 **[新しいテーブル]** をクリックします。  
+2.  **[テーブル]** フォルダーを右クリックし、**[新しいテーブル...]** をクリックします。  
   
 3.  通常どおりに新しいテーブルを作成します。 詳しくは、「[テーブルの作成 &#40;データベース エンジン&#41;](../tables/create-tables-database-engine.md)」を参照してください。  
   

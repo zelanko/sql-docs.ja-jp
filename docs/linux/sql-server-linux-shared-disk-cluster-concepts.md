@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 668bf72f2673b123ce5a238dbbf5cd7af43604d4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cabebb91ecb7d276066cb0f1c6a2f09c633d0ba0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676531"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420533"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの SQL Server on Linux
 
@@ -59,7 +59,7 @@ Linux の Pacemaker クラスターの各 SQL Server FCI には、独自の一�
 DNS の FCI の名前、Pacemaker クラスターで作成される FCI リソースの名前と同じことがあります。
 名前と IP アドレスを DNS に登録する必要があります。
 
-## <a name="shared-storage"></a>ストレージの共有
+## <a name="shared-storage"></a>共有記憶域
 Linux または Windows Server 上にあるかどうか、すべての Fci 共有記憶域のいくつかの形式が必要です。 このストレージは、FCI をホストできる可能性があるすべてのサーバーに表示されますが、1 台のサーバーは、特定の時点で、FCI の記憶域を使用することができます。 Linux での共有記憶域の使用可能なオプションがあります。
 
 - iSCSI

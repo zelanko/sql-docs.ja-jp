@@ -11,12 +11,12 @@ ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f3acf241fbc5737daff76c408159b17b27affe9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f49c20c8efe233bb49194364943f7ebb95ed6497
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220662"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415280"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>RDL サンドボックスの有効化と無効化
   RDL (レポート定義言語) サンドボックス機能を使用すると、複数のテナントが 1 つのレポート サーバー Web ファームを使用している環境で、個々のテナントによる特定の種類のリソースの使用を検出および制限できるようになります。 このような例として、複数のテナントまたは複数の企業によって使用される単一のレポート サーバー Web ファームを管理するホスティング サービスのシナリオがあります。 レポート サーバー管理者は、次の目的を達成するためにこの機能を有効にできます。  
@@ -35,10 +35,10 @@ ms.locfileid: "48220662"
   
 -   式での名前付きパラメーター。  
   
- このトピックで説明内の各要素の <`RDLSandboxing`> RSReportServer.Config ファイル内の要素。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、次を参照してください。 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)します。  
+ このトピックでは、RSReportServer.Config ファイルの <`RDLSandboxing`> 要素内の各要素について説明します。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)」を参照してください。  
   
 ## <a name="example-configuration"></a>構成例  
- 設定および値の次の例を示しています、<`RDLSandboxing`> RSReportServer.Config ファイル内の要素。  
+ RSReportServer.Config ファイルの <`RDLSandboxing`> 要素の設定および値の例を次に示します。  
   
 ```  
 <RDLSandboxing>  
@@ -47,8 +47,8 @@ ms.locfileid: "48220662"
    <MaxStringResultLength>3000</MaxStringResultLength>  
    <MaxArrayResultLength>250</MaxArrayResultLength>  
    <Types>  
-      <Allow Namespace=”System.Drawing” AllowNew=”True”>Bitmap</Allow>  
-      <Allow Namespace=”TypeConverters.Custom” AllowNew=”True”>*</Allow>  
+      <Allow Namespace="System.Drawing" AllowNew="True">Bitmap</Allow>  
+      <Allow Namespace="TypeConverters.Custom" AllowNew="True">*</Allow>  
    </Types>  
    <Members>  
       <Deny>Format</Deny>  
@@ -62,17 +62,17 @@ ms.locfileid: "48220662"
   
 |設定|説明|  
 |-------------|-----------------|  
-|**MaxExpressionLength**|RDL 式で許可される文字数の最大値です。<br /><br /> 既定値は 1000 です。|  
-|**MaxResourceSize**|外部リソースに許可されるサイズの最大値 (単位: KB) です。<br /><br /> 既定値: 100|  
-|**MaxStringResultLength**|RDL 式の戻り値で許可される文字数の最大値です。<br /><br /> 既定値は 1000 です。|  
-|**MaxArrayResultLength**|RDL 式の配列戻り値で許可されるアイテム数の最大値です。<br /><br /> 既定値: 100|  
+|**MaxExpressionLength**|RDL 式で許可される文字数の最大値です。<br /><br /> 既定値:1000|  
+|**MaxResourceSize**|外部リソースに許可されるサイズの最大値 (単位: KB) です。<br /><br /> 既定値:100|  
+|**MaxStringResultLength**|RDL 式の戻り値で許可される文字数の最大値です。<br /><br /> 既定値:1000|  
+|**MaxArrayResultLength**|RDL 式の配列戻り値で許可されるアイテム数の最大値です。<br /><br /> 既定値:100|  
 |**型**|RDL 式内で許可されるメンバーの一覧です。|  
 |**Allow**|RDL 式で許可される型または型のセットです。|  
 |**Namespace**|**Allow** の属性の 1 つであり、Value に適用される 1 つ以上の型を含む名前空間です。 このプロパティでは、大文字と小文字が区別されません。|  
-|`AllowNew`|**Allow** のブール属性であり、RDL 式内または RDL の **\<Class>** 要素内でその型の新しいインスタンスを作成できるかどうかを制御します。<br /><br /> 注: とき`RDLSandboxing`が有効の設定に関係なく、RDL 式に新しい配列を作成することはできません`AllowNew`します。|  
+|`AllowNew`|**Allow** のブール属性であり、RDL 式内または RDL の **\<Class>** 要素内でその型の新しいインスタンスを作成できるかどうかを制御します。<br /><br /> 注:ときに`RDLSandboxing`が有効の設定に関係なく、RDL 式に新しい配列を作成することはできません`AllowNew`します。|  
 |**[値]**|**Allow** に対する値であり、RDL 式で許可される型の名前を示します。 値が **\*** の場合は、名前空間内のすべての型が許可されることを意味します。 このプロパティでは、大文字と小文字が区別されません。|  
 |**メンバー**|**\<Types>** 要素に含まれる型の一覧に対する、RDL 式で許可されないメンバー名の一覧です。|  
-|**Deny**|RDL 式で許可されないメンバーの名前です。 このプロパティでは、大文字と小文字が区別されません。<br /><br /> 注: メンバーに対して **Deny** が指定されている場合、この名前を持つすべての型のメンバーがすべて許可されません。|  
+|**Deny**|RDL 式で許可されないメンバーの名前です。 このプロパティでは、大文字と小文字が区別されません。<br /><br /> 注:メンバーに対して **Deny** が指定されている場合、この名前を持つすべての型のメンバーがすべて許可されません。|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>RDL サンドボックスが有効なときの式の操作  
  式で使用されるリソースの管理を容易にするために、RDL サンドボックス機能を次のような方法で変更できます。  
@@ -119,7 +119,7 @@ ms.locfileid: "48220662"
   
 -   その新しいクラスを許可一覧に追加します。  
   
- 追加する[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]許可一覧に .NET Framework の関数は、許可一覧に Microsoft.VisualBasic 名前空間から対応する型を追加します。  
+ 許可一覧に [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework の関数を追加するには、Microsoft.VisualBasic 名前空間の対応する型を許可一覧に追加します。  
   
  許可一覧に [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework の型キーワードを追加するには、対応する CLR 型を許可一覧に追加します。 たとえば、使用するため、 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework のキーワード`Integer`には、次の XML フラグメントを追加、  **\<RDLSandboxing >** 要素。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48220662"
   
 -   そのプロキシ型を許可一覧に追加します。  
   
- カスタム アセンブリから許可一覧に型を追加しても、アセンブリに対して暗黙に実行権限が付与されることはありません。 コード アクセス セキュリティ ファイルを具体的に変更して、アセンブリに実行権限を提供する必要があります。 詳細については、「[Reporting Services のコード アクセス セキュリティ](extensions/secure-development/code-access-security-in-reporting-services.md)」を参照してください。  
+ カスタム アセンブリから許可一覧に型を追加しても、アセンブリに対して暗黙に実行権限が付与されることはありません。 コード アクセス セキュリティ ファイルを具体的に変更して、アセンブリに実行権限を提供する必要があります。 詳細については、「 [Reporting Services のコード アクセス セキュリティ](extensions/secure-development/code-access-security-in-reporting-services.md)」を参照してください。  
   
 #### <a name="maintaining-the-deny-list-of-members"></a>保守、\<拒否 > メンバーの一覧  
  許可一覧に新しい型を追加するときには、次に示す場合に、メンバーのブロック一覧の更新が必要となります。  
@@ -142,9 +142,9 @@ ms.locfileid: "48220662"
   
 -   許可一覧に含まれる型にメンバーを追加する場合。  
   
--   更新すると、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]レポート サーバーにします。  
+-   レポート サーバー上で [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] を更新する場合。  
   
--   レポート サーバーを [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の新しいバージョンにアップグレードする場合。  
+-   レポート サーバーを [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の新しいバージョンにアップグレードする場合。  
   
 -   RDL 型に新しいメンバーが追加された可能性があるため、新しい RDL スキーマを処理できるようにレポート サーバーを更新する場合  
   

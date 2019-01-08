@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 21f779f1e0b1764fd35d6399aa220e244574d576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145907"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545590"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft アソシエーション アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "50145907"
  マイニング モデルのパラメーターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーを使用していつでも変更できます。 プログラムでを使用してもパラメーターを変更することができます、 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> AMO、またはを使用して、コレクション、 [MiningModels 要素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA でします。 次の表では、各パラメーターについて説明します。  
   
 > [!NOTE]  
->  DMX ステートメントを使用して既存のモデルのパラメーターを変更することはできません。パラメーターは、モデルを作成するときに DMX CREATE MODEL または ALTER STRUCTURE… ADD MODEL で指定する必要があります。  
+>  DMX ステートメントでは; を使用して、既存のモデル内のパラメーターを変更することはできません。DMX CREATE MODEL または ALTER STRUCTURE では、パラメーターを指定する必要があります.ADD MODEL で指定する必要があります。  
   
  *MAXIMUM_ITEMSET_COUNT*  
  生成されるアイテムセットの最大数を指定します。 数が指定されていない場合は、既定値が使用されます。  
@@ -133,11 +133,11 @@ ms.locfileid: "50145907"
  マイニング構造列に適用されます。  
   
  MODEL_EXISTENCE_ONLY  
- 列が、 **Missing** および **Existing**の 2 つの可能な状態を持つ列として扱われることを示します。 NULL は Missing 値になります。  
+ 列が、次の 2 つの可能な状態を持つ列として扱われることを示します。**不足している**と**既存**します。 NULL は Missing 値になります。  
   
  マイニング モデル列に適用されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  アソシエーション モデルには、キー列、入力列、および 1 つの予測可能列が必要です。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  

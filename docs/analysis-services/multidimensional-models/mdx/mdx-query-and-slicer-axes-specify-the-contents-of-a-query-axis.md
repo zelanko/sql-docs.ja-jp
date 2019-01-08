@@ -1,5 +1,5 @@
 ---
-title: クエリ軸 (MDX) の内容を指定する |Microsoft ドキュメント
+title: クエリ軸 (MDX) の内容の指定 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bceafa9fb8ddd89162deca105404c317001a86bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 38a48fd99ae9a03599914a1dfdac0bf204301c4c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026809"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399575"
 ---
-# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>MDX クエリ軸とスライサー軸、クエリ軸の内容を指定します。
+# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>MDX クエリ軸とスライサー軸 - クエリ軸のコンテンツを指定する
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   クエリ軸は、多次元式 (MDX) の SELECT ステートメントから返されるセル セットの範囲を指定します。 セル セットの範囲を指定することで、返されるデータのうち、クライアントで表示するデータを限定できます。  
   
@@ -68,7 +68,7 @@ FROM [Adventure Works]
   
 ```  
   
- セットの定義の前に NON EMPTY キーワードを使用すると、軸からすべての空の組を簡単に削除できます。 たとえば、これまでの例では、キューブ内に 2004 年 8 月以降のデータがありませんでした。 どの列にもデータがないすべての行をセルセットから削除するには、ROWS 軸のセットの定義の前に、以下のように NON EMPTY を追加します。  
+ セットの定義の前に NON EMPTY キーワードを使用すると、軸からすべての空の組を簡単に削除できます。 たとえば、これまでに見たの例ではありませんデータ キューブから 2004 年 8 月の以降です。 どの列にもデータがないすべての行をセルセットから削除するには、ROWS 軸のセットの定義の前に、以下のように NON EMPTY を追加します。  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -112,6 +112,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [スライサー軸 & #40; の内容の指定MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [スライサー軸の内容の指定 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

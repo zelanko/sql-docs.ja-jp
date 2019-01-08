@@ -14,12 +14,12 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d5eadf38bcdb7573cf19941535182e2cc8f87f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fc706cd372f4bee0c9449b15de6d070240141bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111502"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414789"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>標準サブスクリプションを作成、変更、および削除する (ネイティブ モードの Reporting Services)
   標準のサブスクリプションは、電子メールまたは共有フォルダーを使用してレポートを配信する個々のユーザーによって作成されるサブスクリプションです。 標準のサブスクリプションは常に基になるレポートから定義されます。  
@@ -27,7 +27,7 @@ ms.locfileid: "48111502"
  サブスクリプションを作成するユーザーが、そのサブスクリプションを所有します。 各ユーザーは、自分が所有するサブスクリプションを変更または削除できます。  
   
 > [!NOTE]  
->  以降で[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]プログラムでサブスクリプションの所有権を転送することができます。 サブスクリプションの所有権の転送に使用できるユーザー インターフェイスはありません。 詳細については、次を参照してください。 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降では、サブスクリプションの所有権をプログラムによって転送できます。 サブスクリプションの所有権の転送に使用できるユーザー インターフェイスはありません。 詳細については、次を参照してください。 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  に応じて**RSReportServer.config**構成ファイルの設定、ユーザーがサブスクリプションにユーザーを追加することがあります (たとえば、マネージャーは自分の電子メール アドレスを追加しますまたは、直接レポートのコピーを受信した各している、レポートの場合)。 これがサポートされているかどうかは、個々のサブスクリプションを定義する際に、[宛先] フィールドが表示されるかどうかで決まります。 詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)します。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48111502"
   
 -   ファイル共有配信を使用するには、対象フォルダーを定義しておく必要があります。 詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)します。  
   
- レポートをサブスクライブするには、保存された資格情報を使用するか、資格情報を使用しないように、レポートのデータ ソースを構成しておく必要があります。 詳細については、次を参照してください。 [Reporting Services データ ソースに資格情報を保存](../report-data/store-credentials-in-a-reporting-services-data-source.md)します。 レポートのデータ ソースをそのように構成しない場合は、 **[新しいサブスクリプション]** ボタンが使用できない状態になります。  
+ レポートをサブスクライブするには、保存された資格情報を使用するか、資格情報を使用しないように、レポートのデータ ソースを構成しておく必要があります。 詳細については、「 [Reporting Services データ ソースに資格情報を保存する](../report-data/store-credentials-in-a-reporting-services-data-source.md)」を参照してください。 レポートのデータ ソースをそのように構成しない場合は、 **[新しいサブスクリプション]** ボタンが使用できない状態になります。  
   
  ここでは、データ ドリブン サブスクリプションを作成する方法については説明しません。 データ ドリブン サブスクリプションを作成する方法の詳細については、「[データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)](../create-a-data-driven-subscription-ssrs-tutorial.md)」を参照するか、オンライン ヘルプで、レポート マネージャーの [データ ドリブン サブスクリプションの作成] ページに関する説明を参照してください。  
   
@@ -173,10 +173,10 @@ ms.locfileid: "48111502"
   
 ## <a name="see-also"></a>参照  
  [タスクと権限](../security/tasks-and-permissions.md)   
- [SharePoint モードのレポート サーバーのサブスクリプション作成し、管理](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [サブスクリプションがネイティブ モード レポート サーバーの作成し、管理](../create-manage-subscriptions-native-mode-report-servers.md)   
- [データ ドリブン サブスクリプション](data-driven-subscriptions.md)   
- [サブスクリプションと配信&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
  [個人用サブスクリプションを使用する](use-my-subscriptions-native-mode-report-server.md)  
   

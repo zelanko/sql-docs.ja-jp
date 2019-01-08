@@ -1,5 +1,5 @@
 ---
-title: Microsoft シーケンス クラスタ リング アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+title: Microsoft シーケンス クラスター アルゴリズム テクニカル リファレンス |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cf5f652cc2cec77fdbcb488710886441788a0631
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016469"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418383"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft シーケンス クラスタリング アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "34016469"
  CLUSTER_COUNT  
  アルゴリズムによって作成されるクラスターの概数を指定します。 その数のクラスターをデータから作成できない場合は、可能な限り多数のクラスターが作成されます。 CLUSTER_COUNT パラメーターを 0 に設定すると、アルゴリズムではヒューリスティックを使用して、作成するクラスターの数が最適に決定されます。  
   
- 既定値は、10 です。  
+ 既定値は 10 です。  
   
 > [!NOTE]  
 >  0 以外の数値を指定すると、アルゴリズムへのヒントとして機能します。アルゴリズムでは指定の数を取得することを目標に処理が進められますが、指定の数以外になる場合もあります。  
@@ -83,7 +83,7 @@ ms.locfileid: "34016469"
  MINIMUM_SUPPORT  
  クラスターの作成に必要とされる、属性をサポートするケースの最小数を指定します。  
   
- 既定値は、10 です。  
+ 既定値は 10 です。  
   
  MAXIMUM_SEQUENCE_STATES  
  シーケンスの状態の最大数を指定します。  
@@ -93,7 +93,7 @@ ms.locfileid: "34016469"
  既定値は、64 です。  
   
  MAXIMUM_STATES  
- アルゴリズムによってサポートされる非シーケンス属性用の状態の最大数を指定します。 非シーケンス属性の状態の数が状態の最大数よりも大きい場合、アルゴリズムでは属性の最も一般的な状態が使用され、残りの状態は **Missing**として処理されます。  
+ アルゴリズムによってサポートされる非シーケンス属性用の状態の最大数を指定します。 アルゴリズムが、属性の最も一般的な状態を使用し、残りの状態として扱われます非シーケンス属性の状態の数が状態の最大数よりも大きい場合は、 **Missing**します。  
   
  既定値は、100 です。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34016469"
  マイニング構造列に適用されます。  
   
  MODEL_EXISTENCE_ONLY  
- 列が、 **Missing** および **Existing**の 2 つの可能な状態を持つ列として扱われることを示します。 NULL は **Missing** 値として扱われます。  
+ 列が、次の 2 つの可能な状態を持つ列として扱われることを示します。**不足している**と**既存**します。 NULL は **Missing** 値として扱われます。  
   
  マイニング モデル列に適用されます。  
   
@@ -123,22 +123,22 @@ ms.locfileid: "34016469"
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 (データ マイニング)](../../analysis-services/data-mining/content-types-data-mining.md)」を参照してください。  
   
-|列|コンテンツの種類|  
+|[列]|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Table、Ordered|  
 |予測可能な属性|Continuous、Cyclical、Discrete、Discretized、Table、Ordered|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
--   シーケンスの予測には [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md) 関数を使用します。 各エディションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]シーケンスの予測をサポートするを参照してください[SQL Server 2012 の各エディションでサポートされる機能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)です。  
+-   シーケンスの予測には [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md) 関数を使用します。 各エディションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]シーケンス予測をサポートするを参照してください[機能は、SQL Server 2012 の各エディションでサポートされている](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)します。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムでは、Predictive Model Markup Language (PMML) を使用したマイニング モデルの作成はサポートされていません。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムでは、ドリルスルー、OLAP マイニング モデルの使用、およびデータ マイニング ディメンションの使用がサポートされています。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft シーケンス クラスタ リング アルゴリズム](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [シーケンス クラスター モデルのクエリ例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [シーケンス クラスター モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

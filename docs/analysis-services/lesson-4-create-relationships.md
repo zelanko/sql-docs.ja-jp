@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 4: リレーションシップの作成 |Microsoft Docs'
+title: レッスン 4:[リレーションシップの作成] | Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbddc0966729b93b2e9ac202966dff645c28c32c
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792032"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411299"
 ---
-# <a name="lesson-4-create-relationships"></a>レッスン 4: リレーションシップを作成します。
+# <a name="lesson-4-create-relationships"></a>レッスン 4:[リレーションシップの作成]
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このレッスンでは、データをインポートした際に自動的に作成されたリレーションシップを確認し、異なるテーブル間に新しいリレーションシップを追加します。 リレーションシップとは、2 つのテーブル間を接続し、それらのテーブル内のデータをどのように関連付けるかを決定するものです。 たとえば、DimProduct テーブルと DimProductSubcategory テーブルには、各製品が特定のサブカテゴリに属しているということに基づくリレーションシップがあります。 詳細についてを参照してください。[リレーションシップ](../analysis-services/tabular-models/relationships-ssas-tabular.md)します。
   
-このレッスンの推定所要時間: **10 分**  
+このレッスンを完了するまでに時間を推定するには。**10 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
-このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 3: 日付テーブルとしてマーク](../analysis-services/lesson-3-mark-as-date-table.md)します。 
+## <a name="prerequisites"></a>前提条件  
+このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 3:日付テーブルとしてマーク](../analysis-services/lesson-3-mark-as-date-table.md)します。 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>既存のリレーションシップの確認と新しいリレーションシップの追加  
 データをインポートするには、テーブルのインポート ウィザードを使用して、AdventureWorksDW データベースから 7 つのテーブルがあります。 一般に、リレーショナル ソースからデータをインポートするときに既存のリレーションシップがデータと共に自動的にインポートします。 ただし、モデルの作成を進める前に、それらのテーブル間リレーションシップが適切に作成されたかどうかを確認する必要があります。 またこのチュートリアルでは、3 つの新しいリレーションシップの追加も行います。  
@@ -41,7 +41,7 @@ ms.locfileid: "42792032"
   
 2.  間の実線をクリックして、 **DimCustomer**テーブルおよび**DimGeography**テーブル。 これら 2 つのテーブル間の実線は、そのリレーションシップがアクティブであることを示します。つまり、そのリレーションシップは DAX 数式の計算時に既定で使用されます。  
   
-    通知、 **GeographyKey**内の列、 **DimCustomer**テーブルおよび**GeographyKey**内の列、 **DimGeography**テーブル両方のようになりましたボックス内に表示されます。 このショーでは、これらは、リレーションシップで使用される列。 リレーションシップのプロパティが、**[プロパティ]** ウィンドウに表示されます。  
+    通知、 **GeographyKey**内の列、 **DimCustomer**テーブルおよび**GeographyKey**内の列、 **DimGeography**テーブル両方のようになりましたボックス内に表示されます。 このショーでは、これらは、リレーションシップで使用される列。 リレーションシップのプロパティに表示されます、**プロパティ**ウィンドウ。  
   
     > [!TIP]  
     > だけでなく、モデル デザイナーを使用して、ダイアグラム ビューで、テーブル形式ですべてのテーブル間のリレーションシップを表示するのにリレーションシップの管理 ダイアログ ボックスを使用することもできます。 右クリック**リレーションシップ**クリックして、表形式モデル エクスプ ローラーで**リレーションシップの管理**します。 リレーションシップの管理 ダイアログ ボックスでは、データのインポート時に自動的に作成されたリレーションシップを表示します。  
@@ -56,7 +56,7 @@ ms.locfileid: "42792032"
     |はい|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
     |はい|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
-    上記のテーブル内のリレーションシップのいずれかが存在しない場合は、次のテーブルがモデルに含まれることを確認します。 DimCustomer、DimDate、DimGeography、DimProduct、DimProductCategory、DimProductSubcategory、FactInternetSales とします。 同じデータ ソース接続からのテーブルが複数回インポートされた場合、それらのテーブル間のリレーションシップは作成されず、手動で作成する必要があります。  
+    上記のテーブル内のリレーションシップのいずれかが存在しない場合は、モデルには、次の表が含まれることを確認します。DimCustomer、DimDate、DimGeography、DimProduct、DimProductCategory、DimProductSubcategory、および FactInternetSales します。 同じデータ ソース接続からのテーブルが複数回インポートされた場合、それらのテーブル間のリレーションシップは作成されず、手動で作成する必要があります。  
 
 ### <a name="take-a-closer-look"></a>詳しく見てください。
 ダイアグラム ビューでは、矢印、アスタリスク、およびテーブル間のリレーションシップを表示する行の数がわかります。
@@ -91,7 +91,7 @@ ms.locfileid: "42792032"
      ![として-テーブル-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>次の操作
-次のレッスンに移動:[レッスン 5: 計算列の作成](../analysis-services/lesson-5-create-calculated-columns.md)です。
+次のレッスンに移動します。[レッスン 5:計算列を作成](../analysis-services/lesson-5-create-calculated-columns.md)です。
   
   
   

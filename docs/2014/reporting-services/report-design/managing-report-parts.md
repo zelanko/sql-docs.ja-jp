@@ -11,12 +11,12 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5f6d37f88044d9888c82b5770ea1bca366423459
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea7896e5f7c394539793ca65496824691275963d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123254"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393755"
 ---
 # <a name="managing-report-parts"></a>レポート パーツの管理
   以降で[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、レポート パーツをレポート サーバーにパブリッシュおよび適切なアクセス許可がある場合に、その他のレポートおよび他のユーザーを再利用できます。  
@@ -95,7 +95,7 @@ ms.locfileid: "48123254"
  [レポート ビルダーのレポート パーツおよびデータセット](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [[全般] プロパティ ページ、レポート パーツ&#40;レポート マネージャー&#41;](../general-properties-page-report-parts-report-manager.md)   
  [[アイテム] ページの移動&#40;レポート マネージャー&#41;](../move-items-page-report-manager.md)   
- [レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [レポート パーツのトラブルシューティング&#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [レポート デザイナーでのレポート パーツ &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   

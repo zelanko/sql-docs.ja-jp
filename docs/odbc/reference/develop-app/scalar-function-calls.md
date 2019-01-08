@@ -13,19 +13,19 @@ ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54615676558165e4044e99bf9452ce8e8a333170
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e02a217579e70a3b7461037750a919efec14458
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704300"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515475"
 ---
 # <a name="scalar-function-calls"></a>スカラー関数の呼び出し
 スカラー関数は、各行の値を返します。 たとえば、絶対値のスカラー関数は数値の列を引数として受け取りと、列の各値の絶対値を返します。 スカラー関数を呼び出すためのエスケープ シーケンスは、します。  
   
  **{fn** *スカラー関数* **}**  
   
- 場所*スカラー関数*に示す関数の 1 つ[付録 e: スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)します。 スカラー関数のエスケープ シーケンスの詳細については、次を参照してください。[スカラー関数エスケープ シーケンス](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)付録 c: SQL の文法でします。  
+ 場所*スカラー関数*に示す関数の 1 つ[付録 e:スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)します。 スカラー関数のエスケープ シーケンスの詳細については、次を参照してください[スカラー関数エスケープ シーケンス](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)付録 c:。SQL 文法。  
   
  たとえば、次の SQL ステートメントは、名前、同じ結果セットの大文字の顧客の作成します。 最初のステートメントでは、エスケープ シーケンス構文を使用します。 2 番目のステートメントでは、OS/2 の Ingres のネイティブの構文を使用して、相互運用可能なではありません。  
   
@@ -38,14 +38,14 @@ SELECT uppercase(Name) FROM Customers
  アプリケーションは、ネイティブの構文を使用するスカラー関数の呼び出しと ODBC 構文を使用するスカラー関数の呼び出しに混在させることができます。 たとえば、姓、コンマ、および最初の名前として、従業員テーブル内の名前が格納されていることを想定しています。 次の SQL ステートメントでは、Employee テーブルに従業員の姓の結果セットを作成します。 ステートメントは、ODBC スカラー関数を使用して**部分文字列**と SQL Server のスカラー関数**CHARINDEX**と SQL Server でのみ正しく実行されます。  
   
 ```  
-SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers  
+SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers  
 ```  
   
  相互運用性を最大に、アプリケーションを使用する必要があります、**変換**スカラー関数、スカラー関数の出力が必要な型であることを確認します。 **変換**関数は、1 つの SQL データ型のデータを指定した SQL データ型に変換します。 構文、**変換**関数  
   
- **変換 (** *value_exp* **、** *data_type * * *)**  
+ **変換 (** *value_exp* **、** _data_type_**)**  
   
- 場所*value_exp*列名、もう 1 つのスカラー関数、または、リテラル値の結果と*data_type*と一致するキーワード、 **#define**によって使用される名前、定義されている、SQL データ型識別子[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。 たとえば、次の SQL ステートメントを使用して、**変換**ことを確認する関数の出力、 **CURDATE**関数は、タイムスタンプ列または文字データではなく、日付。  
+ 場所*value_exp*列名、もう 1 つのスカラー関数、または、リテラル値の結果と*data_type*と一致するキーワード、 **#define**によって使用される名前、定義されている、SQL データ型識別子[付録 d:データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。 たとえば、次の SQL ステートメントを使用して、**変換**ことを確認する関数の出力、 **CURDATE**関数は、タイムスタンプ列または文字データではなく、日付。  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  

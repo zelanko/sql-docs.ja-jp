@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a9d7d8e73dc61afc90485c0d5cd36b3bb009fda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b16deb7ed2bd43cc45966d27b79729897e76405c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658950"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532358"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>sys.external_file_formats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47658950"
 |field_terminator|**nvarchar(10)**|Format_type = DELIMITEDTEXT、フィールド ターミネータです。||  
 |string_delimiter|**nvarchar(10)**|Format_type = DELIMITEDTEXT、これは、文字列の区切り記号です。||  
 |date_format|**nvarchar (50)**|Format_type = DELIMITEDTEXT、これは、ユーザー定義の日付と時刻の形式です。||  
-|use_type_default|**bit**|Format_type = 区切りのテキスト、PolyBase にテキスト ファイルを HDFS からデータをインポートするときに、欠損値を処理する方法を指定します[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。|0 ～ は、文字列の 'NULL' として、不足値を格納します。<br /><br /> 1 – 列の既定値として、不足値を格納します。|  
+|use_type_default|**bit**|Format_type = 区切りのテキスト、PolyBase にテキスト ファイルを HDFS からデータをインポートするときに、欠損値を処理する方法を指定します[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。|0 - は、文字列の 'NULL' として、不足値を格納します。<br /><br /> 1 - 列の既定値として、不足値を格納します。|  
 |serde_method|**nvarchar (255)**|Format_type = RCFILE、これは、シリアル化/逆シリアル化メソッドです。||  
 |row_terminator|**nvarchar(10)**|Format_type = DELIMITEDTEXT、これは、外部の Hadoop ファイル内の各行の終了文字を指定します。|常に ' \n' です。|  
 |エンコーディング|**nvarchar(10)**|Format_type = DELIMITEDTEXT、これは、外部の Hadoop ファイルのエンコード方法です。|常に ' UTF8' とします。|  

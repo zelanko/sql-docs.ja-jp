@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f55c922c1424235203505a6ba17bbec56972c9f7
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 52ede16185515c3df00ff21ece784d62eec984ef
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400815"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396517"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>並列データ ウェアハウス (PDW) で、ステージング データベースを使用します。
 SQL Server 並列データ ウェアハウス (PDW) では、ステージング データベースを使用して、読み込みプロセス中に一時的にデータを格納します。 既定では、SQL Server PDW は、テーブルの断片化が発生することができます、ステージング データベースと転送先データベースを使用します。 テーブルの断片化を減らすためには、ユーザー定義のステージング データベースを作成することができます。 または、読み込みエラーからのロールバックが問題ではないときに、一時テーブルをスキップして、変換先テーブルに直接読み込むパフォーマンスを向上させるために、fastappend 読み込みモードを使用することができます。  
@@ -38,7 +38,7 @@ A*ステージング データベース*はアプライアンスへの読み込�
   
 -   行ストア クラスター化インデックスに読み込まれ、ステージング テーブルは行ストア クラスター化インデックスです。  
   
-## <a name="Permissions"></a>Permissions  
+## <a name="Permissions"></a>アクセス許可  
 ステージング データベース (一時テーブルの作成) に対する作成アクセス許可が必要です。 
 
 <!-- MISSING LINKS

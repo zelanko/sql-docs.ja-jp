@@ -15,20 +15,20 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84c24494797a96670fc6abd5e8fd6fd409b0a705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a951590c1284f39cb2dfea1f9e97c05a04a3e7ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226272"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520372"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 におけるデータベース エンジン機能の動作の変更
   このトピックでは、[!INCLUDE[ssDE](../includes/ssde-md.md)]の動作変更について説明します。 動作変更によって、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の機能や操作方法が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の以前のバージョンと異なっています。  
   
-## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>動作の変更 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] での動作変更  
  以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、特定の長さ (4020 文字) を超える文字列を含む XML ドキュメントに対してクエリを実行すると、返される結果が正しくない場合があります。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] では、このようなクエリから正しい結果が返されます。  
   
-## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>動作の変更 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] での動作変更  
   
 ### <a name="metadata-discovery"></a>メタデータの検出  
  機能強化、[!INCLUDE[ssDE](../includes/ssde-md.md)]以降[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以前のバージョンの SQLDescribeCol によって返されるよりも、期待される結果のより正確な記述を取得する SQLDescribeCol を許可する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。[メタデータ検出](../relational-databases/native-client/features/metadata-discovery.md)します。  
@@ -99,7 +99,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>XML モードでの sqlcmd.exe の動作変更  
- SELECT * from T FOR XML … の実行時に XML モード (:XML ON コマンド) で sqlcmd.exe を使用する場合の動作が変更されています。  
+ XML モードで sqlcmd.exe を使用する場合の動作の変更がある (::XML ON コマンド) SELECT を実行するときに * from T FOR XML.  
   
 ### <a name="dbcc-checkident-revised-message"></a>DBCC CHECKIDENT のメッセージの変更  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]、DBCC CHECKIDENT コマンドによって返されるメッセージの再シード処理とその使用は場合にのみが変更された*new_reseed_value*を現在の id 値を変更します。 新しいメッセージが"id 情報を調べて: 現在の id 値 '\<現在の id 値 >'。 DBCC の実行が完了しました。 DBCC がエラー メッセージを出力した場合は、システム管理者に相談してください。"  
@@ -107,7 +107,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  以前のバージョンでは、メッセージは"id 情報を調べて: 現在の id 値 '\<現在の id 値 >'、列の現在の値'\<現在の列値 >'。 DBCC の実行が完了しました。 DBCC がエラー メッセージを出力した場合は、システム管理者に相談してください。" このメッセージは、DBCC CHECKIDENT で NORESEED が指定されている場合、2 番目のパラメーターが指定されていない場合、または reseed 値が指定されていない場合に関しては変更されていません。 詳細については、「[DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)」をご覧ください。  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>XML データ型に対する exist() 関数の動作の変更  
- 動作、 **exist()** 0 (ゼロ) に null 値を持つ XML データ型を比較するときに、関数が変更されました。 次の例を参照してください。  
+ 動作、 **exist()** 0 (ゼロ) に null 値を持つ XML データ型を比較するときに、関数が変更されました。 次に例を示します。  
   
 ```xml  
 DECLARE @test XML;  

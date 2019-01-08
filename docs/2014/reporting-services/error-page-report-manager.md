@@ -11,21 +11,21 @@ ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 28366043f6681ab01cd3d1912d5180ae06914ae8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19d1fdd45018e436dddab95cfe01173ec63f794d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157652"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511670"
 ---
 # <a name="error-page-report-manager"></a>[エラー] ページ (レポート マネージャー)
-  [エラー] ページには、エラーの状況に関する詳細情報が表示されます。 このページには、サーバーベースまたはセッションベースのエラーが表示されます。 特定のページ コントロールに関連する検証エラーは、コントロールの横にインラインで表示されます。  
+  [エラー] ページには、エラーの状況に関する詳細情報が表示されます。 このページで、サーバー ベースまたはセッション ベースのエラーが表示されます。 特定のページ コントロールに関連する検証エラーは、コントロールの横にインラインで表示されます。  
   
--   ローカル レポート サーバーを閲覧している、次のようなエラーが発生する場合を参照してください:[ローカル管理用のネイティブ モード レポート サーバーの構成&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+-   参照する場合は、ローカル レポート サーバーに、次のようなエラーを参照してください。 参照してください。[ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   
      ユーザー ' Domain\\[ユーザー名]' は必要な権限がありません。 適切なアクセス許可が付与されていることと、Windows ユーザー アカウント制御 (UAC) の制限に対処済みであることを確認してください。  
   
--   次のようなエラー メッセージを表示する場合は、次を参照してください。[リモート管理のレポート サーバーの構成](report-server/configure-a-report-server-for-remote-administration.md)します。  
+-   次のようなエラー メッセージが表示された場合は、「 [Configure a Report Server for Remote Administration](report-server/configure-a-report-server-for-remote-administration.md)」を参照してください。  
   
      コンピューターが見つかりませんでした。 "RPC サーバーを利用できません。 (HRESULT からの例外: 0x800706BA)"。  
   

@@ -14,12 +14,12 @@ ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f3e44d2891d9080b361d07d0bdcacfd0ad2ec39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05555f9f3b90cbf0eaae410a2b97dc31a0ed17d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209772"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393096"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>クエリ軸の内容の指定 (MDX)
   クエリ軸は、多次元式 (MDX) の SELECT ステートメントから返されるセル セットの範囲を指定します。 セル セットの範囲を指定することで、返されるデータのうち、クライアントで表示するデータを限定できます。  
@@ -72,7 +72,7 @@ FROM [Adventure Works]
   
 ```  
   
- セットの定義の前に NON EMPTY キーワードを使用すると、軸からすべての空の組を簡単に削除できます。 たとえば、これまでの例では、キューブ内に 2004 年 8 月以降のデータがありませんでした。 どの列にもデータがないすべての行をセルセットから削除するには、ROWS 軸のセットの定義の前に、以下のように NON EMPTY を追加します。  
+ セットの定義の前に NON EMPTY キーワードを使用すると、軸からすべての空の組を簡単に削除できます。 たとえば、これまでに見たの例ではありませんデータ キューブから 2004 年 8 月の以降です。 どの列にもデータがないすべての行をセルセットから削除するには、ROWS 軸のセットの定義の前に、以下のように NON EMPTY を追加します。  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -116,6 +116,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [スライサー軸の内容の指定&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [スライサー軸の内容の指定 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

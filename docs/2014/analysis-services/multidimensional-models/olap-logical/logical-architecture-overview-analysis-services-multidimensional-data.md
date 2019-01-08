@@ -15,12 +15,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 525e3d131e5bb2e53d35faa73f1c4c579c59cbd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd2aad1cf57852c2b78db1128a972c0490a52a85
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091452"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416493"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>論理アーキテクチャの概要 (Analysis Services - 多次元データ)
   Analysis Services は、さまざまな種類の Analysis Services モデルで使用されるメモリ アーキテクチャとランタイム環境を指定する、サーバー配置モードで動作します。 サーバー モードは、インストール時に決定されます。 **多次元およびデータ マイニング モード**従来の OLAP およびデータ マイニングをサポートしています。 **表形式モード**表形式モデルをサポートしています。 **SharePoint 統合モード**の読み込みとブック内の Excel または PowerPivot のデータ モデルのクエリを使用して、SharePoint の PowerPivot としてインストールされた Analysis Services のインスタンスを参照します。  
@@ -48,7 +48,7 @@ ms.locfileid: "48091452"
  各データベース オブジェクトには 1 つ以上のキューブ オブジェクトが含まれています。 キューブは、メジャーとディメンションによって定義されます。 キューブのメジャーとディメンションは、そのキューブの基になっているか、またはメジャー定義とディメンション定義から生成されたデータ ソース ビュー内のテーブルおよびビューから派生します。  
   
 ## <a name="object-inheritance"></a>オブジェクトの継承  
- ASSL オブジェクト モデルには繰り返される多くの要素グループがあります。 たとえば、"`Dimensions` contain `Hierarchies`" という要素グループでは要素のディメンション階層を定義します。 `Cubes` と `MeasureGroups` のどちらにも、"`Dimensions` contain `Hierarchies`" という要素グループがあります。  
+ ASSL オブジェクト モデルには繰り返される多くの要素グループがあります。 たとえば、要素グループ"`Dimensions`を含む`Hierarchies`、"要素のディメンション階層を定義します。 `Cubes` と `MeasureGroups` のどちらにも、"`Dimensions` contain `Hierarchies`" という要素グループがあります。  
   
  明示的にオーバーライドされない限り、要素はこれらの繰り返される要素グループの詳細を上位レベルから継承します。 たとえば、`Translations` の `CubeDimension` は、先祖要素である `Translations` の `Cube` と同じです。  
   
@@ -126,6 +126,6 @@ ms.locfileid: "48091452"
  ここで示す例には、1 つのファクト テーブルだけが含まれています。 キューブに複数のファクト テーブルがある場合、各ファクト テーブルからのメジャーはメジャー グループに編成され、メジャー グループは定義済みのディメンション リレーションシップによって、特定のセットのディメンションに関連付けられます。 これらのリレーションシップは、データ ソース ビューの参加テーブルとリレーションシップの粒度を指定することによって定義します。 **関連トピック:**[ディメンション リレーションシップ](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)します。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル データベース&#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
+ [多次元モデル データベース &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
   
   

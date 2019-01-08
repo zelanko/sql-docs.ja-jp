@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed672aedc62c9521fe475589de0a7aa9ac935614
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 715d3b06ed3017a00852f58c618e2ea0b0de24d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984390"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403347"
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>補足のレッスン - 動的なセキュリティを実装する行フィルターを使用します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "38984390"
   
 動的なセキュリティを実装するには、データ ソースとしてのモデルへの接続を作成し、モデル オブジェクトとデータを参照できるユーザーの Windows ユーザー名を含むテーブルを、モデルに追加する必要があります。 このチュートリアルで作成するモデルは Adventure Works Corp. のコンテキスト内にありますが、このレッスンを完了するには、自分のドメインのユーザーが含まれているテーブルを追加する必要があります。 追加するユーザー名のパスワードは必要ありません。 独自のドメインからユーザーの小規模なサンプルでは、EmployeeSecurity テーブルを作成するには機能を使用する、貼り付け、Excel スプレッドシートから従業員データの貼り付けします。 実際のシナリオでは、モデルに追加するユーザー名が含まれたテーブルは通常、実際のデータベースのテーブル (たとえば、実際の dimEmployee テーブルなど) をデータ ソースとして使用します。  
   
-動的なセキュリティを実装するには、[USERNAME Function (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) および [LOOKUPVALUE Function (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab) という 2 つの新しい DAX 関数を使用します。 行フィルター式に適用されるこれらの関数は、新しいロールで定義されています。 LOOKUPVALUE 関数を使用して、この数式は EmployeeSecurity テーブルの値を指定しにログオンしたユーザーのユーザー名を指定する USERNAME 関数に値がこのロールに属していることを渡します。 ユーザーは、ロールの行フィルターによって指定されたデータのみを参照できます。 このシナリオでは、販売担当者がインターネット上で自分の販売区域の売上データのみを参照できるように指定します。  
+動的なセキュリティを実装するのには、2 つの新しい DAX 関数を使用します。[USERNAME 関数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)と[LOOKUPVALUE 関数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)します。 行フィルター式に適用されるこれらの関数は、新しいロールで定義されています。 LOOKUPVALUE 関数を使用して、この数式は EmployeeSecurity テーブルの値を指定しにログオンしたユーザーのユーザー名を指定する USERNAME 関数に値がこのロールに属していることを渡します。 ユーザーは、ロールの行フィルターで指定されたデータのみを参照できます。 このシナリオでは、販売担当者がインターネット上で自分の販売区域の売上データのみを参照できるように指定します。  
   
 この補足のレッスンを完了するには、一連の作業を行います。 この Adventure Works テーブル モデルに固有の作業が実際のシナリオに必ずしも適用されない場合には、そのように記載されています。 各作業には、作業の目的を表す追加情報が含まれています。  
   
-このレッスンの推定所要時間: **30 分**  
+このレッスンを完了するまでに時間を推定するには。**30 分**  
   
 ## <a name="prerequisites"></a>前提条件  
 この補足のレッスンのトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 この補足のレッスンの作業を実行する前に、前のレッスンをすべて完了している必要があります。  
@@ -41,7 +41,7 @@ ms.locfileid: "38984390"
   
 2.  **[既存の接続]** ダイアログ ボックスで **[Adventure Works DB from SQL]** データ ソース接続が選択されていることを確認し、 **[開く]** をクリックします。  
   
-    [権限借用の資格情報] ダイアログ ボックスが表示された場合は、「レッスン 2: データの追加」で使用した権限借用の資格情報を入力します。  
+    レッスン 2 で使用した場合、ダイアログ ボックスが表示されたら、権限借用の資格情報は、権限借用の資格情報を入力します。データを追加します。  
   
 3.  **[データのインポート方法の選択]** ページで、 **[インポートするデータをテーブルとビューの一覧から選択する]** が選択されていることを確認し、 **[次へ]** をクリックします。  
   
@@ -115,7 +115,7 @@ FactInternetSales、DimGeography、および DimSalesTerritory テーブルす�
 この作業では、新しいユーザー ロールを作成します。 このロールは、DimSalesTerritory テーブルの行がユーザーに表示を定義する行フィルターが含まれます。 DimSalesTerritory に関連するその他のすべてのテーブルと一対多リレーションシップの方向にフィルターが適用されます。 ロールのメンバーであるすべてのユーザーがクエリを実行できる EmployeeSecurity テーブル全体をセキュリティで保護する単純なフィルターも適用されます。  
   
 > [!NOTE]  
-> このレッスンで作成する Sales Employees by Territory ロールによって、メンバーが参照 (またはクエリを実行) できるデータは、自分が属する販売区域の売上データのみに制限されます。 追加する場合、ユーザーをメンバーとして、Sales Employees by Territory ロールで作成したロールのメンバーにも存在する[レッスン 11: ロールの作成](../analysis-services/lesson-11-create-roles.md)、アクセス許可の組み合わせが表示されます。 あるユーザーが複数のロールのメンバーである場合、各ロールに対して定義された権限と行フィルターは累積されます。 つまり、ロールを組み合わせることでユーザーの権限は引き上げられます。  
+> このレッスンで作成する Sales Employees by Territory ロールによって、メンバーが参照 (またはクエリを実行) できるデータは、自分が属する販売区域の売上データのみに制限されます。 追加する場合、ユーザーをメンバーとして、Sales Employees by Territory ロールで作成したロールのメンバーにも存在する[レッスン 11。ロールを作成](../analysis-services/lesson-11-create-roles.md)、アクセス許可の組み合わせが表示されます。 あるユーザーが複数のロールのメンバーである場合、各ロールに対して定義された権限と行フィルターは累積されます。 つまり、ロールを組み合わせることでユーザーの権限は引き上げられます。  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Sales Employees by Territory ユーザー ロールを作成するには  
   
@@ -186,6 +186,6 @@ FactInternetSales、DimGeography、および DimSalesTerritory テーブルす�
     このユーザーは、自分が属する区域以外の区域のインターネット販売データを参照したり、クエリを実行することはできません。これは、Sales Employees by Territory ユーザー ロールで Sales Territory テーブルに定義された行フィルターによって、他の販売区域に関連するすべてのデータが効果的に保護されているためです。  
   
 ## <a name="see-also"></a>参照  
-[USERNAME 関数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)  
-[LOOKUPVALUE 関数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)  
+[USERNAME Function (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)  
+[LOOKUPVALUE Function (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)  
 [CUSTOMDATA 関数 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  

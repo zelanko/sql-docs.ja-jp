@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e15f069c14131f6e75c1062e981b04aa6ef93a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a23f24cc0ad15ab217f328a1a2dd42737e7c6b57
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835923"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991795"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (文字列連結) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ expression + expression
   
  2 つのバイナリ間にある任意の文字列を、その両端にあるバイナリ文字列と結合する場合、文字データへの明示的な変換を使用する必要があります。 次の例では、バイナリ連結で `CONVERT` または `CAST` を使用する必要がある場合と、`CONVERT` または `CAST` を使用する必要がない場合を示します。  
   
-```  
+```sql
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
 SET @mybin1 = 0xFF  
 SET @mybin2 = 0xA5  
@@ -78,7 +78,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ### <a name="a-using-string-concatenation"></a>A. 文字列連結を使用する  
  次の例では、複数の文字の列から、`Name` という列見出しで単一の列を作成します。個人の姓に、コンマとスペース 1 つを連結し、さらにその名を連結します。 結果セットは、姓、名の順で昇順に表示されます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + FirstName) AS Name  
@@ -89,7 +89,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ### <a name="b-combining-numeric-and-date-data-types"></a>B. 数値型と日付型を結合する  
  次の例では、`CONVERT` 関数を使用して、**numeric** 型と **date** データ型を連結します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-multiple-string-concatenation"></a>C. 複数の文字列の連結を使用する  
  次の例では、複数の文字列を連結して 1 つの長い文字列を形成し、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] の副社長の姓と、名のイニシャルを表示します。 姓の後ろにコンマを追加し、名のイニシャルの後ろにピリオドを追加します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ',' + SPACE(1) + SUBSTRING(FirstName, 1, 1) + '.') AS Name, e.JobTitle  
@@ -136,7 +136,7 @@ GO
 ### <a name="d-using-large-strings-in-concatenation"></a>D. 連結で長い文字列を使用する
 次の例では、複数の文字列を連結して 1 つの長い文字列を形成し、最終的な文字列の計算を試行します。 結果セットの最終的な長さは、式の評価が左 (つまり、@x + @z + @y => (@x + @z) + @y) から開始されるため、16000 です。 この場合、(@x + @z) の結果は、8000 バイトで切り捨てられ、@y が結果セットに追加され、文字列の最終的な長さは 16000 になります。 @y は大きな値の型の文字列であるため、切り捨ては行われません。
 
-```
+```sql
 DECLARE @x varchar(8000) = replicate('x', 8000)
 DECLARE @y varchar(max) = replicate('y', 8000)
 DECLARE @z varchar(8000) = replicate('z',8000)
@@ -159,7 +159,7 @@ GO
 ### <a name="e-using-multiple-string-concatenation"></a>E. 複数の文字列の連結を使用する  
  次の例では、複数の文字列を連結して、サンプル データベースの副社長の姓と、名のイニシャルを表示する 1 つの長い文字列を形成します。 姓の後ろにコンマを追加し、名のイニシャルの後ろにピリオドを追加します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + SUBSTRING(FirstName, 1, 1) + '.') AS Name, Title  

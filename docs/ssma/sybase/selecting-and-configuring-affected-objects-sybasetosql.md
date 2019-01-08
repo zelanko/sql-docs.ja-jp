@@ -12,12 +12,12 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0aed95b084970bf4aa24bd279d8f52af7a33cfc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627548"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402262"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>影響を受けるオブジェクトの選択と構成 (SybaseToSQL)
 このページでは、テーブルを選択することができ、SSMA 前の手順で選択したオブジェクトの実行の結果を検証するときに、外部キーを変更とを比較する必要があります。 また、検証パラメーターをカスタマイズできます。  
@@ -40,19 +40,19 @@ SSMA のテスト担当者は、これらのオブジェクトのいずれかを
   
 -   Rule  
   
--   既定  
+-   既定値  
   
--   Identity  
+-   同一。  
   
 -   [可]  
   
 ## <a name="sql"></a>Sql  
 SQL タブには、「テーブル作成」にはが含まれています。 SQL のテーブルを選択します。  
   
-## <a name="data"></a>data  
+## <a name="data"></a>データ  
 [データ] タブには、選択したテーブル内のデータが表示されます。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
 [プロパティ] タブには、選択したテーブルのプロパティが表示されます。 次のフィールド、[プロパティ] タブの下。  
   
 -   作成または最後に変更  

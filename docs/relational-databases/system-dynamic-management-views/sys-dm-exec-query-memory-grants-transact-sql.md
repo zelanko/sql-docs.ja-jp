@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 247b89dcacc30417d01160c490010909cfbf5cfd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839080"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413415"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   要求したメモリ許可を待機しているし、メモリ許可が与えられているすべてのクエリに関する情報を返します。 メモリ許可を必要としないクエリは、このビューでは表示されません。 たとえば、並べ替えし、ハッシュ結合の操作なしのクエリ中に、クエリ実行メモリ許可がある、 **ORDER BY**句には、メモリ許可がありません。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、動的管理ビューは、データベースの包含に影響を与えるまたはユーザーがアクセスを他のデータベースに関する情報が公開される情報を公開できません。 この情報が公開されないように、接続されたテナントに属していないデータを含む行はすべてフィルターで除外されます。さらに、列の値**scheduler_id**、 **wait_order**、 **pool_id**、 **group_id**フィルター処理され、列の値の設定NULL です。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、動的管理ビューでデータベースの包含に影響を与える情報を公開することや、ユーザーがアクセスできる他のデータベースに関する情報を公開することはできません。 この情報を公開することを避けるため、接続されているテナントに属していないデータが含まれるすべての行はフィルターで除外します。さらに、列の値**scheduler_id**、 **wait_order**、 **pool_id**、 **group_id**フィルター処理され、列の値の設定NULL です。  
   
 > [!NOTE]  
 > これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_exec_query_memory_grants**します。  
@@ -53,7 +53,7 @@ ms.locfileid: "47839080"
 |**max_used_memory_kb**|**bigint**|この時点までに使用された最大物理メモリ (KB 単位)。|  
 |**query_cost**|**float**|推定クエリ コスト。|  
 |**timeout_sec**|**int**|このクエリがメモリ許可要求をやめるまでのタイムアウト (秒単位)。|  
-|**resource_semaphore_id**|**smallint**|このクエリが待機しているリソース セマフォの非一意の ID。<br /><br /> **注:** この ID は一意のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]より前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]します。 この変更は、クエリの実行のトラブルシューティングに影響する可能性があります。 詳細については、このトピックの後半の「解説」セクションを参照してください。|  
+|**resource_semaphore_id**|**smallint**|このクエリが待機しているリソース セマフォの非一意の ID。<br /><br /> **注:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、この ID が一意です。 この変更は、クエリの実行のトラブルシューティングに影響する可能性があります。 詳細については、このトピックの後半の「解説」セクションを参照してください。|  
 |**queue_id**|**smallint**|このクエリがメモリ許可を待機している待機キューの ID。 メモリが既に与えられている場合は NULL です。|  
 |**wait_order**|**int**|指定した待機クエリの順番**queue_id**します。 他のクエリがメモリ許可を取得するか、タイムアウトになった場合、個々のクエリのこの値は変化する可能性があります。メモリが既に許可されている場合は NULL です。|  
 |**is_next_candidate**|**bit**|次のメモリ許可の候補。<br /><br /> 1 = はい<br /><br /> 0 = いいえ<br /><br /> NULL = メモリが既に許可されている|  

@@ -14,12 +14,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643950"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410409"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant の新機能
 この記事では、各リリースで追加の Data Migration Assistant (DMA) を示します。
@@ -33,9 +33,9 @@ DMA の v4.1 リリースには、オンプレミス SQL Server データベー�
 
 - **互換性の問題**します。 DMA では、次の領域に関連する互換性の問題も識別します。
 
-    - 重大な変更: 特定のスキーマ オブジェクトをターゲット データベースへの移行機能が損なわれる可能性があります。  データベースの移行後にこれらのスキーマ オブジェクトを修正することをお勧めします。
-    - 動作変更: 報告されるスキーマ オブジェクトが引き続き機能しますが、パフォーマンスの低下など、異なる動作を発生する可能性があります。
-    - 情報の問題: これらのオブジェクトは、移行に影響しませんが機能の SQL Server リリースから非推奨可能性があります。
+    - 重大な変更:特定のスキーマ オブジェクトは、ターゲット データベースへの移行機能が損なわれる可能性があります。  データベースの移行後にこれらのスキーマ オブジェクトを修正することをお勧めします。
+    - 動作変更:報告されたスキーマ オブジェクトが引き続き機能しますが、パフォーマンスの低下など、異なる動作を発生する可能性があります。
+    - 情報の問題:これらのオブジェクトは移行には影響しませんが、機能の SQL Server リリースから非推奨可能性があります。
 
 使用して、評価が完了した後、 [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) を Azure SQL Database マネージ インスタンスの SQL Server データベースの移行を実行します。  DMS は両方ともサポート[オフライン](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)(1 回限り) と[オンライン](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)(最小限のダウンタイム) データベースの移行を Azure SQL Database マネージ インスタンス。
 

@@ -10,12 +10,12 @@ ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d5b17e7b054552c96c6fb3ff861c22b4e87e394f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b927d9116424f1b471dc675189548e3c6a459569
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674830"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531760"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL の新機能 (MySqlToSql)
 この記事では、各リリースでの MySQL の変更の SSMA が一覧表示します。 
@@ -189,7 +189,7 @@ MySQL 用の SSMA の 2010 年 7 月リリースには、次の機能が含ま�
   
 4.  **オブジェクトへの変換の機能強化:**  
   
-    -   MySQL のメタベース オブジェクト – プロシージャ、関数、ビュー、トリガー、およびステートメントの変換。  
+    -   プロシージャ、関数、ビュー、トリガー、およびステートメント - MySQL メタベース オブジェクトが変換されます。  
     -   テーブル内の空間データ型の制限付きのサポート。  
     -   MySQL の機能を SQL Server ストアド プロシージャに変換するオプション  
     -   オブジェクトの変換中に SQL モードと文字セットのマッピングを適用するオプション  
@@ -210,4 +210,4 @@ MySQL 用の SSMA の 2010 年 1 月リリースは、最初のリリースで�
   
 -   両方への移行のサポートを追加でオンプレミス SQL Server と Azure SQL。  
   
--   **機能のスナップショット:** スキーマとデータの移行 MySQL テーブル/インデックスと制約の。
+-   **スナップショットの機能:** スキーマとデータの移行 MySQL テーブル/インデックスと制約の。

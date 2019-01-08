@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d515496ec264e4b6331021d385a8d42a981fbbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 373cee8bf85815db18c50eb2919600ffec258f0b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058362"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516505"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable の作成、変更、および削除
   新しい FileTable の作成や、既存の FileTable の変更または削除を行う方法について説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "48058362"
   
 -   自動的に作成される 3 つの主キーと一意の制約で使用する名前。  
   
-###  <a name="HowToCreate"></a> 方法: FileTable を作成する  
+###  <a name="HowToCreate"></a> 操作方法：FileTable を作成します。  
  **Transact-SQL を使用して FileTable を作成する**  
  FileTable を作成するには、**AS FileTable** オプションを指定して [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) ステートメントを呼び出します。 FileTable には固定スキーマがあるため、列の一覧を指定する必要はありません。 新しい FileTable には次の設定を指定できます。  
   
@@ -96,7 +96,7 @@ GO
   
 -   FileTable には、FILESTREAM 列が含まれているため、有効な FILESTREAM ファイル グループが必要です。 必要に応じて、FileTable を作成する **CREATE TABLE** コマンドの一部として、FILESTREAM ファイル グループを指定することもできます。 ファイル グループが指定されていない場合、FileTable はデータベースの既定の FILESTREAM ファイル グループを使用します。 データベースに FILESTREAM ファイル グループがない場合は、エラーが発生します。  
   
--   **CREATE TABLE... AS FILETABLE** ステートメントの一部としてテーブルの制約を作成することはできません。 ただし、制約を追加するには、後で **ALTER TABLE** ステートメントを使用します。  
+-   **CREATE TABLE...AS FILETABLE** ステートメントの一部としてテーブルの制約を作成することはできません。 ただし、制約を追加するには、後で **ALTER TABLE** ステートメントを使用します。  
   
 -   **tempdb** データベースまたはその他のシステム データベースに FileTable を作成することはできません。  
   
@@ -107,7 +107,7 @@ GO
   
  ALTER TABLE ステートメントを使用して FileTable 名前空間 (システム定義の制約を含む) を有効または無効にする方法の詳細については、「 [FileTable の管理](manage-filetables.md)」を参照してください。  
   
-###  <a name="HowToChange"></a> 方法: FileTable のディレクトリを変更する  
+###  <a name="HowToChange"></a> 操作方法：FileTable のディレクトリを変更します。  
  **Transact-SQL を使用して FileTable のディレクトリを変更する**  
  ALTER TABLE ステートメントを呼び出し、有効な新しい値を **FILETABLE_DIRECTORY** SET オプションに指定します。  
   

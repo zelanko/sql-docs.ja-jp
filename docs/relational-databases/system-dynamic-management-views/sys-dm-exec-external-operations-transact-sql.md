@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae94de96cc36c4b53204d76049df6079a5690a3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3488a7137e03d3ffdec71f068697c96a151a1301
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656476"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517519"
 ---
 # <a name="sysdmexecexternaloperations-transact-sql"></a>sys.dm_exec_external_operations (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "51656476"
 |execution_id|**nvarchar(32)**|PolyBase クエリに関連付けられているクエリの一意の識別子|内の ID を参照してください[sys.dm_exec_requests &#40;TRANSACT-SQL。&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
 |step_index|**int**|クエリのステップのインデックス|Step_index を参照してください[sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL。&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
 |処理の種類|**nvarchar(128)**|Hadoop 操作またはその他の外部の操作を説明します。|' 外部 Hadoop Operation'|  
-|処理の名前|**nvarchar (4000)**|示す方法 (量は、入力を使用) の割合で、ジョブの状態|0 ～ 1 – 率 100 (完了) を掛けた値|  
-|map _ の進行状況|**float**|存在する場合に、パーセンテージで示した、reduce の状態のジョブを示します|0 ～ 1 – 率 100 (完了) を掛けた値|  
+|処理の名前|**nvarchar (4000)**|示す方法 (量は、入力を使用) の割合で、ジョブの状態|0-1 - 率 100 (完了) を掛けた値|  
+|map _ の進行状況|**float**|存在する場合に、パーセンテージで示した、reduce の状態のジョブを示します|0-1 - 率 100 (完了) を掛けた値|  
   
 ## <a name="see-also"></a>参照  
  [PolyBase 動的管理ビューでのトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

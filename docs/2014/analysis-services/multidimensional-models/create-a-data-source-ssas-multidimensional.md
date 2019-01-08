@@ -19,12 +19,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5c6b02cba58b35472fc5d0224d7faf9534c332a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54971b2b71d37ec4b246d982429fac3d6abf5b9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049492"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412479"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>データ ソースの作成 (SSAS 多次元)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の多次元モデルでは、データ ソース オブジェクトが、処理 (またはインポート) するデータを持つデータ ソースへの接続を表します。 多次元モデルには少なくとも 1 つのデータ ソース オブジェクトが含まれている必要がありますが、複数のデータ ウェアハウスのデータを結合するために、データ ソース オブジェクトをさらに追加することもできます。 このトピックで説明する手順に従って、モデルのデータ ソース オブジェクトを作成します。 このオブジェクトのプロパティの設定の詳細については、「[データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](set-data-source-properties-ssas-multidimensional.md)」を参照してください。  
@@ -67,7 +67,7 @@ ms.locfileid: "48049492"
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の既定では、接続文字列と共にパスワードは保存されません。 パスワードが保存されていない場合は、必要に応じてパスワードを入力するよう [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] から求められます。 パスワードを保存するように選択した場合、パスワードは暗号化形式でデータ接続文字列に保存されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、データ ソースを含むデータベースの暗号化キーを使用して、データ ソースのパスワード情報が暗号化されます。 接続情報が暗号化されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービス アカウントまたはパスワードを変更する必要があります。これを行わないと、暗号化された情報を復元できません。 詳細については、「 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)」を参照してください。  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>データ マイニング オブジェクト用の権限借用情報の定義  
- データ マイニング クエリは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービス アカウントのコンテキストで実行できますが、クエリを送信するユーザーのコンテキスト、または指定されたユーザーのコンテキストでも実行できます。 クエリが実行されるコンテキストは、クエリの結果に影響する場合があります。 データ マイニング`OPENQUERY`タイプのオペレーション、データ マイニングのクエリをサービス アカウントのコンテキストではなく、(クエリを実行するユーザー) に関係なく、指定したユーザーのコンテキストでは、現在のユーザーのコンテキストでを実行する可能性があります。 これにより、限られたセキュリティ資格情報でクエリを実行することができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で現在のユーザーまたは指定されたユーザーの権限を借用するには、 **[特定のユーザー名とパスワードを使用する]** または **[現在のユーザーの資格情報を使用する]** オプションを選択します。  
+ データ マイニング クエリは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービス アカウントのコンテキストで実行できますが、クエリを送信するユーザーのコンテキスト、または指定されたユーザーのコンテキストでも実行できます。 クエリが実行されるコンテキストは、クエリの結果に影響する場合があります。 データ マイニングの `OPENQUERY` 型の演算では、サービス アカウントのコンテキストではなく、現在のユーザーのコンテキスト、または指定されたユーザー (クエリを実行するユーザーにかかわらず) のコンテキストでデータ マイニング クエリを実行できます。 これにより、限られたセキュリティ資格情報でクエリを実行することができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で現在のユーザーまたは指定されたユーザーの権限を借用するには、 **[特定のユーザー名とパスワードを使用する]** または **[現在のユーザーの資格情報を使用する]** オプションを選択します。  
   
 ##  <a name="bkmk_steps"></a> データ ソース ウィザードによるデータ ソースの作成  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48049492"
   
 3.  **[接続の定義方法を選択します]** ページで **[既存の接続または新しい接続に基づいてデータ ソースを作成する]** を選択し、次に **[新規作成]** をクリックして **接続マネージャー**を開きます。  
   
-     新しい接続は、接続マネージャーで作成されます。 接続マネージャーでは、プロバイダーを選択し、そのプロバイダーが基になるデータに接続するために使用する接続文字列プロパティを指定します。 必要な情報は選択したプロバイダーによって異なりますが、通常は、サーバーまたはサービス インスタンス、サーバーまたはサービス インスタンスへのログオン情報、データベース名またはファイル名、その他のプロバイダー固有の設定を指定します。 以降の手順では、SQL Server データベース接続を前提とします。  
+     新しい接続は、接続マネージャーで作成されます。 接続マネージャーでは、プロバイダーを選択し、そのプロバイダーが基になるデータに接続するために使用する接続文字列プロパティを指定します。 必要な情報は選択したプロバイダーによって異なりますが、通常は、サーバーまたはサービス インスタンス、サーバーまたはサービス インスタンスへのログオン情報、データベース名またはファイル名、その他のプロバイダー固有の設定を指定します。 この手順の残りの部分、SQL Server データベースの接続をものとします。  
   
 4.  接続に使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework またはネイティブ OLE DB プロバイダーを選択します。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "48049492"
   
 -   プライマリ データ ソースとして、1 つのデータ ソースを指定します。 プライマリ データ ソースは、データ ソース ビューを作成するために使用されるデータ ソースです。  
   
--   プライマリ データ ソースをサポートする必要があります、`OpenRowset`関数。  SQL Server のこの関数の詳細については、「 <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>」を参照してください。  
+-   プライマリ データ ソースは、`OpenRowset` 関数をサポートしている必要があります。  SQL Server のこの関数の詳細については、「 <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>」を参照してください。  
   
  複数のデータ ソースのデータを結合するには、次の方法を使用します。  
   

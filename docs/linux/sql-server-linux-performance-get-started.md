@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: sql-linux
-ms.openlocfilehash: f60b16d1fba4e6c6b46615e5a5fd512db20ab854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3288bb18a4bc8d87b9be1eb8f57bbc66555b9db5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703800"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401354"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>SQL Server on Linux のパフォーマンス機能のチュートリアル
 
@@ -64,7 +64,7 @@ SQL Server を初めて利用する Linux ユーザーの場合、次のタス�
 SQL Server では、アプリケーションのシステムのパフォーマンスを大幅に改善できるインメモリ OLTP 機能を提供します。  評価ガイドのこのセクションでは、コンパイルまたは解釈することなくテーブルにアクセスできる、ネイティブ コンパイル ストアド プロシージャと、メモリに格納されているメモリ最適化テーブルを作成する手順を説明します。
 
 ### <a name="configure-database-for-in-memory-oltp"></a>インメモリ OLTP でのデータベースを構成します。
-1. インメモリ OLTP を使用するには、データベースで少なくとも 130 の互換性レベルを設定することを推奨します。  AdventureWorks の現在の互換性レベルを確認するには、次のクエリを使用します。  
+1. インメモリ OLTP を使用するには少なくとも 130 の互換性レベルにデータベースを設定することをお勧めします。  AdventureWorks の現在の互換性レベルを確認するには、次のクエリを使用します。  
 
    ```sql
    USE AdventureWorks
@@ -83,7 +83,7 @@ SQL Server では、アプリケーションのシステムのパフォーマン
    GO
    ```
 
-2. トランザクションにディスク ベース テーブルとメモリ最適化テーブルの両方が含まれる場合、メモリ最適化部分のトランザクションはスナップショットと呼ばれるトランザクション分離レベルで動作させることが重要です。  コンテナーをまたがるトランザクションでメモリ最適化テーブルに対してこのレベルを確実に適用するには、次を実行します。
+2. トランザクションは、ディスク ベース テーブルとメモリ最適化テーブルの両方では、ときにきわめて重要トランザクションのメモリ最適化部分が、トランザクション分離レベルで動作するスナップショットの名前。  コンテナーをまたがるトランザクションでメモリ最適化テーブルに対してこのレベルを確実に適用するには、次を実行します。
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
@@ -159,7 +159,7 @@ SQL Server では、メモリ最適化テーブルにアクセスするネイテ
 ### <a name="learn-more-about-in-memory-oltp"></a>インメモリ OLTP の詳細
 インメモリ OLTP の詳細については、次のトピックを参照してください。
 
-- [クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [クイック スタート 1。TRANSACT-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
 - [インメモリ OLTP への移行](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
 - [メモリ最適化を使用した一時テーブルとテーブル変数の高速化](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [メモリ使用量の監視とトラブルシューティング](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)

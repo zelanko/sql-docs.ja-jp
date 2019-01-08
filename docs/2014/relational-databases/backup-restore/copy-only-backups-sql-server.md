@@ -14,12 +14,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf2a1c84bab547e7b3dbc4bd1a930b4605f4052f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149643"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504832"
 ---
 # <a name="copy-only-backups-sql-server"></a>コピーのみのバックアップ (SQL Server)
   *コピーのみのバックアップ*は、従来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップのシーケンスから独立した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップです。 通常、バックアップを行うとデータベースが変更され、その後のバックアップの復元方法に影響します。 ただし、データベース全体のバックアップや復元の手順に影響を与えない、特殊な目的にバックアップを行うと役に立つ場合があります。 このため、コピーのみのバックアップが導入されました。  
@@ -34,7 +34,7 @@ ms.locfileid: "48149643"
   
 -   コピーのみのログ バックアップ (完全復旧モデルおよび一括ログ復旧モデルのみ)  
   
-     コピーのみのログ バックアップは、既存のログ アーカイブ ポイントを保持するため、定期的なログ バックアップの一連の作業に影響を与えません。 通常、コピーのみのログ バックアップは不要です。 新しい定期的なログ バックアップを (WITH NORECOVERY を使用して) 作成してから、そのバックアップを、復元シーケンスに必要なすべての以前のログ バックアップと共に使用できます。 ただし、コピーのみのログ バックアップは、オンライン復元を実行する際に役立つ場合があります。 この例については、「[例: 読み取り/書き込みファイルのオンライン復元 &#40;完全復旧モデル&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)」を参照してください。  
+     コピーのみのログ バックアップは、既存のログ アーカイブ ポイントを保持するため、定期的なログ バックアップの一連の作業に影響を与えません。 通常、コピーのみのログ バックアップは不要です。 新しい定期的なログ バックアップを (WITH NORECOVERY を使用して) 作成してから、そのバックアップを、復元シーケンスに必要なすべての以前のログ バックアップと共に使用できます。 ただし、コピーのみのログ バックアップは、オンライン復元を実行する際に役立つ場合があります。 これの例は、次を参照してください。[例。読み取り/書き込みファイルのオンライン復元&#40;完全復旧モデル&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)します。  
   
      コピーのみのバックアップの後、トランザクション ログは切り捨てられません。  
   
@@ -52,18 +52,18 @@ ms.locfileid: "48149643"
   
 -   コピーのみの完全バックアップの場合:  
   
-     データベースのバックアップ*database_name* TO \<backup_device*>* . WITH COPY_ONLY …  
+     データベースのバックアップ*database_name* TO \<backup_device*>* .WITH COPY_ONLY.  
   
     > [!NOTE]  
     >  COPY_ONLY は、DIFFERENTIAL オプションと共に指定した場合には機能しません。  
   
 -   コピーのみのログ バックアップの場合:  
   
-     BACKUP LOG *database_name* TO *\<* backup_device*>* . WITH COPY_ONLY …  
+     BACKUP LOG *database_name* TO *\<* backup_device*>* .WITH COPY_ONLY.  
   
 ###  <a name="PowerShellProcedure"></a> PowerShell の使用  
   
-1.  使用して、`Backup-SqlDatabase`コマンドレットと、`-CopyOnly`パラメーター。  
+1.  `Backup-SqlDatabase` パラメーターを指定して `-CopyOnly` コマンドレットを使用します。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **完全バックアップまたはログ バックアップを作成するには**  

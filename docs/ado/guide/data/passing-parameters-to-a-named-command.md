@@ -14,12 +14,12 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773390"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505714"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>名前付きコマンドにパラメーターを渡す
 コマンドの結果がとして渡された場合と同様、*アウト*名前付きのコマンドでは、パラメーターの変数されているパラメーター化コマンドとして渡された*で*変数を名前付きコマンド。  
@@ -83,15 +83,15 @@ Set objComm = Nothing
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- — の必須の入力パラメーターであるため、一致しないデータ型のエラーが発生、**文字列**の種類のではありません、**整数**型。  
+ -の必須の入力パラメーターであるため、一致しないデータ型のエラーが発生、**文字列**の種類のではありません、**整数**型。  
   
- 次の呼び出し。  
+ 次の呼び出し-  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- — 有効ですが、データベースにこのようなレコードが存在しないため、設定、空の結果になります。  
+ -有効ですが、データベースにこのようなレコードが存在しないため、設定、空の結果になります。  
   
 ## <a name="see-also"></a>参照  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

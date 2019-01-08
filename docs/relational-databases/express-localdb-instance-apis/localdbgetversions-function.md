@@ -16,12 +16,12 @@ ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 961517ce1fe0c68b355b12b7749f13bdb9fb0d59
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 54551e68d80b675ba040373c5c6bc8055a2162a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570837"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415869"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51570837"
   
 ## <a name="parameters"></a>パラメーター  
  *pVersionNames*  
- [出力] ユーザーのワークステーションで使用できる LocalDB バージョンの名前を格納します。  
+ [出力]ユーザーのワークステーションで利用できる LocalDB バージョンの名前が含まれています。  
   
  *lpdwNumberOfVersions*  
  [入力/出力]入力内のバージョンのスロットの数を保持する、 *pVersionNames*バッファー。   

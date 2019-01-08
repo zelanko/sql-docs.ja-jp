@@ -18,22 +18,22 @@ ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9b955f59cb1c7813be28c7edd46b32d0c8e44b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e89ebe73f7bee6f44df353afca515aca4cbbdcf2
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735470"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947623"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   入力値として提供された XML テキストを読み取り、MSXML パーサー (Msxmlsql.dll) を使用して解析し、使用できる状態の解析済みドキュメントを提供します。 この解析済みのドキュメントでは、XML ドキュメント内の各種ノード (要素、属性、テキスト、コメントなど) がツリー形式で表示されます。  
   
  **sp_xml_preparedocument** XML ドキュメントの新しく作成された内部表現へのアクセスに使用できるハンドルを返します。 このハンドルは、セッションまたは実行することによって、ハンドルが無効になるまでの期間の有効な**sp_xml_removedocument**します。  
   
 > [!NOTE]  
->  解析済みドキュメントがの内部キャッシュに格納されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 MSXML パーサーの 8 分の 1 つ、合計使用可能なメモリを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 メモリ不足を回避するには、実行**sp_xml_removedocument**メモリを解放します。  
+>  解析済みのドキュメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部キャッシュに格納されます。 MSXML パーサーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に割り当てられている総メモリの 8 分の 1 が使用されます。 メモリ不足を回避するには、実行**sp_xml_removedocument**メモリを解放します。  
   
 > [!NOTE]  
 >  旧バージョンと互換性のため、 **sp_xml_preparedocument** (char(13)) と LF (属性の場合、これらの文字はエンティティ化でも char(10)) 文字 CR を折りたたみます。  

@@ -11,12 +11,12 @@ ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbeb44d09f9825a640bc849f4127751ef39aa72c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f96a4b976d338e7f005d0f731bac0b58f5798bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118539"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401477"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot の正常性ルール - 構成
   PowerPivot for SharePoint には、サーバーの可用性と構成に関する問題を監視および解決するのに役立つ SharePoint 正常性ルールが含まれています。 PowerPivot for SharePoint に適用される正常性ルールは、[ルール定義の確認] ページに表示されます。  
@@ -29,10 +29,10 @@ ms.locfileid: "48118539"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **注 :** 正常性ルールの設定は、SQL Server Analysis Services インスタンスと PowerPivot サービス アプリケーションに対して別々に構成されます。 各サービスの正常性ルールを構成するには、このトピックで示されている手順に従ってください。 SharePoint 2013 配置の場合、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] はサービス アプリケーションを使用するだけです。 そのため、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] によってインストールされる正常性ルール セットは、SharePoint のバージョンに応じて異なります。 トピックの「バージョン」列を参照してください。[正常性ルールのリファレンス&#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)、または、インストールされたルールを表示する次の Windows PowerShell コマンドを実行することができます。  
+ **注:** 正常性ルールの設定は、SQL Server Analysis Services インスタンスと PowerPivot サービス アプリケーションに対して別々に構成されます。 各サービスの正常性ルールを構成するには、このトピックで示されている手順に従ってください。 SharePoint 2013 配置の場合、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] はサービス アプリケーションを使用するだけです。 そのため、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] によってインストールされる正常性ルール セットは、SharePoint のバージョンに応じて異なります。 トピックの「バージョン」列を参照してください。[正常性ルールのリファレンス&#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)、または、インストールされたルールを表示する次の Windows PowerShell コマンドを実行することができます。  
   
 ```  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
+Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
 ```  
   
  **このトピックの内容:**  
@@ -74,27 +74,27 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      CPU リソースの割り当ての不足 (既定値は 80%)  
      この正常性ルールは、Analysis Services サーバー プロセス (msmdsrv.exe) に使用されている CPU リソースが、データ収集間隔の設定を通じて指定された 4 時間以上にわたって 80% 以上である場合にトリガーされます。  
   
-     この構成設定は、 **[問題とソリューションの確認]** ページの **[PowerPivot: Analysis Services には要求された操作を実行するのに十分な CPU リソースがありません。]** というルールの定義に対応しています。  
+     この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ。**PowerPivot:Analysis Services には、要求された操作を実行するための十分な CPU リソースがありません。**  
   
      システムの CPU リソースの不足 (既定値は 90%)  
      この正常性ルールは、サーバーの CPU リソースが、データ収集間隔の設定を通じて指定された 4 時間以上にわたって 90% 以上である場合にトリガーされます。 全体的な CPU 使用率は、サーバーの状態の指標として CPU 使用率を監視する、サーバーの状態に基づく負荷分散アルゴリズムの一部として測定されます。  
   
-     この構成設定は、 **[問題とソリューションの確認]** ページの **[PowerPivot: 全体的な CPU 使用率が高すぎます。]** というルールの定義に対応しています。  
+     この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ。**PowerPivot:全体的な CPU 使用率が高すぎます。**  
   
      メモリ不足のしきい値 (既定値は 5%)  
      SharePoint アプリケーション サーバー上の SQL Server Analysis Services インスタンスには、常に未使用のメモリをいくらか確保しておく必要があります。 サーバーのほとんどの操作はメモリ バインドされているため、サーバーは上限まで実行されない場合に最適に実行されます。 5% の未使用メモリは、Analysis Services に割り当てられているメモリに対する割合として計算されます。 たとえば、メモリの合計が 200 GB で、Analysis Services にその 80% (つまり 160 GB) が割り当てられている場合、5% の未使用メモリは 160 GB の 5% (つまり 8 GB) です。  
   
-     この構成設定は、 **[問題とソリューションの確認]** ページの **[PowerPivot: Analysis Services には要求された操作を実行するのに十分なメモリがありません。]** というルールの定義に対応しています。  
+     この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ。**PowerPivot:Analysis Services には、要求された操作を実行するための十分なメモリがありません。**  
   
      接続の最大数 (既定値は 100)  
      この正常性ルールは、Analysis Services インスタンスへの接続数が、データ収集間隔の設定を通じて指定された 4 時間以上にわたって 100 以上である場合にトリガーされます。 この既定値は恣意的なものです (サーバーのハードウェアの仕様やユーザーの利用状況に基づいていません)。そのため、使用している環境のサーバー容量およびユーザーの利用状況に応じて、値を増減できます。  
   
-     この構成設定は、 **[問題とソリューションの確認]** ページの **[PowerPivot: 大量の接続は、現在の負荷を処理するにはより多くのサーバーを配置する必要があることを示しています。]** というルールの定義に対応しています。  
+     この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ。**PowerPivot:大量の接続では、現在の負荷を処理するより多くのサーバーをデプロイする必要がありますを示します。**  
   
      ディスク領域の不足 (既定値は 5%)  
      ディスク領域は、データベースへの要求が行われるたびに、PowerPivot データをキャッシュするために使用されます。 このルールは、ディスク領域が不足している場合に、そのことを通知します。 既定では、バックアップ フォルダーが置かれているディスク ドライブ上のディスク領域が 5% 未満になると、この正常性ルールがトリガーされます。 ディスク使用量の詳細については、次を参照してください。[ディスク使用領域の構成&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)します。  
   
-     この構成設定は、 **[問題とソリューションの確認]** ページの **[PowerPivot: データがキャッシュされるドライブのディスク領域が不足しています。]** というルールの定義に対応しています。  
+     この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ。**PowerPivot:ディスク領域の PowerPivot データがキャッシュされているドライブが不足しています。**  
   
      データ収集間隔 (時間)  
      正常性ルールのトリガーに使用される数値の計算に使用される、データ収集期間を指定できます。 システムは常に監視されていますが、正常性ルールの警告のトリガーに使用されるしきい値は、事前に定義された間隔に基づいて生成されるデータを使用して計算されます。 既定の間隔は 4 時間です。 サーバーは、ユーザー接続数、ディスク領域の使用状況、CPU およびメモリの使用率などを評価するために、4 時間前から収集されているシステム データと利用状況データを取得します。  
@@ -116,7 +116,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      読み込み対接続の比率 (既定値は 20%)  
      この正常性ルールは、読み込みイベント数が接続イベント数に比べて多い場合にトリガーされます。それにより、サーバーによるデータベースのアンロードが早すぎる可能性があること、またはキャッシュの削減設定が厳しすぎることが通知されます。  
   
-     この構成設定は、 **[問題とソリューションの確認]** ページの **[PowerPivot: 接続に対する読み込みイベントの比率が高すぎます。]** というルールの定義に対応しています。  
+     この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ。**PowerPivot:接続に対する読み込みイベントの比率が高すぎます。**  
   
      データ収集間隔 (既定値は 4 時間)  
      正常性ルールのトリガーに使用される数値の計算に使用される、データ収集期間を指定できます。 システムは常に監視されていますが、正常性ルールの警告のトリガーに使用されるしきい値は、事前に定義された間隔に基づいて生成されるデータを使用して計算されます。 既定の間隔は 4 時間です。 サーバーは、収集に対する読み込みの比率を評価するために、4 時間前から収集されているシステム データと利用状況データを取得します。  
@@ -126,7 +126,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      使用状況データ収集の詳細については、次を参照してください。[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。  
   
-     この構成設定は、 **[問題とソリューションの確認]** ページの **[PowerPivot: 使用状況データが必要な頻度で更新されていません。]** というルールの定義に対応しています。  
+     この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ。**PowerPivot:使用状況データが必要な頻度で更新されません。**  
   
 ## <a name="see-also"></a>参照  
  [ディスク使用量を構成する&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)   

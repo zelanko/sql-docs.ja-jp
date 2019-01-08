@@ -1,5 +1,5 @@
 ---
-title: 'タスク 1: 照合ポリシーの定義 |Microsoft Docs'
+title: タスク 1:照合ポリシーの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a94030fdf0f4ef42e0253022913f06f109e4dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55739fd6cf7b6c395c2e7a66c3d80fad22607a83
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107442"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394195"
 ---
-# <a name="task-1-defining-a-matching-policy"></a>タスク 1: 照合ポリシーを定義する
-  ここでは、1 つのルールを持つ照合ポリシーを作成します。 ルールでは 1 つの前提条件: **Supplier ID**、つまり、ルール内の他のドメインを使用する前に Supplier Id が一致する必要があります。 ルールでは、その他の 2 つのドメイン: **Supplier Name**で**類似性**値に設定**70%** と**Contact Email**で**類似性**値に設定**30%** します。  
+# <a name="task-1-defining-a-matching-policy"></a>タスク 1:照合ポリシーを定義する
+  ここでは、1 つのルールを持つ照合ポリシーを作成します。 このルールでは、**Supplier ID**、つまり、ルール内の他のドメインを使用する前に Supplier Id が一致する必要があります。 このルールでは、そのほかに、**Supplier Name**で**類似性**値に設定**70%** と**Contact Email**で**類似性**に値の設定**30%** します。  
   
 1.  メイン ページで**DQS クライアント**、 をクリックして**右矢印**横に**Suppliers**ナレッジ ベース、および選択**照合ポリシー**します。  
   
@@ -69,6 +69,6 @@ ms.locfileid: "48107442"
 16. をクリックして**次**に切り替える、**照合結果**ページ。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 2: 照合ポリシーをテストおよびパブリッシュする](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
+ [タスク 2:テストと一致するポリシーを公開](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   

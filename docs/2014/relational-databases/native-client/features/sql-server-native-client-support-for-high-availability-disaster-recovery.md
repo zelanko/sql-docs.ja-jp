@@ -10,15 +10,15 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ce83a5fae673d32fd86523fa13ef8b67b74b780
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 267d39335cd0bf74134030f3bb2af4a11e652319
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137614"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391066"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>SQL Server Native Client の HADR サポート
-  このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client のサポート ([!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で追加) について説明します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の詳細については、「[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」、および「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+  このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client のサポート ([!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で追加) について説明します。 詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md)、[作成し、可用性グループの構成&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)、および[アクティブなセカンダリ。読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)します。  
   
  接続文字列で、特定の可用性グループの可用性グループ リスナーを指定できます。 フェールオーバーする可用性グループ内のデータベースに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client アプリケーションが接続されている場合、元の接続が切断されるため、フェールオーバー後にアプリケーションが動作を継続するには新しい接続を開く必要があります。  
   
@@ -30,11 +30,11 @@ ms.locfileid: "48137614"
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover を使用した接続  
  SQL Server 2012 可用性グループ リスナーまたは SQL Server 2012 フェールオーバー クラスター インスタンスに接続する際には、必ず `MultiSubnetFailover=Yes` を指定してください。 `MultiSubnetFailover` を指定することで、SQL Server 2012 のすべての可用性グループおよびフェールオーバー クラスター インスタンスに対して高速フェールオーバーが有効化され、単一サブネットおよびマルチサブネットの AlwaysOn トポロジにおけるフェールオーバー時間が大幅に短縮されます。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 サブネット フェールオーバーの際には、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は積極的に TCP 接続を再試行します。  
   
- `MultiSubnetFailover` 接続プロパティを指定すると、アプリケーションが可用性グループまたはフェールオーバー クラスター インスタンスに配置され、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client がすべての IP アドレスに対して接続を試行することでプライマリ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上のデータベースに接続を試みます。 接続に `MultiSubnetFailover=Yes` を指定した場合、クライアントは、オペレーティング システムの既定の TCP 再転送間隔よりも早く TCP 接続を再試行します。 これにより、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後、再接続されるまでの時間を短縮することができます。単一サブネットとマルチサブネットの可用性グループ インスタンスおよびフェールオーバー クラスター インスタンスに適用することができます。  
+ `MultiSubnetFailover` 接続プロパティを指定すると、アプリケーションが可用性グループまたはフェールオーバー クラスター インスタンスに配置され、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client がすべての IP アドレスに対して接続を試行することでプライマリ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上のデータベースに接続を試みます。 ときに`MultiSubnetFailover=Yes`クライアントでは TCP 接続の試行をオペレーティング システムの既定の TCP 再送信間隔よりも高速で再試行します。 接続に対して指定します。 これにより、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後、再接続されるまでの時間を短縮することができます。単一サブネットとマルチサブネットの可用性グループ インスタンスおよびフェールオーバー クラスター インスタンスに適用することができます。  
   
  接続文字列キーワードの詳細については、「[SQL Server Native Client での接続文字列キーワードの使用](../applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
- 接続先が可用性グループ リスナーでもフェールオーバー クラスター インスタンスでもないときに `MultiSubnetFailover=Yes` を指定すると、パフォーマンスが低下する可能性があるため、このような指定はサポートされません。  
+ 可用性グループ リスナーまたはフェールオーバー クラスター インスタンス以外に接続するときに `MultiSubnetFailover=Yes` を指定するとパフォーマンスが低下する可能性があるため、このような指定はサポートされていません。  
   
  可用性グループまたはフェールオーバー クラスター インスタンス内のサーバーに接続する際には、次のガイドラインに従います。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48137614"
   
 -   64 個を超える数の IP アドレスが構成された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続すると、接続エラーが発生します。  
   
--   `MultiSubnetFailover` 接続プロパティを使用するアプリケーションの動作は、認証の種類 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証、Kerberos 認証、または Windows 認証) の影響を受けません。  
+-   `MultiSubnetFailover` 接続プロパティを使用するアプリケーションの動作は、次の認証の種類に影響されません:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証、Kerberos 認証、Windows 認証。  
   
 -   `loginTimeout` の値を増やすことで、フェールオーバー時間に対応し、アプリケーションの接続試行回数を減らすことができます。  
   
@@ -54,32 +54,32 @@ ms.locfileid: "48137614"
   
 1.  セカンダリ レプリカの場所が、接続を許可するように構成されていない。  
   
-2.  アプリケーションに `ApplicationIntent=ReadWrite` (以降に解説します) が使用されているが、セカンダリ レプリカの場所が読み取り専用アクセスとして構成されている。  
+2.  アプリケーションで (以降で説明する) `ApplicationIntent=ReadWrite` が使用され、セカンダリ レプリカの場所が読み取り専用アクセス用に構成されている場合。  
   
- プライマリ レプリカが読み取り専用ワークロードを拒否するように構成されているとき、接続文字列に `ApplicationIntent=ReadOnly` が含まれていると、接続は失敗します。  
+ プライマリ レプリカが読み取り専用ワークロードを拒否するように構成されていて、接続文字列に `ApplicationIntent=ReadOnly` が含まれる場合、接続は失敗します。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>データベース ミラーリングの使用からマルチサブネット クラスターの使用へのアップグレード  
  接続文字列に `MultiSubnetFailover` および `Failover_Partner` の接続キーワードが存在する場合、接続エラーが発生します。 また、`MultiSubnetFailover` が使用されているとき、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から、データベース ミラーリング ペアに属していることを示すフェールオーバー パートナー応答が返された場合にも、エラーが発生します。  
   
- データベース ミラーリングを現在使用している [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client アプリケーションをマルチサブネットのシナリオにアップグレードする場合、`Failover_Partner` 接続プロパティを削除して `MultiSubnetFailover` に置き換え、それを `Yes` に設定し、接続文字列内のサーバー名を可用性グループ リスナーの名前に置き換えます。 接続文字列で `Failover_Partner` および `MultiSubnetFailover=Yes` が使用されている場合、ドライバーでエラーが発生します。 ただし、接続文字列で `Failover_Partner` および `MultiSubnetFailover=No` (または `ApplicationIntent=ReadWrite`) が使用されている場合、アプリケーションではデータベース ミラーリングが使用されます。  
+ データベース ミラーリングを現在使用している [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client アプリケーションをマルチサブネットのシナリオにアップグレードする場合、`Failover_Partner` 接続プロパティを削除して `MultiSubnetFailover` に置き換え、それを `Yes` に設定し、接続文字列内のサーバー名を可用性グループ リスナーの名前に置き換えます。 接続文字列に `Failover_Partner` と `MultiSubnetFailover=Yes` が使用されている場合、ドライバーはエラーを生成します。 ただし、接続文字列に `Failover_Partner` と `MultiSubnetFailover=No` (または `ApplicationIntent=ReadWrite`) が使用されている場合、アプリケーションはデータベース ミラーリングを使用します。  
   
  ドライバーは、可用性グループのプライマリ データベースでデータベース ミラーリングを使用する場合、エラーを返します`MultiSubnetFailover=Yes`は可用性グループ リスナーにはなく、プライマリ データベースに接続する接続文字列で使用します。  
   
 ## <a name="specifying-application-intent"></a>アプリケーション インテントの指定  
  `ApplicationIntent=ReadOnly` が指定されている場合、AlwaysOn が有効になっているデータベースにクライアントが接続するときに読み取りワークロードが要求されます。 サーバーは、接続時およびデータベース ステートメントの使用時にインテントを強制しますが、その対象は AlwaysOn 対応データベースのみです。  
   
- `ApplicationIntent` キーワードは、従来型の読み取り専用データベースに対しては動作しません。  
+ `ApplicationIntent` キーワードは、従来の読み取り専用データベースに対しては無効です。  
   
  対象の AlwaysOn データベースのワークロードの読み取りを許可または禁止することができます (これは、`ALLOW_CONNECTIONS`の句、`PRIMARY_ROLE`と`SECONDARY_ROLE`[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントです)。  
   
- `ApplicationIntent` キーワードを使用して、読み取り専用のルーティングを有効にします。  
+ 読み取り専用ルーティングを有効にするには、`ApplicationIntent` キーワードを使用します。  
   
 ## <a name="read-only-routing"></a>読み取り専用ルーティング  
  読み取り専用のルーティングは、データベースの読み取り専用レプリカを使用可能にする機能です。 読み取り専用のルーティングを有効にするには  
   
 1.  AlwaysOn 可用性グループ リスナーに接続する必要があります。  
   
-2.  `ApplicationIntent` 接続文字列キーワードは `ReadOnly` に設定する必要があります。  
+2.  `ApplicationIntent` 接続文字列キーワードが `ReadOnly` に設定されている。  
   
 3.  データベース管理者が可用性グループを構成し、読み取り専用のルーティングを有効にする必要があります。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48137614"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC アプリケーションは、次に示した 3 つの関数のいずれかを使用して、接続を行うことができます。  
   
-|機能|説明|  
+|関数|説明|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)|`SQLBrowseConnect` から返されるサーバーの一覧に VNN は含まれません。 確認できるのはサーバーの一覧だけです。スタンドアロン サーバーであるのか、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が有効な 2 つ以上の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] インスタンスが含まれる Windows Server フェールオーバー クラスタリング (WSFC) クラスターのうちのプライマリ サーバーまたはセカンダリ サーバーであるのかは示されません。 サーバーへの接続時にエラーが返された場合、接続先のサーバーの構成に `ApplicationIntent` 設定との互換性がないことが原因として考えられます。<br /><br /> `SQLBrowseConnect` は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が有効な 2 つ以上の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] インスタンスが含まれる Windows Server フェールオーバー クラスタリング (WSFC) クラスター内のサーバーを認識しません。このため、`SQLBrowseConnect` 接続文字列キーワードは、`MultiSubnetFailover` では無視されます。|  
 |[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|`SQLConnect` は、データ ソース名 (DSN) または接続プロパティを介して、`ApplicationIntent` と `MultiSubnetFailover` の両方をサポートします。|  

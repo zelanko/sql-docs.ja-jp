@@ -1,5 +1,5 @@
 ---
-title: 構成し、SharePoint と診断ログの表示 |Microsoft ドキュメント
+title: 構成し、SharePoint、および診断ログの表示 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9d36c65115f1ad786340ec8a4058bd20c52cb6a1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027219"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410419"
 ---
-# <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>構成し、SharePoint と診断ログの表示
+# <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>構成し、SharePoint と診断ログを表示
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サーバー操作、イベント、およびメッセージは、SharePoint ログ ファイルに記録されます。 このトピックでは、ログ記録レベルの構成とログ ファイルの情報の表示について説明します。 ログ ファイルに記録される [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サーバー イベントを制御できます。 また、ログに記録されるメッセージの重大度も制御できます。 詳細については、「 [使用状況データ収集の構成 &#40;対象は Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)」を参照してください。  
   
- このトピックの内容:  
+ このトピックの内容  
   
 -   [ログ ファイルの場所](#bkmk_filelocation)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34027219"
   
 -   エラーに相関 ID が示されている場合は、ID をコピーしてログ ファイルで検索用語として使用します。  
   
--   「高」または「例外」のエラー状態を検索します。 「[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス」を検索します。  
+-   「高」または「例外」のエラー状態を検索します。 検索"[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]サービス"。  
   
 -   エラーの発生日時を把握している場合は、日付と時刻の情報を使用して、スクロールするエントリの範囲を絞り込みます。  
   
@@ -116,17 +116,17 @@ ms.locfileid: "34027219"
 #### <a name="entries-for-power-pivot-services"></a>PowerPivot サービスのエントリ  
  次の表では、SharePoint ログ ファイルで検出される可能性が最も高い [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サーバー操作のエントリについて説明します。  
   
-|[処理]|領域|カテゴリ|レベル|メッセージ|詳細|  
+|Process|領域|カテゴリ|Level|メッセージ|詳細|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス|使用方法|Verbose|現時点では要求の統計は存在せず、ログに記録するものはありません。|サービスは、事前に定義された間隔でクエリ応答統計を使用状況イベントとして使用状況データ収集システムに報告します。 このメッセージは、報告するクエリ統計がないことを示しています。|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス|Web フロント エンド|Verbose|アプリケーション サーバーのデータ ソースの検索を開始して =\<*パス*>|接続要求を受信すると、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービスは使用できる [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] を識別して要求を処理します。 ファーム内にサーバーが 1 台しかない場合は、すべての要求をローカル サーバーが受け取ります。|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス|使用方法|"詳細"|現時点では要求の統計は存在せず、ログに記録するものはありません。|サービスは、事前に定義された間隔でクエリ応答統計を使用状況イベントとして使用状況データ収集システムに報告します。 このメッセージは、報告するクエリ統計がないことを示しています。|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス|Web フロント エンド|"詳細"|アプリケーション サーバーのデータ ソースの検索を開始しています =\<*パス*>|接続要求を受信すると、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービスは使用できる [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] を識別して要求を処理します。 ファーム内にサーバーが 1 台しかない場合は、すべての要求をローカル サーバーが受け取ります。|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス|Web フロント エンド|"詳細"|アプリケーション サーバーの検索に成功しました。|要求は [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーションに割り当てられました。|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス|Web フロント エンド|Verbose|リダイレクト要求を\< *PowerPivotdata ソース*> を[!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]です。|要求は [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]に転送されました。|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス|[要求の処理]|Verbose|ユーザー名の要求をリダイレクトする\<*SharePoint ユーザー*> データベースへ|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] データ ソースへの権限を借用した接続が、SharePoint ユーザーの代わりに作成されました。|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス|Web フロント エンド|"詳細"|リダイレクトの要求、 \< *PowerPivotdata ソース*> を[!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]します。|要求は [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]に転送されました。|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス|[要求の処理]|"詳細"|ユーザー名の要求をリダイレクトする\<*SharePoint ユーザー*> データベースへ|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] データ ソースへの権限を借用した接続が、SharePoint ユーザーの代わりに作成されました。|  
   
 ## <a name="see-also"></a>参照  
  [Power Pivot 使用状況データ収集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [使用状況データ収集の構成 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+ [使用状況データ収集の構成 &#40;対象は Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

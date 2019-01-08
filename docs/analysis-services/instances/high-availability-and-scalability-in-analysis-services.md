@@ -1,5 +1,5 @@
 ---
-title: 高可用性とスケーラビリティの Analysis Services |Microsoft ドキュメント
+title: Analysis Services の高可用性とスケーラビリティ |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700903"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439504"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services の高可用性とスケーラビリティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -96,13 +96,13 @@ ms.locfileid: "35700903"
 
 - アクティブ/アクティブは現在サポートされていません。 Analysis Services でサポートされている WSFC 構成は、アクティブ/パッシブ (フェールオーバー) のみです。
 - Analysis Services をクラスター化するときは、クラスターに参加するすべてのノードが同じハードウェアまたは非常によく似たハードウェアで実行され、各ノードの操作コンテキストがオペレーティング システムのバージョンとサービス パック、Analysis Services のバージョンとサービス パック (または累積更新プログラム)、およびサーバー モードに関して同じであることを確認してください。
-- パッシブ ノードを別のワークロードのアクティブ ノードとして再利用するのは避けてください。 ノードが両方のワークロードを処理できないと、実際のフェールオーバー状況が発生した場合に、コンピューター使用率の短期的な効果が失われます。
+- 別のワークロードのアクティブ ノードとパッシブ ノードを再利用しないでください。 ノードが両方のワークロードを処理できないと、実際のフェールオーバー状況が発生した場合に、コンピューター使用率の短期的な効果が失われます。
  
- フェールオーバー クラスターで Analysis Services を配置するための詳細な手順と背景情報については、ホワイトペーパー「 [SQL Server Analysis Services をクラスター化する方法](https://msdn.microsoft.com/library/dn736073.aspx)」をご覧ください。 このガイダンスは SQL Server 2012 を対象にしていますが、最新バージョンの Analysis Services にも引き続き適用されます。  
+ このホワイト ペーパーでは、詳細な手順と背景情報については、フェールオーバー クラスターで Analysis Services の展開が用意されています。[SQL Server Analysis Services をクラスター化する方法](https://msdn.microsoft.com/library/dn736073.aspx)します。 このガイダンスは SQL Server 2012 を対象にしていますが、最新バージョンの Analysis Services にも引き続き適用されます。  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services データベースの同期](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Analysis Services 表形式のデータベース用の NUMA 関係の強制](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
- [Analysis Services のケース スタディ: 大規模な商用ソリューションでテーブル モデルの使用](https://msdn.microsoft.com/library/dn751533.aspx)  
+ [Forcing NUMA Node affinity for Analysis Services Tabular Databases (Analysis Services 表形式データベースに対する NUMA ノード アフィニティの強制)](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Analysis Services のケース スタディ:大規模な商用ソリューションで表形式モデルの使用](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 8d47dde7-c941-4280-a934-e2fe3f9a938f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e44342686c8de426032a3f0147b867d6eb1b19e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42c6f97e23ea36e606047f683c7fc118b1726a4b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202952"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403960"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 のインストール
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は、SharePoint にパブリッシュする [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックのクエリ処理と管理を行う、サーバー コンポーネントのコレクションです。 サービスには、Analysis Services エンジンと [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスが含まれます。  
@@ -30,7 +30,7 @@ ms.locfileid: "48202952"
   
  インストールする[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]を使用して、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]インストール メディア。  
   
- 高度な展開シナリオについては、次を参照してください[展開のチェックリスト: Reporting Services、Power View および PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)と[展開のチェックリスト: PowerPivot サーバーへの追加によるスケール アウト、。SharePoint 2010 ファーム](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)します。  
+ 高度な展開シナリオについては、次を参照してください。[展開のチェックリスト。Reporting Services、Power View および PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)と[展開のチェックリスト。SharePoint 2010 ファームに PowerPivot サーバーの追加によるスケール アウト](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [PowerPivot for SharePoint 2010 をインストールする](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
