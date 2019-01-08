@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.agent.job.f1
@@ -12,12 +12,12 @@ ms.assetid: e171d13e-1302-4f0e-88be-67d656aec8d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f8f99faf04c392fbb7a2a11c30b42db4d40d6df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8dceeba78e639ecbe2fd81fbdb1021293e75cf8a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062038"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809344"
 ---
 # <a name="sql-server-agent-properties-job-system-page"></a>[SQL Server エージェントのプロパティ] ダイアログ ボックス ([ジョブ システム] ページ)
   このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスによるジョブの管理方法を表示および変更ができます。  

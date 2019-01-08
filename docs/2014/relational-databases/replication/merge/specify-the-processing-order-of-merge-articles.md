@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], processing order
@@ -14,19 +13,19 @@ ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 569767e74c6666a68b41b5af9914a5a028522bc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb5506a4279ecd11c31d860f68d4c3736425298b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174052"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788534"
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>マージ アーティクルの処理順序の指定
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以降では、マージ パブリケーションのアーティクルの既定の処理順序をオーバーライドすることができます。 これは、たとえば、トリガーを使用して参照整合性を定義し、これらのトリガーを特定の順序で起動する必要がある場合に便利です。  
   
  **アーティクルの処理順序を指定するには**  
   
--   レプリケーション Transact-SQL プログラミング: [マージ テーブル アーティクルの処理順序の指定 &#40;レプリケーション Transact-SQL プログラミング&#41;](../publish/specify-the-processing-order-of-merge-table-articles.md)  
+-   レプリケーション TRANSACT-SQL プログラミング:[マージ テーブル アーティクルの処理順序の指定 (レプリケーション Transact-SQL プログラミング)](../publish/specify-the-processing-order-of-merge-table-articles.md)  
   
 ## <a name="how-processing-order-is-determined"></a>処理順序を決定する方法  
  マージ同期の際、既定ではアーティクルがオブジェクト間の依存関係で必要な順序で処理されます。依存関係には、ベース テーブルに対して定義されている宣言参照整合性 (DRI) 制約も含まれます。 同期処理では、テーブルに対する変更が列挙された後で、これらの変更が適用されます。 DRI が定義されておらず、テーブル アーティクル間に結合フィルターか論理レコードが存在する場合、フィルターや論理レコードで必要な順序でアーティクルが処理されます。 DRI、結合フィルター、論理レコード、またはその他の依存関係で他のアーティクルと関係付けられていないアーティクルは、システム テーブル [sysmergearticles &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/sysmergearticles-transact-sql) 内のアーティクル ニックネームに従って処理されます。  

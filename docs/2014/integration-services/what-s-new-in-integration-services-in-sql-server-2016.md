@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, what's new
@@ -14,12 +13,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7427402df49625c04ab7d1c38dd6bcfe3298e0ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 804e528aed70a6612f35391bd4ad96ebfd03df3a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048542"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792014"
 ---
 # <a name="what39s-new-integration-services"></a>どのような&#39;s 新しい (Integration Services)
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、以前のリリースから変更されていません。  
@@ -29,9 +28,9 @@ ms.locfileid: "48048542"
  関連する変更の詳細については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Business Intelligence を参照してください[Analysis Services と Business Intelligence で新](../analysis-services/what-s-new-in-analysis-services.md)します。  
   
 ##  <a name="ValidateXML"></a> XML タスクでの XML 検証の詳細な出力  
- XML ドキュメントを検証し、有効にすると詳細なエラー出力を取得、 `ValidationDetails` XML タスクのプロパティ。 前に、`ValidationDetails`プロパティが使用可能な XML タスクによる XML 検証にのみ、true または false の結果、エラーやその場所に関する情報が返されます。 次に、設定`ValidationDetails`を true に、出力ファイルに行番号と位置を含むすべてのエラーに関する詳細情報が含まれています。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。 詳細については、「 [Validate XML with the XML Task](control-flow/xml-task.md)」を参照してください。  
+ XML タスクの `ValidationDetails` プロパティを有効にして、XML ドキュメントを検証し、詳細なエラー出力を取得します。 `ValidationDetails` プロパティが利用できるようになる前は、XML タスクによる XML 検証では、true や false のみの結果が返され、エラーやその場所に関する情報は返されませんでした。 次に、設定`ValidationDetails`を true に、出力ファイルに行番号と位置を含むすべてのエラーに関する詳細情報が含まれています。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。 詳細については、「 [Validate XML with the XML Task](control-flow/xml-task.md)」を参照してください。  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] 導入された、`ValidationDetails`プロパティ[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]Service Pack 2。 その時点では、この新しいプロパティは発表されることも文書化されることもありませんでした。 `ValidationDetails`で使用可能なプロパティも[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]と SQL Server 2016 でします。  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] では、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2 で `ValidationDetails` プロパティが導入されました。 その時点では、この新しいプロパティは発表されることも文書化されることもありませんでした。 `ValidationDetails` プロパティは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] と SQL Server 2016 でも利用できます。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 の各エディションがサポートする機能](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
