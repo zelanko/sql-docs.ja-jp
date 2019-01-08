@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.allsubscriptions.tran.f1
@@ -13,12 +12,12 @@ ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75db3b31fbc895aa72bb74d92aa8afb6d932ec95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1383a7cd470e162a2c25a121fea7455ea381c06
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182442"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762084"
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>パブリケーション情報、[すべてのサブスクリプション]\(トランザクション パブリケーション)
   **[すべてのサブスクリプション]** タブには、選択したトランザクション パブリケーションに対するすべてのサブスクリプションの情報が表示されます。  
@@ -26,13 +25,13 @@ ms.locfileid: "48182442"
 ## <a name="options"></a>および  
  サブスクリプションに関する詳細情報やタスクを調べるには、そのサブスクリプションの行を右クリックし、ショートカット メニューのオプションをクリックします。 グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
   
--   **[並べ替え]**: **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
+-   **並べ替え**:1 つ以上の列で並べ替え、**列の並べ替え** ダイアログ ボックス。  
   
--   **[表示する列の選択]**: **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
+-   **表示する列を選択**:列の表示とその表示順序を選択、**列の選択** ダイアログ ボックス。  
   
--   **[フィルター]**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター選択します。  
+-   **フィルター**:列の値に基づいてグリッドの行をフィルター選択、**フィルター設定** ダイアログ ボックス。  
   
--   **[フィルターのクリア]**: グリッドのフィルター設定をすべてクリアします。  
+-   **フィルターのクリア**:グリッドのすべてのフィルター設定をオフにします。  
   
  フィルター設定は各グリッドに固有です。 列の選択と並べ替えは、各パブリッシャーのパブリケーション グリッドなど、同じ種類のすべてのグリッドに適用されます。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48182442"
  状態値 **[パフォーマンス クリティカル]** および **[まもなく期限切れ/期限切れ]** は、しきい値が設定されている場合のみ表示されます。 パフォーマンスの測定としきい値の設定については、「[Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)」 (レプリケーション モニターを使用したパフォーマンスの監視) と「[レプリケーション モニターのしきい値と警告の設定](monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
  **サブスクリプション**  
- 各サブスクリプションの名前です。 *SubscriberName: SubscriptionDatabaseName*という形式になります。  
+ サブスクリプションごとに、フォームでの名前。*SubscriberName:SubscriptionDatabaseName*します。  
   
  **[パフォーマンス]**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 各サブスクリプションのパフォーマンス評価は、レプリケーション モニターにより取得され、履歴パフォーマンスに反映されていない、最も新しい計測値に基づいています。 パフォーマンスは、パフォーマンスしきい値が定義されているパブリケーションへのサブスクリプションについてのみ計測されます。パブリケーションにパフォーマンスしきい値が定義されていない場合、この列には **[有効になっていません]** と表示されます。 パフォーマンス評価は、次のいずれかの値になります。  

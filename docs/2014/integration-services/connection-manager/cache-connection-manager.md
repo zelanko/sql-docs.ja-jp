@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Cache connection manager
@@ -13,12 +12,12 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0d3513446c930d41ef9163708e60ad063244479
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa2c26f086ea67a83308945990375b19164a7d0d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064282"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769144"
 ---
 # <a name="cache-connection-manager"></a>キャッシュ接続マネージャー
   キャッシュ接続マネージャーでは、キャッシュ変換またはキャッシュ ファイル (.caw) からデータを読み取り、そのデータをキャッシュ ファイルに保存できます。 キャッシュ ファイルを使用するようにキャッシュ接続マネージャーを構成したかどうかに関係なく、データは常にメモリに格納されます。  
@@ -52,9 +51,9 @@ ms.locfileid: "48064282"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] デザイナーで設定できるプロパティの詳細については、「 [[キャッシュ接続マネージャー エディター] ダイアログ ボックス](../cache-connection-manager-editor.md)」を参照してください。  
   
- プログラムによる接続マネージャーの構成方法については、「<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>」および「[プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)」を参照してください。  
+ プログラムによる接続マネージャーの構成方法の詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」および「 [プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)」をご覧ください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+ [キャッシュ接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
   

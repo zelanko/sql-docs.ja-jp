@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - resource pools [SQL Server], create
@@ -14,21 +13,21 @@ ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b62c0f104eb5e1d4afd8c495027544252cd180fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051832"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753964"
 ---
 # <a name="create-a-resource-pool"></a>リソース プールの作成
   リソース プールを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)、 [権限](#Permissions)  
+-   **作業を開始する準備:**[制限事項と制約](#LimitationsRestrictions)、[アクセス許可](#Permissions)  
   
--   **リソース プールの作成に使用するもの:**  [SQL Server Management Studio](#CreRPProp)、 [Transact-SQL](#CreRPTSQL)  
+-   **リソースを作成するプールを使用します。**[SQL Server Management Studio](#CreRPProp)、 [TRANSACT-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  CPU の割合の最大値は、CPU の割合の最小値以上にする必要があります。 メモリの割合の最大値は、メモリの割合の最小値以上にする必要があります。  
@@ -72,7 +71,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](resource-governor.md)   
+ [リソース ガバナー](resource-governor.md)   
  [リソース ガバナーの有効化](enable-resource-governor.md)   
  [リソース ガバナー リソース プール](resource-governor-resource-pool.md)   
  [リソース プールの設定の変更](change-resource-pool-settings.md)   

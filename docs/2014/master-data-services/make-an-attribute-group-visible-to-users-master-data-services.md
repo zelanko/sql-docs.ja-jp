@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 13d4cd28d07f174c8ceff417f819f8db1bf63340
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14f9ad5eb733db24f47acad192dbe89543831766
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208312"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750926"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>属性グループのユーザーへの表示 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **[エクスプローラー]** 機能領域のグリッドの上部にタブを表示させる場合は、ユーザーまたはグループに対して属性グループを表示します。  
@@ -28,7 +27,7 @@ ms.locfileid: "48208312"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 -   少なくとも 1 つの属性グループが必要です。 詳細については、「[属性グループを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)」を参照してください。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48208312"
 10. **[保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [属性グループ&#40;マスター データ サービス&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [属性グループを作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
+ [属性グループ (マスター データ サービス)](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+ [属性グループを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], administrative considerations
@@ -14,12 +13,12 @@ ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9b46cca225d0c5abdb912910ee7bb9849c81c831
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050478"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756294"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle パブリッシャーの管理上の注意点
   Oracle データベース システムの管理者は、Oracle パブリッシャーを構成して、レプリケーションの変更追跡のメカニズムを設定した後でも、標準の Oracle データベース ユーティリティを使用したり、通常のシステム管理作業を実行したりすることができます。 しかし、特定の管理作業を実行してパブリッシュされたデータへの影響については注意する必要があります。  

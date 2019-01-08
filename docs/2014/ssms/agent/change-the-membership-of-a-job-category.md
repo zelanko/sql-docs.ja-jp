@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -15,12 +15,12 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f956a6f87142a9b9bae2d8398d69e3fd3ae08c9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f309bf2f339347c6d29000b45bdaab602b3bd752
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106172"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760734"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でジョブ カテゴリのメンバーシップを変更する方法について説明します。  
@@ -41,10 +41,10 @@ ms.locfileid: "48106172"
   
      [SQL Server 管理オブジェクト](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
- 詳細については、「 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)」をご覧ください。  
+ 詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
   

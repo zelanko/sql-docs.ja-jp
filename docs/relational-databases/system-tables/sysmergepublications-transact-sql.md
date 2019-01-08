@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergepublications
@@ -19,12 +18,12 @@ ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2a7ed15f4c971cdd7489084717f2a11ecd9a2e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790280"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748425"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,8 +65,8 @@ ms.locfileid: "47790280"
 |**allow_subscription_copy**|**bit**|サブスクリプション データベースをコピーする機能が有効になっているかどうかを指定します。 **0**コピーが許可されないことを意味します。|  
 |**allow_synctoalternate**|**bit**|代替同期パートナーがこのパブリッシャーと同期できるかどうかを示します。 **0**同期パートナーを使用できないことを意味します。|  
 |**validate_subscriber_info**|**nvarchar(500)**|サブスクライバー情報を取得し、サブスクライバー上でのパラメーター化された行フィルター条件を検証するときに使用される機能の一覧。|  
-|**ad_guidname**|**sysname**|パブリケーションがパブリッシュされるかどうかを指定します、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory。 有効な GUID では、Active Directory でパブリケーションがパブリッシュされることと、GUID は、対応する Active Directory パブリケーション オブジェクトを指定します。 **objectGUID**します。 NULL の場合、パブリケーションは Active Directory にパブリッシュされません。|  
-|**backward_comp_level**|**int**|データベースの互換性レベルです。 次の値のいずれかです。<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**ad_guidname**|**sysname**|パブリケーションが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory にパブリッシュされるかどうかを示します。 有効な GUID では、Active Directory でパブリケーションがパブリッシュされることと、GUID は、対応する Active Directory パブリケーション オブジェクトを指定します。 **objectGUID**します。 NULL の場合、パブリケーションは Active Directory にパブリッシュされません。|  
+|**backward_comp_level**|**int**|データベースの互換性レベルです。 次のいずれかの値になります。<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**達した**|**int**|許可される同時マージ処理の最大数。 値**0**のこのプロパティは、特定の時点で実行されている同時マージ処理の数に制限がないことを意味します。 このプロパティは、1 つのマージ アプリケーションに対して一度に実行できる同時実行マージ処理数の制限値を設定します。 同時にスケジュールに組み込まれているスナップショット処理の数が、指定された実行可能な数より大きい場合、余分なジョブは待ち行列に挿入され、現在実行されているマージ処理が終わるまで待機状態に置かれます。|  
 |**max_concurrent_dynamic_snapshots**|**int**|マージ パブリケーションに対して実行できるフィルター選択されたデータの同時実行スナップショット セッションの最大数です。 場合**0**、任意の時点で、パブリケーションに対して同時に実行できるフィルター選択されたデータの同時実行スナップショット セッションの最大数に制限はありません。 このプロパティは、1 つのマージ アプリケーションに対して一度に実行できる同時実行スナップショット処理数の制限値を設定します。 同時にスケジュールに組み込まれているスナップショット処理の数が、指定された実行可能な数より大きい場合、余分なジョブは待ち行列に挿入され、現在実行されているマージ処理が終わるまで待機状態に置かれます。|  
 |**use_partition_groups**|**smallint**|パブリケーションで事前計算済みパーティションを使用するかどうかを指定します。|  
@@ -82,7 +81,7 @@ ms.locfileid: "47790280"
 |**snapshot_jobid**|**binary(16)**|サブスクライバーによるスナップショット生成処理の開始が可能な場合のスナップショットを生成するエージェント ジョブを示します。|  
 |**allow_web_synchronization**|**bit**|Web 同期では、パブリケーションが有効になっているかどうかを指定します、 **1**パブリケーションに対して Web 同期が有効であることを意味します。|  
 |**web_synchronization_url**|**nvarchar(500)**|Web 同期で使用するインターネット URL の既定値を指定します。|  
-|**allow_partition_realignment**|**bit**|パブリッシャーでの行の変更がパーティションの変更を伴う場合、削除をサブスクライバーに送信するかどうかを示します。<br /><br /> **0** = データ、古いからパーティションは、パブリッシャーでこのデータに加えられた変更は、このサブスクライバーにレプリケートされませんが、サブスクライバーで加えられた変更は、パブリッシャーにレプリケートされます、サブスクライバーで残ります。<br /><br /> **1** = サブスクライバーのパーティションの長い一部でないデータを削除して、パーティション変更の結果を反映するためにサブスクライバーを削除します。<br /><br /> 詳細については、次を参照してください。 [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)します。<br /><br /> 注: この値が、サブスクライバーに残さデータ**0**読み取り専用であるかのように扱う必要がある。 ただし、これは厳密に適用されません、レプリケーション システムです。|  
+|**allow_partition_realignment**|**bit**|パブリッシャーでの行の変更がパーティションの変更を伴う場合、削除をサブスクライバーに送信するかどうかを示します。<br /><br /> **0** = データ、古いからパーティションは、パブリッシャーでこのデータに加えられた変更は、このサブスクライバーにレプリケートされませんが、サブスクライバーで加えられた変更は、パブリッシャーにレプリケートされます、サブスクライバーで残ります。<br /><br /> **1** = サブスクライバーのパーティションの長い一部でないデータを削除して、パーティション変更の結果を反映するためにサブスクライバーを削除します。<br /><br /> 詳細については、次を参照してください。 [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)します。<br /><br /> 注:この値がサブスクライバーに残るデータ**0**読み取り専用であるかのように扱う必要がある。 ただし、これは厳密に適用されません、レプリケーション システムです。|  
 |**retention_period_unit**|**tinyint**|定義するときに使用する単位を定義します。*保有*、これらの値のいずれかを指定することができます。<br /><br /> **0** = 日。<br /><br /> **1**週を = です。<br /><br /> **2** = 月。<br /><br /> **3**年を = です。|  
 |**decentralized_conflicts**|**int**|競合の原因となったサブスクライバーで競合レコードを保存するかどうかを示します。<br /><br /> **0** = 競合レコードはサブスクライバー側では保存されません。<br /><br /> **1** = 競合レコードはサブスクライバーで格納されます。|  
 |**generation_leveling_threshold**|**int**|生成結果に含まれる変更の数を指定します。 生成とは、パブリッシャーまたはサブスクライバーに配信される変更のコレクションです。|  

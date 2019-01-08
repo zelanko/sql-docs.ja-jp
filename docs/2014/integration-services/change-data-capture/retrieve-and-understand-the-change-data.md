@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],retrieving data
@@ -13,12 +12,12 @@ ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b19ad6aba7f81094c08a93c1bcccd1bca466f80d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc856bcee4aa873d2359c444af6147b0ca0909d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193652"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762054"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>変更データを取得および理解する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにおいて、最初のタスクは、変更データを取得するクエリを実行することです。 このクエリは、データ フロー タスクの変換元コンポーネント内で実行します。 その後、下流にある変換や変換先を使用して、変更データを変換先に適用できます。  
@@ -58,6 +57,6 @@ ms.locfileid: "48193652"
 ## <a name="next-step"></a>次の手順  
  変更データを取得するように OLE DB ソースを構成したら、次の手順で、パッケージのデータ フローのデザインを開始します。  
   
- **次のトピック:** [挿入、更新、および削除を処理する](process-inserts-updates-and-deletes.md)  
+ **次のトピック:**[挿入、更新、および削除を処理する](process-inserts-updates-and-deletes.md)  
   
   

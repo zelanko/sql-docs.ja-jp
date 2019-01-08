@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
@@ -13,12 +12,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a62e70239db5688fc37b34f3b11752f43178d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce643cbaa6cfade08b84894bdd1af9b24533392b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151029"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750115"
 ---
 # <a name="general-page"></a>[全般] ページ
   **[オプション]** ダイアログ ボックスの **[Integration Services デザイナー]** ページにある **[全般]** ページを使用すると、パッケージの読み込み、表示、およびアップグレードに関するオプションを指定できます。  
@@ -37,7 +36,7 @@ ms.locfileid: "48151029"
  署名されていないパッケージが読み込まれたときに、警告を表示します。  
   
  **[優先順位制約ラベルを表示する]**  
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]でパッケージを表示する場合に、優先順位制約でどのラベル ([成功]、[失敗]、または [完了]) を表示するかを選択します。  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] でパッケージを表示する場合に、優先順位制約でどのラベル ([成功]、[失敗]、または [完了]) を表示するかを選択します。  
   
  **[スクリプト言語]**  
  新しいスクリプト タスクおよびスクリプト コンポーネントの既定のスクリプト言語を選択します。  
@@ -55,7 +54,7 @@ ms.locfileid: "48151029"
  [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] パッケージをアップグレードするとき、アップグレードされたバージョンのパッケージ用に新しいパッケージ ID を作成します。  
   
 ## <a name="see-also"></a>参照  
- [セキュリティの概要&#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+ [セキュリティの概要 &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [スクリプトによるパッケージの拡張](extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

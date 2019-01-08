@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
@@ -13,12 +12,12 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79d862aa5fa2327a6b88ff1936d92e1c3f45f090
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 831e44cb232dea7f0730c73d360cd787f3895878
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173252"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756994"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>変更データのクエリを準備する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、3 番目に行う最後のタスクは、変更データのクエリを準備してデータ フロー タスクを追加することです。  
@@ -125,7 +124,7 @@ ms.locfileid: "48173252"
   
         ```  
   
-5.  既定のコードを返す行のままに`DtsExecResult.Success`スクリプトの操作を実行します。  
+5.  スクリプトの実行から `DtsExecResult.Success` を返す既定のコード行はそのまま使用します。  
   
 6.  スクリプト開発環境と **[スクリプト タスク エディター]** を閉じます。  
   
@@ -171,7 +170,7 @@ ms.locfileid: "48173252"
         ```  
   
         > [!NOTE]  
-        >  `else`このサンプルで句は、開始日時として null 値を渡すことによって変更データの初期読み込みのクエリを生成します。 このサンプルは、変更データ キャプチャを有効にする前に行われた変更もデータ ウェアハウスにアップロードする必要があるシナリオには対応していません。  
+        >  このサンプルの `else` 句では、開始日時として NULL 値を渡すことによって変更データの最初の読み込みのクエリが生成されます。 このサンプルは、変更データ キャプチャを有効にする前に行われた変更もデータ ウェアハウスにアップロードする必要があるシナリオには対応していません。  
   
 3.  **[SQL 実行タスク エディター]** の **[パラメーター マッピング]** ページで、次のマッピングを行います。  
   
@@ -199,6 +198,6 @@ ms.locfileid: "48173252"
 ## <a name="next-step"></a>次の手順  
  クエリ文字列を準備してデータ フロー タスクを構成したら、次にデータベースから変更データを取得するテーブル値関数を作成します。  
   
- **次のトピック:** [変更データを取得する関数を作成する](create-the-function-to-retrieve-the-change-data.md)  
+ **次のトピック:**[変更データを取得する関数を作成する](create-the-function-to-retrieve-the-change-data.md)  
   
   

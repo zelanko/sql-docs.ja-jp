@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
@@ -17,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69aea0ec22ec03f05f05f10998e955d7f19bffd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9513e58afc764fe8df5719ad03ac575a2632da6b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216162"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770084"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   ピア ツー ピア レプリケーションは、データのコピーを複数のサーバー インスタンス ( *ノード*) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。 ピア ツー ピア レプリケーションはトランザクション レプリケーションを基礎としており、トランザクション的に一貫性のある変更がほぼリアルタイムで反映されます。 これにより、読み取り操作のスケールアウトを必要とするアプリケーションで、クライアントからの読み取りを複数のノードに分散することができます。 また、データがほぼリアルタイムで複数のノードに保持されるため、データの冗長性が実現され、データの可用性が向上します。  
@@ -73,7 +72,7 @@ ms.locfileid: "48216162"
   
  それぞれのオフィスにはデータベースとアプリケーション サーバーが 1 つずつあり、サポート エンジニアがカスタマー コールに関する情報を入力、更新する際に使用されています。 トポロジは時間でパーティション分割されるので、 現在営業中のノードでのみ更新が行われ、その更新は他の参加データベースに送られます。 このトポロジには、次のような利点があります。  
   
--   孤立せず独立性を維持。各オフィスはデータを個別に挿入、更新、または削除できますが、それらはすべて他の参加データベースにレプリケートされるため、データを共有することもできます。  
+-   孤立せず独立性:各オフィスは、挿入、更新、データを個別に削除またはが参加している他のすべてのデータベースにレプリケートされるため、共有データこともできます。  
   
 -   参加データベースのいずれかで障害が発生したり、メンテナンスが行われている場合に高い可用性を実現。  
   

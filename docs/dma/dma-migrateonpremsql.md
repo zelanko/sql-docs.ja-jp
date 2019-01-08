@@ -15,18 +15,18 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 3c16c87ea79e3c80de9f93bc3571a46d0610b22d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643840"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395425"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>SQL Server または Data Migration Assistant を使用して Azure Vm 上の SQL Server にオンプレミスの SQL Server のアップグレードします。
 
 Data Migration Assistant は、Azure Vm または Azure SQL Database で SQL Server オンプレミスと以降のバージョンの SQL Server へのアップグレードまたは SQL Server への移行のシームレスな評価を提供します。
 
-この記事では、Data Migration Assistant を使用して、オンプレミス SQL Server 以降のバージョンの SQL Server または Azure Vm 上の SQL Server をアップグレードするための詳細な手順を説明します。   
+この記事では、Data Migration Assistant を使用して、オンプレミス SQL Server 以降のバージョンの SQL Server または Azure Vm 上の SQL Server をアップグレードするための詳細な手順を説明します。   
 
 ## <a name="create-a-new-migration-project"></a>新しい移行プロジェクトを作成します。
 
@@ -111,5 +111,5 @@ Data Migration Assistant は、バックアップ フォルダー、データ、
 ## <a name="see-also"></a>関連項目
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-- [Data Migration Assistant: 構成の設定](../dma/dma-configurationsettings.md)
-- [Data Migration Assistant: ベスト プラクティス](../dma/dma-bestpractices.md)
+- [Data Migration Assistant:構成設定](../dma/dma-configurationsettings.md)
+- [Data Migration Assistant:ベスト プラクティス](../dma/dma-bestpractices.md)

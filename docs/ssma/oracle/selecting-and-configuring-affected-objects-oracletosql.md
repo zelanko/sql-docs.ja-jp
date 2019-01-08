@@ -13,12 +13,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4034beae4e022379de1cb9cac83f982f512bdc7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688300"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405919"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>影響を受けるオブジェクトの選択と構成 (OracleToSQL)
 このページでは、テーブルを選択することができ、SSMA 前の手順で選択したオブジェクトの実行の結果を検証するときに、外部キーを変更とを比較する必要があります。 また、検証パラメーターをカスタマイズできます。  
@@ -41,19 +41,19 @@ SSMA のテスト担当者は、これらのオブジェクトのいずれかを
   
 -   Rule  
   
--   既定  
+-   既定値  
   
--   Identity  
+-   同一。  
   
 -   [可]  
   
 ## <a name="sql"></a>Sql  
 SQL タブには、「テーブル作成」にはが含まれています。 SQL のテーブルを選択します。  
   
-## <a name="data"></a>data  
+## <a name="data"></a>データ  
 [データ] タブには、選択したテーブル内のデータが表示されます。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
 [プロパティ] タブには、選択したテーブルのプロパティが表示されます。 次のフィールド、[プロパティ] タブの下。  
   
 -   作成または最後に変更  

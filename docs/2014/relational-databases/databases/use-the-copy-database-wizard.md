@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
@@ -26,15 +25,15 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d47f2e7ce32ef77ec7188efbc7c09d053cf8208
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108692"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759114"
 ---
 # <a name="use-the-copy-database-wizard"></a>データベース コピー ウィザードの使用
-  データベース コピー ウィザードを使用すると、サーバーを停止することなく、データベースとそのオブジェクトをサーバー間で簡単にコピーできます。 以前からデータベースをアップグレードすることもできます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。 このウィザードを使用すると、次の操作を実行できます。  
+  データベース コピー ウィザードを使用すると、サーバーを停止することなく、データベースとそのオブジェクトをサーバー間で簡単にコピーできます。 また、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にデータベースをアップグレードすることもできます。 このウィザードを使用すると、次の操作を実行できます。  
   
 -   移動元またはコピー元、および移動先またはコピー先サーバーを選択します。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48108692"
   
      [SQL Server データベースのアップグレード後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -119,10 +118,10 @@ ms.locfileid: "48108692"
      [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー アカウントを使用して接続することをユーザーに許可します。  
   
      **[SQL Server 認証を使用する]**  
-     ユーザーが提供することで接続を許可する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ユーザー名とパスワード。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のユーザー名とパスワードを入力して接続することをユーザーに許可します。  
   
      **ユーザー名**  
-     接続に使用するユーザー名を入力します。 このオプションを使用して接続を選択した場合にのみ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
+     接続に使用するユーザー名を入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証による接続が選ばれている場合にのみ利用できます。  
   
      **Password**  
      ログインのパスワードを入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続が指定されている場合にのみ使用できます。  
@@ -142,13 +141,13 @@ ms.locfileid: "48108692"
      [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー アカウントを使用して接続することをユーザーに許可します。  
   
      **[SQL Server 認証を使用する]**  
-     ユーザーが提供することで接続を許可する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ユーザー名とパスワード。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のユーザー名とパスワードを入力して接続することをユーザーに許可します。  
   
      **ユーザー名**  
-     接続に使用するユーザー名を入力します。 このオプションは使用できるは、選択した場合にのみ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
+     接続に使用するユーザー名を入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択した場合にのみ使用できます。  
   
      **Password**  
-     ログインのパスワードを入力します。 このオプションは使用できるは、選択した場合にのみ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
+     ログインのパスワードを入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択した場合にのみ使用できます。  
   
      **Next**  
      サーバーに接続し、ユーザーを検証します。 このプロセスでは、選択したコンピューター上でユーザーが上記の権限を所有しているかどうかを確認します。  
@@ -229,20 +228,20 @@ ms.locfileid: "48108692"
      **[フォルダーの場所]**  
      ファイル システム上にあるソース データベース ファイルの場所を指定します。  
   
-     例 : C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
+     以下に例を示します。C:\Program files \microsoft SQL Server\MSSQL110 します。MSSQLSERVER\MSSQL\DATA  
   
      **[転送元のサーバーでのファイル共有]**  
      ソース データベース ファイルの場所をファイル共有のパスとして指定します。  
   
      例:"\\\\*server_name*\C$\Program Files\Microsoft SQL Server\MSSQL110 します。MSSQLSERVER\MSSQL\Data  
   
-9. データベース コピー ウィザードを作成、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージからデータベースを転送、**パッケージを構成して** ページで、適切なパッケージをカスタマイズします。  
+9. データベースを転送するための [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージがデータベース コピー ウィザードによって作成されます。 **[パッケージの構成]** ページで、適宜パッケージをカスタマイズしてください。  
   
      **[パッケージの場所]**  
-     場所が表示されます、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージが書き込まれます。  
+     [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージを書き込む場所が表示されます。  
   
      **パッケージ名**  
-     名前を入力、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージ。  
+     [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの名前を入力します。  
   
      **[ログ オプション]**  
      ログ情報を Windows イベント ログとして保存するか、テキスト ファイルとして保存するかを選択します。  
@@ -250,7 +249,7 @@ ms.locfileid: "48108692"
      **[エラー ログ ファイルのパス]**  
      ログ ファイルの場所のパスを指定します。 このオプションは、テキスト ファイルのログのオプションが選択されている場合のみ使用できます。  
   
-10. **[パッケージのスケジュール設定]** ページで、移動操作またはコピー操作をいつ開始するのかを指定します。 かどうかには、システム管理者でないを指定してください、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウントにアクセスできる、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) パッケージ実行サブシステム。  
+10. **[パッケージのスケジュール設定]** ページで、移動操作またはコピー操作をいつ開始するのかを指定します。 システム管理者でない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSIS) パッケージ実行サブシステムへのアクセス権がある [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェント プロキシ アカウントを指定する必要があります。  
   
      **Run immediately**  
      クリックした後、移動またはコピー操作を開始**次**します。  
@@ -279,7 +278,7 @@ ms.locfileid: "48108692"
      **メッセージ**  
      各ステップで返されるメッセージが表示されます。  
   
-##  <a name="FollowUp"></a> 補足情報: SQL Server データベースのアップグレード後  
+##  <a name="FollowUp"></a> フォローしてください：SQL Server データベースのアップグレード後  
  データベース コピー ウィザードを使用して、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のバージョンにアップグレードした後は、データベースが直ちに使用可能となり、自動的にアップグレードされます。 データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、" **フルテキスト アップグレード オプション** " サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションが **[インポート]** または **[再構築]** に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 なお、アップグレード オプションが **[インポート]** に設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 **フルテキスト アップグレード オプション** プロパティの設定の表示と変更については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。  
   
  アップグレード前のユーザー データベースの互換性レベルが 100 以上の場合は、アップグレード後も互換性レベルは変わりません。 アップグレードされたデータベースの互換性レベルが 90 の場合、互換性レベルは 100 に設定されます。これは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされている下限の互換性レベルです。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)」を参照してください。  

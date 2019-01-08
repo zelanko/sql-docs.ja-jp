@@ -23,12 +23,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 429a0d7d29864cb3aeca313f5e69638014ff2887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9feaa3be20692b89b0d0568f1ccacc49c992667
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215122"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408281"
 ---
 # <a name="set-index-options"></a>インデックス オプションの設定
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] におけるインデックスのプロパティを、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して変更する方法について説明します。  
@@ -47,13 +47,13 @@ ms.locfileid: "48215122"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   ALTER INDEX ステートメントに SET 句を使用することによって、ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、IGNORE_DUP_KEY、および STATISTICS_NORECOMPUTE の各オプションが直ちにインデックスに適用されます。  
+-   次のオプションは、ALTER INDEX ステートメントの SET 句を使用して、すぐに、インデックスに適用されます。ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、IGNORE_DUP_KEY、および STATISTICS_NORECOMPUTE します。  
   
--   ALTER INDEX REBUILD または CREATE INDEX WITH DROP_EXISTING を使用してインデックスを再構築する際には、PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP、および DROP_EXISTING (CREATE INDEX のみ) の各オプションを設定できます。  
+-   ALTER INDEX REBUILD または CREATE INDEX WITH DROP_EXISTING のいずれかを使用してインデックスを再構築するときは、次のオプションを設定できます。PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP、および DROP_EXISTING (CREATE INDEX のみ)。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48215122"
   
 2.  プラス記号をクリックして **[テーブル]** フォルダーを展開します。  
   
-3.  インデックスのプロパティを変更するテーブルを右クリックし、 **[デザイン]** を選択します。  
+3.  インデックスのプロパティを変更するテーブルを右クリックし、**[デザイン]** を選択します。  
   
 4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   

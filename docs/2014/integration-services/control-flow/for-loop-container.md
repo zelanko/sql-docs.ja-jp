@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainerdetails.f1
@@ -17,15 +16,15 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1d04762b61376d2e9ede00467d89f62c55634d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92e1ff31c03e3de20d680544f7f432350151f33e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203733"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761804"
 ---
 # <a name="for-loop-container"></a>For ループ コンテナー
-  For ループ コンテナーは、パッケージ内で繰り返す制御フローを定義します。 ループの実装は、プログラミング言語の **For** ループ構造と同じです。 For ループ コンテナー、ループの各繰り返しで式を評価し、式が評価されるまでそのワークフローを繰り返します`False`します。  
+  For ループ コンテナーは、パッケージ内で繰り返す制御フローを定義します。 ループの実装は、プログラミング言語の **For** ループ構造と同じです。 For ループ コンテナーは、ループの各繰り返しで式を評価し、式が `False` に評価されるまでそのワークフローを繰り返します。  
   
  For ループ コンテナーは、次の要素を使用してループを定義します。  
   
@@ -67,6 +66,6 @@ ms.locfileid: "48203733"
   
 ## <a name="see-also"></a>参照  
  [制御フロー](control-flow.md)   
- [Integration Services &#40;です。SSIS&#41; 式](../expressions/integration-services-ssis-expressions.md)  
+ [Integration Services (SSIS) 式](../expressions/integration-services-ssis-expressions.md)  
   
   

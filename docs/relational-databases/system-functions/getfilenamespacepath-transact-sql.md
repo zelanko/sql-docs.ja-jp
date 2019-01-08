@@ -18,12 +18,12 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72d1842f81a8a4a3558b96d1dbece16f8ea4352d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c94fc80bd516c0be5b414aac98e0e4435ec8b53
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727160"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396185"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47727160"
 |値|説明|  
 |-----------|-----------------|  
 |**0**|データベース レベルのディレクトリ内の相対パスを返します。<br /><br /> これは既定値です。|  
-|**1**|以降では、完全な UNC パスを返します、`\\computer_name`します。|  
+|**1**|`\\computer_name` で始まる完全な UNC パスを返します。|  
   
  *@option*  
  パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 *@option* 次の値のいずれかを設定できます。  
@@ -63,7 +63,7 @@ ms.locfileid: "47727160"
 ## <a name="return-type"></a>戻り値の型  
  **nvarchar(max)**  
   
- 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このパスの一部として返されるコンピューター名はクラスター化されたインスタンスの仮想ホスト名、インスタンスが、フェールオーバー クラスターでクラスター化します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスがフェールオーバー クラスターにクラスター化されている場合、このパスの一部として返されるコンピューター名は、クラスター化インスタンスの仮想ホスト名になります。  
   
  データベースが Always On 可用性グループに属している場合、 **FileTableRootPath**関数は、コンピューター名の代わりに、仮想ネットワーク名 (VNN) を返します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47727160"
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\...`  
   
- この論理パスは、物理的な NTFS パスに直接対応しません。 このパスは FILESTREAM のファイル システム フィルター ドライバーと FILESTREAM エージェントによって物理パスに変換されます。 論理パスと物理パスを分離することにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、パスの有効性に影響を与えることなく内部的にデータを再構成できます。  
+ この論理パスは、物理的な NTFS パスに直接対応しません。 FILESTREAM のファイル システム フィルター ドライバーと FILESTREAM エージェントによって物理パスに変換されます。 論理パスと物理パスを分離することにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、パスの有効性に影響を与えることなく内部的にデータを再構成できます。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
  コードとアプリケーションが現在のコンピューターとデータベースから切り離された状態を維持するには、絶対ファイル パスに依存したコードを記述しないでください。 代わりに、完全なパス、ファイルの実行時に取得を使用して、 **FileTableRootPath**と**GetFileNamespacePath**関数を併用、次の例に示すようにします。 既定では、 **GetFileNamespacePath** 関数は、データベースのルート パスの下のファイルの相対パスを返します。  
@@ -84,7 +84,7 @@ SELECT @root = FileTableRootPath();
   
 @fullPath = varchar(1000);  
 SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## <a name="remarks"></a>コメント  
@@ -93,13 +93,13 @@ WHERE Name = N’document.docx’;
  次の例を呼び出す方法を示して、 **GetFileNamespacePath**ファイルまたは FileTable のディレクトリの UNC パスを取得します。  
   
 ```  
--- returns the relative path of the form “\MyFileTable\MyDocDirectory\document.docx”  
+-- returns the relative path of the form "\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath() AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
   
--- returns “\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx”  
+-- returns "\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## <a name="see-also"></a>参照  

@@ -5,8 +5,7 @@ ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistributiondb_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2ba920af692d85cbe8df1df69169fcde01a5c78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c55e0f8d7c2e102b18f7c17fb263c8f76658ede
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610120"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765804"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**]*データベース '*  
  作成するディストリビューション データベースの名前を指定します。 *データベース*は**sysname**、既定値はありません。 指定したデータベースが既に存在しており、まだディストリビューション データベースとしてマークされていない場合は、ディストリビューションの有効化に必要なオブジェクトがインストールされ、データベースがディストリビューション データベースとしてマークされます。 指定したデータベースが、既にディストリビューション データベースとして有効な場合は、エラーが返されます。  
   
- [  **@data_folder=**] **' * * * data_folder'*  
+ [  **@data_folder=**] **'**_data_folder'_  
  ディストリビューション データベース データ ファイルの格納に使用するディレクトリの名前を指定します。 *data_folder*は**nvarchar (255)**、既定値は NULL です。 NULL の場合、その [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータ ディレクトリ、たとえば `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` が使用されます。  
   
- [  **@data_file=**] **'***data_file***'**  
+ [  **@data_file=**] **'**_data_file_**'**  
  データベース ファイルの名前を指定します。 *data_file*は**nvarchar (255)**、既定値は**データベース**します。 NULL を指定した場合、このストアド プロシージャではデータベース名を使用してファイル名が生成されます。  
   
  [  **@data_file_size=**] *data_file_size*  
  データ ファイルの初期サイズをメガバイト (MB) 単位で指定します。 *data_file_size は*s **int**、既定値は 5 MB です。  
   
- [  **@log_folder=**] **'***log_folder***'**  
- データベース ログ ファイルを格納するディレクトリの名前を指定します。 *log_folder*は**nvarchar (255)**、既定値は NULL です。 NULL の場合のインスタンスをデータ ディレクトリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用されます (たとえば、 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`)。  
+ [  **@log_folder=**] **'**_log_folder_**'**  
+ データベース ログ ファイルを格納するディレクトリの名前を指定します。 *log_folder*は**nvarchar (255)**、既定値は NULL です。 NULL の場合、その [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータ ディレクトリ、たとえば `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` が使用されます。  
   
- [  **@log_file=**] **'***log_file***'**  
+ [  **@log_file=**] **'**_log_file_**'**  
  ログ ファイルの名前です。 *log_file*は**nvarchar (255)**、既定値は NULL です。 NULL を指定した場合、このストアド プロシージャではデータベース名を使用してファイル名が生成されます。  
   
  [  **@log_file_size=**] *log_file_size*  
@@ -88,10 +87,10 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@security_mode=**] *security_mode*  
  ディストリビューターに接続するときに使用するセキュリティ モードを指定します。 *security_mode*は**int**、既定値は 1 です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証。**1** Windows 統合認証を指定します。  
   
- [  **@login=**] **'***ログイン***'**  
+ [  **@login=**] **'**_ログイン_**'**  
  ディストリビューターに接続してディストリビューション データベースを作成するときに使用するログイン名を指定します。 これは、必要な場合*security_mode*に設定されている**0**します。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
- [  **@password=**] **'***パスワード***'**  
+ [  **@password=**] **'**_パスワード_**'**  
  ディストリビューターに接続するときに使用するパスワードを指定します。 これは、必要な場合*security_mode*に設定されている**0**します。 *パスワード*は**sysname**、既定値は NULL です。  
   
  [  **@createmode=**] *(createmode = restore)*  

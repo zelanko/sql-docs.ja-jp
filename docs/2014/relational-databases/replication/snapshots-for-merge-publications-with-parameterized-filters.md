@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
@@ -17,12 +16,12 @@ ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 621966b18de4f7b1d8e48c755b9c52edfa5afe77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25df8e37a8ed1a9f88438558edc2770081dbddcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052049"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751015"
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット
   パラメーター化された行フィルターがマージ パブリケーションで使用される場合、レプリケーションは 2 つの要素から成るスナップショットを持つ各サブスクリプションを初期化します。 まず、レプリケーションに必要なすべてのオブジェクトとパブリッシュされたオブジェクトのスキーマが含まれるスキーマ スナップショットが作成されます。ただしデータは含まれません。 次に、スキーマ スナップショットからのオブジェクトとスキーマが含まれるスナップショットと、サブスクリプションのパーティションに属するデータを使用して、各サブスクリプションが初期化されます。 複数のサブスクリプションが特定のパーティションを受信する場合 (つまり、同じスキーマとデータを受信する場合)、そのパーティションのスナップショットは 1 回しか作成されません。複数のサブスクリプションは、同じスナップショットから初期化されます。 パラメーター化された行フィルターの詳細については、「 [パラメーター化された行フィルター](merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  

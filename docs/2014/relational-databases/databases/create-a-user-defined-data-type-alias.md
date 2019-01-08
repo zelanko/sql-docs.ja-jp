@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.userdefineddatatype.general.f1
@@ -16,12 +15,12 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82578b6270bdcb73126c8891f47c41e8ebf1aacf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85eebaa5abbf97b5b7787a788b4294b504a30e10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184042"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768824"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名の作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]にユーザー定義データ型の別名を新しく作成する方法について説明します。  
@@ -40,7 +39,7 @@ ms.locfileid: "48184042"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -88,10 +87,10 @@ ms.locfileid: "48184042"
   
     |||  
     |-|-|  
-    |1 ～ 9|5|  
-    |10 ～ 19|9|  
-    |20 ～ 28|13|  
-    |29 ～ 38|17|  
+    |1 - 9|5|  
+    |10 - 19|9|  
+    |20 - 28|13|  
+    |29 - 38|17|  
   
      `nchar`と`nvarchar`データ型の場合は、ストレージ値は 2 倍の値では常に**長さ**します。  
   

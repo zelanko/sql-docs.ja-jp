@@ -18,12 +18,12 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e20a7ebdffc8972a1c3d1449fd65d2560a1d71b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145242"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753084"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   ファイルと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間の一括コピーに使用するさまざまな制御パラメーターの既定の設定を変更します。  
@@ -68,7 +68,7 @@ iValue
  BCPFILECP  
  *iValue*データ ファイルのコード ページの数が含まれています。 1252 や 850 などのコード ページ番号を指定するか、次のいずれかの値を指定できます。  
   
- BCPFILE_ACP を指定すると、ファイル内のデータには、クライアントの Microsoft Windows&#xAE; コード ページが使用されます。  
+ BCPFILE_ACP ファイル内のデータは、Microsoft Windows では [概要] タブ クライアントのコード ページです。  
   
  BCPFILE_OEMCP を指定すると、ファイル内のデータには、クライアントの OEM コード ページ (既定) が使用されます。  
   
@@ -120,7 +120,7 @@ iValue
  BCPODBC  
  TRUE の場合、指定する**datetime**と**smalldatetime**文字形式で保存される値は、ODBC タイムスタンプ エスケープ シーケンスのプレフィックスとサフィックスが使用されます。 BCPODBC オプションは、BCP_OUT にのみ適用されます。  
   
- FALSE の場合、 **datetime** 1997 年 1 月 1 日を表す値が文字の文字列に変換されます。 1997-01-01 00:00:00.000 します。 TRUE の場合、同じ**datetime**として表される値: {ts ' 1997-01-01 00:00:00.000'}。  
+ FALSE の場合、 **datetime** 1997 年 1 月 1 日を表す値が文字の文字列に変換されます。1997-01-01 00:00:00.000 します。 TRUE の場合、同じ**datetime**として表される値: {ts ' 1997-01-01 00:00:00.000'}。  
   
  BCPROWCOUNT  
  現在 (または最後) の BCP 操作で処理された行数を返します。  

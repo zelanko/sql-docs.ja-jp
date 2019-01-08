@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - e-mail [SMO]
@@ -16,15 +14,15 @@ ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fcf6e57ed33e0799ae61610fdb15bd59aea45de8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 232ea094ac81badfe7a6ec378371b55a0b08103b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221572"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758534"
 ---
 # <a name="using-database-mail"></a>データベース メールの使用
-  SMO では、<xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> プロパティによって参照される <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> オブジェクトで、データベース メール サブシステムを表現します。 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> オブジェクトを使用すると、データベース メール サブシステムを構成して、プロファイルおよびメール アカウントを管理することができます。 SMO<xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>オブジェクトに属している、`Server`オブジェクト、つまり、メール アカウントのスコープがサーバー レベルであります。  
+  SMO では、<xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> プロパティによって参照される <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> オブジェクトで、データベース メール サブシステムを表現します。 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> オブジェクトを使用すると、データベース メール サブシステムを構成して、プロファイルおよびメール アカウントを管理することができます。 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> オブジェクトは `Server` オブジェクトに属しています。これは、メール アカウントのスコープがサーバー レベルであることを意味しています。  
   
 ## <a name="examples"></a>使用例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  

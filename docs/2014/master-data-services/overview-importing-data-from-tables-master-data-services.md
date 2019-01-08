@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
@@ -15,15 +14,15 @@ ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c9113e8e3ae1f65d42b1e55a81cee4dcfc2152b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3f9d1589c9e7434b16ce3f500b44eb1d9374cd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217812"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756814"
 ---
 # <a name="data-import-master-data-services"></a>データのインポート (Master Data Services)
-  データ モデルを作成したら[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、データの追加を開始して、内のデータに変更を加える、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース。   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ステージング テーブル、ストアド プロシージャ、マスター データ マネージャーを使います。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]内のデータのモデルを作成すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでデータの追加と変更ができるようになります。   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ステージング テーブル、ストアド プロシージャ、マスター データ マネージャーを使います。  
   
  使用することも、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]、MDS リポジトリにデータを追加する ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース)。 詳細については、次を参照してください。[データのパブリッシュ&#40;MDS アドインの Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)します。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48217812"
      ステージング ストアド プロシージャや [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] を使って、データを読み込みます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]では、 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ステージング プロセスのサポートは推奨されなくなりました。  
+>  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] では、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ステージング プロセスのサポートは非推奨とされました。  
   
 ## <a name="deactivating-and-deleting-members"></a>メンバーの非アクティブ化と削除  
  非アクティブにしたメンバーは、再びアクティブにできます。 メンバーを再びアクティブにすると、階層およびコレクションにおける属性とメンバーシップが復元されます。 以前のトランザクションはすべてそのままです。 マスター データ マネージャーの **[バージョン管理]** 機能領域の管理者は、非アクティブになっているトランザクションを表示できます。  

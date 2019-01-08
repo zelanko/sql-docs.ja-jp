@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fba7ca3af280beaea72e4055d29e9fc7e444c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b05d3b02c4fcd0d90b0b96a1a32c792537818e1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177192"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757924"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>論理レコードによる関連行への変更のグループ化
     
@@ -98,7 +97,7 @@ ms.locfileid: "48177192"
   
 -   ビジネス ロジック ハンドラーまたはカスタム競合回避モジュールによるカスタム競合解決は、論理レコードに含まれているアーティクルについてはサポートされていません。  
   
--   パラメーター化されたフィルターを含むパブリケーションで論理レコードが使用されている場合、各サブスクライバーをそのパーティションのスナップショットで初期化する必要があります。 サブスクライバーを別の方法で初期化した場合、マージ エージェントは失敗します。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)」をご覧ください。  
+-   パラメーター化されたフィルターを含むパブリケーションで論理レコードが使用されている場合、各サブスクライバーをそのパーティションのスナップショットで初期化する必要があります。 サブスクライバーを別の方法で初期化した場合、マージ エージェントは失敗します。 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)」を参照してください。  
   
 -   論理レコードに関連する競合は、競合表示モジュールに表示されません。 これらの競合に関する情報を表示するには、レプリケーション ストアド プロシージャを使用します。 詳細については、「[マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](../view-conflict-information-for-merge-publications.md)」を参照してください。  
   

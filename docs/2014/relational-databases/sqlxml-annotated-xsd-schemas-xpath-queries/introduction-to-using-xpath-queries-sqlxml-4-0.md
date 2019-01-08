@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], about XPath queries
@@ -16,12 +14,12 @@ ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf30ab6a58648a24e82e96eed7a39c23a3605fe8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184772"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753374"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath クエリの使用について (SQLXML 4.0)
   XML パス言語 (XPath) クエリは、URL の一部として、またはテンプレート内で指定できます。 この結果のフラグメントの構造はマッピング スキーマによって決定され、値はデータベースから取得されます。 このプロセスは、CREATE VIEW ステートメントを使用してビューを作成し、そのビューに対して SQL クエリを記述するのと概念的には同じです。  
@@ -111,7 +109,7 @@ ms.locfileid: "48184772"
 |数値を使用する述語||  
 |算術演算子|mod|  
 |ノード関数|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
-|文字列関数|`string()`, `concat()`, `starts-with()`, `contains()`, `substring-before()`, `substring-after()`, `substring()`, `string-length()`, `normalize()`, `translate()`|  
+|文字列関数|`string()`、`concat()`、`starts-with()`、`contains()`、`substring-before()`、`substring-after()`、`substring()`、`string-length()`、`normalize()`、`translate()`|  
 |Boolean 関数群|`lang()`|  
 |数値関数|`sum()`, `floor()`, `ceiling()`, `round()`|  
 |Union 演算子|&#124;|  

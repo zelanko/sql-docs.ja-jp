@@ -1,24 +1,23 @@
 ---
-title: '手順 4: レッスン 6 のパッケージの展開 | Microsoft Docs'
+title: 手順 4:レッスン 6 パッケージの展開 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7cc4a80849f9dfd12bd7148351c0230e30e64ed
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 02491a0773a3ecbaaf6384bf88d7c07d1549745b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905042"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752632"
 ---
-# <a name="step-4-deploying-the-lesson-6-package"></a>手順 4: レッスン 6 のパッケージの展開
+# <a name="step-4-deploying-the-lesson-6-package"></a>手順 4:レッスン 6 パッケージの展開
   パッケージを配置するには、SQL Server インスタンスの Integration Services の SSISDB カタログにパッケージを追加する必要があります。 このレッスンでは、SSISDB カタログへのレッスン 6 パッケージの追加、パラメーターの設定、パッケージの実行を行います。 このレッスンでは、SQL Server Management Studio を使用して SSISDB カタログにレッスン 6 パッケージを追加し、パッケージを配置します。 パッケージを配置したら、新しい場所を指すようにパラメーターを変更し、パッケージを実行します。  
   
  このレッスンの内容  

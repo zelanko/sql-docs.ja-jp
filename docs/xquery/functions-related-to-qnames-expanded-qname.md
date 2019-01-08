@@ -16,12 +16,12 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 898d2f0982ce5538f853335ea652891e7c390547
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6715c89ff3086f5031e2554929aced39d6f135db
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670051"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501904"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>QNames に関係する関数 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   場合、 *$paramLocal* xs:NCName 型の正しい形式で指定された値がない、空のシーケンスが返され、動的エラーを表します。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、xs:QName 型から別の型への変換はサポートされません。 このため、 **expanded-QName()** 関数は、XML の構築では使用できません。 たとえば、`<e> expanded-QName(…) </e>` など、ノードを構築する場合、型指定なしの値を使用する必要があります。 これは、`expanded-QName()` で返される xs:QName の値を xdt:untypedAtomic に変換する必要性を意味します。 ところが、これはサポートされていません。 この件に関する解決策については、このトピック後半の例を参照してください。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、xs:QName 型から別の型への変換はサポートされません。 このため、 **expanded-QName()** 関数は、XML の構築では使用できません。 たとえば、`<e> expanded-QName(...) </e>` など、ノードを構築する場合、型指定なしの値を使用する必要があります。 これは、`expanded-QName()` で返される xs:QName の値を xdt:untypedAtomic に変換する必要性を意味します。 ところが、これはサポートされていません。 この件に関する解決策については、このトピック後半の例を参照してください。  
   
 -   既存の QName 型の値を変更または比較できます。 たとえば、 `/root[1]/e[1] eq expanded-QName("https://nsURI" "myNS")` 、要素の値と比較します <`e`>、によって返される qname、 **expanded-QName()** 関数。  
   
@@ -133,7 +133,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. expanded-QName() 関数を使用する際の制限事項に対処する  
- **Expanded-qname**関数は、XML の構築では使用できません。 次の例を使って説明します。 この制限を回避するために、この例では最初にノードを挿入してから、そのノードを変更しています。  
+ **Expanded-qname**関数は、XML の構築では使用できません。 次に例を示します。 この制限を回避するために、この例では最初にノードを挿入してから、そのノードを変更しています。  
   
 ```  
 -- if exists drop the table T  
@@ -201,7 +201,7 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>実装の制限事項  
- 1 つの制限がある: **expanded-QName()** 関数が 2 番目の引数として空のシーケンスに受け取り、2 番目の引数が正しくない場合は、実行時エラーを発生させる代わりに空に戻ります。  
+ 1 つの制限があります。**Expanded-QName()** 関数が 2 番目の引数として空のシーケンスに受け取り、2 番目の引数が正しくない場合は、実行時エラーを発生させる代わりに空に戻ります。  
   
 ## <a name="see-also"></a>参照  
  [QNames に関係する関数&#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 用データ マイニング アドイン Office |Microsoft ドキュメント
+title: SQL Server のデータ マイニング アドインを Office の |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2220bb48704fb29aa00236ebf1ec4ad46ecb4007
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 89986d3c8de4a1cbefbccf285a92a2dc19c6c7aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014739"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504750"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Office 用 SQL Server データ マイニング アドイン
 
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office 用データ マイニング アドインは、予測、推奨設定、または検索の分析モデルを構築するために Excel のデータを使用できるようにする軽量な一連の予測分析用ツールです。  
   
 > [!IMPORTANT]
-> データ マイニング アドインを Office には、Office 2016 またはそれ以降のサポートされません。
+> データ マイニング アドインを Office には、以降 Office 2016 ではサポートされません。
   
  アドインのウィザードおよびデータ管理のツールでは、次の一般的なデータ マイニング タスクの実行手順を説明しています。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "34014739"
   
      上級ユーザーの場合、 **詳細クエリ エディター**を使用したドラッグ アンド ドロップによるカスタムの DMX クエリ作成や、Excel VBA を使用した予測の自動化が可能です。  
   
--   **ドキュメントと管理。** データセットを作成しモデルを構築した後は、データとモデル パラメーターの統計サマリーを生成して作業と洞察をドキュメント化できます。  
+-   **ドキュメントと管理。** データ セットを作成し、モデルを構築したら、データとモデル パラメーターの統計サマリーを生成することによって、作業と洞察を文書化します。  
   
--   **調査と視覚化。** データ マイニングは、単なる完全自動化が可能なアクティビティではありません。結果を調査して理解し、有用なアクションにつなげる必要があります。 アドインは、Excel の対話的ビューアー、モデル ダイアグラムをカスタマイズできる Visio テンプレート、追加のフィルタリングまたは修正のためにグラフとテーブルを Excel にエクスポートする機能を備えており、調査に役立ちます。  
+-   **調査と視覚化。** データ マイニングは、完全に自動化できるアクティビティではない - を探索して意味のあるアクションを実行するように、結果を理解する必要があります。 アドインは、Excel の対話的ビューアー、モデル ダイアグラムをカスタマイズできる Visio テンプレート、追加のフィルタリングまたは修正のためにグラフとテーブルを Excel にエクスポートする機能を備えており、調査に役立ちます。  
   
--   **配置と統合。** 有用なモデルを作成した場合、管理ツールを使用してテスト サーバーから別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスにモデルをエクスポートして、実稼働環境にモデルを配置します。  
+-   **配置と統合。** 運用環境に、実験用のサーバーからの別のインスタンスにモデルをエクスポートする管理ツールを使用して、モデルを配置、有用なモデルを作成した場合[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。  
   
      また、作成時のサーバー上にモデルを残したまま、トレーニング データを更新し、Integration Services または DMX スクリプトを使用して予測を実行することもできます。  
   

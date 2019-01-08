@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], defaults
@@ -14,12 +13,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98f50eb8fb9d45c782eb1c134464141a041e30d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14bc2f8445f61cb8cbafb94770c646df4d6a48bb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194182"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748494"
 ---
 # <a name="specify-default-values-for-columns"></a>列の既定値の指定
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して列に入力される既定値を指定できます。 既定値を割り当てなかった場合、ユーザーが列に何も入力しないと、次のようになります。  
@@ -42,7 +41,7 @@ ms.locfileid: "48194182"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   

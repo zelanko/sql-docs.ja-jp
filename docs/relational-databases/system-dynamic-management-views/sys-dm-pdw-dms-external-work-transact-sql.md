@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7a66255683125b78785a41e77d6f8881012c1480
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9c80038b344a942068f040bde040d4a9a29edcae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673031"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419314"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51673031"
 |status|**nvarchar(32)**|ワーカーの状態です。|保留中で、処理、完了、失敗した、中止されました|  
 |start_time|**datetime**|このワーカーの実行の開始時刻。|以上のクエリに、開始時刻には、このワーカーに属しています。 参照してください[sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)します。|  
 |end_time|**datetime**|実行が終了した、失敗、または時刻が取り消されたです。|継続的なまたはキューに置かれた作業者の NULL を表します。 それ以外の場合、start_time より大きい。|  
-|total_elapsed_time|**int**|時間の合計は、ミリ秒単位での実行に費やされました。|以上の値を 0 にします。<br /><br /> Total_elapsed_time では、整数の最大値を超えると、total_elapsed_time 引き続き、最大値になります。 この状態が「、最大値を超過しました」警告を生成します。<br /><br /> 最大値をミリ秒単位は 24.8 日に相当します。|  
+|total_elapsed_time|**int**|時間の合計は、ミリ秒単位での実行に費やされました。|以上の値を 0 にします。<br /><br /> Total_elapsed_time では、整数の最大値を超えると、total_elapsed_time 引き続き、最大値になります。 この状態が"、最大値を超過しました"警告を生成します。<br /><br /> 最大値をミリ秒単位は 24.8 日に相当します。|  
   
  このビューで保持される最大行数は、詳細については、次を参照してください。[システム ビューの最大値](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)します。  
   

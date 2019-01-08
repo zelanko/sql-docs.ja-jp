@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
@@ -13,12 +13,12 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb2138b8eed55e30d884e2e3fba9e1ecb43f7998
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b972a1d2bb1f65a8b8e26005a3af8c10b2dc02f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139632"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757644"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio のユーザー サポート
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、[ヘルプ] メニューと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックという形のユーザー サポートがあります。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] の [ヘルプ] メニューでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に関する情報にアクセスするための方法がいくつか用意されています。 旧バージョンの [ヘルプ] 環境内からは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティや MSDN オンラインのリソースにアクセスすることはできませんでしたが、このバージョンからは可能になりました。 さらに、[ヘルプ] 環境を [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境内に起動するか、専用の外部ウィンドウに起動するかも設定できるようになりました。  

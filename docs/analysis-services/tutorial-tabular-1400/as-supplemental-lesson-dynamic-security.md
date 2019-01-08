@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services チュートリアル補足のレッスン: 動的なセキュリティ |Microsoft Docs'
+title: Analysis Services チュートリアル補足のレッスン:動的なセキュリティ |Microsoft Docs
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: 15ff0eebd7cbbb0815544b18f0f042ef411a3657
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4abe105c2bb083ba4479d4d23418e0e73adce5f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084595"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398431"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>補足のレッスン: 動的なセキュリティ
 
@@ -24,13 +24,13 @@ ms.locfileid: "43084595"
   
 動的なセキュリティを実装するには、モデルに接続し、モデル オブジェクトとデータを参照できるユーザーのユーザー名を含むモデルにテーブルを追加します。 このチュートリアルを使用して作成するモデルは Adventure Works; のコンテキストで、します。ただし、このレッスンを完了するには、独自のドメインからユーザーを含むテーブルを追加する必要があります。 追加されたユーザー名のパスワードが不要です。 を独自のドメインからユーザーの小規模なサンプルでは、EmployeeSecurity テーブルを作成するには、機能を使用する、貼り付け、Excel スプレッドシートから従業員データの貼り付けします。 実際のシナリオでは、ユーザー名を含むテーブルは通常である必要の実際のデータベースのテーブルをデータ ソースとしてたとえば、実際の DimEmployee テーブルです。  
   
-動的なセキュリティを実装するには、2 つの DAX 関数を使用: [USERNAME 関数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)と[LOOKUPVALUE 関数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)します。 行フィルター式に適用されるこれらの関数は、新しいロールで定義されています。 LOOKUPVALUE 関数を使用すると、数式は EmployeeSecurity テーブルの値を指定します。 数式にログオンしたユーザーのユーザー名を指定する USERNAME 関数に値がこのロールに属していることを渡します。 ユーザーは、ロールの行フィルターによって指定されたデータのみを参照できます。 このシナリオでは、営業部の従業員がインターネットに属している販売区域の売上データを参照できますのみを指定します。  
+動的なセキュリティを実装するには、2 つの DAX 関数を使用します。[USERNAME 関数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)と[LOOKUPVALUE 関数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)します。 行フィルター式に適用されるこれらの関数は、新しいロールで定義されています。 LOOKUPVALUE 関数を使用すると、数式は EmployeeSecurity テーブルの値を指定します。 数式にログオンしたユーザーのユーザー名を指定する USERNAME 関数に値がこのロールに属していることを渡します。 ユーザーは、ロールの行フィルターで指定されたデータのみを参照できます。 このシナリオでは、営業部の従業員がインターネットに属している販売区域の売上データを参照できますのみを指定します。  
   
 この Adventure Works テーブル モデルに固有の作業が実際のシナリオに必ずしも適用されない場合には、そのように記載されています。 各作業には、作業の目的を表す追加情報が含まれています。  
   
-このレッスンの推定所要時間: **30 分**  
+このレッスンを完了するまでに時間を推定するには。**30 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 
 この補足のレッスンの記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 この補足のレッスンの作業を実行する前に、前のレッスンをすべて完了している必要があります。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "43084595"
   
 1.  表形式モデル エクスプ ローラーで >**データソース**、接続を右クリックし、クリックして**新しいテーブルのインポート**します。  
 
-    [権限借用の資格情報] ダイアログ ボックスが表示された場合は、「レッスン 2: データの追加」で使用した権限借用の資格情報を入力します。
+    レッスン 2 で使用した場合、ダイアログ ボックスが表示されたら、権限借用の資格情報は、権限借用の資格情報を入力します。データを追加します。
   
 2.  ナビゲーターで、選択、 **DimSalesTerritory**テーブル、およびクリックして **[ok]**。    
   
@@ -116,7 +116,7 @@ FactInternetSales、DimGeography、および DimSalesTerritory テーブルす�
 このタスクでは、ユーザー ロールを作成します。 このロールには、DimSalesTerritory テーブルの行がユーザーに表示を定義する行フィルターが含まれます。 DimSalesTerritory に関連するその他のすべてのテーブルと一対多リレーションシップの方向にフィルターが適用されます。 任意のユーザー ロールのメンバーであるクエリを実行できる EmployeeSecurity テーブル全体をセキュリティで保護するフィルターが適用されます。  
   
 > [!NOTE]  
-> このレッスンで作成する Sales Employees by Territory ロールによって、メンバーが参照 (またはクエリを実行) できるデータは、自分が属する販売区域の売上データのみに制限されます。 追加する場合、ユーザーをメンバーとして、Sales Employees by Territory ロールで作成したロールのメンバーにも存在する[レッスン 11: ロールの作成](../tutorial-tabular-1400/as-lesson-11-create-roles.md)、アクセス許可の組み合わせを取得します。 あるユーザーが複数のロールのメンバーである場合、各ロールに対して定義された権限と行フィルターは累積されます。 これは、ユーザーに権限のロールの組み合わせによって決まります。  
+> このレッスンで作成する Sales Employees by Territory ロールによって、メンバーが参照 (またはクエリを実行) できるデータは、自分が属する販売区域の売上データのみに制限されます。 追加する場合、ユーザーをメンバーとして、Sales Employees by Territory ロールで作成したロールのメンバーにも存在する[レッスン 11。ロールを作成](../tutorial-tabular-1400/as-lesson-11-create-roles.md)、アクセス許可の組み合わせを取得します。 あるユーザーが複数のロールのメンバーである場合、各ロールに対して定義された権限と行フィルターは累積されます。 これは、ユーザーに権限のロールの組み合わせによって決まります。  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Sales Employees by Territory ユーザー ロールを作成するには  
   
@@ -188,6 +188,6 @@ FactInternetSales、DimGeography、および DimSalesTerritory テーブルす�
   
 ## <a name="see-also"></a>参照  
 
-[USERNAME 関数 (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
-[LOOKUPVALUE 関数 (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
+[USERNAME Function (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
+[LOOKUPVALUE Function (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
 [CUSTOMDATA 関数 (DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  

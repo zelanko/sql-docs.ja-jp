@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41aef87375e50d40ccdec3b6d80782ab028bbf1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb60bec3b21b25f22a5ab27025a3b87e5eb303f7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103682"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751374"
 ---
 # <a name="left-ssis-expression"></a>LEFT (SSIS 式)
   指定された文字式の一番左の部分から指定された数の文字を返します。  
@@ -59,7 +58,7 @@ LEFT("Mountain Bike", 8)
 ```  
   
 ## <a name="see-also"></a>参照  
- [右&#40;SSIS 式&#41;](right-ssis-expression.md)   
- [関数&#40;SSIS 式&#41;](functions-ssis-expression.md)  
+ [RIGHT (SSIS 式)](right-ssis-expression.md)   
+ [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articles.f1
@@ -13,12 +12,12 @@ ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23b060d50a3d19b017f9207d1747b7caf5d1cf62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4765c6b9ef6dce7511a2ffe120d60efe8b6d235
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162692"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753274"
 ---
 # <a name="articles"></a>[アーティクル]
   **[アーティクル]** ページでは、パブリケーションにアーティクルとして含めるデータベース オブジェクトを指定します。 1 つまたは複数の他のデータベース オブジェクトに依存するデータベース オブジェクトをパブリッシュする場合、参照されているオブジェクトをすべてパブリッシュする必要があります。 たとえば、テーブルに依存しているビューをパブリッシュする場合は、そのテーブルもパブリッシュする必要があります。  

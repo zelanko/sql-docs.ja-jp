@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_register_custom_scripting
@@ -17,12 +16,12 @@ ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57a58ec761dfbc8a3db0a9bec01ffeb04dc9e0e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57866bdc46e88587d0d8b3db27a416c8153b6003
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700550"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773904"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **sp_register_custom_scripting**スナップショットおよびトランザクション レプリケーションで使用されます。  
   
  このストアド プロシージャは、レプリケートされるテーブルにスキーマ変更を行う前に実行する必要があります。 このストアド プロシージャの使用に関する詳細については、次を参照してください。[再生成カスタム トランザクション プロシージャのスキーマ変更の反映を](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)します。  
@@ -77,7 +76,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、または**db_ddladmin**固定データベース ロールが実行できる**sp _register_custom_scripting**します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_unregister_custom_scripting &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

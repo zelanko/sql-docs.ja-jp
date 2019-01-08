@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server replication]
@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90dcc76466709b1cc3e76406029ea2fffaaea1f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167198"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768454"
 ---
 # <a name="manage-job-steps"></a>ジョブ ステップの管理
   ジョブ ステップは、ジョブがデータベースまたはサーバーで行う処理です。 すべてのジョブには、最低 1 つのジョブ ステップを含める必要があります。 ジョブ ステップには次のような種類があります。  
@@ -57,7 +57,7 @@ ms.locfileid: "48167198"
   
 -   実行可能プログラムまたはオペレーティング システムのコマンド。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのいずれでもサポートされません。  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] タスク。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48167198"
   
 -   コマンドが正常に終了した場合に返されるプロセス終了コード。  
   
--   実行するコマンド。 オペレーティング システム コマンドを実行する場合、これはコマンド自体を指します。 外部プログラムの場合は、 **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"** など、プログラム名とそのプログラムの引数を指します。  
+-   実行するコマンド。 オペレーティング システム コマンドを実行する場合、これはコマンド自体を指します。 外部プログラムの場合は、これは、プログラムと、プログラムの引数の名前などです。**C:\Program files \microsoft SQL Server\100\Tools\Binn\sqlcmd.exe-e-q"sp_who"**  
   
     > [!NOTE]  
     >  システム パスまたはジョブ ステップの実行ユーザーのパスで指定されたディレクトリ内に、実行可能ファイルが存在しない場合は、実行可能ファイルの完全パスを指定する必要があります。  
@@ -206,7 +206,7 @@ Set oServer = nothing
 |Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント Transact-SQL ジョブ ステップのオプションを定義する方法について説明します。|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
 |ActiveX スクリプト ジョブ ステップを作成する方法について説明します。|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Service のコマンドとクエリを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップを作成し、定義する方法について説明します。|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
-|ジョブの実行中にエラーが発生した場合に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行する必要があるアクションについて説明します。|[ジョブ ステップの成功時または失敗時の動作の設定](set-job-step-success-or-failure-flow.md)|  
+|ジョブの実行中にエラーが発生した場合に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行する必要があるアクションについて説明します。|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
 |[ジョブ ステップのプロパティ] ダイアログ ボックスにジョブ ステップの詳細を表示する方法について説明します。|[ジョブ ステップ情報の表示](view-job-step-information.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップのログを削除する方法について説明します。|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   

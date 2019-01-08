@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd85605f6f99563cd042e438e4ffd517a636d133
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176472"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770454"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded イベント クラス
   CPU Threshold Exceeded イベント クラスは、REQUEST_MAX_CPU_TIME_SEC に指定されている CPU しきい値を超えるクエリがリソース ガバナーによって検出されたことを示します。  
@@ -37,7 +36,7 @@ ms.locfileid: "48176472"
 |EventSubClass|`int`|CPU 制限違反。|21|はい|  
 |GroupID|`int`|違反が発生したグループ ID。|66|はい|  
 |OwnerID|`int`|違反の原因となったプロセスの SPID。|58|はい|  
-|SPID|`int`|このイベントを発生させたサーバー プロセスの ID。<br /><br /> 注: システム スレッドが CPU 使用率をバックグラウンド タスクとして検証する場合は、この ID が実際のユーザー SPID と異なることがあります。|12|はい|  
+|SPID|`int`|このイベントを発生させたサーバー プロセスの ID。<br /><br /> 注:システム スレッドが CPU 使用率をバックグラウンド タスクとして検証する場合は、この ID が実際のユーザー SPID と異なることがあります。|12|はい|  
 |StartTime|`datetime`|このイベントが発生した時刻。|14|はい|  
   
 ## <a name="see-also"></a>参照  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - server performance [SQL Server], objects for monitoring
@@ -30,12 +30,12 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0678c741387e6b9e3a252d03fcebad8dcb5e5a52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de0e30a3d0b7daf014753c225ca34bf7a1b0cd17
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133033"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753594"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server オブジェクトの使用
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、システム モニターで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを実行しているコンピューターの利用状況を監視できるオブジェクトとカウンターが用意されています。 オブジェクトとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロックや Windows プロセスなど任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースです。 各オブジェクトには、監視するオブジェクトのさまざまな特性を示す 1 つ以上のカウンターが含まれます。 たとえば、 **SQL Server Locks** オブジェクトには、 **Number of Deadlocks/sec** や **Lock Timeouts/sec**という名前のカウンターが含まれています。  
@@ -110,8 +110,8 @@ ms.locfileid: "48133033"
 |[SQLServer:SQL Statistics](sql-server-sql-statistics-object.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] で受信する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのバッチ数など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリの側面についての情報を提供します。|  
 |[SQLServer:Transactions](sql-server-transactions-object.md)|トランザクションの総数やスナップショット トランザクションの数など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアクティブなトランザクションについての情報を提供します。|  
 |[SQLServer:User Settable](sql-server-user-settable-object.md)|カスタム監視を実行します。 各カウンターは、監視する値を返すカスタム ストアド プロシージャまたは任意の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントにすることができます。|  
-|[SQLServer:Wait Statistics](sql-server-wait-statistics-object.md)|待機についての情報を提供します。|  
-|[SQLServer:Workload Group Stats](sql-server-workload-group-stats-object.md)|リソース ガバナーのワークロード グループ統計に関する情報を提供します。|  
+|[SQLServer:待機の統計](sql-server-wait-statistics-object.md)|待機についての情報を提供します。|  
+|[SQLServer:ワークロード グループ統計](sql-server-workload-group-stats-object.md)|リソース ガバナーのワークロード グループ統計に関する情報を提供します。|  
   
 ##  <a name="SQLServerReplicationPOs"></a> SQL Server レプリケーション パフォーマンス オブジェクト  
  次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション用のパフォーマンス オブジェクトの一覧を示します。  

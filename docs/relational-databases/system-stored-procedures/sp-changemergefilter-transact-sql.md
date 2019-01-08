@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergefilter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d43af8f9ffc64eb7fcfaba5aff7434696376321
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c872cbafb3cb0a3a54c34e489242d9f69339b68f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704850"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748224"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 |プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
-|**filter_type**|**1**|結合フィルター。<br /><br /> このオプションがサポートするために必要な[!INCLUDE[ssEW](../../includes/ssew-md.md)]サブスクライバー。|  
+|**filter_type**|**1**|結合フィルター。<br /><br /> このオプションは、[!INCLUDE[ssEW](../../includes/ssew-md.md)] サブスクライバーをサポートするために必要です。|  
 ||**2**|論理レコード リレーションシップ。|  
 ||**3**|結合フィルターは論理レコード リレーションシップでもあります。|  
 |**filtername**||フィルターの名前。|  
@@ -73,7 +72,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|結合は、一意なキーに基づいて行われます。|  
 ||**false**|結合は、一意なキーに基づいて行われません。|  
   
- [  **@force_invalidate_snapshot =** ]*更によって*  
+ [ **@force_invalidate_snapshot =** ]*更によって*  
  このストアド プロシージャが実行する操作によって既存のスナップショットが無効になることを許可します。 *更によって*は、**ビット**、既定値は、 **0**します。  
   
  **0**スナップショットが無効であることをマージ アーティクルへの変更が発生しないことを指定します。 ストアド プロシージャで、変更に新しいスナップショットが必要であることが検出されると、エラーが発生し、変更は加えられません。  

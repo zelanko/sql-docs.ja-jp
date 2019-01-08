@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.cvmerge.f1
@@ -13,12 +12,12 @@ ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ac6813542099b955b7430309fe6629f6a5648af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156072"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756234"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>[Microsoft レプリケーション競合表示モジュール] \(マージ レプリケーション)
   レプリケーション競合表示モジュールを使用すると、レプリケーション同期中に発生した競合を表示できます。 競合が発生するのは、同一のデータの変更が、2 つの異なるサーバー、たとえば、パブリッシャーとサブスクライバー、または 2 つの異なるサブスクライバーで行われたときです。 競合は、レプリケーションがアーティクルの作成時に選択された競合回避モジュールを使用することで自動的に解決されます。 ただし、レプリケーション競合表示モジュールを使用すると、必要な場合に、競合を回避するための別の解決方法を選択することができます。 発生する可能性がある競合は、次のとおりです。  
@@ -72,7 +71,7 @@ ms.locfileid: "48156072"
  最初の 5 列および競合データが含まれている列を表示します。 これは、テーブルに多数の列があり、競合を解決するのに最も関連する列のみを表示する場合に便利です。 主キーや名前フィールドなど、行を識別するフィールドはテーブルの最初の列にある場合が多いため、このビューでは最初の 5 列が必ず表示されます。  
   
  **列情報の表示** (**[...]**)  
- 列の情報である **[テーブル名]**、 **[列名]**、 **[データ型]**、および **[列の値]** を表示します。 **[列の値]** は、値が読み取り専用と表示されている場合を除いて編集可能です。  
+ 列情報を表示する をクリックします。**テーブル名**、**列名**、**データ型**、および**列の値**します。 **[列の値]** は、値が読み取り専用と表示されている場合を除いて編集可能です。  
   
  **[優先されたデータの送信]**  
  競合回避モジュールによって優先データと見なされた行をそのまま使用します。 読み取り専用と表示されていない列の値は、このボタンをクリックする前に変更することができます。  

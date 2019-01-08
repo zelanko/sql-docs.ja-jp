@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: af11bb2283db0561c176fb543ff21c3c04f676d3
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: b4071bee5e13f415be90328bb7ff0b55ff91087c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100253"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416396"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Windows Azure への SQL Server マネージ バックアップ
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は Windows Azure BLOB ストレージ サービスへの SQL Server バックアップを管理および自動化します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]で使用されるバックアップ方法は、データベースの保有期間とトランザクション ワークロードに基づきます。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] では、指定された保有期間の特定の時点への復元がサポートされています。   
@@ -58,12 +58,12 @@ ms.locfileid: "50100253"
   
  **Windows Azure ストレージ サービス**を使って[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]バックアップ ファイルを格納します。    概念、構造、および Windows Azure ストレージ アカウントを作成するための要件で詳しく説明は、 [Key Components and Concepts 概要](sql-server-backup-to-url.md#intorkeyconcepts)のセクション、 **SQL Server Backup to URL**トピックです。  
   
- **SQL 資格情報**Windows Azure ストレージ アカウントへの認証に必要な情報を格納するために使用します。 SQL 資格情報オブジェクトには、アカウント名とアクセス キー情報が格納されます。 詳細については、次を参照してください。、 [Key Components and Concepts 概要](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)セクション、 **SQL Server Backup to URL**トピック。 Windows Azure ストレージの認証情報を格納する SQL 資格情報を作成する方法のチュートリアルは、次を参照してください。[レッスン 2: Create a SQL Server Credential](../../tutorials/lesson-2-create-a-sql-server-credential.md)します。  
+ **SQL 資格情報**Windows Azure ストレージ アカウントへの認証に必要な情報を格納するために使用します。 SQL 資格情報オブジェクトには、アカウント名とアクセス キー情報が格納されます。 詳細については、次を参照してください。、 [Key Components and Concepts 概要](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)セクション、 **SQL Server Backup to URL**トピック。 Windows Azure ストレージの認証情報を格納する SQL 資格情報を作成する方法のチュートリアルは、次を参照してください。[レッスン 2。SQL Server 資格情報を作成する](../../tutorials/lesson-2-create-a-sql-server-credential.md)します。  
   
 ###  <a name="Concepts_Components"></a> 概念と主要なコンポーネント  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、バックアップ操作を管理する機能です。 内のメタデータを格納、 **msdb**完全なデータベースとトランザクションの書き込みを使用してデータベースのシステム ジョブ ログのバックアップ。  
   
-#### <a name="components"></a>Components  
+#### <a name="components"></a>コンポーネント  
  Transact-SQL は、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を操作するためのメイン インターフェイスです。 システム ストアド プロシージャは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の有効化、構成、および監視に使用します。 システム関数は、既存の構成設定、パラメーター値、およびバックアップ ファイル情報を取得するために使用します。 拡張イベントは、エラーと警告を表示するために使用します。 警告メカニズムを有効にするには、SQL エージェント ジョブと SQL Server のポリシー ベースの管理を使用します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に関連するオブジェクトとその機能の説明の一覧を次に示します。  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成するには、PowerShell コマンドレットも使用できます。 SQL Server Management Studio では、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] によって作成されたバックアップを **[データベースの復元]** タスクを使用して復元することがサポートされています。  
@@ -95,7 +95,7 @@ ms.locfileid: "50100253"
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]では、可用性データベース以外のすべてのデータベースについて SQL Server インスタンス名を使用して Windows Azure ストレージ コンテナーの名前が付けられます。  可用性データベースの場合は、可用性グループの GUID を使用して Windows Azure ストレージ コンテナーの名前が付けられます。  
   
- 可用性データベース以外のデータベースのバックアップ ファイルについては、データベース名の先頭 40 文字、データベース GUID (‘-‘ を除く)、およびタイムスタンプを使用して、名前が作成されます。 各セグメントの間には、区切り記号としてアンダースコア文字が挿入されます。 完全バックアップにはファイル拡張子として **.bak** が使用され、ログ バックアップには **.log** が使用されます。 可用性グループ データベースでは、前のファイル名前付け規則に加え、40 文字のデータベース名の後に可用性グループ データベース GUID が追加されます。 可用性グループ データベース GUID 値は、sys.databases の group_database_id の値です。  
+ 可用性データベース以外のデータベースのバックアップ ファイルには、規則に従って名前が付けられます。データベース名、データベースの GUID の先頭 40 文字を使用して名前を作成せず、'-'、およびタイムスタンプ。 各セグメントの間には、区切り記号としてアンダースコア文字が挿入されます。 完全バックアップにはファイル拡張子として **.bak** が使用され、ログ バックアップには **.log** が使用されます。 可用性グループ データベースでは、前のファイル名前付け規則に加え、40 文字のデータベース名の後に可用性グループ データベース GUID が追加されます。 可用性グループ データベース GUID 値は、sys.databases の group_database_id の値です。  
   
  **データベースの完全バックアップ:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]エージェントは、次のいずれかが当てはまる場合に、データベースの完全バックアップをスケジュールします。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "50100253"
 ###  <a name="support_limits"></a> サポートに関する制限事項  
  次に、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に固有の制限事項をいくつか示します。  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] エージェントでは、データベースのバックアップ (データベースの完全バックアップとログ バックアップ) のみがサポートされます。  ファイル バックアップの自動化はサポートされません。  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] エージェントでは、データベースのバックアップのみをサポートしています。その内訳は、完全バックアップとログ バックアップです。  ファイル バックアップの自動化はサポートされません。  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の操作は、現在 Transact-SQL を使用してサポートされています。 監視とトラブルシューティングは、拡張イベントを使用して行うことができます。 PowerShell と SMO のサポートは、SQL Server インスタンスのストレージと保有期間の既定の設定を構成すること、および SQL Server のポリシー ベースの管理ポリシーに基づいてバックアップ状態と全体的な正常性を監視することに制限されています。  
   
@@ -142,9 +142,9 @@ ms.locfileid: "50100253"
   
 -   現在、Windows Azure ストレージのページ BLOB で許容される最大ファイル サイズは 1 TB です。 ファイルが 1 TB を超えると、バックアップが失敗します。 この状況を回避するには、大規模なデータベースでは圧縮を使用し、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を設定する前にバックアップ ファイルのサイズをテストしておくことをお勧めします。 テストを実行するには、ローカル ディスクにバックアップするか、Transact-SQL の `BACKUP TO URL` ステートメントを使用して手動で Windows Azure ストレージにバックアップします。 詳細については、「 [SQL Server Backup to URL](sql-server-backup-to-url.md)」を参照してください。  
   
--   復旧モデル: 完全復旧モデルまたは一括ログ復旧モデルに設定されたデータベースのみがサポートされています。  単純復旧モデルに設定されたデータベースはサポートされていません。  
+-   復旧モデル:完全または一括ログ モデルに設定する専用のデータベースがサポートされています。  単純復旧モデルに設定されたデータベースはサポートされていません。  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、バックアップ、高可用性、またはディザスター リカバリーをサポートする他のテクノロジで構成されている場合にいくつかの制限がある場合があります。 詳細については、次を参照してください。 [SQL Server Managed Backup to Windows Azure: 相互運用性と共存](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)します。  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は、バックアップ、高可用性、またはディザスター リカバリーをサポートする他のテクノロジで構成されている場合にいくつかの制限がある場合があります。 詳細については、次を参照してください[SQL Server Managed Backup to Windows Azure:。相互運用性と共存](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)します。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
@@ -160,7 +160,7 @@ ms.locfileid: "50100253"
 ## <a name="see-also"></a>参照  
  [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [SQL Server Backup to URL](sql-server-backup-to-url.md)   
- [SQL Server Managed Backup to Windows Azure: 相互運用性と共存](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
+ [SQL Server を Windows Azure マネージ バックアップ:相互運用性と共存](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
  [Windows Azure への SQL Server マネージ バックアップのトラブルシューティング](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
   
   

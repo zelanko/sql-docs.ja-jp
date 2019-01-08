@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 29/10/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ba109b21eb8af1f4260aee43f8a9c5f8d3a3bdb
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: 7568e9deb0462dec9e9527d9876aeefd9ed9c543
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226334"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767664"
 ---
 # <a name="replication-distribution-agent"></a>レプリケーション ディストリビューション エージェント
   レプリケーション ディストリビューション エージェントは、ディストリビューション データベース テーブルに登録されたスナップショット (スナップショット レプリケーションの場合) とトランザクション (トランザクション レプリケーションの場合) を、サブスクライバーのレプリケーション先のテーブルに移動する実行可能ファイルです。  
@@ -205,7 +204,7 @@ ms.locfileid: "50226334"
  ソースに利用可能なレプリケートされたトランザクションがない場合、エージェントはディストリビューターに対してトランザクションなしのメッセージを報告します。 このオプションは、エージェントが次にトランザクションなしのメッセージを報告するまでの待ち時間を指定します。 前回レプリケートされたトランザクションを処理した後で、ソースに利用可能なトランザクションがないことを検出すると、エージェントは必ずトランザクションなしのメッセージを報告します。 既定値は 60 秒です。  
   
  **-OledbStreamThreshold** *oledb_stream_threshold*  
- BLOB データの最小バイト サイズを指定します。この値を超えると、データはストリームとしてバインドされます。 このパラメーターを使用するためには、 **–UseOledbStreaming** を指定する必要があります。 400 バイトから 1048576 バイトまでの値を指定できます。既定値は 16384 バイトです。  
+ BLOB データの最小バイト サイズを指定します。この値を超えると、データはストリームとしてバインドされます。 このパラメーターを使用するためには、**-UseOledbStreaming** を指定する必要があります。 400 バイトから 1048576 バイトまでの値を指定できます。既定値は 16384 バイトです。  
   
  **-Output** *output_path_and_file_name*  
  エージェントの出力ファイルのパスです。 ファイル名が指定されていない場合、出力はコンソールに送られます。 指定された名前のファイルが存在する場合、出力はそのファイルに追加されます。  
@@ -274,7 +273,7 @@ ms.locfileid: "50226334"
  ディストリビューションのサブスクリプションの種類を指定します。 値 **0** はプッシュ サブスクリプションを、値 **1** はプル サブスクリプションを、値 **2** は匿名サブスクリプションを示します。  
   
  **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
- 履歴をログに記録するトランザクション間隔を指定します。 最後に履歴をログに記録してからコミットしたトランザクションの数がこのオプションより多い場合、履歴メッセージがログに記録されます。 既定値は、100 です。 値 **0** は、 **TransactionsPerHistory**が無制限であることを指定します。 See the preceding **–MessageInterval**parameter.  
+ 履歴をログに記録するトランザクション間隔を指定します。 最後に履歴をログに記録してからコミットしたトランザクションの数がこのオプションより多い場合、履歴メッセージがログに記録されます。 既定値は、100 です。 値 **0** は、 **TransactionsPerHistory**が無制限であることを指定します。 上記の **-MessageInterval** パラメーターを参照してください。  
   
  **-UseDTS**  
  データ変換を許可するパブリケーションでは、このパラメーターを指定する必要があります。  

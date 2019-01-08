@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Master Data Services], derived hierarchies with explicit caps
@@ -15,12 +14,12 @@ ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 803ec168404f24ff274ce698515a1a27b61ddd03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89b4eccbe26817d25d8c80a56e602fcbc5ab6e8a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075624"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763464"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>明示的なキャップを持つ派生階層 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の、派生階層の最上位レベルとして使用される明示的階層のレベルは、明示的なキャップを持つ派生階層と呼ばれます。  
@@ -50,15 +49,15 @@ ms.locfileid: "48075624"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|派生階層を作成する。|[派生階層を作成&#40;マスター データ サービス&#41;](create-a-derived-hierarchy-master-data-services.md)|  
-|明示的階層を作成する。|[明示的階層を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|既存の派生階層を削除する。|[派生階層を削除&#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|派生階層を作成する。|[派生階層を作成する (マスター データ サービス)](create-a-derived-hierarchy-master-data-services.md)|  
+|明示的階層を作成する。|[明示的階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|既存の派生階層を削除する。|[派生階層を削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [派生階層&#40;マスター データ サービス&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+-   [派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [明示的階層&#40;マスター データ サービス&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

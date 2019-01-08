@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f4aaba1f67a6b1765057251a23a2b1f3c37ec58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b2c11bff78526f63e01b14dbea2d52e5c0b2df1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169032"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756416"
 ---
 # <a name="use-the-new-instance-wizard"></a>新しいインスタンス ウィザードの使用
   新しいインスタンス ウィザードを使用すると、CDC サービスに新しいインスタンスを作成できます。 Oracle CDC インスタンスの作成ウィザードは、CDC デザイナー コンソールから開きます。 新しいインスタンス ウィザードでは、次の操作を実行できます。  

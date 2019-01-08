@@ -11,12 +11,12 @@ ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 629494b298f9eacee0b7217522698897be401e04
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 866b32abbc7f7e754b11fd286dd0c35eeeb92165
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669893"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400696"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>SQL Server の機能と機能の使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ SQL Server 2016 で導入された最新の機能を含め、SQL Server の主�
 |SQL Server の機能または機能|WideWorldImporters での使用|
 |-----------------------------|---------------------|
 |テンポラル テーブル|すべての参照スタイル参照テーブルと StockItems、顧客、サプライヤーなどの主要なエンティティを含む多くのテンポラル テーブルがあります。 簡単に追跡するこれらのエンティティの履歴により、テンポラル テーブルを使用します。|
-|Json の AJAX 呼び出し|アプリケーションがこれらのテーブルを照会する AJAX 呼び出しを頻繁に使用します。 担当者、顧客、サプライヤー、および StockItems します。 呼び出しは、JSON のペイロード (つまりで返されるデータは JSON データとして書式設定) を返します。 、たとえば、ストアド プロシージャを参照してください`Website.SearchForCustomers`します。|
+|Json の AJAX 呼び出し|頻繁にアプリケーションでは、AJAX 呼び出しを使用して、これらのテーブルのクエリを実行します。担当者、顧客、サプライヤー、および StockItems します。 呼び出しは、JSON のペイロード (つまりで返されるデータは JSON データとして書式設定) を返します。 、たとえば、ストアド プロシージャを参照してください`Website.SearchForCustomers`します。|
 |JSON のプロパティと値のバッグ|複数のテーブルでは、テーブル内のリレーショナル データを拡張する JSON データを保持する列があります。 たとえば、`Application.SystemParameters`アプリケーション設定の列があると`Application.People`レコードのユーザーの基本設定の列があります。 これらのテーブルを使用して、`nvarchar(max)`組み込み関数を使用して CHECK 制約と共に、JSON データを記録する列`ISJSON`値が有効な JSON を列を確認します。|
 |行レベル セキュリティ (RLS)|行レベル セキュリティ (RLS) を使用して、ロールのメンバーシップに基づいて、顧客テーブルへのアクセスを制限できます。 販売区域ごとには、ロールとユーザーがあります。 アクションの表示は、するには、含まれているサンプル script.zip で対応するスクリプトを使用の[サンプルのリリース](https://go.microsoft.com/fwlink/?LinkID=800630)します。|
 |リアルタイム運用分析|(データベースの完全バージョン)コア トランザクション テーブル`Sales.InvoiceLines`と`Sales.OrderLines`運用ワークロードの影響を最小限に抑える、トランザクション データベースでの分析クエリを効率的に実行をサポートするために非クラスター化列ストア インデックスを持つ両方。 同じデータベース内のトランザクションと分析を実行するいると呼ばれるもを[ハイブリッド トランザクション/分析処理 (HTAP)](https://wikipedia.org/wiki/Hybrid_Transactional/Analytical_Processing_(HTAP))します。 アクションの表示は、するには、含まれているサンプル script.zip で対応するスクリプトを使用の[サンプルのリリース](https://go.microsoft.com/fwlink/?LinkID=800630)します。|

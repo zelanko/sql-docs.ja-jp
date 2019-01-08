@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating explicit hierarchies [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71c695a31aacf146bf2e97dd0ad4a38044d6b8b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b24a03ff71e6ddec125dfa40ae4c01b3062ada8c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083582"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761604"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>明示的階層を作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で任意のレベルでメンバーが存在できる不規則階層が必要な場合、明示的階層を作成します。 明示的階層には、1 つのエンティティのメンバーが含まれています。  
@@ -31,7 +30,7 @@ ms.locfileid: "48083582"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 -   エンティティは、明示的階層およびコレクションに対して有効化されている必要があります。 詳細については、次を参照してください。[明示的階層およびコレクションに対してエンティティを有効にする&#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)します。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48083582"
   
 7.  **明示的階層の追加**ページで、**明示的階層名**ボックスに、階層の名前を入力します。  
   
-8.  必要に応じて、 **[必須階層]** チェック ボックスをオフにして、任意の階層として明示的階層を作成します。 階層の種類の詳細については、「[明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)」を参照してください。  
+8.  必要に応じて、 **[必須階層]** チェック ボックスをオフにして、任意の階層として明示的階層を作成します。 階層の種類の詳細については、「 [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)」を参照してください。  
   
 9. クリックして**階層の保存**します。  
   
@@ -59,13 +58,13 @@ ms.locfileid: "48083582"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [統合メンバーを作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)  
+-   [統合メンバーを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)  
   
 -   [階層内のメンバーを移動&#40;マスター データ サービス&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [明示的階層&#40;マスター データ サービス&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
- [明示的なキャップを持つ派生階層 &#40;マスター データ サービス&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [明示的階層名を変更する&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
+ [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
+ [明示的なキャップを持つ派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
+ [明示的階層名を変更する (マスター データ サービス)](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
   
   

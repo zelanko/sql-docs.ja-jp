@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 469a17c909e6b59289dc165c0327e040b2a8503f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d215fe6a1b0c41868816e09e64927b8f736f8c9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158652"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772548"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>変更の追跡グループに属性を追加する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で属性の値に対する変更を追跡する場合、変更の追跡グループに属性を追加します。  
@@ -33,7 +32,7 @@ ms.locfileid: "48158652"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 -   変更の追跡グループに追加する属性が存在する必要があります。 詳細については、「[テキスト属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)」を参照してください。  
   
@@ -69,10 +68,10 @@ ms.locfileid: "48158652"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [属性値の変更に基づいてアクションを開始する&#40;マスター データ サービス&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
+-   [属性値の変更に基づいてアクションを開始する (マスター データ サービス)](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [テキスト属性を作成&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
- [ドメイン ベースの属性を作成する&#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+ [テキスト属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
+ [ドメイン ベースの属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

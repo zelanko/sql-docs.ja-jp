@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
@@ -13,12 +12,12 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afdab0c6817e65e1562a6768394d842a8e944c8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00910fdb6800921a2c6eeae79340eb5d2a79db20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129173"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756364"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>データの変更の準備ができているかどうかを判断する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、2 番目のタスクは、選択した間隔の変更データが準備できていることを確認することです。 選択したエンドポイントまでの変更が非同期キャプチャ プロセスでまだ一部処理されていない可能性があるため、この手順が必要となります。  
@@ -200,7 +199,7 @@ ms.locfileid: "48129173"
         > [!NOTE]  
         >  `Thread.Sleep` メソッドは、ミリ秒単位で指定される引数を想定しています。  
   
-7.  既定のコードを返す行のままに`DtsExecResult.Success`スクリプトの操作を実行します。  
+7.  スクリプトの実行から `DtsExecResult.Success` を返す既定のコード行はそのまま使用します。  
   
 8.  スクリプト開発環境と **[スクリプト タスク エディター]** を閉じます。  
   
@@ -276,7 +275,7 @@ ms.locfileid: "48129173"
   
 6.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックしてスクリプト開発環境を開きます。  
   
-7.  Main プロシージャに、呼び出すことによって、エラー ログに記録するコードを入力します。、`Dts.Log`メソッド、またはいずれかのメソッドを呼び出してイベントを発生させる、`Dts.Events`インターフェイス。 `Dts.TaskResult = Dts.Results.Failure`を返すことによってエラーをパッケージに通知します。  
+7.  Main プロシージャに、`Dts.Log` メソッドを呼び出してエラーをログに記録するコードか、`Dts.Events` インターフェイスのいずれかのメソッドを呼び出してイベントを発生させるコードを入力します。 `Dts.TaskResult = Dts.Results.Failure`を返すことによってエラーをパッケージに通知します。  
   
      次の例は、メッセージをログに書き込む方法を示しています。 詳細については、「 [スクリプト タスクでのログ記録](../extending-packages-scripting/task/logging-in-the-script-task.md)」、「 [スクリプト タスクでのイベントの発生](../extending-packages-scripting/task/raising-events-in-the-script-task.md)」、「 [スクリプト タスクから結果を返す](../extending-packages-scripting/task/returning-results-from-the-script-task.md)」を参照してください。  
   
@@ -335,6 +334,6 @@ ms.locfileid: "48129173"
 ## <a name="next-step"></a>次の手順  
  変更データが準備できていると判断したら、次に変更データのクエリを準備します。  
   
- **次のトピック:** [変更データのクエリを準備する](prepare-to-query-for-the-change-data.md)  
+ **次のトピック:**[変更データのクエリを準備する](prepare-to-query-for-the-change-data.md)  
   
   

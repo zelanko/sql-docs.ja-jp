@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
@@ -19,12 +18,12 @@ ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 111d5b219280537d72e21873091a591634b8afa8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b6298020c1aa39f2c5c319efa492f6832c301f9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082211"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751614"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>SQL Server フェールオーバー クラスターでのノードの追加または削除 (セットアップ)
   次の手順を使用すると、既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスでノードを管理できます。  
@@ -66,7 +65,7 @@ ms.locfileid: "48082211"
   
 8.  [クラスター ノードの構成] ページで、ドロップダウン ボックスを使用して、このセットアップ操作で変更する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの名前を指定します。  
   
-9. [サーバーの構成 - サービス アカウント] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。 フェールオーバー クラスターのインストールでは、アクティブ ノードに指定された設定に基づいて、アカウント名とスタートアップの種類に関する情報がこのページにあらかじめ設定されます。 各アカウントのパスワードを入力する必要があります。 詳細については、「 [サーバーの構成 - サービス アカウント](../../install/server-configuration-service-accounts.md) 」および「 [Windows サービス アカウントと権限の構成](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
+9. [サーバーの構成 - サービス アカウント] ページで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。 フェールオーバー クラスターのインストールでは、アクティブ ノードに指定された設定に基づいて、アカウント名とスタートアップの種類に関する情報がこのページにあらかじめ設定されます。 各アカウントのパスワードを入力する必要があります。 詳細については、「 [サーバーの構成 - サービス アカウント](../../install/server-configuration-service-accounts.md) 」および「 [Windows サービス アカウントと権限の構成](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
      **セキュリティに関する注意** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   

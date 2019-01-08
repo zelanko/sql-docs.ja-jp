@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker / DBM Transport object
@@ -13,12 +13,12 @@ ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb200c251f53ca67ca3e93da350325802f39ac14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0347c7f7e19ae5500f8c5be100ef2d0dc663784
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068692"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748234"
 ---
 # <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server の Broker および DBM Transport オブジェクト
   **Broker / DBM Transport** パフォーマンス オブジェクトには、Service Broker とデータベース ミラーリングに関するネットワーク情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  

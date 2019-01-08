@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d7099149b8725e03430a3d45bc2a6371c1dd1019
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf04a73d2ecc100ae5e9b41b5807aa25b05ba32a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136342"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761644"
 ---
 # <a name="lockreleased-event-class"></a>Lock:Released イベント クラス
   Lock:Released イベント クラスは、ページなどのリソースのロックが解放されたことを示します。  
   
  Lock:Acquired イベント クラスおよび Lock:Released イベント クラスを使用すると、オブジェクトがロックされている時点、取得するロックの種類、およびロックが保持されていた期間を監視できます。 長時間ロックが保持されると、競合の問題が発生する原因となり、調査が必要になることがあります。 たとえば、アプリケーションでは、テーブルの行のロックを取得して、ユーザー入力を待機できます。 ユーザー入力は行われるまでに長時間かかることがあるので、ロックによって他のユーザーがブロックされることがあります。 この場合、アプリケーションは、必要なときにだけロックを要求し、ロックが取得されている場合はユーザー入力を要求しないように再設計する必要があります。  
   
-## <a name="lock-released-event-class-data-columns"></a>Lock:Released イベント クラスのデータ列  
+## <a name="lock-released-event-class-data-columns"></a>ロック:イベント クラスのデータ列をリリースしました。  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  

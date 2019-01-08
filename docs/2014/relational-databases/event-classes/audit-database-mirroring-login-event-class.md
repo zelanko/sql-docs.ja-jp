@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d2c920a2b7341b75f85c2c9cf46bc381d607e1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57ad0c696eb8c81a029160417a7d847d6e0600ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128862"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776484"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **Audit Database Mirroring Login** イベントを作成して、データベース ミラーリングのトランスポートのセキュリティに関する監査メッセージを報告します。  
@@ -51,7 +50,7 @@ ms.locfileid: "48128862"
 |**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
 |**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |**状態**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース コード内のイベントが生成された場所を示します。 イベントが生成された場所によって、状態コードが異なることがあります。 マイクロソフトのサポート エンジニアはこの状態コードを使用して、イベントが生成されたソース コード内の場所を特定することができます。|30|いいえ|  
-|**TargetUserName**|**nvarchar**|ログイン状態。 次のいずれかです。<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> <br /><br /> 注: ISC は、セキュリティ コンテキストの送信 (Initiate Security Context) を表します。 ASC は、セキュリティ コンテキストの受け入れ (Accept Security Context) を表します。|39|いいえ|  
+|**TargetUserName**|**nvarchar**|ログイン状態。 次のいずれかです。<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> <br /><br /> 注:ISC は、セキュリティ コンテキストの送信 (Initiate Security Context) を表します。 ASC は、セキュリティ コンテキストの受け入れ (Accept Security Context) を表します。|39|いいえ|  
 |**TransactionID**|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   
  次の表に、このイベント クラスのサブクラス値を示します。  
