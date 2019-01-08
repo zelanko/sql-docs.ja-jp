@@ -18,12 +18,12 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b3a2a4fb654603e783a50e46b212f746226132ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07ff9e3ed413b3cb73a4dbfb84bac6961acb1759
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194472"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368064"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>SQL Server 2014 チュートリアル
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] では、多数の新しいテクノロジと機能が導入されています。  
@@ -32,9 +32,9 @@ ms.locfileid: "48194472"
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] サーバーを使用している場合は、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] データ プロバイダーがインストールされています。 チュートリアルの作業を正常に実行するには、それらのプロバイダーと連携する [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] サンプル データベースか、または [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] バージョンのサンプル データベースと連携する [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] データ プロバイダーが必要です。  
   
--   ダウンロードする[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]には、チュートリアルで使用するためのサンプル[SQL Server 用サンプル](http://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images)CodePlex でします。  
+-   ダウンロードする[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]には、チュートリアルで使用するためのサンプル[SQL Server 用サンプル](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images)CodePlex でします。  
   
--   ダウンロードする、[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]ブックと[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]で使用するレポート[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]チュートリアルに移動して[PowerPivot と Power View における HelloWorldPicnic サンプル モデル用のイメージ ファイル](http://www.microsoft.com/download/details.aspx?id=26719)します。  
+-   ダウンロードする、[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]ブックと[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]で使用するレポート[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]チュートリアルに移動して[PowerPivot と Power View における HelloWorldPicnic サンプル モデル用のイメージ ファイル](https://www.microsoft.com/download/details.aspx?id=26719)します。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 機能である[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]用アドイン[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition。  
@@ -43,7 +43,7 @@ ms.locfileid: "48194472"
   
 -   ダウンロードする[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]のバージョンの[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]に移動して、データベース[SQL Server 2012 用 Adventure Works](http://msftdbprodsamples.codeplex.com/releases/view/55330) CodePlex でします。  
   
--   一覧を表示する[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]チュートリアルに移動して[チュートリアル](http://msdn.microsoft.com/library/ms167593.aspx)MSDN ライブラリ。  
+-   一覧を表示する[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]チュートリアルに移動して[チュートリアル](https://msdn.microsoft.com/library/ms167593.aspx)MSDN ライブラリ。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  チュートリアルは、以下の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] テクノロジに対して使用できます。  

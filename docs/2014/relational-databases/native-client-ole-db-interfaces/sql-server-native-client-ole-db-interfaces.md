@@ -15,19 +15,19 @@ ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d38957be6a022a3f3837a9f7b2539423dd48b3ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29bd6c25ec826f1c2ce7af1aae6e29462de0b6c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184812"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374484"
 ---
 # <a name="sql-server-native-client-ole-db-reference"></a>SQL Server Native Client (OLE DB) リファレンス
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを実行している 1 つまたは複数のコンピューター上のデータにアクセスする必要があるコンシューマー インターフェイスを公開する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、OLE DB バージョン 2.0 準拠のプロバイダーです。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを実行している 1 つまたは複数のコンピューター上のデータにアクセスする必要があるコンシューマー インターフェイスを公開する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、OLE DB バージョン 2.0 準拠のプロバイダー。  
   
  これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのプログラミング リファレンスは文書化されてすべての OLE DB インターフェイスと、メソッドを使用する場合は、プロバイダー固有の動作を発生を行うインターフェイスやメソッドのみ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DBプロバイダー。  
   
- OLE DB の中核となるインターフェイスやメソッドの完全な説明については、[OLE DB のプログラマー リファレンス](http://go.microsoft.com/fwlink/?LinkId=45232)に関するページをご覧ください。  
+ OLE DB の中核となるインターフェイスやメソッドの完全な説明については、[OLE DB のプログラマー リファレンス](https://go.microsoft.com/fwlink/?LinkId=45232)に関するページをご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

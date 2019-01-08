@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsynctriggers_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c69681e396065f1881ff9ea81468ef85c8b26da4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89a6a997fd272985bd60d0b5d574fea07463f54d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799721"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588287"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,46 +58,46 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@sub_table=**] **'***sub_table***'**  
+ [  **@sub_table=**] **'**_sub_table_**'**  
  サブスクライバー テーブルの名前を指定します。 *sub_table*は**sysname**、既定値はありません。  
   
- [  **@sub_table_owner=**] **'***sub_table_owner***'**  
+ [  **@sub_table_owner=**] **'**_sub_table_owner_**'**  
  サブスクライバー テーブルの所有者の名前を指定します。 *sub_table_owner*は**sysname**、既定値はありません。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_パブリッシャー_**'**  
  パブリッシャー サーバーの名前を指定します。 *パブリッシャー*は**sysname**、既定値はありません。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。 NULL の場合は、現在のデータベースが使用されます。  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_パブリケーション_**'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@ins_proc=**] **'***ins_proc***'**  
+ [  **@ins_proc=**] **'**_ins_proc_**'**  
  パブリッシャー側での同期トランザクション挿入をサポートするストアド プロシージャの名前を指定します。 *ins_proc*は**sysname**、既定値はありません。  
   
- [  **@upd_proc=**] **'***upd_proc***'**  
+ [  **@upd_proc=**] **'**_upd_proc_**'**  
  パブリッシャー側での同期トランザクション更新をサポートするストアド プロシージャの名前を指定します。 *ins_proc*は**sysname**、既定値はありません。  
   
- [  **@del_proc=**] **'***del_proc***'**  
+ [  **@del_proc=**] **'**_del_proc_**'**  
  パブリッシャー側での同期トランザクション削除をサポートするストアド プロシージャの名前を指定します。 *ins_proc*は**sysname**、既定値はありません。  
   
- [  **@cftproc =** ] **'***cftproc***'**  
+ [  **@cftproc =** ] **'**_cftproc_**'**  
  キュー更新が許可されているパブリケーションで使用される自動生成プロシージャの名前を指定します。 *cftproc*は**sysname**、既定値はありません。 即時更新が許可されているパブリケーションの場合、この値は NULL です。 このパラメーターは、キュー更新 (キュー更新、およびフェールオーバーとしてキュー更新を使用する即時更新) が許可されているパブリケーションに適用されます。  
   
- [  **@proc_owner =** ] **'***proc_owner***'**  
+ [  **@proc_owner =** ] **'**_proc_owner_**'**  
  更新パブリケーション (キュー更新パブリケーションおよび即時更新パブリケーション) 用のすべての自動生成ストアド プロシージャの作成時に使用された、パブリッシャーのユーザー アカウントを指定します。 *proc_owner*は**sysname**既定値はありません。  
   
- [  **@identity_col=**] **'***identity_col***'**  
+ [  **@identity_col=**] **'**_identity_col_**'**  
  パブリッシャーでの ID 列の名前を指定します。 *identity_col*は**sysname**、既定値は NULL です。  
   
- [  **@ts_col=**] **'***timestamp_col***'**  
+ [  **@ts_col=**] **'**_timestamp_col_**'**  
  名前を指定します、**タイムスタンプ**パブリッシャーの列。 *timestamp_col*は**sysname**、既定値は NULL です。  
   
- [  **@filter_clause=**] **'***filter_clause***'**  
+ [  **@filter_clause=**] **'**_filter_clause_**'**  
  行フィルターを定義する制限句 (WHERE) を指定します。 制限句を入力する場合は、WHERE キーワードを省略します。 *filter_clause*は**nvarchar (4000)**、既定値は NULL です。  
   
- [  **@primary_key_bitmap =**] **'***primary_key_bitmap***'**  
+ [  **@primary_key_bitmap =**] **'**_primary_key_bitmap_**'**  
  テーブル内の主キー列のビットマップを指定します。 *primary_key_bitmap*は**varbinary (4000)**、既定値はありません。  
   
  [  **@identity_support =** ] *identity_support*  
@@ -107,7 +106,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@independent_agent =** ] *independent_agent*  
  このパブリケーションに対して単独のディストリビューション エージェント (独立エージェント) があるか、パブリケーション データベースとサブスクリプション データベースの 1 つのペアにつき 1 つのディストリビューション エージェント (共有エージェント) があるかを示します。 この値には、パブリッシャーで定義されているパブリケーションの independent_agent プロパティの値が反映されます。 *independent_agent*は bit で、既定値は**0**します。 場合**0**エージェントが共有エージェント。 場合**1**エージェントが独立したエージェント。  
   
- [  **@distributor =** ] **'***ディストリビューター***'**  
+ [  **@distributor =** ] **'**_ディストリビューター_**'**  
  ディストリビューターの名前です。 *ディストリビューター*は**sysname**、既定値はありません。  
   
  [ **@pubversion**=] *pubversion*  

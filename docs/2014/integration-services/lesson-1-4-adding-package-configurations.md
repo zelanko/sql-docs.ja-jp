@@ -1,24 +1,23 @@
 ---
-title: '手順 4: パッケージ構成の追加 | Microsoft Docs'
+title: 手順 4:パッケージ構成の追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20d4e13b765e58ef5bfd7464bbf46b6106e4f525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8284f25e54cadbedd4cb14e07970af249fe4521
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085394"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364014"
 ---
-# <a name="step-4-adding-package-configurations"></a>手順 4: パッケージ構成の追加
+# <a name="step-4-adding-package-configurations"></a>手順 4:パッケージ構成の追加
   ここでは、各パッケージに構成を追加します。 パッケージ プロパティとパッケージ オブジェクトの値は、構成によって実行時に更新されます。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] にはさまざまな種類の構成があります。 構成は、環境変数、レジストリ エントリ、ユーザー定義変数、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブル、XML ファイルに格納できます。 さらに柔軟性を高めるため、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では間接構成を使用することもできます。 これは、環境変数を使用して構成の場所を指定し、それによって実際の値を指定する方法です。 Deployment Tutorial プロジェクトのパッケージでは、XML 構成ファイルと間接構成を組み合わせて使用します。 XML 構成ファイルには、複数のプロパティの構成を含めることができ、必要に応じて複数のパッケージから参照できます。 このチュートリアルでは、パッケージごとに異なる構成ファイルを使用します。  
@@ -130,13 +129,13 @@ ms.locfileid: "48085394"
 12. **[パッケージ構成オーガナイザー]** ダイアログ ボックスで、LoadXMLData EV Configuration が最初に、LoadXMLData Configuration が 2 番目に表示されていることを確認し、 **[閉じる]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 5: 更新したパッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [手順 5:更新パッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。** <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
- [パッケージの構成](../../2014/integration-services/package-configurations.md)   
- [パッケージ構成を作成します。](../../2014/integration-services/create-package-configurations.md)   
+ [[パッケージ構成]](../../2014/integration-services/package-configurations.md)   
+ [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)   
  [パッケージで使用されるファイルへのアクセス](../../2014/integration-services/access-to-files-used-by-packages.md)  
   
   

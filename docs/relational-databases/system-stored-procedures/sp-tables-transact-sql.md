@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da1a73aebef6637b97d400de19379f37a60315a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27c6e8b8a1eca70a9f6d7753c2c0c943444f65d7
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688510"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589781"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,24 +49,24 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@table_name=** ] **'***name***'**  
+ [  **@table_name=** ] **'**_名前_**'**  
  カタログ情報を返すために使用するテーブルを指定します。 *名前*は**nvarchar (384)**、既定値は NULL です。 ワイルドカードによるパターン照合がサポートされています。  
   
- [  **@table_owner=** ] **'***所有者***'**  
+ [  **@table_owner=** ] **'**_所有者_**'**  
  カタログ情報を返すために使用するテーブルのテーブル所有者です。 *所有者*は**nvarchar (384)**、既定値は NULL です。 ワイルドカードによるパターン照合がサポートされています。 所有者を指定しない場合は、基になる DBMS の既定のテーブル可視性ルールが適用されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザーが指定した名前のテーブルを所有している場合、そのテーブルの列が返されます。 所有者を指定せず、かつ、指定した名前のテーブルを現在のユーザーが所有していない場合は、このプロシージャは、データベース所有者が所有する、指定された名前のテーブルを探します。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定された名前のテーブルを現在のユーザーが所有している場合、そのテーブルの列が返されます。 所有者を指定せず、かつ、指定した名前のテーブルを現在のユーザーが所有していない場合は、このプロシージャは、データベース所有者が所有する、指定された名前のテーブルを探します。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
   
- [  **@table_qualifier=** ] **'***修飾子***'**  
- テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
+ [  **@table_qualifier=** ] **'**_修飾子_**'**  
+ テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (_修飾子_**.**_所有者_**.**_名前_)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列はデータベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
   
- [ **、** [  **@table_type=** ] **"'***型***'**、 **'** 型 **'"** ]  
+ [ **、** [  **@table_type=** ] **"'**_型_**'**、 **'** 型 **'"** ]  
  指定したテーブル型のすべてのテーブルに関する情報を持つ、コンマで区切られた値の一覧です。 以下の**テーブル**、 **SYSTEMTABLE**、および**ビュー**します。 *型*は**varchar (100)**、既定値は NULL です。  
   
 > [!NOTE]  
 >  テーブル型はそれぞれ単一引用符で囲み、パラメーター全体を二重引用符で囲む必要があります。 テーブル型は必ず大文字です。 SET QUOTED_IDENTIFIER がオンになっている場合は、単一引用符をそれぞれ 2 つずつ付け、パラメーター全体を単一引用符で囲む必要があります。  
   
- [  **@fUsePattern =** ] **'***fUsePattern***'**  
+ [  **@fUsePattern =** ] **'**_fUsePattern_**'**  
  アンダースコア (_)、パーセント (%)、および角かっこ ([ または ]) の各文字がワイルドカードとして解釈されるかどうかを決定します。 有効な値は 0 (パターン一致がオフ) および 1 (パターン一致がオン) です。 *fUsePattern*は**ビット**、既定値は 1 です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -76,11 +76,11 @@ sp_tables [ [ @table_name = ] 'name' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_QUALIFIER**|**sysname**|テーブル修飾子の名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベース名を表します。 このフィールドには NULL を指定できます。|  
-|**TABLE_OWNER**|**sysname**|テーブルの所有者名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、テーブルを作成したデータベース ユーザーの名前を表します。 このフィールドは常に値を返します。|  
+|**TABLE_QUALIFIER**|**sysname**|テーブル修飾子の名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列はデータベース名を表します。 このフィールドには NULL を指定できます。|  
+|**TABLE_OWNER**|**sysname**|テーブルの所有者名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列はテーブルを作成したデータベース ユーザーの名前を表します。 このフィールドは常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。 このフィールドは常に値を返します。|  
 |**TABLE_TYPE**|**varchar (32)**|テーブル、システム テーブル、またはビューです。|  
-|**「解説」**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値は返されません。|  
+|**「解説」**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この列の値を返しません。|  
   
 ## <a name="remarks"></a>コメント  
  相互運用可能性を最大にするため、ゲートウェイのクライアントは、SQL-92 標準の SQL パターン照合 (% と _ ワイルドカード文字) のみを想定してください。  

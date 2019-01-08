@@ -14,12 +14,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62512268f5c4ee98fc20a142d97bf870d74d9ce6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8f792d128d8d75bdf39a2b04b104b827d74c7b63
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018207"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376424"
 ---
 # <a name="spatial-data-types-overview"></a>空間データ型の概要
   空間データには 2 つの型があります。 `geometry` データ型は平面 (ユークリッド (平面地球)) データをサポートしています。 `geometry` データ型 (平面) は、Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 および SQL MM (ISO 標準) の両方に準拠しています。  
@@ -27,7 +27,7 @@ ms.locfileid: "51018207"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではそのほかに、`geography` データ型もサポートされています。このデータ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。  
   
 > [!IMPORTANT]  
->  空間データ型の機能強化を含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]に導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー「 [SQL Server コードネーム "Denali" の新しい空間機能](http://go.microsoft.com/fwlink/?LinkId=226407)」をダウンロードして参照してください。  
+>  空間データ型の機能強化を含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]に導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー「 [SQL Server コードネーム "Denali" の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)」をダウンロードして参照してください。  
   
 ##  <a name="objects"></a> 空間データ オブジェクト  
  `geometry` データ型と `geography` データ型は、16 の空間データ オブジェクト (インスタンス型) をサポートしています。 ただし、 *インスタンス化可能*なインスタンス型、つまりデータベース内でインスタンスを作成して使用することができる (インスタンス化できる) インスタンス型は、そのうちの 11 種類のみです。 これらのインスタンスとして識別される、親データ型から派生するプロパティによって`Points`、 **LineStrings, CircularStrings**、 `CompoundCurves`、 `Polygons`、`CurvePolygons`または複数のとして`geometry`または`geography`インスタンス、`GeometryCollection`します。 `Geography` 型には、`FullGlobe` という追加のインスタンス型があります。  
@@ -99,9 +99,9 @@ ms.locfileid: "51018207"
   
  OGC の仕様の詳細については、以下を参照してください。  
   
--   [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](http://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [OGC の仕様、簡易機能アクセス Part 2 – SQL オプション](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC の仕様、簡易機能アクセス Part 2 - SQL オプション](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
   
 ##  <a name="circular"></a> 円弧セグメント  
@@ -149,7 +149,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
   
 ```  
 LS LengthCS Length  
-5.65685…6.28318…  
+5.65685...6.28318...  
 ```  
   
  次の図は、各型の格納方法を示します (赤い線は`LineString``@g1`を示し、青い線の表示`CircularString``@g2`)。  

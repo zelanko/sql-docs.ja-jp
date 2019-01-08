@@ -1,6 +1,6 @@
 ---
-title: SQL Server Machine Learning での新しい Python パッケージのインストール |Microsoft Docs
-description: SQL Server 2017 の Machine Learning Services (In-database)、および Machine Learning Server (スタンドアロン) に新しい Python パッケージを追加します。
+title: 新しい Python 言語のパッケージの SQL Server Machine Learning のインストールします。
+description: SQL Server 2017 の Machine Learning Services (In-database)、および Machine Learning Server (スタンドアロン) するには、新しい Python パッケージを追加します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/10/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4e7ad9382f1e85bd5f816065116b5a52c6745c8b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fc038f94fc24b8c0f795efc18c62acc1656877a7
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697644"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432315"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server に新しい Python パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51697644"
 
 + [SQL Server 2017 の Machine Learning Services (In-database)](../install/sql-machine-learning-services-windows-install.md) Python 言語のオプションを使用します。 
 
-+ パッケージは、Windows での Python 3.5 準拠していて、実行である必要があります。 
++ パッケージには、Windows での Python 3.5 対応で、実行をする必要があります。 
 
 + パッケージをインストールするサーバーへの管理アクセスが必要です。
 
@@ -46,13 +46,6 @@ ms.locfileid: "51697644"
 
 この例ではインストールされているパッケージは[CNTK](https://docs.microsoft.com/cognitive-toolkit/)、トレーニング、およびニューラル ネットワークのさまざまな種類の共有で、カスタマイズをサポートするマイクロソフトのディープ ラーニング フレームワークです。
 
-> [!TIP]
-> ヘルプは、Python ツールの構成が必要ですか。 これらのブログを参照してください。
-> 
-> [Machine Learning Server を使用して Python Web サービスの概要](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
-> 
-> [David Crook: Microsoft Cognitive Toolkit と VS Code](https://dacrook.com/cntk-vs-code-awesome/)
-
 ### <a name="step-1-download-the-windows-version-of-the-python-package"></a>手順 1. Windows のバージョンの Python パッケージをダウンロードします。
 
 + インターネットにアクセスできないと、サーバー上の Python パッケージをインストールする場合は、WHL ファイルを別のコンピューターにダウンロードし、サーバーにコピーする必要があります。
@@ -64,7 +57,7 @@ ms.locfileid: "51697644"
 > [!IMPORTANT]
 > パッケージの Windows バージョンを取得できることを確認します。 .Gz のファイルが終了した場合、適切なバージョンではない可能性があります。
 
-このページには、複数のプラットフォームおよび複数の Python バージョンのダウンロードが含まれています: [CNTK のセットアップ](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
+このページには、複数のプラットフォームおよび複数の Python バージョンのダウンロードが含まれています。[CNTK をセットアップします。](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
 ### <a name="step-2-open-a-python-command-prompt"></a>手順 2. Python のコマンド プロンプトを開く
 
@@ -116,7 +109,7 @@ Successfully installed cntk-2.1
 
 インストールが完了したら、次の手順で説明したようにパッケージを使用してすぐに開始できます。
 
-CNTK を使用したディープ ラーニングの例は、これらのチュートリアルを参照してください:[の CNTK Python API](https://cntk.ai/pythondocs/tutorials.html)
+CNTK を使用したディープ ラーニングの例については、これらのチュートリアルを参照してください。[CNTK は Python API](https://cntk.ai/pythondocs/tutorials.html)
 
 パッケージから関数をスクリプトを使用する挿入の標準`import <package_name>`スクリプトの最初の行のステートメント。
 

@@ -1,6 +1,6 @@
 ---
-title: SQL Server での R 拡張機能 |Microsoft Docs
-description: SQL Server での組み込みの R ライブラリと R コードの実行について説明します。
+title: R プログラミング言語の拡張機能 - SQL Server Machine Learning
+description: SQL Server 2016 R Services または SQL Server 2017 Machine Learning Services での組み込みの R ライブラリと R コードの実行について説明します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
@@ -8,23 +8,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: af71b03238a744702288f1f7411a5ebec3911f60
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: cb9b710ca5ec06e05a93dbee5f22ee0860f7f4ca
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892883"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432765"
 ---
-# <a name="r-extension-in-sql-server"></a>SQL Server での R 拡張機能
+# <a name="r-language-extension-in-sql-server"></a>SQL Server で R 言語の拡張機能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-R 拡張機能は、SQL Server Machine Learning サービスにアドオンをリレーショナル データベース エンジンの一部です。 R の実行環境を標準的なライブラリとツール、基本の R ディストリビューションを追加および Microsoft R ライブラリ: [RevoScaleR](../r/revoscaler-overview.md) 、規模の分析のため[MicrosoftML](../using-the-microsoftml-package.md)機械学習アルゴリズム、およびデータまたは SQL Server での R コードにアクセスするための他のライブラリです。
+R 拡張機能は、SQL Server Machine Learning サービスにアドオンをリレーショナル データベース エンジンの一部です。 追加、R の実行環境を標準的なライブラリとツール、基本の R ディストリビューションと Microsoft R ライブラリ。[RevoScaleR](../r/ref-r-revoscaler.md) 、規模の分析のため[MicrosoftML](../r/ref-r-microsoftml.md)機械学習アルゴリズム、およびデータまたは SQL Server での R コードにアクセスするための他のライブラリです。
 
 R 統合は、SQL Server で SQL Server 2016 以降で使用できる[R Services](../r/sql-server-r-services.md)、継続の一部として転送[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)します。
 
 ## <a name="r-components"></a>R コンポーネント
 
-SQL Server には、オープン ソースの独自のパッケージが含まれています。 基本の R ライブラリは、Microsoft の配布のオープン ソース r: Microsoft R を開きます (MRO) によってインストールされます。 R の現在のユーザーは、R コードを移植して、ほとんどまたはまったく変更で SQL Server の外部プロセスとして実行できる必要があります。 MRO は、SQL ツールとは別にインストールされているし、機能拡張フレームワークのコア エンジン プロセスの外部で実行されます。 インストール中には、オープン ソース ライセンスの条項に同意する必要があります。 R です。 その他のオープン ソース ディストリビューションの場合と同様に、標準的な R パッケージを変更なしに実行するその後、 
+SQL Server には、オープン ソースの独自のパッケージが含まれています。 基本の R ライブラリは、オープン ソース r: の Microsoft の配布によってインストールされます。Microsoft R Open (MRO)。 R の現在のユーザーは、R コードを移植して、ほとんどまたはまったく変更で SQL Server の外部プロセスとして実行できる必要があります。 MRO は、SQL ツールとは別にインストールされているし、機能拡張フレームワークのコア エンジン プロセスの外部で実行されます。 インストール中には、オープン ソース ライセンスの条項に同意する必要があります。 R です。 その他のオープン ソース ディストリビューションの場合と同様に、標準的な R パッケージを変更なしに実行するその後、 
 
 SQL Server では、基本の R 実行可能ファイルでは変更しませんが、そのバージョンが独自のパッケージをビルドしてテストする 1 つであるために、セットアップでインストールする R のバージョンを使用する必要があります。 CRAN から発生する可能性のある R のベース ディストリビューションにおける MRO の違いの詳細については、次を参照してください。 [R 言語と Microsoft R 製品、機能との相互運用](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)します。
 
@@ -35,7 +35,7 @@ SQL Server では、基本の R 実行可能ファイルでは変更しません
 | ライブラリ | 説明 |
 |---------|-------------|
 | [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | データ ソース オブジェクトとデータの探索、操作、変換、および視覚エフェクトをサポートしています。 など、さまざまなスケーラブルな機械学習モデルと同様に、リモート計算コンテキストの作成をサポート**rxLinMod**します。 これらの API は、大きすぎてメモリに収まらないデータ セットの分析と複数のコアまたはプロセッサでの分散計算を実行するように最適化されています。 RevoScaleR パッケージでは、高速移動と分析のために使用されるデータのストレージの XDF ファイルの形式もサポートします。 XDF 形式は、カラム型ストレージを使用する移植可能な形式であり、テキスト、SPSS、ODBC 接続などのさまざまなソースからデータを読み込んで操作するために使用できます。 |
-| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 場合の速度と精度、最適化されているだけでなく行のテキストとイメージを操作するための変換を機械学習アルゴリズムが含まれています。 詳細については、次を参照してください。 [MicrosoftML パッケージを使用して、SQL Server で](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package)します。 | 
+| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 場合の速度と精度、最適化されているだけでなく行のテキストとイメージを操作するための変換を機械学習アルゴリズムが含まれています。 詳細については、次を参照してください。 [SQL Server の MicrosoftML](../r/ref-r-microsoftml.md)します。 | 
 
 ## <a name="using-r-in-sql-server"></a>SQL Server で R を使用
 

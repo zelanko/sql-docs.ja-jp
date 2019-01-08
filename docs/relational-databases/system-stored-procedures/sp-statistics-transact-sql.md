@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b365ad16ce7f96ba3e0dd14f278b1ce4db60a32
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4bed4614f3d38ca7700d40b73347430f27e9d82b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657134"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591706"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,24 +47,24 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@table_name=** ] **'***table_name***'**  
+ [  **@table_name=** ] **'**_table_name_**'**  
  カタログ情報を返すために使用するテーブルを指定します。 *table_name*は**sysname**、既定値はありません。 ワイルドカードによるパターン照合はサポートされていません。  
   
- [  **@table_owner=** ] **'***所有者***'**  
+ [  **@table_owner=** ] **'**_所有者_**'**  
  カタログ情報を返すために使用するテーブルのテーブル所有者の名前です。 *table_owner*は**sysname**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされていません。 場合*所有者*が指定されていない、基になる DBMS の既定のテーブル可視性規則が適用されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定された名前のテーブルを現在のユーザーが所有している場合、そのテーブルのインデックスが返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定したテーブルを所有していない*名前*、この手順は、指定したテーブルを探します*名前*によって所有されている、データベース所有者です。 テーブルが存在する場合は、そのテーブルのインデックスが返されます。  
   
- [  **@table_qualifier=** ] **'***修飾子***'**  
- テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このパラメーターはデータベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
+ [  **@table_qualifier=** ] **'**_修飾子_**'**  
+ テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (_修飾子_**.**_所有者_**.**_名前_)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このパラメーターはデータベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
   
- [  **@index_name=** ] **'***index_name***'**  
+ [  **@index_name=** ] **'**_index_name_**'**  
  インデックス名を指定します。 *index_name*は**sysname**、既定値は % です。 ワイルドカードによるパターン照合がサポートされています。  
   
- [  **@is_unique=** ] **'***is_unique***'**  
+ [  **@is_unique=** ] **'**_is_unique_**'**  
  あるかどうか一意インデックスのみ (場合**Y**) を返します。 *is_unique*は**char (1)**、既定値は**N**します。  
   
- [  **@accuracy=** ] **'***精度***'**  
+ [  **@accuracy=** ] **'**_精度_**'**  
  統計のカーディナリティおよび統計のページの精度を指定します。 *精度*は**char (1)**、既定値は**Q**します。指定**E**カーディナリティおよびページが正確になるように、統計が更新されるかどうかを確認します。  
   
  値**E** (sql_ensure) ドライバーを無条件に統計を取得します。  

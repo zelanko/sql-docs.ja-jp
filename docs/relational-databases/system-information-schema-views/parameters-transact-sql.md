@@ -20,24 +20,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 611a7545bfe13a2c9d835abee021c3117be846cd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14001680cd4cf92086ab797f77e2233222d36b67
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657751"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590716"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   現在のデータベース内の、現在のユーザーがアクセスできるユーザー定義の関数またはストアド プロシージャのパラメーターごとに 1 行のデータを返します。 関数の場合は、戻り値情報の行も返します。  
   
- これらのビューから情報を取得するには、完全修飾名を指定 **INFORMATION_SCHEMA. * * * view_name*します。  
+ これらのビューから情報を取得するには、完全修飾名を指定**INFORMATION_SCHEMA** 。_view_name_します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar(** 128 **)**|パラメーターの基になるルーチンのカタログ名。|  
-|**SPECIFIC_SCHEMA**|**nvarchar(** 128 **)**|パラメーターの基になるルーチンのスキーマ名。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**SPECIFIC_SCHEMA**|**nvarchar(** 128 **)**|パラメーターの基になるルーチンのスキーマ名。<br /><br /> <strong>\*\* 重要な\* \*</strong> オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**SPECIFIC_NAME**|**nvarchar(** 128 **)**|パラメーターの基になるルーチンの名前。|  
 |**ORDINAL_POSITION**|**int**|1 から始まるパラメーターの順序を表す位置。 関数の戻り値の場合、この値は 0 です。|  
 |**PARAMETER_MODE**|**nvarchar (** 10 **)**|入力パラメーターの場合は IN、出力パラメーターの場合は OUT、入出力パラメーターの場合は INOUT を返します。|  

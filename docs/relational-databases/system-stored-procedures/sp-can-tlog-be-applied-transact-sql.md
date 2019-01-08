@@ -18,17 +18,17 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e8d29c2a9b273425510342d87349091348c1c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd0273e27ec20f23d683347f9501b72355f560d6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806816"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588604"
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  トランザクション ログ バックアップを適用できるかどうかを確認、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 **sp_can_tlog_be_applied**データベースは Restoring 状態である必要があります。  
+  トランザクション ログ バックアップを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに適用できるかどうかを検証します。 **sp_can_tlog_be_applied**データベースは Restoring 状態である必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@backup_file_name=** ] **'***backup_file_name***'**  
+ [  **@backup_file_name=** ] **'**_backup_file_name_**'**  
  バックアップ ファイルの名前を指定します。 *backup_file_name*は**nvarchar (128)** します。  
   
- [ **@database_name=** ] **'***database_name***'**  
+ [  **@database_name=** ] **'**_database_name_**'**  
  データベースの名前です。 *database_name* は **sysname** です。  
   
- [ **@result=** ] *result* **OUTPUT**  
+ [ **@result=** ] _result_ **OUTPUT**  
  トランザクション ログをデータベースに適用できるかどうかを示します。 *結果*は**ビット**します。  
   
  1 = ログを適用できる  

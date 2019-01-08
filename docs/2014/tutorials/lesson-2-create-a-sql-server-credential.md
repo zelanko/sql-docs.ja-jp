@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: SQL Server 資格情報の作成 |Microsoft Docs'
+title: レッスン 2:SQL Server 資格情報の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ ms.assetid: 64f8805c-1ddc-4c96-a47c-22917d12e1ab
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9bac1f166472fa6f4285779f2054d7121133693f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1a59c1e32773ddc022319a9357ea61802864a77
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194572"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372584"
 ---
-# <a name="lesson-2-create-a-sql-server-credential"></a>レッスン 2: SQL Server 資格情報の作成
-  **資格情報:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。  ここでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]バックアップおよび復元プロセスでは、資格情報を使用して、Windows Azure Blob ストレージ サービスを認証します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 詳細については、表示、コピー、またはストレージ アカウントを再生成する方法についての**アクセス キー**を参照してください[ストレージ アカウント アクセス キー](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx)します。  
+# <a name="lesson-2-create-a-sql-server-credential"></a>レッスン 2:SQL Server 資格情報の作成
+  **資格情報:** A[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資格情報が SQL Server の外部にあるリソースへの接続に必要な認証情報を格納するために使用するオブジェクト。  ここでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップおよび復元プロセスで資格情報を使用して、Windows Azure BLOB ストレージ サービスを認証します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 詳細については、表示、コピー、またはストレージ アカウントを再生成する方法についての**アクセス キー**を参照してください[ストレージ アカウント アクセス キー](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)します。  
   
- 資格情報については、次を参照してください。[資格情報](../relational-databases/security/authentication-access/credentials-database-engine.md)します。  
+ 資格情報の全般的な情報については、「 [資格情報](../relational-databases/security/authentication-access/credentials-database-engine.md)」を参照してください。  
   
- 資格情報が使用されているその他の例では、次を参照してください。 [SQL Server エージェント プロキシの作成](../ssms/agent/create-a-sql-server-agent-proxy.md)です。  
+ 資格情報が使用されるその他の例については、「 [SQL Server エージェント プロキシの作成](../ssms/agent/create-a-sql-server-agent-proxy.md)」参照してください。  
   
 > [!IMPORTANT]  
->  次に示す SQL Server 資格情報を作成するための要件は次の SQL Server のバックアップ プロセスに固有 ([SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)、および[SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md))。 SQL Server では、Azure ストレージにアクセスしてバックアップの書き込みまたは読み取りを行う場合、ストレージ アカウント名とアクセス キーの情報を使用します。  Azure storage にデータベース ファイルを格納するための資格情報を作成する方法の詳細については、次を参照してください[レッスン 3: SQL Server 資格情報の作成。](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+>  次に示す SQL Server 資格情報を作成するための要件は次の SQL Server のバックアップ プロセスに固有 ([SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)、および[SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md))。 SQL Server では、Azure ストレージにアクセスしてバックアップの書き込みまたは読み取りを行う場合、ストレージ アカウント名とアクセス キーの情報を使用します。  Azure storage にデータベース ファイルを格納するための資格情報を作成する方法の詳細については、次を参照してください。[レッスン 3。SQL Server 資格情報を作成します。](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="create-a-sql-server-credential"></a>SQL Server 資格情報の作成  
  SQL Server 資格情報を作成するには、次の手順を実行します。  
@@ -41,8 +41,8 @@ ms.locfileid: "48194572"
   
     ```  
     CREATE CREDENTIAL mycredential   
-    WITH IDENTITY= 'mystorageaccount' – this is the name of the storage account you specified when creating a storage account (See Lesson 1)   
-    , SECRET = '<storage account access key>' – this should be either the Primary or Secondary Access Key for the storage account (See Lesson 1)  
+    WITH IDENTITY= 'mystorageaccount' - this is the name of the storage account you specified when creating a storage account (See Lesson 1)   
+    , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account (See Lesson 1)  
   
     ```  
   
@@ -53,6 +53,6 @@ ms.locfileid: "48194572"
  バックアップの概念と要件の Windows Azure Blob ストレージ サービスの詳細については、次を参照してください。 [SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)します。  
   
 ### <a name="next-lesson"></a>次のレッスン  
- [レッスン 3: Windows Azure Blob ストレージ サービスへのデータベースの完全バックアップの書き込み](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)します。  
+ [レッスン 3:Windows Azure Blob ストレージ サービスに対するデータベースの完全バックアップの書き込み](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)します。  
   
   

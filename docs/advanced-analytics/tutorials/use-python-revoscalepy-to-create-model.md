@@ -1,5 +1,5 @@
 ---
-title: Revoscalepy で Python を使用して、SQL Server でモデルを作成する |Microsoft Docs
+title: Revoscalepy で Python を使用して、SQL Server Machine Learning - モデルを作成
 description: Revoscalepy 関数を使用して、SQL Server でリモートで実行されているデータ サイエンス モデルを作成する Python スクリプトを記述します。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f554badcba282bad7fb386daf8c4c0f4106804b4
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 18c5b801198946313e4f489902eb5f7c9ff0d7af
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100163"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596833"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Revoscalepy で Python を使用して、SQL Server でリモートで実行されているモデルの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +72,7 @@ SQL Server での Python コードを実行する必要があります、 **revo
 すべての操作を実行するには、SQL Server のインスタンスをコンピューティング コンテキストとして使用します。
 
 > [!NOTE]
-> コマンドラインから実行されているこのサンプルのデモについては、このビデオを参照してください: [SQL Server 2017 Advanced Analytics の Python の使用](https://www.youtube.com/watch?v=FcoY795jTcc)
+> コマンドラインから実行されているこのサンプルのデモについては、このビデオを参照してください。[SQL Server 2017 高度な分析の Python の使用](https://www.youtube.com/watch?v=FcoY795jTcc)
 
 ### <a name="sample-code"></a>サンプル コード
 
@@ -130,7 +130,7 @@ def test_linmod_sql():
 
     これらの変数を渡す、 [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata)コンス トラクターを実装する、**データ ソース オブジェクト**という`data_source`します。
 
-+ 作成する、**計算コンテキスト オブジェクト**を使用して、 [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata)コンス トラクター。 その結果、**計算コンテキスト オブジェクト**という`sql_cc`。
++ 作成する、**計算コンテキスト オブジェクト**を使用して、 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver)コンス トラクター。 その結果、**計算コンテキスト オブジェクト**という`sql_cc`。
 
     この例では、計算コンテキストとして使用する同じ SQL Server インスタンスにデータがあるという前提で、データ ソースで同じ接続文字列を使用して、再使用します。 
     

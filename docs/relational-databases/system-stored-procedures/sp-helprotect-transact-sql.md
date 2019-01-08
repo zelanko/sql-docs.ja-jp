@@ -18,12 +18,12 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec91d276308b38a16763dc824989d28fd66fd837
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23b0ba70ee6141ab8453aa3e6949ceff2d537b2c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595652"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591186"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +48,18 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@name =** ] **'***object_statement***'**  
- レポートする権限が存在する、現在のデータベースのオブジェクトまたはステートメントの名前を指定します *object_statement*は**nvarchar (776)** の既定値は NULL には、すべてのオブジェクトとステートメントの権限が返されます。 値がオブジェクト (テーブル、ビュー、ストアド プロシージャ、または拡張ストアド プロシージャ) の場合は、現在のデータベース内の有効なオブジェクトであることが必要です。 オブジェクト名は、フォームで、所有者の修飾子を含めることができます*所有者 ***.*** オブジェクト*します。  
+ [  **@name =** ] **'**_object_statement_**'**  
+ レポートする権限が存在する、現在のデータベースのオブジェクトまたはステートメントの名前を指定します *object_statement*は**nvarchar (776)** の既定値は NULL には、すべてのオブジェクトとステートメントの権限が返されます。 値がオブジェクト (テーブル、ビュー、ストアド プロシージャ、または拡張ストアド プロシージャ) の場合は、現在のデータベース内の有効なオブジェクトであることが必要です。 オブジェクト名は、フォームで、所有者の修飾子を含めることができます_所有者_**.**_オブジェクト_します。  
   
  場合*object_statement*ステートメント、CREATE ステートメントであることができます。  
   
- [  **@username =** ] **'***これ***'**  
+ [  **@username =** ] **'**_これ_**'**  
  レポートされる権限に関連するプリンシパルの名前を指定します。 *これ*は**sysname**の既定値は NULL には、現在のデータベースにすべてのプリンシパルが返されます。 *これ*現在のデータベースに存在する必要があります。  
   
- [  **@grantorname =** ] **'***grantor***'**  
+ [  **@grantorname =** ] **'**_grantor_**'**  
  権限を許可したプリンシパルの名前を指定します。 *権限の許可者*は**sysname**の既定値は NULL には、データベース内のすべてのプリンシパルにより許可された権限のすべての情報が返されます。  
   
- [ **@permissionarea =** ] **'***type***'**  
+ [  **@permissionarea =** ] **'**_型_**'**  
  オブジェクトのアクセス許可を表示するかどうかを示す文字の文字列 (文字の文字列**o**)、ステートメント権限 (文字の文字列**s**)、またはその両方 (**os**)。 *型*は**varchar (10)**、既定値は**os**します。 *型*の任意の組み合わせは、 **o**と**s**、または間の空白またはコンマなし**o**と**s**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -78,15 +78,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**列**|**sysname**|権限の種類:<br /><br /> All = オブジェクトの現在の列すべてに対する権限<br /><br /> New = 今後 ALTER ステートメントを使用して変更される可能性のある、オブジェクトの新しい列に対する権限<br /><br /> All+New = All と New を組み合わせた権限<br /><br /> 権限の種類が列に適用されない場合は、ピリオドを返します。|  
   
 ## <a name="remarks"></a>コメント  
- 次のプロシージャでは、すべてのパラメーターが省略可能です。 パラメーターなしで実行される場合`sp_helprotect`現在のデータベースで許可または拒否されているすべての権限を表示します。  
+ 次のプロシージャでは、すべてのパラメーターが省略可能です。 どのパラメーターも指定せずに実行した場合、`sp_helprotect` では現在のデータベースで許可または拒否されているすべての権限が表示されます。  
   
- すべてではなく一部のパラメーターだけを指定する場合は、特定のパラメーターを示す名前付きのパラメーターを使用するか、プレースホルダーとして `NULL` を使用します。 たとえば、データベース所有者のすべての権限をレポートする (`dbo`)、次を実行します。  
+ すべてではなく一部のパラメーターだけを指定する場合は、特定のパラメーターを示す名前付きのパラメーターを使用するか、プレースホルダーとして `NULL` を使用します。 たとえば、データベース所有者 `dbo` に関するすべての権限をレポートするには、次のように実行します。  
   
 ```  
 EXEC sp_helprotect NULL, NULL, dbo;  
 ```  
   
- スイッチまたは  
+ または  
   
 ```  
 EXEC sp_helprotect @grantorname = 'dbo';  
@@ -109,7 +109,7 @@ EXEC sp_helprotect 'titles';
 ```  
   
 ### <a name="b-listing-the-permissions-for-a-user"></a>B. ユーザーに対する権限を一覧表示する  
- 次の例はそのユーザーのすべての権限を一覧表示`Judy`現在のデータベースにします。  
+ 次の例では、現在のデータベース内でユーザー `Judy` に与えられているすべての権限を一覧表示します。  
   
 ```  
 EXEC sp_helprotect NULL, 'Judy';  

@@ -1,5 +1,5 @@
 ---
-title: あやめのデモ データ セットの SQL Server での Python および R のチュートリアル |Microsoft Docs
+title: Python および R のチュートリアル - SQL Server Machine Learning のあやめのデモ データ セット
 Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2fbe5915f7b135882bbbefbb83b572d2cd640837
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: ce0469b5625af3f38047233737f3afbd209e11b9
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216686"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046572"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server での Python および R のチュートリアル: あやめのデモ データ 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "50216686"
 
 チュートリアルとクイック スタートのこのデータ セットを使用して、次に示します。
 
-+  [SQL Server の Python のモデルを使用するトレーニングとスコア付け](train-score-using-python-in-tsql.md)
++  [クイック スタート:作成、トレーニング、および SQL Server でのストアド プロシージャで Python モデルを使用](quickstart-python-train-score-in-tsql.md)
 
 ## <a name="create-the-database"></a>データベースの作成
 
@@ -58,7 +58,7 @@ ms.locfileid: "50216686"
     ```
 
     > [!TIP] 
-    > 記憶する的確を T-SQL に慣れていない場合、`DROP...IF`ステートメント。 テーブルを作成しようとすると、既に存在する、SQL Server にエラーが返されます"が既にデータベースに ' iris_data' という名前のオブジェクト。"。 このようなエラーを回避するために 1 つの方法では、コードの一部として、既存のテーブルまたはその他のオブジェクトを削除します。
+    > 記憶する的確を T-SQL に慣れていない場合、`DROP...IF`ステートメント。 テーブルを作成しようとすると、既に存在する、SQL Server には、エラーが返されます。「が既にデータベースに ' iris_data' という名前のオブジェクト。」 このようなエラーを回避するために 1 つの方法では、コードの一部として、既存のテーブルまたはその他のオブジェクトを削除します。
 
 4. トレーニング済みモデルを格納するために使用するテーブルを作成する次のコードを実行します。 SQL Server での Python (または R) モデルを保存するする必要があるシリアル化型の列に格納されている**varbinary (max)** します。 
 
@@ -154,6 +154,6 @@ ms.locfileid: "50216686"
 
 ## <a name="next-steps"></a>次の手順
 
-次のレッスンでは、機械学習モデルを作成しし、テーブルに保存から予測される結果を生成するモデルを使用します。
+次のクイック スタートでは、機械学習モデルを作成し、し、テーブルに保存から予測される結果を生成するモデルを使用します。
 
-+ [SQL Server の Python のモデルを使用するトレーニングとスコア付け](train-score-using-python-in-tsql.md)
++ [クイック スタート:作成、トレーニング、および SQL Server でのストアド プロシージャで Python モデルを使用](quickstart-python-train-score-in-tsql.md)

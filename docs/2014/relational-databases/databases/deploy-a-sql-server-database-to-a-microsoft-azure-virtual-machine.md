@@ -43,15 +43,15 @@ ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c17e29b5a41930f954e5cad6b67fccbaa1cc086d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f1bf8c37ab27bc00fd291d6687737215519259
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207532"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357891"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure Virtual Machine の SQL Server データベースの配置
-  **Windows Azure 仮想マシンに SQL Server データベースを配置**ウィザードを使用して、データベースを[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスから Windows Azure 仮想マシン (VM) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に配置します。 このウィザードはデータベースの完全バックアップ操作を活用し、SQL Server のユーザー データベースから常にデータベース スキーマ全体とデータ全体をコピーします。 また、このウィザードは Azure のすべての仮想マシンを自動的に構成するため、仮想マシンの事前構成は必要ありません。  
+  **Windows Azure 仮想マシンに SQL Server データベースを配置** ウィザードを使用して、データベースを [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスから Windows Azure 仮想マシン (VM) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に配置します。 このウィザードはデータベースの完全バックアップ操作を活用し、SQL Server のユーザー データベースから常にデータベース スキーマ全体とデータ全体をコピーします。 また、このウィザードは Azure のすべての仮想マシンを自動的に構成するため、仮想マシンの事前構成は必要ありません。  
   
  このウィザードは同じデータベース名を持つ既存のデータベースを上書きしないため、このウィザードを使用して差分バックアップを実行することはできません。 仮想マシン上にある既存のデータベースを置き換えるには、まず既存のデータベースを削除するか、データベース名を変更する必要があります。 インフライト配置操作を実行しているときに、複数のデータベース名の間で名前の競合が発生し、既存のデータベースが仮想マシン上に存在している場合は、ウィザードはインフライト データベースに対して付加的なデータベース名を提示し、操作を完了できるようにします。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48207532"
 -   Windows Azure の公開プロファイル。  
   
     > [!CAUTION]  
-    >  SQL Server では現在、公開プロファイルのバージョン 2.0 がサポートされています。 公開プロファイルのサポート対象バージョンをダウンロードするには、「 [公開プロファイルのバージョン 2.0 のダウンロード](http://go.microsoft.com/fwlink/?LinkId=396421)」をご覧ください。  
+    >  SQL Server では現在、公開プロファイルのバージョン 2.0 がサポートされています。 公開プロファイルのサポート対象バージョンをダウンロードするには、「 [公開プロファイルのバージョン 2.0 のダウンロード](https://go.microsoft.com/fwlink/?LinkId=396421)」をご覧ください。  
   
 -   Windows Azure サブスクリプションにアップロードされた管理証明書。  
   
@@ -85,13 +85,13 @@ ms.locfileid: "48207532"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のソース インスタンスから配置を計画しているデータベースのバックアップ操作の特権資格情報。  
   
- Windows Azure 仮想マシンで SQL Server を実行する方法の詳細については、次を参照してください。 [Windows Azure Virtual Machines における SQL Server に移行する準備を行う](http://msdn.microsoft.com/library/dn133142.aspx)します。  
+ Windows Azure 仮想マシンで SQL Server を実行する詳細については、「 [Azure の仮想マシンに SQL Server を移行するための準備](https://msdn.microsoft.com/library/dn133142.aspx)」をご覧ください。  
   
  Windows Server オペレーティング システムを実行しているコンピューターでは、このウィザードを実行するために、次の構成設定を使用する必要があります。  
   
--   セキュリティ強化の構成の無効化。[サーバー マネージャー] > [ローカル サーバー] を使用し、[Internet Explorer セキュリティ強化の構成]\(ESC) を **[オフ]** に設定します。  
+-   セキュリティ強化の構成をオフにする:サーバー マネージャーを使用して > Internet Explorer 強化セキュリティ構成 (ESC) に設定するローカル サーバー **OFF**します。  
   
--   JavaScript の有効化。Internet Explorer > [インターネット オプション] > [セキュリティ] > [レベルのカスタマイズ] > [スクリプト] > [アクティブ スクリプト] を選択し、**[有効にする]** に設定します。  
+-   JavaScript の有効化。Internet Explorer > [インターネット オプション] > [セキュリティ] > [レベルのカスタマイズ] > [スクリプト] > [アクティブ スクリプト]:**有効にする**します。  
   
 ###  <a name="limitations"></a> 制限事項と制約事項  
  この操作に対応するデータベース サイズの上限は 1 TB です。  
@@ -123,9 +123,9 @@ ms.locfileid: "48207532"
 ###  <a name="filestream"></a> FILESTREAM が有効なデータベースの Azure 仮想マシンへの配置に関する注意点  
  FILESTREAM オブジェクトに格納されている BLOBS があるデータベースを配置する場合は、次のガイドラインと制限事項に注意してください:  
   
--   配置機能は FILESTREAM が有効なデータベースを新しい仮想マシンに配置することはできません。 ウィザードを実行する前に FILESTREAM が仮想マシンで有効になっていない場合は、データベースの復元操作が失敗し、ウィザードの操作が正常に完了できません。 FILESTREAM を使用するデータベースを正常に配置するには、ウィザードを起動する前にホスト仮想マシンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで FILESTREAM を有効にします。 詳細については、「 [FILESTREAM (SQL Server)](http://msdn.microsoft.com/library/gg471497.aspx)」を参照してください。  
+-   配置機能は FILESTREAM が有効なデータベースを新しい仮想マシンに配置することはできません。 ウィザードを実行する前に FILESTREAM が仮想マシンで有効になっていない場合は、データベースの復元操作が失敗し、ウィザードの操作が正常に完了できません。 FILESTREAM を使用するデータベースを正常に配置するには、ウィザードを起動する前にホスト仮想マシンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで FILESTREAM を有効にします。 詳細については、「 [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx)」を参照してください。  
   
--   データベースがインメモリ OLTP を使用すると、データベースを変更せずに Azure 仮想マシンにデータベースを配置できます。 詳細については、「 [インメモリ OLTP (インメモリ最適化)](http://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx)」を参照してください。  
+-   データベースがインメモリ OLTP を使用すると、データベースを変更せずに Azure 仮想マシンにデータベースを配置できます。 詳細については、「 [インメモリ OLTP (インメモリ最適化)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx)」を参照してください。  
   
 ###  <a name="geography"></a> 資産の地理的分散に関する注意点  
  次の資産が同じ地理的領域に存在する必要があることに注意してください:  
@@ -179,7 +179,7 @@ ms.locfileid: "48207532"
   
 2.  **オブジェクト エクスプローラー**で、インスタンス名を展開してから、 **データベース** ノードを展開します。  
   
-3.  配置するデータベースを右クリックして **[タスク]** を選択し、 **[Windows Azure 仮想マシンにデータベースを配置]** をクリックします。  
+3.  デプロイを選択するデータベースを右クリックして**タスク**、し、**データベース Windows Azure 仮想マシンを配置しています.**  
   
 
   
@@ -192,16 +192,16 @@ ms.locfileid: "48207532"
   
 -   **[次へ]** - **[ソースの設定]** ページに進みます。  
   
--   **[キャンセル]** : 操作を取り消し、ウィザードを閉じます。  
+-   **[キャンセル]**: 操作を取り消し、ウィザードを閉じます。  
   
--   **[ヘルプ]** : ウィザードに関する MSDN ヘルプ トピックを起動します。  
+-   **ヘルプ**-ウィザードに関する MSDN ヘルプ トピックを起動します。  
   
 ##  <a name="Source_settings"></a> [ソース設定]  
  このページを使用して、Windows Azure 仮想マシンに配置するデータベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 ローカル コンピューターからのファイルを Windows Azure に転送する前に、それらのファイルの一時的な保存場所も指定します。 共有のネットワークの場所を指定できます。  
   
  **[オプション]**  
   
--   SSIS サーバー インスタンスを再起動するたびに **[接続]** をクリックして、配置するデータベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの接続詳細を指定します。  
+-   クリックして**接続しています.** のインスタンスの接続の詳細を指定し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を展開するデータベースをホストします。  
   
 -   **[データベースの選択]** ドロップダウン リストを使用して、展開するデータベースを指定します。  
   
@@ -212,34 +212,34 @@ ms.locfileid: "48207532"
   
  **[オプション]**  
   
--   **[管理証明書]** : このオプションを使用して、Windows Azure からの管理証明書に一致するローカル証明書ストアの証明書を指定します。  
+-   **管理証明書**-このオプションを使用して Windows Azure の管理証明書に一致するローカル証明書ストアから証明書を指定します。  
   
--   **[公開プロファイル]** : コンピューターにダウンロードした公開プロファイルが既にある場合は、このオプションを使用します。  
+-   **発行プロファイル**-コンピューターにダウンロードした公開プロファイルが既にある場合は、このオプションを使用します。  
   
--   **[サインイン]** : このオプションで、Live ID や Hotmail アカウントなどの Microsoft アカウントを使用して Windows Azure にサインインし、新しい管理証明書を生成してダウンロードします。 サブスクリプションごとの証明書の数は制限されています。  
+-   **サインイン**使い、Microsoft を使用して Windows Azure にサインインするには、このオプション アカウント - たとえば、Live ID や Hotmail アカウント - を生成して新しい管理証明書をダウンロードします。 サブスクリプションごとの証明書の数は制限されています。  
   
--   **[サブスクリプション]** : ローカル証明書ストアまたは公開プロファイルの管理証明書と一致する、Windows Azure サブスクリプションの ID を選択、入力、または貼り付けます。  
+-   **サブスクリプション**- 選択、入力、またはローカルの証明書ストアまたは公開プロファイルの管理証明書に一致する Windows Azure サブスクリプション ID を貼り付けます。  
   
 ##  <a name="Deployment_settings"></a> [配置設定] ページ  
  このページを使用して、配置先サーバーと、新しいデータベースの詳細を指定します。  
   
  **[オプション]**  
   
--   **[Azure 仮想マシン]** : SQL Server データベースをホストする仮想マシンの詳細を指定します。  
+-   **Azure 仮想マシン**-SQL Server データベースをホストする VM の詳細を指定します。  
   
--   **[クラウド サービス名]** : 仮想マシンをホストするサービスの名前を指定します。 新しいクラウド サービスを作成するには、新しいクラウド サービスの名前を指定します。  
+-   **クラウド サービス名**-VM をホストするサービスの名前を指定します。 新しいクラウド サービスを作成するには、新しいクラウド サービスの名前を指定します。  
   
--   **[仮想マシン名]** : SQL Server データベースをホストする仮想マシンの名前を指定します。 新しい Windows Azure 仮想マシンを作成するには、新しい Windows Azure 仮想マシンの名前を指定します。  
+-   **仮想マシン名**-SQL Server データベースをホストする VM の名前を指定します。 新しい Windows Azure 仮想マシンを作成するには、新しい Windows Azure 仮想マシンの名前を指定します。  
   
--   **[設定]** : [設定] ボタンを使用して、SQL Server データベースをホストするための新しい仮想マシンを作成します。 既存の仮想マシンを使用している場合は、指定した情報を使用して資格情報の認証が行われます。  
+-   **設定**-設定 ボタンを使用して、SQL Server データベースをホストする新しい VM を作成します。 既存の仮想マシンを使用している場合は、指定した情報を使用して資格情報の認証が行われます。  
   
--   **[ストレージ アカウント]** : ボックスの一覧からストレージ アカウントを選択します。 新しいストレージ アカウントを作成するには、新しいアカウントの名前を指定します。 アフィニティ グループに関連付けられたストレージ アカウントは、ドロップダウン リストに使用できないことに注意してください。  
+-   **ストレージ アカウント**-ドロップダウン リストからストレージ アカウントを選択します。 新しいストレージ アカウントを作成するには、新しいアカウントの名前を指定します。 アフィニティ グループに関連付けられたストレージ アカウントは、ドロップダウン リストに使用できないことに注意してください。  
   
--   **[対象になるデータベース]** : 対象になるデータベースの詳細を指定します。  
+-   **データベースを対象に**-ターゲット データベースの詳細を指定します。  
   
--   **[サーバー接続]** : サーバーの接続詳細です。  
+-   **サーバー接続**-サーバーの接続の詳細。  
   
--   **[データベース]** : 新しいデータベースの名前を指定または確認します。 対象の SQL Server インスタンスにデータベース名が既にある場合は、変更したデータベース名を指定することをお勧めします。  
+-   **データベース**- 指定するか、新しいデータベースの名前を確認します。 対象の SQL Server インスタンスにデータベース名が既にある場合は、変更したデータベース名を指定することをお勧めします。  
   
 ##  <a name="Summary"></a> [概要] ページ  
  このページを使用すると、操作について指定した設定を確認できます。 指定した設定で配置操作を実行するには、 **[完了]** をクリックします。 配置操作を取り消してウィザードを終了するには、 **[キャンセル]** をクリックします。  
@@ -251,13 +251,13 @@ ms.locfileid: "48207532"
   
  **[完了]** をクリックして、ウィザードを終了します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 用のクラウド アダプター](../../database-engine/cloud-adapter-for-sql-server.md)   
  [データベースのライフサイクル管理](../database-lifecycle-management.md)   
  [データ層アプリケーションのエクスポート](../data-tier-applications/export-a-data-tier-application.md)   
  [BACPAC ファイルのインポートによる新しいユーザー データベースの作成](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
  [Azure SQL データベースのバックアップと復元](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
- [Microsoft Azure Virtual Machines 上での SQL Server の配置](http://msdn.microsoft.com/library/dn133141.aspx)   
- [Microsoft Azure Virtual Machines に SQL Server を移行するための準備](http://msdn.microsoft.com/library/dn133142.aspx)  
+ [Microsoft Azure Virtual Machines 上での SQL Server の配置](https://msdn.microsoft.com/library/dn133141.aspx)   
+ [Microsoft Azure Virtual Machines に SQL Server を移行するための準備](https://msdn.microsoft.com/library/dn133142.aspx)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3b586dae30582b5438d249ce719196b146721bc2
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ffd9c83cb5aad8e22c98ebf1ff2472237452e1c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099520"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208372"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>レポートへの HTML のインポート (レポート ビルダーおよび SSRS)
   テキスト ボックスを使用すると、データセットのフィールドから取得した HTML 形式のテキストをレポートに挿入できます。 正しい形式の HTML に評価される単純型または複合型の式のテキストを使用できます。 書式付きのテキストは、PDF などのサポートされている出力形式すべてにレンダリングできます。  
@@ -28,7 +28,7 @@ ms.locfileid: "50099520"
 > [!NOTE]  
 >  HTML マークアップが含まれたテキストをインポートする場合、データは必ず最初にテキスト ボックスによって解析される必要があります。 サポートされているのは HTML タグのサブセットのみなので、レンダリングされたレポートに表示される HTML が元の HTML と異なる場合もあります。  
   
- すぐに使用するには、「[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)」をご覧ください。  
+ すばやく開始するのを参照してください。[チュートリアル。テキストの書式設定&#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -60,8 +60,6 @@ ms.locfileid: "50099520"
     -   CSS の絶対的な長さ単位で表された有効な RDL サイズ値のみサポートされます。 サポートされる単位は、in、cm、mm、pt、および pc です。  
   
     -   CSS の相対的な長さ単位はサポートされず、無視されます。 サポートされない単位は、em、ex、px、%、rem などです。  
-  
-     CSS の単位の詳細については、「[CSS Values and Units Reference](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx)」(CSS の値と単位のリファレンス) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx) を参照してください。  
   
 -   color  
   

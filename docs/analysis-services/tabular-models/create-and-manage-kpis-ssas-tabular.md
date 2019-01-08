@@ -1,5 +1,5 @@
 ---
-title: 作成および管理 Kpi |Microsoft ドキュメント
+title: 作成し、Analysis Services 表形式モデルで Kpi の管理 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8740cfbcf8448a0344d68e182a7cbf379c458a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ae17e727367b702967ec879ed8469973ab3b812
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042116"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072089"
 ---
-# <a name="create-and-manage-kpis"></a>作成および管理の Kpi 
+# <a name="create-and-manage-kpis"></a>作成して、Kpi の管理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  この記事では、作成、編集、または表形式モデルで KPI (主要業績評価指標) を削除する方法について説明します。 KPI を作成するには、評価結果が KPI のベース値になるメジャーを選択します。 次に、[主要業績評価指標] ダイアログ ボックスで、評価結果が対象の値になる 2 番目のメジャーまたは絶対値を選択します。 ベース メジャーと対象のメジャーの間のパフォーマンスを測定する、状態のしきい値を定義します。  
+  この記事では、作成、編集、または表形式モデルで KPI (主要業績評価指標) を削除する方法について説明します。 KPI を作成するには、KPI のベース値に評価されるメジャーを選択します。 次に、[主要業績評価指標] ダイアログ ボックスで、評価結果が対象の値になる 2 番目のメジャーまたは絶対値を選択します。 ベース メジャーと対象のメジャーの間のパフォーマンスを測定する、状態のしきい値を定義します。  
   
 ## <a name="tasks"></a>処理手順  
   
 > [!IMPORTANT]  
->  KPI を作成する前に、値を評価するベース メジャーを作成する必要があります。 次に、ベース メジャーを KPI に拡張します。 メジャーを作成する方法が他のトピックで説明されている[作成と管理メジャー](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)です。 KPI には対象の値も必要です。 この値には事前定義された別のメジャーまたは絶対値を使用できます。 ベース メジャーを KPI に拡張すると、[主要業績評価指標] ダイアログ ボックスで対象の値を選択し、状態のしきい値を定義できます。  
+>  KPI を作成する前に、値を評価するベース メジャーを作成する必要があります。 次に、ベース メジャーを KPI に拡張します。 メジャーを作成する方法が、別のトピックで説明されている[の作成と管理のメジャー](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)します。 KPI には対象の値も必要です。 この値には事前定義された別のメジャーまたは絶対値を使用できます。 ベース メジャーを KPI に拡張すると、[主要業績評価指標] ダイアログ ボックスで対象の値を選択し、状態のしきい値を定義できます。  
   
 ###  <a name="bkmk_create_KPI"></a> KPI を作成するには  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34042116"
 5.  **[説明]** をクリックして KPI、値、状態、および対象の説明を入力します。  
   
 > [!TIP]  
->  Excel で分析機能を使用して、KPI をテストできます。 詳細については、次を参照してください。 [Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)です。  
+>  Excel で分析機能を使用して、KPI をテストできます。 詳細については、次を参照してください。 [Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)します。  
   
 ###  <a name="bkmk_edit_KPI"></a> KPI を編集するには  
   
@@ -70,7 +70,7 @@ ms.locfileid: "34042116"
 |[説明]|Alt + D|  
 |傾向|Alt + T|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [メジャー](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [作成し、managemeasures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  

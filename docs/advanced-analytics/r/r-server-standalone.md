@@ -1,19 +1,19 @@
 ---
-title: SQL Server のスタンドアロン R Server または Machine Learning Server のインストール |Microsoft Docs
+title: スタンドアロン R Server または Machine Learning Server インストールの SQL Server Machine Learning サービス
 description: スタンドアロン R Server の概要概要と SQL Server セットアップでの Machine Learning Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 12/18/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9cb0cecaef28d512cf36e694344e62b01df88ebf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f1cbc4a7c02597c6c8bece8c47976fabdb4959e7
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657501"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731979"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (スタンドアロン) と SQL Server での Machine Learning Server (スタンドアロン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,17 +25,17 @@ SQL Server 2016 では、この機能は呼**R Server (スタンドアロン)** 
 > [!Note]
 > スタンドアロン サーバーは、機能的には、SQL のブランド化されていないバージョンの SQL Server セットアップによってインストールされている、 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)、リモートの実行など、ユーザー シナリオをサポートしています。サービスの運用化と web サービス、および R と Python ライブラリの完全なコレクション。
 
-## <a name="components"></a>Components
+## <a name="components"></a>コンポーネント
 
 SQL Server 2016 には R のみです。 SQL Server 2017 では、R と Python がサポートされています。 次の表では、各バージョンの機能について説明します。
 
 | コンポーネント | 説明 |
 |-----------|-------------|
-| R パッケージ | [**RevoScaleR** ](revoscaler-overview.md)スケーラブルな R データ操作、変換、視覚エフェクトと分析のための関数とは、プライマリ ライブラリ。  <br/>[**MicrosoftML** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)テキスト分析、画像分析、およびセンチメント分析のカスタム モデルを作成する機械学習アルゴリズムを追加します。 <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) T-SQL ストアド プロシージャに R スクリプトを配置すること、データベースでストアド プロシージャを登録すると、R 開発環境からストアド プロシージャを実行しているヘルパー関数を提供します。<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md)プランの web サービス (SQL Server 2017 のみ) での展開。 <br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md)は R で MDX クエリを指定するため|
+| R パッケージ | [**RevoScaleR** ](ref-r-revoscaler.md)スケーラブルな R データ操作、変換、視覚エフェクトと分析のための関数とは、プライマリ ライブラリ。  <br/>[**MicrosoftML** ](ref-r-microsoftml.md)テキスト分析、画像分析、およびセンチメント分析のカスタム モデルを作成する機械学習アルゴリズムを追加します。 <br/>[**sqlRUtils** ](ref-r-sqlrutils.md) T-SQL ストアド プロシージャに R スクリプトを配置すること、データベースでストアド プロシージャを登録すると、R 開発環境からストアド プロシージャを実行しているヘルパー関数を提供します。<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md)プランの web サービス (SQL Server 2017 のみ) での展開。 <br/>[**olapR** ](ref-r-olapr.md)は R で MDX クエリを指定するため|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)は r です Microsoft のオープン ソース ディストリビューションには。パッケージおよびインタープリターが含まれます。 常にセットアップにまとめられた MRO のバージョンを使用します。 |
 | R ツール | R コンソール ウィンドウとコマンド プロンプトは、R のディストリビューションで標準的なツールです。 \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64 で見つけることです。 |
 | R のサンプルとスクリプト |  オープン ソースの R と RevoScaleR パッケージには、作成して事前インストールされているデータを使用してスクリプトを実行できるように、組み込みのデータ セットが含まれます。 \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets と \library\RevoScaleR でそれらを探します。 |
-| Python パッケージ | [**revoscalepy** ](../python/what-is-revoscalepy.md)データ操作、変換、視覚エフェクトと分析のための関数での Python のスケーラブルなは、プライマリ ライブラリ。 <br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)テキスト分析、画像分析、およびセンチメント分析のカスタム モデルを作成する機械学習アルゴリズムを追加します。  |
+| Python パッケージ | [**revoscalepy** ](../python/ref-py-revoscalepy.md)データ操作、変換、視覚エフェクトと分析のための関数での Python のスケーラブルなは、プライマリ ライブラリ。 <br/>[**microsoftml** ](../python/ref-py-microsoftml.md)テキスト分析、画像分析、およびセンチメント分析のカスタム モデルを作成する機械学習アルゴリズムを追加します。  |
 | Python ツール | 組み込みの Python のコマンド ライン ツールは、アドホック テストとタスクに適しています。 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe でツールを検索します。 |
 | Anaconda | Anaconda とは、Python と重要なパッケージのオープン ソース ディストリビューションです。 |
 | Python のサンプルとスクリプト | R と Python には、組み込みのデータ セットとスクリプトが含まれています。 Revoscalepy データを掲載 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample データ。 |
@@ -53,33 +53,41 @@ SQL Server から切り離されて独立したサーバーと、R と Python �
 
 セットアップを開始、バイナリを使い慣れた開発ツールにアタッチし、最初のスクリプトを記述します。
 
-### <a name="step-1-install-the-software"></a>手順 1: ソフトウェアをインストールします。
+### <a name="step-1-install-the-software"></a>手順 1:ソフトウェアをインストールします。
 
 これらのバージョンのいずれかをインストールします。
 
 + [SQL Server 2017 の Machine Learning Server (スタンドアロン)](../install/sql-machine-learning-standalone-windows-install.md)
 + [SQL Server 2016 R Server (スタンドアロン) - R のみ](../install/sql-r-standalone-windows-install.md)
 
-### <a name="step-2-configure-a-development-tool"></a>手順 2: 開発ツールを構成します。
+### <a name="step-2-configure-a-development-tool"></a>手順 2:開発ツールを構成します。
 
 スタンドアロン サーバーでは、同じコンピューターにインストールされている開発を使用してローカルで動作する一般的です。
 
 + [R ツールの設定](set-up-a-data-science-client.md)
 + [Python ツールの設定](../python/setup-python-client-tools-sql.md)
 
-### <a name="step-3-write-your-first-script"></a>手順 3: 最初のスクリプトを記述します。
+### <a name="step-3-write-your-first-script"></a>手順 3:最初のスクリプトを作成します。
 
 RevoScaleR、revoscalepy、および機械学習アルゴリズムから関数を使用して、R または Python のスクリプトを記述します。
   
-  + [R と 25 の関数で RevoScaleR 探索](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler): 基本的な R コマンドと、高いパフォーマンスを実現する RevoScaleR の再頒布可能分析関数への進行状況と R ソリューションをスケーリングと開始します。 最も一般的な R モデリング パッケージ (K-平均法クラスタリング、デシジョン ツリー、デシジョン フォレストなど) の並列化可能なバージョンの多くと、データ操作のツールを含みます。
+  + [R と 25 の関数で RevoScaleR 探索](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler):基本的な R コマンドから開始して、高パフォーマンスとスケーリング R ソリューションを提供する RevoScaleR の再頒布可能分析関数にし、進行状況します。 最も一般的な R モデリング パッケージ (K-平均法クラスタリング、デシジョン ツリー、デシジョン フォレストなど) の並列化可能なバージョンの多くと、データ操作のツールを含みます。
 
-  + [クイック スタート: microsoftml の Python パッケージを二項分類の例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): microsoftml とよく知られている乳がんがんのデータセットから関数を使用して二項分類モデルを作成します。
+  + [クイック スタート:Microsoftml の Python パッケージを二項分類の例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml):Microsoftml とよく知られている乳がんがんのデータセットから関数を使用して二項分類モデルを作成します。
 
 タスクの最適な言語を選択します。 R は、SQL を使用して実装するが困難な統計の計算に最適です。 データ セット ベース操作では、活用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]最大のパフォーマンスを実現するためにします。 列にわたって非常に高速計算、メモリ内データベース エンジンを使用します。
 
-### <a name="step-4-operationalize-your-solution"></a>手順 4: ソリューションを運用します。
+### <a name="step-4-operationalize-your-solution"></a>手順 4:ソリューションを運用化します。
 
 スタンドアロン サーバーを使用できる、 [operationalization](https://docs.microsoft.com//machine-learning-server/what-is-operationalization)機能、SQL のノンブランドの[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)します。 運用化は、これらのメリットを提供するスタンドアロン サーバーを構成することができます。 展開および web サービス、診断の実行、テストの web サービスの容量として、コードをホストします。
+
+### <a name="step-5-maintain-your-server"></a>手順 5:サーバーを管理します。
+
+SQL Server では、定期的に累積的更新プログラムを解放します。 累積的更新プログラムを適用するセキュリティと機能の拡張を既存のインストールに追加します。 
+
+新規または変更された機能についての説明が記載されて、 [CAB のダウンロード](../install/sql-ml-cab-downloads.md)記事や、web ページの[SQL Server 2016 累積的更新プログラム](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions)と[SQL Server 2017 の累積的更新プログラム](https://support.microsoft.com/help/4047329). 
+
+既存のインスタンスに更新プログラムを適用する方法の詳細については、次を参照してください。[更新プログラムを適用](../install/sql-machine-learning-standalone-windows-install.md#apply-cu)のインストール手順。
 
 ## <a name="see-also"></a>関連項目
 

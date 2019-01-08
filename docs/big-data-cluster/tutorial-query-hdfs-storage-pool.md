@@ -1,22 +1,24 @@
 ---
-title: ビッグ データの SQL Server クラスターで HDFS をクエリする方法 |Microsoft Docs
+title: 記憶域プールの HDFS のデータを照会します。
+titleSuffix: SQL Server 2019 big data clusters
 description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) での HDFS データを照会する方法を示します。 記憶域プール内のデータに対して外部テーブルを作成してクエリを実行しています。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/11/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: c6f0f01936d5b6e570c2bff53d19ae7a64f151ab
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 78b78fafa8b2dce197fae98ef42b763cc0fa2f4e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644245"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432175"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>チュートリアル: SQL Server のビッグ データ クラスターで HDFS を照会します。
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>チュートリアル:ビッグ データの SQL Server クラスターで HDFS のクエリ
 
-このチュートリアルでは、SQL Server 2019 ビッグ データ クラスターで HDFS のデータを照会する方法を示します。
+このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) での HDFS データを照会する方法を示します。
 
 このチュートリアルで確認する方法。
 
@@ -27,19 +29,19 @@ ms.locfileid: "49644245"
 > [!TIP]
 > をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、次を参照してください。、[データ仮想化のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)GitHub でします。
 
-## <a name="prerequisites"></a>前提条件
+## <a id="prereqs"></a> 前提条件
 
-- [Kubernetes でのビッグ データ クラスター デプロイ](deployment-guidance.md)します。
-- [Azure Data Studio と SQL Server 2019 拡張機能をインストール](deploy-big-data-tools.md)します。
-- [クラスターにサンプル データを読み込む](#sampledata)します。
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [ビッグ データ ツール](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 の拡張機能**
+- [ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>HDFS に外部テーブルを作成します。
 
 記憶域プールには、HDFS に格納されている CSV ファイルでは、web クリック ストリーム データが含まれています。 次の手順を使用すると、そのファイル内のデータにアクセスできる外部テーブルを定義します。
 
-1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、次を参照してください。 [master の SQL Server インスタンスへの接続](deploy-big-data-tools.md#master)します。
+1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、次を参照してください。 [master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)します。
 
 2. 内の接続をダブルクリックして、**サーバー**ウィンドウに SQL Server のマスター インスタンスのサーバー ダッシュ ボードを表示します。 選択**新しいクエリ**します。
 

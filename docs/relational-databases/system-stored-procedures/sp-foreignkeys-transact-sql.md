@@ -18,12 +18,12 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3ef9f2aa7ec6f5608e55f84efd35af25c1776a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0fc8552157e9864ed45306ec268fefb4eec87bf
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605180"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589949"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +46,32 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@table_server =** ] **'***table_server***'**  
+ [  **@table_server =** ] **'**_table_server_**'**  
  テーブル情報を返すリンク サーバーの名前です。 *table_server*は**sysname**、既定値はありません。  
   
- [  **@pktab_name =** ] **'***pktab_name***'**  
+ [  **@pktab_name =** ] **'**_pktab_name_**'**  
  主キーを持つテーブルの名前です。 *pktab_name*は**sysname**、既定値は NULL です。  
   
- [  **@pktab_schema =** ] **'***pktab_schema***'**  
+ [  **@pktab_schema =** ] **'**_pktab_schema_**'**  
  主キーが設定されたスキーマの名前です。 *pktab_schema*は**sysname**、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、所有者名に相当します。  
   
- [  **@pktab_catalog =** ] **'***pktab_catalog***'**  
- 主キーが設定されたカタログの名前です。 *pktab_catalog*は**sysname**、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース名が含まれます。  
+ [  **@pktab_catalog =** ] **'**_pktab_catalog_**'**  
+ 主キーが設定されたカタログの名前です。 *pktab_catalog*は**sysname**、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベース名に相当します。  
   
- [  **@fktab_name =** ] **'***fktab_name***'**  
+ [  **@fktab_name =** ] **'**_fktab_name_**'**  
  外部キー テーブルの名前です。 *fktab_name*は**sysname**、既定値は NULL です。  
   
- [  **@fktab_schema =** ] **'***fktab_schema***'**  
+ [  **@fktab_schema =** ] **'**_fktab_schema_**'**  
  外部キーが設定されたスキーマの名前です。 *fktab_schema*は**sysname**、既定値は NULL です。  
   
- [  **@fktab_catalog =** ] **'***fktab_catalog***'**  
+ [  **@fktab_catalog =** ] **'**_fktab_catalog_**'**  
  外部キーが設定されたカタログの名前です。 *fktab_catalog*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
   
 ## <a name="result-sets"></a>結果セット  
- さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*カタログ ***.*** スキーマ ***.*** テーブル*)、これは、結果セットで表されます。  
+ さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (_カタログ_**.**_スキーマ_**.**_テーブル_)、これは、結果セットで表されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -84,10 +84,10 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |**FKTABLE_NAME**|**sysname**|外部キーが設定されたテーブルの名前です。 このフィールドは常に値を返します。|  
 |**FKCOLUMN_NAME**|**sysname**|返される TABLE_NAME の各列に対する、外部キー列の名前です。 このフィールドは常に値を返します。|  
 |**KEY_SEQ**|**smallint**|複数列の主キーにおける、列のシーケンス番号です。 このフィールドは常に値を返します。|  
-|**UPDATE_RULE**|**smallint**|SQL の操作が更新であるとき、外部キーに適用される動作です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0、1、またはこれらの列 2 を返します。<br /><br /> 0=CASCADE: 外部キーを変更します。<br /><br /> 1=NO ACTION: 外部キーが存在する場合には変更します。<br /><br /> 2=SET_NULL: 外部キーを NULL に設定します。|  
-|**DELETE_RULE**|**smallint**|SQL の操作が削除であるとき、外部キーに適用される動作です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0、1、またはこれらの列 2 を返します。<br /><br /> 0=CASCADE: 外部キーを変更します。<br /><br /> 1=NO ACTION: 外部キーが存在する場合には変更します。<br /><br /> 2=SET_NULL: 外部キーを NULL に設定します。|  
+|**UPDATE_RULE**|**smallint**|SQL の操作が更新であるとき、外部キーに適用される動作です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はこれらの列に 0、1、または 2 を返します。<br /><br /> 0=CASCADE: 外部キーを変更します。<br /><br /> 1=NO ACTION: 外部キーが存在する場合には変更します。<br /><br /> 2=SET_NULL: 外部キーを NULL に設定します。|  
+|**DELETE_RULE**|**smallint**|SQL の操作が削除であるとき、外部キーに適用される動作です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はこれらの列に 0、1、または 2 を返します。<br /><br /> 0=CASCADE: 外部キーを変更します。<br /><br /> 1=NO ACTION: 外部キーが存在する場合には変更します。<br /><br /> 2=SET_NULL: 外部キーを NULL に設定します。|  
 |**FK_NAME**|**sysname**|外部キー識別子です。 データ ソースに適用されない場合は NULL になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、FOREIGN KEY 制約の名前を返します。|  
-|**PK_NAME**|**sysname**|主キー識別子。 データ ソースに適用されない場合は NULL になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主キー制約の名前を返します。|  
+|**PK_NAME**|**sysname**|主キー識別子。 データ ソースに適用されない場合は NULL になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、PRIMARY KEY 制約の名前を返します。|  
 |**遅延**|**smallint**|制約チェックの遅延が可能かどうかを示します。|  
   
  結果セットの FK_NAME と PK_NAME の各列は常に NULL を返します。  
@@ -99,7 +99,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、外部キーの情報を返しますに関する、`Department`テーブルに、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 、リンク サーバー上のデータベース`Seattle1`します。  
+ 次の例では、`Department` リンク サーバーにある [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `Seattle1` テーブルについての外部キー情報を返します。  
   
 ```  
 EXEC sp_foreignkeys @table_server = N'Seattle1',   

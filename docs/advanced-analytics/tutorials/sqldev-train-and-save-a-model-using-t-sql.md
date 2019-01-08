@@ -1,19 +1,19 @@
 ---
-title: レッスン 3 のトレーニングと R と T-SQL (SQL Server Machine Learning) を使用して、モデルの保存 |Microsoft Docs
-description: SQL Server に R を埋め込む方法を示すチュートリアルはストアド プロシージャと T-SQL 関数
+title: レッスン 3 のトレーニングと R と T-SQL - SQL Server Machine Learning を使用してモデルの保存
+description: トレーニング、シリアル化し、R モデルを保存する方法を示すチュートリアル SQL Server を使用してストアド プロシージャと T-SQL 関数します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 11/16/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 23387a6074f0c4a1dd6b4cb675b84f7aaced2a06
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f3abe58aac4d5920e64337f63a40dc8f87fb12d9
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033560"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645111"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>レッスン 3: トレーニングし、T-SQL を使用してモデルを保存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,8 +30,8 @@ ms.locfileid: "51033560"
 
 2. ストアド プロシージャを作成する次のステートメントを実行して**RxTrainLogitModel**します。 このストアド プロシージャは、入力データを定義しを使用して**rxLogit** RevoScaleR ロジスティック回帰モデルを作成するからです。
 
-    ```SQL
-    CREATE PROCEDURE [dbo].[RxTrainLogitModel]
+    ```sql
+    CREATE PROCEDURE [dbo].[RxTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
     
     AS
     BEGIN
@@ -42,27 +42,24 @@ ms.locfileid: "51033560"
         from nyctaxi_sample
         tablesample (70 percent) repeatable (98052)
     '
-      -- Insert the trained model into a database table
-      INSERT INTO nyc_taxi_models
+    
       EXEC sp_execute_external_script @language = N'R',
                                       @script = N'
-    
     ## Create model
     logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet)
     summary(logitObj)
     
-    ## Serialize model and put it in data frame
-    trained_model <- data.frame(model=as.raw(serialize(logitObj, NULL)));
+    ## Serialize model 
+    trained_model <- as.raw(serialize(logitObj, NULL));
     ',
       @input_data_1 = @inquery,
-      @output_data_1_name = N'trained_model'
-      ;
-    
+      @params = N'@trained_model varbinary(max) OUTPUT',
+      @trained_model = @trained_model OUTPUT; 
     END
     GO
     ```
 
-    -をいくつかのデータが残されていることをモデルをテストすることを確認するには、データの 70% がトレーニングのためのタクシー データ テーブルからランダムに選択します。
+    - 一部のデータが残されていることをモデルをテストするためには、データの 70% がトレーニングのためのタクシー データ テーブルからランダムに選択します。
 
     - SELECT クエリによって、カスタムのスカラー関数 *fnCalculateDistance* が使用され、乗車位置と降車位置直線距離が計算されます。 クエリの結果が、既定の R の入力変数に格納されている`InputDataset`します。
   
@@ -70,41 +67,43 @@ ms.locfileid: "51033560"
   
         二項変数 _tipped_ が *ラベル* または結果列として使用され、モデルは、  _passenger_count_、 _trip_distance_、 _trip_time_in_secs_、および _direct_distance_の機能列を使用して調整されます。
   
-    -   R 変数 `logitObj`に保存されたトレーニング済みのモデルはシリアル化され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に出力するためにデータ フレームに入れられます。 その出力は、将来の予測に使用できるようにデータベース テーブル _nyc_taxi_models_に挿入されます。
+    - R 変数に保存されたトレーニング済みのモデル`logitObj`はシリアル化され、出力パラメーターとして返されます。
 
-## <a name="generate-the-r-model-using-the-stored-procedure"></a>ストアド プロシージャを使用して、R モデルを生成します。
+## <a name="train-and-deploy-the-r-model-using-the-stored-procedure"></a>トレーニングおよびストアド プロシージャを使用して、R モデルのデプロイ
 
 ストアド プロシージャには、入力データの定義が既に含まれているために、入力クエリを提供する必要はありません。
 
-1. R モデルを生成するには、他のパラメーターなしのストアド プロシージャを呼び出します。
+1. トレーニングを R モデルのデプロイは、ストアド プロシージャを呼び出すし、データベース テーブルに挿入_nyc_taxi_models_の将来の予測に使用できるようにします。
 
-    ```SQL
-    EXEC RxTrainLogitModel
+    ```sql
+    DECLARE @model VARBINARY(MAX);
+    EXEC RxTrainLogitModel @model OUTPUT;
+    INSERT INTO nyc_taxi_models (name, model) VALUES('RxTrainLogit_model', @model);
     ```
 
 2. ウォッチ、**メッセージ**のウィンドウ[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]に R のパイプ メッセージ**stdout**このメッセージのように、ストリーム。 
 
-    "外部スクリプトからの STDOUT メッセージ: Rows Read: 1193025、Total Rows Processed: 1193025、Total Chunk Time: 0.093 秒"
+    "外部スクリプトからの STDOUT メッセージ。行の読み取り:処理された合計行、1193025:1193025、チャンクの合計時間:0.093 秒"
 
     個々 の関数に固有のメッセージも、`rxLogit`変数を表示し、モデルの作成の一部として生成されるメトリックをテストします。
 
 3.  テーブルを開き、ステートメントが完了したら、 *nyc_taxi_models*します。 データの処理とモデルの調整を行うに時間がかかる場合があります。
 
-    _model_列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
+    列にシリアル化されたモデルが含まれていますが、その 1 つの新しい行が追加されたを参照してください_モデル_とモデル名**RxTrainLogit_model**列_名前_します。
 
-    ```
-    model
-    ------
-    0x580A00000002000302020....
+    ```sql
+    model                        name
+    ---------------------------- ------------------
+    0x580A00000002000302020....  RxTrainLogit_model
     ```
 
 次の手順では、予測を生成するのにトレーニング済みモデルを使用します。
 
 ## <a name="next-lesson"></a>次のレッスン
 
-[レッスン 4: ストアド プロシージャで R モデルを使用して潜在的な結果を予測します。](../tutorials/sqldev-operationalize-the-model.md)
+[レッスン 4:ストアド プロシージャで R モデルを使用して潜在的な結果を予測します。](../tutorials/sqldev-operationalize-the-model.md)
 
 ## <a name="previous-lesson"></a>前のレッスン
 
-[レッスン 2: R と T-SQL 関数を使用してデータ機能を作成します。](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[レッスン 2:R と T-SQL 関数を使用してデータ機能を作成します。](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

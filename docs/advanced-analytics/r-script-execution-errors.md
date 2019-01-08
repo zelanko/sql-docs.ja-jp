@@ -1,5 +1,5 @@
 ---
-title: SQL Server Machine Learning と R Services での R スクリプトのエラー |Microsoft Docs
+title: R スクリプトのエラーとトラブルシューティング - SQL Server Machine Learning サービス
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 941a8bbc5e7326d87dcdba8c822fb2c3f2190900
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5e4ac26b10a8a9f7e17345e927ee89ea6c731fb1
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695440"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644891"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>SQL Server で R スクリプトのエラー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ R ランタイムが機能している、スクリプトがエラーを返す場
 私たちはまた、確認し、R とデータベース エンジンの間でデータを移動するときに生じる可能性のあるデータ型に関する問題を修正するスクリプトを少し修正することお勧めします。 詳細については、次を参照してください。 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)します。
 
 さらに、ストアド プロシージャとしてより簡単に使用される形式で R スクリプトをバンドルするのに sqlrutils パッケージを使用することができます。 詳細については、以下をご覧ください。
-* [Sqlrutils パッケージを使用して R コード用のストアド プロシージャを生成します。](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+* [sqlrutils パッケージ](r/ref-r-sqlrutils.md)
 * [Sqlrutils を使用してストアド プロシージャを作成します。](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## <a name="script-returns-inconsistent-results"></a>スクリプトには、一貫性のない結果が返されます。
@@ -68,7 +68,7 @@ R スクリプトは、いくつかの理由、SQL Server のコンテキスト�
 
 2. 次のスクリプトを実行します。 既定値を変更した場合、ユーザー グループ名とコンピューターとインスタンス名を編集してください。
 
-    ```SQL
+    ```sql
     USE [master]
     GO
     

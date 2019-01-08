@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
@@ -31,18 +30,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53385dd40fa0b180fcc6994832faf5feffcdd8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a09abfe2d5370e9564dd3d081346c022cb2ca0d7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106401"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361964"
 ---
 # <a name="fuzzy-lookup-transformation"></a>あいまい参照変換
   あいまい参照変換では、データの標準化、データの修正、不足している値の提供など、データのクリーン タスクを実行します。  
   
 > [!NOTE]  
->  パフォーマンスやメモリの制限など、あいまい参照変換に関する詳細については、ホワイト ペーパー「 [SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化](http://go.microsoft.com/fwlink/?LinkId=96604)」を参照してください。  
+>  パフォーマンスやメモリの制限など、あいまい参照変換に関する詳細については、ホワイト ペーパー「 [SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化](https://go.microsoft.com/fwlink/?LinkId=96604)」を参照してください。  
   
  あいまい参照変換は、あいまい一致を使用するという点が参照変換とは異なります。 参照変換では、等結合を使用して、参照テーブル内の一致レコードを検索します。 返されるのは、一致レコードを少なくとも 1 つ含むレコードと、一致レコードがないレコードです。 これに対して、あいまい参照変換では、あいまい一致を使用して、参照テーブル内の 1 つ以上の類似一致を返します。  
   
@@ -120,18 +119,18 @@ ms.locfileid: "48106401"
 ## <a name="temporary-tables-and-indexes"></a>一時テーブルおよびインデックス  
  あいまい参照変換の実行時には、変換の接続先の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース内に、テーブルやインデックスなどの一時オブジェクトが作成されます。 これらの一時テーブルとインデックスのサイズは、参照テーブルの行数とトークン数や、あいまい参照変換が作成するトークン数に比例します。したがって、膨大なディスク容量を消費する可能性もあります。 また、変換はこれらの一時テーブルに対してクエリを実行します。 このため、特に稼働サーバーのディスク容量が少ない場合は、あいまい参照変換を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースの非稼働インスタンスに接続することを検討してください。  
   
- この変換で使用するテーブルおよびインデックスがローカル コンピューター上にあると、変換のパフォーマンスが向上する可能性があります。 あいまい参照変換が使用する参照テーブルが稼働サーバー上にある場合は、テーブルを非稼働サーバーにコピーして、あいまい参照変換がこのコピーにアクセスするように設定することを検討してください。 こうすることで、参照クエリによって稼働サーバーのリソースが消費されるのを回避できます。 また、MatchIndexOptionsis が **GenerateAndMaintainNewIndex**に設定されていて、あいまい参照変換で一致インデックスが維持されている場合は、データ クリーン操作中に参照テーブルがロックされ、他のユーザーやアプリケーションはテーブルにアクセスできません。  
+ この変換で使用するテーブルおよびインデックスがローカル コンピューター上にあると、変換のパフォーマンスが向上する可能性があります。 あいまい参照変換が使用する参照テーブルが稼働サーバー上にある場合は、テーブルを非稼働サーバーにコピーして、あいまい参照変換がこのコピーにアクセスするように設定することを検討してください。 こうすることで、参照クエリによって稼働サーバーのリソースが消費されるのを回避できます。 また、MatchIndexOptionsis が **GenerateAndMaintainNewIndex** に設定されていて、あいまい参照変換で一致インデックスが維持されている場合は、データ クリーン操作中に参照テーブルがロックされ、他のユーザーやアプリケーションはテーブルにアクセスできません。  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>あいまい参照変換の設定  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
  **[あいまい参照変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [あいまい参照変換エディター&#40;参照テーブル タブ&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [あいまい参照変換エディター ([参照テーブル] タブ)](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
--   [あいまい参照変換エディター&#40;列 タブ&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
+-   [あいまい参照変換エディター ([列] タブ)](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [あいまい参照変換エディター&#40;詳細設定 タブ&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [あいまい参照変換エディター ([詳細設定] タブ)](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   

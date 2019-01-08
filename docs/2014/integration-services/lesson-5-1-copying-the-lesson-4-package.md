@@ -1,24 +1,23 @@
 ---
-title: '手順 1: レッスン 4 のパッケージのコピー | Microsoft Docs'
+title: 手順 1:レッスン 4 のパッケージのコピー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76017bf54455d702dbea060e4f966765ddb1e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9aaa786680ff15a8b2efcb00d104f73f64089a55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070019"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360854"
 ---
-# <a name="step-1-copying-the-lesson-4-package"></a>手順 1: レッスン 4 のパッケージのコピー
+# <a name="step-1-copying-the-lesson-4-package"></a>手順 1:レッスン 4 のパッケージのコピー
   ここでは、レッスン 4 で作成した Lesson 4.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 4 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 5 の実習では、このパッケージの新しいコピーを使用します。  
   
 ### <a name="to-copy-the-lesson-4-package"></a>レッスン 4 のパッケージをコピーするには  
@@ -49,11 +48,11 @@ ms.locfileid: "48070019"
   
 3.  **[既存のパッケージのコピーを追加]** ダイアログ ボックスの **[パッケージの場所]** で、 **[ファイル システム]** をクリックします。  
   
-4.  参照ボタン ( **[…]** ) をクリックし、コンピューター上の **Lesson 4.dtsx** に移動して、 **[開く]** をクリックします。  
+4.  参照ボタン ( **[…]** ) をクリックし、コンピューター上の **Lesson 4.dtsx** に移動して、**[開く]** をクリックします。  
   
      このチュートリアルのレッスン パッケージをすべてダウンロードするには、次の手順を実行します。  
   
-    1.  「[Integration Services 製品サンプル](http://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
+    1.  「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
   
     2.  **[ダウンロード]** タブをクリックします。  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48070019"
 5.  前の手順の手順 3 ～ 8 の説明に従って、レッスン 4 パッケージをコピーして貼り付けます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 2: パッケージ構成の有効化と構成](lesson-5-2-enabling-and-configuring-package-configurations.md)  
+ [手順 2:有効にして、パッケージの構成](lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
   

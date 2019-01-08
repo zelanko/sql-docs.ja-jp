@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergedeleteconflictrows
@@ -17,12 +16,12 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 270ca534b5527efa9dea52b107166bb445965b2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e31a8827f940e0dd5a3debe2d03bf675f33df3cd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595680"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591176"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +41,16 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_パブリケーション_**'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** します。 パブリケーションを指定した場合は、パブリケーションに関係するすべての競合が返されます。  
   
- [  **@source_object=**] **'***source_object***'**  
+ [  **@source_object=**] **'**_source_object_**'**  
  ソース オブジェクトの名前を指定します。 *source_object*は**nvarchar (386)**、既定値は NULL です。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_パブリッシャー_**'**  
  パブリッシャーの名前です。*パブリッシャー*は**sysname**、既定値は NULL です。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  パブリッシャー データベースの名前です。*publisher_db*は**sysname**、既定値は NULL です。  
   
 ## <a name="result-sets"></a>結果セット  
@@ -60,7 +59,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|削除競合のソース オブジェクトです。|  
 |**rowguid**|**uniqueidentifier**|削除競合の行識別子 (ROWID) です。|  
-|**conflict_type**|**int**|競合の種類を示すコードです。<br /><br /> **1** = UpdateConflict: 行レベルで競合が検出されました。<br /><br /> **2** = ColumnUpdateConflict: 列レベルで競合が検出されます。<br /><br /> **3** = UpdateDeleteWinsConflict: 削除競合で優先されます。<br /><br /> **4** = UpdateWinsDeleteConflict: 競合を避けるに削除された rowguid がこのテーブルに記録されます。<br /><br /> **5** = UploadInsertFailed: サブスクライバーからの挿入がパブリッシャーで適用できませんでした。<br /><br /> **6** = DownloadInsertFailed: パブリッシャーからの挿入がサブスクライバーで適用できませんでした。<br /><br /> **7** = UploadDeleteFailed: サブスクライバーでの削除がパブリッシャーにアップロードできませんでした。<br /><br /> **8** = DownloadDeleteFailed: パブリッシャーでの削除をサブスクライバーにダウンロードできませんでした。<br /><br /> **9** = UploadUpdateFailed: サブスクライバーでの更新がパブリッシャーで適用できませんでした。<br /><br /> **10** = DownloadUpdateFailed: パブリッシャーでの更新がサブスクライバーに適用できませんでした。|  
+|**conflict_type**|**int**|競合の種類を示すコードです。<br /><br /> **1** = UpdateConflict:競合は、行レベルで検出されました。<br /><br /> **2** = ColumnUpdateConflict:列レベルで検出された競合しています。<br /><br /> **3** = UpdateDeleteWinsConflict:削除が優先されます。<br /><br /> **4** = UpdateWinsDeleteConflict:競合を避けるに削除された rowguid が、このテーブルに記録されます。<br /><br /> **5** = UploadInsertFailed:パブリッシャーでサブスクライバーからの挿入を適用できませんでした。<br /><br /> **6** = DownloadInsertFailed:サブスクライバーでパブリッシャーからの挿入を適用できませんでした。<br /><br /> **7** = UploadDeleteFailed:サブスクライバーでの削除はパブリッシャーにアップロードされませんでした。<br /><br /> **8** = DownloadDeleteFailed:パブリッシャーでの削除がサブスクライバーにダウンロードできませんでした。<br /><br /> **9** = UploadUpdateFailed:サブスクライバーでの更新をパブリッシャーで適用されませんでした。<br /><br /> **10** = DownloadUpdateFailed:パブリッシャーでの更新をサブスクライバーに適用されませんでした。|  
 |**reason_code**|**Int**|状況依存のエラー コードです。|  
 |**reason_text**|**varchar(720)**|状況依存のエラーの説明です。|  
 |**origin_datasource**|**varchar(255)**|競合の元です。|  

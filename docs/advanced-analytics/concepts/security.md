@@ -1,5 +1,5 @@
 ---
-title: SQL Server machine learning 用のセキュリティ |Microsoft Docs
+title: R と Python 拡張機能 - SQL Server Machine Learning のセキュリティの概要
 description: SQL Server Machine Learning Services の機能拡張フレームワークのセキュリティの概要。 ログインとユーザー アカウント、SQL Server スタート パッド サービス、複数のスクリプト、およびファイルのアクセス許可を実行しているワーカー アカウントのセキュリティ。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a5d109e16c81481f9e4267dc4963ecea74cfa736
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419377"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596573"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の機能拡張フレームワークのセキュリティの概要
 
@@ -71,7 +71,7 @@ SQL Server から外部のスクリプトを起動するたびに、データベ
 
 ## <a name="services-used-in-external-processing-launchpad"></a>外部の処理 (スタート パッド) で使用されるサービス
 
-機能拡張フレームワークを 1 つの新しい NT サービスの追加、[サービスの一覧](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)SQL Server のインストール: [ **SQL Server スタート パッド (MSSSQLSERVER)**](extensibility-framework.md#launchpad)。
+機能拡張フレームワークを 1 つの新しい NT サービスの追加、[サービスの一覧](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)SQL Server のインストール。[**SQL Server スタート パッド (MSSSQLSERVER)**](extensibility-framework.md#launchpad)します。
 
 データベース エンジンでは、SQL Server スタート パッド サービスを使用して、別のプロセスとして、R または Python のセッションをインスタンス化します。 低い特権のアカウントの下で、プロセスが実行されます。SQL Server、スタート パッド、およびストアド プロシージャまたはホストのクエリが実行されたときのユーザー id とは異なります。 R と SQL Server での Python のセキュリティと分離のモデルの基になる低い特権のアカウントで別のプロセスでスクリプトを実行します。
 

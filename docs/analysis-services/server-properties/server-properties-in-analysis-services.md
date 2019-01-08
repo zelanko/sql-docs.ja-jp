@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce74bb210e3d5d3cd01120b0bd406672db6dd5ed
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975100"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785823"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services のサーバー プロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -30,7 +30,7 @@ SQL Server Management Studio のプロパティ ページには、最も頻繁�
 > 
 > サーバー構成に影響を与える他のプロパティには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の配置構成プロパティが含まれます。 これらのプロパティに関する詳細については、「 [ソリューションの配置に関する構成設定の指定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)」を参照してください。
  
-##  <a name="bkmk_config"></a> Management Studio のプロパティを構成する 
+## <a name="configure-properties-in-management-studio"></a>Management Studio のプロパティを構成する 
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続します。  
   
@@ -40,12 +40,11 @@ SQL Server Management Studio のプロパティ ページには、最も頻繁�
   
      サーバー プロパティの変更は、テーブル モードおよび多次元モードのサーバーについてのみサポートされます。 マイクロソフトのサポートから別途指示された場合を除き、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]をインストールした場合は、必ず既定値を使用してください。  
   
-     運用上またはパフォーマンス上の問題をサーバーのプロパティを通じて解消する方法については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
-     サーバーのプロパティについては、Microsoft ホワイト ペーパー「 [SQL Server 2005 Analysis Services (SSAS) サーバー プロパティ](http://go.microsoft.com/fwlink/?LinkID=199102)」も参照してください。サーバーのプロパティの多くは、過去数回のリリースにわたり変更されていません。    
+## <a name="configure-properties-in-msmdsrvini"></a>msmdsrv.ini のプロパティを構成する
   
-##  <a name="bkmk_msmdsrvini"></a> msmdsrv.ini のプロパティを構成する
-  一部のプロパティの設定は、msmdrsrv.ini ファイルでのみ行うことができます。 詳細プロパティを表示しても設定する対象のプロパティが含まれていない場合は、msmdsrv.ini ファイルを直接編集する必要があります。
+一部のプロパティの設定は、msmdrsrv.ini ファイルでのみ行うことができます。 これらのプロパティは、Azure Analysis Services には適用されません。
+詳細プロパティを表示しても設定する対象のプロパティが含まれていない場合は、msmdsrv.ini ファイルを直接編集する必要があります。 
   
 1.  Management Studio の [全般プロパティ] ページの **DataDir** プロパティをチェックして、Analysis Services プログラム ファイル (msmdsrv.ini を含む) の場所を確認します。
 
@@ -59,7 +58,7 @@ SQL Server Management Studio のプロパティ ページには、最も頻繁�
   
 5.  ファイルを保存し、サービスを再起動します。  
   
-##  <a name="bkmk_ref"></a> サーバー プロパティ リファレンス  
+##  <a name="server-property-reference"></a>サーバー プロパティ リファレンス  
   
  次のトピックでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のさまざまな構成プロパティについて説明します。  
   

@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15f862ceff618fb3c0f20d6e2bdf8d9d5b276801
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97c7159682e421005385fd830ceed4380086089c
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806840"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432265"
 ---
-#<a name="installing-smo"></a>SMO のインストール
+# <a name="installing-smo"></a>SMO のインストール
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
@@ -38,11 +38,11 @@ ms.locfileid: "47806840"
 >>[!Important]
 >>説明したように、[ファイルとバージョン番号](files-and-version-numbers.md) ページで、SMO アセンブリを GAC にインストールしないでください。 SMO のこれらのバージョンを使用しても他のアプリケーションで問題を引き起こすそうでした (など[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio)。
 
-##<a name="installing-the-package"></a>パッケージをインストールします。
+## <a name="installing-the-package"></a>パッケージをインストールします。
 
 参照してください[NuGet クイック スタート - パッケージを使用して](https://docs.microsoft.com/nuget/quickstart/use-a-package)手順と例についてをインストールすると、NuGet パッケージを使用します。 
   
 ## <a name="system-requirements"></a>システム要件
   
- SMO が必要です[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]4.0 を使用して任意のアプリケーションは、クライアント コンピューターがそのバージョンがあること、または以降がインストールされていることを確認する必要がありますので、実行します。
+ SMO が必要です[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]4.0 を使用して任意のアプリケーションは、クライアント コンピューターがそのバージョンがあること、または以降がインストールされていることを確認する必要がありますので、実行します。 NetFx SMO ライブラリにインストールされているいくつかのネイティブ バイナリでは、VC 2013 ランタイムをインストールする必要もあります。そのランタイムがパッケージに含まれていません。 ターゲット アーキテクチャに適切な再頒布可能パッケージをダウンロードします。 https://www.microsoft.com/download/details.aspx?id=40784
   

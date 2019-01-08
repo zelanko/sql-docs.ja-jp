@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41a23e9885a2d5bd49d074dc72699601eb08a6d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90705da83013de65423aa2984293f8f780194de0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850560"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588936"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +43,26 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication =** ] **'***publication***'**  
+ [  **@publication =** ] **'**_パブリケーション_**'**  
  関連付けられているパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は**%**、このサーバーのすべてのサブスクリプション情報が返されます。  
   
- [  **@article=** ] **'***記事***'**  
+ [  **@article=** ] **'**_記事_**'**  
  アーティクルの名前を指定します。 *記事*は**sysname**、既定値は**%**、選択したパブリケーションとサブスクライバーに関するすべてのサブスクリプション情報が返されます。 場合**すべて**パブリケーションの完全版のサブスクリプションの 1 つのエントリが返されます。  
   
- [  **@subscriber=** ] **'***サブスクライバー***'**  
+ [  **@subscriber=** ] **'**_サブスクライバー_**'**  
  サブスクリプション情報を取得するサブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**、既定値は**%**、選択したパブリケーションとアーティクルに関するすべてのサブスクリプション情報が返されます。  
   
- [  **@destination_db=** ] **'***destination_db***'**  
+ [  **@destination_db=** ] **'**_destination_db_**'**  
  対象データベース名を指定します。 *destination_db*は**sysname**、既定値は **%** します。  
   
- [  **@found=** ] **'***見つかった***'** 出力  
+ [  **@found=** ] **'**_見つかった_**'** 出力  
  行を返すことを示すフラグです。 *見つかった*は**int**は出力パラメーターで、既定値は 23456 です。  
   
  **1**パブリケーションが見つかったことを示します。  
   
  **0**パブリケーションが見つからないことを示します。  
   
- [ **@publisher**=] **'***パブリッシャー***'**  
+ [ **@publisher**=] **'**_パブリッシャー_**'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、および既定値は、現在のサーバーの名前。  
   
 > [!NOTE]  
@@ -91,9 +90,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|DTS パッケージがサブスクリプションに割り当てられている場合の、DTS パッケージの場所。 パッケージの値がある場合**0**でパッケージの場所を指定します、**ディストリビューター**します。 値**1**を指定します、**サブスクライバー**します。|  
 |**subscriber_security_mode**|**smallint**|セキュリティ モードをサブスクライバーで、場所**1** Windows 認証では、ことを意味と**0**意味[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**subscriber_login**|**sysname**|サブスクライバーのログイン名です。|  
-|**@subscriber_password**||実際のサブスクライバー パスワードは返されません。 によってマスクされる結果は、"**\*\*\*\*\*\***"文字列。|  
+|**@subscriber_password**||実際のサブスクライバー パスワードは返されません。 によってマスクされる結果は、"**&#42;&#42;&#42;&#42;&#42;&#42;**"文字列。|  
 |**job_login**|**sysname**|ディストリビューション エージェントが実行される Windows アカウントの名前。|  
-|**job_password**||実際のジョブ パスワードは返されません。 によってマスクされる結果は、"**\*\*\*\*\*\***"文字列。|  
+|**job_password**||実際のジョブ パスワードは返されません。 によってマスクされる結果は、"**&#42;&#42;&#42;&#42;&#42;&#42;**"文字列。|  
 |**distrib_agent_name**|**nvarchar(100)**|サブスクリプションと同期するエージェント ジョブの名前。|  
 |**subscriber_type**|**tinyint**|サブスクライバーの種類。次のいずれかになります。<br /><br /> **0** = SQL Server サブスクライバー<br /><br /> **1** = ODBC データ ソース サーバー<br /><br /> **2** = Microsoft JET データベース (非推奨)<br /><br /> **3** = OLE DB プロバイダー|  
 |**subscriber_provider**|**sysname**|SQL Server 以外のデータ ソース用の OLE DB プロバイダーを登録するときに使用される、一意なプログラム識別子 (PROGID)。|  
