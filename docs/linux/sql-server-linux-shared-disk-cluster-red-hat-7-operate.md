@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 4b41e3adeaab22a958e94e373762c57a6d613f6d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661268"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393576"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server、Red Hat Enterprise Linux の共有ディスク クラスターで運用します。
 
@@ -142,10 +142,10 @@ sudo crm_mon
    ```
 
    > [!NOTE]
-   > 組み込みの高可用性構成が備わっていない別のファイアウォールを使用する場合は、Pacemaker 用に次のポートを開き、クラスター内の他のノードと通信できるようにする必要があります
+   > 組み込みの高可用性構成がない別のファイアウォールを使用している場合、次のポートが、クラスター内の他のノードと通信できる Pacemaker 用に開かれる必要があります。
    >
-   > * TCP: ポート 2224、3121、21064
-   > * UDP: ポート 5405
+   > * [TCP]: ポート、2224 3121、21064
+   > * UDP:ポート 5405
 
 1. 新しいノードに Pacemaker パッケージをインストールします。
 
@@ -261,7 +261,7 @@ pacemaker: active/enabled
 
     Pacemaker ですべてのノードが通信できるように、で次のポートが開かれている必要があります。
     
-    - * * TCP: 2224、3121、21064
+    - * * TCP:2224、3121、21064
 
 - **Pacemaker および Corosync サービスが実行されているか**
 

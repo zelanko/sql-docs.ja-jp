@@ -20,18 +20,18 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0815a5d0597fabb6b4f5e942d2bbb92b7ae57e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bac7f88dcbd9895cfd0d07a5993ab9e38a4608d0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727540"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214733"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 関数
 **準拠**  
- バージョンで導入されました ODBC 2.0 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 2.0 の規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLDrivers**ドライバーの説明とドライバー属性のキーワードを示します。 この関数は、ドライバー マネージャーによってのみ実装されます。  
   
 ## <a name="syntax"></a>構文  
@@ -86,7 +86,7 @@ SQLRETURN SQLDrivers(
   
 |SQLSTATE|[エラー]|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|(DM) ドライバー マネージャー固有の情報メッセージ。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
+|01000|一般的な警告|(DM) ドライバー マネージャーに固有の情報メッセージ。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データで、右側が切り捨てられました|(DM) バッファー \* *DriverDescription*を完全なドライバーの説明を返すのに十分な大きさがありません。 そのため、説明が切り捨てられました。 完全なドライバーの説明の長さが返される\* *DescriptionLengthPtr*します。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。<br /><br /> (DM) バッファー \* *DriverAttributes*属性値のペアの完全な一覧を返すのに十分な大きさがありません。 そのため、一覧が切り捨てられました。 属性値のペアの切り詰められていない一覧の長さが返される **AttributesLengthPtr*します。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリの割り当てエラー|(DM)、ドライバー マネージャーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  

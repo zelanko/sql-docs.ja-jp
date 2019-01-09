@@ -11,12 +11,12 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4f0853eb502d810a693e4cc2872710a62c784268
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e84b6e148774fc9b48b6174fa8be87579290fec4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159402"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393417"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>コマンド プロンプトからの PowerPivot のインストール
   コマンド ラインからセットアップを実行して、SQL Server PowerPivot for SharePoint をインストールすることができます。 コマンドには `/ROLE` パラメーターを含め、`/FEATURES` パラメーターを除外する必要があります。  
@@ -37,7 +37,7 @@ ms.locfileid: "48159402"
   
  どちらのロールを指定しても、アプリケーション、構成、および配置のファイルがインストールされて、SharePoint ファームで PowerPivot for SharePoint を実行できるようになります。 指定したロールに基づいて、SharePoint 統合のハードウェアおよびソフトウェアの要件がチェックされます。  
   
- 既存のファーム オプションでは、SharePoint ファームが既に存在することが想定されます。 新しいファーム オプションでは、ユーザーが新しいファームを作成することが想定されます。コマンド ライン構文でデータベース エンジン インスタンスの追加がサポートされているため、データベース エンジン インスタンスをファームのデータベース サーバーとして使用できます。  
+ 既存のファーム オプションでは、SharePoint ファームが既に存在することが想定されます。 新しいファーム オプションは、新しいファームでは; を作成することが前提としています。データベース エンジンのインスタンスをファームのデータベース サーバーとして使用できるように、コマンドラインの構文で、データベース エンジンのインスタンスの追加をサポートします。  
   
  以前のリリースとは異なり、すべてのサーバー構成タスクはインストール後のタスクとして実行されます。 インストールと構成の手順を自動化している場合は、PowerShell を使用してサーバーを構成できます。 詳細については、次を参照してください。 [Windows PowerShell を使用して、PowerPivot 構成](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)します。  
   

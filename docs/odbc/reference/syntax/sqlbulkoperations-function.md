@@ -20,18 +20,18 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d59e4d93b082312b6ae33fc3c2e2ca1e4177c771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815180"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212712"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLBulkOperations**一括挿入や一括ブックマークを実行します。 更新プログラムを含む、操作は、削除、およびブックマークでフェッチします。  
   
 ## <a name="syntax"></a>構文  
@@ -89,7 +89,7 @@ SQLRETURN SQLBulkOperations(
 |HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている、 **SQLBulkOperations**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM)、指定した*StatementHandle*実行の状態ではありませんでした。 最初に呼び出さず、関数が呼び出された**SQLExecDirect**、 **SQLExecute**、またはカタログ関数。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM) ドライバーは ODBC 2、でした。*x*ドライバー、および**SQLBulkOperations**に対して呼び出された、 *StatementHandle*する前に**SQLFetchScroll**または**SQLFetch**が呼び出されました。<br /><br /> (DM) **SQLBulkOperations**後が呼び出された**SQLExtendedFetch**が呼び出されて、 *StatementHandle*します。|  
 |HY011|属性を設定できません。|(DM) ドライバーは ODBC 2、でした。*x*ドライバー、および、し、SQL_ATTR_ROW_STATUS_PTR ステートメント属性は、呼び出しの間で設定された**SQLFetch**または**SQLFetchScroll**と**SQLBulkOperations**.|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY090|文字列またはバッファーの長さが無効です。|*操作*SQL_DATA_AT_EXEC に等しくないが、引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK; データ値が null ポインターではありませんでした C データ型が SQL_C_BINARY または SQL_C_CHAR; と列の長さの値が 0 未満。、SQL_COLUMN_IGNORE、SQL_NTS、または SQL_NULL_DATA、SQL_LEN_DATA_AT_EXEC_OFFSET 未満。<br /><br /> 長さ/インジケーター バッファーの値が SQL_DATA_AT_EXEC です。SQL 型がいずれかの SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソース固有のデータ型。SQL_NEED_LONG_DATA_LEN 情報の種類と**SQLGetInfo** "Y"でした。<br /><br /> *操作*引数が SQL_ADD、SQL_ATTR_USE_BOOKMARK ステートメント属性は、SQL_UB_VARIABLE に設定されており、列 0 がの長さはこの結果セットに対してブックマークの最大の長さと等しくありませんでした。 バッファーにバインドされました。 (この長さは、IRD の SQL_DESC_OCTET_LENGTH フィールドで使用できますし、呼び出すことによって取得できる**SQLDescribeCol**、 **SQLColAttribute**、または**SQLGetDescField**)。|  
+|HY090|文字列またはバッファーの長さが無効です。|*操作*SQL_DATA_AT_EXEC に等しくないが、引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK; データ値が null ポインターではありませんでした C データ型が SQL_C_BINARY または SQL_C_CHAR; と列の長さの値が 0 未満。、SQL_COLUMN_IGNORE、SQL_NTS、または SQL_NULL_DATA、SQL_LEN_DATA_AT_EXEC_OFFSET 未満。<br /><br /> 長さ/インジケーター バッファーの値が SQL_DATA_AT_EXEC です。SQL 型がいずれかの SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型。SQL_NEED_LONG_DATA_LEN 情報の種類と**SQLGetInfo** "Y"でした。<br /><br /> *操作*引数が SQL_ADD、SQL_ATTR_USE_BOOKMARK ステートメント属性は、SQL_UB_VARIABLE に設定されており、列 0 がの長さはこの結果セットに対してブックマークの最大の長さと等しくありませんでした。 バッファーにバインドされました。 (この長さは、IRD の SQL_DESC_OCTET_LENGTH フィールドで使用できますし、呼び出すことによって取得できる**SQLDescribeCol**、 **SQLColAttribute**、または**SQLGetDescField**)。|  
 |HY092|無効な属性の識別子|(DM) の指定された値、*操作*引数が無効です。<br /><br /> *操作*引数が SQL_ADD、SQL_UPDATE_BY_BOOKMARK、または SQL_DELETE_BY_BOOKMARK、および SQL_ATTR_CONCURRENCY のステートメント属性 SQL_CONCUR_READ_ONLY に設定されています。<br /><br /> *操作*引数が SQL_DELETE_BY_BOOKMARK、SQL_FETCH_BY_BOOKMARK、または SQL_UPDATE_BY_BOOKMARK、およびブックマーク列がバインドされていないまたは SQL_UB_OFF に SQL_ATTR_USE_BOOKMARKS ステートメントの属性が設定されました。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースがで要求された操作をサポートしていません、*操作*引数。|  
@@ -102,7 +102,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="comments"></a>コメント  
   
 > [!CAUTION]  
->  どのようなステートメントの状態について**SQLBulkOperations**呼び出すことができ、ODBC 2 と互換性のために行う必要があります *。x*アプリケーションを参照してください、[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)付録 g: ドライバーとの下位互換性のためのガイドライン」セクション。  
+>  どのようなステートメントの状態について**SQLBulkOperations**呼び出すことができ、ODBC 2 と互換性のために行う必要があります *。x*アプリケーションを参照してください、[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)付録 g: セクション旧バージョンとの互換性のためのガイドラインをドライバーです。  
   
  アプリケーションを使用して**SQLBulkOperations**ベース テーブルまたは現在のクエリに対応するビューでは、次の操作を実行します。  
   
@@ -232,7 +232,7 @@ SQLRETURN SQLBulkOperations(
   
 1.  使用して、データをバインドに**SQLBindCol**、アプリケーションの場所での列番号などのアプリケーション定義の値、  *\*TargetValuePtr*実行時のデータのバッファー列です。 値は、列を識別するために後で使用できます。  
   
-     アプリケーションの場所の結果、SQL_LEN_DATA_AT_EXEC (*長さ*) マクロで、  *\*StrLen_or_IndPtr*バッファー。 列の SQL データ型は SQL_LONGVARBINARY、SQL_LONGVARCHAR、または長い形式のデータ ソース固有のデータ型と、ドライバーで SQL_NEED_LONG_DATA_LEN 情報の種類に"Y"を返す場合**SQLGetInfo**、*長さ* ; パラメーターに送信されるデータのバイト数は、それ以外の場合、負以外の値を指定する必要があり、無視されます。  
+     アプリケーションの場所の結果、SQL_LEN_DATA_AT_EXEC (*長さ*) マクロで、  *\*StrLen_or_IndPtr*バッファー。 列の SQL データ型は SQL_LONGVARBINARY、SQL_LONGVARCHAR、または長い形式のデータ ソースに固有のデータ型と、ドライバーで SQL_NEED_LONG_DATA_LEN 情報の種類に"Y"を返す場合**SQLGetInfo**、*長さ* ; パラメーターに送信されるデータのバイト数は、それ以外の場合、負以外の値を指定する必要があり、無視されます。  
   
 2.  ときに**SQLBulkOperations**を呼び出す場合は、実行時データ列、関数の戻り値 SQL_NEED_DATA およびに依存して手順 3. に進みます。 (実行時データ列がない場合、プロセスが完了しました。)  
   
@@ -243,7 +243,7 @@ SQLRETURN SQLBulkOperations(
   
      実行時データ列は列のデータを送信行セットで**SQLPutData**行が更新または挿入**SQLBulkOperations**します。 バインドされている**SQLBindCol**します。 によって返される値**SQLParamData**内の行のアドレスは、**TargetValuePtr*が処理されているバッファー。  
   
-4.  アプリケーション呼び出し**SQLPutData**列のデータを送信する 1 つ以上の時間。 すべてのデータ値を返すことができない場合は、複数の呼び出しが必要な *\*TargetValuePtr*で指定されたバッファー **SQLPutData**; を複数回呼び出す**SQLPutData**文字、バイナリ、またはデータ ソース固有のデータ型の列に文字データを送信するときにのみ、または列が文字、バイナリ、C のバイナリ データを送信するときに、同じ列が許可されるか、データ ソース固有のデータ型します。  
+4.  アプリケーション呼び出し**SQLPutData**列のデータを送信する 1 つ以上の時間。 すべてのデータ値を返すことができない場合は、複数の呼び出しが必要な *\*TargetValuePtr*で指定されたバッファー **SQLPutData**; を複数回呼び出す**SQLPutData**文字、バイナリ、またはデータのソースに固有のデータ型の列に文字データを送信するときにのみ、または列が文字、バイナリ、C のバイナリ データを送信するときに、同じ列が許可されるか、データ ソースに固有のデータを入力します。  
   
 5.  アプリケーション呼び出し**SQLParamData**列のすべてのデータが送信されたことを通知するには、もう一度です。  
   

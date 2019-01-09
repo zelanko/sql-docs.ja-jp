@@ -20,18 +20,18 @@ ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a41829e9cb1f905c82e7cd5f8b179e5e1f777741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70fe1ca95f5160f801eaf3528e625116705eda6d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771680"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203811"
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLGetEnvAttr**環境属性の現在の設定を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -88,7 +88,7 @@ SQLRETURN SQLGetEnvAttr(
   
  **SQLGetEnvAttr**割り当てと、環境ハンドルの解放の間でいつでも呼び出すことができます。 環境のアプリケーションの設定が正常にすべての環境属性がされるまで保持**SQLFreeHandle**で呼び出される、 *EnvironmentHandle*で、 *HandleType*sql_handle_env としての。 ODBC 3 では、複数の環境ハンドルを同時に割り当てることが *.x*します。 別の環境が割り当てられているときに、1 つの環境の環境属性は影響しません。  
   
-> [!NOTE]  
+> [!NOTE]
 >  SQL_ATTR_OUTPUT_NTS 環境属性は、標準に準拠したアプリケーションでサポートされています。 ときに**SQLGetEnvAttr**を呼び出すと、ODBC 3 *.x*ドライバー マネージャーは常にこの属性を SQL_TRUE を返します。 呼び出しでのみ SQL_ATTR_OUTPUT_NTS が SQL_TRUE に設定することができます**SQLSetEnvAttr**します。  
   
 ## <a name="related-functions"></a>関連する関数  

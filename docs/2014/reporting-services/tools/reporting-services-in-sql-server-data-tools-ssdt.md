@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: MT
+ms.openlocfilehash: 5fafd1a86686b7609a8b6e0241c05cc858f2dc41
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906302"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409699"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]が強化されたビジネス インテリジェンス ソリューションに固有の環境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に付属しています。  
@@ -49,7 +49,7 @@ ms.locfileid: "48906302"
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#bkmk_Top)  
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> レポート デザイナーのウィンドウとペイン  
- レポート デザイナーは、2 つのビュー:**デザイン**レポート データとレポートのレイアウトを定義して**プレビュー**レポートのレンダリングされるビューを表示します。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
+ レポート デザイナーには、2 つのビューがサポートされています。**デザイン**レポート データとレポートのレイアウトを定義して**プレビュー**レポートのレンダリングされるビューを表示します。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
   
 ###  <a name="bkmk_ReportDataPane"></a> レポート データ ペイン  
  [レポート データ] ペインには、組み込みフィールド、データ ソース、データセット、フィールド コレクション、レポート パラメーター、および画像が表示されます。  
@@ -188,7 +188,7 @@ ms.locfileid: "48906302"
   
 -   **[レポートのプロパティ]** **[レポートのプロパティ]** ダイアログ ボックスを開きます。 このダイアログ ボックスでは、一般的なレポートのプロパティ (作成者の名前やグリッドの間隔など) を割り当てたり、レポート レイアウトのプロパティ (列数やページ サイズなど) を指定したりできます。 また、カスタム コード、アセンブリやクラスへの参照、データ出力要素の名前、データ変換の名前、およびデータ スキーマの名前も含めることができます。  
   
--   **[表示]** レポート デザイナーの [デザイン] タブと [プレビュー] タブを切り替えます。  
+-   **ビュー** 2 つのレポート デザイナー タブを切り替えます。デザインおよびプレビューします。  
   
 -   **[ページ ヘッダー]** レポートのページ ヘッダーを追加または削除します。 ページ ヘッダーを削除すると、ページ ヘッダー内のすべてのアイテムが削除されます。  
   

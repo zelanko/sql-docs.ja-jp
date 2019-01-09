@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677681"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979918"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux の共有ディスク クラスターを構成します。
 
@@ -62,7 +62,7 @@ ms.locfileid: "51677681"
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> セットアップ時に、SQL Server インスタンスのためにサーバー マスター キーが生成され、`/var/opt/mssql/secrets/machine-key` に配置されます。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるため、その id はノード間で共有されません。 したがって、各ローカル mssql アカウント がサーバー マスター  キーの暗号化を解除するためにアクセスできるようにするために、各セカンダリ ノードにプライマリ ノードから暗号化キーをコピーする必要があります。 
+> セットアップ時に、SQL Server インスタンスのためにサーバー マスター キーが生成され、`/var/opt/mssql/secrets/machine-key` に配置されます。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるために、その id は、ノード間で共有されません。 したがって、各ローカル mssql アカウント がサーバー マスター  キーの暗号化を解除するためにアクセスできるようにするために、各セカンダリ ノードにプライマリ ノードから暗号化キーをコピーする必要があります。 
 
 1. プライマリ ノードで、Pacemaker 用 SQL server ログインを作成および実行する権限をログイン`sp_server_diagnostics`します。 Pacemaker は、このアカウントを使用して、ノードは、SQL Server を実行していることを確認します。 
 
@@ -274,10 +274,10 @@ NFS の使用に関する詳細については、次のリソースを参照し�
    sudo firewall-cmd --reload
    ```
 
-   > 組み込みの高可用性構成が備わっていない別のファイアウォールを使用する場合は、Pacemaker 用に次のポートを開き、クラスター内の他のノードと通信できるようにする必要があります
+   > 組み込みの高可用性構成がない別のファイアウォールを使用している場合、次のポートが、クラスター内の他のノードと通信できる Pacemaker 用に開かれる必要があります。
    >
-   > * TCP: ポート 2224、3121、21064
-   > * UDP: ポート 5405
+   > * [TCP]: ポート、2224 3121、21064
+   > * UDP:ポート 5405
 
 1. 各ノードに Pacemaker パッケージをインストールします。
 
@@ -285,7 +285,7 @@ NFS の使用に関する詳細については、次のリソースを参照し�
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-   
+    
 
 2. Pacemaker と Corosync のパッケージをインストールしたときに作成された既定のユーザー用のパスワードを設定します。 両方のノードで同じパスワードを使用します。 
 
@@ -293,7 +293,7 @@ NFS の使用に関する詳細については、次のリソースを参照し�
    sudo passwd hacluster
    ```
 
-   
+    
 
 3. `pcsd` サービスと Pacemaker を有効にし、起動します。 これにより、再起動後にノードはクラスターに再度参加できます。 両方のノードで、次のコマンドを実行します。
 
@@ -314,8 +314,8 @@ NFS の使用に関する詳細については、次のリソースを参照し�
 1. ノードのいずれかで、クラスターを作成します。
 
    ```bash
-   sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
-   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
+   sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
+   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
    ```
 
@@ -330,13 +330,13 @@ NFS の使用に関する詳細については、次のリソースを参照し�
 
 2. SQL Server、ファイル システム、仮想 IP リソースに対してクラスター リソースを構成し、クラスターに構成をプッシュします。 次の情報が必要です。
 
-   - **SQL Server リソース名**: クラスター化された SQL Server リソースの名前。 
-   - **Floating IP リソース名**: 仮想 IP アドレス リソースの名前。
-   - **IP アドレス**: SQL Server のクラスター化されたインスタンスに接続するクライアントが使用する IP アドレス。 
-   - **ファイル システムのリソース名**: ファイル システム リソースの名前。
-   - **デバイス**:、NFS 共有のパス
-   - **デバイス**: 共有にマウントしているローカル パス
-   - **fstype**: ファイル共有の種類 (つまり nfs)
+   - **SQL Server リソース名**:クラスター化された SQL Server リソースの名前。 
+   - **Floating IP リソース名**:仮想 IP アドレス リソースの名前。
+   - **IP アドレス**:SQL Server のクラスター化されたインスタンスに接続するクライアントが使用する IP アドレス。 
+   - **ファイル システムのリソース名**:ファイル システム リソースの名前。
+   - **デバイス**:NFS 共有のパス
+   - **デバイス**:共有にマウントされているローカル パス
+   - **fstype**:ファイル共有の種類 (つまり nfs)
 
    次のスクリプト環境から値を更新します。 クラスター化されたサービスを構成および開始するために 1 つのノード上で実行します。  
 
@@ -370,7 +370,7 @@ NFS の使用に関する詳細については、次のリソースを参照し�
    sudo pcs status 
    ```
 
-   次の例は、PacemakerがSQL Server のクラスター化されたインスタンスの開始に成功したときの結果を示しています。 
+   次の例は、Pacemaker には SQL Server のクラスター化されたインスタンスが正常に開始するときに結果を示します。 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1

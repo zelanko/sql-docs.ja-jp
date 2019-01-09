@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
@@ -13,12 +12,12 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4d3afbb967238cfef049b491f6ab871f830708b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04c63477a53de07777806aa8efb1fda78ef44264
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102462"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791104"
 ---
 # <a name="use-a-recordset-destination"></a>レコードセット変換先を使用する
   レコードセット変換先では、データは外部データ ソースに保存されません。 代わりに、レコードセット変換先では、`Object` データ型の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 レコードセット変換先でデータが保存されたら、通常、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子によって、現在の行の各列の値が個別のパッケージ変数に保存されます。 その後、Foreach ループ コンテナー内で構成したタスクによって変数から値が読み取られ、その値を使用してアクションが実行されます。  
@@ -38,7 +37,7 @@ ms.locfileid: "48102462"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成または開きます。  
   
-2.  レコード セット変換先でメモリに保存されたレコード セットを格納変数の型が設定される変数を作成する`Object`します。  
+2.  レコードセット変換先でメモリに保存されたレコードセットを格納する変数を作成し、変数の型を `Object` に設定します。  
   
 3.  使用するレコードセットの各列の値を格納するために、適切な型の追加の変数を作成します。  
   
@@ -69,21 +68,21 @@ ms.locfileid: "48102462"
   
 3.  **[変数]** ウィンドウで、レコードセットと現在の行の列値を格納する変数を作成します。  
   
-    1.  という名前の変数を作成する`BonusRecordset`、その型に設定し、`Object`します。  
+    1.  `BonusRecordset` という名前の変数を作成し、その型を `Object` に設定します。  
   
-         `BonusRecordset`変数は、レコード セットを保持します。  
+         `BonusRecordset` 変数にはレコードセットが格納されます。  
   
-    2.  という名前の変数を作成する`EmailAddress`、その型に設定し、`String`します。  
+    2.  `EmailAddress` という名前の変数を作成し、その型を `String` に設定します。  
   
-         `EmailAddress`変数は販売員の電子メール アドレスを保持します。  
+         `EmailAddress` 変数には販売員の電子メール アドレスが格納されます。  
   
-    3.  という名前の変数を作成する`FirstName`、その型に設定し、`String`します。  
+    3.  `FirstName` という名前の変数を作成し、その型を `String` に設定します。  
   
-         `FirstName`変数は販売員の名を保持します。  
+         `FirstName` 変数には販売員の名が格納されます。  
   
-    4.  という名前の変数を作成する`Bonus`、その型に設定し、`Double`します。  
+    4.  `Bonus` という名前の変数を作成し、その型を `Double` に設定します。  
   
-         `Bonus`変数は販売員のボーナス額を保持します。  
+         `Bonus` 変数には販売員のボーナス額が格納されます。  
   
 #### <a name="to-configure-the-connection-managers"></a>接続マネージャーを構成するには  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48102462"
   
 1.  **デザイナーの** [制御フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブで、データ フロー タスクをデザイン画面に追加します。  
   
-2.  **[データ フロー]** tab, add an OLE DB source to the [データ フロー] task, and then open the **[OLE DB ソース エディター]** を開きます。  
+2.   **[データ フロー]** tab, add an OLE DB source to the [データ フロー] task, and then open the **[OLE DB ソース エディター]** を開きます。  
   
 3.  エディターの **[接続マネージャー]** ページで、次の設定を使用してソースを構成します。  
   

@@ -1,5 +1,5 @@
 ---
-title: 分析を構成するサービスと Kerberos の制約付き委任 (KCD) |Microsoft ドキュメント
+title: 構成する Analysis Services と Kerberos の制約付き委任 (KCD) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: be9fde53d440ff82a34fafce3230cdfbf85f2897
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019249"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811154"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Analysis Services と Kerberos の制約付き委任 (KCD) の構成
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,15 +25,15 @@ ms.locfileid: "34019249"
   
  このトピックのセクションでは、KCD を必要とする [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] と [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] での一般的なシナリオを確認します。また、インストールおよび構成する必要があるものについて概要を説明しながら、サーバーの展開例を紹介します。 ドメイン コントローラーや KCD など、関連するテクノロジの詳細情報へのリンクについては、「 [詳細情報とコミュニティ コンテンツ](#bkmk_moreinfo) 」をご覧ください。  
   
-## <a name="scenario-1-workbook-as-data-source-wds"></a>シナリオ 1: データ ソースとしてのブック (WDS)  
- ![1 を参照してください](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "1 を参照してください")Office Online Server が Excel ブックを開くと![2 を参照してください](../../../analysis-services/instances/install-windows/media/ssas-callout2.png "2 を参照してください")別のブックへのデータ接続を検出します。 Office Online Server は要求を送信、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]リダイレクター サービス![3 を参照してください](../../../analysis-services/instances/install-windows/media/ssas-callout3.png "3 を参照してください")を開くには 2 つ目のブックとデータ![4 参照](../../../analysis-services/instances/install-windows/media/ssas-callout4.png "4 を参照してください").  
+## <a name="scenario-1-workbook-as-data-source-wds"></a>シナリオ 1:(WDS) のデータ ソースとしてブック。  
+ ![1 を参照してください](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "1 を参照してください")Office Online Server が Excel ブックを開くと![2 を参照してください](../../../analysis-services/instances/install-windows/media/ssas-callout2.png "2 を参照してください")別のブックへのデータ接続を検出します。 Office Online Server は要求を送信、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]リダイレクター サービス![3 を参照してください](../../../analysis-services/instances/install-windows/media/ssas-callout3.png "3 を参照してください。") 2 番目のブックとデータを開く![4 を参照してください](../../../analysis-services/instances/install-windows/media/ssas-callout4.png "4 を参照してください。").  
   
  このシナリオでは、Office Online Server から SharePoint の SharePoint [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] リダイレクター サービスにユーザーの資格情報を委任する必要があります。  
   
  ![データ ソースとしてブック](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "データ ソースとしてブック")  
   
-## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>シナリオ 2: Excel ブックにリンクする Analysis Services 表形式モデル  
- Analysis Services 表形式モデル![1 を参照してください](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "1 を参照してください")Power Pivot モデルを含む Excel ブックにリンクします。 このシナリオでは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が表形式モデルを読み込んだときに、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] はブックへのリンクを検出します。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、モデルを処理するときに、クエリ要求を SharePoint に送信してブックを読み込みます。 このシナリオでは、Analysis Services から SharePoint にクライアントの資格情報を委任する必要は **ありません** が、クライアント アプリケーションがアウトオブライン バインドでデータ ソース情報を上書きする可能性があります。 アウトオブライン バインド要求で現在のユーザーの権限の借用が指定されている場合、ユーザーの資格情報を委任する必要があるため、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] と SharePoint 間で KCD を構成する必要があります。  
+## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>シナリオ 2:Excel ブックへの Analysis Services 表形式のモデル リンク  
+ Analysis Services 表形式モデルを![1 を参照してください。](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "1 を参照してください。") Power Pivot モデルを含む Excel ブックへのリンク。 このシナリオでは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が表形式モデルを読み込んだときに、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] はブックへのリンクを検出します。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、モデルを処理するときに、クエリ要求を SharePoint に送信してブックを読み込みます。 このシナリオでは、Analysis Services から SharePoint にクライアントの資格情報を委任する必要は **ありません** が、クライアント アプリケーションがアウトオブライン バインドでデータ ソース情報を上書きする可能性があります。 アウトオブライン バインド要求で現在のユーザーの権限の借用が指定されている場合、ユーザーの資格情報を委任する必要があるため、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] と SharePoint 間で KCD を構成する必要があります。  
   
  ![office online server](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-oos.png "office online server")  
   
@@ -53,9 +53,9 @@ ms.locfileid: "34019249"
 ### <a name="domain-controller"></a>ドメイン コントローラー  
  ドメイン コントローラー (DC) 用にインストールするものは次のとおりです。  
   
--   **役割:** Active Directory ドメイン サービス。 概要については、「 [Configuring Active Directory (AD DS) in Windows Server 2012](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/)」 (Windows Server 2012 での Active Directory (AD DS) の構成) をご覧ください。  
+-   **ロール:** Active Directory Domain Services。 概要については、「 [Configuring Active Directory (AD DS) in Windows Server 2012](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/)」 (Windows Server 2012 での Active Directory (AD DS) の構成) をご覧ください。  
   
--   **役割:** DNS サーバー  
+-   **ロール:** DNS Server  
   
 -   **機能:** .NET Framework 3.5 の機能/.NET Framework 3.5  
   
@@ -65,23 +65,23 @@ ms.locfileid: "34019249"
   
 -   IPv4 と IPv6 の両方のアドレスを構成することをお勧めします。 これは、Windows コントロール パネルで構成できます。  
   
-    1.  **[ネットワークと共有センター]** をクリックします。  
+    1.   **[ネットワークと共有センター]** をクリックします。  
   
     2.  イーサネット接続をクリックします。  
   
-    3.  **[プロパティ]** をクリックします。  
+    3.   **[プロパティ]** をクリックします。  
   
-    4.  **[インターネット プロトコル バージョン 6 (TCP/IPv6)]** をクリックします。  
+    4.   **[インターネット プロトコル バージョン 6 (TCP/IPv6)]** をクリックします。  
   
-    5.  **[プロパティ]** をクリックします。  
+    5.   **[プロパティ]** をクリックします。  
   
-    6.  **[次の DNS サーバーのアドレスを使う]** をクリックします。  
+    6.   **[次の DNS サーバーのアドレスを使う]** をクリックします。  
   
     7.  ipconfig コマンドで取得した IP アドレスを入力します。  
   
     8.  **[詳細設定]** をクリックし、 **[DNS]** タブをクリックして DNS サフィックスが正しいことを確認します。  
   
-    9. **[以下の DNS サフィックスを順に追加する]** をクリックします。  
+    9.  **[以下の DNS サフィックスを順に追加する]** をクリックします。  
   
     10. IPv4 でこれらの手順を繰り返します。  
   
@@ -92,15 +92,15 @@ ms.locfileid: "34019249"
 ### <a name="2016-sql-server-database-engine-and-analysis-services-in-power-pivot-mode"></a>2016 SQL Server データベース エンジンと Power Pivot モードの Analysis Services  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターにインストールするものは次のとおりです。  
   
- ![注](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注")で、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]セットアップ ウィザードで、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Power pivot モードは、機能選択ワークフローの一部としてインストールします。  
+ ![注](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "に注意してください")で、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]セットアップ ウィザード、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Power pivot モードは、機能選択ワークフローの一部としてインストールします。  
   
 1.  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] セットアップ ウィザードを実行し、機能選択ページで、データベース エンジン、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、管理ツールをクリックします。 セットアップ ウィザードの後の手順で、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]モードを指定できます。  
   
-2.  インスタンスの構成では、"POWERPIVOT" という名前付きインスタンスを構成します。  
+2.  インスタンスの構成では、"POWERPIVOT"の名前付きインスタンスを構成します。  
   
 3.  [Analysis Services の構成] ページで、 **Power Pivot** モード用に Analysis Services サーバーを構成し、Office Online Server の **コンピューター名** を Analysis Services サーバー管理者の一覧に追加します。 詳細については、「 [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)」を参照してください。  
   
-4.  既定では、"コンピューター" オブジェクトは検索には含まれません。 をクリックして![コンピューター アカウントを追加するオブジェクト をクリックして](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "コンピューター アカウントを追加するオブジェクト をクリックして")コンピューター オブジェクトを追加します。  
+4.  ただし、既定では、「コンピューター」オブジェクトの種類は、検索には含まれません。 クリックして![コンピューター アカウントを追加するオブジェクト をクリックして](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "コンピューター アカウントを追加するオブジェクト をクリックして")コンピューター オブジェクトを追加します。  
   
      ![ssas の管理者としてコンピューター アカウントを追加](../../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "ssas 管理者としてコンピューター アカウントを追加")  
   
@@ -131,7 +131,7 @@ ms.locfileid: "34019249"
   
 7.  SQL Server や Excel ファイルなど、更新元となる外部ソースに対して、Analysis Services サービス アカウントで**制約付き委任設定を構成** します。 Analysis Services サービス アカウントで、次のオプションが設定されていることを確認します。  
   
-     **注:** Active Directory ユーザーとコンピューターでアカウントの委任タブが表示されていない場合、これはそのアカウントに SPN がないためです。  `my/spn`のような仮の SPN を追加することで、委任タブを表示できます。  
+     **注:** Active Directory ユーザーとコンピューター アカウントの委任タブが表示されない場合、そのアカウントに SPN がないためにです。  `my/spn`のような仮の SPN を追加することで、委任タブを表示できます。  
   
      **[指定されたサービスへの委任でのみこのユーザーを信頼する]** と **[任意の認証プロトコルを使う]**。  
   
@@ -149,11 +149,11 @@ ms.locfileid: "34019249"
   
     1.  Office Online Server で、PowerShell ウィンドウを管理者特権で開き、次のコマンドを実行します。  
   
-    2.  `New-OfficeWebAppsExcelBIServer –ServerId <AS instance name>`  
+    2.  `New-OfficeWebAppsExcelBIServer -ServerId <AS instance name>`  
   
-    3.  サンプル: `New-OfficeWebAppsExcelBIServer –ServerId "MTGQLSERVER-13\POWERPIVOT"`  
+    3.  サンプル: `New-OfficeWebAppsExcelBIServer -ServerId "MTGQLSERVER-13\POWERPIVOT"`  
   
-3.  Office Online Server コンピューター アカウントが SharePoint サービス アカウントに対してユーザーの権限を借用することを許可するように**Active Directory を構成** します。 そのために、Office Online Server で、SharePoint Web サービスのアプリケーション プールを実行するプリンシパルの委任プロパティを設定します。このセクションの PowerShell コマンドには、Active Directory (AD) PowerShell オブジェクトが必要です。  
+3.  Office Online Server コンピューター アカウントが SharePoint サービス アカウントに対してユーザーの権限を借用することを許可するように**Active Directory を構成** します。 そのため、Office Online Server での SharePoint Web サービスのアプリケーション プールを実行するプリンシパルの委任プロパティを設定します。このセクションでは、PowerShell コマンドでは、Active Directory (AD) PowerShell オブジェクトが必要です。  
   
     1.  Office Online Server の Active Directory ID を取得します。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019249"
         $computer1 = Get-ADComputer -Identity [ComputerName]  
         ```  
   
-         このプリンシパル名を見つけるには、タスク マネージャーの [詳細] で w3wp.exe のユーザー名を調べます (例: svcSharePoint)。  
+         このプリンシパル名を見つけるには、タスク マネージャーの [詳細] で w3wp.exe のユーザー名を調べます 例: svcSharePoint"  
   
         ```  
         Set-ADUser svcSharePoint -PrincipalsAllowedToDelegateToAccount $computer1  
@@ -171,12 +171,12 @@ ms.locfileid: "34019249"
     2.  プロパティが正しく設定されていることを確認します。  
   
     3.  ```  
-        Get-ADUser svcSharePoint –Properties PrincipalsAllowedToDelegateToAccount  
+        Get-ADUser svcSharePoint -Properties PrincipalsAllowedToDelegateToAccount  
         ```  
   
 4.  Office Online Server アカウントで Analysis Services Power Pivot インスタンスに対する**制約付き委任設定を構成** します。 これは、Office Online Server が実行されているコンピューター アカウントです。 Office Online Service アカウントで、次のオプションが設定されていることを確認します。  
   
-     **注:** Active Directory ユーザーとコンピューターでアカウントの委任タブが表示されていない場合、これはそのアカウントに SPN がないためです。  `my/spn`のような仮の SPN を追加することで、委任タブを表示できます。  
+     **注:** Active Directory ユーザーとコンピューター アカウントの委任タブが表示されない場合、そのアカウントに SPN がないためにです。  `my/spn`のような仮の SPN を追加することで、委任タブを表示できます。  
   
      **[指定されたサービスへの委任でのみこのユーザーを信頼する]** と **[任意の認証プロトコルを使う]**。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "34019249"
   
 4.  PowerPivot 構成ウィザードを実行します。 「 [Power Pivot の構成ツール](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」をご覧ください。  
   
-5.  SharePoint を Office Online Server に接続します。    ??Configure_xlwac_on_SPO.ps1 ??  
+5. SharePoint を Office Online Server に接続します。 (Configure_xlwac_on_SPO.ps1)
   
 6.  Kerberos 用の SharePoint 認証プロバイダーを構成します。 **これはシナリオ 1 で必要**です。 詳細については、「 [SharePoint 2013 で Kerberos 認証を計画する](https://technet.microsoft.com/library/ee806870.aspx)」を参照してください。  
   
@@ -214,6 +214,6 @@ ms.locfileid: "34019249"
   
  [KERBEROS PRIMER (Kerberos の概要) - ビデオ](http://blog.martinlund.it/kerberos-primer/)  
   
- [SQL Server® の Microsoft® Kerberos Configuration Manager](http://www.microsoft.com/en-us/download/details.aspx?id=39046)  
+ [For SQL Server® Microsoft® Kerberos Configuration Manager](http://www.microsoft.com/en-us/download/details.aspx?id=39046)  
   
   

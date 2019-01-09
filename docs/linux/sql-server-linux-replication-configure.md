@@ -10,15 +10,13 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.custom: sql-linux
 ms.technology: linux
-ms.assetid: ''
-ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 71ad9b87f701a1f1de4f13a7788bba13543056e8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 7ab482a9c2a4bce9da7dc2b0a68cae6391759b92
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030019"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754454"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Linux 上の SQL Server レプリケーションを構成します。
 
@@ -98,6 +96,6 @@ SQL Server Management Studio (SSMS) または Transact SQL ストアド プロ�
 
 ## <a name="next-steps"></a>次の手順
 
-[Linux 上の概念: SQL Server レプリケーション](sql-server-linux-replication.md)
+[概念:Linux 上の SQL Server レプリケーション](sql-server-linux-replication.md)
 
 [レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)します。

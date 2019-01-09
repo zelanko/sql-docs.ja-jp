@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -15,12 +14,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ff6cda85a64841e5b97c89e1ccf936b857fd1f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077692"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774914"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 以外のサブスクライバーのサブスクリプションの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。 トランザクション レプリケーションとスナップショット レプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対するデータのパブリッシュがサポートされています。 サポートされるサブスクライバー プラットフォームの詳細については、「 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。  
@@ -97,7 +96,7 @@ ms.locfileid: "48077692"
   
     -   IBM DB2 の場合、データベースは DB2 接続文字列の **Initial Catalog** プロパティで指定されます。DB2 接続文字列は、後述する **[追加の接続オプション]** フィールドに入力できます。  
   
-8.  **[ディストリビューション エージェント セキュリティ]** ページで、サブスクライバーの横のプロパティ ボタン (**[...]**) をクリックし、 **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスにアクセスします。  
+8.  **[ディストリビューション エージェント セキュリティ]** ページで、サブスクライバーの横のプロパティ ボタン **[...]** をクリックし、**[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスにアクセスします。  
   
 9. **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスで、以下の操作を行います。  
   
@@ -154,12 +153,12 @@ ms.locfileid: "48077692"
   
 2.  パブリッシャー側のパブリケーション データベースに対して、[sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql) を実行して、パブリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバ―をサポートしていることを確認します。  
   
-    -   場合の値`enabled_for_het_sub`は 1、非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーがサポートされます。  
+    -   `enabled_for_het_sub` の値が 1 の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーがサポートされます。  
   
     -   場合の値`enabled_for_het_sub`は 0 です実行[sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を指定して`enabled_for_het_sub`の**@property**と`true`の。**@value**.  
   
         > [!NOTE]  
-        >  変更する前に`enabled_for_het_sub`に`true`パブリケーションに既存のサブスクリプションを削除する必要があります。 パブリケーションで更新サブスクリプションもサポートされる場合、`enabled_for_het_sub` を `true` に設定することはできません。 `enabled_for_het_sub` を変更すると、他のパブリケーション プロパティにも影響します。 詳細については、「 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)」を参照してください。  
+        >  `enabled_for_het_sub` を `true` に変更する前に、そのパブリケーションに対する既存のサブスクリプションをすべて削除する必要があります。 パブリケーションで更新サブスクリプションもサポートされる場合、`enabled_for_het_sub` を `true` に設定することはできません。 `enabled_for_het_sub` を変更すると、他のパブリケーション プロパティにも影響します。 詳細については、「 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) を実行します。 **@destination_db** に、**@publication**、**@subscriber**、**(既定の転送先)** の値を指定し、**@subscription_type** に **push** の値を指定し、**@subscriber_type** に値 3 を指定します (OLE DB プロバイダーを指定します)。  
   
