@@ -11,12 +11,12 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa6994d4bcf01cc1de7036a45d52a7a090af80b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 251ec4db1d1f1cb4ddebe447e095c3c2338ee0bb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218173"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352147"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Deployment and Version Support in SQL Server Data Tools (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] では、次のシナリオがサポートされます。  
@@ -36,7 +36,7 @@ ms.locfileid: "48218173"
   
  レポートは、レポート デザイナーでプレビューとしてレンダリングされるか、レポート サーバーに配置される前にビルドされます。  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **[プロジェクト プロパティ]** ダイアログ ボックスで、構成プロパティを設定します。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **[プロジェクト プロパティ]** ダイアログ ボックスで、構成プロパティを設定します。  
   
  ビルド プロパティと配置プロパティには、以下の項目が含まれます。  
   
@@ -46,21 +46,21 @@ ms.locfileid: "48218173"
   
 -   [TargetServerVersion] は、TargetServerURL プロパティで指定された対象レポート サーバーにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の想定されるバージョンを識別する配置プロパティです。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ダイアログ ボックスで以前のバージョンの **[プロジェクト プロパティ]** を指定しても、レポートが自動的に以前のバージョンに戻ることはありません。 このような場合、レポート サーバー プロジェクトには、2 つの異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンのレポートが含まれることになります。 レポート サーバー プロジェクトが配置されると、プロジェクト内のレポートはすべて、TargetServerVersion で指定されたバージョンに変換されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ダイアログ ボックスで以前のバージョンの **[プロジェクト プロパティ]** を指定しても、レポートが自動的に以前のバージョンに戻ることはありません。 このような場合、レポート サーバー プロジェクトには、2 つの異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンのレポートが含まれることになります。 レポート サーバー プロジェクトが配置されると、プロジェクト内のレポートはすべて、TargetServerVersion で指定されたバージョンに変換されます。  
   
  プロジェクトには複数のプロジェクト構成を追加できます。各プロジェクト構成は、異なるバージョンのレポート サーバーへの配置など、さまざまなシナリオで使用されます。 詳細については、「[配置プロパティを設定する (Reporting Services)](set-deployment-properties-reporting-services.md)」および「[[プロパティ ページ] ダイアログ ボックス](project-property-pages-dialog-box.md)」を参照してください。  
   
 ##  <a name="bkmk_SupportedVersions"></a> Supported Versions  
   
 > [!NOTE]  
->  レポート サーバー プロジェクトの 32 ビット開発環境である [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] ベースのコンピューターで実行できるようにデザインされていないため、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] ベースのサーバーにはインストールされません。 ただし、x64 ベースのコンピューターでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がサポートされています。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]レポート サーバー プロジェクトの 32 ビット開発環境であり、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]ベースのコンピューターで実行できるようにデザインされていないため、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]ベースのサーバーにはインストールされません。 ただし、x64 ベースのコンピューターでは [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がサポートされています。  
   
  次の表では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でのレポートの作成およびパブリッシュをサポートするバージョンについて説明します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降にスキーマが変更されました。  
   
-|プロジェクトまたはファイルの種類|バージョン|レポートの作成|レポートのパブリッシュ|注|  
+|プロジェクトまたはファイルの種類|バージョン|レポートの作成|レポートのパブリッシュ|メモ|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
 |レポート サーバー プロジェクト<br /><br /> または<br /><br /> レポート サーバー プロジェクト ウィザード|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL スキーマ|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |レポート サーバー プロジェクト<br /><br /> または<br /><br /> レポート サーバー プロジェクト ウィザード|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|2012 RDL スキーマ|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
@@ -71,7 +71,7 @@ ms.locfileid: "48218173"
 |[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] RDLC レポート デザイナー|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|2005 RDL スキーマ|サポートされていません|2008 RDL スキーマはサポートされていません。|  
 |[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ビューアー コントロール|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|ローカル モードでは 2008 RDL がサポートされていません。|なし|サーバー モードの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーで 2008 RDL レポートを表示できます。|  
   
- 以前のバージョンのレポート定義スキーマでレポートを開く方法の詳細については、「[レポートのアップグレード](../install-windows/upgrade-reports.md)」を参照してください。 特定のレポート定義スキーマの詳細については、「 [レポート定義言語の仕様](http://go.microsoft.com/fwlink/?linkid=116865)」を参照してください。  
+ 以前のバージョンのレポート定義スキーマでレポートを開く方法の詳細については、「[レポートのアップグレード](../install-windows/upgrade-reports.md)」を参照してください。 特定のレポート定義スキーマの詳細については、「 [レポート定義言語の仕様](https://go.microsoft.com/fwlink/?linkid=116865)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ ソースとレポートのパブリッシュ](../reports/publishing-data-sources-and-reports.md)  

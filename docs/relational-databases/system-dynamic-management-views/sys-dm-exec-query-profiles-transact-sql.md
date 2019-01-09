@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b2f1bf4cf990c7888088388a8d9c65a45865a9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fb79f056e533f4aabacdab5e3467bedce22b696
+ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727120"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52860095"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "47727120"
 |first_row_time|**bigint**|最初の行を開いたときのタイムスタンプ (ミリ秒単位)。|  
 |last_row_time|**bigint**|最後の行を開いたときのタイムスタンプ (ミリ秒単位)。|  
 |close_time|**bigint**|閉じたときのタイムスタンプ (ミリ秒単位)。|  
-|elapsed_time_ms|**bigint**|これまでに対象のノードの操作によって使用された経過時間の合計 (ミリ秒単位)。|  
-|cpu_time_ms|**bigint**|これまでに対象のノードの操作によって使用された CPU 時間の合計 (ミリ秒単位)。|  
+|elapsed_time_ms|**bigint**|経過時間の合計 (ミリ秒) をターゲット ノードの操作によってこれまでに使用します。|  
+|cpu_time_ms|**bigint**|これまでにターゲット ノードの操作によって CPU 使用率 (ミリ秒単位) の時間の合計数します。|  
 |database_id|**smallint**|読み取りおよび書き込みが実行されたオブジェクトを含むデータベースの ID。|  
 |object_id|**int**|読み取りおよび書き込みが実行されたオブジェクトの識別子。 sys.objects.object_id を参照します。|  
 |index_id|**int**|行セットが開かれている対象のインデックス (ある場合)。|  
@@ -73,7 +73,7 @@ ms.locfileid: "47727120"
 |segment_read_count|**int**|これまでのセグメント先行読み取りの数。|  
 |segment_skip_count|**int**|これまでのセグメント スキップの数。| 
 |actual_read_row_count|**bigint**|残余述語が適用される前に、演算子によって読み取られた行の数。| 
-|estimated_read_row_count|**bigint**|**適用対象:** 以降[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>残余述語が適用される前に、演算子によって読み取られる行の数が推定されます。|  
+|estimated_read_row_count|**bigint**|**適用対象:** 以降で[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>残余述語が適用される前に、演算子によって読み取られる行の数が推定されます。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  クエリ プラン ノードで IO がない場合、IO 関連のすべてのカウンターは NULL に設定されます。  
@@ -84,20 +84,30 @@ ms.locfileid: "47727120"
   
 -   並列スキャンがある場合、この DMV では、スキャンで使用される並列スレッドごとにカウンターがレポートされます。
  
- 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 では、標準的なクエリの実行統計プロファイリング インフラストラクチャでは、軽量なクエリの実行統計プロファイリング インフラストラクチャのサイド バイ サイドでが存在します。 新しいクエリ実行統計プロファイリング インフラストラクチャは、行の実際の数などの演算子ごとのクエリ実行統計を収集する場合のパフォーマンスのオーバーヘッドを大幅に削減します。 グローバルを使用してこの機能を有効にすることができますスタートアップ[トレース フラグ 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)が自動的にオン query_thread_profile 拡張イベントを使用する場合またはします。
+以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 では、標準的なクエリの実行統計プロファイリング インフラストラクチャでは、軽量なクエリの実行統計プロファイリング インフラストラクチャのサイド バイ サイドでが存在します。 新しいクエリ実行統計プロファイリング インフラストラクチャは、行の実際の数などの演算子ごとのクエリ実行統計を収集する場合のパフォーマンスのオーバーヘッドを大幅に削減します。 グローバルを使用してこの機能を有効にすることができますスタートアップ[トレース フラグ 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)が自動的にオン query_thread_profile 拡張イベントを使用する場合またはします。
 
 >[!NOTE]
 > CPU と経過時間は、パフォーマンスに与える影響を軽減する軽量なクエリの実行統計プロファイリング インフラストラクチャでサポートされていません。
 
- XML ON および SET STATISTICS PROFILE ON の従来のクエリの実行統計プロファイリング インフラストラクチャを使用して、常に統計情報を設定します。
-  
+XML ON および SET STATISTICS PROFILE ON の従来のクエリの実行統計プロファイリング インフラストラクチャを使用して、常に統計情報を設定します。
+
+有効にするには、sys.dm_exec_query_profiles の出力は次の操作を行います。
+
+[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および後で調査中のクエリと共に SET STATISTICS PROFILE ON または SET STATISTICS XML ON を使用します。 これは、プロファイリング インフラストラクチャを使用し、SET コマンドが実行されたセッションの DMV の結果を生成します。 アプリケーションから実行されているクエリを調査するいるし、してオプションの設定を有効にすることはできません、プロファイリングのインフラストラクチャが有効になります、query_post_execution_showplan イベントを使用して拡張イベントを作成できます。 
+
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 かオンにする[トレース フラグ 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)または query_thread_profile 拡張イベントを使用します。
+
+>[!NOTE]
+> 調査中のクエリは、プロファイリング インフラストラクチャを有効になっている後に起動するがあります。 クエリが既に実行されている場合、拡張イベント セッションの開始と sys.dm_exec_query_profiles で結果が生成されません。
+
+
 ## <a name="permissions"></a>アクセス許可  
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
    
 ## <a name="examples"></a>使用例  
- Sys.dm_exec_query_profiles を分析するクエリを実行することを計画しているセッションに手順 1: ログインします。 構成するには、プロファイルのクエリで SET STATISTICS PROFILE を使用します。 この同じセッションでクエリを実行します。  
+ 手順 1:sys.dm_exec_query_profiles を使用して分析するクエリを実行するセッションにログインします。 構成するには、プロファイルのクエリで SET STATISTICS PROFILE を使用します。 この同じセッションでクエリを実行します。  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -111,7 +121,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- クエリが実行されているセッションとは異なる 2 つ目のセッションに手順 2: ログインします。  
+ 手順 2:クエリが実行されているセッションとは異なる 2 番目のセッションにログインします。  
   
  次のステートメントでは、セッション 54 で現在実行されているクエリの進行状況が要約されます。 これを実行するために、各ノードのすべてのスレッドからの出力行の総数が計算され、そのノードの出力行の予測数と比較されます。  
   

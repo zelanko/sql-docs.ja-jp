@@ -13,12 +13,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: b9cea2592b0e1c65fd23ccbad6b8235077ed1f2f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018437"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376221"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core インストールでの SQL Server の構成
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 の Server Core インストールで [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] を構成する方法について詳しく説明します。 次のセクションを参照してください。  
@@ -48,19 +48,19 @@ ms.locfileid: "51018437"
   
  Server Core インストールをリモートで構成および管理する方法の詳細については、次のトピックを参照してください。  
   
--   [Windows Server 2008 R2: Server Core 展開のベスト プラクティス](http://go.microsoft.com/fwlink/?LinkID=245957)(http://go.microsoft.com/fwlink/?LinkID=245957)  
+-   [Windows Server 2008 R2:Server Core 展開のベスト プラクティス](https://go.microsoft.com/fwlink/?LinkID=245957)(https://go.microsoft.com/fwlink/?LinkID=245957)  
   
--   [Server Core インストールの構成: 概要](http://go.microsoft.com/fwlink/?LinkId=245958)(http://go.microsoft.com/fwlink/?LinkId=245958)  
+-   [Server Core インストールを構成するには。概要](https://go.microsoft.com/fwlink/?LinkId=245958)(https://go.microsoft.com/fwlink/?LinkId=245958)  
   
--   [Windows Server 2008 R2 の Server Core インストールを構成する sconfig.cmd](http://go.microsoft.com/fwlink/?LinkId=245959) (http://go.microsoft.com/fwlink/?LinkId=245959)  
+-   [Windows Server 2008 R2 の Server Core インストールを構成する sconfig.cmd](https://go.microsoft.com/fwlink/?LinkId=245959) (https://go.microsoft.com/fwlink/?LinkId=245959)  
   
--   [Windows Server 2008 R2 の Server Core インストールを実行するサーバーでサーバー ロールのインストール: 概要](http://go.microsoft.com/fwlink/?LinkId=245960)(http://go.microsoft.com/fwlink/?LinkId=245960)  
+-   [Windows Server 2008 R2 の Server Core インストールを実行するサーバーでサーバーの役割のインストール。概要](https://go.microsoft.com/fwlink/?LinkId=245960)(https://go.microsoft.com/fwlink/?LinkId=245960)  
   
--   [Windows Server 2008 R2 の Server Core インストールを実行するサーバーで Windows の機能のインストール: 概要](http://go.microsoft.com/fwlink/?LinkId=245961)(http://go.microsoft.com/fwlink/?LinkId=245961)  
+-   [Windows Server 2008 R2 の Server Core インストールを実行するサーバーで Windows の機能のインストール。概要](https://go.microsoft.com/fwlink/?LinkId=245961)(https://go.microsoft.com/fwlink/?LinkId=245961)  
   
--   [Server Core インストールの管理: 概要](http://go.microsoft.com/fwlink/?LinkId=245962)(http://go.microsoft.com/fwlink/?LinkId=245962)  
+-   [Server Core インストールを管理するには。概要](https://go.microsoft.com/fwlink/?LinkId=245962)(https://go.microsoft.com/fwlink/?LinkId=245962)  
   
--   [Server Core インストールの管理](http://go.microsoft.com/fwlink/?LinkId=245963)(http://go.microsoft.com/fwlink/?LinkId=245963)  
+-   [Server Core インストールの管理](https://go.microsoft.com/fwlink/?LinkId=245963)(https://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="BKMK_InstallSQLUpdates"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのインストール  
  ここでは、Windows Server Core コンピューターに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の更新プログラムをインストールする方法について説明します。 常に最新のセキュリティ更新プログラムがインストールされた状態になるように、適切なタイミングで最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを評価してインストールすることをお勧めします。 インストールの詳細については[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Windows Server Core コンピューターで、次を参照してください。 [Server Core での SQL Server 2014 のインストール](install-sql-server-on-server-core.md)します。  
@@ -81,7 +81,7 @@ ms.locfileid: "51018437"
  メインの製品のインストールに最新の製品の更新プログラムを含めるには、UpdateEnabled パラメーターと UpdateSource パラメーターを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ時に製品の更新プログラムを有効にする場合は、次の例を参照してください。  
   
 ```tsql  
-Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource=”<SourcePath>” /IACCEPTSQLSERVERLICENSETERMS  
+Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource="<SourcePath>" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 ###  <a name="bkmk_alreadyInstall"></a> 既にインストールされている [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の更新プログラムをインストールする  
@@ -150,7 +150,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーによって変更内容が保存されます。 その後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを手動で再起動する必要があります。 業務上の要件に合った時間帯を選んで再起動することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが再起動されると、AlwaysOn が有効になり、IsHadrEnabled サーバー プロパティが 1 に設定されます。  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   対象となるコンピューターに接続するには、適切なユーザー権限を持っているか、そのコンピューターに対する適切な権限が委任されている必要があります。  
 > -   管理しているコンピューターの名前は、コンソール ツリーの [コンピューターの管理] の横に、かっこで囲まれて表示されます。  
   
@@ -182,7 +182,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
 ##  <a name="BKMK_ConfigureRemoteAccess"></a> Server Core で実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート アクセスの構成  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Server Core SP1 で実行している [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] インスタンスのリモート アクセスを構成するには、以下で説明する操作を実行します。  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  リモート接続を有効にするには、SQLCMD.exe をローカルで使用して、Server Core インスタンスに対して次のステートメントを実行します。  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -256,7 +256,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> トラブルシューティング ツールの使用  
  [SQLdiag ユーティリティ](../../tools/sqldiag-utility.md) を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] やその他の種類のサーバーからログ ファイルやデータ ファイルを収集したり、サーバーを一定期間にわたって監視したり、サーバーに関する特定の問題をトラブルシューティングしたりすることができます。 SQLdiag は、マイクロソフト カスタマー サポート サービスによる診断情報収集の高速化と簡素化を目的としたユーティリティです。  
   
- このユーティリティは、「 [SQLdiag ユーティリティ](../../tools/sqldiag-utility.md)」で指定されている構文を使用して、Server Core の管理者のコマンド プロンプトで起動できます。  
+ トピックで指定されている構文を使用して、Server Core での管理者コマンド プロンプト ユーティリティを起動できます。[SQLdiag ユーティリティ](../../tools/sqldiag-utility.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Server Core での SQL Server 2014 をインストールします。](install-sql-server-on-server-core.md)   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -24,12 +22,12 @@ ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74d53bd692371861e12ebbd323af2741da146bc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82f6c6d8e7ecfa3a1ca29805c186d601ed65bd00
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113332"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782934"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>アップデートグラムの概要 (SQLXML 4.0)
   変更することができます (挿入、更新、または削除) でデータベース[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]アップデート グラムまたは OPENXML を使用して文書化、既存の XML から[!INCLUDE[tsql](../../../includes/tsql-md.md)]関数。  
@@ -110,7 +108,7 @@ ms.locfileid: "48113332"
  アップデートグラムでマッピング スキーマが指定されていないときに使用される既定のマッピングでは、アップデートグラムの要素がテーブルにマップされ、要素中心マッピングの場合は子要素、属性中心マッピングの場合は属性が、それぞれ列にマップされます。  
   
 ### <a name="element-centric-mapping"></a>要素中心のマッピング  
- 要素中心のアップデートグラムでは、要素に、要素のプロパティを表す子要素を含めます。 たとえば、次のアップデートグラムを参照してください。 **\<Person.Contact >** 要素が含まれています、  **\<FirstName >** と **\<LastName >** 子要素。 これらの子要素のプロパティになって、  **\<Person.Contact >** 要素。  
+ 要素中心のアップデートグラムでは、要素に、要素のプロパティを表す子要素を含めます。 たとえば、次のアップデートグラムを参照してください。  **\<Person.Contact >** 要素が含まれています、  **\<FirstName >** と **\<LastName >** 子要素。 これらの子要素のプロパティになって、  **\<Person.Contact >** 要素。  
   
  アップデート グラムは暗黙的なマッピングを使用してこのアップデート グラムでは、マッピング スキーマを指定しないため、場所、  **\<Person.Contact >** 要素は Person.Contact テーブルにマップし、その子要素が firstname にマップし、LastName 列。  
   

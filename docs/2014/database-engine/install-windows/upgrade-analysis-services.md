@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: install
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -20,20 +20,20 @@ ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88dfe4836cc84b7792639817a01c026f6d3f3283
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8bbec3cd552434070d76913f72812b302440bcdb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018107"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363484"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services のアップグレード
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアップグレードします。 アップグレードに関する詳細情報の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SharePoint モードを参照してください。 [PowerPivot for SharePoint のアップグレード](upgrade-power-pivot-for-sharepoint.md)します。 既存の SQL Server のアップグレードの詳細については、インスタンスは、「[インストール ウィザードを SQL Server 2014 を使用するアップグレード&#40;セットアップ&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)します。  
   
 ## <a name="known-upgrade-issues"></a>アップグレードに関する既知の問題  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]にアップグレードする前に、次のトピックを確認してください。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]にアップグレードする前に、次のトピックを確認してください。  
   
--   [SQL Server 2014 リリース ノート](http://go.microsoft.com/fwlink/?LinkID=296445).  
+-   [SQL Server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 -   これについては、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の特徴および機能廃止、非推奨、または変更を参照してください[Analysis Services の旧バージョンとの互換性](../../analysis-services/analysis-services-backward-compatibility.md)します。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "51018107"
 -   Analysis Services を新しいハードウェア上にインストールし、既存のデータベースをそのサーバーへ移行することもできます。  
   
 ## <a name="in-place-upgrade"></a>インプレース アップグレード  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既存のインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and, as part of the upgrade process, auの既存のインスタンスをmatically migrate existing databases from the old instance の既存のインスタンスを the new instance. メタデータおよびバイナリ データは 2 つのバージョン間で互換性があるため、アップグレード後もそのまま使用できます。手動でデータを移行する必要はありません。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既存のインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and, as part of the upgrade process, auの既存のインスタンスをmatically migrate existing databases from the old instance の既存のインスタンスを the new instance. メタデータおよびバイナリ データは 2 つのバージョン間で互換性があるため、アップグレード後もそのまま使用できます。手動でデータを移行する必要はありません。  
   
  既存のインスタンスをアップグレードするには、セットアップを実行し、新しいインスタンスの名前として既存のインスタンス名を指定します。  
   

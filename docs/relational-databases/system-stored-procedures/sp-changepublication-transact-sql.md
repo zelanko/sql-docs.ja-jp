@@ -5,8 +5,7 @@ ms.date: 08/29/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changepublication
@@ -17,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e80f468f917a240981fc6e4c16df862d72084541
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670171"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209131"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +59,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|指定したパブリケーションに対して匿名サブスクリプションを作成できません。 ピア ツー ピア パブリケーションの場合は変更できません。|  
 |**allow_initialize_from_backup**|**true**|サブスクライバーでは、初期スナップショットではなくバックアップから、このパブリケーションへのサブスクリプションを初期化できます。 このプロパティを変更することはできません以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーション。|  
 ||**false**|サブスクライバーでは初期スナップショットを使用する必要があります。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリケーションの場合は変更できません。|  
-|**allow_partition_switch**|**true**|パブリッシュされたデータベースに対して ALTER TABLE ... SWITCH ステートメントを実行できます。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
-||**false**|パブリッシュされたデータベースに対して ALTER TABLE ... SWITCH ステートメントを実行することはできません。|  
+|**allow_partition_switch**|**true**|ALTER TABLE…パブリッシュされたデータベースに対して SWITCH ステートメントを実行できます。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
+||**false**|ALTER TABLE…パブリッシュされたデータベースに対して SWITCH ステートメントを実行することはできません。|  
 |**allow_pull**|**true**|指定したパブリケーションに対してプル サブスクリプションを許可します。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリケーションの場合は変更できません。|  
 ||**false**|指定したパブリケーションに対してプル サブスクリプションを許可しません。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリケーションの場合は変更できません。|  
 |**allow_push**|**true**|指定したパブリケーションに対してプッシュ サブスクリプションを許可します。|  
@@ -80,7 +79,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**description**||パブリケーションを記述するエントリです。省略可能です。|  
 |**enabled_for_het_sub**|**true**|パブリケーションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーのサポートを有効にします。 **enabled_for_het_sub**パブリケーションに対するサブスクリプションがある場合は変更できません。 実行する必要があります[レプリケーションのストアド プロシージャ (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)設定する前に、次の要件に準拠する**enabled_for_het_sub**を true にします。<br /> - **allow_queued_tran**あります**false**します。<br /> - **allow_sync_tran**あります**false**します。<br /> 変更する**enabled_for_het_sub**に**true**既存のパブリケーション設定を変更することがあります。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリケーションの場合は変更できません。|  
 ||**false**|パブリケーションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーはサポートされません。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリケーションの場合は変更できません。|  
-|**enabled_for_internet**|**true**|パブリケーションはインターネットに対応しており、サブスクライバーへのスナップショット ファイルの転送にファイル転送プロトコル (FTP) を使用できます。 パブリケーションの同期ファイルはディレクトリ C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp に保存されます。 *ftp_address* NULL にすることはできません。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリケーションの場合は変更できません。|  
+|**enabled_for_internet**|**true**|パブリケーションはインターネットに対応しており、サブスクライバーへのスナップショット ファイルの転送にファイル転送プロトコル (FTP) を使用できます。 パブリケーションの同期ファイルは、次のディレクトリに配置されます。C:\Program files \microsoft SQL server \mssql\repldata\ftp します。 *ftp_address* NULL にすることはできません。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリケーションの場合は変更できません。|  
 ||**false**|パブリケーションはインターネットに対応していません。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリケーションの場合は変更できません。|  
 |**enabled_for_p2p**|**true**|パブリケーションでピア ツー ピア レプリケーションがサポートされます。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリケーションの場合は変更できません。<br /> 設定する**enabled_for_p2p**に**true**、次の制限が適用されます。<br /> - **allow_anonymous**あります**false**<br /> - **allow_dts を含む**あります**false**します。<br /> - **allow_initialize_from_backup**あります**は true。**<br /> - **allow_queued_tran**あります**false**します。<br /> - **allow_sync_tran**あります**false**します。<br /> - **enabled_for_het_sub**あります**false**します。<br /> - **independent_agent**あります**true**します。<br /> - **repl_freq**あります**連続**します。<br /> - **replicate_ddl**あります**1**します。|  
 ||**false**|パブリケーションでピア ツー ピア レプリケーションがサポートされません。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリケーションの場合は変更できません。|  
@@ -93,19 +92,19 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|新しいサブスクリプションがある場合にのみ、同期ファイルが作成されます。 サブスクリプションの後、スナップショット エージェントが起動して完了するまで、サブスクライバーは同期ファイルを取得できません。|  
 |**independent_agent**|**true**|パブリケーションに専用のディストリビューション エージェントがあります。|  
 ||**false**|パブリケーションでは共有ディストリビューション エージェントが使用されます。パブリケーションおよびサブスクリプション データベースの各ペアには 1 つの共有エージェントがあります。|  
-|**このとき p2p_continue_onconflict**|**true**|ディストリビューション エージェントは、競合の検出時に変更の処理を続行します。<br /> **注意:** の既定値を使用することをお勧めします。`FALSE`します。 このオプションを設定すると`TRUE`、ディストリビューション エージェントが、最高の発信元 ID を持つノードから競合する行を適用してトポロジ内のデータを収束しようとしています。 この方法では収束が保証されません。 競合が検出された後に、トポロジに一貫性があることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。|  
+|**このとき p2p_continue_onconflict**|**true**|ディストリビューション エージェントは、競合の検出時に変更の処理を続行します。<br /> **注意が必要です。** 既定値の `FALSE` を使用することをお勧めします。 このオプションを設定すると`TRUE`、ディストリビューション エージェントが、最高の発信元 ID を持つノードから競合する行を適用してトポロジ内のデータを収束しようとしています。 この方法では収束が保証されません。 競合が検出された後に、トポロジに一貫性があることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。|  
 ||**false**|ディストリビューション エージェントは、競合の検出時に変更の処理を停止します。|  
 |**post_snapshot_script**||ディストリビューション エージェントで実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルの場所を指定します。このスクリプトの実行は、初期同期で、レプリケートされたすべてのオブジェクト スクリプトとデータが適用された後で行われます。|  
 |**pre_snapshot_script**||ディストリビューション エージェントで実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルの場所を指定します。このスクリプトの実行は、初期同期で、レプリケートされたすべてのオブジェクト スクリプトとデータが適用される前に行われます。|  
 |**publish_to_ActiveDirectory**|**true**|このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、非推奨とされます。 現在、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory にはパブリケーション情報を追加できません。|  
 ||**false**|Active Directory からパブリケーション情報を削除します。|  
-|**queue_type**|**sql**|トランザクションの保存に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用。 このプロパティを変更できるのは、アクティブなサブスクリプションがない場合に限られます。<br /><br /> 注: サポートを使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージ キューは廃止されました。 値を指定する**msmq**の*値*エラーが発生します。|  
+|**queue_type**|**sql**|トランザクションの保存に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用。 このプロパティを変更できるのは、アクティブなサブスクリプションがない場合に限られます。<br /><br /> 注:[!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) の使用は現在サポートされていません。 値を指定する**msmq**の*値*エラーが発生します。|  
 |**repl_freq**|**継続的です**|ログ ベースのすべてのトランザクションの出力をパブリッシュします。|  
 ||**スナップショット**|スケジュールされた同期イベントのみをパブリッシュします。|  
 |**replicate_ddl**|**1**|データ定義言語 (DDL) ステートメントがパブリッシャーで実行がレプリケートされます。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリケーションの場合は変更できません。|  
 ||**0**|DDL ステートメントはレプリケートされません。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリケーションの場合は変更できません。 スキーマ変更のレプリケーションは、ピア ツー ピア レプリケーションを使用する場合は無効にできません。|  
-|**replicate_partition_switch**|**true**|パブリッシュされたデータベースに対して実行される ALTER TABLE ... SWITCH ステートメントは、サブスクライバーにレプリケーションする必要があります。 このオプションは有効な場合にのみ*allow_partition_switch*が TRUE に設定します。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
-||**false**|ALTER TABLE ... SWITCH ステートメントはサブスクライバーにレプリケートしないでください。|  
+|**replicate_partition_switch**|**true**|ALTER TABLE…パブリッシュされたデータベースに対して実行される SWITCH ステートメントをサブスクライバーにレプリケートする必要があります。 このオプションは有効な場合にのみ*allow_partition_switch*が TRUE に設定します。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
+||**false**|ALTER TABLE…SWITCH ステートメントをサブスクライバーにレプリケートしないようにします。|  
 |**保有期間**||**int**保有期間を時間、サブスクリプションの利用状況を表します。 保有期間内にサブスクリプションがアクティブ状態でなくなると削除されます。|  
 |**snapshot_in_defaultfolder**|**true**|スナップショット ファイルは既定のスナップショット フォルダーに格納されます。 場合*alt_snapshot_folder*も指定、スナップショット ファイルは既定値と別の場所の両方に格納します。|  
 ||**false**|指定された別の場所にスナップショット ファイルが格納されている*alt_snapshot_folder*します。|  
@@ -116,7 +115,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**同時実行**|すべてのテーブルについてネイティブ モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショット レプリケーションには無効です。|  
 ||**concurrent_c**|すべてのテーブルについてキャラクター モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショット レプリケーションには無効です。|  
 |**taskid**||このプロパティは現在サポートされておらず、非推奨とされます。|  
-|**allow_drop**|**true**|により、`DROP TABLE`トランザクション レプリケーションの一部であるアーティクルの DLL をサポートします。 サポートされる最小バージョン: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 以降および[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]Service Pack 1 以降。 その他の参照: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|により、`DROP TABLE`トランザクション レプリケーションの一部であるアーティクルの DLL をサポートします。 サポートされる最小バージョン。[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 以降および[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]Service Pack 1 以降。 その他の参照。[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|無効にします`DROP TABLE`トランザクション レプリケーションの一部であるアーティクルの DLL をサポートします。 これは、**既定**このプロパティの値。|
 |**NULL** (既定値)||サポートされている値の一覧を返します*プロパティ*します。|  
   
@@ -132,7 +131,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **1**アーティクルへの変更が発生する、既存のサブスクリプションを再初期化されることを指定します。 サブスクリプションの再初期化を許可します。  
   
 [ **@publisher** =] **'***パブリッシャー***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーを指定します。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+ 以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
   > [!NOTE]  
   >  *パブリッシャー*でアーティクルのプロパティを変更する場合、使用されませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  

@@ -1,5 +1,5 @@
 ---
-title: 使用状況データ収集の構成 (Power Pivot for SharePoint |Microsoft ドキュメント
+title: 使用状況データ収集の構成 (Power Pivot for SharePoint |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bafa3d8b45dc2ad59314218f34959120b50e6bfe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026879"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420283"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>使用状況データ収集の構成 (対象は Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34026879"
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードの使用状況データの詳細については、「 [PowerPivot 管理ダッシュボードと使用状況データ](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)」を参照してください。  
   
- **このトピックの内容**  
+ **このトピックの内容:**  
   
  [使用状況データ収集の有効化とデータ収集を開始するイベントの選択](#events)  
   
@@ -48,13 +48,13 @@ ms.locfileid: "34026879"
   
 1.  サーバーの全体管理で **[監視]** をクリックします。  
   
-2.  **[レポート]** セクションで、 **[使用状況と正常性のデータ収集の構成]** をクリックします。  
+2.   **[レポート]** セクションで、 **[使用状況と正常性のデータ収集の構成]** をクリックします。  
   
 3.  **[利用状況データの収集を有効にする]** をオンにします。  
   
 4.  **[ログ対象イベント]** セクションで、チェック ボックスをオンまたはオフにして、次の Analysis Services イベントを有効または無効にします。  
   
-    |イベント|Description|  
+    |イベント|説明|  
     |-----------|-----------------|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 接続**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 接続イベントは、ユーザーに代わって実行される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー接続を監視するために使用します。|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 読み込みデータの使用状況**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 読み込みデータ使用状況は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データをサーバーのメモリに読み込む要求を監視するために使用します。 読み込みイベントは、コンテンツ データベースまたはキャッシュから読み込まれた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースに対して生成されます。|  
@@ -86,9 +86,9 @@ ms.locfileid: "34026879"
 ##  <a name="jobs"></a> 使用状況データ収集に使用されるタイマー ジョブの構成  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーの状態と使用状況データは、次に示す 2 つのタイマー ジョブにより、使用状況データ収集システムの別々の場所に移動されます。  
   
--   "Microsoft SharePoint Foundation 利用状況データのインポート" タイマー ジョブは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 使用状況データを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション データベースに移動します。  
+-   「Microsoft SharePoint Foundation 使用状況データ インポート」タイマー ジョブは移動[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]の使用状況を[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サービス アプリケーション データベース。  
   
--   "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボード処理タイマー ジョブ" は、組み込み管理レポートのデータ ソースである [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックにデータを移動します。  
+-   "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]管理ダッシュ ボード処理タイマー ジョブ"データを[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]組み込み管理レポートのデータのソースであるブック。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードに表示される管理レポートをより頻繁に更新する必要がある場合は、次の手順を実行します。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "34026879"
 |**Usage data history**|365 (日)|Integer|0 は無制限を示しますが、履歴データが期限切れとなる上限を設定し、履歴データを自動的に削除することもできます。 限られた保持期間の有効な値は 1 ～ 5,000 (日) です。|  
 |[簡易応答の上限]|500 (ミリ秒単位)|Integer|簡易要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。 0 ～ 500 ミリ秒で完了する要求は簡易要求であり、レポートでは無視されます。|  
 |迅速な応答の上限|1000 (ミリ秒単位)|Integer|迅速な要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。|  
-|想定される応答の上限|3000 (ミリ秒単位)|Integer|想定される要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。|  
+|[想定される応答の上限]|3000 (ミリ秒単位)|Integer|想定される要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。|  
 |長い応答の上限|10,000 (ミリ秒)|Integer|長い要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。 この上限を超えるすべての要求は、上限のしきい値がない超過カテゴリに分類されます。|  
   
 ## <a name="see-also"></a>参照  

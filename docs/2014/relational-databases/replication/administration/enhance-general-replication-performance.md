@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,19 +21,19 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ffc277e43bf48975da92e5463b4e157e266b55b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 465e43422616d5d0202bf31959fab5f56c4f35d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138198"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806254"
 ---
 # <a name="enhance-general-replication-performance"></a>レプリケーションの全般的パフォーマンスの向上
   このトピックで解説するガイドラインに従うことによって、アプリケーションおよびネットワーク上にある全種類のレプリケーションの全般的なパフォーマンスを向上させることができます。  
   
 ## <a name="server-and-network"></a>サーバーおよびネットワーク  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に割り当てるメモリの最大容量と最小容量を設定する。  
+-    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に割り当てるメモリの最大容量と最小容量を設定する。  
   
      既定では、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更します。 レプリケーション作業中に使用できるメモリ容量が少なくなるのを防ぐには、 **min server memory** オプションを使用して最小メモリ容量を設定します。 オペレーティング システムによるディスクへのメモリ書き出しを防ぐために、 **max server memory** オプションを使用して最大メモリ容量を設定することもできます。 詳細については、「[サーバー メモリに関するサーバー構成オプション](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)」を参照してください。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "48138198"
   
 -   Large Object (LOB) データ型の使用を制限する。  
   
-     列の他のデータ型と比較して、LOB はより大きな記憶域とより多くの処理を必要とします。 アプリケーションで必要でない限り、LOB 型の列をアーティクルに含めないようにしてください。 データ型`text`、 `ntext`、および`image`は非推奨とされます。 Lob を追加する場合、データ型を使用することが勧め`varchar(max)`、 `nvarchar(max)`、 `varbinary(max)`、それぞれします。  
+     列の他のデータ型と比較して、LOB はより大きな記憶域とより多くの処理を必要とします。 アプリケーションで必要でない限り、LOB 型の列をアーティクルに含めないようにしてください。 `text`、`ntext`、および `image` の各データ型は非推奨です。 LOB が必要な場合は、`varchar(max)`、`nvarchar(max)`、および `varbinary(max)` の各データ型を使用することをお勧めします。  
   
      トランザクション レプリケーションの場合は、 **OLEDB ストリームのディストリビューション プロファイル**と呼ばれるディストリビューション エージェント プロファイルの使用を検討してください。 詳細については、「 [Replication Agent Profiles](../agents/replication-agent-profiles.md)」を参照してください。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "48138198"
   
      変更をパーティション分割するには、各サブスクライバーにデータのサブセットをパブリッシュするか、またはアプリケーションを使用して、指定した行の変更を所定のノードに転送します。  
   
-    -   マージ レプリケーションは、単一パブリケーションで、パラメーター化されたフィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+    -   マージ レプリケーションは、単一パブリケーションで、パラメーター化されたフィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳細については、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
     -   トランザクション レプリケーションは、複数のパブリケーションで、静的フィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳細については、「[パブリッシュされたデータのフィルター選択](../publish/filter-published-data.md)」を参照してください。  
   
@@ -153,11 +152,11 @@ ms.locfileid: "48138198"
   
 -   初期テスト、監視、またはデバッグの間を除いて、レプリケーション エージェントの冗長レベルを低く設定する。  
   
-     ディストリビューション エージェントまたはマージ エージェントの **–HistoryVerboseLevel** パラメーターおよび **–OutputVerboseLevel** パラメーターを低く設定します。 これにより、エージェントの履歴および出力を追跡するために挿入される新しい行の数を減らすことができます。 代わりに、同じ状態の既存の履歴メッセージが、新しい履歴情報に更新されます。 テスト、監視、およびデバッグを行うときには、冗長レベルを高く設定して、エージェントの動作に関する情報をできるだけ多く得られるようにしてください。  
+     ディストリビューション エージェントまたはマージ エージェントの **-HistoryVerboseLevel** パラメーターおよび **-OutputVerboseLevel** パラメーターを低く設定します。 これにより、エージェントの履歴および出力を追跡するために挿入される新しい行の数を減らすことができます。 代わりに、同じ状態の既存の履歴メッセージが、新しい履歴情報に更新されます。 テスト、監視、およびデバッグを行うときには、冗長レベルを高く設定して、エージェントの動作に関する情報をできるだけ多く得られるようにしてください。  
   
--   スナップショット エージェント、マージ エージェント、およびディストリビューション エージェントの **–MaxBCPThreads** パラメーターを使用します (コンピューターのプロセッサ数を超えるスレッド数は指定できません)。 このパラメーターには、スナップショットの作成および適用時に並列実行できる一括コピーの操作数を指定します。  
+-   スナップショット エージェント、マージ エージェント、およびディストリビューション エージェントの **-MaxBCPThreads** パラメーターを使用します (コンピューターのプロセッサ数を超えるスレッド数は指定できません)。 このパラメーターには、スナップショットの作成および適用時に並列実行できる一括コピーの操作数を指定します。  
   
--   ディストリビューション エージェントおよびマージ エージェントの **–UseInprocLoader** パラメーターを使用します (パブリッシュされたテーブルに XML 列が含まれる場合、このパラメーターは使用できません)。 このパラメーターを指定すると、スナップショットの適用時にエージェントが BULK INSERT コマンドを実行します。  
+-   ディストリビューション エージェントおよびマージ エージェントの **-UseInprocLoader** パラメーターを使用します (パブリッシュされたテーブルに XML 列が含まれる場合、このパラメーターは使用できません)。 このパラメーターを指定すると、スナップショットの適用時にエージェントが BULK INSERT コマンドを実行します。  
   
  エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、以下をご覧ください。  
   

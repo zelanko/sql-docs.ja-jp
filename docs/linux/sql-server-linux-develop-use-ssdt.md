@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 2053e338bf14d11f25e6e12b3d6c5aee6b8e636e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 874fd8948d4098e9003fb2c54e1feb8b5cbbe4e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750364"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio を使用して、Linux 上の SQL Server のデータベースを作成するには
 
@@ -27,7 +27,7 @@ SQL Server Data Tools (SSDT) は、Visual Studio を SQL Server on Linux の強�
 
 1. 既にインストールしていない Visual Studio、Windows コンピューターの場合[ダウンロードして Visual Studio のインストール]します。 Visual Studio Community エディションは、受講者、完全に機能を備えた無料の IDE、Visual Studio のライセンスがない、オープン ソース、個人の開発者。
 
-2. Visual Studio のインストール中に次のように選択します。**カスタム**の、**インストールの種類を選択**オプション。 **[次へ]** をクリックします。
+2. Visual Studio のインストール中に次のように選択します。**カスタム**の、**インストールの種類を選択**オプション。  **[次へ]** をクリックします。
 
 3. 選択**Microsoft SQL Server Data Tools**、 **Git for Windows**、および**Visual Studio 向け GitHub 拡張**機能の選択項目の一覧。
 
@@ -99,7 +99,7 @@ Linux 上の SQL Server は、SSDT 17.0 RC またはそれ以降のバージョ�
 
 5. 発行状態を確認、**データ ツール操作**ウィンドウ。
 
-6. クリックして**ビュー Reulst**または**スクリプトの表示**SQL Server on Linux での結果を発行データベースの詳細を確認します。
+6. をクリックして**結果を表示する**または**スクリプトの表示**SQL Server on Linux での結果を発行データベースの詳細を確認します。
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
@@ -107,12 +107,12 @@ Linux 上の SQL Server インスタンスに新しいデータベースを作�
 
 ## <a name="next-steps"></a>次の手順
 
-T-SQL を初めて使う場合は、「[チュートリアル: Transact-SQL ステートメントの作成]」 (チュートリアル: Transact-SQL ステートメントの記述) と「[TRANSACT-SQL リファレンス (データベース エンジン)]」 (Transact-SQL リファレンス (データベース エンジン)) を参照してください。
+T-SQL に慣れていない場合は、次を参照してください。[チュートリアル:TRANSACT-SQL ステートメントの作成]と[TRANSACT-SQL リファレンス (データベース エンジン)]します。
 
 SQL Data Tools でのデータベース開発の詳細については、次を参照してください[SSDT MSDN ドキュメント]
 
 [ダウンロードして Visual Studio のインストール]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
+[Download and Install SSDT]:https://aka.ms/ssdt-download
 [SSDT MSDN ドキュメント]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[チュートリアル: Transact-SQL ステートメントの作成]:https://msdn.microsoft.com/library/ms365303.aspx
+[チュートリアル:TRANSACT-SQL ステートメントの作成]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL リファレンス (データベース エンジン)]:https://msdn.microsoft.com/library/bb510741.aspx

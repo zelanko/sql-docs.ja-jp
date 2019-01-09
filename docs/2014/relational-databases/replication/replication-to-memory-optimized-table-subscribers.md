@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f1ec48661147c78449e7767e87bafd475bb7819
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: d2409c993aad299551dcaf97e11c99fe032a96f1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128652"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800664"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>メモリ最適化テーブル サブスクライバーへのレプリケーション
   トランザクション レプリケーションのサブスクライバーとして機能するテーブルは、ピア ツー ピア トランザクション レプリケーションを除き、メモリ最適化テーブルとして構成できます。 その他のレプリケーション構成はメモリ最適化テーブルとは互換性がありません。  
@@ -242,7 +241,7 @@ ms.locfileid: "48128652"
     GO  
     ```  
   
-6.  スキーマをサブスクライバーのデータベースに適用したら、将来の使用のために保存します。  
+6.  サブスクライバーのデータベースにスキーマを適用し、将来使用するためのスキーマを保存します。  
   
 7.  パブリッシャー (ソース) のデータをサブスクライバーに読み込みます。 サブスクリプションを追加するまで、パブリッシャーでデータを変更しないでください。  次に示すように BCP を使用できます。  
   
@@ -302,7 +301,7 @@ GO
   
 -   サブスクライバーのメモリ最適化テーブルにレプリケートされるテーブルの主キーを更新するには、制限があります。 詳細については、次を参照してください。[主キーに変更をレプリケートする](#PrimaryKey)します。  
   
--   外部キー、UNIQUE 制約、トリガー、スキーマの変更、ROWGUIDCOL、計算列、データ圧縮、別名データ型、バージョン管理、ロックは、メモリ最適化テーブルではサポートされていません。 参照してください[TRANSACT-SQL は、インメモリ OLTP でサポートされていない構造](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)について。  
+-   外部キー、UNIQUE 制約、トリガー、スキーマの変更、ROWGUIDCOL、計算列、データ圧縮、別名データ型、バージョン管理、ロックは、メモリ最適化テーブルではサポートされていません。 詳細については、「 [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 」を参照してください。  
   
 ##  <a name="Schema"></a> スキーマ ファイルの変更  
   

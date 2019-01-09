@@ -1,5 +1,5 @@
 ---
-title: データベース ディメンションの定義 |Microsoft ドキュメント
+title: データベース ディメンションの定義 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3f9d827bbbcb50dc352ba8987cf04704a18e4ef0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94fa4e719e99928a56694b748e11fff1ad16db9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025859"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534710"
 ---
 # <a name="define-database-dimensions"></a>データベース ディメンションの定義
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトまたはデータベースの既存のデータベース ディメンションを構成するには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーを使用します。 ディメンション デザイナーを使用すると、次の操作を実行できます。  
+   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンション デザイナーを使用します。 ディメンション デザイナーを使用すると、次の操作を実行できます。  
   
 -   ディメンションレベルのプロパティを構成します。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "34025859"
   
  ディメンション デザイナーには、次の表で説明しているように、3 つの異なるタブがあります。  
   
-|タブ|Description|  
+|タブ|説明|  
 |---------|-----------------|  
-|**[ディメンション構造]**|ディメンション構造の操作に使用します。ディメンションのデータ ソース ビュー スキーマの確認や作成、または属性の操作を行ったり、属性をユーザー定義階層にまとめることができます。|  
+|**[ディメンション構造]**|このタブにディメンションの構造と動作を確認またはディメンション、属性を使用して、ユーザー定義階層の属性を整理するには、データ ソース ビュー スキーマの作成に使用します。|  
 |**属性リレーションシップ**|ディメンションの属性リレーションシップを作成、変更、または削除するときに使用します。|  
 |**翻訳**|ディメンションのメタデータの翻訳を異なる言語で追加および編集するときに使用します。|  
 |**ブラウザー**|処理済みディメンションのメンバーを調べるときや、ディメンションのメタデータの翻訳を確認するときに使用します。|  
@@ -50,10 +50,10 @@ ms.locfileid: "34025859"
  [ディメンションの属性のプロパティの参照](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  ディメンションの属性を定義して構成する方法を説明します。  
   
- [ユーザー定義階層を作成します。](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
+ [ユーザー定義階層の作成](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  ユーザー定義階層を定義して構成する方法を説明します。  
   
- [属性リレーションシップを定義します。](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
+ [属性リレーションシップの定義](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
  属性のリレーションシップを定義して構成する方法を説明します。  
   
  [ビジネス インテリジェンス ウィザードを使用したディメンションの拡張](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  

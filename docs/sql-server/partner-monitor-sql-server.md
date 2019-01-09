@@ -2,8 +2,6 @@
 title: SQL Server 監視のパートナー | Microsoft Docs
 description: サーバー監視のソリューションを提供しているサードパーティ パートナーの一覧を表示します。
 services: sql-server
-documentationcenter: NA
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 11/02/2017
@@ -11,12 +9,12 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 16e2e8dcc3e136ad99171845da89ff9a6504c460
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1dbe3213ae6b5774cd08efa6f6a24b799f74a6a7
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501974"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731999"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 監視パートナー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

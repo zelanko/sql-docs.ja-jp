@@ -1,5 +1,5 @@
 ---
-title: '[ファイルを開くアプリケーションの選択] - ([新しいファイル]) | Microsoft Docs'
+title: '[ファイルを開くアプリケーションの選択]([新しいファイル]) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,22 +7,20 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.openwith
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f489e1a1501299b0f78c037c810ef54db7117edf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1ae2df6aab71a5dc914260f19b13327e1e84a2a
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675590"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328162"
 ---
-# <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] - ([新しいファイル])
+# <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] \([新しいファイル])
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 1 つ以上のエディターでドキュメントを開くには、**[ファイル]** メニューの **[開く]** をクリックし、次に **[ファイル]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスでファイルを選択し、 **[開く]** の横の矢印をクリックし、次に **[ファイルを開くアプリケーションの選択]** をクリックします。 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスの **[このファイルを開くのに使用するプログラムを選択してください]** の一覧で、目的のプログラムをクリックし、次に **[開く]** をクリックします。  
   
@@ -47,4 +45,3 @@ ms.locfileid: "47675590"
   
 ## <a name="see-also"></a>参照  
 [ファイル拡張子をコード エディターに関連付ける](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
-  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
@@ -19,12 +18,12 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d9549d988da0892324ceafbbd471e7e201557e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6ded31664a8eaf6b11bc630754752677d46d7ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204802"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750334"
 ---
 # <a name="install-integration-services"></a>Integration Services のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を含む任意またはすべてのコンポーネントを 1 つのセットアップ プログラムでインストールできます。 セットアップによって、他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントと共にまたは単独で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を 1 台のコンピューターにインストールできます。  
@@ -34,7 +33,7 @@ ms.locfileid: "48204802"
  セットアップの開始、セットアップ ウィザードの使用、またはコマンド ラインからのセットアップの実行の手順については、ここでは扱いません。 インストールするには、セットアップと選択のコンポーネントを起動する方法の詳しい手順については、「 [SQL Server 2014 インストールのクイック スタート](../../getting-started/quick-start-installation-of-sql-server-2014.md)します。 インストールするためのコマンド ライン オプションについて[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を参照してください[コマンド プロンプトから SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)します。  
   
 ## <a name="preparing-to-install-integration-services"></a>Integration Services をインストールする準備  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールする前に、次の要件を確認してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールする前に、次の要件を確認してください。  
   
 -   [SQL Server 2014 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
@@ -125,6 +124,6 @@ ms.locfileid: "48204802"
  64 ビット バージョンの機能は、 **Program Files** ディレクトリに格納されます。32 ビット バージョンの機能は、 **Program Files (x86)** ディレクトリに別個にインストールされます。 この動作は [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に固有の動作ではありません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] パッケージの 32 ビット開発環境である [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 64 ビット オペレーティング システムではサポートされていないので、[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] サーバーにはインストールされません。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの 32 ビット開発環境であるは、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 64 ビット オペレーティング システムではサポートされていないので、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] サーバーにはインストールされません。  
   
   

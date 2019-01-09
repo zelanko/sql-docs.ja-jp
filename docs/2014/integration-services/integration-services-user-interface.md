@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -17,12 +16,12 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c307d7c31b3599a358346812279d79c37705b533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89fdb4d112d37a61b377bbac768d94012a703664
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074162"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362754"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services のユーザー インターフェイス
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーのタブ上にあるデザイン画面以外にも、パッケージに機能を追加したり、パッケージ オブジェクトのプロパティを構成するための、次に示すようなウィンドウやダイアログ ボックスが用意されています。  
@@ -40,7 +39,7 @@ ms.locfileid: "48074162"
   
  次の表は、 **[SSIS]** メニューと [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーのデザイン画面から使用できるダイアログ ボックスの一覧です。  
   
-|ダイアログ ボックス|用途|アクセス|  
+|ダイアログ ボックス|目的|アクセス|  
 |----------------|-------------|------------|  
 |**作業の開始**|サンプル、チュートリアル、およびビデオにアクセスします。|**[制御フロー]** タブまたは **[データ フロー]** タブのデザイン画面で右クリックし、 **[作業の開始]** をクリックします。<br /><br /> 新しい **プロジェクトを作成するときに** [作業の開始] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ウィンドウが自動的に表示されるようにするには、ウィンドウの下部にある **[新しいプロジェクトで常に表示する]** を選択します。|  
 |**[SSIS ログの構成]**|ログを追加してログ記録の詳細を設定することにより、パッケージとそのタスクのログ記録を構成します。|次に、 **[SSIS]** メニューの **[ログ記録]** をクリックします。<br /><br /> - または -<br /><br /> **[制御フロー]** タブのデザイン画面で任意の場所を右クリックし、 **[ログ記録]** をクリックします。|  
@@ -56,11 +55,11 @@ ms.locfileid: "48074162"
   
  `- <SamplesSites>`  
   
- `<GettingStartedSamples>http://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
+ `<GettingStartedSamples>https://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
   
  `- <ToolboxSamples>`  
   
- `<Site>http://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
+ `<Site>https://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
   
  `</ToolboxSamples>`  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48074162"
   
  次の表は、 **[SSIS]** メニュー、 **[表示]** メニュー、および [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーのデザイン画面から使用できるウィンドウの一覧です。  
   
-|ウィンドウ|用途|アクセス|  
+|ウィンドウ|目的|アクセス|  
 |------------|-------------|------------|  
 |**変数**|カスタム変数を追加して管理します。|**[SSIS]** メニューの **[変数]** をクリックします。<br /><br /> - または -<br /><br /> **[制御フロー]** タブおよび **[データ フロー]** タブのデザイン画面で任意の場所を右クリックし、 **[変数]** をクリックします。<br /><br /> - または -<br /><br /> **[表示]** メニューで **[その他のウィンドウ]** をポイントし、 **[変数]** をクリックします。|  
 |**[ログ イベント]**|実行時にログ エントリを表示します。|**[SSIS]** メニューの **[ログ イベント]** をクリックします。<br /><br /> - または -<br /><br /> **[制御フロー]** タブおよび **[データ フロー]** タブのデザイン画面で任意の場所を右クリックし、 **[ログ イベント]** をクリックします。<br /><br /> - または -<br /><br /> **[表示]** メニューで **[その他のウィンドウ]** をポイントし、 **[ログ イベント]** をクリックします。|  
@@ -83,7 +82,7 @@ ms.locfileid: "48074162"
 |コンテナー。 詳細については、「 [Integration Services コンテナー](control-flow/integration-services-containers.md)」を参照してください。|**[制御フロー]** タブのデザイン画面で、コンテナーをダブルクリックします。|  
 |タスク。 詳細については、「 [Integration Services のタスク](control-flow/integration-services-tasks.md)」を参照してください。|**[制御フロー]** タブのデザイン画面で、タスクをダブルクリックします。|  
 |変換元。|**[データ フロー]** タブのデザイン画面で、変換元をダブルクリックします。|  
-|変換。 詳しくは、「 [Integration Services の変換](data-flow/transformations/integration-services-transformations.md)」をご覧ください。|**[データ フロー]** タブのデザイン画面で、変換をダブルクリックします。|  
+|変換。 詳細については、「 [Integration Services の変換](data-flow/transformations/integration-services-transformations.md)」を参照してください。|**[データ フロー]** タブのデザイン画面で、変換をダブルクリックします。|  
 |変換先。|**[データ フロー]** タブのデザイン画面で、変換先をダブルクリックします。|  
   
 ## <a name="advanced-editor"></a>[詳細エディター]  
@@ -115,7 +114,7 @@ ms.locfileid: "48074162"
  その他のウィンドウおよびメニューの詳細については、Visual Studio のマニュアルを参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]でパッケージを作成する方法については、「 [SQL Server データ ツールでのパッケージの作成](create-packages-in-sql-server-data-tools.md)」を参照してください。  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]でパッケージを作成する方法については、「 [SQL Server データ ツールでのパッケージの作成](create-packages-in-sql-server-data-tools.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SSIS デザイナー](ssis-designer.md)  

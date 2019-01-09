@@ -1,5 +1,5 @@
 ---
-title: SQL Server Machine Learning Services で拡張可能アーキテクチャ |Microsoft Docs
+title: R 言語と Python スクリプト - SQL Server Machine Learning の機能拡張アーキテクチャ
 description: デュアル アーキテクチャ リレーショナル データを R と Python スクリプトを実行するために、SQL Server データベース エンジンの外部コードのサポート。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2ada06ce41cd9a5faf3237ce2b9bac6fc40291d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4e48d51e45cdc9f1cd56f22228d95370b8f75711
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419220"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432745"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services で拡張可能アーキテクチャ 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

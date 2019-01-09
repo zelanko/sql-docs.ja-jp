@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: 式の概要 | Microsoft Docs'
+title: チュートリアル:式の概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 73bcce5c157ad412fabb677302eeddbd40a8b54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075852"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399336"
 ---
-# <a name="tutorial-introducing-expressions"></a>チュートリアル: 式の概要
+# <a name="tutorial-introducing-expressions"></a>チュートリアル:式の概要
   式を使用すると、強力で柔軟なレポートを作成できます。 このチュートリアルでは、一般的な関数および演算子を使用した式を作成および実装する方法を説明します。 使用する、**式**名前値の連結、見て別のデータセット内の値式を作成する ダイアログ ボックスとフィールドの値に基づいた画像を表示します。  
   
  レポートは縞状で、各行には白と白でない色が交互に使用されます。 レポートには、白以外の行の色を選択するためのパラメーターが含まれています。  
@@ -54,9 +54,9 @@ ms.locfileid: "48075852"
   
 -   [レポートを保存します。](#Save)  
   
- このチュートリアルの推定所要時間: 30 分。  
+ このチュートリアルの推定所要時間:30 分。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/report-builder-tutorials.md) を参照してください。  
   
 ##  <a name="Setup"></a> 1.テーブルまたはマトリックス ウィザードを使用して表レポートとデータセットを作成する  
@@ -66,7 +66,7 @@ ms.locfileid: "48075852"
 >  このチュートリアルのクエリにはデータ値が含まれているため、外部のデータ ソースを必要としません。 このため、クエリが非常に長くなっています。 ビジネス環境でクエリにデータを含めることはありません。 これは、学習に使用することのみを目的としています。  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+>  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーを参照する方法の詳細については、データ ソースを選択し、データセットを作成するこのシリーズの最初のチュートリアルを参照してください。[チュートリアル:基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
   
 #### <a name="to-create-a-new-table-report"></a>新しい表レポートを作成するには  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48075852"
   
      クエリには、生年月日、名前、姓、州または郡、国または地域の識別子、性別、年度累計購入額などを示す列の名前が指定されています。  
   
-10. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。 結果セットには FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、および LastPurchase の各列が含まれ、20 行のデータが表示されます。  
+10. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。 結果セットは、20 行のデータを表示して、次の列が含まれています。FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、および LastPurchase します。  
   
 11. **[次へ]** をクリックします。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48075852"
   
 2.  **[DataSource1]** を右クリックし、**[データ ソースのプロパティ]** をクリックします。  
   
-3.  **[名前]** ボックスに「 **ExpressionsDataSource**」と入力します。  
+3.   **[名前]** ボックスに「 **ExpressionsDataSource**」と入力します。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -175,7 +175,7 @@ ms.locfileid: "48075852"
   
 2.  **[DataSet1]** を右クリックし、**[データセットのプロパティ]** をクリックします。  
   
-3.  **[名前]** ボックスに「 **Expressions**」と入力します。  
+3.   **[名前]** ボックスに「 **Expressions**」と入力します。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -310,7 +310,7 @@ ms.locfileid: "48075852"
   
 4.  **[データ ソース]** ボックスの一覧の [ExpressionsDataSource] をクリックします。  
   
-5.  **[名前]** ボックスに「 **CountryRegion**」と入力します。  
+5.   **[名前]** ボックスに「 **CountryRegion**」と入力します。  
   
 6.  クエリの種類に **[テキスト]** が選択されていることを確認し、 **[クエリ デザイナー]** をクリックします。  
   
@@ -343,7 +343,7 @@ ms.locfileid: "48075852"
   
 #### <a name="to-look-up-values-in-the-countryregion-dataset"></a>CountryRegion データセット内の値を参照するには  
   
-1.  をクリックして、 **Country Region ID**列のタイトルとテキストの削除: id。  
+1.  をクリックして、 **Country Region ID**列のタイトルとテキストを削除します。ID。  
   
 2.  **[Country Region]** 列のデータ セルを右クリックし、 **[式]** をクリックします。  
   
@@ -418,7 +418,7 @@ ms.locfileid: "48075852"
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Indicator"></a> 7.インジケーターを使用して売上比較を示す  
- 新しい列を追加し、インジケーターを使用して、個人の年度累計 (YTD) 購入額が平均 YTD 購入額を上回るか下回るかを示します。 **Round** 関数では、値から小数が除去されます。  
+ 新しい列を追加し、個人の年の日付 (YTD) 購入額が平均 YTD 購入額の上下でかどうかを表示するインジケーターを使用してください。 **Round** 関数では、値から小数が除去されます。  
   
  インジケーターとその状態を構成するには、多数の手順が必要です。 する場合、"、インジケーターを構成するには」の手順で前方にスキップしてこのチュートリアルから完成した式のコピー/貼り付け、**式** ダイアログ ボックス。  
   
@@ -506,7 +506,7 @@ ms.locfileid: "48075852"
   
 30. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-31. **[終了]** 値のボックスに「 **0**」と入力します。  
+31.  **[終了]** 値のボックスに「 **0**」と入力します。  
   
 32. 水平矢印のある行をクリックし、 **[削除]** をクリックします。  
   
@@ -522,7 +522,7 @@ ms.locfileid: "48075852"
   
 38. **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="GreenBar"></a> 8。レポートを縞状レポートにする  
+##  <a name="GreenBar"></a> 8。「緑色のステータス バー」レポートのレポートを作成します。  
  パラメーターを使用して、レポート内で 1 行おきに適用する色を指定し、レポートを縞状にします。  
   
 #### <a name="to-add-a-parameter"></a>パラメーターを追加するには  
@@ -533,9 +533,9 @@ ms.locfileid: "48075852"
   
      **[レポート パラメーターのプロパティ]** ダイアログ ボックスが表示されます。  
   
-3.  **[プロンプト]** に「 **Choose color**」と入力します。  
+3.   **[プロンプト]** に「 **Choose color**」と入力します。  
   
-4.  **[名前]** に「 **RowColor**」と入力します。  
+4.   **[名前]** に「 **RowColor**」と入力します。  
   
 5.  左側のウィンドウで次のようにクリックします。**使用可能な値**します。  
   
@@ -543,27 +543,27 @@ ms.locfileid: "48075852"
   
 7.  **[追加]** をクリックします。  
   
-8.  **ラベル**ボックスに、入力:**黄色**  
+8.  **ラベル**ボックスに、入力します。**黄色**  
   
-9. **[値]** ボックスに「 **Yellow**」と入力します。  
+9.  **[値]** ボックスに「 **Yellow**」と入力します。  
   
 10. **[追加]** をクリックします。  
   
-11. **[ラベル]** ボックスに「 **Green**」と入力します。  
+11.  **[ラベル]** ボックスに「 **Green**」と入力します。  
   
-12. **[値]** ボックスに「 **PaleGreen**」と入力します。  
+12.  **[値]** ボックスに「 **PaleGreen**」と入力します。  
   
 13. **[追加]** をクリックします。  
   
-14. **[ラベル]** ボックスに「 **Blue**」と入力します。  
+14.  **[ラベル]** ボックスに「 **Blue**」と入力します。  
   
-15. **[値]** ボックスに「 **LightBlue**」と入力します。  
+15.  **[値]** ボックスに「 **LightBlue**」と入力します。  
   
 16. **[追加]** をクリックします。  
   
-17. **[ラベル]** ボックスに「 **Pink**」と入力します。  
+17.  **[ラベル]** ボックスに「 **Pink**」と入力します。  
   
-18. **[値]** ボックスに「 **Pink**」と入力します。  
+18.  **[値]** ボックスに「 **Pink**」と入力します。  
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -601,7 +601,7 @@ ms.locfileid: "48075852"
   
 15. カーソルが別の位置にある場合は、`Count(` の直後に置きます。  
   
-16. 左かっこを削除し、「**,“Expressions”)**」と入力します。  
+16. 左かっこを削除し、入力 **、"Expressions")**  
   
     > [!NOTE]  
     >  Expressions は、データ行をカウントするデータセットの名前です。  
@@ -621,7 +621,7 @@ ms.locfileid: "48075852"
   
 22. カーソルが別の位置にある場合は、`Parameters!RowColor.Value` の直後に置きます。  
   
-23. 「**, "White")**」と入力します。  
+23. 入力 **,"White")**  
   
      完成した式は、次のようになります。 `=IIf(RunningValue(Fields!FirstName.Value,Count, "Expressions") Mod 2 =0, Parameters!RowColor.Value, "White")`  
   
@@ -708,7 +708,7 @@ ms.locfileid: "48075852"
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
  [インジケーター&#40;レポート ビルダーおよび SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [画像、テキスト ボックス、四角形、および行&#40;レポート ビルダーおよび SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [テーブル &#40;レポート ビルダーおよび SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)  
   

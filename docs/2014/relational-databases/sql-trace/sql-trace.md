@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0a1091e56ee505731fb9ce0d683975caa9c3d29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193192"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823486"
 ---
 # <a name="sql-trace"></a>SQL トレース (SQL Trace)
   SQL トレースでは、トレース定義に一覧表示されているイベント クラスのインスタンスであるイベントが収集されます。 このようなイベントは、フィルターによってトレースから除外したり、対象のキューに登録したりすることができます。 イベントの対象には、ファイルまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を指定できます。SMO では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を管理するアプリケーションでトレース情報を使用できます。  
@@ -36,7 +35,7 @@ ms.locfileid: "48193192"
  次の用語は SQL トレースの主要な概念を示したものです。  
   
  **イベント**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]のインスタンス内での操作により発生します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]のインスタンス内での操作により発生します。  
   
  **データ列**  
  イベントの属性。  
@@ -74,8 +73,8 @@ ms.locfileid: "48193192"
 |データ列|列番号|説明|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName** <sup>1</sup>|10|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラム名ではなくアプリケーションによって渡された値が格納されます。|  
-|**BigintData1**|52|値 (`bigint`データ型)、トレースで指定されたイベント クラスに依存します。|  
-|**BigintData2**|53|値 (`bigint`データ型)、トレースで指定されたイベント クラスに依存します。|  
+|**BigintData1**|52|トレースで指定されているイベント クラスに依存する値 (`bigint` データ型)。|  
+|**BigintData2**|53|トレースで指定されているイベント クラスに依存する値 (`bigint` データ型)。|  
 |**Binary Data**|2|トレースにキャプチャされるイベント クラスに依存するバイナリ値。|  
 |**ClientProcessID** <sup>1</sup>|9|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|  
 |**ColumnPermissions**|44|列権限が設定されていたかどうかを示します。 ステートメントのテキストを解析して、どの権限がどの列に適用されていたかを判断できます。|  
@@ -161,7 +160,7 @@ ms.locfileid: "48193192"
 |トレースで収集されるデータ量を最小限にする方法について説明します。|[トレース ファイルとテーブル サイズの制限](../sql-trace/limit-trace-file-and-table-sizes.md)|  
 |Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]でトレースのスケジュールを設定するための 2 つの方法について説明します。|[トレースのスケジュール設定](../sql-trace/schedule-traces.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server プロファイラーのテンプレートと権限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 管理オブジェクト &#40;SMO&#41; プログラミング ガイド](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   

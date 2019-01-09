@@ -11,12 +11,12 @@ ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3c0e257a3fe1b4aff1f1c9336f4cb11e8a12e613
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5982bd49a5b7847cb8c09a7e46ca077bbe0e2d2b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088732"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521618"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>不明なメンバーと NULL 処理のプロパティの定義
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] がディメンションを処理するときに、ディメンションの属性を生成しているのは、データ ソース ビューのテーブルまたはビュー内の基になる列の各値です。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] での処理中に NULL 値があった場合は、既定によって NULL は数値列ではゼロに、文字列型の列では空の文字列に変換されます。 この既定の設定を変更したり、基礎的なリレーショナル データ ウェアハウスに固有の抽出、変換、読み込みプロセスがあればそれらを使用して NULL 値を変換したりできます。 また、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を使用し、ディメンションに対しては **UnknownMember** プロパティと **UnknownMemberName** プロパティ、ディメンションのキー属性に対しては **NullProcessing** プロパティという 3 つのプロパティを構成して、指定した値に NULL 値を変換することもできます。  
@@ -90,7 +90,7 @@ ms.locfileid: "48088732"
   
 9. **属性** ウィンドウで、この名前が新しい属性を変更`Category`します。  
   
-10. [プロパティ] ウィンドウで、 **[NameColumn]** プロパティ フィールド内をクリックし、参照ボタン (**[...]**) をクリックして、 **[名前列]** ダイアログ ボックスを開きます。  
+10. プロパティ ウィンドウでクリックして、 **NameColumn**プロパティ フィールドで、参照 をクリックし、(**.**) ボタンをクリックする、**名前列** ダイアログ ボックス。  
   
 11. **[基になる列]** ボックスの一覧で **[EnglishProductCategoryName]** を選択し、 **[OK]** をクリックします。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48088732"
   
 13. **属性** ウィンドウで、この名前が新しい属性を変更`Subcategory`します。  
   
-14. [プロパティ] ウィンドウで、 **[NameColumn]** プロパティ フィールド内をクリックし、参照ボタン ( **[...]** ) をクリックして、 **[名前列]** ダイアログ ボックスを開きます。  
+14. プロパティ ウィンドウでクリックして、 **NameColumn**プロパティ フィールドし、クリックし、参照 **(...)** ボタンをクリックする、**名前列** ダイアログ ボックス。  
   
 15. **[基になる列]** ボックスの一覧で **[EnglishProductSubcategoryName]** を選択し、 **[OK]** をクリックします。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48088732"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  **[属性]** ペインで、 **[Subcategory]** を選択します。  
+7.   **[属性]** ペインで、 **[Subcategory]** を選択します。  
   
 8.  [プロパティ] ウィンドウで、 **[KeyColumns]** プロパティ、 **[DimProductSubcategory.ProductSubcategoryKey (Integer)]** プロパティの順に展開します。  
   
@@ -179,6 +179,6 @@ ms.locfileid: "48088732"
      ![アセンブリのコンポーネントを示す製品名レベル](../../2014/tutorials/media/l4-assemblycomponents-1.gif "アセンブリ コンポーネントを示す製品名レベル")  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 5: ディメンションおよびメジャー グループ間のリレーションシップの定義](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [レッスン 5:ディメンションとメジャー グループ間のリレーションシップを定義します。](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   

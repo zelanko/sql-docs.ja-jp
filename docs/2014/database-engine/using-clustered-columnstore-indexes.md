@@ -10,12 +10,12 @@ ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6d040f8d7e784650cfbf0cf8b4540c599ed9599
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059402"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502700"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>クラスター化列ストア インデックスの使用
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクラスター化 columnstore インデックスを使用するタスクです。  
@@ -60,7 +60,7 @@ GO
  使用して、 [DROP INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql)クラスター化列ストア インデックスを削除するステートメント。 この操作は、インデックスを削除し、列ストア テーブルを行ストア ヒープに変換します。  
   
 ##  <a name="load"></a> クラスター化列ストア インデックスにデータを読み込む  
- 標準的な読み込み方法を使用して既存のクラスター化列ストア インデックスにデータを追加できます。  たとえば、bcp 一括読み込みツール、Integration Services、および INSERT …  SELECT を使用して、クラスター化列ストア インデックスにすべてのデータを読み込むことができます。  
+ 標準的な読み込み方法を使用して既存のクラスター化列ストア インデックスにデータを追加できます。  たとえば、bcp 一括読み込みツール、Integration Services、および INSERT.SELECT を使用して、クラスター化列ストア インデックスにすべてのデータを読み込むことができます。  
   
  クラスター化 columnstore インデックスでは、columnstore の列セグメントの断片化を防ぐためにデルタストアを活用します。  
   
@@ -68,7 +68,7 @@ GO
  パーティション分割されたデータの場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はまずパーティションに各行を割り当て、次にパーティション内のデータの columnstore 処理を実行します。 各パーティションには、独自の行グループと少なくとも 1 つのデルタストアがあります。  
   
 ### <a name="deltastore-loading-scenarios"></a>デルタストアの読み込みのシナリオ  
- デルタストアの行は、行グループに許容されている最大行数になるまで蓄積されます。 デルタストアに行グループごとの最大数の行が含まれる場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は行グループを "CLOSED" としてマークします。 "組ムーバー" というバックグラウンド プロセスが、CLOSED 行グループを見つけて columnstore に移動します。ここで行グループは列セグメントに圧縮され、列セグメントは columnstore に格納されます。  
+ デルタストアの行は、行グループに許容されている最大行数になるまで蓄積されます。 デルタストアの行グループあたりの行数の最大数が含まれている[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]行グループ"CLOSED"としてマークされます。 バック グラウンド プロセスは、「組ムーバー」と呼ばれる、CLOSED 行グループを検索し、場所、行グループは列セグメントに圧縮され、列セグメントが、列ストアに格納されている列ストアに移動します。  
   
  各クラスター化 columnstore インデックスに対して複数のデルタストアが許容されます。  
   
@@ -83,9 +83,9 @@ GO
 |一括読み込みを行う行|列ストアに追加される行|デルタストアに追加される行|  
 |-----------------------|-----------------------------------|----------------------------------|  
 |102,000|0|102,000|  
-|145,000|145,000<br /><br /> 行グループのサイズ: 145,000|0|  
-|1,048,577|1,048,576<br /><br /> 行グループのサイズ: 1,048,576|1|  
-|2,252,152|2,252,152<br /><br /> 行グループのサイズ: 1,048,576、1,048,576、155,000|0|  
+|145,000|145,000<br /><br /> 行グループのサイズ:145,000|0|  
+|1,048,577|1,048,576<br /><br /> 行グループのサイズ:1,048, 576 です。|1|  
+|2,252,152|2,252,152<br /><br /> 行グループのサイズ:1,048, 576、1,048, 576、155,000 できます。|0|  
   
  次の例は、1,048,577 個の行をパーティションに読み込んだ結果を示しています。 この結果では、列ストアに 1 つの圧縮された行グループ (圧縮された列セグメントとして)、およびデルタストアに 1 行があります。  
   
@@ -102,13 +102,13 @@ SELECT * FROM sys.column_store_row_groups
   
  使用[挿入&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/insert-transact-sql)行を挿入します。 行はデルタストアに追加されます。  
   
- [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql) を使用して行を削除します。  
+  [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql) を使用して行を削除します。  
   
 -   行が列ストアにある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は行を論理的に削除されたとしてマークしますが、インデックスが再構築されるまで行の物理ストレージを再確保することはありません。  
   
 -   行がデルタストアにある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は論理的および物理的に行を削除します。  
   
- [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql) を使用して行を更新します。  
+  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql) を使用して行を更新します。  
   
 -   行が列ストアにある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は行を論理的に削除されたとしてマークし、更新された行をデルタストアに挿入します。  
   

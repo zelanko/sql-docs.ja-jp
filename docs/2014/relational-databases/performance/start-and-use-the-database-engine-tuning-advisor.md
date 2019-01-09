@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
@@ -20,18 +19,18 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d587b8cd2fb4342ddba42ac85a1d595d6b7b23c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097822"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356382"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。 データベースをチューニングした後で結果を表示および操作する方法については、「 [データベース エンジン チューニング アドバイザーからの出力の表示および操作](database-engine-tuning-advisor.md)」を参照してください。  
   
 ##  <a name="Initialize"></a> データベース エンジン チューニング アドバイザーを初期化する  
- 初回起動時に、 **sysadmin** 固定サーバー ロールのメンバーであるユーザーがデータベース エンジン チューニング アドバイザーを初期化する必要があります。 これで複数のシステム テーブルを作成する必要があるため、`msdb`チューニング操作をサポートするデータベース。 また、初期化によって、 **db_owner** 固定データベース ロールのメンバーであるユーザーも自分の所有するデータベースにあるテーブルのワークロードをチューニングできます。  
+ 初回起動時に、 **sysadmin** 固定サーバー ロールのメンバーであるユーザーがデータベース エンジン チューニング アドバイザーを初期化する必要があります。 これは、チューニング操作をサポートするには、いくつかのシステム テーブルを `msdb` データベースに作成する必要があるためです。 また、初期化によって、 **db_owner** 固定データベース ロールのメンバーであるユーザーも自分の所有するデータベースにあるテーブルのワークロードをチューニングできます。  
   
  システム管理者権限を持つユーザーは、次の操作のいずれかを実行する必要があります。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48097822"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>SQL Server Management Studio からデータベース エンジン チューニング アドバイザーを起動するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **の** メニューの **[データベース エンジン チューニング アドバイザー]** でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。  
+1.   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **の** メニューの **[データベース エンジン チューニング アドバイザー]** でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>SQL Server Management Studio のクエリ エディターからデータベース エンジン チューニング アドバイザーを起動するには  
   
@@ -213,7 +212,7 @@ ms.locfileid: "48097822"
 >  データベース エンジン チューニング アドバイザーの一時停止はサポートされていません。 ツールバーの **[分析の停止]** または **[分析の停止 (推奨設定を使用)]** のいずれかをクリックしてからツールバーの **[分析の開始]** をクリックすると、データベース エンジン チューニング アドバイザーは新しいチューニング セッションを開始します。  
   
 ###  <a name="dta"></a> dta ユーティリティを使用する  
- [dta ユーティリティ](../../tools/dta/dta-utility.md) には、データベースのチューニングに使用できるコマンド プロンプト実行可能ファイルが用意されています。 このファイルにより、バッチ ファイルやスクリプトでデータベース エンジン チューニング アドバイザー機能を使用できるようになります。 **dta** ユーティリティでは、ワークロードとして、プラン キャッシュ エントリ、トレース ファイル、トレース テーブル、および [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトが使用されます。 また、データベース エンジン チューニング アドバイザー XML スキーマに準拠する XML 入力も使用されます。このスキーマは、この [Microsoft Web サイト](http://go.microsoft.com/fwlink/?linkid=43100)から入手できます。  
+ [dta ユーティリティ](../../tools/dta/dta-utility.md) には、データベースのチューニングに使用できるコマンド プロンプト実行可能ファイルが用意されています。 このファイルにより、バッチ ファイルやスクリプトでデータベース エンジン チューニング アドバイザー機能を使用できるようになります。 **dta** ユーティリティでは、ワークロードとして、プラン キャッシュ エントリ、トレース ファイル、トレース テーブル、および [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトが使用されます。 また、データベース エンジン チューニング アドバイザー XML スキーマに準拠する XML 入力も使用されます。このスキーマは、この [Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=43100)から入手できます。  
   
  **dta** ユーティリティを使用してワークロードのチューニングを開始する前に、次のことを考慮してください。  
   
@@ -235,16 +234,16 @@ ms.locfileid: "48097822"
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  分析に使用するイベントの数を変更するには、 **–n** オプションを指定します。 次の例では、キャッシュ エントリの数を 2,000 に増やします。  
+2.  分析に使用するイベントの数を変更するには、**-n** オプションを指定します。 次の例では、キャッシュ エントリの数を 2,000 に増やします。  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  インスタンスのすべてのデータベースのイベントを分析するには、 **-ipf** オプションを指定します。  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>ワークロードと dta ユーティリティの既定の設定を使用してデータベースをチューニングするには  
@@ -299,11 +298,11 @@ ms.locfileid: "48097822"
 ##  <a name="XMLInput"></a> XML 入力ファイルを作成する  
  経験豊かな XML 開発者の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーで使用できる XML 形式のファイルを作成して、ワークロードをチューニングできます。 このような XML ファイルを作成するには、使い慣れた XML ツールを使用してサンプル ファイルを編集するか、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマからインスタンスを生成します。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールの次の場所から入手できます。  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールの次の場所から入手できます。  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマは、この [Microsoft Web サイト](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)からもオンラインで入手できます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマは、この [Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)からもオンラインで入手できます。  
   
  この URL から、多くの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML スキーマを入手できるページに移動できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの行までページを下にスクロールします。  
   
@@ -444,7 +443,7 @@ database_name.owner_name.table_name
  インデックス付きビューを追加するための推奨設定のみが含まれます。 クラスター化インデックスおよび非クラスター化インデックスは、推奨されません。  
   
  **フィルター選択されたインデックスを含める**  
- フィルター選択されたインデックスを追加するための推奨設定が含まれます。 このオプションは、 **[インデックスおよびインデックス付きビュー]**、 **[インデックス]**、または **[非クラスター化インデックス]** のいずれかの物理デザイン構造を選択した場合に使用できます。  
+ フィルター選択されたインデックスを追加するための推奨設定が含まれます。 このオプションは、これらの物理デザイン構造のいずれかを選択する場合に使用できます。**インデックスおよびインデックス付きビュー**、**インデックス**、または**非クラスター化インデックス**します。  
   
  **[インデックス]**  
  クラスター化インデックスおよび非クラスター化インデックスを追加するための推奨設定のみが含まれます。 インデックス付きビューは推奨されません。  
@@ -506,7 +505,7 @@ database_name.owner_name.table_name
  **[チューニング ログ]**  
  このチューニング セッションに関する情報が表示されます。 このログを印刷するには、ログを右クリックして **[印刷]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース エンジン チューニング アドバイザーからの出力の表示および操作](database-engine-tuning-advisor.md)   
  [dta Utility](../../tools/dta/dta-utility.md)  
   

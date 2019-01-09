@@ -1,5 +1,5 @@
 ---
-title: メジャー グループ内のディメンションの粒度を定義する |Microsoft ドキュメント
+title: メジャー グループ内のディメンションの粒度の定義 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9faa4c869591c6885a1856fca0ec63661af7799a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e047f955f9c4ecccc02404dc139d557935e0f090
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018819"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542245"
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>レッスン 5-4-メジャー グループ内のディメンションの粒度の定義
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -95,11 +95,11 @@ ms.locfileid: "34018819"
   
 7.  ピボットテーブル フィールド リストで **Sales Territories** ユーザー定義階層を選択し、右側の下矢印をクリックします。  
   
-    ![フィールド リスト で sales Territories 階層](../analysis-services/media/l5-granularity-1a.png "フィールド リスト で Sales Territories 階層")  
+    ![フィールド リスト内の sales Territories 階層](../analysis-services/media/l5-granularity-1a.png "フィールド リスト内の Sales Territories 階層")  
   
 8.  フィルターで [すべて選択] チェック ボックスをクリックしてすべての選択を解除してから、 **North America**だけを選択します。  
   
-    ![北アメリカを選択するためのフィルター ペイン](../analysis-services/media/l5-granularity-1b.png "北アメリカを選択するためのフィルター ペイン")  
+    ![North America を選択するためのフィルター ペイン](../analysis-services/media/l5-granularity-1b.png "North America を選択するためのフィルター ペイン")  
   
 9. ピボットテーブル フィールド リストで **Date**を展開します。  
   
@@ -127,13 +127,13 @@ ms.locfileid: "34018819"
   
     **Employee** および **Date** キューブ ディメンションは、通常のリレーションシップを介して **Sales Quotas** および Sales Quotas 1 メジャー グループにリンクしています。 また、 **Sales Territory** キューブ ディメンションはどちらのメジャー グループにもリンクしていません。  
   
-4.  **Sales Territory** ディメンションと **Sales Quotas** メジャー グループが交差する位置にあるセルをクリックし、参照ボタン (**[...]**) をクリックします。 **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
+4.  交差する位置のセルをクリックして、 **Sales Territory**ディメンションと**Sales Quotas**メジャー グループと、参照ボタンをクリックして (**.**).**[リレーションシップの定義]** ダイアログ ボックスが開きます。  
   
 5.  **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
 6.  **[中間ディメンション]** ボックスの一覧から **[Employee]** を選択します。  
   
-7.  **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
+7.   **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
   
 8.  **[中間ディメンションの属性]** ボックスの一覧から **[Sales Territory Key]** を選択します (Sales Territory Region 属性のキー列は、SalesTerritoryKey 列です)。  
   
@@ -141,13 +141,13 @@ ms.locfileid: "34018819"
   
 10. **[OK]** をクリックします。  
   
-11. **Sales Territory** ディメンションと **Sales Quotas 1** メジャー グループが交差する位置にあるセルをクリックし、参照ボタン (**[...]**) をクリックします。 **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
+11. 交差する位置のセルをクリックして、 **Sales Territory**ディメンションと**Sales Quotas 1**メジャー グループと、参照ボタンをクリックして (**.**).**[リレーションシップの定義]** ダイアログ ボックスが開きます。  
   
 12. **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
 13. **[中間ディメンション]** ボックスの一覧から **[Employee]** を選択します。  
   
-14. **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
+14.  **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
   
 15. **[中間ディメンションの属性]** ボックスの一覧から **[Sales Territory Key]** を選択します (Sales Territory Region 属性のキー列は、SalesTerritoryKey 列です)。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "34018819"
   
     **Order Date** キューブ ディメンションの名前を **Date** に変更することにより、同キューブ ディメンションがこのキューブのプライマリ日付ディメンションとしての機能を持っていることを把握しやすくなります。  
   
-20. **Sales Quotas**メジャー グループと **Date** ディメンションが交差する位置にあるセルで、参照ボタン ( **[...]** ) をクリックします。  
+20. [参照] ボタンをクリックします (**.**) の交差部分にあるセルで、 **Sales Quotas**メジャー グループと**日付**ディメンション。  
   
 21. **[リレーションシップの定義]** ダイアログ ボックスで、 **[リレーションシップの種類の選択]** ボックスの一覧から **[標準]** を選択します。  
   
@@ -218,13 +218,13 @@ ms.locfileid: "34018819"
   
     会計四半期レベルの各メンバーが、四半期レベルと同じ値になっています。 たとえば、 **Q1 FY 2008** では、 **Q1 FY 2008** の分の $9,180,000.00 が、その各メンバーの値にもなっています。 このように表示されるのは、ファクト テーブルの詳細度が四半期単位であり、同時に Date ディメンションの詳細レベルも四半期単位であるためです。 レッスン 6 では、四半期ごとの販売量を各月に均等に割り振る方法について学習します。  
   
-    ![Sales Quota メジャー グループが正しく多次元化](../analysis-services/media/l5-granularity-7.gif "正しく多次元化 Sales Quota メジャー グループ")  
+    ![Sales Quota メジャー グループの次元は正しく](../analysis-services/media/l5-granularity-7.gif "正しくの次元は、Sales Quota メジャー グループ")  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 6: 計算の定義](../analysis-services/lesson-6-defining-calculations.md)  
+[レッスン 6:計算の定義](../analysis-services/lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>参照  
-[ディメンションのリレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+[ディメンション リレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [ファクト リレーションシップとファクト リレーションシップのプロパティの定義](../analysis-services/multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)  
 [データ ソース ビュー デザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

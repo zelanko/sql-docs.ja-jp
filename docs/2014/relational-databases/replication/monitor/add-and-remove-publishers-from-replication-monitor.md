@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, adding and removing Publishers
@@ -13,12 +12,12 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 217069061ea8169c3580e53de1d77462a85e29cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136012"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788442"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>レプリケーション モニターのパブリッシャーの追加および削除
   パブリッシャーになっているサーバーからレプリケーション モニターを起動すると、そのサーバーは自動的にモニターに追加されます。 その他のパブリッシャーを追加するには、 **[パブリッシャーの追加]** ダイアログ ボックスを使用します。 追加したパブリッシャーは、モニターの左ペインのグループの中に表示されます。 既定で **[マイ パブリッシャー]** グループが含まれていますが、新しいグループを作成して、1 つ以上のレプリケーション トポロジを管理できます。 レプリケーション モニターの開始の詳細については、「[レプリケーション モニターの開始](start-the-replication-monitor.md)」を参照してください。  
@@ -47,7 +46,7 @@ ms.locfileid: "48136012"
   
 2.  **[パブリッシャーの追加]** ダイアログ ボックスで、 **[追加]** をクリックし、 **[Oracle パブリッシャーの追加]** をクリックします。  
   
-3.  **[サーバーへの接続]** ダイアログ ボックスで、Oracle パブリッシャーに関連付けられている [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターの名前を入力し、認証の種類を選択します。 **[SQL Server 認証]** を選択した場合は、ログインとパスワードを入力します。 指定した資格情報はレプリケーション モニターによって保存され、今後このサーバーに接続するときに使用されます。 指定する Windows アカウントまたは SQL Server ログインは、固定サーバーロール **sysadmin** またはディストリビューション データベースの固定データベース ロール **replmonitor** のメンバーである必要があります。  
+3.   **[サーバーへの接続]** ダイアログ ボックスで、Oracle パブリッシャーに関連付けられている [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターの名前を入力し、認証の種類を選択します。 **[SQL Server 認証]** を選択した場合は、ログインとパスワードを入力します。 指定した資格情報はレプリケーション モニターによって保存され、今後このサーバーに接続するときに使用されます。 指定する Windows アカウントまたは SQL Server ログインは、固定サーバーロール **sysadmin** またはディストリビューション データベースの固定データベース ロール **replmonitor** のメンバーである必要があります。  
   
 4.  **[接続]** をクリックします。  
   

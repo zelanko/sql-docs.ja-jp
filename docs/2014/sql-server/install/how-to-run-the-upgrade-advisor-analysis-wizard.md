@@ -1,5 +1,5 @@
 ---
-title: '方法: アップグレード アドバイザー分析ウィザードを実行 |Microsoft Docs'
+title: 操作方法:アップグレード アドバイザー分析ウィザードを実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0896639f1c088b3ead255758075075f3e397b47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49c8cd84ada68d4ac00b13567528abff72d13847
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065282"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207651"
 ---
-# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>アップグレード アドバイザー分析ウィザードを実行する方法
+# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>操作方法:アップグレード アドバイザー分析ウィザードを実行します。
   アップグレード アドバイザー分析ウィザードは、アップグレード アドバイザー開始ページから起動します。 ここでは、アップグレード アドバイザー分析ウィザードの実行方法について説明します。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  アップグレード アドバイザー分析ウィザードを実行すると、アップグレード アドバイザーによって既定のレポート フォルダーにレポートが保存されます。 ただし、レポート ビューアーで表示されるのは、保存されている最近 5 件のレポートのみです。 レポートの既定の場所は、My Documents\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade advisor \110\reports です。  
   
 ### <a name="to-run-the-upgrade-advisor-analysis-wizard"></a>アップグレード アドバイザー分析ウィザードを実行するには  
   
 1.  アップグレード アドバイザーの開始 ページで、**アップグレード アドバイザー分析ウィザードを起動**します。  
   
-2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネント** ページで、スキャン サーバーの名前を入力、**サーバー名**ボックスをクリックして**検出**します。 サーバー名については次のガイドラインに従ってください。  
+2.   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネント** ページで、スキャン サーバーの名前を入力、**サーバー名**ボックスをクリックして**検出**します。 サーバー名については次のガイドラインに従ってください。  
   
     -   クラスター化されていないインスタンスをスキャンするには、コンピューター名を入力します。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48065282"
 8.  分析が完了したら、クリックして**レポートの起動**検出されたアップグレードの問題を表示します。  
   
 ## <a name="see-also"></a>参照  
- [方法: アップグレード アドバイザーの起動](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [操作方法：アップグレード アドバイザーを起動します。](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
  [アップグレード アドバイザーを実行している&#40;ユーザー インターフェイス&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 多対多リレーションシップを定義する |Microsoft ドキュメント
+title: 多対多リレーションシップの定義 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 487b61512e1dbd784b9b63eb0c3efdf1f98281ec
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c2541637af690395bb52c86a604ed7b37bd3fb00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019629"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518021"
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>レッスン 5-3-多対多リレーションシップを定義します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34019629"
 多対多のディメンションでは値は個別に集計され、すべてのメンバーに対して 2 回以上集計されることはありません。  
   
 > [!NOTE]  
-> 多対多のディメンション リレーションシップに対応させるには、関連するすべてのテーブルを結合する主キーと外部キーを、データ ソース ビューに定義します。 このようにしないと、キューブ デザイナーの **[ディメンションの使用法]** タブでリレーションシップを確立するときに正しいメジャー グループを選択できません。  
+> 多対多ディメンションのリレーションシップをサポートするために関連するすべてのテーブル間のデータ ソース ビューでプライマリ キーと外部キー リレーションシップを定義する必要があります。 このようにしないと、キューブ デザイナーの **[ディメンションの使用法]** タブでリレーションシップを確立するときに正しいメジャー グループを選択できません。  
   
 詳細については、「 [ディメンション リレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)」および「 [多対多のリレーションシップと多対多のリレーションシップのプロパティの定義](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)」を参照してください。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34019629"
   
 5.  **[テーブルの追加と削除]** ダイアログ ボックスで、 **[含まれているオブジェクト]** ボックスの一覧に **DimSalesReason** テーブルと **FactInternetSalesReason** テーブルを追加し、 **[OK]** をクリックします。  
   
-    関連するテーブル間に、主キーと外部キーのリレーションシップが自動的に確立されます。これらのリレーションシップは、基になるリレーショナル データベースに定義されているためです。 これらのリレーションシップが基のリレーショナル データベースに定義されていない場合は、データ ソース ビューで定義する必要があります。  
+    これらのリレーションシップが基になるリレーショナル データベースで定義されているために関連するテーブル間の主キーと外部キー リレーションシップが自動的に確立することに注意してください。 これらのリレーションシップが基のリレーショナル データベースに定義されていない場合は、データ ソース ビューで定義する必要があります。  
   
 6.  **[書式]** メニューで **[自動レイアウト]** をポイントし、 **[ダイアグラム]** をクリックします。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34019629"
   
     次の図のように、各並び順の行番号では、その行の商品の購入動機がキー値により識別されます。  
   
-    ![キーの購入動機を識別する値](../analysis-services/media/l5-many-to-many-1.gif "キーの購入動機を識別する値")  
+    ![キーの購入動機を識別するために値](../analysis-services/media/l5-many-to-many-1.gif "キーの購入動機を識別する値")  
   
 ## <a name="defining-the-intermediate-measure-group"></a>中間メジャー グループの定義  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34019629"
   
 5.  **[Internet Sales Reason Count]** を選択し、[プロパティ] ウィンドウでこのメジャーのプロパティを確認します。  
   
-    このメジャーの **AggregateFunction** プロパティは、 **Sum** ではなく、 **Count**として定義されていることがわかります。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]選択した**カウント**基になるデータ型が文字列データ型であるためです。 基のファクト テーブルの他の 2 つの列は、メジャーとしては選択されていません。これらは実際のメジャーではなく、数値キーであることを [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が検出したためです。 準加法の動作の詳細については、「 [準加法の動作の定義](../analysis-services/multidimensional-models/define-semiadditive-behavior.md)」を参照してください。  
+    このメジャーの **AggregateFunction** プロパティは、 **Sum** ではなく、 **Count**として定義されていることがわかります。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でこのプロパティが **Count** になっているのは、基のデータ型が文字列データ型であるためです。 基のファクト テーブルの他の 2 つの列は、メジャーとしては選択されていません。これらは実際のメジャーではなく、数値キーであることを [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が検出したためです。 準加法の動作の詳細については、「 [準加法の動作の定義](../analysis-services/multidimensional-models/define-semiadditive-behavior.md)」を参照してください。  
   
 6.  [プロパティ] ウィンドウで、 **Internet Sales Reason Count** メジャーの **Visible** プロパティを **False**に変更します。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "34019629"
   
     次の図は、 **Internet Sales Reason Count** メジャーのプロパティを示しています。  
   
-    ![Internet Sales Reason Count メジャーのプロパティを](../analysis-services/media/l5-many-to-many-2.gif "Internet Sales Reason Count メジャーのプロパティ")  
+    ![Internet Sales Reason Count メジャーのプロパティ](../analysis-services/media/l5-many-to-many-2.gif "Internet Sales Reason Count メジャーのプロパティ")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>多対多ディメンションの定義  
   
@@ -114,7 +114,7 @@ ms.locfileid: "34019629"
   
 11. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
-12. **[属性]** ディメンションのディメンション デザイナーの **[属性]** ペインで **[属性] Key**をクリックします。次に、[プロパティ] ウィンドウで、 **Name** プロパティを **[属性].** に変更します。  
+12.  **[属性]** ディメンションのディメンション デザイナーの **[属性]** ペインで **[属性] Key**をクリックします。次に、[プロパティ] ウィンドウで、 **Name** プロパティを **[属性].** に変更します。  
   
 13. ディメンション デザイナーの **[階層]** ペインで、 **Sales Reasons** という名前のユーザー階層を作成します。この階層の下に **Sales Reason Type** レベルを配置し、さらにその下に **Sales Reason** レベルを配置します。  
   
@@ -171,11 +171,11 @@ ms.locfileid: "34019629"
     ![キューブ デザイナーのペインのデータのフィルターおよび](../analysis-services/media/l5-many-to-many-5.gif "キューブ デザイナーのフィルターおよびデータ ペイン")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[メジャー グループ内のディメンションの粒度を定義します。](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[メジャー グループでのディメンション粒度の定義](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>参照  
-[データ ソース ビュー デザイナー & #40; でのダイアグラムの操作します。Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
-[ディメンションのリレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+[データ ソース ビュー デザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[ディメンション リレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [多対多のリレーションシップと多対多のリレーションシップのプロパティの定義](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   
   

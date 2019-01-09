@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: レポート データ ソースのプロパティの変更 | Microsoft Docs'
+title: レッスン 2:ソースのプロパティのレポート データの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e2a729c844d88ffb11b5de3622868fc9bc2eee17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa3dbc789b561702d21d705d1b9d362f7f3c01d7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159622"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416663"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>レッスン 2:レポート データ ソースのプロパティの変更
   このレッスンでは、受信者に配信されるレポートを、レポート マネージャーを使って選択します。 ここで定義するデータ ドリブン サブスクリプションによって、チュートリアル「 **基本的なテーブル レポートの作成 (SSRS チュートリアル)** 」で作成されたレポート [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)が配信されます。 この後の手順では、レポートがデータの取得に使用するデータ ソースの接続情報を変更します。 データ ドリブン サブスクリプションを介して配信できるのは、 **保存されている資格情報** を使用してレポート データ ソースにアクセスするレポートのみです。 保存されている資格情報は、レポートの自動処理に必要となります。  
   
  また、データセットとレポートを変更し、パラメーターを使用して `[Order]` のレポートをフィルター処理します。これによってサブスクリプションが特定の注文と表示形式で、レポートのさまざまなインスタンスを出力できるようになります。  
@@ -53,23 +53,23 @@ ms.locfileid: "48159622"
   
 6.  **[レポート サーバーに保存され、セキュリティで保護された資格情報]** をクリックします。  
   
-7.  ユーザー名とパスワードを入力します。ユーザー名は、 *domain\user*の形式で入力してください。 アクセス許可がない、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースであるログインを指定します。  
+7.  ユーザー名とパスワードを入力します。ユーザー名は、 *domain\user*の形式で入力してください。 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースにアクセスする権限がない場合は、このデータベースへの権限があるログイン情報を指定します。  
   
-8.  **[データ ソースへの接続時に Windows 資格情報として使用する]** をクリックし、 **[OK]** をクリックします。 ドメイン アカウントを使用していない場合 (たとえば、使用している場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログイン)、このチェック ボックスをクリックしてしないでください。  
+8.  **[データ ソースへの接続時に Windows 資格情報として使用する]** をクリックし、 **[OK]** をクリックします。 ドメイン アカウントを使用していない場合 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインを使用している場合など) は、このチェック ボックスをオンにしないでください。  
   
 9. **[接続テスト]** をクリックして、データ ソースに接続できることを確認します。  
   
 10. **[適用]** をクリックします。  
   
-11. レポートを表示し、指定した資格情報を使用してレポートが実行されていることを確認します。 レポートを表示するには、 **[表示]** タブをクリックします。レポートが開いたら、する必要があります従業員名を選択して順にクリックして、**レポートの表示**レポートを表示するボタンをクリックします。  
+11. レポートを表示し、指定した資格情報を使用してレポートが実行されていることを確認します。 レポートを表示するには、 **[表示]** タブをクリックします。レポートが開いたら、従業員名を選択してから **[レポートの表示]** をクリックする必要があります。  
   
 ##  <a name="bkmk_modify_dataset"></a> AdventureWorksDataset を変更するには  
   
-1.  Sales Orders レポートを開く [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で Sales Orders レポートを開きます。  
   
 2.  データセット `AdventureWorksDataset` を右クリックし、 **[データセットのプロパティ]** をクリックします。  
   
-3.  `WHERE (UPPER(SalesOrderNumber) =UPPER(@OrderNumber) or  @OrderNumber IS NULL)` ステートメントの前に `Group By` ステートメントを追加します。 完全なクエリ構文は次のとおりです。  
+3.  `WHERE (UPPER(SalesOrderNumber) =UPPER(@OrderNumber) or  @OrderNumber IS NULL)` ステートメントを `Group By` ステートメントの前に追加します。 完全なクエリ構文は次のとおりです。  
   
     ```  
     SELECT soh.OrderDate AS Date, soh.SalesOrderNumber AS [Order], pps.Name AS Subcat, pp.Name AS Product, SUM(sd.OrderQty) AS Qty, SUM(sd.LineTotal)  AS LineTotal  
@@ -92,7 +92,7 @@ ms.locfileid: "48159622"
   
 ##  <a name="bkmk_add_reportparameter"></a> レポート パラメーターを追加し、レポートを再パブリッシュ  
   
-1.  **レポート データ** ペインで、 **[新規作成]** をクリックし、 **[パラメーター]** をクリックします。  
+1.   **レポート データ** ペインで、 **[新規作成]** をクリックし、 **[パラメーター]** をクリックします。  
   
 2.  **[名前]** に「 `OrderNumber`」と入力します。  
   
@@ -114,19 +114,19 @@ ms.locfileid: "48159622"
   
          ![パラメーター領域を表示、レポート ビューアー](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "パラメーター領域を表示、レポート ビューアー")  
   
-8.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、「[レッスン 6: グループと合計の追加 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」の「レポートをレポート サーバーにパブリッシュするには (オプション)」セクションを参照してください。  
+8.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、レポート サーバー (省略可能) に、レポートをパブリッシュ' するセクションを参照してください。 の[レッスン 6。グループ化と合計の追加&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)します。  
   
 ##  <a name="bkmk_redeploy"></a> レポートを再配置するには  
   
-1.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、「[レッスン 6: グループと合計の追加 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」の「レポートをレポート サーバーにパブリッシュするには (オプション)」セクションを参照してください。  
+1.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、レポート サーバー (省略可能) に、レポートをパブリッシュ' するセクションを参照してください。 の[レッスン 6。グループ化と合計の追加&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)します。  
   
-2.  ツール バーの **[ビルド]** をクリックし、 **[チュートリアルの配置]** をクリックします。  
+2.  ツール バーの **[ビルド]** をクリックし、 **[Tutorial の配置]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
- 保存されている資格情報を使用してデータを取得するレポートを構成しました。 次に、レポート マネージャーの [データ ドリブン サブスクリプション] ページを使用してサブスクリプションを指定します。 「 [レッスン 3: データ ドリブン サブスクリプションの定義](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)」を参照してください。  
+ 保存されている資格情報を使用してデータを取得するレポートを構成しました。 次に、レポート マネージャーの [データ ドリブン サブスクリプション] ページを使用してサブスクリプションを指定します。 参照してください[レッスン 3。データ ドリブン サブスクリプションを定義する](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [レポート データ ソースを管理します。](report-data/manage-report-data-sources.md)   
+## <a name="see-also"></a>参照  
+ [レポート データ ソースを管理する](report-data/manage-report-data-sources.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  

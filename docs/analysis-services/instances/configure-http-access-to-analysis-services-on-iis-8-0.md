@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b3d45b5f1e3dc47aa47a4478cb8408626ad73de3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148147"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420653"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0 で Analysis Services への HTTP アクセスを構成します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "50148147"
   
  IIS と Analysis Services の間のリモート接続では、Analysis Services OLE DB プロバイダー (MSOLAP) を、IIS を実行する Windows サーバーにインストールする必要があります。  
   
-1.  [SQL Server 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=42295)のダウンロード ページに移動します。  
+1.   [SQL Server 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=42295)のダウンロード ページに移動します。  
   
 2.  赤い [ダウンロード] ボタンをクリックします。  
   
@@ -91,12 +91,12 @@ ms.locfileid: "50148147"
 > [!NOTE]  
 >  クライアントがリモートの Analysis Services サーバーに接続できるようにするために、Windows ファイアウォールでポートのブロックを忘れずに解除してください。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
   
-##  <a name="bkmk_copy"></a> 手順 1: MSMDPUMP ファイルを Web サーバー上のフォルダーにコピーする  
+##  <a name="bkmk_copy"></a> 手順 1:MSMDPUMP ファイルの Web サーバー上のフォルダーへのコピー  
  作成した各 HTTP エンドポイントに、独自の MSMDPUMP ファイル セットを用意する必要があります。 この手順では、Analysis Services プログラム フォルダーの MSMDPUMP 実行可能ファイル、構成ファイル、およびリソース フォルダーを、IIS が実行されているコンピューターのファイル システム上に作成する新しい仮想ディレクトリ フォルダーにコピーします。  
   
  ドライブは、NTFS ファイル システム用にフォーマットされている必要があります。 作成するフォルダーへのパスには、スペースを使用することはできません。  
   
-1.  次のファイルをコピー\<ドライブ >: \Program Files\Microsoft SQL Server\\< インスタンス\>\OLAP\bin\isapi: MSMDPUMP です。DLL、MSMDPUMP です。INI、および Resources フォルダー。  
+1.  次のファイルをコピー\<ドライブ >: SQL Server \Program Files\Microsoft\\< インスタンス\>\OLAP\bin\isapi:MSMDPUMP.DLL、MSMDPUMP.INI、および [リソース] フォルダーです。  
   
      ![MSMDPUMP ファイルのフォルダー構造](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "MSMDPUMP ファイルのフォルダー構造")  
   
@@ -104,7 +104,7 @@ ms.locfileid: "50148147"
   
 3.  この新しいフォルダーに、コピーしておいたファイルを貼り付けます。  
   
-4.  Web サーバー上の \inetpub\wwwroot\OLAP フォルダーに、MSMDPUMP.DLL、MSMDPUMP.INI、および Resources フォルダーがあることを確認します。 フォルダー構造は次のようになります。  
+4.  Web サーバーの \inetpub\wwwroot\OLAP フォルダーに以下のものが含まれていることを確認します。MSMDPUMP.DLL、MSMDPUMP.INI、および [リソース] フォルダーです。 フォルダー構造は次のようになります。  
   
     -   \<ドライブ >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
@@ -112,7 +112,7 @@ ms.locfileid: "50148147"
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
-##  <a name="bkmk_appPool"></a> 手順 2: IIS にアプリケーション プールと仮想ディレクトリを作成する  
+##  <a name="bkmk_appPool"></a> 手順 2:IIS へのアプリケーション プールと仮想ディレクトリの作成  
  次に、アプリケーション プールと、ポンプへのエンドポイントを作成します。  
   
 #### <a name="create-an-application-pool"></a>アプリケーション プールの作成  
@@ -148,7 +148,7 @@ ms.locfileid: "50148147"
 > [!NOTE]  
 >  以前のバージョンのこれらの手順には、仮想ディレクトリを作成する手順が含まれていました。 その手順は必要なくなりました。  
   
-##  <a name="bkmk_auth"></a> 手順 3: IIS 認証を構成し、拡張機能を追加する  
+##  <a name="bkmk_auth"></a> 手順 3:IIS 認証の構成と拡張機能の追加  
  この手順では、作成した SSAS 仮想ディレクトリの詳細を進めます。 認証方法を指定してから、スクリプト マップを追加します。 HTTP を使用した Analysis Services でサポートされている認証方法は次のとおりです。  
   
 -   Windows 認証 (Kerberos または NTLM)  
@@ -165,9 +165,9 @@ ms.locfileid: "50148147"
   
  **匿名認証** は、構成が容易で Analysis Services への HTTP 接続を短時間に検証できることから、初期テストによく使用されます。 わずか数回の操作で、一意のユーザー アカウントを ID として割り当て、そのアカウントに Analysis Services の権限を付与し、そのアカウントを使用してクライアント アプリケーション内のデータ アクセスを検証した後、テストの完了時に匿名認証を無効にすることができます。  
   
- 運用環境でユーザーが Windows ユーザー アカウントを持っていない場合でも匿名認証を使用することができますが、「 [匿名認証を有効にする (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)」の記事で示されているベスト プラクティスに従って、ホスト システムに対する権限をロックしてください。 認証は仮想ディレクトリに対して設定し、親 Web サイトには設定しないでください。アカウント アクセスのレベルをさらに下げるためです。  
+ また、運用環境でユーザーが Windows ユーザー アカウントを持っていない場合にも匿名認証を使用できます。ただし、次の記事で示されているベスト プラクティスに従って、ホスト システムに対する権限をロックしてください。[匿名認証 (IIS 7) を有効にする](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)します。 認証は仮想ディレクトリに対して設定し、親 Web サイトには設定しないでください。アカウント アクセスのレベルをさらに下げるためです。  
   
- 匿名認証を有効にした場合、HTTP エンドポイントに接続するすべてのユーザーが匿名ユーザーとして接続できるようになります。 個々のユーザーの接続を監査することも、ユーザー ID を使用してモデルのデータを選択することもできません。 このように、匿名認証を使用すると、モデル デザインからデータ更新、データ アクセスに至るまで、広範囲に影響が及びます。 ただし、ユーザーにまだ Windows ユーザー ログインがない状況では、匿名アカウントを使用せざるを得ない場合があります。  
+ 匿名認証を有効にした場合、HTTP エンドポイントに接続するすべてのユーザーが匿名ユーザーとして接続できるようになります。 個々 のユーザーの接続を監査もユーザー id を使用して、モデルからデータを選択することはできません。 このように、匿名認証を使用すると、モデル デザインからデータ更新、データ アクセスに至るまで、広範囲に影響が及びます。 ただし、ユーザーにまだ Windows ユーザー ログインがない状況では、匿名アカウントを使用せざるを得ない場合があります。  
   
 #### <a name="set-the-authentication-type-and-add-a-script-map"></a>認証の種類の設定とスクリプト マップの追加  
   
@@ -188,7 +188,7 @@ ms.locfileid: "50148147"
   
 5.  Windows 認証または基本認証を使用する場合は、 **匿名認証** を無効にします。 匿名認証が有効な場合、他の認証方法が有効になっていても、IIS はこの認証方法を最初に使用します。  
   
-     匿名認証では、匿名ユーザーに対して確立したユーザー アカウントとしてポンプ (msmdpump.dll) が実行されます。 IIS に接続しているユーザーと Analysis Services に接続しているユーザーは区別されません。 既定では、IIS は IUSR アカウントを使用しますが、ネットワークの権限を持つドメイン ユーザー アカウントに変更することもできます。 IIS と Analysis Services が別々のコンピューターにある場合は、この機能が必要になります。  
+     匿名認証では、匿名ユーザーに対して確立したユーザー アカウントとしてポンプ (msmdpump.dll) が実行されます。 IIS に接続しているユーザーと Analysis Services に接続しているユーザーは区別されません。 既定では、IIS は IUSR アカウントを使用しますが、ネットワークの権限を持つドメイン ユーザー アカウントに変更することもできます。 IIS と Analysis Services が異なるコンピューター上にある場合は、この機能を必要があります。  
   
      匿名認証用に資格情報を構成する方法については、「 [匿名認証](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)」を参照してください。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "50148147"
   
      ![ISAPI 拡張機能の追加確認のスクリーン ショット](../../analysis-services/instances/media/ssas-httpaccess-isapiprompt.png "ISAPI 拡張機能の追加確認のスクリーン ショット")  
   
-##  <a name="bkmk_edit"></a> 手順 4: MSMDPUMP.INI ファイルを編集して対象サーバーを設定する  
+##  <a name="bkmk_edit"></a> 手順 4:MSMDPUMP.INI ファイルの編集による対象サーバーの設定  
  MSMDPUMP.INI ファイルを使用して、MSMDPUMP.DLL が接続する Analysis Services インスタンスを指定します。 これには、ローカルまたはリモートの、既定のインスタンスまたは名前付きのインスタンスとしてインストールされているインスタンスを指定できます。  
   
  C:\inetpub\wwwroot\OLAP フォルダーにある msmdpump.ini ファイルを開いて、このファイルの内容を確認します。 以下のようになっています。  
@@ -227,7 +227,7 @@ ms.locfileid: "50148147"
   
  既定の固定ポートでリッスンするように Analysis Services のインスタンスまたは名前付き構成しているの場合は、サーバー名にポート番号を追加する必要があります (たとえば、 \<ServerName > AW-SRV01:55555\</ServerName >) し、許可する必要があります受信Windows ファイアウォールでそのポートに接続します。  
   
-## <a name="step-5-grant-data-access-permissions"></a>手順 5: データ アクセス権限を付与する  
+## <a name="step-5-grant-data-access-permissions"></a>手順 5:データ アクセス権限の付与  
  前に説明したように、Analysis Services インスタンスの権限を付与する必要があります。 各データベース オブジェクトには特定レベルの権限 (読み取り、または読み取り/書き込み) を付与するロールがあり、各ロールに Windows ユーザー ID で構成されるメンバーが割り当てられます。  
   
  権限を設定するには、SQL Server Management Studio を使用します。 **Database**  |  **Roles** フォルダーにロールを作成して、データベース権限を指定し、Windows ユーザー アカウントまたは Windows グループ アカウントにメンバーを割り当て、特定のオブジェクトに対する読み取り権限または書き込み権限を付与することができます。 モデル データを使用するが更新しないクライアント接続の場合、一般的には、キューブに対する権限は **"読み取り"** で十分です。  
@@ -242,7 +242,7 @@ ms.locfileid: "50148147"
   
  アクセス許可の設定の詳細については、「 [オブジェクトと操作へのアクセスの承認 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)」を参照してください。  
   
-##  <a name="bkmk_test"></a> 手順 6: 構成をテストする  
+##  <a name="bkmk_test"></a> 手順 6:構成のテスト  
  MSMDPUMP の接続文字列構文は、MSMDPUMP.dll ファイルへの URL です。  
   
  Web アプリケーションは、固定ポートでリッスンしているが場合に、サーバー名または IP アドレスにポート番号を追加 (たとえば、`http://my-web-srv01:8080/OLAP/msmdpump.dll`または`http://123.456.789.012:8080/OLAP/msmdpump.dll`します。  
@@ -251,7 +251,7 @@ ms.locfileid: "50148147"
   
  **Internet Explorer を使用した接続テスト**  
   
- このエラーで終了する接続要求を得ることができない多く移動:"へのいずれかの接続を確立できません '\<サーバー名 >'、または分析サービスがサーバーで実行されていません"。  
+ このエラーで終了する接続要求を得ることができない多く移動。"へのいずれかの接続を確立できません '\<サーバー名 >'、または分析サービスがサーバーで実行されていません"。  
   
  エラーに関する詳細情報を取得するには、次の操作を行います。  
   

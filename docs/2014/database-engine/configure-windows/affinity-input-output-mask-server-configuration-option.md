@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - affinity I/O mask option
@@ -16,12 +15,12 @@ ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3a2a4e3c41e98be8f39a39e37aee968532e2d9d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101552"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640093"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask サーバー構成オプション
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 と Windows Server 2003 では、マルチタスク処理を実行するために、プロセス スレッドを異なるプロセッサ間で移動させることがあります。 オペレーティング システムにとっては効率的であっても、この操作で各プロセッサのキャッシュに繰り返しデータが再読み込みされるため、システムの負荷が高くなり、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが低下する場合があります。 このような状況では、特定のスレッドにプロセッサを割り当てることで、プロセッサの再読み込みを回避してパフォーマンスを向上できます。このようなスレッドとプロセッサ間の関連付けを "プロセッサ関係 (processor affinity)" と言います。  
@@ -49,7 +48,7 @@ ms.locfileid: "48101552"
   
  affinity I/O パターンで 1 が設定されているビットは、対応する CPU で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のディスク I/O 操作を実行できることを示します。また、0 が設定されているビットは、対応する CPU に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のディスク I/O 操作のスケジュールを設定できないことを示します。 すべてのビットがゼロに設定されているか、 **affinity I/O mask** が指定されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のディスク I/O は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスレッドを処理できるすべての CPU にスケジュール設定されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** オプションの設定は特殊な操作なので、特に必要な場合にのみこのオプションを使用することをお勧めします。 通常は、Windows 2000 または Windows 2003 の既定の関係 (affinity) で、最適なパフォーマンスが得られます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** オプションの設定は特殊な操作なので、特に必要な場合にのみこのオプションを使用することをお勧めします。 通常は、Windows 2000 または Windows 2003 の既定の関係 (affinity) で、最適なパフォーマンスが得られます。  
   
  **affinity I/O mask** オプションを指定する場合は、 **affinity mask** 構成オプションと共に使用する必要があります。 **affinity I/O mask** スイッチと **affinity mask** オプションの両方で同じ CPU を有効にしないようにしてください。 各 CPU に対応するビットは、次の 3 つの状態のうちのいずれかに設定します。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87a5abc4377007558787595a2d2368ca5e5c5bb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149472"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375364"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>マージ アーティクルのカスタム競合回避モジュールの実装
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] または [COM ベースのカスタム競合回避モジュール](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)を使用して、マージ アーティクルのカスタム競合回避モジュールを実装する方法について説明します。  
@@ -119,11 +118,11 @@ ms.locfileid: "48149472"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>サンプルのカスタム競合回避モジュールの表示  
   
-1.  SQL Server 2000 サンプル ファイルにサンプルが提供されています。 「 **SQL Server 2000 Service Pack 3 用の更新されたサンプル** 」から [sql2000samples.cab](http://www.microsoft.com/download/details.aspx?id=8560)をダウンロードします。 これによって、合計 6.9 MB の 8 つのファイルがダウンロードされます。  
+1.  SQL Server 2000 サンプル ファイルにサンプルが提供されています。 「 **SQL Server 2000 Service Pack 3 用の更新されたサンプル** 」から [sql2000samples.cab](https://www.microsoft.com/download/details.aspx?id=8560)をダウンロードします。 これによって、合計 6.9 MB の 8 つのファイルがダウンロードされます。  
   
 2.  ダウンロードされた圧縮済み .cab ファイルからファイルを抽出します。  
   
-3.  **setup.exe**を実行します。  
+3.   **setup.exe**を実行します。  
   
     > [!NOTE]  
     >  インストール オプションを選択する場合は、 **レプリケーション** サンプルをインストールするだけで済みます。 (既定のインストール パスは**C:\Program Files (x86) \Microsoft SQL Server 2000 Samples\1033\\**)  
@@ -135,7 +134,7 @@ ms.locfileid: "48149472"
     > [!NOTE]  
     >  サンプルの com 競合回避モジュールが (既定で) **C:\Program Files (x86)\Microsoft SQL Server 2000 Samples\1033\sqlrepl\resolver\subspres** フォルダーにインストールします。  
   
-6.  **subspres** フォルダーで、すべてのソース ファイルで **#include sqlres.h** を検出し、 **#import "replrec.dll" no_namespace, raw_interfaces_only**で置き換えます。  
+6.   **subspres** フォルダーで、すべてのソース ファイルで **#include sqlres.h** を検出し、 **#import "replrec.dll" no_namespace, raw_interfaces_only**で置き換えます。  
   
 ## <a name="see-also"></a>参照  
  [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

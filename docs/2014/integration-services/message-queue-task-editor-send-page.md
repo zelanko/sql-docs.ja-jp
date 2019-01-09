@@ -15,15 +15,15 @@ ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97abb785026fa4709e08526e8fb033e97120c97f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaadce1425de4468056f0df5e3d7106432ca804
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095942"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516096"
 ---
 # <a name="message-queue-task-editor-send-page"></a>[メッセージ キュー タスク エディター] ([送信] ページ)
-  **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[送信]** ページを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージからメッセージを送信するメッセージ キュー タスクを構成できます。  
+   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[送信]** ページを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージからメッセージを送信するメッセージ キュー タスクを構成できます。  
   
  このタスクの詳細については、「 [Message Queue Task](control-flow/message-queue-task.md)」を参照してください。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48095942"
  **[VariableMessage]**  
  変数名を入力します。または、参照ボタン ( **[...]** ) をクリックし、変数を指定します。 変数はコンマで区切って指定します。  
   
- **関連項目 :** 「変数の選択」  
+ **関連項目:**[変数の選択]  
   
 ### <a name="messagetype--string-message"></a>[MessageType] = [文字列メッセージ]  
  **[StringMessage]**  
@@ -67,8 +67,8 @@ ms.locfileid: "48095942"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [メッセージ キュー タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [メッセージ キュー タスク エディター&#40;ページが表示されます。&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [[メッセージ キュー タスク エディター] ([全般] ページ)](general-page-of-integration-services-designers-options.md)   
+ [メッセージ キュー タスク エディター ([受信] ページ)](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [[式] ページ](expressions/expressions-page.md)  
   
   

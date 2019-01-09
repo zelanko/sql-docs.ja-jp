@@ -179,11 +179,11 @@ items:
         href: greater-than-mdx.md
       - name: '>= (以上)'
         href: greater-than-or-equal-to-mdx.md
-      - name: 'AND'
+      - name: AND
         href: and-mdx.md
       - name: IS
         href: is-mdx.md
-      - name: 'NOT'
+      - name: NOT
         href: not-mdx.md
       - name: OR
         href: or-mdx.md

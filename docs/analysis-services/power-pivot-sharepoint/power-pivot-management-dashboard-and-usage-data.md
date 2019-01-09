@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099933"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419703"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理ダッシュボードと使用状況データ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "50099933"
   
 5.  テキスト エディターで .odc ファイルを開きます。  
   
-6.  **\<Odc:ConnectionString >** 要素、削除、行の最後までスクロール**埋め込みデータ = False**、し、削除**Edit Mode = 0**。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
+6.   **\<Odc:ConnectionString >** 要素、削除、行の最後までスクロール**埋め込みデータ = False**、し、削除**Edit Mode = 0**。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
   
 7.  このファイルを保存します。 残りの手順は、使用している [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] と Excel のバージョンによって異なります。  
   
@@ -107,13 +107,13 @@ ms.locfileid: "50099933"
   
     4.  .ODC ファイルが表示されている場合はそのファイルをクリックします。 .ODC ファイルが表示されない場合は、 **[参照]** をクリックし、ファイル パスで .odc ファイルを指定します。  
   
-    5.  **[開く]** をクリックします。  
+    5.   **[開く]** をクリックします。  
   
     6.  **[接続のテスト]** をクリックして、接続に成功したことを確認します。  
   
     7.  接続の名前を指定して、 **[次へ]** をクリックします。  
   
-    8.  [MDX クエリの指定] で、 **[デザイン]** をクリックして MDX クエリ デザイナーを開き、操作するデータを収集します。 **Edit Mode プロパティ名の形式が正しくありません。** というエラー メッセージが表示される場合は、.ODC ファイルを編集していることを確認してください。  
+    8.  MDX クエリの指定 をクリックして**デザイン**を使用するデータを収集する MDX クエリ デザイナーを開く**エラー メッセージが表示された場合**「Edit Mode のプロパティ名形式が正しくありません」ことを確認します。編集します。ODC ファイルです。  
   
     9. **[OK]** をクリックし、 **[完了]** をクリックします。  
   

@@ -1,6 +1,6 @@
 ---
-title: 'Analytics Platform System: スケール アウト データ ウェアハウスの新機能新機能'
-description: 新機能 Microsoft® Analytics Platform System、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト オンプレミス アプライアンスの新機能を参照してください。
+title: Analytics Platform System のスケール アウト データ ウェアハウスの新機能新機能
+description: Microsoft Analytics Platform System の新機能については、スケール アウト オンプレミス アプライアンス MPP SQL Server 並列データ ウェアハウスをホストします。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,25 +9,41 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ffad259ca0de75ad2eb4b7fc6f51614f1c4dea9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700360"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626356"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System、スケール アウトの MPP データ ウェアハウスの新機能新機能
-新機能については最新のアプライアンスの更新プログラム Microsoft® Analytics Platform System (APS) を参照してください。 アクセス ポイントは、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト オンプレミス アプライアンスです。 
+新機能については最新のアプライアンスの更新プログラム Microsoft Analytics Platform System (APS) を参照してください。 アクセス ポイントは、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト オンプレミス アプライアンスです。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.3"></a>
+## <a name="aps-cu73"></a>APS CU7.3
+リリース日 - 2018 の年 12 月
+
+### <a name="common-subexpression-elimination"></a>共通部分式の削除
+APS CU7.3 では、SQL クエリ オプティマイザーの共通部分式の削除によるクエリ パフォーマンスが向上します。 改善には、2 つの方法でクエリが向上します。 最初の特典を特定し、削除などの機能は、SQL のコンパイル時間を短縮式を使用します。 2 番目とさらに重要な利点は、これら冗長部分式のデータ移動操作クエリが高速化のための実行時間は除外されます。 この機能の詳細な説明を参照して[ここ](common-sub-expression-elimination.md)します。
+
+### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Informatica の場合は 10.2.0 APS Informatica コネクタの公開
+APS Informatica 10.2.0 のバージョンで動作するため、Informatica コネクタの新しいバージョンをリリースしました。 新しいコネクタをダウンロードできます[ダウンロード サイト](https://www.microsoft.com/download/details.aspx?id=57472)します。
+
+#### <a name="supported-versions"></a>Supported Versions
+| APS バージョン | Informatica PowerCenter | Driver |
+|:---|:---|:---|
+| APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
+| APS 2016 およびそれ以降 | 10.2.0 | SQL Server Native Client 11.x |
+
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2
 リリース日 - 2018 の年 10 月
 
 ### <a name="support-for-tls-12"></a>TLS 1.2 のサポート
-APS CU7.2 では、TLS 1.2 をサポートします。 クライアント マシン AP と AP にイントラ ノード通信できるようになりましたに設定する TLS1.2 経由でのみ通信します。 SSDT、SSIS、および TLS 1.2 経由でのみ通信するために設定されているクライアント コンピューターにインストールされている Dwloader などのツールは、TLS 1.2 を使用して AP に接続できます。 既定では、AP は旧バージョンとの互換性のため TLS (1.0、1.1、1.2) のすべてのバージョンをサポートします。 APS アプライアンスを設定する場合は、stictly に TLS 1.2 を使用して、レジストリ設定を変更することによって行うことができます。 
+APS CU7.2 では、TLS 1.2 をサポートします。 クライアント マシン AP と AP にイントラ ノード通信できるようになりましたに設定する TLS1.2 経由でのみ通信します。 SSDT、SSIS、および TLS 1.2 経由でのみ通信するために設定されているクライアント コンピューターにインストールされている Dwloader などのツールは、TLS 1.2 を使用して AP に接続できます。 既定では、AP は旧バージョンとの互換性のため TLS (1.0、1.1、1.2) のすべてのバージョンをサポートします。 厳密に TLS 1.2 を使用する、APS アプライアンスを設定する場合は、レジストリ設定を変更することでこれを実行できます。 
 
-参照してください[AP で TLS1.2 を構成する](configure-tls12-aps.md)詳細についてはします。
+詳細については、次を参照してください。 [AP で TLS1.2 を構成する](configure-tls12-aps.md)します。
 
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>PolyBase の Hadoop 暗号化ゾーンをサポートします。
 PolyBase は Hadoop 暗号化ゾーンを通信できるようになりました。 必要なアクセス ポイントの構成の変更を参照してください。 [Hadoop セキュリティの構成](polybase-configure-hadoop-security.md#encryptionzone)します。
@@ -85,7 +101,7 @@ SMO を使用する代わりにメタデータの呼び出しのカタログ オ
 ### <a name="bug-fixes"></a>バグの修正
 APS CU7.1 で SQL Server 2016 SP2 CU2 にアップグレードします。 アップグレードでは、以下に示すいくつかの問題を修正します。
 
-| [タイトル] | 説明 |
+| タイトル | 説明 |
 |:---|:---|
 | **組ムーバー デッドロックの可能性** |アップグレードでは、分散トランザクション、およびタプル ムーバー バック グラウンド スレッドでデッドロックの長年にわたる可能性を修正します。 CU7.1 をインストールすると、TF634 SQL Server スタートアップ パラメーターまたはグローバル トレース フラグとして組ムーバーを停止するために使用するお客様に安全に削除できます。 | 
 | **特定の遅延/リード クエリが失敗しました。** |このアップグレードでは、入れ子になった lag/リード関数はエラーを使用した CCI テーブルで特定のクエリは固定されます。 | 
@@ -101,9 +117,9 @@ APS 2016 を AU7 にアップグレードしてください。 以下は、AP AU
 APS AU7 は作成し、既定では、自動的に統計を更新します。 統計情報の設定を更新するには、管理者がの新しい機能のスイッチのメニュー項目を使用できます、 [Configuration Manager](appliance-configuration.md#CMTasks)します。 [機能スイッチ](appliance-feature-switch.md)られた、自動更新、および統計の非同期更新の動作を制御します。 統計情報の設定を更新することも、 [ALTER DATABASE (並列データ ウェアハウス)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)ステートメント。
 
 ### <a name="t-sql"></a>T-SQL
-選択@varがサポートされています。 詳細については、[ローカル変数を選択します] を参照してください (/sql/t-sql/language-elements/select-local-variable-transact-sql) 
+選択@varがサポートされています。 詳細については、次を参照してください。[ローカル変数を選択します。](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-ハッシュと ORDER GROUP クエリ ヒントはサポートされています。 詳細については、[Hints(Transact-SQL) - クエリ] を参照してください (/sql/t-sql/クエリ/ヒント-transact-sql クエリ)
+ハッシュと ORDER GROUP クエリ ヒントはサポートされています。 詳細については、次を参照してください[Hints(Transact-SQL) - クエリ。 ](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>機能スイッチ
 APS AU7 で機能スイッチが導入されています[Configuration Manager](launch-the-configuration-manager.md)します。 AutoStatsEnabled と DmsProcessStopMessageTimeoutInSeconds が管理者によって変更できる構成可能なオプションではようになりました。

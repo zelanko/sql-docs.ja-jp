@@ -1,5 +1,5 @@
 ---
-title: SQL Server インスタンス (Machine Learning サービス) で R と Python のコンポーネントのアップグレード |Microsoft Docs
+title: R と Python コンポーネント - SQL Server Machine Learning Services のアップグレードします。
 description: R と SQL Server 2016 サービスまたは SQL Server 2017 Machine Learning Services sqlbindr.exe を使用して Machine Learning Server にバインドするでの Python をアップグレードします。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897f83e7272a47428d696802adf79ff816805486
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078892"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645451"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server インスタンス内のマシン ラーニング (R および Python) コンポーネントをアップグレードします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +28,7 @@ SQL Server で R と Python の統合には、オープン ソースと Microsof
 
 と共に、サービス モデルでのスイッチは、コンポーネントを更新します。 代わりに、 [SQL Server 製品のライフ サイクル](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017)で[SQL Server の累積的更新プログラム](https://support.microsoft.com/help/4047329/sql-server-2017-build-versions)、サービスの更新が今すぐに準拠している、[コンピューター (&)、Microsoft R Server のサポート タイムラインLearning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)上、[モダン ライフ サイクル](https://support.microsoft.com/help/30881/modern-lifecycle-policy)します。
 
-コンポーネントのバージョンおよび最新のサービスを除くバインドは変わりません、インストールの基礎: R と Python の統合は、データベース エンジンのインスタンスの一部ではまだ (しない追加コスト バインドに関連付けられた)、ライセンスが変更されていないと SQLサーバーのサポート ポリシーがデータベース エンジンの保持されたままです。 この記事の残りの部分では、バインド メカニズムと SQL Server のバージョンごとにそのしくみについて説明します。
+コンポーネントのバージョンおよび最新のサービスを除くバインドでは、インストールの基礎は変更されません。R と Python の統合は、データベース エンジンのインスタンスの一部ではまだ (しない追加コスト バインドに関連付けられた)、ライセンスが変更されていないし、データベース エンジンの SQL Server サポート ポリシーを引き続き保持します。 この記事の残りの部分では、バインド メカニズムと SQL Server のバージョンごとにそのしくみについて説明します。
 
 > [!NOTE]
 > SQL Server インスタンスにバインドされているのみ (データベース) のインスタンスにバインドが適用されます。 バインディングでは、(スタンドアロン) のインストールに関係ありません。
@@ -109,7 +109,7 @@ Microsoft Machine Learning のセットアップでは、既存の機能や SQL 
 
 1. 既存のバージョンが置き換えするよりも低いことを確認するには、基本の R と RevoScaleR パッケージのバージョンを確認します。 SQL Server 2016 R Services での R 基本パッケージ 3.2.2、RevoScaleR 8.0.3 します。
 
-    ```SQL
+    ```sql
     EXECUTE sp_execute_external_script
     @language=N'R'
     ,@script = N'str(OutputDataSet);
@@ -139,7 +139,7 @@ Microsoft Machine Learning のセットアップでは、既存の機能や SQL 
 
    右側には、インスタンス名の横にあるチェック ボックスを選択します。 インスタンスが表示されない場合、互換性のない組み合わせがあります。 インスタンスを選択しない場合は、Machine Learning Server の新規スタンドアロン インストールが作成され、SQL Server ライブラリは変更されません。 存在しない場合はインスタンスを選択することはできません[SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)します。 
 
-    ![Microsoft Machine Learning Server セットアップ ウィザード](media/mls-931-installer-mssql13.png)
+    ![インストール手順を構成します。](media/mls-931-installer-mssql13.png)
 
 1. **使用許諾契約書**] ページで、[**これらの条項に同意**Machine Learning Server のライセンス条項に同意します。 
 
@@ -151,7 +151,7 @@ Microsoft Machine Learning のセットアップでは、既存の機能や SQL 
 
 インストール プロセス中には、SQL Server で使用される任意の R または Python ライブラリに置換し、新しいコンポーネントを使用するスタート パッドが更新されます。 その結果、インスタンスは、既定の R_SERVICES フォルダーにライブラリを使用した場合、は、アップグレード後にこれらのライブラリが削除され、新しい場所でライブラリを使用するスタート パッド サービスのプロパティが変更されます。
 
-バインディングがこれらのフォルダーの内容に影響します。 C:\Program files \microsoft SQL Server\MSSQL13 します。MSSQLSERVER\R_SERVICES\library は、C:\Program Files\Microsoft\ML Server\R_SERVER の内容に置き換えられます。 2 つ目のフォルダーとその内容は、Microsoft Machine Learning Server セットアップによって作成されます。 
+バインディングでは、これらのフォルダーの内容に影響します。C:\Program files \microsoft SQL Server\MSSQL13 します。MSSQLSERVER\R_SERVICES\library は、C:\Program Files\Microsoft\ML Server\R_SERVER の内容に置き換えられます。 2 つ目のフォルダーとその内容は、Microsoft Machine Learning Server セットアップによって作成されます。 
 
 アップグレードに失敗した場合、 [SqlBindR エラーコード](#sqlbindr-error-codes)詳細についてはします。
 
@@ -159,7 +159,7 @@ Microsoft Machine Learning のセットアップでは、既存の機能や SQL 
 
 新しいバージョンがあることを確認するには、R と RevoScaleR のバージョンを再確認します。 パッケージ情報を取得するのにには、データベース エンジンのインスタンスでの R パッケージを使用した分散 R コンソールを使用します。
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
 @language=N'R'
 ,@script = N'str(OutputDataSet);
@@ -226,13 +226,13 @@ Microsoft Machine Learning Server を実行するという SqlBindR.exe コマ�
 
 SQL Server セットアップによって確立されている R と Python コンポーネントの最初のインストールには、バインド インスタンスを復元できます。 SQL Server のサービスに戻すことに 3 つの部分があります。
 
-+ [手順 1: Microsoft Machine Learning Server からバインドを解除します。](#step-1-unbind)
-+ [手順 2: インスタンスを元の状態に復元します。](#step-2-restore)
-+ [手順 3: インストールに追加したすべてのパッケージを再インストールします。](#step-3-reinstall-packages)
++ [ステップ 1: Microsoft Machine Learning Server からバインド解除します。](#step-1-unbind)
++ [手順 2:インスタンスを元の状態に復元します。](#step-2-restore)
++ [手順 3:インストールに追加したすべてのパッケージを再インストールします。](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>手順 1: バインド解除
+### <a name="step-1-unbind"></a>手順 1:[バインドの解除]
 
 2 つがあるバインディングをロールバックするためのオプション: 再度セットアップを再実行または SqlBindR コマンド ライン ユーティリティを使用します。
 
@@ -257,7 +257,7 @@ SQL Server セットアップによって確立されている R と Python コ�
 
 <a name="step-2-restore"></a> 
 
-###  <a name="step-2-repair-the-sql-server-instance"></a>手順 2: SQL Server インスタンスを修復します。
+###  <a name="step-2-repair-the-sql-server-instance"></a>手順 2:SQL Server インスタンスを修復します。
 
 R と Python の機能を持つデータベース エンジンのインスタンスを修復する SQL Server セットアップを実行します。 既存の更新プログラムは保持されますが、この手順でそれらのパッチが適用されます、SQL Server の R と Python のパッケージの更新をサービスが実行されなかった場合。
 
@@ -265,7 +265,7 @@ R と Python の機能を持つデータベース エンジンのインスタン
 
 <a name="step-3-reinstall-packages"></a> 
 
-### <a name="step-3-add-any-third-party-packages"></a>手順 3: すべてのサード パーティ製パッケージを追加します。
+### <a name="step-3-add-any-third-party-packages"></a>手順 3:すべてのサード パーティ製パッケージを追加します。
 
 パッケージ ライブラリに他のオープン ソースまたはサードパーティ製のパッケージを追加した可能性があります。 スイッチの既定のパッケージ ライブラリの場所を逆に、バインドすることがあるために、R と Python を使用して今すぐいるライブラリにパッケージを再インストールする必要があります。 詳細については、次を参照してください。[パッケージの既定](installing-and-managing-r-packages.md)、[新しい R パッケージをインストール](install-additional-r-packages-on-sql-server.md)、および[新しい Python パッケージをインストール](../python/install-additional-python-packages-on-sql-server.md)します。
 
@@ -283,7 +283,7 @@ R と Python の機能を持つデータベース エンジンのインスタン
 |*bind*| 指定された SQL データベース インスタンスを R Server の最新バージョンにアップグレードし、インスタンスが R Server の今後のアップグレードを自動的に取得するようにします|
 |*unbind*|R Server の最新バージョンを指定した SQL データベース インスタンスからアンインストールし、R Server の今後のアップグレードがインスタンスに影響を与えないようにします|
 
-<a name="sqlbinder-error-codes"><a/>
+<a name="sqlbindr-error-codes"><a/>
 
 ## <a name="binding-errors"></a>バインド エラー
 
@@ -328,7 +328,7 @@ Microsoft Machine Learning Server 9.2.1 および 9.3 には、この問題は�
 ### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>バインドまたはバインド解除のまま複数の一時フォルダー
 
 場合があります、バインディングおよびバインド解除操作の一時フォルダーをクリーンアップに失敗します。
-このような名前を持つフォルダーを検索する場合は削除できますインストールが完了したら: R_SERVICES_<guid>
+このような名前を持つフォルダーを検索する場合、インストールが完了した後に削除できます。R_SERVICES_<guid>
 
 > [!NOTE]
 > インストールが完了するまで待機することを確認します。 1 つのバージョンに関連付けられている R ライブラリを削除し、新しい R ライブラリを追加する長い時間がかかることができます。 操作が完了したら、一時フォルダーは削除されます。

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], making changes
@@ -22,12 +21,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ea125f631c277724abd99f31c9c3d2e5f478e6df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffde1cb7b803c82896b894aa05cb0679459297c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111322"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811524"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>変更の追跡のしくみ (SQL Server)
   変更の追跡を使用するアプリケーションは、追跡した変更を取得し、その変更を別のデータ ストアに適用して、ソース データベースを更新できる必要があります。 このトピックでは、これらのタスクの実行方法について説明します。また、フェールオーバーが発生してデータベースをバックアップから復元する必要がある場合に、変更の追跡が果たす役割についても説明します。  
@@ -45,7 +44,7 @@ ms.locfileid: "48111322"
   
 -   呼び出し元のクライアントは、変更を取得し、最終同期バージョン以前のすべての変更を認識しています。  
   
--   そのため、CHANGETABLE(CHANGES …) は、最終同期バージョンより後で発生したすべての変更を返します。  
+-   そのため、CHANGETABLE(CHANGES …) からは、最終同期バージョンより後で発生したすべての変更が返されます。  
   
      次の図は、CHANGETABLE(CHANGES …) を使用して変更を取得する方法を示しています。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48111322"
 ```  
   
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>変更追跡関数を使用した変更の取得  
- テーブルの変更された行およびその変更に関する情報を取得するには、CHANGETABLE(CHANGES…) を使用します。 たとえば、次のクエリは、 `SalesLT.Product` テーブルの変更を取得します。  
+ テーブルの変更された行およびその変更に関する情報を取得するには、CHANGETABLE(CHANGES…) を使用します。たとえば、次のクエリは、 `SalesLT.Product` テーブルの変更を取得します。  
   
 ```tsql  
 SELECT  
@@ -131,7 +130,7 @@ ON
 ### <a name="validating-the-last-synchronized-version"></a>最終同期バージョンの検証  
  変更に関する情報を保持する期間には制限があります。 期間の長さは、ALTER DATABASE の一部として指定できる CHANGE_RETENTION パラメーターで制御されます。  
   
- CHANGE_RETENTION に指定された期間によって、すべてのアプリケーションで、データベースから変更を要求する必要がある頻度が決まることに注意してください。 *last_synchronization_version* の値がテーブルの有効な最小同期バージョンより古い場合、そのアプリケーションでは有効な変更の列挙を実行できません。 これは、変更情報の一部がクリーンアップされている場合があるためです。 アプリケーションで CHANGETABLE(CHANGES …) を使用して変更を取得する前に、CHANGETABLE(CHANGES …) に渡す予定の *last_synchronization_version* の値を検証する必要があります。 *last_synchronization_version* の値が有効ではない場合は、そのアプリケーションのすべてのデータを再初期化する必要があります。  
+ CHANGE_RETENTION に指定された期間によって、すべてのアプリケーションで、データベースから変更を要求する必要がある頻度が決まることに注意してください。 *last_synchronization_version* の値がテーブルの有効な最小同期バージョンより古い場合、そのアプリケーションでは有効な変更の列挙を実行できません。 これは、変更情報の一部がクリーンアップされている場合があるためです。 アプリケーションで CHANGETABLE(CHANGES …) を使用して変更を取得する前に、CHANGETABLE(CHANGES …) に渡す予定の *last_synchronization_version* の値を検証する必要があります。*last_synchronization_version* の値が有効ではない場合は、そのアプリケーションのすべてのデータを再初期化する必要があります。  
   
  次の例では、 `last_synchronization_version` の値の有効性をテーブルごとに検証する方法を示します。  
   
@@ -202,9 +201,9 @@ ON
   
 2.  CHANGE_TRACKING_CURRENT_VERSION() を使用して、次回の変更の取得の際に使用できるバージョンを取得します。  
   
-3.  CHANGETABLE(CHANGES …) を使用して Sales テーブルの変更を取得します。  
+3.  CHANGETABLE(CHANGES ...) を使用して Sales テーブルの変更を取得します。  
   
-4.  CHANGETABLE(CHANGES  ) を使用して SalesOrders テーブルの変更を取得します。  
+4.  CHANGETABLE(CHANGES ...) を使用して SalesOrders テーブルの変更を取得します。  
   
  データベースで実行される次の 2 つのプロセスが、上記の手順で返される結果に影響する場合があります。  
   
@@ -233,7 +232,7 @@ ON
   
 4.  CHANGETABLE(CHANGES …) を使用して Sales テーブルの変更を取得します。  
   
-5.  CHANGETABLE(CHANGES  ) を使用して SalesOrders テーブルの変更を取得します。  
+5.  CHANGETABLE(CHANGES ...) を使用して SalesOrders テーブルの変更を取得します。  
   
 6.  トランザクションをコミットします。  
   
@@ -241,7 +240,7 @@ ON
   
 -   最終同期バージョンの検証後にクリーンアップが実行された場合でも、クリーンアップで実行された削除操作がトランザクション内からは認識されないため、CHANGETABLE(CHANGES ...) から有効な結果が返されます。  
   
--   次回の同期バージョンの取得後に Sales テーブルまたは SalesOrders テーブルに対して行われた変更は認識されません。そのため、CHANGETABLE(CHANGES  ) の呼び出しで、CHANGE_TRACKING_CURRENT_VERSION() によって返されたバージョンより後の変更は返されません。 また、Sales テーブルと SalesOrders テーブルの間の一貫性も保持されます。それぞれの CHANGETABLE(CHANGES …) の呼び出しの間にコミットされたトランザクションが認識されないためです。  
+-   次回の同期バージョンの取得後に Sales テーブルまたは SalesOrders テーブルに対して行われた変更は認識されません。そのため、CHANGETABLE(CHANGES ...) の呼び出しで、CHANGE_TRACKING_CURRENT_VERSION() によって返されたバージョンより後の変更は返されません。 また、Sales テーブルと SalesOrders テーブルの間の一貫性も保持されます。それぞれの CHANGETABLE(CHANGES …) の呼び出しの間にコミットされたトランザクションが認識されないためです。  
   
  次の例では、データベースに対してスナップショット分離を有効にする方法を示します。  
   
@@ -301,7 +300,7 @@ COMMIT TRAN
   
  同期アプリケーションでこれらの操作を実行するには、次の関数を使用できます。  
   
--   CHANGETABLE(VERSION ...)  
+-   CHANGETABLE(VERSION...)  
   
      アプリケーションで変更を加える際にこの関数を使用すると、競合がないかどうかを確認できます。 この関数は、変更追跡対象テーブルの指定された行に関する最新の変更追跡情報を取得します。 この変更追跡情報には、最後に変更された行のバージョンが含まれています。 この情報をアプリケーションで使用することによって、アプリケーションの前回の同期後に行が変更されたかどうかを確認できます。  
   
@@ -312,7 +311,7 @@ COMMIT TRAN
 ### <a name="checking-for-conflicts"></a>競合の確認  
  双方向同期のシナリオでは、前回変更を取得してから行が更新されていないかどうかをクライアント アプリケーションで確認する必要があります。  
   
- 次の例は、CHANGETABLE(VERSION ...) 関数を使用して最も効率的に (別のクエリを使用せずに) 競合を確認する方法を示しています。 この例では、 `CHANGETABLE(VERSION …)` が、 `SYS_CHANGE_VERSION` で指定される行の `@product id`を判別します。 `CHANGETABLE(CHANGES …)` でも同じ情報を取得できますが、効率が下がります。 行の `SYS_CHANGE_VERSION` の値が `@last_sync_version`の値より大きい場合は競合があります。 競合がある場合、行は更新されません。 `ISNULL()` の確認が必要なのは、行の変更情報がない場合もあるためです。 変更の追跡を有効にしてからまだ行が更新されていない場合や、変更情報がクリーンアップされてからまだ行が更新されていない場合は、変更情報は存在しません。  
+ 次の例は、CHANGETABLE(VERSION ...) 関数を使用して最も効率的に (別のクエリを使用せずに) 競合を確認する方法を示しています。 この例では、 `CHANGETABLE(VERSION ...)` が、 `SYS_CHANGE_VERSION` で指定される行の `@product id`を判別します。 `CHANGETABLE(CHANGES ...)` でも同じ情報を取得できますが、効率が下がります。 行の `SYS_CHANGE_VERSION` の値が `@last_sync_version`の値より大きい場合は競合があります。 競合がある場合、行は更新されません。 `ISNULL()` の確認が必要なのは、行の変更情報がない場合もあるためです。 変更の追跡を有効にしてからまだ行が更新されていない場合や、変更情報がクリーンアップされてからまだ行が更新されていない場合は、変更情報は存在しません。  
   
 ```tsql  
 -- Assumption: @last_sync_version has been validated.  
@@ -356,7 +355,7 @@ END
 ```  
   
 ### <a name="setting-context-information"></a>コンテキスト情報の設定  
- WITH CHANGE_TRACKING_CONTEXT 句を使用すると、アプリケーションで変更情報と一緒にコンテキスト情報を格納できます。 格納した情報は、CHANGETABLE(CHANGES  ) によって返される SYS_CHANGE_CONTEXT 列から取得できます。  
+ WITH CHANGE_TRACKING_CONTEXT 句を使用すると、アプリケーションで変更情報と一緒にコンテキスト情報を格納できます。 格納した情報は、CHANGETABLE(CHANGES ...) によって返される SYS_CHANGE_CONTEXT 列から取得できます。  
   
  コンテキスト情報は通常、変更のソースを識別するために使用されます。 変更のソースを識別できれば、その情報をデータ ストアで使用して、再び同期される際に変更が取得されないようにすることができます。  
   
@@ -390,9 +389,9 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 BEGIN TRAN  
     -- Verify that last_sync_version is valid.  
     IF (@last_sync_version <  
-CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID(‘SalesLT.Product’)))  
+CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID('SalesLT.Product')))  
     BEGIN  
-       RAISERROR (N’Last_sync_version too old’, 16, -1);  
+       RAISERROR (N'Last_sync_version too old', 16, -1);  
     END  
     ELSE  
     BEGIN  

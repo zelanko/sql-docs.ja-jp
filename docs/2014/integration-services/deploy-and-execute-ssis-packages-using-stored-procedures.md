@@ -11,25 +11,25 @@ ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 699c6c2dad976cc070609b3c652b5abcfe2d7577
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aee74a2b0bd632e2efcb780a52f1b05f1949669
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094144"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210941"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>ストアド プロシージャを使用した SSIS パッケージの配置と実行
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを、プロジェクト配置モデルを使用するように構成すると、[!INCLUDE[ssIS](../includes/ssis-md.md)] カタログのストアド プロシージャを使用して、プロジェクトの配置とパッケージの実行を行うことができます。 プロジェクト配置モデルの詳細については、「[プロジェクトとパッケージの展開](packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
  また、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用して、プロジェクトの配置とパッケージの実行を行うこともできます。 詳細については、「 **関連項目** 」セクションのトピックを参照してください。  
   
-> [!TIP]  
+> [!TIP]
 >  次の手順を実行することにより、catalog.deploy_project を除き、次の手順に示されるストアド プロシージャの Transact-SQL ステートメントを簡単に生成できます。  
->   
+> 
 >  1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で、オブジェクト エクスプローラーの **[Integration Services カタログ]** ノードを展開し、実行するパッケージに移動します。  
 > 2.  パッケージを右クリックし、**[実行]** をクリックします。  
 > 3.  必要に応じて、パラメーター値、接続マネージャー プロパティ、 **[詳細設定]** タブのオプション (ログ記録レベルなど) を設定します。  
->   
+> 
 >      詳細については、「[SSIS サーバーでのパッケージ実行のログ記録を有効にする](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md)」を参照してください。  
 > 4.  **[OK]** をクリックしてパッケージを実行する前に、 **[スクリプト]** をクリックします。 Transact-SQL が [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のクエリ エディター ウィンドウに表示されます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48094144"
   
      [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト配置ファイルのバイナリ コンテンツを取得するには、*@project_stream* パラメーターの場合、SELECT ステートメントと、OPENROWSET 関数および BULK 行セット プロバイダーを使用します。 BULK 行セット プロバイダーを使用すると、ファイルからデータを読み取ることができます。 BULK 行セット プロバイダーの SINGLE_BLOB 引数は、データ ファイルの内容を、varbinary(max) 型の単一行、単一列の行セットとして返します。 詳細については、「[OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
   
-     次の例では、SSISPackages_ProjectDeployment プロジェクトを、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーの SSIS パッケージ フォルダーに配置します。 バイナリ データは、プロジェクト ファイル (SSISPackage_ProjectDeployment.ispac) から読み取られ、varbinary(max) 型の *@ProjectBinary* パラメーターに格納されます。 *@ProjectBinary* パラメーター値は、*@project_stream* パラメーターに割り当てられます。  
+     次の例では、SSISPackages_ProjectDeployment プロジェクトを、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーの SSIS パッケージ フォルダーに配置します。 バイナリ データは、プロジェクト ファイル (SSISPackage_ProjectDeployment.ispac) から読み取られ、varbinary(max) 型の *@ProjectBinary* パラメーターに格納されます。 *@ProjectBinary* パラメーター値は、*@project_stream* パラメーターに割り当てられます。  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  
@@ -100,7 +100,7 @@ ms.locfileid: "48094144"
   
      **[リンク サーバーのプロパティ]** ダイアログ ボックスの **[サーバー オプション]** ページで、**[RPC]** および **[RPC 出力]** を **[True]** に設定します。 そして、 **[分散トランザクションのプロモーションを RPC に対して有効化]** を **[False]** に設定します。  
   
--   オブジェクト エクスプローラーの **[リンク サーバー]** にある **[プロバイダー]** ノードを展開し、プロバイダーを右クリックして **[プロパティ]** をクリックすることで、リンク サーバーに対して選択したプロバイダーの動的パラメーターを有効にします。 **[動的パラメーター]** の横にある **[有効化]** を選択します。  
+-   オブジェクト エクスプローラーの **[リンク サーバー]** にある **[プロバイダー]** ノードを展開し、プロバイダーを右クリックして **[プロパティ]** をクリックすることで、リンク サーバーに対して選択したプロバイダーの動的パラメーターを有効にします。  **[動的パラメーター]** の横にある **[有効化]** を選択します。  
   
 -   分散トランザクション コーディネーター (DTC) が両方のサーバーで起動していることを確認します。  
   
@@ -124,8 +124,8 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [Integration Services サーバーへのプロジェクトを配置します。](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
- [SQL Server Data Tools でパッケージを実行します。](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
+ [Integration Services サーバーへのプロジェクトの配置](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
+ [SQL Server Data Tools でのパッケージの実行](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
  [SQL Server Management Studio を使用した SSIS サーバーでのパッケージの実行](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
   

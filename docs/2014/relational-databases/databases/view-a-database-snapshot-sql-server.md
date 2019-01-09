@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], viewing
@@ -15,12 +14,12 @@ ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb7cb313ed104278eabecfbb83a76334838d3ece
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b8648b9166ffa192ca21233ab6add38260a7dea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123842"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811554"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>データベース スナップショットの表示 (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]データベース スナップショットを表示する方法について説明します。  
@@ -41,7 +40,7 @@ ms.locfileid: "48123842"
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** を展開します。  
+2.   **[データベース]** を展開します。  
   
 3.  **[データベース スナップショット]** を展開し、表示するスナップショットを選択します。  
   
@@ -63,6 +62,6 @@ ms.locfileid: "48123842"
 -   [データベース スナップショットの削除 &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
- [データベース スナップショット &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
+ [Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   
   

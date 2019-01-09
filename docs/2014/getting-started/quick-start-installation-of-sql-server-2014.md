@@ -22,12 +22,12 @@ ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c682b29a4265b9c6955b440dc45e4920ca87d081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f70b3367d2ca0b6c896c970f29b179dc969640c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223382"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366644"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 のクイック スタート インストール
     
@@ -78,11 +78,11 @@ ms.locfileid: "48223382"
   
      参照してください[SQL Server 2014 BI の機能をインストール](../sql-server/install/install-sql-server-business-intelligence-features.md)が含まれるは、Microsoft BI プラットフォームの一部である機能のインストールについては、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、および複数分析データの作成または操作に使用されるクライアント アプリケーション。  
   
--   **フェールオーバー クラスター インストール**  
+-    **フェールオーバー クラスター インストール**  
   
      参照してください[SQL Server フェールオーバー クラスター インストール](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)インストールの詳細については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]フェイル オーバー クラスター。  
   
- 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベースとサンプル コードはインストールされません。 Express 以外のエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のサンプル データベースとサンプル コードをインストールするには、[CodePlex Web サイト](http://go.microsoft.com/fwlink/?LinkId=87843)をご覧ください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のサンプル データベースと [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] のサンプル コードのサポートについては、「[データベースとサンプルの概要](http://go.microsoft.com/fwlink/?LinkId=110391)」をご覧ください。  
+ 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベースとサンプル コードはインストールされません。 Express 以外のエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のサンプル データベースとサンプル コードをインストールするには、[CodePlex Web サイト](https://go.microsoft.com/fwlink/?LinkId=87843)をご覧ください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のサンプル データベースと [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] のサンプル コードのサポートについては、「[データベースとサンプルの概要](https://go.microsoft.com/fwlink/?LinkId=110391)」をご覧ください。  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-installation"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インストール  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インストール ウィザードを使用する場合でも、コマンド プロンプトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] をインストールする場合でも、セットアップ時には以下の 1 つ以上の手順を実行する必要があります。  

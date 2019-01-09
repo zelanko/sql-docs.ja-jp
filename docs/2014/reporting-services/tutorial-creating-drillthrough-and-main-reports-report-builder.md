@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:作成の詳細レポートとメイン レポート (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3428c80e86f510b29ffb875bef604293cb1558a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093822"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512550"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル:詳細レポートとメイン レポート (レポート ビルダー) を作成します。
   このチュートリアルでは、詳細レポートとメイン レポートの 2 種類のレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 次の図は、レポートを作成します。  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- 次の図では、メイン レポートのフィールド値 "Games and Toys" が詳細レポートのタイトルに表示されています。 この詳細レポートには、Games and Toys 製品カテゴリに関連するデータが含まれています。  
+ 次の図は、フィールド値、Games and Toys、ドリルスルー レポートのタイトルのメイン レポートの表示を示します。 この詳細レポートには、Games and Toys 製品カテゴリに関連するデータが含まれています。  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
@@ -80,9 +80,9 @@ ms.locfileid: "48093822"
   
 8.  [メイン レポートと詳細レポートを実行します。](#MRunReports)  
   
- このチュートリアルの推定所要時間: 30 分。  
+ このチュートリアルの推定所要時間:30 分。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  このチュートリアルでは、Contoso Sales キューブにアクセスする必要があります。 この必要条件は、詳細レポートとメイン レポートの両方に適用されます。 要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/report-builder-tutorials.md)」を参照してください。  
   
 ##  <a name="DMatrixAndDataset"></a> 1.テーブルまたはマトリックス ウィザードを使用して詳細レポートを作成する  
@@ -130,7 +130,7 @@ ms.locfileid: "48093822"
 10. **[資格情報の種類]** をクリックします。  
   
     > [!NOTE]  
-    >  データ ソースの権限の構成によっては、既定の認証オプションを変更する必要があります。 詳細については、「[セキュリティ (レポート ビルダー)](report-builder/security-report-builder.md)」を参照してください。  
+    >  データ ソースの権限の構成によっては、既定の認証オプションを変更する必要があります。 詳細については、「 [セキュリティ (レポート ビルダー)](report-builder/security-report-builder.md)で作成するモバイル レポートで使用できます。  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48093822"
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
   
-1.  **[クエリのデザイン]** ページのメタデータ ペインで、 **[(…)]** ボタンをクリックします。  
+1.  **[クエリのデザイン]** ページのメタデータ ペインで、**[ (...) ]** ボタンをクリックします。  
   
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
@@ -168,7 +168,7 @@ ms.locfileid: "48093822"
   
 5.  フィルター式の一覧で、 **[All Channel]** を展開し、 **[Online]** と **[Reseller]** をクリックして、 **[OK]** をクリックします。  
   
-     Channel を Online と Reseller のみに制限するフィルターがクエリに追加されます。  
+     クエリをこれらのチャネルのみを含めるフィルターが含まれるようになりました。Online と Reseller のみに制限するフィルターがクエリに追加されます。  
   
 6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name**の下) にドラッグします。  
   
@@ -443,7 +443,7 @@ ms.locfileid: "48093822"
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
   
-1.  **[クエリのデザイン]** ページのメタデータ ペインで、キューブ セクションの参照ボタン ( **[(...)]**) をクリックします。  
+1.  **[クエリのデザイン]** ページのメタデータ ペインで、キューブ セクションの参照ボタン ( **[...]** ) をクリックします。  
   
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
@@ -462,7 +462,7 @@ ms.locfileid: "48093822"
   
 5.  フィルター式の一覧で、 **[All Channel]** を展開し、 **[Online]** と **[Reseller]** をクリックして、 **[OK]** をクリックします。  
   
-     Channel を Online と Reseller のみに制限するフィルターがクエリに追加されます。  
+     クエリをこれらのチャネルのみを含めるフィルターが含まれるようになりました。Online と Reseller のみに制限するフィルターがクエリに追加されます。  
   
 6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name**の下) にドラッグします。  
   
@@ -562,7 +562,7 @@ ms.locfileid: "48093822"
   
 1.  **[レイアウトの選択]** ページの **[オプション]** で、 **[小計と総計を表示]** が選択されていることを確認します。  
   
-     ウィザードのプレビュー ペインに、4 行を含むマトリックスが表示されます。  レポートを実行すると、最初の行が列グループになり、2 行目に列見出し、3 行目に製品カテゴリのデータ (`[Sum(Net_ QTY)]` と `[Sum(Net_Sales)]`)、4 行目に合計が含まれます。  
+     ウィザードのプレビュー ペインに、4 行を含むマトリックスが表示されます。  レポートを実行すると、各行は次のように表示されます。最初の行が列グループになり、2 行目に列見出し、3 行目に製品カテゴリのデータ (`[Sum(Net_ QTY)]` と `[Sum(Net_Sales)]`)、4 行目に合計が含まれます。  
   
 2.  **[次へ]** をクリックします。  
   
@@ -599,7 +599,7 @@ ms.locfileid: "48093822"
   
 3.  **[アクション]** タブをクリックします。  
   
-4.  **[レポートに移動する]** を選択します。  
+4.   **[レポートに移動する]** を選択します。  
   
 5.  **[レポートの指定]** で、 **[参照]** をクリックして、ResellerVSOnlineDrillthrough という名前の詳細レポートを指定します。  
   
@@ -685,7 +685,7 @@ ms.locfileid: "48093822"
   
 1.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-2.  「 **2009 Product Category Sales: Online and Reseller Category:**」と入力します。  
+2.  型**2009 Product Category Sales:Online と Reseller Category:** します。  
   
 3.  入力したテキストを選択します。  
   

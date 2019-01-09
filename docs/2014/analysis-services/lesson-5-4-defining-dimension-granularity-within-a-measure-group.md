@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: e1d7b619cb711938f07ae7902dc1b9544adc5890
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460927"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512291"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>メジャー グループでのディメンション粒度の定義
   ファクト データは、利用目的ごとに異なる粒度でディメンションを作成しなければならない場合があります。 たとえば、販売店やインターネットでの売上データを日ごとに記録する一方で、販売量は月ごとまたは四半期ごとに記録することが考えられます。 このようなシナリオでは、ファクト テーブルごとに異なる詳細度を、時間のディメンションに設定します。 新しいデータベース ディメンションを定義する場合、このようにさまざまに異なる詳細度を設定して時間のディメンションを定義することもできますが、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を使用すると、さらに容易にディメンションを定義できます。  
@@ -127,13 +127,13 @@ ms.locfileid: "49460927"
   
      注意、**従業員**と`Date`にキューブ ディメンションがリンクされている、 **Sales Quotasand Sales Quotas 1**標準リレーションシップによりメジャー グループです。 また、 **Sales Territory** キューブ ディメンションはどちらのメジャー グループにもリンクしていません。  
   
-4.  交差する位置のセルをクリックして、 **Sales Territory**ディメンションと`Sales Quotas`メジャー グループと、参照ボタンをクリックして (**.**). **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
+4.  交差する位置のセルをクリックして、 **Sales Territory**ディメンションと`Sales Quotas`メジャー グループと、参照ボタンをクリックして (**.**).**[リレーションシップの定義]** ダイアログ ボックスが開きます。  
   
 5.  **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
 6.  **[中間ディメンション]** ボックスの一覧から **[Employee]** を選択します。  
   
-7.  **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
+7.   **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
   
 8.  **[中間ディメンションの属性]** ボックスの一覧から **[Sales Territory Key]** を選択します (Sales Territory Region 属性のキー列は、SalesTerritoryKey 列です)。  
   
@@ -141,13 +141,13 @@ ms.locfileid: "49460927"
   
 10. **[OK]** をクリックします。  
   
-11. **Sales Territory** ディメンションと **Sales Quotas 1** メジャー グループが交差する位置にあるセルをクリックし、参照ボタン (**[...]**) をクリックします。 **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
+11. 交差する位置のセルをクリックして、 **Sales Territory**ディメンションと**Sales Quotas 1**メジャー グループと、参照ボタンをクリックして (**.**).**[リレーションシップの定義]** ダイアログ ボックスが開きます。  
   
 12. **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
 13. **[中間ディメンション]** ボックスの一覧から **[Employee]** を選択します。  
   
-14. **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
+14.  **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
   
 15. **[中間ディメンションの属性]** ボックスの一覧から **[Sales Territory Key]** を選択します (Sales Territory Region 属性のキー列は、SalesTerritoryKey 列です)。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "49460927"
      ![Sales Quota メジャー グループの次元は正しく](../../2014/tutorials/media/l5-granularity-7.gif "正しくの次元は、Sales Quota メジャー グループ")  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 6 : 計算の定義](lesson-6-defining-calculations.md)  
+ [レッスン 6:計算の定義](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>参照  
  [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

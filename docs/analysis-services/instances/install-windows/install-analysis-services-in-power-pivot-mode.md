@@ -1,5 +1,5 @@
 ---
-title: Power Pivot モードで Analysis Services のインストール |Microsoft ドキュメント
+title: Power Pivot モードで Analysis Services のインストール |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 59d3f4dadc2de71f8fa4438ec48a2783164a485a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019309"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527751"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Power Pivot モードでの Analysis Services のインストール
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "34019309"
 ##  <a name="bkmk_background"></a> 背景情報  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint は、SharePoint 2016 (SharePoint 2013) ファームでの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] データ アクセスを提供する中間層のバックエンド サービスです。  
   
--   **バックエンド サービス:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel を使用して分析データが含まれたブックを作成した場合、サーバー環境でそのデータにアクセスするには [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint が必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは、SharePoint Server がインストールされているコンピューターで実行することも、SharePoint ソフトウェアがインストールされていない別のコンピューターで実行することもできます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] には、SharePoint との依存関係はありません。  
+-   **バックエンド サービス:** 使用する場合[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]が必要、分析データを含むブックを作成する Excel [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint server 環境では、そのデータにアクセスします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは、SharePoint Server がインストールされているコンピューターで実行することも、SharePoint ソフトウェアがインストールされていない別のコンピューターで実行することもできます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] には、SharePoint との依存関係はありません。  
   
-     **注:** このトピックでは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーおよびバックエンド サービスのインストールについて説明します。  
+     **注:** このトピックでは、のインストールを説明します、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]サーバーおよびバックエンド サービスです。  
   
--   **中間層:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ギャラリー、定期データ更新、管理ダッシュボード、データ プロバイダーなどの SharePoint の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] エクスペリエンスを強化します。 中間層のインストールと構成の詳細については、以下を参照してください。  
+-   **中間層:** 機能強化、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]などの SharePoint エクスペリエンス[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ギャラリー、定期データ更新、管理ダッシュ ボード、データ プロバイダー。 中間層のインストールと構成の詳細については、以下を参照してください。  
   
     -   [Power Pivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
@@ -47,16 +47,16 @@ ms.locfileid: "34019309"
   
 4.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] インスタンスの名前を使用できる必要があります。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]名前付きインスタンスが既に存在するコンピューターに、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] モードの Analysis Services をインストールすることはできません。  
   
-     **注:** インスタンス名は POWERPIVOT である必要があります。  
+     **注:** インスタンス名は、POWERPIVOT である必要があります。  
   
 5.  「 [SharePoint モードの Analysis Services サーバーのハードウェアとソフトウェアの要件](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)」を参照してください。  
   
 6.  「 [SQL Server 2016 Release Notes](../../../sql-server/sql-server-2016-release-notes.md)」で、リリース ノートを確認します。  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server エディションの要件  
- ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、「 [SQL Server 2016 の各エディションでサポートされる Analysis Services 機能](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)と[Editions and Components の SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)です。  
+ ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、次を参照してください。 [SQL Server 2016 の各エディションでサポートされる Analysis Services 機能](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)と[エディションと SQL Server 2016 のコンポーネントの](../../../sql-server/editions-and-components-of-sql-server-2016.md)します。  
   
-##  <a name="InstallSQL"></a> 手順 1. Power Pivot for SharePoint のインストール  
+##  <a name="InstallSQL"></a> 手順 1:Power Pivot for SharePoint をインストールします。  
  この手順では、SQL Server セットアップを実行して、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーをインストールします。 後の手順で、このサーバーをブックのデータ モデルで使用するように Excel Services を構成します。  
   
 1.  SQL Server インストール ウィザード (Setup.exe) を実行します。  
@@ -87,7 +87,7 @@ ms.locfileid: "34019309"
   
 12. **[インスタンスの構成]** ページで、 **[名前付きインスタンス]** を選択し、インスタンス名に **[POWERPIVOT]** を入力して、 **[次へ]** をクリックします。  
   
-     ![SQL のセットアップ - インスタンスの構成のランディング ページ](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "SQL セットアップのインスタンスの構成のランディング ページ")  
+     ![SQL のセットアップ - インスタンスの構成のランディング ページ](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "SQL セットアップ - ランディング ページ インスタンスの構成")  
   
 13. **[サーバー構成]** のページで、すべてのサービスの **[スタートアップの種類]** を [自動] に設定します。 **SQL Server Analysis Services**に必要なドメイン アカウントとパスワードを指定します。次の図の **(1)** です。  
   
@@ -99,15 +99,15 @@ ms.locfileid: "34019309"
   
      **[次へ]** を選択します。  
   
-     ![SQL のセットアップ - サーバー構成のランディング ページ](../../../analysis-services/instances/install-windows/media/sql2016-pp-server-config-landing-page.png "SQL セットアップ - サーバー構成のランディング ページ")  
+     ![SQL のセットアップ - サーバーの構成のランディング ページ](../../../analysis-services/instances/install-windows/media/sql2016-pp-server-config-landing-page.png "SQL セットアップ - サーバーの構成のランディング ページ")  
   
 14. [!INCLUDE[ssDE](../../../includes/ssde-md.md)]をインストールする場合は、 **[データベース エンジンの構成]** ページが表示されます。 [ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] の構成] で、 **[現在のユーザーの追加]** を選択して、データベース エンジン インスタンスに対する管理者権限をユーザー アカウントに付与します。  
   
      **[次へ]** を選択します。  
   
-15. **[Analysis Services の構成]** ページの **[サーバー モード]** で、 **[PowerPivot モード]** を選択します。  
+15.  **[Analysis Services の構成]** ページの **[サーバー モード]** で、 **[PowerPivot モード]** を選択します。  
   
-     ![SQL のセットアップ - Analysis Services の構成のランディング ページ](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "SQL セットアップ - Analysis Services の構成のランディング ページ")  
+     ![SQL のセットアップ - Analysis Services の構成がランディング ページ](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "SQL セットアップ - Analysis Services の構成がランディング ページ")  
   
 16. **[Analysis Services の構成]** ページで、 **[現在のユーザーの追加]** を選択して、ユーザー アカウントに管理権限を付与します。 セットアップの完了後にサーバーを構成するには、管理権限が必要になります。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "34019309"
   
 3.  Analysis Services インスタンス (たとえば、**[サーバー名]\POWERPIVOT**) に接続します。 インスタンスに接続できたら、サービスが実行されていることがわかります。  
   
-##  <a name="bkmk_config"></a> 手順 2. 基本的な Analysis Services SharePoint 統合の構成  
+##  <a name="bkmk_config"></a> 手順 2:基本的な Analysis Services の SharePoint 統合を構成する  
  SharePoint ドキュメント ライブラリ内で Excel の高度なデータ モデルを操作できるようにするには、次の手順を実行して構成を変更する必要があります。 これらの手順は、SharePoint と SQL Server Analysis Services をインストールしてから実行します。  
   
 ### <a name="sharepoint-2016"></a>SharePoint 2016  
@@ -215,10 +215,10 @@ ms.locfileid: "34019309"
   
     ```  
   
-##  <a name="bkmk_verify"></a> 手順 3. 統合の確認  
+##  <a name="bkmk_verify"></a> 手順 3:統合を確認する  
  ここでは、Analysis Services 統合を確認するために、新しいブックを作成し、アップロードする手順を示します。 この手順を実行するには、SQL Server データベースが必要です。  
   
-1.  **注:** スライサーやフィルターが含まれた高度なブックが既にある場合は、そのブックを SharePoint ドキュメント ライブラリにアップロードし、ドキュメント ライブラリ ビューからスライサーとフィルターを操作できるかどうかを確認します。  
+1.  **注:** スライサーやフィルターが含まれた高度なブックが既にある場合は、そのブックを SharePoint ドキュメント ライブラリにアップロードし、[ドキュメント ライブラリ] ビューからスライサーとフィルターを操作できるかどうかを確認します。  
   
 2.  Excel で新しいブックを開きます。  
   
@@ -261,8 +261,8 @@ ms.locfileid: "34019309"
 ##  <a name="bkmk_upgrade_workbook"></a> ブックのアップグレードと定期データ更新  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の以前のバージョンで作成したブックのアップグレードに必要な手順は、そのブックを作成した [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のバージョンによって異なります。 詳細については、「 [ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)」を参照してください。  
   
-##  <a name="bkmk_multiple_servers"></a> シングル サーバー インストールではない場合 - Power Pivot for Microsoft SharePoint  
- **Web フロントエンド (WFE)** または **中間層:** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーを大規模な SharePoint ファームで SharePoint モードで使用したり、ファームに [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の追加機能をインストールしたりするには、各 SharePoint サーバーでインストーラー パッケージ **spPowerPivot16.msi (SharePoint 2016) (spPowerPivot.msi (SharePoint 2013))** を実行します。 spPowerPivot16.msi (spPowerPivot.msi) では、必要なデータ プロバイダーと [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 (2013) の構成ツールをインストールします。  
+##  <a name="bkmk_multiple_servers"></a> -シングル サーバー インストールではない Power Pivot for Microsoft SharePoint  
+ **Web フロント エンド (WFE)** または**中間層:**:使用する、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]大規模な SharePoint ファームで追加インストールして、SharePoint モードのサーバー[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]インストーラー パッケージを実行して、ファームに機能**spPowerPivot16.msi (SharePoint 2016)、または spPowerPivot.msi (SharePoint2013 年)** 各 SharePoint サーバー上でします。 spPowerPivot16.msi (spPowerPivot.msi) では、必要なデータ プロバイダーと [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 (2013) の構成ツールをインストールします。  
   
  中間層のインストールと構成の詳細については、以下を参照してください。  
   
@@ -274,17 +274,17 @@ ms.locfileid: "34019309"
   
 -   [Power Pivot の構成とソリューションの配置 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)  
   
- **冗長性とサーバー負荷:** 2 台目またはそれ以上の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーを [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] モードでインストールすると、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバー機能の冗長性が実現します。 サーバーを追加すると、サーバー間の負荷分散も行われます。 詳細については、以下を参照してください。  
+ **冗長性とサーバー負荷:** インストール、1 秒以上[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]内のサーバー[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]モードでの冗長性が実現、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]サーバーの機能。 サーバーを追加すると、サーバー間の負荷分散も行われます。 詳細については、以下を参照してください。  
   
--   [Excel Services (SharePoint 2013) のデータ モデルを処理するための Analysis Services を構成する](http://technet.microsoft.com/library/jj614437(v=office.15))です。  
+-   [Excel Services (SharePoint 2013) でデータ モデルを処理するための Analysis Services を構成する](http://technet.microsoft.com/library/jj614437(v=office.15))します。  
   
--   [Excel Services データ モデルの設定 (SharePoint 2013) を管理](http://technet.microsoft.com/library/jj219780(v=office.15))です。  
+-   [Excel Services データ モデルの設定 (SharePoint 2013) を管理](http://technet.microsoft.com/library/jj219780(v=office.15))します。  
   
- ![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を SQL Server に関するフィードバックを送信](https://feedback.azure.com/forums/908035-sql-server)です。  
+ ![SharePoint の設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を SQL Server に関するフィードバックを送信](https://feedback.azure.com/forums/908035-sql-server)します。  
   
 ## <a name="see-also"></a>参照  
  [SharePoint 2013 への Power Pivot の移行](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [Power Pivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [ブックと定期データ更新 & #40; をアップグレードします。SharePoint 2013 & #41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

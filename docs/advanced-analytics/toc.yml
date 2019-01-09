@@ -52,22 +52,32 @@ items:
   items:
   - name: R
     items:
+    - name: SQL Server に R が存在することを確認する
+      href: tutorials/quickstart-r-verify.md
     - name: R と SQL での Hello World
-      href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
+      href: tutorials/quickstart-r-run-using-tsql.md
     - name: 入力と出力の処理
-      href: tutorials/rtsql-working-with-inputs-and-outputs.md
+      href: tutorials/quickstart-r-inputs-and-outputs.md
     - name: データ型とオブジェクトの処理
-      href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+      href: tutorials/quickstart-r-data-types-and-objects.md
     - name: R 関数の使用
-      href: tutorials/rtsql-using-r-functions-with-sql-server-data.md
+      href: tutorials/quickstart-r-functions.md
     - name: 予測モデルの作成
-      href: tutorials/rtsql-create-a-predictive-model-r.md
-    - name: モデルからの予測とプロット
-      href: tutorials/rtsql-predict-and-plot-from-model.md
+      href: tutorials/quickstart-r-create-predictive-model.md
+    - name: モデルから予測する
+      href: tutorials/quickstart-r-predict-from-model.md
   - name: Python
     items:
-    - name: T-SQL を使用した Python の実行
-      href: tutorials/run-python-using-t-sql.md
+    - name: SQL Server に Python が存在することを確認する
+      href: tutorials/quickstart-python-verify.md
+    - name: Python と SQL での Hello World
+      href: tutorials/quickstart-python-run-using-t-sql.md
+    - name: 入力と出力の処理
+      href: tutorials/quickstart-python-inputs-and-outputs.md
+    - name: Python のデータ構造と SQL
+      href: tutorials/quickstart-python-data-structures.md
+    - name: 最初のモデルのトレーニングと使用
+      href: tutorials/quickstart-python-train-score-in-tsql.md
 - name: チュートリアル
   href: tutorials/machine-learning-services-tutorials.md
   items:
@@ -79,24 +89,6 @@ items:
       href: tutorials/demo-data-iris-in-sql.md
     - name: NYC タクシー データ セット
       href: tutorials/demo-data-nyctaxi-in-sql.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: 最初のモデルのトレーニングと使用
-      href: tutorials/train-score-using-python-in-tsql.md
-    - name: revoscalepy を使用した Python モデルの作成
-      href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: データベース内分析について
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: 1 - データの探索
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 2 - 機能エンジニアリング
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 3 - トレーニングおよびデプロイ
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 4 - 予測
-        href: tutorials/sqldev-py6-operationalize-the-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -157,6 +149,22 @@ items:
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: rxExec を使用したカスタム R の送信
         href: tutorials/r-tutorial-custom-r-functions.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: revoscalepy を使用した Python モデルの作成
+      href: tutorials/use-python-revoscalepy-to-create-model.md
+    - name: データベース内分析について
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: 1 - データの探索
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: 2 - 機能エンジニアリング
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: 3 - トレーニングおよびデプロイ
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: 4 - 予測
+        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: サンプル
   href: https://github.com/Microsoft/sql-server-samples
 - name: ソリューション
@@ -180,8 +188,6 @@ items:
       href: r/installing-and-managing-r-packages.md
     - name: パッケージ情報の取得
       href: r/determine-which-packages-are-installed-on-sql-server.md
-    - name: 新しい Python パッケージのインストール
-      href: python/install-additional-python-packages-on-sql-server.md
     - name: 新しい R パッケージのインストール
       href: r/install-additional-r-packages-on-sql-server.md
       items:
@@ -200,22 +206,28 @@ items:
         href: r/create-a-local-package-repository-using-minicran.md
       - name: R パッケージを使用するためのヒント
         href: r/packages-installed-in-user-libraries.md
+    - name: 新しい Python パッケージのインストール
+      href: python/install-additional-python-packages-on-sql-server.md
   - name: データ探索と予測モデリング
     items:
-    - name: R ライブラリとデータ型
+    - name: R から SQL へのデータ型の変換
       href: r/r-libraries-and-data-types.md
-    - name: Python ライブラリとデータ型
+    - name: Python から SQL へのデータ型の変換
       href: python/python-libraries-and-data-types.md
-    - name: R を使用した予測モデリング
-      href: r/data-exploration-and-predictive-modeling-with-r.md
     - name: ODBC を使用して R オブジェクトを読み込む
       href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
-    - name: Machine Learning Services で使用する R コードの変換
-      href: r/converting-r-code-for-use-in-sql-server.md
-    - name: rxExecBy を使用して複数のモデルを作成する
-      href: r/creating-multiple-models-using-rxexecby.md
     - name: R での OLAP キューブからのデータの使用
       href: r/using-data-from-olap-cubes-in-r.md
+    - name: olapR を使って MDX クエリを作成する方法
+      href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: R を使用した予測モデリング
+      href: r/data-exploration-and-predictive-modeling-with-r.md
+    - name: rxExecBy を使用して複数のモデルを作成する
+      href: r/creating-multiple-models-using-rxexecby.md
+  - name: 配置
+    items:
+    - name: SQL Server 用の R コードを変換する
+      href: r/converting-r-code-for-use-in-sql-server.md
     - name: sqlrutils を使用してストアド プロシージャを作成する
       href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
   - name: 予測
@@ -269,25 +281,23 @@ items:
     - name: R コード プロファイル関数
       href: r/using-r-code-profiling-functions.md
 - name: リファレンス
-  href: r/machine-learning-services-r-reference.md
   items:
   - name: R パッケージ
-    href: r/machine-learning-services-r-reference.md
     items:
-    - name: SQL の olapR
-      href: r/how-to-create-mdx-queries-using-olapr.md
-    - name: SQL の MicrosoftML
-      href: using-the-microsoftml-package.md
-    - name: SQL の RevoScaleR
-      href: r/revoscaler-overview.md
-    - name: SQL Server データ用の RevoScaleR 関数リスト
-      href: r/scaler-functions-for-working-with-sql-server-data.md
-    - name: SQL の sqlrutils
-      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+    - name: RevoScaleR
+      href: r/ref-r-revoscaler.md
+    - name: MicrosoftML
+      href: r/ref-r-microsoftml.md
+    - name: olapR
+      href: r/ref-r-olapr.md
+    - name: sqlRUtils
+      href: r/ref-r-sqlrutils.md
   - name: Python パッケージ
     items:
-    - name: SQL の revoscalepy
-      href: python/what-is-revoscalepy.md
+    - name: revoscalepy
+      href: python/ref-py-revoscalepy.md
+    - name: microsoftml
+      href: python/ref-py-microsoftml.md
 - name: リソース
   items:
   - name: リリース ノート
@@ -319,9 +329,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: e400aa9026b3a2684ffc5f436e4fe43cba3c52d4
-ms.sourcegitcommit: 0395ffeb6e51b5d653fa23673e564c4c0cfe4f57
+ms.openlocfilehash: 9e76e68b7b970c64050136b3ae9cb9c486c297c2
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52717195"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046602"

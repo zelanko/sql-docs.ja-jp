@@ -1,5 +1,5 @@
 ---
-title: SQL Server Machine Learning とプログラミング拡張機能のドキュメント | Microsoft Docs
+title: R と Python の機械学習とプログラミング拡張機能のドキュメント - SQL Server Machine Learning
 description: SQL Server での R および Python と大規模なエンタープライズ データ分析用の組み込みのデータ サイエンス モデリングおよび機械学習アルゴリズム。
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4c56d49e4cf168c7d1b6b1830caa6c79e237f46c
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 498a73df26b516856fefe411f5d29bdac8076139
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712384"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596543"
 ---
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 # <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server Machine Learning とプログラミング拡張機能のドキュメント
@@ -68,6 +68,6 @@ SQL Server 2019 では、Java コード実行で、R および Python と同じ�
 | [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | R | R タスクの分散および並列処理: データ変換、探索、視覚化、統計および予測分析。 |
 | [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | R に適合された Microsoft の AI アルゴリズムに基づいた関数。 |
 | [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | R | OLAP キューブからのデータのインポート。 |
-| [sqlRUtils]() | R | R と T-SQL のカプセル化のためのヘルパー関数。 |
+| [sqlRUtils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | R | R と T-SQL のカプセル化のためのヘルパー関数。 |
 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Python | Python タスクの分散および並列処理: データ変換、探索、視覚化、統計および予測分析。  | 
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Python | Python に適合された Microsoft の AI アルゴリズムに基づいた関数。  |

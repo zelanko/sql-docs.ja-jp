@@ -11,17 +11,17 @@ ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12943c96c64c1a5d20ee94c76a9701fc7a983d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083822"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411279"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>使用状況データ収集の構成 (対象は PowerPivot for SharePoint)
   使用状況データ収集は、ファーム レベルの SharePoint 機能です。 PowerPivot for SharePoint では、このシステムを使用および拡張して、PowerPivot のデータやサービスがどのように使用されているかを示すレポートが PowerPivot 管理ダッシュボードに用意されています。 SharePoint のインストール方法によっては、使用状況データ収集がファームに対して無効になっていることがあります。 ファーム管理者は、使用状況のログ記録を有効にして、PowerPivot 管理ダッシュボードに表示される使用状況データを作成する必要があります。  
   
- PowerPivot 管理ダッシュ ボードの使用状況データについては、次を参照してください。 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)します。  
+ PowerPivot 管理ダッシュボードの使用状況データの詳細については、「 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)」を参照してください。  
   
  **このトピックの内容:**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48083822"
   
 1.  サーバーの全体管理で **[監視]** をクリックします。  
   
-2.  **[レポート]** セクションで、 **[使用状況と正常性のデータ収集の構成]** をクリックします。  
+2.   **[レポート]** セクションで、 **[使用状況と正常性のデータ収集の構成]** をクリックします。  
   
 3.  **[利用状況データの収集を有効にする]** をオンにします。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48083822"
     |**PowerPivot 接続**|PowerPivot 接続イベントは、ユーザーに代わって実行される PowerPivot サーバー接続を監視するために使用します。|  
     |**PowerPivot 読み込みデータ使用状況**|PowerPivot 読み込みデータ使用状況は、PowerPivot データをサーバーのメモリに読み込む要求を監視するために使用します。 読み込みイベントは、コンテンツ データベースまたはキャッシュから読み込まれた PowerPivot データ ファイルに対して生成されます。|  
     |**PowerPivot アンロード データ使用状況**|PowerPivot アンロード データ使用状況は、PowerPivot データ ソースを非アクティブ期間の後にアンロードする要求を監視するために使用します。 PowerPivot データ ソースのディスクへのキャッシュは、アンロード イベントとして報告されます。|  
-    |**PowerPivot クエリの使用状況**|PowerPivot クエリの使用状況に読み込まれるデータのクエリ処理時間を監視するために使用する[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]インスタンス。|  
+    |**PowerPivot クエリの使用状況**|PowerPivot クエリの使用状況は、 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスに読み込まれるデータのクエリ処理時間を監視するために使用します。|  
   
     > [!NOTE]  
     >  サーバー状態操作とデータ更新操作でも使用状況データが生成されますが、これらの処理に関連するイベントはありません。  
@@ -87,9 +87,9 @@ ms.locfileid: "48083822"
 ##  <a name="jobs"></a> 使用状況データ収集に使用されるタイマー ジョブの構成  
  PowerPivot サーバーの状態と使用状況データは、次に示す 2 つのタイマー ジョブにより、使用状況データ収集システムの別々の場所に移動されます。  
   
--   "Microsoft SharePoint Foundation 利用状況データのインポート" タイマー ジョブは、PowerPivot 使用状況データを PowerPivot サービス アプリケーション データベースに移動します。  
+-   「Microsoft SharePoint Foundation 使用状況データ インポート」タイマー ジョブは、PowerPivot 使用状況を PowerPivot サービス アプリケーション データベースに移動します。  
   
--   "PowerPivot 管理ダッシュボード処理タイマー ジョブ" は、組み込み管理レポートのデータ ソースである PowerPivot ブックにデータを移動します。  
+-   「PowerPivot 管理ダッシュ ボード処理タイマー ジョブ」の組み込み管理レポートのデータ ソースは、PowerPivot ブックへのデータ。  
   
  PowerPivot 管理ダッシュボードに表示される管理レポートをより頻繁に更新する必要がある場合は、次の手順を実行します。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48083822"
   
 6.  **[今すぐ実行]** をクリックします。  
   
-7.  レポートをチェックして、更新データを確認します。 詳細については、次を参照してください。 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)します。  
+7.  レポートをチェックして、更新データを確認します。 詳細については、「 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)」をご参照ください。  
   
 ##  <a name="confighist"></a> 使用状況データ履歴の格納期間の制限  
  イベント (接続、読み込み、アンロード、およびオンデマンド クエリ処理) およびデータ更新 (スケジュールされたデータ処理) に対して、使用状況データ履歴が格納されます。 使用状況データは SharePoint 使用状況データ収集システムを通じて収集されますが、レポート データは長期的な保存のために PowerPivot アプリケーション データベースとレポート データベースに移動されます。 使用状況データ履歴の設定によって、PowerPivot アプリケーション データベースで使用状況データを維持する期間が制御されます。 同じ PowerPivot サービス アプリケーション データベースに格納されたすべての種類の使用状況データに、同じ制限が同様に適用されます。  
@@ -187,7 +187,7 @@ ms.locfileid: "48083822"
 |**Usage data history**|365 (日)|Integer|0 は無制限を示しますが、履歴データが期限切れとなる上限を設定し、履歴データを自動的に削除することもできます。 限られた保持期間の有効な値は 1 ～ 5,000 (日) です。|  
 |[簡易応答の上限]|500 (ミリ秒単位)|Integer|簡易要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。 0 ～ 500 ミリ秒で完了する要求は簡易要求であり、レポートでは無視されます。|  
 |迅速な応答の上限|1000 (ミリ秒単位)|Integer|迅速な要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。|  
-|想定される応答の上限|3000 (ミリ秒単位)|Integer|想定される要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。|  
+|[想定される応答の上限]|3000 (ミリ秒単位)|Integer|想定される要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。|  
 |長い応答の上限|10,000 (ミリ秒)|Integer|長い要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。 この上限を超えるすべての要求は、上限のしきい値がない超過カテゴリに分類されます。|  
   
 ## <a name="see-also"></a>参照  

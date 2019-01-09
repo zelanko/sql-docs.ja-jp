@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - surface area configuration [SQL Server], sp_configure
@@ -28,12 +27,12 @@ ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a903a3246b8a91a8ff0b42862b7bbf4046497c3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088712"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640553"
 ---
 # <a name="server-configuration-options-sql-server"></a>サーバー構成オプション (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースの管理および最適化を行うには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または sp_configure システム ストアド プロシージャを使用して、構成オプションを設定します。 最も一般的に使用されるサーバー構成オプションは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から使用できます。また、sp_configure を使用するとすべての構成オプションにアクセスできます。 システムへの影響を慎重に検討したうえで、これらのオプションを設定してください。 詳細については、「[サーバー プロパティの表示または変更 &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md)」を参照してください。  
@@ -65,7 +64,7 @@ ms.locfileid: "48088712"
   
 -   SC = 自己構成オプション。  
   
-    |構成オプション|最小値|最大値|既定|  
+    |構成オプション|最小値|最大値|既定値|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  

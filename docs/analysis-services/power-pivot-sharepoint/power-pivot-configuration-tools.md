@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ab3e6eb8839b87f1145501cd0b30895bf181ec60
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e2d15054f3d6ebbcd25627df42aab5b9248db1f6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984474"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207501"
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38984474"
   
 -   Analysis Services インスタンスでサーバー管理者である必要があります (SharePoint 2010 のみ)。  
   
--   ファームの構成データベースで db_owner である必要があります。  
+-   ファームの構成データベースに対する db_owner 権限があります。  
   
 -   構成ツールを使用するための TCP/IP ポートの要件はないため、構成ツールに対応するようファイアウォールを構成する必要はありません。 構成ツールを使用するには、Web アプリケーションおよび共有サービスを SharePoint プラットフォームの一部として使用できることが必要です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー用にファイアウォールを構成することが必要な場合があります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "38984474"
 |名前|サポートされている SharePoint のバージョン|詳細な構成|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 の構成|SharePoint 2013|[PowerPivot for SharePoint 2013 の構成または修復 &#40;PowerPivot 構成ツール&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツール|SharePoint 2010 と SharePoint 2010 の組み合わせ|[構成または修復の Power Pivot for SharePoint 2010 (Power Pivot 構成ツール)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツール|SharePoint 2010 と SharePoint 2010 の組み合わせ|[Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
   
 ###  <a name="bkmk_sum_differences_betweentools"></a> 2 つの構成ツールの相違点  
  2 つのバージョンの構成ツールは似ていますが、実行する構成手順に違いがあります。 この違いは、SharePoint 2010 と SharePoint 2013 の間の変更と、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の SQL Server 2012 SP1 バージョンとそれ以前のバージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint とのアーキテクチャの違いに起因します。  
@@ -83,15 +83,15 @@ ms.locfileid: "38984474"
   
 -   [Power Pivot for SharePoint 用 PowerShell リファレンス](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
-> [!NOTE]  
+> [!NOTE]
 >  このツールでは、Reporting Services は構成できません。 Reporting Services を SharePoint 環境に追加する場合は、Reporting Services を個別にインストールし、構成する必要があります。 詳細については、以下を参照してください。  
->   
+> 
 >  -   [SharePoint モードでの最初のレポート サーバーのインストール](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)。  
 > -   [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)。  
   
 ##  <a name="bmkm_start_tool"></a> いずれかの PowerPivot 構成ツールを起動する  
   
-1.  **[スタート]** 画面で、「 **powerpivot**」と入力します。  
+1.   **[スタート]** 画面で、「 **powerpivot**」と入力します。  
   
      **[スタート]** 画面で「 **powerpivot** 」と入力するか、 **[スタート]** メニューの **[すべてのプログラム]** をクリックし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]** をクリックし、次のいずれかをクリックします。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "38984474"
   
      ![2 つの PowerPivot 構成ツール](../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "2 つの PowerPivot 構成ツール")  
   
-     **注:** このツールは、ローカル サーバーに [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] がインストールされている場合にのみ使用できます。  
+     **注:** ツールは、使用可能な場合にのみ[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]ローカル サーバーにインストールされます。  
   
 2.  構成ツールが起動されると、インストールのステータスがチェックされ、インストールに有効なタスクが提供されます。  
   

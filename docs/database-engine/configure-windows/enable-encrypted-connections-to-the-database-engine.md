@@ -21,12 +21,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ed6454a6bce8f9f0942e5427910c2942bfa838e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 316becea16562fda0e1ba05623f09018367254af
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788500"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589296"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47788500"
   
 5.  **[証明書スナップイン]** ダイアログ ボックスで **[コンピューター アカウント]** をクリックし、 **[完了]** をクリックします。  
   
-6.  **[スタンドアロン スナップインの追加]** ダイアログ ボックスで **[閉じる]** をクリックします。  
+6.   **[スタンドアロン スナップインの追加]** ダイアログ ボックスで **[閉じる]** をクリックします。  
   
 7.  **[スナップインの追加と削除]** ダイアログ ボックスで **[OK]** をクリックします。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "47788500"
   
 ##  <a name="ConfigureServerConnections"></a> 暗号化された接続を強制するサーバーを構成するには  
   
-1.  **SQL Server 構成マネージャー**で、**[SQL Server ネットワークの構成]** を展開し、**[***\<server instance> のプロトコル]* を右クリックします。次に **[プロパティ]** を選びます。  
+1.  **SQL Server 構成マネージャー**で、**[SQL Server ネットワークの構成]** を展開し、**[**_\<server instance> のプロトコル]_ を右クリックします。次に **[プロパティ]** を選びます。  
   
-2.  **[***\<instance name> のプロトコル]* の **[プロパティ]** ダイアログ ボックスの **[証明書]** タブで、**[証明書]** ボックスのドロップダウンから必要な証明書を選択し、**[OK]** をクリックします。  
+2.  **[**_\<instance name> のプロトコル]_ の **[プロパティ]** ダイアログ ボックスの **[証明書]** タブで、**[証明書]** ボックスのドロップダウンから必要な証明書を選択し、**[OK]** をクリックします。  
   
 3.  **[フラグ]** タブの **[ForceEncryption]** ボックスの一覧の **[はい]** をクリックし、 **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   

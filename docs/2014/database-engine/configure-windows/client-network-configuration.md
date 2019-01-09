@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - client configuration [SQL Server], connections
@@ -19,12 +18,12 @@ ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15e016802fd57a1c9363ceba0dfa22b33ac30126
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 862c13e61513b46b44ce55df9e66170bbb1ac219
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131162"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641053"
 ---
 # <a name="client-network-configuration"></a>クライアント ネットワーク構成
   クライアント ソフトウェアを使用すると、クライアント コンピューターからネットワーク上の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続できます。 "クライアント" は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]など、サーバーが提供するサービスを使用するフロント エンドのアプリケーションです。 こうしたアプリケーションを実行するコンピューターは、 *クライアント コンピューター*と呼ばれます。  
@@ -43,7 +42,7 @@ ms.locfileid: "48131162"
   
 -   DB-Library クライアント  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** コマンド プロンプト ユーティリティや DB-Library に書き込まれるクライアントなどです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の DB-Library を使用したクライアント アプリケーションに対するサポートは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 限定の機能です。  
+      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** コマンド プロンプト ユーティリティや DB-Library に書き込まれるクライアントなどです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の DB-Library を使用したクライアント アプリケーションに対するサポートは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 限定の機能です。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では、DB-Library および Embedded SQL API を使用した既存アプリケーションからの接続が引き続きサポートされますが、これらの API を使用するアプリケーションでのプログラミング作業に必要なファイルやドキュメントは含まれません。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の今後のバージョンでは、DB-Library アプリケーションや Embedded SQL アプリケーションからの接続はサポートされなくなります。 新しいアプリケーションの開発には DB-Library や Embedded SQL を使用しないでください。 DB-Library や Embedded SQL への依存関係は、既存アプリケーションを変更するときに削除してください。 これらの API の代わりに、SQLClient 名前空間または OLE DB や ODBC などの API を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、これらのアプリケーションの実行に必要な DB-Library DLL は含まれていません。 DB-Library アプリケーションまたは Embedded SQL アプリケーションを実行するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 6.5、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0、または [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]から DB-Library DLL を入手する必要があります。  

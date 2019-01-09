@@ -1,24 +1,23 @@
 ---
-title: '手順 2: パッケージ構成の有効化と構成 | Microsoft Docs'
+title: 手順 2:有効にして、パッケージの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33516b6f47a3c4f33d001c225c5a1a60a9802f7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2895a40dbff1215f5f6b2b2d873069f41b1d315
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100803"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747964"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>手順 2 : パッケージ構成の有効化と構成
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>手順 2:有効にして、パッケージの構成
   ここでは、パッケージ構成ウィザードを使用することで、プロジェクトをパッケージ配置モデルに変換してパッケージ構成を有効にします。 ここでは、Foreach ループ コンテナーの `Directory` プロパティの構成設定が記述された XML 構成ファイルを生成します。 Directory プロパティの値は、実行時に更新できる新しいパッケージ レベル変数を使って指定します。 また、テスト時に使用する新しいサンプル データを作成します。  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Directory プロパティにマップする新しいパッケージ レベル変数を作成するには  
@@ -40,11 +39,11 @@ ms.locfileid: "48100803"
   
 7.  **[制御フロー]** タブに戻り、 **[Foreach File in Folder]** コンテナーをダブルクリックします。  
   
-8.  **[Foreach ループ エディター]** の **[コレクション]** ページで、 **[Expressions]** をクリックし、参照ボタン ( **[...]**) をクリックします。  
+8.  **[Foreach ループ エディター]** の **[コレクション]** ページで、**[Expressions]** をクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
 9. **プロパティ式エディター**、クリックして、**プロパティ**一覧`Directory`します。  
   
-10. **[式]** ボックスで、参照ボタン (**[...]**) をクリックします。  
+10. **[式]** ボックスで、参照ボタン ( **[...]** ) をクリックします。  
   
 11. **[式ビルダー]** で [変数] フォルダーを展開し、 **User::varFolderName** 変数を **[式]** ボックスへドラッグします。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48100803"
   
 10. **[構成ファイルの場所の選択]** ダイアログ ボックスで、 **[ファイル名]** に「 **SSISTutorial**」と入力し、 **[保存]** をクリックします。  
   
-11. **[構成の種類の選択]** ページで **[次へ]** をクリックします。  
+11.  **[構成の種類の選択]** ページで **[次へ]** をクリックします。  
   
 12. **[エクスポートするプロパティの選択]** ページの **[オブジェクト]** ペインで、 **[変数]**、 **[varFolderName]**、 **[Properties]** の順に展開し、 **[Value]** チェック ボックスをオンにします。  
   
@@ -106,6 +105,6 @@ ms.locfileid: "48100803"
 3.  `New Sample Data`フォルダーをコピーしたファイルを貼り付けます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 3: Directory プロパティの構成値の変更](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [手順 3:Directory プロパティの構成値の変更](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

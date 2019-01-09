@@ -1,5 +1,5 @@
 ---
-title: 親子ディメンションの単項演算子 |Microsoft ドキュメント
+title: 親子ディメンションの単項演算子 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b7f38bb378650fbd243441086df043295376581
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7d4938bc0eac0d3a5568f668b181af1b4169de27
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023129"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539740"
 ---
-# <a name="parent-child-dimension-attributes---unary-operators"></a>親子ディメンションの属性の単項演算子
+# <a name="parent-child-dimension-attributes---unary-operators"></a>親子ディメンションの属性 - 単項演算子
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の親子リレーションシップを含んでいるディメンションでは、親属性のすべての計算されないメンバーにカスタム ロールアップを指定する、単項 (またはカスタム ロールアップ) 演算子列を指定します。 単項演算子は、親メンバーの値が評価されるたびにメンバーに適用されます。 親属性 ( **Usage** =Parent) の**UnaryOperatorColumn**は、単項演算子を含んでいるテーブル列をデータ ソース ビューで指定します。 この列に格納されるカスタム ロールアップ演算子の値は、属性の各メンバーに適用されます。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の親子リレーションシップを含んでいるディメンションでは、親属性のすべての計算されないメンバーにカスタム ロールアップを指定する、単項 (またはカスタム ロールアップ) 演算子列を指定します。 単項演算子は、親メンバーの値が評価されるたびにメンバーに適用されます。 親属性 ( **Usage** =Parent) の**UnaryOperatorColumn**は、単項演算子を含んでいるテーブル列をデータ ソース ビューで指定します。 この列に格納されるカスタム ロールアップ演算子の値は、属性の各メンバーに適用されます。  
   
  データ ソース ビューでは、ディメンション テーブルの名前付き計算を作成し、単項演算子列として指定できます。 "+" などの単純な式は、すべてのメンバーに関して同じ演算子を返します。 ただし、すべてのメンバーに関して 1 つの演算子を返す式に限り、使用できます。  
   
@@ -26,10 +26,10 @@ ms.locfileid: "34023129"
   
  親属性の **UnaryOperatorColumn** プロパティに対する既定の設定は (none) で、カスタム ロールアップ演算子を無効にします。 次の表は、単項演算子と、レベルに適用された場合の動作を示しています。  
   
-|単項演算子|Description|  
+|単項演算子|説明|  
 |--------------------|-----------------|  
 |+ (正符号)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値に加算されます。 これは、単項演算子列が属性に対して定義されていない場合の既定の演算子です。|  
-|- (負符号)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値から減算されます。|  
+|-(マイナス記号)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値から減算されます。|  
 |* (アスタリスク)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値で乗算されます。|  
 |/ (スラッシュ)|メンバーの値は、そのメンバーの前に出現した兄弟メンバーの集計値で除算されます。|  
 |~ (チルダ)|メンバーの値は無視されます。|  
@@ -43,6 +43,6 @@ ms.locfileid: "34023129"
 ## <a name="see-also"></a>参照  
  [ディメンションの属性のプロパティの参照](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [親子ディメンションのカスタム ロールアップ演算子](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
- [ディメンション デザイナーで、ビジネス インテリジェンス ウィザードを起動します。](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  
+ [ディメンション デザイナーでのビジネス インテリジェンス ウィザードの起動](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  
   
   

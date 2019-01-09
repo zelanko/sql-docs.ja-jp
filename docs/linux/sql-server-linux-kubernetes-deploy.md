@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee92cd702b716ea79f05adaf35f775927710411f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4b42f0a70765744147a44c8b4d274b87cc00ca43
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672451"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215428"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Kubernetes クラスター上の SQL Server Always On 可用性グループをデプロイします。
 
@@ -27,7 +27,7 @@ Kubernetes で、展開には、SQL Server の演算子では、SQL Server の�
 - サービスと可用性グループに接続します。
 - データベースを可用性グループに追加します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 - Kubernetes クラスター
 - Kubernetes バージョン 1.11.0 以降
@@ -35,12 +35,12 @@ Kubernetes で、展開には、SQL Server の演算子では、SQL Server の�
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - アクセス、 [sql server のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)GitHub リポジトリ
 
->[!NOTE]
->Kubernetes クラスターの任意の型を使用することができます。 Azure Kubernetes Service (AKS) での Kubernetes クラスターを作成するを参照してください。 [AKS クラスターの作成](https://docs.microsoft.com/azure/aks/create-cluster)です。
+> [!NOTE]
+> Kubernetes クラスターの任意の型を使用することができます。 Azure Kubernetes Service (AKS) での Kubernetes クラスターを作成するを参照してください。 [AKS クラスターの作成](https://docs.microsoft.com/azure/aks/create-cluster)です。
 > 次のスクリプトでは、Azure で 4 つのノードの Kubernetes クラスターを作成します。
->```azure-cli
-az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
->```
+> ```azure-cli
+> az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
+> ```
 
 ## <a name="deploy-the-operator-sql-server-containers-and-load-balancing-services"></a>演算子、SQL Server のコンテナー、およびサービスの負荷分散展開します。
 
