@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 1: データベース エンジン チューニング アドバイザーでの基本操作 | Microsoft Docs'
+title: レッスン 1:データベース エンジン チューニング アドバイザーでの基本操作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee0b1c221c3bdb18ec9b79339e9dd55cb4eed93e
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: d41c8a3dcc995849fa62ea9a06703d915298eeac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071806"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201781"
 ---
-# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>レッスン 1: データベース エンジン チューニング アドバイザーでの基本操作
+# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>レッスン 1:データベース エンジン チューニング アドバイザーでの基本操作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 データベース エンジン チューニング アドバイザーでは、グラフィカル ユーザー インターフェイス (GUI) を使用して、チューニング セッションやチューニング推奨設定レポートを表示できます。 このレッスンでは、このツールの起動方法および操作画面の構成方法を説明します。 このレッスンを終了すると、ツールの起動と画面の構成を複数の方法で行い、日常的に実行するチューニング タスクに活用できるようになります。  
 
@@ -33,7 +33,7 @@ ms.locfileid: "49071806"
 - [AdventureWorks2017 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)をダウンロードします。
 
 
-SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)に関するページをご覧ください。
+SSMS でデータベースを復元する手順については、ここでは。[データベースを復元する。](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
   > このチュートリアルは、SQL Server Management Studio と基本的なデータベース管理タスクの使用に慣れてユーザーのものでは。 
@@ -62,7 +62,7 @@ SSMS でデータベースを復元する手順については、[データベ�
   
 -   右側のペインには、 **[全般]** タブと **[チューニング オプション]** タブがあります。 これらのタブでデータベース エンジン チューニング セッションを定義します。 **[全般]** タブでは、チューニング セッション名の入力、使用するワークロード ファイルまたはテーブルの指定、およびこのセッションでチューニングするデータベースとテーブルの選択を行います。 ワークロードとは、チューニングするデータベースに対して実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのセットです。 データベースをチューニングする際には、トレース ファイル、トレース テーブル、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト、または XML ファイルがワークロード入力として使用されます。 **[チューニング オプション]** タブでは、物理データベース設計構造 (インデックスまたはインデックス付きビュー) を選択し、その分析時に適用するパーティション分割方法を指定できます。 またこのタブでは、データベース エンジン チューニング アドバイザーがワークロードのチューニングにあてる最大時間を指定することもできます。 既定のワークロード チューニング時間は 1 時間です。  
   
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターから [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スクリプトをインポートする場合、XML ファイルからスクリプトを取り込むことができます。 詳細については、「 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] データベース エンジン チューニング アドバイザーからの出力の表示および操作 [」の](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)クエリ エディターからデータベース エンジン チューニング アドバイザーを起動する方法に関するセクションを参照してください。  
   
 ## <a name="configure-tool-options-and-layout"></a>ツール オプションとレイアウトを構成します。 
@@ -86,7 +86,7 @@ SSMS でデータベースを復元する手順については、[データベ�
     -   データベース エンジン チューニング アドバイザーによるワークロードの分析が完了する前に、間違ってチューニング セッションを停止しないように、既定では **[セッションの分析を停止する前に確認する]** がオンになっています。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 2: データベース エンジン チューニング アドバイザーの使用](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[レッスン 2:データベース エンジン チューニング アドバイザーの使用](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   
