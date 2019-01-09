@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 12/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,22 +19,20 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8c6b8ea4467ddc09a08d21a337b1b5c8c44f34e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bd47fd06404dad6e6896d377e95de677a08c5ae3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538794"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205162"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-指定したバイト ストリームまたはファイル パスから R パッケージをデータベースにアップロードします。
+指定したバイト ストリームまたはファイル パスから R パッケージ ファイルをデータベースにアップロードします。 このステートメントは、データベース管理者が新しい外部言語ランタイム (現在は R のみ) に必要な成果物および [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] でサポートされる OS プラットフォームをアップロードする汎用メカニズムとして機能します。 
 
-このステートメントは、データベース管理者が新しい外部言語ランタイム (R、Python、Java など) に必要な成果物および [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] でサポートされる OS プラットフォームをアップロードするための汎用メカニズムとして機能します。 
-
-現在、R 言語と Windows プラットフォームのみがサポートされています。 Python および Linux は、今後のリリースでサポートされる予定です。
+SQL Server 2017 以降では、R 言語と Windows プラットフォームがサポートされています。 Python および Linux は、今後のリリースでサポートされる予定です。
 
 ## <a name="syntax"></a>構文
 
@@ -94,7 +92,7 @@ WITH ( LANGUAGE = 'R' )
 
 ライブラリのコンテンツのプラットフォームを指定します。 既定値は、SQL Server が実行されているホスト プラットフォームに設定されます。 そのため、ユーザーが値を指定する必要はありません。 複数のプラットフォームがサポートされている場合、またはユーザーが別のプラットフォームを指定する必要がある場合に必要です。 
 
-SQL Server 2017 では、サポートされているプラットフォームは Windows のみです。
+現在サポートされているプラットフォームは Windows のみです。
 
 ## <a name="remarks"></a>Remarks
 
@@ -181,7 +179,7 @@ EXEC sp_execute_external_script
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. バイト ストリームからライブラリを作成する
 
-パッケージ ファイルをサーバー上の場所に保存できない場合は、パッケージのコンテンツを変数で渡すことができます。 次の例では、ビットを 16 進数リテラルとして渡すことで、ライブラリを作成します。
+パッケージ ファイルをサーバー上の場所に保存できない場合は、パッケージのコンテンツを変数で渡すことができます。 次の例では、ビットを 16 進数リテラルとして渡して、ライブラリを作成します。
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
