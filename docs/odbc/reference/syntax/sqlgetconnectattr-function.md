@@ -20,21 +20,21 @@ ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d9006d2b1792e66c1f37faa94c9c4b3f9304f3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a24ccf58a1cd0f6d0f4fb2fd32dbee79feb896b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764360"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204441"
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLGetConnectAttr**接続属性の現在の設定を返します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  どのようなドライバー マネージャーは、ときに、マッピングするには、この関数、ODBC 3 の詳細については *.x*アプリケーションの操作は、ODBC 2 *.x*ドライバーを参照してください[後方のマッピング置換関数アプリケーションの互換性を](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)します。  
   
 ## <a name="syntax"></a>構文  
