@@ -1,5 +1,5 @@
 ---
-title: 解析の変更済みバージョンを使用してサービスのチュートリアル プロジェクト |Microsoft ドキュメント
+title: Services チュートリアル プロジェクトの分析の変更後のバージョンを使用して |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 93847b7e6cade7d77774603ba1852c16a5a783b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4d3fb90b8823ff8a8585647bf60b87ed4098bc6e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017699"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401115"
 ---
-# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>レッスン 4-1-Analysis Services チュートリアル プロジェクトの変更済みバージョンを使用します。
+# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>レッスン 4-1: Analysis Services チュートリアル プロジェクトの修正バージョンを使用します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 このチュートリアルの残りのレッスンでは、最初の 3 つのレッスンで作成した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの修正版を使用します。 まず、新しいテーブルと名前付き計算が **Adventure Works DW 2012** データ ソース ビューに追加されています。次に、新しいディメンションがプロジェクトおよび [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加されています。 そして、2 つ目のメジャー グループが追加されています。このメジャー グループには、2 番目のファクト テーブルのメジャーが含まれています。 修正されたこのプロジェクトを使用すれば、これまでに習得したスキルを繰り返し使用せずに、ビジネス インテリジェンス アプリケーションに機能を追加する方法を学習していくことができます。  
@@ -25,15 +25,15 @@ ms.locfileid: "34017699"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>プロジェクト ファイルのダウンロードと展開  
   
-1.  このチュートリアルのサンプル プロジェクトをダウンロードできるページに移動するには、[ここをクリック](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services)してください。 チュートリアルのプロジェクトに含まれる、 **adventure-works-マルチ ディメンションのチュートリアル-projects.zip**をダウンロードします。  
+1.  このチュートリアルのサンプル プロジェクトをダウンロードできるページに移動するには、[ここをクリック](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) してください。 チュートリアルのプロジェクトに含まれる、 **adventure-機能-マルチ ディメンション-チュートリアル-projects.zip**をダウンロードします。  
   
-2.  をクリックして**adventure-works-マルチ ディメンションのチュートリアル-projects.zip**このチュートリアルでは、プロジェクトを含むパッケージをダウンロードします。  
+2.  クリックして**adventure-機能-マルチ ディメンション-チュートリアル-projects.zip**このチュートリアルでは、プロジェクトを含むパッケージをダウンロードします。  
   
     既定では、.zip ファイルはダウンロード フォルダーに保存されます。 より短いパスの場所に .zip ファイルを移動する必要があります (たとえば、ファイルを保存するための C:\Tutorials フォルダーを作成します)。  その後、.zip ファイルに含まれているファイルを展開します。 長いパスのダウンロード フォルダーからファイルを解凍しようとすると、レッスン 1 しか取得できない場合があります。  
   
 3.  ルート ドライブか、それに近い場所にサブフォルダーを作成します (C:\Tutorial など）。  
   
-4.  移動、 **adventure-works-マルチ ディメンションのチュートリアル-projects.zip**サブフォルダーにファイル。  
+4.  移動、 **adventure-機能-マルチ ディメンション-チュートリアル-projects.zip**サブフォルダーにファイル。  
   
 5.  ファイルを右クリックし、 **[すべて展開]** をクリックします。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "34017699"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>修正したプロジェクトの読み込みと処理  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で **[ファイル]** メニューの **[ソリューションを閉じる]** をクリックして、使用しないファイルを閉じます。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]の**ファイル**メニューのをクリックして**ソリューションを閉じる**を使用しないファイルを閉じます。  
   
-2.  **[ファイル]** メニューの **[開く]** をポイントし、**[プロジェクト/ソリューション]** をクリックします。  
+2.  **[ファイル]** メニューの **[開く]** をポイントし、 **[プロジェクト/ソリューション]** をクリックします。  
   
 3.  チュートリアルのプロジェクト ファイルを展開した場所を参照します。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34017699"
 ## <a name="understanding-the-enhancements-to-the-project"></a>プロジェクトの修正について  
 プロジェクトの修正版は、最初の 3 つのレッスンで作成した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトとは異なります。 この相違点について、次のセクションで説明します。 チュートリアルの残りのレッスンを続ける前に、この情報を確認してください。  
   
-### <a name="data-source-view"></a>データ ソース ビュー  
+### <a name="data-source-view"></a>[データ ソース ビュー]  
 修正したプロジェクトのデータ ソース ビューには、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベースから取得された 1 つのファクト テーブルと 4 つのディメンション テーブルが追加されています。  
   
 このデータ ソース ビューには 10 個のテーブルがあり、 <All Tables> ダイアグラムの情報が整理されていません。 このため、テーブル間のリレーションシップがわかりにくく、簡単には特定のテーブルを探すことができません。 この問題を解決するために、テーブルを 2 つの論理ダイアグラムに整理します。2 つのダイアグラムとは、 **Internet Sales** ダイアグラムと **Reseller Sales** ダイアグラムです。 1 つのファクト テーブルに対し、これらのダイアグラムを 1 つずつ構成します。 1 つのダイアグラムにテーブルやそのリレーションシップをすべて表示しなくとも、論理ダイアグラムを作成することにより、複数のテーブルから特定のサブセットのみをデータ ソース ビューに表示し、操作できます。  
@@ -66,7 +66,7 @@ ms.locfileid: "34017699"
   
 -   **Customer**  
   
--   **日付**  
+-   **Date**  
   
 -   **Product**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34017699"
   
 -   **Geography**  
   
--   **日付**  
+-   **Date**  
   
 -   **Product**  
   
@@ -118,5 +118,5 @@ Geography ディメンションは、 **Adventure Works DW 2012** データ ソ�
 [親子階層の親属性プロパティの定義](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
 ## <a name="see-also"></a>参照  
-[Analysis Services プロジェクトの展開](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+[Analysis Services プロジェクトの配置](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   

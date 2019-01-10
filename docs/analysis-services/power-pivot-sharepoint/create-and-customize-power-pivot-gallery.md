@@ -1,5 +1,5 @@
 ---
-title: 作成し、Power Pivot ギャラリーのカスタマイズ |Microsoft ドキュメント
+title: 作成し、Power Pivot ギャラリーのカスタマイズ |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3c705a54d24b358593b1f1fafec328e3d2fa6fd9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0cc45718f864f14ade20348b5dae76286ea14f3a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025979"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417123"
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34025979"
     >  Power Pivot ギャラリーには、Microsoft Silverlight が必要です。  Microsoft Edge ブラウザーでは、Silverlight がサポートされていません。   
     > Edge でライブラリ コンテンツを表示するには、Power Pivot ギャラリーの **[ライブラリ]** タブをクリックして、ドキュメント ライブラリ ビューを **[すべてのドキュメント]** に変更します。    
     > 既定のビューを変更するには、 **[ライブラリ]** タブをクリックしてから、[ビューの変更] をクリックします。 [このビューを既定のビューにする] をクリックし、[OK] をクリックして既定のビューを保存します。  
-    >  Microsoft Edge のサポート対象について詳しくは、Windows ブログ「 [過去からの離別、第 2 部: ActiveX、VBScript... に別れを告げる](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)」をご覧ください。  
+    >  Edge のサポート対象の詳細については、Windows のブログを参照してください。[以前は、第 2 部からの離別。ActiveX、VBScript に別れを取得しています.](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   ライブラリを作成するには、サイト所有者である必要があります。  
   
@@ -64,13 +64,13 @@ ms.locfileid: "34025979"
 ##  <a name="createlib"></a> PowerPivot ギャラリーの作成  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] をインストールすると、 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] ギャラリーが自動的に作成されます。 既存のファームに [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] を追加した場合、または追加のライブラリが必要な場合は、アプリケーションまたはサイト用の新しいライブラリを作成できます。  
   
-1.  1.  **SharePoint 2010**: サイトのホーム ページの左上にある **[サイトの操作]** をクリックします。  
+1.  1.  **SharePoint 2010**:クリックして**サイトの操作**サイトのホーム ページの左上隅にあります。  
   
     2.  **[その他のオプション]** をクリックします。  
   
     3.  [ライブラリ] の **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー**をクリックします。  
   
-    1.  **SharePoint 2013**: 設定アイコンをクリックして![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")です。 **[サイト コンテンツ]** をクリックします。  
+    1.  **SharePoint 2013**:設定アイコンをクリックして![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")します。 **[サイト コンテンツ]** をクリックします。  
   
     2.  **[アプリケーションの追加]** をクリックします。  
   
@@ -104,9 +104,9 @@ ms.locfileid: "34025979"
   
 2.  リボンで、 **[ライブラリ]** をクリックします。  
   
-3.  **SharePoint 2010:** [ユーザー設定のビュー] で、 **[このビューの変更]** をクリックします。  
+3.  **SharePoint 2010:** カスタム ビュー で次のようにクリックします。**このビューを変更する**します。  
   
-     **SharePoint 2013:** **[ビューの管理]** で、 **[ビューの変更]** をクリックします。  
+     **SharePoint 2013 の場合:****ビューの管理**、 をクリックして**ビューの変更**します。  
   
 4.  [並べ替え] で、一覧でのブックの表示方法を決定するために使用される基準を指定します。 既定では、ドキュメントは追加された順序で表示されます。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "34025979"
   
  ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
- ブックに対するデータ更新をスケジュールするには、ブックの所有者または作成者が **投稿** 権限を持っている必要があります。 投稿権限のあるユーザーは、ブックのデータ更新構成ページを開いて編集し、データの更新に使用する資格情報およびスケジュール情報を指定できます。  
+ ブックに対するデータ更新をスケジュールするには、ブックの所有者または作成者が **投稿** 権限を持っている必要があります。 投稿権限を持つユーザーは、開くおよび資格情報を指定し、データを更新するための情報をスケジュールするブックのデータ更新構成ページを編集できます。  
   
  したがって、 **表示** または **読み取り** 権限レベルのみを持つユーザーは、最新の情報に更新ボタンにアクセスできません。 最新の情報に更新ボタンは表示されますが、無効になっています。 詳細については、「 [SharePoint 2013 のユーザー権限とアクセス許可レベル](http://technet.microsoft.com/library/cc721640.aspx)」を参照してください。  
   
@@ -132,11 +132,11 @@ ms.locfileid: "34025979"
   
  プレビューした各ページのサムネイル スケッチを表示する各種レイアウトの説明を次の表に示します。  
   
-|表示|Description|  
+|表示|説明|  
 |----------|-----------------|  
 |ギャラリー ビュー (既定)|ギャラリーは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーの既定のビューです。 プレビューは左側に表示されます。 その横に、各ワークシートの小さいサムネイルが左から右の順に表示されます。|  
 |[すべてのドキュメント]|これはドキュメント ライブラリの標準のレイアウトです。 個々のドキュメントを管理する場合、またはライブラリ コンテンツを一覧形式で表示する場合にこのビューを選択できます。<br /><br /> プロパティを編集したり、個々のドキュメントを削除または移動するには、このビューを使用します。<br /><br /> バージョン管理を有効にしている場合は、このビューを使用して、ライブラリでドキュメントをチェックインまたはチェックアウトする必要があります。|  
-|シアター ビューとカルーセル ビュー|これらのビューは、少数の関連ドキュメントを表示する場合に最も適した特殊なビューです。 サムネイルの 360 度回転には、ライブラリ内のすべてのドキュメントのすべてのページが含まれます。 ドキュメント数が多い場合、特定の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを検索するか開く必要があるユーザーにとってこれらのビューは非実用的である可能性があります。<br /><br /> シアター ビュー: プレビュー領域は中央にあります。 各ワークシートの小さいサムネイルがページの下部の右側または左側に表示されます。<br /><br /> カルーセル ビュー: プレビュー領域は中央にあります。 現在のサムネイルの直前および直後のサムネイルがプレビュー領域に隣接します。|  
+|シアター ビューとカルーセル ビュー|これらのビューは、少数の関連ドキュメントを表示する場合に最も適した特殊なビューです。 サムネイルの 360 度回転には、ライブラリ内のすべてのドキュメントのすべてのページが含まれます。 ドキュメント数が多い場合、特定の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを検索するか開く必要があるユーザーにとってこれらのビューは非実用的である可能性があります。<br /><br /> シアター ビュー:プレビュー領域が中央に表示されます。 各ワークシートの小さいサムネイルがページの下部の右側または左側に表示されます。<br /><br /> カルーセル ビュー:プレビュー領域が中央に表示されます。 現在のサムネイルの直前および直後のサムネイルがプレビュー領域に隣接します。|  
   
 ### <a name="switch-to-a-different-view"></a>別のビューへの切り替え  
   
@@ -148,8 +148,8 @@ ms.locfileid: "34025979"
   
 ## <a name="see-also"></a>参照  
  [Power Pivot for SharePoint インストールのトラブルシューティング](../../analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md)   
- [Power Pivot ギャラリーを使用](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
- [Power Pivot サイト用の信頼できる場所の作成](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Power Pivot ギャラリーを使用する](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
+ [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Power Pivot ギャラリーの削除](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
   

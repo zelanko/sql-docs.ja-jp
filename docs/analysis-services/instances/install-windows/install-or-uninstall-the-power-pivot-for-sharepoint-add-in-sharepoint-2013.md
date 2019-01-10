@@ -1,5 +1,5 @@
 ---
-title: インストールまたは Power Pivot の SharePoint アドインのアンインストール (SharePoint 2013) |Microsoft ドキュメント
+title: インストールまたは Power Pivot の SharePoint アドインのアンインストール (SharePoint 2013) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c24287c48f450620dfbbebb016c78dd544005da4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1fdc41aaaad19317db3b3795cc63d137b19600c2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018079"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418513"
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>Power Pivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34018079"
   
 -   このアドインは、SharePoint 2013 と SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が含まれるシングル サーバー配置では必須ではありません。 アドインによってインストールされたコンポーネントは、SharePoint モードで [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーをインストールするときに含まれます。 アドインを使用した配置例を示す図については、「 [SQL Server BI 機能の配置トポロジ](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)」を参照してください。  
   
- **注** : このトピックでは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ソリューション ファイルと [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成ツールのインストールについて説明します。 インストールが完了したら、構成ツールと追加機能について「[Power Pivot の構成とソリューションの配置 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)」を参照してください。  
+ **注:** このトピックでは、インストールについて説明します、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ソリューション ファイルと[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 2013 構成ツール。 インストールが完了したら、構成ツールと追加機能について「[Power Pivot の構成とソリューションの配置 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)」をご覧ください。  
   
  **spPowerPivot.msi**をダウンロードする方法の詳細については、「 [Microsoft® SQL Server® 2014 PowerPivot® for Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854)」を参照してください。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34018079"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分析管理オブジェクト。  
   
--   **バックエンド サービス:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel を使用して分析データが含まれたブックを作成した場合、サーバー環境でそのデータにアクセスするには、BI サーバーが SharePoint モードで [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] を実行するように Excel Services を構成する必要があります。 SQL Server セットアップは、SharePoint Server 2013 がインストールされているコンピューターで実行することも、SharePoint ソフトウェアがインストールされていない別のコンピューターで実行することもできます。 Analysis Services には、SharePoint との依存関係はありません。  
+-   **バックエンド サービス:** 使用する場合[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]分析データを含むブックを作成する Excel、Excel Services を実行して、BI サーバー構成が必要[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]サーバー環境でそのデータにアクセスする SharePoint モードでします。 SQL Server セットアップは、SharePoint Server 2013 がインストールされているコンピューターで実行することも、SharePoint ソフトウェアがインストールされていない別のコンピューターで実行することもできます。 Analysis Services には、SharePoint との依存関係はありません。  
   
      バックエンド サービスのインストール、アンインストール、構成の詳細については、次のトピックを参照してください。  
   
@@ -53,12 +53,12 @@ ms.locfileid: "34018079"
 ##  <a name="bkmk_where_to_install"></a> spPowerPivot.msi をインストールする場所  
  ベスト プラクティスとして、構成の一貫性を確保するために、SharePoint ファームのすべてのサーバー (アプリケーション サーバーや Web フロントエンド サーバーなど) に **spPowerPivot.msi** をインストールすることをお勧めします。 インストーラー パッケージには、Analysis Services データ プロバイダーと [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 構成ツールが含まれています。 **spPowerPivot.msi** をインストールするときに、個々のコンポーネントを除外することで、インストールをカスタマイズできます。  
   
- **データ プロバイダー:** SharePoint と SQL Server のさまざまなテクノロジで Analysis Services データ プロバイダー (Excel Services、PerformancePoint Services、Power View など) が使用されます。 **spPowerPivot.msi** をすべての SharePoint サーバーにインストールすると、Analysis Services データ プロバイダーの完全なセットと [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の接続をファーム全体で常に使用できるようになります。  
+ **データ プロバイダー:** SharePoint と SQL Server のいくつかのテクノロジは、Excel Services、PerformancePoint Services、Power View などの Analysis Services データ プロバイダーを使用します。 **spPowerPivot.msi** をすべての SharePoint サーバーにインストールすると、Analysis Services データ プロバイダーの完全なセットと [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の接続をファーム全体で常に使用できるようになります。  
   
 > [!NOTE]  
 >  Analysis Services データ プロバイダーは、 **spPowerPivot.msi**を使用して SharePoint 2013 サーバーにインストールする必要があります。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Feature Pack に用意されている他のインストーラー パッケージには、この環境でデータ プロバイダーが必要とする SharePoint 2013 サポート ファイルが含まれていないため、これらのパッケージはサポートされていません。  
   
- **構成ツール:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成ツールが必須となる SharePoint サーバーは 1 台だけです。 ただし、ベスト プラクティスとして、マルチサーバー ファームでは少なくとも 2 台のサーバーに構成ツールをインストールし、一方のサーバーがオフラインの場合でも構成ツールにアクセスできるようにしておくことをお勧めします。  
+ **構成ツール:**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] For SharePoint 2013 構成ツールは、SharePoint サーバーの 1 つのみで必要です。 ただし、ベスト プラクティスとして、マルチサーバー ファームでは少なくとも 2 台のサーバーに構成ツールをインストールし、一方のサーバーがオフラインの場合でも構成ツールにアクセスできるようにしておくことをお勧めします。  
   
 ##  <a name="bkmk_prereq"></a> 要件と前提条件  
   
@@ -68,7 +68,7 @@ ms.locfileid: "34018079"
   
 -   内のサーバー[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]モード。 Excel Services では、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーとして SQL Server Analysis Services インスタンスを使用します。 Analysis Services は、ローカル コンピューターでもリモート コンピューターでも実行できます。  
   
--   **権限:** [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)]をインストールするには、現在のユーザーがコンピューターの管理者であり、SharePoint ファーム管理者グループのメンバーである必要があります。  
+-   **アクセス許可:**[!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] をインストールするには、現在のユーザーがコンピューターの管理者であり、SharePoint ファーム管理者グループのメンバーである必要があります。  
   
 -   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] の要件と前提条件の詳細については、「 [SharePoint モードの Analysis Service サーバーのハードウェア要件とソフトウェア要件](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)」を参照してください。  
   
@@ -95,14 +95,14 @@ ms.locfileid: "34018079"
   
  `Msiexec.exe /i SpPowerPivot.msi`」を参照してください。  
   
- インストール ログを作成するには、MsiExec の標準のログ スイッチを使用します。 次の例では、"v" 詳細ログ スイッチを使用して、ログ ファイル "Install_Log.txt" を作成します。  
+ インストール ログを作成するには、MsiExec の標準のログ スイッチを使用します。 次の例では、"Install_Log.txt"を"v"詳細ログ スイッチを使用して、ログ ファイルを作成します。  
   
 ```  
 Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt  
 ```  
   
 ### <a name="quiet-command-line-installation-for-scripting"></a>スクリプト作成のためのサイレント コマンド ライン インストール  
- **/q** スイッチまたは **/quiet** スイッチを使用すると、ダイアログや警告が表示されないサイレント インストールを実行できます。 サイレント インストールは、アドインのインストールのスクリプトを作成する場合に役立ちます。  
+ **/q** スイッチまたは **/quiet** スイッチを使用すると、ダイアログや警告が表示されない "サイレント" インストールを実行できます。 サイレント インストールは、アドインのインストールのスクリプトを作成する場合に役立ちます。  
   
 > [!IMPORTANT]  
 >  サイレント コマンド ライン インストールで **/q** スイッチを使用する場合、使用許諾契約書は表示されません。 インストール方法にかかわらず、このソフトウェアの使用は、使用許諾契約に基づいています。ユーザーは使用許諾契約に準拠する責任があります。  
@@ -123,10 +123,10 @@ Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
  spPowerPivot.msi をインストールするときに、コマンド ライン オプションを使用して、 [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 構成ツールではなく、データ プロバイダーなどの特定の項目をインストールすることができます。 構成ツール以外のすべてのコンポーネントをインストールするコマンド ラインの例を次に示します。  
   
 ```  
-Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common”  
+Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common"  
 ```  
   
-|オプション|Description|  
+|オプション|説明|  
 |------------|-----------------|  
 |Analysis_Server_SP_addin|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成|  
 |SQL_OLAPDM|MSOLAP|  
@@ -151,7 +151,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
  **構成ツールを起動するには、次の手順を実行します。**  
   
- Windows のスタート画面から「power」と入力し、[アプリ] の検索結果で **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 の構成**をクリックします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセットアップによって SharePoint 2010 と SharePoint 2013 のそれぞれの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールがインストールされるため、検索結果には 2 つのリンクが含まれる場合があります。 必ず SharePoint 2013 構成ツールの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] を起動してください。  
+ Windows スタート画面から「power」と、アプリの検索結果でクリック **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成**します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセットアップによって SharePoint 2010 と SharePoint 2013 のそれぞれの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールがインストールされるため、検索結果には 2 つのリンクが含まれる場合があります。 必ず SharePoint 2013 構成ツールの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] を起動してください。  
   
  ![2 つの PowerPivot 構成ツール](../../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "2 つの PowerPivot 構成ツール")  
   
@@ -159,7 +159,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
 1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントします。  
   
-2.  [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]をクリックします。  
+2.  [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] をクリックします。  
   
 3.  **[構成ツール]** をクリックします。  
   
@@ -174,11 +174,11 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
  [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] をアンインストールまたは修復するには、次のいずれかの方法を使用します。  
   
-1.  **Windows コントロール パネル:** [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013**] を選択します。 **[アンインストール]** または **[修復]** をクリックします。  
+1.  **Windows コントロール パネル:** 選択[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013**します。 **[アンインストール]** または **[修復]** をクリックします。  
   
 2.  spPowerPivot.msi を実行し、 **[削除]** または **[修復]** を選択します。  
   
- **コマンド ライン:** コマンド ラインを使用して [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 を修復またはアンインストールするには、 **管理者権限で** コマンド プロンプトを開き、次のいずれかのコマンドを実行します。  
+ **コマンドライン:** 修復またはアンインストール[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]コマンド プロンプトを開き、コマンドラインを使用して SharePoint 2013 の**管理者のアクセス許可を持つ**次のコマンドのいずれかを実行します。  
   
 -   修復するには、次のコマンドを実行します。  
   

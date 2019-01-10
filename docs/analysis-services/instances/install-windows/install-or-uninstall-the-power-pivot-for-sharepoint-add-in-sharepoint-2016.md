@@ -1,5 +1,5 @@
 ---
-title: インストールまたは Power Pivot の SharePoint アドインのアンインストール (SharePoint 2016) |Microsoft ドキュメント
+title: インストールまたは Power Pivot の SharePoint アドインのアンインストール (SharePoint 2016) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0251696f4c3007f891a6a5c483db487c527a62ea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4a3fba818dbedfe7d21f3b3a9527ed3b83f085ef
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018329"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407389"
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>PowerPivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] は、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ファームでの [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] データ アクセスを提供するアプリケーション サーバー コンポーネントとバックエンド サービスのコレクションです。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerpivot16.msi**) は、アプリケーション サーバー コンポーネントのインストールに使用されるインストーラー パッケージです。  
   
- **注:** このトピックでは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ソリューション ファイルと [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 構成ツールのインストールについて説明します。 インストールが完了したら、構成ツールと追加機能について「[Power Pivot の構成とソリューションの配置 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)」をご覧ください。  
+ **注:** このトピックでは、インストールについて説明します、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ソリューション ファイルと[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 2016 構成ツール。 インストールが完了したら、構成ツールと追加機能について「[Power Pivot の構成とソリューションの配置 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)」をご覧ください。  
   
  **spPowerPivot16.msi**をダウンロードする方法については、「 [Microsoft® SQL Server® 2016 Power Pivot® for Microsoft SharePoint®](https://www.microsoft.com/download/details.aspx?id=52675)」をご覧ください。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34018329"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分析管理オブジェクト。  
   
--   **バックエンド サービス:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel を使用して分析データが含まれたブックを作成した場合、サーバー環境でそのデータにアクセスするには、BI サーバーが [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードで [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] を実行するように Office Online Server を構成する必要があります。 SQL Server セットアップは、SharePoint Server 2016 がインストールされているコンピューターで実行することも、SharePoint ソフトウェアがインストールされていない別のコンピューターで実行することもできます。 Analysis Services には、SharePoint との依存関係はありません。  
+-   **バックエンド サービス:** 使用する場合[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]分析データを含むブックを作成する Excel、Office Online Server を実行して、BI サーバー構成が必要[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]で[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]サーバー環境でそのデータにアクセスするモード。 SQL Server セットアップは、SharePoint Server 2016 がインストールされているコンピューターで実行することも、SharePoint ソフトウェアがインストールされていない別のコンピューターで実行することもできます。 Analysis Services には、SharePoint との依存関係はありません。  
   
      バックエンド サービスのインストール、アンインストール、構成の詳細については、次のトピックを参照してください。  
   
@@ -49,12 +49,12 @@ ms.locfileid: "34018329"
 ##  <a name="bkmk_where_to_install"></a> spPowerPivot16.msi をインストールする場所  
  ベスト プラクティスとして、構成の一貫性を確保するために、SharePoint ファームのすべてのサーバー (アプリケーション サーバーや Web フロントエンド サーバーなど) に **spPowerPivot16.msi** をインストールすることをお勧めします。 インストーラー パッケージには、Analysis Services データ プロバイダーと [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 構成ツールが含まれています。 **spPowerPivot16.msi** をインストールするときに、個々のコンポーネントを除外することで、インストールをカスタマイズできます。  
   
- **データ プロバイダー:** SharePoint と SQL Server のいくつかのテクノロジで Analysis Services データ プロバイダー (PerformancePoint Services や Power View など) が使用されます。 **spPowerPivot16.msi** をすべての SharePoint サーバーにインストールすると、Analysis Services データ プロバイダーの完全なセットと [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の接続をファーム全体で常に使用できるようになります。  
+ **データ プロバイダー:** いくつかの SharePoint と SQL Server のテクノロジでは、PerformancePoint Services や Power View を含む Analysis Services データ プロバイダーを使用します。 **spPowerPivot16.msi** をすべての SharePoint サーバーにインストールすると、Analysis Services データ プロバイダーの完全なセットと [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の接続をファーム全体で常に使用できるようになります。  
   
 > [!NOTE]  
 >  Analysis Services データ プロバイダーは、 **spPowerPivot16.msi**を使用して SharePoint 2016 サーバーにインストールする必要があります。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Feature Pack に用意されている他のインストーラー パッケージには、この環境でデータ プロバイダーが必要とする SharePoint 2016 サポート ファイルが含まれていないため、これらのパッケージはサポートされていません。  
   
- **構成ツール:** [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 構成ツールが必須となる SharePoint サーバーは 1 台だけです。 ただし、ベスト プラクティスとして、マルチサーバー ファームでは少なくとも 2 台のサーバーに構成ツールをインストールし、一方のサーバーがオフラインの場合でも構成ツールにアクセスできるようにしておくことをお勧めします。  
+ **構成ツール:**[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] SharePoint サーバーの 1 つのみで構成ツールが必要です。 ただし、ベスト プラクティスとして、マルチサーバー ファームでは少なくとも 2 台のサーバーに構成ツールをインストールし、一方のサーバーがオフラインの場合でも構成ツールにアクセスできるようにしておくことをお勧めします。  
   
 ##  <a name="bkmk_prereq"></a> 要件と前提条件  
   
@@ -64,9 +64,9 @@ ms.locfileid: "34018329"
   
 -   内のサーバー[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]モード。 Office Online Server では、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーとして SQL Server Analysis Services インスタンスを使用します。 Analysis Services は、ローカルの SharePoint サーバーでもリモート コンピューターでも実行できます。 Office Online Server にインストールすることはできません。  
   
--   **権限:** [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]をインストールするには、現在のユーザーがコンピューターの管理者であり、SharePoint ファーム管理者グループのメンバーである必要があります。  
+-   **アクセス許可:** インストールする[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]、現在のユーザーには、SharePoint ファーム管理者グループと、コンピューターで、管理者が必要です。  
   
--   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] の要件と前提条件の詳細については、「 [SharePoint モードの Analysis Service サーバーのハードウェア要件とソフトウェア要件](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)」をご覧ください。  
+-   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] の要件と前提条件の詳細については、「 [SharePoint モードの Analysis Service サーバーのハードウェア要件とソフトウェア要件](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)」を参照してください。  
   
 ##  <a name="bkmk_install"></a> Power Pivot for SharePoint をインストールするには  
  **spPowerpivot16.msi** インストーラー パッケージは、グラフィカル ユーザー インターフェイスとコマンド ライン モードの両方をサポートしています。 どちらのインストール方法でも、管理者特権で .msi を実行する必要があります。 インストールが完了したら、構成ツールと追加機能について「[Power Pivot の構成とソリューションの配置 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)」をご覧ください。  
@@ -91,14 +91,14 @@ ms.locfileid: "34018329"
   
  `Msiexec.exe /i spPowerPivot16.msi`」をご覧ください。  
   
- インストール ログを作成するには、MsiExec の標準のログ スイッチを使用します。 次の例では、"v" 詳細ログ スイッチを使用して、ログ ファイル "Install_Log.txt" を作成します。  
+ インストール ログを作成するには、MsiExec の標準のログ スイッチを使用します。 次の例では、"Install_Log.txt"を"v"詳細ログ スイッチを使用して、ログ ファイルを作成します。  
   
 ```  
 Msiexec.exe /i spPowerPivot16.msi /L v c:\test\Install_Log.txt  
 ```  
   
 ### <a name="quiet-command-line-installation-for-scripting"></a>スクリプト作成のためのサイレント コマンド ライン インストール  
- **/q** スイッチまたは **/quiet** スイッチを使用すると、ダイアログや警告が表示されないサイレント インストールを実行できます。 サイレント インストールは、アドインのインストールのスクリプトを作成する場合に役立ちます。  
+ **/q** スイッチまたは **/quiet** スイッチを使用すると、ダイアログや警告が表示されない "サイレント" インストールを実行できます。 サイレント インストールは、アドインのインストールのスクリプトを作成する場合に役立ちます。  
   
 > [!IMPORTANT]  
 >  サイレント コマンド ライン インストールで **/q** スイッチを使用する場合、使用許諾契約書は表示されません。 インストール方法にかかわらず、このソフトウェアの使用は、使用許諾契約に基づいています。ユーザーは使用許諾契約に準拠する責任があります。  
@@ -119,10 +119,10 @@ Msiexec.exe /i spPowerPivot16.msi /L v c:\test\Install_Log.txt
  spPowerPivot16.msi をインストールするときに、コマンド ライン オプションを使用して、 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 構成ツールではなく、データ プロバイダーなどの特定の項目をインストールすることができます。 構成ツール以外のすべてのコンポーネントをインストールするコマンド ラインの例を次に示します。  
   
 ```  
-Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common”  
+Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common"  
 ```  
   
-|オプション|Description|  
+|オプション|説明|  
 |------------|-----------------|  
 |Analysis_Server_SP_addin16|[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 構成|  
 |SQL_OLAPDM|SQL Server 2016 の Analysis Services OLE DB プロバイダー|  
@@ -145,7 +145,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
   
  **構成ツールを起動するには、次の手順を実行します。**  
   
- Windows のスタート画面から「power」と入力し、[アプリ] の検索結果で **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] の構成**を選択します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセットアップによって SharePoint 2013 と SharePoint 2016 のそれぞれの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールがインストールされるため、検索結果には 2 つのリンクが含まれる場合があることに注意してください。 必ず [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 構成ツールを起動してください。  
+ Windows のスタート画面から「power」と、アプリの検索結果で選択**[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]構成**します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセットアップによって SharePoint 2013 と SharePoint 2016 のそれぞれの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールがインストールされるため、検索結果には 2 つのリンクが含まれる場合があることに注意してください。 必ず [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 構成ツールを起動してください。  
   
  ![PowerPivot for SharePoint 2016 構成](../../../analysis-services/instances/install-windows/media/powerpivot-for-sharepoint-2016-configuration.png "PowerPivot for SharePoint 2016 構成")  
   
@@ -168,11 +168,11 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
   
  [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] をアンインストールまたは修復するには、次のいずれかの方法を使用します。  
   
-1.  **Windows コントロール パネル:** [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]**[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]**] を選択します。 **[アンインストール]** または **[修復]** を選択します。  
+1.  **Windows コントロール パネル:** 選択[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]  **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]** します。 **[アンインストール]** または **[修復]** を選択します。  
   
 2.  spPowerPivot16.msi を実行し、 **[削除]** オプションまたは **[修復]** オプションを選択します。  
   
- **コマンド ライン:** コマンド ラインを使用して [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] を修復またはアンインストールするには、 **管理者権限で** コマンド プロンプトを開き、次のいずれかのコマンドを実行します。  
+ **コマンドライン:** 修復またはアンインストール[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]コマンド プロンプトを開き、コマンドラインを使用して**管理者のアクセス許可を持つ**次のコマンドのいずれかを実行します。  
   
 -   修復するには、次のコマンドを実行します。  
   

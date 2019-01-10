@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00a1ff652e3f1463d37e2cd5457965968b4ba4c
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47709560"
@@ -32,10 +32,10 @@ ms.locfileid: "47709560"
  *信頼済みゾーン外は、ハード ドライブへのアクセスが許可されていません。*
 クロス ドメインの信頼関係の低いサイトの関連するスクリプトは、次の操作が無効になります: **Stream.SaveToFile**、 **Stream.LoadFromFile**、 **Recordset.Save**と**Recordset.Open**と組み合わせて使用される、 **adCmdFile**フラグまたは、Microsoft OLE DB 永続化プロバイダーが (MSPersist)。
 
- **Recordset.Open** *、***Recordset.Save** *、***Stream.SaveToFile** *、および***Stream.LoadFromFile***物理ファイルのみで動作します。* 
+ **Recordset.Open** *、* **Recordset.Save** *、* **Stream.SaveToFile** *、および* **Stream.LoadFromFile** *物理ファイルのみで動作します。*
 これらのメソッドは、ファイル ハンドルが指す物理ファイルのみを検証するようになりました。
 
- **Recordset.ActiveCommand***HTML/ASP ページから呼び出されたときにエラーが返されます。* 
+ **Recordset.ActiveCommand** *HTML/ASP ページから呼び出されたときにエラーが返されます。*
 これにより、**コマンド**誤用されるオブジェクト。
 
  *数***レコード セット***、入れ子になったによって返される***図形***コマンドには上限が設けられています。* 

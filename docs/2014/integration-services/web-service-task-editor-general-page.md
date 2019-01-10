@@ -15,12 +15,12 @@ ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32da4424359a7b27ebef6f48c988f9e20c6f4d71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d349947ed06ec406dad4f928cdbbc97838aec409
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090232"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538681"
 ---
 # <a name="web-service-task-editor-general-page"></a>[Web サービス タスク エディター] ([全般] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、HTTP 接続マネージャーの指定、Web サービス タスクで使用する WSDL (Web サービス記述言語) ファイルの場所の指定、Web サービス タスクの記述、WSDL ファイルのダウンロードなどの操作を実行できます。  
@@ -29,12 +29,12 @@ ms.locfileid: "48090232"
   
 ## <a name="options"></a>および  
  **[HTTPConnection]**  
- 接続マネージャーを一覧から選択するか、[\<**新しい接続…**>] をクリックして新しい接続マネージャーを作成します。  
+ 接続マネージャーを一覧から選択するか、\<[**新しい接続...>]** をクリックして新しい接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  HTTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
   
- **関連項目:**  [HTTP 接続マネージャー](connection-manager/http-connection-manager.md), 、[[HTTP 接続マネージャー エディター] ([サーバー] ページ)](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **関連項目:**[HTTP 接続マネージャー](connection-manager/http-connection-manager.md)、 [HTTP 接続マネージャー エディター&#40;サーバーページ&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **[WSDLFile]**  
  コンピューターのローカルにある WSDL ファイルの完全修飾パスを入力するか、参照ボタン ( **[...]** ) をクリックしてファイルを指定します。  
@@ -73,8 +73,8 @@ ms.locfileid: "48090232"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Web サービス タスク エディター &#40;[入力] ページ&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Web サービス タスク エディター&#40;ページの出力&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [[Web サービス タスク エディター] ([入力] ページ)](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [[Web サービス タスク エディター] ([出力] ページ)](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [[式] ページ](expressions/expressions-page.md)  
   
   

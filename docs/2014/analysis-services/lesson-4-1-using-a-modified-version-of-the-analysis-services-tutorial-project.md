@@ -11,12 +11,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70b4a8bedc86023c9eaf1304e61573c4840a62bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194712"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368884"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Analysis Services チュートリアル プロジェクトの修正バージョンの使用
   このチュートリアルの残りのレッスンでは、最初の 3 つのレッスンで作成した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの修正版を使用します。 まず、新しいテーブルと名前付き計算が **Adventure Works DW 2012** データ ソース ビューに追加されています。次に、新しいディメンションがプロジェクトおよび [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加されています。 そして、2 つ目のメジャー グループが追加されています。このメジャー グループには、2 番目のファクト テーブルのメジャーが含まれています。 修正されたこのプロジェクトを使用すれば、これまでに習得したスキルを繰り返し使用せずに、ビジネス インテリジェンス アプリケーションに機能を追加する方法を学習していくことができます。  
@@ -25,7 +25,7 @@ ms.locfileid: "48194712"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>プロジェクト ファイルのダウンロードと展開  
   
-1.  このチュートリアルのサンプル プロジェクトをダウンロードできるページに移動するには、[ここをクリック](http://go.microsoft.com/fwlink/?LinkID=221866) してください。 チュートリアルのプロジェクトは、 **Analysis Services Tutorial SQL Server 2012** ダウンロードに含まれています。  
+1.  このチュートリアルのサンプル プロジェクトをダウンロードできるページに移動するには、[ここをクリック](https://go.microsoft.com/fwlink/?LinkID=221866)してください。 チュートリアルのプロジェクトは、 **Analysis Services Tutorial SQL Server 2012** ダウンロードに含まれています。  
   
 2.  このチュートリアルのプロジェクトを含むパッケージをダウンロードするには、 **[Analysis Services Tutorial SQL Server 2012]** をクリックしてください。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "48194712"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>修正したプロジェクトの読み込みと処理  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で **[ファイル]** メニューの **[ソリューションを閉じる]** をクリックして、使用しないファイルを閉じます。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]の**ファイル**メニューのをクリックして**ソリューションを閉じる**を使用しないファイルを閉じます。  
   
-2.  **[ファイル]** メニューの **[開く]** をポイントし、**[プロジェクト/ソリューション]** をクリックします。  
+2.  **[ファイル]** メニューの **[開く]** をポイントし、 **[プロジェクト/ソリューション]** をクリックします。  
   
 3.  チュートリアルのプロジェクト ファイルを展開した場所を参照します。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48194712"
   
 -   **Customer**  
   
--   **日付**  
+-   **Date**  
   
 -   **Product**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48194712"
   
 -   **Geography**  
   
--   **日付**  
+-   **Date**  
   
 -   **Product**  
   
