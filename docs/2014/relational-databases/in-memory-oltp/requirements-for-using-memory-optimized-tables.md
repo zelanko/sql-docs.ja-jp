@@ -36,7 +36,7 @@ ms.locfileid: "53352421"
   
 -   インメモリ OLTP をインストールするには、 **のインストール時に** [データベース エンジン サービス] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を選択します。  
   
-     レポートの生成をインストールする ([Determining if テーブルまたはストアド プロシージャ Should Be Ported to インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) と[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)](を使用して、インメモリ OLTP を管理する[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]オブジェクト エクスプ ローラー) を選択します**管理ツール-基本**または**管理ツール-高度な**インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。  
+     レポートの生成をインストールする ([Determining if テーブルまたはストアド プロシージャ Should Be Ported to インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) と[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (を使用して、インメモリ OLTP を管理する[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]オブジェクト エクスプ ローラー) を選択します**管理ツール-基本**または**管理ツール-高度な**インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。  
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a> [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
