@@ -3,21 +3,24 @@ title: R と Python の機械学習とプログラミング拡張機能のドキ
 description: SQL Server での R および Python と大規模なエンタープライズ データ分析用の組み込みのデータ サイエンス モデリングおよび機械学習アルゴリズム。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/10/2018
+ms.date: 01/09/2019
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 498a73df26b516856fefe411f5d29bdac8076139
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 7eb5083f17ab08f19b689b3550f979f88495f604
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596543"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206248"
 ---
+# <a name="sql-server-machine-learning"></a>SQL Server Machine Learning
+
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-# <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server Machine Learning とプログラミング拡張機能のドキュメント
+
+## <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server Machine Learning とプログラミング拡張機能のドキュメント
 
 クイック スタート、チュートリアル、および操作方法に関する記事によって、常駐のリレーショナル データに対して R および Python 外部ライブラリおよび言語を使用する方法について説明します。 [SQL Server Machine Learning](what-is-sql-server-machine-learning.md) の R および Python ライブラリには、基本ディストリビューション、データ サイエンス モデル、機械学習アルゴリズム、およびネットワーク上でデータを転送する必要なく、大規模な高パフォーマンス分析を実行するための関数が含まれています。 
 
@@ -31,7 +34,8 @@ SQL Server 2019 では、Java コード実行で、R および Python と同じ�
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sql-server-2017"
-# <a name="sql-server-machine-learning-r-and-python-documentation"></a>SQL Server Machine Learning R および Python ドキュメント
+
+## <a name="sql-server-machine-learning-r-and-python-documentation"></a>SQL Server Machine Learning R および Python ドキュメント
 
 クイック スタート、チュートリアル、および操作方法に関する記事によって、常駐のリレーショナル データに対して R および Python 外部ライブラリおよび言語を使用する方法について説明します。 [SQL Server Machine Learning](what-is-sql-server-machine-learning.md) の R および Python ライブラリには、基本ディストリビューション、データ サイエンス モデル、機械学習アルゴリズム、およびネットワーク上でデータを転送する必要なく、大規模な高パフォーマンス分析を実行するための関数が含まれています。 
 
