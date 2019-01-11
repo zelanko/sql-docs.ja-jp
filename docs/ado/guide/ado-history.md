@@ -38,24 +38,24 @@ ms.locfileid: "47709560"
  **Recordset.ActiveCommand** *HTML/ASP ページから呼び出されたときにエラーが返されます。*
 これにより、**コマンド**誤用されるオブジェクト。
 
- *数***レコード セット***、入れ子になったによって返される***図形***コマンドには上限が設けられています。* 
+ *数***レコード セット** *、入れ子になったによって返される* **図形** *コマンドには上限が設けられています。*
 入れ子になった shape コマンドは 512 の最大値を返すようになりました**レコード セット**します。 つまり、**図形**コマンドは、任意の深さでネスト不要になったことができます。 最大レベルの深さは、512 文字です代わりに、各コマンドを実行する 1 つ (子) の場合**Recordset**します。 任意のレベルでは、場合、**図形**コマンドが複数返されます**レコード セット**レベルの深さの上限は 512 未満になります。
 
 ## <a name="ado-27"></a>ADO 2.7
  *64 ビット プラットフォーム サポート*ADO 2.7 には 64 ビット プロセッサのサポートが導入されています。
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***メソッド*ADO 2.6 以降では、ADO MD 取得できるオブジェクトで指定された一意の名前を使用して、 [UniqueName プロパティ (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)します。   親オブジェクトの名前は、既知である必要はありませんし、親のコレクションは、スキーマ オブジェクトを取得する事前設定する必要はありません。 参照してください[GetSchemaObject メソッド (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)します。
+ **CubDef.GetSchemaObject** *メソッド*ADO 2.6 以降では、ADO MD 取得できるオブジェクトで指定された一意の名前を使用して、 [UniqueName プロパティ (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)します。 親オブジェクトの名前は、既知である必要はありませんし、親のコレクションは、スキーマ オブジェクトを取得する事前設定する必要はありません。 参照してください[GetSchemaObject メソッド (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)します。
 
  *コマンド ストリーム*、**コマンド**オブジェクト ストリーム形式でのコマンドのサポートを使用する代わりに、 **CommandText**プロパティ。 [CommandStream プロパティ (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) XML テンプレートまたはとしてアップデート グラムを指定するために使用できる、**コマンド**for SQL Server、Microsoft OLE DB プロバイダーで入力します。
 
- **言語***プロパティ*[言語](../../ado/reference/ado-api/dialect-property.md)構文を定義する新しいプロパティは、一般的なルールを文字列またはストリームを解析するプロバイダーを使用することです。  
+ **言語** *プロパティ* [言語](../../ado/reference/ado-api/dialect-property.md)構文を定義する新しいプロパティは、一般的なルールを文字列またはストリームを解析するプロバイダーを使用することです。
 
- **Command.Execute***メソッド*、[メソッドの実行](../../ado/reference/ado-api/execute-method-ado-command.md)ADO の**コマンド**オブジェクトは入力と出力のストリームを使用して強化されています。  
+ **Command.Execute** *メソッド*、 [メソッドの実行](../../ado/reference/ado-api/execute-method-ado-command.md)ADO の**コマンド** オブジェクトは入力と出力のストリームを使用して強化されています。
 
  *フィールド statusvalues*を変更する場合、ユーザーは DB_E_ERRORSOCCURRED エラーが発生した場合、**フィールド**の**レコード セット**、ADO に収まるようになりました、 **Field.Status**プロパティを適切な状態情報、ユーザーには、問題点の詳細についてがあるできるようにします。 参照してください[Status プロパティ (ADO Field)](../../ado/reference/ado-api/status-property-ado-field.md)します。
 
- **NamedParameters***プロパティ* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)の新しいプロパティである、**コマンド**という名前のプロバイダーを使用することを示すオブジェクトパラメーター。  
+ **NamedParameters** *プロパティ* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)の新しいプロパティである、**コマンド** という名前のプロバイダーを使用することを示すオブジェクトパラメーター。
 
  *ストリームの結果セット*ADO は、データ ソースから結果セットを返すことができます、 **Stream**、なく**レコード セット**オブジェクト。 Microsoft OLE DB Provider の最新バージョンの SQL Server を使用して取得できます XML の結果、プロバイダーから"XML の"クエリを実行しています。 A **Stream**結果セットを受け取る、ソースとして"XML の"コマンドを使用して開くことができます。 参照してください[をストリームに結果セットを取得する](../../ado/guide/data/retrieving-resultsets-into-streams.md)します。
 
