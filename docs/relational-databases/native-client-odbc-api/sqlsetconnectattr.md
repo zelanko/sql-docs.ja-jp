@@ -1,7 +1,7 @@
 ---
 title: SQLSetConnectAttr |Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7167f88fd1cc3b349df9543080caf6d571322c40
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 0e27df2328474f4123daa9488af88eb7903832be
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306259"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206378"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,7 +36,7 @@ ms.locfileid: "53306259"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で、新しいトランザクション分離レベル属性 SQL_COPT_SS_TXN_ISOLATION のサポートが導入されました。 SQL_COPT_SS_TXN_ISOLATION を SQL_TXN_SS_SNAPSHOT に設定すると、トランザクションがスナップショット分離レベルで実行されることが報告されます。  
   
 > [!NOTE]  
->  SQL_ATTR_TXN_ISOLATION は、SQL_TXN_SS_SNAPSHOT 以外のすべての分離レベルを設定する場合に使用できます。 スナップショット分離を使用する場合は、SQL_COPT_SS_TXN_ISOLATION を使用して SQL_TXN_SS_SNAPSHOT を設定する必要があります。 ただし、スナップショット分離レベルは SQL_ATTR_TXN_ISOLATION または SQL_COPT_SS_TXN_ISOLATION のどちらを使用しても取得することはできます。  
+> SQL_ATTR_TXN_ISOLATION は、SQL_TXN_SS_SNAPSHOT 以外のすべての分離レベルを設定する場合に使用できます。 スナップショット分離を使用する場合は、SQL_COPT_SS_TXN_ISOLATION を使用して SQL_TXN_SS_SNAPSHOT を設定する必要があります。 ただし、スナップショット分離レベルは SQL_ATTR_TXN_ISOLATION または SQL_COPT_SS_TXN_ISOLATION のどちらを使用しても取得することはできます。  
   
  ODBC ステートメントの属性を接続属性に昇格すると、予期しない結果が生じることがあります。 結果セットの処理にサーバー カーソルを必要とするステートメント属性は、接続属性に昇格できます。 たとえば、ODBC ステートメント属性 SQL_ATTR_CONCURRENCY に既定値の SQL_CONCUR_READ_ONLY よりも制限の厳しい値を設定すると、ドライバーはその接続で送信されるすべてのステートメントに動的カーソルを使用します。 この接続から送信されるステートメントで ODBC カタログ関数を実行すると、SQL_SUCCESS_WITH_INFO とカーソルの動作が読み取り専用に変更されたことを示す診断レコードが返されます。 この接続で、COMPUTE 句を含む Transact-SQL の SELECT ステートメントを実行すると、ステートメントの実行に失敗します。  
   
@@ -193,7 +194,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_IS_OFF|既定値です。 ログインでユーザー ID とパスワードの検証に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用します。|  
 |SQL_IS_ON|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対するユーザーのアクセス権の検証に Windows 認証を使用します。|  
 
-< 名前 ="sqlcoptssmarsenabled"></a>
+<a name="sqlcoptssmarsenabled"></a>
 ## <a name="sqlcoptssmarsenabled"></a>SQL_COPT_SS_MARS_ENABLED  
  この属性は、複数のアクティブな結果セット (MARS) を有効または無効にします。 既定では、MARS は無効になっています。 この属性は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続を確立する前に設定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続が開かれると、MARS の設定 (有効または無効) は接続が閉じられるまで維持されます。  
   
@@ -315,7 +316,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  スナップショット分離の詳細については、次を参照してください。[スナップショット分離を使用した作業](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)します。  
   
-## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP  
+## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP
+
  この属性は現在サポートされていません。  
 
 <a name="sqlcoptssuserdata"></a>
@@ -333,7 +335,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_WARN_YES|コード ページの変換中にデータの損失が発生した場合に、警告を表示します。|  
 |SQL_WARN_NO|(既定値) コード ページの変換中にデータの損失が発生した場合に、警告を表示しません。|  
   
-## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>SQLSetConnectAttr によるサービス プリンシパル名 (SPN) のサポート  
+## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>SQLSetConnectAttr によるサービス プリンシパル名 (SPN) のサポート
+
  新しい接続属性である SQL_COPT_SS_SERVER_SPN および SQL_COPT_SS_FAILOVER_PARTNER_SPN の値を設定するのには、SQLSetConnectAttr を使用できます。 接続が開いている場合、これらの属性を設定することはできません。接続が開いているときにこれらの属性を設定しようとすると、"現時点での操作は正しくありません。" というメッセージと共に、エラー HY011 が返されます (SQLSetConnectOption こともできますをこれらの値を設定します。)  
   
  Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)します。  
@@ -344,7 +347,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  SQL_COPT_SS_CONNECTION_DEAD の詳細については、次を参照してください。 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)と[データ ソースに接続する&#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)します。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>例
+
  次の例では、パフォーマンス データがログに記録されます。  
   
 ```  
@@ -388,7 +392,8 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 // Continue on...  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
  [SQLSetConnectAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59368)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   

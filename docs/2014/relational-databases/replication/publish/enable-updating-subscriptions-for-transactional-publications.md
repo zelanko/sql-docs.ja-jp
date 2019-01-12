@@ -14,12 +14,12 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2998ac4c51ea4ea7b289e4ef769acf0f3991f53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784894"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135952"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>トランザクション パブリケーションの更新可能なサブスクリプションの有効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "52784894"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  パブリケーションの新規作成ウィザードの **[パブリケーションの種類]** ページで、トランザクション パブリケーションの更新サブスクリプションを有効にします。 このウィザードの使用の詳細については、「[パブリケーションの作成](create-a-publication.md)」を参照してください。 パブリケーションの作成後は、更新サブスクリプションを有効にすることはできません。  
   
- 更新サブスクリプションを使用するには、サブスクリプションの新規作成ウィザードでオプションも構成する必要があります。 詳細については、「 [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)」を参照してください。  
+ 更新サブスクリプションを使用するには、サブスクリプションの新規作成ウィザードでオプションも構成する必要があります。 詳細については、「 [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)」を参照してください。  
   
 #### <a name="to-enable-updating-subscriptions"></a>更新サブスクリプションを有効にするには  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52784894"
   
 4.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
-5.  サブスクライバーで、このパブリケーションに対する更新サブスクリプションを作成します。 詳しくは、「 [トランザクション パブリケーションの更新可能なサブスクリプションの作成](../create-updatable-subscription-transactional-publication-transact-sql.md)」をご覧ください。  
+5.  サブスクライバーで、このパブリケーションに対する更新サブスクリプションを作成します。 詳しくは、「 [トランザクション パブリケーションの更新可能なサブスクリプションの作成](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)」をご覧ください。  
   
 #### <a name="to-create-a-publication-that-supports-queued-updating-subscriptions"></a>キュー更新サブスクリプションをサポートするパブリケーションを作成するには  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52784894"
   
 5.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
-6.  サブスクライバーで、このパブリケーションに対する更新サブスクリプションを作成します。 詳しくは、「 [トランザクション パブリケーションの更新可能なサブスクリプションの作成](../create-updatable-subscription-transactional-publication-transact-sql.md)」をご覧ください。  
+6.  サブスクライバーで、このパブリケーションに対する更新サブスクリプションを作成します。 詳しくは、「 [トランザクション パブリケーションの更新可能なサブスクリプションの作成](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)」をご覧ください。  
   
 #### <a name="to-change-the-conflict-policy-for-a-publication-that-allows-queued-updating-subscriptions"></a>キュー更新サブスクリプションが可能なパブリケーションの競合ポリシーを変更するには  
   
@@ -105,11 +105,11 @@ ms.locfileid: "52784894"
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
 ## <a name="see-also"></a>参照  
- [キュー更新の競合解決オプションの設定 (SQL Server Management Studio)](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
- [トランザクション レプリケーションで使用するパブリケーションの種類](../transactional/publication-types-for-transactional-replication.md)   
+ [キュー更新の競合解決オプションの設定 (SQL Server Management Studio)](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [トランザクション レプリケーションで使用するパブリケーションの種類](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [sqlcmd でのスクリプト変数の使用](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4daea476dd9d533d8a16365a5260905f9fb22d29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b8d858e8b7ab62ac22902a15159163f8d6d01889
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804304"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133514"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] (トランザクション サブスクリプション)
   **[ディストリビューターからサブスクライバーまでの履歴]** タブでは、ステータス、履歴、情報メッセージ、およびすべてのエラー メッセージを含む、ディストリビューション エージェントの詳細情報が表示されます。  
@@ -62,7 +62,7 @@ ms.locfileid: "52804304"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
- [サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [表示情報とレプリケーション モニターを使用してタスクを実行します。](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)   
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)  
   

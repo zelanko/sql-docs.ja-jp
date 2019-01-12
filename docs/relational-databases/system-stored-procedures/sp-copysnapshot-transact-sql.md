@@ -16,12 +16,12 @@ ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0cb4757d454343b48d5eea74d10d66cdbaa7a52a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d3c8037bdccc0b04e2c11399f09e5a99c109df65
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817194"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134112"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_パブリケーション_**'**  
  スナップショットの内容をコピーするパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@destination_folder=**] **'***destination_folder***'**  
+ [  **@destination_folder=**] **'**_destination_folder_**'**  
  パブリケーションのスナップショットの内容をコピーするフォルダーの名前です。 *destination_folder*は**nvarchar (255)**、既定値はありません。 *Destination_folder*別の場所などの別のサーバー、ネットワーク ドライブ、またはリムーバブル メディア (Cd-rom やリムーバブル ディスク) を指定できます。  
   
- [  **@subscriber=**] **'***サブスクライバー***'**  
+ [  **@subscriber=**] **'**_サブスクライバー_**'**  
  サブスクライバーの名前です。 *サブスクライバー*が sysname で、既定値は NULL です。  
   
- [  **@subscriber_db=**] **'***@subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_@subscriber_db_**'**  
  サブスクリプション データベースの名前です。 *@subscriber_db*が sysname で、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -62,7 +62,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_copysnapshot**します。  
   
 ## <a name="see-also"></a>参照  
- [スナップショット フォルダーの代替位置](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [スナップショット フォルダーの代替位置](../../relational-databases/replication/snapshot-options.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

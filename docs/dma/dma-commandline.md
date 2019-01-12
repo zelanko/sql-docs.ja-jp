@@ -2,7 +2,7 @@
 title: コマンドライン (SQL Server) から Data Migration Assistant を実行 |Microsoft Docs
 description: SQL Server データベースの移行を評価するためのコマンドラインから Data Migration Assistant を実行する方法について説明します
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: c308dc9e0f05ec8abed83a75a3a1d0ea396fd46c
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 7d02ead6a601c47ba68bd12ece8fa444ceee5a9e
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643990"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226399"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>コマンドラインから Data Migration Assistant を実行します。
-Data Migration Assistant をインストールするバージョン 2.1 以降で、ときで dmacmd.exe もインストールされます *%programfiles%\\Microsoft Data Migration Assistant\\*します。 Dmacmd.exe を使用して、無人モードでデータベースを評価し、JSON または CSV ファイルに結果を出力します。 このメソッドは、いくつかのデータベースや巨大なデータベースを評価するときに便利です。 
+Data Migration Assistant をインストールするバージョン 2.1 以降で、ときで dmacmd.exe もインストールされます *%programfiles%\\Microsoft Data Migration Assistant\\*します。 Dmacmd.exe を使用して、無人モードでデータベースを評価し、JSON または CSV ファイルに結果を出力します。 このメソッドは、いくつかのデータベースや巨大なデータベースを評価するときに便利です。 
 
 > [!NOTE]
 > 評価のみを実行している Dmacmd.exe をサポートします。 この時点では、移行はサポートされていません。
@@ -45,7 +45,7 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Dmacmd.exe ヘルプ テキストを使用する方法        | N
 |`/AssessmentName`     |   評価プロジェクトの名前   | Y
 |`/AssessmentDatabases`     | 接続文字列のスペースで区切られた一覧。 データベース名 (初期カタログ) と小文字は区別されます。 | Y
-|`/AssessmentTargetPlatform`     | 評価では、サポートされている値のターゲット プラットフォーム: SqlServer2012、SqlServer2014、SqlServer2016、および AzureSqlDatabaseV12 します。 既定値は SqlServer2016   | N
+|`/AssessmentTargetPlatform`     | 評価では、サポートされている値のターゲット プラットフォーム:SqlServer2012、SqlServer2014、SqlServer2016、および AzureSqlDatabaseV12 します。 既定値は SqlServer2016   | N
 |`/AssessmentEvaluateFeatureParity`  | 機能パリティ ルールを実行します。  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | 互換性規則を実行します。  | Y <br> (AssessmentEvaluateCompatibilityIssues または AssessmentEvaluateRecommendations が必要です)。
 |`/AssessmentEvaluateRecommendations`     | 機能のお勧めを実行します。        | Y <br> (AssessmentEvaluateCompatibilityIssues または必要な AssessmentEvaluateRecommendationsis)
@@ -96,13 +96,13 @@ Catalog=DatabaseName;Integrated Security=true"
 **ターゲット プラットフォームは、SQL Azure データベースの単一データベースの評価結果を .json および .csv のファイルに保存します。**
 
 ```
-DmaCmd.exe /AssessmentName="TestAssessment" 
+DmaCmd.exe /AssessmentName="TestAssessment" 
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
 /AssessmentTargetPlatform="AzureSqlDatabaseV12"
 /AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
-/AssessmentOverwriteResult 
-/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
 /AssessmentResultJson="C:\\temp\\AssessmentReport.json"
 ```
 
@@ -122,24 +122,6 @@ Catalog=DatabaseName3;Integrated Security=true"***
 ```
 
 ## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>CLI を使用して azure の SQL データベースの SKU の推奨事項
-
-> [!IMPORTANT]
-> Azure SQL Database の SKU の推奨事項は、現在使用できる SQL Server 2016 から、またはそれ以降の移行は。
-
-```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationCurrencyCode=USD
-/SkuRecommendationOfferName=MS-AZR-0044p
-/SkuRecommendationRegionName=UKWest
-/SkuRecommendationSubscriptionId=<Your Subscription Id>
-/AzureAuthenticationInteractiveAuthentication=true
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
-```
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation

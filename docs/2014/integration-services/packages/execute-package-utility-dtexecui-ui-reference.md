@@ -23,12 +23,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e01e1c77d67bd19fa01ec1cf07e4e53807651b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5f5b1b235cf3cf3a97198a97ee6a8520a6034635
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797957"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134672"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>パッケージ実行ユーティリティ (DtExecUI) の UI リファレンス
   **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 開くことができます、このユーザー インターフェイス[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または」と入力して`dtexecui`を使用してパッケージを実行する代わりには、コマンド プロンプトで、 **DTExec**コマンド プロンプト ツールです。  
@@ -67,7 +67,7 @@ ms.locfileid: "52797957"
 |||  
 |-|-|  
 |値|説明|  
-|**SQL Server**|パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に存在する場合は、このオプションを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証に使用するユーザー名とパスワードを指定します。 各ユーザー名とパスワードは、 **/USER** *username* および **/PASSWORD** *password* options to the commおよび prompt.|  
+|**SQL Server**|パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に存在する場合は、このオプションを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証に使用するユーザー名とパスワードを指定します。 各ユーザー名とパスワードは、 **/USER** _username_ および **/PASSWORD** _password_ options to the commおよび prompt.|  
 |**ファイル システム**|パッケージがファイル システムに存在する場合は、このオプションを選択します。|  
 |**[SSIS パッケージ ストア]**|パッケージが [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに存在する場合は、このオプションを選択します。|  
   

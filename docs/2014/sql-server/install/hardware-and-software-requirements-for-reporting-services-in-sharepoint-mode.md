@@ -1,7 +1,7 @@
 ---
 title: Hardware and Software Requirements for Reporting Services の SharePoint モード |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -11,14 +11,15 @@ ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ee2cbd875416e1b981d2dfa6006e42529fcf679
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5b70a6a736d9a7f566eb4aa60a37ed7b5151168e
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362604"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206178"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Reporting Services の SharePoint モードに関するハードウェアとソフトウェアの要件
+
   このトピックでは、SharePoint モードで実行している [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の前提条件、ハードウェアの要件、およびインストールに関する注意点について説明します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードには SharePoint Server が必要なため、要件のほとんどは SharePoint 環境に基づきます。 ネイティブ モード レポート サーバーの場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を実行するための最低限のハードウェア要件とソフトウェア要件をハードウェアが満たしている必要があります。 詳細については、「 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)」をご参照ください。  
   
 -   [前提条件](#bkmk_prereq)  
@@ -61,11 +62,13 @@ ms.locfileid: "53362604"
   
 -   レポート サーバー インスタンスの場合、データベースに SQL Server Express Edition を使用することはできません。 ただし、SharePoint 製品によってインストールされる SQL Server Express Edition インスタンスは、他のデータベース エンジン エディションと共存できます。  
   
-##  <a name="bkmk_powerview"></a> [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] の要件  
+##  <a name="bkmk_powerview"></a> [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] の要件
+
  Office.Microsoft.com で最新の [Power View 関連ドキュメント](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) を確認してください。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は Microsoft Excel 2013 の機能の 1 つであり、Microsoft SharePoint Server 2010 および 2013 の Enterprise Edition 用の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services アドインに含まれています。  
   
-##  <a name="bkmk_more_information"></a> その他の情報  
- SharePoint の変更点については、次を参照してください。 [SharePoint 2010 から SharePoint 2013 への変更](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/en-us/library/ff607742(office.15).aspx)します。  
+##  <a name="bkmk_more_information"></a> その他の情報
+
+ SharePoint の変更点については、次を参照してください。 [SharePoint 2010 から SharePoint 2013 への変更](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/library/ff607742(office.15).aspx)します。  
   
  [SQL Server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445).  
   

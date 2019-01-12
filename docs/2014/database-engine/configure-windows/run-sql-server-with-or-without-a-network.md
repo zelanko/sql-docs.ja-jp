@@ -21,12 +21,12 @@ ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ccad9c0c579547f3d032c8f6a4526b8568a7b9c0
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 050986f4c78fc285e936b206c82faef90b89d75e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639500"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134422"
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>ネットワークを使用する場合とネットワークを使用しない場合の SQL Server の実行
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はネットワーク上で実行できます。また、ネットワークを使用せずに機能させることもできます。  
@@ -49,8 +49,8 @@ ms.locfileid: "52639500"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlcmd **などのローカル クライアントからスタンドアロンの**インスタンスに接続するときは、ネットワークを使用せずに、ローカル パイプを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに直接接続します。 ローカル パイプとネットワーク パイプの相違は、ネットワークを使用するかしないかです。 他に指定がない限り、ローカル パイプでもネットワーク パイプでも、標準パイプ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .\pipe\sql\query) を使用して\\\\のインスタンスとの接続が確立されます。  
   
- サーバー名を指定せずにローカル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続しているときは、ローカル パイプを使用していることになります。 ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続し、明示的にサーバー名を指定しているときは、ネットワーク パイプまたは IPX/SPX (Internetwork Packet Exchange/Sequenced Packet Exchange) などの別のネットワーク プロセス間通信 (IPC) メカニズムを使用していることになります (複数のネットワークを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成している場合)。 スタンドアロンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではネットワーク パイプがサポートされないので、クライアントから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、不要な **/***<Server_name>* 引数を省略する必要があります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] osql **からスタンドアロンの**インスタンスに接続するには、次のように入力します。  
+ サーバー名を指定せずにローカル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続しているときは、ローカル パイプを使用していることになります。 ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続し、明示的にサーバー名を指定しているときは、ネットワーク パイプまたは IPX/SPX (Internetwork Packet Exchange/Sequenced Packet Exchange) などの別のネットワーク プロセス間通信 (IPC) メカニズムを使用していることになります (複数のネットワークを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成している場合)。 スタンドアロンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではネットワーク パイプがサポートされないので、クライアントから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、不要な **/**_<Server_name>_ 引数を省略する必要があります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] osql **からスタンドアロンの**インスタンスに接続するには、次のように入力します。  
   
- **osql /Usa /P** *\<saPassword>*  
+ **osql /Usa /P** _\<saPassword>_  
   
   

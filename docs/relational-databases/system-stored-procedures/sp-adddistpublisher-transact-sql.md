@@ -16,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 171618db612b77de63feb2a7e53b248a6ac847b0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 079e2591323b60ea86f93c3cbaedc423cc85d420
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206571"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135043"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_パブリッシャー_**'**  
  パブリッシャー名です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
- [  **@distribution_db=**] **'***distribution_db***'**  
+ [  **@distribution_db=**] **'**_distribution_db_**'**  
  ディストリビューション データベースの名前を指定します。 *distributor_db*は**sysname**、既定値はありません。 このパラメーターは、レプリケーション エージェントがパブリッシャーに接続するために使用します。  
   
  [  **@security_mode=**] *security_mode*  
@@ -62,26 +62,26 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0**|ディストリビューター側のレプリケーション エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用してパブリッシャーに接続します。|  
 |**1** (既定値)|ディストリビューター側のレプリケーション エージェントは Windows 認証を使用してパブリッシャーに接続します。|  
   
- [  **@login=**] **'***ログイン***'**  
+ [  **@login=**] **'**_ログイン_**'**  
  ログインを指定します。 このパラメーターは必要な場合*security_mode*は**0**します。 *login* のデータ型は **sysname** で、既定値は NULL です。 このパラメーターは、レプリケーション エージェントがパブリッシャーに接続するために使用します。  
   
- [  **@password=**] **'***パスワード***'**]  
+ [  **@password=**] **'**_パスワード_**'**]  
  パスワードです。 *パスワード*は**sysname**、既定値は NULL です。 このパラメーターは、レプリケーション エージェントがパブリッシャーに接続するために使用します。  
   
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。  
   
- [  **@working_directory=**] **'***working_directory***'**  
+ [  **@working_directory=**] **'**_working_directory_**'**  
  パブリケーション用のデータ ファイルとスキーマ ファイルの格納に使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)**、および既定値は ReplData フォルダーのこのインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、たとえば`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`します。 名前は UNC 形式で指定する必要があります。  
 
  Azure SQL Database では、使用`\\<storage_account>.file.core.windows.net\<share>`します。
 
- [  **@storage_connection_string =**] **'***storage_connection_string***'**  
+ [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
  SQL データベースに必要です。 Azure Portal からストレージ アクセス キーを使用 > 設定します。
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
- [  **@trusted=**] **'***信頼***'**  
+ [  **@trusted=**] **'**_信頼_**'**  
  このパラメーターは、非推奨であり、旧バージョンとの互換性のためにのみ提供されています。 *信頼された*は**nvarchar (5)**、以外に設定して**false**エラーが発生します。  
   
  [  **@encrypted_password=**] *encrypted_password*  
@@ -95,7 +95,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0** (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
 |**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータベース|  
   
- [ **@publisher_type**=] **'***publisher_type***'**  
+ [ **@publisher_type**=] **'**_publisher_type_**'**  
  パブリッシャーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外の場合に、パブリッシャーの種類を指定します。 *publisher_type*が sysname で、次の値のいずれかを指定できます。  
   
 |値|説明|  

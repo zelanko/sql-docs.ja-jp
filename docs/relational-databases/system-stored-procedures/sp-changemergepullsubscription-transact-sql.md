@@ -16,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a71f486318c9431e25898b36343c67562da5451e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9b7c8e0bd544815b7a26afaccd308d6898e3bc95
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784684"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136132"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +42,19 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_パブリケーション_**'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は % です。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_パブリッシャー_**'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は % です。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は % です。  
   
- [  **@property=**] **'***プロパティ***'**  
+ [  **@property=**] **'**_プロパティ_**'**  
  変更するプロパティの名前を指定します。 *プロパティ*は**sysname**テーブル内の値のいずれかを指定できます。  
   
- [  **@value=**] **'***値***'**  
+ [  **@value=**] **'**_値_**'**  
  指定したプロパティの新しい値です。 *値*は**nvarchar (255)** テーブル内の値のいずれかを指定できます。  
   
 |プロパティ|値|説明|  

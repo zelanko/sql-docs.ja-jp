@@ -15,23 +15,23 @@ ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 623378b83bf0ae248ee2559f2ef18d5cadfc7452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8520607baa223931169300ab2840d364598d0dec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176962"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135133"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>SharePoint ライブラリへのレポートのパブリッシュ
   SharePoint 統合用に構成されている SharePoint サイトにレポートをパブリッシュするには、レポート デザイナーでレポート プロジェクトのプロパティを設定する必要があります。 プロジェクトのプロパティでは、サーバー、レポート、および共有データ ソースへの参照はすべて、完全修飾 URL で指定する必要があります。 レポート定義では、サブレポートや詳細レポートへの参照、および Web ベースの画像などのリソースへの参照はすべて完全修飾 URL で指定する必要があります。  
   
- プロジェクトにプロパティを設定するには、SharePoint サイトの **メンバー** 権限または **所有者** 権限が必要です。 詳細については、「 [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)」を参照してください。  
+ プロジェクトにプロパティを設定するには、SharePoint サイトの **メンバー** 権限または **所有者** 権限が必要です。 詳細については、「 [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 (SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)」を参照してください。  
   
 ### <a name="to-publish-a-report-to-a-sharepoint-site"></a>レポートを SharePoint サイトにパブリッシュするには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で既存または新規のレポート サーバー プロジェクトを開きます。  
   
-2.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 *[\<プロジェクト>*** プロパティ ページ]** ダイアログ ボックスが開きます。  
+2.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 _[\<プロジェクト>_**プロパティ ページ]** ダイアログ ボックスが開きます。  
   
 3.  **[構成]** ボックスで、レポートのビルドとパブリッシュに使用するソリューション ビルド構成の名前を選択します。 現在の構成は **[アクティブ]** (*\<configuration>*) として表示されます。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "48176962"
   
 ## <a name="see-also"></a>参照  
  [[プロパティ ページ] ダイアログ ボックス](../tools/project-property-pages-dialog-box.md)   
- [配置プロパティを設定&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
+ [配置プロパティを設定する &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [レポート サーバーへのレポートのパブリッシュ](publishing-reports-to-a-report-server.md)   
- [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [Office データ接続を使用して、 &#40;.odc&#41;レポート&#40;Reporting Services の SharePoint 統合モード&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 (SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [レポートで Office Data Connection (.odc) を使用する (Reporting Services の SharePoint 統合モード)](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

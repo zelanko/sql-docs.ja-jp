@@ -12,12 +12,12 @@ ms.assetid: 4b983e76-bb77-43c5-b44b-19919d3da619
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5624b58f95ca6a5f47af6269a2bd4cbc6a30033b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3f2a0aa29f032dfed7202430aeb44b20e05c78c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758194"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134972"
 ---
 # <a name="mssqleng014161"></a>MSSQL_ENG014161
     
@@ -35,7 +35,7 @@ ms.locfileid: "52758194"
 ## <a name="explanation"></a>説明  
  レプリケーションでは、いくつかの条件に対して警告を有効にできます。 これには、トランザクション サブスクリプションに指定した待機時間の超過も含まれます。 待機時間とは、パブリッシャーでデータ変更がコミットされてから、サブスクライバーで対応する変更がコミットされるまでの経過時間です。  
   
- レプリケーション モニターまたは [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)を使用して警告を有効にするときは、警告を表示するタイミングを決定するしきい値を指定します。 指定したしきい値に達するか、そのしきい値を超えた場合、警告がレプリケーション モニターに表示され、イベントが Windows イベント ログに書き込まれます。 しきい値に達した時点で、SQL Server エージェントの警告を表示させることもできます。 詳細については、「[レプリケーション モニターのしきい値と警告の設定](monitor/set-thresholds-and-warnings-in-replication-monitor.md)」および「[プログラムによるレプリケーションの監視](monitor/monitoring-replication-overview.md)」を参照してください。  
+ レプリケーション モニターまたは [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)を使用して警告を有効にするときは、警告を表示するタイミングを決定するしきい値を指定します。 指定したしきい値に達するか、そのしきい値を超えた場合、警告がレプリケーション モニターに表示され、イベントが Windows イベント ログに書き込まれます。 しきい値に達した時点で、SQL Server エージェントの警告を表示させることもできます。 詳細については、「[レプリケーション モニターのしきい値と警告の設定](monitor/set-thresholds-and-warnings-in-replication-monitor.md)」および「[プログラムによるレプリケーションの監視](monitoring-replication.md)」を参照してください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
  サブスクリプションが待機時間のしきい値を超えた場合は、システムでパフォーマンスの問題が発生しているかどうか、またはしきい値を調整する必要があるかどうかを確認する必要があります。 レプリケーションを構成したら、パフォーマンス基準を策定します。これにより、アプリケーションおよびトポロジにおける通常のワークロードに対するレプリケーションの動作方法について判断できるようになります。 このパフォーマンス基準には待機時間を組み入れ、適切なしきい値を設定できるようにします。  

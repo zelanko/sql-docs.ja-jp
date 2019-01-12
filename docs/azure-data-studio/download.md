@@ -3,7 +3,7 @@ title: ダウンロードしてインストールする
 titleSuffix: Azure Data Studio
 description: ダウンロードと Windows 用の Azure データ Studio のインストール、macOS、または Linux
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,50 +11,57 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ab531acaf5b8246da6603807760d716ab7ffb74
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: a4f8861d8d7104b536abbf14a7629218c46e577e
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030656"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143062"
 ---
 # <a name="download-and-install-azure-data-studio"></a>ダウンロードし、Azure Data Studio のインストール
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で動作します。
 
-ダウンロードして、最新のリリースでは、インストール、*年 11 月リリース*:
+ダウンロードして、最新のリリースでは、インストール、*年 1 月リリース*:
 
 > [!NOTE]
 > SQL Operations Studio から更新しているし、設定、キーボード ショートカット、またはコード スニペットを保持する場合は、次を参照してください。[ユーザー設定の移動](#move-user-settings)します。
 
 |プラットフォーム|ダウンロード|リリース日| バージョン |
 |:---|:---|:---|:---|
-|Windows|[インストーラー](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2038323)|2018 年 11 月 6 日 |1.2.4|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2038327)|2018 年 11 月 6 日 |1.2.4|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2038405)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)|2018 年 11 月 6 日 |1.2.4|
+|Windows|[ユーザーのインストーラー (推奨)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[システムのインストーラー](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|2019 年 1 月 9日 |1.3.8|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|2019 年 1 月 9日 |1.3.8|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|2019 年 1 月 9日 |1.3.8|
 
 最新のリリースに関する詳細は、次の [リリース ノート](release-notes.md) を参照してください。
 
 ## <a name="get-azure-data-studio-for-windows"></a>Windows 用 Azure Data Studio を入手します。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]のこのリリースは標準的な Windows インストーラーと .zip を含んでいます。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]のこのリリースは標準的な Windows インストーラーと .zip を含んでいます。
 
-**インストーラー**
+**ユーザーのインストーラー** (推奨)
 
-1. [Windows 用の [!INCLUDE[name-sos](../includes/name-sos-short.md)] インストーラー](https://go.microsoft.com/fwlink/?linkid=2038320) ダウンロードして実行します。
-1. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]のアプリを開始します。
+必要ありません、管理者特権のインストールとアップグレードの両方を簡略化するためには、ユーザーのインストーラーをお勧めします。
+
+1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *ユーザー* Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=2049972)します。
+2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]のアプリを開始します。
+
+**システムのインストーラー**
+
+1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *システム*Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=2049975)します。
+2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]のアプリを開始します。
 
 
 **zip ファイル**
 
-1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Windows .zip](https://go.microsoft.com/fwlink/?linkid=2038323) をダウンロードします。
+1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Windows .zip](https://go.microsoft.com/fwlink/?linkid=2050146) をダウンロードします。
 2. ダウンロードしたファイルを参照し、展開します。
 3. `\azuredatastudio-windows\azuredatastudio.exe`を実行します。
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>MacOS 用の Azure データ Studio を入手します。
 
-1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2038327) をダウンロードします。
+1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2049981) をダウンロードします。
 2. zip のコンテンツを展開するには、ダブルクリックします。
 3. させる[!INCLUDE[name-sos](../includes/name-sos-short.md)]で使用できる、*スタート パッド*、ドラッグ*Azure データ Studio.app*を*アプリケーション*フォルダー。
 
@@ -62,9 +69,9 @@ ms.locfileid: "53030656"
 ## <a name="get-azure-data-studio-for-linux"></a>Linux 用 Azure Data Studio を入手します。
 
 1. ダウンロード[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Linux を使用して、インストーラーまたは tar.gz アーカイブのいずれかで。
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2038405)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2050157)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)
 1. ファイルを展開し、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を起動するため、新しいターミナル ウィンドウを開いて次のコマンドを入力します。
 
    **Debian のインストール:**
@@ -131,7 +138,7 @@ Windows インストーラーを使用して[!INCLUDE[name-sos-short](../include
 - Windows 10 (64 ビット)
 - Windows 8.1 (64 ビット)
 - Windows 8 (64 ビット)
-- Windows 7 (SP1) (64 ビット) - [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767) が必要です
+- Windows 7 (SP1) (64 ビット) - [KB2533623](https://www.microsoft.com/download/details.aspx?id=26767) が必要です
 - Windows Server 2016
 - Windows Server 2012 R2 (64 ビット)
 - Windows Server 2012 (64 ビット)
@@ -162,6 +169,13 @@ Windows インストーラーを使用して[!INCLUDE[name-sos-short](../include
 ## <a name="supported-sql-offerings"></a>サポートされる SQL 製品
 
 * このバージョンの Azure データ Studio はすべて[サポート対象バージョンの SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ](https://support.microsoft.com/lifecycle?C2=1044) Azure SQL Database と Azure SQL Data Warehouse で最新のクラウド機能の使用をサポートしています。 Azure Data Studio には、Azure SQL マネージ インスタンスのプレビュー サポートも提供します。
+
+## <a name="upgrade-from-sql-operations-studio"></a>SQL Operations Studio からのアップグレード
+
+SQL Operations Studio を使用している場合は、Azure Data Studio にアップグレードする必要があります。 SQL Operations Studio は、Azure Data Studio のプレビュー バージョンとプレビュー名前でした。 2018 年 9 月に、私たち[Azure Data Studio に名前が変更](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/)と一般公開 (GA) バージョンをリリースしました。 SQL Operations Studio は不要になったされている更新もサポート、SQL Operations Studio のすべてのユーザー要求を最新の機能では、セキュリティ更新プログラムを取得する Azure Data Studio の最新バージョンをダウンロードして、修正するためです。
+ 
+最新の Azure Data Studio には、古いプレビューからアップグレードする際、現在の設定と拡張機能は失われます。 設定を移動するには次の手順に従います*ユーザー設定の移動*セクション。
+
 
 ## <a name="move-user-settings"></a>ユーザー設定を移動します。
 

@@ -16,12 +16,12 @@ ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 947e02d8e4bb7236065293b718b3750d0f248fbb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 21da0ca61d2d9075fe7c962156443fd85f3ebefd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811024"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135134"
 ---
 # <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_login**=] **'***job_login***'**  
+ [ **@job_login**=] **'**_job_login_**'**  
  エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**、既定値は NULL です。  
   
- [ **@job_password**=] **'***job_password***'**  
+ [ **@job_password**=] **'**_job_password_**'**  
  エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値は NULL です。  
   
  [  **@frompublisher=** ] *frompublisher*  

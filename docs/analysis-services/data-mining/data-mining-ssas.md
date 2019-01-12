@@ -1,6 +1,6 @@
 ---
-title: データ マイニング (SSAS) |Microsoft ドキュメント
-ms.date: 05/01/2018
+title: データ マイニング (SSAS) |Microsoft Docs
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: data-mining
@@ -9,15 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7468074eb8a18dd9448e558cadebdc9f07ffc2cb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 163314576f609d6fc34ba55b05eff841d1361182
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014819"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185098"
 ---
 # <a name="data-mining-ssas"></a>データ マイニング (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+> [!IMPORTANT]
+> データ マイニングは、SQL Server Analysis Services 2017 の非推奨とされます。 非推奨の機能では、ドキュメントは更新されません。 詳細についてを参照してください。 [Analysis Services の旧バージョンとの互換性 (SQL 2017)](../analysis-services-backward-compatibility-sql2017.md)します。
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]にデータ マイニング機能を提供することで、バージョン 2000 のリリース以降、予測分析の分野をリードしてきました。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングの組み合わせにより、データ クレンジングと準備、機械学習、およびレポート作成機能を備えた、予測分析の統合プラットフォームを提供しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングには、EM および K-Means クラスタリング モデル、ニューラル ネットワーク、ロジスティック回帰と線形回帰、デシジョン ツリー、Naive Bayes 分類子など、複数の標準的なアルゴリズムが含まれています。 すべてのモデルに視覚エフェクトが統合されており、モデルの開発、調整、および評価が簡単に行えます。  データ マイニングをビジネス インテリジェンス ソリューションに統合することで、複雑な問題に関して合理的な意思決定を行う場合に、この情報を役立てることができます。  
   
 ## <a name="benefits-of-data-mining"></a>データ マイニングの利点  
@@ -28,30 +32,30 @@ ms.locfileid: "34014819"
 ## <a name="key-data-mining-features"></a>データ マイニングの主要機能  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングでは、統合データ マイニング ソリューションをサポートするために次の機能が提供されています。  
   
--   複数のデータ ソース: スプレッドシートやテキスト ファイルなど、任意の表形式のデータ ソースをデータ マイニングに使用することができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で作成した OLAP キューブを簡単にマイニングすることもできます。 ただし、インメモリ データベースからのデータは使用できません。  
+-   複数のデータ ソース:データ マイニングでは、スプレッドシートやテキスト ファイルを含む任意の表形式のデータ ソースを使用することができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で作成した OLAP キューブを簡単にマイニングすることもできます。 ただし、インメモリ データベースからのデータは使用できません。  
   
 -   統合されたデータ クレンジング、データ管理、およびレポート: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、データのプロファイリングとクレンジングのための高度なツールが提供されます。 モデル作成の準備段階でデータ クリーニング用の ETL プロセスを構築できます。また、ssISnoversion により、モデルの再トレーニングと更新が容易になります。  
   
--   複数のカスタマイズ可能なアルゴリズム: クラスタリング、ニューラル ネットワーク、デシジョン ツリーなどのアルゴリズムの提供に加え、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングは、独自のカスタム プラグイン アルゴリズムの開発をサポートします。  
+-   複数のカスタマイズ可能なアルゴリズム:クラスタ リング、ニューラル ネットワーク、デシジョン ツリーなどのアルゴリズムを提供するだけでなく[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ マイニングには、独自のカスタム プラグイン アルゴリズムの開発をサポートします。  
   
--   モデル テスト用インフラストラクチャ: 相互検証、分類マトリックス、リフト チャート、散布図などの重要な統計ツールを使用して、モデルおよびデータ セットをテストできます。 テストおよびトレーニングのセットを容易に作成および管理できます。  
+-   モデル テスト用インフラストラクチャ:相互検証、分類マトリックス、リフト チャート、散布図などの重要な統計ツールを使用して、モデルおよびデータ セットをテストできます。 テストおよびトレーニングのセットを容易に作成および管理できます。  
   
--   クエリおよびドリルスルー: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングでは、予測クエリをアプリケーションに統合するための DMX 言語が提供されます。 モデルから詳細な統計とパターンを取得し、ケース データにドリルスルーすることもできます。  
+-   クエリおよびドリルスルー:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングは、予測クエリをアプリケーションに統合するための DMX 言語を提供します。 モデルから詳細な統計とパターンを取得し、ケース データにドリルスルーすることもできます。  
   
--   クライアント ツール: SQL Server で提供される開発および設計スタジオに加え、Excel 用データ マイニング アドインを使用して、モデルの作成、照会、および参照を行うことができます。 Web サービスなど、カスタムのクライアントを作成することもできます。  
+-   クライアント ツール:SQL Server で提供される開発および設計スタジオに加え、Excel 用データ マイニング アドインを使用して、モデルの作成、照会、および参照を行うことができます。 Web サービスなど、カスタムのクライアントを作成することもできます。  
   
--   スクリプト言語サポートとマネージ API: データ マイニング オブジェクトはすべて、プログラム可能です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用の MDX 拡張機能、XMLA 拡張機能、または、PowerShell 拡張機能により、スクリプトの作成が可能です。 データ マイニング拡張機能 (DMX) 言語を使用すると、クエリとスクリプト作成を迅速に行うことができます。  
+-   スクリプト言語のサポートとマネージド API:すべてのデータ マイニング オブジェクトは、あらゆる点でプログラム可能です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用の MDX 拡張機能、XMLA 拡張機能、または、PowerShell 拡張機能により、スクリプトの作成が可能です。 データ マイニング拡張機能 (DMX) 言語を使用すると、クエリとスクリプト作成を迅速に行うことができます。  
   
--   セキュリティおよび配置: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]により、ロール ベースのセキュリティが提供されます (モデルと構造データへのドリルスルーに、別々の権限を使用できるなど)。 他のサーバーへのモデルの配置が容易であるため、ユーザーがパターンにアクセスし、予測を実行することが可能になります。  
+-   セキュリティと配置:[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] により、ロール ベースのセキュリティが提供されます (モデルと構造データへのドリルスルーに、別々の権限を使用できるなど)。 他のサーバーへのモデルの配置が容易であるため、ユーザーがパターンにアクセスし、予測を実行することが可能になります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  このセクションのトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングの主要機能および関連タスクについて説明します。  
   
 -   [データ マイニングの概念](../../analysis-services/data-mining/data-mining-concepts.md)  
   
--   [データ マイニング アルゴリズムと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+-   [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+-   [マイニング構造 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
 -   [マイニング モデル &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   

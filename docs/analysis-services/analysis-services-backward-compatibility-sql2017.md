@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2017 Analysis Services の旧バージョンとの互換性 |Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29fb46b02e887ceebde293383fda99cbd3ed42be
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072429"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185078"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services の旧バージョンとの互換性 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53072429"
 この記事では、機能の可用性と現在のリリースと以前のリリースの動作の変更について説明します。
 
 ## <a name="deprecated-features"></a>非推奨の機能
-A*非推奨の機能*は将来のリリースで製品から廃止されますはまだサポートされているし、旧バージョンとの互換性を維持するために現在のリリースに含まれます。 今後のリリースとの互換性を維持するために、新規および既存のプロジェクトで非推奨の機能を使用して停止するをお勧めします。
+A*非推奨の機能*は将来のリリースで製品から廃止されますはまだサポートされているし、旧バージョンとの互換性を維持するために現在のリリースに含まれます。 今後のリリースとの互換性を維持するために、新規および既存のプロジェクトで非推奨の機能を使用して停止するをお勧めします。 非推奨の機能では、ドキュメントは更新されません。
 
 次の機能は、このリリースで非推奨とされます。
   

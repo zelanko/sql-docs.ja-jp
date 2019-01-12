@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091262"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134092"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、高可用性と追加のデータベース復旧機能を提供します。  
@@ -191,9 +191,9 @@ ms.locfileid: "48091262"
   
 -   単一の可用性グループ内でマージ レプリケーションとパブリッシング データベースを使用する場合は、次のことが適用されます。  
   
-    -   プッシュ サブスクリプション: パブリッシャーとディストリビューターの両方が少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]を実行する必要があります。  
+    -   プッシュ サブスクリプション:パブリッシャーとディストリビューターの両方を実行する必要がありますには少なくとも[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]します。  
   
-    -   プル サブスクリプション: パブリッシャー、ディストリビューター、およびサブスクライバー データベースは、少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]である必要があります。 これは、可用性グループがセカンダリにフェールオーバーする方法を、サブスクライバー上のマージ エージェントが把握しておく必要があることが原因です。  
+    -   プル サブスクリプション:以上である必要があります、パブリッシャー、ディストリビューターおよびサブスクライバー データベース[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]します。 これは、可用性グループがセカンダリにフェールオーバーする方法を、サブスクライバー上のマージ エージェントが把握しておく必要があることが原因です。  
   
 -   ディストリビューション データベースを可用性グループに配置することはサポートされていません。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "48091262"
 |||||  
 |-|-|-|-|  
 ||**パブリッシャー**|**ディストリビューター** <sup>3</sup>|**サブスクライバー (Subscriber)**|  
-|**トランザクション**|[はい]<sup>1</sup>|いいえ|はい<sup>2</sup>|  
+|**トランザクション**|可<sup>1</sup>|いいえ|はい<sup>2</sup>|  
 |**P2P**|いいえ|いいえ|いいえ|  
 |**Merge**|はい|いいえ|はい<sup>2</sup>|  
 |**スナップショット**|はい|いいえ|はい<sup>2</sup>|  
@@ -231,7 +231,7 @@ ms.locfileid: "48091262"
   
 -   [AlwaysOn パブリケーション データベースのメンテナンス&#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [管理 &#40;レプリケーション&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [レプリケーションの管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   
@@ -253,7 +253,7 @@ ms.locfileid: "48091262"
  [レプリケーション サブスクライバーと AlwaysOn 可用性グループ&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性グループ: 相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [AlwaysOn 可用性グループ:相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [変更データ キャプチャについて &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [変更の追跡について &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [SQL Server のレプリケーション](../../../relational-databases/replication/sql-server-replication.md)   

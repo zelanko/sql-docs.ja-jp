@@ -13,17 +13,17 @@ ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 379357c8598fbdfddedfaa6b3cc5952e2a9119c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ba249d99c991fafc377aee019d666b9fa11df8b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786074"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135622"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>論理レコードの競合の検出および解決
   ここでは、論理レコードの使用時に利用できる、競合検出および競合解決方法のさまざまな組み合わせを紹介します。 マージ レプリケーションでの競合は、複数のノードが同じデータを変更したとき、またはマージ レプリケーションが変更をレプリケートするときに制約違反などの特定の種類のエラーに遭遇したときに発生します。 競合の検出および解決の詳細については、「 [マージ レプリケーションの競合検出および解決の詳細](advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
- アーティクルに対して競合の追跡と競合解決のレベルを指定するには、「 [マージ アーティクルの競合追跡と解決のレベルを指定](../publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)」を参照してください。  
+ アーティクルに対して競合の追跡と競合解決のレベルを指定するには、「 [マージ アーティクルの競合追跡と解決のレベルを指定](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution)」を参照してください。  
   
 ## <a name="conflict-detection"></a>競合検出  
  論理レコードの競合検出方法は、 **column_tracking** と **logical_record_level_conflict_detection**の 2 つのアーティクル プロパティによって決定されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンでは、論理レコード レベルの検出もサポートしています。  

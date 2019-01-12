@@ -12,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810894"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136062"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle パブリッシャーの設計上の注意点および制限
   Oracle データベースからのパブリッシュは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースからのパブリッシュとほぼ同じように機能するように設計されています。 ただし、以下の制限および問題に注意してください。  
@@ -135,7 +135,7 @@ ms.locfileid: "52810894"
   
 -   Oracle パブリケーションに対するサブスクライバーは、バックアップから自動的に初期化することはできません。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。 Oracle パブリッシャーでは、行数検証をサポートしています。 詳細については、「[Validate Replicated Data](../validate-replicated-data.md)」 (レプリケートされたデータの検証) を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。 Oracle パブリッシャーでは、行数検証をサポートしています。 詳細については、「[Validate Replicated Data](../validate-data-at-the-subscriber.md)」 (レプリケートされたデータの検証) を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 Oracle パブリッシャーでは、キャラクター モード スナップショットをサポートしています。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "52810894"
   
     -   [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) または [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql) から **@job_login** パラメーターを変更することはできませんが、パスワードは変更できます。  
   
- レプリケーション セキュリティの詳細については、「[セキュリティと保護 (レプリケーション)](../security/security-and-protection-replication.md)」を参照してください。  
+ レプリケーション セキュリティの詳細については、次を参照してください。 [SQL Server レプリケーションのセキュリティ](../security/view-and-modify-replication-security-settings.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Oracle パブリッシャーの管理上の注意点](administrative-considerations-for-oracle-publishers.md)   

@@ -14,12 +14,12 @@ ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc2cc36a309f74c63ad13f93c9d5e76fb9140900
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770224"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135972"
 ---
 # <a name="rename-columns-database-engine"></a>列名の変更 (データベース エンジン)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブル列の名前を変更することができます。  
@@ -64,7 +64,7 @@ ms.locfileid: "52770224"
   
 2.  **[列名]** の下の変更する名前を選択して、新しい名前を入力します。  
   
-3.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
+3.  **ファイル** メニューの **table name**_の保存_をクリックします。  
   
 > [!NOTE]  
 >  **[列のプロパティ]** タブで列の名前を変更することもできます。名前を変更する列を選択して、 **[名前]** に新しい値を入力します。  

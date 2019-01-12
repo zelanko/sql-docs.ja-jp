@@ -8,12 +8,12 @@ manager: craigg
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 8bccadd8fbce9fe2a8cc6f16db75dbd09f3d1ed0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
-ms.translationtype: MT
+ms.openlocfilehash: 4d3ca6a3e43781b35bfd24f04ee1cf0483b1eb05
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53264364"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206268"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio での SQL Server のビッグ データ クラスターに接続します。
 
@@ -29,7 +29,7 @@ ms.locfileid: "53264364"
 
 ## <a name="connect-to-the-cluster"></a>クラスターに接続します。
 
-ビッグ データ クラスターに接続するときに、SQL Server に接続するオプションがある[マスター インスタンス](concept-master-instance.md)または HDFS/Spark ゲートウェイ。 次のセクションでは、それぞれに接続する方法を示します。
+ビッグ データ クラスターに接続するときに、HDFS/Spark ゲートウェイまたは SQL Server のマスター インスタンスに接続するオプションがあります。 次のセクションでは、それぞれに接続する方法を示します。
 
 ## <a id="master"></a> マスター インスタンス
 
@@ -79,6 +79,9 @@ SQL Server のマスター インスタンスは、SQL Server のリレーショ
 1. Azure Data Studio でキーを押して**F1** > **新しい接続**します。
 
 1. **接続の種類**、**ビッグ データの SQL Server クラスター**します。
+
+   > [!TIP]
+   > 表示されない場合、**ビッグ データの SQL Server クラスター**接続入力をインストールしたかどうかを確認、[拡張機能の SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md)と拡張機能の完了後に Azure Data Studio を再起動します。インストールします。
 
 1. ビッグ データのクラスターの IP アドレスを入力**サーバー名**(ポートを指定しません)。
 

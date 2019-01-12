@@ -16,12 +16,12 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c07d35024358961b1d438d6a0b53cc764bbc479
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781234"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133632"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   キュー更新サブスクリプションによって複数の場所にある同じデータを変更できるため、パブリッシャーでデータを同期するときに競合が起こる可能性があります。 レプリケーションによって、パブリッシャーとデータの変更を同期するときに競合を検出し、パブリケーションを作成したときに選択した解決方法でこれらの競合を解決します。 発生する可能性がある競合は、次のとおりです。  
@@ -54,7 +54,7 @@ ms.locfileid: "52781234"
   
  **キュー更新の競合解決方法を設定するには**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[キュー更新の競合解決オプションの設定 (SQL Server Management Studio)](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[キュー更新の競合解決オプションの設定 (SQL Server Management Studio)](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 -   レプリケーション TRANSACT-SQL プログラミング:[トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   

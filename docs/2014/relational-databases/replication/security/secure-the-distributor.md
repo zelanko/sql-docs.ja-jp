@@ -13,17 +13,17 @@ ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51618b0103a168ab72cab676fdf76ec1da8c3a7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788604"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135502"
 ---
 # <a name="secure-the-distributor"></a>ディストリビューターのセキュリティ保護
   レプリケーション エージェントのうち、ログ リーダー エージェント、スナップショット エージェント、キュー リーダー エージェント、ディストリビューション エージェント、およびマージ エージェントは、ディストリビューターに接続します。 最低限必要な権限のみを与え、かつすべてのパスワードの格納を保護するという原則に従って、これらの各エージェントに対し適切なログインを指定することは重要です。  
   
--   ログインとパスワードの管理の詳細については、「[レプリケーションのログインとパスワードの管理](manage-logins-and-passwords-in-replication.md)」を参照してください。  
+-   ログインとパスワードの管理の詳細については、「[レプリケーションのログインとパスワードの管理](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)」を参照してください。  
   
 -   各エージェントで必要な権限の詳細については、「 [Replication Agent Security Model](replication-agent-security-model.md)」を参照してください。  
   
@@ -48,6 +48,6 @@ ms.locfileid: "52788604"
  [レプリケーションのセキュリティ設定の表示および変更](view-and-modify-replication-security-settings.md)   
  [データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [セキュリティと保護 &#40;レプリケーション&#41;](security-and-protection-replication.md)  
+ [SQL Server レプリケーションのセキュリティ](view-and-modify-replication-security-settings.md)  
   
   

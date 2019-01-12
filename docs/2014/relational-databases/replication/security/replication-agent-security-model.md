@@ -20,15 +20,15 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f34b5accc278a55946546c149c00bffd3a02a693
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811996"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133572"
 ---
 # <a name="replication-agent-security-model"></a>レプリケーション エージェントのセキュリティ モデル
-  レプリケーション エージェントのセキュリティ モデルは、細かく制御するアカウントのレプリケーション エージェントを実行および接続を作成できます。別のアカウントは、各エージェントに対して指定できます。 アカウントを指定する方法の詳細については、「[レプリケーションのログインとパスワードの管理](manage-logins-and-passwords-in-replication.md)」を参照してください。  
+  レプリケーション エージェントのセキュリティ モデルは、細かく制御するアカウントのレプリケーション エージェントを実行および接続を作成できます。別のアカウントは、各エージェントに対して指定できます。 アカウントを指定する方法の詳細については、「[レプリケーションのログインとパスワードの管理](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)」を参照してください。  
   
 > [!IMPORTANT]  
 >  **sysadmin** 固定サーバー ロールのメンバーがレプリケーションを構成する際には、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント アカウントの権限を借用するようにレプリケーション エージェントを構成できます。 このとき、レプリケーション エージェントのログインとパスワードを指定する必要はありませんが、その方法はお勧めしません。 セキュリティ上、このトピックの「エージェントに必要な権限」に記載されている最小限の権限を持った各エージェントのアカウントを指定することをお勧めします。  
@@ -92,7 +92,7 @@ ms.locfileid: "52811996"
   
 ## <a name="see-also"></a>参照  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [セキュリティと保護 &#40;レプリケーション&#41;](security-and-protection-replication.md)   
+ [SQL Server レプリケーションのセキュリティ](view-and-modify-replication-security-settings.md)   
  [スナップショット フォルダーのセキュリティ保護](secure-the-snapshot-folder.md)  
   
   

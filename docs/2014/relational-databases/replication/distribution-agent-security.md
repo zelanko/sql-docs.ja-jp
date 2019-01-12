@@ -14,12 +14,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a28ee9f405e589e7956be4391f22d9ea2a46388
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815524"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135527"
 ---
 # <a name="distribution-agent-security"></a>[ディストリビューション エージェント セキュリティ]
   **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスを使用すると、ディストリビューション エージェントを実行する Windows アカウントを指定できます。 ディストリビューション エージェントは、プッシュ サブスクリプションのディストリビューターと、プル サブスクリプションのサブスクライバーで動作します。 エージェント プロセスはこのアカウントで実行されるため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントは、 *プロセス アカウント*としても参照されます。 ダイアログ ボックスで使用できる追加オプションは、次に示すアクセスの方法によって異なります。  
@@ -94,7 +94,7 @@ Persist Security Info=False;Connection Pooling=True;
  文字列内のオプションの多くは、接続する DB2 サーバーに固有のものですが、 **Process Binary as Character** オプションは常に **False**に設定する必要があります。 サブスクリプション データベースを識別するため、 **Initial Catalog** オプションに値が必要です。 詳細については、「 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションのログインとパスワードの管理](security/manage-logins-and-passwords-in-replication.md)   
+ [レプリケーションのログインとパスワードの管理](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [レプリケーション エージェントのセキュリティ モデル](security/replication-agent-security-model.md)   
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   

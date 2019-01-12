@@ -10,12 +10,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5113730b1920fb1cd6ecf305e03614e3de894a8e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366854"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136052"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>SQL Server をストレージ オプションとして SMB ファイル共有にインストールする
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、システム データベース (Master、Model、MSDB、および TempDB) と[!INCLUDE[ssDE](../../includes/ssde-md.md)] ユーザー データベースをストレージ オプションとしてサーバー メッセージ ブロック (SMB) ファイル サーバーにインストールできます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スタンドアロン インストールと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール (FCI) の両方に当てはまります。  
@@ -98,11 +98,11 @@ ms.locfileid: "53366854"
     > [!NOTE]  
     >  SMB 共有フォルダーに対するフル コントロールの共有権限と NTFS 権限は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウント、および管理サーバー ロールを持つ Windows ユーザーに制限する必要があります。  
   
-     ドメイン アカウントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとして使用することをお勧めします。 サービス アカウントとしてシステム アカウントを使用すると場合の形式でコンピューター アカウントのアクセス許可を付与します。 * < domain_name >***\\***< computer_name > ***$** します。  
+     ドメイン アカウントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとして使用することをお勧めします。 システム アカウントをサービス アカウントとして使用した場合、コンピューター アカウントのアクセス許可を _<ドメイン名>_**\\**_<コンピューター名>_**$** という形式で指定できます。  
   
     > [!NOTE]  
     >  -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで、ストレージ オプションとして SMB ファイル共有を指定した場合は、ドメイン アカウントをサービス アカウントとして指定する必要があります。 SMB ファイル共有を使用する場合、システム アカウントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール後にのみサービス アカウントとして指定することができます。  
-    > -   仮想アカウントでは、リモートの場所へアクセスすることはできません。 どの仮想アカウントも、コンピューター アカウントの権限を使用します。 *<domain_name>***\\***<computer_name>***$** の形式でコンピューター アカウントを準備してください。  
+    > -   仮想アカウントでは、リモートの場所へアクセスすることはできません。 どの仮想アカウントも、コンピューター アカウントの権限を使用します。 _<domain_name>_**\\**_<computer_name>_**$** の形式でコンピューター アカウントを準備してください。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに使用するアカウントには、クラスター セットアップの際にデータ ディレクトリとして使用される、SMB ファイル共有フォルダーおよび他のすべてのデータ フォルダー (ユーザー データベース ディレクトリ、ユーザー データベース ログ ディレクトリ、TempDB ディレクトリ、TempDB ログ ディレクトリ、バックアップ ディレクトリ) に対して、フル コントロール権限が必要です。  
   

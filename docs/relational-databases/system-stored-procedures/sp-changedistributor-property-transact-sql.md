@@ -16,12 +16,12 @@ ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f769e45d80dd54c6e006297e46ee9cf8ad2da92e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 12ba78e62b0441a76cea2b10ebaf13caec767443
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819134"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133902"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@property=**] **'***プロパティ***'**  
+ [  **@property=**] **'**_プロパティ_**'**  
  対象となるディストリビューターのプロパティを指定します。 *プロパティ*は**sysname**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
@@ -47,7 +47,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 |**heartbeat_interval**|エージェントが進行状況のメッセージをログに記録せずに実行を継続できる最大時間 (分) です。|  
 |NULL (既定値)|使用可能なすべて*プロパティ*値が出力されます。|  
   
- [  **@value=**] **'***値***'**  
+ [  **@value=**] **'**_値_**'**  
  対象となるディストリビューター プロパティの値を指定します。 *値*は**varchar (255)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

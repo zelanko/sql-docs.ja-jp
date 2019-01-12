@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: 9c1f2fbb750dcdf8e5d78ddcfd5004a32c0cc209
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
-ms.translationtype: MT
+ms.openlocfilehash: 4d4e39da3176223305fe02a8931ff9d2c34a64c4
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246751"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206355"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法
 
@@ -77,7 +77,7 @@ Kubernetes クラスターを構成した後は、SQL Server のビッグ デー
 kubectl config view
 ```
 
-## <a name="define-environment-variables"></a>環境変数を定義します。
+## <a id="env"></a> 環境変数を定義します。
 
 渡される環境変数のセットを使用して、クラスター構成をカスタマイズすることができます、`mssqlctl create cluster`コマンド。 環境変数のほとんどは、以下に従って既定値を持つ省略可能です。 資格情報をユーザー入力を必要とするように環境変数があることに注意してください。
 

@@ -12,12 +12,12 @@ ms.assetid: cd81b601-2ec3-4358-ad58-c2655496e6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f702f591b16059c1c8ca6aa44d467b900c7c22e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b9461a26140215f2c72d9cf9113877a85767bd77
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794305"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134902"
 ---
 # <a name="mssqleng014164"></a>MSSQL_ENG014164
     
@@ -35,7 +35,7 @@ ms.locfileid: "52794305"
 ## <a name="explanation"></a>説明  
  レプリケーションでは、いくつかの条件に対して警告を有効にできます。 これには、マージ パブリッシャーとサブスクライバー間で変更を同期する際、十分な数の行を処理できないエラーも含まれます。 LAN 接続とダイヤルアップ接続には異なる時間を指定できます。  
   
- レプリケーション モニターまたは [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)を使用して警告を有効にするときは、警告を表示するタイミングを決定するしきい値を指定します。 指定したしきい値に達するか、そのしきい値を超えた場合、警告がレプリケーション モニターに表示され、イベントが Windows イベント ログに書き込まれます。 しきい値に達した時点で、SQL Server エージェントの警告を表示させることもできます。 詳細については、「[レプリケーション モニターのしきい値と警告の設定](monitor/set-thresholds-and-warnings-in-replication-monitor.md)」および「[プログラムによるレプリケーションの監視](monitor/monitoring-replication-overview.md)」を参照してください。  
+ レプリケーション モニターまたは [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)を使用して警告を有効にするときは、警告を表示するタイミングを決定するしきい値を指定します。 指定したしきい値に達するか、そのしきい値を超えた場合、警告がレプリケーション モニターに表示され、イベントが Windows イベント ログに書き込まれます。 しきい値に達した時点で、SQL Server エージェントの警告を表示させることもできます。 詳細については、「[レプリケーション モニターのしきい値と警告の設定](monitor/set-thresholds-and-warnings-in-replication-monitor.md)」および「[プログラムによるレプリケーションの監視](monitoring-replication.md)」を参照してください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
  サブスクリプションが行処理しきい値に達していない場合、システムでパフォーマンスの問題が発生しているかどうか、またはしきい値を調整する必要があるかどうかを確認する必要があります。 レプリケーションを構成したら、パフォーマンス基準を策定します。これにより、アプリケーションおよびトポロジにおける通常のワークロードに対するレプリケーションの動作方法について判断できるようになります。 このパフォーマンス基準に処理される行数を組み入れ、適切なしきい値を設定できるようにします。  

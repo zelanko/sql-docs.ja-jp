@@ -12,12 +12,12 @@ ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ad635cc5dea991c1857831d874de6482b5a9b0d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0558ded6ed10284df39270ddeca9d92434daf40e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816864"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133732"
 ---
 # <a name="mssqleng018752"></a>MSSQL_ENG018752
     
@@ -48,7 +48,7 @@ ms.locfileid: "52816864"
 ## <a name="user-action"></a>ユーザーの操作  
  次の手順を実行して、この問題に対するトラブルシューティングに役立てることができます。 いずれかの手順によって、ログ リーダー エージェントをエラーを発生させないで起動できるようになった場合は、残りの手順を実行する必要はありません。  
   
--   このエラーの発生原因となる可能性があるその他のエラーについて、ログ リーダー エージェントの履歴を確認します。 レプリケーション モニターでエージェントの状態やエラーの詳細を表示する方法については、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)」を参照してください。  
+-   このエラーの発生原因となる可能性があるその他のエラーについて、ログ リーダー エージェントの履歴を確認します。 レプリケーション モニターでエージェントの状態とエラーの詳細を表示する方法の詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
 -   パブリッシュされたデータベースに接続されている特定のプロセス識別番号 (SPID) に対応する [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) の出力を確認します。 **sp_repldone**、 **sp_replcmds**、または **sp_replshowcmds**を実行していた可能性のある接続をすべて閉じます。  
   

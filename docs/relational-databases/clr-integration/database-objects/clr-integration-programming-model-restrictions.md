@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9d42017e3dfd6016d8b4a42c6953905e804200f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538526"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136022"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 統合プログラミング モデルの制限事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "52538526"
   
 -   サポートされているアセンブリの 1 つであること。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)します。  
   
--   使用している **CREATE ASSEMBLY FROM * * *\<場所 >、* で使用できるすべての参照アセンブリとその依存関係と*\<場所 >* します。  
+-   使用している**アセンブリから作成**_\<場所 >、_ で使用できるすべての参照アセンブリとその依存関係と*\<場所 >*.  
   
--   使用している **CREATE ASSEMBLY FROM * * *\<バイト... >、* 区切りのスペースを使用して、参照が指定のすべてのバイトとします。  
+-   使用する**アセンブリから作成**_\<バイト... >、_ 区切りのスペースを使用して、参照が指定のすべてのバイトとします。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  すべて**EXTERNAL_ACCESS**アセンブリは、次の条件を満たす必要があります。  

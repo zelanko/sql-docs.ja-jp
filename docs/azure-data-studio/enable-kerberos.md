@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: b73e144dd362691ea93b3312f6dc10ce542f1c43
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 02e5e0ba4bd7300d71d95d5e3572ce4e09ac3bd4
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030216"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143330"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>接続[!INCLUDE[name-sos](../includes/name-sos-short.md)]Windows 認証に Kerberos を使用して、SQL server 
 
@@ -27,7 +27,7 @@ MacOS または Linux で統合認証 (Windows 認証) を使用するために�
 ## <a name="prerequisites"></a>前提条件
 
 - Kerberos ドメイン コント ローラーのクエリを実行するには、Windows ドメインに参加しているマシンへのアクセス。
-- SQL Server は、Kerberos 認証を許可するように構成する必要があります。 Unix で実行されている、クライアント ドライバーは、Kerberos を使用してのみ統合認証サポートされます。 Kerberos を使用して認証を設定する Sql Server の詳細についてはあります[ここ](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server)します。 Spn を接続しようとしている Sql Server のインスタンスごとに登録されている必要があります。 SQL Server の Spn の形式の詳細が表示されている[ここ](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server は、Kerberos 認証を許可するように構成する必要があります。 Unix で実行されている、クライアント ドライバーは、Kerberos を使用してのみ統合認証サポートされます。 Kerberos を使用して認証を設定する Sql Server の詳細についてはあります[ここ](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server)します。 Spn を接続しようとしている Sql Server のインスタンスごとに登録されている必要があります。 SQL Server の Spn の形式の詳細が表示されている[ここ](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>確認のかどうか、Sql Server は Kerberos のセットアップ

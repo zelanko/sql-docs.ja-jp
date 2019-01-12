@@ -18,12 +18,12 @@ ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bdd411323c78f3289a2855002adcedef3a975b40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 06bfc2148f7a367fa02d94109e9b5b8a250fd1f9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814224"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133782"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>プル サブスクリプションのプロパティの表示または変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、プル サブスクリプションのプロパティを表示および変更する方法について説明します。  
@@ -159,8 +159,8 @@ ms.locfileid: "52814224"
 8.  すべての接続を閉じます。  
   
 ## <a name="see-also"></a>参照  
- [サブスクリプションの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [レプリケーション セキュリティの推奨事項](security/replication-security-best-practices.md)   
+ [表示情報とレプリケーション モニターを使用してタスクを実行します。](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [パブリケーションのサブスクライブ](subscribe-to-publications.md)  
   
   

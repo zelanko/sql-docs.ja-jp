@@ -16,12 +16,12 @@ ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8f212c0762f696ed7341a5df2fad449eb20bb31
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 55fc802a476d22514251f7a399974283603ea853
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802524"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135592"
 ---
 # <a name="spenumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@distributor =**] **'***ディストリビューター***'**  
+ [  **@distributor =**] **'**_ディストリビューター_**'**  
  カスタム競合回避モジュールが配置されているディストリビューターの名前です。 *ディストリビューター*は**sysname**、既定値は NULL です。 *このパラメーターは非推奨し、将来のリリースで削除される予定です。*  
   
 ## <a name="result-sets"></a>結果セット  

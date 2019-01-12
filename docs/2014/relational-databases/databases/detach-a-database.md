@@ -15,12 +15,12 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20dce5a584d7ae990b25dd10312c9474bd08c873
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749064"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134642"
 ---
 # <a name="detach-a-database"></a>データベースのデタッチ
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースをデタッチする方法について説明します。 デタッチされたファイルはそのまま残り、FOR ATTACH または FOR ATTACH_REBUILD_LOG オプションを指定した CREATE DATABASE によって再アタッチできます。 ファイルを別のサーバーに移動し、そこにアタッチすることもできます。  
@@ -85,7 +85,7 @@ ms.locfileid: "52749064"
   
     -   データベースがレプリケーションに含まれている場合、 **[状態]** は **[準備ができていません]** になり、 **[メッセージ]** 列に **[データベースがレプリケートされました]** と表示されます。  
   
-    -   データベースに 1 つまたは複数のアクティブな接続、**状態**は**準備ができていません**と**メッセージ**列が表示されます *< number_of_active_connections> * * * アクティブな接続** - 例。**1 のアクティブな接続**します。 データベースをデタッチするには、 **[接続の削除]** を選択してアクティブな接続を切断する必要があります。  
+    -   データベースに 1 つまたは複数のアクティブな接続、**状態**は**準備ができていません**と**メッセージ**列が表示されます _< number_of_active_connections>_**アクティブな接続**- 例。**1 のアクティブな接続**します。 データベースをデタッチするには、 **[接続の削除]** を選択してアクティブな接続を切断する必要があります。  
   
      メッセージについてより詳しい情報を得るには、ハイパーリンクのテキストをクリックして利用状況モニターを開きます。  
   

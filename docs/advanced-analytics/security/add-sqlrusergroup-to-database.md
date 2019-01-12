@@ -1,6 +1,6 @@
 ---
-title: データベース ユーザー - SQL Server Machine Learning のサービスとしての SQLRUserGroup を追加します。
-description: ループバック接続は暗黙の認証を使用して、ワーカー アカウントは id の変換、呼び出し元のユーザーに、サーバーにログインできるように、データベース ユーザーとして SQLRUserGroup を追加します。
+title: SQL Server Machine Learning サービス - SQL Server ログインとしての SQLRUserGroup を追加します。
+description: ループバック接続は暗黙の認証を使用して、ワーカー アカウントは id の変換、呼び出し元のユーザーに、サーバーにログインできるように SQL Server ログインとして SQLRUserGroup を追加します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 0bc84a7a4cfae14ea19491c42e828d0a93cdfba7
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432355"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143422"
 ---
-# <a name="add-sqlrusergroup-as-a-database-user"></a>データベース ユーザーとしての SQLRUserGroup の追加
+# <a name="add-sqlrusergroup-as-a-sql-server-login"></a>SQL Server ログインとしての SQLRUserGroup を追加します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-データベース ログインを作成[SQLRUserGroup](../concepts/security.md#sqlrusergroup)ときに、[ループバック接続をループ](../../advanced-analytics/concepts/security.md#implied-authentication)、スクリプトを指定します、*信頼関係接続*、およびオブジェクトの実行に使用される id含まれています、コードは、Windows ユーザー アカウント。
+SQL Server ログインを作成[SQLRUserGroup](../concepts/security.md#sqlrusergroup)ときに、[ループバック接続をループ](../../advanced-analytics/concepts/security.md#implied-authentication)、スクリプトを指定します、*信頼関係接続*とオブジェクトの実行に使用される id含まれています、コードは、Windows ユーザー アカウント。
 
 接続がある信頼された`Trusted_Connection=True`接続文字列にします。 SQL Server では、信頼関係接続を指定する要求を受信したときに、現在の Windows ユーザーの id が、ログインを持つかどうかをチェックします。 ワーカー アカウントとして実行すると、外部プロセス用 (から MSSQLSERVER01 など**SQLRUserGroup**)、それらのアカウントでは、既定では、ログインはありませんので、要求は失敗します。
 

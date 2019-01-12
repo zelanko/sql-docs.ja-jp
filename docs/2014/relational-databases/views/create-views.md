@@ -12,12 +12,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5eaa6c702c02a3258ac66ec55081965d25a12a55
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541816"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134402"
 ---
 # <a name="create-views"></a>ビューの作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ビューを作成できます。 ビューは、次の目的で使用できます。  
@@ -70,7 +70,7 @@ ms.locfileid: "52541816"
   
 6.  **抽出条件ペイン**で、列の追加の並べ替え条件またはフィルター条件を選択します。  
   
-7.  **[ファイル]** メニューの *[*view name の保存***]* をクリックします。  
+7.  **ファイル** メニューの **view name**_の保存_をクリックします。  
   
 8.  **[名前の選択]** ダイアログ ボックスで、新しいビューの名前を入力し、 **[OK]** をクリックします。  
   

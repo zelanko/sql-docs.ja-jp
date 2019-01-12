@@ -12,12 +12,12 @@ ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e34d70b84e20f8c4f65e09baad9d8388aa96fca3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b9445c7b366a43253da4accabaf98d9c5b7f8d92
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806214"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134942"
 ---
 # <a name="subscriber-types"></a>サブスクライバーの種類
   マージ レプリケーションを使用すると、パブリケーションがサポートする必要があるサブスクライバーの種類を指定することができます。 サブスクライバーの種類を選択することで、パブリケーションが使用できる機能を決定する *パブリケーションの互換性レベル*が設定されます。  
@@ -38,7 +38,6 @@ ms.locfileid: "52806214"
 ## <a name="see-also"></a>参照  
  [データとデータベース オブジェクトのパブリッシュ](publish/publish-data-and-database-objects.md)   
  [Create a Publication](publish/create-a-publication.md)   
- [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](view-and-modify-distributor-and-publisher-properties.md)   
- [プロパティ リファレンス &#40;レプリケーション&#41;](properties-reference-replication.md)  
-  
+ [ディストリビューターとパブリッシャーのプロパティの表示および変更](view-and-modify-distributor-and-publisher-properties.md)   
+
   

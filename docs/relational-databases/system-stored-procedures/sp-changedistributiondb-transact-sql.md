@@ -16,12 +16,12 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f38ef40a1e64544d077f30031fe128070cef2fd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 031fc14eba8cdea8cdbff41d18d6e6ab6bc42a68
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819204"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133852"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@database=**] **'***データベース***'**  
+ [  **@database=**] **'**_データベース_**'**  
  ディストリビューション データベースの名前を指定します。 *データベース*は**sysname**、既定値はありません。  
   
- [  **@property=**] **'***プロパティ***'**  
+ [  **@property=**] **'**_プロパティ_**'**  
  指定されたデータベースの変更の対象となるプロパティです。 *プロパティ*は**sysname**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
@@ -53,7 +53,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|ディストリビューションの最短保持期間です。|  
 |NULL (既定値)|使用可能なすべて*プロパティ*値が出力されます。|  
   
- [  **@value=**] **'***値***'**  
+ [  **@value=**] **'**_値_**'**  
  指定したプロパティの新しい値です。 *値*は**nvarchar (255)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

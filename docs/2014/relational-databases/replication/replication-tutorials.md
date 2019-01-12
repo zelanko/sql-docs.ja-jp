@@ -14,12 +14,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2d57e12535bad09c1ddf1f89e87cba17e364f19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784824"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135402"
 ---
 # <a name="replication-tutorials"></a>レプリケーションのチュートリアル
   レプリケーションには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でレプリケーション トポロジをセットアップし、それを実行する方法を学習できるチュートリアルが用意されています。  
@@ -40,6 +40,6 @@ ms.locfileid: "52784824"
  マージ レプリケーションを使用して、サーバーと、常時接続でない 1 つ以上のクライアントの間でデータを交換する方法を学習します。  
   
 ## <a name="see-also"></a>参照  
- [セキュリティと保護 (レプリケーション)](security/security-and-protection-replication.md)  
+ [SQL Server レプリケーションのセキュリティ](security/view-and-modify-replication-security-settings.md)  
   
   

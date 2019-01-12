@@ -13,12 +13,12 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823310"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134742"
 ---
 # <a name="best-practices-for-replication-administration"></a>レプリケーション管理の推奨事項
   レプリケーションを構成したら、レプリケーション トポロジの管理方法について理解することが重要です。 このトピックでは、さまざまな分野における推奨事項について説明し、また各分野の詳細情報へのリンクも提供します。 このトピックで、ベスト プラクティス ガイダンスに従うだけでなくよく寄せられる質問と問題を理解するよく寄せられる質問のトピックを検討してください。[よく寄せられる質問レプリケーションの管理者に関して](frequently-asked-questions-for-replication-administrators.md)します。  
@@ -121,7 +121,7 @@ ms.locfileid: "52823310"
 ## <a name="validate-data-periodically"></a>定期的なデータの検証  
  レプリケーションでは検証は必須ではありませんが、トランザクション レプリケーションおよびマージ レプリケーションを行う場合には定期的に検証することをお勧めします。 検証を行うことによって、サブスクライバーのデータがパブリッシャーのデータに一致していることを検証できます。 検証が正常に行われるのは、パブリッシャーの変更内容がその時点ですべてサブスクライバーにレプリケートされていて (サブスクライバーでの更新がサポートされている場合は、サブスクライバーからパブリッシャーへも変更内容がレプリケートされ)、2 つのデータベースが同期している場合です。  
   
- パブリケーション データベースのバックアップ スケジュールに従って検証を行うことを推奨します。 たとえば、パブリケーション データベースを週に 1 回完全バックアップする場合は、検証もバックアップの終了後、週に 1 回行います。 詳細については、「[レプリケートされたデータの検証](../validate-replicated-data.md)」を参照してください。  
+ パブリケーション データベースのバックアップ スケジュールに従って検証を行うことを推奨します。 たとえば、パブリケーション データベースを週に 1 回完全バックアップする場合は、検証もバックアップの終了後、週に 1 回行います。 詳細については、「[レプリケートされたデータの検証](../validate-data-at-the-subscriber.md)」を参照してください。  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>エージェント プロファイルによるエージェント パラメーターへの必要に応じた変更  
  エージェント プロファイルを使用すると、レプリケーション エージェントのパラメーターを簡単に設定できます。 エージェントのコマンド ラインでパラメーターを指定することもできますが、通常は定義済みのエージェント プロファイルを使用するか、パラメーターの値の変更が必要な場合新規プロファイルを作成します。 たとえば、マージ レプリケーションを使用中にサブスクライバーの接続をブロードバンドからダイヤルアップに変更する場合、マージ エージェントに対して **低速リンク** プロファイルの使用を検討してください。このプロファイルでは、低速通信リンクにより適したパラメーターのセットが使用されます。 詳しくは、「 [レプリケーション エージェント プロファイル](../agents/replication-agent-profiles.md)」をご覧ください。  
@@ -148,6 +148,6 @@ ms.locfileid: "52823310"
  詳細については、「[パブリケーション データベースでのスキーマの変更](../publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [管理 &#40;レプリケーション&#41;](administration-replication.md)  
+ [レプリケーションの管理に関する FAQ](frequently-asked-questions-for-replication-administrators.md)  
   
   

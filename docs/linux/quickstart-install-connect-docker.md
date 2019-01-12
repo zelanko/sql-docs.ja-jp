@@ -5,7 +5,7 @@ description: このクイック スタートでは、Docker を使用して、SQ
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -13,12 +13,12 @@ ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: a8ed1a9be24ab071bc3e202902b2a56f3ab3c046
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: f4e6298cb1165f75dcd9a6aa6c77a1628650c0f6
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266013"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206318"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>クイック スタート:Docker を使用した SQL Server のコンテナー イメージを実行します。
 
@@ -328,7 +328,7 @@ SELECT @@SERVERNAME,
 
 SQL 接続をサポートする外部の Linux、Windows、macOS ツールから、Docker コンピューターの SQL Server インスタンスに接続することもできます。
 
-次の手順ではコンテナーの外で **sqlcmd** を使用して、コンテナーで実行されている SQL Server に接続します。 この手順は、コンテナーの外に SQL Server コマンド ライン ツールがインストール済みであることを前提としています。 どのツールを使用しても同じプリンシパルが適用されますが、接続するプロセスはツールごとに固有です。
+次の手順ではコンテナーの外で **sqlcmd** を使用して、コンテナーで実行されている SQL Server に接続します。 この手順は、コンテナーの外に SQL Server コマンド ライン ツールがインストール済みであることを前提としています。 その他のツールを使用する場合、同じ原則が適用されますが、接続のプロセスは各ツールに固有です。
 
 1. コンテナーをホストしているコンピューターの IP アドレスを探します。 Linux の場合、 **ifconfig** または **ip addr** を使用します。Windows の場合、**ipconfig** を使用します。
 

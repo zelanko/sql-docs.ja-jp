@@ -12,12 +12,12 @@ ms.assetid: 54b45e70-46b3-4c7a-a5bf-06f6dd028ceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 340bf8f8b5c85195d1ac0a061cf16d6dcfe4c084
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1f292841c227db26f1c518b2eaef896f7ce3570c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823626"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134622"
 ---
 # <a name="mssqleng014151"></a>MSSQL_ENG014151
     
@@ -40,11 +40,7 @@ ms.locfileid: "52823626"
   
 -   失敗したエージェントを再起動し、問題なく実行されるかどうかを確認します。 詳細については、「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」および「[レプリケーション エージェント実行可能ファイルの概念](concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
--   エージェント履歴およびジョブ履歴を参照し、同時期に発生したその他のエラーを確認します。 レプリケーション モニターにおけるエージェントの状態およびエラーの詳細の表示については、以下のトピックを参照してください。  
-  
-    -   スナップショット エージェント、ログ リーダー エージェント、およびキュー リーダー エージェントについては、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)」を参照してください。  
-  
-    -   ディストリビューション エージェントおよびマージ エージェントについては、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+-   エージェント履歴およびジョブ履歴を参照し、同時期に発生したその他のエラーを確認します。 レプリケーション モニターでエージェントの状態とエラーの詳細を表示する方法の詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
 -   エージェントがアクセスするコンピューター間で基本的な接続が機能していることを確認し、 [sqlcmd Utility](../../tools/sqlcmd-utility.md)などのユーティリティにより各コンピューターを接続します。 接続の際には、エージェントが接続に使用するものと同じアカウントを使用します。 各エージェント アカウントで必要な権限の詳細については、「 [Replication Agent Security Model](security/replication-agent-security-model.md)」を参照してください。  
   

@@ -13,12 +13,12 @@ ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae66ab14a058f5fd6cfef462ddcc1c83c5a9cfe3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823526"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134952"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   カスタム競合回避モジュールを使用すると、既定の解決メカニズムより高い柔軟性が得られ、レプリケートされたデータを使用するアプリケーションに必要なビジネス ロジックを実装できます。 COM ベースのカスタム競合回避モジュールは、 **ICustomResolver** COM インターフェイス、メソッドとプロパティ、および競合解決専用に設計されたその他のインターフェイスとデータ型定義を実装するダイナミック リンク ライブラリ (DLL) です。  
@@ -32,7 +32,7 @@ ms.locfileid: "52823526"
   
 -   更新、挿入、削除など、解決する必要がある行の変更の種類、およびマージ変更のアップロード、ダウンロード、またはその両方で競合回避モジュールを呼び出すかどうか。 1 種類の変更、すべての変更、または各変更の組み合わせを指定できます。 既定のマージ競合回避モジュールでは、カスタム競合回避モジュールで対応しなかった競合が処理されます。  
   
--   競合の解決時に列レベルの追跡を使用するかどうか。 列レベルの追跡が有効になっている場合、競合が発生した列のデータに対してのみ競合のフラグが付けられ、それ以外の場合、データはマージされます。 しかし、競合の解決方法は行レベルの追跡の場合と同じです。競合で優先されるデータによって行全体が上書きされます。ただし、データは、パブリッシャー、サブスクライバー、またはそれ以外で変更された値が混合されている場合があります。 詳細については、「 [マージ レプリケーションの競合の検出および解決](advanced-merge-replication-resolve-merge-replication-conflicts.md)」を参照してください。  
+-   競合の解決時に列レベルの追跡を使用するかどうか。 列レベルの追跡が有効になっている場合、競合が発生した列のデータに対してのみ競合のフラグが付けられ、それ以外の場合、データはマージされます。 しかし、競合の解決方法は行レベルの追跡の場合と同じです。競合で優先されるデータによって行全体が上書きされます。ただし、データは、パブリッシャー、サブスクライバー、またはそれ以外で変更された値が混合されている場合があります。 詳細については、「 [マージ レプリケーションの競合の検出および解決](advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
  COM ベースのカスタム競合回避モジュールを実装するには、「 [マージ アーティクルのカスタム競合回避モジュールの実装](../implement-a-custom-conflict-resolver-for-a-merge-article.md)」を参照してください。  
   

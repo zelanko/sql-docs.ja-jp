@@ -13,12 +13,12 @@ ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f58b96f2b8d95f31eeb89c9e0796b39a221b0a66
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7033db55df0dd9b25c3dee5accdd4259842a571b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786124"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133322"
 ---
 # <a name="article-options-for-merge-replication"></a>マージ レプリケーションのアーティクルのオプション
   アプリケーションのニーズに合わせてレプリケーション動作をカスタマイズするためのマージ テーブル アーティクルには多くのオプションがあります。 マージ レプリケーションを使用すると、以下のようなことが可能です。  
@@ -29,11 +29,11 @@ ms.locfileid: "52786124"
   
 -   1 つまたは複数のアーティクルに対する削除をレプリケーション トリガーおよびシステム テーブルによって追跡しないように指定します。 このオプションは多くのアプリケーション シナリオで役に立ちます。 レプリケートする必要のないバッチ削除を使用するシナリオなどがあります。 詳細については、「[Optimize Merge Replication Performance with Conditional Delete Tracking](optimize-merge-replication-performance-with-conditional-delete-tracking.md)」 (条件付き削除の追跡によるマージ レプリケーションのパフォーマンスの最適化) を参照してください。  
   
--   アーティクルの処理順序を指定し、アプリケーションが要求する順序でアーティクルが処理されるようにします。 詳細については、「[Specify the Processing Order of Merge Articles](specify-the-processing-order-of-merge-articles.md)」 (マージ アーティクルの処理順序の指定) を参照してください。  
+-   アーティクルの処理順序を指定し、アプリケーションが要求する順序でアーティクルが処理されるようにします。 詳細については、次を参照してください。[マージ レプリケーションの指定プロパティ](../publish/specify-merge-replication-properties.md)します。  
   
 -   関連するレコードのセットを 1 つの単位として処理するように指定します (既定では、マージ レプリケーションはテーブルへの変更を行単位で処理します)。 詳細については、「[論理レコードによる関連行への変更のグループ化](group-changes-to-related-rows-with-logical-records.md)」を参照してください。  
   
--   トポロジの複数のノードで同じデータが変更される可能性がある場合に、競合の検出と解決を使用します。 詳細については、「 [Detect and Resolve Merge Replication Conflicts](advanced-merge-replication-resolve-merge-replication-conflicts.md)」を参照してください。  
+-   トポロジの複数のノードで同じデータが変更される可能性がある場合に、競合の検出と解決を使用します。 詳細については、「 [Detect and Resolve Merge Replication Conflicts](advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
 -   制約やトリガーをサブスクライバーにコピーするかどうかなど、スキーマ オプションを指定します。 詳細については、「 [スキーマ オプションの指定](../publish/specify-schema-options.md)」を参照してください。  
   

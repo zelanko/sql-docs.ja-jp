@@ -3,7 +3,7 @@ title: SQL Server 2019 拡張機能 (プレビュー)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 用 SQL Server 2019 Preview の拡張機能
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -12,12 +12,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6ce44d22675be344aaa1f08632e39bfdf9c190b3
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: c41c2a08f0b8d608ef21cd44a60a2d63cdeb5fed
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432815"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143315"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 拡張機能 (プレビュー)
 
@@ -31,9 +31,9 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 
    |プラットフォーム|ダウンロード|リリース日|バージョン
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038184)|2018 年 11 月 6 日 |0.8.0 以降
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038178)|2018 年 11 月 6 日 |0.8.0 以降
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038246)|2018 年 11 月 6 日 |0.8.0 以降
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051167)|2019 年 1 月 9日 |0.9.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051166)|2019 年 1 月 9日 |0.9.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051165)|2019 年 1 月 9日 |0.9.1
 
 1. Azure Data Studio で次のように選択します。 **VSIX パッケージからの拡張機能のインストール**から、**ファイル**メニューとダウンロードした .vsix ファイルを選択します。
 

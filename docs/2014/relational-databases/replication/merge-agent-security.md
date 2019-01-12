@@ -14,12 +14,12 @@ ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47571fcfe6b11945ab910f40feeb35145ab8d2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: af3d3490957114d6ba7731b49435dc7e90122f90
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765084"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134692"
 ---
 # <a name="merge-agent-security"></a>[マージ エージェント セキュリティ]
   **[マージ エージェント セキュリティ]** ダイアログ ボックスを使用すると、マージ エージェントの実行に使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを指定できます。 マージ エージェントは、プッシュ サブスクリプションの場合はディストリビューターで実行され、プル サブスクリプションの場合はサブスクライバーで実行されます。 エージェント プロセスがこのアカウントで実行されるため、Windows アカウントは *プロセス アカウント*とも呼ばれます。 ダイアログ ボックスで使用できる追加オプションは、次に示すアクセスの方法によって異なります。  
@@ -82,7 +82,7 @@ ms.locfileid: "52765084"
  サブスクライバーへの接続に使用される Windows アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントは、少なくとも、サブスクリプション データベースの **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションのログインとパスワードの管理](security/manage-logins-and-passwords-in-replication.md)   
+ [レプリケーションのログインとパスワードの管理](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [レプリケーション エージェントのセキュリティ モデル](security/replication-agent-security-model.md)   
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   

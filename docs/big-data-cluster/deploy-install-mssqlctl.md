@@ -1,5 +1,6 @@
 ---
-title: Mssqlctl SQL 2019 ビッグ データ クラスターを管理するためのインストール |Microsoft Docs
+title: mssqlctl をインストールする
+titleSuffix: SQL Server 2019 big data clusters
 description: インストールして、SQL Server 2019 ビッグ データ クラスター (プレビュー) の管理の mssqlctl ツールをインストールする方法について説明します。
 author: rothja
 ms.author: jroth
@@ -7,12 +8,12 @@ manager: craigg
 ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 5133134a45a4110abc0a1a7a3eebe1c5ac7b6ebd
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
-ms.translationtype: MT
+ms.openlocfilehash: 5bf02506034bcdb3a2370e3678da935a6eb6d0cf
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432105"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206148"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスターを管理する mssqlctl をインストールします。
 

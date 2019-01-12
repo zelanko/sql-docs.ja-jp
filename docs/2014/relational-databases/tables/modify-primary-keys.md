@@ -13,12 +13,12 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c411b3f032931dfe0964fe008d7fa1b5598d6423
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e9e19d6d6453acedff16e46dbd2d90d92a3b9587
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822956"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134802"
 ---
 # <a name="modify-primary-keys"></a>主キーの変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して主キーを変更できます。 列の順序、インデックス名、クラスター化オプション、または FILL FACTOR を変更することで、テーブルの主キーを変更できます。  
@@ -59,7 +59,7 @@ ms.locfileid: "52822956"
     |FILL FACTOR を定義する。|**[FILL の指定]** カテゴリを展開して、 **[FILL FACTOR]** ボックスに 0 ～ 100 の整数を入力します。 Fill Factor の詳細とその使用方法については、「 [インデックスの FILL FACTOR の指定](../indexes/specify-fill-factor-for-an-index.md)」を参照してください。|  
     |列の順序を変更する。|**[列]** をクリックして、プロパティの右にある省略記号 ( **[...]** ) をクリックします。 **[インデックスの列]** ダイアログ ボックスで、主キーから列を削除します。 次に、削除した列を必要な順序で再度追加します。 **[列名]** ボックスの一覧から列名を削除するだけで、キーから列を削除できます。|  
   
-4.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
+4.  **ファイル** メニューの **table name**_の保存_をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **主キーを変更するには**  

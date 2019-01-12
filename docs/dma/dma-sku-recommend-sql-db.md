@@ -2,7 +2,7 @@
 title: (Data Migration Assistant)、オンプレミス データベースの適切な Azure SQL データベース SKU の識別 |Microsoft Docs
 description: Data Migration Assistant を使用して、オンプレミス データベースの右側の Azure SQL データベースの SKU を特定する方法について説明します
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544111"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226499"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>オンプレミス データベースの適切な Azure SQL データベース SKU の識別します。
 
@@ -30,9 +30,6 @@ ms.locfileid: "52544111"
 
 > [!NOTE] 
 > この機能は現在使用可能なのみを使用して、コマンド ライン インターフェイス (CLI) です。 DMA のユーザー インターフェイスを使用してこの機能のサポートは、今後のリリースで追加されます。
-
-> [!IMPORTANT]
-> Azure SQL Database の SKU の推奨事項は、現在使用できる SQL Server 2016 から、またはそれ以降の移行は。
 
 次の手順では、Azure SQL データベースの SKU の推奨事項を特定し、Data Migration Assistant を使用して azure に関連付けられているデータベースをプロビジョニングできます。
 
@@ -66,7 +63,7 @@ V4.0 の Database Migration Assistant をダウンロードまたはそれ以降
     .\SkuRecommendationDataCollectionScript.ps1
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
-     -CollectionTimeInSeconds 10
+     -CollectionTimeInSeconds 2400
      -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
     ```
     

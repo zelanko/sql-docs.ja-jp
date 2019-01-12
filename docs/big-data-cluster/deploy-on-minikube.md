@@ -9,12 +9,12 @@ ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: a4bdccba6d42868225a39792cb94566df1f56680
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
-ms.translationtype: MT
+ms.openlocfilehash: 02c0eb930cddbe3ff1a9d5529f640474b5bf2af4
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246571"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206208"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Minikube の SQL Server 2019 ビッグ データ クラスターのデプロイを構成します。
 
@@ -25,7 +25,7 @@ ms.locfileid: "53246571"
 - SQL Server 2019 (プレビュー) のビッグ データ クラスター Minikube クラスターを実行するには、コンピューターに少なくとも 32 GB の RAM があることをお勧めします。
 
    > [!TIP] 
-   > コンピューターに推奨されるメモリの最小値のみがある場合は、プールのコンピューティング インスタンスの 1 つだけ、1 つのデータ プール インスタンスと 1 の記憶域プールのインスタンスがクラスターのデプロイを構成します。 この構成のみ使用してください評価環境の持続性とデータの可用性が重要です。 参照してください、[のデプロイに関するドキュメント](deployment-guidance.md#define-environment-variables)データ プールのレプリカの数を構成する設定を環境変数の詳細については、プール、および記憶域プールを計算します。
+   > コンピューターに推奨されるメモリの最小値のみがある場合は、プールのコンピューティング インスタンスの 1 つだけ、1 つのデータ プール インスタンスと 1 の記憶域プールのインスタンスがクラスターのデプロイを構成します。 この構成のみ使用してください評価環境の持続性とデータの可用性が重要です。 参照してください、[のデプロイに関するドキュメント](deployment-guidance.md#env)データ プールのレプリカの数を構成する設定を環境変数の詳細については、プール、および記憶域プールを計算します。
 
 - -X VT または amd-v の仮想化は、コンピューターの BIOS で有効にする必要があります。
 

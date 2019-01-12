@@ -3,7 +3,7 @@ title: リリース ノートと変更ログ
 titleSuffix: Azure Data Studio
 description: Azure Data Studio リリース ノート
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22542b42aff4b6d2d37e4a7342395d154d16dc95
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030346"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143662"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio の最新のリリース ノートと、変更ログ
 
-**[11 月のリリースをダウンロードしてください。](download.md)**
+**[1 月のリリースをダウンロードしてください。](download.md)**
+
+
+## <a name="january-2019-january-release"></a>2019 年 1 月 (1 月リリース)
+
+リリース日:2019 年 1 月 9日  
+バージョン：1.3.8
+
+- Windows のユーザーの新しいインストーラーを追加します。 既存のシステムのインストーラーとは異なり、新しいユーザーのインストーラーに管理者特権は必要ありません。 これにより、管理者以外のユーザーより簡単なアップグレード エクスペリエンスができます。
+- Azure Active Directory 認証のサポート。
+- Idera SQL DM パフォーマンス Insights (プレビュー) をお知らせします。
+- SQL Server インポート拡張機能のサポートにデータ層アプリケーションのウィザード。
+- 更新する、 [SQL Server 2019 プレビュー拡張機能](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- SQL Server Profiler の機能強化。
+- 大規模なクエリ (プレビュー) のストリームの結果。
+- コミュニティの拡張機能: sp_executesql to sql と新しいデータベース。
+- 解決[バグし、問題](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1)します。
+
+詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)します。
 
 ## <a name="november-2018-november-release"></a>2018 年 11 月 (11 月のリリース)
 
@@ -35,6 +53,7 @@ ms.locfileid: "53030346"
 - .Net Core へのアップグレードの SQL ツール サービス 2.2 Preview 3 (の最終的な AAD サポート)
 
 ### <a name="bug-fixes"></a>バグの修正
+
 - 修正[発行 #2933](https://github.com/Microsoft/azuredatastudio/issues/2933):接続が Azure SQL DB に失われました
 - 修正[発行 #2914](https://github.com/Microsoft/azuredatastudio/issues/2914):「無効な引数」例外拡大 OE データベース ノード
 - 修正[発行 #2935](https://github.com/Microsoft/azuredatastudio/pull/2935):クエリの結果に複数行のメッセージを正しく表示します。
@@ -44,8 +63,6 @@ ms.locfileid: "53030346"
 - 修正[発行 #3047](https://github.com/Microsoft/azuredatastudio/pull/3047):SQL Server に接続するためのコマンド ライン インターフェイスの追加します。
 - 修正[発行 #3031](https://github.com/Microsoft/azuredatastudio/pull/3031):クエリ プランのテーマのサポートを追加します。
 - [...]
-
-詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)します。
 
 ## <a name="october-2018-october-release"></a>10 月 2018 (年 10 月リリース)
 
@@ -146,7 +163,7 @@ Azure Data Studio (SQL Operations Studio 以前) の一般的な可用性リリ�
 - 修正[発行 #2129](https://github.com/Microsoft/azuredatastudio/pull/2129):タブの切り替えは、データのスクロール位置の編集を保存します。
 - 修正[発行 #2152](https://github.com/Microsoft/azuredatastudio/issues/2152):結果のグリッド行インジケーター 0 から始まります。
 
-## <a name="known-issues"></a>既知の問題
+### <a name="known-issues"></a>既知の問題
 
 - [発行 #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) Excel のデータの先頭行のみを保存して保存.
 - [発行 #2150](https://github.com/Microsoft/azuredatastudio/issues/2150):コンテナー内の SQL を Ubuntu 16.04 に接続できません。

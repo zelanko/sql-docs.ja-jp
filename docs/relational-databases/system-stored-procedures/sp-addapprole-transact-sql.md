@@ -18,12 +18,12 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 04163593c48a22bebdd933881b165af3418e0dfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40e397bd63d8018d2043a1aced4824f48e4ddc9a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690690"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135872"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,19 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@rolename =** ] **'***ロール***'**  
+ [  **@rolename =** ] **'**_ロール_**'**  
  新しいアプリケーション ロールの名前を指定します。 *ロール*は**sysname**、既定値はありません。 *ロール*有効な識別子である必要があり、現在のデータベースに既に存在することはできません。  
   
  アプリケーション ロール名の長さは 1 ～ 128 文字で、英字、記号、および数字を含めることができます。 ロール名が円記号を含めることはできません (\\) NULL または空の文字列 (") したりします。  
   
- [  **@password =** ] **'***パスワード***'**  
+ [  **@password =** ] **'**_パスワード_**'**  
  アプリケーション ロールをアクティブにするために必要なパスワードを指定します。 *パスワード*は**sysname**、既定値はありません。 *パスワード*NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー (およびロール) はスキーマを完全に区別されません。 以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]スキーマは、ロールを完全に区別します。 この新しいアーキテクチャは CREATE APPLICATION ROLE の動作に反映されています。 このステートメントよりも優先されます**sp_addapprole**します。  
+ 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザー (およびロール) はスキーマと完全には区別されていません。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、スキーマはロールとは完全に区別されています。 この新しいアーキテクチャは CREATE APPLICATION ROLE の動作に反映されています。 このステートメントよりも優先されます**sp_addapprole**します。  
   
  以前のバージョンとの下位互換性を維持するために[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **sp_addapprole**は次の処理します。  
   

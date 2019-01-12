@@ -12,12 +12,12 @@ ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc44785fa96b5bc9af8e871605f8304d13bc481d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4788e7696b9bb986ab5a16fb2fea618d0b996cc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753284"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133592"
 ---
 # <a name="mssqleng020574"></a>MSSQL_ENG020574
     
@@ -33,7 +33,7 @@ ms.locfileid: "52753284"
 |メッセージ テキスト|パブリケーション '%s' のアーティクル '%s' に対するサブスクライバー '%s' のサブスクリプションで、データ検証に失敗しました。|  
   
 ## <a name="explanation"></a>説明  
- サブスクライバーのデータがパブリッシャーのデータに対して検証され、データが一致しなかったため検証に失敗しました。 検証の詳細については、「 [Validate Replicated Data](validate-replicated-data.md)」を参照してください。  
+ サブスクライバーのデータがパブリッシャーのデータに対して検証され、データが一致しなかったため検証に失敗しました。 検証の詳細については、「 [Validate Replicated Data](validate-data-at-the-subscriber.md)」を参照してください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
  次のように対処することをお勧めします。  

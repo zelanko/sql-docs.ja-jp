@@ -5,18 +5,17 @@ description: Linux 上の SQL Server 常にで可用性グループ (AG) の読�
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 02/14/2018
+ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.assetid: ''
-ms.openlocfilehash: 014ff123618c04f91c0e2c2a39d5ef8e5690a386
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 60cdef13ec46ab1f859d17f724863f67939e6b6f
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203871"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206498"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux 上の読み取りスケールの SQL Server 可用性グループの構成します。
 
@@ -24,8 +23,8 @@ ms.locfileid: "53203871"
 
 Linux で、SQL Server 常にで可用性グループ (AG) の読み取りスケール ワークロードを構成できます。 AG には 2 種類のアーキテクチャがあります。 高可用性のアーキテクチャでは、クラスター マネージャーを使用して、改善されたビジネス継続性を提供します。 このアーキテクチャは、読み取りスケール レプリカも含めることができます。 高可用性アーキテクチャを作成するを参照してください。[を構成する SQL Server Always On 可用性グループの Linux での高可用性](sql-server-linux-availability-group-configure-ha.md)します。 その他のアーキテクチャでは、読み取りスケール ワークロードのみをサポートします。 この記事では、読み取りスケール ワークロードの場合で、クラスター マネージャーがない AG を作成する方法について説明します。 このアーキテクチャは、読み取りスケールのみを提供します。 高可用性は提供されません。
 
->[!NOTE]
->`CLUSTER_TYPE = NONE` による可用性グループには、さまざまなオペレーティング システム プラットフォームでホストされているレプリカを含めることができます。 高可用性はサポートできません。 
+> [!NOTE]
+> `CLUSTER_TYPE = NONE` による可用性グループには、さまざまなオペレーティング システム プラットフォームでホストされているレプリカを含めることができます。 高可用性はサポートできません。 
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
@@ -84,7 +83,6 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 ## <a name="next-steps"></a>次の手順
 
-* [分散型可用性グループを構成する](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
-* [可用性グループの詳細](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
+* [分散型可用性グループを構成する](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [可用性グループの詳細](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [強制手動フェールオーバーの実行](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
-

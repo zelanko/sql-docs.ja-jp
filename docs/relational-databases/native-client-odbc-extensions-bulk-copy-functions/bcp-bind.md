@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ae1ad6aabc87d1cf0d7d92da5b97092c23bc02d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0574683e2f77efe0654a8c3193bee2f499a9400b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511930"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135742"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -177,7 +177,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>コメント  
  使用**bcp_bind**プログラム変数からのテーブルにデータをコピーする高速で効率的な方法を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
- 呼び出す[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)これまたは他の一括コピー関数を呼び出す前にします。 呼び出す**bcp_init**設定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一括コピー先のテーブル。 呼び出すときに**bcp_init**で使用するため**bcp_bind**と[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)、 **bcp_init** *szDataFile*、データ ファイルを示すパラメーターが NULL に設定されています。**bcp_init**_eDirection_パラメーターが DB_IN に設定されます。  
+ 呼び出す[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)これまたは他の一括コピー関数を呼び出す前にします。 呼び出す**bcp_init**設定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一括コピー先のテーブル。 呼び出すときに**bcp_init**で使用するため**bcp_bind**と[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)、 **bcp_init** _szDataFile_、データ ファイルを示すパラメーターが NULL に設定されています。**bcp_init**_eDirection_パラメーターが DB_IN に設定されます。  
   
  個別**bcp_bind**の各列に対して呼び出し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をコピーするテーブル。 後、必要な**bcp_bind**呼び出しが行われているし、呼び出す**bcp_sendrow**をプログラム変数からのデータ行を送信する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 列の再バインドはサポートされていません。  
   

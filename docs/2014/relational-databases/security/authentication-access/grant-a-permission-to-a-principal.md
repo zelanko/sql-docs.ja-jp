@@ -12,12 +12,12 @@ ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 17282ecfc0c6adbb1e4d1fc97f470371f90bd3f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520796"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134922"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>プリンシパルに対する権限の許可
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]でプリンシパルに権限を与える方法について説明します。  
@@ -65,7 +65,7 @@ ms.locfileid: "52520796"
   
 4.  ストアド プロシージャを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **ストアド プロシージャのプロパティ-* * * stored_procedure_name*  ダイアログ ボックスで、選択 ページでで**権限**します。 このページを使用して、ユーザーまたはロールをストアド プロシージャに追加し、追加したユーザーまたはロールが所有する権限を指定します。  
+5.  **ストアド プロシージャのプロパティ -**_stored_procedure_name_  ダイアログ ボックスで、選択 ページでで**権限**します。 このページを使用して、ユーザーまたはロールをストアド プロシージャに追加し、追加したユーザーまたはロールが所有する権限を指定します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   
