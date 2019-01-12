@@ -5,14 +5,16 @@ description: Azure Data Studio で SQL Server のビッグ データ クラス�
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.date: 12/07/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.openlocfilehash: d0843315b44b52a38377068023b9d17ba2bd05a2
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.openlocfilehash: c7d37843aff49f27ec05cdcf7b89febd86c72fbf
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246501"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241588"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio での SQL Server のビッグ データ クラスターで Spark ジョブを送信します。
 
