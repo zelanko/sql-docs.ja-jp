@@ -18,12 +18,12 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5ba2a19505d0d7a1493b997eda7d12f3a588f7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bbf909004f6b3d809babfb99b1787728194bd140
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524106"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100862"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,25 +43,25 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@msgnum****=** ] *msg_id*  
+ [  **\@msgnum =** ] *msg_id*  
  メッセージの ID を指定します。 *msg_id*は**int**既定値は NULL です。 *msg_id*ユーザー定義エラー メッセージが 50,001 から 2,147, 483,647 までの整数を指定できます。 組み合わせた*msg_id*と*言語*一意である必要があります指定した言語の ID が既に存在する場合、エラーが返されます。  
   
- [ **@severity =** ]*severity*  
+ [ **\@重要度 =** ]*重要度*  
  エラーの重大度レベルを指定します。 *重大度*は**smallint**既定値は NULL です。 有効なレベルは 1 ～ 25 です。 重大度レベルの詳細については、「 [データベース エンジン エラーの重大度](../../relational-databases/errors-events/database-engine-error-severities.md)」を参照してください。  
   
- [  **@msgtext =** ] **'**_msg_**'**  
+ [  **\@msgtext =** ] **'**_msg_**'**  
  エラー メッセージのテキストを指定します。 *msg*は**nvarchar (255)** 既定値は NULL です。  
   
- [  **@lang =** ] **'**_言語_**'**  
+ [  **\@lang =** ] **'**_言語_**'**  
  このメッセージの言語を指定します。 *言語*は**sysname**既定値は NULL です。 複数の言語を同じサーバーにインストールできる*言語*各メッセージを記述する言語を指定します。 ときに*言語*は省略すると、言語が既定の言語のセッション。  
   
- [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
- メッセージを、発生時に Windows のアプリケーション ログに書き込むかどうかを指定します。 **@with_log** **varchar (5)** 既定値は FALSE。 TRUE の場合は、エラーは常に Windows のアプリケーション ログに書き込まれます。 FALSE の場合、常に Windows のアプリケーション ログに書き込まれるわけではありませんが、エラーの発生状況によっては書き込まれることもあります。 メンバーのみ、 **sysadmin**サーバーの役割は、このオプションを使用できます。  
+ [  **\@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
+ メッセージを、発生時に Windows のアプリケーション ログに書き込むかどうかを指定します。 **\@with_log**は**varchar (5)** 既定値は FALSE。 TRUE の場合は、エラーは常に Windows のアプリケーション ログに書き込まれます。 FALSE の場合、常に Windows のアプリケーション ログに書き込まれるわけではありませんが、エラーの発生状況によっては書き込まれることもあります。 メンバーのみ、 **sysadmin**サーバーの役割は、このオプションを使用できます。  
   
 > [!NOTE]  
 >  Windows のアプリケーション ログにメッセージを書き込む場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のエラー ログ ファイルにも同じ内容が書き込まれます。  
   
- [ **@replace** *=* ] **'**_置換_**'**  
+ [ **\@置換 =** ] **'**_置換_**'**  
  文字列として指定されている場合*置換*、既存のエラー メッセージが新しいメッセージ テキストと重大度レベルで上書きされます。 *置換*は**varchar (7)** 既定値は NULL です。 場合、このオプションを指定する必要があります*msg_id*既に存在します。 英語版のすべてのメッセージが同じであるその他のすべての言語の英語版のメッセージ重大度レベルが置き換えられます*msg_id*します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

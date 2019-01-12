@@ -16,12 +16,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 06b97ac4bf58b933f55c4b53bfeacfbc9a736f28
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516216"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126162"
 ---
 # <a name="create-clustered-indexes"></a>クラスター化インデックスの作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルにクラスター化インデックスを作成できます。 クラスター化インデックスは、いくつかの例外を除くすべてのテーブルに必要です。 クラスター化インデックスは、クエリ パフォーマンスを向上するだけではなく、必要に応じて再構築または再構成してテーブルの断片化を制御することができます。 また、クラスター化インデックスをビューに作成することもできます。 (クラスター化インデックスの定義は「 [クラスター化インデックスと非クラスター化インデックスの概念](clustered-and-nonclustered-indexes-described.md)」にあります。)  
@@ -86,7 +86,7 @@ ms.locfileid: "52516216"
   
 4.  **[インデックス キー列]** で、**[追加]** をクリックします。  
   
-5.  *[<テーブル名> から列を選択]* ダイアログ ボックスで、クラスター化インデックスに追加するテーブル列のチェック ボックスをオンにします。  
+5.  [_table_name_ **から列を選択**] ダイアログ ボックスで、クラスター化インデックスに追加するテーブル列のチェック ボックスをオンにします。  
   
 6.  **[OK]** をクリックします。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "52516216"
   
 9. **[閉じる]** をクリックします。  
   
-10. **[ファイル]** メニューの *[<テーブル名> の保存]* をクリックします。  
+10. **ファイル** メニューの **テーブル名**_の保存_をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

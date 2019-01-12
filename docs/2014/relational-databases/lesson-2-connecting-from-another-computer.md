@@ -1,5 +1,5 @@
 ---
-title: レッスン 2:別のコンピューターからの接続 |Microsoft Docs
+title: 'レッスン 2: 別のコンピューターからの接続 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,14 +10,14 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367195"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127212"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2:別のコンピューターから接続します。
+# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2: 別のコンピューターからの接続
   セキュリティを強化するため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer、Express、および Evaluation Editions の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初にインストールした状態では別のコンピューターからアクセスできないようになっています。 このレッスンでは、別のコンピューターから接続するために、プロトコルの有効化、ポートの構成、Windows ファイアウォールの構成を行う方法について学習します。  
   
  このレッスンの内容は次のとおりです。  
@@ -44,7 +44,7 @@ ms.locfileid: "53367195"
     > [!NOTE]  
     >  32 ビットと 64 ビットの両方のオプションが利用できる場合もあります。  
   
-2.  **SQL Server 構成マネージャー**、展開**SQL Server ネットワーク構成**、 をクリックし、**プロトコル**  *\<InstanceName>* します。  
+2.  **SQL Server 構成マネージャー**、展開**SQL Server ネットワーク構成**、 をクリックし、**プロトコル**  _\<InstanceName>_ します。  
   
      既定のインスタンス (名前のないインスタンス) は、 **MSSQLSERVER**として一覧表示されます。 名前付きインスタンスをインストールした場合は、指定した名前が表示されます。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] は **SQLEXPRESS**としてしてインストールされます (セットアップ中に名前を変更した場合を除く)。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "53367195"
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** ボックスが **[データベース エンジン]** になっていることを確認します。  
   
-3.  **[サーバー名]** ボックスに「 **tcp:** 」と入力してプロトコルを指定し、続けてコンピューター名、コンマ、ポート番号の順に入力します。 既定のインスタンスに接続する場合、ポート 1433 が暗黙的に設定されるためポート番号を省略できます。したがって、この場合は「**tcp:***<コンピューター名>*」と入力します。 今回の名前付きインスタンスの例では、「**tcp:***<コンピューター名>***,49172**」と入力します。  
+3.  **[サーバー名]** ボックスに「**tcp:**」と入力してプロトコルを指定し、続けてコンピューター名、コンマ、ポート番号の順に入力します。 既定のインスタンスに接続する場合、ポート 1433 が暗黙的に設定されるためポート番号を省略できます。したがって、この場合は「**tcp:**_<computer_name>_」と入力します。 今回の名前付きインスタンスの例では、「**tcp:**_<computer_name>_**,49172**」と入力します。  
   
     > [!NOTE]  
     >  **[サーバー名]** ボックスで **tcp:** を省略した場合、クライアントは、有効になっているすべてのプロトコルをクライアント構成に指定された順番で試行します。  

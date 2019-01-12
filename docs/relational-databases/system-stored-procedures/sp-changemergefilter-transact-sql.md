@@ -16,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c872cbafb3cb0a3a54c34e489242d9f69339b68f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c199af62d7cd5cb95c382b412182bb24c957bf89
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748224"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127082"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +44,19 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=** ] **'***パブリケーション***'**  
+ [  **@publication=** ] **'**_パブリケーション_**'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@article=** ] **'***記事***'**  
+ [  **@article=** ] **'**_記事_**'**  
  アーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
   
- [  **@filtername=** ] **'***filtername***'**  
+ [  **@filtername=** ] **'**_filtername_**'**  
  フィルターの現在の名前を指定します。 *filtername*は**sysname**、既定値はありません。  
   
- [  **@property=** ] **'***プロパティ***'**  
+ [  **@property=** ] **'**_プロパティ_**'**  
  変更するプロパティの名前を指定します。 *プロパティ*は**sysname**、既定値はありません。  
   
- [  **@value=**] **'***値***'**  
+ [  **@value=**] **'**_値_**'**  
  指定したプロパティの新しい値です。 *値*は**nvarchar (1000)**、既定値はありません。  
   
  次の表に、アーティクルのプロパティと、それぞれの値を示します。  

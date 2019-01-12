@@ -13,17 +13,17 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa7fb107e67d529c656a49b271744757a1a73746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651320"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128062"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日付、時刻、およびタイムスタンプのリテラル
 日付、時刻、およびタイムスタンプのリテラルのエスケープ シーケンスは、します。  
   
- **{***-型* **'** *値* **'}**   
+ **{**_-型_ **'** _値_ **'}**  
   
  場所*リテラル型*は、値の 1 つは、次の表に表示されています。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47651320"
   
  [秒コンポーネントを含むリテラル、時刻、またはタイムスタンプ間隔で小数点の右側にある数字の 1] の番号は SQL_DESC_PRECISION の記述子フィールドに含まれる秒の有効桁数に依存します。 (詳細については、次を参照してください[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)。  
   
- 詳細については、日付、時刻、およびタイムスタンプ エスケープ シーケンスは、次を参照してください。[日付、時刻、およびタイムスタンプ エスケープ シーケンス](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md)付録 c: SQL の文法でします。  
+ 詳細については、日付、時刻、およびタイムスタンプ エスケープ シーケンスは、次を参照してください[日付、時刻、およびタイムスタンプ エスケープ シーケンス](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md)付録 c:。SQL 文法。  
   
  たとえば、次の SQL ステートメントの両方、Orders テーブルの販売注文 1023 の開いている日付を更新します。 最初のステートメントでは、エスケープ シーケンスの構文を使用します。 2 番目のステートメントでは、日付列の Oracle Rdb ネイティブ構文を使用して、相互運用可能ではありません。  
   

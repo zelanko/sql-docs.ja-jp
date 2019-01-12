@@ -14,12 +14,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c426781f52a513cca1e90e5f83eac7feab79fdaf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785224"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124992"
 ---
 # <a name="article-properties---ltarticlegt"></a>アーティクルのプロパティ - &lt;Article&gt;
   **[アーティクルのプロパティ]** ダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ]** ダイアログ ボックスから開くことができます。 このダイアログ ボックスでは、すべての種類のアーティクルのプロパティを表示し、設定できます。 パブリケーションを作成するときにのみ設定できるプロパティや、パブリケーションにアクティブなサブスクリプションがない場合にのみ設定できるプロパティがあります。 設定できないプロパティは読み取り専用として表示されます。  
@@ -121,7 +121,7 @@ ms.locfileid: "52785224"
   
 ### <a name="resolver-tab"></a>[競合回避モジュール] タブ  
  **[既定の競合回避モジュールを使用する]**  
- 既定の競合回避モジュールを選択した場合、使用されるサブスクリプションのタイプに応じて、各サブスクライバーに割り当てられている優先度、またはパブリッシャーに書き込まれた最初の変更に基づいて競合が回避されます。 詳細については、「[マージ レプリケーションの競合の検出および解決](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)」を参照してください。  
+ 既定の競合回避モジュールを選択した場合、使用されるサブスクリプションのタイプに応じて、各サブスクライバーに割り当てられている優先度、またはパブリッシャーに書き込まれた最初の変更に基づいて競合が回避されます。 詳細については、「[マージ レプリケーションの競合の検出および解決](merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
  **[ディストリビューターに登録されたカスタム競合回避モジュールを使用する]**  
  アーティクル競合回避モジュール ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] が提供しているモジュールまたは自作のモジュール) の使用を選択した場合、リスト ボックスから競合回避モジュールを選択する必要があります。 詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  

@@ -18,12 +18,12 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f3f2dbe576fe95f89588354785b64bf444eb27b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 542cf5a0960e967d2bebb3889af0f03656004472
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661851"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124562"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  場合、**でしょうか。** 出現インジケーターが指定されていない`sequence of`場合にのみ、True を返します、`Expression`入力と一致する、`Type`指定と`Expression`シングルトンを返します。  
   
- **注**プラス記号 (**+**) およびアスタリスク (**\***) では、出現インジケーターはサポートされていない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
+ **注**プラス記号 (**+**) およびアスタリスク (**&#42;**) では、出現インジケーターはサポートされていない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
   
  次の例では、使用、**のインスタンス**XQuery 演算子。  
   
@@ -139,7 +139,7 @@ where ProductModelID=19
  クエリから True が返されます。  
   
 ### <a name="example-c"></a>例 C  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の `instance of` 式は共用体型を使用する場合に制限があります。具体的には、要素または属性の型が共用体型の場合、`instance of` で正確な型が判断されません。 したがって、SequenceType で使用されているアトミック型が、simpleType 階層内にある式の実際の型の最上位の親でない限り、クエリから False が返されます。 つまり、SequenceType に指定したアトミック型は、anySimpleType の直接の子である必要があります。 型階層については、次を参照してください。[型キャストの規則では、XQuery](../xquery/type-casting-rules-in-xquery.md)します。  
+ 共用体の型を使用する場合、`instance of`式[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]制限があります。具体的には、要素または属性の型が共用体型が場合`instance of`正確な型が判断されません。 したがって、SequenceType で使用されているアトミック型が、simpleType 階層内にある式の実際の型の最上位の親でない限り、クエリから False が返されます。 つまり、SequenceType に指定したアトミック型は、anySimpleType の直接の子である必要があります。 型階層については、次を参照してください。[型キャストの規則では、XQuery](../xquery/type-casting-rules-in-xquery.md)します。  
   
  次のクエリの例では、以下の操作を実行します。  
   
@@ -401,7 +401,7 @@ select @x.query('xs:date("2000-01-01Z")')
     go  
     ```  
   
-     結果を次に示します。  
+     これは、結果です。  
   
     ```  
     <a>2002-05-25Z</a>  

@@ -12,12 +12,12 @@ ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 15f4c7759404c0c904f17819f0a8eb750588777e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fc4e2ecd81b6bf0a6c24aff8e89dc31c95e04625
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758914"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126082"
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
     
@@ -48,7 +48,7 @@ ms.locfileid: "52758914"
 -   レプリケーション メンテナンス ジョブ。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 通常、ログ リーダー エージェント、キュー リーダー エージェント、およびディストリビューション エージェントは連続実行しますが、他のエージェントは、要求時に実行するかスケジュールに合わせて実行します。 エージェントが実行を完了したかどうかわからない場合は、エージェントの状態を確認します。 詳細については、「[レプリケーション エージェントの監視](agents/replication-agents.md)」を参照してください。  
+ 通常、ログ リーダー エージェント、キュー リーダー エージェント、およびディストリビューション エージェントは連続実行しますが、他のエージェントは、要求時に実行するかスケジュールに合わせて実行します。 エージェントが実行を完了したかどうかわからない場合は、エージェントの状態を確認します。 詳細については、「[レプリケーション エージェントの監視](agents/replication-agents-overview.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](agents/replication-agent-administration.md)   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a7a6c0ddee6e425ff80155be3002d8deffe187
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d628f2b5dffc976e32b15bea08407c5d0740c297
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721272"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123993"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@tblname=** ] **'***table_or_indexed_view_name***'**  
+ [  **@tblname=** ] **'**_table_or_indexed_view_name_**'**  
  AUTO_UPDATE_STATISTICS オプションを表示するテーブルまたはインデックス付きビューの名前を指定します。 *table_or_indexed_view_name*は**nvarchar (776)**、既定値はありません。  
   
- [  **@flagc=** ] **'***stats_value***'**  
+ [  **@flagc=** ] **'**_stats_value_**'**  
  AUTO_UPDATE_STATISTICS オプションを次のいずれかの値に更新します。  
   
  **ON** = ON  
@@ -57,7 +57,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  ときに*stats_flag*が指定されていない場合、AUTO_UPDATE_STATISTICS の現在の設定を表示します。 *stats_value*は**varchar (10)**、既定値は NULL です。  
   
- [  **@indname=** ] **'***statistics_name***'**  
+ [  **@indname=** ] **'**_statistics_name_**'**  
  AUTO_UPDATE_STATISTICS オプションを表示または更新する統計の名前を指定します。 インデックスの統計を表示する場合は、インデックスの名前を使用できます。インデックスの名前は、対応する統計オブジェクトの名前と同じです。  
   
  *statistics_name*は**sysname**、既定値は NULL です。  
@@ -89,7 +89,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-display-the-status-of-all-statistics-on-a-table"></a>A. テーブルのすべての統計の状態を表示する  
- 次は、のすべての統計情報のステータスを表示します。、`Product`テーブル。  
+ 次の例では、`Product` テーブルのすべての統計の状態を表示します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -109,7 +109,7 @@ GO
 ```  
   
 ### <a name="c-disable-autoupdatestatistics-for-a-specific-index"></a>C. 特定のインデックスの AUTO_UPDATE_STATISTICS を無効にする  
- 次の例の AUTO_UPDATE_STATISTICS オプションを無効になります、`AK_Product_Name`のインデックス、`Product`テーブル。  
+ 次の例では、`AK_Product_Name` テーブルにある `Product` インデックスの AUTO_UPDATE_STATISTICS オプションを無効にします。  
   
 ```  
 USE AdventureWorks2012;  
@@ -120,7 +120,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [統計](../../relational-databases/statistics/statistics.md)   
- [ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   

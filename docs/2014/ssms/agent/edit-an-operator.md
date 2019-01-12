@@ -15,12 +15,12 @@ ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c037aedf4fa3199be658999f676731875e0b785
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9ee3228eea9970563540be9bc6a4c3b9a3677112
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764204"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127592"
 ---
 # <a name="edit-an-operator"></a>Edit an Operator
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、通知の受信や通知用の電子メール アドレス、ポケットベル アドレス、Net SEND アドレスなど、オペレーターの可用性を編集する方法について説明します。  
@@ -66,7 +66,7 @@ ms.locfileid: "52764204"
   
 4.  編集するオペレーターを右クリックし、 **[プロパティ]** をクリックします。  
   
-     *[<オペレーター名> のプロパティ]* ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
+     _operator_name_**のプロパティ** ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
   
     -   [オペレーターのプロパティと演算子の新しい&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

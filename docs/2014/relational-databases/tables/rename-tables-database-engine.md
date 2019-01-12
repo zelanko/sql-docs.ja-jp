@@ -15,12 +15,12 @@ ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34b930defb70b64bd006026870389fc509b755c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789012"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124592"
 ---
 # <a name="rename-tables-database-engine"></a>テーブル名の変更 (データベース エンジン)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブルの名前を変更することができます。  
@@ -64,7 +64,7 @@ ms.locfileid: "52789012"
   
 4.  この操作を取り消すには、このフィールド外に移動する前に Esc キーを押します。  
   
-5.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
+5.  **ファイル** メニューの **table name**_の保存_を選びます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

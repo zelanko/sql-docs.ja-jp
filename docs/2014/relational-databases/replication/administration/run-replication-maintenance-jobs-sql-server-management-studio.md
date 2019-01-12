@@ -12,26 +12,21 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19faa0690069d6c16be7591547f4a242ac2469fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805586"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128392"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>レプリケーション メンテナンス ジョブの実行 (SQL Server Management Studio)
   レプリケーションでは以下のメンテナンス ジョブを使用します。  
   
--   **データ検証で問題が見つかったサブスクリプションの再初期化**  
-  
--   **エージェント履歴のクリーンアップ: ディストリビューション**  
-  
--   **ディストリビューションのレプリケーション モニターの状態更新機能**  
-  
--   **レプリケーション エージェントの検査**  
-  
--   **ディストリビューションのクリーンアップ: ディストリビューション**  
-  
+-   **データ検証で問題が見つかったサブスクリプションの再初期化**
+-   **エージェント履歴のクリーンアップ: ディストリビューション**
+-   **ディストリビューションのレプリケーション モニターの状態更新機能**
+-   **レプリケーション エージェントの検査**
+-   **ディストリビューションのクリーンアップ: ディストリビューション**
 -   **有効期限が切れたサブスクリプションのクリーンアップ**  
   
  上記のジョブの開始および停止は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[ジョブ]** フォルダーおよびレプリケーション モニターの **[エージェント]** タブから行います。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。 各ジョブのプロパティの表示および変更は、同じフォルダーおよびタブからアクセスできる **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスで行います。  
@@ -74,7 +69,7 @@ ms.locfileid: "52805586"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [パブリッシャーの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [表示情報とレプリケーション モニターを使用してタスクを実行します。](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーション エージェントの管理](../agents/replication-agent-administration.md)  
   
   

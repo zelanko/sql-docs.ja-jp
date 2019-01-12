@@ -13,12 +13,12 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 10862df13f154ecc2e144952db16652c70a2abf4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 661ec0fca03349f4b833a9fa3128bd539a2cc267
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785174"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127202"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>データの変更をトランザクション アーティクルに反映する方法の設定
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、トランザクション アーティクルへのデータの変更の反映方法を設定する方法について説明します。  
@@ -116,11 +116,11 @@ ms.locfileid: "52785174"
   
 1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 **@publication**、**@article**、および **@source_object** に、それぞれ、アーティクルが属しているパブリケーションの名前、アーティクルの名前、および、パブリッシュ対象のデータベース オブジェクトを指定します。さらに、**@schema_option** にビットマスク **0x02** (カスタム ストアド プロシージャの自動生成を有効にする) を指定し、次のいずれかのパラメーターを指定します。  
   
-    -   **@ins_cmd** - **CALL sp_MSins_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **@ins_cmd** -の値を指定<strong>CALL sp_msins _*article_name*</strong>ここで、 **_article_name_** の指定された値 **@article**.  
   
-    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **@del_cmd** -の値を指定<strong>CALL sp_msdel _*article_name*</strong> または<strong>XCALL sp_msdel _*article_name*</strong>ここで、 **_article_name_** _ * に指定された値は、@article* *。  
   
-    -   **@upd_cmd** - **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name***、**MCALL sp_MSupd_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **@upd_cmd** -の値を指定<strong>SCALL sp_msupd _*article_name*</strong>、 <strong>CALL sp_msupd _*article_name*</strong>、 <strong>XCALL sp_MSupd__article_name*</strong>、または<strong>MCALL sp_msupd _* article_name *</strong>ここで、 _**article_name**_ 値です指定された **@article**します。  
   
     > [!NOTE]  
     >  上記コマンド パラメーターのそれぞれについて、レプリケーションによって生成されるストアド プロシージャに独自の名前を指定できます。  
@@ -136,11 +136,11 @@ ms.locfileid: "52785174"
   
 1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 **@publication**、**@article**、および **@source_object** に、それぞれ、アーティクルが属しているパブリケーションの名前、アーティクルの名前、および、パブリッシュ対象のデータベース オブジェクトを指定します。さらに、**@schema_option** にビットマスク **0x02** (カスタム ストアド プロシージャの自動生成を有効にする) を指定し、次のいずれかのパラメーターを指定します。  
   
-    -   **@ins_cmd** - **CALL sp_MSins_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **@ins_cmd** -の値を指定<strong>CALL sp_msins _*article_name*</strong>ここで、 _**article_name**_ の指定された値 **@article**.  
   
-    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **@del_cmd** -の値を指定<strong>CALL sp_msdel _*article_name*</strong> または<strong>XCALL sp_msdel _*article_name*</strong>ここで、 _**article_name**_ の指定された値 **@article**します。  
   
-    -   **@upd_cmd** - **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name***、**MCALL sp_MSupd_* article_name*** を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **@upd_cmd** -の値を指定<strong>SCALL sp_msupd _*article_name*</strong>、 <strong>CALL sp_msupd _*article_name*</strong>、 <strong>XCALL sp_msupd _*article_name*</strong>、 <strong>MCALL sp_msupd _*article_name*</strong>ここで、  _**article_name**_ の指定された値 **@article**します。  
   
     > [!NOTE]  
     >  上記コマンド パラメーターのそれぞれについて、レプリケーションによって生成されるストアド プロシージャに独自の名前を指定できます。  
@@ -160,6 +160,6 @@ ms.locfileid: "52785174"
   
 ## <a name="see-also"></a>参照  
  [トランザクション アーティクルに変更を反映する方法の指定](../transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [パブリケーションとアーティクルの作成、変更、および削除 &#40;レプリケーション&#41;](create-modify-and-delete-publications-and-articles-replication.md)  
+ [パブリケーションを作成します。](create-a-publication.md)  
   
   

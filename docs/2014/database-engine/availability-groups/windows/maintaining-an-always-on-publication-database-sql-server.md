@@ -13,12 +13,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b275f7b25d87753911548eda5225d5de29f0897c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143762"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126985"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>AlwaysOn パブリケーション データベースのメンテナンス (SQL Server)
   このトピックでは、AlwaysOn 可用性グループを使用するときのパブリケーション データベースのメンテナンスについての特別な考慮事項について説明します。  
@@ -68,7 +68,7 @@ ms.locfileid: "48143762"
     > [!NOTE]  
     >  メンバー データベースをパブリッシュした可用性グループを削除した場合、またはパブリッシュされたデータベースを可用性グループから削除した場合、パブリッシュされたデータベースのすべてのコピーは復旧中の状態のままとなります。 それぞれを復元すると、パブリッシュされたデータベースとして表示されます。 1 つのコピーだけをパブリケーション メタデータで保持する必要があります。 パブリッシュされたデータベース コピーのレプリケーションを無効にするには、最初にすべてのサブスクリプションとパブリケーションをデータベースから削除します。  
   
-     実行`sp_dropsubscription`パブリケーション サブスクリプションを削除します。 アクティブなパブリッシング データベースのメタデータをディストリビューターで保持するために、 *@ignore_distributributor* パラメーターを 1 に設定します。  
+     `sp_dropsubscription` を実行してパブリケーション サブスクリプションを削除します。 アクティブなパブリッシング データベースのメタデータをディストリビューターで保持するために、 *@ignore_distributributor* パラメーターを 1 に設定します。  
   
     ```  
     USE MyDBName;  
@@ -81,7 +81,7 @@ ms.locfileid: "48143762"
         @ignore_distributor = 1;  
     ```  
   
-     実行`sp_droppublication`のすべてのパブリケーションを削除します。 この場合も、アクティブなパブリッシング データベースのメタデータをディストリビューターで保持するために、 *@ignore_distributor* パラメーターを 1 に設定します。  
+     `sp_droppublication` を実行してすべてのパブリケーションを削除します。 この場合も、アクティブなパブリッシング データベースのメタデータをディストリビューターで保持するために、 *@ignore_distributor* パラメーターを 1 に設定します。  
   
     ```  
     EXEC sys.sp_droppublication   
@@ -106,14 +106,14 @@ ms.locfileid: "48143762"
   
 -   [レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ&#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [管理 &#40;レプリケーション&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [レプリケーションの管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [レプリケーション サブスクライバーと AlwaysOn 可用性グループ&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
  [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性グループ: 相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
+ [AlwaysOn 可用性グループ:相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server のレプリケーション](../../../relational-databases/replication/sql-server-replication.md)  
   
   

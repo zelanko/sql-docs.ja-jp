@@ -16,12 +16,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bf36beb01ee7d31b78e6bdf06921bc460bcbbad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d2529bc92acf32730b0462edeb7315b60fd046a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199212"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127439"
 ---
 # <a name="database-engine-scripting"></a>データベース エンジン スクリプト
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] のインスタンスとそのインスタンスに含まれるオブジェクトを管理するための [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell スクリプト環境をサポートします。 スクリプト環境と非常によく似た環境で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] と XQuery を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを作成および実行することもできます。  
@@ -60,7 +60,7 @@ ms.locfileid: "48199212"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ファイル]**/ メニューの **[開く]** を使用して、新しい[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウでファイルを開きます。  
   
--   使用して、**-i * * * input_file*パラメーターを使用して、ファイルを実行、`sqlcmd`ユーティリティ。  
+-   使用して、 **-i**_input_file_パラメーターを使用して、ファイルを実行、`sqlcmd`ユーティリティ。  
   
 -   **-QueryFromFile** パラメーターを使用して、 **PowerShell スクリプトの** Invoke-Sqlcmd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドレットでファイルを実行します。  
   
@@ -73,12 +73,12 @@ ms.locfileid: "48199212"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] スクリプトを対話形式で開発、デバッグ、および実行するために、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のコード エディターとテキスト エディターを使用する方法について説明します。|[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
-|使用する方法について説明します、`sqlcmd`ユーティリティを実行する[!INCLUDE[tsql](../../includes/tsql-md.md)]対話形式でスクリプトを開発する機能など、コマンド プロンプトからスクリプト。|[sqlcmd 操作方法のトピック](../../database-engine/sqlcmd-how-to-topics.md)|  
+|対話形式でスクリプトを開発する機能も含めて、コマンド プロンプトから [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを実行するために、`sqlcmd` ユーティリティを使用する方法について説明します。|[sqlcmd 操作方法のトピック](../../database-engine/sqlcmd-how-to-topics.md)|  
 |Windows PowerShell 2.0 環境に SQL Server コンポーネントを統合し、SQL Server インスタンスおよびオブジェクトを管理するための PowerShell スクリプトを作成する方法について説明します。|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
 |データベースの 1 つまたは複数のオブジェクトを再作成する **スクリプトを作成するために、** スクリプトの生成とパブリッシュ [!INCLUDE[tsql](../../includes/tsql-md.md)] ウィザードを使用する方法について説明します。|[スクリプトの生成 &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>参照  
  [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
- [チュートリアル: Transact-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [チュートリアル:TRANSACT-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

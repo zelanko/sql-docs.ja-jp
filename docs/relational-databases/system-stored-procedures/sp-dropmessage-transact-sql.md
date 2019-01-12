@@ -18,17 +18,17 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa4b07c3a7c27546990f1b5a1a25fd4f7d0da83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eae9eeceec6d32ca616244f2ebd77f96d23e614
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725040"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124152"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  インスタンスから、指定したユーザー定義エラー メッセージを削除、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 使用してユーザー定義メッセージを表示することができます、 **sys.messages**カタログ ビューです。  
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスから、指定したユーザー定義エラー メッセージを削除します。 使用してユーザー定義メッセージを表示することができます、 **sys.messages**カタログ ビューです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ sp_dropmessage [ @msgnum = ] message_number
  [  **@msgnum =** ] *message_number*  
  削除するメッセージ番号を指定します。 *message_number*ユーザー定義のメッセージをメッセージの番号 50000 より大きい値を持つ必要があります。 *message_number*は**int**、既定値は NULL です。  
   
- [  **@lang =** ] **'***言語***'**  
+ [  **@lang =** ] **'**_言語_**'**  
  メッセージを削除する言語です。 場合**すべて**が指定されているすべての言語バージョン*message_number*は削除されます。 *言語*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -71,7 +71,7 @@ EXEC sp_dropmessage 50001;
 ```  
   
 ### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>B. ローカライズ版を含むユーザー定義メッセージを削除する  
- 次の例では、数、ユーザー定義メッセージを削除する`60000`メッセージのローカライズされたバージョンが含まれます。  
+ 次の例では、ローカライズ版を含む番号 `60000` のユーザー定義メッセージを削除します。  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="c-dropping-a-localized-version-of-a-user-defined-message"></a>C. ユーザー定義メッセージのローカライズ版を削除する  
- 次の例では、ユーザー定義メッセージ数のローカライズ版を削除する`60000`、メッセージ全体を削除せずします。  
+ 次の例では、全メッセージを削除せずに、番号 `60000` のユーザー定義メッセージのローカライズ版を削除します。  
   
 ```  
 USE master;  

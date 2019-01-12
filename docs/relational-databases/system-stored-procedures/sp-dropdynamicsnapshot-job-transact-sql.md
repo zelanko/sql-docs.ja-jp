@@ -16,12 +16,12 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 410a852ed1535a219208a62b7d0b45849333cb49
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4612c7b20e448eecbd6c83a3d09d0796dcff542
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818994"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126262"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_パブリケーション_**'**  
  フィルター選択されたデータ スナップショット ジョブを削除するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
+ [ **@dynamic_snapshot_jobname**=] **'**_dynamic_snapshot_jobname_**'**  
  削除対象となる、フィルター選択されたデータ スナップショット ジョブの名前を指定します。 *dynamic_snapshot_jobname*が sysname で、既定の設定でない場合にどのようなジョブ名に関連付けられている*dynamic_snapshot_jobid*します。  
   
- [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid**=] **'**_dynamic_snapshot_jobid_**'**  
  削除対象となる、フィルター選択されたデータ スナップショット ジョブの ID を指定します。 *dynamic_snapshot_jobid*は**uniqueidentifier**、既定値は NULL です。  
   
 > [!IMPORTANT]  

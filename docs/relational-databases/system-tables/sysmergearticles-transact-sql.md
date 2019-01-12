@@ -18,12 +18,12 @@ ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4834ebec21b69d000a84c6d4fdd5c615f2ca833e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 53bf75f0c153012eb60188f354ac9ac775ce1b26
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757014"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128242"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52757014"
 |**fast_multicol_updateproc**|**bit**|1 つの UPDATE ステートメントで同じ行の複数の列に対して変更を適用するように、マージ エージェントが有効になっているかどうかを示します。<br /><br /> **0**列ごとに個別の更新の変更の問題を = です。<br /><br /> **1** = 1 つのステートメントで複数の列を更新する UPDATE ステートメントを発行します。|  
 |**check_permissions**|**int**|マージ エージェントがパブリッシャーに変更を適用するときに確認されるテーブルレベル権限のビットマップ。 *check_permissions*これらの値のいずれかの。<br /><br /> **0x00 =** 権限は確認されません。<br /><br /> **0x10 =** サブスクライバー側で Insert をアップロードする前に、パブリッシャー側で権限を確認します。<br /><br /> **0x20 =** サブスクライバーで行われた更新プログラムをアップロードする前に、パブリッシャー側で権限を確認します。<br /><br /> **0x40 =** サブスクライバー側で Delete をアップロードする前に、パブリッシャー側で権限を確認します。|  
 |**maxversion_at_cleanup**|**int**|メタデータがクリーンアップされる最上位世代。|  
-|**processing_order**|**int**|マージ パブリケーション内のアーティクルの処理順序を示します値が**0**アーティクルが順序付けられたがないことと、最低から最高値の順序でアーティクルが処理で示されます。 2 つのアーティクルの値が同じ場合、それらは同時に処理されます。 詳細については、「[Specify the Processing Order of Merge Articles](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)」 (マージ アーティクルの処理順序の指定) を参照してください。|  
+|**processing_order**|**int**|マージ パブリケーション内のアーティクルの処理順序を示します値が**0**アーティクルが順序付けられたがないことと、最低から最高値の順序でアーティクルが処理で示されます。 2 つのアーティクルの値が同じ場合、それらは同時に処理されます。 詳細については、次を参照してください。[マージ レプリケーションの指定プロパティ](../../relational-databases/replication/merge/specify-merge-replication-properties.md)します。|  
 |**upload_options**|**tinyint**|クライアント サブスクリプションを使用したサブスクライバー側での更新に対する制限を定義します。次のいずれかの値になります。<br /><br /> **0** = クライアント サブスクリプションを使用したサブスクライバーで行われる更新に制限はありません。 すべての変更がパブリッシャーにアップロードされます。<br /><br /> **1** = 変更は、クライアント サブスクリプションを使用したサブスクライバーで許可されますが、パブリッシャーにはアップロードされません。<br /><br /> **2** = クライアント サブスクリプションを使用したサブスクライバーでの変更は許可されません。<br /><br /> 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。|  
 |**published_in_tran_pub**|**bit**|マージ パブリケーション内のアーティクルが、トランザクション パブリケーションでもパブリッシュされるかどうかを示します。<br /><br /> **0** = アーティクルはトランザクション アーティクルでパブリッシュされません。<br /><br /> **1** = アーティクルはトランザクション アーティクルでもパブリッシュされます。|  
 |**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

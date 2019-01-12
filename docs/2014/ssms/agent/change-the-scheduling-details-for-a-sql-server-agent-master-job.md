@@ -10,12 +10,12 @@ ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13cd77270554a3c68ab07bfe8820295f9136f3dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 01f9e53c4ae42f981b1b579294954a965ef8c376
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751674"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127162"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブのスケジューリングの詳細の変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でジョブ定義のスケジューリングの詳細を変更する方法について説明します。  
@@ -56,7 +56,7 @@ ms.locfileid: "52751674"
   
 4.  スケジュールを編集するジョブを右クリックして、 **[プロパティ]** をクリックします。  
   
-5.  **ジョブのプロパティ-* * * job_name*ダイアログ ボックスで、**ページの選択**、**スケジュール**。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ。新しいジョブ&#40;[スケジュール] ページ&#41;](job-properties-new-job-schedules-page.md)します。  
+5.  **ジョブのプロパティ -**_job_name_ダイアログ ボックスで、**ページの選択**、**スケジュール**。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ。新しいジョブ&#40;[スケジュール] ページ&#41;](job-properties-new-job-schedules-page.md)します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   

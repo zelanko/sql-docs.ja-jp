@@ -14,12 +14,12 @@ ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e35b5020eef6b7a884a0490d882c82e2775c8952
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3142a78fcf3a2413e43b1a7598b5d3b282aba1c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805784"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127672"
 ---
 # <a name="subscriber-properties"></a>[サブスクライバーのプロパティ]
   **[サブスクライバーのプロパティ]** ダイアログ ボックスには、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているサブスクライバーに関連する情報が表示されます。  
@@ -39,8 +39,8 @@ ms.locfileid: "52805784"
  サブスクライバーとサブスクライバーの種類に関する情報が含まれています。  
   
 ## <a name="see-also"></a>参照  
- [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](view-and-modify-distributor-and-publisher-properties.md)   
- [プロパティ リファレンス &#40;レプリケーション&#41;](properties-reference-replication.md)   
+ [ディストリビューターとパブリッシャーのプロパティの表示および変更](view-and-modify-distributor-and-publisher-properties.md)   
+
  [パブリケーションのサブスクライブ](subscribe-to-publications.md)  
   
   

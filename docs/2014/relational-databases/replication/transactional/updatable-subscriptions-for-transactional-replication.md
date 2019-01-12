@@ -17,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813984"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126432"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52813984"
   
  トランザクション パブリケーションの更新可能なサブスクリプションを有効にするには、「 [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)」をご覧ください。  
   
- トランザクション パブリケーションの更新可能なサブスクリプションを作成するには、「 [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)」をご覧ください。  
+ トランザクション パブリケーションの更新可能なサブスクリプションを作成するには、「 [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)」をご覧ください。  
   
 ## <a name="switching-between-update-modes"></a>更新モードの切り替え  
  更新可能なサブスクリプションを使用する場合に、サブスクリプションに 1 つの更新モードを指定し、アプリケーションで別の更新モードが必要な場合はそちらに切り替えるように指定できます。 たとえば、サブスクリプションで即時更新を使用するが、システム障害でネットワークに接続できなくなった場合には、キュー更新に切り替えるように指定することができます。  
@@ -124,7 +124,7 @@ ms.locfileid: "52813984"
   
 ## <a name="see-also"></a>参照  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
- [トランザクション レプリケーションで使用するパブリケーションの種類](publication-types-for-transactional-replication.md)   
+ [トランザクション レプリケーション](transactional-replication.md)   
  [データとデータベース オブジェクトのパブリッシュ](../publish/publish-data-and-database-objects.md)   
  [パブリケーションのサブスクライブ](../subscribe-to-publications.md)  
   

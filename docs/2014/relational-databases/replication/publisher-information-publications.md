@@ -1,5 +1,5 @@
 ---
-title: パブリッシャー情報、[パブリケーション] | Microsoft Docs
+title: SQL Server レプリケーション ' パブリッシャー情報 ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8614db7bd44f6ba5de8826215aed8cf123e86488
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812174"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128912"
 ---
-# <a name="publisher-information-publications"></a>パブリッシャー情報、[パブリケーション]
+# <a name="sql-server-replication-publisher-information-dialog-box"></a>SQL Server レプリケーション ' パブリッシャー情報 ダイアログ ボックス
   **[パブリケーション]** タブを使用すると、左ペインで選択したパブリッシャーにおけるすべてのパブリケーションに関する要約情報を取得できます。  
   
 ## <a name="options"></a>および  
@@ -84,7 +84,7 @@ ms.locfileid: "52812174"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
- [パブリッシャーの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [表示情報とレプリケーション モニターを使用してタスクを実行します。](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)  
   
   

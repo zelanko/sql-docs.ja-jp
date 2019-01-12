@@ -17,12 +17,12 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87cb1034499afe331f78278b43986528a78d9674
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2bff82764256eebb02141bf2e1fafd86dce026e4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758074"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125772"
 ---
 # <a name="view-replicated-commands-and-other-information-in-the-distribution-database-replication-transact-sql-programming"></a>レプリケートされたコマンドなどディストリビューション データベースに格納されている情報を表示する (レプリケーション Transact-SQL プログラミング)
   トランザクション レプリケーションでは、トランザクション コマンドが、ディストリビューション エージェントによってすべてのサブスクライバーに反映されるか、サブスクライバーのディストリビューション エージェントによって変更が抽出されるまで、ディストリビューション データベースに格納されます。 ディストリビューション データベース内で保留状態のコマンドは、レプリケーションのストアド プロシージャを使用してプログラムから表示できます。 詳細については、「[Replication Stored Procedures &#40;Transact-SQL&#41; (レプリケーションのストアド プロシージャ &#40;Transact-SQL&#41;)](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)」を参照してください。  
@@ -38,6 +38,6 @@ ms.locfileid: "52758074"
 2.  ディストリビューターのディストリビューション データベースで [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql)を実行します。 (省略可) 手順 1. のアーティクル ID を **@article_id**」を参照してください。 (省略可) パブリケーション データベースの ID を **@publisher_database_id**に指定します。この ID は、 **sys.databases** カタログ ビューの [database_id](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列で確認できます。  
   
 ## <a name="see-also"></a>参照  
- [Programmatically Monitor Replication (プログラムによるレプリケーションの監視)](monitoring-replication-overview.md)  
+ [Programmatically Monitor Replication (プログラムによるレプリケーションの監視)](../monitoring-replication.md)  
   
   

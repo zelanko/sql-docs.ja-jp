@@ -12,12 +12,12 @@ ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e82c71834a2d41a7620f549bc6335fa15df84bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813994"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125382"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>チュートリアル:レプリケーションに備えたサーバーの準備
   レプリケーション トポロジを構成するには、事前にセキュリティ計画を立てることが重要です。 このチュートリアルでは、レプリケーション トポロジのセキュリティを向上する方法と、データのレプリケートで最初のステップとなるディストリビューションの構成方法を学習します。 他のチュートリアルを行う前に、まずこのチュートリアルを実行してください。  
@@ -49,6 +49,6 @@ ms.locfileid: "52813994"
   
 ## <a name="see-also"></a>参照  
  [[ディストリビューションの構成]](configure-distribution.md)   
- [セキュリティと保護 &#40;レプリケーション&#41;](security/security-and-protection-replication.md)  
+ [SQL Server レプリケーションのセキュリティ](security/view-and-modify-replication-security-settings.md)  
   
   

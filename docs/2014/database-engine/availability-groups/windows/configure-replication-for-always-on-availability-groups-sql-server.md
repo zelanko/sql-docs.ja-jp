@@ -13,12 +13,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cce805ea589a3795a5d617a1d2e01274f8a2fc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 547ebeb6043345821d2b2a19b407599abfd14008
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174622"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125412"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループ用のレプリケーションの構成 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でのレプリケーションおよび AlwaysOn 可用性グループの構成には、7 つのステップが必要です。 各ステップの詳細については、以下のセクションで説明します。  
@@ -70,7 +70,7 @@ ms.locfileid: "48174622"
   
  **元のパブリッシャーでのパブリッシャーの構成**  
   
-1.  リモート ディストリビューションを構成します。 実行の場合は、パブリッシャーを構成するストアド プロシージャを使用、`sp_adddistributor`します。 同じ値を指定*@password*とき`sp_adddistrbutor`が実行された、ディストリビューターでディストリビューションを設定します。  
+1.  リモート ディストリビューションを構成します。 ストアド プロシージャを使用してパブリッシャーを構成する場合は、`sp_adddistributor` を実行します。 同じ値を指定*@password*とき`sp_adddistrbutor`が実行された、ディストリビューターでディストリビューションを設定します。  
   
     ```  
     exec sys.sp_adddistributor  
@@ -78,7 +78,7 @@ ms.locfileid: "48174622"
         @password = 'MyDistPass'  
     ```  
   
-2.  データベースでレプリケーションを有効にします。 実行の場合は、パブリッシャーを構成するストアド プロシージャを使用、`sp_replicationdboption`します。 データベースに対してトランザクション レプリケーションとマージ レプリケーションの両方を構成する場合は、それぞれを有効にする必要があります。  
+2.  データベースでレプリケーションを有効にします。 ストアド プロシージャを使用してパブリッシャーを構成する場合は、`sp_replicationdboption` を実行します。 データベースに対してトランザクション レプリケーションとマージ レプリケーションの両方を構成する場合は、それぞれを有効にする必要があります。  
   
     ```  
     USE master;  
@@ -133,7 +133,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- セカンダリ レプリカの各ホストで、ディストリビューションを構成します。 リモート ディストリビューターには、元のパブリッシャーのディストリビューターを指定します。 同じパスワードを使用するときと`sp_adddistributor`ディストリビューターで最初に実行されました。 ディストリビューションの構成ストアド プロシージャを使用する場合、 *@password*パラメーターの`sp_adddistributor`パスワードを指定するために使用します。  
+ セカンダリ レプリカの各ホストで、ディストリビューションを構成します。 リモート ディストリビューターには、元のパブリッシャーのディストリビューターを指定します。 パスワードは、ディストリビューターで最初に `sp_adddistributor` を実行したときと同じものを使用します。 ディストリビューションの構成ストアド プロシージャを使用する場合、 *@password*パラメーターの`sp_adddistributor`パスワードを指定するために使用します。  
   
 ```  
 EXEC sp_adddistributor   
@@ -141,7 +141,7 @@ EXEC sp_adddistributor
     @password = '**Strong password for distributor**';  
 ```  
   
- セカンダリ レプリカの各ホストで、データベースのパブリケーションのプッシュ サブスクライバーがリンク サーバーとして表示されることを確認します。 使用してリモート パブリッシャーを構成するには、ストアド プロシージャを使用されているが場合、`sp_addlinkedserver`にサブスクライバーを追加 (まだ存在しない場合)、パブリッシャーにリンク サーバーとして。  
+ セカンダリ レプリカの各ホストで、データベースのパブリケーションのプッシュ サブスクライバーがリンク サーバーとして表示されることを確認します。 ストアド プロシージャを使用してリモート パブリッシャーを構成する場合は、`sp_addlinkedserver` を使用してパブリッシャーにリンク サーバーとしてサブスクライバーを追加します (まだ存在しない場合)。  
   
 ```  
 EXEC sys.sp_addlinkedserver   
@@ -176,15 +176,15 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
  ストアド プロシージャ `sp_validate_replica_hosts_as_publishers` は、可用性グループ レプリカの各ホストで、可用性グループに関する情報をクエリするための十分な権限を持つログインから実行する必要があります。 異なり`sp_validate_redirected_publisher`、呼び出し元の資格情報を使用し、可用性グループ レプリカに接続する msdb.dbo.MSdistpublishers に保持されているログインを使用しません。  
   
 > [!NOTE]  
->  `sp_validate_replica_hosts_as_publishers` 読み取りを読み取りアクセスを許可または必要としない、セカンダリ レプリカのホストの検証を指定する目的は、次のエラーで失敗します。  
+>  セカンダリ レプリカのホストで読み取りアクセスが許可されていない場合や、読み取りを目的としたアクセスを指定する必要がある場合、`sp_validate_replica_hosts_as_publishers` による検証は失敗し、次のエラー メッセージが表示されます。  
 >   
 >  メッセージ 21899、レベル 11、状態 1、プロシージャ `sp_hadr_verify_subscribers_at_publisher`、行 109  
 >   
->  元のパブリッシャー 'MyOriginalPublisher' のサブスクライバーの sysserver エントリがあるかどうかを判断するために、リダイレクトされたパブリッシャー 'MyReplicaHostName' で実行したクエリが、エラー '976'、エラー メッセージ 'エラー 976、レベル 14、状態 1、メッセージ: 対象になるデータベース 'MyPublishedDB' は可用性グループに参加しているため、現在クエリでアクセスできません。 データ移動が中断されているか、可用性レプリカの読み取りアクセスが有効になっていません。 このデータベースや可用性グループの他のデータベースへの読み取り専用アクセスを許可するには、グループの 1 つ以上のセカンダリ可用性レプリカへの読み取りアクセスを有効にします。  詳細については、次を参照してください。、`ALTER AVAILABILITY GROUP`ステートメント[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オンライン ブックの「します。 '。  
+>  リダイレクトされたパブリッシャーの元のパブリッシャーのサブスクライバーの sysserver エントリがあるかどうかを判断するには、' MyReplicaHostName' でクエリを 'myoriginalpublisher' エラー '976'、エラー メッセージ ' エラー 976、レベル 14、状態 1、メッセージ。ターゲット データベース 'MyPublishedDB' は、可用性グループに参加しているしは現在のクエリにアクセスできません。 データ移動が中断されているか、可用性レプリカの読み取りアクセスが有効になっていません。 このデータベースや可用性グループの他のデータベースへの読み取り専用アクセスを許可するには、グループの 1 つ以上のセカンダリ可用性レプリカへの読み取りアクセスを有効にします。  詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの `ALTER AVAILABILITY GROUP` ステートメントのトピックを参照してください。' で失敗しました。  
 >   
 >  レプリカ ホスト 'MyReplicaHostName' について、1 つまたは複数のパブリッシャー検証エラーが発生しました。  
   
- これは想定されている動作です。 これらのセカンダリ レプリカのホストでは、sysserver エントリをホストで直接クエリして、サブスクライバー サーバーのエントリがあるかどうかを確認する必要があります。  
+ これは通常の動作です。 これらのセカンダリ レプリカのホストでは、sysserver エントリをホストで直接クエリして、サブスクライバー サーバーのエントリがあるかどうかを確認する必要があります。  
   
 ##  <a name="step7"></a> 7.元のパブリッシャーをレプリケーション モニターに追加する  
  それぞれの可用性グループ レプリカで、元のパブリッシャーをレプリケーション モニターに追加します。  
@@ -196,7 +196,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ&#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [管理 &#40;レプリケーション&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [レプリケーションの管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **可用性グループを作成して構成するには**  
   
@@ -223,7 +223,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 ## <a name="see-also"></a>参照  
  [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性グループ: 相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
+ [AlwaysOn 可用性グループ:相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server のレプリケーション](../../../relational-databases/replication/sql-server-replication.md)  
   
   

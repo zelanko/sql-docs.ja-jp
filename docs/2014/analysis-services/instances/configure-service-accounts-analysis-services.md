@@ -16,12 +16,12 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 214d58fd64649b23f632b393d6b9b0a2b71a2359
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7b6be38afc2c95d6cfce80bcefa6ad0b3ab954fe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362834"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125502"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>サービス アカウントの構成 (Analysis Services)
   製品全体のアカウントの準備については、 [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)サービスに関する包括的なサービス アカウントの情報を提供するトピック、「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows サービス アカウントと権限の構成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]」を参照してください。 有効なアカウントの種類、セットアップで割り当てられた Windows 特権、ファイル システムの権限、レジストリの権限などについては、前のトピックをご覧ください。  
@@ -39,7 +39,7 @@ ms.locfileid: "53362834"
 ## <a name="logon-account-recommendations"></a>ログオン アカウントに関する推奨事項  
  フェールオーバー クラスターでは、Analysis Services のすべてのインスタンスが Windows ドメイン ユーザー アカウントを使用するように構成する必要があります。 すべてのインスタンスに、同じアカウントを割り当てます。 詳細については、「 [Analysis Services をクラスター化する方法](https://msdn.microsoft.com/library/dn736073.aspx) 」を参照してください。  
   
- スタンドアロンのインスタンスが既定の仮想アカウントを使用する必要があります**NT service \mssqlserverolapservice**既定のインスタンス、または **NT service \msolap$ * * * インスタンス名*名前付きインスタンス。 この推奨事項は、すべてのサーバー モードの Analysis Services インスタンスに適用されます。オペレーティング システムには Windows Server 2008 R2 以降、Analysis Services には SQL Server 2012 を想定しています。  
+ スタンドアロンのインスタンスは、既定のインスタンスの場合は既定の仮想アカウント **NT Service\MSSQLServerOLAPService** を使用しなければならず、名前付きインスタンスの場合は **NT Service\MSOLAP$**_instance-name_ を使用します。 この推奨事項は、すべてのサーバー モードの Analysis Services インスタンスに適用されます。オペレーティング システムには Windows Server 2008 R2 以降、Analysis Services には SQL Server 2012 を想定しています。  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Analysis Services へのアクセス許可の付与  
  このセクションでは、Analysis Services がローカルの内部操作 (実行可能ファイルの開始、構成ファイルの読み取り、データ ディレクトリからのデータベースの読み込みなど) に必要とするアクセス許可を説明します。 必要としているのがその情報ではなく、外部データ アクセスやその他のサービスおよびアプリケーションとの相互運用性のためのアクセス許可の設定のガイダンスである場合は、このトピックで後述する「 [特定のサーバー操作に対する追加のアクセス許可の付与](#bkmk_tasks) 」を参照してください。  

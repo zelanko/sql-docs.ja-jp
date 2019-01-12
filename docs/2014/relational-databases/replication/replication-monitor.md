@@ -14,12 +14,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 780c4913a75b6014c43c407f05181ef93eddb594
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813970"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124452"
 ---
 # <a name="replication-monitor"></a>レプリケーション モニター
   ここでは、レプリケーション モニターに関する情報を紹介します。 モニターに表示されるページとダイアログ ボックスは、レプリケーションの種類と、監視の対象となる [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンに応じて変わります。  
@@ -31,15 +31,7 @@ ms.locfileid: "52813970"
 -   [ディストリビューターの設定](distributor-settings.md)  
   
 -   [ディストリビューター情報、パブリケーション](distributor-information-publications.md)  
-  
--   [ディストリビューター情報、[サブスクリプション ウォッチ リスト] &#40;トランザクション パブリケーション、SQL Server 2005 以降&#41;](distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [ディストリビューター情報、[サブスクリプション ウォッチ リスト] &#40;マージ パブリケーション、SQL Server 2005 以降&#41;](distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [ディストリビューター情報、[サブスクリプション ウォッチ リスト] &#40;スナップショット パブリケーション、SQL Server 2005 以降&#41;](distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [ディストリビューター情報、エージェント](distributor-information-agents.md)  
-  
+
 -   [[パブリッシャーの設定]](publisher-settings.md)  
   
 -   [パブリッシャー情報、[パブリケーション]](publisher-information-publications.md)  
@@ -80,8 +72,6 @@ ms.locfileid: "52813970"
   
 -   [サブスクリプション、[同期の履歴] &#40;マージ サブスクリプション、SQL Server 2005 以降&#41;](subscription-synchronization-history.md)  
   
--   [サブスクリプション、[同期の履歴] &#40;マージ サブスクリプション、SQL Server 2000&#41;](subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
-  
 -   [サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] &#40;スナップショット サブスクリプション&#41;](subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
 -   [ログ リーダー エージェント](log-reader-agent.md)  
@@ -97,6 +87,5 @@ ms.locfileid: "52813970"
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)   
- [プロパティ リファレンス &#40;レプリケーション&#41;](properties-reference-replication.md)  
   
   

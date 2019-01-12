@@ -16,12 +16,12 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ffb78d301762f9b7edcb78a2ba062db6fe662f6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f2ada1011096eb8275f9059e531cfc0fcc1af58c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540025"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126172"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>コア レベルの API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -38,7 +38,7 @@ ms.locfileid: "52540025"
 |**SQLCancel**|Hstmt、ステートメント ハンドルでの処理をキャンセルします。 場合によっては、Oracle では実行中のステートメントの取り消しを使用することはできません。 これは、Oracle ODBC Driver for Oracle でどの時点で、ステートメントの結果が取り消された、プロセスを完了するまで実行中のステートメントを続行することを意味します。|  
 |**SQLColAttributes**|結果セット内の列の記述子の情報を返します。 記述子の情報は、文字列、32 ビットの記述子に依存する値、または整数値として返されます。|  
 |**SQLConnect**|データ ソースに接続します。 Oracle オペレーティング システムの認証を使用する指定として「/」、 *szUID*パラメーターと""として、 *szAuthStr*パラメーター。|  
-|**SQLDescribeCol**|名前、型、有効桁数、スケール、および指定された結果の列の null 値を返します。 **注:****SQLDescribeCol** SQL_VARCHAR として計算列をレポートします。|  
+|**SQLDescribeCol**|名前、型、有効桁数、スケール、および指定された結果の列の null 値を返します。 **注:SQLDescribeCol** SQL_VARCHAR として計算列をレポートします。|  
 |**SQLDisconnect**|接続を閉じます。 共有環境の接続プールが有効になっているし、アプリケーションを呼び出すかどうか**SQLDisconnect**その環境で、接続で、接続が接続プールに返されを使用して他のコンポーネントを引き続き使用できます同じ共有環境です。|  
 |**Sqlerror 関数**|最後のエラーについてのエラーまたは状態情報を返します。 このドライバーは、スタックまたはに対して返されるエラーの一覧、 *hstmt*、 *hdbc*、および*henv*方法に応じて、引数への呼び出し**SQLError**されます。 エラー キューは、各ステートメントの後にフラッシュされます。 通常、Oracle のエラー メッセージを取得し、空ではそれ以外の場合。|  
 |**SQLExecDirect**|新しい、準備されていない SQL ステートメントを実行します。 ドライバーでは、ステートメントにパラメーターが存在しない場合、パラメーター マーカーの変数の現在の値が使用されます。 テーブル、ビュー、またはフィールド名にスペースが含まれる場合の名前で囲みます引用符の背面にマークします。 例では、データベースには、という名前のテーブルが含まれている場合、 *My Table*とフィールド*My Field*識別子の各要素を囲むようになります。<br /><br /> 選択\`表\`します。 \`マイ Field1\`、;\`表\`.\`マイ Field2\` FROM\`行をテーブル '|  

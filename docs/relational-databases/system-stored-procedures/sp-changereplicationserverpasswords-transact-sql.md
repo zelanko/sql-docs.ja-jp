@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 073577731fba32e092307ebd7c86eb5904c38a05
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760235"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125712"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証  
   
- [ **@login** =] **'***ログイン***'**  
+ [ **@login** =] **'**_ログイン_**'**  
  変更する Windows アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前を指定します。 *ログイン*は**nvarchar (257)**、既定値はありません  
   
- [ **@password** =] **'***パスワード***'**  
+ [ **@password** =] **'**_パスワード_**'**  
  新しいパスワードを格納する、指定された*ログイン*します。 *パスワード*は**sysname**、既定値はありません。  
   
 > [!NOTE]  
 >  レプリケーション パスワードを変更したら、そのパスワードを使用する各エージェントを停止して再起動し、エージェントに対して変更を反映させる必要があります。  
   
- [ **@server** =] **'***server***'**  
+ [ **@server** =] **'**_server_**'**  
  保存パスワードを変更するサーバー接続を指定します。 *server*は**sysname**、これらの値のいずれかを指定できます。  
   
 |値|説明|  

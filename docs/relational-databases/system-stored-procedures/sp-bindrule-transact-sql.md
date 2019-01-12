@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f06c0b7395ce61a52cae17e9cbc6429cdd6b9eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08f754022ae28cfce074978bfdd8c3f79ba71a6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728390"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128412"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@rulename=**] **'***ルール***'**  
+ [  **@rulename=**] **'**_ルール_**'**  
  CREATE RULE ステートメントによって作成されたルールの名前です。 *ルール*、 **nvarchar(776)** の既定値はありません。  
   
- [  **@objname=**] **'***object_name***'**  
+ [  **@objname=**] **'**_object_name_**'**  
  ルールがバインドされるテーブルと列、または別名データ型です。 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 また、計算列にもバインドできません。  
   
  *object_name*は**nvarchar (776)** 既定値はありません。 場合*object_name*は 1 つの要素名では、別名データ型として解決されます。 2 部構成または 3 部構成の名前の場合は、最初にテーブルおよび列として解決されます。この解決が失敗すると、別名データ型として解決されます。 既存の別名データ型の列を継承する既定では、*ルール*ルールを直接その列にバインドしない限り、します。  
@@ -60,7 +60,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  別名データ型を使用する式に対して作成されたルールは、列または別名データ型にバインドできますが、参照されてもコンパイルできません。 別名データ型に対して作成されたルールは使用しないでください。  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
+ [  **@futureonly=** ] **'**_futureonly_flag_**'**  
  ルールを別名データ型にバインドするときにのみ使用されます。 *future_only_flag*は**varchar (15)** 既定値は NULL です。 このパラメーターを設定すると**futureonly**エイリアス データ型の既存の列を新しいルールを継承しないようにします。 場合*futureonly_flag*が null の場合、新しいルールを現在ルールがあるいないか、別名データ型の既存のルールを使用している別名データ型の列にバインドされます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -81,7 +81,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-binding-a-rule-to-a-column"></a>A. 列にルールをバインドする  
- というルール`today`が作成された次の例がするルールをバインドするルールを作成するステートメントを使用して現在のデータベースで、`HireDate`の列、`Employee`テーブルです。 行が `Employee` テーブルに追加されると、`HireDate` 列のデータは `today` ルールと照らし合わせてチェックされます。  
+ CREATE RULE ステートメントを使用して `today` という名前のルールが現在のデータベースで作成されているものとします。次の例では、`HireDate` テーブルの `Employee` 列に、このルールをバインドします。 行が `Employee` テーブルに追加されると、`HireDate` 列のデータは `today` ルールと照らし合わせてチェックされます。  
   
 ```  
 USE master;  
@@ -90,7 +90,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. 別名データ型にルールをバインドする  
- `rule_ssn` という名前のルールがあり、`ssn` という名前の別名データ型があるものとします。次の例では、`rule_ssn` を `ssn` にバインドします。 CREATE TABLE ステートメントで、型の列で`ssn`を継承、`rule_ssn`ルールです。 型の既存の列`ssn`も継承、`rule_ssn`ルールは、しない限り、 **futureonly**が指定されて*futureonly_flag*、または`ssn`に直接バインドされたルールがあります。 列にバインドされているルールは、データ型にバインドされているルールより常に優先します。  
+ `rule_ssn` という名前のルールがあり、`ssn` という名前の別名データ型があるものとします。次の例では、`rule_ssn` を `ssn` にバインドします。 CREATE TABLE ステートメントで、`ssn` 型の列は `rule_ssn` ルールを継承します。 型の既存の列`ssn`も継承、`rule_ssn`ルールは、しない限り、 **futureonly**が指定されて*futureonly_flag*、または`ssn`に直接バインドされたルールがあります。 列にバインドされているルールは、データ型にバインドされているルールより常に優先します。  
   
 ```  
 USE master;  

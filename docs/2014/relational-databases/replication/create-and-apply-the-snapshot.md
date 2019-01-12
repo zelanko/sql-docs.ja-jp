@@ -13,12 +13,12 @@ ms.assetid: 631f48bf-50c9-4015-b9d8-8f1ad92d1ee2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd78bf7da1a68e7e053af52c4fa8f9cf0cd71094
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4c69b22af2a4e5a087c21b34fc719f971c3844b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755644"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128582"
 ---
 # <a name="create-and-apply-the-snapshot"></a>スナップショットの作成および適用
   スナップショットは、パブリケーションの作成後に、スナップショット エージェントによって生成されます。 スナップショットは、以下の方法で生成できます。  
@@ -43,8 +43,7 @@ ms.locfileid: "52755644"
   
  スナップショット フォルダーの既定の場所を表示または変更するには、「  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[既定のスナップショットの場所を指定&#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)  
-  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[既定のスナップショットの場所を指定します。](snapshot-options.md#snapshot-folder-locations)
 -   レプリケーション プログラミングおよび RMO プログラミング:[パブリッシングおよびディストリビューションの構成](configure-publishing-and-distribution.md)  
   
 ## <a name="see-also"></a>参照  

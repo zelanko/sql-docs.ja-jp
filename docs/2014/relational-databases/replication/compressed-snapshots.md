@@ -14,12 +14,12 @@ ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c45dc872cd75640f244c55863cdbace607812a38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 873a16f8e6dcc73b4f2b3da5727d49207252ca63
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815344"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124282"
 ---
 # <a name="compressed-snapshots"></a>圧縮スナップショット
   低速なネットワークでスナップショットを転送する場合や、スナップショットをリムーバブル メディアに保存する際にそのままではメディアに収まらない場合は、スナップショット ファイルを圧縮することができます。 スナップショット ファイルを圧縮すると、このような場合に役に立つ反面、スナップショットの生成および適用に要する時間が増大します。  
@@ -33,7 +33,7 @@ ms.locfileid: "52815344"
   
  **スナップショット ファイルを圧縮および配信するには**  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[スナップショット ファイルの圧縮 (SQL Server Management Studio)](publish/compress-snapshot-files-sql-server-management-studio.md)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[スナップショット ファイルの圧縮 (SQL Server Management Studio)](snapshot-options.md#compress-snapshot-files)  
   
 -   レプリケーション[!INCLUDE[tsql](../../includes/tsql-md.md)]プログラミングします。[スナップショットのプロパティの構成 (レプリケーション Transact-SQL プログラミング)](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   

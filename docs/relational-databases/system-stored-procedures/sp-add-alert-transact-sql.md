@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12c44c565e6e867c2fde6a99d770c2b083e3d6f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4193e073f4ad4c52d6b2c7f6b82c6246107e85a1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203282"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127072"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@name =** ] **'***name***'**  
+ [  **@name =** ] **'**_名前_**'**  
  警告の名前を指定します。 この名前は、警告に対する応答として送信される電子メールまたはポケットベルのメッセージに表示されます。 一意であり、割合を含めることができます (**%**) 文字。 *名前*は**sysname**、既定値はありません。  
   
  [ **@message_id =** ] *message_id*  
@@ -78,7 +78,7 @@ sp_add_alert [ @name = ] 'name'
   
  この値を設定すると、たとえば短時間に繰り返し警告が発生したとき、不要な電子メール メッセージの送信を防止できます。  
   
- [  **@notification_message =** ] **'***このパラメーター***'**  
+ [  **@notification_message =** ] **'**_このパラメーター_**'**  
  電子メールの一部としてオペレーターに送信される追加の省略可能なメッセージ**net send**、またはポケットベル通知します。 *このパラメーター*は**nvarchar (512)**、既定値は NULL です。 指定する*このパラメーター*は書き加えるなど特別な注意を追加するために便利です。  
   
  [  **@include_event_description_in =** ] *include_event_description_in*  
@@ -94,16 +94,16 @@ sp_add_alert [ @name = ] 'name'
 |**2**|[ポケットベル]|  
 |**4**|**net send**|  
   
- [ **@database_name =** ] **'***database***'**  
+ [  **@database_name =** ] **'**_データベース_**'**  
  どのデータベースでエラーが発生したときに警告を起動するかを指定します。 場合*データベース*が指定されていない、エラーの発生場所に関係なく警告が発生します。 *データベース*は**sysname**します。 角かっこ ([ ]) で囲まれた名前は使用できません。 既定値は NULL になります。  
   
- [  **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
+ [  **@event_description_keyword =** ] **'**_event_description_keyword_pattern_**'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの説明に、どのような文字のシーケンスが含まれている必要があるかを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 式のパターン検索文字を使用できます。 *event_description_keyword_pattern*は**nvarchar (100)**、既定値は NULL です。 このパラメーターはオブジェクト名をフィルター処理するために役立ちます (たとえば、 **%customer_table%**)。  
   
  [ **@job_id =** ] *job_id*  
  対象となる警告に対する応答として実行するジョブのジョブ ID 番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_**'**  
  この警告への応答として実行するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ sp_add_alert [ @name = ] 'name'
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 では実装されていません。 *raise_snmp_trap*は**tinyint**、既定値は 0。  
   
- [  **@performance_condition =** ] **'***performance_condition***'**  
+ [  **@performance_condition =** ] **'**_performance_condition_**'**  
  形式で表される値は、'*itemcomparatorvalue*'。 *performance_condition*は**nvarchar (512)** 既定値は null の場合、これらの要素で構成されています。  
   
 |形式の要素|説明|  
@@ -121,13 +121,13 @@ sp_add_alert [ @name = ] 'name'
 |*比較演算子*|演算子 >、<、または = のいずれか。|  
 |*[値]*|カウンターの数値。|  
   
- [  **@category_name =** ] **'***カテゴリ***'**  
+ [  **@category_name =** ] **'**_カテゴリ_**'**  
  警告カテゴリの名前を指定します。 *カテゴリ*は**sysname**、既定値は NULL です。  
   
- [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**=] **'**_wmi_namespace_**'**  
  イベントのクエリに対する WMI 名前空間を指定します。 *wmi_namespace*は**sysname**、既定値は NULL です。 サポートされるのはローカル サーバーの名前空間だけです。  
   
- [ **@wmi_query**= ] **'***wmi_query***'**  
+ [ **@wmi_query**=] **'**_wmi_query_**'**  
  警告に対する WMI イベントを指定するクエリを指定します。 *wmi_query*は**nvarchar (512)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

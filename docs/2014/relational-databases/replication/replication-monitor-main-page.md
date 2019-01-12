@@ -12,12 +12,12 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2983889b79f30c18c6b6ae1ad22d614629b37654
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ed11d8f045315130fb0d9155607625659f2b8052
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778104"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125595"
 ---
 # <a name="replication-monitor-main-page"></a>レプリケーション モニター、メイン ページ
   レプリケーション モニターを使用すると、レプリケーション トポロジにおけるパブリケーションとサブスクリプションの状態およびパフォーマンスを追跡できます。 以降のトピックで詳しく説明します。  
@@ -30,15 +30,7 @@ ms.locfileid: "52778104"
   
     -   [レプリケーション モニターのデータの更新](monitor/refresh-data-in-replication-monitor.md)  
   
-    -   [パブリッシャーの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
-  
-    -   [パブリケーションの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
-  
-    -   [パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)  
-  
-    -   [サブスクリプションの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
-  
-    -   [サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+    -   [表示情報とレプリケーション モニターを使用してタスクを実行します。](monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
     -   [トランザクション レプリケーションの待機時間の計測および接続の検証](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

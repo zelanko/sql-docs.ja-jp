@@ -1,5 +1,5 @@
 ---
-title: ビジネス ロジック ハンドラーのデバッグ (レプリケーション プログラミング) | Microsoft Docs
+title: ビジネス ロジック ハンドラーのデバッグ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 019ff508b10859cae2388636e9189292b498e251
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761514"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128762"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>ビジネス ロジック ハンドラーのデバッグ (レプリケーション プログラミング)
   マージ サブスクリプションの同期時にカスタム ビジネス ロジックを呼び出すには、ビジネス ロジック ハンドラーを使用します。 詳細については、「[Execute Business Logic During Merge Synchronization](merge/execute-business-logic-during-merge-synchronization.md)」(マージ同期中のビジネス ロジックの実行) をご覧ください。  
@@ -31,7 +31,7 @@ ms.locfileid: "52761514"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>ローカル コンピューターでビジネス ロジック ハンドラーをデバッグするには  
   
-1.  パブリッシングとディストリビューションを構成し、パブリケーションを作成し、パブリケーションへのサブスクリプションを作成します。 詳細については、「[Configure Publishing and Distribution](configure-publishing-and-distribution.md)」(パブリッシングとディストリビューションの構成) と「[Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](publish/create-modify-and-delete-publications-and-articles-replication.md)」(パブリケーションとアーティクルの作成、変更、削除 (レプリケーション)) をご覧ください。  
+1.  パブリッシングとディストリビューションを構成し、パブリケーションを作成し、パブリケーションへのサブスクリプションを作成します。 詳細については、次を参照してください。 [Configure Publishing and Distribution](configure-publishing-and-distribution.md)と[Create a Publication](publish/create-a-publication.md)します。  
   
 2.  ビジネス ロジック ハンドラーを作成して登録します。 詳細については、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。  
   

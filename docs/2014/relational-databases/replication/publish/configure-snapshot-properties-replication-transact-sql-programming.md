@@ -14,12 +14,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 880f2f6fc155338aa65637fbc71402ba7ec55821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800214"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127883"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>スナップショットのプロパティの構成 (レプリケーション Transact-SQL プログラミング)
   スナップショットのプロパティは、レプリケーションのストアド プロシージャを使用し、プログラムから定義および変更できます。使用するストアド プロシージャは、パブリケーションの種類によって異なります。  
@@ -101,7 +101,7 @@ ms.locfileid: "52800214"
 ## <a name="see-also"></a>参照  
  [スナップショット フォルダーの代替位置](../alternate-snapshot-folder-locations.md)   
  [圧縮スナップショット](../compressed-snapshots.md)   
- [スナップショットが適用される前および後のスクリプトの実行](../execute-scripts-before-and-after-the-snapshot-is-applied.md)   
+ [スナップショットが適用される前および後のスクリプトの実行](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [FTP によるスナップショットの転送](../transfer-snapshots-through-ftp.md)   
  [パブリケーションおよびアーティクルのプロパティの変更](change-publication-and-article-properties.md)  

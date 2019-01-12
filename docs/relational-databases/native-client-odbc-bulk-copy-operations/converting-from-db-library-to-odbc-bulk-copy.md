@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08db3afed0709f97404317ed19d8a7d9f58da374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81d44a01e46078599fe601d672211a9d615ce528
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826370"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124052"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library から ODBC への一括コピーの変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47826370"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが Db-library のメッセージとエラー ハンドラーをサポートしていません。 呼び出す必要があります**SQLGetDiagRec**エラーと ODBC の一括コピー関数によって生成されたメッセージを取得します。 ODBC バージョンの一括コピー関数は、標準的な一括コピーのリターン コードである SUCCEED または FAILED を返しますが、SQL_SUCCESS や SQL_ERROR など、ODBC 形式のリターン コードを返しません。  
   
--   DB ライブラリの指定した値[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen*パラメーターの解釈は、ODBC とは異なる **bcp_bind * * * cbData*パラメーター。  
+-   DB ライブラリの指定した値[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen*パラメーターの解釈は、ODBC とは異なる**bcp_bind**_cbData_パラメーター。  
   
     |示された状態|Db-library *varlen*値|ODBC *cbData*値|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "47826370"
   
      Db-library で、 *varlen* -1 の値は、可変長のデータが指定されていることを示します、ODBC で*cbData*は NULL 値のみが指定されていることを意味する解釈されます。 Db-library 変更*varlen* SQL_VARLEN_DATA を-1 といずれかの仕様*varlen* SQL_NULL_DATA に 0 が指定します。  
   
--   DB ライブラリ **bcp_colfmt * * * file_collen*と ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * として同じ問題がある、**bcp_bind * * * varlen*と*cbData*上記のパラメーター。 Db-library 変更*file_collen* SQL_VARLEN_DATA を-1 といずれかの仕様*file_collen* SQL_NULL_DATA に 0 が指定します。  
+-   DB ライブラリ**bcp_colfmt**_file_collen_と ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData*として同じ問題がある、 **bcp_bind**_varlen_と*cbData*上記のパラメーター。 Db-library 変更*file_collen* SQL_VARLEN_DATA を-1 といずれかの仕様*file_collen* SQL_NULL_DATA に 0 が指定します。  
   
 -   *IValue*パラメーターは、ODBC の[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)関数は void ポインターです。 Db-library では、 *iValue*が整数でした。 ODBC の値をキャスト*iValue*を void *。  
   

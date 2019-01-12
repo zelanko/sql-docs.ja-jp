@@ -14,12 +14,12 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85eb91717bba1642270d0851a4a11917d8c40051
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3bd29769b0ba4fd5d9a48fcef07181b7ac70f7c8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770744"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123543"
 ---
 # <a name="validate-subscription"></a>[サブスクリプションを検証する]
   **[サブスクリプションを検証する]** ダイアログ ボックスを使用すると、サブスクリプションのマージ エージェントを次に実行するときに、マージ パブリケーションへのサブスクリプションを検証するように指定できます。 検証の結果はレプリケーション モニターに表示されます。 詳しくは、「 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)」をご覧ください。  
@@ -40,6 +40,6 @@ ms.locfileid: "52770744"
  クリックすると、 **[サブスクリプションの検証オプション]** ダイアログ ボックスが開き、行数の検証とバイナリ チェックサムの検証のどちらを使用するかを指定できます。  
   
 ## <a name="see-also"></a>参照  
- [レプリケートされたデータの検証](validate-replicated-data.md)  
+ [レプリケートされたデータの検証](validate-data-at-the-subscriber.md)  
   
   

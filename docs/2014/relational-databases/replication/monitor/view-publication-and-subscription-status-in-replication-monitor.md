@@ -21,12 +21,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95fbb61460c23ca0fedf0baec71aa21acaa50398
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786744"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123932"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>レプリケーション モニターでのパブリケーションおよびサブスクリプションの状態の表示
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターには、パブリケーションおよびサブスクリプションの状態情報が表示されます。  
@@ -53,11 +53,8 @@ ms.locfileid: "52786744"
   
  **パブリケーションおよびサブスクリプションの状態を表示するには**  
   
--   レプリケーション モニター:[情報を表示し、パブリケーションのタスクを実行&#40;レプリケーション モニター&#41; ](view-information-and-perform-tasks-for-a-publication-replication-monitor.md)と[情報を表示し、サブスクリプションのタスクを実行&#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   レプリケーション モニター:[情報およびレプリケーション モニターを使用してタスクを実行する表示](view-information-and-perform-tasks-replication-monitor.md)します。
   
- **エージェントの詳細情報を表示するには**  
-  
--   レプリケーション モニター:[情報を表示し、パブリケーションに関連付けられているエージェントのタスクを実行&#40;レプリケーション モニター&#41; ](view-information-and-perform-tasks-for-publication-agents.md)と[情報を表示し、サブスクリプションに関連付けられているエージェントのタスクを実行&#40;レプリケーションモニター&#41;](view-information-and-perform-tasks-for-subscription-agents.md)します。  
   
 ## <a name="publication-status-values"></a>パブリケーションの状態の値  
  次の表は、パブリケーションの状態の値と対応するアイコンを優先度順に示しています。  

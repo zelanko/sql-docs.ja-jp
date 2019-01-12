@@ -12,12 +12,12 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9363dfe3bee63bb6b32ecb5d7c29468f6a3def1a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 823a6455616b412a41179d831b565e10b3286fb7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215801"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127392"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>master データベースの復元 (Transact-SQL)
   このトピックでは、データベースの完全バックアップから **master** データベースを復元する方法について説明します。  
@@ -43,7 +43,7 @@ ms.locfileid: "53215801"
  次の例では、既定のサーバー インスタンスで `master` データベースを復元します。 この例では、サーバー インスタンスが既にシングル ユーザー モードで実行されていることを前提としています。 この例は、 `sqlcmd` を起動し、ディスク デバイス `RESTORE DATABASE` から `master` データベースの完全バックアップを復元する `Z:\SQLServerBackups\master.bak`ステートメントを実行します。  
   
 > [!NOTE]
->  名前付きインスタンスの場合、**sqlcmd** コマンドでは、**-S***\<ComputerName>*\\*\<InstanceName>* オプションを指定する必要があります。  
+>  名前付きインスタンスの場合、**sqlcmd** コマンドでは、**-S**_\<ComputerName>_\\*\<InstanceName>* オプションを指定する必要があります。  
   
 ```  
   

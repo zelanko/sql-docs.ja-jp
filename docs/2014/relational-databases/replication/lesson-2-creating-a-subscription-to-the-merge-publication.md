@@ -1,11 +1,10 @@
 ---
-title: レッスン 2:マージ パブリケーションに対するサブスクリプションを作成する |Microsoft Docs
+title: 'レッスン 2: マージ パブリケーションに対するサブスクリプションを作成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,14 +12,14 @@ ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 8634606ba3eaba8a38aefb66043c0d00e33660a2
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590996"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127542"
 ---
-# <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>レッスン 2:マージ パブリケーションへのサブスクリプションの作成
+# <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>レッスン 2: マージ パブリケーションへのサブスクリプションの作成
   このレッスンでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してサブスクリプションを作成します。 次に、サブスクリプション データベースに権限を設定し、新しいサブスクリプション用のフィルター選択データのスナップショットを手動で作成します。 このレッスンでは、前のレッスンを完了している必要があります[レッスン 1。マージ レプリケーションを使用してデータのパブリッシュ](lesson-1-publishing-data-using-merge-replication.md)します。  
   
 ### <a name="to-create-the-subscription"></a>サブスクリプションを作成するには  

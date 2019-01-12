@@ -12,12 +12,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f9df741090bf896019c6d1c4ede5215982497cb3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4d5e8b6e3bc008263c83a9bdf5b36b4235897921
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366994"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126702"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートする場合、またはテーブルからデータを一括エクスポートする場合、フォーマット ファイルを使用して、他のデータ形式に準拠するため、または他のソフトウェアからデータ ファイルを読み取るための編集をほとんど (あるいはまったく) 必要としないデータ ファイルを柔軟なシステムに出力できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "53366994"
 ## <a name="creating-a-non-xml-format-file"></a>XML 以外のフォーマット ファイルの作成  
  **bcp** コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。 **format** オプションには、次に示す **-f** オプションが必要です。  
   
- **bcp** *table_or_view* **format** nul **-f***format_file_name*  
+ **bcp** _table_or_view_ **format** nul **-f***format_file_name*  
   
 > [!NOTE]  
 >  XML 以外のフォーマット ファイルであることを区別するには、MyTable.fmt のように、ファイル名拡張子として .fmt を使用することをお勧めします。  
@@ -61,7 +61,7 @@ ms.locfileid: "53366994"
   
 |修飾子|説明|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|XML 以外のフォーマット ファイルを指定します。|  
+|**formatnul-f** _format_file_|XML 以外のフォーマット ファイルを指定します。|  
 |**-n**|ネイティブ データ型を指定します。|  
 |**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
   
@@ -91,7 +91,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
 |修飾子|説明|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|XML 以外のフォーマット ファイルを指定します。|  
+|**formatnul-f** _format_file_|XML 以外のフォーマット ファイルを指定します。|  
 |**-c**|文字データを指定します。|  
 |**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
   
@@ -135,7 +135,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 ## <a name="creating-an-xml-format-file"></a>XML フォーマット ファイルの作成  
  **bcp** コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。 **format** オプションには常に **-f** オプションが必要です。XML フォーマット ファイルを作成するには、次に示すように **-x** オプションも指定する必要があります。  
   
- **bcp** *table_or_view* **format nul-f** *format_file_name* **-x**  
+ **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
 >  XML フォーマット ファイルであることを区別するには、MyTable.xml のように、ファイル名拡張子として .xml を使用することをお勧めします。  
@@ -161,7 +161,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 |修飾子|説明|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|XML フォーマット ファイルを指定します。|  
+|**formatnul-f** _format_file_ **-x**|XML フォーマット ファイルを指定します。|  
 |**-c**|文字データを指定します。|  
 |**-t** `,`|コンマ (**,**) をフィールド ターミネータとして指定します。<br /><br /> 注:データ ファイルが既定のフィールド ターミネータを使用している場合 (`\t`)、 **-t**スイッチが必要ではありません。|  
 |**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
@@ -201,7 +201,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 |修飾子|説明|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|XML フォーマット ファイルを指定します。|  
+|**formatnul-f** _format_file_ **-x**|XML フォーマット ファイルを指定します。|  
 |**-n**|ネイティブ データ型を指定します。|  
 |**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
   

@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba242dfc6c457bd94c082f151f162b8f6eb06e29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819184"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128237"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=** ] **'***パブリッシャー***'**  
+ [  **@publisher=** ] **'**_パブリッシャー_**'**  
  パブリッシャー名です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
- [  **@property=** ] **'***プロパティ***'**  
+ [  **@property=** ] **'**_プロパティ_**'**  
  指定されたパブリッシャーの変更の対象となるプロパティです。 *プロパティ*は**sysname**これらの値のいずれかを指定できます。  
   
- [ **@value=** ] **'***value***'**  
+ [ **@value=** ] **'**_value_**'**  
  指定されたプロパティの値です。 *値*は**nvarchar (255)**、既定値は NULL です。  
   
- [  **@storage_connection_string =**] **'***storage_connection_string***'**  
+ [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
  SQL Database マネージ インスタンスに必要なは、Azure SQL Database の記憶域ボリュームのアクセス キーが一致する必要があります。 
 
 
