@@ -19,12 +19,12 @@ ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b8d88e1098d9bfddb690685804d29b44730da4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11c704413f9668a5da99ded7d269d05b8e3f2c25
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827500"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100627"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*instance_name*'  
  インスタンス名を指定します。 *instance_name*は**sysname**既定値は NULL の場合は、ローカルのインスタンス。  
   
-> **注:***instance_name*インスタンスの完全修飾名は、コンピューター名と形式でインスタンス名で構成される必要があります*computerName* \\ *instanceName*します。    
+> **注:**_instance_name_インスタンスの完全修飾名は、コンピューター名と形式でインスタンス名で構成される必要があります*computerName* \\ *instanceName*します。    
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

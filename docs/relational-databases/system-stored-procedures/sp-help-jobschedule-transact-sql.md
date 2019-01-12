@@ -18,17 +18,17 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a327b07384ce2c12e64612b19c611c57dbbf18b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36e00cf0e5d39722fee1c60fc86f0e6f81fd7e43
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850370"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100357"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  によって使用されるジョブのスケジュールに関する情報を返します[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]自動化された操作を実行します。  
+  ジョブのスケジュールに関する情報を返します。[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、このスケジュールを使用して、自動化された操作を実行します。  
  
  
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -47,12 +47,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_id=** ] *job_id*  
  ジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_**'**  
  ジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
-> **注:** か*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
+> **注:** いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **'**_schedule_name_**'**  
  ジョブのスケジュール アイテムの名前を指定します。 *schedule_name*は**sysname**、既定値は NULL です。  
   
  [ **@schedule_id=** ] *schedule_id*  
@@ -88,7 +88,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|スケジュールの識別子。|  
 |**job_count**|**int**|返されたジョブの数。|  
   
-> **注:****sp_help_jobschedule**から値を返します、**では**と**dbo.sysschedules**システム テーブル**msdb**.   **sysjobschedules** 20 分ごとに更新します。 そのため、このストアド プロシージャから返される値に影響が生じることがあります。  
+> **注: sp_help_jobschedule**から値を返します、**では**と**dbo.sysschedules**システム テーブル**msdb**します。 **sysjobschedules** 20 分ごとに更新します。 そのため、このストアド プロシージャから返される値に影響が生じることがあります。  
   
 ## <a name="remarks"></a>コメント  
  パラメーター **sp_help_jobschedule**特定の組み合わせでのみ使用できます。 場合*schedule_id*が指定されても*job_id*も*job_name*を指定できます。 それ以外の場合、 *job_id*または*job_name*でパラメーターを使用できる*schedule_name*します。  
@@ -109,7 +109,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-the-job-schedule-for-a-specific-job"></a>A. 特定のジョブのジョブ スケジュールを返す  
- 次の例は、という名前のジョブのスケジュール情報を返します`BackupDatabase`します。  
+ 次の例では、`BackupDatabase` という名前のジョブのスケジュール情報を返します。  
   
 ```  
 USE msdb ;  

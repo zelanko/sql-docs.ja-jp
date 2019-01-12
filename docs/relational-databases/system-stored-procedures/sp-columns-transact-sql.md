@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d61c0d2a7c7b15db9e96a354d5b7f062d10ca8f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 71b5b57625a8feb5d268898ff4865c2039bd358c
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514079"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100507"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,21 +46,21 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@table_name=**] *object*  
+ [  **\@table_name =**]*オブジェクト*  
  カタログ情報を返すために使用するオブジェクトの名前を指定します。 *オブジェクト*テーブル、ビュー、またはテーブル値関数などの列を持つその他のオブジェクトにすることができます。 *オブジェクト*は**nvarchar (384)**、既定値はありません。 ワイルドカードによるパターン照合がサポートされています。  
   
- [ **@table_owner****=**] *owner*  
+ [  **\@table_owner =**]*所有者*  
  カタログ情報を返すために使用するオブジェクトの所有者を指定します。 *所有者*は**nvarchar (384)**、既定値は NULL です。 ワイルドカードによるパターン照合がサポートされています。 場合*所有者*が指定されていない、基になる DBMS の既定のオブジェクトの可視性規則が適用されます。  
   
  指定した名前のオブジェクトを現在のユーザーが所有している場合は、そのオブジェクトの列が返されます。 場合*所有者*が指定されていない、現在のユーザーが指定したオブジェクトを所有していない*オブジェクト*、 **sp_columns**は、指定したオブジェクトを検索*オブジェクト*データベース所有者が所有します。 存在する場合は、そのオブジェクトの列が返されます。  
   
- [ **@table_qualifier****=**] *qualifier*  
+ [  **\@table_qualifier =**]*修飾子*  
  オブジェクト識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品で、3 つの部分名オブジェクト (_修飾子_**.**_所有者_**.**_名前_)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列はデータベース名を表します。 製品によっては、オブジェクトのデータベース環境のサーバー名を表す場合があります。  
   
- [ **@column_name=**] *column*  
+ [  **\@column_name =**]*列*  
  1 つの列は、カタログ情報の 1 つだけの列が必要なときに使用されます。 *列*は**nvarchar (384)**、既定値は NULL です。 場合*列*が指定されていないすべての列が返されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、*列*に表示される列の名前を表します、 **syscolumns**テーブル。 ワイルドカードによるパターン照合がサポートされています。 相互運用可能性を最大にするため、ゲートウェイのクライアントは、SQL-92 標準のパターン照合 (% と _ ワイルドカード文字) のみを想定してください。  
   
- [  **@ODBCVer=**] *ODBCVer*  
+ [  **\@ODBCVer =**] *ODBCVer*  
  使用されている ODBC のバージョンです。 *ODBCVer*は**int**、既定値は 2 です。 既定値の 2 は ODBC Version 2 を示します。 有効な値は 2 または 3 です。 バージョン 2 および 3 の間で動作の違いは、ODBC を参照してください。 **SQLColumns**仕様。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

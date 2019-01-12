@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 4078d2d660a2690983e34c6db024df3a93df97eb
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: ae57a6f453cf15dbb22158b49aad990cc0c3df67
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266063"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100737"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker で SQL Server のコンテナー イメージを構成します。
 
@@ -64,19 +64,10 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 
 - のみ、有効なライセンスがある場合、SQL Server を運用環境で使用できます。 無料の SQL Server Express の運用環境ライセンスを取得する[ここ](https://go.microsoft.com/fwlink/?linkid=857693)します。 SQL Server Standard および Enterprise Edition のライセンスを利用[Microsoft ボリューム ライセンス](https://www.microsoft.com/licensing/default.aspx)します。
 
-- 実稼働 SQL Server のコンテナー イメージをプルする必要があります[Docker ストア](https://store.docker.com)します。 1 つをいない場合は、Docker のストアのアカウントを作成します。
 
-- 同様に運用エディションを実行する Docker ストアの開発者のコンテナー イメージを構成できます。 実稼働エディションを実行するのにには、次の手順を使用します。
+- 同様に運用エディションを実行する開発者のコンテナー イメージを構成できます。 実稼働エディションを実行するのにには、次の手順を使用します。
 
-   1. 最初に、ログイン、docker id に、コマンドラインからします。
-
-      ```bash
-      docker login
-      ```
-
-   2. 次に、無料の開発者のストアの Docker でコンテナー イメージを取得する必要があります。 移動して[ https://store.docker.com/images/mssql-server-linux ](https://store.docker.com/images/mssql-server-linux)、 をクリックして**チェック アウトを続行**指示に従います。
-
-   3. プロシージャを実行し、要件を確認、[クイック スタート](quickstart-install-connect-docker.md)します。 2 つの違いがあります。 イメージをプルする必要があります**ストア、microsoft、mssql-サーバー-linux:\<タグ名\>** Docker ストアから。 実稼働エディションを指定する必要があり、 **MSSQL_PID**環境変数。 次の例では、Enterprise Edition の最新の SQL Server 2017 コンテナー イメージを実行する方法を示します。
+プロシージャを実行し、要件を確認、[クイック スタート](quickstart-install-connect-docker.md)します。 実稼働エディションを指定する必要があります、 **MSSQL_PID**環境変数。 次の例では、Enterprise Edition の最新の SQL Server 2017 コンテナー イメージを実行する方法を示します。
 
       ```bash
       docker run --name sqlenterprise \
@@ -93,10 +84,10 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
       ```
 
       > [!IMPORTANT]
-      > 値を渡すことによって**Y**環境変数に**ACCEPT_EULA**にエディションの値と**MSSQL_PID**、有効であり、既存のライセンスがあることを表現する、使用する SQL Server のバージョンとエディション。 また、Docker コンテナー イメージをで実行されている SQL Server ソフトウェアの使用は、SQL Server ライセンスの条項に準拠するものを同意するものです。
+      > By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
 
       > [!NOTE]
-      > 使用できる値の完全な一覧については**MSSQL_PID**を参照してください[on Linux の環境変数と SQL Server の構成設定](sql-server-linux-configure-environment-variables.md)します。
+      > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
 
 ::: moniker-end
 

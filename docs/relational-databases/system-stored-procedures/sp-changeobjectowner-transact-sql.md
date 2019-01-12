@@ -18,12 +18,12 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 16ba2e0130c766763c554d6ec256a8858db3373b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8914ce54d85e99213d923d7bebc186f61f928cf9
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204931"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100487"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@objname =** ] **'***オブジェクト***'**  
- 現在のデータベース内の既存のテーブル、ビュー、ユーザー定義関数、またはストアド プロシージャの名前です。 *オブジェクト*は、 **nvarchar (776)**、既定値はありません。 *オブジェクト*形式で、既存のオブジェクトの所有者で修飾できます*existing_owner ***.*** オブジェクト*場合は、スキーマとその所有者が同じ名前を指定します。  
+ [  **@objname =** ] **'**_オブジェクト_**'**  
+ 現在のデータベース内の既存のテーブル、ビュー、ユーザー定義関数、またはストアド プロシージャの名前です。 *オブジェクト*は、 **nvarchar (776)**、既定値はありません。 *オブジェクト*形式で、既存のオブジェクトの所有者で修飾できます_existing_owner_**.**_オブジェクト_場合は、スキーマとその所有者が同じ名前を指定します。  
   
- [  **@newowner=**] **' * * * 所有者* **'**  
+ [  **@newowner=**] **'**_所有者_ **'**  
  オブジェクトの新しい所有者となるセキュリティ アカウントの名前です。 *所有者*は**sysname**、既定値はありません。 *所有者*有効なデータベース ユーザー、サーバーの役割をする必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows ログイン、または現在のデータベースへのアクセス権を持つ Windows グループ。 新しい所有者が、対応するデータベース レベルのプリンシパルを与えられていない Windows ユーザーまたは Windows グループである場合、データベース ユーザーが作成されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

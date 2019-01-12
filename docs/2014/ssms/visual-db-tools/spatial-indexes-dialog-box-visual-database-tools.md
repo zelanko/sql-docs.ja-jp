@@ -12,12 +12,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b347715a601be779b864500a6bc28655141ceeeb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773474"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100537"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>[空間インデックス] ダイアログ ボックス (Visual Database Tools)
   **[インデックス/キー]** ダイアログ ボックスを使用してインデックスを作成できない **geometry** データ型や **geography** データ型の列 (*空間列*) のインデックスを作成するには、 **[空間インデックス]** を使用します。 各空間列に複数の空間インデックスを作成できますが、空間インデックスは一度に 1 つずつ作成する必要があります。  
@@ -109,7 +109,7 @@ ms.locfileid: "52773474"
  **[ページのロックを許可]**  
  該当するインデックスでページレベルのロックを許可するかどうかを指定します。 ページレベル ロックの許可、非許可はデータベースのパフォーマンスに影響を与えます。  
   
- **再計算する****統計情報**  
+ **統計を再計算します。**  
  インデックスの作成時に、統計情報を新たに計算するかどうかを指定します。 統計情報の再計算により、インデックスの構築には前よりも時間がかかりますが、通常はクエリのパフォーマンスが向上します。  
   
  **[行のロックを許可]**  
