@@ -10,12 +10,12 @@ ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bf10e4357579bcda5ec9ac3bef92b49f596b7a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812294"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133262"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で SQL Server エージェントのマスター ジョブのステップに変更を加える方法について説明します。  
@@ -56,13 +56,13 @@ ms.locfileid: "52812294"
   
 4.  ステップを変更するジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **ジョブのプロパティ-* * * job_name*ダイアログ ボックスで、**ページの選択**、**手順**。  
+5.  **[ジョブのプロパティ -** _<ジョブ名>]_ ダイアログ ボックスで、**[ページの選択]** の **[ステップ]** を選択します。  
   
-6.  クリックして**編集**を開く、**ジョブ ステップのプロパティ-* * * job_step_name*  ダイアログ ボックス。 このダイアログ ボックスで使用可能なオプションの詳細については、次を参照してください。[ジョブ ステップのプロパティ。新しいジョブ ステップ&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)と[ジョブ ステップのプロパティ。新しいジョブ ステップ&#40;[詳細] ページ&#41;](job-step-properties-new-job-step-advanced-page.md)します。  
+6.  クリックして**編集**を開く、**ジョブ ステップのプロパティ -**_job_step_name_  ダイアログ ボックス。 このダイアログ ボックスで使用可能なオプションの詳細については、次を参照してください。[ジョブ ステップのプロパティ。新しいジョブ ステップ&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)と[ジョブ ステップのプロパティ。新しいジョブ ステップ&#40;[詳細] ページ&#41;](job-step-properties-new-job-step-advanced-page.md)します。  
   
 7.  完了したら、 **[OK]** をクリックします。  
   
-8.  **ジョブのプロパティ-* * * job_name*ダイアログ ボックスで、をクリックして**OK**します。  
+8.  **ジョブのプロパティ -**_job_name_ダイアログ ボックスで、をクリックして**OK**します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

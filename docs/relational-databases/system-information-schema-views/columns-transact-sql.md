@@ -20,24 +20,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6666f717881d30c7232a7b83b3f6a6c59925df71
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f6a14751ea8a0b268c846935e5058c10d79b4d60
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658102"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131782"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   現在のデータベースの現在のユーザーがアクセスできる列ごとに 1 行のデータを返します。  
   
- これらのビューから情報を取得するには、完全修飾名を指定**INFORMATION_SCHEMA * * *.** view_name * です。  
+ これらのビューから情報を取得するには、完全修飾名を指定**INFORMATION_SCHEMA**_.view_name_します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|テーブル修飾子|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前<br /><br /> **&#42;&#42;重要な&#42; &#42;** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|テーブル名です。|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|列名|  
 |**ORDINAL_POSITION**|**int**|列の識別番号。|  
@@ -57,7 +57,7 @@ ms.locfileid: "51658102"
 |**COLLATION_SCHEMA**|**nvarchar(** 128 **)**|常に NULL が返されます。|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|列が文字データの場合は、照合順序の一意の名前を返しますまたは**テキスト**データ型。 それ以外の場合は NULL が返されます。|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|列が別名データ型の場合、この列はユーザー定義のデータ型が作成されたデータベースの名前になります。 それ以外の場合は NULL が返されます。|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|列がユーザー定義のデータ型の場合、この列にはユーザー定義のデータ型のスキーマ名が返されます。 それ以外の場合は NULL が返されます。<br /><br /> **\*\* 重要な\* \*** データ型のスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 型のスキーマを調べる唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用する方法です。|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|列がユーザー定義のデータ型の場合、この列にはユーザー定義のデータ型のスキーマ名が返されます。 それ以外の場合は NULL が返されます。<br /><br /> **&#42;&#42;重要な&#42; &#42;** データ型のスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 型のスキーマを調べる唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用する方法です。|  
 |**ドメイン名**|**nvarchar(** 128 **)**|列がクエリ アナライザーの場合、この列はクエリ アナライザーの名前になります。 それ以外の場合は NULL が返されます。|  
   
 ## <a name="remarks"></a>コメント  

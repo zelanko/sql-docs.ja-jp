@@ -18,12 +18,12 @@ ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c66f3ac4395e3985d6881ddb085db1d9a71c366
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23c97002d5400d3794bed23fea4fb4eb05efd7f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713220"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133012"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@functname =** ] **'***プロシージャ***'**  
+ [  **@functname =** ] **'**_プロシージャ_**'**  
  ダイナミックリンク ライブラリ (DLL) の内部で呼び出す関数の名前を指定します。 *プロシージャ*は**nvarchar (517)**、既定値はありません。 *プロシージャ*形式で所有者名を含めることができます必要に応じて*owner.function*します。  
   
- [  **@dllname =** ] **'***dll***'**  
+ [  **@dllname =** ] **'**_dll_**'**  
  関数が含まれている DLL の名前を指定します。 *dll*は**varchar (255)**、既定値はありません。 DLL の完全パスを指定することをお勧めします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

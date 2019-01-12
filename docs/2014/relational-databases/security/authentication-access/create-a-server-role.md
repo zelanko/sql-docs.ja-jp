@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532131"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133292"
 ---
 # <a name="create-a-server-role"></a>サーバー ロールの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]で新しいサーバー ロールを作成する方法について説明します。  
@@ -69,7 +69,7 @@ ms.locfileid: "52532131"
   
 3.  **[サーバー ロール]** フォルダーを右クリックし、**[新しいサーバー ロール]** を選択します。  
   
-4.  **新しいサーバー ロール-* * * server_role_name*  ダイアログ ボックスの 、**全般** ページで新しいサーバー ロールの名前を入力、**サーバー ロール名**ボックス。  
+4.  **新しいサーバー ロール -**_server_role_name_  ダイアログ ボックスの 、**全般** ページで新しいサーバー ロールの名前を入力、**サーバー ロール名**ボックス。  
   
 5.  **[所有者]** ボックスに、新しいサーバー ロールを所有するサーバー プリンシパルの名前を入力します。 または、省略記号 **[...]** をクリックして **[サーバー ログインまたはロールの選択]** ダイアログ ボックスを開きます。  
   

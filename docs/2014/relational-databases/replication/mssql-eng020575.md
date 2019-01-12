@@ -12,12 +12,12 @@ ms.assetid: 8886378c-e70e-481a-bd24-2d613a39f491
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a4e4f951f221f9a66b69c942a3ca0f48abfaeac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 46e346cf816d265f13120b85839d6a306f0d1dc4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772394"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132552"
 ---
 # <a name="mssqleng020575"></a>MSSQL_ENG020575
     
@@ -33,7 +33,7 @@ ms.locfileid: "52772394"
 |メッセージ テキスト|パブリケーション '%s' のアーティクル '%s' に対するサブスクライバー '%s' のサブスクリプションが、データ検証に合格しました。|  
   
 ## <a name="explanation"></a>説明  
- サブスクライバーのデータがパブリッシャーのデータに対して検証され、データが一致したため検証に合格しました。 検証の詳細については、「 [Validate Replicated Data](validate-replicated-data.md)」を参照してください。  
+ サブスクライバーのデータがパブリッシャーのデータに対して検証され、データが一致したため検証に合格しました。 検証の詳細については、「 [Validate Replicated Data](validate-data-at-the-subscriber.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  

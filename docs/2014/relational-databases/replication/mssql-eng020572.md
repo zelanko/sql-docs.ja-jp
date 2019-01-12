@@ -12,12 +12,12 @@ ms.assetid: 636566db-ffcf-4109-8c11-15b8c7cb9cd9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 243b9b1658e2a0b34626e973799127b19ddc0e11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 86ec01db387d1c130ab593e99e5ef66a73259cf6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806744"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132628"
 ---
 # <a name="mssqleng020572"></a>MSSQL_ENG020572
     
@@ -33,7 +33,7 @@ ms.locfileid: "52806744"
 |メッセージ テキスト|パブリケーション '%s' のアーティクル '%s' に対するサブスクライバー '%s' のサブスクリプションが、検証エラーの発生後、再初期化されました。|  
   
 ## <a name="explanation"></a>説明  
- サブスクライバーのデータがパブリッシャーのデータに対して検証され、データが一致しなかったため検証に失敗しました。 検証を実行するように指定したときに、検証が失敗した場合にサブスクリプションを再初期化するオプションを選択しました。 サブスクリプションを再初期化するには、サブスクライバーで新しいスナップショットを適用する必要があります。 検証の詳細については、「 [Validate Replicated Data](validate-replicated-data.md)」を参照してください。  
+ サブスクライバーのデータがパブリッシャーのデータに対して検証され、データが一致しなかったため検証に失敗しました。 検証を実行するように指定したときに、検証が失敗した場合にサブスクリプションを再初期化するオプションを選択しました。 サブスクリプションを再初期化するには、サブスクライバーで新しいスナップショットを適用する必要があります。 検証の詳細については、「 [Validate Replicated Data](validate-data-at-the-subscriber.md)」を参照してください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
  サブスクライバーで新しいスナップショットを適用すると、パブリッシャーのデータとサブスクライバーのデータが一致します。  

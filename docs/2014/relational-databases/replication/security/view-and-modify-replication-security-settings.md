@@ -16,12 +16,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c4fd9221e363cb869f01c525a7f4b63b91132ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0fb57b14b27fd2682efae9da8befae6c5454f1d1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375634"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132122"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>レプリケーションのセキュリティ設定の表示および変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、レプリケーションのセキュリティ設定を表示および変更する方法について説明します。 たとえば、ログ リーダー エージェントからパブリッシャーへの接続を SQL Server 認証から Windows 統合認証に変更したい場合や、Windows アカウントのパスワードを変更したときにエージェント ジョブの実行に使用する資格情報を変更したい場合があります。 各エージェントで必要な権限の詳細については、「[Replication Agent Security Model](replication-agent-security-model.md)」(レプリケーション エージェントのセキュリティ モデル) をご覧ください。  
@@ -572,10 +572,10 @@ ms.locfileid: "53375634"
 ## <a name="see-also"></a>参照  
  [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
  [レプリケーション スクリプトのアップグレード &#40;レプリケーション Transact-SQL プログラミング&#41;](../administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [レプリケーションのログインとパスワードの管理](manage-logins-and-passwords-in-replication.md)   
+ [レプリケーションのログインとパスワードの管理](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [レプリケーション エージェントのセキュリティ モデル](replication-agent-security-model.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [セキュリティと保護 &#40;レプリケーション&#41;](security-and-protection-replication.md)   
+ [SQL Server レプリケーションのセキュリティ](view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

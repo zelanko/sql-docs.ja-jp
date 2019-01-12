@@ -13,12 +13,12 @@ ms.assetid: 25b7af05-2721-4b24-9083-fb671e8bf4e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0af2d4357c74d9ce7bec74e1b787ed259b04977
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 78dfc544d7fd01f6641df6c0968d4a59a668cdd3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797364"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132522"
 ---
 # <a name="securing-replication-over-the-internet"></a>インターネット経由のレプリケーションのセキュリティ
   インターネット経由のレプリケーションを利用すると、特にモバイルのサブスクライバーで必要とされるような柔軟性を実現できます。ただし、適切に構成して十分なセキュリティを確保する必要があります。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] では、インターネット経由で情報を安全に共有するために、次のいずれかの技術を使用することを推奨しています。  
@@ -39,6 +39,6 @@ ms.locfileid: "52797364"
   
 ## <a name="see-also"></a>参照  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [セキュリティと保護 &#40;レプリケーション&#41;](security-and-protection-replication.md)  
+ [SQL Server レプリケーションのセキュリティ](view-and-modify-replication-security-settings.md)  
   
   

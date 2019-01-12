@@ -14,17 +14,17 @@ ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9443319c17c2148284d606aebcad89db38de12eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b27dd81df572e289d182fdaa637a3af972b3d603
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781474"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133002"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>対象サーバーでの暗号化オプションの設定
   マスター サーバーと一部またはすべての対象サーバーの間で SSL (Secure Sockets Layer) 暗号通信の証明書を使用できない場合、これらの間のチャネルを暗号化するには、必要なセキュリティ レベルを使用するように対象サーバーを構成します。  
   
- マスター サーバーと対象サーバーの間の特定の通信チャネルに求められる適切なセキュリティ レベルを構成するには、対象サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのレジストリ サブキー **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<*instance_name*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** を、次のいずれかの値に設定します。 \<*instance_name*> の値は **MSSQL.***n* です。 たとえば、 **MSSQL.1** や **MSSQL.3**となります。  
+ マスター サーバーと対象サーバーの間の特定の通信チャネルに求められる適切なセキュリティ レベルを構成するには、対象サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのレジストリ サブキー **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<*instance_name*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** を、次のいずれかの値に設定します。 \<*instance_name*> の値は **MSSQL.**_n_ です。 たとえば、 **MSSQL.1** や **MSSQL.3**となります。  
   
 |値|説明|  
 |-----------|-----------------|  

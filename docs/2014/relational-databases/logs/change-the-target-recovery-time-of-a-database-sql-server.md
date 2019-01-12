@@ -10,12 +10,12 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36be65b9e359d4fe115e2b410db181f049c1eccd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766824"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131452"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>データベースのターゲットの復旧時間の変更 (SQL Server)
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースのターゲットの復旧時間を変更する方法について説明します。 既定では、ターゲットの復旧時間は 0 で、データベースは *自動チェックポイント* ( **復旧間隔** サーバー オプションによって制御されます) を使用します。 ターゲットの復旧時間を 0 より大きい値に設定すると、データベースは *間接的なチェックポイント* を使用するようになり、このデータベースの復旧時間に上限を設定します。  
@@ -57,7 +57,7 @@ ms.locfileid: "52766824"
   
 2.  次の [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)ステートメントを、次のように使用します。  
   
-     TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      0 (既定値) より大きい値の場合は、指定されたデータベースでクラッシュが発生したときの復旧時間に上限を指定します。  

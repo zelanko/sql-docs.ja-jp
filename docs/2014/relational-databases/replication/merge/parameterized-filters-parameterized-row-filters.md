@@ -20,12 +20,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3eba894a08df8a491df428cd5f34b4c9850ffae0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 905a0a4189a97b6cd8ef3cc461f805adf0afd727
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205921"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131502"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   パラメーター化された行フィルターを使用すると、複数のパブリケーションを作成しなくても、パーティションの異なるデータを各サブスクライバーに送信できます (以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、パラメーター化されたフィルターは動的フィルターと呼ばれていました)。 パーティションとは、テーブル内の行のサブセットのことです。パラメーター化された行フィルターの作成時に選択した設定に基づき、パブリッシュされたテーブルの各行は、1 つのパーティションのみに属するか (重複しないパーティションが作成されます)、2 つ以上のパーティションに属します (重複するパーティションが作成されます)。  

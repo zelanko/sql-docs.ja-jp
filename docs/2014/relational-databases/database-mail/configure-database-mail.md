@@ -39,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371184"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131492"
 ---
 # <a name="configure-database-mail"></a>データベース メールを構成する
   このトピックでは、データベース メール構成ウィザードを使用してデータベース メールを有効化して構成する方法、およびテンプレートを使用してデータベース メール構成スクリプトを作成する方法について説明します。  
@@ -394,7 +394,7 @@ ms.locfileid: "53371184"
 
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- **[<*インスタンス名*> からテスト電子メールを送信]** ページでは、指定したデータベース メール プロファイルを使ってメール メッセージを送信できます。 このページを使用してテスト電子メールを送信できるのは、固定サーバー ロール **sysadmin** のメンバーのみです。  
+ **[_<インスタンス名>_ からテスト電子メールを送信]** ページでは、指定したデータベース メール プロファイルを使用して電子メール メッセージを送信できます。 このページを使用してテスト電子メールを送信できるのは、固定サーバー ロール **sysadmin** のメンバーのみです。  
   
  **[データベース メール プロファイル]**  
  データベース メール プロファイルを一覧から選択します。 このフィールドは必須です。 プロファイルが 1 つも表示されない場合は、プロファイルがないか、またはプロファイルに対する権限がありません。 プロファイルの作成および構成には、 **データベース メール構成ウィザード** を使用します。 プロファイルが表示されない場合は、データベース メール構成ウィザードを使用して、使用するプロファイルを作成してください。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2f08fa101e2a53696e58f15413ec08c301a9e890
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9eca631440e92f946513429ddb43d3212a109984
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596948"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131942"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @loginame **=** ] **'***ログイン***'**  
+ [ @loginame **=** ] **'**_ログイン_**'**  
  固定サーバー ロールから削除するログインの名前を指定します。 *ログイン*は**sysname**、既定値はありません。 *ログイン*存在する必要があります。  
   
- [ @rolename **=** ] **'***ロール***'**  
+ [ @rolename **=** ] **'**_ロール_**'**  
  サーバー ロールの名前を指定します。 *ロール*は**sysname**、既定値は NULL です。 *ロール*値は次のいずれかを指定する必要があります。  
   
 -   sysadmin  
@@ -78,7 +78,7 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
  Sysadmin 固定サーバー ロール、または ALTER ANY LOGIN アクセス許可の両方のサーバーと、メンバーの削除元となるロールのメンバーシップでのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ログインを削除する`JackO`から、`sysadmin`固定サーバー ロール。  
+ 次の例では、`JackO` 固定サーバー ロールからログイン `sysadmin` を削除します。  
   
 ```  
 EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';  

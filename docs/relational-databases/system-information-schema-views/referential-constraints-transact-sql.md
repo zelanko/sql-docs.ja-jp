@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 149bcdddd5388c9c68a9d2d96c5474903104757d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f0cb0110e6f2cc047ca5db5f2813b250567573fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508023"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132142"
 ---
 # <a name="referentialconstraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "52508023"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|制約修飾子|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|制約を含むスキーマの名前です。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|制約を含むスキーマの名前です。<br /><br /> **&#42;&#42;重要な&#42; &#42;** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**CONSTRAINT_NAME**|**sysname**|制約名。|  
 |**UNIQUE_CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|UNIQUE 制約修飾子です。|  
-|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|UNIQUE 制約を含むスキーマの名前です。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|UNIQUE 制約を含むスキーマの名前です。<br /><br /> **&#42;&#42;重要な&#42; &#42;** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**UNIQUE_CONSTRAINT_NAME**|**sysname**|UNIQUE 制約。|  
 |**MATCH_OPTION**|**varchar (** 7 **)**|参照に関する制約の一致条件です。 常に SIMPLE を返します。 これは、一致条件が定義されていないことを表します。 次のいずれかに当てはまる場合には、条件は一致したと見なされます。<br /><br /> 外部キー列内の少なくとも 1 つの値が NULL である。<br /><br /> 外部キー列のすべての値が NULL でなく、主キー テーブルに同じキーの行がある。|  
 |**UPDATE_RULE**|**varchar (** 11 **)**|ときに実行されるアクションを[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントにこの制約によって定義されている参照の整合性に違反しています。 次のいずれかを返します。 <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> この制約の ON UPDATE で NO ACTION が指定されている場合、制約内で参照されている主キーの更新が外部キーに反映されません。 少なくとも 1 つの外部キーに同じ値が含まれるために、このような主キーの更新が参照整合性違反を引き起こす場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] による親テーブルと参照元テーブルへの変更は実行されません。 また [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが発生します。<br /><br /> この制約の ON UPDATE で CASCADE が指定されている場合は、主キーの値の変更が外部キーの値に自動的に反映されます。|  

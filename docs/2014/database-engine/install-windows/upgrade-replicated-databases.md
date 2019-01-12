@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d26bb248705ddce8932264701fbb7b9c09f64fcb
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018597"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132402"
 ---
 # <a name="upgrade-replicated-databases"></a>レプリケートされたデータベースのアップグレード
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、レプリケートされたデータベースを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からアップグレードすることができます。ノードのアップグレード中は、その他のノードでの操作を停止する必要はありません。 トポロジでサポートされるバージョンに関して、以下の規則が守られていることを確認してください。  
@@ -89,9 +89,8 @@ ms.locfileid: "51018597"
  以前のバージョンからレプリケートされたデータベースのバックアップを復元するときにレプリケーション設定が保持されるようにするには、バックアップが作成されたサーバーおよびデータベースと同じ名前のサーバーおよびデータベースに復元します。  
   
 ## <a name="see-also"></a>参照  
- [管理 &#40;レプリケーション&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+ [レプリケーションの管理に関する FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [レプリケーションの下位互換性](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
- [新機能 &#40;レプリケーション&#41;](../../../2014/relational-databases/replication/what-s-new-replication.md)   
  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [SQL Server 2014 へのアップグレード](upgrade-sql-server.md)  
   

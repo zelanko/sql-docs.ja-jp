@@ -15,12 +15,12 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea98f596638d19994d76606ae136204ae5f8d419
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823926"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132442"
 ---
 # <a name="duplicate-tables"></a>テーブルの複製
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、新しいテーブルを作成して既存のテーブルから列情報をコピーすることで既存のテーブルを複製できます。  
@@ -63,7 +63,7 @@ ms.locfileid: "52823926"
   
 6.  **[編集]** メニューの **[貼り付け]** をクリックします。  
   
-7.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
+7.  **ファイル** メニューの **table name**_の保存_をクリックします。  
   
 8.  **[名前の選択]** ダイアログ ボックスで、新しいテーブルの名前を入力し、 **[OK]** をクリックします。  
   

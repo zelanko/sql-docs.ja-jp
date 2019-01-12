@@ -14,12 +14,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98b2b9e94ea6474d2e10e1da9282c37af9bb0c27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 77581cc6d8838e0cfed4bb7cc615f4d1f58de0d5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814394"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132578"
 ---
 # <a name="create-unique-constraints"></a>UNIQUE 制約の作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して UNIQUE 制約を作成し、主キー以外の特定の列に重複した値が入力されないようにします。 UNIQUE 制約を作成すると、対応する一意なインデックスが自動的に作成されます。  
@@ -55,7 +55,7 @@ ms.locfileid: "52814394"
   
 4.  **[全般]** の下のグリッドで、 **[型]** をクリックし、プロパティの右にあるドロップダウン リスト ボックスの **[一意キー]** をクリックします。  
   
-5.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
+5.  **ファイル** メニューの **table name**_の保存_をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

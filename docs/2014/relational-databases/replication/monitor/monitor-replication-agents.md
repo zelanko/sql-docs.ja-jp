@@ -19,12 +19,12 @@ ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1456a3113feb8a32ce9876ef7ef060f96f66910b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ab277c5ad8d85fdc7c24046bfa191078525fe705
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800734"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132312"
 ---
 # <a name="monitor-replication-agents"></a>レプリケーション エージェントの監視
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターを使用すると、レプリケーションの利用状況を体系的に表示でき、特定のエージェントに関する情報を簡単に見つけることもできます。 次の一覧に、各エージェント、各エージェントを利用できるレプリケーション モニターのタブ、およびそれらのタブへのアクセス方法について説明しているトピックへのリンクを示します。  
@@ -37,7 +37,7 @@ ms.locfileid: "52800734"
   
     -   キュー リーダー エージェント (Queue Reader Agent)  
   
-     情報にアクセスし、次のタブを通じてこれらのエージェントに関連付けられているタスク:**エージェント**(各パブリッシャーおよびパブリケーションで使用可能) と**警告**(各パブリケーションで使用可能)。 詳細については、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-publication-agents.md)」を参照してください。  
+     情報にアクセスし、次のタブを通じてこれらのエージェントに関連付けられているタスク:**エージェント**(各パブリッシャーおよびパブリケーションで使用可能) と**警告**(各パブリケーションで使用可能)。 詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](view-information-and-perform-tasks-replication-monitor.md)します。  
   
 -   以下のエージェントは、レプリケーション モニターでサブスクリプションと関連付けられています。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52800734"
   
     -   [マージ エージェント]  
   
-     情報にアクセスし、次のタブを通じてこれらのエージェントに関連付けられているタスク:**サブスクリプション ウォッチ リスト**(各パブリッシャーで利用可能)、または**すべてのサブスクリプション** タブ (各パブリケーションで使用可能)。 詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+     情報にアクセスし、次のタブを通じてこれらのエージェントに関連付けられているタスク:**サブスクリプション ウォッチ リスト**(各パブリッシャーで利用可能)、または**すべてのサブスクリプション** タブ (各パブリケーションで使用可能)。 詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](view-information-and-perform-tasks-replication-monitor.md)します。  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>SQL Server Management Studio を使用してレプリケーション エージェントを監視する  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] には、レプリケーション エージェントの監視用に以下のダイアログ ボックスが用意されています。  
@@ -56,7 +56,7 @@ ms.locfileid: "52800734"
   
 -   **[同期の状態の表示]** ダイアログ ボックス (すべてのサブスクリプション用。このダイアログ ボックスからディストリビューション エージェントおよびマージ エージェントにアクセスできます)  
   
- レプリケーション モニターでは、各エージェントに関する追加情報が表示され、キュー リーダー エージェントが使用されている場合はその監視機能も提供されます。 詳細については、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-publication-agents.md)」、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-publication-agents.md)」および「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+ レプリケーション モニターでは、各エージェントに関する追加情報が表示され、キュー リーダー エージェントが使用されている場合はその監視機能も提供されます。 詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](view-information-and-perform-tasks-replication-monitor.md)します。  
   
 #### <a name="to-monitor-the-snapshot-agent-and-log-reader-agent"></a>スナップショット エージェントおよびログ リーダー エージェントを監視するには  
   

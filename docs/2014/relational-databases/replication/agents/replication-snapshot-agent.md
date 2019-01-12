@@ -15,12 +15,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d98c19c91fe05c2d283192b97d063c0b8d26e3c
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785973"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132282"
 ---
 # <a name="replication-snapshot-agent"></a>レプリケーション スナップショット エージェント
   レプリケーション スナップショット エージェントは、パブリッシュされたテーブルおよびデータベース オブジェクトのスキーマとデータを含むスナップショット ファイルを作成し、これらのファイルをスナップショット フォルダーに格納し、同期ジョブをディストリビューション データベースに記録する実行可能ファイルです。  
@@ -135,7 +135,7 @@ ms.locfileid: "53785973"
  > [!NOTE]  
  >  有効な SSL 証明書には、SQL Server の完全修飾ドメイン名が定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
   
- 詳細については、「[セキュリティの概要 &#40;レプリケーション&#41;](../security/security-overview-replication.md)」を参照してください。  
+ 詳細については、次を参照してください。 [SQL Server レプリケーションのセキュリティ](../security/view-and-modify-replication-security-settings.md)します。  
   
  **-FieldDelimiter** _field_delimiter_  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一括コピーで扱うデータ ファイルのフィールドの末尾を示す 1 文字または文字列です。 既定値は \n\<x$3>\n です。  
