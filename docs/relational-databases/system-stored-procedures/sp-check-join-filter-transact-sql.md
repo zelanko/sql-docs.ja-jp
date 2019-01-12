@@ -22,12 +22,12 @@ ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7e5a6e7745f6ccb66f4aa4674216566d935df06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c86699a87a04762162ce527d9f66c9fda55a1bb1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760204"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129332"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@filtered_table**=] **'***filtered_table***'**  
+ [ **@filtered_table**=] **'**_filtered_table_**'**  
  フィルター済みテーブルの名前を指定します。 *filtered_table*は**nvarchar (400)**、既定値はありません。  
   
- [ **@join_table**=] **'***join_table***'**  
+ [ **@join_table**=] **'**_join_table_**'**  
  結合するテーブルの名前を指定*filtered_table*します。 *join_table*は**nvarchar (400)**、既定値はありません。  
   
- [ **@join_filterclause** =] **'***join_filterclause***'**  
+ [ **@join_filterclause** =] **'**_join_filterclause_**'**  
  テストする結合フィルター句を指定します。 *join_filterclause*は**nvarchar (1000)**、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  

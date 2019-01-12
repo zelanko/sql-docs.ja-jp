@@ -14,12 +14,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3254ae226a0ac955f2cf5b2f39077853ebf3e057
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d904f82c793acf6135f600e1ed5392bda96e1bb8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762784"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130852"
 ---
 # <a name="create-a-job-category"></a>ジョブ カテゴリの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクトを使用して、ジョブ カテゴリを作成する方法について説明します。  
@@ -48,7 +48,7 @@ ms.locfileid: "52762784"
   
 3.  **[ジョブ]** フォルダーを右クリックし、 **[ジョブ カテゴリの管理]** をクリックします。  
   
-4.  *[ジョブ カテゴリの管理- <サーバー名>]* ダイアログ ボックスで、**[追加]** をクリックします。  
+4.  **&lt;server_name&gt;**__ ダイアログ ボックスで、 **追加**をクリックします。  
   
 5.  新しいダイアログ ボックスで、 **[名前]** ボックスに新しいジョブ カテゴリの名前を入力します。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52762784"
   
 7.  **[OK]** をクリックします。  
   
-8.  *[ジョブ カテゴリの管理 - <サーバー名>]* ダイアログ ボックスで、**[最新の情報に更新]** をクリックして、新しいジョブ カテゴリをアクティブにします。 すべての設定が適切であることを確認したら、このダイアログ ボックスを閉じます。  
+8.  **&lt;server_name&gt;**__ ダイアログ ボックスで、 **最新の情報に更新** をクリックして、新しいジョブ カテゴリをアクティブにします。 すべての設定が適切であることを確認したら、このダイアログ ボックスを閉じます。  
   
  これらのダイアログ ボックスの詳細については、次を参照してください。[ジョブ カテゴリ。ジョブ カテゴリの管理](job-categories-manage-job-categories.md)と[ジョブ カテゴリのプロパティと新しいジョブ カテゴリ](job-categories-properties-new-job-category.md)します。  
   

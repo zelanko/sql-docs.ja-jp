@@ -16,12 +16,12 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acb16727506952146ace1383c8d36808d7c22a73
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 34ba40387c246fe5f7f2de8dd74197b7cd43c0f5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791504"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130742"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +43,16 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=** ] **'***パブリケーション***'**  
+ [  **@publication=** ] **'**_パブリケーション_**'**  
  パブリケーション名を指定します。 *パブリケーション*は**sysname**、既定値は NULL です。 パブリケーションが存在し、識別子の規則に従っている必要があります。  
   
- [  **@subscriber=**] **'***サブスクライバー***'**  
+ [  **@subscriber=**] **'**_サブスクライバー_**'**  
  サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は NULL です。  
   
- [  **@subscriber_db=** ] **'***@subscriber_db***'**  
+ [  **@subscriber_db=** ] **'**_@subscriber_db_**'**  
  サブスクリプション データベースの名前です。 *subscription_database*は**sysname**、既定値は NULL です。  
   
- [  **@subscription_type=** ] **'***subscription_type***'**  
+ [  **@subscription_type=** ] **'**_subscription_type_**'**  
  サブスクリプションの種類を指定します。 *subscription_type*は**nvarchar (15)**、これらの値のいずれかを指定できます。  
   
 |値|説明|  

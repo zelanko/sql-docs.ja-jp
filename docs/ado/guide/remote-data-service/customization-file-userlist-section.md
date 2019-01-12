@@ -14,12 +14,12 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b499f06254a482deea2c90f2fc570b8bb7c9d43e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5feb29337ccd0ee79cd1b6f98187cc6fdb52a942
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516753"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130672"
 ---
 # <a name="customization-file-userlist-section"></a>カスタマイズ ファイルの UserList セクション
 **Userlist**セクションに関連する、**接続**の同じセクションとセクション*識別子*パラメーター。  
@@ -32,13 +32,13 @@ ms.locfileid: "52516753"
 ## <a name="syntax"></a>構文  
  形式は、ユーザーのアクセス エントリです。  
   
- *userName* **=**   
- ***accessRights***  
+ _userName_ **=**   
+ **_accessRights_**  
   
 |要素|説明|  
 |----------|-----------------|  
 |*userName*|*ユーザー名*のこの接続を使用しているユーザー。 有効なユーザー名が、IIS を用いて確立された**Service Manager**ダイアログ。|  
-|***accessRights***|次のアクセス権のいずれか:<br /><br /> -   **NoAccess** -ユーザーがデータ ソースにアクセスできません。<br />-   **読み取り専用**-ユーザーがデータ ソースを読み取ることができます。<br />-   **ReadWrite** -ユーザーの読み取りまたはデータ ソースへの書き込みができます。|  
+|**_accessRights_**|次のアクセス権のいずれか:<br /><br /> -   **NoAccess** -ユーザーがデータ ソースにアクセスできません。<br />-   **読み取り専用**-ユーザーがデータ ソースを読み取ることができます。<br />-   **ReadWrite** -ユーザーの読み取りまたはデータ ソースへの書き込みができます。|  
   
 ## <a name="see-also"></a>参照  
  [カスタマイズ ファイル Connect セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

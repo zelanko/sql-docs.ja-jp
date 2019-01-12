@@ -22,12 +22,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49729948f284af9ec2a638f7da3da4b248521653
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 00fc90be42bddd7feb43d96c9110def4db60835c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762494"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130452"
 ---
 # <a name="replication-agent-administration"></a>レプリケーション エージェントの管理
   レプリケーション エージェントは、レプリケーションに関連した数多くのタスクを実行します。たとえば、スキーマとデータのコピーの作成、パブリッシャーまたはサブスクライバーでの更新の検出、およびサーバー間での変更の反映などを行います。 既定では、レプリケーション エージェントは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントのジョブ ステップで実行されます。 エージェントは単なる実行可能ファイルであるため、コマンド ラインやバッチ スクリプトから直接呼び出すこともできます。 各レプリケーション エージェントでは、ランタイム パラメーターのセットを使用して実行方法を制御できます。このパラメーターはエージェント プロファイルまたはコマンド ラインで指定します。  
@@ -69,7 +69,7 @@ ms.locfileid: "52762494"
   
     -   キュー リーダー エージェント (Queue Reader Agent)  
   
-     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、 **[エージェント]** タブを使用します。詳細については、「[View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md)」 (パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;) を参照してください。  
+     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、 **[エージェント]** タブを使用します。詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
 -   以下のエージェントは、レプリケーション モニターでサブスクリプションと関連付けられています。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52762494"
   
     -   [マージ エージェント]  
   
-     情報にアクセスし、次のタブを通じてこれらのエージェントに関連付けられているタスク:**サブスクリプション ウォッチ リスト**(各パブリッシャーで利用可能)、または**すべてのサブスクリプション** タブ (各パブリケーションで使用可能)。 詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+     情報にアクセスし、次のタブを通じてこれらのエージェントに関連付けられているタスク:**サブスクリプション ウォッチ リスト**(各パブリッシャーで利用可能)、または**すべてのサブスクリプション** タブ (各パブリケーションで使用可能)。 詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
 ## <a name="independent-and-shared-agents"></a>独立したエージェントと共有エージェント  
  独立したエージェントとは、1 つのサブスクリプションを処理するエージェントのことです。 共有エージェントは複数のサブスクリプションにサービスを提供します。同じ共有エージェントを使用している複数のサブスクリプションで同期する必要がある場合、既定では、それらのサブスクリプションはキューに格納されて待機し、共有エージェントがそれらを一度に 1 つずつ処理します。 独立したエージェントは、サブスクリプションが必要に応じていつでも同期できるように常に待機しているので、待機時間が短くなります。 マージ レプリケーションでは常に独立したエージェントが使用され、トランザクション レプリケーションでは、既定ではパブリケーションの新規作成ウィザードで作成されたパブリケーションに対して独立したエージェントが使用されます (以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、トランザクション レプリケーションは既定で共有エージェントを使用していました)。  

@@ -16,12 +16,12 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7894d5f7f3d3c686c8984c0386f1025f00c2890
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4bcf5b0163156fe078c3bd3382efb193ec417399
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770144"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129410"
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x100000000**|このオプションを使用して、指定されている場合は、FILESTREAM 属性をレプリケートする**varbinary (max)** 列。 テーブルを [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] サブスクライバーにレプリケートする場合は、このオプションを指定しないでください。 FILESTREAM 列を持つテーブルをレプリケート[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サブスクライバーがサポートされていません、このスキーマ オプションを設定する方法に関係なく、します。 関連するオプションを参照してください。 **0x800000000**します。|  
 |**0x200000000**|日付と時刻のデータ型に変換 (**日付**、**時間**、 **datetimeoffset**、および**datetime2**) で導入された[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]データ以前のバージョンでサポートされている種類[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
-|**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイル グループに格納されます。 レプリケーションではファイル グループは作成されないので、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイル グループを作成しておく必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、次を参照してください。[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)します。<br /><br /> 関連するオプションを参照してください。 **0x100000000**します。|  
+|**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイル グループに格納されます。 レプリケーションではファイル グループは作成されないので、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイル グループを作成しておく必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、次を参照してください。[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)します。<br /><br /> 関連するオプションを参照してください。 **0x100000000**します。|  
 |**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) に変換します**varbinary (max)** を実行しているサブスクライバーに UDT 型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]します。|  
 |**0x2000000000**|変換、 **hierarchyid**のデータ型**varbinary (max)** ように型の列**hierarchyid**実行しているサブスクライバーにレプリケートできる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 使用する方法の詳細についての**hierarchyid**レプリケートされたテーブル内の列を参照してください[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)します。|  
 |**0x4000000000**|テーブルのフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、次を参照してください。 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)します。|  
@@ -296,7 +296,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  アーティクルのソース テーブルが別のパブリケーションの値で既にパブリッシュされている場合*partition_options*の両方のアーティクルで同じである必要があります。  
   
  [  **@processing_order=** ] *processing_order*  
- マージ パブリケーション内のアーティクルの処理順序を示します。 *processing_order*は**int**、既定値は 0。 **0**アーティクルが順序付けられたがないと、その他の値は、このアーティクルの処理順序の序数値を表すことを指定します。 アーティクルは、最も小さい値から最も大きい値の順序で処理されます。 処理順序が内のアーティクル ニックネームの順序によって決まりますが 2 つのアーティクルの値が同じ場合は、 [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)システム テーブル。 詳細については、「[Specify the Processing Order of Merge Articles](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)」 (マージ アーティクルの処理順序の指定) を参照してください。  
+ マージ パブリケーション内のアーティクルの処理順序を示します。 *processing_order*は**int**、既定値は 0。 **0**アーティクルが順序付けられたがないと、その他の値は、このアーティクルの処理順序の序数値を表すことを指定します。 アーティクルは、最も小さい値から最も大きい値の順序で処理されます。 処理順序が内のアーティクル ニックネームの順序によって決まりますが 2 つのアーティクルの値が同じ場合は、 [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)システム テーブル。 詳細については、次を参照してください。[マージ レプリケーションの指定プロパティ](../../relational-databases/replication/merge/specify-merge-replication-properties.md)します。  
   
  [  **@subscriber_upload_options=** ] *subscriber_upload_options*  
  サブスクライバーにおける、クライアント サブスクリプションを使用した更新に対する制限を定義します。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。 *subscriber_upload_options*は**tinyint**値は次のいずれかを指定できます。  
@@ -358,11 +358,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  値を指定する場合**3**の*partition_options*を単一のサブスクリプションのみパーティションごとにそのアーティクル内のデータがあります。 第 2 のサブスクリプションを作成し、その新しいサブスクリプションのフィルター選択条件が既存のサブスクリプションと同じパーティションとして判別される場合、既存のサブスクリプションは削除されます。  
   
- 3 の値を指定するときに*partition_options*メタデータがクリーンアップたびに、マージ エージェントを実行し、パーティション スナップショット有効期限が短くします。 このオプションを使用するときは、サブスクライバーが要求したパーティション スナップショットを有効にすることを検討してください。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」をご覧ください。  
+ 3 の値を指定するときに*partition_options*メタデータがクリーンアップたびに、マージ エージェントを実行し、パーティション スナップショット有効期限が短くします。 このオプションを使用するときは、サブスクライバーが要求したパーティション スナップショットを有効にすることを検討してください。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
  使用して、静的行フィルターでアーティクルを追加する*subset_filterclause*を既存のパブリケーションがパラメーター化されたフィルターの記事では、サブスクリプションを再初期化する必要があります。  
   
- 指定するときに*processing_order*をお勧めします記事順序の値の間にすきまを残したりを簡単に、将来新しい値を設定します。 たとえば、Article1、Article2、Article3 の 3 つのアーティクルがあれば、設定*processing_order* 10、20、30 ではなく 1、2、および 3 にします。 詳細については、「[Specify the Processing Order of Merge Articles](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)」 (マージ アーティクルの処理順序の指定) を参照してください。  
+ 指定するときに*processing_order*をお勧めします記事順序の値の間にすきまを残したりを簡単に、将来新しい値を設定します。 たとえば、Article1、Article2、Article3 の 3 つのアーティクルがあれば、設定*processing_order* 10、20、30 ではなく 1、2、および 3 にします。 詳細については、次を参照してください。[マージ レプリケーションの指定プロパティ](../../relational-databases/replication/merge/specify-merge-replication-properties.md)します。  
   
 ## <a name="default-schema-option-table"></a>既定のスキーマ オプションの一覧  
  次の表は、NULL 値が指定されている場合、ストアド プロシージャによって設定されている既定値を示します*schema_option*アーティクルの種類によって決まります。  

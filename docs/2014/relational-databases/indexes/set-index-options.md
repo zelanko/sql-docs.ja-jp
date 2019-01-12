@@ -23,12 +23,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9feaa3be20692b89b0d0568f1ccacc49c992667
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408281"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130192"
 ---
 # <a name="set-index-options"></a>インデックス オプションの設定
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] におけるインデックスのプロパティを、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して変更する方法について説明します。  
@@ -78,7 +78,7 @@ ms.locfileid: "52408281"
   
 7.  **[閉じる]** をクリックします。  
   
-8.  **[ファイル]** メニューの *[<テーブル名> を保存]* を選択します。  
+8.  **[ファイル]** メニューの [ **table_name**_を保存_] を選びます。  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>インデックスのプロパティをオブジェクト エクスプローラーで変更するには  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52408281"
   
 7.  該当するプロパティの設定を変更してインデックスをカスタマイズします。  
   
-8.  インデックス列の位置を追加、削除、または変更するには、 **インデックスのプロパティ -**  **全般** *全般* ページをクリックします。 詳細については、「 [Index Properties F1 Help](index-properties-f1-help.md)」をご覧ください。  
+8.  インデックス列の位置を追加、削除、または変更するには、 **インデックスのプロパティ -**  **全般** _全般_ ページをクリックします。 詳細については、「 [Index Properties F1 Help](index-properties-f1-help.md)」をご覧ください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

@@ -16,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 582eb67d72941e24c135d3cd1690ab23aaca5acc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6b15212edcb043ed86e3d2cd18c5f33624660692
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208161"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130682"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,16 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_パブリケーション_**'**  
  目的のアーティクルを含むパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は NULL です。  
   
- [  **@article=**] **'***記事***'**  
+ [  **@article=**] **'**_記事_**'**  
  プロパティを変更するアーティクルの名前を指定します。 *記事*は**sysname**、既定値は NULL です。  
   
- [  **@property=**] **'***プロパティ***'**  
+ [  **@property=**] **'**_プロパティ_**'**  
  変更するアーティクルのプロパティを指定します。 *プロパティ*は**nvarchar (100)** します。  
   
- [  **@value=**] **'***値***'**  
+ [  **@value=**] **'**_値_**'**  
  アーティクル プロパティの新しい値を指定します。 *値*は**nvarchar (255)** します。  
   
  次の表に、アーティクルのプロパティと、それぞれの値を示します。  
@@ -114,7 +114,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x100000000**|このオプションを使用して、指定されている場合は、FILESTREAM 属性をレプリケートする**varbinary (max)** 列。 テーブルを [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] サブスクライバーにレプリケートする場合は、このオプションを指定しないでください。 FILESTREAM 列を持つテーブルをレプリケート[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サブスクライバーがサポートされていません、このスキーマ オプションを設定する方法に関係なく、します。<br /><br /> 関連するオプションを参照してください。 **0x800000000**します。|  
 ||**0x200000000**|日付と時刻のデータ型に変換 (**日付**、**時間**、 **datetimeoffset**、および**datetime2**) で導入された[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以前のバージョンでサポートされているデータ型に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 ||**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
-||**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイル グループに格納されます。 レプリケーションではファイル グループは作成されないので、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイル グループを作成しておく必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、次を参照してください。[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)します。<br /><br /> 関連するオプションを参照してください。 **0x100000000**します。|  
+||**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイル グループに格納されます。 レプリケーションではファイル グループは作成されないので、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイル グループを作成しておく必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、次を参照してください。[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)します。<br /><br /> 関連するオプションを参照してください。 **0x100000000**します。|  
 ||**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) 8000 バイトを超えるに変換します**varbinary (max)** を実行しているサブスクライバーに UDT 型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]します。|  
 ||**0x2000000000**|変換、 **hierarchyid**のデータ型**varbinary (max)** ように型の列**hierarchyid**実行しているサブスクライバーにレプリケートできる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 使用する方法の詳細についての**hierarchyid**レプリケートされたテーブル内の列を参照してください[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)します。|  
 ||**0x4000000000**|テーブルのフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、次を参照してください。 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)します。|  
@@ -155,7 +155,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  変更によって新しいスナップショットの生成が必要になるプロパティについては、「解説」を参照してください。  
   
- [**@force_reinit_subscription=] * * * 更によって*  
+ [  **@force_reinit_subscription=]**_更によって_  
  このストアド プロシージャが実行する操作によって、既存のサブスクリプションの再初期化が必要になることを許可します。 *更によって*は、**ビット**、既定値は**0**します。  
   
  **0**アーティクルへの変更では、サブスクリプションを再初期化するのには発生しないことを指定します。 変更に既存のサブスクリプションの再初期化が必要であることをストアド プロシージャが検出すると、エラーが発生し、変更は加えられません。  
@@ -164,7 +164,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  変更によって既存のサブスクリプションの再初期化が必要になるプロパティについては、「解説」を参照してください。  
   
- [ **@publisher**=] **'***パブリッシャー***'**  
+ [ **@publisher**=] **'**_パブリッシャー_**'**  
  以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  

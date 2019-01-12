@@ -18,12 +18,12 @@ ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb3c0d60d5c20651e525d573f8367f1aff4824f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80de1581116ddc477ee1d5b8197532a853ee3da7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601380"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130522"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @loginame **=** ] **'***ログイン***'**  
+ [ @loginame **=** ] **'**_ログイン_**'**  
  固定サーバー ロールに追加するログインの名前を指定します。 *ログイン*は**sysname**、既定値はありません。 *ログイン*できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインします。 Windows ログインに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセスが許可されていない場合は、アクセスが自動的に許可されます。  
   
- [ @rolename **=** ] **'***ロール***'**  
+ [ @rolename **=** ] **'**_ロール_**'**  
  ログインを追加する固定サーバー ロールの名前を指定します。 *ロール*は**sysname**、既定値は null の場合、値は次のいずれかを指定する必要があります。  
   
 -   sysadmin  
@@ -82,7 +82,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
  新しいメンバーを追加するロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、Windows ログイン`Corporate\HelenS`を`sysadmin`固定サーバー ロール。  
+ 次の例では、Windows ログイン `Corporate\HelenS` を固定サーバー ロール `sysadmin` に追加します。  
   
 ```  
 EXEC sp_addsrvrolemember 'Corporate\HelenS', 'sysadmin';  

@@ -20,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761453"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129420"
 ---
 # <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
   いずれかを使用して、**登録データ層アプリケーションのウィザード**または既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成するスクリプトを作成し、にDAC定義が登録は、WindowsPowerShell`msdb`システム データベース (**マスター**で[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
@@ -101,7 +101,7 @@ ms.locfileid: "52761453"
  **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
 ### <a name="validating-objects"></a>オブジェクトの検証  
- ****  *SchemaName* **を実行できません。** *ObjectName* **を実行できません。** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 *SchemaName ***.*** ObjectName* は、現在検証されているオブジェクトを示します。  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 _SchemaName_**.**_ObjectName_ は、現在検証されているオブジェクトを示します。  
   
  **\< 以前**-に戻り、**プロパティの設定**エントリを変更するページ。  
   

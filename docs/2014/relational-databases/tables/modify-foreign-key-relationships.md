@@ -16,12 +16,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 50e6886e9ef69842432a0759095f11335cfbb494
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797664"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129622"
 ---
 # <a name="modify-foreign-key-relationships"></a>外部キー リレーションシップの変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、リレーションシップの外部キー側を変更できます。 テーブルの外部キーを変更すると、主キー テーブルの列に関連付けられる列が変更されます。  
@@ -139,7 +139,7 @@ ms.locfileid: "52797664"
   
     -   **[既定値の設定]** &#xA0;&#xA0;テーブルのすべての外部キー列に既定値が定義されている場合、その列に定義されている既定値が設定されます。  
   
-4.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
+4.  **ファイル** メニューの **table name**_の保存_をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **外部キーを変更するには**  

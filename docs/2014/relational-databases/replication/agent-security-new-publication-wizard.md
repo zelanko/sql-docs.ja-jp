@@ -12,12 +12,12 @@ ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b7acd2c6ab698a8fafb8e89c21376973163d88c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 555aa4e49887000354e5d31ff5d039a5f0ac75eb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758204"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129202"
 ---
 # <a name="agent-security-new-publication-wizard"></a>[エージェント セキュリティ] \(パブリケーションの新規作成ウィザード)
   **[エージェント セキュリティ]** ページを使用すると、次のエージェントを実行したり、レプリケーション トポロジ内のコンピューターに接続したりする際のアカウントを指定できます。  
@@ -54,10 +54,10 @@ ms.locfileid: "52758204"
   
 ## <a name="see-also"></a>参照  
  [Create a Publication](publish/create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](view-and-modify-distributor-and-publisher-properties.md)   
  [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
- [レプリケーションのログインとパスワードの管理](security/manage-logins-and-passwords-in-replication.md)   
+ [レプリケーションのログインとパスワードの管理](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [データとデータベース オブジェクトのパブリッシュ](publish/publish-data-and-database-objects.md)   
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)  
   

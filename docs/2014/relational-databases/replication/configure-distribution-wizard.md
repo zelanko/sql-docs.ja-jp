@@ -12,29 +12,25 @@ ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f5d1c1012c9e482b09281fd11406017b4330dd6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c77f6ce464540cd74f67af73d63a20f5d94fdfc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813694"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130033"
 ---
 # <a name="configure-distribution-wizard"></a>ディストリビューションの構成ウィザード
   ここでは、ディストリビューションの構成ウィザードの次のページについて紹介します。  
   
--   [[ディストリビューター]](distributor.md)  
-  
+-   [[ディストリビューター]](distributor.md)
 -   [[スナップショット フォルダー]](snapshot-folder.md)  
-  
 -   [ディストリビューション データベース](distribution-database.md)  
-  
 -   [[パブリッシャー]](publishers.md)  
-  
 -   [[ディストリビューター パスワード]](distributor-password.md)  
   
 ## <a name="see-also"></a>参照  
  [[ディストリビューションの構成]](configure-distribution.md)   
- [パブリッシングとディストリビューションの構成](configure-publishing-and-distribution.md)   
- [プロパティ リファレンス &#40;レプリケーション&#41;](properties-reference-replication.md)  
+ [パブリッシングおよびディストリビューションの構成](configure-publishing-and-distribution.md)   
+
   
   

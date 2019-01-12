@@ -23,18 +23,18 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 13466b4d9d5cc497830906f144e95f044442e318
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197312"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129892"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>メディア セット、メディア ファミリ、およびバックアップ セット (SQL Server)
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を初めて使用するユーザーを対象とし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。 ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でバックアップ メディアに使用する形式、バックアップ メディアとバックアップ デバイス間の対応付け、バックアップ メディアでのバックアップの構成、メディア セットとメディア ファミリに関するいくつかの注意点について説明します。 古いメディア セットを新しいメディア セットと交換する前に行うバックアップ メディアの初期化およびフォーマット処理の手順、メディア セット内の古いバックアップ セットを上書きする方法、新しいバックアップ セットをメディア セットに追加する方法についても説明します。  
   
 > [!NOTE]  
->  Windows Azure Blob ストレージ サービスへの SQL Server のバックアップの詳細についてを参照してください。 [SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)します。  
+>  Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップについては、「 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
   
   
 ##  <a name="TermsAndDefinitions"></a> 用語と定義  
@@ -106,7 +106,7 @@ ms.locfileid: "48197312"
 ### <a name="backup-sets"></a>バックアップ セット  
  バックアップ操作が正常に行われると、メディア セットに 1 つの *バックアップ セット* が追加されます。 バックアップ セットは、バックアップが属するメディア セットの観点から表現されます。 バックアップ メディアにメディア ファミリが 1 つしかない場合は、そのファミリにバックアップ セット全体が含まれます。 バックアップ メディアが複数のメディア ファミリで構成されている場合、バックアップ セットはこれらのファミリ間で分散されます。 各メディアのバックアップ セットには、そのバックアップ セットを説明するヘッダーが含まれています。  
   
- 次の例は、[!INCLUDE[tsql](../../includes/tsql-md.md)]というメディア セットを作成するステートメント`MyAdvWorks_MediaSet_1`の[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースのバックアップ デバイスとして 3 つのテープ ドライブを使用します。  
+ 次の例は、バックアップ デバイスとして 3 つのテープ ドライブを使用し、 [!INCLUDE[tsql](../../includes/tsql-md.md)] データベース用に `MyAdvWorks_MediaSet_1` というメディア セットを作成する [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ステートメントを示しています。  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -140,7 +140,7 @@ WITH
   
  ![3 つのメディア セット テープにまたがる 2 番目のバックアップ セット](../../database-engine/media/bnr-mediaset-appendedto.gif "3 つのメディア セット テープにまたがる 2 番目のバックアップ セット")  
   
- バックアップを復元するとき、使用するバックアップを FILE オプションで指定できます。 次の例は、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの完全バックアップを復元した後、同じメディア セットで差分バックアップを行う場合の FILE **=***backup_set_file_number* 句の使用法を示しています。 メディア セットでは 3 つのバックアップ テープが使用されます。テープが装着されているテープ ドライブは `\\.\tape0`、 `tape1`、および `tape2`です。  
+ バックアップを復元するとき、使用するバックアップを FILE オプションで指定できます。 次の例は、 **=**_データベースの完全バックアップを復元した後、同じメディア セットで差分バックアップを行う場合の FILE_ backup_set_file_number [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 句の使用法を示しています。 メディア セットでは 3 つのバックアップ テープが使用されます。テープが装着されているテープ ドライブは `\\.\tape0`、 `tape1`、および `tape2`です。  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
@@ -219,7 +219,7 @@ GO
  テープ ヘッダーの場合は、ヘッダーをそのまま残すことに意味があります。 ディスク バックアップ メディアの場合、バックアップ操作で指定されたバックアップ デバイスが使用したファイルだけが上書きされます。ディスク上のそれ以外のファイルは上書きされません。 バックアップを上書きする場合、既存のメディア ヘッダーを保持し、新しいバックアップをバックアップ デバイスの初めてのバックアップとして作成できます。 既存のメディア ヘッダーがない場合、関連付けられたメディア名とメディアの説明が入った有効なメディア ヘッダーが自動的に書き込まれます。 既存のメディア ヘッダーが無効な場合、バックアップ操作は終了します。 メディアが空の場合、MEDIANAME、MEDIAPASSWORD、および MEDIADESCRIPTION が指定されていれば、それらを使用して新しいメディア ヘッダーが生成されます。  
   
 > [!IMPORTANT]  
->  以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]バックアップを作成するため、MEDIAPASSWORD オプションは廃止されました。 ただし、パスワード付きで作成されたバックアップを復元することは、引き続き可能です。  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、バックアップの作成での MEDIAPASSWORD オプションが廃止されました。 ただし、パスワード付きで作成されたバックアップを復元することは、引き続き可能です。  
   
  次のいずれかの条件が存在する場合、バックアップ メディアは上書きされません。  
   

@@ -13,12 +13,12 @@ ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dea87fd8144863d8098c88ee9e038cebda0b0060
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816654"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129812"
 ---
 # <a name="security-role-requirements-for-replication"></a>レプリケーションのセキュリティ ロール要件
   レプリケーションでは、ユーザーのログインがマップされているロールに基づいて、ユーザーが実行できる操作が制限されます。 レプリケーションでは、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、およびパブリケーション アクセス リスト (PAL) 内のログインに、特定の権限が許可されています。  
@@ -51,6 +51,6 @@ ms.locfileid: "52816654"
   
 ## <a name="see-also"></a>参照  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [セキュリティと保護 &#40;レプリケーション&#41;](security-and-protection-replication.md)  
+ [SQL Server レプリケーションのセキュリティ](view-and-modify-replication-security-settings.md)  
   
   

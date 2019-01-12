@@ -16,12 +16,12 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36188e2faa578c0c4ef2a89b32e00d474366d32d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 00c5b4b94bc0a4347991944ccaa7898e75f244f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212439"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130692"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,20 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=** ] **'***パブリケーション***'**  
+ [  **@publication=** ] **'**_パブリケーション_**'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@scriptfile=** ] **'***scriptfile***'**  
+ [  **@scriptfile=** ] **'**_scriptfile_**'**  
  SQL スクリプト ファイルへの完全なパスを指定します。 *scriptfile*は**nvarchar (4000)**、既定値はありません。  
   
- [  **@skiperror=** ] **'***skiperror***'**  
+ [  **@skiperror=** ] **'**_skiperror_**'**  
  スクリプト処理の最中にエラーが発生したときに、ディストリビューション エージェントまたはマージ エージェントを停止させる必要があるかどうかを示します。 *SkipError*は**ビット**、既定値は 0。  
   
  **0** = は、エージェントを停止します。  
   
  **1** = エージェントはスクリプトを続行し、エラーを無視します。  
   
- [  **@publisher=** ] **'***パブリッシャー***'**  
+ [  **@publisher=** ] **'**_パブリッシャー_**'**  
  以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  

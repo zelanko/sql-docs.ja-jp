@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3c4667f0f70e76a35acdece3f644d57d16a77776
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 150fd6e01efb67281146e5b7dfff79bde27636dc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698830"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130602"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_dropapprole [@rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@rolename =** ] **'***ロール***'**  
+ [  **@rolename =** ] **'**_ロール_**'**  
  アプリケーションの役割を削除します。 *ロール*は、 **sysname**、既定値はありません。 *ロール*現在のデータベースに存在する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -57,7 +57,7 @@ sp_dropapprole [@rolename = ] 'role'
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、削除、`SalesApp`現在のデータベースからアプリケーション ロールです。  
+ 次の例では、現在のデータベースからアプリケーション ロール `SalesApp` を削除します。  
   
 ```  
 EXEC sp_dropapprole 'SalesApp';  

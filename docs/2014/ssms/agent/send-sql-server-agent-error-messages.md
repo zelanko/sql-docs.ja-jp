@@ -15,12 +15,12 @@ ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75c7fbe2997c84963f2ed1d420840b514fb89860
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779044"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130175"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、net send によってエラー メッセージを送信するように [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成する方法について説明します。  
@@ -66,7 +66,7 @@ ms.locfileid: "52779044"
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。  
   
-3.  **SQL Server エージェントのプロパティ-* * * server_name*ダイアログ ボックスで、**エラー ログ**上、**全般**ページで、送信するユーザー名またはコンピューター名を入力エラー メッセージが、 **Net send 受信者**ボックス。  
+3.  **SQL Server エージェントのプロパティ -**_server_name_ダイアログ ボックスで、**エラー ログ**上、**全般**ページで、ユーザー名を入力またはメッセージがエラーを送信するコンピューター名、 **Net send 受信者**ボックス。  
   
 4.  **[OK]** をクリックします。  
   

@@ -15,12 +15,12 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f309bf2f339347c6d29000b45bdaab602b3bd752
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a3e8497e4f5a8b5e74b7bb0b5d9c01cef78e275d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760734"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131082"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でジョブ カテゴリのメンバーシップを変更する方法について説明します。  
@@ -56,13 +56,13 @@ ms.locfileid: "52760734"
   
 3.  **[ジョブ]** フォルダーを右クリックし、 **[ジョブ カテゴリの管理]** をクリックします。  
   
-4.  *[ジョブ カテゴリの管理 - <サーバー名>]* ダイアログ ボックスで、編集するジョブ カテゴリを選択し、**[ジョブの表示]** をクリックします。  
+4.  **server_name**__ ダイアログ ボックスで、編集するジョブ カテゴリを選択し、 **ジョブの表示**をクリックします。  
   
 5.  **[すべてのジョブを表示]** チェック ボックスをオンにします。  
   
 6.  カテゴリにジョブを追加するには、メイン グリッドで、ジョブに対応する **[選択]** 列のチェック ボックスをオンにします。 カテゴリからジョブを削除するには、チェック ボックスをオフにします。 完了したら、 **[OK]** をクリックします。  
   
-7.  *[ジョブ カテゴリの管理 - <サーバー名>]* ダイアログ ボックスを閉じます。  
+7.  **&lt;server_name&gt;**__ ダイアログ ボックスを閉じます。  
   
 ##  <a name="TSQL"></a> Transact-SQL の使用  
   

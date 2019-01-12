@@ -16,12 +16,12 @@ ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30f7ee9e8488fad2311adae55f973bab8a22ec22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3db4c300cad5f38b46b73b2edc065a5b98ec90f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770294"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130812"
 ---
 # <a name="spmschangelogreaderagentproperties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher** =] **'***パブリッシャー***'**  
+ [ **@publisher** =] **'**_パブリッシャー_**'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
+ [  **@publisher_db=** ] **'**_publisher_db_**'**  
  パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
@@ -58,19 +58,19 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
  **1** Windows 認証を指定します。  
   
- [ **@publisher_login**=] **'***publisher_login***'**  
+ [ **@publisher_login**=] **'**_publisher_login_**'**  
  パブリッシャーへの接続時に使用するログインを指定します。 *publisher_login*は**sysname**、既定値はありません。 *publisher_login*場合に指定する必要があります*publisher_security_mode*は**0**します。 場合*publisher_login* null と*publisher_security_mode*は**1**で指定した Windows アカウント*job_login*使用されますときに、パブリッシャーに接続します。  
   
- [ **@publisher_password**=] **'***publisher_password***'**  
+ [ **@publisher_password**=] **'**_publisher_password_**'**  
  パブリッシャーへの接続時に使用するパスワードを指定します。 *publisher_password*は**sysname**、既定値はありません。  
   
- [ **@job_login**=] **'***job_login***'**  
+ [ **@job_login**=] **'**_job_login_**'**  
  エージェントを実行する Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**、既定値はありません。 *これ以外は変更できません*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *パブリッシャーです。*  
   
- [ **@job_password**=] **'***job_password***'**  
+ [ **@job_password**=] **'**_job_password_**'**  
  エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値はありません。  
   
- [ **@publisher_type**=] **'***publisher_type***'**  
+ [ **@publisher_type**=] **'**_publisher_type_**'**  
  パブリッシャーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで実行されていないときのパブリッシャーの種類を指定します。 *publisher_type*は**sysname**値は次のいずれかを指定できます。  
   
 |値|説明|  

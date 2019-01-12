@@ -13,12 +13,12 @@ ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc2bf4573408606c38f368e58b3a245dfdea4ece
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 349e3313a194aa45ae26a106b1f61d7df7ac1f46
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806854"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131213"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシを変更する方法について説明します。  
@@ -64,9 +64,9 @@ ms.locfileid: "52806854"
   
 4.  プロキシにサブシステムのノードを展開するプラス記号をクリックします (たとえば **[ActiveX スクリプト]**)。  
   
-5.  変更するプロキシ アカウントを右クリックし、 **[プロパティ]** を選択します。  
+5.  変更するプロキシ アカウントを右クリックし、**[プロパティ]** を選択します。  
   
-6.  *[<プロキシ名> - プロキシ アカウントのプロパティ]* ダイアログ ボックスで、必要に応じてプロキシ アカウントを変更します。 このダイアログ ボックスのオプションについては、「 [SQL Server エージェント プロキシの作成](create-a-sql-server-agent-proxy.md)」を参照してください。  
+6.  _proxy_name_ **[ プロキシ アカウントのプロパティ]** ダイアログ ボックスで、必要に応じてプロキシ アカウントを変更します。 このダイアログ ボックスのオプションについては、「[SQL Server エージェント プロキシの作成](create-a-sql-server-agent-proxy.md)」を参照してください。  
   
 7.  完了したら、 **[OK]** をクリックします。  
   

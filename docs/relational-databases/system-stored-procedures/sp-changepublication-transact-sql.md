@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209131"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131242"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication =** ] **'***publication***'**  
+ [  **@publication =** ] **'**_パブリケーション_**'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。  
   
- [  **@property =** ] **'***プロパティ***'**  
+ [  **@property =** ] **'**_プロパティ_**'**  
  変更するパブリケーションのプロパティを指定します。 *プロパティ*は**nvarchar (255)** します。  
   
- [  **@value =** ] **'***値***'**  
+ [  **@value =** ] **'**_値_**'**  
  新しいプロパティ値を指定します。 *値*は**nvarchar (255)**、既定値は NULL です。  
   
  次の表に、変更可能なパブリケーションのプロパティと、プロパティの値に関する制限を示します。  
@@ -130,7 +130,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **0**アーティクルへの変更では、サブスクリプションを再初期化するのには発生しないことを指定します。 変更に既存のサブスクリプションの再初期化が必要であることをストアド プロシージャが検出すると、エラーが発生し、変更は加えられません。  
   - **1**アーティクルへの変更が発生する、既存のサブスクリプションを再初期化されることを指定します。 サブスクリプションの再初期化を許可します。  
   
-[ **@publisher** =] **'***パブリッシャー***'**  
+[ **@publisher** =] **'**_パブリッシャー_**'**  
  以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
   > [!NOTE]  

@@ -16,12 +16,12 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caaf907b0db55306ebd341ed727174f3531c947f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 21d0ea34f3521333976ce00a3f5b823c3fcb816a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777741"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129302"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,31 +46,31 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_パブリッシャー_**'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_パブリケーション_**'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@alternate_publisher=**] **'***alternate_synchronization_partner***'**  
+ [  **@alternate_publisher=**] **'**_alternate_synchronization_partner_**'**  
  代替パブリッシャーの名前を指定します。 *alternate_synchronization_partner*は**sysname**、既定値はありません。  
   
- [  **@alternate_publisher_db=**] **'***alternate_publisher_db***'**  
+ [  **@alternate_publisher_db=**] **'**_alternate_publisher_db_**'**  
  代替パブリッシャーのパブリケーション データベースの名前を指定します。 *alternate_publisher_db*は**sysname**、既定値はありません。  
   
- [  **@alternate_publication=**] **'***alternate_synchronization_partner***'**  
+ [  **@alternate_publication=**] **'**_alternate_synchronization_partner_**'**  
  代替同期パートナーのパブリケーションの名前を指定します。 *alternate_synchronization_partner*は**sysname**、既定値はありません。  
   
- [  **@alternate_distributor=**] **'***alternate_distributor***'**  
+ [  **@alternate_distributor=**] **'**_alternate_distributor_**'**  
  代替同期パートナーのディストリビューターの名前を指定します。 *alternate_distributor*は**sysname**、既定値はありません。  
   
- [  **@friendly_name=**] **'***friendly_name***'**  
+ [  **@friendly_name=**] **'**_friendly_name_**'**  
  代替同期パートナーを構成するパブリッシャー、パブリケーション、ディストリビューターの関連を識別するための表示名を指定します。 *friendly_name*は**nvarchar (255)**、既定値は NULL です。  
   
- [  **@reserved=**] **'***予約***'**  
+ [  **@reserved=**] **'**_予約_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  

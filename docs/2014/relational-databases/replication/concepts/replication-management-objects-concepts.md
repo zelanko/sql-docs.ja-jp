@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,12 +20,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75d4e1e4ac97683d25e00fd2cf249a8890f5edd3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772085"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129572"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   レプリケーション管理オブジェクト (RMO) は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーション機能をカプセル化するマネージド コード アセンブリです。 RMO は <xref:Microsoft.SqlServer.Replication> 名前空間により実装されます。  
@@ -35,16 +35,16 @@ ms.locfileid: "52772085"
  [[ディストリビューションの構成]](../configure-distribution.md)  
  このセクションのトピックでは、RMO を使用してパブリッシングおよびディストリビューションを構成する方法について説明します。  
   
- [パブリケーションとアーティクルの作成、変更、および削除 &#40;レプリケーション&#41;](../publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [パブリケーションの作成](../publish/create-a-publication.md)  
  このセクションのトピックでは、RMO を使用してパブリケーションおよびアーティクルを作成、削除、および変更する方法について説明します。  
   
  [パブリケーションのサブスクライブ](../subscribe-to-publications.md)  
  このセクションのトピックでは、RMO を使用してサブスクリプションを作成、削除、および変更する方法について説明します。  
   
- [レプリケーション トポロジのセキュリティ保護](../security/secure-a-replication-topology.md)  
+ [レプリケーション トポロジのセキュリティ保護](../security/view-and-modify-replication-security-settings.md)  
  このセクションのトピックでは、RMO を使用してセキュリティ設定を表示および変更する方法について説明します。  
   
- [サブスクリプションの同期 &#40;レプリケーション&#41;](../synchronize-subscriptions-replication.md)  
+ [サブスクリプションの同期 &#40;レプリケーション&#41;](../synchronize-data.md)  
  ここでは、サブスクリプションを同期する方法を説明します。  
   
  [レプリケーションの監視](../monitoring-replication.md)  
