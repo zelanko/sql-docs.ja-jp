@@ -16,12 +16,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9f106af7d3464ca1b0f2047fd86e2670389d821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822596"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135812"
 ---
 # <a name="change-publication-and-article-properties"></a>パブリケーションおよびアーティクルのプロパティの変更
   パブリケーションが作成された後は、ほとんどのパブリケーションおよびアーティクルのプロパティを変更できますが、スナップショットの再生成およびサブスクリプションの再初期化、またはそのいずれかが必要になる場合もあります。 このトピックでは、変更された場合に、これらの操作のいずれかまたは両方を必要とするすべてのプロパティについて説明します。  
@@ -93,7 +93,7 @@ ms.locfileid: "52822596"
 |レプリケーション先のテーブルの所有者を変更します。|**sp_changemergearticle**|**destination_owner**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
   
 ## <a name="see-also"></a>参照  
- [管理 &#40;レプリケーション&#41;](../administration/administration-replication.md)   
+ [レプリケーションの管理に関する FAQ](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [スナップショットの作成および適用](../create-and-apply-the-snapshot.md)   
  [サブスクリプションの再初期化](../reinitialize-subscriptions.md)   
  [sp_addmergefilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

@@ -13,12 +13,12 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb3e20913a2a7232aeeb93132fb6a8d0bb69e532
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 8907d3a3644c0795608495c259a93fb64d648332
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782794"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125912"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したサブスクリプションの同期 (Windows 同期マネージャー)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が同期マネージャーと同じコンピューターで実行されている場合には、サブスクリプションを Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションに同期させるためだけに使用できます (オフライン ファイルや Web ページを同期するためにも使用できます)。 同期マネージャーを使用するには、以下の手順を実行します。  
@@ -97,7 +97,7 @@ ms.locfileid: "52782794"
   
 ### <a name="to-use-the-interactive-resolver"></a>インタラクティブ競合回避モジュールを使用するには  
   
-1.  アーティクルおよびサブスクリプションで、対話型の競合回避を有効にします。 詳細については、「[マージ アーティクルのインタラクティブな競合回避の指定](publish/specify-interactive-conflict-resolution-for-merge-articles.md)」を参照してください。  
+1.  アーティクルおよびサブスクリプションで、対話型の競合回避を有効にします。 詳細については、「[マージ アーティクルのインタラクティブな競合回避の指定](/publish/specify-merge-replication-properties.md#interactive-conflict-resolution)」を参照してください。  
   
 2.  対話型の競合回避が有効になっており、1 つ以上のアーティクルで競合があると、同期マネージャーでサブスクリプションの同期が開始された後、インタラクティブ競合回避モジュールが自動的に起動されます。 インタラクティブ競合回避モジュールは、一度に 1 つずつ、競合および (パブリケーションとサブスクリプションの作成時に指定した回避モジュールに基づく) 推奨の回避方法を表示します。  
   

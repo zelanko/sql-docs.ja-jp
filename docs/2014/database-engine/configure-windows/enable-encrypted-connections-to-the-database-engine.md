@@ -20,12 +20,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8ffe88de8533db5cf9bbec7936d30e95d64b1726
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
-ms.translationtype: HT
+ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640773"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133912"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>データベース エンジンへの暗号化接続の有効化 (SQL Server 構成マネージャー)
   このトピックでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 構成マネージャーを使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] の証明書を指定することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの暗号化接続を有効にする方法について説明します。 サーバー コンピューターには証明書を提供し、クライアント マシンは証明書のルート機関を信頼するように設定する必要があります。 提供は、証明書を Windows にインポートすることでインストールする処理です。  
@@ -83,9 +83,9 @@ ms.locfileid: "52640773"
   
 ###  <a name="ConfigureServerConnections"></a> 暗号化された接続を許可するサーバーを構成するには  
   
-1.  **SQL Server 構成マネージャー**で、**[SQL Server ネットワークの構成]** を展開し、**[***\<server instance> のプロトコル]* を右クリックします。次に **[プロパティ]** を選びます。  
+1.  **SQL Server 構成マネージャー**で、**[SQL Server ネットワークの構成]** を展開し、**[**_\<server instance> のプロトコル]_ を右クリックします。次に **[プロパティ]** を選びます。  
   
-2.  **プロトコル * * *\<インスタンス名 >* **プロパティ** ダイアログ ボックスで、**証明書** タブで、下のドロップダウンから必要な証明書の選択**証明書**ボックスをクリックして**OK**します。  
+2.  **プロトコル**_\<インスタンス名 >_ **プロパティ** ダイアログ ボックスの 、**証明書** タブで、下のドロップダウンから証明書を必要な**証明書**ボックスをクリックして**OK**します。  
   
 3.  **[フラグ]** タブの **[ForceEncryption]** ボックスの一覧の **[はい]** をクリックし、 **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   

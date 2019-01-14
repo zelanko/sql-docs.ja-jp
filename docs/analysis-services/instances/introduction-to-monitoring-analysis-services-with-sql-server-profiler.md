@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ebae2156d1c0cc7c3459c5083723368c66d87b9e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6c72c30584137caa998d4bec3bd6194abfbdc6a7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144699"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128152"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>SQL Server Profiler による Analysis Services の監視の概要
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスによって生成されたイベントを監視できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用すると、次の操作を実行できます。  
+   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスによって生成されたイベントを監視できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用すると、次の操作を実行できます。  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスのパフォーマンスの監視。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "50144699"
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を停止しても、再起動するとトレースを続行できます。  
   
     > [!NOTE]  
-    >  パスワードはトレース イベントに表示されず、****** に置換されます。  
+    >  パスワードが、トレース イベントには表示されずは置き換えられます\* \* \* \* \* \*イベント。  
   
  パフォーマンスを最適化するために、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用する場合は、最も関心のあるイベントだけを監視してください。 監視するイベントが多すぎると、特に監視が長時間に及ぶ場合は、オーバーヘッドが増加し、トレース ファイルやトレース テーブルが非常に大きくなる可能性があります。 また、フィルター機能を使用して、収集するデータの量を制限し、トレースがあまり大きくならないようにしてください。  
   

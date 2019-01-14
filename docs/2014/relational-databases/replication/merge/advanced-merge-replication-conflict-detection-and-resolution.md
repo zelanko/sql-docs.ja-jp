@@ -19,12 +19,12 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7e8f2f9de721f2e314961a6d2c10cf14c99be53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786104"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132882"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>マージ レプリケーションの競合検出および解決の詳細
   パブリッシャーとサブスクライバーが接続され、同期が発生すると、マージ エージェントによって競合の検出が行われます。 競合が検出された場合、マージ エージェントは競合回避モジュール (アーティクルをパブリケーションに追加するときに指定) を使用して、他のサイトに反映する許容データを決定します。  
@@ -57,7 +57,7 @@ ms.locfileid: "52786104"
   
  詳しくは、「 [論理レコードの競合の検出および解決](advanced-merge-replication-conflict-resolving-in-logical-record.md)」をご覧ください。  
   
- アーティクルに対して競合の追跡と競合解決のレベルを指定するには、「 [マージ アーティクルの競合追跡と解決のレベルを指定](../publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)」を参照してください。  
+ アーティクルに対して競合の追跡と競合解決のレベルを指定するには、「 [マージ アーティクルの競合追跡と解決のレベルを指定](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution)」を参照してください。  
   
 ## <a name="conflict-resolution"></a>競合解決  
  競合が検出されると、選択した競合回避モジュールがマージ エージェントによって起動され、この競合回避モジュールを使用して、競合で優先するデータを決定します。 競合で優先された行がパブリッシャーおよびサブスクライバーで適用され、優先されなかった行のデータは競合テーブルに書き込まれます。 対話型操作による競合解決を選択しなかった場合、競合はモジュールの実行直後に解決されます。  

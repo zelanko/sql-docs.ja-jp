@@ -12,12 +12,12 @@ ms.assetid: 7d604ab1-6dd6-4f8e-a79c-eba99ab106fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1caae3830167d9fde7507503a82b8fdf7bd7c5c9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3cae39c440c86348763b20ae04c70b3ce2ecc181
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797114"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127104"
 ---
 # <a name="copy-a-policy-based-management-facet-state-to-an-xml-file"></a>XML ファイルへのポリシー ベースの管理ファセットの状態のコピー
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でポリシー ベースの管理ファセットの状態を XML ファイルにコピーする方法について説明します。  
@@ -45,7 +45,7 @@ ms.locfileid: "52797114"
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを右クリックし、 **[ファセット]** をクリックします。  
   
-2.  **[ファセットを表示 - ***<オブジェクト名>]* ダイアログ ボックスで、**[現在の状態をポリシーとしてエクスポート]** をクリックします。  
+2.  **ファセットの表示 -**_object_name_ダイアログ ボックスで、をクリックして**現在の状態をポリシーとしてエクスポート**します。  
   
 3.  **[ポリシーとしてエクスポート]** ダイアログ ボックスで、ファイルのパスと名前を入力します。または、参照ボタン (**[...]**) を使用してファイルを指定し、XML ファイルの名前を入力します。 このダイアログ ボックスで利用可能なオプションの詳細については、「 [Export As Policy Dialog Box](export-as-policy-dialog-box.md)」を参照してください。  
   

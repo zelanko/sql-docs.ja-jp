@@ -18,12 +18,12 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b9390b198ddcb9a54691a7f33b8f52d520356d8
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 232b071c11d4a2a0bb2e42b6f9787d07f99e21e2
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292429"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226589"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery と静的な型指定
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "51292429"
   
  暗黙的な変換の後での静的な型チェックを必須にした場合、カーディナリティが正しく、許可された型の値のみが演算に渡されます。 "String"+ 1 の場合は"string"の静的な型は、ことを認識**xs:string**します。 許容される型でないため、 **+** 操作、型エラーが発生します。  
   
- 任意の式 E1 の結果に任意の式 E2 を加算する (E1 + E2) 場合、静的な型の推定によって E1 および E2 の静的な型が判定されたうえで、それらの型が演算に許可されている型であるかどうかのチェックが行われます。 たとえば、E1 の静的な型には、いずれかを指定できる場合は、 **xs:string**または**xs:integer**実行時が整数である場合でも、いくつかの値で、静的な型チェック、型のエラーを発生させます。 大文字と小文字 E1 の静的な型の場合も同様**xs:integer\*** します。 **+** 操作は 1 つの整数値のみを受け入れる、E1 は 0 を返すことができ、または、1 つ以上の静的な型チェック エラーが発生します。  
+ 任意の式 E1 の結果に任意の式 E2 を加算する (E1 + E2) 場合、静的な型の推定によって E1 および E2 の静的な型が判定されたうえで、それらの型が演算に許可されている型であるかどうかのチェックが行われます。 たとえば、E1 の静的な型には、いずれかを指定できる場合は、 **xs:string**または**xs:integer**実行時が整数である場合でも、いくつかの値で、静的な型チェック、型のエラーを発生させます。 大文字と小文字 E1 の静的な型の場合も同様**xs:integer&#42;** します。 **+** 操作は 1 つの整数値のみを受け入れる、E1 は 0 を返すことができ、または、1 つ以上の静的な型チェック エラーが発生します。  
   
  既に説明したように、型の推定の結果、渡されるデータの型についてユーザーが認識しているよりも範囲の広い型が導かれることがよくあります。 そのような場合は、ユーザーがクエリを書き換える必要があります。 よく見られるケースを次に示します。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "51292429"
 ## <a name="type-checking-of-union-types"></a>union 型の型チェック  
  union 型は型チェックがあるので注意して処理する必要があります。 ここでは、例を使って 2 つの問題を説明します。  
   
-### <a name="example-function-over-union-type"></a>例 : union 型に使用する関数  
+### <a name="example-function-over-union-type"></a>例:Union 型に関数  
  union 型の <`r`> 要素の定義を考えてみます。  
   
 ```  
@@ -86,7 +86,7 @@ ms.locfileid: "51292429"
   
  "Average"、関数、XQuery のコンテキスト内で`fn:avg (//r)`XQuery コンパイラは、さまざまな種類の値を追加できないため、静的なエラーを返します (**xs:int 型**、 **xs:float**または**xs:二重**) の <`r`> 要素の引数で**fn:avg()** します。 これを解決するには、関数の呼び出し部分を「`fn:avg(for $r in //r return $r cast as xs:double ?)`」と書き換えます。  
   
-### <a name="example-operator-over-union-type"></a>例 : union 型に使用する演算子  
+### <a name="example-operator-over-union-type"></a>例:Union 型に演算子  
  加算演算子 ('+') を使用するにはオペランドの正確な型が必要です。 したがって、式 `(//r)[1] + 1` は既に説明した要素 <`r`> の型定義に関する静的なエラーを返します。 解決策の 1 つは、「`(//r)[1] cast as xs:int? +1`」("?" は 0 回または 1 回の出現を示す) に書き換える方法です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、すべてのキャストは実行時エラーの結果として空のシーケンスになる可能性があるので、"cast as" に "?" を付ける必要があります。  
   
 ## <a name="see-also"></a>参照  

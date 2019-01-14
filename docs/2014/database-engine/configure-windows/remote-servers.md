@@ -16,12 +16,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e400c24476df7d9e663f17c71425f11b5155058
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641013"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123952"
 ---
 # <a name="remote-servers"></a>リモート サーバー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、旧バージョンとの互換性を保つ目的でのみ、リモート サーバーがサポートされています。 新しいアプリケーションでは、リモート サーバーではなく、リンク サーバーを使用してください。 詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。  
@@ -57,7 +57,7 @@ ms.locfileid: "52641013"
 >  可能な場合は、Windows 認証を使用します。  
   
 ### <a name="remote-server-security-example"></a>リモート サーバーのセキュリティの例  
- **serverSend** と **serverReceive** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールがあるとします。 **serverReceive** は、 **Sales_Mary**という **serverSend**からの受信ログインを、 **serverReceive** の **Alice** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログインにマップするように構成されています。 **serverSend** から **Joe** という別のログインを受信すると、それは **serverReceive**** の **Joe** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインにマップされます。  
+ **serverSend** と **serverReceive** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールがあるとします。 **serverReceive** は、 **Sales_Mary**という **serverSend**からの受信ログインを、 **serverReceive** の **Alice** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログインにマップするように構成されています。 **serverSend**からの **Joe**という別の受信ログインは、 **serverReceive** の _Joe_ という[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログインにマップされます。  
   
  次の Transact-SQL コードの例では、 `serverSend` に対して RPC を実行するように `serverReceive`を構成しています。  
   

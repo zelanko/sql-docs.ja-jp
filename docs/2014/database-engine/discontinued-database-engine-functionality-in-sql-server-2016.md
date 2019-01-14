@@ -33,12 +33,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 27eb70cb687553b11fefae423a7544609836c5c8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357018"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132620"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 で廃止されたデータベース エンジンの機能
   このトピックでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] で使用できなくなった [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。  
@@ -75,7 +75,7 @@ ms.locfileid: "53357018"
 |システム テーブル|sys.database_principal_aliases|別名の代わりにロールを使用してください。|  
 |Transact-SQL|`RAISERROR` という形式の `RAISERROR integer 'string'` は廃止されました。|現在使用してステートメントを書き直してください**raiserror (...)** 構文。|  
 |Transact-SQL 構文|`COMPUTE / COMPUTE BY`|`ROLLUP` を使用してください。|  
-|Transact-SQL 構文|使用**\* =** と **=\***|ANSI 結合構文を使用してください。 詳細については、次を参照してください。 [(TRANSACT-SQL) から。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Transact-SQL 構文|使用**\* =** と **=&#42;**|ANSI 結合構文を使用してください。 詳細については、次を参照してください。 [(TRANSACT-SQL) から。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvent|databases_data_file_size_changed、databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change、database_file_size_change で置換<br /><br /> database_file_size_change<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **XEvent の追加変更します。**  

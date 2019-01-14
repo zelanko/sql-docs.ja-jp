@@ -16,12 +16,12 @@ ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ff1ea78afa77211504e6a0b17c8931183dead73
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798354"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132432"
 ---
 # <a name="delete-unique-constraints"></a>UNIQUE 制約の削除
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して UNIQUE 制約を削除できます。 UNIQUE 制約を削除すると、制約式に含まれる 1 つ以上の列に入力される値に対する一意性の条件が取り除かれ、対応する一意なインデックスが削除されます。  
@@ -65,7 +65,7 @@ ms.locfileid: "52798354"
   
 4.  **[削除]** をクリックします。  
   
-5.   **ファイル** メニューの **の保存** *の保存*をクリックします。  
+5.   **ファイル** メニューの **の保存** _の保存_をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

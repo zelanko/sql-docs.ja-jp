@@ -15,22 +15,19 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d1bdc1f39e7e8e40b75b02bcb258f23ee411a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757488"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131912"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>マージ レプリケーションのバックアップと復元の方式
   マージ レプリケーションでは、次のデータベースを定期的にバックアップします。  
   
--   パブリッシャーにあるパブリケーション データベース  
-  
--   ディストリビューターにあるディストリビューション データベース  
-  
--   各サブスクライバーにあるサブスクリプション データベース  
-  
+-   パブリッシャーにあるパブリケーション データベース   
+-   ディストリビューターにあるディストリビューション データベース    
+-   各サブスクライバーにあるサブスクリプション データベース    
 -   パブリッシャー、ディストリビューター、およびすべてのサブスクライバーにある **master** および **msdb** システム データベース。 これらのデータベースは、相互に関連するレプリケーション データベースとして、同時にバックアップする必要があります。 たとえば、パブリッシャーでパブリケーション データベースをバックアップするときに、 **master** および **msdb** データベースも同時にバックアップします。 パブリケーション データベースを復元するときは、 **master** および **msdb** データベースのレプリケーションの構成と設定が、パブリケーション データベースと一致していることを確認します。  
   
  定期的なログ バックアップを実行する場合は、レプリケーション関連の変更をログ バックアップでキャプチャする必要があります。 ログ バックアップを実行しない場合は、レプリケーションに関連する設定を変更するたびに、バックアップを実行する必要があります。 詳細については、「 [一般にバックアップの更新が必要になるアクション](common-actions-requiring-an-updated-backup.md)」を参照してください。  

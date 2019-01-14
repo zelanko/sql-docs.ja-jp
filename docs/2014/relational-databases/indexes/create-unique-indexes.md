@@ -17,12 +17,12 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52f677c99b72de5a4342d534bddcd216027e4e0d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540909"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127232"
 ---
 # <a name="create-unique-indexes"></a>一意のインデックスの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルに一意のインデックスを作成する方法について説明します。 一意インデックスを使用すると、インデックス キーの値が重複することがないので、テーブルのすべての行を一意にすることができます。 UNIQUE 制約を作成することと、制約に依存しない一意インデックスを作成することの間に大きな違いはありません。 データ検証動作も同じ方式で行われます。また、クエリ オプティマイザーでは、制約によって作成された一意インデックスと手動で作成された一意インデックスは区別されません。 ただし、列に UNIQUE 制約を作成すると、インデックスの目的が明確になります。 UNIQUE 制約の詳細については、「 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)」を参照してください。  
@@ -124,7 +124,7 @@ ms.locfileid: "52540909"
   
 13. **[閉じる]** をクリックします。  
   
-14. **[ファイル]** メニューの *[<テーブル名> の保存]* をクリックします。  
+14. **[ファイル]** メニューの [_table_name_ **の保存**] をクリックします。  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>オブジェクト エクスプ ローラーを使用して一意のインデックスを作成する  
   
@@ -142,7 +142,7 @@ ms.locfileid: "52540909"
   
 7.  **[インデックス キー列]** で、**[追加]** をクリックします。  
   
-8.  *[<テーブル名> から列を選択]* ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+8.  **table_name**_から列を選択_ ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 9. **[OK]** をクリックします。  
   

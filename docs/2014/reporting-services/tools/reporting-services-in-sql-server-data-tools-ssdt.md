@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5fafd1a86686b7609a8b6e0241c05cc858f2dc41
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: df8e06b5de6824ee33fb8e923411ecf3e24e2ca9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409699"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125142"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]が強化されたビジネス インテリジェンス ソリューションに固有の環境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に付属しています。  
@@ -40,7 +40,7 @@ ms.locfileid: "52409699"
 ##  <a name="bkmk_ReportServerProjects"></a> レポート サーバープロジェクト  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]をインストールすると、 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]で次のプロジェクト テンプレートを使用できるようになります。  
   
--   **レポート サーバー プロジェクト。** レポート サーバー プロジェクトを選択すると、レポート デザイナーが開きます。 レポート サーバー プロジェクトは、 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] によってインストールされ、 **[新しいプロジェクト]** ダイアログ ボックスで使用できる、ビジネス インテリジェンス プロジェクト用のテンプレートです。 詳細については、「[新規または既存のレポートをレポート プロジェクトに追加する (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md)」を参照してください。レポート サーバー プロジェクトのプロパティは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] プロジェクト内のすべてのレポートとすべての共有データ ソースに適用されます。 これらのプロパティには、レポート サーバーの URL、およびレポートと共有データ ソースのフォルダー名が含まれます。 現在のプロパティ値を確認するには、 **[プロジェクト プロパティ ページ]** ダイアログ ボックスを使用します。 このダイアログ ボックスを開く、**プロジェクト** メニューのをクリックして*\<プロジェクト名 >* **プロパティ**します。  
+-   **レポート サーバー プロジェクト。** レポート サーバー プロジェクトを選択すると、レポート デザイナーが開きます。 レポート サーバー プロジェクトは、 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] によってインストールされ、 **[新しいプロジェクト]** ダイアログ ボックスで使用できる、ビジネス インテリジェンス プロジェクト用のテンプレートです。 詳細については、「[新規または既存のレポートをレポート プロジェクトに追加する (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md)」を参照してください。レポート サーバー プロジェクトのプロパティは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] プロジェクト内のすべてのレポートとすべての共有データ ソースに適用されます。 これらのプロパティには、レポート サーバーの URL、およびレポートと共有データ ソースのフォルダー名が含まれます。 現在のプロパティ値を確認するには、 **[プロジェクト プロパティ ページ]** ダイアログ ボックスを使用します。 このダイアログ ボックスを開く、**プロジェクト** メニューのをクリックして_\<プロジェクト名 >_ **プロパティ**します。  
   
 -   **レポート サーバー プロジェクト ウィザード。** レポート サーバー プロジェクト ウィザードを選択すると、レポート サーバー プロジェクトが自動的に作成され、レポート ウィザードが開きます。 このウィザードでは、各ページの手順に従ってレポートを作成し、データ ソースへの接続文字列の作成、データ ソースの資格情報の設定、クエリのデザイン、テーブルまたはマトリックス データ領域の追加、レポート データやグループの指定、フォントや色のスタイルの選択、レポート サーバーへのレポートのパブリッシュ、およびローカルでのレポートのプレビューを行うことができます。 ウィザードを使用してレポートを作成した後で、レポート サーバー プロジェクトでレポート デザイナーを使用して、レポート データおよびレポート デザイナーを変更できます。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "52409699"
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#bkmk_Top)  
   
 ##  <a name="bkmk_SourceControl"></a> ソース管理  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。**[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> カスタム レポート テンプレート  
  新しいレポートのテンプレートとしてカスタム レポートを使用するには、 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] がインストールされているコンピューターの ReportProject フォルダーにそれらのレポートをコピーするだけです。 既定では、このフォルダーは\<ドライブ >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private \projectitems\reportproject にあります。 レポート プロジェクトに新しいアイテムを追加すると、カスタム レポートが [テンプレート] ペインに表示されます。  

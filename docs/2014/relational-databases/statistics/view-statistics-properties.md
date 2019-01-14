@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415639"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54099967"
 ---
 # <a name="view-statistics-properties"></a>統計のプロパティの表示
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のテーブルまたはインデックス付きビューについての、現在のクエリの最適化に関する統計を表示します。 統計オブジェクトには、統計に関するメタデータが含まれるヘッダー、統計オブジェクトの最初のキー列の値の分布が含まれるヒストグラム、および列間の相関関係を測定する密度ベクトルが格納されています。 ヒストグラムと密度ベクトルの詳細については、「[DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)」を参照してください。  
@@ -58,9 +58,9 @@ ms.locfileid: "52415639"
   
 5.  プロパティを表示する統計オブジェクトを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  [ **統計のプロパティ -** *statistics_name* ] ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]** を選びます。  
+6.  [ **統計のプロパティ -** _statistics_name_ ] ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]** を選びます。  
   
-      **統計のプロパティ -**  **statistics_name** *statistics_name* ページで次のプロパティが表示されます。  
+      **統計のプロパティ -**  **statistics_name** _statistics_name_ ページで次のプロパティが表示されます。  
   
      **テーブル名**  
      統計の対象となるテーブルの名前が表示されます。  

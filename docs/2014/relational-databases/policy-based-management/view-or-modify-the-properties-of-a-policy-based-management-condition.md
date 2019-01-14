@@ -13,12 +13,12 @@ ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb6f8f381b0cc284e0db2816fd56dd130f60de07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758214"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100587"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>ポリシー ベースの管理条件のプロパティの表示または変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でポリシー ベースの管理条件のプロパティを表示または変更する方法について説明します。  
@@ -54,7 +54,7 @@ ms.locfileid: "52758214"
   
 4.  プラス記号をクリックして **[条件]** フォルダーを展開します。  
   
-5.  表示または編集する条件を右クリックし、 **[プロパティ]** をクリックします。 *[*条件を開く - ***条件名>]* ダイアログ ボックスで使用可能なオプションの詳細については、「[[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [全般] ページ](../../integration-services/general-page-of-integration-services-designers-options.md)」、「[[条件を開く] ダイアログ ボックス、[依存ポリシー] ページ](open-condition-dialog-box-dependent-policies-page.md)」、「[[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [説明] ページ](create-new-condition-or-open-condition-dialog-box-description-page.md)」、「[[高度な編集] &#40;条件&#41; ダイアログ ボックス](advanced-edit-condition-dialog-box.md)」を参照してください。  
+5.  表示または編集する条件を右クリックし、 **[プロパティ]** をクリックします。 使用できるオプションの詳細については、**条件を開く -**_condition_name_ダイアログ ボックスを参照してください[新しい条件の作成または開く条件 ダイアログ ボックス、[全般] ページ](../../integration-services/general-page-of-integration-services-designers-options.md)、[条件ダイアログ ボックスの 依存ポリシーページを開く](open-condition-dialog-box-dependent-policies-page.md)、[新しい条件または条件を開く ダイアログ ボックス、[説明] ページを作成](create-new-condition-or-open-condition-dialog-box-description-page.md)、および[編集を高度な&#40;条件&#41; ダイアログ ボックス](advanced-edit-condition-dialog-box.md)します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   

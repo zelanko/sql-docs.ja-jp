@@ -16,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1fc809277151ee85608c9ca286185011cf52552
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 6c3341c37998f61cba743c8da8a4cd772c2c73d9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822576"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133762"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,22 +62,22 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_パブリケーション_**'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。 パブリケーションは既に存在している必要があります。  
   
- [  **@subscriber =**] **'***サブスクライバー***'**  
+ [  **@subscriber =**] **'**_サブスクライバー_**'**  
  サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は NULL です。  
   
- [  **@subscriber_db=**] **'***@subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_@subscriber_db_**'**  
  サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値は NULL です。  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
+ [  **@subscription_type=**] **'**_subscription_type_**'**  
  サブスクリプションの種類を指定します。 *subscription_type*は**nvarchar (15)**、既定値は PUSH です。 場合**プッシュ**、プッシュ サブスクリプションが追加され、ディストリビューターでマージ エージェントを追加します。 場合**プル**ディストリビューターでマージ エージェントを追加せずにプル サブスクリプションが追加されます。  
   
 > [!NOTE]  
 >  匿名サブスクリプションの場合、このストアド プロシージャを使用する必要はありません。  
   
- [  **@subscriber_type=**] **'***subscriber_type***'**  
+ [  **@subscriber_type=**] **'**_subscriber_type_**'**  
  サブスクライバーの種類を指定します。 *subscriber_type*は**nvarchar (15)** 値は次のいずれかを指定できます。  
   
 |値|説明|  
@@ -90,7 +90,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscription_priority=**] *subscription_priority*  
  サブスクリプションの優先度を示す数値を指定します。 *subscription_priority*は**実際**、既定値は NULL です。 ローカル サブスクリプションと匿名サブスクリプションの場合、優先度は 0.0 です。 グローバル サブスクリプションの場合は、優先度を 100.0 未満にする必要があります。  
   
- [  **@sync_type=**] **'***sync_type***'**  
+ [  **@sync_type=**] **'**_sync_type_**'**  
  サブスクリプションの同期の種類を指定します。 *sync_type*は**nvarchar (15)**、既定値は**自動**します。 **自動**または**none**します。 場合**自動**スキーマと初期データのパブリッシュされたテーブルの最初に転送されます、サブスクライバー。 場合**none**サブスクライバーが既にスキーマと初期データのパブリッシュされたテーブルのことが前提とします。 システム テーブルとデータは常に転送されます。  
   
 > [!NOTE]  
@@ -167,13 +167,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@active_end_date=**] *active_end_date*  
  マージ エージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値は NULL です。  
   
- [  **@optional_command_line=**] **'***optional_command_line***'**  
+ [  **@optional_command_line=**] **'**_optional_command_line_**'**  
  省略可能な実行用のコマンド プロンプトを指定します。 *optional_command_line*は**nvarchar (4000)**、既定値は NULL です。 このパラメーターを使用して、出力をキャプチャしてファイルに保存するコマンドを追加したり、構成ファイルや属性を指定できます。  
   
- [  **@description=**] **'***説明***'**  
+ [  **@description=**] **'**_説明_**'**  
  対象となるマージ サブスクリプションの短い説明を指定します。 *説明*は**nvarchar (255)**、既定値は NULL です。 レプリケーション モニターでこの値が表示されます、**フレンドリ名**列は、監視されるパブリケーションのサブスクリプションの並べ替えに使用できます。  
   
- [  **@enabled_for_syncmgr=**] **'***enabled_for_syncmgr***'**  
+ [  **@enabled_for_syncmgr=**] **'**_enabled_for_syncmgr_**'**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーを介してサブスクリプションを同期できるかどうかを指定します。 *enabled_for_syncmgr*は**nvarchar (5)**、既定値は FALSE。 場合**false**サブスクリプションが同期マネージャーに登録されません。 場合**true**、サブスクリプションは同期マネージャーに登録および起動しなくても同期できます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
  [  **@offloadagent=** ] *remote_agent_activation*  
@@ -182,16 +182,16 @@ sp_addmergesubscription [ @publication= ] 'publication'
 > [!NOTE]  
 >  このパラメーターは非推奨とされました、スクリプトの旧バージョンとの互換性だけ保持されます。  
   
- [  **@offloadserver=** ] **'***remote_agent_server_name***'**  
+ [  **@offloadserver=** ] **'**_remote_agent_server_name_**'**  
  エージェントをリモートから起動するときに使用するサーバーのネットワーク名を指定します。 *remote_agent_server_name*は**sysname**、既定値は NULL です。  
   
- [  **@use_interactive_resolver=** ] **'***use_interactive_resolver***'**  
+ [  **@use_interactive_resolver=** ] **'**_use_interactive_resolver_**'**  
  対話的に競合を回避できるすべてのアーティクルについて、対話的に競合を解決できるようにします。 *use_interactive_resolver*は**nvarchar (5)**、既定値は FALSE。  
   
- [  **@merge_job_name=** ] **'***merge_job_name***'**  
+ [  **@merge_job_name=** ] **'**_merge_job_name_**'**  
  *@merge_job_name*パラメーターは非推奨し、設定することはできません。 *merge_job_name*は**sysname**、既定値は NULL です。  
   
- [ **@hostname**=] **'***hostname***'**  
+ [ **@hostname**=] **'**_hostname_**'**  
  によって返される値よりも優先[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)パラメーター化されたフィルターの WHERE 句でこの関数を使用する場合。 *ホスト名*は**sysname**、既定値は NULL です。  
   
 > [!IMPORTANT]  

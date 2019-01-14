@@ -17,12 +17,12 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 16249e9b9a1af56793d30cef48a9e1573f883c57
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371194"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136092"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>特定の TCP ポートで受信待ちするようにサーバーを構成する方法 (SQL Server 構成マネージャー)
   このトピックでは、SQL Server 構成マネージャーを使用して、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスが特定の固定ポートで受信待ちするように構成する方法について説明します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の既定のインスタンスは、有効であれば TCP ポート 1433 で受信待ちします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] と [!INCLUDE[ssEW](../../includes/ssew-md.md)] の名前付きインスタンスは、動的ポートを使用するように構成されています。 つまり、これらのインスタンスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始時に、使用可能なポートが選択されます。 名前付きインスタンスにファイアウォール経由で接続する場合は、特定のポートで受信待ちするように [!INCLUDE[ssDE](../../includes/ssde-md.md)] を構成します。これにより、ファイアウォールで適切なポートを開くことができます。  
@@ -51,7 +51,7 @@ ms.locfileid: "53371194"
   
 3.  **[TCP 動的ポート]** ダイアログ ボックスには、 **が動的ポートで受信待ちすることを示す**0 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が表示されています。この 0 を削除します。  
   
-4.  **[IP***n* **のプロパティ]** ボックスの **[TCP ポート]** ボックスに、この IP アドレスが受信待ちするポート番号を入力し、**[OK]** をクリックします。  
+4.   **IP**_n_ **のプロパティ** ボックスの **TCP ポート** box, type the port number you want this IP address to listen on, and then click **OK**をクリックします。  
   
 5.  コンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
   

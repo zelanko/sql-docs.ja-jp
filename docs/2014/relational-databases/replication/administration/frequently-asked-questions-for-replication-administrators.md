@@ -13,12 +13,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6fa90f7732b504000696ad2977ae465b392ff565
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748726"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125862"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>レプリケーションの管理者に関してよく寄せられる質問
   ここでは、レプリケートされたデータベースの管理者が行うさまざまな作業についての指針となるような質問と回答を掲載します。  
@@ -42,9 +42,9 @@ ms.locfileid: "52748726"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>サブスクリプションはいつ利用可能になりますか。また、サブスクリプション データベースはいつ利用可能になりますか。  
  サブスクリプションは、スナップショットがサブスクリプション データベースに適用された後で利用可能になります。 それ以前にもサブスクリプション データベースにアクセスできますが、スナップショットの適用が完了するまではデータベースを使用しないでください。 スナップショットの生成と適用の状態を確認するには、レプリケーション モニターを使用します。  
   
--   スナップショットはスナップショット エージェントによって生成されます。 パブリケーションのスナップショットの生成状態は、レプリケーション モニターの **[エージェント]** タブで確認します。 詳細については、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md)」を参照してください。  
+-   スナップショットはスナップショット エージェントによって生成されます。 パブリケーションのスナップショットの生成状態は、レプリケーション モニターの **[エージェント]** タブで確認します。 詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
--   スナップショットはディストリビューション エージェントまたはマージ エージェントによって適用されます。 スナップショットの適用状態は、レプリケーション モニターの **[ディストリビューション エージェント]** ページまたは **[マージ エージェント]** ページで確認します。 詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する (レプリケーション モニター)](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+-   スナップショットはディストリビューション エージェントまたはマージ エージェントによって適用されます。 スナップショットの適用状態は、レプリケーション モニターの **[ディストリビューション エージェント]** ページまたは **[マージ エージェント]** ページで確認します。 
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>ディストリビューション エージェントまたはマージ エージェントの開始時にスナップショット エージェントが完了していなかったらどうなりますか。  
  ディストリビューション エージェントまたはマージ エージェントがスナップショット エージェントと同時に実行されてもエラーになることはありません。 ただし、以下の点に注意してください。  
@@ -94,7 +94,7 @@ ms.locfileid: "52748726"
  この情報は、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]およびいくつかのレプリケーション ストアド プロシージャを使用して参照できます。 詳細については、「 [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md)」を参照してください。  
   
 ### <a name="does-replication-encrypt-data"></a>レプリケーションではデータが暗号化されますか。  
- No. レプリケーションでは、データベースに格納されるデータやネットワーク経由で転送されるデータは暗号化されません。 詳細については、「[Security Overview &#40;Replication&#41;](../security/security-overview-replication.md)」(セキュリティの概要 &#40;レプリケーション&#41;) の「Encryption」 (暗号化) を参照してください。  
+ No. レプリケーションでは、データベースに格納されるデータやネットワーク経由で転送されるデータは暗号化されません。 詳細については、トピックの「暗号化」セクションを参照してください。 [SQL Server レプリケーションのセキュリティ](../security/view-and-modify-replication-security-settings.md)します。  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>インターネット経由でデータをレプリケートするにはどうすればよいですか。  
  インターネット経由のデータのレプリケーションでは、以下を使用します。  
@@ -140,7 +140,7 @@ ms.locfileid: "52748726"
   
 -   サブスクリプション データベース上で GRANT ステートメントを直接実行します。  
   
--   ポストスナップショット スクリプトを使用してステートメントを実行します。 詳細については、「[スナップショットが適用される前および後のスクリプトの実行](../execute-scripts-before-and-after-the-snapshot-is-applied.md)」を参照してください。  
+-   ポストスナップショット スクリプトを使用してステートメントを実行します。 詳細については、「[スナップショットが適用される前および後のスクリプトの実行](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)」を参照してください。  
   
 -   ストアド プロシージャ [sp_addscriptexec](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql) を使用してステートメントを実行します。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "52748726"
  可能。 データベースのレプリケーションに関係する特別な注意点がいくつかあります。 詳細については、「 [レプリケートされたデータベースのバックアップと復元](back-up-and-restore-replicated-databases.md)」を参照してください。  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>レプリケーションはトランザクション ログの大きさに影響しますか。  
- マージ レプリケーションとスナップショット レプリケーションは、トランザクション ログのサイズには影響しません。ただし、トランザクション レプリケーションは影響する場合があります。 データベースに 1 つ以上のトランザクション パブリケーションが含まれている場合、それらのパブリケーションに関連するすべてのトランザクションがディストリビューション データベースに配布されるまで、トランザクション ログの切り捨ては行われません。 トランザクション ログが大きくなりすぎ、ログ リーダー エージェントをスケジュールによって実行している場合は、実行間隔を短くすることを検討してください。 または、連続モードで実行するように設定してください。 連続モードで実行するように設定されている場合は (既定値)、実行中であることを確認してください。 ログ リーダー エージェントの確認の詳細については、「[パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md)」を参照してください。  
+ マージ レプリケーションとスナップショット レプリケーションは、トランザクション ログのサイズには影響しません。ただし、トランザクション レプリケーションは影響する場合があります。 データベースに 1 つ以上のトランザクション パブリケーションが含まれている場合、それらのパブリケーションに関連するすべてのトランザクションがディストリビューション データベースに配布されるまで、トランザクション ログの切り捨ては行われません。 トランザクション ログが大きくなりすぎ、ログ リーダー エージェントをスケジュールによって実行している場合は、実行間隔を短くすることを検討してください。 または、連続モードで実行するように設定してください。 連続モードで実行するように設定されている場合は (既定値)、実行中であることを確認してください。 ログ リーダー エージェントの状態を確認する方法の詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
  また、パブリケーション データベースまたはディストリビューション データベース上で "sync with backup" オプションを設定している場合は、すべてのトランザクションのバックアップが完了するまでトランザクション ログの切り捨ては行われません。 トランザクション ログが大きくなりすぎ、かつ、このオプションを設定している場合は、トランザクション ログのバックアップ間隔を短くしてください。 トランザクション レプリケーションに関係するデータベースのバックアップと復元の詳細については、「[Strategies for Backing Up and Restoring Snapshot and Transactional Replication](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)」 (スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式) を参照してください。  
   
@@ -189,7 +189,7 @@ ms.locfileid: "52748726"
 ## <a name="replication-maintenance"></a>レプリケーションのメンテナンス  
   
 ### <a name="how-do-i-determine-if-the-data-at-subscribers-is-synchronized-with-data-at-the-publisher"></a>サブスクライバーのデータがパブリッシャーのデータと同期していることはどうすれば判断できますか。  
- 検証機能を使用します。 検証では、指定したサブスクライバーがパブリッシャーと同期されているかどうかがレポートされます。 詳細については、「[Validate Replicated Data](../validate-replicated-data.md)」 (レプリケートされたデータの検証) を参照してください。 正しく同期されていない行がある場合、検証を行っても、同期されていない行についての情報が表示されませんが、 [tablediff ユーティリティ](../../../tools/tablediff-utility.md) では表示されます。  
+ 検証機能を使用します。 検証では、指定したサブスクライバーがパブリッシャーと同期されているかどうかがレポートされます。 詳細については、「[Validate Replicated Data](../validate-data-at-the-subscriber.md)」 (レプリケートされたデータの検証) を参照してください。 正しく同期されていない行がある場合、検証を行っても、同期されていない行についての情報が表示されませんが、 [tablediff ユーティリティ](../../../tools/tablediff-utility.md) では表示されます。  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>既存のパブリケーションにテーブルを追加するにはどうすればよいですか。  
  テーブル (または他のオブジェクト) を追加するときに、パブリケーション データベースまたはサブスクリプション データベースに対する操作を停止する必要はありません。 パブリケーションにテーブルを追加するには、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスか、ストアド プロシージャ [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) および [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を使用します。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
@@ -207,7 +207,7 @@ ms.locfileid: "52748726"
  データベースからレプリケーションを削除するために必要な操作は、データベースがパブリケーション データベースであるか、サブスクリプション データベースであるか、その両方であるかによって異なります。  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>レプリケートする必要のあるトランザクションまたは行があるかどうかはどうすれば判断できますか。  
- トランザクション レプリケーションの場合は、ストアド プロシージャか、レプリケーション モニターの **[未配布のコマンド]** タブを使用します。 詳細については、「[View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)」 (レプリケートされたコマンドなどディストリビューション データベースに格納されている情報を表示する &#40;レプリケーション Transact-SQL プログラミング&#41;) および「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する (レプリケーション モニター)](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+ トランザクション レプリケーションの場合は、ストアド プロシージャか、レプリケーション モニターの **[未配布のコマンド]** タブを使用します。 詳細については、次を参照してください[ビューのレプリケートされたコマンドとディストリビューション データベース内のその他の情報&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)と[情報を表示しを使用したタスクの実行。レプリケーション モニター](../monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
  マージ レプリケーションの場合は、ストアド プロシージャ **sp_showpendingchanges**を使用します。 詳細については、「[sp_showpendingchanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)」を参照してください。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "52748726"
   
 -   コマンドをサブスクライバーに配布するのに要すると推定される時間を示します。 スナップショットを生成してサブスクライバーに適用するのに必要な時間よりもこの値が大きい場合は、サブスクライバーの再初期化を検討してください。 詳細については、「 [サブスクリプションの再初期化](../reinitialize-subscriptions.md)」を参照してください。  
   
- 詳細については、「[sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)」および「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する (レプリケーション モニター)](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+ 詳細については、次を参照してください。 [sp_replmonitorsubscriptionpendingcmds &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)と[情報を表示し、レプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
 ## <a name="replication-and-other-database-features"></a>レプリケーションおよびその他のデータベース機能  
   
@@ -229,7 +229,7 @@ ms.locfileid: "52748726"
  可能。 データはすべてクラスターの 1 つのディスク セットに格納されるため、特別な注意は不要です。  
   
 ## <a name="see-also"></a>参照  
- [管理 &#40;レプリケーション&#41;](administration-replication.md)   
+ [レプリケーションの管理に関する FAQ](frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

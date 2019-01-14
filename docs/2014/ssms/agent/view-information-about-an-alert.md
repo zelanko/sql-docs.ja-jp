@@ -16,12 +16,12 @@ ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 693c36cf0c23004f0538595ac75e1aa5d5039a33
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768474"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100237"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に関する情報を表示する方法について説明します。  
@@ -57,7 +57,7 @@ ms.locfileid: "52768474"
   
 4.  表示する情報がある警告を右クリックし、**[プロパティ]** を選択します。  
   
-     *[<アラート名> 警告のプロパティ]* ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
+     [_alert_name_ **警告のプロパティ**] ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
   
     -   [アラートのプロパティ-新しい警告&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

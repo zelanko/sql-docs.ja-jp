@@ -1,11 +1,10 @@
 ---
-title: レッスン 2:スナップショット フォルダーの準備 |Microsoft Docs
+title: 'レッスン 2: スナップショット フォルダーの準備 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,14 +12,14 @@ ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d15b08a5ff98392961c3f4fb01c397f220303e86
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
-ms.translationtype: HT
+ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591026"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128492"
 ---
-# <a name="lesson-2-preparing-the-snapshot-folder"></a>レッスン 2:スナップショット フォルダーの準備
+# <a name="lesson-2-preparing-the-snapshot-folder"></a>レッスン 2: スナップショット フォルダーの準備
   このレッスンでは、パブリケーション スナップショットの作成と保存に使用されるスナップショット フォルダーを設定する方法を学習します。  
   
 ### <a name="to-create-a-share-for-the-snapshot-folder-and-assign-permissions"></a>スナップショット フォルダーの共有を作成し、アクセス許可を与えるには  

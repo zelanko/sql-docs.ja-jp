@@ -20,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823517"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125232"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式
   スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式を計画する場合には、以下の 3 点を考慮する必要があります。  
@@ -117,7 +117,7 @@ ms.locfileid: "52823517"
   
          ディストリビューション エージェントの実行方法の詳細については、「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」および「[レプリケーション エージェント実行可能ファイルの概念](../concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
-         コマンドを確認する方法の詳細については、「[レプリケートされたコマンドなどディストリビューション データベースに格納されている情報を表示する &#40;レプリケーション Transact-SQL プログラミング&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)」および「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+         コマンドを確認する方法の詳細については、次を参照してください[ビューのレプリケートされたコマンドとディストリビューション データベース内のその他の情報&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)と[情報の表示。およびレプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
     2.  パブリッシャー、ディストリビューター、およびサブスクライバーで、レプリケーション構成を削除した後、再作成を行います。 サブスクリプションを再作成するときには、サブスクライバーにデータが格納済みであることを指定します。 復元が完了します。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52823517"
   
          ディストリビューション エージェントの実行方法の詳細については、「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」および「[レプリケーション エージェント実行可能ファイルの概念](../concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
-         コマンドを確認する方法の詳細については、「[レプリケートされたコマンドなどディストリビューション データベースに格納されている情報を表示する &#40;レプリケーション Transact-SQL プログラミング&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)」および「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+         コマンドを確認する方法の詳細については、次を参照してください[ビューのレプリケートされたコマンドとディストリビューション データベース内のその他の情報&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)と[情報の表示。およびレプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
     2.  [tablediff ユーティリティ](../../../tools/tablediff-utility.md) またはその他のツールを使用して、パブリッシャーとサブスクライバーを手動で同期します。 これにより、パブリケーション データベースのバックアップに含まれていなかったサブスクリプション データベースのデータを復旧できます。 手順 c. に進みます。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "52823517"
   
      ディストリビューション エージェントの実行方法の詳細については、「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」および「[レプリケーション エージェント実行可能ファイルの概念](../concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
-     コマンドを確認する方法の詳細については、「[レプリケートされたコマンドなどディストリビューション データベースに格納されている情報を表示する &#40;レプリケーション Transact-SQL プログラミング&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)」および「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+     コマンドを確認する方法の詳細については、次を参照してください[ビューのレプリケートされたコマンドとディストリビューション データベース内のその他の情報&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)と[情報の表示。およびレプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
 3.  キュー更新サブスクリプションを使用している場合は、各サブスクライバーに接続して、サブスクリプション データベースの [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) テーブルからすべての行を削除します。 手順 4 に進みます。  
   
@@ -285,7 +285,7 @@ ms.locfileid: "52823517"
   
     2.  検証を行うすべてのパブリケーションにマークを付けます。 検証に失敗したサブスクリプションを再初期化します。 復元が完了します。  
   
-         検証の詳細については、「 [Validate Replicated Data](../validate-replicated-data.md)」を参照してください。 再初期化の詳細については、「[サブスクリプションの再初期化](../reinitialize-subscriptions.md)」を参照してください。  
+         検証の詳細については、「 [Validate Replicated Data](../validate-data-at-the-subscriber.md)」を参照してください。 再初期化の詳細については、「[サブスクリプションの再初期化](../reinitialize-subscriptions.md)」を参照してください。  
   
 #### <a name="msdb-database-distributor"></a>msdb データベース (ディストリビューター)  
   
@@ -301,7 +301,7 @@ ms.locfileid: "52823517"
   
 4.  検証を行うすべてのパブリケーションにマークを付けます。 検証に失敗したサブスクリプションを再初期化します。 復元が完了します。  
   
-     検証の詳細については、「 [Validate Replicated Data](../validate-replicated-data.md)」を参照してください。 再初期化の詳細については、「[サブスクリプションの再初期化](../reinitialize-subscriptions.md)」を参照してください。  
+     検証の詳細については、「 [Validate Replicated Data](../validate-data-at-the-subscriber.md)」を参照してください。 再初期化の詳細については、「[サブスクリプションの再初期化](../reinitialize-subscriptions.md)」を参照してください。  
   
 #### <a name="master-database-distributor"></a>master データベース (ディストリビューター)  
   

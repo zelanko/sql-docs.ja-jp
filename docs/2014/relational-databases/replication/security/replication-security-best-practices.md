@@ -15,12 +15,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18a3bed07be7fd035a5011d16c528525685cdfb6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781174"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135932"
 ---
 # <a name="replication-security-best-practices"></a>レプリケーション セキュリティの推奨事項
   レプリケーションでは、単一ドメインのイントラネットから、信頼できないドメイン間およびインターネット経由でデータにアクセスするアプリケーションに及ぶ分散環境でデータを移動します。 これらのさまざまな状況下でレプリケーション接続のセキュリティを確保するためには、推奨事項を理解することが重要です。  
@@ -37,7 +37,7 @@ ms.locfileid: "52781174"
   
     -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
--   異なる Windows アカウントで各レプリケーション エージェントを実行し、すべてのレプリケーション エージェント接続に対して Windows 認証を使用する。 アカウントの指定の詳細については、「[レプリケーションのログインとパスワードの管理](manage-logins-and-passwords-in-replication.md)」を参照してください。  
+-   異なる Windows アカウントで各レプリケーション エージェントを実行し、すべてのレプリケーション エージェント接続に対して Windows 認証を使用する。 アカウントの指定の詳細については、「[レプリケーションのログインとパスワードの管理](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)」を参照してください。  
   
 -   各エージェントに必要な権限のみを許可する。 詳細については、「 [Replication Agent Security Model](replication-agent-security-model.md)」の「エージェントに必要な権限」を参照してください。  
   
@@ -73,6 +73,6 @@ ms.locfileid: "52781174"
  [サブスクライバーのセキュリティ保護](secure-the-subscriber.md)   
  [ディストリビューターのセキュリティ保護](secure-the-distributor.md)   
  [パブリッシャーのセキュリティ保護](secure-the-publisher.md)   
- [セキュリティと保護 &#40;レプリケーション&#41;](security-and-protection-replication.md)  
+ [SQL Server レプリケーションのセキュリティ](view-and-modify-replication-security-settings.md)  
   
   

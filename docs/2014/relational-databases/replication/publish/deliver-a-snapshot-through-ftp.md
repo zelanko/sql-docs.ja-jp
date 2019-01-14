@@ -14,35 +14,17 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e3422e1fc41069bcb1f5f88c841212b5415cacd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d1a8989492c9efb670b00bda00dbfa757c549fca
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777564"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130272"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>FTP でのスナップショットの配信
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、FTP でスナップショットを配信する方法について説明します。  
   
- **このトピックの内容**  
-  
--   **作業を開始する準備:**  
-  
-     [制限事項と制約事項](#Restrictions)  
-  
-     [前提条件](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **FTP でスナップショットを配信するために使用するもの:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> はじめに  
-  
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+##  <a name="Restrictions"></a> 制限事項と制約事項  
   
 -   スナップショット エージェントには、指定したディレクトリに対する書き込み権限が必要です。また、ディストリビューション エージェントまたはマージ エージェントには、読み取り権限が必要です。 プル サブスクリプションを使用する場合は、共有ディレクトリを UNC (汎用名前付け規則) パス (\\\ftpserver\home\snapshots など) として指定する必要があります。 詳細については、「[Secure the Snapshot Folder](../security/secure-the-snapshot-folder.md)」(スナップショット フォルダーのセキュリティ保護) をご覧ください。  
   
@@ -62,26 +44,16 @@ ms.locfileid: "52777564"
   
 #### <a name="to-specify-ftp-information"></a>FTP 情報を指定するには  
   
-1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの次のいずれかのページで、**[ファイル転送プロトコル (FTP) を使用したスナップショット ファイルのダウンロードをサブスクライバーに許可する]** を選択します。  
-  
-    -   **[FTP スナップショット]** ページ。スナップショット パブリケーション、トランザクション パブリケーション、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンを実行しているパブリッシャーのマージ パブリケーションの場合。  
-  
-    -   **[FTP スナップショットとインターネット]** ページ。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降を実行しているパブリッシャーからのマージ パブリケーションの場合。  
-  
-2.  **[FTP サーバー名]**、 **[ポート番号]**、 **[FTP ルート フォルダーからのパス]**、 **[ログイン]**、および **[パスワード]** の値を指定します。  
-  
-     たとえば、FTP サーバーのルートが \\\ftpserver\home で、スナップショットを \\\ftpserver\home\snapshots に格納する場合は、**[FTP ルート フォルダーからのパス]** には「\snapshots\ftp」と指定します (レプリケーションでは、スナップショット ファイルが作成されるときにスナップショット フォルダーのパスに "ftp" が追加されます)。  
-  
-3.  スナップショット エージェントが、手順 2. で指定したディレクトリにスナップショット ファイルを書き込むように指定します。 たとえば、スナップショット エージェントがスナップショット ファイルを \\\ftpserver\home\snapshots\ftp に書き込むようにするには、次のいずれかの場所に \\\ftpserver\home\snapshots というパスを指定する必要があります。  
-  
-    -   このパブリケーションに関連付けられているディストリビューターの既定のスナップショットの場所。  
-  
-         既定のスナップショット場所の指定方法の詳細については、「[Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../specify-the-default-snapshot-location-sql-server-management-studio.md)」(既定のスナップショットの場所の指定 (SQL Server Management Studio)) をご覧ください。  
-  
-    -   このパブリケーションの代替スナップショット フォルダーの場所。 スナップショットが圧縮されている場合、別の場所が必要です。  
-  
-         **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの [スナップショット] ページで、**[ファイルを次のフォルダーに保存する]** ボックスにパスを入力します。 代替スナップショット フォルダーの場所の詳細については、「 [Alternate Snapshot Folder Locations](../alternate-snapshot-folder-locations.md)」を参照してください。  
-  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの次のいずれかのページで、**[ファイル転送プロトコル (FTP) を使用したスナップショット ファイルのダウンロードをサブスクライバーに許可する]** を選択します。   
+    -   **[FTP スナップショット]** ページ。スナップショット パブリケーション、トランザクション パブリケーション、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンを実行しているパブリッシャーのマージ パブリケーションの場合。    
+    -   **[FTP スナップショットとインターネット]** ページ。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降を実行しているパブリッシャーからのマージ パブリケーションの場合。    
+2.  **[FTP サーバー名]**、 **[ポート番号]**、 **[FTP ルート フォルダーからのパス]**、 **[ログイン]**、および **[パスワード]** の値を指定します。    
+     たとえば、FTP サーバーのルートが \\\ftpserver\home で、スナップショットを \\\ftpserver\home\snapshots に格納する場合は、**[FTP ルート フォルダーからのパス]** には「\snapshots\ftp」と指定します (レプリケーションでは、スナップショット ファイルが作成されるときにスナップショット フォルダーのパスに "ftp" が追加されます)。    
+3.  スナップショット エージェントが、手順 2. で指定したディレクトリにスナップショット ファイルを書き込むように指定します。 たとえば、スナップショット エージェントがスナップショット ファイルを \\\ftpserver\home\snapshots\ftp に書き込むようにするには、次のいずれかの場所に \\\ftpserver\home\snapshots というパスを指定する必要があります。    
+    -   このパブリケーションに関連付けられているディストリビューターの既定のスナップショットの場所。    
+         既定のスナップショットの場所を指定する方法については、次を参照してください。 [、既定のスナップショットの場所を指定](../snapshot-options.md#snapshot-folder-locations)します。    
+    -   このパブリケーションの代替スナップショット フォルダーの場所。 スナップショットが圧縮されている場合、別の場所が必要です。    
+         **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの [スナップショット] ページで、**[ファイルを次のフォルダーに保存する]** ボックスにパスを入力します。   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
@@ -89,16 +61,11 @@ ms.locfileid: "52777564"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションで FTP スナップショット配信を有効にするには  
   
-1.  パブリッシャーのパブリケーション データベースに対して、 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)を実行します。 指定**@publication**、@property`true`の**@enabled_for_internet**、適切な次のパラメーターの値。  
-  
-    -   **@ftp_address** - スナップショットの配信に使用する FTP サーバーのアドレス。  
-  
-    -   (省略可) **@ftp_port** - FTP サーバーで使用されるポート。  
-  
-    -   (省略可) **@ftp_subdirectory** - FTP ログインに割り当てられる既定の FTP ディレクトリのサブディレクトリ。 たとえば、FTP サーバーのルートが \\\ftpserver\home のときに、スナップショットを \\\ftpserver\home\snapshots に保存するには、**@ftp_subdirectory** に **\snapshots\ftp** と指定します (スナップショット ファイルが作成されるときに、スナップショット フォルダーのパスに "ftp" が付加されます)。  
-  
-    -   (省略可) **@ftp_login** - FTP サーバーに接続するときに使用されるログイン アカウント。  
-  
+1.  パブリッシャーのパブリケーション データベースに対して、 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)を実行します。 指定**@publication**、@property`true`の**@enabled_for_internet**、適切な次のパラメーターの値。    
+    -   **@ftp_address** - スナップショットの配信に使用する FTP サーバーのアドレス。    
+    -   (省略可) **@ftp_port** - FTP サーバーで使用されるポート。    
+    -   (省略可) **@ftp_subdirectory** - FTP ログインに割り当てられる既定の FTP ディレクトリのサブディレクトリ。 たとえば、FTP サーバーのルートが \\\ftpserver\home のときに、スナップショットを \\\ftpserver\home\snapshots に保存するには、**@ftp_subdirectory** に **\snapshots\ftp** と指定します (スナップショット ファイルが作成されるときに、スナップショット フォルダーのパスに "ftp" が付加されます)。    
+    -   (省略可) **@ftp_login** - FTP サーバーに接続するときに使用されるログイン アカウント。    
     -   (省略可) **@ftp_password** - FTP ログイン用のパスワード。  
   
      これにより、FTP を使用するパブリケーションが作成されます。 詳細については、「 [Create a Publication](create-a-publication.md)」を参照してください。  
@@ -107,14 +74,10 @@ ms.locfileid: "52777564"
   
 1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)を実行します。 指定**@publication**、@property`true`の**@enabled_for_internet**に適切な次のパラメーターの値。  
   
-    -   **@ftp_address** - スナップショットの配信に使用する FTP サーバーのアドレス。  
-  
-    -   (省略可) **@ftp_port** - FTP サーバーで使用されるポート。  
-  
-    -   (省略可) **@ftp_subdirectory** - FTP ログインに割り当てられる既定の FTP ディレクトリのサブディレクトリ。 たとえば、FTP サーバーのルートが \\\ftpserver\home のときに、スナップショットを \\\ftpserver\home\snapshots に保存するには、**@ftp_subdirectory** に **\snapshots\ftp** と指定します (スナップショット ファイルが作成されるときに、スナップショット フォルダーのパスに "ftp" が付加されます)。  
-  
-    -   (省略可) **@ftp_login** - FTP サーバーに接続するときに使用されるログイン アカウント。  
-  
+    -   **@ftp_address** - スナップショットの配信に使用する FTP サーバーのアドレス。    
+    -   (省略可) **@ftp_port** - FTP サーバーで使用されるポート。    
+    -   (省略可) **@ftp_subdirectory** - FTP ログインに割り当てられる既定の FTP ディレクトリのサブディレクトリ。 たとえば、FTP サーバーのルートが \\\ftpserver\home のときに、スナップショットを \\\ftpserver\home\snapshots に保存するには、**@ftp_subdirectory** に **\snapshots\ftp** と指定します (スナップショット ファイルが作成されるときに、スナップショット フォルダーのパスに "ftp" が付加されます)。    
+    -   (省略可) **@ftp_login** - FTP サーバーに接続するときに使用されるログイン アカウント。    
     -   (省略可) **@ftp_password** - FTP ログイン用のパスワード。  
   
      これにより、FTP を使用するパブリケーションが作成されます。 詳細については、「 [Create a Publication](create-a-publication.md)」を参照してください。  
@@ -129,46 +92,32 @@ ms.locfileid: "52777564"
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>FTP スナップショット配信を使用するマージ パブリケーションへのプル サブスクリプションを作成するには  
   
-1.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)を実行します。 **@publisher** および **@publication** を指定します。  
-  
-2.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)を実行します。 指定**@publisher**、 **@publisher_db**、  **@publication**サブスクライバーでディストリビューション エージェントを実行する Windows 資格情報**@job_login**と **@job_password**の値と`true`の **@use_ftp**します。  
-  
+1.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)を実行します。 **@publisher** および **@publication** を指定します。   
+2.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)を実行します。 指定**@publisher**、 **@publisher_db**、  **@publication**サブスクライバーでディストリビューション エージェントを実行する Windows 資格情報**@job_login**と **@job_password**の値と`true`の **@use_ftp**します。    
 3.  パブリッシャー側のパブリケーション データベースに対して [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) を実行し、プル サブスクリプションを登録します。 詳細については、「 [プル サブスクリプションの作成](../create-a-pull-subscription.md)」をご覧ください。  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションの FTP スナップショット配信の設定を変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を実行します。 **@property** に次のいずれかの値を指定し、この新しい設定値を **@value** に指定します。  
-  
-    -   `ftp_address` - スナップショットの配信に使用する FTP サーバーのアドレス。  
-  
-    -   `ftp_port` - FTP サーバーで使用されるポート。  
-  
-    -   `ftp_subdirectory` - FTP スナップショットに使用する既定の FTP ディレクトリのサブディレクトリ。  
-  
-    -   `ftp_login` - FTP サーバーへの接続に使用されるログイン。  
-  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を実行します。 **@property** に次のいずれかの値を指定し、この新しい設定値を **@value** に指定します。    
+    -   `ftp_address` - スナップショットの配信に使用する FTP サーバーのアドレス。    
+    -   `ftp_port` - FTP サーバーで使用されるポート。    
+    -   `ftp_subdirectory` - FTP スナップショットに使用する既定の FTP ディレクトリのサブディレクトリ。    
+    -   `ftp_login` - FTP サーバーへの接続に使用されるログイン。    
     -   `ftp_password` - FTP ログイン用のパスワード。  
   
-2.  (省略可) 変更する各 FTP 設定について手順 1. を実行します。  
-  
+2.  (省略可) 変更する各 FTP 設定について手順 1. を実行します。    
 3.  (省略可) FTP スナップショット配信を無効にするには、パブリッシャー側のパブリケーション データベースに対して [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行します。 値を指定`enabled_for_internet`の**@property**の値と`false`の **@value**します。  
   
 #### <a name="to-change-ftp-snapshot-delivery-settings-for-a-merge-publication"></a>マージ パブリケーションの FTP スナップショット配信の設定を変更するには  
   
 1.  パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。 **@property** に次のいずれかの値を指定し、この新しい設定値を **@value** に指定します。  
   
-    -   `ftp_address` - スナップショットの配信に使用する FTP サーバーのアドレス。  
-  
-    -   `ftp_port` - FTP サーバーで使用されるポート。  
-  
-    -   `ftp_subdirectory` - FTP スナップショットに使用する既定の FTP ディレクトリのサブディレクトリ。  
-  
-    -   `ftp_login` - FTP サーバーへの接続に使用されるログイン。  
-  
-    -   `ftp_password` - FTP ログイン用のパスワード。  
-  
-2.  (省略可) 変更する各 FTP 設定について手順 1. を実行します。  
-  
+    -   `ftp_address` - スナップショットの配信に使用する FTP サーバーのアドレス。    
+    -   `ftp_port` - FTP サーバーで使用されるポート。    
+    -   `ftp_subdirectory` - FTP スナップショットに使用する既定の FTP ディレクトリのサブディレクトリ。   
+    -   `ftp_login` - FTP サーバーへの接続に使用されるログイン。    
+    -   `ftp_password` - FTP ログイン用のパスワード。    
+2.  (省略可) 変更する各 FTP 設定について手順 1. を実行します。    
 3.  (省略可) FTP スナップショット配信を無効にするには、パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) を実行します。 値を指定`enabled_for_internet`の**@property**の値と`false`の **@value**します。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
