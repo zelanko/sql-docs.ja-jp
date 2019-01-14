@@ -14,12 +14,12 @@ ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93a01e3d3c687485bb9d330dfe8e97c31cc65cef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9309df663b0754b28a9ec1397fb5bfa1ad1beabc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609836"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134712"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>SQL Server ツールでサーバーの状態を表示できるようにする WMI の構成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47609836"
   
 6.  **[グループ名またはユーザー名]** ボックスにグループまたはユーザーを追加して選択します。  
   
-7.  *[***<group or user> のアクセス許可]* ボックスで、サービスの状態をリモートから確認できるようにするユーザーの **[リモートの有効化]** の **[許可]** 列にあるチェック ボックスをオンにします。  
+7.  **[**_<group or user> のアクセス許可]_ ボックスで、サービスの状態をリモートから確認できるようにするユーザーの **[リモートの有効化]** の **[許可]** 列にあるチェック ボックスをオンにします。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server エージェント サービスの開始、停止、または一時停止](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

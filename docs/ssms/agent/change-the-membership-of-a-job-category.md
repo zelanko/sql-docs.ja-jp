@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1e56b8180caf8beec9a0371e79e847fd4ff2e30d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cbb3f5d659a859e58deb7410e6890b5b39ac2895
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701110"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131132"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51701110"
   
 -   **作業を開始する準備:**  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **ジョブ カテゴリのメンバーシップを変更する方法:**  
   
@@ -50,8 +50,8 @@ ms.locfileid: "51701110"
   
 ## <a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Security"></a>Security  
-詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
+### <a name="Security"></a>セキュリティ  
+詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="SSMS"></a>SQL Server Management Studio の使用  
   
@@ -63,13 +63,13 @@ ms.locfileid: "51701110"
   
 3.  **[ジョブ]** フォルダーを右クリックし、 **[ジョブ カテゴリの管理]** をクリックします。  
   
-4.  *[ジョブ カテゴリの管理 - <サーバー名>]* ダイアログ ボックスで、編集するジョブ カテゴリを選択し、**[ジョブの表示]** をクリックします。  
+4.  **server_name**__ ダイアログ ボックスで、編集するジョブ カテゴリを選択し、 **ジョブの表示**をクリックします。  
   
 5.  **[すべてのジョブを表示]** チェック ボックスをオンにします。  
   
 6.  カテゴリにジョブを追加するには、メイン グリッドで、ジョブに対応する **[選択]** 列のチェック ボックスをオンにします。 カテゴリからジョブを削除するには、チェック ボックスをオフにします。 完了したら、 **[OK]** をクリックします。  
   
-7.  *[ジョブ カテゴリの管理 - <サーバー名>]* ダイアログ ボックスを閉じます。  
+7.  **&lt;server_name&gt;**__ ダイアログ ボックスを閉じます。  
   
 ## <a name="TSQL"></a>Transact-SQL の使用  
   

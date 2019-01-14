@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2e0de2004ce2b3e9c91988bfc08fa0fea2074435
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c7dbc000d71d7d2cda2d299de476346103f2d2a6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701953"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134312"
 ---
 # <a name="create-a-job-category"></a>ジョブ カテゴリの作成
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51701953"
   
     [制限事項と制約事項](#Restrictions)  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **ジョブ カテゴリを作成する方法:**  
   
@@ -54,8 +54,8 @@ ms.locfileid: "51701953"
 ### <a name="Restrictions"></a>制限事項と制約事項  
 マルチサーバー カテゴリは、マスター サーバー上だけに存在します。 マスター サーバー上で使用できるのは、**[未カテゴリ化 (マルチサーバー)]** という既定のジョブ カテゴリだけです。 マルチサーバー ジョブがダウンロードされると、対象サーバー上ではそのカテゴリが **[MSX からのジョブ]** に変更されます。  
   
-### <a name="Security"></a>Security  
-詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
+### <a name="Security"></a>セキュリティ  
+詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="SSMS"></a>SQL Server Management Studio の使用  
   
@@ -67,7 +67,7 @@ ms.locfileid: "51701953"
   
 3.  **[ジョブ]** フォルダーを右クリックし、 **[ジョブ カテゴリの管理]** をクリックします。  
   
-4.  *[ジョブ カテゴリの管理- <サーバー名>]* ダイアログ ボックスで、**[追加]** をクリックします。  
+4.  **&lt;server_name&gt;**__ ダイアログ ボックスで、 **追加**をクリックします。  
   
 5.  新しいダイアログ ボックスで、 **[名前]** ボックスに新しいジョブ カテゴリの名前を入力します。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "51701953"
   
 7.  **[OK]** をクリックします。  
   
-8.  *[ジョブ カテゴリの管理 - <サーバー名>]* ダイアログ ボックスで、**[最新の情報に更新]** をクリックして、新しいジョブ カテゴリをアクティブにします。 すべての設定が適切であることを確認したら、このダイアログ ボックスを閉じます。  
+8.  **&lt;server_name&gt;**__ ダイアログ ボックスで、 **最新の情報に更新** をクリックして、新しいジョブ カテゴリをアクティブにします。 すべての設定が適切であることを確認したら、このダイアログ ボックスを閉じます。  
   
 これらのダイアログ ボックスの詳細については、「 [[ジョブ カテゴリ] - [ジョブ カテゴリの管理]](../../ssms/agent/job-categories-manage-job-categories.md) 」および「 [ジョブ カテゴリのプロパティ - [新しいジョブ カテゴリ]](../../ssms/agent/job-categories-properties-new-job-category.md)」をご覧ください。  
   

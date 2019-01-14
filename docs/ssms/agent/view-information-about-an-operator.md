@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 58abfa4ff4add4415b71a536b0c9aeb1f6a9f472
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0ce920c169e2a3e64be1c6aa02841305b64378ee
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702560"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256397"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51702560"
   
 -   **作業を開始する準備:**  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **オペレーターに関する情報を表示する方法:**  
   
@@ -48,9 +48,9 @@ ms.locfileid: "51702560"
   
 ## <a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>アクセス許可  
 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
@@ -73,7 +73,7 @@ ms.locfileid: "51702560"
   
 4.  表示するオペレーターを右クリックし、**[プロパティ]** をクリックします。  
   
-    *[<オペレーター名> のプロパティ]* ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
+    _operator_name_**のプロパティ** ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
   
     -   [オペレーターのプロパティ - [新しいオペレーター] ([全般] ページ)](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
