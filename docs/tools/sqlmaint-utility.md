@@ -19,12 +19,12 @@ ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 333d51131fedac6bb87dc9dd5ba49c17ff26073e
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 8f73f17d3224ced3fca052e9b19a7d61cf64548b
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293089"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100437"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,31 +81,31 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  **sqlmaint** の構文ダイアグラムが返されます。 このパラメーターは単独で使用する必要があります。  
   
- **-S** *server_name*[ **\\**_instance\_name_]  
+ **-S** _server_name_[ **\\**_instance\_name_]  
  対象となる [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスを指定します。 サーバー上の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の既定のインスタンスに接続するには、_server\_name_ を指定します。 サーバー上の [!INCLUDE[ssDE](../includes/ssde-md.md)] の名前付きインスタンスに接続するには、_server\_name_**\\**_instance\_name_ を指定します。 サーバーを指定しない場合、 **sqlmaint** は、ローカル コンピューター上にある [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスに接続します。  
   
- **-U** *login_ID*  
+ **-U** _login_ID_  
  サーバーに接続するときに使用するログイン ID を指定します。 指定しない場合、 **sqlmaint** は [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 認証の使用を試みます。 *login_ID* に特殊文字が含まれる場合、特殊文字を二重引用符 (") で囲む必要があります。特殊文字が含まれない場合は、二重引用符は省略可能です。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。  
   
- **-P** *password*  
+ **-P** _password_  
  ログイン ID のパスワードを指定します。 **-U** パラメーターも指定されている場合にのみ有効です。 *password* に特殊文字が含まれる場合、特殊文字を二重引用符で囲む必要があります。特殊文字が含まれない場合は、二重引用符は省略可能です。  
   
 > [!IMPORTANT]  
 >  パスワードはマスクされません。 可能な場合は、Windows 認証を使用します。  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  メンテナンス操作の実行対象となるデータベースの名前を指定します。 *database_name* に特殊文字が含まれる場合、特殊文字を二重引用符で囲む必要があります。特殊文字が含まれない場合は、二重引用符は省略可能です。  
   
- **-PlanName** *name*  
+ **-PlanName** _name_  
  データベース メンテナンス プラン ウィザードを使用して定義される、データベース メンテナンス プランの名前を指定します。 **sqlmaint** が使用するプランの情報は、プラン内のデータベースのリストのみです。 他の **sqlmaint** パラメーターに指定するすべてのメンテナンス操作は、このデータベースのリストに適用されます。  
   
- **-PlanID** *guid*  
+ **-PlanID** _guid_  
  データベース メンテナンス プラン ウィザードを使用して定義される、データベース メンテナンス プランのグローバル一意識別子 (GUID) を指定します。 **sqlmaint** が使用するプランの情報は、プラン内のデータベースのリストのみです。 他の **sqlmaint** パラメーターに指定するすべてのメンテナンス操作は、このデータベースのリストに適用されます。 このパラメーターの値は、msdb.dbo.sysdbmaintplans の plan_id 値に一致する必要があります。  
   
- **-Rpt** *text_file*  
+ **-Rpt** _text_file_  
  レポートの生成先となるファイルの完全なパスとファイル名を指定します。 レポートは画面上にも表示されます。 レポートによってファイル名に日時が追加され、バージョン情報が維持されます。 日時は、_*yyyyMMddhhmm*の形式で、ファイル名の最後 (ピリオドの前) に追加されます。 *yyyy* = 年、 *MM* = 月、 *dd* = 日、 *hh* = 時間、 *mm* = 分。  
   
  1996 年 12 月 1 日午前 10:23 に ユーティリティを実行し、 *text_file* 値が次のようになるとします。  
@@ -122,10 +122,10 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  *sqlmaint* がリモート サーバーにアクセスする場合、 **text_file** には、完全な汎用名前付け規則 (UNC) のファイル名を指定する必要があります。  
   
- **-To**  *operator_name*  
+ **-To**  _operator_name_  
  生成されたレポートが SQL Mail を使用して送信される場合の、送信先となるオペレーターを指定します。  
   
- **-HtmlRpt** *html_file*  
+ **-HtmlRpt** _html_file_  
  HTML レポートの生成先となるファイルの完全パスとファイル名を指定します。 **sqlmaint** は、*-Rpt* パラメーターの場合と同じように、ファイル名に _ **yyyyMMddhhmm** 形式の文字列を追加してファイル名を生成します。  
   
  *sqlmaint* がリモート サーバーにアクセスする場合、 **html_file** には、完全な UNC ファイル名を指定する必要があります。  
@@ -133,7 +133,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-DelHtmlRpt** \<*time_period*>  
  レポート ファイル作成後の期間が \<*time_period*> を超える場合、レポート ディレクトリ内にあるすべての HTML レポートを削除します。 **-DelHtmlRpt** は、*html_file* パラメーターを基に生成されたパターンに適合する名前を持つファイルを検索します。 *html_file* が C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm の場合、**-DelHtmlRpt** によって **sqlmaint** は、C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm というパターンに一致する名前を持つファイルを検索し、指定された \<*time_period*> より前のファイルをすべて削除します。  
   
- **-RmUnusedSpace** *threshold_percent free_percent*  
+ **-RmUnusedSpace** _threshold_percent free_percent_  
  **-D**に指定されたデータベースから使用されていない領域を削除します。 このオプションは、自動拡張が定義されているデータベースに対してのみ使用できます。 *Threshold_percent* は、 **sqlmaint** が使用されていないデータ領域を削除する基準となるデータベースのサイズを MB 単位で指定します。 データベースが *threshold_percent*より小さい場合、何も行われません。 *Free_percent* は、データベースに残す必要がある使用されていない領域の量を、データベースの最終的なサイズに対する割合として指定します。 たとえば、200 MB のデータベースに 100 MB のデータを取り込む場合、 *free_percent* に 10 を指定すると、最終的なデータベース サイズは 110 MB になります。 データベースが *free_percent* とデータベースのデータ量の合計より小さい場合、データベースは拡張されないことにご注意ください。 たとえば、108 MB のデータベースが 100 MB のデータを持つ場合、 *free_percent* に 10 を指定してもデータベースは 110 MB に拡張されず、108 MB のままです。  
   
  **-CkDB** | **-CkDBNoIdx**  
@@ -147,7 +147,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-CkCat**  
  **-D** に指定されたデータベースで、DBCC CHECKCATALOG (Transact-SQL) ステートメントを実行します。 詳細については、「[DBCC CHECKCATALOG &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)」を参照してください。  
   
- **-UpdOptiStats** *sample_percent*  
+ **-UpdOptiStats** _sample_percent_  
  データベースの各テーブルで、次のステートメントを実行します。  
   
 ```  
@@ -158,7 +158,7 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
   
  詳細については、「 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md)で作成されたデータベース メンテナンス プランを実行します。  
   
- **-RebldIdx** *free_space*  
+ **-RebldIdx** _free_space_  
  FILL FACTOR とは逆の関係になる値として *free_space* の割合の値を使用し、対象データベースのテーブルのインデックスを再構築します。 たとえば、 *free_space* の割合が 30 の場合、使用される FILL FACTOR は 70 になります。 *free_space* の割合の値に 100 が指定された場合は、最初の FILL FACTOR 値を使用してインデックスが再構築されます。  
   
  インデックスが計算列にある場合、 **-RebldIdx** を使用するときに **-SupportComputedColumn**引数も指定する必要があります。  
