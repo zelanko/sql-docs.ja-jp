@@ -13,18 +13,18 @@ ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0f38fd7a404e991cd6c87fd303cb03658f8b235
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a626e79a33c134a3bdde5880b68f2545c6dea78e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734650"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129642"
 ---
 # <a name="filter-settings"></a>[フィルターの設定]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[フィルターの設定]** ダイアログ ボックスを使用すると、レプリケーション モニターのグリッドのフィルターを定義できます。 たとえば、アクティブなサブスクリプションのみを **[すべてのサブスクリプション]** タブに表示するには、 **[列名]** 列から **[状態]** を選択し、 **[演算子]** 列から **[等しい]** を選択し、 **[値 1]** 列から **[アクティブ]** を選択します。 1 つ以上の列に基づくフィルターを定義したら、フィルター条件に一致する行のサブセットのみがグリッドに表示されるようにフィルターが適用されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[状態]**  
  フィルター選択する列の名前を選択します。 1 つ以上の列をフィルター処理の基にすることができます。  
   
@@ -38,6 +38,6 @@ ms.locfileid: "47734650"
  このボタンをクリックすると、定義されているすべてのフィルターがクリアされます。 単一のフィルターを削除するには、フィルター行を選択して Del キーを押します。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 202293da5a056e65bb10715d6dac985555e898d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab8431339c53d782b8823000b12fa368a523040e
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626670"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100807"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp を使用したファイル ストレージ型の指定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,15 +44,15 @@ ms.locfileid: "47626670"
   
     |ファイル ストレージ型|コマンド プロンプトで入力する文字|  
     |-----------------------|-----------------------------|  
-    |**char***|**c****[har]**|  
+    |**char**|**c****[har]**|  
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
-    |**text**\*\*|**T****[ext]**|  
+    |**text**|**T****[ext]**|  
     |**ntext2**|**W**|  
     |**[バイナリ]**|**x**|  
     |**varbinary**|**x**|  
-    |**image**\*\*|**I****[mage]**|  
+    |**image**|**I****[mage]**|  
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**time**|**te**|  
@@ -85,15 +85,15 @@ ms.locfileid: "47626670"
   
 |ファイル ストレージ型|ホスト ファイル データ型|  
 |-----------------------|-------------------------|  
-|**char***|SQLCHAR|  
+|**char**|SQLCHAR|  
 |**varchar**|SQLCHAR|  
 |**nchar**|SQLNCHAR|  
 |**nvarchar**|SQLNCHAR|  
-|**text**\*\*|SQLCHAR|  
-|**ntext**\*\*|SQLNCHAR|  
+|**text**|SQLCHAR|  
+|**ntext**|SQLNCHAR|  
 |**[バイナリ]**|SQLBINARY|  
 |**varbinary**|SQLBINARY|  
-|**image**\*\*|SQLBINARY|  
+|**image**|SQLBINARY|  
 |**datetime**|SQLDATETIME|  
 |**smalldatetime**|SQLDATETIM4|  
 |**decimal**|SQLDECIMAL|  

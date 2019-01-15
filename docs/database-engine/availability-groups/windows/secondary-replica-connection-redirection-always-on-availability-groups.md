@@ -1,7 +1,7 @@
 ---
 title: SQL Server でのセカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト -Always On 可用性グループ | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,14 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a811fdb21d6c0c1d702c067f255ece3c2b183b9c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600531"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206308"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>セカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト (Always On 可用性グループ)
+
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 では、"*Always On 可用性グループに対するセカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト*" が導入されています。 すべてのオペレーティング システム プラットフォームで、読み取り/書き込み接続のリダイレクトを利用できます。 接続文字列に指定されたターゲット サーバーに関係なく、クライアント アプリケーションの接続先をプライマリ レプリカにすることができます。 
@@ -53,8 +54,8 @@ ms.locfileid: "51600531"
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] では、`<add_replica_option>` 仕様に `READ_WRITE_ROUTING_URL` が追加されています。 次のトピックを参照してください。 
 
-* [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md)
-* [ALTER AVAILABILITY GROUP](../../../t-sql\statements\alter-availability-group-transact-sql.md)
+* [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
+* [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
 ### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) が設定されていない (既定の設定) 
@@ -156,7 +157,8 @@ GO
 
 接続文字列に指定された SQL Server インスタンスを利用できない場合 (インスタンスが停止している) 場合、ターゲット サーバー上のレプリカに割り当てられているロールに関係なく、接続は失敗します。 長時間にわたるアプリケーションのダウンタイムを避けるには、接続文字列内に代替の `FailoverPartner` を構成します。 アプリケーションでは、フェールオーバーの実行中はオフライン状態になるプライマリ レプリカとセカンダリ レプリカに対応するための再試行ロジックを実装する必要があります。 接続文字列については、「[SqlConnection.ConnectionString プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)」を参照してください。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
 [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  
 [可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   

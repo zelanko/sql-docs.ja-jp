@@ -13,12 +13,12 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca169dc94a2f3fcbe6165bbbe1c69de158f9835f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787e3c18581339de78a5f4fcd653967566f85ece
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719010"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124662"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同期のセキュリティ アーキテクチャ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47719010"
 |以下のいずれかを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用します。<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: **SubscriberSecurityMode** の **@distributor_security_mode** パラメーターの値に [@job_password](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)パラメーター<br />-   RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> の値に <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>。<br />-   マージ エージェントのコマンド ライン: **-DistributorSecurityMode** の値に **0**。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: **@distributor_login** の **@distributor_password** パラメーターと [@job_password](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)パラメーター<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> と <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> マージ エージェントのコマンド ライン : **-DistributorLogin** と **-DistributorPassword**|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. FTP サーバーへの接続  
- スナップショットをサブスクライバーに適用する前に、IIS を実行しているコンピューターに、UNC の場所ではなく FTP サーバーからスナップショット ファイルをダウンロードする場合にのみ、この接続に Windows ユーザーを指定します。 詳細については、「[FTP によるスナップショットの転送](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)」を参照してください。  
+ スナップショットをサブスクライバーに適用する前に、IIS を実行しているコンピューターに、UNC の場所ではなく FTP サーバーからスナップショット ファイルをダウンロードする場合にのみ、この接続に Windows ユーザーを指定します。 詳細については、「[FTP によるスナップショットの転送](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
   
 |認証の種類|認証を指定する場所|  
 |----------------------------|-------------------------------------------|  

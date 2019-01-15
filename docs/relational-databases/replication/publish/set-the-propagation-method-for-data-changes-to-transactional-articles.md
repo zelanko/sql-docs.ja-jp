@@ -14,12 +14,12 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b03471825ee3a6db98a0df68c81828ee61d433a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5231236fea77859bcdd7b1e18979480a944ec22c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527477"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131462"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>データの変更をトランザクション アーティクルに反映する方法の設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,11 +118,11 @@ ms.locfileid: "52527477"
   
 1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 **@publication**、**@article**、および **@source_object** に、それぞれ、アーティクルが属しているパブリケーションの名前、アーティクルの名前、および、パブリッシュ対象のデータベース オブジェクトを指定します。さらに、**@schema_option** にビットマスク **0x02** (カスタム ストアド プロシージャの自動生成を有効にする) を指定し、次のいずれかのパラメーターを指定します。  
   
-    -   **@ins_cmd** - **CALL sp_MSins\__article_name_** の値を指定します。ここで、**_article_name_** は **@article** に指定した値です。  
+    -   **@ins_cmd** - **CALL sp_MSins_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
   
-    -   **@del_cmd** - **CALL sp_MSdel\__article_name_** または **XCALL sp_MSdel\__article_name_** の値を指定します。ここで、**_article_name_** は **@article** に指定した値です。  
+    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
   
-    -   **@upd_cmd** - specify a value of **SCALL sp_MSupd\__article_name_**、**CALL sp_MSupd\__article_name_**、**XCALL sp_MSupd\__article_name_**、**MCALL sp_MSupd\__article_name_** の値を指定します。ここで、**_article_name_** は **@article** に指定した値です。  
+    -   **@upd_cmd** - **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name***、**MCALL sp_MSupd_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
   
     > [!NOTE]  
     >  上記コマンド パラメーターのそれぞれについて、レプリケーションによって生成されるストアド プロシージャに独自の名前を指定できます。  
@@ -138,11 +138,11 @@ ms.locfileid: "52527477"
   
 1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 **@publication**、**@article**、および **@source_object** に、それぞれ、アーティクルが属しているパブリケーションの名前、アーティクルの名前、および、パブリッシュ対象のデータベース オブジェクトを指定します。さらに、**@schema_option** にビットマスク **0x02** (カスタム ストアド プロシージャの自動生成を有効にする) を指定し、次のいずれかのパラメーターを指定します。  
   
-    -   **@ins_cmd** - **CALL sp_MSins\__article_name_** の値を指定します。ここで、**_article_name_** は **@article** に指定した値です。  
+    -   **@ins_cmd** - **CALL sp_MSins_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
   
-    -   **@del_cmd** - **CALL sp_MSdel\__article_name_** または **XCALL sp_MSdel\__article_name_** の値を指定します。ここで、**_article_name_** は **@article** に指定した値です。  
+    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
   
-    -   **@upd_cmd** - specify a value of **SCALL sp_MSupd\__article_name_**、**CALL sp_MSupd\__article_name_**、**XCALL sp_MSupd\__article_name_**、**MCALL sp_MSupd\__article_name_** の値を指定します。ここで、**_article_name_** は **@article** に指定した値です。  
+    -   **@upd_cmd** - **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name***、**MCALL sp_MSupd_* article_name*** を指定します。ここで、***article_name*** は **@article** に指定した値です。  
   
     > [!NOTE]  
     >  上記コマンド パラメーターのそれぞれについて、レプリケーションによって生成されるストアド プロシージャに独自の名前を指定できます。  
@@ -162,6 +162,6 @@ ms.locfileid: "52527477"
   
 ## <a name="see-also"></a>参照  
  [トランザクション アーティクルに変更を反映する方法の指定](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [パブリケーションとアーティクルの作成、変更、および削除 &#40;レプリケーション&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

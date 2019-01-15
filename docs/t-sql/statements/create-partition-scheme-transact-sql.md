@@ -29,12 +29,12 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ee5082535620d05c96b505b1920b8036d92f5e97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83017a49354eb3da8220ae2fa4536961d1fed420
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843104"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124782"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,14 +65,14 @@ AS PARTITION partition_function_name
  ALL  
  すべてのパーティションを *file_group_name* で提供されるファイル グループにマップすることを指定します。**[** PRIMARY **]** を指定した場合は、すべてのパーティションをプライマリ ファイル グループにマップすることを指定します。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。  
   
- *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
+ *file_group_name* | **[** PRIMARY **]** [ **,**_...n_]  
  *partition_function_name* によって指定されたパーティションを保持するファイル グループの名前を指定します。 *file_group_name* がデータベースに既に存在する必要があります。  
   
- **[** PRIMARY **]** を指定した場合、パーティションはプライマリ ファイル グループに格納されます。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。 パーティションは、パーティション 1 から始まり、[**,***...n*] で一覧表示されているファイル グループの順序で、ファイル グループに割り当てられます。[**,***...n*] では、同じ *file_group_name* を複数回指定できます。 *n* が *partition_function_name* で指定されたパーティションの数を保持するのに十分ではない場合、CREATE PARTITION SCHEME は失敗し、エラーが発生します。  
+ **[** PRIMARY **]** を指定した場合、パーティションはプライマリ ファイル グループに格納されます。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。 パーティションは、パーティション 1 から始まり、[**,**_...n_] で一覧表示されているファイル グループの順序で、ファイル グループに割り当てられます。 [**,**_...n_] では、同じ *file_group_name* を複数回指定できます。 *n* が *partition_function_name* で指定されたパーティションの数を保持するのに十分ではない場合、CREATE PARTITION SCHEME は失敗し、エラーが発生します。  
   
  *partition_function_name* によって生成されるパーティションの数がファイル グループより少ない場合、割り当てられていない最初のファイル グループが NEXT USED とマークされ、情報メッセージに NEXT USED ファイル グループの名前が表示されます。 ALL を指定した場合、唯一の *file_group_name* に、この *partition_function_name* に対する NEXT USED プロパティが設定されます。 ALTER PARTITION FUNCTION ステートメントで追加のパーティションを作成した場合は、NEXT USED ファイル グループがそのパーティションを受け取ります。 割り当てられていないファイル グループを追加作成して新しいパーティションを保持するには、ALTER PARTITION SCHEME を使用します。  
   
- *file_group_name* [ 1 **,***...n*] でプライマリ ファイル グループを指定するときは、PRIMARY を **[** PRIMARY**]** のように区切る必要があります。これは、PRIMARY がキーワードであるためです。  
+ *file_group_name* [ 1 **,**_...n_] でプライマリ ファイル グループを指定するときは、PRIMARY を **[** PRIMARY **]** のように区切る必要があります。これは、PRIMARY がキーワードであるためです。  
   
  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] では PRIMARY のみサポートされます。 後半の例 E をご覧ください。 
   

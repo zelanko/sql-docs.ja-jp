@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3b2ce551f280c56e7526455ee03931478f2322b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672631"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125055"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "51672631"
  [[ディストリビューションの構成]](../../../relational-databases/replication/configure-distribution.md)  
  このセクションのトピックでは、RMO を使用してパブリッシングおよびディストリビューションを構成する方法について説明します。  
   
- [パブリケーションとアーティクルの作成、変更、および削除 &#40;レプリケーション&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)  
  このセクションのトピックでは、RMO を使用してパブリケーションおよびアーティクルを作成、削除、および変更する方法について説明します。  
   
  [パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)  
  このセクションのトピックでは、RMO を使用してサブスクリプションを作成、削除、および変更する方法について説明します。  
   
- [レプリケーション トポロジのセキュリティ保護](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
+ [レプリケーション トポロジのセキュリティ保護](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
  このセクションのトピックでは、RMO を使用してセキュリティ設定を表示および変更する方法について説明します。  
   
- [サブスクリプションの同期 &#40;レプリケーション&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md)  
+ [サブスクリプションの同期 &#40;レプリケーション&#41;](../../../relational-databases/replication/synchronize-data.md)  
  ここでは、サブスクリプションを同期する方法を説明します。  
   
- [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication.md)  
  ここでは、プログラムからレプリケーション トポロジを監視する方法を説明します。  
   
 ## <a name="introduction-to-rmo-programming"></a>RMO プログラミングの概要  

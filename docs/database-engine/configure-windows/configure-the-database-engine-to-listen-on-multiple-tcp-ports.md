@@ -19,12 +19,12 @@ ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe616847c9a9883fb46508286828b679a37ed065
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2efa695bd6b6c36db1a813d7b33a866a30bd95f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655960"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125962"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>複数の TCP ポートでリッスンするデータベース エンジンの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,9 +76,9 @@ ms.locfileid: "47655960"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>追加の TCP ポートでリッスンするように SQL Server データベース エンジンを構成するには  
   
-1.  SQL Server 構成マネージャーで **[SQL Server ネットワークの構成]** を展開し、*[<instance_name> のプロトコル]* をクリックします。  
+1.  SQL Server 構成マネージャーで **[SQL Server ネットワークの構成]** を展開し、**_[<instance_name>_ のプロトコル]** をクリックします。  
   
-2.  *[<instance_name> のプロトコル]* を展開し、**[TCP/IP]** をクリックします。  
+2.  **[_<instance_name>_ のプロトコル]** を展開し、**[TCP/IP]** をクリックします。  
   
 3.  右ペインで、無効になっている IP アドレスのうち、有効にする IP アドレスをそれぞれ右クリックし、**[有効化]** をクリックします。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "47655960"
   
 6.  左ペインで、 **[SQL Server のサービス]** をクリックします。  
   
-7.  右ペインで、**[SQL Server***<instance_name>]* を右クリックし、**[再起動]** をクリックします。  
+7.  右ペインで、**[SQL Server _<instance_name>_]** を右クリックし、**[再起動]** をクリックします。  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]が再起動すると、エラー ログには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンしているポートが記録されています。  
   

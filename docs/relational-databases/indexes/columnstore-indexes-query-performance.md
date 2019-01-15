@@ -1,7 +1,7 @@
 ---
 title: 列ストア インデックス - クエリ パフォーマンス | Microsoft Docs
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe14cc4f52fe0606fd68613736d91fd48bf87f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637145"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255287"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列ストア インデックス - クエリ パフォーマンス
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   列ストア インデックスによって提供される非常に高速なクエリ パフォーマンスを実現するための推奨事項について説明します。    
@@ -141,11 +142,11 @@ FROM FactResellerSalesXL_CCI
 ```    
     
 ### <a name="string-predicate-pushdown"></a>文字列述語のプッシュ ダウン    
-データ ウェアハウスのスキーマを設計する際は、1 つ以上のファクト テーブルと多数のディメンション テーブルで構成されたスター スキーマまたはスノーフレーク スキーマを使用することをお勧めします。 [ファクト テーブル](https://en.wikipedia.org/wiki/Fact_table) にはビジネスの測定値やトランザクションを格納し、 [ディメンション テーブル](https://en.wikipedia.org/wiki/Dimension_table) にはファクトの分析が必要なディメンションを格納します。    
+データ ウェアハウスのスキーマを設計する際は、1 つ以上のファクト テーブルと多数のディメンション テーブルで構成されたスター スキーマまたはスノーフレーク スキーマを使用することをお勧めします。 [ファクト テーブル](https://wikipedia.org/wiki/Fact_table) にはビジネスの測定値やトランザクションを格納し、 [ディメンション テーブル](https://wikipedia.org/wiki/Dimension_table) にはファクトの分析が必要なディメンションを格納します。    
     
 たとえば、特定の地域における特定の商品の売上を表すレコードがファクトで、一連の地域や商品などを表すのがディメンションす。 ファクト テーブルとディメンション テーブルは、主キーと外部キーのリレーションシップによって接続されます。 1 つ以上のディメンション テーブルをファクト テーブルと結合する分析クエリが最もよく使用されます。    
     
-ディメンション テーブル `Products` について考えてみましょう。 一般的な主キーは `ProductCode` で、通常は文字列データ型として表されます。 クエリのパフォーマンスのためには、代理キー (通常は整数型の列) を作成して、ファクト テーブルからディメンション テーブル内の行を参照することをお勧めします。    
+ディメンション テーブル `Products` について考えてみましょう。 一般的な主キーは `ProductCode` で、通常は文字列データ型として表されます。 クエリのパフォーマンスのためには、代理キー (通常は整数型の列) を作成して、ファクト テーブルからディメンション テーブル内の行を参照することをお勧めします。    
     
 列ストア インデックスは、数値または整数ベースのキーが関与する結合/述語を持つ分析クエリを非常に効率よく実行します。 ただし、多くの顧客ワークロードでは、ファクト テーブルとディメンション テーブルをリンクする文字列ベースの列を使用した場合、列ストア インデックスを含むクエリのパフォーマンスが低くなることがわかっています。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、文字列型の列を持つ述語を SCAN ノードをプッシュ ダウンすることで、文字列ベースの列を持つ分析クエリのパフォーマンスを大きく向上しています。    
     

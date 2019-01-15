@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51485f1d1bbe120b42371c9d04a9d4576ac8d0d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba432d722bcd6f9df6c797d361a53e0b6dc6dff9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391545"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254965"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>インメモリ OLTP に対してサポートされていない SQL Server の機能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52391545"
 |データベース|Allowed|[説明]|  
 |---------------|-------------|-----------------|  
 | ユーザー データベース、**model**、および **msdb**。 | いいえ | ほとんどの場合、複数のデータベースにまたがるクエリおよびトランザクションは*サポートされません*。<br /><br />クエリがメモリ最適化テーブルまたはネイティブにコンパイルされたストアド プロシージャを使用している場合、そのクエリは他のデータベースにアクセスできません。 この制限は、クエリだけでなくトランザクションにも適用されます。<br /><br />例外は、システム データベースである **tempdb** と **master** です。 ここで、**master** データベースは読み取り専用アクセスで利用できます。 |
-| **Resource** データベース、**tempdb** | [ユーザー アカウント制御] | インメモリ OLTP オブジェクトを扱うトランザクションでは、**Resource** および **tempdb** システム データベースを追加の制限なく使用できます。
+| **Resource** データベース、**tempdb** | 可 | インメモリ OLTP オブジェクトを扱うトランザクションでは、**Resource** および **tempdb** システム データベースを追加の制限なく使用できます。
 
 
 ## <a name="scenarios-not-supported"></a>サポートされていないシナリオ  
@@ -64,8 +64,8 @@ ms.locfileid: "52391545"
   
 - メモリ最適化テーブルにアクセスするクエリでのキーセットと動的カーソル。 これらのカーソルは静的および読み取り専用に降格されます。  
   
-- **MERGE INTO** *target* の使用は、*target* がメモリ最適化テーブルである場合にはサポートされません。
-    - **MERGE USING** *source* は、メモリ最適化テーブルでサポートされます。  
+- **MERGE INTO** _target_ の使用は、*target* がメモリ最適化テーブルである場合にはサポートされません。
+    - **MERGE USING** _source_ は、メモリ最適化テーブルでサポートされます。  
   
 - ROWVERSION (TIMESTAMP) データ型はサポートされていません。 詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。
   

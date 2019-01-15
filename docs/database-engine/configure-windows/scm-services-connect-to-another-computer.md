@@ -13,12 +13,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb0117203d290c32c22691f665a7717a68bb5465
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 327257526f48424398a3931ba9270b3752b4b316
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072146"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135772"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM サービス - 別のコンピューターに接続する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "49072146"
   
 8.  **[スナップインの追加と削除]** ウィンドウで **[OK]** をクリックします。  
   
-9. **[コンピューターの管理 (***\<コンピューター名>***)]**、**[サービスとアプリケーション]** の順に展開します。  
+9. **[コンピューターの管理 (**_\<コンピューター名>_**)]**、**[サービスとアプリケーション]** の順に展開します。  
   
 10. **[SQL Server 構成マネージャー]** を右クリックして、 **[ここから新しいウィンドウ]** をクリックします。  
   

@@ -23,12 +23,12 @@ ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b0ad92c9bf7596bb30dce4adf912fb1a9aa468a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a548fe7327c6e3c8ac4febca3db442490c983058
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678220"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131702"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>マークされたトランザクションを含む関連データベースの復旧
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,13 +61,13 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  複数のデータベースに関係するトランザクションにマークを挿入する方法については、「 [マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)」を参照してください。  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>特定のマークの時点へ復旧するための Transact-SQL 構文  
- マークされたトランザクションを[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)ステートメントで指定する場合、次のいずれかの句を使用して、マークに到達した時点またはマークの直前まで復旧できます。  
+ マークされたトランザクションを [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントで指定する場合、次のいずれかの句を使用して、マークに到達した時点またはマークの直前まで復旧できます。  
   
--   WITH STOPATMARK = **'***<mark_name>***'** 句を使用して、マークされたトランザクションが復旧ポイントであることを指定します。  
+-   WITH STOPATMARK = **'**_<mark_name>_**'** 句を使用して、マークされたトランザクションが復旧ポイントであることを指定します。  
   
      STOPATMARK では、マークまでロールフォワードされます。ロールフォワードには、マークされたトランザクションも含まれます。  
   
--   WITH STOPBEFOREMARK = **'***<mark_name>***'** 句を使用して、マークの直前のログ レコードが復旧ポイントであることを指定します。  
+-   WITH STOPBEFOREMARK = **'**_<mark_name>_**'** 句を使用して、マークの直前のログ レコードが復旧ポイントであることを指定します。  
   
      STOPBEFOREMARK では、マークまでロールフォワードされますが、マークされたトランザクションは含まれません。  
   

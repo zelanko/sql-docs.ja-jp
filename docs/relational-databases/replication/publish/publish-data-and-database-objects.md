@@ -42,12 +42,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9d1acf8774331ca5e789d9c8d9c50e05a6a3b1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523073"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129012"
 ---
 # <a name="publish-data-and-database-objects"></a>データとデータベース オブジェクトのパブリッシュ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,36 +71,22 @@ ms.locfileid: "52523073"
 ## <a name="creating-publications"></a>パブリケーションの作成  
  パブリケーションを作成するには、次の情報を指定します。  
   
--   ディストリビューター。  
-  
--   スナップショット ファイルの場所。  
-  
--   パブリケーション データベース。  
-  
--   作成するパブリケーションの種類 (スナップショット、トランザクション、更新可能なサブスクリプションを含むトランザクション、またはマージ)。  
-  
--   パブリケーションに含めるデータとデータベース オブジェクト (アーティクル)。  
-  
--   すべての種類のパブリケーションの静的行フィルターと列フィルター、およびマージ パブリケーションのパラメーター化された行フィルターと結合フィルター。  
-  
--   スナップショット エージェントのスケジュール。  
-  
--   エージェントの実行に使用するアカウント。対象となるエージェントは、スナップショット エージェント (すべてのパブリケーション用)、ログ リーダー エージェント (すべてのトランザクション パブリケーション用)、およびキュー リーダー エージェント (サブスクリプションの更新が許可されているトランザクション パブリケーション用) です。  
-  
+-   ディストリビューター。    
+-   スナップショット ファイルの場所。    
+-   パブリケーション データベース。    
+-   作成するパブリケーションの種類 (スナップショット、トランザクション、更新可能なサブスクリプションを含むトランザクション、またはマージ)。    
+-   パブリケーションに含めるデータとデータベース オブジェクト (アーティクル)。   
+-   すべての種類のパブリケーションの静的行フィルターと列フィルター、およびマージ パブリケーションのパラメーター化された行フィルターと結合フィルター。   
+-   スナップショット エージェントのスケジュール。    
+-   エージェントの実行に使用するアカウント。対象となるエージェントは、スナップショット エージェント (すべてのパブリケーション用)、ログ リーダー エージェント (すべてのトランザクション パブリケーション用)、およびキュー リーダー エージェント (サブスクリプションの更新が許可されているトランザクション パブリケーション用) です。    
 -   パブリケーションの名前と説明。  
   
- パブリケーションの操作方法の詳細については、次のトピックを参照してください。  
-  
--   [パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)  
-  
--   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)  
-  
--   [パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
-  
--   [アーティクルのプロパティの表示と変更](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
-  
--   [パブリケーションの削除](../../../relational-databases/replication/publish/delete-a-publication.md)  
-  
+ パブリケーションの操作方法の詳細については、次のトピックを参照してください。    
+-   [パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [アーティクルの定義](../../../relational-databases/replication/publish/define-an-article.md)    
+-   [パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
+-   [アーティクルのプロパティの表示と変更](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
+-   [パブリケーションの削除](../../../relational-databases/replication/publish/delete-a-publication.md)    
 -   [アーティクルの削除](../../../relational-databases/replication/publish/delete-an-article.md)  
   
 > [!NOTE]  
@@ -109,12 +95,9 @@ ms.locfileid: "52523073"
 ## <a name="publishing-tables"></a>テーブルのパブリッシュ  
  パブリッシュされるオブジェクトで最も一般的なのはテーブルです。 以下のリンクは、テーブルのパブリッシュに関連する分野についての情報を提供します。  
   
--   [パブリッシュされたデータのフィルター選択](../../../relational-databases/replication/publish/filter-published-data.md)  
-  
--   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
+-   [パブリッシュされたデータのフィルター選択](../../../relational-databases/replication/publish/filter-published-data.md)    
+-   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
+-   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  レプリケーションでテーブルをパブリッシュする場合、宣言された参照整合性 (主キー制約、参照に関する制約、一意制約)、インデックス、ユーザー DML トリガー (DDL トリガーはレプリケートできません)、拡張プロパティ、照合順序などの、サブスクライバーにコピーするスキーマ オブジェクトを指定できます。 拡張プロパティは、パブリッシャーとサブスクライバー間で初期同期を実行するときにのみレプリケートされます。 初期同期の完了後に拡張プロパティを追加または変更した場合、その変更はレプリケートされません。  
@@ -199,7 +182,7 @@ ms.locfileid: "52523073"
   
 -   キャラクター モードのスナップショット ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のバージョンのサブスクライバーや [!INCLUDE[ssEW](../../../includes/ssew-md.md)] サブスクライバーで使用されます) を使用するパブリケーションのアーティクルの場合。既定では、所有者は空白のままになります。 既定の所有者は、サブスクライバーに接続しているディストリビューション エージェントまたはマージ エージェントで使用されるアカウントに関連付けられている所有者になります。  
   
- オブジェクトの所有者は、**[アーティクルのプロパティ - \<***Article***>]** ダイアログ ボックスと、ストアド プロシージャの **sp_addarticle**、**sp_addmergearticle**、**sp_changearticle**、**sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
+ オブジェクトの所有者は、**[アーティクルのプロパティ - \<**_Article_**>]** ダイアログ ボックスと、ストアド プロシージャ**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** および **sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>以前のバージョンの SQL Server を実行するサブスクライバーへのデータのパブリッシュ  
   

@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 40035d23d7414aa00f44f22411244ca7452ccafd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534443"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124872"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>データベース ミラーリングとレプリケーション (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "52534443"
 |自動フェールオーバーを伴わない高い安全性モード|コミット済みのすべてのトランザクションがミラーのディスクに保存されることが保証されます。 ログ リーダー エージェントはミラーで保存されたトランザクションのみをレプリケートします。 ミラーが使用できない場合、プリンシパルのデータベースが停止します。そのため、ログ リーダー エージェントがレプリケートするトランザクションがなくなります。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション機能とタスク](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server のレプリケーション](../../relational-databases/replication/sql-server-replication.md)   
  [ログ配布とレプリケーション &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   
   
