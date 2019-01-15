@@ -11,12 +11,12 @@ ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb0411323de64747c4b142fc4eda1882aceae010
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ad198e96c24431ab51f0ab89517530598bfb1ced
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502711"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129443"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>前処理オプション (Distributed Replay 管理ツール)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ dreplay preprocess [-m controller] -i input_trace_file
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- **-m** *controller*  
+ **-m** _controller_  
  コントローラーのコンピューターの名前を指定します。 "`localhost`" または "`.`" を使用してローカル コンピューターを参照できます。  
   
  **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。  
   
- **-i** *input_trace_file*  
+ **-i** _input_trace_file_  
  `D:\Mytrace.trc`などの形式で、コントローラー上の入力トレース ファイルの完全なパスを指定します。 **-i** パラメーターは必須です。  
   
  同じディレクトリにロールオーバー ファイルがある場合は、自動的に読み込まれて使用されます。 ファイルは、ファイル ロールオーバー名前付け規則に準拠する必要があります (例: `Mytrace.trc`、`Mytrace_1.trc`、`Mytrace_2.trc`、`Mytrace_3.trc`、... `Mytrace_n.trc`)。  
@@ -48,7 +48,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 > [!NOTE]  
 >  コントローラーとは別のコンピューターで管理ツールを使用している場合は、このパラメーターにローカル パスを使用できるように、コントローラーに入力トレース ファイルをコピーする必要があります。  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  中間ファイルが格納される、コントローラー上のディレクトリを指定します。 **-d** パラメーターは必須です。  
   
  これには次の要件があります。  
@@ -61,14 +61,14 @@ dreplay preprocess [-m controller] -i input_trace_file
   
 -   UNC パスはサポートされません。  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  前処理構成ファイルのフル パスです。別の場所に保存されている前処理構成ファイルの場所を指定するために使用します。 このパラメーターは UNC パスにするか、または管理ツールを実行するコンピューター上にローカルに置くことができます。  
   
  **-c** パラメーターは、フィルターが必要ない場合または最大アイドル時間を変更しない場合は、必要ありません。  
   
  **-c** パラメーターが指定されない場合は、既定の前処理構成ファイル `DReplay.exe.preprocess.config`が使用されます。  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  ステータス メッセージを表示する頻度 (秒単位) を指定します。  
   
  **-f** を指定しない場合は、既定の間隔は 30 秒です。  

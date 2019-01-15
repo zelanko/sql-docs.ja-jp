@@ -9,12 +9,12 @@ ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64db1b89c66f21a571bfd05fa4017f799405c8bc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 09e8ad6b60dfc9afbb3fbed7ef450dc4fb1cc28a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501863"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589206"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>status オプション (Distributed Replay 管理ツール)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +32,12 @@ dreplay status [-m controller] [-f status_interval]
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- **-m** *controller*  
+ **-m** _controller_  
  コントローラーのコンピューターの名前を指定します。 "`localhost`" または "`.`" を使用してローカル コンピューターを参照できます。  
   
  **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  状態を表示する頻度 (秒単位) を指定します。  
   
  **-f** パラメーターを指定しない場合は、既定の間隔は 30 秒です。  
