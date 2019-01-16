@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86a7c1418e59b494362a3d64da81f07caf6cab95
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f0d627b294281e5022cbc2dec34de884ab658318
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674161"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256597"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの更新 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -269,7 +269,7 @@ ms.locfileid: "51674161"
  次の XSD マッピング スキーマには**\<顧客 >**、 **\<順序 >**、および **\<OD >** にマップされる要素、データベースの Sales.Customer、Sales.SalesOrderHeader、および Sales.SalesOrderDetail テーブル。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -363,7 +363,7 @@ ms.locfileid: "51674161"
  次の XSD マッピング スキーマを使用して、テーブルの XML ビューを提供する、  **\<Student >**、 **\<コース >**、および**\<登録>** 要素。 **IDREFS**マッピング スキーマ内の属性は、これらの要素間のリレーションシップを指定します。 **StudentIDList**属性を**\<コース >** 要素は、 **IDREFS**型属性で、Enrollment テーブルの StudentID 列を指します。 同様に、 **EnrolledIn**属性を **\<Student >** 要素は、 **IDREFS**登録での CourseID 列を参照する型の属性テーブルです。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

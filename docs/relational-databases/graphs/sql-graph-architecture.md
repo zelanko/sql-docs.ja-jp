@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512807"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300189"
 ---
 # <a name="sql-graph-architecture"></a>SQL グラフ アーキテクチャ  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
  
 ![sql のアーキテクチャ グラフ](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql グラフ データベース アーキテクチャ")   
 
-図 1: SQL グラフ データベース アーキテクチャ
+図 1:SQL グラフ データベース アーキテクチャ
  
 ## <a name="node-table"></a>ノード テーブル
 ノード テーブルでは、グラフのスキーマのエンティティを表します。 ノード テーブルが作成されるたびに、ユーザー定義の列と共に暗黙`$node_id`列を作成すると、データベース内の特定のノードを一意に識別します。 内の値`$node_id`の組み合わせは、自動的に生成される`object_id`のノード テーブルと内部的に生成された bigint 値。 ただし、ときに、`$node_id`列を選択すると、JSON 文字列の形式での計算値が表示されます。 また、`$node_id`は、16 進数の文字列と内部名にマップされる擬似列です。 選択すると`$node_id`として、テーブルから列名が表示されます`$node_id_<hex_string>`します。 内部クエリを実行する推奨される方法は、クエリで擬似列名を使用して`$node_id`列と 16 進文字列と内部名を使用を避ける必要があります。
@@ -58,7 +58,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 
 ![テーブル-人の友人](../../relational-databases/graphs/media/person-friends-tables.png "/people/person ノードや友人のエッジ テーブル")   
 
-図 2: ノードとエッジ テーブルの表現
+図 2:ノードとエッジ テーブルの表現
 
 
 
@@ -97,13 +97,15 @@ SQL グラフを構築する方法について説明します。 基本事項を
 
 `sys.columns` ノードまたはエッジ テーブルで作成した暗黙の型の列に関する情報を格納もされます。 Sys.columns から以下の情報を取得できる、ただし、ユーザーは、ノードまたはエッジ テーブルからのこれらの列を選択できません。 
 
-ノード テーブルで暗黙的な列  
+ノード テーブルで暗黙的な列
+
 |列名    |データ型  |is_hidden  |解説  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |内部`graph_id`列  |
 |$node_id_\<hex_string> |NVARCHAR   |0  |外部ノード`node_id`列  |
 
-エッジ テーブルで暗黙的な列  
+エッジ テーブルで暗黙的な列
+
 |列名    |データ型  |is_hidden  |解説  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |内部`graph_id`列  |
@@ -133,7 +135,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 学習、 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] SQL Server と Azure SQL Database で導入された拡張機能を有効にするグラフ オブジェクトに対するクエリの作成とします。 クエリ言語の拡張機能では、クエリのヘルプし、ASCII アート構文を使用してグラフを走査します。
  
 ### <a name="data-definition-language-ddl-statements"></a>データ定義言語 (DDL) ステートメント
-|タスク   |関連記事  |注
+|タスク   |関連記事  |メモ
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` AS ノードまたは AS エッジ テーブルの作成をサポートするために拡張されています。 エッジ テーブルは可能性がありますか、任意のユーザー定義の属性がない可能性がありますに注意してください。  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|ノードとエッジ テーブルには、リレーショナル テーブルを使用して、同じ方法を変更できる、`ALTER TABLE`します。 ユーザーでは、追加したり、ユーザー定義の列、インデックスまたは制約を変更することができます。 ただし、内部グラフ列を変更するには、ような`$node_id`または`$edge_id`エラーになります。  |
@@ -143,7 +145,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>データ操作言語 (DML) ステートメント
-|タスク   |関連記事  |注
+|タスク   |関連記事  |メモ
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|ノード テーブルに挿入すると、リレーショナル テーブルに挿入するよりも同じです。 値は、`$node_id`列が自動的に生成されます。 値を挿入しようとしています。`$node_id`または`$edge_id`列はエラーになります。 ユーザーが値を指定する必要があります`$from_id`と`$to_id`エッジ テーブルを挿入するときに列。 `$from_id` `$to_id`は、`$node_id`接続する特定のエッジ ノードの値。  |
 |Del | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|リレーショナル テーブルから削除されると、同じ方法でノードまたはエッジ テーブルからデータを削除できます。 ただし、このリリースではありません制約を十分に削除されたノードにエッジがポイントありませんし、ノードの削除時に、エッジの連鎖削除がサポートされていません。 ノードが削除されると、そのノードに接続するすべてのエッジも削除されたこと、グラフの整合性を維持するをお勧めします。  |
@@ -152,7 +154,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 
 
 ### <a name="query-statements"></a>クエリ ステートメント
-|タスク   |関連記事  |注
+|タスク   |関連記事  |メモ
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|ノードとエッジ テーブルとして内部的に格納されます、ノードとエッジ テーブルでの SQL Server または Azure SQL Database のテーブルでサポートされている操作のほとんどをサポートするため  |
 |MATCH  | [一致&#40;TRANSACT-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|一致の組み込みは、パターン マッチングとグラフをトラバースをサポートするために導入されました。  |

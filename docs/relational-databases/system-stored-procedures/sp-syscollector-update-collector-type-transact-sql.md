@@ -19,12 +19,12 @@ ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c430e43fbb8f48968e96a027becf1abccf63e2f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed8c11a7d5f333a086482d2882a6aef7a97370e3
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658481"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256977"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
+ [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
  コレクター型の GUID です。 *collector_type_uid*は**uniqueidentifier**、しする場合は NULL それが自動的に作成され出力として返されます。  
   
  [ **@name =** ] **'***name***'**  
  コレクター型の名前を指定します。 *名前*は**sysname**と指定する必要があります。  
   
- [  **@parameter_schema =** ] **'***parameter_schema***'**  
+ [ **@parameter_schema =** ] **'***parameter_schema***'**  
  このコレクター型の XML スキーマを指定します。 *parameter_schema*は**xml**し、特定のコレクター型で必要になります。 必要でない場合は、この引数を NULL にできます。  
   
  [ **@collection_package_id =** ] *collection_package_id*  
@@ -76,7 +76,7 @@ EXEC sp_syscollector_update_collector_type
 @collector_type_uid = '302E93D1-3424-4BE7-AA8E-84813ECF2419',  
 @name = 'Generic T-SQL Query Collector Type',  
 @parameter_schema = '<?xml version="1.0" encoding="utf-8"?>  
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
   <xs:element name="TSQLQueryCollector">  
 <xs:complexType>  
   <xs:sequence>  

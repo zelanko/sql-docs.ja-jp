@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55b81e7fff73442660ae98f4d6e6fcbfca0906df
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acac24b36f5eefcc1490e016d43c4ef014fb813d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675142"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256127"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth を使用した、再帰リレーションシップの深さの指定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  この結果を生成するには、次の XSD スキーマを使用して、これに対する XPath クエリを指定できます。 スキーマについて説明します、  **\<Emp >** から成る EmployeeType 型の要素、  **\<Emp >** 同じ EmployeeType 型の子要素。 これは、要素とその先祖が同じ型の再帰リレーションシップです。 さらに、スキーマを使用して、  **\<sql:relationship >** 監督者と被監督者間の親子リレーションシップを記述します。 これで **\<sql:relationship >** Emp は親と子テーブルの両方。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -149,7 +149,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -191,7 +191,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  変更後のスキーマは次のようになります。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>sql:max-depth 注釈  
  再帰リレーションシップで構成されるスキーマでは、スキーマ内に再帰の深さを明示的に指定する必要があります。 これは、対応する FOR XML EXPLICIT クエリを正常に作成し、要求された結果を返すために必要です。  
   
- 使用して、 **sql:max-深さ**スキーマに記述されている再帰リレーションシップの再帰の深さを指定するスキーマの注釈。 値、 **sql:max-深さ**注釈は、再帰の数を示す正の整数 (1 ~ 50): 1 の値を要素で再帰を停止する、 **sql:max-深さ**注釈指定します。値が 2 の停止位置を示す要素から次のレベルに再帰**sql:max-深さ**し、指定します。  
+ 使用して、 **sql:max-深さ**スキーマに記述されている再帰リレーションシップの再帰の深さを指定するスキーマの注釈。 値、 **sql:max-深さ**注釈は、再帰の数を示す正の整数 (1 ~ 50)。1 の値を要素で再帰を停止する、 **sql:max-深さ**注釈が指定されて; 値が 2 の停止位置を示す要素から、[次へ] レベルで再帰**sql:max-深さ**が指定されて;などなど。  
   
 > [!NOTE]  
 >  この基本となる実装では、マッピング スキーマに対して指定されている XPath クエリが、SELECT ... FOR XML EXPLICIT クエリに変換されます。 このクエリでは、再帰に有限の深さを指定する必要があります。 指定した値が大きいほど**sql:max-深さ**が大きいほど、FOR XML EXPLICIT クエリが生成されます。 これによって、取得に時間がかかることがあります。  
@@ -249,7 +249,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-b"></a>例 B  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -291,7 +291,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-c"></a>例 C  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
     <xsd:appinfo>  
@@ -339,7 +339,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 #### <a name="example-d"></a>例 D  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:complexType name="CustomerBaseType">   

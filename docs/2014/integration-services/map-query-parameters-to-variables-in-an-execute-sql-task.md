@@ -18,14 +18,18 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0f1add0f2d249922f00fc1b16d5da12bb903faf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6fb2354720b334d69f7d5e05977c82c3807fd109
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524988"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300079"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>クエリ パラメーターを SQL 実行タスクの変数にマップする方法
+
+  > [!div class="nextstepaction"]
+  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
+
   このトピックでは、SQL 実行タスクでパラメーター化された SQL ステートメントを使用して、SQL ステートメント内の変数とパラメーター間のマッピングを作成する方法を説明します。  
   
  異なる種類の接続で使用する SQL 実行タスク、パラメーター マーカー、およびパラメーター名の詳細については、「 [SQL 実行タスク](control-flow/execute-sql-task.md) 」および「 [SQL 実行タスクのパラメーターとリターン コード](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)」を参照してください。  

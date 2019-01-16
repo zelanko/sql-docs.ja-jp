@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90c611eff42a3cd31894e27b1a7737ca77e91bea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9ebaeb1a0fce11d984f858247763c4222d4a8b27
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670408"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256927"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath のデータ型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51670408"
  XPath が 3 つのデータ型:**文字列**、**数**、および**ブール**します。 **数**データ型は、IEEE 754 倍精度浮動小数点では常にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float (53)** データ型が XPath に最も近い**数**します。 ただし、 **float (53)** IEEE 754 ではありません。 たとえば、非数 (NaN) も無限大も使用されません。 数値以外の文字列を変換しようとしています。**数**エラー 0 個の結果で除算しようとします。  
   
 ## <a name="xpath-conversions"></a>XPath 変換  
- `OrderDetail[@UnitPrice > "10.0"]` などの XPath クエリを使用する場合は、データ型の変換を暗黙的に行うか明示的に行うかによって、クエリの意味が微妙に変わります。 このため、XPath データ型の実装方法について理解しておくことが重要です。 XML パス言語 (XPath) version 1.0 W3C XPath 言語仕様の W3C Web サイトで 8 1999 年 10 月の推奨事項を提示するを参照して https://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
+ `OrderDetail[@UnitPrice > "10.0"]` などの XPath クエリを使用する場合は、データ型の変換を暗黙的に行うか明示的に行うかによって、クエリの意味が微妙に変わります。 このため、XPath データ型の実装方法について理解しておくことが重要です。 XML パス言語 (XPath) version 1.0 W3C XPath 言語仕様の W3C Web サイトで 8 1999 年 10 月の推奨事項を提示するを参照して http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  XPath の演算子は、次の 4 つのカテゴリに分けられます。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "51670408"
 |どちらもノード セットでない場合|両方のオペランドを変換**数**し比較。|両方のオペランドを共通のデータ型に変換し比較。 変換**ブール**いずれかの場合**ブール**、**数**いずれかの場合**数**それ以外に変換**文字列**。|  
   
 > [!NOTE]  
->  XPath の関係演算子はオペランドを常に変換するため、**数**、**文字列**比較はできません。 日付の比較は、SQL Server 2000 は、XPath 仕様には、このバリエーションを提供しています: 関係演算子を比較すると、**文字列**に、**文字列**、ノード セットに、**文字列**、または、文字列の値を持つノード セットを文字列の値を持つノード セット、**文字列**比較 (いない、**数**の比較) が使用されます。  
+>  XPath の関係演算子はオペランドを常に変換するため、**数**、**文字列**比較はできません。 日付の比較を含めるには、SQL Server 2000 は、XPath 仕様にこのバリエーションの 1 つを提供します。関係演算子を比較すると、**文字列**を**文字列**、ノード セットと、**文字列**、または、文字列値ノード セットを文字列値ノード セットを**文字列**比較 (いない、**数**比較) が実行されます。  
   
 ## <a name="node-set-conversions"></a>ノード セット変換  
  ノード セット変換は常に直感的なものとは限りません。 ノード セットに変換されます、**文字列**セット内の最初のノードのみの文字列値を取得しています。 ノード セットに変換されます**数**に変換してから、**文字列**、および変換し、**文字列**に**数**します。 ノード セットに変換されます**ブール**によってその存在をテストします。  

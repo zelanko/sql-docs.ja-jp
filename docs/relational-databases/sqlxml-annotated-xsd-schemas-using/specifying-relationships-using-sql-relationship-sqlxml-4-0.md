@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55741ddbf71eaff963e25c8e087c3cff31389409
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7578df8d31dadba739bb2de58a8568f6ba55d7e4
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670500"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256097"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship を使用した、リレーションシップの指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "51670500"
  **\<リレーションシップ >** 要素は、Sales.SalesOrderHeader テーブルの CustomerID を Sales.Customer テーブル内の CustomerID 主キーを参照する外部キーとして指定します。 したがって、顧客の注文の子要素として表示されます。 **\<顧客 >** 要素。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -121,7 +121,7 @@ ms.locfileid: "51670500"
  次は、スキーマを変更し、名前のないリレーションシップを指定した例です。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Customer" sql:relation="Sales.Customer"  type="CustomerType" />  
@@ -201,12 +201,12 @@ ms.locfileid: "51670500"
   
  XML ドキュメントでは、Sales.SalesOrderHeader テーブル内の注文ごとに 1 つ**\<順序 >** 要素。 それぞれ**\<順序 >** 要素のリストがある**\<製品 >** 子要素、注文した製品ごとに 1 つ。  
   
- この階層を生成する XSD スキーマを指定するには、OrderOD と ODProduct の 2 つのリレーションシップを指定する必要があります。 OrderOD リレーションシップでは、Sales.SalesOrderHeader テーブルと Sales.SalesOrderDetail テーブル間の親子リレーションシップを指定します。 ODProduct リレーションシップでは、Sales.SalesOrderDetail テーブルと Production.Product テーブル間のリレーションシップを指定します。  
+ この階層を生成する XSD スキーマを指定するには、2 つのリレーションシップを指定する必要があります。指定され、OrderOD と ODProduct します。 OrderOD リレーションシップでは、Sales.SalesOrderHeader テーブルと Sales.SalesOrderDetail テーブル間の親子リレーションシップを指定します。 ODProduct リレーションシップでは、Sales.SalesOrderDetail テーブルと Production.Product テーブル間のリレーションシップを指定します。  
   
- 次のスキーマで、 **msdata:relationship**注釈、 **\<製品 >** 要素が 2 つの値を指定します: OrderOD と ODProduct します。 これらの値の指定順序は重要です。  
+ 次のスキーマで、 **msdata:relationship**注釈、 **\<製品 >** 要素が 2 つの値を指定します。指定され、OrderOD と ODProduct します。 これらの値の指定順序は重要です。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -244,7 +244,7 @@ ms.locfileid: "51670500"
  名前付きリレーションシップを指定する代わりに、匿名のリレーションシップを指定することもできます。 ここでのコンテンツ全体**\<注釈 >**. **\</annotation >**、2 つのリレーションシップについて説明しますの子要素として表示される**\<製品 >** します。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Order" msdata:relation="Sales.SalesOrderHeader"   
@@ -323,7 +323,7 @@ ms.locfileid: "51670500"
  この例では、スキーマが含まれています、\<顧客 > を持つ要素を\<CustomerID > 子要素と IDREFS 型の OrderIDList 属性です。 \<顧客 > 要素が AdventureWorks データベースの Sales.Customer テーブルにマップします。 既定では、このマッピングのスコープがすべての子要素に適用されます、または属性の場合を除き、 **sql:relation**が指定されています、子要素または属性に、この場合は、適切なプライマリ-キー/外部キー リレーションシップがある必要があります使用して定義されている、\<リレーションシップ > 要素。 子要素または属性を使用して、別のテーブルを指定して、**関係**注釈を指定する必要がありますも、**リレーションシップ**注釈。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -392,7 +392,7 @@ ms.locfileid: "51670500"
  **\<順序 >** 要素が含まれています、  **\<OrderDetail >** 子要素。 **\<sql:relationship >** が指定されています **\<OrderDetail >** の子要素の子要素として、注文に関連する注文の詳細が表示されるように**\<順序 >** 要素。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -496,7 +496,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
  次の XML ビューには、  **\<Emp1 >** と **\<Emp2 >** 要素は、Sales.Emp1 および Sales.Emp2 テーブルにマップします。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

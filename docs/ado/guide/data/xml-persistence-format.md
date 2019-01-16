@@ -13,12 +13,12 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f794267904ec1c84595b4b627722a1ca935c15a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2330703450e42e8ddf9bfeed536dd3649d65edf8
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211011"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255687"
 ---
 # <a name="xml-persistence-format"></a>XML 保存形式
 ADO では、utf-8 が保持する XML ストリームのエンコードを使用します。  
@@ -67,7 +67,7 @@ xmlns:z="#RowsetSchema">
   
  スキーマでは、名前空間、スキーマ」セクションで、[データ] セクションの宣言を示します。 スキーマ セクションには、行、運送、CompanyName、および電話の定義が含まれています。  
   
- 準拠しているスキーマの定義、 [W3C の XML データの指定](https://www.w3.org/TR/1998/NOTE-XML-data/)(ただし、検証は、Internet Explorer 5 では発生しません) を完全に検証することができます。 XML データは、現在は、レコード セットの永続化のみサポートされているスキーマ形式です。  
+ 準拠しているスキーマの定義、 [W3C の XML データの指定](http://www.w3.org/TR/1998/NOTE-XML-data/)(ただし、検証は、Internet Explorer 5 では発生しません) を完全に検証することができます。 XML データは、現在は、レコード セットの永続化のみサポートされているスキーマ形式です。  
   
  [データ] セクションでは、運送会社に関する情報を含む 3 つの行があります。 [データ] セクションが空である空の行セットが、 \<rs: データ > タグが存在する必要があります。 データのない、書き込めるのタグの短縮形単に\<rs: データ/>。 "Rs"の付いた任意のタグは、urn: スキーマによって定義された名前空間内にあることを示します-microsoft-com:rowset します。  
   

@@ -13,12 +13,12 @@ ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5eb8012190914c2b5312a89428947f670db11df4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 45e8e37d8bb85e727771072abda9249b8155076f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201731"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256197"
 ---
 # <a name="schema-section"></a>スキーマ セクション
 スキーマ セクションが必要です。 前の例に示すように、ADO は更新可能な限りデータ値のセマンティクスを保持するには、各列に関する詳細なメタデータを書き込みます。 ただし、XML に読み込むには、ADO のみが必要です、列および所属する行セットの名前。 最小限のスキーマの例を次に示します。  
@@ -99,7 +99,7 @@ ms.locfileid: "53201731"
  同様があるため、エイリアスに対して定義されていない`CompanyName`前の例では、`CompanyName`ドキュメント全体で一貫して使用する必要があります。  
   
 ## <a name="data-types"></a>データ型  
- データ型は、dt:type 属性を持つ列に適用できます。 使用できる XML 型に説明するものでは、データ型を参照してください、 [W3C の XML データの指定](https://www.w3.org/TR/1998/NOTE-XML-data/)します。 2 つの方法でデータ型を指定できます。 列の定義自体で直接 dt:type 属性を指定するか、入れ子になった列定義の要素として s:datatype コンストラクトを使用します。 例えば以下のようにします。  
+ データ型は、dt:type 属性を持つ列に適用できます。 使用できる XML 型に説明するものでは、データ型を参照してください、 [W3C の XML データの指定](http://www.w3.org/TR/1998/NOTE-XML-data/)します。 2 つの方法でデータ型を指定できます。 列の定義自体で直接 dt:type 属性を指定するか、入れ子になった列定義の要素として s:datatype コンストラクトを使用します。 例えば以下のようにします。  
   
 ```  
 <s:AttributeType name="Phone" >  

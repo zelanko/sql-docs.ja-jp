@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c8edb6cb54d2ef600080093729a9ff0c06f4082
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3758a437a35ad3add877d04eaafca0997f7b2096
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671641"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256457"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath クエリの使用について (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51671641"
   
  XPath は、XML ドキュメントからノード セットを選択するときに使用できるグラフ ナビゲーション言語です。 XPath の各演算子では、前の XPath 演算子によって選択されたノード セットに基づいて、ノード セットを選択します。 たとえば、与えられた一連の**\<顧客 >** XPath のノードは、すべてを選択できます**\<順序 >** を持つノード、**日付**の値の属性 **「7/14/1999」** します。 結果のノード セットには、注文日が 1999 年 7 月 14 日となっているすべての注文が含まれます。  
   
- XPath 言語は W3C (World Wide Web Consortium) によって標準のナビゲーション言語として定義されています。 SQLXML 4.0 にある W3C XPath 仕様のサブセットを実装する https://www.w3.org/TR/1999/PR-xpath-19991008.htmlします。  
+ XPath 言語は W3C (World Wide Web Consortium) によって標準のナビゲーション言語として定義されています。 SQLXML 4.0 にある W3C XPath 仕様のサブセットを実装する http://www.w3.org/TR/1999/PR-xpath-19991008.htmlします。  
   
  次に、W3C XPath 実装と SQLXML 4.0 実装の主な違いを示します。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "51671641"
 |ノード関数|**先祖**、**先祖や self**、**子孫**、**子孫または self (//)**、**次**、 **次の兄弟**、**名前空間**、**前**、**前兄弟**|  
 |文字列関数|**string()**、 **concat()**、 **starts-with()**、 **contains()**、 **substring-before()**、 **substring-after()**、 **substring()**、 **string-length()**、 **normalize()**、 **translate()**|  
 |Boolean 関数群|**lang()**|  
-|数値関数|**sum()**、 **floor()**、 **ceiling()**、 **round()**|  
+|数値関数|**sum()**, **floor()**, **ceiling()**, **round()**|  
 |Union 演算子|&#124;|  
   
  テンプレートに XPath クエリを指定する場合には、次の動作に注意してください。  

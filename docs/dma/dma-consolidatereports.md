@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3b36e720cc390311c851eef55d09a74cc5e5d6ad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d26de5c86485e6e7a2c6a11b8528c55c8ce92229
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503279"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300089"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>エンタープライズを評価し、DMA で評価レポートの統合
 
@@ -35,6 +35,7 @@ ms.locfileid: "52503279"
     - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 以上。
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 以降。
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)します。
+    - [Azure PowerShell モジュール](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - ダウンロードして抽出します。
     - [DMA レポートの Power BI テンプレート](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip)します。
     - [LoadWarehouse スクリプト](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip)します。
@@ -120,7 +121,7 @@ DmaProcessor 関数に関連付けられているパラメーターは、次の�
 
 |パラメーター  |説明
 |---------|---------|
-|**プロセス**  | JSON ファイルの処理される場所です。 指定できる値は**SQLServer**と**AzureSQLDatabase**します。 |
+|**processTo**  | JSON ファイルの処理される場所です。 指定できる値は**SQLServer**と**AzureSQLDatabase**します。 |
 |**serverName** | SQL Server インスタンスは、データを処理します。  指定した場合**AzureSQLDatabase**の**プロセス**パラメーターでは、SQL Server の名前のみを含める (は含まれていません。 database.windows.net)。 求められます 2 つのログインの Azure SQL データベースを対象とする場合最初の 2 つ目は、Azure の SQL Server の管理者ログイン中に、Azure テナントの資格情報です。 |
 |**CreateDMAReporting** | JSON ファイルを処理するために作成するステージング データベースです。  既に指定したデータベースが存在する、いずれかにこのパラメーターを設定すると、オブジェクトを作成取得はありません。  このパラメーターは、削除された 1 つのオブジェクトを再作成するために便利です。 |
 |**CreateDataWarehouse** | Power BI レポートで使用されるデータ ウェアハウスを作成します。 |

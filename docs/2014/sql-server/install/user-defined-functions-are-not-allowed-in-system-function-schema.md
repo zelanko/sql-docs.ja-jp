@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a91275eadeebd6b996774363ab279eddc76f0f75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b7c21521fbdd4a4e80ed196c67c72f790341f020
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540008"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254277"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema でユーザー定義関数が許可されない
   アップグレード アドバイザーは、文書化されていないユーザーによって所有されているユーザー定義関数を検出しました。 **system_function_schema**します。 このユーザーを指定してユーザー定義のシステム関数を作成することはできません。 **System_function_schema**ユーザー名が存在しないため、この名前に関連付けられているユーザー ID (UID = 4) に予約されている、 **sys**スキーマと、内部使用のみに制限されます。  
@@ -55,7 +55,7 @@ ms.locfileid: "52540008"
   
 4.  参照を置き換える**system_function_schema**で**dbo**でユーザー定義関数 DDL ステートメントが含まれているすべてのスクリプト。  
   
-5.  変更するか、2 つの部分名 dbo * を使用して、これらの関数を呼び出すスクリプトを *. * * * function_name*、または 3 つの部分名*database_name ***.** dbo します。* function_name *。  
+5.  2 つの部分名 dbo を使用するこれらの関数を呼び出すスクリプトを変更して **.**_function_name_、または 3 つの部分名_database_name_**.** dbo します。*function_name*します。  
   
  詳細については、SQL Server オンライン ブックの次のトピックを参照してください。  
   

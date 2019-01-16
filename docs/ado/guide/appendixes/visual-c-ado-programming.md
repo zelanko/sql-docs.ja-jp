@@ -16,12 +16,12 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1b34c2b88c8e1906438f706143fcf6ec966026d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997594"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257047"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ での ADO プログラミング
 ADO の API リファレンスには、ADO アプリケーション プログラミング インターフェイス (API)、Microsoft Visual Basic に似た構文を使用しての機能について説明します。 ADO のプログラマが Visual Basic、Visual C などのさまざまな言語を使用する対象とするユーザーには、すべてのユーザーが、(としない場合、 **#import**ディレクティブ)、および Visual j (ADO と WFC クラス パッケージ) にします。  
@@ -74,6 +74,7 @@ variable = objectPtr->GetProperty;  // get property value
  たとえば、**コマンド**オブジェクト**ActiveConnection**プロパティが、別の構文で宣言された**取得**_ActiveConnection_と**PutRef**_ActiveConnection_します。 **PutRef**-たいので、実際が通常開いている状態に、構文は、適切な選択**接続**オブジェクト (つまり、**接続**オブジェクト ポインター) このプロパティ。 一方で、**レコード セット**オブジェクトが**取得**-、**配置**-、および**PutRef**_ActiveConnection_、操作が別の構文ではありません。  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>コレクション、GetItem メソッドをおよび項目のプロパティ  
+
  ADO など、いくつかのコレクションを定義する**フィールド**、**パラメーター**、**プロパティ**、および**エラー**します。 Visual C で、 **GetItem (_インデックス_)** メソッドは、コレクションのメンバーを返します。 *インデックス*は、**バリアント**、この値は、コレクション内のメンバーの数値インデックスまたは、メンバーの名前を含む文字列。  
   
  **__Declspec(property...)** コンパイラ ディレクティブを宣言、**項目**プロパティとして各コレクションに別の構文の基本的な**37-1getitem ()** メソッド。 代替構文は、角かっこを使用して、配列参照するようになります。 一般に、2 つの形式は、次のようになります。  

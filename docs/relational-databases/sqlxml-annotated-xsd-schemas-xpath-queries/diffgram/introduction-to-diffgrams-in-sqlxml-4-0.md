@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 567c4b6054623fad160dc17378e2a4a680fc4c8e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12746eec96373e5d5a66206081408fbe2d0d3544
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669511"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255827"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0 の DiffGram の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51669511"
 <diffgr:diffgram   
          xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"  
          xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"  
-         xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
    <DataInstance>  
       ...  
    </DataInstance>  

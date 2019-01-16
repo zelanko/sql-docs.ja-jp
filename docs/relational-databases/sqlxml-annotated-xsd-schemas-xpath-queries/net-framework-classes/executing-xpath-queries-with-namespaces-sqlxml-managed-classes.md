@@ -20,12 +20,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc9e8e9c8d3ea5d35c30110d8b317152cd7c40aa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ee8abb015ab4dab9606c7f81cb86f712bf23ec54
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673401"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254514"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>名前空間を使用した XPath クエリの実行 (SQLXML マネージド クラス)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51673401"
  SQLXML 4.0 では、この XPath クエリを名前空間プレフィックスと共に指定します。 例としては、 **x: 連絡先**ここで、 **x**名前空間のプレフィックスします。 次の XSD スキーマについて考えてみます。  
   
 ```  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
             xmlns:con="urn:myschema:Contacts"  
             targetNamespace="urn:myschema:Contacts">  

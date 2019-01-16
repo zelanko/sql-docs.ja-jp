@@ -17,17 +17,21 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcf2d5924e160f38c9b00b564a8ae94b6f8705c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 23ba1fdda2ce951834c221cdd58d39a034a5b3ff
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358004"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300589"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 の各エディションがサポートする機能
-  このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のさまざまなエディションでサポートされる機能の詳細について説明します。  
-  
-> **注:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の 180 日間の試用期間中は評価版で使用できます。 詳細については、次を参照してください。、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用版ソフトウェア Web サイト](https://go.microsoft.com/fwlink/?LinkId=190955)します。  
+
+  > [!div class="nextstepaction"]
+  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
+
+  このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のさまざまなエディションでサポートされる機能の詳細について説明します。 
+
+ > **注:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の 180 日間の試用期間中は評価版で使用できます。 詳細については、次を参照してください。、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用版ソフトウェア Web サイト](https://go.microsoft.com/fwlink/?LinkId=190955)します。  
 > 
 > **注:** SQL Server Evaluation Edition および SQL Server Developer Edition でサポートされている機能については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise の機能セットをご覧ください。  
   
@@ -368,7 +372,7 @@ ms.locfileid: "53358004"
 |使用状況レポート|はい|はい||||||  
 |状態の監視のルール|はい|はい||||||  
 |PowerPivot ギャラリー|はい|はい||||||  
-|PowerPivot のデータ更新|はい|はい||||||  
+|PowerPivot のデータ更新|はい|[はい]||||||  
 |PowerPivot データ フィード|はい|はい||||||  
   
 ###  <a name="DataMining"></a> データ マイニング  

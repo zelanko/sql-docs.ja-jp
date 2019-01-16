@@ -17,31 +17,31 @@ ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92fb7b0e9722c52c7f1e9fc071d434f531b2fc46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721910"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256227"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE、INSERT ステートメント
 SQL ベースのアプリケーションでは、テーブルに変更を加えるを実行して、 **UPDATE**、**削除**、および**挿入**ステートメント。 これらのステートメントでは、Minimum SQL 文法の準拠レベルの一部であるし、すべてのドライバーとデータ ソースでサポートする必要があります。  
   
  これらのステートメントの構文です。  
   
- **UPDATE**  *table-name*  
+ **UPDATE** _table-name_  
   
- **設定***列識別子* **=** {*式*&#124; です。**NULL**}  
+ **設定** _列識別子_  **=** {*式* &#124; です。**NULL**}  
   
- [**、** *列識別子* **=** {*式*&#124; です。**NULL**}].  
+ [**、** _列識別子_ **=** {*式*&#124; です。**NULL**}].  
   
- [**WHERE** *search-condition*]  
+ [**WHERE** _search-condition_]  
   
- **DELETE FROM** *table-name*[**WHERE** *search-condition*]  
+ **DELETE FROM** _table-name_[**WHERE** _search-condition_]  
   
- **INSERT INTO** *table-name*[**(***column-identifier* [**,** *column-identifier*]...**)**]  
+ **INSERT INTO** _table-name_[**(** _column-identifier_ [**,** _column-identifier_]...**)**]  
   
- {*クエリ仕様* &#124; **値 (* * * 挿入値*[* *、** *挿入値*].**)**}  
+ {*query-specification* &#124; **VALUES (** _insert-value_ [**,** _insert-value_]...**)**}  
   
  なお、*クエリ仕様*要素は、コアと拡張 SQL 文法とでのみ有効ですが、*式*と*検索条件*要素の詳細になりますコアと拡張 SQL 文法で複雑です。  
   

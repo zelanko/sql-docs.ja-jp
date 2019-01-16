@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 319980e5ce6b2bb1671c57c9619b635fbf130bf8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 52c93c8a30131b1e13ef177d6b76b946a1b639af
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671161"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255237"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの挿入 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -388,7 +388,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
  次のスキーマ (CustOrderSchema.xml) について説明します、  **\<CustOrder >** 要素で構成される、 **OrderID**と**EmployeeID**属性。 スキーマをさらに興味深いにするために、既定値が割り当てられている、 **EmployeeID**属性。 アップデートグラムでは、属性の既定値は、アップデートグラムでその属性が指定されていない挿入操作のみに使用されます。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="CustOrder" >  
    <xsd:complexType>  
@@ -458,7 +458,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0"?>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:element name="Student" sql:relation="Students">  
   <xsd:complexType>  
@@ -489,7 +489,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
       xmlns:updg="urn:schemas-microsoft-com:xml-updategram"  
-      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   
 <updg:sync mapping-schema='StudentSchema.xml'>  
   <updg:before/>  
@@ -564,7 +564,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
  次のスキーマ (XSD-ElementHavingNamespace.xml) では、対応する要素と属性の宣言方法を示しています。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
      xmlns:dt="urn:schemas-microsoft-com:datatypes"   
      xmlns:sql="urn:schemas-microsoft-com:mapping-schema"    
      xmlns:x="https://server/xyz/schemas/"   
@@ -636,7 +636,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
         <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
               xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
               xmlns:wf="https://www.adventure-works.com/schemas/OtherFeatures"   
-              xmlns:html="https://www.w3.org/1999/xhtml"   
+              xmlns:html="http://www.w3.org/1999/xhtml"   
               xmlns="">  
   <p1:Summary>  
      <html:p>Insert Example</html:p>  
@@ -687,7 +687,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
            xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  

@@ -1,7 +1,7 @@
 ---
 title: CDATA セクションを使用して sql:use を作成する-cdata (SQLXML 4.0) |マイクロソフトのドキュメント
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,14 +21,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ed36a17744c9626b54de7439af20cdd76c2bc18
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2af9a6ef501b09e102ed708fa7600416c9e0fd8b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667401"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254417"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>sql:use-cdata を使用した、CDATA セクションの作成 (SQLXML 4.0)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML では、文字がマークアップ文字として処理されないよう、文字を含むテキスト ブロックをエスケープするときに CDATA セクションを使用します。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "51667401"
  次のスキーマに**sql:use-cdata**の 1 (True) に設定されて、  **\<AddressLine1 >** 内の**\<アドレス >** 要素です。 この結果、データは CDATA セクション内に返されます。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Address"   
                sql:relation="Person.Address"   

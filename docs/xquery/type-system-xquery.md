@@ -24,21 +24,21 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e8b4680532843b9f60b6cdab3c0c528aab719dbf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668664"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254787"
 ---
 # <a name="type-system-xquery"></a>型システム (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery は、スキーマ型に対しては厳密に型指定された言語で、型指定されていないデータに対しては厳密には型指定されていない言語です。 XQuery の定義済みの型には、次のものがあります。  
   
--   内の XML スキーマの組み込み型、 **https://www.w3.org/2001/XMLSchema**名前空間。  
+-   内の XML スキーマの組み込み型、 **http://www.w3.org/2001/XMLSchema**名前空間。  
   
--   定義された型、 **https://www.w3.org/2004/07/xpath-datatypes**名前空間。  
+-   定義された型、 **http://www.w3.org/2004/07/xpath-datatypes**名前空間。  
   
  このトピックでは、次の内容についても説明します。  
   
@@ -65,7 +65,7 @@ WHERE ProductModelID=7
  この型指定情報は、列に関連付けられた XML スキーマ コレクションによって提供されます。  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>XPath データ型の名前空間で定義されている型  
- 定義された型、 **https://www.w3.org/2004/07/xpath-datatypes**名前空間の定義済みのプレフィックスがある**xdt**します。 これらの型には、次のことが当てはまります。  
+ 定義された型、 **http://www.w3.org/2004/07/xpath-datatypes**名前空間の定義済みのプレフィックスがある**xdt**します。 これらの型には、次のことが当てはまります。  
   
 -   XML スキーマ コレクションを作成しているときは、これらの型を使用できません。 これらの型が、XQuery 型システムで使用され、使わ[XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)します。 たとえば、アトミック型にキャストできます**xdt:untypedAtomic**の**xdt**名前空間。  
   
@@ -110,7 +110,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="integer"/>  
 </schema>'  
 GO  

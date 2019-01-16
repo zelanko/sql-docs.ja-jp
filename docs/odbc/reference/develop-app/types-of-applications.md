@@ -17,18 +17,18 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d835e7d541f69c6a84129d3d6c1c8128f748a23
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 50e3e733a4ddd4855da2ea7722407e5f061eee47
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541909"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255797"
 ---
 # <a name="types-of-applications"></a>アプリケーションの種類
 ODBC アプリケーションは、次のように分類できます。  
   
 -   **純粋な ODBC 2。**  
-     ***x*アプリケーション**32 ビット アプリケーションです。  
+     **_x_アプリケーション**32 ビット アプリケーションです。  
   
     -   ODBC 2 だけを呼び出します。*x*関数 (ODBC 1.0 関数を含む**SQLSetParam**)。 ODBC 1 が含まれます。*x* 32 ビットへ移植されたアプリケーション。  
   
@@ -37,10 +37,10 @@ ODBC アプリケーションは、次のように分類できます。
     -   再コンパイルされていない ODBC 3.5 ヘッダー。  
   
 -   **純粋な ODBC 2。**  
-     ***x*アプリケーションの再コンパイル**純粋な ODBC 2 *。x* ODBC 3.5 ヘッダー ファイルを使用して再コンパイルされているアプリケーション 0x0250 = ODBCVER を設定します。  
+     **_x_アプリケーションの再コンパイル**純粋な ODBC 2 *。x* ODBC 3.5 ヘッダー ファイルを使用して再コンパイルされているアプリケーション 0x0250 = ODBCVER を設定します。  
   
 -   **純粋な ODBC 2。**  
-     ***x* Unicode アプリケーション**純粋な ODBC 2 *。x* Unicode 準拠し、SQL_WCHAR データ型を使用するアプリケーションを再コンパイルします。  
+     **_x_ Unicode アプリケーション**純粋な ODBC 2 *。x* Unicode 準拠し、SQL_WCHAR データ型を使用するアプリケーションを再コンパイルします。  
   
 -   **純粋なグループと ISO**-**ODBC に準拠したアプリケーション**32 ビット アプリケーションです。  
   
