@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: e6585c78b26199c7ae5194e37d152db91aab1224
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba1cb702faef5826158f9f65e9bb36d794934a5a
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396317"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991775"
 ---
 # <a name="download-and-install-sqlpackage"></a>ダウンロードしてインストール sqlpackage
 
@@ -26,8 +26,8 @@ sqlpackage は、Windows、macOS、Linux で実行されます。
 |プラットフォーム|ダウンロード|リリース日|[バージョンのオプション]|ビルド
 |:---|:---|:---|:---|:---|
 |Windows|[MSI インストーラー](https://go.microsoft.com/fwlink/?linkid=2033947)|2018 年 10 月 24 日|18.0|15.0.4200.1|
-|macOS の .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2044514)|2018 年 11 月 15 日 | - |13.0.0.0|
-|Linux の .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2044263)|2018 年 11 月 15 日 | - |13.0.0.0|
+|macOS の .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2044514)|2018 年 11 月 15 日 | - |15.0.4240.1|
+|Linux の .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2044263)|2018 年 11 月 15 日 | - |15.0.4240.1|
 
 最新リリースに関する詳細については、次を参照してください。、[リリース ノート](sqlpackage-release-notes.md)します。
 
@@ -65,8 +65,9 @@ Sqlpackage のこのリリースには、標準の Windows インストーラー
    ```bash
    cd ~
    mkdir sqlpackage
-   unzip ~/Downloads/sqlpackage-linux-<version string>.zip ~/sqlpackage 
-   echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bashrc
+   unzip ~/Downloads/sqlpackage-linux-<version string>.zip -d ~/sqlpackage 
+   echo "export PATH=\"\$PATH:$HOME/sqlpackage\"" >> ~/.bashrc
+   chmod a+x ~/sqlpackage/sqlpackage
    source ~/.bashrc
    sqlpackage
    ```
@@ -77,7 +78,7 @@ Sqlpackage のこのリリースには、標準の Windows インストーラー
    **Debian:**
 
    ```bash
-   sudo apt-get install libuwind8
+   sudo apt-get install libunwind8
    ```
 
    **Redhat:**

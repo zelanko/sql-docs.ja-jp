@@ -11,19 +11,19 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c36ae89563490257ccc9db78c7386642a71f0ce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8e2df0607162f5f2cb90ff6b0525fdc530b7be66
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398432"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211822"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>高可用性、障害回復のための JDBC Driver のサポート
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  このトピックでは、高可用性とディザスター リカバリーを実現する [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]のための [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] のサポートについて説明します。 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]の詳細については、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] オンライン ブックを参照してください。  
+  このトピックでは、高可用性のディザスター リカバリーを実現する [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] のための [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] のサポートについて説明します。 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]の詳細については、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] オンライン ブックを参照してください。  
   
- Version 4.0 以降の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、接続プロパティを使用して、(高可用性、障害回復) 可用性グループ (AG) の可用性グループ リスナーを指定できます。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] アプリケーションを AlwaysOn データベースに接続しているときにフェールオーバーが発生した場合、元の接続は切断され、アプリケーションではフェールオーバー後に処理を続行するために新しい接続を開く必要があります。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] では、次の[接続プロパティ](../../connect/jdbc/setting-the-connection-properties.md)が追加されました。  
+ Version 4.0 以降の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、接続プロパティを使用して、(高可用性のディザスター リカバリー) 可用性グループ (AG) の可用性グループ リスナーを指定できます。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] アプリケーションを AlwaysOn データベースに接続しているときにフェールオーバーが発生した場合、元の接続は切断され、アプリケーションではフェールオーバー後に処理を続行するために新しい接続を開く必要があります。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] では、次の[接続プロパティ](../../connect/jdbc/setting-the-connection-properties.md)が追加されました。  
   
 -   **multiSubnetFailover**  
   
@@ -40,11 +40,11 @@ Microsoft JDBC Driver 6.0 for SQL Server では、新しい接続プロパティ
 * 64 を超える IP アドレスがある場合は、transparentNetworkIPResolution が無視されます。
 * TransparentNetworkIPResolution が true の場合、最初の接続試行は 500 ミリ秒のタイムアウト値を使用します。 接続の試行の残りの部分では、multiSubnetFailover 機能と同じロジックに従います。 
 
-> [!NOTE]  
-ユーザーは Microsoft JDBC Driver 4.2 を使用して (または削減) SQL Server の場合、 **multiSubnetFailover**が false の場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]最初の IP アドレスに接続しようとしています。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が 1 つ目の IP アドレスとの間に接続を確立できない場合、接続は失敗します。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、サーバーに関連付けられているその他の IP アドレスとの接続は試行されません。 
-
-  
-> [!NOTE]  
+> [!NOTE]
+> ユーザーは Microsoft JDBC Driver 4.2 を使用して (または削減) SQL Server の場合、 **multiSubnetFailover**が false の場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]最初の IP アドレスに接続しようとしています。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が 1 つ目の IP アドレスとの間に接続を確立できない場合、接続は失敗します。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、サーバーに関連付けられているその他の IP アドレスとの接続は試行されません。 
+> 
+> 
+> [!NOTE]
 >  接続タイムアウト値を大きくし、接続再試行ロジックを実装することにより、アプリケーションが可用性グループに接続する確立が高まります。 また、可用性グループのフェールオーバーにより接続が失敗する可能性があるため、接続再試行ロジックを実装して、再接続されるまで、失敗した接続の再接続を試行する必要があります。  
   
  
@@ -52,13 +52,13 @@ Microsoft JDBC Driver 6.0 for SQL Server では、新しい接続プロパティ
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover を使用した接続  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **multiSubnetFailover=true** を指定してください。 **multiSubnetFailover** を使用することで、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のすべての可用性グループおよびフェールオーバー クラスター インスタンスに対して高速フェールオーバーが有効化され、単一サブネットおよびマルチサブネットの AlwaysOn トポロジにおけるフェールオーバー時間が大幅に短縮されます。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 サブネット フェールオーバー中、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では TCP 接続が積極的に再試行されます。  
   
- **multiSubnetFailover** 接続プロパティを指定すると、アプリケーションが可用性グループまたはフェールオーバー クラスター インスタンスに配置され、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ではすべての IP アドレスに対して接続を試行することで、プライマリ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上のデータベースに接続が試行されます。 接続に対して **MultiSubnetFailover=true** を指定した場合、クライアントにより、オペレーティング システムの既定の TCP 再送信間隔より短い間隔で TCP 接続が再試行されます。 これにより、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後、再接続されるまでの時間を短縮することができます。単一サブネットとマルチサブネットの可用性グループ インスタンスおよびフェールオーバー クラスター インスタンスに適用することができます。  
+ **multiSubnetFailover** 接続プロパティを指定すると、アプリケーションが可用性グループまたはフェールオーバー クラスター インスタンスに配置され、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ではすべての IP アドレスに対して接続を試行することで、プライマリ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上のデータベースに接続が試行されます。 接続に対して **MultiSubnetFailover=true** を指定した場合、オペレーティング システムの既定の TCP 再送信間隔より短い間隔で、クライアントにより TCP 接続が再試行されます。 これにより、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後、再接続されるまでの時間を短縮することができます。単一サブネットとマルチサブネットの可用性グループ インスタンスおよびフェールオーバー クラスター インスタンスに適用することができます。  
   
  接続文字列キーワードの詳細については、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]を参照してください[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)します。  
   
  可用性グループ リスナーまたはフェールオーバー クラスター インスタンス以外に接続するときに **multiSubnetFailover=true** を指定すると、パフォーマンスが低下する可能性があるため、このような指定はサポートされていません。  
   
- セキュリティ マネージャーがインストールされていない場合、Java 仮想マシンにより仮想 IP アドレス (VIP) が期限付きでキャッシュされます。この期限は、既定で JDK 実装および Java プロパティ (networkaddress.cache.ttl および networkaddress.cache.negative.ttl) によって定義されます。 JDK セキュリティ マネージャーがインストールされている場合、Java 仮想マシンにより VIP がキャッシュされます。このキャッシュは、既定で更新されません。 Java 仮想マシン キャッシュの "有効期限" (networkaddress.cache.ttl) を 1 日に設定する必要があります。 既定値を 1 日 (またはその他の値) に変更しない場合、VIP が追加または更新されたときに古い値が削除されません。 Networkaddress.cache.ttl と networkaddress.cache.negative.ttl の詳細については、次を参照してください。 [ https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)します。  
+ セキュリティ マネージャーがインストールされていない場合、Java 仮想マシンにより仮想 IP アドレス (VIP) が期限付きでキャッシュされます。この期限は、既定で JDK 実装および Java プロパティ (networkaddress.cache.ttl および networkaddress.cache.negative.ttl) によって定義されます。 JDK セキュリティ マネージャーがインストールされている場合、Java 仮想マシンにより VIP がキャッシュされます。このキャッシュは、既定で更新されません。 Java 仮想マシン キャッシュの "有効期限" (networkaddress.cache.ttl) を 1 日に設定する必要があります。 既定値を 1 日 (またはその他の値) に変更しない場合、VIP が追加または更新されたときに Java 仮想マシン キャッシュから古い値が削除されません。 Networkaddress.cache.ttl と networkaddress.cache.negative.ttl の詳細については、次を参照してください。 [ https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)します。  
   
  可用性グループまたはフェールオーバー クラスター インスタンス内のサーバーに接続する際には、次のガイドラインに従います。  
   
@@ -70,7 +70,7 @@ Microsoft JDBC Driver 6.0 for SQL Server では、新しい接続プロパティ
   
 -   64 個を超える数の IP アドレスが構成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続すると、接続エラーが発生します。  
   
--   **multiSubnetFailover** 接続プロパティを使用するアプリケーションの動作は、認証の種類 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証、Kerberos 認証、または Windows 認証) の影響を受けません。  
+-   **multiSubnetFailover** 接続プロパティを使用するアプリケーションの動作は、次の認証の種類に影響されません。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証、Kerberos 認証、Windows 認証。  
   
 -   **loginTimeout** の値を増やすことで、フェールオーバー時間に対応し、アプリケーションの接続試行回数を減らすことができます。  
   

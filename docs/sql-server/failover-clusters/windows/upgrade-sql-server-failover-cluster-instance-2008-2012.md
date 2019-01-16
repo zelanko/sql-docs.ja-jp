@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a63d6e347f83e63f7f99a2e06e1122b1c93934b0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394152"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257057"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 クラスターで実行されている SQL Server インスタンスのアップグレード
 
@@ -46,12 +46,12 @@ ms.locfileid: "52394152"
 
 |                                   | すべてのサーバー オブジェクトと VNN が必要 | すべてのサーバー オブジェクトと VNN が必要 | サーバー オブジェクト/VNN は不要\* | サーバー オブジェクト/VNN は不要\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| ***可用性グループ(Y/N)***                  | ***Y***                              | ***N***                                                            | ***Y***    | ***N***    |
+| **_可用性グループ(Y/N)_**                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
 | **クラスターで SQL FCI のみを使用**         | [シナリオ 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [シナリオ 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [シナリオ 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [シナリオ 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **クラスターでスタンドアロン インスタンスを使用** | [シナリオ 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [シナリオ 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [シナリオ 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [シナリオ 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* 可用性グループ リスナー名を除く
 
-## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>シナリオ 1: SQL Server 可用性グループを使用する、フェールオーバー クラスター インスタンス (FCI) のない Windows クラスター
+## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>シナリオ 1:SQL Server 可用性グループを使用する、フェールオーバー クラスター インスタンス (FCI) のない Windows クラスター
 可用性グループ (AG) を使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップの場合、Windows Server 2016/2012 R2 とは異なる Windows クラスターに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の並列配置を作成することで新しいクラスターに移行できます。 その後、ターゲット クラスターが現在の運用クラスターに対してセカンダリとなる分散型 AG を作成できます。 その場合、ユーザーは [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 以降にアップグレードする必要があります。
 
 ###  <a name="to-perform-the-upgrade"></a>アップグレードを実行するには
@@ -194,7 +194,7 @@ SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../
 
 15. コンピューターが再起動後にオンラインに戻ったら、フェールオーバー クラスター マネージャーで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI ロールをそれぞれ開始します。
 
-## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>シナリオ 5: スタンドアロン SQL Server インスタンスと可用性グループを使用する Windows クラスター
+## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>シナリオ 5: スタンドアロン SQL Server インスタンスを使用し、可用性グループを含む Windows クラスター
 
 スタンドアロン レプリカを含む可用性グループを使用するクラスターの移行は、可用性グループを使用する FCI を含むクラスターの移行プロセスと似ています。 ここでも、元の可用性グループを削除して、ターゲット クラスターで再構築する必要があります。ただし、スタンドアロン インスタンスの移行には追加コストがかかるため、ダウンタイムが増えます。 **Always On は、移行前にターゲット環境内の各 FCI で有効にする必要があります。**
 
@@ -242,7 +242,7 @@ SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../
 
 ### [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]
 
--   **データベース** **ミラーリング** **エンドポイント**
+-   **データベース ミラーリング エンドポイント**
 
     SQL の観点から、データベース ミラーリング エンドポイントは、システム テーブルと共に新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに移行されます。 移行前に、ファイアウォールで適切なルールが適用されており、他のプロセスが同じポートでリッスンしていないことを確認してください。
 
@@ -256,17 +256,17 @@ SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../
 
 ### <a name="replication"></a>のレプリケーション
 
--   **リモート** **ディストリビューター**、**パブリッシャー**、**サブスクライバー**
+-   **リモート ディストリビューター、パブリッシャー、サブスクライバー**
 
     ディストリビューターとパブリッシャーとの関係は、これら 2 つをホストするコンピューターの VNN のみに依存します。これにより、新しいコンピューターに適切に解決されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブもシステム テーブルと共に適切に移行されるため、さまざまなレプリケーション エージェントで通常どおり実行を継続できます。 移行するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント自体または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブを実行する Windows アカウントに、ターゲット環境での同じアクセス許可が必要になります。 パブリッシャーとサブスクライバーの両方との通信は通常どおり実行されます。
 
--   **スナップショット** **フォルダー**
+-   **[スナップショット フォルダー]**
 
     移行するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能で使用されるネットワーク共有に、元の環境と同じアクセス許可でターゲット環境内のコンピューターからアクセスできる必要があります。 移行前に、アクセスできることを確認する必要があります。
 
 ### <a name="service-broker"></a>Service Broker
 
--   **Service** **Broker** **エンドポイント**
+-   **Service Broker エンドポイント**
 
     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の観点から、エンドポイントに関する問題はありません。 移行前に、同じポートで既にプロセスがリッスンしていないことと、ファイアウォール ルールでそのポートがブロックされていないこと、あるいはポートを特に許可するファイアウォール ルールがあることを確認する必要があります。
 
@@ -278,7 +278,7 @@ SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../
 
     ルートはターゲットの仮想ネットワーク名によって異なります。これにより、コンピューター名と SQL FCI ネットワーク名の両方が、新しい環境内の正しいコンピューターに適切に解決されます。 参照される他の VNN を新しいコンピューターにリダイレクトする必要もあります。
 
--   **リモート** **サービス** **バインド**
+-   **リモート サービス バインド**
 
     リモート サービス バインドを使用するすべてのユーザーが適切に移行すると、移行後にリモート サービス バインドは意図したとおりに機能します。
 
@@ -288,7 +288,7 @@ SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../
 
     ジョブは、システム データベースと共に適切に移行されます。 SQL エージェント ジョブまたは SQL エージェント自体を実行するすべてのユーザーは、ターゲット コンピューターに対して、前提条件で指定されているものと同じアクセス許可を持つことになります。
 
--   **アラートと** **演算子**
+-   **アラートと演算子**
 
     アラートと演算子は、システム データベースと共に適切に移行されます。
 

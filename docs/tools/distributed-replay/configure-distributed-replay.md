@@ -11,12 +11,12 @@ ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5253fc1b7ace718fc2d83cadd9fca944b4898c7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 166e5e929863a9c7213f3cda6f43e6c1007865b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506223"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125562"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "52506223"
   
 -   [再生構成ファイル](#ReplayConfig)  
   
-##  <a name="DReplayController"></a> コントローラー構成ファイル: DReplayController.config  
+##  <a name="DReplayController">コントローラー構成ファイル:</a>DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller サービスを開始すると、コントローラー構成ファイル `DReplayController.config`からログ記録レベルが読み込まれます。 このファイルは、Distributed Replay Controller サービスをインストールしたフォルダーにあります。  
   
  **\<コントローラーのインストール パス>\DReplayController.config**  
@@ -51,7 +51,7 @@ ms.locfileid: "52506223"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> クライアント構成ファイル: DReplayClient.config  
+##  <a name="DReplayClient"></a> クライアント構成ファイル:DReplayClient.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client サービスを開始すると、クライアント構成ファイル `DReplayClient.config`から構成設定が読み込まれます。 このファイルは、各クライアントの Distributed Replay Client サービスをインストールしたフォルダーにあります。  
   
  **\<クライアントのインストール パス>\DReplayClient.config**  
@@ -78,7 +78,7 @@ ms.locfileid: "52506223"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a> 前処理構成ファイル : DReplay.exe.preprocess.config  
+##  <a name="PreprocessConfig"></a> 前処理構成ファイル:DReplay.exe.preprocess.config  
  前処理段階を開始するために管理ツールを使用すると、管理ツールは前処理構成ファイル `DReplay.exe.preprocess.config` から前処理設定を読み込みます。  
   
  既定の構成ファイルまたは管理ツール **-c** パラメーターを使用して、変更された前処理構成ファイルの場所を指定します。 管理ツールの前処理オプションの使用の詳細については、「[前処理オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)」を参照してください。  
@@ -107,7 +107,7 @@ ms.locfileid: "52506223"
 </Options>  
 ```  
   
-##  <a name="ReplayConfig"></a> 再生構成ファイル : DReplay.exe.replay.config  
+##  <a name="ReplayConfig"></a> 再生構成ファイル:DReplay.exe.replay.config  
  イベント再生段階を開始するために管理ツールを使用すると、管理ツールは再生構成ファイル `DReplay.exe.replay.config`から再生設定を読み込みます。  
   
  既定の構成ファイルまたは管理ツール **-c** パラメーターを使用して、変更された再生構成ファイルの場所を指定します。 管理ツールの再生オプションの使用の詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)」を参照してください。  
@@ -123,7 +123,7 @@ ms.locfileid: "52506223"
   
 |設定|XML 要素|[説明]|指定できる値|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンス (テスト サーバー)|`<Server>`|接続先となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバーとインスタンスの名前を指定します。|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" または "`.`" を使用してローカル ホストを表すことはできません。|いいえ (管理ツールの **replay** オプションで、サーバー名が既に **-s***target server* パラメーターを使用して指定されている場合)。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンス (テスト サーバー)|`<Server>`|接続先となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバーとインスタンスの名前を指定します。|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" または "`.`" を使用してローカル ホストを表すことはできません。|いいえ (管理ツールの **replay** オプションで、サーバー名が既に **-s**_target server_ パラメーターを使用して指定されている場合)。|  
 |シーケンス モード|`<SequencingMode>`|イベント スケジュールに使用されるモードを指定します。|`synchronization` &#124; `stress`|不可。 既定値は `stress`です。|  
 |ストレス スケールの粒度|`<StressScaleGranularity>`|ストレス モードで、Service Profile ID (SPID) のすべての接続をまとめて測定するのか (SPID)、個別に測定するのか (Connection) を指定します。|SPID &#124; Connection|可能。 既定値は `SPID`です。|  
 |接続タイム スケール|`<ConnectTimeScale>`|ストレス モードで接続時間を測定するのに使用されます。|`1` ～ `100`の整数値です。|不可。 既定値は `100`です。|  
@@ -167,8 +167,8 @@ ms.locfileid: "52506223"
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>同期シーケンス モードで実行するときに、考えられる問題
  再生の機能が表示される「停止」、または再生イベントを非常に遅くなります現象が発生する可能性があります。 この現象は、データまたは復元先データベースに存在しないイベントが再生されるトレースが依存する場合に発生することができます。 
- 
-1 つの例は、キャプチャされたワークロードなど、Service Broker の受信の WAITFOR ステートメントで、WAITFOR を使用します。 同期シーケンス モードを使用して、バッチが順番に再生されます。 データベースのバックアップ後にソース データベースに対して挿入が発生した場合は、トレースを開始する再生キャプチャする前に、WAITFOR 受信再生中に発行された、WAITFOR の期間全体を待機する必要があります。 イベントは、WAITFOR の受信が停止している後に再生するのに設定します。 これにより、再生のデータベース ターゲットをゼロに削除するには、バッチ要求/秒パフォーマンス モニター カウンターで、WAITFOR が完了するまでです。 
+ 
+ 1 つの例は、キャプチャされたワークロードなど、Service Broker の受信の WAITFOR ステートメントで、WAITFOR を使用します。 同期シーケンス モードを使用して、バッチが順番に再生されます。 データベースのバックアップ後にソース データベースに対して挿入が発生した場合は、トレースを開始する再生キャプチャする前に、WAITFOR 受信再生中に発行された、WAITFOR の期間全体を待機する必要があります。 イベントは、WAITFOR の受信が停止している後に再生するのに設定します。 これにより、再生のデータベース ターゲットをゼロに削除するには、バッチ要求/秒パフォーマンス モニター カウンターで、WAITFOR が完了するまでです。 
  
  同期モードでありを使用して、この動作を回避する必要がある場合は、次の操作を行う必要があります。
  

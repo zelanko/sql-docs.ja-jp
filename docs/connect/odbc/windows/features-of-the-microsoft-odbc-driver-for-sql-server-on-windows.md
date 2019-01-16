@@ -11,12 +11,12 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a06f7360460aef57c9c103474f620796cff31d2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: db5c3e2e8265e88d49025ffd65894623fc5c5f85
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536640"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202241"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows の機能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -36,7 +36,7 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に
   
 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のこのリリースには、次の新機能が含まれています。  
   
-### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>ログイン タイムアウトを指定するための bcp.exe-l オプション
+### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>ログイン タイムアウトを指定するための bcp.exe -l オプション
  
 - l オプションでは、サーバーへの接続の試行時に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への `bcp.exe` のログインがタイムアウトするまでの秒数を指定します。 既定のログイン タイムアウトは、15 秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`bcp.exe` はエラー メッセージを生成します。 値 0 は、無限のタイムアウトを指定します。 (約) 10 秒未満のログイン タイムアウトは信頼できません。  
   

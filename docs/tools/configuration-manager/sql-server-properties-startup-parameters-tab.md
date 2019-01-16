@@ -12,18 +12,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 81a0a2e9d5201943cc6b04ac4b931d1e8a9a561e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ea089a65065aedac59eb7cac7308acdab097ff47
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540671"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213071"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([起動時のパラメーター] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   このダイアログ ボックスを使用すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の起動時のパラメーターを追加または削除できます。 起動時のパラメーターは [!INCLUDE[ssDE](../../includes/ssde-md.md)] のパフォーマンスに大きな影響を及ぼします。 起動時のパラメーターを追加または変更する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのスタートアップ オプションの使用」を参照してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[起動時のパラメーターの指定]**  
  パラメーターを追加するには、パラメーターを入力し、 **[追加]** をクリックします。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52540671"
  master データベースを移動する方法の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「システム データベースの移動」を参照してください。  
   
 ## <a name="optional-parameters"></a>省略可能なパラメーター  
- サポートされている、すべての起動時のパラメーターについては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのスタートアップ オプションの使用」で説明されています。 起動時のパラメーターの -T*trace#* は、指定された有効なトレース フラグ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace#*) を使用して*のインスタンスを起動することを指定します。 トレース フラグを使用してサーバーが起動すると、標準的な動作とは異なります。 トレース フラグの詳細については、[!INCLUDE[tsql](../../includes/tsql-md.md)]オンライン ブックの「トレース フラグ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )」を参照してください。  
+ サポートされている、すべての起動時のパラメーターについては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのスタートアップ オプションの使用」で説明されています。 起動時のパラメーターの -T*trace#* は、指定された有効なトレース フラグ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace#*) を使用して*のインスタンスを起動することを指定します。 トレース フラグを使用してサーバーが起動すると、標準的な動作とは異なります。 トレース フラグの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「トレース フラグ ([!INCLUDE[tsql](../../includes/tsql-md.md)])」を参照してください。  
   
 > [!CAUTION]  
 >  ドキュメントに未記載の起動時のパラメーターとトレース フラグについては、インターネット上で追加の説明を読むことができます。 ドキュメントに未記載の起動時のパラメーターとトレース フラグは、一般的ではない問題の解決またはテストに必要な特定の条件の適用のために作成されます。 ドキュメントに未記載の起動時のパラメーターを使用すると、予期しない結果になる場合があります。 マイクロソフト カスタマー サポート サービスから指示されない限り、ドキュメントに未記載のパラメーターを使用しないでください。  
@@ -80,6 +80,6 @@ ms.locfileid: "52540671"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって使用されるドメイン アカウント ( [!INCLUDE[ssDE](../../includes/ssde-md.md)] がドメイン アカウントで実行されるように構成されている場合)。  
   
 ## <a name="books-online-references"></a>オンライン ブックの参照  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時のパラメーターの追加情報については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「サーバーのスタートアップ オプションを構成する方法 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー)」を参照してください。  
+ 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]起動時のパラメーターを参照してください"する方法。サーバーのスタートアップ オプションの構成 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager)"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
   

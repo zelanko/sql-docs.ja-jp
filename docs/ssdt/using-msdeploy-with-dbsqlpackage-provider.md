@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4e9112840f6329bd846c62bd7f8dbb8b5d99340
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 128e1feeb3b344a21dbb682d4d41d402060ab1ff
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520949"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256947"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage プロバイダーでの MSDeploy の使用
 **DbSqlPackage** は SQL Server/SQL Azure データベースとのやり取りを可能にする **MSDeploy** プロバイダーです。 **DbSqlPackage** は次の操作をサポートしています。  
@@ -47,8 +47,8 @@ MS-Deploy 動詞は、MS-Deploy コマンド ラインに **-verb** スイッチ
   
 |動詞|[説明]|  
 |--------|---------------|  
-|ダンプ (dump)|.dacpac ファイルに含まれるソース データベースに関する名前、バージョン番号、説明などの情報を提供します。 ソース データベースは、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="***.dacpac-file-path***"**|  
-|sync|dbSqlPackage 操作は、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />sync 動詞の有効なソースおよびターゲットのパラメーターの詳細については、以下のセクションを参照してください。|  
+|ダンプ (dump)|.dacpac ファイルに含まれるソース データベースに関する名前、バージョン番号、説明などの情報を提供します。 ソース データベースは、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_.dacpac-file-path_**"**|  
+|sync|dbSqlPackage 操作は、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />sync 動詞の有効なソースおよびターゲットのパラメーターの詳細については、以下のセクションを参照してください。|  
   
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage ソース  
 **dbSqlPackage** は、有効な SQL Server または SQL Azure 接続文字列か、ディスク上にある .dacpac ファイルのパスのどちらかを入力として取得します。  プロバイダーの入力ソースを指定する構文は次のとおりです。  

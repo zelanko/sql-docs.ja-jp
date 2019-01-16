@@ -11,16 +11,16 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46285d61f38619ed8dff835faee266e5a76f591d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 709ee04eaaf35501cedae0e61d93cfe6e3b55210
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511161"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125942"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>replay オプション (Distributed Replay 管理ツール)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe**は、Distributed Replay Controller と通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **replay** コマンド ライン オプションとそれに対応する構文について説明します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe**は、Distributed Replay Controller と通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **replay** コマンド ライン オプションとそれに対応する構文について説明します。  
   
  **replay** オプションはイベント再生段階を開始します。ここでは、コントローラーは、指定されたクライアントに再生データをディスパッチし、分散再生を開始して、クライアントを同期します。 必要に応じて、再生に参加している各クライアントは再生アクティビティを記録し、結果トレース ファイルをローカルに保存できます。  
   
@@ -36,12 +36,12 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- **-m** *controller*  
+ **-m** _controller_  
  コントローラーのコンピューターの名前を指定します。 "`localhost`" または "`.`" を使用してローカル コンピューターを参照できます。  
   
  **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  中間ファイルが格納される、コントローラー上のディレクトリを指定します。 **-d** パラメーターは必須です。  
   
  これには次の要件があります。  
@@ -59,7 +59,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  **-o** パラメーターが指定されていない場合は、結果トレース ファイルは生成されません。 コンソール出力は再生の最後に概要情報を返しますが、他の再生統計情報は提供されません。  
   
- **-s** *target_server*  
+ **-s** _target_server_  
  分散ワークロードが再生される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンスを指定します。 このパラメーターは、 **server_name[\instance name]** の形式で指定します。  
   
  "`localhost`" または "`.`" を対象サーバーとして使用することはできません。  
@@ -68,18 +68,18 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  **-s** パラメーターが使用されている場合、再生構成ファイルの `<Server>` セクションの `<ReplayOptions>` 要素は無視されます。  
   
- **-w** *clients*  
+ **-w** _clients_  
  この必須パラメーターは、分散再生に参加するクライアントのコンピューター名を指定するコンマ区切りのリスト (スペースを含まない) です。 IP アドレスは指定できません。 コントローラーにクライアントが既に登録されている必要があることに注意してください。  
   
 > [!NOTE]  
 >  クライアント サービスが開始するときに、クライアント構成ファイルで指定されているコントローラーにクライアントが登録されます。  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  再生構成ファイルの完全なパスです。別の場所に保存されている場合に、その場所を指定するために使用します。  
   
  再生構成ファイル **の既定値を使用する場合、** -c `DReplay.exe.replay.config`パラメーターは必要ありません。  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  状態を表示する頻度 (秒単位) を指定します。  
   
  **-f** を指定しない場合は、既定の間隔は 30 秒です。  
@@ -91,7 +91,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   **-d** パラメーターは、コントローラーの中間ファイルの場所として `c:\WorkingDir`を指定しています。  
   
--   **-o** パラメーターは、指定された各クライアントが再生アクティビティをキャプチャし、それを結果トレース ファイルに保存するように指定しています。 注 : 構成ファイル内の `<ResultTrace>` 要素は、行数と結果セットが記録される場合に使用できます。  
+-   **-o** パラメーターは、指定された各クライアントが再生アクティビティをキャプチャし、それを結果トレース ファイルに保存するように指定しています。 注:構成ファイル内の `<ResultTrace>` 要素は、行数と結果セットが記録される場合に使用できます。  
   
 -   **-w** パラメーターは、 `client1` から `client4` までのコンピューターがクライアントとして分散再生に参加するように指定しています。  
   

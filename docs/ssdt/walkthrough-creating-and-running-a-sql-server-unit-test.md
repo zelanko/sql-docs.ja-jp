@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: SQL Server の単体テストの作成と実行 | Microsoft Docs'
+title: チュートリアル :SQL Server の単体テストの作成と実行 | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540933"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143592"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>チュートリアル :SQL Server の単体テストの作成と実行
 このチュートリアルでは、複数のストアド プロシージャの動作を検証する SQL Server の単体テストを作成します。 SQL Server の単体テストを作成すると、アプリケーションの不適切な動作の原因となる可能性があるコードの欠陥を特定するのに役立ちます。 SQL Server の単体テストとアプリケーション テストは、自動テスト スイートの一部として実行できます。  
@@ -274,7 +274,7 @@ ms.locfileid: "52540933"
   
 2.  ストアド プロシージャの 1 つを右クリックし、**[単体テストの作成]** をクリックして **[単体テストの作成]** ダイアログ ボックスを表示します。  
   
-3.  ストアド プロシージャのチェック ボックスの 5 つすべてを選択します。 **Sales.uspCancelOrder**、 **Sales.uspFillOrder**、 **Sales.uspNewCustomer**、 **Sales.uspPlaceNewOrder**、 **Sales.uspShowOrderDetails**。  
+3.  ストアド プロシージャのチェック ボックスの 5 つすべてを選択します。**Sales.uspCancelOrder**、**Sales.uspFillOrder**、**Sales.uspNewCustomer**、**Sales.uspPlaceNewOrder**、**Sales.uspShowOrderDetails**。  
   
 4.  **[プロジェクト]** ボックスの一覧で、**[新しい Visual C# テスト プロジェクトの作成]** を選択します。  
   
@@ -723,7 +723,7 @@ ms.locfileid: "52540933"
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|成功|  
     |Sales_uspShowOrderDetailsTest|成功|  
-    |Sales_uspFillOrderTest|"ScalarValueCondition 条件 (scalarValueCondition2) に失敗しました: ResultSet 1 行 1 列 1: 値が一致しません。実際は '-100' ですが、指定は '100' です。" というエラーが表示されて失敗します。このエラーは、ストアド プロシージャの定義に重大でないエラーが含まれていることが原因で発生します。|  
+    |Sales_uspFillOrderTest|次のエラーにより失敗しました:"ScalarValueCondition 条件 (scalarValueCondition2) が失敗しました:ResultSet 1 の行 1 の列 1: 値が一致しません。実際は '-100'、予期した値は '100'。"このエラーは、ストアド プロシージャの定義に重大でないエラーが含まれていることが原因で発生します。|  
   
     次に、エラーを修正してテストを再実行します。  
   
@@ -950,7 +950,7 @@ ms.locfileid: "52540933"
   
     テストは失敗し、次のエラーが表示されます。  
   
-    **Test method TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest threw exception: System.Data.SqlClient.SqlException: You can only cancel open orders.**  
+    **テスト メソッド TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest で、次の例外がスローされました。System.Data.SqlClient.SqlException: 未処理注文のみキャンセルすることができます。**  
   
     次に、例外が予期されたものであることを示すようにコードを変更します。  
   
@@ -968,7 +968,7 @@ ms.locfileid: "52540933"
     特定の例外が表示されることを予期するよう指定します。 必要に応じて、特定のエラー番号を指定することもできます。 この属性を追加しないと、単体テストは失敗し、メッセージが [テスト結果] ウィンドウに表示されます。  
   
     > [!IMPORTANT]  
-    > 現在、Visual Studio 2012 では ExpectedSqlException 属性がサポートされていません。 これに対処する方法については、「 ["予期されるエラー" データベース単体テストを実行できない](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)」を参照してください。  
+    > 現在、Visual Studio 2012 では ExpectedSqlException 属性がサポートされていません。 これに対処する方法については、「 ["予期されるエラー" データベース単体テストを実行できない](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)」を参照してください。  
   
 3.  [ファイル] メニューの [SqlServerUnitTests1.cs の保存] をクリックします。  
   

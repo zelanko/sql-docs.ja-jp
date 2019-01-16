@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c77e32b019f9b801daaa58e480d4825725f15e8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1f2c1cc7c40e3992f2cd28a777b48e0f927cf87
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697263"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135852"
 ---
 # <a name="database-engine-scripting"></a>データベース エンジン スクリプト
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "51697263"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ファイル]**/ メニューの **[開く]** を使用して、新しい[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウでファイルを開きます。  
   
--   **-i***input_file* パラメーターを使用して **sqlcmd** ユーティリティでファイルを実行します。  
+-   **-i**_input_file_ パラメーターを使用して **sqlcmd** ユーティリティでファイルを実行します。  
   
 -   **-QueryFromFile** パラメーターを使用して、 **PowerShell スクリプトの** Invoke-Sqlcmd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドレットでファイルを実行します。  
   
@@ -81,6 +81,6 @@ ms.locfileid: "51697263"
   
 ## <a name="see-also"></a>参照  
  [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
- [チュートリアル : Transact-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [チュートリアル: Transact-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

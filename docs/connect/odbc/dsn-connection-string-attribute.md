@@ -1,37 +1,35 @@
 ---
-title: DSN と接続文字列のキーワードと for SQL Server ODBC ドライバーで使用される属性 |Microsoft Docs
+title: DSN と接続文字列キーワードの ODBC ドライバー - SQL Server |Microsoft Docs
 ms.custom: ''
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+ms.reviewer: MightyPen
 ms.author: v-jizho2
+author: karinazhou
 manager: craigg
-ms.openlocfilehash: a5c75876771efbc87eb30c368fb5246e12c60707
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 0dedb58cf0a9825625027e363db20a56f06839dd
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512864"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306239"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN と接続文字列のキーワードと属性
 
 このページは、接続文字列と、Dsn キーワード、SQLSetConnectAttr と SQLGetConnectAttr、ODBC Driver for SQL Server で使用可能な接続属性を一覧表示します。
 
-
-
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>DSN または接続文字列のキーワードと接続属性をサポート
 
-次の表は、使用可能なキーワードと各プラットフォーム (l: Linux での属性M: Mac。W: Windows の場合)。 キーワードの詳細属性をクリックします。
+次の表は、使用可能なキーワードと各プラットフォーム (l: 属性Linux ; M:Mac。属性:Windows: キーワードの詳細属性をクリックします。
 
-| DSN / 接続文字列のキーワード | 接続属性 | プラットフォーム | 
+| DSN / 接続文字列のキーワード | 接続属性 | プラットフォーム |
 |-|-|-|
 | [Addr](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Address](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [AnsiNPW](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) |  [SQL_COPT_SS_ANSI_NPW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssansinpw) | LMW |
+| [AnsiNPW](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ANSI_NPW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssansinpw) | LMW |
 | [APP](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [ApplicationIntent](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_APPLICATION_INTENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssapplicationintent) | LMW |
 | [AttachDBFileName](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ATTACHDBFILENAME](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssattachdbfilename) | LMW |
@@ -103,7 +101,7 @@ ms.locfileid: "51512864"
 | | [SQL_COPT_SS_BROWSE_SERVER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbrowseserver) | LMW |
 | | [SQL_COPT_SS_CEKEYSTOREDATA](dsn-connection-string-attribute.md#sqlcoptsscekeystoredata) | LMW |
 | | [SQL_COPT_SS_CEKEYSTOREPROVIDER](dsn-connection-string-attribute.md#sqlcoptsscekeystoreprovider) | LMW |
-| | [SQL_COPT_SS_CLIENT_CONNECTION_ID](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md#sqlcoptssclientconnectionid) | LMW |
+| | [SQL_COPT_SS_CLIENT_CONNECTION_ID](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) | LMW |
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
@@ -179,7 +177,7 @@ SQL Server に接続するときに使用する認証モードを設定します
 
 | キーワードの値 | 属性値| [説明] |
 |-|-|-|
-|[ユーザー アカウント制御]|SQL_IS_ON|(既定値) 透過的なネットワーク IP の解決を有効にします。|
+|可|SQL_IS_ON|(既定値) 透過的なネットワーク IP の解決を有効にします。|
 |いいえ|SQL_IS_OFF|透過的なネットワーク IP の解決を無効にします。|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
@@ -189,7 +187,7 @@ SQL Server 2012 への接続と新しい場合は、メタデータに SET FMTON
 | キーワードの値 | [説明] |
 |-|-|
 |いいえ|(既定値)使用可能な場合は、メタデータの sp_describe_first_result_set を使用します。 |
-|[ユーザー アカウント制御]| メタデータに SET FMTONLY を使用します。 |
+|可| メタデータに SET FMTONLY を使用します。 |
 
 ### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
 

@@ -23,14 +23,19 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f2a600f727de4aa4e23de1ccbf2b668bba4ae0ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 17e210356aadaa17394abf0b68bf9303461943d2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370144"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300339"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)
+
+  > [!div class="nextstepaction"]
+  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
+
+
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には電子メール配信拡張機能があり、電子メールを使用してレポートを配布できます。 電子メール サブスクリプションをどのように定義するかに応じて、配信は、通知、リンク、添付ファイル、または埋め込みレポートから構成されます。 電子メール配信拡張機能は、既存のメール サーバー テクノロジと連携して動作します。 メール サーバーは、SMTP サーバーまたはフォワーダーである必要があります。 レポート サーバーは、オペレーティング システムに用意されている Collaboration Data Objects (CDO) ライブラリ (cdosys.dll) を通じて SMTP サーバーに接続します。  
   
  既定では、レポート サーバーの電子メール配信拡張機能は構成されていません。 Reporting Services 構成マネージャーを使用して、この拡張機能の最低限の構成を行う必要があります。 詳細なプロパティを設定するには、 `RSReportServer.config` ファイルを編集します。 この拡張機能を使用するようにレポート サーバーを構成できない場合は、代わりに共有フォルダーにレポートを配信できます。 詳細については、「 [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)」を参照してください。  

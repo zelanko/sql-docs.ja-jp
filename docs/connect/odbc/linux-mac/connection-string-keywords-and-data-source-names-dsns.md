@@ -15,12 +15,12 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c07b0bb4659f9b1b05573bf952842486f9ec72e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: db4df94d04a27df5715abe4bf5e4947850c687e4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420453"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125842"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server への接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52420453"
 参照してください[DSN と接続文字列キーワード、および属性](../../../connect/odbc/dsn-connection-string-attribute.md)のすべての接続文字列キーワードと Linux および Mac でサポートされる属性
 
 > [!IMPORTANT]  
-> データベース ミラーリングを使用する (フェールオーバー パートナーがある) データベースに接続する場合は、接続文字列にデータベース名を指定しないでください。 代わりに、**use** <*データベース名*> コマンドを送信してデータベースに接続してから、クエリを実行します。  
+> データベース ミラーリングを使用する (フェールオーバー パートナーがある) データベースに接続する場合は、接続文字列にデータベース名を指定しないでください。 代わりに、**use** <_データベース名_> コマンドを送信してデータベースに接続してから、クエリを実行します。  
   
 渡される値、**ドライバー**キーワードは、次のいずれかを指定できます。  
   
@@ -53,15 +53,15 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-サーバーに接続するために、必要に応じてプロトコルとポートを指定することができます。 たとえば、 **Server = tcp:***servername***, 12345**します。 Linux と macOS のドライバーでサポートされている唯一のプロトコルは`tcp`します。
+サーバーに接続するために、必要に応じてプロトコルとポートを指定することができます。 たとえば、 **Server = tcp:**_servername_**, 12345**します。 Linux と macOS のドライバーでサポートされている唯一のプロトコルは`tcp`します。
 
 静的ポートの名前付きインスタンスに接続するには、<b>Server=</b>*servername*,**port_number** を使用します。 動的ポートへの接続はサポートされていません。  
 
 または、DSN 情報をテンプレート ファイルに追加し、次のコマンドを実行して `~/.odbc.ini` に追加することもできます。
- - **odbcinst-i の-f** *template_file*  
+ - **odbcinst -i -s -f** _template_file_  
  
 使用して、ドライバーが動作していることを確認できる`isql`このコマンドを使用するか、接続をテストします。
- - **OutFile.dat-s out、bcp master.INFORMATION_SCHEMA.TABLES <server> -u <name> -p <password>**  
+ - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Secure Sockets Layer (SSL) を使用する  
 Secure Sockets Layer (SSL) を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]への接続を暗号化できます。 SSL は、ネットワーク上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のユーザー名とパスワードを保護します。 また、サーバーの ID を検証して、man-in-the-middle (MITM) 攻撃に対して保護することもできます。  

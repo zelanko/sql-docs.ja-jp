@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506826"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226689"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -66,8 +66,8 @@ Always Encrypted が有効でない場合、暗号化された列をターゲッ
 
 |クエリの特性 | Always Encrypted が有効になっており、アプリケーションがキーとキー メタデータにアクセスできる|Always Encrypted が有効になっており、アプリケーションがキーまたはキー メタデータにアクセスできない | Always Encrypted が無効になっている|
 |:---|:---|:---|:---|
-| 暗号化された列をターゲットとするパラメーター。 | パラメーター値は透過的に暗号化されます。 | [エラー] | [エラー]|
-| 暗号化された列をターゲットとするパラメーターを含まない、暗号化された列からのデータの取得。| 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションでは、プレーン テキスト列の値を受け取ります。 | [エラー] | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列として受け取ります。
+| 暗号化された列をターゲットとするパラメーター。 | パラメーター値は透過的に暗号化されます。 | Error | Error|
+| 暗号化された列をターゲットとするパラメーターを含まない、暗号化された列からのデータの取得。| 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションでは、プレーン テキスト列の値を受け取ります。 | Error | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列として受け取ります。
 
 次の例は、暗号化された列のデータを取得および変更する方法を示しています。 例には、次のスキーマを持つテーブルがあるとします。 SSN 列と BirthDate 列が暗号化されていることに注意してください。
 
@@ -96,7 +96,7 @@ CREATE TABLE [dbo].[Patients](
 
 - 暗号化された列を含め、データベース列に挿入された値は、バインドされたパラメーターとして渡されます (「[SQLBindParameter 関数](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)」を参照してください)。 暗号化されていない列に値を送信する場合、パラメーターの使用は省略可能です (ただし、SQL インジェクションを防ぐのに役立つので、強くお勧めします) が、暗号化された列をターゲットとする値に対しては必須です。 SSN または BirthDate 列に挿入された値は、クエリ ステートメントに埋め込まれているリテラルとして渡された、ドライバーは、暗号化、またはそれ以外のクエリ内のリテラルの処理を試行しませんので、クエリは失敗します。 その結果、サーバーはこれらの値を、暗号化された列と互換性がないと見なして拒否します。
 
-- SSN 列に挿入されるパラメーターの SQL 型が、SQL_CHAR にマップするに設定されている、 **char** SQL Server データ型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 パラメーターの型が、SQL_WCHAR にマップするに設定されたかどうか**nchar**、Always Encrypted は nchar の暗号化された値から暗号化された char 値へのサーバー側の変換はサポートされていない、クエリは失敗します。 参照してください[ODBC プログラマ リファレンス - 付録 d: データ型](https://msdn.microsoft.com/library/ms713607.aspx)については、データ型マッピングします。
+- SSN 列に挿入されるパラメーターの SQL 型が、SQL_CHAR にマップするに設定されている、 **char** SQL Server データ型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 パラメーターの型が、SQL_WCHAR にマップするに設定されたかどうか**nchar**、Always Encrypted は nchar の暗号化された値から暗号化された char 値へのサーバー側の変換はサポートされていない、クエリは失敗します。 参照してください[ODBC プログラマ リファレンス - 付録 d:データ型](https://msdn.microsoft.com/library/ms713607.aspx)については、データ型マッピングします。
 
 ```
     SQL_DATE_STRUCT date;
@@ -286,7 +286,7 @@ Always Encrypted はクライアント側暗号化テクノロジであるため
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>クエリ パラメーターのメタデータを取得するためのラウンド トリップを制御する
 
-既定では、接続に対して Always Encrypted が有効になっている場合、ドライバーは、各パラメーター化クエリに対して [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) を呼び出し、クエリ ステートメント (パラメーター値を除く) を SQL Server に渡します。 このストアド プロシージャを調べる場合は、すべてのパラメーターを暗号化する必要がある場合、クエリ ステートメントを分析し、暗号化することができるように、各パラメーターの暗号化に関連する情報を返します。 上記の動作により、クライアント アプリケーションへの透過性の概要: アプリケーション (およびアプリケーション開発者) に暗号化された列をターゲットとする値が渡される限り、暗号化された列にアクセスするクエリを意識する必要はありませんパラメーターでドライバー。
+既定では、接続に対して Always Encrypted が有効になっている場合、ドライバーは、各パラメーター化クエリに対して [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) を呼び出し、クエリ ステートメント (パラメーター値を除く) を SQL Server に渡します。 このストアド プロシージャを調べる場合は、すべてのパラメーターを暗号化する必要がある場合、クエリ ステートメントを分析し、暗号化することができるように、各パラメーターの暗号化に関連する情報を返します。 上記の動作により、クライアント アプリケーションに対する高度な透明性が確保されます。暗号化された列をターゲットとする値がパラメーターでドライバーに渡される限り、アプリケーション (およびアプリケーション開発者) は、暗号化された列にどのクエリがアクセスするかを認識する必要はありません。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>ステートメントあたりの動作を常に暗号化します。
 
@@ -294,7 +294,7 @@ Always Encrypted はクライアント側暗号化テクノロジであるため
 
 ステートメントの Always Encrypted の動作を制御する設定 SQLSetStmtAttr を呼び出す、`SQL_SOPT_SS_COLUMN_ENCRYPTION`ステートメント属性値は次のいずれかを使用します。
 
-|ReplTest1|[説明]|
+|[値]|[説明]|
 |-|-|
 |`SQL_CE_DISABLED` (0)|ステートメントの暗号化が常に無効になっています|
 |`SQL_CE_RESULTSETONLY` (1)|暗号化解除のみです。 結果セットと戻り値は復号化、およびパラメーターが暗号化されていません。|
@@ -426,7 +426,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ドライバーが読み込みメカニズム プラットフォーム定義されているダイナミック ライブラリを使用して ValuePtr パラメーターで識別されるライブラリの読み込みを試行 (`dlopen()` Linux と macOS、 `LoadLibrary()` Windows 上) の一覧にその中に定義されているすべてのプロバイダーを追加します。ドライバーに既知のプロバイダー。 次のエラーが発生することがあります。
 
-| [エラー] | [説明] |
+| Error | [説明] |
 |:--|:--|
 |`CE203`|ダイナミック ライブラリを読み込むことができませんでした。|
 |`CE203`|ライブラリで"CEKeyStoreProvider"エクスポート シンボルが見つかりませんでした。|
@@ -437,7 +437,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 > [!NOTE]
 > アプリケーション プログラマでは、それらを必要とする任意のクエリがすべて接続経由で送信される前に、カスタム プロバイダーが読み込まれたことを確認する必要があります。 このようにしないと、エラーが発生します。
 
-| [エラー] | [説明] |
+| Error | [説明] |
 |:--|:--|
 |`CE200`|キーストア プロバイダー %1 が見つかりません。 適切なキーストア プロバイダー ライブラリが読み込まれたことを確認します。|
 
@@ -538,7 +538,7 @@ SQLPutData と部分では、データの挿入や比較を送信できません
 
 ## <a name="bulk-copy-of-encrypted-columns"></a>暗号化された列の一括コピー
 
-使用、 [SQL 一括コピー関数](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)と**bcp** SQL Server 用 ODBC Driver 17 以降ユーティリティで Always Encrypted でサポートされます。 プレーン テキスト (挿入時に暗号化およびで復号化された取得) と (そのまま転送) の暗号化テキストの両方を挿入できるし、一括コピー (bcp_ *) Api を使用して取得し、 **bcp**ユーティリティ。
+使用、 [SQL 一括コピー関数](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)と**bcp** SQL Server 用 ODBC Driver 17 以降ユーティリティで Always Encrypted でサポートされます。 プレーン テキスト (挿入時に暗号化およびで復号化された取得) と (そのまま転送) の暗号化テキストの両方を挿入できるし、一括コピーを使用して取得 (bcp_&#42;) Api と**bcp**ユーティリティ。
 
 - Varbinary (max) の形式 (たとえば、別のデータベースに読み込む一括) で暗号化テキストを取得せずに接続する、`ColumnEncryption`オプション (またはに設定する`Disabled`) BCP OUT 操作を実行します。
 
@@ -546,7 +546,7 @@ SQLPutData と部分では、データの挿入や比較を送信できません
 
 - Varbinary (max) の形式 (例: 取得された上) で暗号化テキストを挿入、設定、`BCPMODIFYENCRYPTED`オプションを TRUE にして、BCP IN 操作を実行します。 結果として得られるデータを復号可能なためには、転送先の列の CEK が元の暗号化テキストの取得元と同じことを確認します。
 
-使用する場合、 **bcp**ユーティリティ: コントロールに、`ColumnEncryption`設定、-d オプションを使用して、目的の値を含む DSN を指定します。 暗号化テキストを挿入することを確認、`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`ユーザーの設定を有効にします。
+使用する場合、 **bcp**ユーティリティ。コントロールに、`ColumnEncryption`設定、-d オプションを使用して、目的の値を含む DSN を指定します。 暗号化テキストを挿入することを確認、`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`ユーザーの設定を有効にします。
 
 次の表は、暗号化された列で動作しているときに操作の概要を示します。
 

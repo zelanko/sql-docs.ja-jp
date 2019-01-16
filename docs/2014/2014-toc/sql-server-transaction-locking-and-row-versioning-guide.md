@@ -10,12 +10,12 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 538386a12c2f33038a3688f102140dd5fd4c1845
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfd65d3335c7eb57c69f4fe6a37042376efc71bf
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375594"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300609"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server トランザクションのロックおよび行のバージョン管理ガイド
   どのようなデータベースであっても、トランザクションを正しく管理しないと、ユーザー数が多いシステムでは競合やパフォーマンスの問題を招くことがあります。 データにアクセスするユーザー数が多いほど、トランザクションが効率的に行われるアプリケーションを用意することが重要になります。 このガイドでは、各トランザクションの物理的な整合性の確保を目的として [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]で使用されるロックおよび行のバージョン管理のメカニズムと、アプリケーションで効率的にトランザクションを制御する方法について説明します。  
@@ -152,7 +152,7 @@ GO
   
  次の例では、3 番目の `INSERT` ステートメントによって、主キーが重複するという実行時エラーが生成されます。 最初の 2 つの `INSERT` ステートメントは正常に完了しコミットされるので、実行時エラーの生成後も有効です。  
   
-```  
+```sql  
 CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));  
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  

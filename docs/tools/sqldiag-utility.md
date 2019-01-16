@@ -30,12 +30,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a20913ac99f7c4cf32ae31c55cdf027f2db360c1
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 05336c1b9a7f6830b3dd2c6e6f0b794984bda061
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292709"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100947"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,16 +86,16 @@ sqldiag
  **/?**  
  使用方法についての情報を表示します。  
   
- **/I** *configuration_file*  
+ **/I** _configuration_file_  
  **SQLdiag** が使用する構成ファイルを設定します。 既定では、 **/I** は SQLDiag.Xml に設定されます。  
   
- **/O** *output_folder_path*  
+ **/O** _output_folder_path_  
  **SQLdiag** 出力を、指定されたフォルダーにリダイレクトします。 **/O** オプションが指定されない場合、 **SQLdiag** 出力は、 **SQLdiag** スタートアップ フォルダーの下にある SQLDIAG という名前のサブフォルダーに書き込まれます。 SQLDIAG フォルダーが存在しない場合、 **SQLdiag** によって作成されます。  
   
 > [!NOTE]  
 >  出力フォルダーの場所は、 **/P**で指定できるサポート フォルダーの場所に応じて決まります。 まったく別の場所に出力フォルダーを設定するには、 **/O**に完全なディレクトリ パスを指定します。  
   
- **/P** *support_folder_path*  
+ **/P** _support_folder_path_  
  サポート フォルダーのパスを設定します。 既定では、 **/P** は **SQLdiag** 実行可能ファイルが存在するフォルダーに設定されます。 サポート フォルダーには、XML 構成ファイル、Transact-SQL スクリプト、診断情報の収集中にユーティリティが使用するその他のファイルなどの **SQLdiag** サポート ファイルが格納されています。 このオプションを使用して、別のサポート ファイルのパスを指定すると、 **SQLdiag** は指定されたフォルダーに必要なサポート ファイルが存在しない場合、それらのファイルを指定されたフォルダーへ自動的にコピーします。  
   
 > [!NOTE]  
@@ -103,7 +103,7 @@ sqldiag
 >   
 >  **SQLDIAG /P %cd%**  
   
- **/N** *output_folder_management_option*  
+ **/N** _output_folder_management_option_  
  起動時に **SQLdiag** が出力フォルダーを上書きまたは名前を変更するかどうかを設定します。 使用できるオプションは次のとおりです。  
   
  1 = 出力フォルダーを上書きします (既定)。  
@@ -113,12 +113,12 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** は起動時に、現在の出力フォルダーに出力を追加しません。 既定の出力フォルダーを上書きするか (オプション 1)、または既定のフォルダー名を変更して (オプション 2)、SQLDIAG という名前の新しい既定の出力フォルダーに出力を書き込むかのどちらかです。  
   
- **/M** *machine1* [ *machine2 * * machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
  構成ファイルで指定されたコンピューターをオーバーライドします。 既定では、構成ファイルは SQLDiag.Xml です。または **/I** パラメーターで設定されます。 複数のコンピューターを指定する場合、それぞれのコンピューター名をスペースで区切ります。  
   
  *@machinelistfile* を使用すると、構成ファイルに保存するコンピューター一覧のファイル名が指定されます。  
   
- **/C** *file_compression_type*  
+ **/C** _file_compression_type_  
  **SQLdiag** 出力フォルダー ファイルで使用されるファイル圧縮の種類を設定します。 使用できるオプションは次のとおりです。  
   
  0 = なし (既定)。  
@@ -153,7 +153,7 @@ sqldiag
   
  **SQLdiag** は、ユーティリティが実行されているコンピューター上のローカル時間を使用することに注意してください。  
   
- **/A**  *SQLdiag_application_name*  
+ **/A**  _SQLdiag_application_name_  
  **SQLdiag** ユーティリティの複数のインスタンスの実行を、同一の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに対して有効にします。  
   
  各 *SQLdiag_application_name* は、異なるインスタンスの **SQLdiag**を特定します。 *SQLdiag_application_name* インスタンスの名前と [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの名前には関連性はありません。  
@@ -162,11 +162,11 @@ sqldiag
   
  例 :  
   
- **SQLDIAG START /A**  *SQLdiag_application_name*  
+ **SQLDIAG START /A**  _SQLdiag_application_name_  
   
  **/R** オプションと共に使用し、 **SQLdiag** の特定のインスタンスをサービスとして登録することもできます。 例 :  
   
- **SQLDIAG /R /A** *SQLdiag_application_name*  
+ **SQLDIAG /R /A** _SQLdiag_application_name_  
   
 > [!NOTE]  
 >  **SQLdiag** は *SQLdiag_application_name*に指定されたインスタンス名に、自動的にプレフィックスの DIAG$ を付けます。 これにより、 **SQLdiag** をサービスとして登録する場合に、わかりやすいサービス名になります。  
@@ -202,7 +202,7 @@ sqldiag
   
  **net start** コマンドを次のように使用してサービスを開始することもできます。  
   
- **net**  **start SQLDIAG**  
+ **net  start SQLDIAG**  
   
  **/U**  
  **SQLdiag** のサービスとしての登録を解除します。  
@@ -229,7 +229,7 @@ sqldiag
   
  **START** 、 **STOP**、または **STOP_ABORT**と共に使用し、 **SQLdiag**サービスの特定のインスタンスを制御できるのは、 **SQLdiag** の名前付きインスタンスを指定した **/A** 引数のみです。 例 :  
   
- **SQLDIAG START /A** *SQLdiag_application_name*  
+ **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>セキュリティ要件  
  **SQLdiag** を汎用モード ( **/G** コマンド ライン引数を指定) 以外のモードで実行する場合は、 **SQLdiag** を実行するユーザーは、Windows **Administrators** グループのメンバー、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールのメンバーであることが必要です。 既定では、 **SQLdiag** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続しますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証もサポートされます。  
