@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0572f9ef57b5d1ba17383cf758f612b0c6eec81f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bfd659028d02c7b37dcf31c36b587ce5f3550661
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677691"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256817"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>レコードの生成処理 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "51677691"
  たとえば、次の XSD スキーマ フラグメントを考えてみます。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Customer" sql:relation="Customers" >  
    <xsd:complexType>  
@@ -116,7 +116,7 @@ ms.locfileid: "51677691"
  ここで、次の注釈付き XSD スキーマで指定される XML ビューを考えてみます。 このスキーマを使用して **\<sql:relationship >** 顧客と CustOrder テーブル間のリレーションシップを指定します。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -221,12 +221,12 @@ ms.locfileid: "51677691"
 ## <a name="exceptions-to-the-record-generation-rule"></a>レコード生成の規則の例外  
  XML 一括読み込みでは、IDREF または IDREFS 型のノードがスコープ内に入っても、ノードのレコードは生成されません。 スキーマのどこかで、レコードを完全に記述するようにしてください。 **Dt:type =「nmtokens」** IDREFS 型が無視されると同様、注釈は無視されます。  
   
- 例えば、次の XSD スキーマを記述する**\<お客様 >** と**\<注文 >** 要素です。 **\<お客様 >** 要素が含まれています、 **OrderList** IDREFS 型の属性です。 **\<Sql:relationship >** タグは、一対多の関係、顧客と注文の一覧を指定します。  
+ 例えば、次の XSD スキーマを記述する**\<お客様 >** と**\<注文 >** 要素です。 **\<お客様 >** 要素が含まれています、 **OrderList** IDREFS 型の属性です。  **\<Sql:relationship >** タグは、一対多の関係、顧客と注文の一覧を指定します。  
   
  スキーマは次のようになります。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

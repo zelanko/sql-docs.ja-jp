@@ -1,7 +1,7 @@
 ---
 title: クエリ (SQLXML 4.0) での XSD スキーマを使用して注釈が付けられた |Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,18 +23,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48773fe5b4238f74c88bd8fb91f425ce96fd4359
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7d6fd994c25acae6a27d5c66c18f1c2a7d7b3a77
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665321"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256857"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>クエリでの注釈付き XSD スキーマの使用 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   注釈付きスキーマに対してクエリを指定し、XSD スキーマに対してテンプレートで XPath クエリを指定して、データベースからデータを取得することができます。  
   
- **\<Sql:xpath-クエリ >** 要素では、注釈付きスキーマで定義されている XML ビューに対して XPath クエリを指定することができます。 使用して実行するのには、XPath クエリ対象となる注釈付きスキーマが識別される、**マッピング スキーマ**の属性、  **\<sql:xpath-クエリ >** 要素。  
+  **\<Sql:xpath-クエリ >** 要素では、注釈付きスキーマで定義されている XML ビューに対して XPath クエリを指定することができます。 使用して実行するのには、XPath クエリ対象となる注釈付きスキーマが識別される、**マッピング スキーマ**の属性、  **\<sql:xpath-クエリ >** 要素。  
   
  テンプレートは、1 つ以上のクエリを含む有効な XML ドキュメントです。 FOR XML クエリと XPath クエリでは、ドキュメント フラグメントが返されますが、 テンプレートは、ドキュメント フラグメントのコンテナーとして機能します。テンプレートは、そのため、1 つの最上位の要素を指定する方法を提供します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "51665321"
  たとえば、次の注釈付きスキーマを考えてみます。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -76,7 +76,7 @@ ms.locfileid: "51665321"
   
 ```  
 <ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
-<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema1' sql:is-mapping-schema='1'>  
   <xsd:element name='Employees' ms:relation='HumanResources.Employee'>  
@@ -89,7 +89,7 @@ ms.locfileid: "51665321"
   </xsd:element>  
 </xsd:schema>  
   
-<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema2' sql:is-mapping-schema='1'>  
   <xsd:element name='Contacts' ms:relation='Person.Contact'>  

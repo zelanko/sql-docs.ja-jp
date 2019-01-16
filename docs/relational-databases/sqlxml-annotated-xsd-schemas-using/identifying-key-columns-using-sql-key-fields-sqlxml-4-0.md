@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d00c0f2347ddd948f7c192a6b51b3185a59a0679
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 79ccd8f7126be2bb52563e2f6f6b4e75db35b1e4
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665391"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256607"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields を使用した、キー列の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ ms.locfileid: "51665391"
   
  次のスキーマを検討してください。 スキーマ間の階層の指定、 **\<順序 >** と**\<顧客 >** いる要素、 **\<順序 >** 要素は親と**\<顧客 >** 要素は、子。  
   
- **\<Sql:relationship >** 親子リレーションシップを指定するタグを使用します。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 提供される情報 **\<sql:relationship >** 親テーブル (Sales.SalesOrderHeader) 内の行を一意に識別するには不十分です。 指定しないと、 **sql:key-フィールド**注釈、生成される階層は正確ではありません。  
+  **\<Sql:relationship >** 親子リレーションシップを指定するタグを使用します。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 提供される情報 **\<sql:relationship >** 親テーブル (Sales.SalesOrderHeader) 内の行を一意に識別するには不十分です。 指定しないと、 **sql:key-フィールド**注釈、生成される階層は正確ではありません。  
   
  **Sql:key-フィールド**で指定した**\<順序 >** 注釈は、親 (Sales.SalesOrderHeader テーブル) 内の行を一意に識別し、その子要素が下に表示、その親。  
   
  スキーマは次のようになります。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -131,7 +131,7 @@ ms.locfileid: "51665391"
  次のスキーマを使用して指定された階層はありません **\<sql:relationship >** します。 スキーマを指定する必要がありますが、 **sql:key-フィールド**HumanResources.Employee テーブルに従業員を一意に識別する注釈。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="HumanResources.Employee" sql:key-fields="EmployeeID" >  
    <xsd:complexType>  
@@ -175,7 +175,7 @@ ms.locfileid: "51665391"
   
      詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

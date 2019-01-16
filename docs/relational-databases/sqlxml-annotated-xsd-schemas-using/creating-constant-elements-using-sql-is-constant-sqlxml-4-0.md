@@ -1,7 +1,7 @@
 ---
 title: '定数要素を使用した作成: は定数 (SQLXML 4.0) |マイクロソフトのドキュメント'
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,14 +20,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f749e5c37742ac4e52a9cf0fc9dcb417d07aede0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bfc7504807754227de489b03f845ddbd2ad5d61b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545431"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256938"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant を使用した、定数要素の作成 (SQLXML 4.0)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   定数要素を指定する、データベース テーブルまたは列にマップされない XSD スキーマ内の要素は、-使用することができます、 **sql: は定数**注釈。 この注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。 **Sql: は定数**任意の属性がない要素に注釈を指定できます。 この注釈を値 true (または 1) と共に要素に指定した場合、その要素は XML ドキュメント内に表示されますが、データベースにはマップされなくなります。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "52545431"
   **\<CustomerOrders >** マップされないデータベースのテーブルまたは列を結果の XML を含むコンテナー要素として表示されます、 **\<順序 >** 子要素。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

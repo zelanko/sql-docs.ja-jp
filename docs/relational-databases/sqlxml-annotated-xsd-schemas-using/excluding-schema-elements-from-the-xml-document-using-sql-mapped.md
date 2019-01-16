@@ -24,12 +24,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0efaecb87fb9fa2876d2c5cb66f36eae48e7b974
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a93d62917efb4bb53c1d5a699109844e1d358bb6
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669301"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256037"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>sql:mapped を使用した XML ドキュメントからのスキーマ要素の除外
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "51669301"
   
  この XSD スキーマを AdventureWorks データベースの Person.Contact テーブルにマッピング**sql: マップ**が指定されて、 **HomeAddress** Employees テーブルは、ホームを格納していないため、属性従業員の住所。 この結果、マッピング スキーマに対して Xpath クエリを指定すると、属性はデータベースにマップされず、結果の XML ドキュメント内に返されません。  
   
- スキーマの残りの部分に対しては、既定のマッピングが適用されます。 **\<Person.Contact >** 要素は Person.Contact テーブルにマップされ、すべての属性は Person.Contact テーブル内の同じ名前の列にマップします。  
+ スキーマの残りの部分に対しては、既定のマッピングが適用されます。  **\<Person.Contact >** 要素は Person.Contact テーブルにマップされ、すべての属性は Person.Contact テーブル内の同じ名前の列にマップします。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact">  
     <xsd:complexType>  
