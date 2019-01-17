@@ -3,7 +3,7 @@ title: ダウンロードしてインストールする
 titleSuffix: Azure Data Studio
 description: ダウンロードと Windows 用の Azure データ Studio のインストール、macOS、または Linux
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 01/17/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d7e9cd2130487a0ac50d6aa55a8a2e0f9cf9e80c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 09e459b61350a100a64a788e0c7746d9a2ae623e
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298719"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361618"
 ---
 # <a name="download-and-install-azure-data-studio"></a>ダウンロードし、Azure Data Studio のインストール
 
@@ -26,16 +26,18 @@ ms.locfileid: "54298719"
 [!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で動作します。
 
 
-ダウンロードして、最新のリリースでは、インストール、*年 1 月リリース*:
+ダウンロードして、最新のリリースでは、インストール、*年 1 月の修正プログラム リリース*:
+
+バージョン 1.3.9 1.3.8 で発見されたいくつかの問題を修正します。 詳細については、次を参照してください。[年 1 月の修正プログラム リリース](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)します。
 
 > [!NOTE]
 > SQL Operations Studio から更新しているし、設定、キーボード ショートカット、またはコード スニペットを保持する場合は、次を参照してください。[ユーザー設定の移動](#move-user-settings)します。
 
 |プラットフォーム|ダウンロード|リリース日| バージョン |
 |:---|:---|:---|:---|
-|Windows|[ユーザーのインストーラー (推奨)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[システムのインストーラー](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|2019 年 1 月 9日 |1.3.8|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|2019 年 1 月 9日 |1.3.8|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|2019 年 1 月 9日 |1.3.8|
+|Windows|[ユーザーのインストーラー (推奨)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[システムのインストーラー](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|2019 年 1 月 16日 |1.3.9|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|2019 年 1 月 16日 |1.3.9|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|2019 年 1 月 16日 |1.3.9|
 
 最新のリリースに関する詳細は、次の [リリース ノート](release-notes.md) を参照してください。
 

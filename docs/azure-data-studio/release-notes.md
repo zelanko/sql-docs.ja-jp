@@ -3,7 +3,7 @@ title: リリース ノートと変更ログ
 titleSuffix: Azure Data Studio
 description: Azure Data Studio リリース ノート
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 01/17/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,17 +11,26 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143662"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361682"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio の最新のリリース ノートと、変更ログ
 
-**[1 月のリリースをダウンロードしてください。](download.md)**
+**[最新のリリースをインストールをダウンロードしてください。](download.md)**
 
+
+## <a name="january-hotfix-2019-january-hotfix-release"></a>(1 月の修正プログラム リリース) 2019 年 1 月の修正プログラム
+
+リリース日:2019 年 1 月 16日  
+バージョン：1.3.9
+
+バージョン 1.3.9 1.3.8 で発見されたいくつかの問題を修正します。 詳細については、次を参照してください。[年 1 月の修正プログラム リリース](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)します。
+
+詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)します。
 
 ## <a name="january-2019-january-release"></a>2019 年 1 月 (1 月リリース)
 
@@ -37,8 +46,6 @@ ms.locfileid: "54143662"
 - 大規模なクエリ (プレビュー) のストリームの結果。
 - コミュニティの拡張機能: sp_executesql to sql と新しいデータベース。
 - 解決[バグし、問題](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1)します。
-
-詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)します。
 
 ## <a name="november-2018-november-release"></a>2018 年 11 月 (11 月のリリース)
 
@@ -200,7 +207,7 @@ Azure Data Studio (SQL Operations Studio 以前) の一般的な可用性リリ�
  - 修正[発行 1724](https://github.com/Microsoft/azuredatastudio/issues/1724):ダイアログの拡張機能が動作を停止しました
  - 修正[発行 1749](https://github.com/Microsoft/azuredatastudio/issues/1749):バグ:列内の HTML データが解釈されます。
  - 修正[発行 1789](https://github.com/Microsoft/azuredatastudio/issues/1789):機能拡張: 接続プロバイダーを追加する場合アンインストールは決して一覧から削除、
- - 修正[発行 1791](https://github.com/Microsoft/azuredatastudio/issues/1791):Sqlops 拡張機能: が queryeditor.connect() が、ターゲット データベースに接続しますが、UI は、エディターの接続を表示しません。
+ - 修正[発行 1791](https://github.com/Microsoft/azuredatastudio/issues/1791):Sqlops Extensions: queryeditor.connect() connects to the target database, but UI does not show the editor is connected
  - 修正[発行 1799](https://github.com/Microsoft/azuredatastudio/issues/1799):上位 10 個の DB サイズのグラフは、大文字小文字を区別するインスタンスでは動作しません
  - 修正[発行 1814](https://github.com/Microsoft/azuredatastudio/issues/1814): sqlops.d.ts 入力ミスが原因で暗黙的な 'any' 型の定義
  - 修正[発行 1817](https://github.com/Microsoft/azuredatastudio/issues/1817):エラー de Ortografia

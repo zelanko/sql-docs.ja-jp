@@ -5,16 +5,16 @@ description: インストールして、SQL Server 2019 ビッグ データ ク�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/15/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb012492811383154d10358e1c3ee40c422e3813
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: aec8f030a996e5dd86c44a5a655e98d4926988ed
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241693"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361412"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスターを管理する mssqlctl をインストールします。
 
@@ -49,16 +49,24 @@ Linux は、Python 3.5 をインストールしてから pip をアップグレ�
    ```bash
    sudo apt-get update && /
    sudo apt-get install -y python3 && /
-   sudo apt-get install -y python3-pip && /
-   sudo -H pip3 install --upgrade pip
+   sudo apt-get install -y python3-pip
    ```
 
+1. Pip3 をアップグレードします。
+
+   ```bash
+   sudo -H pip3 install --upgrade pip
+   ```
+   
 1. インストール**mssqlctl**次のコマンドを使用します。
 
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
-
+   
+   > [!NOTE]
+   > `--user`スイッチ mssqlctl を Python のユーザーのインストール ディレクトリにインストールされます。 これは通常`~/.local/bin`Linux 上。 いずれか、パスにこのディレクトリを追加かユーザー インストール ディレクトリに移動して実行`./mssqlctl`そこから。
+   
 ## <a name="next-steps"></a>次の手順
 
 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)します。
