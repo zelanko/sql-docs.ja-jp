@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7273baec814905d86e431c5a6a8f13313b9743e4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 98f7e0ac3667bc8546a7bf7ce2d8036341bb2650
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536649"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206601"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC ドライバーでの Azure Active Directory の使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -34,7 +34,7 @@ Microsoft ODBC Driver for SQL Server バージョン 13.1 以降は、ユーザ�
 
 |[オブジェクト名]|値|既定|[説明]|
 |-|-|-|-|
-|`Authentication`|(設定しません) (空の文字列)、 `SqlPassword`、 `ActiveDirectoryPassword`、 `ActiveDirectoryIntegrated`、 `ActiveDirectoryInteractive`|(未設定)|認証モードを制御します。<table><tr><th>ReplTest1<th>[説明]<tr><td>(未設定)<td>認証モードの他のキーワード (既存のレガシ接続オプション) によって決まります<tr><td>(空の文字列)<td>接続文字列: "{0}"オーバーライド設定を解除し、`Authentication`値、DSN に設定します。<tr><td>`SqlPassword`<td>ユーザー名とパスワードを使用して SQL Server インスタンスに直接認証します。<tr><td>`ActiveDirectoryPassword`<td>ユーザー名とパスワードを使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows ドライバーのみ_します。 統合認証を使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryInteractive`<td>_Windows ドライバーのみ_します。 対話型認証を使用して id を Azure Active Directory で認証します。</table>|
+|`Authentication`|(設定しません) (空の文字列)、 `SqlPassword`、 `ActiveDirectoryPassword`、 `ActiveDirectoryIntegrated`、 `ActiveDirectoryInteractive`|(未設定)|認証モードを制御します。<table><tr><th>[値]<th>[説明]<tr><td>(未設定)<td>認証モードの他のキーワード (既存のレガシ接続オプション) によって決まります<tr><td>(空の文字列)<td>接続文字列: "{0}"オーバーライド設定を解除し、`Authentication`値、DSN に設定します。<tr><td>`SqlPassword`<td>ユーザー名とパスワードを使用して SQL Server インスタンスに直接認証します。<tr><td>`ActiveDirectoryPassword`<td>ユーザー名とパスワードを使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows ドライバーのみ_します。 統合認証を使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryInteractive`<td>_Windows ドライバーのみ_します。 対話型認証を使用して id を Azure Active Directory で認証します。</table>|
 |`Encrypt`|(未設定)、`Yes`、`No`|(説明を参照してください)|接続の暗号化を制御します。 場合の前の属性値、`Authentication`の設定が_none_ 、DSN または接続文字列は、既定値は`Yes`します。 それ以外の場合、既定値は `No` です。 場合、属性`SQL_COPT_SS_AUTHENTICATION`の前の属性値を上書き`Authentication`、明示的に DSN または接続文字列または接続属性での暗号化の値を設定します。 暗号化の前の属性値が`Yes`値が設定されている場合`Yes`DSN または接続文字列にします。|
 
 ## <a name="new-andor-modified-connection-attributes"></a>接続の新規作成または変更された属性
@@ -136,7 +136,7 @@ typedef struct AccessToken
     ...
     SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
     ...
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
     ...
 ~~~
 次の例では、アクセス トークン認証による Azure Active Directory を使用して SQL Server への接続に必要なコードを示します。 この場合、アクセス トークンを処理し、関連付けられている接続属性を設定するアプリケーション コードを変更する必要は。
