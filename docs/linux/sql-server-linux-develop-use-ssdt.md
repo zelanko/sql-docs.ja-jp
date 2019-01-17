@@ -65,7 +65,7 @@ Linux 上の SQL Server は、SSDT 17.0 RC またはそれ以降のバージョ�
 
 2. 右クリックし、データベース プロジェクト メニューを開いて**TutorialDB**ソリューション エクスプ ローラーでします。
 
-3. 選択**テーブル****追加**します。
+3. 選択**テーブル** **追加**します。
 
     <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
 
