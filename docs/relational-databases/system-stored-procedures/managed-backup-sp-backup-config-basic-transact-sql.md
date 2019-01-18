@@ -48,7 +48,7 @@ EXEC managed_backup.sp_backup_config_basic
   
 ##  <a name="Arguments"></a> 引数  
  @enable_backup  
- 指定したデータベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効または無効にします。 @enable_backupは**ビット**します。 パラメーターを構成するときに必要な[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の最初のインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 変更する場合は、既存 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 構成では、このパラメーターは省略可能です。 その場合は、指定されていないすべての構成値は、既存の値を保持します。  
+ 指定したデータベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効または無効にします。 @enable_backupは **ビット** します。 パラメーターを構成するときに必要な[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の最初のインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 変更する場合は、既存 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 構成では、このパラメーターは省略可能です。 その場合は、指定されていないすべての構成値は、既存の値を保持します。  
   
  @database_name  
  有効にするためのデータベース名は、特定のデータベースでのバックアップを管理します。  
