@@ -1,7 +1,7 @@
 ---
 title: レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/16/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,15 +14,15 @@ ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8968754a797c3f3b1a7e66886f7874c9bc13c5d3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390666"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372675"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server)
-  レプリケーション サブスクライバーであるデータベースを含む AlwaysOn 可用性グループがフェールオーバーすると、レプリケーション サブスクリプションが失敗することがあります。 トランザクション サブスクライバーの場合、サブスクリプションがサブスクライバーの可用性グループ リスナーの名前を使用していると、ディストリビューション エージェントは自動的にレプリケーションを継続します。 マージ サブスクライバーの場合、レプリケーション管理者はサブスクリプションを再作成して、手動でサブスクライバーを再構成する必要があります。  
+  レプリケーション サブスクライバーであるデータベースを含む AlwaysOn 可用性グループがフェールオーバーすると、レプリケーション サブスクリプションが失敗することがあります。 トランザクション レプリケーションのプッシュ サブスクライバーでは、ディストリビューション エージェントは引き続き AG リスナー名を使用して、サブスクリプションが作成された場合、フェールオーバー後に自動的にレプリケートします。 トランザクション レプリケーションのプル サブスクライバーでディストリビューション エージェントは引き続き、フェールオーバー後に自動的にレプリケートするを AG リスナー名と、元のサブスクライバーのサーバーを使用し、実行中に、サブスクリプションが作成された場合。 ディストリビューション エージェントのジョブのみ作成元のサブスクライバー (可用性グループのプライマリ レプリカ) ためにです。 マージ サブスクライバーの場合、レプリケーション管理者はサブスクリプションを再作成して、手動でサブスクライバーを再構成する必要があります。  
   
 ## <a name="what-is-supported"></a>サポート対象  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションは、パブリッシャーの自動フェールオーバー、トランザクション サブスクライバーの自動フェールオーバー、およびマージ サブスクライバーの手動フェールオーバーをサポートします。 可用性データベース上のディストリビューターのフェールオーバーはサポートされていません。 AlwaysOn は、Websync および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact のシナリオと組み合わせることはできません。  

@@ -3,19 +3,20 @@ title: インストール SQL Server Machine Learning サービス (In-database)
 description: SQL Server または Windows の SQL Server 2017 Machine Learning Services の SQL Server インストールの手順での Python での R です。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9118edd1ab25cf13cbb6d10212b50f7e7428fe9f
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 2f323ac135ed41ff15c1d41a17407d03138e4807
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645351"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372694"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>SQL Server Machine Learning では、Windows サービスをインストールします。
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 以降、R と Python のサポートで、データベース内分析が提供されます**SQL Server Machine Learning Services**、後継[SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016 で導入されました。 関数ライブラリは、R と Python で使用可能なし、データベース エンジンのインスタンス上の外部スクリプトとして実行します。 
@@ -203,6 +204,13 @@ R の機能統合のみに設定する必要があります、 **MKL_CBWR**環�
     | 1|
 
 
+<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
+Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
+due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
+I will inform HeidiSteen  [GeneMi, 2019/01/17]
+-->
+
+
 > [!NOTE]
 > 列または Python スクリプトで使用されている見出しでは返されません、設計します。 出力の列名を追加するには、戻り値のデータ セットのスキーマを指定する必要があります。 そのため、列の名前を付けると、SQL データ型を指定することは、ストアド プロシージャの結果でパラメーターを使用します。
 > 
@@ -288,12 +296,12 @@ SQL Server で使用するパッケージは、インスタンスによって使
 
 R 開発者は、簡単な例で作業を開始し、SQL Server での R の動作の基本を学習します。 次の手順で、次のリンクを参照してください。
 
-+ [チュートリアル:T-SQL での R を実行します。](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [チュートリアル:R の開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル: T-SQL での R を実行します。](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [チュートリアル: R の開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python の開発者は、これらのチュートリアルに従って、SQL Server で Python を使用する方法を学ぶことができます。
 
-+ [チュートリアル:T-SQL での Python を実行します。](../tutorials/run-python-using-t-sql.md)
-+ [チュートリアル:Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [チュートリアル: T-SQL での Python を実行します。](../tutorials/run-python-using-t-sql.md)
++ [チュートリアル: Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 実際のシナリオに基づく機械学習の例を表示するを参照してください。 [Machine learning のチュートリアル](../tutorials/machine-learning-services-tutorials.md)します。

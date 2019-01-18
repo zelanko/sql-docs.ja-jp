@@ -5,17 +5,17 @@ description: SQL Server 2019 ビッグ データ クラスター (プレビュ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 54ea67e8b85d4e9a1a8cdbe4b40cf1bb9c3f1062
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241603"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372638"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 ビッグ データ ツールをインストールします。
 
@@ -38,7 +38,14 @@ ms.locfileid: "54241603"
 | **sqlcmd** | いくつかのスクリプトの | SQL Server を照会するための従来のコマンド ライン ツール ([詳細](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15))。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | いくつかのスクリプトの | Url を使用してデータを転送するためのコマンド ライン ツールです。 | [Windows](https://curl.haxx.se/windows/) \| Linux: curl パッケージのインストール |
 
-<sup>1</sup> kubectl バージョン 1.10 以降を使用する必要があります。 また、Kubernetes クラスターのマイナー バージョンを 1 つずつずらして Kubectl のバージョンがあります。 Kubectl クライアントを特定のバージョンをインストールする場合は、「 [kubectl curl を使用してバイナリをインストール](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)(Windows 10 を使用して cmd.exe、Windows PowerShell ではなく curl を実行する)。
+<sup>1</sup> kubectl バージョン 1.10 以降を使用する必要があります。 また、Kubernetes クラスターのマイナー バージョンを 1 つずつずらして kubectl のバージョンがあります。 Kubectl クライアントを特定のバージョンをインストールする場合は、「 [kubectl curl を使用してバイナリをインストール](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)(Windows 10 を使用して cmd.exe、Windows PowerShell ではなく curl を実行する)。 
+
+> [!TIP]
+> Azure Kubernetes Service (AKS) で以前にデプロイされたクラスターでは、kubectl を使用するには、次の Azure CLI コマンドでクラスター コンテキストを設定する必要があります。
+>
+>    ```azurecli
+>    az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>
+>    ```
 
 <sup>2</sup> Azure CLI バージョン 2.0.4 を使用する必要がありますまたはそれ以降。 実行`az --version`必要な場合は、バージョンを確認します。
 
