@@ -4,18 +4,18 @@ description: この記事では、Red Hat、Ubuntu 上の SQL Server Machine Lea
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 12/07/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15a1a411672303fc8556927bcaf218052758744d
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 7e140a4eeb8fe6481b52be378c6ad9569160e9e3
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553254"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397661"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>SQL Server 2019 の Machine Learning サービス (R、Python、Java) Linux 上のインストールします。
 
@@ -71,13 +71,13 @@ ls /opt/microsoft/mssql/bin
 
 2. パッケージ マネージャーと構文を使用して、オペレーティング システムのインストール コマンドを実行します。 
 
-   + [Red Hat](#RHEL)
+   + [RedHat](#RHEL)
    + [Ubuntu](#ubuntu)
    + [SUSE](#SUSE)
 
 ## <a name="prerequisites"></a>前提条件
 
-+ Linux バージョンである必要があります[SQL Server でサポートされている](sql-server-linux-release-notes-2019.md#supported-platforms)、オンプレミス、または Docker コンテナーで実行中です。 サポートされているバージョンは次のとおりです。
++ Linux バージョンである必要があります[SQL Server でサポートされている](sql-server-linux-release-notes-2019.md#supported-platforms)、Docker エンジンは含まれません。 サポートされているバージョンは次のとおりです。
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -167,17 +167,17 @@ zypper update
 
 | パッケージ名 | 適用先 | 説明 |
 |--------------|----------|-------------|
-|mssql-サーバーの機能拡張  | All | 機能拡張フレームワークが R、Python、または Java コードを実行するために使用します。 |
-|mssql server extensibility java | Java | Java の実行環境を読み込むための Java 拡張機能。 その他のライブラリや Java のパッケージはありません。 |
+|mssql-server-extensibility  | All | 機能拡張フレームワークが R、Python、または Java コードを実行するために使用します。 |
+|mssql-server-extensibility-java | Java | Java の実行環境を読み込むための Java 拡張機能。 その他のライブラリや Java のパッケージはありません。 |
 | microsoft openmpi  | Python、R | メッセージは Linux での並列処理の Revo のライブラリによって使用されるインターフェイスを渡します。 |
 | mssql-mlservices-python | Python | Anaconda と Python のオープン ソース ディストリビューション。 |
-|mssql mlservices mlm py  | Python | *完全なインストール*します。 Revoscalepy、microsoftml、事前トレーニング済みの画像の特徴の生成とテキストのセンチメント分析のモデルを提供します。| 
-|mssql mlservices パッケージ py  | Python | *最小インストールによって*します。 Microsoftml revoscalepy を提供します。 <br/>事前トレーニング済みモデルを除外します。 | 
-| [microsoft の r のオープン *](#mro) | R | R のオープン ソース ディストリビューションは、3 つのパッケージで構成されます。 |
-|mssql mlservices mlm r  | R | *完全なインストール*します。 第 sqlRUtils RevoScaleR、MicrosoftML、olapR、事前トレーニング済みの画像の特徴の生成とテキストのセンチメント分析のモデルを提供します。| 
-|mssql mlservices パッケージ r  | R | *最小インストールによって*します。 RevoScaleR、sqlRUtils、MicrosoftML、olapR を提供します。 <br/>事前トレーニング済みモデルを除外します。 | 
-|mssql mlservices mml py  | CTP 2.0 2.1 のみ | Mssql-mslservices-python を Python パッケージの統合により、CTP 2.2 で廃止します。 Revoscalepy を提供します。 事前トレーニング済みモデルと microsoftml を除外します。| 
-|mssql mlservices mml r  | CTP 2.0 2.1 のみ | Mssql-mslservices python に R パッケージの統合により、CTP 2.2 で廃止します。 RevoScaleR、sqlRUtils、olapR を提供します。 事前トレーニング済みモデルと MicrosoftML を除外します。  |
+|mssql-mlservices-mlm-py  | Python | *完全なインストール*します。 Revoscalepy、microsoftml、事前トレーニング済みの画像の特徴の生成とテキストのセンチメント分析のモデルを提供します。| 
+|mssql-mlservices-packages-py  | Python | *最小インストールによって*します。 Microsoftml revoscalepy を提供します。 <br/>事前トレーニング済みモデルを除外します。 | 
+| [microsoft-r-open*](#mro) | R | R のオープン ソース ディストリビューションは、3 つのパッケージで構成されます。 |
+|mssql-mlservices-mlm-r  | R | *完全なインストール*します。 第 sqlRUtils RevoScaleR、MicrosoftML、olapR、事前トレーニング済みの画像の特徴の生成とテキストのセンチメント分析のモデルを提供します。| 
+|mssql-mlservices-packages-r  | R | *最小インストールによって*します。 RevoScaleR、sqlRUtils、MicrosoftML、olapR を提供します。 <br/>事前トレーニング済みモデルを除外します。 | 
+|mssql-mlservices-mml-py  | CTP 2.0 2.1 のみ | Mssql-mslservices-python を Python パッケージの統合により、CTP 2.2 で廃止します。 Revoscalepy を提供します。 事前トレーニング済みモデルと microsoftml を除外します。| 
+|mssql-mlservices-mml-r  | CTP 2.0 2.1 のみ | Mssql-mslservices python に R パッケージの統合により、CTP 2.2 で廃止します。 RevoScaleR、sqlRUtils、olapR を提供します。 事前トレーニング済みモデルと MicrosoftML を除外します。  |
 
 <a name="RHEL"></a>
 
@@ -564,12 +564,12 @@ Linux および Windows の間の類似性がある[リソース ガバナンス
 
 R 開発者は、簡単な例で作業を開始し、SQL Server での R の動作の基本を学習します。 次の手順で、次のリンクを参照してください。
 
-+ [チュートリアル:T-SQL での R を実行します。](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [チュートリアル:R の開発者向けのデータベース内分析](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル: T-SQL での R を実行します。](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [チュートリアル: R の開発者向けのデータベース内分析](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python の開発者は、これらのチュートリアルに従って、SQL Server で Python を使用する方法を学ぶことができます。
 
-+ [チュートリアル:T-SQL での Python を実行します。](../advanced-analytics/tutorials/run-python-using-t-sql.md)
-+ [チュートリアル:Python 開発者向けのデータベース内分析](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [チュートリアル: T-SQL での Python を実行します。](../advanced-analytics/tutorials/run-python-using-t-sql.md)
++ [チュートリアル: Python 開発者向けのデータベース内分析](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 実際のシナリオに基づく機械学習の例を表示するを参照してください。 [Machine learning のチュートリアル](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)します。

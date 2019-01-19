@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5b7b4b9831fcfa04932ed05951b27bca7e4e4b0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710773"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397611"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -57,7 +57,14 @@ ms.locfileid: "52710773"
 |**last_execution_time**|**datetimeoffset**|最後の実行時間とは、最後に、クエリ/プランの終了時刻です。|  
 |**avg_compile_duration**|**float**|コンパイルの統計情報を計画します。|  
 |**last_compile_duration**|**bigint**|コンパイルの統計情報を計画します。|  
-  
+|**plan_forcing_type**|**int**|型の強制プランです。<br /><br />
+0:なし<br /><br />
+1:MANUAL<br /><br />
+2:自動 | |**plan_forcing_type_desc**|**nvarchar (60)**|Plan_forcing_type の説明テキスト。<br /><br />
+NONE:プランの適用なし<br /><br />
+手動：ユーザーが強制されたプラン<br /><br />
+自動：自動チューニングによる強制プラン |
+
 ## <a name="plan-forcing-limitations"></a>プラン強制の制限事項
 クエリ ストアには、クエリ オプティマイザーに特定の実行プランを使用させるためのメカニズムがあります。 ただし、適用の適用を妨げる可能性のある制限がいくつかあります。 
 

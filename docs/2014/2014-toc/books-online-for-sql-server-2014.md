@@ -19,20 +19,22 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6b54c44c88c384b28f9966ad9c7e3888fd038aa3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eae4ddb70dceccaa4956322dbf74cd84df3a83cc
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353910"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397561"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Books Online for SQL Server 2014
+
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® オンライン ブックへようこそ。 オンライン ブックには、タスクの説明とリファレンスのドキュメントが含まれており、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を使用してデータ管理およびビジネス インテリジェンスに関連する作業を行う方法が記載されています。  
   
  **お試しください:**  
  ![Azure Virtual Machine のアイコン](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Azure アカウントをすでにお持ちですか?  やがて**[ここ](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 既にインストールされている SQL Server 2014 Service Pack 1 (SP1) の仮想マシンを作成します。 SQL Server 2014 (SP1) の詳細については、次を参照してください。 [SQL Server 2014 Service Pack 1 リリース情報](https://support.microsoft.com/en-us/kb/3058865)します。 
   
 ## <a name="sql-server-technologies"></a>SQL Server のテクノロジ  
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、データ管理および分析のためのテクノロジが含まれています。 各テクノロジの機能、タスク、およびリファレンスのドキュメントを参照するには、次の表のリンクをクリックしてください。  
   
 |||  
@@ -46,6 +48,7 @@ ms.locfileid: "53353910"
 |![Reporting Services のアイコン](media/reportingservices.gif "Reporting Services のアイコン")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services は Web 対応のレポート機能を提供します。これによって組織では、さまざまなデータ ソースのコンテンツを表示するレポートの作成、さまざまな形式でのレポートのパブリッシュ、およびセキュリティやサブスクリプションの集中管理を行うことができます。|  
   
 ## <a name="sql-server-information-on-the-web"></a>Web 上の SQL Server 情報  
+
  [!INCLUDE[msCoName](../includes/msconame-md.md)] では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に関する追加情報を以下の Web サイトで公開しています。  
   
  **SQL Server の Web サイト**  
@@ -63,6 +66,7 @@ ms.locfileid: "53353910"
 -   [XML デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## <a name="see-also"></a>参照  
+
  [SQL Server 構成マネージャーのヘルプ](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   
