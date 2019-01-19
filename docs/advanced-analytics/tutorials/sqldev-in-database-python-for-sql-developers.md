@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: ab28dafe062d7a8d492e702aa5570881ef77f1e0
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596683"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405622"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>チュートリアル:SQL 開発者向けの In-database Python 分析
+# <a name="tutorial-python-data-analytics-for-sql-developers"></a>チュートリアル:SQL 開発者向けの Python データの分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-構築して Python に基づく機械学習ソリューションを導入する Python の統合について説明します SQL プログラマ向けのこのチュートリアルでは、 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server データベース。 
+構築して Python に基づく機械学習ソリューションを導入する Python の統合について説明します SQL プログラマ向けのこのチュートリアルでは、 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server データベース。 T-SQL、SQL Server Management Studio とでは、データベース エンジンのインスタンスを使用します[Machine Learning サービス](../install/sql-machine-learning-services-windows-install.md)と Python 言語のサポート。
 
-このチュートリアルでは、データ モデリング ワークフローで使用される Python 関数について説明します。 手順には、データの探索、ビルドして二項分類モデルとモデルのデプロイが含まれます。 ニューヨーク市タクシーのデータセットと Limosine 委員会のサンプル データを使用し、ビルドは、モデルが旅行に日、しかも、距離、乗車場所の時間に基づくヒントに可能性があるかどうかを予測します。 このチュートリアルで使用する Python コードのすべては、作成して、Management Studio で実行するストアド プロシージャにラップされます。
+このチュートリアルでは、データ モデリング ワークフローで使用される Python 関数について説明します。 手順には、データの探索、ビルドして二項分類モデルとモデルのデプロイが含まれます。 ニューヨーク市タクシーのデータセットと Limosine 委員会のサンプル データを使用し、ビルドは、モデルが旅行に日、しかも、距離、乗車場所の時間に基づくヒントに可能性があるかどうかを予測します。 
+
+このチュートリアルで使用する Python コードのすべては、作成して、Management Studio で実行するストアド プロシージャにラップされます。
 
 > [!NOTE]
 > このチュートリアルは、R と Python の両方で使用できます。 R のバージョンについては、次を参照してください。 [in-database analytics R 開発者向け](sqldev-in-database-r-for-sql-developers.md)します。

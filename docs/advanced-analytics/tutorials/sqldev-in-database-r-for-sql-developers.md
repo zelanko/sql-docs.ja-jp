@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e5b0bc8633e956817e778a1d5a2d75a86df8588
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 8d3235c585d3ea56a64776fde841ccc6d71b1a4d
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596344"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405602"
 ---
-# <a name="tutorial-in-database-analytics-for-sql-developers-using-r"></a>チュートリアル:R を使用した SQL 開発者向けのデータベース内分析
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>チュートリアル:SQL 開発者向けの R データの分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-構築し、R ベースの machine learning を使用してソリューションを展開する R の統合について説明します SQL プログラマ向けのこのチュートリアルでは、 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server データベース。 
+構築し、R ベースの machine learning を使用してソリューションを展開する R の統合について説明します SQL プログラマ向けのこのチュートリアルでは、 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server データベース。 T-SQL、SQL Server Management Studio、および [Machine Learning のサービス] で、データベース エンジンのインスタンスを使用します ([Machine Learning サービス](../install/sql-machine-learning-services-windows-install.md)と R 言語のサポート
 
-このチュートリアルでは、ワークフローをモデル化データで使用される R 関数を紹介します。 手順には、データの探索、ビルドして二項分類モデルとモデルのデプロイが含まれます。 ビルドがモデルでは、旅行を日、しかも、距離、乗車場所の時間に基づくヒントに可能性があるかどうかを予測します。 このチュートリアルで使用する R コードのすべては、作成して、Management Studio で実行するストアド プロシージャにラップされます。
+このチュートリアルでは、ワークフローをモデル化データで使用される R 関数を紹介します。 手順には、データの探索、ビルドして二項分類モデルとモデルのデプロイが含まれます。 ビルドがモデルでは、旅行を日、しかも、距離、乗車場所の時間に基づくヒントに可能性があるかどうかを予測します。 
+
+このチュートリアルで使用する R コードのすべては、作成して、Management Studio で実行するストアド プロシージャにラップされます。
 
 ## <a name="background-for-sql-developers"></a>SQL 開発者向けの背景
 

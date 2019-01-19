@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 12ec074501e93af586a5d495bd7984ad62f3fd88
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242143"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405822"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法
 
@@ -248,7 +248,7 @@ kubectl get svc -n <your-cluster-name>
 
 現時点では、ビッグ データ クラスターを新しいリリースにアップグレードする唯一の方法は、手動で削除してクラスターを再作成します。 各リリースでは、一意のバージョンの**mssqlctl**ですが、以前のバージョンと互換性がありません。 また、古いクラスターを新しいノードにイメージをダウンロードする場合は、最新のイメージ可能性がありますと互換性がない、クラスター上で古いイメージ。 最新のリリースにアップグレードするには、次の手順を使用します。
 
-1. 以前のクラスターを削除する前に、HDFS と SQL Server のマスター インスタンスにデータをバックアップします。 使用することができます、SQL Server のマスター インスタンスの[SQL Server のバックアップと復元](data-ingestion-restore-databse.md)します。 HDFS のする[で、データをコピーできます**curl**](data-ingestion-curl.md)します。
+1. 以前のクラスターを削除する前に、HDFS と SQL Server のマスター インスタンスにデータをバックアップします。 使用することができます、SQL Server のマスター インスタンスの[SQL Server のバックアップと復元](data-ingestion-restore-database.md)します。 HDFS のする[で、データをコピーできます**curl**](data-ingestion-curl.md)します。
 
 1. 以前のクラスターを削除、`mssqlctl delete cluster`コマンド。
 
@@ -310,10 +310,10 @@ kubectl get svc -n <your-cluster-name>
 
    | サービス | 説明 |
    |---|---|
-   | **エンドポイントでマスター-プール** | マスター インスタンスへのアクセスを提供します。<br/>(**EXTERNAL-IP、31433**と**SA**ユーザー) |
-   | **サービス mssql コント ローラー lb**<br/>**サービス mssql コント ローラー nodeport** | ツールと、クラスターを管理するクライアントをサポートしています。 |
-   | **サービス プロキシ-lb**<br/>**サービスのプロキシ-nodeport** | アクセスできるように、[クラスター管理ポータル](cluster-admin-portal.md)します。<br/>(https://**EXTERNAL-IP**: 30777/ポータル)|
-   | **サービス-セキュリティ-lb**<br/>**サービス-セキュリティ-nodeport** | HDFS/Spark ゲートウェイへのアクセスを提供します。<br/>(**EXTERNAL-IP**と**ルート**ユーザー) |
+   | **endpoint-master-pool** | マスター インスタンスへのアクセスを提供します。<br/>(**EXTERNAL-IP、31433**と**SA**ユーザー) |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | ツールと、クラスターを管理するクライアントをサポートしています。 |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | アクセスできるように、[クラスター管理ポータル](cluster-admin-portal.md)します。<br/>(https://**EXTERNAL-IP**: 30777/ポータル)|
+   | **service-security-lb**<br/>**service-security-nodeport** | HDFS/Spark ゲートウェイへのアクセスを提供します。<br/>(**EXTERNAL-IP**と**ルート**ユーザー) |
 
    > [!NOTE]
    > サービス名は、Kubernetes 環境によって異なります。 Azure Kubernetes Service (AKS) をデプロイするときに、サービス名が終わる**lb**します。サービス名が終わる minikube と kubeadm 展開で **- nodeport**します。

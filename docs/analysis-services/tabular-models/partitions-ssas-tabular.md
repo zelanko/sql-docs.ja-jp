@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6dfcebd520cd0efdecf2549a685595fe7a60deec
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 5d26b1b1558ca546fb47660488b15dc777c5ad87
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071819"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405852"
 ---
 # <a name="partitions"></a>[メジャー グループ]
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "53071819"
 |トピック|説明|  
 |-----------|-----------------|  
 |[ワークスペース データベースのパーティションの作成と管理](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|作成して、SSDT で Partition Manager を使用して、モデル ワークスペース データベースでパーティションを管理する方法について説明します。|  
-|[ワークスペース データベースでパーティションの処理](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|モデル ワークスペース データベースでのパーティションの処理 (更新) 方法について説明します。|  
+|[ワークスペース データベースのパーティションの処理](../../analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md)|モデル ワークスペース データベースでのパーティションの処理 (更新) 方法について説明します。|  
   
 ## <a name="see-also"></a>関連項目  
  [DirectQuery モード](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   

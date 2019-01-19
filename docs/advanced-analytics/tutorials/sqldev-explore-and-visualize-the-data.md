@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 76e3fdca639ed576b6b0664042aea5df2b5a9f74
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645501"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405782"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>レッスン 1:探索し、データの視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "53645501"
 
 ストアド プロシージャは varbinary データのストリームとして画像を返し、直接見ることはできません。 ただし、 **bcp** ユーティリティを利用すれば、varbinary データを取得し、クライアント コンピューターに画像ファイルとして保存できます。
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、次のステートメントを実行します。
+1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、次のステートメントを実行します。
   
     ```sql
     EXEC [dbo].[RxPlotHistogram]
@@ -114,25 +114,24 @@ ms.locfileid: "53645501"
   
     **結果**
     
-    *plot*
-    *0xFFD8FFE000104A4649...*
+    *plot* *0xFFD8FFE000104A4649...*
   
-2.  PowerShell コマンド プロンプトを開き、適切なインスタンス名、データベース名、ユーザー名、および引数としての資格情報を提供する、次のコマンドを実行します。 Windows id を使用してそれらを置き換えることができます **-u**と **-p**で **-t**します。
+2. PowerShell コマンド プロンプトを開き、適切なインスタンス名、データベース名、ユーザー名、および引数としての資格情報を提供する、次のコマンドを実行します。 Windows id を使用してそれらを置き換えることができます **-u**と **-p**で **-t**します。
   
-     ```powershell
-     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
-     ```
+    ```powershell
+    bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
+    ```
 
     > [!NOTE]
     > Bcp コマンド スイッチは大文字小文字を区別します。
   
-3.  接続に成功した場合は、グラフィック ファイル形式に関する詳細情報を入力するように求められます。 
+3. 接続に成功した場合は、グラフィック ファイル形式に関する詳細情報を入力するように求められます。 
 
    プロンプトのたびに ENTER キーを押し、初期設定を適用します。ただし、次については変更します。
     
-    -   **フィールド プロットのプレフィックス長**に「0」を入力します。
+   + **フィールド プロットのプレフィックス長**に「0」を入力します。
   
-    -   後で再利用するために出力パラメーターを保存する場合、「 **Y** 」を入力します。
+   + 後で再利用するために出力パラメーターを保存する場合、「 **Y** 」を入力します。
   
     ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 

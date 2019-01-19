@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7fbed76272903fb7a9b6eee037a070677411a0f5
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 4b3beca0f9e9a8c714e60bde7a2e7ff067e2265e
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596423"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405732"
 ---
-# <a name="tutorial-in-database-analytics-for-data-scientists-using-r"></a>チュートリアル:R を使用して、データ サイエンティスト向けのデータベース内分析
+# <a name="tutorial-sql-development-for-r-data-scientists"></a>チュートリアル:SQL R データ サイエンティスト向けの開発
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 データ サイエンティスト向けのこのチュートリアルでは、SQL Server 2016 または SQL Server 2017 のいずれかでサポートされる R 機能に基づく予測モデリングのエンド ツー エンド ソリューションを構築する方法を説明します。 このチュートリアルでは、 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server データベース。 
@@ -43,7 +43,7 @@ R コードの組み合わせを使用する[!INCLUDE[ssNoVersion](../../include
 両方を備えたコンピューターでチュートリアルを実行する代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と R 開発環境では、ですが運用環境のためには、この構成は推奨されません。 同じコンピューターにクライアントとサーバーを配置する必要がある場合は、「リモート」のクライアントから R スクリプトを送信するための Microsoft R ライブラリの 2 番目のセットをインストールすることを確認します。 SQL Server インスタンスのプログラム ファイルにインストールされている R ライブラリを使用しません。 具体的には、1 台のコンピューターを使用している場合は、クライアントとサーバーの操作をサポートするためにこれらの場所の両方で RevoScaleR ライブラリ必要があります。
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
-+ C:\Program files \microsoft SQL Server\MSSQL14 します。MSSQLSERVER\R_SERVICES\library\RevoScaleR
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 <a name="add-packages"></a>
 

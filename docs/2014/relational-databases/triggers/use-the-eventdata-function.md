@@ -13,12 +13,12 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 65103e99a6cba7d21daca85f3295135a43f435a5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776384"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405679"
 ---
 # <a name="use-the-eventdata-function"></a>EVENTDATA 関数の使用
   DDL トリガーを起動するイベントに関する情報は、EVENTDATA 関数を使用してキャプチャされます。 この関数は、`xml` 値を返します。 XML スキーマには、次の項目に関する情報が含まれています。  
@@ -127,7 +127,7 @@ GO
 > [!NOTE]  
 >  イベント データを返す場合は、`value()` メソッドの代わりに XQuery の `query()` メソッドを使用してください。 `query()` メソッドでは、出力として XML の他に、アンパサンド記号でエスケープされたキャリッジ リターンとライン フィード (CRLF) の組み合わせが返されます。それに対して `value()` メソッドの出力には、CRLF の組み合わせが表示されません。  
   
- 同様の DDL トリガーの例を、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースで提供しています。 この例を入手するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して Database Triggers フォルダーを探します。 このフォルダーは **データベースの** [プログラミング] [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] フォルダーにあります。 **ddlDatabseTriggerLog** を右クリックし、 **[データベース トリガーをスクリプト化]** をクリックします。 既定では、DDL トリガー **ddlDatabseTriggerLog** は無効になっています。  
+ 同様の DDL トリガーの例を、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースで提供しています。 この例を入手するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して Database Triggers フォルダーを探します。 このフォルダーは **データベースの** [プログラミング] [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] フォルダーにあります。 右クリック**ddlDatabaseTriggerLog**選択**データベース トリガーをスクリプト**します。 既定では、DDL トリガーによって**ddlDatabaseTriggerLog**は無効です。  
   
 ## <a name="see-also"></a>参照  
  [DDL イベント](../triggers/ddl-events.md)   
