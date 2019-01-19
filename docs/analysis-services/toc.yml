@@ -289,7 +289,7 @@ items:
           href: ./tabular-models/import-from-analysis-services-ssas-tabular.md
         - name: Power Pivot からのインポート
           href: ./tabular-models/import-from-power-pivot-ssas-tabular.md
-      - name: '[プロパティ]'
+      - name: Properties
         items:
         - name: Power View - レポート プロパティ
           href: ./tabular-models/power-view-reporting-properties-ssas-tabular.md
@@ -400,7 +400,7 @@ items:
         - name: ワークスペース データベースのパーティションの作成と管理
           href: ./tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
         - name: ワークスペース データベースのパーティションの処理
-          href: ./tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md
+          href: ./tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md
       - name: パースペクティブ
         href: ./tabular-models/perspectives-ssas-tabular.md
         items:
@@ -529,7 +529,7 @@ items:
             href: ./multidimensional-models/understanding-incremental-generation.md
           - name: データ ソース ビューおよびデータ ソースへの変更の管理
             href: ./multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md
-      - name: ディメンション
+      - name: Dimensions
         href: ./multidimensional-models/dimensions-in-multidimensional-models.md
         items:
         - name: ディメンション ウィザードを使用したディメンションの作成
@@ -1523,9 +1523,9 @@ items:
     href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: トレース イベント
     href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
-ms.openlocfilehash: ee7868cfee9c8f087ffd43959ccfa7f30b643b7e
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: b226bb92d106c31c54f37feeaedc2070393f835f
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53786003"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405812"
