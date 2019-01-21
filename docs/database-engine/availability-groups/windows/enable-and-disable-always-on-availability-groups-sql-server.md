@@ -16,12 +16,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66db1468b93e2ff95073bfd7e9f065860f774a0f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8c1be5887e4d3b6ff4af02e12e8af26a456987e2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202791"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125433"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Always On 可用性グループ機能を有効または無効にする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "53202791"
   
 2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-3.  **SQL Server 構成マネージャー**で、**[SQL Server のサービス]** をクリックし、SQL Server (**\<***instance name***>)** を右クリックして、**[プロパティ]** をクリックします。**\<***instance name***>** は、AlwaysOn 可用性グループを有効にするローカル サーバー インスタンスの名前です。  
+3.  **SQL Server 構成マネージャー**で、**[SQL Server のサービス]** をクリックし、SQL Server (**\<**_instance name_**>)** を右クリックして、**[プロパティ]** をクリックします。**\<**_instance name_**>** は、AlwaysOn 可用性グループを有効にするローカル サーバー インスタンスの名前です。  
   
 4.  **[AlwaysOn 高可用性]** タブを選択します。  
   
@@ -198,7 +198,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-3.  **SQL Server 構成マネージャー**で、**[SQL Server のサービス]** をクリックし、SQL Server (**\<***instance name***>)** を右クリックして、**[プロパティ]** をクリックします。**\<***instance name***>** は、AlwaysOn 可用性グループを無効にするローカル サーバー インスタンスの名前です。  
+3.  **SQL Server 構成マネージャー**で、**[SQL Server のサービス]** をクリックし、SQL Server (**\<**_instance name_**>)** を右クリックして、**[プロパティ]** をクリックします。**\<**_instance name_**>** は、AlwaysOn 可用性グループを無効にするローカル サーバー インスタンスの名前です。  
   
 4.  **[AlwaysOn 高可用性]** タブで、 **[AlwaysOn 可用性グループを有効にする]** チェック ボックスをオフにし、 **[OK]** をクリックします。  
   

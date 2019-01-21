@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: abfad9aeef575035f4f171a19073b97a266797ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3de9c31febeecca588464cfb386543347ddad852
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208561"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126582"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Always On 可用性グループに柔軟な自動フェールオーバー ポリシーを構成する
 
@@ -87,7 +87,7 @@ ms.locfileid: "53208561"
   
          これらの整数値とエラー条件レベルの関係は次のとおりです。  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] の値|レベル|自動フェールオーバーが開始される条件|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] の値|Level|自動フェールオーバーが開始される条件|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|1|サーバーの停止。 フェールオーバーまたは再起動のため、SQL Server サービスが停止した場合。|  
         |2|2|サーバーの応答停止。 下限値の任意の条件が満たされた場合、SQL Server サービスがクラスターに接続され正常性チェックのタイムアウトしきい値を超えた場合、または現在のプライマリ レプリカがエラー状態になった場合。|  
@@ -113,9 +113,9 @@ ms.locfileid: "53208561"
   
 2.  可用性グループに可用性レプリカを追加する場合は、 **New-SqlAvailabilityGroup** コマンドレットを使用します。 既存の可用性レプリカを変更する場合は、 **Set-SqlAvailabilityGroup** コマンドレットを使用します。  
   
-    -   フェールオーバーの条件レベルを設定するには、**FailureConditionLevel***level* パラメーターを使用します。この *level* は次の値のいずれかになります。  
+    -   フェールオーバーの条件レベルを設定するには、 **FailureConditionLevel**_level_ パラメーターを使用します。この *level* は次の値のいずれかになります。  
   
-        |[値]|レベル|自動フェールオーバーが開始される条件|  
+        |[値]|Level|自動フェールオーバーが開始される条件|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|1|サーバーの停止。 フェールオーバーまたは再起動のため、SQL Server サービスが停止した場合。|  
         |**OnServerUnresponsive**|2|サーバーの応答停止。 下限値の任意の条件が満たされた場合、SQL Server サービスがクラスターに接続され正常性チェックのタイムアウトしきい値を超えた場合、または現在のプライマリ レプリカがエラー状態になった場合。|  
@@ -125,7 +125,7 @@ ms.locfileid: "53208561"
   
          詳細については、「[可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)」を参照してください。  
   
-         たとえば、次のコマンドでは、既存の可用性グループ `AG1`のエラー条件レベルをレベル 1 に変更します。  
+         たとえば、次のコマンドでは、既存の可用性グループ `AG1` のエラー条件レベルをレベル 1 に変更します。  
   
         ```  
         Set-SqlAvailabilityGroup `   
@@ -133,7 +133,7 @@ ms.locfileid: "53208561"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   正常性チェックのタイムアウトしきい値を設定するには、**HealthCheckTimeout***n* パラメーターを使用します。この *n* は 15000 ミリ秒 (15 秒) ～ 4294967295 ミリ秒の整数です。 既定値は 30000 ミリ秒 (30 秒) です。  
+    -   正常性チェックのタイムアウトしきい値を設定するには、 **HealthCheckTimeout**_n_ パラメーターを使用します。ここで *n* は 15000 ミリ秒 (15 秒) ～ 4294967295 ミリ秒の整数です。 既定値は 30000 ミリ秒 (30 秒) です。  
   
          たとえば、次のコマンドでは、既存の可用性グループ `AG1`の正常性チェックのタイムアウトしきい値が 120,000 ミリ秒 (2 分) に変更されます。  
   

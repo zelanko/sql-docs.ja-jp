@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 290dd7ad7be98334ebd7eccf49c29df89890bc13
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6b2e04e5b63000bcdd7100c297ecd9d90dd33f27
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209101"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125582"
 ---
 # <a name="create-a-login"></a>ログインの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "53209101"
   
     4.  詳細検索オプションを表示するには **[詳細]** をクリックします。 詳細については、「 [[ユーザー、コンピューターまたはグループの選択] ダイアログ ボックス - [詳細設定] ページ](https://technet.microsoft.com/library/cc733110.aspx)」を参照してください。  
   
-    5.  [**OK**] をクリックします。  
+    5.  **[OK]** をクリックします。  
   
 4.  Windows プリンシパル上に基づいてログインを作成するには、 **[Windows 認証]** を選択します。 これは既定値です。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "53209101"
  **[ユーザー マッピング]** ページには、すべての可能なデータベースと、ログインに適用できるデータベースに対するデータベース ロール メンバーシップが一覧表示されます。 選択したデータベースによって、ログインに使用できるロールのメンバーシップが決まります。 このページで使用できるオプションを次に示します。  
   
  **[このログインにマップされたユーザー]**  
- このログインでアクセスできるデータベースを選択します。 データベースを選択すると、**[*database_name* のデータベース ロール メンバーシップ]** ペインに有効なデータベース ロールが表示されます。  
+ このログインでアクセスできるデータベースを選択します。 データベースを選択すると、**[_database_name_ のデータベース ロール メンバーシップ]** ペインに有効なデータベース ロールが表示されます。  
   
  **マップ**  
  下の一覧にあるデータベースへのアクセスを、ログインに許可します。  
@@ -149,10 +149,10 @@ ms.locfileid: "53209101"
  **[既定のスキーマ]**  
  ユーザーの既定のスキーマを指定します。 ユーザーが最初に作成されるときの既定のスキーマは、 **dbo**です。 存在しない既定のスキーマを指定することもできます。 Windows グループ、証明書、非対称キーにマップされるユーザーに対して既定のスキーマを指定することはできません。  
   
- **[*database_name* では guest アカウントが有効]**  
+ **[_database_name_ では guest アカウントが有効]**  
  選択したデータベースで guest アカウントが有効かどうかを示す読み取り専用属性です。 guest アカウントを有効または無効にするには、guest アカウントの **[ログインのプロパティ]** ダイアログ ボックスの **[状態]** ページを使用します。  
   
- **[*database_name* のデータベース ロール メンバーシップ]**  
+ **[_database_name_ のデータベース ロール メンバーシップ]**  
  指定されたデータベースにおけるユーザーのロールを選択します。 どのデータベースでも、ユーザーはすべて **public** ロールのメンバーになり、削除できません。 データベース ロールの詳細については、「 [データベース レベルのロール](../../../relational-databases/security/authentication-access/database-level-roles.md)」を参照してください。  
   
 ### <a name="securables"></a>[セキュリティ保護可能なリソース]  
@@ -167,7 +167,7 @@ ms.locfileid: "53209101"
   
 2.  **[オブジェクトの追加]** ダイアログ ボックスで、**[特定のオブジェクト]**、**[この種類のすべてのオブジェクト]**、**[サーバー**_server\_name]_ のいずれかのオプションを選択します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **注:****[サーバー **_server\_name]_ を選択すると、そのサーバーのセキュリティ保護可能なすべてのオブジェクトが上のグリッドに自動的に入力されます。  
+    > **注:****[サーバー** _server\_name]_ を選択すると、そのサーバーのセキュリティ保護可能なすべてのオブジェクトが上のグリッドに自動的に入力されます。  
   
 3.  **[特定のオブジェクト]** を選択した場合:  
   

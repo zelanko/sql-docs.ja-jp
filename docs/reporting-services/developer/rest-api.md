@@ -10,12 +10,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: 498432a84d523c597d7c7c52c151dce003047ba2
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328559"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254697"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Reporting Services の REST API による開発
 
@@ -40,14 +40,14 @@ REST API の要求/応答ペアは、次の 5 つのコンポーネントに分�
 
 * HTTP 要求メッセージ ヘッダーのフィールド:
 
-    * 必須の [HTTP メソッド](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) (操作または動詞ともいう)。要求する操作の種類をサービスに通知します。 Reporting Services REST API では、DELETE、GET、HEAD、PUT、POST、および PATCH の各メソッドがサポートされます。
+    * 必須の [HTTP メソッド](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) (操作または動詞ともいう)。要求する操作の種類をサービスに通知します。 Reporting Services REST API では、DELETE、GET、HEAD、PUT、POST、および PATCH の各メソッドがサポートされます。
     * 省略可能な追加ヘッダー フィールド。指定された URI および HTTP メソッドで必要です。
 
 * 省略可能な HTTP **要求メッセージ本文**のフィールド。URI および HTTP 操作をサポートするためのものです。 たとえば、POST 操作には、複合パラメーターとして渡される MIME でエンコードされたオブジェクトが含まれます。 POST または PUT 操作の場合、本文の MIME エンコードの種類を `Content-type` 要求ヘッダーでも指定する必要があります。 一部のサービスでは、`application/json` などの特定の MINE の種類を使用する必要があります。
 
 * HTTP **応答メッセージ ヘッダー**のフィールド:
 
-    * [HTTP 状態コード](https://www.w3.org/Protocols/HTTP/HTRESP.html)。成功コードの 2xx から、エラー コードの 4xx または 5xx までの範囲です。 または、API のドキュメントに記載されているように、サービスで定義された状態コードが返されることもあります。
+    * [HTTP 状態コード](http://www.w3.org/Protocols/HTTP/HTRESP.html)。成功コードの 2xx から、エラー コードの 4xx または 5xx までの範囲です。 または、API のドキュメントに記載されているように、サービスで定義された状態コードが返されることもあります。
     * 省略可能な追加ヘッダー フィールド。要求の応答をサポートするために必要です (`Content-type` 応答ヘッダーなど)。
 
 * 省略可能な HTTP **応答メッセージ本文**のフィールド:
