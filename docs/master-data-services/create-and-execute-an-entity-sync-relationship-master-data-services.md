@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 95bf478ba6bb44194f5713a16d0c87b067487551
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4c4ae12021930ba447c3cb01a9830907fb3153
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854627"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822916"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>エンティティの同期関係の作成と実行 (マスター データ サービス)
 
@@ -112,15 +111,15 @@ ms.locfileid: "47854627"
   
  インデックスをクリックすると、次の情報が表示されます。  
   
--   **前回の試行エラー**: 前回の同期の試行に関するエラー情報が表示されます。  
+-   **前回の試行エラー**:前回の同期の試行に関するエラー情報が表示されます。  
   
--   **作成者**: 同期を作成したユーザーの名前。  
+-   **作成者**:同期を作成したユーザーの名前。  
   
--   **作成日時**: 同期が作成された日時。  
+-   **作成日時**:同期が作成された日時。  
   
--   **更新者**: 同期を最後に更新したユーザーの名前。  
+-   **更新者**:同期を最後に更新したユーザーの名前。  
   
--   **更新日時**: 同期が最後に更新された日時。  
+-   **更新日時**:同期が最後に更新された日時。  
   
 ## <a name="next-steps"></a>Next Steps  
  [エンティティの同期関係の編集と削除 (マスター データ サービス)](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: fd046f665745ca9456acb6a2c30e28ff9a6fc082
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711503"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626401"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリのストア機能により、クエリ プランの選択やパフォーマンスを把握できます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 クエリのストアは、自動的にクエリ、プラン、および実行時統計の履歴をキャプチャし、確認用に保持します。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) オプションを使用してクエリ ストアを構成できます。 
   
@@ -105,7 +105,7 @@ INNER JOIN sys.query_store_query_text AS Txt
   
 ![SQL Server 2016 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー")   ![SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー") 
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[機能低下したクエリ]** を選択し、  **[機能低下したクエリ]** ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部のドロップダウン ボックスを使用し、さまざまな条件に基づいてクエリをフィルター処理します (**実行時間 (ミリ秒)** (既定)、CPU 時間 (ミリ秒)、論理読み取り (KB)、論理書き込み (KB)、物理読み取り (KB)、CLR 時間 (ミリ秒)、DOP、メモリ消費量 (KB)、行数、使用済みログ メモリ (KB)、使用済み一時 DB メモリ (KB)、待機時間 (ミリ秒))。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[機能低下したクエリ]** を選択し、 ** [機能低下したクエリ]** ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部のドロップダウン ボックスを使用し、さまざまな条件に基づいてクエリをフィルター処理します:**実行時間 (ミリ秒)** (既定)、CPU 時間 (ミリ秒)、論理読み取り (KB)、論理書き込み (KB)、物理読み取り (KB)、CLR 時間 (ミリ秒)、DOP、メモリ消費量 (KB)、行数、使用済みログ メモリ (KB)、使用済み一時 DB メモリ (KB)、待機時間 (ミリ秒)。  
 プランを選択して、グラフィカルなクエリ プランを表示します。 ボタンを使用して、ソース クエリの表示、クエリ プランの強制と強制解除、グリッド形式とグラフ形式の切り替え、選択したプランの比較 (複数選択時)、表示の更新を行うことができます。  
   
 ![SQL Server 2016 の SSMS オブジェクト エクスプローラーでの低下したクエリ](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016 の SSMS オブジェクト エクスプローラーでの低下したクエリ")  
@@ -239,7 +239,7 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
 ```  
   
  > [!NOTE]
- > `INTERVAL_LENGTH_MINUTES` に任意の値を使用することはできません。 1、5、10、15、30、60、または 1440 分のいずれかを使用します。  
+ > `INTERVAL_LENGTH_MINUTES` に任意の値を使用することはできません。 次のいずれかを使用します:1、5、10、15、30、60、1440 分。  
   
  間隔の新しい値は、 **sys.database_query_store_options** ビューで明らかになります。  
   

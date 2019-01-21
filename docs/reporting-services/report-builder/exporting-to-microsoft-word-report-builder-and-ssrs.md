@@ -1,23 +1,25 @@
 ---
 title: Microsoft Word へのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
+description: Word 表示拡張機能は、改ページ調整されたレポートを  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 形式 (.docx) で表示します。 形式は、Office Open XML です。
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e8bae0c0ef770acf460840abcc0989f8cdf4324e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393337"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202421"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
-  Word 表示拡張機能は、改ページ調整されたレポートを  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 形式 (.docx) で表示します。 形式は、Office Open XML です。  
+  Word 表示拡張機能は、改ページ調整されたレポートを Microsoft Word 形式 (.docx) で表示します。 形式は、Office Open XML です。  
   
  このレンダラーによって生成されるファイルのコンテンツ タイプは **application/vnd.openxmlformats-officedocument.wordprocessingml.document** で、ファイル拡張子は .docx です。  
   
@@ -70,9 +72,9 @@ ms.locfileid: "52393337"
   
  この問題は、Word レンダラーがレポートの **PageNumber** や **TotalPages** などの改ページに関連するフィールドを解析して単純な参照のみを処理し、関数の呼び出しが行われないために生じます。 この場合、式は **ToString** 関数を呼び出します。 次の 2 つの式は同等であり、レポート ビルダーやレポート デザイナーでレポートをプレビューするか、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルや SharePoint ライブラリでパブリッシュされたレポートを表示した場合は、両方とも正しく表示されます。 ただし、Word レンダラーでは 2 番目の式のみが正しく解析され、正しいページ番号が表示されます。  
   
--   **複合式:**  式は以下のとおりです: `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **複合式:** 式は `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber` です  
   
--   **テキスト ランを使用した式:** テキスト、 **Average Sales**、および式、  `=Avg(Fields!YTDPurchase.Value, "Sales)`、およびテキスト、 **ページ番号**、および式 `=Globals!PageNumber`  
+-   **テキスト ランを使用した式:** テキスト、**Average Sales**、式、`=Avg(Fields!YTDPurchase.Value, "Sales)`、テキスト、**Page Number**、式 `=Globals!PageNumber`  
   
  この問題を回避するには、フッターおよびヘッダーで式を使用するときに 1 つの複合式ではなく複数のテキスト ランを使用します。 次の 2 つの式は等価です。 最初の式は複合式で、2 番目の式はテキスト ランを使用しています。 Word レンダラーでは、2 番目の式のみが正しく解析されます。  
   

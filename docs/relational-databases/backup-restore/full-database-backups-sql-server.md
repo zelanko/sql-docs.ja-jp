@@ -20,12 +20,12 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f20b2f1b29c6ba175237e2e4f47cb5cf6fa0a610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 066bd086fcbe9b69cc49821651302cd2102cd671
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771832"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214091"
 ---
 # <a name="full-database-backups-sql-server"></a>データベースの完全バックアップ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47771832"
   
  ![データベース バックアップ間でのデータ損失の危険性](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "データベース バックアップ間でのデータ損失の危険性")  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  次の例では、WITH FORMAT を使用してデータベースの完全バックアップを作成することにより、既存のバックアップを上書きして新しいメディア セットを作成します。  
   
 ```  
@@ -70,7 +70,7 @@ GO
   
  ログのバックアップを作成する方法については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)」を参照してください。  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  次の例では、WITH FORMAT を使用してデータベースの完全バックアップを作成することにより、既存のバックアップを上書きして新しいメディア セットを作成します。 その後、トランザクション ログをバックアップします。 実際の状況では、一連の定期的なログ バックアップを実行する必要があります。 この例では、完全復旧モデルが使用されるように [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを設定します。  
   
 ```  

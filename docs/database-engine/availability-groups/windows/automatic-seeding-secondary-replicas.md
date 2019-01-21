@@ -1,8 +1,8 @@
 ---
-title: セカンダリ レプリカの自動シード処理 (SQL Server) | Microsoft Docs
-description: 自動シード処理を使用して、セカンダリ レプリカを初期化します。
+title: 自動シード処理を使用して、可用性グループのセカンダリ レプリカを初期化する
+description: 自動シード処理を使用して、SQL 2016 以降で Always On 可用性グループの一部としてセカンダリ レプリカを初期化します。
 services: data-lake-analytics
-ms.custom: ''
+ms.custom: seodec18
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506688"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306169"
 ---
-# <a name="automatic-seeding-for-secondary-replicas"></a>セカンダリ レプリカの自動シード処理
+# <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>自動シード処理を使用して、Always On 可用性グループのセカンダリ レプリカを初期化する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2012 および 2014 では、SQL Server Always On 可用性グループでセカンダリ レプリカを初期化する唯一の方法はバックアップ、コピー、および復元を使用することです。 SQL Server 2016 では、セカンダリ レプリカを初期化するための*自動シード処理*という新機能が導入されています。 自動シード処理ではログ ストリーム トランスポートを使用して、VDI を使用するバックアップを、構成済みのエンドポイントを使用する可用性グループの各データベースのセカンダリ レプリカにストリーミングします。 この新機能は、可用性グループの最初の作成時やデータベースの追加時に使用できます。 自動シード処理は、Always On 可用性グループをサポートする SQL Server のすべてのエディションで、従来の可用性グループと[分散型可用性グループ](distributed-availability-groups.md)の両方で使用できます。
@@ -32,7 +32,7 @@ SQL Server 2012 および 2014 では、SQL Server Always On 可用性グルー�
 
 * [プライマリ レプリカへのパフォーマンスおよびトランザクション ログの影響](#performance-and-transaction-log-impact-on-the-primary-replica)
 * [ディスク レイアウト](#disklayout)
-* [Security](#security)
+* [セキュリティ](#security)
 
 
 ### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>プライマリ レプリカへのパフォーマンスおよびトランザクション ログの影響
@@ -207,7 +207,7 @@ GO
 たとえば、以下のスクリプトでは、自動シード処理に関連したイベントをキャプチャする拡張イベント セッションを作成します。
 
 ```sql
-CREATE EVENT SESSION [AG_autoseed] ON SERVER 
+CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
     ADD EVENT sqlserver.hadr_db_manager_seeding_request_msg,

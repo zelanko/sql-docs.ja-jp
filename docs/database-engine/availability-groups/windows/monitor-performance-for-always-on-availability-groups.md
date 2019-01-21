@@ -1,6 +1,7 @@
 ---
-title: Always On 可用性グループのパフォーマンスを監視する (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 可用性グループのパフォーマンスを監視する
+description: この記事では、同期プロセスについて説明し、主要なメトリックの計算方法を示すと共に、一般的なパフォーマンス トラブルシューティング シナリオへのリンクをいくつか紹介します。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2f9b3fb8ce55a57a7609aacd685ef56952b6811e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601152"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203352"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 可用性グループのパフォーマンスを監視する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -408,21 +409,21 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
              この設定により、ポリシーは必ず、ローカルの可用性レプリカがプライマリ レプリカである可用性グループのみで評価されます。  
   
-        -   **評価モード**: **スケジュールで実行**  
+        -   **[評価モード]**:**スケジュールで実行**  
   
-        -   **スケジュール**: **CollectorSchedule_Every_5min**  
+        -   **[スケジュール]**:**CollectorSchedule_Every_5min**  
   
         -   **有効**: **選択**  
   
     -   **[説明]** ページ:  
   
-        -   **カテゴリ**: **可用性データベースの警告**  
+        -   **カテゴリ**:**可用性データベースの警告**  
   
              この設定により、Always On ダッシュボードにポリシーの評価結果を表示できるようになります。  
   
-        -   **説明**: **検出とフェールオーバーのオーバーヘッドが 1 分であると仮定すると、現在のレプリカの RTO は 10 分を超えています。すぐに、それぞれのサーバー インスタンスでのパフォーマンスの問題を調査する必要があります。**  
+        -   **説明**:**検出とフェールオーバーのオーバーヘッドが 1 分であると仮定すると、現在のレプリカの RTO は 10 分を超えています。すぐに、それぞれのサーバー インスタンスでのパフォーマンスの問題を調査する必要があります。**  
   
-        -   **表示するテキスト**: **RTO を超過しました!**  
+        -   **表示するテキスト**:**RTO を超過しました!**  
   
 8.  次の仕様に基づいて 2 番目の[ポリシー ベースの管理ポリシー](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md)を作成します。  
   
@@ -434,19 +435,19 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
         -   **対象**: **IsPrimaryReplica AvailabilityGroup** の**すべての DatabaseReplicaState**  
   
-        -   **評価モード**: **スケジュールで実行**  
+        -   **[評価モード]**:**スケジュールで実行**  
   
-        -   **スケジュール**: **CollectorSchedule_Every_30min**  
+        -   **[スケジュール]**:**CollectorSchedule_Every_30min**  
   
         -   **有効**: **選択**  
   
     -   **[説明]** ページ:  
   
-        -   **カテゴリ**: **可用性データベースの警告**  
+        -   **カテゴリ**:**可用性データベースの警告**  
   
-        -   **説明**: **可用性データベースは、1 時間の RPO を超過しています。すぐに、可用性レプリカでのパフォーマンスの問題を調査する必要があります。**  
+        -   **説明**:**可用性データベースは、1 時間の RPO を超過しています。すぐに、可用性レプリカでのパフォーマンスの問題を調査する必要があります。**  
   
-        -   **表示するテキスト**: **RPO を超過しました!**  
+        -   **表示するテキスト**:**RPO を超過しました!**  
   
  完了すると、2 つの新しい SQL Server エージェント ジョブが作成されます (各ポリシー評価スケジュールに対して 1 つ)。 これらのジョブの名前は、**syspolicy_check_schedule** で始める必要があります。  
   
@@ -457,8 +458,8 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
 |シナリオ|[説明]|  
 |--------------|-----------------|  
-|[トラブルシューティング: 可用性グループ接続の超過 RTO ](troubleshoot-availability-group-exceeded-rto.md)|データ損失のない自動フェールオーバーまたは計画的な手動フェールオーバーの後で、フェールオーバー時間が RTO を超過します。 または、同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。|  
-|[トラブルシューティング: 可用性グループ接続の超過 RPO ](troubleshoot-availability-group-exceeded-rpo.md)|強制的な手動フェールオーバーを実行した後で、データ損失が RPO より大きくなります。 または、非同期コミット セカンダリ レプリカのデータ損失の可能性を計算したとき、計算結果が RPO を超過していることが判明します。|  
+|[トラブルシューティング: 可用性グループ接続の超過 RTO](troubleshoot-availability-group-exceeded-rto.md)|データ損失のない自動フェールオーバーまたは計画的な手動フェールオーバーの後で、フェールオーバー時間が RTO を超過します。 または、同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。|  
+|[トラブルシューティング: 可用性グループ接続の超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|強制的な手動フェールオーバーを実行した後で、データ損失が RPO より大きくなります。 または、非同期コミット セカンダリ レプリカのデータ損失の可能性を計算したとき、計算結果が RPO を超過していることが判明します。|  
 |[トラブルシューティング: プライマリ上の変更がセカンダリ レプリカに反映されない](troubleshoot-primary-changes-not-reflected-on-secondary.md)|クライアント アプリケーションは、プライマリ レプリカの更新を正常に完了しますが、セカンダリ レプリカのクエリを実行すると、変更が反映されていないことが示されます。|  
   
 ##  <a name="BKMK_XEVENTS"></a> 有用な拡張イベント  

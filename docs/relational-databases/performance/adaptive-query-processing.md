@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503412"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207313"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Microsoft SQL データベースでのアダプティブ クエリの処理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -126,11 +126,11 @@ USE HINT クエリ ヒントは、データベース スコープ構成または
 
 | IsMemoryGrantFeedbackAdjusted の値 | [説明] |
 |---|---|
-| No: First Execution | メモリ許可フィードバックは、最初のコンパイルとそれに関連付けられた実行ではメモリを調整しません。  |
-| No: Accurate Grant | ディスクへの書き込みが存在せず、許可されたメモリの少なくとも 50% がステートメントによって使用されている場合、メモリ許可フィードバックはトリガーされません。 |
-| No: Feedback disabled | メモリ許可フィードバックが継続的にトリガーされ、メモリを増加させる操作と減少させる操作の間で変動している場合、ステートメントのメモリ許可フィードバックは無効にされます。 |
-| Yes: Adjusting | メモリ許可フィードバックが適用されています。また、次の実行に向けてさらに調整される可能性があります。 |
-| Yes: Stable | メモリ許可フィードバックが適用されています。また、許可されたメモリが安定しています (つまり、前回の実行で許可されたメモリと今回の実行で許可されたメモリが同じです)。 |
+| No:First Execution | メモリ許可フィードバックは、最初のコンパイルとそれに関連付けられた実行ではメモリを調整しません。  |
+| No:Accurate Grant | ディスクへの書き込みが存在せず、許可されたメモリの少なくとも 50% がステートメントによって使用されている場合、メモリ許可フィードバックはトリガーされません。 |
+| No:Feedback disabled | メモリ許可フィードバックが継続的にトリガーされ、メモリを増加させる操作と減少させる操作の間で変動している場合、ステートメントのメモリ許可フィードバックは無効にされます。 |
+| Yes:Adjusting | メモリ許可フィードバックが適用されています。また、次の実行に向けてさらに調整される可能性があります。 |
+| Yes:Stable | メモリ許可フィードバックが適用されています。また、許可されたメモリが安定しています (つまり、前回の実行で許可されたメモリと今回の実行で許可されたメモリが同じです)。 |
 
 > [!NOTE]
 > パブリック プレビューの行モード メモリ許可フィードバック プランの属性は、バージョン 17.9 以降の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のグラフィカルなクエリ実行プランで表示されます。 
@@ -171,7 +171,7 @@ USE HINT クエリ ヒントは、データベース スコープ構成または
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
@@ -190,7 +190,7 @@ WHERE [fo].[Quantity] = 360;
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
 クエリでは 1 行が返されます。 ライブ クエリ統計を有効にすると次のようなプランが表示されます。

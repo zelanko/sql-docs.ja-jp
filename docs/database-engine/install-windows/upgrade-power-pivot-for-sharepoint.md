@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 921994834433e7a4e2e081d6b8b43ce6294f6e09
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 99e6a0b600dfe7adfe173176b69cd2b45ffdd223
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518303"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209211"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint のアップグレード
 
@@ -203,7 +203,7 @@ ms.locfileid: "52518303"
   
     10. ファーム内のソリューションおよび機能のアップグレードが完了するまで、数分かかります。 この間、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに対する接続要求は、"データを更新できません" または "要求されたアクションを実行しようとしたときにエラーが発生しました。 再試行してください" のようなエラーが表示されます。 アップグレードが完了すると、サーバーは使用可能になり、これらのエラーは発生しなくなります。  
   
-8.  ファーム内の各 SQL Server Analysis Services (**) サービスに対して、1) SQL Server セットアップを実行する、2)** 構成ツールを実行するという[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]処理を繰り返します [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 。  
+8.  ファーム内の各 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) サービスに対して次の**処理を繰り返します**。1) SQL Server セットアップを実行する、2)[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを実行する。  
   
 9. アップグレード後の手順を実行し、ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーのバージョンを確認して、アップグレードが成功したことを確認します。 詳しくは、この記事の「[アップグレード後の検証タスク](#verify)」および次のセクションをご覧ください。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "52518303"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  既存の配置について、 **[種類]** が "取り消し" または "展開" であり、 **[ファイル]** が powerpivotwebapp.wsp または powerpivotfarm.wsp であることを確認します。  
+    2.  既存の配置について、**[種類]** が "取り消し" または "展開" であり、**[ファイル]** が powerpivotwebapp.wsp または powerpivotfarm.wsp であることを確認します。  
   
     3.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューションに関連するデプロイまたは取り消しの場合、**[JobId]** の GUID 値をコピーし、次のコマンドに貼り付けます (シェルの [編集] メニューの [マーク]、[コピー]、および [貼り付け] を使用して GUID をコピーします)。  
   

@@ -1,6 +1,7 @@
 ---
-title: 分散トランザクション対応の可用性グループを構成する | Microsoft Docs
-ms.custom: ''
+title: 可用性グループ用に分散トランザクションを構成する
+description: 'Always On 可用性グループ内のデータベースに対して分散トランザクションを構成する方法について説明します。 '
+ms.custom: seodec18
 ms.date: 05/22/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -16,14 +17,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3953e1d6a4b9382d1607765683c990c42432f7b4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513681"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215671"
 ---
-# <a name="configure-availability-group-for-distributed-transactions"></a>分散トランザクション対応の可用性グループを構成する
+# <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 可用性グループ用に分散トランザクションを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] は、可用性グループのデータベースを含むすべての分散トランザクションをサポートします。 この記事では、分散トランザクションの可用性グループを構成する方法について説明します。  
@@ -186,10 +187,10 @@ following the guideline for Troubleshooting DTC Transactions.
 
 [分散トランザクション](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
-[Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+[Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [トランザクション - Always On 可用性グループとデータベース ミラーリング](transactions-always-on-availability-and-database-mirroring.md)  
 
 [XA トランザクションのサポート](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[動作のしくみ: DTC トランザクションのセッション/SPID (-2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[動作方法:DTC トランザクションのセッション/SPID (-2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

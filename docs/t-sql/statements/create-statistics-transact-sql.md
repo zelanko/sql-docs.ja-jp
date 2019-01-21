@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae5faf4c861de4849289fe8752633caca0347976
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0bf6e2b9a678d1406e2b9beb8cdda09d3ef704e6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523294"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209937"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
         [ [ FULLSCAN   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
-            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
         [ [ , ] INCREMENTAL = { ON | OFF } ] 
@@ -197,7 +197,7 @@ CREATE STATISTICS statistics_name
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 MAXDOP = *max_degree_of_parallelism*  
-**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
   
  統計操作の間、**max degree of parallelism** 構成オプションをオーバーライドします。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
@@ -247,7 +247,7 @@ MAXDOP = *max_degree_of_parallelism*
 ### <a name="examples-use-the-adventureworks-database"></a>使用例では、AdventureWorks データベースを使用します。  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. CREATE STATISTICS を SAMPLE number PERCENT と共に使用する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `ContactMail1` テーブルにある `BusinessEntityID` 列と `EmailPromotion` 列の 5% のランダムなサンプルを使用して、`Contact` 統計情報を作成します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Contact` テーブルにある `BusinessEntityID` 列と `EmailPromotion` 列の 5% のランダムなサンプルを使用して、`ContactMail1` 統計情報を作成します。  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -278,7 +278,7 @@ GO
 ### <a name="d-create-statistics-on-an-external-table"></a>D. 統計、外部テーブルを作成します。  
  列の一覧を提供するだけでなく、外部テーブルの統計を作成するときにする必要がある唯一の意思決定は、行をサンプリングすることによって、またはすべての行をスキャンして統計を作成するかどうかです。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フル スキャンのオプション、統計を作成するを一時テーブルに外部テーブルからデータをインポートがかなり長くかかります。 大きなテーブルの場合は、既定のサンプリング方法通常で十分です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フル スキャンのオプション、統計を作成するを一時テーブルに外部テーブルからデータをインポートがかなり長くかかります。 大きなテーブルの場合は、既定のサンプリング方法通常で十分です。  
   
 ```sql  
 --Create statistics on an external table and use default sampling.  
@@ -290,11 +290,11 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. CREATE STATISTICS を FULLSCAN および PERSIST_SAMPLE_PERCENT と共に使用する  
  次の例では、`Contact` テーブルの `BusinessEntityID` 列と `EmailPromotion` 列のすべての行について `ContactMail2` 統計を作成し、サンプリング率を明示的に指定しない後続のすべての更新について 100 パーセントのサンプリング率を設定します。  
-  
+  
 ```sql  
 CREATE STATISTICS NamePurchase  
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
-    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
+    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
+    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
 ```  
   
 ### Examples using AdventureWorksDW database. 

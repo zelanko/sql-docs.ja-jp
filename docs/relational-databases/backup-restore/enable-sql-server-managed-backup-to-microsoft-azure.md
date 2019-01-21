@@ -11,12 +11,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fedebfb082639114ec068f80db436af7b8a035b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7ef52db1ccafaeaf9539974032da3622b23838c4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672801"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787094"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップを有効にする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +48,20 @@ ms.locfileid: "51672801"
     New-AzureStorageContainer -Name backupcontainer -Context $context  
     ```  
   
-4.  **Shared Access Signature (SAS) を生成する** : コンテナーにアクセスするには、SAS を作成する必要があります。 SAS は、いくつかのツール、コード、Azure PowerShell を使用して作成できます。 次の `New-AzureStorageContainerSASToken` コマンドを実行すると、1 年後に期限切れになる `backupcontainer` BLOB コンテナーの SAS トークンが作成されます。  
+4.  **Shared Access Signature (SAS) を生成する**: コンテナーにアクセスするには、SAS を作成する必要があります。 SAS は、いくつかのツール、コード、Azure PowerShell を使用して作成できます。 次の `New-AzureStorageContainerSASToken` コマンドを実行すると、1 年後に期限切れになる `backupcontainer` BLOB コンテナーの SAS トークンが作成されます。  
   
     ```powershell  
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
     New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
     ```  
+    AzureRM の場合、次のコマンドを使用します。
+       ```powershell
+    Connect-AzureRmAccount
+    Set-AzureRmContext -SubscriptionId "YOURSUBSCRIPTIONID"
+    $StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
+    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
+    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
+   ```  
   
      このコマンドの出力には、コンテナーの URL と SAS トークンの両方が含まれます。 以下に例を示します。  
   
@@ -68,11 +76,11 @@ ms.locfileid: "51672801"
     |**コンテナーの URL:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**SAS トークン:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録します。 SAS の詳細については、「 [Shared Access Signature、第 1 部: SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。  
+     SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録します。 SAS の詳細については、「[Shared Access Signature、第 1 部: SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>[有効化] [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
-1.  **SAS URL の SQL 資格情報を作成する** : SAS トークンを使用して、BLOB コンテナーの URL の SQL 資格情報を作成します。 SQL Server Management Studio で、次の Transact-SQL クエリを使用して、次の例に基づいて BLOB コンテナーの資格情報を作成します。  
+1.  **SAS URL の SQL 資格情報を作成する**: SAS トークンを使用して、BLOB コンテナーの URL の SQL 資格情報を作成します。 SQL Server Management Studio で、次の Transact-SQL クエリを使用して、次の例に基づいて BLOB コンテナーの資格情報を作成します。  
   
     ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
@@ -84,7 +92,7 @@ ms.locfileid: "51672801"
   
 3.  **保有期間を決定する:** バックアップ ファイルに必要な保有期間を決定します。 保有期間は日数で指定し、その範囲は 1 ～ 30 になります。  
   
-4.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にして構成する:** SQL Server Management Studio を起動し、対象の SQL Server インスタンスに接続します。 要件に合わせて、データベース名、コンテナーの URL、および保有期間の値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
+4.  **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にして構成する:** SQL Server Management Studio を起動し、対象の SQL Server インスタンスに接続します。 要件に合わせて、データベース名、コンテナーの URL、および保有期間の値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
   
     > [!IMPORTANT]  
     >  インスタンス レベルで管理対象バックアップを有効にするには、`database_name` パラメーターに `NULL` を指定します。  
@@ -127,7 +135,7 @@ ms.locfileid: "51672801"
   
 7.  **Microsoft Azure ストレージ アカウントでバックアップ ファイルを表示する:** SQL Server Management Studio または Azure 管理ポータルから、ストレージ アカウントに接続します。 指定したコンテナー内のすべてのバックアップが表示されます。 データベースに対して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にしてから 5 分以内のデータベースとログ バックアップが表示される場合があります。  
   
-8.  **正常性状態を監視する:**  前の手順で構成した電子メール通知から監視するか、ログに記録されているイベントをアクティブに監視することができます。 イベントを表示するための Transact-SQL ステートメントのいくつかの例を示します。  
+8.  **正常性状態を監視する:** 前の手順で構成した電子メール通知から監視するか、ログに記録されているイベントをアクティブに監視することができます。 イベントを表示するための Transact-SQL ステートメントのいくつかの例を示します。  
   
     ```  
     --  view all admin events  

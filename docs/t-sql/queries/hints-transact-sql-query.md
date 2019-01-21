@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42247b11f00524ba08dd74f41f11da35fdcb2026
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a4eb946a9b851342b1f997f2b491b0b0708138c
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530356"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306279"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ ms.locfileid: "52530356"
   
  このクエリ ヒントは、インデックス付きビューを直接使用することを実質的に禁止し、クエリ プラン内のインデックス付きビューにインデックスを指定します。  
   
- クエリの SELECT 要素でビューが直接参照され、WITH (NOEXPAND) または WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ) が指定されている場合のみ、インデックス付きビューは展開されません。 クエリ ヒント WITH (NOEXPAND) の詳細については、「[FROM](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
+ クエリの SELECT 要素でビューが直接参照され、WITH (NOEXPAND) または WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ) が指定されている場合のみ、インデックス付きビューは展開されません。 クエリ ヒント NOEXPAND の詳細については、「[NOEXPAND の使用](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand)」を参照してください。  
   
  INSERT、UPDATE、MERGE、DELETE ステートメントなど、ステートメントの SELECT 要素内のビューのみが、ヒントの影響を受けます。  
   
@@ -287,7 +287,7 @@ ms.locfileid: "52530356"
    > [!NOTE]
    > 既定またはレガシのカーディナリティ推定の設定が、データベース スコープ構成、トレース フラグ、または QUERYTRACEON などの別のクエリ ヒントによって適用されている場合、QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n ヒントはそれをオーバーライドしません。   
    > このヒントは、クエリ オプティマイザーの動作にのみ影響します。 特定のデータベース機能の可用性など、[データベース互換レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)に依存する可能性のある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他の機能には影響しません。  
-   > このヒントについて詳しくは、「[Developer’s Choice: Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model)」(開発者の選択: クエリ ヒント実行モデル) をご覧ください。
+   > このヒントの詳細については、「[Developer’s Choice:Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model)」(開発者の選択: クエリ ヒント実行モデル) をご覧ください。
     
 *  'QUERY_PLAN_PROFILE'      
  クエリの軽量プロファイリングを有効にします。 この新しいヒントを含むクエリが完了したら、新しい拡張イベントである query_plan_profile が起動されます。 この拡張イベントでは、実行の統計と query_post_execution_showplan 拡張イベントのような実際の実行プラン XML が公開されますが、新しいヒントを含むクエリのみが対象です。 **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降)。 
@@ -296,7 +296,7 @@ ms.locfileid: "52530356"
   > query_post_execution_showplan 拡張イベントの収集を有効にした場合は、サーバー上で実行しているすべてのクエリに標準的なプロファイリング インフラストラクチャが追加されるので、全体的なサーバー パフォーマンスに影響する可能性があります。      
   > *query_thread_profile* 拡張イベントのコレクションを有効にして軽量プロファイリング インフラストラクチャを代わりに使用する場合、パフォーマンス オーバーヘッドがはるかに少なくなりますが、依然として全体的なサーバー パフォーマンスに影響します。       
   > query_plan_profile 拡張イベントを有効にした場合、軽量プロファイリング インフラストラクチャは QUERY_PLAN_PROFILE を使用して実行されるクエリに対してのみ有効になるので、サーバー上の他のワークロードには影響しません。 このヒントを使用して、サーバー ワークロードの他の部分に影響を与えずに特定のクエリをプロファイリングします。
-  > 軽量プロファイリングについて詳しくは、「[Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)」(開発者の選択: クエリの進行状況 - いつでも、どこでも) をご覧ください。
+  > 軽量プロファイリングの詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」をご覧ください。
  
 サポートされているすべての USE HINT 名の一覧は、動的管理ビューの [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) を使用して照会できます。    
 
@@ -309,7 +309,7 @@ ms.locfileid: "52530356"
  USE PLAN N **'**_xml\_plan_**'**     
  **'**_xml\_plan_**'** で指定されているクエリの既存のクエリ プランを使用するように、クエリ オプティマイザーを設定します。 USE PLAN は、INSERT、UPDATE、MERGE、または DELETE の各ステートメントに指定することはできません。  
   
-TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint>  **[,]**..._n_ ] ] **)** *exposed_object_name* に対応するテーブルまたはビューに、指定したテーブル ヒントを適用します。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。  
+TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ] ] **)** *exposed_object_name* に対応するテーブルまたはビューに、指定したテーブル ヒントを適用します。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。  
   
  *exposed_object_name* には、次のいずれかの参照を指定できます。  
   

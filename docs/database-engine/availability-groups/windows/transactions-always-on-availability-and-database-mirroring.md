@@ -1,7 +1,7 @@
 ---
 title: トランザクション - Always On 可用性グループとデータベース ミラーリング | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -16,12 +16,12 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad9700e9b1c86b454191e51c6a7e4ee52c393c6b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: af982fa485cb9fbcc394a063e0390b795e87e0b0
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606842"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328952"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>トランザクション - 可用性グループとデータベース ミラーリング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "51606842"
 
 SQL Server 2017 では、可用性グループのデータベースに対して分散トランザクションがサポートされています。 このサポートには、SQL Server の同じインスタンス上のデータベース、または SQL Server の異なるインスタンス上のデータベースが含まれています。 分散トランザクションは、データベース ミラーリング用に構成されたデータベースではサポートされていません。
 
->[!NOTE]
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 
->
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 より前のバージョンでは、可用性グループのデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。
+> [!NOTE]
+> [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 
+> 
+> [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] Service Pack 2 より前のバージョンでは、可用性グループ内のデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。
 
 分散トランザクション対応の可用性グループの構成については、「[Configure Availability Group for Distributed Transactions](configure-availability-group-for-distributed-transactions.md)」 (分散トランザクション対応の可用性グループを構成する)」を参照してください。
 
@@ -45,13 +45,13 @@ SQL Server 2017 では、可用性グループのデータベースに対して�
 - [DTC 開発者ガイド](https://msdn.microsoft.com/library/ms679938.aspx)
 - [DTC プログラマ リファレンス](https://msdn.microsoft.com/library/ms686108.aspx)
 
-## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 以前: 同じ SQL Server インスタンス内での複数データベースにまたがるトランザクションのサポート  
+## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 以前:同じ SQL Server インスタンス内での複数データベースにまたがるトランザクションのサポート  
 
 SQL Server 2016 SP1 以前では、可用性グループに対して、同じ SQL Server インスタンス内での複数データベースにまたがるトランザクションはサポートされていません。 いずれかまたは両方のデータベースが可用性グループにある場合は、同じ SQL Server インスタンスで複数データベースにまたがるトランザクションの 2 つのデータベースをホストできない可能性があります。 この制限は、これらのデータベースが同じ可用性グループの一部である場合でも適用されます。  
   
 複数のデータベースにまたがるトランザクションは、データベース ミラーリングでもサポートされていません。  
   
-##  <a name="dtcsupport"></a> SQL Server 2016 SP1 以前: 分散トランザクションのサポート  
+##  <a name="dtcsupport"></a> SQL Server 2016 SP1 以前:分散トランザクションのサポート  
 複数のデータベースがそれぞれ異なる SQL Server インスタンスでホストされている場合は、可用性グループで分散トランザクションがサポートされます。 これは、SQL Server インスタンスと DTC に準拠した別のサーバー間の分散トランザクションにも当てはまります。  
  
 Microsoft 分散トランザクション コーディネーター (MSDTC または DTC) は、分散システムのトランザクション インフラストラクチャを提供する Windows サービスです。 MSDTC では、クライアント アプリケーションに対して、1 つのトランザクションに複数のデータ ソースを含め、その後、トランザクションに含まれるすべてのサーバーにコミットすることを許可します。 たとえば、MSDTC を使用して、さまざまなサーバーの複数のデータベースにわたるトランザクションを調整することができます。
@@ -91,6 +91,6 @@ SQL Server 2016 では、トランザクションの 1 つ以上のデータベ�
 >  この記事で承認されていない DTC とデータベース ミラーリングの使用や DTC と可用性グループの使用はサポートされていません。  これは、DTC に関係しない部分はサポートされないことを意味するものではありません。ただし、分散トランザクションの不適切な使用により発生する問題はサポートされません。  
   
 ## <a name="next-steps"></a>次の手順  
- [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20fad19ffa9d5d82c83321f63236b066e3e1c781
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0dc4612ff2d77558a04062704df61e1f93b58ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849840"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774104"
 ---
 # <a name="create-an-index-master-data-services"></a>インデックスを作成する (マスター データ サービス)
 
@@ -61,13 +60,13 @@ ms.locfileid: "47849840"
   
  インデックスをクリックすると、次の情報が表示されます。  
   
--   **作成者**: インデックスを作成したユーザーの名前。  
+-   **作成者**:インデックスを作成したユーザーの名前。  
   
--   **作成日時**: インデックスが作成された日時。  
+-   **作成日時**:インデックスが作成された日時。  
   
--   **更新者**: インデックスを最後に更新したユーザーの名前。  
+-   **更新者**:インデックスを最後に更新したユーザーの名前。  
   
--   **更新日時**: インデックスが最後に更新された日時。  
+-   **更新日時**:インデックスが最後に更新された日時。  
   
 ## <a name="next-steps"></a>Next Steps  
  [インデックスの編集と削除 (マスター データ サービス)](../master-data-services/edit-and-delete-an-index-master-data-services.md)  

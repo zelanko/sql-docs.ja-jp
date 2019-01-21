@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410859"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202661"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>データベース エンジンの権限の概要
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -175,7 +175,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
 -   データベース上のユーザーとユーザー定義ロールは、 `sys.database_principals` ビューを使用して調べることができます。  
   
--   ログインやユーザー定義固定サーバー ロールに付与された権限は、 `sys.server_permissions` ビューを使用して調べることができます。 このビューは、[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] では使用できません。  
+-   ログインやユーザー定義固定サーバー ロールに付与された権限は、 `sys.server_permissions` ビューを使用して調べることができます。 このビューは、 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]では使用できません。  
   
 -   ユーザーやユーザー定義固定データベース ロールに付与された権限は、 `sys.database_permissions` ビューを使用して調べることができます。  
   
@@ -233,7 +233,7 @@ JOIN sys.database_principals AS dRole
   
 -   [チュートリアル: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
--   [チュートリアル : Transact-SQL ステートメントの作成](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
+-   [チュートリアル: Transact-SQL ステートメントの作成](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>参照  
  [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

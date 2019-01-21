@@ -1,20 +1,21 @@
 ---
 title: SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する | Microsoft Docs
 description: オンプレミス データに接続するモバイル デバイス用の Reporting Services モバイル レポートについて説明します。これらレポートには多様なデータ視覚エフェクトが用意されています。
-ms.date: 03/30/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a57b58490f6a2bfd8f0d5e8880402f1e136abd7e
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710863"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213061"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する
 多様なデータ視覚エフェクトが含まれる [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートについて学びます。これらのレポートはモバイル デバイス用に最適化されており、オンプレミス データに接続します。 
@@ -35,10 +36,10 @@ ms.locfileid: "52710863"
 操作を開始するために次の記事が役立ちます。
 -   [SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)のダウンロード  
 -  [Reporting Services モバイル レポートの作成](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [詳細なチュートリアル: SQL Server Reporting Services でのモバイル レポートと KPI の作成](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Christopher Finlan のブログ)  
-- [デザイン優先、またはデータ優先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): シミュレートされたデータで最初にレポートをデザインするか、独自のデータで開始するかどうかを決定します。  
-- [Reporting Services モバイル レポートのデータ](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md): 共有データセットからデータを使用するか、モバイル レポートで使用する Excel ブックからデータを準備します。
-- [Reporting Services のモバイル レポートと KPI におけるデータ更新のしくみ](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Christopher Finlan のブログ): 共有データセットのキャッシュの設定について確認し、データが更新される頻度を制御し、レポートのパフォーマンスを高速化します。
+-  [詳細なチュートリアル:SQL Server Reporting Services でのモバイル レポートと KPI の作成](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Christopher Finlan のブログ)  
+- [デザイン優先、またはデータ優先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md):シミュレートされたデータで最初にレポートをデザインするか、独自のデータで開始するかどうかを決定します。  
+- [Reporting Services モバイル レポートのデータ](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md):共有データセットのデータを使用するか、Excel ブックから準備したデータをモバイル レポートで使用します。
+- [Reporting Services のモバイル レポートと KPI におけるデータ更新のしくみ](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Christopher Finlan のブログ):データの更新頻度を制御して、レポートのパフォーマンスを高速化できるよう、共有データセットのキャッシュを設定する方法について説明します。
 - [モバイル レポートでの視覚化](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [モバイル レポートでのゲージ](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [モバイル レポートでのマップ](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
@@ -46,9 +47,8 @@ ms.locfileid: "52710863"
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Power BI モバイル アプリでの SSRS モバイル レポート
 
--  [iOS モバイル アプリで Reporting Services のモバイル レポートと KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) を表示する
--  [Android デバイス用の Power BI アプリで Reporting Services のモバイル レポートと KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports) を表示する
--  [Windows 10 デバイス用の Power BI アプリで Reporting Services のモバイル レポートと KPI を表示する](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
+-  iOS および Android 用の Power BI モバイル アプリで [Reporting Services のモバイル レポートと KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) を表示する
+-  Windows 10 デバイス用の Power BI アプリで [Reporting Services のモバイル レポートと KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/) を表示する   
 
 ## <a name="see-also"></a>参照  
   

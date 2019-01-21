@@ -1,6 +1,7 @@
 ---
-title: 可用性グループからのセカンダリ データベースの削除 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: セカンダリ データベースの可用性グループからの削除
+description: TRANSACT-SQL (T-SQL)、PowerShell、または SQL Server Management Studio のいずれかを使用して Always On 可用性グループからセカンダリ データベースを削除する手順について説明します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40f08d9b924f8bfd223490694de0f6160f5f9962
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 637c4a984876ad401fb2a757ac4d76ea833a5222
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632680"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213551"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>可用性グループからのセカンダリ データベースの削除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "47632680"
   
      [前提条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **セカンダリ データベースを削除する方法:**  
   
@@ -41,9 +42,9 @@ ms.locfileid: "47632680"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **補足情報:**  [セカンダリ データベースを可用性グループから削除した後](#FollowUp)  
+-   **補足情報:**[セカンダリ データベースを可用性グループから削除した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a>   
 ###  <a name="Prerequisites"></a> 前提条件と制限  
@@ -60,7 +61,7 @@ ms.locfileid: "47632680"
   
 1.  オブジェクト エクスプローラーで、1 つ以上のセカンダリ データベースを削除するセカンダリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
+2.  [**AlwaysOn 高可用性**] ノードと [**可用性グループ**] ノードを展開します。  
   
 3.  可用性グループを選択し、 **[可用性データベース]** ノードを展開します。  
   
@@ -113,7 +114,7 @@ ms.locfileid: "47632680"
   
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 補足情報: セカンダリ データベースを可用性グループから削除した後  
+##  <a name="FollowUp"></a> 補足情報:セカンダリ データベースを可用性グループから削除した後  
  セカンダリ データベースを削除すると、可用性グループに参加しなくなり、削除されたセカンダリ データベースに関するすべての情報が可用性グループによって破棄されます。 削除されたセカンダリ データベースは RESTORING 状態になります。  
   
 > [!TIP]  

@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: fe1fef76dd083d5b464bd2021aebb0e74e695543
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51acbbb1bac63084a26abb68f461880df1409578
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703920"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204811"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -206,7 +206,7 @@ DBCC CLONEDATABASE では、複製に必要なトランザクション整合性�
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>A. スキーマ、統計、クエリ ストアを含むデータベースを複製する 
-次の例では、スキーマ、統計、クエリ ストア データを含む AdventureWorks データベースが複製されます ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降のバージョン)。
+次の例では、スキーマ、統計、クエリ ストア データを含む AdventureWorks データベースが複製されます ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降のバージョン)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);    
@@ -214,7 +214,7 @@ GO
 ```  
   
 ### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>B. データベースを統計なし、スキーマのみで複製する 
-次の例では、統計を含めずに AdventureWorks データベースが複製されます ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 以降のバージョン)。
+次の例では、統計を含めずに AdventureWorks データベースが複製されます ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 以降のバージョン)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS;    

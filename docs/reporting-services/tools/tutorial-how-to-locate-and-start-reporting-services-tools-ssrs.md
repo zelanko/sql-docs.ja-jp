@@ -1,9 +1,11 @@
 ---
-title: 'チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS) | Microsoft Docs'
-ms.date: 05/30/2017
+title: チュートリアル:Reporting Services ツールを検索および開始する方法 (SSRS) | Microsoft Docs
+ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
+description: このチュートリアルでは、レポート サーバーの設定、レポート サーバーのコンテンツと動作の管理、Reporting Services の改ページ調整されたレポートとモバイル レポートの作成とパブリッシュに使用できるツールを紹介します。
+ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, tutorials
@@ -18,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a720f17e43dc22c5bb554c1e7a83cc7e845b835
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2937ca969b7a277710b8040481d61c68a12e096f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711303"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206221"
 ---
-# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS)
+# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル:Reporting Services ツールを検索および開始する方法 (SSRS)
 
   このチュートリアルでは、レポート サーバーの設定、レポート サーバーのコンテンツと動作の管理、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートとモバイル レポートの作成とパブリッシュに使用できるツールを紹介します。 既にツールを使用している場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を使用するスキルを学ぶことができるその他のチュートリアルへお進みください。 その他のチュートリアルについては、「 [Reporting Services のチュートリアル (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)を使用するスキルを学ぶことができるその他のチュートリアルへお進みください。  
   
@@ -40,7 +42,7 @@ ms.locfileid: "52711303"
 -   暗号化キーを管理します。  
 -   自動レポート処理および電子メールによるレポート配信を構成します。  
   
- **インストール:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードのインストール時にインストールされます。 詳細については、 [「Reporting Services ネイティブ モードのレポート サーバーのインストール」](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)を参照してください。  
+**インストール:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードのインストール時にインストールされます。 詳細については、 [「Reporting Services ネイティブ モードのレポート サーバーのインストール」](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)を参照してください。  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>Reporting Services 構成マネージャーを起動するには  
   
@@ -66,12 +68,12 @@ ms.locfileid: "52711303"
   
      ![Reporting Services 構成ツール](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services 構成ツール")  
   
- **次の手順:** 「[レポート サーバーを構成および管理する (SSRS ネイティブ モード)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)」、「[Reporting Services 構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ **次の手順:**「[レポート サーバーを構成および管理する (SSRS ネイティブ モード)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)」と「[Reporting Services 構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」。  
   
 ##  <a name="web-portal-native-mode"></a>Web ポータル (ネイティブ モード)  
  [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) を使用して、権限の設定、サブスクリプションおよびスケジュールの管理、レポートを使用した作業を実行できます。 Web ポータルを使用してレポートを表示することもできます。  
   
- **:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードをインストールすると Web ポータルがインストールされます: [Reporting Services ネイティブ モードのレポート サーバーのインストール](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **インストール:** Web ポータルは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードのインストール時にインストールされます。[Reporting Services ネイティブ モードのレポート サーバーのインストール](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
  Web ポータルを起動するには適切なアクセス許可が必要です。初期状態では、Web ポータルの機能へのアクセス許可は、ローカルの管理者グループのメンバーにのみ与えられています。 Web ポータルに表示されるページとオプションは、現在のユーザーに割り当てられているロールによって異なります。 アクセス許可のないユーザーには空白のページが表示され、 レポート閲覧用のアクセス許可が与えられているユーザーにはリンクが表示されます。このユーザーはリンクをクリックしてレポートを表示することができます。 アクセス許可の詳細については、「[ロールと権限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)」を参照してください。  
   
@@ -107,7 +109,7 @@ ms.locfileid: "52711303"
 5.  **[接続]** をクリックします。 ルート ノードを展開して、サーバーのプロパティを設定したり、ロールの定義を変更したり、レポート サーバー機能をオフにすることができます。  
   
 ##  <a name="bkmk_ssdt"></a> レポート デザイナーとレポート ウィザードが統合された SQL Server データ ツール  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の改ページ調整されたレポートを作成するためのツールには、レポート デザイナーと [レポート ビルダー](#bkmk_report_builder)の 2 つがあります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の改ページ調整されたレポートを作成するためのツールには、  レポート デザイナーと[レポート ビルダー](#bkmk_report_builder)の 2 つがあります。  
   
  レポート デザイナーは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] - Visual Studio で使用できます。 レポート デザイナーのデザイン画面にはタブ付きウィンドウ、ウィザード、メニューが用意されており、これらを使ってレポートの作成機能にアクセスできます。 レポート デザイナー ツールは、レポート サーバー プロジェクトまたは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート サーバー ウィザードのテンプレートを選択すると使用可能になります。 詳細については、「[SQL Server データ ツールの Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。 
  
@@ -132,7 +134,9 @@ ms.locfileid: "52711303"
  初めてレポートを作成する場合は、「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。 レポート デザイナーで使用できるクエリ デザイナーの詳細については、「 [SQL Server データ ツールのレポート デザイナーのクエリ デザイン ツール (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)を使用するスキルを学ぶことができるその他のチュートリアルへお進みください。  
   
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
- [SQL Server のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)はスタンドアロンのアプリケーションであり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部で改ページ調整されたレポートを作成するために使用できます。 レポート デザイナーで作成したレポートであっても、以前のバージョンの [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でデザインしたレポートであっても、あらゆる既存レポートのカスタマイズおよび更新が可能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  
+ [SQL Server のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)はスタンドアロンのアプリケーションであり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部で改ページ調整されたレポートを作成するために使用できます。 レポート デザイナーで作成したレポートであっても、以前のバージョンの [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でデザインしたレポートであっても、あらゆる既存レポートのカスタマイズおよび更新が可能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールします。 
+
+ページ調整されたレポートの準備ができたら、レポート サーバーに公開するか、[Power BI サービスに保存します](https://docs.microsoft.com/power-bi/paginated-reports-save-to-power-bi-service)。 
   
  Microsoft ダウンロード センターから[レポート ビルダーをダウンロード](https://go.microsoft.com/fwlink/?LinkID=219138) します。  
   
@@ -151,7 +155,7 @@ ms.locfileid: "52711303"
 3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] が開き、改ページ調整されたレポートを作成したり開いたりできます。  
   
 ##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
- [Web ポータルおよび iPad や iPhone などのモバイル デバイスで表示できるモバイル レポートを作成するには、](https://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) SQL Server Mobile Report Publisher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用します。   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  
+ [Web ポータルおよび iPad や iPhone などのモバイル デバイスで表示できるモバイル レポートを作成するには、](../mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) SQL Server Mobile Report Publisher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用します。   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールできます。  
   
  Microsoft ダウンロード センターから[SQL Server Mobile Report Publisher をダウンロード](https://go.microsoft.com/fwlink/?LinkID=733527) します。  
   

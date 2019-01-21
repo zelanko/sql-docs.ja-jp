@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
@@ -15,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
+ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507285"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738118"
 ---
 # <a name="system-settings-master-data-services"></a>システム設定 (マスター データ サービス)
 
@@ -78,7 +77,7 @@ ms.locfileid: "52507285"
 |**[すべてのステージング トランザクションをログに記録]**|**StagingTransactionLogging**|SQL Server 2008 R2 だけに適用されます。 ステージング レコードが [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに読み込まれるときにトランザクションをログに記録するかどうかを示します。 既定値は **[オフ]** または **2**です。 値を **[オン]** または **1** に変更すると、ログ記録が有効になります。|  
 |**[ステージング バッチの間隔]**|**StagingBatchInterval**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[統合管理]** 機能領域で、 **[バッチの開始]** をクリックしてからバッチが処理されるまでの秒数を示します。 既定値は **60** 秒 (1 分) です。|  
   
- 詳細については、「[概要: テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
+ 詳細については、「[概要:テーブルからデータをインポートする &#40;マスター データ サービス&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
   
 ##  <a name="Explorer"></a> エクスプローラー設定  
   
@@ -113,7 +112,7 @@ ms.locfileid: "52507285"
 |**[通知に対するマスター データ マネージャーの URL]**|**MDMRootURL**|電子メール通知のリンクで使用される [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションの URL (`https://constoso/mds` など)。|  
 |**[通知電子メールの送信間隔]**|**NotificationInterval**|電子メール通知を送信する頻度 (秒数)。 既定値は **120** 秒 (2 分) です。|  
 |**[電子メールごとの通知の数]**|**NotificationsPerEmail**|単一の電子メールに記載される検証の問題の最大数。 これを超える数の問題が存在しても、電子メールには含まれません (ただし、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]では確認できます)。|  
-|**[既定の電子メールの形式]**|**EmailFormat**|すべての電子メール通知の形式。 既定値は **[HTML]** または **1**です。 データベース設定値 **2** は、 **テキスト**を意味します。<br /><br /> 注: この設定は、ユーザーごとにオーバーライドすることができます。オーバーライドするには、[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、ユーザーの **[全般]** タブの **[電子メールの形式]** を変更して保存します。|  
+|**[既定の電子メールの形式]**|**EmailFormat**|すべての電子メール通知の形式。 既定値は **[HTML]** または **1**です。 データベース設定値 **2** は、 **テキスト**を意味します。<br /><br /> 注:この設定は、ユーザーごとにオーバーライドすることができます。オーバーライドするには、[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、ユーザーの **[全般]** タブの **[電子メールの形式]** を変更して保存します。|  
 |**[電子メール アドレスの正規表現]**|**EmailRegExPattern**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[ユーザー/グループの権限]** 機能領域で、ユーザーの **[電子メールの形式]** を変更して保存します。正規表現の詳細については、MSDN ライブラリの「 [正規表現言語要素](https://go.microsoft.com/fwlink/?LinkId=164401) 」を参照してください。|  
 |**[データベース メール アカウント]**|**EmailProfilePrincipalAccount**|電子メール通知を送信するときに使用するデータベース メール アカウントを表示します。 既定のプロファイルは **mds_email_user**です。|  
 |**[データベース メール プロファイル]**|**DatabaseMailProfile**|電子メール通知を送信するときに使用するデータベース メール プロファイル。 既定値は空白です。|  
@@ -128,7 +127,12 @@ ms.locfileid: "52507285"
   
 |構成マネージャーの設定|システム設定|[説明]|  
 |-----------------------------------|--------------------|-----------------|  
-||**SecurityMemberProcessInterval**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[ユーザー/グループの権限]** 機能領域で、 **[階層メンバー]** タブで設定したユーザーとグループの権限が適用される頻度 (秒数) を示します。 既定値は **3,600** 秒 (60 分) です。|  
+||**SecurityMemberProcessInterval**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[ユーザー/グループの権限]** 機能領域で、 **[階層メンバー]** タブで設定したユーザーとグループの権限が適用される頻度 (秒数) を示します。 既定値は **3600** 秒 (60 分) です。|  
+
+##  <a name="Performance"></a> パフォーマンス設定  
+|構成マネージャーの設定|システム設定|[説明]|  
+|-----------------------------------|--------------------|-----------------|  
+|**Enable performance improvement setting (パフォーマンス向上の設定を有効にする)**|**PerformanceImprovementEnable**|読み込みアクセス許可関連のページのパフォーマンスがよくなるこの設定は既定で有効になります (**1 に設定**)。 ただし、この状況では、エンティティ、属性、ユーザー、またはグループの作成/変更はパフォーマンスが低下します。 これを回避するには、この設定を無効にできます (**0 に設定**)。 この設定を変更した後。 コマンド "**EXEC [mdm].[udpPerformanceToggleSwitch];**" を実行して、ビューとデータが正しいことを確認する必要があります。|  
   
  詳細については、「[メンバー権限を直ちに適用する (マスター データ サービス)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)」を参照してください。  
   

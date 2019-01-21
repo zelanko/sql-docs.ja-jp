@@ -11,12 +11,12 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9e2237473024a75227ff7ec7838849618cdf54d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14a4ff6a2af3182e8e62a019993d39a6470caf37
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663461"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205120"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>アクティブなリースを保持しているバックアップ BLOB ファイルを削除する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "51663461"
   
 ###  <a name="Code_Example"></a> PowerShell スクリプトの例  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  PowerShell 2.0 を実行している場合、Microsoft WindowsAzure.Storage.dll アセンブリの読み込み中に問題が発生することがあります。 この問題を解決するには、[PowerShell](https://docs.microsoft.com/powershell/) をアップグレードすることをお勧めします。 また、PowerShell 2.0 では次の回避策を使用することもできます。  
->   
+> 
 >  -   次のスクリプトを使用して実行時に .NET 2.0 アセンブリと .NET 4.0 アセンブリを読み込むように powershell.exe.config ファイルを作成または変更する:  
->   
+> 
 >     ```  
 >     \<?xml version="1.0"?>   
 >     <configuration>   
@@ -55,7 +55,7 @@ ms.locfileid: "51663461"
 >             <supportedRuntime version="v2.0.50727"/>   
 >         </startup>   
 >     </configuration>  
->   
+> 
 >     ```  
   
  次に示すスクリプトの例では、アクティブなリースを保持している BLOB を識別し、それを終了しています。 この例は、リリースのリース ID をフィルター選択する方法も示します。  
@@ -84,7 +84,7 @@ ms.locfileid: "51663461"
   
      **リースを終了しています**  
   
-     **\<BLOB の URL> のリースは復元リースです。このメッセージが表示されるのは、まだアクティブな復元リースを保持している BLOB がある場合のみです。**  
+     **\<BLOB の URL> のリースは復元リースです:このメッセージが表示されるのは、まだアクティブな復元リースを保持している BLOB がある場合のみです。**  
   
      **\<BLOB の URL> のリースは復元リースではありません。\<BLOB の URL>** のリースを終了しています。  
   

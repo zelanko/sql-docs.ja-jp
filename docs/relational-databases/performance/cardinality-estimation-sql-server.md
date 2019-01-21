@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27ef6862a5fcfb6e63ffcbdd89fb1e000c2065f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667031"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328852"
 ---
 # <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ ms.locfileid: "51667031"
 -  **非依存性:** 異なる列のデータ分布は、相関関係情報があって使用可能な場合を除き、相互に独立しているものと想定されます。
 -  **統一性:** 個別の値は等間隔であり、すべて同じ頻度です。 具体的には、各[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram) ステップ内では、個別の値は均等に分散し、各値は同じ頻度です。 
 -  **コンテインメント (単純):** ユーザーは存在するデータをクエリします。 たとえば、2 つのテーブル間の等価結合では、結合の選択度を推定するためにヒストグラムを結合する前に、各入力のヒストグラムの述語選択度<sup>1</sup>を考慮します。 
--  **包含:** `Column = Constant` のフィルター述語では、定数が関連付けられた列に実際に存在すると想定されます。 対応するヒストグラム ステップが空ではない場合、ステップの個別値のいずれかは述語の値と一致するものと想定されます。
+-  **包含:**`Column = Constant` のフィルター述語では、定数が関連付けられた列に実際に存在すると想定されます。 対応するヒストグラム ステップが空ではない場合、ステップの個別値のいずれかは述語の値と一致するものと想定されます。
 
   <sup>1</sup> 述語を満たす行数。
 
 以降の更新プログラムは [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以上 (互換性レベルが 120 以上) に含まれています。 レベル 120 以上の CE 更新プログラムには、最新のデータ ウェアハウスおよび OLTP ワークロードで適切に機能する更新された前提条件とアルゴリズムが組み込まれています。 CE 120 以降では、CE 70 の前提条件から次のモデル前提条件が変更されました。
 
--  **非依存性**が**相関関係**になります: 異なる列の値の組み合わせは必ずしも独立していません。 これはより実際のデータ クエリと似ている可能性があります。
--  **簡単なコンテインメント**は**ベース コンテインメント**になります: ユーザーは存在しないデータをクエリする可能性があります。 たとえば、2 つのテーブル間の等価結合では、ベース テーブル ヒストグラムを使用して結合の選択度を推定した後、述語選択度を考慮します。
+-  **非依存性**が**相関関係**になります:異なる列の値の組み合わせは必ずしも独立していません。 これはより実際のデータ クエリと似ている可能性があります。
+-  **単純なコンテインメント**は**ベース コンテインメント**になります:ユーザーは存在しないデータをクエリする可能性があります。 たとえば、2 つのテーブル間の等価結合では、ベース テーブル ヒストグラムを使用して結合の選択度を推定した後、述語選択度を考慮します。
   
-**互換性レベル:** [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) に次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを使用して、データベースが特定のレベルであることを確認します。  
+**互換性レベル:**[COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) に次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを使用して、データベースが特定のレベルであることを確認します。  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -90,7 +90,7 @@ WHERE OrderAddedDate >= '2016-05-01'; 
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**クエリ ストア:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から導入されたクエリ ストアは、クエリのパフォーマンスを確認する場合に便利なツールです。 クエリ ストアを有効にすると、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] の**オブジェクト エクスプローラー**で、データベース ノード以下に**クエリ ストア** ノードが表示されます。  
+**クエリ ストア:**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から導入されたクエリ ストアは、クエリのパフォーマンスを確認する場合に便利なツールです。 クエリ ストアを有効にすると、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] の**オブジェクト エクスプローラー**で、データベース ノード以下に**クエリ ストア** ノードが表示されます。  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  

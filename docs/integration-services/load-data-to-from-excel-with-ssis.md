@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 270528218e23d230ecb8b8ea4dc5bde6baaa6440
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05d19b94f22187e699999642fe79fbcd08c2548a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545723"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749965"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする
 
@@ -52,7 +52,7 @@ SSIS で次のいずれかのツールを使って、Excel からデータをイ
 
 SSIS を使用して Excel からデータをインポートしたり、データを Excel にエクスポートするには、事前に Excel の接続コンポーネントをダウンロードする必要があります (まだインストールされていない場合)。 Excel の接続コンポーネントは、既定ではインストールされません。
 
-[Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)で、Excel の接続コンポーネントの最新バージョンをダウンロードします。 以前のバージョンの Excel で作成したファイルは、最新バージョンのコンポーネントで開くことができます。
+Excel の接続コンポーネントの最新版を [Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)でダウンロードします。 以前のバージョンの Excel で作成したファイルは、最新バージョンのコンポーネントで開くことができます。
 
 ### <a name="notes-about-the-download-and-installation"></a>ダウンロードとインストールに関する注意事項
 
@@ -64,7 +64,7 @@ SSIS を使用して Excel からデータをインポートしたり、デー�
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-    2016 再頒布可能パッケージのインストールに問題がある場合は、代わりに [Microsoft Access データベース エンジン 2010 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=13255)から 2010 再頒布可能パッケージをインストールします  (Excel 2013 用の再頒布可能パッケージはありません)。
+    2016 再頒布可能パッケージのインストールに問題がある場合は、代わりに [Microsoft Access データベース エンジン 2010 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=13255)から 2010 再頒布可能パッケージをインストールしてください。 (Excel 2013 用の再頒布可能パッケージはありません)。
 
 ## <a name="specify-excel"></a> データ ソースとして Excel を指定する
 

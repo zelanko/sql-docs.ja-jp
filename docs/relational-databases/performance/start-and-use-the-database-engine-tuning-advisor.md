@@ -16,15 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 926b099e6cadadb130717159188f2fcc87dbc218
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 749f94658d03828b30de3b328df1abfc8c932d43
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517671"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351061"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -454,7 +454,7 @@ database_name.owner_name.table_name
  インデックス付きビューを追加するための推奨設定のみが含まれます。 クラスター化インデックスおよび非クラスター化インデックスは、推奨されません。  
   
  **フィルター選択されたインデックスを含める**  
- フィルター選択されたインデックスを追加するための推奨設定が含まれます。 このオプションは、 **[インデックスおよびインデックス付きビュー]**、 **[インデックス]**、または **[非クラスター化インデックス]** のいずれかの物理デザイン構造を選択した場合に使用できます。  
+ フィルター選択されたインデックスを追加するための推奨設定が含まれます。 このオプションは、**[インデックスおよびインデックス付きビュー]**、**[インデックス]**、または **[非クラスター化インデックス]** のいずれかの物理デザイン構造を選択した場合に使用できます。  
   
  **[インデックス]**  
  クラスター化インデックスおよび非クラスター化インデックスを追加するための推奨設定のみが含まれます。 インデックス付きビューは推奨されません。  

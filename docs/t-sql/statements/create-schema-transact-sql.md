@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2348a0ba8aa1fa0c3c01a1d59867a14abb4579f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9b2fad9fc09736a335e8fc5797cda836f907191
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808010"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210971"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,8 +123,8 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  この動作が必要なのは、ユーザーが Windows グループに基づいてオブジェクトを作成および所有できるようにするためです。 ただし、スキーマおよびユーザーが誤って作成される可能性があります。 ユーザーおよびスキーマが暗黙的に作成されないように、可能な限り、明示的にデータベース プリンシパルを作成して既定のスキーマを割り当てます。 または、データベース内にオブジェクトを作成するときに、2 部または 3 部構成のオブジェクト名を使用して既存のスキーマを明示的に指定します。  
 
->  [!NOTE]
->  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] では、Azure Active Directory ユーザーを暗黙的に作成することはできません。 外部プロバイダーからの Azure AD ユーザーの作成では AAD でユーザーの状態を確認する必要があるので、ユーザーの作成はエラー 2760 "**指定されたスキーマ名 "\<user_name@domain>" が存在しないか、そのスキーマ名を使用する権限がありません**"、 およびその後のエラー 2759 "**直前のエラーにより CREATE SCHEMA に失敗しました**" で失敗します。 これらのエラーを回避するには、最初に外部プロバイダーから Azure AD ユーザーを作成し、次にオブジェクト作成ステートメントを再実行します。
+> [!NOTE]
+>  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] では、Azure Active Directory ユーザーを暗黙的に作成することはできません。 外部プロバイダーから Azure AD ユーザーを作成する場合、ユーザーの状態を AAD で確認する必要があるので、ユーザーの作成はエラー 2760:**指定されたスキーマ名 "\<user_name@domain>" が存在しないか、そのスキーマ名を使用する権限がないため失敗します。** 次いで、エラー 2759:**直前のエラーにより CREATE SCHEMA に失敗しました。** が表示されます。 これらのエラーを回避するには、最初に外部プロバイダーから Azure AD ユーザーを作成し、次にオブジェクト作成ステートメントを再実行します。
  
   
 ## <a name="deprecation-notice"></a>今後のバージョンでの使用  

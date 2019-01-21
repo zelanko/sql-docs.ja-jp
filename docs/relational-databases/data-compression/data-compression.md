@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bba6cc9159ac3cfc9cc45f882a916dcad3365e4e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2370c428d063958079e749c792a60de3b7379ee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533549"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210531"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "52533549"
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>列ストアおよび列ストアの保存用圧縮の使用  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。  
   
 ### <a name="basics"></a>の基本操作  
  列ストア テーブルおよび列ストア インデックスは常に列ストア圧縮を使用して格納されます。 保存用圧縮と呼ばれる追加の圧縮機能を構成するによって、列ストアのデータ サイズをさらに小さくすることができます。  保存用圧縮を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータに対して Microsoft Xpress 圧縮アルゴリズムを実行します。 次の種類のデータ圧縮を使用して、保存用圧縮を追加または削除します。  
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
      OFFLINE でクラスター化インデックスを削除すると、クラスター化インデックスの上位レベルだけが削除されます。そのため、操作はとても高速です。 ONLINE でクラスター化インデックスを削除すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、ヒープが手順 1. で 1 回、手順 2. で 1 回の計 2 回再構築されます。  
   
 ## <a name="how-compression-affects-replication"></a>レプリケーションへの圧縮の影響 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。   
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。   
 レプリケーションでデータ圧縮を使用する場合は、次の点に注意してください。  
 -   スナップショット エージェントで最初のスキーマ スクリプトが生成されるときに、新しいスキーマでは、テーブルとインデックスの両方に同じ圧縮設定が使用されます。 圧縮をテーブルのみで有効にし、インデックスで無効にすることはできません。  
 -   トランザクション レプリケーションの場合、アーティクル スキーマ オプションによって、スクリプトを作成する必要がある依存オブジェクトおよびプロパティが特定されます。 詳細については、「 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)」を参照してください。  
@@ -187,7 +187,7 @@ REBUILD PARTITION = ALL WITH (
 |パブリッシャーですべてのパーティションが圧縮される場合はサブスクライバーでテーブルを圧縮するが、パーティション構成はレプリケートしない。|False|True|すべてのパーティションで圧縮が有効になっているかどうかを確認します。<br /><br /> テーブル レベルで圧縮のスクリプトを作成します。|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>他の SQL Server コンポーネントへの圧縮の影響 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
    
  圧縮はストレージ エンジンで行われるので、他のほとんどの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントには、データは圧縮されていない状態で提供されます。 このため、他のコンポーネントに対する圧縮の影響は、次のように制限されます。  
 -   一括インポート操作と一括エクスポート操作  

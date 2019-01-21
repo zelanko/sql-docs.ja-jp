@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7d5a8b82d60dcd4c2fae13af02310767e10700cd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640199"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205841"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 の Integration Services の新機能
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -180,7 +180,7 @@ ms.locfileid: "51640199"
   
 -   管理オブジェクト モデル (MOM) API  
   
- 詳細については、「[Services (SSIS) プロジェクトとパッケージの配置](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+ 詳細については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
 
 ####  <a name="encrypted"></a> SSIS カタログでの Always Encrypted のサポート  
  SSIS は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の Always Encrypted 機能を既にサポートしています。 詳細については、次のログの投稿を参照してください。  
@@ -200,7 +200,7 @@ ms.locfileid: "51640199"
  SSIS カタログの新しい **RuntimeLineage** ログ記録レベルは、データ フローの系列情報を追跡するために必要な情報を収集します。 この系列情報を解析して、タスク間の系列の関係をマッピングできます。 ISV と開発者は、この情報を利用して、カスタム系列マッピング ツールを構築できます。 
 
 ####  <a name="CustomLogging"></a> SSIS カタログでの新しいカスタム ログ レベル  
- SSIS カタログの以前のバージョンでは、パッケージを実行するときに、4 つの組み込みログ記録レベル ( **なし、基本、パフォーマンス、または詳細**) から選択できました。 SQL Server 2016 では、**RuntimeLineage** ログ記録レベルが追加されています。 さらに、複数のカスタム ログ記録レベルを作成して SSIS カタログに保存し、パッケージを実行するときに、毎回ログ記録レベルを選択できるようになりました。 カスタム ログ記録レベルでは、キャプチャする統計とイベントのみを選択します。 必要に応じて、変数の値、接続文字列、およびタスクのプロパティを確認するために、イベント コンテキストを含めます。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。 
+ SSIS カタログの以前のバージョンでは、パッケージを実行するときに、4 つの組み込みログ記録レベル (**なし、基本、パフォーマンス、または詳細**) から選択できました。 SQL Server 2016 では、**RuntimeLineage** ログ記録レベルが追加されています。 さらに、複数のカスタム ログ記録レベルを作成して SSIS カタログに保存し、パッケージを実行するときに、毎回ログ記録レベルを選択できるようになりました。 カスタム ログ記録レベルでは、キャプチャする統計とイベントのみを選択します。 必要に応じて、変数の値、接続文字列、およびタスクのプロパティを確認するために、イベント コンテキストを含めます。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。 
 
 ####  <a name="ErrorColumn"></a> データ フロー内のエラー列の名前  
  エラー出力にエラーが含まれるデータ フロー内の行をリダイレクトすると、出力には、エラーが発生したが列の名前が表示されない列の数値識別子が含まれています。 エラーが発生した列の名前を、さまざまな方法で検索または表示できるようになりました。  
@@ -213,7 +213,7 @@ ms.locfileid: "51640199"
   
 -   スクリプト コンポーネントまたはカスタムデータフロー コンポーネントで、IDTSComponentMetadata100 インターフェイスの新しい <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> メソッドを呼び出します。  
   
- この機能強化の詳細については、SSIS 開発者である Bo Fan による次のブログの投稿を参照してください: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(SSIS データ フローのエラー列の機能強化)。  
+ この機能強化の詳細については、SSIS 開発者である Bo Fan による次のブログの投稿を参照してください: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx) (SSIS データ フローのエラー列の機能強化)。  
   
 > [!NOTE]  
 >  (このサポートはその後のリリースで拡張されています。 詳細については、「 [エラー列名の拡張サポート](#getidstring) 」および「 [API の新しい IDTSComponentMetaData130 インターフェイス](#CMD130)」を参照してください。)  
@@ -326,7 +326,7 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
    
  ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
 
->   [!IMPORTANT]
+> [!IMPORTANT]
 > SSIS 用のカスタム拡張機能を開発する場合は、「 [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) 」(カスタム コンポーネントでの複数ターゲットのサポート) および「 [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)」(SSIS のカスタム拡張機能を SSDT 2015 for SQL Server 2016 用 SSDT 2015 の複数バージョン サポートでサポートされるようにする) を参照してください。  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>SQL Server Management Studio の管理エクスペリエンスの強化

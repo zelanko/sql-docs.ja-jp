@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 267e1c145a6a67976f1d057c0c98186f192f9247
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 513ccaf7c50b7ca08d6651d516a4b5265d86d7fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191072"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210785"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "52191072"
 
 これらの関数は、あるデータ型の式を別のデータ型に変換します。  
 
-**例:** 入力データ型を変更します。
+**例:** 入力データ型を変更します
 
 **CAST**
 ```sql  
@@ -103,7 +103,7 @@ CONVERT 関数で *expression* を変換する方法を指定する整数式で�
 ## <a name="date-and-time-styles"></a>日付および時刻のスタイル  
 date または time データ型の *expression* の場合、*style* には次の表に示すいずれかの値を指定できます。 その他の値は 0 として処理されます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、date 型と time 型を **datetimeoffset** に変換するときにサポートされるスタイルは、0 または 1 のみです。 他のすべての変換スタイルでは 9809 が返されます。
   
->  [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クウェート アルゴリズムを使用して、アラビア スタイルで、日付の書式をサポートします。
   
 |2 桁の年 (yy) (<sup>1</sup>)|4 桁の年 (yyyy)|Standard|入力/出力 (<sup>3</sup>)|  
@@ -125,8 +125,8 @@ date または time データ型の *expression* の場合、*style* には次�
 |**14**|**114**|-|hh:mi:ss:mmm(24h)|  
 |-|**20** または **120** (<sup>2</sup>)|ODBC 標準|yyyy-mm-dd hh:mi:ss(24h)|  
 |-|**21** または **121** (<sup>2</sup>)|time、date、datetime2、および datetimeoffset の ODBC 標準 (ミリ秒を含む) の既定値|yyyy-mm-dd hh:mi:ss.mmm(24h)|  
-|-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (スペースなし)<br /><br /> 注: ミリ秒 (mmm) の値が 0 の場合、ミリ秒を表す小数部の値は表示されません。 たとえば、値 "2012-11-07T18:26:20.000" は、"2012-11-07T18:26:20"' と表示されます。|  
-|-|**127**(<sup>6、7</sup>)|ISO 8601 (タイム ゾーン Z)|yyyy-mm-ddThh:mi:ss.mmmZ (スペースなし)<br /><br /> 注: ミリ秒 (mmm) の値が 0 の場合、ミリ秒を示す小数部の値は表示されません。 たとえば、値 "2012-11-07T18:26:20.000" は、"2012-11-07T18:26:20" と表示されます。|  
+|-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (スペースなし)<br /><br /> 注:ミリ秒 (mmm) の値が 0 の場合、ミリ秒を表す小数部の値は表示されません。 たとえば、値 "2012-11-07T18:26:20.000" は、"2012-11-07T18:26:20"' と表示されます。|  
+|-|**127**(<sup>6、7</sup>)|ISO 8601 (タイム ゾーン Z)|yyyy-mm-ddThh:mi:ss.mmmZ (スペースなし)<br /><br /> 注:ミリ秒 (mmm) の値が 0 の場合、ミリ秒を示す小数部の値は表示されません。 たとえば、値 "2012-11-07T18:26:20.000" は、"2012-11-07T18:26:20" と表示されます。|  
 |-|**130** (<sup>1、</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> このスタイルでは、**mon** は月の正式名に関する複数トークンの Hijri (イスラム暦) ユニコード表現を表します。 この値は、SSMS の既定の米国用インストールでは正しく表示されません。|  
 |-|**131** (<sup>2</sup>)|Hijri (<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
   
@@ -154,7 +154,7 @@ date または time データ型の *expression* の場合、*style* には次�
 ## <a name="float-and-real-styles"></a>float 型スタイルと real 型スタイル
 *expression* が **float** 型または **real** 型の場合、*style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
   
-|ReplTest1|[出力]|  
+|[値]|[出力]|  
 |---|---|
 |**0** (既定値)|最高 6 桁。 該当する場合は、科学的表記法で使用します。|  
 |**1**|常に 8 桁。 常に科学的表記法で使用します。|  
@@ -165,19 +165,19 @@ date または time データ型の *expression* の場合、*style* には次�
 ## <a name="money-and-smallmoney-styles"></a>money 型スタイルと smallmoney 型スタイル
 *expression* が **money** 型または **smallmoney** 型の場合、*style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
   
-|ReplTest1|[出力]|  
+|[値]|[出力]|  
 |---|---|
-|**0** (既定値)|小数点位置から左へ 3 桁ごとの位置にはコンマを挿入しません。また、小数点右側には 2 桁をとります。<br /><br />例: 4235.98|  
-|**1**|小数点位置から左へ 3 桁ごとの位置にはコンマを挿入します。また、小数点右側には 2 桁をとります。<br /><br />例: 3,510.92|  
-|**2**|小数点位置から左へ 3 桁ごとの位置にはコンマを挿入しません。また、小数点右側には 4 桁をとります。<br /><br />例: 4235.9819|  
+|**0** (既定値)|小数点位置から左へ 3 桁ごとの位置にはコンマを挿入しません。また、小数点右側には 2 桁をとります。<br /><br />例:4235.98|  
+|**1**|小数点位置から左へ 3 桁ごとの位置にはコンマを挿入します。また、小数点右側には 2 桁をとります。<br /><br />例:3,510.92|  
+|**2**|小数点位置から左へ 3 桁ごとの位置にはコンマを挿入しません。また、小数点右側には 4 桁をとります。<br /><br />例:4235.9819|  
 |**126**|char(n) または varchar(n) に変換する場合はスタイル 2 に相当します。|  
   
 ## <a name="xml-styles"></a>xml スタイル
 *expression* が **xml** 型の場合、*style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
   
-|ReplTest1|[出力]|  
+|[値]|[出力]|  
 |---|---|
-|**0** (既定値)|既定の解析動作を使用します。つまり、余分な空白を破棄し、内部の DTD サブセットを許可しません。<br /><br />**注:** **xml** データ型への変換では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での余分な空白は XML 1.0 とは別の方法で処理されます。 詳細については、「[XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)」を参照してください。|  
+|**0** (既定値)|既定の解析動作を使用します。つまり、余分な空白を破棄し、内部の DTD サブセットを許可しません。<br /><br />**注:****xml** データ型への変換では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での余分な空白は XML 1.0 とは別の方法で処理されます。 詳細については、「[XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)」を参照してください。|  
 |**1**|余分な空白を保持します。 このスタイル設定は、**xml:space="preserve"** の動作と一致するように、既定の **xml:space** の処理を設定します。|  
 |**2**|限定的な内部 DTD サブセット処理を有効にします。<br /><br /> 有効な場合、サーバーでは内部 DTD サブセットで提供される情報を次のように使用して、検証を行わない解析操作を実行できます。<br /><br />   - 属性の既定値が適用されます<br />   - 内部エンティティの参照が解決および展開されます<br />   - DTD コンテンツ モデルの構文の正確さが確認されます<br /><br /> パーサーでは外部 DTD サブセットが無視されます。 また、XML 宣言を評価して、**standalone** 属性に **yes** または **no** の値が設定されているかどうかも確認しません。 代わりに、XML インスタンスをスタンドアロン ドキュメントとして解析します。|  
 |**3**|余分な空白を保持し、限定的な内部 DTD サブセット処理を有効にします。|  
@@ -185,7 +185,7 @@ date または time データ型の *expression* の場合、*style* には次�
 ## <a name="binary-styles"></a>バイナリ スタイル
 *expression* が **binary(n)**、**char(n)**、**varbinary(n)**、または **varchar(n)** の場合、*style* は次の表に示すいずれかの値になります。 表に記載されていないスタイル値の場合は、エラーが返されます。
   
-|ReplTest1|[出力]|  
+|[値]|[出力]|  
 |---|---|
 |**0** (既定値)|ASCII 文字をバイナリ バイトに変換するか、バイナリ バイトを ASCII 文字に変換します。 各文字またはバイトは 1:1 で変換されます。<br /><br /> バイナリの *data_type* の場合は、文字 0x が結果の左側に追加されます。|  
 |**1**、**2**|バイナリの *data_type* の場合は、式は文字式であることが必要です。 *expression* は**偶数**桁の 16 進数 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f) である必要があります。 *style* が 1 に設定されている場合、最初の 2 文字は 0x である必要があります。 式に奇数桁の文字が含まれているか、いずれかの文字が使用できない場合は、エラーが発生します。<br /><br /> 変換された式の長さが *data_type* の長さを超える場合、結果の右側が切り捨てられます。<br /><br /> 固定長の *data_type* が変換された結果より長い場合は、結果の右側に 0 が追加されます。<br /><br /> *data_type* が文字型の場合は、バイナリ式である必要があります。 各バイナリ文字は、16 進値を表す 2 桁の英数文字に変換されます。 変換された式の長さが *data_type* の長さを超える場合、右側が切り捨てられます。<br /><br /> *data_type* が固定サイズの文字型で、変換された結果の長さが *data_type* の長さよりも短い場合、変換された式の右側に空白が追加され、偶数桁の 16 進数が維持されます。<br /><br /> *style* が 1 の場合、変換された結果の左側に文字 0x が追加されます。|  

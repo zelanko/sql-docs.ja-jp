@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef241919f29225ee7c6384a7466fc69bc9391ed
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571441"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748484"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>ページとエクステントのアーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -155,7 +155,7 @@ IAM ページはアロケーション ユニットごとに必要に応じて割
  
 アロケーション ユニットのチェーンにリンクされている IAM ページIAM ページには、その IAM ページによってマップされるエクステントの範囲の開始エクステントを示すヘッダーがあります。 また、1 ビットが 1 つのエクステントを表す大きな 1 つのビットマップがあります。 マップ内の最初のビットは、その範囲で最初のエクステントを表し、2 番目のビットは第 2 エクステントを表し、それ以降のビットも同様の順でエクステントを表します。 ビットが 0 の場合、そのビットが表すエクステントは、IAM を所有するアロケーション ユニットに割り当てられていません。 ビットが 1 の場合、そのビットが表すエクステントは、IAM ページを所有するアロケーション ユニットに割り当てられています。
 
-新しい行を挿入する必要があるのに現在のページに使用できる領域がない場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では IAM ページおよび PFS ページで割り当てのためのページを検索するか、ヒープあるいは Text 型または Image 型のページについては行を格納するのに必要な空き領域があるページを検索します。 まず、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は IAM ページを使用してそのアロケーション ユニットに割り当てられているエクステントを検索します。 それぞれのエクステントについて、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は使用可能なページがあるかどうかを PFS ページの中で検索します。 IAM ページおよび PFS ページは 1 ページで多数のデータ ページを管理できるので、データベース内の IAM ページおよび PFS ページの数はわずかです。 このため、IAM ページおよび PFS ページは一般的に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バッファー プールのメモリに入っており、高速に検索できます。 インデックスについては、インデックス キーで新しい行の挿入ポイントを設定します。 インデックスでは既に説明したような検索処理は行われません。
+新しい行を挿入する必要があるのに現在のページに使用できる領域がない場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では IAM ページおよび PFS ページで割り当てのためのページを検索するか、ヒープあるいは Text 型または Image 型のページについては行を格納するのに必要な空き領域があるページを検索します。 まず、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は IAM ページを使用してそのアロケーション ユニットに割り当てられているエクステントを検索します。 それぞれのエクステントについて、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は使用可能なページがあるかどうかを PFS ページの中で検索します。 IAM ページおよび PFS ページは 1 ページで多数のデータ ページを管理できるので、データベース内の IAM ページおよび PFS ページの数はわずかです。 このため、IAM ページおよび PFS ページは一般的に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バッファー プールのメモリに入っており、高速に検索できます。 インデックスの場合、新しい行の挿入ポイントがインデックス キーによって設定されるが、新しいページが必要なときは、前述のプロセスが発生します。
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]によりアロケーション ユニットに新しいエクステントが割り当てられるのは、挿入する行を格納するのに必要な空き領域のあるページが既存のエクステントの中ですぐに見つからない場合のみです。 
 

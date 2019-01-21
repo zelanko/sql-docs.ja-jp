@@ -1,6 +1,7 @@
 ---
-title: 柔軟な自動フェールオーバー ポリシーを構成する | Microsoft Docs
-ms.custom: ''
+title: 可用性グループに柔軟な自動フェールオーバー ポリシーを構成する
+description: TRANSACT-SQL (T-SQL)、PowerShell、または SQL Server Management Studio を使用して Always On 可用性グループに柔軟なフェールオーバー ポリシーを構成する方法を説明します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 621811a2cf4c3f7e08143f8608dd0fdced65a816
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: abfad9aeef575035f4f171a19073b97a266797ef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505834"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208561"
 ---
-# <a name="configure-flexible-automatic-failover-policy"></a>柔軟な自動フェールオーバー ポリシーを構成する
+# <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Always On 可用性グループに柔軟な自動フェールオーバー ポリシーを構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -114,7 +115,7 @@ ms.locfileid: "52505834"
   
     -   フェールオーバーの条件レベルを設定するには、**FailureConditionLevel***level* パラメーターを使用します。この *level* は次の値のいずれかになります。  
   
-        |ReplTest1|レベル|自動フェールオーバーが開始される条件|  
+        |[値]|レベル|自動フェールオーバーが開始される条件|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|1|サーバーの停止。 フェールオーバーまたは再起動のため、SQL Server サービスが停止した場合。|  
         |**OnServerUnresponsive**|2|サーバーの応答停止。 下限値の任意の条件が満たされた場合、SQL Server サービスがクラスターに接続され正常性チェックのタイムアウトしきい値を超えた場合、または現在のプライマリ レプリカがエラー状態になった場合。|  

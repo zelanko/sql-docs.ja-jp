@@ -1,12 +1,11 @@
 ---
-title: '概要: テーブルからデータをインポートする (マスター データ サービス) | Microsoft Docs'
+title: 概要 :テーブルからデータをインポートする (マスター データ サービス) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
@@ -16,14 +15,14 @@ ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 806868f2ee57fc4c89ac9f90a13981d97e125fbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d4703d6a5e8438404ba282b09b6af6edf40ea71
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788640"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215419"
 ---
-# <a name="overview-importing-data-from-tables-master-data-services"></a>概要: テーブルからデータをインポートする (マスター データ サービス)
+# <a name="overview-importing-data-from-tables-master-data-services"></a>概要 :テーブルからデータをインポートする (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -31,8 +30,8 @@ ms.locfileid: "47788640"
   
  データを追加および変更する方法の手順については、「[テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/import-data-from-tables-master-data-services.md)」を参照してください。  
   
-> [!NOTE]  
->  また、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]を使って、Excel から MDS リポジトリ ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース) にデータを追加することもできます。 詳細については、「[概要: Excel からのデータのインポート (Excel 用 MDS アドイン)](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)」を参照してください。  
+> [!NOTE]
+>  また、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] を使って、Excel から MDS リポジトリ ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース) にデータを追加することもできます。 詳細については、「[概要:Excel からのデータのインポート (Excel 用 MDS アドイン)](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)」を参照してください。  
   
  データを追加、変更する場合は、次の操作を行うことができます。  
   

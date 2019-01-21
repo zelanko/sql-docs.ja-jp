@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
@@ -14,12 +13,12 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a47b9b13c5de6368b14b6767ea71d8e888da4c72
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6583bab946104e08e102c422373aa94ff2ee752b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395395"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766134"
 ---
 # <a name="staging-process-errors-master-data-services"></a>ステージング処理のエラー (Master Data Services)
 
@@ -38,7 +37,7 @@ ms.locfileid: "52395395"
 |210041|"ROOT" は有効なメンバー コードではありません。|**MemberCode** の値に、単語 "ROOT" が含まれています。|リーフ<br /><br /> [統合]<br /><br /> リレーションシップ|  
 |210042|"MDMUNUSED" は有効なメンバー コードではありません。|**MemberCode** の値に、単語 "MDMUNUSED" が含まれています。|リーフ<br /><br /> [統合]<br /><br /> リレーションシップ|  
 |210052|MemberCode は、ドメイン ベースの属性値として使用されているため、非アクティブ化できません。|**ImportType** = **3** または **4**のとき、メンバーが他のメンバーの属性値として使用されている場合、ステージングは失敗します。 **ImportType5** または **6** のいずれかを使用して、値を NULL に設定するか、ステージング プロセスを実行する前に値を変更してください。|リーフ<br /><br /> [統合]|  
-|300002|メンバー コードが無効です。|リレーションシップ: 親または子のどちらかのメンバー コードが存在しません。<br /><br /> リーフまたは統合: **ImportType** = **3** または **4** で、メンバー コードが存在しません。|リーフ<br /><br /> [統合]<br /><br /> リレーションシップ|  
+|300002|メンバー コードが無効です。|[関係] :親または子のどちらかのメンバー コードが存在しません。<br /><br /> リーフまたは統合: **ImportType** = **3** または **4** で、メンバー コードが存在しません。|リーフ<br /><br /> [統合]<br /><br /> リレーションシップ|  
 |300004|このメンバー コードは既に存在します。|**ImportType** = **1** で、エンティティに既に存在するメンバー コードを使用しました。|リーフ<br /><br /> [統合]|  
 |210011|**RelationshipType** が **1**の場合、 **ParentCode** はリーフ メンバーにできません。|**ParentCode** の値が統合メンバー コードであることを確認してください。|リレーションシップ|  
 |210015|階層およびバッチのステージング テーブルに、メンバー コードが複数回出現します。|明示的階層の場合に、同じバッチ内で同じメンバーの位置を複数回指定しました。|リレーションシップ|  
@@ -49,6 +48,6 @@ ms.locfileid: "52395395"
   
 ## <a name="see-also"></a>参照  
  [ステージング中に発生したエラーの表示 (マスター データ サービス)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [概要: テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ [概要:テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
   
   

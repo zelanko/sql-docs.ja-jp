@@ -1,6 +1,7 @@
 ---
-title: ポリシー評価の結果 (AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: ポリシー評価の結果ページ (Always On ダッシュボード) | Microsoft Docs
+description: SQL Server Management Studio の [Always On ダッシュボード] 内にある [ポリシー評価の結果ページ] の説明。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 587258b743ae65201e1f30e10fc513f361da8824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907be803cc448a5b8424adf4e968cb4520c52cd3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821050"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201931"
 ---
-# <a name="policy-evaluation-result-always-on"></a>ポリシー評価の結果 (AlwaysOn)
+# <a name="policy-evaluation-result-page-always-on-dashboard"></a>ポリシー評価の結果ページ (Always On ダッシュボード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   AlwaysOn ダッシュボードの **[ポリシー評価の結果]** ページは、現在のポリシーの問題を表示するために使用します。  

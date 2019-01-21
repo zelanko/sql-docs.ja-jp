@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 833775d4ab032724eb76f80ed51b2548d29bd875
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fdb2e2dc081bce539bf2671e14993281d2415b98
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701756"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206231"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51701756"
   
  DROP INDEX ステートメントは、PRIMARY KEY 制約または UNIQUE 制約を定義することで作成されたインデックスには適用されません。 制約および対応するインデックスを削除するには、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を DROP CONSTRAINT 句と共に使用します。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  `<drop_backward_compatible_index>` で定義される構文は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のバージョンでは削除される予定です。 新規の開発作業ではこの構文を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、`<drop_relational_or_xml_index>` で指定されている構文を使用してください。 XML インデックスは、旧バージョンとの互換性のための構文を使用して削除することはできません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -115,7 +115,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
 ## <a name="arguments"></a>引数  
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、インデックスを削除します。  
   
@@ -202,7 +202,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  **"** default **"**  
  結果のテーブルの既定の場所を指定します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ここでは、default はキーワードではありません。 これは、既定のファイル グループの識別子で、MOVE TO **"** default **"** または MOVE TO **[** default **]** のように区切り記号で区切る必要があります。 **"** default **"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON に設定されている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
  FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** }  
@@ -221,7 +221,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  **"** default **"**  
  FILESTREAM データの既定の位置を指定します。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ここでは、default はキーワードではありません。 これは、既定のファイル グループの識別子で、MOVE TO **"** default **"** または MOVE TO **[** default **]** のように区切り記号で区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
 ## <a name="remarks"></a>Remarks  
@@ -238,7 +238,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  新しい FILL FACTOR 値を適用したり、一括読み取りの後でデータを再構成するためなどに、インデックスを削除し、作り直して、再構成または再構築することがあります。 これを行うには、特にクラスター化インデックスに対しては、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用するのがより効率的です。 ALTER INDEX REBUILD は、非クラスター化インデックスを再構築するオーバーヘッドをなくすために最適化されています。  
   
 ## <a name="using-options-with-drop-index"></a>DROP INDEX でのオプションの使用  
- クラスター化インデックスを削除する際に、MAXDOP、ONLINE、および MOVE TO インデックス オプションを設定できます。  
+ クラスター化インデックスを削除する際に、MAXDOP、ONLINE、MOVE TO インデックス オプションを設定できます。  
   
  MOVE TO は、単一のトランザクションでクラスター化インデックスを削除し、結果のテーブルを別のファイル グループまたはパーティション構成に移動するために使用します。  
   

@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83905f449377f02eef8098ff8afdcbf4618ce80f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b487a507dac6a7492f45b2f3dd32df2291bb56cc
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670731"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886687"
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>明示的なスキーマで OPENJSON を使用する (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,10 +58,10 @@ WITH ( k1 int,
   
 |k1|k2|col3|col4|col5|array_element|  
 |--------|--------|----------|----------|----------|--------------------|  
-|11|*NULL*|"text"|*NULL*|*NULL*|{"k1": 11、"k2": null の場合、"k3":"text"}|  
+|11|*NULL*|"text"|*NULL*|*NULL*|{"k1":11, "k2": null, "k3": "text"}|  
 |21|テキスト「2」|*NULL*|テキスト「4」|{「データ」:"テキスト"が 4}|{"k1": true,"k2":"text2"、"k4": {「データ」: テキスト「4」}}|  
-|31|"32"|*NULL*|*NULL*|*NULL*|{"k1": 31 日"k2": 32}|  
-|41|*NULL*|*NULL*|オプション|{「データ」: false}|{"k1": 41、"k2": null の場合、"k4": {「データ」: false}}|  
+|31|"32"|*NULL*|*NULL*|*NULL*|{"k1":31, "k2":32 }|  
+|41|*NULL*|*NULL*|オプション|{「データ」: false}|{"k1":41, "k2": null,       "k4": { "data": false }    }|  
   
 ## <a name="example---load-json-into-a-includessnoversionincludesssnoversion-mdmd-table"></a>例 - JSON を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに読み込む。  
  次の例では、全体の JSON オブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルです。  
@@ -88,10 +88,6 @@ DECLARE @json NVARCHAR(MAX) = '{
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database の JSON の詳細情報  
   
-### <a name="microsoft-blog-posts"></a>マイクロソフトのブログ記事  
-  
-具体的なソリューション、ユース ケース、推奨事項については、SQL Server および Azure SQL Database に組み込まれている JSON のサポートに関する[ブログ投稿](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)を参照してください。  
-
 ### <a name="microsoft-videos"></a>Microsoft ビデオ
 
 SQL Server と Azure SQL Database に組み込まれている JSON のサポートの視覚的な紹介は、次のビデオをご覧ください。

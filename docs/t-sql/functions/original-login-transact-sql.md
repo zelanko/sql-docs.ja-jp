@@ -22,15 +22,15 @@ ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a4b22ca8bec9f12778cae94d31de77c9cbe7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91c5694868c7e57182b8295e5bac793ee8698a50
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789140"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951594"
 ---
 # <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続しているログインの名前を返します。 この関数を使用すると、明示的または暗黙的にコンテキストが何度も切り替えられるセッションにおける、元のログインの ID を取得できます。  
   
@@ -48,11 +48,13 @@ ORIGINAL_LOGIN( )
   
 ## <a name="remarks"></a>Remarks  
  この関数は、元の接続コンテキストの ID を監査するときに便利です。 [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) や [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) などの関数では、現在実行しているコンテキストが返されるのに対し、ORIGINAL_LOGIN では、そのセッションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに最初に接続したログインの ID が返されます。  
-  
- NULL を返します [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。  
+ 
   
 ## <a name="examples"></a>使用例  
- 次の例では、現在のセッションの実行コンテキストを、ステートメントの呼び出し元のログインから `login1` に切り替えます。 関数 `SUSER_SNAME` および `ORIGINAL_LOGIN` を使用すると、現在のセッションのユーザー (コンテキストの切り替え先のユーザー) と、元のログイン アカウントが返されます。  
+ 次の例では、現在のセッションの実行コンテキストを、ステートメントの呼び出し元のログインから `login1` に切り替えます。 関数 `SUSER_SNAME` および `ORIGINAL_LOGIN` を使用すると、現在のセッションのユーザー (コンテキストの切り替え先のユーザー) と、元のログイン アカウントが返されます。 
+ 
+  >[!NOTE]
+  > Azure SQL Database では ORIGINAL_LOGIN 関数がサポートされますが、*Execute as LOGIN* がサポートされないため、次のスクリプトは失敗します。 
   
 ```  
 USE AdventureWorks2012;  

@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ecd7626e28faae1626809e6f45141c93dd4021e3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 48e1ef4a027c3bd62818bb85fd0218e033e620da
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404517"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203881"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -247,10 +247,10 @@ TO \<backup_device> [ **,**...*n* ] 関連する[バックアップ デバイス
 
 バックアップ操作に使用する論理または物理バックアップ デバイスを指定します。  
   
-{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **Applies to:** SQL Server   
+{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **適用対象:** SQL Server   
 データベースのバックアップが作成されるバックアップ デバイスの論理名を指定します。 論理名は、識別子のルールに従う必要があります。 変数 (@*logical_device_name_var*) として指定する場合、バックアップ デバイス名を文字列定数 (@_logical\_device\_name\_var_**=** logical backup device name) として指定するか、**ntext** または **text** データ型以外の文字列データ型の変数として指定できます。  
   
-{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **適用対象:** SQL Server に適用する DISK、APE、および URL。 
+{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **適用対象:** SQL Server に適用する DISK、TAPE、URL。 
 ディスク ファイルまたはテープ デバイス、あるいは Microsoft Azure BLOB ストレージ サービスを指定します。 URL の形式は、Microsoft Azure ストレージ サービスへのバックアップを作成するために使用されます。 詳細と例については、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 チュートリアルについては、「[チュートリアル: Microsoft Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)」を参照してください。 
 
 > [!NOTE] 
@@ -259,7 +259,7 @@ TO \<backup_device> [ **,**...*n* ] 関連する[バックアップ デバイス
 > [!IMPORTANT]  
 > [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、URL にバックアップする場合、単一デバイスにのみバックアップできます。 URL へのバックアップ時に複数のデバイスにバックアップするには、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用する必要があります。また、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
   
-**URL の適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
 ディスク デバイスは、BACKUP ステートメントで指定するときにまだ存在していなくてもかまいません。 物理デバイスが既に存在し、BACKUP ステートメントに INIT オプションが指定されていない場合、バックアップはデバイスに追加されます。  
  
@@ -295,12 +295,12 @@ MIRROR TO \<backup_device> [ **,**...*n* ] TO 句で指定したバックアッ�
 バックアップ操作で使用するオプションを指定します。  
   
 CREDENTIAL  
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
 Microsoft Azure BLOB ストレージ サービスにバックアップを作成する場合にのみ使用します。  
   
 FILE_SNAPSHOT **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。
 
-Azure Blob ストレージ サービスを使用してすべての SQL Server データベース ファイルが格納される場合は、データベース ファイルの Azure のスナップショットを作成するために使用します。 詳細については、「[Microsoft Azure 内の SQL Server データ ファイル](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップでは、データベース ファイル (データとログ ファイル) の Azure スナップショットを一貫性のある状態で取得します。 Azure のスナップショットの一貫性のあるセットでは、バックアップを構成し、バックアップ ファイルに記録されます。 唯一の違い `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` と `BACKUP LOG TO URL WITH FILE_SNAPSHOT` こと、後者もトランザクション ログを切り捨て、以前のではありませんが。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップに必要な初期の完全バックアップの後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] だけで、1 つのトランザクション ログ バックアップは、トランザクション ログ バックアップの時刻で、ポイントにデータベースを復元するために、バックアップのチェーンを確立するためにします。 さらに、次の 2 つのトランザクション ログ バックアップの期間の間のポイントにデータベースを復元するだけの 2 つのトランザクション ログ バックアップが必要です。  
+Azure Blob ストレージ サービスを使用してすべての SQL Server データベース ファイルが格納される場合は、データベース ファイルの Azure のスナップショットを作成するために使用します。 詳細については、「[Microsoft Azure 内の SQL Server データ ファイル](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スナップショット バックアップでは、データベース ファイル (データとログ ファイル) の Azure スナップショットを一貫性のある状態で取得します。 Azure のスナップショットの一貫性のあるセットでは、バックアップを構成し、バックアップ ファイルに記録されます。 `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` と `BACKUP LOG TO URL WITH FILE_SNAPSHOT` の唯一の違いは、後者ではトランザクション ログの切り捨ても行うのに対して、前者では行わないことです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスナップショット バックアップでは、バックアップ チェーンを確立するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で必要な最初の完全バックアップの後、トランザクション ログ バックアップの時点にデータベースを復元する場合、単一のトランザクション ログ バックアップのみが必要になります。 さらに、次の 2 つのトランザクション ログ バックアップの期間の間のポイントにデータベースを復元するだけの 2 つのトランザクション ログ バックアップが必要です。  
     
 DIFFERENTIAL  
 
@@ -370,7 +370,7 @@ NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }
 { EXPIREDATE **='**_date_**'** | RETAINDAYS **=** *days* }  
 このバックアップのバックアップ セットがいつ上書きできるようになるかを指定します。 オプションを両方とも使用した場合は、RETAINDAYS が EXPIREDATE よりも優先されます。  
   
-どちらのオプションも指定されていない場合、失効日は **mediaretention** 構成設定によって決まります。 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)構成オプションを構成する方法について説明します。   
+どちらのオプションも指定されていない場合、失効日は **mediaretention** 構成設定によって決まります。 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。   
   
 > [!IMPORTANT]  
 > これらのオプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのファイルの上書きを防ぐことのみを目的としています。 テープは別の方法で消去することができ、ディスク ファイルはオペレーティング システムで削除できます。 有効期限の確認の詳細については、このトピックの「SKIP」および「FORMAT」を参照してください。  
@@ -534,7 +534,7 @@ REWIND
   
 NOREWIND
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でバックアップ操作の後テープを開いたままにしておきます。 このオプションを使用すると、1 つのテープに複数のバックアップ操作を実行する場合のパフォーマンスを向上できます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でバックアップ操作後にテープを開いたままにしておくことを指定します。 このオプションを使用すると、1 つのテープに複数のバックアップ操作を実行する場合のパフォーマンスを向上できます。  
   
 NOREWIND は暗黙的に NOUNLOAD も意味しています。この 2 つのオプションを同一 BACKUP ステートメント内で同時に使用することはできません。  
   

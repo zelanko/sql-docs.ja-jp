@@ -11,12 +11,12 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395684"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215821"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>マスター データ サービスの高可用性とディザスター リカバリー
 
@@ -156,8 +156,8 @@ WSFC 機能がすべてのインスタンスにインストールされたら、
 7.  **[概要]** ページで、警告やエラー メッセージがないか確認します。
 
     エラーは修正する必要があります。 警告は問題とならない場合があります。 警告メッセージは、"テストした項目は要件を満たしていますが、確認が推奨される要素が含まれています" ということを意味するものです。 たとえば、図 7 には、"ディスク アクセス待ち時間検証" という警告があります。これはディスクが他のタスクで一時的に占有されていることを原因として示すもので、無視してかまいません。 詳しくは、それぞれの警告/エラー メッセージのオンライン ドキュメントをご覧ください。 図 7 を参照してください。
- 
-![検証の構成ウィザード、[検証] ページ](media/Fig6_ValidationTests.png)
+ 
+    ![検証の構成ウィザード、[検証] ページ](media/Fig6_ValidationTests.png)
 
     図 6
 
@@ -187,7 +187,7 @@ WSFC 機能がすべてのインスタンスにインストールされたら、
 
 -   WSFC 機能は、一部のエディションの Windows Server でご利用いただけない場合があります。 お使いのエディションにこの機能があることをご確認ください。
 
--   Active Directory で WSFC を設定するアクセス許可が与えられていることを確認します。 問題がある場合は、「[フェールオーバー クラスターのステップ バイ ステップ ガイド: Active Directory でのアカウントの構成](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx)」を参照してください。
+-   Active Directory で WSFC を設定するアクセス許可が与えられていることを確認します。 問題がある場合は、「[フェールオーバー クラスターのステップ バイ ステップ ガイド:Active Directory でのアカウントの構成](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx)」を参照してください。
 
 WSFC の詳細については、「[Failover Clusters](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx)」(フェールオーバー クラスター) を参照してください。
 
@@ -305,7 +305,7 @@ AG は既存のデータベースにのみ作成できます。 そのため、1
     レプリカごとに、**同期コミット**、**自動フェールオーバー**、**読み取り可能なセカンダリ**を設定します。 図 17 を参照してください。
 17.
 
-    **同期コミット**: あるデータベースのプライマリ レプリカでトランザクションがコミットされた場合、そのトランザクションは他のすべての同期レプリカでもコミットされます。 非同期コミットではこれが保証されません。プライマリ レプリカに遅れることがあります。
+    **同期コミット**:あるデータベースのプライマリ レプリカでトランザクションがコミットされた場合、そのトランザクションは他のすべての同期レプリカでもコミットされます。 非同期コミットではこれが保証されません。プライマリ レプリカに遅れることがあります。
 
     通常は、2 つのノードが同じデータ センターにあるときにのみ、同期コミットを有効にしてください。 異なるデータ センターに置かれる場合、同期コミットによりデータベースのパフォーマンスが遅くなることがあります。
 
@@ -358,7 +358,7 @@ AG は既存のデータベースにのみ作成できます。 そのため、1
 
 3.  **[フェールオーバー]** をクリックし、同期レプリカと非同期レプリカにフェールオーバーします。 この目的は、フェールオーバーが問題なく行われることを確認することです。
 
- AlwaysOn の設定が完了します。
+ AlwaysOn の設定が完了します。
 
 AlwaysOn 可用性グループの詳細については、「[AlwaysOn 可用性グループ (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)」を参照してください。
 

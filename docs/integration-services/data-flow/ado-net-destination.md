@@ -19,12 +19,12 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38175416fdd47ee50f9bb3aa94b7318b8926317b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a462e54379a5a916d6b302f99ef6f44d2148399a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640022"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209091"
 ---
 # <a name="ado-net-destination"></a>ADO NET 変換先
   ADO NET 変換先では、データベースのテーブルやビューを使用する、さまざまな [!INCLUDE[vstecado](../../includes/vstecado-md.md)]互換データベースにデータを読み込みます。 このデータを既存のテーブルやビューに読み込むことができますが、新しいテーブルを作成して、そこにデータを読み込むこともできます。  
@@ -96,14 +96,14 @@ ms.locfileid: "51640022"
   
  **[使用可能な場合は一括挿入を使用する]** を選択し、 **[エラー]** オプションを **[行をリダイレクトする]** に設定した場合、変換先によってエラー出力にリダイレクトされるデータのバッチに問題のない行が含まれる可能性があります。一括操作でのエラー処理の詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。 **[エラー]** オプションの詳細については、「[[ADO NET 変換先エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)」を参照してください。  
   
-> [!NOTE]  
+> [!NOTE]
 >  SQL Server または Sybase 変換元テーブルに ID 列が含まれる場合、SQL 実行タスクを利用し、ADO NET 変換先の前に IDENTITY_INSERT を有効にし、その後再び無効にする必要があります。 (ID 列プロパティは、列の増分値を指定します。 SET IDENTITY_INSERT ステートメントにより、変換先テーブルの ID 列に、変換元テーブルの明示的値を挿入できます。)  
->   
+> 
 >   SET IDENTITY_INSERT ステートメントとデータ読み込みを正常に実行するには、次を行う必要があります。  
 >       1.SQL 実行タスクと ADO NET 変換先に同じ ADO.NET 接続マネージャーを使用します。  
 >       2.接続マネージャーで、**RetainSameConnection** プロパティと **MultipleActiveResultSets** プロパティを True に設定します。  
 >       3.ADO.NET 変換先で、**UseBulkInsertWhenPossible** プロパティを False に設定します。   
->
+> 
 >  詳細については、「[SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)」および「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)」を参照してください。  
   
 ## <a name="external-resources"></a>外部リソース  
@@ -120,7 +120,7 @@ ms.locfileid: "51640022"
   
 3.  **[ADO NET 変換先エディター]** で、 **[マッピング]** をクリックします。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "51640022"
   
 3.  **[ADO NET 変換先エディター]** で、 **[エラー出力]** をクリックします。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **入力または出力**  
  入力の名前を表示します。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "51640022"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連項目:**[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  使用されていません。  

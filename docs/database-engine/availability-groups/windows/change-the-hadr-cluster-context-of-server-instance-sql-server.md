@@ -1,6 +1,7 @@
 ---
-title: サーバー インスタンスの HADR クラスター コンテキストの変更 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループでレプリカのメタデータを管理するクラスターを変更する
+description: クラスター間の移行を実行するとき、SQL Server のインスタンスに対して HADR クラスター コンテキストを変更することで、Always On 可用性グループ内の可用性レプリカのメタデータを管理するクラスターを変更します。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 940fc70407c6a4131719818bbbc87049c93fab6b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605703"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202131"
 ---
-# <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>サーバー インスタンスの HADR クラスター コンテキストの変更 (SQL Server)
+# <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Always On 可用性グループでレプリカのメタデータを管理するクラスターを変更する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -37,11 +38,11 @@ ms.locfileid: "51605703"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **可用性レプリカのクラスター コンテキストを**  [Transact-SQL](#TsqlProcedure)  
+-   **次を使用して可用性レプリカのクラスター コンテキストを切り替えるには:**[Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [可用性レプリカのクラスター コンテキストの切り替え後](#FollowUp)  
+-   **補足情報:**[可用性レプリカのクラスター コンテキストの切り替え後](#FollowUp)  
   
 -   [関連タスク](#RelatedTasks)  
   
@@ -133,7 +134,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;  
 ```  
   
-##  <a name="FollowUp"></a> 補足情報: 可用性レプリカのクラスター コンテキストの切り替え後  
+##  <a name="FollowUp"></a> 補足情報:可用性レプリカのクラスター コンテキストの切り替え後  
  新しい HADR クラスター コンテキストは、サーバー インスタンスの再起動なしですぐに有効になります。 HADR クラスター コンテキスト設定は、サーバー インスタンスが再起動した場合でも変更されない永続的なインスタンス レベルの設定です。  
   
  次に示すように、 [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md) 動的管理ビューをクエリすることで、新しい HADR クラスター コンテキストを確認します。  
@@ -168,7 +169,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [SQL Server 2012 技術記事](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

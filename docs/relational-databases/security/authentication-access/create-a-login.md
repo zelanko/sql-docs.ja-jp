@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3702cdd2e09b101b3a779926fa170a976b39c958
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 290dd7ad7be98334ebd7eccf49c29df89890bc13
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516643"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209101"
 ---
 # <a name="create-a-login"></a>ログインの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "52516643"
 ##  <a name="Background"></a> 背景情報  
  ログインは、セキュリティ プリンシパル、またはセキュリティで保護されたシステムで認証できるエンティティです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に接続するためには、ユーザーにログインが必要です。 Windows プリンシパル (ドメイン ユーザーや Windows ドメイン グループなど) に基づいてログインを作成することも、Windows プリンシパルに基づかないログイン ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインなど) を作成することもできます。  
   
-> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用するためには、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] に混合モード認証が使用されている必要があります。 詳細については、「 [認証モードの選択](../../../relational-databases/security/choose-an-authentication-mode.md)」を参照してください。  
+> **注:**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用するためには、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]に混合モード認証が使用されている必要があります。 詳細については、「 [認証モードの選択](../../../relational-databases/security/choose-an-authentication-mode.md)」を参照してください。  
   
  セキュリティ プリンシパルとして、ログインには権限を許可することができます。 ログインのスコープは、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]全体です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上の特定のデータベースに接続するには、データベース ユーザーにログインをマップする必要があります。 データベース内の権限を許可したり拒否したりする際に、その対象となるのは、ログインではなく、データベース ユーザーです。 ログインには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス全体をスコープとして持つ権限 ( **CREATE ENDPOINT** 権限など) を許可することができます。  
   
-> **注:** ログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するとき、その ID がマスター データベースで検証されます。 包含データベース ユーザーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のデータベース レベルでの接続が認証されます。 包含データベース ユーザーを使用する場合、ログインは必要ありません。 包含データベースは、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (および master データベース) のインスタンスから分離されたデータベースです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、Windows 認証と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証の両方で包含データベース  ユーザーがサポートされます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]を使用して、包含データベース ユーザーとデータベース レベルのファイアウォール規則を結合します。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
+> **注:** ログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するとき、その ID がマスター データベースで検証されます。 包含データベース ユーザーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のデータベース レベルでの接続が認証されます。 包含データベース ユーザーを使用する場合、ログインは必要ありません。 包含データベースは、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (および master データベース) のインスタンスから分離されたデータベースです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、Windows 認証と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証の両方で包含データベース  ユーザーがサポートされます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]を使用して、包含データベース ユーザーとデータベース レベルのファイアウォール規則を結合します。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
   
 ##  <a name="Security"></a> Security  
 
@@ -70,7 +70,7 @@ ms.locfileid: "52516643"
   
     4.  詳細検索オプションを表示するには **[詳細]** をクリックします。 詳細については、「 [[ユーザー、コンピューターまたはグループの選択] ダイアログ ボックス - [詳細設定] ページ](https://technet.microsoft.com/library/cc733110.aspx)」を参照してください。  
   
-    5.  **[OK]** をクリックします。  
+    5.  [**OK**] をクリックします。  
   
 4.  Windows プリンシパル上に基づいてログインを作成するには、 **[Windows 認証]** を選択します。 これは既定値です。  
   
@@ -165,15 +165,15 @@ ms.locfileid: "52516643"
   
 1.  **[検索]** をクリックします。  
   
-2.  **[オブジェクトの追加]** ダイアログ ボックスで、**[特定のオブジェクト]**、**[この種類のすべてのオブジェクト]**、**[サーバー** _server\_name]_ のいずれかのオプションを選択します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  **[オブジェクトの追加]** ダイアログ ボックスで、**[特定のオブジェクト]**、**[この種類のすべてのオブジェクト]**、**[サーバー**_server\_name]_ のいずれかのオプションを選択します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **注:** **[サーバー _server\_name_]** を選択すると、そのサーバーのセキュリティ保護可能なすべてのオブジェクトが上のグリッドに自動的に入力されます。  
+    > **注:****[サーバー **_server\_name]_ を選択すると、そのサーバーのセキュリティ保護可能なすべてのオブジェクトが上のグリッドに自動的に入力されます。  
   
 3.  **[特定のオブジェクト]** を選択した場合:  
   
     1.  **[オブジェクトの選択]** ダイアログ ボックスの **[以下のオブジェクトの種類を選択]** で、**[オブジェクトの種類]** をクリックします。  
   
-    2.  **[オブジェクトの種類を選択]** ダイアログ ボックスで、 **[エンドポイント]**、 **[ログイン]**、 **[サーバー]**、 **[可用性グループ]**、 **[サーバー ロール]** のオブジェクトの種類のいずれかまたはすべてを選択します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  **[オブジェクトの種類を選択]** ダイアログ ボックスで、**[エンドポイント]**、**[ログイン]**、**[サーバー]**、**[可用性グループ]**、**[サーバー ロール]** のいずれかまたはすべてをオブジェクトの種類として選択します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  **[選択するオブジェクト名を入力してください (例)]** で、**[参照]** をクリックします。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "52516643"
   
     5.  **[オブジェクトの選択]** ダイアログ ボックスで **[OK]** をクリックします。  
   
-4.  **[オブジェクトの種類を選択]** ダイアログ ボックスで **[この種類のすべてのオブジェクト]** を選択した場合は、**[エンドポイント]**、**[ログイン]**、**[サーバー]**、**[可用性グループ]**、**[サーバー ロール]** のオブジェクトの種類のいずれかまたはすべてを選択します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  **[オブジェクトの種類を選択]** ダイアログ ボックスで **[この種類のすべてのオブジェクト]** を選択した場合は、**[エンドポイント]**、**[ログイン]**、**[サーバー]**、**[可用性グループ]**、**[サーバー ロール]** のいずれかまたはすべてをオブジェクトの種類として選択します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **名前**  
  グリッドに追加される各プリンシパルまたはセキュリティ保護可能なリソースの名前です。  
@@ -264,7 +264,7 @@ ms.locfileid: "52516643"
   
  詳細については、「[CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> 補足情報: ログインの作成後に実行する手順  
+##  <a name="FollowUp"></a> 補足情報:ログインの作成後に実行する手順  
  ログインの作成が済むと、そのログインで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に接続できるようになりますが、実際の作業を行うための十分な権限があるとは限りません。 ログインに関して一般的に行われる操作について説明するトピックへのリンクを次に示します。  
   
 -   ログインをロールに参加させるには、「 [ロールの追加](../../../relational-databases/security/authentication-access/join-a-role.md)」を参照してください。  

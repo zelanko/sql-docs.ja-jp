@@ -11,14 +11,14 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: baa4f703e4c76722dcecb729299e6ff416784f75
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 274e91c482ada16847cb2b2e704ac9d953567d7d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970384"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328592"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>チュートリアル: SQL Server Management Studio を使用して SQL Server インスタンスに接続し、クエリを行う
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>チュートリアル:SQL Server Management Studio を使用して SQL Server インスタンスに接続し、クエリを行う
 
 > [!div class="nextstepaction"]
 > [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
@@ -40,8 +40,8 @@ ms.locfileid: "50970384"
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
 
 SQL Server インスタンスへのアクセス権を持っていない場合は、次のリンクからプラットフォームを選択します。 SQL 認証を選択する場合は、SQL Server のログイン資格情報を使用します。
-- **Windows**: [SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- **macOS**: [Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
+- **Windows**:[SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- **macOS**:[Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>SQL Server インスタンスに接続する
@@ -66,9 +66,9 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
 ### <a name="examples-of-successful-connections"></a>接続の成功例
 SQL Server 接続の成功を確認するには、**オブジェクト エクスプローラー**内でオブジェクトを展開し、調べます。 これらのオブジェクトは、接続先のサーバーの種類によって異なります。 
 
-- オンプレミス SQL Server に接続 - この場合、NODE5\SQL2016ST: ![オンプレミス サーバーに接続](media/connect-query-sql-server/connect-on-prem.png)
+- オンプレミス SQL Server に接続 - この場合、NODE5\SQL2016ST:![オンプレミス サーバーに接続](media/connect-query-sql-server/connect-on-prem.png)
 
-- SQL Azure DB に接続 - この場合、msftestserver.database.windows.net: ![SQL Azure DB に接続](media/connect-query-sql-server/connect-sql-azure.png)
+- SQL Azure DB に接続 - この場合、msftestserver.database.windows.net:![SQL Azure DB に接続](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]
   > このチュートリアルでは、以前、"*Windows 認証*" を使用してオンプレミス SQL Server に接続しましたが、この方法は SQL Azure DB ではサポートされていません。 そのため、この画像では、SQL 認証を使用して SQL Azure DB に接続しています。 詳細については、[SQL オンプレミス認証](../../relational-databases/security/choose-an-authentication-mode.md)に関するページと [SQL Azure 認証](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access)に関するページを参照してください。 

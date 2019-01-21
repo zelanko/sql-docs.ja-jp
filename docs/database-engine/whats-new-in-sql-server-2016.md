@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504511"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266083"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>データベース エンジンの新機能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -319,11 +319,11 @@ model データベースの新しい値および新しいデータベースの�
 - [COMPRESS &#40;Transact-SQL&#41;](../t-sql/functions/compress-transact-sql.md) 関数および [DECOMPRESS &#40;Transact-SQL&#41;](../t-sql/functions/decompress-transact-sql.md) 関数は、GZIP アルゴリズムに合わせて値を変換したり、変換解除したりします。
 - 日付と時刻の相互作用をサポートするために、[DATEDIFF_BIG &#40;Transact-SQL&#41;](../t-sql/functions/datediff-big-transact-sql.md) 関数および [AT TIME ZONE &#40;Transact-SQL&#41;](../t-sql/queries/at-time-zone-transact-sql.md) 関数と [sys.time_zone_info &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) ビューが追加されました。
 - (これまでのサーバー レベルの資格情報に加え) データベース レベルで資格情報を作成できるようになりました。 詳細については、「[CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-database-scoped-credential-transact-sql.md)」を参照してください。
-- [SERVERPROPERTY &#40;Transact-SQL&#41;](../t-sql/functions/serverproperty-transact-sql.md) に新しい 8 つのプロパティ (InstanceDefaultDataPath、InstanceDefaultLogPath、ProductBuild、ProductBuildType、ProductMajorVersion、ProductMinorVersion、ProductUpdateLevel、ProductUpdateReference) が追加されました。
+- [SERVERPROPERTY &#40;Transact-SQL&#41;](../t-sql/functions/serverproperty-transact-sql.md) に新しい 8 つのプロパティ(InstanceDefaultDataPath、InstanceDefaultLogPath、ProductBuild、ProductBuildType、ProductMajorVersion、ProductMinorVersion、ProductUpdateLevel、ProductUpdateReference) が追加されました。
 - [HASHBYTES &#40;Transact-SQL&#41;](../t-sql/functions/hashbytes-transact-sql.md) 関数に対する 8,000 バイトの入力長制限が削除されました。
 - 新しい文字列関数 [STRING_SPLIT &#40;Transact-SQL&#41;](../t-sql/functions/string-split-transact-sql.md) および [STRING_ESCAPE &#40;Transact-SQL&#41;](../t-sql/functions/string-escape-transact-sql.md) が追加されました。
-- 自動拡張オプション: トレース フラグ 1117 が ALTER DATABASE の AUTOGROW_SINGLE_FILE および AUTOGROW_ALL_FILES オプションに置き換えられ、トレース フラグ 1117 の効力はなくなりました。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」および [sys.filegroups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) の新しい is_autogrow_all_files 列をご覧ください。
-- 混合エクステントの割り当て: ユーザー データベースの場合、オブジェクトの最初の 8 ページの既定の割り当てで、混合ページ エクステントではなく単一エクステントが使用されるようになります。 トレース フラグ 1118 は ALTER DATABASE の SET MIXED_PAGE_ALLOCATION オプションに置き換えられ、トレース フラグ 1118 の効力はなくなりました。 詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md)」および [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) の新しい `is_mixed_page_allocation_on` 列をご覧ください。
+- 自動拡張オプション:トレース フラグ 1117 が ALTER DATABASE の AUTOGROW_SINGLE_FILE および AUTOGROW_ALL_FILES オプションに置き換えられ、トレース フラグ 1117 の効力はなくなりました。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」および [sys.filegroups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) の新しい is_autogrow_all_files 列をご覧ください。
+- 混合エクステントの割り当て:ユーザー データベースの場合、オブジェクトの最初の 8 ページの既定の割り当てで、混合ページ エクステントではなく単一エクステントが使用されるようになります。 トレース フラグ 1118 は ALTER DATABASE の SET MIXED_PAGE_ALLOCATION オプションに置き換えられ、トレース フラグ 1118 の効力はなくなりました。 詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md)」および [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) の新しい `is_mixed_page_allocation_on` 列をご覧ください。
 
 ### <a name="transact-sql-improvements-for-natively-compiled-modules"></a>ネイティブ コンパイル モジュールに関係する Transact-SQL の改善点
 
@@ -438,10 +438,8 @@ Always On で、暗号化されたデータベースがサポートされるよ�
 最新の [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)をダウンロードしてください。
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] では、Microsoft Azure への接続用に開発中の Active Directory 認証ライブラリ (ADAL) がサポートされます。 これは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] で使用される証明書ベース認証に代わるものです。
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストールでは、前提条件として .NET 4.6 をインストールする必要があります。 .NET 4.6 は、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストール時のセットアップに応じて自動的にインストールされます。
 - 新しいクエリ結果グリッド オプションでは、結果グリッドからのテキストのコピーまたは保存時に復帰/改行 (改行文字) を維持することができます。 [ツール] メニューの [オプション] からこのように設定します。
 - SQL Server 管理ツールがメイン機能ツリーからインストールされなくなりました。詳細については、「 [SSMS を使用した SQL Server 管理ツールのインストール](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)」を参照してください。
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストールでは、前提条件として .NET 4.6.1 をインストールする必要があります。 .NET 4.6.1 は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストール時のセットアップに応じて自動的にインストールされます。
 
 ### <a name="upgrade-advisor"></a>アップグレード アドバイザー
 SQL Server 2016 Upgrade Advisor プレビューはスタンドアロン ツールです。これにより、以前のバージョンのユーザーは、SQL Server データベースに対して一連のアップグレード ルールを実行し、重大な動作変更や非推奨の機能を検出でき、Stretch Database などの新機能の採用に役立ちます。

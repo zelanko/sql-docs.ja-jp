@@ -11,12 +11,12 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c49ec9733634d0b8eb5f6523eb6fd7f416b5f408
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb847f12e7b9a508d880033da7e66a426b757791
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829470"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202641"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Access データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **Microsoft Access** データ ソースに接続する方法を説明します。
@@ -46,8 +46,8 @@ Microsoft Access データベースへの接続例を次のスクリーン シ�
  **[ファイル名]**  
 Access ファイルのパスとファイル名を指定します。 たとえば、ローカル コンピューター上のファイルの場合は **C:\\MyData.mdb**、ネットワーク共有上のファイルの場合は **\\\\Sales\\Database\\Northwind.mdb** と指定します。 または、**[参照]** をクリックします。 
 
- >   [!NOTE] 
- > **[参照]** をクリックして Access ファイルを見つける場合、**[開く]** ダイアログ ボックスでは古い .MDB 形式とファイル拡張子を持つファイルが既定でフィルター処理されます。 ただし、データ プロバイダーでは、新しい .ACCDB 形式とファイル拡張子を持つファイルを開くこともできます。
+> [!NOTE]
+> **[参照]** をクリックして Access ファイルを見つける場合、**[開く]** ダイアログ ボックスでは古い .MDB 形式とファイル拡張子を持つファイルが既定でフィルター処理されます。 ただし、データ プロバイダーでは、新しい .ACCDB 形式とファイル拡張子を持つファイルを開くこともできます。
   
  **[参照]**  
  **[ファイルを開く]** ダイアログ ボックスを使用して、データベース ファイルを検索します。  
@@ -55,7 +55,7 @@ Access ファイルのパスとファイル名を指定します。 たとえば
  **User name**  
 ワークグループの情報ファイルがデータベースに関連付けられている場合は、有効なユーザー名を指定します。  
   
- **Password**  
+ **パスワード**  
 ワークグループの情報ファイルがデータベースに関連付けられている場合は、ここでユーザーのパスワードを指定します。
  
 データベースがすべてのユーザーに対して 1 つのパスワードで保護されている場合は、「[データベース ファイルはパスワードで保護されているか](#database_password)」を参照してください。
@@ -70,7 +70,7 @@ Access ファイルのパスとファイル名を指定します。 たとえば
 > 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールできます。
 
 ## <a name="officeDownloads"></a>Access に接続するために必要なファイルを取得する  
-Access と Excel を含む Microsoft Office データ ソース用の接続コンポーネントがまだインストールされていない場合は、必要に応じてダウンロードします。 [Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)で、Access と Excel の両方のファイルの最新バージョンの接続コンポーネントをダウンロードします。
+Access と Excel を含む Microsoft Office データ ソース用の接続コンポーネントがまだインストールされていない場合は、必要に応じてダウンロードします。 Access と Excel の両方のファイルの最新バージョンの接続コンポーネントを [Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)でダウンロードします。
   
 以前のバージョンの Access で作成したファイルは、最新バージョンのコンポーネントで開くことができます。
 

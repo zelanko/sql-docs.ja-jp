@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
@@ -15,12 +14,12 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d39d78d9fef6756804f69c8fb49ed1e880d94767
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bbad98239ef2aabbea33a1874e5e6f3efad51c55
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395388"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783614"
 ---
 # <a name="database-object-security-master-data-services"></a>データベース オブジェクト セキュリティ (マスター データ サービス)
 
@@ -45,19 +44,19 @@ ms.locfileid: "52395388"
 -   [システム設定を構成する](#SysSettings)  
   
 ##  <a name="Staging"></a> データをステージングする  
- 次の表では、セキュリティ保護可能な各リソースの名前の一部に "name" を使用しています。 これは、エンティティの作成時に指定するステージング テーブルの名前を示します。 詳細については、「[概要: テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
+ 次の表では、セキュリティ保護可能な各リソースの名前の一部に "name" を使用しています。 これは、エンティティの作成時に指定するステージング テーブルの名前を示します。 詳細については、「[概要:テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
   
 |操作|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
-|リーフ メンバーとその属性を作成、更新、および削除します。|stg.name_Leaf|必須: INSERT<br /><br /> オプション: SELECT および UPDATE|  
+|リーフ メンバーとその属性を作成、更新、および削除します。|stg.name_Leaf|必須:INSERT<br /><br /> 省略可能:SELECT と UPDATE|  
 |リーフ ステージング テーブルから MDS データベースの適切なテーブルにデータを読み込む|stg.udp_name_Leaf|EXECUTE|  
-|統合メンバーとその属性を作成、更新、および削除します。|stg.name_Consolidated|必須: INSERT<br /><br /> オプション: SELECT および UPDATE|  
+|統合メンバーとその属性を作成、更新、および削除します。|stg.name_Consolidated|必須:INSERT<br /><br /> 省略可能:SELECT と UPDATE|  
 |統合ステージング テーブルから MDS データベースの適切なテーブルにデータを読み込む|stg.udp_name_Consolidated|EXECUTE|  
-|明示的階層内でメンバーを移動する。|stg.name_Relationship|必須: INSERT<br /><br /> オプション: SELECT および UPDATE|  
+|明示的階層内でメンバーを移動する。|stg.name_Relationship|必須:INSERT<br /><br /> 省略可能:SELECT と UPDATE|  
 |リレーションシップ ステージング テーブルから MDS の適切なテーブルにデータを読み込む|stg.udp_name_Relationship|EXECUTE|  
 |ステージング テーブルのデータが MDS データベース テーブルに挿入されたときに発生したエラーを表示する|stg.udp_name_Relationship|SELECT|  
   
- 詳細については、「[概要: テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
+ 詳細については、「[概要:テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
   
 ##  <a name="rules"></a> ビジネス ルールに対してデータを検証する  
   

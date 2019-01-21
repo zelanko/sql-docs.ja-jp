@@ -1,6 +1,7 @@
 ---
-title: アクティブなセカンダリ - 読み取り可能なセカンダリ レプリカ - AlwaysOn 可用性 | Microsoft Docs
-ms.custom: ''
+title: 可用性グループのセカンダリ レプリカに読み取り専用の負荷を移す
+description: SQL Server で Always On 可用性グループのセカンダリ レプリカに読み取り専用のクエリとレポートの負荷を移す方法について説明します。
+ms.custom: seodec18
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0c7c2b420adedaff0a67ff0f10c14d581f13f94
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 653171f45dff58afe617f1d70380e4ce9f3ee600
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604718"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206271"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ)
+# <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 可用性グループのセカンダリ レプリカに読み取り専用の負荷を移す
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のアクティブなセカンダリ機能では、1 つ以上のセカンダリ レプリカ (*読み取り可能なセカンダリ レプリカ*) への読み取り専用アクセスをサポートしています。 読み取り可能なセカンダリ レプリカは、同期コミット可用性モードまたは非同期コミット可用性モードのいずれにも指定できます。 読み取り可能なセカンダリ レプリカは、すべてのセカンダリ データベースへの読み取り専用アクセスを許可します。 ただし、読み取り可能なセカンダリ データベースは読み取り専用に設定されません。 これらは動的です。 セカンダリ データベースは、対応するプライマリ データベースに対する変更がそのセカンダリ データベースに適用されると変更されます。 一般的なセカンダリ レプリカでは、持続性のあるメモリ最適化テーブルを含めて、セカンダリ データベースのデータはほぼリアルタイムです。 また、フルテキスト インデックスはセカンダリ データベースと同期されます。 多くの場合、プライマリ データベースと対応するセカンダリ データベース間のデータ待機時間は数秒です。  
@@ -35,22 +36,6 @@ ms.locfileid: "51604718"
 >  セカンダリ データベースにデータを書き込むことはできませんが、ユーザー データベースやシステム データベース ( **tempdb**など) を含め、セカンダリ レプリカをホストするサーバー インスタンス上の読み書き可能なデータベースには書き込むことができます。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] また、読み取り可能なセカンダリ レプリカへの読み取りを目的とした接続要求の再ルーティング (*読み取り専用ルーティング*) もサポートしています。 読み取り専用ルーティングについては、「 [リスナーを使用した読み取り専用セカンダリ レプリカ (読み取り専用ルーティング) への接続](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)」を参照してください。  
-  
- **このトピックの内容**  
-  
--   [利点](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Benefits)  
-  
--   [可用性グループの前提条件](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Prerequisites)  
-  
--   [制限事項と制約事項](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_LimitationsRestrictions)  
-  
--   [パフォーマンスに関する考慮事項](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Performance)  
-  
--   [キャパシティ プランニングの注意点](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_CapacityPlanning)  
-  
--   [関連タスク](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_RelatedTasks)  
-  
--   [関連コンテンツ](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#RelatedContent)  
   
 ##  <a name="bkmk_Benefits"></a> 利点  
  読み取り可能なセカンダリ レプリカに読み取り専用接続を割り当てることには、次の利点があります。  
@@ -232,9 +217,9 @@ GO
     |セカンダリ レプリカは読み取り可能かどうか|スナップショット分離または RCSI レベルは有効かどうか|プライマリ データベース|セカンダリ データベース|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
     |いいえ|いいえ|行のバージョンまたは 14 バイトのオーバーヘッドなし|行のバージョンまたは 14 バイトのオーバーヘッドなし|  
-    |いいえ|[ユーザー アカウント制御]|行のバージョンおよび 14 バイトのオーバーヘッド|行のバージョンはないが、14 バイトのオーバーヘッドあり|  
-    |[ユーザー アカウント制御]|いいえ|行のバージョンはないが、14 バイトのオーバーヘッドあり|行のバージョンおよび 14 バイトのオーバーヘッド|  
-    |[ユーザー アカウント制御]|[ユーザー アカウント制御]|行のバージョンおよび 14 バイトのオーバーヘッド|行のバージョンおよび 14 バイトのオーバーヘッド|  
+    |いいえ|可|行のバージョンおよび 14 バイトのオーバーヘッド|行のバージョンはないが、14 バイトのオーバーヘッドあり|  
+    |可|いいえ|行のバージョンはないが、14 バイトのオーバーヘッドあり|行のバージョンおよび 14 バイトのオーバーヘッド|  
+    |可|可|行のバージョンおよび 14 バイトのオーバーヘッド|行のバージョンおよび 14 バイトのオーバーヘッド|  
   
 ##  <a name="bkmk_RelatedTasks"></a> 関連タスク  
   
@@ -252,7 +237,7 @@ GO
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

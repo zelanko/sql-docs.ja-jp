@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 23e50b94464d252431d153c9d68247cbff410b7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9619bca36ec488fdd5e25b5b9eb9a82370d7049
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597051"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754674"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)
 
@@ -82,16 +81,16 @@ ms.locfileid: "47597051"
   
  ビューをクリックすると、次の情報が表示されます。  
   
--   **作成者**: ビューを作成したユーザーの名前。  
+-   **作成者**:ビューを作成したユーザーの名前。  
   
--   **作成日時**: ビューが作成された日時。  
+-   **作成日時**:ビューが作成された日時。  
   
--   **更新者**: ビューを最後に更新したユーザーの名前。  
+-   **更新者**:ビューを最後に更新したユーザーの名前。  
   
--   **更新日時**: ビューが最後に更新された日時。  
+-   **更新日時**:ビューが最後に更新された日時。  
   
 ## <a name="see-also"></a>参照  
- [概要: データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [概要:データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)   
  [サブスクリプション ビューを削除する &#40;マスター データ サービス&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [バージョン フラグを作成する (マスター データ サービス)](../master-data-services/create-a-version-flag-master-data-services.md)  
   

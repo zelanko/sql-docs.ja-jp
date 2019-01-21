@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating text attributes
@@ -15,12 +14,12 @@ ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0e74d369ccc79bead39e3214fa73be5333ede070
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227c43c52fda16e8c521ecefe9771dc5ea5a41e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854810"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759394"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>テキスト属性を作成する (マスター データ サービス)
 
@@ -52,13 +51,13 @@ ms.locfileid: "47854810"
   
  属性をクリックすると、次の情報が表示されます。  
   
--   **作成者**: 属性を作成したユーザーの名前。  
+-   **作成者**:属性を作成したユーザーの名前。  
   
--   **作成日時**: 属性が作成された日時。  
+-   **作成日時**:属性が作成された日時。  
   
 -   **更新者**: 属性を最後に更新したユーザーの名前。  
   
--   **更新日時**: 属性が最後に更新された日時。  
+-   **更新日時**:属性が最後に更新された日時。  
   
 ### <a name="to-create-a-text-attribute"></a>テキスト属性を作成するには  
   
@@ -97,7 +96,7 @@ ms.locfileid: "47854810"
 ## <a name="see-also"></a>参照  
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)   
  [属性名とデータ型を変更する &#40;マスター データ サービス&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [ドメイン ベースの属性を作成する &#40;マスター データ サービス&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [ドメイン ベースの属性を作成する (マスター データ サービス)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [ファイル属性を作成する (マスター データ サービス)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

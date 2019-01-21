@@ -13,12 +13,12 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 001ca15788a47a4089739b10f884ef9a81dfa2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d89e15ed8b14c9866e9ad217a973272480eb26c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681690"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204821"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存]\(SQL Server インポートおよびエクスポート ウィザード)
   **[パッケージの保存および実行]** ページで、設定を SQL Server Integration Services (SSIS) パッケージとして保存することを指定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードは **[SSIS パッケージの保存]** を表示します。 このページでは、ウィザードで作成されたパッケージを保存するための追加オプションを指定します。  
@@ -39,7 +39,7 @@ ms.locfileid: "47681690"
  **[説明]**  
  パッケージの説明を指定します。 パッケージを見るだけでその内容がわかり、保守が容易になるように、パッケージの目的について記述することをお勧めします。  
   
- **ターゲット**  
+ **移行先**  
  パッケージに対して以前に指定した保存先です ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはファイル システム)。 別の保存先にパッケージを保存する場合は、 **[パッケージの保存および実行]** ページに戻ります。
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>スクリーン ショット - SQL Server にパッケージを保存する
@@ -65,7 +65,7 @@ SQL Server 認証を使用してサーバーに接続します。
  **User name**  
 SQL Server 認証を指定した場合は、ユーザー名を入力します。  
   
- **Password**  
+ **パスワード**  
 SQL Server 認証を指定した場合は、パスワードを入力します。  
     
 ## <a name="screen-shot---save-the-package-in-the-file-system"></a>スクリーン ショット - ファイル システムにパッケージを保存する

@@ -1,9 +1,11 @@
 ---
 title: レポート パラメーター (レポート ビルダーおよびレポート デザイナー) | Microsoft Docs
-ms.date: 10/17/2016
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
+description: このトピックでは、Reporting Services レポート パラメーターの一般的な使用方法、設定できるプロパティ、その他について説明します。
+ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
@@ -15,26 +17,25 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 55104192e2a6ac738ca5b99365fd90b74d40430b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032081"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215023"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>レポート パラメーター (レポート ビルダーおよびレポート デザイナー)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードおよびネイティブ モード
+
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート パラメーターの一般的な使用方法、設定できるプロパティ、その他について説明します。 レポート パラメーターを使用すると、レポート データの制御、他のレポートとの関連付け、およびレポートの表示方法の変更が可能になります。 レポート パラメーターは、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] やレポート デザイナーで作成する改ページ調整されたレポートのほか、 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]で作成するモバイル レポートで使用できます。 詳細については、「 [レポート パラメーターの概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)」を参照してください。  
-  
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードおよびネイティブ モード|  
-  
- ご自分でレポートにパラメーターを追加してみる場合には、「 [チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)で作成するモバイル レポートで使用できます。  
+ 
+ご自分でレポートにパラメーターを追加してみる場合には、「[チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)」を参照してください。  
     
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> パラメーターの一般的な使用方法  
  パラメーターの一般的な使用方法を以下に示します。  
   
- **改ページ調整されたレポート データおよびモバイル レポート データの制御**  
+**改ページ調整されたレポート データおよびモバイル レポート データの制御**  
   
 -   変数が含まれるデータセット クエリを記述して、データ ソース側で改ページ調整されたレポート データをフィルター処理する。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "50032081"
   
 -   ユーザーが値を指定して改ページ調整されたレポートのデータをカスタマイズできるようにする (2 つのパラメーターを用意して売上データの開始日と終了日を指定できるようにするなど)。  
   
- **他のレポートとの関連付け**  
+**他のレポートとの関連付け**  
   
 -   パラメーターを使用してメイン レポートを詳細レポート、サブレポート、およびリンク レポートに関連付ける。 一連のレポートをデザインするときは、特定の情報を得るために各レポートをデザインできます。 各レポートでは、関連する情報について、さまざまな表示形式や詳細レベルで情報を示すことができます。 相互に関連する一連のレポートを提供するには、対象となる各レポート上のデータのうち、関連性を持つデータに対して、パラメーターを作成します。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "50032081"
   
 -   複数のユーザー向けにパラメーター セットをカスタマイズする。 たとえば、売上レポートに基づく 2 つのリンク レポートをレポート サーバーに作成して、 一方のリンク レポートでは販売員用の定義済みパラメーター値を使用し、もう一方のリンク レポートでは販売責任者用の定義済みパラメーター値を使用することができます。 どちらのレポートも同じレポート定義を使用します。  
   
- **レポートの表示方法の変更**  
+**レポートの表示方法の変更**  
   
 -   URL 要求を使用してレポート サーバーにコマンドを送信し、レポートの表示をカスタマイズする。 詳細については、「[URL アクセス (SSRS)](../../reporting-services/url-access-ssrs.md)」および「[URL 内でレポート パラメーターを渡す](../../reporting-services/pass-a-report-parameter-within-a-url.md)」を参照してください。  
   
@@ -105,9 +106,9 @@ ms.locfileid: "50032081"
   
  詳細については、このトピックの「 [データセット クエリ](#bkmk_Dataset_Parameters) 」をご覧ください。  
   
- **パラメーターを手動で作成する**  
+**パラメーターを手動で作成する**  
   
- パラメーターを手動でレポート データ ペインから作成する。 レポート パラメーターを構成すると、ユーザーが値を対話的に入力してレポートの内容や外観をカスタマイズできるようにすることができます。 構成済みの値をユーザーが変更できないようにすることもできます。  
+パラメーターを手動でレポート データ ペインから作成する。 レポート パラメーターを構成すると、ユーザーが値を対話的に入力してレポートの内容や外観をカスタマイズできるようにすることができます。 構成済みの値をユーザーが変更できないようにすることもできます。  
   
 > [!NOTE]  
 >  パラメーターはサーバーで個別に管理されるため、新しいパラメーター設定でメイン レポートを再パブリッシュしても、レポートの既存のパラメーター設定は上書きされません。  
@@ -211,31 +212,10 @@ ms.locfileid: "50032081"
 >  データセット パラメーターと関連付けられていないレポート パラメーターがあり、このパラメーター値がレポートに含まれている場合、レポート ユーザーは、式の構文または URL をパラメーター値に入力して、このレポートを Excel または HTML に変換できます。 別のユーザーがこのレポートを表示して、表示されたパラメーター コンテンツをクリックすると、悪意のあるスクリプトまたはリンクが意図せず実行されてしまう可能性があります。  
 >   
 >  悪意のあるスクリプトを誤って実行するリスクを軽減するためには、信頼されたソースのレポートしか開かないようにする必要があります。 レポートのセキュリティ保護の詳細については、「 [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)」を参照してください。  
-  
-##  <a name="bkmk_How_To_Topics"></a> 操作方法に関するトピック  
- パラメーターとフィルターを扱う際の詳細な手順を紹介しているトピックの一覧を次に示します。  
-  
--   [レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [レポート パラメーターの値の追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)  
-  
--   [レポート パラメーターの既定値の追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)  
-  
--   [レポート パラメーターの順序の変更 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
-  
--   [データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
--   [サブレポートおよびパラメーターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
-  
--   [レポートのパラメーター ペインをカスタマイズする (レポート ビルダー)](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)  
-  
 
 ##  <a name="bkmk_Related_Topics"></a> 関連項目  
- [SSRS レポート パラメーターの構成 (クイズ)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
-  
- [チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+
+ [チュートリアル:レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [レポート パラメーターの概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   

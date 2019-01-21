@@ -1,18 +1,18 @@
 ---
 title: Reporting Services (SSRS) の新機能 | Microsoft Docs
-ms.date: 09/06/2018
+ms.date: 12/11/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b72f5bfef28c5f434cff07b2a931519c3fefd295
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 1b6844ad30aa426d1df71727becc6e6cfa3071d5
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712404"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432475"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の新機能
 
@@ -31,7 +31,7 @@ SQL Server 2017 Reporting Services をダウンロードするには、「**[Mic
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 プレビュー Reporting Services
 
-[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)] Reporting Services は CTP 2.1 では使用できません。 現在のバージョンである [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md) をインストールしてください。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services は CTP 2.2 では使用できません。 現在のバージョンである [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md) をインストールしてください。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -62,7 +62,7 @@ SQL Server 2017 Reporting Services をダウンロードするには、「**[Mic
 * [Microsoft SQL Server レポート ビルダー](https://go.microsoft.com/fwlink/?LinkId=734968)のダウンロード
 * [SQL Server Data Tools - リリース候補](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)のダウンロード
 
-> **注**: DAX のクエリ デザイナーは、SQL Server 2016+ に組み込まれた SSAS 表形式のデータ ソースでのみ使用できます。
+> **注**:DAX のクエリ デザイナーは、SQL Server 2016+ に組み込まれた SSAS 表形式のデータ ソースでのみ使用できます。
 ::: moniker-end
  
 ## <a name="ssrs-2016"></a>SSRS 2016
@@ -76,12 +76,12 @@ SQL Server 2017 Reporting Services をダウンロードするには、「**[Mic
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a> [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+ #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] のカスタム ブランド化 
   ブランド化パックを使用して、組織のロゴや色で [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] をカスタマイズできます。  
   
   カスタムブランド化の詳細については、「 [Web ポータルのブランド化](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)」を参照してください。
  
- #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a> [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+ #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] での主要業績評価指標 (KPI) 
 
 使用しているフォルダーのコンテキストに適合する KPI を [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] で直接作成できます。 KPI を作成するときは、データセットを選択し、それらの値を集約できます。 詳細をドリル スルーするための関連コンテンツを選択することもできます。
   
@@ -95,7 +95,7 @@ SQL Server 2017 Reporting Services をダウンロードするには、「**[Mic
 Reporting Services モバイル レポートは、多様なフォーム ファクター用に最適化された専用レポートであり、モバイル デバイスでレポートにアクセスするユーザーに最適なエクスペリエンスを提供します。 モバイル レポートでは、時間グラフ、カテゴリ グラフ、比較グラフ、ツリーマップ、カスタム マップなどの多種多様な視覚エフェクトを使用できます。 モバイル レポートは、オンプレミスの SQL Server Analysis Services 多次元およびテーブル データを含むさまざまなデータ ソースに接続できます。 調整可能なグリッド行とグリッド列と柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応するモバイル レポートをレイアウトできます。 その後、これらのモバイル レポートを Reporting Service サーバーに保存しておき、iPad、iPhone、Android フォン、および Windows 10 デバイスのブラウザーまたはPower BI モバイル アプリで表示と操作を実行できます。
   
 #### <a name="mobile-report-publisher"></a>Mobile Report Publisher  
-  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]では、SQL Server モバイル レポートを作成して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]に公開できます。  
+ [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]では、SQL Server モバイル レポートを作成して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]に公開できます。  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
@@ -134,13 +134,13 @@ Reporting Services モバイル レポートは、多様なフォーム ファ�
 
 **レポートの埋め込み:** iframe を URL パラメーターと共に使用して、モバイル レポートやページ分割されたレポートを他の Web ページやアプリケーションに埋め込むことができるようになりました。  
 
-**レポートアイテムの Power BI ダッシュボードへのピン留め:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]でレポートを表示しているときに、レポート アイテムを選択し、 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。   ピン留めできるアイテムは、グラフ、ゲージ パネル、マップ、イメージです。 **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択できます。   ![注:](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。  
+**レポートアイテムの Power BI ダッシュボードへのピン留め:**[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]でレポートを表示しているときに、レポート アイテムを選択し、[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。   ピン留めできるアイテムは、グラフ、ゲージ パネル、マップ、イメージです。 **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択できます。   ![注:](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。  
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
  詳細については、「[Power BI Report Server の統合 &#40;構成マネージャー&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)」および「[Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)」を参照してください。  
  
- **PowerPoint のレンダリングとエクスポート:** Microsoft PowerPoint (PPTX) 形式は、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] の新しい表示拡張機能です。 通常のアプリケーション (レポート ビルダー、レポート デザイナー (SSDT)、および [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]) から PPTX 形式のレポートをエクスポートできます。 たとえば、次の図は [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]のエクスポート メニューを示しています。 
+ **PowerPoint のレンダリングとエクスポート:** Microsoft PowerPoint (PPTX) 形式は、[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] の新しい表示拡張機能です。 通常のアプリケーション (レポート ビルダー、レポート デザイナー (SSDT)、および [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]) から PPTX 形式のレポートをエクスポートできます。 たとえば、次の図は [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]のエクスポート メニューを示しています。 
   
  ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
   
@@ -152,7 +152,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
   
  詳細については、「 [URL アクセスを使用してレポートをエクスポート](../reporting-services/export-a-report-using-url-access.md)」を参照してください。  
  
- **リモート印刷での PDF による ActiveXの置き換え:** レポート ビューアー ツール バーの ActiveX 印刷エクスペリエンスが、サポートされているブラウザー (Microsoft Edge など) のマトリックス間で機能する最新の PDF ベースのエクスペリエンスに置き換えられました。 ActiveX コントロールをダウンロードする必要はなくなります。 使用するブラウザーとインストールされている PDF 表示アプリケーションおよびサービスに応じて、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] はレポートを印刷するための印刷ダイアログを表示するか、レポートの .PDF ファイルのダウンロードを促します。  管理者が [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]からクライアント側の印刷を無効にすることもできます。 詳細については、「 [Reporting Services のクライアント側印刷機能の有効化と無効化](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。
+ **リモート印刷での PDF による ActiveX の置き換え:** レポート ビューアー ツール バーの ActiveX 印刷エクスペリエンスが、サポートされているブラウザー (Microsoft Edge など) のマトリックス間で機能する最新の PDF ベースのエクスペリエンスに置き換えられました。 ActiveX コントロールをダウンロードする必要はなくなります。 使用するブラウザーとインストールされている PDF 表示アプリケーションおよびサービスに応じて、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] はレポートを印刷するための印刷ダイアログを表示するか、レポートの .PDF ファイルのダウンロードを促します。  管理者が [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]からクライアント側の印刷を無効にすることもできます。 詳細については、「 [Reporting Services のクライアント側印刷機能の有効化と無効化](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
@@ -166,11 +166,11 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 |**ファイル共有サブスクリプションの共有資格情報**: [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のファイル共有サブスクリプションには、現在 2 つのワークフローがあります。<br /><br /> このリリースでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理者が 1 つのファイル共有アカウントを構成し、そのアカウントを 1 つ以上のサブスクリプションで使用できるようになりました。 ファイル共有アカウントは、ネイティブ モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーで **[ファイル共有アカウントの指定]** を使用して構成します。その後、サブスクリプション構成ページで、ユーザーが **[ファイル共有アカウントの使用]** を選択します。<br /><br /> 個々のサブスクリプションに、宛先のファイル共有の資格情報を具体的に構成します。<br /><br /> この 2 つの方法を組み合わせて、一部のファイル共有サブスクリプションでは管理者が構成したファイル共有アカウントを使用し、他のサブスクリプションでは特定の資格情報を使用することもできます。|ネイティブ モード|  
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
- 新しいリリースの SSDT には、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]用のプロジェクト テンプレート (レポート サーバー プロジェクト ウィザードとレポート サーバー プロジェクト) が含まれています。 SSDT のダウンロードについては、 [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542)に関するページをご覧ください。  
+ 新しいリリースの SSDT には、[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 用のプロジェクト テンプレートが含まれています:レポート サーバー プロジェクト ウィザードとレポート サーバー プロジェクト。 SSDT のダウンロードについては、 [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542)に関するページをご覧ください。  
 
 ### <a name="report-builder-improvements"></a>レポート ビルダーの機能強化
 
-**新しいレポート ビルダーのユーザー インターフェイス:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] コア ユーザー インターフェイスの UI 要素が簡素化され、最新の外観になりました。  
+**新しいレポート ビルダーのユーザー インターフェイス:**[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] コア ユーザー インターフェイスの UI 要素が簡素化され、最新の外観になりました。  
   
 |||  
 |-|-|  

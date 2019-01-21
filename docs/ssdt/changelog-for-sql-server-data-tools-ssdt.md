@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 91709818cad0609fda4c624f9bd7585af0c9eea9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 53a3a9b85b0f125e2c0ceb4cf882bbb86a962619
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712608"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213451"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,8 +27,8 @@ ms.locfileid: "52712608"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT for Visual Studio 2017 (15.8.2)
-ビルド番号: 14.0.16182.0  
-リリース日: 2018 年 11 月 5 日  
+ビルド番号:14.0.16182.0  
+リリース日:2018 年 11 月 5 日  
 
 ### <a name="whats-new"></a>新機能
 **SSIS:**
@@ -42,8 +42,8 @@ ms.locfileid: "52712608"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT for Visual Studio 2017 (15.8.1)
-ビルド番号: 14.0.16179.0  
-リリース日: 2018 年 9 月 27 日  
+ビルド番号:14.0.16179.0  
+リリース日:2018 年 9 月 27 日  
 
 ### <a name="whats-new"></a>新機能
 
@@ -60,8 +60,8 @@ ms.locfileid: "52712608"
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT for Visual Studio 2017 (15.8)
-ビルド番号: 14.0.16174.0  
-リリース日: 2018 年 9 月 5 日  
+ビルド番号:14.0.16174.0  
+リリース日:2018 年 9 月 5 日  
 
 ### <a name="whats-new"></a>新機能
 
@@ -84,8 +84,8 @@ ms.locfileid: "52712608"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT for Visual Studio 2017 (15.7.1)
-ビルド番号: 14.0.16167.0  
-リリース日: 2018 年 7 月 2 日  
+ビルド番号:14.0.16167.0  
+リリース日:2018 年 7 月 2 日  
   
 ### <a name="whats-new"></a>新機能
 
@@ -107,8 +107,8 @@ ms.locfileid: "52712608"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1570"></a>SSDT for Visual Studio 2017 (15.7.0)
-ビルド番号: 14.0.16165.0  
-リリース日: 2018 年 6 月 4 日  
+ビルド番号:14.0.16165.0  
+リリース日:2018 年 6 月 4 日  
   
 ### <a name="whats-new"></a>新機能
 
@@ -131,8 +131,8 @@ ms.locfileid: "52712608"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT for Visual Studio 2017 (15.6.0)
-ビルド番号: 14.0.16162.0  
-リリース日: 2018 年 4 月 10 日
+ビルド番号:14.0.16162.0  
+リリース日:2018 年 4 月 10 日
   
 ### <a name="whats-new"></a>新機能
 
@@ -160,7 +160,7 @@ ms.locfileid: "52712608"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT for Visual Studio 2017 (15.5.2)
-ビルド番号: 14.0.16156.0
+ビルド番号:14.0.16156.0
   
 ### <a name="whats-new"></a>新機能
 
@@ -184,19 +184,19 @@ ms.locfileid: "52712608"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1551"></a>SSDT for Visual Studio 2017 (15.5.1)
-ビルド番号: 14.0.16148.0
+ビルド番号:14.0.16148.0
   
 ### <a name="whats-new"></a>新機能
 
 Visual Studio 2017 (15.5.1) はバージョン 15.5.0 と同じリリースですが、インストーラーの次のバグが修正されています。
 
 1.  SQL Server Integration Services のインストールの後処理でインストーラーがハングする問題を修正しました。
-2.  セットアップに失敗し、"The requested metafile operation is not support (0x800707D3)" (要求されたメタファイル操作はサポートされていません) というエラー メッセージが表示される問題を修正しました。
+2.  次のエラー メッセージで設定が失敗する問題を修正します。「要求されたメタファイル操作はサポートされていません (0x800707D3)」
 
 以上の 2 つのバグ修正に加え、15.5.0 の次の詳細が 15.5.1 にも当てはまります。
 
 ## <a name="ssdt-for-visual-studio-2017-1550"></a>SSDT for Visual Studio 2017 (15.5.0)
-ビルド番号: 14.0.16146.0
+ビルド番号:14.0.16146.0
   
 ### <a name="whats-new"></a>新機能
 
@@ -223,7 +223,7 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 
 
 ## <a name="ssdt-174-for-visual-studio-2015"></a>SSDT 17.4 for Visual Studio 2015
-ビルド番号: 14.0.61712.050
+ビルド番号:14.0.61712.050
 
 ### <a name="whats-new"></a>新機能
 
@@ -271,7 +271,7 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 
 
 ## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>SSDT for Visual Studio 2017 (15.4.0 プレビュー)
-ビルド番号: 14.0.16134.0
+ビルド番号:14.0.16134.0
   
 ### <a name="whats-new"></a>新機能
 
@@ -302,7 +302,7 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 
 
 ## <a name="ssdt-173-for-visual-studio-2015"></a>SSDT 17.3 for Visual Studio 2015
-ビルド番号: 14.0.61709.290
+ビルド番号:14.0.61709.290
 
 ### <a name="whats-new"></a>新機能
 
@@ -360,7 +360,7 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 - マウス カーソルが表形式の数式バーを離れるときに、クラッシュが発生する可能性がある問題を修正しました。
 - テーブル名を変更することで、ソース テーブルが不適切に変更され、予期しないエラーが発生する [テーブルのプロパティの編集] ダイアログの問題を修正しました。
 - 多次元プロジェクトのロール デザイナーのセル データ タブ デザイナーで [キューブのセキュリティをテスト] を呼び出そうとすると、VS2017 で発生する可能性があるクラッシュを修正しました。
-- SSDT: 表形式データ ソースの場合、プロパティは編集できません。
+- SSDT:データ ソースが表形式の場合、プロパティは編集できません。
 - ソリューション ファイルで、MSBuild と DevEnv ビルドが正しく動作しなくなる場合がある問題を修正しました。
 - 表形式モデルに大きなメタデータが含まれる場合、モデルの変更 (メジャーの DAX 編集、計算された列) をコミットするときのパフォーマンスが大幅に改善されました
 - 1400 互換性レベル モデルで PowerQuery を使用してデータをインポートする場合に関するいくつかの問題を修正しました
@@ -393,7 +393,7 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 - VS 2017 の RDLC のコンパイルとビルドに関する問題を修正しました
 
 ## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>SSDT for Visual Studio 2017 (15.3.0 プレビュー)
-ビルド番号: 14.0.16121.0
+ビルド番号:14.0.16121.0
   
 ### <a name="whats-new"></a>新機能
 
@@ -410,7 +410,7 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 
 
 ## <a name="ssdt-172-for-visual-studio-2015"></a>SSDT 17.2 for Visual Studio 2015
-ビルド番号: 14.0.61707.300
+ビルド番号:14.0.61707.300
 
 ### <a name="whats-new"></a>新機能
 
@@ -458,7 +458,7 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 
 
 ## <a name="ssdt-171-for-visual-studio-2015"></a>SSDT 17.1 for Visual Studio 2015
-ビルド番号: 14.0.61705.170
+ビルド番号:14.0.61705.170
 
 ### <a name="whats-new"></a>新機能
 **AS プロジェクト:**
@@ -488,13 +488,13 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 - EKM プロバイダー [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)での HSM による非対称キーでのデータベースの問題を解決しました
 
 ## <a name="ssdt-170-for-visual-studio-2015-supports-up-to-sql-server-2017"></a>SSDT 17.0 for Visual Studio 2015 (SQL Server 2017 までサポート)
-ビルド番号: 14.0.61704.140
+ビルド番号:14.0.61704.140
 
 ### <a name="whats-new"></a>新機能
 **データベース プロジェクト:**
 - ビューのクラスター化インデックスが修正され、展開がブロックされることはなくなりました
 - 列の暗号化に関連するスキーマ比較文字列で、インスタンス名ではなく適切な名前が使用されます。   
-- SqlPackage に新しいコマンド ライン オプション (ModelFilePath) を追加しました。  これにより、上級ユーザーは、インポート、発行およびスクリプト作成操作で、外部 model.xml を指定することができます   
+- SqlPackage に新しいコマンド ライン オプション(ModelFilePath) が追加されました。  これにより、上級ユーザーは、インポート、発行およびスクリプト作成操作で、外部 model.xml を指定することができます   
 - Azure AD ユニバーサル認証と多要素認証 (MFA) をサポートするように DacFx API が拡張されました
 
 **IS プロジェクト:**
@@ -531,18 +531,18 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 **AS プロジェクト:**
 - BI プロジェクトのテンプレートの優先順位を修正して、VS の [新しいプロジェクト] カテゴリで先頭に表示されることがないようにしました
 - SSIS、SSAS、または SSRS ソリューションが開いているとき、めったにない状況で発生する可能性がある VS のクラッシュを修正しました。
-- 表形式: DAX の解析と数式バーについて、さまざまな機能強化とパフォーマンスの修正が行われました。
-- 表形式: SSAS 表形式プロジェクトが開いていない場合は、表形式モデル エクスプローラーが表示されなくなりました。
-- 多次元: 高 DPI コンピューターで処理中のダイアログが使用できないという問題が修正されました。
-- 表形式: SSMS が既に開いている場合に BI プロジェクトを開くと SSDT で障害が発生するという問題が修正されました。 [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)を参照)。
-- 表形式: 1103 モデルの bim ファイルに階層が正しく保存されないという問題が修正されました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)を参照)。
-- 表形式: サポートされていない場合でも、統合ワークスペース モードが 32 ビット コンピューターで使用できるという問題が修正されました。
-- 表形式: 半選択モード (DAX 式は入力したが、メジャーをクリックしている場合など) の状態で何かをクリックするとクラッシュする可能性があるという問題が修正されました。
-- 表形式: 展開ウィザードでモデルの .Name プロパティが "Model" にリセットされるという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)を参照)。
-- 表形式: ダイアログ ビューが選択されていない場合でも、TME で階層を選択するとプロパティが表示されるという問題が修正されました。
-- 表形式: 特定のアプリケーションから貼り付ける場合、DAX 数式バーに、テキストではなく、イメージまたは他のコンテンツが貼り付けられるという問題が修正されました。
-- 表形式: 特定の定義のメジャーが存在するため、1103 の一部の古いモデルが開けないという問題が修正されました。
-- 表形式: XEvent セッションを削除できないという問題が修正されました。
+- 表形式:DAX の解析と数式バーにさまざまな機能強化とパフォーマンス修正を行いました。
+- 表形式:SSAS 表形式プロジェクトが開いていない場合、表形式モデル エクスプローラーが表示されなくなりました。
+- 多次元:高 DPI コンピューターで処理中のダイアログを使用できない問題を修正しました。
+- 表形式:SSMS が既に開いている場合に BI プロジェクトを開くと SSDT で障害が発生する問題を修正しました。( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)を参照)。
+- 表形式:1103 モデルの bim ファイルに階層が正しく保存されない問題を修正しました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)を参照)。
+- 表形式:32 ビット コンピューターで、サポートされていない統合ワークスペース モードが使用できる問題を修正しました。
+- 表形式:半選択モード (DAX 式は入力したが、メジャーをクリックしている場合など) の状態で何かをクリックするとクラッシュする可能性がある問題を修正しました。
+- 表形式:展開ウィザードでモデルの .Name プロパティが "Model" にリセットされる問題を修正しました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)を参照)。
+- 表形式:ダイアログ ビューが選択されていない場合でも、TME で階層を選択するとプロパティが表示される問題を修正しました。
+- 表形式:特定のアプリケーションから貼り付ける場合、DAX 数式バーに、テキストではなく、イメージまたは他のコンテンツが貼り付けられる問題を修正しました。
+- 表形式:特定の定義のメジャーが存在するため、1103 の一部の古いモデルが開けない問題を修正しました。
+- 表形式:XEvent セッションを削除できない問題を修正しました。
 - devenv.com で AS "smproj" ファイルのビルドを試行すると失敗する問題を修正しました
 - 韓国 IME での表形式モデルのシート タブのタイトル テキストが何度も変更されるという問題を修正して、テキストを確定しました。
 - DAX Related() 関数の Intellisense が正常に機能せず、他のテーブルの列が表示されない問題を修正しました。
@@ -586,13 +586,13 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 - DeploymentContributors でパブリック モデルにアクセスできるが、バッキング スキーマが初期化されていない問題を修正しました ([Github の問題](https://github.com/Microsoft/DACExtensions/issues/8)を参照)。
 - ファイル グループの配置に対する DacFx を一時的に修正しました。
 - 外部シノニムに対する「未解決の参照」エラーを修正しました。 
-- Always Encrypted: オンライン暗号化は、キャンセル時に変更追跡を無効にできず、暗号化を開始する前に変更追跡がクリーニングされていない場合は適切に機能しません。
+- Always Encrypted:オンライン暗号化では、キャンセル時の変更追跡は無効にできず、暗号化を開始する前に変更追跡がクリーニングされていない場合は適切に機能しません。
 
 
 ## <a name="ssdt-165-for-visual-studio-2015-supports-up-to-sql-server-2016"></a>SSDT 16.5 for Visual Studio 2015 (SQL Server 2016 までサポート)
-リリース日: 2016 年 10 月 20 日
+リリース済み : 2016 年 10 月 20 日
 
-ビルド番号: 14.0.61021.0
+ビルド番号:14.0.61021.0
 
 **新機能**
 
@@ -623,17 +623,17 @@ SqlPackage の発行アクションとスクリプト アクションには、2 
 
 ```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
-DacFx では、2 つの新しい API (DacServices.Publish() および DacServices.Script()) が追加されました。 これらは、発行 + スクリプト + レポートの各アクションを 1 回の操作で実行できるようサポートします。 使用例:
+DacFx に 2 つの新しい API、DacServices.Publish() と DacServices.Script() が追加されました。 これらは、発行 + スクリプト + レポートの各アクションを 1 回の操作で実行できるようサポートします。 使用例:
 
 ```
 DacServices service = new DacServices(connectionString);
 using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
 var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
 // Call publish and receive deployment script & report in the results
@@ -678,16 +678,16 @@ SSAS 表形式デザイナーの DAX パーサーにおいて、大きな DAX �
 
 **統合サービス**
 
-* 接続のバグ  [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) の修正: 複数の統合サービス パッケージのタスクの移動
+* 接続のバグ  [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) の修正:複数の統合サービス パッケージのタスクの移動
 
 
 
 
 
 ## <a name="ssdt-164-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.4 for Visual Studio 2015 (SQL Server 2016 用)
-リリース日: 2016 年 9 月 20 日
+リリース済み : 2016 年 9 月 20 日
 
-ビルド番号: 14.0.60918
+ビルド番号:14.0.60918
 
 **新機能**
 
@@ -700,11 +700,11 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
 **データベース ツールの更新および修正点**
  **:**
 
-- [接続の問題 3087775](https://connect.microsoft.com/SQLServer/feedback/details/3087775): VS データ ツールの 7 月の更新 14.0.60629.0 では、テンポラル テーブルが破損していました ("値を null にすることはできません。 パラメーター名: reportedElement")。
-- [接続の問題 1026648](https://connect.microsoft.com/SQLServer/feedback/details/1026648): SSDT 比較では IsPersistedNullable が異なるものとして表示されます。
-- [接続の問題 2054735](https://connect.microsoft.com/SQLServer/feedback/details/2054735): BACPAC のインポート時に ID がリセットされます。
-- [接続の問題 2900167](https://connect.microsoft.com/SQLServer/feedback/details/2900167): SSDT 単体テストを実行すると一時ファイルが残ります。
-- [接続の問題 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712): 下位互換性が確保されません - AppLocal と NuGet 化
+- [接続の問題 3087775](https://connect.microsoft.com/SQLServer/feedback/details/3087775):VS データ ツールの 7 月の更新 14.0.60629.0 では、テンポラル テーブルが破損していました ("値を null にすることはできません。 パラメーター名: reportedElement")。
+- [接続の問題 1026648](https://connect.microsoft.com/SQLServer/feedback/details/1026648):SSDT 比較では IsPersistedNullable が異なるものとして表示されます。
+- [接続の問題 2054735](https://connect.microsoft.com/SQLServer/feedback/details/2054735):BACPAC のインポート時に ID がリセットされます。
+- [接続の問題 2900167](https://connect.microsoft.com/SQLServer/feedback/details/2900167):SSDT 単体テストを実行すると一時ファイルが残ります。
+- [接続の問題 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712):下位互換性が確保されません - AppLocal と NuGet 化
 
 **Analysis Services と Reporting Services**
 
@@ -725,15 +725,15 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
 
 
 ## <a name="ssdt-163-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.3 for Visual Studio 2015 (SQL Server 2016 用)
-リリース日: 2016 年 8 月 15 日
+リリース済み : 2016 年 8 月 15 日
 
-ビルド番号: 14.0.60812.0  
+ビルド番号:14.0.60812.0  
 
 **新機能**
 
 - **リリース バージョン管理と番号付け:** 月別ではなく数値でリリースがタグ付けされるようになりました。 これは新しい SSMS ポリシーに準拠したもので、リリースや修正プログラムが 1 か月に複数ある場合の処理が簡略化されます。 このリリースは 16.3 であり、RTM リリース後の 3 回目の更新であることを意味します。 修正プログラムは 16.3.1 のように表記され、次回の更新 (来月を予定) は 16.4 になります。
 - **Analysis Services - 表形式モデル エクスプローラー:** 表形式モデル エクスプローラーを使用すると、モデル内のさまざまなメタデータ オブジェクト (データ ソース、テーブル、メジャー、リレーションシップなど) 間を移動できます。 このエクスプローラーは個別のツール ウィンドウとして実装されます。Visual Studio の [表示] メニューを開いて [その他のウィンドウ] をポイントし、[表形式モデル エクスプローラー] をクリックすると表示できます。 既定では、表形式モデル エクスプローラーは個別のタブのソリューション エクスプローラー領域に表示されます。表形式モデル エクスプローラーでは、メタデータ オブジェクトが、表形式モデル 1200 のスキーマによく似たツリー構造で表示されます。また、多数の新機能も追加されています。
-- **データベース ツール - Always Encrypted**: このリリースには、新しい [Always Encrypted キー管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)ダイアログが用意されています。これにより、データベース プロジェクトまたは SQL Server オブジェクト エクスプローラーのライブ データベースに列マスター キーまたは列暗号化キーを簡単に追加できます。 このリリースは、Windows 証明書ストアの証明書をサポートしています。 今後のリリースでは、Azure Key Vault および CNG プロバイダーがサポートされる予定です。
+- **データベース ツール - Always Encrypted**:このリリースには、新しい [Always Encrypted キー管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)ダイアログが用意されています。これにより、データベース プロジェクトまたは SQL Server オブジェクト エクスプローラーのライブ データベースに列マスター キーまたは列暗号化キーを簡単に追加できます。 このリリースは、Windows 証明書ストアの証明書をサポートしています。 今後のリリースでは、Azure Key Vault および CNG プロバイダーがサポートされる予定です。
     - 列マスター キーまたは列暗号化キーを作成する際、[データベースの更新] のクリック直後に SQL Server オブジェクト エクスプローラーに変更が反映されない可能性があります。 この問題を回避するには、SQL Server オブジェクト エクスプローラーでデータベース ノードを更新します。
     - SQL Server オブジェクト エクスプローラーからデータを含むテーブル内の列を暗号化しようとすると、エラーが発生する可能性があります。 現在、この機能は SSDT データベース プロジェクトと SSMS でのみサポートされています。 SQL Server オブジェクト エクスプローラーのサポートは今後のリリースで有効になる予定です。
 
@@ -765,14 +765,14 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
  
   
 ## <a name="ssdt-july-for-visual-studio-2015-for-sql-server-2016"></a>SSDT July for Visual Studio 2015 (SQL Server 2016 用)  
-リリース日: 2016 年 6 月 30 日  
+リリース済み : 2016 年 6 月 30 日  
   
-ビルド番号: 14.0.60629.0  
+ビルド番号:14.0.60629.0  
   
 **新機能**  
-* **Always Encrypted のサポート:** Always Encrypted の列を格納するデータベースについては、このリリースのコア API とコマンド ライン ツール (SqlPackage.exe) を通じて Always Encrypted が完全にサポートされます。 Always Encrypted のすべての機能が完全にサポートされた状態でデータベース プロジェクトをビルドして発行できます。  
-* **テンポラル テーブルのサポートの強化:** テンポラル テーブルが完成したら、変更および再リンクの前にそのテーブルのリンクを解除することで処理が簡略化されます。 つまり、サポートされる操作に関して、テンポラル テーブルが他の種類のテーブル (標準、メモリ内) と同等になります。 
-* **SqlPackage.exe とインストールの変更:** SSDT を SQL Server エンジンと SSMS の更新から切り離すための変更が行われました。 詳しくは、「[Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/)」(SSDT と SqlPackage.exe のインストールおよび更新の変更) をご覧ください。
+* **Always Encrypted のサポート:** このリリースでは、Always Encrypted 列があるデータベースで、Always Encrypted がコア API とコマンド ライン ツール (SqlPackage.exe) を通じて完全にサポートされます。 Always Encrypted のすべての機能が完全にサポートされた状態でデータベース プロジェクトをビルドして発行できます。  
+* **テンポラル テーブルのサポートの強化:** テンポラル テーブルのリンクを変更前に解除し、これらが完了したら再リンクするようにし、処理を簡略化しました。 つまり、サポートされる操作に関して、テンポラル テーブルが他の種類のテーブル (標準、メモリ内) と同等になります。 
+* **SqlPackage.exe とインストールの変更:** SSDT を SQL Server エンジンと SSMS の更新から切り離すための変更を行いました。 詳しくは、「[Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/)」(SSDT と SqlPackage.exe のインストールおよび更新の変更) をご覧ください。
 
  
 
@@ -808,9 +808,9 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
     
 
 ## <a name="ssdt-june-for-visual-studio-2015-for-sql-server-2016"></a>SSDT June for Visual Studio 2015 (SQL Server 2016 用)  
-リリース日: 2016 年 6 月 1 日  
+リリース済み : 2016 年 6 月 1 日  
   
-ビルド番号: 14.0.60525.0 
+ビルド番号:14.0.60525.0 
 
 SSDT の一般提供 (GA) がリリースされました。 2016 年 6 月の SSDT GA の更新では、SQL Server 2016 RTM の最新の更新プログラムのサポートとさまざまなバグ修正が追加されました。 詳しくは、「[SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)」(2016 年 6 月の SQL Server Data Tools の GA 更新) をご覧ください。
 

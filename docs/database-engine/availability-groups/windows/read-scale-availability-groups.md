@@ -1,6 +1,7 @@
 ---
-title: 読み取りスケール可用性グループ | Microsoft Docs
-ms.custom: ''
+title: 可用性グループで読み取りスケールを使用する
+description: 'Always On 可用性グループの使用時、読み取りスケールを達成する方法の説明。 '
+ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee043206e4525f8c549f9bf6e90c2655bff0c6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9556e7cecf64d0cd3d2abfe0aecdf3c5aa7cc8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622410"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203841"
 ---
-# <a name="read-scale-availability-groups"></a>読み取りスケール可用性グループ
+# <a name="use-read-scale-with-always-on-availability-groups"></a>Always On 可用性グループで読み取りスケールを使用する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 可用性グループは、SQL Server で高可用性機能を実現するだけではなく、統合されたスケーリング ソリューションも提供する、包括的なソリューションです。 一般的なデータベース アプリケーションでは、複数のクライアントがさまざまな種類のワークロードを実行します。 リソースの制約のために、ボトルネックが発生することもあります。 リソースを解放すると、OLTP ワークロードのために、より高いスループットを達成することができます。 また、読み取り専用ワークロードで、より優れたパフォーマンスとスケールを実現することもできます。 SQL Server の高速レプリケーション技術を活用し、複製されたデータベースのグループを作成し、レポートと分析のワークロードを読み取り専用レプリカに移します。

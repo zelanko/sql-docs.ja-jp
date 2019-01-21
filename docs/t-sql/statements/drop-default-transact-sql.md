@@ -19,19 +19,19 @@ ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1872a3a1cdcdbe112ead08b4bef1fc680ef90338
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 72accd7718280b4994c3339531c8e5d0fef067c1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703730"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210791"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   1 つ以上のユーザー定義のデフォルトを現在のデータベースから削除します。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  DROP DEFAULT は、次期バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、DROP DEFAULT の使用は避け、現在このオプションを使用しているアプリケーションは修正するようにしてください。 代わりに、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) または [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) の DEFAULT キーワードを使用して作成できるデフォルト定義を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -44,7 +44,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
   
 ## <a name="arguments"></a>引数  
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、既定値を削除します。  
   
@@ -77,7 +77,7 @@ IF EXISTS (SELECT name FROM sys.objects
 GO  
 ```  
   
- 以降で [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 、次の構文を使用することができます。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、次の構文を使うことができます。  
   
 ```  
 DROP DEFAULT IF EXISTS datedflt;  

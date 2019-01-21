@@ -5,8 +5,7 @@ ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
@@ -16,12 +15,12 @@ ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1752fd6736ef8900c22054dfa8f7ec6799d981fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23fe106f296860d121d7315daf669855c792b64d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685920"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759214"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>ドメイン ベースの属性を作成する (マスター データ サービス)
 
@@ -55,13 +54,13 @@ ms.locfileid: "47685920"
   
  属性をクリックすると、次の情報が表示されます。  
   
--   **作成者**: 属性を作成したユーザーの名前。  
+-   **作成者**:属性を作成したユーザーの名前。  
   
--   **作成日時**: 属性が作成された日時。  
+-   **作成日時**:属性が作成された日時。  
   
 -   **更新者**: 属性を最後に更新したユーザーの名前。  
   
--   **更新日時**: 属性が最後に更新された日時。  
+-   **更新日時**:属性が最後に更新された日時。  
   
 ### <a name="to-create-a-domain-based-attribute"></a>ドメイン ベースの属性を作成するには  
   
@@ -104,7 +103,7 @@ ms.locfileid: "47685920"
 ## <a name="see-also"></a>参照  
  [ドメインベースの属性 (マスター データ サービス)](../master-data-services/domain-based-attributes-master-data-services.md)   
  [派生階層を作成する (マスター データ サービス)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [属性名とデータ型を変更する &#40;マスター データ サービス&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [属性名とデータ型を変更する (マスター データ サービス)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [属性を削除する (マスター データ サービス)](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   

@@ -41,12 +41,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 008707aee498d5c63f1ef8a2d67e7166bf7eb4f4
-ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
+ms.openlocfilehash: f2b1ef643fe1d19b0df1ed4efd3b4802789006eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51818518"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206191"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>引数
 *OR ALTER*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  条件付きで、既に存在する場合にのみ関数を変更します。 
  
@@ -345,7 +345,7 @@ RETURNS return_data_type
  ORDER (\<order_clause>) は、テーブル値関数から結果が返される順序を指定します。 詳細については、このトピックで後述する「[並べ替え順序の使用に関するガイダンス](#using-sort-order-in-clr-table-valued-functions)」を参照してください。  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*    
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+ **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  アセンブリおよび作成した関数名が参照するメソッドを指定します。  
   
@@ -373,7 +373,7 @@ RETURNS return_data_type
  *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数のテーブル データ型を定義します。 テーブルの定義には、列の定義、および列またはテーブルの制約が含まれます。 テーブルは、常にプライマリ ファイル グループに保存されます。  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([一部のリージョンではプレビュー](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
+ **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([一部のリージョンではプレビュー](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
   
  CLR 関数のテーブル データ型を定義します。 テーブルの定義には、列名およびデータ型のみが含まれます。 テーブルは、常にプライマリ ファイル グループに保存されます。  
   
@@ -397,7 +397,7 @@ RETURNS return_data_type
  関数に以下のオプションを 1 つ以上指定します。  
   
  ENCRYPTION  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+ **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]で、CREATE FUNCTION ステートメントの元のテキストを、暗号化した形式に変換することを示します。 暗号化した形式の出力は、どのカタログ ビューでも直接見ることはできません。 システム テーブルまたはデータベース ファイルへのアクセス権を持たないユーザーは、暗号化した形式のテキストを取得できません。 ただし、[DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)経由でシステム テーブルにアクセスする権限、または直接データベース ファイルにアクセスする権限を持っているユーザーは、このテキストを使用できます。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時、元のプロシージャをメモリから取得できます。 システム メタデータのアクセス方法について詳しくは、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
@@ -679,7 +679,7 @@ SELECT クエリを実行するときは、そのクエリで `ORDER BY` を一�
   
  また、この例では、[EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 句を使用して、ストアド プロシージャを実行できるセキュリティ コンテキストを指定します。 この例のオプション `CALLER` は、プロシージャが呼び出し元ユーザーのコンテキストで実行されることを指定しています。 指定できるその他のオプションは、`SELF`、`OWNER`、および *user_name* です。  
   
- 以下に関数呼び出しを示します。 `DATEFIRST` が `1` に設定されていることに注意してください。  
+ 以下に関数呼び出しを示します。 `DATEFIRST` が `1` に設定されていることにご注意ください。  
   
 ```sql
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  
@@ -790,7 +790,7 @@ GO
 ### <a name="d-creating-a-clr-function"></a>D. CLR 関数を作成する  
  この例では、CLR 関数 `len_s` を作成します。 関数が作成される前に、アセンブリ `SurrogateStringFunction.dll` がローカル データベースに登録されます。  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  

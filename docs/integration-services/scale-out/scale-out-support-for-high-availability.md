@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3429a52d24b9bb9fbb0de18c1687cfdaa76d30
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638149"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246741"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
 
@@ -97,7 +97,7 @@ Azure の仮想マシンでは、この構成手順の他に追加の手順が�
 
 1.  Azure ドメインを設定する必要があります。 Windows Server フェールオーバー クラスタリングでは、クラスター内のすべてのコンピューターが同じドメインのメンバーである必要があります。 詳細については、「[Azure Portal を使用して Azure Active Directory Domain Services を有効にする](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started)」を参照してください。
 
-2. Azure ロード バランサーを設定する必要があります。 これは可用性グループ リスナーの要件です。 詳細については、「[チュートリアル: 内部トラフィックを Basic Load Balancer によって、Azure Portal を使用する VM に負荷分散する](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)」を参照してください。
+2. Azure ロード バランサーを設定する必要があります。 これは可用性グループ リスナーの要件です。 詳細については、「[チュートリアル:Azure portal の Basic ロードバランサーを使用して内部トラフィックの負荷を分散する](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)」を参照してください。
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8.SSISDB で Scale Out Master アドレスを更新する
 
@@ -107,7 +107,7 @@ Azure の仮想マシンでは、この構成手順の他に追加の手順が�
 
 これで、[Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md) を使用して、Scale Out Worker を追加できます。 接続ページで「`[SQL Server Availability Group Listener DNS name],[Port]`」と入力します。
 
-# <a name="upgrade-scale-out-in-high-availability-environment"></a>高可用性環境で Scale Out をアップグレードする
+## <a name="upgrade-scale-out-in-high-availability-environment"></a>高可用性環境で Scale Out をアップグレードする
 高可用性環境で Scale Out をアップグレードするには、[Always On for SSIS Catalog のアップグレード手順](../catalog/ssis-catalog.md#Upgrade)に従い、各コンピューター上の Scale Out Master と Scale Out Worker をアップグレードし、上記の手順 7 の Windows Server フェールオーバー クラスター ロールを新しいバージョンの Scale Out Master サービスを使用して再作成します。
 
 ## <a name="next-steps"></a>次の手順

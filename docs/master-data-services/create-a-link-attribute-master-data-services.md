@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating link attributes
@@ -15,12 +14,12 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1f309ad8d7842b678fa47ed5786023b0bb042b63
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4bcd5917c6215fc263283fb5d66269fab6645fb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703155"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779204"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>リンク属性を作成する (マスター データ サービス)
 
@@ -55,13 +54,13 @@ ms.locfileid: "51703155"
   
  属性をクリックすると、次の情報が表示されます。  
   
--   **作成者**: 属性を作成したユーザーの名前。  
+-   **作成者**:属性を作成したユーザーの名前。  
   
--   **作成日時**: 属性が作成された日時。  
+-   **作成日時**:属性が作成された日時。  
   
 -   **更新者**: 属性を最後に更新したユーザーの名前。  
   
--   **更新日時**: 属性が最後に更新された日時。  
+-   **更新日時**:属性が最後に更新された日時。  
   
 ### <a name="to-create-a-link-attribute"></a>リンク属性を作成するには  
   

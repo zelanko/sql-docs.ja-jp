@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5c17d05b00c711c311e41ac98add0e6fd549f58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67f22e0608493ba3f33144c8d97b9cb275a5c506
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535764"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207091"
 ---
 # <a name="enhance-transactional-replication-performance"></a>トランザクション レプリケーションのパフォーマンスの向上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "52535764"
   
      エージェントを連続的に実行するようにし、高い頻度のスケジュール、たとえば毎分などのスケジュールの作成を避けることで、レプリケーションのパフォーマンスが向上します。これは、エージェントが開始および停止する必要がなくなるからです。 ディストリビューション エージェントを連続的に実行するように設定すると、トポロジ内で接続しているその他のサーバーに、短い待機時間で変更が反映されます。 詳細については、以下をご覧ください。  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [同期スケジュールの指定](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)][ ] :[同期スケジュールの指定](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>ディストリビューション エージェントおよびログ リーダー エージェントのパラメーター  
 トラフィックが多い OLTP システムでは、ログ リーダーとディストリビューション エージェントのスループットを増やすため、エージェント プロファイルのパラメーターが調節されることがよくあります。 
@@ -156,7 +156,7 @@ SQL Server オンライン ブックの "ディストリビューション エ�
 一連のトランザクションをコミットすると、一定のオーバーヘッドが生じます。より多くのトランザクションを、より低い頻度でコミットするほど、オーバーヘッドは多くのデータに分散されます。  CommitBatchSize を増やすと (最大 200)、サブスクライバーにコミットされるトランザクションが増えるので、パフォーマンスが向上する可能性があります。 しかし、変更を適用するコストは、ログを含むディスクの最大 I/O などのその他の要因によって制限されるため、このパラメーターを大きくする利点は少なくなります。 さらに、検討すべきトレード オフもあります。ディストリビューション エージェントのやり直しの原因となる失敗をすべてロールバックし、多くのトランザクションを再適用する必要があります。 信頼性の低いネットワークでは、値を小さくすると失敗が少なくなり、失敗が発生した場合にロールバックおよび再適用するトランザクションの数が減ります。  
   
 
-##<a name="see-more"></a>詳細情報
+## <a name="see-more"></a>詳細情報
   
 [レプリケーション エージェント プロファイルの操作](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  

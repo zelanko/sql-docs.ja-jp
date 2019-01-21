@@ -5,19 +5,18 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b79bb79750d7f4696581dab86c95cf71abf02375
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce92fb9c6bead52848ad5de1b70092b8168f292
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526948"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205611"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
 
@@ -36,12 +35,12 @@ ms.locfileid: "52526948"
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]を学習するためのビデオと他のトレーニング リソースへのリンクについては、「[マスター データ サービスについて学習する](../master-data-services/learn-sql-server-master-data-services.md)」をご覧ください。 
   
 > **ダウンロード**  
->-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** に移動してください。  
->-   Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** にアクセスして、SQL Server がインストール済みの仮想マシンをすぐにご利用いただけます。  
- 
+> -   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** に移動してください。  
+> -   Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** にアクセスして、SQL Server がインストール済みの仮想マシンをすぐにご利用いただけます。  
+> 
 > **MDS Web サイトを作成できませんか?**
->>この問題を解決する方法については、この Microsoft サポートの記事を参照してください。
-[SQL Server 2016 の低い特権のアカウントでは、MDS Web サイトを作成することはできません。](https://aka.ms/mdssupport) 
+> >この問題を解決する方法については、この Microsoft サポートの記事を参照してください。
+> [SQL Server 2016 の低い特権のアカウントでは、MDS Web サイトを作成することはできません。](https://aka.ms/mdssupport) 
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer と Silverlight
 - Windows Server 2012 マシンに [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] をインストールするときに、Web アプリケーション サイトでスクリプトを許可するように Internet Explorer セキュリティ強化を構成しなければならない場合があります。 そうしないと、サーバー コンピューター上のサイトの参照が失敗します。
@@ -119,11 +118,11 @@ ms.locfileid: "52526948"
  **[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] を使って、データベースと Web サイトを設定するには**  
 
  
-> [!WARNING]  
-    >  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager を起動する前に [IIS をインストール](#InstallIIS)する必要があります。 それ以外の場合、Configuration Manager にインターネット インフォメーション サービス エラーが表示され、[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web アプリケーションを作成できなくなります。  
-    
+> [!WARNING]
+>  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager を起動する前に [IIS をインストール](#InstallIIS)する必要があります。 それ以外の場合、Configuration Manager にインターネット インフォメーション サービス エラーが表示され、[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web アプリケーションを作成できなくなります。  
+> 
 > **ブラウザーの要件**
->>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web アプリケーションは、Internet Explorer (IE) 9 以降でのみ動作します。 IE 8 以前のバージョン、Microsoft Edge、Chrome はサポートされていません。    
+> >[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web アプリケーションは、Internet Explorer (IE) 9 以降でのみ動作します。 IE 8 以前のバージョン、Microsoft Edge、Chrome はサポートされていません。    
   
 1.  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]を起動して、 **[データベース構成]** をクリックします。  
   
@@ -216,7 +215,7 @@ ms.locfileid: "52526948"
   
  このツールを実行するための前提条件については、「 [MDSModelDeploy を使用したモデルの配置パッケージの配置](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)」を参照してください。  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の新機能をサポートするためにデータに加えられた更新については、「[SQL Server のサンプル: モデル配置パッケージ(MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の新機能をサポートするためにデータに加えられた更新については、「[SQL Server のサンプル: モデルの配置パッケージ (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
   
  **サンプル モデルを配置するには**  
   

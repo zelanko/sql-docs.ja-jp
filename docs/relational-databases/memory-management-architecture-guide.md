@@ -1,7 +1,7 @@
 ---
 title: メモリ管理アーキテクチャ ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 924b347e5fa8907fa1f2b9cb9b820a63808cbc3b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669401"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328982"
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,8 +57,8 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 | |32 ビット <sup>1</sup> |64 ビット|
 |-------|-------|-------| 
 |コンベンショナル メモリ |すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション。 プロセス仮想アドレス空間制限まで: <br>- 2 GB<br>- 3 GB (/3 gb のブート パラメーターを使用する場合) <sup>2</sup> <br>- 4 GB (WOW64 の場合) <sup>3</sup> |すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション。 プロセス仮想アドレス空間制限まで: <br>- 7 TB (IA64 アーキテクチャを使用する場合) (IA64 は [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降ではサポートされません)<br>- オペレーティング システムの最大容量 (x64 アーキテクチャを使用する場合) <sup>4</sup>
-|AWE メカニズム ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で 32 ビット プラットフォームのプロセス仮想アドレス空間制限を超えることを許可する) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise、および Developer エディション : バッファー プールは、最大 64 GB のメモリにアクセスできます。|該当なし <sup>5</sup> |
-|Lock Pages in Memory オペレーティング システム (OS) 特権 (物理メモリのロックを許可し、ロックされたメモリの OS ページングを回避する)<sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise、および Developer エディション : AWE メカニズムを使用する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスで必要です。 AWE メカニズムによって割り当てられたメモリは、ページ アウトできません。 <br> AWE を有効にせずにこの特権を許可しても、サーバーに対する影響はありません。 | 必要なときにのみ、具体的には、sqlservr プロセスがページ アウトされているという兆候があるときにのみ使用します。その場合、次のようなエラー 17890 がエラー ログに報告されます。`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
+|AWE メカニズム ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で 32 ビット プラットフォームのプロセス仮想アドレス空間制限を超えることを許可する) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise、および Developer エディション:バッファー プールは、最大 64 GB のメモリにアクセスできます。|該当なし <sup>5</sup> |
+|Lock Pages in Memory オペレーティング システム (OS) 特権 (物理メモリのロックを許可し、ロックされたメモリの OS ページングを回避する)<sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise、および Developer エディション:AWE メカニズムを使用する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスで必要です。 AWE メカニズムによって割り当てられたメモリは、ページ アウトできません。 <br> AWE を有効にせずにこの特権を許可しても、サーバーに対する影響はありません。 | 必要なときにのみ、具体的には、sqlservr プロセスがページ アウトされているという兆候があるときにのみ使用します。その場合、次のようなエラー 17890 がエラー ログに報告されます。`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]から続けて 32 ビット バージョンを利用することはできません。  
 <sup>2</sup> /3gb は、オペレーティング システムのブート パラメーターです。 詳細については、MSDN ライブラリを参照してください。  
@@ -87,9 +87,9 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 
 |メモリ割り当ての種類| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降|
 |-------|-------|-------|
-|単一ページ割り当て|[ユーザー アカウント制御]|はい。"あらゆるサイズの" ページ割り当てに統合。|
+|単一ページ割り当て|可|はい。"あらゆるサイズの" ページ割り当てに統合。|
 |複数ページ割り当て|いいえ|はい。"あらゆるサイズの" ページ割り当てに統合。|
-|CLR 割り当て|いいえ|[ユーザー アカウント制御]|
+|CLR 割り当て|いいえ|可|
 |スレッド スタック メモリ|いいえ|いいえ|
 |Windows からの直接割り当て|いいえ|いいえ|
 
@@ -103,6 +103,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 -  大量のメモリ バッファーを必要とするバックアップ操作。
 -  大量の入力パラメーターを格納する必要があるトレース操作。
 
+<a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降の "memory_to_reserve" の変更点
 以前のバージョンの SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ マネージャーは、**複数ページ アロケータ (MPA)**、**CLR アロケータ**、SQL Server プロセスの**スレッド スタック**のメモリ割り当て、**直接 Windows 割り当て (DWA)** で使用するために、プロセス VAS (Virtual Address Space/仮想アドレス空間) の一部を予約しました。 仮想アドレス空間のこの部分は、"Mem-To-Leave" または "non-Buffer Pool" 領域とも呼ばれています。
 
@@ -115,10 +116,10 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 |メモリ割り当ての種類| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降|
 |-------|-------|-------|
 |単一ページ割り当て|いいえ|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
-|複数ページ割り当て|[ユーザー アカウント制御]|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
-|CLR 割り当て|[ユーザー アカウント制御]|[ユーザー アカウント制御]|
-|スレッド スタック メモリ|[ユーザー アカウント制御]|[ユーザー アカウント制御]|
-|Windows からの直接割り当て|[ユーザー アカウント制御]|[ユーザー アカウント制御]|
+|複数ページ割り当て|可|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
+|CLR 割り当て|可|可|
+|スレッド スタック メモリ|可|可|
+|Windows からの直接割り当て|可|可|
 
 ## <a name="dynamic-memory-management"></a> 動的メモリ管理
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の既定のメモリ管理動作では、システムでメモリ不足を発生させることなく、必要な量のメモリを獲得します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、Microsoft Windows の Memory Notification API を使用してこれを実現しています。
@@ -182,8 +183,8 @@ min server memory と max server memory の両方に同じ値を指定した場�
 ## <a name="memory-used-by-sql-server-objects-specifications"></a>SQL Server オブジェクトの仕様で使用されるメモリ
 次の一覧で、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各オブジェクトによって使用されるおおよそのメモリ量について説明します。 表示されている金額は概算であり、環境とオブジェクトの作成方法によって異なります。
 
-* ロック (ロック マネージャーにより保守管理): 64 バイト + 32 バイト (所有者あたり)   
-* ユーザー接続: 約 (3 \* network_packet_size + 94 kb)    
+* ロック (ロック マネージャーにより保守管理):64 バイト + (32 バイト * 所有者数)   
+* ユーザー接続:約 (3 \* network_packet_size + 94 kb)    
 
 **ネットワーク パケット サイズ**は、アプリケーションと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース エンジン間の通信に使用される表形式のデータ スキーム (TDS) パケットのサイズです。 既定のパケット サイズは 4 KB であり、network packet size 構成オプションによって制御されます。
 
@@ -313,12 +314,12 @@ min server memory と max server memory の両方に同じ値を指定した場�
 > TORN_PAGE_DETECTION は、使用するリソースが比較的少なくて済みますが、CHECKSUM による保護の最小限のサブセットしか利用できません。
 
 ## <a name="understanding-non-uniform-memory-access"></a>Non-Uniform Memory Access について
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は Non-Uniform Memory Access (NUMA) に対応しているので、特殊な構成を行わなくても NUMA ハードウェアで適切に実行されます。 プロセッサのクロック速度や数が増加するにつれて処理能力が向上しますが、その一方で、向上した能力の活用に必要となるメモリの待機時間を減らすことが困難になります。 ハードウェア ベンダーはメモリの待機時間をなくすために、大容量の L3 キャッシュを搭載していますが、この解決策にも限界があります。 この問題に対する、拡張性に優れた解決方法が NUMA アーキテクチャです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、アプリケーションを変更しなくても NUMA ベースのコンピューターを活用できるように設計されています。 詳細については、「 [ソフト NUMA を使用するように SQL Server を構成する方法](../database-engine/configure-windows/soft-numa-sql-server.md)」をご覧ください。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は Non-Uniform Memory Access (NUMA) に対応しているので、特殊な構成を行わなくても NUMA ハードウェアで適切に実行されます。 プロセッサのクロック速度や数が増加するにつれて処理能力が向上しますが、その一方で、向上した能力の活用に必要となるメモリの待機時間を減らすことが困難になります。 ハードウェア ベンダーはメモリの待機時間をなくすために、大容量の L3 キャッシュを搭載していますが、この解決策にも限界があります。 この問題に対する、拡張性に優れた解決方法が NUMA アーキテクチャです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、アプリケーションを変更しなくても NUMA ベースのコンピューターを活用できるように設計されています。 詳細については、「[ソフト NUMA を使用するようにSQL Server を構成する方法](../database-engine/configure-windows/soft-numa-sql-server.md)」をご覧ください。
 
 ## <a name="see-also"></a>参照
 [サーバー メモリに関するサーバー構成オプション](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [ページの読み取り](../relational-databases/reading-pages.md)   
 [ページの書き込み](../relational-databases/writing-pages.md)   
-[方法: ソフト NUMA を使用するように SQL Server を構成する](../database-engine/configure-windows/soft-numa-sql-server.md)   
+[方法:ソフト NUMA を使用するように SQL Server を構成する](../database-engine/configure-windows/soft-numa-sql-server.md)   
 [メモリ最適化テーブルを使用するための要件](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)   
 [メモリ最適化テーブルを利用してメモリ不足の問題を解決する](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)

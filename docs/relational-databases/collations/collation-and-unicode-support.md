@@ -28,16 +28,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661721"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206441"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 **char** や **varchar** などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用可能な照合順序の一覧については、「 [sys」を参照してください。fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)」を参照してください。    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 **char** や **varchar** などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用可能な照合順序の一覧については、「 [sys」を参照してください。fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)」を参照してください。    
     
 サーバー、データベース、列、または式の照合順序を選択すると、データベースのさまざまな操作の結果に影響を与える特定の特性がデータに割り当てられます。 たとえば、`ORDER BY` を使用してクエリを構築する場合、結果セットの並べ替え順序は、データベースに適用される照合順序、またはクエリの式レベルで `COLLATE` 句に指定される照合順序に依存します。    
     
@@ -64,7 +64,7 @@ ms.locfileid: "51661721"
 |------------|-----------------|    
 |大文字と小文字を区別する (_CS)|大文字と小文字を区別します。 このオプションを選択すると、大文字より先に小文字が並べ替えられます。 このオプションを選択しないと、照合順序で大文字と小文字が区別されません。 つまり、大文字と小文字は、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 大文字と小文字を区別しないことを明示的に選択するには、_CI と指定します。|    
 |アクセントを区別する (_AS)|アクセントのある文字とアクセントのない文字を区別します。 たとえば、"a" と "&#xE1;" は等しくありません。 このオプションを選択しないと、照合順序でアクセントが区別されません。 つまり、アクセントのある文字とアクセントのない文字は、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 アクセントを区別しないことを明示的に選択するには、_AI と指定します。|    
-|かなを区別する (_KS)|ひらがなとカタカナという日本語の 2 種類のかな文字を区別します。 このオプションを選択しないと、照合順序でかなが区別されません。 つまり、ひらがなとカタカナは、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 かなを区別しないように指定する唯一の方法は、このオプションを省略することです。|    
+|かなを区別する (_KS)|次の 2 種類の日本語かな文字を区別します。ひらがなとカタカナ。 このオプションを選択しないと、照合順序でかなが区別されません。 つまり、ひらがなとカタカナは、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 かなを区別しないように指定する唯一の方法は、このオプションを省略することです。|    
 |文字幅を区別する (_WS)|全角文字と半角文字を区別します。 このオプションを選択しないと、同じ文字の全角表現と半角表現は、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 文字幅を区別しないように指定する唯一の方法は、このオプションを省略することです。|    
 |バリエーションの選択を区別する (_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]から導入された日本語の照合順序 Japanese_Bushu_Kakusu_140 と Japanese_XJIS_140 で多様な表意文字のバリエーションの選択を区別します。 バリエーションのシーケンスは、基本文字と追加のバリエーションの選択で構成されます。 この _VSS オプションが選択されていない場合、照合順序はバリエーションの選択が区別されず、バリエーションの選択は比較で考慮されません。 つまり、SQL Server では、並べ替えが同じになるように、バリエーションの選択が異なる同じ基本文字に基づいて構築された文字を考慮しています。 [「Unicode Ideographic Variation Database」](https://www.unicode.org/reports/tr37/)(Unicode 表意文字のバリエーション データベース) も参照してください。 <br/><br/> 異体字セレクターを区別する (_VSS) 照合順序は、全文検索インデックスではサポートされていません。 全文検索インデックスでは、アクセントを区別する (_AS)、かなを区別する (_KS)、文字幅を区別する (_WS) オプションのみがサポートされます。 SQL Server XML と CLR のエンジンでは、(_VSS) 異体字セレクターはサポートされていません。
 |UTF-8 (_UTF8)|UTF-8 でエンコードされたデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納できるようにします。 このオプションを選択しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、適用可能なデータ型に対して既定の非 Unicode エンコード形式が使用されます。| 
@@ -121,7 +121,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  並べ替え順序は、データ値の並べ替え方法を指定します。 これは、データ比較の結果に影響を及ぼします。 データは、照合順序を使用して並べ替えられ、インデックスを使用して最適化することができます。    
     
 ##  <a name="Unicode_Defn"></a> Unicode のサポート    
-Unicode は、コード ポイントを文字にマップするための標準です。 Unicode は世界中のすべての言語のすべての文字を処理できるようにデザインされているので、異なる文字のセットを扱うために他のコード ページを必要とすることがありません。 複数の言語を反映する文字データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) に格納する場合は、非 Unicode データ型 (**char**、 **varchar**、および **text**) ではなく、Unicode (UTF-16) データ型 (**nchar**、**nvarchar**、および **ntext**) を使用してください。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、 UTF 8 対応の照合順序 (\_UTF8) を使用した場合、以前の非 Unicode データ型 (**char** と **varchar**) が Unicode (UTF-8) データ型になります。 
+Unicode は、コード ポイントを文字にマップするための標準です。 Unicode は世界中のすべての言語のすべての文字を処理できるようにデザインされているので、異なる文字のセットを扱うために他のコード ページを必要とすることがありません。 複数の言語を反映する文字データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) に格納する場合は、非 Unicode データ型 (**char**、**varchar**、**text**) ではなく、Unicode (UTF-16) データ型 (**nchar**、**nvarchar**、**ntext**) を使用してください。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、 UTF 8 対応の照合順序 (\_UTF8) を使用した場合、以前の非 Unicode データ型 (**char** と **varchar**) が Unicode (UTF-8) データ型になります。 
 
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、既存 Unicode (UTF-16) データ型 (**nchar**、**nvarchar**、および **ntext**) の動作は変わりません。   

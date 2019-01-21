@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712120"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328972"
 ---
 # <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -156,10 +156,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |最もリソースを消費するクエリ|対象となる実行メトリックを選択し、対象期間内で最も極端な値を持つクエリを特定します。 <br />このビューを使用して、データベースのリソース消費量に最も大きな影響を与えているクエリに焦点を絞ります。|  
 |強制適用されたプランのあるクエリ|クエリ ストアを使って以前に強制適用されたプランを一覧表示します。 <br />このビューを使って、現在強制適用されているすべてのプランに簡単にアクセスします。|  
 |高バリエーションのクエリ|目的の期間内の継続時間、CPU 時間、IO、メモリ使用率など、使用可能なディメンションのいずれかに関連して実行バリエーションが高いクエリを分析します。<br />このビューを使用して、アプリケーション全体のユーザー エクスペリエンスに影響を及ぼす可能性のある、パフォーマンスの差異が大きいクエリを特定します。|  
-|クエリ待機統計|データベースで最もアクティブな待機カテゴリ、および選択した待機カテゴリに対して最も影響を与えているクエリを分析します。<br />このビューを使用して待機統計を分析し、アプリケーション全体のユーザー エクスペリエンスに影響を及ぼしている可能性のあるクエリを特定します。<br /><br />**適用対象:** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 以降および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|クエリ待機統計|データベースで最もアクティブな待機カテゴリ、および選択した待機カテゴリに対して最も影響を与えているクエリを分析します。<br />このビューを使用して待機統計を分析し、アプリケーション全体のユーザー エクスペリエンスに影響を及ぼしている可能性のあるクエリを特定します。<br /><br />**適用対象:**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 以降および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |追跡対象のクエリ|最も重要なクエリの実行をリアルタイムで追跡します。 このビューは通常、強制適用されたプランを持つクエリがあり、クエリのパフォーマンスを安定させる必要がある場合に使用します。|
   
-> [!TIP]  
+> [!TIP]
 > [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して最もリソースを消費するクエリを特定し、プラン変更により機能低下したクエリを修正する方法の詳細については、[クエリ ストアに関する @Azure ブログの記事](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)を参照してください。  
   
  パフォーマンスが低下したクエリを特定する際に必要なアクションは、問題の性質によって異なります。  
@@ -168,7 +168,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
      ![クエリ ストアのプランの強制](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
-> [!NOTE]  
+> [!NOTE]
 > 上の図では特定のクエリ プランに異なる図形が使われている場合があり、考えられる各状態の意味を次に示します。<br />  
 > |図形|意味|  
 > |-------------------|-------------|

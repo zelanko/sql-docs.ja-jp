@@ -1,6 +1,7 @@
 ---
-title: Always On 可用性グループの拡張イベント (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 可用性グループの拡張イベントを構成する
+description: SQL Server では、Always On 可用性グループに固有の拡張イベントが定義されています。 可用性グループのトラブルシューティングの際、セッション内のこのような拡張イベントを監視すれば、根本原因を容易に診断することができます。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b33f51b741d9bb97882fb2662111833bb4937a0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413199"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207571"
 ---
-# <a name="always-on-availability-groups-extended-events"></a>Always On 可用性グループの拡張イベント
+# <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 可用性グループの拡張イベントを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server では、Always On 可用性グループに固有の拡張イベントが定義されています。 可用性グループのトラブルシューティングの際、セッション内のこのような拡張イベントを監視すれば、根本原因を容易に診断することができます。 可用性グループの拡張イベントは、次のクエリを使用して表示することができます。  
   
@@ -302,7 +303,7 @@ GO
 |availability_group_id|Guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
 |ddl_action|alwayson_ddl_action|REATE、ALTER、DROP といった DDL アクションの種類を示します。|  
-|ddl_phase|ddl_opcode|BEGIN、COMMIT、または ROLLBACK といった DDL 操作のフェーズを示しす。|  
+|ddl_phase|ddl_opcode|BEGIN、COMMIT、ROLLBACK といった DDL 操作のフェーズを示しす。|  
 |ステートメントから削除してください。|unicode_string|実行されたステートメントのテキスト。|  
   
 #### <a name="alwaysonhealth-session-definition"></a>alwayson_health セッションの定義  

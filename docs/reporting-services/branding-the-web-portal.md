@@ -1,18 +1,19 @@
 ---
 title: Web ポータルのブランド化 | Microsoft Docs
-ms.date: 11/17/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+description: この記事では、ブランド パッケージを利用してビジネスのブランドを設定することで Web ポータルの外観を変更する方法について説明します。 CSS (カスケーディング スタイル シート) に詳しくなくても作成できるようにブランド パッケージは設計されています。
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e3761e7bc91a219562d46cc33f0c5bbd4ca6aa3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397710"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201042"
 ---
 # <a name="branding-the-web-portal"></a>Web ポータルのブランド化
 
@@ -239,5 +240,7 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
             "altTableAccent":"#fdc336"  
         }  
     }  
+
+## <a name="next-steps"></a>次の手順
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

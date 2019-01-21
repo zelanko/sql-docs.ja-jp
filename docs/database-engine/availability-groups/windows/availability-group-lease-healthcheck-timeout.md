@@ -1,6 +1,7 @@
 ---
-title: SQL Server 可用性グループ リースの正常性チェック タイムアウト | Microsoft Docs
-ms.custom: ''
+title: 可用性グループ リースの正常性チェック タイムアウトのしくみ
+description: Always On 可用性グループのリース、クラスター、正常性チェック タイムのしくみとガイドライン。
+ms.custom: seodec18
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393985"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209081"
 ---
-# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>リース、クラスター、正常性チェック タイムアウトのメカニズムとガイドライン 
+# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 可用性グループのリース、クラスター、正常性チェック タイムアウトのしくみとガイドライン。 
 
 ハードウェア、ソフトウェア、クラスターの構成に応じて、また、稼働時間やパフォーマンスに関するアプリケーション要件に応じて、リース、クラスター、正常性チェック タイムアウトの値を構成する必要があります。 特定のアプリケーションやワークロードでは、ハード エラー後のダウンタイムを制限するためにより積極的な監視が必要になります。 その他のアプリケーションやワークロードでは、リソースの使用量が多いために発生する一時的なネットワークの問題や待機時間に対する許容範囲を広げる必要があり、低速のフェールオーバーでよい場合があります。 
 
@@ -76,11 +77,11 @@ AG のエラー状態レベルによって、正常性チェックのエラー�
 
 | レベル | インスタンスが停止と見なされる状態
 |:---|---
-| 1: OnServerDown | AG 以外のすべてのリソースが失敗した場合、正常性チェックでアクションは行われません。 AG データが 5 間隔内、または 5/3 \* HealthCheckTimeout 内で受信されない場合
-| 2: OnServerUnresponsive | HealthCheckTimeout の `sp_server_diagnostics` からデータが受信されない場合
-| 3: OnCriticalServerError | (既定値) システム コンポーネントがエラーを報告する場合
-| 4: OnModerateServerError | リソース コンポーネントがエラーを報告する場合 
-| 5:  OnAnyQualifiedFailureConitions |  クエリ処理コンポーネントがエラーを報告する場合
+| 1:OnServerDown | AG 以外のすべてのリソースが失敗した場合、正常性チェックでアクションは行われません。 AG データが 5 間隔内、または 5/3 \* HealthCheckTimeout 内で受信されない場合
+| 2:OnServerUnresponsive | HealthCheckTimeout の `sp_server_diagnostics` からデータが受信されない場合
+| 3:OnCriticalServerError | (既定値) システム コンポーネントがエラーを報告する場合
+| 4:OnModerateServerError | リソース コンポーネントがエラーを報告する場合 
+| 5:OnAnyQualifiedFailureConitions |  クエリ処理コンポーネントがエラーを報告する場合
 
 ## <a name="updating-cluster-and-always-on-timeout-values"></a>クラスターと Always On のタイムアウト値の更新 
 
@@ -155,7 +156,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
 ## <a name="see-also"></a>参照    
 
-[アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;AlwaysOn 可用性グループ&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
+[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
 
 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)         
 

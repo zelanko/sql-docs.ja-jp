@@ -1,5 +1,5 @@
 ---
-title: '[レプリカの指定] ページ (新しい可用性グループ ウィザード: レプリカの追加ウィザード) | Microsoft Docs'
+title: '[レプリカの指定] ページ (新しい可用性グループ ウィザード:レプリカの追加ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12ad3867a465582aa1362f8607187ed9026c26ca
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9e5f746ed9aeea4356b619cff2439292d73384a7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605442"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212481"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>[レプリカの指定] ページ (新しい可用性グループ ウィザード: レプリカの追加ウィザード)
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>[レプリカの指定] ページ (新しい可用性グループ ウィザード:レプリカの追加ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 **[レプリカの指定]** ページのオプションについて説明します。 このページの対象は、 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** の **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** です。 **[レプリカの指定]** ページを使用して、1 つまたは複数の可用性レプリカを指定および構成して可用性グループを追加します。 このページには、次の表に示す 4 つのタブが含まれます。 この表でタブの名前をクリックすると、このトピックの対応するセクションに移動します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "51605442"
  セカンダリ レプリカをホストするために使用するサーバー インスタンスが **[可用性レプリカ]** グリッドに表示されていない場合は、**[レプリカの追加]** をクリックします。 ハイブリッド IT 環境で可用性グループを構成する場合は (「 [Windows Azure の仮想マシン内の SQL Server の高可用性と災害復旧](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)」を参照)、 **[Azure のレプリカ追加]** をクリックして、セカンダリ レプリカを備えた仮想マシンを Windows Azure に作成できます。  
   
  **[初期ロール]**  
- 新しいレプリカが初期状態で実行するロール ( **プライマリ** または **セカンダリ**) を示します。  
+ 新しいレプリカが初期状態で実行するロール(**プライマリ** または **セカンダリ**) を示します。  
   
  **自動フェールオーバー (上限 3)**  
  この可用性レプリカを自動フェールオーバー パートナーにする場合のみ、このチェック ボックスをオンにします。 自動フェールオーバーを構成するには、最初のプライマリ レプリカと 1 つのセカンダリ レプリカに対してこのオプションを選択する必要があります。 どちらのレプリカでも同期コミット可用性モードが使用されます。 3 つのレプリカのみが自動フェールオーバーをサポートできます。  
@@ -123,7 +123,7 @@ ms.locfileid: "51605442"
  バックアップを実行するレプリカを選択するときにバックアップ ジョブが可用性レプリカのロールを無視するように指定します。 バックアップ ジョブは、動作状態および接続状態と組み合わせて、各可用性レプリカのバックアップ優先順位などの他の要素を評価する場合があります。  
   
 > [!IMPORTANT]  
->  バックアップに関するユーザー設定は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 詳細については、「[アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+>  バックアップに関するユーザー設定は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
 ### <a name="replica-backup-priorities-grid"></a>[レプリカのバックアップの優先順位] グリッド  
  **[レプリカのバックアップの優先順位]** グリッドを使用して、可用性グループのレプリカごとに、バックアップの優先順位を指定します。 このグリッドに含まれる列は、次のとおりです。  
@@ -189,9 +189,9 @@ ms.locfileid: "51605442"
  **[サブネット]**  
  ネットワーク モードとして **[DHCP]** を選択している場合は、 **[サブネット]** ボックスの一覧を使用して、可用性グループの可用性レプリカがホストされているサブネットのアドレスを選択します。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  可用性グループ リスナーを定義した後は、次のことを行うことを強くお勧めします。  
->   
+> 
 >  -   リスナーの IP アドレスが排他的に使用されるように確保することを、ネットワーク管理者に依頼します。 この可用性グループへのクライアント接続を要求するときの接続文字列で使用できるよう、リスナーの DNS ホスト名をアプリケーション開発者に通知します。  
 > -   この可用性グループへのクライアント接続を要求するときの接続文字列で使用できるよう、リスナーの DNS ホスト名をアプリケーション開発者に通知します。  
   

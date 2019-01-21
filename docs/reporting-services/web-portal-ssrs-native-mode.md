@@ -1,25 +1,26 @@
 ---
-title: Web ポータル (SSRS ネイティブ モード) | Microsoft Docs
-ms.date: 07/02/2017
+title: レポート サーバーの Web ポータル (SSRS ネイティブ モード) | Microsoft Docs
+ms.date: 12/05/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ec3fac28637e21da9fecc7ad291b8ff347ba7d6d
+ms.sourcegitcommit: 9d2fef55b0abfc049fbb55c315097dda2aeb6853
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711223"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53010293"
 ---
-# <a name="web-portal-ssrs-native-mode"></a>Web ポータル (SSRS ネイティブ モード)
+# <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>レポート サーバーの Web ポータル (SSRS ネイティブ モード)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Reporting Services Web ポータルは Web ベースの機能であり、レポート、モバイル レポート、KPI を表示したり、レポート サーバー インスタンスの要素をナビゲートしたりできます。 Web ポータルを利用し、1 つのレポート サーバー インスタンスを管理することもできます。
+Reporting Services レポート サーバーの Web ポータルは Web ベース エクスペリエンスです。 このポータルでは、レポート、モバイル レポート、KPI を表示したり、レポート サーバー インスタンス内の要素間を移動したりできます。 Web ポータルを利用し、1 つのレポート サーバー インスタンスを管理することもできます。
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
@@ -27,24 +28,15 @@ Reporting Services Web ポータルは Web ベースの機能であり、レポ�
 
 Web ポータルを利用し、次のタスクを実行できます。
 
-- レポートの表示、検索、印刷、サブスクライブ。
-
-- サーバー上のアイテムを整理するフォルダー階層の作成、セキュリティ保護、保守。
-
+- レポートの表示、検索、印刷、およびサブスクライブ。
+- サーバー上のアイテムを整理するフォルダー階層の作成、セキュリティ保護、および保守。
 - アイテムおよび操作に対するアクセスを決定するロールベースのセキュリティの構成。
-
-- レポート実行プロパティ、レポート履歴、レポート パラメーターの構成。
-
+- レポート実行プロパティ、レポート履歴、およびレポート パラメーターの構成。
 - スケジュールおよびデータ ソース接続をさらに管理しやすくする共有スケジュールおよび共有データ ソースの作成。
-
 - 大きい受信者一覧にレポートをロール アウトするデータ ドリブン サブスクリプションの作成。
-
 - 既存レポートの再利用や目的変更を行うための、リンク レポートの作成。
-
 - Report Builder や Mobile Report Publisher など、一般的なツールのダウンロード。
-
 - [KPI の作成](../reporting-services/working-with-kpis-in-reporting-services.md)。
-
 - フィードバックや機能要求の送信。
 
 Web ポータルでは、レポート サーバー フォルダーを参照したり、特定のレポートを検索したりできます。 レポート、その全般プロパティ、レポート履歴にキャプチャされているレポートの過去のコピーを表示できます。 権限に応じて、レポートにサブスクライブし、電子メールの受信ボックスやファイル システム上の共有フォルダーに配信させることもできます。
@@ -63,7 +55,7 @@ Web ポータルは、ネイティブ モードで実行されているレポー
 
 ## <a name="start-and-use-the-web-portal"></a>Web ポータルの開始と使用
 
-Web ポータルは Web アプリケーションであり、ブラウザー ウィンドウのアドレス バーに [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] の URL を入力して起動します。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]の起動時に表示されるページ、リンク、オプションは、レポート サーバーに対してユーザーが持っている権限によって異なります。 タスクを実行するには、そのタスクを含むロールに割り当てられている必要があります。  すべての権限を持つロールに割り当てられたユーザーは、レポート サーバーの管理に利用できるすべてのアプリケーション メニューとページにアクセスできます。 一方、レポートの表示と実行の権限を持つロールに割り当てられたユーザーは、それらの操作をサポートするメニューとページのみを表示できます。 各ユーザーに対して、レポート サーバーごとに異なるロールを割り当てることも、単一のレポート サーバーに保存されている多様なレポートまたはフォルダーごとに異なるロールを割り当てることもできます。
+Web ポータルは Web アプリケーションであり、ブラウザー ウィンドウのアドレス バーに [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] の URL を入力して起動します。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] の起動時に表示されるページ、リンク、オプションは、レポート サーバーに対してユーザーが持っている権限によって異なります。 タスクを実行するには、そのタスクを含むロールに割り当てられている必要があります。  すべての権限を持つロールに割り当てられたユーザーは、レポート サーバーの管理に利用できるすべてのアプリケーション メニューとページにアクセスできます。 一方、レポートの表示と実行の権限を持つロールに割り当てられたユーザーは、それらの操作をサポートするメニューとページのみを表示できます。 各ユーザーに対して、レポート サーバーごとに異なるロールを割り当てることも、単一のレポート サーバーに保存されている多様なレポートまたはフォルダーごとに異なるロールを割り当てることもできます。
 
 ロールの詳細については、「 [ネイティブ モードのレポート サーバーに対する権限の許可](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」を参照してください。
 
@@ -108,7 +100,7 @@ Power BI Desktop レポートと Excel ブックのアクセス許可をアッ�
 
 ## <a name="search-for-items"></a>アイテムの検索
 
-検索語句を入力できます。ユーザーがアクセスできるアイテムが表示されます。 結果は KPI、レポート、データセット、その他のアイテムに分類されます。 その後、結果を使用したり、お気に入りに追加したりできます。
+検索語句を入力すると、ユーザーがアクセスできるアイテムが表示されます。 結果は KPI、レポート、データセット、その他のアイテムに分類されます。 その後、結果を使用したり、お気に入りに追加したりできます。
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 

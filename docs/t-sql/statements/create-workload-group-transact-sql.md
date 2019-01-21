@@ -20,12 +20,12 @@ ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 51073cc28977e0b30ec53a9d7b1165ea09920008
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a0c838252c95eba5704b3a5e6c8c22b449c771e7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398385"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213537"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ CREATE WORKLOAD GROUP group_name
 -   外部プロセス用の外部リソース プール 詳細については、「[sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
- REQUEST_MEMORY_GRANT_PERCENT: インデックス作成では、パフォーマンスを向上させるため、最初に許可されたメモリ量を超えるワークスペース メモリの使用が許可されます。 この特別な処理は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のリソース ガバナーでサポートされています。 ただし、最初のメモリ許可も追加のメモリ許可も、リソース プール設定およびワークロード グループ設定によって制限されます。  
+ REQUEST_MEMORY_GRANT_PERCENT:インデックスの作成では、パフォーマンスの改善のために最初に付与されたのよりも多くのワークスペース メモリを使用することが許可されています。 この特別な処理は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のリソース ガバナーでサポートされています。 ただし、最初のメモリ許可も追加のメモリ許可も、リソース プール設定およびワークロード グループ設定によって制限されます。  
   
  **パーティション テーブルのインデックス作成**  
   

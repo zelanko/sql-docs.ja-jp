@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
@@ -15,12 +14,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f21bdeceed35e7eb680d5dd1c2b74863e3a29dbb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398791"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748834"
 ---
 # <a name="create-a-model-master-data-services"></a>モデルを作成する (マスター データ サービス)
 
@@ -57,21 +56,21 @@ ms.locfileid: "52398791"
   
  作成されたモデルごとに、8 列の行がグリッドに追加されます。 8 つの列は次のとおりです。  
   
--   **[状態]**: モデルの状態。 **[モデルの保存]** ボタンをクリックすると、モデルが更新されていることを示す ![更新中](../master-data-services/media/mds-model-status-updating.png "更新中") 画像が表示されます。 モデルの作成中または編集中にエラーが発生すると、![エラー](../master-data-services/media/mds-model-status-error.png "エラー") 画像が表示されます。 それ以外の場合は正常な状態であり、 ![[OK]](../master-data-services/media/mds-model-status-ok.png "[OK]") 画像が表示されます。  
+-   **状態**:モデルの状態。 **[モデルの保存]** ボタンをクリックすると、モデルが更新されていることを示す ![更新中](../master-data-services/media/mds-model-status-updating.png "更新中") 画像が表示されます。 モデルの作成中または編集中にエラーが発生すると、![エラー](../master-data-services/media/mds-model-status-error.png "エラー") 画像が表示されます。 それ以外の場合は正常な状態であり、 ![[OK]](../master-data-services/media/mds-model-status-ok.png "[OK]") 画像が表示されます。  
   
--   **[名前]**: モデル名。  
+-   **[名前]**:モデル名。  
   
--   **[説明]**: モデルの説明。  
+-   **説明**:モデルの説明。  
   
--   **[Log Retention Days]**(ログの保持日数): モデルのログを保持する日数。  
+-   **ログ保持日数**:モデルのログを保持する日数。  
   
--   **[作成者]**: モデルを作成したユーザーのユーザー名。  
+-   **作成者**:モデルを作成したユーザーのユーザー名。  
   
--   **[Created Date and Time]**(作成日時): モデルが作成された日時。  
+-   **作成日時**:モデルが作成された日時。  
   
--   **[Updated By]**(更新者): モデルを最後に更新したユーザーのユーザー名。  
+-   **更新者**:モデルを最後に更新したユーザーのユーザー名。  
   
--   **[Updated Date and Time]**(更新日時): モデルが最後に更新された日時。  
+-   **更新日時**:モデルが最後に更新された日時。  
   
 ## <a name="next-steps"></a>Next Steps  
   
