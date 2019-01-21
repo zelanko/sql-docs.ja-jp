@@ -1,7 +1,7 @@
 ---
-title: 拡張イベント | Microsoft Docs
+title: 拡張イベント - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 10/23/2016
+ms.date: 12/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,24 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 972e420f75db790321bc8c8eee595f1932e4f451
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 441d0535e75663150d12e5ff6c05a7b1067f3e6d
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662426"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531048"
 ---
 # <a name="extended-events"></a>拡張イベント
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントのアーキテクチャは高い拡張性と柔軟な構成を備えており、これによってユーザーは、トラブルシューティングまたはパフォーマンスの問題の特定に必要な量の情報を過不足なく収集できます。  
 
-拡張イベントの詳細については、次を参照してください。
+拡張イベントの詳細については、「[クイック スタート:SQL Server 拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」を参照してください。
 
-- [クイック スタート: SQL Server の拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
-- ブログ: [SQL Server 拡張イベント](https://blogs.msdn.com/b/extended_events/)
 
-  
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントの利点  
  拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースはごくわずかです。 拡張イベントには、セッション データを容易かつ迅速に作成、変更、表示、および分析するためのグラフィカル ユーザー インターフェイスが 2 つ用意されています (**新規セッション ウィザード** と **[新しいセッション]**)。  
   

@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 52149ae289f0cea89ff31a501acaaf8d0c7cbd3e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 352cd03017b33247c66f7eb0090cd79d0d5cd532
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545623"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980098"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -196,7 +196,7 @@ SQLDUMPEREDUMPFLAGS
  切り替え先のクラスターを識別するには、次のいずれかの値を指定します。  
   
  *windows_cluster*  
- WSFC の netwirj の名前。 短い名前または完全なドメイン名を指定できます。 短い名前のターゲット IP アドレスを検出するために、ALTER SERVER CONFIGURATION は DNS 解決を使用します。 ある種の状況では、短い名前を使用すると混乱が生じ、DNS から誤った IP アドレスが返されることがあります。 そのため、完全なドメイン名を指定することをお勧めします。  
+ WSFC のネットワーク名。 短い名前または完全なドメイン名を指定できます。 短い名前のターゲット IP アドレスを検出するために、ALTER SERVER CONFIGURATION は DNS 解決を使用します。 ある種の状況では、短い名前を使用すると混乱が生じ、DNS から誤った IP アドレスが返されることがあります。 そのため、完全なドメイン名を指定することをお勧めします。  
   
   > [!NOTE] 
   > この設定を使用したクラスター間の移行はサポートされなくなりました。 クラスター間の移行を実行するには、分散可用性グループまたは他の方法 (ログ配布など) を使用します。 
@@ -237,10 +237,10 @@ SQLDUMPEREDUMPFLAGS
  OFF  
  大きい NUMA ハードウェア ノードの小さい NUMA ノードへの自動ソフトウェア パーティション分割を無効にします。 実行中の値を変更するには、データベース エンジンの再起動が必要です。  
 
-> [!WARNING]  
+> [!WARNING]
 > ALTER SERVER CONFIGURATION ステートメントと SOFT NUMA オプションおよび SQL Server エージェントの動作に関しては既知の問題があります。  推奨される操作のシーケンスを次に示します。  
 > 1) SQL Server エージェントのインスタンスを停止します。  
-> 2) ALTER SERVER CONFGURATION SOFT NUMA オプションを実行します。  
+> 2) ALTER SERVER CONFIGURATION SOFT NUMA オプションを実行します。  
 > 3) SQL Server インスタンスを再起動します。  
 > 4) SQL Server エージェントのインスタンスを起動します。  
   
@@ -272,10 +272,10 @@ SQLDUMPEREDUMPFLAGS
 ###  <a name="Affinity"></a> プロセス関係を設定する  
  このセクションの例では、CPU および NUMA ノードにプロセス関係を設定する方法を示します。 この例では、256 個の CPU が、4 つのグループから成る NUMA ノード構成 (4 グループ合計 16 ノード) でサーバーに搭載されていることを想定しています。 NUMA ノードにも CPU にもスレッドは割り当てられていません。  
   
--   ～ 3 では、0 ～ 63 の Cpu グループ 0: NUMA ノード 0  
--   グループ 1: NUMA ノード 4 ～ 7、64 ～ 127 の Cpu  
--   NUMA ノードのグループ 2: 8 ～ 12、128 ～ 191 の Cpu  
--   グループ 3: NUMA ノード 13 ～ 16、CPU 192 ～ 255  
+-   グループ 0:NUMA ノード 0 ～ 3、CPU 0 ～ 63  
+-   グループ 1:NUMA ノード 4 から 7、CPU 64 から 127  
+-   グループ 2:NUMA ノード 8 から 12、CPU 128 から 191  
+-   グループ 3:NUMA ノード 13 から 16、CPU 192 から 255  
   
 #### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>A. グループ 0 とグループ 2 のすべての CPU に関係を設定する  
  次の例では、グループ 0 とグループ 2 のすべての CPU に関係を設定します。  

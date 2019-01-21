@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc6314ac1c24aa545e3f5c44749b755bf7e7174b
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a40bf0e7f3758ca048f78f59177b7fc80a5e94ca
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018957"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979288"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,21 +43,21 @@ ms.locfileid: "51018957"
   
 -   **MultiPolygon** を構成するすべてのインスタンスは、許容される **Polygon** インスタンスです。 許容される **Polygon** インスタンスの詳細については、「 [Polygon](../../relational-databases/spatial/polygon.md)」を参照してください。  
   
- 次の例に、許容される **MultiPolygon** インスタンスを示します。  
+次の例に、許容される **MultiPolygon** インスタンスを示します。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 ```  
   
- 次の例に、 `System.FormatException`をスローする MultiPolygon インスタンスを示します。  
+次の例に、 `System.FormatException`をスローする MultiPolygon インスタンスを示します。  
   
-```  
+```sql  
 DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3)))';  
 ```  
   
- MultiPolygon の 2 番目のインスタンスは LineString インスタンスであり、許容される Polygon インスタンスではありません。  
+MultiPolygon の 2 番目のインスタンスは LineString インスタンスであり、許容される Polygon インスタンスではありません。  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
  **MultiPolygon** インスタンスは、空の **MultiPolygon** インスタンスであるか、次の条件を満たす場合に有効です。  
@@ -66,29 +66,31 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
   
 2.  **MultiPolygon** インスタンスを構成する **Polygon** インスタンスは重複しません。  
   
- 次に、2 つの有効な **MultiPolygon** インスタンスと 1 つの無効な **MultiPolygon** インスタンスの例を示します。  
+次に、2 つの有効な **MultiPolygon** インスタンスと 1 つの無効な **MultiPolygon** インスタンスの例を示します。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` は、2 つの **Polygon** インスタンスが 1 つの接点のみで接しているため有効です。 `@g3` は、2 つの **Polygon** インスタンスの内部が互いに重なっているため無効です。  
+`@g2` は、2 つの **Polygon** インスタンスが 1 つの接点のみで接しているため有効です。 `@g3` は、2 つの **Polygon** インスタンスの内部が互いに重なっているため無効です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、 `geometry``MultiPolygon` インスタンスを作成し、2 つ目の構成要素の Well-Known Text (WKT) を返します。  
+### <a name="example-a"></a>例 A。
+次の例では、 `geometry``MultiPolygon` インスタンスを作成し、2 つ目の構成要素の Well-Known Text (WKT) を返します。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON(((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1)), ((9 9, 9 10, 10 9, 9 9)))');  
 SELECT @g.STGeometryN(2).STAsText();  
 ```  
   
- 次の例では、空の `MultiPolygon` インスタンスを作成します。  
+## <a name="example-b"></a>例 B。
+次の例では、空の `MultiPolygon` インスタンスを作成します。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - partitioned indexes [SQL Server], about partitioned indexes
 - index partitions
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11f2ad440e817c62a8efa67ba421351b9db93ff9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5cac151a3c3192c03f915c95eb0ac228ad2d8c05
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662428"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414177"
 ---
 # <a name="partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "51662428"
 -   [SQL Server 2008 を使用したパーティション テーブルとパーティション インデックス](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
 -   [自動スライディング ウィンドウを実装する方法](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
 -   [パーティション テーブルの一括読み込み](https://msdn.microsoft.com/library/cc966380.aspx)    
--   [プロジェクト REAL: データ ライフ サイクル - パーティション分割](https://technet.microsoft.com/library/cc966424.aspx)    
+-   [プロジェクト REAL:データ ライフ サイクル -- パーティション分割](https://technet.microsoft.com/library/cc966424.aspx)    
 -   [パーティション テーブルとパーティション インデックスに対するクエリ処理の機能強化](https://msdn.microsoft.com/library/ms345599.aspx)    
 -   [大規模なリレーショナル データ ウェアハウスを構築するためのトップ 10 のベスト プラクティス](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
   

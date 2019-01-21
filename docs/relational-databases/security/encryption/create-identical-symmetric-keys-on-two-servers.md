@@ -1,7 +1,7 @@
 ---
 title: 2 台のサーバーでの同じ対称キーの作成 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,51 +13,41 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 525c9fc853a3ba4696e4e9aac5df6ac2776fc943
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2f8de3783e7d169e1458170d10db61ad9ac680a
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844600"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997564"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>2 台のサーバーでの同じ対称キーの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]で 2 台のサーバーに同じ対称キーを作成する方法について説明します。 暗号化テキストの暗号化を解除するには、暗号化に使用したキーが必要です。 1 つのデータベースで暗号化と暗号化解除の両方が行われる場合、データベースに格納されているキーを、権限に応じて暗号化と暗号化解除の両方に使用できます。 一方、暗号化と暗号化解除が別々のデータベースまたは別々のサーバーで行われる場合、一方のデータベースに格納されているキーを他方のデータベースで使用することはできません。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]で 2 台のサーバーに同じ対称キーを作成する方法について説明します。 暗号化テキストの暗号化を解除するには、暗号化に使用したキーが必要です。 1 つのデータベースで暗号化と暗号化解除の両方が行われる場合、データベースに格納されているキーを、権限に応じて暗号化と暗号化解除の両方に使用できます。 一方、暗号化と暗号化解除が別々のデータベースまたは別々のサーバーで行われる場合、一方のデータベースに格納されているキーを他方のデータベースで使用することはできません。
   
- **このトピックの内容**  
+## <a name="before-you-begin"></a>はじめに  
   
--   **作業を開始する準備:**  
+### <a name="limitations-and-restrictions"></a>制限事項と制約事項  
   
-     [制限事項と制約事項](#Restrictions)  
+- 対称キーを作成するときには、証明書、パスワード、対称キー、非対称キー、PROVIDER のうち少なくとも 1 つを使用して対称キーを暗号化する必要があります。 キーには種類ごとの暗号化を複数指定できます。 つまり、1 つの対称キーを、複数の証明書、パスワード、対称キー、および非対称キーを使用して同時に暗号化できます。  
   
-     [Security](#Security)  
+- データベースのマスター キーの公開キーではなく、パスワードを使用して対称キーを暗号化する場合は、TRIPLE DES 暗号化アルゴリズムが使用されます。 このため、AES など、強力な暗号化アルゴリズムで作成されたキーでも、キー自身はそれより弱いアルゴリズムで保護されます。  
   
--   [Transact-SQL を使用して、2 台のサーバーに同じ対称キーを作成するには](#TsqlProcedure)  
+## <a name="security"></a>Security  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
-  
-###  <a name="Restrictions"></a> 制限事項と制約事項  
-  
--   対称キーを作成するときには、証明書、パスワード、対称キー、非対称キー、PROVIDER のうち少なくとも 1 つを使用して対称キーを暗号化する必要があります。 キーには種類ごとの暗号化を複数指定できます。 つまり、1 つの対称キーを、複数の証明書、パスワード、対称キー、および非対称キーを使用して同時に暗号化できます。  
-  
--   データベースのマスター キーの公開キーではなく、パスワードを使用して対称キーを暗号化する場合は、TRIPLE DES 暗号化アルゴリズムが使用されます。 このため、AES など、強力な暗号化アルゴリズムで作成されたキーでも、キー自身はそれより弱いアルゴリズムで保護されます。  
-  
-###  <a name="Security"></a> セキュリティ  
-  
-####  <a name="Permissions"></a> Permissions  
+### <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY SYMMETRIC KEY 権限が必要です。 AUTHORIZATION を指定する場合は、データベース ユーザーに対する IMPERSONATE 権限、またはアプリケーション ロールに対する ALTER 権限が必要です。 証明書または非対称キーを使用して暗号化する場合は、証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。 対称キーを所有できるのは、Windows ログイン、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン、およびアプリケーション ロールだけです。 グループとロールは対称キーを所有できません。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+## <a name="using-transact-sql"></a>Transact-SQL の使用  
   
-#### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>2 台のサーバーに同じ対称キーを作成するには  
+### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>2 台のサーバーに同じ対称キーを作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+1. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+2. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の CREATE MASTER KEY、CREATE CERTIFICATE、および CREATE SYMMETRIC KEY ステートメントを実行して、キーを作成します。  
+3. 次の CREATE MASTER KEY、CREATE CERTIFICATE、および CREATE SYMMETRIC KEY ステートメントを実行して、キーを作成します。  
   
-    ```  
+    ```sql
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'My p@55w0Rd';  
     GO  
     CREATE CERTIFICATE [cert_keyProtection] WITH SUBJECT = 'Key Protection';  
@@ -70,11 +60,11 @@ ms.locfileid: "47844600"
     GO  
     ```  
   
-4.  別のサーバー インスタンスに接続し、別のクエリ ウィンドウを開き、前述の SQL ステートメントを実行して、そのサーバーに同じキーを作成します。  
+4. 別のサーバー インスタンスに接続し、別のクエリ ウィンドウを開き、前述の SQL ステートメントを実行して、そのサーバーに同じキーを作成します。  
   
-5.  最初のサーバーで次の OPEN SYMMETRIC KEY ステートメントと SELECT ステートメントを実行して、キーをテストします。  
+5. 最初のサーバーで次の OPEN SYMMETRIC KEY ステートメントと SELECT ステートメントを実行して、キーをテストします。  
   
-    ```  
+    ```sql
     OPEN SYMMETRIC KEY [key_DataShare]   
         DECRYPTION BY CERTIFICATE cert_keyProtection;  
     GO  
@@ -83,9 +73,9 @@ ms.locfileid: "47844600"
     -- For example, the output might look like this: 0x2152F8DA8A500A9EDC2FAE26D15C302DA70D25563DAE7D5D1102E3056CE9EF95CA3E7289F7F4D0523ED0376B155FE9C3  
     ```  
   
-6.  他方のサーバーで、上の SELECT ステートメントの結果を次のコードの `@blob` 値として貼り付け、次のコードを実行して、このキーで暗号化テキストの暗号化を解除できることを確認します。  
+6. 他方のサーバーで、上の SELECT ステートメントの結果を次のコードの `@blob` 値として貼り付け、次のコードを実行して、このキーで暗号化テキストの暗号化を解除できることを確認します。  
   
-    ```  
+    ```sql
     OPEN SYMMETRIC KEY [key_DataShare]   
         DECRYPTION BY CERTIFICATE cert_keyProtection;  
     GO  
@@ -94,9 +84,9 @@ ms.locfileid: "47844600"
     GO  
     ```  
   
-7.  両方のサーバーで対称キーを終了します。  
+7. 両方のサーバーで対称キーを終了します。  
   
-    ```  
+    ```sql
     CLOSE SYMMETRIC KEY [key_DataShare];  
     GO  
     ```  
@@ -114,5 +104,3 @@ ms.locfileid: "47844600"
 -   [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../../t-sql/functions/decryptbykey-transact-sql.md)  
   
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
-  
-  

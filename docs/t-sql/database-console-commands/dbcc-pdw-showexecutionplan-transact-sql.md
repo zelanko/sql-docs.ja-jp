@@ -12,19 +12,19 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 532a19a4fca82e200b9499672cf48f736cfd3f4b
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: d69a9393c990c16357287ac31433780c3b7e27a4
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226324"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979838"
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 特定の [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 計算ノードまたは制御ノードで実行されているクエリの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行プランを表示します。 クエリの計算ノードと管理 ノードで実行中に、クエリ パフォーマンスの問題のトラブルシューティングを行うには、これを使用します。
   
-SMP のクエリ パフォーマンスの問題が認識されたら [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、コンピューティング ノードで実行されているクエリのパフォーマンスを向上させるためにいくつかの方法があります。 複数列統計を作成する、非クラスター化インデックスを作成する、またはクエリ ヒントを使用してコンピューティング ノードでのクエリのパフォーマンスを向上させる方法が含まれます。
+計算ノードで実行されている SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリについて、クエリのパフォーマンスに問題があることがわかった場合、パフォーマンスを向上する方法がいくつかあります。 複数列統計を作成する、非クラスター化インデックスを作成する、またはクエリ ヒントを使用してコンピューティング ノードでのクエリのパフォーマンスを向上させる方法が含まれます。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -89,7 +89,7 @@ AND pdw_node_id = 201001
 order by request_id, [dms_step_index], [distribution_id];  
 ```  
   
-上記のクエリの結果に基づき、DBCC PDW_SHOWEXEUCTIONPLAN へのパラメーターとして、sql_spid と pdw_node_id を使用します。 たとえば、次のコマンドでは、pdw_node_id 201001 と sql_spid 375 の実行プランが表示されます。
+上記のクエリの結果に基づき、DBCC PDW_SHOWEXECUTIONPLAN へのパラメーターとして、sql_spid と pdw_node_id を使用します。 たとえば、次のコマンドでは、pdw_node_id 201001 と sql_spid 375 の実行プランが表示されます。
   
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );  

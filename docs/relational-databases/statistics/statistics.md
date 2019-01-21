@@ -20,16 +20,16 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e7ddca2a5f33e26cb60a9e45068fcaacc10a294
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 302ad4ce50e3e1bd1b63bd734dcdc4e88cb83fdc
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506568"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380733"
 ---
 # <a name="statistics"></a>統計
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "52506568"
 
 具体的には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、次の 3 つの区間で、並べ替えられた列値のセットから**ヒストグラム**を作成します。
 
-- **ヒストグラムの初期化**: 最初の区間で、並べ替えられたセットの先頭から始まる値のシーケンスが処理され、*range_high_key*、*equal_rows*、*range_rows*、*distinct_range_rows* の最大 200 個の値が収集されます (この区間の間、*range_rows* と *distinct_range_rows* は常にゼロです)。 最初の手順は、すべての入力が使用されたとき、または 200 個の値が見つかったときに終了します。 
-- **バケットのマージを使用したスキャン**: 2 つ目の手順では、統計キーの先頭の列から追加された各値が並び順で処理されます。連続する各値は最後の範囲に追加されるか、末尾に新しい範囲が作成されます (これは、入力値が並べ替えられているため可能です。)。 新しい範囲が作成されると、既存の隣接する範囲の 1 組が 1 つの範囲に折りたたまれます。 情報の損失を最小限に抑えるために、この範囲の組が選択されます。 この方法では、*区間幅を最大にする*アルゴリズムを使用して境界値の差を最大にし、ヒストグラムの区間の数を最小限に抑えます。 範囲を折りたたんだ後の区間の数は、この区間全体で 200 のままです。
-- **ヒストグラムの統合**: 3 番目の区間では、失われる情報の量が少なければ、より多くの範囲が折りたたまれる可能性があります。 ヒストグラムの区間の数は、境界点が 200 より少ない列でも、個別の値の数より少なくなることがあります。 そのため、列に 200 を超える一意の値が含まれていても、ヒストグラムの区間の数は 200 未満となることがあります。 一意の値のみで構成される列の場合、統合されたヒストグラムには最小で 3 つの区間が存在します。
+- **ヒストグラムの初期化**:最初の区間で、並べ替えられたセットの先頭から始まる値のシーケンスが処理され、*range_high_key*、*equal_rows*、*range_rows*、*distinct_range_rows* の最大 200 個の値が収集されます (この区間の間、*range_rows* と *distinct_range_rows* は常にゼロです)。 最初の区間は、すべての入力が使用されたとき、または 200 個の値が見つかったときに終了します。 
+- **バケットのマージを使用したスキャン**:2 つ目の手順では、統計キーの先頭の列から追加された各値が並び順で処理されます。連続する各値は最後の範囲に追加されるか、末尾に新しい範囲が作成されます (これは、入力値が並べ替えられているため可能です)。 新しい範囲が作成されると、既存の隣接する範囲の 1 組が 1 つの範囲に折りたたまれます。 情報の損失を最小限に抑えるために、この範囲の組が選択されます。 この方法では、*区間幅を最大にする*アルゴリズムを使用して境界値の差を最大にし、ヒストグラムの区間の数を最小限に抑えます。 範囲を折りたたんだ後の手順の数は、この手順全体で 200 個のままです。
+- **ヒストグラムの統合**:3 番目の区間では、失われる情報の量が少なければ、より多くの範囲が折りたたまれる可能性があります。 ヒストグラムの区間の数は、境界点が 200 より少ない列でも、個別の値の数より少なくなることがあります。 そのため、列に 200 を超える一意の値が含まれていても、ヒストグラムの区間の数は 200 未満となることがあります。 一意の値のみで構成される列の場合、統合されたヒストグラムには最小で 3 つの区間が存在します。
 
 > [!NOTE]
 > fullscan ではなくサンプルを使用してヒストグラムが作成されている場合、*equal_rows*、*range_rows*、*distinct_range_rows*、*average_range_rows* の値は推定されます。そのため、これらの値は整数である必要はありません。
@@ -200,7 +200,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>データのサブセットから選択するクエリを使用する  
 クエリ オプティマイザーでは、1 列ずつおよびインデックスに対して統計を作成する際、すべての行の値に対する統計を作成します。 行のサブセットから選択するクエリの場合、その行のサブセットのデータ分布が一意であれば、フィルター選択された統計情報を使用することでクエリ プランを向上させることができます。 フィルター選択された統計情報は、[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) ステートメントを [WHERE](../../t-sql/queries/where-transact-sql.md) 句と共に使用してフィルター述語の式を定義することで作成できます。  
   
-たとえば、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] を使用する場合、`Production.Product` テーブルの各製品は、`Production.ProductCategory` テーブルの 4 つのカテゴリ (Bikes、Components、Clothing、および Accessories) のいずれかに属しています。 各カテゴリでは、重量に関するデータ分布が異なります。自転車の重量は 13.77 ～ 30.0、部品の重量は 2.12 ～ 1050.00 (一部 NULL 値)、衣類の重量はすべて NULL、付属品の重量も NULL です。  
+たとえば、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] を使用する場合、`Production.Product` テーブルの各製品は、`Production.ProductCategory` テーブルの次の 4 つのカテゴリのいずれかに属しています:Bikes、Components、Clothing、Accessories。 各カテゴリでは、重量に関するデータ分布が異なります。自転車の重量は 13.77 ～ 30.0、部品の重量は 2.12 ～ 1050.00 (一部 NULL 値)、衣類の重量はすべて NULL、付属品の重量も NULL です。  
   
 たとえば Bikes の場合、自転車のすべての重量についてのフィルター選択された統計情報を使用すると、テーブル全体の統計情報を使用する場合や、Weight 列の統計情報が存在しない場合と比べて、より正確な統計情報がクエリ オプティマイザーに提供され、クエリ プランの品質が向上します。 自転車の重量の列は、フィルター選択された統計情報には適していますが、重量の参照が比較的少ない場合、フィルター選択されたインデックスには必ずしも適しているとは限りません。 フィルター選択されたインデックスを使用することで得られる参照のパフォーマンスの向上よりも、フィルター選択されたインデックスをデータベースに追加するためのメンテナンス コストとストレージ コストの増加の方が大きい場合があります。  
   

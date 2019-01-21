@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: cbede7141154147bbb714d00d794d4b8af7cf8e0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0fc010c3b02bfbe5e2c5fabb1f8e6313144d7efa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696404"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979379"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -87,13 +87,13 @@ ADD SENSITIVITY CLASSIFICATION TO
 ## <a name="remarks"></a>Remarks  
 
 - 1 つのオブジェクトには分類を 1 つだけ追加できます。 分類済みのオブジェクトに分類を追加すると、既存の分類が上書きされます。
-- 1 つの `ADD SENSITIVITY CLASSIFICTION` ステートメントを使用して複数のオブジェクトを分類できます。
+- 1 つの `ADD SENSITIVITY CLASSIFICATION` ステートメントを使用して複数のオブジェクトを分類できます。
 - システム ビュー [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) を使用すると、データベースの秘密度の分類に関する情報を取得できます。
 
 
 ## <a name="permissions"></a>アクセス許可
 
-ALTER ANY SENSITIVITY CLASSIFICATION 権限が必要です。 ALTER ANY SENSITIVITY CLASSIFACTION は、データベース権限 ALTER またはサーバー権限 CONTROL SERVER によって示されます。
+ALTER ANY SENSITIVITY CLASSIFICATION 権限が必要です。 ALTER ANY SENSITIVITY CLASSIFICATION は、データベース権限 ALTER またはサーバー権限 CONTROL SERVER によって示されます。
 
 
 ## <a name="examples"></a>使用例  
@@ -119,7 +119,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 ## <a name="see-also"></a>参照  
 
-[DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 

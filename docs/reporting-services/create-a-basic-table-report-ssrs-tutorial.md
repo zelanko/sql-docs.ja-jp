@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 426648f277ad5134a38dfa9cc7fb6948db6f918a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 54a2d32ea942505861074af8ec27d5dbbc59e4ac
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031641"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591416"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>基本的なテーブル レポートの作成 (SSRS チュートリアル)
 
@@ -41,17 +41,17 @@ ms.locfileid: "50031641"
 **このチュートリアルの推定所要時間:** 30 分。
   
 ## <a name="tasks"></a>処理手順  
-[レッスン 1: レポート サーバー プロジェクトの作成 (Reporting Services)](../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md)  
+[レッスン 1:レポート サーバー プロジェクトの作成 &#40;Reporting Services&#41;](../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md)  
   
-[レッスン 2: 接続情報の指定 (Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)  
+[レッスン 2:接続情報の指定 &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)  
   
-[レッスン 3: テーブル レポートのデータセットの定義 (Reporting Services)](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
+[レッスン 3:テーブル レポートのデータセットの定義 &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
   
-[レッスン 4: レポートへのテーブルの追加 (Reporting Services)](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md)  
+[レッスン 4:レポートへのテーブルの追加 &#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md)  
   
-[レッスン 5: レポートの書式設定 (Reporting Services)](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)  
+[レッスン 5:レポートの書式設定 &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)  
   
-[レッスン 6: グループと合計の追加 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)  
+[レッスン 6:グループと合計の追加 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)  
 
 ## <a name="next-steps"></a>次の手順
 

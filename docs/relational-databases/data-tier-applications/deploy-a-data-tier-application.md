@@ -22,15 +22,15 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58fa8d8009806f22153a22d63ea83b238140d431
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 204aa0ea696e45fa756360df790cdf983066260f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517442"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590976"
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   ウィザードまたは PowerShell スクリプトを使用して、データ層アプリケーション (DAC) パッケージからデータベース エンジンまたは Azure SQL Database の既存のインスタンスに DAC を配置できます。 
   
  配置プロセスでは、**msdb** システム データベース ([!INCLUDE[ssSDS](../../includes/sssds-md.md)] では **master** データベース) に DAC 定義を格納することで DAC インスタンスを登録し、データベースを作成して、DAC で定義されたすべてのデータベース オブジェクトをそのデータベースに設定します。  
@@ -39,8 +39,7 @@ ms.locfileid: "52517442"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>同じ DAC パッケージを複数回配置する 
  同じ DAC パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] の単一のインスタンスに複数回配置することはできますが、配置は一度に 1 つずつ実行する必要があります。 各配置に指定される DAC インスタンス名は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンス内で一意である必要があります。  
   
-## <a name="managed-instances"></a>マネージド インスタンス  
- データベース エンジンのマネージド インスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに **SQL Server ユーティリティ**に組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  
+ データベース エンジンのインスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに **SQL Server ユーティリティ**に組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  
   
 ###  <a name="database-options-and-settings"></a>データベースのオプションと設定  
  既定では、配置中に作成されたデータベースには、CREATE DATABASE ステートメントによる既定の設定すべてが適用されます。ただし、次の設定は除きます。  

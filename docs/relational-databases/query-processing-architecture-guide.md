@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542521"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591886"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ GO
 * 実行プランは頻繁に参照されるため、そのコストがゼロになることはありません。 メモリ負荷が存在せず、現在のコストがゼロでない場合、実行プランはプラン キャッシュに残り、削除されません。
 * アドホック実行プランは挿入され、メモリ負荷が生じるまでは再度参照されることはありません。 アドホック実行プランは、現在のコストがゼロで初期化されます。そのため、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は実行プランを検証するときに現在のコストがゼロであると認識し、プラン キャッシュから実行プランを削除します。 メモリ負荷が存在しない場合、アドホック実行プランは、現在のコストがゼロでプラン キャッシュに残ります。
 
-キャッシュから 1 つまたはすべてのプランを手動で削除するには、 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)を使用します。
+キャッシュから 1 つまたはすべてのプランを手動で削除するには、 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)を使用します。 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降は、`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` を使用してスコープ内のデータベースのプロシージャ (プラン) キャッシュをクリアします。
 
 ### <a name="recompiling-execution-plans"></a>実行プランの再コンパイル
 
@@ -572,7 +572,7 @@ WHERE ProductSubcategoryID = 4;
 パラメーター化は個々の Transact-SQL ステートメント レベルで行われます。 つまり、バッチ内では個々のステートメントがパラメーター化されます。 コンパイルの後、パラメーター化クエリは、最初に送信されたバッチのコンテキストで実行されます。 クエリの実行プランがキャッシュに残っている場合、sys.syscacheobjects 動的管理ビューの sql 列を参照することでクエリがパラメーター化されているかどうかを判断できます。 クエリがパラメーター化されている場合、この列には送信されたバッチのテキストの前に "\@1 tinyint" のように、パラメーターの名前とデータ型が付加されます。
 
 > [!NOTE]
-> パラメーター名の規則はありません。 特定の命名順序に依存することは避けてください。 また、パラメーター名、パラメーター化されるリテラル、およびパラメーター化されたテキストに含まれるスペースは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバージョンおよび Service Pack の適用状況によって異なります。
+> パラメーター名の規則はありません。 特定の命名順序に依存することは避けてください。 また、次のものは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバージョンおよび Service Pack の適用状況によって異なる場合があります:パラメーター名、パラメーター化されるリテラル、およびパラメーター化されたテキストに含まれるスペース。
 
 #### <a name="data-types-of-parameters"></a>パラメーターのデータ型
 
@@ -1025,10 +1025,10 @@ XML プラン表示出力では、 `SeekPredicateNew` 要素がその要素を�
 
 |列 A に基づいたテーブル パーティション |各テーブル パーティションにおける列 B の検索 |
 |----|----|
-|テーブル パーティション 1: A < 10   |B=50、B=100、B=150 |
-|テーブル パーティション 2: A >= 10 AND A < 20   |B=50、B=100、B=150 |
-|テーブル パーティション 3: A >= 20 AND A < 30   |B=50、B=100、B=150 |
-|テーブル パーティション 4: A >= 30  |B=50、B=100、B=150 |
+|テーブル パーティション 1:A < 10   |B=50、B=100、B=150 |
+|テーブル パーティション 2:A >= 10 AND A < 20   |B=50、B=100、B=150 |
+|テーブル パーティション 3:A >= 20 AND A < 30   |B=50、B=100、B=150 |
+|テーブル パーティション 4:A >= 30  |B=50、B=100、B=150 |
 
 ### <a name="best-practices"></a>ベスト プラクティス
 

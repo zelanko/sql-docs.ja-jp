@@ -10,26 +10,26 @@ helpviewer_keywords:
 - Resource Governor, workload group create
 - workload groups [SQL Server], create
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 47d64b30c14f81b96615167fd48401af45435165
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38ac3547e077197572f1db0c5759bb02f6f5bb01
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686840"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380713"
 ---
 # <a name="create-a-workload-group"></a>ワークロード グループの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ワークロード グループを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **ワークロード グループの作成に使用するもの:** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   **ワークロード グループの作成に使用するもの:**[SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
@@ -77,7 +77,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
+ [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [リソース プールの作成](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [ワークロード グループの設定の変更](../../relational-databases/resource-governor/change-workload-group-settings.md)   

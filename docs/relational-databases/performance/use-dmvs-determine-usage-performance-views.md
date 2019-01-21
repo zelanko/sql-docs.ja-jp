@@ -2,19 +2,19 @@
 title: DMV を使用してビューの使用統計とパフォーマンスを確認する
 description: DMV を使用してビューの使用統計とパフォーマンスを確認する
 manager: craigg
-author: MashaMSFT
-ms.author: mathoma
+author: julieMSFT
+ms.author: jrasnick
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586315"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380663"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>DMV を使用してビューの使用統計とパフォーマンスを確認する
 この記事では、**ビューを使用するクエリのパフォーマンス**に関する情報を取得するために使用する方法とスクリプトについて説明します。 これらのスクリプトの目的は、データベース内のさまざまなビューの使用とパフォーマンスのインジケーターを提供することです。 
@@ -194,10 +194,4 @@ GO
 ```
 
 ## <a name="see-also"></a>参照
-[動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[パフォーマンス チューニングのための DMV (動画 - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)   
-[パフォーマンス チューニングのための DMV (スライドとデモ - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)   
-[カプセル形式での SQL Server チューニング (動画 - SQL Saturday Parma)](https://vimeo.com/200980883)    
-[SQL Server のチューニングの概要 (スライドとデモ - SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)   
-[SQL Server 動的管理ビューでのパフォーマンス チューニング](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)   
-[SQL Server 2016 の最も顕著な待機の種類](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)   
+[動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 

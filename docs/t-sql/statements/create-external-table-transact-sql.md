@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e7d0e18e67720b301f97cc212f7b3b5de0d08e29
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402817"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980538"
 ---
 # <a name="create-external-table-transact-sql"></a>外部テーブル (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "52402817"
   
  外部テーブルを使用します。  
   
--   Hadoop または Azure の blob ストレージ データをクエリ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、Hadoop または Azure Blob Storage データをクエリします。  
   
--   インポートおよびに Hadoop または Azure の blob ストレージからデータを格納、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。  
+-   Hadoop または Azure Blob Storage からデータをインポートして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納します。  
   
 -   弾力性のあるデータベースで使用するため、外部テーブルを作成します。  
      クエリ。  
@@ -255,8 +255,8 @@ REJECTED_ROW_LOCATION = *<ディレクトリの場所>*
  外部データ ソースを作成したログインに注意してください Hadoop または Azure blob ストレージにある、外部データ ソースを読み書きするアクセス許可が必要です。  
 
 
- > [!IMPORTANT]  
-
+> [!IMPORTANT]
+> 
 >  ALTER ANY EXTERNAL DATA SOURCE 権限は、あらゆる外部データ ソース オブジェクトを作成し、変更する能力をプリンシパルに与えます。そのため、データベース上のすべてのデータベース スコープ資格情報にアクセスする能力も与えます。 この権限は特権として考える必要があります。したがって、システム内の信頼できるプリンシパルにのみ与える必要があります。
 
 ## <a name="error-handling"></a>エラー処理  
@@ -274,7 +274,7 @@ REJECTED_ROW_LOCATION = *<ディレクトリの場所>*
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  CTP2 では、エクスポート機能はサポートされていません、つまり完全に SQL データを外部データ ソースに格納します。 この機能は、CTP3 で使用されます。  
   
- アプライアンス オフ、外部テーブルのデータが存在するため、PolyBase の管理されていないと変更またはの外部プロセスによっていつでも削除です。 このため、外部のテーブルに対して uery 結果は決定的である保証はありません。 同じクエリでは、外部のテーブルに対して実行するたびに異なる結果を返すことができます。 同様に、外部のデータが削除されるか、再配置する場合に、クエリが失敗することができます。  
+ アプライアンス オフ、外部テーブルのデータが存在するため、PolyBase の管理されていないと変更またはの外部プロセスによっていつでも削除です。 このため、外部のテーブルに対してクエリ結果は決定的である保証はありません。 同じクエリでは、外部のテーブルに対して実行するたびに異なる結果を返すことができます。 同様に、外部のデータが削除されるか、再配置する場合に、クエリが失敗することができます。  
   
  さまざまな外部データ ソースを参照して各いる複数の外部テーブルを作成することができます。 ただし、さまざまな Hadoop のデータ ソースに対してクエリを同時に実行すると、各 Hadoop ソース必要があります同じ 'hadoop 接続' サーバーの構成設定を使用します。 たとえば、ことはできません同時にクエリを実行する Cloudera Hadoop クラスターと Hortonworks の Hadoop クラスターに対してこれらさまざまな構成設定を使用するためです。 構成設定とサポートされる組み合わせについては、「[PolyBase 接続構成 &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)」を参照してください。  
   
@@ -283,7 +283,7 @@ REJECTED_ROW_LOCATION = *<ディレクトリの場所>*
 -   CREATE TABLE、および DROP TABLE  
   
 -   統計の作成と DROP STATISTICS  
-注: Azure SQL Database では、外部テーブルの CREATE と DROP STATISTICS はサポートされていません。 
+注:Azure SQL Database では、外部テーブルの CREATE と DROP STATISTICS はサポートされていません。 
   
 -   ビューの作成、および DROP VIEW  
   
@@ -297,7 +297,7 @@ REJECTED_ROW_LOCATION = *<ディレクトリの場所>*
   
  PolyBase は 32 の同時実行 PolyBase クエリを実行している場合、最大で 1 つのフォルダーの 33 k ファイルを使用できます。 この最大数には、各 HDFS フォルダー内のファイルとサブフォルダーの両方が含まれます。 コンカレンシーの程度が 32 未満である場合は、ユーザーは、複数の 33 k ファイルが含まれている HDFS のフォルダーに対して PolyBase クエリを実行できます。 短い外部ファイルのパスを維持して、1 つの HDFS フォルダー 30 個を超える k ファイルを使用することをお勧めします。 ファイルが多すぎますが参照されるときに、Java 仮想マシン (JVM) のメモリ不足の例外が発生する可能性があります。  
 
-テーブルの幅の制限: SQL Server 2016 の PolyBase には、テーブル定義により、有効な 1 つの行の最大サイズに基づく 32 KB の行の幅の制限があります。 列のスキーマの合計が 32 KB を超えると、PolyBase はデータをクエリできなくなります。 
+テーブルの幅の制限:SQL Server 2016 の PolyBase には、テーブル定義により、有効な 1 つの行の最大サイズに基づく 32 KB の行の幅の制限があります。 列のスキーマの合計が 32 KB を超えると、PolyBase はデータをクエリできなくなります。 
 
 SQL Data Warehouse では、この制限が 1 MB に増えます。
 
@@ -406,7 +406,7 @@ WITH (
 ```  
   
 ### <a name="d-querying-hadoop-data"></a>D. Hadoop のデータを照会します。  
- クリック ストリームは、Hadoop クラスター上の employee.tbl 区切りテキスト ファイルに接続する外部テーブルです。 次のクエリでは、標準のテーブルに対するクエリと同じように検索します。 ただし、このクエリでは、Hadoop からデータを取得し、、restuls を計算します。  
+ クリック ストリームは、Hadoop クラスター上の employee.tbl 区切りテキスト ファイルに接続する外部テーブルです。 次のクエリでは、標準のテーブルに対するクエリと同じように検索します。 ただし、このクエリでは Hadoop からデータを取得し、restuls を計算します。  
   
 ```  
 SELECT TOP 10 (url) FROM ClickStream WHERE user_ip = 'xxx.xxx.xxx.xxx'  

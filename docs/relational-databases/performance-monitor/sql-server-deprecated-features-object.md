@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fcb107c5ae7a22fa2705fda0580e0284940f694
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523343"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380693"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|非推奨の sys.numbered_procedure_parameters への参照が見つかりました。 使用しないでください。 コンパイルごとに 1 回発生します。|  
 |numbered_procedures|非推奨の sys.numbered_procedures への参照が見つかりました。 使用しないでください。 コンパイルごとに 1 回発生します。|  
-|Oldstyle RAISEERROR|非推奨の RAISERROR (形式 : RAISERROR 整数文字列) 構文が見つかりました。 現在の RAISERROR 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
+|Oldstyle RAISEERROR|非推奨の RAISERROR (形式:RAISERROR 整数文字列) 構文が見つかりました。 現在の RAISERROR 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |アドホック接続の OLEDB|SQLOLEDB はサポートされないプロバイダーです。 アドホック接続には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用してください。|  
 |PERMISSIONS|PERMISSIONS 組み込み関数への参照が見つかりました。 代わりに sys.fn_my_permissions をクエリしてください。 クエリごとに 1 回発生します。|  
 |ProcNums|非推奨の ProcNums 構文が見つかりました。 参照を削除してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  

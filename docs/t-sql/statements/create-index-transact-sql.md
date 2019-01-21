@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 679eb8412f4633af845efc7c5520c351f9749822
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 55f5056f65daa3c9f52809087f4cf6773d708910
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518330"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980508"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -301,9 +301,12 @@ ON *partition_scheme_name* **( *column_name* )**
  ON **"** default **"**  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)]。  
   
- 既定のファイル グループに、指定したインデックスを作成します。  
+ テーブルまたはビューと同じファイルグループまたはパーティション スキームに対して、指定されたインデックスを作成します。  
   
- この文脈での default という語はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"** default **"** または ON **[** default **]** のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+ この文脈での default という語はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"** default **"** または ON **[** default **]** のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。
+ 
+> [!NOTE]  
+> "default" は、CREATE INDEX のコンテキストでは、データベースの既定のファイル グループを示していません。 これは、"default" でデータベースの既定のファイルグループに対してテーブルを検索する CREATE TABLE とは異なります。
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -452,7 +455,7 @@ DROP_EXISTING では、以下を変更できません。
 ONLINE = { ON | **OFF** }  
 インデックス操作時に、基になるテーブルや関連するインデックスをクエリやデータ変更で使用できるかどうかを指定します。 既定値は OFF です。  
   
-> [!NOTE]  
+> [!NOTE]
 > オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
  ON  
@@ -533,7 +536,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
-> [!NOTE]  
+> [!NOTE]
 > 並列インデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」および「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
   
  DATA_COMPRESSION  
@@ -557,11 +560,11 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* 
   
  \<partition_number_expression> は以下の方法で指定できます。  
   
--   ON PARTITIONS (2) などのように、1 つのパーティションの番号を指定します。  
--   ON PARTITIONS (1, 5) などのように、複数のパーティションのパーティション番号をコンマで区切って指定します。  
--   ON PARTITIONS (2, 4, 6 TO 8) などのように、範囲と個別のパーティションの両方を指定します。  
+-   ON PARTITIONS (2) などのようにパーティション番号を指定しますON PARTITIONS (2)。  
+-   コンマで区切った複数の個別のパーティションのパーティション番号を提供します。たとえば次のとおりです。ON PARTITIONS (1, 5)。  
+-   範囲と個別のパーティションの両方を提供します。たとえば次のとおりです。ON PARTITIONS (2, 4, 6 TO 8)。  
   
- \<range> は、ON PARTITIONS (6 TO 8) などのように、パーティション番号を TO で区切って指定できます。  
+ \<範囲> はパーティション番号として、TO で区切って指定できます。たとえば次のとおりです。ON PARTITIONS (6 TO 8)。  
   
  さまざまなパーティションにさまざまな種類のデータ圧縮を設定するには、次のように DATA_COMPRESSION オプションを複数回指定します。  
  
@@ -635,7 +638,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  SET オプションが正しくないと、次の状態が発生する場合があります。  
   
 -   フィルター選択されたインデックスが作成されません。  
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)]によりエラーが生成され、インデックスのデータを変更していた INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントがロールバックされます。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりエラーが生成され、インデックスのデータを変更していた INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントがロールバックされます。  
 -   Transact-SQL ステートメントの実行プランで、クエリ オプティマイザーがインデックスを無視します。  
   
  フィルター選択されたインデックスについて詳しくは、「[フィルター選択されたインデックスの作成](../../relational-databases/indexes/create-filtered-indexes.md)」をご覧ください。  
@@ -659,8 +662,8 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  計算列のインデックスを作成するには、計算列が決定的で正確である必要があります。 ただし、PERSISTED プロパティを使用した場合、インデックス作成が可能となる計算列の種類は、次のようになります。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]、CLR 関数、およびユーザーによって決定的とマークされた CLR ユーザー定義型メソッドに基づく計算列  
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)]の定義によると決定的であるが、正確でない式に基づく計算列  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]、CLR 関数、およびユーザーによって決定的とマークされた CLR ユーザー定義型メソッドに基づく計算列。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]の定義によると決定的であるが、正確でない式に基づく計算列。  
   
  保存される計算列に対しては、前の「インデックス付きビューに必要な SET オプション」で示すように、次の SET オプションを設定する必要があります。  
   
@@ -792,7 +795,7 @@ INSERT INTO t1 VALUES (1, 0);
 ## <a name="version-notes"></a>バージョンに関するメモ  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、filegroup オプションおよび filestream オプションはサポートされません。  
   
-## <a name="examples-all-versions-uses-the-adventureworks-database"></a>例: すべてのバージョン。 AdventureWorks データベースを使用します。  
+## <a name="examples-all-versions-uses-the-adventureworks-database"></a>例 :すべてのバージョン。 AdventureWorks データベースを使用します。  
   
 ### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>A. 単純な非クラスター化行ストア インデックスを作成する  
  次の例では、`Purchasing.ProductVendor` テーブルの `VendorID` 列に非クラスター化インデックスを作成します。  
@@ -828,7 +831,7 @@ CREATE INDEX IX_FF ON dbo.FactFinance ( FinanceKey, DateKey, OrganizationKey DES
 WITH ( DROP_EXISTING = ON );  
  ```  
   
-## <a name="examples-sql-server-azure-sql-database"></a>例: SQL Server、Azure SQL Database  
+## <a name="examples-sql-server-azure-sql-database"></a>例 :SQL Server、Azure SQL Database  
   
 ### <a name="e-create-a-unique-nonclustered-index"></a>E. 一意の非クラスター化インデックスを作成する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある `Name` テーブルの `Production.UnitMeasure` 列に一意の非クラスター化インデックスを作成します。 このインデックスでは、`Name` 列に挿入されるデータが一意である必要があります。  
@@ -1049,7 +1052,7 @@ CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABL
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
--- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
 CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
 
 -- Pause a running resumable online index creation 
@@ -1078,7 +1081,7 @@ CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
--- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
 CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
 
 -- Pause a running resumable online index creation 

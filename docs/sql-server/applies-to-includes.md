@@ -3,27 +3,27 @@ title: SQL Server ドキュメントのインクルード ファイル | Microso
 ms.custom: ''
 ms.date: 08/15/2018
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: database-engine
+ms.technology: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
+ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06d710e269ff4575bf7edb1c074de9421dad5c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cee54e6f49ffaf7e996cf593388ad22e8a7b44
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614760"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731959"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>バージョン管理と applies-to に関する SQL Server インクルード ファイル
 
-ドキュメント内の参照は、Markdown でインクルード ファイルを使用することにより、個々のアーティクルの実際のテキストを変更することなく簡単に変更できます。 SQL のコンテンツには、3 種類のインクルード ファイルがあります。SQL のバージョン、applies-to、および参照のテキストです。 **SQL バージョンのインクルード**は、SQL Server 2016 や 2017 など、説明している SQL のバージョンを示すために使用されます。 **applies-to のインクルード**は、SQL Server on Linux や Azure SQL Database など、ドキュメントで適用される SQL 製品とサービスを示します。 **参照のテキストのインクルード**は、他の 2 つのカテゴリに該当しないインクルードです。たとえば "Get Help" インクルード (顧客が SQL でのヘルプを参照するために使用できるリンクの一覧) などです。
+ドキュメント内の参照は、Markdown でインクルード ファイルを使用することにより、個々のアーティクルの実際のテキストを変更することなく簡単に変更できます。 SQL のコンテンツには、次の 3 種類のインクルード ファイルがあります:SQL のバージョン、applies-to、参照のテキスト。 **SQL Server のバージョン** インクルード ファイルは、SQL Server 2016 や 2017 など、説明している SQL のバージョンを示すために使用されます。 **applies-to** インクルード ファイルは、SQL Server on Linux や Azure SQL Database など、ドキュメントで適用される SQL 製品とサービスを示します。 **参照のテキスト** インクルード ファイルは、他の 2 つのカテゴリに該当しないインクルードです。たとえば "Get Help" インクルード (顧客が SQL Server でのヘルプを参照するために使用できるリンクの一覧) などです。
 
-この記事は、最初の 2 種類のインクルードに対する基準点を提供することのみが目的です。 インクルード ファイルの完全な一覧は、[sql-docs リポジトリ](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes)で参照できます。
+この記事は、最初の 2 種類のインクルード ファイルに対する基準点を提供することのみが目的です。 インクルード ファイルの完全な一覧は、[sql-docs リポジトリ](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes)で参照できます。
 
-## <a name="sql-server-version-includes"></a>SQL Server のバージョンのインクルード
+## <a name="sql-server-version-include-files"></a>SQL Server のバージョンのインクルード ファイル
 
 SQL のコンテンツの作成者は、製品名や SQL Server のバージョンを含める必要があることが頻繁にあります。 この方法では、名前に変更があると、各アーティクルごとに値を手動で更新する代わりに、インクルード ファイルが更新されます。 次のインクルード ファイルは製品名のプレースホルダーとして使用されますが、すべての SQL ドキュメントで一貫して使用されているわけではありません。 SQL Server vNext は、まだバージョン番号を持っておらず、これに対する例外となる SQL の将来のリリースを指します。  
 
@@ -41,9 +41,9 @@ SQL のコンテンツの作成者は、製品名や SQL Server のバージョ�
 | SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]` | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="sql-server-non-version-specific"></a>SQL Server (バージョン固有ではない)
+## <a name="sql-server-applies-to-non-version-specific"></a>SQL Server applies-to (バージョン固有ではない)
 
-次の applies-to インクルードでは SQL Server のバージョンが省略されています。
+次の applies-to インクルード ファイルでは、SQL Server のバージョンが省略されています。
 
 | [ファイル名]| Markdown の例 |image|
 | :-------------| :----------| :-------------------|
@@ -63,9 +63,9 @@ SQL のコンテンツの作成者は、製品名や SQL Server のバージョ�
 | appliesto-xx-xxxx-asdw-xxx-md.md | `[!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
  
-## <a name="sql-server-version-specific"></a>SQL Server (バージョン固有)
+## <a name="sql-server-applies-to-version-specific"></a>SQL Server applies-to (バージョン固有である)
 
-次の applies-to インクルードでは、ドキュメントを適用する SQL のバージョンが指定されます。
+次の applies-to インクルード ファイルでは、ドキュメントを適用する SQL のバージョンが指定されます。
 
  [ファイル名]| Markdown の例 |image|
 | :-------------| :----------| :-------------------|
@@ -107,9 +107,9 @@ SQL のコンテンツの作成者は、製品名や SQL Server のバージョ�
 | tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md | `[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="analysis-services"></a>Analysis Services
+## <a name="analysis-services-applies-to"></a>Analysis Services の applies-to
 
-次の applies-to インクルードは、Analysis Services のドキュメントで使用します。
+次の applies-to インクルード ファイルは、Analysis Services のドキュメントで使用します。
 
 | [ファイル名]| Markdown の例 |image|
 | :-------------| :----------| :-------------------|
@@ -124,9 +124,9 @@ SQL のコンテンツの作成者は、製品名や SQL Server のバージョ�
 | ssas-appliesto-sqlas-all-aas.md | `[!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)]` | [!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="reporting-services"></a>Reporting Services
+## <a name="reporting-services-applies-to"></a>Reporting Services の applies-to
 
-次の applies-to インクルードは、Reporting Services のドキュメントで使用します。
+次の applies-to インクルード ファイルは、Reporting Services のドキュメントで使用します。
 
 | [ファイル名]| Markdown の例 |image|
 | :-------------| :----------| :-------------------|

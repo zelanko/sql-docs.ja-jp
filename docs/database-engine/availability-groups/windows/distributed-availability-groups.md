@@ -1,6 +1,7 @@
 ---
-title: 分散型可用性グループ (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 分散型可用性グループとは
+description: 分散型可用性グループは、2 つの異なる可用性グループにまたがるもので、特殊な種類の可用性グループです。 分散型可用性グループに参加する可用性グループは、同じ場所に存在している必要はありません。
+ms.custom: seodec18
 ms.date: 07/31/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ebc3dfd0534deb313725ab646da26f770d0f99cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1aaf988a3b9a869aba5ef30c6aac739a6349c70e
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534448"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53381033"
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,9 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>分散型可用性グループに関する SQL Server のバージョンとエディションの要件
 
-現在、分散型可用性グループは、メジャー バージョンが同じ SQL Server で作成された可用性グループでのみ機能します。 たとえば、分散型可用性グループに参加するすべての可用性グループは、現在、SQL Server 2016 で作成されている必要があります。 SQL Server 2012 または 2014 には分散型可用性グループ機能が存在しなかったため、これらのバージョンで作成された可用性グループは、分散型可用性グループに参加できません。 
+SQL Server 2017 以降の分散型可用性グループでは、SQL Server の複数のメジャー バージョンを、同じ分散型可用性グループ内に混在させることができます。 読み取り/書き込みプライマリを含む AG は、同じバージョンでも、分散型 AG に参加している他の AR より低くてもかまいません。 他の AG は、同じバージョンか、それより高くてもかまいません。 このシナリオは、アップグレードおよび移行のシナリオを対象としたものです。 たとえば、読み取り/書き込みプライマリ レプリカを含む SQL Server 2016 の AG を、SQL Server 2017 以降にアップグレードまたは移行したい場合、分散型 AG に参加している他の AG を SQL Server 2017 で構成できます。
+
+SQL Server 2012 または 2014 には分散型可用性グループ機能が存在しなかったため、これらのバージョンで作成された可用性グループは、分散型可用性グループに参加できません。 
 
 > [!NOTE]
 > 分散型可用性グループは、Standard Edition を使って構成したり、Standard Edition と Enterprise Edition を組み合わせて構成したりすることはできません。
@@ -85,7 +88,7 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 * 1 つの WSFC クラスターはドメインに参加しており、もう 1 つの WSFC クラスターはドメインに参加していない。
 * どちらの WSFC クラスターもドメインに参加していない。
 
-両方の WSFC クラスターが同じドメイン (信頼されていないドメイン) に参加している場合、分散型可用性グループを作成するときに特別なことを行う必要ありません。 可用性グループと WSFC クラスターが同じドメインに参加していない場合は、ドメインに依存しない可用性グループを作成する場合と同じように、証明書を使って分散型可用性グループを動作させる必要があります。 分散型可用性グループ用に証明書を構成する方法については、「[Create a domain-independent availability group](domain-independent-availability-groups.md#create-a-domain-independent-availability-group)」(ドメインに依存しない可用性グループを作成する) のステップ 3 ～ 13 に従ってください。
+両方の WSFC クラスターが同じドメイン (信頼されていないドメイン) に参加している場合、分散型可用性グループを作成するときに特別なことを行う必要ありません。 可用性グループと WSFC クラスターが同じドメインに参加していない場合は、ドメインに依存しない可用性グループを作成する場合と同じように、証明書を使って分散型可用性グループを動作させる必要があります。 分散型可用性グループ用に証明書を構成する方法については、「[Create a domain-independent availability group](domain-independent-availability-groups.md)」(ドメインに依存しない可用性グループを作成する) のステップ 3 ～ 13 に従ってください。
 
 分散型可用性グループでは、基になる各可用性グループのプライマリ レプリカが相互の証明書を持っている必要があります。 証明書を使わないエンドポイントが既にある場合は、[ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) を使って証明書を使うようにエンドポイントを再構成します。
 
@@ -138,7 +141,7 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 ![分散型可用性グループでの読み取りのスケールアウト](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-次の図の AG 1 は、2 つの異なる分散型可用性グループ (分散型 AG 1 (AG 1 と AG2 で構成) および分散型 AG 2 (AG 1 と AG 3 で構成)) のプライマリ レプリカになっています。
+次の図の AG 1 は、次の 2 つの異なる分散型可用性グループのプライマリ レプリカになっています:分散型 AG 1 (AG 1 と AG2 で構成) および分散型 AG 2 (AG 1 と AG 3 で構成)。
 
 
 ![分散型可用性グループを使った読み取りのスケールアウトのもう 1 つの例]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
@@ -229,7 +232,7 @@ INNER JOIN sys.availability_replicas AS ar
 GO
 ```
 
-次の図は、分散型可用性グループに参加している 2 つ目の WSFC クラスターの出力例です。 SPAG1 は、DENNIS と JY という 2 つのレプリカで構成されています。 一方、SPDistAG という分散型可用性グループには、従来の可用性グループのようにインスタンス名ではなく、2 つの参加している可用性グループ (SPAG1 と SPAG2) の名前が表示されます。 
+次の図は、分散型可用性グループに参加している 2 つ目の WSFC クラスターの出力例です。 SPAG1 は、次の 2 つのレプリカで構成されています:DENNIS と JY。 一方、SPDistAG という分散型可用性グループには、従来の可用性グループのようにインスタンス名ではなく、2 つの参加している可用性グループ (SPAG1 と SPAG2) の名前が表示されます。 
 
 ![上記のクエリの出力例](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 

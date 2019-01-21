@@ -28,17 +28,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 239bcbfdb1aa932189fdd77863b68489c3cb7edc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 066b202a91f646dadd4a72182193e9fb0fcee6f1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744690"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979998"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 共通テーブル式は単純なクエリから派生し、単一の SELECT、INSERT、UPDATE、または DELETE ステートメントの実行スコープ内で定義されます。 CTE は、CREATE VIEW ステートメントの中で、ビューの SELECT ステートメントの定義の一部として指定することもできます。 共通テーブル式には、自己参照を含めることができます。 これは再帰共通テーブル式と呼ばれます。  
+> [!div class="nextstepaction"]
+> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 共通テーブル式は単純なクエリから派生し、単一の SELECT、INSERT、UPDATE、または DELETE ステートメントの実行スコープ内で定義されます。 CTE は、CREATE VIEW ステートメントの中で、ビューの SELECT ステートメントの定義の一部として指定することもできます。 共通テーブル式には、自己参照を含めることができます。 これは再帰共通テーブル式と呼ばれます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,7 +66,7 @@ ms.locfileid: "47744690"
  *CTE_query_definition*  
  共通テーブル式を設定した結果セットを持つ SELECT ステートメントを指定します。 *CTE_query_definition* の SELECT ステートメントでは、CTE は別の CTE を定義できないという点を除き、ビューの作成と同じ要件を満たす必要があります。 詳細については、「解説」セクションと「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。  
   
- 複数の *CTE_query_definition* が定義されている場合、set 演算子 UNION ALL、UNION、EXCEPT、INTERSECT のいずれかでクエリ定義を結合する必要があります。  
+ 複数の *CTE_query_definition* が定義されている場合、次の set 演算子のいずれかでクエリ定義を結合する必要があります:UNION ALL、UNION、EXCEPT、INTERSECT。  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -72,7 +75,7 @@ ms.locfileid: "47744690"
   
 -   CTE の後には、その CTE 列の一部または全部を参照する単一の SELECT、INSERT、UPDATE、または DELETE ステートメントを指定する必要があります。 CTE は、ビューの SELECT ステートメントの定義の一部として CREATE VIEW ステートメントに指定することもできます。  
   
--   非再帰 CTE では、複数の CTE クエリを定義できます。 定義は、set 演算子 UNION ALL、UNION、INTERSECT、または EXCEPT のいずれかによって結合する必要があります。  
+-   非再帰 CTE では、複数の CTE クエリを定義できます。 定義は、次の set 演算子のいずれかによって結合する必要があります:UNION ALL、UNION、INTERSECT、EXCEPT。  
   
 -   CTE は、自分自身および同一の WITH 句内で先に定義された CTE を参照できます。 前方参照は許可されません。  
   
@@ -101,7 +104,7 @@ ms.locfileid: "47744690"
   
 -   再帰 CTE の定義には、少なくとも 2 つの CTE クエリ定義を含める必要があります。1 つはアンカー メンバーで、もう 1 つは再帰メンバーです。 アンカー メンバーと再帰メンバーは複数定義できます。ただし、すべてのアンカー メンバーの定義は、最初の再帰メンバーの定義よりも前に記述する必要があります。 CTE 自体を参照しない CTE クエリ定義はすべてアンカー メンバーとなります。  
   
--   アンカー メンバーは、set 演算子 UNION ALL、UNION、INTERSECT、または EXCEPT のいずれかによって結合する必要があります。 UNION ALL は、最後のアンカー メンバーと最初の再帰メンバーを連結する場合、および複数の再帰メンバーを連結する場合に使用できる唯一の set 演算子です。  
+-   アンカー メンバーは、次の set 演算子のいずれかによって結合する必要があります:UNION ALL、UNION、INTERSECT、EXCEPT。 UNION ALL は、最後のアンカー メンバーと最初の再帰メンバーを連結する場合、および複数の再帰メンバーを連結する場合に使用できる唯一の set 演算子です。  
   
 -   アンカー メンバーの列数と再帰メンバーの列数は、同じである必要があります。  
   

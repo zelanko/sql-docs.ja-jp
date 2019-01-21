@@ -23,12 +23,12 @@ ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0ba43b04bc5c77d060fd2f8edda25d8a925a2856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1e6db73f4acea3654e8cffe8699df08f3f8d2c7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602290"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980088"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE ステートメント - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ FROM <backup_device> [ ,...n ]
  データベースの復元元である、**sp_addumpdevice** で作成されたバックアップ デバイスの論理名を指定します。この名前は識別子の規則に従っている必要があります。 変数 (**@**_logical\_backup\_device\_name\_var_) として指定する場合、バックアップ デバイス名は、文字列定数 (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
   
  {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- 指定したディスク デバイスまたはテープ デバイスから、バックアップを復元することを許可します。 ディスクまたはテープを表すデバイスの種類を、完全なパスとファイル名を含む実際のデバイス名と共に指定してください。たとえば、DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' または TAPE = '\\\\.\TAPE0' のように指定します。 変数 (**@**_physical\_backup\_device\_name\_var_) として指定する場合、デバイス名は、文字列定数 (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
+ 指定したディスク デバイスまたはテープ デバイスから、バックアップを復元することを許可します。 デバイスの実際の名前 (たとえば、完全なパスとファイル名) でディスクとテープのデバイスの種類を指定する必要があります:ディスク = "C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak"、テープ = "\\\\.\TAPE0"。 変数 (**@**_physical\_backup\_device\_name\_var_) として指定する場合、デバイス名は、文字列定数 (**@**_physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
   
  ネットワーク サーバーを UNC 名で指定する場合は、デバイスの種類に DISK を指定してください (UNC 名にはマシン名を含める必要があります)。 UNC 名の使用の詳細については、「[バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。  
   

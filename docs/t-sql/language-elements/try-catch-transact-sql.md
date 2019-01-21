@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3374d7ae2f86ce27de46fad9027f78a040ca356b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 68900243001edf7d9dcb39bcf10bf13e24bd0c48
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545749"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997584"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -103,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) は、エラー メッセージのテキストの全文を返します。 このテキストには、長さ、オブジェクト名、回数など、置き換え可能なパラメーターに提供される値が含まれます。  
   
- CATCH ブロックのスコープの外側から呼び出されると、これらの関数は NULL を返します。 エラー情報は、CATCH ブロックのスコープ内のどこからでも、これらの関数を使用して取得できます。 たとえば、次のスクリプトでは、エラー処理関数を含んでいるストアド プロシージャを示しています。 `CATCH` 構造の `TRY...CATCH` ブロックでは、このストアド プロシージャを呼び出して、エラーに関する情報を返しています。  
+CATCH ブロックのスコープの外側から呼び出されると、これらの関数は NULL を返します。 エラー情報は、CATCH ブロックのスコープ内のどこからでも、これらの関数を使用して取得できます。 たとえば、次のスクリプトでは、エラー処理関数を含んでいるストアド プロシージャを示しています。 `CATCH` 構造の `TRY...CATCH` ブロックでは、このストアド プロシージャを呼び出して、エラーに関する情報を返しています。  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -146,17 +146,19 @@ END CATCH;
   
 -   システム管理者による KILL ステートメントを使用したセッションの終了。  
   
- 次の種類のエラーは、TRY...CATCH 構造と同じ実行レベルで発生した場合には、CATCH ブロックによって処理されません。  
+次の種類のエラーは、TRY...CATCH 構造と同じ実行レベルで発生した場合には、CATCH ブロックによって処理されません。  
   
 -   構文エラーなど、バッチの実行を妨げるコンパイル エラー。  
   
 -   ステートメントレベルの再コンパイルで発生するエラー (コンパイル後の名前の遅延解決により発生するオブジェクト名の解決エラーなど)。  
+-   オブジェクト名解決エラー   
+
   
- これらのエラーは、バッチ、ストアド プロシージャ、またはトリガーを実行したレベルに返されます。  
+これらのエラーは、バッチ、ストアド プロシージャ、またはトリガーを実行したレベルに返されます。  
   
- TRY ブロック内の下位の実行レベル (たとえば、sp_executesql またはユーザー定義のストアド プロシージャを実行しているとき) でのコンパイル中またはステートメントレベルの再コンパイル中にエラーが発生した場合、そのエラーは TRY...CATCH 構造よりも下位のレベルで発生し、関連する CATCH ブロックによって処理されます。  
+TRY ブロック内の下位の実行レベル (たとえば、sp_executesql またはユーザー定義のストアド プロシージャを実行しているとき) でのコンパイル中またはステートメントレベルの再コンパイル中にエラーが発生した場合、そのエラーは TRY...CATCH 構造よりも下位のレベルで発生し、関連する CATCH ブロックによって処理されます。  
   
- 次の例は、`SELECT` ステートメントによって生成されたオブジェクト名解決エラーが `TRY...CATCH` 構造でキャッチされず、同じ `SELECT` ステートメントをストアド プロシージャ内で実行した場合には `CATCH` ブロックでキャッチされることを示しています。  
+次の例は、`SELECT` ステートメントによって生成されたオブジェクト名解決エラーが `TRY...CATCH` 構造でキャッチされず、同じ `SELECT` ステートメントをストアド プロシージャ内で実行した場合には `CATCH` ブロックでキャッチされることを示しています。  
   
 ```sql  
 BEGIN TRY  

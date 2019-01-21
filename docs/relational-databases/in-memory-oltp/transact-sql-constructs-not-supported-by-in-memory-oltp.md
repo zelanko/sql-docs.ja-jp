@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5023d29379ab254e85c38e0b9e0b6ae3c8772133
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503624"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590766"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>インメモリ OLTP でサポートされていない Transact-SQL の構造
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,8 +68,8 @@ ms.locfileid: "52503624"
 |演算|主キー列の更新|メモリ最適化テーブルおよびテーブル型の主キー列を更新できません。 主キーを更新する必要がある場合は、古い行を削除し、更新された主キーで新しい行を挿入します。|  
 |演算|CREATE INDEX|メモリ最適化テーブルのインデックスは、 **CREATE TABLE** ステートメントまたは **ALTER TABLE** ステートメントを使用してインラインで指定する必要があります。|  
 |演算|CREATE FULLTEXT INDEX|フルテキスト インデックスは、メモリ最適化テーブルでサポートされていません。|  
-|演算|スキーマの変更|メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャでは、以下のスキーマの変更はサポートされていません。<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server: ALTER TABLE、ALTER PROCEDURE、および sp_rename 操作がサポートされています。 拡張プロパティの追加など、その他のスキーマの変更はサポートされていません。<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: ALTER TABLE および ALTER PROCEDURE 操作はサポートされています。 sp_rename など、その他のスキーマ変更はサポートされていません。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: スキーマの変更はサポートされていません。 メモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャの定義を変更するには、まずオブジェクトを削除し、次に目的の定義でオブジェクトを再作成します。| 
-|演算|TRUNCATE TABLE|メモリ最適化テーブルでは TRUNCATE 操作はサポートされません。 テーブルからすべての行を削除するには、**DELETE FROM***table* を使ってすべての行を削除するか、テーブルを削除してから再作成します。|  
+|演算|スキーマの変更|メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャでは、以下のスキーマの変更はサポートされていません。<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server:ALTER TABLE、ALTER PROCEDURE、および sp_rename 操作がサポートされています。 拡張プロパティの追加など、その他のスキーマの変更はサポートされていません。<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)][ ] :ALTER TABLE および ALTER PROCEDURE 操作はサポートされています。 sp_rename など、その他のスキーマ変更はサポートされていません。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: スキーマの変更はサポートされていません。 メモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャの定義を変更するには、まずオブジェクトを削除し、次に目的の定義でオブジェクトを再作成します。| 
+|演算|TRUNCATE TABLE|メモリ最適化テーブルでは TRUNCATE 操作はサポートされません。 テーブルからすべての行を削除するには、 **DELETE FROM**_table_ を使用してすべての行を削除するか、テーブルを削除してから再作成します。|  
 |演算|ALTER AUTHORIZATION|既存のメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャでの所有者の変更はサポートされていません。 所有者を変更するには、テーブルまたはプロシージャを削除した後、再作成します。|  
 |演算|ALTER SCHEMA|既存のメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャを別のスキーマに転送することはサポートされていません。 スキーマ間で転送を行うには、オブジェクトを削除してから再作成します。|  
 |演算|DBCC CHECKTABLE|DBCC CHECKTABLE はメモリ最適化テーブルではサポートされていません。 ディスク上のチェックポイント ファイルの整合性を確認するには、MEMORY_OPTIMIZED_DATA ファイル グループのバックアップを実行します。|  
@@ -104,11 +104,11 @@ ms.locfileid: "52503624"
 |機能|カーソル|カーソルは、ネイティブ コンパイル ストアド プロシージャではサポートされていません。<br /><br /> クライアントからプロシージャを実行する場合、カーソル API ではなく RPC を使用します。 ODBC で、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントから削除してください。 **EXECUTE**を避け、代わりにプロシージャの名前を直接指定します。<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチまたは他のストアド プロシージャからプロシージャを実行する場合、ネイティブ コンパイル ストアド プロシージャでカーソルを使用しないでください。<br /><br /> ネイティブ コンパイル ストアド プロシージャを作成する場合は、カーソルを使用せずに、セットベースのロジックまたは **WHILE** ループを使用します。|  
 |機能|定数以外のパラメーターの既定値|ネイティブ コンパイル ストアド プロシージャのパラメーターで既定値を使用する場合、値は定数にする必要があります。 パラメーター宣言からワイルドカードを削除します。|  
 |機能|EXTERNAL|CLR ストアド プロシージャをネイティブでコンパイルすることはできません。 CREATE PROCEDURE ステートメントから AS EXTERNAL 句または NATIVE_COMPILATION オプションを削除します。|  
-|機能|番号付きストアド プロシージャ|ネイティブ コンパイル ストアド プロシージャには番号を付けられません。 **CREATE PROCEDURE** ステートメントから **;***number* を削除してください。|  
+|機能|番号付きストアド プロシージャ|ネイティブ コンパイル ストアド プロシージャには番号を付けられません。 **CREATE PROCEDURE**_ステートメントから_ ; **number** を削除してください。|  
 |機能|複数行の INSERT...VALUES ステートメント|ネイティブ コンパイル ストアド プロシージャでは、同じ **INSERT** ステートメントを使用して複数行を挿入できません。 各行に対して **INSERT** ステートメントを作成します。|  
 |機能|共通テーブル式 (CTE)|共通テーブル式 (CTE) は、ネイティブ コンパイル ストアド プロシージャでサポートされません。 クエリを書き直します。|  
 |機能|COMPUTE|**COMPUTE** 句はサポートされていません。 クエリから削除します。|  
-|機能|SELECT INTO|**INTO** 句は **SELECT** ステートメントではサポートされていません。 クエリを **INSERT INTO** *Table* **SELECT** として再作成します。|  
+|機能|SELECT INTO|**INTO** 句は **SELECT** ステートメントではサポートされていません。 クエリを **INSERT INTO** _Table_ **SELECT** として再作成します。|  
 |機能|不完全な挿入列リスト|通常、INSERT ステートメントでは、テーブルのすべての列に値を指定する必要があります。<br /><br /> ただし、メモリ最適化テーブルでは、DEFAULT 制約と IDENTITY(1,1) 列はサポートされません。 これらの列は INSERT 列リストから省略でき、IDENTITY 列の場合は INSERT 列リストから省略する必要があります。|  
 |機能|*関数*|いくつかの組み込み関数は、ネイティブ コンパイル ストアド プロシージャではサポートされません。 ストアド プロシージャから、拒否された関数を削除します。 サポートされる組み込み関数の詳細については、<br />「[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」または<br />「[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」を参照してください。|  
 |機能|CASE|**適用対象:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 以降の SQL Server<br/>**CASE** 式は、ネイティブ コンパイル ストアド プロシージャ内のクエリではサポートされていません。 各ケースのクエリを作成します。 詳細については、「 [ネイティブ コンパイル ストアド プロシージャに CASE 式を実装する](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)」を参照してください。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server では CASE 式をサポートしていません。|  

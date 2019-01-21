@@ -5,19 +5,18 @@ documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 2ae5eb35be423a7b0dedc85d9c7cd589f75c781e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e7a2ecb3d432579fdbffee9a5cec0d776d4f4596
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395565"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732089"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して Azure SQL Data Warehouse にデータを読み込む
 
@@ -96,7 +95,7 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 
 1. Azure Blob Upload Task を使用して、Azure Blob Storage でデータのステージングを行う。 Azure BLOB アップロード タスクを取得するには、[Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure] をダウンロードしてください。
 
-2. 次に、SSIS の SQL 実行タスクを使用して、SQL Data Warehouse にデータを読み込む PolyBase スクリプトを起動します。 (SSIS を使用せずに) Azure Blob Storage から SQL Data Warehouse にデータを読み込む例については、「[チュートリアル: Azure SQL Data Warehouse へのデータの読み込み](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)」を参照してください。
+2. 次に、SSIS の SQL 実行タスクを使用して、SQL Data Warehouse にデータを読み込む PolyBase スクリプトを起動します。 (SSIS を使用せずに) Azure Blob Storage から SQL Data Warehouse にデータを読み込む例については、「[チュートリアル:Azure SQL Data Warehouse へのデータの読み込み](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)」を参照してください。
 
 ## <a name="option-2---use-a-source-and-destination"></a>オプション 2 - ソースと変換先を使用する
 
@@ -213,9 +212,9 @@ SQL Server と SQL Data Warehouse に接続するには、ADO.NET 接続マネ�
 
 ## <a name="next-steps"></a>次の手順
 
-- デザイン環境でパッケージのデバッグおよびトラブルシューティングを行う方法について説明します。 こちらから開始: [パッケージ開発のトラブルシューティング ツール][Troubleshooting Tools for Package Development]。
+- デザイン環境でパッケージのデバッグおよびトラブルシューティングを行う方法について説明します。 こちらから開始:[パッケージ開発のトラブルシューティング ツール][Troubleshooting Tools for Package Development]。
 
-- Integration Services サーバーまたは別の保存場所に SSIS プロジェクトおよびパッケージを配置する方法について説明します。 こちらから開始: [プロジェクトとパッケージの展開][Deployment of Projects and Packages]。
+- Integration Services サーバーまたは別の保存場所に SSIS プロジェクトおよびパッケージを配置する方法について説明します。 こちらから開始:[プロジェクトとパッケージの展開][Deployment of Projects and Packages]。
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png

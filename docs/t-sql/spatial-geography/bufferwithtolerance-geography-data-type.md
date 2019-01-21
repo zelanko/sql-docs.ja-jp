@@ -18,12 +18,12 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f83a4174fb599170e466a28ab06eb0d2772fd604
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b73851cdfdf180f3acffc8892d757b0f46abe99d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391357"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980299"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "52391357"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  *distance* が非数 (NAN) の場合、または *distance* が正か負の無限大の場合、このメソッドは **ArgumentException** をスローします。  *tolerance* が 0、非数 (NaN)、負の数値、または正か負の無限大の場合も、このメソッドは **ArgumentException** をスローします。  

@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394529"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980388"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -390,10 +390,10 @@ column_name <data_type>
   
  ON {*partition_scheme* | *filegroup* | **"** default **"**} は、PRIMARY KEY 制約または UNIQUE 制約で指定することもできます。 これらの制約はインデックスを作成します。 *filegroup* を指定すると、インデックスは指定されたファイル グループに格納されます。 **"** default **"** を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに格納されます。 PRIMARY KEY 制約または UNIQUE 制約がクラスター化インデックスを作成する場合、テーブルのデータ ページはインデックスと同じファイル グループに格納されます。 CLUSTERED を指定するか、制約によりクラスター化インデックスを作成し、テーブル定義の *partition_scheme* または *filegroup* とは異なる *partition_scheme* (またはその逆) を指定すると、制約定義だけが優先され、それ以外は無視されます。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ここでは、default はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"** default **"** または ON **[** default **]** のように区切る必要があります。 **"** default **"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  パーティション テーブルを作成した後、テーブルの LOCK_ESCALATION オプションを AUTO に設定することを検討してください。 テーブルではなくパーティション (HoBT) レベルにロックをエスカレートできるようにすることで、コンカレンシーが向上します。 詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
  TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
@@ -401,12 +401,12 @@ column_name <data_type>
   
  テーブル内に値の大きな列がない場合は、TEXTIMAGE_ON は指定できません。 *partition_scheme* を指定した場合は、TEXTIMAGE_ON を指定できません。 **"** default **"** を指定するか、TEXTIMAGE_ON をまったく指定しないと、値の大きな列は既定のファイル グループに格納されます。 CREATE TABLE で指定した値の大きな列のデータの格納方法を、後から変更することはできません。  
 
-> [!NOTE]  
+> [!NOTE]
 > Varchar(max)、nvarchar(max)、varbinary(max)、xml および大きな UDT 値は、データ行に直接格納されます。レコードのサイズまで値を格納できますが、サイズの上限は 8,000 バイトです。 値がレコードに収まらない場合には、ポインターが行内に格納され、残りは行外の LOB ストレージ領域に格納されます。 0 が既定値です。
-TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され、データが行内に格納されている場合は影響しません。 sp_tableoption の large value types out of row オプションを使用すると、LOB 値全体が行外に格納されます。 
-
-
-> [!NOTE]  
+> TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され、データが行内に格納されている場合は影響しません。 sp_tableoption の large value types out of row オプションを使用すると、LOB 値全体が行外に格納されます。 
+> 
+> 
+> [!NOTE]
 >  ここでは、default はキーワードではありません。 default は、既定のファイル グループの識別子のため、TEXTIMAGE_ON **"** default **"** または TEXTIMAGE_ON **[** default **]** のように区切る必要があります。 **"** default **"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } 
@@ -666,7 +666,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  作成されたテーブルの行が参照関係を持ち、参照される行が親テーブルから削除された場合に、その行に対して実行される操作を指定します。 既定値は NO ACTION です。  
   
  NO ACTION  
- NO ACTION を指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではエラーが発生し、親テーブルでの行の削除操作がロールバックされます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] がエラーを生成し、親テーブルでの行の削除操作がロールバックされます。  
   
  CASCADE  
  親テーブルから行が削除された場合に、参照元テーブルからもその行が削除されます。  
@@ -706,7 +706,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  変更対象のテーブルに ON UPDATE での INSTEAD OF トリガーが既に存在する場合は、ON UPDATE CASCADE、SET NULL、または SET DEFAULT を定義できません。  
   
- たとえば、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで、**ProductVendor** テーブルに **Vendor** テーブルとの参照関係がある (外部キー **ProductVendor.BusinessEntity** が主キー **Vendor.BusinessEntityID** を参照している) とします。  
+ たとえば、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで、**ProductVendor** テーブルに **Vendor** テーブルとの参照関係があるとします。**ProductVendor.BusinessEntity** 外部キーは **Vendor.BusinessEntityID** 主キーを参照します。  
   
  UPDATE ステートメントを **Vendor** テーブルの行で実行した場合、ON UPDATE CASCADE アクションが **ProductVendor.BusinessEntityID** に対して指定されていると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では **ProductVendor** テーブルに 1 つ以上の従属行があるかどうかが確認されます。 従属行がある場合、**ProductVendor** テーブルの従属行が、**Vendor** テーブルで参照される行と共に更新されます。  
   
@@ -793,13 +793,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  *partition_number_expression* は以下の方法で指定できます。  
   
--   ON PARTITIONS (2) などのように、1 つのパーティションのパーティション番号を指定します。  
+-   1 つのパーティションのパーティション番号を提供します。たとえば次のとおりです。ON PARTITIONS (2)。  
   
--   ON PARTITIONS (1, 5) などのように、複数のパーティションのパーティション番号をコンマで区切って指定します。  
+-   コンマで区切った複数の個別のパーティションのパーティション番号を提供します。たとえば次のとおりです。ON PARTITIONS (1, 5)。  
   
--   ON PARTITIONS (2, 4, 6 TO 8) などのように、範囲と個別のパーティションの両方を指定します  
+-   範囲と個別のパーティションの両方を提供します。たとえば次のとおりです。ON PARTITIONS (2, 4, 6 TO 8)  
   
- `<range>` は、ON PARTITIONS (6 TO 8) などのように、パーティション番号を TO で区切って指定できます。  
+ `<range>` はパーティション番号として、TO で区切って指定できます。たとえば次のとおりです。ON PARTITIONS (6 TO 8)。  
   
  さまざまなパーティションにさまざまな種類のデータ圧縮を設定するには、次のように DATA_COMPRESSION オプションを複数回指定します。  
   
@@ -930,7 +930,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 Azure SQL Database Managed Instance では、メモリ最適化テーブルはサポートされません。 
   
- 値が ON の場合は、テーブルがメモリ最適化されていることを示します。 メモリ最適化テーブルは、トランザクション処理のパフォーマンスの最適化に使用されるインメモリ OLTP 機能の一部です。 インメモリ OLTP の使用を開始するには、「[クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)」をご覧ください。 メモリ最適化テーブルについて詳しくは、「[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)」をご覧ください。  
+ 値が ON の場合は、テーブルがメモリ最適化されていることを示します。 メモリ最適化テーブルは、トランザクション処理のパフォーマンスの最適化に使用されるインメモリ OLTP 機能の一部です。 インメモリ OLTP の使用を開始する方法については、「[クイック スタート 1:Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)」を参照してください。 メモリ最適化テーブルについて詳しくは、「[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)」をご覧ください。  
   
  既定値の OFF は、テーブルがディスク ベースであることを示します。  
   
@@ -957,7 +957,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 
   
-列インデックスとテーブル インデックスは、CREATE TABLE ステートメントの一部として指定できます。 メモリ最適化テーブルのインデックスの追加と削除について詳しくは、「[メモリ最適化テーブルの変更](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)」をご覧ください
+列インデックスとテーブル インデックスは、CREATE TABLE ステートメントの一部として指定できます。 メモリ最適化テーブルのインデックスの追加と削除の詳細については、次のページを参照してください。[メモリ最適化テーブルの変更](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
   
  HASH  
    
@@ -1255,7 +1255,7 @@ SELECT * FROM tempdb.sys.database_files
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-create-a-primary-key-constraint-on-a-column"></a>A. 列に PRIMARY KEY 制約を作成する  
- 次の例では、`EmployeeID` テーブルの `Employee` 列にクラスター化インデックスを持つ PRIMARY KEY 制約の列定義を示しています。 制約名を指定していないため、制約名はシステムによって提供されます。  
+ 次の例では、`Employee` テーブルの `EmployeeID` 列にクラスター化インデックスを持つ PRIMARY KEY 制約の列定義を示しています。 制約名を指定していないため、制約名はシステムによって提供されます。  
   
 ```sql  
 CREATE TABLE dbo.Employee (EmployeeID int  
@@ -1263,7 +1263,7 @@ PRIMARY KEY CLUSTERED);
 ```  
   
 ### <a name="b-using-foreign-key-constraints"></a>B. FOREIGN KEY 制約を使用する  
- FOREIGN KEY 制約は、他のテーブルを参照するために使用します。 外部キーは単一列キーの場合も複数列キーの場合もあります。 次の例では、`SalesOrderHeader` テーブルを参照する `SalesPerson` テーブルに対する単一列 FOREIGN KEY 制約を示しています。 単一列 FOREIGN KEY 制約では、REFERENCES 句のみが必要とされます。  
+ FOREIGN KEY 制約は、他のテーブルを参照するために使用します。 外部キーは単一列キーの場合も複数列キーの場合もあります。 次の例では、`SalesPerson` テーブルを参照する `SalesOrderHeader` テーブルに対する単一列 FOREIGN KEY 制約を示しています。 単一列 FOREIGN KEY 制約では、REFERENCES 句のみが必要とされます。  
   
 ```sql  
 SalesPersonID int NULL  
@@ -1312,7 +1312,7 @@ DEFAULT USER
 ```  
   
 ### <a name="e-using-check-constraints"></a>E. CHECK 制約を使用する  
- 次の例は、`CreditRating` テーブルの `Vendor` 列に入力する値に対する制限を示しています。 制約には名前がありません。  
+ 次の例は、`Vendor` テーブルの `CreditRating` 列に入力する値に対する制限を示しています。 制約には名前がありません。  
   
 ```sql  
 CHECK (CreditRating >= 1 and CreditRating <= 5)  
@@ -1389,7 +1389,7 @@ CREATE TABLE PartitionTable (col1 int, col2 char(10))
 GO  
 ```  
   
- `col1` の列 `PartitionTable` の値に基づき、各パーティションは次のように割り当てられます。  
+ `PartitionTable` の列 `col1` の値に基づき、各パーティションは次のように割り当てられます。  
   
 |[ファイル グループ]|test1fg|test2fg|test3fg|test4fg|  
 |---------------|-------------|-------------|-------------|-------------|  
@@ -1397,7 +1397,7 @@ GO
 |**値**|col 1 \<= 1|col1 > 1 AND col1 \<= 100|col1 > 100 AND col1 \<= 1,000|col1 > 1000|  
   
 ### <a name="i-using-the-uniqueidentifier-data-type-in-a-column"></a>I. 列で uniqueidentifier データ型を使用する  
- 次の例では、`uniqueidentifier` 列を含むテーブルを作成します。 この例では、PRIMARY KEY 制約を使って、重複値を挿入するユーザーからテーブルを保護し、`NEWSEQUENTIALID()` 制約で `DEFAULT` 関数を使って、新しい行の値を指定します。 また、$ROWGUID キーワードを使用して参照できるように、この `uniqueidentifier` 列に ROWGUIDCOL プロパティを適用します。  
+ 次の例では、`uniqueidentifier` 列を含むテーブルを作成します。 この例では、PRIMARY KEY 制約を使って、重複値を挿入するユーザーからテーブルを保護し、`DEFAULT` 制約で `NEWSEQUENTIALID()` 関数を使って、新しい行の値を指定します。 また、$ROWGUID キーワードを使用して参照できるように、この `uniqueidentifier` 列に ROWGUIDCOL プロパティを適用します。  
   
 ```sql  
 CREATE TABLE dbo.Globally_Unique_Data  
@@ -1425,7 +1425,7 @@ CREATE TABLE UDTypeTable
 ```  
   
 ### <a name="l-using-the-username-function-for-a-computed-column"></a>L. 計算列に USER_NAME 関数を使用する  
- 次の例では、`USER_NAME()` 列で `myuser_name` 関数を使用します。  
+ 次の例では、`myuser_name` 列で `USER_NAME()` 関数を使用します。  
   
 ```sql  
 CREATE TABLE dbo.mylogintable  
@@ -1433,12 +1433,12 @@ CREATE TABLE dbo.mylogintable
 ```  
   
 ### <a name="m-creating-a-table-that-has-a-filestream-column"></a>M. FILESTREAM 列を含むテーブルを作成する  
- 次の例では、`FILESTREAM` という `Photo` 列を含むテーブルを作成します。 テーブルに 1 つ以上の `FILESTREAM` 列が含まれる場合、テーブルには `ROWGUIDCOL` 列が 1 つ存在する必要があります。  
+ 次の例では、`Photo` という `FILESTREAM` 列を含むテーブルを作成します。 テーブルに 1 つ以上の `FILESTREAM` 列が含まれる場合、テーブルには `ROWGUIDCOL` 列が 1 つ存在する必要があります。  
   
 ```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
-    EmployeeId int NOT NULL PRIMARY KEY,  
+     EmployeeId int NOT NULL PRIMARY KEY  
     ,Photo varbinary(max) FILESTREAM NULL  
     ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL  
         UNIQUE DEFAULT NEWID()  

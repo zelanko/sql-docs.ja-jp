@@ -18,15 +18,15 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fb13510e4894e3f2bc77293a1f4aac0b186f1f0
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 93386da795d7e993c0d23c70625290cc8901d8bc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586255"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589976"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 > [!div class="nextstepaction"]
 > [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
@@ -126,6 +126,9 @@ FROM Product
 |2|LL Headset|bike|  
 |3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  
+
+  >[!NOTE]
+  > この順序が入力文字列の部分文字列の順序と一致するかどうかは保証 "_されない_" ため、出力の順序は異なる場合があります。
   
 ### <a name="c-aggregation-by-values"></a>C. 値による集計  
 ユーザーは、製品数で並べ替え、タグごとに製品数を表示するレポートを作成し、2 製品を超えるタグのみに絞り込む必要があります。  
@@ -153,12 +156,11 @@ WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));
 指定された 2 つのタグ (clothing と road) を持つ製品を検索するには:  
   
 ```sql  
-  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE EXISTS (SELECT *  
     FROM STRING_SPLIT(Tags, ',')  
-    WHERE value IN ('clothing', 'road');  
+    WHERE value IN ('clothing', 'road'));  
 ```  
   
 ### <a name="e-find-rows-by-list-of-values"></a>E. 値のリストで行を検索する  

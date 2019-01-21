@@ -11,12 +11,12 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb91f7c7b570fb678e2b503ed1841c5d3b45dcae
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 23d86191b60cfe4dbcf6793b4765b51b7df66fc1
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616283"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591656"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Data Quality Client で Integration Services プロジェクトを開く
 
@@ -51,9 +51,9 @@ ms.locfileid: "52616283"
   
 3.  **[プロジェクトを開く]** 画面で、次のいずれかの方法で Integration Services プロジェクトを特定します。  
   
-    1.  **[プロジェクト名]**: Integration Services プロジェクトは "Package.DQS Cleansing_\<*日付*>\<*時刻*>_{GUID}" の名前付け規則を使用して表示されます。 同じパッケージを [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で正常に実行するたびに、新しいプロジェクトが **[プロジェクトを開く]** 画面に表示されます。  
+    1.  **[プロジェクト名]**:Integration Services プロジェクトは、次の名前付け規則を使用して表示されます:"Package.DQS Cleansing_*\<日付>\<時刻>*_{GUID}"。 同じパッケージを [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で正常に実行するたびに、新しいプロジェクトが **[プロジェクトを開く]** 画面に表示されます。  
   
-    2.  **[プロジェクトの種類]**: Integration Services プロジェクトはプロジェクトの種類が **[SSIS]** として **[プロジェクトを開く]** 画面に表示されます。  
+    2.  **[プロジェクトの種類]**:Integration Services プロジェクトはプロジェクトの種類が **[SSIS]** として **[プロジェクトを開く]** 画面に表示されます。  
   
      プロジェクトを選択して **[次へ]** をクリックします。  
   

@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d923536f678884307be526ddebf0f825774c1093
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f01c19b7afd63402abc5729404d73e52429722be
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699670"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980078"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 互換性レベル
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > お使いのデータベース全体でデータベース互換性レベル 140 を活用するとき、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の**カーディナリティ推定**モデル、データベース互換性レベル 110 へのマッピングを選択するのであれば、「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。特にそのキーワード `LEGACY_CARDINALITY_ESTIMATION = ON` をご覧ください。
 >  
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] における 2 つの互換性レベル間での、最も重要なクエリのパフォーマンスの違いを評価する方法の詳細については、「[Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)」 (Azure SQL Database での互換性レベル 130 によるクエリ パフォーマンスの改善) を参照してください。 この記事では互換性レベル 130 と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を取り上げていますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で 140 に移行する場合も同じ手法が適用されます。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] における 2 つの互換性レベル間での、最も重要なクエリのパフォーマンスの違いを評価する方法の詳細については、「[Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)」 (Azure SQL Database での互換性レベル 130 によるクエリ パフォーマンスの改善) を参照してください。 この記事では互換性レベル 130 と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を取り上げていますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で 140 に移行する場合も同じ手法が適用されます。
 
 次のクエリを実行して、接続先である [!INCLUDE[ssDE](../../includes/ssde-md.md)] のバージョンを特定します。  
   
@@ -255,7 +255,7 @@ SQL Server 2017 より前の SQL Server の初期のバージョンのトレー�
 |xQuery メソッドに必要な SET オプションは、メソッドがビューまたはインライン テーブル値関数に含まれる場合に検証されません。|xQuery メソッドに必要な SET オプションは、メソッドがビューまたはインライン テーブル値関数に含まれる場合に検証されます。 メソッドの SET オプションが正しく設定されていない場合は、エラーが発生します。|Low|  
 |行末文字 (復帰と改行) を含む XML 属性値は、XML 標準に従って正規化されません。 つまり、1 つの改行文字ではなく両方の文字が返されます。|行末文字 (復帰と改行) を含む XML 属性値は、XML 標準に従って正規化されます。 つまり、外部解析エンティティ (ドキュメント エンティティを含む) のすべての改行が、入力時に正規化されます。このとき、2 文字のシーケンス #xD #xA と、後ろに #xA がない #xD の両方について、1 つの #xA 文字に変換されます。<br /><br /> 行末文字を含む文字列値を転送するための属性を使用しているアプリケーションは、このような文字が送信されても受け取りません。 正規化処理を回避するには、XML 数字エンティティを使用してすべての行末文字をエンコードしてください。|Low|  
 |列プロパティ `ROWGUIDCOL` および `IDENTITY` は、制約として不適切に指定される可能性があります。 たとえば、ステートメント `CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` は実行されますが、制約名は保持されず、ユーザーはその制約にアクセスできません。|列プロパティ `ROWGUIDCOL` および `IDENTITY` は、制約として指定できません。 156 のエラーが返されます。|Low|  
-|`UPDATE T1 SET @v = column_name = <expression>` などの双方向の代入を使用して列を更新すると、予期しない結果が生じる可能性があります。これは、ステートメントの実行時に、`WHER`E 句や `ON` 句などの他の句でステートメントの開始値ではなく変数の有効期限の値を使用できるためです。 これにより、述語の意味が行ごとに予期せず変化することがあります。<br /><br /> この動作は、互換性レベルが 90 に設定されている場合にのみ適用されます。|双方向の代入を使用して列を更新すると、予想どおりの結果が生じます。これは、ステートメントの実行時に、列のステートメントの開始値のみが利用されるためです。|Low|  
+|`UPDATE T1 SET @v = column_name = <expression>` などの双方向の代入を使用して列を更新すると、予期しない結果が生じる可能性があります。これは、ステートメントの実行時に、`WHERE` 句や `ON` 句などの他の句でステートメントの開始値ではなく変数の有効期限の値を使用できるためです。 これにより、述語の意味が行ごとに予期せず変化することがあります。<br /><br /> この動作は、互換性レベルが 90 に設定されている場合にのみ適用されます。|双方向の代入を使用して列を更新すると、予想どおりの結果が生じます。これは、ステートメントの実行時に、列のステートメントの開始値のみが利用されるためです。|Low|  
 |以下の「例」の E を参照してください。|以下の「例」の F を参照してください。|Low|  
 |ODBC 関数 {fn CONVERT()} では、言語の既定の日付形式が使用されます。 言語によっては、既定の形式が YDM の場合があります。この場合、CONVERT() を `{fn CURDATE()}` などの YMD 形式が想定されている他の関数と組み合わせて使用すると、変換エラーが発生する可能性があります。|ODBC 関数 `{fn CONVERT()}` では、ODBC データ型 SQL_TIMESTAMP、SQL_DATE、SQL_TIME、SQLDATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP への変換時にスタイル 121 (言語に依存しない YMD 形式) が使用されます。|Low|  
 |DATEPART などの datetime 組み込み関数では、文字列入力値が有効な datetime リテラルである必要はありません。 たとえば、`SELECT DATEPART (year, '2007/05-30')` は正常にコンパイルされます。|`DATEPART` などの datetime 組み込み関数では、文字列入力値が有効な datetime リテラルである必要があります。 無効な datetime リテラルを使用すると、エラー 241 が返されます。|Low|  
@@ -356,7 +356,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
 ```  
   
 ### <a name="e"></a>E.  
- 変数代入は、最上位レベルの UNION 演算子を含むステートメントで許可されていますが、予期しない結果が返されます。 たとえば、次のステートメントでは、2 つのテーブルの和集合からの列 `@v` の値がローカル変数 `BusinessEntityID` に割り当てられます。 定義上、SELECT ステートメントが複数の値を返した場合は、最後に返された値が変数に割り当てられます。 この場合は、最後の値が変数に正しく割り当てられますが、SELECT UNION ステートメントの結果セットも返されます。  
+ 変数代入は、最上位レベルの UNION 演算子を含むステートメントで許可されていますが、予期しない結果が返されます。 たとえば、次のステートメントでは、2 つのテーブルの和集合からの列 `BusinessEntityID` の値がローカル変数 `@v` に割り当てられます。 定義上、SELECT ステートメントが複数の値を返した場合は、最後に返された値が変数に割り当てられます。 この場合は、最後の値が変数に正しく割り当てられますが、SELECT UNION ステートメントの結果セットも返されます。  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

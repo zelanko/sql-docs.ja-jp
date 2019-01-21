@@ -23,20 +23,20 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31b1fb369ee6b5007e79c96ebb7a536d6e2a147e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: da5e69d974f33f7eeb60e185a5a4a67dae6c01a8
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514041"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589696"
 ---
 # <a name="upgrade-a-data-tier-application"></a>データ層アプリケーションのアップグレード
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   データ層アプリケーションのアップグレード ウィザードまたは Windows PowerShell スクリプトを使用すると、現在配置されているデータ層アプリケーション (DAC) のスキーマとプロパティを、新しいバージョンの DAC で定義されているスキーマとプロパティに一致するように変更できます。  
   
--   **作業を開始する準備:**  [DAC アップグレード オプションの選択](#ChoseDACUpgOptions)、 [制限事項と制約事項](#LimitationsRestrictions)、 [前提条件](#Prerequisites)、 [セキュリティ](#Security)、 [権限](#Permissions)  
+-   **作業を開始する準備:**[DAC アップグレード オプションの選択](#ChoseDACUpgOptions)、[制限事項と制約事項](#LimitationsRestrictions)、[前提条件](#Prerequisites)、[セキュリティ](#Security)、[権限](#Permissions)  
   
--   **DAC のアップグレード:**  [データ層アプリケーションのアップグレード ウィザードの使用](#UsingDACUpgradeWizard)、 [PowerShell の使用](#UpgradeDACPowerShell)  
+-   **DAC のアップグレード:**[データ層アプリケーションのアップグレード ウィザードの使用](#UsingDACUpgradeWizard)、[PowerShell の使用](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  DAC アップグレードは、既存のデータベースのスキーマを新しい DAC バージョンで定義されているスキーマに一致するように変更するインプレース アップグレードです。 新しい DAC バージョンは、DAC パッケージ ファイルで提供されます。 DAC パッケージの作成の詳細については、「 [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)」を参照してください。  

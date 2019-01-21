@@ -5,19 +5,18 @@ documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 1b25f4ecde0a80aef19e94b2d1f1b572529bcfd6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e4d5dbd9f7b419437481acb3306fc88a237fcc5d
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412689"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732069"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して SQL Server または Azure SQL Database にデータを読み込む
 
@@ -174,9 +173,9 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 
 ## <a name="next-steps"></a>次の手順
 
-- デザイン環境でパッケージのデバッグおよびトラブルシューティングを行う方法について説明します。 こちらから開始: [パッケージ開発のトラブルシューティング ツール][Troubleshooting Tools for Package Development]。
+- デザイン環境でパッケージのデバッグおよびトラブルシューティングを行う方法について説明します。 こちらから開始:[パッケージ開発のトラブルシューティング ツール][Troubleshooting Tools for Package Development]。
 
-- Integration Services サーバーまたは別の保存場所に SSIS プロジェクトおよびパッケージを配置する方法について説明します。 こちらから開始: [プロジェクトとパッケージの展開][Deployment of Projects and Packages]。
+- Integration Services サーバーまたは別の保存場所に SSIS プロジェクトおよびパッケージを配置する方法について説明します。 こちらから開始:[プロジェクトとパッケージの展開][Deployment of Projects and Packages]。
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png

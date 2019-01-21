@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2736c3cf0d8373b80a41277a6b80b4b12b0ecd3a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8e5c839f8c5005e3f02129e36023db53f70f4a20
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510703"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590306"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "52510703"
 ### <a name="database-mirroring-and-sql-server-audit"></a>データベース ミラーリングと SQL Server 監査  
  データベース監査の仕様が定義されていて、データベース ミラーリングを使用するデータベースには、そのデータベース監査の仕様が含まれます。 ミラー化された SQL インスタンスでも正しく機能するようにするには、以下の項目を構成する必要があります。  
   
--   データベース監査の仕様が監査レコードを書き込めるようにするには、同じ GUID を持つ監査をミラー サーバーに作成する必要があります。 これは、CREATE AUDIT WITH GUID**=***\<ソース Server Audit の GUID*> コマンドを使用して構成できます。  
+-   データベース監査の仕様が監査レコードを書き込めるようにするには、同じ GUID を持つ監査をミラー サーバーに作成する必要があります。 これは、CREATE AUDIT WITH GUID**=**\<_ソース Server Audit の GUID_> コマンドを使用して構成できます。  
   
 -   バイナリ ファイル ターゲットの場合は、監査記録が書き込まれる場所に対する適切なアクセス許可がミラー サーバーのサービス アカウントに必要です。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "52510703"
  [DDL トリガー](../../../relational-databases/triggers/ddl-triggers.md)  
  データ定義言語 (DDL) トリガーを使用してデータベースの変更を追跡する方法について説明します。  
   
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 - セキュリティと保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet:SQL Server TechCenter:SQL Server 2005 - セキュリティと保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティに関する最新の情報を提供します。  
   
 ## <a name="see-also"></a>参照  

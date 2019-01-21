@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 744895bc3e2a60d8eb3edad4554f08bc1aaf6a95
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 972cd8bf1acc8a7abcf428c3bfd553e878248fde
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641503"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069788"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -168,7 +168,7 @@ XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 このオプションが ON の場合、または統計コレクションが [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) によって有効化されている場合は、ネイティブ コンパイル T-SQL モジュールのステートメント レベルの実行統計が収集されます。
 
-ネイティブ コンパイル T-SQL モジュールのパフォーマンスの監視について詳しくは、「[ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)」をご覧ください。
+ネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールのパフォーマンスの監視の詳細については、「[ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)」を参照してください。
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
@@ -210,20 +210,20 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 [グローバル一時テーブル](create-table-transact-sql.md)の自動削除機能を設定できます。 既定値は ON で、グローバル一時テーブルはどのセッションでも使用中でないときに自動的に削除されることを意味します。 OFF に設定すると、グローバル一時テーブルは、DROP TABLE ステートメントを使用して明示的に削除する必要があります。または、サーバーの再起動時に自動的に削除されます。
 
-- Azure SQL Database 論理サーバー上では、このオプションを論理サーバーの個々のユーザー データベース内で設定できます。
-- SQL Server および Azure SQL Database Managed Instance 上では、このオプションは `TEMPDB` 内で設定され、個々のユーザー データベースの設定に影響を与えません。
+- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 論理サーバー上では、このオプションを論理サーバーの個々のユーザー データベース内で設定できます。
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance 上では、このオプションは `TempDB` 内で設定され、個々のユーザー データベースの設定に影響を与えません。
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-複数ステートメントのテーブル値関数のインターリーブ実行は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で有効または無効にできます。 インターリーブ実行は、SQL データベースのアダプティブ クエリ処理の一部の機能です。 詳細については、[アダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)に関するページをご覧ください。
+複数ステートメントのテーブル値関数のインターリーブ実行は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で有効または無効にできます。 インターリーブ実行は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のアダプティブ クエリ処理の一部の機能です。 詳細については、[アダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)に関するページをご覧ください。
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
 **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-適応結合は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で有効または無効にできます。 適応型結合は、SQL Server 2017 で導入された[アダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)の一部の機能です。
+適応結合は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で有効または無効にできます。 適応型結合は、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] で導入された[アダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)の一部の機能です。
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
@@ -233,66 +233,62 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 ## <a name="Permissions"></a> Permissions
 
-データベースでは、ALTER ANY DATABASE SCOPE CONFIGURATION が必要です。 この権限は、データベース上で CONTROL 権限を持つユーザーが付与できます。
+データベースに対する `ALTER ANY DATABASE SCOPE CONFIGURATION` が必要です。 この権限は、データベース上で CONTROL 権限を持つユーザーが付与できます。
 
 ## <a name="general-remarks"></a>全般的な解説
-
 セカンダリ データベースにはプライマリとは異なるスコープ構成を設定できますが、すべてのセカンダリ データベースで同じ構成が使用されます。 個々のセカンダリに異なる設定を構成することはできません。
 
 このステートメントを実行すると、現在のデータベースのプロシージャ キャッシュが消去されます。つまり、すべてのクエリを再コンパイルする必要があります。
 
 3 部構成の名前のクエリの場合、現在のデータベース コンテキストでコンパイルされる SQL モジュール (プロシージャ、関数、トリガーなど) ではなく、クエリに対する現在のデータベース接続の設定が適用されます。そのため、そのような設定が置かれているデータベースのオプションが使用されます。
 
-ALTER_DATABASE_SCOPED_CONFIGURATION イベントは、DDL トリガーの始動に利用できる DDL イベントとして追加され、ALTER_DATABASE_EVENTS トリガー グループの子です。
+`ALTER_DATABASE_SCOPED_CONFIGURATION` イベントは、DDL トリガーの始動に使用できる DDL イベントとして追加されます。`ALTER_DATABASE_EVENTS` トリガー グループの子です。
 
 データベース スコープ構成設定がデータベースに継承されるので、特定のデータベースが復元またはアタッチされたときに、既存の構成設定が残ります。
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
 ### <a name="maxdop"></a>MAXDOP
-
 詳細設定はグローバル設定をオーバーライドします。その Resource Governor が他のすべての MAXDOP 設定の上限となります。 MAXDOP 設定のロジックは次のようになります。
 
-- クエリ ヒントは sp_configure とデータベース スコープ設定の両方をオーバーライドします。 ワークロード グループにリソース グループ MAXDOP が設定されている場合:
+- クエリ ヒントは `sp_configure` とデータベース スコープ構成の両方をオーバーライドします。 ワークロード グループにリソース グループ MAXDOP が設定されている場合:
 
   - クエリ ヒントが 0 に設定されている場合、Resource Governor 設定でオーバーライドされます。
 
   - クエリ ヒントが 0 ではない場合、Resource Governor 設定が上限となります。
 
-- DB スコープ設定 (0 ではない限り) は、クエリ ヒントがある場合を除き、sp_configure をオーバーライドし、Resource Governor 設定が上限となります。
+- データベース スコープ構成 (0 ではない限り) は、クエリ ヒントがある場合を除き、`sp_configure` 設定をオーバーライドし、Resource Governor 設定が上限となります。
 
-- sp_configure 設定は、Resource Governor 設定でオーバーライドされます。
+- `sp_configure` 設定は、Resource Governor 設定でオーバーライドされます。
 
 ### <a name="queryoptimizerhotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
 
-QUERYTRACEON ヒントを使用して旧来のクエリ オプティマイザーまたはクエリ オプティマイザー修正プログラムを有効にするとき、クエリ ヒントとデータベース スコープ構成設定の OR 条件になります。つまり、いずれかが有効になっている場合、オプションが適用されます。
+`QUERYTRACEON` ヒントを使用して SQL Server 7.0 から [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] バージョンの既定のクエリ オプティマイザーまたはクエリ オプティマイザー修正プログラムを有効にするとき、クエリ ヒントとデータベース スコープ構成設定の OR 条件になります。つまり、いずれかが有効になっている場合、データベース スコープ構成が適用されます。
 
-### <a name="geodr"></a>GeoDR
+### <a name="geo-dr"></a>Geo DR
 
-読み取り可能なセカンダリ データベース (AlwaysOn 可用性グループや Azure SQL Database の geo レプリケートされたデータベース) では、データベースの状態を確認することでセカンダリ値が使用されます。 フェールオーバーで再コンパイルが行われず、技術的に、セカンダリ設定を使用しているクエリが新しいプライマリに与えられる場合でも、プライマリとセカンダリの間の設定はワークロードが異なるときにのみ変わるというのがその考えです。そのため、キャッシュされたクエリでは最適設定が使用されるが、新しいクエリはそれに適した新しい設定を選択します。
+読み取り可能なセカンダリ データベース (Always On 可用性グループや [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の geo レプリケートされたデータベース) では、データベースの状態を確認することでセカンダリ値が使用されます。 フェールオーバーで再コンパイルが行われず、技術的に、セカンダリ設定を使用しているクエリが新しいプライマリに与えられる場合でも、プライマリとセカンダリの間の設定はワークロードが異なるときにのみ変わるというのがその考えです。そのため、キャッシュされたクエリでは最適設定が使用されるが、新しいクエリはそれに適した新しい設定を選択します。
 
 ### <a name="dacfx"></a>DacFx
 
-ALTER DATABASE SCOPED CONFIGURATION は Azure SQL Database と SQL Server 2016 以降の SQL Server の新しい機能であり、データベース スキーマに影響を与えます。スキーマのエクスポートは (データがあってもなくても)、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] や [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] など、以前のバージョンの SQL Server にはインポートできません。 たとえば、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] データベースから [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) または [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) にエクスポートしたものは、下位レベルのサーバーにインポートできません。
+`ALTER DATABASE SCOPED CONFIGURATION` は [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) の新しい機能であり、データベース スキーマに影響を与えます。スキーマのエクスポートは (データがあってもなくても)、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] や [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] など、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にはインポートできません。 たとえば、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] データベースから [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) または [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) にエクスポートしたものは、下位レベルのサーバーにインポートできません。
 
 ### <a name="elevateonline"></a>ELEVATE_ONLINE
 
-このオプションは、WITH(ONLINE= 構文) 対応の DDL ステートメントにのみ適用されます。 XML インデックスは影響を受けません。
+このオプションは、`WITH (ONLINE = <syntax>)` 対応の DDL ステートメントにのみ適用されます。 XML インデックスは影響を受けません。
 
 ### <a name="elevateresumable"></a>ELEVATE_RESUMABLE
 
-このオプションは、WITH(RESUMABLE = 構文) 対応の DDL ステートメントにのみ適用されます。 XML インデックスは影響を受けません。
+このオプションは、`WITH (RESUMABLE = <syntax>)` 対応の DDL ステートメントにのみ適用されます。 XML インデックスは影響を受けません。
 
 ## <a name="metadata"></a>メタデータ
 
 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) システム ビューには、データベース内のスコープ構成に関する情報が表示されます。 データベース スコープ構成オプションはサーバー全体の初期設定にオーバーライドするため、sys.database_scoped_configurations にのみ表示されます。 [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) システム ビューは、サーバー全体の設定にのみ表示されます。
 
 ## <a name="examples"></a>使用例
-
 以下は ALTER DATABASE SCOPED CONFIGURATION の使用例です
 
 ### <a name="a-grant-permission"></a>A. 権限の付与
-
 この例では、ALTER DATABASE SCOPED CONFIGURATION の実行に必要な権限をユーザー [Joe] に与えています。
 
 ```sql
@@ -300,7 +296,6 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
 ### <a name="b-set-maxdop"></a>B. MAXDOP の設定
-
 この例では、geo レプリケーション シナリオでプライマリ データベースに MAXDOP = 1 を、セカンダリ データベースに MAXDOP = 4 を設定します。
 
 ```sql
@@ -315,7 +310,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```
 
 ### <a name="c-set-legacycardinalityestimation"></a>C. LEGACY_CARDINALITY_ESTIMATION の設定
-
 この例では、geo レプリケーション シナリオで、セカンダリ データベースの LEGACY_CARDINALITY_ESTIMATION を ON に設定します。
 
 ```sql
@@ -329,7 +323,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ```
 
 ### <a name="d-set-parametersniffing"></a>D. PARAMETER_SNIFFING の設定
-
 この例では、geo レプリケーション シナリオで、プライマリ データベースの PARAMETER_SNIFFING を OFF に設定します。
 
 ```sql
@@ -349,7 +342,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
 ```
 
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. QUERY_OPTIMIZER_HOTFIXES の設定
-
 geo レプリケーション シナリオで、プライマリ データベースの QUERY_OPTIMIZER_HOTFIXES を ON に設定します。
 
 ```sql
@@ -357,7 +349,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>F. プロシージャ キャッシュの消去
-
 この例では、プロシージャ キャッシュを消去します (プライマリ データベースのみ可能)。
 
 ```sql
@@ -365,8 +356,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 ```
 
 ### <a name="g-set-identitycache"></a>G. IDENTITY_CACHE の設定
-
-**適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (機能はパブリック プレビュー段階)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
 
 この例では、ID キャッシュを無効にします。
 
@@ -375,8 +365,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ```
 
 ### <a name="h-set-optimizeforadhocworkloads"></a>H. OPTIMIZE_FOR_AD_HOC_WORKLOADS の設定
-
-**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 この例では、バッチが初めてコンパイルされるとき、コンパイルしたプラン スタブのキャッシュ保存を有効にします。
 
@@ -385,7 +374,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevateonline"></a>I. ELEVATE_ONLINE を設定する
-
 **適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] およびパブリック プレビュー機能
 
 この例では、ELEVATE_ONLINE が FAIL_UNSUPPORTED に設定されます。
@@ -395,8 +383,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevateresumable"></a>J. ELEVATE_RESUMABLE を設定する
-
-**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (パブリック プレビュー機能)
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (パブリック プレビュー機能)
 
 この例では、ELEVATE_RESUMABLE が WHEN_SUPPORTED に設定されます。
 

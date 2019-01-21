@@ -8,15 +8,15 @@ ms.technology: security
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: egranet
-ms.author: esgranet
+ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cec6c79fadb5ef2a63145fff3efe0df3c8cd0f9d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539112"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980458"
 ---
 # <a name="static-data-masking"></a>静的データ マスク
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ NULL 値での置換を実行するマスク機能では、マスク前データ
  
  ![マスク機能ドロップダウン](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- 注: これらのマスク機能のほとんどには、追加の構成パラメーターがあります。 シャッフル マスクについては、既定のパラメーターが提供されています。 グループ シャッフル マスク、単一値マスク、文字列合成マスクについては、ユーザーが構成パラメーターを指定する必要があります。 構成パラメーターを変更または指定するには、**[構成...]** オプションをクリックし、ポップアップ表示されるダイアログ ボックスでパラメーターの (代替) 値を指定します。 各マスク機能について詳しくは、「[マスク機能](#masking-functions)」をご覧ください。
+ 注:これらのマスク機能のほとんどには、追加の構成パラメーターがあります。 シャッフル マスクについては、既定のパラメーターが提供されています。 グループ シャッフル マスク、単一値マスク、文字列合成マスクについては、ユーザーが構成パラメーターを指定する必要があります。 構成パラメーターを変更または指定するには、**[構成...]** オプションをクリックし、ポップアップ表示されるダイアログ ボックスでパラメーターの (代替) 値を指定します。 各マスク機能について詳しくは、「[マスク機能](#masking-functions)」をご覧ください。
  
  ![マスク機能の構成ボタン](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -125,7 +125,7 @@ NULL 値での置換を実行するマスク機能では、マスク前データ
 6. 静的データ マスクでは、ユーザーの **[Documents]** フォルダーに [Static Data Masking] という名前のフォルダーが作成されて、ログ ファイルが格納されます。 ログ ファイルは、デバッグの目的に役立ちます。 ログ ファイルの名前は、構成ウィンドウの下部で示されます。 
   
  
-7. (SQL Server のみ) オンプレミスのデータベースで静的データ マスクを使用すると、バックアップ/復元操作が実行されます。 **ステップ 2: .BAK ファイルの場所の複製**では、バックアップ ファイルを格納するサーバー上の場所を指定します。 
+7. (SQL Server のみ) オンプレミスのデータベースで静的データ マスクを使用すると、バックアップ/復元操作が実行されます。 **[Step 2:Clone .BAK file Location]\(ステップ 2: .BAK ファイルの場所の複製\)** では、バックアップ ファイルを格納するサーバー上の場所を指定します。 
 
 ## <a name="masking-functions"></a>マスク機能
 

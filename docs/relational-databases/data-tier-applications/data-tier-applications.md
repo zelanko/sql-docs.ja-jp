@@ -15,15 +15,15 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72595a95c08d89bec7db4a9b4252fe8873b12195
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba71da1f77d0fed61908b6d7aab953505a33e511
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525722"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591476"
 ---
 # <a name="data-tier-applications"></a>の
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   データ層アプリケーション (DAC) は、テーブル、ビュー、インスタンス オブジェクト (ログインを含む) など、ユーザーのデータベースに関連付けられたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを定義する論理的なデータベース管理エンティティです。 DAC は、データ層の開発者とデータベース管理者が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを DAC パッケージ (DACPAC とも呼ばれます) という移植可能なアーティファクトにパッケージ化できるようにする自己完結型の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース配置単位です。  
   
  BACPAC は、データベース スキーマおよびデータベースに格納されているデータをカプセル化する関連アーティファクトです。  
@@ -109,7 +109,7 @@ ms.locfileid: "52525722"
   
 -   **IMPORT**: ユーザーは、スキーマおよびデータをホスト サーバーの新しいデータベースにインポートできます。  
   
- この両方の機能が、データベース管理ツール (SQL Server Management Studio、Azure ポータル、DACFx API) でサポートされます。  
+ この両方の機能が、次のデータベース管理ツールでサポートされます:SQL Server Management Studio、Azure Portal、DACFx API。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースを作成 (DAC パッケージを配置することによるデータベースの作成を含む) するには、 **dbmanager** ロールのメンバーであるか、 **CREATE DATABASE** 権限が割り当てられている必要があります。 データベースを削除するには、 **dbmanager** ロールのメンバーであるか、 **DROP DATABASE** 権限が割り当てられている必要があります。  

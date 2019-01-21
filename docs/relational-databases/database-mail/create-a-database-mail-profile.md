@@ -15,22 +15,22 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0280e8039b5288186e910289eeb7c7566fdb0ae0
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae292a384a26c050976d4557793f6060ac3fe1b7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558729"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980448"
 ---
 # <a name="create-a-database-mail-profile"></a>データベース メール プロファイルの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **データベース メール構成ウィザード** または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、データベース メールのパブリック プロファイルとプライベート プロファイルを作成します。 メール プロファイルの詳細については、「[データベース メール プロファイル](database-mail-configuration-objects.md)」をご覧ください。
+  **データベース メール構成ウィザード** または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、データベース メールのパブリック プロファイルとプライベート プロファイルを作成します。 メール プロファイルの詳細については、「 [データベース メール プロファイル](database-mail-configuration-objects.md)」をご覧ください。
   
--   **作業を開始する準備:** [前提条件](#Prerequisites)、[セキュリティ](#Security)  
+-   **はじめに:**[前提条件](#Prerequisites)、[セキュリティ](#Security)  
   
--   **データベース メールのプライベート プロファイルの作成:**  [データベース メール構成ウィザードの使用](#SSMSProcedure)、[Transact-SQL の使用](#PrivateProfile)  
+-   **次を使用してデータベース メールのプライベート プロファイルを作成するには:**[データベース メール構成ウィザード](#SSMSProcedure)、[Transact-SQL](#PrivateProfile)  
   
--   **データベース メールのパブリック プロファイルの作成:**  [データベース メール構成ウィザード](#SSMSProcedure)、 [Transact-SQL の使用](#PublicProfile)  
+-   **次を使用してデータベース メールのパブリック プロファイルを作成するには:**[データベース メール構成ウィザード](#SSMSProcedure)、[Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51558729"
   
 -   **[プロファイルとアカウントの管理]** ページで、 **[新しいプロファイルを作成する]** オプションを選択し、 **[次へ]** をクリックします。  
   
--   **[新しいプロファイル]** ページで、プロファイル名と説明を指定し、プロファイルに含めるアカウントを追加して、 **[次へ]** をクリックします。  
+-   **[新しいプロファイル]** ページで、プロファイル名と説明を指定し、プロファイルに含めるアカウントを追加して、**[次へ]** をクリックします。  
   
 -   **[ウィザードの完了]** ページで、実行される動作を確認し、 **[完了]** をクリックして、新しいプロファイルの作成を完了します。  
   

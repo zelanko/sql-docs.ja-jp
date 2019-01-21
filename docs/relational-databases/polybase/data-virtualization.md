@@ -1,22 +1,22 @@
 ---
 title: SQL Server 2019 CTP 2.0 で外部データを仮想化する | Microsoft Docs
-description: ''
+description: このページでは、リレーショナル データ ソースに対して外部テーブルの作成ウィザードを使用する詳細な手順を説明します
 author: Abiola
 ms.author: aboke
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f09da2ec6d40f45bfe756fcfe648fd54fd5db6fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a8f5f55dfa0a569ec88542f819e30d21889997e3
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416873"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596673"
 ---
-# <a name="use-the-data-external-table-wizard-with-external-tables"></a>外部テーブルでデータ外部テーブル ウィザードを使用する
+# <a name="use-the-external-table-wizard-with-relational-data-sources"></a>リレーショナル データ ソースで外部テーブル ウィザードを使用する
 
 SQL Server 2019 CTP 2.0 の主なシナリオの 1 つは、データを仮想化する機能です。 このプロセスにより、データを元の場所に置いたままにすることができます。 SQL Server インスタンスでデータを*仮想化*して、SQL Server 内の他のテーブルと同じようにクエリを行うことができます。 このプロセスにより、ETL プロセスの必要性が最小になります。 このプロセスは、PolyBase コネクタを使用することによって可能です。 データ仮想化の詳細については、「[PolyBase 入門](polybase-guide.md)」を参照してください。
 

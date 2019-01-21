@@ -26,16 +26,16 @@ helpviewer_keywords:
 - partition functions [SQL Server]
 - partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da4ea3844087ea5b130060b8cc37a6bfa4c355bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8c9beeacd220108b2df83049716387439f0e2a90
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522273"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414187"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "52522273"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してパーティション テーブルまたはパーティション インデックスを作成するには:**  
   
@@ -204,7 +204,7 @@ ms.locfileid: "52522273"
   
                 -   **[日]** を選択した場合は、ジョブ スケジュールを実行する日付と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の 15 日にジョブ スケジュールを実行する場合は、**[日]** を選択し、1 番目のボックスに「15」と入力し、2 番目のボックスに「2」と入力します。 2 番目のボックスで使用できる最大の値は "99" であることに注意してください。  
   
-                -   **[曜日]** を選択した場合は、ジョブ スケジュールを実行する曜日と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の最後の平日にジョブ スケジュールを実行する場合は、**[日]** を選択し、リストから **[最終]** を選択します。次に 2 番目のリストから **[平日]** を選択し、最後のボックスに「2」と入力します。 最初の 2 つのリストでは、特定の平日 (たとえば、日曜日や水曜日) に加えて、 **[第 1]**、 **[第 2]**、 **[第 3]**、または **[第 4]** を選択できます。 最後のボックスで使用できる最大の値は "99" であることに注意してください。  
+                -   **[曜日]** を選択した場合は、ジョブ スケジュールを実行する曜日と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の最後の平日にジョブ スケジュールを実行する場合は、**[日]** を選択し、リストから **[最終]** を選択します。次に 2 番目のリストから **[平日]** を選択し、最後のボックスに「2」と入力します。 **[第 1]**、**[第 2]**、**[第 3]**、または **[第 4]** も、特定の平日 (たとえば、日曜日や水曜日) に加えて、最初の 2 つのリストから選択できます。 最後のボックスで使用できる最大の値は "99" であることに注意してください。  
   
         2.  **[一日のうちの頻度]** で、頻度、ジョブ スケジュールを実行する当日にジョブ スケジュールを繰り返す頻度を指定します。  
   

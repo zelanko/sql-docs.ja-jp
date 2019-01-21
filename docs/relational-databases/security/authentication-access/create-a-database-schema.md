@@ -19,30 +19,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c4bf49266f87dcc569ca6bca52c5a8d82119bb7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1cdaa903f8d81c2c4878965bc085f594f0313704
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510864"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626269"
 ---
 # <a name="create-a-database-schema"></a>データベース スキーマの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、スキーマを作成する方法について説明します。  
-  
- **このトピックの内容**  
-  
--   **作業を開始する準備:**  
-  
-     [制限事項と制約事項](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **スキーマを作成する方法:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -75,9 +61,12 @@ ms.locfileid: "52510864"
 5.  **[スキーマの所有者]** ボックスに、スキーマを所有するデータベース ユーザーまたはロールの名前を入力します。 または、 **[検索]** をクリックして **[ロールとユーザーの検索]** ダイアログ ボックスを開きます。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+
+> [!NOTE]
+> **Azure SQL Database** または **Azure SQL Data Warehouse** に対する SSMS を使用してスキーマを作成している場合、ダイアログ ボックスは表示されません。 生成されたスキーマ テンプレート作成 T-SQL ステートメントを実行する必要があります。
   
 ### <a name="additional-options"></a>追加オプション  
- **[スキーマ - 新規作成]** ダイアログ ボックスには、**[権限]** と **[拡張プロパティ]** という 2 つのページもあり、それぞれにオプションが用意されています。  
+ **[スキーマ - 新規作成]** ダイアログ ボックスには次の 2 つのページもあり、それぞれにオプションが用意されています:**[権限]**、**[拡張プロパティ]**。  
   
 -   **[権限]** ページには、すべてのセキュリティ保護可能なリソースと、ログインに付与できる、セキュリティ保護可能なリソースに対する権限が一覧表示されます。  
   

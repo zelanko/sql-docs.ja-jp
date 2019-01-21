@@ -18,12 +18,12 @@ ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 42d3976cabcfc231079f5b3b0c8cf9cbd1dcde94
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: daaaa615a778314556f9684800bdc2a56cd7a5ef
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524325"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980148"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>可用性グループの権限の取り消し (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  可用性グループに対して取り消すことができる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON AVAILABILITY GROUP **::***availability_group_name*  
+ ON AVAILABILITY GROUP **::**_availability_group_name_  
  権限を取り消す可用性グループを指定します。 スコープ修飾子 (**::**) が必要です。  
   
  { FROM | TO } \<server_principal> 取り消される権限の対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
@@ -101,12 +101,12 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
 ## <a name="permissions"></a>アクセス許可  
- 可用性グループに対する CONTROL 権限、またはサーバーに対する ALTER ANY AVAILABILTIY GROUP 権限が必要です。  
+ 可用性グループに対する CONTROL 権限、またはサーバーに対する ALTER ANY AVAILABILITY GROUP 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. 可用性グループの VIEW DEFINITION 権限を取り消す  
- 次の例では、可用性グループ `VIEW DEFINITION` での `MyAg` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して取り消します。  
+ 次の例では、可用性グループ `MyAg` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して取り消します。  
   
 ```  
 USE master;  
@@ -115,7 +115,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. CASCADE を指定して TAKE OWNERSHIP 権限を取り消す  
- 次の例では、可用性グループ `TAKE OWNERSHIP` での `MyAg` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー `PKomosinski` から取り消し、`PKomosinski` が MyAg での TAKE OWNERSHIP 権限を許可したすべてのプリンシパルから取り消します。  
+ 次の例では、可用性グループ `MyAg` での `TAKE OWNERSHIP` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー `PKomosinski` から取り消し、`PKomosinski` が MyAg での TAKE OWNERSHIP 権限を許可したすべてのプリンシパルから取り消します。  
   
 ```  
 USE master;  

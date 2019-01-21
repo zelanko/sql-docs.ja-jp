@@ -15,12 +15,12 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4bf4143ad0d446e526a72ad32b45d4397933827c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c5def2cd5b24046fe41524ed26b149c335b1c1f0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657212"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590502"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Kerberos 環境で Windows 認証を使用する場合、クライアントは�
 > [!CAUTION]  
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-**サーバー コンピューターの** **MaxTokenSize を変更するには**  
+**サーバー コンピューターの MaxTokenSize を変更するには**  
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   

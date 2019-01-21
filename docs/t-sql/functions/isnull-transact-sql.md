@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f19e41bb14179dcf0a01de36c86a9f4ff5fdfc88
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 2b5c3e694518f5500736ee1d991d6253e1ac5357
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970482"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978988"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ISNULL ( check_expression , replacement_value )
  NULL かどうかを調べる[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *check_expression* は任意のデータ型です。  
   
  *replacement_value*  
- *check_expression* が NULL の場合に返される式です。 *replacement_value* は、暗黙的に *check_expresssion* の型に変換できる型である必要があります。  
+ *check_expression* が NULL の場合に返される式です。 *replacement_value* は、暗黙的に *check_expression* の型に変換できる型である必要があります。  
   
 ## <a name="return-types"></a>戻り値の型  
  *check_expression* と同じ型が返されます。 リテラル NULL が *check_expression* として指定されている場合、*replacement_value* のデータ型を返します。 リテラル NULL が *check_expression* として指定されていて *replacement_value* が指定されていない場合、**int** を返します。  
@@ -65,7 +65,7 @@ ISNULL ( check_expression , replacement_value )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-isnull-with-avg"></a>A. AVG で ISNULL を使用する  
- 次の例では、すべての製品の重量の平均を求めます。 `50` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `Product` を代入します。  
+ 次の例では、すべての製品の重量の平均を求めます。 `Product` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `50` を代入します。  
   
 ```  
 USE AdventureWorks2012;  

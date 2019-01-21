@@ -17,12 +17,12 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c36cd11c60c3558e6b050de17a517d9feb968d32
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a8749700b557852b9807d28ee7cae2295504fa24
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638630"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979988"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS クレンジング変換
   DQS クレンジング変換では、Data Quality Services (DQS) を使用して、接続されたデータ ソースまたは類似のデータ ソース用に作成された承認済みのルールを適用することにより、接続されたデータ ソースのデータを修正します。 データ修正ルールの詳細については、「 [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)」を参照してください。 DQS の詳細については、「 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)」を参照してください。  
@@ -87,8 +87,8 @@ ms.locfileid: "51638630"
  **[データ品質ナレッジ ベース]**  
  接続されたデータ ソースの既存の DQS ナレッジ ベースを選択します。 DQS サポート技術情報の詳細については、「 [DQS のナレッジ ベースとドメイン](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)」を参照してください。  
   
- **暗号化接続**  
- DQS サーバーと [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]の間のデータ転送を暗号化するために、接続を暗号化するかどうかを指定します。  
+ **[暗号化接続]**  
+ DQS サーバーと [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の間のデータ転送を暗号化するために、接続を暗号化するかどうかを指定します。  
   
  **[使用できるドメイン]**  
  選択されたナレッジ ベースで使用できるドメインを一覧表示します。 ドメインには、単一ドメインと、2 つ以上の単一ドメインが含まれた複合ドメインの 2 種類があります。  

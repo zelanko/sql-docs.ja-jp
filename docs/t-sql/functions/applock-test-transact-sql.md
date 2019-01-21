@@ -22,12 +22,12 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ca73ac4f7283ac8bbcfb7490a9554ea49c9bcfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fe1b71d95dd326eedbdf481c68a74d30c052c6f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749240"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980188"
 ---
 # <a name="applocktest-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 クライアント アプリケーションによって指定されたロック リソース名を指定します。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーが内部的に保存できる値に内部的にハッシュされます。  *resource_name* は **nvarchar (255**) であり、既定値はありません。 *resource_name* はバイナリ比較し、現在のデータベースの照合順序の設定に関係なく大文字小文字を区別します。
   
 **'** *lock_mode* **'**  
-特定のリソースに対して取得するロック モード。 *lock_mode* は **nvarchar (32)** であり、既定値はありません。 *lock_mode* は、**Shared**、**Update**、**IntentShared**、**IntentExclusive**、**Exclusive** のいずれかの値をとります。
+特定のリソースに対して取得するロック モード。 *lock_mode* は **nvarchar (32)** であり、既定値はありません。 *lock_mode* は、次のいずれかの値をとります:**Shared**、**Update**、**IntentShared**、**IntentExclusive**、**Exclusive**。
   
 **'** *lock_owner* **'**  
 ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)**, 、値には、いずれかを指定して **トランザクション** (既定値) または **セッション**です。 既定値または **Transaction** を明示的に指定した場合、APPLOCK_TEST はトランザクション内から実行する必要があります。

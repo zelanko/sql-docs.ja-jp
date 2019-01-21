@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be0f60c692334b577a7eb59fa25f385ef0af33c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a2a977be46826859cf286fff1750345d5346e2b9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020465"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596823"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>まずはデータベースのストレッチの有効化ウィザードを実行する
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -178,7 +178,7 @@ ms.locfileid: "43020465"
   
 ##  <a name="KnownIssues"></a> ウィザードのトラブルシューティング  
  **Stretch Database ウィザードにエラーが発生しました。**  
- Stretch Database がサーバー レベルでまだ有効になっていなく、システム管理者に有効にする権限がないウィザードを実行すると、ウィザードでエラーが発生します。 システム管理者にローカル サーバー インスタンスの Stretch Database を有効にするように依頼し、ウィザードを再度実行します。 詳細については、「 [前提条件: サーバーで Stretch Database を有効にするためのアクセス許可](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)」を参照してください。  
+ Stretch Database がサーバー レベルでまだ有効になっていなく、システム管理者に有効にする権限がないウィザードを実行すると、ウィザードでエラーが発生します。 システム管理者にローカル サーバー インスタンスの Stretch Database を有効にするように依頼し、ウィザードを再度実行します。 詳しくは、「[前提条件:サーバーで Stretch Database を有効にするためのアクセス許可](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)」をご覧ください。  
   
 ## <a name="next-steps"></a>次の手順  
  Stretch Database の追加のテーブルを有効にします。 データの移行を監視し、ストレッチが有効なデータベースとテーブルを管理します。  

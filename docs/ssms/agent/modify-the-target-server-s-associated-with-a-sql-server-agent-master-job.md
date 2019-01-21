@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 72bd5e48e1b594ac5ff03f489259738f9bca5f86
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c0277feaf7063cdbf1e4e37cd97c4f8cb5895f18
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507881"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590366"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブに関連付けられている対象サーバーの変更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52507881"
   
     [制限事項と制約事項](#Restrictions)  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **以下を使用して SQL Server エージェントのマスター ジョブに関連付けられている対象サーバーを変更するには:**  
   
@@ -46,9 +46,9 @@ ms.locfileid: "52507881"
 ### <a name="Restrictions"></a>制限事項と制約事項  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター ジョブの対象サーバーを、ローカル サーバーとリモート サーバーの両方に設定することはできません。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。 詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
@@ -63,7 +63,7 @@ ms.locfileid: "52507881"
   
 4.  対象サーバーを変更するジョブを右クリックし、 **[プロパティ]** を選択します。  
   
-5.  *[*ジョブのプロパティ - ***ジョブ名>]* ダイアログ ボックスで、**[ページの選択]** の **[対象サーバー]** を選択します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)](../../ssms/agent/job-properties-new-job-targets-page.md)」を参照してください。  
+5.  **[ジョブのプロパティ - <_ジョブ名_>]** ダイアログ ボックスで、**[ページの選択]** の **[対象サーバー]** を選択します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)](../../ssms/agent/job-properties-new-job-targets-page.md)」を参照してください。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   

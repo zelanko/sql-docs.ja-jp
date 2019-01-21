@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d89d70b7aae73acd965f053a993432c62878351f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525203"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979648"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>SQL Server を構成して Microsoft にフィードバックを送信する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ SQL Server エラーと使用状況レポートを開始するには、**[開始
     
     レジストリ エントリ名 = CustomerFeedback
     
-    エントリのデータ型ダブルワード: 0 はオプトアウト、1 はオプトインです。
+    エントリのデータ型 DWORD :0 はオプトアウト、1 はオプトインです
     
     {InstanceID} は、次の例のように、インスタンスの型とインスタンスを表します。
 
@@ -91,18 +91,18 @@ SQL Server エラーと使用状況レポートを開始するには、**[開始
     
     レジストリ エントリ名 = CustomerFeedback
     
-    エントリのデータ型ダブルワード: 0 はオプトアウト、1 はオプトインです。
+    エントリのデータ型 DWORD :0 はオプトアウト、1 はオプトインです
 
 > [!NOTE]
 > {Major Version} は SQL Server のバージョンを表します。たとえば、SQL Server 2017 は 140 です。
 
-- SQL Server Management Studio
+- SQL Server Management Studio 17 の場合:
   
-    Subkey = HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\140
+    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0
 
-    レジストリ エントリ名 = CustomerFeedback
+    レジストリ エントリ名 = UserFeedbackOptIn
 
-    エントリのデータ型ダブルワード: 0 はオプトアウト、1 はオプトインです。
+    エントリのデータ型 DWORD :0 はオプトアウト、1 はオプトインです
 
     また、SSMS 17.x は Visual Studio 2015 シェルを基盤とし、Visual Studio インストールによって、既定でカスタマー フィードバックが可能になります。  
 
@@ -114,6 +114,13 @@ SQL Server エラーと使用状況レポートを開始するには、**[開始
 
     これらのレジストリ サブキー上のレジストリに基づいたグループ ポリシーは、SQL Server 2017 使用状況データ収集で受け入れられます。
 
+- SQL Server Management Studio 18 の場合:
+    
+    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell
+
+    レジストリ エントリ名 = UserFeedbackOptIn
+
+    エントリのデータ型 DWORD :0 はオプトアウト、1 はオプトインです
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>クラッシュ ダンプ収集のレジストリ サブキーの設定
 
 SQL Server の以前のバージョンでの動作と同様に、SQL Server 2017 Enterprise のお客様は、サーバーでグループ ポリシー設定を構成してクラッシュ ダンプの収集のオプトイン、オプトアウトを設定できます。 これを行うには、レジストリに基づいたポリシーを構成します。 関連するレジストリ サブキーと設定は以下の通りです。 
@@ -124,7 +131,7 @@ SQL Server の以前のバージョンでの動作と同様に、SQL Server 2017
 
     レジストリ エントリ名 = EnableErrorReporting
 
-    エントリのデータ型ダブルワード: 0 はオプトアウト、1 はオプトインです。
+    エントリのデータ型 DWORD :0 はオプトアウト、1 はオプトインです
  
     {InstanceID} は、次の例のように、インスタンスの型とインスタンスを表します。 
 
@@ -139,7 +146,7 @@ SQL Server の以前のバージョンでの動作と同様に、SQL Server 2017
 
     レジストリ エントリ名 = EnableErrorReporting
 
-    エントリのデータ型ダブルワード: 0 はオプトアウト、1 はオプトインです。
+    エントリのデータ型 DWORD :0 はオプトアウト、1 はオプトインです
 
 > [!NOTE]
 > {Major Version} は SQL Server のバージョンを表します。 たとえば、"140" は、SQL Server 2017 を指します。

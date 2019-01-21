@@ -11,12 +11,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 486d03addff39a0377298dcd1ddfb768046f2aa1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b364a92732be8e12233faf51b03d92154c2a6d28
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417803"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979498"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,10 +35,10 @@ EXPLAIN SQL_statement
   
 ## <a name="arguments"></a>引数  
  *SQL_statement*  
- **EXPLAIN** を実行する [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントです。 *SQL_statement* には、**SELECT**、**INSERT**、**UPDATE**、**DELETE**、**CREATE TABLE AS SELECT**、**CREATE REMOTE TABLE** のいずれかのコマンドが使用できます。  
+ **EXPLAIN** を実行する [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントです。 *SQL_statement* には、次のいずれかのコマンドを使用できます:**SELECT**、**INSERT**、**UPDATE**、**DELETE**、**CREATE TABLE AS SELECT**、**CREATE REMOTE TABLE**。  
   
 ## <a name="permissions"></a>アクセス許可  
- **SHOWPLAN** アクセス許可と、*SQL_statement* を実行するためのアクセス許可が必要です。 「[アクセス許可: GRANT、DENY、REVOKE &#40;Azure SQL Data Warehouse、並列データ ウェアハウス&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)」を参照してください。  
+ **SHOWPLAN** アクセス許可と、*SQL_statement* を実行するためのアクセス許可が必要です。 「[アクセス許可:GRANT、DENY、REVOKE &#40;Azure SQL Data Warehouse、並列データ ウェアハウス&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)」を参照してください。  
   
 ## <a name="return-value"></a>戻り値  
  **EXPLAIN** コマンドからの戻り値は、次に示す構造を持つ XML ドキュメントです。 この XML ドキュメントには、指定したクエリのクエリ プランのすべての操作が、それぞれ `<dsql_operation>` タグで囲まれて一覧表示されます。 戻り値の型は **nvarchar (max)** です。  
@@ -71,13 +71,13 @@ EXPLAIN SQL_statement
   
 |操作の種類|コンテンツ|例|  
 |--------------------|-------------|-------------|  
-|BROADCAST_MOVE、DISTRIBUTE_REPLICATED_TABLE_MOVE、MASTER_TABLE_MOVE、PARTITION_MOVE、SHUFFLE_MOVE、および TRIM_MOVE|これらの属性を持つ `<operation_cost>` 要素。 値には、ローカル操作のみが反映されます。<br /><br /> -   *cost* は、ローカル オペレーター コストで、実行する操作の推定所要時間 (ミリ秒) を示します。<br />-   *accumulative_cost* は、プランで見られるすべての操作 (並列処理の合計値を含む) の合計です (ミリ秒)。<br />-   *average_rowsize*は、操作中に取得されて渡される行の推定平均サイズ (バイト) です。<br />-   *output_rows* は、出力 (ノード) カーディナリティで、出力行の数を示します。<br /><br /> `<location>`: 操作が実行されるノードまたはディストリビューション。 オプション: "Control"、"ComputeNode"、"AllComputeNodes"、"AllDistributions"、"SubsetDistributions"、"Distribution"、および "SubsetNodes"。<br /><br /> `<source_statement>`: SHUFFLE_MOVE のソース データ。<br /><br /> `<destination_table>`: データの移動先となる内部の一時テーブル。<br /><br /> `<shuffle_columns>`: (SHUFFLE_MOVE 操作にのみ適用可能)。 一時テーブルのディストリビューション列として使用される 1 つまたは複数の列。|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
-|CopyOperation|`<operation_cost>`: 上記の `<operation_cost>` を参照。<br /><br /> `<DestinationCatalog>`: 宛先ノード。<br /><br /> `<DestinationSchema>`: DestinationCatalog 内の宛先スキーマ。<br /><br /> `<DestinationTableName>`: 宛先テーブルの名前または "TableName"。<br /><br /> `<DestinationDatasource>`: 宛先データベースの接続の名前または情報。<br /><br /> `<Username>` と `<Password>`: これらのフィールドには、宛先で必要となるユーザー名とパスワードが示されます。<br /><br /> `<BatchSize>`: コピー操作のバッチ サイズ。<br /><br /> `<SelectStatement>`: コピーを実行するために使用される Select ステートメント。<br /><br /> `<distribution>`: コピーが実行されるディストリビューション。|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
-|MetaDataCreate_Operation|`<source_table>`: 操作のソース テーブル。<br /><br /> `<destionation_table>`: 操作の宛先テーブル。|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
-|ON|`<location>`: 上記の `<location>` を参照。<br /><br /> `<sql_operation>`: ノードで実行される SQL コマンドを識別します。|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
-|RemoteOnOperation|`<DestinationCatalog>`: 宛先カタログ。<br /><br /> `<DestinationSchema>`: DestinationCatalog 内の宛先スキーマ。<br /><br /> `<DestinationTableName>`: 宛先テーブルの名前または "TableName"。<br /><br /> `<DestinationDatasource>`: 宛先データソースの名前。<br /><br /> `<Username>` と `<Password>`: これらのフィールドには、宛先で必要となるユーザー名とパスワードが示されます。<br /><br /> `<CreateStatement>`: 宛先データベースのテーブルの作成ステートメント。|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
-|RETURN|`<resultset>`: 結果セットの識別子。|`<resultset>RS_19</resultset>`|  
-|RND_ID|`<identifier>`: 作成したオブジェクトの識別子。|`<identifier>TEMP_ID_260</identifier>`|  
+|BROADCAST_MOVE、DISTRIBUTE_REPLICATED_TABLE_MOVE、MASTER_TABLE_MOVE、PARTITION_MOVE、SHUFFLE_MOVE、および TRIM_MOVE|これらの属性を持つ `<operation_cost>` 要素。 値には、ローカル操作のみが反映されます。<br /><br /> -   *cost* は、ローカル オペレーター コストで、実行する操作の推定所要時間 (ミリ秒) を示します。<br />-   *accumulative_cost* は、プランで見られるすべての操作 (並列処理の合計値を含む) の合計です (ミリ秒)。<br />-   *average_rowsize*は、操作中に取得されて渡される行の推定平均サイズ (バイト) です。<br />-   *output_rows* は、出力 (ノード) カーディナリティで、出力行の数を示します。<br /><br /> `<location>`[ ] :操作が実行されるノードまたはディストリビューション。 オプション:"Control"、"ComputeNode"、"AllComputeNodes"、"AllDistributions"、"SubsetDistributions"、"Distribution"、"SubsetNodes"。<br /><br /> `<source_statement>`[ ] :SHUFFLE_MOVE のソース データ。<br /><br /> `<destination_table>`[ ] :データの移動先となる内部の一時テーブル。<br /><br /> `<shuffle_columns>`[ ] :(SHUFFLE_MOVE 操作にのみ適用可能)。 一時テーブルのディストリビューション列として使用される 1 つまたは複数の列。|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
+|CopyOperation|`<operation_cost>`[ ] :上記の `<operation_cost>` を参照。<br /><br /> `<DestinationCatalog>`[ ] :宛先ノード。<br /><br /> `<DestinationSchema>`[ ] :DestinationCatalog 内の宛先スキーマ。<br /><br /> `<DestinationTableName>`[ ] :宛先テーブルの名前または "TableName"。<br /><br /> `<DestinationDatasource>`[ ] :宛先データベースの接続の名前または情報。<br /><br /> `<Username>` および `<Password>`:これらのフィールドには、宛先で必要となるユーザー名とパスワードが示されます。<br /><br /> `<BatchSize>`[ ] :コピー操作のバッチ サイズ。<br /><br /> `<SelectStatement>`[ ] :コピーを実行するために使用される Select ステートメント。<br /><br /> `<distribution>`[ ] :コピーが実行されるディストリビューション。|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
+|MetaDataCreate_Operation|`<source_table>`[ ] :操作のソース テーブル。<br /><br /> `<destination_table>`[ ] :操作の宛先テーブル。|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
+|ON|`<location>`[ ] :上記の `<location>` を参照。<br /><br /> `<sql_operation>`[ ] :ノードで実行される SQL コマンドを識別します。|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
+|RemoteOnOperation|`<DestinationCatalog>`[ ] :宛先カタログ。<br /><br /> `<DestinationSchema>`[ ] :DestinationCatalog 内の宛先スキーマ。<br /><br /> `<DestinationTableName>`[ ] :宛先テーブルの名前または "TableName"。<br /><br /> `<DestinationDatasource>`[ ] :宛先データソースの名前。<br /><br /> `<Username>` および `<Password>`:これらのフィールドには、宛先で必要となるユーザー名とパスワードが示されます。<br /><br /> `<CreateStatement>`[ ] :宛先データベースのテーブルの作成ステートメント。|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
+|RETURN|`<resultset>`[ ] :結果セットの識別子。|`<resultset>RS_19</resultset>`|  
+|RND_ID|`<identifier>`[ ] :作成したオブジェクトの識別子。|`<identifier>TEMP_ID_260</identifier>`|  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  **EXPLAIN** は、*最適化可能な*クエリ、つまり、**EXPLAIN** コマンドの結果に基づいて、改善または修正できるクエリにのみ適用できます。 上記に一覧表示されている **EXPLAIN** コマンドがサポートされています。 **EXPLAIN** をサポートされていないクエリの型で使用しようとすると、エラーが返されるか、クエリがエコーされます。  
@@ -286,21 +286,21 @@ GO
   
 -   行 18 から操作 1 が始まります。 行 18 と 19 は、**RND_ID** 操作により、オブジェクトの説明に使用されるランダムな ID 番号が作成されることを示しています。 上記の出力で説明されているオブジェクトは、**TEMP_ID_16893** です。 実際の番号は異なる場合があります。  
   
--   行 20 から操作 2 が始まります。 行 21 から 25: すべての計算ノードで、**TEMP_ID_16893** という名前の一時テーブルを作成します。  
+-   行 20 から操作 2 が始まります。 行 21 から 25:すべての計算ノードで、**TEMP_ID_16893** という名前の一時テーブルを作成します。  
   
--   行 26 から操作 3 が始まります。 行 27 から 37: BROADCAST_MOVE を使用して、データを **TEMP_ID_16893** に移動します。 各計算ノードに送信されるクエリが提供されます。 行 37 では、宛先テーブルを **TEMP_ID_16893** として指定します。  
+-   行 26 から操作 3 が始まります。 行 27 から 37:BROADCAST_MOVE を使用して、データを **TEMP_ID_16893** に移動します。 各計算ノードに送信されるクエリが提供されます。 行 37 では、宛先テーブルを **TEMP_ID_16893** として指定します。  
   
--   行 38 から操作 4 が始まります。 行 39 から 40: テーブルのランダムな ID を作成します。 **TEMP_ID_16894** は、上記の例の ID 番号です。 実際の番号は異なる場合があります。  
+-   行 38 から操作 4 が始まります。 行 39 から 40:テーブルのランダムな ID を作成します。 **TEMP_ID_16894** は、上記の例の ID 番号です。 実際の番号は異なる場合があります。  
   
--   行 41 から操作 5 が始まります。 行 42 から 46: すべてのノードで、**TEMP_ID_16894** という名前の一時テーブルを作成します。  
+-   行 41 から操作 5 が始まります。 行 42 から 46:すべてのノードで、**TEMP_ID_16894** という名前の一時テーブルを作成します。  
   
--   行 47 から操作 6 が始まります。 行 48 から 91: SHUFFLE_MOVE 操作を使用して、さまざまなテーブル (**TEMP_ID_16893** など) からテーブル **TEMP_ID_16894** にデータを移動します。 各計算ノードに送信されるクエリが提供されます。 行 90 では、宛先テーブルを **TEMP_ID_16894** として指定します。 行 91 では、列を指定します。  
+-   行 47 から操作 6 が始まります。 行 48 から 91:SHUFFLE_MOVE 操作を使用して、さまざまなテーブル (**TEMP_ID_16893** など) からテーブル **TEMP_ID_16894** にデータを移動します。 各計算ノードに送信されるクエリが提供されます。 行 90 では、宛先テーブルを **TEMP_ID_16894** として指定します。 行 91 では、列を指定します。  
   
--   行 92 から操作 7 が始まります。 行 93 から 97: すべての計算ノードで、**TEMP_ID_16893** という名前の一時テーブルを破棄します。  
+-   行 92 から操作 7 が始まります。 行 93 から 97:すべての計算ノードで、**TEMP_ID_16893** という名前の一時テーブルを破棄します。  
   
--   行 98 から操作 8 が始まります。 行 99 から 135: クライアントに結果を返します。 指定したクエリを使用して結果を取得します。  
+-   行 98 から操作 8 が始まります。 行 99 から 135:クライアントに結果を返します。 指定したクエリを使用して結果を取得します。  
   
--   行 136 から操作 9 が始まります。 行 137 から 140: すべてのノードで、一時テーブル **TEMP_ID_16894** を破棄します。  
+-   行 136 から操作 9 が始まります。 行 137 から 140:すべてのノードで、一時テーブル **TEMP_ID_16894** を破棄します。  
   
   
 

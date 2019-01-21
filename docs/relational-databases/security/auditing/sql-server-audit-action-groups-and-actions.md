@@ -22,12 +22,12 @@ ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 864377bee6ee587e95321338d0c1a46f5c7523e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31eb77b8223c13de9fe5a7e098a42462ed4fd915
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742980"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591756"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 監査のアクション グループとアクション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,8 +82,8 @@ ms.locfileid: "47742980"
 |DATABASE_CHANGE_GROUP|このイベントは、データベースが作成、変更、または削除されるときに発生します。 このイベントは、任意のデータベースが作成、変更、または削除されるたびに発生します。 [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md)と同じです。|  
 |DATABASE_LOGOUT_GROUP|このイベントは、包含データベースのユーザーがデータベースをログアウトするときに発生します。 Database Logout Event Class と同じです。|  
 |DATABASE_MIRRORING_LOGIN_GROUP|このイベントは、データベース ミラーリングのトランスポート セキュリティに関する監査メッセージを報告するために発生します。 [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)と同じです。|  
-|DATABASE_OBJECT_ACCESS_GROUP|このイベントは、メッセージ型、アセンブリ、コントラクトなどのデータベース オブジェクトへのアクセスが行われるたびに発生します。 このイベントは、任意のデータベースへの任意のアクセスに対して発生します。 注意: 大量の監査レコードが生成される可能性があります。<br /><br /> [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md)と同じです。|  
-|DATABASE_OBJECT_CHANGE_GROUP|このイベントは、スキーマなどのデータベース オブジェクトで、CREATE、ALTER、または DROP ステートメントが実行されたときに発生します。 このイベントは、任意のデータベース オブジェクトが作成、変更、または削除されるたびに発生します。 注意: 非常に大量の監査レコードが生成される可能性があります。<br /><br /> [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md)と同じです。|  
+|DATABASE_OBJECT_ACCESS_GROUP|このイベントは、メッセージ型、アセンブリ、コントラクトなどのデータベース オブジェクトへのアクセスが行われるたびに発生します。 このイベントは、任意のデータベースへの任意のアクセスに対して発生します。 注:大量の監査レコードが生成される可能性があります。<br /><br /> [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md)と同じです。|  
+|DATABASE_OBJECT_CHANGE_GROUP|このイベントは、スキーマなどのデータベース オブジェクトで、CREATE、ALTER、または DROP ステートメントが実行されたときに発生します。 このイベントは、任意のデータベース オブジェクトが作成、変更、または削除されるたびに発生します。 注:非常に大量の監査レコードが生成される可能性があります。<br /><br /> [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md)と同じです。|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|このイベントは、データベース スコープ内のオブジェクトの所有者が変更されたときに発生します。 このイベントは、サーバー上の任意のデータベースの任意のオブジェクト所有権の変更に対して発生します。 [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md)と同じです。|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|このイベントは、アセンブリやスキーマなどのデータベース オブジェクトに対して GRANT、REVOKE、または DENY が実行された場合に発生します。 このイベントは、サーバー上の任意のデータベースの任意のオブジェクト権限の変更に対して発生します。 [Audit Database Object GDR Event Class](../../../relational-databases/event-classes/audit-database-object-gdr-event-class.md)と同じです。|  
 |DATABASE_OPERATION_GROUP|このイベントは、チェックポイントやクエリ通知のサブスクライブなど、データベースの操作が行われたときに発生します。 このイベントは、任意のデータベースの任意のデータベース操作に対して発生します。 [Audit Database Operation Event Class](../../../relational-databases/event-classes/audit-database-operation-event-class.md)と同じです。|  
@@ -122,6 +122,9 @@ ms.locfileid: "47742980"
  サーバー レベルのアクション グループは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス全体のアクションを対象とします。 たとえば、該当するアクション グループをサーバー監査の仕様に追加すると、任意のデータベースの任意のスキーマ オブジェクトのアクセス確認が記録されます。 データベース監査の仕様では、そのデータベースのスキーマ オブジェクト アクセスのみが記録されます。  
   
  サーバー レベルのアクションでは、データベース レベルのアクションに対する詳細なフィルタリングは使用できません。 Employee グループのログインの Customers テーブルに対する SELECT アクションの監査などのデータベース レベルの監査では、アクションの詳細なフィルタリングを実装する必要があります。 ユーザーのデータベース監査の仕様に、システム ビューなどのサーバー スコープ オブジェクトは含めないでください。  
+
+ > [!NOTE]
+ > トランザクション レベルの監査を有効にするとオーバーヘッドが発生するため、[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 以降では、[情報セキュリティ国際評価基準 (Common Criteria) への準拠] を有効にしていない場合、トランザクション レベルの監査は既定で無効になります。  [情報セキュリティ国際評価基準 (Common Criteria) への準拠] が無効になっている場合でも、TRANSACTION_GROUP から監査の仕様にアクションを追加することはできますが、トランザクション アクションが実際に収集されることはありません。  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 以降で、TRANSACTION_GROUP からの監査アクションを構成する場合は、[情報セキュリティ国際評価基準 (Common Criteria) への準拠] を有効にすることによって、トランザクション レベルの監査インフラストラクチャを有効にしてください。  なお、[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP1 CU2 以降では、トレース フラグ 3427 でトランザクション レベルの監査を無効にすることもできます。
   
 ## <a name="database-level-audit-action-groups"></a>データベース レベルの監査アクション グループ  
  データベース レベルの監査アクション グループは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ監査イベント クラスに似ています。 イベント クラスの詳細については、「 [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。  

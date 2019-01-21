@@ -17,12 +17,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 254fa32ff939f7e84c361cd5baae4c99d4c42715
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff355276e4e154d47fc9b5c2124c16b296836eaa
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539674"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591596"
 ---
 # <a name="ssms-utility"></a>Ssms ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,10 +53,10 @@ Ssms
  *solutionfile*  
  開くソリューションを指定します。 パラメーターには、ソリューション ファイルへの完全パスを含める必要があります。  
   
- [**-S** *servername*]  
+ [**-S** _servername_]  
   サーバー名  
   
- [**-d** *databasename*]  
+ [**-d** _databasename_]  
   データベース名  
 
  **[-G]** Azure Active Directory 認証を使用して接続します。 接続の種類は、**-P** および/または **-U** が含まれるかどうかで決まります。
@@ -66,10 +66,10 @@ Ssms
 
   **[Active Directory - MFA サポートで汎用]** は現在サポートされていません。 
   
-[**-U** *username*]  
+[**-U** _username_]  
  'SQL 認証' または 'Active Directory - パスワード' に接続するときのユーザー名  
   
-[**-P** *password*]  
+[**-P** _password_]  
  'SQL 認証' または 'Active Directory - パスワード' で接続するときのパスワード
   
 **[-E]**  
@@ -78,7 +78,7 @@ Ssms
 **[-nosplash]**  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開くとき、スプラッシュ スクリーンのグラフィックを表示しません。 限られた帯域幅を使用した接続では、ターミナル サービスを使用して [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を起動しているコンピューターへ接続する場合に、このオプションを使用してください。 この引数では、大文字と小文字は区別されず、他の引数の前後どちらにも指定できます。  
   
-[**-log***[filename]?*]  
+[**-log**_[filename]?_]  
  トラブルシューティング用に指定したファイルに [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のアクティビティを記録します。  
   
 **[-?]**  

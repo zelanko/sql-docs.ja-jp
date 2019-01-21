@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 12/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d15863bfeb814d88d3971b0cb3a957abee947c47
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 75c1bb4f7c236f45b94e534ceec2655fc24808df
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516090"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980438"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -86,13 +86,13 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
   
 ## <a name="arguments"></a>引数  
 *login_name*  
-作成するログインの名前を指定します。 ログインには、SQL Server ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインの 4 種類があります。 Windows ドメイン アカウントからマップされるログインを作成する場合は、Windows 2000 よりも前の Windows で使用されていた [\<domainName>\\<login_name>] 形式のユーザー ログイン名を使用する必要があります。 login_name@DomainName 形式の UPN は使用できません。 例については、この記事の後半の例 D を参照してください。 認証ログインは **sysname** 型であり、[識別子](../../relational-databases/databases/database-identifiers.md) のルールに従っている必要があります。このログインに "**\\**" を含めることはできません。 Windows ログインには "**\\**" を含めることができます。 Active Directory ユーザーに基づくログインは、21 文字未満の名前に制限されます。 
+作成するログインの名前を指定します。 ログインには 4 つの種類があります。SQL Server ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインです。 Windows ドメイン アカウントからマップされるログインを作成する場合は、Windows 2000 よりも前の Windows で使用されていた [\<domainName>\\<login_name>] 形式のユーザー ログイン名を使用する必要があります。 login_name@DomainName 形式の UPN は使用できません。 例については、この記事の後半の例 D を参照してください。 認証ログインは **sysname** 型であり、[識別子](../../relational-databases/databases/database-identifiers.md) のルールに従っている必要があります。このログインに "**\\**" を含めることはできません。 Windows ログインには "**\\**" を含めることができます。 Active Directory ユーザーに基づくログインは、21 文字未満の名前に制限されます。 
 
-PASSWORD **='**_password_**'* SQL Server ログインにのみ適用されます。 作成するログインのパスワードを指定します。 強力なパスワードを使用する必要があります。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 SQL Server 2012 (11.x) 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。 
+PASSWORD **=**'*password*' SQL Server ログインにのみ適用されます。 作成するログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 SQL Server 2012 (11.x) 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。 
   
 パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a ～ z、A ～ Z、0 ～ 9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。 
   
-PASSWORD **=**_hashed\_password_  
+PASSWORD **=** *hashed\_password*  
 HASHED キーワードにのみ適用されます。 作成するログインのパスワードのハッシュ値を指定します。 
   
 HASHED SQL Server ログインにのみ適用されます。 PASSWORD 引数の後に入力されたパスワードが、ハッシュ済みであることを示します。 このオプションを選択しなかった場合、パスワードとして入力した文字列は、ハッシュされてからデータベースに格納されます。 このオプションは、あるサーバーから別のサーバーにデータベースを移行する場合にのみ使用してください。 新しいログインを作成する場合は HASHED オプションを使用しないでください。 HASHED オプションは SQL 7 以前で作成されたハッシュでは使用できません。
@@ -285,7 +285,7 @@ CREATE LOGIN login_name
 作成するログインの名前を指定します。 Azure SQL Database 論理サーバーでは SQL ログインのみがサポートされます。 
 
 PASSWORD **='** password**'*  
-作成する SQL ログインのパスワードを指定します。 強力なパスワードを使用する必要があります。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。 
+作成する SQL ログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。 
   
 パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a ～ z、A ～ Z、0 ～ 9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。 
 
@@ -316,7 +316,7 @@ SQL Database では、接続の認証に必要なログイン データおよび
  
 ## <a name="permissions"></a>アクセス許可
 
-サーバーレベル プリンシパルのログイン (準備プロセスで作成) または master データベースの `loginmanager` データベース ロールのメンバーだけが新しいログインを作成できます。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) に関するページを参照してください。
+サーバーレベル プリンシパルのログイン (準備プロセスで作成) または master データベースの `loginmanager` データベース ロールのメンバーだけが新しいログインを作成できます。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>) に関するページを参照してください。
 
 ## <a name="logins"></a>Login
 - サーバーに対する **ALTER ANY LOGIN** 権限または **securityadmin** 固定サーバー ロールのメンバーシップが必要です。 このコマンドを実行できるのは、サーバーに対する **ALTER ANY LOGIN** 権限または securityadmin 権限のメンバーシップを持つ Azure Active Directory (Azure AD) アカウントのみです。
@@ -326,7 +326,7 @@ SQL Database では、接続の認証に必要なログイン データおよび
 ログインが作成されたら、ログインは SQL Database に接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。 
   
 - データベースに接続するには、そのデータベースにログイン用のデータベース ユーザーを作成する必要があります。 詳細については、[CREATE USER](../../t-sql/statements/create-user-transact-sql.md) に関するページを参照してください。 
-- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
+- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
 - サーバー全体の権限を付与するには、master データベースにデータベース ユーザーを作成し、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して、管理サーバー ロールのいずれかにユーザーを追加します。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)、および[サーバー ロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)に関するページを参照してください。
 - 新しいログインまたはログインを含むロールにサーバー レベルの権限を許可するには、**GRANT** ステートメントを使用します。 詳細については、「[GRANT](../../t-sql/statements/grant-transact-sql.md)」を参照してください。
   
@@ -384,102 +384,157 @@ GO
 
 ## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
-## <a name="overview"></a>概要
-
 ## <a name="syntax"></a>構文 
   
 ```sql
--- Syntax for Azure SQL Database  
-CREATE LOGIN login_name  
- { WITH <option_list> }  
+-- Syntax for Azure SQL Database Managed Instance
+CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
   
-<option_list> ::=   
-    PASSWORD = { 'password' }  
-    [ , SID = sid ]  
+<option_list> ::=
+    PASSWORD = {'password'}
+    | SID = sid
+    | DEFAULT_DATABASE = database
+    | DEFAULT_LANGUAGE = language  
 ```  
 
-## <a name="arguments"></a>引数  
+> [!IMPORTANT]
+> SQL Database Managed Instance の Azure AD ログインは**パブリック プレビュー**段階です。 これは **FROM EXTERNAL PROVIDER** 構文で導入されています。
+
+## <a name="arguments"></a>引数
 *login_name*  
-作成するログインの名前を指定します。 Azure SQL Database Managed Instance では SQL ログインのみがサポートされます。 
+**FROM EXTERNAL PROVIDER** 句と共に使用すると、ログインで Azure Active Directory (AD) プリンシパル (Azure AD ユーザー、グループ、またはアプリケーション) が指定されます。 それ以外の場合、ログインは作成された SQL ログインの名前を示します。
 
-PASSWORD **='** password**'*  
-作成する SQL ログインのパスワードを指定します。 強力なパスワードを使用する必要があります。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。 
-  
-パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a ～ z、A ～ Z、0 ～ 9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。 
+FROM EXTERNAL PROVIDER </br>
+ログインが Azure AD Authentication 用であることを指定します。
 
-SID = *sid*  
-ログインを再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Database の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)**) のリテラルです。 たとえば、`SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` のようにします。 
+PASSWORD **=** '*password*'  
+作成する SQL ログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。 
   
-## <a name="remarks"></a>Remarks  
+パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a ～ z、A ～ Z、0 ～ 9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。
+
+SID **=** *sid*  
+ログインを再作成に使用されます。 SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Database の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)**) のリテラルです。 たとえば、`SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` のようにします。 
+
+## <a name="remarks"></a>Remarks
+
 - パスワードでは大文字と小文字が区別されます。
+- Azure AD アカウントにマップされたサーバーレベルのプリンシパルを作成するための新しい構文が導入されました (**FROM EXTERNAL PROVIDER**)
+- **FROM EXTERNAL PROVIDER** を指定した場合:
+    - login_name は、現在の Azure SQL Managed Instance によって Azure AD 内でアクセスできる既存の Azure AD アカウント (ユーザー、グループ、またはアプリケーション) を表す必要があります。
+    - **PASSWORD** オプションは使用できません。
+    - 現在、最初の Azure AD ログインは、上記の構文を使用して、`sysadmin` の標準 SQL Server アカウント (Azure AD 以外) で作成する必要があります。
+        - SQL Database Managed Instance の Azure AD 管理者を使用して Azure AD ログインを作成すると、次のエラーが発生します。</br>
+        `Msg 15247, Level 16, State 1, Line 1
+        User does not have permission to perform this action.`
+        - これは**パブリック プレビュー**の既知の制限であり、今後修正される予定です。
+    - 最初の Azure AD ログインが作成され、必要なアクセス許可が付与されると、このログインで他の Azure AD ログインを作成できます。
+- **FROM EXTERNAL PROVIDER** 句を省略すると、既定で通常の SQL ログインが作成されます。
+- Azure AD ログインは sys.server_principals で表示することができます。Azure AD ユーザーにマップされたログインの場合、type 列の値は **E** に設定され、type_desc は **EXTERNAL_LOGIN** に設定されます。Azure AD グループにマップされたログインの場合、type 列の値は **X** に設定され、type_desc 値は **EXTERNAL_GROUP** に設定されます。
 - スクリプトでログインを転送する場合は、「[SQL Server 2005 のインスタンス間でログインおよびパスワードを転送する方法](https://support.microsoft.com/kb/918992)」を参照してください。
-- ログインを作成すると、自動的に新しいログインが有効になり、ログインにサーバー レベルの **CONNECT SQL** 権限が与えられます。 
-- アクセスを許可するにはサーバーの[認証モード](../../relational-databases/security/choose-an-authentication-mode.md)がログインの種類に一致する必要があります。
-    - 権限システムの設計の詳細については、「 [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。
+- ログインを作成すると、自動的に新しいログインが有効になり、ログインにサーバー レベルの **CONNECT SQL** 権限が与えられます。
   
-## <a name="login"></a>Login
+## <a name="logins-and-permissions"></a>ログインとアクセス許可
 
-### <a name="sql-database-logins"></a>SQL データベース ログイン
-**CREATE LOGIN** ステートメントはバッチ内の唯一のステートメントである必要があります。 
-  
-**sqlcmd** などの SQL Database に接続するいくつかのメソッドでは、*\<login>*@*\<server>* の表記法を使用して、接続文字列のログイン名に SQL Database サーバー名を追加する必要があります。 たとえば、ログインが `login1` で、SQL Database サーバーの完全修飾名が `servername.database.windows.net` である場合、接続文字列の *username* パラメーターは `login1@servername` となる必要があります。 の合計の長さ、 *username* パラメーターには、128 文字まで *login_name* サーバー名の長さマイナス 127 文字に制限されます。 この例では、`login_name` が 10 文字であるため、`servername` には 117 文字までしか指定できません。 
-  
-SQL Database では、ログインを作成する際に master データベースに接続する必要があります。 
-  
- SQL Server ルールを使用すると、\<loginname>@\<servername> 形式の SQL Server 認証ログインを作成できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーが **myazureserver** で、ログインが **myemail@live.com** である場合、**myemail@live.com@myazureserver** としてログインを指定する必要があります。 
-  
-SQL Database では、接続の認証に必要なログイン データおよびサーバー レベルのファイアウォール規則は、各データベースで一時的にキャッシュされます。 このキャッシュは定期的に更新されます。 認証キャッシュを強制的に更新し、データベースに最新バージョンのログイン テーブルがあることを確認するには、[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) を実行します。 
-  
- SQL Database ログインの詳細については、[Windows Azure SQL Database におけるデータベースとログインの管理](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)に関する記事を参照してください。 
- 
-## <a name="permissions"></a>アクセス許可
+サーバーレベル プリンシパルのログイン (準備プロセスで作成) または master データベースの `securityadmin` または `sysadmin` データベース ロールのメンバーだけが新しいログインを作成できます。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) に関するページを参照してください。
 
-サーバーレベル プリンシパルのログイン (準備プロセスで作成) または master データベースの `loginmanager` データベース ロールのメンバーだけが新しいログインを作成できます。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) に関するページを参照してください。
+既定で、マスターに新しく作成された Azure AD ログインに付与される標準のアクセス許可は
+- **CONNECT SQL** と **VIEW ANY DATABASE** です。
 
-## <a name="logins"></a>Login
-- サーバーに対する **ALTER ANY LOGIN** 権限または **securityadmin** 固定サーバー ロールのメンバーシップが必要です。 このコマンドを実行できるのは、サーバーに対する **ALTER ANY LOGIN** 権限または securityadmin 権限のメンバーシップを持つ Azure Active Directory (Azure AD) アカウントのみです。
-- Azure SQL 論理サーバーで使用されるのと同じディレクトリ内の Azure AD のメンバーである必要があります。
-  
+### <a name="sql-database-managed-instance-logins"></a>SQL Database Managed Instance のログイン:
+
+- サーバーに対する **ALTER ANY LOGIN** アクセス許可、または固定サーバー ロール `securityadmin` または `sysadmin` のいずれかのメンバーシップが必要です。 create コマンドを実行できるのは、サーバーに対する **ALTER ANY LOGIN** アクセス許可またはそのようなロールのいずれかのメンバーシップを持つ Azure Active Directory (Azure AD) アカウントのみです。
+- ログインが SQL プリンシパルの場合、`sysadmin` ロールの一部であるログインのみが create コマンドを使用して Azure AD アカウントのログインを作成できます。
+- Azure SQL Managed Instance で使用されるのと同じディレクトリ内の Azure AD のメンバーである必要があります。
+
 ## <a name="after-creating-a-login"></a>ログインを作成した後  
-ログインが作成されたら、ログインは SQL Database に接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。 
+ログインが作成されたら、ログインは SQL Database Managed Instance に接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。 
   
-- データベースに接続するには、そのデータベースにログイン用のデータベース ユーザーを作成する必要があります。 詳細については、[CREATE USER](../../t-sql/statements/create-user-transact-sql.md) に関するページを参照してください。 
-- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
+- Azure AD ログインから Azure AD ユーザーを作成するには、「[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 
+- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
 - サーバー全体の権限を付与するには、master データベースにデータベース ユーザーを作成し、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して、管理サーバー ロールのいずれかにユーザーを追加します。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)、および[サーバー ロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)に関するページを参照してください。
+    - 次のコマンドを使用して、Azure AD ログインに `sysadmin` ロールを追加します。`ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - 新しいログインまたはログインを含むロールにサーバー レベルの権限を許可するには、**GRANT** ステートメントを使用します。 詳細については、「[GRANT](../../t-sql/statements/grant-transact-sql.md)」を参照してください。
+
+## <a name="limitations"></a>制限事項
+
+- Azure AD グループにマップされた Azure AD ログインをデータベース所有者として設定することはサポートされていません。
+- [EXECUTE AS](execute-as-transact-sql.md) 句など、他の Azure AD プリンシパルを使用した Azure AD サーバーレベル プリンシパルの偽装がサポートされています。
+- Azure AD プリンシパルを対象とした次の操作を実行できるのは、`sysadmin` ロールの一部である SQL サーバーレベルのプリンシパル (ログイン) のみです。
+  - EXECUTE AS USER
+  - EXECUTE AS LOGIN
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-login-with-a-password"></a>A. パスワード付きのログインを作成する  
- 次の例では、特定のユーザーのログインを作成し、パスワードを割り当てます。 
-  
-```sql  
-CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';  
-GO  
-```  
-  
-### <a name="b-creating-a-login-from-a-sid"></a>B. SID からログインを作成します。  
- 次の例では、まず、SQL Server 認証のログインを作成し、ログインの SID を調べています。 
-  
-```sql  
-CREATE LOGIN TestLogin WITH PASSWORD = 'SuperSecret52&&';  
-  
-SELECT name, sid FROM sys.sql_logins WHERE name = 'TestLogin';  
-GO  
-```  
-  
+ 次の例では、特定のユーザーのログインを作成し、パスワードを割り当てます。
+
+ ```sql
+ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';  
+ GO  
+ ```
+
+### <a name="b-creating-a-login-from-a-sid"></a>B. SID からログインを作成します。
+ 次の例では、まず、SQL Server 認証のログインを作成し、ログインの SID を調べています。
+
+ ```sql
+ CREATE LOGIN TestLogin WITH PASSWORD = 'SuperSecret52&&';  
+
+ SELECT name, sid FROM sys.sql_logins WHERE name = 'TestLogin';  
+ GO  
+ ```  
+
  クエリでは、SID として 0x241C11948AEEB749B0D22646DB1A19F2 を返します。 クエリでは、別の値を返します。 次のステートメントは、ログインを削除し、ログインを作成し直します。 前のクエリから SID を使用します。 
-  
-```sql  
-DROP LOGIN TestLogin;  
-GO  
-  
-CREATE LOGIN TestLogin   
-WITH PASSWORD = 'SuperSecret52&&', SID = 0x241C11948AEEB749B0D22646DB1A19F2;  
-  
-SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';  
-GO  
-```  
+
+ ```sql
+ DROP LOGIN TestLogin;  
+ GO  
+
+ CREATE LOGIN TestLogin
+ WITH PASSWORD = 'SuperSecret52&&', SID = 0x241C11948AEEB749B0D22646DB1A19F2;  
+
+ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';  
+ GO  
+ ```
+
+### <a name="c-creating-a-login-for-a-local-azure-ad-account"></a>C. ローカル Azure AD アカウントのログインを作成する
+ 次の例では、Azure AD に存在する *myaad* の Azure AD アカウント joe@myaad.onmicrosoft.com のログインを作成します。
+
+```sql
+CREATE LOGIN [joe@myaad.onmicrosoft.com] FROM EXTERNAL PROVIDER
+GO
+```
+
+### <a name="d-creating-a-login-for-a-federated-azure-ad-account"></a>D. フェデレーション Azure AD アカウントのログインを作成する
+ 次の例では、*contoso* という Azure AD に存在するフェデレーション Azure AD アカウント bob@contoso.com のログインを作成します。 ユーザー bob はゲスト ユーザーである可能性もあります。
+
+```sql
+CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER
+GO
+```
+
+### <a name="e-creating-a-login-for-an-azure-ad-group"></a>E. Azure AD グループのログインを作成する
+ 次の例では、Azure AD に存在する *myaad* の Azure AD グループ *mygroup* のログインを作成します。
+
+```sql
+CREATE LOGIN [mygroup] FROM EXTERNAL PROVIDER
+GO
+```
+
+### <a name="f-creating-a-login-for-an-azure-ad-application"></a>F. Azure AD アプリケーションのログインを作成する
+ 次の例では、Azure AD に存在する *myaad* の Azure AD アプリケーション *myapp* のログインを作成します。
+
+```sql
+CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER
+```
+
+### <a name="g-check-newly-added-logins"></a>G. 新しく追加されたログインを確認する
+ 新しく追加されたログインを確認するには、次の T-SQL コマンドを実行します。
+
+```sql
+SELECT *   
+FROM sys.server_principals;
+GO
+```
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
@@ -498,7 +553,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />論理サーバー](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance]()|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />論理サーバー](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -521,7 +576,7 @@ CREATE LOGIN login_name
 作成するログインの名前を指定します。 Azure SQL Database では SQL ログインのみがサポートされます。 
 
 PASSWORD **='** password**'*  
-作成する SQL ログインのパスワードを指定します。 強力なパスワードを使用する必要があります。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。 
+作成する SQL ログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。 
   
 パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a ～ z、A ～ Z、0 ～ 9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。 
 
@@ -551,13 +606,13 @@ SQL Data Warehouse では、接続の認証に必要なログイン データお
  
 ## <a name="permissions"></a>アクセス許可
 
-サーバーレベル プリンシパルのログイン (準備プロセスで作成) または master データベースの `loginmanager` データベース ロールのメンバーだけが新しいログインを作成できます。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) に関するページを参照してください。
+サーバーレベル プリンシパルのログイン (準備プロセスで作成) または master データベースの `loginmanager` データベース ロールのメンバーだけが新しいログインを作成できます。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>) に関するページを参照してください。
 
 ## <a name="after-creating-a-login"></a>ログインを作成した後  
 ログインが作成されたら、ログインは SQL Data Warehouse に接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。 
   
 - データベースに接続するには、ログイン用のデータベース ユーザーを作成する必要があります。 詳細については、[CREATE USER](../../t-sql/statements/create-user-transact-sql.md) に関するページを参照してください。
-- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
+- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
 - サーバー全体の権限を付与するには、master データベースにデータベース ユーザーを作成し、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して、管理サーバー ロールのいずれかにユーザーを追加します。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)、および[サーバー ロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)に関するページを参照してください。
 
 - 新しいログインまたはログインを含むロールにサーバー レベルの権限を許可するには、**GRANT** ステートメントを使用します。 詳細については、「[GRANT](../../t-sql/statements/grant-transact-sql.md)」を参照してください。 
@@ -610,7 +665,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />論理サーバー](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance]()|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />論理サーバー](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 
@@ -634,9 +689,9 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>引数  
 *login_name*  
-作成するログインの名前を指定します。 ログインには、SQL Server ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインの 4 種類があります。 Windows ドメイン アカウントからマップされるログインを作成する場合は、Windows 2000 よりも前の Windows で使用されていた [\<domainName>\\<login_name>] 形式のユーザー ログイン名を使用する必要があります。 login_name@DomainName 形式の UPN は使用できません。 例については、この記事の後半の例 D を参照してください。 認証ログインは **sysname** 型であり、[識別子](../../relational-databases/databases/database-identifiers.md) のルールに従っている必要があります。このログインに "**\\**" を含めることはできません。 Windows ログインには "**\\**" を含めることができます。 Active Directory ユーザーに基づくログインは、21 文字未満の名前に制限されます。 
+作成するログインの名前を指定します。 ログインには 4 つの種類があります。SQL Server ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインです。 Windows ドメイン アカウントからマップされるログインを作成する場合は、Windows 2000 よりも前の Windows で使用されていた [\<domainName>\\<login_name>] 形式のユーザー ログイン名を使用する必要があります。 login_name@DomainName 形式の UPN は使用できません。 例については、この記事の後半の例 D を参照してください。 認証ログインは **sysname** 型であり、[識別子](../../relational-databases/databases/database-identifiers.md) のルールに従っている必要があります。このログインに "**\\**" を含めることはできません。 Windows ログインには "**\\**" を含めることができます。 Active Directory ユーザーに基づくログインは、21 文字未満の名前に制限されます。 
 
-PASSWORD **='**_password_**'* SQL Server ログインにのみ適用されます。 作成するログインのパスワードを指定します。 強力なパスワードを使用する必要があります。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 SQL Server 2012 (11.x) 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。 
+PASSWORD **='**_password_' SQL Server ログインにのみ適用されます。 作成するログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 SQL Server 2012 (11.x) 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。 
   
 パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a ～ z、A ～ Z、0 ～ 9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。 
   
@@ -672,7 +727,7 @@ WINDOWS
 - 権限システムの設計の詳細については、「 [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可  
-ログインを作成できるのは、サーバーに対する **ALTER ANY LOGIN** 権限、または **securityadmin** 固定サーバー ロールのメンバーシップを持つユーザーのみとなります。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) に関するページを参照してください。
+ログインを作成できるのは、サーバーに対する **ALTER ANY LOGIN** 権限、または **securityadmin** 固定サーバー ロールのメンバーシップを持つユーザーのみとなります。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>) に関するページを参照してください。
   
 ## <a name="after-creating-a-login"></a>ログインを作成した後  
 ログインが作成されたら、ログインは SQL Data Warehouse に接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。 

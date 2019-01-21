@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc42802f6263e7e7609ef6c11aa6dda4114cee97
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 56dff4af5345359e5da37e4aae355f5c56b8228a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503652"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980485"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -554,7 +554,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
  ROWGUIDCOL では列に一意な値が格納されるわけではなく、またテーブルに挿入される新しい行に対して値は自動的に生成されません。 各列に対して一意な値を生成するには、INSERT ステートメントで NEWID 関数または NEWSEQUENTIALID 関数を使用するか、NEWID 関数または NEWSEQUENTIALID 関数を列の既定値として使用します。  
   
  [ {ADD | DROP} PERSISTED ]  
- 指定した列に対して PERSISTED プロパティが追加または削除されます。 列は、決定的な式で定義される計算列であることが必要です。 PERSISTED として指定した列では、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって物理的にテーブルに計算値が格納され、計算列が依存している他の列が更新されるとその計算値も更新されます。 計算列を PERSISTED とマークすることにより、決定的であるが不正確な式によって定義されている計算列にインデックスを作成できます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。  
+ 指定した列に対して PERSISTED プロパティが追加または削除されます。 列は、決定的な式で定義される計算列であることが必要です。 PERSISTED として指定した列では、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって物理的にテーブルに計算値が格納され、計算列が依存している他の列が更新されるとその計算値も更新されます。 計算列を PERSISTED とマークすることにより、決定的であるが不正確な式によって定義されている計算列にインデックスを作成できます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。  
   
 パーティション テーブルのパーティション分割列として使用する計算列には、明示的に PERSISTED とマークする必要があります。  
   
@@ -733,7 +733,7 @@ OFF
   
  現在クラスター化インデックスのリーフ レベルに格納されているデータ行を移動する場所を指定します。 テーブルは新しい位置に移動します。 このオプションは、クラスター化インデックスを作成する制約にのみ適用されます。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ここでは、default はキーワードではありません。 これは、既定のファイル グループの識別子で、MOVE TO **"** default **"** または MOVE TO **[** default **]** のように区切り記号で区切る必要があります。 **"** default **"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
 { CHECK | NOCHECK } CONSTRAINT  
@@ -791,7 +791,7 @@ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 用およびバージョン V12 より前の SQL Database 用に構築された非クラスター化列ストア インデックスは読み取り専用形式でした。 すべてのパーティションの操作を実行する前に、(これは更新可能な) 現在の形式に非クラスター化列ストア インデックスを再構築する必要があります。  
   
 SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"** default **"** | **"** NULL **"** }**)**  
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`FILESTREAM` はサポートされていません。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`FILESTREAM` はサポートされていません。  
   
 FILESTREAM データの格納場所を指定します。  
   
@@ -808,7 +808,7 @@ SET FILESTREAM_ON 句を指定した ALTER TABLE は、テーブルに FILESTREA
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]  ) ] } **)**  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-テーブルのシステムのバージョン管理を無効にするか、テーブルのシステムのバージョン管理を使用します。 テーブルのシステムのバージョン管理を有効にするのには、システムは、データ型、null 値許容制約、およびシステムのバージョン管理の主キー制約の要件を満たしていることを確認します。 HISTORY_TABLE 引数を使用しない場合、システムは 2 つのテーブル間のリンクを作成するには、現在のテーブルのスキーマに一致する新しい履歴テーブルを生成し、により、システムは、履歴テーブルには、現在のテーブル内の各レコードの履歴を記録するします。 この履歴テーブルの名前になります `MSSQL_TemporalHistoryFor<primary_table_object_id>`です。 HISTORY_TABLE 引数を介してへのリンクを作成し、既存の履歴テーブルを使用する場合に、現在のテーブルと、指定したテーブルの間のリンクが作成されます。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを実行することもできます。 このデータの整合性チェックでは、既存のレコードが重複しないことを確認します。 データを実行する一貫性チェックが、既定値です。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。  
+テーブルのシステムのバージョン管理を無効にするか、テーブルのシステムのバージョン管理を使用します。 テーブルのシステムのバージョン管理を有効にするのには、システムは、データ型、null 値許容制約、およびシステムのバージョン管理の主キー制約の要件を満たしていることを確認します。 HISTORY_TABLE 引数を使用しない場合、システムは 2 つのテーブル間のリンクを作成するには、現在のテーブルのスキーマに一致する新しい履歴テーブルを生成し、により、システムは、履歴テーブルには、現在のテーブル内の各レコードの履歴を記録するします。 この履歴テーブルの名前は `MSSQL_TemporalHistoryFor<primary_table_object_id>` になります。 HISTORY_TABLE 引数を介してへのリンクを作成し、既存の履歴テーブルを使用する場合に、現在のテーブルと、指定したテーブルの間のリンクが作成されます。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを実行することもできます。 このデータの整合性チェックでは、既存のレコードが重複しないことを確認します。 データを実行する一貫性チェックが、既定値です。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。  
   
 HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK |  WEEKS | MONTH | MONTHS | YEAR | YEARS} } **Applies to**:  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
@@ -820,7 +820,7 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK |  WEEKS |
  許可されるテーブル ロックのエスカレーション方法を指定します。  
   
  AUTO  
- このオプションを指定すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で、テーブル スキーマに適したロック エスカレーションの粒度が選択されます。  
+ このオプションを指定すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で、テーブル スキーマに適したロック エスカレーションの粒度が選択されます。  
   
 -   テーブルがパーティション分割されている場合は、ロック エスカレーションをパーティション分割できます。 パーティション レベルにエスカレートされたロックが、後で TABLE 粒度にエスカレートされることはありません。  
 -   テーブルがパーティション分割されていない場合は、ロック エスカレーションは TABLE 粒度に設定されます。  
@@ -829,7 +829,7 @@ TABLE
 テーブルがパーティション分割されているかどうかに関係なく、ロック エスカレーションはテーブルレベルの粒度で行われます。 TABLE は既定値です。  
   
 DISABLE  
-ほとんどの場合でロック エスカレーションを禁止します。 テーブルレベルのロックは完全には禁止されません。 たとえば、SERIALIZABLE 分離レベルでクラスター化インデックスがないテーブルをスキャンしている場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]でテーブル ロックを実行して、データの整合性を保護します。  
+ほとんどの場合でロック エスカレーションを禁止します。 テーブルレベルのロックは完全には禁止されません。 たとえば、SERIALIZABLE 分離レベルでクラスター化インデックスがないテーブルをスキャンしている場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] でテーブル ロックを実行して、データの整合性を保護します。  
   
 REBUILD  
 パーティション テーブル内のすべてのパーティションを含めたテーブル全体を再構築するには、REBUILD WITH 構文を使用します。 テーブルにクラスター化インデックスが含まれている場合、REBUILD オプションを指定すると、クラスター化インデックスが再構築されます。 REBUILD は ONLINE 操作として実行できます。  
@@ -892,12 +892,12 @@ REBUILD WITH ( \<rebuild_option> )
  列セットの名前を指定します。 列セットは、型指定されていない XML 表記であり、テーブルのすべてのスパース列を 1 つにまとめて構造化した出力です。 スパース列を含むテーブルには列セットを追加できません。 列セットの詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。  
   
  { ENABLE | DISABLE } FILETABLE_NAMESPACE  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
  FileTable に対するシステム定義の制約を有効または無効にします。 FileTable でのみ使用できます。  
   
  SET ( FILETABLE_DIRECTORY = *directory_name* )  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`FILETABLE` はサポートされていません。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`FILETABLE` はサポートされていません。  
   
  Windows と互換性のある FileTable ディレクトリ名を指定します。 この名前は、データベース内のすべての FileTable ディレクトリ名の中で一意である必要があります。 一意性の比較では、SQL 照合順序の設定とは関係なく、大文字と小文字は区別されません。 FileTable でのみ使用できます。  
 ```    
@@ -1714,7 +1714,7 @@ GO
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 #### <a name="a-add-system-versioning-to-existing-tables"></a>A. システムのバージョン管理を既存のテーブルに追加します。  
- 次の例では、既存のテーブルをシステムのバージョン管理を追加し、将来の履歴テーブルを作成する方法を示します。 この例では、既存のテーブルと呼ばれるが `InsurancePolicy` 、主キーを定義します。 この例では、これらの値を null にすることはできませんので、開始時刻と終了の既定値を使用してシステムのバージョン管理の場合は、新しく作成された期間列を設定します。 この例では、非表示の句を使用して、既存のアプリケーションが、現在のテーブルとの対話に与える影響がないことを確認します。  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] でのみ利用できる HISTORY_RETENTION_PERIOD も使用します。 
+ 次の例では、既存のテーブルをシステムのバージョン管理を追加し、将来の履歴テーブルを作成する方法を示します。 この例では、主キーが定義された `InsurancePolicy` という既存のテーブルがあることを前提としています。 この例では、これらの値を null にすることはできませんので、開始時刻と終了の既定値を使用してシステムのバージョン管理の場合は、新しく作成された期間列を設定します。 この例では、非表示の句を使用して、既存のアプリケーションが、現在のテーブルとの対話に与える影響がないことを確認します。  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] でのみ利用できる HISTORY_RETENTION_PERIOD も使用します。 
   
 ```sql  
 --Alter non-temporal table to define periods for system versioning  
@@ -1754,7 +1754,7 @@ SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSIS
 ```  
   
 #### <a name="c-disabling-and-re-enabling-system-versioning-to-change-table-schema"></a>C. 無効にして、テーブルのスキーマを変更するシステムのバージョン管理を再度有効にします。  
- この例は、システムのバージョン管理を無効にする方法を示しています。、 `Department` テーブル、列を追加、およびシステムのバージョン管理を再び有効にします。 テーブルのスキーマを変更するのには、システムのバージョン管理を無効化が必要です。 有効にする、DBA は、データの整合性をスキップするは、システムのバージョン管理を再度有効にするときに確認して、パフォーマンスを得るためのメリットを得る、テーブルのスキーマの更新中に、両方のテーブルに更新プログラムを防ぐために、トランザクション内で次の手順を実行します。 統計を作成する、パーティションの切り替え、圧縮を 1 つまたは両方のテーブルに適用するなどのタスクをシステムのバージョン管理を無効にする必要がないことに注意してください。  
+ この例は、`Department` テーブルでシステムのバージョン管理を無効にし、列を追加し、システムのバージョン管理を再度有効にする方法を示しています。 テーブルのスキーマを変更するのには、システムのバージョン管理を無効化が必要です。 有効にする、DBA は、データの整合性をスキップするは、システムのバージョン管理を再度有効にするときに確認して、パフォーマンスを得るためのメリットを得る、テーブルのスキーマの更新中に、両方のテーブルに更新プログラムを防ぐために、トランザクション内で次の手順を実行します。 統計を作成する、パーティションの切り替え、圧縮を 1 つまたは両方のテーブルに適用するなどのタスクをシステムのバージョン管理を無効にする必要がないことに注意してください。  
   
 ```sql  
 BEGIN TRAN  
@@ -1775,7 +1775,7 @@ COMMIT
 ```  
   
 #### <a name="d-removing-system-versioning"></a>D. システムのバージョン管理を削除します。  
- この例では、Department テーブルとドロップダウンから、システムのバージョン管理を完全に削除を `DepartmentHistory` テーブルです。 必要に応じて、システムのバージョン管理情報を記録する、システムによって使用される期間の列を削除することがもできます。 システムのバージョン管理が有効な場合は、`Department` か `DepartmentHistory` のいずれかのテーブルを削除できないことに注意してください。  
+ この例は、Department テーブルからシステムのバージョン管理を完全に削除し、`DepartmentHistory` テーブルを削除する方法を示しています。 必要に応じて、システムのバージョン管理情報を記録する、システムによって使用される期間の列を削除することがもできます。 システムのバージョン管理が有効な場合は、`Department` か `DepartmentHistory` のいずれかのテーブルを削除できないことに注意してください。  
   
 ```sql  
 ALTER TABLE Department  
@@ -1938,17 +1938,17 @@ WITH
   
 |パーティション|データがある|境界の範囲|  
 |---------------|---------------|--------------------|  
-|1|[ユーザー アカウント制御]|OrderDate < '2004-01-01'|  
-|2|[ユーザー アカウント制御]|'2004-01-01' <= OrderDate < '2005-01-01'|  
-|3|[ユーザー アカウント制御]|'2005-01-01' <= OrderDate< '2006-01-01'|  
-|4|[ユーザー アカウント制御]|'2006-01-01'<= OrderDate < '2007-01-01'|  
-|5|[ユーザー アカウント制御]|'2007-01-01' <= OrderDate|  
+|1|可|OrderDate < '2004-01-01'|  
+|2|可|'2004-01-01' <= OrderDate < '2005-01-01'|  
+|3|可|'2005-01-01' <= OrderDate< '2006-01-01'|  
+|4|可|'2006-01-01'<= OrderDate < '2007-01-01'|  
+|5|可|'2007-01-01' <= OrderDate|  
   
--   パーティション 1 (データがある): OrderDate < '2004-01-01'  
--   パーティション 2 (データがある): '2004-01-01' <= OrderDate < '2005-01-01'  
--   パーティション 3 (データがある): '2005-01-01' <= OrderDate< '2006-01-01'  
--   パーティション 4 (データがある): '2006-01-01'<= OrderDate < '2007-01-01'  
--   パーティション 5 (データがある): '2007-01-01' <= OrderDate  
+-   パーティション 1 (データがある):OrderDate < '2004-01-01'  
+-   パーティション 2 (データがある):'2004-01-01' <= OrderDate < '2005-01-01'  
+-   パーティション 3 (データがある):'2005-01-01' <= OrderDate< '2006-01-01'  
+-   パーティション 4 (データがある):'2006-01-01'<= OrderDate < '2007-01-01'  
+-   パーティション 5 (データがある):'2007-01-01' <= OrderDate  
   
 `OrdersHistory` テーブルには、`Orders` テーブルと列と列名が同じ次の DDL があります。 どちらも `id` 列に対してハッシュ分散されています。  
   
@@ -1966,8 +1966,8 @@ WITH
   
  列と列名は同じである必要がありますが、パーティションの境界が同じである必要はありません。 この例では、`OrdersHistory` テーブルに次の 2 つのパーティションがあり、両方のパーティションが空です。  
   
--   パーティション 1 (データがない): OrderDate < '2004-01-01'  
--   パーティション 2 (空): '2004-01-01' <= OrderDate  
+-   パーティション 1 (データがない):OrderDate < '2004-01-01'  
+-   パーティション 2 (空):'2004-01-01' <= OrderDate  
   
 これら 2 つのテーブルの場合、次のコマンドで、`OrderDate < '2004-01-01'` があるすべての行は `Orders` テーブルから `OrdersHistory` テーブルに移動されます。  
   
@@ -1979,16 +1979,16 @@ ALTER TABLE Orders SWITCH PARTITION 1 TO OrdersHistory PARTITION 1;
   
  `Orders` テーブル  
   
--   パーティション 1 (空): OrderDate < '2004-01-01'  
--   パーティション 2 (データがある): '2004-01-01' <= OrderDate < '2005-01-01'  
--   パーティション 3 (データがある): '2005-01-01' <= OrderDate< '2006-01-01'  
--   パーティション 4 (データがある): '2006-01-01'<= OrderDate < '2007-01-01'  
--   パーティション 5 (データがある): '2007-01-01' <= OrderDate  
+-   パーティション 1 (空):OrderDate < '2004-01-01'  
+-   パーティション 2 (データがある):'2004-01-01' <= OrderDate < '2005-01-01'  
+-   パーティション 3 (データがある):'2005-01-01' <= OrderDate< '2006-01-01'  
+-   パーティション 4 (データがある):'2006-01-01'<= OrderDate < '2007-01-01'  
+-   パーティション 5 (データがある):'2007-01-01' <= OrderDate  
   
  `OrdersHistory` テーブル  
   
--   パーティション 1 (データがある): OrderDate < '2004-01-01'  
--   パーティション 2 (空): '2004-01-01' <= OrderDate  
+-   パーティション 1 (データがある):OrderDate < '2004-01-01'  
+-   パーティション 2 (空):'2004-01-01' <= OrderDate  
   
 `Orders` テーブルをクリーン アップするには、次のようにパーティション 1 と 2 をマージして空のパーティションを削除します。  
   
@@ -2000,10 +2000,10 @@ ALTER TABLE Orders MERGE RANGE ('2004-01-01');
   
  `Orders` テーブル  
   
--   パーティション 1 (データがある): OrderDate < '2005-01-01'  
--   パーティション 2 (データがある): '2005-01-01' <= OrderDate< '2006-01-01'  
--   パーティション 3 (データがある): '2006-01-01'<= OrderDate < '2007-01-01'  
--   パーティション 4 (データがある): '2007-01-01' <= OrderDate  
+-   パーティション 1 (データがある):OrderDate < '2005-01-01'  
+-   パーティション 2 (データがある):'2005-01-01' <= OrderDate< '2006-01-01'  
+-   パーティション 3 (データがある):'2006-01-01'<= OrderDate < '2007-01-01'  
+-   パーティション 4 (データがある):'2007-01-01' <= OrderDate  
   
 もう 1 年が経過し、2005 年をアーカイブする準備が整ったとします。 空のパーティションを次のように分割して、2005 年の空のパーティションを `OrdersHistory` テーブルに割り当てることができます。  
   
@@ -2015,9 +2015,9 @@ ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');
   
  `OrdersHistory` テーブル  
   
--   パーティション 1 (データがある): OrderDate < '2004-01-01'  
--   パーティション 2 (空): '2004-01-01' < '2005-01-01'  
--   パーティション 3 (空): '2005-01-01' <= OrderDate  
+-   パーティション 1 (データがある):OrderDate < '2004-01-01'  
+-   パーティション 2 (空):'2004-01-01' < '2005-01-01'  
+-   パーティション 3 (空):'2005-01-01' <= OrderDate  
   
 ## <a name="see-also"></a>参照  
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   

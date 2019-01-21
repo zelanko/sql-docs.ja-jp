@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4cc82fcdd1324ae8596d83d6a8911973a98ae569
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533019"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980338"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52533019"
   
 ## <a name="date-description"></a>date の説明
   
-|プロパティ|ReplTest1|  
+|プロパティ|[値]|  
 |--------------|-----------|  
 |構文|**date**|  
 |使用方法|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
@@ -66,7 +66,7 @@ ms.locfileid: "52533019"
 |------------------|-----------------|  
 |mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**ydm** は、現在の言語における月の正式名または省略形を表します。 コンマは省略可能であり、大文字と小文字は無視されます。<br /><br /> こうしたあいまいさを排除するため、4 桁の西暦を使用してください。<br /><br /> 日を省略したときは、その月の 1 日が指定されます。|  
   
-|ISO 8601|説明|  
+|ISO 8601|[説明]|  
 |--------------|----------------|  
 |-YYYY-MM-DD<br /><br /> YYYYMMDD|SQL 標準と同じです。 これが国際標準として定義された唯一の形式です。|  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52533019"
 |yyyy-mm-ddTZD|XML/SOAP 用にサポートされています。<br /><br /> TZD は、タイム ゾーン指定子 (Z または +hh:mm または -hh:mm) です。<br /><br /> -   hh:mm はタイム ゾーン オフセットを表します。 hh は、タイム ゾーン オフセットの時間数を表す 0 ～ 14 の 2 桁の数字です。<br />-   MM は、タイム ゾーン オフセットの付加的な分数を表す 0 ～ 59 の 2 桁の数字です。<br />-   タイム ゾーン オフセットでは、+ (正負号) または - (負符号) を必ず指定します。 ローカル時刻を取得する際、協定世界時 (UTC) を基準としてタイム ゾーン オフセットを加算するか、減算するかを示します。 タイム ゾーン オフセットの有効範囲は -14:00 ～ +14:00 までです。|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI および ISO 8601 への準拠  
-**date** は、グレゴリオ暦に対する ANSI SQL 標準の定義に従います。ANSI SQL 標準の NOTE 85 には、"Datetime データ型では、グレゴリオ形式の日付を 0001-01-01 CE から 9999-12-31 CE の日付範囲で格納できます" と定義されています。
+**date** は、グレゴリオ暦に対する ANSI SQL 標準の定義に準拠します。「NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001-01-01 CE through 9999-12-31 CE.」(注 85 - Datetime データ型は、日付の範囲 0001-01-01 CE から 9999-12-31 で格納される、グレゴリオ形式の日付を許可します。)
   
 下位クライアント用の既定の文字列リテラル形式は、SQL 標準形式 (YYYY-MM-DD) に準拠します。 この形式は、DATE に対する ISO 8601 の定義と同じです。
   
@@ -106,7 +106,7 @@ ms.locfileid: "52533019"
 ### <a name="converting-date-to-other-date-and-time-types"></a>date から他の日付/時刻データ型への変換
 ここでは、**date** データ型が他の日付/時刻データ型に変換される場合の処理について説明します。
   
-**time(n)** に変換すると、変換は失敗し、エラー メッセージ 206 "オペランド型の不整合: date は time と互換性がありません" が発生します。
+**time(n)** に変換すると、変換は失敗し、エラー メッセージ 206"オペランド型の不整合: date は time と互換性がありません" が発生します。
   
 **datetime** に変換する場合は、日付がコピーされます。 次のコードでは、`date` の値を `datetime` の値に変換した結果を示します。
   
@@ -124,7 +124,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-**smalldatetime** への変換では、**date** の値が [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) の範囲内にある場合は、日付部分がコピーされ、時刻部分が 00:00:00.000 に設定されます。 **date** の値が **smalldatetime** 値の範囲外の場合は、"date データ型から smalldatetime データ型への変換の結果、範囲外の値になりました" というエラー メッセージ 242 が表示され、**smalldatetime** の値は NULL に設定されます。 次のコードでは、`date` の値を `smalldatetime` の値に変換した結果を示します。
+**smalldatetime** への変換では、**date** の値が [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) の範囲内にある場合は、日付部分がコピーされ、時刻部分が 00:00:00.000 に設定されます。 **date** 値が **smalldatetime** 値の範囲外にある場合、エラー メッセージ 242"date データ型から smalldatetime データ型に変換すると、結果は範囲外の値になります。**smalldatetime** 値は NULL に設定されます。" が発生します。 次のコードは、`date` 値を `smalldatetime` 値に変換した結果を示しています。
   
 ```sql
 DECLARE @date date= '1912-10-25';  

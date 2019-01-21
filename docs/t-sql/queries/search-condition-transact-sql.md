@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ef9f5377ffef172436d7e84164a20f1d92a9a325
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699800"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979518"
 ---
 # <a name="search-condition-transact-sql"></a>検索条件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -118,13 +118,13 @@ ms.locfileid: "51699800"
  \<graph_search_pattern>  
  グラフの一致パターンを指定します。 この句の引数の詳細については、「[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)」を参照してください
  
- NOT  
+ [NOT]  
  述語によって指定されたブール式を否定します。 詳細については、「[NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)」を参照してください。  
   
- AND  
+ [AND]  
  2 つの条件を結合し、両方の条件が真の場合に TRUE と評価します。 詳細については、「[AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)」を参照してください。  
   
- OR  
+ [OR]  
  2 つの条件を結合し、少なくとも片方の条件が真の場合に TRUE と評価します。 詳細については、「[OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md)」を参照してください。  
   
  \< predicate >  
@@ -190,7 +190,7 @@ ms.locfileid: "51699800"
  式がリストに含まれているかどうかに基づいて、式の検索を指定します。 検索式には定数または列名を指定できます。またリストには、一般的にはサブクエリが指定されますが、一連の定数も指定できます。 値のリストはかっこで囲んでください。 詳細については、「[IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)」を参照してください。  
   
  *subquery*  
- 制限付きの SELECT ステートメントと見なすことができます。また、SELECT ステートメントの中の \<query_expresssion> に似ています。 ORDER BY 句および INTO キーワードは使用できません。 詳細については、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
+ 制限付きの SELECT ステートメントと見なすことができます。また、SELECT ステートメントの中の \<query_expression> に似ています。 ORDER BY 句および INTO キーワードは使用できません。 詳細については、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
   
  ALL  
  比較演算子およびサブクエリと共に使用します。 サブクエリで取得されたすべての値が比較演算子の要件を満たしている場合は、\<predicate> に TRUE を返します。また、少なくとも 1 つの値が比較要件を満たしていない場合、またはサブクエリが外側のステートメントに行を返さなかった場合は、FALSE を返します。 詳細については、「[ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)」を参照してください。  

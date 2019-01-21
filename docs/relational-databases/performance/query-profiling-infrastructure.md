@@ -5,17 +5,24 @@ ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
-ms.topic: conceptual - "query plans [SQL Server]" - "execution plans [SQL Server]" - "query profiling" - "lightweight query profiling" - "lightweight profiling" - "lwp"
+ms.topic: conceptual
+helpviewer_keywords:
+- query plans [SQL Server]
+- execution plans [SQL Server]
+- query profiling
+- lightweight query profiling
+- lightweight profiling
+- lwp
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0ee0bc2c99d997d6a44d5ca0e9944e0ae4bfeb3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617252"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732029"
 ---
 # <a name="query-profiling-infrastructure"></a>クエリ プロファイリング インフラストラクチャ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +59,7 @@ ms.locfileid: "52617252"
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>軽量クエリ実行統計プロファイリング インフラストラクチャ v1
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 から [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])。 
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 から [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])。 
   
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で、軽量プロファイリングの導入により、実行プランに関する情報を収集するパフォーマンスのオーバーヘッドが軽減されました。 標準プロファイリングと異なり、軽量プロファイリングでは CPU のランタイム情報が収集されません。 ただし、軽量プロファイリングでも行数と I/O の使用状況の情報は収集されます。
 
@@ -76,13 +83,13 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> クエリ プロファイリングのパフォーマンス オーバーヘッドの詳細については、ブログの投稿「[Developers Choice: Query progress - anytime, anywhere ](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)」(開発者の選択: クエリの進行状況 - いつでも、どこでも) を参照してください。 
+> クエリ プロファイリングのパフォーマンス オーバーヘッドの詳細については、ブログの投稿「[Developers Choice:Query progress - anytime, anywhere (開発者の選択: クエリの進行状況 - いつでも、どこでも) ](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)」をご覧ください。 
 
 *query_thread_profile* イベントを使用する拡張イベント セッションの実行時に、[sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV も軽量プロファイリングを使用して入力されます。これによって、[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)を使用することや、DMV に直接クエリを実行することができます。
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>軽量クエリ実行統計プロファイリング インフラストラクチャ v2
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 から [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])。 
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 から [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])。 
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 には、オーバーヘッドが最小限の軽量プロファイリングの改訂版が含まれます。 軽量プロファイリングも、*適用対象*の前述のバージョンで、[トレース フラグ 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用してグローバルに有効にできます。 送信中の要求にクエリ実行プランを返すために、新しい DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) が導入されました。
 
@@ -107,7 +114,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>軽量クエリ実行統計プロファイリング インフラストラクチャ v3
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] には、すべての実行の行数情報を収集する軽量プロファイリングの新しい改訂版が含まれます。 軽量プロファイリングは、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] で既定で有効であり、トレース フラグ 7412 は機能しません。
 
@@ -118,7 +125,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 軽量プロファイリング v2 以降では、低オーバーヘッドでもあることから、CPU バインドされていない任意のサーバーで軽量プロファイリングを**継続的に**実行できます。データベースの専門家は、利用状況モニターを使用するか、`sys.dm_exec_query_profiles` に直接クエリを実行するなどして、いつでも処理中の実行から、ランタイム統計を含むクエリ プランを取得できます。
 
-クエリ プロファイリングのパフォーマンス オーバーヘッドの詳細については、ブログの投稿「[Developers Choice: Query progress - anytime, anywhere ](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)」(開発者の選択: クエリの進行状況 - いつでも、どこでも) を参照してください。 
+クエリ プロファイリングのパフォーマンス オーバーヘッドの詳細については、ブログの投稿「[Developers Choice:Query progress - anytime, anywhere (開発者の選択: クエリの進行状況 - いつでも、どこでも)](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)」をご覧ください。 
 
 ## <a name="see-also"></a>参照  
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -133,4 +140,4 @@ WITH (MAX_MEMORY=4096 KB,
  [プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [実際の実行プラン](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)      
- [開発者の選択: クエリの進行状況 - いつでも、どこでも](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+ [開発者の選択:クエリの進行状況 - いつでも、どこでも](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)

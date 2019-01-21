@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703820"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980484"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>テーブル (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51703820"
  
 テーブルについて、またテーブルの使用方法について理解するには、[SQL Data Warehouse のテーブル](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/)に関するページを参照してください。
 
-注: この記事での SQL Data Warehouse に関する説明は、特に明記がない限り、SQL Data Warehouse および Parallel Data Warehouse の両方に適用されます。 
+注:この記事での SQL Data Warehouse に関する説明は、特に明記がない限り、SQL Data Warehouse および Parallel Data Warehouse の両方に適用されます。 
  
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -484,18 +484,18 @@ WITH
  この例では、データが次のパーティションに並べ替えられます。  
   
 -   パーティション 1: col < = 10   
--   パーティション 2時 10分 < col < = 20   
--   パーティション 3時 20分 < col < = 30   
--   パーティション 4時 30分 < col < = 40   
--   パーティション 5時 40分 < col  
+-   パーティション 2:10 < col <= 20   
+-   パーティション 3:20 < col <= 30   
+-   パーティション 4:30 < col <= 40   
+-   パーティション 5:40 < col  
   
  この同じテーブルがパーティション分割されている場合は、次のパーティションに RANGE LEFT (既定値) の場合、データの代わりに、RANGE RIGHT が並べ替えられます。  
   
 -   パーティション 1: col < 10  
--   パーティション 2時 10分 < = col < 20   
--   パーティション 3時 20分 < = col < 30    
--   パーティション 4時 30分 < = col < 40   
--   パーティション 5時 40分 < = col  
+-   パーティション 2:10 <= col < 20   
+-   パーティション 3:20 <= col < 30    
+-   パーティション 4:30 <= col < 40   
+-   パーティション 5:40 <= col  
   
 ### <a name="OnePartition"></a> I. 1 つのパーティションを持つパーティション テーブルを作成します。  
  次の例では、1 つのパーティションをパーティション テーブルを作成します。 指定しません任意の境界値では、1 つのパーティションになります。  
@@ -514,7 +514,7 @@ WITH
 ```  
   
 ### <a name="DatePartition"></a> J. 日付でパーティション分割テーブルを作成します。  
- 次の例は、という名前の新しいテーブルを作成 `myTable`, にパーティション分割、 `date` 列です。 境界値の範囲の右側と日付を使用するは、各パーティション内の月のデータを格納します。  
+ 次の例では、`myTable` という名前の新しいテーブルを作成し、`date` 列に基づいてパーティション分割を行います。 境界値の範囲の右側と日付を使用するは、各パーティション内の月のデータを格納します。  
   
 ```  
 CREATE TABLE myTable (  

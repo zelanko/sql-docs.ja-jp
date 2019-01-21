@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 877fbd597ce603427c9bdcca00b2ecdeffbb2180
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: f91d98f48031f34f4c1c1ef91c86c1cbb60520fd
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586295"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531067"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ UPDATE STATISTICS table_or_indexed_view_name
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-UPDATE STATISTICS schema_name . ] table_name   
+UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
     [ WITH   
        {  
@@ -164,7 +164,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 MAXDOP = *max_degree_of_parallelism*  
-**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
   
  統計操作の間、**max degree of parallelism** 構成オプションをオーバーライドします。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
@@ -243,7 +243,7 @@ GO
 ```  
   
 ### <a name="b-update-the-statistics-for-an-index"></a>B. 1 つのインデックスの統計を更新する  
- 次の例では、`AK_SalesOrderDetail_rowguid` テーブルの `SalesOrderDetail` インデックスの統計を更新します。  
+ 次の例では、`SalesOrderDetail` テーブルの `AK_SalesOrderDetail_rowguid` インデックスの統計を更新します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -253,7 +253,7 @@ GO
 ```  
   
 ### <a name="c-update-statistics-by-using-50-percent-sampling"></a>C. 50% サンプリングで統計を更新する  
- 次の例では、`Name` テーブルの `ProductNumber` および `Product` 列に統計を作成し、更新します。  
+ 次の例では、`Product` テーブルの `Name` および `ProductNumber` 列に統計を作成し、更新します。  
   
 ```sql  
 USE AdventureWorks2012;  

@@ -18,12 +18,12 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d18d64f08eacc5b2784c9101d77e90f4c5d33a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fdb4a177f1d391877e6f1b9d0f7b37c9c001b955
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702800"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979478"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51702800"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  `STBuffer()` は、*tolerance* = distance \* .001 と *relative* = **false** を指定して [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) と同様の方法でバッファーを計算します。  
@@ -88,7 +88,7 @@ ms.locfileid: "51702800"
  ```  
   
 ### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. CurvePolygon インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、STBuffer() を呼び出す  
- 次の例では、`Polygon` インスタンスからバッファーが負の値の `CurvePolygon` インスタンスが返されます。  
+ 次の例では、`CurvePolygon` インスタンスからバッファーが負の値の `Polygon` インスタンスが返されます。  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
@@ -134,7 +134,7 @@ ms.locfileid: "51702800"
  ```  
   
 ### <a name="h-calling-stbuffer-with-a-string-parameter-value"></a>H. 文字列のパラメーター値を指定して STBuffer() を呼び出す  
- 次の例では、文字列パラメーターをメソッドに渡しますが、前と同じように `Polygon` インスタンスが返されます。  
+ 次の例では、前と同じように `Polygon` インスタンスが返されますが、文字列パラメーターをメソッドに渡します。  
   
 ```
  DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 

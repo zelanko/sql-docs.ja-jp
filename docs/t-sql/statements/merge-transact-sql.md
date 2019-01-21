@@ -25,12 +25,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c541081382065d327e4d056a860aad47462be5a1
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 939ba409a75d332d0aba97aa972db2ba9eecaf7a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970523"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980018"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -251,7 +251,7 @@ SET
  ソース テーブルとの暗黙の結合を実行するため、対象テーブルの 1 つ以上のインデックスの名前または ID を指定します。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
  \<output_clause>  
- *target_table* 内の更新、挿入、または削除される行ごとに 1 行を返します。この場合、特定の順序はありません。 **$action** は、OUTPUT 句に指定することができます。 **$action** は、行に対して実行されたアクションに従って 'INSERT'、'UPDATE'、'DELETE' のいずれかの値をそれぞれの行について返す、**nvarchar(10)** 型の列です。 この句の引数について詳しくは、「[OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」をご覧ください。  
+ *target_table* 内の更新、挿入、または削除される行ごとに 1 行を返します。この場合、特定の順序はありません。 **$action** は、OUTPUT 句に指定することができます。 **$action** は、行に対して実行されたアクションに従って次のいずれかの値をそれぞれの行について返す、**nvarchar(10)** 型の列です:"INSERT"、"UPDATE"、または "DELETE"。 この句の引数について詳しくは、「[OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」をご覧ください。  
   
  OPTION ( \<query_hint> [ ,...n ] )  
  オプティマイザー ヒントを使用して、データベース エンジンがステートメントを処理する方法をカスタマイズすることを指定します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
@@ -317,7 +317,7 @@ SET
 ### <a name="a-using-merge-to-perform-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. MERGE を使用して、単一のステートメントでテーブルに INSERT 操作と UPDATE 操作を実行する  
  一般的なシナリオは、一致する行が存在する場合はテーブル内の 1 つ以上の列を更新し、一致する行が存在しない場合はデータを新しい行として挿入することです。 通常、この操作を行うには、適切な UPDATE ステートメントと INSERT ステートメントを含むストアド プロシージャにパラメーターを渡します。 MERGE ステートメントを使用すると、単一のステートメントで両方のタスクを実行できます。 次の例は、INSERT ステートメントと UPDATE ステートメントの両方を含む [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのストアド プロシージャを示しています。 このプロシージャを、単一の MERGE ステートメントで同等の操作を実行するように変更します。  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
@@ -389,7 +389,7 @@ GO
 ### <a name="b-using-merge-to-perform-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. MERGE を使用して、単一のステートメントでテーブルに UPDATE 操作と DELETE 操作を実行する  
  次の例では、MERGE を使用して、`ProductInventory` テーブルで処理される注文に基づいて、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベース内の `SalesOrderDetail` テーブルを毎日更新します。 `Quantity` テーブルで各製品のその日の注文数を差し引くことで、`ProductInventory` テーブルの `SalesOrderDetail` 列を更新します。 製品の注文数によって、製品の在庫レベルが 0 以下に低下した場合は、その製品の行が `ProductInventory` テーブルから削除されます。  
   
-```  
+```sql  
 CREATE PROCEDURE Production.usp_UpdateInventory  
     @OrderDate datetime  
 AS  
@@ -416,7 +416,7 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ### <a name="c-using-merge-to-perform-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. MERGE を使用し、派生ソース テーブルを使用して対象テーブルに UPDATE 操作と INSERT 操作を実行する  
  次の例は、MERGE を使用し、行を更新または挿入することで [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `SalesReason` テーブルを変更します。 ソース テーブルの `NewName` の値が対象テーブル (`SalesReason`) の `Name` 列の値と一致すると、対象テーブルの `ReasonType` 列が更新されます。 `NewName` の値が一致しない場合は、ソース行が対象テーブルに挿入されます。 ソース テーブルは、[!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクターを使用して複数の行を指定する派生テーブルです。 派生テーブルでテーブル値コンストラクターを使用する方法について詳しくは、「[テーブル値コンストラクター &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)」をご覧ください。 この例では、OUTPUT 句の結果をテーブル変数に格納し、挿入された行数と更新された行数を返す単純な選択操作を実行することで MERGE ステートメントの結果をまとめる方法も示しています。  
   
-```  
+```sql  
 -- Create a temporary table variable to hold the output actions.  
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
@@ -440,7 +440,7 @@ GROUP BY Change;
 ### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. MERGE ステートメントの結果を別のテーブルに挿入する  
  次の例では、MERGE ステートメントの OUTPUT 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 MERGE ステートメントは、`Quantity` テーブル内で処理される注文に基づいて、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `ProductInventory` テーブルの `SalesOrderDetail` 列を毎日更新します。 この例では、更新された行をキャプチャし、在庫変更の追跡に使用する別のテーブルに挿入します。  
   
-```  
+```sql  
 CREATE TABLE Production.UpdatedInventory  
     (ProductID INT NOT NULL, LocationID int, NewQty int, PreviousQty int,  
      CONSTRAINT PK_Inventory PRIMARY KEY CLUSTERED (ProductID, LocationID));  

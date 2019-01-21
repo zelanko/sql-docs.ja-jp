@@ -21,12 +21,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d08609edc596006290d5e0bb062701c5f212ff8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c51655426d892c4d6e233bc72b7388d200bbce8a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514705"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589397"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>データベース管理者用の診断接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "52514705"
   
  DAC ポートは、起動中に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって動的に割り当てられます。 既定のインスタンスに接続する場合、DAC では SQL Server Browser サービスへの SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) 要求が使用されません。 まず、TCP ポート 1434 経由で接続が試行されます。 接続が失敗した場合、ポートを取得するために SSRP 呼び出しが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser が SSRP 要求をリッスンしていない場合は、接続要求によってエラーが返されます。 DAC がリッスンしているポート番号を確認するには、エラー ログを参照します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリモート管理接続を受け入れるように構成されている場合、次のように DAC を明示的なポート番号で開始する必要があります。  
   
- **sqlcmd -S tcp:***\<server>,\<port>*  
+ **sqlcmd -S tcp:**_\<server>,\<port>_  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログには DAC のポート番号が一覧されます。既定のポート番号は 1434 です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がローカルの DAC 接続のみを受け入れるように構成されている場合は、次のコマンドを実行し、ループバック アダプターを使用して接続します。  
   

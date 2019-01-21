@@ -26,12 +26,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad662f209361dbffd8096bd7605cb5ad0e01a9d5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 8c8a970d96475d2682bc58246aa2383bf19e8365
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072046"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979738"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -131,7 +131,7 @@ WITH NO_INFOMSGS 句が指定されていない場合は次のメッセージが
   
 ## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の制限事項と制約事項  
 DBCC FREEPROCCACHE はトランザクション内で実行できません。
-DBCC FREEPROCCAHCE は EXPLAIN ステートメント内でサポートされていません。
+DBCC FREEPROCCACHE は EXPLAIN ステートメント内でサポートされていません。
   
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] のメタデータ  
 DBCC FREEPROCCACHE を実行すると、新しい行が sys.pdw_exec_requests システム ビューに追加されます。

@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性グループのクラスター化された DTC を作成する | Microsoft Docs
-ms.custom: ''
+title: 可用性グループ用のクラスター化された DTC リソースを作成する
+description: このトピックでは、SQL Server の AlwaysOn 可用性グループのためにクラスター化された DTC を完全に構成する方法について説明します。
+ms.custom: seodec18
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce78afa02f0a0f5acdb061e21a1311ac20f844d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2182b11c9416c487d3d583308d07ae1ad5f3f72f
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396922"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069778"
 ---
-# <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>AlwaysOn 可用性グループのクラスター化された DTC を作成する
+# <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Always On 可用性グループ用のクラスター化された DTC リソースを作成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -42,7 +43,7 @@ ms.locfileid: "52396922"
   - 名前: `Cluster`
   - ネットワーク名: `Cluster Network 1`
   - ノード: `SQLNODE1, SQLNODE2`
-  - ストレージの共有: `Cluster Disk 3` ( `SQLNODE1`所有)
+  - 共有ストレージ:`Cluster Disk 3` (`SQLNODE1` が所有)
 - クラスター詳細 (作成予定):
   - ネットワーク名リソース: `DTCnet1`
   - DTC ネットワーク名リソース: `DTC1`
@@ -320,21 +321,21 @@ GO
 ```
 
 > [!IMPORTANT]
-既存の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で DTC を有効にすることはできません。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、既存の可用性グループに対して次の構文を受け取ります。  
->
+> 既存の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で DTC を有効にすることはできません。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、既存の可用性グループに対して次の構文を受け取ります。  
+> 
 > USE master;    
 > ALTER AVAILABILITY GROUP \<availability_group\>  
-SET (DTC_Support = Per_DB)  
->
->ただし、構成変更は実際には行われません。  次の T-SQL クエリで **dtc_support** 構成を確定できます。  
->
->SELECT name, dtc_support FROM sys.availability_groups  
->
->可用性グループで DTC サポートを有効にする唯一の方法は、Transact-SQL を利用して可用性グループを作成することです。
+> SET (DTC_Support = Per_DB)  
+> 
+> ただし、構成変更は実際には行われません。  次の T-SQL クエリで **dtc_support** 構成を確定できます。  
+> 
+> SELECT name, dtc_support FROM sys.availability_groups  
+> 
+> 可用性グループで DTC サポートを有効にする唯一の方法は、Transact-SQL を利用して可用性グループを作成することです。
  
 ## <a name="ClusterDTC"></a>8.クラスター リソースを準備する
 
-このスクリプトは DTC 依存リソース (ディスクと IP) を準備します。  共有ストレージが Windows クラスターに追加されます。  ネットワーク リソースが作成されます。それから DTC が作成され、可用性グループのリソースとなります。  `SQLNODE1` で次の PowerShell スクリプトを実行します。
+このスクリプトは DTC 依存リソース(ディスクと IP) を準備します。  共有ストレージが Windows クラスターに追加されます。  ネットワーク リソースが作成されます。それから DTC が作成され、可用性グループのリソースとなります。  `SQLNODE1` で次の PowerShell スクリプトを実行します。 [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) さんのスクリプトに感謝します。
 
 ```powershell  
 # Create a clustered Microsoft Distributed Transaction Coordinator properly in the resource group with SQL Server
@@ -587,4 +588,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> `USE AG1` ステートメントを実行し、データベース コンテキストを `AG1`に設定する必要があります。  設定しないと、"トランザクション コンテキストを他のセッションが使用中です。" というエラー メッセージが表示されます。
+> `USE AG1` ステートメントを実行し、データベース コンテキストを `AG1`に設定する必要があります。  そうしないと、次のエラー メッセージを受け取ります。"トランザクション コンテキストを他のセッションが使用中です。"

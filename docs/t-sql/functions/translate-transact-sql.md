@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eadf8d4512e3dd5e119dd92e9e2039e0af9dc0ce
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: a72ef38b960e00a88c7d4e1e0038e32a897a46d9
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617440"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980118"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,8 @@ TRANSLATE ( inputString, characters, translations)
 
 *characters* 式と *translations* 式の長さが異なる場合、`TRANSLATE` はエラーを返します。 `TRANSLATE` は、いずれかの引数が NULL の場合は NULL を返します。  
 
-`TRANSLATE` 関数の動作は、複数の [REPLACE](../../t-sql/functions/replace-transact-sql.md) 関数を使用した場合と同じです。
+`TRANSLATE` 関数の動作は、複数の [REPLACE](../../t-sql/functions/replace-transact-sql.md) 関数を使用した場合と似ています。 ただし、`TRANSLATE` では文字が複数回置き換えられることはありません。 これは、使用するたびに関連するすべての文字が置き換えられる複数の `REPLACE` 関数とは異なります。 
+
 
 `TRANSLATE` は常に SC 照合順序を認識しています。
 
@@ -110,6 +111,20 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 |ポイント  |座標 |  
 ---------|--------- |
 (137.4  72.3) |[137.4,72.3] |
+
+
+### <a name="c-use-the-translate-function"></a>C. TRANSLATE 関数を使用する
+
+```sql
+SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
+       REPLACE(REPLACE(REPLACE('abcdef','a','b'),'b','c'),'c','d') AS Replaced;
+```
+
+結果は次のようになります。
+
+| 変換後 | 置換後 |  
+| ---------|--------- |
+| bcddef | ddddef |
 
 
 ## <a name="see-also"></a>参照

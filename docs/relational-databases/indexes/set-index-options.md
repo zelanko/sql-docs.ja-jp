@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0dbf0368c86b906a2f482010779407353f771db8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5f852bcf9a1cf195df6ebf05738cc63536ee4941
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392886"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588106"
 ---
 # <a name="set-index-options"></a>インデックス オプションの設定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52392886"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してインデックスのプロパティを変更するには:**  
   
@@ -55,9 +55,9 @@ ms.locfileid: "52392886"
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   ALTER INDEX ステートメントに SET 句を使用することによって、ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、IGNORE_DUP_KEY、および STATISTICS_NORECOMPUTE の各オプションが直ちにインデックスに適用されます。  
+-   ALTER INDEX ステートメントに SET 句を使用することによって、次の各オプションが直ちにインデックスに適用されます:ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE。  
   
--   ALTER INDEX REBUILD または CREATE INDEX WITH DROP_EXISTING を使用してインデックスを再構築する際には、PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP、および DROP_EXISTING (CREATE INDEX のみ) の各オプションを設定できます。  
+-   ALTER INDEX REBUILD または CREATE INDEX WITH DROP_EXISTING を使用してインデックスを再構築するときは、次の各オプションを設定できます:PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP、DROP_EXISTING (CREATE INDEX のみ)。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52392886"
   
 7.  **[閉じる]** をクリックします。  
   
-8.  **[ファイル]** メニューの *[<テーブル名> を保存]* を選択します。  
+8.  **[ファイル]** メニューの [ **table_name**_を保存_] を選びます。  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>インデックスのプロパティをオブジェクト エクスプローラーで変更するには  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52392886"
   
 7.  該当するプロパティの設定を変更してインデックスをカスタマイズします。  
   
-8.  インデックス列の位置を追加、削除、または変更するには、 **インデックスのプロパティ -**  **全般** *全般* ページをクリックします。 詳細については、「 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)」をご覧ください。  
+8.  インデックス列の位置を追加、削除、または変更するには、 **インデックスのプロパティ -**  **全般** _全般_ ページをクリックします。 詳細については、「 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)」をご覧ください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

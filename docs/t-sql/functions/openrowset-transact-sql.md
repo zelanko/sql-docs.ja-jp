@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7cbf93440d9b164adef0f87c5af88da02d0f9b50
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509960"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531097"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -114,13 +114,13 @@ OPENROWSET
  BULK オプションの使用方法の詳細については、後の「解説」を参照してください。 BULK オプションに必要な権限については、後の「権限」を参照してください。  
   
 > [!NOTE]  
->  OPENROWSET (BULK ...) を完全復旧モデルでデータのインポートに使用する場合、ログ記録は最適化されません。  
+> OPENROWSET (BULK ...) を完全復旧モデルでデータのインポートに使用する場合、ログ記録は最適化されません。  
   
  データを一括インポート用に準備する方法については、「[一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)」をご覧ください。  
   
  '*data_file*'  
  データを対象テーブルにコピーするデータ ファイルの完全なパスを指定します。   
- **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+ **適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、data_file は Azure Blob Storage に格納することができます。 例については、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。
 
 > [!IMPORTANT]
@@ -136,7 +136,7 @@ OPENROWSET
 > CODEPAGE は、Linux ではサポートされていないオプションです。
 
 > [!NOTE]  
->  フォーマット ファイルの各列に対して照合順序名を指定することをお勧めします (65001 オプションを照合順序/コード ページ仕様よりも優先する場合を除く)。  
+> フォーマット ファイルの各列に対して照合順序名を指定することをお勧めします (65001 オプションを照合順序/コード ページ仕様よりも優先する場合を除く)。  
   
 |CODEPAGE の値|[説明]|  
 |--------------------|-----------------|  
@@ -149,15 +149,15 @@ OPENROWSET
  形式エラーがあり、OLE DB 行セットに変換できない行を収集するときに使用するファイルを指定します。 該当する行は、データ ファイルからこのエラー ファイルに "そのまま" コピーされます。  
   
  エラー ファイルはコマンドの実行開始時に作成されます。 存在するファイルの場合にはエラーが発生し、 拡張子 .ERROR.txt の制御ファイルが作成されます。 このファイルにはエラー ファイルの各行と、エラーの診断が含まれています。 エラーが修正されると、データは読み込み可能になります。  
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、`error_file_path` は Azure Blob Storage に格納することができます。 
 
 'errorfile_data_source_name'   
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 名前付きの外部データ ソースで、インポート中に見つかったエラーを格納するエラー ファイルの Azure Blob Storage の場所を指しています。 外部データ ソースは、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 で追加された `TYPE = BLOB_STORAGE` オプションを使用して作成する必要があります。 詳しくは、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」をご覧ください。
   
  FIRSTROW =*first_row*  
- 読み込み開始行の行番号を指定します。 既定値は、1 です。 指定したデータ ファイルの最初の行を示します。 行番号は行ターミネータの数をカウントして決定されます。 FIRSTROW は 1 から始まります。  
+ 読み込み開始行の行番号を指定します。 既定値は 1 です。 指定したデータ ファイルの最初の行を示します。 行番号は行ターミネータの数をカウントして決定されます。 FIRSTROW は 1 から始まります。  
   
  LASTROW =*last_row*  
  読み込み終了行の行番号を指定します。 既定値は 0 です。 指定したデータ ファイルの最後の行を示します。  
@@ -168,7 +168,7 @@ OPENROWSET
  既定の *maximum_errors* は 10 です。  
   
 > [!NOTE]  
->  MAX_ERRORS は CHECK 制約、または変換には適用されません **money** と **bigint** データ型。  
+> MAX_ERRORS は CHECK 制約、または変換には適用されません **money** と **bigint** データ型。  
   
  ROWS_PER_BATCH =*rows_per_batch*  
  データ ファイル内にあるデータ行の概算数を指定します。 この値は実際の行数と同じ次数にする必要があります。  
@@ -198,7 +198,7 @@ OPENROWSET
  *data_file* の内容を、**varbinary(max)** 型の単一行、単一列の行セットとして返します。  
   
 > [!IMPORTANT]  
->  すべての Windows エンコード変換がサポートされるのは SINGLE_BLOB オプションだけなので、SINGLE_CLOB オプションや SINGLE_NCLOB オプションではなく、SINGLE_BLOB オプションだけを使用して XML データをインポートすることをお勧めします。  
+> すべての Windows エンコード変換がサポートされるのは SINGLE_BLOB オプションだけなので、SINGLE_CLOB オプションや SINGLE_NCLOB オプションではなく、SINGLE_BLOB オプションだけを使用して XML データをインポートすることをお勧めします。  
   
  SINGLE_CLOB  
  *data_file* を ASCII として読み取り、現在のデータベースの照合順序に従い、内容を **varchar(max)** 型の単一行、単一列の行セットとして返します。  
@@ -209,21 +209,21 @@ OPENROWSET
 ### <a name="input-file-format-options"></a>入力ファイル フォーマットのオプション
   
 FORMAT **=** 'CSV'   
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 [RFC 4180](https://tools.ietf.org/html/rfc4180) 標準に準拠しているコンマ区切り値ファイルを指定します。
 
  FORMATFILE ='*format_file_path*'  
- フォーマット ファイルの完全パスを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では XML と非 XML の 2 種類のフォーマット ファイルがサポートされます。  
+ フォーマット ファイルの完全パスを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次の 2 種類のフォーマット ファイルがサポートされます:XML と非 XML。  
   
  フォーマット ファイルは、結果セットの列の型を定義する場合に必要となります。 ただし SINGLE_CLOB、SINGLE_BLOB、または SINGLE_NCLOB を指定した場合は例外で、この場合はフォーマット ファイルは必要ありません。  
   
  フォーマット ファイルについては、「[データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)」をご覧ください。  
 
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、format_file_path は Azure Blob Storage に格納することができます。 例については、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。
 
 FIELDQUOTE **=** 'field_quote'   
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 CSV ファイルで引用符文字として使用される文字を指定します。 指定されていない場合は、[RFC 4180](https://tools.ietf.org/html/rfc4180) 標準の定義に従って引用符文字 (") が引用符文字として使用されます。
 
   
@@ -248,10 +248,10 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
      `FROM OPENROWSET(BULK...) AS table_alias`  
   
      `FROM OPENROWSET(BULK...) AS table_alias(column_alias,...n)`  
->    [!IMPORTANT]  
->    `AS <table_alias>` への追加に失敗すると次のエラーが発生します:    
->    メッセージ 491、レベル 16、状態 1、行 20    
->    FROM 句の一括行セットには相関名を指定してください。    
+> [!IMPORTANT]  
+> `AS <table_alias>` への追加に失敗すると次のエラーが発生します:    
+> メッセージ 491、レベル 16、状態 1、行 20    
+> FROM 句の一括行セットには相関名を指定してください。    
   
 -   `SELECT...FROM OPENROWSET(BULK...)` ステートメントは、データをテーブルにインポートせずに、ファイル内のデータに対してクエリを直接実行します。 また、`SELECT...FROM OPENROWSET(BULK...)` ステートメントでフォーマット ファイルを使用して列名やデータ型を指定すると、一括列の別名を列挙することもできます。  
   
@@ -262,13 +262,13 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
  `INSERT...SELECT * FROM OPENROWSET(BULK...)` ステートメントの使用方法については、「[データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)」をご覧ください。 一括インポートによって実行される行挿入操作がトランザクション ログに記録される条件について詳しくは、「 [一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」をご覧ください。  
   
 > [!NOTE]  
->  `OPENROWSET` を使用するにあたっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で権限借用がどのように処理されるかを理解しておくことが重要です。 セキュリティの考慮事項については、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」をご覧ください。  
+> `OPENROWSET` を使用するにあたっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で権限借用がどのように処理されるかを理解しておくことが重要です。 セキュリティの考慮事項については、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」をご覧ください。  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>SQLCHAR、SQLNCHAR、および SQLBINARY データの一括インポート  
  OPENROWSET(BULK...) では、指定がない場合、SQLCHAR、SQLNCHAR、および SQLBINARY データの最大の長さが 8000 バイトを超えないものと想定されます。 インポートされるデータが 8000 バイトを超える **varchar(max)**、**nvarchar(max)**、または **varbinary(max)** オブジェクトを含む LOB データ フィールドにある場合、XML フォーマット ファイルを使用してそのデータ フィールドの最大の長さを定義する必要があります。 最大の長さを指定するには、フォーマット ファイルを編集して MAX_LENGTH 属性を宣言します。  
   
 > [!NOTE]  
->  自動生成されたフォーマット ファイルには、LOB フィールドの最大の長さの指定がありません。 ただし、手作業でフォーマット ファイルを編集して長さまたは最大の長さを指定できます。  
+> 自動生成されたフォーマット ファイルには、LOB フィールドの最大の長さの指定がありません。 ただし、手作業でフォーマット ファイルを編集して長さまたは最大の長さを指定できます。  
   
 ### <a name="bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML ドキュメントの一括エクスポートまたは一括インポート  
  SQLXML データを一括エクスポートまたは一括インポートする場合、フォーマット ファイルのデータ型には次のいずれかを使用します。  
@@ -296,10 +296,10 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 ```  
   
 ### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>B. Microsoft OLE DB Provider for Jet を使用する  
- 次の例では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet を介して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Access `Customers` データベース内のテーブル `Northwind` にアクセスします。  
+ 次の例では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet を介して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Access `Northwind` データベース内のテーブル `Customers` にアクセスします。  
   
 > [!NOTE]  
->  この例では、Access がインストールされていることを前提としています。 この例を実行するには、Northwind データベースをインストールする必要があります。  
+> この例では、Access がインストールされていることを前提としています。 この例を実行するには、Northwind データベースをインストールする必要があります。  
   
 ```sql  
 SELECT CustomerID, CompanyName  
@@ -315,7 +315,7 @@ GO
  次の例では、ローカル インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` データベース内の `Customers` テーブル 、および同じコンピューター上に格納されている Access `Northwind` データベースのテーブル `Orders` から、すべてのデータを選択します。  
   
 > [!NOTE]  
->  この例では、Access がインストールされていることを前提としています。 この例を実行するには、Northwind データベースをインストールする必要があります。  
+> この例では、Access がインストールされていることを前提としています。 この例を実行するには、Northwind データベースをインストールする必要があります。  
   
 ```sql  
 USE Northwind  ;  
@@ -392,7 +392,7 @@ OPENROWSET (BULK N'D:\data.csv', FORMATFILE =
     'D:\format_no_collation.txt', CODEPAGE = '65001') AS a;  
 ```  
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. フォーマット ファイルを使用して CSV ファイルのデータにアクセスする  
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 ```sql
 SELECT *
 FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
@@ -418,7 +418,7 @@ SELECT * FROM OPENROWSET(
 
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. Azure Blob Storage に格納されているファイルのデータにアクセスする   
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 次の例では、Shared Access Signature に対して作成された Azure ストレージ アカウントとデータベース スコープ資格情報のコンテナーを指している外部データ ソースを使用します。     
 
 ```sql

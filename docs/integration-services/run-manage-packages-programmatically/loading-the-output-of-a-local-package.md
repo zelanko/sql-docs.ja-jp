@@ -17,18 +17,21 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4229a8ddbd899ea8709cdc537f2d9383f9043179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ec5e67b6a2f593f2869cf72fa2983305e084f8d
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697520"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414157"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>ローカル パッケージの出力の読み込み
   クライアント アプリケーションは、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先に出力が保存された場合、または **System.IO** 名前空間のクラスを使用してフラット ファイル変換先に出力が保存された場合に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの出力を読み取ることができます。 ただし、メモリから直接、パッケージの出力を読み取ることもできます。その際、データを保持するための中間手段を必要としません。 このソリューションの重要な点は、**System.Data** 名前空間からの **IDbConnection**、**IDbCommand**、および **IDbDataParameter** の各インターフェイスを特別に実装した **Microsoft.SqlServer.Dts.DtsClient** 名前空間です。 既定では、アセンブリ Microsoft.SqlServer.Dts.DtsClient.dll は、**%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** にインストールされています。  
-  
+
+> [!IMPORTANT]
+> この記事で説明する、`DtsClient` ライブラリを使用する手順は、パッケージ配置モデル (つまり、`/SQL`、`/DTS`、または`/File` オプション) で配置されているパッケージに対してのみ使用できます。 サーバー配置モデル (つまり、`/ISServer` オプション) で配置されているパッケージに対しては、この手順は使用できません。 サーバー配置モデル (つまり、`/ISServer` オプション) で配置されているローカル パッケージの出力を使用するには、この記事で説明されている手順ではなく、[Data Streaming Destination](../data-flow/data-streaming-destination.md) を使用します。
+
 > [!NOTE]  
->  このトピックで説明されている手順では、データ フロー タスクおよび親オブジェクトの DelayValidation プロパティが既定値の **False** に設定されている必要があります。  
+> このトピックで説明されている手順では、データ フロー タスクおよび親オブジェクトの DelayValidation プロパティが既定値の **False** に設定されている必要があります。
   
 ## <a name="description"></a>[説明]  
  この手順では、マネージド コードを使用して、DataReader 変換先でパッケージの出力をメモリから直接読み込むクライアント アプリケーションを開発する方法を示します。 ここにまとめた手順は、後のコード例で示します。  

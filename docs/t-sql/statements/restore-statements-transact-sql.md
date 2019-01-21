@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f6ee77ac0a4fc91f9a182c1d893d39d599228da4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d4370a2f60a17ee126be5940ec69dbdfc5a03d4f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524590"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980318"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (Transact-SQL)
 BACKUP コマンドで作成した SQL Database のバックアップを復元します。 
@@ -167,7 +167,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
    } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
-Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
+Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seamless restore experience for all the three devices.  
 <files_or_filegroups>::=   
 {   
    FILE = { logical_file_name_in_backup | @logical_file_name_in_backup_var }   
@@ -342,7 +342,7 @@ RESTORE は、明示的または暗黙的なトランザクションでは使用
   
 損傷した **master** データベースの復元は、特別な手順を使用して行われます。 詳細については、「[システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)」を参照してください。  
   
-データベースを復元すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュが消去されます。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
+データベースを復元すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュが消去されます。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
   
 可用性データベースを復元するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにデータベースを復元した後、そのデータベースを可用性グループに追加します。  
 
@@ -360,7 +360,7 @@ WITH RESTRICTED_USER オプションを使用すると、ユーザー アクセ�
 バックアップと復元は **vardecimal** ストレージ形式で正常に機能します。 **vardecimal** の詳細については、「[sp_db_vardecimal_storage_format &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)」を参照してください。  
   
 ### <a name="restore-full-text-data"></a>フルテキスト データの復元  
-完全復元を実行すると、フルテキスト データは他のデータベース データと共に復元されます。 標準の構文 `RESTORE DATABASE database_name FROM backup_device` を使用すると、フルテキスト ファイルはデータベース ファイルの復元の一部として復元されます。  
+完全復元を実行すると、フルテキスト データは他のデータベース データと共に復元されます。 標準の `RESTORE DATABASE database_name FROM backup_device` 構文を使用すると、フルテキスト ファイルはデータベース ファイルの復元の一部として復元されます。  
   
 RESTORE ステートメントでは、フルテキスト データに対し、代替位置への復元、差分復元、ファイルとファイル グループの復元、ファイルとファイル グループの差分復元を行うこともできます。 また、RESTORE ではデータベース データと同様にフルテキスト ファイルだけを復元することもできます。  
   
@@ -368,7 +368,7 @@ RESTORE ステートメントでは、フルテキスト データに対し、�
 > [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からインポートされたフルテキスト カタログもデータベース ファイルとして扱われます。 これらの場合は、フルテキスト カタログをバックアップするための [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の手順をそのまま適用できますが、バックアップ操作中の一時停止と再開は必要なくなります。 詳細については、「[フルテキスト カタログのバックアップと復元](https://go.microsoft.com/fwlink/?LinkId=107381)」を参照してください。  
   
 ## <a name="metadata"></a>メタデータ  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、各サーバー インスタンスのバックアップおよび復元動作を記録する、バックアップおよび復元用の履歴テーブルが用意されています。 復元を実行すると、バックアップ履歴テーブルも変更されます。 これらのテーブルについては、「[バックアップの履歴とヘッダーの情報 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)」を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、各サーバー インスタンスのバックアップおよび復元動作を追跡する、バックアップおよび復元の履歴テーブルが含まれています。 復元を実行すると、バックアップ履歴テーブルも変更されます。 これらのテーブルについては、「[バックアップの履歴とヘッダーの情報 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)」を参照してください。  
   
 ##  <a name="REPLACEoption"></a> REPLACE オプションによる影響  
 REPLACE は頻繁に使用すべきではありません。使用するのは十分に検討した後のみに限定してください。 通常、復元により、誤ってデータベースを別のデータベースで上書きしてしまうのを防ぐことができます。 RESTORE ステートメントで指定したデータベースが現在のサーバーに既に存在し、指定したデータベースのファミリ GUID がバックアップ セットに記録されているデータベースのファミリ GUID と異なる場合、そのデータベースは復元されません。 これは重要な保護機能です。  
@@ -412,7 +412,7 @@ REPLACE オプションは、通常は復元によって実行されるいくつ
 バックアップ操作では、オプションで、メディア セットとバックアップ セットにそれぞれパスワードを設定できます。 メディア セットまたはバックアップ セットにパスワードが設定されている場合は、RESTORE ステートメントで正しいパスワードを指定する必要があります。 これらのパスワードを設定しておくと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使って不正に復元操作が行われたり、メディアにバックアップ セットが不正に追加されたりするのを防ぐことができます。 ただし、パスワードで保護されたメディアは、BACKUP ステートメントの FORMAT オプションで上書きできます。  
   
 > [!IMPORTANT]  
->  パスワードによる保護は強力なものではありません。 パスワードによる保護は、権限の有無にかかわらず、ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使用して不適切な復元を行わないようにすることを目的としています。 その他の手段によるバックアップ データの読み取りやパスワードの置き換えを防ぐわけではありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]バックアップ保護に最適な方法は、バックアップ テープを安全な場所に保管するか、バックアップしたディスク ファイルを適切なアクセス制御リスト (ACL) で保護することです。 ACL は、バックアップを作成するディレクトリのルートに設定する必要があります。  
+>  パスワードによる保護は強力なものではありません。 権限の有無にかかわらず、ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使用して不適切な復元を行わないようにすることを目的としています。 その他の手段によるバックアップ データの読み取りやパスワードの置き換えを防ぐわけではありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]バックアップ保護に最適な方法は、バックアップ テープを安全な場所に保管するか、バックアップしたディスク ファイルを適切なアクセス制御リスト (ACL) で保護することです。 ACL は、バックアップを作成するディレクトリのルートに設定する必要があります。  
    
 > [!NOTE]
 > Microsoft Azure Blob Storage を使用した SQL Server のバックアップと復元に固有の情報については、「[Microsoft Azure Blob ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
@@ -594,12 +594,12 @@ RESTORE DATABASE AdventureWorks2012
 ###  <a name="restoring_using_FILE_n_FG"></a> I. FILE および FILEGROUP 構文を使用して復元する  
 次の例では、2 つのファイル、1 つのセカンダリ ファイル グループ、および 1 つのトランザクション ログを格納している `MyDatabase` という名前のデータベースを復元します。 このデータベースは、完全復旧モデルを使用しています。  
   
-データベース バックアップは、`MyDatabaseBackups` という名前の論理バックアップ デバイス上のメディア セットにある 9 番目のバックアップ セットです。 次に、`10` デバイス上にある次の 3 つのバックアップ セット (`11`、`12`、および `MyDatabaseBackups`) にある 3 つのログ バックアップを、`WITH NORECOVERY` を使用して復元します。 最後のログ バックアップを復元した後、データベースを復旧します。  
+データベース バックアップは、`MyDatabaseBackups` という名前の論理バックアップ デバイス上のメディア セットにある 9 番目のバックアップ セットです。 次に、`MyDatabaseBackups` デバイス上にある次の 3 つのバックアップ セット (`10`、`11`、および `12`) にある 3 つのログ バックアップを、`WITH NORECOVERY` を使用して復元します。 最後のログ バックアップを復元した後、データベースを復旧します。  
   
 > [!NOTE] 
 > すべてのログ バックアップが復元される前に復旧してしまわないように、復旧は別のステップとして実行します。  
   
-`RESTORE DATABASE` では、2 種類の `FILE` オプションを使用していることに注意してください。 `FILE` のように、バックアップ デバイス名より前の `FILE = 'MyDatabase_data_1'` オプションでは、バックアップ セットから復元するデータベース ファイルの論理ファイル名を指定します。 このバックアップ セットは、メディア セット内の最初のデータベース バックアップではありません。したがって、メディア セット内での位置は、`FILE=9` のように `WITH` 句の `FILE` オプションを使用して示されます。  
+`RESTORE DATABASE` には、2 種類の `FILE` オプションがあることに注意してください。 `FILE` のように、バックアップ デバイス名より前の `FILE = 'MyDatabase_data_1'` オプションでは、バックアップ セットから復元するデータベース ファイルの論理ファイル名を指定します。 このバックアップ セットは、メディア セット内の最初のデータベース バックアップではありません。したがって、メディア セット内での位置は、`FILE=9` のように `WITH` 句の `FILE` オプションを使用して示されます。  
   
 ```sql  
 RESTORE DATABASE MyDatabase  

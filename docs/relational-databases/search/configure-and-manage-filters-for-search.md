@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b18963f7b512d2fa395d53406528a2d813b364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba65abd869322574cd2047be5066aad4b1c30767
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739700"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53552954"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>検索用フィルターの構成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,12 +40,16 @@ ms.locfileid: "47739700"
 
 ## <a name="installed-filters"></a>インストールされているフィルター 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、独自の XML フィルターと HTML フィルターがインストールされます。 さらに、オペレーティング システムに既にインストールされている [!INCLUDE[msCoName](../../includes/msconame-md.md)] 専用形式 (.doc、.xdoc、.ppt など) のフィルターもすべて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって読み込まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに現在読み込まれているフィルターを確認するには、次のように [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) ストアド プロシージャを使用します。  
-  
+
 ```sql
 EXEC sp_help_fulltext_system_components 'filter';   
 ```  
+
+> [!NOTE]
+> .xlsx のサポートを提供する Office Filter Pack の最新バージョンであっても、SQL Server では完全 Open XML スプレッドシートはサポートされません。  エラーは返されず、SQL Server は完全 Open XML スプレッドシートの内容のインデックス作成を失敗するだけです。
+
 ## <a name="non-microsoft-filters"></a>Microsoft 以外のフィルター
-ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 形式以外のフィルターを使用するには、事前にこれらのフィルターをサーバー インスタンスに読み込む必要があります。 追加のフィルターのインストールの詳細については、「 [登録済みのフィルターおよびワード ブレーカーの表示または変更](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)」を参照してください。  
+ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] 形式以外のフィルターを使用するには、事前にこれらのフィルターをサーバー インスタンスに読み込む必要があります。 追加のフィルターのインストールの詳細については、「 [登録済みのフィルターおよびワード ブレーカーの表示または変更](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)」を参照してください。  
   
   
 ## <a name="see-also"></a>参照  

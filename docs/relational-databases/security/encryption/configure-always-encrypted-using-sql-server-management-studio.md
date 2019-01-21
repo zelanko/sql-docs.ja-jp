@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d12db3ef11d3dc4d658b7126319ea53ddf12a91f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a6cc6dcb53bb7c535db570bbaa68db0673a83879
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535363"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531117"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>SQL Server Management Studio を使用した Always Encrypted の構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ SSMS では、データベースを管理する人 (DBA) と、暗号化され�
 
 [Always Encrypted ウィザード](../../../relational-databases/security/encryption/always-encrypted-wizard.md) は、選択したデータベースの列に対して目的の暗号化構成を設定することができる強力なツールです。 現在の Always Encrypted の構成と目的のターゲット構成に応じて、ウィザードでは、列を暗号化したり、列の暗号化を解除したり (解読)、列を再暗号化したり (たとえば、列に対して構成された、新しい列暗号化キー、または現在のものとは異なる暗号化の種類を使用) できます。 ウィザードの 1 回の実行で、複数の列を構成することができます。
 
-Always Encrypted に対してキーをプロビジョニングしていない場合は、ウィザードが自動的にキーを生成してくれます。 列マスター キーのキー ストアとして、Windows 証明書ストアまたは Azure Key Vault を選択する必要があるだけです。 ウィザードでは、キーの名前とメタデータ オブジェクトをデータベース内に自動的に生成します。 キーのプロビジョニング方法をより詳細に制御する必要がある場合 (および列マスター キーを格納したキー ストアの選択肢がもっと必要である場合) は、 **[新しい列マスター キー]** ダイアログと **[新しい列の暗号化キー]** ダイアログ (後で説明) を使用してキーをプロビジョニングしてから、ウィザードを開始してください。 Always Encrypted ウィザードでは、既存の列暗号化キーを選択できます。
+Always Encrypted に対してキーをプロビジョニングしていない場合は、ウィザードが自動的にキーを生成してくれます。 列マスター キーのキー ストアとして、つぎのどちらかを選択する必要があるだけです:Windows 証明書ストアまたは Azure Key Vault。 ウィザードでは、キーの名前とメタデータ オブジェクトをデータベース内に自動的に生成します。 キーのプロビジョニング方法をより詳細に制御する必要がある場合 (および列マスター キーを格納したキー ストアの選択肢がもっと必要である場合) は、 **[新しい列マスター キー]** ダイアログと **[新しい列の暗号化キー]** ダイアログ (後で説明) を使用してキーをプロビジョニングしてから、ウィザードを開始してください。 Always Encrypted ウィザードでは、既存の列暗号化キーを選択できます。
 
 このウィザードの使い方の詳細については、  [Always Encrypted ウィザード](../../../relational-databases/security/encryption/always-encrypted-wizard.md)を参照してください。
 
@@ -77,8 +77,8 @@ SSN が `char(11)` テーブルで暗号化された `Patients` 列であると�
 1.  Always Encrypted が、 `SELECT` クエリを実行するクエリ エディター ウィンドウでデータベース接続に対して有効になっていることを確認します。 これにより、.NET Framework Data Provider for SQL Server (SSMS で使用) に、暗号化された列をターゲットとするパラメーター化された Transact-SQL 変数 (以下を参照) を暗号化するよう指示されます。 以下の、「 [データベース接続での Always Encrypted の有効化と無効化](#en-dis) 」を参照してください。   
 2.  暗号化された列に構成されているすべての列マスター キーにアクセスできることを確認します。 たとえば、列マスター キーが証明書である場合、SSMS が実行されているコンピューターに証明書が展開されていることを確認する必要があります。 あるいは、列マスター キーが Azure Key Vault に格納されているキーの場合、キーにアクセスする権限があることを確認する必要があります (Azure へのサインインが求められる場合もあります)。   
 3.  クエリ エディター ウィンドウで Always Encrypted のパラメーター化が有効になっていることを確認してください。 (SSMS バージョン 17.0 以降が必要です)。Transact-SQL 変数を宣言し、データベースに送信 (挿入、更新またはフィルタリング) する値で初期化します。 詳細については、以下の「[Always Encrypted のパラメーター化](#param)」を参照してください。   
-    >   [!NOTE]
-    >   Always Encrypted でサポートされる型変換のサブセットは限られているため、多くの場合、Transact-SQL 変数のデータ型が、ターゲットとなるターゲット データベース列の型と同じである必要があります。   
+    > [!NOTE]
+    > Always Encrypted でサポートされる型変換のサブセットは限られているため、多くの場合、Transact-SQL 変数のデータ型が、ターゲットとなるターゲット データベース列の型と同じである必要があります。   
 4.  データベースに Transact-SQL 変数の値を送信するクエリを実行します。 SSMS は変数をクエリ パラメーターに変換し、その値を暗号化してからデータベースに送信します。   
 
 *例*   
@@ -94,13 +94,13 @@ SSN が `char(11)` テーブルで暗号化された `Patients` 列であると�
 データベース接続で Always Encrypted を有効にするには、 `Column Encryption Setting=Enabled` [サーバーに接続] **ダイアログの** [追加のプロパティ] **タブで** を指定します。    
 データベース接続で Always Encrypted を無効にするには、 `Column Encryption Setting=Disabled` [サーバーに接続] **ダイアログの** [追加のプロパティ] **タブで** を指定するか、 **[列暗号化設定]** の設定を単に削除します (既定値は **[無効]**)。   
 
->  [!TIP] 
->  既存のクエリ エディター ウィンドウで Always Encrypted の有効化と無効化を切り替えるには、次のようにします。   
->  1.   クエリ エディター ウィンドウの任意の場所をクリックします。
->  2.   **[接続]** > **[接続の変更...]** の順に選択します。 
->  3.   **[オプション]** をクリックします。
->  4.   **[追加のプロパティ]** タブを選択し、`Column Encryption Setting=Enabled` を入力する (Always Encrypted の動作を有効にする) か、設定を削除します (Always Encrypted の動作を無効にする)。   
->  5.   **[接続]** をクリックします。   
+> [!TIP]
+> 既存のクエリ エディター ウィンドウで Always Encrypted の有効化と無効化を切り替えるには、次のようにします。   
+> 1.    クエリ エディター ウィンドウの任意の場所をクリックします。
+> 2.    **[接続]** > **[接続の変更...]** の順に選択します。 
+> 3.    **[オプション]** をクリックします。
+> 4.    **[追加のプロパティ]** タブを選択し、`Column Encryption Setting=Enabled` を入力する (Always Encrypted の動作を有効にする) か、設定を削除します (Always Encrypted の動作を無効にする)。   
+> 5.    **[接続]** をクリックします。   
    
 ### <a name="param"></a>Always Encrypted のパラメーター化   
  
@@ -134,8 +134,8 @@ WHERE [SSN] = @SSN
 5.  **[OK]** をクリックします。   
 
 Always Encrypted が有効な状態のデータベース接続を使用するクエリ エディター ウィンドウでクエリを実行する場合に、パラメーター化がクエリ エディター ウィンドウで有効になっていないと、有効にするよう求められます。   
->   [!NOTE]   
->   Always Encrypted のパラメーター化が機能するのは、Always Encrypted が有効な状態のデータベース接続を使用するクエリ エディター ウィンドウのみです (「 [データベース接続での Always Encrypted の有効化と無効化](#en-dis)」を参照)。 クエリ エディター ウィンドウで Always Encrypted が有効な状態ではないデータベース接続を使用すると、Transact-SQL 変数がパラメーター化されません。   
+> [!NOTE]
+> Always Encrypted のパラメーター化が機能するのは、Always Encrypted が有効な状態のデータベース接続を使用するクエリ エディター ウィンドウのみです (「 [データベース接続での Always Encrypted の有効化と無効化](#en-dis)」を参照)。 クエリ エディター ウィンドウで Always Encrypted が有効な状態ではないデータベース接続を使用すると、Transact-SQL 変数がパラメーター化されません。   
 
 #### <a name="how-parameterization-for-always-encrypted-works"></a>Always Encrypted のパラメーター化のしくみ   
 
@@ -173,7 +173,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio では Intellisense を使用して、正常にパラメーター化できた変数と失敗したパラメーター化の試行 (およびその理由) を通知します。   
 
-クエリ エディターでは、正常にパラメーター化できた変数の宣言に警告の下線が付けられます。 警告の下線が付いた宣言ステートメントにカーソルを置くと、パラメーター化プロセスの結果が表示されます。これには、結果の [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) オブジェクト (変数に対応する) の主要なプロパティ ( [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)、 [Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx)、 [Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)、 [Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)、 [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx)) の値が含まれます。 また、 **[エラー一覧]** ビューの **[警告]** タブには、正常にパラメーター化されたすべての変数の完全な一覧も表示されます。 **[エラー一覧]** ビューを開くには、メイン メニューから **[ビュー]** を選択し、 **[エラー一覧]** を選択します。    
+クエリ エディターでは、正常にパラメーター化できた変数の宣言に警告の下線が付けられます。 警告の下線が付いた宣言ステートメントにカーソルを置くと、パラメーター化プロセスの結果が表示されます。これには、結果の [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) オブジェクト (変数に対応する) の次の主要なプロパティの値が含まれます:[SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)、[Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx)、[Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)、[Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)、[SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx)。 また、 **[エラー一覧]** ビューの **[警告]** タブには、正常にパラメーター化されたすべての変数の完全な一覧も表示されます。 **[エラー一覧]** ビューを開くには、メイン メニューから **[ビュー]** を選択し、 **[エラー一覧]** を選択します。    
 
 SQL Server Management Studio が変数のパラメーター化を試みたときに、パラメーター化が失敗した場合には、変数の宣言にエラーの下線が付けられます。 エラーの下線が付けられた宣言ステートメントにカーソルを置くと、エラーに関する結果が表示されます。 また、 **[エラー一覧]** ビューの **[エラー]** タブで、すべての変数のパラメーター化エラーの完全な一覧を表示することもできます。 **[エラー一覧]** ビューを開くには、メイン メニューから **[ビュー]** を選択し、 **[エラー一覧]** を選択します。   
 
@@ -185,8 +185,8 @@ SQL Server Management Studio が変数のパラメーター化を試みたとき
  
 ![always-encrypted-error](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
  
->   [!NOTE]
->   Always Encrypted でサポートされる型変換のサブセットは限られているため、多くの場合、Transact-SQL 変数のデータ型が、ターゲットとなるターゲット データベース列の型と同じである必要があります。 たとえば、 `SSN` テーブル内の `Patients` 列の型が `char(11)`であると仮定して、 `@SSN` である、 `nchar(11)`変数の型が列の型と一致しないため、以下のクエリは失敗します。   
+> [!NOTE]
+> Always Encrypted でサポートされる型変換のサブセットは限られているため、多くの場合、Transact-SQL 変数のデータ型が、ターゲットとなるターゲット データベース列の型と同じである必要があります。 たとえば、 `SSN` テーブル内の `Patients` 列の型が `char(11)`であると仮定して、 `@SSN` である、 `nchar(11)`変数の型が列の型と一致しないため、以下のクエリは失敗します。   
 
 ```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
@@ -202,8 +202,8 @@ WHERE [SSN] = @SSN;
     encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
     column_encryption_key_database_name = 'Clinic') are incompatible in the equal to operator.
 
->   [!NOTE]
->   パラメーター化しないと、型変換を含め、クエリ全体が SQL Server/Azure SQL Database 内で処理されます。 パラメーター化が有効になっている場合は、SQL Server Management Studio 内の .NET Framework でいくつかの型変換が実行されます。 .NET Framework 型システムと SQL Server 型システムには違いがある (float など、いくつかの型の精度が異なる) ため、パラメーター化を有効にして実行されたクエリでは、パラメーター化を有効にせずに実行されたクエリとは異なる結果が生成される場合があります。 
+> [!NOTE]
+> パラメーター化しないと、型変換を含め、クエリ全体が SQL Server/Azure SQL Database 内で処理されます。 パラメーター化が有効になっている場合は、SQL Server Management Studio 内の .NET Framework でいくつかの型変換が実行されます。 .NET Framework 型システムと SQL Server 型システムには違いがある (float など、いくつかの型の精度が異なる) ため、パラメーター化を有効にして実行されたクエリでは、パラメーター化を有効にせずに実行されたクエリとは異なる結果が生成される場合があります。 
 
 #### <a name="permissions"></a>アクセス許可      
 
@@ -214,7 +214,7 @@ WHERE [SSN] = @SSN;
 - **キー ストア プロバイダー (CNG)** キー ストアまたはキーを使用する際に入力を求められる可能性がある必要な権限と資格情報は、ストアと KSP の構成によって異なります。   
 - **暗号化サービス プロバイダー (CAPI)** キー ストアまたはキーを使用する際に入力を求められる可能性がある必要な権限と資格情報は、ストアと CSP の構成によって異なります。   
 
-詳細については、 [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(列マスター キーの作成と格納 (Always Encrypted)) を参照してください。
+詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。
 
 
 <a name="provisioncmk"></a>
@@ -232,8 +232,8 @@ WHERE [SSN] = @SSN;
     - **キー ストア プロバイダー (CNG)** - Cryptography Next Generation (CNG) API を実装するキー ストア プロバイダー (KSP) を介してアクセスできるキー ストアを示します。 通常、この種のストアは、ハードウェア セキュリティ モジュール (HSM) となります。 このオプションを選択したら、KSP を選択する必要があります。 既定では、**Microsoft ソフトウェア キー ストア プロバイダー** が選択されます。 HSM に格納されている列マスター キーを使用する場合は、デバイス用の KSP を選択します (ダイアログを開く前に、コンピューターにインストールし、構成しておく必要があります)。
     -   **暗号化サービス プロバイダー (CAPI)** - 暗号化 API (CAPI) を実装する暗号化サービス プロバイダー (CSP) を介してアクセスできるキー ストアです。 通常、そのようなストアは、ハードウェア セキュリティ モジュール (HSM) です。 このオプションを選択したら、CSP を選択する必要があります。  HSM に格納されている列マスター キーを使用する場合は、デバイス用の CSP を選択します (ダイアログを開く前に、コンピューターにインストールし、構成しておく必要があります)。
     
-    >   [!NOTE]
-    >   CAPI は非推奨の API であるため、既定では暗号化サービス プロバイダー (CAPI) オプションは無効になります。 これを有効にするには、Windows レジストリの **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** キーの下に CAPI Provider Enabled DWORD 値を作成し、これを 1 に設定します。 キー ストアで CNG がサポートされていない場合は、CAPI ではなく CNG を使用する必要があります。
+    > [!NOTE]
+    > CAPI は非推奨の API であるため、既定では暗号化サービス プロバイダー (CAPI) オプションは無効になります。 これを有効にするには、Windows レジストリの **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** キーの下に CAPI Provider Enabled DWORD 値を作成し、これを 1 に設定します。 キー ストアで CNG がサポートされていない場合は、CAPI ではなく CNG を使用する必要があります。
    
     上記キー ストアの詳細については、 [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(列マスター キーの作成と格納 (Always Encrypted)) を参照してください。
 
@@ -266,18 +266,18 @@ SQL Server Management Studio では、新しい列暗号化キーを生成し、
 - **キー ストア プロバイダー (CNG)** - キー ストアまたはキーを使用する際には、ストアと KSP の構成に応じて、必要な権限と資格情報を入力するよう求められる場合があります。
 - **暗号化サービス プロバイダー (CAPI)** - キー ストアまたはキーを使用する際には、ストアと CSP の構成に応じて、必要な権限と資格情報を入力するよう求められる場合があります。
 
-詳細については、 [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(列マスター キーの作成と格納 (Always Encrypted)) を参照してください。
+詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。
 
 <a name="rotatecmk"></a>
 ## <a name="rotating-column-master-keys"></a>列マスター キーの回転
 
 列マスター キーの回転は、既存の列マスター キーを新しい列マスター キーに置き換える処理です。 キーの回転は、キーが侵害されている場合に、または必須の暗号化キーを定期的に回転することを求めた組織のポリシーまたはコンプライアンス規定に準拠するために、行うことが必要な場合があります。 列マスター キーの回転では、現在の列マスター キーで保護された列暗号化キーを暗号化解除し、新しい列マスター キーを使用して列暗号化キーを再度暗号化し、キーのメタデータを更新するという処理が必要です。 詳細については、「 [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)(Always Encrypted のキー管理の概要)」を参照してください。
 
-**手順 1: 新しい列マスター キーをプロビジョニングする**
+**ステップ 1: 新しい列マスター キーをプロビジョニングする**
 
 前述の「列マスター キーのプロビジョニング」セクションの手順に従って、新しい列マスター キーをプロビジョニングします。
 
-**手順 2: 新しい列マスター キーで列暗号化キーを暗号化する**
+**ステップ 2:新しい列マスター キーで列暗号化キーを暗号化する**
 
 列マスター キーは、通常、1 つまたは複数の列暗号化キーを保護します。 列暗号化キーを列マスター キーにより暗号化すると、各列暗号化キーの暗号化された値がデータベースに格納されます。
 この手順では、回転する列マスター キーで保護されている各列暗号化キーを新しい列マスター キーで暗号化し、新しい暗号化された値をデータベースに格納します。 結果的に、回転の影響を受けた各列暗号化キーには暗号化された値が 2 つ含まれることになります。1 つは既存の列マスター キーにより暗号化された値、もう 1 つは新しい列マスター キーで暗号化された値です。
@@ -293,7 +293,7 @@ SQL Server Management Studio では、古い列マスター キーで保護さ�
 > [!NOTE]
 > 古い列マスター キーで暗号化されたそれぞれの列暗号化キーが他の列マスター キーで暗号化されていないことを確認します。 つまり、回転の影響を受けるすべての列暗号化キーに、データベースの暗号化された値が 1 つだけ含まれている必要があります。 影響を受ける列暗号化キーのいずれかに複数の暗号化された値が含まれている場合、回転を続行する前にその値を削除する必要があります (列暗号化キーの暗号化された値を削除する方法は、 *"手順 4"* を参照してください)。
 
-**手順 3: 新しい列マスター キーでアプリケーションを構成する**
+**ステップ 3:新しい列マスター キーでアプリケーションを構成する**
 
 この手順では、回転している列マスター キーで保護されたデータベース列 (つまり、回転されている列マスター キーで暗号化される列暗号化キーで暗号化されたデータベース列) に対してクエリを実行するすべてのクライアント アプリケーションが、新しい列マスター キーにアクセスできるようにする必要があります。 この手順は、新しい列マスター キーが格納されているキー ストアの種類によって異なります。 例 :
 - 新しい列マスター キーが Windows 証明書ストアに格納された証明書である場合、データベースの列マスター キーのキー パスに指定された場所と同じ証明書ストアの場所 (*[現在のユーザー]* または *[ローカル コンピューター]*) に証明書を展開する必要があります。 アプリケーションが、証明書にアクセスできる必要があります。
@@ -306,7 +306,7 @@ SQL Server Management Studio では、古い列マスター キーで保護さ�
 > [!NOTE]
 > 回転のこの時点では、古い列マスター キーと新しい列マスター キーの両方が有効であり、これらを使ってデータにアクセスすることができます。
 
-**手順 4: 古い列マスター キーで暗号化された列暗号化キーの値をクリーンアップする**
+**ステップ 4:古い列マスター キーで暗号化された列暗号化キーの値をクリーンアップする**
 
 新しい列マスター キーを使用するようにすべてのアプリケーションを構成したら、 *"古い"* 列マスター キーで暗号化された列暗号化キーの値をデータベースから削除します。新しい列マスター キーを使用するようにすべてのアプリケーションを構成したら、古い列マスター キーで暗号化された列暗号化キーの値をデータベースから削除します。 古い値を削除することで、次の回転を行うことができます (ただし、回転される列マスター キーで保護されたすべての列暗号化キーに、必ず暗号化された値が 1 つ必要です)。
 
@@ -322,7 +322,7 @@ SQL Server Management Studio では、古い列マスター キーで保護さ�
 
 SQL Server Management Studio では、 [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) ステートメントを発行して、古い列マスター キーで暗号化された列暗号化キーの暗号化された値を削除します。
 
-**手順 5: 古い列マスター キーのメタデータを削除する**
+**ステップ 5:古い列マスター キーのメタデータを削除する**
 
 データベースから古い列マスター キーの定義を削除する場合は、次の手順を使用します。 
 1.  **オブジェクト エクスプローラー**で **[セキュリティ]、[Always Encrypted キー]、[列マスター キー]** フォルダーの順に移動し、データベースから削除する古い列マスター キーを探します。
@@ -347,7 +347,7 @@ SQL Server Management Studio では、 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 - **キー ストア プロバイダー (CNG)** - キー ストアまたはキーを使用する際には、ストアと KSP の構成に応じて、必要な権限と資格情報を入力するよう求められる場合があります。
 - **暗号化サービス プロバイダー (CAPI)** - キー ストアまたはキーを使用する際には、ストアと CSP の構成に応じて、必要な権限と資格情報を入力するよう求められる場合があります。
 
-詳細については、 [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(列マスター キーの作成と格納 (Always Encrypted)) を参照してください。
+詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。
 
 <a name="rotatecek"></a> 
 ## <a name="rotating-column-encryption-keys"></a>列暗号化キーの回転
@@ -369,7 +369,7 @@ SQL Server Management Studio では、 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 
 ### <a name="permissions"></a>アクセス許可
 
-列暗号化キーを回転するために必要なデータベース権限: **ALTER ANY COLUMN MASTER KEY** - 新しい自動生成の列暗号化キーを使用する場合に必要です (新しい列マスター キーとその新しいメタデータも生成されます)。
+列暗号化キーを回転するために必要なデータベース権限:**ALTER ANY COLUMN MASTER KEY** - 新しい自動生成の列暗号化キーを使用する場合に必要です (新しい列マスター キーとその新しいメタデータも生成されます)。
 **ALTER ANY COLUMN ENCRYPTION KEY** - 新しい列暗号化キーのメタデータを追加するのに必要です。
 **VIEW ANY COLUMN MASTER KEY DEFINITION** - 列マスター キーのメタデータにアクセスして読み取るのに必要です。
 **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** - 列暗号化キーの列メタデータにアクセスして読み取るのに必要です。
@@ -380,7 +380,7 @@ SQL Server Management Studio では、 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 - **キー ストア プロバイダー (CNG)** - キー ストアまたはキーを使用する際には、ストアと KSP の構成に応じて、必要な権限と資格情報を入力するよう求められる場合があります。
 - **暗号化サービス プロバイダー (CAPI)** - キー ストアまたはキーを使用する際には、ストアと CSP の構成に応じて、必要な権限と資格情報を入力するよう求められる場合があります。
 
-詳細については、 [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(列マスター キーの作成と格納 (Always Encrypted)) を参照してください。
+詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。
 
 ## <a name="performing-dac-upgrade-operations-when-database-or-dacpac-uses-always-encrypted"></a>データベースまたは DACPAC で Always Encrypted が使用されている場合に DAC アップグレード操作を実行する
 
@@ -412,7 +412,7 @@ DACPAC またはターゲット データベースで Always Encrypted がセッ
 - **キー ストア プロバイダー (CNG)** - キー ストアまたはキーを使用する際には、ストアと KSP の構成に応じて、必要な権限と資格情報を入力するよう求められる場合があります。
 - **暗号化サービス プロバイダー (CAPI)** - キー ストアまたはキーを使用する際には、ストアと CSP の構成に応じて、必要な権限と資格情報を入力するよう求められる場合があります。
 
-詳細については、 [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(列マスター キーの作成と格納 (Always Encrypted)) を参照してください。
+詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。
 
 ## <a name="migrating-databases-with-encrypted-columns-using-bacpac"></a>暗号化された列を含むデータベースを BACPAC を使用して移行する
 
@@ -455,7 +455,7 @@ BACPAC をデータベースにインポートすると、BACPAC からの暗号
 - **Azure Key Vault** - 列マスター キーが格納されている資格情報コンテナーに対して get、unwrapKey、wrapKey、sign、および verify の権限が必要です。
 - **キー ストア プロバイダー (CNG)** - キー ストアまたはキーを使用する際に入力を求められる可能性がある必要な権限と資格情報は、ストアと KSP の構成によって異なります。
 - **暗号化サービス プロバイダー (CAPI)** - キー ストアまたはキーを使用する際に入力を求められる可能性がある必要な権限と資格情報は、ストアと CSP の構成によって異なります。
-詳細については、 [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(列マスター キーの作成と格納 (Always Encrypted)) を参照してください。
+詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。
 
 ## <a name="see-also"></a>参照
 - [Always Encrypted (データベース エンジン)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

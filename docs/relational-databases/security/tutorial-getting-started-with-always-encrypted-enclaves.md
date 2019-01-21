@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: SSMS を使用したセキュア エンクレーブを使用する Always Encrypted の概要 | Microsoft Docs'
+title: チュートリアル:SSMS を使用したセキュア エンクレーブを使用する Always Encrypted の概要 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523547"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046582"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル: SSMS を使用したセキュア エンクレーブを使用する Always Encrypted の概要
+# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 このチュートリアルでは、[セキュア エンクレーブを使用する Always Encrypted](encryption/always-encrypted-enclaves.md) の開始方法について説明します。 次のことを示します。
@@ -55,7 +55,7 @@ ms.locfileid: "52523547"
 >[!NOTE]
 >開始する前に、HGS コンピューターがドメインに参加していてはなりません。
 
-## <a name="step-1-configure-the-hgs-computer"></a>手順 1: HGS コンピューターを構成する
+## <a name="step-1-configure-the-hgs-computer"></a>手順 1:HGS コンピューターを構成する
 
 この手順では、ホスト キーの構成証明をサポートしているホスト ガーディアン サービスを実行するように HGS コンピューターを構成します。
 
@@ -87,7 +87,7 @@ ms.locfileid: "52523547"
 >[!NOTE]
 >または、HGS コンピューターを DNS 名によって参照する場合は、企業の DNS サーバーから新しい HGS ドメイン コントローラーにフォワーダーを設定できます。  
 
-## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>手順 2: SQL Server コンピューターを保護されたホストとして構成する
+## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>手順 2:SQL Server コンピューターを保護されたホストとして構成する
 この手順では、ホスト キーの構成証明を使用して、HGS に登録されている保護されたホストとして SQL Server コンピューターを構成します。
 >[!NOTE]
 >ホスト キーの構成証明はテスト環境でのみ使用することをお勧めします。 運用環境では、TPM 構成証明を使用してください。
@@ -122,7 +122,8 @@ ms.locfileid: "52523547"
 7. SQL Server コンピューター上で、管理者特権の Windows PowerShell コンソール内で次のコマンドを実行して、SQL Server コンピューターに証明する場所を指示します。 HGS コンピューターの IP アドレスまたは DNS 名を必ず指定します。 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
+   # use http, and not https
+   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
    ```
 
 上記のコマンドの結果として、AttestationStatus = Passed と表示されます。
@@ -133,7 +134,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 
 他のすべてに失敗した場合は、Clear-HgsClientHostKey を実行し、手順 4. から 7. を繰り返します。
 
-## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>手順 3: SQL Server 上でセキュア エンクレーブを使用する Always Encrypted を有効にする
+## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>手順 3:SQL Server 上でセキュア エンクレーブを使用する Always Encrypted を有効にする
 
 この手順では、SQL Server インスタンス上でエンクレーブを使用する Always Encrypted の機能を有効にします。
 
@@ -169,7 +170,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     > [!NOTE]
     > [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] では、高度な計算が既定で無効になります。 これらは、SQL Server インスタンスを再起動するたびに、上記のステートメントを使用して有効にする必要があります。
 
-## <a name="step-4-create-a-sample-database"></a>手順 4: サンプル データベースを作成する
+## <a name="step-4-create-a-sample-database"></a>手順 4:サンプル データベースの作成
 この手順では、いくつかのサンプル データを含むデータベースを作成し、その後暗号化します。
 
 1. SSMS を使用して SQL Server インスタンスに接続します。
@@ -221,7 +222,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     GO
     ```
 
-## <a name="step-5-provision-enclave-enabled-keys"></a>手順 5: エンクレーブ対応のキーをプロビジョニングする
+## <a name="step-5-provision-enclave-enabled-keys"></a>手順 5:エンクレーブ対応キーをプロビジョニングする
 
 この手順では、エンクレーブ計算を許可する列マスター キーと列暗号化キーを作成します。
 
@@ -229,7 +230,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 2. **[オブジェクト エクスプローラー]** で、データベースを展開し、**[セキュリティ]** > **[Always Encrypted キー]** に移動します。
 3. エンクレーブ対応の列マスター キーをプロビジョニングします。
     1. **[Always Encrypted キー]** を右クリックし、**[新しい列マスター キー...]** を選択します。
-    2. 列マスター キー名: CMK1 を選択します。
+    2. 列マスター キー名CMK1 を選択します。
     3. **[Windows 証明書ストア -現在のユーザー] または [Windows 証明書ストア - ローカル コンピューター]** か、**[Azure Key Vault]** を選択します。
     4. **[エンクレーブ計算を許可する]** を選択します。
     5. [Azure Key Vault] を選択した場合は、Azure にサインインし、キー コンテナーを選択します。 Always Encrypted のキー コンテナーを作成する方法について詳しくは、「[Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)」(Azure portal からキー コンテナーを管理する) を参照してください。
@@ -241,11 +242,11 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 4. 新しいエンクレーブ対応の列暗号化キーを作成します。
 
     1. **[Always Encrypted キー]** を右クリックし、**[新しい列の暗号化キー]** を選択します。
-    2. 新しい列暗号化キーの名前: CEK1 を入力します。
+    2. 新しい列暗号化キーの名前CEK1 を入力します。
     3. **[列マスター キー]** ドロップダウンで、前の手順で作成した列マスター キーを選択します。
     4. **[OK]** を選択します。
 
-## <a name="step-6-encrypt-some-columns-in-place"></a>手順 6: 一部の列のインプレース暗号化を行う
+## <a name="step-6-encrypt-some-columns-in-place"></a>手順 6:一部の列のインプレース暗号化を行う
 
 この手順では、サーバー側エンクレーブ内の SSN および給与列に格納されたデータを暗号化し、データの SELECT クエリをテストします。
 
@@ -289,7 +290,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     SELECT * FROM [dbo].[Employees]
     ```
 
-## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>手順 7: 暗号化された列に対して高度なクエリを実行する
+## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>手順 7:暗号化された列に対して高度なクエリを実行する
 
 ここで、暗号化された列に対して高度なクエリを実行できます。 いくつかのクエリ処理は、サーバー側エンクレーブ内で実行されます。 
 

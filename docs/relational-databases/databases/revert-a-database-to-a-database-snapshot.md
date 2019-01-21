@@ -14,12 +14,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f99cba0597faad9da7250097f1ca8e866bd00e21
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7d04286e2b8703e7d06a9913b421f69a94234b25
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560429"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591056"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>データベースをデータベース スナップショットに戻す
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "51560429"
   
      [前提条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **データベースをデータベース スナップショットに戻すには、**  [Transact-SQL](#TsqlProcedure)  
+-   **以下を使用して、データベースをデータベース スナップショットに戻す方法:**[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -101,7 +101,7 @@ ms.locfileid: "51560429"
   
      データベースを戻す操作には、ソース データベースに対して RESTORE DATABASE 権限が必要です。 データベースを戻すには、次の Transact-SQL ステートメントを使用します。  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
   
      *database_name* はソース データベースで、 *database_snapshot_name* はデータベースを戻す対象になるスナップショットの名前です。 このステートメントでは、バックアップ デバイスではなく、スナップショット名を指定する必要があることに注意してください。  
   

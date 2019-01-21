@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b29291d808b643f9ac66491ae200d6169eb5232a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697331"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589636"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>引数  
- **@** *local_variable*  
+ **@** _local_variable_  
  **cursor**、**text**、**ntext**、**image**、または **table** を除く任意の型の変数の名前です。 変数名の先頭には 1 つのアット マーク (**@**) を指定します。 変数名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
  *property_name*  
@@ -86,10 +86,10 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  { **.** | **::** }  
  CLR ユーザー定義型のメソッドを指定します。 静的メソッド以外のインスタンス メソッドでは、ピリオド (**.**) を使用します。 静的メソッドでは、2 つのコロン (**::**) を使用します。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
   
- *method_name* **(** *argument* [ **,**... *n* ] **)**  
+ _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
  ユーザー定義型のメソッドを指定します。このメソッドでは、あるデータ型のインスタンスの状態を変更する場合に 1 つ以上の引数を使用します。 静的メソッドはパブリックであることが必要です。  
   
- **@** *SQLCLR_local_variable*  
+ **@** _SQLCLR_local_variable_  
  型がアセンブリに存在する変数を指定します。 詳細については、「[共通言語ランタイム &#40;CLR&#41; 統合のプログラミング概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)」をご覧ください。  
   
  *mutator_method*  
@@ -127,7 +127,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  SET ステートメントにカーソルの宣言が含まれることを指定します。  
   
  SCROLL  
- カーソルがすべての FETCH オプション (FIRST、LAST、NEXT、PRIOR、RELATIVE、ABSOLUTE) をサポートすることを指定します。 FAST_FORWARD も指定した場合、SCROLL は指定できません。  
+ カーソルがすべての FETCH オプションをサポートすることを指定します:FIRST、LAST、NEXT、PRIOR、RELATIVE、ABSOLUTE。 FAST_FORWARD も指定した場合、SCROLL は指定できません。  
   
  FORWARD_ONLY  
  カーソルで、FETCH NEXT オプションだけがサポートされることを指定します。 カーソルは、最初の行から最後の行への一方向にしか取得できません。 STATIC、KEYSET、DYNAMIC のいずれのキーワードも指定しないで FORWARD_ONLY を指定した場合、カーソルは DYNAMIC として実装されます。 FORWARD_ONLY も SCROLL も指定しなかった場合は、STATIC、KEYSET、または DYNAMIC キーワードを指定しない限り、FORWARD_ONLY が既定値になります。 STATIC、KEYSET、および DYNAMIC カーソルの既定値は SCROLL です。  
@@ -178,7 +178,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  変数は式の内部だけで使用でき、オブジェクト名やキーワードの代わりに使用することはできません。 動的 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成するには、EXECUTE を使用します。  
   
- SET **@***cursor_variable* の構文規則に、LOCAL キーワードと GLOBAL キーワードは含まれません。 SET **@***cursor_variable* = CURSOR... 構文を使用すると、カーソルは default to local cursor データベース オプションの設定に応じて、GLOBAL または LOCAL として作成されます。  
+ SET **@**_cursor_variable_ の構文規則に、LOCAL キーワードと GLOBAL キーワードは含まれません。 SET **@**_cursor_variable_ = CURSOR... 構文を使用すると、カーソルは default to local cursor データベース オプションの設定に応じて、GLOBAL または LOCAL として作成されます。  
   
  カーソル変数は、グローバル カーソルを参照する場合でも、常にローカルです。 カーソル変数でグローバル カーソルを参照する場合、カーソルに対してグローバル カーソル参照とローカル カーソル参照の両方が行われます。 詳細については、例 C を参照してください。  
   
@@ -189,7 +189,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  SELECT ステートメントで、値を連結する目的で (つまり、集計値を計算する目的で) 変数を使用しないでください。 予期しないクエリ結果が生じる可能性があります。 (代入を含め) SELECT リスト内のすべての式は、出力行ごとに 1 回のみ実行されると保証されていないことが原因です。 詳細については、[サポート技術情報の資料](https://support.microsoft.com/kb/287515)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- public ロールのメンバーシップが必要です。 すべてのユーザーは、SET **@***local_variable* を使用できます。  
+ public ロールのメンバーシップが必要です。 すべてのユーザーは、SET **@**_local_variable_ を使用できます。  
   
 ## <a name="examples"></a>使用例  
   

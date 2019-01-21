@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3375af07fc7231321c96c2aa03d95dbbdc6709f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506410"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980008"
 ---
 # <a name="create-external-data-source-transact-sql"></a>外部データ ソース (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -151,15 +151,15 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 LOCATION = \<location_path> **HADOOP**    
 HADOOP の場合、Hadoop クラスターの Uniform Resource Indicator (URI) を指定します。  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
-NameNode_URI: Hadoop クラスター Namenode のマシン名または IP アドレスです。  
-port: Namenode IPC ポートです。 これは、Hadoop では、fs.default.name 構成パラメーターによって示されます。 値が指定されていない場合、8020 が既定で使用されます。  
+NameNode_URI:Hadoop クラスター Namenode のマシン名または IP アドレスです。  
+port:Namenode IPC ポートです。 これは、Hadoop では、fs.default.name 構成パラメーターによって示されます。 値が指定されていない場合、8020 が既定で使用されます。  
 例: `LOCATION = 'hdfs://10.10.10.10:8020'`
 
 Hadoop を使用する Azure Blob Storage の場合、Azure Blob Storage に接続するための URI を指定します。  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
-wasb[s]: Azure Blob Storage のプロトコルを指定します。 [S] は省略可能であり、セキュリティ保護された SSL 接続を指定します。SQL Server から送信されたデータは SSL プロトコルを使って安全に暗号化されます。 'Wasb' ではなく ' wasbs' を使用を強くお勧めします。 LOCATION は、wasb [s] の代わりに asv [s] を使用できます。 Asv [s] 構文は非推奨とされており、将来のリリースでは削除されます。  
-container: Azure Blob Storage コンテナーの名前を指定します。 ドメインのストレージ アカウントのルート コンテナーを指定するには、コンテナー名ではなく、ドメイン名を使用します。 ルート コンテナーは、データをバックアップ コンテナーに書き込むことはできませんのでは読み取り専用です。  
-account_name: Azure ストレージ アカウントの完全修飾ドメイン名 (FQDN) です。  
+wasb[s]:Azure Blob Storage のプロトコルを指定します。 [S] は省略可能であり、セキュリティ保護された SSL 接続を指定します。SQL Server から送信されたデータは SSL プロトコルを使って安全に暗号化されます。 'Wasb' ではなく ' wasbs' を使用を強くお勧めします。 LOCATION は、wasb [s] の代わりに asv [s] を使用できます。 Asv [s] 構文は非推奨とされており、将来のリリースでは削除されます。  
+container:Azure Blob Storage コンテナーの名前を指定します。 ドメインのストレージ アカウントのルート コンテナーを指定するには、コンテナー名ではなく、ドメイン名を使用します。 ルート コンテナーは、データをバックアップ コンテナーに書き込むことはできませんのでは読み取り専用です。  
+account_name:Azure ストレージ アカウントの完全修飾ドメイン名 (FQDN) です。  
 例: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
 Azure Data Lake Store の場合、LOCATION は、お使いの Azure Data Lake Store に接続するための URI を指定します。
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 RDBMS のチュートリアルについては、[クロスデータベース クエリの概要 (列方向のパーティション分割)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/) のトピックを参照してください。  
 
 **BLOB_STORAGE**   
-この型は、一括操作にのみ使用されます。`LOCATION` は Azure Blob Storage とコンテナーの有効な URL にする必要があります。 `LOCATION` URL の末尾に、**/**、ファイル名、または Shared Access Signature パラメーターを配置しないでください。 `CREADENTIAL` は、BLOB オブジェクトがパブリックでない場合に必須です。 例 : 
+この型は、一括操作にのみ使用されます。`LOCATION` は Azure Blob Storage とコンテナーの有効な URL にする必要があります。 `LOCATION` URL の末尾に、**/**、ファイル名、または Shared Access Signature パラメーターを配置しないでください。 `CREDENTIAL` は、BLOB オブジェクトがパブリックでない場合に必須です。 例 : 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -329,7 +329,7 @@ Hadoop NameNode フェールオーバーが発生した場合に PolyBase クエ
 ## <a name="locking"></a>ロック  
  外部データ ソース オブジェクト上には、共有ロックを取得します。  
   
-##  <a name="examples"></a> 例: SQL Server 2016  
+##  <a name="examples"></a> 例:SQL Server 2016  
   
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Hadoop を参照する外部データ ソースを作成する  
 Hortonworks または Cloudera Hadoop クラスターを参照する外部データ ソースを作成するには、マシン名または Hadoop Namenode とポートの IP アドレスを指定します。  
@@ -401,7 +401,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-azure-sql-database"></a>例: Azure SQL Database
+## <a name="examples-azure-sql-database"></a>例 :Azure SQL データベース
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Shard Map Manager の外部データ ソースを作成する
 SHARD_MAP_MANAGER を参照する外部データ ソースを作成するには、Azure SQL Database または Azure 仮想マシン上の SQL Server データベースで Shard Map Manager をホストする論理サーバー名を指定します。
@@ -442,10 +442,10 @@ WITH (
 );
 ```
 
-## <a name="examples-azure-sql-data-warehouse"></a>例: Azure SQL Data Warehouse
+## <a name="examples-azure-sql-data-warehouse"></a>例 :Azure SQL Data Warehouse
 
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Azure Data Lake Store を参照する外部データ ソースを作成する
-Azure Data Lake Store の接続は、お使いの ADLS URI と Azure Acitve Directory アプリケーションのサービス プリンシパルに基づいています。 このアプリケーションの作成に関するドキュメントは、「[Data Lake Store での Azure Active Directory を使用したサービス間認証](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)」で見つかります。
+Azure Data Lake Store の接続は、お使いの ADLS URI と Azure Active Directory アプリケーションのサービス プリンシパルに基づいています。 このアプリケーションの作成に関するドキュメントは、「[Data Lake Store での Azure Active Directory を使用したサービス間認証](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)」で見つかります。
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -465,7 +465,7 @@ WITH (TYPE = HADOOP,
 
 
 
-## <a name="examples-parallel-data-warehouse"></a>例: Parallel Data Warehouse
+## <a name="examples-parallel-data-warehouse"></a>例 :Parallel Data Warehouse
 
 ### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. プッシュダウンが有効になっている Hadoop を参照する外部データ ソースを作成する
 JOB_TRACKER_LOCATION オプションを指定して、PolyBase クエリの Hadoop への計算のプッシュダウンを有効にします。 有効にすると、PolyBase はクエリの計算を Hadoop にプッシュするか、すべてのデータを移動して SQL Server でクエリを処理するかどうかをコストに基づいて決定します。 
@@ -491,7 +491,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-bulk-operations"></a>例: 一括操作   
+## <a name="examples-bulk-operations"></a>例 :一括操作   
 ### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Azure Blob Storage からデータを取得する一括操作用の外部データ ソースを作成する   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。   
 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) または [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) を使用する一括操作に対し、次のデータ ソースを使用します。 使用される資格情報は、`SHARED ACCESS SIGNATURE` を ID として使用して作成する必要があり、SASS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付が UTC 時刻です)。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。   

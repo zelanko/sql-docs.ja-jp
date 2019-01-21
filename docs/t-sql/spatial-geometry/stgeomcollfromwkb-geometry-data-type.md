@@ -18,12 +18,12 @@ ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2462be51a6464321c8c864cdeaa37f126199a391
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5222f3076126f26a03d8634bff05f32ccd4b723
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760470"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979788"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- `STGeomCollFromWKB()` によって返される **geometry** インスタンスの OGC 型は、対応する WKB 入力に基づき、**GeomCollection**、**MultiPolygon**、**MultiLineString**、**MulitPoint** のいずれかに設定されます。  
+ `STGeomCollFromWKB()` によって返される **geometry** インスタンスの OGC 型は、対応する WKB 入力に基づき、**GeomCollection**、**MultiPolygon**、**MultiLineString**、**MultiPoint** のいずれかに設定されます。  
   
  このメソッドは、入力が適切な形式でない場合に、FormatException 例外をスローします。  
   

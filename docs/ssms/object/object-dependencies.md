@@ -13,12 +13,12 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bdda5d95544df6b7cd7cc4108c3bd21dc8f50d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fca3b535b31a3524389804442bb61370fb164008
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779160"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591536"
 ---
 # <a name="object-dependencies"></a>[オブジェクトの依存関係]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "47779160"
 このダイアログ ボックスを使用すると、選択されているオブジェクトを変更または削除する前に依存関係について理解できます。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
-**<selected object>** *<selected object>*  
+**[\<_選択したオブジェクト_> に依存するオブジェクト]**  
 このボタンをクリックすると、依存関係が監視され、選択されているオブジェクトに依存するオブジェクトの一覧が表示されます。  
   
-*<selected object>* **が依存する****オブジェクト**  
+**[****\<_選択したオブジェクト_> が依存するオブジェクト]**  
 このボタンをクリックすると、依存関係が監視され、選択されているオブジェクトが依存するオブジェクトの一覧が表示されます。  
   
 **依存関係**  

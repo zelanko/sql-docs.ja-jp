@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5e69a2ebd97a554620914ffba5ea20c6a08aa21
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520855"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980328"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -327,7 +327,7 @@ GO
   
  クラスター化キーと 1 つ以上の **text**、**ntext**、または **image** 列の両方を更新しているときに、UPDATE ステートメントで複数の行を変更する場合は、これらの列に対する部分更新は、値の完全な置き換えとして実行されます。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **ntext**、**text**、**image** データ型は、将来の [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) を使用してください。  
   
 ### <a name="updating-large-value-data-types"></a>大きな値のデータ型を更新する  
@@ -367,7 +367,7 @@ GO
     ```  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ミューテーター メソッドが呼び出された場合は、エラーを返す、 [!INCLUDE[tsql](../../includes/tsql-md.md)] null 値またはによって生成された新しい値の場合はミューテーター メソッドは null です。  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ミューテーター メソッドを [!INCLUDE[tsql](../../includes/tsql-md.md)] NULL 値で呼び出した場合や、ミューテーター メソッドにより生成された新しい値が NULL である場合、エラーが返されます。  
   
 -   ユーザー定義型の登録済みプロパティまたはパブリック データ メンバーの値を変更します。 値を指定する式は、プロパティの型に暗黙的に変換できる必要があります。 次の例では、ユーザー定義型 `X` のプロパティ `Point` の値を変更します。  
   
@@ -546,7 +546,7 @@ GO
 ```  
   
 #### <a name="e-using-the-with-commontableexpression-clause"></a>E. WITH common_table_expression 句を使用する  
- 次の例では、`PerAssemnblyQty` の製造に直接または間接的に使用されるすべての部品およびコンポーネントの `ProductAssemblyID 800` の値を更新します。 共通テーブル式は、`ProductAssemblyID 800` の製造に直接使用される部品やそのコンポーネントの製造に使用される部品などを含む、部品の階層リストを返します。 共通テーブル式が返した行のみが変更されます。  
+ 次の例では、`PerAssemblyQty` の製造に直接または間接的に使用されるすべての部品およびコンポーネントの `ProductAssemblyID 800` の値を更新します。 共通テーブル式は、`ProductAssemblyID 800` の製造に直接使用される部品やそのコンポーネントの製造に使用される部品などを含む、部品の階層リストを返します。 共通テーブル式が返した行のみが変更されます。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -574,7 +574,7 @@ WHERE d.ComponentLevel = 0;
 ```  
   
 #### <a name="f-using-the-where-current-of-clause"></a>F. WHERE CURRENT OF 句を使用する  
- 次の例では、WHERE CURRENT OF 句を使用して、カーソルが置かれている行だけを更新します。 テーブルを結合して作成されたカーソルの場合は、UPDATE ステートメントで指定した `table_name` のみが変更されます。 この場合、カーソルに関連する他のテーブルには影響ありません。  
+ 次の例では、WHERE CURRENT OF 句を使用して、カーソルが置かれている行だけを更新します。 カーソルが結合に基づくとき、UPDATE ステートメントで指定した `table_name` のみが変更されます。 この場合、カーソルに関連する他のテーブルには影響ありません。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -723,7 +723,7 @@ GO
  このセクションの例では、テーブルの行を別のテーブルの情報に基づいて更新する方法を示します。  
   
 #### <a name="n-using-the-update-statement-with-information-from-another-table"></a>N. 別のテーブルの情報を使用して UPDATE ステートメントを実行する  
- 次の例では、`SalesYTD` テーブルの最新の売上高を反映するように `SalesPerson` テーブルの `SalesOrderHeader` 列を変更します。  
+ 次の例では、`SalesOrderHeader` テーブルの最新の売上高を反映するように `SalesPerson` テーブルの `SalesYTD` 列を変更します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -762,7 +762,7 @@ GO
  このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../../t-sql/functions/rowset-functions-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルの行を更新する方法を示します。  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O.  リンク サーバーを使用してリモート テーブルのデータを更新する  
- 次の例では、リモート サーバー上のテーブルを更新します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 server.catalog.schema.object という形式の 4 部構成のオブジェクト名の一部として、リンク サーバー名 `MyLinkServer` を指定します。 `@datasrc` には有効なサーバー名を指定する必要があります。  
+ 次の例では、リモート サーバー上のテーブルを更新します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 server.catalog.schema.object という形式の 4 部構成のオブジェクト名の一部として、リンク サーバー名 `MyLinkedServer` を指定します。 `@datasrc` には有効なサーバー名を指定する必要があります。  
   
 ```sql  
 USE master;  
@@ -770,7 +770,7 @@ GO
 -- Create a link to the remote data source.   
 -- Specify a valid server name for @datasrc as 'server_name' or 'server_nameinstance_name'.  
   
-EXEC sp_addlinkedserver @server = N'MyLinkServer',  
+EXEC sp_addlinkedserver @server = N'MyLinkedServer',  
     @srvproduct = N' ',  
     @provider = N'SQLNCLI10',   
     @datasrc = N'<server name>',  
@@ -781,7 +781,7 @@ GO
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-UPDATE MyLinkServer.AdventureWorks2012.HumanResources.Department  
+UPDATE MyLinkedServer.AdventureWorks2012.HumanResources.Department  
 SET GroupName = N'Public Relations'  
 WHERE DepartmentID = 4;  
 ```  
@@ -790,18 +790,18 @@ WHERE DepartmentID = 4;
  次の例では、[OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 行セット関数を指定してリモート テーブルの行を更新します。 この例では、前の例で作成したリンク サーバー名を使用します。  
   
 ```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
+UPDATE OPENQUERY (MyLinkedServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
 SET GroupName = 'Sales and Marketing';  
 ```  
   
 #### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>Q.  OPENDATASOURCE 関数を使用してリモート テーブルのデータを更新する  
- 次の例では、[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行セット関数を指定してリモート テーブルに行を挿入します。 *server_name* または *server_name\instance_name* という形式を使用して、データ ソースの有効なサーバー名を指定します。 場合によっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを Ad Hoc Distributed Queries 用に構成する必要があります。 詳細については、「[ad hoc distributed queries サーバー構成オプション](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)」を参照してください。  
-  
-```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
-SET GroupName = 'Sales and Marketing';  
-```  
-  
+ 次の例では、[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行セット関数を指定してリモート テーブルの行を更新します。 *server_name* または *server_name\instance_name* という形式を使用して、データ ソースの有効なサーバー名を指定します。 場合によっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを Ad Hoc Distributed Queries 用に構成する必要があります。 詳細については、「[ad hoc distributed queries サーバー構成オプション](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)」を参照してください。  
+
+```sql
+UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2012.HumanResources.Department
+SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
+```
+
 ###  <a name="LOBValues"></a> ラージ オブジェクト データ型を更新する  
  このセクションの例では、ラージ オブジェクト (LOB) データ型で定義された列の値を更新する方法を示します。  
   

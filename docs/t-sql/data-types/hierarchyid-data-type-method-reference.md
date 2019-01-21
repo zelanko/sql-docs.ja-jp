@@ -19,12 +19,12 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bba3aa9dd92086fa887e92c5c5efc3379f419fd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51d4b6c9e19f334946657205de6cdc8c6ce593ec
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702954"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980028"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid データ型メソッド リファレンス
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "51702954"
   
 ### <a name="one-directional-replication"></a>単方向レプリケーション
 単方向レプリケーションには、サブスクライバー側で変更が行われないスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションが含まれます。 **hierarchyid** 列が単方向レプリケーションとどのように連携するかは、サブスクライバーが実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なります。
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] パブリッシャーは、**hierachyid** 列を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サブスクライバーにレプリケートできます。特別な注意は必要ありません。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] パブリッシャーは、**hierarchyid** 列を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サブスクライバーにレプリケートできます。特別な注意は必要ありません。  
 -   [!INCLUDE[ssEW](../../includes/ssew-md.md)] または前バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているサブスクライバーにレプリケートするには、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] パブリッシャーは、**hierarchyid** 列を変換する必要があります。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] および前バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**hierarchyid** 列がサポートされません。 このどちらかのバージョンを使用している場合でも、サブスクライバーにデータをレプリケートすることは可能です。 そのためには、互換性のあるデータ型に列を変換できるように、スキーマ オプションまたはパブリケーションの互換性レベル (マージ レプリケーションの場合) を設定する必要があります。  
   
 どちらのシナリオでも、列のフィルター選択はサポートされています。 これには、**hierarchyid** 列をフィルターで除外する処理が含まれます。 行のフィルター選択は、フィルターに **hierarchyid** 列が含まれない限りサポートされます。

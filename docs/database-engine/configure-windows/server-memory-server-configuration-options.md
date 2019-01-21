@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2b85546e79e426f078ff77ab11b4eb9eb076aea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b1342d023b1edc828105dbbda2e18b0ca09877de
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519524"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591646"
 ---
 # <a name="server-memory-server-configuration-options"></a>サーバー メモリに関するサーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52519524"
 **max server memory** に設定できる最小メモリは 128 MB です。
   
 > [!IMPORTANT]  
-> **max server memory** 値の設定が高すぎると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の単一インスタンスと、同じホストの他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでメモリの競合が発生することがあります。 ただし、この値の設定が低すぎても、メモリやパフォーマンス関連の大きな問題が発生する可能性があります。 **max server memory** を最小値に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動できなくなることもあります。 このオプションの変更後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できなくなった場合は、***-f*** 起動オプションを使用して起動し、**max server memory** を元の値に戻します。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
+> **max server memory** 値の設定が高すぎると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の単一インスタンスと、同じホストの他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでメモリの競合が発生することがあります。 ただし、この値の設定が低すぎても、メモリやパフォーマンス関連の大きな問題が発生する可能性があります。 **max server memory** を最小値に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動できなくなることもあります。 このオプションの変更後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できなくなった場合は、**_-f_** 起動オプションを使用して起動し、**max server memory** を元の値に戻します。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はメモリを動的に使用できますが、手動でメモリ オプションを設定して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアクセスできるメモリの量を制限こともできます。 この場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のメモリ量を設定する前に、OS に必要なメモリ、max_server_memory で制御されないメモリ割り当てに必要なメモリ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のインスタンス (およびコンピューターが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 専用でない場合は他のシステム) に必要なメモリの量を物理メモリ全体から差し引いて適切なメモリ設定を決定します。 この差が、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに割り当てることができる最大メモリ量です。  
  
@@ -56,7 +56,7 @@ ms.locfileid: "52519524"
   
 <a name="max_server_memory"></a> **max_server_memory** を利用し、OS に好ましくないメモリ負荷が発生しないようにします。 最大サーバー メモリ構成を設定するには、メモリ要件を判断する目的で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の全体的使用量を観察します。 単一インスタンスでこのような計算をより精確に行うには:
  -  OS のメモリ合計から、1GB ～ 4GB を OS 自体に予約します。
- -  次に、**max server memory** で制御されない、潜在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ割り当てに相当するメモリ量を差し引きます。この相当するメモリ量は、***スタック サイズ<sup>1</sup> に計算した最大ワーカー スレッド<sup>2</sup> を掛けたものにスタートアップ パラメーター<sup>3</sup> の -g を足して求められます*** (*-g* が設定されていない場合、既定で 256MB を足します)。 残ったものが単一インスタンス セットアップの max_server_memory 設定になります。
+ -  次に、**max server memory** で制御されない、潜在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ割り当てに相当するメモリ量を差し引きます。この相当するメモリ量は、**_スタック サイズ<sup>1</sup>\* に計算した最大ワーカー スレッド<sup>2</sup> を掛けたものにスタートアップ パラメーター<sup>3</sup> の -g を足して_** 求められます (*-g* が設定されていない場合、既定で 256MB を足します)。 残ったものが単一インスタンス セットアップの max_server_memory 設定になります。
  
 <sup>1</sup> アーキテクチャあたりのスレッド スタック サイズについては、「[メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md#stacksizes)」を参照してください。
 

@@ -19,20 +19,20 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d73910b856702b2785a39fc2b8ad021f1a6d9405
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d1c0b3c7332fdb2583800f3aa600175f06f8928f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519008"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591346"
 ---
 # <a name="delete-a-data-tier-application"></a>データ層アプリケーションの削除
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   データ層アプリケーションの削除ウィザードまたは Windows PowerShell スクリプトを使用して、データ層アプリケーションを削除できます。 関連付けられたデータベースの保持、デタッチ、または削除を指定することができます。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **DAC のアップグレード:**  [データ層アプリケーションの登録ウィザードの使用](#UsingDeleteDACWizard)、 [PowerShell の使用](#DeleteDACPowerShell)  
+-   **DAC のアップグレード:**[データ層アプリケーションの登録ウィザードの使用](#UsingDeleteDACWizard)、[PowerShell の使用](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>はじめに  
  データ層アプリケーション (DAC) インスタンスを削除する場合、3 つのオプションのいずれかを選択して、データ層アプリケーションに関連付けられたデータベースの処理を指定します。 どのオプションを選択した場合も、DAC 定義のメタデータが削除されます。 各オプションは、データ層アプリケーションに関連付けられたデータベースの処理方法が異なります。 DAC またはデータベースに関連付けられたインスタンスレベルのオブジェクト (ログインなど) が、ウィザードによって削除されることはありません。  

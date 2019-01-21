@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: 別のコンピューターからの接続 | Microsoft Docs'
+title: レッスン 2:別のコンピューターからの接続 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d08fe92b865076a330f0272f8b3fde81f17a8854
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520521"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589236"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2: 別のコンピューターからの接続
+# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2:別のコンピューターからの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 セキュリティを強化するため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer、Express、および Evaluation Editions の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初にインストールした状態では別のコンピューターからアクセスできないようになっています。 このレッスンでは、別のコンピューターから接続するために、プロトコルの有効化、ポートの構成、Windows ファイアウォールの構成を行う方法について学習します。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52520521"
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  **SQL Server 構成マネージャー**で **SQL Server ネットワークの構成**を展開し、 **** *<InstanceName>* をクリックします。  
+2.  **SQL Server 構成マネージャー**で **SQL Server ネットワークの構成**を展開し、 **** _<InstanceName>_ をクリックします。  
   
     既定のインスタンス (名前のないインスタンス) は、 **MSSQLSERVER**として一覧表示されます。 名前付きインスタンスをインストールした場合は、指定した名前が表示されます。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] は **SQLEXPRESS**としてしてインストールされます (セットアップ中に名前を変更した場合を除く)。  
   
@@ -139,6 +139,6 @@ ms.locfileid: "52520521"
 これで、基本的な接続に関する簡単なチュートリアルを終了します。  
   
 ## <a name="return-to-tutorials-portal"></a>チュートリアル ポータルに戻る  
-[チュートリアル : データベース エンジンの概要](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+[チュートリアル:データベース エンジンの概要](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 
