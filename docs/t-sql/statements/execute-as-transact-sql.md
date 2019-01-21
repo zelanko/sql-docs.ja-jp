@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2183c64e1d525e0d0add54317e2af10d0ada311b
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 6a66ee0be27bcc584bd3d01a7b17a1fffbc74a33
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979708"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134342"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "53979708"
 > [!IMPORTANT]  
 >  データベース ユーザーに対するコンテキスト スイッチがアクティブであるときに、データベース外部のリソースへアクセスを試みると、ステートメントが失敗する原因となります。 たとえば、USE *database* ステートメントや分散クエリ、3 部または 4 部構成の識別子を使用する別のデータベースを参照するクエリなどは実行しないでください。  
   
- **'** *name* **'**  
+ **'** _name_ **'**  
  有効なユーザーまたはログイン名を指定します。 *name* は、**sysadmin** 固定サーバー ロールのメンバーであるか、[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) または [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) のプリンシパルとして存在する必要があります。  
   
  *name* はローカル変数として指定できます。  
@@ -85,7 +85,7 @@ ms.locfileid: "53979708"
  COOKIE INTO **@**_varbinary_variable_  
  REVERT WITH COOKIE ステートメントの呼び出し時に適切な **@**_varbinary_variable_ 値が含まれている場合にのみ、実行コンテキストを以前のコンテキストに戻せることを示します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、Cookie を **@**_varbinary_variable_ に渡します。 **COOKIE INTO** オプションを使用できるのは、アドホック レベルでのみです。  
   
- **@** *varbinary_variable* は **varbinary(8000)** です。  
+ **@** _varbinary_variable_ は **varbinary(8000)** です。  
   
 > [!NOTE]  
 >  Cookie の **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(100)** を返します。 将来のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションが引き続き正常に動作するように、アプリケーションでは **varbinary(8000)** を予約しておく必要があります。  

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - viewing statistics properties
 - statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48d205f913127fa598ba3d2d2d75f2a1eb3f1303
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4f710a7ef79f5532cd8a58921cb8b07d350c1305
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406689"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380887"
 ---
 # <a name="view-statistics-properties"></a>統計のプロパティの表示
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52406689"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **統計のプロパティを表示するために使用するもの:**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "52406689"
   
 6.  [ **統計のプロパティ -** *statistics_name* ] ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]** を選びます。  
   
-     **統計のプロパティ -**  **statistics_name** *statistics_name* ページで次のプロパティが表示されます。  
+      **統計のプロパティ -** **statistics_name** *statistics_name* ページで次のプロパティが表示されます。  
   
      **テーブル名**  
      統計の対象となるテーブルの名前が表示されます。  
@@ -71,7 +71,7 @@ ms.locfileid: "52406689"
      統計情報が格納されるデータベース オブジェクトの名前が表示されます。  
   
      **[INDEX の統計 statistics_name]**  
-     このテキスト ボックスは、統計オブジェクトから返されるプロパティを示します。 このプロパティは、統計ヘッダー、密度ベクトル、およびヒストグラムという 3 つのセクションに分かれています。  
+     このテキスト ボックスは、統計オブジェクトから返されるプロパティを示します。 このプロパティは、次の 3 つのセクションに分かれています:統計ヘッダー、密度ベクトル、ヒストグラム。  
   
      以下に、統計ヘッダーを指定した場合に結果セットに返される列を示します。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "52406689"
      以下に、密度ベクトルを指定した場合に結果セットに返される列を示します。  
   
      **[すべての密度]**  
-     密度は "1 / *distinct values*" です。 結果には、統計オブジェクトの列の各プレフィックスに対する密度が、密度ごとに 1 行表示されます。 個別の値は、行および列プレフィックスごとの列値の個別のリストです。 たとえば、統計オブジェクトにキー列 (A, B, C) が含まれる場合、結果では列プレフィックス (A)、(A, B)、および (A, B, C) ごとに個別の値リストの密度が報告されます。 プレフィックス (A, B, C) を使用すると、これらの各リストは個別の値リスト (3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7) のようになります。 プレフィックス (A, B) を使用すると、同じ列値の個別の値リストが (3, 5)、(4, 4)、および (4, 5) になります。  
+     密度は "1 / *distinct values*" です。 結果には、統計オブジェクトの列の各プレフィックスに対する密度が、密度ごとに 1 行表示されます。 個別の値は、行および列プレフィックスごとの列値の個別のリストです。 たとえば、統計オブジェクトにキー列 (A, B, C) が含まれる場合、結果では次の列プレフィックスごとに個別の値リストの密度が報告されます:(A)、(A, B)、(A, B, C)。 プレフィックス (A、B、C) を使用すると、これらの各リストは次の個別の値リストになります。(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 プレフィックス (A、B) を使用すると、同じ列値に次の個別の値リストが含まれます。(3, 5)、(4, 4)、(4, 5)。  
   
      **[平均の長さ]**  
      列プレフィックスの列値のリストを格納する平均の長さ (バイト単位)。 たとえば、リスト (3, 5, 6) の値ごとに 4 バイト必要な場合は、長さは 12 バイトになります。  
