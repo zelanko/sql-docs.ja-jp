@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cfe8b4bf09b545a5141a2896eb757254265e092
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 866d71333297b609642707a793b27c735d29057d
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206408"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327892"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する
 
@@ -166,7 +166,7 @@ NuGet パッケージは、セキュリティで保護されたエンクレー�
     4. **[エンクレーブ計算を許可する]** を選択します。
     5. [Azure Key Vault] を選択した場合は、Azure にサインインし、キー コンテナーを選択します。 Always Encrypted のキー コンテナーを作成する方法について詳しくは、「[Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)」(Azure portal からキー コンテナーを管理する) を参照してください。
     6. 既にキーが存在する場合はそれを選択します。または、フォームの指示に従って新しいキーを作成します。
-    7. [**OK**] をクリックします。
+    7. **[OK]** をクリックします。
 
         ![エンクレーブ計算を許可する](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
@@ -175,7 +175,7 @@ NuGet パッケージは、セキュリティで保護されたエンクレー�
     1. **[Always Encrypted キー]** を右クリックし、**[新しい列の暗号化キー]** を選択します。
     2. 新しい列暗号化キーの名前を入力します。
     3. **[列マスター キー]** ドロップダウンで、前の手順で作成した列マスター キーを選択します。
-    4. [**OK**] をクリックします。
+    4. **[OK]** をクリックします。
 
 ### <a name="provision-enclave-enabled-keys-using-powershell"></a>**PowerShell を使用してエンクレーブ対応キーをプロビジョニングする**
 
@@ -224,8 +224,8 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 
 ```powershell
-Import-Module AzureRM
-Connect-AzureRmAccount
+Import-Module Az
+Connect-AzAccount
 
 # User values
 $SubscriptionId = "<Azure SubscriptionId>"
@@ -235,16 +235,16 @@ $akvName = "<key vault name>"
 $akvKeyName = "<key name>"
 
 # Set the context to the specified subscription.
-$azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
+$azureCtx = Set-AzContext -SubscriptionId $SubscriptionId
 
 # Create a new resource group - skip, if your desired group already exists.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation
 
 # Create a new key vault - skip if your vault already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
 
 # Grant yourself permissions needed to create and use the column master key.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, list, update, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, list, update, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 
 # Create a column master key in Azure Key Vault.
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"

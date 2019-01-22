@@ -14,15 +14,15 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f1d5269b19f8bfb04321ac23e01d1f85b8c0861e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0677b75397522602a7cd6d42942f0b8610d6d9b6
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129462"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395375"
 ---
 # <a name="transactional-replication"></a>トランザクション レプリケーション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   一般にトランザクション レプリケーションは、パブリケーションのデータベース オブジェクトとデータのスナップショットで開始されます。 最初のスナップショットが取得されるとすぐ、それ以後パブリッシャーでデータやスキーマが変更されると、通常はその都度 (ほぼリアルタイムで) サブスクライバーに配信されるようになります。 データの変更は、パブリッシャーで発生したのと同じ順序で、同じトランザクションの中で、サブスクライバーに適用されます。したがって、パブリケーション内では、トランザクションの一貫性が保証されます。  
   
  トランザクション レプリケーションは一般にサーバー間の環境で使用され、次のような場合に適しています。  
