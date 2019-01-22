@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d8f51a507ff3dc2ee317b2b347c4c7b56b043694
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526614"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202881"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services (SSIS) プロジェクトとパッケージの配置
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、プロジェクト配置モデルと従来のパッケージ配置モデルの 2 つの配置モデルがサポートされています。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。  
@@ -102,14 +102,14 @@ SSIS サービス アカウントを既定値から変更した場合は、パ�
   
 1.  SSISDB カタログをまだ作成していない場合は、作成します。 詳細については、「[SSIS カタログ](../../integration-services/catalog/ssis-catalog.md)」を参照してください。  
   
-2.  **Integration Services プロジェクト変換ウィザード** を実行して、プロジェクトをプロジェクト配置モデルに変換します。 詳細については、「 [プロジェクトをプロジェクトの配置モデルに変換するには](#convert)」の手順を参照してください。  
+2.  **Integration Services プロジェクト変換ウィザード** を実行して、プロジェクトをプロジェクト配置モデルに変換します。 詳細については、後の手順を参照してください。[プロジェクトをプロジェクトの配置モデルに変換するには](#convert)  
   
     -   [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] 以降でプロジェクトを作成した場合、既定では、プロジェクトでプロジェクト配置モデルが使用されます。  
   
     -   以前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]でプロジェクトを作成した場合、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクト ファイルを開いた後に、プロジェクトをプロジェクト配置モデルに変換します。  
   
         > [!NOTE]  
-        >  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有できるデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」(パッケージでの接続マネージャーの追加、削除、または共有) を参照してください。  
+        >  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有できるデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」 を参照してください。  
   
          **Integration Services プロジェクト変換ウィザード** を [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のいずれから実行するかによって、ウィザードが実行する変換タスクは異なります。  
   
@@ -123,7 +123,7 @@ SSIS サービス アカウントを既定値から変更した場合は、パ�
   
      パッケージのアップグレードの詳細については、「 [Integration Services パッケージのアップグレード](../../integration-services/install-windows/upgrade-integration-services-packages.md) 」および「 [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)」を参照してください。  
   
-3.  プロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置します。 詳細については、「 [Integration Services サーバーにプロジェクトを配置するには](#deploy)」の手順を参照してください。  
+3.  プロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置します。 詳細については、後の手順を参照してください。[Integration Services サーバーにプロジェクトを配置するには](#deploy)。  
   
 4.  (省略可能) 配置されたプロジェクト用の環境を作成します。 
   
@@ -273,7 +273,7 @@ static void Main()
   
 2.  プロジェクトとすべてのパッケージの互換性テストが成功した場合は、 **[OK]** をクリックしてパッケージを変換します。  
   
-> **注:** プロジェクトをプロジェクト配置モデルに変換するには、 **Integration Services プロジェクト変換ウィザード**を使用します。 詳細については、「 [Integration Services プロジェクトの変換ウィザード](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+> **注:** プロジェクトをプロジェクト配置モデルに変換するには、**Integration Services プロジェクト変換ウィザード**を使用します。 詳細については、「 [Integration Services プロジェクトの変換ウィザード](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 配置ウィザード
   **Integration Services 配置ウィザード** は次の 2 つの配置モデルをサポートしています。
@@ -295,7 +295,7 @@ static void Main()
 
  - SQL Server のインストール フォルダーで、実行可能ファイル **ISDeploymentWizard.exe** を検索します。たとえば、"C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn" で検索します。 
  
- > **注:** **[説明]** ページが表示された場合は、 **[次へ]** をクリックして、 **[ソースの選択]** ページに切り替えます。 
+ > **注:****[説明]** ページが表示された場合は、 **[次へ]** をクリックして、 **[ソースの選択]** ページに切り替えます。 
  
  このページの設定は、配置モデルごとに異なります。 このページで選択したモデルに基づいて、「 [Project Deployment Model](#ProjectModel) 」セクションまたは「 [Package Deployment Model](#PackageModel) 」セクションの手順に従ってください。  
   
@@ -409,13 +409,13 @@ static void Main()
   
  また、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して、プロジェクトの配置とパッケージの実行を行うこともできます。 詳細については、「 **関連項目** 」セクションのトピックを参照してください。  
   
-> [!TIP]  
+> [!TIP]
 >  次の手順を実行することにより、catalog.deploy_project を除き、次の手順に示されるストアド プロシージャの Transact-SQL ステートメントを簡単に生成できます。  
->   
+> 
 >  1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、オブジェクト エクスプローラーの **[Integration Services カタログ]** ノードを展開し、実行するパッケージに移動します。  
 > 2.  パッケージを右クリックし、**[実行]** をクリックします。  
 > 3.  必要に応じて、パラメーター値、接続マネージャー プロパティ、 **[詳細設定]** タブのオプション (ログ記録レベルなど) を設定します。  
->   
+> 
 >      詳細については、「[SSIS サーバーでのパッケージ実行のログ記録を有効にする](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。  
 > 4.  **[OK]** をクリックしてパッケージを実行する前に、 **[スクリプト]** をクリックします。 Transact-SQL が [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディター ウィンドウに表示されます。  
   
@@ -486,7 +486,7 @@ static void Main()
   
      **[リンク サーバーのプロパティ]** ダイアログ ボックスの **[サーバー オプション]** ページで、**[RPC]** および **[RPC 出力]** を **[True]** に設定します。 そして、 **[分散トランザクションのプロモーションを RPC に対して有効化]** を **[False]** に設定します。  
   
--   オブジェクト エクスプローラーの **[リンク サーバー]** にある **[プロバイダー]** ノードを展開し、プロバイダーを右クリックして **[プロパティ]** をクリックすることで、リンク サーバーに対して選択したプロバイダーの動的パラメーターを有効にします。  **[動的パラメーター]** の横にある **[有効化]** を選択します。  
+-   オブジェクト エクスプローラーの **[リンク サーバー]** にある **[プロバイダー]** ノードを展開し、プロバイダーを右クリックして **[プロパティ]** をクリックすることで、リンク サーバーに対して選択したプロバイダーの動的パラメーターを有効にします。 **[動的パラメーター]** の横にある **[有効化]** を選択します。  
   
 -   分散トランザクション コーディネーター (DTC) が両方のサーバーで起動していることを確認します。  
   

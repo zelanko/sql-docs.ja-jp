@@ -17,12 +17,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2961e4c8345157df3d8b625ccc7bb45501570793
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 419f8c12e3716d295440dae887591b547af54f32
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675211"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208247"
 ---
 # <a name="create-a-push-subscription"></a>プッシュ サブスクリプションの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "51675211"
   
     -   ディストリビューターで実行されるディストリビューション エージェントが使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 資格情報。 **@job_login** に **@job_password**」を参照してください。  
   
-        > **注:** Windows 統合認証を使用して行われる接続では、常に **@job_login** および **@job_password** で指定される Windows 資格情報を使用します。 ディストリビューション エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
+        > **注:** Windows 統合認証を使用して行われる接続では、常に **@job_login** @value **@job_password**」を参照してください。 ディストリビューション エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
   
     -   (省略可) **0** を、 **@subscriber_security_mode** を指定し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@subscriber_login** に **@subscriber_password**」を参照してください。 サブスクライバーに接続するときに SQL Server 認証を使用する必要がある場合、これらのパラメーターを指定します。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "51675211"
   
     -   ディストリビューターで実行されるマージ エージェントが使用する Windows 資格情報。 **@job_login** に **@job_password**」を参照してください。  
   
-        > **注:** Windows 統合認証を使用して行われる接続では、常に **@job_login** および **@job_password** で指定された Windows 資格情報を使用します。 マージ エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
+        > **注:** Windows 統合認証を使用して行われる接続では、常に **@job_login** @value **@job_password**」を参照してください。 マージ エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
   
     -   (省略可) **0** を、 **@subscriber_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@subscriber_login** に **@subscriber_password**」を参照してください。 サブスクライバーに接続するときに SQL Server 認証を使用する必要がある場合、これらのパラメーターを指定します。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "51675211"
   
     -   ディストリビューターで実行されるディストリビューション エージェントが使用する <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> に <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> (または <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> ) フィールド。これにより、ディストリビューターでディストリビューション エージェントを実行するときに使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントの資格情報が得られます。 このアカウントは、ディストリビューターとのローカル接続を確立したり、Windows 認証を使用したリモート接続を確立するときに使用されます。  
   
-        > **注:** サブスクリプションが **sysadmin** 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> の設定は必須ではありませんが、推奨されます。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
+        > **注:** サブスクリプションが <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 固定サーバー ロールのメンバーにより作成される場合、 **P:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity** の設定は必須ではありませんが、推奨されます。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
     -   (省略可) **true** に <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (既定値) を指定します。 **false**を指定した場合、サブスクリプションはプログラムでのみ同期が可能になります。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "51675211"
   
     -   ディストリビューターで実行されるディストリビューション エージェントが使用する <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> に <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> (または <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> ) フィールド。これにより、ディストリビューターでディストリビューション エージェントを実行するときに使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントの資格情報が得られます。 このアカウントは、ディストリビューターとのローカル接続を確立したり、Windows 認証を使用したリモート接続を確立するときに使用されます。  
   
-        > **注:** サブスクリプションが **sysadmin** 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> の設定は必須ではありませんが、推奨されます。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
+        > **注:** サブスクリプションが <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 固定サーバー ロールのメンバーにより作成される場合、 **P:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity** の設定は必須ではありませんが、推奨されます。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
     -   (省略可) **true** に <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (既定値) を指定します。 **false**を指定した場合、サブスクリプションはプログラムでのみ同期が可能になります。  
   

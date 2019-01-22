@@ -1,7 +1,7 @@
 ---
 title: SQLSetDescField 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8704d28fb8ae39cf7d8f6bb595c884b70a6721a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fb6061adf707a58737fd34d7cb7bbe33b2e9579a
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204161"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420237"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 関数
+
 **準拠**  
  バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
@@ -36,8 +37,7 @@ ms.locfileid: "53204161"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp  
 SQLRETURN SQLSetDescField(  
      SQLHDESC      DescriptorHandle,  
      SQLSMALLINT   RecNumber,  
@@ -143,7 +143,7 @@ SQLRETURN SQLSetDescField(
 |ヘッダー フィールドの名前|型|R/W|既定値|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD:R APD:R IRD:R の IPD:R|ARD:SQL_DESC_ALLOC_AUTO の暗黙の SQL_DESC_ALLOC_USER または明示的な<br /><br /> APD:SQL_DESC_ALLOC_AUTO の暗黙の SQL_DESC_ALLOC_USER または明示的な<br /><br /> IRD:SQL_DESC_ALLOC_AUTO<br /><br /> IPD:SQL_DESC_ALLOC_AUTO|  
-|SQL_DESC_ARRAY_SIZE|SQLULEN です。|ARD:APD の読み取り/書き込みです。R/W IRD:未使用の IPD:未使用|ARD: [1] APD: [1] IRD:未使用の IPD:未使用|  
+|SQL_DESC_ARRAY_SIZE|SQLULEN|ARD:APD の読み取り/書き込みです。R/W IRD:未使用の IPD:未使用|ARD: [1] APD: [1] IRD:未使用の IPD:未使用|  
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|ARD:APD の読み取り/書き込みです。R/W IRD:IPD の読み取り/書き込みです。R/W|ARD:APD の ptr は null します。Ptr IRD は null します。Null ptr IPD:Null ptr|  
 |SQL_DESC_BIND_OFFSET_PTR|SQLLEN *|ARD:APD の読み取り/書き込みです。R/W IRD:未使用の IPD:未使用|ARD:APD の ptr は null します。Ptr IRD は null します。未使用の IPD:未使用|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|ARD:APD の読み取り/書き込みです。R/W IRD:未使用の IPD:未使用|ARD:SQL_BIND_BY_COLUMN<br /><br /> APD:SQL_BIND_BY_COLUMN<br /><br /> IRD:未使用<br /><br /> IPD:未使用|  
@@ -165,18 +165,18 @@ SQL_DESC_COUNT|SQLSMALLINT|ARD:APD の読み取り/書き込みです。R/W IRD:
 |SQL_DESC_DATA_PTR|SQLPOINTER|ARD:APD の読み取り/書き込みです。R/W IRD:未使用の IPD:未使用|ARD:APD の ptr は null します。Ptr IRD は null します。未使用の IPD:未使用 [2]|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|ARD:APD の読み取り/書き込みです。R/W IRD:R の IPD:R/W|ARD:ND APD:ND IRD:IPD の D:ND|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|ARD:APD の読み取り/書き込みです。R/W IRD:R の IPD:R/W|ARD:ND APD:ND IRD:IPD の D:ND|  
-SQL_DESC_DISPLAY_SIZE|SQLLEN|ARD:未使用の APD:未使用の IRD:R の IPD:未使用|ARD:未使用の APD:未使用の IRD:IPD の D:未使用|  
+|SQL_DESC_DISPLAY_SIZE|SQLLEN|ARD:未使用の APD:未使用の IRD:R の IPD:未使用|ARD:未使用の APD:未使用の IRD:IPD の D:未使用|  
 |SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|ARD:未使用の APD:未使用の IRD:R の IPD:R|ARD:未使用の APD:未使用の IRD:IPD の D:D [1]|  
 |SQL_DESC_INDICATOR_PTR|SQLLEN *|ARD:APD の読み取り/書き込みです。R/W IRD:未使用の IPD:未使用|ARD:APD の ptr は null します。Ptr IRD は null します。未使用の IPD:未使用|  
 |SQL_DESC_LABEL|SQLCHAR *|ARD:未使用の APD:未使用の IRD:R の IPD:未使用|ARD:未使用の APD:未使用の IRD:IPD の D:未使用|  
-|SQL_DESC_LENGTH|SQLULEN です。|ARD:APD の読み取り/書き込みです。R/W IRD:R の IPD:R/W|ARD:ND APD:ND IRD:IPD の D:ND|  
+|SQL_DESC_LENGTH|SQLULEN|ARD:APD の読み取り/書き込みです。R/W IRD:R の IPD:R/W|ARD:ND APD:ND IRD:IPD の D:ND|  
 |SQL_DESC_LITERAL_PREFIX|SQLCHAR *|ARD:未使用の APD:未使用の IRD:R の IPD:未使用|ARD:未使用の APD:未使用の IRD:IPD の D:未使用|  
 |SQL_DESC_LITERAL_SUFFIX|SQLCHAR *|ARD:未使用の APD:未使用の IRD:R の IPD:未使用|ARD:未使用の APD:未使用の IRD:IPD の D:未使用|  
 |SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR *|ARD:未使用の APD:未使用の IRD:R の IPD:R|ARD:未使用の APD:未使用の IRD:IPD の D:D [1]|  
 |SQL_DESC_NAME|SQLCHAR *|ARD:未使用の APD:未使用の IRD:R の IPD:R/W|ARD:ND APD:ND IRD:IPD の D:ND|  
 |SQL_DESC_NULLABLE|SQLSMALLINT|ARD:未使用の APD:未使用の IRD:R の IPD:R|ARD:ND APD:ND IRD:IPD の D:ND|  
 |SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|ARD:APD の読み取り/書き込みです。R/W IRD:R の IPD:R/W|ARD:ND APD:ND IRD:IPD の D:ND|  
-SQL_DESC_OCTET_LENGTH|SQLLEN|ARD:APD の読み取り/書き込みです。R/W IRD:R の IPD:R/W|ARD:ND APD:ND IRD:IPD の D:ND|  
+|SQL_DESC_OCTET_LENGTH|SQLLEN|ARD:APD の読み取り/書き込みです。R/W IRD:R の IPD:R/W|ARD:ND APD:ND IRD:IPD の D:ND|  
 |SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|ARD:APD の読み取り/書き込みです。R/W IRD:未使用の IPD:未使用|ARD:APD の ptr は null します。Ptr IRD は null します。未使用の IPD:未使用|  
 |SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|ARD:未使用の APD:未使用の IRD:未使用の IPD:R/W|ARD:未使用の APD:未使用の IRD:未使用の IPD:D = SQL_PARAM_INPUT|  
 |SQL_DESC_PRECISION|SQLSMALLINT|ARD:APD の読み取り/書き込みです。R/W IRD:R の IPD:R/W|ARD:ND APD:ND IRD:IPD の D:ND|  
@@ -186,7 +186,7 @@ SQL_DESC_OCTET_LENGTH|SQLLEN|ARD:APD の読み取り/書き込みです。R/W IR
 |SQL_DESC_SEARCHABLE|SQLSMALLINT|ARD:未使用の APD:未使用の IRD:R の IPD:未使用|ARD:未使用の APD:未使用の IRD:IPD の D:未使用|  
 |SQL_DESC_TABLE_NAME|SQLCHAR *|ARD:未使用の APD:未使用の IRD:R の IPD:未使用|ARD:未使用の APD:未使用の IRD:IPD の D:未使用|  
 |SQL_DESC_TYPE|SQLSMALLINT|ARD:APD の読み取り/書き込みです。R/W IRD:R の IPD:R/W|ARD:SQL_C_DEFAULT APD:SQL_C_DEFAULT IRD:IPD の D:ND|  
-SQL_DESC_TYPE_NAME|SQLCHAR *|ARD:未使用の APD:未使用の IRD:R の IPD:R|ARD:未使用の APD:未使用の IRD:IPD の D:D [1]|  
+|SQL_DESC_TYPE_NAME|SQLCHAR *|ARD:未使用の APD:未使用の IRD:R の IPD:R|ARD:未使用の APD:未使用の IRD:IPD の D:D [1]|  
 |SQL_DESC_UNNAMED|SQLSMALLINT|ARD:未使用の APD:未使用の IRD:R の IPD:R/W|ARD:ND APD:ND IRD:IPD の D:ND|  
 |SQL_DESC_UNSIGNED|SQLSMALLINT|ARD:未使用の APD:未使用の IRD:R の IPD:R|ARD:未使用の APD:未使用の IRD:IPD の D:D [1]|  
 |SQL_DESC_UPDATABLE|SQLSMALLINT|ARD:未使用の APD:未使用の IRD:R の IPD:未使用|ARD:未使用の APD:未使用の IRD:IPD の D:未使用|  
@@ -213,7 +213,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD:未使用の APD:未使用の IRD:R の IPD:R|A
   
  ARD でこのフィールドを呼び出すことによって設定することもできます。 **SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE 属性を持つ。 APD でこのフィールドを呼び出すことによって設定することもできます。 **SQLSetStmtAttr** SQL_ATTR_PARAMSET_SIZE 属性を持つ。  
   
- **[すべて] SQL_DESC_ARRAY_STATUS_PTR**  
+ **SQL_DESC_ARRAY_STATUS_PTR [All]**  
  記述子種類ごとに、この SQLUSMALLINT の * SQLUSMALLINT 値の配列へのヘッダー フィールドのポインター。 これらのアレイが次のように名前付き: 状態配列 (IRD)、パラメーター状態配列 (IPD)、行操作配列 (ARD)、およびパラメーターの操作の配列 (APD) の行。  
   
  このヘッダー フィールドが呼び出しの後に状態の値を含む行の状態配列を指す、ird **SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLSetPos**します。 配列には、行セット内の行がある多くの要素があります。 アプリケーションは、SQLUSMALLINTs の配列を割り当てるし、配列をポイントするには、このフィールドを設定する必要があります。 フィールドは、既定で null ポインターに設定されます。 状態値は生成されません後者を null ポインターの場合は、SQL_DESC_ARRAY_STATUS_PTR フィールドが設定され、配列が設定されていない、ドライバーは、配列を設定します。  
@@ -368,7 +368,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD:未使用の APD:未使用の IRD:R の IPD:R|A
 |--------------------|------------------------------|  
 |SQL_TYPE_DATE/SQL_C_TYPE_DATE|SQL_CODE_DATE|  
 |SQL_TYPE_TIME/SQL_C_TYPE_TIME|SQL_CODE_TIME|  
-|SQL_TYPE_TIMESTAMP/SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
+|SQL_TYPE_TIMESTAMP/ SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
   
  このフィールドは、次の表に、interval データ型を設定できます。  
   
@@ -379,12 +379,12 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD:未使用の APD:未使用の IRD:R の IPD:R|A
 |SQL_INTERVAL_DAY_TO_MINUTE/SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
 |SQL_INTERVAL_DAY_TO_SECOND/SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
 |SQL_INTERVAL_HOUR/SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
-QL_INTERVAL_HOUR_TO_MINUTE/SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
+|SQL_INTERVAL_HOUR_TO_MINUTE/SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
 |SQL_INTERVAL_HOUR_TO_SECOND/SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
 |SQL_INTERVAL_MINUTE/SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
 |SQL_INTERVAL_MINUTE_TO_SECOND/SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
 |SQL_INTERVAL_MONTH/SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
-QL_INTERVAL_SECOND/SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
+|SQL_INTERVAL_SECOND/SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
 |SQL_INTERVAL_YEAR/SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
 |SQL_INTERVAL_YEAR_TO_MONTH/SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
   
@@ -454,7 +454,7 @@ QL_INTERVAL_SECOND/SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
   
  場合に呼び出し**SQLFetch**または**SQLFetchScroll**をこのフィールドで指し示されるバッファー内の塗りつぶしを返しませんでした SQL_SUCCESS または SQL_SUCCESS_WITH_INFO、バッファーの内容は未定義です。 このフィールドは、*遅延フィールド*します。 設定されているを確認したり、データのオクテットの長さを示すために後で、ドライバーによって使用時に使用されません。  
   
- **SQL_DESC_PARAMETER_TYPE [Ipd]**  
+ **SQL_DESC_PARAMETER_TYPE [IPDs]**  
  この SQLSMALLINT レコード フィールドが入力パラメーターの入力/出力パラメーター、出力パラメーター、入力/出力ストリームのパラメーターの SQL_PARAM_INPUT_OUTPUT_STREAM または sql _ の SQL_PARAM_OUTPUT SQL_PARAM_INPUT_OUTPUT SQL_PARAM_INPUT を設定します。ストリーミングされた出力パラメーターの PARAM_OUTPUT_STREAM します。 既定では SQL_PARAM_INPUT に設定されます。  
   
  IPD では、フィールドは SQL_PARAM_INPUT を既定で設定 (SQL_ATTR_ENABLE_AUTO_IPD ステートメント属性は sql_false になります)、ドライバーでは、IPD が自動的に設定されていない場合。 アプリケーションでは、入力パラメーターのないパラメーターがの IPD でこのフィールドを設定する必要があります。  

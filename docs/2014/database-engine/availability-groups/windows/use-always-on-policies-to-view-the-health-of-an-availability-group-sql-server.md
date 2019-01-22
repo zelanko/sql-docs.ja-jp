@@ -1,7 +1,7 @@
 ---
 title: AlwaysOn ポリシーを使用して可用性グループ (SQL Server) の正常性の表示 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: high-availability
@@ -12,12 +12,12 @@ ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ff043a40449664385360b073451b0217727a5c0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 12a183718ee13915fd6236caf943fea03819e723
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355231"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420127"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>AlwaysOn ポリシーを使用した可用性グループの正常性の確認 (SQL Server)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の AlwaysOn ポリシーまたは [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の PowerShell を使用して、AlwaysOn 可用性グループの運用状態の正常性を確認する方法について説明します。 AlwaysOn ポリシー ベースの管理については、次を参照してください。[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)します。  
@@ -61,9 +61,10 @@ ms.locfileid: "53355231"
   
      たとえば、次のコマンドでは、サーバー インスタンス `Computer\Instance`上で正常性状態が "Error" の可用性グループすべてを表示します。  
   
-    ```  
-    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups `   
-    | Test-SqlAvailabilityGroup | Where-Object { $_.HealthState -eq "Error" }  
+    ```powershell
+    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups |
+        Test-SqlAvailabilityGroup |
+        Where-Object { $_.HealthState -eq "Error" }  
     ```  
   
      `Test-SqlAvailabilityReplica`  
@@ -71,7 +72,7 @@ ms.locfileid: "53355231"
   
      たとえば、次のコマンドは、可用性グループ `MyReplica` 内の `MyAg` という名前の可用性レプリカの正常性を評価し、概要を出力します。  
   
-    ```  
+    ```powershell
     Test-SqlAvailabilityReplica `   
     -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
@@ -81,9 +82,9 @@ ms.locfileid: "53355231"
   
      たとえば、次のコマンドは、可用性グループ `MyAg` 内のすべての可用性データベースの正常性を評価し、各データベースの概要を出力します。  
   
-    ```  
-    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\DatabaseReplicaStates `   
-     | Test-SqlDatabaseReplicaState  
+    ```powershell
+    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\DatabaseReplicaStates |
+        Test-SqlDatabaseReplicaState  
     ```  
   
      これらのコマンドレットでは、次のオプションを使用できます。  
@@ -98,11 +99,10 @@ ms.locfileid: "53355231"
   
      たとえば、次の `Test-SqlAvailabilityGroup` コマンドは、`-ShowPolicyDetails` パラメーターを指定して、可用性グループ `MyAg` 上で実行されたポリシー ベースの管理 (PBM) のポリシーごとに、このコマンドレットによって実行されたそれぞれのポリシー評価の結果を表示します。  
   
-    ```  
+    ```powershell
     Test-SqlAvailabilityGroup `   
     -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\AgName `  
     -ShowPolicyDetails  
-  
     ```  
   
     > [!NOTE]  
@@ -121,7 +121,7 @@ ms.locfileid: "53355231"
   
 -   [パート 2:高度なコマンドレットの使用方法](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
   
--   [パート 3:単純な監視アプリケーション](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+-   [パート 3:シンプルな監視アプリケーション](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
   
 -   [パート 4:SQL Server エージェントとの統合](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   

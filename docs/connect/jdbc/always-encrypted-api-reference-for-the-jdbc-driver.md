@@ -11,12 +11,12 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1605b608550446ecb31a79e6074a7e8cfa7ea916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 66f659f5fbb2daa0b0a9969c3e7cde75dccc53d0
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420704"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361672"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC ドライバーの Always Encrypted API のリファレンス
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,11 +37,12 @@ ms.locfileid: "52420704"
 |新しい接続文字列キーワード:<br /><br /> columnEncryptionSetting|columnEncryptionSetting=Enabled は接続で Always Encrypted 機能を有効にし、columnEncryptionSetting=Disabled はこの機能を無効にします。 指定できる値は、Enabled または Disabled です。 既定値は Disabled です。|  
 |新しいメソッド:<br /><br /> `public static void setColumnEncryptionTrustedMasterKeyPaths(Map<String, List\<String>> trustedKeyPaths)`<br /><br /> `public static void updateColumnEncryptionTrustedMasterKeyPaths(String server, List\<String> trustedKeyPaths)`<br /><br /> `public static void removeColumnEncryptionTrustedMasterKeyPaths(String server)`|データベース サーバーの信頼されたキー パスの一覧を設定、更新、削除できます。 アプリケーション クエリの処理中に、一覧にないキー パスをドライバーが受け取った場合、クエリは失敗します。 このプロパティは、セキュリティが侵害され、偽のキー パスを送信し、キー ストアの資格情報漏洩につながるおそれがある SQL Server を含めたセキュリティ攻撃に対して、セキュリティ保護をさらに強化します。|  
 |新しいメソッド:<br /><br /> `public static Map<String, List\<String>> getColumnEncryptionTrustedMasterKeyPaths()`|データベース サーバーの信頼されたキー パスの一覧を返します。|  
-|新しいメソッド:<br /><br /> `public static void registerColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|カスタム キー ストア プロバイダーを登録できます。 これは、キー ストア プロバイダー名をキー ストア プロバイダー実装にマップするディクショナリです。<br /><br /> JVM キーストアを使用するには、JVM キーストアの資格情報を使用して SQLServerColumnEncryptionJVMKeyStoreProvider オブジェクトをインスタンス化し、ドライバーに登録する必要があります。 このプロバイダーの名前は ‘MSSQL_JVM_KEYSTORE’ である必要があります。<br /><br /> Azure Key Vault ストアを使用するには、SQLServerColumnEncryptionAzureKeyStoreProvider オブジェクトをインスタンス化し、ドライバーに登録する必要があります。 このプロバイダーの名前は、'AZURE_KEY_VAULT' である必要があります。|
+|新しいメソッド:<br /><br /> `public static void registerColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|カスタム キー ストア プロバイダーを登録できます。 これは、キー ストア プロバイダー名をキー ストア プロバイダー実装にマップするディクショナリです。<br /><br /> JVM キーストアを使用するには、JVM キーストアの資格情報を使用して SQLServerColumnEncryptionJVMKeyStoreProvider オブジェクトをインスタンス化し、ドライバーに登録する必要があります。 このプロバイダーの名前は 'MSSQL_JVM_KEYSTORE' である必要があります。<br /><br /> Azure Key Vault ストアを使用するには、SQLServerColumnEncryptionAzureKeyStoreProvider オブジェクトをインスタンス化し、ドライバーに登録する必要があります。 このプロバイダーの名前は、'AZURE_KEY_VAULT' である必要があります。|
 |`public final boolean getSendTimeAsDatetime()`|SendTimeAsDatetime 接続プロパティの設定を返します。|
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|SendTimeAsDatetime 接続プロパティの設定を変更します。|
 
  **SQLServerConnectionPoolProxy クラス**
+ 
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |`public final boolean getSendTimeAsDatetime()` | SendTimeAsDatetime 接続プロパティの設定を返します。|
@@ -152,6 +153,7 @@ ms.locfileid: "52420704"
 
   
 新しい種類**microsoft.sql.Types**クラス
+
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|対象の SQL 型としてこれらの型を使用するパラメーターの値を送信するときに**暗号化**datetime、smalldatetime、money、smallmoney を使用して uniqueidentifier 列`setObject()/updateObject()`API のメソッド。|  
@@ -159,7 +161,7 @@ ms.locfileid: "52420704"
   
  **SQLServerStatementColumnEncryptionSetting 列挙型**  
   
- 暗号化された列を読み書きするときにデータを送受信する方法を指定します。 クエリによっては、暗号化されていない列を使用する場合に Always Encrypted ドライバーの処理をバイパスすることにより、パフォーマンスの影響が軽減される可能性があります。 暗号化を回避したり、プレーンテキスト データにアクセスしたりするためにこれらの設定値を使用することはできません。  
+ 暗号化された列を読み書きするときにデータを送受信する方法を指定します。 に応じて、特定のクエリには、Always Encrypted ドライバーの処理、暗号化されていない列が使用されているときにバイパスすることによってパフォーマンスの影響を軽減する可能性があります。 暗号化を回避したり、プレーンテキスト データにアクセスしたりするためにこれらの設定値を使用することはできません。  
   
  **構文**  
   

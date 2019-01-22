@@ -1,7 +1,7 @@
 ---
 title: bcp ユーティリティ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2018
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 375a20488c8f887a89538ee640e059a96da72a99
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: b5198ed4dda2efc350d3ef956a1dda0e3766ca15
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300579"
+ms.locfileid: "54317832"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "54300579"
 
 リリース番号:15.0 <br>
 ビルド番号:15.0.1000.34<br>
-リリース日2018 年 10 月 18 日
+リリース日:2018 年 10 月 18 日
 
 SQLCMD の新しいバージョンでは、SQL Database、SQL Data Warehouse、および Always Encrypted 機能の多要素認証 (MFA) のサポートを含む、Azure AD の認証をサポートします。
 新しい BCP では、SQL Database と SQL Data Warehouse 用の Multi-factor Authentication (MFA) のサポートなど、Azure AD の認証をサポートします。
@@ -110,8 +110,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#w">-w</a>]
     [<a href="#x">-x</a>]
 </pre></td></tr></table>  
-  
-## <a name="arguments"></a>引数  
+
+## <a name="arguments"></a>引数
+
  _**data\_file**_<a name="data_file"></a>  
  データ ファイルの完全パスを指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]にデータを一括インポートする場合は、データ ファイルには指定したテーブルまたはビューにコピーするデータが含まれます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]からデータを一括エクスポートする場合は、データ ファイルにはテーブルまたはビューからコピーしたデータが含まれます。 パスは、1 文字から 255 文字までです。 データ ファイルに含めることができる行の数は最大 2^63 - 1 です。  
   
@@ -173,7 +174,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|850 などの特定のコード ページ番号を指定します。<br /><br /> バージョン 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) より前のバージョンでは、コード ページ 65001 (UTF-8 エンコード) はサポートされません。 バージョン 13 以降では、UTF-8 エンコードを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の前のバージョンにインポートできます。|  
   
  **-d** _**database\_name**_<a name="d"></a>   
- 接続先のデータベースを指定します。 既定では、bcp.exe はユーザーの既定のデータベースに接続します。  **-d** *database_name* と、3 つの部分で構成される名前 (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice. *database_name* がハイフン (-)、またはスラッシュ (/) から始まる場合は、 **-d** とデータベース名の間に空白を入れないでください。  
+ 接続先のデータベースを指定します。 既定では、bcp.exe はユーザーの既定のデータベースに接続します。 **-d** *database_name* と、3 つの部分で構成される名前 (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice. *database_name* がハイフン (-)、またはスラッシュ (/) から始まる場合は、 **-d** とデータベース名の間に空白を入れないでください。  
   
  **-e** _**err\_file**_<a name="e"></a>  
  **bcp** ユーティリティがファイルからデータベースに転送できなかったすべての行を格納するエラー ファイルの完全パスを指定します。 **bcp** コマンドからのエラー メッセージは、ユーザーのワークステーションに送られます。 このオプションを指定しないと、エラー ファイルは作成されません。  
@@ -254,7 +255,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    対話型認証を有効にするユーザー名と-g オプションを提供します (-U) のみ、パスワードなし。   
 
-   次の例では、ユーザーが AAD アカウントを表すユーザー名を示す、Azure AD の対話型モードを使用してデータをエクスポートします。 これは、前のセクションで使用される同じ例を示します。*Azure Active Directory のユーザー名とパスワード:*  
+   次の例では、ユーザーが AAD アカウントを表すユーザー名を示す、Azure AD の対話型モードを使用してデータをエクスポートします。 これは、前のセクションで使用される同じ例を示します。*Azure Active Directory のユーザー名とパスワード*します。  
 
    対話モードを手動で入力されたパスワードが必要または有効にすると、multi-factor authentication でアカウントが、構成された MFA 認証メソッドを完了します。 
 
@@ -427,9 +428,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  詳細については、「 [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)」をご覧ください。  
   
  **-x**<a name="x"></a>  
-  **format** および **-f** *format_file* オプションと共に使用し、既定の XML ではないフォーマット ファイルの代わりに XML ベースのフォーマット ファイルを生成します。 **-x** はデータのインポート時とエクスポート時には機能しません。  **format** および **-f** *format_file*の両方を指定せずに使用すると、エラーが生成されます。  
-  
+ **format** および **-f** *format_file* オプションと共に使用し、既定の XML ではないフォーマット ファイルの代わりに XML ベースのフォーマット ファイルを生成します。 **-x** はデータのインポート時とエクスポート時には機能しません。 **format** および **-f** *format_file*の両方を指定せずに使用すると、エラーが生成されます。  
+
 ## 解説<a name="remarks"></a>
+
  **bcp** 13.0 クライアントは、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のツールをインストールしたときにインストールされます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] と以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の両方のツールがインストールされている場合、PATH 環境変数の値の順番によっては、 **bcp** 13.0 クライアントではなく、以前の **bcp** クライアントを使用している可能性があります。 この環境変数によって Windows で実行可能ファイルを探すときに使用されるディレクトリのセットが定義されます。 使用しているバージョンを確認するには、Windows のコマンド プロンプトで **bcp /v** コマンドを実行します。 コマンド パスを PATH 環境変数で設定する方法の詳細については、Windows のヘルプを参照してください。  
  
 bcp ユーティリティは、[Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676) とは別にダウンロードすることもできます。  `ENU\x64\MsSqlCmdLnUtils.msi` または `ENU\x86\MsSqlCmdLnUtils.msi`を選択してください。
@@ -442,16 +444,19 @@ bcp ユーティリティは、[Microsoft SQL Server 2016 Feature Pack](https://
  データを一括インポートまたはエクスポート用に準備する方法については、「[一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)」をご覧ください。  
   
  一括インポートによって実行される行挿入操作がトランザクション ログに記録される条件について詳しくは、「 [一括インポートで最小ログ記録を行うための前提条件](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」をご覧ください。  
-  
-## <a name="native-data-file-support"></a>ネイティブ データ ファイルのサポート  
+
+## <a name="native-data-file-support"></a>ネイティブ データ ファイルのサポート
+
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の **bcp** ユーティリティでは、 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]、および [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]と互換性のあるネイティブ データ ファイルがサポートされています。  
-  
-## <a name="computed-columns-and-timestamp-columns"></a>計算列とタイムスタンプ列  
+
+## <a name="computed-columns-and-timestamp-columns"></a>計算列とタイムスタンプ列
+
  計算列または **timestamp** 列にインポートされるデータ ファイル内の値は無視され、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によって自動的に値が割り当てられます。 データ ファイルにテーブル内の計算列または **timestamp** 列の値が含まれない場合は、フォーマット ファイルを使用して、データのインポート時にテーブル内の計算列または **timestamp** 列を無視するように指定します。この列の値は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によって自動的に割り当てられます。  
   
  計算列と **timestamp** 列は、通常どおり、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からデータ ファイルに一括コピーされます。  
-  
-## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>空白や引用符を含む識別子の指定  
+
+## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>空白や引用符を含む識別子の指定
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子には、空白や引用符などを埋め込むことができます。 これらの識別子は次のように扱う必要があります。  
   
 -   コマンド プロンプトで空白や引用符を含む識別子またはファイル名を指定する場合、識別子を二重引用符 (" ") で囲みます。  
@@ -469,8 +474,9 @@ bcp ユーティリティは、[Microsoft SQL Server 2016 Feature Pack](https://
     -   **-q** オプションを指定します。  
   
     -   所有者名、テーブル名、またはビュー名を、引用符内でかっこ ([ ]) を使用して囲みます。  
-  
-## <a name="data-validation"></a>データの検証  
+
+## <a name="data-validation"></a>データの検証
+
  **bcp** によってデータ検証とデータ チェックが実行されるようになったため、無効なデータを含むデータ ファイルに対して実行した場合、このスクリプトは失敗する可能性があります。 たとえば、 **bcp** では次の検証が行われます。  
   
 -   **float** データ型または **real** データ型のネイティブ表記が有効かどうか。  
@@ -478,8 +484,9 @@ bcp ユーティリティは、[Microsoft SQL Server 2016 Feature Pack](https://
 -   Unicode データが偶数バイト長かどうか。  
   
  以前のリリースでは、クライアントが無効なデータにアクセスを試みるまでは失敗が発生することはありませんでしたが、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で一括インポート可能であった無効な形式のデータが、新しいバージョンでは読み込みに失敗する場合があります。 今回のリリースでは検証機能が追加されたため、一括読み込み後のクエリで発生する問題を最小限に抑えられます。  
-  
-## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML ドキュメントの一括エクスポートまたは一括インポート  
+
+## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML ドキュメントの一括エクスポートまたは一括インポート
+
  SQLXML データを一括エクスポートまたは一括インポートする場合、フォーマット ファイルのデータ型には次のいずれかを使用します。  
   
 |データ型|結果|  
@@ -487,8 +494,9 @@ bcp ユーティリティは、[Microsoft SQL Server 2016 Feature Pack](https://
 |SQLCHAR または SQLVARYCHAR|データは、クライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます。 結果は、フォーマット ファイルを指定せずに **-c** スイッチを指定した場合と同じです。|  
 |SQLNCHAR または SQLNVARCHAR|データは Unicode として送られます。 結果は、フォーマット ファイルを指定せずに **-w** スイッチを指定した場合と同じです。|  
 |SQLBINARY または SQLVARYBIN|データは変換なしで送られます。|  
-  
-## <a name="permissions"></a>アクセス許可  
+
+## <a name="permissions"></a>アクセス許可
+
  **bcp out** 操作には、ソース テーブルでの SELECT 権限が必要です。  
   
  **bcp in** 操作には、対象となるテーブルでの SELECT/INSERT 権限が最低限必要となります。 また、次のうちのいずれかに該当する場合は、ALTER TABLE 権限が必要です。  
@@ -507,8 +515,9 @@ bcp ユーティリティは、[Microsoft SQL Server 2016 Feature Pack](https://
   
 > [!NOTE]
 > [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]からは、対象テーブルでの ALTER TABLE 権限が必要となりました。 この新しい要件により、対象テーブルでの ALTER TABLE 権限がユーザー アカウントに与えられていないと、トリガーおよび制約チェックを実行しない **bcp** スクリプトは失敗する可能性があります。
-  
-## <a name="character-mode--c-and-native-mode--n-best-practices"></a>キャラクター モード (-c) およびネイティブ モード (-n) のベスト プラクティス  
+
+## <a name="character-mode--c-and-native-mode--n-best-practices"></a>キャラクター モード (-c) およびネイティブ モード (-n) のベスト プラクティス
+
  このセクションでは、キャラクター モード (-c) およびネイティブ モード (-n) の推奨事項について説明します。  
   
 -   (管理者/ユーザー) 可能であれば、ネイティブ形式 (-n) を使用して、区切り記号の問題を回避します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を使用してエクスポートおよびインポートを行うには、ネイティブ形式を使用します。 データを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以外のデータベースにインポートする場合は、データを[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からエクスポートするときに -c または -w オプションを使用します。  
@@ -516,8 +525,9 @@ bcp ユーティリティは、[Microsoft SQL Server 2016 Feature Pack](https://
 -   (管理者) BCP OUT を使用するときに、データを検証します。 たとえば、BCP OUT、BCP IN、その後 BCP OUT を使用する場合、データが正しくエクスポートされ、ターミネータ値がデータ値の一部として使用されていないことを確認します。 ターミネータ値とデータ値の競合を回避するために、-t および -r オプションを使用して、既定のターミネータ値をランダムな 16 進数値でオーバーライドすることを検討してください。  
   
 -   (ユーザー) 実際の文字列値と競合する可能性を最小限に抑えるために、長くて一意のターミネータ (バイトまたはキャラクターの任意のシーケンス) を使用します。 これには、-t および -r オプションを使用します。  
-  
-## <a name="examples"></a>使用例  
+
+## <a name="examples"></a>使用例
+
  ここでは、次の例について説明します。  
  
 -   A. **bcp** ユーティリティ バージョンの特定
@@ -540,6 +550,7 @@ bcp ユーティリティは、[Microsoft SQL Server 2016 Feature Pack](https://
 
 
 ### <a name="example-test-conditions"></a>**テスト条件の例**
+
 以下の例では、SQL Server (2016 以降) および Azure SQL Database 用の `WideWorldImporters` サンプル データベースを利用しています。  `WideWorldImporters` ダウンロードできます[ https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)します。  サンプル データベースを復元する構文については、「 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 」を参照してください。  特記していない場合、この例では、Windows 認証を使用していること、および **bcp** コマンドを実行しているサーバー インスタンスへのセキュリティ接続があることを前提としています。  多くの例では、 `D:\BCP` というディレクトリを使用します。
 
 以下のスクリプトでは、`WideWorldImporters.Warehouse.StockItemTransactions` テーブルの空のコピーを作成し、主キー制約を追加します。  SQL Server Management Studio (SSMS) で、次の T-SQL スクリプトを実行します。
@@ -694,22 +705,23 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 ```  
 bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...  
 ```  
-  
-## <a name="additional-examples"></a>その他の例  
+
+## <a name="additional-examples"></a>その他の例
+
 |次のトピックでは、bcp の使用例を示します。 |
 |---|
-|一括インポートまたは一括エクスポートのデータ形式 (SQL Server)<br />&emsp;&#9679;&emsp;[ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[文字形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[フィールド ターミネータと行ターミネータの指定 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[一括インポート中の NULL の保持または既定値の使用 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[データの一括インポート時の ID 値の保持 (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)<br />&emsp;&#9679;&emsp;[フォーマット ファイルの作成 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[データの一括インポートでのフォーマット ファイルの使用 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[フォーマット ファイルを使用したデータ フィールドのスキップ (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
+|一括インポートまたは一括エクスポートのデータ形式 (SQL Server)<br />&emsp;&#9679;&emsp;[ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[文字形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[フィールド ターミネータと行ターミネータの指定 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[一括インポート中の NULL の保持または既定値の使用 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[データの一括インポート時の ID 値の保持 (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)<br />&emsp;&#9679;&emsp;[フォーマット ファイルの作成 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[データの一括インポートでのフォーマット ファイルの使用 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[フォーマット ファイルを使用したデータ フィールドのスキップ (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>  </p>|
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
  [一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
- [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
-  
-  
+ [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
+
 ## <a name="feedback"></a>フィードバック
 
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL クライアント ツール フォーラム](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)

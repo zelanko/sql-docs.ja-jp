@@ -11,12 +11,12 @@ ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19e8cf2e5c4aeaa2eab8c49d61a05a0eaa434e3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f28175eab5219a6181bf241fc60fec576a6ef50
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611040"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405722"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft SQL Server 用 JDBC Driver
 
@@ -27,27 +27,32 @@ ms.locfileid: "47611040"
 Microsoft JDBC Driver for SQL Server は、IBM WebSphere や SAP NetWeaver などの主要なアプリケーション サーバーに対してテスト済みです。
   
 ## <a name="getting-started"></a>作業の開始  
-* [ステップ 1: Java 開発用に開発環境を構成する](step-1-configure-development-environment-for-java-development.md)  
-* [ステップ 2: Java 開発用に SQL データベースを作成する](step-2-create-a-sql-database-for-java-development.md)  
-* [ステップ 3: Java を使用した SQL への接続を概念実証する](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+
+* [ステップ 1: Java 開発用の開発環境を構成します。](step-1-configure-development-environment-for-java-development.md)  
+* [手順 2:Java 開発用の SQL database を作成します。](step-2-create-a-sql-database-for-java-development.md)  
+* [手順 3:Java を使用した sql 接続の概念実証](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>ドキュメント  
+
 * [作業の開始](getting-started-with-the-jdbc-driver.md)
 * [概要](overview-of-the-jdbc-driver.md)  
 * [プログラミング ガイド](programming-guide-for-jdbc-sql-driver.md)
-* [Security](securing-jdbc-driver-applications.md)  
+* [セキュリティ](securing-jdbc-driver-applications.md)  
 * [パフォーマンスと信頼性](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [トラブルシューティング](diagnosing-problems-with-the-jdbc-driver.md)
-* [コード サンプル](sample-jdbc-driver-applications.md) 
+* [コード サンプル](sample-jdbc-driver-applications.md)
 * [準拠と法律](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>コミュニティ
-[JDBC ドライバーの追加情報の検索](finding-additional-jdbc-driver-information.md)  
+
+[フィードバックやその他の JDBC ドライバー情報の検索](finding-additional-jdbc-driver-information.md)  
   
 ## <a name="download"></a>ダウンロード
+
 [SQL Server 用 Microsoft JDBC Driver のダウンロード](download-microsoft-jdbc-driver-for-sql-server.md)-Maven プロジェクトでは、その他に関する情報が追加されます。
   
 ## <a name="samples"></a>サンプル  
+
 * [サンプル JDBC Driver アプリケーション](sample-jdbc-driver-applications.md)  
 * [Windows 上の Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
 * [MacOS で Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)

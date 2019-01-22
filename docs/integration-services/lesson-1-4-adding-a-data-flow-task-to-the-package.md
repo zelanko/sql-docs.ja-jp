@@ -1,5 +1,5 @@
 ---
-title: '手順 4: パッケージへのデータ フロー タスクの追加 | Microsoft Docs'
+title: 手順 4:パッケージへのデータ フロー タスクの追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5e73f8578c9ee9be1b30bd95722d9acd0a0e4ca
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e18408d3e96c6b03814beae37238bf52c5c192
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410559"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205901"
 ---
 # <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>レッスン 1-4 - パッケージへのデータ フロー タスクの追加
 前の実習では、データ ソースおよび変換先データに接続するための接続マネージャーを作成しました。次の実習では、パッケージにデータ フロー タスクを追加します。 データ フロー タスクには、変換元と変換先の間でデータを移動させるデータ フロー エンジンがカプセル化されており、データを移動する際に、変換、クリーン、修正を行うことができます。 抽出、変換、読み込み (ETL) プロセスのほとんどが、このデータ フロー タスクで実行されます。  
   
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、データ フローと制御フローが切り離されています。  
   
 ### <a name="to-add-a-data-flow-task"></a>データ フロー タスクを追加するには  

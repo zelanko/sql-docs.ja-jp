@@ -1,7 +1,7 @@
 ---
 title: 重大な変更をデータベース エンジンの SQL Server 2014 の機能 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2018
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: release-landing
@@ -13,12 +13,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe4dc2f55b8d9b1bc9475e936341d24d16ce77a6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375274"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420207"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 におけるデータベース エンジン機能の重大な変更
   このトピックでは、重大な変更を説明します、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]と以前のバージョンの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 これらの変更によって、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に基づくアプリケーション、スクリプト、または機能が使用できなくなる場合があります。 この問題は、アップグレードするときに発生することがあります。 詳細については、「 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)」を参照してください。  
@@ -42,7 +42,6 @@ ms.locfileid: "53375274"
 |ALTER TABLE|ALTER TABLE ステートメントでは、2 部構成 (schema.object) のテーブル名だけを使用できます。 これで、次の形式を使用してテーブル名を指定することは、コンパイル時にエラー 117 で失敗します。<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> 以前のバージョンでは、server.database.schema.table という形式を指定すると、エラー 4902 が返されました。 .database.schema.table または ..schema.table という形式を指定すると、成功しました。 問題を解決するには、4 部構成のプレフィックスの使用を削除してください。|  
 |メタデータの参照|FOR BROWSE または SET NO_BROWSETABLE ON を使用してビューをクエリすると、基になるオブジェクトのメタデータではなく、ビューのメタデータが返されるようになりました。 この動作は現在、他のメタデータ参照方法と一致します。|  
 |SOUNDEX|データベース互換性レベル 110 では、SOUNDEX 関数は新しいルールを実装します。このため、この関数により計算される値が、110 未満の互換性レベルで計算された値と異なる結果になる場合があります。 互換性レベル 110 へのアップグレード後に、SOUNDEX 関数を使用するインデックス、ヒープ、または CHECK 制約の再構築が必要になる場合があります。 詳細については、「[SOUNDEX (Transact-SQL)](/sql/t-sql/functions/soundex-transact-sql)」を参照してください。
- .|  
 |失敗した DML ステートメントの行数メッセージ|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、[!INCLUDE[ssDE](../includes/ssde-md.md)] は一貫して RowCount の付いた TDS DONE トークンを送信します。DML ステートメントが失敗した場合はクライアントに 0 を返します。 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、失敗する DML ステートメントが TRY-CATCH ブロックに含まれていて、それが [!INCLUDE[ssDE](../includes/ssde-md.md)] によって自動パラメーター化されるか、または TRY-CATCH ブロックが失敗したステートメントと同じレベルにない場合、-1 という間違った値がクライアントに送信されます。 たとえば、TRY-CATCH ブロックがストアド プロシージャを呼び出し、そのプロシージャ内の DML ステートメントが失敗した場合、クライアントは -1 という間違った値を受け取ります。<br /><br /> この不適切な動作に依存するアプリケーションは失敗します。|  
 |SERVERPROPERTY ('エディション')|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] インスタンスのインストールされている製品のエディション。 このプロパティの値を使用すると、インストールされている製品でサポートされている CPU の最大数など、機能や制限を確認できます。<br /><br /> インストールされている Enterprise edition に基づき、返されること"Enterprise Edition"または"Enterprise Edition:コア ベース ライセンス '。 Enterprise のエディションは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の単一のインスタンスによる最大計算容量に基づいて区別されます。 計算容量制限の詳細については[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]を参照してください[Compute Capacity Limits by Edition の SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)します。|  
 |CREATE LOGIN|`CREATE LOGIN WITH PASSWORD = '`*パスワード*`' HASHED`によって作成されたハッシュでオプションを使用することはできません[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]7 以降。|  
@@ -189,7 +188,7 @@ ms.locfileid: "53375274"
   
  次の機能をデモンストレーション上場合にのみ、既定の名前空間 URI、名前空間に対応最終推奨設定では、新しい動作が説明されている[ http://www.w3.org/2005/xpath-functions](http://www.w3.org/2005/xpath-functions)します。 互換性レベルが 110 以上の場合、既定では、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] は既定の関数名前空間をこの名前空間にバインドします。 ただし、これらの関数は、この名前空間が互換性レベルにかかわらず使用される場合にのみ、新しい動作を示します。  
   
--   **fn:string の長さ**  
+-   **fn:string-length**  
   
 -   **fn:substring**  
   

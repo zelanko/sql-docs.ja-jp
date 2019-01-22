@@ -1,7 +1,7 @@
 ---
 title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,19 +17,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a72ef38b960e00a88c7d4e1e0038e32a897a46d9
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 591d2dcbb8a14cff7e4595bdeeab93787f51c5cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980118"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419877"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 2 番目の引数で指定された一部の文字が 3 番目の引数で指定された対象の文字セットに変換された後に、最初の引数として指定された文字列を返します。
 
-## <a name="syntax"></a>構文   
+## <a name="syntax"></a>構文
+
 ```
 TRANSLATE ( inputString, characters, translations) 
 ```
@@ -45,7 +47,8 @@ TRANSLATE ( inputString, characters, translations)
 *translations*   
  置換文字を含む文字列[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *translations* には、*characters* と同じデータ型および長さを指定する必要があります。
 
-## <a name="return-types"></a>戻り値の型   
+## <a name="return-types"></a>戻り値の型
+
 2 番目の引数の文字が 3 番目の引数の一致する文字に置き換えられる、`inputString` と同じデータ型の文字式を返します。
 
 ## <a name="remarks"></a>Remarks   
@@ -57,15 +60,19 @@ TRANSLATE ( inputString, characters, translations)
 
 `TRANSLATE` は常に SC 照合順序を認識しています。
 
-## <a name="examples"></a>使用例   
+## <a name="examples"></a>使用例
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. 角かっこと中かっこを通常のかっこで置き換える    
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. 角かっこと中かっこを通常のかっこで置き換える
+
 次のクエリは、入力文字列の角かっこと中かっこを通常のかっこで置き換えます。
-```
+
+```sql
 SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
+
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
-```
+
+```plain_text
 2*(3+4)/(7-2)
 ```
 
@@ -98,8 +105,10 @@ REPLACE
 );
 ```
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>B. GeoJSON ポイントを WKT に変換する    
-GeoJSON は、さまざまな地理的データ構造をエンコードするための形式です。 `TRANSLATE` 関数を使用すると、開発者は GeoJSON ポイントから WKT 形式への変換とその逆の変換に簡単に実行できます。 次のクエリは、入力の角かっこと中かっこを通常のかっこで置き換えます。   
+###  <a name="b-convert-geojson-points-into-wkt"></a>B. GeoJSON ポイントを WKT に変換する
+
+GeoJSON は、さまざまな地理的データ構造をエンコードするための形式です。 `TRANSLATE` 関数を使用すると、開発者は GeoJSON ポイントから WKT 形式への変換とその逆の変換に簡単に実行できます。 次のクエリは、入力の角かっこと中かっこを通常のかっこで置き換えます。
+
 ```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
@@ -107,11 +116,9 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 
-
 |ポイント  |座標 |  
----------|--------- |
-(137.4  72.3) |[137.4,72.3] |
-
+|---------|--------- |
+|(137.4  72.3) |[137.4,72.3] |
 
 ### <a name="c-use-the-translate-function"></a>C. TRANSLATE 関数を使用する
 
@@ -128,6 +135,7 @@ SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
 
 
 ## <a name="see-also"></a>参照
+
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  

@@ -16,12 +16,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f710a7ef79f5532cd8a58921cb8b07d350c1305
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: d3a20135a3063e5316f133e2f6483eb40e17d035
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380887"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256637"
 ---
 # <a name="view-statistics-properties"></a>統計のプロパティの表示
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,9 +60,9 @@ ms.locfileid: "53380887"
   
 5.  プロパティを表示する統計オブジェクトを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  [ **統計のプロパティ -** *statistics_name* ] ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]** を選びます。  
+6.  [ **統計のプロパティ -** _statistics_name_ ] ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]** を選びます。  
   
-      **統計のプロパティ -** **statistics_name** *statistics_name* ページで次のプロパティが表示されます。  
+     **統計のプロパティ -** **statistics_name** _statistics_name_ ページで次のプロパティが表示されます。  
   
      **テーブル名**  
      統計の対象となるテーブルの名前が表示されます。  

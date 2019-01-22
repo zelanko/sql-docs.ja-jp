@@ -3,17 +3,17 @@ title: 既定の R と Python ライブラリの SQL Server Machine Learning サ
 description: SQL Server R Services で R Server では、Machine Learning サービス (In-database)、および Machine Learning Server (スタンドアロン) によってインストールされた R と Python のパッケージ
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 01/19/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0a8c4c0f14a099dd4b6d8e6c48b8d84e209f6024
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 907932911ef522383678774f596772904f687dc2
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432335"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419857"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server の既定の R と Python のパッケージ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "53432335"
 
 R パッケージがインストールされている[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)と[SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)セットアップ中に、R の機能を選択するとします。 
 
-パッケージ         | 2016 | 2017 | 説明 |
+|パッケージ         | 2016 | 2017 | 説明 |
 |----------------|--------------|--------------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | リモート計算コンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚エフェクトと分析の rx 関数を並列実行に使用されます。 |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |ストアド プロシージャで R スクリプトを含めるために使用します。 |
@@ -89,9 +89,9 @@ SQL server machine learning をインストールするときに、各言語を�
 
 |バージョンおよび言語  | 既定のパス|
 |----------------------|------------|
-| SQL Server 2016 |C:\Program files \microsoft SQL Server\MSSQL13 します。MSSQLSERVER\R_SERVICES\library|
-| R を使用した SQL Server 2017|C:\Program files \microsoft SQL Server\MSSQL14 します。MSSQLSERVER\R_SERVICES\library |
-| SQL Server 2017 の Python の使用 |C:\Program files \microsoft SQL Server\MSSQL14 します。MSSQLSERVER\PYTHON_SERVICES\Lib\site パッケージ |
+| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
+| R を使用した SQL Server 2017|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
+| SQL Server 2017 の Python の使用 |C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
 
 
 #### <a name="file-path-for-standalone-server-installations"></a>スタンドアロン サーバーのインストール ファイルのパス
@@ -100,9 +100,9 @@ SQL server machine learning をインストールするときに、各言語を�
 
 |バージョン| インストール|既定のパス|
 |-------|-------------|------------|
-| SQL Server 2016|R Server (スタンドアロン)| C:\Program files \microsoft SQL server \130\r_server|
-|SQL Server 2017|Machine Learning Server、R の使用 |C:\Program files \microsoft SQL Server\140\R_SERVER|
-|SQL Server 2017|Machine Learning Server、Python の使用 |C:\Program files \microsoft SQL Server\140\PYTHON_SERVER|
+| SQL Server 2016|R Server (スタンドアロン)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
+|SQL Server 2017|Machine Learning Server、R の使用 |C:\Program Files\Microsoft SQL Server\140\R_SERVER|
+|SQL Server 2017|Machine Learning Server、Python の使用 |C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER|
 
 > [!NOTE]
 > Microsoft R Server のスタンドアロン インストール可能性があるようなサブフォルダー名とファイルを持つその他のフォルダーを検索する場合または[Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)します。 これらのサーバー製品では、別のインストーラーとパス (つまり、C:\Program Files\Microsoft\R Server\R_SERVER または C:\Program Files\Microsoft\ML SERVER\R_SERVER) があります。 詳細については、次を参照してください。 [Machine Learning Server を Windows にインストール](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)または[Windows のインストールの R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)します。
