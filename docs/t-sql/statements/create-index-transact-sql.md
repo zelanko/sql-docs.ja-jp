@@ -55,18 +55,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55f5056f65daa3c9f52809087f4cf6773d708910
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 8a77956d457e70566cbebef0e92d952b0b1158d9
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980508"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300509"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 テーブルまたはビューにリレーショナル インデックスを作成します。 クラスター化または非クラスター化 B ツリー インデックスであるため、行ストア インデックスとも呼ばれます。 行ストア インデックスは、テーブルにデータが設定される前に作成することができます。 クエリが特定の列から選択するか、特定の順序での値の並べ替えを要求する場合は特に、クエリのパフォーマンスを向上させるために行ストア インデックスを使用します。  
   
@@ -278,7 +278,7 @@ CLUSTERED
   
  フィルター選択されたインデックスは、XML インデックスおよびフルテキスト インデックスには適用されません。 UNIQUE インデックスの場合、一意のインデックス値を持つ必要があるのは選択した行のみです。 フィルター選択されたインデックスでは IGNORE_DUP_KEY オプションを使用できません。  
   
-ON *partition_scheme_name* **( *column_name* )**  
+ON _partition_scheme_name_ **( *column_name* )**  
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  ファイル グループが定義されているパーティション構成を指定します。このファイル グループは、パーティション インデックスのパーティションのマップ先となります。 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) または [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) を実行して、パーティション構成がデータベース内に存在するようにする必要があります。 *column_name* には、パーティション インデックスがパーティション分割される対象の列を指定します。 この列は、*partition_scheme_name* で使用されているパーティション関数の引数のデータ型、長さ、および有効桁数に一致する必要があります。 *column_name* インデックス定義内の列に限定されません。 UNIQUE インデックスをパーティション分割する場合、*column_name* は一意のキーとして使用されている列から選択する必要がありますが、それ以外の場合はベース テーブルの任意の列を指定できます。 この制限により、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、単一のパーティション内だけでキー値の一意性を確認できます。  
@@ -476,7 +476,7 @@ RESUMABLE **=** { ON | **OFF**}
 
  OFF の場合、インデックス操作は再開可能ではありません。
 
-MAX_DURATION **=** *time* **[MINUTES]** は **RESUMABLE = ON** (**ONLINE = ON** が必須) と共に使用。
+MAX_DURATION **=** _time_ **[MINUTES]** は **RESUMABLE = ON** (**ONLINE = ON** が必須) と共に使用。
  
 **適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (パブリック プレビュー機能)
 
@@ -696,7 +696,7 @@ INSERT INTO t1 VALUES (1, 0);
   
 -   新しいインデックス オプションは、WITH (**_option\_name_ = ON | OFF**) を使用してのみ指定できる。  
 -   同じステートメントで、旧バージョンとの互換性がある構文と新しい構文の両方を使ってオプションを指定することはできない。 たとえば、WITH (**DROP_EXISTING, ONLINE = ON**) を指定すると、ステートメントは失敗します。  
--   XML インデックスを作成するとき、オプションは WITH (***option_name*= ON | OFF**) を使用して指定する必要がある。  
+-   XML インデックスを作成するとき、オプションは WITH (**_option_name_= ON | OFF**) を使用して指定する必要がある。  
   
 ## <a name="dropexisting-clause"></a>DROP_EXISTING 句  
  DROP_EXISTING 句を使用して、インデックスの再構築、列の追加または削除、オプションの変更、列の並べ替え順の変更、パーティション構成またはファイル グループの変更を行うことができます。  

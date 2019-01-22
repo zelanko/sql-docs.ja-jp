@@ -47,18 +47,18 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980388"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300569"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で新しいテーブルを作成します。  
   
@@ -981,7 +981,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  ローカル一時テーブル名の前には 1 つの番号記号 (#) を付加し (#*table_name*)、グローバル一時テーブル名の前には 2 つの番号記号を付加します (##*table_name*)。  
   
- SQL ステートメントは、CREATE TABLE ステートメントの *table_name* に指定された値を使用して、一時テーブルを参照します。以下に例を示します####。  
+ SQL ステートメントは、CREATE TABLE ステートメントの *table_name* に指定された値を使用して、一時テーブルを参照します。以下に例を示します。  
   
 ```sql  
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);  
@@ -990,6 +990,8 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
   
  1 つのストアド プロシージャまたはバッチ内で複数の一時テーブルを作成する場合は、それぞれ違う名前で作成する必要があります。  
+ 
+ 一時テーブルを作成またはアクセスするときに *schema_name* を含めると、無視されます。  すべての一時テーブルは、dbo スキーマで作成されます。
   
  ローカル一時テーブルが、複数ユーザーが同時に実行できるストアド プロシージャまたはアプリケーションで作成される場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、異なるユーザーが作成する個々のテーブルを区別できなければなりません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、各ローカル一時テーブル名の末尾に数値サフィックスを内部的に追加することによって、テーブルを区別します。 **tempdb** の **sysobjects** テーブルに格納される一時テーブルのフル ネームは、CREATE TABLE ステートメントで指定されたテーブル名とシステムが生成する数値サフィックスから構成されます。 サフィックスを許可する *table_name* 指定は、ローカルの一時テーブル名は、116 文字を超えることはできません。  
   

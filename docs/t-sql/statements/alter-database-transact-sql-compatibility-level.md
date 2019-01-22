@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 互換性レベル (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f01c19b7afd63402abc5729404d73e52429722be
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 55d919cefd20ef4b139dbf30a053bbda568f6e38
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980078"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242163"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 互換性レベル
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -168,9 +168,9 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>互換性レベル 140 と互換性レベル 150 との相違点  
 このセクションでは、互換性レベル 150 で導入された新しい動作について説明します。
 
-現在、データベース互換レベル 150 は [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] でプライベート プレビューとして提供されています。 このデータベース互換レベルは、データベース互換レベル 140 で導入されたものを超える、新世代のクエリ処理と関連付けられます。     
+現在、データベース互換レベル 150 は [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] でパブリック プレビューとして提供されています。 このデータベース互換レベルは、データベース互換レベル 140 で導入されたものを超える、新世代のクエリ処理と関連付けられます。     
 
-データベース互換レベル 150 で使用できるクエリ処理機能の詳細については、「[What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md)」 (SQL Server 2019 の新機能) を参照してください。     
+データベース互換レベル 150 で使用できるクエリ処理機能の詳細については、「[What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md)」 (SQL Server 2019 の新機能) と「[SQL データベースでのインテリジェントなクエリ処理](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017)」を参照してください。
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>互換性レベル 130 と互換性レベル 140 との相違点  
 このセクションでは、互換性レベル 140 で導入された新しい動作について説明します。

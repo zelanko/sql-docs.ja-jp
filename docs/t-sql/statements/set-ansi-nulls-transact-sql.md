@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2d84c426bddf4a896a3be1f79ea85e3b718fd4e
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: 798a31bacecc45a22510a121847e9e20423d4b3d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069768"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143392"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "54069768"
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で = (等号) 比較演算子と <> (不等号) 比較演算子を NULL 値に対して使用した場合の ISO 準拠動作を指定します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のバージョンでは、ANSI_NULLS が ON になり、このオプションを明示的に OFF に設定するすべてのアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のバージョンでは、ANSI_NULLS が ON になり、このオプションを明示的に OFF に設定するすべてのアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -83,20 +83,20 @@ ANSI_NULLS が ON に設定されていると、NULL 値に対するすべての
   
 スクリプトが意図どおりに動作するようにするには、ANSI_NULLS データベース オプションや SET ANSI_NULLS の設定とは無関係に、NULL 値を含む可能性のある比較で、IS NULL と IS NOT NULL を使用するようにしてください。  
   
-分散クエリを実行する際には、SET ANSI_NULLS を ON に設定してください。  
+分散クエリを実行する際には、ANSI_NULLS を ON に設定する必要があります。  
   
-計算列やインデックス付きビューのインデックスを作成または変更するときには、SET ANSI_NULLS を ON に設定する必要があります。 SET ANSI_NULLS が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューにおける CREATE、UPDATE、INSERT、および DELETE のステートメントはいずれも失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、要求された値に違反するすべての SET オプションを一覧表示するエラーが返されます。 また、SELECT ステートメントの実行時に SET ANSI_NULLS が OFF の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は計算列やビュー上のインデックス値を無視し、テーブルやビューにそのようなインデックスがないものとして SELECT 操作を処理します。  
+計算列やインデックス付きビューのインデックスを作成または変更するときには、ANSI_NULLS を ON に設定する必要があります。 SET ANSI_NULLS が OFF の場合、計算列にインデックスが設定されているテーブルやインデックス付きビューにおける CREATE、UPDATE、INSERT、および DELETE のステートメントはいずれも失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、要求された値に違反するすべての SET オプションを一覧表示するエラーが返されます。 また、SELECT ステートメントの実行時に SET ANSI_NULLS が OFF の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は計算列やビュー上のインデックス値を無視し、テーブルやビューにそのようなインデックスがないものとして SELECT 操作を処理します。  
   
 > [!NOTE]  
 > ANSI_NULLS は、計算列およびインデックス付きビューにおいてインデックスを操作するときに、指定された値に設定する必要がある 7 つの SET オプションの中の 1 つです。 オプション `ANSI_PADDING`、`ANSI_WARNINGS`、`ARITHABORT`、`QUOTED_IDENTIFIER`、および `CONCAT_NULL_YIELDS_NULL` も ON に設定し、`NUMERIC_ROUNDABORT` を OFF に設定する必要があります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に ANSI_NULLS が ON に設定されます。 この設定は、ODBC データ ソースまたは ODBC 接続属性で構成でき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続する前にアプリケーションの内部で設定される OLE DB 接続プロパティでも構成できます。 SET ANSI_NULLS の既定値は OFF です。  
   
- SET ANSI_DEFAULTS が ON の場合には、SET ANSI_NULLS は有効 (ON) になります。  
+ANSI_DEFAULTS が ON の場合は、ANSI_NULLS は有効になります。  
   
- SET ANSI_NULLS は、解析時ではなく実行時に設定されます。  
+ANSI_NULLS の設定は、解析時ではなく実行時に定義されます。  
   
- この設定の現在の設定を表示するには、次のクエリを実行します。
+この設定の現在の設定を表示するには、次のクエリを実行します。
   
 ```sql  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  
@@ -105,7 +105,7 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
 ```  
   
 ## <a name="permissions"></a>アクセス許可  
- public ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`=` (等号) 比較演算子と `<>` (不等号) 比較演算子を使用して、テーブル内の `NULL` 値と NULL 以外の値を比較します。 例は `IS NULL` が `SET ANSI_NULLS` 設定に影響されないことも示しています。  
@@ -132,9 +132,12 @@ WHERE a <> @varname;
 SELECT a   
 FROM t1   
 WHERE a IS NULL;  
-GO  
-  
--- SET ANSI_NULLS to ON and test.  
+GO 
+```
+
+次に ANSI_NULLS を ON に設定し、テストします。
+
+```sql
 PRINT 'Testing ANSI_NULLS ON';  
 SET ANSI_NULLS ON;  
 GO  
@@ -153,8 +156,11 @@ SELECT a
 FROM t1   
 WHERE a IS NULL;  
 GO  
-  
--- SET ANSI_NULLS to OFF and test.  
+```
+
+次に ANSI_NULLS を OFF に設定し、テストします。  
+
+```sql
 PRINT 'Testing SET ANSI_NULLS OFF';  
 SET ANSI_NULLS OFF;  
 GO  

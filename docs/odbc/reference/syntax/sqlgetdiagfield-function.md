@@ -1,7 +1,7 @@
 ---
 title: SQLGetDiagField 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f975b15d07bf837c0f5fe5d2649cc78b341d23c6
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203981"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420167"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 関数
+
 **準拠**  
  バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
@@ -36,8 +37,7 @@ ms.locfileid: "53203981"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```cpp
 SQLRETURN SQLGetDiagField(  
      SQLSMALLINT     HandleType,  
      SQLHANDLE       Handle,  
@@ -60,7 +60,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_HANDLE_ENV として  
   
--   SQL_HANDLE_STMT として  
+-   SQL_HANDLE_STMT  
   
  SQL_HANDLE_DBC_INFO_TOKEN ハンドルは、ドライバー マネージャーとドライバーでのみ使用されます。 アプリケーションでは、この種類のハンドルは使用しないでください。 SQL_HANDLE_DBC_INFO_TOKEN の詳細については、次を参照してください。 [ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)します。  
   
@@ -160,7 +160,7 @@ SQLRETURN SQLGetDiagField(
 ## <a name="header-fields"></a>ヘッダー フィールド  
  次の表に示されているヘッダー フィールドに含まれる、 *DiagIdentifier*引数。  
   
-|DiagIdentifier| の戻り値の型 : |戻り値|  
+|DiagIdentifier|の戻り値の型 : |戻り値|  
 |--------------------|-----------------|-------------|  
 |SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|このフィールドには、カーソル内の行の数が含まれています。 そのセマンティクスが異なります、 **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES2、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2、SQL_KEYSET_CURSOR_ATTRIBUTES2、および SQL_STATIC_CURSOR_ATTRIBUTES2、いることを示す情報の種類行カウントは各カーソルの種類 (SQL_CA2_CRC_EXACT と SQL_CA2_CRC_APPROXIMATE ビット) で使用できます。<br /><br /> ステートメント ハンドルののみとにした場合のみ、このフィールドの内容が定義された**SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**が呼び出されました。 呼び出す**SQLGetDiagField**で、 *DiagIdentifier*ハンドルには、ステートメント以外で SQL_DIAG_CURSOR_ROW_COUNT の SQL_ERROR が返されます。|  
 |SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR *|これは、基になる関数が実行される SQL ステートメントを記述する文字列です。 (特定の値をこのセクションで後で「動的関数のフィールドの値」を参照してください)。ステートメント ハンドルとへの呼び出し後にのみ、このフィールドの内容が定義された**SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**します。 呼び出す**SQLGetDiagField**で、 *DiagIdentifier*ハンドルには、ステートメント以外で SQL_DIAG_DYNAMIC_FUNCTION の SQL_ERROR が返されます。 呼び出す前にこのフィールドの値は未定義**SQLExecute**または**SQLExecDirect**します。|  
@@ -172,7 +172,7 @@ SQLRETURN SQLGetDiagField(
 ## <a name="record-fields"></a>レコードのフィールド  
  次の表に示されているレコード フィールドに含まれる、 *DiagIdentifier*引数。  
   
-|DiagIdentifier| の戻り値の型 : |戻り値|  
+|DiagIdentifier|の戻り値の型 : |戻り値|  
 |--------------------|-----------------|-------------|  
 |SQL_DIAG_CLASS_ORIGIN|SQLCHAR *|このレコードの SQLSTATE 値のクラス部分を定義するドキュメントを示す文字列。 その値が、Open Group と ISO コールレベル インターフェイスによって定義されたすべての SQLSTATEs"ISO 9075"。 (これらすべてが SQLSTATE クラスは、"IM") に固有の ODBC SQLSTATEs、その値は"ODBC 3.0" です。|  
 |SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|SQL_DIAG_ROW_NUMBER フィールドが、行セットまたは一連のパラメーターの有効な行番号の場合は、このフィールドには、結果セット内の列番号またはパラメーターのセット内のパラメーター数を表す値が含まれています。 結果セット列の番号は常に 1 から開始この状態レコードは、ブックマーク列に関係している場合、フィールドは 0 にすることができます。 パラメーター番号は、1 から始まります。 値 SQL_NO_COLUMN_NUMBER 状態レコードは、列の数またはパラメーターの番号に関連付けられていない場合があります。 ドライバーが、列の数またはこのレコードが関連付けられているパラメーターの数を判別できない場合、このフィールドは SQL_COLUMN_NUMBER_UNKNOWN 値を持ちます。<br /><br /> このフィールドの内容は、ステートメント ハンドルに対してのみ定義されます。|  
@@ -189,38 +189,59 @@ SQLRETURN SQLGetDiagField(
   
 |SQL ステートメント (SQL statement)<br /><br /> 実行|値<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|値<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
-|*alter ドメイン ステートメント*|「ALTER ドメイン」|SQL_DIAG_ALTER_DOMAIN|  
-|*alter table ステートメント*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
-|*アサーション定義*|「アサーションの作成」|SQL_DIAG_CREATE_ASSERTION|  
-|*文字セットの定義*|"文字セットの作成|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*照合順序定義*|「照合順序の作成」|SQL_DIAG_CREATE_COLLATION|  
-|*create index ステートメント*|「インデックスの作成」|SQL_DIAG_CREATE_INDEX|  
-|*create table ステートメント*|「テーブルの作成」|SQL_DIAG_CREATE_TABLE|  
-|*create view ステートメント*|「ビューの作成」|SQL_DIAG_CREATE_VIEW|  
+|*alter-domain-statement*|「ALTER ドメイン」|SQL_DIAG_ALTER_DOMAIN|  
+|*alter-table-statement*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
+|*assertion-definition*|「アサーションの作成」|SQL_DIAG_CREATE_ASSERTION|  
+|*character-set-definition*|"文字セットの作成|SQL_DIAG_CREATE_CHARACTER_SET|  
+|*collation-definition*|「照合順序の作成」|SQL_DIAG_CREATE_COLLATION|  
+|*domainn-definition*|「ドメインの作成」|SQL_DIAG_CREATE_DOMAIN|
+|*create-index-statement*|「インデックスの作成」|SQL_DIAG_CREATE_INDEX|  
+|*create-table-statement*|「テーブルの作成」|SQL_DIAG_CREATE_TABLE|  
+|*create-view-statement*|「ビューの作成」|SQL_DIAG_CREATE_VIEW|  
 |*カーソルの指定*|"カーソルの選択|SQL_DIAG_SELECT_CURSOR|  
-|*delete ステートメント配置*|"動的な削除の CURSOR"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
-|*delete ステートメントの検索*|[場所の削除]|SQL_DIAG_DELETE_WHERE|  
-n-定義 *|「ドメインの作成」|SQL_DIAG_CREATE_DOMAIN|  
-|*drop アサーションのステートメント*|「ドロップ アサーション」|SQL_DIAG_DROP_ASSERTION|  
-|*ドロップ文字セット stmt*|「ドロップ文字セット」|SQL_DIAG_DROP_CHARACTER_SET|  
-|*drop の照合順序-ステートメント*|「照合順序をドロップ」|SQL_DIAG_DROP_COLLATION|  
-|*drop ドメイン-ステートメント*|「ドロップ ドメイン」|SQL_DIAG_DROP_DOMAIN|  
-|*drop index-ステートメント*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
-|*drop schema のステートメント*|"DROP SCHEMA"|SQL_DIAG_DROP_SCHEMA|  
-|*drop-テーブル-ステートメント*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
-|*drop-変換-ステートメント*|「変換してドロップ」|SQL_DIAG_DROP_TRANSLATION|  
-|*drop-ビュー-ステートメント*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
--ステートメント *|「許可」|SQL_DIAG_GRANT|  
+|*delete-statement-positioned*|"動的な削除の CURSOR"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
+|*delete-statement-searched*|[場所の削除]|SQL_DIAG_DELETE_WHERE|  
+|*drop-assertion-statement*|「ドロップ アサーション」|SQL_DIAG_DROP_ASSERTION|  
+|*drop-character-set-stmt*|「ドロップ文字セット」|SQL_DIAG_DROP_CHARACTER_SET|  
+|*drop-collation-statement*|「照合順序をドロップ」|SQL_DIAG_DROP_COLLATION|  
+|*drop-domain-statement*|「ドロップ ドメイン」|SQL_DIAG_DROP_DOMAIN|  
+|*drop-index-statement*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
+|*drop-schema-statement*|"DROP SCHEMA"|SQL_DIAG_DROP_SCHEMA|  
+|*drop-table-statement*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
+|*drop-translation-statement*|"DROP TRANSLATION"|SQL_DIAG_DROP_TRANSLATION|  
+|*drop-view-statement*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
+|*grantstatement*|「許可」|SQL_DIAG_GRANT|
 |*insert ステートメント*|"INSERT"|SQL_DIAG_INSERT|  
 |*ODBC の手順-拡張機能*|"CALL"|SQL_DIAG_ 呼び出し|  
-|*revoke ステートメント*|"REVOKE"|SQL_DIAG_REVOKE|  
+|*revoke-statement*|"REVOKE"|SQL_DIAG_REVOKE|  
 |*スキーマ定義*|「スキーマの作成」|SQL_DIAG_CREATE_SCHEMA|  
-|*翻訳の定義*|「翻訳の作成」|SQL_DIAG_CREATE_TRANSLATION|  
-|*update ステートメント配置*|「動的な更新カーソル」|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
-|*update ステートメントの検索*|「場所の更新」|SQL_DIAG_UPDATE_WHERE|  
+|*translation-definition*|「翻訳の作成」|SQL_DIAG_CREATE_TRANSLATION|  
+|*update-statement-positioned*|「動的な更新カーソル」|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
+|*update-statement-searched*|「場所の更新」|SQL_DIAG_UPDATE_WHERE|  
 |Unknown|*空の文字列*|SQL_DIAG_UNKNOWN_STATEMENT|  
-  
-## <a name="sequence-of-status-records"></a>状態レコードのシーケンス  
+
+<!--
+These two malformed table rows were fixed by educated GUESS only.
+Each pair starts with the original flawed row.
+Flawed because treated as only two cells by HTML render,
+and because missing info anyway.
+Also, these flawed rows lacked '|' as their first nonWhitespace character (although markdown technically allows this omission, unfortunately).
+Arguably the following SQL.H file shows the sequence of the flawed rows in the table was suboptimal also.
+
+ftp://www.fpc.org/fpc32/VS6Disk1/VC98/INCLUDE/SQL.H
+
+GeneMi , 2019/01/19
+- - - - - - - - - - - - - -
+
+n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|  
+|*domain-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
+
+-statement*|"GRANT"|SQL_DIAG_GRANT|  
+|*grant-statement*|"GRANT"|SQL_DIAG_GRANT|
+-->
+
+## <a name="sequence-of-status-records"></a>状態レコードのシーケンス
+
  状態レコードは、行番号と診断の種類に基づいてシーケンス内に配置されます。 ドライバー マネージャーは、最終的な順序で生成される状態レコードが返されるを決定します。 ドライバーは、最終的な順序で生成される状態レコードが返されるを決定します。  
   
  診断レコードは、ドライバー マネージャーとドライバーの両方によって投稿されたは場合、ドライバー マネージャーが順序付ける責任を負います。  
@@ -254,7 +275,7 @@ n-定義 *|「ドメインの作成」|SQL_DIAG_CREATE_DOMAIN|
   
 |詳細|参照先|  
 |---------------------------|---------|  
-|診断データの構造体の複数のフィールドを取得します。|[SQLGetDiagRec 関数](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
+|診断データの構造体の複数のフィールドを取得します。|[SQLGetDiagRec 関数](sqlgetdiagrec-function.md)|  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

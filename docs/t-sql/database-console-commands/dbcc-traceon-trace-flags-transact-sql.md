@@ -1,7 +1,7 @@
 ---
 title: トレース フラグ (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/14/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,14 +21,15 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ddf60d76f41da844fe9a5187d8ce3824777716a0
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069828"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206468"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 トレース フラグは、サーバー固有の特性を設定したり、特定の動作を変更したりするときに使用します。 たとえば、トレース フラグ 3226 は、よく使用されるスタートアップ トレース フラグであり、エラー ログ内のバックアップの成功メッセージを抑制します。 トレース フラグは、パフォーマンスの問題を診断する場合や、ストアド プロシージャや複雑なコンピューター システムをデバッグする場合によく使用されますが、特定のワークロードに悪影響を及ぼす動作に対応するために Microsoft サポートがお勧めすることもあります。  ドキュメントに記載されているすべてのトレース フラグと Microsoft サポートがお勧めするトレース フラグは、指示どおりに使用した場合、運用環境で完全にサポートされます。  この一覧のトレース フラグには、特定の使用法に関して追加の考慮事項が存在する可能性があるため、ここに示したすべての推奨事項とサポート エンジニアによる推奨事項を慎重に検討することをお勧めします。 また、SQL Server での構成変更と同様に、展開する前に、運用環境以外でこのフラグを徹底的にテストすることをお勧めします。
@@ -116,7 +117,7 @@ ms.locfileid: "54069828"
 |**7412**|軽量のクエリ実行統計プロファイリング インフラストラクチャを有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/3170113)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降のビルドに適用されます。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、軽量プロファイリングが既定で有効になるため、このトレース フラグには効果はありません。<br /><br />**スコープ**: グローバルのみ|
 |**7471**|1 つのテーブルの異なる統計情報に対して複数の [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) を同時に実行できるようにします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/3156157)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ|
 |**7745**|データベースのシャットダウン時にクエリ ストアがデータをディスクにフラッシュしないように強制します。<br /><br />**注:** このトレースを使うと、以前にディスクにフラッシュされていないクエリ ストアのデータが、シャットダウン時に失われる可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシャットダウンでは、このトレース フラグの代わりに SHUTDOWN WITH NOWAIT コマンドを使って、即時シャットダウンを強制できます。<br /><br />**スコープ**: グローバルのみ|
-|**7752**|クエリ ストアの非同期読み込みを有効にします。<br /><br />**注:** クエリ ストアの同期読み込み (既定の動作) に関連して、[!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] で多数の QDS_LOADDB 待機が発生している場合は、このトレース フラグを使います。<br /><br />**スコープ**: グローバルのみ|
+|**7752**|クエリ ストアの非同期読み込みを有効にします。<br /><br />**注:** クエリ ストアの同期読み込み (データベース復旧時の既定の動作) に関連して、[!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] で多数の QDS_LOADDB 待機が発生している場合は、このトレース フラグを使います。<br /><br />**スコープ**: グローバルのみ|
 |**7806**|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]で専用管理者接続 (DAC) を有効にします。 既定では、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] で予約されている DAC リソースはありません。 詳細については、「 [データベース管理者用の診断接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。<br /><br />**スコープ**: グローバルのみ|  
 |**8011**|リソース モニターのリング バッファーを無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/920093)をご覧ください。<br /><br />**スコープ**: グローバル、セッション|
 |**8012**|スケジューラのリング バッファーを無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/920093)をご覧ください。<br /><br />**スコープ**: グローバルのみ|
@@ -126,7 +127,7 @@ ms.locfileid: "54069828"
 |**8020**|ワーキング セットの監視を無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/920093)をご覧ください。<br /><br />**スコープ**: グローバルのみ|
 |**8032**|キャッシュ制限パラメーターを [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] RTM の設定に戻します。これにより、一般に、より大きいキャッシュに対応できるようになります。 この設定は、頻繁に再利用されるキャッシュ エントリがキャッシュに収まらない場合や、サーバー構成オプション [[アドホック ワークロードの最適化]](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) でプラン キャッシュの問題を解決できない場合に使用します。<br /><br />**警告:** トレース フラグ 8032 を使用した場合、キャッシュが大きいために他のメモリ コンシューマー (バッファー プールなど) で利用できるメモリが少なくなると、パフォーマンスが低下することがあります。<br /><br />**スコープ**: グローバルのみ|   
 |**8048**|NUMA パーティション分割のメモリ オブジェクトを CPU パーティション分割に変換します。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/2809338)をご覧ください。<br /><br />**注:**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 8048 に効力はありません。<br /><br />**スコープ**: グローバルのみ|  
-|**8075**|64 ビット [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] でメモリ ページの割り当てエラーが発生したときに、[VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd) の断片化を減らします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/3074434)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10、および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3 に適用されます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 8075 に効力はありません。<br /><br />**スコープ**: グローバルのみ|
+|**8075**|64 ビット [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] でメモリ ページの割り当てエラーが発生したときに、[VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-2012-11x-gm) の断片化を減らします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/3074434)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10、および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3 に適用されます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 8075 に効力はありません。<br /><br />**スコープ**: グローバルのみ|
 |**8079**|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 がハードウェア レイアウトを調査し、NUMA ノードあたり 8 個以上の CPU をレポートしたシステムにソフト NUMA を自動的に構成できるようにします。 自動ソフト NUMA の動作は、ハイパースレッド (HT/論理プロセッサ) に対応しています。 パーティション分割と追加ノードの作成により、リスナーの数の増加、スケーリング、およびネットワークと暗号化機能の向上により、バックグラウンド処理が拡張されます。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 に適用されます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 8079 に効力はありません。<br /><br />**スコープ**: グローバルのみ| 
 |**8207**|トランザクション レプリケーションと CDC に対して単一の更新を有効にします。 サブスクライバーへの更新は、DELETE と INSERT のペアとしてレプリケートできます。 これは、UPDATE トリガーの起動など、ビジネス ルールを満たさない場合があります。 トレース フラグ 8207 を使用すると、1 行 (シングルトンの更新) のみに影響する一意の列への更新は、DELETE または INSERT のペアとしてではなく、UPDATE としてレプリケートされます。 一意の制約が存在する列に更新が影響を与える場合、または更新が複数行に影響する場合、更新は引き続き DELETE または INSERT のペアとしてレプリケートされます。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/302341)をご覧ください。<br /><br />**スコープ**: グローバルのみ|
 |**8721**|統計の自動更新を実行するときに、エラー ログにレポートします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/195565)をご覧ください。<br /><br />**スコープ**: グローバルのみ|

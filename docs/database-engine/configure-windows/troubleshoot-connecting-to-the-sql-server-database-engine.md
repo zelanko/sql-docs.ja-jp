@@ -14,15 +14,19 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 853f3c26f729db2256ad859174eeef16d4698453
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: d70a08ac868aa28a38f3e32a9fb32024bc345193
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531077"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300469"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server データベース エンジンへの接続のトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+
+  > [!div class="nextstepaction"]
+  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 これは、SQL Server データベース エンジンに接続できないときに使用するトラブルシューティング技法の完全一覧です。 ここにある手順は、最も頻繁に発生する問題の順に並べられているわけではありません。 最も基本的な問題からより複雑な問題の順に並べられています。 TCP/IP プロトコルを利用し、別のコンピューターから SQL Server に接続する場合を想定しています (それが最も一般的な状況です)。 SQL Server とクライアント アプリケーションの両方で Windows 10 を実行する SQL Server 2016 を対象にこれらの手順は書かれていますが、他のバージョンの SQL Server や他のオペレーティング システムにも一般的に適用されます (ほんの少しだけ変更があります)。
 
