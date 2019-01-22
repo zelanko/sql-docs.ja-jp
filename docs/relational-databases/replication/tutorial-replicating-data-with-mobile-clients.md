@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: サーバーとモバイル クライアントの間のレプリケーション (マージ) を構成する | Microsoft Docs'
+title: チュートリアル:サーバーとモバイル クライアントの間のレプリケーション (マージ) を構成する | Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545539"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130722"
 ---
-# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>チュートリアル: サーバーとモバイル クライアントの間のレプリケーション (マージ) を構成する
+# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>チュートリアル:サーバーとモバイル クライアントの間のレプリケーション (マージ) を構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 マージ レプリケーションは、中央のサーバーと、常時接続でないモバイル クライアントの間でデータを移動する際の問題を解決する有効なソリューションです。 レプリケーション ウィザードを使用すると、マージ レプリケーション トポロジを簡単に設定し、管理できます。 
 
@@ -37,7 +37,7 @@ ms.locfileid: "52545539"
 > * マージ パブリケーションにサブスクリプションを同期する。
   
 ## <a name="prerequisites"></a>Prerequisites  
-このチュートリアルは、データベースの基本的な操作は理解しているが、レプリケーション機能についてはあまり詳しくないユーザーを対象としています。 このチュートリアルを開始する前に、「[チュートリアル: レプリケーション用の SQL Server の準備](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)」を完了しておく必要があります。  
+このチュートリアルは、データベースの基本的な操作は理解しているが、レプリケーション機能についてはあまり詳しくないユーザーを対象としています。 このチュートリアルを行うには、[チュートリアル: レプリケーション用の SQL Server の準備](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)に関するページを完了しておく必要があります。  
   
 このチュートリアルを実行するには、SQL Server、SQL Server Management Studio (SSMS)、および AdventureWorks データベースが必要です。 
   
@@ -82,7 +82,7 @@ ms.locfileid: "52545539"
     ![[パブリケーションの種類] ページと [サブスクライバーの種類] ページ](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
   
    
-6. **[アーティクル]** ページで、**[テーブル]** ノードを展開します。 **Employee**、**SalesOrderHeader**、および **SalesOrderDetail** の 3 つのテーブルを選択します。 **[次へ]** を選択します。  
+6. **[アーティクル]** ページで、**[テーブル]** ノードを展開します。 次の 3 つのテーブルを選択します。**Employee**、**SalesOrderHeader**、および **SalesOrderDetail**。 **[次へ]** を選択します。  
 
    ![[アーティクル] ページでのテーブルの選択](media/tutorial-replicating-data-with-mobile-clients/mergearticles.png)
 
@@ -251,7 +251,7 @@ ms.locfileid: "52545539"
 詳細については、以下をご覧ください。  
 - [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)  
 - [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## <a name="synchronize-the-subscription-to-the-merge-publication"></a>マージ パブリケーションにサブスクリプションを同期する
 

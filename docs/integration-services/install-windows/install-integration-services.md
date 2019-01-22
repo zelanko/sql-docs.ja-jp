@@ -20,14 +20,18 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d612ad390500bd7e279d90872ed2b08c6afe2428
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d1ef66f97683b24014661fb6a1e633ce6ce06ce
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677200"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299919"
 ---
 # <a name="install-integration-services"></a>Integration Services のインストール
+
+  > [!div class="nextstepaction"]
+  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を含む任意またはすべてのコンポーネントを 1 つのセットアップ プログラムでインストールできます。 他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントと共にまたは単独で、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を 1 台のコンピューターにインストールするには、セットアップを使います。    
     
  この記事では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールする前に知っておく必要がある重要な注意点について説明します。 この記事の情報を参考にして各インストール オプションを評価することにより、インストール時に適切な選択を行うことができます。    

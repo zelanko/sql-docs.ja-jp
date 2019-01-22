@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d26d4d303ffb312a2dc289e9f7426fbc6d191de8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629042"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226529"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -56,52 +56,48 @@ CREATE SEQUENCE [schema_name . ] sequence_name
 ```  
   
 ## <a name="arguments"></a>引数  
- *sequence_name*  
- データベースに認識されるシーケンスの一意な名前を指定します。 データ型は **sysname** です。  
+*sequence_name*  
+データベースに認識されるシーケンスの一意な名前を指定します。 データ型は **sysname** です。  
   
- [ built_in_integer_type | user-defined_integer_type  
- シーケンスを任意の整数型として定義できます。 次の型を使用できます。  
+[ built_in_integer_type | user-defined_integer_type  
+シーケンスを任意の整数型として定義できます。 次の型を使用できます。  
   
 -   **tinyint** - 0 ～ 255 の範囲  
-  
 -   **smallint** - -32,768 ～ 32,767 の範囲  
-  
 -   **int** - -2,147,483,648 ～ 2,147,483,647 の範囲  
-  
 -   **bigint** - -9,223,372,036,854,775,808 ～ 9,223,372,036,854,775,807 の範囲  
-  
 -   小数点以下のない **decimal** と **numeric**。  
-  
 -   許可される型のいずれかに基づくユーザー定義データ型 (別名型)。  
   
- データ型が指定されていない場合は、**bigint** データ型が既定で使用されます。  
+データ型が指定されていない場合は、**bigint** データ型が既定で使用されます。  
   
- START WITH \<constant>  
- シーケンス オブジェクトによって返される最初の値。 **START** 値は、シーケンス オブジェクトの最小値以上および最大値以下にする必要があります。 新しいシーケンス オブジェクトの既定の開始値は、昇順のシーケンス オブジェクトの最小値および降順のシーケンス オブジェクトの最大値です。  
+START WITH \<constant>  
+シーケンス オブジェクトによって返される最初の値。 **START** 値は、シーケンス オブジェクトの最小値以上および最大値以下にする必要があります。 新しいシーケンス オブジェクトの既定の開始値は、昇順のシーケンス オブジェクトの最小値および降順のシーケンス オブジェクトの最大値です。  
   
- INCREMENT BY \<constant>  
- **NEXT VALUE FOR** 関数を呼び出すたびに必要なシーケンス オブジェクトの値を増分 (負の場合は減少) させるのに使用される値。 増分値が負の値の場合はシーケンス オブジェクトは降順で、それ以外の場合は昇順です。 0 は増分として使用できません。 新しいシーケンス オブジェクトの既定の増分値は 1 です。  
+INCREMENT BY \<constant>  
+**NEXT VALUE FOR** 関数を呼び出すたびに必要なシーケンス オブジェクトの値を増分 (負の場合は減少) させるのに使用される値。 増分値が負の値の場合はシーケンス オブジェクトは降順で、それ以外の場合は昇順です。 0 は増分として使用できません。 新しいシーケンス オブジェクトの既定の増分値は 1 です。  
   
- [ MINVALUE \<constant> | **NO MINVALUE** ]  
- シーケンス オブジェクトの境界を指定します。 新しいシーケンス オブジェクトの既定の最小値は、シーケンス オブジェクトのデータ型の最小値です。 これは、0 を **tinyint** データ型およびその他のすべてのデータ型の負の数。  
+[ MINVALUE \<constant> | **NO MINVALUE** ]  
+シーケンス オブジェクトの境界を指定します。 新しいシーケンス オブジェクトの既定の最小値は、シーケンス オブジェクトのデータ型の最小値です。 これは、0 を **tinyint** データ型およびその他のすべてのデータ型の負の数。  
   
- [ MAXVALUE \<constant> | **NO MAXVALUE**  
- シーケンス オブジェクトの境界を指定します。 新しいシーケンス オブジェクトの既定の最大値は、シーケンス オブジェクトのデータ型の最大値です。  
+[ MAXVALUE \<constant> | **NO MAXVALUE**  
+シーケンス オブジェクトの境界を指定します。 新しいシーケンス オブジェクトの既定の最大値は、シーケンス オブジェクトのデータ型の最大値です。  
   
- [ CYCLE | **NO CYCLE** ]  
- 最小値または最大値を超過した場合に、シーケンス オブジェクトを最小値 (または降順シーケンス オブジェクトの最大値) から再起動するか、例外をスローするかを指定するプロパティ。 新しいシーケンス オブジェクトの既定のサイクル オプションは、NO CYCLE です。  
+[ CYCLE | **NO CYCLE** ]  
+最小値または最大値を超過した場合に、シーケンス オブジェクトを最小値 (または降順シーケンス オブジェクトの最大値) から再起動するか、例外をスローするかを指定するプロパティ。 新しいシーケンス オブジェクトの既定のサイクル オプションは、NO CYCLE です。  
   
- サイクルは、開始値からではなく最小値または最大値から再起動されることに注意してください。  
+> [!NOTE]
+> SEQUENCE のサイクルは、開始値からではなく最小値または最大値から再起動されることに注意してください。  
   
- [ **CACHE** [\<constant> ] | NO CACHE ]  
- シーケンス番号を生成するのに必要なディスク IO の数を最小限に抑えることで、シーケンス オブジェクトを使用するアプリケーションのパフォーマンスが向上します。 CACHE の既定値です。  
+[ **CACHE** [\<constant> ] | NO CACHE ]  
+シーケンス番号を生成するのに必要なディスク IO の数を最小限に抑えることで、シーケンス オブジェクトを使用するアプリケーションのパフォーマンスが向上します。 CACHE の既定値です。  
   
- たとえば、キャッシュ サイズとして 50 を選択した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は キャッシュされた 50 の個々の値を保持しません。 現在の値とキャッシュに残っている値の数だけをキャッシュします。 これは、キャッシュを格納するために必要なメモリの量は、常にシーケンス オブジェクトのデータ型の 2 つのインスタンスと等しくなることを意味します。  
+たとえば、キャッシュ サイズとして 50 を選択した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は キャッシュされた 50 の個々の値を保持しません。 現在の値とキャッシュに残っている値の数だけをキャッシュします。 これは、キャッシュを格納するために必要なメモリの量は、常にシーケンス オブジェクトのデータ型の 2 つのインスタンスと等しくなることを意味します。  
   
 > [!NOTE]  
->  キャッシュ サイズを指定せずにキャッシュ オプションを有効にする場合、データベース エンジンによってサイズが選択されます。 ただし、この選択では一定のサイズが選択されるため、これに依存しないように注意してください。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、予告なしにキャッシュ サイズの算出方法を変更する場合があります。  
+> キャッシュ サイズを指定せずにキャッシュ オプションを有効にする場合、データベース エンジンによってサイズが選択されます。 ただし、この選択では一定のサイズが選択されるため、これに依存しないように注意してください。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、予告なしにキャッシュ サイズの算出方法を変更する場合があります。  
   
- **CACHE** オプションを使用して作成するときに予期しないシャットダウン (電源障害など) が発生すると、キャッシュ内のシーケンス番号が失われる可能性があります。  
+**CACHE** オプションを使用して作成するときに予期しないシャットダウン (電源障害など) が発生すると、キャッシュ内のシーケンス番号が失われる可能性があります。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  シーケンス番号は、現在のトランザクションの範囲外で生成されます。 シーケンス番号を使用しているトランザクションがコミットまたはロールバックされるかどうかにかかわらず、シーケンス番号は使用されます。  
@@ -167,7 +163,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
  次の例では、ユーザーの AdventureWorks\Larry テストのスキーマでシーケンスを作成するためのアクセス許可を付与します。  
   
-```  
+```sql  
 GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]  
 ```  
   
@@ -185,7 +181,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
   
  テストのスキーマを作成するには、次のステートメントを実行します。  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
 ```  
@@ -193,7 +189,7 @@ GO
 ### <a name="a-creating-a-sequence-that-increases-by-1"></a>A. 1 つずつ増加するシーケンスを作成します。  
  次の例では、Thierry は、it が使用されるたびに増加する CountBy1 をいずれかによってという名前のシーケンスを作成します。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 1  
     INCREMENT BY 1 ;  
@@ -203,7 +199,7 @@ GO
 ### <a name="b-creating-a-sequence-that-decreases-by-1"></a>B. 1 つずつ減少するシーケンスを作成する  
  次の例では、シーケンスは 0 から開始し、使用するたびに 1 つずつ減少します。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountByNeg1  
     START WITH 0  
     INCREMENT BY -1 ;  
@@ -213,7 +209,7 @@ GO
 ### <a name="c-creating-a-sequence-that-increases-by-5"></a>C. 5 つずつ増加するシーケンスを作成する  
  次の例では、使用されるたびに 5 つずつ増加するシーケンスを作成します。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 5  
     INCREMENT BY 5 ;  
@@ -223,7 +219,7 @@ GO
 ### <a name="d-creating-a-sequence-that-starts-with-a-designated-number"></a>D. 指定された数値から開始するシーケンスを作成する  
  テーブルをインポートした後、Thierry は最上位の ID 番号が 24,328 であることに気付きます。 Thierry には、24,329 で始まる番号を生成するシーケンスが必要です。 次のコードは 24,329 で始まり、1 ずつ増加するシーケンスを作成します。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.ID_Seq  
     START WITH 24329  
     INCREMENT BY 1 ;  
@@ -233,13 +229,13 @@ GO
 ### <a name="e-creating-a-sequence-using-default-values"></a>E. 既定値を使用してシーケンスを作成する  
  次の例では、既定値を使用して、シーケンスを作成します。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.TestSequence ;  
 ```  
   
  次のステートメントを実行して、シーケンスのプロパティを確認します。  
   
-```  
+```sql  
 SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;  
 ```  
   
@@ -258,15 +254,15 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 ### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. 特定のデータ型のシーケンスを作成する  
  次の例では、-32,768 ～ 32,767 の範囲の **smallint** データ型を使用して、シーケンスを作成します。  
   
-```  
-CREATE SEQUENCE SmallSeq  
+```sql  
+CREATE SEQUENCE SmallSeq 
     AS smallint ;  
 ```  
   
 ### <a name="g-creating-a-sequence-using-all-arguments"></a>G. すべての引数を使用してシーケンスを作成する  
  次の例では、0 ～ 255 の範囲の **smallint** データ型を使用して、DecSeq という名前のシーケンスを作成します。 シーケンスは 125 で始まり、数値が生成されるたびに 25 ずつ増加します。 シーケンスは、値が最大値の 200 を超える場合は繰り返すように設定されているため、最小値の 100 で再起動します。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.DecSeq  
     AS decimal(3,0)   
     START WITH 125  
@@ -280,7 +276,7 @@ CREATE SEQUENCE Test.DecSeq
   
  次のステートメントを実行して、最初の値、つまり `START WITH` オプションが 125であることを確認します。  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.DecSeq;  
 ```  
   
@@ -290,7 +286,7 @@ SELECT NEXT VALUE FOR Test.DecSeq;
   
  次のコードを実行して、キャッシュ サイズを確認し、現在の値を表示します。  
   
-```  
+```sql  
 SELECT cache_size, current_value   
 FROM sys.sequences  
 WHERE name = 'DecSeq' ;  

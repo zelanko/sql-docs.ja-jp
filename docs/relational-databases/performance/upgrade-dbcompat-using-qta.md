@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 28bd264498c681542c9cb27e79cdd21f3cf0821c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509944"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257097"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>クエリ調整アシスタントを使用したデータベースのアップグレード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +64,9 @@ QTA では、クエリ ストアから実行できる `SELECT` クエリのみ�
 QTA では、[カーディナリティ推定機能 (CE)](../../relational-databases/performance/cardinality-estimation-sql-server.md) バージョンでの変更によるクエリ パフォーマンス低下の既知の使用可能なパターンがターゲットとなります。 たとえば、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] およびデータベース互換レベル 110 から、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] およびデータベース互換レベル 140 にデータベースをアップグレードするときに、一部のクエリは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] に存在する CE バージョン (CE 70) での動作専用に設計されているため、その機能が低下する場合があります。 これは、CE 140 から CE 70 に戻すことが唯一のオプションであるという意味ではありません。 新しいバージョンの特定の変更のみが機能低下の原因である場合、特定のクエリではより適切に動作していた以前の CE バージョンの関連する部分のみを使用するようにクエリにヒントを示すことができ、新しい CE バージョンの他のすべての強化機能を引き続き利用できます。 また、機能が低下していない、ワークロード内の他のクエリでは、新しい CE の機能強化による利点が得られます。
 
 QTA によって検索される CE パターンは、次のとおりです。 
--  **独立性と相関関係**: 独立性を想定することで特定のクエリをより適切に推定することができる場合、クエリ ヒント `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` では、相関関係を考慮するフィルターの `AND` 述語を推定するときに最低限の選択度を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって実行プランが生成されます。 詳細については、[USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)に関する記述と、「[CE のバージョン](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce)」を参照してください。
+-  **独立性と相関関係**: 独立性を想定することで特定のクエリをより適切に推定することができる場合、クエリ ヒント `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` によって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、相関関係を考慮するフィルターの `AND` 述語を推定するときに、最低限の選択度を使用して実行プランが生成されます。 詳細については、[USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)に関する記述と、「[CE のバージョン](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce)」を参照してください。
 -  **単純な含有と基本含有**: 異なる結合含有で特定のクエリをより適切に推定できる場合、クエリ ヒント `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` では、既定の基本含有の推定ではなく、単純な含有の推定を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって実行プランが生成されます。 詳細については、[USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)に関する記述と、「[CE のバージョン](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce)」を参照してください。
--  100 行の**複数ステートメントのテーブル値関数 (MSTVF) の固定のカーディナリティ推定**と1 行: 100 行の TVF の既定の固定カーディナリティ推定で、([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 以前のバージョンのクエリ オプティマイザー CE モデルでの既定値に対応する) 1 行の TVF の固定推定を使用する場合より効率的なプランが得られない場合、実行プランを生成するためにクエリ ヒント `QUERYTRACEON 9488` が使用されます。 MSTVF の詳細については、「[ユーザー定義関数の作成 (データベース エンジン)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)」を参照してください。
+-  100 行の**複数ステートメントのテーブル値関数 (MSTVF) の固定のカーディナリティ推定**と1 行: 100 行の TVF の既定の固定カーディナリティ推定で、([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 以前のバージョンのクエリ オプティマイザー CE モデルでの既定値に対応する) 1 行の TVF の固定推定を使用する場合よりも効率的なプランが得られない場合、実行プランを生成するためにクエリ ヒント `QUERYTRACEON 9488` が使用されます。 MSTVF の詳細については、「[ユーザー定義関数の作成 (データベース エンジン)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)」を参照してください。
 
 > [!NOTE]
 > 最後の手段として、狭いスコープのヒントで、対象となるクエリ パターンに対して十分良い結果が得られない場合は、実行プランを生成するためにクエリ ヒント `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` を使用して、CE 70 を最大限に活用することも考慮されます。
@@ -98,10 +98,10 @@ QTA はセッション ベースの機能であり、セッションが初めて
 
        ![新しいデータベースのアップグレードの [設定] ウィンドウ](../../relational-databases/performance/media/qta-new-session-settings.png "新しいデータベースのアップグレードの [設定] ウィンドウ")
 
-        > [!IMPORTANT]
-        > 提案された *[最大サイズ]* は、短い時間のワークロードに適している可能性がある任意の値です。   
-        > しかし、非常に大きなワークロード (つまり、多くのさまざまなプランが生成される可能性がある場合) のベースラインおよびデータベース アップグレード後のワークロードに関する情報を保持するには十分でない可能性があることに注意してださい。   
-        > このようになることが予測される場合は、適切なより高い値を入力してください。
+       > [!IMPORTANT]
+       > 提案された *[最大サイズ]* は、短い時間のワークロードに適している可能性がある任意の値です。   
+       > しかし、非常に大きなワークロード (つまり、多くのさまざまなプランが生成される可能性がある場合) のベースラインおよびデータベース アップグレード後のワークロードに関する情報を保持するには十分でない可能性があることに注意してださい。   
+       > このようになることが予測される場合は、適切なより高い値を入力してください。
 
 4.  **[調整]** ウィンドウでセッション構成が終了し、次のステップでセッションを開いて続行するよう指示されます。 完了したら、**[完了]** をクリックします。
 
@@ -123,7 +123,7 @@ QTA はセッション ベースの機能であり、セッションが初めて
     -  **セッション名**: データベースの名前とセッションの作成日時で構成された、システムによって生成される名前。
     -  **状態**: セッションの状態 (アクティブまたは終了)。
     -  **説明**: システムによって生成され、ユーザーが選択したターゲット データベース互換レベルと、ビジネス サイクル ワークロードの日数で構成されます。
-    -  **開始時刻**: セッションが作成された日時。
+    -  **開始した時刻**: セッションが作成された日時。
 
     ![QTA のセッション管理ページ](../../relational-databases/performance/media/qta-session-management.png "QTA のセッション管理ページ")
 

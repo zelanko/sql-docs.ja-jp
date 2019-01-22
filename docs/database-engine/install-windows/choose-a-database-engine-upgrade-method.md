@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ba27a8364afc3d006341079a597cc0edcb6131fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bd388ede86a397fa83bf98deb017e294cb280752
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665611"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300159"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
   
 SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md.md)] のアップグレードを計画している場合、ダウンタイムとリスクを最小限に抑えるために、考慮すべきいくつかのアプローチがあります。 インプレース アップグレードの実行、新規インストールへの移行、またはローリング アップグレードの実行が可能です。 次の図は、これらのアプローチから選択する場合に役立ちます。 図の各アプローチについては、下でも説明しています。 図の意思決定ポイントに役立てるため、「 [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」も参照してください。  
   
@@ -64,11 +64,11 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
 ## <a name="migrate-to-a-new-installation"></a>新しいインストールへの移行  
  このアプローチでは、多くの場合に、新しいハードウェア上に、新しいバージョンのオペレーティング システムで新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境をビルドしながら、現在の環境を維持します。 新しい環境に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしたら、既存の環境から既存のユーザー データベースを新しい環境に移行し、ダウンタイムを最小限に抑えるように、新しい環境を準備するための多くの手順を実行します。 これらの手順では、以下の移行が含まれます。  
   
--   **システム オブジェクト:** 一部のアプリケーションでは、シングル ユーザー データベースのスコープ外の情報、エンティティ、オブジェクトに依存する場合があります。 通常、アプリケーションには、マスター データベースと msdb データベースへの依存関係があり、ユーザー データベースにも依存関係があります。 ユーザー データベースの外部に格納される (ユーザー データベースを正しく機能させるために必要な) すべてのデータは、対象のサーバー インスタンスで使用できるようにする必要があります。 たとえば、アプリケーションのログインが、マスター データベースにメタデータとして格納されているため、それらを移行先サーバーで再作成する必要があります。 アプリケーションまたはデータベースのメンテナンス プランが、メタデータが msdb データベースに格納されるエージェント ジョブに依存している場合、移行先サーバー インスタンスでこれらのジョブを再作成する必要があります。 同様に、サーバーレベルのトリガーのメタデータはマスターに格納されます。  
+-   **システム オブジェクト:** アプリケーションによっては、シングル ユーザー データベースのスコープの外部にある情報、エンティティ、オブジェクトに依存することがあります。 通常、アプリケーションには、マスター データベースと msdb データベースへの依存関係があり、ユーザー データベースにも依存関係があります。 ユーザー データベースの外部に格納される (ユーザー データベースを正しく機能させるために必要な) すべてのデータは、対象のサーバー インスタンスで使用できるようにする必要があります。 たとえば、アプリケーションのログインが、マスター データベースにメタデータとして格納されているため、それらを移行先サーバーで再作成する必要があります。 アプリケーションまたはデータベースのメンテナンス プランが、メタデータが msdb データベースに格納されるエージェント ジョブに依存している場合、移行先サーバー インスタンスでこれらのジョブを再作成する必要があります。 同様に、サーバーレベルのトリガーのメタデータはマスターに格納されます。  
  
    アプリケーションのデータベースを別のサーバー インスタンスに移動するときは、移行先サーバー インスタンス上のマスターおよび msdb に、依存しているエンティティとオブジェクトのすべてのメタデータを再作成する必要があります。 たとえば、データベース アプリケーションでサーバーレベルのトリガーを使用している場合、そのデータベースを新しいシステムでアタッチまたは復元するだけでは不十分です。 このデータベースは、マスター データベース内にこれらのトリガーのメタデータを手動で再作成しない限り、正常に動作しません。 詳細については、「[データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
   
--   **MSDB に格納されている Integration Services パッケージ:** MSDB にパッケージを格納する場合、 [dtutil Utility](../../integration-services/dtutil-utility.md) を使用して、それらのパッケージをスクリプトに記述するか、新しいサーバーに再配置する必要があります。 新しいサーバーでパッケージを使用する前に、パッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にアップグレードする必要があります。 詳細については、「 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)」を参照してください。  
+-   **MSDB に格納されている Integration Services パッケージ:** MSDB にパッケージを格納する場合、[dtutil Utility](../../integration-services/dtutil-utility.md) を使用して、それらのパッケージをスクリプトに記述するか、新しいサーバーに再配置する必要があります。 新しいサーバーでパッケージを使用する前に、パッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にアップグレードする必要があります。 詳細については、「 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)」を参照してください。  
   
 -   **Reporting Services 暗号化キー:** レポート サーバー構成で重要なのは、機密情報の暗号化に使用される対称キーのバックアップ コピーの作成です。 キーのバックアップ コピーは多くのルーチン処理で必要とされ、キーのバックアップ コピーにより新しいインストールで既存のレポート サーバー データベースを再利用できます。 詳細については、「 [Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md) 」および「 [Upgrade 」および「 Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください  
   
@@ -93,23 +93,23 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
   
 新規インストール アップグレードに必要な手順は、アタッチされたストレージを使用するか、または SAN ストレージを使用するかどうかによってやや異なります。  
   
--   **アタッチされたストレージ環境:** アタッチされたストレージを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境がある場合、次の図と図内のリンクで、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の新規インストール アップグレードに必要な手順を示しています。  
+-   **アタッチされたストレージ環境:** アタッチされたストレージを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境がある場合、次の図と図内のリンクで、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の新規インストール アップグレードに必要な手順を示しています。  
   
      ![アタッチされたストレージのバックアップと復元を使用した新しいインストール アップグレードの方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "アタッチされたストレージのバックアップと復元を使用した新しいインストール アップグレードの方法")  
   
--   **SAN ストレージ環境:**  SAN ストレージを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境がある場合、次の図と図内のリンクで、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の新規インストール アップグレードに必要な手順を示しています。  
+-   **SAN ストレージ環境:** SAN ストレージを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境がある場合、次の図と図内のリンクで、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の新規インストール アップグレードに必要な手順を示しています。  
   
      ![SAN ストレージのデタッチとアタッチを使用した新しいインストール アップグレードの方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN ストレージのデタッチとアタッチを使用した新しいインストール アップグレードの方法")  
   
 ## <a name="rolling-upgrade"></a>ローリング アップグレード  
  ローリング アップグレードは、特定の順序でアップグレードする必要がある複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを含む SQL Server ソリューション環境で、アップタイムを最大にし、リスクを最小にして、機能を維持するために必要です。 ローリング アップグレードは、基本的に特定の順序での複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのアップグレードであり、既存の各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対してインプレース アップグレードを実行するか、またはアップグレード プロジェクトの一環としてハードウェアやオペレーティング システムのアップグレードを容易にするために、新規インストール アップグレードを実行します。 ローリング アップグレード アプローチを使用する必要がある多くのシナリオがあります。 これらを以下の各記事で説明します。  
   
--   Always-On 可用性グループ: この環境でローリング アップグレードを実行する詳細な手順については、「 [Always-On 可用性グループ レプリカ インスタンスのアップグレード](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)」を参照してください。    
+-   Always On 可用性グループ: この環境でローリング アップグレードを実行する詳細な手順については、「[Always On 可用性グループ レプリカ インスタンスのアップグレード](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)」を参照してください。    
 -   フェールオーバー クラスター インスタンス: この環境でローリング アップグレードを実行する詳細な手順については、「[SQL Server フェールオーバー クラスター インスタンスのアップグレード](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)」を参照してください。    
--   ミラー化インスタンス: この環境でローリング アップグレードを実行する詳細な手順については、「 [ミラー化されたインスタンスのアップグレード](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)」を参照してください。    
--   ログ配布インスタンス: この環境でローリング アップグレードを実行する詳細な手順については、「[SQL Server 2016 へのログ配布のアップグレード &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)」を参照してください。    
+-   ミラー化インスタンス: この環境でローリング アップグレードを実行する詳細な手順については、「[ミラー化されたインスタンスのアップグレード](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)」を参照してください。    
+-   ログ配布インスタンス: この環境でローリング アップグレードを実行する詳細な手順については、[SQL Server へのログ配布のアップグレード &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md) に関するページを参照してください。    
 -   レプリケーション環境: この環境でローリング アップグレードを実行する詳細な手順については、「[レプリケートされたデータベースのアップグレード](../../database-engine/install-windows/upgrade-replicated-databases.md)」を参照してください。  
--   SQL Server Reporting Services スケールアウト環境: この環境でローリング アップグレードを実行する詳細な手順については、「 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。  
+-   SQL Server Reporting Services スケールアウト環境: この環境でローリング アップグレードを実行する詳細な手順については、「[Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」 (Reporting Services のアップグレードと移行) を参照してください。  
   
 ## <a name="next-steps"></a>次の手順
  [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   

@@ -14,12 +14,12 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2deb67c8fff00cc2780fc28e4a04e938db41c4a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c6df1fe4c6954539afe8043ffb36c89e5f428fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764650"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128552"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>レプリケーション モニターのインターフェイスの概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "47764650"
   
      このタブには、すべての種類のレプリケーションで使用されるエージェントおよびジョブに関する詳細情報が表示されます。 また、各エージェントとジョブを開始および停止することもできます。  
   
- 詳細については、「[パブリッシャーの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)」を参照してください。  
+ 詳細については、「[パブリッシャーの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
  レプリケーション モニターでは、パブリッシャー ノードのコンテキスト メニューも使用できます。 左ペインのパブリッシャーを右クリックすると、以下の操作を行うことができます。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "47764650"
   
          エラー メッセージに、エージェントが実行されない理由についての詳細情報が表示され、パブリケーションに関連するエージェントに対するトラブルシューティングを開始できます。  
   
- 詳細については、「[パブリケーションの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)」と「[View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)」 (パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;) を参照してください。  
+ 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
  レプリケーション モニターでは、パブリケーション ノードのコンテキスト メニューも使用できます。 左ペインのパブリケーションを右クリックすると、以下の操作を行うことができます。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "47764650"
   
          このタブには、同期中に処理される各アーティクルの詳細な統計が表示されます。この統計には、各処理フェーズ (変更のアップロードやダウンロードなど) にかかる時間などが含まれます。 このタブによって、速度低下の原因となっているテーブルを特定することができます。また、マージ サブスクリプションのパフォーマンスに関するトラブルシューティングを開始するのにも最適です。  
   
- 詳細については、「[サブスクリプションの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)」および「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する (レプリケーション モニター)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+ 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>情報の表示とエージェント プロファイル関連のタスクの実行  
  レプリケーション モニターには、エージェント プロファイルを管理するためのさまざまなダイアログ ボックスが用意されています。 エージェント プロファイルとは、エージェントのパラメーターのセットであり、これらのパラメーターによってエージェントの動作が決定されます。 詳しくは、「 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。 これらのダイアログ ボックスには以下のものがあります。  
@@ -236,6 +236,6 @@ ms.locfileid: "47764650"
      このダイアログ ボックスでは新しいプロファイルを作成できます。新しいプロファイルには、既存のプロファイルの値をオプションで指定できます。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab01e5745293bd4e50f59358b17a0fa5d06d9e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e6192da995dac47d974c3c3f2ff6c5f576acc2e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785240"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123963"
 ---
 # <a name="publisher-information-agents"></a>パブリッシャー情報、[エージェント]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ ms.locfileid: "47785240"
   
  これらのジョブの詳細については、「[Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)」 (レプリケーション エージェントの管理) を参照してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  エージェントまたはジョブに関する情報を表示するには、 **[エージェントとジョブの種類]** メニューから選択します。 エージェントまたはジョブに関する詳細情報やタスクを調べるには、対象のエージェントまたはジョブの行を右クリックし、ショートカット メニューのオプションをクリックします。 グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
   
 -   **[並べ替え]**: **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
   
 -   **[表示する列の選択]**: **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
   
--   **[フィルター]**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター選択します。  
+-   **[フィルター]**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
   
 -   **[フィルターのクリア]**: グリッドのフィルター設定をすべてクリアします。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47785240"
  **ステータス**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   Error  
   
 -   [再試行]  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47785240"
  **ステータス**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   Error  
   
 -   [再試行]  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47785240"
  **ステータス**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   Error  
   
 -   [再試行]  
   
@@ -176,7 +176,7 @@ ms.locfileid: "47785240"
  **ステータス**  
  それぞれのジョブの状態。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   Error  
   
 -   [再試行]  
   
@@ -198,8 +198,7 @@ ms.locfileid: "47785240"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [パブリッシャーの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

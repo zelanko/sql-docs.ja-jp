@@ -12,18 +12,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30cce2024ded94131cb8c2067b65ba7d4f980663
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 784776001ea5280ace3e69f24cf450b366f9322c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671967"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300389"
 ---
 # <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Microsoft SQL リレーショナル データベースを使用するためのガイダンス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 このセクションでは、Microsoft SQL リレーショナル データベース、データベース オブジェクト、データ型、およびデータの操作や管理に使用されるメカニズムに関連する機能およびタスクついて説明します。 この情報は、ほとんどのバージョンの [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)] に共通しています。 個々のトピックでは、一部の機能が特定のプラットフォームに限定されていると記載されている場合があります。 各プラットフォームの詳細については、次のリンクを参照してください。 
   

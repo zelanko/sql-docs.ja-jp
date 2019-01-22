@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbab8cc4eb36d81c0aa6f1ff40c2f498157257f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e43c8f3fb6be391bcead0c2671d73d46d5d2b261
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525947"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226509"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016 の非推奨のフルテキスト検索機能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52525947"
   
 |非推奨の機能|代替|機能名|機能 ID|  
 |------------------------|-----------------|------------------|----------------|  
-|FULLTEXTCATALOGPROPERTY プロパティ: LogSize|[なし] :|FULLTEXTCATALOGPROPERTY **('LogSize')**|211|  
+|FULLTEXTCATALOGPROPERTY プロパティLogSize|[なし] :|FULLTEXTCATALOGPROPERTY **('LogSize')**|211|  
 |FULLTEXTSERVICEPROPERTY プロパティ<br /><br /> ConnectTimeout<br /><br /> DataTimeout|[なし] :|FULLTEXTSERVICEPROPERTY **('ConnectTimeout')**<br /><br /> FULLTEXTSERVICEPROPERTY **('DataTimeout'**)|210<br /><br /> 209|  
 |sp_fulltext_catalog|CREATE FULL CATALOG<br /><br /> ALTER FULLTEXT CATALOG<br /><br /> DROP FULLTEXT CATALOG|sp_fulltext_catalog|84|  
 |sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|CREATE FULL INDEX<br /><br /> ALTER FULLTEXT INDEX<br /><br /> DROP FULLTEXT INDEX|sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|86<br /><br /> 87<br /><br /> 85|  
@@ -53,10 +53,10 @@ ms.locfileid: "52525947"
 |------------------------|-----------------|------------------|----------------|  
 |CONTAINS および CONTAINSTABLE 汎用 NEAR 演算子<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|カスタム NEAR 演算子<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG オプション<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|[なし] :|CREATE FULLTEXT CATLOG IN PATH<br /><br /> [なし] :<sup>*</sup>|237<br /><br /> なし*|  
-|DATABASEPROPERTYEX プロパティ : IsFullTextEnabled|[なし] :|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
+|DATABASEPROPERTYEX プロパティ: IsFullTextEnabled|[なし] :|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |sp_detach_db オプション<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|[なし] :|sp_detach_db @keepfulltextindexfile|226|  
 |sp_fulltext_service アクションの値: resource_usage には機能がありません。|なし|sp_fulltext_service @action=resource_usage|200|  
   
- * **SQL Server:Deprecated Features** オブジェクトは、CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup* の使用を監視しません。  
+ &#42;**SQL Server:Deprecated Features** オブジェクトは、CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup* の使用を監視しません。  
   
   

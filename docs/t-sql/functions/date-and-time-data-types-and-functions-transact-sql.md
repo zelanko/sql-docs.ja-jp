@@ -21,18 +21,18 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d52233102f5ebe9a812e8071556afa4aff0316f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b95da5f74481fed0053f31cde326fe271e79abc9
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511711"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299219"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日付と時刻のデータ型および関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 このトピックの次のセクションでは、すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数について説明します。
 -   [日付および時刻のデータ型](#DateandTimeDataTypes)  
@@ -51,12 +51,12 @@ ms.locfileid: "52511711"
   
 |データ型|Format|範囲|精度|ストレージ サイズ (バイト)|ユーザー定義の 1 秒未満の秒の有効桁数|タイム ゾーン オフセット|  
 |---|---|---|---|---|---|---|
-|[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 ～ 23:59:59.9999999|100 ナノ秒|3 ～ 5|[ユーザー アカウント制御]|いいえ|  
+|[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 ～ 23:59:59.9999999|100 ナノ秒|3 ～ 5|可|いいえ|  
 |[date](../../t-sql/data-types/date-transact-sql.md)|-YYYY-MM-DD|0001-01-01 ～ 31.12.99|1 日|3|いいえ|いいえ|  
 |[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss|1900-01-01 ～ 2079-06-06|1 分|4|いいえ|いいえ|  
 |[datetime](../../t-sql/data-types/datetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnn]|1753-01-01 ～ 9999-12-31|0.00333 秒|8|いいえ|いいえ|  
-|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 ～ 9999-12-31 23:59:59.9999999|100 ナノ秒|6 ～ 8|[ユーザー アカウント制御]|いいえ|  
-|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000 ～ 9999-12-31 23:59:59.9999999 (UTC)|100 ナノ秒|8 ～ 10|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 ～ 9999-12-31 23:59:59.9999999|100 ナノ秒|6 ～ 8|可|いいえ|  
+|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000 ～ 9999-12-31 23:59:59.9999999 (UTC)|100 ナノ秒|8 ～ 10|可|可|  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) データ型は、日付または時刻のデータ型ではありません。 **timestamp** は、**rowversion** の非推奨のシノニムです。  
@@ -99,11 +99,11 @@ ms.locfileid: "52511711"
 |機能|構文|戻り値|戻り値のデータ型|決定性|  
 |---|---|---|---|---|
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|返します、 **日付** 指定された年、月、および日の値です。|**date**|決定的|  
-|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|指定された有効桁数を使用して、指定された日付と時刻を表す **datetime2** 値を返します。|**datetime2(** *precision* **)**|決定的|  
+|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|指定された有効桁数を使用して、指定された日付と時刻を表す **datetime2** 値を返します。|**datetime2(** _precision_ **)**|決定的|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds*)|返します、 **datetime** 指定した日付と時刻の値です。|**datetime**|決定的|  
-|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|指定されたオフセットおよび有効桁数を使用して、指定された日付と時刻を表す **datetimeoffset** 値を返します。|**datetimeoffset(** *precision* **)**|決定的|  
+|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|指定されたオフセットおよび有効桁数を使用して、指定された日付と時刻を表す **datetimeoffset** 値を返します。|**datetimeoffset(** _precision_ **)**|決定的|  
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute* )|返します、 **smalldatetime** 指定した日付と時刻の値です。|**smalldatetime**|決定的|  
-|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|指定された有効桁数を使用して、指定された時刻を表す **time** 値を返します。|**time(** *precision* **)**|決定的|  
+|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|指定された有効桁数を使用して、指定された時刻を表す **time** 値を返します。|**time(** _precision_ **)**|決定的|  
   
 ###  <a name="GetDateandTimeDifference"></a> 日付と時刻の差の値を返す関数
   
@@ -127,10 +127,10 @@ ms.locfileid: "52511711"
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|現在のセッションにおける、SET DATEFIRST の現在の値を返します。|**tinyint**|非決定的|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **@***number_var* }|週の最初の曜日を 1 ～ 7 の数値で設定します。|適用なし|適用なし|  
-|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@***format_var* }|**datetime** 型または **smalldatetime** 型のデータを入力する場合の日付要素 (月、日、年) の順番を設定します。|適用なし|適用なし|  
+|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@**_format_var_ }|**datetime** 型または **smalldatetime** 型のデータを入力する場合の日付要素 (月、日、年) の順番を設定します。|適用なし|適用なし|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|現在使用している言語の名前を返します。 @@LANGUAGE は、日付または時刻の関数ではありません。 ただし、言語設定は日付関数の出力に影響します。|適用なし|適用なし|  
-|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'***language***'** &#124; **@***language_var* }|セッションおよびシステム メッセージの言語環境を設定します。 SET LANGUAGE は日付または時刻の関数ではありません。 ただし、言語設定は日付関数の出力に影響します。|適用なし|適用なし|  
-|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'***language***'** ]|サポートされている言語の日付形式に関する情報を返します。 **sp_helplanguage** は、日付または時刻のストアド プロシージャではありません。 ただし、言語設定は日付関数の出力に影響します。|適用なし|適用なし|  
+|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'**_language_**'** &#124; **@***language_var* }|セッションおよびシステム メッセージの言語環境を設定します。 SET LANGUAGE は日付または時刻の関数ではありません。 ただし、言語設定は日付関数の出力に影響します。|適用なし|適用なし|  
+|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'**_language_**'** ]|サポートされている言語の日付形式に関する情報を返します。 **sp_helplanguage** は、日付または時刻のストアド プロシージャではありません。 ただし、言語設定は日付関数の出力に影響します。|適用なし|適用なし|  
   
 ###  <a name="ValidateDateandTimeValues"></a> 日付と時刻の値を検証する関数
   

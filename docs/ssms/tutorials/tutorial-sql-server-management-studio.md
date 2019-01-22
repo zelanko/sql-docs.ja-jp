@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: SQL Server Management Studio (SSMS) | Microsoft Docs'
+title: チュートリアル:SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5deb2b29c70187bb0222e21df7193f300f7eb7b0
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: f8b1560ef694885ae0debbf06f2d61d23c5d0f66
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970543"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299399"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のチュートリアル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 SQL Server Management Studio (SSMS) のチュートリアルでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインフラストラクチャを管理するための統合環境について説明します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを構成、監視、および管理するためのグラフィカル インターフェイスを提供します。 さらに、データベースなどの、アプリケーションで使用されるデータ層コンポーネントを配置、監視、およびアップグレードすることもできます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、スクリプトを編集およびデバッグするための [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、XML の各言語エディターも提供します。  
   
@@ -64,7 +64,7 @@ SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的
     このチュートリアルでは、環境レイアウトの変更など、SSMS 環境の構成の基本を学習します。 このチュートリアルでは、さまざまな SSMS コンポーネントについても説明します。 
   
 
-- [チュートリアル: SSMS を使用するためのヒントとテクニック](ssms-tricks.md)
+- [チュートリアル: SSMS を使用するための追加のヒントとテクニック](ssms-tricks.md)
 
     このチュートリアルでは、SSMS の使用に関するその他のヒントとテクニックを学習します。 チュートリアルは次のような内容です。
     - テキストのコメント化とコメント解除
@@ -81,7 +81,7 @@ SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的
 
   -   最新バージョンの [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) をインストールします。  
 
-最初のセクションではデータベースを作成する手順を説明しますが、[AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)では他のサンプル データベースが見つかります。 SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
+最初のセクションではデータベースを作成する手順を説明しますが、[AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)に、データベースの他のサンプルもあります。 SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
 
 
   

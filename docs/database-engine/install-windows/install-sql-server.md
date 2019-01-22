@@ -15,16 +15,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 89bb096f92bfd2ae5cc4da46ba99fb4ae41929d0
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600892"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300369"
 ---
 # <a name="install-sql-server"></a>SQL Server をインストールする
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
+
  
  [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] は 64 ビット アプリケーションでのみ使用できるようになりました。 SQL Server の入手およびインストールの方法に関する重要な詳細情報を次に示します。
 
@@ -32,9 +35,9 @@ ms.locfileid: "51600892"
   
 *  **オプション**: インストール ウィザード、コマンド プロンプト、または sysprep でインストールします。
  
-*  **要件**: インストールする前に、「 [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md) 
+*  **要件**: インストールする前に、「[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」に記載されているインストール要件、システム構成チェック、セキュリティ上の考慮事項を確認してください。 
 
-* **プロセス**: インストール プロセスの完全な手順については、「 [SQL Server のインストール](../../database-engine/install-windows/installation-for-sql-server-2016.md) 」を参照してください。
+* **プロセス**: インストール プロセスの完全な手順については、「[SQL Server のインストール](../../database-engine/install-windows/installation-for-sql-server-2016.md)」を参照してください。
 
 * **サンプル データベースとサンプル コード**: 
     * これらは、既定では SQL Server セットアップの一環としてインストールされません。 

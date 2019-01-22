@@ -2,7 +2,7 @@
 title: SQL Server Integration Services (SSIS) Scale Out のトラブルシューティング | Microsoft Docs
 description: この記事では、SSIS Scale Out での一般的な問題をトラブルシューティングする方法について説明します
 ms.custom: performance
-ms.date: 05/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 20473c4555a0f0a98484bd66ef93ce659d51a2a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732496"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206328"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out のトラブルシューティング
 
@@ -38,7 +38,7 @@ SSIS Scale Out には、SSIS カタログ データベース `SSISDB`、Scale Ou
 
     SSMS のオブジェクト エクスプローラーで **[SSISDB]** を右クリックして、**[Scale Out 機能が有効です]** を確認します。
 
-    ![Scale Out が有効になっているか](media\isenabled.PNG)
+    ![Scale Out が有効になっているか](media/isenabled.PNG)
 
     プロパティ値が False の場合は、ストアド プロシージャ `[catalog].[enable_scaleout]` を呼び出して、Scale Out を有効にします。
 
@@ -131,21 +131,21 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
-    値の名前: **SendTrustedIssuerList** 
+    値の名前:**SendTrustedIssuerList** 
 
-    値の型: **REG_DWORD** 
+    値の型:**REG_DWORD** 
 
-    値のデータ: **0 (False)**
+    値のデータ:**0 (False)**
 
 4.  手順 2 の説明のように自己署名以外の証明書をすべて消去できない場合、次のレジストリ キーの値を 2 に設定します。
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
-    値の名前: **ClientAuthTrustMode** 
+    値の名前:**ClientAuthTrustMode** 
 
-    値の型: **REG_DWORD** 
+    値の型:**REG_DWORD** 
 
-    値データ: **2**
+    値のデータ:**2**
 
     > [!NOTE]
     > 自己署名以外の証明書がルート証明書ストアにある場合は、クライアント証明書の認証が失敗します。 詳細については、「[Internet Information Services (IIS) 8 may reject client certificate requests with HTTP 403.7 or 403.16 errors](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ)」(インターネット インフォメーション サービス (IIS) 8 で HTTP 403.7 エラーまたは 403.16 エラーが発生してクライアント証明書の要求が拒否される可能性がある) を参照してください。
@@ -224,4 +224,4 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 ## <a name="next-steps"></a>次の手順
 詳細については、SSIS Scale Out のセットアップと構成に関する以下の記事を参照してください。
 -   [1 台のコンピューターでの Integration Services (SSIS) Scale Out の概要](get-started-with-ssis-scale-out-onebox.md)
--   [チュートリアル: Integration Services Scale Out をセットアップする](walkthrough-set-up-integration-services-scale-out.md)
+-   [チュートリアル:Integration Services Scale Out をセットアップする](walkthrough-set-up-integration-services-scale-out.md)

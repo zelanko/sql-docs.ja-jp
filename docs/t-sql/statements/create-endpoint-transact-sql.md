@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3920cdf30575d5b51948fe7789d568a1dacc961
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596221"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124582"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47596221"
   
      この部分では、エンドポイントでサポートされているペイロードを定義します。 ペイロードには、サポートされている [!INCLUDE[tsql](../../includes/tsql-md.md)]、Service Broker、データベース ミラーリングのうちのいずれかを指定できます。 ここでは、言語固有の情報も指定できます。  
   
-> **注:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] でネイティブ XML Web サービス (SOAP/HTTP エンドポイント) は削除されました。  
+> **注:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] からは、ネイティブ XML Web サービス (SOAP/HTTP エンドポイント) は削除されました。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  以下は、TCP プロトコル オプションにのみ適用されます。  
   
- LISTENER_PORT **=***listenerPort*  
+ LISTENER_PORT **=**_listenerPort_  
  Service Broker TCP/IP プロトコルによって接続を受信待ちされるポート番号を指定します。 通常は 4022 が使用されますが、1024 ～ 32767 の範囲であればどの番号でも有効です。  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "* ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
  エンドポイントが受信待ちする IP アドレスを指定します。 既定値は ALL です。 したがって、リスナーは任意の有効な IP アドレスでの接続を許可します。  
   
  完全修飾ドメイン名の代わりに IP アドレスを使用してデータベース ミラーリングを構成する (`ALTER DATABASE SET PARTNER = partner_IP_address` または `ALTER DATABASE SET WITNESS = witness_IP_address`) 場合は、ミラーリング エンドポイントの作成時に `LISTENER_IP=ALL` の代わりに `LISTENER_IP =IP_address` を指定する必要があります。  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  別の場所にあるサービスのメッセージを破棄します。 これは既定値です。  
   
- MESSAGE_FORWARD_SIZE **=***forward_size*  
+ MESSAGE_FORWARD_SIZE **=**_forward_size_  
  転送するメッセージを格納する際に使用するエンドポイントに対して割り当てる最大記憶容量を、MB 単位で指定します。  
   
  **DATABASE_MIRRORING オプション**  

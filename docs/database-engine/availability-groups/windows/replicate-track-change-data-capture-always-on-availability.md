@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8738e882455cfdb05630754e94f349d2e5f0204a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a40d8209fd01c6f5e3c4ec2c3d4344d2b62ee35
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512117"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125952"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>レプリケーション、変更の追跡、変更データ キャプチャ - Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -196,9 +196,9 @@ Always On 可用性グループに含まれるデータベースで変更デー�
   
 -   単一の可用性グループ内でマージ レプリケーションとパブリッシング データベースを使用する場合は、次のことが適用されます。  
   
-    -   プッシュ サブスクリプション: パブリッシャーとディストリビューターの両方が少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]を実行する必要があります。  
+    -   プッシュ サブスクリプション: パブリッシャーとディストリビューターの両方が少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] を実行する必要があります。  
   
-    -   プル サブスクリプション: パブリッシャー、ディストリビューター、およびサブスクライバー データベースは、少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]である必要があります。 これは、可用性グループがセカンダリにフェールオーバーする方法を、サブスクライバー上のマージ エージェントが把握しておく必要があることが原因です。  
+    -   プル サブスクリプション: パブリッシャー、ディストリビューター、およびサブスクライバー データベースは、少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 上にある必要があります。 これは、可用性グループがセカンダリにフェールオーバーする方法を、サブスクライバー上のマージ エージェントが把握しておく必要があることが原因です。  
   
 -   パブリッシャーのインスタンスは、Always On 可用性グループに参加するために必要なすべての前提条件を満たす必要があります。 詳細については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。  
   
@@ -208,10 +208,10 @@ Always On 可用性グループに含まれるデータベースで変更デー�
 |||||  
 |-|-|-|-|  
 ||**パブリッシャー**|**ディストリビューター**|**サブスクライバー (Subscriber)**|  
-|**トランザクション**|[ユーザー アカウント制御]<br /><br /> 注: 双方向の相互トランザクション レプリケーションのサポートは含まれません。|[ユーザー アカウント制御]|[ユーザー アカウント制御]| 
+|**トランザクション**|可<br /><br /> 注:双方向の相互トランザクション レプリケーションのサポートは含まれません。|可|可| 
 |**P2P**|いいえ|いいえ|いいえ|  
-|**Merge**|[ユーザー アカウント制御]|いいえ|いいえ|  
-|**スナップショット**|[ユーザー アカウント制御]|いいえ|[ユーザー アカウント制御]|
+|**Merge**|可|いいえ|いいえ|  
+|**スナップショット**|可|いいえ|可|
   
  **データベース ミラーリングでディストリビューター データベースを使用することはできません。  
   
@@ -230,7 +230,7 @@ Always On 可用性グループに含まれるデータベースで変更デー�
   
 -   [AlwaysOn パブリケーション データベースのメンテナンス &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [管理 &#40;レプリケーション&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [レプリケーション管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   

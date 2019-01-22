@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e63f83970eaf4d96f4d4f02494716914e8ca6a9c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8f5db32be5b749ad2f9b83050c3d4edb0ae30c27
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662931"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226479"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51662931"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DUP_KEY|  
-|メッセージ テキスト|オブジェクト名 '%.*ls' およびインデックス名 '%.\*ls' の重複キーが見つかったため、CREATE UNIQUE INDEX が終了しました。  重複キーの値は %ls です。|  
+|メッセージ テキスト|オブジェクト名 '%.\*ls' およびインデックス名 '%.\*ls' の重複キーが見つかったため、CREATE UNIQUE INDEX が終了しました。  重複キーの値は %ls です。|  
   
 ## <a name="explanation"></a>説明  
 このエラーは、一意インデックスを作成しようとしたときに、指定した値がテーブルの 1 つ以上の行に含まれている場合に発生します。 一意インデックスは、インデックスを作成して UNIQUE キーワードを指定した場合、または UNIQUE 制約を作成した場合に作成されます。 インデックスまたは制約で定義された列の値が重複する行をテーブルに含めることはできません。  

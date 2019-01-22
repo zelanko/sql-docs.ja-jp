@@ -1,7 +1,7 @@
 ---
 title: セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0cfe8b4bf09b545a5141a2896eb757254265e092
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534770"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206408"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) は、既存の [Always Encrypted ](always-encrypted-database-engine.md) 機能を拡張して、データを機密性に保ちながら機密データに対してより高度な機能を有効にすることができます。
@@ -26,14 +27,14 @@ ms.locfileid: "52534770"
 セキュリティで保護されたエンクレーブが設定された Always Encrypted を設定するには、次のワークフローを使用します。
 
 1. ホスト ガーディアン サービス (HGS) 構成証明を構成します。
-2. SQL Server コンピューターに [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] をインストールします。
+2. SQL Server コンピューターに [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] をインストールします。
 3. クライアント/開発用コンピューターにツールをインストールします。
 4. SQL Server インスタンスでエンクレーブの種類を構成します。
 5. エンクレーブ対応キーをプロビジョニングします。
 6. 機密データを含む列を暗号化します。
 
->[!NOTE]
->テスト環境を設定し、SSMS でセキュリティで保護されたエンクレーブが設定された Always Encrypted の機能を試す方法の手順を説明したチュートリアルについては、「[Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)」(チュートリアル: SSMS を使用するセキュリティで保護されたエンクレーブが設定された Always Encrypted の概要) を参照してください。
+> [!NOTE]
+> テスト環境を設定し、SSMS でセキュリティで保護されたエンクレーブが設定された Always Encrypted の機能を試す方法の手順を説明したチュートリアルについては、「[Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)」 (チュートリアル: SSMS を使用するセキュリティで保護されたエンクレーブが設定された Always Encrypted の概要) を参照してください。
 
 ## <a name="configure-your-environment"></a>環境を構成する
 
@@ -45,7 +46,7 @@ SQL Server を実行しているコンピューターには、次のオペレー
 
 *SQL Server*:
 
-- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 以降
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 以降
 
 *Windows*:
 
@@ -134,7 +135,7 @@ NuGet パッケージは、セキュリティで保護されたエンクレー�
    ```
 
     > [!NOTE]
-    > [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] では、高度な計算が既定で無効になります。 これらは、SQL Server インスタンスを再起動するたびに、上記のステートメントを使用して有効にする必要があります。
+    > [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] では、高度な計算が既定で無効になります。 これらは、SQL Server インスタンスを再起動するたびに、上記のステートメントを使用して有効にする必要があります。
 
 ## <a name="provision-enclave-enabled-keys"></a>エンクレーブ対応キーをプロビジョニングする
 
@@ -165,7 +166,7 @@ NuGet パッケージは、セキュリティで保護されたエンクレー�
     4. **[エンクレーブ計算を許可する]** を選択します。
     5. [Azure Key Vault] を選択した場合は、Azure にサインインし、キー コンテナーを選択します。 Always Encrypted のキー コンテナーを作成する方法について詳しくは、「[Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)」(Azure portal からキー コンテナーを管理する) を参照してください。
     6. 既にキーが存在する場合はそれを選択します。または、フォームの指示に従って新しいキーを作成します。
-    7. **[OK]** をクリックします。
+    7. [**OK**] をクリックします。
 
         ![エンクレーブ計算を許可する](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
@@ -174,7 +175,7 @@ NuGet パッケージは、セキュリティで保護されたエンクレー�
     1. **[Always Encrypted キー]** を右クリックし、**[新しい列の暗号化キー]** を選択します。
     2. 新しい列暗号化キーの名前を入力します。
     3. **[列マスター キー]** ドロップダウンで、前の手順で作成した列マスター キーを選択します。
-    4. **[OK]** をクリックします。
+    4. [**OK**] をクリックします。
 
 ### <a name="provision-enclave-enabled-keys-using-powershell"></a>**PowerShell を使用してエンクレーブ対応キーをプロビジョニングする**
 
@@ -217,7 +218,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 クライアント/開発用コンピューターで Windows PowerShell ISE を開き、次のスクリプトを実行します。
 
-**手順 1: Azure Key Vault に列マスター キーをプロビジョニングする**
+**ステップ 1: Azure Key Vault に列マスター キーをプロビジョニングする**
 
 これは、Azure portal を使用して行うこともできます。 詳細は、「[Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)」(Azure portal からキー コンテナーを管理する) を参照してください。
 
@@ -249,7 +250,7 @@ Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resource
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-**手順 2: データベースに列マスター キーのメタデータを作成し、列暗号化キーを作成し、データベースに列暗号化キーのメタデータを作成します。**
+**ステップ 2:データベースに列マスター キーのメタデータを作成し、列暗号化キーを作成し、データベースに列暗号化キーのメタデータを作成します。**
 
 
 ```powershell
@@ -514,7 +515,7 @@ GO
   - キー管理のオーバーヘッドが生じます。新しい列マスター キーを作成し、影響を受けた列のクエリを実行するアプリケーションで使用できるようにする必要があります。  
 
 
-#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>オプション 2: この方法には 2 つの手順があります。1) (オプション 1 と同様に) 列マスター キーを交換します。2) ランダム化された暗号化を使用して決定論的に暗号化された列の一部を再暗号化して、それらの列の高度な計算を有効にします。
+#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>オプション 2:この方法には 2 つの手順があります。1) (オプション 1 と同様に) 列マスター キーを交換します。2) ランダム化された暗号化を使用して決定論的に暗号化された列の一部を再暗号化して、それらの列の高度な計算を有効にします。
   
 - 長所:
   - インプレースでデータを再暗号化するため、大量のデータを含む決定論的に暗号化された列の高度なクエリを有効にする場合にお勧めの方法です。 手順 1 では、決定論的な暗号化を使用して列のインプレース暗号化が解除されるため、手順 2 はインプレースで実行できる点に注意してください。
@@ -524,7 +525,7 @@ GO
   - 特定の列マスター キーに関連付けられた列の一部を選択して変換することができません。
   - キー管理のオーバーヘッドが生じます。新しい列マスター キーを作成し、影響を受けた列のクエリを実行するアプリケーションで使用できるようにする必要があります。
 
-#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>オプション 3: (必要な場合) クライアント側で新しいエンクレーブ対応列暗号化キーとランダム化された暗号化を使用して、選択した列を再暗号化します。
+#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>オプション 3:(必要な場合) クライアント側で新しいエンクレーブ対応列暗号化キーとランダム化された暗号化を使用して、選択した列を再暗号化します。
   
 - 長所 - この方法の場合:
   - 1 列または少数の一部の列に対して選択的にエンクレーブ機能を有効にすることができます。
@@ -860,7 +861,7 @@ Always Encrypted とエンクレーブ計算を使用するには、アプリケ
 Always Encrypted を使用した .NET Framework アプリケーションの開発の詳細については、以下の記事を参照してください。
 
 - [Always Encrypted と .NET Framework Data Provider を使用して開発する](develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted: SQL Database で機密データを保護し、暗号キーを Azure Key Vault に格納する](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+- [Always Encrypted:SQL Database で機密データを保護し、暗号キーを Azure Key Vault に格納する](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 
 #### <a name="example"></a>例
 

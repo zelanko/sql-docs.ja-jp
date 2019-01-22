@@ -26,15 +26,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 53de562bb59b279f511e73a66ad308eff029b26e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526402"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299429"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
   関連するウィンドウ関数が適用される前に、行セットのパーティション処理と並べ替えを決定します。 つまり、OVER 句はクエリ結果セット内のウィンドウまたはユーザー指定の行セットを定義します。 その後、ウィンドウ関数はウィンドウ内の各行の値を計算します。 OVER 句と関数を使用して、移動平均、累積集計、集計途中経過、グループ結果ごとの上位 N などの集計値を計算できます。  
   
@@ -287,7 +290,7 @@ WHERE SalesOrderID IN(43659,43664);
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]集計は `SalesOrderID` ごとに計算され、`Percent by ProductID` は各 `SalesOrderID` の各行に対して計算されることに注意してください。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 集計は `SalesOrderID` ごとに計算され、`Percent by ProductID` は各 `SalesOrderID` の各行に対して計算されることに注意してください。  
   
 ```  
 SalesOrderID ProductID   OrderQty Total       Percent by ProductID  

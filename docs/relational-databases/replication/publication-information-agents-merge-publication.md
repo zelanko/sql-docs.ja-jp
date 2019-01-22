@@ -13,12 +13,12 @@ ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cbfa998a28696bc4675607f4d6d2bfd20185c91c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38d267db0fe3656d860ec3cfe7063da88a069bc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630400"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127762"
 ---
 # <a name="publication-information-agents-merge-publication"></a>パブリケーション情報、[エージェント] \(マージ パブリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47630400"
   
 -   **[表示する列の選択]**: **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
   
--   **[フィルター]**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター選択します。  
+-   **[フィルター]**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
   
 -   **[フィルターのクリア]**: グリッドのフィルター設定をすべてクリアします。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47630400"
 -   [完了]  
   
  **エージェント**  
- スナップショット エージェント。 これは、マージ パブリケーションに関連付けられる唯一のエージェントです。 マージ エージェントは、このパブリケーションのサブスクリプションに関連付けられます。 詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  
+ スナップショット エージェント。 これは、マージ パブリケーションに関連付けられる唯一のエージェントです。 マージ エージェントは、このパブリケーションのサブスクリプションに関連付けられます。 詳細については、[レプリケーション モニターを使用した情報の表示とタスクの実行](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)に関するページを参照してください。  
   
  **[前回の開始時刻]**  
  エージェントが最後に起動された時刻です。  
@@ -62,8 +62,7 @@ ms.locfileid: "47630400"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [パブリケーションの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)  
+ [レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: 2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する | Microsoft Docs'
+title: チュートリアル:2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f477276ef55689b6d79244f4493246f99aa9d34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514201"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128352"
 ---
-# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>チュートリアル: 2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する
+# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>チュートリアル:2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 トランザクション レプリケーションは、常時接続サーバー間でデータを移動する際の問題を解決する有効なソリューションです。 レプリケーション ウィザードを使用すると、レプリケーション トポロジを簡単に設定し、管理できます。 
 
@@ -39,7 +39,7 @@ ms.locfileid: "52514201"
   
   
 ## <a name="prerequisites"></a>Prerequisites  
-このチュートリアルは、データベースの基本的な操作は理解しているが、レプリケーション機能についてはあまり詳しくないユーザーを対象としています。 このチュートリアルを開始する前に、「[チュートリアル: レプリケーション用の SQL Server の準備](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)」を完了しておく必要があります。  
+このチュートリアルは、データベースの基本的な操作は理解しているが、レプリケーション機能についてはあまり詳しくないユーザーを対象としています。 このチュートリアルを行うには、[チュートリアル: レプリケーション用の SQL Server の準備](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)に関するページを完了しておく必要があります。  
   
 このチュートリアルを実行するには、SQL Server、SQL Server Management Studio (SSMS)、および AdventureWorks データベースが必要です。  
   
@@ -226,7 +226,7 @@ ms.locfileid: "52514201"
   
    A. **[トレーサー トークン]** タブを選択します。  
    B. **[トレーサーの挿入]** を選択します。    
-   c. **[パブリッシャーからディストリビューターまで]** 列、 **[ディストリビューターからサブスクライバーまで]** 列、および **[合計待機時間]** 列で、トレーサー トークンの経過時間を表示します。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。
+   c. 次の列にトレーサー トークンの経過時間を表示します。**[Publisher to Distributor]\(パブリッシャーからディストリビューターまで\)**、**[Distributor to Subscriber]\(ディストリビューターからサブスクライバーまで\)**、**[合計待機時間]**。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。
 
    ![トレーサー トークンの情報](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 

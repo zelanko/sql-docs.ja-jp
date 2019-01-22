@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4256efa5952870ede608d96fa2659ce9d88f35da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668421"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124612"
 ---
 # <a name="upgrade-replicated-databases"></a>レプリケートされたデータベースのアップグレード
 
@@ -132,9 +132,9 @@ SQL Server インスタンスを SQL 2016 (またはそれ以降) にアップ�
  以前のバージョンからレプリケートされたデータベースのバックアップを復元するときにレプリケーション設定が保持されるようにするには、バックアップが作成されたサーバーおよびデータベースと同じ名前のサーバーおよびデータベースに復元します。  
   
 ## <a name="see-also"></a>参照  
- [管理 &#40;レプリケーション&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+ [SQL Server のレプリケーション](../../relational-databases/replication/sql-server-replication.md)  
+ [レプリケーション管理に関する FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [レプリケーションの下位互換性](../../relational-databases/replication/replication-backward-compatibility.md)   
- [新機能 &#40;レプリケーション&#41;](../../relational-databases/replication/what-s-new-replication.md)   
  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)  
  [SQL Server 2016 へのレプリケーション トポロジのアップグレード](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)

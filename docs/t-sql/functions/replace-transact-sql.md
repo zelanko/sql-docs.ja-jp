@@ -23,18 +23,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7059099beb306ad5ee74ce779a7861edc04d40d
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 743c812bf5fbb0ec9673c3a07d4d08a91d21aae3
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970873"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299729"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 指定した文字列値をすべて別の文字列値に置き換えます。  
   
@@ -69,7 +69,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  0x0000 (**char(0)**) の Windows 照合順序で未定義の文字は、REPLACE に含めることができません。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`cde` にある文字列 `abcdefghi` を `xxx` に置換します。  
+ 次の例では、`abcdefghi` にある文字列 `cde` を `xxx` に置換します。  
   
 ```sql  
 SELECT REPLACE('abcdefghicde','cde','xxx');  

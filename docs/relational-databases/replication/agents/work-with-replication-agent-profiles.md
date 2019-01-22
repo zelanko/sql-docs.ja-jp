@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef9738e2c6f2f2ff89f384b1c7ff46aba39b9fa2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c2b1729996b53bb3419838c0ce55dc30182c467f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536432"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135447"
 ---
 # <a name="work-with-replication-agent-profiles"></a>レプリケーション エージェント プロファイルを操作する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "52536432"
   
     -   プロファイルの削除  
   
--   **フォロー アップ:** [エージェント パラメーターを変更した後](#FollowUp)  
+-   **補足情報:**[エージェント パラメーターを変更した後](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52536432"
   
 1.  **[エージェント プロファイル]** ダイアログ ボックスにエージェントのプロファイルが複数表示されている場合は、エージェントを 1 つ選択します。  
   
-2.  プロファイルの横にあるプロパティ ボタン **[...]** をクリックします。  
+2.  プロファイルの横にあるプロパティ ボタン (**[...]**) をクリックします。  
   
 3.  **[\<ProfileName> プロファイル プロパティ]** ダイアログ ボックスにパラメーターと値が表示されます。  
   
@@ -286,7 +286,7 @@ ms.locfileid: "52536432"
   
 5.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> メソッドを呼び出して、このオブジェクトで表されるユーザー定義プロファイルをサーバーから削除します。  
   
-##  <a name="FollowUp"></a> フォロー アップ: エージェント パラメーターを変更した後  
+##  <a name="FollowUp"></a> 補足情報:エージェント パラメーターを変更した後  
 エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。 SQL Server 2017 CU3 以降では、エージェントを再起動しなくても、一部のエージェント パラメーターの変更が有効になります。 
   
 ## <a name="see-also"></a>参照  

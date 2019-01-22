@@ -22,15 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63c65bb6348afa4d095971b5833f26e8e33dd5a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 111d7cb0790bd0cbdb9c9bb17a6ebcb78ac3b04a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666776"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298609"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 引数を順番に評価し、`NULL` と評価されない最初の式の現在の値を返します。 たとえば、`SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` では、3 番目の値が null ではない最初の値であるために、3 番目の値が返されます。 
   
@@ -190,7 +193,7 @@ GO
  (12 row(s) affected)
  ```  
   
-### <a name="c-simple-example"></a>C: 簡単な例  
+### <a name="c-simple-example"></a>C:簡単な例  
  次の例では、`COALESCE` が NULL 以外の値を含む最初の列からデータを選択する方法を示します。 `Products` テーブルに、このデータが含まれているとします。  
   
  ```  
@@ -220,7 +223,7 @@ FROM Products ;
   
  最初の行の `FirstNotNull` 値が `Socks, Mens` でなく `PN1278` であることに着目してください。 これは、この例で、`Name` 列が `COALESCE` のパラメーターとして指定されていないためです。  
   
-### <a name="d-complex-example"></a>D: 複雑な例  
+### <a name="d-complex-example"></a>D:複雑な例  
  次の例では、`COALESCE` を使用して 3 つの列の値を比較し、列で検索された null 以外の値のみを返します。  
   
 ```sql  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de03858d60e5a8ad21232b2f13d17b880f106ed2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761990"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242265"
 ---
 # <a name="restore-pages-sql-server"></a>ページ復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47761990"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ページを復元する方法:**  
   
@@ -63,9 +63,9 @@ ms.locfileid: "47761990"
   
 -   復元できるのはデータベース ページのみです。 ページ復元を使用して、次のものを復元することはできません。  
   
-    -   トランザクション ログ  
+    -   [トランザクション ログ]  
   
-    -   アロケーション ページ。これには、グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページなどが含まれます。  
+    -   アロケーション ページ:グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページなどが含まれます。  
   
     -   すべてのデータ ファイルのページ 0 (ファイルのブート ページ)  
   
@@ -136,8 +136,8 @@ ms.locfileid: "47761990"
     |[ヘッダー]|値|  
     |------------|------------|  
     |**名前**|バックアップ セットの名前です。|  
-    |**コンポーネント**|バックアップされるコンポーネント。**[データベース]**、**[ファイル]**、または **[\<空白>]** \(トランザクション ログ用) のいずれかを指定します。|  
-    |**型**|実行するバックアップの種類です。 **[完全]**、 **[差分]**、または **[トランザクション ログ]** のいずれかを指定します。|  
+    |**コンポーネント**|バックアップされるコンポーネント:**[データベース]**、**[ファイル]**、または **[\<空白>]** (トランザクション ログ用)。|  
+    |**型**|実行するバックアップの種類: **[完全]**、**[差分]**、**[トランザクション ログ]**。|  
     |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  
     |**[位置]**|ボリューム内でのバックアップ セットの位置。|  
