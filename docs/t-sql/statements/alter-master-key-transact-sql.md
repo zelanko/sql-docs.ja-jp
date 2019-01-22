@@ -24,16 +24,16 @@ helpviewer_keywords:
 - service master key [SQL Server], modifying
 - DROP ENCRYPTION BY SERVICE MASTER KEY phrase
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d4c4f0e7f2ffce588d01f0544263a398ea4549a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7190892a06eb7684b549e38d6cb417b8bddb6ff0
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746230"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361482"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ ALTER MASTER KEY <alter_option>
 ## <a name="remarks"></a>Remarks  
  REGENERATE オプションを指定すると、データベース マスター キーと、それによって保護されるすべてのキーが再作成されます。 これらのキーは、最初に元のマスター キーで暗号化解除され、次に新しいマスター キーで暗号化されます。 この操作はリソースを大量に消費するため、マスター キーのセキュリティに問題がある場合を除き、リソース要求が少ないときに実行するように考慮してください。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 SMK を再作成方法について詳しくは、「[ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)」をご覧ください。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 SMK を再作成方法について詳しくは、「[ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)」をご覧ください。  
   
  FORCE オプションを指定すると、マスター キーを使用できなかった場合や、暗号化されているすべての秘密キーをサーバーで暗号化解除できなかった場合でも、キーの再生成が続行されます。 マスター キーを開くことができない場合は、[RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md) ステートメントを使って、マスター キーをバックアップから復元してください。 FORCE オプションは、マスター キーを取得できないか、暗号化解除が失敗する場合にのみ使用してください。 取得できないキーによってのみ暗号化されている情報は失われます。  
   

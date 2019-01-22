@@ -24,15 +24,15 @@ helpviewer_keywords:
 - denying permissions [SQL Server], application roles
 - application roles [SQL Server], permissions
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 739abfdbf2d25d5df634e7a085c393af9176a659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749370"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327683"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (データベース プリンシパルの権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

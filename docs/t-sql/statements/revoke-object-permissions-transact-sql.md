@@ -15,15 +15,15 @@ helpviewer_keywords:
 - revoking permissions to access tables
 - object permissions [SQL Server], revoking
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 55c06191de80cf76f6ced789f2fe10ff8c1c79ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e7c288fb10eb1473835f29fa538c49d2fe47585
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623460"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327703"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE (オブジェクトの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,15 +63,15 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  ALL  
  ALL を指定しても、可能な権限がすべて取り消されるわけではありません。 ALL を指定すると、指定したオブジェクトに適用されるすべての [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 権限を取り消すことになります。 ALL の意味は、状況に応じて次のようになります。  
   
- スカラー関数の権限の場合は、EXECUTE、REFERENCES。  
+ スカラー関数の権限:EXECUTE、REFERENCES。  
   
- テーブル値関数の権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ テーブル値関数の権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
- ストアド プロシージャの権限の場合は、EXECUTE。  
+ ストアド プロシージャの権限:EXECUTE。  
   
- テーブルの権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ テーブルの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
- ビューの権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ ビューの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
  PRIVILEGES  
  [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 準拠のために用意されています。 ALL の動作は変更されません。  

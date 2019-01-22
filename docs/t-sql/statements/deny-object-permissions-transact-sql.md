@@ -13,15 +13,15 @@ helpviewer_keywords:
 - DENY statement, objects
 - table permissions [SQL Server]
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 01c2e711b68cf8bd143c19be0567bb6de8265701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3d5bea06c12da29eb38c3190682d2fcfe344fe4
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662790"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326773"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY (オブジェクトの権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ DENY <permission> [ ,...n ] ON
  ALL  
  ALL を指定しても、可能な権限がすべて拒否されるわけではありません。 ALL を指定すると、指定したオブジェクトに適用されるすべての ANSI-92 権限を拒否することになります。 ALL の意味は、状況に応じて次のようになります。  
   
- - スカラー関数の権限の場合は、EXECUTE、REFERENCES。  
- - テーブル値関数の権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
- - ストアド プロシージャの権限の場合は、EXECUTE。  
- - テーブルの権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
- - ビューの権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ - スカラー関数の権限:EXECUTE、REFERENCES。  
+ - テーブル値関数の権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ - ストアド プロシージャの権限:EXECUTE。  
+ - テーブルの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ - ビューの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
 PRIVILEGES  
  ANSI-92 準拠のために用意されています。 ALL の動作は変更されません。  

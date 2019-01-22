@@ -15,16 +15,16 @@ helpviewer_keywords:
 - GRANT statement, schemas
 - granting permissions [SQL Server], schemas
 ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89726cd631b870079d4413b788041cb4385d0649
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5d923201600adcf0e1bb4026e3feee28dea7e97
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753400"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327623"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT (スキーマ権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ AS *granting_principal*
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 たとえば、テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーには計算列の SELECT 権限も必要です。  
+>  権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 例 :テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーには計算列の SELECT 権限も必要です。  
   
  スキーマは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、スキーマで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   

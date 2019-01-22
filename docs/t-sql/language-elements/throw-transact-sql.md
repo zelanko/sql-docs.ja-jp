@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a9c57b68a7aabc2d275dd5fa64c7e7cb00c3969
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6146c25c64acce0688221df63039b17bff358971
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505911"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361562"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -73,7 +73,7 @@ THROW [ { error_number | @local_variable },
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-throw-to-raise-an-exception"></a>A. THROW を使用して例外を発生させる  
- 次の例は、`THROW` ステートメントを使用して例外を発生させる方法を示します。  
+ 次の例では、`THROW` ステートメントを使用して例外を発生させる方法を示します。  
   
 ```sql  
 THROW 51000, 'The record does not exist.', 1;  
@@ -88,7 +88,7 @@ THROW 51000, 'The record does not exist.', 1;
  ```  
   
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>B. THROW を使用して例外を再度発生させる  
- 次の例は、`THROW` ステートメントを使用して最後に発生した例外を再度発生させる方法を示します。  
+ 次の例では、`THROW` ステートメントを使用して最後にスローされた例外を再度発生させる方法を示します。  
   
 ```sql  
 USE tempdb;  
@@ -112,14 +112,14 @@ END CATCH;
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
  ```
- PRINT 'In catch block.';  
+ In catch block. 
  Msg 2627, Level 14, State 1, Line 1  
  Violation of PRIMARY KEY constraint 'PK__TestReth__3214EC272E3BD7D3'. Cannot insert duplicate key in object 'dbo.TestRethrow'.  
  The statement has been terminated.
  ```  
   
 ### <a name="c-using-formatmessage-with-throw"></a>C. FORMATMESSAGE を THROW と共に使用する  
- 次の例は、`FORMATMESSAGE` 関数を `THROW` と共に使用して、カスタマイズされたエラー メッセージをスローする方法を示します。 この例では、まず、`sp_addmessage` を使用して、ユーザー定義のエラー メッセージを作成します。 THROW ステートメントでは、RAISERROR のように、*message* パラメーターで書式引数が許可されないため、エラー メッセージ 60000 で想定される 3 つのパラメーター値を渡すために FORMATMESSAGE 関数が使用されます。  
+ 次の例では、`FORMATMESSAGE` 関数を `THROW` と共に使用して、カスタマイズされたエラー メッセージをスローする方法を示します。 この例では、まず、`sp_addmessage` を使用して、ユーザー定義のエラー メッセージを作成します。 THROW ステートメントでは、RAISERROR のように、*message* パラメーターで書式引数が許可されないため、エラー メッセージ 60000 で想定される 3 つのパラメーター値を渡すために FORMATMESSAGE 関数が使用されます。  
   
 ```sql  
 EXEC sys.sp_addmessage  

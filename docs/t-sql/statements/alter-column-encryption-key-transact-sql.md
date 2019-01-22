@@ -18,15 +18,15 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8f76bfc903eaf18978c2c77803cdd7054d384ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec90c3ca632a917bd0905063d2fee94f4c0dfa32
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839530"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326763"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
  列マスター キーは、次の理由でローテーションされます。
 - 法令に遵守するためにキーを定期的にローテーションする必要があります。
 - 列マスター キーのセキュリティが侵害されたためにローテーションする必要があります。
-- サーバー側のセキュリティで保護されたエンクレーブと列の暗号化キーの共有を有効または無効にします。 たとえば、現在使用中の列マスター キーがエンクレーブ計算をサポートしていない場合 (ENCLAVE_COMPUTATIONS プロパティで定義されていない場合)、お使いの列マスター キーで暗号化されている列暗号化キーを使用して保護されている列でエンクレーブ計算を有効にしたい場合、ENCLAVE_COMPUTATIONS プロパティで列マスター キーを新しいキーと置き換える必要があります。 詳細については、「[Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」 (セキュリティで保護されたエンクレーブが設定された Always Encrypted) を参照してください。
+- サーバー側のセキュリティで保護されたエンクレーブと列の暗号化キーの共有を有効または無効にします。 たとえば、現在使用中の列マスター キーがエンクレーブ計算をサポートしていない場合 (ENCLAVE_COMPUTATIONS プロパティで定義されていない場合)、お使いの列マスター キーで暗号化されている列暗号化キーを使用して保護されている列でエンクレーブ計算を有効にしたい場合、ENCLAVE_COMPUTATIONS プロパティで列マスター キーを新しいキーと置き換える必要があります。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
 
 
 列暗号化キーについての情報を表示するには、[sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)、[sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) を使います。  
