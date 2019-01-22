@@ -23,15 +23,15 @@ helpviewer_keywords:
 - CREATE SECURITY POLICY statement
 - Row-Level Security
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 01417c90e5583b8b2276f05ec92347758689d284
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f5732c63ae381c0ca9c120b64aef3915dc6db926
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532483"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326083"
 ---
 # <a name="create-security-policy-transact-sql"></a>セキュリティ ポリシー (TRANSACT-SQL) の作成します。
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *\<block_dml_operation>* ブロック述語が適用される特定の DML 操作。 結局、DML 操作が実行される (INSERT または UPDATE) 後に、述語、行の値に評価することを指定します。 前に、DML の操作が実行される (更新または削除) する前に、述語は、行の値に評価することを指定します。 操作が指定されていない場合、述語は、すべての操作に適用されます。  
   
  [ STATE = { ON | **OFF** } ]  
- セキュリティ ポリシーによるターゲット テーブルに対するセキュリティ述語の実施を有効または無効にします。 作成されているセキュリティ ポリシーが有効になっているが指定されていない場合。  
+ セキュリティ ポリシーによるターゲット テーブルに対するセキュリティ述語の実施を有効または無効にします。 指定しないと、作成されているセキュリティ ポリシーは有効になります。  
   
  [SCHEMABINDING = {ON |OFF}]  
  SCHEMABINDING オプションを使用して、ポリシー内のすべての述語関数を作成する必要があるかどうかを示します。 既定では、schemabinding を指定してすべての関数を作成する必要があります。  
