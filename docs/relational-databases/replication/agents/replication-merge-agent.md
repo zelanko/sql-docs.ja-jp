@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3ce470350556e035453e68c8e84e6cff1ae1ee14
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c7262d2ed909729d03563ca0f5aa17f8781ab843
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590226"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125902"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ replmerg [-?]
 [-InternetLogin internet_login]  
 [-InternetPassword internet_password]  
 [-InternetProxyLogin internet_proxy_login]  
-[-InternetProxyPassword internet_proxy_password]  
+[–InternetProxyPassword internet_proxy_password]  
 [-InternetProxyServer internet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeout internet_timeout]  
@@ -176,7 +176,7 @@ replmerg [-?]
  > [!NOTE]  
  >  有効な SSL 証明書には、SQL Server の完全修飾ドメイン名が定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
 
- 詳細については、「[セキュリティの概要 &#40;レプリケーション&#41;](../../../relational-databases/replication/security/security-overview-replication.md)」を参照してください。  
+ 詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
@@ -229,7 +229,7 @@ replmerg [-?]
 |**0**|エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーをログに記録します。|  
 |**1**|各セッションの状態における増分セッションの詳細をログに記録します。エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーに加えて、進行状況が含まれます。|  
 |**2**|既定値です。 各セッションの状態における増分セッションの詳細、およびアーティクル レベルのセッションの詳細をログに記録します。エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーに加えて、進行状況が含まれます。 エージェントの状態のメッセージもログに記録されます。|  
-|**3**| **-HistoryVerboseLevel** = **2**と同じですが、より多くのエージェント進行状況メッセージがログに記録されます。|  
+|**3**|**-HistoryVerboseLevel** = **2**と同じですが、より多くのエージェント進行状況メッセージがログに記録されます。|  
   
  **-Hostname** _host_name_  
  ローカル コンピューターのネットワーク名です。 既定値は、ローカル コンピューターの名前になります。  
@@ -246,7 +246,7 @@ replmerg [-?]
  **-InternetProxyLogin**  *internet_proxy_login*  
  認証を必要とする、 *internet_proxy_server*で定義されたプロキシ サーバーへの接続時に使用されるログイン名を指定します。  
   
- **-InternetProxyPassword**  *internet_proxy_password*  
+ **–InternetProxyPassword**  *internet_proxy_password*  
  認証を必要とする、 *internet_proxy_server*で定義されたプロキシ サーバーへの接続時に使用されるパスワードを指定します。  
   
  **-InternetProxyServer**  *internet_proxy_server*  
@@ -383,7 +383,7 @@ replmerg [-?]
 |**3**|行数とバイナリ チェックサムの検証。|  
   
 > [!NOTE]  
->  バイナリ チェックサムまたはチェックサムを使用した検証では、データ型がサブスクライバー側とパブリッシャー側とで異なる場合には、誤ってエラーを報告することがあります。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-replicated-data.md)」の「データ検証に関する注意点」を参照してください。  
+>  バイナリ チェックサムまたはチェックサムを使用した検証では、データ型がサブスクライバー側とパブリッシャー側とで異なる場合には、誤ってエラーを報告することがあります。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」の「データ検証に関する注意点」を参照してください。  
   
  **-ValidateInterval** _validate_interval_  
  サブスクリプションが継続モードで検証される間隔 (分) です。 既定値は **60** 分です。  

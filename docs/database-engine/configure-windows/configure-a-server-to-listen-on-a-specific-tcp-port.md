@@ -18,12 +18,12 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0b8be637da67d9aa083fb4afbc024381c1b83a81
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a990088feab172954f82b3be34a505202626c7d0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605302"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132802"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>特定の TCP ポートで受信待ちするようにサーバーを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "51605302"
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  **[IP***n* **のプロパティ]** ボックスの **[TCP ポート]** ボックスに、この IP アドレスが受信待ちするポート番号を入力し、**[OK]** をクリックします。 複数のポートを指定する場合は、コンマで区切ります。
+4.  **IP**_n_ **のプロパティ** ボックスの **TCP ポート** box, type the port number you want this IP address to listen on, and then click **OK**をクリックします。 複数のポートを指定する場合は、コンマで区切ります。
 
     > [!NOTE] 
-    > **[プロトコル]** タブの **[すべて受信待ち]** 設定が [はい] に設定されている場合、**[IPAll]** セクションの **[TCP ポート]** と **[TCP 動的ポート]** の値のみが使用され、個々の **[IP***n]* セクションは完全に無視されます。 **[すべて受信待ち]** の設定が [いいえ] に設定されている場合、**[IPAll]** セクションの **[TCP ポート]** と **[TCP 動的ポート]** の設定は無視され、個々の **[IP***n]* セクションの **[TCP ポート]**、**[TCP 動的ポート]**、および **[有効]** の設定が代わりに使用されます。
-    > 各 **[IP***n]* セクションには、既定値が [いいえ] の **[有効]** 設定があります。[いいえ] では、ポートが定義されている場合でも、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこの IP アドレスは無視されます。  
+    > **[プロトコル]** タブの **[すべて受信待ち]** 設定が [はい] に設定されている場合、**[IPAll]** セクションの **[TCP ポート]** と **[TCP 動的ポート]** の値のみが使用され、個々の **[IP**_n]_ セクションは完全に無視されます。 **[すべて受信待ち]** の設定が [いいえ] に設定されている場合、**[IPAll]** セクションの **[TCP ポート]** と **[TCP 動的ポート]** の設定は無視され、個々の **[IP**_n]_ セクションの **[TCP ポート]**、**[TCP 動的ポート]**、および **[有効]** の設定が代わりに使用されます。
+    > 各 **[IP**_n]_ セクションには、既定値が [いいえ] の **[有効]** 設定があります。[いいえ] では、ポートが定義されている場合でも、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこの IP アドレスは無視されます。  
   
 5.  コンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
   

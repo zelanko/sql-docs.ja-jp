@@ -13,16 +13,16 @@ ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98f253ec67268b2150bc5ad145e5a10a28281581
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cafbae856962fe7fda7ffb43fe1bc530bca204b7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842410"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126652"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>パブリッシャー情報、[サブスクリプション ウォッチ リスト]\(マージ パブリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **以降を実行しているディストリビューターでは、** [サブスクリプション ウォッチ リスト] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。このタブは、選択されているパブリッシャーで使用できるすべてのパブリケーションのサブスクリプションについて情報を表示するために用意されています。 サブスクリプションの一覧にフィルターをかけて、エラー、警告、および動作に問題があるサブスクリプションを確認できます。 このタブは、パブリッシャーにおけるすべてのレプリケーション動作を管理者が一元的に監視できる場所です。レプリケーション モニターは、選択されているレプリケーションの種類と **[表示]** ボックスで選択されたオプションに基づいて、注意が必要なすべてのサブスクリプションを表示します。 このタブに表示されるアイテムは現在の状態およびパフォーマンスに基づいているので、現時点での **[表示]** ボックスのオプションに一致する場合にのみ、このページにサブスクリプションが表示されます。  
+  **以降を実行しているディストリビューターでは、** [サブスクリプション ウォッチ リスト] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。このタブは、選択されているパブリッシャーで使用できるすべてのパブリケーションのサブスクリプションについて情報を表示するために用意されています。 サブスクリプションの一覧にフィルターをかけて、エラー、警告、および動作に問題があるサブスクリプションを確認できます。 このタブは、パブリッシャーにおけるすべてのレプリケーション動作を管理者が一元的に監視できる場所です。レプリケーション モニターは、選択されているレプリケーションの種類と **[表示]** ドロップダウン リスト ボックスで選択されたオプションに基づいて、注意が必要なすべてのサブスクリプションを表示します。 このタブに表示されるアイテムは現在の状態およびパフォーマンスに基づいているので、現時点での **[表示]** ボックスのオプションに一致する場合にのみ、このページにサブスクリプションが表示されます。  
   
 ## <a name="options"></a>および  
  サブスクリプションに関する詳細情報やタスクを調べるには、そのサブスクリプションの行を右クリックし、ショートカット メニューのオプションをクリックします。 グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
@@ -31,7 +31,7 @@ ms.locfileid: "47842410"
   
 -   **[表示する列の選択]**: **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
   
--   **[フィルター]**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター選択します。  
+-   **[フィルター]**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
   
 -   **[フィルターのクリア]**: グリッドのフィルター設定をすべてクリアします。  
   
@@ -71,13 +71,13 @@ ms.locfileid: "47842410"
  状態値 **[まもなく期限切れ/期限切れ]** および **[長期マージ]** は、しきい値が設定されている場合のみ表示されます。 **[パフォーマンス クリティカル]** の状態の値は、同じ種類の接続 (ダイヤルアップまたは LAN) によるサブスクリプションの同期が 5 回行われた後にのみ表示されます。 パフォーマンスの測定としきい値の設定については、「[Monitor Performance with Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)」 (レプリケーション モニターを使用したパフォーマンスの監視) と「[レプリケーション モニターのしきい値と警告の設定](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
  **サブスクリプション**  
- 各サブスクリプションの名前です。*SubscriberName: SubscriptionDatabaseName*という形式になります。  
+ 各サブスクリプションの名前です。*SubscriberName: SubscriptionDatabaseName* という形式になります。  
   
  **表示名**  
  各サブスクリプションの説明です。 この説明は、 **[サブスクリプションのプロパティ]** ダイアログ ボックスで入力するか、 **@description** または [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) の [@description](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)と表示されます。 多くの場合、この説明は "表示名"、つまりサブスクリプションの通称として使用されます。  
   
  **パブリケーション**  
- サブスクリプションと同期するパブリケーションの名前です。 *PublicationDatabaseName: PublicationName*という形式になります。  
+ サブスクリプションと同期するパブリケーションの名前です。*PublicationDatabaseName: PublicationName* という形式になります。  
   
  **[パフォーマンス]**  
  各サブスクリプションのパフォーマンス評価です。これはレプリケーション モニターにより取得された、最新の配信率の計測結果に基づいています。 パフォーマンス評価は、接続の種類が同じ (ダイヤルアップまたは LAN) パブリケーションに対するサブスクリプションの履歴の平均パフォーマンスと、個々のサブスクリプションのパフォーマンスを比較することで決定されます。 レプリケーション モニターには、50 以上の変更を伴う同期がそれぞれ同じ種類の接続により 5 回行われた後で、値が表示されます。 50 以上の変更を伴う同期が 5 回未満の場合、または最新の同期における変更が 50 未満の場合には、この列は空白になります。  
@@ -111,8 +111,8 @@ ms.locfileid: "47842410"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [パブリッシャーの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [パブリッシャーの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)   
  [マージ レプリケーションの Web 同期](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

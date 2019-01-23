@@ -13,12 +13,12 @@ ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 263f1b3a76a30c1ab220234b32dd55af1ab6cfac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b6f01dd6e6b06464ac5fbaf76480a6c3aad2b38
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674710"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123983"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>パブリケーション情報、[警告] \(スナップショット パブリケーション、SQL Server 2005 以降)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47674710"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [パブリケーションの情報の表示とタスクの実行 &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

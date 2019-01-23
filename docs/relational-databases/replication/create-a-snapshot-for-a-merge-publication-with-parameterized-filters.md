@@ -1,7 +1,7 @@
 ---
 title: パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/03/2016
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,38 +15,48 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71d7e79a0e941b5f080b033469700e19eaa3241e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14255fde1f8d0d165e1071f95c737f60aacf5058
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666097"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131432"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パラメーター化されたフィルターでマージ パブリケーションのスナップショットを作成する方法ついて説明します。  
+このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パラメーター化されたフィルターでマージ パブリケーションのスナップショットを作成する方法ついて説明します。  
+
+パラメーター化された行フィルターがマージ パブリケーションで使用される場合、レプリケーションは 2 つの要素から成るスナップショットを持つ各サブスクリプションを初期化します。 まず、レプリケーションに必要なすべてのオブジェクトとパブリッシュされたオブジェクトのスキーマが含まれるスキーマ スナップショットが作成されます。ただしデータは含まれません。 次に、スキーマ スナップショットからのオブジェクトとスキーマが含まれるスナップショットと、サブスクリプションのパーティションに属するデータを使用して、各サブスクリプションが初期化されます。 複数のサブスクリプションが特定のパーティションを受信する場合 (つまり、同じスキーマとデータを受信する場合)、そのパーティションのスナップショットは 1 回しか作成されません。複数のサブスクリプションは、同じスナップショットから初期化されます。 パラメーター化された行フィルターの詳細については、「 [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
- **このトピックの内容**  
+ 次の 3 つの方法のいずれかで、パラメーター化されたフィルターを使用して、パブリケーションのスナップショットを作成できます。  
   
--   **作業を開始する準備:**  
+-   **各パーティションのスナップショットを事前に生成します。** このオプションを使用すると、スナップショットが生成されたときに制御できます。    
+     スナップショットがスケジュールに従って更新されるように選択することもできます。 スナップショットの作成対象となったパーティションをサブスクライブする新しいサブスクライバーは、最新のスナップショットを受信します。   
+-   サブスクライバーが初めて同期されたときに、**スナップショットの生成と適用を要求できるようにします。** このオプションを使用すると、新しいサブスクライバーは管理者の介入を必要としないで同期できます (スナップショットを生成するには[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがパブリッシャーで実行されている必要があります)。  
   
-     [推奨事項](#Recommendations)  
+    > [!NOTE]  
+    >  パブリケーション内の 1 つ以上のアーティクルにフィルターを適用して、各サブスクリプション固有の重複しないパーティションが得られる場合、マージ エージェントが実行されるたびにメタデータがクリーンアップされます。 これは、パーティション スナップショットの有効期間が短時間で切れてしまうことを意味します。 このオプションを使用する場合は、サブスクライバーに対してスナップショットの生成と配信を許可することを検討する必要があります。 フィルター オプションの詳細については、「 [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
--   **パラメーター化されたフィルターを使用してマージ パブリケーションのスナップショットを作成するために使用するもの:**  
+-   **スナップショット エージェントを使用して、手動で各サブスクライバーのスナップショットを生成します**。 サブスクライバーは、マージ エージェントが正しいスナップショットを取得および適用できるように、スナップショットの場所をマージ エージェントに提供する必要があります。  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+    > [!NOTE]  
+    >  このオプションは、旧バージョンとの互換性のためにサポートされており、FTP スナップショット共有を使用できません。  
   
-     [Transact-SQL](#TsqlProcedure)  
+ 最も柔軟性の高い方法は、事前に生成され、サブスクライバーに要求されるスナップショット オプションの組み合わせを使用することです。スナップショットは、スケジュールに基づいて (通常はオフピーク時に) 事前生成および更新されますが、新しいパーティションを必要とするサブスクリプションが作成された場合は、サブスクライバーが独自のスナップショットを生成できます。  
   
-     [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
+ 各店舗に在庫を配送する移動営業部署のある [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]について考えてみましょう。 各営業担当者は、各自のログインに基づいてサブスクリプションを受信し、各自が担当する店舗についてのデータを取得します。 管理者は、スナップショットを事前に生成し、毎週日曜日に更新するように選択しています。 場合によっては、新しいユーザーがシステムに追加され、スナップショットを使用できないパーティションのデータが必要になります。 管理者の選択により、サブスクライバーが開始するスナップショットで、スナップショットがまだ使用できないためにサブスクライバーがパブリケーションをサブスクライブできない状況を回避することもできます。 新しいサブスクライバーが初めて接続すると、指定されたパーティションに対してスナップショットが生成され、サブスクライバーで適用されます (スナップショットを生成できるようにするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがパブリッシャーで実行されている必要があります)。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+ パラメーター化されたフィルターを使用してパブリケーションのスナップショットを作成するには、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」を参照してください。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+## <a name="security-settings-for-the-snapshot-agent"></a>スナップショット エージェントに対するセキュリティの設定  
+ スナップショット エージェントは各パーティションのスナップショットを作成します。 事前に生成されるスナップショットとサブスクライバーによって要求されるスナップショットの場合、エージェントが実行され、パブリケーションのスナップショット エージェント ジョブ作成時に指定された資格情報に基づいて接続が作成されます (このジョブは、パブリケーションの新規作成ウィザードまたは **sp_addpublication_snapshot**によって作成されます)。 資格情報を変更するには、 **sp_changedynamicsnapshot_job**を使用します。 詳しくは、「[sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)」をご覧ください。  
+
+  
+##  <a name="Recommendations"></a> 推奨事項  
   
 -   パラメーター化されたフィルターを使用してマージ パブリケーションのスナップショットを生成する際には、最初にすべてのパブリッシュ済みデータとサブスクリプションのサブスクライバー メタデータを含む標準 (スキーマ) スナップショットを生成する必要があります。 詳しくは、「 [初期スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。 スキーマ スナップショットを作成した後で、パブリッシュ済みデータのサブスクライバー固有のパーティションを含むスナップショットを作成できます。  
   
--   パブリケーション内の 1 つ以上のアーティクルにフィルターを適用して、各サブスクリプション固有の重複しないパーティションが得られる場合、マージ エージェントが実行されるたびにメタデータがクリーンアップされます。 これは、パーティション スナップショットの有効期間が短時間で切れてしまうことを意味します。 このオプションを使用する場合は、サブスクライバーに対してスナップショットの生成と配信を許可することを検討する必要があります。 フィルター オプションの詳細については、「[Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」(パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット) の「Setting 'partition options」(パーティション オプションの設定) を参照してください。  
+-   パブリケーション内の 1 つ以上のアーティクルにフィルターを適用して、各サブスクリプション固有の重複しないパーティションが得られる場合、マージ エージェントが実行されるたびにメタデータがクリーンアップされます。 これは、パーティション スナップショットの有効期間が短時間で切れてしまうことを意味します。 このオプションを使用する場合は、サブスクライバーに対してスナップショットの生成と配信を許可することを検討する必要があります。 
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[データ パーティション]** ページでパーティションのスナップショットを作成します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。 サブスクライバーには、スナップショットの生成と配信の開始や、スナップショットの生成を許可できます。  
@@ -413,7 +423,6 @@ PAUSE
 ## <a name="see-also"></a>参照  
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [レプリケーション セキュリティの推奨事項](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   
