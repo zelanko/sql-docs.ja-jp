@@ -4,17 +4,17 @@ description: この記事では、Linux で実行されている SQL Server に�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/25/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c45203e8524fe2df9301250afd1bef40df37bc3d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: b17f232fc9dfb2c9d1ac663e831b8e9f78aaa3bb
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457665"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux Frequently Asked Questions (FAQ)
 
@@ -32,10 +32,6 @@ ms.locfileid: "49419357"
 
    SQL Server をテストして、上記のディストリビューションの Linux ではサポートされています。 他の Linux ディストリビューションは密接に関連し、SQL Server を実行できる可能性があります (たとえば、CentOS、密接に関連する Red Hat Enterprise Server)。 サポートされていないオペレーティング システムに SQL Server をインストールする場合は、確認しますが、**サポート ポリシー**のセクション、 [for Microsoft SQL Server のテクニカル サポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)サポートを理解するには影響します。 いくつかコミュニティに維持される Linux ディストリビューションには、基になるオペレーティング システムが問題である場合は、サポートを受ける形式的な方法はありません。 にも注意してください。
 
-1. **どのように Linux 上のライセンスの機能ですか。**
-
-   SQL Server では、Windows と Linux の両方の同様のライセンスします。 実際には、SQL Server のライセンスを取得して、そのライセンスを使用して、好みのプラットフォーム上に選択できます。 詳細については、次を参照してください。 [SQL Server のライセンス方法](https://www.microsoft.com/sql-server/sql-server-2017-pricing)します。
-
 1. **Linux 上の SQL Server を Windows と同じですか。**
 
    Core for SQL Server データベース エンジンは、Windows 上にある Linux で同じです。 ただし、一部の機能は現在サポートされていません Linux 上。 Linux でサポートされていない機能の一覧は、次を参照してください。、[機能とサービスがサポートされていない](sql-server-linux-release-notes.md#Unsupported)します。 確認することも、[既知の問題](sql-server-linux-release-notes.md#known-issues)します。 これらのリストで指定されている場合を除き、他の SQL Server の機能とサービスは、Linux でサポートされます。
@@ -47,6 +43,39 @@ ms.locfileid: "49419357"
 1. **SQL Server の Windows のバック グラウンドからです。Linux 上の SQL Server を使用する方法を確認するのに役立つリソースはありますか。**
 
    [クイック スタート](sql-server-linux-setup.md#platforms)Linux 上の SQL Server をインストールし、TRANSACT-SQL クエリを実行する方法の詳細な手順を説明します。 その他のチュートリアルでは、Linux 上の SQL Server を使用して追加についてを説明します。 ヒントのサードパーティの一覧は、次を参照してください。、 [SQL Server on Linux のヒントの一覧を MSSQLTIPS](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/)します。
+
+## <a name="licensing"></a>ライセンス
+
+1. **どのように Linux 上のライセンスの機能ですか。**
+
+   SQL Server では、Windows と Linux の両方の同様のライセンスします。 実際には、SQL Server のライセンスを取得して、そのライセンスを使用して、好みのプラットフォーム上に選択できます。 詳細については、次を参照してください。 [SQL Server のライセンス方法](https://www.microsoft.com/sql-server/sql-server-2017-pricing)します。
+
+1. **既に購入したときに、SQL Server のエディションを選択するべきですか**
+
+   Mssql conf セットアップを実行するときに、次のオプションが表示されます。
+   
+   ```
+   Choose an edition of SQL Server:
+      1. Evaluation (free, no production use rights, 180-day limit)
+      2. Developer (free, no production use rights)
+      3. Express (free)
+      4. Web (PAID)
+      5. Standard (PAID)
+      6. Enterprise (PAID)
+      7. Enterprise Core (PAID)
+      8. I bought a license through a retail sales channel and have a product key to enter.
+   ```
+     
+   Enterprise Agreement の一部としてのボリューム ライセンス、または MSDN サブスクリプションを通じてライセンスを取得している場合は、4 ~ 7 のオプションを選択する必要があります。 この手順では、ライセンスを入力することが要求されずする必要がありますが以前に購入された適切なライセンスには、構成します。 小売店から Standard edition を購入している場合は、8 のオプションを選択します。 このオプションを使用して、キーの入力は求め。 
+
+1. **インストールされているバージョンとエディションの SQL Server on Linux の確認方法**
+
+   クライアント ツールを使用した SQL Server インスタンスに接続するよう**sqlcmd**、 **mssql cli**、または Visual Studio Code。 バージョンとエディションの SQL Server を実行していることを確認する次の TRANSACT-SQL クエリを実行します。 
+
+   ```sql
+   SELECT @@VERSION
+   SELECT SERVERPROPERTY('Edition')
+   ```
 
 ## <a name="installation"></a>インストール
 
@@ -69,22 +98,6 @@ ms.locfileid: "49419357"
 1. **Linux に SQL Server の無人インストールを実行できますか。**
 
    可能。 無人インストールの詳細については、次を参照してください。 [Linux 上の SQL Server のインストールのガイダンスについて](sql-server-linux-setup.md#unattended)します。 サンプル スクリプトを参照してください。 [Red Hat](sample-unattended-install-redhat.md)、 [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)、および[Ubuntu](sample-unattended-install-ubuntu.md)します。 確認することも[このサンプル スクリプト](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)SQL Server Customer Advisory チームによって作成します。
-
-1. **既に購入したときに、SQL Server のエディションを選択するべきですか**
-
-   Mssql conf セットアップを実行する場合は、これらのオプションが表示されます。  
-   `Choose an edition of SQL Server:` <br>
-`     1. Evaluation (free, no production use rights, 180-day limit)` <br>
-`     2. Developer (free, no production use rights)` <br>
-`     3. Express (free)` <br>
-`     4. Web (PAID)` <br>
-`     5. Standard (PAID)` <br>
-`     6. Enterprise (PAID)` <br>
-`     7. Enterprise Core (PAID)` <br>
-`     8. I bought a license through a retail sales channel and have a product key to enter.`
-     
-   Enterprise Agreement の一部としてのボリューム ライセンス、または MSDN サブスクリプションを通じてライセンスを取得している場合は、4 ~ 7 を選択する必要があります。 小売店から Standard edition を購入している場合は、8 を選択する必要があります。 
-
 
 ## <a name="tools"></a>ツール
 
@@ -139,7 +152,7 @@ ms.locfileid: "49419357"
 
 1. **移行できますデータ Oracle および他のデータベース エンジンから SQL Server on Linux でしょうか。**
 
-   可能。 SSMA は、いくつかの種類のデータベース エンジンからの移行をサポートしています: Microsoft Access、DB2、MySQL、Oracle、および SAP ASE (旧称 SAP Sybase ASE の場合)。 SSMA を使用する方法の例は、次を参照してください。 [Oracle スキーマを SQL Server Migration Assistant を使った Linux 上の SQL Server に移行](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)します。
+   可能。 SSMA は、いくつかの種類のデータベース エンジンからの移行をサポートしています。Microsoft Access、DB2、MySQL、Oracle、および SAP ASE (旧称 SAP Sybase ASE の場合)。 SSMA を使用する方法の例は、次を参照してください。 [Oracle スキーマを SQL Server Migration Assistant を使った Linux 上の SQL Server に移行](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)します。
 
 1. **どのようなアクセス許可は、SQL Server のファイルに必要なでしょうか。**
 
