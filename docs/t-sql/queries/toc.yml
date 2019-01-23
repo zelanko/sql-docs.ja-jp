@@ -67,7 +67,7 @@
   href: subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
 - name: テーブル値コンストラクター
   href: table-value-constructor-transact-sql.md
-- name: 先頭に戻る
+- name: TOP
   href: top-transact-sql.md
 - name: UPDATE
   href: update-transact-sql.md

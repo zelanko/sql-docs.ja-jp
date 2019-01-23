@@ -134,7 +134,7 @@ SELECT <select_criteria>
 8.  SELECT  
 9. DISTINCT  
 10. ORDER BY  
-11. 先頭に戻る  
+11. TOP  
 
 > [!WARNING]
 > 上記の順序は、通常は true です。 ただし、一般的ではないシーケンスが異なる場合があります。
