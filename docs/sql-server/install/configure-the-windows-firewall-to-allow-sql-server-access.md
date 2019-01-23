@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 483696e8ecc717e0ead5c7be16a627c046cb47ca
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 96c6292c4c14f97ce0cf0dda17f107a5d5e1bb15
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300069"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395429"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,6 +102,8 @@ ms.locfileid: "54300069"
     -   ["netsh firewall" コンテキストの代わりに "netsh advfirewall firewall" コンテキストを使用して、Windows Server 2008 および Windows Vista で Windows ファイアウォールの動作を制御する方法](https://support.microsoft.com/kb/947709)  
   
     -   ["profile=all" パラメーターと共に "netsh firewall" コマンドを使用しても、Windows Vista ベースのコンピューターでパブリック プロファイルが構成されない](https://support.microsoft.com/kb/947213)  
+    
+- **Linux の場合**:Linux では、アクセスするサービスに関連付けられたポートを開く必要もあります。 Linux の異なるディストリビューションと異なるファイアウォールには、独自のプロシージャがあります。 2 つの例については、[Red Hat での SQL Server](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-red-hat?view=sqlallproducts-allversions) に関するページと [SUSE での SQL Server](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-suse?view=sqlallproducts-allversions) に関するページを参照してください。 
   
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>で使用されるポート [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  次の表で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用されるポートを確認できます。  
@@ -138,13 +140,13 @@ ms.locfileid: "54300069"
 
 1. 右側のペインの **[操作]** の **[新しい規則]** をクリックします。**新規の受信の規則ウィザード**が開きます。
 
-1. **[規則の種類]** で、**[プログラム]** をクリックします。 [**次へ**] をクリックします。
+1. **[規則の種類]** で、**[プログラム]** をクリックします。 **[次へ]** をクリックします。
 
 1. **[プログラム]** で **[このプログラムのパス]** をクリックします。 **[参照]** をクリックして SQL Server のインスタンスを検索します。 sqlservr.exe というプログラムです。 通常は以下の場所にあります。
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
-   [**次へ**] をクリックします。
+   **[次へ]** をクリックします。
 
 1. **[操作]** で、**[接続を許可する]** をクリックします。  
 

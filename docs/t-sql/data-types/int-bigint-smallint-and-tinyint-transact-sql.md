@@ -29,18 +29,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37d811ff0bab33f2f88760bdefbb6c56e28791d0
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: aa752fef34868c57f5f042f67c874e74da67c062
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970414"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298829"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint、および tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 整数データを使用する実数データ型です。 データベースの容量を節約するために、すべての可能な値を確実に含めることができる最小のデータ型を使用します。 たとえば、255 歳以上の人は誰もいきていないので、人の年齢には tinyint で十分でしょう。 しかし、255 年を超える建物はあり得るので、建物の経過年数には tinyint では不十分になります。
   

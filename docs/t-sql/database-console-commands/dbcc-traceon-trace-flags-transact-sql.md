@@ -1,7 +1,7 @@
 ---
 title: トレース フラグ (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/15/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f57bd4ef770d4958c09bd54fb19718e8e8c641df
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206468"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361692"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 
@@ -145,6 +145,7 @@ ms.locfileid: "54206468"
 |**9488**|<a name="9488"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] までのバージョンのクエリ オプティマイザーカーディナリティ推定モデルを使う場合、テーブル値関数の固定の推定を既定値の 1 に設定します ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 以前のバージョンのクエリ オプティマイザーカーディナリティ推定モデルでの既定値に対応します)。<br /><br />**スコープ**: グローバル、セッション、クエリ|
 |**9495**|INSERT...SELECT 操作の挿入の間に並列処理を無効にして、ユーザー テーブルと一時テーブルの両方に適用します。 詳しくは、[Microsoft サポート技術情報](https://support.microsoft.com/kb/3180087)をご覧ください。<br /><br />**スコープ**: グローバル、セッション| 
 |**9567**|自動シード処理時の Always On 可用性グループのデータ ストリーム圧縮を有効にします。 自動シードの処理中、圧縮によって転送時間が大幅に短縮され、プロセッサの負荷が増大します。 詳しくは、「[AlwaysOn 可用性グループを自動的に初期化する](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)」および「[可用性グループの圧縮の調整](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)」をご覧ください。<br /><br />**スコープ**: グローバル、セッション|
+|**9571**|既定のデータベース パスに対する可用性グループの自動シード処理を無効にします。 詳細については、「[ディスク レイアウト](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md)」を参照してください。<br /><br />**スコープ**: グローバル、セッション| 
 |**9591**|Always On 可用性グループでのログ ブロック圧縮を無効にします。 ログ ブロック圧縮は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の同期および非同期レプリカの両方で使われる既定の動作です。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の圧縮は、非同期レプリカでのみ使われます。 <br /><br />**スコープ**: グローバル、セッション|
 |**9592**|同期可用性グループのログ ストリーム圧縮を有効にします。 この機能は、圧縮によって待機時間が長くなるため、同期可用性グループでは既定で無効にされています。 詳細については、「 [Tune compression for availability group](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)」(可用性グループの圧縮を調整する) を参照してください。<br /><br />**スコープ**: グローバル、セッション| 
 |**9929**|インメモリ チェックポイント ファイルをそれぞれ 1 MB に削減します。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/3147012)をご覧ください。<br /><br />**スコープ**: グローバルのみ|  

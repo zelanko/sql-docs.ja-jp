@@ -14,18 +14,18 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20ebb8bc0658b7d31388d6f514102fba8db4a8e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12fbfd6c6e6ba6e6a3bb015aed5375553fcd735f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634310"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131902"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したサブスクリプションの同期
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が同期マネージャーと同じコンピューターで実行されている場合には、サブスクリプションを Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションに同期させるためだけに使用できます (オフライン ファイルや Web ページを同期するためにも使用できます)。 同期マネージャーを使用するには、以下の手順を実行します。  
   
-1.  **[サブスクリプションのプロパティ - \<Subscriber>: \<SubscriptionDatabase>]** ダイアログ ボックスで、Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効にします。 このダイアログ ボックスへのアクセスの詳細については、「[プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。  
+1.  **[サブスクリプションのプロパティ - \<サブスクライバー>: \<SubscriptionDatabase>]** ダイアログ ボックスで、Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効にします。 このダイアログ ボックスへのアクセスの詳細については、「[プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。  
   
 2.  Windows の **[スタート]** メニューから、同期マネージャーにアクセスします。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47634310"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効化するには  
   
-1.  **[サブスクリプションのプロパティ - \<Subscriber>: \<SubscriptionDatabase>]** ダイアログ ボックスの **[全般]** ページで、**[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
+1.  **** **[サブスクリプションのプロパティ - \<サブスクライバー>:\<SubscriptionDatabase>]** ダイアログ ボックスの [全般] ページで、**[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47634310"
   
     -   **[スタート]** ボタンをクリックし、 **[プログラム]** または **[すべてのプログラム]** をポイントします。 **[アクセサリ]** をポイントし、 **[同期]** をクリックします。  
   
-    -   **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。 **[ファイル名を指定して実行]** ダイアログ ボックスで、 **[名前]** in the **ボックスに「** 」と入力し、 **[OK]**」を参照してください。  
+    -    **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。 **[ファイル名を指定して実行]** ダイアログ ボックスで、 **[名前]** in the **ボックスに「** 」と入力し、 **[OK]**」を参照してください。  
   
 2.  **[同期する項目]** ダイアログ ボックスで、同期するサブスクリプションを選択します。 サブスクリプションは、そのコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの下に表示されます。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47634310"
   
 ### <a name="to-use-the-interactive-resolver"></a>インタラクティブ競合回避モジュールを使用するには  
   
-1.  アーティクルおよびサブスクリプションで、対話型の競合回避を有効にします。 詳細については、「[マージ アーティクルのインタラクティブな競合回避の指定](../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md)」を参照してください。  
+1.  アーティクルおよびサブスクリプションで、対話型の競合回避を有効にします。 詳細については、「[Specify Merge Replication properties](../../relational-databases/replication/merge/specify-merge-replication-properties.md)」 (マージ レプリケーションのプロパティの指定) を参照してください。  
   
 2.  対話型の競合回避が有効になっており、1 つ以上のアーティクルで競合があると、同期マネージャーでサブスクリプションの同期が開始された後、インタラクティブ競合回避モジュールが自動的に起動されます。 インタラクティブ競合回避モジュールは、一度に 1 つずつ、競合および (パブリケーションとサブスクリプションの作成時に指定した回避モジュールに基づく) 推奨の回避方法を表示します。  
   

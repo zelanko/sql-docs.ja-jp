@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257097"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317802"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>クエリ調整アシスタントを使用したデータベースのアップグレード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ QTA はセッション ベースの機能であり、セッションが初めて
     > [!NOTE]
     > **[セッション]** ボタンを押すと、**セッション管理**ページに戻り、アクティブなセッションはそのままになります。
 
-    このステップには、次の 3 つのサブステップがあります。
+    この手順には、次の 3 つのサブステップがあります。
 
     1.  **[ベースライン データの収集]** では、クエリ ストアでベースラインを収集できるように、ユーザーに代表的なワークロード サイクルの実行が要求されます。 そのワークロードが完了したら、**[Done with workload run]\(ワークロードの実行完了\)** をオンにし、**[次へ]** をクリックします。
 
@@ -207,7 +207,7 @@ QTA はセッション ベースの機能であり、セッションが初めて
     > 代わりに、[sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) システム テーブルを使用してプラン ガイドを検索し、[sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md) を使用して手動で削除します。  
   
 ## <a name="permissions"></a>アクセス許可  
-**db_owner** ロール メンバーシップのメンバーシップが必要です。
+**db_owner** ロールのメンバーシップが必要です。
   
 ## <a name="see-also"></a>参照  
  [互換性レベルと SQL Server アップグレード](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
