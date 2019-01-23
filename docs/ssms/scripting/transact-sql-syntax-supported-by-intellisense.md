@@ -42,7 +42,7 @@ ms.locfileid: "51643066"
 |FROM|ORDER BY|  
 |HAVING|UNION|  
 |FOR|GROUP BY|  
-|先頭に戻る|OPTION (hint)|  
+|TOP|OPTION (hint)|  
   
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>サポートされているその他の Transact-SQL ステートメント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでは、IntelliSense によって、次の表に示す [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントもサポートされています。  
