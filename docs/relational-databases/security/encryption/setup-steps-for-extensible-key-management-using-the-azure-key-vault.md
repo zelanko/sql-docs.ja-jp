@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522918"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327353"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault を使用する SQL Server TDE 拡張キー管理 - 設定手順
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
 2016 | [Visual Studio 2015 の Visual C++ 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>パート I: Azure Active Directory サービス プリンシパルをセットアップする  
+## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>パート I:Azure Active Directory サービス プリンシパルをセットアップする  
  SQL Server のアクセス権を Azure Key Vault に付与するためには、Azure Active Directory (AAD) にサービス プリンシパル アカウントが必要です。  
   
 1.  [Azure Portal](https://ms.portal.azure.com/) に移動してサインインします。  
@@ -58,7 +58,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
  ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
   
-## <a name="part-ii-create-a-key-vault-and-key"></a>パート II: Key Vault とキーを作成する  
+## <a name="part-ii-create-a-key-vault-and-key"></a>パート II:Key Vault とキーを作成する  
  ここで作成される Key Vault とキーは、SQL Server データベース エンジンが暗号化キーを保護するために使用します。  
   
 > [!IMPORTANT]  
@@ -69,7 +69,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
      [最新の Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 以降) をインストールして起動します。 次のコマンドを使用して Azure アカウントにサインインします。  
   
     ```powershell  
-    Login-AzureRmAccount  
+    Connect-AzAccount  
     ```  
   
      このステートメントからは次の情報が返されます。  
@@ -83,14 +83,14 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
     ```  
   
     > [!NOTE]  
-    >  複数のサブスクリプションの中から資格情報コンテナーで使用する特定のサブスクリプションを指定する場合は、 `Get-AzureRmSubscription` でサブスクリプションを表示し、 `Select-AzureRmSubscription` で正しいサブスクリプションを選択します。 指定しなかった場合、いずれかのサブスクリプションが PowerShell によって既定で選択されます。  
+    >  複数のサブスクリプションの中から資格情報コンテナーで使用する特定のサブスクリプションを指定する場合は、 `Get-AzSubscription` でサブスクリプションを表示し、 `Select-AzSubscription` で正しいサブスクリプションを選択します。 指定しなかった場合、いずれかのサブスクリプションが PowerShell によって既定で選択されます。  
   
 2.  **新しいリソース グループを作成する**  
   
      Azure Resource Manager で作成されるすべての Azure リソースは、リソース グループに属している必要があります。 そこで、Key Vault の従属先となるリソース グループを作成します。 この例では `ContosoDevRG`を使用します。 すべての Key Vault 名はグローバルに **一意** であるため、リソース グループと Key Vault には独自の一意の名前を選択します。  
   
     ```powershell  
-    New-AzureRmResourceGroup -Name ContosoDevRG -Location 'East Asia'  
+    New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  
     ```  
   
      このステートメントからは次の情報が返されます。  
@@ -109,10 +109,10 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
 3.  **Key Vault を作成する**  
   
-     `New-AzureRmKeyVault` コマンドレットには、リソース グループ名、Key Vault 名、地理的位置を指定する必要があります。 たとえば、 `ContosoDevKeyVault`という名前の Key Vault の場合、次のように入力します。  
+     `New-AzKeyVault` コマンドレットには、リソース グループ名、Key Vault 名、地理的位置を指定する必要があります。 たとえば、 `ContosoDevKeyVault`という名前の Key Vault の場合、次のように入力します。  
   
     ```powershell  
-    New-AzureRmKeyVault -VaultName 'ContosoDevKeyVault' `  
+    New-AzKeyVault -VaultName 'ContosoDevKeyVault' `  
        -ResourceGroupName 'ContosoDevRG' -Location 'East Asia'  
     ```  
   
@@ -152,15 +152,15 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
     > [!IMPORTANT]  
     >  Azure Active Directory サービス プリンシパルには、Key Vault に対して少なくとも `get`、`wrapKey`、および `unwrapKey` の権限が必要です。  
   
-     **パラメーターには、以下のように、パート I でコピーした** クライアント ID `ServicePrincipalName` を使用します。 `Set-AzureRmKeyVaultAccessPolicy` は、メッセージを伴わずに実行されます。正常に実行されたとしても何も出力されません。  
+     **パラメーターには、以下のように、パート I でコピーした** クライアント ID `ServicePrincipalName` を使用します。 `Set-AzKeyVaultAccessPolicy` は、メッセージを伴わずに実行されます。正常に実行されたとしても何も出力されません。  
   
     ```powershell  
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     権限を確認するには、 `Get-AzureRmKeyVault` コマンドレットを呼び出します。 このステートメントから返された出力結果の "Access Policies" に、この Key Vault にアクセスできるもう 1 つのテナントとして AAD アプリケーションの名前が表示されます。  
+     権限を確認するには、 `Get-AzKeyVault` コマンドレットを呼び出します。 このステートメントから返された出力結果の "Access Policies" に、この Key Vault にアクセスできるもう 1 つのテナントとして AAD アプリケーションの名前が表示されます。  
   
        
 5.  **Key Vault に非対称キーを生成する**  
@@ -238,7 +238,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
     >  Key Vault は、同じ名前を持った複数バージョンのキーをサポートしていますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタで使用するキーについては、複数のバージョンを使用したりロールオーバーしたりすることは避けてください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化に使用するキーをロールしたいと管理者が考える場合は、コンテナー内に別の名前で新しいキーを作成し、DEK を暗号化するために使用してください。  
    
   
-## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>パート III: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタをインストールする  
+## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>パート III:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタをインストールする  
  [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=521700)から SQL Server コネクタをダウンロードします。 (この作業は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者が行う必要があります。)  
 
 > [!NOTE]  
@@ -262,7 +262,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
 -   [C.SQL Server コネクタのエラー コードの説明](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>パート IV: 構成する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>パート IV:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を構成する  
  このセクションの各操作に最低限必要な権限レベルについては、「[B. よく寄せられる質問](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) 」を参照してください。  
   
 1.  **sqlcmd.exe または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio を起動する**  

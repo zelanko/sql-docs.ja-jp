@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33faa406912e2f80d6911e9e4f94b27397e89cef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3893672f6d253bf3f428198dd58d63e3cac30baa
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534761"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326423"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>列マスター キーを作成して保存する (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,16 +120,16 @@ Azure Key Vault は、暗号化キーやシークレットの保護に役立ち�
 
 ```
 # Create a column master key in Azure Key Vault.
-Login-AzureRmAccount
+Connect-AzAccount
 $SubscriptionId = "<Azure subscription ID>"
 $resourceGroup = "<resource group name>"
 $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
-$azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+$azureCtx = Set-AzContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
@@ -145,7 +145,7 @@ Azure Key Vault に格納されている列マスター キーで保護されて
 
 #### <a name="using-powershell"></a>PowerShell の使用
 
-Azure Key Vault で実際のキーにアクセスするためにユーザーとアプリケーションを有効にするには、Vault のアクセス ポリシー ([Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)) を設定する必要があります。
+Azure Key Vault で実際のキーにアクセスするためにユーザーとアプリケーションを有効にするには、コンテナーのアクセス ポリシー ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)) を設定する必要があります。
 
 ```
 $vaultName = "<vault name>"
@@ -154,9 +154,9 @@ $userPrincipalName = "<user to grant access to>"
 $clientId = "<client Id>"
 
 # grant users permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
+Set-AzKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
 # grant applications permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
+Set-AzKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
 ```
 
 ## <a name="creating-column-master-keys-in-hardware-security-modules-using-cng"></a>CNG を使用してハードウェア セキュリティ モジュールに列マスター キーを作成する
@@ -207,11 +207,11 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 Always Encrypted の列マスター キーは、Cryptography API (CAPI) を実装するキー ストアに格納することができます。 通常は、デジタルのキーを安全に管理し、暗号化処理を提供する物理デバイスであるハードウェア セキュリティ モジュール (HSM) のようなストアがこれに含まれます。 HSM は、プラグイン カードまたはコンピューター (ローカルの HSM) またはネットワークサーバーに直接接続する外部デバイスの形で提供されることになっています。
 
-特定のコンピューターのアプリケーションから HSM を使用できるようにするには、CAPI を実装する Cryptography Service Provider (CSP) をコンピューターにインストールして構成する必要があります。 Always Encrypted のクライアント ドライバー (ドライバー内部の列マスター キー ストア プロバイダー) は CSP を使用して、キー ストアに格納された列マスター キーで保護されている列暗号化キーを暗号化および暗号化解除します。 メモ: CAPI は、非推奨のレガシ API です。 HSM で KSP を使用できる場合、CSP/CAPI ではなく KSP を使用する必要があります。
+特定のコンピューターのアプリケーションから HSM を使用できるようにするには、CAPI を実装する Cryptography Service Provider (CSP) をコンピューターにインストールして構成する必要があります。 Always Encrypted のクライアント ドライバー (ドライバー内部の列マスター キー ストア プロバイダー) は CSP を使用して、キー ストアに格納された列マスター キーで保護されている列暗号化キーを暗号化および暗号化解除します。 注:CAPI は、非推奨のレガシ API です。 HSM で KSP を使用できる場合、CSP/CAPI ではなく KSP を使用する必要があります。
 
 CSP は、Always Encrypted で使用される RSA アルゴリズムをサポートする必要があります。
 
-Windows には RSA をサポートし、テスト目的で使用できる、(HSM ではサポートされない) 次のソフトウェアベースの CSP が含まれています: Microsoft Enhanced RSA および AES Cryptographic Provider。
+Windows には RSA をサポートし、テスト目的で使用できる、(HSM ではサポートされない) 次のソフトウェアベースの CSP が含まれています:Microsoft Enhanced RSA および AES Cryptographic Provider。
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-capicsp"></a>CAPI/CSP を使用してキー ストア内の列マスター キーを作成する
 

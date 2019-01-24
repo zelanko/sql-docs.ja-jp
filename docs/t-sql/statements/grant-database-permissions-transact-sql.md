@@ -17,16 +17,16 @@ helpviewer_keywords:
 - database permissions [SQL Server], granting
 - GRANT statement, databases
 ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34a23cc197b1720df2e2a1dae4cbc28c4bf70554
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07680455783316fd3854b9b45ba7f5077a58d3f9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682240"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327493"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT (データベースの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ permission | ALL [ PRIVILEGES ]
  データベースで許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
  ALL  
- このオプションでは、可能な権限がすべて許可されるわけではありません。 ALL を指定した場合は、BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、CREATE VIEW 権限を許可することになります。  
+ このオプションでは、可能な権限がすべて許可されるわけではありません。 ALL を指定すると、次のアクセス許可が許可されます。BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、CREATE VIEW。  
   
  PRIVILEGES  
  ISO 準拠のために用意されています。 ALL の動作は変更されません。  
@@ -110,7 +110,7 @@ permission | ALL [ PRIVILEGES ]
 ## <a name="remarks"></a>Remarks
   
 > [!IMPORTANT]  
->  権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 たとえば、テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーには計算列の SELECT 権限も必要です。
+>  権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 例 :テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーには計算列の SELECT 権限も必要です。
   
  データベースは、セキュリティ保護可能なリソースで、権限の階層で親となっているサーバーに含まれています。 次の表に、データベースで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   

@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9eb95a89fa8539eede53a154f7e7087a3f31f71b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 64c4819bd307afe3b7e4b310949148deabb8c938
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135322"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327813"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -82,7 +82,7 @@ Always On 可用性グループのセカンダリ レプリカ上のセカンダ
 ALTER DATABASE のデータベース互換レベルに関連した SET オプションの構文と関連情報について説明します。  
   
 ## <a name="syntax"></a>構文  
-  
+
 ```
 -- SQL Server Syntax  
 ALTER DATABASE { database_name  | CURRENT }  
@@ -124,14 +124,15 @@ ALTER DATABASE { database_name  | CURRENT }
  
 <compatibility_level>
    { 140 | 130 | 120 | 110 | 100 | 90 }   
-```  
-  
+```
+
 ## <a name="arguments"></a>引数  
+
 *database_name*  
 変更するデータベースの名前を指定します。  
   
-> [!NOTE]  
->  このオプションは、包含データベースでは使用できません。  
+> [!NOTE]
+> このオプションは、包含データベースでは使用できません。
   
 CURRENT  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -159,7 +160,8 @@ Windows 照合順序名および SQL 照合順序名について詳しくは、�
 **\<file_and_filegroup_options>::=**  
 詳しくは、「[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
 データベースを削除するには、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) を使用します。  
   
 データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。  
@@ -191,7 +193,8 @@ ALTER DATABASE ステートメントは自動コミット モード (既定の�
 - データベースのバックアップを復元した。  
 - データベースをデタッチした。  
   
-## <a name="changing-the-database-collation"></a>データベースの照合順序の変更  
+## <a name="changing-the-database-collation"></a>データベースの照合順序の変更
+
 データベースに別の照合順序を適用する前に、次の条件が満たされているかどうかを確認してください。  
   
 - 現在データベースを使用しているのは、1 人だけである。  
@@ -221,31 +224,35 @@ ALTER DATABASE ステートメントは自動コミット モード (既定の�
   
 新しい照合順序によって名前が重複すると、変更操作が失敗し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は重複が見つかった名前空間を示すエラー メッセージを返します。  
   
-## <a name="viewing-database-information"></a>データベース情報の表示  
+## <a name="viewing-database-information"></a>データベース情報の表示
+
 カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
+
 データベースに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-changing-the-name-of-a-database"></a>A. データベースの名前を変更する  
+### <a name="a-changing-the-name-of-a-database"></a>A. データベースの名前を変更する
+
 次の例では、`AdventureWorks2012` データベースの名前を `Northwind` に変更します。  
-  
-```sql  
+
+```sql
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
 Modify Name = Northwind ;  
 GO  
-```  
-  
-### <a name="b-changing-the-collation-of-a-database"></a>B. データベースの照合順序を変更する  
+```
+
+### <a name="b-changing-the-collation-of-a-database"></a>B. データベースの照合順序を変更する
+
 次の例では、`testdb`S 照合順序で `SQL_Latin1_General_CP1_CI_A` という名前のデータベースを作成した後、`testdb` データベースの照合順序を `COLLATE French_CI_AI` に変更します。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
-  
-```sql  
+
+```sql
 USE master;  
 GO  
   
@@ -256,9 +263,10 @@ GO
 ALTER DATABASE testDB  
 COLLATE French_CI_AI ;  
 GO  
-```  
-  
-## <a name="see-also"></a>参照  
+```
+
+## <a name="see-also"></a>参照
+
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
@@ -367,8 +375,8 @@ ALTER DATABASE { database_name | CURRENT }
   | <temporal_history_retention>  
 }  
 ```
-  
-## <a name="arguments"></a>引数  
+
+## <a name="arguments"></a>引数
 
 *database_name*  
 
@@ -392,11 +400,11 @@ MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'Bus
 データベースのサービス階層を変更します。 
 
 次の例では、エディションを `premium` に変更します。
-  
-```sql  
+
+```sql
 ALTER DATABASE current 
     MODIFY (EDITION = 'premium');
-``` 
+```
 
 データベースの MAXSIZE プロパティがそのエディションでサポートされる有効な範囲内の値に設定されていない場合、EDITION の変更は失敗します。  
 
@@ -440,22 +448,25 @@ DTU に基づくモデルの MAXSIZE 値。指定すると、上記の表に示�
 **vCore に基づくモデル**
 
 **General Purpose サービス層- 第 4 世代のコンピューティング プラットフォーム**
+
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |--: |--: |--: |--:|
 |データの最大サイズ (GB)|1024|1024|1536|3072|4096|4096|
 
 **General Purpose サービス層 - 第 5 世代のコンピューティング プラットフォーム**
+
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |データの最大サイズ (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
 
-
 **Business Critical サービス層 - 第 4 世代のコンピューティング プラットフォーム**
+
 |パフォーマンス レベル|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
 |:--- | --: |--: |--: |--: |--: |--: |
 |データの最大サイズ (GB)|1024|1024|1024|1024|1024|1024|
 
 **Business Critical サービス層 - 第 5 世代のコンピューティング プラットフォーム**
+
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |データの最大サイズ (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
@@ -471,13 +482,13 @@ vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない
 MODIFY (SERVICE_OBJECTIVE = \<service-objective>)  
 
 パフォーマンス レベルを指定します。 次の例では、Premium データベースのサービスの目標を `P6` に変更します。
- 
-```sql  
+
+```sql
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
 
-パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`S0``S1``S2`、`S3``S4``S6``S7``S9``S12``P1``P2``P4``P6``P11``P15``GP_GEN4_1``GP_GEN4_2``GP_GEN4_4``GP_GEN4_8``GP_GEN4_16``GP_GEN4_24``BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_4`、`BC_GEN4_8`、`BC_GEN4_16``BC_GEN4_24``GP_Gen5_2``GP_Gen5_4``GP_Gen5_8``GP_Gen5_16``GP_Gen5_24``GP_Gen5_32``GP_Gen5_48``GP_Gen5_80``BC_Gen5_2``BC_Gen5_4``BC_Gen5_8``BC_Gen5_16``BC_Gen5_24``BC_Gen5_32``BC_Gen5_48``BC_Gen5_80``HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16``HS_GEN4_24`、`HS_Gen5_2``HS_Gen5_4``HS_Gen5_8``HS_Gen5_16``HS_Gen5_24``HS_Gen5_32``HS_Gen5_48``HS_Gen5_80` です。  
+パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_4`、`GP_GEN4_8`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_4`、`BC_GEN4_8`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_48`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_8`、`BC_Gen5_16`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_48`、`BC_Gen5_80`、`HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80` です。  
 
 サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、「[Azure SQL Database サービス レベル概要](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)」、「[DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(DTU に基づくリソースの制限)、「[vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(vCore に基づくリソースの制限) を参照してください。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。 
   
@@ -499,7 +510,7 @@ WITH ALLOW_CONNECTIONS { **ALL** | NO }
 
 ALLOW_CONNECTIONS が指定されていない場合は、既定では ALL に設定されます。 ALL に設定されている場合は、適切なアクセス許可を持つすべてのログインに接続を許可する読み取り専用データベースになります。  
   
-WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`,    `GP_Gen5_8`,    `GP_Gen5_16`,   `GP_Gen5_24`,   `GP_Gen5_32`,   `GP_Gen5_48`,   `GP_Gen5_80`, `BC_Gen5_2`,  `BC_Gen5_4`,    `BC_Gen5_8`,    `BC_Gen5_16`,   `BC_Gen5_24`,   `BC_Gen5_32`,   `BC_Gen5_48`,   `BC_Gen5_80` }  
+WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`,`GP_Gen5_4`,`GP_Gen5_8`,`GP_Gen5_16`,`GP_Gen5_24`,`GP_Gen5_32`,`GP_Gen5_48`,`GP_Gen5_80`, `BC_Gen5_2`,`BC_Gen5_4`,`BC_Gen5_8`,`BC_Gen5_16`,`BC_Gen5_24`,`BC_Gen5_32`,`BC_Gen5_48`,`BC_Gen5_80` }  
 
 SERVICE_OBJECTIVE が指定されていない場合、セカンダリ データベースがプライマリ データベースと同じサービス レベルで作成します。 SERVICE_OBJECTIVE を指定した場合は、指定したレベルにセカンダリ データベースが作成されます。 このオプションは、低価格のサービス レベルで地理的レプリケーションのセカンダリの作成をサポートします。 指定する SERVICE_OBJECTIVE は、ソースと同じエディション内でなければなりません。 たとえば、エディションが Premium の場合、S0 を指定することはできません。  
   
@@ -796,9 +807,10 @@ ALTER DATABASE database_name
           | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c' 
           | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }  
-```  
-  
-## <a name="arguments"></a>引数  
+```
+
+## <a name="arguments"></a>引数
+
 *database_name*  
 変更するデータベースの名前を指定します。  
 
@@ -819,7 +831,8 @@ MAXSIZE
 SERVICE_OBJECTIVE  
 パフォーマンス レベルを指定します。 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] のサービス目標の詳細については、[パフォーマンス レベル](https://azure.microsoft.com/documentation/articles/performance-tiers/)に関するページを参照してください。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
+
 これらのアクセス許可が必要です。  
   
 - サーバー レベル プリンシパル ログイン (プロビジョニング処理で作成されたもの) または  
@@ -827,14 +840,16 @@ SERVICE_OBJECTIVE
   
 所有者が `dbmanager` ロールのメンバーである場合を除き、データベースの所有者はデータベースを変更することはできません。  
   
-## <a name="general-remarks"></a>全般的な解説  
+## <a name="general-remarks"></a>全般的な解説
+
 現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、**ALTER は master データベースに接続されている間に実行する必要があります**。  
   
 SQL Data Warehouse は COMPATIBILITY_LEVEL 130 に設定されており、変更することはできません。 詳細については、「[ALTER DATABASE (TRANSACT-SQL) の互換性レベル](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)」を参照してください。
   
 データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。  
   
-## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
+## <a name="limitations-and-restrictions"></a>制限事項と制約事項
+
 ALTER DATABASE を実行するには、データベースをオンラインにする必要があり、一時停止状態にすることはできません。  
   
 ALTER DATABASE ステートメントは、既定のトランザクション管理モードには自動コミット モードで実行する必要があります。 これは、接続の設定で設定されます。  
@@ -843,7 +858,8 @@ ALTER DATABASE ステートメントでは、ユーザー定義のトランザ�
 
 データベースの照合順序を変更することはできません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>使用例
+
 これらの例を実行する前に、変更対象のデータベースが現在のデータベースでないことを確認します。 現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、**ALTER は master データベースに接続されている間に実行する必要があります**。  
 
 ### <a name="a-change-the-name-of-the-database"></a>A. データベースの名前を変更します。  
@@ -871,7 +887,8 @@ ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
 [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
 [SQL Data Warehouse の参照記事](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
@@ -914,7 +931,8 @@ ALTER DATABASE database_name
     ENCRYPTION { ON | OFF }  
 ```  
   
-## <a name="arguments"></a>引数  
+## <a name="arguments"></a>引数
+
 *database_name*  
 変更するデータベースの名前。 アプライアンスでデータベースの一覧を表示するには、[sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) を使用します。  
   
@@ -952,32 +970,39 @@ AU7 へのアップグレード後に作成された新しいデータベース�
 
 統計の詳細については、「[統計](/sql/relational-databases/statistics/statistics)」を参照してください。
 
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
+
 データベースに対する ALTER 権限が必要です。  
   
 ## <a name="error-messages"></a>エラー メッセージ
+
 自動統計が無効になっている場合に、統計の設定を変更しようとすると、"このオプションは PDW でサポートされていません" というエラーが PDW から返されます。 システム管理者は、機能スイッチ [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) を有効にすることにより、自動統計を有効にすることができます。
 
-## <a name="general-remarks"></a>全般的な解説  
+## <a name="general-remarks"></a>全般的な解説
+
 REPLICATED_SIZE、DISTRIBUTED_SIZE、LOG_SIZE は、データベースの現在の値と同じ値か、それより大きい値か、それより小さい値に設定できます。  
   
-## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
+## <a name="limitations-and-restrictions"></a>制限事項と制約事項
+
 増加と縮小はおおよそで行われます。 結果的に与えられる実際のサイズはサイズ パラメーターとは異なる場合があります。  
   
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は ALTER DATABASE ステートメントを不可分操作として実行しません。 実行中、ステートメントが中止された場合、既に発生している変更はそのまま残ります。  
 
 統計の設定は、管理者によって自動統計が有効にされた場合にのみ機能します。管理者である場合は、機能スイッチ [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) を使用して自動統計を有効または無効にします。 
   
-## <a name="locking-behavior"></a>ロック動作  
+## <a name="locking-behavior"></a>ロック動作
+
 DATABASE オブジェクトを共有ロックします。 別のユーザーが読み取りまたは書き込みをしているデータベースを変更することはできません。 データベースで [USE](../language-elements/use-transact-sql.md) ステートメントを発行しているセッションもこれに該当します。  
   
-## <a name="performance"></a>パフォーマンス  
+## <a name="performance"></a>パフォーマンス
+
 データベース内の実際のデータ サイズとディスクの断片化の量によっては、データベースの縮小に多大な時間とシステム リソースが必要となります。 たとえば、データベースの縮小に数時間かかることがあります。  
   
-## <a name="determining-encryption-progress"></a>暗号化の進捗状況を見る  
+## <a name="determining-encryption-progress"></a>暗号化の進捗状況を見る
+
 次のクエリを使用すると、データベースの Transparent Data Encryption の進捗状況を割合で見ることができます。  
   
-```sql  
+```sql
 WITH  
 database_dek AS (  
     SELECT ISNULL(db_map.database_id, dek.database_id) AS database_id,  
@@ -1023,7 +1048,8 @@ TDE 実装の全手順を包括的な例で見るには、「[Transparent Data E
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-altering-the-autogrow-setting"></a>A. AUTOGROW 設定を変更する  
+### <a name="a-altering-the-autogrow-setting"></a>A. AUTOGROW 設定を変更する
+
 データベース `CustomerSales` の AUTOGROW を ON に設定します。  
   
 ```sql  
@@ -1031,7 +1057,8 @@ ALTER DATABASE CustomerSales
     SET ( AUTOGROW = ON );  
 ```  
   
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. 複製テーブルの最大記憶域を変更する  
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. 複製テーブルの最大記憶域を変更する
+
 次の例では、データベース `CustomerSales` の複製テーブルの記憶域上限を 1 GB に設定します。 これは計算ノードごとの記憶域上限になります。  
   
 ```sql  
@@ -1039,7 +1066,8 @@ ALTER DATABASE CustomerSales
     SET ( REPLICATED_SIZE = 1 GB );  
 ```  
   
-### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. 分散テーブルの最大記憶域を変更する  
+### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. 分散テーブルの最大記憶域を変更する
+
  次の例では、データベース `CustomerSales` の分散テーブルの記憶域上限を 1000 GB (1 テラバイト) に設定します。 これは、計算ノードごとの記憶域上限ではなく、アプライアンス全体の全計算ノードの記憶域上限を 1 つにしたものになります。  
   
 ```sql  
@@ -1047,7 +1075,8 @@ ALTER DATABASE CustomerSales
     SET ( DISTRIBUTED_SIZE = 1000 GB );  
 ```  
   
-### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. トランザクション ログの最大記憶域を変更する  
+### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. トランザクション ログの最大記憶域を変更する
+
  次の例では、データベース `CustomerSales` を更新し、アプライアンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクション ログの最大サイズを 10 GB にします。  
   
 ```sql  
@@ -1067,6 +1096,7 @@ SELECT NAME,
 FROM sys.databases;
 ```
 ### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. データベースに対して統計の自動作成および自動更新を有効にする
+
 次のステートメントを使用して、データベース CustomerSales について自動的かつ非同期的に統計を作成および更新する機能を有効にします。  これにより、高品質のクエリ プランを作成するために必要に応じて統計が作成および更新されます。
 
 ```sql
@@ -1074,11 +1104,12 @@ ALTER DATABASE CustomerSales
     SET AUTO_CREATE_STATISTICS ON;
 ALTER DATABASE CustomerSales
     SET AUTO_UPDATE_STATISTICS ON; 
-ALTER DATABASE CustomerSales
+ALTER DATABASE 
     SET AUTO_UPDATE_STATISTICS_ASYNC ON;
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
  [CREATE DATABASE &#40;並列データ ウェアハウス&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
 

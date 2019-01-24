@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 8b46686dfb440e9d0d9fa68fcaf23d51eea86c97
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328972"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143472"
 ---
 # <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -329,17 +329,17 @@ WHERE is_forced_plan = 1;
   
 ##  <a name="Renaming"></a> 強制適用されたプランを持つクエリがある場合はデータベースの名前を変更しない  
 
- 実行プランは、3 つの要素で構成される名前 (`database.schema.object`) を使用してオブジェクトを参照します。   
+実行プランは、3 つの要素で構成される名前 (`database.schema.object`) を使用してオブジェクトを参照します。   
 
 データベース名を変更すると、プランの強制適用が失敗し、その後のすべてのクエリ実行で再コンパイルが発生します。  
 
-##  <a name="Recovery"></a> ミッション クリティカルなサーバーにトレース フラグを使用して、障害からの回復を向上させる
+##  <a name="Recovery"></a> ミッション クリティカルなサーバーでトレース フラグを使用する
  
-高可用性とディザスター リカバリーのシナリオでクエリ ストアのパフォーマンスを向上させるには、グローバル トレース フラグ 7745 と 7752 を使用できます。 詳細については、「[Trace Flags](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」(トレース フラグ) を参照してください
+グローバル トレース フラグ 7745 と 7752 を使用すると、クエリ ストアを使用するデータベースの可用性を向上させることができます。 詳しくは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)に関する記事をご覧ください。
   
-トレース フラグ 7745 では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシャットダウンされる前に、クエリ ストアによってディスクにデータを書き込む既定の動作が行われないようにします。
+-  トレース フラグ 7745 では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシャットダウンされる前に、クエリ ストアによってディスクにデータを書き込む既定の動作が行われないようにします。 つまり、収集されただけでディスクにまだ保存されていないクエリ ストア データは失われます。 
   
-トレース フラグ 7752 を使用すると、クエリ ストアの非同期読み込みが可能になります。また、クエリ ストアを完全に読み込む前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクエリを実行することができます。 クエリ ストアの既定の動作は、クエリ ストアが回復する前に、クエリが実行ないようにします。
+-  トレース フラグ 7752 では、クエリ ストアの非同期読み込みが有効になります。 これにより、データベースをオンラインにすることができ、クエリ ストアが完全に復旧される前にクエリを実行できます。 既定の動作では、クエリ ストアの同期読み込みが行われます。 既定の動作では、クエリ ストアが復旧される前にクエリを実行することはできませんが、コレクション内でクエリが失われることもありません。
 
 > [!IMPORTANT]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の Just In Time ワークロード分析情報のためにクエリ ストアを使用している場合は、[KB 4340759](https://support.microsoft.com/help/4340759) におけるパフォーマンスのスケーラビリティの修正を、できるだけ早くインストールするよう計画します。 

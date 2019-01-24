@@ -19,15 +19,15 @@ helpviewer_keywords:
 - logins [SQL Server], granting access
 - granting permissions [SQL Server], impersonation
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 19cccc7c8199e3cdfc425cf8269c363549ad69de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11caad507a8d8af50bae6c3d2b51807287ee694c
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781410"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326603"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT (サーバー プリンシパルの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ GRANT permission [ ,...n ] }
  *permission*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインで許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- LOGIN **::** *SQL_Server_login*  
+ LOGIN **::***SQL_Server_login*  
  許可される権限の対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 スコープ修飾子 (**::**) が必要です。  
   
  SERVER ROLE **::** *server_role*  

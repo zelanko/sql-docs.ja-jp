@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd046f665745ca9456acb6a2c30e28ff9a6fc082
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 9406b4afe6ed3c99bf729b0598020413b4a1c045
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626401"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361662"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "53626401"
   
 2.  **[データベースのプロパティ]** ダイアログ ボックスで、 **[クエリのストア]** ページをクリックします。  
   
-3.  **[操作モード (要求)]** ボックスで、 **[オン]** を選択します。  
+3.  **[操作モード (要求)]** ボックスで、**[読み取り、書き込み]** を選択します。  
   
 #### <a name="use-transact-sql-statements"></a>Transact-SQL ステートメントを使用する  
   
 **ALTER DATABASE** ステートメントを使用してクエリのストアを有効にします。 例 :  
   
 ```sql  
-ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
+ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE); 
 ```  
   
 クエリ ストアに関連する構文オプションの詳細については、「[ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
@@ -105,7 +105,7 @@ INNER JOIN sys.query_store_query_text AS Txt
   
 ![SQL Server 2016 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー")   ![SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー") 
   
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[機能低下したクエリ]** を選択し、 ** [機能低下したクエリ]** ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部のドロップダウン ボックスを使用し、さまざまな条件に基づいてクエリをフィルター処理します:**実行時間 (ミリ秒)** (既定)、CPU 時間 (ミリ秒)、論理読み取り (KB)、論理書き込み (KB)、物理読み取り (KB)、CLR 時間 (ミリ秒)、DOP、メモリ消費量 (KB)、行数、使用済みログ メモリ (KB)、使用済み一時 DB メモリ (KB)、待機時間 (ミリ秒)。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[機能低下したクエリ]** を選択し、  **[機能低下したクエリ]** ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部のドロップダウン ボックスを使用し、さまざまな条件に基づいてクエリをフィルター処理します:**実行時間 (ミリ秒)** (既定)、CPU 時間 (ミリ秒)、論理読み取り (KB)、論理書き込み (KB)、物理読み取り (KB)、CLR 時間 (ミリ秒)、DOP、メモリ消費量 (KB)、行数、使用済みログ メモリ (KB)、使用済み一時 DB メモリ (KB)、待機時間 (ミリ秒)。  
 プランを選択して、グラフィカルなクエリ プランを表示します。 ボタンを使用して、ソース クエリの表示、クエリ プランの強制と強制解除、グリッド形式とグラフ形式の切り替え、選択したプランの比較 (複数選択時)、表示の更新を行うことができます。  
   
 ![SQL Server 2016 の SSMS オブジェクト エクスプローラーでの低下したクエリ](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016 の SSMS オブジェクト エクスプローラーでの低下したクエリ")  

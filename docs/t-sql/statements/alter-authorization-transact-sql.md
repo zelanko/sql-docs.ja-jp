@@ -23,16 +23,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], permissions
 - TAKE OWNERSHIP
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6855f45379f113f91c54b46e3d1c77a913c853f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c7f31849aa75d0102f1406a49faf0d1c8c6a8e9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730710"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327547"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -129,7 +129,7 @@ ALTER AUTHORIZATION ON
 |OBJECT|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
 |ASSEMBLY|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |ASYMMETRIC KEY|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|AVAILABILITY GROUP |**適用対象**: SQL Server 2012 ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|
+|AVAILABILITY GROUP |**適用対象**:SQL Server 2012 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|
 |CERTIFICATE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |CONTRACT|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
 |DATABASE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 詳しくは、後の「[データベースに対する ALTER AUTHORIZATION](#AlterDB)」をご覧ください。|    
@@ -171,7 +171,7 @@ ALTER AUTHORIZATION ON
  対象のエンティティがデータベース以外であり、エンティティを新しい所有者に譲渡する場合は、すべての権限が削除されます。    
     
 > [!CAUTION]    
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] でのスキーマの動作は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から変更されました。 コードで、スキーマがデータベース ユーザーと同じであることが前提となっている場合、正しい結果が返されない場合があります。 CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION のいずれかの DDL ステートメントが使用されたことのあるデータベースでは、sysobjects を含む以前のカタログ ビューを使用しないでください。 このようなデータベースでは、新しいカタログ ビューを使用する必要があります。 新しいカタログ ビューでは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されたプリンシパルとスキーマの分離が考慮されます。 カタログ ビューの詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。    
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] でのスキーマの動作は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から変更されました。 コードで、スキーマがデータベース ユーザーと同じであることが前提となっている場合、正しい結果が返されない場合があります。 以下の DDL ステートメントが使用されているデータベースでは、sysobjects などの古いカタログ ビューを使用してはいけません:CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 このようなデータベースでは、新しいカタログ ビューを使用する必要があります。 新しいカタログ ビューでは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されたプリンシパルとスキーマの分離が考慮されます。 カタログ ビューの詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。    
     
  また、次の点も注意してください。    
     

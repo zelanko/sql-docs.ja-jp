@@ -13,16 +13,16 @@ helpviewer_keywords:
 - granting permissions [SQL Server], objects
 - GRANT statement, objects
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a03e07f20c2e33c4ffad59d7050793cd1b52b9c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed580cb28c65eab7f0abd7702cab623bcf9fcd2e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621220"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326323"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT (オブジェクトの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,11 +63,11 @@ GRANT <permission> [ ,...n ] ON
  ALL  
  ALL を指定しても、可能な権限がすべて許可されるわけではありません。 ALL を指定すると、指定したオブジェクトに適用されるすべての [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 権限を許可することになります。 ALL の意味は、状況に応じて次のようになります。  
   
-- スカラー関数の権限の場合は、EXECUTE、REFERENCES。  
-- テーブル値関数の権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
-- ストアド プロシージャの権限の場合は、EXECUTE。  
-- テーブルの権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
-- ビューの権限の場合は、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+- スカラー関数の権限:EXECUTE、REFERENCES。  
+- テーブル値関数の権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+- ストアド プロシージャの権限:EXECUTE。  
+- テーブルの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+- ビューの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
 PRIVILEGES  
  [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 準拠のために用意されています。 ALL の動作は変更されません。  
@@ -116,7 +116,7 @@ PRIVILEGES
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 たとえば、テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーには計算列の SELECT 権限も必要です。  
+>  権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 例 :テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーには計算列の SELECT 権限も必要です。  
   
  オブジェクトに関する情報は、各種カタログ ビューに表示されます。 詳しくは、「[オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)」をご覧ください。  
   

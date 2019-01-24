@@ -20,16 +20,16 @@ helpviewer_keywords:
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cfc88234cf7d8fea62a07969949e53b084eee17f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 818bd4150965f0a1e36c942f21d9446759c4ec04
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207791"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242245"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE Statements - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -85,7 +85,7 @@ FROM <backup_device>
  指定されたデバイス上にあるバックアップごとに、サーバーからヘッダー情報の行が送信されます。下に説明する列が含まれています。  
   
 > [!NOTE]
->  RESTORE HEADERONLY では、メディア上のすべてのバックアップ セットが確認されるため、 大容量のテープ ドライブを使用している場合は結果セットの生成に時間がかかることがあります。 バックアップ セットごとの情報を取得せずにメディアの内容をすばやく確認するには、RESTORE LABELONLY を使用するか、FILE **=** *backup_set_file_number* を指定します。  
+>  RESTORE HEADERONLY では、メディア上のすべてのバックアップ セットが確認されるため、 大容量のテープ ドライブを使用している場合は結果セットの生成に時間がかかることがあります。 バックアップ セットごとの情報を取得せずにメディアの内容をすばやく確認するには、RESTORE LABELONLY を使用するか、FILE **=** _backup_set_file_number_ を指定します。  
 > 
 > [!NOTE]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format の特性により、他のソフトウェア プログラムから作成されたバックアップ セットと [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ セットが同じメディア上に記録されている場合があります。 RESTORE HEADERONLY によって返される結果セットには、その他のバックアップ セットの情報も 1 件につき 1 行ずつ含まれます。  
@@ -122,7 +122,7 @@ FROM <backup_device>
 |**SoftwareVersionBuild**|**int**|バックアップ セットを作成したサーバーのビルド番号。|  
 |**MachineName**|**nvarchar(128)**|バックアップ操作を実行したコンピューターの名前。|  
 |**フラグ**|**int**|**1** に設定されている場合の個々のフラグ ビットの意味は次のとおりです。<br /><br /> **1** = ログ バックアップに一括ログ操作が含まれている。<br /><br /> **2** = スナップショット バックアップ。<br /><br /> **4** = データベースがバックアップ時に読み取り専用だった。<br /><br /> **8** = データベースがバックアップ時にシングル ユーザー モードだった。<br /><br /> **16** = バックアップにバックアップ チェックサムが含まれている。<br /><br /> **32** = データベースがバックアップ時に損傷したが、エラーに関係なくバックアップ操作の続行が要求された。<br /><br /> **64** = ログ末尾のバックアップ。<br /><br /> **128** = 不完全なメタデータでのログ末尾のバックアップ。<br /><br /> **256** = NORECOVERY でのログ末尾のバックアップ。<br /><br /> **重要:****Flags** ではなく、下に示す **HasBulkLoggedData** から **IsCopyOnly** までのブール値をとる各列の使用をお勧めします。|  
-|**BindingID**|**uniqueidentifier**|データベースに割り当てられたバインド ID。 これは、**sys.database_recovery_status****database_guid** に対応します。 データベースが復元されると、新しい値が割り当てられます。 **FamilyGUID** (下記) も参照してください。|  
+|**BindingID**|**uniqueidentifier**|データベースに割り当てられたバインド ID。 これは、**sys.database_recovery_status database_guid** に対応します。 データベースが復元されると、新しい値が割り当てられます。 **FamilyGUID** (下記) も参照してください。|  
 |**RecoveryForkID**|**uniqueidentifier**|最後の復旧分岐の ID。 この列は、[backupset](../../relational-databases/system-tables/backupset-transact-sql.md) テーブル内の **last_recovery_fork_guid** に対応します。<br /><br /> データのバックアップでは、**RecoveryForkID** は **FirstRecoveryForkID** と同じです。|  
 |**[照合順序]**|**nvarchar(128)**|データベースで使用されている照合順序。|  
 |**FamilyGUID**|**uniqueidentifier**|元のデータベースに関する作成時の ID。 この値は、データベースが復元されても変わりません。|  
@@ -150,7 +150,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) から現在のバージョンまで)。<br /><br /> 使用される暗号化の種類:証明書キーまたは非対称キー。 バックアップが暗号化されていない、ときに、この値は NULL を使用します。|  
   
 > [!NOTE]  
->  バックアップ セットにパスワードが定義されている場合、RESTORE HEADERONLY によって完全な情報が返されるのは、コマンドの PASSWORD オプションと同じパスワードが指定されているバックアップ セットに対してのみです。 また保護されていないバックアップ セットについても、RESTORE HEADERONLY では完全な情報が返されます。 メディア上にある、他のパスワードで保護されているバックアップ セットについては、**BackupName** 列が '***Password Protected\*\*\*' に設定され、他の列は NULL になります。  
+>  バックアップ セットにパスワードが定義されている場合、RESTORE HEADERONLY によって完全な情報が返されるのは、コマンドの PASSWORD オプションと同じパスワードが指定されているバックアップ セットに対してのみです。 また保護されていないバックアップ セットについても、RESTORE HEADERONLY では完全な情報が返されます。 メディア上にある、他のパスワードで保護されているバックアップ セットについては、**BackupName** 列が '**_Password Protected_**' に設定され、他の列は NULL になります。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  クライアントは RESTORE HEADERONLY を使用して、特定のバックアップ デバイス上のすべてのバックアップについて、バックアップ ヘッダーに関するすべての情報を取得できます。 バックアップ デバイス上にあるバックアップごとに、ヘッダー情報が 1 行のデータとしてサーバーから送信されます。  

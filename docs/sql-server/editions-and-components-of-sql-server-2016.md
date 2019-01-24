@@ -33,15 +33,18 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd06451150d655d7173025ecdaf7bc4247a22da1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206181"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420227"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 の各エディションとサポートされている機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 このトピックでは、SQL Server のエディションでサポートされる機能の詳細を説明します。  現時点で、SQL Server 2017 のエディションでサポートされる機能の変更はありません。  
   
@@ -110,7 +113,7 @@ ms.locfileid: "53206181"
 |-------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブック|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の主要マニュアル。| 
 
-**Developer Edition と Evaluation Edition **  
+**Developer Edition と Evaluation Edition**   
 Developer Edition と Evaluation Edition でサポートされている機能については、下の表に記載されている SQL Server Enterprise Edition の機能をご覧ください。
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 の Developer Edition に追加された機能の一覧については、[SQL Server 2016 SP1 の各エディション](https://aka.ms/uw6cw4)に関するページをご覧ください。  
 
@@ -142,7 +145,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |データベース ミラーリング|はい|はい<br /><br /> FULL SAFETY のみ|ミラーリング監視のみ|ミラーリング監視のみ|ミラーリング監視のみ| 
 |バックアップ圧縮|はい|[はい]|いいえ|いいえ|いいえ| 
 |データベース スナップショット|はい|はい <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup>|
-|Always On フェールオーバー クラスター インスタンス|はい<br /><br /> ノードの数はオペレーティング システムの最大容量|はい<br /><br /> 2 つのノードのサポート|いいえ|いいえ|いいえ|  
+|Always On フェールオーバー クラスター インスタンス|可<br /><br /> 16|可<br /><br /> 2 つのノードのサポート|いいえ|いいえ|いいえ|  
 |Always On 可用性グループ|はい<br /><br /> 2 個の同期セカンダリ レプリカを含む最大 8 個のセカンダリ レプリカ|いいえ|いいえ|いいえ|いいえ|
 |基本的な可用性グループ <sup>2</sup>|いいえ|はい<br /><br /> 2 つのノードのサポート|いいえ|いいえ|いいえ|
 |オンライン ページおよびファイルの復元|はい|いいえ|いいえ|いいえ|いいえ|

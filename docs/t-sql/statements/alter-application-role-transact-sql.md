@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ALTER APPLICATION ROLE statement
 - application roles [SQL Server], modifying
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 58cac793f7bcf356f8055c27b598c9521f0c7bce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b272b3b5df01931cfabf1f19945bba477cc680bc
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690230"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326713"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ALTER APPLICATION ROLE application_role_name
  アプリケーション ロールは、sys.database_principals カタログ ビューで参照できます。  
   
 > [!CAUTION]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] でのスキーマの動作は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から変更されました。 コードで、スキーマがデータベース ユーザーと同じであることが前提となっている場合、正しい結果が返されない場合があります。 CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION のいずれかの DDL ステートメントが使用されたことのあるデータベースでは、sysobjects を含む以前のカタログ ビューを使用しないでください。 このようなデータベースでは、新しいカタログ ビューを使用する必要があります。 新しいカタログ ビューでは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されたプリンシパルとスキーマの分離が考慮されます。 カタログ ビューの詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] でのスキーマの動作は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から変更されました。 コードで、スキーマがデータベース ユーザーと同じであることが前提となっている場合、正しい結果が返されない場合があります。 以下の DDL ステートメントが使用されているデータベースでは、sysobjects などの古いカタログ ビューを使用してはいけません:CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 このようなデータベースでは、新しいカタログ ビューを使用する必要があります。 新しいカタログ ビューでは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されたプリンシパルとスキーマの分離が考慮されます。 カタログ ビューの詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。 既定のスキーマを変更するには、アプリケーション ロールに対する ALTER 権限も必要です。 アプリケーション ロールは、それ自体の既定のスキーマを変更できますが、名前とパスワードは変更できません。  

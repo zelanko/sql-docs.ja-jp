@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48596269a6e87f28127a5749ff662d1b401608a9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 889df15caaba289e5f0fed43727d9358bab3a2e1
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532769"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327473"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>PowerShell を使用して Always Encrypted キーの構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ Always Encrypted に SqlServer PowerShell を使用する方法については�
 
 タスク  |[アーティクル]  |プレーンテキストのキー/キー ストアへのアクセス  |データベースへのアクセス   
 ---------|---------|---------|---------
-手順 1. キー ストアで列マスター キーを作成します。<br><br>**注:** SqlServer PowerShell モジュールでは、この手順はサポートされていません。 コマンドラインからこのタスクを実行するには、選択したキー ストアに固有のツールを使用します。 |[列マスター キーを作成して保存する (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | [ユーザー アカウント制御] | いいえ     
+手順 1. キー ストアで列マスター キーを作成します。<br><br>**注:** SqlServer PowerShell モジュールでは、この手順はサポートされていません。 コマンドラインからこのタスクを実行するには、選択したキー ストアに固有のツールを使用します。 |[列マスター キーを作成して保存する (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | 可 | いいえ     
 手順 2.  PowerShell 環境を起動し、SqlServer の PowerShell モジュールをインポートします。  |   [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    いいえ    | いいえ         
-手順 3.  サーバーとデータベースに接続します。     |     [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    いいえ     | [ユーザー アカウント制御]         
+手順 3.  サーバーとデータベースに接続します。     |     [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    いいえ     | 可         
 手順 4.  列マスター キーの場所に関する情報を含む *SqlColumnMasterKeySettings* オブジェクトを作成します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 キー ストアに固有のコマンドレットを使用します。   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   いいえ      | いいえ         
-手順 5.  データベースの列マスター キーに関するメタデータを作成します。      |    [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注:** このコマンドレットは背後で [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントを発行し、キー メタデータを作成します。|    いいえ     |    [ユーザー アカウント制御]
-手順 6.  列マスター キーが Azure Key Vault に保存されている場合、Azure に対して認証します。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |  [ユーザー アカウント制御]   | いいえ         
-手順 7.  新しい列暗号化キーを生成し、それを列マスター キーで暗号化し、データベースで列の暗号化キー メタデータを作成します。     |    [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**注:** 内部で列の暗号化キーを生成し、暗号化するコマンドレットのバリエーションを使用します。<br><br>**注:** このコマンドレットは背後で [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) ステートメントを発行し、キー メタデータを作成します。  | [ユーザー アカウント制御] | [ユーザー アカウント制御]
+手順 5.  データベースの列マスター キーに関するメタデータを作成します。      |    [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注:** このコマンドレットは背後で [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントを発行し、キー メタデータを作成します。|    いいえ     |    可
+手順 6.  列マスター キーが Azure Key Vault に保存されている場合、Azure に対して認証します。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |  可   | いいえ         
+手順 7.  新しい列暗号化キーを生成し、それを列マスター キーで暗号化し、データベースで列の暗号化キー メタデータを作成します。     |    [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**注:** 内部で列の暗号化キーを生成し、暗号化するコマンドレットのバリエーションを使用します。<br><br>**注:** このコマンドレットは背後で [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) ステートメントを発行し、キー メタデータを作成します。  | 可 | 可
   
 
 ## <a name="windows-certificate-store-without-role-separation-example"></a>Windows 証明書ストアの例 (役割の分離なし)
@@ -88,16 +88,16 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 
 ```
 # Create a column master key in Azure Key Vault.
-Login-AzureRmAccount
+Connect-AzAccount
 $SubscriptionId = "<Azure SubscriptionId>"
 $resourceGroup = "<resource group name>"
 $azureLocation = "<datacenter location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<key name>"
-$azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation # Creates a new key vault - skip if your vault already exists.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+$azureCtx = Set-AzConteXt -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation # Creates a new key vault - skip if your vault already exists.
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 
 # Import the SqlServer module.
@@ -191,11 +191,11 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 タスク  |[アーティクル]  |プレーンテキストのキー/キー ストアへのアクセス  |データベースへのアクセス  
 ---------|---------|---------|---------
-手順 1. キー ストアで列マスター キーを作成します。<br><br>**注:** SqlServer モジュールでは、この手順はサポートされていません。 コマンドラインからこのタスクを実行するには、キー ストアの種類に固有のツールを使用する必要があります。     | [列マスター キーを作成して保存する (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    [ユーザー アカウント制御]    | いいえ 
+手順 1. キー ストアで列マスター キーを作成します。<br><br>**注:** SqlServer モジュールでは、この手順はサポートされていません。 コマンドラインからこのタスクを実行するには、キー ストアの種類に固有のツールを使用する必要があります。     | [列マスター キーを作成して保存する (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    可    | いいえ 
 手順 2.  PowerShell セッションを起動し、SqlServer のモジュールをインポートします。      |     [SqlServer モジュールのインポート](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | いいえ | いいえ         
 手順 3.  列マスター キーの場所に関する情報を含む *SqlColumnMasterKeySettings* オブジェクトを作成します。 *SqlColumnMasterKeySettings* は、メモリ (PowerShell) に存在するオブジェクトです。 キー ストアに固有のコマンドレットを使用します。 |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)   | いいえ         | いいえ         
-手順 4.  列マスター キーが Azure Key Vault に保存されている場合、Azure に対して認証します。 |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |[ユーザー アカウント制御]|いいえ         
-手順 5.  列暗号化キーを生成し、それを列マスター キーで暗号化して列の暗号化キーの値を暗号化します。     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)     |    [ユーザー アカウント制御]    | いいえ        
+手順 4.  列マスター キーが Azure Key Vault に保存されている場合、Azure に対して認証します。 |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |可|いいえ         
+手順 5.  列暗号化キーを生成し、それを列マスター キーで暗号化して列の暗号化キーの値を暗号化します。     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)     |    可    | いいえ        
 手順 6.  列マスター キーの場所 (プロバイダー名と列マスター キーのキー パス) と列暗号化キーの暗号化値を DBA に提供します。  | 後半の例を参照してください。        |   いいえ      | いいえ         
 
 ### <a name="dba"></a>DBA 
@@ -206,10 +206,10 @@ DBA は、セキュリティ管理者から受け取った (上記の手順 6) �
 ---------|---------|---------|---------
 手順 1.  列の暗号化キーの場所と列の暗号化キーの暗号化された値をセキュリティ管理者から取得します。 |後半の例を参照してください。 | いいえ | いいえ
 手順 2.  PowerShell 環境を起動し、Sql Server のモジュールをインポートします。  | [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)  | いいえ | いいえ
-手順 3.  サーバーとデータベースに接続します。 | [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | [ユーザー アカウント制御]
+手順 3.  サーバーとデータベースに接続します。 | [データベースへの接続](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | 可
 手順 4.  列マスター キーの場所に関する情報を含む SqlColumnMasterKeySettings オブジェクトを作成します。 SqlColumnMasterKeySettings は、メモリに存在するオブジェクトです。 | New-SqlColumnMasterKeySettings | いいえ | いいえ
-手順 5. データベースの列マスター キーに関するメタデータを作成します。 | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br>**注:** このコマンドレットは背後で [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントを発行し、列マスター キー メタデータを作成します。 | いいえ | [ユーザー アカウント制御]
-手順 6. データベースで列の暗号化キー メタデータを作成します。 | New-SqlColumnEncryptionKey<br>**注:** DBA は、列の暗号化キー メタデータのみを作成するコマンドレットのバリエーションを使用します。<br>このコマンドレットは背後で [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) ステートメントを発行し、列の暗号化キー メタデータを作成します。 | いいえ | [ユーザー アカウント制御]
+手順 5. データベースの列マスター キーに関するメタデータを作成します。 | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br>**注:** このコマンドレットは背後で [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントを発行し、列マスター キー メタデータを作成します。 | いいえ | 可
+手順 6. データベースで列の暗号化キー メタデータを作成します。 | New-SqlColumnEncryptionKey<br>**注:** DBA は、列の暗号化キー メタデータのみを作成するコマンドレットのバリエーションを使用します。<br>このコマンドレットは背後で [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) ステートメントを発行し、列の暗号化キー メタデータを作成します。 | いいえ | 可
   
 ## <a name="windows-certificate-store-with-role-separation-example"></a>Windows 証明書ストアの例 (役割の分離あり)
 

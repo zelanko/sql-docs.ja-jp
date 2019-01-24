@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4a65105416da0a53327cbcd174062a92d3659529
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ed04fab7d5496f71bc4c9accbcb4fd2e5579df5c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207411"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126142"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Always On 可用性グループの読み取り専用ルーティングの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "53207411"
   
     -   セカンダリ ロールの読み取り専用ルーティングを構成するには、ADD REPLICA 句または MODIFY REPLICA WITH 句で、SECONDARY_ROLE オプションを次のように指定します。  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***')**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**')**  
   
          読み取り専用ルーティング URL のパラメーターは次のとおりです。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "53207411"
   
     -   プライマリ ロールの読み取り専用ルーティングを構成するには、ADD REPLICA 句または MODIFY REPLICA WITH 句で、PRIMARY_ROLE オプションを次のように指定します。  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('***server***'** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('**_server_**'** [ **,**...*n* ] **))**  
   
          *server* は、可用性グループの読み取り専用セカンダリ レプリカをホストするサーバー インスタンスを識別します。  
   
@@ -189,13 +189,13 @@ GO
   
 2.  可用性グループに可用性レプリカを追加する場合は、 **New-SqlAvailabilityReplica** コマンドレットを使用します。 既存の可用性レプリカを変更する場合は、 **Set-SqlAvailabilityReplica** コマンドレットを使用します。 関連するパラメーターは次のとおりです。  
   
-    -   セカンダリ ロールの読み取り専用ルーティングを構成するには、**ReadonlyRoutingConnectionUrl"***url***"** パラメーターを指定します。  
+    -   セカンダリ ロールの読み取り専用ルーティングを構成するには、 **ReadonlyRoutingConnectionUrl"**_url_**"** パラメーターを指定します。  
   
          *url* は、読み取り専用接続のためにレプリカにルーティングするときに使用する、接続の完全修飾ドメイン名 (FQDN) およびポートです。 例:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          詳細については、「 [AlwaysOn の read_only_routing_url の計算](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)」を参照してください。  
   
-    -   プライマリ ロールの接続アクセスを構成するには、**ReadonlyRoutingList"***server***"** [ **,**...*n* ] を指定します。*server* は、可用性グループの読み取り専用セカンダリ レプリカをホストするサーバー インスタンスを識別します。 例:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   プライマリ ロールの接続アクセスを構成するには、 **ReadonlyRoutingList"**_server_**"** [ **,**...*n* ] を指定します。 *server* は、可用性グループの読み取り専用セカンダリ レプリカをホストするサーバー インスタンスを識別します。 例:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  レプリカの読み取り専用ルーティング リストを構成する前に、レプリカの読み取り専用ルーティング URL を設定する必要があります。  

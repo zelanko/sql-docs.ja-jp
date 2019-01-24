@@ -2,7 +2,7 @@
 title: ALTER DATABASE の SET オプション (Transact-SQL) | Microsoft Docs
 description: SQL Server および Azure SQL Database で、自動調整、暗号化、クエリ ストアなどのデータベースのオプションを設定する方法について説明します
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 1/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a06414a9ca09ecfd02438827cbee6645ca381ae
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1dee3b66253935a979aa483de87c42dc4bb53e3f
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215388"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211133"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL) 
 
@@ -704,10 +704,13 @@ ON
 クエリのストアを有効にします。  
   
 OFF  
-クエリのストアを無効にします。 これが既定値です。   
+クエリのストアを無効にします。 これが既定値です。
   
 CLEAR  
-クエリ ストアの内容を削除します。  
+クエリ ストアの内容を削除します。
+
+> [!NOTE]  
+> Azure SQL Data Warehouse の場合は、ユーザー データベースから `ALTER DATABASE SET QUERY_STORE` を実行する必要があります。 別のデータ ウェアハウス インスタンスからのステートメントの実行は、サポートされていません。
   
 OPERATION_MODE  
 クエリのストアの操作モードをについて説明します。 有効な値は、READ_ONLY、READ_WRITE はします。 READ_WRITE モードでは、クエリのストアは、収集し、クエリ プランとランタイム実行の統計情報が引き続き発生すます。 READ_ONLY モードでは、クエリのストアから情報を読み取ることができますが、新しい情報は追加されません。 クエリのストアを変更は、最大値が割り当てられているクエリのストアの領域が不足している場合は操作モードを READ_ONLY にします。  

@@ -21,16 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e0481611eb666b893395581805c923cf03921ad9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91cc75f835320b6cf15c20cbb7d72101dc2868df
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509384"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327783"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ WITH IDENTITY = 'identity_name'
  SECRET **='**_secret_**'**  
  送信の認証に必要なシークレットを指定します。  
   
- Azure Key Vault へのアクセスに資格情報を使うときは、**CREATE CREDENTIAL** の **SECRET** 引数に、Azure Active Directory の**サービス プリンシパル**の \<*クライアント ID*> (ハイフンなし) と \<*シークレット*> を間のスペースなしで渡す必要があります。 後半の例 C を参照してください。 資格情報が Shared Access Signature を使っている場合は、**SECRET** は Shared Access Signature トークンです。 D は次の例を参照してください。  Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成する方法について詳しくは、「[レッスン 1: Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)」をご覧ください。  
+ Azure Key Vault へのアクセスに資格情報を使うときは、**CREATE CREDENTIAL** の **SECRET** 引数に、Azure Active Directory の**サービス プリンシパル**の \<*クライアント ID*> (ハイフンなし) と \<*シークレット*> を間のスペースなしで渡す必要があります。 後半の例 C を参照してください。 資格情報が Shared Access Signature を使っている場合は、**SECRET** は Shared Access Signature トークンです。 D は次の例を参照してください。  Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成する方法について詳しくは、「[レッスン 1:Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)」をご覧ください。  
   
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
  "*拡張キー管理プロバイダー (EKM)*" の名前を指定します。 キーの管理について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. SAS トークンを使用して資格情報の作成  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで。  
   
- 次の例では、SAS トークンを使用して共有アクセス署名資格情報を作成します。  Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成してから、Shared Access Signature を使って資格情報を作成するチュートリアルについては、「[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」(チュートリアル: Microsoft Azure BLOB ストレージ サービスと SQL Server 2016 データベースの使用) をご覧ください。  
+ 次の例では、SAS トークンを使用して共有アクセス署名資格情報を作成します。  Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成してから、Shared Access Signature を使って資格情報を作成するチュートリアルについては、「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
   
 > [!IMPORTANT]  
 >  **CREDENTIAL NAME** 引数では、名前がコンテナーのパス (https で始まり、末尾のスラッシュを含まないもの) と一致する必要があります。 **IDENTITY** 引数には、名前 *SHARED ACCESS SIGNATURE* が必要です。 **SECRET** 引数には、Shared Access Signature トークンが必要です。  
@@ -167,7 +167,7 @@ GO
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
- [レッスン 2: Shared Access Signature を使用して SQL Server 資格情報を作成する](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
+ [レッスン 2:Shared Access Signature を使用して SQL Server 資格情報を作成する](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
  [Shared Access Signatures](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   

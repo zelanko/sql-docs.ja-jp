@@ -11,17 +11,17 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 274e91c482ada16847cb2b2e704ac9d953567d7d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 99119431d65cc8780cba24fbd891a1688844a769
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328592"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300309"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>チュートリアル:SQL Server Management Studio を使用して SQL Server インスタンスに接続し、クエリを行う
 
 > [!div class="nextstepaction"]
-> [SQL Server ドキュメントの改善にご協力ください。](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 このチュートリアルでは、SQL Server Management Studio (SSMS) を使って SQL Server インスタンスに接続し、いくつかの基本的な Transact-SQL (T-SQL) コマンドを実行する方法を説明します。 この記事では、以下のことを行う方法を示します。
 

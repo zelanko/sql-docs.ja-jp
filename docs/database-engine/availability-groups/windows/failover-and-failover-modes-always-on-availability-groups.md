@@ -16,12 +16,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44e11edc9608dc4c10634ea58af1c0140bba666f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e20ad7cab67a87dd7bb76be0117ee87752e3e66f
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207441"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226669"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,9 +84,9 @@ ms.locfileid: "53207441"
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |自動フェールオーバー (automatic failover)|いいえ|いいえ|可|  
 |計画的な手動フェールオーバー|いいえ|はい|可|  
-|強制フェールオーバー|可|可|可**\***|  
+|強制フェールオーバー|可|可|可 **&#42;**|  
   
- **\*** 同期されたセカンダリ レプリカ上で強制フェールオーバー コマンドを実行した場合、セカンダリ レプリカは手動フェールオーバーの場合と同様に動作します。  
+ **&#42;** 同期されたセカンダリ レプリカ上で強制フェールオーバー コマンドを実行した場合、セカンダリ レプリカは手動フェールオーバーの場合と同様に動作します。  
   
  フェールオーバー中にデータベースが使用できなくなる時間の長さは、フェールオーバーの種類および原因によって異なります。  
   

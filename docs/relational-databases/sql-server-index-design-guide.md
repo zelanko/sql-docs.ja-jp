@@ -1,7 +1,7 @@
 ---
 title: SQL Server のインデックスのアーキテクチャとデザイン ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 07/06/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712703"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420187"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server のインデックスのアーキテクチャとデザイン ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -218,7 +218,7 @@ ON Purchasing.PurchaseOrderDetail
 |-|-|
 |[sys.indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
 |[sys.partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
-[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
 |[sys.column_store_row_groups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
 |[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -824,7 +824,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>インメモリ非クラスター化インデックスのアーキテクチャ
 
-インメモリ非クラスター化インデックスは、2011 年に Microsoft Research が独自に考案した Bw ツリーというデータ構造を使用して実装されています。 Bw ツリーは、B ツリーのロックおよびラッチフリーのバリエーションです。 詳細については、「[The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/)」(Bw ツリー: 新しいハードウェア プラットフォーム向けの B ツリー) を参照してください。 
+インメモリ非クラスター化インデックスは、2011 年に Microsoft Research が独自に考案した Bw ツリーというデータ構造を使用して実装されています。 Bw ツリーは、B ツリーのロックおよびラッチフリーのバリエーションです。 詳細については、「[The Bw-Tree:A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/)」(Bw ツリー: 新しいハードウェア プラットフォーム向けの B ツリー) を参照してください。 
 
 大まかに説明すると、Bw ツリーは、ページ ID (PidMap) で整理されたページのマップです。また、ページ ID (PidAlloc) と、ページ マップ内および相互にリンクされているページのセットを割り当て、再利用する機能があります。 これら 3 つの上位レベルのサブコンポーネントが、Bw ツリーの基本的な内部構造を構成します。
 
@@ -871,7 +871,7 @@ Bw ツリーのインデックス ページは、1 行の格納から最大 8 KB
 
 **手順 1:** キー値 10 (青色の三角形) を表す差分ページが作成され、非リーフ ページ Pp1 内のそのポインターは新しい差分ページに設定されます。 さらに、特別なマージ差分ページ (緑色の三角形) が作成され、差分ページを示すようにリンクされます。 この段階では、両方のページ (差分ページとマージ差分ページ) は、同時のトランザクションには表示されません。 1 つのアトミック手順では、ページ マッピング テーブルのリーフレベル ページ P1 へのポインターはマージ差分ページを示すように更新されます。 この手順の後、Pp1 のキー値 10 のエントリはマージ差分ページを示すようになります。 
 
-**手順 2**: 非リーフ ページ Pp1 のキー値 7 を表す行を削除し、キー値 10 のエントリが P1 を示すように更新する必要があります。 この処理を実行するために、新しい非リーフ ページ Pp2 が割り当てられ、キー値 7 を表す行を除き、Pp1 のすべての行がコピーされます。キー値 10 の行はページ P1 を示すように更新されます。 この処理が完了すると、1 つのアトミック手順で、Pp1 を示すページ マッピング テーブルのエントリは Pp2 を示すように更新されます。 Pp1 には到達できなくなります。 
+**手順 2:** 非リーフ ページ Pp1 のキー値 7 を表す行を削除し、キー値 10 のエントリが P1 を示すように更新する必要があります。 この処理を実行するために、新しい非リーフ ページ Pp2 が割り当てられ、キー値 7 を表す行を除き、Pp1 のすべての行がコピーされます。キー値 10 の行はページ P1 を示すように更新されます。 この処理が完了すると、1 つのアトミック手順で、Pp1 を示すページ マッピング テーブルのエントリは Pp2 を示すように更新されます。 Pp1 には到達できなくなります。 
 
 **手順 3:** リーフレベル ページ P2 と P1 はマージされ、差分ページは削除されます。 この処理を実行するために、新しいページ P3 が割り当てられ、P2 と P1 の行がマージされ、差分ページの変更は新しい P3 に含まれます。 次に、1 つのアトミック手順で、ページ P1 を示すページ マッピング テーブルのエントリは、ページ P3 を示すように更新されます。 
 

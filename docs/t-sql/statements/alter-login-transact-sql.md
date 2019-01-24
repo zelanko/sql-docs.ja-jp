@@ -21,16 +21,16 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd062ba7ea48de6cce202b964dea9d80754b75f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a373c46a00f6e83461f41974bafa269e50468bca
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215591"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327823"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -209,22 +209,29 @@ ALTER LOGIN Mary5 ENABLE;
 ```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
+
+### <a name="c-changing-the-password-of-a-login-when-logged-in-as-the-login"></a>C. ログインとしてログインしたときにログインのパスワードを変更する 
+ 現在使用しているログインのパスワードを変更しようとして、`ALTER ANY LOGIN` アクセス許可がない場合は、`OLD_PASSWORD` オプションを指定する必要があります。    
   
-### <a name="c-changing-the-name-of-a-login"></a>C. ログインの名前を変更する  
+```sql  
+ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>' OLD_PASSWORD = '<oldWeakPasswordHere>';  
+```  
+
+### <a name="d-changing-the-name-of-a-login"></a>D. ログインの名前を変更する  
  次の例では、ログイン `Mary5` の名前を `John2` に変更します。  
   
 ```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
-### <a name="d-mapping-a-login-to-a-credential"></a>D. ログインを資格情報にマップする  
+### <a name="e-mapping-a-login-to-a-credential"></a>E. ログインを資格情報にマップする  
  次の例では、ログイン `John2` を資格情報 `Custodian04` にマップします。  
   
 ```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
-### <a name="e-mapping-a-login-to-an-extensible-key-management-credential"></a>E. ログインを拡張キー管理資格情報にマップする  
+### <a name="f-mapping-a-login-to-an-extensible-key-management-credential"></a>F. ログインを拡張キー管理資格情報にマップする  
  次の例では、ログイン `Mary5` を EKM 資格情報 `EKMProvider1` にマップします。  
   
   

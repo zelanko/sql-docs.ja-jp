@@ -1,6 +1,6 @@
 ---
 title: 移行後の検証および最適化ガイド | Microsoft Docs
-ms.date: 5/03/2017
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,23 +13,25 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213621"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206368"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移行後の検証および最適化ガイド
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の移行後手順は、データの精度と完全性の調整、およびワークロードのパフォーマンスの問題の発見に、非常に重要です。
 
-# <a name="common-performance-scenarios"></a>パフォーマンスの一般的なシナリオ 
+## <a name="common-performance-scenarios"></a>パフォーマンスの一般的なシナリオ
+
 次に示すのは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プラットフォームへの移行後に発生する一般的なパフォーマンスのシナリオと、その解決方法です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行 (古いバージョンから新しいバージョン) に固有のシナリオや、外部のプラットフォーム (Oracle、DB2、MySQL、Sybase など) から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行に固有のシナリオが含まれています。
 
 ## <a name="CEUpgrade"></a> CE バージョンでの変更によるクエリ パフォーマンス低下
- 
+
 **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
 
 古いバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降に移行する場合、および[データベース互換性レベル](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)を最新のレベルにアップグレードする場合、ワークロードのパフォーマンスが低下するリスクにさらされる可能性があります。
@@ -126,6 +128,7 @@ SARGable ではない述語の例を次に示します。
 > MSTVF (複数ステートメントのテーブル値関数) の出力テーブルはコンパイル時に作成されないので、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは実際の統計ではなくヒューリスティックに依存して、行の推定を決定します。 基底テーブルにインデックスを追加しても、役には立ちません。 MSTVF の場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、MSTVF によって返されるものと予想される行数に固定値 1 を使います ([!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降、固定の推定値は 100 行です)。
 
 ### <a name="steps-to-resolve"></a>解決手順
+
 1.  複数ステートメントの TVF が 1 ステートメントのみである場合は、インライン TVF に変換します。
 
     ```sql
@@ -142,7 +145,8 @@ SARGable ではない述語の例を次に示します。
     RETURN
     END
     ```
-    変換先 
+
+    インライン形式の例を次に示します。
 
     ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
@@ -158,7 +162,8 @@ SARGable ではない述語の例を次に示します。
 
 2.  さらに複雑な場合は、メモリ最適化テーブルまたは一時テーブルに格納される中間結果を使うことを検討します。
 
-##  <a name="Additional_Reading"></a> その他の情報  
+##  <a name="Additional_Reading"></a> その他の情報
+
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [メモリ最適化テーブル](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [ユーザー定義関数](../relational-databases/user-defined-functions/user-defined-functions.md)  

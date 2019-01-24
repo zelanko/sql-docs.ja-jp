@@ -13,12 +13,12 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58b0010f2440a95b698bb37d99e8e3bc11cce218
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 57330040f7fc5ba1fdd48278b69a46bcf7eaee46
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209981"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226549"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>PowerShell による Always On 可用性グループの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "53209981"
 ###  <a name="SummaryPSStatements"></a> 作業の概要および対応する PowerShell コマンドレット  
  次の表は、可用性グループの構成に伴う基本的な作業の一覧です。一覧には PowerShell コマンドレットによってサポートされる作業が示されています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に関連したこれらの作業は、この表に示されている順に実行する必要があります。  
   
-|タスク|PowerShell コマンドレット (利用可能な場合) または Transact SQL ステートメント|作業の実行場所**\***|  
+|タスク|PowerShell コマンドレット (利用可能な場合) または Transact SQL ステートメント|作業の実行場所 **&#42;**|  
 |----------|--------------------------------------------------------------------|---------------------------------|  
 |データベース ミラーリング エンドポイントを作成する ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスごとに 1 回)|**New-SqlHadrEndPoint**|データベース ミラーリング エンドポイントが欠落している各サーバー インスタンスで実行します。<br /><br /> 注:既存のデータベース ミラーリング エンドポイントに変更を加えるには、**Set-SqlHadrEndpoint** を使用します。|  
 |可用性グループを作成する|まず、 **New-SqlAvailabilityReplica** コマンドレットに **-AsTemplate** パラメーターを指定し、可用性グループに追加する予定の 2 つの可用性レプリカのそれぞれについて、インメモリの可用性レプリカ オブジェクトを作成します。<br /><br /> 次に、 **New-SqlAvailabilityGroup** コマンドレットを使用し、可用性レプリカ オブジェクトを参照して、可用性グループを作成します。|初期プライマリ レプリカをホストするサーバー インスタンスで実行します。|  

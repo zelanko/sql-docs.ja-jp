@@ -14,12 +14,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1c8c674eb0e86d0b78348f07fb95259327582cc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 00de66d272688a7b61b4847e38a41f4738457d92
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208731"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300149"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Always On 可用性グループの一部として複製したパブリッシャー データベースを管理する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "53208731"
     > [!NOTE]  
     >  メンバー データベースをパブリッシュした可用性グループを削除した場合、またはパブリッシュされたデータベースを可用性グループから削除した場合、パブリッシュされたデータベースのすべてのコピーは復旧中の状態のままとなります。 それぞれを復元すると、パブリッシュされたデータベースとして表示されます。 1 つのコピーだけをパブリケーション メタデータで保持する必要があります。 パブリッシュされたデータベース コピーのレプリケーションを無効にするには、最初にすべてのサブスクリプションとパブリケーションをデータベースから削除します。  
   
-     **sp_dropsubscription** を実行してパブリケーション サブスクリプションを削除します。 アクティブなパブリッシング データベースのメタデータをディストリビューターで保持するために、 *@ignore_distributributor* パラメーターを 1 に設定します。  
+     **sp_dropsubscription** を実行してパブリケーション サブスクリプションを削除します。 アクティブなパブリッシング データベースのメタデータをディストリビューターで保持するために、 *@ignore_distributor* パラメーターを 1 に設定します。  
   
     ```  
     USE MyDBName;  
@@ -115,7 +115,7 @@ ms.locfileid: "53208731"
   
 -   [レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
--   [管理 &#40;レプリケーション&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [レプリケーション管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [レプリケーション サブスクライバーと AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

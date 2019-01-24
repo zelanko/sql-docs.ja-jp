@@ -13,12 +13,12 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44944c4dcc4c3f4b8cc45ee6f3ba57863316b9de
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4313725b5fc18b25749fabb6163361755de66715
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213021"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226609"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Transact-SQL (T-SQL) を使用した Always On 可用性グループの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "53213021"
 ###  <a name="SummaryTsqlStatements"></a> 作業の概要および対応する Transact-SQL ステートメント  
  次の表は、可用性グループの作成と構成に伴う基本的な作業と、これらの作業に使用する [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの一覧です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に関連したこれらの作業は、この表に示されている順に実行する必要があります。  
   
-|タスク|Transact-SQL ステートメント|作業の実行場所**\***|  
+|タスク|Transact-SQL ステートメント|作業の実行場所 **&#42;**|  
 |----------|----------------------------------|---------------------------------|  
 |データベース ミラーリング エンドポイントを作成する ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスごとに 1 回)|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* ...FOR DATABASE_MIRRORING|データベース ミラーリング エンドポイントが欠落している各サーバー インスタンスで実行します。|  
 |可用性グループを作成する|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|初期プライマリ レプリカをホストするサーバー インスタンスで実行します。|  

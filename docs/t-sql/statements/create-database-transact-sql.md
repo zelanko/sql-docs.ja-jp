@@ -38,20 +38,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5642af0a47cff5ffa7c45aa910fb3101ad831df0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0ba661f6cc2c19b00dd5c51be9b3dfeb1d47a6e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532557"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327888"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
-新しいデータベースを作成します。 
+新しいデータベースを作成します。
 
 お使いの特定バージョンの SQL の構文、引数、注釈、権限、例を表示するには、以下のいずれかのタブをクリックします。
 
-構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。 
+構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。
 
 ## <a name="click-a-product"></a>製品をクリックしてください
 
@@ -72,12 +72,11 @@ ms.locfileid: "52532557"
 
 SQL Server では、このステートメントは、新しいデータベース、使用されるファイル、そのファイル グループを作成します。 また、データベース スナップショットを作成したり、別のデータベースのデタッチされたファイルからデータベースを作成するためにデータベース ファイルをアタッチするためにも使用できます。 
 
-
 ## <a name="syntax"></a>構文  
 
 データベースの作成。  
 
-```  
+```
 CREATE DATABASE database_name   
 [ CONTAINMENT = { NONE | PARTIAL } ]  
 [ ON   
@@ -164,7 +163,8 @@ CREATE DATABASE database_snapshot_name
 [;]  
 ```  
   
-## <a name="arguments"></a>引数  
+## <a name="arguments"></a>引数
+
  *database_name*  
  新規データベースの名前です。 データベース名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意であり、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
   
@@ -209,7 +209,7 @@ CREATE DATABASE database_snapshot_name
   
      データベースに対する非トランザクション FILESTREAM アクセスのレベルを指定します。  
   
-    |ReplTest1|[説明]|  
+    |[値]|[説明]|  
     |-----------|-----------------|  
     |OFF|非トランザクション アクセスは無効です。|  
     |READONLY|このデータベース内の FILESTREAM データは、非トランザクション プロセスによって読み取ることができます。|  
@@ -455,7 +455,8 @@ CREATE DATABASE database_snapshot_name
   
  詳細については、「解説」の「データベース スナップショット」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  [master データベース](../../relational-databases/databases/master-database.md)は、ユーザー データベースが作成、変更、または削除されるたびにバックアップする必要があります。  
   
  CREATE DATABASE ステートメントは自動コミット モード (既定のトランザクション管理モード) で実行する必要があり、明示的または暗黙的なトランザクション モードでは許可されません。  
@@ -466,7 +467,7 @@ CREATE DATABASE database_snapshot_name
   
 2.  Service Broker GUID がデータベースに割り当てられます。  
   
-3.  次に、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、データベース内の領域の使用状況を記録する内部データが格納されるページを除いて、データベースの残りの部分に空のページを挿入します。  
+3.  次に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は、データベース内の領域の使用状況を記録する内部データが格納されるページを除いて、データベースの残りの部分に空のページを挿入します。  
   
  インスタンスには、最大 32,767 個のデータベースを指定できます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
@@ -479,14 +480,16 @@ CREATE DATABASE database_snapshot_name
 - データベース スナップショットの作成
 - メモリ最適化データ ファイル グループ
    
-## <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ  
+## <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ
+
  すべてのデータベースには、*プライマリ ファイル*と*トランザクション ログ ファイル*という少なくとも 2 つのファイル、および少なくとも 1 つのファイル グループがあります。 各データベースに、最大 32,767 のファイルと 32,767 のファイル グループを指定できます。  
   
  データベースを作成する際に、データ ファイルのサイズは、データベースに記述されるデータの最大量を基に可能な限り大きく設定しておきます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ファイルのストレージには、ストレージ エリア ネットワーク (SAN)、iSCSI ベースのネットワーク、または、ローカルにアタッチされたディスクを使用することをお勧めします。この構成により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスと信頼性を最適化することができるためです。  
   
-## <a name="database-snapshots"></a>データベース スナップショット  
+## <a name="database-snapshots"></a>データベース スナップショット
+
  CREATE DATABASE ステートメントを使用して、*ソース データベース*の読み取り専用の静的ビューである*データベース スナップショット*を作成できます。 データベース スナップショットは、スナップショットが作成された時点で存在していたソース データベースと、トランザクション的に一貫性があります。 ソース データベースは複数のスナップショットを持つことができます。  
   
 > [!NOTE]  
@@ -498,20 +501,24 @@ CREATE DATABASE database_snapshot_name
   
  詳細については、「[データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)」を参照してください。  
   
-## <a name="database-options"></a>データベース オプション  
+## <a name="database-options"></a>データベース オプション
+
  データベースを作成するたびに、いくつかのデータベース オプションが自動的に設定されます。 これらのオプションの一覧については、「[ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
   
-## <a name="the-model-database-and-creating-new-databases"></a>model データベースと新しいデータベースの作成  
+## <a name="the-model-database-and-creating-new-databases"></a>model データベースと新しいデータベースの作成
+
  [model データベース](../../relational-databases/databases/model-database.md)内にあるすべてのユーザー定義のオブジェクトは、新しく作成されたすべてのデータベースにコピーされます。 テーブル、ビュー、ストアド プロシージャ、データ型など、あらゆるオブジェクトを model データベースに追加し、新しく作成されたすべてのデータベースに含めることができます。  
   
  CREATE DATABASE *database_name* ステートメントがサイズ パラメーターを追加せずに指定されている場合、プライマリ データ ファイルは、model データベースのプライマリ ファイルと同じサイズになります。  
   
  FOR ATTACH が指定されていない限り、すべての新しいデータベースは、model データベースからデータベース オプションの設定を継承します。 たとえば、auto shrink データベース オプションは、model データベースにおいても、作成するどの新規データベースにおいても、**true** に設定されます。 model データベースのオプションを変更すると、これらの新しいオプション設定が、作成する新規のデータベースで使用されます。 model データベースの操作の変更は、既存のデータベースには影響を与えません。 CREATE DATABASE ステートメントで FOR ATTACH を指定すると、新しいデータベースは元のデータベースからデータベース オプションの設定を継承します。  
   
-## <a name="viewing-database-information"></a>データベース情報の表示  
+## <a name="viewing-database-information"></a>データベース情報の表示
+
  カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。 詳細については、「[システム ビュー &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)」を参照してください。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
+
  CREATE DATABASE、CREATE ANY DATABASE、または ALTER ANY DATABASE の各権限が必要です。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス上のディスク使用量を管理するため、通常、データベースを作成する権限をいくつかのログイン アカウントに制限します。  
@@ -525,7 +532,8 @@ GRANT CREATE DATABASE TO [Fay];
 GO  
 ```  
   
-### <a name="permissions-on-data-and-log-files"></a>データおよびログ ファイルに対する権限  
+### <a name="permissions-on-data-and-log-files"></a>データおよびログ ファイルに対する権限
+
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、各データベースのデータ ファイルとログ ファイルに一定の権限が設定されます。 次の操作がデータベースに適用されるたびに、次の権限が設定されます。  
   
 |||  
@@ -541,8 +549,9 @@ GO
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-creating-a-database-without-specifying-files"></a>A. ファイルを指定せずにデータベースを作成する  
- 次の例では、`mytest` データベースを作成し、対応するプライマリ ファイルおよびトランザクション ログ ファイルを作成します。 ステートメントに \<filespec> 項目が含まれていないため、データベースのプライマリ ファイルは、model データベースのプライマリ ファイルと同じサイズになります。 トランザクション ログは、512KB、またはプライマリ データ ファイルのサイズの 25% の値の大きい方に設定されます。 MAXSIZE が指定されていないため、ファイルはディスク上のすべての使用可能な領域いっぱいまで拡張することができます。 この例では、`mytest` という名前のデータベースが既に存在する場合はそれを削除してから、`mytest` データベースを作成する方法も示します。  
+### <a name="a-creating-a-database-without-specifying-files"></a>A. ファイルを指定せずにデータベースを作成する
+
+ 次の例では、`mytest` データベースを作成し、対応するプライマリ ファイルおよびトランザクション ログ ファイルを作成します。 ステートメントに \<filespec> 項目が含まれていないため、データベースのプライマリ ファイルは、model データベースのプライマリ ファイルと同じサイズになります。 トランザクション ログは、次の値の大きい方に設定されます。512 KB か、プライマリ データ ファイルのサイズの 25%。 MAXSIZE が指定されていないため、ファイルはディスク上のすべての使用可能な領域いっぱいまで拡張することができます。 この例では、`mytest` という名前のデータベースが既に存在する場合はそれを削除してから、`mytest` データベースを作成する方法も示します。  
   
 ```sql  
 USE master;  
@@ -559,7 +568,8 @@ WHERE name = N'mytest';
 GO  
 ```  
   
-### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. データ ファイルとトランザクション ログ ファイルを指定してデータベースを作成する  
+### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. データ ファイルとトランザクション ログ ファイルを指定してデータベースを作成する
+
  次の例では、`Sales` データベースを作成します。 PRIMARY キーワードが使用されていないので、最初のファイル (`Sales_dat`) がプライマリ ファイルになります。 `Sales_dat` ファイルの SIZE パラメーターに MB も KB も指定されていないため、ファイルは MB を使用し、メガバイト単位で割り当てられます。 `Sales_log` ファイルは、`SIZE` パラメーターに `MB` サフィックスが明示的に指定されているため、メガバイト単位で割り当てられます。  
   
 ```sql  
@@ -581,7 +591,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. 複数のデータ ファイルとトランザクション ログ ファイルを指定してデータベースを作成する  
+### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. 複数のデータ ファイルとトランザクション ログ ファイルを指定してデータベースを作成する
+
  次の例では、3 つの `Archive` のデータ ファイルと 2 つの `100-MB` のトランザクション ログ ファイルがある `100-MB` データベースを作成します。 プライマリ ファイルはリストの最初のファイルであり、`PRIMARY` キーワードによって明示的に指定されます。 トランザクション ログ ファイルは、`LOG ON` キーワードに続けて指定されます。 `FILENAME` オプションでファイルに使用される拡張子のうち、`.mdf` はプライマリ データ ファイルに、`.ndf` はセカンダリ データ ファイルに、`.ldf` はトランザクション ログ ファイルに、それぞれ使用されます。 この例では、作成するデータベースは、`D:` データベースと同じ場所ではなく `master` ドライブに格納します。  
   
 ```sql  
@@ -619,14 +630,15 @@ LOG ON
 GO  
 ```  
   
-### <a name="d-creating-a-database-that-has-filegroups"></a>D. ファイル グループのあるデータベースを作成する  
+### <a name="d-creating-a-database-that-has-filegroups"></a>D. ファイル グループのあるデータベースを作成する
+
  次の例では、以下のファイル グループがある `Sales` データベースを作成します。  
   
 -   `Spri1_dat` ファイルおよび `Spri2_dat` ファイルのあるプライマリ ファイル グループ。 これらのファイルの FILEGROWTH 増加量は、`15%` に指定されています。  
   
 -   `SGrp1Fi1` ファイルおよび `SGrp1Fi2` ファイルのある、`SalesGroup1` というファイル グループ。  
   
--   `SalesGroup2` ファイルおよび `SGrp2Fi1` ファイルのある、`SGrp2Fi2` というファイル グループ。  
+-   `SGrp2Fi1` ファイルおよび `SGrp2Fi2` ファイルのある、`SalesGroup2` というファイル グループ。  
   
  この例では、データ ファイルとログ ファイルは、パフォーマンスを向上させるために別のディスクに格納します。  
   
@@ -676,7 +688,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="e-attaching-a-database"></a>E. データベースをアタッチする  
+### <a name="e-attaching-a-database"></a>E. データベースをアタッチする
+
  次の例では、例 D で作成された `Archive` データベースをデタッチしてから、`FOR ATTACH` 句を使用してこのデータベースをアタッチします。 `Archive` は、複数のデータおよびログ ファイルを保有するように定義されています。 しかし、ファイルの場所が作成時から変更されていないため、`FOR ATTACH` 句に指定する必要があるのは、プライマリ ファイルのみです。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、アタッチされているデータベースの一部であるフルテキスト ファイルは、データベースと共にアタッチされます。  
   
 ```sql  
@@ -690,7 +703,8 @@ CREATE DATABASE Archive
 GO  
 ```  
   
-### <a name="f-creating-a-database-snapshot"></a>F. データベース スナップショットを作成する  
+### <a name="f-creating-a-database-snapshot"></a>F. データベース スナップショットを作成する
+
  次の例では、`sales_snapshot0600` データベース スナップショットを作成します。 データベース スナップショットは読み取り専用であるため、ログ ファイルは指定できません。 構文に準拠して、ソース データベース内のすべてのファイルが指定され、ファイル グループは指定されません。  
   
  この例で使用するソース データベースは、例 D で作成された `Sales` データベースです。  
@@ -709,7 +723,8 @@ AS SNAPSHOT OF Sales ;
 GO  
 ```  
   
-### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. データベースを作成し、照合順序名とオプションを指定する  
+### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. データベースを作成し、照合順序名とオプションを指定する
+
  次の例では、`MyOptionsTest` データベースを作成します。 照合順序名が指定され、`TRUSTYWORTHY` および `DB_CHAINING` オプションが `ON` に設定されます。  
   
 ```sql  
@@ -729,7 +744,8 @@ WHERE name = N'MyOptionsTest';
 GO  
 ```  
   
-### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. 移動されたフルテキスト カタログをアタッチする  
+### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. 移動されたフルテキスト カタログをアタッチする
+
  次の例では、フルテキスト カタログ `AdvWksFtCat` を `AdventureWorks2012` のデータおよびログ ファイルと共にアタッチします。 この例では、フルテキスト カタログは、既定の場所から新しい場所、`c:\myFTCatalogs` に移されます。 データおよびログ ファイルは、それぞれの既定の場所に残ります。  
   
 ```sql  
@@ -748,7 +764,8 @@ FOR ATTACH;
 GO  
 ```  
   
-### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>I. 1 つの ROW ファイル グループと 2 つの FILESTREAM ファイル グループを指定してデータベースを作成する  
+### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>I. 1 つの ROW ファイル グループと 2 つの FILESTREAM ファイル グループを指定してデータベースを作成する
+
  次の例では、`FileStreamDB` データベースを作成します。 データベースは、1 つの ROW ファイル グループと 2 つの FILESTREAM ファイル グループを使用して作成されます。 各ファイル グループには、1 つのファイルが含まれます。  
   
 -   `FileStreamDB_data` には行データが含まれます。 これには、既定のパスを指定した 1 つのファイル `FileStreamDB_data.mdf` が含まれます。  
@@ -806,7 +823,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. 複数のファイルを含む FILESTREAM ファイル グループのあるデータベースを作成する  
+### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. 複数のファイルを含む FILESTREAM ファイル グループのあるデータベースを作成する
+
  次の例では、`BlobStore1` データベースを作成します。 データベースは、1 つの ROW ファイル グループと、`FS` という 1 つの FILESTREAM ファイル グループを使用して作成されます。 FILESTREAM ファイル グループには、`FS1` および `FS2` の 2 つのファイルが含まれています。 その後 `FS3` という 3 つ目のファイルが FILESTREAM ファイルグループに追加されると、データベースが変更されます。  
   
 ```sql  
@@ -855,7 +873,8 @@ TO FILEGROUP [FS];
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
@@ -887,6 +906,7 @@ Azure SQL Database 論理サーバーでは、Azure SQL サーバーでこのス
 ## <a name="syntax"></a>構文 
 
 ### <a name="create-a-database"></a>データベースの作成
+
 ```  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 {  
@@ -966,7 +986,7 @@ MAXSIZE
 
 **論理サーバー上の単一のデータベースおよびプールされたデータベースの DTU ベースのモデル**
 
-|**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** | 
+|**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|
@@ -997,21 +1017,25 @@ DTU に基づくモデルの MAXSIZE 値。指定すると、上記の表に示�
 **論理サーバー上の単一のデータベースおよびプールされたデータベースの仮想コア ベースのモデル**
 
 **General Purpose サービス層- 第 4 世代のコンピューティング プラットフォーム**
+
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |--: |--: |--: |--:|
 |データの最大サイズ (GB)|1024|1024|1536|3072|4096|4096|
 
 **General Purpose サービス層 - 第 5 世代のコンピューティング プラットフォーム**
+
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |データの最大サイズ (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
 
 **Business Critical サービス層 - 第 4 世代のコンピューティング プラットフォーム**
+
 |パフォーマンス レベル|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
 |:--- | --: |--: |--: |--: |--: |--: |
 |データの最大サイズ (GB)|1024|1024|1024|1024|1024|1024|
 
 **Business Critical サービス層 - 第 5 世代のコンピューティング プラットフォーム**
+
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |データの最大サイズ (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
@@ -1021,16 +1045,19 @@ vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない
 **マネージド インスタンス内のデータベースの仮想コア ベースのモデル**
 
 **General Purpose サービス層- 第 4 世代のコンピューティング プラットフォーム**
+
 |MAXSIZE|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |
 |データの最大サイズ (TB)|8|8|8|
 
 **General Purpose サービス層 - 第 5 世代のコンピューティング プラットフォーム**
+
 |MAXSIZE|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|
 |データの最大サイズ (TB)|8|8|8|8|8|
 
 引数 MAXSIZE および EDITION には、以下の規則が適用されます。  
+
 - EDITION が指定され、MAXSIZE が指定されていない場合は、エディションの既定値が使用されます。 たとえば、EDITION が Standard に設定され、MAXSIZE が指定されていない場合、MAXSIZE は自動的に 250 MB に設定されます。  
 - MAXSIZE も EDITION が指定されている場合、EDITION は、標準 (S0) に設定し、MAXSIZE は 250 GB に設定します。  
 
@@ -1086,7 +1113,7 @@ CATALOG_COLLATION 引数はデータベースの作成中にのみ使用でき�
 
 `CREATE DATABASE` ステートメントを使用したデータベースのコピーは、非同期操作です。 したがって、コピー プロセスが完了するまで [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーに接続している必要はありません。 `CREATE DATABASE` ステートメントは、sys.databases へのエントリが作成された後、データベース コピー操作が完了する前に、制御をユーザーに戻します。 つまり、`CREATE DATABASE` ステートメントは、データベース コピーがまだ進行しているときに正常に復帰します。  
   
-- [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] サーバーでのコピー プロセスの監視: [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) の `percentage_complete` または `replication_state_desc` 列、もしくは **sys.databases** ビューの `state` 列にクエリを発行します。 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) ビューを使用できるだけでなく、このビューからデータベース コピーを含むデータベース操作の状態も返されます。  
+- [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] サーバーでのコピー プロセスの監視:[dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) の `percentage_complete` または `replication_state_desc` 列、もしくは **sys.databases** ビューの `state` 列に対するクエリを実行します。 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) ビューを使用できるだけでなく、このビューからデータベース コピーを含むデータベース操作の状態も返されます。  
   
 コピー プロセスが正常に完了した時点で、ソース データベースに対するトランザクションが対象データベースに反映されています。  
   
@@ -1103,7 +1130,8 @@ CATALOG_COLLATION 引数はデータベースの作成中にのみ使用でき�
   
  詳細については、[Transact-SQL を使った Azure SQL Database のコピーの作成](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)に関するページを参照してください。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
+
 データベースを作成するには、次のいずれかでログインする必要があります。 
   
 - サーバー レベル プリンシパル ログイン  
@@ -1114,14 +1142,16 @@ CATALOG_COLLATION 引数はデータベースの作成中にのみ使用でき�
   
 ## <a name="examples"></a>使用例
   
-### <a name="simple-example"></a>簡単な例  
+### <a name="simple-example"></a>簡単な例
+
  データベースを作成するための簡単な例です。  
   
 ```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
-### <a name="simple-example-with-edition"></a>エディションでの簡単な例  
+### <a name="simple-example-with-edition"></a>エディションでの簡単な例
+
  標準的なデータベースを作成するための簡単な例です。  
   
 ```sql  
@@ -1129,7 +1159,8 @@ CREATE DATABASE TestDB2
 ( EDITION = 'GeneralPurpose' );  
 ```  
   
-### <a name="example-with-additional-options"></a>追加のオプションの使用例  
+### <a name="example-with-additional-options"></a>追加のオプションの使用例
+
  複数のオプションを使用する例です。  
   
 ```sql  
@@ -1138,7 +1169,8 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ( MAXSIZE = 500 MB, EDITION = 'GeneralPurpose', SERVICE_OBJECTIVE = 'GP_GEN4_8' ) ;  
 ```  
   
-### <a name="creating-a-copy"></a>コピーを作成します。  
+### <a name="creating-a-copy"></a>コピーを作成します。
+
  データベースのコピーを作成する例です。  
   
 **適用対象:** 単一のデータベースおよびプールされたデータベースのみ。
@@ -1158,7 +1190,8 @@ S3M100 をという名前のプールには、新しいデータベースを作�
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
-### <a name="creating-a-copy-of-a-database-on-another-server"></a>別のサーバーにデータベースのコピーを作成します。  
+### <a name="creating-a-copy-of-a-database-on-another-server"></a>別のサーバーにデータベースのコピーを作成します。
+
 次の例では、単一データベースの P2 パフォーマンス レベルで db_original database のコピーである named db_copy を作成します。  これは、柔軟なプールまたは 1 つのデータベースのパフォーマンス レベルでの db_original がいるかどうかに関係なく当てはまります。  
   
 **適用対象:** 単一のデータベースおよびプールされたデータベースのみ。
@@ -1244,7 +1277,8 @@ Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-
    > [!TIP]
    > 回避策としては、[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbmi) を使い、 `CREATE DATABASE` の後でデータベース オプションを設定したり、ファイルを追加したりします。  
 
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
+
 データベースを作成するには、次のいずれかでログインする必要があります。 
   
 - サーバー レベル プリンシパル ログイン  
@@ -1253,7 +1287,8 @@ Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-
   
 ## <a name="examples"></a>使用例
   
-### <a name="simple-example"></a>簡単な例  
+### <a name="simple-example"></a>簡単な例
+
  データベースを作成するための簡単な例です。  
   
 ```sql  
@@ -1302,7 +1337,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]  
 ```  
   
-## <a name="arguments"></a>引数  
+## <a name="arguments"></a>引数
+
 *database_name*  
 新しいデータベースの名前。 この名前は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] データベースと [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベースの両方をホストでき、ID の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に従う、SQL Server に固有のものである必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。  
   
@@ -1328,24 +1364,27 @@ Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-
 SERVICE_OBJECTIVE  
 パフォーマンス レベルを指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] のサービス目標の詳細については、[パフォーマンス レベル](https://azure.microsoft.com/documentation/articles/performance-tiers/)に関するページを参照してください。  
   
-## <a name="general-remarks"></a>全般的な解説  
+## <a name="general-remarks"></a>全般的な解説
+
 データベースのプロパティを参照するには、[DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) を使用します。  
   
 後で最大サイズ、またはサービス目標の値を変更するには、[ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldw) を使用します。   
 
 SQL Data Warehouse は COMPATIBILITY_LEVEL 130 に設定されており、変更することはできません。 詳細については、「[ALTER DATABASE (TRANSACT-SQL) の互換性レベル](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)」を参照してください。
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
+
 必要なアクセスを許可します。  
   
 -   サーバー レベル プリンシパル ログイン、プロビジョニングのプロセスによって作成されたか、  
   
 -   `dbmanager` データベース ロールのメンバー。  
   
-## <a name="error-handling"></a>エラー処理  
+## <a name="error-handling"></a>エラー処理
 データベースのサイズが MAXSIZE に達するとエラー コード 40544 が表示されます。 このような場合は、挿入、データを更新して (テーブル、ストアド プロシージャ、ビュー、関数など) の新しいオブジェクトを作成またはことはできません。 まだ読み取りとデータを削除、テーブルの切り捨て、テーブルやインデックスを削除してインデックスを再構築できます。 これを解決するには、MAXSIZE を現在のデータベースのサイズより大きい値にするか、一部のデータを削除してストレージ領域を解放します。 新しいデータを挿入できるようになるまでに、最大で 15 分の遅延が生じる可能性があります。  
   
-## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
+## <a name="limitations-and-restrictions"></a>制限事項と制約事項
+
 新しいデータベースを作成するには、master データベースに接続している必要があります。  
   
 `CREATE DATABASE` ステートメントが [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ内の唯一のステートメントである必要があります。
@@ -1354,7 +1393,8 @@ SQL Data Warehouse は COMPATIBILITY_LEVEL 130 に設定されており、変更
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
   
-### <a name="a-simple-example"></a>A. 簡単な例  
+### <a name="a-simple-example"></a>A. 簡単な例
+
 データ ウェアハウスのデータベースを作成するための簡単な例です。 これにより、10240 GB、既定の照合順序は SQL_Latin1_General_CP1_CI_AS、最小のコンピューティング能力が DW100 の、最小の最大サイズのデータベースが作成されます。  
   
 ```  
@@ -1362,7 +1402,8 @@ CREATE DATABASE TestDW
 (EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');  
 ```  
   
-### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>B. すべてのオプションを使用して、データ ウェアハウス データベースを作成します。  
+### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>B. すべてのオプションを使用して、データ ウェアハウス データベースを作成します。
+
 すべてのオプションを使用して 10 テラバイトのデータ ウェアハウスを作成する例。  
   
 ```  
@@ -1370,7 +1411,8 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 (MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000');  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
 [ALTER DATABASE &#40;Azure SQL Data Warehouse&#40;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldw)
 [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) 
 [DROP DATABASE &#40;Transact-SQL&#40;](../../t-sql/statements/drop-database-transact-sql.md) 
@@ -1440,7 +1482,8 @@ WITH (
   
  AUTOGROW が OFF の場合、個々の計算ノードで、ログ サイズが *log_size* を超えて増加するようなアクションが行われると、ユーザーにエラーが返されます。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
+
  master データベースの **CREATE ANY DATABASE** 許可または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
  次の例は、データベース ユーザー Fay にデータベースを作成する権限を与えます。  
@@ -1452,10 +1495,12 @@ GRANT CREATE ANY DATABASE TO [Fay];
 GO  
 ```  
   
-## <a name="general-remarks"></a>全般的な解説  
+## <a name="general-remarks"></a>全般的な解説
+
  データベースはデータベース互換性レベル 120 で作成されます。これは [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の互換性レベルです。 この互換性によって、PDW で使用されるすべての [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 機能をデータベースで使用できます。  
   
-## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
+## <a name="limitations-and-restrictions"></a>制限事項と制約事項
+
  CREATE DATABASE ステートメントは、明示的なトランザクションでは使用できません。 詳細については、「[ステートメント](../../t-sql/statements/statements.md)」を参照してください。  
   
  データベースの制約の最小値と最大値については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の "最小値と最大値" を参照してください。  
@@ -1468,15 +1513,18 @@ GO
   
 -   ログのサイズが (*log_size* / 計算ノードの数) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-## <a name="locking"></a>ロック  
+## <a name="locking"></a>ロック
+
  DATABASE オブジェクトを共有ロックします。  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>メタデータ
+
  この操作に成功すると、このデータベースのエントリがメタデータ ビューの [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) と [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) に表示されます。  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-basic-database-creation-examples"></a>A. 基本的データベース作成の例  
+### <a name="a-basic-database-creation-examples"></a>A. 基本的データベース作成の例
+
  次の例では、データベース `mytest` を作成します。複製テーブルの記憶域割り当ては計算ノードごとに 100 GB、分散テーブルの記憶域割り当てはアプライアンスごとに 500 GB、トランザクション ログの記憶域割り当てはアプライアンスごとに 100 GB です。 この例では、AUTOGROW は既定の OFF です。  
   
 ```  
@@ -1498,7 +1546,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 100 GB);  
 ```  
   
-### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. 小数点以下を含む GB サイズでデータベースを作成する  
+### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. 小数点以下を含む GB サイズでデータベースを作成する
+
  次の例では、データベース `mytest` を作成します。AUTOGROW は OFF です。複製テーブルの記憶域割り当ては計算ノードごとに 1.5 GB、分散テーブルの記憶域割り当てはアプライアンスごとに 5.25 GB、トランザクション ログの記憶域割り当てはアプライアンスごとに 10 GB です。  
   
 ```  
@@ -1509,7 +1558,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 10 GB);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
  [ALTER DATABASE &#40;並列データ ウェアハウス&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   

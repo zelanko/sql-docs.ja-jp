@@ -11,14 +11,14 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: fc9923cdc27594c37e8f89390f0cb4906f3478f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11a429ef4dec41fa316831ae38a76e4a7998d558
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758950"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326133"
 ---
-# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>チュートリアル: Azure で SQL Server Integration Services (SSIS) パッケージをデプロイし、実行する
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>チュートリアル:Azure で SQL Server Integration Services (SSIS) パッケージをデプロイし、実行する
 このチュートリアルでは、Azure SQL Database の SSIS カタログに SQL Server Integration Services (SSIS) プロジェクトをデプロイする方法、Azure-SSIS Integration Runtime でのパッケージの実行方法、および実行中のパッケージの監視方法を示します。
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -57,7 +57,7 @@ SQL Server Management Studio を使用して、Azure SQL Database サーバー�
    | **サーバー名** | 完全修飾サーバー名 | 名前は **mysqldbserver.database.windows.net** の形式である必要があります。 サーバー名が必要な場合は、「[Azure 上の SSISDB カタログ データベースへの接続](ssis-azure-connect-to-catalog-database.md)」を参照してください。 |
    | **[認証]** | SQL Server 認証 (SQL Server Authentication) | Windows 認証を使用して Azure SQL Database に接続することはできません。 |
    | **Login** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
-   | **Password** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
+   | **パスワード** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
 
 3. **SSISDB データベースに接続します**。 **[オプション]** を選択して、**[サーバーへの接続]** ダイアログ ボックスを展開します。 展開した **[サーバーへの接続]** ダイアログ ボックスで、**[接続プロパティ]** タブを選択します。**[データベースへの接続]** フィールドで、`SSISDB` を選択または入力します。
 
@@ -206,13 +206,13 @@ SSIS パッケージの実行アクティビティを使用して Azure Data Fac
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime に関するメタデータを取得する
 
 ```powershell
-Get-AzureRmDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
+Get-AzDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
 ### <a name="get-the-status-of-the-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime の状態を取得する
 
 ```powershell
-Get-AzureRmDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
+Get-AzDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
 ## <a name="next-steps"></a>次の手順

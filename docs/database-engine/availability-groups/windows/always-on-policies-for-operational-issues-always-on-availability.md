@@ -14,12 +14,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07cc3b6b11d4f40792ede3c0d2a9668c5ada0db6
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214171"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226559"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Always On 可用性グループでの運用上の問題に対するポリシー ベースの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53214171"
 ##  <a name="Always OnPBM"></a> 定義済みのポリシーと問題点  
  次の表は、定義済みのポリシーをまとめたものです。  
   
-|ポリシー名|問題点|カテゴリ**\***|ファセット|  
+|ポリシー名|問題点|カテゴリ **&#42;**|ファセット|  
 |-----------------|-----------|--------------------|-----------|  
 |WSFC クラスターの状態|[WSFC クラスター サービスはオフラインです](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)。|重大|SQL Server のインスタンス|  
 |可用性グループのオンライン状態|[可用性グループがオフライン](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)。|重大|可用性グループ|  
@@ -67,7 +67,7 @@ ms.locfileid: "53214171"
 |可用性データベースのデータ同期状態|[可用性データベースのデータ同期状態が正常ではありません](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性データベース|  
   
 > [!IMPORTANT]
->  **\*** AlwaysOn ポリシーでは、カテゴリの名前が ID として使用されます。 AlwaysOn カテゴリの名前を変更すると、正常性評価の機能を使用できなくなります。 このため、AlwaysOn カテゴリの名前は変更しないでください。  
+>  **&#42;** Always On ポリシーでは、カテゴリの名前が ID として使用されます。 AlwaysOn カテゴリの名前を変更すると、正常性評価の機能を使用できなくなります。 このため、AlwaysOn カテゴリの名前は変更しないでください。  
   
 ##  <a name="Dashboard"></a> AlwaysOn ダッシュボード  
  AlwaysOn ダッシュボードには、可用性グループの正常性を一目で確認できるビューが用意されています。 AlwaysOn ダッシュボードには、次の機能が含まれています。  

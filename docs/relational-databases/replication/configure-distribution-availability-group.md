@@ -1,7 +1,7 @@
 ---
 title: 可用性グループの SQL Server ディストリビューション データベースの構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b2f6defed7ad897f3464aec1b8b99391a2b9149
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d23495f210a2c5979a5e5abecd9f43e4f5b62c02
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126452"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372686"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 可用性グループのレプリケーション ディストリビューション データベースを設定する
 
@@ -34,7 +34,9 @@ ms.locfileid: "54126452"
 SQL Server 2017 CU 6 と SQL Server 2016 SP2-CU3 では、次のメカニズムを使用して AG のレプリケーション ディストリビューション データベースをサポートするようになりました。
 
 - ディストリビューション データベース AG にはリスナーが必要です。 パブリッシャーでは、ディストリビューターを追加する場合、リスナー名をディストリビューター名として使用します。
-- レプリケーション ジョブの作成では、リスナー名をディストリビューター名として使用します。
+- レプリケーション ジョブの作成では、リスナー名をディストリビューター名として使用します。 ディストリビューション サーバー上で作成されたレプリケーション スナップショット ジョブ、ログ リーダー ジョブ、ディストリビューション エージェント (プッシュ サブスクリプション) ジョブは、ディストリビューション DB 用 AG のすべてのセカンダリ レプリカ上で作成されます。
+ >[!NOTE]
+ >プル サブスクリプション用のディストリビューション エージェント ジョブは、サブスクライバー サーバー上には作成されますが、ディストリビューション サーバー上には作成されません。 
 - 新しいジョブでは、ディストリビューション データベースの状態 (AG 内でプライマリかセカンダリか) を監視し、ディストリビューション データベースの状態に基づいてレプリケーション ジョブを有効または無効にします。
 
 AG のディストリビューション データベースを下記の手順に基づいて構成したら、ディストリビューション データベース AG のフェールオーバーの前後にレプリケーション構成ジョブおよびランタイム ジョブが正常に実行されるようになります。

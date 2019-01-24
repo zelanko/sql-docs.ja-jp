@@ -14,12 +14,12 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ef7392b4e41271bacd91b5e1a9244bbfe1c1139
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1b14a63222721f21848518cbee5acfe99feb4d0f
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558639"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405862"
 ---
 # <a name="master-database"></a>master データベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,34 +50,34 @@ SQL Server と Azure SQL Database Managed Instance に向けた **master** デ�
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|いいえ|  
-|ANSI_NULL_DEFAULT|OFF|[ユーザー アカウント制御]|  
-|ANSI_NULLS|OFF|[ユーザー アカウント制御]|  
-|ANSI_PADDING|OFF|[ユーザー アカウント制御]|  
-|ANSI_WARNINGS|OFF|[ユーザー アカウント制御]|  
-|ARITHABORT|OFF|[ユーザー アカウント制御]|  
+|ANSI_NULL_DEFAULT|OFF|可|  
+|ANSI_NULLS|OFF|可|  
+|ANSI_PADDING|OFF|可|  
+|ANSI_WARNINGS|OFF|可|  
+|ARITHABORT|OFF|可|  
 |AUTO_CLOSE|OFF|いいえ|  
-|AUTO_CREATE_STATISTICS|ON|[ユーザー アカウント制御]|  
+|AUTO_CREATE_STATISTICS|ON|可|  
 |AUTO_SHRINK|OFF|いいえ|  
-|AUTO_UPDATE_STATISTICS|ON|[ユーザー アカウント制御]|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|[ユーザー アカウント制御]|  
+|AUTO_UPDATE_STATISTICS|ON|可|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|可|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|[ユーザー アカウント制御]|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|[ユーザー アカウント制御]|  
-|CURSOR_DEFAULT|GLOBAL|[ユーザー アカウント制御]|  
+|CONCAT_NULL_YIELDS_NULL|OFF|可|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|可|  
+|CURSOR_DEFAULT|GLOBAL|可|  
 |データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> いいえ<br /><br /> いいえ|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|[ユーザー アカウント制御]|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|可|  
 |DB_CHAINING|ON|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
 |MIXED_PAGE_ALLOCATION|ON|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|[ユーザー アカウント制御]|  
-|PAGE_VERIFY|CHECKSUM|[ユーザー アカウント制御]|  
-|PARAMETERIZATION|SIMPLE|[ユーザー アカウント制御]|  
-|QUOTED_IDENTIFIER|OFF|[ユーザー アカウント制御]|  
+|NUMERIC_ROUNDABORT|OFF|可|  
+|PAGE_VERIFY|CHECKSUM|可|  
+|PARAMETERIZATION|SIMPLE|可|  
+|QUOTED_IDENTIFIER|OFF|可|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
-|RECOVERY|SIMPLE|[ユーザー アカウント制御]|  
-|RECURSIVE_TRIGGERS|OFF|[ユーザー アカウント制御]|  
+|RECOVERY|SIMPLE|可|  
+|RECURSIVE_TRIGGERS|OFF|可|  
 |Service Broker のオプション|DISABLE_BROKER|いいえ|  
-|TRUSTWORTHY|OFF|[ユーザー アカウント制御]|  
+|TRUSTWORTHY|OFF|可|  
   
 これらのデータベース オプションの説明は、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   

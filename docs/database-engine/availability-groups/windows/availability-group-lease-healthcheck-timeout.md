@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 05501a3d084921f52088a76d7e1a69390cd48998
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209081"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405802"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 可用性グループのリース、クラスター、正常性チェック タイムアウトのしくみとガイドライン。 
 
@@ -46,7 +46,7 @@ Always On リソース DLL は、内部の SQL Server コンポーネントの�
 
 リースのメカニズムでは、SQL Server と Windows Server フェールオーバー クラスター間の同期が適用されます。 フェールオーバー コマンドが実行されたときに、クラスター サービスは現在のプライマリ レプリカのリソース DLL に対してオフライン呼び出しを行います。 リソース DLL は、まず、ストアド プロシージャを使用して AG をオフラインにしようとします。 このストアド プロシージャが失敗した場合、またはタイムアウトになった場合、クラスター サービスにエラーが報告され、終了コマンドが実行されます。 終了の際に再度同じストアド プロシージャの実行が試行されますが、クラスターはこの時点では、リソース DLL が新しいレプリカで AG がオンラインになる前に成功または失敗を報告するまで待機しません。 この 2 番目のプロシージャ呼び出しが失敗した場合、リソース ホストはリース メカニズムに依存して、インスタンスをオフラインにする必要があります。 AG をオフラインにするためにリソース DLL が呼び出されると、リソース DLL はリース停止イベントを通知し、SQL Server のリース ワーカー スレッドをウェイクアップして AG をオフラインにします。 この停止イベントが通知されない場合でも、リースは期限切れとなり、レプリカは解決中の状態に遷移します。 
 
-リースは主にプライマリ インスタンスとクラスター間の同期メカニズムですが、その他の場合はフェールオーバーが不要なエラー状態が発生することもあります。 たとえば、CPU の高い使用率、メモリ不足状態、メモリ ダンプ生成時の SQL プロセスの応答失敗、システム全体のハング、tempdb のプレッシャーにより、リース ワーカー スレッドにリソースが与えられず、SQL インスタンスからのリース更新が妨げられたり、フェールオーバーが引き起こされたりします。 
+リースは主にプライマリ インスタンスとクラスター間の同期メカニズムですが、その他の場合はフェールオーバーが不要なエラー状態が発生することもあります。 たとえば、CPU の高い使用率、メモリ不足状態 (少ない仮想メモリ、プロセス ページング)、メモリ ダンプ生成時の SQL プロセスの応答失敗、システム全体のハング、クラスター (WSFC) のオフラインへの移行 (たとえば、クォーラム損失のため) により、SQL インスタンスからのリース更新が妨げられ、フェールオーバーが発生する可能性があります。 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>クラスターのタイムアウト値に関するガイドライン 
 
@@ -75,7 +75,7 @@ Always On リソース DLL は、内部の SQL Server コンポーネントの�
 AG のエラー状態レベルによって、正常性チェックのエラー状態が変わります。 あらゆるエラー レベルで、AG 要素が `sp_server_diagnostics` によって正常でないと報告された場合、正常性チェックは失敗します。 各レベルは、その下のレベルからエラー状態をすべて継承します。 
 
 
-| レベル | インスタンスが停止と見なされる状態
+| Level | インスタンスが停止と見なされる状態
 |:---|---
 | 1:OnServerDown | AG 以外のすべてのリソースが失敗した場合、正常性チェックでアクションは行われません。 AG データが 5 間隔内、または 5/3 \* HealthCheckTimeout 内で受信されない場合
 | 2:OnServerUnresponsive | HealthCheckTimeout の `sp_server_diagnostics` からデータが受信されない場合
@@ -121,7 +121,7 @@ WSFC 構成には、クラスター タイムアウト値を判断する必要�
 
 3. ポップアップ ウィンドウで、プロパティ タブに移動します。そこに、この AG に固有の値の一覧があります。 LeaseTimeout 値をクリックして、これを変更します。 
 
-   ![[プロパティ]](media/availability-group-lease-healthcheck-timeout/image3.png) 
+   ![Properties](media/availability-group-lease-healthcheck-timeout/image3.png) 
 
 
    AG の構成に応じて、リスナー、共有ディスク、ファイル共有などのリソースが追加される可能性があります。これらのリソースに追加の構成は必要ありません。 

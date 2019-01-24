@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520691"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327843"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "52520691"
 -   **PowerShell を使用する場合:** 新しい非対称キーを (現在の TDE 非対称キーとは異なる名前で) Key Vault に作成します。  
   
     ```powershell  
-    Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
+    Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] または sqlcmd.exe を使用する場合:** 以下のステートメントを使用します。手順 3. (セクション 3) を参照してください。  
+-   **[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] または sqlcmd.exe を使用する場合:** 以下のステートメントを使用します。手順 3 (セクション 3) を参照してください。  
   
      新しい非対称キーをインポートします。  
   
@@ -152,7 +152,7 @@ Key Vault は定期的にバックアップする必要があります。 資格
 * 新しい資格情報コンテナーを使用するための権限を SQL Server サービス プリンシパルに付与します。  
 * 必要に応じて、新しい資格情報コンテナー名を反映するように、データベース エンジンが使用する SQL Server 資格情報を変更します。  
   
-キーのバックアップは、クラウドの地理的領域または国 (米国、カナダ、日本、オーストラリア、インド、APAC、ヨーロッパ、ブラジル、中国、米国政府、ドイツ) が一致していれば、異なる Azure リージョン間で復元することができます。  
+キーのバックアップは、クラウドの地理的領域または国が一致していれば、異なる Azure リージョン間で復元することができます:米国、カナダ、日本、オーストラリア、インド、APAC、ヨーロッパ、ブラジル、中国、米国政府、ドイツ。  
   
   
 ##  <a name="AppendixB"></a> B. よく寄せられる質問  
