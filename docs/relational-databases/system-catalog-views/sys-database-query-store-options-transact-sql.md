@@ -1,7 +1,7 @@
 ---
 title: sys.database_query_store_options (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cef670e97387c2eb4b9493fc1303e36a742f89bc
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: ca46886ab9648142bb79863dad0818033c2ce0a1
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53265929"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838109"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   このデータベースのクエリのストアのオプションを返します。  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]します。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "53265929"
 |**readonly_reason**|**int**|ときに、 **desired_state_desc**は READ_WRITE ですおよび**actual_state_desc**が READ_ONLY、 **readonly_reason**返しますは少しをクエリ ストアがであるかを示すマップ。読み取り専用モードです。<br /><br /> 1-データベースが読み取り専用モードです。<br /><br /> 2-データベースがシングル ユーザー モードです。<br /><br /> 4-データベースが緊急モードです。<br /><br /> 8-データベースがセカンダリ レプリカ (Always On と Azure に適用される[!INCLUDE[ssSDS](../../includes/sssds-md.md)]geo レプリケーション)。 のみ、この値を効果的に確認できます**読み取り可能な**セカンダリ レプリカ<br /><br /> 65536-クエリのストアは MAX_STORAGE_SIZE_MB オプションによって設定されたサイズ制限に達しました。<br /><br /> 131072-クエリのストア内の別のステートメントの数は、内部メモリの制限に達しました。 不要なクエリを削除するか、クエリ ストアを読み取り/書き込みモードに転送を有効にする上位のサービス階層へのアップグレードを検討してください。<br />[!INCLUDE[ssSDS](../../includes/sssds-md.md)]だけに適用されます。<br /><br /> 262144 - ディスク上に保存するを待機しているメモリ内の項目のサイズは、内部メモリの制限に達しました。 クエリ ストアは、メモリ内の項目がディスクに保存されるまで一時的に読み取り専用モードになります。 <br />[!INCLUDE[ssSDS](../../includes/sssds-md.md)]だけに適用されます。<br /><br />524288-データベースは、ディスク サイズの上限に達しました。 クエリ ストア データベースに属しているユーザー、クエリ ストアをさらに拡張できないことを意味するデータベースは、できない場合の領域がない場合、できなくなります。<br />[!INCLUDE[ssSDS](../../includes/sssds-md.md)]だけに適用されます。 <br /> <br /> クエリ ストアの操作を切り替えるモード戻る読み取り/書き込みを参照してください**検証クエリ ストアは継続にクエリのデータを収集**の[クエリ ストアに関するベスト プラクティスとして](../../relational-databases/performance/best-practice-with-the-query-store.md)します。|  
 |**current_storage_size_mb**|**bigint**|メガバイト単位でディスク上のクエリのストアのサイズ。|  
 |**flush_interval_seconds**|**bigint**|データのクエリの格納が正規ディスクにフラッシュする期間を定義します。 既定値は 900 (15 分) です。<br /><br /> 使用して、変更、 `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` ステートメントです。|  
-|**interval_length_minutes**|**bigint**|統計の集計間隔です。 任意の値を指定することはできません。 次のいずれかを使用します。1、5、10、15、30、60、および 1440 分です。 既定値は、60 分です。|  
+|**interval_length_minutes**|**bigint**|統計の集計間隔です。 任意の値を指定することはできません。 次のいずれかを使用します:1、5、10、15、30、60、および 1440 分です。 既定値は、60 分です。|  
 |**max_storage_size_mb**|**bigint**|クエリのストアの最大のディスクのサイズです。 既定値は、100 MB です。<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition の既定値は 1 Gb、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの既定値は 10 Mb です。<br /><br /> 使用して、変更、 `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` ステートメントです。|  
 |**stale_query_threshold_days**|**bigint**|ないポリシー設定を使用したクエリのクエリのストアに保存しておく日数です。 既定値は 30 です。 リテンション期間ポリシーを無効にする 0 に設定します。<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの場合、既定の日数は 7 日です。<br /><br /> 使用して、変更、 `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` ステートメントです。|  
 |**max_plans_per_query**|**bigint**|ストアド プランの最大数を制限します。 既定値は、200 です。 最大値に達すると、クエリのストアは、そのクエリへの新しいプランをキャプチャを停止します。 0 に設定には、キャプチャしたプランの数に関して制限が削除されます。<br /><br /> 使用して、変更、 `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` ステートメントです。|  

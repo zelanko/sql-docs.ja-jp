@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_plan (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 8a1b27787c1b987c4fc881c3d1e170efae937670
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419797"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838099"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -43,20 +43,20 @@ ms.locfileid: "54419797"
 |**compatibility_level**|**smallint**|クエリで参照されているデータベースのデータベースの互換性レベルです。|  
 |**query_plan_hash**|**binary(8)**|個別の計画の MD5 ハッシュ。|  
 |**query_plan**|**nvarchar(max)**|クエリ プランのプラン表示 XML です。|  
-|**is_online_index_plan**|**bit**|オンラインのインデックス構築中に、プランが使用されました。|  
-|**is_trivial_plan**|**bit**|プランは、単純なプラン (出力では、クエリ オプティマイザーのステージ 0) です。|  
-|**is_parallel_plan**|**bit**|計画は、並列です。|  
-|**is_forced_plan**|**bit**|プランが強制的にユーザーがストアド プロシージャを実行するときにマークされた**sys.sp_query_store_force_plan**します。 強制実行メカニズム*は保証されません*によって参照されるクエリを正確にこのプランが使用されること**query_id**します。 プランの強制再コンパイルするクエリし、通常同じまたは類似したプランによって参照されるプランに正確に生成されます**plan_id**します。 プランの強制が成功しなかった場合**force_failure_count**増加と**last_force_failure_reason**失敗の理由が表示されます。|  
-|**s_natively_compiled**|**bit**|プランでは、ネイティブ コンパイルのメモリ最適化の手順を説明します。 (0 = FALSE、1 = TRUE)。|  
-|**force_failure_count**|**bigint**|このプランを強制的に失敗した回数。 クエリが再コンパイルされるときにだけインクリメントすることができます (*各実行ではなく*)。 毎回 0 にリセットされます**is_plan_forced**がから変更された**FALSE**に**TRUE**します。|  
-|**last_force_failure_reason**|**int**|プラン強制の失敗理由理由です。<br /><br /> 0: エラー、それ以外の場合のエラー番号、強制的に失敗する原因となったエラーの<br /><br /> 8637:ONLINE_INDEX_BUILD<br /><br /> 8683:INVALID_STARJOIN<br /><br /> 8684:TIME_OUT<br /><br /> 8689:NO_DB<br /><br /> 8690:HINT_CONFLICT<br /><br /> 8691:SETOPT_CONFLICT<br /><br /> 8694:DQ_NO_FORCING_SUPPORTED<br /><br /> 8698:NO_PLAN<br /><br /> 8712:NO_INDEX<br /><br /> 8713:VIEW_COMPILE_FAILED<br /><br /> \<その他の値 >:GENERAL_FAILURE|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc の説明テキストです。<br /><br /> ONLINE_INDEX_BUILD。 クエリが対象のテーブルにインデックスがオンラインに構築されているがあるときに、データを変更しよう<br /><br /> INVALID_STARJOIN: プランには無効な StarJoin 仕様が含まれています<br /><br /> TIME_OUT:強制されたプランで指定したプランの検索中に許可される操作数のオプティマイザーを超えています<br /><br /> NO_DB:計画で指定されたデータベースが存在しません<br /><br /> HINT_CONFLICT:プランがクエリ ヒントと競合するためにクエリをコンパイルできません。<br /><br /> DQ_NO_FORCING_SUPPORTED:プランは、分散クエリまたはフルテキスト操作の使用と競合するため、クエリを実行することはできません。<br /><br /> NO_PLAN:強制されたプランがクエリに対して有効であることを確認できませんでした。 ので、クエリ プロセッサはクエリ プランを作成できませんでした。<br /><br /> NO_INDEX:不要になったのプランで指定されたインデックスが存在します。<br /><br /> VIEW_COMPILE_FAILED。計画で参照されているインデックス付きビューでの問題のためのクエリ プランを設定できませんでした。<br /><br /> GENERAL_FAILURE: 一般的な強制エラー (上の理由ではカバーしない)|  
+|**is_online_index_plan**|**bit**|オンラインのインデックス構築中に、プランが使用されました。 <br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
+|**is_trivial_plan**|**bit**|プランは、単純なプラン (出力では、クエリ オプティマイザーのステージ 0) です。 <br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
+|**is_parallel_plan**|**bit**|計画は、並列です。 <br/>**注:** Azure SQL Data Warehouse (1) 1 つは常に返します。|  
+|**is_forced_plan**|**bit**|プランが強制的にユーザーがストアド プロシージャを実行するときにマークされた**sys.sp_query_store_force_plan**します。 強制実行メカニズム*は保証されません*によって参照されるクエリを正確にこのプランが使用されること**query_id**します。 プランの強制再コンパイルするクエリし、通常同じまたは類似したプランによって参照されるプランに正確に生成されます**plan_id**します。 プランの強制が成功しなかった場合**force_failure_count**増加と**last_force_failure_reason**失敗の理由が表示されます。 <br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
+|**s_natively_compiled**|**bit**|プランでは、ネイティブ コンパイルのメモリ最適化の手順を説明します。 (0 = FALSE、1 = TRUE)。 <br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
+|**force_failure_count**|**bigint**|このプランを強制的に失敗した回数。 クエリが再コンパイルされるときにだけインクリメントすることができます (*各実行ではなく*)。 毎回 0 にリセットされます**is_plan_forced**がから変更された**FALSE**に**TRUE**します。 <br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
+|**last_force_failure_reason**|**int**|プラン強制の失敗理由理由です。<br /><br /> 0: エラー、それ以外の場合のエラー番号、強制的に失敗する原因となったエラーの<br /><br /> 8637:ONLINE_INDEX_BUILD<br /><br /> 8683:INVALID_STARJOIN<br /><br /> 8684:TIME_OUT<br /><br /> 8689:NO_DB<br /><br /> 8690:HINT_CONFLICT<br /><br /> 8691:SETOPT_CONFLICT<br /><br /> 8694:DQ_NO_FORCING_SUPPORTED<br /><br /> 8698:NO_PLAN<br /><br /> 8712:NO_INDEX<br /><br /> 8713:VIEW_COMPILE_FAILED<br /><br /> \<その他の値 >:GENERAL_FAILURE <br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc の説明テキストです。<br /><br /> ONLINE_INDEX_BUILD。 クエリが対象のテーブルにインデックスがオンラインに構築されているがあるときに、データを変更しよう<br /><br /> INVALID_STARJOIN: プランには無効な StarJoin 仕様が含まれています<br /><br /> TIME_OUT:強制されたプランで指定したプランの検索中に許可される操作数のオプティマイザーを超えています<br /><br /> NO_DB:計画で指定されたデータベースが存在しません<br /><br /> HINT_CONFLICT:プランがクエリ ヒントと競合するためにクエリをコンパイルできません。<br /><br /> DQ_NO_FORCING_SUPPORTED:プランは、分散クエリまたはフルテキスト操作の使用と競合するため、クエリを実行することはできません。<br /><br /> NO_PLAN:強制されたプランがクエリに対して有効であることを確認できませんでした。 ので、クエリ プロセッサはクエリ プランを作成できませんでした。<br /><br /> NO_INDEX:不要になったのプランで指定されたインデックスが存在します。<br /><br /> VIEW_COMPILE_FAILED。計画で参照されているインデックス付きビューでの問題のためのクエリ プランを設定できませんでした。<br /><br /> GENERAL_FAILURE: 一般的な強制エラー (上の理由ではカバーしない) <br/>**注:** Azure SQL Data Warehouse は常に返します*NONE*します。|  
 |**count_compiles**|**bigint**|コンパイルの統計情報を計画します。|  
 |**initial_compile_start_time**|**datetimeoffset**|コンパイルの統計情報を計画します。|  
 |**last_compile_start_time**|**datetimeoffset**|コンパイルの統計情報を計画します。|  
 |**last_execution_time**|**datetimeoffset**|最後の実行時間とは、最後に、クエリ/プランの終了時刻です。|  
-|**avg_compile_duration**|**float**|コンパイルの統計情報を計画します。|  
-|**last_compile_duration**|**bigint**|コンパイルの統計情報を計画します。|  
+|**avg_compile_duration**|**float**|コンパイルの統計情報を計画します。 <br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
+|**last_compile_duration**|**bigint**|コンパイルの統計情報を計画します。 <br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
 |**plan_forcing_type**|**int**|型の強制プランです。<br /><br />0:なし<br /><br />1:MANUAL<br /><br />2:AUTO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type の説明テキスト。<br /><br />NONE:プランの適用なし<br /><br />手動：ユーザーが強制されたプラン<br /><br />自動：自動チューニングによる強制プランします。|  
 

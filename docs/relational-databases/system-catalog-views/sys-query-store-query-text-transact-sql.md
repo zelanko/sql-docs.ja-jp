@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_query_text (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b5fe04b5852eeebc858067505eaa0342ad8cb87
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e41eca10cf5db5e34b5e9e9122eb56a1a236315e
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712243"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838079"
 ---
 # <a name="sysquerystorequerytext-transact-sql"></a>sys.query_store_query_text (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "52712243"
 |**query_text_id**|**bigint**|主キー。|  
 |**query_sql_text**|**nvarchar(max)**|ユーザーから提供されるため、クエリの SQL テキスト。 ある空白文字、ヒント、およびコメントが含まれています。|  
 |**statement_sql_handle**|**vabinary(64)**|個別のクエリの SQL ハンドル。|  
-|**is_part_of_encrypted_module**|**bit**|クエリ テキストは、暗号化されたモジュールの一部です。|  
-|**has_restricted_text**|**bit**|クエリ テキストには、パスワードまたはその他の unmentionable 単語が含まれています。|  
+|**is_part_of_encrypted_module**|**bit**|クエリ テキストは、暗号化されたモジュールの一部です。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
+|**has_restricted_text**|**bit**|クエリ テキストには、パスワードまたはその他の unmentionable 単語が含まれています。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
   
 ## <a name="permissions"></a>アクセス許可  
  必要があります、 **VIEW DATABASE STATE**権限。  
