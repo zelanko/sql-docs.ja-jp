@@ -20,30 +20,32 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf815386b00ca70ceacbb549b9dbccd50c9a482
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206351"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130572"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>マージ レプリケーションの詳細 - 競合の検出および解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   パブリッシャーとサブスクライバーが接続され、同期が発生すると、マージ エージェントによって競合の検出が行われます。 競合が検出された場合、マージ エージェントは競合回避モジュール (アーティクルをパブリケーションに追加するときに指定) を使用して、他のサイトに反映する許容データを決定します。  
+
+ マージ レプリケーションでは、競合を検出して解決するためのさまざまなメソッドが用意されています。 ほとんどのアプリケーションの場合、次の既定のメソッドが適切です。  
+  
+-   競合がパブリッシャーとサブスクライバーの間で発生した場合、パブリッシャーの変更は保存され、サブスクライバーの変更は破棄されます。   
+-   クライアント サブスクリプション (プル サブスクリプションの既定の種類) を使用している 2 つのサブスクライバー間で競合が発生した場合は、パブリッシャーと同期する最初のサブスクライバーからの変更が保存され、2 番目のサブスクライバーからの変更は破棄されます。 クライアントとサーバーのサブスクリプションの指定の詳細については、「[Specify a Merge Subscription Type and Conflict Resolution Priority (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)」 (マージ サブスクリプションの種類と競合解決プロパティの指定 (SQL Server Management Studio)) を参照してください。   
+-   サーバー サブスクリプション (プッシュ サブスクリプションの既定の種類) を使用している 2 つのサブスクライバー間で競合が発生した場合は、優先度が高い方のサブスクライバーからの変更が保存され、2 番目のサブスクライバーからの変更は破棄されます。 優先度値が同じである場合は、パブリッシャーと同期する最初のサブスクライバーからの変更が保存されます。  
   
 > [!NOTE]  
 >  サブスクライバーとパブリッシャーの同期が取られていても、異なるサブスクライバーで行われた更新の間に競合が発生する場合があります。これに比べ、サブスクライバーとパブリッシャーにおける更新では、競合はあまり発生しません。  
   
- 競合検出および解決の動作は、次のオプションによって異なります。これらのオプションについては、このトピックで解説します。  
-  
--   列レベルの追跡、行レベルの追跡、または論理レコードレベルの追跡のいずれかを指定しているかどうか。  
-  
+ 競合検出および解決の動作は、次のオプションによって異なります。これらのオプションについては、このトピックで解説します。    
+-   列レベルの追跡、行レベルの追跡、または論理レコードレベルの追跡のいずれかを指定しているかどうか。    
 -   優先度に基づく解決メカニズムを指定しているかどうか、またはアーティクル競合回避モジュールを指定しているかどうか。 アーティクル競合回避モジュールは次のいずれかになります。  
   
-    -   マネージド コードで記述された *ビジネス ロジック ハンドラー*  
-  
-    -   COM ベースの *カスタム競合回避モジュール*  
-  
+    -   マネージド コードで記述された *ビジネス ロジック ハンドラー*   
+    -   COM ベースの *カスタム競合回避モジュール*    
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]によって提供される COM ベースの競合回避モジュール  
   
      既定の解決メカニズムを使用する場合、クライアントまたはサーバーのどちらのサブスクリプションが使用されるかによっても動作が異なります。  
@@ -51,18 +53,32 @@ ms.locfileid: "53206351"
 ## <a name="conflict-detection"></a>競合検出  
  データの変更が競合と見なされるかどうかは、アーティクルに対して設定した競合の追跡の種類によって異なります。  
   
--   列レベルの追跡を選択している場合、複数のレプリケーション ノードで行われた同一行の同一列に対する変更が競合と見なされます。  
-  
--   行レベルの追跡を選択している場合、複数のレプリケーション ノードで行われた同一行の任意の列に対する変更が競合と見なされます (該当する行で影響を受ける列が同一である必要はありません)。  
-  
+-   列レベルの追跡を選択している場合、複数のレプリケーション ノードで行われた同一行の同一列に対する変更が競合と見なされます。    
+-   行レベルの追跡を選択している場合、複数のレプリケーション ノードで行われた同一行の任意の列に対する変更が競合と見なされます (該当する行で影響を受ける列が同一である必要はありません)。    
 -   論理レコードレベルの追跡を選択している場合、複数のレプリケーション ノードで行われた同一論理レコードの任意の行に対する変更が競合と見なされます (該当する行で影響を受ける列が同一である必要はありません)。  
   
  詳しくは、「 [論理レコードの競合の検出および解決](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)」をご覧ください。  
   
- アーティクルに対して競合の追跡と競合解決のレベルを指定するには、「 [マージ アーティクルの競合追跡と解決のレベルを指定](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)」を参照してください。  
+ アーティクルに対して競合の追跡と競合解決のレベルを指定するには、「[マージ レプリケーションのプロパティの指定](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)」をご覧ください。  
   
 ## <a name="conflict-resolution"></a>競合解決  
  競合が検出されると、選択した競合回避モジュールがマージ エージェントによって起動され、この競合回避モジュールを使用して、競合で優先するデータを決定します。 競合で優先された行がパブリッシャーおよびサブスクライバーで適用され、優先されなかった行のデータは競合テーブルに書き込まれます。 対話型操作による競合解決を選択しなかった場合、競合はモジュールの実行直後に解決されます。  
+
+マージ レプリケーションの競合の表示 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  パブリッシャーとサブスクライバーが接続され、同期が発生すると、マージ エージェントによって競合の検出が行われます。 競合が検出された場合、マージ エージェントは競合回避モジュールを使用して、どのデータを受け入れて他のサイトに反映するかを決定します。  
+  
+> [!NOTE]  
+>  サブスクライバーがパブリッシャーと同期している場合でも、サブスクライバーとパブリッシャーでの更新よりも、別のサブスクライバーの更新で競合が発生することがよくあります。  
+  
+ マージ レプリケーションでは、競合を検出して解決するためのさまざまなメソッドが用意されています。 ほとんどのアプリケーションの場合、次の既定のメソッドが適切です。  
+  
+-   競合がパブリッシャーとサブスクライバーの間で発生した場合、パブリッシャーの変更は保存され、サブスクライバーの変更は破棄されます。  
+  
+-   クライアント サブスクリプション (プル サブスクリプションの既定の種類) を使用している 2 つのサブスクライバー間で競合が発生した場合は、パブリッシャーと同期する最初のサブスクライバーからの変更が保存され、2 番目のサブスクライバーからの変更は破棄されます。 クライアントとサーバーのサブスクリプションの指定の詳細については、「[Specify a Merge Subscription Type and Conflict Resolution Priority (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)」 (マージ サブスクリプションの種類と競合解決プロパティの指定 (SQL Server Management Studio)) を参照してください。  
+  
+-   サーバー サブスクリプション (プッシュ サブスクリプションの既定の種類) を使用している 2 つのサブスクライバー間で競合が発生した場合は、優先度が高い方のサブスクライバーからの変更が保存され、2 番目のサブスクライバーからの変更は破棄されます。 優先度値が同じである場合は、パブリッシャーと同期する最初のサブスクライバーからの変更が保存されます。  
+  
+ マージ レプリケーションにおける競合の検出と解決の詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
 ### <a name="resolver-types"></a>競合回避モジュールの種類  
  マージ レプリケーションでは、アーティクル レベルで競合解決が行われます。 複数のアーティクルで構成されているパブリケーションの場合、複数の競合回避モジュールで各アーティクルに対応するか、1 つの競合回避モジュールで 1 つのアーティクル、複数のアーティクル、またはパブリケーションを構成するすべてのアーティクルに対応できます。  
@@ -85,7 +101,7 @@ ms.locfileid: "53206351"
   
      マージ レプリケーションには、競合回避モジュールを COM オブジェクトとして作成するための API が用意されています。この COM オブジェクトは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] や [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]などの言語で記述します。 詳細については、「 [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)」を参照してください。  
   
--    [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
      [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、COM ベースの競合回避モジュールが各種用意されています。 詳細については、「 [Microsoft COM ベースの競合回避モジュール](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
   
