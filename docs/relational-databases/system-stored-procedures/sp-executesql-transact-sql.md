@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2018d96233a1dea6f4b2d7cfa612f19df878610f
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 50841053266c475a140f056826ac40ca0e70906c
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300029"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880505"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ sp_executesql [ @stmt = ] statement
  含まれる各パラメーター \@stmt では、両方に対応するエントリがあります、 \@params パラメーター定義リストとパラメーター値の一覧。  
   
  [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
- 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む\@stmt します。この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 すべてのパラメーターで指定された\@で定義されている stmtmust \@params します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに\@stmt にパラメーターが含まれていない\@params は必要ありません。 このパラメーターの既定値は NULL です。  
+ 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む\@stmt します。この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 すべてのパラメーターで指定された\@で stmt を定義する必要があります\@params します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに\@stmt にパラメーターが含まれていない\@params は必要ありません。 このパラメーターの既定値は NULL です。  
   
  [ \@param1= ] '*value1*'  
  パラメーター文字列に定義する最初のパラメーターの値を指定します。 Unicode 定数または Unicode 変数を指定できます。 含まれるすべてのパラメーターに指定されたパラメーター値が必要がある\@stmt します。ときに、値は必要ありません、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに\@stmt にパラメーターがありません。  

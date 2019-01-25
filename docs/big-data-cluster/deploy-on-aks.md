@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8e6e91836b3daf0392da082df1f4ec806e9faf94
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a5dcc1c2726eaf234056fc77979df4d21a0dea17
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241243"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898927"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイ用 Azure Kubernetes サービスを構成します。
 
@@ -26,7 +26,7 @@ AKS によって、作成、構成、およびコンテナー化されたアプ�
 この記事では、Azure CLI を使用して AKS で Kubernetes をデプロイする手順について説明します。 Azure サブスクリプションを持っていない場合は、開始する前に、無料のアカウントを作成します。
 
 > [!TIP] 
-> AKS と SQL Server の両方のビッグ データ クラスターをデプロイするサンプル python スクリプトについては、次を参照してください。[ビッグ データ クラスター Azure Kubernetes Service (AKS) で SQL Server 展開](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)します。
+> AKS と SQL Server の両方のビッグ データ クラスターをデプロイするサンプル python スクリプトについては、次を参照してください。[クイック スタート。ビッグ データ クラスター Azure Kubernetes Service (AKS) で SQL Server 展開](quickstart-big-data-cluster-deploy.md)します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -106,6 +106,6 @@ Azure リソース グループは、azure リソースのデプロイし、管�
 
 ## <a name="next-steps"></a>次の手順
 
-この記事の手順では、AKS で Kubernetes クラスターを構成します。 次の手順では、SQL Server 2019 ビッグ データ クラスターをデプロイします。
+この記事の手順では、AKS で Kubernetes クラスターを構成します。 次の手順では、SQL Server 2019 ビッグ データ クラスターをデプロイします。 ビッグ データ クラスターをデプロイする方法の詳細については、次の記事を参照してください。
 
-[クイック スタート:SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。](quickstart-big-data-cluster-deploy.md)
+[Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法](deployment-guidance.md)

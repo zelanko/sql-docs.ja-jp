@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 0413da85b4f213eb75a1b9ed5d80852663870c74
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372638"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898958"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 ビッグ データ ツールをインストールします。
 
-この記事では、管理、作成については、インストールされるクライアント ツールをについて説明し、SQL Server 2019 を使用してビッグ データ クラスター (プレビュー)。
+この記事では、管理、作成については、インストールされるクライアント ツールをについて説明し、SQL Server 2019 を使用してビッグ データ クラスター (プレビュー)。 次のセクションでは、一連のツールとインストール手順へのリンクを提供します。 ビッグ データ クラスターをデプロイする前に必須の Windows または Linux にマークされているツールを構成します。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -63,5 +63,10 @@ ms.locfileid: "54372638"
 その他のツールは、特定のシナリオでのみ必要です。 **Azure CLI** AKS のデプロイに関連付けられている Azure サービスを管理するために使用できます。 **mssql cli**は、クラスター内の SQL Server のマスター インスタンスに接続し、コマンドラインからクエリを実行することができます、省略可能ですが、便利なツールです。 **Sqlcmd**と**curl**が GitHub のスクリプトを使用してサンプル データをインストールする場合に必要です。
 
 ## <a name="next-steps"></a>次の手順
+
+ツールを構成した後は、クラウドまたはオンプレミスでの Kubernetes に SQL Server 2019 ビッグ データ クラスターを展開します。 詳細については、次のデプロイに関する記事を参照してください。
+
+- [クイック スタート:SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。](quickstart-big-data-cluster-deploy.md)
+- [Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法](deployment-guidance.md)
 
 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)します。

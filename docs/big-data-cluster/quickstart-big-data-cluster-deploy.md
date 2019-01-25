@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 39c79c39c04d64656b83004425d476896cbc75db
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241703"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898987"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート:SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。
 
@@ -85,7 +85,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **コント ローラーのユーザー** | コント ローラーのユーザーのユーザー名 (既定:**管理者**)。 |
 
    > [!IMPORTANT]
-   > クラスター内各永続ボリューム要求は、接続されたディスクが必要です。 現時点では、ビッグ データ クラスターには、21 の永続ボリューム要求が必要です。 Azure の仮想マシンのサイズとノードの数を選択すると、ときに、ノード間で接続できるディスクの合計数が 21 以上であることを確認します。 たとえば、 [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)マシンのサイズは、3 つのノードでは、48 のディスクを接続できることを意味するため、16 の接続されたディスクをサポートしています。
+   > 既定の**Standard_L4s**マシンのサイズはすべての Azure リージョンでは使用できません。 別のマシン サイズを選択した場合、クラスター内のノード間で接続できるディスクの合計数が 21 以上であることを確認します。 クラスター内各永続ボリューム要求は、接続されたディスクが必要です。 現時点では、ビッグ データ クラスターには、21 の永続ボリューム要求が必要です。 たとえば、 [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)マシンのサイズは、3 つのノードでは、48 のディスクを接続できることを意味するため、16 の接続されたディスクをサポートしています。
 
    > [!NOTE]
    > `sa`アカウントは、システム管理者は、セットアップ時に作成される SQL Server のマスター インスタンス。 展開を作成した後、`MSSQL_SA_PASSWORD`を実行して環境変数が探索可能な`echo $MSSQL_SA_PASSWORD`マスター インスタンス コンテナーにします。 セキュリティのため、変更、`sa`デプロイ後に、マスター インスタンス上のパスワード。 詳細については、次を参照してください。 [SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)します。
@@ -237,7 +237,9 @@ az group delete -n <resource group name>
 
 ## <a name="next-steps"></a>次の手順
 
+配置スクリプトでは、Azure Kubernetes サービスが構成されているし、SQL Server 2019 のビッグ データ クラスターをデプロイすることもできます。 手動によるインストールを将来のデプロイをカスタマイズすることもできます。 どのビッグ データについてクラスターは、デプロイおよびデプロイをカスタマイズする方法については、次を参照してください。[ビッグ データの SQL Server をデプロイする方法を Kubernetes クラスターの](deployment-guidance.md)します。
+
 これで、SQL Server のビッグ データ クラスターをデプロイすると、サンプル データを読み込むし、チュートリアルの確認できます。
 
 > [!div class="nextstepaction"]
-> [チュートリアル:SQL Server 2019 のビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
+> [チュートリアル: SQL Server 2019 のビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)

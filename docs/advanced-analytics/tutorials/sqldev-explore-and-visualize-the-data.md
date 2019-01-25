@@ -8,19 +8,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 76e3fdca639ed576b6b0664042aea5df2b5a9f74
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: b6822892547b8fa4ff3ad4dced02908d10cd39ec
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405782"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898997"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>レッスン 1:探索し、データの視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、SQL Server で R を使用する方法に関する SQL 開発者向けのチュートリアルの一部です。
 
-このレッスンでが、サンプル データを確認しを使用していくつかのプロットを生成し、 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)から[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)および一般的な[Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)基本 R での関数これらの R 関数が既に含まれている[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]します。
+この手順でが、サンプル データを確認しを使用していくつかのプロットを生成し、 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)から[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)および一般的な[Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)基本 R での関数これらの R 関数が既に含まれている[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]します。
 
 このレッスンの主な目的がから R 関数を呼び出す方法を示す[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャおよびアプリケーション ファイル形式で結果を保存します。
 
