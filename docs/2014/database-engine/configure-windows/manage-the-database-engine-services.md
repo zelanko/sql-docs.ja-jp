@@ -51,7 +51,7 @@ ms.locfileid: "52639238"
   
  **Windows 8 を使用して SQL Server 構成マネージャーにアクセスするには**  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではありません。そのため、Windows 8.0 を実行している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーはアプリケーションとして表示されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開くには、 **検索** チャームで、 **[アプリ]** の下に「 **SQLServerManager12.msc** 」( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の場合) と入力し ( **の場合は「** SQLServerManager11.msc [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]」、 **の場合は「** SQLServerManager10.msc[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]」と入力し)、 **Enter**キーを押します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではありません。そのため、Windows 8.0 を実行している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーはアプリケーションとして表示されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開くには、 **検索** チャームで、 **[アプリ]** の下に「 **SQLServerManager12.msc** 」( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の場合) と入力し ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の場合は「 **SQLServerManager11.msc** 」、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の場合は「 **SQLServerManager10.msc** 」と入力し)、 **Enter**キーを押します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

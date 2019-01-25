@@ -123,7 +123,7 @@ ms.locfileid: "54298699"
 ####  <a name="Permissions"></a> Permissions  
  サービスを開始、停止、一時停止、再開、または再起動できるのは、既定ではローカル管理者グループのメンバーだけです。 管理者以外のユーザーがサービスを管理できるようにする方法については、「 [[HOWTO] Windows Server 2003 でサービスを管理する権利をユーザーに付与する](https://support.microsoft.com/kb/325349)」をご覧ください (Windows の他のバージョンでも処理は同じです)。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] SHUTDOWN [!INCLUDE[tsql](../../includes/tsql-md.md)]**コマンドを使用して** を停止するには、 **sysadmin** 固定サーバー ロールまたは **serveradmin** 固定サーバー ロールのメンバーシップが必要です。この権限を譲渡することはできません。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] の **SHUTDOWN** コマンドを使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止するには、 **sysadmin** 固定サーバー ロールまたは **serveradmin** 固定サーバー ロールのメンバーシップが必要です。この権限を譲渡することはできません。  
   
 ##  <a name="SSCMProcedure"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの使用  
   
@@ -191,7 +191,7 @@ ms.locfileid: "54298699"
 3.  アクションを実行するかどうかを確認するメッセージが表示されたら、 **[はい]** をクリックします。  
   
 ##  <a name="CommandPrompt"></a> コマンド プロンプト ウィンドウからの net コマンドの使用  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[msCoName](../../includes/msconame-md.md)] コマンドを使用して、 **、** サービスを開始、停止、または一時停止できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows の **net** コマンドを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスを開始、停止、または一時停止できます。  
   
 ###  <a name="dbDefault"></a> 既定のインスタンスを開始するには [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -267,9 +267,9 @@ ms.locfileid: "54298699"
     -   サービスを停止するには、 **net start** を **net stop**に置き換えます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] SHUTDOWN **ステートメントを使用して、** を停止できます。  
+ **SHUTDOWN** ステートメントを使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止できます。  
   
-#### <a name="to-stop-the-includessdeincludesssde-mdmd-using-includetsqlincludestsql-mdmd"></a>を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止するには [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+#### <a name="to-stop-the-includessdeincludesssde-mdmd-using-includetsqlincludestsql-mdmd"></a>[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止するには
   
 -   現在実行中の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびストアド プロシージャが終了するまで待機してから [!INCLUDE[ssDE](../../includes/ssde-md.md)]を停止するには、次のステートメントを実行します。  
   
