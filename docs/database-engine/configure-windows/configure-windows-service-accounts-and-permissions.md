@@ -174,7 +174,7 @@ ms.locfileid: "54300519"
   
 -   <a name="MSA"></a>**Managed Service Accounts**  
   
-     管理されたサービス アカウント (MSA) は、ドメイン コント ローラーによって作成および管理されるドメイン アカウントの一種です。 管理されたサービス アカウントは、サービスの実行に使用する 1 つのメンバー コンピューターに割り当てられます。 パスワードは、ドメイン コント ローラーによって自動的に管理されます。 MSA を使用して、コンピューターにログインすることはできませんが、コンピューターは、MSA を使用して Windows サービスを開始することができます。 MSA には、サービス プリンシパル名 (SPN) を Active Directory に登録する機能があります。 MSA には、 **$** DOMAIN\ACCOUNTNAME$ **など、** サフィックスを伴う名前が付けられます。 MSA を指定する場合は、パスワードを空白のままにします。 MSA は、1 つのコンピューターに割り当てられているため、Windows クラスターの異なるノード上では使用できません。  
+     管理されたサービス アカウント (MSA) は、ドメイン コント ローラーによって作成および管理されるドメイン アカウントの一種です。 管理されたサービス アカウントは、サービスの実行に使用する 1 つのメンバー コンピューターに割り当てられます。 パスワードは、ドメイン コント ローラーによって自動的に管理されます。 MSA を使用して、コンピューターにログインすることはできませんが、コンピューターは、MSA を使用して Windows サービスを開始することができます。 MSA には、サービス プリンシパル名 (SPN) を Active Directory に登録する機能があります。 MSA には、 **DOMAIN\ACCOUNTNAME$** など、**$** サフィックスを伴う名前が付けられます。 MSA を指定する場合は、パスワードを空白のままにします。 MSA は、1 つのコンピューターに割り当てられているため、Windows クラスターの異なるノード上では使用できません。  
   
     > [!NOTE]  
     >  MSA は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが MSA を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスで使用する前に、ドメイン管理者が Active Directory に作成する必要があります。  
@@ -202,9 +202,9 @@ ms.locfileid: "54300519"
     |サービス|仮想アカウント名|  
     |-------------|--------------------------|  
     |[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスの既定のインスタンス|**NT SERVICE\MSSQLSERVER**|  
-    |[!INCLUDE[ssDE](../../includes/ssde-md.md)] という名前の **という名前の**サービスの名前付きインスタンス|**NT SERVICE\MSSQL$PAYROLL**|  
-    |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
-    |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PAYROLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という名前の **という名前の**|**NT SERVICE\SQLAGENT$PAYROLL**|  
+    |**PAYROLL** という名前の [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスの名前付きインスタンス|**NT SERVICE\MSSQL$PAYROLL**|  
+    |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス|**NT SERVICE\SQLSERVERAGENT**|  
+    |**PAYROLL** という名前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
  管理されたサービス アカウントと仮想アカウントの詳細については、「 **Service Accounts Step-by-Step Guide** 」 (サービス アカウントのステップ バイ ステップ ガイド) の「 [Managed service account and virtual account concepts](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) 」 (管理されたサービス アカウントと仮想アカウントの概念) および「 [Managed Service Accounts Frequently Asked Questions (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)」 (管理されたサービス アカウントに関してよく寄せられる質問 (FAQ)) をご覧ください。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "54300519"
 
 ユーザー アカウントに加え、各サービスには 3 種類の起動時の状態があります。これらの状態はユーザーによる制御が可能です。
   
--   **無効** &#xA0;&#xA0;&#xA0;サービスがインストールされていますが、現在は実行されていません。  
+-   **無効** サービスがインストールされていますが、現在は実行されていません。  
   
 -   **手動** サービスがインストールされていますが、別のサービスまたはアプリケーションでその機能が必要な場合のみ開始されます。  
   
@@ -304,7 +304,7 @@ ms.locfileid: "54300519"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアント:**|**サービスとしてログオン** (SeServiceLogonRight)|  
 |**PolyBase エンジンと DMS**| **サービスとしてログオン** (SeServiceLogonRight)  |   
 |**スタート パッド:**|**サービスとしてログオン** (SeServiceLogonRight) <br /><br /> **プロセス レベル トークンを置き換える** (SeAssignPrimaryTokenPrivilege)<br /><br />**スキャン チェックを行わない** (SeChangeNotifyPrivilege)<br /><br />**プロセスに対してメモリ クォータを調整する** (SeIncreaseQuotaPrivilege)|     
-|**R Services:****SQLRUserGroup** (SQL 2016 および 2017)  |**ローカル ログオンを許可する** |   
+|**R Services:** **SQLRUserGroup** (SQL 2016 および 2017)  |**ローカル ログオンを許可する** |   
 |**Machine Learning** '**すべてのアプリケーション パッケージ [AppContainer]** (SQL 2019)  |SQL Server 'Binn'、R_Services、および PYTHON_Services ディレクトリに対する**読み取り権限と実行権限** |   
 
  \* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスで無効になっています。  
@@ -411,7 +411,7 @@ ms.locfileid: "54300519"
 ||管理者のみ|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<sql_instance_name>\*|フル コントロール|  
 ||管理者、システム|\tools\binn\schemas\sqlserver\2004\07\showplan|フル コントロール|  
 ||ユーザー|\tools\binn\schemas\sqlserver\2004\07\showplan|読み取り、実行|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<レポート サーバー Web サービス アカウント>|*\<install>* \Reporting Services\LogFiles|Del<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<レポート サーバー Web サービス アカウント>|*\<install>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||レポート マネージャー アプリケーション プールの ID、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アカウント、Everyone|*\<install>* \Reporting Services\ReportManager、*\<install>* \Reporting Services\ReportManager\Pages\\\*\*、*\<install>* \Reporting Services\ReportManager\Styles\\\*.\*、*\<install>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|Read|  
 ||レポート マネージャー アプリケーション プールの ID|*\<install>* \Reporting Services\ReportManager\Pages\\*.\*|Read|  
 ||\<レポート サーバー Web サービス アカウント>|*\<install>* \Reporting Services\ReportServer|Read|  
@@ -419,7 +419,7 @@ ms.locfileid: "54300519"
 ||Everyone (Everyone)|*\<install>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
 ||ネットワーク サービス|*\<install>* \Reporting Services\ReportServer\ReportService.asmx|[完全]|  
 ||Everyone (Everyone)|*\<install>* \Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||ReportServer Windows サービス アカウント|*\<install>* \Reporting Services\ReportServer\RSReportServer.config|Del<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||ReportServer Windows サービス アカウント|*\<install>* \Reporting Services\ReportServer\RSReportServer.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Everyone (Everyone)|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> 読み取り制御|  
 ||ターミナル サービス ユーザー|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> 値の設定<br /><br /> サブキーの作成<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> DELETE<br /><br /> 読み取り制御|  
 ||パワー ユーザー|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> 値の設定<br /><br /> サブキーの作成<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> DELETE<br /><br /> 読み取り制御|  
@@ -482,7 +482,7 @@ Windows Management Instrumentation (WMI) は、 [!INCLUDE[ssDE](../../includes/s
   
 -   サーバーの**CREATE DDL EVENT NOTIFICATION** 権限。  
   
--   **の** CREATE TRACE EVENT NOTIFICATION [!INCLUDE[ssDE](../../includes/ssde-md.md)]権限。  
+-   **[!INCLUDE[ssDE](../../includes/ssde-md.md)]** の CREATE TRACE EVENT NOTIFICATION 権限。  
   
 -   **VIEW ANY DATABASE** サーバーレベル権限。  
   
@@ -552,7 +552,7 @@ Windows Management Instrumentation (WMI) は、 [!INCLUDE[ssDE](../../includes/s
  どの [!INCLUDE[ssAS](../../includes/ssas-md.md)] インストールでも、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのシステム管理者を指定する必要があります。 管理者特権は、Analysis Services の **サーバー** ロールで準備されます。  
   
 ###  <a name="SSRS"></a> SSRS の準備  
- セットアップ中に指定されたアカウントは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] RSExecRole **データベース ロールのメンバーとして** で準備されます。 詳細については、 [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
+ セットアップ中に指定されたアカウントは、 **RSExecRole** データベース ロールのメンバーとして [!INCLUDE[ssDE](../../includes/ssde-md.md)] で準備されます。 詳細については、 [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
   
 ##  <a name="Upgrade"></a> 以前のバージョンからアップグレード  
  ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の以前のバージョンからのアップグレード中に行われる変更について説明します。  
@@ -563,7 +563,7 @@ Windows Management Instrumentation (WMI) は、 [!INCLUDE[ssDE](../../includes/s
   
     -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、サービスごとの SID のセキュリティ コンテキストで実行されます。 サービスごとの SID には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス (DATA など) のファイル フォルダーまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レジストリ キーへのアクセス権が付与されます。  
   
-    -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] のサービスごとの SID は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] sysadmin **固定サーバー ロールのメンバーとして** で準備されます。  
+    -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] のサービスごとの SID は、 **sysadmin** 固定サーバー ロールのメンバーとして [!INCLUDE[ssDE](../../includes/ssde-md.md)] で準備されます。  
   
     -   サービスごとの SID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がフェールオーバー クラスター インスタンスでない場合、ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows グループに追加されます。  
   
