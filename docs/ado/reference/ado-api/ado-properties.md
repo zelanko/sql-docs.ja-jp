@@ -14,14 +14,15 @@ ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 696685a4c1550ab503b7847ae676ee7c41c679c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f24ffa490ac8ae5b88809b89eed8a188b86fabb
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611500"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044677"
 ---
 # <a name="ado-properties"></a>ADO のプロパティ
+
 |||  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|現在のレコードがどのページが存在することを示します。|  
@@ -41,7 +42,7 @@ ms.locfileid: "47611500"
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|型を示す、**コマンド**オブジェクト。|  
 |[ConnectionString プロパティ](../../../ado/reference/ado-api/connectionstring-property-ado.md)|データ ソースへの接続を確立するための情報を示します。|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|試行を終了し、エラーが発生する前に、接続を確立中に待機する時間を示します。|  
-|[カウント](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|カーソル サービスの場所を示します。|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|使用するカーソルの種類を示す、 **Recordset**オブジェクト。|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|によって参照されるオブジェクトから取得するデータ メンバーの名前を示します、 **DataSource**プロパティ。|  
@@ -94,14 +95,14 @@ ms.locfileid: "47611500"
 |[型 (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)|含まれているデータの型を示す、 **Stream** (バイナリまたはテキスト)。|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|データベースに現在の値を示す、**フィールド**オブジェクト。|  
 |[[値]](../../../ado/reference/ado-api/value-property-ado.md)|割り当てられている値を示します、**フィールド**、**パラメーター**、または**プロパティ**オブジェクト。|  
-|[[バージョン]](../../../ado/reference/ado-api/version-property-ado.md)|ADO のバージョン番号を示します。|  
+|[バージョン](../../../ado/reference/ado-api/version-property-ado.md)|ADO のバージョン番号を示します。|  
   
 ## <a name="see-also"></a>参照  
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO のコレクション](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO の列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [付録 b:ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO イベント](../../../ado/reference/ado-api/ado-events.md)   
  [ADO メソッド](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   

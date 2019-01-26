@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: c43ec2c3b010d43c25b1b9f2740480952a9e9ff8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d1b002df5c526c4b888bac1b203b54af4e21a3e0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402327"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044978"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server Linux VDI クライアント SDK の仕様
 
@@ -298,6 +298,7 @@ Close の呼び出しが返された後、仮想デバイスのセットのイ�
 | |**NOERROR** |関数が正常に実行されました。
 | |**VD_E_PROTOCOL** |仮想デバイスのセットが現在開いていません。
 | |**VD_E_INVALID** |PBuffer が有効なアドレスではありません。
+
 GetBufferHandle 関数を呼び出すプロセスは、データ転送が完了すると、ClientVirtualDevice::CompleteCommand を呼び出すことを解説します。
 
 ## <a name="clientvirtualdevicesetmapbufferhandle"></a>ClientVirtualDeviceSet::MapBufferHandle

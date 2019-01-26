@@ -14,21 +14,22 @@ ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d37b1a07566943038bd73b0d79eb2dcd4655fda6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 522c563a113bab599481821dbb5d79422126a901
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696931"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044774"
 ---
 # <a name="ado-md-properties"></a>ADO MD のプロパティ
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|どの ADO に**接続**オブジェクトの現在のセル セットまたは現在が属するカタログ。|  
-|[キャプション](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|表示するときに使用するテキスト キャプションを示す、**レベル**または**メンバー**オブジェクト。|  
+|[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|表示するときに使用するテキスト キャプションを示す、**レベル**または**メンバー**オブジェクト。|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|対象のメンバーの数を示す現在**メンバー**オブジェクト階層の親であります。|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|コレクションを返します**メンバー**を現在**メンバー**階層の親であります。|  
-|[カウント](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
 |[[奥行]](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|間のレベルの数を示す、**レベル**と階層のレベルのルート。|  
 |[[説明]](../../../ado/reference/ado-md-api/description-property-ado-md.md)|現在のオブジェクトを説明するテキストを返します。|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|軸上のディメンションの数を示します。|  

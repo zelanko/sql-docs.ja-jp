@@ -14,14 +14,15 @@ ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28c64bbe66da1adf6ad4d3a0f9484789ee2a71dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50bdb3117b01d68f03208d6db501d44f05a849ce
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838232"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044885"
 ---
 # <a name="ado-events"></a>ADO のイベント
+
 |||  
 |-|-|  
 |[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|後に呼び出される、 **BeginTrans**操作。|  
@@ -50,7 +51,7 @@ ms.locfileid: "47838232"
  [ADO のコレクション](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO の列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [付録 b:ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO イベントの処理](../../../ado/guide/data/handling-ado-events.md)   
  [ADO メソッド](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   

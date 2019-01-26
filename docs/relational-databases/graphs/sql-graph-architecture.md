@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300189"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044548"
 ---
 # <a name="sql-graph-architecture"></a>SQL グラフ アーキテクチャ  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -135,6 +135,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 学習、 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] SQL Server と Azure SQL Database で導入された拡張機能を有効にするグラフ オブジェクトに対するクエリの作成とします。 クエリ言語の拡張機能では、クエリのヘルプし、ASCII アート構文を使用してグラフを走査します。
  
 ### <a name="data-definition-language-ddl-statements"></a>データ定義言語 (DDL) ステートメント
+
 |タスク   |関連記事  |メモ
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` AS ノードまたは AS エッジ テーブルの作成をサポートするために拡張されています。 エッジ テーブルは可能性がありますか、任意のユーザー定義の属性がない可能性がありますに注意してください。  |
@@ -145,6 +146,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>データ操作言語 (DML) ステートメント
+
 |タスク   |関連記事  |メモ
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|ノード テーブルに挿入すると、リレーショナル テーブルに挿入するよりも同じです。 値は、`$node_id`列が自動的に生成されます。 値を挿入しようとしています。`$node_id`または`$edge_id`列はエラーになります。 ユーザーが値を指定する必要があります`$from_id`と`$to_id`エッジ テーブルを挿入するときに列。 `$from_id` `$to_id`は、`$node_id`接続する特定のエッジ ノードの値。  |
@@ -154,6 +156,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 
 
 ### <a name="query-statements"></a>クエリ ステートメント
+
 |タスク   |関連記事  |メモ
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|ノードとエッジ テーブルとして内部的に格納されます、ノードとエッジ テーブルでの SQL Server または Azure SQL Database のテーブルでサポートされている操作のほとんどをサポートするため  |

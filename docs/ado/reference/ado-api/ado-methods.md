@@ -14,14 +14,15 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 494de627d6e76ba59f1bfb0684c31afe4bf07e68
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530241"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044758"
 ---
 # <a name="ado-methods"></a>ADO メソッド
+
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|更新可能なに対して新しいレコードを作成します。 **Recordset**オブジェクト。|  

@@ -14,21 +14,22 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6218ef0c0d39aa1393c5b467c4d8d96960c487f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 176afb0ed710087ec150838e1e6bc6c49eb9e908
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637230"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044666"
 ---
 # <a name="adox-properties"></a>ADOX のプロパティ
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|ADO を示す**接続**カタログが属するオブジェクトします。|  
 |[Attributes](../../../ado/reference/adox-api/attributes-property-adox.md)|列の特性について説明します。|  
-|[クラスター化](../../../ado/reference/adox-api/clustered-property-adox.md)|インデックスがクラスター化されているかどうかを示します。|  
+|[クラスター化インデックス](../../../ado/reference/adox-api/clustered-property-adox.md)|インデックスがクラスター化されているかどうかを示します。|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|ADO を指定します**コマンド**作成またはプロシージャを実行するために使用できるオブジェクト。|  
-|[カウント](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|オブジェクトが作成された日付を示します。|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|オブジェクトの最終更新日を示します。|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|列の指定された最大サイズを示します。|  

@@ -20,17 +20,18 @@ ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a7a7075fb1710622d0681ba4c10ba8bfe696653
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac0f23e73f67c3d95744d974366ab547d50672ea
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719020"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044845"
 ---
 # <a name="sysxmlschemaattributes-transact-sql"></a>sys.xml_schema_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   属性を表す XML スキーマ コンポーネントごとに 1 行を返します**symbol_space**の**A**します。  
+
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**\<列を継承 >**|--|継承[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)します。|  

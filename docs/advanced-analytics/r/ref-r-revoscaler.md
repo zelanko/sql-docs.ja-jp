@@ -8,14 +8,15 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 92992847e2806e18014d2d6828a5f5019ad100b3
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: c67fd63af6ed3492b8064be037ed4f8f5dff338f
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645431"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044409"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (SQL Server での R ライブラリ)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **RevoScaleR**は Microsoft から高パフォーマンスのデータ サイエンスの職務のライブラリです。 関数は、データのインポート、データ変換、集約、視覚化、および分析をサポートします。
@@ -55,7 +56,7 @@ SQL Server と R は、場合によっては異なるデータ型を使用しま
 | 関数| 説明|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  リモート インスタンスに計算をプッシュには、SQL Server 計算コンテキスト オブジェクトを作成します。 いくつか**RevoScaleR**関数が引数としてコンピューティング コンテキストを受け取ります。 |
-[rxGetComputeContext/rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | 取得またはアクティブなコンピューティング コンテキストを設定します。 |
+|[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | 取得またはアクティブなコンピューティング コンテキストを設定します。 |
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) | SQL Server のクエリまたはテーブルに基づくデータ オブジェクトを作成します。 |
 | [RxOdbcData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxodbcdata) | ODBC 接続に基づいてデータ ソースを作成します。 |
 | [RxXdfData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxxdfdata) | ローカル XDF ファイルに基づくデータ ソースを作成します。 XDF ファイルはディスクにデータをメモリ内の負荷を軽減するよく使用されます。 1 つのバッチ内のデータベースから転送できる以上のデータまたはメモリ内に収まるよりも多くのデータを扱うとき、XDF ファイルは役に立ちます。 たとえば、ローカル ワークステーションに、データベースから定期的に大量のデータを移動する場合クエリではなく R 操作ごとに繰り返しデータベースするとして使用できます XDF ファイルある種のキャッシュをローカル データを保存し、R ワークスペースで作業し。|

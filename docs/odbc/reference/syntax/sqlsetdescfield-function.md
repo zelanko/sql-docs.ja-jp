@@ -20,12 +20,12 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6061adf707a58737fd34d7cb7bbe33b2e9579a
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420237"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044359"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 関数
 
@@ -147,7 +147,7 @@ SQLRETURN SQLSetDescField(
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|ARD:APD の読み取り/書き込みです。R/W IRD:IPD の読み取り/書き込みです。R/W|ARD:APD の ptr は null します。Ptr IRD は null します。Null ptr IPD:Null ptr|  
 |SQL_DESC_BIND_OFFSET_PTR|SQLLEN *|ARD:APD の読み取り/書き込みです。R/W IRD:未使用の IPD:未使用|ARD:APD の ptr は null します。Ptr IRD は null します。未使用の IPD:未使用|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|ARD:APD の読み取り/書き込みです。R/W IRD:未使用の IPD:未使用|ARD:SQL_BIND_BY_COLUMN<br /><br /> APD:SQL_BIND_BY_COLUMN<br /><br /> IRD:未使用<br /><br /> IPD:未使用|  
-SQL_DESC_COUNT|SQLSMALLINT|ARD:APD の読み取り/書き込みです。R/W IRD:R の IPD:R/W|ARD:APD の 0:0 IRD:IPD の D:0|  
+|SQL_DESC_COUNT|SQLSMALLINT|ARD:APD の読み取り/書き込みです。R/W IRD:R の IPD:R/W|ARD:APD の 0:0 IRD:IPD の D:0|  
 |SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN です *|ARD:未使用の APD:未使用の IRD:IPD の読み取り/書き込みです。R/W|ARD:未使用の APD:未使用の IRD:Null ptr IPD:Null ptr|  
   
  [1] フィールドは、IPD をドライバーが自動的に作成する場合にのみ定義されます。 ない場合は、定義はありません。 アプリケーションが、これらのフィールド、SQLSTATE HY091 を設定しようとしています。 場合 (無効な記述子フィールド識別子) が返されます。  
