@@ -48,7 +48,7 @@ ms.lasthandoff: 12/13/2018
 ms.locfileid: "53360904"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動
-  このトピックでは、開始、停止、一時停止、再開、または再起動する方法を説明します、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser サービスを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 **net**コマンド プロンプトでコマンド[!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell。  
+  このトピックでは、開始、停止、一時停止、再開、または再起動する方法を説明します、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser サービスを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 **net**コマンド プロンプトでコマンド[!INCLUDE[tsql](../../includes/tsql-md.md)]、または P83owerShell。  
   
 -   **作業を開始する準備:**  
   
@@ -117,7 +117,7 @@ ms.locfileid: "53360904"
 ####  <a name="Permissions"></a> Permissions  
  サービスを開始、停止、一時停止、再開、または再起動できるのは、既定ではローカル管理者グループのメンバーだけです。 管理者以外のユーザーがサービスを管理できるようにする方法については、「 [[HOWTO] Windows Server 2003 でサービスを管理する権利をユーザーに付与する](https://support.microsoft.com/kb/325349)」をご覧ください (Windows の他のバージョンでも処理は同じです)。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] の `SHUTDOWN` コマンドを使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止するには、 **sysadmin** または **serveradmin** 固定サーバー ロールのメンバーシップが必要です。この権限は譲渡できません。  
+ 停止、[!INCLUDE[ssDE](../../includes/ssde-md.md)]を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN`コマンド内のメンバーシップが必要です、 **sysadmin**または**serveradmin**固定サーバー ロールと権限は譲渡できません。  
   
 ##  <a name="SSCMProcedure"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの使用  
   
@@ -172,7 +172,7 @@ ms.locfileid: "53360904"
 3.  アクションを実行するかどうかを確認するメッセージが表示されたら、 **[はい]** をクリックします。  
   
 ##  <a name="CommandPrompt"></a> コマンド プロンプト ウィンドウからの net コマンドの使用  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows の **net** コマンドを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスを開始、停止、または一時停止できます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[msCoName](../../includes/msconame-md.md)] コマンドを使用して、 **、** サービスを開始、停止、または一時停止できます。  
   
 ###  <a name="dbDefault"></a> 既定のインスタンスを開始するには [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -250,7 +250,7 @@ ms.locfileid: "53360904"
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  `SHUTDOWN` ステートメントを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)]を停止できます。  
   
-#### <a name="to-stop-the-includessdeincludesssde-mdmd-using-includetsqlincludestsql-mdmd"></a>[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止するには
+#### <a name="to-stop-the-includessdeincludesssde-mdmd-using-includetsqlincludestsql-mdmd"></a>[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止するには  
   
 -   現在実行中の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびストアド プロシージャが終了するまで待機してから [!INCLUDE[ssDE](../../includes/ssde-md.md)]を停止するには、次のステートメントを実行します。  
   
