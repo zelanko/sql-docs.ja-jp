@@ -1,3 +1,3 @@
 ## <a name="edit-contentmediaedit-topic-pencilpng-contribute-sql-documentation"></a>![コンテンツの編集](../media/edit-topic-pencil.png) SQL ドキュメントの投稿
-編集できますコンテンツ自分をご存知でしたか。 これを行う場合は、ドキュメントが向上だけでなくする共同作成者として返金して、ページにありますもあります。
+あなた自身でコンテンツを編集できるのをご存知でしたか。 コンテンツを編集するとドキュメントが改善されるだけでなく、共同作成者としてあなたの名前が追加されます。
 - [SQL Server のドキュメントに投稿する方法](https://docs.microsoft.com/sql/sql-server/sql-server-docs-contribute)
