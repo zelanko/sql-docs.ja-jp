@@ -13,12 +13,12 @@ ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4f26b5de16185f7c19601cd91a88e9bda23b895
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 094a5f631b6a1cb146e46a6c4f1170fc56ca63f2
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596723"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457585"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Stretch 対応データベースのバックアップ (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53596723"
  -   Microsoft Azure では、Stretch Database が SQL Server から Azure に移行したリモート データを自動的にバックアップします。  
 
 > [!TIP]
-> バックアップは、完全な高可用性とビジネス継続性ソリューションの一部にすぎません。 高可用性についての詳細は、「 [高可用性ソリューション](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)」を参照してください。
+> バックアップは、完全な高可用性とビジネス継続性ソリューションの一部にすぎません。 高可用性についての詳細は、「 [高可用性ソリューション](../../database-engine/sql-server-business-continuity-dr.md)」を参照してください。
    
 ## <a name="back-up-your-sql-server-data"></a>SQL Server データのバックアップ  
   

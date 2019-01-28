@@ -9,12 +9,12 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46cbbaa2654e18f0aef5d5a3b904f41ce5a88219
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: f9ee612238f9e8208de48b6d52256141d1ed638d
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457635"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Stretch 対応データベースの復元 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "53596583"
   バックアップの詳細については、「 [Stretch 対応データベースのバックアップ](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)」をご覧ください。
 
 > [!TIP]
-> バックアップは、完全な高可用性とビジネス継続性ソリューションの一部にすぎません。 高可用性の詳細については、「 [高可用性ソリューション](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)」をご覧ください。
+> バックアップは、完全な高可用性とビジネス継続性ソリューションの一部にすぎません。 高可用性の詳細については、「 [高可用性ソリューション](../../database-engine/sql-server-business-continuity-dr.md)」をご覧ください。
 
 ## <a name="restore-your-sql-server-data"></a>SQL Server データの復元
 ハードウェアの障害または破損から復元するには、Stretch 対応 SQL Server データベースをバックアップから復元します。 現在使用中の SQL Server の復元方法を引き続き使用できます。 詳細については、「 [復元と復旧の概要](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)」をご覧ください。

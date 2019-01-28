@@ -9,18 +9,19 @@ ms.technology: ''
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: efb72426b1eceff0dbbf88676fb0aa9a83134cae
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 35243a3f983f711968f8012eaa23eefdacb11a31
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701840"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044988"
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 管理のパートナー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 SQL Server サービスを管理するためのツールを、業界をリードする豊富な種類の中から選びます。  この記事では、Microsoft SQL Server をサポートする管理ソリューションを提供する Microsoft パートナー会社を示します。
 
 ## <a name="our-management-partners"></a>Microsoft の管理パートナー
+
 | Partner | [説明] | リンク |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL コンプライアンス マネージャーは SQL Server に対してどのユーザーが何を、いつ、どのように行ったかを表示する包括的な監査ソリューションで、規制とデータ セキュリティの要件への準拠に役立ちます。<br><br>[システム要件][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Web サイト][idera_website]<br>[Twitter][idera_twitter]<br>[ビデオ][idera_youtube] | |

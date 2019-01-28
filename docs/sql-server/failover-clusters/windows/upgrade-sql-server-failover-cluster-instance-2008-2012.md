@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a63d6e347f83e63f7f99a2e06e1122b1c93934b0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6c669932929f690a1d3f01968bbaaa482aa4d568
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257057"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044558"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 クラスターで実行されている SQL Server インスタンスのアップグレード
 
@@ -49,6 +49,7 @@ ms.locfileid: "54257057"
 | **_可用性グループ(Y/N)_**                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
 | **クラスターで SQL FCI のみを使用**         | [シナリオ 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [シナリオ 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [シナリオ 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [シナリオ 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **クラスターでスタンドアロン インスタンスを使用** | [シナリオ 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [シナリオ 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [シナリオ 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [シナリオ 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
+
 \* 可用性グループ リスナー名を除く
 
 ## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>シナリオ 1:SQL Server 可用性グループを使用する、フェールオーバー クラスター インスタンス (FCI) のない Windows クラスター
