@@ -212,7 +212,7 @@ ms.locfileid: "54131632"
   
 -   <a name="MSA"></a>**Managed Service Accounts**  
   
-     管理されたサービス アカウント (MSA) は、ドメイン コント ローラーによって作成および管理されるドメイン アカウントの一種です。 管理されたサービス アカウントは、サービスの実行に使用する 1 つのメンバー コンピューターに割り当てられます。 パスワードは、ドメイン コント ローラーによって自動的に管理されます。 MSA を使用して、コンピューターにログインすることはできませんが、コンピューターは、MSA を使用して Windows サービスを開始することができます。 MSA には、サービス プリンシパル名 (SPN) を Active Directory に登録する機能があります。 MSA には、 **$** DOMAIN\ACCOUNTNAME$ **など、** サフィックスを伴う名前が付けられます。 MSA を指定する場合は、パスワードを空白のままにします。 MSA は、1 つのコンピューターに割り当てられているため、Windows クラスターの異なるノード上では使用できません。  
+     管理されたサービス アカウント (MSA) は、ドメイン コント ローラーによって作成および管理されるドメイン アカウントの一種です。 管理されたサービス アカウントは、サービスの実行に使用する 1 つのメンバー コンピューターに割り当てられます。 パスワードは、ドメイン コント ローラーによって自動的に管理されます。 MSA を使用して、コンピューターにログインすることはできませんが、コンピューターは、MSA を使用して Windows サービスを開始することができます。 MSA には、サービス プリンシパル名 (SPN) を Active Directory に登録する機能があります。 MSA には、 **DOMAIN\ACCOUNTNAME$** など、**$** サフィックスを伴う名前が付けられます。 MSA を指定する場合は、パスワードを空白のままにします。 MSA は、1 つのコンピューターに割り当てられているため、Windows クラスターの異なるノード上では使用できません。  
   
     > [!NOTE]  
     >  MSA は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが MSA を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスで使用する前に、ドメイン管理者が Active Directory に作成する必要があります。  
@@ -240,7 +240,7 @@ ms.locfileid: "54131632"
     |サービス|仮想アカウント名|  
     |-------------|--------------------------|  
     |[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスの既定のインスタンス|**NT SERVICE\MSSQLSERVER**|  
-    |[!INCLUDE[ssDE](../../includes/ssde-md.md)] という名前の **という名前の**サービスの名前付きインスタンス|**NT SERVICE\MSSQL$PAYROLL**|  
+    |**PAYROLL** という名前の [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスの名前付きインスタンス|**NT SERVICE\MSSQL$PAYROLL**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス|**NT SERVICE\SQLSERVERAGENT**|  
     |**PAYROLL** という名前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
@@ -251,7 +251,7 @@ ms.locfileid: "54131632"
 ###  <a name="Auto_Start"></a> 自動起動  
  ユーザー アカウントに加え、各サービスには 3 種類の起動時の状態があります。これらの状態はユーザーによる制御が可能です。  
   
--   **無効** &#xA0;&#xA0;&#xA0;サービスがインストールされていますが、現在は実行されていません。  
+-   **無効** サービスがインストールされていますが、現在は実行されていません。  
   
 -   **手動** サービスがインストールされていますが、別のサービスまたはアプリケーションでその機能が必要な場合のみ開始されます。  
   
