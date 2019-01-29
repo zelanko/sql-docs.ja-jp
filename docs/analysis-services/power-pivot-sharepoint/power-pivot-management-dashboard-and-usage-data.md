@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419703"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087751"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理ダッシュボードと使用状況データ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52419703"
 ### <a name="change-the-current-service-application"></a>現在のサービス アプリケーションを変更する  
  管理ダッシュボードで現在の [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーションを変更するには、次の手順を実行します。  
   
-1.  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードの上部で、現在のサービス アプリケーションの名前 ("**既定の [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーション**" など) を確認します。  
+1.  上部にある、[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]管理ダッシュ ボード、たとえば、現在のサービス アプリケーションの名前に注意してください**既定[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]サービス アプリケーション**します。  
   
 2.  **[アクション]** ダッシュボードで、 **[サービス アプリケーションの一覧を表示する]** をクリックします。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "52419703"
   
 5.  テキスト エディターで .odc ファイルを開きます。  
   
-6.   **\<Odc:ConnectionString >** 要素、削除、行の最後までスクロール**埋め込みデータ = False**、し、削除**Edit Mode = 0**。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
+6.  **\<Odc:ConnectionString >** 要素、削除、行の最後までスクロール**埋め込みデータ = False**、し、削除**Edit Mode = 0**。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
   
 7.  このファイルを保存します。 残りの手順は、使用している [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] と Excel のバージョンによって異なります。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "52419703"
   
     4.  .ODC ファイルが表示されている場合はそのファイルをクリックします。 .ODC ファイルが表示されない場合は、 **[参照]** をクリックし、ファイル パスで .odc ファイルを指定します。  
   
-    5.   **[開く]** をクリックします。  
+    5.  **[開く]** をクリックします。  
   
     6.  **[接続のテスト]** をクリックして、接続に成功したことを確認します。  
   

@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419874"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087713"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理ダッシュボードと使用状況データ
   PowerPivot 管理ダッシュボードとは、SQL Server PowerPivot for SharePoint の配置の管理に役立つ SharePoint サーバーの全体管理の定義済みのレポートおよび Web パーツのコレクションです。 管理ダッシュボードでは、サーバーの状態、ブックの利用状況、およびデータ更新に関連する情報が示されます。 ダッシュボードは、SharePoint 使用状況データ コレクションのデータを使用します。  
@@ -67,7 +67,7 @@ ms.locfileid: "52419874"
 ### <a name="change-the-current-service-application"></a>現在のサービス アプリケーションを変更する  
  管理ダッシュボードで現在の PowerPivot サービス アプリケーションを変更するには、次の手順を実行します。  
   
-1.  PowerPivot 管理ダッシュボードの上部で、現在のサービス アプリケーションの名前 (" **既定の PowerPivot サービス アプリケーション**" など) を確認します。  
+1.  PowerPivot 管理ダッシュ ボードの上部にあるには、現在のサービス アプリケーションの名前をたとえばメモ**Default PowerPivot Service Application**します。  
   
 2.  **[アクション]** ダッシュボードで、 **[サービス アプリケーションの一覧を表示する]** をクリックします。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "52419874"
   
     4.  .ODC ファイルが表示されている場合はそのファイルをクリックします。 .ODC ファイルが表示されない場合は、 **[参照]** をクリックし、ファイル パスで .odc ファイルを指定します。  
   
-    5.   **[開く]** をクリックします。  
+    5.  **[開く]** をクリックします。  
   
     6.  **[接続のテスト]** をクリックして、接続に成功したことを確認します。  
   

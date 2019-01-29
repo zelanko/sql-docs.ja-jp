@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226689"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044949"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -417,6 +417,7 @@ ODBC Driver for SQL Server には、CEKeystoreProvider インターフェイス�
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | 引数 | [説明] |
 |:---|:---|
 |`ConnectionHandle`|[入力]接続ハンドルです。 有効な接続ハンドルである必要がありますが、1 つの接続ハンドル経由で読み込まれるプロバイダーから同じプロセス内の他のアクセス。|
@@ -451,13 +452,14 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | 引数 | [説明] |
 |:---|:---|
 |`ConnectionHandle`|[入力]接続ハンドルです。 有効な接続ハンドルである必要がありますが、1 つの接続ハンドル経由で読み込まれるプロバイダーから同じプロセス内の他のアクセス。|
 |`Attribute`|[入力]取得する属性:`SQL_COPT_SS_CEKEYSTOREPROVIDER`定数。|
 |`ValuePtr`|[出力]次のプロバイダー名を返すメモリへのポインター。|
 |`BufferLength`|[入力]ValuePtr バッファーの長さ。|
-|`StringLengthPtr`|[出力](Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\*ValuePtr します。 ValuePtr が null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数が null 終了の長さマイナス BufferLength より大きい場合、文字でデータ\*ValuePtr がの長さマイナス BufferLength に切り捨てられます、null 終端文字は、ドライバーが null で終わるとします。|
+|`StringLengthPtr`|[出力]\(Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\*ValuePtr します。 ValuePtr が null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数が null 終了の長さマイナス BufferLength より大きい場合、文字でデータ\*ValuePtr がの長さマイナス BufferLength に切り捨てられます、null 終端文字は、ドライバーが null で終わるとします。|
 
 全体の一覧の取得を許可するのには、すべての Get 操作は、現在のプロバイダー名を返し、次の内部のカウンターをインクリメントします。 このカウンターが空の文字列、リストの末尾に達すると ("") が返されると、カウンターがリセットされます。一連の Get 操作は、リストの先頭からもう一度に進みます。
 
@@ -477,6 +479,7 @@ unsigned int dataSize;
 char data[];
 } CEKEYSTOREDATA;
 ```
+
 | 引数 | [説明] |
 |:---|:---|
 |`name`|[入力]プロバイダーの名前、設定時にデータを送信します。 取得時に無視されます。 Null で終わる、ワイド文字の文字列。|
@@ -489,6 +492,7 @@ A`SQLSetConnectAttr`を使用して呼び出す、`SQL_COPT_SS_CEKEYSTOREDATA`�
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | 引数 | [説明] |
 |:---|:---|
 |`ConnectionHandle`| [入力]接続ハンドルです。 有効な接続ハンドルである必要がありますが、1 つの接続ハンドル経由で読み込まれるプロバイダーから同じプロセス内の他のアクセス。|
@@ -508,6 +512,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | 引数 | [説明] |
 |:---|:---|
 |`ConnectionHandle`|[入力]接続ハンドルです。 有効な接続ハンドルである必要がありますが、1 つの接続ハンドル経由で読み込まれるプロバイダーから同じプロセス内の他のアクセス。|
