@@ -9,12 +9,12 @@ ms.date: 01/15/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aec8f030a996e5dd86c44a5a655e98d4926988ed
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: d3ee1a0d2b6f3ec2c395b2c318aaf4b151497562
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361412"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087611"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスターを管理する mssqlctl をインストールします。
 
@@ -34,9 +34,15 @@ ms.locfileid: "54361412"
 
 1. Python の使用が最新のパスを取得できるように、新しい Windows PowerShell セッションを開きます。
 
-2. インストール**mssqlctl**次のコマンドを使用します。
+1. 以前のリリースがあれば**mssqlctl**をインストールすることが重要アンインストール**mssqlctl**最初、最新バージョンをインストールする前にします。
 
-   ```bash
+   ```powershell
+   pip3 uninstall mssqlctl
+   ```
+
+1. インストール**mssqlctl**次のコマンドを使用します。
+
+   ```powershell
    pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
 
@@ -57,16 +63,22 @@ Linux は、Python 3.5 をインストールしてから pip をアップグレ�
    ```bash
    sudo -H pip3 install --upgrade pip
    ```
-   
+
+1. 以前のリリースがあれば**mssqlctl**をインストールすることが重要アンインストール**mssqlctl**最初、最新バージョンをインストールする前にします。
+
+   ```bash
+   pip3 uninstall mssqlctl
+   ```
+
 1. インストール**mssqlctl**次のコマンドを使用します。
 
    ```bash
    pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
-   
+
    > [!NOTE]
    > `--user`スイッチ mssqlctl を Python のユーザーのインストール ディレクトリにインストールされます。 これは通常`~/.local/bin`Linux 上。 いずれか、パスにこのディレクトリを追加かユーザー インストール ディレクトリに移動して実行`./mssqlctl`そこから。
-   
+
 ## <a name="next-steps"></a>次の手順
 
 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)します。

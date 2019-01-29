@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f323ac135ed41ff15c1d41a17407d03138e4807
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 6fd14582fdae0d76463b8d8739d214882b78f999
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372694"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147010"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>SQL Server Machine Learning では、Windows サービスをインストールします。
 
@@ -29,7 +29,9 @@ SQL Server 2017 以降、R と Python のサポートで、データベース内
 
 + データベース エンジンのインスタンスが必要です。 機能をインストールするだけ R または Python を既存のインスタンスに増分の追加にできます。
 
-- Machine Learning サービスのインストールは*はサポートされていません*で SQL Server 2017 フェールオーバー クラスターにします。 ただし、その*はサポートされて*SQL Server 2019 とします。 
++ ビジネス継続性の[Always On 可用性グループ](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)Machine Learning サービスはサポートされています。 Machine Learning のサービスをインストールし、各ノードで、パッケージを構成する必要があります。
+
++ Machine Learning サービスのインストールは*はサポートされていません*で SQL Server 2017 フェールオーバー クラスターにします。 ただし、その*はサポートされて*SQL Server 2019 とします。 
  
 + ドメイン コント ローラーで Machine Learning サービスをインストールできません。 セットアップの Machine Learning サービスの部分は失敗します。
 

@@ -11,12 +11,12 @@ ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d2808f6f653ee25f240dbe400b76e018e5033676
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fe75fc89ffa1642ebc3fa4301cb0a80c83895141
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376654"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087791"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>チェックリスト:PowerShell を使用して、SharePoint の PowerPivot を確認するには
   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] のインストール操作や復旧操作を完了するには、信頼性の高い検証テストに合格する必要があります。このテストでは、サービスとデータが操作可能であるかどうかが確認されます。 この記事では、Windows PowerShell を使用してこのテストの手順を実行する方法について説明します。 各手順は個別のセクションで説明されています。これにより、特定のタスクを直接参照することもできます。 たとえば、メンテナンスやバックアップでサービス アプリケーションとコンテンツ データベースの名前の確認をスケジュールする必要がある場合は、このトピックの「 [データベース](#bkmk_databases) 」セクションのスクリプトを実行し、これらの名前を確認することができます。  
@@ -33,7 +33,7 @@ ms.locfileid: "53376654"
   
 |||  
 |-|-|  
-|[PowerShell 環境を準備する](#bkmk_prerequisites)<br /><br /> [現象と推奨される操作](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services の Windows サービス](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService と PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [PowerPivot サービス アプリケーションとプロキシ](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [データベース](#bkmk_databases)<br /><br /> [SharePoint 機能](#bkmk_features)<br /><br /> [タイマー ジョブ](#bkmk_timer_jobs)<br /><br /> [正常性ルール](#bkmk_health_rules)<br /><br /> **(E)** [Windows と ULS のログ](#bkmk_logs)<br /><br /> [MSOLAP プロバイダー](#bkmk_msolap)<br /><br /> [ADOMD.Net クライアント ライブラリ](#bkmk_adomd)<br /><br /> [正常性データの収集ルール](#bkmk_health_collection)<br /><br /> [ソリューション](#bkmk_solutions)<br /><br /> [手動による検証手順](#bkmk_manual)<br /><br /> [その他のリソース](#bkmk_more_resources)<br /><br /> [完全な PowerShell スクリプト](#bkmk_full_script)|![powerpivot の powershell による検証](../../../sql-server/install/media/ssas-powershell-component-verification.png "powerpivot の powershell による検証")|  
+|[PowerShell 環境を準備する](#bkmk_prerequisites)<br /><br /> [現象と推奨される操作](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services の Windows サービス](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService と PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [PowerPivot サービス アプリケーションとプロキシ](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [データベース](#bkmk_databases)<br /><br /> [SharePoint 機能](#bkmk_features)<br /><br /> [タイマー ジョブ](#bkmk_timer_jobs)<br /><br /> [正常性ルール](#bkmk_health_rules)<br /><br /> **(E)** [Windows と ULS のログ](#bkmk_logs)<br /><br /> [MSOLAP プロバイダー](#bkmk_msolap)<br /><br /> [ADOMD.Net クライアント ライブラリ](#bkmk_adomd)<br /><br /> [正常性データの収集ルール](#bkmk_health_collection)<br /><br /> [ソリューション](#bkmk_solutions)<br /><br /> [手動による検証手順](#bkmk_manual)<br /><br /> [その他のリソース](#bkmk_more_resources)<br /><br /> [完全な PowerShell スクリプト](#bkmk_full_script)|![powerpivot の powershell による検証](../../../sql-server/install/media/ssas-powershell-component-verification.png "powerpivot の powershell による検証")|  
   
 ##  <a name="bkmk_prerequisites"></a> PowerShell 環境を準備する  
  このセクションの手順では、PowerShell 環境を準備します。 この手順は必須ではありませんが、スクリプト環境が現在どのように構成されているかに応じて必要になります。  
@@ -87,7 +87,7 @@ Name              DisplayName                                Status
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running  
 ```  
   
-##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService と PowerPivotEngineSerivce  
+##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService と PowerPivotEngineService  
  このセクションのスクリプトでは、 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] System サービスを確認します。 SharePoint 2013 の配置では 1 つのシステム サービスが存在し、SharePoint 2010 の配置では 2 つサービスが存在します。  
   
  **PowerPivotSystemService**  
@@ -106,7 +106,7 @@ TypeName                                  Status Applications                   
 SQL Server PowerPivot Service Application Online {Default PowerPivot Service Application} SPFarm Name=SharePoint_Config_77d8ab0744a34e8aa27c806a2b8c760c  
 ```  
   
- **PowerPivotEngineSerivce**  
+ **PowerPivotEngineService**  
   
 > [!NOTE]  
 >  SharePoint 2013 を使用している場合は、**このセクションを省略してください** 。 PowerPivotEngineService は、SharePoint 2013 の配置には含まれません。 Get-PowerPivot**Engine**Service コマンドレットを SharePoint 2013 で実行する場合は、次のようなエラー メッセージが表示されます。 このエラー メッセージは、このトピックの前提条件に関するセクションで説明されている Add-PSSnapin コマンドを実行した場合でも返されます。  
@@ -467,7 +467,7 @@ Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 get-service | select name, displayname, status | where {$_.Name -eq "msolap`$powerpivot"} | format-table -property * -autosize | out-default  
   
 #Write-Host ""  
-Write-Host -ForegroundColor Green "PowerPivotEngineSerivce and PowerPivotSystemService"  
+Write-Host -ForegroundColor Green "PowerPivotEngineService and PowerPivotSystemService"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
   
 Get-PowerPivotSystemService | select typename, status, applications, farm | format-table -property * -autosize | out-default  

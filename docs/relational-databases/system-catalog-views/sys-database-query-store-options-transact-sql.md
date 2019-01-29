@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24222ed24da0fea385e27aa13bd518efa15a32c3
-ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
+ms.openlocfilehash: e8f1169e430a9ab6295862a3434f08967e01f33f
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55071339"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087781"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "55071339"
 |**desired_state_desc**|**nvarchar(60)**|クエリのストアの目的の操作モードの説明テキスト。<br />OFF<br />READ_ONLY<br />READ_WRITE|  
 |**actual_state**|**smallint**|クエリのストアの操作モードを示します。 だけでなく、ユーザーが必要な目的の状態の一覧は、実際の状態がエラー状態を指定できます。<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = エラー|  
 |**actual_state_desc**|**nvarchar(60)**|クエリのストアの実際の操作モードの説明テキストです。<br />OFF<br />READ_ONLY<br />READ_WRITE<br />ERROR<br /><br /> 実際の状態が、目的の状態と異なる場合は、状況があります。<br />-データベースが読み取り専用モードに設定されている場合、またはクエリ ストアのサイズが構成されているクォータを超えた場合は、クエリ ストアは、読み取り/書き込みが、ユーザーが指定されていた場合でも読み取り専用モードで動作可能性があります。<br />極端なシナリオでクエリ ストアは、内部エラーにより、エラー状態を入力できます。 クエリ ストアを実行して回復できるような場合、`sp_query_store_consistency_check`影響を受けたデータベースでストアド プロシージャ。|  
-|**readonly_reason**|**int**|ときに、 **desired_state_desc**は READ_WRITE ですおよび**actual_state_desc**が READ_ONLY、 **readonly_reason**返しますは少しをクエリ ストアがであるかを示すマップ。読み取り専用モードです。<br /><br /> **1** -データベースが読み取り専用モード<br /><br /> **2** -データベースがシングル ユーザー モード<br /> **4** -データベースが緊急モード<br /> **8** -データベースがセカンダリ レプリカ (Always On の対象と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]geo レプリケーション)。 のみ、この値を効果的に確認できます**読み取り可能な**セカンダリ レプリカ<br /> **65536** -クエリ ストアは MAX_STORAGE_SIZE_MB オプションによって設定されたサイズ制限に達しました。<br /> **131072** -クエリのストア内の別のステートメントの数が内部メモリの上限に達しました。 不要なクエリを削除するか、クエリ ストアを読み取り/書き込みモードに転送を有効にする上位のサービス階層へのアップグレードを検討してください。<br />**適用対象:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]」を参照してください。<br /> **262144** -ディスク上に保存するを待機しているメモリ内の項目のサイズが内部メモリの上限に達しました。 クエリ ストアは、メモリ内の項目がディスクに保存されるまで一時的に読み取り専用モードになります。 <br />**適用対象:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]」を参照してください。<br /><br /> **524288** -データベースはディスク サイズの上限に達しました。 クエリ ストア データベースに属しているユーザー、クエリ ストアをさらに拡張できないことを意味するデータベースは、できない場合の領域がない場合、できなくなります。<br />**適用対象:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]」を参照してください。 <br /> <br /> クエリ ストアの操作を切り替えるモード戻る読み取り/書き込みを参照してください**検証クエリ ストアは継続にクエリのデータを収集**の[クエリ ストアに関するベスト プラクティスとして](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify)します。|  
+|**readonly_reason**|**int**|ときに、 **desired_state_desc**は READ_WRITE ですおよび**actual_state_desc**が READ_ONLY、 **readonly_reason**返しますは少しをクエリ ストアがであるかを示すマップ。読み取り専用モードです。<br /><br /> **1** -データベースが読み取り専用モード<br /><br /> **2** -データベースがシングル ユーザー モード<br /><br /> **4** -データベースが緊急モード<br /><br /> **8** -データベースがセカンダリ レプリカ (Always On の対象と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]geo レプリケーション)。 のみ、この値を効果的に確認できます**読み取り可能な**セカンダリ レプリカ<br /><br /> **65536** -クエリ ストアは MAX_STORAGE_SIZE_MB オプションによって設定されたサイズ制限に達しました。<br /><br /> **131072** -クエリのストア内の別のステートメントの数が内部メモリの上限に達しました。 不要なクエリを削除するか、クエリ ストアを読み取り/書き込みモードに転送を有効にする上位のサービス階層へのアップグレードを検討してください。<br />**適用対象:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]」を参照してください。<br /><br /> **262144** -ディスク上に保存するを待機しているメモリ内の項目のサイズが内部メモリの上限に達しました。 クエリ ストアは、メモリ内の項目がディスクに保存されるまで一時的に読み取り専用モードになります。 <br />**適用対象:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]」を参照してください。<br /><br /> **524288** -データベースはディスク サイズの上限に達しました。 クエリ ストア データベースに属しているユーザー、クエリ ストアをさらに拡張できないことを意味するデータベースは、できない場合の領域がない場合、できなくなります。<br />**適用対象:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]」を参照してください。 <br /> <br /> クエリ ストアの操作を切り替えるモード戻る読み取り/書き込みを参照してください**検証クエリ ストアは継続にクエリのデータを収集**の[クエリ ストアに関するベスト プラクティスとして](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify)します。|  
 |**current_storage_size_mb**|**bigint**|メガバイト単位でディスク上のクエリのストアのサイズ。|  
 |**flush_interval_seconds**|**bigint**|クエリを定期的にフラッシュする期間は、秒単位でディスクにデータを格納します。 既定値は**900** (15 分)。<br /><br /> 使用して、変更、 `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` ステートメントです。|  
 |**interval_length_minutes**|**bigint**|分単位で統計の集計間隔です。 任意の値を指定することはできません。 次のいずれかを使用します:1、5、10、15、30、60、および 1440 分です。 既定値は**60**分。|  

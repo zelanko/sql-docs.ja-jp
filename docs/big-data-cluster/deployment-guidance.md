@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405822"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087861"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法
 
@@ -256,10 +256,27 @@ kubectl get svc -n <your-cluster-name>
     mssqlctl delete cluster <old-cluster-name>
    ```
 
-1. 最新バージョンのインストール**mssqlctl**します。
+1. 以前のバージョンをアンインストール**mssqlctl**します。
+
+   ```bash
+   pip3 uninstall mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > 新しいバージョンをインストールしないでください**mssqlctl**古いバージョンをまずアンインストールすることがなく。
+
+1. 最新バージョンのインストール**mssqlctl**します。 
+   
+   **Windows:**
+
+   ```powershell
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   ```
+
+   **Linux の場合:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
 
    > [!IMPORTANT]

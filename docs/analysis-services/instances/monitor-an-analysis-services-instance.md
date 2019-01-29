@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ac0f94b7f12cdba6237b2694114580f56dc6597
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 39cc5a22165d07aafce29e4216548c4e8d226892
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540459"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087631"
 ---
 # <a name="monitoring-overview"></a>監視の概要
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-Analysis Services は監視に役立つさまざまなツールと、サーバーのパフォーマンスを調整します。 どのツールを選択するかは、実行する監視またはチューニングの種類や、監視するイベントによって異なります。
+Analysis Services は、監視し、サーバーのパフォーマンスを調整するのに役立つさまざまなツールです。 どのツールを選択するかは、実行する監視またはチューニングの種類や、監視するイベントによって異なります。
 
 SQL Server Analysis Services の監視の詳細については、次を参照してください。、 [SQL Server 2008 R2 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)します。  
   

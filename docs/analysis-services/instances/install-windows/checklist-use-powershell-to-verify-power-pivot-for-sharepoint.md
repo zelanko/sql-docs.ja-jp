@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ccfcd29c7389ee1724994561bca382ae98e13b9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46cfdd9075bd950b287bef399ca3a505a1261f5d
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516382"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087831"
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>チェックリスト:PowerShell を使用して Powerpivot for SharePoint を確認するには
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ Name              DisplayName                                Status
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running  
 ```  
   
-##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService と PowerPivotEngineSerivce  
+##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService と PowerPivotEngineService  
  このセクションのスクリプトでは、 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] System サービスを確認します。 SharePoint 2013 の配置では 1 つのシステム サービスが存在し、SharePoint 2010 の配置では 2 つサービスが存在します。  
   
  **PowerPivotSystemService**  
@@ -93,7 +93,7 @@ TypeName                                  Status Applications                   
 SQL Server PowerPivot Service Application Online {Default PowerPivot Service Application} SPFarm Name=SharePoint_Config_77d8ab0744a34e8aa27c806a2b8c760c  
 ```  
   
- **PowerPivotEngineSerivce**  
+ **PowerPivotEngineService**  
   
 > [!NOTE]  
 >  SharePoint 2013 を使用している場合は、**このセクションを省略してください** 。 PowerPivotEngineService は、SharePoint 2013 の配置には含まれません。 Get-PowerPivotEngineService コマンドレットを SharePoint 2013 で実行する場合は、次のようなエラー メッセージが表示されます。 このエラー メッセージは、このトピックの前提条件に関するセクションで説明されている Add-PSSnapin コマンドを実行した場合でも返されます。  
@@ -454,7 +454,7 @@ Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 get-service | select name, displayname, status | where {$_.Name -eq "msolap`$powerpivot"} | format-table -property * -autosize | out-default  
   
 #Write-Host ""  
-Write-Host -ForegroundColor Green "PowerPivotEngineSerivce and PowerPivotSystemService"  
+Write-Host -ForegroundColor Green "PowerPivotEngineService and PowerPivotSystemService"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
   
 Get-PowerPivotSystemService | select typename, status, applications, farm | format-table -property * -autosize | out-default  

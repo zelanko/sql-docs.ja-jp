@@ -18,12 +18,12 @@ ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9177f154af1085a28c902e137cad0640f5702fb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354897"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087901"
 ---
 # <a name="thread-pool-properties"></a>スレッド プール プロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、多くの操作でマルチスレッドを使用し、複数のジョブを並列実行することによって、サーバーの全体的なパフォーマンスを向上させます。 スレッドをより効率的に管理するために、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はスレッド プールを使用してスレッドの事前割り当てを実行し、次のジョブがスレッドを容易に利用できるようにします。  
@@ -193,13 +193,13 @@ ms.locfileid: "53354897"
   
  NUMA ノードは無視されます。 IOProcess スレッド プールは 1 つしか存在しなくなり、そのスレッド プール内のすべてのスレッドがすべての論理プロセッサに関連付けられます。 既定 (PerNumaNode=-1) では、コンピューターの NUMA ノード数が 4 未満の場合はこれが有効な設定です。  
   
- ![Numa、プロセッサ、およびスレッド プールの一致](../media/ssas-threadpool-numaex0.PNG "Numa、プロセッサ、およびスレッド プールの一致")  
+ ![Numa、プロセッサ、およびスレッド プールの対応](../media/ssas-threadpool-numaex0.PNG "Numa、プロセッサ、およびスレッド プールの対応")  
   
  **PerNumaNode=1 の設定**  
   
  NUMA ノードごとに IOProcess スレッド プールが作成されます。 個別のスレッド プールを用意すると、NUMA ノード上のローカル キャッシュなど、ローカル リソースへの連携アクセスが改善されます。  
   
- ![Numa、プロセッサ、およびスレッド プールの一致](../media/ssas-threadpool-numaex1.PNG "Numa、プロセッサ、およびスレッド プールの一致")  
+ ![Numa、プロセッサ、およびスレッド プールの対応](../media/ssas-threadpool-numaex1.PNG "Numa、プロセッサ、およびスレッド プールの対応")  
   
  **PerNumaNode=2 の設定**  
   
@@ -207,7 +207,7 @@ ms.locfileid: "53354897"
   
  次の例では、システムでとを持つ 4 つの NUMA ノード設定 32 個の論理プロセッサ`PerNumaNode`2 の IOProcess スレッド プールが 32 になります。 最初の 8 個のスレッド プール内にあるスレッドは、いずれも NUMA ノード 0 内の論理プロセッサに関連付けられますが、最適なプロセッサは 0、1、2、...最大で 7 まで設定されます。 続く 8 個のスレッド プールは、いずれも NUMA ノード 1 内の論理プロセッサに関連付けられますが、最適なプロセッサは 8、9、10、...最大で 15 まで設定されます。  
   
- ![Numa、プロセッサ、およびスレッド プールの一致](../media/ssas-threadpool-numaex2.PNG "Numa、プロセッサ、およびスレッド プールの一致")  
+ ![Numa、プロセッサ、およびスレッド プールの対応](../media/ssas-threadpool-numaex2.PNG "Numa、プロセッサ、およびスレッド プールの対応")  
   
  この関係レベルでは、スケジューラは必ず、優先 NUMA ノード内にある最適な論理プロセッサを最初に使用しようとします。 その論理プロセッサが使用できない場合は、スケジューラは同じノード内にある別のプロセッサを選択するか、他のスレッドが使用できない場合は同じプロセッサ グループ内にある別のプロセッサを選択します。 詳細と例については、「 [Analysis Services 2012 の構成設定 (Wordpress ブログ)](https://go.microsoft.com/fwlink/?LinkId=330387)」をご覧ください。  
   

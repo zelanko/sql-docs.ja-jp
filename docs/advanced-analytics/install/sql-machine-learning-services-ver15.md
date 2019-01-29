@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d0b91668141b73b8ce5e4708cb403b7cc09b4ce9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 8ef383a0f2c85525e408607c22513065dd5bcb50
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432835"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087741"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019 で SQL Server Machine Learning Services のインストールの違い  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ AppContainer Sid に基づいて、新しいファイアウォール規則があ
 
 ## <a name="symbolic-link-created-by-setup"></a>セットアップによって作成されたシンボリック リンク
 
-現在の既定値にシンボリック リンクが作成された**R_SERVICES**と**PYTHON_SERIVCES** SQL Server セットアップの一部として。 このリンクを作成しない場合は、代替策は、フォルダーに至るまで、階層に 'all application packages' の読み取りアクセス許可を付与します。
+現在の既定値にシンボリック リンクが作成された**R_SERVICES**と**PYTHON_SERVICES** SQL Server セットアップの一部として。 このリンクを作成しない場合は、代替策は、フォルダーに至るまで、階層に 'all application packages' の読み取りアクセス許可を付与します。
 
 
 ## <a name="see-also"></a>関連項目

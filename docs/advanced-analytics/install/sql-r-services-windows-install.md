@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 69b3b9a57b2a4f6120c88552ca3100b288968b69
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 0cfe6b67217521f829f7b4745d42283e70a411fe
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645321"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147030"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services をインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,6 +27,8 @@ SQL Server 2017 での R 統合が提供されています[Machine Learning サ�
 ## <a name="pre-install-checklist"></a>インストール前のチェックリスト
 
 + データベース エンジンのインスタンスが必要です。 既存のインスタンスに増分追加できますが、だけの R をインストールすることはできません。
+
++ ビジネス継続性の[Always On 可用性グループ](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)R サービスはサポートされています。 R サービスをインストールし、各ノードで、パッケージを構成する必要があります。
 
 + フェールオーバー クラスターに R Services をインストールできません。 R プロセスを分離するために使用されるセキュリティ メカニズムは、Windows Server フェールオーバー クラスター環境と互換性がありません。
 
@@ -254,7 +256,7 @@ SQL Server で使用するパッケージは、インスタンスによって使
 
 R 開発者は、簡単な例で作業を開始し、SQL Server での R の動作の基本を学習します。 次の手順で、次のリンクを参照してください。
 
-+ [チュートリアル:T-SQL での R を実行します。](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [チュートリアル:R の開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル: T-SQL での R を実行します。](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [チュートリアル: R の開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 実際のシナリオに基づく機械学習の例を表示するを参照してください。 [Machine learning のチュートリアル](../tutorials/machine-learning-services-tutorials.md)します。
