@@ -9,22 +9,25 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 1dbe3213ae6b5774cd08efa6f6a24b799f74a6a7
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 426b0eed5b53760e872ebd18b11fce4de5ff22b9
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731999"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044925"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 監視パートナー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 SQL Server サービスを監視するためのツールを、業界をリードする豊富な種類の中から選びます。 この記事では、Microsoft SQL Server をサポートする監視ソリューションを提供する Microsoft パートナー会社を示します。
 
 <!--
+
 |![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+
 -->
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft の監視パートナー
+
 | Partner | [説明] | リンク |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL の診断マネージャーは、SQL Server 環境内の正常性、パフォーマンス、可用性の問題を中央コンソールから管理者に事前に通知する、強力なパフォーマンス監視と診断ソリューションです。<br><br>[システム要件][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Web サイト][idera_website]<br>[Twitter][idera_twitter]<br>[ビデオ][idera_youtube] | |
