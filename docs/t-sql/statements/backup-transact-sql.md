@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805778"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1132,9 +1132,9 @@ URL に対する所有とアクセス許可の問題によって、バックア�
 この例では、Microsoft Azure BLOB ストレージ サービスへの `Sales` のデータベースの COPY_ONLY バックアップを実行します。  ストレージ アカウント名は `mystorageaccount`です。  コンテナーは `myfirstcontainer`と呼ばれます。  保存されたアクセス ポリシーは読み取り、書き込み、削除および一覧表示権で作成されています。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` は、保存されたアクセス ポリシーに関連付けられている Shared Access Signature を使用して作成されています。  Microsoft Azure BLOB ストレージ サービスへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップについては、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」および「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。
 
 ```sql  
-BACKUP DATABASE Sales WITH COPY_ONLY
+BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
-WITH STATS = 5;
+WITH STATS = 5, COPY_ONLY;
 ```
 
   

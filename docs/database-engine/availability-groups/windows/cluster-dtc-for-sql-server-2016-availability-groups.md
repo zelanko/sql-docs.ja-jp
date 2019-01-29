@@ -12,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0bcbbd26ed97fd0df20abfb997495105fe2f726a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0b5003b20a1cfa477cde724a7ddfa32914eab9ef
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203311"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044458"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Always On 可用性グループの DTC サービスをクラスター化する方法
 
@@ -26,12 +26,14 @@ ms.locfileid: "53203311"
 このトピックでは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用に Microsoft 分散トランザクション コーディネーター (DTC) サービスをクラスター化するための要件と手順について説明します。 分散トランザクションと [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の詳細については、「 [Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」をご覧ください。
 
  ## <a name="checklist-preliminary-requirements"></a>チェック リスト:準備要件
+
 ||タスク|リファレンス|  
 |------|-----------------|----------|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|すべてのノード、サービス、可用性グループが正しく構成されていることを確認します。|[Always On 可用性グループの前提条件、制限事項、推奨事項 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|可用性グループの DTC 要件が満たされていることを確認します。|[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
 ## <a name="checklist-clustered-dtc-resource-dependencies"></a>チェック リスト:クラスター化された DTC リソースの依存関係
+
 ||タスク|リファレンス|  
 |------|-----------------|----------|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|共有記憶域ドライブ。|[Configuring the Shared-Storage Drive](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx)(共有記憶域ドライブの構成)。 ドライブ文字に **M**を使用することを検討します。|
@@ -43,6 +45,7 @@ ms.locfileid: "53203311"
 
 
 ## <a name="checklist-post-clustered-dtc-resource-configurations"></a>チェック リスト:クラスター化 DTC リソースの事後構成
+
 ||タスク|リファレンス|  
 |------|-----------------|----------|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|クラスター化された DTC リソースへの安全なネットワーク アクセスを有効にします。|[MS DTC への安全なネットワーク アクセスを有効にする](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|

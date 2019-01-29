@@ -14,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
-ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
+ms.openlocfilehash: 4a76d8d657f2451c52aea74c99576ffd89b30c8c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738118"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044488"
 ---
 # <a name="system-settings-master-data-services"></a>システム設定 (マスター データ サービス)
 
@@ -130,6 +130,7 @@ ms.locfileid: "53738118"
 ||**SecurityMemberProcessInterval**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[ユーザー/グループの権限]** 機能領域で、 **[階層メンバー]** タブで設定したユーザーとグループの権限が適用される頻度 (秒数) を示します。 既定値は **3600** 秒 (60 分) です。|  
 
 ##  <a name="Performance"></a> パフォーマンス設定  
+
 |構成マネージャーの設定|システム設定|[説明]|  
 |-----------------------------------|--------------------|-----------------|  
 |**Enable performance improvement setting (パフォーマンス向上の設定を有効にする)**|**PerformanceImprovementEnable**|読み込みアクセス許可関連のページのパフォーマンスがよくなるこの設定は既定で有効になります (**1 に設定**)。 ただし、この状況では、エンティティ、属性、ユーザー、またはグループの作成/変更はパフォーマンスが低下します。 これを回避するには、この設定を無効にできます (**0 に設定**)。 この設定を変更した後。 コマンド "**EXEC [mdm].[udpPerformanceToggleSwitch];**" を実行して、ビューとデータが正しいことを確認する必要があります。|  

@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805718"
 ---
 # <a name="always-encrypted-wizard"></a>Always Encrypted ウイザード
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "54327873"
  
  - **権限:** 暗号化された列に対してこのウィザードを使用してクエリを実行し、キーを選択するには、`VIEW ANY COLUMN MASTER KEY DEFINITION` 権限と `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 権限が必要です。 新しいキーを作成するには、 `ALTER ANY COLUMN MASTER KEY` 権限と `ALTER ANY COLUMN ENCRYPTION KEY` 権限も必要です。  
  
- #### <a name="to-open-the-always-encrypted-wizard"></a>Always Encrypted ウイザード を開く  
+ #### <a name="to-open-the-always-encrypted-wizard"></a>Always Encrypted ウイザード を開く
  
  1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のオブジェクト エクスプローラー コンポーネントで [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]に接続します。  
    
  2.  データベースを右クリックして **[タスク]** をポイントし、 **[列の暗号化]** をクリックします。  
    
- ## <a name="column-selection-page"></a>列の選択ページ  
+ ## <a name="column-selection-page"></a>列の選択ページ
  - テーブルと列を見つけ、選択した列の暗号化の種類 (決定性またはランダム) と暗号化鍵を選択します。 現在暗号化されている列の暗号化を解除するには、 **[プレーン テキスト]** を選択します。 列の暗号化鍵を回転させるには、別の暗号化鍵を選択します。ウィザードが列の暗号化を解除し、新しい鍵で列を再び暗号化します。 (テンポラル テーブルとインメモリ テーブルの暗号化は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされていますが、このウィザードでは構成できません。)  
  
 ## <a name="master-key-configuration-page"></a>マスター キーの構成ページ  

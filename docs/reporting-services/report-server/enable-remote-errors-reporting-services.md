@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 758917c8f3fd11d79162ac650cd29efd709e9dd3
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 1f604f75c685e1d06edf4287ea86a71020197188
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457455"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>リモート エラーの有効化 (Reporting Services)
   リモート サーバーで発生するエラー状態に関する追加情報が返されるように、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーのサーバー プロパティを設定できます。 エラー メッセージに "このエラーの詳細を表示するには、ローカルのサーバー コンピューターでレポート サーバーを開くか、リモート エラーを有効にしてください。" と表示されている場合は、 **EnableRemoteErrors** プロパティを設定すると、問題のトラブルシューティングに役立つ追加情報にアクセスできます。 詳細については、 [オンライン ブックの「](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) レポート サーバーのシステム プロパティ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
@@ -108,7 +108,7 @@ ms.locfileid: "51813126"
   
 ##  <a name="bkmk_ConfigurationInfo"></a> ConfigurationInfo テーブルの変更 (ネイティブ モード)  
   
-1.  > [!NOTE]  
-    >  レポート サーバー データベースで **ConfigurationInfo** テーブルを編集して、 **EnableRemoteErrors** を **True**に設定できますが、レポート サーバーが現在使用中の場合は、SQL Server Management Studio またはスクリプトを使用して設定を変更する必要があります。 データベース内で設定を変更した場合、変更は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの再起動後に反映されます。  
+> [!NOTE]  
+>  レポート サーバー データベースで **ConfigurationInfo** テーブルを編集して、 **EnableRemoteErrors** を **True**に設定できますが、レポート サーバーが現在使用中の場合は、SQL Server Management Studio またはスクリプトを使用して設定を変更する必要があります。 データベース内で設定を変更した場合、変更は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの再起動後に反映されます。  
   
   

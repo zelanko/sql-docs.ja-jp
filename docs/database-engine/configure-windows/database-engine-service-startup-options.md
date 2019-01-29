@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a4a31e52cbaa9e91219c2e67341de968d5c7e2c
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: e0c9cf64fa8e2b4304e2ba25536a298edbd306ac
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626332"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044329"
 ---
 # <a name="database-engine-service-startup-options"></a>データベース エンジン サービスのスタートアップ オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,7 @@ ms.locfileid: "53626332"
   
 ## <a name="list-of-startup-options"></a>スタートアップ オプションの一覧  
 ### <a name="default-startup-options"></a>既定のスタートアップ オプション  
+
 |オプション|[説明]|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|master データベース ファイルの完全修飾パス (通常は、C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf)。 このオプションを省略すると、レジストリ内にあるパラメーターが使用されます。|  
@@ -56,6 +57,7 @@ ms.locfileid: "53626332"
 |**-l**  *master_log_path*|master データベース ログ ファイルの完全修飾パス (通常は、C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf)。 このオプションを指定しない場合は、レジストリ内にあるパラメーターが使用されます。|  
   
 ### <a name="other-startup-options"></a>他のスタートアップ オプション   
+
 |オプション |[説明]|   
 |---------------------------|-----------------|  
 |**-c**|コマンド プロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動する場合に、起動時間を短縮します。 通常、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、サービス コントロール マネージャーを呼び出すことにより、サービスとして起動します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、コマンド プロンプトから起動した場合はサービスとして起動しないため、 **-c** を使用してこの手順を省略します。|  

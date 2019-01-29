@@ -2,7 +2,7 @@
 title: 可用性グループによるレプリケーションを構成する
 description: Always On 可用性グループでレプリケーションを構成する
 ms.custom: seodec18
-ms.date: 07/09/2018
+ms.date: 01/25/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dc4b6f393529923c8de6b0c25754c5185e4f1bb5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be1de83c0b3fccab722933ef1c080d018c5b74c0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129682"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044319"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 可用性グループでレプリケーションを構成する
 
@@ -126,9 +126,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
 ```  
   
  詳細については、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」を参照してください。  
- 
-> [!NOTE]  
->  Per_DB オプションを使用して DTC_Support が有効になっている可用性グループ内のデータベースでは、レプリケーションを有効にできません。  
+
   
 ##  <a name="step3"></a> 3.セカンダリ レプリカのすべてのホストでレプリケーションが構成されていることを確認する  
  セカンダリ レプリカの各ホストで、レプリケーションをサポートするように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が構成されていることを確認します。 レプリケーションがインストールされているかどうかを確認するには、セカンダリ レプリカの各ホストで次のクエリを実行します。  

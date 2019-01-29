@@ -41,12 +41,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2022064cd1f9db8ae61d4480266278854bf0bc8c
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 72d978967591fbffa8d25b3954c78256149f7592
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242235"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045095"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (Transact-SQL)
 BACKUP コマンドで作成した SQL Database のバックアップを復元します。 
@@ -294,6 +294,7 @@ Note: URL is the format used to specify the location and the file name for the M
   
 ### <a name="discontinued-restore-keywords"></a>廃止された RESTORE キーワード  
 次のキーワードは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では廃止されました。  
+
 |廃止されたキーワード|代替キーワード|代替キーワードの例|  
 |--------------------------|------------------|------------------------------------|  
 |LOAD|RESTORE|`RESTORE DATABASE`|  

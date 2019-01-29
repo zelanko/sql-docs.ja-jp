@@ -14,17 +14,18 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebe1af350632325d56fdf0251b790082fb443e97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45a3b887688186aaedfc66423b4982629914f159
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769240"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880535"
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Always Encrypted で保護された機微なデータの移行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
- 一括コピー操作中にサーバーでメタデータ チェックを実行せずに暗号化されたデータを読み込むには、 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** オプションを指定してユーザーを作成します。 このオプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より古いバージョンの [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] から従来のツールで使用するためのものです。Always Encrypted を使用できないサードパーティの ETL (Extract-Transform-Load) ワークフローで使用する場合もあります。 これにより、ユーザーは、暗号化された列を含むあるテーブル セットから、(同じデータベースまたは別のデータベース内の) 暗号化された列を含む別のテーブル セットに暗号化されたデータを安全に移動することができます。  
- -  
+
+一括コピー操作中にサーバーでメタデータ チェックを実行せずに暗号化されたデータを読み込むには、 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** オプションを指定してユーザーを作成します。 このオプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より古いバージョンの [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] から従来のツールで使用するためのものです。Always Encrypted を使用できないサードパーティの ETL (Extract-Transform-Load) ワークフローで使用する場合もあります。 これにより、ユーザーは、暗号化された列を含むあるテーブル セットから、(同じデータベースまたは別のデータベース内の) 暗号化された列を含む別のテーブル セットに暗号化されたデータを安全に移動することができます。  
+
  ## <a name="the-allowencryptedvaluemodifications-option"></a>ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプション  
  [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) と [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) の両方に ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプションがあります。 このオプションを ON に設定すると (既定値は OFF)、一括コピー操作でサーバーに対する暗号化メタデータ チェックが抑制されます。これにより、ユーザーはデータの暗号化を解除せずにテーブルまたはデータベース間で暗号化されたデータの一括コピーを行うことができます。  
   

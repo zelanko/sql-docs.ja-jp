@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cbf03f09ce4d72a738fe018bd0ca0cd67af3d107
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300569"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838149"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -479,8 +479,6 @@ column_name <data_type>
   
  IDENTITY  
  新しい列が ID 列であることを指定します。 テーブルに行が新しく追加されると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は列に一意な増分の値を設定します。 ID 列は通常、PRIMARY KEY 制約と共に使用され、テーブルの一意な行識別子 (ROWID) の役割を果たします。 IDENTITY プロパティは、**tinyint**、**smallint**、**int**、**bigint**、**decimal(p,0)**、**numeric(p,0)** のいずれかの列に割り当てることができます。 ID 列は 1 つのテーブルにつき 1 つだけ作成できます。 バインドされた既定値および DEFAULT 制約を ID 列と組み合わせて使用することはできません。 seed と increment の両方を指定するか、またはどちらも指定しません。 どちらも指定しないときの既定値は (1,1) です。  
-  
- メモリ最適化テーブルでは、*seed* と *increment* の両方に指定できる値は 1 だけです。(1,1) は *seed* および *increment* の既定値です。  
   
  *seed*  
  テーブルに読み込まれる最初の行に使用される値です。  

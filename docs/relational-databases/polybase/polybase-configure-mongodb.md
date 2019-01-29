@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 68fb5c69d30e9ba30f27bcd23347ed5543c7e792
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 6c4ccf371cdcac99d50c3142ec42641380623501
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947587"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044498"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>MongoDB 上の外部データにアクセスするための PolyBase の構成
 
@@ -142,6 +142,7 @@ JSON の入れ子になったデータ型/繰り返しデータ型は次のよ�
 * Nested field restaurant.address.zipcode becomes restaurant.address_zipcode
 
 採点配列は次のようにフラット化されます。
+
 | grades_date | grades_grade  | games_score | 
 | ------------- | ------------------------- | -------------- |
 |1393804800000 |A |2|
