@@ -43,7 +43,7 @@ SqlInt16 GetLevel ( )
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
-**SQL Server の戻り値の型: * *smallint * ***
+**SQL Server の戻り値の型: smallint** 
   
 **CLR の戻り値の型: SqlInt16**
   

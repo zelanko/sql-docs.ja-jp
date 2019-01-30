@@ -49,7 +49,7 @@ ms.locfileid: "47674737"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*n* は次の 2 つの値のいずれかの値として扱われます。 **1**<=n<=**24** の場合、*n* は **24** として処理されます。 **25**<=n<=**53** の場合、*n* は **53** として処理されます。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float****[(n)]** データ型は、*n* (**1** ～ **53**) のすべての値で ISO 標準に準拠しています。 シノニムは、 有効桁数を **2 倍** は **float (53)** です。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float** **[(n)]** データ型は、*n* (**1** ～ **53**) のすべての値で ISO 標準に準拠しています。 シノニムは、 有効桁数を **2 倍** は **float (53)** です。
   
 ## <a name="remarks"></a>Remarks  
   

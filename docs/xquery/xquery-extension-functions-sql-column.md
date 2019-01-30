@@ -106,7 +106,7 @@ ProductID               Result
 ...  
 ```  
   
- 次のクエリは、製品固有の情報を保持する XML を構築します。 この情報には、ある特定の製品モデル (ProductModelID=19) に属するすべての製品について、ProductID、ProductName、ProductPrice、および取得可能な場合は ProductModelName が含まれます。 XML が割り当てられているし、@xの変数**xml**型。  
+ 次のクエリは、製品固有の情報を保持する XML を構築します。 この情報には、ある特定の製品モデル (ProductModelID=19) に属するすべての製品について、ProductID、ProductName、ProductPrice、および取得可能な場合は ProductModelName が含まれます。 XML が割り当てられているし、@xの変数 **xml** 型。  
   
 ```sql
 declare @x xml  

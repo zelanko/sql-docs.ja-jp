@@ -47,7 +47,7 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 IsDescendantOf テストを実行する必要がある **hierarchyid** ノード。
   
 ## <a name="return-types"></a>戻り値の型  
-**SQL Server の戻り値の型: * *ビット * ***
+**SQL Server の戻り値の型: ビット**
   
 **CLR の戻り値の型:SqlBoolean**
   

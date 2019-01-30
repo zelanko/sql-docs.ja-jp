@@ -61,7 +61,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
  いずれかの引数が NULL の場合は、NULL を返します。  
   
- 場合 *string_expression* の種類はありません **varchar (max)** または **nvarchar (max)、* *** 置換 * * は 8,000 バイトで戻り値を切り捨てます。 8,000 バイトを超える値を返すには、大きな値を格納できるデータ型に *string_expression* を明示的にキャストする必要があります。  
+ 場合 *string_expression* の種類はありません **varchar (max)** または **nvarchar (max)、** 置換 は 8,000 バイトで戻り値を切り捨てます。 8,000 バイトを超える値を返すには、大きな値を格納できるデータ型に *string_expression* を明示的にキャストする必要があります。  
   
 ## <a name="remarks"></a>Remarks  
  REPLACE は、入力の照合順序に基づいて比較を行います。 特定の照合順序で比較を行うには、[COLLATE](~/t-sql/statements/collations.md) を使用して、入力に明示的な照合順序を適用します。  
