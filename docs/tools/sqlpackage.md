@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 8d06e0f985a9e50d1eee0a7e6c96f440d8ef7dcd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 29d01a54dc8293c46c2ac71b0fd91905ff9174ec
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528569"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045072"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -24,13 +24,13 @@ ms.locfileid: "52528569"
   
 - [Publish](#publish-parameters-properties-and-sqlcmd-variables): ソース .dacpac ファイルのスキーマに合わせてデータベース スキーマの増分更新を行います。 データベースがサーバーに存在しない場合は、公開操作によって作成されます。 それ以外の場合、既存のデータベースを更新します。  
   
-- [Export](#export-parameters-and-properties): SQL Server または Azure SQL Database のライブ データベース (データベース スキーマとユーザー データを含む) を BACPAC パッケージ (.bacpac ファイル) にエクスポートします。  
+- [Export](#export-parameters-and-properties):SQL Server または Azure SQL Database のライブ データベース (データベース スキーマとユーザー データを含む) を BACPAC パッケージ (.bacpac ファイル) にエクスポートします。  
   
-- [Import](#import-parameters-and-properties): BACPAC パッケージのスキーマとテーブル データを SQL Server または Azure SQL Database の新しいユーザー データベースにインポートします。  
+- [Import](#import-parameters-and-properties):BACPAC パッケージのスキーマとテーブル データを、SQL Server または Azure SQL Database インスタンス内の新しいユーザー データベースにインポートします。  
   
 - [DeployReport](#deployreport-parameters-and-properties): 公開操作によって行われる変更の XML レポートを作成します。  
   
-- [DriftReport](#driftreport-parameters): 前回データベースが登録された後に、登録されたデータベースに対して行われた変更の XML レポートを作成します。  
+- [DriftReport](#driftreport-parameters):登録されたデータベースに対して最終登録以降に行われた変更に関する XML レポートを作成します。  
   
 - [Script](#script-parameters-and-properties): ソースのスキーマに合わせてターゲットのスキーマを更新する、Transact-SQL の増分更新スクリプトを作成します。  
   
@@ -48,7 +48,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
   
 ### <a name="help-for-the-extract-action"></a>Extract アクションは、のヘルプ
 
-|パラメーター|短い形式|ReplTest1|[説明]|
+|パラメーター|短い形式|[値]|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
@@ -56,7 +56,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
 |**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe/Action: 発行/ですか。 |
+|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Publish /?。 |
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。 |
 |**/SourceConnectionString:**|**に**|{string}|ソース データベースの有効な SQL Server または SQL Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのソース パラメーターとも同時には使用できません。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|ソース データベースの名前を定義します。 |
@@ -72,21 +72,21 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ### <a name="properties-specific-to-the-extract-action"></a>Extract 操作に固有のプロパティ
 
-|プロパティ|ReplTest1|[説明]|
+|プロパティ|[値]|[説明]|
 |---|---|---|
-|**/p:**|CommandTimeout = (INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
+|**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
 |**/p:**|DacApplicationDescription=(STRING)|DACPAC メタデータに格納されるアプリケーションの説明を定義します。|
 |**/p:**|DacApplicationName=(STRING)|DACPAC メタデータに格納されるアプリケーション名を定義します。 既定値は、データベース名です。|
 |**/p:**|DacMajorVersion = (INT32 '1')|DACPAC メタデータに格納されるメジャー バージョンを定義します。|
 |**/p:**|DacMinorVersion = (INT32 '0')|DACPAC メタデータに格納されるマイナー バージョンを定義します。|
 |**/p:**|ExtractAllTableData=(BOOLEAN)|すべてのユーザー テーブルからデータを抽出するかどうかを示します。 'True' の場合は、すべてのユーザー テーブルからデータを抽出すると、およびデータを抽出するための個々 のユーザー テーブルを指定することはできません。 'False' の場合は、1 つまたは複数のユーザー テーブルからデータを抽出するを指定します。|
 |**/p:**|ExtractApplicationScopedObjectsOnly (ブール値は ' True') を =|true の場合、指定されたソースのアプリケーション スコープのオブジェクトのみを抽出します。 false の場合、指定されたソースのすべてのオブジェクトを抽出します。|
-|**/p:**|ExtractReferencedServerScopedElements (ブール値は ' True') を =|true の場合、ソース データベース オブジェクトによって参照されるログイン オブジェクト、サーバー監査オブジェクト、および資格情報オブジェクトを抽出します。|
+|**/p:**|ExtractReferencedServerScopedElements=(BOOLEAN 'True')|true の場合、ソース データベース オブジェクトによって参照されるログイン オブジェクト、サーバー監査オブジェクト、および資格情報オブジェクトを抽出します。|
 |**/p:**|ExtractUsageProperties=(BOOLEAN)|テーブル行数やインデックス サイズなどの使用プロパティを、データベースから抽出するかどうかを指定します。|
 |**/p:**|IgnoreExtendedProperties=(BOOLEAN)|拡張プロパティを無視するかどうかを指定します。|
 |**/p:**|IgnorePermissions (ブール値は ' True') を =|アクセス許可を無視するかどうかを指定します。|
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|ユーザーとログイン間のリレーションシップを無視するかどうかを指定します。|
-|**/p:**|ストレージ = ({ファイル&#124;メモリ} 'File')|抽出時に使用されるスキーマ モデルのバックアップ用ストレージの種類を指定します。|
+|**/p:**|Storage=({File&#124;Memory} 'File')|抽出時に使用されるスキーマ モデルのバックアップ用ストレージの種類を指定します。|
 |**/p:**|TableData=(STRING)|データの抽出元となるテーブルを示します。 次の形式で名前の部分を囲む角かっこの有無は、テーブル名を指定: schema_name.table_identifier。|
 |**/p:**|VerifyExtraction=(BOOLEAN)|抽出された DACPAC を検証するかどうかを指定します。|
 
@@ -96,32 +96,32 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 
 ### <a name="help-for-publish-action"></a>公開操作のヘルプ
 
-|パラメーター|短い形式|ReplTest1|[説明]|
+|パラメーター|短い形式|[値]|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|パブリッシュ|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
-|**/AzureKeyVaultAuthMethod:**|**/akv**|{対話型&#124;ClientIdSecret}|Azure Key Vault にアクセスするためにどの認証方法を使用するかを指定します |
+|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Azure Key Vault にアクセスするためにどの認証方法を使用するかを指定します |
 |**/ClientId:**|**/cid**|{string}|必要な場合、Azure Key Vault に対する認証に使用されるクライアント ID を指定します |
 |**/DeployScriptPath:**|**/dsp**|{string}|配置スクリプトを出力する省略可能なファイル パスを指定します。 Azure の配置では、master データベースを作成または変更するための TSQL コマンドがある場合、スクリプトは同じパスに書き込まれますが、出力ファイル名として "Filename_Master.sql" が使用されます。 |
-|**/DeployReportPath:**|**/drp**|{string}|展開レポートの xml ファイルを出力する省略可能なファイル パスを指定します。 |
+|**/DeployReportPath:**|**/drp**|{string}|配置レポートの xml ファイルを出力する省略可能なファイル パスを指定します。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
 |**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
 |**/Profile:**|**/pr**|{string}|DAC 公開プロファイルのファイル パスを指定します。 出力の生成時に使用するプロパティと変数のコレクションをプロファイルで定義します。|
-|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe/Action: 発行/ですか。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Publish /?。|
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。|
 |**/Secret:**|**/secr**|{string}|必要な場合、Azure Key Vault に対する認証に使用されるクライアント シークレットを指定します |
 |**/SourceConnectionString:**|**に**|{string}|ソース データベースの有効な SQL Server または SQL Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのソース パラメーターとも同時には使用できません。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|ソース データベースの名前を定義します。 |
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|ソース データベース接続に SQL 暗号化を使用するかどうかを指定します。 |
-|**/Sourcefile:**|**/sf**|{string}|データベースではなく、ソース ファイルを操作のソースとして使用するように指定します。 このパラメーターを使用した場合、他のソース パラメーターは無効になります。 |
+|**/SourceFile:**|**/sf**|{string}|データベースではなく、ソース ファイルを操作のソースとして使用するように指定します。 このパラメーターを使用した場合、他のソース パラメーターは無効になります。 |
 |**/SourcePassword:**|**/sp**|{string}|SQL Server 認証シナリオでは、ソース データベースへのアクセスに使用するパスワードを定義します。 |
 |**/SourceServerName:**|**/ssn**|{string}|ソース データベースをホストしているサーバーの名前を定義します。 |
 |**/SourceTimeout:**|**/st**|{int}|ソース データベースへの接続を確立する際のタイムアウトを秒単位で指定します。 |
 |**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|SSL を使用してソース データベースへの接続を暗号化し、証明書チェーンを検証せずに信頼を確認するかどうかを指定します。 |
 |**/SourceUser:**|**/su**|{string}|SQL Server 認証シナリオでは、ソース データベースへのアクセスに使用する SQL Server ユーザーを定義します。 |
-|**/ターゲット接続文字列:**|**/tcs**|{string}|ターゲット データベースの有効な SQL Server または Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのターゲット パラメーターとも同時には使用できません。 |
+|**/TargetConnectionString:**|**/tcs**|{string}|ターゲット データベースの有効な SQL Server または Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのターゲット パラメーターとも同時には使用できません。 |
 |**/TargetDatabaseName:**|**/tdn**|{string}|sqlpackage.exe の動作のターゲットとなるデータベースの名前のオーバーライドを指定します。 |
 |**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|ターゲット データベース接続に SQL 暗号化を使用するかどうかを指定します。 |
 |**/TargetPassword:**|**/tp**|{string}|SQL Server 認証シナリオでは、ターゲット データベースへのアクセスに使用するパスワードを定義します。 |
@@ -135,7 +135,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 
 ### <a name="properties-specific-to-the-publish-action"></a>公開操作に固有のプロパティ
 
-|プロパティ|ReplTest1|[説明]|
+|プロパティ|[値]|[説明]|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。|
@@ -145,11 +145,11 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|変更を配置する前にデータベースをバックアップします。|
 |**/p:**|BlockOnPossibleDataLoss (ブール値は ' True') を =|公開操作によるデータ損失の可能性がある場合に、公開を終了するかどうかを指定します。|
 |**/p:**|BlockWhenDriftDetected (ブール値は ' True') を =|スキーマがその登録と一致しないか、スキーマが登録されていないデータベースの更新をブロックするかどうかを指定します。|
-|**/p:**|CommandTimeout = (INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
+|**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|生成された公開スクリプト内で SETVAR 変数の宣言をコメント アウトする必要があるかどうかを指定します。 このようなコメント アウトが必要になるのは、SQLCMD.EXE などのツールを使用して、公開時にコマンド ラインで値を指定する予定がある場合などです。|
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|この設定では、配置の際にデータベースの照合順序をどのように処理するかを指定します。既定では、ソースで指定されている照合順序と異なる場合にターゲット データベースの照合順序が更新されます。 このオプションを設定した場合、ターゲット データベース (またはサーバー) の照合順序が使用されます。|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|データベースへの公開時に、ターゲット データベースを更新するか、削除して再作成するかを指定します。|
-|**/p:**|DatabaseEdition = ({Basic&#124;標準&#124;Premium&#124;既定} '既定')|Azure SQL Database のエディションを定義します。|
+|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database のエディションを定義します。|
 |**/p:**|DatabaseMaximumSize=(INT32)|Azure SQL Database の最大サイズを GB 単位で定義します。|
 |**/p:**|DatabaseServiceObjective=(STRING)|Azure SQL Database のパフォーマンス レベル ("P0" や "S1" など) を定義します。|
 |**/p:**|DeployDatabaseInSingleUserMode=(BOOLEAN)|true の場合、データベースは配置前にシングル ユーザー モードに設定されます。|
@@ -159,7 +159,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |**/p:**|DoNotDropObjectType=(STRING)|DropObjectsNotInSource が true のときに削除しないオブジェクトの種類。 有効なオブジェクトの種類名は、Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers です。|
 |**/p:**|DoNotDropObjectTypes=(STRING)|DropObjectsNotInSource が true の場合に削除されない、オブジェクトの種類のセミコロン区切りリスト。 有効なオブジェクトの種類名は、Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers です。|
 |**/p:**|DropConstraintsNotInSource (ブール値は ' True') を =|データベースへの公開時に、ターゲット データベースのデータベース スナップショット (.dacpac) ファイルに存在しない制約を削除するかどうかを指定します。|
-|**/p:**|DropDmlTriggersNotInSource (ブール値は ' True') を =|データベースへの公開時に、ターゲット データベースのデータベース スナップショット (.dacpac) ファイルに存在しない DML トリガーを削除するかどうかを指定します。|
+|**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|データベースへの公開時に、ターゲット データベースのデータベース スナップショット (.dacpac) ファイルに存在しない DML トリガーを削除するかどうかを指定します。|
 |**/p:**|DropExtendedPropertiesNotInSource (ブール値は ' True') を =|データベースに公開するとき、データベース スナップショット (.dacpac) ファイルに存在しない拡張プロパティをターゲット データベースから削除するかどうかを指定します。|
 |**/p:**|DropIndexesNotInSource (ブール値は ' True') を =|データベースへの公開時に、ターゲット データベースのデータベース スナップショット (.dacpac) ファイルに存在しないインデックスを削除するかどうかを指定します。|
 |**/p:**|DropObjectsNotInSource=(BOOLEAN)|データベースへの公開時に、データベース スナップショット (.dacpac) ファイルに存在しないオブジェクトをターゲット データベースから削除するかどうかを指定します。 この値は、DropExtendedProperties よりも優先されます。|
@@ -185,7 +185,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |**/p:**|IgnoreFilegroupPlacement (ブール値は ' True') を =|データベースに公開するとき、FILEGROUP 内のオブジェクトの位置の相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreFileSize (ブール値は ' True') を =|データベースに公開するとき、ファイル サイズの相違を無視するか、または警告を発するかを指定します。|
 |**/p:**|IgnoreFillFactor (ブール値は ' True') を =|データベースに公開するとき、インデックス格納の FILL FACTOR の相違を無視するか、または警告を発するかを指定します。|
-|**/p:**|IgnoreFullTextCatalogFilePath (ブール値は ' True') を =|データベースに公開するとき、フルテキスト カタログのファイル パスの相違を無視するか、または警告を発するかを指定します。|
+|**/p:**|IgnoreFullTextCatalogFilePath=(BOOLEAN 'True')|データベースに公開するとき、フルテキスト カタログのファイル パスの相違を無視するか、または警告を発するかを指定します。|
 |**/p:**|IgnoreIdentitySeed=(BOOLEAN)|データベースに公開するとき、Identity 列のシードの相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreIncrement=(BOOLEAN)|データベースに公開するとき、Identity 列のインクリメントの相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreIndexOptions=(BOOLEAN)|データベースに公開するとき、インデックス オプションの相違を無視するか、更新するかを指定します。|
@@ -218,11 +218,11 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |**/p:**|ScriptDeployStateChecks=(BOOLEAN)|データベース名とサーバー名がデータベース プロジェクトで指定された名前と一致していることを確認するステートメントを公開スクリプトで生成するかどうかを指定します。|
 |**/p:**|ScriptFileSize=(BOOLEAN)|ファイル グループにファイルを追加するときに、サイズを指定するかどうかを制御します。|
 |**/p:**|ScriptNewConstraintValidation (ブール値は ' True') を =|At 末尾のすべての発行、制約を check 制約または公開の途中で外部キー制約によるデータ エラーを回避する 1 つのセットとして検証されます。 False に設定すると、対応するデータを確認せずに制約が公開されます。|
-|**/p:**|ScriptRefreshModule (ブール値は ' True') を =|公開スクリプトの末尾に更新ステートメントを追加します。|
+|**/p:**|ScriptRefreshModule=(BOOLEAN 'True')|公開スクリプトの末尾に更新ステートメントを追加します。|
 |**/p:**|ストレージ = ({ファイル&#124;メモリ})|データベース モデルの構築時に要素をどのように格納するかを指定します。 パフォーマンス上の理由から、既定値は InMemory です。 大規模なデータベースの場合は、File バックアップ ストレージが必要です。|
 |**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|検証を警告として扱う公開中に発生したエラーかどうかを指定します。 配置計画をターゲット データベースに対して実行する前に、生成された配置計画がチェックされます。 計画の検証では、変更を加えるためには取り除く必要のある、ターゲットのみのオブジェクト (インデックスなど) の損失などの問題が検出されます。 また、複合プロジェクトへの参照のためテーブルやビューなどに依存関係が存在するのに、その関係がターゲット データベースに存在しない状況も検出されます。 最初のエラーで停止公開操作ではなく、すべての問題の完全な一覧を取得します。 これを行うことができます。|**/p:**|UnmodifiableObjectWarnings (ブール値は ' True') を =|修正できない相違がオブジェクトで見つかった場合 (たとえば、同じファイルのファイル サイズまたはファイル パスが異なる場合) に警告を生成するかどうかを指定します。|
 |**/p:**|VerifyCollationCompatibility (ブール値は ' True') を =|照合順序の互換性を検証するかどうかを指定します。|
-|**/p:**|VerifyDeployment (ブール値は ' True') を =|公開前にチェックを実行して、正常な公開をブロックする可能性のある問題が存在する場合は公開操作を停止するかどうかを指定します。 たとえば、ターゲット データベースの外部キーがデータベース プロジェクトに存在せず、公開時にエラーが発生する場合は、公開操作が停止することがあります。|
+|**/p:**|VerifyDeployment=(BOOLEAN 'True')|公開前にチェックを実行して、正常な公開をブロックする可能性のある問題が存在する場合は公開操作を停止するかどうかを指定します。 たとえば、ターゲット データベースの外部キーがデータベース プロジェクトに存在せず、公開時にエラーが発生する場合は、公開操作が停止することがあります。|
 |
 
 ### <a name="sqlcmd-variables"></a>SQLCMD 変数
@@ -231,7 +231,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
   
 |パラメーター|既定|[説明]|  
 |-------------|-----------|---------------|  
-|**/変数: {propertyname} = {value}**||操作固有の変数の名前と値のペア ({VariableName}={Value}) を指定します。 DACPAC ファイルには、有効な SQLCMD 変数の一覧が含まれます。 すべての変数に値を指定しないと、エラーが発生します。|  
+|**/Variables:{PropertyName}={Value}**||操作固有の変数の名前と値のペア ({VariableName}={Value}) を指定します。 DACPAC ファイルには、有効な SQLCMD 変数の一覧が含まれます。 すべての変数に値を指定しないと、エラーが発生します。|  
   
 ## <a name="export-parameters-and-properties"></a>エクスポート パラメーターとスクリプト プロパティ
 
@@ -239,7 +239,7 @@ SqlPackage.exe の Export 操作を実行すると、SQL Server または Azure 
   
 ### <a name="help-for-export-action"></a>エクスポート操作のヘルプ
 
-|パラメーター|短い形式|ReplTest1|[説明]|
+|パラメーター|短い形式|[値]|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|[エクスポート]|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
@@ -247,7 +247,7 @@ SqlPackage.exe の Export 操作を実行すると、SQL Server または Azure 
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
 |**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe/Action: 発行/ですか。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Publish /?。|
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。|
 |**/SourceConnectionString:**|**に**|{string}|ソース データベースの有効な SQL Server または SQL Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのソース パラメーターとも同時には使用できません。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|ソース データベースの名前を定義します。 |
@@ -263,12 +263,12 @@ SqlPackage.exe の Export 操作を実行すると、SQL Server または Azure 
 
 ### <a name="properties-specific-to-the-export-action"></a>エクスポート操作に固有のプロパティ
 
-|プロパティ|ReplTest1|[説明]|
+|プロパティ|[値]|[説明]|
 |---|---|---|
-|**/p:**|CommandTimeout = (INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
-|**/p:**|ストレージ = ({ファイル&#124;メモリ} 'File')|抽出時に使用されるスキーマ モデルのバックアップ用ストレージの種類を指定します。|
+|**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
+|**/p:**|Storage=({File&#124;Memory} 'File')|抽出時に使用されるスキーマ モデルのバックアップ用ストレージの種類を指定します。|
 |**/p:**|TableData=(STRING)|データの抽出元となるテーブルを示します。 次の形式で名前の部分を囲む角かっこの有無は、テーブル名を指定: schema_name.table_identifier。|
-|**/p:**|TargetEngineVersion = ({0} 既定&#124;最新&#124;V11&#124;V12} 'Latest')|予期されるターゲット エンジンのバージョンを指定します。 これは、生成された bacpac 内のメモリ最適化テーブルなどの V12 機能を備えた Azure SQL Database サーバーでサポートされているオブジェクトを許可するかどうかに影響します。|
+|**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|予期されるターゲット エンジンのバージョンを指定します。 これは、生成された bacpac 内のメモリ最適化テーブルなどの V12 機能を備えた Azure SQL Database サーバーでサポートされているオブジェクトを許可するかどうかに影響します。|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Microsoft Azure SQL Database v12 のサポートされているフルテキスト ドキュメントの種類を確認するかどうかを指定します。|
   
 ## <a name="import-parameters-and-properties"></a>インポート パラメーターとプロパティ
@@ -277,17 +277,17 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
   
 ### <a name="help-for-command-actions"></a>コマンド アクションのヘルプ
 
-|パラメーター|短い形式|ReplTest1|[説明]|
+|パラメーター|短い形式|[値]|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|[インポート]|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
 |**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe/Action: 発行/ですか。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Publish /?。|
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。|
-|**/Sourcefile:**|**/sf**|{string}|ソース ファイルを操作のソースとして使用するように指定します。 このパラメーターを使用した場合、他のソース パラメーターは無効になります。 |
-|**/ターゲット接続文字列:**|**/tcs**|{string}|ターゲット データベースの有効な SQL Server または Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのターゲット パラメーターとも同時には使用できません。 |
+|**/SourceFile:**|**/sf**|{string}|ソース ファイルを操作のソースとして使用するように指定します。 このパラメーターを使用した場合、他のソース パラメーターは無効になります。 |
+|**/TargetConnectionString:**|**/tcs**|{string}|ターゲット データベースの有効な SQL Server または Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのターゲット パラメーターとも同時には使用できません。 |
 |**/TargetDatabaseName:**|**/tdn**|{string}|sqlpackage.exe の動作のターゲットとなるデータベースの名前のオーバーライドを指定します。 |
 |**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|ターゲット データベース接続に SQL 暗号化を使用するかどうかを指定します。 |
 |**/TargetPassword:**|**/tp**|{string}|SQL Server 認証シナリオでは、ターゲット データベースへのアクセスに使用するパスワードを定義します。 |
@@ -299,10 +299,11 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|ユニバーサル認証を使用するかどうかを指定します。 True に設定すると、MFA をサポートする対話型認証プロトコルがアクティブです。 このオプションは、ユーザー名とパスワード、または統合認証 (Windows 資格情報) を入力するように求める対話型のプロトコルを使用して、MFA なしで認証に Azure AD にも使用できます。 SourceConnectionString で Azure AD 認証を特定できません/UniversalAuthentication が True に設定されている場合 (/scs)。 SourceConnectionString で Azure AD 認証を指定する必要があります/UniversalAuthentication が False に設定されている場合 (/scs)。 <br/> Active Directory ユニバーサル認証の詳細については、次を参照してください。 [SQL Database と SQL Data Warehouse (MFA の SSMS サポート) を使用したユニバーサル認証](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)します。|
 
 インポート アクションに固有のプロパティ:
-|プロパティ|ReplTest1|[説明]|
+
+|プロパティ|[値]|[説明]|
 |---|---|---|
-|**/p:**|CommandTimeout = (INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
-|**/p:**|DatabaseEdition = ({Basic&#124;標準&#124;Premium&#124;既定} '既定')|Azure SQL Database のエディションを定義します。|
+|**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
+|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database のエディションを定義します。|
 |**/p:**|DatabaseMaximumSize=(INT32)|Azure SQL Database の最大サイズを GB 単位で定義します。|
 |**/p:**|DatabaseServiceObjective=(STRING)|Azure SQL Database のパフォーマンス レベル ("P0" や "S1" など) を定義します。|
 |**/p:**|ImportContributorArguments=(STRING)|配置コントリビューターに配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。|
@@ -315,7 +316,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
   
 ### <a name="help-for-deployreport-action"></a>DeployReport アクションのヘルプ
 
-|パラメーター|短い形式|ReplTest1|[説明]|
+|パラメーター|短い形式|[値]|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
@@ -325,18 +326,18 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/OutputPath:**|**/op**|{string}|出力ファイルが生成されるファイル パスを指定します。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
 |**/Profile:**|**/pr**|{string}|DAC 公開プロファイルのファイル パスを指定します。 出力の生成時に使用するプロパティと変数のコレクションをプロファイルで定義します。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe/Action: 発行/ですか。 |
+|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Publish /?。 |
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。 |
 |**/SourceConnectionString:**|**に**|{string}|ソース データベースの有効な SQL Server または SQL Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのソース パラメーターとも同時には使用できません。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|ソース データベースの名前を定義します。 |
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|ソース データベース接続に SQL 暗号化を使用するかどうかを指定します。 |
-|**/Sourcefile:**|**/sf**|{string}|データベースではなく、ソース ファイルを操作のソースとして使用するように指定します。 このパラメーターを使用した場合、他のソース パラメーターは無効になります。 |
+|**/SourceFile:**|**/sf**|{string}|データベースではなく、ソース ファイルを操作のソースとして使用するように指定します。 このパラメーターを使用した場合、他のソース パラメーターは無効になります。 |
 |**/SourcePassword:**|**/sp**|{string}|SQL Server 認証シナリオでは、ソース データベースへのアクセスに使用するパスワードを定義します。 |
 |**/SourceServerName:**|**/ssn**|{string}|ソース データベースをホストしているサーバーの名前を定義します。 |
 |**/SourceTimeout:**|**/st**|{int}|ソース データベースへの接続を確立する際のタイムアウトを秒単位で指定します。 |
 |**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|SSL を使用してソース データベースへの接続を暗号化し、証明書チェーンを検証せずに信頼を確認するかどうかを指定します。 |
 |**/SourceUser:**|**/su**|{string}|SQL Server 認証シナリオでは、ソース データベースへのアクセスに使用する SQL Server ユーザーを定義します。 |
-|**/ターゲット接続文字列:**|**/tcs**|{string}|ターゲット データベースの有効な SQL Server または Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのターゲット パラメーターとも同時には使用できません。 |
+|**/TargetConnectionString:**|**/tcs**|{string}|ターゲット データベースの有効な SQL Server または Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのターゲット パラメーターとも同時には使用できません。 |
 |**/TargetDatabaseName:**|**/tdn**|{string}|sqlpackage.exe の動作のターゲットとなるデータベースの名前のオーバーライドを指定します。 |
 |**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|ターゲット データベース接続に SQL 暗号化を使用するかどうかを指定します。 |
 |**/TargetFile:**|**/tf**|{string}|データベースの代わりにアクションのターゲットとして使用するターゲット ファイル (つまり、.dacpac ファイル) を指定します。 このパラメーターを使用した場合、他のターゲット パラメーターは無効になります。 このパラメーターは、データベース ターゲットのみをサポートするアクションの無効にされます。|
@@ -351,7 +352,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 
 ## <a name="properties-specific-to-the-deployreport-action"></a>DeployReport アクションに固有のプロパティ
 
-|プロパティ|ReplTest1|[説明]|
+|プロパティ|[値]|[説明]|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。|
@@ -361,11 +362,11 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|変更を配置する前にデータベースをバックアップします。|
 |**/p:**|BlockOnPossibleDataLoss (ブール値は ' True') を =|公開操作によるデータ損失の可能性がある場合に、公開を終了するかどうかを指定します。|
 |**/p:**|BlockWhenDriftDetected (ブール値は ' True') を =|スキーマがその登録と一致しないか、スキーマが登録されていないデータベースの更新をブロックするかどうかを指定します。 |
-|**/p:**|CommandTimeout = (INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。 |
+|**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。 |
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|生成された公開スクリプト内で SETVAR 変数の宣言をコメント アウトする必要があるかどうかを指定します。 このようなコメント アウトが必要になるのは、SQLCMD.EXE などのツールを使用して、公開時にコマンド ラインで値を指定する予定がある場合などです。 |
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|この設定では、配置の際にデータベースの照合順序をどのように処理するかを指定します。既定では、ソースで指定されている照合順序と異なる場合にターゲット データベースの照合順序が更新されます。 このオプションを設定した場合、ターゲット データベース (またはサーバー) の照合順序が使用されます。 |
 |**/p:**|CreateNewDatabase=(BOOLEAN)|データベースへの公開時に、ターゲット データベースを更新するか、削除して再作成するかを指定します。 |
-|**/p:**|DatabaseEdition = ({Basic&#124;標準&#124;Premium&#124;既定} '既定')|Azure SQL Database のエディションを定義します。 |
+|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database のエディションを定義します。 |
 |**/p:**|DatabaseMaximumSize=(INT32)|Azure SQL Database の最大サイズを GB 単位で定義します。|
 |**/p:**|DatabaseServiceObjective=(STRING)|Azure SQL Database のパフォーマンス レベル ("P0" や "S1" など) を定義します。 |
 |**/p:**|DeployDatabaseInSingleUserMode=(BOOLEAN)|true の場合、データベースは配置前にシングル ユーザー モードに設定されます。 |
@@ -375,7 +376,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|DoNotDropObjectType=(STRING)|DropObjectsNotInSource が true のときに削除しないオブジェクトの種類。 有効なオブジェクトの種類名は、Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers です。 |
 |**/p:**|DoNotDropObjectTypes=(STRING)|DropObjectsNotInSource が true の場合に削除されない、オブジェクトの種類のセミコロン区切りリスト。 有効なオブジェクトの種類名は、Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers です。|
 |**/p:**|DropConstraintsNotInSource (ブール値は ' True') を =|データベースへの公開時に、ターゲット データベースのデータベース スナップショット (.dacpac) ファイルに存在しない制約を削除するかどうかを指定します。|
-|**/p:**|DropDmlTriggersNotInSource (ブール値は ' True') を =|データベースへの公開時に、ターゲット データベースのデータベース スナップショット (.dacpac) ファイルに存在しない DML トリガーを削除するかどうかを指定します。|
+|**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|データベースへの公開時に、ターゲット データベースのデータベース スナップショット (.dacpac) ファイルに存在しない DML トリガーを削除するかどうかを指定します。|
 |**/p:**|DropExtendedPropertiesNotInSource (ブール値は ' True') を =|データベースに公開するとき、データベース スナップショット (.dacpac) ファイルに存在しない拡張プロパティをターゲット データベースから削除するかどうかを指定します。|
 |**/p:**|DropIndexesNotInSource (ブール値は ' True') を =|データベースへの公開時に、ターゲット データベースのデータベース スナップショット (.dacpac) ファイルに存在しないインデックスを削除するかどうかを指定します。|
 |**/p:**|DropObjectsNotInSource=(BOOLEAN)|データベースへの公開時に、データベース スナップショット (.dacpac) ファイルに存在しないオブジェクトをターゲット データベースから削除するかどうかを指定します。 この値は、DropExtendedProperties よりも優先されます。|
@@ -401,7 +402,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|IgnoreFilegroupPlacement (ブール値は ' True') を =|データベースに公開するとき、FILEGROUP 内のオブジェクトの位置の相違を無視するか、更新するかを指定します。| 
 |**/p:**|IgnoreFileSize (ブール値は ' True') を =|データベースに公開するとき、ファイル サイズの相違を無視するか、または警告を発するかを指定します。 |
 |**/p:**|IgnoreFillFactor (ブール値は ' True') を =|データベースに公開するとき、インデックス格納の FILL FACTOR の相違を無視するか、または警告を発するかを指定します。|
-|**/p:**|IgnoreFullTextCatalogFilePath (ブール値は ' True') を =|データベースに公開するとき、フルテキスト カタログのファイル パスの相違を無視するか、または警告を発するかを指定します。| 
+|**/p:**|IgnoreFullTextCatalogFilePath=(BOOLEAN 'True')|データベースに公開するとき、フルテキスト カタログのファイル パスの相違を無視するか、または警告を発するかを指定します。| 
 |**/p:**|IgnoreIdentitySeed=(BOOLEAN)|データベースに公開するとき、Identity 列のシードの相違を無視するか、更新するかを指定します。 |
 |**/p:**|IgnoreIncrement=(BOOLEAN)|データベースに公開するとき、Identity 列のインクリメントの相違を無視するか、更新するかを指定します。 |
 |**/p:**|IgnoreIndexOptions=(BOOLEAN)|データベースに公開するとき、インデックス オプションの相違を無視するか、更新するかを指定します。 |
@@ -434,12 +435,12 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|ScriptDeployStateChecks=(BOOLEAN)|データベース名とサーバー名がデータベース プロジェクトで指定された名前と一致していることを確認するステートメントを公開スクリプトで生成するかどうかを指定します。|
 |**/p:**|ScriptFileSize=(BOOLEAN)|ファイル グループにファイルを追加するときに、サイズを指定するかどうかを制御します。 |
 |**/p:**|ScriptNewConstraintValidation (ブール値は ' True') を =|At 末尾のすべての発行、制約を check 制約または公開の途中で外部キー制約によるデータ エラーを回避する 1 つのセットとして検証されます。 False に設定すると、対応するデータを確認せずに制約が公開されます。|
-|**/p:**|ScriptRefreshModule (ブール値は ' True') を =|公開スクリプトの末尾に更新ステートメントを追加します。|
+|**/p:**|ScriptRefreshModule=(BOOLEAN 'True')|公開スクリプトの末尾に更新ステートメントを追加します。|
 |**/p:**|ストレージ = ({ファイル&#124;メモリ})|データベース モデルの構築時に要素をどのように格納するかを指定します。 パフォーマンス上の理由から、既定値は InMemory です。 大規模なデータベースの場合は、File バックアップ ストレージが必要です。|
 |**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|検証を警告として扱う公開中に発生したエラーかどうかを指定します。 配置計画をターゲット データベースに対して実行する前に、生成された配置計画がチェックされます。 計画の検証では、変更を加えるためには取り除く必要のある、ターゲットのみのオブジェクト (インデックスなど) の損失などの問題が検出されます。 また、複合プロジェクトへの参照のためテーブルやビューなどに依存関係が存在するのに、その関係がターゲット データベースに存在しない状況も検出されます。 最初のエラーで停止公開操作ではなく、すべての問題の完全な一覧を取得します。 これを行うことができます。 |
 |**/p:**|UnmodifiableObjectWarnings (ブール値は ' True') を =|修正できない相違がオブジェクトで見つかった場合 (たとえば、同じファイルのファイル サイズまたはファイル パスが異なる場合) に警告を生成するかどうかを指定します。| 
 |**/p:**|VerifyCollationCompatibility (ブール値は ' True') を =|照合順序の互換性を検証するかどうかを指定します。| 
-|**/p:**|VerifyDeployment (ブール値は ' True') を =|公開前にチェックを実行して、正常な公開をブロックする可能性のある問題が存在する場合は公開操作を停止するかどうかを指定します。 たとえば、ターゲット データベースの外部キーがデータベース プロジェクトに存在せず、公開時にエラーが発生する場合は、公開操作が停止することがあります。 |
+|**/p:**|VerifyDeployment=(BOOLEAN 'True')|公開前にチェックを実行して、正常な公開をブロックする可能性のある問題が存在する場合は公開操作を停止するかどうかを指定します。 たとえば、ターゲット データベースの外部キーがデータベース プロジェクトに存在せず、公開時にエラーが発生する場合は、公開操作が停止することがあります。 |
   
 ## <a name="driftreport-parameters"></a>DriftReport のパラメーター
 
@@ -447,7 +448,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
   
 ### <a name="help-for-driftreport-action"></a>DriftReport アクションのヘルプ
 
-|パラメーター|短い形式|ReplTest1|[説明]|
+|パラメーター|短い形式|[値]|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
@@ -457,7 +458,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/OutputPath:**|**/op**|{string}|出力ファイルが生成されるファイル パスを指定します。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。|
-|**/ターゲット接続文字列:**|**/tcs**|{string}|ターゲット データベースの有効な SQL Server または Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのターゲット パラメーターとも同時には使用できません。 |
+|**/TargetConnectionString:**|**/tcs**|{string}|ターゲット データベースの有効な SQL Server または Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのターゲット パラメーターとも同時には使用できません。 |
 |**/TargetDatabaseName:**|**/tdn**|{string}|sqlpackage.exe の動作のターゲットとなるデータベースの名前のオーバーライドを指定します。 |
 |**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|ターゲット データベース接続に SQL 暗号化を使用するかどうかを指定します。 |
 |**/TargetPassword:**|**/tp**|{string}|SQL Server 認証シナリオでは、ターゲット データベースへのアクセスに使用するパスワードを定義します。 |
@@ -474,30 +475,30 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
   
 ### <a name="help-for-the-script-action"></a>スクリプト アクションのヘルプ
 
-|パラメーター|短い形式|ReplTest1|[説明]|
+|パラメーター|短い形式|[値]|[説明]|
 |---|---|---|---|
 |**/Action:**|**/a**|[スクリプト]|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
 |**/DeployScriptPath:**|**/dsp**|{string}|配置スクリプトを出力する省略可能なファイル パスを指定します。 Azure の配置では、master データベースを作成または変更するための TSQL コマンドがある場合、スクリプトは同じパスに書き込まれますが、出力ファイル名として "Filename_Master.sql" が使用されます。 |
-|**/DeployReportPath:**|**/drp**|{string}|展開レポートの xml ファイルを出力する省略可能なファイル パスを指定します。 |
+|**/DeployReportPath:**|**/drp**|{string}|配置レポートの xml ファイルを出力する省略可能なファイル パスを指定します。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |
 |**/MaxParallelism:**|**/mp**|{int}| 1 つのデータベースに対して実行される同時実行操作の並列処理の次数を指定します。 既定値は 8 です。 |
 |**/OutputPath:**|**/op**|{string}|出力ファイルが生成されるファイル パスを指定します。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe が既存のファイルを上書きするかどうかを指定します。 False を指定すると、既存のファイルが検出された場合に sqlpackage.exe の操作が中止します。 既定値は True です。 |
 |**/Profile:**|**/pr**|{string}|DAC 公開プロファイルのファイル パスを指定します。 出力の生成時に使用するプロパティと変数のコレクションをプロファイルで定義します。|
-|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe/Action: 発行/ですか。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|操作固有のプロパティの名前と値のペア ({PropertyName}={Value}) を指定します。 操作のプロパティ名については、特定の操作のヘルプを参照してください。 例: sqlpackage.exe /Action:Publish /?。|
 |**/Quiet:**|**/q**|{True&#124;False}|詳細なフィードバックを非表示にするかどうかを指定します。 既定値は False です。|
 |**/SourceConnectionString:**|**に**|{string}|ソース データベースの有効な SQL Server または SQL Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのソース パラメーターとも同時には使用できません。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|ソース データベースの名前を定義します。 |
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|ソース データベース接続に SQL 暗号化を使用するかどうかを指定します。 |
-|**/Sourcefile:**|**/sf**|{string}|ソース ファイルを操作のソースとして使用するように指定します。 このパラメーターを使用した場合、他のソース パラメーターは無効になります。 |
+|**/SourceFile:**|**/sf**|{string}|ソース ファイルを操作のソースとして使用するように指定します。 このパラメーターを使用した場合、他のソース パラメーターは無効になります。 |
 |**/SourcePassword:**|**/sp**|{string}|SQL Server 認証シナリオでは、ソース データベースへのアクセスに使用するパスワードを定義します。 |
 |**/SourceServerName:**|**/ssn**|{string}|ソース データベースをホストしているサーバーの名前を定義します。 |
 |**/SourceTimeout:**|**/st**|{int}|ソース データベースへの接続を確立する際のタイムアウトを秒単位で指定します。 |
 |**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|SSL を使用してソース データベースへの接続を暗号化し、証明書チェーンを検証せずに信頼を確認するかどうかを指定します。 |
 |**/SourceUser:**|**/su**|{string}|SQL Server 認証シナリオでは、ソース データベースへのアクセスに使用する SQL Server ユーザーを定義します。 |
-|**/ターゲット接続文字列:**|**/tcs**|{string}|ターゲット データベースの有効な SQL Server または Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのターゲット パラメーターとも同時には使用できません。 |
+|**/TargetConnectionString:**|**/tcs**|{string}|ターゲット データベースの有効な SQL Server または Azure 接続文字列を指定します。 このパラメーターを指定する場合、他のどのターゲット パラメーターとも同時には使用できません。 |
 |**/TargetDatabaseName:**|**/tdn**|{string}|sqlpackage.exe の動作のターゲットとなるデータベースの名前のオーバーライドを指定します。 |
 |**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|ターゲット データベース接続に SQL 暗号化を使用するかどうかを指定します。 |
 |**/TargetFile:**|**/tf**|{string}| データベースの代わりにアクションのターゲットとして使用するターゲット ファイル (つまり、.dacpac ファイル) を指定します。 このパラメーターを使用した場合、他のターゲット パラメーターは無効になります。 このパラメーターは、データベース ターゲットのみをサポートするアクションの無効にされます。|
@@ -512,7 +513,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 
 ### <a name="properties-specific-to-the-script-action"></a>スクリプト アクションに固有のプロパティ
 
-|プロパティ|ReplTest1|[説明]|
+|プロパティ|[値]|[説明]|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|配置コントリビューターに追加の配置コントリビューター引数を指定します。 複数の値を指定する場合は、セミコロンで区切ります。
 |**/p:**|AdditionalDeploymentContributors=(STRING)|dacpac を配置するときに実行する必要がある、追加の配置コントリビューターを指定します。 このとき、セミコロン区切りで、完全修飾ビルド コントリビューター名または ID を指定する必要があります。
@@ -522,11 +523,11 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|変更を配置する前にデータベースをバックアップします。
 |**/p:**|BlockOnPossibleDataLoss (ブール値は ' True') を =|公開操作によるデータ損失の可能性がある場合に、公開を終了するかどうかを指定します。
 |**/p:**|BlockWhenDriftDetected (ブール値は ' True') を =|スキーマがその登録と一致しないか、スキーマが登録されていないデータベースの更新をブロックするかどうかを指定します。
-|**/p:**|CommandTimeout = (INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。
+|**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|生成された公開スクリプト内で SETVAR 変数の宣言をコメント アウトする必要があるかどうかを指定します。 このようなコメント アウトが必要になるのは、SQLCMD.EXE などのツールを使用して、公開時にコマンド ラインで値を指定する予定がある場合などです。
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|この設定では、配置の際にデータベースの照合順序をどのように処理するかを指定します。既定では、ソースで指定されている照合順序と異なる場合にターゲット データベースの照合順序が更新されます。 このオプションを設定した場合、ターゲット データベース (またはサーバー) の照合順序が使用されます。|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|データベースへの公開時に、ターゲット データベースを更新するか、削除して再作成するかを指定します。
-|**/p:**|DatabaseEdition = ({Basic&#124;標準&#124;Premium&#124;既定} '既定')|Azure SQL Database のエディションを定義します。
+|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database のエディションを定義します。
 |**/p:**|DatabaseMaximumSize=(INT32)|Azure SQL Database の最大サイズを GB 単位で定義します。
 |**/p:**|DatabaseServiceObjective=(STRING)|Azure SQL Database のパフォーマンス レベル ("P0" や "S1" など) を定義します。
 |**/p:**|DeployDatabaseInSingleUserMode=(BOOLEAN)|true の場合、データベースは配置前にシングル ユーザー モードに設定されます。
@@ -536,7 +537,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|DoNotDropObjectType=(STRING)|DropObjectsNotInSource が true のときに削除しないオブジェクトの種類。 有効なオブジェクトの種類名は、Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers です。
 |**/p:**|DoNotDropObjectTypes=(STRING)|DropObjectsNotInSource が true の場合に削除されない、オブジェクトの種類のセミコロン区切りリスト。 有効なオブジェクトの種類名は、Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers です。
 |**/p:**|DropConstraintsNotInSource (ブール値は ' True') を =|データベースに公開するとき、データベース スナップショット (.dacpac) ファイルに存在しない制約をターゲット データベースから削除するかどうかを指定します。|
-|**/p:**|DropDmlTriggersNotInSource (ブール値は ' True') を =|データベースに公開するとき、データベース スナップショット (.dacpac) ファイルに存在しない DML triggers が、ターゲット データベースから削除されるかどうかを指定します。|
+|**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|データベースに公開するとき、データベース スナップショット (.dacpac) ファイルに存在しない DML triggers が、ターゲット データベースから削除されるかどうかを指定します。|
 |**/p:**|DropExtendedPropertiesNotInSource (ブール値は ' True') を =|データベースに公開するとき、データベース スナップショット (.dacpac) ファイルに存在しない拡張プロパティをターゲット データベースから削除するかどうかを指定します。|
 |**/p:**|DropIndexesNotInSource (ブール値は ' True') を =|データベースに公開するとき、データベース スナップショット (.dacpac) ファイルに存在しないインデックスをターゲット データベースから削除するかどうかを指定します。|
 |**/p:**|DropObjectsNotInSource=(BOOLEAN)|データベースに公開するとき、データベース スナップショット (.dacpac) ファイルに存在しないオブジェクトをターゲット データベースから削除するかどうかを指定します。 この値は、DropExtendedProperties よりも優先されます。|
@@ -562,7 +563,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|IgnoreFilegroupPlacement (ブール値は ' True') を =|データベースに公開するとき、FILEGROUP 内のオブジェクトの位置の相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreFileSize (ブール値は ' True') を =|データベースに公開するとき、ファイル サイズの相違を無視するか、または警告を発するかを指定します。|
 |**/p:**|IgnoreFillFactor (ブール値は ' True') を =|公開時に、インデックス格納の FILL FACTOR の相違を無視するか、または警告を発するかを指定します。|
-|**/p:**|IgnoreFullTextCatalogFilePath (ブール値は ' True') を =|データベースに公開するとき、フルテキスト カタログのファイル パスの相違を無視するか、または警告を発するかを指定します。|
+|**/p:**|IgnoreFullTextCatalogFilePath=(BOOLEAN 'True')|データベースに公開するとき、フルテキスト カタログのファイル パスの相違を無視するか、または警告を発するかを指定します。|
 |**/p:**|IgnoreIdentitySeed=(BOOLEAN)|データベースに公開するとき、Identity 列のシードの相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreIncrement=(BOOLEAN)|データベースに公開するとき、Identity 列のインクリメントの相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreIndexOptions=(BOOLEAN)|データベースに公開するとき、インデックス オプションの相違を無視するか、更新するかを指定します。|
@@ -595,10 +596,10 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|ScriptDeployStateChecks=(BOOLEAN)|データベース名とサーバー名がデータベース プロジェクトで指定された名前と一致していることを確認するステートメントを公開スクリプトで生成するかどうかを指定します。|
 |**/p:**|ScriptFileSize=(BOOLEAN)|ファイル グループにファイルを追加するときに、サイズを指定するかどうかを制御します。|
 |**/p:**|ScriptNewConstraintValidation (ブール値は ' True') を =|At 末尾のすべての発行、制約を check 制約または公開の途中で外部キー制約によるデータ エラーを回避する 1 つのセットとして検証されます。 False に設定すると、対応するデータを確認せずに制約が公開されます。|
-|**/p:**|ScriptRefreshModule (ブール値は ' True') を =|公開スクリプトの末尾に更新ステートメントを追加します。|
+|**/p:**|ScriptRefreshModule=(BOOLEAN 'True')|公開スクリプトの末尾に更新ステートメントを追加します。|
 |**/p:**|ストレージ = ({ファイル&#124;メモリ})|データベース モデルの構築時に要素をどのように格納するかを指定します。 パフォーマンス上の理由から、既定値は InMemory です。 大規模なデータベースの場合は、File バックアップ ストレージが必要です。|
 |**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|検証を警告として扱う公開中に発生したエラーかどうかを指定します。 配置計画をターゲット データベースに対して実行する前に、生成された配置計画がチェックされます。 計画の検証では、変更を加えるためには取り除く必要のある、ターゲットのみのオブジェクト (インデックスなど) の損失などの問題が検出されます。 また、複合プロジェクトへの参照のためテーブルやビューなどに依存関係が存在するのに、その関係がターゲット データベースに存在しない状況も検出されます。 最初のエラーで停止公開操作ではなく、すべての問題の完全な一覧を取得します。 これを行うことができます。|
 |**/p:**|UnmodifiableObjectWarnings (ブール値は ' True') を =|修正できない相違がオブジェクトで見つかった場合 (たとえば、同じファイルのファイル サイズまたはファイル パスが異なる場合) に警告を生成するかどうかを指定します。|
 |**/p:**|VerifyCollationCompatibility (ブール値は ' True') を =|照合順序の互換性を検証するかどうかを指定します。
-|**/p:**|VerifyDeployment (ブール値は ' True') を =|公開前にチェックを実行して、正常な公開をブロックする可能性のある問題が存在する場合は公開操作を停止するかどうかを指定します。 たとえば、ターゲット データベースの外部キーがデータベース プロジェクトに存在せず、公開時にエラーが発生する場合は、公開操作が停止することがあります。|
+|**/p:**|VerifyDeployment=(BOOLEAN 'True')|公開前にチェックを実行して、正常な公開をブロックする可能性のある問題が存在する場合は公開操作を停止するかどうかを指定します。 たとえば、ターゲット データベースの外部キーがデータベース プロジェクトに存在せず、公開時にエラーが発生する場合は、公開操作が停止することがあります。|
   

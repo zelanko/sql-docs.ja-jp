@@ -123,7 +123,7 @@ ms.locfileid: "54298699"
 ####  <a name="Permissions"></a> Permissions  
  サービスを開始、停止、一時停止、再開、または再起動できるのは、既定ではローカル管理者グループのメンバーだけです。 管理者以外のユーザーがサービスを管理できるようにする方法については、「 [[HOWTO] Windows Server 2003 でサービスを管理する権利をユーザーに付与する](https://support.microsoft.com/kb/325349)」をご覧ください (Windows の他のバージョンでも処理は同じです)。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] SHUTDOWN [!INCLUDE[tsql](../../includes/tsql-md.md)]**コマンドを使用して** を停止するには、 **sysadmin** 固定サーバー ロールまたは **serveradmin** 固定サーバー ロールのメンバーシップが必要です。この権限を譲渡することはできません。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]の **SHUTDOWN** コマンドを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] を停止するには、 **sysadmin** 固定サーバー ロールまたは **serveradmin** 固定サーバー ロールのメンバーシップが必要です。この権限を譲渡することはできません。    
   
 ##  <a name="SSCMProcedure"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの使用  
   
