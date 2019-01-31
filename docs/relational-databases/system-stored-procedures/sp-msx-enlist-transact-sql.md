@@ -48,7 +48,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
  マルチサーバー管理 (マスター) サーバーの名前です。 *msx_server*は**sysname**、既定値はありません。  
   
  [  **@location =**] **'***場所***'**  
- 追加する対象サーバーの場所です。 *場所*は**nvarchar (100)**、既定値は NULL です。  
+ 追加するターゲット サーバーの場所です。 *場所*は**nvarchar (100)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

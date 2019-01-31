@@ -41,7 +41,7 @@ public void setServerName(java.lang.String serverName)
  サーバー名を含む**文字列**です。  
   
 ## <a name="remarks"></a>Remarks  
- サーバー名は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している、対象のコンピューターのホスト名です。 serverName プロパティが設定されていない場合、[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md) は既定値の null が返されます。  
+ サーバー名は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している、ターゲット コンピューターのホスト名です。 serverName プロパティが設定されていない場合、[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md) は既定値の null が返されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

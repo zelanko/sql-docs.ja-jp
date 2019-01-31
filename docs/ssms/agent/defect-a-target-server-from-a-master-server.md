@@ -1,5 +1,5 @@
 ---
-title: マスター サーバーからの対象サーバーの参加の解除 | Microsoft Docs
+title: マスター サーバーからのターゲット サーバーの参加の解除 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51703530"
 ---
-# <a name="defect-a-target-server-from-a-master-server"></a>Defect a Target Server from a Master Server
+# <a name="defect-a-target-server-from-a-master-server"></a>マスター サーバーからのターゲット サーバーの参加の解除
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクト (SMO) を使用して、マスター サーバーから対象サーバーの参加を解除する方法について説明します。 この手順は対象サーバーから実行します。  
+このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクト (SMO) を使用して、マスター サーバーからターゲット サーバーの参加を解除する方法について説明します。 この手順はターゲット サーバーから実行します。  
   
 **このトピックの内容**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51703530"
   
 ## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
-#### <a name="to-defect-a-target-server-from-a-master-server"></a>マスター サーバーから対象サーバーの参加を解除するには  
+#### <a name="to-defect-a-target-server-from-a-master-server"></a>マスター サーバーからターゲット サーバーの参加を解除するには  
   
 1.  **オブジェクト エクスプローラー**で、対象サーバーとして構成するサーバーを展開します。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "51703530"
   
 ## <a name="TsqlProcedure"></a>Transact-SQL の使用  
   
-#### <a name="to-defect-a-target-server-from-a-master-server"></a>マスター サーバーから対象サーバーの参加を解除するには  
+#### <a name="to-defect-a-target-server-from-a-master-server"></a>マスター サーバーからターゲット サーバーの参加を解除するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde_md.md)]に接続します。  
   

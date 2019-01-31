@@ -1,5 +1,5 @@
 ---
-title: 対象サーバーの場所を指定する | Microsoft Docs
+title: ターゲット サーバーの場所を指定する | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -28,7 +28,7 @@ ms.locfileid: "51696221"
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でマルチサーバー管理の構成で対象サーバーの場所を指定する方法について説明します。  
+このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のマルチサーバー管理の構成でターゲット サーバーの場所を指定する方法について説明します。  
   
 **このトピックの内容**  
   
@@ -56,19 +56,19 @@ ms.locfileid: "51696221"
   
 ## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
-#### <a name="to-specify-a-target-servers-location"></a>対象サーバーの場所を指定するには  
+#### <a name="to-specify-a-target-servers-location"></a>ターゲット サーバーの場所を指定するには  
   
 1.  **オブジェクト エクスプローラー**で、対象サーバーの場所として指定するマスター サーバーをプラス記号をクリックして展開します。  
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[対象サーバーの管理]** を選択します。  
   
-3.  対象サーバーを右クリックし、 **[プロパティ]** をクリックします。  
+3.  ターゲット サーバーを右クリックし、**[プロパティ]** をクリックします。  
   
 4.  **[場所]** ボックスにサーバーの場所を入力し、 **[OK]** をクリックします。  
   
 ## <a name="TsqlProcedure"></a>Transact-SQL の使用  
   
-#### <a name="to-specify-a-target-servers-location"></a>対象サーバーの場所を指定するには  
+#### <a name="to-specify-a-target-servers-location"></a>ターゲット サーバーの場所を指定するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
   

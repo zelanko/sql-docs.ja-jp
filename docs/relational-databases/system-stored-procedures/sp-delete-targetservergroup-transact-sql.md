@@ -28,7 +28,7 @@ ms.locfileid: "47833480"
 # <a name="spdeletetargetservergroup-transact-sql"></a>sp_delete_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定した対象サーバー グループを削除します。  
+  指定したターゲット サーバー グループを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sp_delete_targetservergroup [ @name = ] 'name'
   
 ## <a name="arguments"></a>引数  
  [ **@name=** ] **'***name***'**  
- 削除する対象サーバー グループの名前を指定します。 *名前*は**sysname**、既定値はありません。  
+ 削除するターゲット サーバー グループの名前。 *名前*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

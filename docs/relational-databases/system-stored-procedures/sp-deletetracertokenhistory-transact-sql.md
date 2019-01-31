@@ -16,12 +16,12 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70853b86d60eab82feb1fe12b03fabbd61dafb6e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f8f1a91210cbd263a9225cef54bcf27a81bf2bf4
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211921"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428599"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,24 +42,27 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=** ] **'***パブリケーション***'**  
+ [ **@publication=** ] **'***publication***'**  
  トレーサー トークンが挿入されたパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@tracer_id=** ] *tracer_id*  
+ [ **@tracer_id=** ] *tracer_id*  
  削除するトレーサー トークンの ID です。 *tracer_id*は**int**既定値は NULL です。 場合**null**パブリケーションに属するすべてのトレーサー トークンが削除されます。  
   
- [  **@cutoff_date=** ] *cutoff_date*  
+ [ **@cutoff_date=** ] *cutoff_date*  
  終了日を指定します。それ以前にパブリケーションに挿入されたすべてのトレーサー トークンが削除されます。 *cutoff_date*は datetime で、既定値は NULL です。  
   
- [  **@publisher=** ] **'***パブリッシャー***'**  
+ [ **@publisher=** ] **'***publisher***'**  
  パブリッシャーの名前。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]
->  このパラメーターは、に対してのみ指定する必要があります以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  このパラメーターは、に対してのみ指定する必要があります以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーまたはディストリビューターからストアド プロシージャを実行する場合。  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
+ [ **@publisher_db=** ] **'***publisher_db***'**  
  パブリケーション データベースの名前です。 *publisher_db*は**sysname**既定値は NULL です。 ストアド プロシージャがパブリッシャーで実行される場合、このパラメーターは無視されます。  
   
+> [!NOTE]
+>  ディストリビューターからストアド プロシージャを実行するときに、このパラメーターを指定する必要があります。  
+
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   

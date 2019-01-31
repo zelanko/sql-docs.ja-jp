@@ -27,7 +27,7 @@ ms.locfileid: "47735580"
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このページを使用すると、対象サーバーに対するダウンロード命令を指定できます。  
+このページを使用すると、ターゲット サーバーに対するダウンロード命令を指定できます。  
   
 ## <a name="options"></a>[変数]  
 **[命令の種類]**  
@@ -37,7 +37,7 @@ ms.locfileid: "47735580"
 ダウンロード命令の説明を表示します。  
   
 **[ポーリング間隔]**  
-対象サーバーに対するポーリングの間隔を設定します。 **[ポーリング間隔の設定]** 命令に対してのみ適用されます。  
+ターゲット サーバーに対するポーリングの間隔を設定します。 **[ポーリング間隔の設定]** 命令に対してのみ適用されます。  
   
 **[すべての対象サーバー]**  
 このオプションをクリックすると、ダウンロード命令がすべての対象サーバーに送信されます。  
@@ -46,16 +46,16 @@ ms.locfileid: "47735580"
 このオプションをクリックすると、ダウンロード命令が、選択された対象サーバーに送信されます。  
   
 **Select**  
-対象サーバーでダウンロード命令を受け取るよう指定します。  
+ターゲット サーバーでダウンロード命令を受け取るよう指定します。  
   
 **[対象サーバー]**  
-対象サーバーの名前を表示します。  
+ターゲット サーバーの名前を表示します。  
   
 **[ローカル時刻]**  
-対象サーバーのローカル タイム ゾーンにおける日付と時刻を表示します。  
+ターゲット サーバーのローカル タイム ゾーンにおける日付と時刻を表示します。  
   
 **[ポーリング間隔]**  
-対象サーバーに対するポーリングの間隔を表示します。  
+ターゲット サーバーに対するポーリングの間隔を表示します。  
   
 ## <a name="see-also"></a>参照  
 [エンタープライズ全体の管理の自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)  

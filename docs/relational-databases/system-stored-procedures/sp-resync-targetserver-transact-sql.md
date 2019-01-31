@@ -28,7 +28,7 @@ ms.locfileid: "47856980"
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定された対象サーバー内のマルチサーバー ジョブをすべて再同期化します。  
+  指定されたターゲット サーバー内のマルチサーバー ジョブをすべて再同期します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +57,7 @@ sp_resync_targetserver
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、対象サーバー `SEATTLE1` を再同期化します。  
+ 次の例では、`SEATTLE1` ターゲット サーバーを再同期します。  
   
 ```  
 USE msdb ;  

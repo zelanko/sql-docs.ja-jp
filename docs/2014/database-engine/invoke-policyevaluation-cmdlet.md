@@ -28,7 +28,7 @@ ms.locfileid: "48072842"
   **Invoke-PolicyEvaluation** は、SQL Server オブジェクトの対象セットが 1 つまたは複数のポリシーベースの管理ポリシーに指定された条件に準拠しているかどうかを報告する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コマンドレットです。  
   
 ## <a name="using-invoke-policyevaluation"></a>Invoke-PolicyEvaluation の使用  
- **Invoke-PolicyEvaluation** は、対象セットと呼ばれる SQL Server オブジェクトのセットに対し、1 つまたは複数のポリシーを評価します。 対象オブジェクトのセットは、対象サーバーから取得されます。 それぞれのポリシーにより、対象オブジェクトに許可される状態を示す条件が定義されます。 たとえば、 **Trustworthy Database** ポリシーは、Trustworthy データベース プロパティを OFF に設定する必要があることを表します。  
+ **Invoke-PolicyEvaluation** は、対象セットと呼ばれる SQL Server オブジェクトのセットに対し、1 つまたは複数のポリシーを評価します。 対象オブジェクトのセットは、ターゲット サーバーから取得されます。 それぞれのポリシーにより、対象オブジェクトに許可される状態を示す条件が定義されます。 たとえば、 **Trustworthy Database** ポリシーは、Trustworthy データベース プロパティを OFF に設定する必要があることを表します。  
   
  **-AdHocPolicyEvaluationMode** パラメーターは、実行するアクションを指定します。  
   
@@ -93,7 +93,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
  **-TargetObjects** または **-TargetExpression**のどちらか一方だけを指定します。  
   
- 次の例では、Sfc.SqlStoreConnection オブジェクトを使用して、対象サーバーを指定します。  
+ 次の例では、Sfc.SqlStoreConnection オブジェクトを使用して、ターゲット サーバーを指定します。  
   
 ```  
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  

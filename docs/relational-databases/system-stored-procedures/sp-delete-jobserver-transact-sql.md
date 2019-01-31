@@ -28,7 +28,7 @@ ms.locfileid: "47729726"
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定した対象サーバーを削除します。  
+  指定したターゲット サーバーを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,16 +42,16 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 ## <a name="arguments"></a>引数  
  [ **@job_id=** ] *job_id*  
- 指定した対象サーバーを削除するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+ 指定したターゲット サーバーを削除するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
  [ **@job_name=** ] **'***job_name***'**  
- 指定した対象サーバーを削除するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
+ 指定したターゲット サーバーを削除するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要があります。 両方を指定することはできません。  
   
  [ **@server_name=** ] **'***server***'**  
- 指定したジョブから削除する対象サーバーの名前を指定します。 *server*は**nvarchar (30)**、既定値はありません。 *server*できる **(LOCAL)** または対象リモート サーバーの名前。  
+ 指定したジョブから削除するターゲット サーバーの名前を指定します。 *server*は**nvarchar (30)**、既定値はありません。 *server*できる **(LOCAL)** または対象リモート サーバーの名前。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

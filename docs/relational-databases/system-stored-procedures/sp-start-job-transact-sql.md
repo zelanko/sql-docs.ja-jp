@@ -56,7 +56,7 @@ sp_start_job
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@server_name=** ] **'***server_name***'**  
- ジョブを開始する対象サーバーを指定します。 *server_name*は**nvarchar (128)**、既定値は NULL です。 *server_name*ジョブが現在対象となる対象のサーバーのいずれかを指定する必要があります。  
+ ジョブを開始するターゲット サーバーを指定します。 *server_name*は**nvarchar (128)**、既定値は NULL です。 *server_name*ジョブが現在対象となる対象のサーバーのいずれかを指定する必要があります。  
   
  [ **@step_name=** ] **'***step_name***'**  
  ジョブの実行を開始するステップの名前を指定します。 ローカル ジョブにのみ適用されます。 *step_name*は**sysname**、既定値は NULL  

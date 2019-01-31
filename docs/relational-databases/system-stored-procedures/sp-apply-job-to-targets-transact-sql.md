@@ -28,7 +28,7 @@ ms.locfileid: "52537829"
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  1 つ以上の対象サーバー、または 1 つ以上の対象サーバー グループに属する複数の対象サーバーにジョブを適用します。  
+  1 つ以上のターゲット サーバー、または 1 つ以上のターゲット サーバー グループに属する複数のターゲット サーバーにジョブを適用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,22 +44,22 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>引数  
  [ **@job_id =**] *job_id*  
- 指定した対象サーバーまたは対象サーバー グループに適用するジョブの、ジョブ識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+ 指定したターゲット サーバーまたはターゲット サーバー グループに適用するジョブの、ジョブ識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
  [  **@job_name =**] **'**_job_name_**'**  
- 指定した対象サーバーまたは対象サーバー グループに適用するジョブの名前を指定します *job_name*は**sysname**、既定値は NULL です。  
+ 指定したターゲット サーバーまたはターゲット サーバー グループに適用するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
  [  **@target_server_groups =**] **'**_target_server_groups_**'**  
- 指定したジョブを適用する対象サーバー グループを、コンマ区切りのリストで指定します。 *target_server_groups*は**nvarchar (2048)**、既定値は NULL です。  
+ 指定したジョブを適用するターゲット サーバー グループを、コンマ区切りのリストで指定します。 *target_server_groups*は**nvarchar (2048)**、既定値は NULL です。  
   
  [  **@target_servers=** ] **'**_target_servers_**'**  
  指定したジョブを適用する対象サーバーを、コンマ区切りのリストで指定します *target_servers*は**nvarchar (2048)**、既定値は NULL です。  
   
  [  **@operation=** ] **'**_操作_**'**  
- 指定したジョブを、指定した対象サーバーまたは対象サーバー グループに対して適用するか削除するかを指定します。 *操作*は**varchar (7)**、既定値は APPLY です。 有効な操作は**適用**と**削除**します。  
+ 指定されたジョブを指定したターゲット サーバーまたはターゲット サーバー グループに適用または削除する必要があるかどうか。 *操作*は**varchar (7)**、既定値は APPLY です。 有効な操作は**適用**と**削除**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

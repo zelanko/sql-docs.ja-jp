@@ -28,7 +28,7 @@ ms.locfileid: "53374749"
  Windows 認証を使用します。  
   
  **このユーザー名とパスワードを使用して、**  
- 特定のユーザー名とパスワードを指定します。 埋め込みデータ ソースの場合、レポート サーバー プロジェクトを対象サーバーにパブリッシュするときに、データベース用の保存された資格情報としてユーザー名とパスワードが保存されます。 ユーザー名とパスワードを Windows 資格情報として使用する場合は、対象サーバーにパブリッシュされた共有データ ソースのプロパティを変更できます。 詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?linkid=121312)の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ドキュメントの「[共有データ ソースを作成、削除、または変更する (レポート マネージャー)](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)」を参照してください。  
+ 特定のユーザー名とパスワードを指定します。 埋め込みデータ ソースの場合、レポート サーバー プロジェクトをターゲット サーバーにパブリッシュするときに、データベース用の保存された資格情報としてユーザー名とパスワードが保存されます。 ユーザー名とパスワードを Windows 資格情報として使用する場合は、ターゲット サーバーにパブリッシュされた共有データ ソースのプロパティを変更できます。 詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?linkid=121312)の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ドキュメントの「[共有データ ソースを作成、削除、または変更する (レポート マネージャー)](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)」を参照してください。  
   
  **ユーザー名**  
  データ ソースへのログオンに使用するユーザー名を入力します。  

@@ -1,5 +1,5 @@
 ---
-title: マスター サーバーへの対象サーバーの参加 | Microsoft Docs
+title: マスター サーバーへのターゲット サーバーの参加 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,7 +23,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52786214"
 ---
-# <a name="enlist-a-target-server-to-a-master-server"></a>マスター サーバーへの対象サーバーの参加
+# <a name="enlist-a-target-server-to-a-master-server"></a>マスター サーバーへのターゲット サーバーの参加
   このトピックでは、マルチサーバー管理構成に対象サーバーを参加させる方法について説明します。 この手順はマスター サーバーから実行します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクト (SMO) を使用します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス用に使用される Windows アカウントがマルチサーバー環境に与える影響については、「 [マルチサーバー環境の作成](create-a-multiserver-environment.md)」を参照してください。  
@@ -42,17 +42,17 @@ ms.locfileid: "52786214"
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### <a name="to-enlist-a-target-server"></a>対象サーバーを参加させるには  
+#### <a name="to-enlist-a-target-server"></a>ターゲット サーバーを参加させるには  
   
 1.  **オブジェクト エクスプローラー**で、マスター サーバーとして構成するサーバーを展開します。  
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして **[対象サーバーの追加]** をクリックします。  
   
-3.  対象サーバー設定ウィザードを実行し、指示に従って操作します。  
+3.  ターゲット サーバー設定ウィザードを実行し、指示に従って操作します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### <a name="to-enlist-a-target-server"></a>対象サーバーを参加させるには  
+#### <a name="to-enlist-a-target-server"></a>ターゲット サーバーを参加させるには  
   
 1.  `sp_msx_enlist` ストアド プロシージャを使用します。  詳細については、次を参照してください[sp_msx_enlist &#40;TRANSACT-SQL。&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   

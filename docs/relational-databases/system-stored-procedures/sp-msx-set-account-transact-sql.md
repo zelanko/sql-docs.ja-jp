@@ -28,7 +28,7 @@ ms.locfileid: "47627940"
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  対象サーバーに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター サーバーのアカウント名とパスワードを設定します。  
+  ターゲット サーバーに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター サーバーのアカウント名とパスワードを設定します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
  [なし] :  
   
 ## <a name="remarks"></a>コメント  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を使用して、ターゲット サーバーはマスター サーバーにログインを使用してユーザー名とパスワード情報を格納します。 このプロシージャでは、対象サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがマスター サーバーへのログインで使用する資格情報を設定します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を使用して、ターゲット サーバーはマスター サーバーにログインを使用してユーザー名とパスワード情報を格納します。 このプロシージャでは、ターゲット サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがマスター サーバーへのログインで使用する資格情報を設定します。  
   
  既存の資格情報を指定する必要があります。 資格情報の作成の詳細については、次を参照してください。 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)します。  
   

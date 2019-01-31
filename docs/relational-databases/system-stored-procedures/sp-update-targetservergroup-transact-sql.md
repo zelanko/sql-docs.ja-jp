@@ -28,7 +28,7 @@ ms.locfileid: "47788090"
 # <a name="spupdatetargetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定した対象サーバー グループの名前を変更します。  
+  指定したターゲット サーバー グループの名前を変更します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,10 +43,10 @@ sp_update_targetservergroup
   
 ## <a name="arguments"></a>引数  
  [ **@name =**] **'***current_name***'**  
- 対象サーバー グループの名前を指定します。 *current_name*は**sysname**、既定値はありません。  
+ ターゲット サーバー グループの名前を指定します。 *current_name*は**sysname**、既定値はありません。  
   
  [ **@new_name =**] **'***new_name***'**  
- 対象サーバー グループの新しい名前を指定します。 *新しい名前*は**sysname**、既定値はありません。  
+ ターゲット サーバー グループの新しい名前を指定します。 *新しい名前*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -58,7 +58,7 @@ sp_update_targetservergroup
  **sp_update_targetservergroup**から実行する必要があります、 **msdb**データベース。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、対象サーバー グループ `Servers Processing Customer Orders` の名前を `Local Servers Processing Customer Orders` に変更します。  
+ 次の例では、ターゲット サーバー グループ `Servers Processing Customer Orders` の名前を `Local Servers Processing Customer Orders` に変更します。  
   
 ```  
 USE msdb ;  

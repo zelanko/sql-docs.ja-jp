@@ -28,7 +28,7 @@ ms.locfileid: "47758380"
 # <a name="spaddtargetsvrgrpmember-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定した対象サーバーを、指定した対象サーバー グループに追加します。  
+  指定したターゲット サーバーを、指定したターゲット サーバー グループに追加します。  
    
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
  なし  
   
 ## <a name="remarks"></a>コメント  
- 対象サーバーは、複数の対象サーバー グループのメンバーになることができます。  
+ ターゲット サーバーは、複数のターゲット サーバー グループのメンバーになることができます。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールは、このプロシージャを実行できます。  

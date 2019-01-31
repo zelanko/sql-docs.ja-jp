@@ -143,7 +143,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>A. DNS 名を使用して TCP/IP ルートを作成する  
- 次の例では、サービス `//Adventure-Works.com/Expenses` へのルートを作成します。 このルートでは、このサービスへのメッセージが、TCP 経由で DNS 名 `1234` に対応するホスト上のポート `www.Adventure-Works.com` に伝達されるように指定します。 対象サーバーにメッセージが到着すると、一意識別子 `D8D4D268-00A3-4C62-8F91-634B89C1E315` で指定されるブローカー インスタンスにメッセージが配信されます。  
+ 次の例では、サービス `//Adventure-Works.com/Expenses` へのルートを作成します。 このルートでは、このサービスへのメッセージが、TCP 経由で DNS 名 `1234` に対応するホスト上のポート `www.Adventure-Works.com` に伝達されるように指定します。 ターゲット サーバーにメッセージが到着すると、一意識別子 `D8D4D268-00A3-4C62-8F91-634B89C1E315` で指定されるブローカー インスタンスにメッセージが配信されます。  
   
 ```  
 CREATE ROUTE ExpenseRoute  

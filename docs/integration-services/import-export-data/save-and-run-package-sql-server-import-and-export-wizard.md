@@ -56,7 +56,7 @@ SQL Server Data Tools (SSDT) がインストールされている Visual Studio 
 > [!IMPORTANT]
 > このオプションでは、SSIS カタログ データベース (SSISDB) にパッケージを保存できません。  
 
- 対象サーバーを選択し、サーバーに接続するための資格情報を次のページ **[SSIS パッケージの保存]** で指定します。 詳細については、「 [[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)」を参照してください。  
+ ターゲット サーバーを選択し、サーバーに接続するための資格情報を次のページ **[SSIS パッケージの保存]** で指定します。 詳細については、「 [[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)」を参照してください。  
   
  **ファイル システム**  
  **.dtsx** 拡張子を持つファイルとしてパッケージを保存するには、このオプションを選択します。  

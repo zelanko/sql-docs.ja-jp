@@ -34,7 +34,7 @@ ms.locfileid: "51673391"
 SELECT * FROM DDL_DATABASE_LEVEL_EVENTS WHERE DatabaseName = 'AdventureWorks'  
 ```  
   
- このクエリから、WMI プロバイダーは、このイベント通知と同等のものを対象サーバー上に生成しようとします。  
+ このクエリから、WMI プロバイダーは、このイベント通知と同等のものをターゲット サーバー上に生成しようとします。  
   
 ```  
 USE AdventureWorks ;  

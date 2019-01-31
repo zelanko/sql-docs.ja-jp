@@ -94,12 +94,12 @@ ms.locfileid: "53360844"
 |個人用レポート|**いいえ**|**いいえ**|ネイティブ モードの "個人用レポート" 機能は個々のユーザー ログインに基づいているため、スクリプト作成サービスは、rss スクリプトに渡される **-u** パラメーターで指定されていないユーザーの "My Reports" フォルダー内のコンテンツにアクセスすることはできません。 また、「個人用レポート」機能ではありませんの[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]を SharePoint 環境には、SharePoint モードと、フォルダー内のアイテムをコピーすることはできません。 そのため、スクリプトでは、移行元ネイティブ モードのレポート サーバー上の「個人用レポート」フォルダー内にあるレポート アイテムはコピーしません。 このスクリプトで"My Reports"フォルダー内のコンテンツを移行するには、次を手順します。<br /><br /> 1) 新しいフォルダーにレポート マネージャーを作成します。 必要に応じて、各ユーザーのフォルダーやサブフォルダーを作成できます。<br /><br /> 2) いずれかの「個人用レポート」コンテンツを持つユーザーとしてログインします。<br /><br /> 3) では、レポート マネージャーで、をクリックして、**個人用レポート**フォルダー。<br /><br /> 4) をクリックして、**詳細**フォルダーのビュー。<br /><br /> 5) をコピーする各レポートを選択します。<br /><br /> 6) をクリックして**移動**レポート マネージャーのツールバー。<br /><br /> 7)、目的の転送先フォルダーを選択します。<br /><br /> 8) ユーザーごとに手順 2 ~ 7 を繰り返します。<br /><br /> 9)、スクリプトを実行します。|  
 |履歴|**いいえ**|**いいえ**||  
 |履歴の設定|はい|はい|履歴の設定は移行されますが、履歴の詳細は移行されません。|  
-|Schedules|はい|はい|スケジュールを移行するには、SQL Server エージェントが移行先サーバーで実行されている必要があります。 SQL Server エージェントが移行先で実行されていない場合は、次のエラー メッセージが表示されます。<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
+|Schedules|はい|はい|スケジュールを移行するには、SQL Server エージェントがターゲット サーバーで実行されている必要があります。 SQL Server エージェントが移行先で実行されていない場合は、次のエラー メッセージが表示されます。<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
 |ロールとシステム ポリシー|はい|はい|既定では、スクリプトはカスタム権限スキーマをサーバー間でコピーしません。 既定の動作は、項目を TRUE に親のアクセス許可の継承フラグを設定して、移行先サーバーに coied になります。 スクリプトで個々のアイテムの権限をコピーする場合は、SECURITY スイッチを使用します。<br /><br /> 移行元と移行先のサーバーが **同じレポート サーバー モードでない**場合、たとえばネイティブ モードから SharePoint モードへの移行のとき、スクリプトは、「 [Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」トピックで説明している比較に基づいて、既定のロールとグループをマップしようとします。 カスタムのロールとグループは移行先サーバーにコピーされません。<br /><br /> スクリプトが **同じモードの**サーバー間でコピーする場合は、SECURITY スイッチを使用してください。スクリプトは移行先サーバーで新しいロール (ネイティブ モード) またはグループ (SharePoint モード) を作成します。<br /><br /> ロールが移行先サーバーに既に存在する場合、スクリプトは次のような "FAILURE" メッセージを表示し、他のアイテムの移行を続行します。 スクリプトの完了後、移行先サーバー上のロールがニーズを満たすように構成されていることを確認してください。 移行中ロール:8 items found.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 詳細については、「[レポート サーバーへのユーザー アクセスを許可する &#40;レポート マネージャー&#41;](../security/grant-user-access-to-a-report-server.md)」を参照してください。<br /><br /> **注:** 移行元サーバー上に存在するユーザーが移行先サーバーに存在しない場合、スクリプトは移行先サーバーでロールの割り当てを適用することはできません。SECURITY スイッチを使用している場合でも同様です。|  
-|[共有データ ソース]|はい|はい|スクリプトは移行先サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムが移行先サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 資格情報は、データ ソースの一部としてコピー **されません** 。 コンテンツ アイテムの移行後、移行先サーバーで資格情報を更新します。|  
+|[共有データ ソース]|はい|はい|スクリプトはターゲット サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムがターゲット サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 資格情報は、データ ソースの一部としてコピー **されません** 。 コンテンツ アイテムの移行後、移行先サーバーで資格情報を更新します。|  
 |共有データセット|はい|はい||  
-|フォルダー|はい|はい|スクリプトは移行先サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムが移行先サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
-|レポート|はい|はい|スクリプトは移行先サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムが移行先サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
+|フォルダー|はい|はい|スクリプトはターゲット サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムがターゲット サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
+|レポート|はい|はい|スクリプトはターゲット サーバー上の既存のアイテムを上書きしません。 同じ名前のアイテムがターゲット サーバーに既に存在する場合は、次のようなエラー メッセージが表示されます。<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
 |パラメーター|はい|はい||  
 |サブスクリプション|はい|はい||  
 |履歴の設定|はい|はい|履歴の設定は移行されますが、履歴の詳細は移行されません。|  
@@ -248,7 +248,7 @@ ms.locfileid: "53360844"
 |**-v st**="SITE"||省略可能。 このパラメーターは SharePoint モード レポート サーバーにのみ使用されます。|  
 |**- v f**="SOURCEFOLDER"|すべての移行の場合は "/" に設定し、部分的な移行の場合は "/フォルダー/サブフォルダー" に設定します。 指定したフォルダー内のすべてのコンテンツがコピーされます。|省略可能。既定値は "/" です。|  
 |**-v ts**="TARGET_URL"|移行先 RS サーバーの URL。||  
-|**-v tu**="domain\username" **-v tp**="password"|移行先サーバーの資格情報。|省略可能。省略した場合は既定の資格情報が使用されます。 **注:** ユーザーは共有スケジュールの "作成者" およびレポート アイテムの "変更元" アカウントとして移行先サーバーで一覧表示されます。|  
+|**-v tu**="domain\username" **-v tp**="password"|ターゲット サーバーの資格情報。|省略可能。省略した場合は既定の資格情報が使用されます。 **注:** ユーザーは共有スケジュールの "作成者" およびレポート アイテムの "変更元" アカウントとして移行先サーバーで一覧表示されます。|  
 |**-v tst**="SITE"||省略可能。 このパラメーターは SharePoint モード レポート サーバーにのみ使用されます。|  
 |**-v tf** ="TARGETFOLDER"|ルート レベルに移行する場合は "/" に設定します。 既存のフォルダーにコピーする場合は "/フォルダー/サブフォルダー" に設定します。 "SOURCEFOLDER" 内のすべてのコンテンツが "TARGETFOLDER" にコピーされます。|省略可能。既定値は "/" です。|  
 |**-v security**= "True/False"|"False" に設定した場合、移行先カタログ アイテムには移行先システムの設定に従ってセキュリティ設定が継承されます。 この設定は、ネイティブ モードから SharePoint モードへなど、異なるモードのレポート サーバー間の移行にお勧めします。 "True" に設定した場合、スクリプトはセキュリティ設定を移行しようとします。|省略可能。既定値は "False" です。|  
@@ -324,7 +324,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
  このセクションは、コンテンツとポリシーが正常に移行されたことを確認するために移行先サーバーで実行する一部の手順をまとめたものです。  
   
 ### <a name="schedules"></a>Schedules  
- 移行先サーバーでスケジュールを確認するには:  
+ ターゲット サーバーでスケジュールを確認するには:  
   
  **Native Mode**  
   

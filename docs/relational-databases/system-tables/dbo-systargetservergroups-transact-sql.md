@@ -30,7 +30,7 @@ ms.locfileid: "47627505"
 # <a name="dbosystargetservergroups-transact-sql"></a>dbo.systargetservergroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マルチサーバー環境に現在参加している対象サーバー グループを記録します。  
+  マルチサーバー環境に現在参加しているターゲット サーバー グループを記録します。  
   
   
 |列名|データ型|説明|  

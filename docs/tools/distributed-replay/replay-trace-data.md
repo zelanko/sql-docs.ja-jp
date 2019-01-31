@@ -29,7 +29,7 @@ ms.locfileid: "51291460"
  トレース データは、2 つのシーケンス モード (ストレス モードまたは同期モード) のいずれかで再生できます。 既定の動作では、ストレス モードでトレース データを再生します。 イベント再生段階とシーケンス モードの詳細については、「 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)」を参照してください。  
   
 > [!NOTE]  
->  入力トレース データは、Distributed Replay と互換性があるバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でキャプチャする必要があります。 また、入力トレース データは、トレース データを再生する対象サーバーと互換性がある必要があります。 バージョンの要件の詳細については、「 [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)」を参照してください。  
+>  入力トレース データは、Distributed Replay と互換性があるバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でキャプチャする必要があります。 また、入力トレース データは、トレース データを再生するターゲット サーバーと互換性がある必要があります。 バージョンの要件の詳細については、「 [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)」を参照してください。  
   
 ### <a name="to-replay-the-trace"></a>トレースを再生するには  
   

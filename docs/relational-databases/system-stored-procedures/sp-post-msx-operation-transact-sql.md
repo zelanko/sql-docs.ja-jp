@@ -62,7 +62,7 @@ sp_post_msx_operation
  操作が適用されるジョブのジョブ識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値はありません。 **0x00**すべてのジョブを示します。 場合*オブジェクト*は**SERVER**、し*job_id*は必要ありません。  
   
  [ **@specific_target_server =**] **'***target_server***'**  
- 指定した操作を適用する対象サーバーの名前を指定します。 場合*job_id*が指定されているが、 *target_server*が指定されていない、すべてのジョブ、ジョブのサーバー操作が通知されます。 *target_server*は**nvarchar (30)**、既定値は NULL です。  
+ 指定した操作を適用するターゲット サーバーの名前を指定します。 場合*job_id*が指定されているが、 *target_server*が指定されていない、すべてのジョブ、ジョブのサーバー操作が通知されます。 *target_server*は**nvarchar (30)**、既定値は NULL です。  
   
  [ **@value =**] *value*  
  ポーリング間隔を秒数で指定します。 *value* のデータ型は **int**で、既定値は NULL です。 場合にのみ、このパラメーターを指定*操作*は**SET-POLL**します。  

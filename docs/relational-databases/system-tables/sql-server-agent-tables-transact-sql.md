@@ -87,7 +87,7 @@ ms.locfileid: "47794910"
  マルチサーバー グループに現在参加している対象サーバーを記録します。  
   
  [dbo.systargetservergroups](../../relational-databases/system-tables/dbo-systargetservergroups-transact-sql.md)  
- マルチサーバー環境に現在参加している対象サーバー グループを記録します。  
+ マルチサーバー環境に現在参加しているターゲット サーバー グループを記録します。  
   
  [dbo.systargetservers](../../relational-databases/system-tables/dbo-systargetservers-transact-sql.md)  
  マルチサーバー操作ドメインに現在参加している対象サーバーを記録します。  

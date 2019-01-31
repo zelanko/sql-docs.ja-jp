@@ -31,7 +31,7 @@ ms.locfileid: "47611080"
   
 2.  Deployment フォルダーを右クリックし、**[コピー]** をクリックします。  
   
-3.  配置先のコンピューターで、フォルダーをコピーするパブリック共有を探し、**[貼り付け]** をクリックします。  
+3.  ターゲット コンピューターで、フォルダーをコピーするパブリック共有を探し、**[貼り付け]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [手順 2: パッケージ インストール ウィザードの実行](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  

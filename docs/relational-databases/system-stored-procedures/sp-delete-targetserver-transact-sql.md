@@ -43,13 +43,13 @@ sp_delete_targetserver [ @server_name = ] 'server'
   
 ## <a name="arguments"></a>引数  
  [ **@server_name=** ] **'***server***'**  
- 利用可能なサーバーの対象から削除するサーバーの名前を指定します。 *server*は**nvarchar (30)**、既定値はありません。  
+ 利用可能なターゲット サーバーから削除するサーバーの名前を指定します。 *server*は**nvarchar (30)**、既定値はありません。  
   
  [ **@clear_downloadlist=** ] *clear_downloadlist*  
- 対象サーバーのダウンロード一覧を消去するかどうかを指定します。 *clear_downloadlist*型は、**ビット**、既定値は**1**します。 ときに*clear_downloadlist*は**1**サーバーを削除する前に、サーバーのダウンロード一覧が消去されます。 ときに*clear_downloadlist*は**0**ダウンロードの一覧は消去されません。  
+ ターゲット サーバーのダウンロード一覧を消去するかどうかを指定します。 *clear_downloadlist*型は、**ビット**、既定値は**1**します。 ときに*clear_downloadlist*は**1**サーバーを削除する前に、サーバーのダウンロード一覧が消去されます。 ときに*clear_downloadlist*は**0**ダウンロードの一覧は消去されません。  
   
  [ **@post_defection=** ] *post_defection*  
- 対象サーバーに参加解除の命令を通知するかどうかを指定します。 *post_defection*型は、**ビット**、既定値は 1 です。 ときに*post_defection*は**1**サーバーを削除する前に、ターゲット サーバーを参加解除の命令が通知されます。 ときに*post_defection*は**0**プロシージャは、ターゲット サーバーを参加解除の命令が通知されません。  
+ ターゲット サーバーに参加解除の命令を投稿するかどうかを指定します。 *post_defection*型は、**ビット**、既定値は 1 です。 ときに*post_defection*は**1**サーバーを削除する前に、ターゲット サーバーを参加解除の命令が通知されます。 ときに*post_defection*は**0**プロシージャは、ターゲット サーバーを参加解除の命令が通知されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

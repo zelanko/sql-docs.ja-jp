@@ -60,7 +60,7 @@ ms.locfileid: "53375104"
  **-s** *target_server*  
  分散ワークロードが再生される [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の対象インスタンスを指定します。 このパラメーターは、 **server_name[\instance name]** の形式で指定します。  
   
- "`localhost`" または "`.`" を対象サーバーとして使用することはできません。  
+ "`localhost`" または "`.`" をターゲット サーバーとして使用することはできません。  
   
  再生構成ファイル **の** セクションに `<Server>` 要素が指定されている場合、 `<ReplayOptions>` -s `DReplay.exe.replay.config`パラメーターは必要ありません。  
   

@@ -39,9 +39,9 @@ ms.locfileid: "47745092"
 |**operation_code**|**tinyint**|ジョブの操作コード。<br /><br /> **1**アドイン (挿入) を =<br /><br /> **2** UPD (更新) を =<br /><br /> **3** DEL (削除) を =<br /><br /> **4** = 開始<br /><br /> **5** = 停止|  
 |**object_type**|**tinyint**|オブジェクトの種類のコード。|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|オブジェクト ID 番号。|  
-|**target_server**|**sysname**|対象サーバーの名前。|  
-|**error_message**|**nvarchar(1024)**|対象サーバーが特定の行を処理しているときにエラーが発生した場合のエラー メッセージ。|  
-|**date_posted**|**datetime**|ジョブが対象サーバーに通知された日付と時刻。|  
+|**target_server**|**sysname**|ターゲット サーバーの名前。|  
+|**error_message**|**nvarchar(1024)**|ターゲット サーバーが特定の行を処理しているときにエラーが発生した場合のエラー メッセージ。|  
+|**date_posted**|**datetime**|ジョブがターゲット サーバーに通知された日付と時刻。|  
 |**date_downloaded**|**datetime**|ジョブが前回ダウンロードされた日付と時刻。|  
 |**status**|**tinyint**|ジョブのステータス。<br /><br /> **0** = 未ダウンロード<br /><br /> **1** = 正常にダウンロードされました|  
 |**deleted_object_name**|**sysname**|削除されたオブジェクトの名前。|  

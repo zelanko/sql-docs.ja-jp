@@ -60,9 +60,9 @@ sp_help_targetserver
 |**last_poll_date**|**datetime**|サーバーが最後にジョブをポーリングした日付。|  
 |**status**|**int**|指定したサーバーの状態。|  
 |**unread_instructions**|**int**|サーバーに未読の指示があるかどうか。 この列は、すべての行がダウンロードされている場合**0**します。|  
-|**local_time**|**datetime**|対象サーバーのローカル日時。これは、マスター サーバーが最後にポーリングを実行した時点の対象サーバーのローカル時間です。|  
-|**enlisted_by_nt_user**|**nvarchar(100)**|対象サーバーに参加した Microsoft Windows のユーザー。|  
-|**poll_interval**|**int**|ジョブをダウンロードし、ジョブ ステータスをアップロードするために、対象サーバーがマスター SQLServerAgent サービスをポーリングする頻度 (秒単位)。|  
+|**local_time**|**datetime**|ターゲット サーバーのローカル日時。これは、マスター サーバーが最後にポーリングを実行した時点のターゲット サーバーのローカル時間です。|  
+|**enlisted_by_nt_user**|**nvarchar(100)**|ターゲット サーバーに参加した Microsoft Windows のユーザー。|  
+|**poll_interval**|**int**|ジョブをダウンロードし、ジョブ ステータスをアップロードするために、ターゲット サーバーがマスター SQLServerAgent サービスをポーリングする頻度 (秒単位)。|  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーであることが必要です。  
@@ -80,7 +80,7 @@ EXEC dbo.sp_help_targetserver ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server"></a>B. 特定の対象サーバーの情報を一覧表示する  
+### <a name="b-listing-information-for-a-specific-target-server"></a>B. 特定のターゲット サーバーの情報を一覧表示する  
  次の例は、対象サーバーの情報を一覧表示`SEATTLE2`します。  
   
 ```  

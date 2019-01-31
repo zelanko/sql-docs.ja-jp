@@ -27,7 +27,7 @@ ms.locfileid: "52795618"
   
  既定では、マスター サーバーと対象サーバーの間の接続では、完全な SSL (Secure Sockets Layer) 暗号化と証明書の検証が有効になります。 詳しくは、「 [対象サーバーでの暗号化オプションの設定](set-encryption-options-on-target-servers.md)」をご覧ください。  
   
- 対象サーバーが多数ある場合、他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能から多くのパフォーマンス要求を受け取る実稼動サーバー上には、マスター サーバーを定義しないでください。対象サーバーのトラフィックによって実稼動サーバーのパフォーマンスが低下する可能性があります。 また、専用のマスター サーバーにイベントを転送すると、1 つのサーバーに管理を集中することができます。 詳しくは、「 [イベントの管理](manage-events.md)」をご覧ください。  
+ ターゲット サーバーが多数ある場合、他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能から多くのパフォーマンス要求を受け取る実稼働サーバー上には、マスター サーバーを定義しないでください。ターゲット サーバーのトラフィックによって実稼働サーバーのパフォーマンスが低下する可能性があります。 また、専用のマスター サーバーにイベントを転送すると、1 つのサーバーに管理を集中することができます。 詳しくは、「 [イベントの管理](manage-events.md)」をご覧ください。  
   
 > [!NOTE]  
 >  マルチサーバー ジョブの処理を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスのアカウントがマスター サーバーの **msdb** データベースの **TargetServersRole** ロールのメンバーでなければなりません。 マスター サーバー ウィザードを使用すると、登録処理の一環としてこのロールがサービス アカウントに自動的に追加されます。  
@@ -47,9 +47,9 @@ ms.locfileid: "52795618"
   
  マルチサーバー環境を作成するときは、次の点を考慮してください。  
   
--   各対象サーバーは、1 つのマスター サーバーのみに対してレポートを行います。 対象サーバーを別のマスター サーバーに参加させるには、現在のマスター サーバーからその対象サーバーの参加を解除する必要があります。  
+-   各ターゲット サーバーは、1 つのマスター サーバーのみに対してレポートを行います。 ターゲット サーバーを別のマスター サーバーに参加させるには、現在のマスター サーバーからそのターゲット サーバーの参加を解除する必要があります。  
   
--   対象サーバーの名前を変更する場合は、名前を変更する前に参加を解除し、変更を行ってからもう一度参加させる必要があります。  
+-   ターゲット サーバーの名前を変更する場合は、名前を変更する前に参加を解除し、変更を行ってから再登録する必要があります。  
   
 -   マルチサーバー構成を取り消す場合は、マスター サーバーからすべての対象サーバーの参加を解除する必要があります。  
   
@@ -61,11 +61,11 @@ ms.locfileid: "52795618"
 |説明|トピック|  
 |-----------------|-----------|  
 |マスター サーバーを作成する方法について説明します。|[マスター サーバーの作成](make-a-master-server.md)|  
-|対象サーバーを作成する方法について説明します。|[対象サーバーの作成](make-a-target-server.md)|  
-|マスター サーバーに対象サーバーを参加させる方法について説明します。|[マスター サーバーへの対象サーバーの参加](enlist-a-target-server-to-a-master-server.md)|  
-|マスター サーバーから対象サーバーの参加を解除する方法について説明します。|[マスター サーバーからの対象サーバーの参加の解除](defect-a-target-server-from-a-master-server.md)|  
+|ターゲット サーバーを作成する方法について説明します。|[対象サーバーの作成](make-a-target-server.md)|  
+|マスター サーバーにターゲット サーバーを参加させる方法について説明します。|[マスター サーバーへの対象サーバーの参加](enlist-a-target-server-to-a-master-server.md)|  
+|マスター サーバーからターゲット サーバーの参加を解除する方法について説明します。|[マスター サーバーからの対象サーバーの参加の解除](defect-a-target-server-from-a-master-server.md)|  
 |マスター サーバーから複数の対象サーバーの参加を解除する方法について説明します。|[マスター サーバーからの複数の対象サーバーの参加の解除](defect-multiple-target-servers-from-a-master-server.md)|  
-|対象サーバーの状態を確認する方法について説明します。|[sp_help_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
+|ターゲット サーバーの状態を確認する方法について説明します。|[sp_help_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## <a name="see-also"></a>参照  
  [プロキシを使用するマルチサーバー ジョブのトラブルシューティング](troubleshoot-multiserver-jobs-that-use-proxies.md)  

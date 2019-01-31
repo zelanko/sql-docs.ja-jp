@@ -28,7 +28,7 @@ ms.locfileid: "47732220"
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定したジョブを指定した対象サーバーまたは対象サーバー グループから削除します。  
+  指定したジョブを指定したターゲット サーバーまたはターゲット サーバー グループから削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,13 +44,13 @@ sp_remove_job_from_targets [ @job_id = ] job_id
   
 ## <a name="arguments"></a>引数  
  [ **@job_id =**] *job_id*  
- 指定された対象サーバーまたは対象サーバー グループから削除されるジョブのジョブ識別番号を指定します。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+ 指定されたターゲット サーバーまたはターゲット サーバー グループを削除するジョブのジョブ識別番号を指定します。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
  [ **@job_name =**] **'***job_name***'**  
- 指定された対象サーバーまたは対象サーバー グループから削除されるジョブの名前を指定します。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 *job_name*は**sysname**、既定値は NULL です。  
+ 指定したターゲット サーバーまたはターゲット サーバー グループを削除するジョブの名前を指定します。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 *job_name*は**sysname**、既定値は NULL です。  
   
  [ **@target_server_groups =**] **'***target_server_groups***'**  
- 指定したジョブの削除元である対象サーバー グループをコンマで区切って指定します。 *target_server_groups*は**nvarchar (1024)**、既定値は NULL です。  
+ 指定したジョブの削除元であるターゲット サーバー グループをコンマで区切って指定します。 *target_server_groups*は**nvarchar (1024)**、既定値は NULL です。  
   
  [ **@target_servers =**] **'***target_servers***'**  
  指定したジョブの削除元である対象サーバーをコンマで区切って指定します。 *target_servers*は**nvarchar (1024)**、既定値は NULL です。  

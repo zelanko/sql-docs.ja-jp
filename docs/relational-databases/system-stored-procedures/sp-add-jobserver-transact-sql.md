@@ -98,7 +98,7 @@ GO
  次の例には、マルチ サーバー ジョブが割り当てられます。`Weekly Sales Backups`サーバーに`SEATTLE2`します。  
   
 > [!NOTE]  
->  この例では、`Weekly Sales Backups` ジョブが既に存在し、`SEATTLE2` が現在のインスタンスに対する対象サーバーとして登録されていることを前提としています。  
+>  この例では、`Weekly Sales Backups` ジョブが既に存在し、`SEATTLE2` が現在のインスタンスに対するターゲット サーバーとして登録されていることを前提としています。  
   
 ```  
 USE msdb ;  
