@@ -1,7 +1,7 @@
 ---
 title: sys.geo_replication_links (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
-ms.date: 10/18/2016
+ms.date: 01/28/2019
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,14 +20,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6b37ca384c2d3402a3b9ec01a4b9d6ccbfb7d402
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a74e98b3ab756ae67c02fc19eca834a95723d331
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610112"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420979"
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   地理的レプリケーション パートナーでのプライマリおよびセカンダリ データベース間でのレプリケーション リンクごとに 1 行が含まれています。 このビューは、論理マスター データベースに存在します。  
@@ -38,8 +39,8 @@ ms.locfileid: "47610112"
 |start_date|**datetimeoffset**|データベースのレプリケーションが開始されたときに地域別の SQL データベース datacenter の UTC 時刻|  
 |modify_date|**datetimeoffset**|SQL データベースにデータ センター データベースの地理的レプリケーションが完了したときに地域別に UTC 時刻。 新しいデータベースは、この時点で、プライマリ データベースと同期されます。 .|  
 |link_guid|**uniqueidentifier**|地理的レプリケーション リンクの一意の ID。|  
-|partner_server|**sysname**|地理分散されるデータベースを含む論理サーバーの名前です。|  
-|partner_database|**sysname**|リンクの論理サーバー上の地理分散されるデータベースの名前。|  
+|partner_server|**sysname**|Geo レプリケートされたデータベースを含む SQL データベース サーバーの名前です。|  
+|partner_database|**sysname**|リンクされた SQL データベース サーバーを geo レプリケートされたデータベースの名前。|  
 |replication_state|**tinyint**|このデータベースには、いずれかの地理的レプリケーションの状態: です。<br /><br /> 0 = 保留中です。 アクティブなセカンダリ データベースの作成がスケジュールされているが、必要な準備手順がまだ完了していません。<br /><br /> 1 = シード処理中です。 地理的レプリケーションの対象がシード中は、2 つのデータベースがまだ同期されていません。 シードが完了するまでは、セカンダリ データベースに接続することはできません。 プライマリからセカンダリ データベースを削除すると、シード操作がキャンセルされます。<br /><br /> 2 = キャッチアップです。 セカンダリ データベースはトランザクション全体で一貫性のある状態でありが常に、プライマリ データベースと同期されています。|  
 |replication_state_desc|**nvarchar (256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |ロール (role)|**tinyint**|いずれかの地理的レプリケーション ロール:<br /><br /> 0 = プライマリです。 Database_id は、地理的レプリケーション パートナーシップのプライマリ データベースを参照します。<br /><br /> 1 = セカンダリです。  Database_id は、地理的レプリケーション パートナーシップのプライマリ データベースを参照します。|  
@@ -47,27 +48,28 @@ ms.locfileid: "47610112"
 |secondary_allow_connections|**tinyint**|いずれかのセカンダリ型。<br /><br /> 0 = いいえ。 フェールオーバーまで、セカンダリ データベースにアクセスできません。<br /><br /> 1 = 読み取り専用です。 セカンダリ データベースは ApplicationIntent でクライアント接続のみがアクセスできる = 読み取り専用です。<br /><br /> 2 = すべて。 セカンダリ データベースにはクライアントの接続にアクセスします。|  
 |secondary_allow_connections _desc|**nvarchar (256)**|いいえ<br /><br /> All<br /><br /> 読み取り専用|  
   
-## <a name="permissions"></a>アクセス許可  
- このビューはのみ利用可能、**マスター**データベース、サーバー レベル プリンシパル ログインをします。  
+## <a name="permissions"></a>アクセス許可
+
+このビューはのみ利用可能、**マスター**データベース、サーバー レベル プリンシパル ログインをします。  
   
-## <a name="example"></a>例  
- すべてのデータベースとその地理的レプリケーションのリンクを表示します。  
-  
-```  
-SELECT   
+## <a name="example"></a>例
+
+すべてのデータベースとその地理的レプリケーションのリンクを表示します。  
+
+```sql
+SELECT
      database_id  
    , start_date  
    , partner_server  
    , partner_database  
    , replication_state  
    , role_desc  
-   , secondary_allow_connections_desc   
+   , secondary_allow_connections_desc
 FROM sys.geo_replication_links;  
-```  
-  
-## <a name="see-also"></a>参照  
+```
+
+## <a name="see-also"></a>参照
+
  [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
-  
-  

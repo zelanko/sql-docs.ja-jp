@@ -1,7 +1,7 @@
 ---
 title: sys.bandwidth_usage (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 01/28/2019
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -22,21 +22,23 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 90ad88cfaae5c82b79d9da1fa7de5baa60fe46f3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 046e9e651daeb2946538ff5ae269aaad27666fd0
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403718"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421309"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **注:これにのみ適用されます[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11 します。**  
+> [!NOTE]
+> これにのみ適用されます[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.* *  
   
- 内の各データベースで使用されるネットワーク帯域幅に関する情報を返します、  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 の論理サーバー**、します。 指定のデータベースに対して返される各行は、1 時間にわたる 1 つの方向とクラスの使用状況をまとめたものです。  
+ 内の各データベースで使用されるネットワーク帯域幅に関する情報を返します、  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 データベース サーバー**、します。 指定のデータベースに対して返される各行は、1 時間にわたる 1 つの方向とクラスの使用状況をまとめたものです。  
   
- **これは非推奨で、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 論理サーバーです。**  
+ **これは非推奨で、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]します。**  
   
  **Sys.bandwidth_usage**ビューには、次の列が含まれています。  
   
@@ -49,12 +51,14 @@ ms.locfileid: "52403718"
 |**time_period**|使用状況が発生したときの時間帯とは、ピーク時または OffPeak のいずれかです。 Peak 時間帯は、サーバーが作成された領域に基づいています。 たとえば、 サーバーが "US_Northwest" リージョンで作成された場合、Peak 時間帯は太平洋標準時の午前 10:00 から 午後 6 時まで  定義されます。|  
 |**数量**|使用された帯域幅の量 (キロバイト (KB) 単位)。|  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
+
  このビューはのみ利用可能、**マスター**データベース、サーバー レベル プリンシパル ログインをします。  
   
 ## <a name="remarks"></a>コメント  
   
-### <a name="external-and-internal-classes"></a>外部クラスと内部クラス  
+### <a name="external-and-internal-classes"></a>外部クラスと内部クラス
+
  特定の時点で使用される各データベースに対して、 **sys.bandwidth_usage**ビューには、クラスと帯域幅の使用の方向を示す行が返されます。 次の例は、指定されたデータベースに対して公開される可能性があるデータを示しています。 この例では、時刻は 2012-04-21 17:00:00 になっています。これは、ピーク タイムの時間帯における発生時刻です。 データベース名は Db1 です。 この例で**sys.bandwidth_usage**受信と送信方向の外部および内部クラスでは、4 つの組み合わせをすべての行が次のように戻りました。  
   
 |time|database_name|direction|class|time_period|quantity|  
@@ -64,10 +68,9 @@ ms.locfileid: "52403718"
 |2012-04-21 17:00:00|Db1|Ingress|Internal|Peak|1052|  
 |2012-04-21 17:00:00|Db1|Egress|Internal|Peak|3525|  
   
-### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>[!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]でのデータ方向の解釈  
- [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]の場合、帯域幅の使用状況データは連続コピー リレーションシップの両側にある論理マスター データベースで確認できます。 したがって、クエリの対象となる論理サーバーを基準として、Ingress 方向と Egress 方向のインジケーターを解釈する必要があります。 たとえば、ソース サーバーからターゲット サーバーへ、1 MB のデータを転送するレプリケーション ストリームについて考えてみます。 この場合、ソース サーバー側では、送信した合計データ サイズに 1 MB が含まれます。また、ターゲット サーバー側では、受信したデータ サイズとして 1 MB が記録されます。  
+### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>[!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]でのデータ方向の解釈
+
+ [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]の場合、帯域幅の使用状況データは連続コピー リレーションシップの両側にある論理マスター データベースで確認できます。 ように、イングレスを解釈して、クエリを実行するデータベースの観点から方向インジケーターを出力します。 たとえば、ソース サーバーからターゲット サーバーへ、1 MB のデータを転送するレプリケーション ストリームについて考えてみます。 この場合、ソース サーバー側では、送信した合計データ サイズに 1 MB が含まれます。また、ターゲット サーバー側では、受信したデータ サイズとして 1 MB が記録されます。  
   
 > [!NOTE]  
->  ユーザー データ フローの方向では、ほとんどのデータ転送は、ソース サーバーからターゲット サーバーへの転送になります。 ただし、一部のデータ転送では他の方向が必要になる場合があります。  
-  
-  
+> ユーザー データ フローの方向では、ほとんどのデータ転送は、ソース サーバーからターゲット サーバーへの転送になります。 ただし、一部のデータ転送では他の方向が必要になる場合があります。  
