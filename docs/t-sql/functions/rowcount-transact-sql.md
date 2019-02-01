@@ -22,12 +22,12 @@ ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3607ad38e58c5bc1315bc8d01bd0d188d704261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f3919729fc29933d348f8ef0e10d697c5e00646
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781700"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805708"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "47781700"
   
 -   @@ROWCOUNT を 0 にリセットしますが、クライアントにはその値を返しません。  
   
- 単純な割り当てを行うステートメントの場合、@@ROWCOUNT の値は常に 1 に設定されます。 行はクライアントに送信されません。 SET @*local_variable*、RETURN、READTEXT、および SELECT GETDATE() や SELECT **'***Generic Text***'** などのクエリのない SELECT ステートメントは、これに該当します。  
+ 単純な割り当てを行うステートメントの場合、@@ROWCOUNT の値は常に 1 に設定されます。 行はクライアントに送信されません。 ステートメントの例は次のとおりです。SET @*local_variable*、RETURN、READTEXT、および SELECT GETDATE() または SELECT **'***一般的なテキスト***'** などのクエリのない SELECT ステートメント。  
   
- クエリで割り当てを行うステートメント、またはクエリ セットで RETURN を使用するステートメントは、クエリに影響を受ける行数、またはクエリで読み取られる行数を @@ROWCOUNT 値に設定します。たとえば、SELECT @*local_variable* = c1 FROM t1 のようになります。  
+ クエリ内で代入操作をするステートメントまたはクエリ内で RETURN を使用するステートメントは、クエリの影響を受ける行またはクエリに読み取られる行の数を @@ROWCOUNT 値に設定します (例: SELECT @*local_variable* = c1 FROM t1)。  
   
  データ操作言語 (DML) ステートメントは、@@ROWCOUNT 値に、クエリに影響を受ける行の数を設定し、この値をクライアントに返します。 DML ステートメントは、クライアントに行を送信しない場合もあります。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47781700"
   
  EXECUTE ステートメントは、前の @@ROWCOUNT を保存します。  
   
- USE、SET \<option>、DEALLOCATE CURSOR、CLOSE CURSOR、BEGIN TRANSACTION、COMMIT TRANSACTION などのステートメントは、ROWCOUNT 値を 0 にリセットします。  
+ USE、SET \<option>、DEALLOCATE CURSOR、CLOSE CURSOR、PRINT、RAISERROR、BEGIN TRANSACTION、COMMIT TRANSACTION などのステートメントは、ROWCOUNT 値を 0 にリセットします。  
   
  ネイティブ コンパイル ストアド プロシージャでは、直前の @@ROWCOUNT が維持されます。 ネイティブ コンパイル ストアド プロシージャ内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、@@ROWCOUNT は設定しないでください。 詳細については、次を参照してください。 [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
   

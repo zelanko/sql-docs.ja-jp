@@ -12,18 +12,43 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a3a9b85b0f125e2c0ceb4cf882bbb86a962619
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213451"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087891"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 この変更ログは、[SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) のものです。  
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
+
+
+## <a name="ssdt-for-visual-studio-2017-1590"></a>SSDT for Visual Studio 2017 (15.9.0)
+ビルド番号:14.0.16186.0  
+リリース日:2019 年 1 月 28 日
+
+### <a name="whats-new"></a>新機能
+**SSIS:**
+1. SSIS 2017 用の Power Query ソース (プレビュー) を追加します。
+2. SSIS 2012 のサポートを追加します。
+3. SSIS 2019 用の Oracle ソース/ターゲットを追加します。
+4. 以前のバージョンの SSIS から移行する際に、スクリプト タスク/コンポーネントを読み込みできないという問題を修正します。
+5. Windows 7 SP1 および Windows 8.1 でデータ ビューアーが機能しないという問題を修正します。
+6. パッケージの保存時に Visual Studio がクラッシュすることがあるという問題を修正します。 
+7. 保護レベルが EncryptSensitiveWithPassword で、ターゲット サーバーのバージョンが SQL 2017 より前である場合に、パッケージを実行できないことがあるという問題を修正します。
+8. 既定のフォントを使用した注釈が SSDT に表示されないという問題を修正します。
+9. ISDeploymentWizard では、コマンド ライン モードで SQL 認証、Azure Active Directory 統合認証、および Azure Active Directory パスワード認証をサポートします。
+
+### <a name="known-issues"></a>既知の問題:
+
+- ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
+- SSDT for Visual Studio 2017 (15.8 以降) では、Teradata のソース/変換先を含むパッケージを設計することはサポートされていません。 SSDT for Visual Studio 2017 (15.8) を使用します。
+- SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースは OData v4 をサポートしない可能性があります。
+- SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースでは Oracle への接続に ODBC を使用できない可能性があります。
+- Power Query ソースはローカライズされていません。
 
 
 ## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT for Visual Studio 2017 (15.8.2)

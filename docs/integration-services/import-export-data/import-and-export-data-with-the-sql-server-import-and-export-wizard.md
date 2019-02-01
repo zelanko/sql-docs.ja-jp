@@ -24,12 +24,12 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60d4bf5487a2d6e851103d6cfd71bfc69af9036f
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 2ad46c5419bd3fcea3741c69fab8c2fa9eec7862
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383777"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087761"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを使用してデータをインポートおよびエクスポートする
 
@@ -51,7 +51,7 @@ ms.locfileid: "49383777"
 |**エンタープライズ データベース**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、DB2、その他。|SQL Server または SQL Server Data Tools (SSDT) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続に必要なファイルをインストールします。 ただし、SSDT では、Oracle や IBM DB2 などの他のエンタープライズ データベースへの接続に必要なすべてのファイルはインストールされません。<br/><br/>エンタープライズ データベースに接続するには、通常、2 つのものが必要です。<br/><br/>1.**クライアント ソフトウェア**。 エンタープライズ データベース システム用のクライアント ソフトウェアを既にインストールしている場合、通常は接続するために必要なファイルは用意されています。 クライアント ソフトウェアをインストールしていない場合は、ライセンス コピーのインストール方法をデータベース管理者に問い合わせください。<br/><br/>2.**ドライバーまたはプロバイダー**。 Microsoft は、Oracle に接続するためのドライバーとプロバイダーをインストールします。 IBM DB2 に接続するには、Microsoft® OLEDB Provider for DB2 v5.0 for Microsoft SQL Server を [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676) から入手する必要があります。<br/><br/>詳しくは、「[SQL Server データ ソースに接続する](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)」または「[Oracle データ ソースに接続する](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。|
 |**テキスト ファイル** (フラット ファイル)|追加ファイルは必要ありません。<br/><br/>詳しくは、「[フラット ファイル データ ソースに接続する](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。|
 |**Microsoft Excel ファイルと Microsoft Access ファイル**|Microsoft Office は、Excel と Access のファイルにデータ ソースとして接続するために必要なすべてのファイルはインストールしません。 次のダウンロードを入手します - [Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)。<br/><br/>詳しくは、「[Excel データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)」または「[Access データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。|
-|**Azure データ ソース**<br/>現在 Azure BLOB ストレージのみ。|SQL Server Data Tools では、Azure BLOB Storage にデータ ソースとして接続するために必要なファイルはインストールされません。 次のダウンロードを取得してください - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)。<br/><br/>詳しくは、「[Azure Blob Storage に接続する](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)」をご覧ください。|
+|**Azure データ ソース**<br/>現在 Azure BLOB ストレージのみ。|SQL Server Data Tools では、Azure BLOB Storage にデータ ソースとして接続するために必要なファイルはインストールされません。 次のダウンロードを取得してください - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)。<br/><br/>詳細については、「[Azure Blob Storage に接続する](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)」を参照してください。|
 |**オープン ソース データベース**<br/>PostgreSQL、MySql、その他。|これらのデータ ソースに接続するには、追加ファイルをダウンロードする必要があります。<br/><br/>- **PostgreSQL** の場合は、「[PostgreSQL データ ソースに接続する](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。<br/>- **MySql** の場合は、「[MySQL データ ソースに接続する](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。|
 |**ドライバーまたはプロバイダーを入手できるその他のデータ ソース**|通常、次の種類のデータ ソースに接続するために追加ファイルをダウンロードする必要があります。<br/><br/>- **ODBC ドライバー** を使用できるソース。 詳細については、「[ODBC データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。<br/>- **.Net Framework Data Provider** を使用できるソース。<br/>- **OLE DB プロバイダー** を使用できるソース。<br/><br/>他のデータ ソースに変換元と変換先の機能を提供するサード パーティ製のコンポーネントが、SQL Server Integration Services (SSIS) 用のアドオン製品として販売されている場合があります。|
 

@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9b2d920b55e412f3b9fa119db0a7cf893659fca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8c5e406cdab8f4950a897cc66556e54a1faa53f1
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805728"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する
 
@@ -20,7 +20,7 @@ ms.locfileid: "52502818"
 
 レポート ビューアー Web パーツは、SharePoint サイト内の SQL Server Reporting Services (ネイティブ モード) レポートを参照するために使用できるカスタム Web パーツです。 この Web パーツを使用すると、レポート サーバー上のレポートを表示、移動、印刷、およびエクスポートできます。 レポート ビューアー Web パーツは、SQL Server Reporting Services レポート サーバーまたは Power BI Report Server によって処理されるレポート定義 (.rdl) ファイルに関連付けられています。 このレポート ビューアー Web パーツは、Power BI Report Server にホストされている Power BI レポートでは使用できません。
 
-SharePoint Server 2013 または SharePoint Server 2016 環境にレポート ビューアー Web パーツを追加するソリューション パッケージを手動で配置するには、次の手順に従います。 Web パーツを構成する場合、ソリューションを配置する手順を行う必要があります。
+SharePoint Server 2013、SharePoint Server 2016 または SharePoint Server 2019 環境にレポート ビューアー Web パーツを追加するソリューション パッケージを手動で配置するには、次の手順に従います。 Web パーツを構成する場合、ソリューションを配置する手順を行う必要があります。
 
 **レポート ビューアー Web パーツは、スタンドアロンのソリューション パッケージで、SQL Server Reporting Services の SharePoint 統合モードとは関連していません。**
 
@@ -32,6 +32,7 @@ SharePoint Server 2013 または SharePoint Server 2016 環境にレポート �
 >
 
 **サポートされている SharePoint Server のバージョン:**
+* SharePoint Server 2019
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -67,7 +68,7 @@ SharePoint Server 2013 または SharePoint Server 2016 環境にレポート �
     Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
-    **SharePoint 2016**
+    **SharePoint Server 2016 と 2019**
 
     ```
     Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}

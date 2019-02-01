@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 746150438e87746c6fefc81fa7c0bff354147ed6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3a24215479af1aca6e1e742d5c62ba8995aaa4a8
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205331"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087671"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server のヘルプとフィードバック
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +28,9 @@ SQL Server エンジニアリング チームは、SQL Server の [User Voice](h
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>SQL Server Management Studio について提案する
 また、SQL Server Management Studio (SSMS) チームも SQL Server の [User Voice](https://feedback.azure.com/forums/908035-sql-server) を監視しているので、報告する問題や提案がある場合には User Voice が最適です。 
+
+## <a name="i-want-to-make-a-suggestion-about-azure-data-studio"></a>Azure Data Studio に関する要望を送る
+Azure Data Studio チームは、[Azure Data Studio Github](https://github.com/microsoft/azuredatastudio/issues) の問題と機能に関する要望を細かく監視しています。 問題と機能に関する要望をここに送信してください。問題/機能がいつ修正または追加されるかを確認できます。
 
 ## <a name="i-want-to-access-the-sql-server-technical-documentation-offline"></a>SQL Server 技術ドキュメントにオフラインでアクセスする
 SQL Server のドキュメントをオフライン システムで表示するには、2 つのオプションがあります。 SQL Server 技術ドキュメントを使用中にいつでも PDF を作成できます。または、[SQL Server のオフラインのヘルプ ビューアー](sql-server-help-installation.md)を使用してオフラインのコンテンツをダウンロードできます。 
@@ -68,20 +71,21 @@ SQL Server の問題に役立つ可能性がある MSDN フォーラムが多数
 - [SQL Server Analysis Services (SSAS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlanalysisservices&filter=alltypes&sort=lastpostdesc)
 - [SQL Server データ ウェアハウス](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatawarehousing&filter=alltypes&sort=lastpostdesc)
 
-### <a name="developer-communities"></a>開発者コミュニティ
-SQL Server の問題にも役立つ開発者コミュニティがいくつかあります。 
+### <a name="social-media-and-communities"></a>ソーシャル メディアとコミュニティ
+SQL Server の問題に役立つコミュニティがいくつかあります。 
 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
-
-### <a name="social-media"></a>ソーシャル メディア
-SQL チームにもアクセスできるソーシャル メディア アウトレットがいくつかあります。 
-
 - [Reddit](https://www.reddit.com/r/SQLServer/)
+- [Twitter で #sqlhelp ハッシュタグを使用して、コミュニティからサポートを得る](https://twitter.com/hashtag/sqlhelp?src=hash) 
+
+### <a name="updates-via-twitter"></a>Twitter 経由の最新情報
+SQL Server に関する最新情報を提供するいくつかの Twitter アカウントがあります。 
+
 - [SQL Docs Twitter](https://twitter.com/sqldocs)
 - [SQL Tiger チーム Twitter](https://twitter.com/mssqltiger)
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
-- [MikeRayMSFT Twitter](https://twitter.com/mncray)
+
 
 ## <a name="i-want-to-contribute-to-sql-server-documentation"></a>SQL Server のドキュメントに投稿する
 

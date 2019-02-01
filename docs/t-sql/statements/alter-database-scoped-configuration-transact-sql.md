@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/02/2018
+ms.date: 01/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e50b19daefc7f765a4d24850c6557af419c0a345
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226599"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838122"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -73,6 +73,12 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
+    | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
 }
 ```
 
@@ -229,7 +235,31 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
 
-行モード メモリ許可フィードバックは、データベースの互換性レベル 150 以上を維持しながら、データベースまたはステートメント範囲で有効または無効にできます。 行モード メモリ許可フィードバックは、SQL Server 2019 で導入された[アダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)の一部の機能です。
+行モード メモリ許可フィードバックは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 行モード メモリ許可フィードバックは、SQL Server 2017 で導入された[アダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)の一部の機能です (行モードは SQL Server 2019 と Azure SQL Database でサポートされます)。
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
+
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+バッチ モード メモリ許可フィードバックは、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モード メモリ許可フィードバックは、SQL Server 2017 で導入された[アダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)の一部の機能です。
+
+BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
+
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+バッチ モードの適応結合は、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モードの適応結合は、SQL Server 2017 で導入された[アダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)の一部の機能です。
+
+BATCH_MODE_ON_ROWSTORE = { ON | OFF}
+
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
+
+行ストアのバッチ モードは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 行ストアのバッチ モードは、[インテリジェント クエリの処理](../../relational-databases/performance/intelligent-query-processing.md)機能ファミリの一部の機能です。
+
+DEFERRED_COMPILATION_TV = { ON | OFF}
+
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
+
+テーブル変数の遅延コンパイルは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 テーブル変数の遅延コンパイルは、[インテリジェント クエリの処理](../../relational-databases/performance/intelligent-query-processing.md)機能ファミリの一部の機能です。
 
 ## <a name="Permissions"></a> Permissions
 
