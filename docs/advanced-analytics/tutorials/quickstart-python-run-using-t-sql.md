@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0061e96168f16d8a92ed47578c32a3b16bf57306
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: fb05e3b04fe9d6f33389e249d189baa7cc093016
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241813"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513772"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>クイック スタート:SQL Server での Python スクリプトの"hello world" 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -93,9 +93,9 @@ GO
 |-------------|
 | 1 |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで、複数の単純な Python スクリプトを実行すると、入力と出力の構成について詳しく見てを実行します。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:入力と出力を処理します。](quickstart-python-run-using-t-sql.md)
+> [クイック スタート:入力と出力を処理します。](quickstart-python-inputs-and-outputs.md)

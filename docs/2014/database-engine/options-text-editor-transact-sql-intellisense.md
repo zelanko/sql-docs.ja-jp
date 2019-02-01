@@ -9,18 +9,19 @@ ms.technology:
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Advanced
+- VS.ToolsOptionsPages.Text_Editor.SQL_Server_Tools.Advanced
 dev_langs:
 - TSQL
 ms.assetid: 1855d916-5bf9-4d94-b0fb-9f9bb05ff950
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 470a1305582b578934dc117abf6592741ebf79b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5472e7d0c910c03f49425c263293fd721320eba9
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136042"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484631"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>オプション (テキスト エディター-Transact-SQL-IntelliSense)
   **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターの IntelliSense の設定を変更できます。 この設定を変更するには、**[ツール]** メニューの **[オプション]** をクリックし、**[テキスト エディター]** フォルダー、**[Transact-SQL]** フォルダーの順に展開し、**[詳細設定]** をクリックします。  
