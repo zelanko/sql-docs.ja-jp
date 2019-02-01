@@ -21,12 +21,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 316becea16562fda0e1ba05623f09018367254af
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6fd3c164b539c8c6fc2dcce24f8ea1ad479ddee6
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589296"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087691"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,6 +48,9 @@ ms.locfileid: "53589296"
   
  
 ##  <a name="Provision"></a> サーバーに証明書を提供 (インストール) するには  
+
+>[!NOTE]
+>単一サーバーに証明書を追加するには、「[証明書の管理 (SQL Server 構成マネージャー)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md)」を参照してください。
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックし、 **[名前]** ボックスに「 **MMC** 」と入力して **[OK]** をクリックします。  
   
@@ -59,7 +62,7 @@ ms.locfileid: "53589296"
   
 5.  **[証明書スナップイン]** ダイアログ ボックスで **[コンピューター アカウント]** をクリックし、 **[完了]** をクリックします。  
   
-6.   **[スタンドアロン スナップインの追加]** ダイアログ ボックスで **[閉じる]** をクリックします。  
+6.  **[スタンドアロン スナップインの追加]** ダイアログ ボックスで **[閉じる]** をクリックします。  
   
 7.  **[スナップインの追加と削除]** ダイアログ ボックスで **[OK]** をクリックします。  
   
@@ -69,6 +72,10 @@ ms.locfileid: "53589296"
   
 10. **[証明書のインポート ウィザード]** を完了して証明書をコンピューターに追加し、MMC コンソールを閉じます。 コンピューターへの証明書の追加の詳細については、Windows のマニュアルを参照してください。  
   
+## <a name="to-provision-install-a-certificate-across-multiple-servers"></a>複数のサーバーに証明書をプロビジョニング (インストール) するには
+
+複数のサーバーに証明書を追加するには、「[証明書の管理 (SQL Server 構成マネージャー)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md)」を参照してください。
+
 ##  <a name="Export"></a> サーバー証明書をエクスポートするには  
   
 1.  **[証明書]** スナップインで、 **[証明書]** / **[個人]** フォルダーで証明書を探し、 **[証明書]** を右クリックします。次に **[すべてのタスク]** をポイントし、 **[エクスポート]** をクリックします。  
@@ -89,15 +96,15 @@ ms.locfileid: "53589296"
 > [!NOTE]
 > クライアントとサーバーの間で安全な接続を確立するには、暗号化された接続を要求するようにクライアントを構成します。 詳細については、[この記事の後半で](#client-request-encrypt-connect-23h)説明します。
 
-
-
 ### <a name="wildcard-certificates"></a>ワイルドカード証明書  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、ワイルドカード証明書がサポートされます。 他のクライアントでは、ワイルドカード証明書がサポートされていない可能性があります。 詳しくは、クライアントのドキュメントをご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager を使ってワイルドカード証明書を選択することはできません。 ワイルドカード証明書を使うには、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` のレジストリ キーを編集し、**Certificate** の値に証明書の拇印を (スペースを含めずに) 入力する必要があります。  
+
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
-<a name="client-request-encrypt-connect-23h"/>
-##  <a name="ConfigureClientConnections"></a> 暗号化された接続を要求するクライアントを構成するには  
+<a name="client-request-encrypt-connect-23h"/></a>
+
+## <a name="ConfigureClientConnections"></a> 暗号化された接続を要求するクライアントを構成するには  
   
 1.  元の証明書ファイルまたはエクスポートした証明書ファイルを、クライアント コンピューターにコピーします。  
   
@@ -107,7 +114,7 @@ ms.locfileid: "53589296"
   
 4.  **[フラグ]** ページの **[プロトコルの暗号化を設定する]** ボックスで、 **[はい]** をクリックします。  
   
-##  <a name="EncryptConnection"></a> SQL Server Management Studio から接続を暗号化するには  
+## <a name="EncryptConnection"></a> SQL Server Management Studio から接続を暗号化するには  
   
 1.  オブジェクト エクスプローラー ツール バーで **[接続]** をクリックし、 **[データベース エンジン]** をクリックします。  
   

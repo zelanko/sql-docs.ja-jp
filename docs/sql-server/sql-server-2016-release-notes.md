@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7252b672eb29206bbd77cc92cdb3de68f3d6c91
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c243af9bdc0963ba83e94f8e35d90b68c5874a2c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524320"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044379"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,7 @@ ms.locfileid: "52524320"
 SQL Server 2016 SP2 のインストールでは、インストール後に再起動が必要な場合があります。 ベスト プラクティスとして、SQL Server 2016 SP2 インストール後の再起動を計画して実行することをお勧めします。
 
 SQL Server 2016 SP2 にはパフォーマンスとスケールに関連する改善が含まれています。
+
 |機能|[説明]|詳細情報|
 |   --- |   --- |   --- |
 |ディストリビューション DB のクリーンアップ プロシージャの向上 |   サイズ超過のディストリビューション データベース テーブルにより、ブロックとデッドロックの状況が発生していました。 クリーンアップ プロシージャの向上は、これらのブロックまたはデッドロックのシナリオの一部を排除することを目的としています。 |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
@@ -53,6 +54,7 @@ SQL Server 2016 SP2 にはパフォーマンスとスケールに関連する改
 |増分統計の自動更新の改善 |    特定のシナリオでは、増分統計の合計変更数が自動更新のしきい値を超え、それでいて個々のパーティションのいずれもが自動更新のしきい値を超えないようにテーブルの複数のパーティションで多数のデータ変更が行われた場合、統計更新はテーブルでより多くの変更が行われるまで遅延する場合があります。 この動作は、トレース フラグ 11024 で修正されました。   |       |
 
 SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれています。
+
 |機能 |[説明]   |詳細情報   |
 |   --- |   --- |   --- |
 |可用性グループ内のデータベースでの完全な DTC サポート    |   可用性グループの一部であるデータベースでの複数データベース間トランザクションは現在 SQL Server 2016 でサポートされていません。 SQL Server 2016 SP2 では、可用性グループ データベースでの分散トランザクションの完全なサポートを導入しています。   |       |
@@ -110,12 +112,12 @@ SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれ
 |CREATE または ALTER|ストアド プロシージャ、トリガー、ユーザー定義関数、ビューなどのオブジェクトを展開します。|[SQL Server データベース エンジンのブログ](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
 |DROP TABLE によるレプリケーションのサポート|レプリケーションに対する DROP TABLE DDL のサポートにより、レプリケーション アーティクルを削除できます。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
 |Filestream RsFx ドライバーの署名|Windows ハードウェア デベロッパー センター ダッシュボード ポータル (開発ポータル) を使って Filestream RsFx ドライバーに署名して認定することで、SQL Server 2016 SP1 Filestream RsFx ドライバーを Windows Server 2016/Windows 10 に問題なくインストールできます。|[SAP ワークロードを SQL Server に 2.5 倍の速さで移行する](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|SQL サービス アカウントに対する LPIM - プログラムでの識別|DBA は、サービスの開始時に Lock Pages in Memory (LPIM) 特権が有効になっているかどうかをプログラムで識別できます。|[開発者の選択: SQL Server の LPIM および IFI 特権をプログラムで識別する](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|SQL サービス アカウントに対する LPIM - プログラムでの識別|DBA は、サービスの開始時に Lock Pages in Memory (LPIM) 特権が有効になっているかどうかをプログラムで識別できます。|[開発者の選択:SQL Server の LPIM および IFI 特権をプログラムで識別する](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
 |変更の追跡の手動クリーンアップ|新しいストアド プロシージャは、必要に応じて変更の追跡の内部テーブルをクリーンアップします。| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
 |ローカル一時テーブルの並列 INSERT..SELECT の変更|INSERT..SELECT 操作での新しい並列 INSERT。|[SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
 |Showplan XML|クエリに対する許可の警告と最大メモリの有効化、トレース フラグの有効化、他の診断情報の表示など、診断機能の強化。 | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
 |ストレージ クラス メモリ|Windows Server 2016 でストレージ クラス メモリを使ってトランザクション処理を支援することで、トランザクションのコミット時間が桁違いに高速化します。|[SQL Server データベース エンジンのブログ](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|USE HINT|クエリ オプションを `OPTION(USE HINT('<option>'))` を使って、サポートされているクエリ レベルのヒントを使うクエリ オプティマイザーの動作を変更します。 QUERYTRACEON とは異なり、USE HINT オプションでは sysadmin 特権は必要ありません。|[開発者の選択: USE HINT クエリ ヒント](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
+|USE HINT|クエリ オプションを `OPTION(USE HINT('<option>'))` を使って、サポートされているクエリ レベルのヒントを使うクエリ オプティマイザーの動作を変更します。 QUERYTRACEON とは異なり、USE HINT オプションでは sysadmin 特権は必要ありません。|[開発者の選択:USE HINT クエリ ヒント](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
 |XEvent の追加|新しい Xevent および Perfmon 診断機能により、待機時間のトラブルシューティングが向上します。|[拡張イベント](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
 
 さらに、次の修正に注意してください。
@@ -143,7 +145,7 @@ SQL Server 2016 SP1 のインストールでは、インストール後に再起
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
 **問題およびユーザーへの影響:** SQL Server 2016 の前提条件としてインストールされる Microsoft VC++ 2013 ランタイム バイナリに影響を与える問題が見つかりました。 更新プログラムを利用してこの問題を修正できます。 VC ランタイム バイナリに対するこの更新プログラムをインストールしないと、特定のシナリオにおいて、SQL Server 2016 で安定性の問題が発生する可能性があります。 SQL Server 2016 をインストールする前に、 [KB 3164398](https://support.microsoft.com/kb/3164398)で説明されている修正プログラムがコンピューターに必要かどうかを確認してください。 修正プログラムは、[SQL Server 2016 RTM の累積的な更新プログラム パッケージ 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338) にも含まれています。 
 
-**解決方法:** 次の解決策のいずれかを使用します。
+**解決方法:** 次のいずれかのソリューションを使用します。
 
 - [KB 3138367 - 2013 の Visual C++ および Visual C++ の再頒布可能パッケージ用の更新プログラム](https://support.microsoft.com/kb/3138367)をインストールします。 KB は推奨される解決方法です。 このインストールは、SQL Server 2016 のインストールの前でも後でも実行できます。 
 
@@ -212,9 +214,9 @@ SQL Server 2016 SP1 のインストールでは、インストール後に再起
     
 -   **[オンラインまたはローカル ヘルプの選択]** オプションを使用し、[オンライン ヘルプを使用する] にヘルプを構成します。    
     
--    **[オンラインからコンテンツをインストール]** オプションを使用し、SQL Server 2014 のコンテンツをダウンロードします。    
+-   **[オンラインからコンテンツをインストール]** オプションを使用し、SQL Server 2014 のコンテンツをダウンロードします。    
 
- **F1 ヘルプ:** 仕様上、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で F1 キーを押すと、ブラウザーでオンライン バージョンの F1 ヘルプ記事が表示されます。 この問題は、ブラウザー ベースのヘルプで、ローカル ヘルプのインストールを構成した場合でも発生します。 
+ **F1 ヘルプ:** 仕様上、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で F1 キーを押すと、ブラウザーでオンライン バージョンの F1 ヘルプ記事が表示されます。 この問題は、ブラウザー ベースのヘルプで、ローカル ヘルプのインストールを構成した場合でも発生します。 
 
 **コンテンツの更新:** SQL Server Management Studio と Visual Studio では、ドキュメントの追加プロセス中に、ヘルプ ビューアーのアプリケーションが凍結 (ハング) することがあります。 この問題を解決するには、次の手順を実行します。 この問題の詳細については、「 [Visual Studio ヘルプ ビューアーがフリーズする](https://msdn.microsoft.com/library/mt654096.aspx)」を参照してください。    
     
