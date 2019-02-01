@@ -1,5 +1,5 @@
 ---
-title: ジョブのプロパティ - [新しいジョブ] - ([対象サーバー] ページ) | Microsoft Docs
+title: ジョブのプロパティ - [新しいジョブ]\([対象サーバー] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47784750"
 ---
-# <a name="job-properties---new-job-targets-page"></a>ジョブのプロパティ - [新しいジョブ] - ([対象サーバー] ページ)
+# <a name="job-properties---new-job-targets-page"></a>ジョブのプロパティ - [新しいジョブ] \([対象サーバー] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -34,7 +34,7 @@ ms.locfileid: "47784750"
 ローカル サーバー上でジョブを実行します。 対象サーバーがリストされていない場合は、これが唯一利用できるオプションです。  
   
 **[複数のサーバーを対象とする]**  
-1 つまたは複数の対象サーバー上でジョブを実行します。 このオプションを選択した場合は、ジョブを実行するサーバーを選択します。 使用できる対象サーバーの一覧が表示されます。 対象のサーバーをクリックして選択します。  
+1 つまたは複数の対象サーバー上でジョブを実行します。 このオプションを選択した場合は、ジョブを実行するサーバーを選択します。 使用できる対象サーバーの一覧が表示されます。 ターゲット サーバーをクリックして選択します。  
   
 ## <a name="see-also"></a>参照  
 [ジョブの実装](../../ssms/agent/implement-jobs.md)  

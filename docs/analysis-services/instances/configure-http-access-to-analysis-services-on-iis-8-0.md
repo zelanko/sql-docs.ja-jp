@@ -80,7 +80,7 @@ ms.locfileid: "52420653"
   
  IIS と Analysis Services の間のリモート接続では、Analysis Services OLE DB プロバイダー (MSOLAP) を、IIS を実行する Windows サーバーにインストールする必要があります。  
   
-1.   [SQL Server 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=42295)のダウンロード ページに移動します。  
+1.  [SQL Server 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=42295)のダウンロード ページに移動します。  
   
 2.  赤い [ダウンロード] ボタンをクリックします。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "52420653"
   
      ![ISAPI 拡張機能の追加確認のスクリーン ショット](../../analysis-services/instances/media/ssas-httpaccess-isapiprompt.png "ISAPI 拡張機能の追加確認のスクリーン ショット")  
   
-##  <a name="bkmk_edit"></a> 手順 4:MSMDPUMP.INI ファイルの編集による対象サーバーの設定  
+##  <a name="bkmk_edit"></a> 手順 4:MSMDPUMP.INI ファイルの編集によるターゲット サーバーの設定  
  MSMDPUMP.INI ファイルを使用して、MSMDPUMP.DLL が接続する Analysis Services インスタンスを指定します。 これには、ローカルまたはリモートの、既定のインスタンスまたは名前付きのインスタンスとしてインストールされているインスタンスを指定できます。  
   
  C:\inetpub\wwwroot\OLAP フォルダーにある msmdpump.ini ファイルを開いて、このファイルの内容を確認します。 以下のようになっています。  

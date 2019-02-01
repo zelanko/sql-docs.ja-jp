@@ -151,7 +151,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーによって変更内容が保存されます。 その後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを手動で再起動する必要があります。 業務上の要件に合った時間帯を選んで再起動することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが再起動されると、AlwaysOn が有効になり、IsHadrEnabled サーバー プロパティが 1 に設定されます。  
   
 > [!NOTE]
->  -   対象となるコンピューターに接続するには、適切なユーザー権限を持っているか、そのコンピューターに対する適切な権限が委任されている必要があります。  
+>  -   ターゲット コンピューターに接続するには、適切なユーザー権限を持っているか、そのコンピューターに対する適切な権限が委任されている必要があります。  
 > -   管理しているコンピューターの名前は、コンソール ツリーの [コンピューターの管理] の横に、かっこで囲まれて表示されます。  
   
 ### <a name="using-powershell-cmdlets-to-enable-alwayson-availability-groups"></a>PowerShell コマンドレットを使用して AlwaysOn 可用性グループを有効にする  
@@ -182,7 +182,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
 ##  <a name="BKMK_ConfigureRemoteAccess"></a> Server Core で実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート アクセスの構成  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Server Core SP1 で実行している [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] インスタンスのリモート アクセスを構成するには、以下で説明する操作を実行します。  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>のインスタンスでリモート接続を有効にする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  リモート接続を有効にするには、SQLCMD.exe をローカルで使用して、Server Core インスタンスに対して次のステートメントを実行します。  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  

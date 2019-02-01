@@ -18,7 +18,7 @@ ms.lasthandoff: 12/13/2018
 ms.locfileid: "53350820"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay のセキュリティ
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能をインストールして使用する前に、このトピックの重要なセキュリティ情報を確認する必要があります。 このトピックでは、Distributed Replay を使用する前に必要なインストール後のセキュリティ構成手順について説明します。 また、データ保護に関する重要な考慮事項や、重要な削除手順についても説明します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能をインストールして使用する前に、このトピックの重要なセキュリティ情報を確認する必要があります。 このトピックでは、Distributed Replay を使用する前に必要なインストール後のセキュリティ構成手順について説明します。 また、データ保護に関する重要な考慮事項や、重要な削除手順についても説明します。  
   
 ## <a name="user-and-service-accounts"></a>ユーザーおよびサービスのアカウント  
  次の表に、Distributed Replay に使用するアカウントを示します。 Distributed Replay をインストールした後、コントローラーおよびクライアントのサービス アカウントを実行するセキュリティ プリンシパルを割り当てる必要があります。 したがって、Distributed Replay 機能をインストールする前に、対応するドメイン ユーザー アカウントを構成することをお勧めします。  
@@ -98,7 +98,7 @@ ms.locfileid: "53350820"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client サービスを一連のコンピューターにインストールした後、それらのサービス アカウントに使用されるセキュリティ プリンシパルに、トレース ワークロードの再生対象である [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上の sysadmin サーバー ロールを付与する必要があります。 この手順は、Distributed Replay のセットアップで自動的に実行されません。  
   
 ## <a name="data-protection"></a>データ保護  
- Distributed Replay 環境では、次のユーザー アカウントに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の対象サーバー インスタンス、入力トレース データ、および結果トレース ファイルへのフル アクセスが付与されます。  
+ Distributed Replay 環境では、次のユーザー アカウントに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のターゲット サーバー インスタンス、入力トレース データ、および結果トレース ファイルへのフル アクセスが付与されます。  
   
 -   管理ツールの実行に使用される対話ユーザー アカウント。  
   

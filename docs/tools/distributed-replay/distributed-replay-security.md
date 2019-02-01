@@ -100,7 +100,7 @@ ms.locfileid: "51677751"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client サービスを一連のコンピューターにインストールした後、それらのサービス アカウントに使用されるセキュリティ プリンシパルに、トレース ワークロードの再生対象である [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上の sysadmin サーバー ロールを付与する必要があります。 この手順は、Distributed Replay のセットアップで自動的に実行されません。  
   
 ## <a name="data-protection"></a>データ保護  
- Distributed Replay 環境では、次のユーザー アカウントに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の対象サーバー インスタンス、入力トレース データ、および結果トレース ファイルへのフル アクセスが付与されます。  
+ Distributed Replay 環境では、次のユーザー アカウントに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のターゲット サーバー インスタンス、入力トレース データ、および結果トレース ファイルへのフル アクセスが付与されます。  
   
 -   管理ツールの実行に使用される対話ユーザー アカウント。  
   

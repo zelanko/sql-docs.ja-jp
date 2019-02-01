@@ -18,14 +18,14 @@ ms.lasthandoff: 12/03/2018
 ms.locfileid: "52792784"
 ---
 # <a name="prepare-the-input-trace-data"></a>入力トレース データの準備
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能を使用して分散再生を開始する前に、分散再生管理ツールから前処理段階を開始することで、入力トレース データを準備する必要があります。 前処理段階で、Distributed Replay Controller がトレース データを処理し、中間ファイルを生成します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能を使用して分散再生を開始する前に、分散再生管理ツールから前処理段階を開始することで、入力トレース データを準備する必要があります。 前処理段階で、Distributed Replay Controller がトレース データを処理し、中間ファイルを生成します。  
   
  ![分散再生の前処理段階](../../database-engine/media/preprocess.gif "分散再生の前処理段階")  
   
  前処理段階の詳細については、「 [SQL Server Distributed Replay](sql-server-distributed-replay.md)」を参照してください。  
   
 > [!NOTE]  
->  入力トレース データは、Distributed Replay と互換性があるバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でキャプチャする必要があります。 また、入力トレース データは、トレース データを再生する対象サーバーと互換性がある必要があります。 バージョンの要件の詳細については、「 [Distributed Replay Requirements](distributed-replay-requirements.md)」を参照してください。  
+>  入力トレース データは、Distributed Replay と互換性があるバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でキャプチャする必要があります。 また、入力トレース データは、トレース データを再生するターゲット サーバーと互換性がある必要があります。 バージョンの要件の詳細については、「 [Distributed Replay Requirements](distributed-replay-requirements.md)」を参照してください。  
   
 ### <a name="to-prepare-the-input-trace-data"></a>入力トレース データを準備するには  
   

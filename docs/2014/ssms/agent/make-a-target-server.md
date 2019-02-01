@@ -1,5 +1,5 @@
 ---
-title: 対象サーバーの作成 | Microsoft Docs
+title: ターゲット サーバーの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -26,8 +26,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52823666"
 ---
-# <a name="make-a-target-server"></a>対象サーバーの作成
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクト (SMO) を使用して、対象サーバーを作成する方法について説明します。  
+# <a name="make-a-target-server"></a>ターゲット サーバーの作成
+  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクト (SMO) を使用して、ターゲット サーバーを作成する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -46,30 +46,30 @@ ms.locfileid: "52823666"
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
- プロキシに関連付けられているステップを持つ分散ジョブは、対象サーバーのプロキシ アカウントのコンテキストで実行されます。 次の条件を満たしていることを確認してください。満たしていないと、プロキシに関連付けられているジョブ ステップがマスター サーバーから対象サーバーにダウンロードされません。  
+ プロキシに関連付けられているステップがある分散ジョブは、ターゲット サーバーのプロキシ アカウントのコンテキストで実行されます。 次の条件を満たしていることを確認してください。満たしていないと、プロキシに関連付けられているジョブ ステップがマスター サーバーから対象サーバーにダウンロードされません。  
   
 -   マスター サーバー レジストリのサブキー **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) が 1 (true) に設定します。 既定では、この値は 0 (false) に設定されます。  
   
--   ジョブ ステップを実行するマスター サーバー プロキシ アカウントと同じ名前を持つ対象サーバーにプロキシ アカウントが存在すること。  
+-   ジョブ ステップを実行するマスター サーバー プロキシ アカウントと同じ名前を持つターゲット サーバーにプロキシ アカウントが存在すること。  
   
- マスター サーバーから対象サーバーにプロキシ アカウントをダウンロード中に、これらのアカウントを使用するジョブ ステップが失敗した場合は、 **msdb** データベースの **sysdownloadlist** テーブルの **error_message** 列を参照して、以下のエラー メッセージの有無を確認します。  
+ マスター サーバーからターゲット サーバーにプロキシ アカウントをダウンロード中に、これらのアカウントを使用するジョブ ステップが失敗した場合は、**msdb** データベースの **sysdownloadlist** テーブルの **error_message** 列を参照して、以下のエラー メッセージの有無を確認します。  
   
--   "ジョブ ステップではプロキシ アカウントが必要ですが、対象サーバーで一致するプロキシが無効です。"  
+-   "ジョブ ステップではプロキシ アカウントが必要ですが、ターゲット サーバーで一致するプロキシが無効です。"  
   
      このエラーを解決するには、 **AllowDownloadedJobsToMatchProxyName** レジストリ サブキーを 1 に設定します。  
   
 -   "プロキシ アカウントが見つかりませんでした。"  
   
-     このエラーを解決するには、対象サーバー上にプロキシ アカウントが存在し、ジョブ ステップを実行するマスター サーバー プロキシ アカウントと同じ名前が付けられているかどうかを確認します。  
+     このエラーを解決するには、ターゲット サーバー上にプロキシ アカウントが存在し、ジョブ ステップを実行するマスター サーバー プロキシ アカウントと同じ名前が付けられているかどうかを確認します。  
   
 ####  <a name="Permissions"></a> Permissions  
  このプロシージャの実行権限は、既定では `sysadmin` 固定サーバー ロールのメンバーに与えられています。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### <a name="to-make-a-target-server"></a>対象サーバーを作成するには  
+#### <a name="to-make-a-target-server"></a>ターゲット サーバーを作成するには  
   
-1.   **オブジェクト エクスプローラー** で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[対象サーバーに設定]** をクリックします。 **対象サーバー設定ウィザード** を使用して、対象サーバーを設定します。  
   
@@ -79,16 +79,16 @@ ms.locfileid: "52823666"
      マスター サーバーに接続します。  
   
      **[このサーバーの説明]**  
-     この対象サーバーの説明を入力します。 この説明は対象サーバーからマスター サーバーにアップロードされます。  
+     このターゲット サーバーの説明を入力します。 この説明はターゲット サーバーからマスター サーバーにアップロードされます。  
   
 4.  **[マスター サーバー ログインの資格情報]** ページで、必要に応じて対象サーバーに新しいログインを作成します。  
   
      **[必要に応じて新しいログインを作成し、MSX へのアクセス権を割り当てる]**  
-     指定されたログインが存在していない場合に、新しいログインを対象サーバーに作成します。  
+     指定されたログインが存在しない場合に、新しいログインをターゲット サーバーに作成します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### <a name="to-make-a-target-server"></a>対象サーバーを作成するには  
+#### <a name="to-make-a-target-server"></a>ターゲット サーバーを作成するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   

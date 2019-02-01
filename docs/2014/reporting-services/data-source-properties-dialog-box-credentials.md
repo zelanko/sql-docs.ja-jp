@@ -29,7 +29,7 @@ ms.locfileid: "48079042"
  Windows 認証を使用します。  
   
  **このユーザー名とパスワードを使用して、**  
- 特定のユーザー名とパスワードを指定します。 共有データ ソースの場合、レポート サーバー プロジェクトを対象サーバーにパブリッシュするときに、データベース用の保存された資格情報としてユーザー名とパスワードが保存されます。 ユーザー名とパスワードを Windows 資格情報として使用する場合は、対象サーバーにパブリッシュされた共有データ ソースのプロパティを編集できます。 詳細については、「[共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)」を参照してください。  
+ 特定のユーザー名とパスワードを指定します。 共有データ ソースの場合、レポート サーバー プロジェクトをターゲット サーバーにパブリッシュするときに、データベース用の保存された資格情報としてユーザー名とパスワードが保存されます。 ユーザー名とパスワードを Windows 資格情報として使用する場合は、ターゲット サーバーにパブリッシュされた共有データ ソースのプロパティを編集できます。 詳細については、「[共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)」を参照してください。  
   
  **ユーザー名**  
  データ ソースへのログインに使用するユーザー名を入力します。  
@@ -47,7 +47,7 @@ ms.locfileid: "48079042"
  データ ソースの資格情報を指定しません。 このオプションは、データ ソースで資格情報が不要な場合、または他の方法で資格情報を渡している場合にのみ機能します。  
   
 ## <a name="see-also"></a>参照  
- [データ ソースのプロパティ] ダイアログ ボックスの [全般]](../../2014/reporting-services/data-source-properties-dialog-box-general.md)   
+ [データ ソースのプロパティ ダイアログ ボックスの [全般]](../../2014/reporting-services/data-source-properties-dialog-box-general.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services でのデータ接続、データ ソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   

@@ -21,14 +21,14 @@ ms.lasthandoff: 12/13/2018
 ms.locfileid: "53358464"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能を使用すると、将来の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のアップグレードによる影響を評価できます。 また、ハードウェアとオペレーティング システムのアップグレード、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のチューニングの影響を評価する場合にも使用できます。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能を使用すると、将来の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のアップグレードによる影響を評価できます。 また、ハードウェアとオペレーティング システムのアップグレード、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のチューニングの影響を評価する場合にも使用できます。  
   
 ## <a name="benefits-of-distributed-replay"></a>Distributed Replay の利点  
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]と同様に、Distributed Replay を使用して、アップグレードされたテスト環境に対してキャプチャしたトレースを再生できます。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]と異なるのは、Distributed Replay は 1 台のコンピューターからのワークロードの再生に限定されないことです。  
   
  Distributed Replay では、[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] よりもスケーラブルなソリューションが提供されます。 Distributed Replay を使用すると、複数のコンピューターからのワークロードを再生し、ミッションクリティカルなワークロードをより正確にシミュレートできます。  
   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能では、複数のコンピューターを使用してトレース データを再生し、ミッションクリティカルなワークロードをシミュレートできます。 Distributed Replay は、アプリケーション互換性テスト、パフォーマンス テスト、またはキャパシティ プランニングに使用できます。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能では、複数のコンピューターを使用してトレース データを再生し、ミッションクリティカルなワークロードをシミュレートできます。 Distributed Replay は、アプリケーション互換性テスト、パフォーマンス テスト、またはキャパシティ プランニングに使用できます。  
   
 ## <a name="when-to-use-distributed-replay"></a>Distributed Replay を使用する状況  
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] と Distributed Replay は、提供する機能が一部重複しています。  
@@ -53,7 +53,7 @@ ms.locfileid: "53358464"
   
 -   **Distributed Replay client**:1 つまたは複数のコンピューター (物理または仮想)、Windows サービスという名前の実行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分散再生クライアント。 分散再生クライアントは連携して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに対するワークロードをシミュレートします。 各分散再生環境には、1 つまたは複数のクライアントを置くことができます。  
   
--   **ターゲット サーバー**:インスタンス[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Distributed Replay client がトレース データを再生に使用できます。 対象サーバーはテスト環境に配置することをお勧めします。  
+-   **ターゲット サーバー**:インスタンス[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Distributed Replay client がトレース データを再生に使用できます。 ターゲット サーバーはテスト環境に配置することをお勧めします。  
   
  Distributed Replay の管理ツール、コントローラー、およびクライアントは、異なるコンピューターにインストールすることも、同じコンピューターにインストールすることもできます。 同じコンピューターで実行できる Distributed Replay Controller サービスまたは Distributed Replay Client サービスのインスタンスは 1 つだけです。  
   
