@@ -1,7 +1,7 @@
 ---
 title: sp_addrolemember (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2017
+ms.date: 01/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 610c4c6a5692496ff8bcf6bd2650557264f70862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d7b47670d56ab916a8c2f263f9ddee3dc85c0a6
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659650"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652541"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,24 +38,16 @@ ms.locfileid: "47659650"
   
 ## <a name="syntax"></a>構文  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-sp_addrolemember [ @rolename = ] 'role',  
-    [ @membername = ] 'security_account'  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-sp_addrolemember 'role', 'security_account'  
-```  
+```
+sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
+
+```    
   
 ## <a name="arguments"></a>引数  
- [ @rolename=] '*ロール*'  
+ [ @rolename= ] '*role*'  
  現在のデータベースのデータベース ロール名を指定します。 *ロール*は、 **sysname**、既定値はありません。  
   
- [ @membername=] '*これ*'  
+ [ @membername= ] '*security_account*'  
  ロールに追加するセキュリティ アカウントを指定します。 *これ*は、 **sysname**、既定値はありません。 *これ*データベース ユーザー、データベース ロール、Windows ログイン、または Windows グループにすることができます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -84,7 +76,7 @@ sp_addrolemember 'role', 'security_account'
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-adding-a-windows-login"></a>A. Windows ログインを追加する  
- 次の例では、Windows ログイン`Contoso\Mary5`を`AdventureWorks2012`ユーザーとしてデータベース`Mary5`します。 ユーザー`Mary5`に追加し、`Production`ロール。  
+ 次の例では、Windows ログイン`Contoso\Mary5`を`AdventureWorks2012`ユーザーとしてデータベース`Mary5`します。 ユーザー `Mary5` をロール `Production` に追加します。  
   
 > [!NOTE]  
 >  `Contoso\Mary5` はデータベース [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] のデータベース ユーザー `Mary5` として設定されているので、ユーザー名 `Mary5` を指定する必要があります。 `Contoso\Mary5` のログインが存在しない場合、このステートメントは失敗します。 ドメインからのログインを使用してテストしてください。  
@@ -97,16 +89,16 @@ GO
 ```  
   
 ### <a name="b-adding-a-database-user"></a>B. データベース ユーザーを追加する  
- 次の例は、データベース ユーザーを追加します。`Mary5`を、 `Production` 、現在のデータベースのデータベース ロール。  
+ 次の例では、データベース ユーザー `Mary5` を現在のデータベースのデータベース ロール `Production` に追加します。  
   
 ```  
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Windows ログインを追加する  
- 次の例では、ログイン`LoginMary`を`AdventureWorks2008R2`ユーザーとしてデータベース`UserMary`します。 ユーザー`UserMary`に追加し、`Production`ロール。  
+ 次の例では、ログイン`LoginMary`を`AdventureWorks2008R2`ユーザーとしてデータベース`UserMary`します。 ユーザー `UserMary` をロール `Production` に追加します。  
   
 > [!NOTE]  
 >  ログイン`LoginMary`はデータベース ユーザーと呼ばれます`UserMary`で、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース、ユーザー名`UserMary`指定する必要があります。 `Mary5` のログインが存在しない場合、このステートメントは失敗します。 ログインとユーザーは、通常同じ名前を指定します。 この例では、ユーザーとログインに影響を与えるアクションを区別するために別の名前を使用します。  
@@ -120,7 +112,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ```  
   
 ### <a name="d-adding-a-database-user"></a>D. データベース ユーザーを追加する  
- 次の例は、データベース ユーザーを追加します。`UserMary`を、 `Production` 、現在のデータベースのデータベース ロール。  
+ 次の例では、データベース ユーザー `UserMary` を現在のデータベースのデータベース ロール `Production` に追加します。  
   
 ```  
 EXEC sp_addrolemember 'Production', 'UserMary'  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044709"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652591"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System、スケール アウトの MPP データ ウェアハウスの新機能新機能
 新機能については最新のアプライアンスの更新プログラム Microsoft Analytics Platform System (APS) を参照してください。 アクセス ポイントは、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト オンプレミス アプライアンスです。 
@@ -28,14 +28,14 @@ ms.locfileid: "55044709"
 APS CU7.3 では、SQL クエリ オプティマイザーの共通部分式の削除によるクエリ パフォーマンスが向上します。 改善には、2 つの方法でクエリが向上します。 最初の特典を特定し、削除などの機能は、SQL のコンパイル時間を短縮式を使用します。 2 番目とさらに重要な利点は、これら冗長部分式のデータ移動操作クエリが高速化のための実行時間は除外されます。 この機能の詳細な説明を参照して[ここ](common-sub-expression-elimination.md)します。
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Informatica の場合は 10.2.0 APS Informatica コネクタの公開
-APS Informatica 10.2.0 のバージョンで動作するため、Informatica コネクタの新しいバージョンをリリースしました。 新しいコネクタをダウンロードできます[ダウンロード サイト](https://www.microsoft.com/download/details.aspx?id=57472)します。
+Informatica コネクタの新しいバージョンをリリースしました APS Informatica 10.2.0 と 10.2.0 バージョンで動作するための修正プログラムの 1。 新しいコネクタをダウンロードできます[ダウンロード サイト](https://www.microsoft.com/download/details.aspx?id=57472)します。
 
 #### <a name="supported-versions"></a>Supported Versions
 
 | APS バージョン | Informatica PowerCenter | Driver |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
-| APS 2016 およびそれ以降 | 10.2.0 | SQL Server Native Client 11.x |
+| APS 2016 およびそれ以降 | 10.2.0、10.2.0 1 の修正プログラム | SQL Server Native Client 11.x |
 
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2
