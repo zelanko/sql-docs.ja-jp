@@ -1,61 +1,200 @@
 items:
 - name: 概要
   href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
-- name: SQL Server の保護
-  href: securing-sql-server.md
-- name: 監査
-  href: ../../relational-databases/security/auditing/sql-server-audit-database-engine.md
-- name: 認証アクセス
-  href: ../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
-- name: 暗号化
-  href: ../../relational-databases/security/encryption/sql-server-encryption.md
-- name: SQL Server の知的所有権の保護
-  href: protecting-your-sql-server-intellectual-property.md
-- name: '[セキュリティ保護可能なリソース]'
-  href: securables.md
-- name: 包含データベース ユーザー - データベースの可搬性を確保する
-  href: contained-database-users-making-your-database-portable.md
-- name: 認証モードの選択
-  href: choose-an-authentication-mode.md
-- name: メタデータ表示の構成
-  href: metadata-visibility-configuration.md
-- name: セキュリティ構成
-  href: surface-area-configuration.md
-- name: SQL インジェクション
-  href: sql-injection.md
-- name: SQL 脆弱性評価
-  href: sql-vulnerability-assessment.md
-- name: SQL データの検出と分類
-  href: sql-data-discovery-and-classification.md
-- name: TRUSTWORTHY データベース プロパティ
-  href: trustworthy-database-property.md
-- name: アクセス許可
-  href: permissions-database-engine.md
-- name: 権限の階層
-  href: permissions-hierarchy-database-engine.md
-- name: '[権限] ページまたは [セキュリティ保護可能なリソース] ページ'
-  href: permissions-or-securables-page.md
-- name: パスワード ポリシー
-  href: password-policy.md
-- name: 強力なパスワード
-  href: strong-passwords.md
-- name: 行レベルのセキュリティ
-  href: row-level-security.md
-- name: 動的なデータ マスキング
-  href: dynamic-data-masking.md
-- name: 静的データ マスク
-  href: static-data-masking.md
-- name: SQL Server の証明書と非対称キー
-  href: sql-server-certificates-and-asymmetric-keys.md
+  items:
+  - name: SQL Server の保護
+    href: securing-sql-server.md
+- name: 操作方法
+  items:
+  - name: SQL Server のセキュリティ保護
+    items:
+    - name: セキュリティ構成
+      href: surface-area-configuration.md
+    - name: SQL 脆弱性評価ツール
+      href: sql-vulnerability-assessment.md
+    - name: データの検出と分類
+      href: sql-data-discovery-and-classification.md
+    - name: SQL Server コネクタのトラブルシューティング
+      href: encryption/sql-server-connector-maintenance-troubleshooting.md
+    - name: 認証アクセス
+      items:
+      - name: 有効な権限の決定
+        href: authentication-access/determining-effective-database-engine-permissions.md
+      - name: ログインを作成します
+        href: authentication-access/create-a-login.md
+      - name: データベース ユーザーの作成
+        href: authentication-access/create-a-database-user.md
+      - name: データベース スキーマの作成
+        href: authentication-access/create-a-database-schema.md
+      - name: ロールの追加
+        href: authentication-access/join-a-role.md
+      - name: プリンシパルに対する権限の許可
+        href: authentication-access/grant-a-permission-to-a-principal.md
+      - name: サーバー ロールの作成
+        href: authentication-access/create-a-server-role.md
+      - name: アプリケーション ロールの作成
+        href: authentication-access/create-an-application-role.md
+      - name: 資格情報の作成
+        href: authentication-access/create-a-credential.md
+    - name: 暗号化
+      items:
+      - name: アルゴリズムの選択
+        href: encryption/choose-an-encryption-algorithm.md
+      - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する
+        href: encryption/configure-always-encrypted-enclaves.md
+        items:
+        - name: SQL Server Management Studio での構成
+          href: encryption/configure-always-encrypted-using-sql-server-management-studio.md
+        - name: PowerShell での構成
+          href: encryption/configure-always-encrypted-using-powershell.md
+        - name: 列マスター キーの作成と保存
+          href: encryption/create-and-store-column-master-keys-always-encrypted.md
+        - name: PowerShell でのキーの構成
+          href: encryption/configure-always-encrypted-keys-using-powershell.md
+        - name: PowerShell でのキーの交換
+          href: encryption/rotate-always-encrypted-keys-using-powershell.md
+        - name: PowerShell での列の暗号化の構成
+          href: encryption/configure-column-encryption-using-powershell.md
+        - name: 機密データの移行
+          href: encryption/migrate-sensitive-data-protected-by-always-encrypted.md
+        - name: .NET Framework でのアプリケーションの開発
+          href: encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
+      - name: TDE で保護されたデータベースの移動
+        href: encryption/move-a-tde-protected-database-to-another-sql-server.md
+      - name: EKM で TDE を有効にする
+        href: encryption/enable-tde-on-sql-server-using-ekm.md
+      - name: サービス マスター キーをバックアップする
+        href: encryption/back-up-the-service-master-key.md
+      - name: サービス マスター キーを復元する
+        href: encryption/restore-the-service-master-key.md
+      - name: データベースのマスター キーを作成する
+        href: encryption/create-a-database-master-key.md
+      - name: データベースのマスター キーをバックアップする
+        href: encryption/back-up-a-database-master-key.md
+      - name: データベースのマスター キーを復元する
+        href: encryption/restore-a-database-master-key.md
+      - name: 2 台のサーバーでの同じ対称キーの作成
+        href: encryption/create-identical-symmetric-keys-on-two-servers.md
+      - name: データの列の暗号化
+        href: encryption/encrypt-a-column-of-data.md
+    - name: Azure SQL Database のセキュリティ保護
+      items:
+      - name: 暗号化を使用する SQL Server コネクタ
+        href: encryption/use-sql-server-connector-with-sql-encryption-features.md
+      - name: Bring Your Own Key
+        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
+      - name: TDE BYOK キーの交換
+        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation?toc=/docs/relational-databases/security/encryption/toc.json
+      - name: TDE の保護機能の削除
+        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
+      - name: Azure Key Vault を使用した EKM
+        href: encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+    - name: 監査
+      items:
+      - name: サーバー監査の仕様の作成
+        href: auditing/create-a-server-audit-and-server-audit-specification.md
+      - name: データベース監査の仕様の作成
+        href: auditing/create-a-server-audit-and-database-audit-specification.md
+      - name: 監査ログの表示
+        href: auditing/view-a-sql-server-audit-log.md
+      - name: Windows ログへの監査イベントの書き込み
+        href: auditing/write-sql-server-audit-events-to-the-security-log.md
+- name: 概念
+  items:
+  - name: SQL Server の知的所有権の保護
+    href: protecting-your-sql-server-intellectual-property.md
+    items:
+    - name: SQL インジェクション
+      href: sql-injection.md
+    - name: TRUSTWORTHY データベース プロパティ
+      href: trustworthy-database-property.md
+    - name: パスワード ポリシー
+      href: password-policy.md
+    - name: 強力なパスワード
+      href: strong-passwords.md
+    - name: 行レベルのセキュリティ
+      href: row-level-security.md
+    - name: 静的データ マスク
+      href: static-data-masking.md
+    - name: 証明書と非対称キー
+      href: sql-server-certificates-and-asymmetric-keys.md
+  - name: 認証アクセス
+    href: authentication-access/getting-started-with-database-engine-permissions.md
+    items:
+    - name: プリンシパル
+      href: authentication-access/principals-database-engine.md
+    - name: サーバー レベルのロール
+      href: authentication-access/server-level-roles.md
+    - name: データベース レベルのロール
+      href: authentication-access/database-level-roles.md
+    - name: アプリケーション ロール
+      href: authentication-access/application-roles.md
+    - name: '[資格情報]'
+      href: authentication-access/credentials-database-engine.md
+    - name: '[セキュリティ保護可能なリソース]'
+      href: securables.md
+    - name: 包含データベース ユーザー
+      href: contained-database-users-making-your-database-portable.md
+    - name: 認証モード
+      href: choose-an-authentication-mode.md
+    - name: メタデータの表示
+      href: metadata-visibility-configuration.md
+    - name: アクセス許可
+      href: permissions-database-engine.md
+    - name: 権限の階層
+      href: permissions-hierarchy-database-engine.md
+  - name: 暗号化
+    href: encryption/sql-server-encryption.md
+    items:
+    - name: Hierarchy
+      href: encryption/encryption-hierarchy.md
+    - name: Always Encrypted
+      href: encryption/always-encrypted-database-engine.md
+      items:
+      - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted
+        href: encryption/always-encrypted-enclaves.md
+      - name: キー管理
+        href: encryption/overview-of-key-management-for-always-encrypted.md
+      - name: Cryptography
+        href: encryption/always-encrypted-cryptography.md
+      - name: クライアント開発
+        href: encryption/always-encrypted-client-development.md
+    - name: 透過的なデータ暗号化 (TDE)
+      href: encryption/transparent-data-encryption.md
+    - name: Azure SQL Database での TDE
+      href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
+      items:
+      - name: Bring Your Own Key
+        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
+    - name: 暗号化キー
+      href: encryption/sql-server-and-database-encryption-keys-database-engine.md
+      items:
+      - name: サービス マスター キー
+        href: encryption/service-master-key.md
+      - name: 拡張キー管理 (EKM)
+        href: encryption/extensible-key-management-ekm.md
+      - name: Azure Key Vault を使用した EKM
+        href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
+    - name: 監査
+      href: auditing/sql-server-audit-database-engine.md
+      items:
+      - name: アクション グループとアクション
+        href: auditing/sql-server-audit-action-groups-and-actions.md
+      - name: 監査レコード
+        href: auditing/sql-server-audit-records.md
 - name: チュートリアル
   items:
-  - name: Always Encrypted
-    items:
-    - name: SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
-      href: tutorial-getting-started-with-always-encrypted-enclaves.md
-ms.openlocfilehash: 24922a9e1d58dcf4c82c3acecb55d7236a682e36
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+  - name: SSMS を使用したセキュリティで保護されたエンクレーブが設定された Always Encrypted
+    href: tutorial-getting-started-with-always-encrypted-enclaves.md
+- name: リファレンス
+  items:
+  - name: '[権限] ページまたは [セキュリティ保護可能なリソース] ページ'
+    href: permissions-or-securables-page.md
+  - name: Always Encrypted ウイザード
+    href: encryption/always-encrypted-wizard.md
+ms.openlocfilehash: 07f901c76f2f1c1e0570df85bf066e084390688b
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629495"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513892"
