@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e0ac541989368aeb13e5c47d4ad2a6bae8e09ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0176ff43bd56210c7a88c9140a9924e9d91b623a
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736040"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736853"
 ---
 # <a name="azure-key-vault-sample-version-600"></a>Azure Key Vault のサンプル版 6.0.0
 
@@ -229,5 +229,5 @@ public class AKV_600 {
 
 ## <a name="see-also"></a>参照
 
-[Azure Key Vault のサンプル版 7.0.0](../../connect/jdbc/azure-key-vault-sample-version-7-0-0.md)  
+[Azure Key Vault のサンプル バージョン 7.0.0](../../connect/jdbc/azure-key-vault-sample.md)
 [Azure Key Vault のサンプル版 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  

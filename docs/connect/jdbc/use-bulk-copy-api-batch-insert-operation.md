@@ -1,7 +1,7 @@
 ---
 title: MSSQL JDBC ドライバーのバッチ挿入操作の一括コピー API を使用して |Microsoft Docs
 ms.custom: ''
-ms.date: 07/27/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b205e27f24693a2dfaa6fcff2245cf45288a12b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3d3c7cc4d8dd7beeb620a211b2f41a1d1105a04
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696563"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737103"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>バッチ挿入操作に一括コピー API を使用する
 
@@ -65,7 +65,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 * 挿入 INSERT SELECT 式が含まれるクエリ (たとえば、 `INSERT INTO TABLE SELECT * FROM TABLE2`) ではサポートされていません。
 * 複数値の式を含むクエリの挿入 (たとえば、 `INSERT INTO TABLE VALUES (1, 2) (3, 4)`) はサポートされていません。
 * OPTION 句の後に、複数のテーブルと結合または後に別のクエリの挿入クエリはサポートされていません。
-* 一括コピーの API の制限により`DATETIME`、 `SMALLDATETIME`、`GEOMETRY`、および`GEOGRAPHY`データ型は、この機能はサポートされていません。
+* 一括コピーの API の制限により`MONEY`、 `SMALLMONEY`、 `DATE`、 `DATETIME`、 `DATETIMEOFFSET`、 `SMALLDATETIME`、 `TIME`、 `GEOMETRY`、および`GEOGRAPHY`データ型は現在サポートされていませんこの機能です。
 
 以外のため、クエリが失敗した場合"SQL server"関連のエラー、ドライバーは一括挿入を元のロジックにエラー メッセージとフォールバックが記録されます。
 

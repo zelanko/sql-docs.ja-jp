@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーの使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19e1d9d72cef09c12bb00a6cdcfd2db9b9818a93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e0f803b68f2ab9f62c3df27c6930da8e3a8a4a0
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845330"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737093"
 ---
 # <a name="using-the-jdbc-driver"></a>JDBC ドライバーの使用
 
@@ -27,6 +27,8 @@ ms.locfileid: "47845330"
 ## <a name="choosing-the-right-jar-file"></a>最適な JAR ファイルの選択
 
 Microsoft JDBC Driver は、下にな Java ランタイム環境 (JRE) 設定、通信で使用されるさまざまな Jar を提供します。
+
+SQL Server 用 Microsoft JDBC Driver 7.2 提供**mssql-jdbc-7.2.0.jre8.jar**と**mssql-jdbc-7.2.0.jre11.jar**クラス ライブラリ ファイル。
 
 SQL Server 用 Microsoft JDBC ドライバー 7.0 では、 **mssql-jdbc-7.0.0.jre8.jar**、および**mssql-jdbc-7.0.0.jre10.jar**クラス ライブラリ ファイル。
 
@@ -52,7 +54,29 @@ JDBC Driver 6.4 を使用して設定されて、クラスパスに含める場�
 
 JDBC ドライバーの 7.0 を使用して設定されて、クラスパスに含める場合、 **mssql-jdbc-7.0.0.jre8.jar**または**mssql-jdbc-7.0.0.jre10.jar**します。
 
+JDBC ドライバー 7.2 を使用して設定されて、クラスパスに含める場合、 **mssql-jdbc-7.2.0.jre8.jar**または**mssql-jdbc-7.2.0.jre11.jar**します。
+
 アプリケーションが、一般的なをスローする場合は、クラスパスには、適切な Jar ファイルのエントリがない、`Class not found`例外。  
+
+### <a name="for-microsoft-jdbc-driver-72"></a>Microsoft JDBC driver 7.2
+
+**Mssql-jdbc-7.2.0.jre8.jar**または**mssql-jdbc-7.2.0.jre11.jar**ファイルは、次の場所にインストールされます。
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.0.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.0.jre11.jar
+```
+
+次のスニペットは、Windows アプリケーションで使用される CLASSPATH ステートメントの例です。
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.0.jre11.jar`
+
+次のスニペットは、Unix/Linux アプリケーションで使用される CLASSPATH ステートメントの例です。
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.0.jre11.jar`
+
+CLASSPATH ステートメントに、1 つだけ含まれているかどうかを確認[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]、いずれかなど**mssql-jdbc-7.2.0.jre8.jar**または**mssql-jdbc-7.2.0.jre11.jar**します。
   
 ### <a name="for-microsoft-jdbc-driver-70"></a>Microsoft JDBC driver 7.0
 
