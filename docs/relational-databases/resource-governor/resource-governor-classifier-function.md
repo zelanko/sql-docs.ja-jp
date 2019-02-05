@@ -15,15 +15,15 @@ ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 517a07d539c8ca4d775f270cf16fdeee1967361c
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 0a17a0708621a01c101cb29786d61ceda192b5b8
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380573"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689795"
 ---
 # <a name="resource-governor-classifier-function"></a>リソース ガバナーの分類子関数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーの分類プロセスにより、着信セッションがセッションの特性に基づいてワークロード グループに割り当てられます。 分類ロジックは、分類子関数と呼ばれるユーザー定義関数を記述することで調整できます。  
   
 ## <a name="classification"></a>分類  

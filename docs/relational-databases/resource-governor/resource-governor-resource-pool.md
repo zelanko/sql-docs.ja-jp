@@ -14,15 +14,15 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 891e3e41bab9be82145bfeb905e9243b7bf31340
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 7132cacb79266243aab94e0b71e18b4a8cdcbb0f
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044349"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689925"
 ---
 # <a name="resource-governor-resource-pool"></a>リソース ガバナー リソース プール
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーのリソース プールは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスの物理リソースのサブセットを表します。 リソース ガバナーを使用すると、受信するアプリケーション要求がリソース プール内で使用できる CPU、物理 IO、およびメモリの量に制限を指定できます。 各リソース プールは、1 つまたは複数のワークロード グループを含めることができます。 セッションの起動時に、リソース ガバナーの分類子によって、セッションは指定されたワークロード グループに割り当てられます。セッションの実行にはワークロード グループに割り当てられたリソースを使用する必要があります。  
   

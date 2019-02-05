@@ -14,15 +14,15 @@ ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 3ec802a1d2dce89549c252cb6218e0bd8084be18
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 7a2a900bdb72e13d2521e8da0a3b971c2b9edccb
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380484"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689885"
 ---
 # <a name="resource-governor-workload-group"></a>リソース ガバナー ワークロード グループ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーでは、ワークロード グループは分類基準が類似しているセッション要求のコンテナーとして機能します。 ワークロードは、セッションの全体的な監視を可能にし、セッションのポリシーを定義します。 各ワークロード グループはリソース プール内に存在します。リソース プールは [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスの物理リソースのサブセットを表します。 セッションの起動時に、リソース ガバナーの分類子によって、セッションは指定されたワークロード グループに割り当てられます。セッションの実行にはワークロード グループに割り当てられたポリシーおよびリソース プールに対して定義されたリソースを使用する必要があります。  
   
 ## <a name="workload-group-concepts"></a>ワークロード グループの概念  

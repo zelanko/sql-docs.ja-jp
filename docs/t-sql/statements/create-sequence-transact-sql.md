@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226529"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428649"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ INCREMENT BY \<constant>
   
 3.  計算された値は、呼び出し元のステートメントに返される。  
   
- **キャッシュが空になった場合の CACHE オプション**  
+**キャッシュが空になった場合の CACHE オプション**  
   
  キャッシュが空になった場合は、**CACHE** オプションの次の値を生成するようにシーケンス オブジェクトが要求されるたびに、以下のプロセスが発生します。  
   
@@ -139,7 +139,7 @@ INCREMENT BY \<constant>
   
 3.  シーケンス オブジェクトのシステム テーブル行がロックされ、手順 2. (最後の値) で計算された値がシステム テーブルに書き込まれる。 キャッシュが空になったイベントが発生し、新しい永続化された値がユーザーに通知されます。  
   
- **NO CACHE オプション**  
+**NO CACHE オプション**  
   
  **NO CACHE** オプションの次の値を生成するようにシーケンス オブジェクトが要求されるたびに、以下のプロセスが発生します。  
   
