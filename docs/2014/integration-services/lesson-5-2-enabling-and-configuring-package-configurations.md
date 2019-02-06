@@ -10,12 +10,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2895a40dbff1215f5f6b2b2d873069f41b1d315
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5de90c3be35ca5989498872e4c86f4303d17ffc0
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747964"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760075"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>手順 2:有効にして、パッケージの構成
   ここでは、パッケージ構成ウィザードを使用することで、プロジェクトをパッケージ配置モデルに変換してパッケージ構成を有効にします。 ここでは、Foreach ループ コンテナーの `Directory` プロパティの構成設定が記述された XML 構成ファイルを生成します。 Directory プロパティの値は、実行時に更新できる新しいパッケージ レベル変数を使って指定します。 また、テスト時に使用する新しいサンプル データを作成します。  
@@ -43,7 +43,7 @@ ms.locfileid: "52747964"
   
 9. **プロパティ式エディター**、クリックして、**プロパティ**一覧`Directory`します。  
   
-10. **[式]** ボックスで、参照ボタン ( **[...]** ) をクリックします。  
+10. **式**ボックスで、省略記号ボタンをクリックします **([...])。**.  
   
 11. **[式ビルダー]** で [変数] フォルダーを展開し、 **User::varFolderName** 変数を **[式]** ボックスへドラッグします。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "52747964"
   
 16. **[閉じる]** をクリックします。  
   
-17. SSISTutorial.dtsConfig という名前の構成ファイルが作成されます。この構成ファイルには、変数の `alue` に対応する構成設定が含まれています。また、この変数値により、列挙子の `Directory` プロパティが設定されます。  
+17. ウィザードの構成設定を含む、SSISTutorial.dtsConfig という名前の構成ファイルを作成する、`value`順番を設定する変数の`Directory`列挙子のプロパティ。  
   
     > [!NOTE]  
     >  通常、構成ファイルにはパッケージのプロパティに関する複雑な情報が含まれていますが、このチュートリアルでは、次の構成情報のみを使用します:  
     > <Configuration ConfiguredType="Property"  
-    > Path="\Package.Variables[User::varFolderName]。[値] のプロパティ"ValueType ="String"\>  
-    >  \<ConfiguredValue >\</ConfiguredValue >  
+    > Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType="String"\>  
+    >  \<ConfiguredValue>\</ConfiguredValue>  
     > \</構成 >。  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>新しいサンプル データ フォルダーを作成して、データを取り込むには  
@@ -105,6 +105,6 @@ ms.locfileid: "52747964"
 3.  `New Sample Data`フォルダーをコピーしたファイルを貼り付けます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 3:Directory プロパティの構成値の変更](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [ステップ 3:Directory プロパティの構成値の変更](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   
