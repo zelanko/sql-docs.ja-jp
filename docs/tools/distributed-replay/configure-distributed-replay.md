@@ -30,7 +30,7 @@ ms.locfileid: "54125562"
   
 -   [再生構成ファイル](#ReplayConfig)  
   
-##  <a name="DReplayController">コントローラー構成ファイル:</a>DReplayController.config  
+##  <a name="DReplayController"></a> コントローラー構成ファイル:DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller サービスを開始すると、コントローラー構成ファイル `DReplayController.config`からログ記録レベルが読み込まれます。 このファイルは、Distributed Replay Controller サービスをインストールしたフォルダーにあります。  
   
  **\<コントローラーのインストール パス>\DReplayController.config**  
