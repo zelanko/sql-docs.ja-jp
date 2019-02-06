@@ -132,7 +132,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 テーブルは、クラスター化列ストア インデックスを既に持っている場合、既存のインデックスと同じ名前を指定できます。 または DROP EXISTING オプションを使用するには新しい名前を指定します。  
   
-ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    クラスター化列ストア インデックスとして格納するテーブルの 1 部、2 部、または 3 部構成の名前を指定します。 テーブルがヒープかクラスター化インデックスの場合、テーブルは行ストアから列ストアに変換されます。 テーブルが既に列ストアである場合、このステートメントでクラスター化列ストア インデックスが再構築されます。  
   
 #### <a name="with-options"></a>WITH オプション  
@@ -215,7 +215,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
     格納する列を指定します。 非クラスター化列ストア インデックスは、1,024年列に制限されます。  
    各列は、列ストア インデックスでサポートされているデータ型である必要があります。 サポートされるデータ型の一覧については、「[制限事項と制約事項](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)」を参照してください。  
 
-ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    インデックスが含まれているテーブルの 1 部、2 部、または 3 部構成の名前を指定します。  
 
 #### <a name="with-options"></a>WITH オプション
