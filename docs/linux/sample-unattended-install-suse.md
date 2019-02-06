@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 33341becf4c441383fda90fbc6f3d95e09a6d56d
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 91ff8bfa90fd691d4314e56e751d3ebde1079180
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160510"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759955"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>サンプル:SUSE Linux Enterprise Server の無人インストール用の SQL Server のインストール スクリプト
 
@@ -89,6 +89,7 @@ sudo ACCEPT_EULA=Y zypper install -y mssql-tools unixODBC-devel
 echo Adding SQL Server tools to your path...
 echo PATH="$PATH:/opt/mssql-tools/bin" >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
 
 # Optional SQL Server Agent installation:
 if [ ! -z $SQL_INSTALL_AGENT ]
@@ -207,7 +208,7 @@ Bash スクリプトでは、まず変数を設定します。 これらの変�
 
 1. ```SQL_INSTALL_USER``` と ```SQL_INSTALL_USER_PASSWORD``` がどちらも設定されている場合、新しいサーバー管理者のユーザーを作成します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 複数回の無人インストールを簡略化し、適切な環境変数を設定するスタンドアロン Bash スクリプトを作成します。 サンプル スクリプトが使用している変数はいずれも削除することができ、独自の Bash スクリプトに配置することができます。
 
