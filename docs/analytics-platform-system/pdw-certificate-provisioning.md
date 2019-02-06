@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4876b890067bd851167bc1e3e3c355c9701569d5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: af6d4df964820ced9f4d79b67859e010a895bc29
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405097"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742122"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW 証明書のプロビジョニング - Analytics Platform System
 **PDW 証明書のプロビジョニング**Analytics Platform System のページ**Configuration Manager**をインポートまたは PDW リージョンで使用される証明書を削除します。 使用して、接続の暗号化に証明書は、SQL Server PDW のドライバーを使用するツールの SQL Server クライアント経由で、コントロール ノードにセキュリティで保護された通信を支援できます、 [Admin Console](monitor-the-appliance-by-using-the-admin-console.md)、Integration Services で読み込まれるとします。  
@@ -41,7 +41,10 @@ SQL Server PDW は、コントロールのノードへの接続の暗号化に�
 Analytics Platform System を使用して、**Configuration Manager**を追加または信頼された証明書を削除します。 Microsoft Windows HTTP サービス証明書の構成ツールを使用して直接 (**winHttpCertCfg.exe**)、証明書の管理にはサポートされていません。  
   
 ## <a name="import-or-remove-the-certificate"></a>インポートまたは証明書を削除  
-次の手順では、インポートまたはアプライアンスの証明書を削除する方法を示しています。  
+次の手順では、インポートまたはアプライアンスの証明書を削除する方法を示しています。
+
+> [!WARNING]
+> 有効期限が切れた証明書を書き換えるには、新しいものをインポートする前に既存の証明書を削除する必要があります。
   
 ### <a name="to-import-the-certificate"></a>証明書をインポートするには  
   
