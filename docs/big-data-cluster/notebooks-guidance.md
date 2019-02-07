@@ -5,17 +5,17 @@ description: この記事では、SQL Server 2019 のビッグ データ クラ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 95a1f141467fa4c3ee9cd7e7076eca604aa497ca
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e4f1c945bd09c4d2878ebb441027e32898f24c56
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241803"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807472"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>SQL Server 2019 プレビューで notebook を使用する方法
 
@@ -33,16 +33,16 @@ Notebook を使用するには、次の前提条件をインストールする�
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="connect-to-the-hadoop-gateway-knox-end-point"></a>Hadoop ゲートウェイ Knox 終了ポイントに接続するには
+## <a name="connect-to-the-sql-server-big-data-cluster-end-point"></a>SQL Server のビッグ データ クラスター エンドポイントに接続します。
 
-クラスターの別のエンドポイントに接続することができます。 Microsoft SQL Server 接続の種類にまたは HDFS/Spark ゲートウェイ エンドポイントを接続することができます。
-Azure データ Studio (プレビュー) で、F1 キーを押して、をクリックして**新しい接続** HDFS/Spark ゲートウェイ エンドポイントに接続できます。
+クラスターの別のエンドポイントに接続することができます。 Microsoft SQL Server 接続の種類に、または SQL Server のビッグ データ クラスター エンドポイントに接続できます。
+Azure データ Studio (プレビュー) で、F1 キーを押して、をクリックして**新しい接続** SQL Server のビッグ データ クラスター終了ポイントに接続できます。
 
 ![image1](media/notebooks-guidance/image1.png)
 
 ## <a name="browse-hdfs"></a>HDFS を参照します。
 
-接続するは、HDFS フォルダーを参照することができます。 デプロイが完了し、することができます、WebHDFS が開始**更新**、追加**新しいディレクトリ**、**アップロード**ファイル、および**を削除**.
+接続するは、HDFS フォルダーを参照することができます。 デプロイが完了したら、SQL Server 開始 WebHDFS が開始されます。 WebHDFS を使用することができます**更新**、追加**新しいディレクトリ**、**アップロード**ファイル、および**削除**します。
 
 ![イメージ 2](media/notebooks-guidance/image2.png)
 
@@ -60,16 +60,18 @@ Notebook の依存関係のインストールで問題がある場合は、Ctrl 
 新しい notebook を起動する複数の方法はあります。
 
 1. **管理ダッシュ ボード**します。 新しい接続を終了したら、ダッシュ ボードが表示されます。 クリックして**新しい Notebook**ダッシュ ボードからタスク。
-
-  ![image4](media/notebooks-guidance/image4.png)
+  
+    ![image4](media/notebooks-guidance/image4.png)
 
 1. HDFS/Spark 接続を右クリックし、をクリックして**新しい Notebook**のコンテキスト メニュー。
 
-  ![image5](media/notebooks-guidance/image5.png)
+    ![image5](media/notebooks-guidance/image5.png)
 
-  たとえば、ノートブックの名前を指定`Test.ipynb`します。 **[保存]** をクリックします。
+    という名前の新しいファイル`Notebook-0.ipynb`が開きます。
 
-![image6](media/notebooks-guidance/image6.png)
+    ![image6](media/notebooks-guidance/image6.png)
+
+コマンド パレットからノートブックを開くと、として、notebook が表示されます。`Untitled-0.ipynb`します。
 
 ## <a name="supported-kernels-and-attach-to-context"></a>カーネルがサポートされているし、コンテキストにアタッチ
 
@@ -77,97 +79,95 @@ Notebook のインストールには、PySpark と Spark では、Spark を使�
 
 ![image7](media/notebooks-guidance/image7.png)
 
-これらのカーネルのいずれかを選択して、仮想環境でそのカーネルをインストールしますがサポートされている言語でコードを記述することができます。
+これらのカーネルのいずれかを選択して、インストールでは、そのカーネルを構成、仮想環境でサポートされている言語でコードを記述することができます。
 
 |カーネル|説明
 |:-----|:-----
-|PySpark カーネル|クラスターからの Spark のコンピューティングを使用して Python コードを記述します。
-|Spark カーネル|クラスターからの Spark のコンピューティングを使用して Scala コードを記述します。
+|PySpark3、および PySpark カーネル| クラスターからの Spark のコンピューティングを使用して Python コードを記述します。
+|Spark カーネル|クラスターからの Spark のコンピューティングを使用して Scala と R コードを記述します。
 |Python カーネル|ローカル開発用の Python コードを記述します。
 
-`Attach to`をアタッチする、カーネルのコンテキストを提供します。 HDFS/Spark ゲートウェイ (Knox) の末尾に接続している場合は、既定値をポイント`Attach to`は、クラスターの場合は、その終了点。
+`Attach to` アタッチする、カーネルのコンテキストを提供します。 SQL Server ビッグ データ クラスターの終了ポイント、既定値に接続しているときに`Attach to`は、クラスターの場合は、その終了点。
 
-![image8](media/notebooks-guidance/image8.png)
+SQL Server のビッグ データ クラスター エンドポイントに接続されていない場合は、Python が既定のカーネルは、`Attach to`は`localhost`します。
 
 ## <a name="hello-world-in-different-contexts"></a>異なるコンテキストでの hello world
 
-### <a name="pyspark-kernel"></a>Pyspark カーネル
+### <a name="pyspark3pyspark-kernel"></a>Pyspark3/PySpark カーネル
 
 PySpark カーネルを選択し、次のコード セルの種類。
 
+**[実行]** をクリックします。
+
+Spark アプリケーションが開始され、次の出力を返します。
+
+![image8](media/notebooks-guidance/image8.png)
+
+### <a name="spark-kernel--scala-language"></a>Spark カーネル |Scala 言語
+
+Spark の選択 |Scala カーネルと、次のコード セルの種類。
+
 ![image9](media/notebooks-guidance/image9.png)
 
-開始されている Spark アプリケーションは、「」を参照して表示されます、次の出力と実行をクリックしてします。
+クリックして新しいコード セルを追加、 **+ コード**ツールバーにコマンド。
+
+ここで、Spark を選択 |– でセルの種類/貼り付けと、カーネル用のドロップダウン リストでの Scala
 
 ![Image10](media/notebooks-guidance/image10.png)
 
-出力は次の図のようになります。
+– 以下のオプション アイコンをクリックするとに、"セル"オプションを表示することもできます。
 
 ![Image11](media/notebooks-guidance/image11.png)
 
-### <a name="spark-kernel"></a>Spark カーネル
-クリックして新しいコード セルを追加、 **+ コード**ツールバーにコマンド。
+### <a name="spark-kernel--r-language"></a>Spark カーネル |R 言語
 
-![Image12](media/notebooks-guidance/image12.png)
-
-以下のオプション アイコンをクリックするとに、"セル"オプションを表示することもできます。
+Spark の選択 |R カーネルでは、ドロップダウン リストにします。 セルに入力するか、コードを貼り付けます。 クリックして**実行**に、次の出力を参照してください。
 
 ![Image13](media/notebooks-guidance/image13.png)
 
-すべてのセルにするためのオプションを次に示します
+### <a name="local-python-kernel"></a>ローカルの Python カーネル
 
-![Image14](media/notebooks-guidance/image14.png)-
+ローカルの Python カーネルを選択して、セルの種類で
 
-セルの種類/貼り付けと、カーネル用のドロップダウン リストで、Spark カーネルを選択します。
+![Image14](media/notebooks-guidance/image14.png)
+
+### <a name="markdown-text"></a>Markdown テキスト
+
+クリックして新しいテキスト セルを追加、 **+ テキスト**ツールバーにコマンド。
 
 ![Image15](media/notebooks-guidance/image15.png)
 
-をクリックして**実行**Spark アプリケーションを起動することがわかり、これと Spark セッションが作成されます**spark**を定義し、 **HelloWorld**オブジェクト。
-
-ノートブックは、次の図のようになります。
+編集ビューに変更するテキスト セル内をダブルクリックします 
 
 ![Image16](media/notebooks-guidance/image16.png)
 
-次のノートブック セルのオブジェクトを定義した後は、次のコードに入力します。
+編集モードのセルの変更
 
 ![Image17](media/notebooks-guidance/image17.png)
 
-クリックして**実行**してメニューが表示する必要があります、Notebook で、「こんにちは, world!」 で出力します。
+今すぐ型 markdown とすると同時にプレビューが表示されます。
 
 ![Image18](media/notebooks-guidance/image18.png)
 
-### <a name="local-python-kernel"></a>ローカルの python カーネル
-ローカルの Python カーネルを選択して、セルの種類で
+**[実行]** をクリックします。 Spark アプリケーションが起動するには、として Spark セッションが作成されます。 **spark**を定義し、 **HelloWorld**オブジェクト。
+
+ノートブックは、次の図のようになります。
+
+テキスト セルの外側をクリックすると、プレビュー モードに変更され、マークダウンを非表示にします。
 
 ![Image19](media/notebooks-guidance/image19.png)
 
-以下の出力が表示されます。
-
-![Image20](media/notebooks-guidance/image20.png)
-
-### <a name="markdown-text"></a>Markdown テキスト
-クリックして新しいテキスト セルを追加、 **+ テキスト**ツールバーにコマンド。
-
-![Image21](media/notebooks-guidance/image21.png)
-
-Markdown を追加するプレビュー アイコンをクリックします
-
-![Image22](media/notebooks-guidance/image22.png)
-
-Markdown だけを表示に切り替えるためにもう一度プレビュー アイコンをクリックします
-
-![Image23](media/notebooks-guidance/image23.png)
 
 ## <a name="manage-packages"></a>パッケージを管理します。
-自分のシナリオの顧客になるパッケージをインストールする機能は、ローカルの Python 開発用に最適化モ ノの 1 つでした。 既定では、一般的なパッケージを含める pandas、numpy などが含まれていないパッケージが必要な場合、次のコードで記述 Notebook セルなど。 
+自分のシナリオの顧客になるパッケージをインストールする機能は、ローカルの Python 開発用に最適化モ ノの 1 つでした。 既定では、ような一般的なパッケージを含める`pandas`、`numpy`などが含まれていないパッケージは、ノートブックのセルに次のコードを記述する、想定する場合は。 
 
 ```python
 import <package-name>
 ```
 
-このコマンドを実行すると表示されます、`Module not found`エラー。 パッケージが存在する場合エラーいない取得されます。
+このコマンドを実行するときに`Module not found`が返されます。 パッケージが存在する場合エラーいない取得されます。
 
-見つかった場合、 `Module not Found`  をクリックして、エラー**パッケージの管理**を識別、Virtualenv のパスでターミナルを起動します。 パッケージをローカルでインストールできます。 パッケージをインストールするのにには、次のコマンドを使用します。
+返された場合、 `Module not Found`  をクリックして、エラー**パッケージの管理**を識別、Virtualenv のパスでターミナルを起動します。 パッケージをローカルでインストールできます。 パッケージをインストールするのにには、次のコマンドを使用します。
 
 ```bash
 ./pip install <package-name>
@@ -179,14 +179,12 @@ import <package-name>
 import <package-name>
 ```
 
-これで、セルを実行するとが表示されなく、`Module not found`エラー。
-
 パッケージをアンインストールするには、ターミナルから次のコマンドを使用します。
 
 ```bash
 ./pip uninstall <package-name>
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 既存のノートブックを使用する方法については、次を参照してください。 [notebook Azure Data Studio での管理方法](notebooks-how-to-manage.md)します。
