@@ -13,12 +13,13 @@ ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f7c9612bac16463c1ea82d9e5a83bbad9f371700
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+zone_pivot_groups: cs1-command-shell
+ms.openlocfilehash: d6d8a20044d60ab83f9d649827397bf363dd2696
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397631"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832124"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>クイック スタート:Docker を使用した SQL Server のコンテナー イメージを実行します。
 
@@ -58,13 +59,17 @@ any changes to one section should be duplicated in the other-->
 
 1. Microsoft のコンテナー レジストリから SQL Server 2017 Linux コンテナー イメージをプルします。
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
    > [!TIP]
    > SQL Server 2019 のプレビュー イメージを試す場合を参照してください、[今回のプレビュー バージョンの SQL Server 2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019)します。
@@ -75,17 +80,22 @@ any changes to one section should be duplicated in the other-->
 
 2. Docker でコンテナー イメージを実行するには、bash シェル (Linux/macOS) または管理者特権の PowerShell コマンド プロンプトから次のコマンドを使用できます。
 
+
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
    > [!NOTE]
    > パスワードは SQL Server の既定のパスワード ポリシーに従う必要があります。従わない場合、コンテナーで SQL Server をセットアップできず、動作が停止します。 既定では、パスワードは少なくとも 8 文字で指定し、次の 4 つのセットの 3 つの文字を含めることが必要があります。大文字、小文字、十進数字、およびシンボル。 [docker ログ](https://docs.docker.com/engine/reference/commandline/logs/) コマンドを実行することでエラー ログを調査することができます。
@@ -105,13 +115,18 @@ any changes to one section should be duplicated in the other-->
 
 3. Docker コンテナーを表示するには、 `docker ps` コマンドを使用します。
 
+
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker ps -a
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker ps -a
    ```
+   ::: zone-end
 
    次のスクリーンショットのような出力が表示されます。
 
@@ -140,13 +155,17 @@ SELECT @@SERVERNAME,
 
 1. SQL Server 2019 プレビューの Linux コンテナー イメージを Docker Hub からプルします。
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
    > [!TIP]
    > このクイック スタートでは、SQL Server 2019 プレビュー Docker イメージを使用します。 SQL Server 2017 のイメージを実行する場合を参照してください、[この記事の SQL Server 2017 バージョン](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)します。
@@ -157,17 +176,21 @@ SELECT @@SERVERNAME,
 
 2. Docker でコンテナー イメージを実行するには、bash シェル (Linux/macOS) または管理者特権の PowerShell コマンド プロンプトから次のコマンドを使用できます。
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
       -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
    > [!NOTE]
    > パスワードは SQL Server の既定のパスワード ポリシーに従う必要があります。従わない場合、コンテナーで SQL Server をセットアップできず、動作が停止します。 既定では、パスワードは少なくとも 8 文字で指定し、次の 4 つのセットの 3 つの文字を含めることが必要があります。大文字、小文字、十進数字、およびシンボル。 [docker ログ](https://docs.docker.com/engine/reference/commandline/logs/) コマンドを実行することでエラー ログを調査することができます。
@@ -187,13 +210,17 @@ SELECT @@SERVERNAME,
 
 3. Docker コンテナーを表示するには、 `docker ps` コマンドを使用します。
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker ps -a
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker ps -a
    ```
+   ::: zone-end
 
    次のスクリーンショットのような出力が表示されます。
 
@@ -225,24 +252,30 @@ SELECT @@SERVERNAME,
 
 1. コマンド `docker exec -it` を使用して、実行中のコンテナー内の対話型 bash シェルを起動します。 次の例にある `sql1` は、コンテナーを作成したときに `--name` パラメーターで指定した名前です。 
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker exec -it sql1 "bash"
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker exec -it sql1 "bash"
    ```
+   ::: zone-end
 
-1. コンテナー内では sqlcmd とローカル接続してください。 既定では sqlcmd はパスにないため、完全なパスを指定する必要があります。
+2. コンテナー内では sqlcmd とローカル接続してください。 既定では sqlcmd はパスにないため、完全なパスを指定する必要があります。
 
+   ::: zone pivot="cs1-bash"
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
    ```
+   ::: zone-end
 
    > [!TIP]
    > コマンド ラインでパスワードを省略すると、入力を求められます。
 
-1. 成功すると、**sqlcmd** のコマンド プロンプトである `1>` が表示されます。 
+3. 成功すると、**sqlcmd** のコマンド プロンプトである `1>` が表示されます。 
 
 ## <a name="create-and-query-data"></a>データの作成とクエリ
 
@@ -258,13 +291,13 @@ SELECT @@SERVERNAME,
    CREATE DATABASE TestDB
    ```
 
-1. 次の行に、サーバー上のすべてのデータベースの名前を返すクエリを記述します。
+2. 次の行に、サーバー上のすべてのデータベースの名前を返すクエリを記述します。
 
    ```sql
    SELECT Name from sys.Databases
    ```
 
-1. 前の 2 つのコマンドは、すぐに実行されていません。 前のコマンドを実行するには、新しい行に「`GO`」と入力する必要があります。
+3. 前の 2 つのコマンドは、すぐに実行されていません。 前のコマンドを実行するには、新しい行に「`GO`」と入力する必要があります。
 
    ```sql
    GO
@@ -280,19 +313,19 @@ SELECT @@SERVERNAME,
    USE TestDB
    ```
 
-1. `Inventory` という名前の新しいテーブルを作成します。
+2. `Inventory` という名前の新しいテーブルを作成します。
 
    ```sql
    CREATE TABLE Inventory (id INT, name NVARCHAR(50), quantity INT)
    ```
 
-1. 新しいテーブルにデータを挿入します。
+3. 新しいテーブルにデータを挿入します。
 
    ```sql
    INSERT INTO Inventory VALUES (1, 'banana', 150); INSERT INTO Inventory VALUES (2, 'orange', 154);
    ```
 
-1. 「`GO`」と入力して前のコマンドを実行します。
+4. 「`GO`」と入力して前のコマンドを実行します。
 
    ```sql
    GO
@@ -308,7 +341,7 @@ SELECT @@SERVERNAME,
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-1. コマンドを実行します。
+2. コマンドを実行します。
 
    ```sql
    GO
@@ -322,7 +355,7 @@ SELECT @@SERVERNAME,
    QUIT
    ```
 
-1. コンテナー内の対話型のコマンド プロンプトを終了するには、`exit`と入力します。 コンテナーは、対話型 bash シェルを終了した後に実行を続けます。
+2. コンテナー内の対話型のコマンド プロンプトを終了するには、`exit`と入力します。 コンテナーは、対話型 bash シェルを終了した後に実行を続けます。
 
 ## <a id="connectexternal"></a> コンテナー外部から接続する
 
@@ -332,17 +365,21 @@ SQL 接続をサポートする外部の Linux、Windows、macOS ツールから
 
 1. コンテナーをホストしているコンピューターの IP アドレスを探します。 Linux の場合、 **ifconfig** または **ip addr** を使用します。Windows の場合、**ipconfig** を使用します。
 
-1. IP アドレスとコンテナーのポート 1433 にマップされたポートを指定して sqlcmd を実行します。 この例では、1433、ホスト コンピューターで同じポートであります。 ホスト コンピューターで別のマップされたポートを指定した場合は、ここで使用します。
+2. IP アドレスとコンテナーのポート 1433 にマップされたポートを指定して sqlcmd を実行します。 この例では、1433、ホスト コンピューターで同じポートであります。 ホスト コンピューターで別のマップされたポートを指定した場合は、ここで使用します。
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sqlcmd -S 10.3.2.4,1433 -U SA -P '<YourNewStrong!Passw0rd>'
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    sqlcmd -S 10.3.2.4,1433 -U SA -P "<YourNewStrong!Passw0rd>"
    ```
+   ::: zone-end
 
-1. Transact-SQL コマンドを実行します。 終了したら `QUIT` を入力します。
+3. Transact-SQL コマンドを実行します。 終了したら `QUIT` を入力します。
 
 SQL Server に接続するその他の一般的なツールには次のものがあります。
 
@@ -355,15 +392,19 @@ SQL Server に接続するその他の一般的なツールには次のものが
 
 このチュートリアルで使用した SQL Server のコンテナーを削除する場合は、次のコマンドを実行します。
 
-```bash
+   ::: zone pivot="cs1-bash"
+   ```bash
 sudo docker stop sql1
 sudo docker rm sql1
-```
+   ```
+   ::: zone-end
 
-```PowerShell
+   ::: zone pivot="cs1-powershell"
+   ```PowerShell
 docker stop sql1
 docker rm sql1
-```
+   ```
+   ::: zone-end
 
 > [!WARNING]
 > コンテナーを完全に停止して削除すると、コンテナー内のすべての SQL Server データが削除されます。 データを保持する必要がある場合は、[コンテナーからバックアップ ファイルを作成してコピーする](tutorial-restore-backup-in-sql-server-container.md)か、[コンテナー データを永続化する手法](sql-server-linux-configure-docker.md#persist)を使用します。

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 40bd2140ba28307cca30befb7cdad8b180cc856a
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 527f88ed14adc0140cbca179177e85670f72cafd
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645141"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55890013"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R と SQL Server (チュートリアル) を使用してデータ機能を作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -130,7 +130,7 @@ R 言語は統計ライブラリが豊富なことで知られていますが、
 
 1. という名前の SQL 関数を使用*fnCalculateDistance*します。 関数は、NYCTaxi_Sample データベースに既に存在する必要があります。 オブジェクト エクスプ ローラーでは、このパスを移動して、関数の存在を確認します。データベース > NYCTaxi_Sample > プログラミング > 関数 > スカラー値関数 > dbo.fnCalculateDistance します。
 
-  関数が存在しない場合は、SQL Server Management Studio を使用して、NYCTaxi_Sample データベースで関数を生成します。
+    関数が存在しない場合は、SQL Server Management Studio を使用して、NYCTaxi_Sample データベースで関数を生成します。
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -247,7 +247,7 @@ SQL 関数を呼び出すときに、どのくらいの時間のデータの変�
 > [!TIP]
 > 非常に多くの場合は、機能を使用してエンジニア リング[!INCLUDE[tsql](../../includes/tsql-md.md)]R. よりも高速になりますたとえば、T-SQL に高速ウィンドウ化と移動平均のロールバックなどの一般的なデータ サイエンス計算に適用できる、順位付け関数が含まれていますと*n*-タイル。 データとタスクに基づいて、最も効率的な方法を選択してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [R モデルを構築し、SQL に保存](walkthrough-build-and-save-the-model.md)
