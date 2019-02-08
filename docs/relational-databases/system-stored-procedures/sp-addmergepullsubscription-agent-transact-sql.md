@@ -92,16 +92,16 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 ## <a name="arguments"></a>引数  
  [ **@name =** ] **'***name***'**  
- エージェントの名前を指定します。 *名前*は**sysname**、既定値は NULL です。  
+ エージェントの名前を指定します。 *名前* は **sysname** 、既定値は NULL です。  
   
  [ **@publisher =** ] **'***publisher***'**  
- パブリッシャー サーバーの名前を指定します。 *パブリッシャー*は**sysname**、既定値はありません。  
+ パブリッシャー サーバーの名前を指定します。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
  [ **@publisher_db =** ] **'***publisher_db***'**  
- パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
+ パブリッシャー データベースの名前です。 *publisher_db* は **sysname** 、既定値はありません。  
   
  [ **@publication =** ] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+ パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
  [ **@publisher_security_mode =** ] *publisher_security_mode*  
  パブリッシャーへ接続して同期するときに使用するセキュリティ モードを指定します。 *publisher_security_mode*は**int**、既定値は 1 です。 場合**0**を指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 場合**1**、Windows 認証を指定します。  
@@ -110,10 +110,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login =** ] **'***publisher_login***'**  
- パブリッシャーへ接続して同期するときに使用するログインを指定します。 *publisher_login*は**sysname**、既定値は NULL です。  
+ パブリッシャーへ接続して同期するときに使用するログインを指定します。 *publisher_login* は **sysname** 、既定値は NULL です。  
   
  [ **@publisher_password =** ] **'***publisher_password***'**  
- パブリッシャーへの接続時に使用するパスワードを指定します。 *publisher_password*は**sysname**、既定値は NULL です。  
+ パブリッシャーへの接続時に使用するパスワードを指定します。 *publisher_password* は **sysname** 、既定値は NULL です。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
@@ -122,10 +122,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  設定*publisher_encrypted_password*現在サポートされていません。 これを設定しようとしています。**ビット**パラメーターを**1** 、エラーが発生します。  
   
  [ **@subscriber =** ] **'***subscriber***'**  
- サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は NULL です。  
+ サブスクライバーの名前です。 *サブスクライバー* は **sysname** 、既定値は NULL です。  
   
  [ **@subscriber_db =** ] **'***subscriber_db***'**  
- サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値は NULL です。  
+ サブスクリプション データベースの名前です。 *@subscriber_db* は **sysname** 、既定値は NULL です。  
   
  [ **@subscriber_security_mode =** ] *subscriber_security_mode*  
  サブスクライバーへ接続して同期するときに使用するセキュリティ モードを指定します。 *subscriber_security_mode*は**int**、既定値は 1 です。 場合**0**を指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 場合**1**、Windows 認証を指定します。  
@@ -134,19 +134,19 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 >  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 マージ エージェントは常に Windows 認証を使用してローカル サブスクライバーに接続します。 このパラメーターに値を指定した場合は、警告メッセージが返されますが、値は無視されます。  
   
  [ **@subscriber_login =** ] **'***subscriber_login***'**  
- サブスクライバーへ接続して同期するときに使用するサブスクライバー ログインを指定します。 *subscriber_login*場合は必須です*subscriber_security_mode*に設定されている**0**します。 *subscriber_login*は**sysname**、既定値は NULL です。  
+ サブスクライバーへ接続して同期するときに使用するサブスクライバー ログインを指定します。 *subscriber_login* 場合は必須です *subscriber_security_mode* に設定されている **0** します。 *subscriber_login* は **sysname** 、既定値は NULL です。  
   
 > [!NOTE]  
 >  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 このパラメーターに値を指定した場合は、警告メッセージが返されますが、値は無視されます。  
   
  [ **@subscriber_password =** ] **'***subscriber_password***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証で使用するサブスクライバーのパスワードを指定します。 *@subscriber_password*場合は必須です*subscriber_security_mode*に設定されている**0**します。 *@subscriber_password*は**sysname**、既定値は NULL です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証で使用するサブスクライバーのパスワードを指定します。 *@subscriber_password* 場合は必須です *subscriber_security_mode* に設定されている **0** します。 *@subscriber_password* は **sysname** 、既定値は NULL です。  
   
 > [!NOTE]  
 >  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 このパラメーターに値を指定した場合は、警告メッセージが返されますが、値は無視されます。  
   
  [ **@distributor =** ] **'***distributor***'**  
- ディストリビューターの名前です。 *ディストリビューター*は**sysname**、既定値は*パブリッシャー*; は、パブリッシャーがディストリビューターでも。  
+ ディストリビューターの名前です。 *ディストリビューター* は **sysname** 、既定値は *パブリッシャー*; は、パブリッシャーがディストリビューターでも。  
   
  [ **@distributor_security_mode =** ] *distributor_security_mode*  
  ディストリビューターへ接続して同期するときに使用するセキュリティ モードを指定します。 *distributor_security_mode*は**int**、既定値は 0。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 **1** Windows 認証を指定します。  
@@ -155,10 +155,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@distributor_login =** ] **'***distributor_login***'**  
- ディストリビューターへ接続して同期するときに使用するディストリビューター ログインを指定します。 *distributor_login*場合は必須です*distributor_security_mode*に設定されている**0**します。 *distributor_login*は**sysname**、既定値は NULL です。  
+ ディストリビューターへ接続して同期するときに使用するディストリビューター ログインを指定します。 *distributor_login* 場合は必須です *distributor_security_mode* に設定されている **0** します。 *distributor_login* は **sysname** 、既定値は NULL です。  
   
  [ **@distributor_password =** ] **'***distributor_password***'**  
- ディストリビューターのパスワードです。 *distributor_password*場合は必須です*distributor_security_mode*に設定されている**0**します。 *distributor_password*は**sysname**、既定値は NULL です。  
+ ディストリビューターのパスワードです。 *distributor_password* 場合は必須です *distributor_security_mode* に設定されている **0** します。 *distributor_password* は **sysname** 、既定値は NULL です。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
@@ -202,7 +202,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |NULL (既定値)||  
   
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- マージ エージェントを実行する日付です。 このパラメーターが使用されるときに*frequency_type*に設定されている**32** (月単位)。 *frequency_relative_interval*は**int**、これらの値のいずれかを指定できます。  
+ マージ エージェントを実行する日付です。 このパラメーターが使用されるときに *frequency_type* に設定されている **32** (月単位)。 *frequency_relative_interval*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -230,8 +230,8 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
  間隔は、 *frequency_subday*します。 *frequency_subday_interval*は**int**、既定値は NULL です。  
   
- [ **@active_start_time_of_day=**] *active_start_time_of_day*  
- マージ エージェントを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**、既定値は NULL です。  
+ [**@active_start_time_of_day=**] *active_start_time_of_day*  
+ マージ エージェントを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day* は **int** 、既定値は NULL です。  
   
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
  マージ エージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**、既定値は NULL です。  
@@ -273,14 +273,14 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [ **@working_directory =** ] **'***working_directory***'**  
  FTP を使用してスナップショット ファイルを転送するときに、パブリケーションのデータ ファイルとスキーマ ファイルを一時的に格納するために使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)**、既定値は NULL です。  
   
- [ **@use_ftp =** ] **'***use_ftp***'**  
- スナップショットを取得するときに、一般的なプロトコルの代わりに FTP を使用するかどうかを指定します。 *@use_ftp*は**nvarchar (5)**、既定値は FALSE。  
+ [**@use_ftp =** ] **'***use_ftp***'**  
+ スナップショットを取得するときに、一般的なプロトコルの代わりに FTP を使用するかどうかを指定します。 *@use_ftp* は **nvarchar (5)** 、既定値は FALSE。  
   
  [ **@reserved =** ] **'***reserved***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@use_interactive_resolver =** ] **'***use_interactive_resolver***'** ]  
- 対話的な競合解決が可能なすべてのアーティクルについて、インタラクティブ競合回避モジュールを使用して競合を解決します。 *use_interactive_resolver*は**nvarchar (5)**、既定値は FALSE。  
+ 対話的な競合解決が可能なすべてのアーティクルについて、インタラクティブ競合回避モジュールを使用して競合を解決します。 *use_interactive_resolver* は **nvarchar (5)** 、既定値は FALSE。  
   
  [ **@offloadagent =** ] **'***remote_agent_activation***'**  
  > [!NOTE]  
@@ -290,8 +290,8 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  > [!NOTE]  
 >  リモート エージェント アクティブ化は現在サポートされておらず、非推奨とされます。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_server_name* NULL 以外の値にエラーが生成されます。  
   
- [ **@job_name =** ] **'***job_name***'** ]  
- 既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成したジョブ (既定値) の代わりに既存のジョブを使ってサブスクリプションを同期するときにだけ指定します。 メンバーになっていない場合、 **sysadmin**するを指定する必要があります固定サーバー ロール、 *job_login*と*job_password*を指定すると*job_name*.  
+ [**@job_name =** ] **'***job_name***'** ]  
+ 既存のエージェント ジョブの名前を指定します。 *job_name* は **sysname** 既定値は NULL です。 このパラメーターは、新しく作成したジョブ (既定値) の代わりに既存のジョブを使ってサブスクリプションを同期するときにだけ指定します。 メンバーになっていない場合、 **sysadmin**するを指定する必要があります固定サーバー ロール、 *job_login*と*job_password*を指定すると*job_name*.  
   
  [ **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
  フィルター選択されたデータのスナップショットを使用する場合に、読み込むスナップショット ファイルが格納されているフォルダーのパスを指定します。 *dynamic_snapshot_location*は**nvarchar (260)**、既定値は NULL です。 詳しくは、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
@@ -303,7 +303,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Web 同期用のレプリケーション リスナー (REPLISAPI.DLL) の場所を指定します。 *internet_url*は**nvarchar (260)**、既定値は NULL です。 *internet_url*形式での完全修飾 URL は、`http://server.domain.com/directory/replisapi.dll`します。 サーバーの構成で、リッスンするポートがポート 80 以外の場合は、`http://server.domain.com:portnumber/directory/replisapi.dll` の形式のポート番号も指定する必要があります。ここで `portnumber` はポートを表します。  
   
  [ **@internet_login =** ] **'***internet_login***'**  
- HTTP 基本認証を使って Web 同期をホストしている Web サーバーに接続するときに、マージ エージェントが使用するログインを指定します。 *internet_login*は**sysname**、既定値は NULL です。  
+ HTTP 基本認証を使って Web 同期をホストしている Web サーバーに接続するときに、マージ エージェントが使用するログインを指定します。 *internet_login* は **sysname** 、既定値は NULL です。  
   
  [ **@internet_password =** ] **'***internet_password***'**  
  HTTP 基本認証を使って Web 同期をホストしている Web サーバーに接続するときに、マージ エージェントが使用するパスワードを指定します。 *internet_password*は**nvarchar (524)** 既定値は NULL です。  
@@ -326,13 +326,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Web 同期要求が期限切れとなるまでの時間を秒単位で指定します。 *internet_timeout*は**int**、既定値は**300**秒。  
   
  [ **@hostname =** ] **'***hostname***'**  
- HOST_NAME() がパラメーター化フィルターの WHERE 句で使用される場合に、この関数の値はオーバーライドされます。 *ホスト名*は**sysname**、既定値は NULL です。  
+ HOST_NAME() がパラメーター化フィルターの WHERE 句で使用される場合に、この関数の値はオーバーライドされます。 *ホスト名* は **sysname** 、既定値は NULL です。  
   
  [ **@job_login =** ] **'***job_login***'**  
  エージェントを実行する Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**、既定値はありません。 Windows 統合認証を使用する場合、この Windows アカウントは、サブスクライバーへのエージェント接続、およびディストリビューターやパブリッシャーへの接続に常に使用されます。  
   
  [ **@job_password =** ] **'***job_password***'**  
- エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値はありません。  
+ エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password* は **sysname** 、既定値はありません。  
   
 > [!IMPORTANT]  
 >  スクリプト ファイルに認証情報を格納しないでください。 最大限のセキュリティを得るには、ログイン名とパスワードを実行時に指定します。  
