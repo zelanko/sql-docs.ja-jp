@@ -4,19 +4,19 @@ description: さまざまな方法を使用して、SQL Server 2017 と Docker �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ae57a6f453cf15dbb22158b49aad990cc0c3df67
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: e143ba46fd4c288367b3eb75c15b073ebfb9cf34
+ms.sourcegitcommit: 428b0d2951a785bc72f8dac9ac7cea7cda4dc059
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100737"
+ms.lasthandoff: 02/09/2019
+ms.locfileid: "55972205"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker で SQL Server のコンテナー イメージを構成します。
 
@@ -350,6 +350,62 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```PowerShell
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
+## <a id="tz"></a> タイム ゾーンを構成します。
+
+特定のタイム ゾーンを使用して、Linux コンテナーで SQL Server を実行するには、構成、 **TZ**環境変数。 右側の timezone の値を見つけるには、実行、 **tzselect** Linux の bash プロンプトからコマンド。
+
+```bash
+tzselect
+```
+
+タイム ゾーンを選択した後**tzselect**次のような出力が表示されます。
+
+```bash
+The following information has been given:
+
+        United States
+        Pacific
+
+Therefore TZ='America/Los_Angeles' will be used.
+```
+
+この情報を使用して、Linux コンテナーで同じ環境変数を設定することができます。 次の例では、コンテナー内に SQL Server を実行する方法を示しています、`Americas/Los_Angeles`タイム ゾーン。
+
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+```bash
+sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -p 1433:1433 --name sql1 \
+   -e 'TZ=America/Los_Angeles'\
+   -d mcr.microsoft.com/mssql/server:2017-latest 
+```
+
+```PowerShell
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -p 1433:1433 --name sql1 `
+   -e "TZ=America/Los_Angeles" `
+   -d mcr.microsoft.com/mssql/server:2017-latest 
+```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```bash
+sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -p 1433:1433 --name sql1 \
+   -e 'TZ=America/Los_Angeles'\
+   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+
+```PowerShell
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -p 1433:1433 --name sql1 `
+   -e "TZ=America/Los_Angeles" `
+   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+::: moniker-end
 
 ## <a id="tags"></a> 特定の SQL Server のコンテナー イメージを実行します。
 
@@ -589,7 +645,7 @@ cat errorlog
 > [!TIP]
 > マウントするディレクトリをホストしている場合 **/var/opt/mssql**に確認できる代わりに、コンテナーを作成したときに、**ログ**ホスト上のマップされたパスのサブディレクトリ。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 使用する Docker で SQL Server 2017 コンテナー イメージの概要、[クイック スタート](quickstart-install-connect-docker.md)します。
 
