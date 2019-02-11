@@ -343,7 +343,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="remarks"></a>コメント  
  **sp_addmergepullsubscription_agent**はマージ レプリケーションで使用してと同様の機能を使用して[sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)します。  
   
- 正しく実行するときにセキュリティ設定を指定する方法の例については**sp_addmergepullsubscription_agent**を参照してください[Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)します。  
+ 正しく実行するときにセキュリティ設定を指定する方法の例については**sp_addmergepullsubscription_agent**を参照してください[プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
@@ -352,8 +352,8 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addmergepullsubscription_agent**します。  
   
 ## <a name="see-also"></a>参照  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   

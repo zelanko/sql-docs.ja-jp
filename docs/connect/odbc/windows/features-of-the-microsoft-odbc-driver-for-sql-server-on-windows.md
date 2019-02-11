@@ -41,13 +41,13 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の
 - l オプションでは、サーバーへの接続の試行時に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への `bcp.exe` のログインがタイムアウトするまでの秒数を指定します。 既定のログイン タイムアウトは、15 秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`bcp.exe` はエラー メッセージを生成します。 値 0 は、無限のタイムアウトを指定します。 (約) 10 秒未満のログイン タイムアウトは信頼できません。  
   
 ### <a name="driver-aware-connection-pooling"></a>ドライバー対応接続プール  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、[ドライバー対応の接続プール](https://msdn.microsoft.com/library/hh405031(VS.85).aspx)をサポートしています。 詳細については、「 [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)」を参照してください。  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、[ドライバー対応の接続プール](https://msdn.microsoft.com/library/hh405031(VS.85).aspx)をサポートしています。 詳細については、「 [ODBC Driver for SQL Server のドライバー対応接続プール | Microsoft Docs](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)」を参照してください。  
   
 ### <a name="asynchronous-execution-notification-method"></a>非同期実行 (通知方法)  
 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、[非同期実行 (通知方法)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx) をサポートしています。 使用例については、「[非同期実行 &#40;通知方法&#41; の例](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)」を参照してください。  
   
 ### <a name="connection-resiliency"></a>接続の回復
-アプリケーションを Microsoft Azure SQL データベースに接続されたままにするため、Windows 上の ODBC ドライバーは、アイドル状態の接続を復元できます。 詳細については、「 [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)」を参照してください。  
+アプリケーションを Microsoft Azure SQL データベースに接続されたままにするため、Windows 上の ODBC ドライバーは、アイドル状態の接続を復元できます。 詳細については、「 [Windows ODBC ドライバーの接続レジリエンシー](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)」を参照してください。  
   
 ## <a name="behavior-changes"></a>動作の変更
 
