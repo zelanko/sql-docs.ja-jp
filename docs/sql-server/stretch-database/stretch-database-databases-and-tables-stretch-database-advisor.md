@@ -3,6 +3,7 @@ title: Stretch Database 向きのデータベースとテーブルを識別す�
 ms.custom: ''
 ms.date: 10/30/2017
 ms.prod: sql
+ms.technology: ''
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +12,15 @@ helpviewer_keywords:
 - identifying databases for Stretch Database
 - identifying tables for Stretch Database
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9adc861d24713204c819787dce3b79a38230c08c
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 09c5d4d2f6e9732eaae17c8bbc6aad684b290e9b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53597143"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024923"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Data Migration Assistant で Stretch Database 向きのデータベースとテーブルを識別する
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "53597143"
 
 2.  **[評価]** タイプの新しいプロジェクトを作成し、名前を指定します。
 
-3.  **[Source server type]\(ソース サーバーの種類\)** と **[対象サーバーの種類]** の両方で、**[SQL Server]** を選びます。
+3.  **[ソース サーバーの種類]** と **[ターゲット サーバーの種類]** の両方で、**[SQL Server]** を選びます。
 
 4.  **[作成]** を選択します。 
 
