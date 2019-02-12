@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420653"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079468"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0 で Analysis Services への HTTP アクセスを構成します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "52420653"
 > [!NOTE]  
 >  クライアントがリモートの Analysis Services サーバーに接続できるようにするために、Windows ファイアウォールでポートのブロックを忘れずに解除してください。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
   
-##  <a name="bkmk_copy"></a> 手順 1:MSMDPUMP ファイルの Web サーバー上のフォルダーへのコピー  
+##  <a name="bkmk_copy"></a> ステップ 1:MSMDPUMP ファイルの Web サーバー上のフォルダーへのコピー  
  作成した各 HTTP エンドポイントに、独自の MSMDPUMP ファイル セットを用意する必要があります。 この手順では、Analysis Services プログラム フォルダーの MSMDPUMP 実行可能ファイル、構成ファイル、およびリソース フォルダーを、IIS が実行されているコンピューターのファイル システム上に作成する新しい仮想ディレクトリ フォルダーにコピーします。  
   
  ドライブは、NTFS ファイル システム用にフォーマットされている必要があります。 作成するフォルダーへのパスには、スペースを使用することはできません。  
@@ -106,13 +106,15 @@ ms.locfileid: "52420653"
   
 4.  Web サーバーの \inetpub\wwwroot\OLAP フォルダーに以下のものが含まれていることを確認します。MSMDPUMP.DLL、MSMDPUMP.INI、および [リソース] フォルダーです。 フォルダー構造は次のようになります。  
   
-    -   \<ドライブ >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<ドライブ >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+> [!NOTE]  
+>  IIS マネージャーできないデータベースが以前のバックアップの場合、現在のバージョンの Analysis Services に接続することがあります。 これは、MSMDPUMP の変更が原因であり、作業の以前のバージョンから msmdpump.dll ファイルをコピーすることで解決する必要があります。
   
-##  <a name="bkmk_appPool"></a> 手順 2:IIS へのアプリケーション プールと仮想ディレクトリの作成  
+##  <a name="bkmk_appPool"></a> ステップ 2:IIS へのアプリケーション プールと仮想ディレクトリの作成  
  次に、アプリケーション プールと、ポンプへのエンドポイントを作成します。  
   
 #### <a name="create-an-application-pool"></a>アプリケーション プールの作成  
@@ -148,7 +150,7 @@ ms.locfileid: "52420653"
 > [!NOTE]  
 >  以前のバージョンのこれらの手順には、仮想ディレクトリを作成する手順が含まれていました。 その手順は必要なくなりました。  
   
-##  <a name="bkmk_auth"></a> 手順 3:IIS 認証の構成と拡張機能の追加  
+##  <a name="bkmk_auth"></a> ステップ 3:IIS 認証の構成と拡張機能の追加  
  この手順では、作成した SSAS 仮想ディレクトリの詳細を進めます。 認証方法を指定してから、スクリプト マップを追加します。 HTTP を使用した Analysis Services でサポートされている認証方法は次のとおりです。  
   
 -   Windows 認証 (Kerberos または NTLM)  
