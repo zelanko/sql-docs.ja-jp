@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c5399dd2ae5979fad310bbb048e9c3f3c2147db5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9f9f1dd070ecfd2f680ce68460e2adc5c9727097
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199992"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041673"
 ---
 # <a name="define-query-parameters-dialog-box"></a>[クエリ パラメーターの定義] ダイアログ ボックス
   **[クエリ パラメーターの定義]** ダイアログ ボックスを使用すると、デザイン時にクエリ デザイナーでクエリを実行する際のパラメーター値を指定できます。この設定によって、サンプル データを表示させることができます。 クエリ パラメーターを使用すると、データ ソースのデータをフィルター処理し、レポートが処理するデータの量を制限できます。 これらの値は、レポート定義に保存されません。  
@@ -31,7 +31,7 @@ ms.locfileid: "48199992"
  **[パラメーター値]**  
  クエリ パラメーターに使用する値を入力します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server の接続の種類 &#40;SSRS&#41;](sql-server-connection-type-ssrs.md)   
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
  [Reporting Services クエリ デザイナー](../reporting-services-query-designers.md)  

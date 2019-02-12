@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3af76a0ec664a10d5457dc3d106de3727740ce19
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 077fb708f09db0182bc5f1510f0264b139beab13
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523659"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017093"
 ---
 # <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>レッスン 4:データベースの完全バックアップから復元を実行します。
   このレッスンでは、TSQL ステートメントを使用して、前のレッスンで作成したデータベースの完全バックアップからの復元を実行する方法を紹介します。  
@@ -44,6 +43,6 @@ ms.locfileid: "52523659"
 5.  T-SQL ステートメントを確認し、クリックして**Execute**  
   
 ### <a name="return-to-tutorials-portal"></a>チュートリアル ポータルに戻る  
- [チュートリアル:SQL Server のバックアップと復元を Windows Azure Blob ストレージ サービス](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)します。  
+ [チュートリアル: SQL Server のバックアップと復元を Windows Azure Blob ストレージ サービス](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)します。  
   
   

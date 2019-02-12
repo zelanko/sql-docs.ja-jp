@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Report Data pane
 ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 81ab7f53f546c3b048551a0f3acd3866c29a8eb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b73080811e001b67ea52e3cbc9572eb014162e68
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179382"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010353"
 ---
 # <a name="report-data-pane-report-builder"></a>[レポート データ] ペイン (レポート ビルダー)
   **[レポート データ]** ペインを使用すると、レポート内で現在定義されているパラメーター、データ ソース、データセット、フィールド コレクション、および画像が表示されます。 [レポート データ] では、レポート内のデータを表すアイテムの階層ビューが表示されます。 最上位のノードは、組み込みフィールド、パラメーター、画像、およびデータ ソース参照を表します。 データ アイテムを表示するには、各ノードを展開します。 たとえば、データ ソース ノードを展開すると、そのデータ ソース用に定義されたデータセットが表示されます。 データセットを展開すると、そのフィールド コレクションが表示されます。 データをレポート ページ上の選択したレポート アイテムにリンクするには、アイテムをレポート デザイン画面または [グループ化] ペインにドラッグします。 詳細については、「[レポート デザイン ビュー &#40;レポート ビルダー&#41;](report-builder/report-design-view-report-builder.md)」を参照してください。  
@@ -32,7 +32,7 @@ ms.locfileid: "48179382"
  **パラメーター**  
  レポート パラメーターのコレクションを表します。各パラメーターには単一の値または複数の値を指定できます。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
- **画像**  
+ **イメージ**  
  レポートで使用されている画像のセットを表します。 詳細については、「[画像 &#40;レポート ビルダーおよび SSRS& #41;](report-design/images-report-builder-and-ssrs.md)」を参照してください。  
   
  **[データ ソース]**  

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b052ccbd1b91ea66f150dc0995eeeb33994a5e53
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+manager: kfile
+ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439524"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012095"
 ---
 # <a name="report-design-view-report-builder"></a>レポート デザイン ビュー (レポート ビルダー)
   レポート ビルダーのウィンドウは、レポート リソースを整理しやすく、必要なレポートをすばやく作成できるように設計されています。 デザイン画面がウィンドウの中央にあり、その上にリボン、左にレポート データ ペイン、下にグループ化ペイン、右にプロパティ ペインおよびレポート パーツ ギャラリーが配置されています。 デザイン画面は、レポート アイテムの追加や整理を行うための領域です。 リボンには、従来のメニュー項目が、簡単に見つけて使用できるようにカテゴリ別に分類されて表示されます。 ペインでは、レポート リソースの追加、選択、整理や、レポート アイテムのプロパティの変更などを行うことができます。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 742cfa14b1e93632910fca00312379432021246f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03ac60e59b1859ed4e77f3db5e355a1fb9f556f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184338"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042933"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>改ページ、見出し、列、および行の制御 (レポート ビルダーおよび SSRS)
   レポートは、改ページによって複数のページに分割され表示および印刷されます。 改ページを使用すると、レポートのプレビュー時または他のファイル形式へのエクスポート時に、表示が最適化されるようにコンテンツをレポート ページに収めることができます。  
@@ -33,7 +33,7 @@ ms.locfileid: "48184338"
 ## <a name="see-also"></a>参照  
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [グループ化ペイン &#40;レポート ビルダー&#41;](grouping-pane-report-builder.md)   
- [グループ ヘッダーとフッターを表示&#40;レポート ビルダーおよび SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [グループ化ペイン (レポート ビルダー)](grouping-pane-report-builder.md)   
+ [グループ単位でのヘッダーとフッターの表示 (レポート ビルダーおよび SSRS)](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
   

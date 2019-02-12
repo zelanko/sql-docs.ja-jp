@@ -11,14 +11,14 @@ f1_keywords:
 - "10026"
 ms.assetid: 07ccca3f-86ed-4f7e-99bd-0a5e1c64a733
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a532ea7dfc3b5b9e551a3ee09ac461b61c46ece5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c70902ba9ee7bb45f135613a2401b48e8d96d0ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097842"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015536"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>[クエリ パラメーターの定義] ダイアログ ボックス (レポート ビルダー)
   **[クエリ パラメーターの定義]** ダイアログ ボックスを使用すると、デザイン時にクエリ デザイナーでクエリを実行する際のパラメーター値を指定できます。この設定によって、サンプル データを表示させることができます。 クエリ パラメーターを使用すると、データ ソースのデータをフィルター処理し、レポートが処理するデータの量を制限できます。 これらの値は、レポート定義に保存されません。  

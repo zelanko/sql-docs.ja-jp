@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff0a14a546a14d37461193b71b4d682deb25925a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350105"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030624"
 ---
 # <a name="tutorial-format-text-report-builder"></a>チュートリアル:テキストの書式設定 (レポート ビルダー)
   このチュートリアルでは、さまざまな方法でテキストの書式設定を実習します。 空のレポートと、データ ソースおよびデータセットを設定した後、必要な手順を選んで進めることができます。  
@@ -71,11 +71,11 @@ ms.locfileid: "53350105"
   
 1.  レポート データ ペインで、 **[新規作成]** をクリックし、 **[データ ソース]** をクリックします。  
   
-2.  **名前**ボックスに、入力します。**TextDataSource**  
+2.  **[名前]** ボックスに、**TextDataSource**  
   
 3.  **[レポートに埋め込まれた接続を使用する]** をクリックします。  
   
-4.  接続の種類が Microsoft SQL Server であることを確認したら **[接続文字列]** ボックスに次のように入力します。**データ ソース = \<servername >**  
+4.  接続の種類が Microsoft SQL Server であることを確認したら **[接続文字列]** ボックスに次のように入力します。**Data Source = \<servername>**  
   
     > [!NOTE]  
     >  式\<servername >、たとえば report001 など、SQL Server データベース エンジンのインスタンスがインストールされているコンピューターを指定します。 このチュートリアルでは、特定のデータは必要ありません。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] データベースへの接続だけが必要です。 **[データ ソース接続]** の一覧に既にデータ ソース接続が表示されている場合は、データ ソース接続を選択してから次の手順「データセットを作成するには」に進みます。 詳細については、[「別の方法でデータ接続を取得する &#40;レポート ビルダー&#41;」](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)を参照してください。  
@@ -88,7 +88,7 @@ ms.locfileid: "53350105"
   
 2.  データ ソースが **TextDataSource**であることを確認します。  
   
-3.  **名前**ボックスに、入力します。**TextDataset します。**  
+3.  **[名前]** ボックスに、**TextDataset します。**  
   
 4.  クエリの種類に **[テキスト]** が選択されていることを確認してから、 **[クエリ デザイナー]** をクリックします。  
   

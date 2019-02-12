@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ea7896e5f7c394539793ca65496824691275963d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: f7564a37766972782a5c118ced64298b7f4ce076
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393755"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010843"
 ---
 # <a name="managing-report-parts"></a>レポート パーツの管理
   以降で[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、レポート パーツをレポート サーバーにパブリッシュおよび適切なアクセス許可がある場合に、その他のレポートおよび他のユーザーを再利用できます。  

@@ -15,12 +15,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5ef89fc257782f7977efbee371a40e188893bc7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 418259da44f85c3dadbadc413affc937991b2974
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53216061"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832104"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>データベース エンジンの有効なアクセス許可の決定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,12 +63,12 @@ SQL Server データベース エンジンでは、さまざまなオブジェ�
 >    ON SRM.member_principal_id = SP2.principal_id
 >  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
 >  ORDER BY SP1.name;
-```
+> ```
 > [!NOTE]
->  * All logins are members of the public role and cannot be removed. 
->  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
+>  * すべてのログインは public ロールに属し、削除できません。 
+>  * このクエリはマスター データベースのテーブルを確認しますが、オンプレミス製品のデータベースでは実行できません。 
 
-To determine who is a member of a fixed database role, execute the following query in each database.
+固定データベース ロールのメンバーを判断するには、各データベースで次のクエリを実行します。
 ```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
@@ -117,11 +117,11 @@ Windows ユーザーは複数の Windows グループに属することがあり
 >    ON pr.principal_id = pe.grantee_principal_id
 >  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
 >  ORDER BY pr.name, type_desc;
-```
+> ```
 
-### Database Permissions
+### <a name="database-permissions"></a>データベース権限
 
-The following query returns a list of the permissions that have been granted or denied at the database level. This query should be executed in each database.   
+次のクエリは、データベース レベルで承諾または拒否されているアクセス許可の一覧を返します。 このクエリは各データベースで実行してください。   
 ```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

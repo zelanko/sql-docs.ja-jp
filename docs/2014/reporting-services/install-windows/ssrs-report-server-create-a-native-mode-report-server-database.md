@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 202d2331364480cfdac89019dfa918c327544b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: aace9882e358bcd5e5626cc625ed3dbbe4495cce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090262"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017043"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>ネイティブ モード レポート サーバー データベースの作成 (SSRS 構成マネージャー)
   ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースが内部ストレージとして使用されます。 データベースは必須で、パブリッシュされたレポート、モデル、共有データ ソース、セッション データ、リソース、およびサーバー メタデータの格納に使用されます。  
@@ -116,12 +116,12 @@ ms.locfileid: "48090262"
   
 7.  設定が正しいとクリックを確認する概要 ページで情報を確認して**次**します。  
   
-8.  [レポート サーバー URL] ページまたは [レポート マネージャー URL] ページで URL をクリックし、接続を確認します。 このテストが成功するように URL を定義する必要があります。 レポート サーバー データベースの接続が有効な場合は、ブラウザー ウィンドウにレポート サーバーのフォルダー階層またはレポート マネージャーが表示されます。 詳細については、次を参照してください。 [Reporting Services のインストールを確認します。](verify-a-reporting-services-installation.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+8.  [レポート サーバー URL] ページまたは [レポート マネージャー URL] ページで URL をクリックし、接続を確認します。 このテストが成功するように URL を定義する必要があります。 レポート サーバー データベースの接続が有効な場合は、ブラウザー ウィンドウにレポート サーバーのフォルダー階層またはレポート マネージャーが表示されます。 詳細については、 [オンライン ブックの「](verify-a-reporting-services-installation.md) Reporting Services のインストール状態の検証 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [データベース&#40;SSRS ネイティブ モード&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
- [Reporting Services ネイティブ モード レポート サーバーを管理します。](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
+ [Reporting Services ネイティブ モードのレポート サーバーの管理](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

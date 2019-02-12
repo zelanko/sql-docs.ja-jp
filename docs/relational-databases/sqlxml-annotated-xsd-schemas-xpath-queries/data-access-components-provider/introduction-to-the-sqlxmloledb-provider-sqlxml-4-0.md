@@ -12,16 +12,16 @@ helpviewer_keywords:
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d62031bdd9614cb4dafb8c7c8e18bf9e3b90cb8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f8abf4d73342105bf244adbccfe59e550b9f70c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657821"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030093"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB プロバイダーの概要 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>SQLXMLOLEDB プロバイダー固有のプロパティ  
  SQLXMLOLEDB プロバイダーでは、次のプロバイダー固有の接続プロパティへのアクセスが提供されます。  
   
-|接続<br /><br /> property|既定<br /><br /> (ある場合)|説明|  
+|接続<br /><br /> プロパティ|既定値<br /><br /> (ある場合)|説明|  
 |-----------------------------|----------------------------|-----------------|  
 |データ プロバイダー||OLE DB プロバイダーの PROGID を提供します。SQLXMLOLEDB ではこれを介してコマンドが実行されます。 SQLXML 4.0 および [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降、このプロバイダーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 内に含まれているため、このプロパティ値は "SQLNCLI11" に制限されます。 詳細については、「 [SQL Server Native Client プログラミング](../../../relational-databases/native-client/sql-server-native-client-programming.md)」を参照してください。|  
   
  SQLXMLOLEDB プロバイダーでは、次のプロバイダー固有のコマンド プロパティへのアクセスが提供されます。  
   
-|コマンド<br /><br /> property|既定<br /><br /> (ある場合)|説明|  
+|コマンド<br /><br /> プロパティ|既定値<br /><br /> (ある場合)|説明|  
 |--------------------------|----------------------------|-----------------|  
 |基本パス|""|基本ファイル パスを指定します。 基本ファイル パスは、XML Stylesheet Language (XSL) の場所またはマッピング スキーマ ファイルを指定するときに使用します。 基本ファイルのパスは、XSL またはマッピング スキーマ ファイル、XSL またはマッピング スキーマのプロパティで指定されている相対パスの解決にも使用されます。<br /><br /> このプロパティを使用する例についてを参照してください[を実行する XPath クエリ&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)。|  
 |ClientSideXML|False|行セットを XML に変換する処理をサーバーではなくクライアントで行う場合は、このプロパティを True に設定します。 これはパフォーマンスの負荷を中間層に移す場合に便利です。<br /><br /> このプロパティを使用する例についてを参照してください[を実行する SQL クエリ&#40;SQLXMLOLEDB プロバイダー&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)または[を実行するテンプレートを含む SQL クエリ&#40;SQLXMLOLEDB プロバイダー&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  

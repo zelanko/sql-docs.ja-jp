@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2379a62a39453dcde75b39386ab6701a9fba101a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75845ddac250c70078c8ee43d885b7d2b99a69a1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107222"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031093"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 機能の有効化と無効化
   運用レポート サーバーに対する外部からの攻撃の危険性を低減するためのロックダウン ストラテジには含まれないレポート サーバー機能を無効にできます。 ほとんどの場合は、複数の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能を同時に実行して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で提供される機能をすべて利用します。 ただし、配置モデルによっては、不要な機能を無効にすることができます。 たとえば、すべてのレポート処理をスケジュールに従って実行するように構成すると、バックグラウンド処理だけを有効にすることもできます。 同様に、対話型の要求時レポートだけが必要な場合は、レポート サーバー Web サービスだけを実行することもできます。  
@@ -42,7 +42,7 @@ ms.locfileid: "48107222"
   
 1.  テキスト エディターで `RsReportServer.config` ファイルを開きます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
   
-2.  レポート サーバー Web サービスを有効にするには設定`IsWebServiceEnabled`に`true`:  
+2.  レポート サーバー Web サービスを有効にするには、`IsWebServiceEnabled` を `true` に設定します。  
   
     ```  
     <IsWebServiceEnabled>true</IsWebServiceEnabled>  
@@ -124,13 +124,13 @@ ms.locfileid: "48107222"
   
 1.  テキスト エディターで RsReportServer.config ファイルを開きます。 手順については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」をご覧ください。  
   
-2.  レポート マネージャーを有効にするには設定`IsReportManagerEnabled`に`true`:  
+2.  レポート マネージャーを有効にするには、`IsReportManagerEnabled` を `true` に設定します。  
   
     ```  
     <IsReportManagerEnabled>true</IsReportManagerEnabled>  
     ```  
   
-3.  レポート マネージャーをオフにして、次のように設定します`IsReportManagerEnabled`に`false`:。  
+3.  レポート マネージャーを無効にするには、`IsReportManagerEnabled` を `false` に設定します。  
   
     ```  
     <IsReportManagerEnabled>false</IsReportManagerEnabled>  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 304c1048c206f179d5e29d3b5aa097d21a124512
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9ca7b2b7ed4cc66a3c47b2f2ad8044775d69c6ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065332"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015003"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、一連の構成ファイルにアプリケーション設定を格納します。 構成ファイルはセットアップ時に作成され、インストールしたレポート サーバー インスタンスごとに存在します。 各ファイル内の値は、インストール中に設定されるか、ツールやアプリケーションを使用してサーバーの動作を構成したときに設定されます。 場合によっては、高度な設定を追加したり構成したりするために、ファイルを直接変更する必要があります。 構成設定は、XML 要素または XML 属性のいずれかとして指定されます。 XML ファイルおよび構成ファイルを理解している場合は、テキスト エディターまたはコード エディターを使用して、ユーザーが定義可能な設定を変更できます。  
@@ -98,7 +98,7 @@ ms.locfileid: "48065332"
  [データ処理拡張機能の配置](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [配信拡張機能の配置](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [表示拡張機能の配置](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [カスタム レポート アイテムを配置する方法](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [方法: カスタム レポート アイテムを配置します。](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Reporting Services 構成ファイル](reporting-services-configuration-files.md)  
   
   

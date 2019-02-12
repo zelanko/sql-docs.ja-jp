@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d0d844f9f58b22a2982c19ca0347bd75f41da1a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5967303b875ed7bc2ddaba8d1c77c169d0025d04
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106909"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015653"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>CountRows 関数 (レポート ビルダーおよび SSRS)
   NULL 値の行を含めて、指定されたスコープ内の行数を返します。  
@@ -36,13 +36,13 @@ CountRows(scope, recursive)
  (`String`) カウントするレポート アイテムを含むデータセット、データ領域、またはグループの名前です。  
   
  *再帰*  
- (**列挙型**) 省略可。 `Simple` (既定値) または`RdlRecursive`します。 集計を再帰的に実行するかどうかを指定します。  
+ (**列挙型**) 省略可。 `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
   
 ## <a name="return-type"></a>戻り値の型  
- 返します、`Integer`します。  
+ `Integer` 値を返します。  
   
 ## <a name="remarks"></a>コメント  
- `CountRows` null 値を持つ行を含む、指定されたスコープ内のすべての行をカウントします。  
+ `CountRows` は、指定されたスコープ内のすべての行 (NULL 値を持つ行を含む) をカウントします。  
   
  *scope* の値には、式を指定することができません。また、この値では、現在のスコープまたはコンテナー スコープを参照する必要があります。  
   
@@ -58,9 +58,9 @@ CountRows(scope, recursive)
 ```  
   
 ## <a name="see-also"></a>参照  
- [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

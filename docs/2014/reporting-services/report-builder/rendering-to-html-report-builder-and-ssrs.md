@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eea42bfc7b02c4964f34ebc6fe5f4b067a33d21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1905dbe53d5c869c25fcf6f9b07b46bf48dcaf98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084542"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013252"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML での表示 (レポート ビルダーおよび SSRS)
   HTML 表示拡張機能では、HTML 形式でレポートを表示します。 また、完全な HTML ページを生成することも、他の HTML ページに埋め込むための HTML の一部分を生成することもできます。 すべての HTML は、UTF-8 エンコードで生成されます。  
   
  HTML 表示拡張機能は、レポート マネージャーで実行する場合など、ブラウザーで表示されるレポートの既定の表示拡張機能です。  
   
- HTML 表示拡張機能は、レポート マネージャーで実行する場合など、ブラウザーで表示されるレポートの既定の表示拡張機能です。 HTML 表示拡張機能を使用すると、HTML を部分的に表示することも、完全な HTML ドキュメントとして表示することもできます。 HTML がフラグメントの場合、 `HEAD`、 `HTML`、および`BODY`HTML ドキュメントのタグが削除されます。 表示されるのは、`BODY` タグのコンテンツのみです。 これは、他のアプリケーションで作成した HTML に HTML を埋め込む場合に便利です。  
+ HTML 表示拡張機能は、レポート マネージャーで実行する場合など、ブラウザーで表示されるレポートの既定の表示拡張機能です。 HTML 表示拡張機能を使用すると、HTML を部分的に表示することも、完全な HTML ドキュメントとして表示することもできます。 HTML が部分的な場合、HTML ドキュメントの `HEAD` タグ、`HTML` タグ、および `BODY` タグは削除されます。 表示されるのは、`BODY` タグのコンテンツのみです。 これは、他のアプリケーションで作成した HTML に HTML を埋め込む場合に便利です。  
   
  状況によっては、レポート パラメーターを使用して、レポートが HTML で表示される際にスクリプト インジェクション攻撃を開始することも可能であることを意味します。 レポートのセキュリティ保護の詳細については、「 [レポートとリソースの保護](../security/secure-reports-and-resources.md)」を参照してください。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48084542"
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> デバイス情報設定  
- デバイス情報設定を変更することによって、このレンダラーに関する既定の設定の一部 (表示モードなど) を変更することができます。 詳細については、「[HTML デバイス情報設定](../html-device-information-settings.md)」を参照してください。  
+ デバイス情報設定を変更することによって、このレンダラーに関する既定の設定の一部 (表示モードなど) を変更することができます。 詳細については、「 [HTML デバイス情報設定](../html-device-information-settings.md)」を参照してください。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   

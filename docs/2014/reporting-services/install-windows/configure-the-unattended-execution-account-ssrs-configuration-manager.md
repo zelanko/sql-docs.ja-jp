@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16a92441dd7e3088b6be0f8235f6719b6bc7cdb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192532"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012073"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>自動実行アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、自動レポート処理とネットワークを介した接続要求の送信に使用される特別なアカウントが用意されています。 アカウントは次の場合に使用します。  
   
--   データベース認証を使用するレポートに対する接続要求のネットワーク経由での送信や、認証を必要としないまたは使用しない外部レポート データ ソースへの接続。 詳細については、次を参照してください。[資格情報の指定とレポート データ ソースに関する接続情報](../../integration-services/connection-manager/data-sources.md)SQL Server オンライン ブックの「します。  
+-   データベース認証を使用するレポートに対する接続要求のネットワーク経由での送信や、認証を必要としないまたは使用しない外部レポート データ ソースへの接続。 詳細については、SQL Server オンライン ブックの「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../integration-services/connection-manager/data-sources.md) 」を参照してください。  
   
 -   レポートに使用する外部の画像ファイルの取得。 匿名アクセスでアクセスできない画像ファイルを使用する場合は、自動レポート処理アカウントを構成し、アカウントに対してファイルへのアクセス許可を与えます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48192532"
   
  アカウントを指定するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは **rsconfig** ユーティリティを使用できます。 自動実行アカウントを構成する最も簡単な方法は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを実行して、[実行アカウント] ページで資格情報を指定することです。  
   
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、構成するレポート サーバー インスタンスに接続します。 手順については、「[Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、構成するレポート サーバー インスタンスに接続します。 手順については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
 2.  [実行アカウント] ページで、 **[実行アカウントの指定]** を選択します。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48192532"
   
 1.  レポート サーバーにデータまたはサービスを提供するコンピューターおよびサーバーに対してアクセス権を持つ、ドメイン アカウントを作成または選択します。 少ない権限を持つアカウントを使用することをお勧めします (たとえば、読み取り専用権限)。  
   
-2.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックし、 **「cmd」** と入力して **[OK]** をクリックして、コマンド プロンプトを開きます。  
+2.  コマンド プロンプトを開きます。**開始** メニューのをクリックして**実行**、型**cmd**、順にクリックします**OK**。  
   
 3.  次のコマンドを入力して、ローカル レポート サーバー インスタンス上でアカウントを構成します。  
   

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c1a3c4eef40d5cac7d7dabdb0a428d97afdb136
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 951be7ea854bf3f4d9e10e902cfc6574e7749d51
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220432"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041813"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>SAP NetWeaver BI Query Designer のユーザー インターフェイス
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、SAP NetWeaver® Business Intelligence データ ソースに対する多次元式 (MDX) クエリを作成するためのグラフィカル クエリ デザイナーが用意されています。 MDX のグラフィカル クエリ デザイナーには、デザイン モードとクエリ モードという 2 つのモードがあります。 どちらのモードでもメタデータ ペインが表示されます。このペインを使用して、データ ソースで定義されている InfoCube、MultiProvider、または Web 対応クエリからメンバーをドラッグすることによって MDX クエリを作成できます。レポートの処理時には、このクエリに基づいてデータが取得されます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、SAP NetWeaver® Business Intelligence データ ソースに対する多次元式 (MDX) クエリを作成するためのグラフィカル クエリ デザイナーが用意されています。 MDX グラフィカル クエリ デザイナーには、2 つのモードがあります。デザイン モードとクエリ モード。 どちらのモードでもメタデータ ペインが表示されます。このペインを使用して、データ ソースで定義されている InfoCube、MultiProvider、または Web 対応クエリからメンバーをドラッグすることによって MDX クエリを作成できます。レポートの処理時には、このクエリに基づいてデータが取得されます。  
   
 > [!IMPORTANT]  
 >  ユーザーは、クエリを作成して実行する際にデータ ソースにアクセスします。 したがって、データ ソースに対する最小限の権限 (読み取り専用権限など) を付与する必要があります。  
@@ -42,7 +42,7 @@ ms.locfileid: "48220432"
   
  このモードのペインの一覧を次の表に示します。  
   
-|ペイン|機能|  
+|ペイン|関数|  
 |----------|--------------|  
 |キューブの選択ボタン|現在選択されている InfoCube、MultiProvider、または Web 対応クエリを表示します。|  
 |メタデータ ペイン|InfoCubes、MultiProviders、およびクエリの階層リストを表示します。 データ ソースで作成されたクエリが、対応するキューブの下に表示される場合があります。|  
@@ -59,10 +59,10 @@ ms.locfileid: "48220432"
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。 このデータ ソースの種類では使用できません。|  
 |**[インポート]**|ファイル システムのレポート定義 (.rdl) ファイルから既存のクエリをインポートします。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|  
 |![データセット フィールドの更新](../media/rsqdicon-refreshfields.gif "データセット フィールドの更新")|データ ソースからメタデータを更新します。|  
-|![計算されるメンバーの追加](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "計算されるメンバーの追加")|**[計算されるメンバー ビルダー]** ダイアログ ボックスを表示します。|  
+|![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|**[計算されるメンバー ビルダー]** ダイアログ ボックスを表示します。|  
 |![空のセルの表示の切り替え](../../analysis-services/media/rsqdicon-showemptycells.gif "空のセルの表示の切り替え")|データ ペインに空のセルを表示するかどうかを切り替えます。 これは、MDX で NON EMPTY 句を使用することに相当します。|  
 |![クエリの自動実行](../../analysis-services/media/rsqdicon-autoexecute.gif "クエリの自動実行")|データ ペインで列を削除するなど、変更のたびに自動的にクエリを実行して結果を表示します。 結果はデータ ペインに表示されます。|  
-|![削除](../../analysis-services/media/rsqdicon-delete.gif "削除")|データ ペインで選択した列をクエリから削除します。|  
+|![[削除]](../../analysis-services/media/rsqdicon-delete.gif "[削除]")|データ ペインで選択した列をクエリから削除します。|  
 |![[クエリ パラメーター] ダイアログ ボックスのアイコン](../../analysis-services/media/iconqueryparameter.gif "[クエリ パラメーター] ダイアログ ボックスのアイコン")|**[変数]** ダイアログ ボックスを表示します。 このボタンは、クエリ キューブが選択されている場合にのみ有効になります (変数はクエリ キューブでのみサポートされるため)。 変数に既定値を割り当てた場合、対応するレポート パラメーターが作成されます。|  
 |![クエリを実行する](../../analysis-services/media/rsqdicon-run.gif "クエリを実行する")|クエリを実行し、結果をデータ ペインに表示します。|  
 |![クエリを取り消す](../../analysis-services/media/rsqdicon-cancel.gif "クエリを取り消す")|クエリを取り消します。|  
@@ -77,7 +77,7 @@ ms.locfileid: "48220432"
   
  次の表に各ペインの機能を示します。  
   
-|ペイン|機能|  
+|ペイン|関数|  
 |----------|--------------|  
 |キューブの選択ボタン|現在選択されている InfoCube、MultiProvider、またはその他のキューブを表示します。|  
 |メタデータ/関数ペイン|クエリ テキストの作成に使用できるメタデータや関数がタブ付きウィンドウに一覧表示されます。|  
@@ -96,13 +96,13 @@ ms.locfileid: "48220432"
   
 -   **[テキストとして編集]**  
   
--   **計算されるメンバーを追加**(![計算されるメンバーの追加](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "計算されるメンバーの追加"))  
+-   **[計算されるメンバーの追加]** (![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **空のセルを表示する** (![空のセルの表示の切り替え](../../analysis-services/media/rsqdicon-showemptycells.gif "空のセルの表示の切り替え"))  
   
 -   **自動実行** (![クエリの自動実行](../../analysis-services/media/rsqdicon-autoexecute.gif "クエリの自動実行"))  
   
--   **削除**(![削除](../../analysis-services/media/rsqdicon-delete.gif "削除"))  
+-   **[削除]** (![[削除]](../../analysis-services/media/rsqdicon-delete.gif "[削除]"))  
   
 ## <a name="see-also"></a>参照  
  [共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   

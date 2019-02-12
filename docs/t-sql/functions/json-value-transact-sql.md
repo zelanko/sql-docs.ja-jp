@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -18,12 +18,12 @@ ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: b311660253d893673927966ffe6309d2f3530d79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2df74dbf5ee1205a801ea816c4bd48b255c6c80f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687306"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013393"
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -91,13 +91,13 @@ SET @jsonInfo=N'{
   
 |[パス]|厳密でないモードでの戻り値|厳格モードでの戻り値|詳細|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|NULL|[エラー]|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
+|$|NULL|Error|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
 |$info.type。|N '1'|N '1'|該当なし|  
 |$.info.address.town|N'Bristol'|N'Bristol'|該当なし|  
-|$ .info。"アドレス|NULL|[エラー]|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
-|$info.tags。|NULL|[エラー]|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
-|$info.type[0]。|NULL|[エラー]|配列ではありません。|  
-|$info.none。|NULL|[エラー]|プロパティが存在しません。|  
+|$ .info。"アドレス|NULL|Error|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
+|$info.tags。|NULL|Error|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
+|$info.type[0]。|NULL|Error|配列ではありません。|  
+|$info.none。|NULL|Error|プロパティが存在しません。|  
   
 ## <a name="examples"></a>使用例  
   

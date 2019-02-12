@@ -1,7 +1,7 @@
 ---
 title: datetimeoffset (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 07/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74ab6c88467b20299574003c17fd96ac563dbc25
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 636d6979451769151725ba1743ea8a1f3238ccc9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502578"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043173"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52502578"
   
 ## <a name="datetimeoffset-description"></a>datetimeoffset の説明
   
-|プロパティ|ReplTest1|  
+|プロパティ|[値]|  
 |---|---|
 |構文|**datetimeoffset** [ (*fractional seconds precision*) ]|  
 |使用方法|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
@@ -53,8 +53,8 @@ ms.locfileid: "52502578"
 |精度|100 ナノ秒|  
 |既定値|1900-01-01 00:00:00 00:00|  
 |カレンダー|グレゴリオ暦|  
-|ユーザー定義の 1 秒未満の秒の有効桁数|[ユーザー アカウント制御]|  
-|タイム ゾーン オフセットへの対応と保持|[ユーザー アカウント制御]|  
+|ユーザー定義の 1 秒未満の秒の有効桁数|可|  
+|タイム ゾーン オフセットへの対応と保持|可|  
 |夏時間への対応|いいえ|  
   
 |指定した小数点以下桁数|結果 (有効桁数、小数点以下桁数)|列長 (バイト単位)|秒の小数部の有効桁数|  
@@ -235,7 +235,7 @@ SELECT
   
 |データ型|[出力]|  
 |---|---|
-|**Time**|12:35:29. 1234567|  
+|**[時刻]**|12:35:29. 1234567|  
 |**Date**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
 |**DateTime**|2007-05-08 12:35:29.123|  

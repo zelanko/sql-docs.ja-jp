@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 320737c3a84eb1f01899c14dfb2f4c1eefb60856
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 90a8f755b49e0b4f931325de25abea3654cc7d1f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354475"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013963"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>マップ (レポート ビルダーおよび SSRS)
   レポートにマップを追加すると、地理的背景に対してビジネス データを視覚化することができます。 選択するマップの種類は、レポートでどのような情報を伝えるかによって異なります。 追加できるマップの種類としては、単に場所を表示するマップのほか、バブル サイズが領域内の世帯数に応じて変化するバブル マップ、店舗ごとの最も利益率の高い製品に基づいてマーカーのスタイルが変わるマーカー マップ、店舗間の経路を表示するライン マップがあります。  
@@ -274,6 +274,6 @@ ms.locfileid: "53354475"
   
  [カスタムの場所のマップへの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [レポートをトラブルシューティングします。マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

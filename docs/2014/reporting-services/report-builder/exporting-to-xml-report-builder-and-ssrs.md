@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d0f17e055f4f1ddcf7f19ba58d92c5617c891a5e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: kfile
+ms.openlocfilehash: 88e8dd648610d6cd83af6276fc0bb71449532737
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204751"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015694"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML へのエクスポート (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、レポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。  
@@ -68,7 +68,7 @@ ms.locfileid: "53204751"
 |`DateTime or DateTime Offset`|**xsd:dateTime**|  
 |`Time`|**xsd:string**|  
 |`Boolean`|**xsd:boolean**|  
-|`String`, `Char`|**xsd:string**|  
+|`String`、 `Char`|**xsd:string**|  
 |その他|**xsd:string**|  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  

@@ -3,6 +3,7 @@ title: プログラムによるパスワードの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d296eb992dc9683faee721e2b825105c82f362e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c42f8bf47d90bde4f6ffdaa3bb7e22b88c238bb7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675041"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010630"
 ---
 # <a name="changing-passwords-programmatically"></a>プログラムによるパスワードの変更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,15 +43,15 @@ ms.locfileid: "51675041"
   
 |SQL Server エラー コード|エラー メッセージ|  
 |---------------------------|-------------------|  
-|15113|ユーザー '%.*ls' はログインできませんでした。理由: パスワードの検証に失敗しました。 アカウントはロックアウトされています。|  
-|18463|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードを変更できませんでした。 この時点ではパスワードを使用できません。|  
-|18464|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードを変更できませんでした。 このパスワードは短すぎるので、Windows ポリシーの要件を満たしません。|  
-|18465|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードを変更できませんでした。 パスワードは長すぎるため、ポリシー要件を満たしません。|  
-|18466|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードを変更できませんでした。 このパスワードはあまり複雑ではないので、Windows のポリシー要件を満たしません。|  
-|18467|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードを変更できませんでした。 パスワードがパスワード フィルター DLL の要件を満たしていません。|  
-|18468|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードを変更できませんでした。 パスワードの検証で予期しないエラーが発生しました。|  
-|18487|ユーザー '%.*ls' はログインできませんでした。 理由: このアカウントのパスワードの有効期限が切れています。|  
-|18488|ユーザー '%.*ls' はログインできませんでした。 理由: このアカウントのパスワードを変更する必要があります。|  
+|15113|ユーザーはログインできませんでした ' %. * ls' 理由。パスワードの検証に失敗しました。 アカウントはロックアウトされています。|  
+|18463|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードの変更が失敗しました。 この時点ではパスワードを使用できません。|  
+|18464|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードの変更が失敗しました。 このパスワードは短すぎるので、Windows ポリシーの要件を満たしません。|  
+|18465|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードの変更が失敗しました。 パスワードは長すぎるため、ポリシー要件を満たしません。|  
+|18466|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードの変更が失敗しました。 このパスワードはあまり複雑ではないので、Windows のポリシー要件を満たしません。|  
+|18467|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードの変更が失敗しました。 パスワードがパスワード フィルター DLL の要件を満たしていません。|  
+|18468|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードの変更が失敗しました。 パスワードの検証で予期しないエラーが発生しました。|  
+|18487|ユーザー '%.*ls' はログインできませんでした。 理由: アカウントのパスワードの有効期限が切れました。|  
+|18488|ユーザー '%.*ls' はログインできませんでした。 理由: アカウントのパスワードを変更する必要があります。|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがユーザー インターフェイスのパスワードの有効期限をサポートしていると、プログラムを使用します。  

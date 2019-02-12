@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3a5c489125d4a35b5c886ba6d6304b22ceec5c4a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: cfaaa8504a018bad1740c1fb381471e9b4b82878
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375354"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011044"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>カスタム レポート アイテムの実行時コンポーネントの作成
   カスタム レポート アイテムの実行時コンポーネントは、任意の CLS 準拠の言語を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コンポーネントとして実装され、実行時にレポート プロセッサによって呼び出されます。 実行時コンポーネントのプロパティをデザイン環境で定義するには、カスタム レポート アイテムの対応するデザイン時コンポーネントを変更します。  
@@ -137,6 +137,6 @@ namespace Microsoft.Samples.ReportingServices
  [カスタム レポート アイテムのアーキテクチャ](custom-report-item-architecture.md)   
  [カスタム レポート アイテムのデザイン時コンポーネントの作成](creating-a-custom-report-item-design-time-component.md)   
  [カスタム レポート アイテムのクラス ライブラリ](custom-report-item-class-libraries.md)   
- [操作方法：カスタム レポート アイテムを配置します。](how-to-deploy-a-custom-report-item.md)  
+ [方法:カスタム レポート アイテムを配置する](how-to-deploy-a-custom-report-item.md)  
   
   

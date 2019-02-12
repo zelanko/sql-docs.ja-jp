@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8365b0718f389e6417f8f7e1a76cf403e268b574
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e8ad4dbb79f67591abbd1853757cddc749bf225d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081827"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014723"
 ---
 # <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>SetEmailConfiguration メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバーが電子メール送信に使用する電子メール配信拡張機能を構成します。  
@@ -64,7 +64,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
   
  このメソッドでは、レポート サーバー構成ファイルの **SendUsing** エントリを 1 以外の値に設定することはできません。 SMTP メール以外を使用するようにレポート サーバーを構成するには、構成ファイルを手動で編集する必要があります。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3071399edd3a7138d4cee68a162f0c44cfca29ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218232"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032973"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>[設定] (レポート ビルダーの [オプション] ダイアログ ボックス) (レポート ビルダー)
   をクリックして、**レポート ビルダー**ボタンをクリックし、をクリックし、**オプション**最近使ったファイルとの接続を表示するためのオプションを設定します。 既定のレポート サーバーを変更することも、既定のレポート サーバーがなければ追加することもできます。  
@@ -47,6 +47,6 @@ ms.locfileid: "48218232"
  最近使ったサイトとサーバー、共有データセット、共有データ ソース接続、およびドキュメントの現在の一覧をクリアします。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビルダー ダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

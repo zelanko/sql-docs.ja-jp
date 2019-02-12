@@ -3,9 +3,8 @@ title: sys.pdw_loader_run_stages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: pdw
-ms.reviewer: ''
 ms.technology: system-objects
+ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,17 +13,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 52e2946ea70425e32d6157c704ffaa36af17df5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed0721ada78b3aa70741510818c5e312b3bd4d55
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642540"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012634"
 ---
 # <a name="syspdwloaderrunstages-transact-sql"></a>sys.pdw_loader_run_stages (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  進行中と完了したロード操作に関する情報を含む[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]します。 情報は、システムの再起動の間で永続化します。  
+  進行中と完了したロード操作に関する情報を格納 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。 情報は、システムの再起動の間で永続化します。  
   
 |||||  
 |-|-|-|-|  

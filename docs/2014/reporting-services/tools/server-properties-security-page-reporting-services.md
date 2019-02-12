@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9513e66b92a97f1d546d7b33cc20849e8bff868a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 89d8b7165bf32d4d4d300f753b9c3821b6f23134
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161442"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041173"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>[サーバーのプロパティ]\([セキュリティ] ページ) - Reporting Services
   このページを使用すると、レポート サーバーを危険にさらす可能性のある機能を無効にできます。 これらの機能を無効にすることで一部の機能が制限されますが、特定の脅威を緩和することで、レポート サーバー全体のセキュリティを向上させることができます。  
@@ -34,9 +34,9 @@ ms.locfileid: "48161442"
  **[カスタム レポートを有効にする]**  
  ユーザーがレポート ビルダーのレポートからアドホック クエリを実行できるようにするかどうかを指定します。実行できるようにした場合は、ユーザーが対象データをクリックすると新しいレポートが自動的に生成されます。  
   
- このオプションの設定によって、レポート サーバー上の `EnableLoadReportDefinition` プロパティの設定が `True` になるか `False` になるかが決まります。 このオプションをオフにした場合、プロパティに設定されます`False`とレポート サーバーはデータの探索中に作成されるクリックスルー レポートを生成しません。 `LoadReportDefinition` メソッドの呼び出しはすべてブロックされます。  
+ このオプションの設定によって、レポート サーバー上の `EnableLoadReportDefinition` プロパティの設定が `True` になるか `False` になるかが決まります。 このオプションをオフにするとプロパティが `False` に設定され、レポート サーバーはデータ探索中に作成されるクリックスルー レポートを生成しません。 `LoadReportDefinition` メソッドの呼び出しはすべてブロックされます。  
   
- 悪意のあるユーザーがレポート サーバーを過、サービス拒否攻撃を起動するため、脅威を緩和するこのオプションをオフにする`LoadReportDefinition`要求。  
+ この機能を無効にすることで、悪意のあるユーザーによる `LoadReportDefinition` 要求でレポート サーバーが過負荷になるサービス拒否攻撃の脅威を軽減することができます。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーのプロパティを設定する (Management Studio)](set-report-server-properties-management-studio.md)   

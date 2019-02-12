@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 574d5520c150aa26f81ae8393872acb49b9d87bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8777faa32fd31bb31a161f8e4bcb6c297ff2c4b9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141502"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013364"
 ---
 # <a name="getdatabaseversiondisplayname-method-wmi"></a>GetDatabaseVersionDisplayName メソッド (WMI)
   指定したレポート サーバー データベースのバージョン文字列の表示名を取得します。  
@@ -61,7 +61,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

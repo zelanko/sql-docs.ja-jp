@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d5dba03f5e64d06d7c1d8dddd4df36b3f9326e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1c04e3d642b267660b8527502a248a386c8ba93d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358124"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010673"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーのトレース ログは、レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理によって実行された操作を含め、レポート サーバー サービスの操作に関する詳細な情報が記録されている ASCII テキスト ファイルです。 トレース ログ ファイルには、他のログ ファイルに記録されている冗長な情報、およびトレース ログ以外からは入手できない追加情報が含まれています。 トレース ログ情報は、レポート サーバーを含むアプリケーションをデバッグしている場合、またはイベント ログや実行ログに書き込まれた特定の問題を調査している場合に役立ちます。  

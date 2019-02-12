@@ -27,13 +27,13 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 619f96921f1fbbaf3d1eec8d2c89a25491b46180
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 8755528b92152431c948dd06ec9d2f012178ec79
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364774"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015753"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS)
   マップは、レイヤーのコレクションです。 マップをレポートに追加する場合は、先にレイヤーを定義します。 追加のレイヤーを作成するには、マップ レイヤー ウィザードを実行します。  
@@ -283,6 +283,6 @@ ms.locfileid: "53364774"
   
 ## <a name="see-also"></a>参照  
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [レポートをトラブルシューティングします。マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

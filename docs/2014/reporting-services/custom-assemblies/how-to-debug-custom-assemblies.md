@@ -1,5 +1,5 @@
 ---
-title: カスタム アセンブリをデバッグする方法 | Microsoft Docs
+title: 操作方法:カスタム アセンブリのデバッグ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d151641736523457e4c22ea94f50fb0652a73aa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: da4171b624fd4caf4eabae5cec50c4b6c19578b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159732"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011494"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>カスタム アセンブリをデバッグする方法
+# <a name="how-to-debug-custom-assemblies"></a>操作方法:カスタム アセンブリをデバッグします。
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] には、カスタム アセンブリ コードを分析してエラーを探すのに役立ついくつかのデバッグ ツールが用意されています。 どのツールが最適であるかは、何を実行するかによって異なります。 この例では [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]を使用します。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のカスタム アセンブリの設計、開発、およびテストに関して推奨する方法は、テスト レポートおよびカスタム アセンブリを含むソリューションを作成することです。  

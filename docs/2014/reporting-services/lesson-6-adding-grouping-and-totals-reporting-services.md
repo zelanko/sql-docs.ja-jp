@@ -1,5 +1,5 @@
 ---
-title: レッスン 6:追加のグループ化と集計 (Reporting Services) |Microsoft Docs
+title: 'レッスン 6: 追加のグループ化と集計 (Reporting Services) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7565cf64d64197a261c36fb755e3f20a65f1fa27
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7bd3261a6669b1677fbfeff23b0017e622600007
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356462"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012743"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>レッスン 6:グループと合計の追加 (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>レッスン 6: グループと合計の追加 (Reporting Services)
   レポートにグループと合計を追加すると、データを整理して要約できます。  
   
  レポートに集計途中経過を追加する方法の詳細については、curah.microsoft.com のキュレーション[Reporting Services (SSRS) レポートに合計を追加](https://go.microsoft.com/fwlink/p/?LinkId=403698)します。  

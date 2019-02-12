@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f43168d9085ba513094f9cce05c16a173c260e68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 73549c4e578b65d87da4c9863f537bc898973657
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197586"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030073"
 ---
 # <a name="dependent-items-page-report-manager"></a>[依存アイテム] ページ (レポート マネージャー)
   [依存アイテム] ページには、共有データ ソースを参照するレポートおよびモデルの一覧を表示できます。 各アイテムの種類のアイコンはそのアイテムがレポートであるか、またはモデルであるかを示します。 このページはリスト ビューまたは詳細ビューで表示できます。 アイテムごとの詳細な情報を表示するには詳細ビューを使用します。 詳細ビューでは、より多くのページ オプションを利用できます。 共有データ ソースを管理しやすくするために、このページには、データ ソースを使用するレポートおよびモデルへのリンク、レポートやモデルを最後に実行または変更した時点の基準、使用しないレポートやモデルを簡単に削除できる [削除] ボタン、レポートやモデルが必要かどうかを判断する間それらを別の場所に移動できる [移動] ボタンがあります。  
@@ -65,7 +65,7 @@ ms.locfileid: "48197586"
 ## <a name="see-also"></a>参照  
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [[コンテンツ] ページ (レポート マネージャー)](../../2014/reporting-services/contents-page-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

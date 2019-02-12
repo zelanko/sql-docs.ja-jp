@@ -15,16 +15,16 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c19d5e43169142a8e3527fca48bb355e5f1e8f7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ace1b9a52853ed96ccc9cf74099760c30332dfd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713080"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015237"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>ロケーション パスでの選択述語の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47713080"
 > [!NOTE]  
 >  XPath の場合は、この XPath 実装の制限についての情報とそのと W3C 仕様の違いは、次を参照してください。[を使用して XPath クエリの概要&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)します。  
   
-## <a name="selection-predicate-example-1"></a>選択述語: 例 1  
+## <a name="selection-predicate-example-1"></a>選択述語。例 1  
  すべての現在のコンテキスト ノードから次の XPath 式 (ロケーション パス) を選択、 **\<顧客 >** 子要素が、 **CustomerID** ALFKI の値を持つ属性。  
   
 ```  
@@ -50,7 +50,7 @@ ms.locfileid: "47713080"
 /Customer[@CustomerID="ALFKI"]  
 ```  
   
-## <a name="selection-predicate-example-2"></a>選択述語: 例 2  
+## <a name="selection-predicate-example-2"></a>選択述語。例 2  
  すべての現在のコンテキスト ノードから次の XPath 式 (ロケーション パス) を選択、 **\<順序 >** 孫要素が、 **SalesOrderID**値 1 を持つ属性。  
   
 ```  
@@ -65,7 +65,7 @@ ms.locfileid: "47713080"
 /Customer/Order[@SalesOrderID="1"]  
 ```  
   
-## <a name="selection-predicate-example-3"></a>選択述語: 例 3  
+## <a name="selection-predicate-example-3"></a>選択述語。例 3  
  すべての現在のコンテキスト ノードから次の XPath 式 (ロケーション パス) を選択、 **\<顧客 >** 子が 1 つまたは複数 **\<ContactName >** 子:  
   
 ```  
@@ -84,7 +84,7 @@ child::Customer[child::ContactName]
 Customer[ContactName]  
 ```  
   
-## <a name="selection-predicate-example-4"></a>選択述語: 例 4  
+## <a name="selection-predicate-example-4"></a>選択述語。例 4  
  次の XPath 式を選択します**\<顧客 >** がない、コンテキスト ノードの要素の子 **\<ContactName >** 子要素。  
   
 ```  
@@ -101,7 +101,7 @@ child::Customer[not(child::ContactName)]
 Customer[not(ContactName)]  
 ```  
   
-## <a name="selection-predicate-example-5"></a>選択述語: 例 5  
+## <a name="selection-predicate-example-5"></a>選択述語。例 5  
  すべての現在のコンテキスト ノードから次の XPath 式を選択、 **\<顧客 >** 子を持つ、 **CustomerID**属性。  
   
 ```  
@@ -116,7 +116,7 @@ child::Customer[attribute::CustomerID]
 Customer[@CustomerID]  
 ```  
   
-## <a name="selection-predicate-example-6"></a>選択述語 : 例 6  
+## <a name="selection-predicate-example-6"></a>選択述語。例 6  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 では、次の例に示すように、述語にクロス積を含む XPath クエリがサポートされています。  
   
 ```  

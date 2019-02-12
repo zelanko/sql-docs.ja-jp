@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 38ea7c03-4754-4e71-896a-f68cc2c98ce2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a07f977a01c6107b345892f4ad623b3ca2cb941
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367504"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010803"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>時系列予測の DMX のチュートリアル
   このチュートリアルでは、時系列マイニング構造を作成し、3 つのカスタム時系列マイニング モデルを作成し、それらのモデルを使用して予測を行う方法を学習します。  
@@ -53,7 +52,7 @@ ms.locfileid: "53367504"
  [レッスン 4:DMX を使用して時系列予測の作成](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
  このレッスンでは、時系列予測を作成する方法を学習します。  
   
- [レッスン 5:タイム シリーズの拡張モデル](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [レッスン 5: タイム シリーズの拡張モデル](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
  このレッスンでは、`EXTEND_MODEL_CASES` パラメーターを使用して、予測を行うときに新しいデータでモデルを更新する方法を学習します。  
   
 ## <a name="requirements"></a>必要条件  

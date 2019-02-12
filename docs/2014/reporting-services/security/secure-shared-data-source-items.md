@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d888ef0f3019e38e043ebe00c68e03f82e924f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6b159467fc511292ecb1ae3832a04c73dabdd251
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067248"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009644"
 ---
 # <a name="secure-shared-data-source-items"></a>共有データ ソース アイテムをセキュリティで保護する
   共有データ ソース アイテムにセキュリティを設定して、そのアイテムへのアクセスを有効または無効にすることができます。  
@@ -41,10 +41,10 @@ ms.locfileid: "48067248"
 |アイテムへのセキュリティの設定|共有データ ソースへのアクセスを制御するロールの割り当てを作成および変更します。 このタスクは、"データ ソースの表示" タスク、または "データ ソースの管理" タスクのいずれかと併用する必要があります。 それ以外の場合、ユーザーはアイテムを選択できないので効果がありません。|  
   
 ## <a name="see-also"></a>参照  
- [レポート データ ソースを管理します。](../report-data/manage-report-data-sources.md)   
+ [レポート データ ソースを管理する](../report-data/manage-report-data-sources.md)   
  [フォルダーをセキュリティで保護する](secure-folders.md)   
- [レポートとリソースを保護します。](secure-reports-and-resources.md)   
+ [レポートとリソースの保護](secure-reports-and-resources.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
- [Reporting Services データ ソースに資格情報を保存する](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Store Credentials in a Reporting Services Data Source](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

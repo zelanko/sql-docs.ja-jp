@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e8bddd67dca8a97d0279b002784c74e9666e5a15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5a61ae676a0fb863d289532a4ce3e28c9751c8fa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076522"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041363"
 ---
 # <a name="verifying-a-report-run"></a>レポート実行の確認
   レポート処理の状態に関する情報を表示するには、ログ ファイルを使用するか、またはレポート マネージャーでレポートと共に表示される状態の情報を参照します。  
@@ -47,7 +47,7 @@ ms.locfileid: "48076522"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)   
- [レポート処理プロパティを設定します。](set-report-processing-properties.md)   
+ [レポート処理プロパティの設定](set-report-processing-properties.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)  
   
   

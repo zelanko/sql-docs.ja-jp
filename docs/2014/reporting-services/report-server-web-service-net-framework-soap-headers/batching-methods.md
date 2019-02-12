@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 56e58bfdb36e464aa6048343350ea929971989f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0def97e31cb34ac9b764b027b622c5ba605d9a7a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112642"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017133"
 ---
 # <a name="batching-methods"></a>メソッドのバッチ処理
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SOAP ヘッダーを使用することによって、1 つの操作に複数の Web サービス メソッドを含めることができます。 メソッドは、1 つのデータベース トランザクションのスコープ内で、呼び出された順序で実行されます。  

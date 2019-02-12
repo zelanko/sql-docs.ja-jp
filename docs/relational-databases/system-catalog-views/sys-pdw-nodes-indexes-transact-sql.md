@@ -2,8 +2,8 @@
 title: sys.pdw_nodes_indexes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,17 +13,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1eb00d935eccd8f6af4d4ffef1c01fe42824f355
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c13e41abea44bdbe0f954518f42aab118360a155
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856410"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012383"
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  インデックスを返します[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。  
+  インデックスを返します [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。  
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
@@ -45,7 +45,7 @@ ms.locfileid: "47856410"
 |allow_page_locks|**bit**|1 = インデックスはページ ロックを許可します。|常に 1 です。|  
 |has_filter|**bit**|0 = インデックスにフィルターはありません。|常に 0 です。|  
 |filter_definition|**nvarchar(max)**|フィルター選択されたインデックスに含まれる行のサブセットの式。|常に NULL になります。|  
-|pdw_node_id|**int**|一意の識別子、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノード。|NOT NULL|  
+|pdw_node_id|**int**|一意の識別子、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ノードです。|NOT NULL|  
   
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  

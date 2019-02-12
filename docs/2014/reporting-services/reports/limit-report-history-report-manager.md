@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d6f4508dda8496d9065655f5a8e298feaa4e9ad3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e7f600e646e4690ed735b908861bd61516337cfd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134033"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042863"
 ---
 # <a name="limit-report-history-report-manager"></a>レポート履歴を制限する (レポート マネージャー)
   レポート履歴とは、時間の経過と共に作成されるレポート スナップショットの集まりです。 レポート履歴は必要時に作成できるほか、どの程度の頻度でスナップショットを作成し、レポート履歴に追加するかをスケジュールで設定することもできます。  
@@ -48,7 +48,7 @@ ms.locfileid: "48134033"
 4.  レポートのオプションを選択し、 **[適用]** をクリックします。 各オプションに関する詳細については、「[[スナップショット オプション] プロパティ ページ &#40;レポート マネージャー&#41;](../snapshot-options-properties-page-report-manager.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート履歴にスナップショットを追加&#40;レポート マネージャー&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)  
   
   

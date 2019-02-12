@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 521f3772-043a-4bfa-a3d6-d5e3405ac09c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 933c23926febafa595a538105cc84c281ddb3554
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fd6e8afa8a60cb01367eb538f191052de7cf5621
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104482"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015933"
 ---
 # <a name="document-outline"></a>[ドキュメント アウトライン]
   [ドキュメント アウトライン] ウィンドウを使用すると、レポート内のレポート アイテムの階層を表示できます。 Tablix データ領域には、Tablix セルに含まれるテキスト ボックスおよびその他のレポート アイテムがすべて表示されます。 デザイン画面でレポート アイテムを選択すると、[ドキュメント アウトライン] ウィンドウでは、対応するレポート アイテムが選択されます。 このビューを使用すると、デザイン画面上でレポート アイテムを探すことができます。 たとえば、式にエラーが含まれるレポートをプレビューすると、出力ウィンドウに各エラーのメッセージが表示されます。 メッセージには、エラーを含む式が含まれているテキスト ボックスの名前が表示されます。 [ドキュメント アウトライン] ウィンドウでテキスト ボックスの名前をクリックすると、デザイン画面にそのテキスト ボックスが選択された状態で表示され、エラーを含む式を確認できます。  

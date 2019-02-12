@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 33a91c27f78e3bbf2dfec3aeb71f2f2230c9376d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528231"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009674"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>レッスン 3: データセット テーブル レポート (Reporting Services) の定義
   データ ソースを定義した後、データセットを定義する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、レポートで使用するデータは *データセット*に格納されます。 データセットには、データ ソースへのポインターと、レポートで使用されるクエリ、および計算フィールドと変数が含まれています。  
@@ -74,6 +74,6 @@ ms.locfileid: "52528231"
 ## <a name="see-also"></a>参照  
  [クエリ デザイン ツールでレポート デザイナーの SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [SQL Server の接続の種類 &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
- [チュートリアル:TRANSACT-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [チュートリアル: Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

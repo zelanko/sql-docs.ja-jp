@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f0112a4a9ae89dbfc2aedad38c16056a4d246964
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5b80a150bb44690bb4fbc836ba12f41fa8f82c28
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174712"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043063"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション)
   データ ドリブン サブスクリプションでは、外部データ ソースからデータを取得するクエリまたはコマンドによって、動的サブスクリプション データが提供されます。 サブスクリプション データは、データ ドリブン サブスクリプション処理の要件を満たす、サポートされているデータ ソースから取得できます。 クエリまたはコマンドの構文は、レポート サーバーと一緒にインストールされたデータ処理拡張機能に対して有効である必要があります。  
@@ -79,9 +79,9 @@ ms.locfileid: "48174712"
   
  これらの変更のいずれかを行う場合は、サブスクリプションを更新する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [作成、変更、およびデータ ドリブン サブスクリプションの削除](data-driven-subscriptions.md)   
- [データ ドリブン サブスクリプション](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   
   

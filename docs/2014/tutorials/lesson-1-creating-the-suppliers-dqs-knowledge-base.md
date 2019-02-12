@@ -1,26 +1,23 @@
 ---
-title: 'レッスン 1: Suppliers DQS ナレッジ ベースを作成する |Microsoft Docs'
+title: レッスン 1:Suppliers DQS ナレッジ ベースを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f2b4fa3328f2c504be6c1ff761a558a6102a5299
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7aa0e4755de7f358596c7ce477367d84646fd176
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176492"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010954"
 ---
-# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>レッスン 1: Suppliers DQS ナレッジ ベースを作成する
+# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>レッスン 1:Suppliers DQS ナレッジ ベースを作成する
   という名前の DQS ナレッジ ベースを作成するこのレッスンで**Suppliers**仕入先データに関するナレッジ (メタデータ) とします。 ナレッジ ベースを使用して、入力仕入先データのクレンジングおよび照合アクティビティを実行します。 クレンジング アクティビティでは、不正/無効なデータの識別、不正確なデータの修正、修正/提案の提示、データの標準化、および詳細情報を含むデータの拡充が行われます。 照合アクティビティでは、データを比較して、データ上の重複項目を削除するために、データ内で類似したレコード (ただし、若干異なる) を特定します。  
   
  対話型およびコンピューター支援型の両方のプロセスを使用すると、ナレッジ ベースを作成、構築、および管理できます。 ナレッジ ベース内のナレッジはドメインに保持され、各ドメインはクレンジングまたは照合するデータ内のデータ フィールドに固有です。  
@@ -46,6 +43,6 @@ ms.locfileid: "48176492"
 -   ナレッジ ベースをクレンジングおよび照合アクティビティで使用できるように、ナレッジ ベースをパブリッシュします。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 1: ナレッジ ベースとドメインを作成する](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
+ [タスク 1:ナレッジ ベースとドメインを作成します。](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
   
   

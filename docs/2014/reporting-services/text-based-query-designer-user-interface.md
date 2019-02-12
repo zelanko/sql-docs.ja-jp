@@ -15,14 +15,14 @@ helpviewer_keywords:
 - query designers [Reporting Services], text-based
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 36805b803d52652d0b072f6124eb2f90cf9617c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 61c57d661a9865c9ced6912af921dd45b9e1db74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085742"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012393"
 ---
 # <a name="text-based-query-designer-user-interface"></a>テキストベースのクエリ デザイナーのユーザー インターフェイス
   デザイン時に、データ ソースでサポートされているクエリ言語でクエリを指定し、クエリを実行し、結果を表示するには、テキスト ベースのクエリ デザイナーを使用します。 複数の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、カスタム データ処理拡張機能のクエリまたはコマンド構文、および式としてのクエリを指定できます。 テキスト ベースのクエリ デザイナーはクエリを前処理せず、あらゆる種類のクエリ構文に対応できるため、これは多くの種類のデータ ソースで既定のクエリ デザイナー ツールになっています。  
@@ -52,7 +52,7 @@ ms.locfileid: "48085742"
   
 |ペイン|機能|  
 |----------|--------------|  
-|クエリ|[!INCLUDE[tsql](../includes/tsql-md.md)] クエリ テキストを表示します。 [!INCLUDE[tsql](../includes/tsql-md.md)] クエリを記述または編集する際に、このペインを使用します。|  
+|Query|[!INCLUDE[tsql](../includes/tsql-md.md)] クエリ テキストを表示します。 [!INCLUDE[tsql](../includes/tsql-md.md)] クエリを記述または編集する際に、このペインを使用します。|  
 |結果|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]** をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|  
   
 #### <a name="example"></a>例  

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2541fab45a948465a4237f13f86eb4ae520594c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 00dbe62d042618fdf61ef07f2ace5ba2acb2e11e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082432"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013044"
 ---
 # <a name="system-level-tasks"></a>システムレベルのタスク
-  システムレベルのタスクとは、レポート サーバー サイト全体に適用される操作に関連した権限を集めたタスクです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはこの他に、特定のアイテムに適用されるアイテムレベルのタスクがあります。 詳細については、「 [アイテムレベルのタスク](tasks-and-permissions-item-level-tasks.md)」を参照してください。 タスクと一般的な権限の詳細については、次を参照してください。[タスクと権限](tasks-and-permissions.md)します。  
+  システムレベルのタスクとは、レポート サーバー サイト全体に適用される操作に関連した権限を集めたタスクです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはこの他に、特定のアイテムに適用されるアイテムレベルのタスクがあります。 詳細については、「 [アイテムレベルのタスク](tasks-and-permissions-item-level-tasks.md)」を参照してください。 一般的なタスクおよび権限の詳細については、「 [タスクと権限](tasks-and-permissions.md)」を参照してください。  
   
 > [!NOTE]  
 >  プログラムでこれらのタスクを使用して処理を実行している場合、システムレベルのタスクをサポートしているメソッドを使用する必要があります。 詳細については、「 <xref:ReportService2010.ReportingService2010.ListTasks%2A> および <xref:ReportService2010.ReportingService2010.ListRoles%2A>」を参照してください。  

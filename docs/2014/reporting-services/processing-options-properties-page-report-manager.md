@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cc57e9b4e38377769006738ed44427b4a52c06ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7265c833b5fbfe4c2018de895d7a488501304486
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076492"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013103"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>[処理オプション] プロパティ ページ (レポート マネージャー)
   現在選択されているレポートのレポート実行プロパティを設定するには、[処理オプション] プロパティ ページを使用します。 これらのオプションでは、レポートのデータ処理を行うタイミングを決定します。 これらのオプションを設定して、オフピーク時間中にレポート データを取得できます。 また、頻繁にアクセスされるレポートがある場合に、複数のユーザーが同時に同じレポートにアクセスしたときの待ち時間をなくすために、そのコピーを一時的にキャッシュすることができます。  
@@ -62,7 +62,7 @@ ms.locfileid: "48076492"
  この値は、レポート サーバーでのレポート処理に適用されます。 レポートにデータを提供するデータベース サーバーでのデータ処理に対してタイムアウトは設定されません。 ただし、データ処理とレポート処理の両方を十分に完了できる時間を指定する必要があります。 レポート処理のカウントは、レポートを選択したときに開始され、レポートを開くと終了します。  
   
 ## <a name="see-also"></a>参照  
- [レポート処理プロパティを設定します。](report-server/set-report-processing-properties.md)   
+ [レポート処理プロパティの設定](report-server/set-report-processing-properties.md)   
  [レポートのキャッシュ &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  

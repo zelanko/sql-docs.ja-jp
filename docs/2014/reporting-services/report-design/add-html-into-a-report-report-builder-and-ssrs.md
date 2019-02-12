@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ebee6948403822d7e4a9f8d406d1000b27ee2468
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 147daad87bf9ec77d2c686d44d367e85a07ab4c8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182032"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043023"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>レポートへの HTML の追加 (レポート ビルダーおよび SSRS)
   レポートでプレースホルダーを使用すると、データセットのフィールドから HTML をインポートできます。 既定のプレースホルダーはプレーン テキストを表すため、プレースホルダーのマークアップ タイプを HTML に変更する必要があります。 詳細については、[「レポートへの HTML のインポート &#40;レポート ビルダーおよび SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)」を参照してください。  
@@ -43,8 +43,8 @@ ms.locfileid: "48182032"
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [数値と日付の書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [線、色、および画像の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](images-report-builder-and-ssrs.md)   
- [[全般] ([プレースホルダーのプロパティ] ダイアログ ボックス) &#40;レポート ビルダーおよび SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)  
+ [数値と日付の書式設定 (レポート ビルダーおよび SSRS)](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [線、色、および画像の書式設定 (レポート ビルダーおよび SSRS)](images-report-builder-and-ssrs.md)   
+ [[全般] ([プレースホルダーのプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

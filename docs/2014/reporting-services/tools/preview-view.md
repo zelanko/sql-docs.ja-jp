@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5ac2aa3d352de78fae6c3d9613bef2df390e46fa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e3644de6d5a11e801e2b41d7d7aa517bad771714
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354030"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033263"
 ---
 # <a name="preview-view"></a>[プレビュー] ビュー
   **[プレビュー]** ビューを使用すると、表示レポートを表示できます。 レポートをプレビューすると、レポート デザイナーでは、レポートがローカルで実行され、[プレビュー] ビューに表示されます。 プレビュー モードでは、レポート全体が処理されます。 レポートに複雑なクエリや大量のデータが含まれている場合、初回のプレビューは、完了するまでに数分かかることがあります。 その後の変更内容が、レポートの形式に関するのみである場合、プレビュー時にはキャッシュされたデータが使用されます。  

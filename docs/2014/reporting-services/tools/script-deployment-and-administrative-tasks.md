@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 01d506f8db09b8bc30b5587d6d98ecec793adab9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: bf378f94e8a3a010f2959a2c8ce1bd5e69f005bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398875"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013703"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>配置タスクおよび管理タスクのスクリプト作成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、スクリプトを使用した日常的なインストール、配置、および管理タスクの自動化をサポートします。 レポート サーバーの配置は複数の段階を伴うプロセスです。 配置を構成するためには複数のツールとプロセスを使用する必要があります。すべての作業を自動化する単一のプログラムやアプローチは存在しません。  

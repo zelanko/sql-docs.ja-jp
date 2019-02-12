@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 60c12e1ea7f184770d07fcd4af42b81ca41d13db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 731d0eb5f61bd9b9002e674a9dc276db5621591a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082019"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030563"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>データ接続またはデータ ソースの追加および確認 (レポート ビルダーおよび SSRS)
   レポート ビルダーでは、レポート サーバーから共有データ ソースを追加することも、レポートで使用される埋め込みデータ ソースを作成することもできます。 レポート デザイナーでは、共有データ ソースまたは埋め込みデータ ソースを作成して、レポート サーバーに配置することができます。  
@@ -59,7 +59,7 @@ ms.locfileid: "48082019"
   
     2.  次の選択肢の 1 つを使用して、接続文字列を指定します。  
   
-    -   **[接続文字列]** ボックスに接続文字列を直接入力します。 接続文字列の例の一覧は、次を参照してください。[データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)します。  
+    -   **[接続文字列]** ボックスに接続文字列を直接入力します。 接続文字列の例の一覧については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)」を参照してください。  
   
     -   式 (**[fx]** ) ボタンをクリックして、接続文字列を評価する式を作成します。 **[式]** ダイアログ ボックスで、式ペインに式を直接入力します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48082019"
   
 2.  **[接続テスト]** をクリックします。  
   
-3.  接続に成功すると、"接続が正常に作成されました" というメッセージが表示されます。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  接続が成功した場合は、次のメッセージが表示されます。「接続が正常に作成します。」 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  接続に成功しなかった場合は、"データ ソースに接続できません。" というメッセージが表示されます。  
+4.  接続が成功しなかった場合は、次のメッセージが表示されます。「データ ソースに接続できません。」  
   
 5.  **[詳細]** をクリックし、情報に基づいて問題を修正します。  
   

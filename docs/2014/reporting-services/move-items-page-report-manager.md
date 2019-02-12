@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a6c4d822448b452cd66cbc59beffb8fe2d6f0fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082752"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009687"
 ---
 # <a name="move-items-page-report-manager"></a>[<ItemName> を移動] ページ (レポート マネージャー)
   [アイテムの移動] ページは、レポート、フォルダー、またはその他のアイテムを、レポート サーバー上の新しい場所に移動するときに使用します。 レポート サーバーの名前空間内の移動先を参照する際は、移動先のパスを入力することも、ツリー ビューを使用することもできます。 移動できるアイテムは、移動する権限を持っていて、現在のレポート サーバーに保存されているアイテムに限ります。  

@@ -2,10 +2,8 @@
 title: sys.database_firewall_rules (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.prod: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.database_firewall_rules_TSQL
@@ -22,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e224bec27ba3151fb531f5ad0ce9676a4e3a8d2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59c59150136910e2d0818fe93ff4811ed3262d8d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789510"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012323"
 ---
 # <a name="sysdatabasefirewallrules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,9 +37,9 @@ ms.locfileid: "47789510"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |id|**INTEGER**|データベース レベルのファイアウォール設定の識別子。|  
-|NAME|**NVARCHAR (128)**|データベース レベルのファイアウォール設定を説明し、区別するために選択した名前。|  
-|start_ip_address|**VARCHAR (50)**|データベース レベルのファイアウォール設定の範囲において最も小さい IP アドレス。 これ以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスへの接続を試みることができます。 最下位の IP アドレスは`0.0.0.0`します。|  
-|end_ip_address|**VARCHAR (50)**|データベース レベルのファイアウォール設定の範囲において最も大きい IP アドレス。 IP アドレス以下への接続にこれを試みる、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]インスタンス。 最上位の IP アドレスは`255.255.255.255`します。<br /><br /> 注: Windows Azure の接続試行が許可されますこの両方のフィールドと**start_ip_address** equals をフィールド`0.0.0.0`します。|  
+|NAME|**NVARCHAR(128)**|データベース レベルのファイアウォール設定を説明し、区別するために選択した名前。|  
+|start_ip_address|**VARCHAR(50)**|データベース レベルのファイアウォール設定の範囲において最も小さい IP アドレス。 これ以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスへの接続を試みることができます。 指定可能な最小 IP アドレスは `0.0.0.0` です。|  
+|end_ip_address|**VARCHAR(50)**|データベース レベルのファイアウォール設定の範囲において最も大きい IP アドレス。 これ以下の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスへの接続を試みることができます。 指定可能な最大 IP アドレスは `255.255.255.255` です。<br /><br /> 注:Windows Azure の接続試行が許可されますこの両方のフィールドと**start_ip_address** equals をフィールド`0.0.0.0`します。|  
 |create_date|**DATETIME**|データベース レベルのファイアウォール設定が作成された UTC 日時。|  
 |modify_date|**DATETIME**|データベース レベルのファイアウォール設定が最後に変更された UTC 日時。|  
   

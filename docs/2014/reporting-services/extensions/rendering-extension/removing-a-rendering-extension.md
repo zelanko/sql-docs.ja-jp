@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4e9abf2254d9c9710e68df9b488321b4ae4c1b16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5c8f55dd0fa663d5516938e9ca39b5a6dc2caed9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132962"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014632"
 ---
 # <a name="removing-a-rendering-extension"></a>表示拡張機能の削除
   削除する、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]表示拡張機能を削除するだけ、`Extension`要素にある rsreportserver.config ファイルから表示拡張機能の **%ProgramFiles%\Microsoft SQL server \msrs10_50.\< 。インスタンス名 > \reporting**フォルダー。 レポート デザイナーとレポート サーバーのエントリを作成した場合は、削除、`Extension`要素から、 [RSReportDesigner Configuration File](../../report-server/rsreportdesigner-configuration-file.md)もします。 構成情報を削除した後は、表示拡張機能をコンポーネントに使用できません。  

@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.testcdrule.f1
 - sql12.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e413c2a6057476fb44d5a7a106c8374621b9937c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b50eb916b114387f9d80202cf0993e830e79aecd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415679"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012027"
 ---
 # <a name="create-a-cross-domain-rule"></a>クロス ドメイン ルールの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの複合ドメインに対するクロス ドメイン ルールを作成する方法について説明します。 クロス ドメイン ルールとは、複合ドメインに含まれる単一ドメインの値の間の関係をテストするルールです。 ドメイン値が正確で、ビジネス要件に準拠していると見なされるためには、クロス ドメイン ルールが複合ドメイン全体に当てはまる必要があります。 クロス ドメイン ルールは、ドメイン値の検証、修正、および標準化のために使用されます。  
@@ -94,7 +94,7 @@ ms.locfileid: "52415679"
   
 2.  クロス ドメイン ルールが完成したら、 **[完了]** をクリックし、「 [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md)」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="FollowUp"></a> フォローしてください：クロス ドメイン ルールを作成した後  
+##  <a name="FollowUp"></a>補足情報: クロス ドメイン ルールを作成した後  
  クロス ドメイン ルールを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../../2014/data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../../2014/data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../../2014/data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
   

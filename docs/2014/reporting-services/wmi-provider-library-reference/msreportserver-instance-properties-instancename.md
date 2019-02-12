@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 664c86fd8540f51d45c3f72f0454fb6d513eea34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e02d4074b731de6b6800bc9858d9aa6e5c766bf3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221772"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014993"
 ---
 # <a name="instancename-property-wmi-msreportserverinstance"></a>InstanceName プロパティ (WMI MSReportServer_Instance)
-  特定のコンピューター上のレポート サーバー インスタンスの名前を返します。 読み取り専用です。  
+  特定のコンピューター上のレポート サーバー インスタンスの名前を返します。 読み取り専用。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,12 +40,12 @@ public string InstanceName;
 ```  
   
 ## <a name="property-value"></a>プロパティ値  
- A`String`レポート サーバー インスタンスの名前を表すオブジェクト。  
+ レポート サーバー インスタンスの名前を表す `String` オブジェクト。  
   
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>参照  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 57231f0455a4dafbe7dccf5eac74325411cdfdc8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 70ec1c794e86782551099b4fb5d8459c8bae6191
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375324"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041703"
 ---
 # <a name="start-report-builder-report-builder"></a>レポート ビルダーの起動 (レポート ビルダー)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] スタンドアロンが含まれていますと[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]レポート ビルダーのバージョン。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] バージョンは、ネイティブ モードまたは SharePoint 統合モードでインストールされた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と共に使用できます。  
@@ -47,7 +47,7 @@ ms.locfileid: "53375324"
   
 1.  Web ブラウザーでアドレス バーに次の URL を入力します。  
   
-     http://\<servername >/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application  
+     http://\<servername>/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application  
   
 2.  Enter キーを押します。  
   

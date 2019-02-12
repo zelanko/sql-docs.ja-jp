@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7d3e0ab451344b443452052960c16f9ccfdc9462
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7e043e20af78653fccfa0ed3a2b227a1023e0657
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412949"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016084"
 ---
 # <a name="use-the-dqs-speller"></a>DQS のスペル チェックの使用
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のスペル チェックでは、ドメイン内の文字列値の構文、スペル、および文構造をチェックします。 スペル チェックは、サーバー側のエンジンと統合されないクライアント側のスタンドアロンの機能で、現在のフローや状態には影響しません。 スペル チェックで誤りの可能性がある文字列値が見つかると、対応する各ページでドメイン値に対するその他の手動の変更を行うときに、それらの文字列値が赤い下線で示されます。 対象となるページは次のとおりです。  
@@ -64,7 +64,7 @@ ms.locfileid: "52412949"
   
 6.  値を辞書に追加する場合は、 **[辞書に追加]** をクリックします。 値に表示されていた赤い下線が消えます。  
   
-##  <a name="FollowUp"></a> フォローしてください：スペル チェックを使用した後  
+##  <a name="FollowUp"></a>補足情報: スペル チェックを使用した後  
  スペル チェックを実行した後、ドメインのアクティビティを完了してスペル チェックの修正案を反映します。 ナレッジ検出、ドメイン管理、または照合ポリシーのアクティビティで、スペル チェックの分析結果をナレッジ ベースで使用できるようにするには、ナレッジ ベースを発行します。 詳しくは、「[ナレッジ検出の実行](../../2014/data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../../2014/data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../../2014/data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="How"></a> スペル チェックの動作  

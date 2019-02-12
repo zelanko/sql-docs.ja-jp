@@ -1,5 +1,5 @@
 ---
-title: カスタム レポート アイテムを配置する方法 | Microsoft Docs
+title: 操作方法:カスタム レポート アイテムの展開 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 48e55cfb3eb754af540ca4eb4d19ae415d396f60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 891cafeac3901376793383cdd5cd499c549d45f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175872"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033213"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>カスタム レポート アイテムを配置する方法
+# <a name="how-to-deploy-a-custom-report-item"></a>操作方法:カスタム レポート アイテムを配置します。
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でカスタム レポート アイテムを配置するには、レポート サーバー構成ファイルを変更し、デザイン時と実行時のコンポーネント アセンブリをレポート デザイナーとレポート サーバーの両方に対する適切なアプリケーション フォルダーにコピーする必要があります。  
   
 ### <a name="to-deploy-a-custom-report-item"></a>カスタム レポート アイテムを配置するには  

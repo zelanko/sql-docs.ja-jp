@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c8c9ec3622318de6d2d70b8b49294dd282487d80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e1aaede74e9c9aa693a80149eebdc5aabb069ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114032"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029313"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Count 関数 (レポート ビルダーおよび SSRS)
   式で指定された NULL 以外の値の数を、指定されたスコープのコンテキストで評価して返します。  
@@ -33,16 +33,16 @@ Count(expression, scope, recursive)
   
 #### <a name="parameters"></a>パラメーター  
  *式 (expression)*  
- (`Variant`または`Binary`) など、集計を実行する対象の式`=Fields!FieldName.Value`します。  
+ (`Variant` または `Binary`) この集計関数の実行対象の式です (`=Fields!FieldName.Value` など)。  
   
  *スコープ (scope)*  
- (`String`) アイテムを集計関数の適用先となるレポートを含むデータセット、グループ、またはデータ領域の名前。 *scope* を指定しない場合、現在のスコープが使用されます。  
+ (`String`) 集計関数の適用先となるレポート アイテムを含むデータセット、グループ、またはデータ領域の名前です。 *scope* を指定しない場合、現在のスコープが使用されます。  
   
  *再帰*  
- (**列挙型**) 省略可。 `Simple` (既定値) または`RdlRecursive`します。 集計を再帰的に実行するかどうかを指定します。  
+ (**列挙型**) 省略可。 `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
   
 ## <a name="return-type"></a>戻り値の型  
- 返します、`Integer`します。  
+ `Integer` 値を返します。  
   
 ## <a name="remarks"></a>コメント  
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  
@@ -77,9 +77,9 @@ Count(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>参照  
- [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [合計、集計、および組み込みコレクションの式のスコープ&#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

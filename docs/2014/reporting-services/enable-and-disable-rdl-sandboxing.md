@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f49c20c8efe233bb49194364943f7ebb95ed6497
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 2db60863c1ae8c21e391d62182cb27a52558a1e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415280"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013183"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>RDL サンドボックスの有効化と無効化
   RDL (レポート定義言語) サンドボックス機能を使用すると、複数のテナントが 1 つのレポート サーバー Web ファームを使用している環境で、個々のテナントによる特定の種類のリソースの使用を検出および制限できるようになります。 このような例として、複数のテナントまたは複数の企業によって使用される単一のレポート サーバー Web ファームを管理するホスティング サービスのシナリオがあります。 レポート サーバー管理者は、次の目的を達成するためにこの機能を有効にできます。  

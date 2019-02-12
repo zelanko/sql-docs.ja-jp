@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5e70f08293132f570ddb0663db7944ecb4bba497
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: adabb736dd34b35ee98f4ed46b84fd9205d504b5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507969"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012133"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>警告デザイナーでのデータ警告の作成
   データ警告の定義は、データ警告デザイナーで作成します。 作成した警告定義は、保存後、再度データ警告デザイナーで開いて編集し、保存し直すことができます。 警告定義の編集の詳細については、「 [データ警告マネージャーでのデータ警告の管理](manage-my-data-alerts-in-data-alert-manager.md) 」および「 [警告デザイナーでのデータ警告の編集](edit-a-data-alert-in-alert-designer.md)」を参照してください。  

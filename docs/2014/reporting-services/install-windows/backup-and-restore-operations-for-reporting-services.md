@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dff50034b255ae2b2654f6250cf1c39aad092cb5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: aa16c9f5520bd135e7ea2fc3ef13809c04eb05c2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390415"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030143"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services のバックアップおよび復元操作
   このトピックでは、インストールした [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用するデータ ファイルの概要と、これらのファイルをバックアップするタイミングおよび方法について説明します。 レポート サーバー データベース ファイルのバックアップ/復元プランの作成は、復旧計画の最も重要な部分です。 ただし、さらに包括的な復旧計画には、暗号化キー、カスタム アセンブリや拡張機能、構成ファイル、レポートおよびモデルのソース ファイルのバックアップなども必要になります。  

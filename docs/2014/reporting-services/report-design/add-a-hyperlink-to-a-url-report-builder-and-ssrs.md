@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1219998db8ec07de6e03aa14b3aefaee6515e235
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366174"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010193"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS)
   ユーザーがレポート内のリンクをクリックするとブラウザーが開かれ、指定した URL にアクセスできるようにするために、レポート アイテムへのハイパーリンクを追加できます。 ハイパーリンクには、静的な URL または URL を評価する式を使用できます。 URL を保持しているデータベースのフィールドがある場合は、式にそのフィールドを指定し、レポートにハイパーリンクの動的な一覧を渡すことができます。 ハイパーリンクは、テキスト ボックス、画像、グラフ、およびゲージに追加できます。 ただし、ユーザーがその URL にアクセスできることを確認する必要があります。  
@@ -28,7 +28,7 @@ ms.locfileid: "53366174"
   
  URL へのハイパーリンクは、グラフ内のテキスト ボックス、画像、計算系列などの **Action** プロパティがあるアイテムに追加できます。 ユーザーがそのレポート アイテムをクリックすると、定義されたアクションが実行されます。 詳細については、「[[アクション プロパティ] ダイアログ ボックス &#40;レポート ビルダーおよび SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)」と「[外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
   
- すばやく開始するのを参照してください。[チュートリアル。テキストの書式設定&#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)します。  
+ すぐに使用するには、「[チュートリアル:テキストの書式設定 &#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)」をご覧ください。  
   
 > [!NOTE]  
 >  データセット フィールドにバインドされているリンクは、悪意的な改ざんに対して脆弱である可能性があります。 詳細については、msdn.microsoft.com で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=154888)の「[レポートとリソースの保護](../security/secure-reports-and-resources.md)」を参照してください。  

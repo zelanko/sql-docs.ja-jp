@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 12d6db8e8f9add797d640f043de8470fa7a5ed15
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ea3b91f72b3fdd836d0b5cdb3e73122570bdbfcf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392515"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017233"
 ---
 # <a name="change-domain-values"></a>ドメイン値の変更
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースのメタデータを変更および拡張する方法について説明します。 ナレッジ検出でナレッジを生成したり、ナレッジ ベースまたはドメインにナレッジをインポートしたり、別のナレッジ ベースに基づいてナレッジ ベースを作成した後に、データ値を対話形式で変更することができます。 ナレッジ ベースを生成するときは、コンピューター支援型のプロセスを利用するほかに、独自のナレッジを使用してデータ値を確認したり、次のように変更したりできます。  
@@ -100,7 +100,7 @@ ms.locfileid: "52392515"
   
 12. **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](../../2014/data-quality-services/end-the-domain-management-activity.md)」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="FollowUp"></a> フォローしてください：ドメインの値を変更した後  
+##  <a name="FollowUp"></a>補足情報: ドメインの値を変更した後  
  ドメイン値を変更した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../../2014/data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../../2014/data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../../2014/data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="Meaning"></a> "適切"、"エラー"、"無効" の各値の意味  

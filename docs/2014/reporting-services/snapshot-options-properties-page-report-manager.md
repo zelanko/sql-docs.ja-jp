@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4342504d0d62f2c611c680c58fcdeae1f046f29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078102"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042353"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>[スナップショット オプション] プロパティ ページ (レポート マネージャー)
   [スナップショット オプション] プロパティ ページを使用すると、レポート スナップショットをレポート履歴に追加するスケジュールを設定したり、レポート履歴に保存するレポート スナップショットの件数の上限を設定したりできます。  
@@ -62,9 +62,9 @@ ms.locfileid: "48078102"
  変更を保存する場合にクリックします。  
   
 ## <a name="see-also"></a>参照  
- [レポート履歴にスナップショットを追加&#40;レポート マネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [作成、変更、およびレポート履歴にスナップショットを削除します。](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [レポート履歴のスナップショットの作成、変更および削除](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

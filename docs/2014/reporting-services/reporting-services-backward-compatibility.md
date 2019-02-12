@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 253b4e2178f7a3e2e20d3b1263f83ff184d3b9c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b36b196f28bf029d68729c6c8e88116646829705
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051002"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010543"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Reporting Services の旧バージョンとの互換性
   ここでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のバージョン間での動作の変更について説明します。 使用できなくなる機能や、将来のリリースで削除される予定の機能の情報を提供します。 また、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を含むカスタム アプリケーションを使用できなくなるような、製品の根本的な変更についても説明します。  

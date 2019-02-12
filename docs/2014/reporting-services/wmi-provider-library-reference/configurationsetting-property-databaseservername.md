@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3e0c8983e0e1e8f6407077b5927852c4165b702b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54a93f0d33927652bd8efe0f1ffa9369fc398038
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114262"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042553"
 ---
 # <a name="databaseservername-property-wmi-msreportserverconfigurationsetting"></a>DatabaseServerName プロパティ (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースがインストールされるサーバーの名前を指定します。 読み取りと書き込みが可能です。  
@@ -45,7 +45,7 @@ public string DatabaseServerName;
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

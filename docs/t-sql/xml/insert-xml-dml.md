@@ -3,7 +3,6 @@ title: insert (XML DML) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - insert keyword [XML DML]
 - insert XML DML statement
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e4b7193e2b113cdbac330215abc3915c01f1385c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cedc8dee9040e198ffc5f229453a10d54065257
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699960"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012113"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ insert
  *Expression1*  
  挿入する 1 つ以上のノードを識別します。 この引数に指定できるのは、XML の定数インスタンス、modify メソッドが適用されている同じ XML スキーマ コレクションの型指定された XML データ型インスタンスへの参照、スタンドアロンの **sql:column()**/**sql:variable()** 関数を使用する型指定されていない XML データ型インスタンス、または XQuery 式です。 式の結果は、ノード、テキスト ノード、または順序付けられたノードのシーケンスになります。 式をルート (/) ノードに解決することはできません。 式の結果が 1 つの値または値のシーケンスになる場合、シーケンス内の各値がスペースで区切られた 1 つのテキスト ノードとして値が挿入されます。 を複数のノードを定数として指定する場合、ノードがかっこ内に含まれ、は、コンマで区切られます。 一連の要素、属性、値などの異種シーケンスは挿入できません。 *Expression1* が空のシーケンスに解決される場合は、挿入が行われず、エラーも返されません。  
   
- into  
+ 変更前:  
  *Expression1* で識別されるノードは、*Expression2* で識別されるノードの直接の子孫 (子ノード) として挿入されます。 *Expression2* のノードに既に 1 つ以上の子ノードが含まれている場合、**as first** または **as last** のいずれかを使用して、新しいノードを追加する場所を指定する必要があります。 たとえば、それぞれ子リストの先頭または末尾を指定します。 属性を挿入するときは、**as first** キーワードと **as last** キーワードは無視されます。  
   
  after  

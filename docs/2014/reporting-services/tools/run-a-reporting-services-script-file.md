@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fbec3514c7910896e35690be8262b006325f3ef7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: f7db9d1ec95e384cc2756b43518e7e85242005b4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372804"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013573"
 ---
 # <a name="run-a-reporting-services-script-file"></a>Reporting Services スクリプト ファイルを実行する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] スクリプト ファイルは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] スクリプト環境 (RS.exe) を使用してコマンド プロンプトから実行します。 RS.exe には、ユーザーが使用できるコマンド プロンプト引数が多数用意されています。 コマンド プロンプト オプションの詳細については、「[RS.exe ユーティリティ &#40;SSRS&#41;](rs-exe-utility-ssrs.md)」を参照してください。 他のスクリプトのサンプルについては、「 [SQL Server Reporting Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=177889)」を参照してください。  

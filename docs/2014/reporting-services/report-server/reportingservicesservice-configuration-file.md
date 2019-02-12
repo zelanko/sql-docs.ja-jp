@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2029cd6fd95916b71ee673713978a1fe3a1ccd36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 15bac4bb872e1fb3fc42fb62cf355f53358442b9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082543"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014573"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 構成ファイル
   ReportingServicesService.exe.config ファイルには、トレースを構成する設定が含まれています。  
@@ -29,7 +29,7 @@ ms.locfileid: "48082543"
  このファイルは、\Reporting Services\Report Server\Bin フォルダーにあります。  
   
 ## <a name="editing-guidelines"></a>編集のガイドライン  
- このファイルを変更して、ログ ファイル名を変更したり、トレース レベルを増減させることができます。 その他の設定は変更しないでください。 手順については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 トレース ログの詳細については、次を参照してください。 [Report Server Service Trace Log](report-server-service-trace-log.md)します。  
+ このファイルを変更して、ログ ファイル名を変更したり、トレース レベルを増減させることができます。 その他の設定は変更しないでください。 手順については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 トレース ログの詳細については、「 [レポート サーバー サービスのトレース ログ](report-server-service-trace-log.md)」を参照してください。  
   
 ## <a name="example-configuration"></a>構成例  
  ReportingServicesService.exe.config ファイルにある設定および既定値の例を次に示します。  
@@ -87,6 +87,6 @@ ms.locfileid: "48082543"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成ファイル](reporting-services-configuration-files.md)   
- [レポート サーバー サービスのトレース ログ](report-server-service-trace-log.md)  
+ [Report Server Service Trace Log](report-server-service-trace-log.md)  
   
   

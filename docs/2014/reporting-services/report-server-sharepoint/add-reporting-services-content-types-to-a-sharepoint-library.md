@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ea197ddd0c24a487d152c8c6aa9eb9e177605d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d98e8eafeb08ab8b0d37fd6a513d2fb6eb773828
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105892"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030693"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>レポート ビューアー Web パーツを Web ページに追加する (Reporting Services の SharePoint 統合モード)
   レポート ビューアー Web パーツを使用することで、SharePoint 統合モード用に構成されているレポート サーバーで実行されるレポートを表示できます。 この Web パーツでは、レポート ビルダーまたはレポート デザイナーで作成してライブラリにアップロードしたレポート定義ファイル (.rdl) を表示できます。  
@@ -57,8 +57,8 @@ ms.locfileid: "48105892"
 9. ツール ペインの下部で **[適用]** をクリックし、 **[OK]** をクリックしてペインを閉じます。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint サイト上のレポート ビューアー Web パーツ](../report-viewer-web-part-on-a-sharepoint-site.md)   
- [レポート ビューアー Web パーツをカスタマイズします。](../customize-the-report-viewer-web-part.md)   
+ [SharePoint サイトのレポート ビューアー Web パーツ](../report-viewer-web-part-on-a-sharepoint-site.md)   
+ [レポート ビューアー Web パーツのカスタマイズ](../customize-the-report-viewer-web-part.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [インストールまたはアンインストール、Reporting Services アドイン、SharePoint の&#40;SharePoint 2010 および SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   

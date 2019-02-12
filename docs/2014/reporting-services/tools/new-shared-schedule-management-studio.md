@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2d94043e338ddcaeffbfc87a1cfad74e6fd854be
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 61a3e4f7632c5251eb0404a2e4c8a4c0820c1f0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355552"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017253"
 ---
 # <a name="new-shared-schedule-management-studio"></a>[新しい共有スケジュール] (Management Studio)
   このページを使用すると、パブリッシュされたレポートおよびサブスクリプションを実行するための共有スケジュールを作成できます。 共有スケジュールは、レポート固有のスケジュールやサブスクリプション固有のスケジュールの代わりに使用できます。 集中管理されるスケジュール情報と、スケジュールされた操作を一時停止して再開する機能は、アイテム固有のスケジュールと共有スケジュールを区別する 2 つの重要な機能です。  
@@ -36,7 +36,7 @@ ms.locfileid: "53355552"
  **名前**  
  共有スケジュールの名前を入力します。 この名前は、ユーザーがレポートおよびサブスクリプションの共有スケジュールを選択するときにドロップダウン リストに表示されます。 リスト内に納まり、共有スケジュールと別のスケジュールとを簡単に区別できるわかりやすい名前を付けてください。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよびいくつかの記号を含めることもできます。 名前を指定するときに使用できない記号は次のとおりです。  
   
- ; ? : \@ & = +, $/* \< >  
+ ; ? : \@ & = + , $ / * \< >  
   
  " /  
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fa861745b4b786e730ff302cf7cfdc53d6035fcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b15dcac49b4af0df2769080f51e0bf48289c2f60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097772"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011424"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>RDL ファイルのアセンブリの参照
   レポート定義ファイルでのカスタム コード アセンブリの使用をサポートするため、2 つのレポート定義言語 (RDL) 要素 **CodeModules** と **Classes** が RDL 仕様に含まれています。  
@@ -36,7 +36,7 @@ ms.locfileid: "48097772"
 </CodeModules>  
 ```  
   
- カスタム コードから <xref:System.Reflection.Assembly.Load%2A> を呼び出すのではなく、**CodeModule** 要素を RDL ファイルに手動で追加するか、**[レポートのプロパティ]** ダイアログの **[参照]** タブを使用してカスタム アセンブリを登録します。 詳細については、「[レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)」を参照してください。  
+ カスタム コードから <xref:System.Reflection.Assembly.Load%2A> を呼び出すのではなく、**CodeModule** 要素を RDL ファイルに手動で追加するか、**[レポートのプロパティ]** ダイアログの **[参照]** タブを使用してカスタム アセンブリを登録します。 詳細については、「 [レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)を表しています。  
   
  **Classes** 要素では、レポート定義でのインスタンス メンバーの使用がサポートされます。 **Classes** は、クラス名とインスタンス名への参照を含むトップレベルの要素です。 インスタンス メンバーの使用をサポートするレポート定義のエントリは次のようになります。  
   

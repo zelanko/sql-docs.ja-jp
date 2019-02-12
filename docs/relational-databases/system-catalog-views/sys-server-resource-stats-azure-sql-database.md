@@ -2,10 +2,8 @@
 title: sys.server_resource_stats (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: carlrab, edmaca
-ms.technology: ''
 ms.topic: language-reference
 f1_keywords:
 - resource_stats
@@ -21,12 +19,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 82cd70d9f1baa7741f4ecc449167d5c56e7fe954
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b8a5aaa7d0aecd992905e0eaf53ef362f24b1485
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392635"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009654"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ca2338983aae168dce33bd0cd21b37ccac6e9fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051343"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042768"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>データ ソース ビューの作成 (基本的なデータ マイニング チュートリアル)
   データ ソース ビューは、データ ソース上に構築され、データのサブセットを定義します。このデータ ソース ビューを、マイニング構造で使用できます。 また、データ ソース ビューを使用して、列の追加、計算列や集計の作成、および名前付きビューの追加を行うこともできます。 データ ソース ビューを使用すると、プロジェクトに関連するデータの選択、テーブルどうしの関連付け、データの構造の変更などの操作を、元のデータ ソースを変更せずに実行できます。 詳細については、 [「多次元モデルのデータ ソース ビュー」](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)を参照してください。  
@@ -48,9 +47,9 @@ ms.locfileid: "48051343"
  [データ ソースを作成する&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2: 絞り込みメール構造を作成する&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [レッスン 2:ターゲット メーリングの構造を構築&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [ソース ビューのデータを定義する&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューの定義 (Analysis Services)](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
   

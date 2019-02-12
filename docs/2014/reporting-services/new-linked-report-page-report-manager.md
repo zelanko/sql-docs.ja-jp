@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: baca8a9c339ff55ad25f390ac73a2957fdd26447
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 11ccc376b2c325056acbe545f8ac7310b4386245
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119372"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010873"
 ---
 # <a name="new-linked-report-page-report-manager"></a>[新しいリンク レポート] ページ (レポート マネージャー)
   [新しいリンク レポート] ページではリンク レポートを作成できます。 リンク レポートは、独自の設定やプロパティが含まれているレポートですが、別のレポートのレポート定義にリンクしています。 リンク レポートは、特定のグループまたはユーザーによって異なる基本レポート (たとえば、パラメーターとして指定された地域コードに基づいて別のデータを返す地域レポート) がある場合に役立ちます。 通常、リンク レポートは、各レポート インスタンスに異なるパラメーター値を設定して保存する場合に、パラメーター化されたレポートから作成します。 ただし、ユーザーがアクセスできる任意のレポートからリンク レポートを作成することもできます。  

@@ -23,13 +23,13 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a91aa2823238691953e7219b027368e642784fdd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d3bd3ef7205591d0353d7e8ee75e2d0ec49a221d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350372"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042913"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS)
   ウィザードを使用してマップまたはマップ レイヤーをレポートに追加した後、必要に応じてレポート内のマップの体裁を変更することができます。 改善のヒントを次に示します。  

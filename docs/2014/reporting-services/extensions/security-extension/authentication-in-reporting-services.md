@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5088cabad39f75fb1becd65a21c84133608e9a2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2ce82cc9bfb8b3f88934499db4e9295903b67702
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093322"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043203"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services での認証
   認証とは、ユーザーの本人性を立証するプロセスです。 ユーザー認証にはさまざまな方法がありますが、 最も一般的なのはユーザー パスワードを使用する方法です。 たとえば、フォーム認証を実装する場合は、ユーザーに対して資格情報の提示を要求し (通常は、ログイン名とパスワードを要求するインターフェイスを使用)、データベース テーブルや構成ファイルなどのデータ ストアと照合して、そのユーザーが本人かどうかを検証します。 資格情報の有効性を確認できない場合は、認証プロセスが失敗し、そのユーザーは匿名ユーザーであると見なされます。  

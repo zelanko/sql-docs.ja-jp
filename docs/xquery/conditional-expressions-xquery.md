@@ -20,12 +20,12 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3164d17169e0a90416c8131825c3d61b1ff5fe16
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 62a061632b5f598932fe29499519d7eb897c78a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677591"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041743"
 ---
 # <a name="conditional-expressions-xquery"></a>条件式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ if ( sql:variable("@v")="FirstName" ) then
 ')  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <FirstName>fname</FirstName>  
@@ -107,7 +107,7 @@ WHERE ProductModelID = 19
   
  上記のクエリでは、条件、**場合**式は、複数の 2 つの子要素があるかどうかを確認します。 <`Features`>。 3 つ以上ある場合は、結果に `\<there-is-more/>` 要素が返されます。  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
@@ -142,7 +142,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <WorkCenterLocation LocationID="30" />  

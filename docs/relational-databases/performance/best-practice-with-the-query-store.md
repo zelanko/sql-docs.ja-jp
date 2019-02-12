@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b46686dfb440e9d0d9fa68fcaf23d51eea86c97
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 15838ca2bb994aba32cd4aa83d7e8e23c78743f9
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143472"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760105"
 ---
 # <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -345,8 +345,9 @@ WHERE is_forced_plan = 1;
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の Just In Time ワークロード分析情報のためにクエリ ストアを使用している場合は、[KB 4340759](https://support.microsoft.com/help/4340759) におけるパフォーマンスのスケーラビリティの修正を、できるだけ早くインストールするよう計画します。 
 
 ## <a name="see-also"></a>参照  
- [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [インメモリ OLTP でのクエリ ストアの使用](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)  
+[クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
+[クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     
+[インメモリ OLTP でのクエリ ストアの使用](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)     
+[関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)      
+[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)     
   
