@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6b1995ad715ea529da548f06e0643be076abe96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518900"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037763"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>コール センター モデルの検証 (中級者向けデータ マイニング チュートリアル)
   調査モデルを構築したら、それを使用して、データについてより深く考察することができます。具体的には、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] に備わっている次のツールを使用します。  
@@ -110,8 +109,8 @@ ms.locfileid: "52518900"
   
 |属性|値|優先\<0.07|水準 >= 0.12|  
 |---------------|-----------|--------------------|----------------------|  
-|案件あたりの平均時間|89.087 120.000||スコア:100<br /><br /> Value1 の確率:4.45%<br /><br /> 値 2 の確率:51.94%<br /><br /> Value1 をリフトします。0.19 の水<br /><br /> Value2 をリフトします。1.94|  
-|案件あたりの平均時間|44.000 70.597|スコア:に対して 92.35<br /><br /> Value1 の確率:60.06%<br /><br /> 値 2 の確率:8.30%<br /><br /> Value1 をリフトします。2.61<br /><br /> Value2 をリフトします。0.31||  
+|案件あたりの平均時間|89.087 - 120.000||スコア:100<br /><br /> Value1 の確率:4.45 %<br /><br /> 値 2 の確率:51.94 %<br /><br /> Value1 をリフトします。0.19<br /><br /> Value2 をリフトします。1.94|  
+|案件あたりの平均時間|44.000 - 70.597|スコア:92.35<br /><br /> Value1 の確率:60.06 %<br /><br /> 値 2 の確率:8.30 %<br /><br /> Value1 をリフトします。2.61<br /><br /> Value2 をリフトします。0.31||  
   
  [トップに戻る](#bkmk_NNviewer)  
   

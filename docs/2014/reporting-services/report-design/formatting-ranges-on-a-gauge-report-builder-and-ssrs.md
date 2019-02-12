@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 82ae72d5639f4ea22e6a3762e72f65f3354d315a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: de1906afd22e5a6e33fad54e331431611d9c0998
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223022"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037963"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>ゲージの範囲の書式設定 (レポート ビルダーおよび SSRS)
   ゲージ範囲は、ゲージ上の値の重要なサブセクションを示す、ゲージ スケール上のゾーンまたは領域です。 ゲージ範囲を使用すると、ポインター値が特定の値範囲に入る時期を視覚的に示すことができます。 範囲は、開始値と終了値で定義されます。  
@@ -32,7 +32,7 @@ ms.locfileid: "48223022"
  [ゲージのスケールの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージのポインターの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージへの最小値または最大値の設定 &#40;レポート ビルダーおよび SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへの KPI の追加 &#40;レポート ビルダー&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [チュートリアル: レポートへの KPI の追加&#40;レポート ビルダー&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)  
   
   

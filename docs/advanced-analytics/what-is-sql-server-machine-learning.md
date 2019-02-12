@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59ec5bbacf23d0f86f88a17a68faaf27162ebdcb
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596793"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032953"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL Server 2017 での machine Learning サービス (R、Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ SQL Server 2017 Machine Learning Services とは、データベース エンジ�
 
 使用していた場合[SQL Server 2016 R Services](r/sql-server-r-services.md)、SQL Server 2017 での Machine Learning サービスは、基本の R で RevoScaleR の MicrosoftML の更新バージョンでの R のサポートの次世代および他のライブラリは、2016年で導入されました。 
 
-Azure SQL Database で[(R) を使用した Machine Learning サービス](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)は現在パブリック プレビュー段階です。
+Azure SQL Database で[(R) を使用した Machine Learning サービス](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)は現在パブリック プレビュー段階です。
 
 Machine Learning サービスのキーの価値提案は、スケール、および計算と、データが存在する処理を統合する機能での高度な分析を提供する、企業の R と Python パッケージの電源間でデータをプルする必要はありませんネットワーク。
 

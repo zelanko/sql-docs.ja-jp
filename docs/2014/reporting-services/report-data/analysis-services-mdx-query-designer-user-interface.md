@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 34547b62ecac2a41f9d59d96d8f5c9d99f79b21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 490b81e30833a8572ff7ce8bd51c72b5314c3bf7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081062"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030619"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 多次元式 (MDX) クエリおよびデータ マイニング式 (DMX) クエリを構築するためのグラフィカル クエリ デザイナーの提供、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データ ソース。 このトピックでは、MDX クエリ デザイナーについて説明します。 DMX クエリ デザイナーの詳細については、次を参照してください。 [DMX のための Analysis Services 接続の種類&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)します。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに対する多次元式 (MDX) クエリやデータ マイニング式 (DMX) クエリを作成するためのグラフィカル クエリ デザイナーが用意されています。 このトピックでは、MDX クエリ デザイナーについて説明します。 DMX クエリ デザイナーの詳細については、「 [DMX のための Analysis Services の接続の種類 &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)」をご覧ください。  
   
  MDX のグラフィカル クエリ デザイナーには、デザイン モードとクエリ モードという 2 つのモードがあります。 どちらのモードにもメタデータ ペインが表示され、選択したキューブからメンバーをドラッグすることによって MDX クエリを作成できます。レポートの処理時には、このクエリに基づいてデータが取得されます。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48081062"
   
  このモードのペインの一覧を次の表に示します。  
   
-|ペイン|機能|  
+|ペイン|関数|  
 |----------|--------------|  
 |キューブの選択ボタン (**[...]**)|現在選択されているキューブを表示します。|  
 |メタデータ ペイン|選択されたキューブで定義されているメジャー、主要業績評価指標 (KPI)、およびディメンションの階層リストを表示します。|  
@@ -69,11 +69,11 @@ ms.locfileid: "48081062"
 |![MDX クエリ ビューに変更](../../analysis-services/media/rsqdicon-commandtypemdx.gif "MDX クエリのビューへの変更")|コマンドの種類を MDX に切り替えます。|  
 |![DMX クエリ言語ビューへの変更](../media/rsqdicon-commandtypedmx.gif "DMX クエリ言語ビューへの変更")|コマンドの種類を DMX に切り替えます。|  
 |![結果データの更新](../../analysis-services/media/rsqdicon-refresh.gif "結果データの更新")|データ ソースからメタデータを更新します。|  
-|![計算されるメンバーの追加](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "計算されるメンバーの追加")|**[計算されるメンバー ビルダー]** ダイアログ ボックスを表示します。|  
+|![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|**[計算されるメンバー ビルダー]** ダイアログ ボックスを表示します。|  
 |![空のセルの表示の切り替え](../../analysis-services/media/rsqdicon-showemptycells.gif "空のセルの表示の切り替え")|データ ペインに空のセルを表示するかどうかを切り替えます。 これは、MDX で NON EMPTY 句を使用することに相当します。|  
 |![クエリの自動実行](../../analysis-services/media/rsqdicon-autoexecute.gif "クエリの自動実行")|クエリを自動的に実行し、変更が生じるたびに結果を表示します。 結果はデータ ペインに表示されます。|  
 |![集計ボタンの表示](../../analysis-services/media/rsqdicon-showaggregations.gif "集計ボタンの表示")|集計をデータ ペインに表示します。|  
-|![削除](../../analysis-services/media/rsqdicon-delete.gif "削除")|データ ペインで選択した列をクエリから削除します。|  
+|![[削除]](../../analysis-services/media/rsqdicon-delete.gif "[削除]")|データ ペインで選択した列をクエリから削除します。|  
 |![[クエリ パラメーター] ダイアログ ボックスのアイコン](../../analysis-services/media/iconqueryparameter.gif "[クエリ パラメーター] ダイアログ ボックスのアイコン")|**[クエリ パラメーター]** ダイアログ ボックスを表示します。 クエリ パラメーターの値を指定する場合、同じ名前のレポート パラメーターが自動的に作成されます。 クエリ パラメーターの値は、このレポート パラメーターを参照する式に設定されます。|  
 |![[クエリの準備] ボタン](../../analysis-services/media/rsqdicon-preparequery.gif "[クエリの準備] ボタン")|クエリを準備します。|  
 |![クエリを実行する](../../analysis-services/media/rsqdicon-run.gif "クエリを実行する")|クエリを実行し、結果をデータ ペインに表示します。|  
@@ -89,7 +89,7 @@ ms.locfileid: "48081062"
   
  このモードのペインの一覧を次の表に示します。  
   
-|ペイン|機能|  
+|ペイン|関数|  
 |----------|--------------|  
 |キューブの選択ボタン (**[...]**)|現在選択されているキューブを表示します。|  
 |メタデータ/関数/テンプレート ペイン|選択されたキューブで定義されているメジャー、KPI、およびディメンションの階層リストを表示します。|  
@@ -107,7 +107,7 @@ ms.locfileid: "48081062"
   
 -   **[テキストとして編集]**  
   
--   **計算されるメンバーを追加**(![計算されるメンバーの追加](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "計算されるメンバーの追加"))  
+-   **[計算されるメンバーの追加]** (![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **空のセルを表示する** (![空のセルの表示の切り替え](../../analysis-services/media/rsqdicon-showemptycells.gif "空のセルの表示の切り替え"))  
   
@@ -116,9 +116,9 @@ ms.locfileid: "48081062"
 -   **集計の表示** (![集計ボタンの表示](../../analysis-services/media/rsqdicon-showaggregations.gif "集計ボタンの表示"))  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services の MDX クエリ デザイナーでパラメーターを定義&#40;レポート ビルダーおよび SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Analysis Services の MDX クエリ デザイナーでのパラメーターの定義 &#40;レポート ビルダーおよび SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Analysis Services 接続の種類の DMX のため&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [DMX のための Analysis Services の接続の種類 &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [RSReportDesigner 構成ファイル](../report-server/rsreportdesigner-configuration-file.md)   
  [MDX のための Analysis Services の接続の種類 &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)  
   

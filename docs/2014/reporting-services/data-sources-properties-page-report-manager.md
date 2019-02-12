@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 30576bc7ff9cb2049dc035a9f7b4efa152f5f3b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e2e0a15c9b60faf43a7e067d696f2a6cdeb5b7b1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192142"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031988"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>[データ ソース] プロパティ ページ (レポート マネージャー)
   [データ ソース] プロパティ ページでは、現在のレポートの外部データ ソースへの接続方法を定義できます。 レポートに本来パブリッシュされていたデータ ソース接続情報をオーバーライドすることができます。 レポートで複数のデータ ソースが使用される場合、プロパティ ページに各データ ソースの独自のセクションがあります。 データ ソースは、レポートで定義された順に一覧表示されます。  
@@ -67,17 +67,17 @@ ms.locfileid: "48192142"
  **レポートを実行しているユーザーによって指定された資格情報**  
  各ユーザーは、ユーザー名およびパスワードを入力してデータ ソースにアクセスする必要があります。 ユーザーに資格情報の入力を要求するメッセージを定義できます。 既定のテキスト文字列は、"データ ソースへのアクセスに使用するユーザー名とパスワードを入力してください。" です。  
   
- ユーザーが指定する資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証を使用している場合にこのチェック ボックスをオンされません (たとえば、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認証)。  
+ ユーザーが指定する資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証 (たとえば、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証) を使用している場合は、このチェック ボックスをオフにしてください。  
   
  **レポート サーバーに安全に格納されている資格情報**  
  暗号化されたユーザー名およびパスワードを、レポート サーバーのデータベースに格納します。 このオプションを選択すると、レポート (たとえば、ユーザーの操作によってではなく、スケジュールまたはイベントによって起動されるレポート) を自動的に実行できます。 既定のセキュリティを使用している場合、ユーザー名は Windows ドメイン アカウントである必要があります。 この形式でアカウントを指定:\<ドメイン >\\< ユーザー名\>します。 指定するアカウントには、レポートが使用するデータ ソースをホストするコンピューター上でローカルにログオンする権限が必要です。  
   
- 資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証を使用している場合にこのチェック ボックスをオンされません (たとえば、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認証)。  
+ 資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証 (たとえば、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証) を使用している場合は、このチェック ボックスをオフにしてください。  
   
- **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する]** チェック ボックスをオンにすると、データ ソースが権限借用をサポートする場合に限り、資格情報の委任が可能になります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベースでは、このオプションは、SETUSER 関数を設定します。  
+ **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する]** チェック ボックスをオンにすると、データ ソースが権限借用をサポートする場合に限り、資格情報の委任が可能になります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの場合、このオプションによって SETUSER 関数が設定されます。  
   
 > [!TIP]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Windows アカウントの資格情報のみをサポートします。 したがって、オプションは、「データ ソースに接続するときは、Windows 資格情報として使用して」と「偽装、認証されたユーザー データ ソースへの接続の確立後」の両方に選択、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データ ソース。  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Windows アカウントの資格情報のみをサポートします。 したがって、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データ ソースでは、[データ ソースへの接続時に Windows 資格情報として使用する] と [データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する] の両方のチェック ボックスをオンにしてください。  
   
  **Windows 統合セキュリティ**  
  現在のユーザーの Windows 資格情報を使用して、データ ソースにアクセスします。 データ ソースへのアクセスに使用される資格情報が、ネットワーク ドメインへのログオンに使用される資格情報と同じである場合に、このオプションを選択します。 Kerberos 認証が有効なドメインに参加している場合、またはレポート サーバーと同一のコンピューターにデータ ソースがある場合に、このオプションは最適です。 Kerberos 認証が無効になっている場合、Windows 資格情報を別のコンピューターに渡すこともできます。 別のコンピューターの接続が必要な場合に、想定されるデータではなく、エラーが返されます。  
@@ -95,7 +95,7 @@ ms.locfileid: "48192142"
  変更を保存する場合にクリックします。  
   
 ## <a name="see-also"></a>参照  
- [レポート データ ソースを管理します。](report-data/manage-report-data-sources.md)   
+ [レポート データ ソースを管理する](report-data/manage-report-data-sources.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   

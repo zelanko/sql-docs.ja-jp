@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e83d32be1dbb93a75c1d46f3edf7f46d8a0f8a7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209502"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035083"
 ---
 # <a name="preload-the-cache-report-manager"></a>キャッシュの事前読み込み (レポート マネージャー)
   共有データセットのキャッシュ更新計画を作成することによって、共有データセットのキャッシュを事前に読み込むことができます。  
@@ -121,10 +121,10 @@ ms.locfileid: "48209502"
 18. **[適用]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [データ ドリブン サブスクリプション](../subscriptions/data-driven-subscriptions.md)   
- [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
- [パフォーマンス、スナップショット、キャッシュ &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
- [レポート処理プロパティを設定します。](set-report-processing-properties.md)   
- [レポートのキャッシュ&#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
+ [データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)](../create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [パフォーマンス、スナップショット、キャッシュ (Reporting Services)](performance-snapshots-caching-reporting-services.md)   
+ [レポート処理プロパティの設定](set-report-processing-properties.md)   
+ [レポートのキャッシュ (SSRS)](caching-reports-ssrs.md)  
   
   

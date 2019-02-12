@@ -2,7 +2,7 @@
 title: sys.database_files (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
-ms.prod: ''
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a237a562b747922fba4c294330bc9db067822242
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36fe2a156a7c83e8f884c135f24351371b0af533
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689960"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032303"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "47689960"
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|データベース内のファイルの ID です。|  
 |**file_guid**|**uniqueidentifier**|ファイルの GUID です。<br /><br /> NULL = データベースは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の旧バージョンからアップグレードされています。|  
-|**type**|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行 (にアップグレードまたはで作成されたフルテキスト カタログのファイルが含まれます[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。<br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
-|**type_desc**|**nvarchar(60)**|ファイルの種類の説明です。<br /><br /> 行 (にアップグレードまたはで作成されたフルテキスト カタログのファイルが含まれます[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のフルテキスト カタログです。)|  
+|**type**|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 用にアップグレードまたは作成されたフルテキスト カタログのファイルが含まれます。)<br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
+|**type_desc**|**nvarchar(60)**|ファイルの種類の説明です。<br /><br /> ROWS ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 用にアップグレードまたは作成されたフルテキスト カタログのファイルが含まれます。)<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のフルテキスト カタログです。)|  
 |**data_space_id**|**int**|値は 0 または 1 以上になります。 値が 0 の場合はデータベース ログ ファイルを表し、値が 1 以上の場合はこのデータ ファイルが格納されているファイル グループの ID を表します。|  
 |**name**|**sysname**|データベース内のファイルの論理名です。|  
 |**physical_name**|**nvarchar(260)**|オペレーティング システム ファイル名です。 データベースが AlwaysOn によってホストされている場合[読み取り可能セカンダリ レプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)、 **physical_name**プライマリ レプリカ データベースのファイルの場所を示します。 読み取り可能なセカンダリ データベースの適切なファイルの場所、クエリ[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)します。|  
@@ -66,7 +66,7 @@ ms.locfileid: "47689960"
 |**backup_lsn**|**numeric(25,0)**|ファイルの最新データまたは差分バックアップの LSN です。|  
   
 > [!NOTE]  
->  ドロップまたは大きなインデックスを再構築または削除や、大規模なテーブルを切り捨てる、[!INCLUDE[ssDE](../../includes/ssde-md.md)]トランザクションがコミットされた後に、まで、実際のページの割り当て解除と、関連するロックを延期します。 削除操作が延期された場合、割り当てられた領域は、すぐには解放されません。 このため、ラージ オブジェクトを削除するか切り捨てた直後に sys.database_files を実行して返された値は、実際に使用できるディスク領域を反映していないことがあります。  
+>  大きなインデックスを削除または再構成した場合や、大きなテーブルを削除するか切り捨てた場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では実際のページ割り当て解除とそれに関連するロックが、トランザクションがコミットされるまで延期されます。 削除操作が延期された場合、割り当てられた領域は、すぐには解放されません。 このため、ラージ オブジェクトを削除するか切り捨てた直後に sys.database_files を実行して返された値は、実際に使用できるディスク領域を反映していないことがあります。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

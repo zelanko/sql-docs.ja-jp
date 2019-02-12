@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5d3914822d937d37c0965b69c93c9e06434c044e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21726a3f57db48a9dd1ec163de7ece3ba5e544c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223812"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037783"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>アイテムへの展開または折りたたみアクションの追加 (レポート ビルダーおよび SSRS)
   レポート アイテムの展開と折りたたみや、グループと関連付けられているテーブルやマトリックスの行と列の展開と折りたたみを、ユーザーが対話形式で行うようにできます。 アイテムの展開と折りたたみをユーザーが行うようにするには、アイテムの表示プロパティを設定します。 表示の設定は HTML レポート ビューアーで行い、 *ドリルダウン* アクションと呼ばれることがあります。  
@@ -97,7 +97,7 @@ ms.locfileid: "48223812"
      ![展開されたテーブルを含むレポートの実行](../media/expandcollapse-runreport-reporttable.png "展開されたテーブルを含むレポートの実行")  
   
 ## <a name="see-also"></a>参照  
- [ドリルダウン アクション&#40;レポート ビルダーおよび SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [ドリルダウン アクション (レポート ビルダーおよび SSRS)](drilldown-action-report-builder-and-ssrs.md)   
  [アイテムを非表示にする (レポート ビルダーおよび SSRS)](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

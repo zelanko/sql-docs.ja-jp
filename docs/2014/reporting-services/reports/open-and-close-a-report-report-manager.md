@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b8db59646eb8bbb4d4bbe35c0fc54e4b243d4b28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 41d67805a939cd6b5826dd227cc02e348e48dc32
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065732"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034400"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>レポートを開閉する (レポート マネージャー)
   レポート サーバーにパブリッシュされたレポートは、レポート マネージャーを使って閲覧できます。 既定では、すべてのレポートが HTML 形式で表示されます。 開いたレポートをエクスポートすることにより、他のアプリケーションの形式で閲覧することもできます。 対話機能を持ったレポートや対話型データを含んだレポート ビルダーのレポートでは、リンクをクリックして追加のレポートまたはデータを閲覧できます。  
@@ -42,8 +42,8 @@ ms.locfileid: "48065732"
      レポートを閉じても、レポートはブラウザーのキャッシュから削除されません。 レポートへの接続を切断するには、ブラウザーを閉じる必要があります。  
   
 ## <a name="see-also"></a>参照  
- [レポートおよびその他の項目を検索する&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../contents-page-report-manager.md)   
+ [レポートおよび他のアイテムの検索 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [[コンテンツ] ページ (レポート マネージャー)](../contents-page-report-manager.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

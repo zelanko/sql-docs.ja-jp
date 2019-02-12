@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d238284bb53e4ce6acc5d482ae66c0b21a760da6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373794"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038343"
 ---
 # <a name="lesson-1-create-windows-azure-storage-objects"></a>レッスン 1:Windows Azure ストレージ オブジェクトを作成します。
   クラウド記憶域に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バックアップを作成する前に、まず、ストレージ アカウントを作成してから BLOB コンテナーを作成する必要があります。 レッスン 1 では、ストレージ アカウントと BLOB コンテナーを作成して、Windows Azure 管理ポータルへのログイン手順について説明します。  

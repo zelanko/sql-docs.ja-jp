@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 13a64b2cd44f5df1dfe8201b56c351937849364a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 089bd1fbfeaf86c2f5a96e2cfcf790a90431a452
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141542"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036533"
 ---
 # <a name="delete-catalog-items-management-studio"></a>カタログ アイテムの削除 (Management Studio)
   このページを使用すると、共有スケジュールとロール定義を削除できます。  
   
- 複数のレポートおよびサブスクリプションによって使用される共有スケジュールを削除した場合、以前にその共有スケジュールを使用していたレポートおよびサブスクリプションごとに別個のスケジュールが作成されます。 新たに作成される各スケジュールには、共有スケジュールで指定されていた日付、時刻、および定期的なパターンが保持されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、個々のスケジュールを一元管理する手段は存在しません。 共有スケジュールを削除した場合、それ以降は、各アイテムのスケジュール情報を個別に管理する必要があります。 共有スケジュールを削除する前に、使用して、[レポート ページ](schedule-properties-reports-page.md)レポートは、共有スケジュールを現在使用しているかを判断します。  
+ 複数のレポートおよびサブスクリプションによって使用される共有スケジュールを削除した場合、以前にその共有スケジュールを使用していたレポートおよびサブスクリプションごとに別個のスケジュールが作成されます。 新たに作成される各スケジュールには、共有スケジュールで指定されていた日付、時刻、および定期的なパターンが保持されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、個々のスケジュールを一元管理する手段は存在しません。 共有スケジュールを削除した場合、それ以降は、各アイテムのスケジュール情報を個別に管理する必要があります。 共有スケジュールを削除する前に、 [[レポート] ページ](schedule-properties-reports-page.md) を使用して、どのレポートが共有スケジュールを現在使用しているかを確認します。  
   
  ロール定義のうち削除できるのは、ロールの割り当てに現在使用されていないものだけです。 現在使用されているロールを削除しようとすると、レポート サーバーでロールが削除されずにエラー メッセージが表示されます。 このページに含まれるロール定義が 1 つだけで、それが現在使用されていない場合、 **[OK]** をクリックするとその定義が削除されます。 このページに複数のロールが含まれている場合、保持するロールと削除するロールを選択することはできません。 **[OK]** をクリックすると、使用されていないロール定義がすべて削除されます。  
   
@@ -46,8 +46,8 @@ ms.locfileid: "48141542"
  アイテムの削除中にエラーが発生した場合はエラー コードを表示します。  
   
 ## <a name="see-also"></a>参照  
- [アイテムの削除&#40;Management Studio&#41;](delete-an-item-management-studio.md)   
+ [アイテムの削除 &#40;Management Studio&#41;](delete-an-item-management-studio.md)   
  [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   
- [スケジュールの作成、変更、および削除](../subscriptions/create-modify-and-delete-schedules.md)  
+ [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)  
   
   

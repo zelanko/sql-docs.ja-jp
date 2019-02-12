@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.designmatrix.f1
 ms.assetid: ecd8cae0-3f19-4f3e-90d9-4ddfe1d0eec8
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 43d8c841799f740d602d7c2fc48ab229ec30d0fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 0319a8eefd4b77cf60fb445868dbb6cc67a72ac8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166712"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030123"
 ---
 # <a name="design-the-matrix"></a>マトリックスのデザイン
   レポート ウィザードのこのページでは、レポートのフィールドを選択します。  
@@ -42,7 +42,7 @@ ms.locfileid: "48166712"
  **詳細**  
  マトリックスの詳細セクションに表示するフィールドの一覧を表示します。 フィールドの順序を変更するには、対象のフィールドを選択し、[上へ] ボタンまたは [下へ] ボタンをクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マトリックス &#40;レポート ビルダーおよび SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [レポート ウィザードのヘルプ](../../2014/reporting-services/report-wizard-help.md)  
   

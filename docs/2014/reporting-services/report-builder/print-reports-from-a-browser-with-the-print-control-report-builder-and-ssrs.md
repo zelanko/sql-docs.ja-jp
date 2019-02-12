@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ea05556d69c40a18494d0b5600e05399a0da632b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d37179fe54d133268732065a51bbd299c2379418
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110732"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030393"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS)
   レポートを表示するための最も一般的なクライアント アプリケーションはブラウザーですが、ブラウザーの印刷機能はレポートの印刷には適していません。 ブラウザーの印刷機能は、Web ページを印刷するための機能です。 通常、ブラウザーから印刷したページには、Web ページ上にあるすべての可視要素と、ページまたは Web サイトを識別するヘッダーおよびフッター情報が含まれます。 ブラウザーからの印刷では現在のウィンドウの内容が印刷されるため、 レポートが数ページあっても最初のページしか印刷されません。また、レポート ページのサイズが印刷ページのサイズより大きい場合には、ページの全体を印刷しきれない場合もあります。  
   
  ブラウザーで表示したレポートの印刷品質を向上させ、複数のページを印刷するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で提供されているクライアント側印刷機能を使用します。 クライアント側印刷機能では、標準の **[印刷]** ダイアログ ボックスを使用して、印刷する前に、プリンターの選択、ページと余白の指定、およびレポートのプレビューを行うことができます。 クライアント側印刷機能は、ブラウザーの **[ファイル]** メニューの **[印刷]** コマンドの代わりに使用できます。 クライアント側印刷機能を使用すると、レポートがデザインどおりに印刷され、Web ページの印刷で表示されるような余分な要素は印刷されません。  
   
- クライアント側印刷機能を使用するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX コントロールをインストールする必要があります。 詳細については、次を参照してください。 [Reporting Services の、無効にするクライアント側印刷機能の有効化と](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)します。  
+ クライアント側印刷機能を使用するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX コントロールをインストールする必要があります。 詳細については、「 [Reporting Services のクライアント側印刷機能の有効化と無効化](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,7 +41,7 @@ ms.locfileid: "48110732"
  レポートを印刷する前に、表示される EMF レポートの余白を変更できます。 余白を変更するには、 **[印刷]** ダイアログ ボックスで **[プレビュー]** ボタンをクリックします。 プレビュー ページの上部にある **[余白]** ボタンをクリックします。 [余白] ダイアログ ボックスが表示されます。 必要に応じて上下および左右の余白を設定します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)] ダイアログ ボックスが閉じ、プレビューの表示および印刷の設定が保存されます。  
   
 ## <a name="see-also"></a>参照  
- [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
- [レポートを印刷する&#40;レポート ビルダーおよび SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
+ [レポートの印刷 (レポート ビルダーおよび SSRS)](print-reports-report-builder-and-ssrs.md)   
+ [レポートの印刷 (レポート ビルダーおよび SSRS)](print-a-report-report-builder-and-ssrs.md)  
   
   

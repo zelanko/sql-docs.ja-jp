@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb50a9f9674e13c1032091fbae6da55170d44863
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fb1f04a10837088a9c427d6c0994af4334e8988f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374324"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035103"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL の予約と登録について (SSRS 構成マネージャー)
   Reporting Services アプリケーションの URL は、HTTP.SYS の URL 予約として定義されます。 URL 予約は、Web アプリケーションへの URL エンドポイントの構文を定義します。 レポート サーバーでアプリケーションを構成する際には、レポート サーバー Web サービスとレポート マネージャーの両方に対して URL 予約を定義します。 セットアップまたは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで URL を構成すると、自動的に URL 予約が作成されます。  
@@ -63,7 +63,7 @@ ms.locfileid: "53374324"
   
 |HTTP.SYS の URL 予約|[URL]|説明|  
 |---------------------------------|---------|-----------------|  
-|http://+:80/reportserver|http://\<computername >/reportserver<br /><br /> http://\<IPAddress >/reportserver<br /><br /> http://localhost/reportserver|この URL 予約では、ポート 80 でワイルドカード (+) を指定しています。 これにより、ポート 80 のレポート サーバー コンピューターに解決されるホストが指定されているすべての受信要求がレポート サーバー キューに送られます。 この URL 予約を使用すると、任意の数の URL を使用してレポート サーバーにアクセスできます。<br /><br /> ほとんどのオペレーティング システムでは、これが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーの既定の URL 予約です。|  
+|http://+:80/reportserver|http://\<computername>/reportserver<br /><br /> http://\<IPAddress>/reportserver<br /><br /> http://localhost/reportserver|この URL 予約では、ポート 80 でワイルドカード (+) を指定しています。 これにより、ポート 80 のレポート サーバー コンピューターに解決されるホストが指定されているすべての受信要求がレポート サーバー キューに送られます。 この URL 予約を使用すると、任意の数の URL を使用してレポート サーバーにアクセスできます。<br /><br /> ほとんどのオペレーティング システムでは、これが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーの既定の URL 予約です。|  
 |http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|この URL 予約では IP アドレスを指定しています。これは、ワイルドカードの URL 予約よりはるかに制限の厳しい URL 予約です。 レポート サーバーへの接続に使用できるのは、この IP アドレスを含む URL だけです。 この URL の予約 http:// でレポート サーバーへの要求\<computername >/reportserver または http://localhost/reportserverは失敗します。|  
   
 ##  <a name="DefaultURLs"></a> 既定の URL  
@@ -86,12 +86,12 @@ ms.locfileid: "53374324"
   
 |インスタンスの種類|アプリケーション|既定の URL|HTTP.SYS の実際の URL 予約|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|[既定のインスタンス]|レポート サーバー Web サービス|http://\<servername >/reportserver|http://\<servername >: 80/reportserver|  
-|[既定のインスタンス]|レポート マネージャー|http://\<servername >/reportserver|http://\<servername >: 80/reportserver|  
-|[名前付きインスタンス]|レポート サーバー Web サービス|http://\<servername >/reportserver _\<instancename >|http://\<servername >: 80/reportserver _\<instancename >|  
-|[名前付きインスタンス]|レポート マネージャー|http://\<servername >/reports _\<instancename >|http://\<servername >: 80/reports _\<instancename >|  
-|SQL Server Express|レポート サーバー Web サービス|http://\<servername >/reportserver_SQLExpress|http://\<servername >: 80/reportserver_SQLExpress|  
-|SQL Server Express|レポート マネージャー|http://\<servername >/reports_SQLExpress|http://\<servername >: 80/reports_SQLExpress|  
+|[既定のインスタンス]|レポート サーバー Web サービス|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
+|[既定のインスタンス]|レポート マネージャー|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
+|[名前付きインスタンス]|レポート サーバー Web サービス|http://\<servername>/reportserver_\<instancename>|http://\<servername>:80/reportserver_\<instancename>|  
+|[名前付きインスタンス]|レポート マネージャー|http://\<servername>/reports_\<instancename>|http://\<servername >: 80/reports _\<instancename >|  
+|SQL Server Express|レポート サーバー Web サービス|http://\<servername>/reportserver_SQLExpress|http://\<servername>:80/reportserver_SQLExpress|  
+|SQL Server Express|レポート マネージャー|http://\<servername>/reports_SQLExpress|http://\<servername>:80/reports_SQLExpress|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services の URL の認証とサービス ID  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約では、レポート サーバー サービスのサービス アカウントが指定されます。 サービスが実行されているアカウントが、同じインスタンスで実行される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションに対して作成されるすべての URL に対して使用されます。 レポート サーバー インスタンスのサービス ID は、RSReportServer.config ファイルに格納されます。  

@@ -12,20 +12,20 @@ f1_keywords:
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c3d9abd6c84d6d6abe0d30eac06d113a81ebcd0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 26fbda6dacd20b3ec02061b41a7e1de2f3b2d1ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188672"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038273"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>グラフに対する 3D、傾斜、およびその他の効果 (レポート ビルダーおよび SSRS)
   3 次元 (3D) 効果を使用すると、グラフに奥行を与え、グラフの視覚的な効果を高めることができます。 たとえば、分割円グラフの特定のスライスを強調する場合は、そのスライスが最初に目に留まるように、グラフのパースペクティブを回転および変更することができます。 グラフに 3D 効果を適用すると、グラデーションの色および陰影のスタイルはすべて無効になります。  
   
  3 次元効果は個々のグラフに適用することができます。また、2 次元グラフと 3 次元グラフの両方を同じレポートに表示することもできます。  
   
- すべての種類のグラフでは、 **[グラフ領域のプロパティ]** ダイアログ ボックスで **[3D の有効化]** チェック ボックスをオンにすることにより、グラフ領域に 3 次元効果を適用できます。 詳細については、次を参照してください。[グラフに 3D 効果の追加&#40;レポート ビルダーおよび SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)します。  
+ すべての種類のグラフでは、 **[グラフ領域のプロパティ]** ダイアログ ボックスで **[3D の有効化]** チェック ボックスをオンにすることにより、グラフ領域に 3 次元効果を適用できます。 詳細については、「 [グラフへの 3D 効果の追加 (レポート ビルダーおよび SSRS)](chart-effects-add-3d-effects-report-builder.md)チェック ボックスをオンにすることにより、グラフ領域に 3 次元効果を適用できます。  
   
  グラフの視覚的な効果を高めるには、傾斜、エンボス、およびテクスチャのスタイルを横棒グラフ、縦棒グラフ、円グラフ、およびドーナツ グラフに追加する方法もあります。 詳細については、「[グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 (レポート ビルダーおよび SSRS)](chart-effects-add-bevel-emboss-or-texture-report-builder.md)」を参照してください。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "48188672"
 ## <a name="see-also"></a>参照  
  [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [グラフへの 3D 効果の追加 &#40;レポート ビルダーおよび SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  
+ [グラフへの 3D 効果の追加 (レポート ビルダーおよび SSRS)](chart-effects-add-3d-effects-report-builder.md)  
   
   

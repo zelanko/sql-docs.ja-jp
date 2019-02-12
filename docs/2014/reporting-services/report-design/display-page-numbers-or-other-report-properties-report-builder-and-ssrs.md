@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8bfb730a7c19e4aa2481ed50ec69b5356c955584
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0aa360b52f6928db53a473712c38bbfc2d05de78
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148823"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037824"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS)
   レポートのページ ヘッダーまたはページ フッターにページ番号、レポート タイトル、ファイル名、およびその他のレポート プロパティを簡単に追加できます。 これらのプロパティは、レポート データ ペインの [組み込みフィールド] フォルダーのフィールドとして保存されます。  
@@ -63,9 +63,9 @@ ms.locfileid: "48148823"
   
 1.  [&PageNumber] が含まれているテキスト ボックスを右クリックし、**[式]** をクリックします。  
   
-     **[式の設定: 値]** テキスト ボックスに、=Globals!PageNumber という式が含まれています。  
+     **式の設定。値**テキスト ボックスには、式が含まれています。 グローバル変数を = です。PageNumber します。  
   
-2.  種類と = 記号の後にカーソルを置き`"Page " &`します。  
+2.  = (等号) の後ろにカーソルを置き、「`"Page " &`」と入力します。  
   
      式は、="ページ "&Globals!PageNumber となります。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48148823"
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [ページ ヘッダーとページ フッター&#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [テキスト ボックス内のテキストを書式設定&#40;レポート ビルダーおよび SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

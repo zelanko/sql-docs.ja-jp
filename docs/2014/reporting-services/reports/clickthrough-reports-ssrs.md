@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 344d5706af4e7e963c0dbdd643efc3d0fb6b1b10
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: kfile
+ms.openlocfilehash: caf23eb7e7d0e06a9e79dbaa6b9a0120725a4b10
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205711"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031053"
 ---
 # <a name="clickthrough-reports-ssrs"></a>クリックスルー レポート (SSRS)
   クリックスルー レポートとは、メイン レポートに含まれるデータの詳細情報を提供するレポートです。 クリックスルー レポートは、メイン レポートに表示される対話型データをユーザーがクリックすると表示されます。 これらのレポートは、レポート サーバーによって自動的に生成されます。 クリックスルー レポートに表示される内容は、モデルをデザインするときに、レポート モデルのエンティティに割り当てる `DefaultDetailAttribute` プロパティと `DefaultAggregateAttribute` プロパティを設定することによって指定できます。  

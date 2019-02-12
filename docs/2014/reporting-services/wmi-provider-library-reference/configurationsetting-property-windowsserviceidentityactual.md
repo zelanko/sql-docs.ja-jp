@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1003de5a101720c0ad5dc86869f17f2f8508a059
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a1b926b148874573c8c1106be2982dd0e929c50d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080598"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032204"
 ---
 # <a name="windowsserviceidentityactual-property-wmi-msreportserverconfigurationsetting"></a>WindowsServiceIdentityActual プロパティ (WMI MSReportServer_ConfigurationSetting)
-  レポート サーバー Windows サービスを実行している ID です。 読み取り専用です。  
+  レポート サーバー Windows サービスを実行している ID です。 読み取り専用。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,12 +40,12 @@ public string WindowsServiceIdentityActual;
 ```  
   
 ## <a name="property-values"></a>プロパティ値  
- A`String`でレポート サーバー Windows サービスが実行されている id を格納します。  
+ レポート サーバー Windows サービスを実行している ID を含む `String` オブジェクト。  
   
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

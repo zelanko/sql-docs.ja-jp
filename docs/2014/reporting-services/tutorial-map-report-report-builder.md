@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359864"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040163"
 ---
 # <a name="tutorial-map-report-report-builder"></a>チュートリアル:マップ レポート (レポート ビルダー)
   このチュートリアルでは、地図を背景としてレポート データを表示するときに使用できるマップ機能について学習できます。  
@@ -63,7 +63,7 @@ ms.locfileid: "53359864"
 10. [レポートを保存します。](#Save)  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーを参照する方法の詳細については、データ ソースの選択、データセットの作成し、ウィザードを実行して、このシリーズの最初のチュートリアルを参照してください。[チュートリアル:基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
+>  このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーを参照する方法の詳細については、データ ソースの選択、データセットの作成し、ウィザードを実行して、このシリーズの最初のチュートリアルを参照してください。[チュートリアル: 基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
   
  このチュートリアルの推定所要時間:30 分。  
   
@@ -330,7 +330,7 @@ ms.locfileid: "53359864"
   
  以降の手順では、各郡の店舗売上の範囲に特定の色を関連付ける色ルールを指定します。 赤、黄、緑の各色は、売上高が相対的に高い、中程度、または低いことを示します。 カラー スケールを通貨形式に変更します。 新しい凡例に年間売上高の範囲を表示します。 店舗のない郡については、どの色も使用しないことで、関連付けられたデータがないことを示します。  
   
-###  <a name="Relationship"></a> 6a します。 空間データと分析データの間にリレーションシップを構築する  
+###  <a name="Relationship"></a> 6a. 空間データと分析データの間にリレーションシップを構築する  
  分析データに基づいて郡の図形を色分けするには、まず分析データを空間データに関連付けておく必要があります。 このチュートリアルでは、郡の名前を使用してデータを対応させます。  
   
 ##### <a name="to-build-a-relationship-between-spatial-data-and-analytical-data"></a>空間データと分析データの間にリレーションシップを構築するには  

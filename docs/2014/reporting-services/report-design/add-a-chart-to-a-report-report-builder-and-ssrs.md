@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 11df5fadc7ca525f62ec0109ec1a7f6b199205af
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e8776cb0c1f0db206274ff7d766f31ba1c446f51
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349830"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038675"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>レポートへのグラフの追加 (レポート ビルダーおよび SSRS)
   データをビジュアル形式でまとめるには、グラフ データ領域を使用します。 表示するデータの種類に対して適切な種類のグラフを選択することが重要です。 これにより、データをグラフ形式にした場合にどの程度わかりやすくなるかが決まります。 グラフ要素の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)」を参照してください。  
@@ -71,9 +71,9 @@ ms.locfileid: "53349830"
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [チュートリアル:横棒グラフの追加、レポート (レポート ビルダー)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [チュートリアル:レポート (レポート デザイナー) に横棒グラフの追加](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [チュートリアル:レポート (レポート ビルダー) への円グラフの追加](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [チュートリアル:レポート (レポート デザイナー) への円グラフの追加](https://go.microsoft.com/fwlink/?LinkId=198041)  
+ [チュートリアル: 横棒グラフの追加、レポート (レポート ビルダー)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [チュートリアル: レポート (レポート デザイナー) に横棒グラフの追加](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [チュートリアル: レポート (レポート ビルダー) への円グラフの追加](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [チュートリアル: レポート (レポート デザイナー) への円グラフの追加](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

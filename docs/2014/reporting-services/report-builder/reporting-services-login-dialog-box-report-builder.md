@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f593da2103d0efda0b70e5628e23249e437fedfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce767793dc0994c30bba1301a193f0736c7e2e14
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223212"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030423"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>[Reporting Services ログイン] ダイアログ ボックス (レポート ビルダー)
   **[Reporting Services ログイン]** ダイアログ ボックスを使用すると、レポートをレポート サーバーにパブリッシュする際に使用する資格情報を指定できます。 これらの資格情報については、レポート サーバー管理者に問い合わせてください。  
@@ -34,6 +34,6 @@ ms.locfileid: "48223212"
  Web サービスへのログインに使用するパスワードを入力します。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビルダー ダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

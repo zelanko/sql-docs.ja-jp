@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7df0a7c71dbc0298b2f9448f19287f83d34a8617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209542"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030483"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014 のレポート ビルダー
   レポート ビルダーは、レポート作成環境で作業を好むビジネス ユーザー向け、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 環境。 レポートをデザインする際には、データの取得場所、取得するデータ、およびデータの表示方法を指定します。 レポートを実行すると、指定した情報がすべてレポート プロセッサに渡されます。レポート プロセッサは、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 レポート ビルダーでレポートをプレビューすることも、レポート サーバーまたは SharePoint 統合モードのレポート サーバーにレポートをパブリッシュして、他のユーザーがそこからレポートを実行できるようにすることもできます。  
@@ -38,7 +38,7 @@ ms.locfileid: "48209542"
   
 -   **テーブル、マトリックス、グラフの各ウィザードから開始**します。 データ ソース接続を選択したり、フィールドをドラッグ アンド ドロップしてデータセット クエリを作成したりできます。また、レイアウトとスタイルを選択して、レポートをカスタマイズできます。  
   
--   **マップ ウィザードから開始** して、地図や幾何図形を背景として集計データを表示するレポートを作成します。 マップ データには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリや Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの空間データを指定できます。 追加することも、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing マップ タイルの背景。  
+-   **マップ ウィザードから開始** して、地図や幾何図形を背景として集計データを表示するレポートを作成します。 マップ データには、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリや Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの空間データを指定できます。 また、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing のマップ タイルの背景を追加することもできます。  
   
 
   
@@ -82,19 +82,19 @@ ms.locfileid: "48209542"
  [チュートリアル: オフラインでのクイック グラフ レポートを作成します。](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  レポート ビルダーとレポートの作成に使用できるウィザードを紹介します。 このチュートリアルには、作業用の一連のデータが用意されているため、データ ソースに接続せずに実習を開始できます。  
   
- [レポートの計画&#40;レポート ビルダー&#41;](../report-design/planning-a-report-report-builder.md)  
+ [レポートの計画 (レポート ビルダー)](../report-design/planning-a-report-report-builder.md)  
  レポートを作成する前の考慮事項について説明します。  
   
- [レポート作成の概念&#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [レポート作成の概念 (レポート ビルダーおよび SSRS)](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  レポート ビルダーのドキュメント全体で使用する主要な概念について説明します。  
   
- [レポート デザイン ビュー&#40;レポート ビルダー&#41;](report-design-view-report-builder.md)  
+ [レポート デザイン ビュー &#40;レポート ビルダー&#41;](report-design-view-report-builder.md)  
  レポート デザイン ビューの各ペインと領域について説明します。  
   
- [共有データセット デザイン ビュー&#40;レポート ビルダー&#41;](shared-dataset-design-view-report-builder.md)  
+ [共有データセット デザイン ビュー (レポート ビルダー)](shared-dataset-design-view-report-builder.md)  
  共有データセット デザイン ビューの各ペインと領域について説明します。  
   
- [キーボード ショートカット&#40;レポート ビルダー&#41;](keyboard-shortcuts-report-builder.md)  
+ [キーボード ショートカット (レポート ビルダー)](keyboard-shortcuts-report-builder.md)  
  レポート ビルダーでレポートのナビゲーションとデザインに使用できるショートカット キーについて説明します。  
   
  [レポート ビルダーの起動&#40;レポート ビルダー&#41;](start-report-builder.md)  

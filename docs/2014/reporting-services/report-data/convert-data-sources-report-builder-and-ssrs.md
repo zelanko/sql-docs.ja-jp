@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3bd7ed750917129496caf9febe711df9fd0cebc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bc8c9b65c70fef86887ed80a8049b4e930188ffe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090992"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038393"
 ---
 # <a name="convert-a-data-source-from-embedded-to-shared-report-builder-and-ssrs"></a>埋め込みデータ ソースから共有データ ソースへの変換 (レポート ビルダーおよび SSRS)
   レポート データ ペインの各データ ソースは、レポートに固有のものとして埋め込まれている場合と、共有されている場合とがあります。 レポート ビルダーにおける共有データ ソースの参照先は、レポート サーバー上または SharePoint サイト上にパブリッシュされた共有データ ソースです。 レポート デザイナーにおける共有データ ソースの参照先は、ソリューション エクスプローラーの **[共有データ ソース]** フォルダーに表示される共有データ ソースです。  
@@ -63,7 +63,7 @@ ms.locfileid: "48090992"
      レポート データ ペインでデータ ソース アイコンが共有データ ソースのアイコンに変わります。  
   
 ## <a name="see-also"></a>参照  
- [レポート データ ソースを管理します。](manage-report-data-sources.md)   
+ [レポート データ ソースを管理する](manage-report-data-sources.md)   
  [Reporting Services でのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

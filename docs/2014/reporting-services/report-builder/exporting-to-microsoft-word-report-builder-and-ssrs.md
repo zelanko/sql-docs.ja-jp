@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc149e8d8af6b2b5f08d849f3fda261849ff9d8f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 30401dfbc8d9ea9e4c77dad1516b9301d6dae833
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361094"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030403"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
   Word 表示拡張機能は、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 のネイティブ形式でレポートを表示します。 形式は、Office Open XML です。  
@@ -77,9 +77,9 @@ ms.locfileid: "53361094"
   
  この問題は、Word レンダラーがレポートの **PageNumber** や **TotalPages** などの改ページに関連するフィールドを解析して単純な参照のみを処理し、関数の呼び出しが行われないために生じます。 この場合、式は **ToString** 関数を呼び出します。 次の 2 つの式は同等であり、レポート ビルダーやレポート デザイナーでレポートをプレビューするか、レポート マネージャーや SharePoint ライブラリでパブリッシュされたレポートを表示した場合は、両方とも正しく表示されます。 ただし、Word レンダラーでは 2 番目の式のみが正しく解析され、正しいページ番号が表示されます。  
   
--   **複合式:** 式は、します。 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **複合式:** 式は `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber` です  
   
--   **テキスト ランを使用した式:** テキスト、 **Average Sales**、および式、 `=Avg(Fields!YTDPurchase.Value, "Sales)`、およびテキスト、**ページ番号**、および式 `=Globals!PageNumber`  
+-   **テキスト ランを使用した式:** テキスト、**Average Sales**、式、`=Avg(Fields!YTDPurchase.Value, "Sales)`、テキスト、**Page Number**、式 `=Globals!PageNumber`  
   
  この問題を回避するには、フッターおよびヘッダーで式を使用するときに 1 つの複合式ではなく複数のテキスト ランを使用します。 次の 2 つの式は等価です。 最初の式は複合式で、2 番目の式はテキスト ランを使用しています。 Word レンダラーでは、2 番目の式のみが正しく解析されます。  
   

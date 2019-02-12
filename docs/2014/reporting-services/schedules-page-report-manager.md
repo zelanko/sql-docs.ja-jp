@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d4c3dab6371b9272436a49147c8ff2c09b2620d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3dc1cfa85fde084327567e36fea728d9c76ef3f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157192"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028253"
 ---
 # <a name="schedules-page-report-manager"></a>[スケジュール] ページ (レポート マネージャー)
   [スケジュール] ページでは、共有スケジュールを作成、変更、削除、一時停止、または再開できます。 共有スケジュールとは、レポート、サブスクリプション、およびスケジュール情報を利用するその他のプロセスとは別に作成および管理できる名前付きのスケジュールです。 追加した共有スケジュールは、全ユーザーが選択できます。  

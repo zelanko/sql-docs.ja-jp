@@ -2,22 +2,20 @@
 title: sys.dm_xe_database_sessions (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7602e03864a736c6011142fd56c3e6129efcb718
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: ba1a198e9550f72f3e6781659f1cba39bd3d5d1f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143272"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013513"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ ms.locfileid: "54143272"
 ### <a name="relationship-cardinalities"></a>リレーションシップの基数  
 2015-07-13 の時点では、'sys.dm_xe_objects' は、名前には ' (' _d) が含まれていないこれらの Xevent Dmv の 1 つです。 入力ミスまたはエラーでは、次の表の右側の列ではありません。 名前は、Microsoft SQL Server と Azure SQL データベースで同じです。  
   
-|From|変換先|リレーションシップ|  
+|From|目的|リレーションシップ|  
 |--------|------|----------------|  
 |sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|多対一|  
 |sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多対一|  

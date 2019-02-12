@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 292baa254bffc16650376dbbc30e7193b8bc367c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 03d555f967b50b503d608244bdd4a8885cede61e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358824"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025863"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>カスタム レポート アイテムのデザイン時コンポーネントの作成
   カスタム レポート アイテムのデザイン時コンポーネントは、Visual Studio レポート デザイナー環境で使用できるコントロールです。 カスタム レポート アイテムのデザイン時コンポーネントは、ドラッグ アンド ドロップ操作を使用できるアクティブ化されたデザイン画面、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロパティ ブラウザーとの統合、およびカスタム プロパティ エディター機能を提供します。  
@@ -200,6 +200,6 @@ private void OnProportionalScaling(object sender, EventArgs e)
  [カスタム レポート アイテムのアーキテクチャ](custom-report-item-architecture.md)   
  [カスタム レポート アイテムの実行時コンポーネントの作成](creating-a-custom-report-item-run-time-component.md)   
  [カスタム レポート アイテムのクラス ライブラリ](custom-report-item-class-libraries.md)   
- [操作方法：カスタム レポート アイテムを配置します。](how-to-deploy-a-custom-report-item.md)  
+ [方法:カスタム レポート アイテムを配置する](how-to-deploy-a-custom-report-item.md)  
   
   

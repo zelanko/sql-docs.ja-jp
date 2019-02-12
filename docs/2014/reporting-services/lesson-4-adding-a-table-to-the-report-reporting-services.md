@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 4 : レポートへのテーブルの追加 (Reporting Services) | Microsoft Docs'
+title: レッスン 4:テーブルを追加するレポート (Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d990d18498547434a6f7774dfcee076d2986ee40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6255750df935fd3112f0e3b41941983a4882a0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220812"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033233"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>レッスン 4 : レポートへのテーブルの追加 (Reporting Services)
+# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>レッスン 4:(Reporting Services) レポートにテーブルを追加
   データセットを定義したら、レポートのデザインを開始できます。 レポートのレイアウトを作成するには、データ領域、テキスト ボックス、画像、およびレポートに含めるその他のアイテムを、デザイン画面にドラッグ アンド ドロップします。  
   
  基になるデータセットからデータ行を繰り返し表示するアイテムを *データ領域*と呼びます。 基本的なレポートのデータ領域は 1 つだけですが、表形式のレポートにグラフを追加する場合には、データ領域を追加できます。 データ領域を追加したら、そのデータ領域にフィールドを追加できます。  
   
 ### <a name="to-add-a-table-data-region-and-fields-to-a-report-layout"></a>[テーブル] データ領域とフィールドをレポート レイアウトに追加するには  
   
-1.  **[ツールボックス]** で **[テーブル]** をクリックし、デザイン画面内をクリックして、マウスをドラッグします。 デザイン画面の中央に 3 列のテーブル データ領域が作成されます。  
+1.  **[ツールボックス]** で **[表]** をクリックし、デザイン画面内をクリックして、マウスをドラッグします。 デザイン画面の中央に 3 列のテーブル データ領域が作成されます。  
   
     > [!NOTE]  
     >  **[レポート データ]** ペインの左側に **[ツールボックス]** タブが表示されます。 **[ツールボックス]** を開くには、ポインターを **[ツールボックス]** タブの上に移動させます。**[ツールボックス]** が表示されない場合は、**[表示]** メニューの **[ツールボックス]** をクリックします。  
@@ -42,12 +42,12 @@ ms.locfileid: "48220812"
   
 6.  [Qty] フィールドを、3 番目の列の右端沿いに、垂直方向のカーソルとマウス ポインターが正符号 [+] になるまでドラッグします。 マウス ボタンを離すと `[Qty]`の 4 番目の列が作成されます。  
   
-7.  同様に [明細小計] フィールドを追加して、5 番目の列を作成します。  
+7.  同様に \[Line Total\] フィールドを追加して、5 番目の列を作成します。  
   
     > [!NOTE]  
     >  列ヘッダーは [Line Total] です。 レポート デザイナーは、LineTotal を 2 つの語に分割して、列の表示名を自動的に作成します。  
   
-     次の図は、[Date]、[Order]、[Product]、[Qty]、および [Line Total] の各フィールドを使用して作成したテーブル データ領域を示しています。  
+     次の図は、これらのフィールドが設定されているテーブル データ領域を示しています。日付、注文、製品、数量、および行の合計。  
   
      ![デザイン、ヘッダー行および詳細行を持つテーブル](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "デザイン、ヘッダー行および詳細行を持つテーブル")  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48220812"
 >  **[ファイル]** メニューの **[すべてを保存]** をクリックして、レポートを保存します。  
   
 ## <a name="next-steps"></a>次の手順  
- [テーブル] データ領域がレポートに、フィールドがデータ領域にそれぞれ正しく追加され、レポートが正しくプレビューされました。 次は、列ヘッダー、日付、および通貨の値の書式を設定します。 「[レッスン 5: レポートの書式設定 &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)」を参照してください。  
+ [テーブル] データ領域がレポートに、フィールドがデータ領域にそれぞれ正しく追加され、レポートが正しくプレビューされました。 次は、列ヘッダー、日付、および通貨の値の書式を設定します。 参照してください[レッスン 5。レポートの書式設定&#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)します。  
   
 ## <a name="see-also"></a>参照  
  [テーブル &#40;レポート ビルダーおよび SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   

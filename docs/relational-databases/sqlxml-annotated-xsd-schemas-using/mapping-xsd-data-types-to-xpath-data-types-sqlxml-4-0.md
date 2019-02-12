@@ -17,16 +17,16 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
-author: douglaslMS
+author: MightyPen
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01aec4bb2a1eeac47958aa517d0fefc5a165ac52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 158619cadcec1b0133b951bf2ce25445319d7ff4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650140"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034733"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>XSD データ型から XPath データ型へのマッピング (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "47650140"
   
 |XSD データ型|XDR データ型|同等の<br /><br /> XPath データ型|SQL Server<br /><br /> SQL Server 変換|  
 |-------------------|-------------------|------------------------------------|--------------------------------------------|  
-|**Base64Binary**<br /><br /> **HexBinary**|**なし**<br /><br /> **bin.base64bin.hex**|**適用なし**|なし<br /><br /> EmployeeID|  
+|**Base64Binary**<br /><br /> **HexBinary**|**None**<br /><br /> **bin.base64bin.hex**|**適用なし**|なし<br /><br /> EmployeeID|  
 |**ブール値**|**boolean**|**boolean**|CONVERT(bit, EmployeeID)|  
 |**10 進数、整数、浮動小数点数、バイト、short、int、long、float、double、unsignedByte、unsignedShort、unsignedInt、unsignedLong**|**数、int、float、i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8**|**number**|CONVERT(float(53), EmployeeID)|  
-|**id、idref、idrefsentity、エンティティ、表記、nmtoken、nmtokens、DateTime、string、AnyURI**|**id、idref、idrefsentity、エンティティ、列挙、表記、nmtoken、nmtokens、char、dateTime、dateTime.tz、文字列、uri、uuid**|**string**|CONVERT(nvarchar(4000), EmployeeID, 126)|  
+|**id、idref、idrefsentity、エンティティ、表記、nmtoken、nmtokens、DateTime、string、AnyURI**|**id, idref, idrefsentity, entities, enumeration, notation, nmtoken, nmtokens, char, dateTime, dateTime.tz, string, uri, uuid**|**string**|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |**decimal**|**fixed14.4**|**該当なし (はデータ型は XDR データ型 fixed14.4 に相当する XPath の。)**|CONVERT(money, EmployeeID)|  
 |**date**|**date**|**string**|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |**time**|**time**<br /><br /> **time.tz**|**string**|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  

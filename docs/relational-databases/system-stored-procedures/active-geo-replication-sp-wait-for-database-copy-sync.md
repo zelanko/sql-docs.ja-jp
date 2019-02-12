@@ -2,10 +2,8 @@
 title: sp_wait_for_database_copy_sync (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: database-engine, sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_wait_for_database_copy_sync_TSQL
@@ -19,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78a77ce45d4ff148e42ab375341ee521eba982da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d3e667f743b153b965e788d9d7485b311aec5bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662860"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034549"
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>アクティブ Geo レプリケーション - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,10 +41,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @target_server =] '<'  
+ [ @target_server = ] 'server_name'  
  アクティブなセカンダリ データベースをホストする SQL データベース サーバーの名前。 server_name のデータ型は sysname で、既定値はありません。  
   
- [ @target_database =] 'database_name'  
+ [ @target_database = ] 'database_name'  
  アクティブなセカンダリ データベースの名前。 database_name のデータ型は sysname で、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -63,7 +61,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="permissions"></a>アクセス許可  
  プライマリ データベース内のすべてのユーザーが、このシステム ストアド プロシージャを呼び出すことができます。 ログインは、プライマリ データベースとアクティブなセカンダリ データベースの両方のユーザーであることが必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  すべてのトランザクションをコミットする前に、 **sp_wait_for_database_copy_sync**呼び出しがアクティブなセカンダリ データベースに送信されます。  
   
 ## <a name="examples"></a>使用例  
@@ -76,7 +74,7 @@ EXEC sys.sp_wait_for_database_copy_sync @target_server = N'ubfyu5ssyt1', @target
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sys.dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
  [地理的レプリケーション動的管理ビューおよび関数&#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   

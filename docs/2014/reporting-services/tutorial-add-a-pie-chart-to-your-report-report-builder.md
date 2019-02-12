@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: レポートへの円グラフの追加 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:円グラフの追加、レポート (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 12c567f91d526d3ac44485704f7c76fdfa345c11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202532"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020103"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>チュートリアル:レポート (レポート ビルダー) への円グラフの追加します。
   円グラフおよびドーナツ グラフは、データを全体に対する比率として表示します。 円グラフは、主に、グループ間の比較を示すために使用されます。 円グラフおよびドーナツ グラフ、ピラミッド、じょうごグラフでは、図形グラフと呼ばれるグラフのグループを構成します。 図形グラフには軸がありません。 図形グラフに数値フィールドをドロップすると、それぞれの値の全体に占める比率が計算されます。  
   
  円グラフのデータ ポイントが多すぎると、データ ポイント ラベルが過密状態になって見づらくなる場合があります。 その場合は、折れ線グラフの使用を検討してください。 円グラフは、データを少数のデータ ポイントに集計したうえで使用するようにします。  
@@ -45,11 +45,11 @@ ms.locfileid: "48202532"
 7.  [レポートを保存します。](#Save)  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する手順を 2 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+>  このチュートリアルでは、ウィザードに関する手順を 2 つにまとめて示します。 レポート サーバーを参照する方法の詳細については、データ ソースを追加し、データセットを追加、このシリーズの最初のチュートリアルを参照してください。[チュートリアル: 基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
   
- このチュートリアルの推定所要時間: 10 分  
+ このチュートリアルの推定所要時間:10 分  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/report-builder-tutorials.md)」を参照してください。  
   
 ##  <a name="Chart"></a> 1.グラフ ウィザードから円グラフを作成する  

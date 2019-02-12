@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaa0d4a48f1e5feb90fdf2fd8270b287fa7fc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145892"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037813"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>レポート デザイナーを使用してレポートをデザインする (SSRS)
   レポート デザイナーを使用すると、フル機能の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートおよびレポート ソリューションを作成できます。 レポート デザイナーには、データ ソース、データセット、およびクエリ、データ領域とフィールドのレポート レイアウトの配置、連携するパラメーターとレポートのセットなどの対話機能を定義できるグラフィカル インターフェイスが用意されています。  
@@ -118,7 +118,7 @@ ms.locfileid: "48145892"
   
     -   F5 キーを押す。  
   
-     レポートを作成するものも配置しないプロジェクト構成で指定されているレポートを使用する場合、`StartItem`別のプレビュー ウィンドウで、現在の構成プロパティを開きます。  
+     レポートを作成しても配置しないプロジェクト構成を使用している場合は、現在の構成の `StartItem` プロパティで指定されたレポートが、別のプレビュー ウィンドウで開きます。  
   
     > [!NOTE]  
     >  デバッグ モードを使用するには、開始アイテムを設定する必要があります。 ソリューション エクスプ ローラーでレポート プロジェクトを右クリックし、をクリックして**プロパティ**、および`StartItem`、表示するレポートの名前を選択します。  
@@ -183,12 +183,12 @@ ms.locfileid: "48145892"
 |3|レポートのレイアウトが目立たない程度に若干変更されるマイナーなビルドの問題。|  
 |4|パブリッシュ上の警告としてのみ使用される。|  
   
- しようとすると、プレビューまたは配置に新しいレポート アイテムを含むレポートを[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]マップ、データ バーなど、これらのレポート アイテムをレポートから削除できます。 既定では、構成の ErrorLevel プロパティは 2 に設定されます。この設定では、マップが削除されると、レポートの作成が失敗する原因となります。 ただし、ErrorLevel プロパティの値を 0 または 1 に変更すると、マップが削除されても、警告が発行され、ビルド プロセスは続行されます。  
+ マップやデータ バーなど、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]で新しくなったレポート アイテムが含まれるレポートをプレビューまたは配置しようとすると、これらのレポート アイテムはレポートから削除される可能性があります。 既定では、構成の ErrorLevel プロパティは 2 に設定されます。この設定では、マップが削除されると、レポートの作成が失敗する原因となります。 ただし、ErrorLevel プロパティの値を 0 または 1 に変更すると、マップが削除されても、警告が発行され、ビルド プロセスは続行されます。  
   
   
 ## <a name="see-also"></a>参照  
  [Reporting Services SQL Server Data Tools の&#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)   
  [クエリ デザイン ツールでレポート デザイナーの SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
- [SQL Server データ ツールの配置およびバージョン サポート &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+ [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

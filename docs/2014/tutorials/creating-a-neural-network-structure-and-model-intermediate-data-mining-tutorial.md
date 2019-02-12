@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395805"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037723"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>ニューラル ネットワーク構造およびモデルの作成 (中級者向けデータ マイニング チュートリアル)
   データ マイニング モデルを作成するには、まずデータ マイニング ウィザードを使用して、新しいデータ ソース ビューに基づく新しいマイニング構造を作成する必要があります。 ここでは、ウィザードを使用してマイニング構造を作成し、同時に、[!INCLUDE[msCoName](../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムに基づく関連マイニング モデルを作成します。  
@@ -122,7 +121,7 @@ ms.locfileid: "52395805"
   
  ![サービス グレード値の分布](../../2014/tutorials/media/skt-service-grade-valuesc.gif "サービス グレード値の分布")  
   
- その結果、モデルを処理したときに、その出力が期待どおりにグループ化されないことがあります。 たとえば、値の最適なグループを識別するためにクラスタ リングを使用する場合、アルゴリズムによってような範囲に ServiceGrade の値が分かれています。0.0748051948 - 0.09716216215 します。 この分類は数学的には正確ですが、このような範囲がビジネス ユーザーにとって有意なものではない場合もあります。  
+ その結果、モデルを処理したときに、その出力が期待どおりにグループ化されないことがあります。 たとえば、値の最適なグループを識別するためにクラスタ リングを使用する場合、アルゴリズムによってような範囲に ServiceGrade の値が分かれています。0.0748051948 - 0.09716216215. この分類は数学的には正確ですが、このような範囲がビジネス ユーザーにとって有意なものではない場合もあります。  
   
  この手順より直感的な結果をグループ化します数値異なる方法で数値データ列のコピーを作成します。  
   
@@ -150,16 +149,16 @@ ms.locfileid: "52395805"
 |0.0748051948 - 0.09716216215|27|  
 |0.09716216215 - 0.13297297295|39|  
 |0.13297297295 - 0.167499999975|10|  
-|> = 0.167499999975|10|  
+|>= 0.167499999975|10|  
   
  Equal Areas メソッドによるビン分割  
   
 |Value|SUPPORT|  
 |-----------|-------------|  
-|\< [0.07]|26|  
-|[0.07] - 0.00|22|  
+|\< 0.07|26|  
+|0.07 - 0.00|22|  
 |0.09 - 0.11|36|  
-|> = 0.12|36|  
+|>= 0.12|36|  
   
 > [!NOTE]  
 >  これらの統計は、すべてのデータが処理された後のモデルのマージナル統計ノードから取得できます。 マージナル統計ノードの詳細については、次を参照してください。[ニューラル ネットワーク モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)します。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19bdabaab24d9276386095cb8ef97b0130a13c58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 558c27c978ec6343b6185fab3792906c6d21ad52
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530379"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036593"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Reporting Services の暗号化キーのバックアップと復元
   レポート サーバー構成で重要なのは、機密情報の暗号化に使用される対称キーのバックアップ コピーの作成です。 キーのバックアップ コピーは多くのルーチン処理で必要とされ、キーのバックアップ コピーにより新しいインストールで既存のレポート サーバー データベースを再利用できます。  

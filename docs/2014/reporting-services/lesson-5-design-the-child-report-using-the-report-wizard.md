@@ -1,5 +1,5 @@
 ---
-title: レッスン 5:レポート ウィザードを使用して子レポートの設計 |Microsoft Docs
+title: 'レッスン 5: レポート ウィザードを使用して子レポートの設計 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc993c0881eb4aeeddb18c8df0efad69dbba261e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 20fd3bccea72f0869f267058ca6bf71acbb20425
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418353"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032313"
 ---
-# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>レッスン 5:レポート ウィザードを使用して、子レポートをデザインします。
+# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>レッスン 5: レポート ウィザードを使用して、子レポートをデザインします。
   子レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して子レポートを設計します。 レポート デザイナーの詳細については、「[レポート デザイナーを使用してレポートをデザインする &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)」を参照してください。  
   
 ### <a name="to-design-the-child-report-using-the-report-wizard"></a>レポート ウィザードを使用して子レポートを設計するには  

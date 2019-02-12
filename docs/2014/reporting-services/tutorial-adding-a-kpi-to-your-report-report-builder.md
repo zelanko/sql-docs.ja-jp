@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: レポートへの KPI の追加 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:レポート (レポート ビルダー) への KPI の追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 595e05361087ad821b8baeaf6a676936626eb1e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056523"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037663"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>チュートリアル: レポートへの KPI の追加 (レポート ビルダー)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>チュートリアル:レポート (レポート ビルダー) への KPI の追加
   主要業績評価指標 (KPI) は、ビジネス上重要な測定可能値です。 このチュートリアルでは、レポートに KPI を追加する方法を説明します。 このシナリオの KPI は、製品サブカテゴリ別の販売集計です。 この KPI の現在の状態を、色、ゲージ、およびインジケーターを使用して表示します。  
   
  次の図に、ここで作成するレポートを示します。  
@@ -45,11 +45,11 @@ ms.locfileid: "48056523"
 7.  [レポートを保存します。](#Save)  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成、およびウィザードの実行に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+>  このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーを参照する方法の詳細については、データ ソースの選択、データセットの作成し、ウィザードを実行して、このシリーズの最初のチュートリアルを参照してください。[チュートリアル: 基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
   
- このチュートリアルの推定所要時間: 15 分  
+ このチュートリアルの推定所要時間:15 分です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/report-builder-tutorials.md)」を参照してください。  
   
 ##  <a name="Table"></a> 1.テーブルまたはマトリックス ウィザードを使用して表レポートとデータセットを作成する  
@@ -75,7 +75,7 @@ ms.locfileid: "48056523"
   
 5.  **[次へ]** をクリックします。  
   
-6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 詳細については、「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
+6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 詳細については、次を参照してください。[チュートリアル。基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
   
 7.  **[次へ]** をクリックします。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "48056523"
   
 12. **[完了]** をクリックします。  
   
-     テーブルがデザイン画面に追加されます。 テーブルには 5 列 5 行が含まれています。 行グループ ペインに、SalesDate、Subcategory、および Details の 3 つの行グループが表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+     テーブルがデザイン画面に追加されます。 テーブルには 5 列 5 行が含まれています。 行グループ ペインには、3 つの行グループが表示されます。SalesDate、Subcategory、および詳細。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
   
 13. **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "48056523"
   
 1.  表内のセルを右クリックして 2 つ下から、`[Sum(Sales)]`セル (小計行サブカテゴリの売上を表示する)、およびクリック**テキスト ボックスのプロパティ**します。  
   
-2.  **入力**、 をクリックして、 **fx**横に、**塗りつぶしの色**オプションし、次の式を入力、**式の設定: BackgroundColor**フィールド。  
+2.  **入力**、 をクリックして、 **fx**横に、**塗りつぶしの色**オプションし、次の式を入力、**式の設定。BackgroundColor**フィールド。  
   
  `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
