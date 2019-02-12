@@ -46,7 +46,7 @@ ms.locfileid: "56017853"
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. sql:is-constant を指定してコンテナー要素を追加する  
  この注釈付き XSD スキーマ、  **\<CustomerOrders >** 指定することで、定数要素として定義されているが、 **sql: は定数**属性値は 1 です。 そのため、  **\<CustomerOrders >** はデータベース テーブルまたは列にマップされていません。 この定数要素から成る、 **\<順序 >** 子要素。  
   
-  **\<CustomerOrders >** マップされないデータベースのテーブルまたは列を結果の XML を含むコンテナー要素として表示されます、 **\<順序 >** 子要素。  
+ **\<CustomerOrders >** マップされないデータベースのテーブルまたは列を結果の XML を含むコンテナー要素として表示されます、 **\<順序 >** 子要素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
