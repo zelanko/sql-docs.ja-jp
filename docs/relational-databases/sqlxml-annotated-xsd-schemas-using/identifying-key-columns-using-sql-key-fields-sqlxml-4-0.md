@@ -47,11 +47,11 @@ ms.locfileid: "56040443"
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. ときに適切な入れ子を生成\<sql:relationship > 十分な情報は提供されません  
  この例は、場所を示しています**sql:key-フィールド**指定する必要があります。  
   
- 次のスキーマを検討してください。 スキーマ間の階層の指定、 **\<順序 >** と**\<顧客 >** いる要素、 **\<順序 >** 要素は親と**\<顧客 >** 要素は、子。  
+ 次のスキーマを検討してください。 スキーマ間の階層の指定、 **\<順序 >** と **\<顧客 >** いる要素、 **\<順序 >** 要素は親と **\<顧客 >** 要素は、子。  
   
-  **\<Sql:relationship >** 親子リレーションシップを指定するタグを使用します。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 提供される情報 **\<sql:relationship >** 親テーブル (Sales.SalesOrderHeader) 内の行を一意に識別するには不十分です。 指定しないと、 **sql:key-フィールド**注釈、生成される階層は正確ではありません。  
+ **\<Sql:relationship >** 親子リレーションシップを指定するタグを使用します。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 提供される情報 **\<sql:relationship >** 親テーブル (Sales.SalesOrderHeader) 内の行を一意に識別するには不十分です。 指定しないと、 **sql:key-フィールド**注釈、生成される階層は正確ではありません。  
   
- **Sql:key-フィールド**で指定した**\<順序 >** 注釈は、親 (Sales.SalesOrderHeader テーブル) 内の行を一意に識別し、その子要素が下に表示、その親。  
+ **Sql:key-フィールド** で指定した **\<順序 >** 注釈は、親 (Sales.SalesOrderHeader テーブル) 内の行を一意に識別し、その子要素が下に表示、その親。  
   
  スキーマは次のようになります。  
   
