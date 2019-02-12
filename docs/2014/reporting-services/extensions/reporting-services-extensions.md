@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 46dd4563cbc35ce2625e31329bd1a68cf55f177f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 231ba80e2abe304ba98f6ab64eaeba30ea783918
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198542"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030773"
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services の拡張機能
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のモジュール式アーキテクチャは、拡張性を考慮して設計されています。 マネージド コード API を使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の多くのコンポーネントで使用される拡張機能を容易に開発、インストール、および管理できます。 プライベートまたは共有のアセンブリを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用して作成し、変化するビジネス要件に応じて新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を追加できます。  

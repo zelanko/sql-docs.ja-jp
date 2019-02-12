@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b44064191e56dc16e212fb79794918b3023e3dc8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 46984681329be6e236cac6271d3768705a26dd7b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370594"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027553"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>軸の間隔の指定 (レポート ビルダーおよび SSRS)
   軸の間隔により、軸上のラベルおよび付随する目盛りの数が定義されます。 値軸では、軸の間隔により、グラフ上のデータ ポイントに一貫性のある基準が提供されます。 ただしカテゴリ軸では、この機能により、軸ラベルなしでカテゴリが表示されることがあります。 軸の Interval プロパティで、必要な間隔の数を指定できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、実行時に、結果セットのデータに基づいて間隔の数が計算されます。 軸の間隔を計算する方法の詳細については、「[グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  

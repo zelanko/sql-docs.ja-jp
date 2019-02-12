@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 24163866-f37a-4c38-982e-c3d79bf64d4c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 069307827be2b364daaed7c08255773f156d6e4d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 4337babc43983523939f6c6aaa8329964fd49b23
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353963"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033505"
 ---
 # <a name="odbc-connection-type-ssrs"></a>ODBC の接続の種類 (SSRS)
   ODBC データ プロバイダーのデータを含めるには、種類が ODBC のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ODBC データ処理拡張機能に基づいています。  

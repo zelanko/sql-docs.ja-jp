@@ -1,5 +1,5 @@
 ---
-title: レッスン 6:アプリケーションに ReportViewer コントロールの追加 |Microsoft Docs
+title: 'レッスン 6: アプリケーションに ReportViewer コントロールの追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf11d44179dadbc3362c2fcf6f946c30d6856a56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 80515317335678ae8110368d9cf840860e6b0794
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361124"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037003"
 ---
-# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>レッスン 6:アプリケーションに ReportViewer コントロールを追加します。
+# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>レッスン 6: アプリケーションに ReportViewer コントロールを追加します。
   レポート ウィザードを使用して子レポートを設計した後は、Web サイト アプリケーションに ReportViewer コントロールを追加します。  
   
 ### <a name="to-add-a-reportviewer-control-to-the-application"></a>アプリケーションに ReportViewer コントロールを追加するには  

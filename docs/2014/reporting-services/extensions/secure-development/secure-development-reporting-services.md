@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3fda898ff10e22bbed7cf31569ae6acdc3f852ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2e6e4ea444a243baf06b96448621d4f189d5efa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110448"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027063"
 ---
 # <a name="secure-development-reporting-services"></a>セキュリティで保護された開発 (Reporting Services)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、厳しく制約され、管理者が定義したセキュリティ コンテキストでコードを実行できる堅固なセキュリティ システムを備えています。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、コード アクセス セキュリティまたは証拠ベース セキュリティとも呼ばれる [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のセキュリティ システムを使用します。 コード アクセス セキュリティの管理下では、リソースにアクセスする場合にユーザーが信頼されます。ただし、ユーザーが実行するコードが信頼されていない場合は、リソースへのアクセスが拒否されます。  

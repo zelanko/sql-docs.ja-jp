@@ -3,7 +3,7 @@ title: 組み込み関数を使用した JSON データの検証、クエリ、�
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02e8a7e05bfb1de4deb6a9c4b5d95902e7ee6a67
-ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
+ms.openlocfilehash: e7d1d86b3a33f761182346fb00b6ef6c2b13a349
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52886747"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022245"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>組み込み関数を使用した JSON データの検証、クエリ、変更 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.kb.createcd.f1
 - sql12.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9b2efda76c0e1005a298e67b139233a96796522b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3cfaf75851b97a8b13856fa8f65aca0bde7e10d1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413779"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034093"
 ---
 # <a name="create-a-composite-domain"></a>複合ドメインの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの複合ドメインを作成する方法について説明します。 複合ドメインは、1 つのデータ フィールドに適用される 1 つ以上の単一ドメインで構成されます。 複合ドメインについて詳しくは、「[複合ドメインの管理](../../2014/data-quality-services/managing-a-composite-domain.md)」をご覧ください。  
@@ -89,7 +89,7 @@ ms.locfileid: "52413779"
   
 6.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](../../2014/data-quality-services/end-the-domain-management-activity.md)」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="FollowUp"></a> フォローしてください：複合ドメインを作成した後  
+##  <a name="FollowUp"></a>補足情報: 複合ドメインを作成した後  
  複合ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../../2014/data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../../2014/data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../../2014/data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

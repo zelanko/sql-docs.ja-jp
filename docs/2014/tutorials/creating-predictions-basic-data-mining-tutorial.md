@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515455"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035263"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>予測の作成 (基本的なデータ マイニング チュートリアル)
   予測クエリ ビルダーを使用して予測を生成できますし、マイニング モデルの精度をテストし、結果に満足していることにしましたが後、**マイニング モデル予測**データ マイニング モデル タブデザイナー。  

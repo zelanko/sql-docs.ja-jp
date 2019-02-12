@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 853bed4a458fd7f3e7472c563b0cd973bb3eea5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 845013f002bc0d0937ae012ef033aaea1d45cc89
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063382"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025884"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>更新を確認するまたは更新をオフにする (レポート ビルダーおよび SSRS)
   レポートを開くたびに、レポート ビルダーによって、そのレポートにあるレポート パーツのパブリッシュ済みインスタンスがレポート サーバー、またはレポート サーバーと統合されている SharePoint サイト上で更新されたかどうかが確認されます。 また、データセットやパラメーターなどのレポート パーツの依存アイテムに変更が加えられたかどうかも確認されます。 レポート パーツまたはレポート パーツの依存アイテムがサイトまたはサーバー上で更新されている場合は、レポート内の情報バーに、更新されたパーツの数が表示されます。 更新は、表示して受け入れることも、拒否することもできます。また、情報バーを消去することもできます。  
@@ -37,7 +37,7 @@ ms.locfileid: "48063382"
 -   デザイン画面またはレポート本文内のレポートの外側を右クリックし、をクリックして**更新プログラムの確認**します。  
   
 ## <a name="see-also"></a>参照  
- [レポート パーツ&#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [およびレポート パーツを再パブリッシュ&#40;レポート ビルダーおよび SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
  [レポート パーツの参照し、既定のフォルダーの設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
  [レポート パーツのトラブルシューティング&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   

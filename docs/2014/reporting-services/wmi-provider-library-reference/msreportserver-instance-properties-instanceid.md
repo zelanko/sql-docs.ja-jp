@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8144e84f386255c8d04cccee94913a7c184b6a9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2e83bf191eb16fa2e96782f4781bbd142bc04ee7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158992"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033733"
 ---
 # <a name="instanceid-property-wmi-msreportserverinstance"></a>InstanceID プロパティ (WMI MSReportServer_Instance)
   このオブジェクトは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
@@ -39,7 +39,7 @@ public Dim InstanceID As String
 public string InstanceID;  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>参照  

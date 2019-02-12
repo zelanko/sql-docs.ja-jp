@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0751e3e72e7a6b9df1d2cdb8d414cfa263d38426
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5164cdfd418ad8f813b47813f7caee4799e41d90
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109598"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021403"
 ---
 # <a name="deploying-a-data-processing-extension"></a>データ処理拡張機能の配置
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のデータ処理拡張機能は、作成して [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ライブラリにコンパイルした後、レポート サーバーおよびレポート デザイナーで検出できるようにする必要があります。 これは、適切なディレクトリに拡張機能をコピーし、適切な [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成ファイルにエントリを追加するだけで簡単に行うことができます。  
@@ -35,7 +35,7 @@ ms.locfileid: "48109598"
 |---------------|-----------------|  
 |`Name`|拡張機能の一意な名前。たとえば、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ処理拡張機能に対して "SQL"、OLE DB データ処理拡張機能に対して "OLEDB"。 `Name` 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extension** 要素内にあるすべてのエントリの間で一意にする必要があります。|  
 |`Type`|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  
-|`Visible`|`false` の値は、データ処理拡張機能がユーザー インターフェイスに表示されないことを示します。 属性が含まれない場合、既定値は`true`します。|  
+|`Visible`|`false` の値は、データ処理拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は `true` になります。|  
   
  RSReportServer.config ファイルまたは RSReportDesigner.config ファイルの詳細については、「[Reporting Services 構成ファイル](../../report-server/reporting-services-configuration-files.md)」を参照してください。  
   
@@ -43,8 +43,8 @@ ms.locfileid: "48109598"
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[データ処理拡張機能をレポート サーバーに配置する方法](deploying-a-data-processing-extension-to-a-report-server.md)|レポート サーバーにデータ処理拡張機能を配置する方法について説明します。|  
-|[データ処理拡張機能をレポート デザイナーに配置する方法](deploying-a-data-processing-extension-to-report-designer.md)|レポート デザイナーにデータ処理拡張機能を配置する方法について説明します。|  
+|[方法: データ処理拡張機能をレポート サーバーに配置します。](deploying-a-data-processing-extension-to-a-report-server.md)|レポート サーバーにデータ処理拡張機能を配置する方法について説明します。|  
+|[方法: レポート デザイナーにデータ処理拡張機能を配置します。](deploying-a-data-processing-extension-to-report-designer.md)|レポート デザイナーにデータ処理拡張機能を配置する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services の拡張機能](../reporting-services-extensions.md)   

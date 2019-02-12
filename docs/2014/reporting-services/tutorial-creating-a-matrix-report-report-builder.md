@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353392"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033123"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル:マトリックス レポート (レポート ビルダー) を作成します。
   このチュートリアルでは、サンプルの売上データに基づいて基本的なマトリックス レポートを作成する方法を説明します。 このマトリックスは、入れ子になった行グループと列グループ、および隣接する列グループで構成されます。 また、列を書式設定し、テキストを回転させる方法についても学習します。 次の図に、ここで作成するレポートと同様のレポートを示します。  
@@ -325,7 +325,7 @@ ms.locfileid: "53353392"
   
  レポートのレポート ヘッダーにレポート タイトルが表示されます。  
   
-##  <a name="Save"></a> 8。レポートを保存する  
+##  <a name="Save"></a> 8.レポートを保存する  
  レポートは、レポート サーバー、SharePoint ライブラリ、またはコンピューターに保存することができます。  
   
  このチュートリアルでは、レポートをレポート サーバーに保存します。 レポート サーバーにアクセスできない場合は、レポートをコンピューターに保存してください。  
@@ -356,7 +356,7 @@ ms.locfileid: "53353392"
   
 4.  **[保存]** をクリックします。  
   
-##  <a name="RotateTextBox"></a> 9 です。(省略可) テキスト ボックスを 270 度回転させる  
+##  <a name="RotateTextBox"></a> 9.(省略可) テキスト ボックスを 270 度回転させる  
  マトリックスを含むレポートは、実行すると、水平方向と垂直方向に拡張されます。 テキストボックスを垂直方向に、つまり 270 度回転させると、水平方向のスペースを節約できます。 表示レポートの幅は狭くなり、Microsoft Word などの形式にエクスポートした場合は、印刷ページ内に収まる可能性が高くなります。  
   
  テキスト ボックスでも、テキストを水平方向または垂直方向 (上から下) に表示できます。 詳細については、「[テキスト ボックス (レポート ビルダーおよび SSRS)](report-design/text-boxes-report-builder-and-ssrs.md)」を参照してください。  

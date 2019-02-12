@@ -51,13 +51,13 @@ f1_keywords:
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cdaecf8a8090cdd37fde7c199747b5a5e12c390b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cea1d745b677bfa67f6847f2b42ed3701914f1e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184352"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027163"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>グラフの書式設定 (レポート ビルダーおよび SSRS)
   グラフのデータを定義し、そのデータが希望どおりに表示されるようになったら、書式を追加して、全体的な外観を改善したり主要なデータ ポイントを強調したりすることができます。 最も一般的な書式設定オプションは、グラフ要素を右クリックして表示されるショートカット メニューを使用すると表示できるプロパティ ダイアログ ボックスから変更できます。 各グラフ要素には、独自のダイアログ ボックスがあります。 グラフ要素の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)」を参照してください。  

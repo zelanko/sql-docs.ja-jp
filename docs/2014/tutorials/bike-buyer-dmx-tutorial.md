@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/19/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
@@ -16,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af20e220b4f1c2010606fec0d50e51025c73d31f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366724"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025253"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX のチュートリアル
   このチュートリアルでは、データ マイニング拡張機能 (DMX) クエリ言語を使用して、マイニング モデルを作成、トレーニング、および調査する方法を学習します。 その後、これらのマイニング モデルを使用して、顧客が自転車を購入するかどうかを判断する予測を作成します。  
@@ -92,7 +91,7 @@ ms.locfileid: "53366724"
  [レッスン 4:Bike Buyer マイニング モデルの参照](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  このレッスンでは、`SELECT` ステートメントを使用してマイニング モデルの内容を調査する方法を学習します。  
   
- [レッスン 5:予測クエリの実行](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [レッスン 5: 予測クエリの実行](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
  このレッスンでは、`PREDICTION JOIN` ステートメントを使用して、マイニング モデルに対する予測を作成する方法を学習します。  
   
 ## <a name="requirements"></a>必要条件  

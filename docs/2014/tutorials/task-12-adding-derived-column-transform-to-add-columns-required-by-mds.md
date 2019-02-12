@@ -1,26 +1,23 @@
 ---
-title: 'タスク 12: 派生列変換を MDS で必要な列を追加する |Microsoft Docs'
+title: タスク 12:派生列変換を MDS で必要な列を追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 104fdfdebf01bece9f5a3762b33b9e31f40d06d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c80f719bd756a0ad241ef270507e638b08c2081
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125332"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036514"
 ---
-# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>タスク 12: 派生列変換を追加して MDS で必要な列を追加する
+# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>タスク 12:派生列変換を追加して MDS で必要な列を追加する
   ここでは、派生列変換をデータ フローに追加します。 2 つの派生列を追加する**ImportType**と**BatchTag**レコードは、この変換に渡されます。 MDS のステージング テーブルにデータをアップロードする前に、これらの列を追加する必要があります。 これら 2 つは、MDS のステージング テーブルに必要な列です。 参照してください[リーフ メンバー ステージング テーブル](../master-data-services/leaf-member-staging-table-master-data-services.md)の詳細。  
   
 1.  ドラッグ アンド ドロップ**派生列変換**から**共通**セクション、 **SSIS ツールボックス**を**データ フロー**タブ。  
@@ -60,6 +57,6 @@ ms.locfileid: "48125332"
 15. クリックして**OK**を閉じる、**派生列変換** ダイアログ ボックス。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 13: データを書き込む OLE DB 変換先を MDS ステージング テーブルに追加する](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
+ [タスク 13:MDS ステージング テーブルにデータを書き込む OLE DB 変換先を追加します。](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1d6e9ed6c7aa3cf1ac103c157f0084c4c6863167
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a0566d2a271c891aaa85e7624974e7bcd2769891
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081452"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021483"
 ---
 # <a name="deleteencryptedinformation-method-wmi-msreportserverconfigurationsetting"></a>DeleteEncryptedInformation メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースから暗号化された情報を削除します。  
@@ -49,7 +49,7 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このメソッドを呼び出すと、次のデータが削除されます。  
   
 -   ユーザー名とパスワードを含む、暗号化されたデータ ソース情報  
@@ -62,10 +62,10 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
   
  DeleteEncryptedInformation メソッドを呼び出しても、レポート サーバー構成ファイルには影響しません。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

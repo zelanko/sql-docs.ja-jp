@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0a3ae0e5-897b-4898-a60d-5455eec3d305
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2dcb1e84335100eda4155fa1f0a8a1cc9c65206e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159984"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027519"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>マイニング モデルでの入れ子になったテーブルのフィルター処理 (中級者向けデータ マイニング チュートリアル)
   モデルの作成と検証が完了したら、顧客データのサブセットに焦点を絞ります。 たとえば、特定の品目が入っているバスケットのみを分析したり、一定期間に何も購入しなかった顧客の人口統計を分析したりすることができます。  
@@ -111,7 +110,7 @@ ms.locfileid: "48159984"
  [アソシエーションを予測する&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [モデル フィルターの構文と例&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [モデル フィルターの構文と例 (Analysis Services - データ マイニング)](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [マイニング モデルのフィルター &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

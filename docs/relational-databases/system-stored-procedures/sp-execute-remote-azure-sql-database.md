@@ -2,10 +2,8 @@
 title: sp_execute_remote (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords:
 - sp_execute_remote
@@ -18,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c61098eabfe58cb1e791dd379cafb5f91d50f247
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a475ba50aa8d3ba140ea551306d8b9f17fe66d22
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837090"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035903"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,21 +44,21 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>引数  
- [ \@data_source_name =] *datasourcename*  
+ [ \@data_source_name = ] *datasourcename*  
  ステートメントを実行する外部データ ソースを識別します。 参照してください[外部データ ソースの作成 & #40 です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-external-data-source-transact-sql.md)。 外部データ ソースは、"RDBMS"または"SHARD_MAP_MANAGER"の型指定できます。  
   
- [ \@stmt =]*ステートメント*  
- 含む Unicode 文字列には、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチです。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数が指定されている場合に付ける必要があります、 **N**します。Unicode 定数など**N 'sp_who'** が有効で、文字定数 **'sp_who'** はありません。 文字列のサイズは、データベース サーバーで利用可能なメモリにより制限されます。 64 ビット サーバーで、文字列のサイズが 2 GB の最大サイズに制限、 **nvarchar (max)** します。  
+ [ \@stmt= ] *statement*  
+ 含む Unicode 文字列には、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはバッチです。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数が指定されている場合に付ける必要があります、 **N**します。Unicode 定数など**N 'sp_who'** が有効で、文字定数 **'sp_who'** はありません。 文字列のサイズは、データベース サーバーで利用可能なメモリにより制限されます。 64 ビット サーバーで、文字列のサイズが 2 GB の最大サイズに制限、 **nvarchar (max)** します。  
   
 > [!NOTE]  
 >  \@stmt には、たとえば、名前の変数と同じ形式を持つパラメーターを含めることができます。 `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  含まれる各パラメーター \@stmt では、両方に対応するエントリがあります、 \@params パラメーター定義リストとパラメーター値の一覧。  
   
- [ \@params =] N'\@*parameter_name * * data_type* [,...*n* ] '  
+ [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
  1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む\@stmt します。この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 すべてのパラメーターで指定された\@で定義されている stmtmust \@params します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに\@stmt にパラメーターが含まれていない\@params は必要ありません。 このパラメーターの既定値は NULL です。  
   
- [ \@param1 =] '*value1*'  
+ [ \@param1= ] '*value1*'  
  パラメーター文字列に定義する最初のパラメーターの値を指定します。 Unicode 定数または Unicode 変数を指定できます。 含まれるすべてのパラメーターに指定されたパラメーター値が必要がある\@stmt します。ときに、値は必要ありません、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに\@stmt にパラメーターがありません。  
   
  *n*  

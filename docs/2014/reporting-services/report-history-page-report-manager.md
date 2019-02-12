@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b5865ecbca2ea5577fccf0c28faeabf27b9573d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb6d9de69656d40b3a5fd87c5353c6d0b8f0ef5f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053142"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033863"
 ---
 # <a name="report-history-page-report-manager"></a>[レポート履歴] ページ (レポート マネージャー)
   [レポート履歴] ページには、一定期間に生成および保存したレポート スナップショットが表示されます。 レポート サーバーで設定されているオプションによっては、新しいスナップショットのみがレポート ヒストリに保存されます。  
@@ -56,7 +56,7 @@ ms.locfileid: "48053142"
   
 ## <a name="see-also"></a>参照  
  [表示、またはレポート履歴の削除&#40;レポート マネージャー&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [レポート履歴にスナップショットを追加&#40;レポート マネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [全般プロパティ ページ、レポート &#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [スナップショット オプション プロパティ ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  

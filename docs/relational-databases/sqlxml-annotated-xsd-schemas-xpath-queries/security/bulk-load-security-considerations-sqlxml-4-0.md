@@ -13,16 +13,16 @@ helpviewer_keywords:
 - security [SQLXML], XML Bulk Load
 - XML Bulk Load [SQLXML], security
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f33298b28971e301118f92a06e9a8115daf7cb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e881e774a01a7333c5d97005fa5188821b3ed4f9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814780"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037603"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>一括読み込みのセキュリティに関する注意点 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47814780"
   
 -   ユーザーが、エラーを書き込む SQLXML のエラー ログ ファイルを設定した場合は、一括読み込みが実行されるたびに、最新の一括読み込み処理のデータでファイルの内容が上書きされます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML データの一括読み込みを実行する&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

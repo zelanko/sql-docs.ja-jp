@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 86308d04c45dfdb2bb135d1dc4d8a1da8bb957ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 46e431f85960f0fb5ce93ff80a53a3001c1b666d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056342"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023573"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>極座標グラフ (レポート ビルダーおよび SSRS)
-  極座標グラフでは、カテゴリ別にグループ化されたポイントのセットとして、360°の円上に系列が表示されます。 値は、円の中心からポイントまでの距離で表されます。 ポイントが中心から遠いほど、その値は大きくなります。 カテゴリのラベルは、グラフの周囲に表示されます。 極座標グラフにデータを追加する方法の詳細については、次を参照してください。[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)します。  
+  極座標グラフでは、カテゴリ別にグループ化されたポイントのセットとして、360°の円上に系列が表示されます。 値は、円の中心からポイントまでの距離で表されます。 ポイントが中心から遠いほど、その値は大きくなります。 カテゴリのラベルは、グラフの周囲に表示されます。 極座標グラフにデータを追加する方法の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -58,6 +58,6 @@ ms.locfileid: "48056342"
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [折れ線グラフ &#40;レポート ビルダーおよび SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
- [空にして、Null データ ポイントのグラフで&#40;レポート ビルダーおよび SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [グラフ内の空のデータ ポイントおよび NULL データ ポイント &#40;レポート ビルダーおよび SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

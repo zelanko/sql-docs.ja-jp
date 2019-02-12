@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5688cd5beccc582ef5c3413b19938104f659680a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1bb9deac03a2ba3683922a8c7e361cb908c787c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130662"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034713"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>レポートへの罫線の追加 (レポート ビルダーおよび SSRS)
   線や四角形を追加せずに、ヘッダー、フッター、およびレポート本文自体に罫線を追加することで、レポートに罫線を追加できます。  
@@ -38,6 +38,6 @@ ms.locfileid: "48130662"
 3.  フッター内のアイテムの外側で右クリックし、 **[フッターのプロパティ]** をクリックします。 **[罫線]** タブで、左、下、右に、必要なスタイルを指定した罫線を追加します。  
   
 ## <a name="see-also"></a>参照  
- [四角形と線&#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [四角形と線 &#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

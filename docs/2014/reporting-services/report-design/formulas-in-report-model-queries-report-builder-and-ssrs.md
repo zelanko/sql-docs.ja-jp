@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 60a6c6a9271245e36c3e491b946c36e175f12d12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 18390c8cb1df552b746f16c5eb569f08063e7763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209472"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026563"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>レポート モデル クエリの数式 (レポート ビルダーおよび SSRS)
   レポート モデルをデータ ソースとして使用するレポートでは、式の計算が値に対して実行されます。 式には、関数、演算子、定数、フィールドまたはエンティティの参照を含めることができます。 式を使用すると、数値データとテキスト データの結合、集計、フィルター、および評価を行うことができます。 式を作成して新しいフィールドとして保存することも、既存のフィールドの式を変更することもできます。  
@@ -53,7 +53,7 @@ ms.locfileid: "48209472"
  **テキスト連結演算子 :** 1 つ以上のテキスト文字列を連結して 1 つのテキストを生成するには、アンパサンド (&) を使用します。  
   
 ##  <a name="Constants"></a> 定数  
- 定数は計算されない値、つまり変更されない値です。 レポート ビルダーは、次の定数を使用して: `True`、 `False`、および`Empty`します。 これらの定数は、ブール型フィールドを評価するために使用します。 たとえば、IsDiscontinued というフィールドがあるとします。 このフィールドの有効な値は、True、False、または Empty (" ") だけです。  
+ 定数は計算されない値、つまり変更されない値です。 レポート ビルダーでは、`True`、`False`、および `Empty` という定数を使用します。 これらの定数は、ブール型フィールドを評価するために使用します。 たとえば、IsDiscontinued というフィールドがあるとします。 このフィールドの有効な値は、True、False、または Empty (" ") だけです。  
   
 ##  <a name="Functions"></a> 関数  
  関数は、 *引数*と呼ばれる特定の値を特定の順序で使用して計算を実行する定義済みの式です。 引数には、リテラル値またはフィールド、あるいはその両方の組み合わせを指定できます。 式にフィールドが使用されている場合、フィールド名はそのフィールドの各インスタンスを表します。 引数がリテラル値の場合、特殊な文字を使用して、引数がリテラル値であることを指定しなければならない場合があります。  
@@ -68,14 +68,14 @@ ms.locfileid: "48209472"
   
 |||  
 |-|-|  
-|集計関数|`AVG`, `COUNT`, `COUNTDISTINCT`, `MAX`, `MIN`, `STDEV`, `STDEVP`, `SUM`, `VAR`, `VARP`|  
+|集計関数|`AVG`、`COUNT`、`COUNTDISTINCT`、`MAX`、`MIN`、`STDEV`、`STDEVP`、`SUM`、`VAR`、`VARP`|  
 |条件関数|`IF`、 `IN`、 `SWITCH`|  
 |変換関数|`INT`, `DECIMAL`, `FLOAT`, `TEXT`|  
-|日付と時刻の関数|`DATE`, `DATEADD`, `DATEDIFF`, `DATETIME`, `DATEONLY`, `DAY`, `DAYOFWEEK`, `DAYOFYEAR`, `HOUR`, `MINUTE`, `MONTH`, `NOW`, `QUARTER`, `SECOND`, `TIMEONLY`, `TODAY`, `WEEK`, `YEAR`|  
-|情報関数|`GETUSERCULTURE`, `GETUSERID`|  
+|日付と時刻の関数|`DATE`、`DATEADD`、`DATEDIFF`、`DATETIME`、`DATEONLY`、`DAY`、`DAYOFWEEK`、`DAYOFYEAR`、`HOUR`、`MINUTE`、`MONTH`、`NOW`、`QUARTER`、`SECOND`、`TIMEONLY`、`TODAY`、`WEEK`、`YEAR`|  
+|情報関数|`GETUSERCULTURE`、 `GETUSERID`|  
 |論理関数|`AND`、 `NOT`、 `OR`|  
 |算術関数|`MOD`、 `ROUND`、 `TRUNC`|  
 |演算子|加算 (+)、除算 (/)、等しい (=)、累乗 (^)、より大きい (>)、以上 (>=)、より小さい (<)、以下 (<=)、乗算 (*)、負数化 (-)、等しくない (<>)、減算 (-)|  
-|文字列関数|`CONCAT`, `FIND`, `LEFT`, `LENGTH`, `LOWER`, `LTRIM`, `REPLACE`, `RIGHT`, `RTRIM`, `SUBSTRING`, `UPPER`|  
+|文字列関数|`CONCAT`、`FIND`、`LEFT`、`LENGTH`、`LOWER`、`LTRIM`、`REPLACE`、`RIGHT`、`RTRIM`、`SUBSTRING`、`UPPER`|  
   
   

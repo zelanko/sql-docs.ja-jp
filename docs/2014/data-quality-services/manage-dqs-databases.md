@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6dda82b297b04f21fe1b4d2b7255c65b5b8a4aef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bd5a24a76963532c7fa70100bfccc171ba3c90ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366234"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023803"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   ここでは、バックアップ/復元またはデタッチ/アタッチなど DQS のデータベースに対して実行できるデータベース管理アクティビティについて説明します。  
   
 ##  <a name="BackupRestore"></a> DQS データベースのバックアップと復元  
- SQL Server データベースのバックアップと復元は、バックアップ データベースからデータを復旧して災害時のデータの損失を防ぐためにデータベース管理者が実行する一般的な操作です。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 主に 2 つの SQL Server データベースにより実装されます。DQS_MAIN および DQS_PROJECTS します。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) データベースのバックアップと復元の手順は、他の SQL Server データベースの手順と似ています。DQS データベースのバックアップと復元に関連付けられている次の 3 つの問題があります。  
+ SQL Server データベースのバックアップと復元は、バックアップ データベースからデータを復旧して災害時のデータの損失を防ぐためにデータベース管理者が実行する一般的な操作です。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] は、主に DQS_MAIN と DQS_PROJECTS の 2 つの SQL Serverデータベースにより実装されます。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) データベースのバックアップと復元の手順は、他の SQL Server データベースの手順と似ています。DQS データベースのバックアップと復元に関連付けられている次の 3 つの問題があります。  
   
 -   DQS データベースのバックアップと復元の操作を同期する必要があります。 同期しない場合、復元された [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] は機能しません。  
   

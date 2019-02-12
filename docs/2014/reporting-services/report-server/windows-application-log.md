@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 83818feb28dbcda5f7ae981f440fd850ea59af7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 81ec8964de180ad4db9e4edd3e2c609d5ad56b63
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180872"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037303"
 ---
 # <a name="windows-application-log"></a>Windows アプリケーション ログ
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、イベント メッセージが Windows アプリケーション ログに書き込まれます。 アプリケーション ログに書き込まれたメッセージ情報を使用して、ローカル システムで実行されているレポート サーバー アプリケーションで生成されたイベントを確認できます。  
   
 ## <a name="viewing-report-server-events"></a>レポート サーバーのイベントの表示  
- イベント ビューアーを使用すると、ログ ファイルの表示およびログ ファイルに含まれるメッセージのフィルター処理を実行できます。 イベント メッセージの詳細については、次を参照してください。[エラーおよびイベント リファレンス&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)します。 Windows アプリケーション ログおよびイベント ビューアーの詳細については、Windows の製品マニュアルを参照してください。  
+ イベント ビューアーを使用すると、ログ ファイルの表示およびログ ファイルに含まれるメッセージのフィルター処理を実行できます。 イベント メッセージの詳細については、「 [エラーとイベントのリファレンス (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)」を参照してください。 Windows アプリケーション ログおよびイベント ビューアーの詳細については、Windows の製品マニュアルを参照してください。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、次の 3 つのイベント ソースがあります。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48180872"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)   
- [エラーおよびイベント リファレンス&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [エラーとイベントのリファレンス (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

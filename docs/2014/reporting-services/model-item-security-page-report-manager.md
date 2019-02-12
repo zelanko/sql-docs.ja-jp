@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 08742a78d0992467a8fb596ecc4f267576f00701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a89e2e627b297d5d6dc9795217b727aeb20d7c74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195072"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025793"
 ---
 # <a name="model-item-security-page-report-manager"></a>[モデル アイテムのセキュリティ] ページ (レポート マネージャー)
   このページでは、特定のアイテムに対する読み取り専用権限の許可や取り消しを行うことにより、モデルの各部をセキュリティで保護できます。 モデル アイテムのセキュリティは、実行時のアドホック データ探索や、レポート ビルダーでのレポート作成時に、パブリッシュされたモデルの各部分を使用できるかどうかに影響します。 この機能を使用するには、コンテンツ マネージャーの権限が必要です。  

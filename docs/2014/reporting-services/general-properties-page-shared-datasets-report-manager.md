@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24e303409568f028ff57cf189cad4f1022111e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 72bd3d617fa14e785b29b9c89e3d53d7d5dd3da4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202732"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032753"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>[全般] プロパティ ページ、共有データセット (レポート マネージャー)
   共有データセット アイテムのプロパティを表示および管理するには、[共有データセット] ページを使用します。  
@@ -66,11 +66,11 @@ ms.locfileid: "48202732"
   
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [[コンテンツ] ページ (レポート マネージャー)](../../2014/reporting-services/contents-page-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [キャッシュ更新オプション&#40;レポート マネージャー&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [共有データセットのキャッシュ ページで、&#40;レポート マネージャー&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
- [共有データセットを管理します。](report-data/manage-shared-datasets.md)   
- [共有データセットのキャッシュ&#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
+ [共有データセットを管理する](report-data/manage-shared-datasets.md)   
+ [共有データセットのキャッシュ &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

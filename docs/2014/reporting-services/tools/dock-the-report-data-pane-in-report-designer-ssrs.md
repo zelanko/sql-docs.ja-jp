@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb73ae268b088d27a96f7b24fbe8d0c7971b0c23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7892e0699c9815cdf16b3f40e553f95d38ac51df
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210372"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036613"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>レポート デザイナーのレポート データ ペインをドッキングする (SSRS)
-  レポート デザイナーで[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、レポート データ ペインには、データ ソース、データセット、フィールド、パラメーター、およびイメージなど、レポートで使用できるデータ オブジェクトの階層ビューが表示されます。 このビューのデータ ソースは、埋め込みデータ ソースである場合と、ソリューション エクスプローラーに表示される共有データ ソースのデータ ソース参照である場合があります。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のレポート デザイナーでは、データ ソース、データセット、フィールド、パラメーター、画像など、レポートで使用できるデータ オブジェクトの階層ビューがレポート データ ペインに表示されます。 このビューのデータ ソースは、埋め込みデータ ソースである場合と、ソリューション エクスプローラーに表示される共有データ ソースのデータ ソース参照である場合があります。  
   
 ### <a name="to-display-the-report-data-pane"></a>レポート データ ペインを表示するには  
   

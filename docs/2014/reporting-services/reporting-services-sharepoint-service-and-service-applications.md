@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 582b6dea85eae5db3232de86f071a8606bfe36cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 02acf78c8f7c30172271062f090411f5fb8f2e1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538523"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037365"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services の SharePoint サービスとサービス アプリケーション
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードは、SharePoint サービス アーキテクチャ上に構築されており、SharePoint サービスと一対多のサービス アプリケーションを利用します。 サービス アプリケーションを作成すると、サービスが使用可能になり、サービス アプリケーション データベースが生成されます。 複数の Reporting Services サービス アプリケーションを作成することができますが、ほとんどの配置シナリオではサービス アプリケーションは 1 つで十分です。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c3dc4a6627486c3449819da1e7987b8b8ae8f569
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 90e9a4ae2d0d119f8992cf89cb388075c264c042
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109612"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037473"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>罫線の追加および変更 (レポート ビルダーおよび SSRS)
   グラフィック要素を使用してレポートのセクションを区切る場合は、罫線をレポートに追加できます。 色やスタイルなどの罫線のプロパティを編集して、罫線の外観をカスタマイズできます。 たとえば、企業の色をレポートに組み込むことができます。  
@@ -38,6 +38,6 @@ ms.locfileid: "48109612"
     >  線のスタイルを設定した場合**二重**と線の幅が 1 1/2 ポイントより狭いします線が表示されるか double レポート ビルダー、レポート デザイナーまたはレポート マネージャーでレポートを実行するとします。 レポートを他の形式 (Microsoft Word、Acrobat PDF など) にエクスポートすると、二重に表示されます。  
   
 ## <a name="see-also"></a>参照  
- [四角形と線&#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [四角形と線 &#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

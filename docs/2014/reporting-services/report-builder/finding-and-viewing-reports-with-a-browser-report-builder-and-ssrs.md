@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c91d12665ac8637f9de407896aed435a02af6940
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7a04426a5be60f596e941dd9e3da38183a545418
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365171"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036433"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>ブラウザーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)
   Web ブラウザーが対応していれば、レポート サーバーに直接接続してレポートを表示できます。 レポートにはそれぞれ、レポート サーバー上の URL アドレスが割り当てられています。 レポートの Web アドレスを入力すると、レポートを Web アプリケーションとは無関係にブラウザー ウィンドウで開くことができます。 レポートは HTML 形式で表示され、レポート内でページ間の移動やデータ値の検索を行うことができるようにレポート ツール バーが含まれています。 URL でパラメーターを設定すると、ツール バーを非表示にしたりレポートの出力形式を選択したりできます。  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f271f8c3c2d3371326b1ffe8d7f1f55bf5ee89c4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8c737c59081646347a0a878d33dae65b3420a64b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396539"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036819"
 ---
 # <a name="data-matching"></a>データ照合
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ照合プロセスでは、データの重複を減らし、データ ソースのデータの精度を高めることができます。 照合では、1 つのデータ ソースのすべてのレコードにおける重複の度合いを分析し、比較したレコードのセットごとに重み付けした一致率を返します。 これにより、一致と見なすレコードを決定し、ソース データに対して適切な処理を実行することができます。  

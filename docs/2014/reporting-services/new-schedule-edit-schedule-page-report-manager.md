@@ -1,5 +1,5 @@
 ---
-title: '新しいスケジュール: スケジュールの編集 ページ (レポート マネージャー) |Microsoft Docs'
+title: 新しいスケジュール:[スケジュールの編集] ページ (レポート マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7c69e1d2021e4c92dc87bd866ec851d0a3349fe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97af25216bd0f1e30531fcb43e182672cd299ac6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139462"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034550"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>新しいスケジュール: スケジュール ページ (レポート マネージャー) を編集します。
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>新しいスケジュール:[編集のスケジュール] ページ (レポート マネージャー)
   [新しいスケジュール] ページまたは [スケジュールの編集] ページを使用すると、レポートのスケジュールを作成できます。 スケジュールはサブスクリプションで使用されます。その用途は、キャッシュされたレポートを更新、スナップショットをスタンドアロン アイテムとして作成、スナップショットをレポート履歴で作成することです。  
   
 > [!NOTE]  
@@ -79,7 +79,7 @@ ms.locfileid: "48139462"
   
 -   **[時間]** では、1 時間ごとに実行されるスケジュールを定義します。 **[開始日および終了日]** セクションを使用して、スケジュールを実行する日を指定します。  
   
--   **[日]** では、選択した日の指定した時刻に実行されるスケジュールを定義します。 次の方法で日を指定することができます: すべて\<*日*>、すべての平日、毎回\<*数*> 日。 いずれかのオプションを選択すると、それ以外のオプションは表示されていても無効になります。  
+-   **[日]** では、選択した日の指定した時刻に実行されるスケジュールを定義します。 次の方法では、日を指定できます。すべて\<*日*>、すべての平日、毎回\<*数*> 日。 いずれかのオプションを選択すると、それ以外のオプションは表示されていても無効になります。  
   
 -   **[週]** では、1 週間ごとの指定した時刻に実行されるスケジュールを定義します。 実行間隔は、2 週間ごとのようにちょうど 1 週間を単位としているものでも、週の複数の曜日を指定するものでもかまいません。  
   

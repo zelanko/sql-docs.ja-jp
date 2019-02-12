@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e9883e7e21e58424fbc6280ad99ac323becd9b00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 162be037a4ae458fdc609b76d8cad1ee21c27e0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526341"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037203"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>データバインド画像の追加 (レポート ビルダーおよび SSRS)
   レポートには、データベースに保存されている画像への参照を含めることができます。 このような画像を *データバインド画像*と呼びます。 たとえば、製品一覧で製品名と合わせて表示される画像はデータバインド画像です。  
