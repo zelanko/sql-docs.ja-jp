@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ffceeae13889bc616be63fbc23838dd75029c4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 87ee0ab32e605214674c2ee2a933f63cc4b66268
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102982"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032383"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>レポート データ ペインでのフィールドの追加、編集、更新 (レポート ビルダーおよび SSRS)
   データセット フィールドは、外部データ ソースにデータセット クエリを実行するときに返されるデータを表すフィールド名の組み込みのコレクションです。  
@@ -95,6 +95,6 @@ ms.locfileid: "48102982"
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)   
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Reporting Services クエリ デザイナー](../reporting-services-query-designers.md)   
- [クエリ デザイナー &#40;レポート ビルダー&#41;](../query-designers-report-builder.md)  
+ [クエリ デザイナー (レポート ビルダー)](../query-designers-report-builder.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a448e7e4-dbd1-4d31-90bc-4d4a1c23b352
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f212c6436af0e35c7cfaceadf8c519765d0a07a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171949"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035043"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>コール センター データ用のデータ ソース ビューの追加 (中級者向けデータ マイニング チュートリアル)
   ここでは、コール センター データへのアクセスに使用するデータ ソース ビューを追加します。 最初に調査用のニューラル ネットワーク モデルを構築し、その後、提案作成用のロジスティック回帰モデルを構築します。どちらのモデルにも、同じデータを使用します。  
@@ -70,7 +69,7 @@ ms.locfileid: "48171949"
 |FactCallCenterID|データ ウェアハウスにデータがインポートされたときに作成される任意のキー。<br /><br /> この列は一意のレコードを識別する列で、データ マイニング モデルのケース キーとして使用されます。|  
 |DateKey|コール センター業務の日付 (整数値)。 データ ウェアハウスでは日付のキーに整数がよく使用されますが、日付の値でグループ化する場合は、日付/時刻の形式で日付を取得することもできます。<br /><br /> ベンダーからは日々、シフトごとに別個のレポートが提供されるため、日付は一意ではありません。|  
 |WageType|日付が平日、週末や祝日がかどうかを示します。<br /><br /> ある顧客サービスの品質の違い平日と週末にため、この列の入力として使用することができます。|  
-|shift キー|問い合わせが記録されるシフトを示します。 このコール センターでは、1 日の労働時間が、AM、PM1、PM2、Midnight の 4 つのシフトに分かれています。<br /><br /> カスタマー サービスの質がシフトによって異なる可能性があるため、この列を入力として使用します。|  
+|shift キー|問い合わせが記録されるシフトを示します。 このコール センターでは、4 つのシフトに稼働日が分かれています。AM、PM1、PM2、午前 0 時です。<br /><br /> カスタマー サービスの質がシフトによって異なる可能性があるため、この列を入力として使用します。|  
 |LevelOneOperators|勤務時間外のレベル 1 の演算子の数を示します。<br /><br /> コール センターの従業員のレベルはレベル 1 から始まるため、このレベルの従業員は経験が浅い従業員です。|  
 |LevelTwoOperators|勤務しているレベル 2 オペレーターの人数を示します。<br /><br /> 従業員は、レベル 2 オペレーターとして限定するためのサービス時間数を記録する必要があります。|  
 |TotalOperators|シフト中に勤務しているオペレーターの人数の合計。|  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0fefdbe7100f9d8c22b6ed0026748b095ca63253
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3911bfcd923b26251c81809c9671981e0ff84e9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108142"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018044"
 ---
 # <a name="control-report-distribution"></a>レポートの配信を制御する
   電子メール配信およびファイル共有配信に関連するセキュリティ上のリスクを減らすように、レポート サーバーを構成できます。  
@@ -49,7 +49,7 @@ ms.locfileid: "48108142"
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
- [サブスクリプションと配信&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   
   

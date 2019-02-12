@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2fe9b635b53a83699cfc40eddadd7d73bd7948c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c87cd3d902f80b73475dd68726df091971ef0dff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132342"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036002"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>URL アクセスを使用した Reporting Services の統合
   URL アクセスでは、レポート サーバー URL によりレポートにアクセスします。 URL 要求を使用すると、特定のレポート サーバー、およびレポート サーバー データベースのレポート、リソースなどのアイテムにアクセスできます。 また、ユーザーへのレポート表示とナビゲーション方法もカスタマイズできます。 URL のクエリ文字列にはデバイス情報設定、およびレポートと特定の表示出力を対象としたレポート パラメーターが含まれます。 レポート サーバーで URL 要求を処理する方法は、URL を使用してアクセスするパラメーター、パラメーター プレフィックス、およびアイテムの種類によって異なります。  

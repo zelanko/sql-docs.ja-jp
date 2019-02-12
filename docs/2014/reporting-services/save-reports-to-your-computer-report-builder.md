@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7f735e1a46e5b42ec226d3d885dad00d11dcc39f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5952850708057016c5f9b8144254682a7f47fd9d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589361"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029393"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>自分のコンピューターへのレポートの保存 (レポート ビルダー)
   レポート ビルダーでは、レポート定義を自分のコンピューターに保存できます。 ただし、コンピューターに保存した場合、他のユーザーはそのレポートを表示できません。また、共有データ ソースを参照したり、画像やサブレポートなどのレポート アイテムを外部に格納するレポートは実行できない場合があります。 レポートは、レポート サーバーまたは SharePoint サイトに保存することをお勧めします。  

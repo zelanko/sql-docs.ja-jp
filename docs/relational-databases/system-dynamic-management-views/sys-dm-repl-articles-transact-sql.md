@@ -3,7 +3,6 @@ title: sys.dm_repl_articles (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,12 +18,12 @@ ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48112a8cf804b329b16aadc04992ac04b852ba07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65bc88be1b9a6cdb9a69d41a526916ab3aa7ab2a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791076"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031833"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "47791076"
 |**wszArtdelcmd**|**nvarchar(510)**|削除に使用されるコマンドまたはストアド プロシージャ。|  
 |**cmdTypeDel**|**int**|削除ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **0** XCALL を =<br /><br /> **1**呼び出しを =<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **7** = UNKNOWN|  
 |**wszArtupdcmd**|**nvarchar(510)**|更新に使用されるコマンドまたはストアド プロシージャ。|  
-|**cmdTypeUpd**|**int**|更新ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **0** XCALL を =<br /><br /> **1**呼び出しを =<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **4** MCALL を =<br /><br /> **5** VCALL を =<br /><br /> **6** SCALL を =<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeUpd**|**int**|更新ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **0** XCALL を =<br /><br /> **1**呼び出しを =<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **4** MCALL を =<br /><br /> **5** = VCALL<br /><br /> **6** SCALL を =<br /><br /> **7** = UNKNOWN|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|部分更新に使用されるコマンドまたはストアド プロシージャ。|  
 |**cmdTypePartialUpd**|**int**|部分更新ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **2** = SQL|  
 |**numcol**|**int**|列方向にフィルター選択されたアーティクルのパーティション内の列数。|  

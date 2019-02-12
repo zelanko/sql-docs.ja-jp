@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5b0ae98d40a6f5e1e2c830c2d5aca4cc1c99e230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 122fb28e82050fc134b86c2dc79559dec8d02478
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181652"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032424"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>[全般] プロパティ ページ、リソース (レポート マネージャー)
   リソースの [全般] プロパティ ページでは、リソースの名前変更、削除、移動、または置換を行うことができます。 リソースの追加またはプロパティの変更を行ったユーザーに関する情報が、ページ上部に表示されます。  

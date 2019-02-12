@@ -11,14 +11,14 @@ f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2568f22f30ffb722aa7438f9b83f35a7e39f1f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138748"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031853"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>[全般] ([データ ソースのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   レポート サーバーから共有データ ソースを選択する場合や、レポートに埋め込まれたデータ ソースの接続情報を作成または変更する場合は、 **[データ ソースのプロパティ]** ダイアログ ボックスの **[全般]** を選択します。  
@@ -67,8 +67,8 @@ ms.locfileid: "48138748"
 ## <a name="see-also"></a>参照  
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [データ ソースのプロパティ ダイアログ ボックスで、資格情報&#40;レポート ビルダー&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [レポート ビルダー ダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

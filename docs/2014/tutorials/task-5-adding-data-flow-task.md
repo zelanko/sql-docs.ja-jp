@@ -1,26 +1,23 @@
 ---
-title: 'タスク 5: データ フロー タスクの追加 |Microsoft Docs'
+title: タスク 5:データ フロー タスクの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ade652a874d8519fb0ff85c7622e2955248286d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c5cfdc3a7afa210b88bbe0410d31b5b655d95a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137372"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017783"
 ---
-# <a name="task-5-adding-data-flow-task"></a>タスク 5: データ フロー タスクを追加する
+# <a name="task-5-adding-data-flow-task"></a>タスク 5:データ フロー タスクを追加する
   ここでは、SSIS パッケージの制御フローにデータ フロー タスクを追加します。  
   
 1.  ドラッグ アンド ドロップ**Data Flow Task**から**SSIS ツールボックス**を**制御フロー** SSIS デザイナーのタブ。 表示されない場合、 **SSIS ツールボックス**、内をクリックし、**制御フロー** ] タブで [ **SSIS**をクリックし、メニュー バーで**SSIS ツールボックス**します。  
@@ -34,6 +31,6 @@ ms.locfileid: "48137372"
 4.  ダブルクリックして、 **Data Flow Task**に切り替える、**データ フロー**  タブ。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 6: Excel ソースをデータ フローに追加する](task-6-adding-excel-source-to-the-data-flow.md)  
+ [タスク 6:Excel ソースをデータ フローに追加します。](task-6-adding-excel-source-to-the-data-flow.md)  
   
   
