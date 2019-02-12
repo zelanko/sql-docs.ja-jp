@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b90f1ad3e67aafa2ee8b967f8a04ddb16daf4e53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 589f1d42936d243bff9aa77740cefce14ab8856e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132909"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014603"
 ---
 # <a name="export-a-report-using-url-access"></a>URL アクセスを使用してレポートをエクスポートする
   使用してレポートを表示する形式を指定することができます必要に応じて、 *Rs:format*パラメーター。 たとえば、ネイティブ モードのレポート サーバーから直接レポートの PDF コピーを取得するには、次の URL を使用します。  
@@ -39,7 +39,7 @@ http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport
  *Format* パラメーターを URL の一部として含めない場合は、レポート サーバーがブラウザーを検出し、適切な HTML 形式でレポートを表示します。  
   
 ## <a name="see-also"></a>参照  
- [URL アクセス&#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL アクセス &#40;SSRS&#41;](url-access-ssrs.md)   
  [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)  
   
   

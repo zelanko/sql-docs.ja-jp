@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - RDL [Reporting Services], generating
 - RDL [Reporting Services], tutorials
 - RDL [Reporting Services], serializing
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2f104892e3ee8a8c542c41bc07789a94ab8d0c4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349385"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014043"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>RDL スキーマから生成されたクラスを使ったレポートの更新 (SSRS チュートリアル)
   このチュートリアルで、およびレポート定義ファイル (.rdl、.rdlc) を逆シリアル化するための XML スキーマ定義ツール (Xsd.exe) クラスを生成するを使用する方法を示しています、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer>クラス。  
@@ -59,7 +58,7 @@ ms.locfileid: "53349385"
 > [!NOTE]  
 >  サンプルはセットアップ中に自動的にインストールされませんが、いつでもインストールできます。 サンプルについては、次を参照してください。 [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887)します。  
   
- **チュートリアルの完了予定所要時間:** 30 分  
+ **このチュートリアルの推定所要時間:** 30 分  
   
 ## <a name="tasks"></a>処理手順  
  [レッスン 1:RDL スキーマ Visual Studio プロジェクトを作成します。](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
@@ -70,7 +69,7 @@ ms.locfileid: "53349385"
   
  [レッスン 4:レポート定義をプログラムで更新します。](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
   
- [レッスン 5:レポート サーバーにレポート定義をパブリッシュします。](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
+ [レッスン 5: レポート サーバーにレポート定義をパブリッシュします。](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
  [レッスン 6:RDL スキーマ アプリケーションの実行&#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   

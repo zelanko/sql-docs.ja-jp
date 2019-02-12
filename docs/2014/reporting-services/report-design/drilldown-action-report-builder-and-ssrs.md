@@ -40,13 +40,13 @@ f1_keywords:
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3bf939773ac419a8ace4ec9de7425b23f78dd816
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0b939882e5021eb08925f974bad71d1720c6eff7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211552"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029713"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>ドリルダウン アクション (レポート ビルダーおよび SSRS)
   テキスト ボックスに正符号と負符号のアイコンを組み込むことによって、アイテムの表示/非表示をユーザーが対話的に切り替えられるように設定できます。 これを *ドリルダウン* アクションと呼びます。 テーブルまたはマトリックスの場合、静的な行や列、またはグループに関連付けられている行や列の表示と非表示を切り替えることができます。  
@@ -72,7 +72,7 @@ ms.locfileid: "48211552"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="comparing-drilldown-and-drillthrough-reports"></a>ドリルダウン レポートと詳細レポートの比較  
- ドリルダウン レポートでは、ユーザーが正符号または負符号のボタンをクリックすると、レポートのセクションが展開または折りたたまれ、詳細データがその場所に表示されます。 詳細レポートでは、ユーザーが集計値のリンクをクリックすると、別の関連レポートが開き、詳細データが表示されます。 詳細データは、詳細レポートの実行時にのみ取得されます。 通常詳細レポートには、ドリルダウン レポートほどリソースが必要ありません。 詳細については、「[ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](drillthrough-drilldown-subreports-and-nested-data-regions.md)」を参照してください。  
+ ドリルダウン レポートでは、ユーザーが正符号または負符号のボタンをクリックすると、レポートのセクションが展開または折りたたまれ、詳細データがその場所に表示されます。 詳細レポートでは、ユーザーが集計値のリンクをクリックすると、別の関連レポートが開き、詳細データが表示されます。 詳細データは、詳細レポートの実行時にのみ取得されます。 通常詳細レポートには、ドリルダウン レポートほどリソースが必要ありません。 詳細については、「 [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](drillthrough-drilldown-subreports-and-nested-data-regions.md)」を参照してください。  
   
 ## <a name="rendering-extension-support-for-hidden-report-items"></a>非表示レポート アイテムに対する表示拡張機能のサポート  
  レポート アイテムの表示と非表示の切り替えは、レポート ビルダーやレポート マネージャーでレポートを実行するときに使用する HTML 表示拡張機能など、ユーザー対話機能をサポートする表示拡張機能でのみサポートされます。 一部の表示拡張機能では非表示アイテムが表示されます。 条件に応じて表示/非表示を切り替えるレポート アイテムのサポートは、次のようになります。  
@@ -86,8 +86,8 @@ ms.locfileid: "48211552"
  詳しくは、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域&#40;レポート ビルダーおよび SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)   
- [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](drillthrough-drilldown-subreports-and-nested-data-regions.md)   
+ [対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS)](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

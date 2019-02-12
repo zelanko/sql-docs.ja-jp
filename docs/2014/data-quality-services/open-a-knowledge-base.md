@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5baacbca2f7882314ac62c1ef98e22ba6eca9aa8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e7b217d8bc099924e89783492991bd12a2275adb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507541"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031233"
 ---
 # <a name="open-a-knowledge-base"></a>ナレッジ ベースを開く
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で既存のナレッジ ベースを開き、ドメイン管理、ナレッジ検出、または照合ポリシーの追加の準備を行う方法について説明します。  
@@ -68,7 +68,7 @@ ms.locfileid: "52507541"
   
 -   [最近使用したナレッジ ベース] の他のユーザーにロックされたナレッジ ベースを開くには、そのユーザーにナレッジ ベースのロック解除を依頼します。  
   
-##  <a name="FollowUp"></a> フォローしてください：ナレッジ ベースを開いた後  
+##  <a name="FollowUp"></a>補足情報: ナレッジ ベースを開いた後  
  ナレッジ ベースを開くと、ナレッジ ベースはナレッジ ベース テーブルの [状態] 列に示される状態になります。 ナレッジ検出およびポリシー照合のアクティビティでは、ナレッジ ベースは特定のウィザード ページで開かれます。 ドメイン管理アクティビティでは、ナレッジ ベースはドメイン管理ページで開かれます。 状態について詳しくは、「[ナレッジ検出の実行](../../2014/data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../../2014/data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../../2014/data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="Locked"></a> ナレッジ ベースがロックされている場合  

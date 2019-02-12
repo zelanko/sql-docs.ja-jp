@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: db1e01a18d755076585c64ee3518492c8f5de561
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1bfcb23c4ed497d2705ece469e2949c332cdfcdf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091142"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032323"
 ---
 # <a name="data-source-selection-page-report-manager"></a>[データ ソースの選択] ページ (レポート マネージャー)
   [データ ソースの選択] ページを使用すると、レポートまたはレポート モデルで使用する既存の共有データ ソース アイテムを選択できます。 このページは、異なるデータ ソースを選択する場合も使用します。 データ ソースの種類または接続文字列を表示するには、共有データ ソースに移動してプロパティ ページを開く必要があります。  
@@ -47,7 +47,7 @@ ms.locfileid: "48091142"
  クリックすると、選択したデータ ソースが [データ ソース] プロパティ ページにコピーされます。  
   
 ## <a name="see-also"></a>参照  
- [レポート データ ソースを管理します。](report-data/manage-report-data-sources.md)   
+ [レポート データ ソースを管理する](report-data/manage-report-data-sources.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [[データ ソース] プロパティ ページ &#40;レポート マネージャー&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [[新しいデータ ソース] ページ &#40;レポート マネージャー&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   

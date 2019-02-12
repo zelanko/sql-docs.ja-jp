@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 707a18ee54776bee46c58fc9db843c06d14a2ff4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: fcbf2d23dc543edbd6fc6fc20136f0ff4e81bd90
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544599"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031733"
 ---
 # <a name="url-access-parameter-reference"></a>URL Access Parameter Reference
   次のパラメーターを URL の一部として使用すると、レポートのルック アンド フィールを構成できます。 ここでは、最も一般的なパラメーターについて説明します。 パラメーターは大文字と小文字が区別されます。レポート サーバーに出力する場合は *rs:* 、HTML ビューアーに出力する場合は *rc:* をパラメーターの先頭に追加します。 デバイスや表示拡張機能に固有のパラメーターを指定することもできます。 デバイスに固有のパラメーターの詳細については、「 [URL でデバイス情報設定を指定する](specify-device-information-settings-in-a-url.md)」を参照してください。  
@@ -63,7 +63,7 @@ ms.locfileid: "52544599"
 |*スナップショット*|レポート履歴スナップショットに基づいたレポートを表示します。 詳細については、「 [URL アクセスを使用してレポート履歴スナップショットを表示する](render-a-report-history-snapshot-using-url-access.md)」を参照してください。<br /><br /> `Native` モードで、日付が 2003-04-07 でタイムスタンプが 13:40:02 のレポート履歴スナップショットを取得する例。<br /><br /> `http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02`|  
 |*PersistStreams*|1 つの永続化ストリームでレポートを表示します。 このパラメーターは、表示レポートをチャンク単位で送信するために画像レンダラーによって使用されます。 URL アクセス文字列でこのパラメーターを使用した後、同じ URL アクセス文字列を、 *GetNextStream* パラメーターではなく *PersistStreams* パラメーターと共に使用すると、永続化ストリームの次のチャンクを取得できます。 この URL コマンドは、最終的に永続化ストリームの末尾に到達した時点で 0 バイト ストリームを返します。 既定値は `false` です。|  
 |*GetNextStream*|*PersistStreams* パラメーターを使用してアクセスした永続化ストリームの次のデータ チャンクを取得します。 詳細については、 *PersistStreams*の説明を参照してください。 既定値は `false` です。|  
-|*セッション Id*|クライアント アプリケーションとレポート サーバー間で確立されたアクティブ レポート セッションを指定します。 このパラメーターの値は、セッション ID に設定されます。<br /><br /> セッション ID をクッキーまたは URL の一部として指定できます。 セッション クッキーを使用しないようにレポート サーバーを構成している場合、指定したセッション ID なしの最初の要求はセッション ID 付きでリダイレクトされます。 レポート サーバーのセッションの詳細については、「 [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)」を参照してください。|  
+|*SessionID*|クライアント アプリケーションとレポート サーバー間で確立されたアクティブ レポート セッションを指定します。 このパラメーターの値は、セッション ID に設定されます。<br /><br /> セッション ID をクッキーまたは URL の一部として指定できます。 セッション クッキーを使用しないようにレポート サーバーを構成している場合、指定したセッション ID なしの最初の要求はセッション ID 付きでリダイレクトされます。 レポート サーバーのセッションの詳細については、「 [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)」を参照してください。|  
 |*ClearSession*|値が `true` の場合は、レポート セッションからレポートを削除するようにレポート サーバーに指示します。 認証されているユーザーに関連付けられたすべてのレポート インスタンスがレポート セッションから削除されます (レポート インスタンスは、別のレポート パラメーターの値を指定して、レポートを複数回実行するように定義されます)。既定値は `false` です。|  
 |*ResetSession*|値が `true` の場合は、レポート セッションのすべてのレポート スナップショットとの関連付けを削除することによって、レポート セッションをリセットするようレポート サーバーに指示します。 既定値は `false` です。|  
 |*ShowHideToggle*|レポートのセクションの表示と非表示を切り替えます。 切り替えるセクションを表す正の整数を指定します。|  
@@ -71,7 +71,7 @@ ms.locfileid: "52544599"
 ## <a name="report-viewer-web-part-commands-rv"></a>レポート ビューアー Web パーツのコマンド (rv:)  
  次の表では、SharePoint と統合されているレポート ビューアー Web パーツをターゲットとするために使用する、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の予約済みのレポート パラメーター名について説明します。 これらのパラメーター名の先頭には *rv:* が付いています。 レポート ビューアー Web パーツでは、 *rs:ParameterLanguage* パラメーターも受け取ります。  
   
-|パラメーター|アクション|  
+|パラメーター|操作|  
 |---------------|------------|  
 |*[ツール バー]*|レポート ビューアー Web パーツのツール バーの表示を制御します。 既定値は `Full` です。 値は次のとおりです。<br /><br /> `Full`: ツール バーを完全に表示します。<br /><br /> `Navigation`: ツール バーに改ページのみ表示します。<br /><br /> `None`: ツール バーを表示しません。<br /><br /> <br /><br /> `SharePoint` モードで、ツール バーに改ページのみを表示する例。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation`|  
 |*HeaderArea*|レポート ビューアー Web パーツのヘッダーの表示を制御します。 既定値は `Full` です。 値は次のとおりです。<br /><br /> `Full`: ヘッダーを完全に表示します。<br /><br /> `BreadCrumbsOnly`: ヘッダーに階層リンクのナビゲーションのみを表示して、アプリケーションでの現在位置をユーザーに示します。<br /><br /> `None`: ヘッダーを表示しません。<br /><br /> <br /><br /> `SharePoint` モードで、ヘッダーに階層リンクのナビゲーションのみを表示する例。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly`|  

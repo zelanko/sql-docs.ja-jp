@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -18,12 +18,12 @@ ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 956b40a23d51bc8a3d75eb3ab16ef710a1bc848d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c9c5d1a9b1e61bfd6cb93ea57ad6eafabbe9636
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650843"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038463"
 ---
 # <a name="jsonquery-transact-sql"></a>JSON_QUERY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -92,12 +92,12 @@ JSON のパスを解析するための厳密でないまたは strict モード�
 |[パス]|厳密でないモードでの戻り値|厳格モードでの戻り値|詳細|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|全体の JSON テキストを返します|全体の JSON テキストを返します|該当なし|  
-|$info.type。|NULL|[エラー]|オブジェクトまたは配列されません。<br /><br /> 代わりに **JSON_VALUE** を使用します。|  
-|$.info.address.town|NULL|[エラー]|オブジェクトまたは配列されません。<br /><br /> 代わりに **JSON_VALUE** を使用します。|  
+|$info.type。|NULL|Error|オブジェクトまたは配列されません。<br /><br /> 代わりに **JSON_VALUE** を使用します。|  
+|$.info.address.town|NULL|Error|オブジェクトまたは配列されません。<br /><br /> 代わりに **JSON_VALUE** を使用します。|  
 |$ .info。"アドレス|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|該当なし|  
 |$info.tags。|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|該当なし|  
-|$info.type[0]。|NULL|[エラー]|配列ではありません。|  
-|$info.none。|NULL|[エラー]|プロパティが存在しません。|  
+|$info.type[0]。|NULL|Error|配列ではありません。|  
+|$info.none。|NULL|Error|プロパティが存在しません。|  
 
 ### <a name="using-jsonquery-with-for-json"></a>JSON_QUERY と FOR JSON の使用
 

@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 76c8b145b5ad43cdba6a2d55cdcf62fedc0e2ff3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fdd1083f5e8d8e725378dd5cbec62351249ec1bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225964"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043253"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   CSV (コンマ区切り) 表示拡張機能では、レポートのデータを平面的に表して、標準化されたプレーンテキスト形式でレポートを表示します。プレーンテキスト形式のレポートは、多くのアプリケーションで簡単に読み取ったり変換したりすることができます。  
   
- CSV 表示拡張機能は、文字による区切り記号を使用してフィールドと行を分けます。この区切り記号には、コンマ以外の文字を使用するように構成できます。 エクスポートされたファイルは、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] などのスプレッドシート プログラムで開いたり、他のプログラムのインポート形式として使用できます。 エクスポートされたレポートが .csv ファイルになりの MIME の種類を返します`text/csv`します。  
+ CSV 表示拡張機能は、文字による区切り記号を使用してフィールドと行を分けます。この区切り記号には、コンマ以外の文字を使用するように構成できます。 エクスポートされたファイルは、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] などのスプレッドシート プログラムで開いたり、他のプログラムのインポート形式として使用できます。 エクスポートされたレポートは .csv ファイルとなり、MIME の種類として `text/csv` を返します。  
   
  グラフ、データ バー、スパークライン、ゲージ、インジケーターに関連するデータを [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]で操作する場合は、レポートを CSV ファイルにエクスポートし、そのファイルを [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel で開きます。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48225964"
   
 -   ピア データ領域は、一般的なデータ領域または動的な先祖を共有する、データ領域または動的グループです。 ピア データがフラットなツリーの分岐で識別されます。  
   
- 詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)を返します。  
   
  
   

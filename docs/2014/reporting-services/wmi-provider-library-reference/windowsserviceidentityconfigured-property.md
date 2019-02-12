@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dc50326b1ac8788344c6d8fa00b8d7187d17ca11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9dc4532b3b7afadf4049fc99296b83c8ae04511a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189832"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029744"
 ---
 # <a name="windowsserviceidentityconfigured-property-wmi-msreportserverconfigurationsetting"></a>WindowsServiceIdentityConfigured プロパティ (WMI MSReportServer_ConfigurationSetting)
-  レポート サーバー Windows サービスが実行するように最後に構成された ID を返します。 読み取り専用です。  
+  レポート サーバー Windows サービスが実行するように最後に構成された ID を返します。 読み取り専用。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +45,7 @@ public string WindowsServiceIdentityConfigured;
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

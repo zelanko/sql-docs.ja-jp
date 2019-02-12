@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccabc5546cd61f7b685480cf2c2819d6594aee1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8d3abef04fd707681499d13246f050bc75eeda98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182674"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015983"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML ビューアーとレポート ツール バー
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート サーバーからの要求に応じてレポートを表示するために使用される HTML ビューアーが用意されています。 HTML ビューアーには、HTML でレポートを表示するためのフレームワークが提供されます。 これには、レポート ツール バー、パラメーター セクション、資格情報セクション、およびドキュメント マップが含まれます。 HTML ビューアーのレポート ツール バーには、HTML 以外の形式でレポートを表示できるエクスポート オプションなど、レポートに関する作業に使用できる機能が用意されています。 パラメーター セクションとドキュメント マップは、パラメーターまたはドキュメント マップ コントロールを使用するように構成されているレポートを開いた場合のみ表示されます。  
   
 > [!NOTE]  
->  レポート ツール バーを変更することはできませんが、レポート URL でパラメーターを構成して、ツール バーがレポートに表示されないようにすることができます。 レポート ツールバーを非表示の詳細については、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。  
+>  レポート ツール バーを変更することはできませんが、レポート URL でパラメーターを構成して、ツール バーがレポートに表示されないようにすることができます。 レポート ツール バーを非表示にする操作の詳細については、「 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)」を参照してください。  
   
 ## <a name="report-toolbar"></a>レポート ツール バー  
  レポート ツール バーでは、HTML 表示拡張機能で表示されたレポートに対して、ページ ナビゲーション、拡大または縮小、更新、検索、エクスポート、印刷、およびデータ フィード機能が提供されます。  
@@ -34,11 +34,11 @@ ms.locfileid: "48182674"
   
  レポート ツール バーは、次の図のように表示されます。 使用可能なレポート機能や表示オプションによっては、図とは異なるレポート ツール バーが表示される場合があります。  
   
- ![レポート ツールバー](media/htmlviewer-toolbar.gif "レポート ツールバー")  
+ ![Report toolbar](media/htmlviewer-toolbar.gif "Report toolbar")  
   
  次の表では、一般的に使用されるレポート ツール バーの機能を説明します。 各機能は、アクセスに使用するコントロールごとに分類されています。  
   
-|使用するアイコンまたはコントロール||変換先|  
+|使用するアイコンまたはコントロール||目的|  
 |------------------------------|-|--------|  
 |![ページ ナビゲーション コントロール](media/htmlviewer-pagenav.gif "ページ ナビゲーション コントロール")|**ページ ナビゲーション コントロール**|レポートの最初または最後のページを開き、レポートをページごとにスクロールし、レポートの特定のページを開きます。 特定のページを表示するには、ページ番号を入力して Enter キーを押します。|  
 |![ページ表示コントロール](media/htmlviewer-pagesize.gif "ページ表示コントロール")|**ページ表示コントロール**|レポート ページのサイズを拡大または縮小します。 パーセンテージ ベースの変更以外に、 **[ページの幅]** を選択してレポート ページの幅をブラウザー ウィンドウに合わせるか、 **[ページ全体]** を選択してレポートの高さをブラウザー ウィンドウに合わせることができます。 **[ズーム]** オプションは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 以降のバージョンでサポートされています。|  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b2d11854134eb7b83182b35b113b591687f2775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b3663c9cdb9fd83dc0caa4298a81f73adcae87cd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095113"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039273"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>DataSources コレクションと DataSets コレクションの参照 (レポート ビルダーおよび SSRS)
-  `DataSources` コレクションは、レポートで使用されているすべてのデータ ソースを表します。 同様に、`DataSets`コレクションは、レポート内のすべてのデータ ソースのすべてのデータセットを表します。 参照するデータ ソース別に構成されているレポート データセットの階層ビューを表示するには、 **[レポート データ]** ペインを使用します。 これらのコレクションへの参照を含めても、レポートをプレビューしたときには値が表示されません。 このコレクションを使用できるのは、レポートがレポート サーバーにパブリッシュされた後だけです。  
+  `DataSources` コレクションは、レポートで使用されているすべてのデータ ソースを表します。 同様に、`DataSets` コレクションは、レポート内のすべてのデータ ソースのデータセットすべてを表します。 参照するデータ ソース別に構成されているレポート データセットの階層ビューを表示するには、 **[レポート データ]** ペインを使用します。 これらのコレクションへの参照を含めても、レポートをプレビューしたときには値が表示されません。 このコレクションを使用できるのは、レポートがレポート サーバーにパブリッシュされた後だけです。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -29,11 +29,11 @@ ms.locfileid: "48095113"
   
 |**変数**|`Type`|**[説明]**|  
 |------------------|--------------|---------------------|  
-|`DataSourceReference`|`String`|レポート サーバー上のデータ ソース定義の完全パスです。 たとえば、レポートでレポート履歴の一部として使用されたすべてのデータ ソースの一覧を含める場合があります。 次の例では、AdventureWorks2012 という名前のデータ ソースの完全パスを示します。<br /><br /> `/DataSources/AdventureWorks2012`。|  
+|`DataSourceReference`|`String`|レポート サーバー上のデータ ソース定義の完全パスです。 たとえば、レポートでレポート履歴の一部として使用されたすべてのデータ ソースの一覧を含める場合があります。 次の例では、AdventureWorks2012 という名前のデータ ソースの完全パスを示します。<br /><br /> `/DataSources/AdventureWorks2012` 。|  
 |`Type`|`String`|データ ソースのデータ プロバイダーの種類です。 たとえば、 `SQL`のようにします。|  
   
 ## <a name="datasets"></a>DataSets  
- `DataSets` コレクションは、レポート定義で参照されるデータセットを表します。 レポートのクエリをテキスト ボックスに含めて、レポート内のデータに関心を持っているユーザーが元のコマンド テキストを参照できるようにすることもできます。 このコレクションは、 **プレビュー** モードでは使用できません。 次の表のメンバー、`DataSets`コレクション。  
+ `DataSets` コレクションは、レポート定義で参照されるデータセットを表します。 レポートのクエリをテキスト ボックスに含めて、レポート内のデータに関心を持っているユーザーが元のコマンド テキストを参照できるようにすることもできます。 このコレクションは、 **プレビュー** モードでは使用できません。 次の表では、`DataSets` コレクションのメンバーについて説明します。  
   
 |**Member**|`Type`|**[説明]**|  
 |----------------|--------------|---------------------|  
