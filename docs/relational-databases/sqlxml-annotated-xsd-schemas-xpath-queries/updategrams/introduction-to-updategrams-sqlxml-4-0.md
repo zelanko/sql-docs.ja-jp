@@ -20,16 +20,16 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91cb486c1b24cf213b765e42d721c4aeb0866ec8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 884ed081e9d1ec445815802545da2160057e9f3b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843390"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026883"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>アップデートグラムの概要 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "47843390"
  アップデートグラムでマッピング スキーマが指定されていないときに使用される既定のマッピングでは、アップデートグラムの要素がテーブルにマップされ、要素中心マッピングの場合は子要素、属性中心マッピングの場合は属性が、それぞれ列にマップされます。  
   
 ### <a name="element-centric-mapping"></a>要素中心のマッピング  
- 要素中心のアップデートグラムでは、要素に、要素のプロパティを表す子要素を含めます。 たとえば、次のアップデートグラムを参照してください。 **\<Person.Contact >** 要素が含まれています、  **\<FirstName >** と **\<LastName >** 子要素。 これらの子要素のプロパティになって、  **\<Person.Contact >** 要素。  
+ 要素中心のアップデートグラムでは、要素に、要素のプロパティを表す子要素を含めます。 たとえば、次のアップデートグラムを参照してください。  **\<Person.Contact >** 要素が含まれています、  **\<FirstName >** と **\<LastName >** 子要素。 これらの子要素のプロパティになって、  **\<Person.Contact >** 要素。  
   
  アップデート グラムは暗黙的なマッピングを使用してこのアップデート グラムでは、マッピング スキーマを指定しないため、場所、  **\<Person.Contact >** 要素は Person.Contact テーブルにマップし、その子要素が firstname にマップし、LastName 列。  
   

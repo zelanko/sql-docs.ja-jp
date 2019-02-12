@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512550"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023754"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル:詳細レポートとメイン レポート (レポート ビルダー) を作成します。
   このチュートリアルでは、詳細レポートとメイン レポートの 2 種類のレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 次の図は、レポートを作成します。  
@@ -719,7 +719,7 @@ ms.locfileid: "52512550"
   
 7.  **[保存]** をクリックします。  
   
-##  <a name="MRunReports"></a> 8。メイン レポートと詳細レポートを実行する  
+##  <a name="MRunReports"></a> 8.メイン レポートと詳細レポートを実行する  
  メイン レポートを実行し、製品カテゴリの列の値をクリックして詳細レポートを実行します。  
   
 #### <a name="to-run-the-reports"></a>レポートを実行するには  

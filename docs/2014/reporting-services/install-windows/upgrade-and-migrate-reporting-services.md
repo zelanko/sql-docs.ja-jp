@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 28f25620cede6c626280a8a095c66457344679d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363014"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017183"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
   このトピックは、アップグレードおよび移行オプションの概要[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]します。 配置された [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアップグレードするには、次の 2 つの一般的な方法があります。  
@@ -113,7 +113,7 @@ ms.locfileid: "53363014"
   
 -   IIS で既存の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 仮想ディレクトリに任意のカスタマイズをバックアップします。  
   
--   無効な SSL 証明書を削除します。  これには、有効期限が切れており、Reporting Services をアップグレードする前に更新する予定のない証明書が含まれます。  無効な証明書と、アップグレードが失敗して、次のようなエラー メッセージは、Reporting Services のログ ファイルに書き込みます。**Microsoft.reportingservices.wmiprovider.wmiproviderexception::Web サイトでは、Secure Sockets Layer (SSL) 証明書が構成されていません。**.  
+-   無効な SSL 証明書を削除します。  これには、有効期限が切れており、Reporting Services をアップグレードする前に更新する予定のない証明書が含まれます。  無効な証明書と、アップグレードが失敗して、次のようなエラー メッセージは、Reporting Services のログ ファイルに書き込みます。**Microsoft.ReportingServices.WmiProvider.WMIProviderException:Web サイトでは、Secure Sockets Layer (SSL) 証明書が構成されていません。**.  
   
  実稼働環境をアップグレードする前に、必ず実稼働環境と同じ構成をしている実稼動前の環境でアップグレード テストを実行してください。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "53363014"
   
      終了環境で SharePoint 2013 も実行する場合は、SharePoint 2010 から SharePoint 2013 へのデータベース アタッチ アップグレードを完了する必要があります。  
   
--   **SharePoint 2013 の場合:** SharePoint 2013 では、SharePoint 2010 からのインプレース アップグレードがサポートされていません。 ただし、 **データベース アタッチ アップグレード**  の手順はサポートされています。 インプレース アップグレードとデータベース アタッチ アップグレードの 2 つの基本的なアップグレード方法をユーザーが選択できた SharePoint 2010 へのアップグレードとは動作が異なります。  
+-   **SharePoint 2013:** SharePoint 2013 では、SharePoint 2010 からのインプレース アップグレードがサポートされていません。 ただし、 **データベース アタッチ アップグレード**  の手順はサポートされています。 インプレース アップグレードとデータベース アタッチ アップグレードの 2 つの基本的なアップグレード方法をユーザーが選択できた SharePoint 2010 へのアップグレードとは動作が異なります。  
   
      SharePoint 2010 と統合された [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールを使用している場合は、SharePoint サーバーのインプレース アップグレードを行うことはできません。 ただし、SharePoint 2010 ファームから SharePoint 2013 ファームにコンテンツ データベースとサービス アプリケーション データベースを移行することは可能です。  
   

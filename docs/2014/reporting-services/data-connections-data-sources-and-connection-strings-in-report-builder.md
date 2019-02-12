@@ -11,14 +11,14 @@ f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 682b3db94bbac8e3d77b30fed90fb33885cca465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5821d8d747609abfc8433a3ff9ad0ecf2676be7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183492"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011014"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>レポート ビルダーでのデータ接続、データ ソース、および接続文字列
   データをレポートに含めるには、データ接続とデータセットを作成します。 データ接続には、外部データ ソースにアクセスする方法に関する情報が含まれています。 データセットには、データ接続を使用して取得するデータを指定するクエリ コマンドが含まれています。  
@@ -56,14 +56,14 @@ ms.locfileid: "48183492"
 |SharePoint リスト|`data source=http://MySharePointWeb/MySharePointSite/`|データ ソースの種類を設定`SharePoint List`します。|  
 ||||  
 |レポート モデル|該当なし。|レポート モデルに対しては接続文字列は必要はありません。 レポート ビルダーで、レポート サーバーを参照し、そのレポート モデルである .smdl ファイルを選択します。|  
-|Oracle サーバー|`data source=myserver`|データ ソースの種類を設定`Oracle`します。 レポート ビルダーがインストールされているコンピューターとレポート サーバーに、Oracle クライアント ツールがインストールされている必要があります。|  
-|SAP NetWeaver BI データ ソース|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|データ ソースの種類を設定`SAP NetWeaver BI`します。|  
-|Hyperion Essbase データ ソース|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|データ ソースの種類を設定`Hyperion Essbase`します。|  
-|Teradata データ ソース|`data source=` *\<NN &GT;。\<NNN &GT;。\<NNN &GT;。\<N &GT;* `;`|データ ソースの種類を設定`Teradata`します。 接続文字列は、各フィールドが 1 ～ 3 桁の 4 つのフィールドで構成されるインターネット プロトコル (IP) アドレスです。|  
+|Oracle サーバー|`data source=myserver`|データ ソースの種類を `Oracle` に設定します。 レポート ビルダーがインストールされているコンピューターとレポート サーバーに、Oracle クライアント ツールがインストールされている必要があります。|  
+|SAP NetWeaver BI データ ソース|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|データ ソースの種類を `SAP NetWeaver BI` に設定します。|  
+|Hyperion Essbase データ ソース|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|データ ソースの種類を `Hyperion Essbase` に設定します。|  
+|Teradata データ ソース|`data source=` *\<NN>.\<NNN>.\<NNN>.\<N>* `;`|データ ソースの種類を `Teradata` に設定します。 接続文字列は、各フィールドが 1 ～ 3 桁の 4 つのフィールドで構成されるインターネット プロトコル (IP) アドレスです。|  
 |Teradata データ ソース|`Database=` *\<データベース名>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|前の例と同様に、データ ソースの種類を `Teradata` に設定します。 Database タグで指定した既定のデータベースのみを使用して、データ間の関係を自動的に検出しないようにしてください。|  
-|XML データ ソース、Web サービス|`data source=http://adventure-works.com/results.aspx`|データ ソースの種類を設定`XML`します。 接続文字列は、Web サービス記述言語 (WSDL) をサポートする Web サービスの URL です。|  
-|XML データ ソース、XML ドキュメント|`http://localhost/XML/Customers.xml`|データ ソースの種類を設定`XML`します。 接続文字列は XML ドキュメントへの URL です。|  
-|XML データ ソース、埋め込み XML ドキュメント|*空*|データ ソースの種類を設定`XML`します。 XML データはレポート定義に埋め込まれています。|  
+|XML データ ソース、Web サービス|`data source=http://adventure-works.com/results.aspx`|データ ソースの種類を `XML` に設定します。 接続文字列は、Web サービス記述言語 (WSDL) をサポートする Web サービスの URL です。|  
+|XML データ ソース、XML ドキュメント|`http://localhost/XML/Customers.xml`|データ ソースの種類を `XML` に設定します。 接続文字列は XML ドキュメントへの URL です。|  
+|XML データ ソース、埋め込み XML ドキュメント|*空*|データ ソースの種類を `XML` に設定します。 XML データはレポート定義に埋め込まれています。|  
   
  各接続の種類の詳細については、次を参照してください。[外部データ ソースからのデータの追加&#40;SSRS&#41; ](report-data/add-data-from-external-data-sources-ssrs.md)と[Reporting Services でサポートされるデータ ソース&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)します。  
   
@@ -81,6 +81,6 @@ ms.locfileid: "48183492"
   
 ## <a name="see-also"></a>参照  
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [レポート パーツ&#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

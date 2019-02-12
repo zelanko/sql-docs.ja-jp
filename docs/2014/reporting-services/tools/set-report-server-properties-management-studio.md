@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 190114bb10a0caf094f3902a7a1b15e94673565c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e75931e56b62f80716d07fbdf2a7ad73ff10452d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059262"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037703"
 ---
 # <a name="set-report-server-properties-management-studio"></a>レポート サーバーのプロパティを設定する (Management Studio)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でレポート サーバー システム プロパティを設定することにより、機能を有効にしたりサーバーの既定値を設定したりできます。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でレポート サーバー システム プロパティを設定することにより、機能を有効にしたりサーバーの既定値を設定したりできます。  
   
 ### <a name="to-open-the-advanced-server-properties-page"></a>[詳細なサーバー プロパティ] ページを開くには  
   

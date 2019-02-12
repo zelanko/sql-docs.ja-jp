@@ -15,14 +15,14 @@ helpviewer_keywords:
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d11fc38c9e1729ae4651f632d2755bfbbe2f0e2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 99e083439e49d522ddc84f1f32454b0c4777237b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202891"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025873"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>共有データ ソースを作成、削除、または変更する (レポート マネージャー)
   共有データ ソースでは、1 つのデータ ソースに対する接続プロパティを指定します。 多数のレポート、モデル、またはデータ ドリブン サブスクリプションで 1 つのデータ ソースを使用する場合は、共有データ ソースを作成することにより、同じ接続情報を複数箇所で管理するオーバーヘッドを低減できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "48202891"
   
 3.  **[新しいデータ ソース]** をクリックします。 **[新しいデータ ソース]** ページが開きます。  
   
-4.  アイテムの名前を入力します。 名前は 1 文字以上で、文字で始まる必要があります。 特定の記号を含めることもできますが、スペースまたは ; ? : \@ & = +, $/* \< > |" /.  
+4.  アイテムの名前を入力します。 名前は 1 文字以上で、文字で始まる必要があります。 特定の記号を含めることもできますが、スペースまたは ; ? : \@ & = + , $ / * \< > | " /.  
   
 5.  必要に応じて説明を入力し、接続に関する情報をユーザーに提供します。 この説明は、レポート マネージャーの **[コンテンツ]** ページに表示されます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48202891"
   
 7.  **[接続文字列]** でレポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 接続文字列には資格情報を指定しないことをお勧めします。  
   
-     次の例は、ローカルに接続するための接続文字列を示しています。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
+     以下に、ローカルの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースへの接続に使用する接続文字列の例を示します。  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -64,14 +64,14 @@ ms.locfileid: "48202891"
   
     -   データ ソースで資格情報を使用しない場合 (ファイル システムからアクセス可能な XML ファイルをデータ ソースとして使用する場合など) は、 **[資格情報は必要ありません]** をクリックします。 この資格情報オプションは、使用するデータ ソースで妥当と考えられる場合にのみ指定してください。 認証を必要とするデータ ソースに対してこのオプションを選択した場合、接続エラーが発生します。 このオプションを選択する場合は、ユーザーの資格情報を利用できない場合に、レポート サーバーが他のコンピューターに接続して、データまたはファイルを取得できるように、必ず自動実行アカウントを構成してください。  
   
-     資格情報を構成する方法の詳細については、次を参照してください。[資格情報の指定とレポート データ ソースに関する接続情報](report-data/specify-credential-and-connection-information-for-report-data-sources.md)します。 自動実行アカウントについては、「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
+     資格情報の構成の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。 自動実行アカウントについては、「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
 9. データ ソース構成を検証するには、 **[接続テスト]** をクリックします。  
   
     > [!NOTE]  
     >  [接続テスト] ボタンは、XML データ ソースの種類ではサポートされません。  
   
-10. **[OK]** をクリックします。  
+10.  **[OK]** をクリックします。  
   
 ### <a name="to-modify-a-shared-data-source"></a>共有データ ソースを変更するには  
   
@@ -99,9 +99,9 @@ ms.locfileid: "48202891"
   
 ## <a name="see-also"></a>参照  
  [データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [作成、変更、および共有データ ソースを削除する&#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [レポート データ ソースを管理します。](report-data/manage-report-data-sources.md)   
- [レポートのデータ ソースのプロパティを構成する&#40;レポート マネージャー&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [[コンテンツ] ページ (レポート マネージャー)](../../2014/reporting-services/contents-page-report-manager.md)   
+ [共有データ ソースを作成、変更、および削除する (SSRS)](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [レポート データ ソースを管理する](report-data/manage-report-data-sources.md)   
+ [レポートのデータ ソースのプロパティを構成する (レポート マネージャー)](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

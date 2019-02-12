@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: adc4c6ea2cc33fe9c0c911b75c74a4232963fe2e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 356cfa9debf9075776f7c1b6de00211ccc59bd9a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100382"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017083"
 ---
 # <a name="planning"></a>計画
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]について十分に理解するには、次の各トピックをご覧ください。 ニーズに最も合った [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境をインストールおよび構成する方法について学習してください。  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]について十分に理解するには、次の各トピックをご覧ください。 ニーズに最も合った [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境をインストールおよび構成する方法について学習してください。  
   
  ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**全般的な Reporting Services の機能の計画とアーキテクチャ**  
  [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
@@ -33,7 +33,7 @@ ms.locfileid: "48100382"
  ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") **Reporting Services のセットアップ**  
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)  
   
- [配置のチェックリスト: 既存の SharePoint ファームに Reporting Services をインストールします。](../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
+ [配置のチェックリスト:既存の SharePoint ファームに Reporting Services をインストールします。](../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
  [SharePoint の SQL Server BI 機能の配置トポロジ](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)    
   

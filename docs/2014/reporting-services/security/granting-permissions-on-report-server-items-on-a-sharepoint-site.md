@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a1ba908e9db3764ccfc0bd35f8dbb901245519e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c9afb10180087998afd0cc891af895a9db669feb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087022"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017263"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>SharePoint サイトのレポート サーバー アイテムに対する権限の付与
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] は、SharePoint のサイトおよびライブラリにあるレポート サーバー アイテムへのアクセス許可に使用できる、組み込みのセキュリティ機能を提供します。 既にユーザーに権限を割り当てている場合、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] とレポート サーバーの統合設定を構成すると、直ちにそのユーザーがレポート サーバーのアイテムおよび操作にアクセスできるようになります。 既存の権限を使用して、レポート定義などのドキュメントのアップロード、レポートの表示、サブスクリプションの作成、アイテムの管理を実行できます。  
@@ -30,7 +30,7 @@ ms.locfileid: "48087022"
   
 1.  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]の製品マニュアルで、標準的な SharePoint グループの既定のセキュリティ設定に関する説明に目を通し、権限とユーザー アクセスの管理方法を理解します。  
   
-2.  レポート サーバーのアイテムと操作に対するアクセスに特に影響する権限を確認します。 詳細については、次を参照してください。[組み込みのセキュリティをレポート サーバー アイテムに対して Windows SharePoint Services を使用して](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)します。  
+2.  レポート サーバーのアイテムと操作に対するアクセスに特に影響する権限を確認します。 詳細については、「 [レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)」を参照してください。  
   
 3.  定義済みの SharePoint グループに、ユーザー アカウントとグループ アカウントを割り当てます。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48087022"
  サーバー管理者またはサイト コレクション管理者は、他のサイト所有者が権限を設定できるかどうかを決定するオプションを設定できます。 持っている権限のレベルによっては、SharePoint グループや権限レベルの作成やカスタマイズを行えない場合があります。  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>定義済み SharePoint グループと権限レベルの使用  
- [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 製品マニュアルでは、標準の SharePoint グループ ( *Site name* **所有者**, *Site name* **メンバー**、および *Site name* **閲覧者**) を使用し、サイト レベルで権限を割り当てることが推奨されています。 権限を割り当てるユーザーのほとんどは、" *Site name* **閲覧者** " グループまたは " *Site name* **メンバー** "グループのメンバーになるはずです。 親サイトの権限は、サイト階層全体に継承されます。 制限を追加する必要がある特定のアイテムに対しては、権限の継承を無効にできます。  
+  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 製品マニュアルでは、標準の SharePoint グループ ( *Site name* **所有者**, *Site name* **メンバー**、および *Site name* **閲覧者**) を使用し、サイト レベルで権限を割り当てることが推奨されています。 権限を割り当てるユーザーのほとんどは、" *Site name* **閲覧者** " グループまたは " *Site name* **メンバー** "グループのメンバーになるはずです。 親サイトの権限は、サイト階層全体に継承されます。 制限を追加する必要がある特定のアイテムに対しては、権限の継承を無効にできます。  
   
  定義済みの SharePoint グループと、対応する権限レベルを次に示します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48087022"
   
  SharePoint グループには、多数のレポート サーバー操作にすぐにアクセスできるようにするための権限レベルが用意されています。 必要なアクセス レベルを提供する組み込みセキュリティ設定がない場合には、カスタム グループまたはカスタム権限レベルを作成できます。  
   
- 詳細については既定のセキュリティ機能によってレポート サーバーの操作がサポートされている、次を参照してください。[組み込みのセキュリティをレポート サーバー アイテムに対して Windows SharePoint Services を使用して](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)します。  
+ 既定のセキュリティ機能によってサポートされるレポート サーバー操作の詳細については、「 [レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)」を参照してください。  
   
  組み込みセキュリティ機能を使用するには、SharePoint グループに Windows ユーザー アカウントまたはグループ アカウントを割り当てる必要があります。 ソフトウェアのインストール時に [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] へのアクセスが自動的に与えられるサーバー管理者およびポータル サイト所有者を除いて、すべてのユーザーにこのサーバーへのアクセスを許可する必要があります。  
   
@@ -85,14 +85,14 @@ ms.locfileid: "48087022"
  [SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  カスタム レポートに必要な権限と、機能を利用できるようにするための手法について説明します。  
   
- [Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  SharePoint グループを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の定義済みロール定義と比較する方法の概要を説明します。  
   
- [SharePoint サイトにレポート サーバー アイテムに対する権限を設定&#40;Reporting Services の SharePoint 統合モード&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  レポート ビルダーを起動してモデル アイテム セキュリティを設定するための権限を持つ、新しい SharePoint グループを作成する方法を示します。 このトピックでは、レポート サーバーの任意のアイテムまたは操作にカスタム権限を設定する際の一般的ガイドラインも示します。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint サイトにレポート サーバー アイテムに対する権限を設定&#40;Reporting Services の SharePoint 統合モード&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Reporting Services セキュリティと保護](reporting-services-security-and-protection.md)  
+ [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Reporting Services のセキュリティと保護](reporting-services-security-and-protection.md)  
   
   

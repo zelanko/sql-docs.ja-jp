@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8dcd0f49e59a95396e25f9504abc37e58e6ec4b7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 4f4339b91573aad752460b71fb4cce2181c9b880
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374874"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018164"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>さまざまな Microsoft 環境での Business Intelligence 機能の比較
   Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と SharePoint Server、SharePoint Online、および Power BI for Office 365 などのさまざまな環境で配置できます。 このトピックでは、各環境でサポートされるコンポーネントと機能を比較します。  
@@ -40,9 +40,9 @@ ms.locfileid: "53374874"
 |利用状況の監視|はい|いいえ|はい|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブの行ベースのセキュリティの活用|はい|いいえ|いいえ|  
   
- **<sup>1</sup>**[データ管理におけるデータ スチュワードの役割について](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US)と[ビデオ。  Power BI の情報管理とデータ スチュワードシップ](https://www.youtube.com/watch?v=8dHOj68ts7c)します。  
+ **<sup>1</sup>**[データ管理におけるデータ スチュワードの役割について](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US)と[ビデオ。Power BI の情報管理とデータ スチュワードシップ](https://www.youtube.com/watch?v=8dHOj68ts7c)します。  
   
- **<sup>2</sup>**[power BI Q & a:  Power BI ブックの最適化 (クラウドのモデリング)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US)します。  
+ **<sup>2</sup>**[power BI Q & a:Power BI ブックの最適化 (クラウドのモデリング)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US)します。  
   
  **<sup>3</sup>**[Office 365 の Power View での機能の新しい予測 Introducing](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx)します。  
   

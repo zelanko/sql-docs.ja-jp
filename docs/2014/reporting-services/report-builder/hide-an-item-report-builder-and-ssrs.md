@@ -13,18 +13,18 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 50ac9bd023b8fb581f423a039b629015de7b423d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a67d093576076e9822427773afb710c57f801827
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196402"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025493"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>アイテムを非表示にする (レポート ビルダーおよび SSRS)
   レポート パラメーターやその他の式を指定して、アイテムを条件付きで非表示にする場合は、レポート アイテムの表示/非表示を設定します。  
   
- また、ドリルダウン レポートなどで、レポートのテキスト ボックスをクリックすることによってレポート アイテムの表示と非表示をユーザーが切り替えられるようなレポートを設計することもできます。 詳細については、「[アイテムへの展開または折りたたみアクションの追加 (レポート ビルダーおよび SSRS)](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)」を参照してください。  
+ また、ドリルダウン レポートなどで、レポートのテキスト ボックスをクリックすることによってレポート アイテムの表示と非表示をユーザーが切り替えられるようなレポートを設計することもできます。 詳細については、「 [アイテムへの展開または折りたたみアクションの追加 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)」を参照してください。  
   
  以下に、定数または式に基づいて表示レポートでのレポート アイテムの表示または非表示を切り替える手順について説明します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48196402"
     > [!NOTE]  
     >  テーブルまたはマトリックス データ領域全体を選択するには、領域内をクリックして選択し、行ハンドル、列ハンドル、またはコーナー ハンドルを右クリックして、 **[Tablix のプロパティ]** をクリックします。  
   
-2.  **[表示]** をクリックします。  
+2.   **[表示]** をクリックします。  
   
 3.  **[レポートの初期実行時]** で、レポートを初めて表示する際にアイテムを非表示にするかどうかを指定します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48196402"
 3.  **[列表示]** ダイアログ ボックスで、最初の手順の 3 ～ 4 に従います。  
   
 ## <a name="see-also"></a>参照  
- [ドリルダウン アクション&#40;レポート ビルダーおよび SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [ドリルダウン アクション &#40;レポート ビルダーおよび SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
  [アイテムへの展開または折りたたみアクションの追加 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [式の例 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)  
   

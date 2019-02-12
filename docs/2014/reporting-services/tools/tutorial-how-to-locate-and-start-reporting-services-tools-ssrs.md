@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS) | Microsoft Docs'
+title: チュートリアル:Reporting Services ツールを検索および開始する方法 (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c8c8c175eaaf84df788a9b7cbc90e637d51d5c07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105503"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036903"
 ---
-# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS)
-  このチュートリアルでは、レポート サーバーの設定、レポート サーバーのコンテンツと動作の管理、レポートの作成とパブリッシュに使用できるツールを紹介します。 このチュートリアルの目的は、ツールを初めて使用する場合にそれぞれのツールをすぐに見つけて起動できるようにすることです。 使い慣れたツールを使用している場合に移動できますのに役立つその他のチュートリアルを使用するための重要なスキルについて説明します[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]します。 その他のチュートリアルの詳細については、次を参照してください。 [Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)します。  
+# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル:Reporting Services ツールを検索および開始する方法 (SSRS)
+  このチュートリアルでは、レポート サーバーの設定、レポート サーバーのコンテンツと動作の管理、レポートの作成とパブリッシュに使用できるツールを紹介します。 このチュートリアルの目的は、ツールを初めて使用する場合にそれぞれのツールをすぐに見つけて起動できるようにすることです。 既にツールを使用している場合は、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]を使用するときの重要なスキルを学ぶことができるその他のチュートリアルへお進みください。 その他のチュートリアルの詳細については、次を参照してください。 [Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)します。  
   
  このトピックの内容  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48105503"
   
 -   自動レポート処理および電子メールによるレポート配信を構成します。  
   
- **インストール:** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ネイティブ モードのインストール時にインストールされます。 詳細については、「[Reporting Services ネイティブ モードのレポート サーバーのインストール](../install-windows/install-reporting-services-native-mode-report-server.md)」を参照してください。  
+ **インストール:**[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成マネージャーは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ネイティブ モードのインストール時にインストールされます。 詳細については、「 [Reporting Services ネイティブ モードのレポート サーバーのインストール](../install-windows/install-reporting-services-native-mode-report-server.md)」を参照してください。  
   
 #### <a name="to-start-the-reporting-services-configuration-manager"></a>Reporting Services 構成マネージャーを起動するには  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48105503"
   
      リモート コンピューターを指定する場合は、 **[検索]** をクリックして接続を確立します。 ここで指定するレポート サーバーは、リモートで管理するための構成が事前に行われている必要があります。 詳細については、「 [リモート管理用のレポート サーバーの構成](../report-server/configure-a-report-server-for-remote-administration.md)」を参照してください。  
   
-3.  **stance Name**で、構成する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インスタンスを選択します。 この一覧には [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のレポート サーバー インスタンスのみが表示されます。 以前のバージョンの [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]を構成することはできません。  
+3.   **stance Name**で、構成する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インスタンスを選択します。 この一覧には [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のレポート サーバー インスタンスのみが表示されます。 以前のバージョンの [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]を構成することはできません。  
   
 4.  **[接続]** をクリックします。  
   
@@ -85,12 +85,12 @@ ms.locfileid: "48105503"
   
      ![Reporting Services 構成ツール](../media/rs-ui-reportserverconfigkatmai.gif "Reporting Services 構成ツール")  
   
- **次の手順:** 「[レポート サーバーを構成および管理する (SSRS ネイティブ モード)](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)」、「[Reporting Services 構成マネージャー (ネイティブ モード)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
+ **次の手順:**「[レポート サーバーを構成および管理する (SSRS ネイティブ モード)](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)」と「[Reporting Services 構成マネージャー (ネイティブ モード)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)」。  
   
 ##  <a name="bkmk_report_manager"></a> レポート マネージャー (ネイティブ モード)  
  使用[レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)と、アクセス許可を設定、サブスクリプションおよびスケジュールの管理、レポートを使用します。 また、レポート マネージャーを使ってレポートを閲覧することもできます。  
   
- **インストール:** をインストールすると、レポート マネージャーがインストールされている[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]ネイティブ モード: [Reporting Services ネイティブ モード レポート サーバーのインストール](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **インストール:** インストールすると、レポート マネージャーがインストールされている[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]ネイティブ モード。[Reporting Services ネイティブ モードのレポート サーバーのインストール](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
  レポート マネージャーを起動するには適切なアクセス許可が必要です。初期状態では、レポート マネージャーの機能へのアクセス許可は、ローカルの管理者グループのメンバーにのみ与えられています。 レポート マネージャーに表示されるページとオプションは、現在のユーザーに割り当てられているロールによって異なります。 アクセス許可のないユーザーには空白のページが表示され、 レポート閲覧用のアクセス許可が与えられているユーザーにはリンクが表示されます。このユーザーはリンクをクリックしてレポートを表示することができます。 アクセス許可の詳細については、「[ロールと権限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)」を参照してください。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48105503"
   
 4.  ローカル レポート サーバーでレポート マネージャーを実行する場合は、次を参照してください。[ローカル管理用のネイティブ モード レポート サーバーの構成&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)します。  
   
- **次の手順:** [レポート マネージャーの構成&#40;ネイティブ モード&#41;](../report-server/configure-web-portal.md)します。  
+ **次の手順:**[レポート マネージャーの構成&#40;ネイティブ モード&#41;](../report-server/configure-web-portal.md)します。  
   
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
  レポート サーバー管理者は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、レポート サーバーと共に他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンポーネント サーバーを管理できます。 詳細については、「 [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)」を参照してください。  
@@ -169,7 +169,7 @@ ms.locfileid: "48105503"
   
 1.  Web ブラウザーでアドレス バーに次の URL を入力します。  
   
-     **http://\<servername >/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application**  
+     **http://\<servername>/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application**  
   
 2.  Enter キーを押します。  
   
