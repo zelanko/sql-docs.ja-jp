@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 80b5c2e77c5e10a543c7847bd2bd2e60d9d50920
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9861bc63a8fd1e4dd76fb030baf2a11c2774961a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221752"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027574"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>レポートへのドリルスルー アクションの追加 (レポート ビルダーおよび SSRS)
   メイン レポートのリンクをクリックすると開くレポートが *詳細レポート*です。 このドリルスルー リンクを使用すると、ドリルスルー アクションを実行できます。  
@@ -61,8 +61,8 @@ ms.locfileid: "48221752"
 7.  リンクをテストするには、レポートを実行し、このリンクを設定したレポート アイテムをクリックします。  
   
 ## <a name="see-also"></a>参照  
- [アクション プロパティ ダイアログ ボックス&#40;レポート ビルダーおよび SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)   
- [グラフのデータ ポイントの書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [アクション プロパティ ダイアログ ボックス (レポート ビルダーおよび SSRS)](../action-properties-dialog-box-report-builder-and-ssrs.md)   
+ [グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [系列へのツールヒントの表示 (レポート ビルダーおよび SSRS)](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   

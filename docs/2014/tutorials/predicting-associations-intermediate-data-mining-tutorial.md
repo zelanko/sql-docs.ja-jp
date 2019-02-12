@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8a66c6284ea53f65351a964e3f24492c569521af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544259"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022364"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>アソシエーションの予測 (中級者向けデータ マイニング チュートリアル)
   モデルの処理が完了したら、モデルに格納されているアソシエーションに関する情報を使用して予測を作成できます。 このレッスンの最後の作業では、作成したアソシエーション モデルに対して予測クエリを作成する方法について学習します。 このレッスンは、予測クエリ ビルダーの使用方法について理解していることを前提に、アソシエーション モデルに対する予測クエリの作成方法について説明します。 詳細については予測クエリ ビルダーを使用する方法[データ マイニング クエリ インターフェイス](../../2014/analysis-services/data-mining/data-mining-query-tools.md)します。  
@@ -124,9 +123,9 @@ ms.locfileid: "52544259"
   
 |[モデル]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.291.|0.252.|  
-|Water Bottle|2866|0.192.|0.175.|  
-|Patch Kit|2113|0.142.|0.132|  
+|Sport-100|4334|0.291...|0.252...|  
+|Water Bottle|2866|0.192...|0.175...|  
+|Patch Kit|2113|0.142...|0.132|  
   
 ## <a name="working-with-results"></a>結果の操作  
  結果に多数の入れ子になったテーブルが含まれている場合は、結果をフラット化して見やすくすることができます。 そのためには、クエリを手動で変更し、`FLATTENED` キーワードを追加します。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 68f3811c448fca9921308b520dc6c6ef9a006d5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f1fc08eb50c62cc9295d80cac894a9d9f3338698
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098572"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021664"
 ---
 # <a name="getadminsiteurl-method-wmi"></a>GetAdminSiteUrl メソッド (WMI)
   レポート サーバーが統合されている Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]、[!INCLUDE[offSPServ](../../includes/offspserv-md.md)]、[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームのサーバー管理 Web サイトの絶対 URL を取得します。  
@@ -44,10 +44,10 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [MSReportServer_ConfigurationSetting Methods](msreportserver-configurationsetting-methods.md)  
+ [MSReportServer_ConfigurationSetting メソッド](msreportserver-configurationsetting-methods.md)  
   
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f6f52a6d9a1a28d103f407da049814bbf4a6c0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1ff256deda15e2abdecbff4dc94cc1dcd9d2d5c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166312"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035173"
 ---
 # <a name="secure-my-reports"></a>個人用レポートをセキュリティで保護する
   個人用レポート機能により、ユーザーが管理するレポート処理用のワークスペースが提供されます。 [個人用レポート] フォルダーは、その性質上、他の汎用的な用途のフォルダーよりも権限の制限を緩める必要があります。 他のフォルダーのレポートを表示および実行する権限しか持たないユーザーが、[個人用レポート] フォルダーおよび自らが所有するコンテンツを管理するためには、より強い権限が必要となります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、そのための特別なロールの割り当てとロールの定義が用意されています。  
@@ -49,14 +49,14 @@ ms.locfileid: "48166312"
 ## <a name="denying-access-to-my-reports"></a>個人用レポートへのアクセス拒否  
  ユーザーによる個人用レポートへのアクセスを拒否するには、次の方法を使用します。  
   
--   [サイトの設定] ページで個人用レポートを無効にします。 詳細については、次を参照してください。[の有効化と無効にするには、個人用レポート](../report-server/enable-and-disable-my-reports.md)します。  
+-   [サイトの設定] ページで個人用レポートを無効にします。 詳細については、 [「個人用レポートの有効化と無効化」](../report-server/enable-and-disable-my-reports.md)を参照してください。  
   
 -   **個人用レポート** ロールからすべてのタスクを削除します。  
   
  個人用レポートを無効にすると、[個人用レポート] フォルダーのリンクがレポート マネージャーから削除されます。 個人用レポートをサポートする基本のフォルダー構造 (つまり Users フォルダーとサブフォルダー) は有効なままなので、ユーザーはフォルダーのパスがわかればアクセスすることができます。 **個人用レポート** ロールからタスクを削除すると、アクセスが拒否されます。  
   
 ## <a name="see-also"></a>参照  
- [レポートとリソースを保護します。](secure-reports-and-resources.md)   
+ [レポートとリソースの保護](secure-reports-and-resources.md)   
  [フォルダーをセキュリティで保護する](secure-folders.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)  
   

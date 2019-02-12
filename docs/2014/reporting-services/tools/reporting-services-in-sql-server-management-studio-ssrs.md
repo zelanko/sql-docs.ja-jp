@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f6cbd9cc0723f6b1ce01799423a88c6a0f62e801
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d11f943dcbe22080609c8e10a457e2c64d904de2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132188"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036763"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio の Reporting Services (SSRS)
   レポート サーバー管理者は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して次の操作を実行できます。  
@@ -37,13 +37,13 @@ ms.locfileid: "48132188"
   
 -   [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)  
   
--   [レポート サーバーのプロパティを設定&#40;Management Studio&#41;](set-report-server-properties-management-studio.md)  
+-   [レポート サーバーのプロパティを設定する (Management Studio)](set-report-server-properties-management-studio.md)  
   
--   [作成、削除、またはロールを変更&#40;Management Studio&#41;](../security/role-definitions-create-delete-or-modify.md)  
+-   [ロールを作成、削除、または変更する (Management Studio)](../security/role-definitions-create-delete-or-modify.md)  
   
 -   [アイテムの削除&#40;Management Studio&#41;](delete-an-item-management-studio.md)  
   
--   [レポート サーバー ジョブのキャンセル&#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
+-   [[レポート サーバー ジョブのキャンセル] (Management Studio)](cancel-report-server-jobs-management-studio.md)  
   
 ## <a name="see-also"></a>参照  
  [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   

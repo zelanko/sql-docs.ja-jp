@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdd7f7431e4a266e17343d0d793b3bbaaffd2d6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e479580d9d5b7720fe4fb7b641236ec12e4537c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146962"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024244"
 ---
 # <a name="removesslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>RemoveSSLCertificateBindings メソッド (WMI MSReportServer_ConfigurationSetting)
   SSL 証明書のバインドを削除します。  
@@ -66,7 +66,7 @@ public void RemoveSSLCertificateBindings(string Application,
 ## <a name="remarks"></a>コメント  
  このメソッドは、rsreportserver.config ファイルおよび HTTP.SYS (オプション) から特定のバインドを削除します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5360fefa-1362-4102-bfd1-81d3d313c2b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6996316ebf9a7b906eac46b8b14aee730e67fdc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0a92fb78664e472ef65a5c9af9fca87e5b50fa1e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065132"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027913"
 ---
 # <a name="view-page-resources-report-manager"></a>[表示] ページ、リソース (レポート マネージャー)
   リソースを表示するには、リソースの [表示] ページを使用します。 リソースはレポート サーバー上で格納および管理されるアイテムですが、レポート サーバー上で処理されるものではありません (レポート サーバーはレポートおよびモデルを処理します)。 リソースは、サーバーによって処理されない、任意のドキュメント、画像、その他のファイルを格納するために使用できます。 ほとんどの画像ファイル (JPG、GIF、PNG ファイルなど) は、レポート マネージャーの [表示] ページ内に表示できます。 その他のリソースは、別のアプリケーション ウィンドウで開かれます。  

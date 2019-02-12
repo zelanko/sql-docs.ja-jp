@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f9a7213b59e435f797609a7abb7fcd560c4890e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f287e26bac61f2c29b1a60d72f66f4fd32bca966
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116205"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025753"
 ---
 # <a name="excel-device-information-settings"></a>Excel  デバイス情報設定
   次の表は、 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 形式で表示するためのデバイス情報設定を示しています。  
@@ -28,7 +28,7 @@ ms.locfileid: "48116205"
 |-------------|-----------|  
 |**OmitDocumentMap**|ドキュメント マップをサポートするレポートで、ドキュメント マップを省略するかどうかを示します。 既定値は `false` です。|  
 |**OmitFormulas**|表示レポートで式を省略するかどうかを示します。 既定値は `false` です。|  
-|`SimplePageHeade`rs|レポートのページ ヘッダーを Excel ページのヘッダーに表示するかどうかを示します。 値`false`ページ ヘッダーがワークシートの最初の行に表示されることを示します。 既定値は `false` です。|  
+|`SimplePageHeade`rs|レポートのページ ヘッダーを Excel ページのヘッダーに表示するかどうかを示します。 `false` の値は、ページ ヘッダーがワークシートの 1 行目に表示されることを示します。 既定値は `false` です。|  
   
 ## <a name="see-also"></a>参照  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

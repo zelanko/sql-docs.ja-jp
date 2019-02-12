@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ecb5d4b5216139c7d762b03fd5a8a8fbc6a1b5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 29824d30b1fdd96c2bc847b8908b49340a05aaf3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165962"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026903"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>[個人用サブスクリプション] ページ (レポート マネージャー)
   [個人用サブスクリプション] ページでは、各自のサブスクリプションをすべて参照できます。 このページから所有している任意のサブスクリプションにアクセスし、サブスクリプションを変更または削除できます。 所有できるサブスクリプションは、自分で作成したサブスクリプションだけです。 他のユーザーのサブスクリプションにはアクセスできません。また、使用していても所有していないサブスクリプション (たとえば、他のユーザーが定義して、自分の名前が追加されている既存のサブスクリプション) にもアクセスできません。 また、このページからサブスクリプションを作成することはできません。 サブスクリプションの作成についての詳細については、次を参照してください。、[新しいサブスクリプションまたはサブスクリプションの編集 ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)します。  
@@ -68,7 +68,7 @@ ms.locfileid: "48165962"
  サブスクリプションが非アクティブ化されている場合、そのサブスクリプションは処理できません。 サブスクリプションを更新し、操作可能な状態にするには、サブスクリプションを開いてから保存します。  
   
 ## <a name="see-also"></a>参照  
- [サブスクリプションと配信&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8547320f6ac9cda5f98da04209060f433da1436e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 98ac0b972d9833a72345df2603452de5b39abbf0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191762"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027663"
 ---
 # <a name="iswindowsserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWindowsServiceEnabled プロパティ (WMI MSReportServer_ConfigurationSetting)
-  レポート サーバー Windows サービスが有効かどうかを示します。 読み取り専用です。  
+  レポート サーバー Windows サービスが有効かどうかを示します。 読み取り専用。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +45,7 @@ public boolean IsWindowsServiceEnabled;
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
