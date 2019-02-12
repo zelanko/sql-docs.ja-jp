@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cbcc0b3f-7b6d-4dd7-accb-cb375be8d852
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c9d717435c76a57f4f2f8dcc46b5524f1e44d336
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: b5f47bc3b365b2826202eda786afda8407fc77ef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363444"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040773"
 ---
 # <a name="stdevp-function-report-builder-and-ssrs"></a>StDevP 関数 (レポート ビルダーおよび SSRS)
   式で指定された NULL 以外のすべての数値の母集団標準偏差を、指定されたスコープのコンテキストで評価して返します。  

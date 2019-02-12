@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c9bce266836e1181c1d619d89985d9d461729e83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 44d0318882b619f4f6206f59ba47656f35c38636
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183002"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043363"
 ---
 # <a name="new-system-role-management-studio"></a>[新しいシステム ロール]\(Management Studio)
   このページを使用すると、システムレベルのロールの定義を作成できます。 システム ロールの定義には、レポート サーバー全体に適用する、システムレベルのタスクのセットを指定します。  
@@ -30,7 +30,7 @@ ms.locfileid: "48183002"
  **名前**  
  ロールの定義名を入力します。 ロールの定義名は、レポート サーバーの名前空間内で一意である必要があります。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよびいくつかの記号を含めることもできます。 名前を指定するときに使用できない記号は次のとおりです。  
   
- ; ? : \@ & = +, $/* \< >  
+ ; ? : \@ & = + , $ / * \< >  
   
  " /  
   

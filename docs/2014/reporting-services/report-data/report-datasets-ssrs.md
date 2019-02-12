@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 45546e63eff82c5ba4467193811b572756331513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb76a3dfff5ec980d94e3ecf27de6b588c98cf1a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201502"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040513"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>レポートへのデータの追加 (レポート ビルダーおよび SSRS)
   データをレポートに追加するには、データセットを作成します。 各データセットは、データ ソースに対するクエリ コマンドの実行によって取得された結果セットを表します。 結果セットの列はフィールド コレクションです。 結果セット内の行がデータです。 データセットに実際のデータは格納されていません。 データセットには、データ ソースから特定のデータを取得するために必要な情報が含まれています。  
@@ -39,7 +39,7 @@ ms.locfileid: "48201502"
   
  また、レポート パーツ (レポート パーツが依存するデータセットが含まれています) を追加することによって、データセットをレポートに追加することもできます。 [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを表示するレポートの作成方法については、「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。 独自のデータが含まれたレポートの作成方法については、「[チュートリアル: オフラインでのクイック グラフ レポートの作成 &#40;レポート ビルダー&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)」を参照してください。  
+ データを表示するレポートを作成する方法については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを参照してください[チュートリアル。基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)します。 独自のデータを含むレポートを作成するには、次を参照してください。[チュートリアル。オフラインのクイック グラフ レポートの作成&#40;レポート ビルダー&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -66,7 +66,7 @@ ms.locfileid: "48201502"
   
 -   [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
--   [グラフ&#40;レポート ビルダーおよび SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+-   [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
 -   [スパークラインとデータ バー (レポート ビルダーおよび SSRS)](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -74,9 +74,9 @@ ms.locfileid: "48201502"
   
 -   [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [レポート パーツ&#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
--   [フィルター、グループ、およびデータの並べ替え&#40;レポート ビルダーおよび SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
@@ -110,17 +110,17 @@ ms.locfileid: "48201502"
   
  [レポート データ ペインでのフィールドの追加、編集、更新 &#40;レポート ビルダーおよび SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [リレーショナル クエリ デザイナーでクエリを作成&#40;レポート ビルダーおよび SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [リレーショナル クエリ デザイナーでのクエリの作成 &#40;レポート ビルダーおよび SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [多次元データのパラメーター値を非表示のデータセットを表示&#40;レポート ビルダーおよび SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [多次元データのパラメーター値の非表示データセットの表示 &#40;レポート ビルダーおよび SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
- [データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [データセットへのフィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [データ領域のないデータのメッセージを設定&#40;レポート ビルダーおよび SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [データ領域にデータがないことを示すメッセージの設定 &#40;レポート ビルダーおよび SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [クエリ パラメーターをレポート パラメーターに関連付ける&#40;レポート ビルダーおよび SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [クエリ パラメーターのレポート パラメーターへの関連付け &#40;レポート ビルダーおよび SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Analysis Services の MDX クエリ デザイナーでパラメーターを定義&#40;レポート ビルダーおよび SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [Analysis Services の MDX クエリ デザイナーでのパラメーターの定義 &#40;レポート ビルダーおよび SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
@@ -139,6 +139,6 @@ ms.locfileid: "48201502"
   
 ## <a name="see-also"></a>参照  
  [レポート デザイン ビュー (レポート ビルダー)](../report-builder/report-design-view-report-builder.md)   
- [レポート作成の概念&#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [レポート作成の概念 (レポート ビルダーおよび SSRS)](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

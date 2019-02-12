@@ -25,16 +25,16 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ebaeb1a0fce11d984f858247763c4222d4a8b27
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 0c5cb588e96bcabad464339b7227ada3aef86221
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256927"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039923"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath のデータ型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "54256927"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ノード セットで位置の選択は実行されません。たとえば、XPath クエリ `Customer[3]` は 3 番目の顧客を意味しますが、このような位置の選択は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではサポートされていません。 ノードではそのため、-設定-に-**文字列**またはノードの設定-に-**数**XPath 仕様での説明に従って、変換は実装されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XPath 仕様で "先頭" の意味で指定されているものが "任意" の意味として扱われます。 W3C XPath 仕様に XPath クエリに基づいて、たとえば、 `Order[OrderDetail/@UnitPrice > 10.0]` 、最初にそれらの注文を選択**OrderDetail**は、 **[単価]** 10.0 よりも大きい。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、次の XPath クエリでこれらの注文を選択する**OrderDetail**は、 **[単価]** 10.0 よりも大きい。  
   
- 変換**ブール**、存在検査が生成されますテスト。 したがって、XPath クエリ`Products[@Discontinued=true()]`が SQL 式と同じ"products.discontinued is null でない"、SQL 式ではありません"Products.Discontinued = 1" です。 クエリを後者の SQL 式に相当するためには、以外を最初にノード セットを変換**ブール**などの入力**数**します。 たとえば、 `Products[number(@Discontinued) = true()]` のようにします。  
+ 変換**ブール**、存在検査が生成されますテスト。 したがって、XPath クエリ`Products[@Discontinued=true()]`が SQL 式と同じ"products.discontinued is null でない"、SQL 式ではありません"Products.Discontinued = 1" です。 クエリを後者の SQL 式に相当するためには、以外を最初にノード セットを変換**ブール**などの入力**数**します。 たとえば、`Products[number(@Discontinued) = true()]` のようにします。  
   
  大半の演算子は、ノード セット内の 1 つ以上のノードに対して TRUE であれば TRUE となるように定義されているので、これらの演算はノード セットが空の場合は常に FALSE となります。 したがって、A が空の場合、`A = B` と `A != B` は両方とも FALSE になり、`not(A=B)` と `not(A!=B)` は TRUE になります。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "54256927"
 |number、int、float,i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/A (XDR データ型 fixed14.4 に相当する XPath のデータ型はありません)|CONVERT(money, EmployeeID)|  
-|日付|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  日付と時刻の変換はデータベースを使用して、値が格納されているかどうかを使用するように設計、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**データ型または**文字列**します。 なお、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**データ型を使用しません**タイムゾーン**XML よりも小さい有効桁数と**時間**データ型。 含める、**タイムゾーン**内のデータを格納しているデータ型または追加の有効桁数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して、**文字列**型。  

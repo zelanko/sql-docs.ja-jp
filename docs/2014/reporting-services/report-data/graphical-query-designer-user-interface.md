@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 27b487c787a82f67fc861153939eb5838373fca1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 83a9233d9d5016be3307b797bb9a5a84ead276be
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108002"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039293"
 ---
 # <a name="graphical-query-designer-user-interface"></a>グラフィカル クエリ デザイナーのユーザー インターフェイス
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート デザイナーでレポート データセットのリレーショナル データベースからデータを取得するクエリの作成に使用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB、ODBC の各データ ソースの種類に対して、対話形式でクエリを作成して結果を表示するには、グラフィカル クエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーは、複数の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント、複雑なクエリやコマンド構文、式ベースのクエリを指定する場合に使用します。 詳細については、「 [テキストベースのクエリ デザイナーのユーザー インターフェイス](../text-based-query-designer-user-interface.md)」を参照してください。 特定のデータ ソースの種類の使用方法の詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)します。  
@@ -33,7 +33,7 @@ ms.locfileid: "48108002"
  .  
   
 ## <a name="graphical-query-designer"></a>グラフィカル クエリ デザイナー  
- グラフィカル クエリ デザイナーでサポートされているクエリ コマンドの種類は、 **Text**、 **StoredProcedure**、および **TableDirect**の 3 つです。 データセットに対するクエリを作成する前に、 [[データセットのプロパティ]](../dataset-properties-dialog-box-query.md) ダイアログ ボックスの [クエリ] ページにあるコマンドの種類のオプションを選択する必要があります。  
+ グラフィカル クエリ デザイナーには、次の 3 つの種類のクエリ コマンドがサポートされています。**テキスト**、 **StoredProcedure**、または**TableDirect**します。 データセットに対するクエリを作成する前に、 [[データセットのプロパティ]](../dataset-properties-dialog-box-query.md) ダイアログ ボックスの [クエリ] ページにあるコマンドの種類のオプションを選択する必要があります。  
   
  クエリの種類には、次のオプションがあります。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48108002"
   
  次の表に各ペインの機能を示します。  
   
-|ペイン|機能|  
+|ペイン|関数|  
 |----------|--------------|  
 |ダイアグラム|クエリのテーブルをグラフィカルに表示します。 フィールドを選択し、テーブル間のリレーションシップを定義する際に、このペインを使用します。|  
 |グリッド|クエリにより返されるフィールドの一覧を表示します。 別名、並べ替え順、フィルター、グループ、パラメーターを定義するには、このペインを使用します。|  
@@ -106,7 +106,7 @@ EXEC uspGetEmployeeManagers '1';
   
  次の表に各ペインの機能を示します。  
   
-|ペイン|機能|  
+|ペイン|関数|  
 |----------|--------------|  
 |[テーブル] ドロップダウン リスト|データ ソースで利用可能なすべてのテーブルが一覧表示されます。 いずれかを一覧から選択するとアクティブになります。|  
 |結果|選択したテーブルのすべての列が表示されます。 テーブル クエリを実行するには、ツール バーの **[実行]** をクリックします。|  
@@ -124,7 +124,7 @@ EXEC uspGetEmployeeManagers '1';
 ### <a name="command-type-storedprocedure"></a>コマンドの種類 (StoredProcedure)  
  コマンドの種類が **[StoredProcedure]** の場合、グラフィカル クエリ デザイナーには、データ ソースで利用可能なストアド プロシージャを一覧にしたドロップダウン リストと結果ペインが表示されます。 次の表に各ペインの機能を示します。  
   
-|ペイン|機能|  
+|ペイン|関数|  
 |----------|--------------|  
 |[ストアド プロシージャ] ドロップダウン リスト|データ ソースで利用可能なすべてのストアド プロシージャが一覧表示されます。 いずれかを一覧から選択するとアクティブになります。|  
 |結果|ストアド プロシージャの実行結果が表示されます。 選択したストアド プロシージャを実行するには、ツール バーの **[実行]** をクリックします。|  

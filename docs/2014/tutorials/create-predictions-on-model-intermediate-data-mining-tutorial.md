@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0b67ad103cee685ebcbc5455340df9e4d7890e15
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfilee
+ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529230"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041303"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>シーケンス クラスター モデルでの予測の作成 (中級者向けデータ マイニング チュートリアル)
   予測クエリ ビルダーを使用して予測クエリを作成するには、シーケンス クラスター モデルの改善をビューアーで順を理解したら、**マイニング モデル予測**データ マイニング デザイナーのタブ。 予測を作成するには、まずシーケンス クラスター モデルを選択し、次に入力データを選択します。 入力については、外部データ ソースを使用するか、単一クエリを作成してダイアログ ボックスで値を指定することができます。  

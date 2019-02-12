@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4658a709e21e101d35f49424f218ea73a21e27e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 69035945199fa1b07c2d778ffd581f83827cfb0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070412"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040803"
 ---
 # <a name="version-property--wmi-msreportserverconfigurationsetting"></a>Version プロパティ (WMI MSReportServer_ConfigurationSetting)
-  Major.Minor.Build.Revision 形式でレポート サーバーのバージョンを返します。 読み取り専用です。  
+  Major.Minor.Build.Revision 形式でレポート サーバーのバージョンを返します。 読み取り専用。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,12 +34,12 @@ public string Version;
 ```  
   
 ## <a name="property-value"></a>プロパティ値  
- A`string`レポート サーバーのバージョンを格納します。  
+ レポート サーバーのバージョンを表す `string`。  
   
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>参照  

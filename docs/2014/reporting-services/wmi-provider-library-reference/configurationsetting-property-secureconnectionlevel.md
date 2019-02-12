@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 44db8007a7b8abfed99d65c93037dd647cc4cb41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 70b4e9e4dcaf70a34287ae6b216b9faf1749b55b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074447"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016203"
 ---
 # <a name="secureconnectionlevel-property-wmi-msreportserverconfigurationsetting"></a>SecureConnectionLevel プロパティ (WMI MSReportServer_ConfigurationSetting)
-  RSReportServer.config ファイルに指定された、セキュリティで保護された接続レベルを返します。 読み取り専用です。  
+  RSReportServer.config ファイルに指定された、セキュリティで保護された接続レベルを返します。 読み取り専用。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +45,7 @@ public Integer SecureConnectionLevel;
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

@@ -1,26 +1,23 @@
 ---
-title: 'タスク 9: マスター データ マネージャーを使用して派生階層を作成する |Microsoft Docs'
+title: タスク 9:マスター データ マネージャーを使用して派生階層を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3004c9d5ae6637f288a87c50444b46fb958e7d22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076882"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039333"
 ---
-# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>タスク 9: マスター データ マネージャーを使用して派生階層を作成する
+# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>タスク 9:マスター データ マネージャーを使用して派生階層を作成する
   ここでは、マスター データ マネージャーを使用して派生階層を作成します。 この派生階層は、ドメイン ベースの属性リレーションシップから派生した、 **Supplier**と**状態**エンティティ。  
   
 1.  メイン ページに切り替えます**マスター データ マネージャー**をクリックして**SQL Server 2012 マスター データ サービス**ページの上部にあります。  
@@ -41,11 +38,11 @@ ms.locfileid: "48076882"
   
      ![派生階層 ボタンの保存](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-03.jpg "派生階層 ボタンの保存")  
   
-7.  ドラッグ**Supplier**から**使用できるレベル: SuppliersInState**に**現在のレベル: SuppliersInState**します。  
+7.  ドラッグ**Supplier**から**使用できるレベル。SuppliersInState**に**現在のレベル。SuppliersInState**します。  
   
      ![使用できるエンティティと階層を現在のレベルに](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-04.jpg "使用できるエンティティと階層を現在のレベル")  
   
-8.  ドラッグ**状態**から**使用できるレベル: SuppliersInState**に**現在のレベル: SuppliersInState**します。 画面があります**現在のレベル**次の図に示すようにします。  
+8.  ドラッグ**状態**から**使用できるレベル。SuppliersInState**に**現在のレベル。SuppliersInState**します。 画面があります**現在のレベル**次の図に示すようにします。  
   
      ![現在のレベルと派生階層のプレビュー](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-05.jpg "現在のレベルと派生階層のプレビュー")  
   
@@ -64,6 +61,6 @@ ms.locfileid: "48076882"
      ![派生階層エクスプ ローラーで](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "派生階層エクスプ ローラー")  
   
 ## <a name="next-step"></a>次の手順  
- [レッスン 5: SSIS を使用してクレンジングと照合を自動化する](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
+ [レッスン 5: クレンジングと照合 SSIS を使用して自動化します。](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
   
   

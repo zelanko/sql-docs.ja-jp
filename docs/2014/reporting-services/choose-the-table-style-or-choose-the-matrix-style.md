@@ -11,17 +11,17 @@ f1_keywords:
 - sql12.rtp.rptwizard.choosetablestyle.f1
 ms.assetid: e0026583-5744-4863-afa2-6e1585f9e8f3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 62088c91b0fc574490a3c7f2c8d1f442c5d53add
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 589962fbb1819fd4d8f69130dd6031a92ba172ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211389"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014523"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>テーブルのスタイルを選択/マトリックスのスタイルを選択
-  レポート ウィザードのこの 2 つのページを使用すると、レポートのテキストと線のスタイルを選択できます。 スタイルの一覧は、構成できるテンプレートに基づいています。 レポート デザイナーには、[スレート]、[フォレスト]、[フォーマル]、[太字]、[オーシャン]、[汎用] の 6 つの標準テンプレートが用意されています。  
+  レポート ウィザードのこの 2 つのページを使用すると、レポートのテキストと線のスタイルを選択できます。 スタイルの一覧は、構成できるテンプレートに基づいています。 レポート デザイナーには、次の初期テンプレートが用意されています。スレート、フォレスト、企業、太字、[オーシャン]、およびジェネリックです。  
   
  また、新しいスタイル テンプレートを追加することもできます。  
   

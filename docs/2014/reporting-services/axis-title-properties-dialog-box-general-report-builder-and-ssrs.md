@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.axistitleproperties.general.f1
 ms.assetid: e4ef6cc0-ec84-4a89-86ed-a3f8523402d9
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3e20efdcc1d5ca2833896ae583583ed04449b996
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 070b47688067e493321ce25d05f09eec6e44197e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064932"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038853"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([軸のタイトルのプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[軸のタイトルのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、軸のタイトルを定義できます。 軸のタイトルは X 軸の下または Y 軸の横に表示されます。  
@@ -44,6 +44,6 @@ ms.locfileid: "48064932"
  [軸の間隔の指定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [セカンダリ軸にデータをプロット&#40;レポート ビルダーおよび SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [軸のプロパティ ダイアログ ボックスで、軸のオプション&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
+ [[軸のオプション] ([軸のプロパティ] ダイアログ ボックス) &#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

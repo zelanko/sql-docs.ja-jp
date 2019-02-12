@@ -13,14 +13,14 @@ helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 44c99dd44a39aa2008f5e276cde79bb51b6d4d51
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 856faf8f35e30343ef322e726e3d0dffc30ebb4a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590616"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040143"
 ---
 # <a name="expression-dialog-box-report-builder"></a>[式] ダイアログ ボックス (レポート ビルダー)
   使用して、**式**書き込む ダイアログ ボックス[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]の式のレポート アイテムのプロパティ。 式を使用して、色、フォント、罫線など多数のプロパティを設定できます。 実行時に、レポート プロセッサによって式が評価され、その結果がプロパティの値に置き換えられます。  
@@ -30,7 +30,7 @@ ms.locfileid: "53590616"
 ## <a name="expression-constructs"></a>式の構成  
  式は等号 (=) で始まり、定数、リテラル、演算子に加え、組み込みフィールド、組み込みコレクション、組み込み関数、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ランタイム ライブラリ関数、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 共通言語ランタイム クラス、およびカスタム関数への参照を含むことができます。 式に追加できるカテゴリおよび値を次に示します。  
   
- **式を設定します。**_\<プロパティ名 >_  
+ **式を設定します。**_\<PropertyName>_  
  式を定義するプロパティの名前です。 このプロパティは、[プロパティ] ペインで名前を指定して設定することもできます。  
   
  **定数**  

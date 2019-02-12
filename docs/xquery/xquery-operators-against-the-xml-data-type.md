@@ -14,15 +14,15 @@ helpviewer_keywords:
 - operators [XQuery]
 - xml data type [SQL Server], XQuery
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ba69530f6c9cb8451211a2dcec333d347062b74
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2786295b344cfc2df6ae613e42a39f71aee4d3d8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671861"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038893"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>xml データ型に対する XQuery の演算子
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- 前のクエリの動作を観察する別の方法がある: 各電話番号の値から取得した、 **AdditionalContactInfo**列が 2 つの電話番号のセットと比較されます。 値がセット内にある場合、その顧客が結果に返されます。  
+ 前のクエリの動作を観察する別の方法があります。各電話番号の値から取得した、 **AdditionalContactInfo**列が 2 つの電話番号のセットと比較されます。 値がセット内にある場合、その顧客が結果に返されます。  
   
 ### <a name="b-using-a-numeric-operator"></a>B. 数値演算子の使用  
  このクエリの + 演算子は 1 つのアイテムに適用されるので、値の演算子です。 たとえば、クエリによって返されたロット サイズに値 1 が加算されます。  

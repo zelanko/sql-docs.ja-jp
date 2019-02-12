@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 458cca2d14d1dc012742286a04bd2ca90453277c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f7e331f7b7617e85ec8b577ac8c922ba41e4075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227272"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040043"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>IRenderingExtension インターフェイスの実装
   表示拡張機能では、実際のデータと組み合わされるレポート定義から出力結果を取得し、その結果データを使用可能な形式で表示します。 組み合わされたデータの変換と書式設定は、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> を実装する共通言語ランタイム (CLR) クラスを使用して実行されます。 これにより、オブジェクト モデルは、ビューアーやプリンターなどの出力先で使用できる出力形式に変換されます。  
@@ -51,7 +51,7 @@ ms.locfileid: "48227272"
 -   *createAndRegisterStream*: 表示するストリームを取得するために呼び出すデリゲート関数。  
   
 ### <a name="deviceinfo-parameter"></a>deviceInfo パラメーター  
- *deviceInfo* パラメーターには、レポート パラメーターではなく、表示パラメーターが含まれます。 表示パラメーターは表示拡張機能に渡されます。 *deviceInfo* 値は、レポート サーバーによって <xref:System.Collections.Specialized.NameValueCollection> オブジェクトに変換されます。 *deviceInfo* パラメーターのアイテムは、大文字と小文字を区別しない値として扱われます。 URL アクセスによる表示要求が行われると、形式 `rc:key=value` の URL パラメーターが *deviceInfo* 辞書オブジェクトのキーと値のペアに変換されます。 ブラウザー検出コードによって、*clientCapabilities* 辞書のアイテムである EcmaScriptVersion、JavaScript、MajorVersion、MinorVersion、Win32、Type、および AcceptLanguage も指定されます。 *deviceInfo* パラメーターに表示拡張機能が認識しない名前と値のペアがある場合は、すべて無視されます。 次のコード サンプルは、アイコンを取得する <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドを示します。  
+ *deviceInfo* パラメーターには、レポート パラメーターではなく、表示パラメーターが含まれます。 表示パラメーターは表示拡張機能に渡されます。 *deviceInfo* 値は、レポート サーバーによって <xref:System.Collections.Specialized.NameValueCollection> オブジェクトに変換されます。 *deviceInfo* パラメーターのアイテムは、大文字と小文字を区別しない値として扱われます。 URL アクセスによる表示要求が行われると、形式 `rc:key=value` の URL パラメーターが *deviceInfo* 辞書オブジェクトのキーと値のペアに変換されます。 ブラウザー検出コードは、次のものでも用意されています。、 *clientCapabilities*ディクショナリ。ある EcmaScriptVersion、JavaScript、MajorVersion、MinorVersion、Win32、種類、および AcceptLanguage します。 *deviceInfo* パラメーターに表示拡張機能が認識しない名前と値のペアがある場合は、すべて無視されます。 次のコード サンプルは、アイコンを取得する <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドを示します。  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  

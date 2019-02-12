@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: edeefac46805ba74b011d7c86202c7d5dbcdec14
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8a1f8cef9f29c856ab0bc02480221e583a0078f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367154"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039933"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>レッスン 1:Windows Azure ストレージ アカウントとコンテナーを作成します。
   Windows Azure ストレージへの SQL Server データ ファイルの格納を開始する前に、最初に Windows Azure ストレージ アカウント、BLOB コンテナー、および共有アクセス署名を作成する必要があります。 レッスン 1 では、Windows Azure 管理ポータルにログインし、ストレージ アカウント、BLOB コンテナー、および Shared Access Signature を作成する手順について説明します。  

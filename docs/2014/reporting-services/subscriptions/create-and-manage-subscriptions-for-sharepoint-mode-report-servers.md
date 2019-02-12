@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8439c48f7379b983b46edcaf1111606c1a3fbcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e53af8ff7de611f00af6e38553f21885597e7232
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193202"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040643"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint モード レポート サーバーのサブスクリプションの作成と管理
   SharePoint モードのレポート サーバーと統合されている SharePoint Web アプリケーションから、レポートを配信する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成することができます。 サブスクリプションは、ドキュメント ライブラリやファイル フォルダーに対して、または電子メールとしてレポートを配信できます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成するための要件と手順についてまとめます。  
@@ -31,11 +31,11 @@ ms.locfileid: "48193202"
   
  サブスクリプションを作成する場合、配信を指定する方法には次の 3 つがあります。  
   
--   **ドキュメント ライブラリ**: 元のレポートと同じ SharePoint サイト内のライブラリに、元のレポートに基づくドキュメントを配信するためのサブスクリプションを作成できます。 同じサイト コレクション内の別のサーバーや別のサイト上のライブラリにドキュメントを配信することはできません。 ドキュメントを配信するには、レポートの配信先のライブラリにアイテムを追加する権限が必要です。  
+-   **ドキュメント ライブラリ**:元のレポートと同じ SharePoint サイト内のライブラリに、元のレポートに基づくドキュメントを配信するためのサブスクリプションを作成できます。 同じサイト コレクション内の別のサーバーや別のサイト上のライブラリにドキュメントを配信することはできません。 ドキュメントを配信するには、レポートの配信先のライブラリにアイテムを追加する権限が必要です。  
   
 -   **ファイル フォルダー:** 元のレポートに基づくドキュメントを、ファイル システムの共有フォルダーに配信できます。 この場合、ネットワーク接続経由でアクセスできる既存のフォルダーを選択する必要があります。  
   
--   **電子メール:** レポート サーバーの電子メール配信拡張機能を使用できるようにレポート サーバーが構成されている場合は、レポートまたはエクスポートされたレポート ファイル (出力形式で保存) を受信トレイに送信するサブスクリプションを作成できます。 レポートまたはレポート URL なしで通知だけを受信するには、 **[レポートへのリンクを含める]** チェック ボックスと **[メッセージ内にレポートを表示する]** チェック ボックスをオフにします。  
+-   **電子メール:** レポート サーバーの電子メール配信拡張機能を使用するレポート サーバーを構成する場合は、レポートまたはエクスポートされたレポート ファイル (出力形式で保存) をトレイに送信するサブスクリプションを作成できます。 レポートまたはレポート URL なしで通知だけを受信するには、 **[レポートへのリンクを含める]** チェック ボックスと **[メッセージ内にレポートを表示する]** チェック ボックスをオフにします。  
   
  **このトピックの内容:**  
   
@@ -158,9 +158,9 @@ ms.locfileid: "48193202"
 3.  削除するサブスクリプションの横にあるチェック ボックスをオンにし、 **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [サブスクリプションと配信&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Reporting Services の電子メール配信](e-mail-delivery-in-reporting-services.md)   
- [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)   
+ [Reporting Services でのファイル共有の配信](file-share-delivery-in-reporting-services.md)   
  [Reporting Services での SharePoint ライブラリへの配信](sharepoint-library-delivery-in-reporting-services.md)   
  [レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   

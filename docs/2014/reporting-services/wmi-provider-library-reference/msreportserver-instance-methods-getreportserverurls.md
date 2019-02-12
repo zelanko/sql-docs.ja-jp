@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 148e0ece44e97bd4c559bbed9cc95aa97092dffb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fc9427e01f320778eafc1bac738daed0e80ce3c8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171052"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014003"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>GetReportServerUrls メソッド (WMI MSReportServer_Instance)
   ユーザーがレポート サーバーおよびレポート マネージャーへのアクセスに使用できる URL の一覧を返します。  
@@ -37,7 +37,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="parameters"></a>パラメーター  
  *ApplicationName[]*  
- インストールされているアプリケーションを含む配列。 値は`ReportServerWebService`または`ReportManager`します。  
+ インストールされているアプリケーションを含む配列。 値は `ReportServerWebService` または `ReportManager` です。  
   
  *URLs[]*  
  正常に登録された URL を含む配列。  
@@ -53,7 +53,7 @@ public void GetReportServerUrls(out string[] applicationName,
 ## <a name="remarks"></a>コメント  
  WMI 管理オブジェクトによって公開されるメソッドは、InvokeMethod 関数によって呼び出されます。 詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI ドキュメントの「管理オブジェクトのメソッドの実行」を参照してください。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>参照  

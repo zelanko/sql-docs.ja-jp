@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6737a32eb7597f8115a7ee6797bcf1aedbd006b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: be32765c6d996bcc67580949176c2265a0741eed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220782"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039013"
 ---
 # <a name="image-device-information-settings"></a>画像デバイス情報設定
   次の表は、IMAGE 形式で表示するためのデバイス情報設定を示しています。  
@@ -31,13 +31,13 @@ ms.locfileid: "48220782"
 |`DpiX`|出力画像の水平方向の解像度。 既定値は **96**です。 適用対象`BMP`、 `GIF`、 `PNG`、および`TIFF`出力形式。|  
 |`DpiY`|出力画像の垂直方向の解像度。 既定値は **96**です。 適用対象`BMP`、 `GIF`、 `PNG`、および`TIFF`出力形式。|  
 |**EndPage**|表示するレポートの最後のページ。 既定値は `StartPage` の値です。|  
-|**MarginBottom**|レポートに設定する下余白の値 (インチ単位)。 整数または 10 進値の後に"in"を含める必要があります (たとえば、 `1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
-|**MarginLeft**|レポートに設定する左余白の値 (インチ単位)。 整数または 10 進値の後に"in"を含める必要があります (たとえば、 `1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
-|**MarginRight**|レポートに設定する右余白の値 (インチ単位)。 整数または 10 進値の後に"in"を含める必要があります (たとえば、 `1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
-|**MarginTop**|レポートに設定する上余白の値 (インチ単位)。 整数または 10 進値の後に"in"を含める必要があります (たとえば、 `1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
-|**OutputFormat**|1 つ、 [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) サポートされている出力形式: `BMP`、 `EMF`、 `GIF`、 `JPEG`、 `PNG`、または`TIFF`します。|  
-|**PageHeight**|レポートに設定するページの高さ (インチ単位)。 整数または 10 進値の後に"in"を含める必要があります (たとえば、 `11in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
-|**PageWidth**|レポートに設定するページの幅 (インチ単位)。 整数または 10 進値の後に"in"を含める必要があります (たとえば、 `8.5in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
+|**MarginBottom**|レポートに設定する下余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
+|**MarginLeft**|レポートに設定する左余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
+|**MarginRight**|レポートに設定する右余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
+|**MarginTop**|レポートに設定する上余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
+|**OutputFormat**|[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) でサポートされるいずれかの出力形式。`BMP`、`EMF`、`GIF`、`JPEG`、`PNG`、または `TIFF` です。|  
+|**PageHeight**|レポートに設定するページの高さ (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`11in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
+|**PageWidth**|レポートに設定するページの幅 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`8.5in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**PrintDpiX**|出力画像の水平方向の解像度。 既定値は `300` です。 拡張メタファイルに適用されます (`EMF`) 出力形式。|  
 |**PrintDpiY**|出力画像の垂直方向の解像度。 既定値は `300` です。 拡張メタファイルに適用されます (`EMF`) 出力形式。|  
 |`StartPage`|表示するレポートの最初のページ。 値 `0` はすべてのページを表示することを示します。 既定値は `1` です。|  

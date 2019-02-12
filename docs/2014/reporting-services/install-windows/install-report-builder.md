@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 119fa4121e6f18d9592b60b6fcb8504a1228d848
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 830854a26d3f9b05465ee37aac6a9b7584750fe2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353921"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012713"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>スタンドアロン バージョンのレポート ビルダーのインストール (レポート ビルダー)
   レポート ビルダーをインストールすることができます、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=168472)またはレポート ビルダーの Windows インストーラー パッケージである ReportBuilder3_x86.msi にあるパブリック フォルダーなどの場所ダウンロードされています。  
@@ -64,7 +64,7 @@ ms.locfileid: "53353921"
         > [!NOTE]  
         >  ボリュームに十分な空きディスク領域がない場合は、ボリュームが強調表示されます。  
   
-10. **[既定の対象サーバー]** ページで、必要に応じて対象レポート サーバーの URL を指定します (既定の URL と異なる場合)。 **[次へ]** をクリックします。  
+10. **[既定のターゲット サーバー]** ページで、必要に応じて対象レポート サーバーの URL を指定します (既定の URL と異なる場合)。 **[次へ]** をクリックします。  
   
     > [!NOTE]  
     >  レポート ビルダーをレポート サーバーに接続して使用する場合は、ここでサーバーの URL を指定すると便利です。 ただしもこれから行うことができます、**オプション**ダイアログ ボックスのレポート ビルダーで作業するいるとします。  
@@ -97,7 +97,7 @@ ms.locfileid: "53353921"
         > [!NOTE]  
         >  ボリュームに十分な空きディスク領域がない場合は、ボリュームが強調表示されます。  
   
-7.  **[既定の対象サーバー]** ページで、必要に応じて対象レポート サーバーの URL を指定します (既定の URL と異なる場合)。 **[次へ]** をクリックします。  
+7.  **[既定のターゲット サーバー]** ページで、必要に応じて対象レポート サーバーの URL を指定します (既定の URL と異なる場合)。 **[次へ]** をクリックします。  
   
     > [!NOTE]  
     >  レポート ビルダーをレポート サーバーに接続して使用する場合は、ここでサーバーの URL を指定すると便利です。 ただしもこれから行うことができます、**オプション**ダイアログ ボックスのレポート ビルダーで作業するいるとします。  

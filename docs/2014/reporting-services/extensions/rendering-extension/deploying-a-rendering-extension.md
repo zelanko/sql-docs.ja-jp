@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f2f0c56138572873c51de852f282edcfbae1c104
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 302f00feeb5b240a80d6ce969343797202ebe484
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190882"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040053"
 ---
 # <a name="deploying-a-rendering-extension"></a>表示拡張機能の配置
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のレポート表示拡張機能は、作成して [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ライブラリにコンパイルした後、レポート サーバーおよびレポート デザイナーで検出できるようにする必要があります。 それには、拡張機能を適切なディレクトリにコピーし、適切な [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成ファイルにエントリを追加します。  
   
 ## <a name="configuration-file-rendering-extension-element"></a>構成ファイルの表示拡張機能要素  
- 表示拡張機能を .DLL にコンパイルした後、rsreportserver.config ファイルにエントリを追加します。 既定では、%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer にあります。 親要素は \<Render> です。 Render 要素の下には、各表示拡張機能の Extension 要素があります。 `Extension`要素には、名前と型の 2 つの属性が含まれています。  
+ 表示拡張機能を .DLL にコンパイルした後、rsreportserver.config ファイルにエントリを追加します。 既定では、%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer にあります。 親要素は \<Render> です。 Render 要素の下には、各表示拡張機能の Extension 要素があります。 `Extension` 要素には、Name と Type という 2 つの属性があります。  
   
  次の表の属性、`Extension`要素の表示拡張機能。  
   
@@ -34,8 +34,8 @@ ms.locfileid: "48190882"
 |---------------|-----------------|  
 |**名前**|拡張機能の一意の名前。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extensions** 要素内のすべてのエントリの中で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
 |**型**|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  
-|**[表示]**|値が `false` の場合、表示拡張機能がユーザー インターフェイスに表示されないことを示します。 属性が含まれない場合、既定値は`true`します。|  
-|**LogAllExecutionRequests**|値が `false` の場合、エントリがログに記録されるのは、セッションでレポートが最初に実行されるときのみであることを示します。 属性が含まれない場合、既定値は`true`します。<br /><br /> この設定によって、レポートに最初に表示されるページについてのみエントリをログに記録するか (`false` の場合)、レポートに表示されるページごとにエントリをログに記録するか (`true` の場合) が決まります。|  
+|**[表示]**|値が `false` の場合、表示拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は `true` になります。|  
+|**LogAllExecutionRequests**|値が `false` の場合、エントリがログに記録されるのは、セッションでレポートが最初に実行されるときのみであることを示します。 この属性が指定されない場合、既定値は `true` になります。<br /><br /> この設定によって、レポートに最初に表示されるページについてのみエントリをログに記録するか (`false` の場合)、レポートに表示されるページごとにエントリをログに記録するか (`true` の場合) が決まります。|  
   
  詳しくは、「 [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md)」をご覧ください。  
   

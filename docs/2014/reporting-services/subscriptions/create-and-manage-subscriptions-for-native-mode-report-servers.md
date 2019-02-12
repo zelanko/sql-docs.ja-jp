@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4fc706cd372f4bee0c9449b15de6d070240141bd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 770cfbd68a2126bed6bbe024c93e1c5ae623bc59
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414789"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041043"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>標準サブスクリプションを作成、変更、および削除する (ネイティブ モードの Reporting Services)
   標準のサブスクリプションは、電子メールまたは共有フォルダーを使用してレポートを配信する個々のユーザーによって作成されるサブスクリプションです。 標準のサブスクリプションは常に基になるレポートから定義されます。  

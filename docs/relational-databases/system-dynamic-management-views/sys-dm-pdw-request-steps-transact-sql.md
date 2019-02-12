@@ -2,8 +2,8 @@
 title: sys.dm_pdw_request_steps (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8543933aa102a6962846164b7267fad7df222cdd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 63a39ab5ace1ec3666b3f5c70cc628268304ce92
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393596"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039053"
 ---
 # <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52393596"
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id と step_index は、このビューのキーを構成します。<br /><br /> 要求に関連付けられている一意の数値 id です。|Request_id 内を参照してください。 [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)します。|  
 |step_index|**int**|request_id と step_index は、このビューのキーを構成します。<br /><br /> この手順の要求を構成する手順のシーケンス内の位置。|ステップを含む要求に対して (n 1) に 0 を返します。|  
-|operation_type|**nvarchar(35)**|この手順で表される操作の種類。|**DMS クエリ プランの操作:**'ReturnOperation'、'PartitionMoveOperation'、'MoveOperation'、'BroadcastMoveOperation'、'ShuffleMoveOperation'、'TrimMoveOperation'、'CopyOperation'、'DistributeReplicatedTableMoveOperation'<br /><br /> **SQL クエリ プランの操作:**' OnOperation'、'RemoteOperation'<br /><br /> **その他のクエリ プランの操作:**' MetaDataCreateOperation'、'RandomIDOperation'<br /><br /> **読み取りの外部の操作:**' HadoopShuffleOperation'、'HadoopRoundRobinOperation'、'HadoopBroadcastOperation'<br /><br /> **MapReduce の外部の操作:**' HadoopJobOperation'、'HdfsDeleteOperation'<br /><br /> **書き込みのための外部の処理:**' ExternalExportDistributedOperation'、'ExternalExportReplicatedOperation'、'ExternalExportControlOperation'<br /><br /> 詳細についてを参照してください「についてのクエリ プラン」、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]します。|  
+|operation_type|**nvarchar(35)**|この手順で表される操作の種類。|**DMS クエリ プランの操作:**'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **SQL クエリ プランの操作:**' OnOperation'、'RemoteOperation'<br /><br /> **その他のクエリ プランの操作:**'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **読み取りの外部の操作:**'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **MapReduce の外部の操作:**'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **書き込みのための外部の処理:**'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 詳細についてを参照してください「についてのクエリ プラン」、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]します。|  
 |distribution_type|**nvarchar(32)**|この手順が使用される分布の型。|'AllNodes'、'AllDistributions'、'AllComputeNodes'、'ComputeNode'、'配布'、'SubsetNodes'、'SubsetDistributions'、'指定されていません'|  
 |location_type|**nvarchar(32)**|ステップが実行されています。|' Compute'、'コントロール'、'DMS'|  
 |status|**nvarchar(32)**|この手順の状態です。|保留中、実行中、完了、失敗、UndoFailed、PendingCancel、キャンセル、元に戻す、中止されました|  

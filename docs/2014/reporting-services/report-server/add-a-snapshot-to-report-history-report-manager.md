@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e0c9e553ebff35c865adabfeea164a56b5cffce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 859d4ae6557300582b866d6dcd6d0cd3ed124d2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075972"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014983"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>レポート履歴へのスナップショットの追加 (レポート マネージャー)
   レポート履歴とは、時間の経過と共に作成されるレポート スナップショットの集まりです。 レポート スナップショットは、特定の時点で取得されたレイアウト情報およびクエリ結果を含むレポートです。 レポートを選択したときに最新のクエリ結果を取得する要求時レポートとは異なり、レポート スナップショットはスケジュールに従って処理され、その後、レポート サーバーに保存されます。 表示するレポート スナップショットを選択すると、レポート サーバーによってレポート サーバー データベースに格納されたレポートが取得され、スナップショット作成時点のレポートで最新だったデータとレイアウトを表示します。  
@@ -38,7 +38,7 @@ ms.locfileid: "48075972"
 3.  **[新しいスナップショット]** をクリックします。 **[実行時]** 列に新しいスナップショットが作成されます。  
   
     > [!NOTE]  
-    >  レポート履歴にスナップショットを追加するには、管理者がレポート履歴の構成で **[履歴の手動作成を許可する]** に設定しておく必要があります。 詳細については、次を参照してください。[レポート履歴を制限する&#40;レポート マネージャー&#41;](../reports/limit-report-history-report-manager.md)します。  
+    >  レポート履歴にスナップショットを追加するには、管理者がレポート履歴の構成で **[履歴の手動作成を許可する]** に設定しておく必要があります。 詳細については、 [レポート履歴を制限する (レポート マネージャー)](../reports/limit-report-history-report-manager.md)をクリックします。  
   
 4.  **[適用]** をクリックします。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "48075972"
 5.  **[適用]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [レポートの実行プロパティを構成する&#40;レポート マネージャー&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [レポートを開閉&#40;レポート マネージャー&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [レポート履歴を制限する &#40;レポート マネージャー&#41;](../reports/limit-report-history-report-manager.md)   
+ [レポートの実行プロパティを構成する (レポート マネージャー)](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [レポートを開閉する (レポート マネージャー)](../reports/open-and-close-a-report-report-manager.md)   
+ [レポート履歴を制限する (レポート マネージャー)](../reports/limit-report-history-report-manager.md)   
  [[スケジュール]](../subscriptions/schedules.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)  
   

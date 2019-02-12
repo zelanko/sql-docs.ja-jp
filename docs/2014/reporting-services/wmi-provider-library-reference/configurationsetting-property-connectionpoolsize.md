@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f4f555db5b87e2233229215da5b800c0eedea61c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 589069aebe2275fd06e58385fd85cffaaa3c1222
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172082"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016133"
 ---
 # <a name="connectionpoolsize-property-wmi-msreportserverconfigurationsetting"></a>ConnectionPoolSize プロパティ (WMI MSReportServer_ConfigurationSetting)
-  レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとの通信にレポート サーバーが使用する、接続プールサイズです。 読み取り専用です。  
+  レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとの通信にレポート サーバーが使用する、接続プールサイズです。 読み取り専用。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +45,7 @@ public UInt32 ConnectionPoolSize;
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

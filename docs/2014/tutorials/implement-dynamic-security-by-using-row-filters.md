@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c70d749a560ff5dcc39d36d84e8c9ff09b44894f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404197"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041053"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>行フィルターを使用した動的なセキュリティの実装
   この補足のレッスンでは、動的なセキュリティを実装する追加のロールを作成します。 動的なセキュリティには、現在ログオンしているユーザーのユーザー名またはログイン ID に基づいた行レベルのセキュリティが用意されています。 詳細については、「[ロール (SSAS テーブル)](../analysis-services/tabular-models/roles-ssas-tabular.md)」 を参照してください。  
@@ -86,10 +85,10 @@ ms.locfileid: "52404197"
   
     |Employee Id|Sales Territory Id|First Name|Last Name|ログイン ID|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |1|2|\<ユーザー名 >|\<ユーザーの姓 >|\<ドメイン \ ユーザー名 >|  
-    |1|3|\<ユーザー名 >|\<ユーザーの姓 >|\<ドメイン \ ユーザー名 >|  
-    |2|4|\<ユーザー名 >|\<ユーザーの姓 >|\<ドメイン \ ユーザー名 >|  
-    |3|5|\<ユーザー名 >|\<ユーザーの姓 >|\<ドメイン \ ユーザー名 >|  
+    |1|2|\<ユーザー名 >|\<ユーザーの姓 >|\<domain\username>|  
+    |1|3|\<ユーザー名 >|\<ユーザーの姓 >|\<domain\username>|  
+    |2|4|\<ユーザー名 >|\<ユーザーの姓 >|\<domain\username>|  
+    |3|5|\<ユーザー名 >|\<ユーザーの姓 >|\<domain\username>|  
   
 3.  新しいワークシートで、名、姓、および domain\username を組織の 3 人のユーザーの名前とログイン ID に置き換えます。 先頭の 2 つの行に、Employee Id 1 の同じユーザーを配置します。 これは、このユーザーが 1 つ以上の販売区域に属していることを示します。 Employee Id フィールドと Sales Territory Id フィールドはそのままにします。  
   

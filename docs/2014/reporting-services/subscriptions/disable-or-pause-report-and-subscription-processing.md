@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c15666aecbbdde8ca95eaf684bf9909454d3d42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68d6284f7b7b832b37806d2fb39e506689a3b031
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129313"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040683"
 ---
 # <a name="pause-report-and-subscription-processing"></a>レポートとサブスクリプションの処理を一時停止する
   レポートまたはサブスクリプションを直接一時停止することはできません。 ただし、処理の開始前、またはデータ ソースへの接続時に、レポートおよびサブスクリプションの処理を中断できます。 また、レポートやサブスクリプションにユーザーがアクセスできないようにして、レポートやサブスクリプションが処理されないようにすることもできます。  
