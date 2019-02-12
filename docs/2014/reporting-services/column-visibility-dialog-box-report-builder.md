@@ -11,14 +11,14 @@ f1_keywords:
 - "10127"
 ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f6ab67682afc00057085fe3d0f793c51a28258d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 27b03c35d329f207805521a70e628a7dc2045a94
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057777"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025813"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>[列表示] ダイアログ ボックス (レポート ビルダー)
   **[列表示]** ダイアログ ボックスでは、選択した列をレポートの初期実行時に表示または非表示にする操作や、別のレポート アイテムを使用して列の表示を切り替える操作を行うことができます。  
@@ -36,7 +36,7 @@ ms.locfileid: "48057777"
  **表示または非表示の式を基に**  
  式を使用して初期表示を変化させます。  
   
- 評価される式を入力、`Boolean`の値`True`アイテムを非表示にして`False`アイテムを表示します。 式を編集するには、式 (*[fx]*) ボタンをクリックします。  
+ アイテムを非表示にする場合は `Boolean`、アイテムを表示する場合は `True` と評価される `False` 値の式を入力します。 式を編集するには、式 (*[fx]*) ボタンをクリックします。  
   
  **このレポート アイテムが表示を切り替えることができます。**  
  HTML レポート ビューアーでこの列の表示/非表示をユーザーが切り替えられるようにするための切り替えイメージを表示します。  
@@ -46,7 +46,7 @@ ms.locfileid: "48057777"
 ## <a name="see-also"></a>参照  
  [式の例 (レポート ビルダーおよび SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
  [アイテムへの展開または折りたたみアクションの追加 &#40;レポート ビルダーおよび SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [イメージ&#40;レポート ビルダーおよび SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [画像 &#40;レポート ビルダーおよび SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [[全般] ([画像のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

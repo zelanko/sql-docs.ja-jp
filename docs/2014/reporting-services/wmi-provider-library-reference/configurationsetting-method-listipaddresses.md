@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3b8dc70cf1502363585abd7f1be5de7c72c6256a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1c6854194122dbc4ab5e1781ea62de119f7a09e9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062642"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029053"
 ---
 # <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>ListIPAddresses メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー コンピューターの IP アドレスを一覧表示します。  
@@ -61,7 +61,7 @@ public void ListIPAddresses (out string[] IPAddress,
   
  場合*IsDhcpEnabled*は`True`、 *IPAddress*は動的です。 これは、SSL バインドには使用しないでください。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
