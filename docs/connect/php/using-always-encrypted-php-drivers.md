@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5c82c32922712b377fd732b6745b1761e9f32a82
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403427"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55890003"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>SQL Server 用 PHP ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -63,8 +63,8 @@ Always Encrypted が有効でない場合、暗号化された列をターゲッ
 
 |クエリの特性|Always Encrypted が有効になっており、アプリケーションがキーとキー メタデータにアクセスできる|Always Encrypted が有効になっており、アプリケーションがキーまたはキー メタデータにアクセスできない|Always Encrypted が無効になっている|
 |---|---|---|---|
-|暗号化された列をターゲットとするパラメーター。|パラメーター値は透過的に暗号化されます。|[エラー]|[エラー]|
-|暗号化された列をターゲットとするパラメーターを含まない、暗号化された列からのデータの取得。|暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションでは、プレーン テキスト列の値を受け取ります。 |[エラー]|暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列として受け取ります。|
+|暗号化された列をターゲットとするパラメーター。|パラメーター値は透過的に暗号化されます。|Error|Error|
+|暗号化された列をターゲットとするパラメーターを含まない、暗号化された列からのデータの取得。|暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションでは、プレーン テキスト列の値を受け取ります。 |Error|暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列として受け取ります。|
  
 次の例は、暗号化された列のデータを取得および変更する方法を示しています。 例には、次のスキーマを持つテーブルがあるとします。 SSN 列と BirthDate 列は暗号化されています。
 ```
@@ -157,7 +157,7 @@ $stmt->execute();
  -   バインドされたパラメーターを持つクエリを実行するときに PHP ドライバーで、ユーザーが明示的に SQLSRV ドライバーを使用する場合に、SQL 型が指定されていない限り、ユーザーの SQL 型が自動的に決定します。
  -   ドライバーが SSN 列と BirthDate 列から取得されたデータを透過的に暗号化解除するので、プログラムで出力される値はすべてプレーンテキストになります。
  
-注: クエリは必要暗号化は確定的な場合にのみ暗号化された列に対して等価比較を実行できます。 詳細については、「[明確な暗号化またはランダム化された暗号化の選択](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)」を参照してください。
+注:クエリは、暗号化は確定的な場合にのみ、暗号化された列に対して等価比較を実行できます。 詳細については、「[明確な暗号化またはランダム化された暗号化の選択](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)」を参照してください。
 
 SQLSRV:
 ```
@@ -255,7 +255,7 @@ ODBC Driver for SQL Server とは異なりステートメントまたはクエ�
 
 列暗号化キー (CEK) を復号化するための列マスター キー ストアへの呼び出しの数を減らすためには、ドライバーは、メモリ内でプレーン テキスト Cek をキャッシュします。 データベース メタデータから暗号化された CEK (ECEK) を受信した後、ODBC ドライバーは、最初、キャッシュの暗号化されたキー値に対応するプレーン テキスト CEK を検索を試みます。 ドライバーは、キャッシュに対応するプレーン テキスト CEK を見つけられない場合にのみ、CMK を含むキー ストアを呼び出します。
 
-注: ODBC Driver for SQL Server では、キャッシュ内のエントリは、2 時間のタイムアウト後に削除されます。 この動作は、ことを特定の ECEK の少ない方、ドライバーまたは 2 時間おき、アプリケーションの有効期間中に 1 回だけキー ストアにアクセスを意味します。
+注:ODBC Driver for SQL Server では、キャッシュ内のエントリが 2 時間のタイムアウト後に削除されます。 この動作は、ことを特定の ECEK の少ない方、ドライバーまたは 2 時間おき、アプリケーションの有効期間中に 1 回だけキー ストアにアクセスを意味します。
 
 ## <a name="working-with-column-master-key-stores"></a>列マスター キー ストアを操作する
 
@@ -269,7 +269,7 @@ Microsoft driver 5.3.0 for PHP for SQL Server、Windows 証明書ストアのプ
 
 Windows 上の SQL Server 用 ODBC ドライバーには、Windows 証明書ストア、という名前の組み込み列マスター キー ストア プロバイダーが含まれています。`MSSQL_CERTIFICATE_STORE`します。 (このプロバイダーは macOS または Linux で使用できません) です。このプロバイダーでは、CMK がクライアント コンピューターでローカルに格納されているし、ドライバーで使用するために必要な追加の構成、アプリケーションではありません。 ただし、アプリケーションと、ストアに証明書とその秘密キーにアクセスできる場合があります。 詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。
 
-### <a name="using-azure-key-vault"></a>Azure Key Vault を使用
+### <a name="using-azure-key-vault"></a>Azure Key Vault を使用した EKM
 
 Azure Key Vault では、暗号化キー、パスワード、および Azure を使用してその他のシークレットを格納する方法を提供および Always Encrypted のキーを格納するために使用できます。 ODBC Driver for SQL Server (バージョン 17 以降) には、Azure Key Vault の組み込みのマスター _ キー ストア プロバイダーが含まれています。 次の接続オプションは、Azure Key Vault の構成の処理: `KeyStoreAuthentication`、 `KeyStorePrincipalId`、および`KeyStoreSecret`します。 
  -   `KeyStoreAuthentication` 2 つの可能な文字列値のいずれかを実行できます:`KeyVaultPassword`と`KeyVaultClientSecret`します。 これらの値は、認証資格情報の種類は他の 2 つのキーワードで使用を制御します。
@@ -288,23 +288,23 @@ SQLSRV:
 
 Azure Active Directory アカウントを使用します。
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreAuthentication"=>$AADPassword);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreSecret"=>$AADPassword);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 Azure のアプリケーション クライアント ID とシークレットを使用します。
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreAuthentication"=>$applicationClientSecret);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreSecret"=>$applicationClientSecret);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
-PDO_SQLSRV: Azure Active Directory アカウントの使用。
+PDO_SQLSRV:Azure Active Directory アカウントを使用します。
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreAuthentication = $AADPassword;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 Azure のアプリケーション クライアント ID とシークレットを使用します。
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreAuthentication = $applicationClientSecret;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreSecret = $applicationClientSecret;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 

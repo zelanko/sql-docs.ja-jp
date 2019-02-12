@@ -10,21 +10,44 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 69b3b5c9574578b286b882b7d2125b0bb984759b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f9fe0558b169acea58bb98a4f9a07267549aa58f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413750"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013003"
 ---
 # <a name="sqlpackage-release-notes"></a>sqlpackage のリリース ノート
 
 **[最新バージョンのダウンロード](sqlpackage-download.md)**
 
+## <a name="sqlpackage-181"></a>sqlpackage 18.0
+
+リリース日:2009 年 2 月 1 日  
+ビルド13.0.0.0 
+
+リリースには、次の機能と修正プログラムが含まれています。
+
+- UTF8 の照合順序のサポートが追加されました。
+- リバース エンジニア リングのクエリのレガシ カーディナリティ推定機能を使用するパフォーマンスが改善されました。
+- インデックス付きのビューの非クラスター化列ストア インデックスを有効になります。
+- スクリプトを生成するときに、大幅なスキーマ比較のパフォーマンスの問題を修正しました。
+- 特定の xevent セッションを無視するスキーマの誤差検出ロジックを修正しました。
+- グラフ テーブルの順序を固定インポートします。
+- オブジェクトのアクセス許可を持つ外部テーブルのエクスポートを修正しました。
+- .NET Core 2.2 へ移動 
+- .NET Core でのスキーマ比較のメモリ ストレージを使用します。
+
+このリリースではクロス プラットフォームのプレビュー ビルド sqlpackage を対象に .NET Core 2.2、および macOS および Linux で実行できます。 このプレビュー リリースには、次の既知の問題があります。
+
+- ビルドと配置の共同作成者はサポートされていません。
+- Json データのシリアル化を使用する古い .dacpac および .bacpac ファイルはサポートされていません。
+- 参照先 .dacpacs (たとえば master.dacpac) 大文字小文字を区別するファイル システムに関する問題のため解決できません。
+  - (たとえばマスター参照ファイルの名前を大文字に変換を回避するには。BACPAC)。
 ## <a name="sqlpackage-180"></a>sqlpackage 18.0
 
-リリース日: 2018 年 10 月 24 日  
-ビルド: 15.0.4200.1 
+リリース日:2018 年 10 月 24 日  
+ビルド15.0.4200.1 
 
 リリースには、次の機能と修正プログラムが含まれています。
 
@@ -41,8 +64,8 @@ ms.locfileid: "52413750"
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
-リリース日: 2018 年 6 月 22 日  
-ビルド: 14.0.4079.2  
+リリース日:2018 年 6 月 4 日  
+ビルド14.0.4079.2  
 
 このリリースでは、次の問題点を修正しました。
 
@@ -53,8 +76,8 @@ ms.locfileid: "52413750"
 
 ## <a name="sqlpackage-1741"></a>sqlpackage 17.4.1
 
-リリース日: 2018 年 1 月 25 日  
-ビルド: 14.0.3917.1
+リリース日:2018 年 1 月 25 日  
+ビルド14.0.3917.1
 
 このリリースでは、次の問題点を修正しました。
 
@@ -66,8 +89,8 @@ ms.locfileid: "52413750"
 
 ## <a name="sqlpackage-1740"></a>sqlpackage 17.4.0
 
-リリース日: 2017 年 12 月 12 日  
-ビルド: 14.0.3881.1
+リリース日:2019 年 12 月 12日  
+ビルド13.0.0.0
 
 このリリースでは、次の問題点を修正しました。
 
@@ -76,22 +99,3 @@ ms.locfileid: "52413750"
 - 診断情報を保存するファイル パスを指定するコマンド ライン パラメーターを/DiagnosticsFile:"C:\Temp\sqlpackage.log を追加するには"。
 - 診断情報をコンソールにログインする/Diagnostics コマンド ライン パラメーターに追加します。
 
-## <a name="sqlpackage-on-macos-and-linux-net-core-preview"></a>macOS および Linux の .NET Core (プレビュー) で sqlpackage
-
-リリース日: 2018 年 11 月 15 日  
-ビルド: 15.0.4240.1
-
-このリリースでは、.NET Core 2.1 では、対象とする sqlpackage のクロス プラットフォームのプレビュー ビルドを含むし、macOS、Linux で実行できます。 
-
-このリリースでは、次の問題点を修正しました。
-
-- .NET Core 2.1 に移動 
-- SQL CLR UDT 型を含め、CLR UDT 型のサポート: SqlGeography、SqlGeometry、& SqlHierarchyId します。
-
-このリリースでは、次の既知の問題の早期プレビュー版を示します。
-
-- /P:CommandTimeout パラメーターは、120 に直接書き込まれます。
-- ビルドと配置の共同作成者はサポートされていません。
-- Json データのシリアル化を使用する古い .dacpac および .bacpac ファイルはサポートされていません。
-- 参照先 .dacpacs (たとえば master.dacpac) 大文字小文字を区別するファイル システムに関する問題のため解決できません。
-  - (たとえばマスター参照ファイルの名前を大文字に変換を回避するには。BACPAC)。
