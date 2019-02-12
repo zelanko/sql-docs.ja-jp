@@ -13,15 +13,15 @@ helpviewer_keywords:
 - derived hierarchies, moving members
 - members [Master Data Services], moving
 ms.assetid: 049c9a15-89c1-478c-8438-028fffc9e187
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 12957de6492419811fe37dc6d412281af9883f04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96f3c1232f1124ef5f2cd9e77d89fa06607392c7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112100"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026693"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>階層内のメンバーを移動する (マスター データ サービス)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、階層内のメンバーを移動してその場所または親割り当てを変更します。  
@@ -58,7 +58,7 @@ ms.locfileid: "48112100"
   
 ## <a name="see-also"></a>参照  
  [ステージング処理を使用して明示的階層メンバーの移動&#40;マスター データ サービス&#41;](add-update-and-delete-data-master-data-services.md)   
- [派生階層&#40;マスター データ サービス&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
- [明示的階層&#40;マスター データ サービス&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+ [派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
+ [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

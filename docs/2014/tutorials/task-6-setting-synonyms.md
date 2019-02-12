@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00640766d7a19c91f517d8e96e6de9f863d5ed54
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a81a538e2cd15dd38a6c32993395cac20079b6f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365704"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022278"
 ---
 # <a name="task-6-setting-synonyms"></a>タスク 6:シノニムを設定する
   このタスクで 2 つのドメイン値を設定する**USA**と**米国**の**国**とのシノニムとして**米国**として、先頭の値。 **先頭の値を使用して**の作成時にオプションが選択された、**国**ドメイン任意**USA**の値を**国**ドメインとして出力する**米国**など、先頭の値を米国には)。 参照してください[Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx)の詳細。  

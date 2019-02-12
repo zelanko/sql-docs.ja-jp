@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 46bc4a7b3767a18ba6e7f3b5869a56dd259e1285
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6207c9a80ca2a18e182d57127da1fc1133086144
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094962"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026493"
 ---
 # <a name="delete-columns-dialog-box"></a>[列の削除] ダイアログ ボックス
   **[列の削除]** ダイアログ ボックスを使用して、テーブル、マトリックス、または一覧データ領域から列を削除します。 グループに関連付けられている列の場合は、グループ定義も削除できます。  

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e3c88894ee271e9b96e98e25dc14e62bfc0361ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048332"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018903"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Analysis Services プロジェクトの作成 (基本的なデータ マイニング チュートリアル)
-  各[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクトは、1 つのオブジェクトを定義[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベース。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースには、さまざまな種類のオブジェクトが含まれています。  
+  各 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトは、単一の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース内のオブジェクトを定義します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースには、さまざまな種類のオブジェクトが含まれています。  
   
 -   多次元モデル (キューブ)  
   
@@ -29,9 +28,9 @@ ms.locfileid: "48048332"
   
  データ マイニングを実行するうえで、キューブは **必須ではない** ことに注意してください。 既存のキューブに対してデータ マイニングを実行する必要がある場合は、キューブを作成したときに使用したのと同じプロジェクトに対して、データ マイニング モデルを追加する必要があります。 ただし、キューブが関係していない場合は、ほとんどの目的でデータ ウェアハウスなどのリレーショナル データ ソースに対してモデルを作成することができ、より高いパフォーマンスを達成できます。  
   
- このチュートリアルでは、リレーショナル データ ウェアハウスを使用して[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]、データ ソースとして。 すべて、データ マイニング オブジェクトを配置、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]という名前のデータベース`BasicDataMining`、データ マイニングのためだけに使用します。  
+ このチュートリアルでは、データ ソースとして、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]というリレーショナル データ ウェアハウスを使用します。 データ マイニングの目的のみで使用する `BasicDataMining` という名前の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに、すべてのデータ マイニング オブジェクトを配置します。  
   
- 既定では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を使用して、 **localhost**プロジェクトの新しいインスタンス。 名前付きインスタンスまたは別のサーバーを使用している場合は、まずプロジェクトを作成して開き、その後でインスタンス名を変更する必要があります。  
+ 既定では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は新しいプロジェクトに対して **localhost** インスタンスを使用します。 名前付きインスタンスまたは別のサーバーを使用している場合は、まずプロジェクトを作成して開き、その後でインスタンス名を変更する必要があります。  
   
  詳細については[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクトを参照してください[Analysis Services プロジェクトを作成する](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)します。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48048332"
  [データ ソースを作成する&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services プロジェクトのビルド&#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [Analysis Services プロジェクトのビルド &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Analysis Services プロジェクトの作成 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

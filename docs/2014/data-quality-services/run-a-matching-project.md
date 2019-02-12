@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.matchingproject.export.f1
 - sql12.dqs.matchingproject.map.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c39c1c9651872a7e47070cfec400e77fa578a7f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512052"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019693"
 ---
 # <a name="run-a-matching-project"></a>照合プロジェクトの実行
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でデータ照合を実行する方法について説明します。 照合プロセスでは、照合ポリシーの照合ルールに基づいて一致レコードのクラスターを特定し、サバイバーシップ ルールに基づいて各クラスターで保持するレコードを 1 つ特定し、結果をエクスポートします。 照合プロセス (重複除去とも呼ばれます) はコンピューター支援型のプロセスで実行されますが、照合ルールを対話形式で作成し、いくつかの選択肢の中からサバイバーシップ ルールを選択することで、照合プロセスを制御します。  
@@ -164,7 +164,7 @@ ms.locfileid: "52512052"
     > [!NOTE]  
     >  照合プロジェクトの完了後にもう一度そのプロジェクトを使用する場合、発行された時点のナレッジ ベースが使用されます。 プロジェクトの完了後にナレッジ ベースに対して行われた変更は使用されません。 それらの変更を使用する場合や新しいナレッジ ベースを使用する場合は、新しい照合プロジェクトを作成する必要があります。 一方、作成した照合プロジェクトが完了していない場合は、そのプロジェクトで照合を実行するときに、照合ポリシーに対して発行された変更が使用されます。  
   
-##  <a name="FollowUp"></a> フォローしてください：照合プロジェクトを実行した後  
+##  <a name="FollowUp"></a>補足情報: 照合プロジェクトを実行した後  
  照合プロジェクトを実行した後、ナレッジ ベースの照合ポリシーを変更し、更新後の照合ポリシーに基づく別の照合プロジェクトを作成して実行できます。 詳細については、「 [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)」をご参照ください。  
   
 ##  <a name="Profiler"></a> [プロファイラー] タブと [結果] タブ  

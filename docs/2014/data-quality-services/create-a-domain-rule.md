@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.rules.f1
 - sql12.dqs.dm.testdomainrule.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 809ac3ce20bbda443840c807ac05fd6ade7cc225
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 750773c728b2cbe026aac404f90a13928802a4bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365114"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022953"
 ---
 # <a name="create-a-domain-rule"></a>ドメイン ルールの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメイン ルールを作成する方法について説明します。 ドメイン ルールとは、ドメイン値の検証、修正、および標準化のために使用される条件です。 ドメイン値が正確で、ビジネス要件に準拠していると見なされるためには、ドメイン ルールがドメイン全体に当てはまる必要があります。 ドメイン ルールには検証規則を含めることができます。検証規則は、データ品質プロジェクトでドメイン値の検証に使用され、データの修正には使用されません。 また、標準化規則を含めることもできます。標準化規則は、有効なデータに対して適用され、データ修正で使用されます。  
@@ -97,7 +97,7 @@ ms.locfileid: "53365114"
   
 3.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](../../2014/data-quality-services/end-the-domain-management-activity.md)」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="FollowUp"></a> フォローしてください：ドメイン ルールを作成した後  
+##  <a name="FollowUp"></a>補足情報: ドメイン ルールを作成した後  
  ドメイン ルールを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../../2014/data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../../2014/data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../../2014/data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="Conditions"></a> ドメイン ルールの条件  
@@ -129,6 +129,6 @@ ms.locfileid: "53365114"
 |値が次のパターンを含む|オペランド内の文字、数字、または特殊文字のパターンを含む値のみが有効になります。|オペランドの例:Aa-12 (のパターンを含む値*任意*2 つの文字の後に続くがハイフン (-)、*任意*2 桁の数字です)。<br /><br /> 有効な値:Aaa-01、ab-975<br /><br /> 無効な値:A7、aa-6、C-45、aa; 98|  
 |値が次のパターンを含まない|オペランド内の文字パターンを含まない値のみが有効になります。|オペランドの例:Ab-12 (のパターンを含まない値*任意*2 つの文字の後に続くがハイフン (-)、*任意*2 桁の数字です)。<br /><br /> 有効な値:A7、aa-6、C-45、aa; 98<br /><br /> 無効な値:Aaa-01、ab-975|  
 |値が正規表現と一致する|オペランド内の正規表現と一致する値のみが有効と見なされます。<br /><br /> "^"、"$" などのアンカーを正規表現に含めないでください。これらのアンカーは、この条件を含む句に自動的に追加されます。 ("^"、"$" などのアンカーを含む正規表現を使用する場合は、かっこで囲んでください。)正規表現の詳細については、「 [正規表現言語要素](https://go.microsoft.com/fwlink/?LinkId=225561)」を参照してください。|オペランドの例: [1-5]+ (1 ～ 5 の数字の 1 回以上の繰り返し)<br /><br /> 有効な値:123, 12345, 14352<br /><br /> 無効な値:456、ABC|  
-|値が正規表現と一致しない|オペランド内の正規表現と一致しない値のみが有効と見なされます。|オペランドの例: [1-5]+ (1 ～ 5 の数字のみで構成されていない文字列)<br /><br /> 有効な値:456、ABC<br /><br /> 無効な値:123、123456、14352|  
+|値が正規表現と一致しない|オペランド内の正規表現と一致しない値のみが有効と見なされます。|オペランドの例: [1-5]+ (1 ～ 5 の数字のみで構成されていない文字列)<br /><br /> 有効な値:456、ABC<br /><br /> 無効な値:123, 123456, 14352|  
   
   

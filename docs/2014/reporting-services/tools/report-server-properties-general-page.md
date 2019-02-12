@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af0db1ac3d03fa03ea7bb3267656597d164c5302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f92c0886bf3e1e5d5022cde96ad39671588225d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222218"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019343"
 ---
 # <a name="server-properties-general-page"></a>[サーバーのプロパティ] ([全般] ページ)
   このページを使用すると、レポート マネージャーで使用されるタイトルの表示と変更、個人用レポートの有効化と無効化、個人用レポートのセキュリティに関するロール定義の選択、およびクライアントの印刷コントロールの有効化または無効化ができます。  
@@ -31,7 +31,7 @@ ms.locfileid: "48222218"
  **名前**  
  レポート マネージャーで表示されるアプリケーション名を入力します。 既定では、この値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]です。 指定した名前は、レポート マネージャーでのみ表示されます。  
   
- **[バージョン]**  
+ **バージョン**  
  このプロパティは読み取り専用です。 使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のバージョンを示します。  
   
  **のエディション**  
@@ -50,7 +50,7 @@ ms.locfileid: "48222218"
  個人用レポートのセキュリティに使用するロール定義を指定します。 ロール定義は、各個人用レポート フォルダーでサポートされるタスクのセットを特定します。  
   
  **ActiveX クライアントの印刷コントロールのダウンロードを有効にします。**  
- セット、`EnableClientPrinting`レポート サーバー システム プロパティ。 クライアント側の印刷を有効にすると、ローカル管理者の権限を持つユーザーは、HTML レポートを印刷するための署名済み ActiveX コントロールをダウンロードすることができます。 詳細については、次を参照してください。 [Reporting Services の、無効にするクライアント側印刷機能の有効化と](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)します。  
+ `EnableClientPrinting` レポート サーバー システム プロパティを設定します。 クライアント側の印刷を有効にすると、ローカル管理者の権限を持つユーザーは、HTML レポートを印刷するための署名済み ActiveX コントロールをダウンロードすることができます。 詳細については、「 [Reporting Services のクライアント側印刷機能の有効化と無効化](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーのプロパティを設定する (Management Studio)](set-report-server-properties-management-studio.md)   

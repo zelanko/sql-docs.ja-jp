@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 335300f5b8e7f91c3595cdb26cb531bb589c782a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca5f2b01894818680b6b760a1f2b8a342d43d8ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085622"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022899"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>レポート サーバーの構成と管理 (Reporting Services SharePoint モード)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サーバー ベースのレポート プラットフォームで、すぐに使用できるツールとサービスを作成、展開、および、組織、および拡張して、レポートをカスタマイズするためのプログラミング機能のレポートを管理するための完全な範囲を提供します。機能。 レポート環境を SharePoint 製品と統合すると、SharePoint サイトによって提供されるコラボレーション環境を使用するメリットを実感できます。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、組織で利用するレポートの作成、配置、管理に役立つツールやサービスを豊富に備えたサーバー ベースのレポート プラットフォームです。プログラミング機能を使用して、レポート作成機能を拡張したりカスタマイズしたりすることもできます。 レポート環境を SharePoint 製品と統合すると、SharePoint サイトによって提供されるコラボレーション環境を使用するメリットを実感できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  次のセクションでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境と SharePoint 製品またはテクノロジとの統合に関する概念、配置シナリオ、手順などについて説明します。  
@@ -28,7 +28,7 @@ ms.locfileid: "48085622"
   
     -   [SharePoint ユーザー用のデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
-    -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+    -   [SharePoint モード レポート サーバーのサブスクリプションの作成と管理](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
     -   [レポート データ ソース内の資格情報を SharePoint サイトから更新する](report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   

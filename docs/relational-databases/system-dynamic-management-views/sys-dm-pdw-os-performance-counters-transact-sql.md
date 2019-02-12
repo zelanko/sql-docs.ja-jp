@@ -3,9 +3,8 @@ title: sys.dm_pdw_os_performance_counters (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: pdw
-ms.reviewer: ''
 ms.technology: system-objects
+ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 99ef1c42b6c01cd74e146f0d247d31f5033939cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 820027ee5bf893d7df81c51f90b431daa7c0af07
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741000"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027343"
 ---
 # <a name="sysdmpdwosperformancecounters-transact-sql"></a>sys.dm_pdw_os_performance_counters (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Windows パフォーマンス カウンター内のノードに関する情報が含まれます[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]します。  
+  内のノードで Windows パフォーマンス カウンターに関する情報を格納 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。  
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  

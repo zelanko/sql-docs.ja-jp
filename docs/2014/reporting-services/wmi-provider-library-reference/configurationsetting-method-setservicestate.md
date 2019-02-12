@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b40693cd426779f7878c1101fb57efa12ce4e6de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b6413a1cf3e25575078c2f126439cc03ca95a933
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057262"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023893"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>SetServiceState メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバーの Windows サービスおよび Web サービスを開始または停止します。  
@@ -44,13 +44,13 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>パラメーター  
  *EnableWindowsService*  
- A `Boolean` Windows サービスの状態を示す値。 値`true`開始、レポート サーバー Windows サービス以外の値`false`Windows サービスを停止します。  
+ Windows サービスの状態を示す `Boolean` 値。 値が `true` の場合はレポート サーバー Windows サービスを開始し、`false` の場合はレポート サーバー Windows サービスを停止します。  
   
  *EnableWebService*  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web サービスの状態を示す `Boolean` 値。 値が `true` の場合はレポート サーバー Web サービスを開始し、`false` の場合はレポート サーバー Web サービスを停止します。  
   
  *EnableReportManager*  
- A`Boolean`レポート マネージャーの目的の状態を示す値。  
+ レポート マネージャーの目的の状態を示す `Boolean` 値。  
   
  *HRESULT*  
  [out] 呼び出しの成功または失敗を示す値。  
@@ -60,7 +60,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

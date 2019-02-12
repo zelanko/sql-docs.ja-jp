@@ -2,10 +2,9 @@
 title: sp_set_database_firewall_rule (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_set_database_firewall_rule
@@ -22,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8530d8a2d19a5dd9f50fb437626202565435222a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93acd6ad9e904e1e3db5dfe7e244b459e7853d70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800680"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025463"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,14 +44,14 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- **[@name**  =] [N]'*名前*'  
+ **[@name** = ] [N]'*name*'  
  データベース レベルのファイアウォール設定を説明し、区別するために使用される名前。 *名前*は**nvarchar (128)** で既定値はありません。 Unicode 識別子`N`は省略可能です[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]します。 
   
- **[@start_ip_address**  =] '*start_ip_address*'  
- データベース レベルのファイアウォール設定の範囲において最も小さい IP アドレス。 これ以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスへの接続を試みることができます。 最下位の IP アドレスは`0.0.0.0`します。 *start_ip_address*は**varchar (50)** で既定値はありません。  
+ **[@start_ip_address** =] '*start_ip_address*'  
+ データベース レベルのファイアウォール設定の範囲において最も小さい IP アドレス。 これ以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスへの接続を試みることができます。 指定可能な最小 IP アドレスは `0.0.0.0` です。 *start_ip_address*は**varchar (50)** で既定値はありません。  
   
  [**@end_ip_address** =] '*end_ip_address*'  
- データベース レベルのファイアウォール設定の範囲の最上位の IP アドレス。 IP アドレス以下への接続にこれを試みる、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]インスタンス。 最上位の IP アドレスは`255.255.255.255`します。 *end_ip_address*は**varchar (50)** で既定値はありません。  
+ データベース レベルのファイアウォール設定の範囲の最上位の IP アドレス。 これ以下の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスへの接続を試みることができます。 指定可能な最大 IP アドレスは `255.255.255.255` です。 *end_ip_address*は**varchar (50)** で既定値はありません。  
   
  次の表は、サポートされている引数を示していて、オプション[!INCLUDE[ssSDS](../../includes/sssds-md.md)]します。  
   
@@ -76,7 +75,7 @@ EXECUTE sp_set_database_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- 次のコード作成、データベース レベルのファイアウォール設定と呼ばれる`Example DB Setting 1`の IP アドレスのみ`0.0.0.4`します。 次に、`sp_set_database firewall_rule`に終了 IP アドレスを更新するストアド プロシージャが再度呼び出される`0.0.0.6`点で、ファイアウォールの設定。 により、IP アドレス範囲が作成されます`0.0.0.4`、 `0.0.0.5`、および`0.0.0.6`データベースにアクセスします。
+ 次のコードでは、IP アドレス `Example DB Setting 1` だけを許可する、`0.0.0.4` という名前のデータベースレベルのファイアウォールの設定を作成します。 次に、`sp_set_database firewall_rule`に終了 IP アドレスを更新するストアド プロシージャが再度呼び出される`0.0.0.6`点で、ファイアウォールの設定。 により、IP アドレス範囲が作成されます`0.0.0.4`、 `0.0.0.5`、および`0.0.0.6`データベースにアクセスします。
   
 ```  
 -- Create database-level firewall setting for only IP 0.0.0.4  

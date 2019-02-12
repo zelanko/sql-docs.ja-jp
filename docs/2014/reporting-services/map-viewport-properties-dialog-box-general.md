@@ -12,14 +12,14 @@ f1_keywords:
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 62d20c36271bd6dd1bfa591edf606c3e295d1adb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 33849743e47ad910fad44938e7537d7b4be8624a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138642"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018184"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>[全般] ([マップ ビューポートのプロパティ] ダイアログ ボックス)
   **[マップ ビューポートのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、座標系、投影法、および境界に関するオプションを変更できます。  
@@ -85,7 +85,7 @@ ms.locfileid: "48138642"
  **[最大緯度]**  
  最大緯度です。 **[地理]** に対してのみ使用できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マップ (レポート ビルダーおよび SSRS)](report-design/maps-report-builder-and-ssrs.md)  
   
   

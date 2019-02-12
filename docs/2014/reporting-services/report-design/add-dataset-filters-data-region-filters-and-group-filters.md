@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 94095fd1879b4f4343a7a65dfd9d018ca355084f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154222"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026183"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダー)
   レポートのフィルターは、レポート内で使用されるデータを制限するために作成したデータセット、データ領域、またはデータ領域グループの一部です。 データセット クエリを変更できない場合 (共有データセットを使用している場合など)、レポート データを制御する方法としてフィルターを使用できます。  
@@ -70,7 +70,7 @@ ms.locfileid: "48154222"
 |**レポート定義スキーマのデータ型**|**CLR 型**|  
 |--------------------------------------------|-----------------------|  
 |`Boolean`|`Boolean`|  
-|`DateTime`|`DateTime`, `DateTimeOffset`|  
+|`DateTime`|`DateTime`、 `DateTimeOffset`|  
 |`Integer`|`Int16`, `Int32`, `UInt16`, `Byte`, `SByte`|  
 |`Float`|`Single`、 `Double`、 `Decimal`|  
 |`Text`|`String`, `Char`, `GUID`, `Timespan`|  
@@ -84,7 +84,7 @@ ms.locfileid: "48154222"
 |--------------|------------|  
 |**Equal、Like、NotEqual、GreaterThan、GreaterThanOrEqual、LessThan、LessThanOrEqual**|式と単一の値とを比較します。|  
 |**TopN、BottomN**|式と単一の `Integer` 値とを比較します。|  
-|**TopPercent、BottomPercent**|1 つに式を比較します`Integer`または`Float`値。|  
+|**TopPercent、BottomPercent**|式と単一の値 (`Integer` または `Float`) とを比較します。|  
 |**[次の値の間]**|式が 2 つの値の範囲内にあるかどうかを調べます。|  
 |**In**|式が特定の値の集合に含まれるかどうかを調べます。|  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48154222"
  フィルターに使用する値をユーザーが対話形式で選択できるように、この値にパラメーター参照を含めることもできます。  
   
 ## <a name="see-also"></a>参照  
- [レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

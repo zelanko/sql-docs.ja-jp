@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7fa5535d9ea44390312d9db535bbea7a7a5a7d5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 50e89bfa0ec9f8d4d792ed655eef40d9f4d47dcb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062722"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023013"
 ---
 # <a name="msreportserverinstance-properties"></a>MSReportServer_Instance プロパティ
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  
@@ -33,12 +33,12 @@ ms.locfileid: "48062722"
   
 |||  
 |-|-|  
-|[EditionID プロパティ&#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionid.md)|レポート サーバーのエディションを返します。|  
-|[EditionName プロパティ&#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionname.md)|人間が判読できる、レポート サーバーのエディション名を返します。|  
+|[EditionID プロパティ &#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionid.md)|レポート サーバーのエディションを返します。|  
+|[EditionName プロパティ &#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionname.md)|人間が判読できる、レポート サーバーのエディション名を返します。|  
 |[InstanceID](msreportserver-instance-properties-instanceid.md)|このオブジェクトは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|  
-|[InstanceName](msreportserver-instance-properties-instancename.md)|特定のコンピューター上のレポート サーバー インスタンスの名前を返します。 読み取り専用です。|  
+|[InstanceName](msreportserver-instance-properties-instancename.md)|特定のコンピューター上のレポート サーバー インスタンスの名前を返します。 読み取り専用。|  
 |[IsSharePointIntegrated](msreportserver-instance-properties-issharepointintegrated.md)|レポート サーバーが SharePoint 統合モード用に構成されているかどうかを示します。|  
-|[[バージョン]](msreportserver-instance-properties-version.md)|レポート サーバーのバージョンを返します。|  
+|[バージョン](msreportserver-instance-properties-version.md)|レポート サーバーのバージョンを返します。|  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_Instance メンバー](msreportserver-instance-members.md)  

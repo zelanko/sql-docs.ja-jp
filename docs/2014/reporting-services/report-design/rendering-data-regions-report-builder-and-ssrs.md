@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaae13c2bda044a304fbe9c8b8602174b05a679
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33710b2ee804f299d5769c5e2443bdd68ce77be2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057651"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020374"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>データ領域の表示 (レポート ビルダーおよび SSRS)
   データ領域には、すべてのレポート アイテムに適用される一般的な表示動作に加えて、そのデータ領域が従う改ページ動作および表示動作があります。 データ領域固有の表示規則には、データ領域の拡張方法、特殊なセル (コーナーのセルやヘッダー セルなど) の表示方法、およびデータ領域を右から左に記述して表示する方法が含まれます。 ここでは、データ領域のさまざまな部分の表示方法について説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "48057651"
  左上隅は、Tablix コーナーと呼ばれます。 Tablix コーナーでは、その中に他のレポート アイテムを含めることができます。ただし、論理的な改ページがコーナーに挿入されている場合は、Tablix データ領域が表示されるときにその改ページは無視されます。  
   
 ### <a name="tablix-body"></a>Tablix 本体  
- Tablix 本体は、Tablix セルで構成されます。 Tablix 本体は、レポート アイテムの改ページ規則および表示動作に基づいて表示されます。 詳細については、次を参照してください。[レポート アイテムのレンダリング&#40;レポート ビルダーおよび SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)します。  
+ Tablix 本体は、Tablix セルで構成されます。 Tablix 本体は、レポート アイテムの改ページ規則および表示動作に基づいて表示されます。 詳細については、「 [レポート アイテムのレンダリング (レポート ビルダーおよび SSRS)](rendering-report-items-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="chart-gauge-and-map-data-regions"></a>グラフ、ゲージ、およびマップのデータ領域  
  グラフ、ゲージ、およびマップのデータ領域は、レポート本文に描画および表示されると、画像のように動作します。 データ領域内の値には、別のレポートへのリンクやブックマークへの移動などのアクションを関連付けることができます。また、こうしたアクションは、レンダラーでサポートされる場合に同様に表示できます。  
@@ -54,6 +54,6 @@ ms.locfileid: "48057651"
  [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)  
+ [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

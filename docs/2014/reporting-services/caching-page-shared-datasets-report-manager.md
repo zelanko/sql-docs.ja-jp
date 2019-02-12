@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8d19f339b8cb8955ab33f73ea164f8bbfb2e7fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 65fe3e4979e620b3f49af5def2266c84e77cc616
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205178"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017884"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>共有データセットの [キャッシュ] ページ (レポート マネージャー)
   共有データセットのキャッシュ オプションを設定するには、[キャッシュ] プロパティ ページを使用します。  

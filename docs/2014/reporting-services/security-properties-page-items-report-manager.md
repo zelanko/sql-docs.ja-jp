@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 87bdd8c30468f18a30de5bcb3ee122469ac3958c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9b38c5820a1680726b3c69d2e09c1d29600a71b4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189612"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024473"
 ---
 # <a name="security-properties-page-items-report-manager"></a>[セキュリティのプロパティ] ページ、アイテム (レポート マネージャー)
   [セキュリティのプロパティ] ページを使用すると、フォルダー、レポート、モデル、リソース、および共有データ ソースへのアクセスを決定するセキュリティ設定の表示や変更を行えます。 このページは、セキュリティ保護の権限の対象となるアイテムに対して利用できます。  
@@ -51,7 +51,7 @@ ms.locfileid: "48189612"
  削除するグループ名またはユーザー名の横のチェック ボックスをオンにして、 **[削除]** をクリックします。 ロールの割り当てが 1 つしか残っていない場合、またはロールの割り当てがレポート サーバーのセキュリティの基準を定義する組み込みのロールの割り当て ("Built-in\Administrators" など) である場合、ロールの割り当てを削除することはできません。 ロールの割り当てを削除しても、グループ アカウントやユーザー アカウント、またはロールの定義は削除されません。  
   
  **新しいロールの割り当て**  
- クリックすると、[新しいロールの割り当て] ページが開きます。このページは、現在のアイテムに新たなロールの割り当てを作成するために使用します。 詳細については、次を参照してください。[新しいロールの割り当て: ロールの割り当て ページの編集&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)します。  
+ クリックすると、[新しいロールの割り当て] ページが開きます。このページは、現在のアイテムに新たなロールの割り当てを作成するために使用します。 詳細については、次を参照してください。[新しいロールの割り当て。ロールの割り当て ページを編集&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)します。  
   
  **親のセキュリティに戻す**  
  セキュリティ設定を直接の親フォルダーの設定に再設定する場合にクリックします。 レポート サーバーのフォルダー階層全体で継承が維持される場合、最上位のフォルダーである [ホーム] フォルダーのセキュリティ設定が使用されます。  

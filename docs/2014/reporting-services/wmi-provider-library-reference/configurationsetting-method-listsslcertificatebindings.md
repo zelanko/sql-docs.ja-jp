@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bf0405b5afb732a04b524469fb507f1c44bae9a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9802176b5f5c82ba60a4e47d85445b54eaa1a5f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136092"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031623"
 ---
 # <a name="listsslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificateBindings メソッド (WMI MSReportServer_ConfigurationSetting)
   コンピューターにインストールされている SSL 証明書の一覧を返します。  
@@ -69,7 +69,7 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

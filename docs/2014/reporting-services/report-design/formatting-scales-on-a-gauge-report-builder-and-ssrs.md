@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3995d85af81e6417e3117c25c1ec06052d60f269
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 36074fe67459cb47f6becfe914fe868baf5d4940
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069002"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021665"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)
   ゲージのスケールは、最小値と最大値で決められた範囲の数値であり、ゲージ上に表示されます。 通常、ゲージのスケールにはゲージ ラベルと目盛りがあり、ゲージ ポインターによって示された値を正確に読み取れるようになっています。 1 つのゲージ スケールに 1 つまたは複数のゲージ ポインターが関連付けられているのが普通です。 同じゲージに複数のスケールを指定できます。  
@@ -86,8 +86,8 @@ ms.locfileid: "48069002"
 -   線形ゲージのゲージの高さまたは幅の最小値の 1%。  
   
 ## <a name="see-also"></a>参照  
- [ゲージの範囲の書式設定&#40;レポート ビルダーおよび SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [ゲージのポインターの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [ゲージの範囲の書式設定 (レポート ビルダーおよび SSRS)](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS)](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)  

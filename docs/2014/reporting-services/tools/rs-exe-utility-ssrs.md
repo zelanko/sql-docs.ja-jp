@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 859c7d2cb6545c6a15e1e3e40aff28720921fb27
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505641"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023123"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe ユーティリティは入力ファイル内に指定したスクリプトを処理します。 このユーティリティを使用して、レポート サーバーの配置と管理タスクを自動化します。  
@@ -65,13 +65,13 @@ ms.locfileid: "52505641"
  **-?**  
  (省略可) **rs** の引数の構文を表示します。  
   
- `-i` *入力ファイル*  
+ `-i` *input_file*  
  (必須) 実行する .rss ファイルを指定します。 この値は、.rss ファイルへの相対パスまたは完全修飾パスになります。  
   
  `-s` *serverURL*  
  (必須) Web サーバー名とレポート サーバーの仮想ディレクトリ名を指定して、対象ファイルを実行します。 レポート サーバーの URL は、 `http://examplewebserver/reportserver`のように指定します。 サーバー名の先頭のプレフィックス http:// または https:// は省略可能です。 プレフィックスを省略した場合、レポート サーバーのスクリプト ホストは、まず https の使用を試み、https が使用できない場合は、http を使用します。  
   
- `-u` [*ドメイン*\\]*ユーザー名*  
+ `-u` [*domain*\\]*username*  
  (省略可) レポート サーバーへの接続に使用するユーザー アカウントを指定します。 `-u` および `-p` を省略した場合、現在の Windows ユーザー アカウントが使用されます。  
   
  `-p` *パスワード*  

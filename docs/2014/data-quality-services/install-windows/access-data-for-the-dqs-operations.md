@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71ef931fc857841365919073cb470c725c3714e0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 951ff99f6c1e234a0c2861b12ae8f54815f1e37e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030701"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019923"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 操作のためのデータへのアクセス
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 操作にソース データを使用し、処理後のデータをエクスポートするには、次のいずれかの方法を使用できます。  
@@ -40,13 +40,13 @@ ms.locfileid: "51030701"
   
 4.  **[ログインのプロパティ]** ダイアログ ボックスの左ペインで **[ユーザー マッピング]** をクリックします。  
   
-5.  右ペインで、 **[DQS_STAGING_DATA]** データベースの **[マップ]** 列のチェック ボックスをオンにし、 **[DQS_STAGING_DATA のデータベース ロール メンバーシップ]** ペインで次のロールを選択します。  
+5.  右側のウィンドウで、下のチェック ボックスを選択します。、**マップ**の列、 **DQS_STAGING_DATA**データベース、および次の役割を選択し、**データベース ロールのメンバーシップ。DQS_STAGING_DATA**ウィンドウ。  
   
-    -   **db_datareader**: テーブル/ビューからのデータの読み取り。  
+    -   **db_datareader**:テーブル/ビューからデータを読み取ります。  
   
-    -   **db_datawriter**: テーブル内のデータの追加、削除、または変更。  
+    -   **db_datawriter**:追加、削除、またはテーブル内のデータを変更します。  
   
-    -   **db_ddladmin**: テーブル/ビューの作成、変更、または削除。  
+    -   **db_ddladmin**:作成、変更、またはテーブル/ビューを削除します。  
   
 6.  **[ログインのプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックして変更を適用します。  
   

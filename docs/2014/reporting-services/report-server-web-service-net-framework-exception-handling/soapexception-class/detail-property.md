@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cba6c585d94615a1afa5d09ffb62a84da2177616
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 383e356a85597a6b6564584fc375e83f258241b9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223042"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019363"
 ---
 # <a name="detail-property"></a>Detail プロパティ
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** クラスの **Detail** プロパティには、次の XML 構造があります。  
@@ -48,7 +48,7 @@ ms.locfileid: "48223042"
  製品の名前です。 既定値は **Microsoft SQL Server Reporting Services** です。  
   
  **ProductVersion**  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のバージョン。 最大長は 15 文字です。 バージョン番号の形式は、8.00.0xxx.00 のようになります。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のバージョン。 最大長は 15 文字です。 バージョン番号の形式は、次のようにする必要があります。8.00.0xxx.00 します。  
   
  **ProductLocaleId**  
  アプリケーションの INTL DLL のロケール ID または言語 ID (0x41A など)。  

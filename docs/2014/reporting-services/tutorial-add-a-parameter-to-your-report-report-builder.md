@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:パラメーターを追加、レポート (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ec3f74d9237d917fd4b5d94e029cb5a15ea6e59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190302"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018883"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル:レポート (レポート ビルダー) にパラメーターを追加します。
   ユーザー フィルター レポート データ データ ソースからまたはレポートをレポートにパラメーターを追加します。 レポート パラメーターは、データセット クエリに追加したクエリ パラメーターごとに自動で作成されます。 パラメーターのデータ型により、パラメーターがレポート ビューアー ツール バーに表示される方法が決まります。  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
@@ -55,11 +55,11 @@ ms.locfileid: "48190302"
 10. [レポートを保存します。](#Save)  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+>  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーを参照する方法の詳細については、データ ソースを選択し、データセットを作成するこのシリーズの最初のチュートリアルを参照してください。[チュートリアル: 基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
   
- このチュートリアルの推定所要時間 : 25 分  
+ このチュートリアルの推定所要時間:25 分。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/report-builder-tutorials.md) を参照してください。  
   
 ##  <a name="Setup"></a> 1.テーブルまたはマトリックス ウィザードを使用してマトリックス レポートとデータセットを作成する  
@@ -119,7 +119,7 @@ ms.locfileid: "48190302"
   
      クエリ パラメーターは存在しません。 以降、このチュートリアルの中でクエリ パラメーターを追加していきます。  
   
-11. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。 結果セットは StoreID 列、Subcategory 列、Quantity 列で構成され、4 店舗のサブカテゴリごとの販売済み商品数量を示す 11 行のデータが表示されます。  
+11. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。 結果セットは、4 店舗のサブカテゴリごとの販売済み商品数量を表示するデータの 11 行が表示され、次の列が含まれています。StoreID、Subcategory、数量です。  
   
 12. **[次へ]** をクリックします。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "48190302"
   
 7.  レポート ビューアー ツール バーで、店舗 ID の横に「 **200**」と入力し、 **[レポートの表示]** をクリックします。  
   
-##  <a name="AddDataset"></a> 4 a. 使用可能な値と表示名を提供するデータセットを追加する  
+##  <a name="AddDataset"></a> 4a. 使用可能な値と表示名を提供するデータセットを追加する  
  ユーザーがパラメーターの有効な値しか入力できないようにするには、選択可能な値のドロップダウン リストを作成します。 値は、データセットまたは指定した一覧から取得できます。 使用可能な値は、パラメーターへの参照を含まないクエリが格納されているデータセットから指定する必要があります。  
   
 #### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>パラメーターの有効な値のデータセットを作成するには  
@@ -238,7 +238,7 @@ ms.locfileid: "48190302"
   
      レポート データ ペインの **Stores** データセット ノードに、StoreID フィールドと StoreName フィールドが表示されます。  
   
-##  <a name="AvailableValues"></a> 4 b. 値のドロップダウン リストの作成に使用可能な値を指定します。  
+##  <a name="AvailableValues"></a> 4b. 値のドロップダウン リストの作成に使用可能な値を指定します。  
  使用できる値のソースとなるデータセットを作成したら、レポートのプロパティで、レポート ビューアー ツール バーの有効な値のドロップダウン リストに値を設定するために使用するデータセットとフィールドを指定する必要があります。  
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>パラメーターに使用できる値をデータセットから提供するには  
@@ -327,7 +327,7 @@ ms.locfileid: "48190302"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     店舗の列見出しには、複雑な式の表示テキストが含まれています:  **< \<Expr >>** します。  
+     店舗の列見出しには、複雑な式の表示テキストが含まれています。**<\<Expr >>** します。  
   
 8.  レポートをプレビューします。  
   
@@ -422,7 +422,7 @@ ms.locfileid: "48190302"
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-15. 作成した式の前にあるテキスト ボックス内をクリックして、「Parameter Values Selected:」と入力します。  
+15. 作成した式の前にあるテキスト ボックス内をクリックして、「Parameter Values Selected: です。  
   
 16. レポートをプレビューします。  
   
@@ -436,7 +436,7 @@ ms.locfileid: "48190302"
   
 19. ドロップダウン リストで **[すべて選択]** をクリックして一覧を消去し、"Contoso Catalog Store" と "Contoso Asia Online Store" をクリックして **[レポートの表示]** をクリックします。  
   
-##  <a name="Boolean"></a> 8。条件付き表示のためにブール型パラメーターを追加する  
+##  <a name="Boolean"></a> 8.条件付き表示のためにブール型パラメーターを追加する  
   
 #### <a name="to-add-a-boolean-parameter"></a>ブール型パラメーターを追加するには  
   
@@ -482,7 +482,7 @@ ms.locfileid: "48190302"
   
  ページ フッターのテキスト ボックスに、選択したすべての店舗名が表示されます。  
   
-##  <a name="Title"></a> 9 です。レポート タイトルを追加する  
+##  <a name="Title"></a> 9.レポート タイトルを追加する  
   
 #### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
   
@@ -490,7 +490,7 @@ ms.locfileid: "48190302"
   
 2.  「Parameterized Product Sales」と入力し、テキスト ボックスの外側をクリックします。  
   
-##  <a name="Save"></a> 10。レポートを保存する  
+##  <a name="Save"></a> 10.レポートを保存する  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>レポート サーバーにレポートを保存するには  
   

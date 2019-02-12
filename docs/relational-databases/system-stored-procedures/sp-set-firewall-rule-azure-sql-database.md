@@ -2,10 +2,8 @@
 title: sp_set_firewall_rule (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: ''
-ms.prod_service: sql-database, sql-data-warehouse
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_set_firewall_rule
@@ -22,17 +20,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c5ce548a1a1a982a363b9c79e7861f01474bdc18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a096814c7d037fe517614e2701d5a821edcaa053
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758410"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024693"
 ---
 # <a name="spsetfirewallrule-azure-sql-database"></a>sp_set_firewall_rule (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  作成または更新のサーバー レベルのファイアウォール設定、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバー。 このストアド プロシージャは、サーバー レベル プリンシパル ログインまたは割り当てられている Azure Active Directory のプリンシパルに master データベースにできるだけです。  
+  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーのサーバー レベルのファイアウォール設定を作成または更新します。 このストアド プロシージャは、サーバー レベル プリンシパル ログインまたは割り当てられている Azure Active Directory のプリンシパルに master データベースにできるだけです。  
   
   
 ## <a name="syntax"></a>構文  
@@ -49,9 +47,9 @@ sp_set_firewall_rule [@name =] 'name',
   
 |名前|データ型|説明|  
 |----------|--------------|-----------------|  
-|[@name =] 'name'|**NVARCHAR (128)**|サーバー レベルのファイアウォール設定を説明し、区別するために使用される名前。|  
-|[@start_ip_address =] 'start_ip_address'|**VARCHAR (50)**|サーバー レベルのファイアウォール設定の範囲において最も小さい IP アドレス。 IP アドレスと等しいかそれへの接続にこれを試みるよりも大きい、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバー。 最下位の IP アドレスは`0.0.0.0`します。|  
-|[@end_ip_address =] 'end_ip_address'|**VARCHAR (50)**|サーバー レベルのファイアウォール設定の範囲において最も大きい IP アドレス。 これ以下の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試みることができます。 最上位の IP アドレスは`255.255.255.255`します。<br /><br /> 注: Azure の接続試行が許可されますこの両方のフィールドと*start_ip_address* equals をフィールド`0.0.0.0`します。|  
+|[@name =] 'name'|**NVARCHAR(128)**|サーバー レベルのファイアウォール設定を説明し、区別するために使用される名前。|  
+|[@start_ip_address =] 'start_ip_address'|**VARCHAR(50)**|サーバー レベルのファイアウォール設定の範囲において最も小さい IP アドレス。 これ以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試みることができます。 指定可能な最小 IP アドレスは `0.0.0.0` です。|  
+|[@end_ip_address =] 'end_ip_address'|**VARCHAR(50)**|サーバー レベルのファイアウォール設定の範囲において最も大きい IP アドレス。 これ以下の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試みることができます。 指定可能な最大 IP アドレスは `255.255.255.255` です。<br /><br /> 注:Azure の接続試行が許可されますこの両方のフィールドと*start_ip_address* equals をフィールド`0.0.0.0`します。|  
   
 ## <a name="remarks"></a>コメント  
  サーバー レベルのファイアウォール設定の名前は一意である必要があります。 ストアド プロシージャに提供される設定の名前がファイアウォール設定のテーブルに既に存在する場合は、開始 IP アドレスと終了 IP アドレスが更新されます。 そうでない場合は、新しいサーバー レベルのファイアウォール設定が作成されます。  
@@ -72,7 +70,7 @@ exec sp_set_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- 次のコード作成、サーバー レベルのファイアウォール設定と呼ばれる`Example setting 1`の IP アドレスのみ`0.0.0.2`します。 次に、`sp_set_firewall_rule`に終了 IP アドレスを更新するストアド プロシージャが再度呼び出される`0.0.0.4`点で、ファイアウォールの設定。 これにより、IP アドレス範囲を作成します`0.0.0.2`、 `0.0.0.3`、および`0.0.0.4`サーバーへのアクセスします。  
+ 次のコードは、`Example setting 1` という IP アドレス専用の `0.0.0.2` と呼ばれるサーバー レベルのファイアウォール設定を作成します。 次に、`sp_set_firewall_rule`に終了 IP アドレスを更新するストアド プロシージャが再度呼び出される`0.0.0.4`点で、ファイアウォールの設定。 これにより、IP アドレス範囲を作成します`0.0.0.2`、 `0.0.0.3`、および`0.0.0.4`サーバーへのアクセスします。  
   
 ```  
 -- Create server-level firewall setting for only IP 0.0.0.2  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 97320e5e5e525cfaea7c374a43ccf3abac66c98e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6c8f74713a07969ba724ccf2679d7f7bf17fb7ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209202"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024364"
 ---
 # <a name="msreportserverinstance-members"></a>MSReportServer_Instance メンバー
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  
@@ -36,14 +36,14 @@ ms.locfileid: "48209202"
 |[EditionID](msreportserver-instance-properties-editionid.md)|レポート サーバーのエディションを返します。|  
 |[EditionName](msreportserver-instance-properties-editionname.md)|人間が判読できる、レポート サーバーのエディション名を返します。|  
 |[InstanceID](msreportserver-instance-properties-instanceid.md)|このオブジェクトは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|  
-|[InstanceName](msreportserver-instance-properties-instancename.md)|特定のコンピューター上のレポート サーバー インスタンスの名前を返します。 読み取り専用です。|  
+|[InstanceName](msreportserver-instance-properties-instancename.md)|特定のコンピューター上のレポート サーバー インスタンスの名前を返します。 読み取り専用。|  
 |[IsSharePointIntegrated](msreportserver-instance-properties-issharepointintegrated.md)|レポート サーバーが SharePoint 統合モード用に構成されているかどうかを示します。|  
-|[[バージョン]](msreportserver-instance-properties-version.md)|レポート サーバーのバージョンを返します。|  
+|[バージョン](msreportserver-instance-properties-version.md)|レポート サーバーのバージョンを返します。|  
   
 ## <a name="public-methods"></a>パブリック メソッド  
   
 |||  
 |-|-|  
-|[GetReportServerUrls メソッド&#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-methods-getreportserverurls.md)|ユーザーがレポート サーバーおよびレポート マネージャーへのアクセスに使用できる URL の一覧を示します。|  
+|[GetReportServerUrls メソッド (WMI MSReportServer_Instance)](msreportserver-instance-methods-getreportserverurls.md)|ユーザーがレポート サーバーおよびレポート マネージャーへのアクセスに使用できる URL の一覧を示します。|  
   
   

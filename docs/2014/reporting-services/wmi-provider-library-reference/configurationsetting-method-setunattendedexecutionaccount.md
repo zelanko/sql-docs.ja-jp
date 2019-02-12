@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 159bd5e43a9079fe431d921f8275da7a721b5392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4bc1620e5f3bd625eb0b68e51183ce869673747f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181692"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021765"
 ---
 # <a name="setunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>SetUnattendedExecutionAccount メソッド (WMI MSReportServer_ConfigurationSetting)
   レポートの自動実行に使用するアカウントを指定します。  
@@ -59,7 +59,7 @@ public void SetUnattendedExecutionAccount (string UserName,
   
  SetUnattendedExecutionAccount メソッドを使用してレポート サーバー Windows サービスのコンテキストで自動実行を行うことはできません。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

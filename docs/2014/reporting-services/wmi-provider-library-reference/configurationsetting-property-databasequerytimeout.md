@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b5d3115fd6d87152b09a12c3b5806c440d5c423e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf21ba6211a016676ea7d1f2547bf4d96b1e6fb4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224192"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023764"
 ---
 # <a name="databasequerytimeout-property-wmi-msreportserverconfigurationsetting"></a>DatabaseQueryTimeout プロパティ (WMI MSReportServer_ConfigurationSetting)
   レポート サーバーで、コマンドが失敗した、または処理時間が長すぎると見なされるまでの、経過秒数を指定します。 レポート サーバーは、レポートのデータ ソースではなく、SQL カタログに対するクエリの時間を計測しています。 読み取りと書き込みが可能です。  
@@ -40,12 +40,12 @@ public UInt32 DatabaseQueryTimeout;
 ```  
   
 ## <a name="property-values"></a>プロパティ値  
- 32 ビットの符号なし`integer`クエリが実行を許可する秒数を表すオブジェクト。  
+ クエリを実行することが許されている秒数を表す 32 ビットの符号なし `integer` オブジェクト。  
   
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

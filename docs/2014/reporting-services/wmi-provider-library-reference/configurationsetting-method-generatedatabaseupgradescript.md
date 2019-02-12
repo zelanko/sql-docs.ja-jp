@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 553afbfe7e6ad274261172740d7d55b27729b546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5309932735310bc0e794d10766312b650b6eb934
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057302"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018973"
 ---
 # <a name="generatedatabaseupgradescript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseUpgradeScript メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースを [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] スキーマにアップグレードする場合に使用できるスクリプトを生成します。  
@@ -62,7 +62,7 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
 ## <a name="remarks"></a>コメント  
  生成されたスクリプトは、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、および [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]をサポートします。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

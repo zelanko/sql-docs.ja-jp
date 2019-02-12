@@ -12,14 +12,14 @@ f1_keywords:
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4b939fe20f4bcd280c00dc6279ebb1c8ba3a1f45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c6a9c5445e5ed0371922a7c5aad929519ed4e0d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082251"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022783"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([凡例のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[凡例のプロパティ]** ダイアログ ボックスを使用すると、グラフ内の凡例の外観およびレイアウトを定義できます。 詳細については、次を参照してください。[グラフの凡例の書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)します。  
@@ -50,11 +50,11 @@ ms.locfileid: "48082251"
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [グラフの凡例の書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [グラフの凡例の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
  [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [パレットを使用したグラフの色の定義 &#40;レポート ビルダーおよび SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [セカンダリ軸にデータをプロット&#40;レポート ビルダーおよび SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [グラフの凡例の書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
- [移動平均をグラフに追加&#40;レポート ビルダーおよび SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [グラフの凡例の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [グラフへの移動平均の追加 &#40;レポート ビルダーおよび SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

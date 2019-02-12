@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9ffac7320bc284547a8b5d0598c5523e5c0b09b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e0296acddd21319949ff2f76757c5297eb1bceb4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141704"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023792"
 ---
 # <a name="search-a-report-using-url-access"></a>URL アクセスを使用してレポートを検索する
   URL アクセスを使用して、レポート内に特定の文字列があるかどうかを検索できます。 レポート内を検索するには、URL の *rc:FindString* パラメーターの値として検索する文字列を設定します。 さらに、 *rc:StartFind* パラメーターと *rc:EndFind* パラメーターを使用すれば、検索対象をレポート内の特定のページに絞り込むことができます。  
@@ -33,7 +33,7 @@ http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:S
 ```  
   
 ## <a name="see-also"></a>参照  
- [URL アクセス&#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL アクセス &#40;SSRS&#41;](url-access-ssrs.md)   
  [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)  
   
   

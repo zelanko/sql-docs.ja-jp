@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], changing
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 593e71b63cb4fc6e63c1c087e62f24c37c399e8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a10b20332059c9cf1b9aed41caf462faf96414e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069944"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020294"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>システム管理者アカウントの変更 (マスター データ サービス)
   として指定されているユーザー アカウントを変更することができます、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]システム管理者です。  
@@ -50,6 +50,6 @@ ms.locfileid: "48069944"
 5.  クエリを実行します。  
   
 ## <a name="see-also"></a>参照  
- [管理者&#40;マスター データ サービス&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+ [管理者 (マスター データ サービス)](../../2014/master-data-services/administrators-master-data-services.md)  
   
   

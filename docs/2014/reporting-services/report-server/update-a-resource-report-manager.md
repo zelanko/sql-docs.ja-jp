@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5482a935a5357d4557a6ffd202feac6be07900e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 71ccf123b9c8f5dba751affaae0374c90b5a8d99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130362"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020224"
 ---
 # <a name="update-a-resource-report-manager"></a>リソースの更新 (レポート マネージャー)
   リソースを新しいバージョンに置換すると、リソースを更新することができます。 リソースは、レポート サーバーに格納されたアイテムです。このアイテムには、アップロードするファイルのコンテンツが含まれます。 新しいコンテンツまたは異なるコンテンツをインポートすると、既存のリソースを置換できます。 リソースの更新は、既存のプロパティやリソース上のセキュリティ設定を保持しながらコンテンツを更新する方法を提供します。  
@@ -45,7 +45,7 @@ ms.locfileid: "48130362"
  更新するリソースにレポートで使用する画像が含まれる場合、更新された画像を表示するにはレポートを更新する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../contents-page-report-manager.md)   
+ [[コンテンツ] ページ (レポート マネージャー)](../contents-page-report-manager.md)   
  [[ファイルのアップロード] ページ &#40;レポート マネージャー&#41;](../upload-file-page-report-manager.md)   
  [フォルダーへのファイルのアップロード](upload-files-to-a-folder.md)   
  [レポート マネージャー F1 ヘルプ](../report-manager-f1-help.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2330060b0a659715f8a8b80c3d2e1fbe24e93d04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b1bed586c6ec2878fd2a63f7d9ca8bce46bab53
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050904"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017702"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>レポート アイテムのレンダリング (レポート ビルダーおよび SSRS)
   レポート アイテムの数、サイズ、および位置は、レポート本文の改ページに影響します。 以降、各種のレポート アイテムがどのようにレンダリングされるかについて説明します。  
@@ -78,7 +78,7 @@ ms.locfileid: "48050904"
   
 -   繰り返し表示される列ヘッダーおよび行ヘッダー。  
   
-     ヘッダーはフッターよりも優先されます。 繰り返し表示されるグループが入れ子になっている場合は、内側のグループの方が、外側のグループよりも優先されます。 アイテムで、`RepeatWith`プロパティが設定されたターゲットのデータ領域に近いデータ領域に遠い項目に優先順位を持ちます。  
+     ヘッダーはフッターよりも優先されます。 繰り返し表示されるグループが入れ子になっている場合は、内側のグループの方が、外側のグループよりも優先されます。 `RepeatWith` プロパティが設定されたアイテムでは、対象となるデータ領域に近い方のアイテムが、遠い方のアイテムよりも優先されます。  
   
 -   テキスト ボックス、四角形の場合は、明示的な KeepTogether プロパティに設定されたなどの小さなレポート アイテム`true`します。  
   

@@ -2,10 +2,8 @@
 title: sys.dm_continuous_copy_status (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_continuous_copy_status_TSQL
@@ -22,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9cbd0997a7d675c0c7630b730d6ba7514070ab8f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d5e62117f620a93d61d9216ad46383c116c930ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665941"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023883"
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.locfileid: "51665941"
 |**partner_database**|**sysname**|リンクされた SQL データベース サーバー上にあるリンクされたデータベースの名前。|  
 |**last_replication**|**datetimeoffset**|最後に適用したレプリケートされたトランザクションのタイムスタンプ。|  
 |**replication_lag_sec**|**int**|アクティブなセカンダリ データベースによって確認されていない、プライマリ データベースで最後に正常にコミットされたトランザクションのタイムスタンプと、現在の時刻との間の時間差 (秒単位)。|  
-|**replication_state**|**tinyint**|このデータベースの連続コピー レプリケーションの状態。 使用可能な値とその説明を次に示します。<br /><br /> 1: シード処理します。 レプリケーションの対象がシード中であり、トランザクション的に一貫性のない状態になっています。 シードが完了するまで、アクティブなセカンダリ データベースに接続できません。 <br />2: 追いつくようになります。 現在、アクティブなセカンダリ データベースがプライマリ データベースからの遅れを解消しており、トランザクションの一貫性が確保された状態になっています。<br />3: 再シード処理します。 復旧不可能なレプリケーションの障害が原因で、アクティブなセカンダリ データベースが自動的に再シードされている最中です。<br />4: 中断します。 これは、アクティブな連続コピー リレーションシップではありません。 通常、この状態は、インターリンクに利用できる帯域幅がプライマリ データベース上のトランザクション アクティビティのレベルに対して不十分であることを示します。 ただし、連続コピー リレーションシップはそのまま保持されます。|  
+|**replication_state**|**tinyint**|このデータベースの連続コピー レプリケーションの状態。 使用可能な値とその説明を次に示します。<br /><br /> 1:シード中。 レプリケーションの対象がシード中であり、トランザクション的に一貫性のない状態になっています。 シードが完了するまで、アクティブなセカンダリ データベースに接続できません。 <br />2:遅延の解消中。 現在、アクティブなセカンダリ データベースがプライマリ データベースからの遅れを解消しており、トランザクションの一貫性が確保された状態になっています。<br />3:再シード中。 復旧不可能なレプリケーションの障害が原因で、アクティブなセカンダリ データベースが自動的に再シードされている最中です。<br />4:一時中断。 これは、アクティブな連続コピー リレーションシップではありません。 通常、この状態は、インターリンクに利用できる帯域幅がプライマリ データベース上のトランザクション アクティビティのレベルに対して不十分であることを示します。 ただし、連続コピー リレーションシップはそのまま保持されます。|  
 |**replication_state_desc**|**nvarchar (256)**|replication_state の説明。次のいずれかになります。<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
 |**is_rpo_limit_reached**|**bit**|これは常に 0 に設定します。|  
 |**is_target_role**|**bit**|0 = コピー リレーションシップのソース<br /><br /> 1 = コピー リレーションシップの対象|  

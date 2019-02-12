@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf4f59433b8f49ba21f6f23be42eea8716baf417
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1746649fb0cecea4a6861d1e28e4e12b49e2f92f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132148"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022073"
 ---
 # <a name="pathname-property-wmi-msreportserverconfigurationsetting"></a>PathName プロパティ (WMI MSReportServer_ConfigurationSetting)
-  レポート サーバー インスタンスのインストール パスを指定します。 読み取り専用です。  
+  レポート サーバー インスタンスのインストール パスを指定します。 読み取り専用。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +45,7 @@ public string PathName;
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

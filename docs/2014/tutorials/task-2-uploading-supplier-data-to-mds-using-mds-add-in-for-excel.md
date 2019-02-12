@@ -1,26 +1,23 @@
 ---
-title: 'タスク 2: Excel 用 MDS アドインを使用して MDS に仕入先データのアップロード |Microsoft Docs'
+title: タスク 2:Excel 用 MDS アドインを使用して MDS に仕入先データのアップロード |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 36e50a34f708bc13da489591d73ca0521cdb5a6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101212"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025663"
 ---
-# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>タスク 2: Excel 用 MDS アドインを使用して仕入先データを MDS にアップロードする
+# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>タスク 2:Excel 用 MDS アドインを使用して仕入先データを MDS にアップロードする
   このタスクで、クレンジングされた仕入先データを発行する**MDS**を使用して、 **MDS アドインの Excel**します。 という名前のエンティティを作成する**Supplier**で、 **Suppliers**前のレッスンで作成したモデル。 エンティティは、Excel ファイルの各列に属性を持ちます。 Supplier エンティティの Code および Name 属性に対応して、 **SupplierID**と**Supplier Name** Excel の列。  
   
 1.  開いている**クレンジングおよび照合 Suppliers.xls**で**Excel**します。  
@@ -66,6 +63,6 @@ ms.locfileid: "48101212"
 15. 保持**Excel**を開きます。  
   
 ## <a name="next-task"></a>次の作業  
- [タスク 3: マスター データ マネージャーのデータを確認する](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
+ [タスク 3:マスター データ マネージャーでデータを検証します。](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
   
   

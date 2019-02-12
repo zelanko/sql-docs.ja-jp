@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e66a3277554c349b18499b4a1b4546ed504a043c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 57b93a04e4003d56e7e6a1aef4b264240f2b7f46
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165372"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022183"
 ---
 # <a name="listreportserversindatabase-method-wmi-msreportserverconfigurationsetting"></a>ListReportServersInDatabase メソッド (WMI MSReportServer_ConfigurationSetting)
   セキュリティで保護された情報にアクセスできるかどうかに関係なく、レポート サーバー データベースにあるレポート サーバー インストールの一覧を返します。  
@@ -73,7 +73,7 @@ public void ListReportServersInDatabase (out string[] MachineNames,
 ## <a name="remarks"></a>コメント  
  ListReportServersInDatabase は、セキュリティで保護された情報にアクセスできるかどうかに関係なく、レポート サーバー データベースにあるレポート サーバーの一覧を作成し、各レポート サーバーに関する情報を含む配列セットを返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

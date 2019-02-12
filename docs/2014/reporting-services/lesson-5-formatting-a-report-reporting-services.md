@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 5 : レポートの書式設定 (Reporting Services) | Microsoft Docs'
+title: 'レッスン 5: レポート (Reporting Services) の書式設定 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: df56110f96364f4cecd3c9d8d25d39e3fca74392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 37e5ff9cd40dd8c79efcde8c7cb072493a2ff95a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181042"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026290"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>レッスン 5: レポート (Reporting Services) の書式設定
   Sales Orders レポートに 1 つのデータ領域といくつかのフィールドを追加した後、日付および通貨のフィールド、および列ヘッダーを書式設定できます。  
   
  このトピックの内容  
@@ -57,7 +57,7 @@ ms.locfileid: "48181042"
   
 3.  地域設定が英語 (米国) の場合、既定値は次のようになります。  
   
-    -   **小数点以下の桁数 : 2**  
+    -   **小数点以下桁数。2**  
   
     -   **負の数値 : ($12345.00)**  
   
@@ -93,10 +93,10 @@ ms.locfileid: "48181042"
 5.  **[ファイル]** メニューの **[すべてを保存]** をクリックして、レポートを保存します。  
   
 ## <a name="next-steps"></a>次の手順  
- ここでは、列ヘッダー、日付値、および通貨値を書式設定しました。 次に、レポートにグループ化および合計を追加します。 「[レッスン 6: グループと合計の追加 &#40;Reporting Services&#41;」](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) を参照してください。  
+ ここでは、列ヘッダー、日付値、および通貨値を書式設定しました。 次に、レポートにグループ化および合計を追加します。 参照してください[レッスン 6。グループ化と合計の追加&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)します。  
   
 ## <a name="see-also"></a>参照  
- [数値と日付の書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f04a797540abdde31411978ca05b776ee7693bd5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 189c1edbd491eceb7849c90ed917e19e7720fe27
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352074"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018064"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>ReportViewer を使用してパラメーターを含む詳細 (RDLC) レポートを作成する (SSRS チュートリアル)
   [詳細](https://technet.microsoft.com/library/ff519554.aspx)レポートは、ユーザーが別のレポート内のリンクをクリックすることで開かれるレポートのことです。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。 このチュートリアルでは、次のレッスンを通じて、 [ローカル モード レポート](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)でパラメーターとクエリを使用した詳細レポートを作成します。  
@@ -33,7 +33,7 @@ ms.locfileid: "53352074"
  [レッスン 2:親レポートのデータ接続とデータ テーブルを定義します。](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)   
  [レッスン 3:レポート ウィザードを使用して、親レポートをデザインします。](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)   
  [レッスン 4:子レポートのデータ接続とデータ テーブルを定義します。](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)   
- [レッスン 5:レポート ウィザードを使用して、子レポートをデザインします。](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)   
+ [レッスン 5: レポート ウィザードを使用して、子レポートをデザインします。](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)   
  [レッスン 6:アプリケーションに ReportViewer コントロールを追加します。](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)   
  [レッスン 7:親レポートにドリルスルー アクションを追加します。](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)   
  [レッスン 8:データのフィルターを作成します。](../reporting-services/lesson-8-create-a-data-filter.md)   

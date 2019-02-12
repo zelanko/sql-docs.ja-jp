@@ -12,14 +12,14 @@ helpviewer_keywords:
 - importing reports
 ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: dc63daf4095238f948be6bde22bf190aa4d1977a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 84f74f51879a777ea0b9874f1b124806c109e02f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086510"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022193"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>Microsoft Access からレポートをインポートする (Reporting Services)
   レポート デザイナーからのレポートをインポートすることができます、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access データベースまたはプロジェクト。 レポート デザイナーがインストールされているコンピューターに、Access 2002 以降のバージョンがインストールされている必要があります。  

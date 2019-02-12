@@ -16,14 +16,14 @@ f1_keywords:
 - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 64dda9e4da8e5045466b63410c9c19788dc48fc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 55d0da172a8e543d370965ec686340c3e2c23ad8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116332"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018144"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>[フィルター] ページ (グラフのダイアログ ボックス) (レポート ビルダーおよび SSRS)
   クリックして**フィルター**でします。  
@@ -64,9 +64,9 @@ ms.locfileid: "48116332"
  **[式]** で指定した式の評価対象となる式または値を入力します。  
   
 ## <a name="see-also"></a>参照  
- [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [式の例 (レポート ビルダーおよび SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [フィルター、グループ、およびデータの並べ替え&#40;レポート ビルダーおよび SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

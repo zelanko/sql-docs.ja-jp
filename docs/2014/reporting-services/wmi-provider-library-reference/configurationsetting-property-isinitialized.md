@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e7cc5f323e42d79d3954d3eea7009b34eddcc941
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 740c172ebc3248aabf4841fc2dd92c39531fd545
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201912"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021623"
 ---
 # <a name="isinitialized-property-wmi-msreportserverconfigurationsetting"></a>IsInitialized プロパティ (WMI MSReportServer_ConfigurationSetting)
-  レポート サーバー インスタンスが初期化されているかどうかを示します。 読み取り専用です。  
+  レポート サーバー インスタンスが初期化されているかどうかを示します。 読み取り専用。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +45,7 @@ public Boolean DatabaseLogonName;
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  

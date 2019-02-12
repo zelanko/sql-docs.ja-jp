@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d30e91edb402af3797bf88aa67492032206159cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21b24350f3ab377170a51333716b710b4a3f44ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064952"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020133"
 ---
 # <a name="enable-and-disable-my-reports"></a>個人用レポートの有効化と無効化
   個人用レポート機能では、ユーザーが所有しているレポートを個人用のフォルダーに保存できるように、レポート サーバー データベースに個人の記憶域を割り当てます。 レポート サーバー管理者として、この機能を有効化または無効化したり、セキュリティ設定を変更してユーザーがこの作業領域で実行できる操作を制御することで機能の動作を変更することができます。  
@@ -52,7 +52,7 @@ ms.locfileid: "48064952"
  個人用レポートをアクティブ化すると、ユーザーが [個人用レポート] フォルダーを必要とするかどうかに関係なく、ドメイン アカウントを持つ各ユーザーが [個人用レポート] リンクをクリックしたときに、[個人用レポート] フォルダーが作成されます。 フォルダーが使用されているかどうかを判断する体系的な方法はありません。 フォルダーに含まれているデータがあるかどうかを調べるには、フォルダーを手動で確認する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [個人用レポートをセキュリティで保護します。](../security/secure-my-reports.md)   
+ [個人用レポートをセキュリティで保護する](../security/secure-my-reports.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](report-server-content-management-ssrs-native-mode.md)  
   
   

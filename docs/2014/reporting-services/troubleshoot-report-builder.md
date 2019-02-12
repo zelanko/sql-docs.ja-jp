@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 61965f9d07ebef7d3f30623df318125e67587890
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 22eb90e4fc162d2805f760e8f0b3152c3791111f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349395"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017693"
 ---
 # <a name="troubleshoot-report-builder"></a>レポート ビルダーのトラブルシューティング
   レポート ビルダーは、さまざまな種類のデータ ソースからレポートを作成する場合や、レポート サーバーまたは SharePoint サイトにレポートをパブリッシュする場合に使用できる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート作成ツールです。 Web ブラウザー、またはの一部として、レポート ビルダーで作成したレポートを表示できます、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows アプリケーションや SharePoint サイト。  
@@ -26,7 +26,7 @@ ms.locfileid: "53349395"
  次の各トピックは、レポートの作成者とレポート サーバー管理者にそれぞれ役立つ、レポートのトラブルシューティング方法を示しています。  
   
 ## <a name="report-authors"></a>レポートの作成者  
- [レポートをトラブルシューティングします。マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [レポート パーツのトラブルシューティング&#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   

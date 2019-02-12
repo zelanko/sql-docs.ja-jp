@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Delete Rows dialog box
 ms.assetid: 0140478a-8046-42da-a7af-caca69ca2f66
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 71c039623498e991107518a77ec7140308b096ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: f22ba0a5d611d48422611bd9ab767f42711f2f1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108041"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018955"
 ---
 # <a name="delete-rows-dialog-box"></a>[行の削除] ダイアログ ボックス
   **[行の削除]** ダイアログ ボックスを使用すると、テーブル、マトリックス、または一覧の各データ領域から行を削除できます。 グループに関連付けられている行の場合は、グループ定義も削除できます。  

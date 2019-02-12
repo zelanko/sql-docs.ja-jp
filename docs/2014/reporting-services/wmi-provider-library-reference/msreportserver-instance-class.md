@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 80aa9e3838440e93cf92c7efb7f93723a1bdbdef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4edf20d92883c5446a4e63472e006acc3763084d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205932"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024153"
 ---
 # <a name="msreportserverinstance-class"></a>MSReportServer_Instance クラス
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  
   
- この種類の全メンバーの一覧は、次を参照してください[MSReportServer_Instance メンバー。](msreportserver-instance-members.md)  
+ この種類の全メンバーの一覧については、「 [MSReportServer_Instance のメンバー](msreportserver-instance-members.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +45,7 @@ public class MSReportServer_Instance
 ## <a name="thread-safety"></a>スレッド セーフ  
  この型の public static (**では** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) のすべてのメンバーは、マルチスレッド操作で安全に使用できます。 インスタンスのメンバーは、スレッドセーフであるとは限りません。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
  **プラットフォーム:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  

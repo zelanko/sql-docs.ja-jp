@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 28e95e0afe1e2667bd962f6c41fa53e622b4962b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 728d69dcf44e0cab436c73396d833f754891a3f5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371434"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019640"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services のインストール
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) には、 **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** および **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** の 2 つのコンポーネントが含まれています。  
@@ -60,7 +60,7 @@ ms.locfileid: "53371434"
 ##  <a name="DQSInstallation"></a> Data Quality Services のインストールの作業  
  DQS のコンポーネントをインストールするには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップを使用する必要があります。 SQL Server セットアップを実行するときは、インストール ウィザードの一連のページに従いながら、要件に基づいて適切なオプションを選択する必要があります。 インストール ウィザードのページのうち、選択するオプションによって DQS のインストールに影響するページのみを次の表に示します。  
   
-|ページ|アクション|  
+|ページ|操作|  
 |----------|------------|  
 |機能の選択|選択:<br /><br /> **[データベース エンジン サービス]** の下の **[Data Quality Services]** を選択して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]をインストールします。 <br />**[Data Quality Services]** チェック ボックスをオンにすると、SQL Server セットアップでインストーラー ファイル DQSInstaller.exe がコンピューターの SQL Server インスタンス ディレクトリにコピーされます。 *のインストールを完了*[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] するには、SQL Server セットアップを完了した後で、このファイルを実行する必要があります。 また、使用する前に、いくつかの追加の手順を実行して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] を構成する必要があります。 詳細については、「 [インストール後の作業](#PostInstallationTasks)」を参照してください。<br /><br /> **[Data Quality Client]** を選択して [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]をインストールします。<br /><br /> (推奨) **[管理ツール - 基本]** の下の **[管理ツール - 完全]** を選択して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] をインストールします。 これにより、グラフィカル ユーザー インターフェイスを使用して SQL Server のインスタンスを管理できるようになり、次のセクションで示すインストール後の追加の作業の実行が容易になります。|  
 |データベース エンジンの構成|**[現在のユーザーの追加]** をクリックして、ユーザー Windows アカウントを sysadmin 固定サーバー ロールに追加します。 これは、後で DQSInstaller.exe ファイルを実行して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了するために必要です。|  
@@ -68,7 +68,7 @@ ms.locfileid: "53371434"
 ##  <a name="PostInstallationTasks"></a> インストール後の作業  
  SQL Server のインストール ウィザードを完了した後で、このセクションで説明する追加手順を実行して、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを実行し、構成して、使用する必要があります。  
   
-|アクション|説明|関連トピック|  
+|操作|説明|関連トピック|  
 |------------|-----------------|--------------------|  
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを実行する|DQSInstaller.exe ファイルを実行します。 DQSInstaller.exe ファイルを実行すると、次の操作が行われます。<br /><br /> DQS_MAIN, DQS_PROJECTS, および DQS_STAGING_DATA データベースが作成されます。<br /><br /> ##MS_dqs_db_owner_login## ログインと ##MS_dqs_service_login## ログインが作成されます。<br /><br /> DQS_MAIN データベースに dqs_administrator, dqs_kb_editor ロールと dqs_kb_operator ロールが作成されます。<br /><br /> DQInitDQS_MAIN ストアド プロシージャがマスター データベースに作成されます。<br /><br /> DQS_install.log ファイルは通常 C:\Program files \microsoft の SQL Server\MSSQL12 で作成されます。*< Instance_name >* \MSSQL\Log フォルダー。 このファイルには、DQSInstaller.exe ファイルの実行時に行われた操作に関する情報が含まれます。<br /><br /> マスター データ サービス データベースが [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]と同じ SQL Server インスタンス上に存在する場合は、マスター データ サービス ログインにマップされたユーザーが作成され、DQS_MAIN データベースに対する dqs_administrator ロールが付与されます。<br /><br /> <br /><br /> これにより [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールが完了します。|[DQS サーバーのインストールを完了するための DQSInstaller.exe の実行](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)|  
 |ユーザーに DQS ロールを付与する|ログオンする[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]を使用して[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]、ユーザーは、DQS_MAIN データベースに対する次の 3 つのロールのいずれかをいる必要があります: **dqs_administrator**、 **dqs_kb_editor**、または**dqs_kb_演算子**します。 既定では、ユーザー アカウントが sysadmin 固定サーバー ロールのメンバーである場合、DQS ロールがユーザー アカウントに付与されていない場合でも [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] を使用して [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] にログオンできます。 3 つの DQS ロールの詳細については、「 [DQS のセキュリティ](../dqs-security.md)」を参照してください。<br /><br /> 注:DQS_PROJECTS および DQS_STAGING_DATA データベースについては、3 つの DQS ロールは使用できません。|[ユーザーに DQS ロールを付与する](grant-dqs-roles-to-users.md)|  

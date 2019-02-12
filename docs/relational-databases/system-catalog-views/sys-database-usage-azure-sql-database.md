@@ -2,10 +2,9 @@
 title: sys.database_usage (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - database_usage
@@ -22,17 +21,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f17e34de7c230b111652ea57a3baa072a442a6a5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 62942e939c1221b90b623db12c922f3dcc580c99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656741"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024903"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **注意: Azure SQL Database V11 にのみ適用します。**  
+  **注:これは、Azure SQL Database V11 にのみ適用されます。**  
   
  上の数、型、およびデータベースの期間を一覧表示、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーです。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "51656741"
 |列名|説明|  
 |-----------------|-----------------|  
 |time|使用状況イベントが発生した日付。|  
-|sku|データベースのサービス層の種類: **Web**、**ビジネス**、**基本的な**、**標準**、 **Premium**|  
+|sku|データベースのサービス層の種類:**Web**、**ビジネス**、**基本的な**、**標準**、 **Premium**|  
 |quantity|その日に存在していた SKU の種類のデータベースの最大数。|  
   
 ## <a name="permissions"></a>アクセス許可  

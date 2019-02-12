@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6118c1f6be29dd47f2df49371274bbfb93100f5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a0017be7f7ac6117c1512cbaf3e46b662f0a06f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064732"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021683"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services エラー
     
@@ -48,7 +48,7 @@ ms.locfileid: "48064732"
 ## <a name="user-action"></a>ユーザーの操作  
  構成ファイルを手動で編集した後にこのエラーが発生するようになった場合は、変更を破棄して以前の値を入力するか、バックアップがある場合は以前のバージョンを復元します。  
   
- 付属する追加のエラー メッセージ情報を確認する、`rsServerConfiguration`エラー、\Microsoft SQL Server\MSRS12 にあるレポート サーバー トレース ログ ファイルを確認します\<。instancename > \reporting します。 詳細については、「[Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
+ 付属する追加のエラー メッセージ情報を確認する、`rsServerConfiguration`エラー、\Microsoft SQL Server\MSRS12 にあるレポート サーバー トレース ログ ファイルを確認します\<。instancename > \reporting します。 詳細については、「 [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
   
 ## <a name="internal-only"></a>内部使用のみ  
   

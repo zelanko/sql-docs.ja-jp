@@ -2,8 +2,8 @@
 title: sys.dm_pdw_exec_connections (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ec3c51cadb6b16bbf756f1c3d28b436677f64956
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e93d397d10a99f844454494c4bf0d82b7fe6d660
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710890"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030683"
 ---
 # <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -27,12 +27,12 @@ ms.locfileid: "47710890"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|この接続に関連付けられたセッションの識別子。 使用`SESSION_ID()`を返す、`session_id`の現在の接続。|  
+|session_id|**int**|この接続に関連付けられたセッションの識別子。 使用して `SESSION_ID()` を返す、 `session_id` の現在の接続。|  
 |connect_time|**datetime**|接続が確立されたタイムスタンプ。 NULL 値は許可されません。|  
 |encrypt_option|**nvarchar(40)**|TRUE のことを示します (接続が暗号化される) または FALSE (接続は enctypred ではありません)。|  
-|auth_scheme|**nvarchar(40)**|指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 認証スキームがこの接続で使用します。 NULL 値は許可されません。|  
+|auth_scheme|**nvarchar(40)**|この接続で使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 認証方法を指定します。 NULL 値は許可されません。|  
 |client_id|**varchar(48)**|このサーバーに接続するクライアントの IP アドレス。 NULL 値が許可されます。|  
-|sql_spid|**int**|接続のサーバー プロセス ID。 使用`@@SPID`を返す、`sql_spid`の現在の接続。最も終えたら、使用、`session_id`代わりにします。|  
+|sql_spid|**int**|接続のサーバー プロセス ID。 使用して `@@SPID` を返す、 `sql_spid` の現在の接続。最も終えたら、使用、 `session_id` 代わりにします。|  
   
 ## <a name="permissions"></a>アクセス許可  
  必要があります**VIEW SERVER STATE**サーバーに対する権限。  

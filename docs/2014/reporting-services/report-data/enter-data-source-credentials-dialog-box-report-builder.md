@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5299d9deccbec3d9ba842961d408f72767fa5b04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 571e95646caa58a94e92768e1a5fbcc8ed7656b3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080912"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020543"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>[データ ソースの資格情報の入力] ダイアログ ボックス (レポート ビルダー)
   **[データ ソースの資格情報の入力]** ダイアログ ボックスを使用すると、データ ソースからデータを取得するための資格情報を指定できます。  
@@ -31,9 +31,9 @@ ms.locfileid: "48080912"
  データ ソースへのログオンに使用するパスワードを入力します。  
   
 ## <a name="see-also"></a>参照  
- [データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [[全般] ([データ ソースのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](../data-source-properties-dialog-box-general-report-builder.md)   
  [レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)   
- [レポート ビルダー ダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

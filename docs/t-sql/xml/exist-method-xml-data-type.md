@@ -3,7 +3,6 @@ title: exist() メソッド (xml データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - exist() method
 - exist method
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83b029554b8a85f11c477063a818bd90a4019740
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 97b13091d9b43a371a629d4f3d929e66ffffd368
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698550"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026643"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() メソッド (xml データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ select @x.exist('true()');
 ## <a name="examples"></a>使用例  
  **exist()** メソッドを指定する例を次に示します。  
   
-### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>例 : xml 型の変数に対する exist() メソッドの指定  
+### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>例:xml 型の変数に対する exist() メソッドの指定  
  次の例の @x は **xml** 型の変数 (型指定されていない xml) です。また、@f は **exist()** メソッドにより返された値を格納する整数型の変数です。 **Exist()** メソッドは、XML インスタンスに格納されている日付の値が `2002-01-01` である場合に True (1) を返します。  
   
 ```  
@@ -92,7 +91,7 @@ SELECT @f;
   
 -   **text()** メソッドは、型指定されていない値 `2002-01-01` が含まれたテキスト ノードを返します (この値の XQuery の型は **xdt:untypedAtomic** です)。この場合、暗黙的なキャストはサポートされないので、この型指定された値は明示的に **x** 型から **xsd:date** 型にキャストする必要があります。  
   
-### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>例 : 型指定された xml 型の変数に対する exist() メソッドの指定  
+### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>例:型指定された xml 型の変数に対する exist() メソッドの指定  
  次の例では、**xml** 型の変数に対する **exist()** メソッドの使用方法について説明します。 この例で使用する変数は、スキーマ名前空間コレクション名 `ManuInstructionsSchemaCollection` を指定しているため、型指定された XML 変数です。  
   
  この例では、まず製造手順書ドキュメントを変数に代入してから、**exist()** メソッドを使用して、このドキュメントに **LocationID** 属性の値が 50 の <`Location`> 要素が含まれているかどうかを調べます。  
@@ -112,7 +111,7 @@ SET @f = @x.exist(' declare namespace AWMI="https://schemas.microsoft.com/sqlser
 SELECT @f;  
 ```  
   
-### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>例 : xml 型の列に対する exist() メソッドの指定  
+### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>例:xml 型の列に対する exist() メソッドの指定  
  次のクエリでは、仕様書である <`Specifications`> 要素がカタログの説明に含まれていない製品モデル ID を取得します。  
   
 ```  

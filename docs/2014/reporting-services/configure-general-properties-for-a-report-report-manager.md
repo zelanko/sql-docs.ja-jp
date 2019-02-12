@@ -12,14 +12,14 @@ helpviewer_keywords:
 - properties [Reporting Services], general
 ms.assetid: 10b941b2-28e6-4408-9ee4-acebc63c8496
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 24cf490734933eaa367eacf3881bacec92e877fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b1e453bf06f0035a2ceca17f9f5c0af2d2fc9a0c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112186"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023843"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>レポートの全般プロパティを構成する (レポート マネージャー)
     
@@ -56,7 +56,7 @@ ms.locfileid: "48112186"
   
 ## <a name="see-also"></a>参照  
  [項目を削除または移動&#40;レポート マネージャー&#41;](report-server/move-or-delete-an-item-report-manager.md)   
- [[コンテンツ] ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [[コンテンツ] ページ (レポート マネージャー)](../../2014/reporting-services/contents-page-report-manager.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [[全般] プロパティ ページ、レポート&#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   

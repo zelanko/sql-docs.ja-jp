@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4bffdacee7496c27f41db7897861e3ec1f015dc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bc714c2ffb7f4483823e7e49e9825c070a0b9672
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173602"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021413"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>新規または既存のレポートをレポート プロジェクトに追加する (SSRS)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、レポート ウィザードを使用して、またはプロジェクトに新しい空のレポートを追加することで、新しいレポートを追加できます。 既存のレポートを追加することもできます。 レポートを追加すると、そのレポートの名前が、プロジェクトの **[レポート]** フォルダーに表示されます。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、レポート ウィザードを使用するか、新しい空のレポートをプロジェクトに追加することによって、新しいレポートを追加できます。 既存のレポートを追加することもできます。 レポートを追加すると、そのレポートの名前が、プロジェクトの **[レポート]** フォルダーに表示されます。  
   
 > [!NOTE]  
 >  既存のデータ ソースを使ったレポートをプレビューするには、レポート作成クライアントから、そのデータ ソースにアクセスするための権限が必要です。 詳細については、次を参照してください。[埋め込みまたは共有データ ソースを作成&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)します。  
@@ -40,7 +40,7 @@ ms.locfileid: "48173602"
   
     -   **レポートの種類の選択** 次の手順は、作成するレポートの種類を選択することです。 表形式のレポートか、マトリックス形式のレポートを選択することができます。 表形式のレポートは、列数が固定されます。 マトリックス形式のレポート (クロス集計レポート) は、クエリの結果により列数が変化します。 マップ レポートには、地理的背景に対する分析が表示されます。  
   
-    -   **スタイルを選択します。** 次の手順は、スタイル テンプレートを使用してスタイルをレポートに適用することです。 テンプレートを選択して、フォントや色、罫線のスタイルなどのスタイルをレポートに適用します。 レポート デザイナーには、[スレート]、[フォレスト]、[フォーマル]、[太字]、[オーシャン]、[汎用] の 6 つのスタイル テンプレートが用意されています。 また、新しいスタイル テンプレートを追加することもできます。  
+    -   **スタイルを選択します。** 次の手順は、スタイル テンプレートを使用してスタイルをレポートに適用することです。 テンプレートを選択して、フォントや色、罫線のスタイルなどのスタイルをレポートに適用します。 レポート デザイナーには、6 つのスタイル テンプレートが用意されています。スレート、フォレスト、企業、太字、[オーシャン]、およびジェネリックです。 また、新しいスタイル テンプレートを追加することもできます。  
   
         > [!NOTE]  
         >  既存のテンプレートを変更または \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business インテリジェンス \reports\styles で格納されている StyleTemplates.xml ファイルを編集して新しいものを追加することができます\\< lang\>フォルダー場所\<lang > を使用する言語は、(英語版を使用している場合など、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]フォルダー名が"EN")。 このフォルダーは、レポート デザイナーがインストールされているコンピューターにあります。 StyleTemplates.xml ファイルは 2 つあります。 レポート ウィザードを使って適用されたスタイルを修正するには、使用言語に対応するフォルダー内のファイルを編集します。  
