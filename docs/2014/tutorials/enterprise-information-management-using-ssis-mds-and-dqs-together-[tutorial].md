@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b66cc1cb72e92670b345f0160727d306326208b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368564"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035403"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>SSIS、MDS、DQS の組み合わせを使用した Enterprise Information Management [チュートリアル]
   企業の情報管理には、一般に、企業の枠を超えたデータ統合、データのクレンジング、データ照合による重複項目の削除、データの標準化、データの拡充、法的およびコンプライアンス条件に対するデータの準拠、および必要なすべてのセキュリティ設定によるデータの集中管理などの作業が含まれます。  
@@ -83,7 +80,7 @@ ms.locfileid: "53368564"
 |[レッスン 2:Suppliers ナレッジ ベースを使用して仕入先データのクレンジング](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|このレッスンで作成し、DQS プロジェクトを使用して Excel ファイルの仕入先データのクレンジングを実行、 **Suppliers**最初のレッスンで作成したナレッジ ベース。|45|  
 |[レッスン 3:削除するデータを照合して仕入先の一覧から重複します。](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)|このレッスンでは、照合アクティビティを実行するための DQS プロジェクトを作成し、クレンジング済みの仕入先一覧から重複項目を特定して削除します。|45|  
 |[レッスン 4:MDS の仕入先データを格納します。](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|このレッスンでクレンジングおよび照合済みの仕入先データ マスター データ サービス (MDS) を使用してアップロードする、 **MDS アドインの Excel**します。|45|  
-|[レッスン 5:クレンジングと照合 SSIS を使用して自動化します。](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|このレッスンでは、DQS を使用して入力データをクレンジングし、重複項目を削除するためにクレンジングしたデータを照合して、クレンジングおよび照合済みのデータを MDS に自動的に保存する SSIS ソリューションを作成します。|75|  
+|[レッスン 5: クレンジングと照合 SSIS を使用して自動化します。](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|このレッスンでは、DQS を使用して入力データをクレンジングし、重複項目を削除するためにクレンジングしたデータを照合して、クレンジングおよび照合済みのデータを MDS に自動的に保存する SSIS ソリューションを作成します。|75|  
   
 ## <a name="next-steps"></a>次の手順  
  チュートリアルを開始するには、最初のレッスンに進んでください。[レッスン 1:Suppliers DQS ナレッジ ベースを作成する](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)します。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: fce2ad94feef0a59113ce6c7cfd715405ab17a9e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503514"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020523"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>レッスン 2:(Reporting Services) の接続情報を指定します。
   チュートリアル プロジェクトにレポートを追加した後、リレーショナル データベース、多次元データベース、その他のリソースのデータにアクセスするためにレポートで使用される接続情報である *データ ソース*を定義する必要があります。  
@@ -49,7 +49,7 @@ ms.locfileid: "52503514"
     >   
     >  `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2012`  
     >   
-    >  接続文字列の詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](data-connections-data-sources-and-connection-strings-in-reporting-services.md)と[データ ソースのプロパティダイアログ ボックスの [全般]](data-source-properties-dialog-box-general.md)します。  
+    >  接続文字列の詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](data-connections-data-sources-and-connection-strings-in-reporting-services.md)と[データ ソースのプロパティ ダイアログ ボックスの [全般]](data-source-properties-dialog-box-general.md)します。  
   
 6.  左ペインで **[資格情報]** をクリックし、 **[Windows 認証 (統合セキュリティ) を使用する]** をクリックします。  
   

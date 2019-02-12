@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
@@ -14,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12581756e6ffa7d77ba7dc3339c3f38c96962d4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372910"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033683"
 ---
 # <a name="basic-data-mining-tutorial"></a>基本的なデータ マイニング チュートリアル
   ようこそ、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]基本的なデータ マイニングのチュートリアル。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ マイニング モデルを作成および予測を行うのための統合環境を提供します。 このチュートリアルでは、分析し、顧客の購買行動を予測する機械学習を使用するターゲット メーリング キャンペーンのシナリオを完了します。 このチュートリアルでは、クラスタリング、デシジョン ツリー、Naive Bayes (ナイーブ ベイズ) という非常に重要な 3 つのデータ マイニング アルゴリズムを使用する方法を示します。 マイニング モデル ビューアーを使用して結果の分析、予測と精度のグラフに含まれているデータ マイニング ツールを使用して作成する方法も学習[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 すべての例で、架空の企業である [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] を使用します。  
@@ -61,7 +60,7 @@ ms.locfileid: "53372910"
  [レッスン 4:メーリング対象モデルの検証&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  このレッスンでは、ビューアーを使用して各モデルの結果を調査および解釈する方法を学習します。  
   
- [レッスン 5:モデルのテスト&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [レッスン 5: モデルのテスト&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  このレッスンでは、いずれかの絞り込みメール配信モデルのコピーを作成し、トレーニング データを制限するためのマイニング モデル フィルターを特定の顧客のセットに追加し、モデルの実行可能性を評価します。  
   
  [レッスン 6:予測の作成と操作&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
@@ -76,7 +75,7 @@ ms.locfileid: "53372910"
   
 -   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベース。  
   
- セキュリティ強化のため、サンプル データベースは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と一緒にインストールされません。 公式データベースをインストールする[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください、 [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417)ページ[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]します。  
+ セキュリティ強化のため、サンプル データベースは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と一緒にインストールされません。 公式データベースをインストールする[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください、 [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) ページ[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]します。  
   
 > [!NOTE]  
 >  のチュートリアルに従って作業しているときにした方を追加する場合、手順の間で双方向に移動しやすく、**次のトピック**と**前のトピック**ドキュメント ビューアーのツールバーのボタン。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dcadf726623b71daa0f9bf3e699c6bd8ac3ab122
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376674"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016913"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル:レポート (レポート ビルダー) へのスパーク ラインを追加します。
   このチュートリアルでは、サンプルの売上データに基づいて基本的なテーブル レポートを作成してから、テーブルのセルにスパークライン グラフを追加します。  
@@ -295,7 +295,7 @@ ms.locfileid: "53376674"
   
 4.  **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="Title"></a> 8。(オプション) レポート タイトルを追加する  
+##  <a name="Title"></a> 8.(オプション) レポート タイトルを追加する  
  レポート タイトルは、レポートの最上部に表示されます。 レポート ヘッダーがあれば、そこにレポート タイトルを配置します。レポート ヘッダーを使用しない場合は、レポート本文の一番上のテキスト ボックスに配置します。 このチュートリアルでは、自動的にレポート本文の一番上に配置されるテキスト ボックスを使用します。  
   
  テキストの語句や文字のフォントのスタイル、サイズ、および色を変更して、テキストをさらに強調することもできます。 詳細については、「[テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)」を参照してください。  
@@ -318,7 +318,7 @@ ms.locfileid: "53376674"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a> 9 です。レポートを保存する  
+##  <a name="Save"></a> 9.レポートを保存する  
  レポートをレポート サーバーまたは自分のコンピューターに保存します。 レポート サーバーに保存しない場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のいくつかの機能 (レポート パーツ、サブレポートなど) が使用できなくなります。  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>レポート サーバーにレポートを保存するには  

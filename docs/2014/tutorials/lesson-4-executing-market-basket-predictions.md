@@ -1,25 +1,24 @@
 ---
-title: 'レッスン 4: マーケット バスケット予測の実行 |Microsoft Docs'
+title: レッスン 4:マーケット バスケット予測の実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6db486a5d497ba6b6c5bfe312197d78a5656d388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177501"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041433"
 ---
-# <a name="lesson-4-executing-market-basket-predictions"></a>レッスン 4: マーケット バスケット予測の実行
-  このレッスンでは、DMX を使用して`SELECT`関連付けに基づく予測を作成するステートメントをモデル化で作成した[レッスン 2: Market Basket マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)します。 DMX の `SELECT` ステートメントを使用して、`PREDICTION JOIN` 句を追加することにより、予測クエリを作成します。 予測結合の構文の詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;予測結合&#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)します。  
+# <a name="lesson-4-executing-market-basket-predictions"></a>レッスン 4:マーケット バスケット予測の実行
+  このレッスンでは、DMX を使用して`SELECT`関連付けに基づく予測を作成するステートメントをモデル化で作成した[レッスン 2。Market Basket マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)します。 DMX の `SELECT` ステートメントを使用して、`PREDICTION JOIN` 句を追加することにより、予測クエリを作成します。 予測結合の構文の詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;予測結合&#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)します。  
   
  **SELECT FROM \<model > PREDICTION JOIN**のフォーム、`SELECT`ステートメントには、3 つの部分が含まれています。  
   
@@ -79,7 +78,7 @@ SELECT <select list> FROM [<mining model>]
   
 #### <a name="to-create-an-association-query"></a>アソシエーション クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**クエリ エディターを開きます。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**クエリ エディターを開きます。  
   
 2.  `PREDICTION JOIN` ステートメントの汎用例を空のクエリにコピーします。  
   
@@ -147,13 +146,13 @@ SELECT <select list> FROM [<mining model>]
   
 8.  ツールバーの**Execute**ボタンをクリックします。  
   
-     クエリによって、HL Mountain Tire、Fender Set - Mountain、ML Mountain Tire の 3 つの製品が含まれたテーブルが返されます。 テーブルには、返された製品が確率の順に表示されます。 返された製品のうち、クエリで指定した 3 つの製品と同じショッピング カートに入っている可能性の最も高いものが、テーブルの一番上に表示されます。 続いて表示される 2 つは、ショッピング カートに入っている可能性が次に高い製品です。 さらに、このテーブルには、予測の精度を表す統計も含まれます。  
+     このクエリでは、3 つの製品を含むテーブルを返します。HL Mountain Tire、Fender Set - Mountain、および ML Mountain Tire します。 テーブルには、返された製品が確率の順に表示されます。 返された製品のうち、クエリで指定した 3 つの製品と同じショッピング カートに入っている可能性の最も高いものが、テーブルの一番上に表示されます。 続いて表示される 2 つは、ショッピング カートに入っている可能性が次に高い製品です。 さらに、このテーブルには、予測の精度を表す統計も含まれます。  
   
 ## <a name="create-a-prediction-by-using-a-model-with-a-minimumprobability-of-001"></a>MINIMUM_PROBABILITY が 0.01 に設定されたマイニング モデルを使用した予測の作成  
   
 #### <a name="to-create-an-association-query"></a>アソシエーション クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**クエリ エディターを開きます。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**クエリ エディターを開きます。  
   
 2.  `PREDICTION JOIN` ステートメントの汎用例を空のクエリにコピーします。  
   
@@ -219,7 +218,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  ツールバーの**Execute**ボタンをクリックします。  
   
-     クエリによって、HL Mountain Tire、Water Bottle、Fender Set - Mountain の 3 つの製品が含まれたテーブルが返されます。 テーブルには、これらの製品が確率の順に表示されます。 テーブルの一番上に表示されるのは、クエリで指定した 3 つの製品と同じショッピング カートに入っている可能性の最も高い製品です。 それ以外は、ショッピング カートに入っている可能性が次に高い製品です。 テーブルには、予測の精度を表す統計も含まれています。  
+     このクエリでは、3 つの製品を含むテーブルを返します。HL Mountain Tire、Water Bottle、および Fender Set - Mountain します。 テーブルには、これらの製品が確率の順に表示されます。 テーブルの一番上に表示されるのは、クエリで指定した 3 つの製品と同じショッピング カートに入っている可能性の最も高い製品です。 それ以外は、ショッピング カートに入っている可能性が次に高い製品です。 テーブルには、予測の精度を表す統計も含まれています。  
   
      わかるように、このクエリの結果の値、 *MINIMUM_PROBABILITY*パラメーターは、クエリによって返される結果に影響します。  
   
@@ -228,7 +227,7 @@ SELECT <select list> FROM [<mining model>]
  もう 1 つの予測シナリオで DMX を使用する方法については、次を参照してください。 [Bike Buyer DMX のチュートリアル](../../2014/tutorials/bike-buyer-dmx-tutorial.md)します。  
   
 ## <a name="see-also"></a>参照  
- [アソシエーション モデルのクエリ例](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
+ [結合モデルのクエリ例](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
  [データ マイニング クエリ インターフェイス](../../2014/analysis-services/data-mining/data-mining-query-tools.md)  
   
   

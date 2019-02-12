@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 05c8785427b905138e513ab7134d56def7cdcf4d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 429608f066b0c99c9677a0e35f0b8925e58c7dff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353072"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014284"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>タスク 4 (省略可能)。新しいデータ セットを結合、照合、およびパブリッシュする
   後で、MDS リポジトリにさらにデータを追加する場合があります。 データを追加する前に、重複や不正確なデータを追加しないことを確認して、MDS で既に管理されているデータを新しいデータを比較に役立ちます。 Excel 用マスター データ サービス アドインを使用すると、データを MDS にパブリッシュする前に、2 つのワークシートのデータを結合し、データを比較することで重複を識別して削除できます。 MDS Excel アドインの照合機能は、データの一致を識別するための DQS 照合機能を使用します。 ここでは、MDS にパブリッシュする前に、2 つのワークシートのデータを 1 つに結合し、重複を識別して削除するための照合作業を行います。 参照してください[Excel 用 MDS アドインでのデータ品質照合](https://msdn.microsoft.com/library/hh548681.aspx)と[データの結合](https://msdn.microsoft.com/library/hh548680.aspx)詳細についてはトピック。  
@@ -29,7 +26,7 @@ ms.locfileid: "53353072"
   
 3.  をクリックして**Connect**リボンで、**接続と読み込み**グループへの接続に、 **MDS サーバー**。 この接続は、このレッスンの前の手順で構成しました。  
   
-     ![Excel - エクスプ ローラー ボタンを表示するマスター データ ボタンで](../../2014/tutorials/media/et-combinematchandpublishnewsod-01.jpg "Excel - [マスター データ] ボタン エクスプ ローラーボタンを表示します。")  
+     ![Excel - エクスプ ローラー ボタンを表示するマスター データ ボタンで](../../2014/tutorials/media/et-combinematchandpublishnewsod-01.jpg "Excel - [マスター データ] ボタン エクスプ ローラー ボタンを表示します。")  
   
 4.  表示する必要があります、**マスター データ エクスプ ローラー**右側のウィンドウ。 マスター データ エクスプ ローラーが表示されない場合はクリックして**エクスプ ローラーの**リボンのボタンをクリックします。  
   

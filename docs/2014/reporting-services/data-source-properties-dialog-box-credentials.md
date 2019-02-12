@@ -12,14 +12,14 @@ f1_keywords:
 - "10100"
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a5d1f22d37723545cde9430404a5e414fb1856c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4fbee37fe2396c533c6cc16528d467f9862d46c3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079042"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032353"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>[資格情報] ([データ ソースのプロパティ] ダイアログ ボックス)
   **[データ ソースのプロパティ]** ダイアログ ボックスの **[資格情報]** を選択すると、レポート内のデータ ソースに接続するための資格情報を表示および変更できます。 指定した資格情報は、データ ソースへのアクセス、およびレポート プレビュー用のデータのコピーのキャッシュに使用されます。 プレビュー データのキャッシュの方法の詳細については、「 [レポートのプレビュー](reports/previewing-reports.md)」を参照してください。 資格情報の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  

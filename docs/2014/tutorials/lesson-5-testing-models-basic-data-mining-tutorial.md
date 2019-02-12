@@ -1,24 +1,23 @@
 ---
-title: レッスン 5:モデル (基本的なデータ マイニング チュートリアル) のテスト |Microsoft Docs
+title: 'レッスン 5: モデル (基本的なデータ マイニング チュートリアル) のテスト |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e9a7ddcf-2b01-485f-bbb5-62638b303bc6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f942b40959d5f3af1ede0ddb8dbc11161f796eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392935"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025623"
 ---
-# <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>レッスン 5:モデル (基本的なデータ マイニング チュートリアル) のテスト
+# <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>レッスン 5: モデル (基本的なデータ マイニング チュートリアル) のテスト
   絞り込みメール配信シナリオのトレーニング セットを使用してモデルを処理したので、テスト セットに対してモデルをテストします。 検証は、データ マイニング プロセスにおける重要な手順です。 運用環境に配置する前に、実際のデータに対する絞り込みメール配信マイニング モデルの性能を把握しておくことが重要です。  
   
  テスト セット内のデータには自転車購入に関する既知の値が既に含まれているため、モデルの予測が正しいかどうかを簡単に判断できます。 パフォーマンスが最高のモデルで使用される、[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]マーケティング部門は、ターゲット メーリング キャンペーンの顧客を識別します。  
@@ -48,7 +47,7 @@ ms.locfileid: "52392935"
  [リフト チャート タブ&#40;マイニング精度チャート ビュー&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)   
  [リフト チャート &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [テストおよび検証 &#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [[分類マトリックス] タブ&#40;マイニング精度チャートビュー&#41;](../../2014/analysis-services/classification-matrix-tab-mining-accuracy-chart-view.md)   
+ [[分類マトリックス タブ&#40;マイニング精度チャート] ビュー&#41;](../../2014/analysis-services/classification-matrix-tab-mining-accuracy-chart-view.md)   
  [分類マトリックス &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   
