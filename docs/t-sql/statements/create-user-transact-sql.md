@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f3f0b40e022db23cfcd650c5f2da4a5a14082d1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327583"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421219"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "54327583"
 ## <a name="syntax"></a>構文  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database Managed Instance
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database managed instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -127,7 +127,7 @@ CREATE USER user_name
 CREATE USER user_name  
 [;]
 
--- Syntax for users based on Azure AD logins for Azure SQL Database Managed Instance
+-- Syntax for users based on Azure AD logins for Azure SQL Database managed instance
 CREATE USER user_name   
     [   { FOR | FROM } LOGIN login_name  ]  
     | FROM EXTERNAL PROVIDER
@@ -141,7 +141,7 @@ CREATE USER user_name
 ```
 
 > [!IMPORTANT]
-> SQL Database Managed Instance の Azure AD ログインは**パブリック プレビュー**段階です。
+> SQL Database マネージド インスタンスの Azure AD ログインは**パブリック プレビュー**段階です。
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -269,11 +269,11 @@ GO
   
  データベースのユーザーに関する情報については、[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) カタログ ビューを参照してください。
 
-SQL Database Managed Instance でサーバーレベルの Azure AD ログインを作成するために新しい構文拡張 **FROM EXTERNAL PROVIDER** を利用できます。 Azure AD ログインでは、データベースレベルの Azure AD プリンシパルをサーバーレベルの Azure AD ログインにマッピングできます。 Azure AD ログインから Azure AD ユーザーを作成するには、次の構文を使用します。
+SQL Database マネージド インスタンスでサーバーレベルの Azure AD ログインを作成するために新しい構文拡張 **FROM EXTERNAL PROVIDER** を利用できます。 Azure AD ログインでは、データベースレベルの Azure AD プリンシパルをサーバーレベルの Azure AD ログインにマッピングできます。 Azure AD ログインから Azure AD ユーザーを作成するには、次の構文を使用します。
 
 `CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
 
-SQL Database Managed Instance データベースでユーザーを作成するとき、login_name が既存の Azure AD ログインに一致する必要があります。一致しない場合、**FROM EXTERNAL PROVIDER** 句を使用したとき、マスター データベースのログインなしで Azure AD ユーザーのみが作成されます。 たとえば、このコマンドでは、包含ユーザーが作成されます。
+SQL Database マネージド インスタンス データベースでユーザーを作成するとき、login_name が既存の Azure AD ログインに一致する必要があります。一致しない場合、**FROM EXTERNAL PROVIDER** 句を使用したとき、マスター データベースのログインなしで Azure AD ユーザーのみが作成されます。 たとえば、このコマンドでは、包含ユーザーが作成されます。
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
@@ -464,11 +464,11 @@ WITH
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
 ```
 
-### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>I. SQL Database Managed Instance で Azure AD ログインから Azure AD ユーザーを作成する
+### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>I. SQL Database マネージド インスタンス内で Azure AD ログインから Azure AD ユーザーを作成する
 
  Azure AD ログインから Azure AD ユーザーを作成するには、次の構文を使用します。
 
- `sysadmin` ロールで付与された Azure AD ログインで Managed Instance にサインインします。 次の命令文ではログイン bob@contoso.com から Azure AD ユーザー bob@contoso.com が作成されます。 このログインは [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account) 例で作成されました。
+ `sysadmin` ロールで付与された Azure AD ログインを使用してマネージド インスタンスにサインインします。 次の命令文ではログイン bob@contoso.com から Azure AD ユーザー bob@contoso.com が作成されます。 このログインは [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account) 例で作成されました。
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -494,7 +494,7 @@ GO
 
 ### <a name="j-create-an-azure-ad-user-without-an-aad-login-for-the-database"></a>J. データベースの AAD ログインなしで Azure AD ユーザーを作成する
 
-次の構文は、SQL Database Managed Instance データベースで Azure AD ユーザー bob@contoso.com を作成するために使用されます (包含ユーザー)。
+次の構文は、SQL Database マネージド インスタンス データベース内で Azure AD ユーザー bob@contoso.com を作成するために使用されます (包含ユーザー)。
 
 ```sql
 CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;

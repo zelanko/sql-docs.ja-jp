@@ -23,12 +23,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7d1607e46888c4ea42f2e9e01fc9086a947045e2
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 6bac04d2c3e60496c73f1cc91c1adb89c82b606a
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327503"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421099"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ CREATE SERVER AUDIT audit_name
  TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } 監査ターゲットの場所を決定します。 オプションは、バイナリ ファイル、Windows アプリケーション ログ、または Windows セキュリティ ログです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Windows で追加の設定を行わないと Windows セキュリティ ログに書き込むことができません。 詳細については、「 [セキュリティ ログへの SQL サーバー監査イベントの書き込み](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)」を参照してください。  
 
 > [!IMPORTANT]
-> Azure SQL Database Managed Instance では SQL 監査はサーバー レベルで動作します。 場所は `URL` または `EXTERNAL_MONITOR` にのみすることができます。
+> Azure SQL Database マネージド インスタンスでは SQL 監査はサーバー レベルで動作します。 場所は `URL` または `EXTERNAL_MONITOR` にのみすることができます。
   
  FILEPATH ='*os_file_path*'  
  監査ログのパス。 ファイル名は、監査名と監査 GUID に基づいて生成されます。  

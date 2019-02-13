@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8924de6099e947e02023ea92853ee84a94b0f48d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee8626047df76aaf9186295c092623a7cee6d263
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804260"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570665"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,43 +60,45 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ## <a name="return-value"></a>戻り値  
  **varbinary** (最大 8,000 バイト)  
-  
+
+## <a name="remarks"></a>Remarks  
+ハッシュ値を計算するための別の方法として、`CHECKSUM` または `BINARY_CHECKSUM` の使用を検討してください。
+
+MD2、MD4、MD5、SHA、および SHA1 アルゴリズムは、互換性レベル 130 以上では使用できません。 代わりに SHA2_256 または SHA2_512 を使用してください。
+
 ## <a name="examples"></a>使用例  
-  
-### <a name="a-return-the-hash-of-a-variable"></a>A: 変数のハッシュを返す  
+### <a name="return-the-hash-of-a-variable"></a>変数のハッシュを返す  
  次の例では、変数 `@HashThis` に格納されている **nvarchar** 型のデータの `SHA1` ハッシュを返します。  
   
-```  
+```sql  
 DECLARE @HashThis nvarchar(4000);  
 SET @HashThis = CONVERT(nvarchar(4000),'dslfdkjLK85kldhnv$n000#knf');  
 SELECT HASHBYTES('SHA1', @HashThis);  
-  
 ```  
   
-### <a name="b-return-the-hash-of-a-table-column"></a>B: テーブル列のハッシュを返す  
+### <a name="return-the-hash-of-a-table-column"></a>テーブル列のハッシュを返す  
  次の例では、テーブル `c1` 内の列 `Test1` の値の SHA1 ハッシュを返します。  
   
-```  
+```sql  
 CREATE TABLE dbo.Test1 (c1 nvarchar(50));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
 SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-  
 -------------------------------------------  
 0x0E7AAB0B4FF0FD2DFB4F0233E2EE7A26CD08F173  
 0xF643A82F948DEFB922B12E50B950CEE130A934D6  
   
 (2 row(s) affected)  
-  
 ```  
   
 ## <a name="see-also"></a>参照  
- [暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
-  
+[暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
+[チェックサム (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/checksum-transact-sql.md)  
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)  
   

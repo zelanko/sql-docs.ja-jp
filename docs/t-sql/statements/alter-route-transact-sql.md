@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 19b533df8417345796f76f4e365d633e5b707eda
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 304e5ec2722f8556c2d9c873f4ff5c3cfab4b7d2
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169030"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421089"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **='**_next\_hop\_address_'  
 
- Azure SQL Database Managed Instance の場合、`ADDRESS` はローカルである必要があります。
+ Azure SQL Database マネージド インスタンスの場合、`ADDRESS` はローカルである必要があります。
 
  ルート用のネットワーク アドレスを指定します。 *next_hop_address* の次の形式で TCP/IP アドレスを指定します。  
   
@@ -164,7 +164,7 @@ ALTER ROUTE ExpenseRoute
 ```  
   
 ### <a name="c-changing-the-address-for-a-route"></a>C. ルートのアドレスを変更する  
- 次の例では、`ExpenseRoute` ルートのネットワーク アドレスを、ホスト IP アドレス `1234`、TCP ポート `10.2.19.72` に変更します。  
+ 次の例では、IP アドレスが `10.2.19.72` のホストで、`ExpenseRoute` ルートのネットワーク アドレスが TCP ポート `1234` に変更されます。  
   
 ```  
 ALTER ROUTE ExpenseRoute   

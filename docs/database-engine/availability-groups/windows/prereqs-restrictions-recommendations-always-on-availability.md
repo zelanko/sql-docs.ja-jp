@@ -2,7 +2,7 @@
 title: 可用性グループの前提条件、制限事項、推奨事項
 description: Always On 可用性グループをデプロイするための前提条件、制限事項、推奨事項の説明。
 ms.custom: seodec18
-ms.date: 06/05/2018
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -20,12 +20,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 28d0e3c791fc838a292d1846613af34fdabd32a4
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202991"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570805"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性グループの前提条件、制限事項、推奨事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "53202991"
     -   SQL Server インスタンスは、セカンダリ レプリカの並列再実行に最大で 100 個のスレッドを使用します。 各データベースは、最大で、CPU コアの合計数の半分を使用しますが、データベースあたりのスレッド数は 16 個以下となります。 単一のインスタンスで必要なスレッド数の合計が 100 を超えている場合、SQL Server は、残りの各データベースには単一の再実行スレッドを使用します。 シリアル再実行スレッドは、非アクティブな状態のまま最大 15 秒経過すると解放されます。 
     
     > [!NOTE]
-    > 単一のスレッドを使用するデータベースは、各データベース ID の昇順に基づいて選択されます。 そのため、使用可能なワーカー スレッドよりも多くの可用性グループ データベースをホストする SQL Server インスタンスの場合は、データベースの作成順序を検討する必要があります。 たとえば、32 個以上の CPU コアを持つシステムでは、可用性グループに参加している 7 番目以降のデータベースはすべて、各データベースの実際の再実行ワークロードに関係なく、シリアル再実行モードになります。 並列再実行を必要とするデータベースは、最初に可用性グループに追加する必要があります。    
+    > 単一のスレッドを使用するデータベースは、各データベース ID の昇順に基づいて選択されます。 そのため、使用可能なワーカー スレッドよりも多くの可用性グループ データベースをホストする SQL Server インスタンスの場合は、データベースの作成順序を検討する必要があります。 たとえば、CPU のコア数が 32 以上のシステムでは、1 つまたは複数の可用性グループの (データベース ID 順に並べた) 最初の 6 つのデータベースは並列再実行モードを使用し、残りのデータベースは単一再実行モードを使用します。
   
 -   さらに、可用性グループでは非共有スレッドを次のように使用します。  
   

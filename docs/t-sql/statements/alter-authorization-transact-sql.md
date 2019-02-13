@@ -1,7 +1,7 @@
 ---
 title: ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,14 +27,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c7f31849aa75d0102f1406a49faf0d1c8c6a8e9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327547"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421229"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   セキュリティ保護可能なエンティティの所有権を変更します。    
@@ -196,6 +197,7 @@ ALTER AUTHORIZATION ON
 ### <a name="for-sql-server"></a>SQL Server の場合:  
 **新しい所有者の要件:**   
 新しい所有者プリンシパルは、次のいずれかである必要があります。  
+
 -   SQL サーバー認証ログイン。  
 -   Windows ユーザー (グループではなく) を表す Windows 認証ログイン。  
 -   Windows グループを表す Windows 認証ログインを使って認証を行う Windows ユーザー。  
@@ -206,6 +208,7 @@ ALTER AUTHORIZATION ON
 ### <a name="for-azure-sql-database"></a>Azure SQL Database の場合:  
 **新しい所有者の要件:**   
 新しい所有者プリンシパルは、次のいずれかである必要があります。  
+
 -   SQL サーバー認証ログイン。  
 -   Azure AD 内に存在するフェデレーション ユーザー (グループではなく)。  
 -   Azure AD 内に存在するマネージド ユーザー (グループではなく) またはアプリケーション。    
@@ -217,7 +220,8 @@ ALTER AUTHORIZATION ON
 データベースの所有者を変更するには、そのデータベースに接続する必要があります。  
 
 次の種類のアカウントは、データベースの所有者を変更できます。 
-* サーバー レベルのプリンシパル ログイン (論理サーバー作成時にプロビジョニングされた SQL Azure 管理者)。  
+
+* サーバー レベルのプリンシパル ログイン (SQL Database サーバー作成時にプロビジョニングされた SQL Azure 管理者)。  
 * Azure SQL Server の Azure Active Directory 管理者。   
 * データベースの現在の所有者。   
  

@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 48044f9c24942079f66ee4675c1aa01bb6549532
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980484"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484861"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>テーブル (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -289,7 +289,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="determining-the-number-of-table-partitions"></a>テーブルのパーティションの数を決定する
 各ユーザー定義テーブルは、複数の小さなテーブルに分割され、ディストリビューションと呼ばれる個々の場所に格納されるます。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では 60 のディストリビューションが使用されます。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] において、ディストリビューションの数はコンピューティング ノードの数によって異なります。
  
-各ディストリビューションには、すべてのテーブル パーティションが含まれます。 たとえば、60 のディストリビューションと 4 つのテーブル パーティションがある場合は、320 のパーティションが存在することになります。 テーブルがクラスター化列ストア インデックスである場合、パーティションごとに列ストア インデックスが 1 つ存在することになります。つまり、列ストア インデックスの数は 320 になります。
+各ディストリビューションには、すべてのテーブル パーティションが含まれます。 たとえば、60 のディストリビューションと 4 つのテーブル パーティションに加えて 1 つの空のパーティションがある場合は、300 のパーティションが存在することになります (5 x 60= 300)。 テーブルがクラスター化列ストア インデックスである場合、パーティションごとに列ストア インデックスが 1 つ存在することになります。つまり、列ストア インデックスの数は 300 になります。
 
 列ストア インデックスの利点を活用する上で十分な行が各列ストア インデックスに含まれるようにするために、使用するテーブル パーティションの数を少なくすることをお勧めします。 詳細については、「[SQL Data Warehouse でのテーブルのパーティション分割](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)」および [SQL Data Warehouse でのテーブルのインデックス作成](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)に関するページを参照してください。  
 

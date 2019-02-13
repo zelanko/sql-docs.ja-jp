@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: SQL Server、Azure SQL Database、Azure SQL Data Warehouse、Parallel Data Warehouse のデータベース構文を作成します
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0ba661f6cc2c19b00dd5c51be9b3dfeb1d47a6e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 76f0d24c3c8eb0c2cfa77b69d45d8f5d88517a4f
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327888"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570845"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -62,7 +62,7 @@ ms.locfileid: "54327888"
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [SQL Database<br />論理サーバー](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |**_\* SQL Server \*_** | [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -893,15 +893,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL Database<br />論理サーバー\*_**  | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL Database<br />単一データベース/エラスティック プール \*_**  | [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 論理サーバー
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 単一データベース/エラスティック プール
 
 ## <a name="overview"></a>概要
 
-Azure SQL Database 論理サーバーでは、Azure SQL サーバーでこのステートメントを使って、単一のデータベースまたはエラスティック プール内のデータベースを作成できます。 このステートメントで、データベース名、照合順序、最大サイズ、エディション、サービス目標、および該当する場合は新しいデータベースのエラスティック プールを指定します。 また、エラスティック プールにデータベースを作成することにも使用できます。 さらに、別の論理サーバー上にデータベースのコピーを作成することもできます。
+Azure SQL Database 単一データベース/エラスティック プールでは、Azure SQL サーバーでこのステートメントを使って、単一のデータベースまたはエラスティック プール内のデータベースを作成できます。 このステートメントで、データベース名、照合順序、最大サイズ、エディション、サービス目標、および該当する場合は新しいデータベースのエラスティック プールを指定します。 また、エラスティック プールにデータベースを作成することにも使用できます。 さらに、別の SQL Database サーバー上にデータベースのコピーを作成することもできます。
 
 ## <a name="syntax"></a>構文 
 
@@ -973,7 +973,7 @@ EDITION
  
 データベースのサービス層を指定します。 
 
-論理サーバー上の単一のデータベースおよびプールされたデータベース。 使用可能な値: 'basic'、'standard'、'premium'、'GeneralPurpose'、'BusinessCritical'、'Hyperscale'。 
+単一データベース/エラスティック プール上の単一のデータベースおよびプールされたデータベース。 使用可能な値: 'basic'、'standard'、'premium'、'GeneralPurpose'、'BusinessCritical'、'Hyperscale'。 
   
 EDITION が指定されいても MAXSIZE が指定されていない場合、MAXSIZE は、そのエディションでサポートされる最も小さなサイズに設定されます。  
   
@@ -984,7 +984,7 @@ MAXSIZE
 > [!NOTE]
 > **MAXSIZE** 引数は、ハイパースケール サービス層の単一データベースには適用されません。 ハイパースケール層のデータベースは、必要に応じて 100 TB まで拡張できます。 SQL Database サービスによってストレージが自動的に追加されます。最大サイズを設定する必要はありません。
 
-**論理サーバー上の単一のデータベースおよびプールされたデータベースの DTU ベースのモデル**
+**SQL Database サーバー上の単一のデータベースおよびプールされたデータベースの DTU ベースのモデル**
 
 |**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
@@ -1014,7 +1014,7 @@ MAXSIZE
 
 DTU に基づくモデルの MAXSIZE 値。指定すると、上記の表に示すように指定されたサービス層で有効な値である必要があります。
  
-**論理サーバー上の単一のデータベースおよびプールされたデータベースの仮想コア ベースのモデル**
+**SQL Database サーバー上の単一のデータベースおよびプールされたデータベースの仮想コア ベースのモデル**
 
 **General Purpose サービス層- 第 4 世代のコンピューティング プラットフォーム**
 
@@ -1063,10 +1063,10 @@ vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない
 
 SERVICE_OBJECTIVE
 
-- **論理サーバー上の単一のデータベースおよびプールされたデータベースの場合**
+- **単一のデータベースおよびプールされたデータベースの場合**
 
   - パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_4`、`GP_GEN4_8`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_4`、`BC_GEN4_8`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_48`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_8`、`BC_Gen5_16`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_48`、`BC_Gen5_80` です。 
- - **ハイパースケール サービス層の論理サーバー上の単一データベースの場合** パフォーマンス レベルを指定します。 サービス目標に使用できる値: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、    `HS_Gen5_4`、    `HS_Gen5_8`、    `HS_Gen5_16`、   `HS_Gen5_24`、   `HS_Gen5_32`、   `HS_Gen5_48`、   `HS_Gen5_80`。 
+ - **ハイパースケール サービス層の単一のデータベースの場合** パフォーマンス レベルを指定します。 サービス目標に使用できる値: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、    `HS_Gen5_4`、    `HS_Gen5_8`、    `HS_Gen5_16`、   `HS_Gen5_24`、   `HS_Gen5_32`、   `HS_Gen5_48`、   `HS_Gen5_80`。 
  
 - **マネージド インスタンス上のデータベースの場合**
 
@@ -1232,15 +1232,15 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />論理サーバー](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />Managed Instance \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />マネージド インスタンス \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database マネージド インスタンス
 
 ## <a name="overview"></a>概要
 
-Azure SQL Database Managed Instance では、データベースを作成するためにこのステートメントを使用します。 マネージド インスタンス上にデータベースを作成するときは、データベース名と照合順序を指定します。 
+Azure SQL Database マネージド インスタンスでは、データベースを作成するためにこのステートメントを使用します。 マネージド インスタンス上にデータベースを作成するときは、データベース名と照合順序を指定します。 
 
 ## <a name="syntax"></a>構文
 
@@ -1305,7 +1305,7 @@ CREATE DATABASE TestDB1;
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />論理サーバー](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1313,7 +1313,7 @@ CREATE DATABASE TestDB1;
 
 ## <a name="overview"></a>概要
 
-Azure SQL Data Warehouse では、Azure SQL 論理サーバーでこのステートメントを使って、SQL Data Warehouse データベースを作成できます。 このステートメントでは、データベース名、照合順序、最大サイズ、エディション、およびサービス目標を指定します。
+Azure SQL Data Warehouse では、Azure SQL Database サーバーでこのステートメントを使って、SQL Data Warehouse データベースを作成できます。 このステートメントでは、データベース名、照合順序、最大サイズ、エディション、およびサービス目標を指定します。
 
 ## <a name="syntax"></a>構文  
   
@@ -1330,6 +1330,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
     SERVICE_OBJECTIVE = { 
          'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' 
         | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' 
+        |'DW100c' | 'DW200c' | 'DW300c' | 'DW400c' | 'DW500c'
         | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' 
         | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
     }  
@@ -1423,7 +1424,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />論理サーバー](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
 
 &nbsp;
 

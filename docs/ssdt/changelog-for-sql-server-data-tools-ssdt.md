@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: a82fe061c8886dc88af8b44faf4b4fb86ccda2e6
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087891"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428679"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "55087891"
 
 ### <a name="whats-new"></a>新機能
 **SSIS:**
-1. SSIS 2017 用の Power Query ソース (プレビュー) を追加します。
-2. SSIS 2012 のサポートを追加します。
-3. SSIS 2019 用の Oracle ソース/ターゲットを追加します。
+1. ADF 2017 の SSIS 用の Power Query ソース (プレビュー) を追加します。
+2. SQL Server 2012 までさかのぼったサポートを追加します。
+3. SQL Server 2019 用の Oracle ソース/ターゲットを追加します。
 4. 以前のバージョンの SSIS から移行する際に、スクリプト タスク/コンポーネントを読み込みできないという問題を修正します。
 5. Windows 7 SP1 および Windows 8.1 でデータ ビューアーが機能しないという問題を修正します。
 6. パッケージの保存時に Visual Studio がクラッシュすることがあるという問題を修正します。 
-7. 保護レベルが EncryptSensitiveWithPassword で、ターゲット サーバーのバージョンが SQL 2017 より前である場合に、パッケージを実行できないことがあるという問題を修正します。
+7. 保護レベルが EncryptSensitiveWithPassword で、ターゲット サーバーのバージョンが SQL Server 2017 より前である場合に、パッケージを実行できないことがあるという問題を修正します。
 8. 既定のフォントを使用した注釈が SSDT に表示されないという問題を修正します。
 9. ISDeploymentWizard では、コマンド ライン モードで SQL 認証、Azure Active Directory 統合認証、および Azure Active Directory パスワード認証をサポートします。
 
@@ -117,8 +117,8 @@ ms.locfileid: "55087891"
 **SSIS:**
 
 - AS タスクで使用するための新しい Azure Government AAD 機関 (login.microsoftonline.us) のサポートが追加されます。
-- 対象サーバーのバージョンが SQLServer2016 のときに AS 処理タスク UI に "メソッドが見つかりません" と表示される問題が修正されます。
-- 対象サーバーのバージョンが SQLServer2012 のときに一部のパイプライン コンポーネントを実行できない問題が修正されます。
+- ターゲット サーバーのバージョンが SQLServer2016 のときに AS 処理タスク UI に "メソッドが見つかりません" と表示される問題が修正されます。
+- ターゲット サーバーのバージョンが SQLServer2012 のときに一部のパイプライン コンポーネントを実行できない問題が修正されます。
 
 **インストーラー:**
 
@@ -524,7 +524,7 @@ ExecuteOutOfProcess が True に設定されていると、**Integration Service
 
 **IS プロジェクト:**
 - SSIS OData ソースと OData 接続マネージャーで、Microsoft Dynamics AX Online と Microsoft Dynamics CRM Online の OData フィードに接続できるようになりました。
-- SSIS プロジェクトが "SQL Server 2017" の対象サーバー バージョンをサポートするようになりました 
+- SSIS プロジェクトが "SQL Server 2017" のターゲット サーバー バージョンをサポートするようになりました 
 - SQL Server 2017 をターゲットにした場合、CDC 制御タスク、CDC スプリッター、および CDC ソースをサポートします。 
 
 **AS プロジェクト:**

@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c29c19a67e3cbbfa4131e25151e33c67fe667169
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8448d5fd564ff001d847e7af981bc34734cef727
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327903"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421409"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -50,7 +50,7 @@ SQL Server、SQL Database、SQL Data Warehouse、または Parallel Data Warehou
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />論理サーバー](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -262,11 +262,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />論理サーバー\*_**|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />単一データベース/エラスティック プール \*_**|[SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 論理サーバー
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 単一データベース/エラスティック プール
   
 ## <a name="syntax"></a>構文 
   
@@ -282,7 +282,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>引数  
 *login_name*  
-作成するログインの名前を指定します。 Azure SQL Database 論理サーバーでは SQL ログインのみがサポートされます。 
+作成するログインの名前を指定します。 Azure SQL Database 単一データベース/エラスティック プールでは SQL ログインのみがサポートされます。 
 
 PASSWORD **='** password**'*  
 作成する SQL ログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。 
@@ -320,7 +320,7 @@ SQL Database では、接続の認証に必要なログイン データおよび
 
 ## <a name="logins"></a>Login
 - サーバーに対する **ALTER ANY LOGIN** 権限または **securityadmin** 固定サーバー ロールのメンバーシップが必要です。 このコマンドを実行できるのは、サーバーに対する **ALTER ANY LOGIN** 権限または securityadmin 権限のメンバーシップを持つ Azure Active Directory (Azure AD) アカウントのみです。
-- Azure SQL 論理サーバーで使用されるのと同じディレクトリ内の Azure AD のメンバーである必要があります。
+- Azure SQL Database サーバーで使用されるのと同じディレクトリ内の Azure AD のメンバーである必要があります
   
 ## <a name="after-creating-a-login"></a>ログインを作成した後  
 ログインが作成されたら、ログインは SQL Database に接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。 
@@ -378,16 +378,16 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />論理サーバー](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />Managed Instance \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />マネージド インスタンス \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database マネージド インスタンス
 
 ## <a name="syntax"></a>構文 
   
 ```sql
--- Syntax for Azure SQL Database Managed Instance
+-- Syntax for Azure SQL Database managed instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
   
 <option_list> ::=
@@ -398,7 +398,7 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 ```  
 
 > [!IMPORTANT]
-> SQL Database Managed Instance の Azure AD ログインは**パブリック プレビュー**段階です。 これは **FROM EXTERNAL PROVIDER** 構文で導入されています。
+> SQL Database マネージド インスタンスの Azure AD ログインは**パブリック プレビュー**段階です。 これは **FROM EXTERNAL PROVIDER** 構文で導入されています。
 
 ## <a name="arguments"></a>引数
 *login_name*  
@@ -420,10 +420,10 @@ SID **=** *sid*
 - パスワードでは大文字と小文字が区別されます。
 - Azure AD アカウントにマップされたサーバーレベルのプリンシパルを作成するための新しい構文が導入されました (**FROM EXTERNAL PROVIDER**)
 - **FROM EXTERNAL PROVIDER** を指定した場合:
-    - login_name は、現在の Azure SQL Managed Instance によって Azure AD 内でアクセスできる既存の Azure AD アカウント (ユーザー、グループ、またはアプリケーション) を表す必要があります。
+    - login_name は、現在の Azure SQL マネージド インスタンスによって Azure AD 内でアクセスできる既存の Azure AD アカウント (ユーザー、グループ、またはアプリケーション) を表す必要があります。
     - **PASSWORD** オプションは使用できません。
     - 現在、最初の Azure AD ログインは、上記の構文を使用して、`sysadmin` の標準 SQL Server アカウント (Azure AD 以外) で作成する必要があります。
-        - SQL Database Managed Instance の Azure AD 管理者を使用して Azure AD ログインを作成すると、次のエラーが発生します。</br>
+        - SQL Database マネージド インスタンスの Azure AD 管理者を使用して Azure AD ログインを作成すると、次のエラーが発生します。</br>
         `Msg 15247, Level 16, State 1, Line 1
         User does not have permission to perform this action.`
         - これは**パブリック プレビュー**の既知の制限であり、今後修正される予定です。
@@ -440,14 +440,14 @@ SID **=** *sid*
 既定で、マスターに新しく作成された Azure AD ログインに付与される標準のアクセス許可は
 - **CONNECT SQL** と **VIEW ANY DATABASE** です。
 
-### <a name="sql-database-managed-instance-logins"></a>SQL Database Managed Instance のログイン:
+### <a name="sql-database-managed-instance-logins"></a>SQL Database マネージド インスタンスのログイン
 
 - サーバーに対する **ALTER ANY LOGIN** アクセス許可、または固定サーバー ロール `securityadmin` または `sysadmin` のいずれかのメンバーシップが必要です。 create コマンドを実行できるのは、サーバーに対する **ALTER ANY LOGIN** アクセス許可またはそのようなロールのいずれかのメンバーシップを持つ Azure Active Directory (Azure AD) アカウントのみです。
 - ログインが SQL プリンシパルの場合、`sysadmin` ロールの一部であるログインのみが create コマンドを使用して Azure AD アカウントのログインを作成できます。
-- Azure SQL Managed Instance で使用されるのと同じディレクトリ内の Azure AD のメンバーである必要があります。
+- Azure SQL マネージド インスタンスで使用されるのと同じディレクトリ内の Azure AD のメンバーである必要があります。
 
 ## <a name="after-creating-a-login"></a>ログインを作成した後  
-ログインが作成されたら、ログインは SQL Database Managed Instance に接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。 
+ログインが作成されたら、ログインは SQL Database マネージド インスタンスに接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。 
   
 - Azure AD ログインから Azure AD ユーザーを作成するには、「[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 
 - データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
@@ -553,7 +553,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />論理サーバー](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -665,7 +665,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />論理サーバー](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 

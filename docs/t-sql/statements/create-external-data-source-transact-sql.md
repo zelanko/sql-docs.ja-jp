@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980008"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421199"
 ---
 # <a name="create-external-data-source-transact-sql"></a>外部データ ソース (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -167,7 +167,7 @@ Azure Data Lake Store の場合、LOCATION は、お使いの Azure Data Lake St
 
 
 **SHARD_MAP_MANAGER**   
- SHARD_MAP_MANAGER の場合、Azure SQL Database または Azure 仮想マシン上の SQL Server データベースで Shard Map Manager をホストする論理サーバー名を指定します。
+ SHARD_MAP_MANAGER の場合、Azure SQL Database または Azure 仮想マシン上の SQL Server データベースで Shard Map Manager をホストする SQL Database サーバー名を指定します。
  
  ```
  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -188,7 +188,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 チュートリアルについては、[シャーディングのエラスティック クエリの概要 (行方向のパーティション分割)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/) のトピックを参照してください。
   
 **RDBMS**   
-RDBMS の場合、Azure SQL Database でリモート データベースの論理サーバーの名前を指定します。  
+RDBMS の場合、Azure SQL Database でリモート データベースの SQL Database サーバーの名前を指定します。  
 
 ```  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
@@ -404,7 +404,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## <a name="examples-azure-sql-database"></a>例 :Azure SQL データベース
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Shard Map Manager の外部データ ソースを作成する
-SHARD_MAP_MANAGER を参照する外部データ ソースを作成するには、Azure SQL Database または Azure 仮想マシン上の SQL Server データベースで Shard Map Manager をホストする論理サーバー名を指定します。
+SHARD_MAP_MANAGER を参照する外部データ ソースを作成するには、Azure SQL Database または Azure 仮想マシン上の SQL Server データベースで Shard Map Manager をホストする SQL Database サーバー名を指定します。
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -424,7 +424,7 @@ WITH (
 ```
 
 ### <a name="f-create-an-rdbms-external-data-source"></a>F. RDBMS の外部データ ソースを作成する
-RDBMS を参照する外部データ ソースを作成するには、Azure SQL Database でリモート データベースの論理サーバー名を指定します。
+RDBMS を参照する外部データ ソースを作成するには、Azure SQL Database でリモート データベースの SQL Database サーバー名を指定します。
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';

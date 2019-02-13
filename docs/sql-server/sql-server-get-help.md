@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a24215479af1aca6e1e742d5c62ba8995aaa4a8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: fca6676b5cb7532faf7bf88cf04159c28b0fa36b
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087671"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570695"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server のヘルプとフィードバック
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,6 +25,21 @@ Microsoft は製品やドキュメントに関するお客様のご意見を大�
 SQL Server エンジニアリング チームは、SQL Server の [User Voice](https://feedback.azure.com/forums/908035-sql-server) を監視しています。 クラッシュ、パフォーマンスの低下、予期しない動作など、SQL Server に関する問題を報告する場合は、User Voice をお勧めします。 
 
 [User Voice](https://feedback.azure.com/forums/908035-sql-server) は、改善点をエンジニアリング チームに伝える場合にもお勧めです。 推奨事項や機能の提案がある場合は、こちらにも報告してください。 
+
+## <a name="i-want-to-give-feedback-about-sql-server-documentation"></a>SQL Server のドキュメントに関するフィードバックを提供する
+SQL Server コンテンツ チームに連絡する最善の方法は、Git Issue を使用することです。 ほとんどのページの下部には、Git Issue を送信するための次のオプションがあります。 
+
+![[Git Issue content feedback]\(Git Issue コンテンツ フィードバック\)](media/sql-server-get-help/git-issues.png)
+
+共有したいアイデア、提案、フィードバックなどがあれば、ぜひお知らせください。 これは、全般的な Git Issue ([https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback)) に入力することで実行できます。 
+
+開始するには、[New Issue]\(新しい Issue\) ボタンを選択するだけです。 
+
+![新しい Git Issue](media/sql-server-get-help/new-git-issue.png)
+
+
+SQL Server コンテンツ チームは、アンケートのフィードバックも頻繁に求めています。 お時間があれば、[https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) で、感想をお聞かせください。
+
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>SQL Server Management Studio について提案する
 また、SQL Server Management Studio (SSMS) チームも SQL Server の [User Voice](https://feedback.azure.com/forums/908035-sql-server) を監視しているので、報告する問題や提案がある場合には User Voice が最適です。 
@@ -94,7 +109,5 @@ SQL Server に関する最新情報を提供するいくつかの Twitter アカ
 
 公開されるすべての投稿は、SQL コンテンツ チームによって技術的正確さと一貫性が確認されます。 
 
-## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>SQL ドキュメント コンテンツのフィードバックを送る
-お時間があり、SQL ドキュメントのエクスペリエンスについてご意見をお寄せいただける場合はアンケートにご協力ください。 [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) にアクセスしてください。所要時間は 10 分から 15 分です。 
 
-アイデア、提案、フィードバックなど、どのようなことでも SQL コンテンツ チームにお伝えください。 [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback) にアクセスしてください。 
+

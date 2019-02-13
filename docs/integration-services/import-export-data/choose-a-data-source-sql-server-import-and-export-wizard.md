@@ -1,7 +1,7 @@
 ---
 title: '[データ ソースの選択] (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,20 +13,23 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8e337704f95b432c30a6451aabe8a85b4609d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a93eb928b8d9a756380879ad8cc30475ffd223e9
+ms.sourcegitcommit: 92c524119d7df5daf69ec144d532ddcb2e46abc0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806022"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290422"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>[データ ソースの選択] (SQL Server インポートおよびエクスポート ウィザード)
-  [ようこそ] ページの後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[データ ソースを選ぶ]** が表示されます。 このページでは、データ ソースおよびデータに接続する方法についての情報を指定します。
+  [ようこそ] ページの後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[データ ソースを選ぶ]** が表示されます。 このページでは、データ ソースおよびデータに接続する方法についての情報を指定します。
   
 使用できるデータ ソースの詳細については、「 [どのようなデータ ソースと変換先を使用できるでしょうか。](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)」を参照してください。
 
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードでは、SQL Server Integration Services (SSIS) が利用されます。 そのため、SSIS に適用されるものと同じ制限事項がウィザードにも適用されます。  たとえば、「[データの処理エラー](../../integration-services/data-flow/error-handling-in-data.md)」で説明されているように既定で追加される ErrorCode 列や ErrorColumn 列などです。
+
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>[データ ソースの選択] ページのスクリーン ショット 
-次のスクリーンショットは、ウィザードの **[データ ソースの選択]** ページの最初の部分を示しています。 ページの残りの部分には、ここで選択したデータ ソースに応じて変わるさまざまなオプションがあります。
+次のイメージは、ウィザードの **[データ ソースの選択]** ページの最初の部分を示しています。 ページの残りの部分には、ここで選択したデータ ソースに応じて変わるさまざまなオプションがあります。
 
 ![ソースの選択](../../integration-services/import-export-data/media/choose-source.png)
 
@@ -66,10 +69,12 @@ ms.locfileid: "47806022"
 
 この一覧にないデータ ソースに接続する方法については、「[The Connection Strings Reference](https://www.connectionstrings.com/)」(接続文字列リファレンス) をご覧ください。 このサード パーティのサイトには、接続文字列のサンプルと、データ プロバイダーおよび必要な接続情報に関する詳細な情報が記載されています。
 
-## <a name="whats-next"></a>次の操作  
+## <a name="whats-next"></a>次の操作
  データ ソースとデータへの接続方法を指定したら、 **[変換先の選択]** ページに進みます。 このページでは、データの変換先およびデータに接続する方法についての情報を指定します。 詳細については、「 [[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)」をご覧ください。
- 
+
 ## <a name="see-also"></a>参照
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
 
+[!INCLUDE[contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]

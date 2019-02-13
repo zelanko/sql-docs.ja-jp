@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c72da307abd6de30cfb188128eeea52f64b074e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f5b04781959218d9044f1bf032156ce6ec65946
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841160"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420960"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;バージョン - Transact SQL 構成関数
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,14 +77,14 @@ ms.locfileid: "47841160"
 > [!NOTE]  
 > @@VERSION によって報告された製品バージョンが Azure SQL Database で正しくない問題を認識しています。 Azure SQL Database で実行される SQL Server データベース エンジンのバージョンは常に、SQL Server のオンプレミスのバージョンより新しいため、最新のセキュリティ修正プログラムが含まれています。 これは、パッチ レベルが SQL Server のオンプレミスのバージョンと同じかそれより新しく、SQL Server で使用できる最新の機能が Azure SQL Database で使用できることを意味します。
 >
-> エンジンのエディションをプログラムで確認するには、SELECT SERVERPROPERTY('EngineEdition') を使用します。 このクエリでは、スタンドアロンのデータベースの場合に '5'、Azure SQL Database のマネージド インスタンスの場合に '8' を返します。 
+> エンジンのエディションをプログラムで確認するには、SELECT SERVERPROPERTY('EngineEdition') を使用します。 このクエリでは、単一データベース/エラスティック プールの場合に '5'、Azure SQL Database のマネージド インスタンスの場合に '8' が返されます。 
 >
 > この問題が解決されたら、ドキュメントを更新します。
 
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>A: 現在のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を返す  
+### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>A:現在のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を返す  
  次の例では、現在のインストールに関するバージョン情報を返します。  
   
 ```  

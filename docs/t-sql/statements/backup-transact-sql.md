@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: a098756919cec261d9416149a508b311c48cd147
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805778"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421499"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -71,7 +71,7 @@ SQL Database をバックアップします。
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -940,13 +940,13 @@ WITH STATS = 5;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />Managed Instance \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />マネージド インスタンス \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database マネージド インスタンス
 
-Azure SQL Database Managed Instance に配置/ホストされている SQL Database をバックアップします。 SQL Database [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) には自動バックアップがあり、ユーザーは完全なデータベース `COPY_ONLY` バックアップを作成できます。 差分、ログ、およびファイル スナップショットのバックアップはサポートされていません。  
+Azure SQL Database Managed Instance に配置/ホストされている SQL Database をバックアップします。 SQL Database [マネージド インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)には自動バックアップがあり、ユーザーは完全なデータベース `COPY_ONLY` バックアップを作成できます。 差分、ログ、およびファイル スナップショットのバックアップはサポートされていません。  
 
 ## <a name="syntax"></a>構文  
   
@@ -988,9 +988,9 @@ DATABASE
 データベース全体のバックアップを指定します。 データベースのバックアップ時、Managed Instance では、バックアップが復元された場合に一貫性のあるデータベースを生成するのに十分なトランザクション ログをバックアップします。  
 
 > [!IMPORTANT]
-> Managed Instance で作成されたデータベース バックアップは、別の Managed Instance 上にのみ復元できます。 (SQL Server 2016 データベースのバックアップを SQL Server 2012 インスタンスに復元できないことと同様に) SQL Server のオンプレミス インスタンスに復元することはできません。
+> マネージド インスタンスで作成されたデータベース バックアップは、別の マネージド インスタンス上にのみ復元できます。 (SQL Server 2016 データベースのバックアップを SQL Server 2012 インスタンスに復元できないことと同様に) SQL Server のオンプレミス インスタンスに復元することはできません。
   
-BACKUP DATABASE (*データ バックアップ*) で作成されたバックアップを復元すると、バックアップ全体が復元されます。 Azure SQL Database Managed Instance の自動バックアップから復元する方法については、「[SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore)」(SQL Database の復元) を参照してください。  
+BACKUP DATABASE (*データ バックアップ*) で作成されたバックアップを復元すると、バックアップ全体が復元されます。 Azure SQL Database マネージド インスタンスの自動バックアップから復元する方法については、「[SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore)」(SQL Database の復元) を参照してください  
   
 { *database_name* | **@**_database\_name\_var_ }   
 データベース全体のバックアップ元となるデータベースです。 変数 (**@**_database\_name\_var_) として指定する場合、この名前は、文字列定数 (**@**_database\_name\_var_**=**_database name_) として指定するか、**ntext** または**text** データ型以外の文字列データ型の変数として指定します。  
@@ -1118,7 +1118,7 @@ STATS [ **=** _percentage_ ]
   
 STATS オプションでは、次のパーセンテージをレポートするためのしきい値に達した時点で、完了したパーセンテージがレポートされます。 このしきい値は、指定したパーセンテージを正確に反映するものではありません。たとえば STATS=10 の場合、40% が完了しても、43% の時点でメッセージが表示されることがあります。 大きいバックアップ セットの場合、これは重要な問題にはなりません。これは、完了した I/O 呼び出し間で、完了パーセンテージの変化が非常に遅くなるためです。  
   
-## <a name="limitations-for-sql-database-managed-instance"></a>SQL Database Managed Instance の制限事項
+## <a name="limitations-for-sql-database-managed-instance"></a>SQL Database マネージド インスタンスの制限事項
 バックアップの最大ストライプ サイズは 195 GB (最大 BLOB サイズ) です。 バックアップ コマンドでストライプ サイズを増やして、個々のストライプ サイズを減らし、この制限内に収まるようにします。
 
 ## <a name="security"></a>Security  
@@ -1148,7 +1148,7 @@ WITH STATS = 5, COPY_ONLY;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
 
 &nbsp;
 

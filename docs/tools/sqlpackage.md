@@ -24,13 +24,13 @@ ms.locfileid: "56033606"
   
 - [Publish](#publish-parameters-properties-and-sqlcmd-variables): ソース .dacpac ファイルのスキーマに合わせてデータベース スキーマの増分更新を行います。 データベースがサーバーに存在しない場合は、公開操作によって作成されます。 それ以外の場合、既存のデータベースを更新します。  
   
-- [Export](#export-parameters-and-properties):SQL Server または Azure SQL Database のライブ データベース (データベース スキーマとユーザー データを含む) を BACPAC パッケージ (.bacpac ファイル) にエクスポートします。  
+- [Export](#export-parameters-and-properties): SQL Server または Azure SQL Database のライブ データベース (データベース スキーマとユーザー データを含む) を BACPAC パッケージ (.bacpac ファイル) にエクスポートします。  
   
-- [Import](#import-parameters-and-properties):BACPAC パッケージのスキーマとテーブル データを、SQL Server または Azure SQL Database インスタンス内の新しいユーザー データベースにインポートします。  
+- [Import](#import-parameters-and-properties): BACPAC パッケージのスキーマとテーブル データを SQL Server または Azure SQL Database の新しいユーザー データベースにインポートします。  
   
 - [DeployReport](#deployreport-parameters-and-properties): 公開操作によって行われる変更の XML レポートを作成します。  
   
-- [DriftReport](#driftreport-parameters):登録されたデータベースに対して最終登録以降に行われた変更に関する XML レポートを作成します。  
+- [DriftReport](#driftreport-parameters): 前回データベースが登録された後に、登録されたデータベースに対して行われた変更の XML レポートを作成します。  
   
 - [Script](#script-parameters-and-properties): ソースのスキーマに合わせてターゲットのスキーマを更新する、Transact-SQL の増分更新スクリプトを作成します。  
   

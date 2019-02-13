@@ -1,7 +1,7 @@
 ---
 title: クエリ ヒント (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a4eb946a9b851342b1f997f2b491b0b0708138c
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 96f34d4ececcb05f91e5fc6329a598907269501e
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306279"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736970"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -264,7 +264,9 @@ ms.locfileid: "53306279"
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
    バッチ モード アダプティブ結合を無効にします。 詳細については、「[バッチ モード アダプティブ結合](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)」を参照してください。
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   バッチ モード メモリ許可フィードバックを無効にします。 詳細については、「[バッチ モード メモリ許可フィードバック](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)」を参照してください。
+   バッチ モード メモリ許可フィードバックを無効にします。 詳細については、「[バッチ モード メモリ許可フィードバック](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)」を参照してください。   
+* 'DISABLE_DEFERRED_COMPILATION_TV'    
+  テーブル変数の遅延コンパイルを無効にします。 詳細については、「[テーブル変数の遅延コンパイル](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)」をご覧ください。
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    複数ステートメントのテーブル値関数のインターリーブ実行を無効にします。 詳細については、「[複数ステートメントのテーブル値関数のインターリーブ実行](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)」を参照してください。
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
@@ -292,11 +294,11 @@ ms.locfileid: "53306279"
 *  'QUERY_PLAN_PROFILE'      
  クエリの軽量プロファイリングを有効にします。 この新しいヒントを含むクエリが完了したら、新しい拡張イベントである query_plan_profile が起動されます。 この拡張イベントでは、実行の統計と query_post_execution_showplan 拡張イベントのような実際の実行プラン XML が公開されますが、新しいヒントを含むクエリのみが対象です。 **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降)。 
 
-  > [!NOTE]
-  > query_post_execution_showplan 拡張イベントの収集を有効にした場合は、サーバー上で実行しているすべてのクエリに標準的なプロファイリング インフラストラクチャが追加されるので、全体的なサーバー パフォーマンスに影響する可能性があります。      
-  > *query_thread_profile* 拡張イベントのコレクションを有効にして軽量プロファイリング インフラストラクチャを代わりに使用する場合、パフォーマンス オーバーヘッドがはるかに少なくなりますが、依然として全体的なサーバー パフォーマンスに影響します。       
-  > query_plan_profile 拡張イベントを有効にした場合、軽量プロファイリング インフラストラクチャは QUERY_PLAN_PROFILE を使用して実行されるクエリに対してのみ有効になるので、サーバー上の他のワークロードには影響しません。 このヒントを使用して、サーバー ワークロードの他の部分に影響を与えずに特定のクエリをプロファイリングします。
-  > 軽量プロファイリングの詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」をご覧ください。
+   > [!NOTE]
+   > query_post_execution_showplan 拡張イベントの収集を有効にした場合は、サーバー上で実行しているすべてのクエリに標準的なプロファイリング インフラストラクチャが追加されるので、全体的なサーバー パフォーマンスに影響する可能性があります。      
+   > *query_thread_profile* 拡張イベントのコレクションを有効にして軽量プロファイリング インフラストラクチャを代わりに使用する場合、パフォーマンス オーバーヘッドがはるかに少なくなりますが、依然として全体的なサーバー パフォーマンスに影響します。       
+   > query_plan_profile 拡張イベントを有効にした場合、軽量プロファイリング インフラストラクチャは QUERY_PLAN_PROFILE を使用して実行されるクエリに対してのみ有効になるので、サーバー上の他のワークロードには影響しません。 このヒントを使用して、サーバー ワークロードの他の部分に影響を与えずに特定のクエリをプロファイリングします。
+   > 軽量プロファイリングの詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」をご覧ください。
  
 サポートされているすべての USE HINT 名の一覧は、動的管理ビューの [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) を使用して照会できます。    
 
@@ -309,7 +311,7 @@ ms.locfileid: "53306279"
  USE PLAN N **'**_xml\_plan_**'**     
  **'**_xml\_plan_**'** で指定されているクエリの既存のクエリ プランを使用するように、クエリ オプティマイザーを設定します。 USE PLAN は、INSERT、UPDATE、MERGE、または DELETE の各ステートメントに指定することはできません。  
   
-TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ] ] **)** *exposed_object_name* に対応するテーブルまたはビューに、指定したテーブル ヒントを適用します。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。  
+TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint>  **[,]**..._n_ ] ] **)** *exposed_object_name* に対応するテーブルまたはビューに、指定したテーブル ヒントを適用します。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。  
   
  *exposed_object_name* には、次のいずれかの参照を指定できます。  
   

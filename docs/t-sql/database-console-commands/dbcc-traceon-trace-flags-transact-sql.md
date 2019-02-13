@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f57bd4ef770d4958c09bd54fb19718e8e8c641df
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: d4d3d7488e60c95766c64d2b9d0ec3646b978c63
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361692"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652601"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 
@@ -126,7 +126,7 @@ ms.locfileid: "54361692"
 |**8019**|例外リング バッファーのスタック コレクションを無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/920093)をご覧ください。<br /><br />**スコープ**: グローバルのみ|
 |**8020**|ワーキング セットの監視を無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/920093)をご覧ください。<br /><br />**スコープ**: グローバルのみ|
 |**8032**|キャッシュ制限パラメーターを [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] RTM の設定に戻します。これにより、一般に、より大きいキャッシュに対応できるようになります。 この設定は、頻繁に再利用されるキャッシュ エントリがキャッシュに収まらない場合や、サーバー構成オプション [[アドホック ワークロードの最適化]](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) でプラン キャッシュの問題を解決できない場合に使用します。<br /><br />**警告:** トレース フラグ 8032 を使用した場合、キャッシュが大きいために他のメモリ コンシューマー (バッファー プールなど) で利用できるメモリが少なくなると、パフォーマンスが低下することがあります。<br /><br />**スコープ**: グローバルのみ|   
-|**8048**|NUMA パーティション分割のメモリ オブジェクトを CPU パーティション分割に変換します。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/2809338)をご覧ください。<br /><br />**注:**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 8048 に効力はありません。<br /><br />**スコープ**: グローバルのみ|  
+|**8048**|NUMA パーティション分割のメモリ オブジェクトを CPU パーティション分割に変換します。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/2809338)をご覧ください。<br /><br />**注:**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この動作は動的であり、エンジンによって制御されます。<br /><br />**スコープ**: グローバルのみ|  
 |**8075**|64 ビット [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] でメモリ ページの割り当てエラーが発生したときに、[VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-2012-11x-gm) の断片化を減らします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/3074434)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10、および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3 に適用されます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 8075 に効力はありません。<br /><br />**スコープ**: グローバルのみ|
 |**8079**|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 がハードウェア レイアウトを調査し、NUMA ノードあたり 8 個以上の CPU をレポートしたシステムにソフト NUMA を自動的に構成できるようにします。 自動ソフト NUMA の動作は、ハイパースレッド (HT/論理プロセッサ) に対応しています。 パーティション分割と追加ノードの作成により、リスナーの数の増加、スケーリング、およびネットワークと暗号化機能の向上により、バックグラウンド処理が拡張されます。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 に適用されます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 8079 に効力はありません。<br /><br />**スコープ**: グローバルのみ| 
 |**8207**|トランザクション レプリケーションと CDC に対して単一の更新を有効にします。 サブスクライバーへの更新は、DELETE と INSERT のペアとしてレプリケートできます。 これは、UPDATE トリガーの起動など、ビジネス ルールを満たさない場合があります。 トレース フラグ 8207 を使用すると、1 行 (シングルトンの更新) のみに影響する一意の列への更新は、DELETE または INSERT のペアとしてではなく、UPDATE としてレプリケートされます。 一意の制約が存在する列に更新が影響を与える場合、または更新が複数行に影響する場合、更新は引き続き DELETE または INSERT のペアとしてレプリケートされます。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/302341)をご覧ください。<br /><br />**スコープ**: グローバルのみ|

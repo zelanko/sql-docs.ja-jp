@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca0c77ccf18d47f14c7f9eb286158bb8d4642ddf
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: ef3f36df1c96d2909e401b83441ddeb7f3cc9d31
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617762"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513879"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,26 +58,26 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
  **int**
   
 ## <a name="remarks"></a>Remarks  
-BINARY_CHECKSUM(*) をテーブルの行に対して実行した場合、行が変更されていなければ同じ値が返されます。 BINARY_CHECKSUM はハッシュ関数のプロパティとなります。BINARY_CHECKSUM を 2 つの式のリストに適用した場合、その 2 つに対応する要素のデータ型が同じで、等号 (=) 演算子により比較した場合に等しければ、同じ値が返されます。 この定義では、指定した型が NULL 値であるとすると、等しい値として比較されます。 式リストのいずれかの値を変更した場合は、その式のチェックサムも変わります。 ただし、これは保証されません。 そのため、値が変更されたかどうかを検出するには、アプリケーションが変更を検出できないことを許容できる場合のみ、BINARY_CHECKSUM の使用をお勧めします。 それ以外の場合は、代わりに HashBytes を検討してください。 MD5 ハッシュ アルゴリズムを指定した場合は、HashBytes から 2 つの異なる入力に対して同じ結果が返される可能性が BINARY_CHECKSUM よりもはるかに低くなります。
+テーブルの任意の行で計算される `BINARY_CHECKSUM(*)` では、行が変更されていない限り、同じ値が返されます。 `BINARY_CHECKSUM` はハッシュ関数のプロパティに対応します。2 つの式のリストに適用した場合、2 つのリストの対応する要素のデータ型が同じであり、等号 (=) 演算子による比較で等価であれば、同じ値が返されます。 この定義では、指定した型が NULL 値であるとすると、等しい値として比較されます。 式リストのいずれかの値を変更した場合は、その式のチェックサムも変わります。 ただし、これは保証されません。 そのため、値が変更されたかどうかを検出する際には、アプリケーションが変更を検出できないことを許容できる場合のみ、`BINARY_CHECKSUM` の使用をお勧めします。 それ以外の場合は、代わりに `HASHBYTES` の使用を検討してください。 MD5 ハッシュ アルゴリズムを指定した場合は、`HASHBYTES` から 2 つの異なる入力に対して同じ結果が返される可能性が `BINARY_CHECKSUM` よりもはるかに低くなります。
   
-BINARY_CHECKSUM は式のリスト全体を処理でき、指定したリストに対しては同じ値が返されます。 BINARY_CHECKSUM を 2 つの式のリストに適用した場合、2 つのリストの対応する要素が同じ型と同じバイト表現であれば、同じ値が返されます。 この定義では、指定した型の値が NULL であった場合、これらの値は同じバイト表現として扱われます。
+`BINARY_CHECKSUM` は式のリスト全体を処理でき、指定されたリストに対して同じ値を返します。 `BINARY_CHECKSUM` を 2 つの式のリストに適用した場合、2 つのリストの対応する要素が同じ型と同じバイト表現であれば、同じ値が返されます。 この定義では、指定した型の値が NULL であった場合、これらの値は同じバイト表現として扱われます。
   
-BINARY_CHECKSUM と CHECKSUM は類似した関数で、どちらも式のリストに対するチェックサム値の計算に使用でき、式の順序が結果の値に影響します。 BINARY_CHECKSUM(*) で使用される列の順序は、テーブルまたはビュー定義で指定された列の順序です。 これには、計算列が含まれます。
+`BINARY_CHECKSUM` と `CHECKSUM` は類似する関数です。 式のリストにあるチェックサム値を計算するために使用でき、式の順序は結果となる値に影響します。 `BINARY_CHECKSUM(*)` で使用される列の順序は、テーブルまたはビュー定義に指定された列の順序です。 これには、計算列が含まれます。
   
-ロケールによっては、異なる表現の文字列が等しいとして比較される場合があります。このような場合、BINARY_CHECKSUM と CHECKSUM では文字列データ型に対して異なる値が返されます。 文字列データ型は次のとおりです。  
+ロケールによっては、異なる表現の文字列が等しいとして比較される場合があります。このような場合、`BINARY_CHECKSUM` と `CHECKSUM` では文字列データ型に対して異なる値が返されます。 文字列データ型は次のとおりです。  
 
 * **char**  
 * **nchar**  
 * **nvarchar**  
 * **varchar**  
 
-内の複数の  
+または  
 
 * **sql_variant** (**sql_variant** の基本データ型が文字列データ型の場合)。  
   
-たとえば、文字列 "McCavity" と "Mccavity" の BINARY_CHECKSUM 値は異なります。 これに対し、大文字小文字が区別されないサーバーの場合、CHECKSUM ではこれらの文字列に同じチェックサム値が返されます。 CHECKSUM 値と BINARY_CHECKSUM 値の比較を避ける必要があります。
+たとえば、文字列 "McCavity" と "Mccavity" の `BINARY_CHECKSUM` 値は異なります。 これに対し、大文字小文字が区別されないサーバーの場合、`CHECKSUM` ではこれらの文字列に同じチェックサム値が返されます。 `CHECKSUM` 値と `BINARY_CHECKSUM` 値の比較は避ける必要があります。
  
-BINARY_CHECKSUM は、任意の長さの **varbinary(max)** 型の文字と、最大 255 文字の **nvarchar(max)** 型をサポートします。
+`BINARY_CHECKSUM` では、任意の長さの **varbinary(max)** 型の文字と、最大 255 文字の **nvarchar(max)** 型がサポートされます。
   
 ## <a name="examples"></a>使用例  
 この例では、`BINARY_CHECKSUM` を使用して、テーブル行の変更を検出します。
@@ -99,7 +99,8 @@ GO
   
 ## <a name="see-also"></a>参照
 [集計関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [チェックサム (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/checksum-transact-sql.md)  
-[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)
+[HASHBYTES (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   
