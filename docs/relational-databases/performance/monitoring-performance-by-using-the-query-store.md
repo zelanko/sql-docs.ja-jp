@@ -105,7 +105,7 @@ INNER JOIN sys.query_store_query_text AS Txt
   
 ![SQL Server 2016 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー")   ![SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー") 
   
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[機能低下したクエリ]** を選択し、 ** [機能低下したクエリ]** ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部のドロップダウン ボックスを使用し、さまざまな条件に基づいてクエリをフィルター処理します:**実行時間 (ミリ秒)** (既定)、CPU 時間 (ミリ秒)、論理読み取り (KB)、論理書き込み (KB)、物理読み取り (KB)、CLR 時間 (ミリ秒)、DOP、メモリ消費量 (KB)、行数、使用済みログ メモリ (KB)、使用済み一時 DB メモリ (KB)、待機時間 (ミリ秒)。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[機能低下したクエリ]** を選択し、 **[機能低下したクエリ]** ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部のドロップダウン ボックスを使用し、さまざまな条件に基づいてクエリをフィルター処理します:**実行時間 (ミリ秒)** (既定)、CPU 時間 (ミリ秒)、論理読み取り (KB)、論理書き込み (KB)、物理読み取り (KB)、CLR 時間 (ミリ秒)、DOP、メモリ消費量 (KB)、行数、使用済みログ メモリ (KB)、使用済み一時 DB メモリ (KB)、待機時間 (ミリ秒)。  
 プランを選択して、グラフィカルなクエリ プランを表示します。 ボタンを使用して、ソース クエリの表示、クエリ プランの強制と強制解除、グリッド形式とグラフ形式の切り替え、選択したプランの比較 (複数選択時)、表示の更新を行うことができます。  
   
 ![SQL Server 2016 の SSMS オブジェクト エクスプローラーでの低下したクエリ](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016 の SSMS オブジェクト エクスプローラーでの低下したクエリ")  
