@@ -58,7 +58,7 @@ ms.locfileid: "51663051"
   
  `vbc /target:library C:\helloworld.vb`  
   
- これらのコマンドを起動、Visual c# または Visual Basic コンパイラを使用して、 **/target**ライブラリ DLL のビルドを指定するオプション。  
+ これらのコマンドを起動、Visual C# または Visual Basic コンパイラを使用して、 **/target**ライブラリ DLL のビルドを指定するオプション。  
   
 1.  アセンブリをテスト サーバーに配置する前に、すべてのビルド エラーおよび警告を解決します。  
   
