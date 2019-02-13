@@ -1,6 +1,6 @@
 ---
 title: SQL Server Analysis Services 表形式 1400 モデルでサポートされるデータ ソース |Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 856e15e7365128bc79d119afe267334fb8470832
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4c900c6f1683b9f4c96355a759c604022515d2ce
+ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041660"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56159757"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>SQL Server Analysis Services 表形式 1400 モデルにサポートされるデータ ソース
 
@@ -29,17 +29,22 @@ Azure Analysis Services では、次を参照してください。 [Azure Analys
 
 ## <a name="cloud-data-sources"></a>クラウドのデータ ソース
 
-|Azure のデータ ソース  |メモリ内  |DirectQuery  |
+|データ ソース  |メモリ内  |DirectQuery  |
 |---------|---------|---------|
 |Azure SQL データベース     |   はい      |    はい      |
-|Azure SQL データ ウェアハウス     |   はい      |   はい       |
-|Azure BLOB ストレージ     |   はい       |    いいえ      |
+|Azure SQL Data Warehouse     |   はい      |   はい       |
+|Azure Blob Storage     |   はい       |    いいえ      |
 |Azure Table Storage    |   はい       |    いいえ      |
-|Azure Cosmos DB      |  はい        |  いいえ        |
-|Azure Data Lake Store     |   はい       |    いいえ      |
-|Azure HDInsight HDFS     |     はい     |   いいえ       |
-|Azure HDInsight Spark (ベータ)     |   はい       |   いいえ       |
+|Azure Cosmos DB     |  はい        |  いいえ        |
+|Azure Data Lake Store (Gen1)<sup>[1](#gen2)</sup>      |   はい       |    いいえ      |
+|Azure HDInsight HDFS    |     はい     |   いいえ       |
+|Azure HDInsight Spark <sup> [2](#databricks)</sup>     |   はい       |   いいえ       |
 ||||
+
+<a name="gen2">1</a> -ADLS Gen2 は現在サポートされていません。   
+<a name="databricks">2</a> - azure Databricks の使用、Spark コネクタは現在サポートされていません。   
+
+
 
 **プロバイダー**   
 インメモリおよび DirectQuery モデルの Azure データ ソースへの接続は、SQL Server の .NET Framework Data Provider を使用します。
@@ -103,7 +108,7 @@ Azure Analysis Services では、次を参照してください。 [Azure Analys
 |SharePoint リスト | 
 |||
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SQL Server Analysis Services 表形式モデル 1200 にサポートされるデータ ソース](data-sources-supported-ssas-tabular.md)
 

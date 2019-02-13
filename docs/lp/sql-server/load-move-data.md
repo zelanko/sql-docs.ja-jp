@@ -4,20 +4,21 @@ hide_bc: true
 title: SQL Server - データの読み込みと移動
 description: SQL Server を使用してデータベースとデータの読み込み、移動、移行を実行するのに役立つ機能について調べます。
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: ab591fc5f9d816919113b92dc938ee9ab50b0deb
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 75a5da55b81e1ae007372174e18670d48c847372
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698210"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079358"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "51698210"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server のダウンロード</span>
+                                    <span class="likeAnH3">SQL Server 2019 (プレビュー) の試用</span>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +74,7 @@ ms.locfileid: "51698210"
         </ul>
     </div>
     <div class="container">
-        <h1>SQL Server: データの移行、読み込み、移動</h1>
+        <h1>SQL Server:データの移行、読み込み、移動</h1>
         <ul class="pivots tabLess">
             <li class="pivotItem" style="display: list-item;" data-id="#products">
                 <a href="#products" data-linktype="self-bookmark"></a>
