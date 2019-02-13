@@ -46,7 +46,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ```  
   
 ## <a name="arguments"></a>引数  
- **[N]****'**_language_**'** | **@**_language\_var_  
+ **[N]** **'**_language_**'** | **@**_language\_var_  
  [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) に格納されている言語の名前を指定します。 Unicode、または Unicode に変換される DBCS のいずれかを指定できます。 言語を Unicode で指定するには、**N'**_language_**'** を使用します。 変数として指定する場合、変数のデータ型は **sysname** であることが必要です。  
   
 ## <a name="remarks"></a>Remarks  
