@@ -41,10 +41,10 @@ ms.locfileid: "52534123"
 |-|-|-|  
 |**SQL Server データ型**|型 (System.Data.SqlTypes または Microsoft.SqlServer.Types)|**CLR データ型 (.NET Framework)**|  
 |**bigint**|**SqlInt64**|**Int64 では、null 許容\<Int64 >**|  
-|**[バイナリ]**|**SqlBytes、SqlBinary**|**Byte[]**|  
+|**binary**|**SqlBytes、SqlBinary**|**Byte[]**|  
 |**bit**|**SqlBoolean**|**ブール値、null 値許容\<ブール >**|  
 |**char**|なし|なし|  
-|**カーソル (cursor)**|なし|なし|  
+|**cursor**|なし|なし|  
 |**date**|**SqlDateTime**|**DateTime、null 許容\<DateTime >**|  
 |**datetime**|**SqlDateTime**|**DateTime、null 許容\<DateTime >**|  
 |**datetime2**|なし|**DateTime、null 許容\<DateTime >**|  
@@ -67,7 +67,7 @@ ms.locfileid: "52534123"
 |**smallint**|**SqlInt16**|**Int16 型、null 許容\<Int16 >**|  
 |**smallmoney**|**SqlMoney**|**10 進数、null 値許容\<Decimal >**|  
 |**sql_variant**|なし|**Object**|  
-|**テーブル**|なし|なし|  
+|**table**|なし|なし|  
 |**text**|なし|なし|  
 |**time**|なし|**TimeSpan、null 許容\<TimeSpan >**|  
 |**timestamp**|なし|なし|  
@@ -80,7 +80,7 @@ ms.locfileid: "52534123"
 |**xml**|**SqlXml**|なし|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>out パラメーターによるデータ型の自動変換  
- CLR メソッドは、呼び出し元のコードまたはプログラムに情報を入力のパラメーターをマークすることで返すことができます、**アウト**修飾子 (Microsoft Visual c#) または **\<Out() > ByRef** (Microsoft Visual Basic)入力パラメーターが CLR データ型、 **System.Data.SqlTypes**名前空間、および呼び出し元のプログラムは、等価なを指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型変換が自動的に行われる入力パラメーターとしてのデータの型ときに、CLR メソッドは、データ型を返します。  
+ CLR メソッドは、呼び出し元のコードまたはプログラムに情報を入力のパラメーターをマークすることで返すことができます、**アウト**修飾子 (Microsoft Visual C#) または **\<Out() > ByRef** (Microsoft Visual Basic)入力パラメーターが CLR データ型、 **System.Data.SqlTypes**名前空間、および呼び出し元のプログラムは、等価なを指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型変換が自動的に行われる入力パラメーターとしてのデータの型ときに、CLR メソッドは、データ型を返します。  
   
  たとえば、次の CLR ストアド プロシージャには、入力パラメーターの**SqlInt32**でマークされている CLR データ型**アウト**(c#) または **\<Out() > ByRef** (Visual Basic の場合):  
   
