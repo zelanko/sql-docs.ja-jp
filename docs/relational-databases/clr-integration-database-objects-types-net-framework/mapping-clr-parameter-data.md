@@ -80,7 +80,7 @@ ms.locfileid: "52534123"
 |**xml**|**SqlXml**|なし|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>out パラメーターによるデータ型の自動変換  
- CLR メソッドは、呼び出し元のコードまたはプログラムに情報を入力のパラメーターをマークすることで返すことができます、**アウト**修飾子 (Microsoft Visual C#) または **\<Out() > ByRef** (Microsoft Visual Basic)入力パラメーターが CLR データ型、 **System.Data.SqlTypes**名前空間、および呼び出し元のプログラムは、等価なを指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型変換が自動的に行われる入力パラメーターとしてのデータの型ときに、CLR メソッドは、データ型を返します。  
+ CLR メソッドは、呼び出し元のコードまたはプログラムに情報を入力のパラメーターをマークすることで返すことができます、**アウト**修飾子 (Microsoft Visual c#) または **\<Out() > ByRef** (Microsoft Visual Basic)入力パラメーターが CLR データ型、 **System.Data.SqlTypes**名前空間、および呼び出し元のプログラムは、等価なを指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型変換が自動的に行われる入力パラメーターとしてのデータの型ときに、CLR メソッドは、データ型を返します。  
   
  たとえば、次の CLR ストアド プロシージャには、入力パラメーターの**SqlInt32**でマークされている CLR データ型**アウト**(c#) または **\<Out() > ByRef** (Visual Basic の場合):  
   
