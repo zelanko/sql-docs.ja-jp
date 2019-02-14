@@ -5,20 +5,28 @@ description: SQL Server のマスター インスタンスと SQL Server 2019 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/10/2018
+ms.date: 02/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9129b436f33092054a19b858fa5bcdb8aebadec2
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 103e02d456f1176c3bb49c1e67f84215399ab5cd
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241823"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231039"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio での SQL Server のビッグ データ クラスターに接続します。
 
-この記事では、Azure Data Studio から SQL Server 2019 ビッグ データ クラスター (プレビュー) に接続する方法について説明します。
+この記事では、Azure Data Studio から SQL Server 2019 ビッグ データ クラスター (プレビュー) に接続する方法について説明します。 これには、ビッグ データ クラスターとの対話に使用される 2 つのメイン エンドポイントがあります。
+
+| エンドポイント | 説明 |
+|---|---|
+| SQL Server マスター インスタンス | SQL Server のリレーショナル データベースを含むクラスターで SQL Server マスター インスタンス。 |
+| HDFS/Spark ゲートウェイ | HDFS の記憶域クラスターで Spark ジョブを実行する機能へのアクセス。 |
+
+> [!TIP]
+> Azure Data Studio の 2019年 2 月リリースでは、SQL Server のマスター インスタンスへの接続を自動的に HDFS/Spark ゲートウェイへの UI アクセスを提供します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -28,15 +36,11 @@ ms.locfileid: "54241823"
    - **SQL Server 2019 の拡張機能**
    - **kubectl**
 
-## <a name="connect-to-the-cluster"></a>クラスターに接続します。
+## <a id="master"></a> クラスターに接続します。
 
-ビッグ データ クラスターに接続するときに、HDFS/Spark ゲートウェイまたは SQL Server のマスター インスタンスに接続するオプションがあります。 次のセクションでは、それぞれに接続する方法を示します。
+Azure データ Studio を使用したビッグ データ クラスターに接続するには、クラスターで SQL Server のマスター インスタンスに新しい接続を行います。 次の手順では、Azure Data Studio を使用して、マスター インスタンスに接続する方法について説明します。
 
-## <a id="master"></a> マスター インスタンス
-
-SQL Server のマスター インスタンスは、SQL Server のリレーショナル データベースを含む従来の SQL Server インスタンスです。 次の手順では、Azure Data Studio を使用して、マスター インスタンスに接続する方法について説明します。
-
-1. コマンドラインでは、次のコマンドを使用して、マスター インスタンスの ip アドレスを見つけます。
+1. コマンドラインから次のコマンドを使用して、マスター インスタンスの ip アドレスを見つけます。
 
    ```
    kubectl get svc endpoint-master-pool -n <your-cluster-name>
@@ -59,11 +63,22 @@ SQL Server のマスター インスタンスは、SQL Server のリレーショ
 
 1. キーを押して**Connect**、および**Server ダッシュ ボード**が表示されます。
 
-## <a id="hdfs"></a> HDFS/Spark ゲートウェイ
+Azure Data Studio の 2019年 2 月リリースでは、SQL Server のマスター インスタンスに接続することもできます HDFS/Spark ゲートウェイとやり取りします。 つまり、HDFS と、次のセクションで説明する Spark の個別の接続を使用する必要はありません。
 
-**HDFS/Spark ゲートウェイ**HDFS の記憶域プールを使用するには、Spark ジョブを実行して接続することができます。 次の手順では、Azure Data Studio に接続する方法について説明します。
+- オブジェクト エクスプ ローラーを今すぐ新しい含む**Data Services**ノードを右クリックして新しいノートブックを作成または spark ジョブの送信などのビッグ データ クラスター タスク サポートします。 
+- **Data Services**ノードも含まれています、 **HDFS**の HDFS の探索と Notebook で外部テーブルの作成や分析などのアクションを実行するフォルダー。
+- **Server ダッシュ ボード**に、接続は、タブも含まれています。 **SQL Server のビッグ データ クラスター**と**SQL Server 2019 (プレビュー)** 、拡張機能がインストールされている場合。
 
-1. コマンドラインで、次のコマンドのいずれかの HDFS/Spark ゲートウェイの IP アドレスを検索します。
+   ![Azure Data Studio データ サービス ノード](./media/connect-to-big-data-cluster/connect-data-services-node.png)
+
+> [!IMPORTANT]
+> 表示された場合**不明なエラー** UI では、する必要があります[HDFS/Spark ゲートウェイに直接接続](#hdfs)します。 このエラーの原因の 1 つは、SQL Server のマスター インスタンスおよび HDFS/Spark ゲートウェイの別のパスワードです。 Azure Data Studio では、両方に同じパスワードを使用することを前提としています。
+  
+## <a id="hdfs"></a> HDFS/Spark ゲートウェイへの接続します。
+
+ほとんどの場合、SQL Server のマスター インスタンスへの接続にアクセスできる、HDFS と Spark の使用も、 **Data Services**ノード。 、への専用接続がまだ作成することができます、 **HDFS/Spark ゲートウェイ**必要な場合。 次の手順では、Azure Data Studio に接続する方法について説明します。
+
+1. コマンドラインから次のコマンドのいずれかを使用して、HDFS/Spark gateway の IP アドレスを検索します。
    
    **AKS のデプロイ:**
 
@@ -95,6 +110,6 @@ SQL Server のマスター インスタンスは、SQL Server のリレーショ
 
 1. キーを押して**Connect**、および**Server ダッシュ ボード**が表示されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターは](big-data-cluster-overview.md)します。

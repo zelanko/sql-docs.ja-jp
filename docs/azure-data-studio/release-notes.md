@@ -3,7 +3,7 @@ title: リリース ノートと変更ログ
 titleSuffix: Azure Data Studio
 description: Azure Data Studio リリース ノート
 ms.custom: seodec18
-ms.date: 01/17/2019
+ms.date: 02/13/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,17 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: bd3151ae475f96b3e4df227bb4d312940c10bed0
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361682"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231129"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio の最新のリリース ノートと、変更ログ
 
 **[最新のリリースをインストールをダウンロードしてください。](download.md)**
 
+## <a name="february-2019-february-release"></a>2 月 2019 (2 月リリース)
+
+リリース日:2019 年 2 月 13日  
+バージョン：1.4.5
+
+- 追加**SQL Server 用管理パック**SQL Server の管理に関連する拡張機能をインストールしやすく拡張パックします。 この機能には、次が含まれます。
+    - [SQL Server エージェント](https://docs.microsoft.com/sql/azure-data-studio/sql-server-agent-extension?view=sql-server-2017)
+    - [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension?view=sql-server-2017)
+    - [SQL Server のインポート](https://docs.microsoft.com/sql/azure-data-studio/sql-server-import-extension?view=sql-server-2017)
+- Profiler の拡張機能でフィルター処理の拡張イベント サポートを追加しました
+- Added を XML として T-SQL の結果を保存することができる XML 機能として保存
+- 追加のデータ層アプリケーションのウィザードの機能強化
+    - 生成スクリプトの追加 ボタン
+    - デプロイ時にデータ損失の可能性の警告を提供する追加のビュー
+- 更新、 [SQL Server 2019 プレビュー拡張機能](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- 結果の時間の長い既定で有効になっているストリーミング クエリを実行します。
+- 解決[バグし、問題](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1)します。
 
 ## <a name="january-hotfix-2019-january-hotfix-release"></a>(1 月の修正プログラム リリース) 2019 年 1 月の修正プログラム
 

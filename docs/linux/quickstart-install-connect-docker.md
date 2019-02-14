@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: d6d8a20044d60ab83f9d649827397bf363dd2696
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+ms.openlocfilehash: 5cbd3fe2058b120a77772f2ac597f993ab3f508e
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832124"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231019"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>クイック スタート:Docker を使用した SQL Server のコンテナー イメージを実行します。
 
@@ -244,7 +244,29 @@ SELECT @@SERVERNAME,
 
 ## <a id="sapassword"></a> SA パスワードを変更します。
 
-[!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
+<!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
+
+**SA** アカウントは、セットアップ時に作成される SQL Server インスタンスのシステム管理者です。 SQL Server のコンテナーを作成した後、そのコンテナーで `echo $MSSQL_SA_PASSWORD` を実行すると、指定した環境変数 `MSSQL_SA_PASSWORD` が検索できるようになります。 セキュリティのため、SA のパスワードを変更してください。
+
+1. SA ユーザーに使用する強力なパスワードを選択します。
+
+1. `docker exec` を使用して **sqlcmd** を実行し、Transact-SQL でパスワードを変更します。 `<YourStrong!Passw0rd>` と `<YourNewStrong!Passw0rd>` を独自のパスワードの値に置き換えます。
+
+   ::: zone pivot="cs1-bash"
+   ```bash
+   sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
+      -S localhost -U SA -P '<YourStrong!Passw0rd>' \
+      -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong!Passw0rd>"'
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-powershell"
+   ```PowerShell
+   docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
+      -S localhost -U SA -P "<YourStrong!Passw0rd>" `
+      -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong!Passw0rd>'"
+   ```
+   ::: zone-end
 
 ## <a name="connect-to-sql-server"></a>SQL Server への接続
 

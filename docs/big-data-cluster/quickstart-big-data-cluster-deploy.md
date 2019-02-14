@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898987"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231069"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート:SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。
 
@@ -171,56 +171,7 @@ kubectl get svc service-proxy-lb -n <your-cluster-name>
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-SQL Server は、ビッグ データ クラスターが AKS にデプロイします。 SQL Server のマスター インスタンスと Azure Data Studio を使用して HDFS/Spark エンドポイントへの接続に Azure Data Studio を使用できます。
-
-### <a id="master"></a> マスター インスタンス
-
-SQL Server のマスター インスタンスは、SQL Server のリレーショナル データベースを含む従来の SQL Server インスタンスです。 次の手順では、Azure Data Studio を使用して、マスター インスタンスに接続する方法について説明します。
-
-1. コマンドラインでは、次のコマンドを使用して、マスター インスタンスの ip アドレスを見つけます。
-
-   ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
-   ```
-
-1. Azure Data Studio でキーを押して**F1** > **新しい接続**します。
-
-1. **接続の種類**、 **Microsoft SQL Server**します。
-
-1. SQL Server のマスター インスタンスの IP アドレスを入力**サーバー名**(例。**\<IP アドレス\>31433、**)。
-
-1. SQL ログインを入力**ユーザー名**(`SA`) と**パスワード**(配置スクリプトで入力したパスワード)。
-
-1. ターゲットを変更**データベース名**リレーショナル データベースのいずれかにします。
-
-   ![マスター インスタンスに接続します。](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
-
-1. キーを押して**Connect**、および**Server ダッシュ ボード**が表示されます。
-
-### <a id="hdfs"></a> HDFS/Spark ゲートウェイ
-
-**HDFS/Spark ゲートウェイ**HDFS の記憶域プールを使用するには、Spark ジョブを実行して接続することができます。 次の手順では、Azure Data Studio に接続する方法について説明します。
-
-1. コマンドラインで次のコマンドを使用して HDFS/Spark ゲートウェイの IP アドレスを検索します。
-
-   ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
- 
-1. Azure Data Studio でキーを押して**F1** > **新しい接続**します。
-
-1. **接続の種類**、**ビッグ データの SQL Server クラスター**します。
-   
-   > [!TIP]
-   > 表示されない場合、**ビッグ データの SQL Server クラスター**接続入力をインストールしたかどうかを確認、[拡張機能の SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md)と拡張機能の完了後に Azure Data Studio を再起動します。インストールします。
-
-1. ビッグ データのクラスターの IP アドレスを入力**サーバー名**(ポートを指定しません)。
-
-1. 入力`root`の**ユーザー**を指定し、**パスワード**配置スクリプトで入力したビッグ データ クラスターにします。
-
-   ![HDFS/Spark ゲートウェイへの接続します。](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
-
-1. キーを押して**Connect**、および**Server ダッシュ ボード**が表示されます。
+SQL Server は、ビッグ データ クラスターが AKS にデプロイします。 クラスターに接続する Azure Data Studio を使用できます。 詳細については、次を参照してください。 [Azure データ Studio を使用した SQL Server クラスターのビッグ データへの接続](connect-to-big-data-cluster.md)します。
 
 ## <a name="clean-up"></a>クリーンアップします。
 
@@ -235,7 +186,7 @@ Azure でビッグ データ クラスターおよび AKS サービスを削除�
 az group delete -n <resource group name>
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 配置スクリプトでは、Azure Kubernetes サービスが構成されているし、SQL Server 2019 のビッグ データ クラスターをデプロイすることもできます。 手動によるインストールを将来のデプロイをカスタマイズすることもできます。 どのビッグ データについてクラスターは、デプロイおよびデプロイをカスタマイズする方法については、次を参照してください。[ビッグ データの SQL Server をデプロイする方法を Kubernetes クラスターの](deployment-guidance.md)します。
 
