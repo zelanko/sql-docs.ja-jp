@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d393b8f634290069bfe12d3b69c1917fb6ac559f
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: b8d274e0d43f476d2e00b64dc4ea2188c79ae082
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421469"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832144"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -309,68 +309,73 @@ ALTER DATABASE の SET オプションを使ってデータベースの属性を
 [ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbls)  
 ALTER DATABASE のデータベース互換レベルに関連した SET オプションの構文と関連情報について説明します。  
 
-## <a name="syntax"></a>構文 
+## <a name="syntax"></a>構文
 
-```  
+```
 -- Azure SQL Database Syntax  
 ALTER DATABASE { database_name | CURRENT }  
 {  
     MODIFY NAME = new_database_name  
-  | MODIFY ( <edition_options> [, ... n] ) 
-  | SET { <option_spec> [ ,... n ] WITH <termination>} 
-  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
+  | MODIFY ( <edition_options> [, ... n] )
+  | SET { <option_spec> [ ,... n ] WITH <termination>}
+  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
   | ADD SECONDARY ON SERVER <partner_server_name>  
     [WITH ( <add-secondary-option>::= [, ... n] ) ]  
   | REMOVE SECONDARY ON SERVER <partner_server_name>  
   | FAILOVER  
   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
 }  
-[;] 
+[;]
 
-<edition_options> ::= 
+<edition_options> ::=
 {  
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }  
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'} 
-  | SERVICE_OBJECTIVE = 
+  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'}
+  | SERVICE_OBJECTIVE =
        {  <service-objective>
-       | { ELASTIC_POOL (name = <elastic_pool_name>) } 
+       | { ELASTIC_POOL (name = <elastic_pool_name>) }
        } 
 }  
 
 <add-secondary-option> ::=  
    {  
       ALLOW_CONNECTIONS = { ALL | NO }  
-     | SERVICE_OBJECTIVE = 
-       {  <service-objective> 
-       | { ELASTIC_POOL ( name = <elastic_pool_name>) } 
-       } 
+     | SERVICE_OBJECTIVE =
+       {  <service-objective>
+       | { ELASTIC_POOL ( name = <elastic_pool_name>) }
+       }
    }  
 
-<service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+<service-objective> ::=  { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
-      | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
-      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
-      | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
-      | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
-      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6' |
+       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24' |
+       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14' |
+       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80' |
+       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6' |
+       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24' |
+       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14' |
+       | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80' |
+       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
+       | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+      | { ELASTIC_POOL(name = <elastic_pool_name>) } 
       }
 
-<option_spec> ::= 
+<option_spec> ::=
 {  
-    <auto_option> 
-  | <change_tracking_option> 
-  | <cursor_option> 
+    <auto_option>
+  | <change_tracking_option>
+  | <cursor_option>
   | <db_encryption_option>  
-  | <db_update_option> 
-  | <db_user_access_option> 
+  | <db_update_option>
+  | <db_user_access_option>
   | <delayed_durability_option>  
   | <parameterization_option>  
   | <query_store_options>  
   | <snapshot_option>  
   | <sql_option> 
-  | <target_recovery_time_option> 
+  | <target_recovery_time_option>
   | <termination>  
   | <temporal_history_retention>  
 }  
@@ -378,7 +383,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引数
 
-*database_name*  
+*database_name*
 
 変更するデータベースの名前を指定します。  
   
@@ -388,21 +393,21 @@ CURRENT
   
 MODIFY NAME **=**_new_database_name_  
 
-データベースの名前を、*new_database_name* で指定した名前に変更します。 次の例では、`db1` データベースの名前を `db2` に変更します。   
+データベースの名前を、*new_database_name* で指定した名前に変更します。 次の例では、`db1` データベースの名前を `db2` に変更します。
 
-```sql  
+```sql
 ALTER DATABASE db1  
     MODIFY Name = db2 ;  
-```    
+```
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])    
+MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])
 
 データベースのサービス階層を変更します。 
 
 次の例では、エディションを `premium` に変更します。
 
 ```sql
-ALTER DATABASE current 
+ALTER DATABASE current
     MODIFY (EDITION = 'premium');
 ```
 
@@ -413,7 +418,7 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)
 データベースの最大サイズを指定します。 最大サイズは、データベースの EDITION プロパティの有効な値セットに準拠している必要があります。 データベースの最大サイズを変更すると、データベースの EDITION も変更される場合があります。 
 
 > [!NOTE]
-> **MAXSIZE** 引数は、ハイパースケール サービス層の単一データベースには適用されません。 ハイパースケール層のデータベースは、必要に応じて 100 TB まで拡張できます。 SQL Database サービスによってストレージが自動的に追加されます。最大サイズを設定する必要はありません。
+> **MAXSIZE** 引数は、ハイパースケール サービス層の単一データベースには適用されません。 ハイパースケール サービス層のデータベースは、必要に応じて 100 TB まで拡張できます。 SQL Database サービスによってストレージが自動的に追加されます。最大サイズを設定する必要はありません。
 
 **DTU に基づくモデル**
 
@@ -444,32 +449,56 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)
 \* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。  P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、米国政府バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU に基づくモデルのリソースの制限事項に関する詳細については、「[DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(DTU に基づくリソースの制限) を参照してください。  
 
 DTU に基づくモデルの MAXSIZE 値。指定すると、上記の表に示すように指定されたサービス層で有効な値である必要があります。
- 
+
 **vCore に基づくモデル**
 
-**General Purpose サービス層- 第 4 世代のコンピューティング プラットフォーム**
+**General Purpose サービス層 - 第 4 世代のコンピューティング プラットフォーム (パート 1)**
 
-|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
-|:--- | --: |--: |--: |--: |--: |--:|
-|データの最大サイズ (GB)|1024|1024|1536|3072|4096|4096|
+|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
+|:----- | ------: |-------: |-------: |-------: |-------: |--------:|
+|データの最大サイズ (GB)|1024|1024|1024|1536|1536|1536|
 
-**General Purpose サービス層 - 第 5 世代のコンピューティング プラットフォーム**
+**General Purpose サービス層 - 第 4 世代のコンピューティング プラットフォーム (パート 2)**
 
-|MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
-|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
-|データの最大サイズ (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
+|MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
+|:----- | ------: |-------: |-------: |-------: |-------: |--------:|
+|データの最大サイズ (GB)|1536|3072|3072|3072|4096|4096|
 
-**Business Critical サービス層 - 第 4 世代のコンピューティング プラットフォーム**
+**General Purpose サービス層 - 第 5 世代のコンピューティング プラットフォーム (パート 1)**
 
-|パフォーマンス レベル|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
-|:--- | --: |--: |--: |--: |--: |--: |
+|MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
+|:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
+|データの最大サイズ (GB)|1024|1024|1024|1536|1536|1536|1536|
+
+**General Purpose サービス層 - 第 5 世代のコンピューティング プラットフォーム (パート 2)**
+
+|MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
+|:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
+|データの最大サイズ (GB)|3072|3072|3072|4096|4096|4096|4096|
+
+**Business Critical サービス層 - 第 4 世代のコンピューティング プラットフォーム (パート 1)**
+
+|パフォーマンス レベル|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
+|:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |データの最大サイズ (GB)|1024|1024|1024|1024|1024|1024|
 
-**Business Critical サービス層 - 第 5 世代のコンピューティング プラットフォーム**
+**Business Critical サービス層 - 第 4 世代のコンピューティング プラットフォーム (パート 2)**
 
-|MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
-|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
-|データの最大サイズ (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
+|パフォーマンス レベル|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
+|:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
+|データの最大サイズ (GB)|1024|1024|1024|1024|1024|1024|
+
+**Business Critical サービス層 - 第 5 世代のコンピューティング プラットフォーム (パート 1)**
+
+|MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
+|:----- | ------: |-------: |-------: |-------: |---------: |--------:|--------: |
+|データの最大サイズ (GB)|1024|1024|1024|1536|1536|1536|1536|
+
+**Business Critical サービス層 - 第 5 世代のコンピューティング プラットフォーム (パート 2)**
+
+|MAXSIZE|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
+|:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
+|データの最大サイズ (GB)|3072|3072|3072|4096|4096|4096|4096|
 
 vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない場合、既定値は 32 GB です。 仮想コアに基づくモデルのリソースの制限事項の詳細については、[仮想コアに基づくリソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関するページを参照してください。
   
@@ -488,9 +517,15 @@ ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
 
-パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_4`、`GP_GEN4_8`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_4`、`BC_GEN4_8`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_48`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_8`、`BC_Gen5_16`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_48`、`BC_Gen5_80`、`HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80` です。  
+- **単一のデータベースおよびプールされたデータベースの場合**
 
-サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、「[Azure SQL Database サービス レベル概要](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)」、「[DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(DTU に基づくリソースの制限)、「[vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(vCore に基づくリソースの制限) を参照してください。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。 
+  - パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_3`、`GP_GEN4_4`、`GP_GEN4_5`、`GP_GEN4_6`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_9`、`GP_GEN4_10`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_3`、`BC_GEN4_4`、`BC_GEN4_5`、`BC_GEN4_6`、`BC_GEN4_7`、`BC_GEN4_8`、`BC_GEN4_9`、`BC_GEN4_10`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_6`、`GP_Gen5_8`、`GP_Gen5_10`、`GP_Gen5_12`、`GP_Gen5_14`、`GP_Gen5_16`、`GP_Gen5_18`、`GP_Gen5_20`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_6`、`BC_Gen5_8`、`BC_Gen5_10`、`BC_Gen5_12`、`BC_Gen5_14`、`BC_Gen5_16`、`BC_Gen5_18`、`BC_Gen5_20`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_40`、`BC_Gen5_80` です。
+
+  - **ハイパースケール サービス層の単一データベースの場合**
+
+  パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80` です。
+
+サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、「[Azure SQL Database サービス レベル概要](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)」、「[DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(DTU に基づくリソースの制限)、「[vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(vCore に基づくリソースの制限) を参照してください。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。
   
 MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
 
@@ -510,7 +545,7 @@ WITH ALLOW_CONNECTIONS { **ALL** | NO }
 
 ALLOW_CONNECTIONS が指定されていない場合は、既定では ALL に設定されます。 ALL に設定されている場合は、適切なアクセス許可を持つすべてのログインに接続を許可する読み取り専用データベースになります。  
   
-WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`,`GP_Gen5_4`,`GP_Gen5_8`,`GP_Gen5_16`,`GP_Gen5_24`,`GP_Gen5_32`,`GP_Gen5_48`,`GP_Gen5_80`, `BC_Gen5_2`,`BC_Gen5_4`,`BC_Gen5_8`,`BC_Gen5_16`,`BC_Gen5_24`,`BC_Gen5_32`,`BC_Gen5_48`,`BC_Gen5_80` }  
+WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80` }  
 
 SERVICE_OBJECTIVE が指定されていない場合、セカンダリ データベースがプライマリ データベースと同じサービス レベルで作成します。 SERVICE_OBJECTIVE を指定した場合は、指定したレベルにセカンダリ データベースが作成されます。 このオプションは、低価格のサービス レベルで地理的レプリケーションのセカンダリの作成をサポートします。 指定する SERVICE_OBJECTIVE は、ソースと同じエディション内でなければなりません。 たとえば、エディションが Premium の場合、S0 を指定することはできません。  
   
@@ -519,29 +554,29 @@ ELASTIC_POOL (name = \<elastic_pool_name>)
 ELASTIC_POOL が指定されていない場合、セカンダリ データベースはエラスティック プールに作成されません。 ELASTIC_POOL が指定されている場合、セカンダリ データベースが指定されたプールに作成されます。  
   
 > [!IMPORTANT]  
->  セカンダリを追加のコマンドを実行するユーザーは、DBManager をプライマリ サーバー上にある、セカンダリ サーバー上でローカルのデータベースでは、および DBManager db_owner のメンバーシップがある必要があります。  
+> セカンダリを追加のコマンドを実行するユーザーは、DBManager をプライマリ サーバー上にある、セカンダリ サーバー上でローカルのデータベースでは、および DBManager db_owner のメンバーシップがある必要があります。  
   
 REMOVE SECONDARY ON SERVER  \<partner_server_name>  
 
 指定した地理的レプリケーションのセカンダリ データベースに、指定したサーバーを削除します。 コマンドは、プライマリ データベースをホストしているサーバーの master データベースで実行されます。  
   
 > [!IMPORTANT]  
->  セカンダリの削除のコマンドを実行するユーザーは、プライマリ サーバーの DBManager をする必要があります。  
+> セカンダリの削除のコマンドを実行するユーザーは、プライマリ サーバーの DBManager をする必要があります。  
   
 FAILOVER  
 
 セカンダリ データベースをコマンドをプライマリが実行され、降格されますが、現在のプライマリになる新しいセカンダリ geo レプリケーションの連携を昇格させます。 このプロセスの一環として、地理的レプリケーションのモードが一時的に非同期モードからに切り替える同期モードです。 フェールオーバー中。  
   
-1.  プライマリでは、新しいトランザクションの処理を停止します。  
+1. プライマリでは、新しいトランザクションの処理を停止します。  
   
-2.  すべての未処理のトランザクションは、セカンダリにフラッシュされます。  
+2. すべての未処理のトランザクションは、セカンダリにフラッシュされます。  
   
-3.  セカンダリがプライマリになり、古いプライマリで非同期の地理的レプリケーションを開始すると、新しいセカンダリです。  
+3. セカンダリがプライマリになり、古いプライマリで非同期の地理的レプリケーションを開始すると、新しいセカンダリです。  
   
 このシーケンスは、データの損失が発生しないことを保証します。 両方のデータベースは使用できません期間は、役割の交代中に、0 ～ 25 の数秒です。 合計の操作は、約 1 分以内で実行する必要があります。 このコマンドが実行されたときにプライマリ データベースが使用できない場合、プライマリ データベースが使用できないことを示すエラー メッセージで、コマンドは失敗します。 場合は、フェールオーバー プロセスが完了しない、スタックが表示されます、強制フェールオーバー コマンドを使用してデータが失われるをそのまま使用し、次に、データの損失を回復する必要がある場合は、呼び出す devops 失われたデータを回復するには、(CSS) およびできます。  
   
 > [!IMPORTANT]  
->  フェールオーバー コマンドを実行するユーザーは、プライマリ サーバーとセカンダリ サーバーの両方で DBManager をする必要があります。  
+> フェールオーバー コマンドを実行するユーザーは、プライマリ サーバーとセカンダリ サーバーの両方で DBManager をする必要があります。  
   
 FORCE_FAILOVER_ALLOW_DATA_LOSS  
 
@@ -558,9 +593,9 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS
 4. その他のセカンダリがある場合は、自動的に再構成されて新しいプライマリのセカンダリになります。 このプロセスは非同期で、このプロセスが完了するまで、遅延が発生にすることがあります。 再構成が完了するまで、セカンダリは古いプライマリのセカンダリであり続けます。  
   
 > [!IMPORTANT]  
->  Force_failover_allow_data_loss の各コマンドを実行するユーザーは、プライマリ サーバーとセカンダリ サーバーの両方で DBManager をする必要があります。  
+> Force_failover_allow_data_loss の各コマンドを実行するユーザーは、プライマリ サーバーとセカンダリ サーバーの両方で DBManager をする必要があります。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
 
 データベースを削除するには、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) を使用します。  
 データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。  
@@ -569,20 +604,20 @@ ALTER DATABASE ステートメントは自動コミット モード (既定の�
   
 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
   
-プロシージャ キャッシュは、次のシナリオでもフラッシュされます。既定のオプションが設定されているデータベースに対して複数のクエリを実行した。 データベースはその後削除されます。    
+プロシージャ キャッシュは、次のシナリオでもフラッシュされます。既定のオプションが設定されているデータベースに対して複数のクエリを実行した。 データベースはその後削除されます。
   
-## <a name="viewing-database-information"></a>データベース情報の表示  
+## <a name="viewing-database-information"></a>データベース情報の表示
 
 カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
 
 データベースを変更できるのは、(準備プロセスによって作成される) サーバーレベルのプリンシパルのログイン、または `dbmanager` データベース ロールのメンバーだけです。  
   
 > [!IMPORTANT]  
->  データベースの所有者であっても `dbmanager` ロールのメンバーでない場合は、データベースを変更できません。  
+> データベースの所有者であっても `dbmanager` ロールのメンバーでない場合は、データベースを変更できません。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>使用例
   
 ### <a name="a-check-the-edition-options-and-change-them"></a>A. エディション オプションを確認して変更します。
 
@@ -597,39 +632,47 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJ
 ### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. データベースを別の柔軟なプールに移動します。  
 
 pool1 という名前のプールに既存のデータベースを移動します。  
-  
-```sql  
-ALTER DATABASE db1   
+
+```sql
+ALTER DATABASE db1
 MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;  
-```  
-  
+```
+
 ### <a name="c-add-a-geo-replication-secondary"></a>C. 地理的レプリケーション セカンダリを追加します。  
 
 ローカル サーバー上の db1 のサーバー `secondaryserver` に読み取り可能なセカンダリ データベース db1 を作成します。  
   
-```sql  
-ALTER DATABASE db1   
-ADD SECONDARY ON SERVER secondaryserver   
-WITH ( ALLOW_CONNECTIONS = ALL )  
-```  
-  
+```sql
+ALTER DATABASE db1
+ADD SECONDARY ON SERVER secondaryserver
+WITH ( ALLOW_CONNECTIONS = ALL )
+```
+
 ### <a name="d-remove-a-geo-replication-secondary"></a>D. セカンダリ Geo レプリケーションを削除します。  
- 
+
 サーバー `secondaryserver` 上のセカンダリ データベース db1 を削除します。  
-  
-```sql  
-ALTER DATABASE db1   
-REMOVE SECONDARY ON SERVER testsecondaryserver   
-```  
-  
+
+```sql
+ALTER DATABASE db1
+REMOVE SECONDARY ON SERVER testsecondaryserver
+```
+
 ### <a name="e-failover-to-a-geo-replication-secondary"></a>E. 地理的レプリケーションのセカンダリにフェールオーバー  
 
 サーバー `secondaryserver` で実行されると、サーバー `secondaryserver` 上のセカンダリ データベース db1 を昇格させて新しいプライマリ データベースにします。  
   
-```sql  
+```sql
 ALTER DATABASE db1 FAILOVER  
-```  
-  
+```
+
+### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. 単一データベースをサービス層 S0 (標準エディション、パフォーマンス レベル 0) に更新します。
+
+単一データベースをパフォーマンス レベルが S0、最大サイズが 250 GB の標準エディション (サービス層) に更新します。
+
+```sql
+ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
+```
+
 ## <a name="see-also"></a>参照
   
 [CREATE DATABASE - Azure SQL データベース](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbls)   

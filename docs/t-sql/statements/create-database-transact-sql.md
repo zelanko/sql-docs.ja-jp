@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: SQL Server、Azure SQL Database、Azure SQL Data Warehouse、Parallel Data Warehouse のデータベース構文を作成します
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 76f0d24c3c8eb0c2cfa77b69d45d8f5d88517a4f
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 94c8b7fb3a295b7e2175ca2e25d5b0ee64327b18
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570845"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832164"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -922,13 +922,17 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   | ( EDITION = {  'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' } 
   | SERVICE_OBJECTIVE = 
     {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
-      | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'  
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
-      | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
-      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
-      | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
-      | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
-      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'
+       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6' |
+       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24' |
+       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14' |
+       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80' |
+       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6' |
+       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24' |
+       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14' |
+       | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80' |
+       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
+       | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
       | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }
 ```  
@@ -939,14 +943,19 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 CREATE DATABASE database_name  
     AS COPY OF [source_server_name.] source_database_name  
     [ ( SERVICE_OBJECTIVE = 
-      {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |  
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
-      | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
-      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
-      | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
-      | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
-      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
-        | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
+      { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'
+       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6' |
+       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24' |
+       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14' |
+       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80' |
+       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6' |
+       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24' |
+       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14' |
+       | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80' |
+       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
+       | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+      | { ELASTIC_POOL(name = <elastic_pool_name>) } )  
    ]  
 [;] 
 ```  
@@ -1014,63 +1023,73 @@ MAXSIZE
 
 DTU に基づくモデルの MAXSIZE 値。指定すると、上記の表に示すように指定されたサービス層で有効な値である必要があります。
  
-**SQL Database サーバー上の単一のデータベースおよびプールされたデータベースの仮想コア ベースのモデル**
+**vCore に基づくモデル**
 
-**General Purpose サービス層- 第 4 世代のコンピューティング プラットフォーム**
+**General Purpose サービス層 - 第 4 世代のコンピューティング プラットフォーム (パート 1)**
 
-|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
-|:--- | --: |--: |--: |--: |--: |--:|
-|データの最大サイズ (GB)|1024|1024|1536|3072|4096|4096|
+|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
+|:----- | ------: |-------: |-------: |-------: |-------: |--------:|
+|データの最大サイズ (GB)|1024|1024|1024|1536|1536|1536|
 
-**General Purpose サービス層 - 第 5 世代のコンピューティング プラットフォーム**
+**General Purpose サービス層 - 第 4 世代のコンピューティング プラットフォーム (パート 2)**
 
-|MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
-|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
-|データの最大サイズ (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
+|MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24|
+|:----- | ------: |-------: |-------: |-------: |-------: |--------:|
+|データの最大サイズ (GB)|1536|3072|3072|3072|4096|4096|
 
-**Business Critical サービス層 - 第 4 世代のコンピューティング プラットフォーム**
+**General Purpose サービス層 - 第 5 世代のコンピューティング プラットフォーム (パート 1)**
 
-|パフォーマンス レベル|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
-|:--- | --: |--: |--: |--: |--: |--: |
+|MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
+|:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
+|データの最大サイズ (GB)|1024|1024|1024|1536|1536|1536|1536|
+
+**General Purpose サービス層 - 第 5 世代のコンピューティング プラットフォーム (パート 2)**
+
+|MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
+|:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
+|データの最大サイズ (GB)|3072|3072|3072|4096|4096|4096|4096|
+
+**Business Critical サービス層 - 第 4 世代のコンピューティング プラットフォーム (パート 1)**
+
+|パフォーマンス レベル|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
+|:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |データの最大サイズ (GB)|1024|1024|1024|1024|1024|1024|
 
-**Business Critical サービス層 - 第 5 世代のコンピューティング プラットフォーム**
+**Business Critical サービス層 - 第 4 世代のコンピューティング プラットフォーム (パート 2)**
 
-|MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
-|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
-|データの最大サイズ (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
+|パフォーマンス レベル|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
+|:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
+|データの最大サイズ (GB)|1024|1024|1024|1024|1024|1024|
+
+**Business Critical サービス層 - 第 5 世代のコンピューティング プラットフォーム (パート 1)**
+
+|MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
+|:----- | ------: |-------: |-------: |-------: |---------: |--------:|--------: |
+|データの最大サイズ (GB)|1024|1024|1024|1536|1536|1536|1536|
+
+**Business Critical サービス層 - 第 5 世代のコンピューティング プラットフォーム (パート 2)**
+
+|MAXSIZE|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
+|:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
+|データの最大サイズ (GB)|3072|3072|3072|4096|4096|4096|4096|
 
 vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない場合、既定値は 32 GB です。 仮想コアに基づくモデルのリソースの制限事項の詳細については、[仮想コアに基づくリソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関するページを参照してください。
-
-**マネージド インスタンス内のデータベースの仮想コア ベースのモデル**
-
-**General Purpose サービス層- 第 4 世代のコンピューティング プラットフォーム**
-
-|MAXSIZE|GP_Gen4_8|GP_Gen4_16|GP4_24|
-|:--- | --: |--: |
-|データの最大サイズ (TB)|8|8|8|
-
-**General Purpose サービス層 - 第 5 世代のコンピューティング プラットフォーム**
-
-|MAXSIZE|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|
-|:----- | ------: |-------: |-------: |--------: |--------: |---------:|
-|データの最大サイズ (TB)|8|8|8|8|8|
-
+  
 引数 MAXSIZE および EDITION には、以下の規則が適用されます。  
-
-- EDITION が指定され、MAXSIZE が指定されていない場合は、エディションの既定値が使用されます。 たとえば、EDITION が Standard に設定され、MAXSIZE が指定されていない場合、MAXSIZE は自動的に 250 MB に設定されます。  
+  
+- EDITION が指定され、MAXSIZE が指定されていない場合は、エディションの既定値が使用されます。 たとえばは、EDITION が Standard に設定し、MAXSIZE が指定されていない場合、MAXSIZE は自動的に 500 MB に設定します。  
+  
 - MAXSIZE も EDITION が指定されている場合、EDITION は、標準 (S0) に設定し、MAXSIZE は 250 GB に設定します。  
 
 SERVICE_OBJECTIVE
 
 - **単一のデータベースおよびプールされたデータベースの場合**
 
-  - パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_4`、`GP_GEN4_8`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_4`、`BC_GEN4_8`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_48`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_8`、`BC_Gen5_16`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_48`、`BC_Gen5_80` です。 
- - **ハイパースケール サービス層の単一のデータベースの場合** パフォーマンス レベルを指定します。 サービス目標に使用できる値: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、    `HS_Gen5_4`、    `HS_Gen5_8`、    `HS_Gen5_16`、   `HS_Gen5_24`、   `HS_Gen5_32`、   `HS_Gen5_48`、   `HS_Gen5_80`。 
- 
-- **マネージド インスタンス上のデータベースの場合**
+  - パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_3`、`GP_GEN4_4`、`GP_GEN4_5`、`GP_GEN4_6`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_9`、`GP_GEN4_10`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_3`、`BC_GEN4_4`、`BC_GEN4_5`、`BC_GEN4_6`、`BC_GEN4_7`、`BC_GEN4_8`、`BC_GEN4_9`、`BC_GEN4_10`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_6`、`GP_Gen5_8`、`GP_Gen5_10`、`GP_Gen5_12`、`GP_Gen5_14`、`GP_Gen5_16`、`GP_Gen5_18`、`GP_Gen5_20`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_6`、`BC_Gen5_8`、`BC_Gen5_10`、`BC_Gen5_12`、`BC_Gen5_14`、`BC_Gen5_16`、`BC_Gen5_18`、`BC_Gen5_20`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_40`、`BC_Gen5_80` です。
 
-  パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`GP_GEN4_8`、`GP_GEN4_16`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40` です。 
+  - **ハイパースケール サービス層の単一データベースの場合**
+
+  パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80` です。
 
 サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、「[Azure SQL データベースのサービス階層](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers)」をご覧ください。 指定した SERVICE_OBJECTIVE が EDITION によってサポートされていません、エラーが表示されます。 SERVICE_OBJECTIVE の値を 1 つの階層から別の階層に変更する場合 (たとえば、S1 から P1) は、EDITION の値も変更する必要があります。 サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、「[Azure SQL Database サービス レベル概要](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)」、「[DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(DTU に基づくリソースの制限)、「[vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(vCore に基づくリソースの制限) を参照してください。  PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。 
   
