@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b9bb2a1744b7fdc8b734ab3435ef53e0710d8c8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411519"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771348"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,15 +28,15 @@ Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](.
 ## <a name="prerequisites"></a>Prerequisites  
 作業を開始する前に、次の重要な情報を確認してください。  
   
-- [サポートされるバージョンとエディションのアップグレード](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 自分のバージョンの Windows オペレーティング システムと SQL Server から SQL Server 2016 にアップグレードできることを確認します。 たとえば、SQL Server 2005 インスタンスから [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]に直接アップグレードすることはできません。  
+- [サポートされているバージョンとエディションのアップグレード](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md):使用している Windows オペレーティング システムと SQL Server のバージョンから SQL Server 2016 にアップグレードできることを確認します。 たとえば、SQL Server 2005 インスタンスから [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]に直接アップグレードすることはできません。  
   
-- [データベース エンジンのアップグレード方法の選択](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): 正しい順序でアップグレードするには、サポートされるバージョンとエディションのアップグレードに基づいて、また、自分の環境にインストールされているその他のコンポーネントに基づいて、適切なアップグレードの方法と手順を選択します。  
+- [データベース エンジンのアップグレード方法の選択](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md):正しい順序でアップグレードするには、サポートされるバージョンとエディションのアップグレードの確認と、環境にインストールされているその他のコンポーネントに基づいて、適切なアップグレードの方法と手順を選択します。  
   
-- [データベース エンジンのアップグレード計画の策定およびテスト](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): リリース ノート、アップグレードに関する既知の問題、アップグレード前のチェックリストを確認して、アップグレード計画の作成およびテストを行います。  
+- [データベース エンジンのアップグレード計画の策定およびテスト](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md):リリース ノート、アップグレードに関する既知の問題、アップグレード前のチェックリストを確認して、アップグレードの計画を作成およびテストします。  
   
-- [SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]をインストールするためのソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
+- [SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインストールにおけるソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
 
-- [変更データ キャプチャまたはレプリケーションを AG データベースに使用するかどうかの確認](#special-steps-for-change-data-capture-or-replication): AG のデータベースを変更データ キャプチャ (CDC) に対して有効にする場合は、この[手順](#special-steps-for-change-data-capture-or-replication)を完了してください。
+- [変更データ キャプチャまたはレプリケーションを AG データベースに使用するかどうかの確認](#special-steps-for-change-data-capture-or-replication):AG のデータベースを変更データ キャプチャ (CDC) に対して有効にする場合は、この[手順](#special-steps-for-change-data-capture-or-replication)を完了してください。
 
 >[!NOTE]  
 >レプリカをアップグレードするローリング アップグレードでなければ、同じ AG でさまざまなバージョンの SQL Server インスタンスを混在させることはできません。 新しいバージョンの SQL Server インスタンスを既存の AG に新しいレプリカとして追加することはできません。 たとえば、SQL Server 2017 レプリカは既存の SQL Server 2016 AG に追加できません。 AG を使用して新しいバージョンの SQL Server インスタンスに移行するには、SQL Server 2016 Enterprise Edition 以降でサポートされている分散型 AG を使用するしかありません。
@@ -67,6 +67,11 @@ Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](.
 -   他のセカンダリ レプリカ インスタンスをアップグレードまたは更新する前に、プライマリ レプリカ インスタンスをアップグレードしないでください。 アップグレードされたプライマリ レプリカから、同じバージョンにまだアップグレードされていない [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] インスタンスのあるセカンダリ レプリカにログを送信できなくなります。 セカンダリ レプリカへのデータ移動が中断されているときには、そのレプリカに対する自動フェールオーバーは実行されず、可用性データベースでデータ損失が発生する危険性が高まります。  
   
 -   AG をフェールオーバーする前に、フェールオーバー ターゲットの同期状態が SYNCHRONIZED であることを確認してください。  
+
+  > [!WARNING]
+  > 古いバージョンの SQL Server がインストールされているサーバーに、SQL Server の新しいインスタンスまたは新しいバージョンをインストールすると、誤って**古いバージョンの SQL Server でホストされていた可用性グループが停止する可能性があります。** これは、SQL Server のインスタンスまたはバージョンのインストールの間に、SQL Server の高可用性モジュール (RHS.EXE) がアップグレードされるためです。 これにより、サーバー上のプライマリ ロール内の既存の可用性グループが一時的に中断します。 そのため、可用性グループが使用されている古いバージョンの SQL Server を既にホストしているシステムに、新しいバージョンの SQL Server をインストールするときは、次のいずれかのようにすることを強くお勧めします。
+  > - メンテナンス期間中に、新しいバージョンの SQL Server をインストールします。 
+  > - 可用性グループをセカンダリ レプリカにフェールオーバーして、新しい SQL Server インスタンスのインストールの間はプライマリではないようにします。 
   
 ## <a name="rolling-upgrade-process"></a>ローリング アップグレード プロセス  
  実際のプロセスは、AG の配置トポロジや各レプリカのコミット モードなどの要因によって変わります。 ただし、最も単純なシナリオにおけるローリング アップグレードは、次の手順で構成される単純な複数段階のプロセスになります。  
@@ -191,7 +196,7 @@ Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](.
 
 >[!IMPORTANT]
 >- すべてのステップ間の同期を確認します。 次のステップに進む前に、同期コミット レプリカが可用性グループ内で同期され、グローバル プライマリが分散型 AG 内のフォワーダーと同期されていることを確認します。 
->- **推奨事項**: 同期を確認するたびに、データベース ノードと SQL Server Management Studio 内の分散型 AG ノードの両方を更新してください。 すべてが同期された後に、各レプリカの状態のスクリーンショットを保存します。 これは、現在のステップを追跡したり、次のステップに進む前にすべてが正常に作業されたという証拠を提供したり、問題が発生した場合にトラブルシューティングでサポートを行ったりするのに役立ちます。 
+>- **推奨事項**:同期を確認するたびに、データベース ノードと SQL Server Management Studio 内の分散型 AG ノードの両方を更新してください。 すべてが同期された後に、各レプリカの状態のスクリーンショットを保存します。 これは、現在のステップを追跡したり、次のステップに進む前にすべてが正常に作業されたという証拠を提供したり、問題が発生した場合にトラブルシューティングでサポートを行ったりするのに役立ちます。 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>分散型可用性グループのローリング アップグレードの例の図
@@ -223,7 +228,7 @@ Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](.
 
 >[!IMPORTANT]
 >- すべてのステップ間の同期を確認します。 次のステップに進む前に、同期コミット レプリカが可用性グループ内で同期され、グローバル プライマリが分散型 AG 内のフォワーダーと同期されていることを確認します。 
->- 推奨事項: 同期を確認するたびに、データベース ノードと SQL Server Management Studio 内の分散型 AG ノードの両方を更新してください。 すべてが同期された後は、スクリーンショットを取得して保存します。 これは、現在のステップを追跡したり、次のステップに進む前にすべてが正常に作業されたという証拠を提供したり、問題が発生した場合にトラブルシューティングでサポートを行ったりするのに役立ちます。 
+>- 推奨事項:同期を確認するたびに、データベース ノードと SQL Server Management Studio 内の分散型 AG ノードの両方を更新してください。 すべてが同期された後は、スクリーンショットを取得して保存します。 これは、現在のステップを追跡したり、次のステップに進む前にすべてが正常に作業されたという証拠を提供したり、問題が発生した場合にトラブルシューティングでサポートを行ったりするのに役立ちます。 
 
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>変更データ キャプチャまたはレプリケーションの特別な手順

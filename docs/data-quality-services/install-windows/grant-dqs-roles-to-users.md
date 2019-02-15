@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfc154bfb253542e5bdd633504f71e9987caa625
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 00246af5bd0b577d7f1c7aebf4711d58a9828865
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617152"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028443"
 ---
 # <a name="grant-dqs-roles-to-users"></a>ユーザーに DQS ロールを付与する
 
@@ -42,7 +42,7 @@ ms.locfileid: "52617152"
   
 5.  ユーザーの検証後、左ペインの **[ユーザー マッピング]** ページをクリックします。  
   
-6.  右ペインで、 **[DQS_MAIN]** データベースの **[マップ]** 列のチェック ボックスをオンにし、ユーザーに必要なアクセス レベルに応じて、 **[DQS_MAIN のデータベース ロール メンバーシップ]** ペインで **[dqs_administrator]**、 **[dqs_kb_editor]** 、または **[dqs_kb_operator]** チェック ボックスをオンにします。 3 つの DQS ロールの詳細については、「 [DQS のセキュリティ](../../data-quality-services/dqs-security.md)」を参照してください。  
+6.  右側のウィンドウで、**[DQS_MAIN]** データベースの **[マップ]** 列のチェック ボックスをオンにし、ユーザーに必要なアクセス レベルに応じて、**[DQS_MAINのデータベース ロール メンバーシップ]** ウィンドウで **[dqs_administrator]**、**[dqs_kb_editor]**、または **[dqs_kb_operator]** チェック ボックスをオンにします。 3 つの DQS ロールの詳細については、「 [DQS のセキュリティ](../../data-quality-services/dqs-security.md)」を参照してください。  
   
 7.  **[ログイン - 新規作成]** ダイアログ ボックスで、**[OK]** をクリックして変更を適用します。  
   

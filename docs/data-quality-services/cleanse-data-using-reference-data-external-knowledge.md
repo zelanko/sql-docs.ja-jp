@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 05fd04b48f878fc157e8f4c7bb8237e4f3c3f515
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: bec1e9c00c0c97bda29dd1deceac6ca152b6c085
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617192"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036023"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>参照データ (外部) のナレッジを使用したデータのクレンジング
 
@@ -42,7 +42,7 @@ ms.locfileid: "52617192"
     > [!NOTE]  
     >  参照データ サービスのナレッジを使用してデータをクレンジングするときは、 **[全般設定]** タブの **[構成]** セクションで指定したしきい値ではなく、参照データ サービスにドメインをマップするときに指定したしきい値が適用されます。 参照データのクレンジングのしきい値の指定については、「[参照データへのドメインまたは複合ドメインのアタッチ](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)」の手順 9 をご覧ください。  
   
--   ドメイン値が " **提案**"、" **新規**"、" **無効**"、" **修正済み**"、および " **適切**" に分類されます。  
+-   ドメイン値が"**提案**"、"**新規**"、"**無効**"、"**修正済み**"、および "**適切**" に分類されます。  
   
 -   追加データがソースに追加され、クレンジングされたデータと一緒に情報をエクスポートできるようになります。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52617192"
   
 1.  データ品質プロジェクトを作成し、 **[クレンジング]** アクティビティを選択します。 「 [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md)」を参照してください。  
   
-2.  **[マップ]** ページで、 **Address Line**、 **City**、 **State**、および **Zip**の 4 つのドメインをソース データの適切な列にマップします。 **[次へ]** をクリックします。  
+2.  **[マップ]** ページで、**Address Line**、**City**、**State**、および **Zip** の 4 つのドメインをソース データの適切な列にマップします。 **[次へ]** をクリックします。  
   
     > [!NOTE]  
     >  **Address Verification** 複合ドメイン内の 4 つのドメインをすべてマップしているため、データ クレンジングは、個々のドメイン レベルではなく、複合ドメイン レベルで実行されます。  

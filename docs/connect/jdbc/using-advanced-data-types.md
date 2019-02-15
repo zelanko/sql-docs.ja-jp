@@ -1,7 +1,7 @@
 ---
 title: 高度なデータ型の使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510502"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736823"
 ---
 # <a name="using-advanced-data-types"></a>高度なデータ型の使用
 
@@ -32,10 +32,13 @@ ms.locfileid: "52510502"
 |----------------------|-----------------------------------|-------------------------|  
 |varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(既定)、Blob、InputStream、String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String (既定)、Clob、InputStream|  
-|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (既定)、Clob、NClob (Java SE 6.0)|  
-|xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String (既定)、InputStream、Clob、byte[]、Blob、SQLXML (Java SE 6.0)|  
+|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (既定)、Clob、NClob|  
+|xml|LONGVARCHAR<br /><br /> SQLXML|String (既定)、InputStream、Clob、byte[]、Blob、SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String (既定)、byte[]、InputStream|  
-  
+|sqlvariant|SQLVARIANT|Object|  
+|geometry<br /><br /> geography|VARBINARY|byte[]|  
+
+
 <sup>1</sup> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、バイナリ データとしての CLR UDT の送受信をサポートしていますが、CLR メタデータの操作はサポートしていません。  
   
 以下のセクションでは、JDBC ドライバーと高度なデータ型の使用方法の例を示します。  
@@ -168,6 +171,14 @@ JDBC ドライバーにおける **xml** データ型の実装では、以下の
   
 ユーザー定義データ型の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「ユーザー定義型のインスタンスの使用と変更」を参照してください。  
   
+## <a name="sqlvariant-data-type"></a>Sql_variant データ型
+
+Sql_variant データ型については、次を参照してください。 [Sql_variant データ型を使用して](../../connect/jdbc/using-sql-variant-datatype.md)します。  
+
+## <a name="spatial-data-types"></a>空間データ型
+
+空間データ型については、次を参照してください。[空間データ型を使用して](../../connect/jdbc/use-spatial-datatypes.md)します。  
+
 ## <a name="see-also"></a>参照
 
 [JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

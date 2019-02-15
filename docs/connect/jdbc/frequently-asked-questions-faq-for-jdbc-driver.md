@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver のよくあるご質問 (FAQ) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc5b7200dba7ed17da0b6c48f64c83c48a38064f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MTE75
+ms.openlocfilehash: cb77bd5ac3ccc2e12dd7fbf9aff956981b25bce3
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398265"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737053"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC Driver のよくあるご質問 (FAQ)
 
@@ -35,7 +35,14 @@ JDBC ドライバーはオープン ソースとソース コードで確認で�
 **Microsoft ダウンロード センターで入手できる JDBC ドライバー パッケージと GitHub で入手できる JDBC driver の違いは何ですか。**  
 JDBC ドライバー ファイル使用可能な GitHub リポジトリに Microsoft JDBC driver の JDBC ドライバーの中核となるは、リポジトリに表示されているオープン ソース ライセンスに基づいています。 Microsoft ダウンロード センター上のドライバー パッケージには、Windows 統合認証と JDBC ドライバーで XA トランザクションを有効にする追加ライブラリが含まれます。 これらの追加ライブラリは、ダウンロード可能なパッケージに含まれているライセンスの下でです。
 
-**ドライバーをアップグレードする場合に知っておく必要があることは何ですか。**  
+**ドライバーをアップグレードする場合に知っておく必要があることは何ですか。**
+Microsoft JDBC Driver 7.2 では、JDBC 4.2 と 4.3 (部分的に) 仕様をサポートし、次のように、インストール パッケージに 2 つの JAR クラス ライブラリが含まれています。
+
+| JAR                        | JDBC の仕様            | JDK のバージョン |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-7.2.0.jre11.jar | JDBC 4.3 (部分的)、4.2 | JDK 11.0    |
+| mssql-jdbc-7.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+
  Microsoft JDBC ドライバーの 7.0 では、JDBC 4.2 と 4.3 (部分的に) 仕様をサポートし、次のように、インストール パッケージに 2 つの JAR クラス ライブラリが含まれています。
 
 | JAR                        | JDBC の仕様            | JDK のバージョン |
@@ -105,7 +112,7 @@ JDBC ドライバー 4.1、4.2、6.0、6.2、6.4、および 7.0 では、再配
 可能。 ドライバーでは、IPv6 アドレスの使用をサポートします。 接続プロパティのコレクションと serverName 接続文字列のプロパティを使用します。 詳細については、「[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)」をご覧ください。
 
 **アダプティブ バッファリングとは何ですか。**  
-アダプティブ バッファリングと、Microsoft SQL Server 2005 JDBC Driver version 1.2 以降が導入されました。 これは、サーバー カーソルのオーバーヘッドを発生させることなく、あらゆる種類の大きな値のデータを取得できるように設計されています。 Microsoft SQL Server JDBC Driver のアダプティブ バッファリング機能には接続文字列プロパティ responseBuffering があり、これを "adaptive" または "full" に設定できます。 バージョン 1.2 リリースでは、"full" が既定のバッファリング モードであるため、アプリケーションから明示的にアダプティブ バッファリング モードを設定する必要があります。 JDBC Driver 2.0 以降では、ドライバーの既定の動作は "adaptive" です。 したがって、アプリケーションから明示的に要求しなくても、アダプティブ バッファリングの動作が適用されます。 詳細については、「[アダプティブ バッファリングの使用](../../connect/jdbc/using-adaptive-buffering.md)」とブログ「[What is adaptiveresponse buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575)」(アダプティブ レスポンス バッファリングの概要とこれを使用する理由) をご覧ください。
+アダプティブ バッファリングと、Microsoft SQL Server 2005 JDBC Driver version 1.2 以降が導入されました。 これは、サーバー カーソルのオーバーヘッドを発生させることなく、あらゆる種類の大きな値のデータを取得できるように設計されています。 Microsoft SQL Server JDBC Driver のアダプティブ バッファリング機能には接続文字列プロパティ responseBuffering があり、これを "adaptive" または "full" に設定できます。 バージョン 1.2 リリースでは、"full" が既定のバッファリング モードであるため、アプリケーションから明示的にアダプティブ バッファリング モードを設定する必要があります。 JDBC Driver 2.0 以降では、ドライバーの既定の動作は "adaptive" です。 したがって、アプリケーションから明示的に要求しなくても、アダプティブ バッファリングの動作が適用されます。 詳細については、「[アダプティブ バッファリングの使用](../../connect/jdbc/using-adaptive-buffering.md)」とブログ「[What is adaptiveresponse buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575)」 (アダプティブ レスポンス バッファリングの概要とこれを使用する理由) を参照してください。
 
 **ドライバーで接続プールがサポートされますか。**  
 ドライバーは、Java Platform, Enterprise Edition 5 (Java EE 5) の接続プールをサポートしています。 ドライバーは、ミドルウェア アプリケーション サーバー ベンダーが提供するあらゆる接続プールの実装に参加できるように、JDBC 3.0 に必要なインターフェイスを実装しています。 このドライバーは、これらの環境でプールされた接続に参加します。 詳細については、「 [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md)」をご覧ください。 ドライバーは独自のプール実装を提供せず、むしろサードパーティの Java アプリケーション サーバーに依存しています。

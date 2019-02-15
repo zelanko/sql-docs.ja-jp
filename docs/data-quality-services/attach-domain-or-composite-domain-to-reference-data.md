@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.refdata.f1
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6b3b52b0fbdfcd5ccdd7c841bf1a7b73f54857b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617084"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010723"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>参照データへのドメインまたは複合ドメインのアタッチ
 
@@ -35,7 +35,7 @@ ms.locfileid: "52617084"
   
  参照データ サービス スキーマには、参照データ サービスを使用する場合に適切なドメインにマップする必要がある必須列が含まれている場合があります。 参照データ スキーマの必須列には列名に "(M)" と表示されます。 たとえば、**AddressLine** は **Melissa Data - Address Data** の必須スキーマ列で、**CompanyName** は **Digital Trowel Inc. - Us companies and professional data for SQL users** の必須スキーマ列です。  
   
- このトピックでは、複合ドメイン **Address Verification** に 4 つのドメイン (**Address Line**、**City**、**State**、および **Zip**) を作成し、複合ドメインを **Melissa Data - Address Check** 参照データ サービスにアタッチした後、複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップします。  
+ このトピックでは、複合ドメイン **Address Verification** に 4 つのドメイン (**Address Line**、**City**、**State**、**Zip**) を作成し、複合ドメインを **Melissa Data - Address Check** 参照データ サービスにアタッチした後、複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップします。  
   
 ## <a name="before-you-begin"></a>はじめに  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52617084"
   
 3.  **[新しいナレッジ ベース]** 画面で、新しいナレッジ ベースの名前を入力し、 **[ドメイン管理]** アクティビティをクリックして **[作成]** をクリックします。  
   
-4.  **[ドメイン管理]** 画面で、 **[ドメインの作成]** アイコンをクリックしてドメインを作成します。 作成するドメインは、 **Address Line**、 **City**、 **State**、および **Zip**の 4 つです。  
+4.  **[ドメイン管理]** 画面で、 **[ドメインの作成]** アイコンをクリックしてドメインを作成します。 4 つのドメイン、**Address Line**、**City**、**State**、**Zip** を作成します。  
   
 5.  **[複合ドメインの作成]** アイコンをクリックして複合ドメインを作成します。 **[複合ドメインの作成]** ダイアログ ボックスで、 **[複合ドメイン名]** ボックスに「 **Address Verification** 」と入力し、手順 3. で作成したすべてのドメインを複合ドメインに含めます。 **[OK]** をクリックします。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "52617084"
   
  このナレッジ ベースをデータ品質プロジェクトのクレンジング アクティビティに使用できるようになりました。Windows Azure Marketplace を通じて Melissa Data から提供されるナレッジに基づいて、ソース データに含まれる米国の住所を標準化およびクレンジングできます。  
   
-##  <a name="FollowUp"></a> 補足情報: 参照データにドメインをマップした後  
+##  <a name="FollowUp"></a>補足情報: 参照データにドメインをマップした後  
  データ品質プロジェクトを作成し、このトピックで作成したナレッジ ベースと照らし合わせて、米国の住所を含むソース データに対するクレンジング アクティビティを実行します。 「[参照データ &#40;外部&#41; のナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  

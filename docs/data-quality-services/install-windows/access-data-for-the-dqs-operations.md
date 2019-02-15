@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0f97176e1600ca741ddc20eed03aed639c945c76
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: b94f615ddcc2f1b3eb0c577130ee375cc0672848
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616432"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024593"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 操作のためのデータへのアクセス
 
@@ -44,13 +44,13 @@ ms.locfileid: "52616432"
   
 4.  **[ログインのプロパティ]** ダイアログ ボックスの左ペインで **[ユーザー マッピング]** をクリックします。  
   
-5.  右ペインで、 **[DQS_STAGING_DATA]** データベースの **[マップ]** 列のチェック ボックスをオンにし、 **[DQS_STAGING_DATA のデータベース ロール メンバーシップ]** ペインで次のロールを選択します。  
+5.  右ウィンドウで、**[DQS_STAGING_DATA]** データベースの **[マップ]** 列のチェック ボックスをオンにし、**[DQS_STAGING_DATA のデータベース ロール メンバーシップ]** ウィンドウで次のロールを選択します。  
   
-    -   **db_datareader**: テーブル/ビューからのデータの読み取り。  
+    -   **db_datareader**:テーブル/ビューからのデータの読み取り。  
   
-    -   **db_datawriter**: テーブル内のデータの追加、削除、または変更。  
+    -   **db_datawriter**:テーブル内のデータの追加、削除、または変更。  
   
-    -   **db_ddladmin**: テーブル/ビューの作成、変更、または削除。  
+    -   **db_ddladmin**:テーブル/ビューの作成、変更、または削除。  
   
 6.  **[ログインのプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックして変更を適用します。  
   

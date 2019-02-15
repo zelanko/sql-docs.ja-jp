@@ -1,7 +1,7 @@
 ---
 title: 空間データ型を使用して |Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 01/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4d00692b0b5872b1020f900587a24a3116aee9be
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460547"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737013"
 ---
 # <a name="using-spatial-datatypes"></a>空間データ型の使用
 
@@ -90,8 +90,8 @@ Geography 列を使用して、Geography 対応の同様の手法と**getGeograp
 
 |方法|[説明]|
 |:------|:----------|
-|void setGeometry (int n、Geometry x)| 指定された microsoft.sql.Geometry クラスのオブジェクトを指定されたパラメーターを設定します。
-|void setGeography (int n、Geography x)| 指定された microsoft.sql.Geography クラスのオブジェクトを指定されたパラメーターを設定します。
+|void setGeometry(int n, Geometry x)| 指定された microsoft.sql.Geometry クラスのオブジェクトを指定されたパラメーターを設定します。
+|void setGeography(int n, Geography x)| 指定された microsoft.sql.Geography クラスのオブジェクトを指定されたパラメーターを設定します。
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
@@ -99,7 +99,7 @@ Geography 列を使用して、Geography 対応の同様の手法と**getGeograp
 |:------|:----------|
 |Geometry getGeometry (int colunIndex)| この結果セット オブジェクトの現在の行で指定された列の値を Java プログラミング言語で com.microsoft.sqlserver.jdbc.Geometry オブジェクトとして返します。
 |Geometry getGeometry (文字列 columnName)| この結果セット オブジェクトの現在の行で指定された列の値を Java プログラミング言語で com.microsoft.sqlserver.jdbc.Geometry オブジェクトとして返します。
-|Geography getGeography (int colunIndex)| この結果セット オブジェクトの現在の行で指定された列の値を Java プログラミング言語で com.microsoft.sqlserver.jdbc.Geography オブジェクトとして返します。
+|Geography getGeography(int colunIndex)| この結果セット オブジェクトの現在の行で指定された列の値を Java プログラミング言語で com.microsoft.sqlserver.jdbc.Geography オブジェクトとして返します。
 |Geography getGeography (文字列 columnName)| この結果セット オブジェクトの現在の行で指定された列の値を Java プログラミング言語で com.microsoft.sqlserver.jdbc.Geography オブジェクトとして返します。
 
 ### <a name="geometry"></a>Geometry
@@ -107,24 +107,24 @@ Geography 列を使用して、Geography 対応の同様の手法と**getGeograp
 |方法|[説明]|
 |:------|:----------|
 |Geometry STGeomFromText (文字列 wkt、int SRID)| インスタンスに格納されている Z (標高) 値と M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geometry インスタンス用のコンストラクター。
-|Geometry STGeomFromWKB (byte wkb)| Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現からの Geometry インスタンス用のコンストラクター。
+|Geometry STGeomFromWKB(byte[] wkb)| Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現からの Geometry インスタンス用のコンストラクター。
 |ジオメトリ (byte wkb) を逆シリアル化します。| 空間データの SQL Server 内部形式からの Geometry インスタンスのコンス トラクター。
 |ジオメトリの解析 (文字列 wkt)| Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geometry インスタンス用のコンストラクター。 空間参照識別子は、0 を既定値は。
 |ジオメトリのポイント (double x、y の二重、int SRID)| その X と Y 値および空間参照識別子から Point インスタンスを表す Geometry インスタンスのコンス トラクター。
-|文字列:stastext()| Geometry インスタンスにおける Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を返します。 このテキストは、インスタンスに格納されている Z (標高) 値または M (メジャー) 値を含みません。
+|String STAsText()| Geometry インスタンスにおける Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を返します。 このテキストは、インスタンスに格納されている Z (標高) 値または M (メジャー) 値を含みません。
 |byte[] STAsBinary()| Geometry インスタンスにおける Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現を返します。 この値には、インスタンスに格納されている Z 値または M 値が含まれません。
 |バイト [serialize()| Geometry 型の内部 SQL Server 形式を表すバイトを返します。
-|ブール hasM()| オブジェクトに M (メジャー) 値が含まれているかどうかを返します。
+|boolean hasM()| オブジェクトに M (メジャー) 値が含まれているかどうかを返します。
 |ブール hasZ()| オブジェクトには、Z (標高) 値が含まれている場合を返します。
 |二重 getX()| X 座標の値を返します。
 |二重 getY()| Y 座標の値を返します。
 |二重 getM()| オブジェクトの M (メジャー) 値を返します。
 |二重 getZ()| オブジェクトの Z (標高) 値を返します。
 |int getSrid()| 空間参照識別子 (SRID) の値を返します。
-|ブール isNull()| Geometry オブジェクトのかどうかは null を返します。
+|boolean isNull()| Geometry オブジェクトのかどうかは null を返します。
 |int STNumPoints()| Geometry オブジェクト内の地点の数を返します。
-|文字列 STGeometryType()| geometry インスタンスで表される Open Geospatial Consortium (OGC) の型名を返します。
-|文字列 asTextZM()| Geometry オブジェクトの Well-Known Text (WKT) 表現を返します。
+|String STGeometryType()| geometry インスタンスで表される Open Geospatial Consortium (OGC) の型名を返します。
+|String asTextZM()| Geometry オブジェクトの Well-Known Text (WKT) 表現を返します。
 |文字列の toString()| Geometry オブジェクトの文字列表現を返します。
 
 ### <a name="geography"></a>Geography
@@ -132,24 +132,24 @@ Geography 列を使用して、Geography 対応の同様の手法と**getGeograp
 |方法|[説明]|
 |:------|:----------|
 |Geography STGeomFromText (文字列 wkt、int SRID)| インスタンスに格納されている Z (標高) 値と M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geography インスタンス用のコンストラクター。
-|Geography STGeomFromWKB (byte wkb)| Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現からの Geography インスタンス用のコンストラクター。
+|Geography STGeomFromWKB(byte[] wkb)| Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現からの Geography インスタンス用のコンストラクター。
 |Geography が (byte wkb) を逆シリアル化します。| 空間データの SQL Server 内部形式からの Geography インスタンスのコンス トラクター。
 |Geography の解析 (文字列 wkt)| Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geography インスタンス用のコンストラクター。 空間参照識別子は、0 を既定値は。
-|地理的ポイント (lat, lon の二重、int SRID を二重)| Point インスタンスを緯度、経度、SRID (spatial reference identifier) で表す Geography インスタンス用のコンストラクター。
-|文字列:stastext()| Geography インスタンスにおける Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を返します。 このテキストは、インスタンスに格納されている Z (標高) 値または M (メジャー) 値を含みません。
+|地理的ポイント (lon lat 二重 int SRID を二重)| Point インスタンスを経度、緯度、空間参照識別子 (SRID) で表す Geography インスタンス用のコンストラクター。
+|String STAsText()| Geography インスタンスにおける Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を返します。 このテキストは、インスタンスに格納されている Z (標高) 値または M (メジャー) 値を含みません。
 |byte[] STAsBinary())| Geography インスタンスにおける Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現を返します。 この値には、インスタンスに格納されている Z 値または M 値が含まれません。
 |バイト [serialize()| Geography 型の内部 SQL Server 形式を表すバイトを返します。
-|ブール hasM()| オブジェクトに M (メジャー) 値が含まれているかどうかを返します。
+|boolean hasM()| オブジェクトに M (メジャー) 値が含まれているかどうかを返します。
 |ブール hasZ()| オブジェクトには、Z (標高) 値が含まれている場合を返します。
 |二重 getLatitude()| 緯度の値を返します。
-|二重 getLongitude()| 経度値を返します。
+|Double getLongitude()| 経度値を返します。
 |二重 getM()| オブジェクトの M (メジャー) 値を返します。
 |二重 getZ()| オブジェクトの Z (標高) 値を返します。
 |int getSrid()| 空間参照識別子 (SRID) の値を返します。
-|ブール isNull()| Geography オブジェクトのかどうかは null を返します。
+|boolean isNull()| Geography オブジェクトのかどうかは null を返します。
 |int STNumPoints()| Geography オブジェクト内の地点の数を返します。
-|文字列 STGeographyType()| geography インスタンスで表される Open Geospatial Consortium (OGC) の型名を返します。
-|文字列 asTextZM()| Geography オブジェクトの Well-Known Text (WKT) 表現を返します。
+|String STGeographyType()| geography インスタンスで表される Open Geospatial Consortium (OGC) の型名を返します。
+|String asTextZM()| Geography オブジェクトの Well-Known Text (WKT) 表現を返します。
 |文字列の toString()| Geography オブジェクトの文字列表現を返します。
 
 ## <a name="limitations-of-spatial-datatypes"></a>空間データ型の制限事項

@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.kb.selectkb.f1
 - sql13.dqs.kb.newkb.f1
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c4acd731faa13c10a0c32e8e99d2c557748b3d6
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: d247179577812aafbac84fd886f0a1ac0c9a1b67
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616342"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020122"
 ---
 # <a name="create-a-knowledge-base"></a>ナレッジ ベースの作成
 
@@ -63,7 +63,7 @@ ms.locfileid: "52616342"
   
 6.  **[作成]** をクリックします。  
   
-##  <a name="FollowUp"></a> 補足情報: ナレッジ ベースを作成した後  
+##  <a name="FollowUp"></a>補足情報: ナレッジ ベースを作成した後  
  ナレッジ ベースを作成した後は、ナレッジ検出を実行するためのウィザード、照合ポリシーを作成するためのウィザード、またはドメイン管理を実行するためのページが表示されます。 ナレッジ検出、ドメイン管理、または照合ポリシーについて詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
   

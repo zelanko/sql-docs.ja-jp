@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20764d8e2d377ae22f72cb4212d24d76ab92b993
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: c2d852accb33b1667e5f2d0981d6f351543ee72a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616693"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029999"
 ---
 # <a name="use-the-dqs-speller"></a>DQS のスペル チェックの使用
 
@@ -68,7 +68,7 @@ ms.locfileid: "52616693"
   
 6.  値を辞書に追加する場合は、 **[辞書に追加]** をクリックします。 値に表示されていた赤い下線が消えます。  
   
-##  <a name="FollowUp"></a> 補足情報: スペル チェックを使用した後  
+##  <a name="FollowUp"></a>補足情報: スペル チェックを使用した後  
  スペル チェックを実行した後、ドメインのアクティビティを完了してスペル チェックの修正案を反映します。 ナレッジ検出、ドメイン管理、または照合ポリシーのアクティビティで、スペル チェックの分析結果をナレッジ ベースで使用できるようにするには、ナレッジ ベースを発行します。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="How"></a> スペル チェックの動作  

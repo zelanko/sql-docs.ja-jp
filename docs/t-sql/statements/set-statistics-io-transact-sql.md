@@ -26,17 +26,17 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 20099478d1d2dd047b1f17fe963c8fc45b1418fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670282"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760125"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのディスク利用状況に関する情報を表示します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントによって生成されるディスク利用状況に関する情報を表示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,16 +48,16 @@ SET STATISTICS IO { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- STATISTICS IO が ON の場合、統計情報が表示されます。 OFF の場合、情報は表示されません。  
+ STATISTICS IO が ON のときは統計情報が表示され、OFF のときは表示されません。   
   
- 返される情報は、このオプションが ON に設定されてから OFF に設定されるまでに実行される、すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに関する統計情報です。  
+ このオプションを ON に設定した後は、オプションを OFF に設定するまで、すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで統計情報が返されます。  
   
  次の表は、出力アイテムの一覧とその説明です。  
   
 |出力アイテム|意味|  
 |-----------------|-------------|  
 |**Table**|テーブルの名前。|  
-|**Scan count**|すべての値を取得して出力の最終的なデータセットを構築するために、任意の方向のリーフ レベルに達した後に開始されるシーク/スキャンの数。<br /><br /> 使用されるインデックスが主キーの一意のインデックスまたはクラスター化インデックスで、1 つの値のみシークしている場合、Scan count は 0 になります。 たとえば、 `WHERE Primary_Key_Column = <value>`があります。<br /><br /> 主キー列以外の列で定義された一意でないクラスター化インデックスを使用して 1 つの値を検索する場合 Scan count は 1 になります。 これは、検索対象のキー値の重複値を確認する場合に実行されます。 たとえば、 `WHERE Clustered_Index_Key_Column = <value>`があります。<br /><br /> N が、インデックス キーを使用してキー値を検索した後にリーフ レベルで左側または右側に向かって開始される異なるシーク/スキャンの数である場合、Scan count は N となります。|  
+|**Scan count**|出力の最終的なデータセットを構築するすべての値を取得するため、リーフ レベルに達した後で任意の方向に開始されたシークまたはスキャンの数。<br /><br /> 使用されているインデックスが主キーの一意なインデックスまたはクラスター化インデックスで、1 つの値のみをシークしている場合、Scan count は 0 になります。 たとえば、`WHERE Primary_Key_Column = <value>` のようにします。<br /><br /> 主キーではない列で定義されている一意ではないクラスター化インデックスを使用して 1 つの値を検索する場合、Scan count は 1 になります。 この処理は、検索対象のキー値の重複値を確認するために行われます。 たとえば、`WHERE Clustered_Index_Key_Column = <value>` のようにします。<br /><br /> インデックス キーを使用してキー値を特定した後、リーフ レベルで左側または右側に向かって開始された異なるシークまたはスキャンの数が N である場合、Scan count は N になります。|  
 |**logical reads**|データ キャッシュから読み取られたページ数|  
 |**physical reads**|ディスクから読み取られたページ数|  
 |**read-ahead reads**|クエリ用のキャッシュに読み取られたページ数|  

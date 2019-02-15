@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05501a3d084921f52088a76d7e1a69390cd48998
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 6a581e981829d6a2bbd8ed0181decc2d2af5e316
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405802"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742102"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 可用性グループのリース、クラスター、正常性チェック タイムアウトのしくみとガイドライン。 
 
@@ -153,6 +153,13 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   - SameSubnetThreshold \<= CrossSubnetThreshold 
 
   - SameSubnetDelay \<= CrossSubnetDelay 
+  
+ | タイムアウトの設定 | 用途 | [次の値の間] | 使用法 | IsAlive と LooksAlive | 原因 | 結果 
+ | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
+ | リースのタイムアウト </br> **既定値: 20000** | スプリット ブレインを防ぐ | プライマリからクラスター </br> (HADR) | [Windows イベント オブジェクト](/windows/desktop/Sync/event-objects)| 両方で使用される | OS のハング、仮想メモリの不足、ダンプの生成、固定された CPU、WSFC ダウン (クォーラムの損失) | AG リソースのオフライン - オンライン、フェールオーバー |  
+ | セッション タイムアウト </br> **既定値: 10000** | プライマリとセカンダリの間の通信の問題を通知する | セカンダリからプライマリ </br> (HADR) | [TCP ソケット (DBM エンドポイント経由で送信されるメッセージ)](/windows/desktop/WinSock/windows-sockets-start-page-2) | 両方で使用されない | ネットワーク通信、 </br> セカンダリでの問題 - ダウン、OS のハング、リソースの競合 | セカンダリ - 切断 | 
+ |正常性チェック タイムアウト  </br> **既定値: 30000** | プライマリ レプリカの正常性を判断しようとしている間のタイムアウトを示す | クラスターからプライマリ </br> (FCI、HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | 両方で使用される | エラー条件が満たされる、OS のハング、仮想メモリの不足、ワーキング セットのトリミング、ダンプの生成、WSFC (クォーラムの損失)、スケジューラの問題 (デッド ロックしたスケジューラ)| AG リソース オフライン - オンラインまたはフェールオーバー、FCI 再起動/フェールオーバー |  
+  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>参照    
 

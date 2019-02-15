@@ -1,7 +1,7 @@
 ---
 title: time (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 6/7/2017
+ms.date: 06/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff303fd066e1a12ccbd33e1479648001fe5a389b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03f63929d54039399a292e086315c0b8d660f206
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762590"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079458"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "47762590"
   
 ## <a name="time-description"></a>time の説明  
   
-|プロパティ|ReplTest1|  
+|プロパティ|[値]|  
 |--------------|-----------|  
 |構文|**time** [ (*fractional second scale*) ]|  
 |使用方法|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*fractional seconds scale*|秒の小数点以下の有効桁数を指定します。<br /><br /> 0 ～ 7 の整数を指定できます。 Informatica の場合は、0 ～ 3 の整数を指定できます。<br /><br /> 既定の有効桁数は 7 (100 ナノ秒) です。|  
-|既定の文字列リテラル形式<br /><br /> (下位のクライアントに使用)|hh:mm:ss[.nnnnnnn] (Informatica の場合は nnn)<br /><br /> 詳しくは、後の「下位クライアントの下位互換性」セクションをご覧ください。|  
+|既定の文字列リテラル形式<br /><br /> (下位のクライアントに使用)|hh:mm:ss[.nnnnnnn] (Informatica の場合は nnn)<br /><br /> 詳細については、「[下位クライアントの下位互換性](#BackwardCompatibilityforDownlevelClients)」セクションを参照してください。|  
 |範囲|00:00:00.0000000 ～ 23:59:59.9999999 (Informatica の場合は 00:00:00.000 ～ 23:59:59.999)|  
 |要素範囲|hh は、0 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、0 ～ 59 の分を表す 2 桁の数字です。<br /><br /> ss は、0 ～ 59 の秒を表す 2 桁の数字です。<br /><br /> n\* は、秒の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。 Informatica の場合は、n\* は 0 ～ 3 桁の数字です (0 ～ 999)。|  
 |文字長|8 文字 (hh:mm:ss) 以上、16 文字 (hh:mm:ss.nnnnnnn) 以下。 Informatica の場合は、最大 12 文字 (hh:mm:ss.nnn) です。|  
@@ -53,7 +53,7 @@ ms.locfileid: "47762590"
 |ストレージのサイズ|既定では 5 バイト固定 (秒部分の既定の有効桁数は 100ns) です。 Informatica の場合は、既定では 4 バイト固定 (秒部分の既定の有効桁数は 1 ミリ秒) です。|  
 |精度|100 ナノ秒 (Informatica では 1 ミリ秒)|  
 |既定値|00:00:00<br /><br /> この値は、**date** から **datetime2** または **datetimeoffset** への暗黙的な変換で、付加的な時刻要素として使用されます。|  
-|ユーザー定義の 1 秒未満の秒の有効桁数|[ユーザー アカウント制御]|  
+|ユーザー定義の 1 秒未満の秒の有効桁数|可|  
 |タイム ゾーン オフセットへの対応と保持|いいえ|  
 |夏時間への対応|いいえ|  
   
@@ -121,8 +121,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
 --(1 row(s) affected)  
 ```  
   
- 変換先が  
-                    **date** の場合は、変換は失敗し、エラー メッセージ 206 "オペランド型の不整合: date は time と互換性がありません" が発生します。  
+ **date** に変換すると、変換は失敗し、エラー メッセージ 206"オペランド型の不整合: date は time と互換性がありません" が発生します。  
   
  変換先が **datetime** の場合は、時、分、秒の値がコピーされ、日付部分が "1900-01-01" に設定されます。 **time(n)** 値の秒の小数部の有効桁数が 3 桁より大きい場合、**datetime** の結果は切り捨てられます。 次のコードでは、`time(4)` の値を `datetime` の値に変換した結果を示します。  
   

@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732029"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889983"
 ---
 # <a name="query-profiling-infrastructure"></a>クエリ プロファイリング インフラストラクチャ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,12 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 には、オーバーヘッドが最小限の軽量プロファイリングの改訂版が含まれます。 軽量プロファイリングも、*適用対象*の前述のバージョンで、[トレース フラグ 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用してグローバルに有効にできます。 送信中の要求にクエリ実行プランを返すために、新しい DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) が導入されました。
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 と [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降で、軽量プロファイリングがグローバルで有効でない場合、新しい [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)引数 **QUERY_PLAN_PROFILE** を使用して、任意のセッションで、クエリ レベルで軽量プロファイリングを有効にできます。 この新しいヒントを含むクエリが終了すると、新しい ***query_plan_profile*** 拡張イベントも出力され、*query_post_execution_showplan* 拡張イベントに類似した実際の実行プラン XML が提供されます。 この拡張イベントを使用するサンプル セッションは、次の例のように構成できます。
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 と [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降で、軽量プロファイリングがグローバルで有効でない場合、新しい [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)引数 **QUERY_PLAN_PROFILE** を使用して、任意のセッションで、クエリ レベルで軽量プロファイリングを有効にできます。 この新しいヒントを含むクエリが終了すると、新しい ***query_plan_profile*** 拡張イベントも出力され、*query_post_execution_showplan* 拡張イベントに類似した実際の実行プラン XML が提供されます。 
+
+> [!NOTE]
+> *query_plan_profile* 拡張イベントではまた、クエリ ヒントが使用されない場合でも、軽量プロファイリングが活用されます。 
+
+*query_plan_profile* 拡張イベントを使用したサンプル セッションは下の例のように構成できます。
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_Plan] ON SERVER

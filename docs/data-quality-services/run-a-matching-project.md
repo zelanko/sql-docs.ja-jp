@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 72d0d4c0af1b09c8cad4ab6ab5ab6636fd302e4f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617952"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015433"
 ---
 # <a name="run-a-matching-project"></a>照合プロジェクトの実行
 
@@ -45,7 +45,7 @@ ms.locfileid: "52617952"
 ####  <a name="Permissions"></a> Permissions  
  照合プロジェクトを実行するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="StartingaMatchingProject"></a> 最初の手順: 照合プロジェクトの開始  
+##  <a name="StartingaMatchingProject"></a> 最初の手順:照合プロジェクトの開始  
  DQS クライアント アプリケーションで作成したデータ品質プロジェクトで照合アクティビティを実行します。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
@@ -111,7 +111,7 @@ ms.locfileid: "52617952"
   
  サバイバーシップは省略可能であり、 サバイバーシップを実行しなくても結果をエクスポートできます。この場合、照合分析で判定されたピボット レコードが使用されます。 サバイバーシップ プロセスで、クラスター内の複数のレコードがサバイバーシップ ルールに適合する場合は、競合するレコードの中でレコード ID が最も小さいものが保持するレコードとして選択されます。 保持するレコードは、サバイバーシップ ルールごとに異なるファイルやテーブルにエクスポートできます。  
   
-1.  **[エクスポート]** ページの **[エクスポート先の種類]** で、照合データのエクスポート先を選択します ( **[SQL Server]**、 **[CSV ファイル]**、または **[Excel ファイル]**)。  
+1.  **[エクスポート]** ページの **[エクスポート先の種類]** で、照合データのエクスポート先を選択します (**[SQL Server]**、**[CSV ファイル]**、または **[Excel ファイル]**)。  
   
     > [!IMPORTANT]  
     >  Excel の 64 ビット版を使用している場合、一致するデータは Excel ファイルにエクスポートできません。SQL Server データベースまたは .csv ファイルにのみエクスポートできます。  
@@ -168,7 +168,7 @@ ms.locfileid: "52617952"
     > [!NOTE]  
     >  照合プロジェクトの完了後にもう一度そのプロジェクトを使用する場合、発行された時点のナレッジ ベースが使用されます。 プロジェクトの完了後にナレッジ ベースに対して行われた変更は使用されません。 それらの変更を使用する場合や新しいナレッジ ベースを使用する場合は、新しい照合プロジェクトを作成する必要があります。 一方、作成した照合プロジェクトが完了していない場合は、そのプロジェクトで照合を実行するときに、照合ポリシーに対して発行された変更が使用されます。  
   
-##  <a name="FollowUp"></a> 補足情報: 照合プロジェクトを実行した後  
+##  <a name="FollowUp"></a>補足情報: 照合プロジェクトを実行した後  
  照合プロジェクトを実行した後、ナレッジ ベースの照合ポリシーを変更し、更新後の照合ポリシーに基づく別の照合プロジェクトを作成して実行できます。 詳細については、「 [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)」をご参照ください。  
   
 ##  <a name="Profiler"></a> [プロファイラー] タブと [結果] タブ  

@@ -28,17 +28,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ce3a973f84664769ced971eedb28a1c13faeae8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9262ca6e0f2dce018ae925b05e306cc43753a0b7
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519703"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759975"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  **date**、**smalldatetime**、**datetime**、**datetime2**、**datetimeoffset** の各文字列を解釈する際の日付要素 (月、日、年) の順序を指定します。  
+  日付の各文字列を解釈するために、日付要素 (月、日、年) の順序を設定します。 これらの文字列の型は、**date**、**smalldatetime**、**datetime**、**datetime2**、**datetimeoffset** です。  
   
  すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
@@ -57,7 +57,7 @@ SET DATEFORMAT { format | @format_var }
 ## <a name="remarks"></a>Remarks  
  DATEFORMAT **ydm** は、**date**、**datetime2**、**datetimeoffset** データ型にはサポートされていません。  
   
- 文字列の形式によっては、DATEFORMAT 設定が文字列の解釈に与える影響が、**datetime** および **smalldatetime** の値と、**date**、**datetime2**、**datetimeoffset** の値で、異なる場合があります。 この設定は、文字列をデータベース格納用の日付値に変換する際の解釈に影響します。 データベースに格納された日付データ型の値 (ストレージ形式) の表示には影響しません。  
+ DATEFORMAT の設定は、文字列の形式によっては、日付データ型の文字列の解釈が異なる場合があります。 たとえば、**datetime** および **smalldatetime** の解釈は、**date**、**datetime2**、または **datetimeoffset** と一致しないことがあります。 DATEFORMAT は、文字列をデータベースの日付値に変換するときの解釈に影響します。 日付データ型の値の表示や、データベースのストレージ形式には影響しません。  
   
  ISO 8601 など、一部の文字列形式は、DATEFORMAT 設定とは無関係に解釈されます。  
   
@@ -91,6 +91,4 @@ GO
   
 ## <a name="see-also"></a>参照  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
-  
-  
 

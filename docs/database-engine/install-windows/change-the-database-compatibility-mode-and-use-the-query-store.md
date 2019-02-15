@@ -1,7 +1,7 @@
 ---
 title: データベース互換性レベルの変更とクエリ ストアの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/21/2017
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: adf5a2daee8231746a3ed364619f511f05d011f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 995679ad24d1be79849b6b586964a206d4c70d7d
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405227"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807398"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>データベース互換性レベルの変更とクエリ ストアの使用
 
@@ -47,10 +47,12 @@ ms.locfileid: "52405227"
 以下のような、クエリ プロセッサを最新バージョンのコードにアップグレード場合に推奨されるワークフローについては、「[新しい SQL Server にアップグレードするときにパフォーマンスの安定性を維持する](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」を参照してください。  
   
 ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、ユーザーはクエリ調整アシスタントを使用して、推奨されるワークフローのガイドを得ることができます。 詳細については、「[クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)」を参照してください。
  
 ## <a name="see-also"></a>参照  
 [データベースの互換性レベルの表示または変更](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)     
 [クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md)     
-[ALTER DATABASE &#40;Transact-SQL&#41; 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
-    
+[ALTER DATABASE &#40;Transact-SQL&#41; 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)     
+[クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)        
   

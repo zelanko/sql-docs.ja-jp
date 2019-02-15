@@ -3,7 +3,6 @@ title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - WITH XMLNAMESPACES clause
 - declaring XML namespaces
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbc0773b08ea682a9bc8e4803572b9ceae3d28d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256177"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026603"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,11 +86,13 @@ DEFAULT <xml_namespace_uri>
 -   XML 名前空間接頭辞 `xml` は、名前空間 URI `'http://www.w3.org/XML/1998/namespace'` と別のプレフィックスを割り当てることができないこの URI 以外の名前空間ではオーバーライドできません。  
   
 -   クエリで ELEMENTS XSINIL ディレクティブが使用されている場合、XML 名前空間プレフィックス `xsi` は再宣言できません。  
-  
+
+-   xsi 標準名前空間を使用するために 'http://www.w3.org/2001/XMLSchema-instance' を宣言する必要はありません。 'http://www.w3.org/2001/XMLSchema-instance' スキーマが xml ドキュメントで正しく宣言されている限り、未指定の場合は XML/XPATH プロセッサによって暗黙的に追加され、xpath 式で xsi プレフィックスを使用できます。
+
 -   URI 文字列値は、現在のデータベースの照合順序のコード ページに基づいてエンコードされ、内部で Unicode に変換されます。  
   
 -   XML 名前空間 URI では、**xs:anyURI** で使用される XSD の空白短縮の規則に従って空白が短縮されます。 また、XML 名前空間 URI 値は、エンティティ化または非エンティティ化されないことに注意してください。  
-  
+
 -   XML 名前空間 URI に対して、無効な XML 1.0 文字がないかどうかが確認され、検出された場合はエラーが生成されます (U+0007 など)。  
   
 -   空白が短縮された後の XML 名前空間 URI が長さ 0 の文字列になると、"無効な空の名前空間 URI" エラーが発生します。  

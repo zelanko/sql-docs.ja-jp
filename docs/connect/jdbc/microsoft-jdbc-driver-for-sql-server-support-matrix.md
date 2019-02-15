@@ -1,7 +1,7 @@
 ---
 title: Microsoft SQL Server 用 JDBC Driver のサポート表 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 955fc16232857d9c9f04b56d62985116ac3e6338
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: MTE75
+ms.openlocfilehash: 9b086ca3912e8b8a308840a229c448edeb92b60f
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605802"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736929"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft SQL Server 用 JDBC Driver のサポート表
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,9 +32,10 @@ ms.locfileid: "51605802"
   
 |ドライバー名|ドライバー パッケージのバージョン|該当する JAR(s)|メイン ストリーム サポートの終了|
 |-|-|-|-|  
+|Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.0.jre11.jar<br> mssql-jdbc-7.2.0.jre8.jar|2024 年 1 月 31日|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023 年 7 月 31日|  
 |Microsoft SQL Server 用 JDBC Driver 6.4|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 年 2 月 27日|    
-|Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|2022 年 6 月 30日|    
+|Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|2022 年 6 月 30 日|    
 |Microsoft SQL Server 用 JDBC Driver 6.0|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021 年 7 月 14 日|    
 |Microsoft SQL Server 用 JDBC Driver 4.2|4.2|sqljdbc42.jar<br>sqljdbc41.jar|2020 年 8 月 24 日|  
 |Microsoft SQL Server 用 JDBC Driver 4.1|4.1|sqljdbc41.jar|2019 年 12 月 12日|  
@@ -55,6 +56,7 @@ ms.locfileid: "51605802"
   
 |ドライバーのバージョン|SQL Server 2008:|SQL Server 2008R2|SQL Server 2012|Azure SQL データベース|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL マネージ インスタンス (延長プライベート プレビュー)|  
 |-|-|-|-|-|-|-|-|-|-|
+|7.2|×|Y|Y|Y|Y|Y|Y|Y|Y|  
 |7.0|×|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.4|×|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.2|Y|Y|Y|Y|Y|Y|Y|Y|×|
@@ -84,7 +86,8 @@ ms.locfileid: "51605802"
   
 |JDBC ドライバーのバージョン|JRE のバージョン|JDBC API のバージョン| 
 |-|-|-|  
-|7.0|1.8、10|4.2、4.3 (部分的)|  
+|7.2|1.8、11|4.2、4.3 (部分的)|
+|7.0|1.8、10|4.2、4.3 (部分的)|
 |6.4|1.7、1.8、9|4.1、4.2、4.3 (部分的)|  
 |6.2|1.7、1.8|4.1、4.2|  
 |6.1|1.7、1.8|4.1、4.2|  

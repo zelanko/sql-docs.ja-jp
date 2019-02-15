@@ -17,15 +17,15 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9aa7006233437922fc15ac4fe811cbde75dff59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c9e4de5e7255c43460c9566f089f416a1e36782
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618590"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011792"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|XML_ATTRIBUTES または XML_ELEMENTS と組み合わせる (論理和) ことができます。 取得のコンテキストにおいて、このフラグは、使用したデータをオーバーフロー プロパティ **\@mp:xmltext** にコピーしないことを示します。|  
   
  _SchemaDeclaration_  
- フォームのスキーマ定義です。 _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ スキーマ定義を次の形式で指定します。_ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  行セット内の列名を指定します。  
@@ -246,6 +246,6 @@ EXEC sp_xml_removedocument @idoc;
 ```  
   
 ## <a name="see-also"></a>参照  
- [例: OPENXML の使用](../../relational-databases/xml/examples-using-openxml.md)  
+ [例:OPENXML の使用](../../relational-databases/xml/examples-using-openxml.md)  
   
   

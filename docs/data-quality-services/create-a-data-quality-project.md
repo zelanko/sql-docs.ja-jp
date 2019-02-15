@@ -13,15 +13,15 @@ helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: c2b2adb2a1dc2c4c668bb094553f0961dc74439d
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: c63f6407548f3e46bb64a3b7dddffa741426d3a0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616813"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036463"
 ---
 # <a name="create-a-data-quality-project"></a>データ品質プロジェクトの作成
 
@@ -61,7 +61,7 @@ ms.locfileid: "52616813"
   
 4.  **[作成]** をクリックし、データ品質プロジェクトを作成します。  
   
-##  <a name="FollowUp"></a> 補足情報: データ品質プロジェクトを作成した後  
+##  <a name="FollowUp"></a>補足情報: データ品質プロジェクトを作成した後  
  データ品質プロジェクトを作成した後に、選択したアクティビティ (クレンジングと照合) の実行に使用するウィザードが示されます。 クレンジングと照合アクティビティについて詳しくは、「[データ クレンジング](../data-quality-services/data-cleansing.md)」および「[データ照合](../data-quality-services/data-matching.md)」をご覧ください。  
   
   

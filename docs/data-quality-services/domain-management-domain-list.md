@@ -1,5 +1,5 @@
 ---
-title: 'ドメイン管理: ドメイン リスト | Microsoft Docs'
+title: ドメイン管理:ドメイン リスト | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 088629be0f2dfa11e563b0ef7441a1b7c59ec515
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: a58809544a4c4d6db82aedf2eab54841c6c6ec0f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617032"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027434"
 ---
-# <a name="domain-management-domain-list"></a>ドメイン管理: ドメイン リスト
+# <a name="domain-management-domain-list"></a>ドメイン管理:ドメイン リスト
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   このトピックでは、 **(DQS) の** [ドメイン管理] [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ページの [ドメイン] リスト内のコントロールについて説明します。 このペインを使用して管理操作を実行するドメインを選択します。 これと同じペインが、 **[ドメイン管理]** ページのすべてのタブ ページで使用されています。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
   
 ### <a name="domains-list"></a>[ドメイン] リスト  
  **[ドメイン]**  
