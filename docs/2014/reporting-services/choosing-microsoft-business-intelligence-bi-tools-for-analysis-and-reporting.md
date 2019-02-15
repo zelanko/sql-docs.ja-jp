@@ -1,5 +1,5 @@
 ---
-title: 分析と Microsoft business intelligence (BI) ツールでレポートの作成
+title: Microsoft ビジネス インテリジェンス (BI) ツールでの分析とレポート
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 519aa33d615c244289fdf53d6cea6684a8a04dce
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 73dd4f2163169930d7766d3a287b8a5c38de0ee1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553144"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289190"
 ---
-# <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>分析と Microsoft business intelligence (BI) ツールでレポートの作成
+# <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Microsoft ビジネス インテリジェンス (BI) ツールでの分析とレポート
 
   次の表は、データ分析とレポートに対応するワークロードを、これらのワークロードに最も適した Microsoft BI ツールに関連付けます。  
   
@@ -33,14 +33,14 @@ ms.locfileid: "53553144"
 |セルフサービスの予測分析の実行||||||[データ マイニング Excel 用アドイン](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |データの視覚化と探索||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |自然言語クエリを使用した問い合わせの実施|||||[Q & A](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
-|モバイル デバイスを使用したレポートのアクセス||||[HTML 5 (表示をサポート < 10 MB のファイルを)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (表示をサポート < 250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [IOS デバイス上の power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android デバイス上の power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Windows 10 用 power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|モバイル デバイスを使用したレポートのアクセス||||[HTML 5 (< 10 MB ファイルの表示をサポート)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (< 250 MB ファイルの表示をサポート)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS デバイス上の Power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android デバイス上の Power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Windows 10 用 Power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
 |コラボレーションと共有|||[SharePoint サイト](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[SharePoint チーム サイト](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Power BI サイト](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**企業 BI**|IT プロフェッショナル||||||  
 |多次元/表形式ビジネス モデルの作成||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |アドホック データ視覚エフェクトの作成|||[SharePoint 用の Power View](https://go.microsoft.com/fwlink/p/?LinkId=391858)||||  
 |ダッシュボードの作成|||[SharePoint ダッシュボード](https://go.microsoft.com/fwlink/p/?LinkId=391859)<br /><br /> [PerformancePoint Services](https://technet.microsoft.com/library/ee424392.aspx)||||  
-|運用レポートの作成||||||<sup>1</sup> [reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
-|カスタム レポートと埋め込みレポートの作成||||||<sup>1</sup> [reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
+|運用レポートの作成||||||<sup>1</sup> [Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
+|カスタム レポートと埋め込みレポートの作成||||||<sup>1</sup> [Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Advanced Analytics**|データ サイエンティスト||||||  
 |セルフサービスの予測分析の実行||||||[データ マイニング Excel 用アドイン](https://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
 |データ マイニング アルゴリズムの使用||||||[Analysis Services 内でのデータ マイニング](https://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  

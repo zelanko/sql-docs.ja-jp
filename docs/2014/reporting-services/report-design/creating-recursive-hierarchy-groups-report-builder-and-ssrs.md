@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 92412bbde8a1032b34264ca254560f31704281e8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1f81429c6abc8ba1c3cb0936c5107cbf2d49bf11
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038133"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287300"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>複数の再帰型階層グループの作成 (レポート ビルダーおよび SSRS)
   親と子間のリレーションシップがデータセット内のフィールドで表される再帰型データを表示するのには、子フィールドに基づいたデータ領域グループ式を設定し、親フィールドに基づいた親プロパティを設定します。  

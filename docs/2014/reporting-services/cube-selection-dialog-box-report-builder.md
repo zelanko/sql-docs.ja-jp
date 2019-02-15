@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10027"
 ms.assetid: 2887ad5f-015f-4197-8388-c59f78d32f52
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 26ae33e722e1da42a648248df198c23c4fc4ddf5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43668ec1da730687ea422511021ebe64deec9d30
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011034"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288890"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>[キューブの選択] ダイアログ ボックス (レポート ビルダー)
   **[キューブの選択]** ダイアログ ボックスを使用すると、レポートのデータ ソースとして別のキューブを選択できます。 別のキューブを選択することにより、クエリは無効になります。  

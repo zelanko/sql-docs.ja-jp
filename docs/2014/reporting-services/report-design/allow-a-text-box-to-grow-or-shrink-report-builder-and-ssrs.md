@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 75998722f773685e419f0618dc75864ae5fece16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 656569ccf0e0d93c7a8b20f9862c44c502f3f51d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028233"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288590"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>テキスト ボックスの拡大または縮小 (レポート ビルダーおよび SSRS)
   既定では、テキスト ボックスのサイズは固定されています。 内容に応じてテキスト ボックスを拡大または縮小するためのオプションを選択できます。 これらのオプションは、それぞれプロパティ ペインの `CanGrow` プロパティまたは `CanShrink` プロパティに対応します。  
