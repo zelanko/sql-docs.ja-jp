@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3253c8c13b950f661ee7ddc7925aac19221d3173
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fdfcdae32c4709a19833612e16a4956f76c78c5f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011183"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295130"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)
   SharePoint ライブラリからレポートを実行する場合は、レポート内で、またはそのレポートにリンクされている外部ファイルで、接続情報を定義できます。 レポートに埋め込む接続情報をカスタム データ ソースと呼びます。 外部ファイル内で定義する接続情報を共有データ ソースと呼びます。 外部ファイルとしては、レポート サーバー データ ソース (.rsds) ファイルまたは Office データ接続 (.odc) ファイルを使用できます。  

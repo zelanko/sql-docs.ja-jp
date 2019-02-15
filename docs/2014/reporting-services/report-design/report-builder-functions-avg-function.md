@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 13275d0a3a2070c7fd57d65a67d083af06c00af3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 562ba01ff109d78552e3e8bcdd049967847e39b9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018134"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286590"
 ---
 # <a name="avg-function-report-builder-and-ssrs"></a>Avg 関数 (レポート ビルダーおよび SSRS)
   式で指定された NULL 以外のすべての数値の平均を、指定されたスコープで評価して返します。  
