@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ca8a9b258275c0e8b2368519d8af7ca18aad70aa
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 850af4e77b1fcaf8ffdaa0ede7bcaeba79695adc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617462"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013423"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Data Quality Server のインストールを完了するための DQSInstaller.exe の実行
 
@@ -36,9 +36,9 @@ ms.locfileid: "52617462"
   
 1.  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]をインストールするコンピューターで、次のうち適切ないずれかを使用して DQSInstaller.exe ファイルを実行します。  
   
-    -   **[スタート] 画面**: **[スタート]** 画面で、 **[Data Quality Server Installer]**  
+    -   **[スタート] 画面**: **[スタート]** 画面で、**[Data Quality Server Installer]** をクリックします。  
   
-    -   **[スタート] メニュー**: タスク バーの **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントして、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]をクリックします。  [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]で、 **[Data Quality Services]** をクリックし、 **[Data Quality Server Installer]** をクリックします。  
+    -   **[スタート] メニュー**: タスク バーの **[スタート]** ボタンをクリックし、**[すべてのプログラム]** をポイントし、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] をクリックします。 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]で、 **[Data Quality Services]** をクリックし、 **[Data Quality Server Installer]** をクリックします。  
   
     -   **Windows エクスプローラー**: DQSInstaller.exe ファイルを探します。 SQL Server の既定のインスタンスをインストールした場合、DQSinstaller.exe ファイルは C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn に格納されます。 DQSInstaller.exe ファイルをダブルクリックします。  
   
@@ -91,9 +91,9 @@ ms.locfileid: "52617462"
   
 3.  コマンド プロンプトで、DQSInstaller.exe を実行します。コマンド ライン パラメーターは必要に応じて使用します。  
   
-    -   **コマンド ライン パラメーターを使用しない場合**: 「 `dqsinstaller.exe`」と入力し、Enter キーを押します。  
+    -   **コマンド ライン パラメーターを使用しない場合**:「`dqsinstaller.exe`」と入力して Enter キーを押します。  
   
-    -   **コマンド ライン パラメーターを使用する場合**: 上の表で示したコマンドの中から必要なコマンドを入力し、Enter キーを押します。  
+    -   **コマンド ライン パラメーターを使用する場合**:上の表で説明したように、必要なコマンドを入力し、Enter キーを押します。  
   
 4.  指定したコマンドに基づいて、必要なアクションが実行されます。 コマンド ライン パラメーターを使用せずに [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] をインストールした場合、残りの手順は、前のセクション (「 [[スタート] 画面、[スタート] メニュー、または Windows エクスプローラーから DQSInstaller.exe を実行する](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer)」) の手順 2. ～ 6. と同じです。  
   

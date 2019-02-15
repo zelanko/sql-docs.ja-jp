@@ -3,7 +3,7 @@ title: SQL Server 2012 Service Pack のリリース ノート | Microsoft Docs
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
-ms.date: 2/26/2018
+ms.date: 02/26/2018
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9e89edc1deb8e16dc69c58a7f959db74c1e6024
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503271"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017063"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack のリリース ノート
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -129,14 +129,14 @@ Service Pack は、インストール メディアではなくオンラインで
 この Service Pack で修正されたすべてのバグと既知の問題については、 [サポート技術情報記事](https://support.microsoft.com/kb/2674319)を参照してください。   
 
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>同じ IP アドレスを使用すると SQL Server フェールオーバー クラスターのインスタンスの再インストールに失敗する  
-**問題点:** SQL Server フェールオーバー クラスター インスタンスのインストール中に正しくない IP アドレスを指定すると、インストールが失敗します。 失敗したインスタンスをアンインストールした後に、同じインスタンス名と適切な IP アドレスを使用して SQL Server フェールオーバー クラスター インスタンスを再インストールしようとすると、インストールは失敗します。 このエラーは、前のインストールによって残されたリソース グループが重複するため発生します。  
+**問題点:** SQL Server フェールオーバー クラスター インスタンスのインストール中に不適切な IP アドレスを指定すると、インストールは失敗します。 失敗したインスタンスをアンインストールした後に、同じインスタンス名と適切な IP アドレスを使用して SQL Server フェールオーバー クラスター インスタンスを再インストールしようとすると、インストールは失敗します。 このエラーは、前のインストールによって残されたリソース グループが重複するため発生します。  
   
 **回避策:** この問題を解決するには、再インストール時に別のインスタンス名を使用するか、再インストールする前にリソース グループを手動で削除してください。 詳細については、「 [SQL Server フェールオーバー クラスターでのノードの追加または削除](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services と PowerPivot  
   
 ##### <a name="powerpivot-configuration-tool-does-not-create-the-powerpivot-gallery"></a>PowerPivot 構成ツールで PowerPivot ギャラリーが作成されない  
-**問題点:** PowerPivot 構成ツールで準備されるのはチーム サイトであり、PowerPivot ギャラリーは作成されません。  
+**問題点:** PowerPivot 構成ツールはチーム サイトを準備するため、PowerPivot ギャラリーは作成されません。  
   
 **回避策:** 新しいアプリ (ライブラリ) を作成します。  
   
@@ -147,14 +147,14 @@ Service Pack は、インストール メディアではなくオンラインで
 3.  **[PowerPivot ギャラリー]** をクリックします。  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Excel 2013 で PowerPivot for Excel を使用する場合は Excel と一緒にインストールされたアドインを使用する必要がある  
-**問題点:** Office 2010 では、PowerPivot for Excel は [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) からダウンロードできるスタンドアロンのアドインです。 このアドインは、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=29074)からもダウンロードできます。 ダウンロードできる PowerPivot アドインの 2 つのバージョンがあることに注意してください。1つは SQL Server 2008 R2 に、もう 1 つは SQL Server 2012 にそれぞれ付属しています。 ただし、Office 2013 の場合、PowerPivot for Excel は Offce に付属していて、Excel のインストール時にインストールされます。 SQL Server 2008 R2 および SQL Server 2012 に付属の PowerPivot for Excel 2010 には Excel 2013 との互換性はありませんが、Excel 2010 と Excel 2013 をサイド バイ サイドで実行する場合は、クライアント コンピューターに PowerPivot for Excel 2010 をインストールできます。 つまり、2 つのバージョンの Excel が共存できるため、対応する PowerPivot アドインも共存できます。  
+**問題点:** Office 2010 では、PowerPivot for Excel は [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) からダウンロードできるスタンドアロンのアドインです。 このアドインは、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=29074)からもダウンロードできます。 PowerPivot アドインは 2 つのバージョンをダウンロードできることにご留意ください。SQL Server 2008 R2 と SQL Server 2012 にそれぞれ付属するバージョンです。 ただし、Office 2013 の場合、PowerPivot for Excel は Offce に付属していて、Excel のインストール時にインストールされます。 SQL Server 2008 R2 および SQL Server 2012 に付属の PowerPivot for Excel 2010 には Excel 2013 との互換性はありませんが、Excel 2010 と Excel 2013 をサイド バイ サイドで実行する場合は、クライアント コンピューターに PowerPivot for Excel 2010 をインストールできます。 つまり、2 つのバージョンの Excel が共存できるため、対応する PowerPivot アドインも共存できます。  
   
 **回避策:** PowerPivot for Excel 2013 を使用するには、COM アドインを有効にする必要があります。 Excel 2013 で、 **[ファイル]** | **[オプション]** | **[アドイン]** の順にクリックします。**[管理]** ドロップダウン ボックスの一覧で **[COM アドイン]** を選択し、 **[設定]** をクリックします。 **[COM アドイン]** で、 **[Microsoft Office PowerPivot for Excel 2013]** を選択し、 **[OK]** をクリックします。  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>Reporting Services をインストールする前に SharePoint Server 2013 をインストールおよび構成する  
-**問題点:** SQL Server Reporting Services (SSRS) をインストールする **前に** 、次の要件を満たします。  
+**問題点:** SQL Server Reporting Services (SSRS) をインストールする**前に**、次の要件を完了します。  
   
 1.  SharePoint 2013 製品準備ツールを実行します。  
   
@@ -162,10 +162,10 @@ Service Pack は、インストール メディアではなくオンラインで
   
 3.  SharePoint 2013 製品構成ウィザードを実行するか、同等の構成手順を完了して SharePoint ファームを構成します。  
   
-**回避策:**  SharePoint ファームが構成される前に [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードをインストールした場合、必要な回避策は、インストールされている他のコンポーネントによって異なります。  
+**回避策:** SharePoint ファームが構成される前に [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードをインストールした場合、必要な回避策は、インストールされている他のコンポーネントによって異なります。  
   
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>SharePoint Server 2013 の Power View には Microsoft.AnalysisServices.SPClient.dll が必要  
-**問題点:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、必須コンポーネントの **Microsoft.AnalysisServices.SPClient.dll** がインストールされません。 SharePoint Server 2013 Preview と [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールしても、PowerPivot for SharePoint 2013 インストーラー パッケージ (**spPowerPivot.msi**) をダウンロードしてインストールしないと、Power View は動作せず、Power View では次の現象が発生します。  
+**問題点:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、必須コンポーネントの **Microsoft.AnalysisServices.SPClient.dll** がインストールされません。 SharePoint Server 2013 Preview と [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールしても、PowerPivot for SharePoint 2013 インストーラー パッケージ ( **spPowerPivot.msi** ) をダウンロードしてインストールしないと、Power View は動作せず、Power View では次の現象が発生します。  
   
 **現象:** Power View レポートを作成しようとすると、次のようなエラー メッセージが表示されます。  
   
@@ -180,14 +180,14 @@ Service Pack は、インストール メディアではなくオンラインで
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>定期データ更新の後で、PowerPivot ブックの Power View シートが削除される  
 **問題点**: PowerPivot for SharePoint アドインでは、Power View が含まれたブックで **定期データ更新** を使用すると、すべての Power View シートが削除されます。  
   
-**回避策**: Power View ブックで **Scheduled Data Refresh** を使用するには、データ モデルだけの PowerPivot ブックを作成します。 Excel シートと Power View シートを含む別のブックを作成し、データ モデルを含む PowerPivot ブックにリンクします。 データ モデルを含む PowerPivot ブックに対してのみ、定期データ更新を実行します。  
+**回避策**:Power View ブックで **Scheduled Data Refresh** を使用するには、データ モデルだけの PowerPivot ブックを作成します。 Excel シートと Power View シートを含む別のブックを作成し、データ モデルを含む PowerPivot ブックにリンクします。 データ モデルを含む PowerPivot ブックに対してのみ、定期データ更新を実行します。  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS がサポートされていないエディションの SQL Server 2012 で使用可能になる  
-**問題点:** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM リリースでは、Enterprise、Business Intelligence、および Developer 以外のエディションの SQL Server でも Data Quality Services (DQS) 機能を使用できます。 SQL Server 2012 SP1 のインストール後は、Enterprise、Business Intelligence、および Developer 以外のエディションで DQS を使用できなくなります。  
+**問題点:**[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM リリースでは、Enterprise、Business Intelligence、Developer 以外のエディションの SQL Server でも Data Quality Services (DQS) 機能を使用できます。 SQL Server 2012 SP1 のインストール後は、Enterprise、Business Intelligence、および Developer 以外のエディションで DQS を使用できなくなります。  
   
-**回避策**: サポートされていないエディションで DQS を使用している場合は、サポートされているエディションにアップグレードするか、アプリケーションをこの機能に依存しないように変更します。  
+**回避策**:サポートされていないエディションで DQS を使用している場合は、サポートされているエディションにアップグレードするか、アプリケーションをこの機能に依存しないように変更します。  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   

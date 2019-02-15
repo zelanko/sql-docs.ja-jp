@@ -10,50 +10,53 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 41b14322d3c895e687add2236c2447d93df62586
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202451"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771338"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server のオフライン ヘルプとヘルプ ビューアー
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server Management Studio (SSMS) または Visual Studio (VS) のヘルプ ビューアーを使用すると、オンライン ソースまたはディスクから、SQL Server ヘルプ パッケージをダウンロードしてインストールし、それをオフラインで表示することができます。 この記事では、ヘルプ ビューアーをインストールするためのツールの説明に加えて、オフライン ヘルプ コンテンツをインストールする方法および [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]、SQL Server 2016、SQL Server 2017 のヘルプを表示する方法について説明します。
+Microsoft ヘルプ ビューアーを使用すると、オンライン ソースまたはディスクから、SQL Server ヘルプ パッケージをダウンロードしてインストールし、それをオフラインで表示することができます。 ヘルプ ビューアーは、SQL Server Management Studio (SSMS) または Visual Studio (VS) でインストールされます。この記事では、ヘルプ ビューアーをインストールするためのツールの説明に加えて、オフライン ヘルプ コンテンツをインストールする方法および [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]、SQL Server 2016、SQL Server 2017 のヘルプを表示する方法について説明します。
 
-インターネットにアクセスできるシステム上でコンテンツがダウンロードされたら、そのコンテンツを、インターネットに接続されていないシステムに移行することができます。 
+ヘルプ ビューアーのコンテンツをダウンロードするには、インターネットへのアクセスが必要です。 その後、インターネットにアクセスできないコンピューターにコンテンツを移行できます。
 
 > [!NOTE]
 > SQL Server 2016 と SQL Server 2017 では共通のヘルプが提供されます。ただし、一部のトピックは、一方のバージョンにのみ適用され、その旨の説明があります。 ほとんどのトピックは、両方のバージョンに適用されます。
 
 ## <a name="install-the-help-viewer"></a>ヘルプ ビューアーをインストールする
 
-ヘルプ ビューアーには 2 つのバージョンがあります。v2.x は SQL Server 2016/SQL Server 2017 ヘルプをサポートし、v1.x は [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] ヘルプをサポートします。 ヘルプ ビューアーでは、プロキシ設定はサポートされておらず、ISO 形式もサポートされていません。 
+ヘルプ ビューアーには 2 つのバージョンがあります。  各バージョンでは、異なるバージョンの SQL Server コンテンツがサポートされています。  オフライン ブックの形式は時間が経つ間に変化しており、古いバージョンのヘルプ ビューアーでは新しいバージョンのブックはサポートされていません。
+- v2.x では、SQL Server 2016 と SQL Server 2017 のヘルプがサポートされています。 
+- v1.x では、[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] のヘルプがサポートされています。 ヘルプ ビューアーでは、プロキシ設定または ISO 形式はサポートされていません。
 
-ヘルプ ビューアーは、次のツールでインストールされます。 
 
-|**ヘルプ ビューアーをインストールするツール**|**インストールされるヘルプ ビューアーのバージョン**|
+|**ツール**|**インストールされるヘルプ ビューアーのバージョン**|
 |---------|---------|
-|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)| v2.2|
-|[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)| v2.2|
-|Visual Studio 2017* | v2.3|
+|[Visual Studio 2017*](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) | v2.3|
+|[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) | v2.2|
 |Visual Studio 2015 | v2.2|
+|SQL Server 2016 | v1.x|
 |SQL Server 2014 Management Studio | v1.x|
 |Visual Studio の以前のバージョン | v1.x|
-|SQL Server 2016 | v1.x|
+| | |
 
-\* Visual Studio 2017 でヘルプ ビューアーをインストールするには、Visual Studio インストーラーの [個別のコンポーネント] タブで、[コード ツール] にある **[ヘルプ ビューアー]** を選択し、**[インストール]** をクリックします。 
+\* Visual Studio 2017 でヘルプ ビューアーをインストールするには、Visual Studio インストーラーの [個別のコンポーネント] タブで、[コード ツール] にある **[ヘルプ ビューアー]** を選択し、**[インストール]** をクリックします。
 
 >[!NOTE]
 > - SQL Server 2016 ではヘルプ ビューアー 1.1 がインストールされますが、ヘルプ ビューアー 1.1 は SQL Server 2016 のヘルプをサポートしていません。 
-> - SQL Server 2017 をインストールするとき、ヘルプ ビューアーはインストールされません。
+> - SQL Server 2017 をインストールしても、ヘルプ ビューアーはインストールされません。 ヘルプ ビューアーは、SQL Server のインストールに含まれなくなっています。
 > - ヘルプ ビューアー v2.x では、ディスクからコンテンツをインストールした場合、[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] のヘルプもサポートされます。
 
 ## <a name="use-help-viewer-v2x"></a>ヘルプ ビューアー v2.x を使用する
 
-SSMS 17.x と VS 2015 および 2017 ではヘルプ ビューアー 2.x が使用されます。ヘルプ ビューアー 2.x では SQL Server 2016/2017 のヘルプがサポートされます。 
+SSMS 17.x および VS 2015 と 2017 では、ヘルプ ビューアー 2.x が使用されます。ヘルプ ビューアー 2.x では、SQL Server 2016 と SQL Server 2017 のヘルプがサポートされています。 
 
 **ヘルプ ビューアー v2.x を使用してオフライン ヘルプ コンテンツをダウンロードしてインストールするには**
 
@@ -70,7 +73,7 @@ SSMS 17.x と VS 2015 および 2017 ではヘルプ ビューアー 2.x が使�
    >[!NOTE]
    > ディスクからインストールするには (SQL Server 2014 ヘルプ)、[インストール元] で **[ディスク]** を選択し、ディスクの場所を指定します。
    
-   [コンテンツの管理] タブの [ローカル ストア パス] に、ローカル コンピューター上でのコンテンツのインストール先が表示されます。 場所を変更する場合は、**[移動]** をクリックし、**[宛先]** フィールドに異なるフォルダー パスを入力し、**[OK]** をクリックします。
+   [コンテンツの管理] タブの [ローカル ストア パス] に、ローカル コンピューター上でのコンテンツのインストール先が表示されます。 場所を変更するには、**[移動]** をクリックし、**[宛先]** フィールドに異なるフォルダー パスを入力し、**[OK]** をクリックします。
    [ローカル ストア パス] を変更した後、ヘルプのインストールに失敗した場合は、ヘルプ ビューアーを閉じてから再度開き、[ローカル ストア パス] に新しい場所が表示されていることを確認し、インストールを再試行します。
 
 3. インストールする各コンテンツ パッケージ (ドキュメント) の横にある **[追加]** をクリックします。 
@@ -84,21 +87,25 @@ SSMS 17.x と VS 2015 および 2017 ではヘルプ ビューアー 2.x が使�
 > [!NOTE]
 > SQL Server の目次にあるすべての最上位ノード タイトルが、対応するダウンロード可能なヘルプ ドキュメントの名前と厳密に一致するとは限りません。 目次のタイトルは、次のようにドキュメント名にマップされています。
 
-| コンテンツ ウィンドウ | SQL Server のドキュメント |
-|-----|-----|
-|Analysis Services 言語のリファレンス | Analysis Services (MDX) 言語のリファレンス|
-|Data Analysis Expressions (DAX) リファレンス | Data Analysis Expressions (DAX) リファレンス|
-|データ マイニング拡張機能 (DMX) リファレンス | データ マイニング拡張機能 (DMX) リファレンス|
-|SQL Server の開発者ガイド | SQL Server 開発者用リファレンス|
-|SQL Server Management Studio のダウンロード | SQL Server Management Studio|
-|SQL Server での機械学習の概要 | Microsoft Machine Learning Services|
-|Power Query M リファレンス | Power Query M リファレンス|
-|SQL Server ドライバー | SQL Server 接続ドライバー|
-|SQL Server on Linux | SQL Server on Linux|
-|SQL Server 技術ドキュメント | SQL Server 技術ドキュメント (SSIS、SSRS、DB エンジン、セットアップ)|
-|Azure SQL Database 用のツールとユーティリティ | SQL Server のツール|
-|Transact-SQL リファレンス (データベース エンジン) | Transact-SQL リファレンス|
-|XQuery 言語リファレンス (SQL Server) | XQuery 言語リファレンス (SQL Server)|
+(*) は、古い 2016 のコンテンツと共に、SQL Server 2017 の最初の一般公開バージョンのコンテンツを示します。 SQL Server 2016 および 2017 用の独立した完全なブックには、2019 年 1 月時点でのコンテンツの編集が含まれるため、これらのブックは削除されます。  
+
+| | コンテンツ ウィンドウ | SQL Server のドキュメント |
+|-----|-----|-----|
+|*|Analysis Services 言語のリファレンス | Analysis Services (MDX) 言語のリファレンス|
+|*|Data Analysis Expressions (DAX) リファレンス | Data Analysis Expressions (DAX) リファレンス|
+|*|データ マイニング拡張機能 (DMX) リファレンス | データ マイニング拡張機能 (DMX) リファレンス|
+|*|SQL Server での機械学習の概要 | Microsoft Machine Learning Services|
+|*|Power Query M リファレンス | Power Query M リファレンス|
+||SQL Server 2016 ドキュメント | SQL Server 2016 ドキュメント|
+||SQL Server 2017 ドキュメント| SQL Server 2017 ドキュメント|
+|*|SQL Server の開発者ガイド | SQL Server 開発者用リファレンス|
+|*|SQL Server Management Studio のダウンロード | SQL Server Management Studio|
+|*|Microsoft SQL Server のクライアント プログラミングのホーム ページ | SQL Server 接続ドライバー|
+|*|SQL Server on Linux | SQL Server on Linux|
+|*|SQL Server 技術ドキュメント | SQL Server 技術ドキュメント (SSIS、SSRS、DB エンジン、セットアップ)|
+|*|Azure SQL Database 用のツールとユーティリティ | SQL Server のツール|
+|*|Transact-SQL リファレンス (データベース エンジン) | Transact-SQL リファレンス|
+|*|XQuery 言語リファレンス (SQL Server) | XQuery 言語リファレンス (SQL Server)|
 
 > [!NOTE]
 > コンテンツの追加中にヘルプ ビューアーがフリーズ (ハング) した場合は、%LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings ファイル内の Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 行を将来の日付に変更します。 この問題の詳細については、「 [Visual Studio ヘルプ ビューアーがフリーズする](/visualstudio/welcome-to-visual-studio)」を参照してください。
@@ -195,7 +202,7 @@ SSMS と VS の以前のバージョンではヘルプ ビューアー 1.x が�
 3. **[オンライン ヘルプを使用する]**、**[OK]**、**[終了]** の順にクリックします。  
    
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/sql-server-help-installation/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
-   
+
 4. **[ヘルプ]** メニューの **[ヘルプの表示]** をクリックしてヘルプ ビューアーを開き、コンテンツを表示します。 
 
 ## <a name="view-f1-help"></a>F1 ヘルプを表示する
@@ -204,28 +211,27 @@ F1 を押すか、SSMS または VS のダイアログ ボックスで **[ヘル
 
 **F1 ヘルプを表示するには**
 
-1. [ヘルプ] メニューの **[ヘルプ設定の設定]** をポイントし、**[ブラウザーで起動]** または **[ヘルプ ビューアーで起動]** を選択します。 
-2. F1 を押すか、**[ヘルプ]** または **[?]** を、これらが利用できるダイアログ ボックスでクリックすると、 選択した環境で状況依存のオンライン トピックが表示されます。
+1. [ヘルプ] メニューの **[ヘルプ設定の設定]** をポイントし、**[ブラウザーで起動]** または **[ヘルプ ビューアーで起動]** を選択します。
+2. F1 キーを押すか、**[ヘルプ]** または **[?]** を、これらが利用できるダイアログ ボックスでクリックすると、 選択した環境で状況依存のオンライン トピックが表示されます。
 
 > [!NOTE]
->  F1 ヘルプは、オンラインのときにのみ機能します。 F1 ヘルプのオフライン ソースはありません。 
+> F1 ヘルプは、オンラインのときにのみ機能します。 F1 ヘルプのオフライン ソースはありません。
 
 ## <a name="systems-without-internet-access"></a>インターネットに接続されていないシステム
-[前述の手順](#use-help-viewer-v2x)に従って、インターネットにアクセスできるシステム上で SQL Server のヘルプ ビューアーを使用してオフライン コンテンツをダウンロードしたら、そのコンテンツを、インターネットに接続されていないシステムに移行することができます。 次の手順で行うことができます。 
+インターネットにアクセスできるシステムでオフライン ブックをダウンロードした後は、次の手順を使用して、インターネットにアクセスできないシステムにコンテンツを移行することができます。
 
   >[!NOTE]
-  >SQL Server Management Studio などのヘルプ ビューアーをサポートするソフトウェアを、オフライン システム上にインストールする必要があります。 
+  >SQL Server Management Studio などのヘルプ ビューアーをサポートするソフトウェアを、オフライン システム上にインストールする必要があります。
 
 1. ヘルプ ビューアーを開きます (Ctrl + Alt + F1)。
-1. 関心があるドキュメントを選択します。 たとえば、SQL でフィルター処理し、SQL Server 技術ドキュメントを選択します。 
+1. 関心があるドキュメントを選択します。 たとえば、SQL でフィルター処理し、SQL Server 技術ドキュメントを選択します。
 1. ディスク上のファイルの物理パスを特定します。それは、**[ローカル ストア パス]** で見つけることができます。
-1. ご利用のファイル システム エクスプ ローラーを使用して、この場所に移動します。 
+1. ご利用のファイル システム エクスプ ローラーを使用して、この場所に移動します。
     1.  既定の場所は次のとおりです。 `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
-1. **ContentStore**、**Incoming**、**IndexStore** という 3 つのフォルダーを選択し、ご利用のオフライン システム上の同じ場所にコピーします。 USB や CD などの中間メディア デバイスを使用することが必要になる場合があります。 
+1. **ContentStore**、**Incoming**、**IndexStore** という 3 つのフォルダーを選択し、ご利用のオフライン システム上の同じ場所にコピーします。 USB や CD などの中間メディア デバイスを使用することが必要になる場合があります。
 1. これらのファイルが移動されたら、オフライン システム上でヘルプ ビューアーを起動することで、SQL Server 技術ドキュメントを利用できるようになります。
 
 ![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
-   
 
 ## <a name="next-steps"></a>次の手順
 [Microsoft ヘルプ ビューアー - Visual Studio](/visualstudio/ide/microsoft-help-viewer)  
