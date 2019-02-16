@@ -4,18 +4,18 @@ description: この記事では、Linux でのスナップショット フォル
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 9/24/2018
+ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b3f05aa128aa8296d3860cf3ff81a642a0dc5d5a
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 37b2aeb0ad03f0762fc593f5d9b4d2a0fec7a6a4
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254309"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319133"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>共有スナップショット フォルダーのレプリケーションを構成します。
 
@@ -138,9 +138,9 @@ sudo service smb status
 * レプリケーションを設定する場合は、共有パス (例を使用してください。 `//host1/mssql_data`
 * マップ`//host1/mssql_data`ローカル ディレクトリに追加のマッピングを`mssql.conf`します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-[Linux 上の概念: SQL Server レプリケーション](sql-server-linux-replication.md)
+[概念:Linux 上の SQL Server レプリケーション](sql-server-linux-replication.md)
 
 [レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)します。
 
