@@ -5,14 +5,18 @@ title: SQL Server のビジネス継続性
 description: 高可用性、ディザスター リカバリー、また、状況に関係なく、ビジネスを継続するための、SQL Server のさまざまな機能を確認します。
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: bcf57c58e706a8f25a1cd2f2ace671480352f5a2
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 8d0ffb00e47f24fdd8ba85b7dee03119b67c9d0f
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079368"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319093"
 ---
 <div id="main" class="v2">
     <div class="container">
