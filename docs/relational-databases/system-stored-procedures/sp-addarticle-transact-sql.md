@@ -80,8 +80,8 @@ sp_addarticle [ @publication = ] 'publication'
   
  *このパラメーターは、Oracle パブリッシャーに対してはサポートされていません。*  
   
- [  **@destination_table =** ] **'**_destination_table_**'**  
- 異なる場合、レプリケーション先 (サブスクリプション) テーブルの名前は、 *source_table*またはストアド プロシージャ。 *destination_table*は**sysname**の既定値は NULL には、つまり*source_table*と等しい*destination_table * *。*  
+ [ **@destination_table =** ] **'**_destination_table_**'**  
+ 異なる場合、レプリケーション先 (サブスクリプション) テーブルの名前は、 *source_table*またはストアド プロシージャ。 *destination_table*は**sysname**の既定値は NULL には、つまり*source_table*と等しい*destination_table **。*  
   
  [  **@vertical_partition =** ] **'**_vertical_partition_**'**  
  テーブル アーティクル上の列フィルター選択を有効または無効にします。 *vertical_partition*は**nchar (5)**、既定値は FALSE。  
@@ -171,7 +171,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**drop** (既定値)|レプリケーション先テーブルを破棄します。|  
 |**truncate**|レプリケーション先テーブルを切り捨てます。 ODBC サブスクライバーまたは OLE DB サブスクライバーに対しては無効です。|  
   
- [  **@filter_clause=**] **'**_filter_clause_**'**  
+ [ **@filter_clause=**] **'**_filter_clause_**'**  
  行フィルターを定義する制限句 (WHERE) を指定します。 制限句を入力する場合は、WHERE キーワードを省略します。 *filter_clause*は**ntext**、既定値は NULL です。 詳細については、「[パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)」を参照してください。  
   
  [  **@schema_option =**] *schema_option*  
@@ -244,7 +244,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  非をサポートする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー、 *destination_owner* NULL にする必要があります。  
   
- [  **@status=**]*状態*  
+ [ **@status=**] *状態*  
  アーティクルがアクティブであるかどうか、および変更がどのように反映されるかについての追加オプションを指定します。 *ステータス*は**tinyint**、でき、 [|(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)これらの値の 1 つ以上の製品です。  
   
 |値|説明|  
