@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f7de9a4f6e99c60b0bbe560d57f6e7adf397c2e
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e3b3789b28a63d91dd11ce9238b9c3e4a35325be
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087911"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319383"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -557,7 +557,7 @@ SQL エディター:
     
 SMO:
 
-- 既定の制約を含む列を追加する際にデータが既にテーブルに存在すると Table.Alter() が失敗する問題を修正しました。 詳細については、「[sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625)」 (データを含むテーブルに列を追加する際に SQL Server SMO がインラインの既定の制約を生成する) を参照してください。
+- 既定の制約を含む列を追加する際にデータが既にテーブルに存在すると Table.Alter() が失敗する問題を修正しました。 詳細については、「[sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625)」(データを含むテーブルに列を追加する際に SQL Server SMO がインラインの既定の制約を生成する) を参照してください。
     
 Always Encrypted:
 
@@ -894,7 +894,7 @@ DB の拡張をスクリプト化したときに *DATA\_COMPRESSION* オプシ�
 ### <a name="enhancements"></a>機能強化
 
 - インテリジェントなフレームワークを使用して、CSV ファイルのインポート エクスペリエンスを効率化するための新しい "フラット ファイルのインポート" ウィザードが追加されました。これは最小限のユーザーの介入または特殊なドメインの知識で使用できます。 詳細については、「[Import Flat File to SQL Wizard](../relational-databases/import-export/import-flat-file-wizard.md)」 (フラット ファイルを SQL ウィザードにインポートする) を参照してください。
-- オブジェクト エクスプローラーに "XEvent プロファイラー" ノードが追加されました。 詳細については、「[SSMS XEvent Profiler の使用](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)」を参照してください。
+- オブジェクト エクスプローラーに "XEvent プロファイラー" ノードが追加されました。 詳細については、「[SSMS XEvent プロファイラーの使用](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)」を参照してください。
 - パフォーマンス ダッシュボードでの待機の履歴レポートの待機のフィルター処理と分類を更新しました。
 - "Predict" 関数の構文チェックを追加しました。
 - 外部ライブラリ管理のクエリの構文チェックを追加しました。
