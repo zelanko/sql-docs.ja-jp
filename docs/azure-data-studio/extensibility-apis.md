@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a13a171024aecbe39bc7c83f77f109914bc4250
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 0a8177492de46c92577eb98e79ece42e77ba947b
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53029756"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407612"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 機能拡張 Api
 
@@ -69,7 +69,7 @@ credentials: {
 
 - `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` アクティブなすべてのオブジェクト エクスプ ローラー接続ノードを取得します。
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` 指定したメタデータと一致するすべてのオブジェクト エクスプ ローラー ノードを検索します。 `schema`、 `database`、および`parentObjectNames`引数には、`undefined`ときに適用できません。 `parentObjectNames` 目的のオブジェクトであるオブジェクト エクスプ ローラーで最下位のレベルを高いものから、データベース以外の親オブジェクトの一覧を示します。 たとえば、接続の id 列、テーブル"schema1.table1"とデータベース"database1"に属している"column1"を検索するときに`connectionId`、呼び出す`findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`します。 参照してください、 [SQL Operations Studio は既定でサポートされる種類の一覧](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API)この API 呼び出し。
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` 指定したメタデータと一致するすべてのオブジェクト エクスプ ローラー ノードを検索します。 `schema`、 `database`、および`parentObjectNames`引数には、`undefined`ときに適用できません。 `parentObjectNames` 目的のオブジェクトであるオブジェクト エクスプ ローラーで最下位のレベルを高いものから、データベース以外の親オブジェクトの一覧を示します。 たとえば、接続の id 列、テーブル"schema1.table1"とデータベース"database1"に属している"column1"を検索するときに`connectionId`、呼び出す`findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`します。 参照してください、 [Azure Data Studio は既定でサポートされる種類の一覧](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API)この API 呼び出し。
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
 - `connectionId: string` 下のノードが存在する接続の id

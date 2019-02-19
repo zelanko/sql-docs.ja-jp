@@ -11,12 +11,12 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030606"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407582"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>チュートリアル:Azure Data Studio の拡張機能を作成します。
 
@@ -37,16 +37,15 @@ Azure Data Studio は、Visual Studio Code を使用して Azure Data Studio の
 
 - [Node.js](https://nodejs.org)インストールされで使用できる、`$PATH`します。 Node.js を含む[npm](https://www.npmjs.com/)、拡張機能ジェネレーターをインストールするために使用する Node.js パッケージ マネージャー。
 - [Visual Studio Code](https://code.visualstudio.com)拡張機能をデバッグします。
-- Azure の Data Studio[拡張機能をデバッグ](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug)します。
-- 確認`sqlops`がパスにします。 、Windows のことを選択することを確認して、 `Add to Path` setup.exe オプション。 Mac または Linux の場合は、実行、 *'sqlops' コマンドのインストール パスで*オプション。
-- SQL Operations Studio のデバッグ拡張機能 (省略可能)。 これにより、パッケージ化し、Azure Data Studio にインストールすることがなく、拡張機能をテストできます。
+- Azure の Data Studio[拡張機能をデバッグ](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug)(省略可能)。 これにより、パッケージ化し、Azure Data Studio にインストールすることがなく、拡張機能をテストできます。
+- 確認`azuredatastudio`がパスにします。 、Windows のことを選択することを確認して、 `Add to Path` setup.exe オプション。 Mac または Linux の場合は、実行、 *'azuredatastudio' コマンドのインストール パスで*オプション。
 
 
 ## <a name="install-the-extension-generator"></a>拡張機能ジェネレーターをインストールします。
 
 拡張機能の作成のプロセスを簡素化するために構築した、[拡張機能ジェネレーター](https://code.visualstudio.com/docs/extensions/yocode) Yeoman を使用します。 これをインストールするには、コマンド プロンプトから、次を実行します。
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
 ## <a name="create-your-extension"></a>拡張機能を作成します。
 
@@ -54,13 +53,13 @@ Azure Data Studio は、Visual Studio Code を使用して Azure Data Studio の
 
 1. 次のコマンドを使用して拡張機能ジェネレーターを起動します。
 
-   `yo sqlops`
+   `yo azuredatastudio`
 
 2. 選択**新しいキーマップ**拡張機能の種類の一覧から。
 
    ![拡張機能ジェネレーター](./media/tutorial-create-extension/extension-generator.png)
 
-3. 拡張機能の名前を入力する手順に従います (このチュートリアルでは、使用**ssmskeymap**)、および説明を追加します。
+3. 拡張機能の名前を入力する手順に従います (このチュートリアルでは、使用**ssmskeymap2**)、および説明を追加します。
 
 前の手順を完了するには、新規のフォルダーが作成されます。 開いている Visual Studio Code でフォルダーができました、独自のキー バインド拡張機能を作成します。
 
@@ -163,7 +162,7 @@ Visual Studio Code で Azure Data Studio のデバッグ拡張機能がインス
 Azure Data Studio の拡張機能マーケットプ レースは完全にまだ実装されていないが、現在のプロセスがどこかに VSIX (たとえば、GitHub のリリース ページ) 拡張機能をホストする、送信、PR の更新[この JSON ファイル](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json)で、拡張機能の情報です。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このチュートリアルでは、以下の使用方法を学習しました:
 > [!div class="checklist"]
