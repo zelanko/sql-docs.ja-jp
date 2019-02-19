@@ -45,9 +45,9 @@ items:
   items:
   - name: 作成
     href: create-edge-constraints.md
-  - name: DELETE
+  - name: 削除
     href: delete-edge-constraint.md
-  - name: '[変更]'
+  - name: 変更
     href: modify-edge-constraint.md
   - name: 表示
     href: view-edge-constraint-properties.md
