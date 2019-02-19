@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d473ba8f0a16fd161ec2c6edce2cd6de51a08f36
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 78f733d5f34c1c0bf6f89b40ef0346c85f1638b5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143492"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294980"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>チュートリアル:自由形式のレポートの作成 (レポート ビルダー)
 このチュートリアルでは、ニュースレターとして機能する、ページ分割されたレポートを作成します。 各ページには、固定テキスト、概要ビジュアル、詳細サンプル セールス データが表示されます。
