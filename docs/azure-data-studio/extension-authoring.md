@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a939770ba7b362e2601ecb45b126066341c7c34e
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 54036ccf8d8b47eedede1d2ddfe5d85b6dbee351
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030518"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407522"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio の拡張機能を作成して、機能を拡張します。
 
@@ -35,11 +35,11 @@ Azure Data Studio の拡張に知りたい場合は、独自の拡張機能を�
 
 拡張機能を開発するには、必要があります Node.js インストールして、$PATH で使用できます。 Node.js には、npm、拡張機能ジェネレーターをインストールするために使用する Node.js パッケージ マネージャーが含まれています。
 
-新しい拡張機能を開始するには、Azure データ Studio の拡張機能ジェネレーターを使用することができます。 Yeoman[拡張機能ジェネレーター](https://www.npmjs.com/package/generator-sqlops)簡単な拡張機能プロジェクトを作成する非常に簡単になります。 コード ジェネレーターを起動するには、コマンド プロンプトで、次を入力します。
+新しい拡張機能を開始するには、Azure データ Studio の拡張機能ジェネレーターを使用することができます。 Yeoman[拡張機能ジェネレーター](https://www.npmjs.com/package/generator-azuredatastudio)簡単な拡張機能プロジェクトを作成する非常に簡単になります。 コード ジェネレーターを起動するには、コマンド プロンプトで、次を入力します。
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
-`yo sqlops`
+`yo azuredatastudio`
 
 
 **拡張機能の参照**

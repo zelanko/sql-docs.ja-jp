@@ -9,14 +9,14 @@ helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fab47f8994be4500cca49bc427aa7ec7292be2a2
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7357530ed6990c10ece43748c6ef7dd3a00c6454
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710993"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288730"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>レポート作成の概念 (レポート ビルダーおよび SSRS)
   ここでは、ページ分割されたレポートを記述するためにレポート ビルダーとレポート デザイナーのドキュメントで使用する主要な概念について簡単に説明します。 特定の用語の定義については、「[用語集 &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/glossary-report-builder.md)」を参照してください。  

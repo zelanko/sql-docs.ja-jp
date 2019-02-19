@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver for SQL Server の機能の依存関係 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b9d9fea0f211809fd65b65459d50daa7a85db88
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: 26402f5b15fa7dd8e24b13f3adc41836ff275228
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736953"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154687"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server の機能の依存関係
 
@@ -26,12 +26,12 @@ ms.locfileid: "55736953"
 
 ## <a name="compile-time"></a>コンパイル時間
 
- - `com.microsoft.azure:azure-keyvault`[ ] :(省略可能) 常に暗号化された Azure Key Vault 機能用の azure Key Vault Provider
- - `com.microsoft.azure:azure-keyvault-webkey`[ ] :(省略可能) 常に暗号化された Azure Key Vault 機能用の azure Key Vault Provider
- - `com.microsoft.azure:adal4j`[ ] :Azure の Active Directory Library for Java 用 Azure Active Directory 認証の機能と Azure Key Vault 機能 (省略可能)
- - `com.microsoft.rest:client-runtime`[ ] :Azure の Active Directory Library for Java 用 Azure Active Directory 認証の機能と Azure Key Vault 機能 (省略可能)
-- `org.osgi:org.osgi.core`[ ] :OSGi フレームワークのサポートの OSGi コア ライブラリです。
-- `org.osgi:org.osgi.compendium`[ ] :OSGi Compendium OSGi フレームワークのサポート ライブラリです。
+ - `com.microsoft.azure:azure-keyvault` : (省略可能) 常に暗号化された Azure Key Vault 機能 azure の Key Vault Provider
+ - `com.microsoft.azure:azure-keyvault-webkey` : (省略可能) 常に暗号化された Azure Key Vault 機能 azure の Key Vault Provider
+ - `com.microsoft.azure:adal4j` : Azure の Active Directory Library for Java 用 Azure Active Directory 認証の機能と Azure Key Vault 機能 (省略可能)
+ - `com.microsoft.rest:client-runtime` : Azure の Active Directory Library for Java 用 Azure Active Directory 認証の機能と Azure Key Vault 機能 (省略可能)
+- `org.osgi:org.osgi.core`: OSGi フレームワークのサポート OSGi コア ライブラリです。
+- `org.osgi:org.osgi.compendium`: OSGi フレームワークのサポート OSGi Compendium ライブラリです。
 
 ## <a name="test-time"></a>テスト時間
 
@@ -43,7 +43,7 @@ ms.locfileid: "55736953"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.0.jre11</version>
+    <version>7.2.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -66,7 +66,7 @@ ms.locfileid: "55736953"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.0.jre11</version>
+    <version>7.2.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -99,11 +99,11 @@ ms.locfileid: "55736953"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Azure Key Vault プロバイダーの操作。
 
-- JDBC Driver バージョン 7.2.0 - 依存関係のバージョン:-Azure-keyvault (バージョン 1.2.0)、Azure Keyvault Webkey (バージョン 1.2.0)、Adal4j (バージョン 1.6.3) クライアントのランタイム-の-AutoRest (1.6.5) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample.md))
-- JDBC Driver バージョン 7.0.0 - 依存関係のバージョン:Azure-keyvault (バージョン 1.0.0) Adal4j (バージョン 1.6.0) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample.md))
-- JDBC Driver バージョン 6.4.0 - 依存関係のバージョン:Azure-keyvault (バージョン 1.0.0) Adal4j (バージョン 1.4.0) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC Driver 版 6.2.2 - 依存関係のバージョン:Azure-keyvault (バージョン 1.0.0) Adal4j (バージョン 1.4.0) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC Driver 6.0.0 - 依存関係のバージョン:Azure-keyvault (バージョン 0.9.7) Adal4j (バージョン 1.3.0) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
+- JDBC Driver version 7.2.1 - 依存関係のバージョン: Azure-keyvault (バージョン 1.2.0)、Azure Keyvault Webkey (バージョン 1.2.0)、Adal4j (バージョン 1.6.3) クライアントのランタイム-の-AutoRest (1.6.5) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample.md))
+- JDBC Driver バージョン 7.0.0 - 依存関係のバージョン: Azure-keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.6.0) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample.md))
+- JDBC Driver version 6.4.0 - 依存関係のバージョン: Azure-keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.4.0) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- JDBC Driver version 6.2.2 - 依存関係のバージョン: Azure-keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.4.0) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- JDBC Driver version 6.0.0 - 依存関係のバージョン: Azure-keyvault (バージョン 0.9.7)、Adal4j (バージョン 1.3.0) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
 > 6.2.2 と 6.4.0 ドライバーのバージョンでは、バージョン 1.0.0 に azure key vault-java 依存関係が更新されました。 ただし、新しいバージョンでは、(0.9.7) 以前のバージョンと互換性がないと、ドライバーに既存の実装を中断します。 ドライバーの新しい実装には、さらに、Azure Key Vault プロバイダーを使用するクライアント プログラムを中断する API の変更が必要です。
@@ -112,11 +112,11 @@ ms.locfileid: "55736953"
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Azure Active Directory 認証の操作:
 
-- JDBC Driver バージョン 7.2.0 - 依存関係のバージョン:Adal4j (バージョン 1.6.3) クライアントのランタイム-の-AutoRest (1.6.5) とその依存関係
-- JDBC Driver バージョン 7.0.0 - 依存関係のバージョン:Adal4j (バージョン 1.6.0) とその依存関係
-- JDBC Driver バージョン 6.4.0 - 依存関係のバージョン:Adal4j (バージョン 1.4.0) とその依存関係
-- JDBC Driver 版 6.2.2 - 依存関係のバージョン:Adal4j (バージョン 1.4.0) とその依存関係
-- JDBC Driver 6.0.0 - 依存関係のバージョン:Adal4j (バージョン 1.3.0) とその依存関係。 このバージョンのドライバーを使用して接続できる_ActiveDirectoryIntegrated_ sqljdbc_auth.dll と Active Directory 認証ライブラリの SQL Server (を使用して Windows オペレーティング システムにのみ、認証モードADALSQL します。DLL) です。
+- JDBC Driver version 7.2.1 - 依存関係のバージョン: Adal4j (バージョン 1.6.3) クライアントのランタイム-の-AutoRest (1.6.5) とその依存関係
+- JDBC Driver バージョン 7.0.0 - 依存関係のバージョン: Adal4j (バージョン 1.6.0) とその依存関係
+- JDBC Driver version 6.4.0 - 依存関係のバージョン: Adal4j (バージョン 1.4.0) とその依存関係
+- JDBC Driver version 6.2.2 - 依存関係のバージョン: Adal4j (バージョン 1.4.0) とその依存関係
+- JDBC Driver version 6.0.0 - 依存関係のバージョン: Adal4j (バージョン 1.3.0) とその依存関係。 このバージョンのドライバーを使用して接続できる_ActiveDirectoryIntegrated_ sqljdbc_auth.dll と Active Directory 認証ライブラリの SQL Server (を使用して Windows オペレーティング システムにのみ、認証モードADALSQL します。DLL) です。
 
 ドライバーのバージョン 6.4.0 から以降、アプリケーションとは限りませんを必要としない ADALSQL を使用します。Windows オペレーティング システムの DLL です。 *非 Windows オペレーティング システム*ドライバーが ActiveDirectoryIntegrated 認証を使用する Kerberos チケットが必要です。 Kerberos を使用して Active Directory に接続する方法の詳細については、次を参照してください。 [Windows、Linux、Mac 上の設定の Kerberos チケット](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)します。
 

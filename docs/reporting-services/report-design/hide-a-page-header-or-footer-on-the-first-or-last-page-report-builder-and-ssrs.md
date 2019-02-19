@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6291fa6f851116ed5c0010211ce7278e4cafee3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9519e413c9ff80d0757457e7c1624f6f5ace1831
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678580"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287400"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>最初のページまたは最後のページでページ ヘッダーまたはページ フッターを非表示にする (レポート ビルダーおよび SSRS)
   レポートでは、各ページの上部と下部にそれぞれページ ヘッダーとページ フッターを配置できます。 ヘッダーやフッターを追加した後で、レポートの最初と最後のページのヘッダーとフッターだけを非表示にできます。  

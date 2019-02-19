@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: adedbb3c4e173a1b27c0f1d911f847c5e69fe956
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9c536d94d9bbec76cb4b1887f46890680c26a116
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542220"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291290"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>レポート パーツ (レポート ビルダーおよび SSRS)
   テーブル、マトリックス、グラフ、画像などのレポート アイテムを、 *レポート パーツ*としてパブリッシュできます。 レポート パーツは、レポート サーバーに個別にパブリッシュされ、別のページ分割されたレポートで再利用できる、ページ分割されたレポート用のアイテムです。 レポート パーツのファイル拡張子は .rsc です。  

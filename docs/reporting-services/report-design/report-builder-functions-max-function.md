@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ea5c3c20feb94ba780caa9ffb736bb0158d9fa05
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 80cb2ab575d6fdb4d8909ea10bf19feb32c103fc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021566"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288970"
 ---
 # <a name="report-builder-functions---max-function"></a>レポート ビルダー関数 - Max 関数
   指定されたスコープのコンテキストで、式で指定された NULL 以外のすべての数値の中から最大値を返します。  

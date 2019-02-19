@@ -29,14 +29,14 @@ f1_keywords:
 - "10540"
 - "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c4b71175eb95acf68f1f7a6d0eb2a2e23f609006
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7aeaf47c587577ccdc6b78403a003a7c1c1c4a91
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134283"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293550"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>マップの凡例、カラー スケール、および関連付けられているルールの変更 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、マップにはマップの凡例、カラー スケール、および距離スケールを含めることができます。 これらのマップ要素は、マップに表示されているデータをユーザーが解釈する際に役に立ちます。  

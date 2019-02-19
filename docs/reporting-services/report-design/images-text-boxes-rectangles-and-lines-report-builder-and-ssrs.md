@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 88717ffe6cdb7711b1b9ca19a1f57edd5930b7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 70a4aa215fa2ef743d260970cb44c4a7b144504b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664062"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288390"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>画像、テキスト ボックス、四角形、および罫線 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、視覚的な効果の追加、重要な情報の強調、または関連情報の提供のために、テーブル、マトリックス、グラフなどのデータ領域以外にも、画像、テキスト ボックス、四角形などのレポート アイテムが使用されます。 レポート アイテムの書式設定は変更できます。 たとえば、罫線または余白の追加、初期表示または方向の変更、またはアイテムの正確なサイズと位置の指定を行うことができます。  
@@ -28,7 +28,7 @@ ms.locfileid: "47664062"
  テーブルまたはマトリックスの各セルもテキスト ボックスで、スタンドアロン テキスト ボックスと同じ方法で書式設定できます。  
   
  [四角形と線 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
- **罫線**は、水平方向、垂直方向、または対角線方向に表示されます。 罫線は始点と終点で定義します。また、さまざまなスタイル (太さや色など) を割り当てることができます。 罫線にはデータの割り当ては行われません。  
+ **罫線** は、水平方向、垂直方向、または対角線方向に表示されます。 罫線は始点と終点で定義します。また、さまざまなスタイル (太さや色など) を割り当てることができます。 罫線にはデータの割り当ては行われません。  
   
  **四角形** は、グラフィック要素、またはその他のレポート アイテムのコンテナーとして使用できます。 グラフィック要素の場合、四角形には罫線と同じプロパティがあります。 コンテナーの場合、四角形は、その中にあるすべてのレポート アイテムの親コンテナーとして機能します。 親コンテナーにレポート アイテムを配置すると、各レポート ページでのアイテムの表示方法を制御できます。  
   

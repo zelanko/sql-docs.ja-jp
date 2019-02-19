@@ -19,14 +19,14 @@ f1_keywords:
 - "10066"
 - sql13.rtp.rptdesigner.subreportproperties.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4800b340a11f6bde2a45bfb60c3061f19c822177
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5011f6e70ae4dc938ec90d06c6b32a0f78117ff9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031683"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292170"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>線、色、および画像の書式設定 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、線、色、データ領域、画像、その他のレポート アイテムの書式を設定する機能が用意されています。  

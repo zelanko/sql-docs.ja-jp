@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーのリリース ノート |Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b7f863c7534421fa6e091e793297b4be3f73542
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
-ms.translationtype: HT
+ms.openlocfilehash: b720f2b146273fb694ad0a55b013d20bd65a6a6a
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737063"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154875"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC ドライバーのリリース ノート
 
@@ -24,7 +24,13 @@ ms.locfileid: "55737063"
 
 ## <a name="updates-in-microsoft-jdbc-driver-72-for-sql-server"></a>Microsoft JDBC Driver 7.2 for SQL Server の更新された機能
 
-SQL Server 用 Microsoft JDBC Driver 7.2 は、JDBC API 仕様 4.2 に完全に準拠します。 7.2 パッケージ内の jar が Java のバージョンの互換性の名前です。 たとえば、7.2 パッケージから mssql-jdbc-7.2.0.jre11.jar ファイルを使用して、Java 11 でください。
+SQL Server 用 Microsoft JDBC Driver 7.2 は、JDBC API 仕様 4.2 に完全に準拠します。 7.2 パッケージ内の jar が Java のバージョンの互換性の名前です。 たとえば、7.2 パッケージから mssql-jdbc-7.2.1.jre11.jar ファイルを使用して、Java 11 でください。
+
+> [!NOTE]  
+> 2019 年 1 月 31 日にリリースされた 7.2 RTW の JDBC ドライバーでは、SQL ステートメントの解析に問題が見つかりました。 変更がロールバックされ、新しい jar (バージョン 7.2.1) は、2019 年 2 月 11 日にリリースされました。 
+>
+> JDBC ドライバー 7.2 の最新の更新プログラムをダウンロード[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=2063159)、 [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1)、および[Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver)します。 7.2.1 を使用するプロジェクトを更新してください jar をリリースします。 詳細については、表示のリリース ノート[7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1)します。
+
 
 ### <a name="support-for-jdk-11"></a>JDK 11 のサポート
 
@@ -34,7 +40,7 @@ SQL Server 用 Microsoft JDBC Driver 7.2 は、Java Development Kit (JDK) バー
 
 SQL Server 用 Microsoft JDBC Driver 7.2 は、Active Directory 管理対象サービス Id (MSI) 認証モードをサポートします。 この認証モードでは、"Identity"機能を有効に対応の Azure リソースに適用できます。 取得をドライバーによって管理対象システムの Id (MSI) の両方の種類がサポートされている**accessToken**セキュリティで保護された接続を確立するためです。
 
-詳細については、この認証モードを使用するサンプル アプリケーションはこちら。[Azure Active Directory 認証を利用した接続](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)
+詳細については、この認証モードを使用するサンプル アプリケーションはこちら: [Azure Active Directory 認証を使用して接続します。](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)
 
 ### <a name="osgi-support"></a>OSGi サポート
 
@@ -49,11 +55,11 @@ SQL Server 用 Microsoft JDBC Driver 7.2 紹介`SQLServerException.getSQLServerE
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>"Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" バージョン: 1.6.3 に更新
 
-SQL Server 用 Microsoft JDBC Driver 7.2 が Maven の依存関係としても"Java クライアント ランタイムの AutoRest"導入されていますが「Microsoft Azure Active Directory 認証ライブラリ (ADAL4J) Java の」バージョン 1.6.3 への Maven 依存性を更新 (バージョン。1.6.5) として実装されています。 依存関係の詳細については、次を参照してください。 [for SQL Server、Microsoft JDBC Driver の依存関係をフィーチャー](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)します。
+SQL Server 用 Microsoft JDBC Driver 7.2 が Maven の依存関係としても"Java クライアント ランタイムの AutoRest"導入されていますが「Microsoft Azure Active Directory 認証ライブラリ (ADAL4J) Java の」バージョン 1.6.3 への Maven 依存性を更新 (バージョン。1.6.5)。 依存関係の詳細については、次を参照してください。 [for SQL Server、Microsoft JDBC Driver の依存関係をフィーチャー](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)します。
 
-### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>"Microsoft Azure Key Vault SDK の Java"の更新バージョン:1.2.0) として実装されています。
+### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>"Microsoft Azure Key Vault SDK の Java"の更新バージョン: 1.2.0
 
-SQL Server 用 Microsoft JDBC Driver 7.2 は Maven への依存性"Microsoft Azure Key Vault SDK の Java"バージョン 1.2.0 にも"Microsoft Azure SDK の Key Vault WebKey"Maven の依存関係として導入されていますが、更新 (バージョン。1.2.0) として実装されています。 依存関係の詳細については、次を参照してください。 [for SQL Server、Microsoft JDBC Driver の依存関係をフィーチャー](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)します。
+SQL Server 用 Microsoft JDBC Driver 7.2 は Maven への依存性"Microsoft Azure Key Vault SDK の Java"バージョン 1.2.0 にも"Microsoft Azure SDK の Key Vault WebKey"Maven の依存関係として導入されていますが、更新 (バージョン: 1.2.0)。 依存関係の詳細については、次を参照してください。 [for SQL Server、Microsoft JDBC Driver の依存関係をフィーチャー](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)します。
 
 ### <a name="known-issues"></a>既知の問題
 
@@ -131,7 +137,7 @@ SQL Server 用 Microsoft JDBC Driver 6.4 は 4.1 と 4.2 の JDBC 仕様に完�
 
 ### <a name="added-connection-property-sslprotocol"></a>接続プロパティの追加: sslProtocol
 
-新しい接続プロパティを使用して、TLS プロトコルのキーワードを指定できます。 有効な値は次のとおりです。"TLS"、"TLSv1"、"TLSv1.1"および"TLSv1.2"。 詳細については、次を参照してください。 [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol)します。
+新しい接続プロパティを使用して、TLS プロトコルのキーワードを指定できます。 値:"TLS"、"TLSv1"、"TLSv1.1"および"TLSv1.2"。 詳細については、次を参照してください。 [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol)します。
 
 ### <a name="deprecated-connection-property-fipsprovider"></a>接続プロパティを非推奨とされます: fipsProvider
 
@@ -215,7 +221,7 @@ SQL Server 用 Microsoft JDBC Driver 6.1 が 4.1 と 4.2 の JDBC 仕様に完�
 
 Microsoft JDBC Driver 6.0 for SQL Server は 4.1 と 4.2 の JDBC 仕様に完全に準拠します。 Jar を 6.0 のパッケージの名前は、JDBC API のバージョンに準拠してです。 たとえば、6.0 パッケージから sqljdbc42.jar ファイルは、JDBC API 4.2 に準拠してが。 同様に、sqljdbc41.jar ファイルは、JDBC API 4.1 準拠です。
 
-適切な sqljdbc42.jar または sqljdbc41.jar ファイルがあることを確認するには、次のコード行を実行します。 出力する場合は"ドライバーのバージョン。6.0.7507.100"、JDBC Driver 6.0 パッケージがあります。
+適切な sqljdbc42.jar または sqljdbc41.jar ファイルがあることを確認するには、次のコード行を実行します。 出力する場合は"ドライバーのバージョン: 6.0.7507.100"、JDBC Driver 6.0 パッケージがあります。
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -252,7 +258,7 @@ TVP は、複数行のデータをクライアント アプリケーションか
 
 Microsoft JDBC Driver 4.2 for SQL Server は 4.1 と 4.2 の JDBC 仕様に完全に準拠します。 Jar を 4.2 のパッケージの名前は、JDBC API のバージョンに準拠してです。 たとえば、4.2 のパッケージから sqljdbc42.jar ファイルは、JDBC API 4.2 に準拠してが。 同様に、sqljdbc41.jar ファイルは、JDBC API 4.1 準拠です。
 
-確認するには、適切な sqljdbc42.jar または sqljdbc41.jar ファイルを次のコード行を実行があります。 出力する場合は"ドライバーのバージョン。4.2.6420.100"、JDBC Driver 4.2 のパッケージがあります。
+確認するには、適切な sqljdbc42.jar または sqljdbc41.jar ファイルを次のコード行を実行があります。 出力する場合は"ドライバーのバージョン: 4.2.6420.100"、JDBC Driver 4.2 のパッケージがあります。
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");

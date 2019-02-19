@@ -1,7 +1,7 @@
 ---
 title: Java EE のサポートについて |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da575f8c0fecd03e21bc2d24800cde05105a5a3c
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: ae55a5bc677c70d2a1f998e235031ac9bafd5aba
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736930"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154617"
 ---
 # <a name="understanding-java-ee-support"></a>Java EE のサポートについて
 
@@ -36,7 +36,7 @@ JDBC Driver 6.4 では、ドライバーが含まれている**mssql-jdbc-6.4.0.
 
 JDBC ドライバーの 7.0 のドライバーが含まれている**mssql-jdbc-7.0.0.jre8.jar**、または**mssql-jdbc-7.0.0.jre10.jar**します。
 
-JDBC ドライバーの 7.2 のドライバーが含まれている**mssql-jdbc-7.2.0.jre8.jar**、または**mssql-jdbc-7.2.0.jre11.jar**します。
+JDBC ドライバーの 7.2 のドライバーが含まれている**mssql-jdbc-7.2.1.jre8.jar**、または**mssql-jdbc-7.2.1.jre11.jar**します。
   
 このクラス名は、JDBC DriverManager クラスを使用してドライバーを読み込むたびに使用されます。 また、ドライバー構成でドライバーのクラス名を指定する必要があるときにも使用されます。 たとえば、Java EE アプリケーション サーバー内でデータ ソースを構成するには、ドライバーのクラス名を入力する必要が生じる場合があります。  
   
