@@ -1,7 +1,7 @@
 ---
 title: sys.index_resumable_operations (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,17 +20,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df53ab01ecd535de0f742129cae56c44cd2d6221
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 780cffa17f6ee1af70d942545632c98c9d6dc1e7
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821783"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425777"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (TRANSACT-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 **sys.index_resumable_operations**システム ビューを監視し、再開可能なインデックス再構築の現在の実行状態を確認します。  
-**適用対象**: SQL Server 2017 と Azure SQL Database 
+**適用対象**:SQL Server 2017 と Azure SQL Database
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -46,25 +47,31 @@ ms.locfileid: "47821783"
 |**last_pause_time**|**datatime**| インデックス操作 (null 許容の) 最後の一時停止時間。 操作が実行されているとしない一時停止した場合は NULL です。|
 |**total_execution_time**|**int**|開始時間 (分) (null 許容のない) からの合計実行時間|
 |**percent_complete**|**real**|% (Null を許容しません) でインデックス操作の進行状況の完了。|
-|**page_count**|**bigint**|新しいインデックス構築操作とのマッピング インデックス (null を許容しません) によって割り当てられたインデックス ページの合計数。 
+|**page_count**|**bigint**|新しいインデックス構築操作とのマッピング インデックス (null を許容しません) によって割り当てられたインデックス ページの合計数。
 
-## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
-   
-## <a name="example"></a>例  
- 一時停止状態にあるすべての再開可能なインデックス再構築操作を一覧表示します。 
-  
-```  
+## <a name="permissions"></a>アクセス許可
+
+[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+
+## <a name="example"></a>例
+
+ 一時停止状態にあるすべての再開可能なインデックス再構築操作を一覧表示します。
+
+```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
-```  
-  
-## <a name="see-also"></a>参照 
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
- [カタログ ビュー &#40;TRANSACT-SQL&#41; ](catalog-views-transact-sql.md) [オブジェクト カタログ ビュー &#40;TRANSACT-SQL&#41; ](object-catalog-views-transact-sql.md) [sys.indexes &#40;TRANSACT-SQL&#41; ](sys-xml-indexes-transact-sql.md) [sys.index_columns &#40;TRANSACT-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.xml_indexes &#40;Transact-SQL&#41;](sys-xml-indexes-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.key_constraints &#40;TRANSACT-SQL&#41;](sys-key-constraints-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](sys-filegroups-transact-sql.md)   
- [sys.partition_schemes &#40;Transact-SQL&#41;](sys-partition-schemes-transact-sql.md)   
- [SQL Server システム カタログに対するクエリに関してよくあるご質問](querying-the-sql-server-system-catalog-faq.md)   
-  
+```
+
+## <a name="see-also"></a>参照
+
+- [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+- [カタログ ビュー](catalog-views-transact-sql.md)
+- [オブジェクト カタログ ビュー](object-catalog-views-transact-sql.md)
+- [sys.indexes](sys-xml-indexes-transact-sql.md)
+- [sys.index_columns](sys-index-columns-transact-sql.md)
+- [sys.xml_indexes](sys-xml-indexes-transact-sql.md)
+- [sys.objects](sys-index-columns-transact-sql.md)
+- [sys.key_constraints](sys-key-constraints-transact-sql.md)
+- [sys.filegroups](sys-filegroups-transact-sql.md)
+- [sys.partition_schemes](sys-partition-schemes-transact-sql.md)
+- [SQL Server システム カタログに対するクエリに関してよくあるご質問](querying-the-sql-server-system-catalog-faq.md)

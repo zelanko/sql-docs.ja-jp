@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9101471c53ea1e253f7a6eb13e0c2cb2bc137ed3
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f5dab603a7295009bee5275b721e987d5de76710
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046462"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425787"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>SQL Server 2017 の Python のチュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,10 +31,10 @@ ms.locfileid: "54046462"
 
 | リンク | 説明 |
 |------|-------------|
-| [クイック スタート:SQL Server での Python スクリプトの"hello world"](quickstart-r-run-using-tsql.md) | T-SQL で Python を呼び出す方法の基本について説明します。 |
+| [クイック スタート:SQL Server での Python スクリプトの"hello world"](quickstart-python-run-using-t-sql.md) | T-SQL で Python を呼び出す方法の基本について説明します。 |
 | [クイック スタート:作成、トレーニング、および SQL Server でのストアド プロシージャで Python モデルを使用](quickstart-python-train-score-in-tsql.md) | ストアド プロシージャは、入力、およびストアド プロシージャの実行を提供することで Python コードを埋め込みのしくみについて説明します。 |
-| [チュートリアル:Revoscalepy を使用して、モデルを作成します。](use-python-revoscalepy-to-create-model.md) | SQL Server コンピューティング コンテキストを使用して、リモート Python ターミナルからコードを実行する方法を示します。 Python ツールと環境についての知識があります。 サンプル コードを使用してモデルを作成する提供**rxLinMod**、新しい**revoscalepy**ライブラリ。 |
-| [チュートリアル:SQL 開発者向けの In-database Python 分析について説明します](sqldev-in-database-python-for-sql-developers.md) | このエンド ツー エンド チュートリアルでは、T-SQL ストアド プロシージャを使用して完全な Python ソリューションを構築するプロセスについて説明します。 すべての Python コードが含まれます。|
+| [チュートリアル: Revoscalepy を使用して、モデルを作成します。](use-python-revoscalepy-to-create-model.md) | SQL Server コンピューティング コンテキストを使用して、リモート Python ターミナルからコードを実行する方法を示します。 Python ツールと環境についての知識があります。 サンプル コードを使用してモデルを作成する提供**rxLinMod**、新しい**revoscalepy**ライブラリ。 |
+| [チュートリアル: SQL 開発者向けの In-database Python 分析について説明します](sqldev-in-database-python-for-sql-developers.md) | このエンド ツー エンド チュートリアルでは、T-SQL ストアド プロシージャを使用して完全な Python ソリューションを構築するプロセスについて説明します。 すべての Python コードが含まれます。|
 
 <a name ="bkmk_samples"></a>
 
