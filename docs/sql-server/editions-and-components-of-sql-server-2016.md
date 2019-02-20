@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f00d147c5b9a3e6a2ec6137d72940cae9e67158d
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420227"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265399"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 の各エディションとサポートされている機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のインスタンスごとのバッファー プールの最大メモリ|オペレーティング システムの最大容量|128 GB|64 GB|1410 MB|1410 MB|
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のインスタンスごとの列ストア セグメント キャッシュの最大メモリ|メモリ制限なし| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のデータベースごとの最大メモリ最適化データ サイズ|メモリ制限なし| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
-|利用可能な最大メモリ サイズ ( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|表形式:16 GB<br /><br /> MOLAP:64 GB|なし|なし|なし|  
+|利用可能な最大メモリ サイズ ( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|表形式: 16 GB<br /><br /> MOLAP: 64 GB|なし|なし|なし|  
 |利用可能な最大メモリ サイズ ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|64 GB|64 GB|4 GB|なし|
 |リレーショナル データベースの最大サイズ|524 PB|524 PB|524 PB|10 GB|10 GB|  
   
@@ -178,7 +178,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |[リソース ガバナー]|はい|いいえ|いいえ|いいえ|いいえ|  
 |パーティション テーブルの並列処理|はい|いいえ|いいえ|いいえ|いいえ|
 |複数の Filestream コンテナー|はい|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|
-|NUMA 対応のラージ ページ メモリとバッファー配列の割り当て|はい|いいえ|いいえ|いいえ|いいえ|
+|NUMA 対応のラージ ページ メモリとバッファー配列の割り当て|可|いいえ <sup>4</sup>|いいえ|いいえ|いいえ|
 |バッファー プール拡張|はい|[はい]|いいえ|いいえ|いいえ|
 |IO リソース管理|はい|いいえ|いいえ|いいえ|いいえ|  
 |遅延持続性|はい|[はい]|[はい]|[はい]|はい|
@@ -188,6 +188,8 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 <sup>2</sup> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 に適用されます。 
 
 <sup>3</sup> LocalDB のインストール オプションには、この機能は含まれていません。
+
+<sup>4</sup> Standard Edition と SQL Server + CAL ベースのライセンスによって SQL Server Standard で使用できるプロセッサの数を制限できますが、SQL Server Standard は NUMA 対応です。 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |機能|Enterprise|Standard|Web|Express|Express with Advanced Services|  

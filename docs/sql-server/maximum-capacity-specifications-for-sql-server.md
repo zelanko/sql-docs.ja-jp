@@ -1,6 +1,6 @@
 ---
 title: SQL Server の最大容量仕様 | Microsoft Docs
-ms.date: 11/6/2017
+ms.date: 11/06/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -21,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3d189ed1e434380f409fdec0fee799801934019a
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 6cb5b9ecbcc187a059747e9d3121ac50611a0418
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383612"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319403"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "49383612"
 |入れ子にしたサブクエリの数||32||  
 |トリガーの入れ子レベル数||32||  
 |テーブルごとの非クラスター化インデックス数||999||  
-|GROUP BY 句に含まれる個別の式の数 (CUBE、ROLLUP、GROUPING SETS、WITH CUBE、または WITH ROLLUP のいずれかが存在する場合)||32||  
+|次のいずれかが存在する場合の、GROUP BY 句に含まれる個別の式の数:CUBE、ROLLUP、GROUPING SETS、WITH CUBE、WITH ROLLUP||32||  
 |GROUP BY 句内の演算子によって生成されるグループ化セットの数||4,096||  
 |ストアド プロシージャごとのパラメーター数||2,100||  
 |ユーザー定義関数ごとのパラメーター数||2,100||  
@@ -124,7 +124,7 @@ ms.locfileid: "49383612"
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ層アプリケーション オブジェクト  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ層アプリケーション (DAC) でテストされた各種オブジェクトの最大サイズと最大数。  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC オブジェクト||最大サイズ/最大数 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 64 ビットの場合)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC オブジェクト||最大サイズ/最大数 ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 64 ビットの場合)|  
 |------------------------------------------|-|------------------------------------------------------------------|  
 |DAC ごとのデータベース数||1|  
 |DAC ごとのオブジェクト数*||データベース内のオブジェクト数または使用可能なメモリによって制限されます。|  
