@@ -64,7 +64,7 @@ ms.locfileid: "47629370"
   
      スキーマの詳細については、「 [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)」を参照してください。  
   
-9. **ファイル** メニューの **を保存** *を保存*をクリックします。  
+9.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
   
 10. **[名前の選択]** ダイアログ ボックスで、テーブルの名前を入力し、 **[OK]** をクリックします。  
   
