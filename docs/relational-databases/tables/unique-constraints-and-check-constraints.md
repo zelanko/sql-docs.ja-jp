@@ -86,7 +86,7 @@ GO
 DELETE CheckTbl WHERE col1 = 10;  
 ```  
   
- `CHECK` 制約では、テーブル `CheckTbl` に `1` 行以上が格納されていなければならないことを指定していますが、 `DELETE` ステートメントは成功します。  
+ `CHECK` 制約では、テーブル `CheckTbl` に `1` 行以上が格納されていなければならないことを指定していますが、`DELETE` ステートメントは成功します。  
   
 ##  <a name="Tasks"></a> 関連タスク  
   
