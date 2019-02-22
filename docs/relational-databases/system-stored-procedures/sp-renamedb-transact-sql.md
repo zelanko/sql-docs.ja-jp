@@ -18,15 +18,15 @@ ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebe5cac5ad9dbff5d19fddcd67204f640f1c16b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f61002319606a199354022a3fc33ce13a170539d
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658890"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590247"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   データベースの名前を変更します。  
   
@@ -43,10 +43,10 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@dbname=**] **'***古い名前***'**  
+ [ **@dbname=**] **'***old_name***'**  
  データベースの現在の名前です。 *古い名前*は**sysname**、既定値はありません。  
   
- [  **@newname=**] **'***new_name***'**  
+ [ **@newname=**] **'***new_name***'**  
  データベースの新しい名前です。 *新しい名前*識別子の規則に従う必要があります。 *新しい名前*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -56,7 +56,7 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
  メンバーシップが必要です、 **sysadmin**または**dbcreator**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`Accounting` データベースを作成し、このデータベース名を `Financial` に変更します。 `sys.databases`カタログ ビューが、データベースの新しい名前を確認するクエリを実行します。  
+ 次の例では、`Accounting` データベースを作成し、このデータベース名を `Financial` に変更します。 次に、`sys.databases` カタログ ビューを問い合わせ、データベースの新しい名前を検証します。  
   
 ```  
 USE master;  

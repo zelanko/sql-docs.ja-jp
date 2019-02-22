@@ -13,15 +13,15 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7ffa7e044b5771bcf1181ee3aa0e22dfbdd8e555
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a4a3b450427aa8369b1e76c91265a8c663df0243
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020633"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590374"
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   コンピューティング ノードでの各物理データベースに 1 行が含まれています。 集計の物理的なデータベース情報を使用して、データベースに関する詳細情報を取得します。 情報を結合するには、次のように参加します。、 `sys.pdw_nodes_pdw_physical_databases` を、 `sys.pdw_database_mappings` と `sys.databases` テーブルです。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "56020633"
 |physical_name|**sysname**|シェルとコンピューティング ノードで、データベースの物理名。 この値で physical_name 列の値と同じ、 [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)ビュー。|  
 |pdw_node_id|**int**|ノードに関連付けられている一意の数値 id です。|  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-returning"></a>A. 返す  
  次のクエリは、名前と各データベースの ID をすべての計算ノードでマスター、および対応するデータベース名で返します。  
