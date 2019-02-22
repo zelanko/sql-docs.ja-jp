@@ -1,8 +1,0 @@
-- name: テンプレート、XSL、およびスキーマのキャッシュ (SQLXML 4.0)
-  href: caching-templates-xsl-and-schemas-sqlxml-4-0.md
-- name: スキーマのキャッシュ (SQLXML 4.0)
-  href: schema-caching-sqlxml-4-0.md
-- name: テンプレートのキャッシュ (SQLXML 4.0)
-  href: template-caching-sqlxml-4-0.md
-- name: XSL のキャッシュ (SQLXML 4.0)
-  href: xsl-caching-sqlxml-4-0.md

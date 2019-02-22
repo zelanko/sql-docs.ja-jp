@@ -1,8 +1,0 @@
-- name: カスタム接続マネージャーの開発
-  href: developing-a-custom-connection-manager.md
-- name: カスタム接続マネージャーの作成
-  href: creating-a-custom-connection-manager.md
-- name: カスタム接続マネージャーのコーディング
-  href: coding-a-custom-connection-manager.md
-- name: カスタム接続マネージャー用ユーザー インターフェイスの開発
-  href: developing-a-user-interface-for-a-custom-connection-manager.md

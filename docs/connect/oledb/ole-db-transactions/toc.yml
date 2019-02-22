@@ -1,8 +1,0 @@
-- name: トランザクション
-  href: transactions.md
-- name: 分離レベル (OLE DB)
-  href: isolation-levels-ole-db.md
-- name: 分散トランザクションのサポート
-  href: supporting-distributed-transactions.md
-- name: ローカル トランザクションのサポート
-  href: supporting-local-transactions.md

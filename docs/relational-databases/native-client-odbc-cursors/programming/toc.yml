@@ -1,8 +1,0 @@
-- name: カーソル プログラミングの詳細 (ODBC)
-  href: cursor-programming-details-odbc.md
-- name: 高速順方向専用カーソル (ODBC)
-  href: fast-forward-only-cursors-odbc.md
-- name: 暗黙のカーソル変換 (ODBC)
-  href: implicit-cursor-conversions-odbc.md
-- name: autofetch と ODBC カーソルの併用
-  href: using-autofetch-with-odbc-cursors.md

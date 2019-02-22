@@ -1,8 +1,0 @@
-- name: カーソルを使用する方法に関するトピック (ODBC)
-  href: using-cursors-how-to-topics-odbc.md
-- name: 行セットのフェッチおよび更新 (ODBC)
-  href: fetch-and-update-rowsets-odbc.md
-- name: カーソルの使用 (OLE DB)
-  href: use-cursors-odbc.md
-- name: 行セットのバインドの使用 (ODBC)
-  href: use-rowset-binding-odbc.md

@@ -1,8 +1,0 @@
-- name: Ruby Driver for SQL Server
-  href: ruby-driver-for-sql-server.md
-- name: 'ステップ 1: Ruby 開発用に開発環境を構成する'
-  href: step-1-configure-development-environment-for-ruby-development.md
-- name: 'ステップ 2: Ruby 開発用の SQL データベースを作成する'
-  href: step-2-create-a-sql-database-for-ruby-development.md
-- name: 'ステップ 3: Ruby を使用した SQL への接続を概念実証する'
-  href: step-3-proof-of-concept-connecting-to-sql-using-ruby.md

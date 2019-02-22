@@ -1,8 +1,0 @@
-- name: BLOB と OLE オブジェクト
-  href: blobs-and-ole-objects.md
-- name: 大きなデータの取得
-  href: getting-large-data.md
-- name: 大きなデータの設定
-  href: setting-large-data.md
-- name: BLOB 出力パラメーターのストリーミング サポート
-  href: streaming-support-for-blob-output-parameters.md

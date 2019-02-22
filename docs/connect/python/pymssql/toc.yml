@@ -1,8 +1,0 @@
-- name: Python SQL ドライバー - pymssql
-  href: python-sql-driver-pymssql.md
-- name: 'ステップ 1: pymssql Python 開発用に開発環境を構成する'
-  href: step-1-configure-development-environment-for-pymssql-python-development.md
-- name: 'ステップ 2: pymssql Python 開発用の SQL データベースを作成する'
-  href: step-2-create-a-sql-database-for-pymssql-python-development.md
-- name: 'ステップ 3: pymssql を使用した SQL への接続を概念実証する'
-  href: step-3-proof-of-concept-connecting-to-sql-using-pymssql.md

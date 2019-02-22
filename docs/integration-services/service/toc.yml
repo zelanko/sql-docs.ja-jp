@@ -1,8 +1,0 @@
-- name: Integration Services (SSIS) サービス
-  href: integration-services-service-ssis-service.md
-- name: パッケージの管理 (SSIS サービス)
-  href: package-management-ssis-service.md
-- name: Integration Services サービスによってログに記録されるイベント
-  href: events-logged-by-the-integration-services-service.md
-- name: クラスターにおける Integration Services (SSIS)
-  href: integration-services-ssis-in-a-cluster.md

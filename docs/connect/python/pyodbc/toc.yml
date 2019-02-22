@@ -1,8 +1,0 @@
-- name: Python SQL ドライバー - pyodbc
-  href: python-sql-driver-pyodbc.md
-- name: '手順 1: pyodbc Python 開発用に開発環境を構成する'
-  href: step-1-configure-development-environment-for-pyodbc-python-development.md
-- name: 'ステップ 2: pyodbc Python 開発用の SQL データベースを作成する'
-  href: step-2-create-a-sql-database-for-pyodbc-python-development.md
-- name: 'ステップ 3: pyodbc を使用した SQL への接続を概念実証する'
-  href: step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md

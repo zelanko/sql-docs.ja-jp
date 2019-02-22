@@ -1,8 +1,0 @@
-- name: Analysis Services のパーソナル化拡張機能
-  href: analysis-services-personalization-extensions.md
-- name: OLAP ストアド プロシージャの拡張 +
-  href: ../../../analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
-- name: OLAP 機能の拡張
-  href: extending-olap-functionality.md
-- name: パーソナル化による OLAP の拡張
-  href: extending-olap-through-personalizations.md

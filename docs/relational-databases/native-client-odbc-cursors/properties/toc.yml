@@ -1,8 +1,0 @@
-- name: カーソルのプロパティ
-  href: cursor-properties.md
-- name: カーソル同時実行 (ODBC)
-  href: cursor-concurrency-odbc.md
-- name: カーソルの行セット サイズ
-  href: cursor-rowset-size.md
-- name: カーソルのトランザクション分離レベル
-  href: cursor-transaction-isolation-level.md

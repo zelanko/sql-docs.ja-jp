@@ -1,8 +1,0 @@
-- name: ストアド プロシージャの実行
-  href: running-stored-procedures.md
-- name: ストアド プロシージャ呼び出しのバッチ化
-  href: batching-stored-procedure-calls.md
-- name: ストアド プロシージャの呼び出し
-  href: calling-a-stored-procedure.md
-- name: ストアド プロシージャの結果の処理
-  href: processing-stored-procedure-results.md
