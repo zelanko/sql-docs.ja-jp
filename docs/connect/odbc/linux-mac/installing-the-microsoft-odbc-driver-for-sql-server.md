@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 5f9392d0ba5b07a489caffdd2e496051e842b1c8
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: MTE75
+ms.openlocfilehash: 6b9ea2618f51eb167f63232b79c61d9ecdc0e746
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984063"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331612"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS に Microsoft ODBC Driver for SQL Server をインストールする
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -56,7 +56,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6-and-7"></a>Red Hat Enterprise Server 6 および 7
+### <a name="redhat-enterprise-server-6-and-7"></a>RedHat Enterprise Server 6 および 7
 ```
 sudo su
 
@@ -147,7 +147,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql17 mssql-tools
+brew install msodbcsql17 mssql-tools
 ```
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server 
@@ -169,7 +169,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6"></a>Red Hat Enterprise Server 6
+### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -185,7 +185,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="redhat-enterprise-server-7"></a>Red Hat Enterprise Server 7
+### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -295,7 +295,7 @@ brew install --no-sandbox msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
 
 ## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQL Server
 
-### <a name="redhat-enterprise-server-6"></a>Red Hat Enterprise Server 6
+### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -309,7 +309,7 @@ ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
 ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
-### <a name="redhat-enterprise-server-7"></a>Red Hat Enterprise Server 7
+### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -370,7 +370,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-これらの各パッケージがあります、独自の依存関係、可能性のあるシステム上に存在することができない可能性。 この問題の一般的なソリューションでは、ディストリビューションのパッケージ マネージャーのドキュメントを参照してください。[Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)、 [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)、および[SUSE](https://en.opensuse.org/Portal:Zypper)
+これらの各パッケージがあります、独自の依存関係、可能性のあるシステム上に存在することができない可能性。 この問題の一般的なソリューションでは、ディストリビューションのパッケージ マネージャーのドキュメントを参照してください: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)、 [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)、および[SUSE](https://en.opensuse.org/Portal:Zypper)
 
 終了したすべての従属パッケージを手動でダウンロード、インストール コンピューターでは、一緒に配置し、さらに、各パッケージを手動でインストールする一般的なではまた、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 パッケージ。
 
@@ -508,9 +508,9 @@ Linux および MacOS 上の ODBC ドライバーは、次のコンポーネン�
 
 |コンポーネント|[説明]|  
 |---------------|-----------------|  
-|libmsodbcsql 17。X.so.X.X または libmsodbcsql 13。X.so.X.X|ドライバーのすべての機能を含む共有オブジェクト (`so`) ダイナミック ライブラリ ファイル。 このファイルがインストールされている`/opt/microsoft/msodbcsql17/lib64/`Driver 17 for し`/opt/microsoft/msodbcsql/lib64/`Driver 13 の。|  
+|libmsodbcsql-17.X.so.X.X または libmsodbcsql-13.X.so.X.X|ドライバーのすべての機能を含む共有オブジェクト (`so`) ダイナミック ライブラリ ファイル。 このファイルがインストールされている`/opt/microsoft/msodbcsql17/lib64/`Driver 17 for し`/opt/microsoft/msodbcsql/lib64/`Driver 13 の。|  
 |`msodbcsqlr17.rll` または `msodbcsqlr13.rll`|ドライバー ライブラリに付随するリソース ファイル。 このファイルにインストールされます。 `[driver .so directory]../share/resources/en_US/`| 
-|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:** msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> 内 msodbcsql.h がインストールされている`/opt/microsoft/msodbcsql17/include/`Driver 17 for し`/opt/microsoft/msodbcsql/include/`Driver 13 の。 |
+|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> 内 msodbcsql.h がインストールされている`/opt/microsoft/msodbcsql17/include/`Driver 17 for し`/opt/microsoft/msodbcsql/include/`Driver 13 の。 |
 |LICENSE.txt|使用許諾契約書の用語を含むテキスト ファイル。 このファイルが配置されます`/usr/share/doc/msodbcsql17/`Driver 17 for し`/usr/share/doc/msodbcsql/`Driver 13 の。|
 |RELEASE_NOTES|リリース ノートを含むテキスト ファイル。 このファイルが配置されます`/usr/share/doc/msodbcsql17/`Driver 17 for し`/usr/share/doc/msodbcsql/`Driver 13 の。|
 
@@ -521,7 +521,7 @@ Linux および MacOS 上の ODBC ドライバーは、次のコンポーネン�
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib または libmsodbcsql.13.dylib|ドライバーのすべての機能を含むダイナミック ライブラリ (`dylib`) ファイル。 このファイルがインストールされている`/usr/local/lib/`します。|  
 |`msodbcsqlr17.rll` または `msodbcsqlr13.rll`|ドライバー ライブラリに付随するリソース ファイル。 このファイルがインストールされている`[driver .dylib directory]../share/msodbcsql17/resources/en_US/`Driver 17 for し`[driver .dylib directory]../share/msodbcsql/resources/en_US/`Driver 13 の。 | 
-|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:** msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> 内 msodbcsql.h がインストールされている`/usr/local/include/msodbcsql17/`Driver 17 for し`/usr/local/include/msodbcsql/`Driver 13 の。 |
+|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> 内 msodbcsql.h がインストールされている`/usr/local/include/msodbcsql17/`Driver 17 for し`/usr/local/include/msodbcsql/`Driver 13 の。 |
 |LICENSE.txt|使用許諾契約書の用語を含むテキスト ファイル。 このファイルが配置されます`/usr/local/share/doc/msodbcsql17/`Driver 17 for し`/usr/local/share/doc/msodbcsql/`Driver 13 の。 |
 |RELEASE_NOTES|リリース ノートを含むテキスト ファイル。 このファイルが配置されます`/usr/local/share/doc/msodbcsql17/`Driver 17 for し`/usr/local/share/doc/msodbcsql/`Driver 13 の。 |
 

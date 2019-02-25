@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver のシステム要件 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e2ccc488c7bdac6e6e73863b55760c622a73474
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
-ms.translationtype: HT
+ms.openlocfilehash: b82fd5ac5bea29b5022e1af9c0523a64f6e5406c
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736913"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154907"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC Driver のシステム要件
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,16 +44,16 @@ ms.locfileid: "55736913"
 
 **Microsoft JDBC Driver 7.2 for SQL Server:**  
 
-  JDBC Driver 7.2 の各インストール パッケージには、2 つの JAR クラス ライブラリ (**mssql-jdbc-7.2.0.jre8.jar** および **mssql-jdbc-7.2.0.jre11.jar**) が含まれています。
+  JDBC Driver 7.2 の各インストール パッケージには、2 つの JAR クラス ライブラリ (**mssql-jdbc-7.2.1.jre8.jar** および **mssql-jdbc-7.2.1.jre11.jar**) が含まれています。
 
-  JDBC ドライバーの 7.2 はすべて主要な Java 仮想マシンでサポートできるし、連携するように設計が、OpenJDK 8.0、OpenJDK 11.0、Azul Zulu JRE 8.0 および Azul Zulu JRE 11.0 のみでテストされます。
+  JDBC Driver 7.2 は、すべての主要な Java 仮想マシンと連携し、それらでサポートされるように設計されていますが、テストは OpenJDK 8.0、OpenJDK 11.0、Azul Zulu JRE 8.0、および Azul Zulu JRE 11.0 上でのみ実行されます。
   
   Microsoft JDBC Drivers 7.2 for SQL Server に含まれている 2 つの JAR ファイルによって提供されるサポートの概要を以下に示します。  
   
   |JAR|JDBC バージョン準拠|Java バージョンをお勧めします。|[説明]|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.2.0.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 7.2 の新機能は次のとおりです。JDK の 11 のサポート、Active Directory 管理対象サービス Id (MSI) 認証、OSGi サポート、SQLServerError Api。 |    
-|mssql-jdbc-7.2.0.jre11.jar|4.3|10|Java Runtime Environment (JRE) 11.0 が必要です。 JRE 10.0 または低いがスローされます、例外を使用します。<br /><br /> 7.2 の新機能は次のとおりです。JDK の 11 のサポート、Active Directory 管理対象サービス Id (MSI) 認証、OSGi サポート、SQLServerError Api。 |    
+|mssql-jdbc-7.2.1.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 7.2 の新機能が含まれます。 JDK 11 のサポート、Active Directory 管理対象サービス Id (MSI) 認証、OSGi サポート、SQLServerError Api。 |    
+|mssql-jdbc-7.2.1.jre11.jar|4.3|10|Java Runtime Environment (JRE) 11.0 が必要です。 JRE 10.0 または低いがスローされます、例外を使用します。<br /><br /> 7.2 の新機能が含まれます。 JDK 11 のサポート、Active Directory 管理対象サービス Id (MSI) 認証、OSGi サポート、SQLServerError Api。 |    
 
 
   JDBC ドライバーの 7.2 では、Maven Central Repository の使用もし、POM で次のコードを追加することで、Maven プロジェクトに追加できます。XML:  
@@ -62,7 +62,7 @@ ms.locfileid: "55736913"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.0.jre11</version>
+    <version>7.2.1.jre11</version>
 </dependency>
 ```
  
@@ -76,8 +76,8 @@ ms.locfileid: "55736913"
   
   |JAR|JDBC バージョン準拠|Java バージョンをお勧めします。|[説明]|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.0.0.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 7.0 の新機能は次のとおりです。JDK の 10 のサポート、JDBC 4.2 仕様、空間データ型のサポート、cancelQueryTimeout 接続プロパティ、メソッドの境界の要求、useBulkCopyForBatchInsert 接続プロパティでは、データの検出と分類の更新の既定のコンプライアンス レベルについては、utf-8 の拡張機能、および CityHash サポートします。 |    
-|mssql-jdbc-7.0.0.jre10.jar|4.3|10|Java Runtime Environment (JRE) 10.0 が必要です。 JRE 9.0 または低いがスローされます、例外を使用します。<br /><br /> 7.0 の新機能は次のとおりです。JDK の 10 のサポート、JDBC 4.2 仕様、空間データ型のサポート、cancelQueryTimeout 接続プロパティ、メソッドの境界の要求、useBulkCopyForBatchInsert 接続プロパティでは、データの検出と分類の更新の既定のコンプライアンス レベルについては、utf-8 の拡張機能、および CityHash サポートします。 |    
+|mssql-jdbc-7.0.0.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 7.0 の新機能が含まれます JDK 10 のサポート、JDBC 4.2 仕様、空間データ型のサポート、cancelQueryTimeout 接続プロパティ、メソッドの境界の要求、useBulkCopyForBatchInsert 接続プロパティ、データ更新の既定のコンプライアンス レベル。検出と分類の情報、utf-8 の拡張機能、および CityHash サポートします。 |    
+|mssql-jdbc-7.0.0.jre10.jar|4.3|10|Java Runtime Environment (JRE) 10.0 が必要です。 JRE 9.0 または低いがスローされます、例外を使用します。<br /><br /> 7.0 の新機能が含まれます JDK 10 のサポート、JDBC 4.2 仕様、空間データ型のサポート、cancelQueryTimeout 接続プロパティ、メソッドの境界の要求、useBulkCopyForBatchInsert 接続プロパティ、データ更新の既定のコンプライアンス レベル。検出と分類の情報、utf-8 の拡張機能、および CityHash サポートします。 |    
 
 
   JDBC ドライバーの 7.0 では、Maven Central Repository の使用もし、POM で次のコードを追加することで、Maven プロジェクトに追加できます。XML:  
@@ -100,9 +100,9 @@ ms.locfileid: "55736913"
   
   |JAR|JDBC バージョン準拠|Java バージョンをお勧めします。|[説明]|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.4.0.jre7.jar|4.1|7|Java Runtime Environment (JRE) 7.0 が必要です。 JRE 6.0 または下のスローを例外を使用します。<br /><br /> 6.4 の新機能は次のとおりです。Linux 用 azure AD 認証、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウト、および準備されたステートメント ハンドルの SPN の REALM の自動検出のメソッドをプリンシパル/パスワードを再利用します。 |  
-|mssql-jdbc-6.4.0.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 6.4 の新機能は次のとおりです。Linux 用 azure AD 認証、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウト、および準備されたステートメント ハンドルの SPN の REALM の自動検出のメソッドをプリンシパル/パスワードを再利用します。 |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Java Runtime Environment (JRE) 9.0 が必要です。 JRE 8.0 または低いがスローされます、例外を使用します。<br /><br /> 6.4 の新機能は次のとおりです。Linux 用 azure AD 認証、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウト、および準備されたステートメント ハンドルの SPN の REALM の自動検出のメソッドをプリンシパル/パスワードを再利用します。 |
+|mssql-jdbc-6.4.0.jre7.jar|4.1|7|Java Runtime Environment (JRE) 7.0 が必要です。 JRE 6.0 または下のスローを例外を使用します。<br /><br /> 6.4 で新しい機能が含まれます: Linux、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウトのための SPN の REALM の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルを再利用します。 |  
+|mssql-jdbc-6.4.0.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 6.4 で新しい機能が含まれます: Linux、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウトのための SPN の REALM の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルを再利用します。 |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Java Runtime Environment (JRE) 9.0 が必要です。 JRE 8.0 または低いがスローされます、例外を使用します。<br /><br /> 6.4 で新しい機能が含まれます: Linux、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウトのための SPN の REALM の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルを再利用します。 |
 
 JDBC Driver 6.4 は、Maven Central Repository の使用もし、POM で次のコードを追加することで、Maven プロジェクトに追加できます。XML 
 
@@ -124,8 +124,8 @@ JDBC Driver 6.4 は、Maven Central Repository の使用もし、POM で次の�
   
 |JAR|JDBC バージョン準拠|Java バージョンをお勧めします。|[説明]|  
 |---------|-----------------------------|----------------------|-----------------|
-|mssql-jdbc-6.2.2.jre7.jar|4.1|7|Java Runtime Environment (JRE) 7.0 が必要です。 JRE 6.0 または下のスローを例外を使用します。<br /><br /> 6.2 の新機能は次のとおりです。Linux 用 azure AD 認証、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウト、および準備されたステートメント ハンドルの SPN の REALM の自動検出のメソッドをプリンシパル/パスワードを再利用します。 |  
-|mssql-jdbc-6.2.3.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 6.2 の新機能は次のとおりです。Linux 用 azure AD 認証、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウト、および準備されたステートメント ハンドルの SPN の REALM の自動検出のメソッドをプリンシパル/パスワードを再利用します。|    
+|mssql-jdbc-6.2.2.jre7.jar|4.1|7|Java Runtime Environment (JRE) 7.0 が必要です。 JRE 6.0 または下のスローを例外を使用します。<br /><br /> 6.2 の新機能が含まれます: Linux、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウトのための SPN の REALM の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルを再利用します。 |  
+|mssql-jdbc-6.2.3.jre8.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 6.2 の新機能が含まれます: Linux、Kerberos、クロス ドメイン認証、Kerberos 制約付き委任、クエリのタイムアウト、ソケットのタイムアウトのための SPN の REALM の自動検出のプリンシパル/パスワード メソッド用の Azure AD の認証および準備されました。ステートメント ハンドルの再利用|    
 
   JDBC Driver 6.2 では、Maven Central Repository では使用可能なもあり、POM で次のコードを追加することで、Maven プロジェクトに追加できます。XML 
   
@@ -147,8 +147,8 @@ JDBC Driver 6.4 は、Maven Central Repository の使用もし、POM で次の�
   
 |JAR|JDBC バージョン準拠|Java バージョンをお勧めします。|[説明]|  
 |---------|-----------------------------|----------------------|-----------------|   
-|sqljdbc41.jar|4.1|7|Java Runtime Environment (JRE) 7.0 が必要です。 JRE 6.0 または下のスローを例外を使用します。<br /><br /> 6.0 と 4.2 のパッケージの新機能は次のとおりです。JDBC 4.1 準拠と一括コピー<br /><br /> さらに、6.0 のパッケージのみの新機能は次のとおりです。Always Encrypted では、テーブル値パラメーターの場合は、Azure Active Directory 認証、Always On 可用性グループに、透過的な接続パラメーター メタデータの取得準備されたクエリや国際化ドメイン名 (IDN) の機能強化|  
-|sqljdbc42.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 6.0 と 4.2 のパッケージの新機能は次のとおりです。JDBC 4.1 準拠、JDBC 4.2 コンプライアンス、および一括コピー<br /><br /> さらに、6.0 のパッケージのみの新機能は次のとおりです。Always Encrypted では、テーブル値パラメーターの場合は、Azure Active Directory 認証、Always On 可用性グループに、透過的な接続パラメーター メタデータの取得準備されたクエリや国際化ドメイン名 (IDN) の機能強化|  
+|sqljdbc41.jar|4.1|7|Java Runtime Environment (JRE) 7.0 が必要です。 JRE 6.0 または下のスローを例外を使用します。<br /><br /> 6.0 と 4.2 のパッケージの新機能には、JDBC 4.1 準拠と一括コピーが含まれています。<br /><br /> さらに、6.0 のパッケージのみの新機能が含まれます Always Encrypted により、テーブル値パラメーターの場合は、Azure Active Directory 認証、Always On 可用性グループでのパラメーター メタデータの取得での改善に透過的な接続の準備。クエリと国際化ドメイン名 (IDN)|  
+|sqljdbc42.jar|4.2|8|Java Runtime Environment (JRE) 8.0 が必要です。 JRE 7.0 または低いがスローされます、例外を使用します。<br /><br /> 6.0 と 4.2 のパッケージの新機能には、JDBC 4.1 準拠、JDBC 4.2 準拠、一括コピーが含まれています。<br /><br /> さらに、6.0 のパッケージのみの新機能が含まれます Always Encrypted により、テーブル値パラメーターの場合は、Azure Active Directory 認証、Always On 可用性グループでのパラメーター メタデータの取得での改善に透過的な接続の準備。クエリと国際化ドメイン名 (IDN)|  
   
  **Microsoft JDBC Driver 4.1 for SQL Server:**  
   

@@ -1,337 +1,337 @@
 items:
+- name: SQL Server ルートの目次 +
+  href: /sql/sql-server/sql-server-technical-documentation
 - name: SQL Server の ML とプログラミング拡張機能に関するドキュメント
-  href: index.md
+  href: ../advanced-analytics/index.md
 - name: 機械学習の拡張機能 (R、Python)
   items:
   - name: 新機能
-    href: what-s-new-in-sql-server-machine-learning-services.md
+    href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
   - name: SQL ML Services (R、Python)
-    href: what-is-sql-server-machine-learning.md
+    href: ../advanced-analytics/what-is-sql-server-machine-learning.md
   - name: R Services
-    href: r/sql-server-r-services.md
+    href: ../advanced-analytics/r/sql-server-r-services.md
   - name: スタンドアロン サーバー
-    href: r/r-server-standalone.md
+    href: ../advanced-analytics/r/r-server-standalone.md
 - name: Java 拡張機能
   items:
   - name: SQL での Java コードの実行
-    href: java/extension-java.md
+    href: ../advanced-analytics/java/extension-java.md
   - name: SQL から Java を呼び出す方法
-    href: java/howto-call-java-from-sql.md
+    href: ../advanced-analytics/java/howto-call-java-from-sql.md
   - name: Java サンプル
-    href: java/java-first-sample.md
+    href: ../advanced-analytics/java/java-first-sample.md
   - name: Java および SQL データ型
-    href: java/java-sql-datatypes.md
+    href: ../advanced-analytics/java/java-sql-datatypes.md
 - name: インストール
   items:
   - name: SQL Server 2019 の相違点
-    href: install/sql-machine-learning-services-ver15.md
+    href: ../advanced-analytics/install/sql-machine-learning-services-ver15.md
   - name: ML Services (R、Python) のインストール
-    href: install/sql-machine-learning-services-windows-install.md
+    href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
   - name: R サービスのインストール
-    href: install/sql-r-services-windows-install.md
+    href: ../advanced-analytics/install/sql-r-services-windows-install.md
   - name: スタンドアロン サーバー (R、Python) のインストール
-    href: install/sql-machine-learning-standalone-windows-install.md
+    href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
   - name: 事前トレーニング済みモデルのインストール
-    href: install/sql-pretrained-models-install.md
+    href: ../advanced-analytics/install/sql-pretrained-models-install.md
   - name: オフラインのセットアップ (インターネットなし)
-    href: install/sql-ml-component-install-without-internet-access.md
+    href: ../advanced-analytics/install/sql-ml-component-install-without-internet-access.md
     items:
     - name: CAB のダウンロード (オフラインでのセットアップ)
-      href: install/sql-ml-cab-downloads.md
+      href: ../advanced-analytics/install/sql-ml-cab-downloads.md
   - name: コマンド プロンプトのセットアップ
-    href: install/sql-ml-component-commandline-install.md
+    href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
   - name: R および Python のアップグレード
-    href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
+    href: ../advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
   - name: R クライアントのセットアップ
-    href: r/set-up-a-data-science-client.md
+    href: ../advanced-analytics/r/set-up-a-data-science-client.md
   - name: Python クライアントのセットアップ
-    href: python/setup-python-client-tools-sql.md
+    href: ../advanced-analytics/python/setup-python-client-tools-sql.md
   - name: 仮想サーバーのセットアップ
-    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
+    href: ../advanced-analytics/r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
 - name: クイック スタート
   items:
   - name: R
     items:
     - name: SQL Server に R が存在することを確認する
-      href: tutorials/quickstart-r-verify.md
+      href: ../advanced-analytics/tutorials/quickstart-r-verify.md
     - name: R と SQL での Hello World
-      href: tutorials/quickstart-r-run-using-tsql.md
+      href: ../advanced-analytics/tutorials/quickstart-r-run-using-tsql.md
     - name: 入力と出力の処理
-      href: tutorials/quickstart-r-inputs-and-outputs.md
+      href: ../advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md
     - name: データ型とオブジェクトの処理
-      href: tutorials/quickstart-r-data-types-and-objects.md
+      href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
     - name: R 関数の使用
-      href: tutorials/quickstart-r-functions.md
+      href: ../advanced-analytics/tutorials/quickstart-r-functions.md
     - name: 予測モデルの作成
-      href: tutorials/quickstart-r-create-predictive-model.md
+      href: ../advanced-analytics/tutorials/quickstart-r-create-predictive-model.md
     - name: モデルから予測する
-      href: tutorials/quickstart-r-predict-from-model.md
+      href: ../advanced-analytics/tutorials/quickstart-r-predict-from-model.md
   - name: Python
     items:
     - name: SQL Server に Python が存在することを確認する
-      href: tutorials/quickstart-python-verify.md
+      href: ../advanced-analytics/tutorials/quickstart-python-verify.md
     - name: Python と SQL での Hello World
-      href: tutorials/quickstart-python-run-using-t-sql.md
+      href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
     - name: 入力と出力の処理
-      href: tutorials/quickstart-python-inputs-and-outputs.md
+      href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
     - name: Python のデータ構造と SQL
-      href: tutorials/quickstart-python-data-structures.md
+      href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
     - name: 最初のモデルのトレーニングと使用
-      href: tutorials/quickstart-python-train-score-in-tsql.md
+      href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
 - name: チュートリアル
-  href: tutorials/machine-learning-services-tutorials.md
+  href: ../advanced-analytics/tutorials/machine-learning-services-tutorials.md
   items:
   - name: サンプル データ
     items:
     - name: 航空会社のデータ セット
-      href: tutorials/demo-data-airlinedemo-in-sql.md
+      href: ../advanced-analytics/tutorials/demo-data-airlinedemo-in-sql.md
     - name: アヤメ データ セット
-      href: tutorials/demo-data-iris-in-sql.md
+      href: ../advanced-analytics/tutorials/demo-data-iris-in-sql.md
     - name: NYC タクシー データ セット
-      href: tutorials/demo-data-nyctaxi-in-sql.md
+      href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
   - name: R
-    href: tutorials/sql-server-r-tutorials.md
+    href: ../advanced-analytics/tutorials/sql-server-r-tutorials.md
     items:
     - name: パーティション ベースのモデルの作成
-      href: tutorials/r-tutorial-create-models-per-partition.md
+      href: ../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md
     - name: SQL 開発者向けの R
-      href: tutorials/sqldev-in-database-r-for-sql-developers.md
+      href: ../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
       - name: 1 - データの探索
-        href: tutorials/sqldev-explore-and-visualize-the-data.md
+        href: ../advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data.md
       - name: 2 - 機能エンジニアリング
-        href: tutorials/sqldev-create-data-features-using-t-sql.md
+        href: ../advanced-analytics/tutorials/sqldev-create-data-features-using-t-sql.md
       - name: 3 - トレーニングおよびデプロイ
-        href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+        href: ../advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
       - name: 4 - 予測
-        href: tutorials/sqldev-operationalize-the-model.md
+        href: ../advanced-analytics/tutorials/sqldev-operationalize-the-model.md
     - name: R データ サイエンティスト向けの SQL
-      href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+      href: ../advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
       - name: 1 - データの探索
-        href: tutorials/walkthrough-view-and-summarize-data-using-r.md
+        href: ../advanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r.md
       - name: 2 - グラフとプロット
-        href: tutorials/walkthrough-create-graphs-and-plots-using-r.md
+        href: ../advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md
       - name: 3 - 機能エンジニアリング
-        href: tutorials/walkthrough-create-data-features.md
+        href: ../advanced-analytics/tutorials/walkthrough-create-data-features.md
       - name: 4 - モデルの構築と保存
-        href: tutorials/walkthrough-build-and-save-the-model.md
+        href: ../advanced-analytics/tutorials/walkthrough-build-and-save-the-model.md
       - name: 5 - モデルの配置と使用
-        href: tutorials/walkthrough-deploy-and-use-the-model.md
+        href: ../advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md
     - name: RevoScaleR の詳細情報
-      href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
+      href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
       items:
       - name: データベースとアクセス許可の作成
-        href: tutorials/deepdive-work-with-sql-server-data-using-r.md
+        href: ../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md
       - name: RxSqlServerData オブジェクトの作成
-        href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
+        href: ../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
       - name: クエリおよびデータの変更
-        href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
+        href: ../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md
       - name: コンピューティング コンテキストの定義
-        href: tutorials/deepdive-define-and-use-compute-contexts.md
+        href: ../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md
       - name: 概要統計情報の計算
-        href: tutorials/deepdive-create-and-run-r-scripts.md
+        href: ../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md
       - name: データの視覚化
-        href: tutorials/deepdive-visualize-sql-server-data-using-r.md
+        href: ../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md
       - name: モデルを作成する
-        href: tutorials/deepdive-create-models.md
+        href: ../advanced-analytics/tutorials/deepdive-create-models.md
       - name: 新しいデータのスコア付け
-        href: tutorials/deepdive-score-new-data.md
+        href: ../advanced-analytics/tutorials/deepdive-score-new-data.md
       - name: データの変換
-        href: tutorials/deepdive-transform-data-using-r.md
+        href: ../advanced-analytics/tutorials/deepdive-transform-data-using-r.md
       - name: rxImport を使用したデータの読み込み
-        href: tutorials/deepdive-load-data-into-memory-using-rximport.md
+        href: ../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md
       - name: rxDataStep を使用したテーブルの作成
-        href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
+        href: ../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
       - name: チャンク分析の実行
-        href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
+        href: ../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
       - name: SQL Server と XDF ファイル間のデータの移動
-        href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
+        href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: rxExec を使用したカスタム R の送信
-        href: tutorials/r-tutorial-custom-r-functions.md
+        href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
   - name: Python
-    href: tutorials/sql-server-python-tutorials.md
+    href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
     items:
     - name: revoscalepy を使用した Python モデルの作成
-      href: tutorials/use-python-revoscalepy-to-create-model.md
+      href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
     - name: SQL 開発者向けの Python
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
       - name: 1 - データの探索
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+        href: ../advanced-analytics/tutorials/sqldev-py3-explore-and-visualize-the-data.md
       - name: 2 - 機能エンジニアリング
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+        href: ../advanced-analytics/tutorials/sqldev-py4-create-data-features-using-t-sql.md
       - name: 3 - トレーニングおよびデプロイ
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+        href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
       - name: 4 - 予測
-        href: tutorials/sqldev-py6-operationalize-the-model.md
-- name: サンプル
+        href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
+- name: サンプル +
   href: https://github.com/Microsoft/sql-server-samples
 - name: ソリューション
-  href: tutorials/data-science-scenarios-and-solution-templates.md
+  href: ../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md
 - name: 概念
   items:
   - name: 機能拡張フレームワーク
-    href: concepts/extensibility-framework.md
+    href: ../advanced-analytics/concepts/extensibility-framework.md
   - name: R の拡張機能
-    href: concepts/extension-r.md
+    href: ../advanced-analytics/concepts/extension-r.md
   - name: Python の拡張機能
-    href: concepts/extension-python.md
+    href: ../advanced-analytics/concepts/extension-python.md
   - name: Security
-    href: concepts/security.md
+    href: ../advanced-analytics/concepts/security.md
 - name: 操作方法ガイド
-  href: r/sql-server-machine-learning-tasks.md
+  href: ../advanced-analytics/r/sql-server-machine-learning-tasks.md
   items:
   - name: パッケージの管理
     items:
     - name: 既定のパッケージ
-      href: r/installing-and-managing-r-packages.md
+      href: ../advanced-analytics/r/installing-and-managing-r-packages.md
     - name: パッケージ情報の取得
-      href: r/determine-which-packages-are-installed-on-sql-server.md
+      href: ../advanced-analytics/r/determine-which-packages-are-installed-on-sql-server.md
     - name: 新しい R パッケージのインストール
-      href: r/install-additional-r-packages-on-sql-server.md
+      href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
       items:
       - name: R パッケージ マネージャーの使用
-        href: r/use-r-package-managers-on-sql-server.md
+        href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
       - name: T-SQL の使用
-        href: r/install-r-packages-tsql.md
+        href: ../advanced-analytics/r/install-r-packages-tsql.md
       - name: RevoScaleR の使用
-        href: r/use-revoscaler-to-manage-r-packages.md
+        href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
         items:
         - name: リモートの R パッケージ管理を有効にする
-          href: r/r-package-how-to-enable-or-disable.md
+          href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
         - name: R パッケージの同期
-          href: r/package-install-uninstall-and-sync.md
+          href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
       - name: miniCRAN リポジトリの作成
-        href: r/create-a-local-package-repository-using-minicran.md
+        href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
       - name: R パッケージを使用するためのヒント
-        href: r/packages-installed-in-user-libraries.md
+        href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
     - name: 新しい Python パッケージのインストール
-      href: python/install-additional-python-packages-on-sql-server.md
+      href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
   - name: データ探索と予測モデリング
     items:
     - name: R から SQL へのデータ型の変換
-      href: r/r-libraries-and-data-types.md
+      href: ../advanced-analytics/r/r-libraries-and-data-types.md
     - name: Python から SQL へのデータ型の変換
-      href: python/python-libraries-and-data-types.md
+      href: ../advanced-analytics/python/python-libraries-and-data-types.md
     - name: ODBC を使用して R オブジェクトを読み込む
-      href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
+      href: ../advanced-analytics/r/save-and-load-r-objects-from-sql-server-using-odbc.md
     - name: R での OLAP キューブからのデータの使用
-      href: r/using-data-from-olap-cubes-in-r.md
+      href: ../advanced-analytics/r/using-data-from-olap-cubes-in-r.md
     - name: olapR を使って MDX クエリを作成する方法
-      href: r/how-to-create-mdx-queries-using-olapr.md
+      href: ../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md
     - name: R を使用した予測モデリング
-      href: r/data-exploration-and-predictive-modeling-with-r.md
+      href: ../advanced-analytics/r/data-exploration-and-predictive-modeling-with-r.md
     - name: rxExecBy を使用して複数のモデルを作成する
-      href: r/creating-multiple-models-using-rxexecby.md
+      href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
   - name: 配置
     items:
     - name: SQL Server 用の R コードを変換する
-      href: r/converting-r-code-for-use-in-sql-server.md
+      href: ../advanced-analytics/r/converting-r-code-for-use-in-sql-server.md
     - name: sqlrutils を使用してストアド プロシージャを作成する
-      href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
+      href: ../advanced-analytics/r/how-to-create-a-stored-procedure-using-sqlrutils.md
   - name: 予測
     items:
     - name: 予測を生成する方法
-      href: r/how-to-do-realtime-scoring.md
+      href: ../advanced-analytics/r/how-to-do-realtime-scoring.md
     - name: sp_rxPredict でのリアルタイム スコアリング
-      href: real-time-scoring.md
+      href: ../advanced-analytics/real-time-scoring.md
     - name: PREDICT T-SQL でのネイティブ スコアリング
-      href: sql-native-scoring.md
+      href: ../advanced-analytics/sql-native-scoring.md
   - name: パフォーマンス
     items:
     - name: R でのパフォーマンス チューニングの概要
-      href: r/sql-server-r-services-performance-tuning.md
+      href: ../advanced-analytics/r/sql-server-r-services-performance-tuning.md
     - name: パフォーマンス チューニングのサーバーの構成
-      href: r/sql-server-configuration-r-services.md
+      href: ../advanced-analytics/r/sql-server-configuration-r-services.md
     - name: パフォーマンス チューニング - R でのデータの最適化
-      href: r/r-and-data-optimization-r-services.md
+      href: ../advanced-analytics/r/r-and-data-optimization-r-services.md
     - name: R での結果のパフォーマンス チューニング
-      href: r/performance-case-study-r-services.md
+      href: ../advanced-analytics/r/performance-case-study-r-services.md
     - name: R コード プロファイル関数の使用
-      href: r/using-r-code-profiling-functions.md
+      href: ../advanced-analytics/r/using-r-code-profiling-functions.md
   - name: Security
     items:
     - name: ユーザーへの権限の付与
-      href: security/user-permission.md
+      href: ../advanced-analytics/security/user-permission.md
     - name: スタート パッドの構成
-      href: security/sql-server-launchpad-service-account.md
+      href: ../advanced-analytics/security/sql-server-launchpad-service-account.md
     - name: ファイアウォールの構成
-      href: security/firewall-configuration.md
+      href: ../advanced-analytics/security/firewall-configuration.md
     - name: SQLRUserGroup のログインｎ作成
-      href: security/create-a-login-for-sqlrusergroup.md
+      href: ../advanced-analytics/security/create-a-login-for-sqlrusergroup.md
   - name: 管理
     items:
     - name: 統合の管理
-      href: r/managing-and-monitoring-r-solutions.md
+      href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
     - name: SSMS レポートを使用した監視
-      href: r/monitor-r-services-using-custom-reports-in-management-studio.md
+      href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
     - name: DMV を使用した監視
-      href: administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
+      href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
     - name: スクリプトの実行のスケーリング
-      href: administration/modify-user-account-pool.md
+      href: ../advanced-analytics/administration/modify-user-account-pool.md
     - name: リソース管理の使用
-      href: administration/resource-governance.md
+      href: ../advanced-analytics/administration/resource-governance.md
     - name: リソース プールの作成
-      href: administration/how-to-create-a-resource-pool.md
+      href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
     - name: 拡張イベント
-      href: r/extended-events-for-sql-server-r-services.md
+      href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
     - name: 拡張イベント PREDICT T-SQL
-      href: xe-event-predict-tsql.md
-    - name: R コード プロファイル関数
-      href: r/using-r-code-profiling-functions.md
+      href: ../advanced-analytics/xe-event-predict-tsql.md
 - name: リファレンス
   items:
   - name: R パッケージ
     items:
     - name: RevoScaleR
-      href: r/ref-r-revoscaler.md
+      href: ../advanced-analytics/r/ref-r-revoscaler.md
     - name: MicrosoftML
-      href: r/ref-r-microsoftml.md
+      href: ../advanced-analytics/r/ref-r-microsoftml.md
     - name: olapR
-      href: r/ref-r-olapr.md
+      href: ../advanced-analytics/r/ref-r-olapr.md
     - name: sqlRUtils
-      href: r/ref-r-sqlrutils.md
+      href: ../advanced-analytics/r/ref-r-sqlrutils.md
   - name: Python パッケージ
     items:
     - name: revoscalepy
-      href: python/ref-py-revoscalepy.md
+      href: ../advanced-analytics/python/ref-py-revoscalepy.md
     - name: microsoftml
-      href: python/ref-py-microsoftml.md
+      href: ../advanced-analytics/python/ref-py-microsoftml.md
 - name: リソース
   items:
   - name: リリース ノート
-    href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
+    href: ../sql-server/sql-server-2017-release-notes.md
   - name: トラブルシューティング
-    href: machine-learning-troubleshooting-faq.md
+    href: ../advanced-analytics/machine-learning-troubleshooting-faq.md
     items:
     - name: 既知の問題
-      href: known-issues-for-sql-server-machine-learning-services.md
+      href: ../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md
     - name: データ コレクション
-      href: data-collection-ml-troubleshooting-process.md
+      href: ../advanced-analytics/data-collection-ml-troubleshooting-process.md
     - name: インストールとアップグレードのエラー
-      href: r/upgrade-and-installation-faq-sql-server-r-services.md
+      href: ../advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md
     - name: スタート パッドや外部スクリプトの実行エラー
-      href: common-issues-external-script-execution.md
+      href: ../advanced-analytics/common-issues-external-script-execution.md
     - name: R スクリプトのエラー
-      href: r-script-execution-errors.md
+      href: ../advanced-analytics/r-script-execution-errors.md
   - name: ブログ
     items:
-    - name: SQL Server
+    - name: SQL Server +
       href: https://blogs.technet.microsoft.com/dataplatforminsider/
-    - name: R Server
+    - name: Microsoft R Server +
       href: https://blogs.msdn.microsoft.com/microsoftrservertigerteam/
-    - name: Machine Learning
+    - name: Machine Learning +
       href: https://blogs.technet.microsoft.com/machinelearning/
   - name: フォーラム
     items:
-    - name: SQL Server
+    - name: SQL Server +
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
-    - name: Machine Learning Server
+    - name: Machine Learning Server +
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: 86736c40ee50eaebaf2ed7ba15fac123d9b3f05f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c264182ec84140bcc048b7821ea896e6654bd828
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034173"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676080"
