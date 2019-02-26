@@ -2,7 +2,7 @@
 title: 可用性グループの読み取り専用ルーティングの構成
 description: Always On 可用性グループの読み取り専用ルーティングを利用し、セカンダリ レプリカに読み取り専用トラフィックをすべて自動送信する - Transact-SQL (T-SQL) または PowerShell の使用。
 ms.custom: seodec18
-ms.date: 08/14/2017
+ms.date: 02/25/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed04fab7d5496f71bc4c9accbcb4fd2e5579df5c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 937fb97a9ed59793b532a8dcae0903fab5580678
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126142"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828002"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Always On 可用性グループの読み取り専用ルーティングの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "54126142"
   
 -   読み取り専用ルーティングをサポートしようとしている読み取り可能なセカンダリ レプリカに対して、 *読み取り専用ルーティングの URL*を指定する必要があります。 この URL は、ローカル レプリカがセカンダリ ロールで実行されている場合にのみ有効です。 読み取り専用ルーティングの URL は、必要に応じてレプリカごとに指定する必要があります。 各読み取り専用ルーティングの URL は、読み取りを目的とした接続要求を特定の読み取り可能なセカンダリ レプリカにルーティングする際に使用されます。 通常は、読み取り可能なすべてのセカンダリ レプリカに読み取り専用ルーティングの URL が割り当てられます。  
   
-     可用性レプリカの読み取り専用ルーティングの URL の計算の詳細については、「 [AlwaysOn の read_only_routing_url の計算](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
+     可用性レプリカの読み取り専用ルーティングの URL の計算の詳細については、「 [AlwaysOn の read_only_routing_url の計算](https://web.archive.org/web/20170512023255/ https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
   
 -   可用性レプリカがプライマリ レプリカである場合に読み取り専用ルーティングをサポートするには、その可用性レプリカに対して *読み取り専用ルーティング リスト*を指定する必要があります。 読み取り専用ルーティング リストは、ローカル レプリカがプライマリ ロールで実行されている場合にのみ有効です。 このリストは、必要に応じてレプリカごとに指定する必要があります。 通常、各読み取り専用ルーティング リストには、すべての読み取り専用ルーティングの URL が含まれており、リストの末尾にローカル レプリカの URL が示されています。  
   
