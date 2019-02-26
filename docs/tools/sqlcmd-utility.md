@@ -28,18 +28,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fbbf5a3ad4c3d6a667ae2622e5bf09ea5f39c911
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300106"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802378"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 > SQL Server 2014 と下位の場合は、次を参照してください。 [sqlcmd ユーティリティ](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
 > )します。
@@ -64,9 +61,9 @@ ms.locfileid: "54300106"
 
 **バージョン情報**
 
-リリース番号:15.0 <br>
-ビルド番号:15.0.1000.34<br>
-リリース日2018 年 10 月 18 日
+リリース番号: 15.0 <br>
+ビルド番号: 15.0.1000.34<br>
+リリース日: 2018 年 10 月 18 日
 
 SQLCMD の新しいバージョンでは、SQL Database、SQL Data Warehouse、および Always Encrypted 機能の多要素認証 (MFA) のサポートを含む、Azure AD の認証をサポートします。
 新しい BCP では、SQL Database と SQL Data Warehouse 用の Multi-factor Authentication (MFA) のサポートなど、Azure AD の認証をサポートします。
@@ -80,7 +77,7 @@ SQLCMD のバージョンの実行を確認する`sqlcmd -?`コマンドし、�
 > [!NOTE]
 > Always Encrypted をサポートするためには、13.1 以降のバージョンが必要です (`-g`) と Azure Active Directory 認証 (`-G`)。 (お使いのコンピューターには複数のバージョンの sqlcmd.exe がインストールされている可能性があります。 必ず正しいバージョンを使用してください。 バージョンを判断するには、 `sqlcmd -?`を実行します。)
 
-既定でインストールされる事前に、Azure Cloud Shell から sqlcmd ユーティリティを実行できます。[![Cloud Shell を起動](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell を起動")](https://shell.azure.com)
+既定でインストールされる事前に Azure Cloud Shell から sqlcmd ユーティリティを試すことができます: [ ![Cloud Shell の起動](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell の起動")](https://shell.azure.com)
 
   SSMS で sqlcmd ステートメントを実行するには、上部のナビゲーションの [クエリ] メニューのドロップダウン リストから SQLCMD モードを選択します。  
   
@@ -215,7 +212,7 @@ sqlcmd
 
    対話型認証を有効にするユーザー名と-g オプションを提供します (-U) のみ、パスワードなし。
 
-   次の例では、ユーザーが AAD アカウントを表すユーザー名を示す、Azure AD の対話型モードを使用してデータをエクスポートします。 これは、前のセクションで使用される同じ例を示します。*Azure Active Directory のユーザー名とパスワード:*  
+   次の例では、ユーザーが AAD アカウントを表すユーザー名を示す、Azure AD の対話型モードを使用してデータをエクスポートします。 これは、前のセクションで使用される同じ例: *Azure Active Directory ユーザー名とパスワード*します。  
 
    対話モードを手動で入力されたパスワードが必要または有効にすると、multi-factor authentication でアカウントが、構成された MFA 認証メソッドを完了します。
 
@@ -248,10 +245,10 @@ sqlcmd
 **-j** 画面に生のエラー メッセージを出力します。
   
  **-K** _application_intent_  
- アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
+ アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
 **-M** _multisubnet_failover_  
- SQL Server 可用性グループまたは SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、**-M** は無効になります。 詳細については、「[リスナー、クライアント接続、アプリケーションのフェールオーバー](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)」、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx)。 
+ SQL Server 可用性グループまたは SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、**-M** は無効になります。 詳細については、「[リスナー、クライアント接続、アプリケーションのフェールオーバー](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)」、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx)」をご覧ください。 
   
  **-N**  
  クライアントでこのスイッチを使用して、暗号化された接続を要求できます。  
@@ -504,7 +501,7 @@ sqlcmd
  **-c** _batch_terminator_  
  バッチ ターミネータを指定します。 既定では、"GO" だけが入力されている行があると、コマンドが終了したと見なされ、SQL Server に送られます。 バッチ ターミネータをリセットする場合、Transact-SQL の予約キーワードやオペレーティング システムで特別な意味を持つ文字は、先頭に円記号が付いているかどうかに関係なく、使用しないでください。  
   
- **-L** **[c]**  
+ **-L****[c]**  
  ローカルに構成されたサーバー コンピューターと、ネットワーク上でブロードキャストしているサーバー コンピューター名の一覧を表示します。 このパラメーターは、他のパラメーターと組み合わせて使用することはできません。 一覧表示できるサーバー コンピューターの最大数は 3,000 です。 バッファーのサイズが原因でサーバーの一覧が切り捨てられる場合は、警告メッセージが表示されます。  
   
 > [!NOTE]  
@@ -512,7 +509,7 @@ sqlcmd
   
  省略可能なパラメーター **c** を指定すると、出力結果には **Servers:** ヘッダー行が含まれません。このため、各サーバー行は、先頭に空白がない状態で一覧表示されます。 このプレゼンテーションは、クリーン アウトプットと呼ばれます。 クリーン アウトプットを使用すると、スクリプト言語の処理パフォーマンスが向上します。  
   
- **-p** **[1]**  
+ **-p****[1]**  
  すべての結果セットのパフォーマンス統計を出力します。 パフォーマンス統計の形式の例を次に示します。  
   
  `Network packet size (bytes): n`  
@@ -537,7 +534,7 @@ sqlcmd
   
  省略可能なパラメーターが **1**以外の値の場合は、エラーが生成され、 **sqlcmd** は終了します。  
   
- **-X** **[1]**  
+ **-X****[1]**  
  **sqlcmd** がバッチ ファイルから実行される場合に、システムのセキュリティを損なう可能性のあるコマンドを無効にします。 無効なコマンドも認識されます。 **sqlcmd** は警告メッセージを表示して継続します。 省略可能なパラメーターを **1** に指定すると、 **sqlcmd** はエラー メッセージを生成して終了します。 **-X** オプションを使用した場合に無効になるコマンドは次のとおりです。  
   
 -   **ED**  
@@ -840,7 +837,7 @@ Sqlcmd プロンプトの種類。
 
 `GO`
 
-ENTER を押すと、次の情報メッセージが出力されます。データベース コンテキストが 'AdventureWorks2008R2' に変更されました。  
+Enter キーを押すと、"データベース コンテキストが 'AdventureWorks2012' に変更されました。" という情報メッセージが出力されます。  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Transact-SQL クエリからの出力形式  
  まず、**sqlcmd** は SELECT リストで指定した列名を含む列ヘッダーを出力します。 列名は、SQLCMDCOLSEP で指定された文字を使用して分割されます。 既定では、空白です。 列名が列幅よりも短い場合は、出力は次の列まで空白で埋められます。  

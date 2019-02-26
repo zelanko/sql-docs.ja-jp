@@ -11,12 +11,12 @@ ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dba0e72f3575c0958ad142b6d27b7be410d6cec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 005a2c4b34c9aae2cfdfe4663cbfcbe06a68b81a
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658750"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676110"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver (PDO_SQLSRV ドライバーでの直接ステートメント実行と準備されたステートメントの実行)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,8 +34,11 @@ ms.locfileid: "47658750"
   
 クエリは、前のクエリで設定されたコンテキストを必要とする場合は、pdo::sqlsrv_attr_direct_query の設定を True に、クエリを実行します。 たとえば場合は、クエリで一時テーブルを使用すると、pdo::sqlsrv_attr_direct_query を True に設定する必要があります。  
   
-次の例では、前のステートメントからのコンテキストが必要な場合は、pdo::sqlsrv_attr_direct_query を True に設定する必要がありますを示します。  このサンプルは、クエリが直接実行されたときに、プログラム内の後続のステートメントでのみ使用できる一時テーブルを使用します。  
+次の例では、前のステートメントからのコンテキストが必要な場合は、pdo::sqlsrv_attr_direct_query を True に設定する必要がありますを示します。 このサンプルは、クエリが直接実行されたときに、プログラム内の後続のステートメントでのみ使用できる一時テーブルを使用します。  
   
+> [!NOTE]
+> クエリは、ストアド プロシージャを呼び出すし、一時テーブルを使用して、このストアド プロシージャで使用する場合[:exec](../../connect/php/pdo-exec.md)代わりにします。
+
 ```  
 <?php  
    $conn = new PDO('sqlsrv:Server=(local)', '', '');  

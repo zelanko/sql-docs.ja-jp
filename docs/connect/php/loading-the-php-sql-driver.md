@@ -1,7 +1,7 @@
 ---
 title: SQL Server 用 Microsoft Drivers for PHP を読み込む | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dd99ffa39de48dbf8839cbe06a8bb236fffbdf3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606202"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744612"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>SQL Server 用 Microsoft Drivers for PHP を読み込む
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,6 +28,8 @@ ms.locfileid: "51606202"
 事前構築済みのドライバーをダウンロードするには、プラットフォームから、 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github プロジェクト ページ。 各インストール パッケージには、スレッドおよびスレッド以外のバリエーションで SQLSRV と PDO_SQLSRV ドライバーのファイルが含まれています。 Windows、これらは 32 ビットおよび 64 ビットのバリアントで入手できます。 参照してください[Microsoft Drivers for PHP for SQL Server のシステム要件](../../connect/php/system-requirements-for-the-php-sql-driver.md)各パッケージに含まれるドライバー ファイルの一覧についてはします。 PHP バージョン、アーキテクチャ、および PHP 環境の threadedness、ドライバー ファイルが一致する必要があります。
 
 Linux と macOS の場合は、ドライバーまたはインストールできるで見つかった PECL を使用して、[インストール チュートリアル](../../connect/php/installation-tutorial-linux-mac.md)します。
+
+PHP を構築するときにまたはを使用してソースからドライバーをビルドすることも`phpize`します。 追加することで、共有拡張機能を構築する代わりにそれらを PHP 静的に構築のオプションがあるソースからドライバーをビルドする場合は、 `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (Linux および macOS) 上または`--enable-sqlsrv=static --with-pdo-sqlsrv=static`(Windows) 上に、`./configure`をPHP を構築します。 PHP の詳細については、システムを構築および`phpize`を参照してください、 [PHP ドキュメント](http://php.net/manual/install.php)します。
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>ドライバー ファイルを拡張機能ディレクトリに移動する  
 ドライバー ファイルは、PHP ランタイムが検索できるディレクトリである必要があります。 既定のディレクトリを見つけを実行する - 既定 PHP 拡張機能ディレクトリにドライバー ファイルを配置する最も簡単な`php -i | sls extension_dir`で Windows または`php -i | grep extension_dir`Linux/macos でします。 既定の拡張機能ディレクトリを使用していない場合は、ディレクトリを指定、PHP 構成ファイル (php.ini) を使用して、 **extension_dir**オプション。 ドライバー ファイルを配置した場合、Windows などの`c:\php\ext`ディレクトリ、次の行を php.ini に追加。
