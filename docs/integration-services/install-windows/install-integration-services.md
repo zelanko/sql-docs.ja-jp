@@ -20,17 +20,14 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d1ef66f97683b24014661fb6a1e633ce6ce06ce
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 9183daa6e11e015bf484002fcf5857adab0ec087
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299919"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801976"
 ---
 # <a name="install-integration-services"></a>Integration Services のインストール
-
-  > [!div class="nextstepaction"]
-  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を含む任意またはすべてのコンポーネントを 1 つのセットアップ プログラムでインストールできます。 他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントと共にまたは単独で、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を 1 台のコンピューターにインストールするには、セットアップを使います。    
     

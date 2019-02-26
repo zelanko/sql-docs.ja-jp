@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 80bff9787e750e39a0747be831b1fc902d6923a8
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 20b383929910bf24ef9dc89950f15815afdef3bd
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270175"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801756"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd および bcp、SQL Server コマンド ライン ツールを Linux にインストールします。
 
@@ -23,8 +23,8 @@ ms.locfileid: "51270175"
 
 次の手順では、コマンド ライン ツール、Microsoft ODBC ドライバー、およびその依存関係をインストールします。 **Mssql ツール**パッケージが含まれています。
 
-- **sqlcmd**: コマンド ライン クエリ ユーティリティ。
-- **bcp**: 一括インポート/エクスポート ユーティリティ。
+- **sqlcmd**:コマンド ライン クエリ ユーティリティです。
+- **bcp**:一括インポート/エクスポート ユーティリティです。
 
 お使いのプラットフォーム ツールをインストールします。
 
@@ -77,7 +77,7 @@ ms.locfileid: "51270175"
    >   sudo yum update mssql-tools
    >   ```
 
-1. **省略可能な**: 追加`/opt/mssql-tools/bin/`を**パス**bash シェル内の環境変数。
+1. **省略可能な**:追加`/opt/mssql-tools/bin/`を**パス**bash シェル内の環境変数。
 
    させる**sqlcmd と bcp**ログイン セッションでは、bash シェルからアクセス可能な変更、**パス**で、 **~/.bash_profile**次のコマンドでファイル。
 
@@ -122,7 +122,7 @@ ms.locfileid: "51270175"
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **省略可能な**: 追加`/opt/mssql-tools/bin/`を**パス**bash シェル内の環境変数。
+1. **省略可能な**:追加`/opt/mssql-tools/bin/`を**パス**bash シェル内の環境変数。
 
    させる**sqlcmd と bcp**ログイン セッションでは、bash シェルからアクセス可能な変更、**パス**で、 **~/.bash_profile**次のコマンドでファイル。
 
@@ -161,7 +161,7 @@ ms.locfileid: "51270175"
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **省略可能な**: 追加`/opt/mssql-tools/bin/`を**パス**bash シェル内の環境変数。
+1. **省略可能な**:追加`/opt/mssql-tools/bin/`を**パス**bash シェル内の環境変数。
 
    させる**sqlcmd と bcp**ログイン セッションでは、bash シェルからアクセス可能な変更、**パス**で、 **~/.bash_profile**次のコマンドでファイル。
 
@@ -190,9 +190,9 @@ Mac El Capitan と Sierra のツールをインストールするには、次の
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox mssql-tools
+brew install mssql-tools
 #for silent install: 
-#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
+#HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
 ## <a id="docker"></a> Docker
@@ -207,8 +207,8 @@ Docker イメージには、SQL Server コマンド ライン ツールが含ま
 
 | ツール パッケージ | バージョン | ダウンロード |
 |-----|-----|-----|
-| Red Hat RPM ツール パッケージ | 14.0.5.0-1 | [mssql ツール RPM パッケージ](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| SLES RPM ツール パッケージ | 14.0.5.0-1 | [mssql ツール RPM パッケージ](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
+| Red Hat RPM ツール パッケージ | 14.0.5.0-1 | [mssql-tools RPM package](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
+| SLES RPM ツール パッケージ | 14.0.5.0-1 | [mssql-tools RPM package](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian ツール パッケージ | 14.0.5.0-1 | [mssql ツール Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
 | Ubuntu 16.10 Debian ツール パッケージ | 14.0.5.0-1 | [mssql ツール Debian パッケージ](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
 
@@ -225,7 +225,7 @@ Docker イメージには、SQL Server コマンド ライン ツールが含ま
 
 1. **Linux コンピューターにダウンロードしたパッケージを移動**します。 Linux コンピューターに、パッケージを移動する方法の 1 つは、パッケージをダウンロードする別のコンピューターを使用した場合、 **scp**コマンド。
 
-1. **インストール、およびパッケージ**: インストール、 **mssql ツール**と**msodbc**パッケージ。 すべての依存関係エラーが発生した場合は、次の手順まで無視します。
+1. **インストール、およびパッケージ**:インストール、 **mssql ツール**と**msodbc**パッケージ。 すべての依存関係エラーが発生した場合は、次の手順まで無視します。
 
     | プラットフォーム | パッケージのインストール コマンド |
     |-----|-----|
@@ -233,7 +233,7 @@ Docker イメージには、SQL Server コマンド ライン ツールが含ま
     | SLES | `sudo zypper install msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo zypper install mssql-tools-14.0.5.0-1.x86_64.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_13.1.6.0-1_amd64.deb`<br/>`sudo dpkg -i mssql-tools_14.0.5.0-1_amd64.deb` |
 
-1. **解決するには依存関係がない**: 依存関係をこの時点で不足している必要があります。 それ以外の場合は、この手順をスキップすることができます。 場合によってでは、手動で検索して、これらの依存関係をインストールする必要があります。
+1. **解決するには依存関係がない**:この時点での依存関係が不足しているがあります。 それ以外の場合は、この手順をスキップすることができます。 場合によってでは、手動で検索して、これらの依存関係をインストールする必要があります。
 
     RPM パッケージでは、次のコマンドで必要な依存関係を確認できます。
 
@@ -258,7 +258,7 @@ Docker イメージには、SQL Server コマンド ライン ツールが含ま
     dpkg -I mssql-tools_14.0.5.0-1_amd64.deb | grep "Depends:"
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 使用する方法の例については**sqlcmd**を SQL Server に接続し、データベースの作成には、次のクイック スタートのいずれかを表示します。
 
