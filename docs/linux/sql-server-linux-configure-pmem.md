@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b11b3154162fafdfc717e9785fb65e59dc45799c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba2ed69239313a7933840d7a99ccbf3ce0864bfd
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510827"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828422"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Linux 上の SQL Server の永続的なメモリ (PMEM) を構成する方法
 
@@ -80,10 +80,10 @@ ndctl list
 
   デバイスは、ndctl で構成されている、書式設定およびマウントされていますが後で、データベース ファイルを配置できます。 新しいデータベースを作成することもできます。 
 
-1. トレース フラグ 3979 を使用して SQL Server データベース ファイル啓蒙を有効にします。 このトレース フラグは、スタートアップ トレース フラグは、およびよう mssql conf ユーティリティを使用して有効にする必要があります。
+1. PMEM デバイスは、O_DIRECT セーフであるために、トレース フラグを強制フラッシュ メカニズムを無効にする 3979 を有効にします。 このトレース フラグは、スタートアップ トレース フラグは、およびよう mssql conf ユーティリティを使用して有効にする必要があります。 これは、サーバー全体の構成変更をデータの整合性を保証する強制フラッシュ メカニズムが必要な O_DIRECT 非準拠デバイスがある場合に、このトレース フラグを使用する必要がありますに注意してください。 詳細について参照してください。 https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
 
 1. SQL Server を再起動してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux](sql-server-linux-overview.md)します。
