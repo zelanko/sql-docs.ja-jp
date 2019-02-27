@@ -55,7 +55,7 @@ SQL Server と SQL Database に接続するには、ADO.NET 接続マネージ�
 1. **SQL Server Integration Services (SSIS)**. SSIS は SQL Server のコンポーネントであり、使用するには SQL Server のライセンス版、開発者版、または評価版が必要です。 SQL Server の評価版を取得するには、[SQL Server の評価](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)に関するページを参照してください。
 2. **Visual Studio** (省略可能)。 無料の Visual Studio Community Edition を取得するには、「[Visual Studio Community][Visual Studio Community]」を参照してください。 Visual Studio をインストールしない場合は、SQL Server Data Tools (SSDT) のみをインストールできます。 SSDT をインストールすると、機能が制限されたバージョンの Visual Studio がインストールされます。
 3. **Visual Studio 用 SQL Server Data Tools (SSDT)**。 Visual Studio 用 SQL Server Data Tools を取得するには、「[SQL Server Data Tools (SSDT) のダウンロード][Download SQL Server Data Tools (SSDT)]」を参照してください。
-4. このチュートリアルでは、SQL Server または SQL Database のインスタンスに接続し、そのインスタンスにデータを読み込みます。 接続し、テーブルを作成し、次のいずれかにデータを読み込むためのアクセス許可が必要です。
+4. このチュートリアルでは、SQL Server または SQL データベース インスタンスに接続し、そのインスタンスにデータを読み込みます。 接続し、テーブルを作成し、次のいずれかにデータを読み込むためのアクセス許可が必要です。
    - **Azure SQL Database データベース**。 詳細については、[Azure SQL Database](/azure/sql-database/) に関するページを参照してください。  
       内の複数の
    - **SQL Server インスタンス**。 SQL Server は、オンプレミスまたは Azure の仮想マシン上で実行されます。 無料の Evaluation Edition または Developer Edition の SQL Server をダウンロードする場合は、[SQL Server のダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)に関するページを参照してください。
