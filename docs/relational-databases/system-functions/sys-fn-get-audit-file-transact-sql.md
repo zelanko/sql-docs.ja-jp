@@ -22,14 +22,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b4eb865c8c0498e72943c128ff0106638005166
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 571ed8140e408577626c437d38080ccabb6c241f
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980048"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852957"
 ---
-# <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
+# <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバー監査で作成された監査ファイルからの情報を返します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
@@ -70,13 +70,13 @@ fn_get_audit_file ( file_pattern,
 >  ファイル名のパターンがないパスを渡すとエラーが発生します。  
   
  *initial_file_name*  
- 監査レコードの最初の読み取り元に設定する監査ファイル内の特定のファイルのパスと名前を指定します。 種類は**nvarchar (260)** します。  
+ 監査レコードの読み取りを開始する監査ファイル セットでは、特定のファイルの名前とパスを指定します。 種類は**nvarchar (260)** します。  
   
 > [!NOTE]  
 >  *Initial_file_name*引数が有効なエントリを含める必要がありますまたはいずれかの既定値を含める必要があります |NULL 値です。  
   
  *audit_record_offset*  
- initial_file_name で指定したファイルを使用して既知の場所を指定します。 この引数を使用した場合、関数は、指定されたオフセットの直後にあるバッファーの最初のレコードから読み取りを開始します。  
+ Initial_file_name で指定したファイルを使用して、既知の場所を指定します。 この引数を使用した場合、関数は、指定されたオフセットの直後にあるバッファーの最初のレコードから読み取りを開始します。  
   
 > [!NOTE]  
 >  *Audit_record_offset*引数が有効なエントリを含める必要がありますまたはいずれかの既定値を含める必要があります |NULL 値です。 種類は**bigint**します。  
@@ -84,58 +84,60 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>返されるテーブル  
  次の表に、この関数から返される監査ファイルの内容を示します。  
   
-|列名|型|説明|  
-|-----------------|----------|-----------------|  
-|event_time|**datetime2**|監査可能なアクションが発生した日時。 NULL 値は許可されません。|  
-|sequence_number|**int**|大きすぎて監査の書き込みバッファーに収まらなかった 1 つの監査レコード内のレコードの順序を追跡します。 NULL 値は許可されません。|  
-|action_id|**varchar (4)**|アクションの ID。 NULL 値は許可されません。|  
-|succeeded|**bit**|イベントをトリガーしたアクションが成功したかどうかを示します。 NULL 値は許可されません。 ログイン イベント以外のすべてのイベントで、操作ではなく、権限チェックが成功したか失敗したかのみを報告します。<br /> 1 = 成功<br /> 0 = 失敗|  
-|permission_bitmask|**varbinary(16)**|一部のアクションでは、権限の許可、拒否、または取り消しを示します。|  
-|is_column_permission|**bit**|列レベルの権限かどうかを示すフラグ。 NULL 値は許可されません。 permission_bitmask = 0 の場合は 0 を返します。<br /> 1 = true<br /> 0 = false|  
-|session_id|**smallint**|イベントが発生したセッションの ID。 NULL 値は許可されません。|  
-|server_principal_id|**int**|アクションが実行されるログイン コンテキストの ID。 NULL 値は許可されません。|  
-|database_principal_id|**int**|アクションが実行されるデータベース ユーザー コンテキストの ID。 NULL 値は許可されません。 この場合は 0 を返します。 には適用されません。 たとえば、サーバー操作などの場合です。|  
-|target_server_principal_id|**int**|GRANT/DENY/REVOKE 操作が実行されるサーバー プリンシパル。 NULL 値は許可されません。 該当しない場合は 0 を返します。|  
-|target_database_principal_id|**int**|GRANT/DENY/REVOKE 操作が実行されるデータベース プリンシパル。 NULL 値は許可されません。 該当しない場合は 0 を返します。|  
-|object_id|**int**|監査が発生したエンティティの ID。 これには、次の内容が含まれます。<br /> Server オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値は許可されません。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は 0 を返します。 たとえば、認証などの場合です。|  
-|class_type|**varchar(2)**|監査が発生する監査可能なエンティティの種類。 NULL 値は許可されません。|  
-|session_server_principal_name|**sysname**|セッションのサーバー プリンシパル。 NULL 値が許可されます。|  
-|server_principal_name|**sysname**|現在のログイン。 NULL 値が許可されます。|  
-|server_principal_sid|**varbinary**|現在のログイン SID。 NULL 値が許可されます。|  
-|database_principal_name|**sysname**|現在のユーザー。 NULL 値が許可されます。 使用できない場合は NULL を返します。|  
-|target_server_principal_name|**sysname**|アクションの対象ログインします。 NULL 値が許可されます。 該当しない場合は NULL を返します。|  
-|target_server_principal_sid|**varbinary**|対象ログインの SID。 NULL 値が許可されます。 該当しない場合は NULL を返します。|  
-|target_database_principal_name|**sysname**|アクションの対象ユーザー。 NULL 値が許可されます。 該当しない場合は NULL を返します。|  
-|server_instance_name|**sysname**|監査が発生したサーバー インスタンスの名前。 標準の server\instance の形式が使用されます。|  
-|database_name|**sysname**|アクションが発生したデータベース コンテキスト。 NULL 値が許可されます。 サーバー レベルの監査には、NULL を返します。|  
-|schema_name|**sysname**|アクションが発生したスキーマ コンテキスト。 NULL 値が許可されます。 監査がスキーマの外部で発生しているは、NULL を返します。|  
-|object_name|**sysname**|監査が発生したエンティティの名前。 これには、次の内容が含まれます。<br /> Server オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値が許可されます。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は NULL を返します。 たとえば、認証などの場合です。|  
-|statement|**nvarchar (4000)**|TSQL ステートメント (存在する場合)。 NULL 値が許可されます。 該当しない場合は NULL を返します。|  
-|additional_information|**nvarchar (4000)**|単一のイベントに対してだけ適用される固有の情報が XML として返されます。 この種類の情報は、少数の監査可能なアクションに含まれます。<br /><br /> TSQL スタックが関連付けられているアクションに関して、XML 形式には、1 レベルの TSQL スタックが表示されます。 この XML 形式は次のとおりです。<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> frame nest_level は、フレームの現在の入れ子レベルを示します。 モジュール名は 3 つの部分 (database_name、schema_name、object_name) から成る形式で表されます。  モジュール名を解析してなどの無効な xml 文字をエスケープ`'\<'`、 `'>'`、 `'/'`、`'_x'`します。 としてエスケープする必要がある`_xHHHH\_`します。 HHHH は、その文字の 4 桁の 16 進数 UCS-2 コードを表しています。<br /><br /> NULL 値が許可されます。 イベントから追加情報が報告されない場合は NULL を返します。|  
-|file_name|**varchar(260)**|レコードの読み取り元の監査ログ ファイルのパスと名前。 NULL 値は許可されません。|  
-|audit_file_offset|**bigint**|監査レコードを含むファイルのバッファー オフセット。 NULL 値は許可されません。|  
-|user_defined_event_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 引数として渡されるユーザー定義済みのイベント id **sp_audit_write**します。 **NULL**システム イベント (既定値) のユーザー定義のイベントに対しては 0 以外。 詳細については、次を参照してください。 [sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)します。|  
-|user_defined_information|**nvarchar (4000)**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> ユーザーに記録する追加情報を記録するために使用 |監査ログを使用して、 **sp_audit_write**ストアド プロシージャ。|  
-|audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | **適用対象**:SQL Server のみ (2016年以降) |  
-|transaction_id |**bigint** | **適用対象**:SQL Server のみ (2016年以降) |  
-|client_ip |**nvarchar(128)** | **適用対象**:Azure SQL DB + SQL Server (2017年以降) |  
-|application_name |**nvarchar(128)** | **適用対象**:Azure SQL DB + SQL Server (2017年以降) |  
-|duration_milliseconds |**bigint** | **適用対象**:Azure SQL DB のみ |  
-|response_rows |**bigint** | **適用対象**:Azure SQL DB のみ |  
-|affected_rows |**bigint** | **適用対象**:Azure SQL DB のみ |  
-|connection_id |GUID | **適用対象**:Azure SQL DB のみ |
-|data_sensitivity_information |nvarchar (4000) | **適用対象**:Azure SQL DB のみ |
+| 列名 | 型 | 説明 |  
+|-------------|------|-------------|  
+| action_id | **varchar (4)** | アクションの ID。 Null を許容しません。 |  
+| additional_information | **nvarchar (4000)** | 単一のイベントに対してだけ適用される固有の情報が XML として返されます。 監査可能なアクションの数が少ないには、この種情報にはが含まれます。<br /><br /> TSQL スタックが関連付けられているアクションに関して、XML 形式で、1 つのレベルの TSQL スタックが表示されます。 XML 形式になります。<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> frame nest_level は、フレームの現在の入れ子レベルを示します。 モジュール名は、次の 3 つの部分 (database_name、schema_name、object_name) で表されます。  モジュール名を解析してなどの無効な xml 文字をエスケープ`'\<'`、 `'>'`、 `'/'`、`'_x'`します。 としてエスケープする必要がある`_xHHHH\_`します。 HHHH は文字の 4 桁の 16 進 ucs-2 コード<br /><br /> Null 値は。 イベントから追加情報が報告されない場合は NULL を返します。 |
+| affected_rows | **bigint** | **適用対象**:Azure SQL DB のみ<br /><br /> 実行されたステートメントによって影響を受ける行の数。 |  
+| application_name | **nvarchar(128)** | **適用対象**:Azure SQL DB + SQL Server (2017年以降)<br /><br /> 監査イベントの原因となったステートメントを実行するクライアント アプリケーションの名前 |  
+| audit_file_offset | **bigint** | **対象としています**:。SQL Server のみ<br /><br /> 監査レコードを含むファイルのバッファーのオフセット。 NULL 値は許可されません。 |  
+| audit_schema_version | **int** | 常に 1 |  
+| class_type | **varchar(2)** | 監査が発生する監査可能なエンティティの種類。 NULL 値は許可されません。 |  
+| client_ip | **nvarchar(128)** | **適用対象**:Azure SQL DB + SQL Server (2017年以降)<br /><br />    クライアント アプリケーションの ip アドレスのソース |  
+| connection_id | GUID | **適用対象**:Azure SQL DB およびマネージ インスタンス<br /><br /> サーバーの接続の ID |
+| data_sensitivity_information | nvarchar (4000) | **適用対象**:Azure SQL DB のみ<br /><br /> 情報の種類と機密ラベルのデータベースでは、分類済みの列に基づく、監査対象のクエリによって返されます。 詳細については[Azure SQL Database のデータの検出と分類](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
+| database_name | **sysname** | アクションが発生したデータベース コンテキスト。 Null 値は。 サーバー レベルの監査には、NULL を返します。 |  
+| database_principal_id | **int** |アクションが実行されるデータベース ユーザー コンテキストの ID。 NULL 値は許可されません。 この場合は 0 を返します。 には適用されません。 たとえば、サーバー操作などの場合です。|
+| database_principal_name | **sysname** | 現在のユーザー。 Null 値は。 使用できない場合は NULL を返します。 |  
+| duration_milliseconds | **bigint** | **適用対象**:Azure SQL DB およびマネージ インスタンス<br /><br /> クエリ実行時間 (ミリ秒) |
+| event_time | **datetime2** | 監査可能なアクションが発生した日時。 NULL 値は許可されません。 |  
+| file_name | **varchar(260)** | パスと、レコードの送信元、監査ログ ファイルの名前。 NULL 値は許可されません。 |
+| is_column_permission | **bit** | 列レベルの権限かどうかを示すフラグ。 NULL 値は許可されません。 場合は 0 を返します permission_bitmask = 0。<br /> 1 = true<br /> 0 = false |
+| object_id | **int** | 監査が発生したエンティティの ID。 これには、次の内容が含まれます。<br /> Server オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値は許可されません。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は 0 を返します。 たとえば、認証などの場合です。 |  
+| object_name | **sysname** | 監査が発生したエンティティの名前。 これには、次の内容が含まれます。<br /> Server オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> Null 値は。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は NULL を返します。 たとえば、認証などの場合です。 |
+| permission_bitmask | **varbinary(16)** | 一部のアクションでは、権限の許可、拒否、または取り消しを示します。 |
+| response_rows | **bigint** | **適用対象**:Azure SQL DB およびマネージ インスタンス<br /><br /> 結果セットで返される行の数。 |  
+| schema_name | **sysname** | アクションが発生したスキーマ コンテキスト。 Null 値は。 監査がスキーマの外部で発生しているは、NULL を返します。 |  
+| sequence_group_id | **varbinary** | **適用対象**:SQL Server のみ (2016年以降)<br /><br />  一意識別子 |  
+| sequence_number | **int** | 大きすぎて監査の書き込みバッファーに収まらなかった 1 つの監査レコード内のレコードの順序を追跡します。 NULL 値は許可されません。 |  
+| server_instance_name | **sysname** | 監査が発生したサーバー インスタンスの名前。 標準の server \instance の形式が使用されます。 |  
+| server_principal_id | **int** | アクションが実行されるログイン コンテキストの ID。 NULL 値は許可されません。 |  
+| server_principal_name | **sysname** | 現在のログイン。 Null 値は。 |  
+| server_principal_sid | **varbinary** | 現在のログイン SID。 Null 値は。 |  
+| session_id | **smallint** | イベントが発生したセッションの ID。 NULL 値は許可されません。 |  
+| session_server_principal_name | **sysname** | セッションのサーバー プリンシパル。 Null 値は。 |  
+| statement | **nvarchar (4000)** | TSQL ステートメントが存在する場合。 Null 値は。 該当しない場合は NULL を返します。 |  
+| succeeded | **bit** | イベントをトリガーしたアクションが成功したかどうかを示します。 NULL 値は許可されません。 ログイン イベント以外のすべてのイベントで、操作ではなく、権限チェックが成功したか失敗したかのみを報告します。<br /> 1 = 成功<br /> 0 = 失敗 |
+| target_database_principal_id | **int** | データベース プリンシパルで、許可/拒否/取り消し操作が実行されます。 NULL 値は許可されません。 該当しない場合は 0 を返します。 |  
+| target_database_principal_name | **sysname** | アクションの対象ユーザー。 Null 値は。 該当しない場合は NULL を返します。 |  
+| target_server_principal_id | **int** | GRANT/DENY/REVOKE 操作が実行されるサーバー プリンシパル。 NULL 値は許可されません。 該当しない場合は 0 を返します。 |  
+| target_server_principal_name | **sysname** | アクションの対象ログインします。 Null 値は。 該当しない場合は NULL を返します。 |  
+| target_server_principal_sid | **varbinary** | 対象ログインの SID。 Null 値は。 該当しない場合は NULL を返します。 |  
+| transaction_id | **bigint** | **適用対象**:SQL Server のみ (2016年以降)<br /><br /> 1 つのトランザクションで複数の監査イベントを識別するために一意識別子 |  
+| user_defined_event_id | **smallint** | **適用対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、Azure SQL DB およびマネージ インスタンス<br /><br /> 引数として渡されるユーザー定義済みのイベント id **sp_audit_write**します。 **NULL**システム イベント (既定値) のユーザー定義のイベントに対しては 0 以外。 詳細については、次を参照してください。 [sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)します。 |  
+| user_defined_information | **nvarchar (4000)** | **適用対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、Azure SQL DB およびマネージ インスタンス<br /><br /> ユーザーを使用して監査ログに記録する追加情報を記録するために使用、 **sp_audit_write**ストアド プロシージャ。 |  
+
   
 ## <a name="remarks"></a>コメント  
  場合、 *file_pattern*に渡される引数**fn_get_audit_file**参照パスまたはファイルが存在しない、または、ファイルは、監査ファイルがない場合、 **MSG_INVALID_AUDIT_FILE**エラー メッセージが返されます。  
   
-## <a name="permissions"></a>アクセス許可  
- - **SQL Server**:**CONTROL SERVER** 権限が必要です。  
- - **Azure SQL DB**:必要があります、 **CONTROL DATABASE**権限。     
-    - サーバー管理者は、サーバー上のすべてのデータベースの監査ログにアクセスできます。
-    - 以外のサーバー管理者は、現在のデータベースから監査ログをのみアクセスできます。
-    - 上記の条件を満たしていない blob はスキップされます (スキップされた blob の一覧は、クエリの出力メッセージの表示は、)、関数は、アクセスが許可されている blob からのみログを返します。  
+## <a name="permissions"></a>アクセス許可
+
+- **SQL Server**:**CONTROL SERVER** 権限が必要です。  
+- **Azure SQL DB**:必要があります、 **CONTROL DATABASE**権限。     
+  - サーバー管理者は、サーバー上のすべてのデータベースの監査ログにアクセスできます。
+  - 以外のサーバー管理者は、現在のデータベースから監査ログをのみアクセスできます。
+  - 上記の条件を満たしていない blob はスキップされます (スキップされた blob の一覧は、クエリの出力メッセージの表示は、)、関数は、アクセスが許可されている blob からのみログを返します。  
   
 ## <a name="examples"></a>使用例
 

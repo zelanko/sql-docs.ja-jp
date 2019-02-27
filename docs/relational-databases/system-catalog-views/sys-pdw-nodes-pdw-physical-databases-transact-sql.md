@@ -12,29 +12,29 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a4a3b450427aa8369b1e76c91265a8c663df0243
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e01ca29eec9062f6dd7592e4c3b1d4bb2125d999
+ms.sourcegitcommit: cead0faa2fa91d849a41d25e247a0ceba4310d4a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590374"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56893442"
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  コンピューティング ノードでの各物理データベースに 1 行が含まれています。 集計の物理的なデータベース情報を使用して、データベースに関する詳細情報を取得します。 情報を結合するには、次のように参加します。、 `sys.pdw_nodes_pdw_physical_databases` を、 `sys.pdw_database_mappings` と `sys.databases` テーブルです。  
+  コンピューティング ノード上の各物理データベースの行を格納します。 データベースに関する詳細情報を取得する物理的なデータベース情報を集計します。 情報を結合する参加、`sys.pdw_nodes_pdw_physical_databases`を`sys.pdw_database_mappings`と`sys.databases`テーブル。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|データベースのオブジェクト ID。 この値がでの database_id と同じことに注意してください、 [sys.databases &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)ビュー。|  
 |physical_name|**sysname**|シェルとコンピューティング ノードで、データベースの物理名。 この値で physical_name 列の値と同じ、 [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)ビュー。|  
-|pdw_node_id|**int**|ノードに関連付けられている一意の数値 id です。|  
+|pdw_node_id|**int**|ノードに関連付けられている一意の数値 id。|  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-returning"></a>A. 返す  
- 次のクエリは、名前と各データベースの ID をすべての計算ノードでマスター、および対応するデータベース名で返します。  
+ 次のクエリは各データベースの ID と名前を各コンピューティング ノードでマスター、および対応するデータベース名で返します。  
   
 ```  
 SELECT D.database_id AS DBID_in_master, D.name AS UserDatabaseName,   
@@ -47,8 +47,8 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>B. Sys.pdw_nodes_pdw_physical_databases を使用して、オブジェクトの詳細な情報を収集するには  
- 次のクエリでは、インデックスに関する情報を表示し、データベース内のオブジェクトに、オブジェクトが属しているデータベースについての有用な情報が含まれています。  
+### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>B. Sys.pdw_nodes_pdw_physical_databases を使用してオブジェクトの詳細な情報を収集するには  
+ 次のクエリでは、インデックスに関する情報を表示し、オブジェクトがデータベース内のオブジェクトに属しているデータベースに関する有用な情報が含まれています。  
   
 ```  
 SELECT D.name AS UserDatabaseName, D.database_id AS DBIDinMaster,  
@@ -64,7 +64,7 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdwnodespdwphysicaldatabases-to-determine-the-encryption-state"></a>C. Sys.pdw_nodes_pdw_physical_databases を使用して、暗号化の状態を確認するには  
+### <a name="c-using-syspdwnodespdwphysicaldatabases-to-determine-the-encryption-state"></a>C. Sys.pdw_nodes_pdw_physical_databases を使用して暗号化状態を確認するには  
  次のクエリでは、AdventureWorksPDW2012 データベースの暗号化の状態を提供します。  
   
 ```  

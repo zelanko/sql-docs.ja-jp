@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 09fc0a9d9814a399d679b1391678fb5e11ad8a3f
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439504"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852927"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services の高可用性とスケーラビリティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  この記事では、Analysis Services データベースの高可用性とスケーラビリティを確保するために最もよく使用される手法について説明します。 それぞれの目的に個別に対処できますが、実際のところ、この 2 つはほとんどのケースで連携しています。つまり、大規模なクエリまたは処理ワークロードをスケーラブルな方法で配置すると、通常は、高可用性を期待できます。  
+  この記事では、高可用性とスケーラビリティに、Analysis Services データベースを確保するための最もよく使用される手法について説明します。 それぞれの目的に個別に対処できますが、実際のところ、この 2 つはほとんどのケースで連携しています。つまり、大規模なクエリまたは処理ワークロードをスケーラブルな方法で配置すると、通常は、高可用性を期待できます。  
   
  ただし、その逆については必ずしも正しいとは限りません。 ミッションクリティカルで中程度のクエリ ワークロードに対して厳格なサービス レベル契約が存在する場合は、スケーラビリティが伴わない高可用性が唯一の目的になることがあります。  
   

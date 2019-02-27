@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b135362a9f64ac8e1bd0f696f88b8aa92d8af283
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401637"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852937"
 ---
 # <a name="lesson-2-add-data"></a>レッスン 2:データを追加する
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このレッスンでは、AdventureWorksDW SQL サンプル データベースに接続、データを選択、プレビューと、データをフィルター処理をモデル ワークスペース データをインポートして SSDT でテーブルのインポート ウィザードを使用します。  
   
-テーブルのインポート ウィザードを使用すると、さまざまなリレーショナル ソースからデータをインポートできます。アクセス、SQL、Oracle、Sybase、Informix、DB2、Teradata、および詳細。 それぞれのリレーショナル ソースからデータをインポートする手順は、以下で説明する手順とそれほど変わりません。 ストアド プロシージャを使用してデータを選択することもできます。 データとデータのソースからインポートすることのさまざまな種類のインポートの詳細については、次を参照してください。[データソース](../analysis-services/tabular-models/data-sources-ssas-tabular.md)します。  
+テーブルのインポート ウィザードを使用すると、さまざまなリレーショナル ソースからデータをインポートできます。アクセス、SQL、Oracle、Sybase、Informix、DB2、Teradata、および詳細。 それぞれのリレーショナル ソースからデータをインポートする手順は、以下で説明する手順とそれほど変わりません。 ストアド プロシージャを使用してデータを選択することもできます。 データとデータのソースからインポートすることのさまざまな種類のインポートの詳細については、次を参照してください。[データソース](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)します。  
   
 このレッスンを完了するまでに時間を推定するには。**20 分**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "52401637"
   
     これにより、データ ソースへの接続を設定することを支援するテーブルのインポート ウィザードが起動します。 表形式モデル エクスプ ローラーが表示されない、ダブルクリック**Model.bim**で**ソリューション エクスプ ローラー**をデザイナーでモデルを開きます。 
     
-    ![として-テーブル-レッスン 2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
+    ![as-tabular-lesson2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
 
     注:1400 互換性レベル モデルを作成する場合は、テーブルのインポート ウィザードではなく新しい Get Data エクスペリエンスを確認します。 ダイアログ ボックスが表示されます、次の手順とは少し異なりますが、先に進むにことができますをします。 
   
@@ -48,7 +48,7 @@ ms.locfileid: "52401637"
   
 5.  **データベース名**フィールドで、 **AdventureWorksDW**、順にクリックします**次**します。  
   
-    ![として、表形式のレッスン 2-tiw-名前](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
+    ![as-tabular-lesson2-tiw-name](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
   
 6.  **[権限借用情報]** ページで、データをインポートおよび処理する際、Analysis Services がデータ ソースへの接続のために使用する資格情報を指定する必要があります。 **[特定の Windows ユーザー名とパスワード]** が選択されていることを確認し、 **[ユーザー名]** と **[パスワード]** に Windows のログオン資格情報を入力して、 **[次へ]** をクリックします。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52401637"
   
 2.  次の列の上部にあるチェック ボックスをオフにします。**SpanishEducation**、 **FrenchEducation**、 **SpanishOccupation**、 **FrenchOccupation**します。 
 
-    ![として-テーブル-レッスン 2-tiw のクリア](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
+    ![as-tabular-lesson2-tiw-clear](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
   
     これらの列の値はインターネット売上分析と関連がないので、これらの列をインポートする必要はありません。 小さくなりより効率的に不要な列を排除モデルになります。  
   

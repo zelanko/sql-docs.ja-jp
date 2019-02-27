@@ -94,7 +94,7 @@ ms.locfileid: "56802786"
     
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。    
     
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、テーブルを作成し、 `TempID` テーブル内の `SalesReasonID` 列を参照する外部キー制約を `Sales.SalesReason` 列に定義します。 ON DELETE CASCADE 句および ON UPDATE CASCADE 句を使用することによって、 `Sales.SalesReason` テーブルに対する変更が自動的に `Sales.TempSalesReason` テーブルにも反映されるようにしています。    
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします****。 この例では、テーブルを作成し、`Sales.SalesReason` テーブル内の `SalesReasonID` 列を参照する外部キー制約を `TempID` 列に定義します。 ON DELETE CASCADE 句および ON UPDATE CASCADE 句を使用することによって、`Sales.SalesReason` テーブルに対する変更が自動的に `Sales.TempSalesReason` テーブルにも反映されるようにしています。    
     
     ```    
     USE AdventureWorks2012;    
@@ -117,7 +117,7 @@ ms.locfileid: "56802786"
     
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。    
     
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、`TempID` 列に外部キーを作成し、`SalesReasonID` テーブルの `Sales.SalesReason` 列を参照します。    
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします****。 この例では、`TempID` 列に外部キーを作成し、`Sales.SalesReason` テーブルの `SalesReasonID` 列を参照します。    
     
     ```    
     USE AdventureWorks2012;    
