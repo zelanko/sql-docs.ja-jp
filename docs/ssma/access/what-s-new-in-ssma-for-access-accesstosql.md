@@ -2,7 +2,7 @@
 title: SSMA for Access(AccessToSQL) における新 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/22/2018
+ms.date: 02/27/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,15 +10,34 @@ ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 93b708511bb0c17211e42f7c436da521ced12713
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 40d5daaaef68d4355a95fb6cef2c55628cdf4008
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413719"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955923"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) の新機能新機能
-この記事では、アクセスの変更を各リリースでの SSMA が一覧表示します。  
+この記事では、アクセスの変更を各リリースでの SQL Server Migration Assistant (SSMA) が一覧表示します。  
+
+## <a name="ssma-v80"></a>SSMA v8.0
+SSMA for Access のバージョン 8.0 リリースは、品質と変換のメトリックを強化するために、対象となる修正プログラムを提供する拡張されています。 このリリースでは、次の新機能も提供します。
+
+* サポート**Azure SQL Database マネージ インスタンス**ターゲットとして。 Azure SQL Database マネージ インスタンスを対象とする新しいプロジェクトを作成できます。
+
+  ![SQL DB MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
+
+*   変換後**修正アドバイザー**します。 詳細については、[ここ](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)します。
+
+* 予備データベース/スキーマの選択。
+
+    ソースへの接続時にユーザーを関心のあるデータベース/スキーマ選択できます。 移行を計画する、スキーマだけを選択すると、初期接続時の時間を節約し、SSMA の全体的なパフォーマンスを向上します。
+
+    ![SSMA フィルター オブジェクト](../media/ssma-filter-objects.png)
+
+> [!IMPORTANT]
+> SSMA v7.4 と以降のバージョンでは、.Net 4.5.2 は、インストールの前提条件です。
+
 
 ## <a name="ssma-v710"></a>SSMA v7.10
 SSMA for Access の v7.10 リリースは、対象となる修正プログラムの追加のセキュリティとプライバシーの保護をグローバル要件の変更を満たすために提供するように設計で拡張されています。
