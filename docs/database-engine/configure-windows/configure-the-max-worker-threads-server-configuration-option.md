@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2522a2efa2edfb899d2693e6f4746edd85f2d7fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420403"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230979"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52420403"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して max worker threads オプションを構成するには:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "52420403"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [max worker threads オプションを構成した後](#FollowUp)  
+-   **補足情報:**[max worker threads オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -72,8 +72,9 @@ ms.locfileid: "52420403"
     
     |CPU の数|32 ビット コンピューター|64 ビット コンピューター|  
     |------------|------------|------------| 
-    |\<= 4 個のプロセッサ|256|512|
-    |\> 4 個のプロセッサ|256 + ((論理 CPU - 4) * 8)|512 + ((論理 CPU - 4) * 16)| 
+    |4 個以下のプロセッサ|256|512|
+    |4 個を超えるプロセッサと 64 個以下のプロセッサ|256 + ((論理 CPU - 4) * 8)|512 + ((論理 CPU - 4) * 16)|
+    |64 個を超えるプロセッサ|256 + ((論理 CPU - 4) * 32)|512 + ((論理 CPU - 4) * 32)|
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、32 ビットのオペレーティング システムにインストールすることができません。 32 ビット コンピューターの値は、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前のバージョンを実行しているお客様への参考として一覧表示されています。   32 ビット コンピューター上で動作する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの場合、ワーカー スレッドの最大数として 1024 をお勧めします。  
@@ -142,7 +143,7 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> 補足情報: max worker threads オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: max worker threads オプションを構成した後  
  [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) の実行後、[!INCLUDE[ssDE](../../includes/ssde-md.md)] を再起動しなくても、変更は直ちに有効になります。  
   
 ## <a name="see-also"></a>参照  

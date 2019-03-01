@@ -1,5 +1,5 @@
 ---
-title: 'トラブルシューティング ツール: SQL Server トランザクション レプリケーションでのエラーを見つける | Microsoft Docs'
+title: トラブルシューティング ツール:SQL Server トランザクション レプリケーション エラーを検出する | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675901"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154887"
 ---
-# <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>トラブルシューティング ツール: SQL Server トランザクション レプリケーションでのエラーを見つける 
+# <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>トラブルシューティング ツール:トラブルシューティング ツール: SQL Server トランザクション レプリケーション エラーを検出する 
 トランザクション レプリケーションがどのように動作するのかを基本的に理解していないと、レプリケーション エラーのトラブルシューティングはフラストレーションを感じることがあります。 パブリケーション作成の最初のステップは、スナップショット エージェントでスナップショットを作成し、スナップショット フォルダーにそれを保存することです。 次に、ディストリビューション エージェントがサブスクライバーにスナップショットを適用します。 
 
 このプロセスでは、パブリケーションが作成されて、"*同期*" 状態にされます。 同期は次の 3 つのフェーズで動作します。
@@ -45,7 +45,7 @@ ms.locfileid: "51675901"
 1. レプリケーション モニターを使用して、レプリケーションでエラーが発生した箇所 (どのエージェント) をあきらかにします。
    - **パブリッシャーからディストリビューターまで**セクションでエラーが発生している場合は、ログ リーダー エージェントに関する問題です。 
    - **ディストリビューターからサブスクライバーまで**セクションでエラーが発生している場合は、ディストリビューション エージェントに関する問題です。  
-2. ジョブの利用状況モニターでそのエージェントのジョブ履歴を調べて、エラーの詳細を明らかにします。 ジョブ履歴では十分な詳細がわからない場合は、その特定のエージェントで[詳細ログを有効にする](#enable-verbose-logging)ことができます。
+2. ジョブの利用状況モニターでそのエージェントのジョブ履歴を調べて、エラーの詳細を明らかにします。 ジョブ履歴では十分な詳細がわからない場合は、その特定のエージェントで[詳細ログを有効にする](#enable-verbose-logging-on-any-agent)ことができます。
 3. エラーの解決方法の決定を試みます。
 
 

@@ -10,14 +10,14 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1353356a4fb0116e4eed34ef79a8d7a0997db0bb
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c624ba5df22bdd519b464677c154c1718beab3c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813775"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294941"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、マップ ウィザードおよびマップ レイヤー ウィザードは、マップの作成、マップ レイヤーの追加、既存のレイヤーのマップ レイヤー オプションの変更などのタスクを自動化します。  
@@ -70,13 +70,13 @@ ms.locfileid: "51813775"
   
     -   [基本マップ、バブル マップ、および分析マップの違い](#MapType)  
   
-    -   [マップの視覚エフェクトの選択] : 多角形  
+    -   [マップの視覚エフェクトの選択]:多角形  
   
-    -   [マップの視覚エフェクトの選択] : 線  
+    -   [マップの視覚エフェクトの選択]:線  
   
-    -   [マップの視覚エフェクトの選択] : ポイント  
+    -   [マップの視覚エフェクトの選択]:ポイント  
   
-4.  [データ ソースへの接続の選択]、[マップの視覚エフェクトの選択]: ポイント。 マップに表示する分析データが含まれている外部データ ソースへのデータ ソース接続を選択するか作成します。  
+4.  [データ ソースへの接続の選択]、[マップの視覚エフェクトの選択]:ポイント : マップに表示する分析データが含まれている外部データ ソースへのデータ ソース接続を選択するか作成します。  
   
 5.  [クエリのデザイン]。 分析データを指定するクエリを作成します。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "51813775"
   
  マップまたはマップ レイヤーを追加してレポートをプレビューした後、ウィザードで設定したマップ オプションおよびマップ レイヤー オプションを変更できます。 詳細については、「[マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
- マップに関する詳細については、「 [マップ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)をクリックします。 マップをレポートに追加する手順については、「[チュートリアル: マップ レポート (レポート ビルダー)](../../reporting-services/tutorial-map-report-report-builder.md)」を参照してください。  
+ マップに関する詳細については、「 [マップ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)をクリックします。 マップをレポートに追加する手順については、「[チュートリアル:マップ レポート &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-map-report-report-builder.md)」を参照してください。  
   
 ##  <a name="SpatialDataSource"></a> [空間データのソースを選択]  
  このページでは、使用する空間データ ソースと空間データを指定します。 空間データのソースとして、マップ ギャラリー、ESRI シェープファイル、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降のバージョンのデータベースの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 空間データを指定するデータセット クエリを使用できます。  
@@ -185,7 +185,7 @@ ms.locfileid: "51813775"
   
  タイルの詳細については、「 [Bing Maps のタイル システム](https://go.microsoft.com/fwlink/?LinkId=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371)をクリックします。  
   
- デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「 [レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) ビューと [マップ レポートの計画](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)をクリックします。  
+ デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「[レポートのトラブルシューティング:マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)」と「[マップ レポートの計画](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)」を参照してください。  
   
  タイル レイヤーをカスタマイズするためのその他の方法については、「[マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -249,7 +249,7 @@ ms.locfileid: "51813775"
   
 ## <a name="see-also"></a>参照  
  [レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [マップ レポートの計画 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
+ [マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [マップ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   
