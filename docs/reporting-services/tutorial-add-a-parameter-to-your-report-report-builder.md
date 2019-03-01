@@ -1,21 +1,21 @@
 ---
-title: 'チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 95e646fd442144ee00f36cd6fdf80440913ad0ac
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712363"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286950"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー)
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートにパラメーターを追加し、レポート閲覧者が 1 つまたは複数の値でレポート データをフィルター処理できるようにします。 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -23,9 +23,9 @@ ms.locfileid: "52712363"
 レポート パラメーターは、データセット クエリに追加したクエリ パラメーターごとに自動で作成されます。 パラメーターのデータ型により、パラメーターがレポート ビューアー ツール バーに表示される方法が決まります。 
    
 > [!NOTE]  
-> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、およびデータセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
-このチュートリアルの推定所要時間 : 25 分  
+このチュートリアルの推定所要時間:25 分。  
   
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
@@ -82,7 +82,7 @@ ms.locfileid: "52712363"
   
 11. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックしてデータを表示します。   
   
-    結果セットは StoreID 列、Subcategory 列、Quantity 列に、4 店舗のサブカテゴリごとの販売済み商品数量を示す 11 行のデータが表示されます。店舗名は結果セットには含まれません。 このチュートリアルで後ほど、店舗 ID に対応する店舗の名前を別のデータセットから参照します。  
+    結果セットは、次の列で、4 店舗のサブカテゴリごとの販売済み商品数量を示す 11 行のデータで構成されます:StoreID、Subcategory、Quantity。店舗名は結果セットに含まれません。 このチュートリアルで後ほど、店舗 ID に対応する店舗の名前を別のデータセットから参照します。  
   
     クエリ パラメーターは存在しません。 以降、このチュートリアルの中でクエリ パラメーターを追加していきます。   
   
@@ -308,7 +308,7 @@ For *@StoreID*の値として表示されます。この値が、店舗 ID **200
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    店舗の列見出しに、複合式の表示テキスト " **Expr**" が示されます。  
+    店舗の列見出しに、複合式の表示テキストとして次が示されます:**Expr**。  
   
 8.  レポートをプレビューします。  
   

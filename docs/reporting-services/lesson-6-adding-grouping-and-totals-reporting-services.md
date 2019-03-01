@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24d21ae735b44a7068ca929515b66e8a33aade8d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813675"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290080"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>レッスン 6: グループと合計の追加 (Reporting Services)
 このチュートリアルのレッスンでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートにグループ化と合計を追加して、データを整理して要約します。  
@@ -31,7 +31,7 @@ ms.locfileid: "51813675"
   
     ![日付グループの追加](../reporting-services/media/rs-basictablegroups1design.png "日付グループの追加")  
   
-4.  **レポート データ** ペインから **行グループ** ペインに **[Order]** フィールドをドラッグします。 **(詳細)** の上、Date の下に配置します。
+4.  **レポート データ** ペインから **行グループ** ペインに **[Order]** フィールドをドラッグします。 **詳細**の上、日付の下に配置します。
 
     ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
@@ -70,7 +70,7 @@ ms.locfileid: "51813675"
   
 6.  **[書式]** メニューの **[背景色]** をクリックし、 **[淡い灰色]** をクリックして、 **[OK]** をクリックします。  
   
-    ![デザイン ビュー: 注文合計がある基本的なテーブル](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "デザイン ビュー: 注文合計がある基本的なテーブル")  
+    ![デザイン ビュー:注文合計がある基本的なテーブル](../reporting-services/media/rs-basictablesumlinetotaldesign.gif ":デザイン ビュー:注文合計がある基本的なテーブル")  
   
 ## <a name="bkmk_adddailytotal"></a>レポートに毎日の合計を追加するには  
   
@@ -98,13 +98,13 @@ ms.locfileid: "51813675"
   
 4.  **[書式]** メニューの **[背景色]** をクリックし、 **[薄い青]** をクリックして、 **[OK]** をクリックします。  
   
-    ![デザイン ビュー: 基本的なテーブルの総計](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "デザイン ビュー: 基本的なテーブルの総計")  
+    ![デザイン ビュー:基本的なテーブルの総計](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "デザイン ビュー:基本的なテーブルの総計")  
   
 5.  **[プレビュー]** をクリックします。  
   
     最後のページは次の図のようになります。 ツール バーの [最終ページ] ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png)ボタンをクリックします。   
   
-    ![プレビュー: 総計がある基本的なテーブルの](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "プレビュー: 総計がある基本的なテーブル")  
+    ![プレビュー:総計がある基本的なテーブル](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "プレビュー:総計がある基本的なテーブル")  
   
 ## <a name="bkmk_publishreport"></a>レポートをレポート サーバーにパブリッシュするには (オプション)  
   
@@ -125,15 +125,15 @@ ms.locfileid: "51813675"
   
     出力ウィンドウに次のようなメッセージが表示されていれば、正常に展開されたことを示しています。  
   
-    > ------ ビルド開始: プロジェクト: tutorial、構成: デバッグ ------  
+    > ------ ビルド開始:プロジェクト: tutorial、構成:デバッグ ------  
     > 'Sales Orders.rdl' をスキップしています。 アイテムは最新の状態です。  
     > ビルドの完了 -- エラー 0 個、警告 0 個  
-    > ------ ビルド開始: プロジェクト: tutorial、構成: デバッグ ------  
+    > ------ 配置開始:プロジェクト: tutorial、構成:デバッグ ------  
     > https://[server name]/reportserver に配置しています  
     > レポート '/tutorial/Sales Orders' を配置しています。  
     > 配置完了 -- エラー 0 個、警告 0 個  
-    > ========== ビルド: 正常終了または最新の状態 1、失敗 0、スキップ 0 ==========  
-    > ========== 配置: 1 正常終了、0 失敗、0 スキップ ==========  
+    > ========== ビルド:1 正常終了または最新の状態、0 失敗、0 スキップ ==========  
+    > ========== 配置:1 正常終了、0 失敗、0 スキップ ==========  
   
     次のようなメッセージが表示されている場合は、レポート サーバーに対する権限があることと、管理者特権を使用して [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] を開始したことを確認してください。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "51813675"
   
     [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータルの URL を参照します。   
     **注:** *ポータル* URL は "Reports" です。Report *Server* の URL "Reportserver" ではありません。  例 :   
-    `https://<server name>/reports`。  
+    `https://<server name>/reports`  
     `https://localhost/reports` は、レポート サーバーでレポートを設計している場合に動作します。  
   
 8.  レポートが含まれているフォルダーを参照します。 既定の名前の *tutorial*、プロジェクトの名前、またはプロジェクトのプロパティで TargetReportFolder フィールドに入力した名前です。   

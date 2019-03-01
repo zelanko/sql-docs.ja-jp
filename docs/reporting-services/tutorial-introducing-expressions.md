@@ -1,21 +1,21 @@
 ---
-title: 'チュートリアル: 式の概要 | Microsoft Docs'
+title: チュートリアル:式の概要 | Microsoft Docs
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410709"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292220"
 ---
-# <a name="tutorial-introducing-expressions"></a>チュートリアル: 式の概要
+# <a name="tutorial-introducing-expressions"></a>チュートリアル:式の概要
 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] のこのチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 強力かつ柔軟性のあるページネーション付きのレポートを作成するために、式と共に一般的な関数や演算子を使用します。 
 
 名前値の連結、独立したデータセット内の値の参照、フィールド値に基づいた色の表示などを行うための式を作成します。  
@@ -26,7 +26,7 @@ ms.locfileid: "52410709"
   
 ![report-builder-expression-tutorial-in-browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
-このチュートリアルの推定所要時間: 30 分。  
+このチュートリアルの推定所要時間:30 分。  
   
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
@@ -89,7 +89,7 @@ ms.locfileid: "52410709"
     ```  
 
   
-10. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。 結果セットでは、FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、LastPurchase の各列に 23 行のデータが表示されます。  
+10. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。 結果セットには、23 行のデータが表示されます。列はFirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、LastPurchase です。  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -128,9 +128,9 @@ ms.locfileid: "52410709"
   
 1.  レポート データ ペインで **[データ ソース]** フォルダーを展開します。  
   
-2.  **[DataSource1]** を右クリックし、 **[データ ソースのプロパティ]** をクリックします。  
+2.   **[DataSource1]** を右クリックし、 **[データ ソースのプロパティ]** をクリックします。  
   
-3.  **[名前]** ボックスに「 **ExpressionsDataSource**」と入力します。  
+3.   **[名前]** ボックスに「 **ExpressionsDataSource**」と入力します。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -138,11 +138,11 @@ ms.locfileid: "52410709"
   
 1.  レポート データ ペインで **[データセット]** フォルダーを展開します。  
   
-2.  **[DataSet1]** を右クリックし、 **[データセットのプロパティ]** をクリックします。  
+2.   **[DataSet1]** を右クリックし、 **[データセットのプロパティ]** をクリックします。  
 
     ![report-builder-expression-tutorial-rename-dataset](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
-3.  **[名前]** ボックスに「 **Expressions**」と入力します。  
+3.   **[名前]** ボックスに「 **Expressions**」と入力します。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -322,7 +322,7 @@ ms.locfileid: "52410709"
   
 4.  **[データ ソース]** ボックスの一覧の [ExpressionsDataSource] をクリックします。  
   
-5.  **[名前]** ボックスに「 **CountryRegion**」と入力します。  
+5.   **[名前]** ボックスに「 **CountryRegion**」と入力します。  
   
 6.  クエリの種類に **[テキスト]** が選択されていることを確認し、 **[クエリ デザイナー]** をクリックします。  
   
@@ -357,7 +357,7 @@ ms.locfileid: "52410709"
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>CountryRegion データセット内の値を参照するには  
   
-1.  **[Country Region ID]** 列ヘッダーをクリックし、テキストの **ID**という部分を削除し、「 **Country Region**」にします。  
+1.  **[Country Region ID]** 列ヘッダーをクリックし、テキストの**ID** を削除し、**Country Region** にします。  
   
 2.  **[Country Region]** 列のデータ セルを右クリックし、 **[式]** をクリックします。  
   
@@ -369,7 +369,7 @@ ms.locfileid: "52410709"
   
 6.  **[カテゴリ]** ボックスの一覧で **[フィールド (Expressions)]** をクリックし、 **[値]** ボックスの一覧で **[CountryRegionID]** をもう一度ダブルクリックします。  
   
-8.  `CountryRegionID.Value`のすぐ後にカーソルを置き、「 **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**」と入力します。  
+8.   `CountryRegionID.Value`のすぐ後にカーソルを置き、「 **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**」と入力します。  
   
     完成した式は、次のようになります。 `=Lookup(Fields!CountryRegionID.Value,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")`  
   
@@ -409,7 +409,7 @@ ms.locfileid: "52410709"
     > [!WARNING]  
     > 運用環境のレポートでは、レポートのレンダリングごとに何度も評価される式に **Now** 関数を使用しないでください (レポートの詳細行内など)。 **Now** の値が行ごとに変わり、それが式の評価に影響して、微妙に一貫性に欠ける結果を招きます。 これを回避するには、 `ExecutionTime` で提供されている [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] グローバル変数を使用してください。  
   
-15. `Now(`の後の始めかっこを削除し、終わりかっこ **)** を入力します。  
+15.  `Now(`の後の始めかっこを削除し、終わりかっこ **)** を入力します。  
   
     完成した式は `=DateDiff("d", Fields!LastPurchase.Value, Now)`です。  
     
@@ -462,7 +462,7 @@ ms.locfileid: "52410709"
   
 11. **[カテゴリ]** ボックスの一覧で **[フィールド (Expressions)]** をクリックし、 **[値]** ボックスの一覧で **[YTDPurchase]** をもう一度ダブルクリックします。  
   
-13. `Fields!YTDPurchase.Value`のすぐ後に「 **, "Expressions"))**」と入力します。  
+13.  `Fields!YTDPurchase.Value`のすぐ後に「 **, "Expressions"))**」と入力します。  
   
     完成した式は `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`です。  
   
@@ -492,7 +492,7 @@ ms.locfileid: "52410709"
   
 30. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-31. **[終了]** 値のボックスに「 **0**」と入力します。  
+31.  **[終了]** 値のボックスに「 **0**」と入力します。  
   
 32. 水平矢印のある行をクリックし、 **[削除]** をクリックします。  
 
@@ -527,35 +527,35 @@ ms.locfileid: "52410709"
   
     **[レポート パラメーターのプロパティ]** ダイアログ ボックスが表示されます。  
   
-3.  **[プロンプト]** に「 **Choose color**」と入力します。  
+3.   **[プロンプト]** に「 **Choose color**」と入力します。  
   
-4.  **[名前]** に「 **RowColor**」と入力します。  
+4.   **[名前]** に「 **RowColor**」と入力します。  
   
 5.  **[使用できる値]** タブで **[値の指定]** をクリックします。  
   
 7.  **[追加]** をクリックします。  
   
-8.  **[ラベル]** ボックスに「 **Yellow**」と入力します。  
+8.   **[ラベル]** ボックスに「 **Yellow**」と入力します。  
   
-9. **[値]** ボックスに「 **Yellow**」と入力します。  
+9.  **[値]** ボックスに「 **Yellow**」と入力します。  
   
 10. **[追加]** をクリックします。  
   
-11. **[ラベル]** ボックスに「 **Green**」と入力します。  
+11.  **[ラベル]** ボックスに「 **Green**」と入力します。  
   
-12. **[値]** ボックスに「 **PaleGreen**」と入力します。  
+12.  **[値]** ボックスに「 **PaleGreen**」と入力します。  
   
 13. **[追加]** をクリックします。  
   
-14. **[ラベル]** ボックスに「 **Blue**」と入力します。  
+14.  **[ラベル]** ボックスに「 **Blue**」と入力します。  
   
-15. **[値]** ボックスに「 **LightBlue**」と入力します。  
+15.  **[値]** ボックスに「 **LightBlue**」と入力します。  
   
 16. **[追加]** をクリックします。  
   
-17. **[ラベル]** ボックスに「 **Pink**」と入力します。  
+17.  **[ラベル]** ボックスに「 **Pink**」と入力します。  
   
-18. **[値]** ボックスに「 **Pink**」と入力します。  
+18.  **[値]** ボックスに「 **Pink**」と入力します。  
 
     ![report-builder-expression-tutorial-parameter-available](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
   
@@ -583,7 +583,7 @@ ms.locfileid: "52410709"
   
 8.  **[共通の関数]** で **[その他]** をクリックし、 **[アイテム]** ボックスの一覧で **[RowNumber]** をダブルクリックします。  
 
-9. **RowNumber(** のすぐ後に「 **Nothing) MOD 2,**」と入力します。
+9.  **RowNumber(** のすぐ後に「 **Nothing) MOD 2,**」と入力します。
   
 8. **[パラメーター]** をクリックし、 **[値]** ボックスの一覧の **[RowColor]** をダブルクリックします。  
   

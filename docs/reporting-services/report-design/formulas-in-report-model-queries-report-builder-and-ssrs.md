@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 911cbda433727f48fa564364cc672f43ca4b6f4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0e078205cf705c9ea96a8cccc3811e8162a643f6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607694"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298550"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>レポート モデル クエリの数式 (レポート ビルダーおよび SSRS)
   レポート モデルをデータ ソースとして使用するレポートでは、式の計算が値に対して実行されます。 レポート モデル データ ソースのクエリを定義する際に、レポート モデル クエリ デザイナーの **[式の定義]** ダイアログ ボックスで式を定義します。 式には、関数、演算子、定数、フィールドまたはエンティティの参照を含めることができます。 式を使用すると、数値データとテキスト データの結合、集計、フィルター、および評価を行うことができます。 式を作成して新しいフィールドとして保存することも、既存のフィールドの式を変更することもできます。  
@@ -48,7 +48,7 @@ ms.locfileid: "47607694"
  **テキスト連結演算子 :** 1 つ以上のテキスト文字列を連結して 1 つのテキストを生成するには、アンパサンド (&) を使用します。  
   
 ##  <a name="Constants"></a> 定数  
- 定数は計算されない値、つまり変更されない値です。 レポート ビルダーでは、 **True**、 **False**、および **Empty**という定数を使用します。 これらの定数は、ブール型フィールドを評価するために使用します。 たとえば、IsDiscontinued というフィールドがあるとします。 このフィールドの有効な値は、True、False、または Empty (" ") だけです。  
+ 定数は計算されない値、つまり変更されない値です。 レポート ビルダーでは、以下の定数を使用します。**True**、**False**、**Empty**。 これらの定数は、ブール型フィールドを評価するために使用します。 たとえば、IsDiscontinued というフィールドがあるとします。 このフィールドの有効な値は、True、False、または Empty (" ") だけです。  
   
 ##  <a name="Functions"></a> 関数  
  関数は、 *引数*と呼ばれる特定の値を特定の順序で使用して計算を実行する定義済みの式です。 引数には、リテラル値またはフィールド、あるいはその両方の組み合わせを指定できます。 式にフィールドが使用されている場合、フィールド名はそのフィールドの各インスタンスを表します。 引数がリテラル値の場合、特殊な文字を使用して、引数がリテラル値であることを指定しなければならない場合があります。  

@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 139b76fc90ba66ed34720be68e8c016263ea947b
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: fac8c998e48854aed1bae8f640d44c6d44d44348
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300479"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154947"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -74,7 +74,7 @@ ms.locfileid: "54300479"
 > [!div class="nextstepaction"]
 > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
-列と制約の変更、追加、削除、パーティションの再割り当てと再構築、制約とトリガーの無効化や有効化などの方法で、テーブル定義を変更します。
+列と制約を変更、追加、または削除して、テーブルの定義を変更します。 また、ALTER TABLE では、パーティションを再割り当ておよび再構築したり、制約とトリガーを無効化および有効化したりもします。
 
 構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。
 
@@ -425,19 +425,19 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
 
    
 ## <a name="arguments"></a>引数  
- *database_name*  
- テーブルが作成されたデータベースの名前を指定します。  
+*database_name*  
+テーブルが作成されたデータベースの名前です。  
   
- *schema_name*  
- テーブルが所属するスキーマの名前を指定します。  
+*schema_name*  
+テーブルが属しているスキーマの名前です。  
   
- *table_name*  
- 変更するテーブルの名前を指定します。 テーブルが現在のデータベースにないか、現在のユーザーが所有するスキーマに含まれていない場合は、データベースとスキーマを明示的に指定する必要があります。  
+*table_name*  
+変更するテーブルの名前です。 テーブルが現在のデータベースにないか、現在のユーザーが所有するスキーマに含まれていない場合は、データベースとスキーマを明示的に指定する必要があります。  
   
- ALTER COLUMN  
- 指定した列に変更を加えます。  
+ALTER COLUMN  
+指定した列に変更を加えます。  
   
- 変更する列に、次の列は指定できません。  
+変更された列を次にすることはできません。  
   
 -   **timestamp** データ型の列。  
   
@@ -445,16 +445,16 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   計算列、または計算列の中で使用される列。  
   
--   CREATE STATISTICS ステートメントによって生成された統計内の列。ただし、その列のデータ型が **varchar** 型、**nvarchar** 型、または **varbinary** 型であり、データ型の変更がなく、新しいサイズが前のサイズ以上になる場合と、列が NOT NULL から NULL に変更される場合は除きます。 最初に、DROP STATISTICS ステートメントで統計を削除します。
+-   CREATE STATISTICS ステートメントで作成した統計内で使用する。 列が **varchar**、**nvarchar**、または**varbinary** データ型でない限り、データ型は変更されません。 また、新しいサイズは古いサイズと同じか、それより大きくなります。 または、列が null 値以外から null 値に変更された場合です。 最初に、DROP STATISTICS ステートメントで統計を削除します。
 
     > [!NOTE]
     > クエリ オプティマイザーによって自動的に生成された統計は、ALTER COLUMN によって自動的に削除されます。  
   
 -   PRIMARY KEY 制約、または [FOREIGN KEY] REFERENCES 制約で使用されている列。  
   
--   CHECK 制約、または UNIQUE 制約で使用されている列。 ただし、CHECK 制約または UNIQUE 制約の中で使用されている可変長列の長さを変更することはできます。  
+-   CHECK 制約、または UNIQUE 制約で使用されている列。 ただし、CHECK または UNIQUE 制約の中で使用されている可変長列の長さを変更することはできます。  
   
--   既定の定義に関連付けられている列。 ただし、データ型を変更しなければ、列の長さ、有効桁数、または小数点以下桁数は変更できます。  
+-   既定の定義に関連付けられている列。 ただし、データ型が変更されない場合は、列の長さ、有効桁数、または小数点以下桁数を変更できます。  
   
 **text**、**ntext**、**image** のデータ型の列は、次の方法でのみ変更できます。  
   
@@ -464,30 +464,30 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   **image** を **varbinary(max)** へ  
   
-データ型を変更すると、データが変更される可能性があります。 たとえば、**nchar** 型または **nvarchar** 型の列を、**char** 型または **varchar** 型に変更すると、拡張文字が変換される場合があります。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。 列の有効桁数または小数点以下桁数を減らすと、データが切り捨てられる可能性があります。  
+データ型を変更すると、データが変更される可能性があります。 たとえば、**nchar** または **nvarchar** の列を、**char** または **varchar** に変更すると、拡張文字の変換が発生する場合があります。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。 列の有効桁数または小数点以下桁数を減らすと、データが切り捨てられる可能性があります。  
   
 > [!NOTE]
 > パーティション テーブルの列のデータ型は変更できません。  
 >  
-> 列のデータ型が **varchar**、**nvarchar**、または **varbinary** 以外で、新しいサイズが前のサイズよりも小さい場合、インデックスに含まれている列のデータ型は変更できません。  
+> 列が **varchar**、**nvarchar**、または **varbinary** データ型で、かつ新しいサイズが前のサイズと同じかそれよりも小さい場合を除いて、インデックスに含まれている列のデータ型は変更できません。  
 >  
-> 主キー制約に含まれている列は、**NOT NULL** から **NULL** に変更できません。  
+> 主キー制約に含まれている列を、**NOT NULL** から **NULL** に変更することはできません。  
   
-(セキュア エンクレーブなしの) Always Encrypted を使用している場合、変更する列が 'ENCRYPTED WITH' を使用して暗号化されている場合は、データ型を互換性のあるデータ型に変更することはできますが (INT から BIGINT への変更など)、暗号化設定を変更することはできません。  
+(セキュア エンクレーブなしの) Always Encrypted を使用している場合、変更する列が 'ENCRYPTED WITH' を使用して暗号化されている場合は、データ型を互換性のあるデータ型に変更すること (INT から BIGINT など) はできますが、暗号化設定を変更することはできません。  
 
-セキュア エンクレーブを使用する Always Encrypted を使用している場合、列を保護する列暗号化キー (および、キーを変更している場合は新しい列暗号化キー) によってエンクレーブ計算がサポートされている (エンクレーブ対応の列マスター キーで暗号化される) 限り、暗号化設定を変更できます。 詳細については、「[Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」(セキュリティで保護されたエンクレーブが設定された Always Encrypted) を参照してください。  
+セキュア エンクレーブを使用する Always Encrypted を使用しているとき、列を保護する列暗号化キー (および、キーを変更している場合は新しい列暗号化キー) によってエンクレーブ計算がサポートされている (エンクレーブ対応の列マスター キーで暗号化される) 場合は、すべての暗号化設定を変更できます。 詳細については、「[Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」(セキュリティで保護されたエンクレーブが設定された Always Encrypted) を参照してください。  
   
- *column_name*  
- 変更、追加、または削除する列の名前を指定します。 *column_name* には、最大 128 文字まで指定できます。 **timestamp** データ型で作成された新しい列の場合、*column_name* は省略できます。 **timestamp** データ型列に *column_name* が指定されていない場合は、**timestamp** という名前が使用されます。  
+*column_name*  
+変更、追加、または削除する列の名前です。 *column_name* の最大値は 128 文字です。 新しい列の場合、**timestamp** データ型を使って作成した列の *column_name* は省略できます。 **timestamp** データ型の列に *column_name* を指定していない場合は、**timestamp** という名前が使われます。  
   
- [ _type\_schema\_name_**.** ] _type\_name_  
- 更新する列の新しいデータ型、または追加する列のデータ型を指定します。 *type_name* は、パーティション テーブルの既存の列には指定できません。 *type_name* には次のいずれかを指定できます。  
+[ _type\_schema\_name_**.** ] _type\_name_  
+変更する列の新しいデータ型、または追加する列のデータ型です。 パーティション テーブルの既存の列に *type_name* を指定することはできません。 *type_name* には次の型のいずれかを指定できます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型に基づく別名データ型。 別名データ型は、CREATE TYPE ステートメントで作成した後、テーブル定義で使用できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型に基づく別名データ型。 CREATE TYPE ステートメントを使って別名データ型を作成した後、それらをテーブル定義で使用できます。  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ユーザー定義型とそれが属するスキーマ。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ユーザー定義型は、CREATE TYPE ステートメントで作成した後、テーブル定義で使用できます。  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ユーザー定義型とそれが属するスキーマ。 CREATE TYPE ステートメントを使ってユーザー定義型を作成した後、それらをテーブル定義で使用できます。  
   
 変更する列に対して *type_name* を指定する場合の条件を次に示します。  
   
@@ -499,25 +499,25 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
 -   SET ARITHABORT の現在の設定値は無視されます。 ALTER TABLE は、ARITHABORT がオンに設定されている場合と同様に動作します。  
   
 > [!NOTE]  
-> COLLATE 句を指定しないで列のデータ型を変更すると、照合順序が、データベースの既定値とは異なってしまう場合があります。  
+> COLLATE 句を指定しないで列のデータ型を変更すると、照合順序がデータベースの既定の照合順序に変更されます。  
   
- *有効桁数 (precision)*  
- 指定されるデータ型の有効桁数です。 有効桁数の詳細については、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」を参照してください。  
+*有効桁数 (precision)*  
+指定したデータ型の有効桁数です。 有効桁数の詳細については、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」を参照してください。  
   
- *scale*  
- 指定されるデータ型の小数点以下桁数です。 有効な小数点以下桁数の詳細については、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」を参照してください。  
+*scale*  
+指定したデータ型の小数点以下桁数です。 有効な小数点以下桁数の詳細については、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」を参照してください。  
   
- **max**  
- データ型 **varchar**、**nvarchar**、**varbinary** だけに適用され、2^31-1 バイトの文字データ、バイナリ データ、および Unicode データが格納されます。  
+**max**  
+データ型 **varchar**、**nvarchar**、**varbinary** だけに適用され、2^31-1 バイトの文字データ、バイナリ データ、および Unicode データが格納されます。  
   
- *xml_schema_collection*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+*xml_schema_collection*  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- **xml** 型にのみ適用されます。XML スキーマを関連付ける場合に使用します。 **xml** 列をスキーマ コレクションに入力するには、先に [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) を使ってスキーマ コレクションをデータベース内に作成する必要があります。  
+**xml** 型にのみ適用されます。XML スキーマを関連付ける場合に使用します。 **xml** 列をスキーマ コレクションに入力するには、最初に [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) を使ってデータベース内にスキーマ コレクションを作成する必要があります。  
   
 COLLATE \< *collation_name* > 変更する列の新しい照合順序を指定します。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 一覧と詳細については、「[Windows 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)」と「[SQL Server 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」を参照してください。  
   
- COLLATE 句を使用して照合順序を変更できるのは、**char**データ型、**varchar** データ型、**nchar** データ型、**nvarchar** データ型の列だけです。 ユーザー定義の別名データ型列の照合順序を変更するには、別の ALTER TABLE ステートメントを実行して列を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型に変更し、その照合順序を変更した後、その列を別名データ型に戻します。  
+COLLATE 句で照合順序を変更できるのは、**char**、**varchar**、**nchar**、**nvarchar** データ型の列のみです。 ユーザー定義の別名データ型の列の照合順序を変更するには、個別の ALTER TABLE ステートメントを使って列を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型に変更します。 次に、その照合順序を変更し、列を別名データ型に戻します。  
   
 次の条件の 1 つ以上に該当する場合、ALTER COLUMN で照合順序を変更することはできません。  
   
@@ -528,43 +528,43 @@ COLLATE \< *collation_name* > 変更する列の新しい照合順序を指定�
 詳細については、「[COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)」を参照してください。  
   
 NULL | NOT NULL  
- 列で NULL 値が許容されるかどうかを指定します。 NULL 値が許容されない列は、既定値が列に指定されているか、テーブルが空の場合にのみ、ALTER TABLE で追加できます。 計算列で NOT NULL を指定できるのは、同時に PERSISTED も指定した場合だけです。 新しい列で NULL 値が許容され、既定値を指定しない場合、テーブル内の各行の新しい列には NULL 値が格納されます。 新しい列で NULL 値が許容され、新しい列と共に既定の定義を追加した場合は、WITH VALUES を使用して、テーブル内にある各行の新しい列に既定値を格納できます。  
+列で NULL 値が許容されるかどうかを指定します。 null 値が許容されない列は、既定値が指定されているか、テーブルが空の場合にのみ、ALTER TABLE で追加できます。 計算列に対する NOT NULL は、PERSISTED も指定している場合にのみ指定できます。 新しい列で null 値が許容され、既定値を指定しない場合、テーブル内の各行の新しい列に null 値が追加されます。 新しい列で null 値が許容され、新しい列と共に既定の定義を追加した場合は、WITH VALUES を使用して、テーブル内にある各行の新しい列に既定値を格納できます。  
   
- 新しい列で NULL 値が許容されず、テーブルが空でない場合は、新しい列と共に DEFAULT 定義を追加する必要があります。これによって、既存の各行の新しい列には既定値が自動的に読み込まれます。  
+新しい列で null 値が許容されず、テーブルが空でない場合は、新しい列と共に DEFAULT 定義を追加する必要があります。 また、新しい列は、既存の各行の新しい列に既定値と共に自動で読み込まれます。  
   
- ALTER COLUMN に NULL を指定することによって、NOT NULL 列で NULL 値が許容されるように設定できます。ただし、PRIMARY KEY 制約の列は除きます。 ALTER COLUMN に NOT NULL を指定できるのは、列に NULL 値が格納されていないときだけです。 ALTER COLUMN NOT NULL を指定する前に、NULL 値を別の値に更新しておく必要があります。たとえば次のように行います。  
+ALTER COLUMN に NULL を指定して、強制的に NOT NULL 列が null 値を許容するようにできます。ただし、PRIMARY KEY 制約の列は除きます。 ALTER COLUMN に NOT NULL を指定できるのは、列に null 値が含まれていない場合のみです。 ALTER COLUMN NOT NULL を指定する前に、NULL 値を別の値に更新しておく必要があります。たとえば次のように行います。  
   
 ```sql  
 UPDATE MyTable SET NullCol = N'some_value' WHERE NullCol IS NULL;  
 ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;  
 ```  
   
- CREATE TABLE ステートメントまたは ALTER TABLE ステートメントでテーブルを作成または変更すると、データベースとセッションの設定によって、列定義で使われているデータ型の NULL 許容属性が影響を受けたり、場合によってはオーバーライドされたりすることがあります。 計算列でない場合は、常に列を明示的に NULL または NOT NULL として定義することをお勧めします。  
+CREATE TABLE または ALTER TABLE ステートメントを使ってテーブルを作成または変更すると、列の定義で使われているデータ型の NULL 値の許容が、データベースおよびセッションの設定によって影響を受け、場合によってはオーバーライドされます。 計算列でない場合は、必ず常に明示的に NULL または NOT NULL として列を定義します。  
   
- ユーザー定義データ型の列を追加する場合は、NULL 値を許容するかどうかの設定がユーザー定義データ型と同じになるように列を定義し、列の既定値を指定することをお勧めします。 詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。  
+ユーザー定義データ型を含む列を追加する場合は、必ずユーザー定義データ型と同じ NULL 値の許容を使って列を定義します。 また、列の既定値を指定します。 詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
 > ALTER COLUMN に NULL または NOT NULL を指定した場合は、*new_data_type* [(*precision* [, *scale* ])] も指定する必要があります。 データ型、有効桁数、小数点以下桁数を変更しない場合は、その列の現在の値を指定します。  
   
- [ {ADD | DROP} ROWGUIDCOL ]  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+[ {ADD | DROP} ROWGUIDCOL ]  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 指定した列に対して ROWGUIDCOL プロパティが追加または削除されます。 ROWGUIDCOL は、列が行の GUID 列であることを示します。 各テーブルでは 1 つの **uniqueidentifier** 列のみを ROWGUIDCOL 列として指定できます。ROWGUIDCOL プロパティは、**uniqueidentifier** 列にのみ割り当てることができます。 ROWGUIDCOL は、ユーザー定義データ型の列に割り当てることはできません。  
+指定した列に対する ROWGUIDCOL プロパティの追加または削除を指定します。 ROWGUIDCOL は、列が行の GUID 列であることを示します。 1 つのテーブルにつき、1 つの **uniqueidentifier** 列だけを ROWGUIDCOL 列として設定できます。 また、ROWGUIDCOL プロパティは **uniqueidentifier** 列にだけ割り当てることができます。 ROWGUIDCOL をユーザー定義データ型の列に割り当てることはできません。  
   
- ROWGUIDCOL では列に一意な値が格納されるわけではなく、またテーブルに挿入される新しい行に対して値は自動的に生成されません。 各列に対して一意な値を生成するには、INSERT ステートメントで NEWID 関数または NEWSEQUENTIALID 関数を使用するか、NEWID 関数または NEWSEQUENTIALID 関数を列の既定値として使用します。  
+ROWGUIDCOL では列に一意な値が格納されるわけではなく、またテーブルに挿入される新しい行に対して値が自動的に生成されるわけではありません。 各列に対して一意な値を生成するには、INSERT ステートメント上で NEWID、NEWSEQUENTIALID 関数のどちらかを使用します。 または、列の既定値として NEWID か NEWSEQUENTIALID 関数を指定します。  
   
- [ {ADD | DROP} PERSISTED ]  
- 指定した列に対して PERSISTED プロパティが追加または削除されます。 列は、決定的な式で定義される計算列であることが必要です。 PERSISTED として指定した列では、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって物理的にテーブルに計算値が格納され、計算列が依存している他の列が更新されるとその計算値も更新されます。 計算列を PERSISTED とマークすることにより、決定的であるが不正確な式によって定義されている計算列にインデックスを作成できます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。  
+[ {ADD | DROP} PERSISTED ]  
+指定した列に対して PERSISTED プロパティが追加または削除されます。 列は、決定論的な式を使って定義される計算列である必要があります。 PERSISTED として指定した列では、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって物理的にテーブルに計算値が格納され、計算列が依存している他の列が更新されるとその計算値も更新されます。 計算列を PERSISTED とマークすることにより、決定的であるが不正確な式によって定義されている計算列にインデックスを作成できます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。  
   
 パーティション テーブルのパーティション分割列として使用する計算列には、明示的に PERSISTED とマークする必要があります。  
   
 DROP NOT FOR REPLICATION  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-レプリケーション エージェントで挿入操作が実行されるときに、ID 列の値を増分することを指定します。 この句は *column_name* が ID 列の場合にのみ指定できます。  
+レプリケーション エージェントで挿入操作が実行されるときに、ID 列の値をインクリメントすることを指定します。 この句は *column_name* が ID 列の場合にのみ指定できます。  
   
 SPARSE  
-列がスパース列であることを示します。 スパース列のストレージは NULL 値用に最適化されます。 スパース列を NOT NULL として指定することはできません。 スパース列を非スパース列に変換したり、非スパース列をスパース列に変換すると、コマンドの実行中にテーブルがロックされます。 REBUILD 句を使用して領域の節約を要求することが必要な場合があります。 スパース列のその他の制限事項と詳細については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
+列がスパース列であることを示します。 スパース列のストレージは NULL 値用に最適化されます。 スパース列を NOT NULL として設定することはできません。 列をスパースから非スパースに変換したり、非スパースからスパースに変換したりすると、コマンドの実行中にテーブルがロックされます。 REBUILD 句を使用して領域の節約を要求することが必要な場合があります。 スパース列のその他の制限事項と詳細については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
   
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -581,46 +581,46 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
 WITH ( ONLINE = ON | OFF) (\<列の変更の適用対象として>)  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-テーブルを使用可能な状態に維持したまま実行する列の変更操作の多くを許可します。 既定値は OFF です。 列の変更は、データ型、列の長さまたは有効桁数、Null 値の許容、スパースかどうか、および照合順序に関連する列の変更をオンラインで実行できます。  
+テーブルを使用可能な状態に維持したまま、列の変更操作の多くを実行できるようにします。 既定値は OFF です。 データ型、列の長さまたは有効桁数、NULL 値の許容、スパースかどうか、および照合順序に関連する列の変更のために、列の変更をオンラインで実行できます。  
   
-オンラインでの列の変更では、ユーザー作成の統計と自動統計で ALTER COLUMN 操作の実行中に変更された列を参照することができます。 これにより、クエリを通常どおりに実行できます。 操作の最後に、列を参照する自動統計は削除され、ユーザー作成の統計は無効になります。 ユーザーは、操作が完了したら、ユーザー生成の統計を手動で更新する必要があります。 統計やインデックスに使用するフィルター式の中でその列が使われている場合は、列の変更操作は実行できません。  
+オンラインでの列の変更では、ユーザー作成の統計と自動統計で ALTER COLUMN 操作の実行中に変更された列を参照することができます。これにより、通常どおりクエリを実行できます。 操作の最後に、列を参照する自動統計は削除され、ユーザー作成の統計は無効になります。 ユーザーは、操作が完了したら、ユーザー生成の統計を手動で更新する必要があります。 統計やインデックス用のフィルター式の中でその列が使われている場合は、列の変更操作は実行できません。  
   
--   オンラインでの列の変更操作の実行中、列への依存関係のあるすべての操作 (インデックス、ビューなど) はブロックされるか、該当するエラーにより失敗します。 これにより、操作の実行中に依存関係が導入されたためにオンラインでの列の変更が失敗しないようになります。  
+-   オンラインでの列の変更操作の実行中、列への依存関係のあるすべての操作 (インデックス、ビューなど) はブロックされるか、該当するエラーにより失敗します。 この動作により、操作の実行中に依存関係が導入されたためにオンラインでの列の変更が失敗しないようになります。  
   
--   変更された列が非クラスター化インデックスによる参照の場合、NOT NULL から NULL への列の変更は、オンライン操作としてサポートしていません。  
+-   変更された列が非クラスター化インデックスによって参照される場合、NOT NULL から NULL への列の変更は、オンライン操作としてサポートされません。  
   
--   列がチェック制約によって参照されている場合、オンラインでの変更はサポートしていません。変更操作は列の精度を制限しています (数値または日付時刻)。  
+-   列がチェック制約によって参照されていて、かつ変更操作が列の精度 (数値または datetime) を制限している場合、オンラインでの変更はサポートされません。  
   
--   `WAIT_AT_LOW_PRIORITY` オプションは、オンラインでの列の変更に使用できません。  
+-   オンラインでの列の変更と共に `WAIT_AT_LOW_PRIORITY` オプションを使うことはできません。  
   
 -   オンラインでの列の変更では、`ALTER COLUMN ... ADD/DROP PERSISTED` はサポートされていません。  
   
 -   `ALTER COLUMN ... ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` は、オンラインでの列の変更の影響を受けません。  
   
--   変更履歴が有効になっているか、テーブルがマージ レプリケーションのパブリッシャーである場合、オンラインでの列の変更ではテーブルの変更をサポートしていません。  
+-   変更の追跡が有効になっているか、テーブルがマージ レプリケーションのパブリッシャーである場合、オンラインでの列の変更ではテーブルの変更がサポートされません。  
   
 -   オンラインでの列の変更は、CLR データ型との変更をサポートしていません。  
   
--   オンラインでの列の変更では、現在のスキーマ コレクションとは異なるスキーマ コレクションの XML データ型の変更はサポートしていません。  
+-   オンラインでの列の変更では、現在のスキーマ コレクションとは異なるスキーマ コレクションを持つ XML データ型への変更はサポートされていません。  
   
--   オンラインでの列の変更では、列を変更できる場合に制限事項を縮小しません。 インデックスまたは統計などでの参照には、変更が失敗する可能性があります。  
+-   オンラインでの列の変更で、列を変更できるタイミングに関する制限が軽減されるわけではありません。 インデックスまたは統計などでの参照は、変更が失敗する原因となる可能性があります。  
   
--   オンラインでの列の変更では、複数の列を同時に変更することをサポートしていません。  
+-   オンラインでの列の変更では、複数の列を同時に変更することはできません。  
   
 -   システムでバージョン管理されたテンポラル テーブルの場合、オンラインでの列の変更による影響はありません。 ONLINE オプションに指定された値に関係なく、ALTER 列はオンラインとしては実行されません。  
   
-オンラインでの列の変更には、オンライン インデックスの再構築と同様の要件、制限、および機能があります。 この機能には、次が含まれます。  
+オンラインでの列の変更には、オンライン インデックスの再構築と同様の、次のような要件、制限、および機能があります。  
   
 -   オンラインでのインデックスの再構築は、従来の LOB または filestream 列がテーブルに含まれている場合、またはテーブルに列ストア インデックスがある場合はサポートされません。 同じ制限がオンラインでの列の変更にも適用されます。  
   
--   変更される既存の列には、元の列と、新しく作成される非表示の列に使用するため 2 倍の領域の割り当てが必要です。  
+-   変更される既存の列には、元の列と新しく作成される非表示の列のために、2 倍の領域の割り当てが必要です。  
   
 -   オンラインでの列の変更の操作中のロック方法は、オンライン インデックスの構築に使用するのと同じロック パターンに従っています。  
   
 WITH CHECK | WITH NOCHECK  
-新しく追加または再有効化された FOREIGN KEY 制約や CHECK 制約に対して、テーブル内のデータを検証するかどうかを指定します。 指定しない場合、新しい制約には WITH CHECK が使用され、再有効化された制約には WITH NOCHECK が使用されます。  
+新しく追加または再有効化された FOREIGN KEY 制約や CHECK 制約に対して、テーブル内のデータを検証するかどうかを指定します。 指定しない場合、WITH CHECK は新しい制約用と見なされ、WITH NOCHECK は再有効化された制約用と見なされます。  
   
-既存のデータに対して新しい CHECK 制約または FOREIGN KEY 制約を検証しない場合は、WITH NOCHECK を使用します。 ごくわずかな例外を除き、このオプションは推奨されません。 新しい制約は、それ以降にデータが更新されるたびに評価されます。 制約の追加時、制約違反があっても WITH NOCHECK が指定されていたために検出されなかった場合、その後の更新で制約に従わないデータが使用されると行の更新が失敗する可能性があります。  
+既存のデータに対して新しい CHECK または FOREIGN KEY 制約を検証しない場合は、WITH NOCHECK を使用します。 ごくわずかな例外を除き、これの実行は推奨されません。 新しい制約は、それ以降にデータが更新されるたびに評価されます。 制約の追加時、制約違反があっても WITH NOCHECK が指定されていたために検出されなかった場合、その後の更新で制約に従わないデータが使用されると行の更新が失敗する可能性があります。  
   
 > [!NOTE]
 > クエリ オプティマイザーでは、WITH NOCHECK が定義されている制約は考慮されません。 このような制約は、`ALTER TABLE table WITH CHECK CHECK CONSTRAINT ALL` を使用して再び有効にするまで無視されます。  
@@ -633,29 +633,29 @@ ALTER INDEX *index_name* *index_name* のバケット数が変更されること
 > ALTER TABLE ステートメントを使用しない場合、メモリ最適化テーブルのインデックスに対してステートメント [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md)、[PAD_INDEX](alter-table-index-option-transact-sql.md) を使用することはできません。
 
 ADD  
-1 つまたは複数の列の定義、計算列の定義、またはテーブルの制約が追加されたことを指定またはシステムのバージョン管理のために、システムが使用する列。 メモリ最適化テーブルでは、インデックスを追加することができます。
+1 つ以上の列定義、計算列定義、またはテーブル制約を追加します。 または、システムがシステムのバージョン管理用に使う列が追加されます。 メモリ最適化テーブルでは、インデックスを追加することができます。
 
 > [!IMPORTANT]
-> ALTER TABLE ステートメントを使用しない場合、メモリ最適化テーブルのインデックスに対してステートメント [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md)、[PAD_INDEX](alter-table-index-option-transact-sql.md) を使用することはできません。
+> ALTER TABLE ステートメントを使用しない場合、メモリ最適化テーブル上のインデックスに対してステートメント [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md)、[PAD_INDEX](alter-table-index-option-transact-sql.md) を使用することはできません。
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-レコードの有効期間を記録する、システムを使用する列の名前を指定します。 既存の列を指定したり、追加期間 FOR SYSTEM_TIME 引数の一部として、新しい列を作成することができます。 列は、datetime2 データ型があります。 と NOT として定義する必要が NULL です。 期間の列が NULL として定義される場合は、エラーがスローされます。 system_start_time 列と system_end_time 列の [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) を定義し、[列の既定値の指定する](../../relational-databases/tables/specify-default-values-for-columns.md)ことができます。 system_end_time 列の既定値の使用方法については、後述する「[システムのバージョン管理](#system_versioning)」の例 A を参照してください。  
+レコードが有効になる時間の長さを記録するためにシステムによって使用される列の名前を指定します。 既存の列を指定したり、追加期間 FOR SYSTEM_TIME 引数の一部として、新しい列を作成することができます。 データ型 datetime2 を使って列を設定し、それらを NOT NULL として定義します。 期間列を NULL として定義した場合、エラーが発生します。 system_start_time 列と system_end_time 列の [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) を定義し、[列の既定値の指定する](../../relational-databases/tables/specify-default-values-for-columns.md)ことができます。 system_end_time 列の既定値の使用方法については、後述する「[システムのバージョン管理](#system_versioning)」の例 A を参照してください。  
   
-SYSTEM_VERSIONING の設定の引数と組み合わせてこの引数を使用して、既存のテーブルにシステムのバージョン管理を有効にします。 詳細については、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」と「[Azure SQL Database のテンポラル テーブルの概要](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)」を参照してください。  
+SET SYSTEM_VERSIONING 引数と共にこの引数を使用して、既存のテーブル上でシステムのバージョン管理を有効にします。 詳細については、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」と「[Azure SQL Database のテンポラル テーブルの概要](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)」を参照してください。  
   
-[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の時点では、ユーザーは片方または両方の期間列を **HIDDEN** フラグでマークしてこれらの列を暗黙的に非表示にすることで、**SELECT \* FROM \<table_name>** からそれらの列の値が返されないようにすることができるようになります。 既定では、期間の列は非表示にします。 を使用するために非表示の列を時間的なテーブルを直接参照するすべてのクエリに明示的に含まする必要があります。  
+[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の時点では、ユーザーは片方または両方の期間列を **HIDDEN** フラグでマークし、これらの列を暗黙的に非表示にすることで、**SELECT \* FROM \<table_name>** からその列の値が返されないようにすることができます。 既定では、期間の列は非表示ではありません。 を使用するために非表示の列を時間的なテーブルを直接参照するすべてのクエリに明示的に含まする必要があります。  
   
 DROP  
-指定のある 1 つまたは複数の列の定義、計算列の定義、またはテーブルの制約を削除すると、システムは、システムのバージョン管理を使用する列の仕様を削除したりします。  
+1 つ以上の列の定義、計算列の定義、またはテーブルの制約の削除、または、システムがシステムのバージョン管理用に使う列の仕様の削除を指定します。  
   
 CONSTRAINT *constraint_name*    
 テーブルから *constraint_name* が削除されることを指定します。 複数の制約の一覧を表示できます。  
   
 ユーザー定義またはシステム提供の制約名は、**sys.check_constraint**、**sys.default_constraints**、**sys.key_constraints**、および **sys.foreign_keys** カタログ ビューに対してクエリを実行することにより確認できます。  
   
-XML インデックスがテーブルに存在する場合、PRIMARY KEY 制約は削除できません。  
+XML インデックスがテーブル上に存在する場合、PRIMARY KEY 制約は削除できません。  
  
 INDEX *index_name*    
 *index_name* がテーブルから削除されることを指定します。
@@ -674,12 +674,12 @@ COLUMN *column_name*
   
 -   CHECK、FOREIGN KEY、UNIQUE、または PRIMARY KEY 制約で使用されている列  
   
--   DEFAULT キーワードで定義された既定値に関連付けられている列、または既定値のオブジェクトにバインドしている列  
+-   DEFAULT キーワードを使って定義された既定値に関連付けられている、または既定値のオブジェクトにバインドされている。  
   
 -   ルールにバインドしている列  
   
 > [!NOTE]  
-> 列を削除しても、列のディスク領域は再確保されません。 テーブルの行サイズが制限に近いか制限を超えている場合は、必要に応じて、削除した列のディスク領域を再確保してください。 領域を再確保するには、テーブルにクラスター化インデックスを作成するか、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用して既存のクラスター化インデックスを再構築します。 LOB データ型の削除による影響の詳細については、この [CSS ブログ エントリ](https://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx)を参照してください。  
+> 列を削除しても、列のディスク領域は回収されません。 テーブルの行サイズが制限に近いか制限を超えている場合は、必要に応じて、削除した列のディスク領域を再確保してください。 領域を再確保するには、テーブルにクラスター化インデックスを作成するか、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用して既存のクラスター化インデックスを再構築します。 LOB データ型の削除による影響の詳細については、この [CSS ブログ エントリ](https://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx)を参照してください。  
   
 FOR SYSTEM_TIME の期間  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -710,18 +710,18 @@ MAXDOP = *max_degree_of_parallelism*
 詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
 > [!NOTE]  
-> 並列インデックス操作は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一部のエディションで使用できません。 詳細については、[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)に関するセクションと [SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)に関するページを参照してください。  
+> 並列インデックス操作は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 詳細については、[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)に関するセクションと [SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)に関するページを参照してください。  
   
 ONLINE **=** { ON | **OFF** } \<drop_clustered_constraint_option に適用する場合>  
 インデックス操作時に、基になるテーブルや関連するインデックスをクエリやデータ変更で使用できるかどうかを指定します。 既定値は OFF です。 REBUILD は ONLINE 操作として実行できます。  
   
 ON  
-長期のテーブル ロックは、インデックス操作の間は保持されません。 インデックス操作の主なフェーズでは、基になるテーブル、インテント共有 (IS) ロックのみが保持されます。 このことにより、基になるテーブルとインデックスに対するクエリや更新は続行できます。 操作の開始時、非常に短い時間ですが、ソース オブジェクトでは共有 (S) ロックが保持されます。 また操作の終了時は、短い時間ですが、非クラクタ化インデックスが作成される場合は、ソース オブジェクト上で共有 (S) ロックの取得が行われます。また、クラスター化インデックスがオンラインで作成または削除され、クラスター化または非クラスター化インデックスが再構築される場合は、SCH-M (スキーマ修正) ロックが取得されます。 インデックスがローカルの一時テーブルに作成される場合、ONLINE は ON にできません。 シングル スレッドのヒープの再構築操作だけが許可されます。  
+長期のテーブル ロックは、インデックス操作の間は保持されません。 インデックス操作の主なフェーズでは、基になるテーブル、インテント共有 (IS) ロックのみが保持されます。 この動作により、基になるテーブルとインデックスに対するクエリや更新を続行することが可能になります。 操作の開始時、短時間ソース オブジェクトで共有 (S) ロックが保持されます。 操作の最後に、短時間、非クラスター化インデックスを作成する場合はソース上で S (共有) ロックが取得されます。 または、クラスター化インデックスをオンラインで作成または削除する場合、およびクラスター化または非クラスター化インデックスを再構築する場合、SCH-M (スキーマ修正) ロックが取得されます。 インデックスがローカルの一時テーブルに作成される場合、ONLINE を ON に設定することはできません。 シングル スレッドのヒープの再構築操作だけが許可されます。  
   
-**SWITCH** またはオンライン インデックス再構築の DDL を実行するには、特定のテーブルで実行されているすべてのアクティブなブロック トランザクションが完了する必要があります。 実行時には、新しいトランザクションの開始が **SWITCH** または再構築操作によって阻止され、ワークロードのスループットに大きな影響が出たり、基になるテーブルへのアクセスが一時的に遅くなったりする場合があります。  
+**SWITCH** またはオンライン インデックス再構築の DDL を実行するには、特定のテーブルで実行されているすべてのアクティブなブロック トランザクションが完了している必要があります。 実行時には、新しいトランザクションの開始が **SWITCH** または再構築操作によって阻止され、ワークロードのスループットに大きな影響が出たり、基になるテーブルへのアクセスが一時的に遅くなったりする場合があります。  
   
 OFF  
-テーブル ロックは、インデックス操作の間適用されます。 クラスター化インデックスを作成、再構築、または削除するオフライン インデックス操作や、非クラスター化インデックスを再構築または削除するオフライン インデックス操作では、テーブルのスキーマ修正 (Sch-M) ロックが取得されます。 このため、操作中は、すべてのユーザーは基になるテーブルにアクセスできません。 非クラスター化インデックスを作成するオフライン インデックス操作では、テーブルの共有 (S) ロックが取得されます。 この場合は、基になるテーブルに対して更新は許可されませんが、SELECT ステートメントなどの読み取り操作は許可されます。 マルチスレッドのヒープの再構築操作が許可されます。  
+テーブル ロックは、インデックス操作の期間に適用されます。 クラスター化インデックスを作成、再構築、または削除するオフライン インデックス操作や、非クラスター化インデックスを再構築または削除するオフライン インデックス操作では、テーブルのスキーマ修正 (Sch-M) ロックが取得されます。 このロックにより、操作中すべてのユーザーは基になるテーブルにアクセスできません。 非クラスター化インデックスを作成するオフライン インデックス操作では、テーブルの共有 (S) ロックが取得されます。 このロックでは、基になるテーブルへの更新が阻止されますが、SELECT ステートメントなどの読み取り操作は許可されます。 マルチスレッドのヒープの再構築操作が許可されます。  
   
 詳細については、「[オンライン インデックス操作の動作原理](../../relational-databases/indexes/how-online-index-operations-work.md)」を参照してください。  
   
@@ -734,7 +734,7 @@ OFF
  現在クラスター化インデックスのリーフ レベルに格納されているデータ行を移動する場所を指定します。 テーブルは新しい位置に移動します。 このオプションは、クラスター化インデックスを作成する制約にのみ適用されます。  
   
 > [!NOTE]
->  ここでは、default はキーワードではありません。 これは、既定のファイル グループの識別子で、MOVE TO **"** default **"** または MOVE TO **[** default **]** のように区切り記号で区切る必要があります。 **"** default **"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+>  このコンテキストでは、default はキーワードではありません。 これは、既定のファイル グループの識別子で、MOVE TO **"** default **"** または MOVE TO **[** default **]** のように区切り記号で区切る必要があります。 **"** default **"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
 { CHECK | NOCHECK } CONSTRAINT  
 *constraint_name* を有効または無効にします。 このオプションは、FOREIGN KEY 制約と CHECK 制約でのみ使用できます。 NOCHECK を指定すると、制約は無効になり、今後列に行われる挿入または更新は、制約条件に対して検証されません。 DEFAULT、PRIMARY KEY、および UNIQUE 制約は無効にできません。  
@@ -743,7 +743,7 @@ OFF
  すべての制約を、NOCHECK オプションで無効にするか CHECK オプションで有効にします。  
   
 { ENABLE | DISABLE } TRIGGER  
-*trigger_name* を有効または無効にします。 トリガーを無効にしてもテーブルのトリガー定義は引き続き有効ですが、テーブルに対して INSERT、UPDATE、または DELETE ステートメントを実行しても、トリガーを再び有効にするまではトリガー内の動作が実行されることはありません。  
+*trigger_name* を有効または無効にします。 トリガーを無効にした場合、それはまだテーブルに対して定義されています。 ただし、テーブルに対して INSERT、UPDATE、または DELETE ステートメントを実行すると、トリガーが再度有効化されるまでトリガー内のアクションは実行されません。  
   
  ALL  
  テーブル内のすべてのトリガーを有効または無効にします。  
@@ -763,7 +763,7 @@ OFF
 WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-更新された変更の追跡対象の列を [!INCLUDE[ssDE](../../includes/ssde-md.md)] が追跡するかどうかを指定します。 既定値は OFF です。  
+[!INCLUDE[ssDE](../../includes/ssde-md.md)] で追跡するかどうか、どの追跡対象列の変更が更新されたかを指定します。 既定値は OFF です。  
   
 SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -774,45 +774,45 @@ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.
 -   1 つのパーティション テーブルから別のパーティション テーブルに、パーティションを切り替えます。  
 -   パーティション テーブルの 1 つのパーティションにあるすべてのデータを、既存の非パーティション テーブルに再度割り当てます。  
   
-*table* がパーティション テーブルの場合、*source_partition_number_expression* を指定する必要があります。 *target_table* がパーティション分割されている場合、*target_partition_number_expression* を指定する必要があります。 テーブルのデータを既に存在するパーティション テーブルにパーティションとして再度割り当てる場合、または 1 つのパーティション テーブルから別のパーティション テーブルにパーティションを切り替える場合は、対象のパーティションが存在し、空になっている必要があります。  
+*table* がパーティション テーブルの場合、*source_partition_number_expression* を指定する必要があります。 *target_table* がパーティション分割されている場合、*target_partition_number_expression* を指定する必要があります。 テーブルのデータを、既に存在するパーティション テーブルのパーティションとして再度割り当てる場合、または 1 つのパーティション テーブルから別のものにパーティションを切り替える場合は、対象のパーティションが存在し、空になっている必要があります。  
   
 1 つのパーティションのデータを再度割り当てて単一のテーブルを作成する場合は、対象テーブルが既に作成されており、空になっている必要があります。 ソース テーブルまたはパーティションと、対象テーブルまたはパーティションは、両方とも同じファイル グループに存在する必要があります。 また、対応するインデックスまたはインデックス パーティションも、同じファイル グループに存在する必要があります。 切り替えるパーティションには、多くの追加の制限が適用されます。 *table* と *target_table* を同じにすることはできません。 *target_table* にはマルチパート識別子を指定できます。  
   
- *source_partition_number_expression* と *target_partition_number_expression* は、変数と関数を参照できる定数式です。 これらの定数式には、ユーザー定義型変数とユーザー定義関数が含まれます。 これらの定数式で [!INCLUDE[tsql](../../includes/tsql-md.md)] 式を参照することはできません。  
+ *source_partition_number_expression* と *target_partition_number_expression* は、変数と関数を参照できる定数式です。 これらの定数式には、ユーザー定義型変数とユーザー定義関数が含まれます。 これらで [!INCLUDE[tsql](../../includes/tsql-md.md)] 式を参照することはできません。  
   
  Columstore のクラスター化されたインデックスを持つパーティション分割されたテーブルがパーティション分割されたヒープのように動作します。  
   
 -   主キーには、パーティション キーを含める必要があります。  
--   一意のインデックスには、パーティション キーを含める必要があります。  既存の一意のインデックスをパーティション分割キーを含むで一意性を変更できることに注意してください。  
--   パーティションを切り替えるには、するためには、すべての非クラスター化インデックスがパーティション キーを含める必要があります。  
+-   一意のインデックスには、パーティション キーを含める必要があります。 ただし、既存の一意なインデックスを含むパーティション キーを含めると、一意性が変更される場合があることに注意してください。  
+-   パーティションを切り替えるには、すべての非クラスター化インデックスにパーティション キーを含める必要があります。  
   
 レプリケーションを使用する場合の **SWITCH** の制限については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 用およびバージョン V12 より前の SQL Database 用に構築された非クラスター化列ストア インデックスは読み取り専用形式でした。 すべてのパーティションの操作を実行する前に、(これは更新可能な) 現在の形式に非クラスター化列ストア インデックスを再構築する必要があります。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 用およびバージョン V12 より前の SQL Database 用に構築された非クラスター化列ストア インデックスは読み取り専用形式でした。 あらゆる PARTITION 操作を実行する前に、非クラスター化列ストア インデックスを現在の形式に再構築する必要があります (これは更新可能です)。  
   
 SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"** default **"** | **"** NULL **"** }**)**  
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`FILESTREAM` はサポートされていません。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] は `FILESTREAM` をサポートしていません。  
   
 FILESTREAM データの格納場所を指定します。  
   
-SET FILESTREAM_ON 句を指定した ALTER TABLE は、テーブルに FILESTREAM 列がない場合にのみ成功します。 FILESTREAM 列は、2 番目の ALTER TABLE ステートメントで追加できます。  
+SET FILESTREAM_ON 句を指定した ALTER TABLE は、テーブルに FILESTREAM 列がない場合にのみ成功します。 FILESTREAM 列は、2 番目の ALTER TABLE ステートメントを使うことで追加できます。  
   
-*partition_scheme_name* を指定した場合、[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) のルールが適用されます。 テーブルは、行データ用にパーティション分割されている必要があります。また、テーブルのパーティション構成では、FILESTREAM パーティション構成と同じパーティション関数とパーティション列を使用する必要があります。  
+*partition_scheme_name* を指定すると、[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) のルールが適用されます。 テーブルが行データ用に既にパーティション分割されていることを確認します。また、そのパーティション構成では、FILESTREAM パーティション構成と同じパーティション関数とパーティション列を使用する必要があります。  
   
-*filestream_filegroup_name* には、FILESTREAM ファイル グループの名前を指定します。 ファイル グループには、[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) ステートメントまたは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用してファイルが 1 つ定義されている必要があります。それ以外の場合は、エラーが発生します。  
+*filestream_filegroup_name* には、FILESTREAM ファイル グループの名前を指定します。 ファイル グループには、[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) または [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使って、ファイル グループ用に定義されたファイルが 1 つ含まれている必要があります。それ以外の場合はエラーが発生します。  
   
 **"** default **"** には、DEFAULT プロパティ セットを含む FILESTREAM ファイル グループを指定します。 FILESTREAM ファイル グループがない場合は、エラーが発生します。  
   
-**"** NULL **"** を指定すると、テーブルの FILESTREAM ファイル グループへの参照がすべて削除されます。 最初にすべての FILESTREAM 列を削除する必要があります。 テーブルに関連付けられている FILESTREAM データをすべて削除するには、SET FILESTREAM_ON **="** NULL **"** を使用する必要があります。  
+**"** NULL **"** を指定すると、テーブルの FILESTREAM ファイル グループへの参照がすべて削除されます。 最初にすべての FILESTREAM 列を削除する必要があります。 テーブルに関連付けられている FILESTREAM データをすべて削除するには、SET FILESTREAM_ON **="** NULL **"** を使用します。  
   
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]  ) ] } **)**  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-テーブルのシステムのバージョン管理を無効にするか、テーブルのシステムのバージョン管理を使用します。 テーブルのシステムのバージョン管理を有効にするのには、システムは、データ型、null 値許容制約、およびシステムのバージョン管理の主キー制約の要件を満たしていることを確認します。 HISTORY_TABLE 引数を使用しない場合、システムは 2 つのテーブル間のリンクを作成するには、現在のテーブルのスキーマに一致する新しい履歴テーブルを生成し、により、システムは、履歴テーブルには、現在のテーブル内の各レコードの履歴を記録するします。 この履歴テーブルの名前は `MSSQL_TemporalHistoryFor<primary_table_object_id>` になります。 HISTORY_TABLE 引数を介してへのリンクを作成し、既存の履歴テーブルを使用する場合に、現在のテーブルと、指定したテーブルの間のリンクが作成されます。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを実行することもできます。 このデータの整合性チェックでは、既存のレコードが重複しないことを確認します。 データを実行する一貫性チェックが、既定値です。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。  
+テーブルに関するシステムのバージョン管理を無効または有効にします。 テーブルのシステムのバージョン管理を有効にするのには、システムは、データ型、null 値許容制約、およびシステムのバージョン管理の主キー制約の要件を満たしていることを確認します。 HISTORY_TABLE 引数を使用しない場合、システムによって現在のテーブルのスキーマに一致する履歴テーブルが生成され、2 つのテーブル間のリンクが作成され、システムが現在のテーブルにある各レコードの履歴を履歴テーブルに記録できるようになります。 この履歴テーブルの名前は `MSSQL_TemporalHistoryFor<primary_table_object_id>` になります。 HISTORY_TABLE 引数を使ってリンクを作成し、既存の履歴テーブルを使用する場合、システムにより現在のテーブルと、指定したテーブルの間のリンクが作成されます。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを行うよう選択できます。 このデータの整合性チェックにより、既存のレコードが重複しないようになります。 既定ではデータの整合性チェックを実行します。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。  
   
 HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK |  WEEKS | MONTH | MONTHS | YEAR | YEARS} } **Applies to**:  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
-テンポラル テーブルに履歴データを保持する有限または無限のリテンション期間を指定します。 省略すると、無限のリテンション期間が使用されます。
+テンポラル テーブルに履歴データ用の有限または無限のリテンション期間を指定します。 省略すると、無限のリテンション期間が使用されます。
   
  SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -820,16 +820,16 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK |  WEEKS |
  許可されるテーブル ロックのエスカレーション方法を指定します。  
   
  AUTO  
- このオプションを指定すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で、テーブル スキーマに適したロック エスカレーションの粒度が選択されます。  
+ このオプションを指定すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で、テーブル スキーマに適したロックのエスカレーションの細分性を選択できます。  
   
--   テーブルがパーティション分割されている場合は、ロック エスカレーションをパーティション分割できます。 パーティション レベルにエスカレートされたロックが、後で TABLE 粒度にエスカレートされることはありません。  
--   テーブルがパーティション分割されていない場合は、ロック エスカレーションは TABLE 粒度に設定されます。  
+-   テーブルがパーティション分割されている場合は、ロックのエスカレーションをパーティション分割できます。 ロックがパーティション レベルにエスカレートされたら、ロックが後で TABLE 細分性にエスカレートされることはありません。  
+-   テーブルがパーティション分割されていない場合、TABLE 細分性に対してロックのエスカレーションが実行されます。  
   
 TABLE  
-テーブルがパーティション分割されているかどうかに関係なく、ロック エスカレーションはテーブルレベルの粒度で行われます。 TABLE は既定値です。  
+テーブルがパーティション分割されているかパーティション分割されていないかに関係なく、ロックのエスカレーションはテーブルレベルの細分性で実行されます。 TABLE は既定値です。  
   
 DISABLE  
-ほとんどの場合でロック エスカレーションを禁止します。 テーブルレベルのロックは完全には禁止されません。 たとえば、SERIALIZABLE 分離レベルでクラスター化インデックスがないテーブルをスキャンしている場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] でテーブル ロックを実行して、データの整合性を保護します。  
+ほとんどの場合でロック エスカレーションを禁止します。 テーブルレベルのロックは完全には禁止されません。 たとえば、SERIALIZABLE 分離レベルでクラスター化インデックスがないテーブルをスキャンしている場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではテーブル ロックを実行して、データ整合性を保護する必要があります。  
   
 REBUILD  
 パーティション テーブル内のすべてのパーティションを含めたテーブル全体を再構築するには、REBUILD WITH 構文を使用します。 テーブルにクラスター化インデックスが含まれている場合、REBUILD オプションを指定すると、クラスター化インデックスが再構築されます。 REBUILD は ONLINE 操作として実行できます。  
@@ -844,7 +844,7 @@ PARTITION = ALL
 REBUILD WITH ( \<rebuild_option> )  
 クラスター化インデックスを含むテーブルには、すべてのオプションが適用されます。 テーブルにクラスター化インデックスが含まれていない場合、ヒープ構造に影響を与えるのは一部のオプションだけです。  
   
- REBUILD 操作で特定の圧縮設定を指定しないと、パーティションの現在の圧縮設定が使用されます。 現在の設定を取得するには、**sys.partitions** カタログ ビューで **data_compression** 列に対するクエリを実行します。  
+ REBUILD 操作で特定の圧縮設定を指定しないと、パーティション用の現在の圧縮設定が使用されます。 現在の設定を取得するには、**sys.partitions** カタログ ビューで **data_compression** 列に対するクエリを実行します。  
   
  再構築オプションの詳細については、「[index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md)」を参照してください。  
   
@@ -854,31 +854,31 @@ REBUILD WITH ( \<rebuild_option> )
  指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のオプションがあります。  
   
  なし  
- テーブルまたは指定したパーティションが圧縮されません。 これは、列ストア テーブルには適用されません。  
+ テーブルまたは指定したパーティションが圧縮されません。 このオプションは列ストア テーブルには適用されません。  
   
  ROW  
- 行の圧縮を使用して、テーブルまたは指定したパーティションが圧縮されます。 これは、列ストア テーブルには適用されません。  
+ 行の圧縮を使用して、テーブルまたは指定したパーティションが圧縮されます。 このオプションは列ストア テーブルには適用されません。  
   
  PAGE  
- ページの圧縮を使用して、テーブルまたは指定したパーティションが圧縮されます。 これは、列ストア テーブルには適用されません。  
+ ページの圧縮を使用して、テーブルまたは指定したパーティションが圧縮されます。 このオプションは列ストア テーブルには適用されません。  
   
  COLUMNSTORE  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 列ストア テーブルにのみ適用されます。 COLUMNSTORE は、COLUMNSTORE_ARCHIVE オプションで圧縮されたパーティションを解凍するように指定します。 復元されるデータは、すべての列ストア テーブルに使用された列ストア圧縮を使用して引き続き圧縮されます。  
+ 列ストア テーブルにのみ適用されます。 COLUMNSTORE は、COLUMNSTORE_ARCHIVE オプションで圧縮されたパーティションを解凍するように指定します。 復元されるデータは、すべての列ストア テーブルに使用される列ストア圧縮を使用して引き続き圧縮されます。  
   
  COLUMNSTORE_ARCHIVE  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- クラスター化列ストア インデックスを使用して格納されているテーブルである、列ストア テーブルにのみ適用されます。 COLUMNSTORE_ARCHIVE は、指定したパーティションをより小さなサイズにさらに圧縮します。 これは、保存用や、ストレージの使用量を減らす必要があり、しかも保存と取得に時間をかける余裕があるその他の状況で使用できます。  
+ クラスター化列ストア インデックスを使用して格納されているテーブルである、列ストア テーブルにのみ適用されます。 COLUMNSTORE_ARCHIVE は、指定したパーティションをより小さなサイズにさらに圧縮します。 このオプションは、保存用や、ストレージの使用量を減らす必要があり、しかも保存と取得により時間をかける余裕があるその他の状況用に使用します。  
   
  複数のパーティションを同時に再構築するには、「[index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md)」を参照してください。 テーブルにクラスター化インデックスが含まれていない場合、データ圧縮を変更するとヒープと非クラスター化インデックスが再構築されます。 圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
  ONLINE **=** { ON  | **OFF** } \<single_partition_rebuild_option に適用する場合>  
- インデックス操作中に、基となるテーブルの 1 つのパーティションとそれに関連する各インデックスに対してクエリやデータ変更を行うことができるかどうかを指定します。 既定値は OFF です。 REBUILD は ONLINE 操作として実行できます。  
+ 基となるテーブルの 1 つのパーティションと関連するインデックスを、インデックス操作中のクエリとデータ変更用に利用できるかどうかを指定します。 既定値は OFF です。 REBUILD は ONLINE 操作として実行できます。  
   
  ON  
- 長期のテーブル ロックは、インデックス操作の間は保持されません。 インデックスの再構築を開始するときにテーブルに対する S ロックが必要であり、オンライン インデックス再構築を終了するときにテーブルに対する Sch-M ロックが必要です。 どちらのロックも短いメタデータ ロックですが、特に Sch-M ロックは、すべてのブロックしているトランザクションの完了を待機する必要があります。 待機中、Sch-M ロックは、同じテーブルにアクセスするためにこのロックの後に待機している他のすべてのトランザクションをブロックします。  
+ 長期のテーブル ロックは、インデックス操作の間は保持されません。 インデックスの再構築を開始するときにテーブル上の S ロックが必要であり、オンライン インデックス再構築を終了するときにテーブルの Sch-M ロックが必要です。 どちらのロックも短いメタデータ ロックですが、Sch-M ロックは、すべてのブロックしているトランザクションの完了を待機する必要があります。 待機中、Sch-M ロックは、同じテーブルにアクセスするときにこのロックの後に待機している他のすべてのトランザクションをブロックします。  
   
 > [!NOTE]  
 >  オンライン インデックス再構築では、このセクションの後の方で説明されている *low_priority_lock_wait* オプションを設定できます。  
@@ -889,7 +889,7 @@ REBUILD WITH ( \<rebuild_option> )
  *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 列セットの名前を指定します。 列セットは、型指定されていない XML 表記であり、テーブルのすべてのスパース列を 1 つにまとめて構造化した出力です。 スパース列を含むテーブルには列セットを追加できません。 列セットの詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。  
+ 列セットの名前です。 列セットは、型指定されていない XML 表記であり、テーブルのすべてのスパース列を 1 つにまとめて構造化した出力です。 スパース列を含むテーブルには列セットを追加できません。 列セットの詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。  
   
  { ENABLE | DISABLE } FILETABLE_NAMESPACE  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
@@ -897,7 +897,7 @@ REBUILD WITH ( \<rebuild_option> )
  FileTable に対するシステム定義の制約を有効または無効にします。 FileTable でのみ使用できます。  
   
  SET ( FILETABLE_DIRECTORY = *directory_name* )  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`FILETABLE` はサポートされていません。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] は `FILETABLE` をサポートしていません。  
   
  Windows と互換性のある FileTable ディレクトリ名を指定します。 この名前は、データベース内のすべての FileTable ディレクトリ名の中で一意である必要があります。 一意性の比較では、SQL 照合順序の設定とは関係なく、大文字と小文字は区別されません。 FileTable でのみ使用できます。  
 ```    
@@ -911,11 +911,11 @@ REBUILD WITH ( \<rebuild_option> )
 ```    
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
   
- テーブルに対して Stretch Database を有効または無効にします。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。  
+ テーブルに対して Stretch Database を有効または無効にします。 詳細については、「[Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。  
   
  **テーブルに対して Stretch Database を有効にする**  
   
- `ON` を指定してテーブルに対して Stretch を有効にする場合は、`MIGRATION_STATE = OUTBOUND` を指定してデータの移行を即時に開始するか、`MIGRATION_STATE = PAUSED` を指定してデータの移行を延期するかを指定する必要があります。 既定値は `MIGRATION_STATE = OUTBOUND` です。 テーブルに対して Stretch を有効にする方法については、「[データベースに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」を参照してください。  
+ `ON` を指定してテーブルに対して Stretch を有効にする場合は、`MIGRATION_STATE = OUTBOUND` を指定してデータの移行を即時に開始するか、`MIGRATION_STATE = PAUSED` を指定してデータの移行を延期するかを指定する必要があります。 既定値は `MIGRATION_STATE = OUTBOUND` です。 テーブルに対して Stretch を有効にする方法については、「[Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」を参照してください。  
   
  **前提条件**。 テーブルに対して Stretch を有効にする前に、サーバーおよびデータベースで Stretch を有効にする必要があります。 詳細については、「 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)」を参照してください。  
   
@@ -923,29 +923,29 @@ REBUILD WITH ( \<rebuild_option> )
   
  **テーブルに対して Stretch Database を無効にする**  
   
- テーブルの Stretch を無効にすると、既に Azure に移行されているリモート データには 2 つの選択肢があります。 詳細については、「 [Stretch Database を無効にして、リモート データを戻す](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)」を参照してください。  
+ テーブルの Stretch を無効にすると、既に Azure に移行されているリモート データには 2 つの選択肢があります。 詳細については、「[Stretch Database を無効にして、リモート データを戻す](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)」を参照してください。  
   
 -   テーブルに対する Stretch を無効にして、テーブルのリモート データを Azure から SQL Server にコピーして戻すには、次のコマンドを実行します。 このコマンドは取り消すことができません。  
   
     ```sql  
-ALTER TABLE \<table name>
+    ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
   
-     この操作によりデータ転送コストが発生し、取り消すことはできません。 詳細については、「 [Data Transfers (データ転送) の料金詳細](https://azure.microsoft.com/pricing/details/data-transfers/)」を参照してください。  
+この操作によりデータ転送コストが発生し、取り消すことはできません。 詳細については、[データ転送の価格の詳細](https://azure.microsoft.com/pricing/details/data-transfers/)に関するページをご覧ください。  
   
-     すべてのリモート データが Azure から SQL Server にコピーして戻されると、テーブルに対する Stretch は無効になります。  
+すべてのリモート データが Azure から SQL Server にコピーして戻されると、テーブルに対する Stretch は無効になります。  
   
 -   テーブルに対する Stretch を無効にして、リモート データを破棄するには、次のコマンドを実行します。  
   
     ```sql  
-ALTER TABLE \<table_name>
+    ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  
   
  テーブルに対する Stretch Database を無効にすると、データの移行が停止し、クエリの結果にリモート テーブルからの結果が含まれなくなります。  
   
- Stretch を無効にしても、リモート テーブルは削除されません。 リモート テーブルを削除する場合は、Azure 管理ポータルを使用して削除する必要があります。  
+ Stretch を無効にしても、リモート テーブルは削除されません。 リモート テーブルを削除する場合は、Azure portal を使用して削除します。  
   
 [ FILTER_PREDICATE = { null | *predicate* } ]  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
@@ -964,7 +964,7 @@ ALTER TABLE \<table_name>
   
 -   SQL Server から Azure にデータを移行するには `OUTBOUND` を指定します。  
   
--   Azure から SQL Server にテーブルのリモート データをコピーして戻し、テーブルに対する Stretch を無効にするには、`INBOUND` を指定します。 詳細については、「 [Stretch Database を無効にして、リモート データを戻す](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)」を参照してください。  
+-   Azure から SQL Server にテーブルのリモート データをコピーして戻し、テーブルに対する Stretch を無効にするには、`INBOUND` を指定します。 詳細については、「[Stretch Database を無効にして、リモート データを戻す](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)」を参照してください。  
   
      この操作によりデータ転送コストが発生し、取り消すことはできません。  
   
@@ -973,12 +973,12 @@ ALTER TABLE \<table_name>
 WAIT_AT_LOW_PRIORITY  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- オンライン インデックス再構築では、このテーブルに対する操作がブロックされるまで待機する必要があります。 **WAIT_AT_LOW_PRIORITY** は、オンライン インデックス再構築操作が優先度の低いロックを待機して、オンライン インデックス構築操作が待機している間、他の操作を続行可能にすることを示します。 **WAIT AT LOW PRIORITY** オプションを省略すると、`WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)` と同等になります。  
+ オンライン インデックス再構築では、このテーブルに対する操作がブロックされるまで待機する必要があります。 **WAIT_AT_LOW_PRIORITY** は、オンライン インデックス再構築操作が低優先度のロックを待機して、オンライン インデックス構築操作が待機している間、他の操作を実行可能にすることを示します。 **WAIT AT LOW PRIORITY** オプションを省略することは、`WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)` と同じです。  
   
  MAX_DURATION = *time* **[MINUTES]**  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- **SWITCH** またはオンライン インデックス再構築のロックが、DDL コマンドの実行時に低い優先度で待機する時間 (分単位で指定した整数値) です。 操作が **MAX_DURATION** の期間ブロックされると、**ABORT_AFTER_WAIT** アクションのいずれかが実行されます。 **MAX_DURATION** の期間は常に分単位なので、**MINUTES** という単語は省略できます。  
+ **SWITCH** またはオンライン インデックス再構築のロックが、DDL コマンドの実行時に低優先度で待機する時間 (分単位で指定した整数値) です。 操作が **MAX_DURATION** の期間ブロックされると、**ABORT_AFTER_WAIT** アクションのいずれかが実行されます。 **MAX_DURATION** の期間は常に分単位で、**MINUTES** という単語は省略できます。  
   
  ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -990,7 +990,7 @@ WAIT_AT_LOW_PRIORITY
  いずれのアクションも行わずに、現在実行中の **SWITCH** またはオンライン インデックス再構築の DDL 操作を終了します。  
   
  BLOCKERS  
- 現在 **SWITCH** またはオンライン インデックス再構築の DDL 操作をブロックしているすべてのユーザー トランザクションを強制終了して、操作を続行できるようにします。  
+ 現在 **SWITCH** またはオンライン インデックス再構築の DDL 操作をブロックしているすべてのユーザー トランザクションを中止して、操作を続行できるようにします。  
   
  **ALTER ANY CONNECTION** 権限が必要です。  
   
@@ -1005,15 +1005,15 @@ IF EXISTS
  プロシージャ キャッシュにテーブルを参照する実行プランがある場合、ALTER TABLE ではこれらの実行プランに対して、次の実行時に再コンパイルするというマークが付けられます。  
   
 ## <a name="changing-the-size-of-a-column"></a>列のサイズの変更  
- ALTER COLUMN 句で列のデータ型の新しいサイズを指定すると、列の長さ、有効桁数、または小数点以下桁数を変更できます。 列内にデータが存在する場合は、新しいサイズをデータの最大サイズより小さくすることはできません。 また、インデックス内で列を定義することはできません。ただし、その列のデータ型が **varchar**、**nvarchar**、または **varbinary** であり、インデックスが PRIMARY KEY 制約の結果として生じたものでない場合は除きます。 例 P を参照してください。  
+ 列のデータ型の新しいサイズを指定すると、列の長さ、有効桁数、または小数点以下桁数を変更できます。 ALTER COLUMN 句を使います。 列内にデータが存在する場合は、新しいサイズをデータの最大サイズより小さくすることはできません。 また、インデックス内で列を定義することはできません。ただし、その列のデータ型が **varchar**、**nvarchar**、または **varbinary** であり、インデックスが PRIMARY KEY 制約の結果として生じたものでない場合は除きます。 例 P を参照してください。  
   
 ## <a name="locks-and-alter-table"></a>ロックと ALTER TABLE  
- ALTER TABLE で指定した変更は、直ちに実装されます。 変更でテーブル内の行の修正が必要になる場合、ALTER TABLE では行が更新されます。 ALTER TABLE では、変更中にテーブルのメタデータが他の接続で参照されないように、テーブルに対してスキーマ修正 (SCH-M) ロックが取得されます。ただし、オンライン インデックス操作の終了時に、非常に短い時間 SCH-M ロックを必要とする場合は、このロックの取得は行われません。 `ALTER TABLE...SWITCH` 操作では、ロックはソース テーブルと対象テーブルの両方に対して取得されます。 テーブルに加えられた変更はログに記録され、完全に復旧できます。 列の削除や、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における既定値を伴う NOT NULL 列の追加など、きわめて大きなテーブル内のすべての行に影響する変更は、その実行終了までに長い時間がかかり、多くのログ レコードが生成されます。 このような ALTER TABLE ステートメントは、多くの行に影響する INSERT、UPDATE、DELETE の各ステートメントと同じように、十分な注意を払って実行する必要があります。  
+ ALTER TABLE で指定した変更はすぐに実装されます。 変更でテーブル内の行の修正が必要になる場合、ALTER TABLE では行が更新されます。 ALTER TABLE では、変更中にテーブルのメタデータが他の接続で参照されないように、テーブルに対してスキーマ修正 (SCH-M) ロックが取得されます。ただし、終了時に短い SCH-M ロックを必要とするオンライン インデックス操作は除きます。 `ALTER TABLE...SWITCH` 操作では、ロックはソース テーブルと対象テーブルの両方に対して取得されます。 テーブルに加えられた変更はログに記録され、完全に復旧できます。 列の削除や、一部のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における既定値を伴う NOT NULL 列の追加など、大規模なテーブル内のすべての行に影響する変更は、その実行終了までに長い時間がかかり、多くのログ レコードが生成されます。 これらの ALTER TABLE ステートメントは、多くの行に影響する INSERT、UPDATE、または DELETE ステートメントと同じ注意を払って実行します。  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>オンライン操作としての NOT NULL 列の追加  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 以降では、既定値を持つ NOT NULL 列の追加は、既定値が*ランタイム定数*である場合、オンライン操作です。 これは、テーブル内の行数に関係なく、操作がほぼ瞬時に完了することを意味します。 テーブル内の既存の行は、操作中に更新されないためです。その代わりに、既定値はテーブルのメタデータだけに格納され、これらの列にアクセスするクエリで必要になった場合に値が参照されます。 この動作は自動的に行われます。ADD COLUMN 構文以外に、オンライン操作を実装するための追加の構文は必要ありません。 ランタイム定数は、決定性に関係なく、テーブルの各行に対して実行時に同じ値を生成する式です。 たとえば、定数式 "My temporary data" やシステム関数 GETUTCDATETIME() は、ランタイム定数です。 一方、関数の `NEWID()` や `NEWSEQUENTIALID()` は、テーブルの各行で一意の値が生成されるので、ランタイム定数ではありません。 ランタイム定数ではない既定値を持つ NOT NULL 列の追加は、常にオフラインで実行され、操作中は排他 (SCH-M) ロックが取得されます。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 以降では、既定値を持つ NOT NULL 列の追加は、既定値が*ランタイム定数*である場合、オンライン操作です。 つまり、テーブル内の行数に関係なく、操作がほぼ瞬時に完了します。 なぜなら、操作中にテーブル内の既存の行が更新されないためです。 その代わりに、既定値はテーブルのメタデータだけに格納され、これらの列にアクセスするクエリで、必要に応じて、値が検索されます。 この動作は自動的に行われます。 ADD COLUMN 構文以外に、オンライン操作を実装するための追加の構文は必要ありません。 ランタイム定数は、その決定性に関係なく、テーブルの各行に対して実行時に同じ値を生成する式です。 たとえば、定数式 "My temporary data" やシステム関数 GETUTCDATETIME() は、ランタイム定数です。 一方、関数 `NEWID()` や `NEWSEQUENTIALID()` は、テーブルの各行で一意の値が生成されるため、ランタイム定数ではありません。 ランタイム定数ではない既定値を持つ NOT NULL 列の追加は、常にオフラインで実行され、操作中は排他 (SCH-M) ロックが取得されます。  
   
- 既存の行はメタデータに格納された値を参照しますが、新しい行が挿入され、列に別の値が指定されない場合、既定値はその行に格納されます。 メタデータに格納された既定値は、行が更新されるか (UPDATE ステートメントで実際の列が指定されなくても)、テーブルまたはクラスター化インデックスが再構築された場合、既存の列に移動されます。  
+ 既存の行はメタデータに格納された値を参照しますが、新しい行が挿入され、列に別の値が指定されない場合、既定値はその行に格納されます。 メタデータに格納された既定値は、行が更新されるか (UPDATE ステートメントで実際の列が指定されなくても)、テーブルまたはクラスター化インデックスが再構築された場合、既存の行に移動されます。  
   
  型 **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、**text**、**ntext**、**image**、**hierarchyid**、**geometry**、**geography**、または CLR UDTS の列をオンライン操作で追加することはできません。 行の最大サイズが 8,060 バイトの制限を超える場合は、列をオンラインで追加することはできません。 その場合、列はオフライン操作として追加されます。  
   
@@ -1021,40 +1021,40 @@ IF EXISTS
  [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 以降では、単一の ALTER TABLE ADD (インデックス ベース) CONSTRAINT または DROP (クラスター化インデックス) CONSTRAINT ステートメントの実行に使用されるプロセッサ数は、**max degree of parallelism** 構成オプションと現在のワークロードによって決定されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] でシステムがビジー状態であることが検出されると、ステートメントの実行前に自動的に操作の並列処理の次数が減らされます。 MAXDOP オプションを指定すると、ステートメントの実行に使用されるプロセッサ数を手動で構成できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
   
 ## <a name="partitioned-tables"></a>パーティション テーブル  
- ALTER TABLE は、パーティション テーブルを対象にした SWITCH 操作の実行に使用できるほか、非パーティション テーブルと同様に、パーティション テーブルの列、制約、トリガーの状態を変更する場合にも使用できます。 ただし、このステートメントを使用して、テーブル自体のパーティション分割方法を変更することはできません。 パーティション テーブルを再びパーティション分割するには、[ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) および [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md) を使用します。 また、パーティション テーブルの列のデータ型を変更することもできません。  
+ パーティション テーブルを対象にした SWITCH 操作を実行するだけでなく、ALTER TABLE を使って、非パーティション テーブルに対して使われる場合と同様に、パーティション テーブルの列、制約、トリガーの状態を変更します。 ただし、このステートメントを使用して、テーブル自体のパーティション分割方法を変更することはできません。 パーティション テーブルを再びパーティション分割するには、[ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) および [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md) を使用します。 また、パーティション テーブルの列のデータ型を変更することはできません。  
   
 ## <a name="restrictions-on-tables-with-schema-bound-views"></a>スキーマ バインド ビューによるテーブルへの制限  
- スキーマ バインド ビューのあるテーブルに ALTER TABLE ステートメントを実行するときに適用される制約は、単純なインデックスのあるテーブルを変更する場合に現在適用されている制約と同じです。 列の追加は許可されますが、 任意のスキーマ バインド ビューに含まれる列を削除または変更することはできません。 ALTER TABLE ステートメントによって、スキーマ バインド ビューで使用されている列の変更が要求された場合、ALTER TABLE は失敗し、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラー メッセージが表示されます。 スキーマ バインド ビューとインデックス付きビューの詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。  
+ スキーマ バインド ビューのあるテーブルに ALTER TABLE ステートメントを実行するときに適用される制約は、単純なインデックスのあるテーブルを変更する場合に現在適用されている制約と同じです。 列の追加は許可されますが、 スキーマ バインド ビューに含まれる列を削除または変更することはできません。 ALTER TABLE ステートメントによって、スキーマ バインド ビューで使用されている列の変更が要求された場合、ALTER TABLE は失敗し、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラー メッセージが表示されます。 スキーマ バインド ビューとインデックス付きビューの詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。  
   
- ベース テーブルを参照するスキーマ バインド ビューを作成しても、そのテーブルに対するトリガーの追加や削除には影響はありません。  
+ ベース テーブルに対するトリガーの追加や削除は、そのテーブルを参照するスキーマ バインド ビューを作成しても影響を受けません。  
   
 ## <a name="indexes-and-alter-table"></a>インデックスと ALTER TABLE  
- 制約が削除されると、制約の要素として作成されたインデックスも削除されます。 CREATE INDEX で作成されたインデックスは、DROP INDEX で削除する必要があります。 ALTER INDEX ステートメントを使用すると、制約定義の要素であるインデックスを再構築できます。ALTER TABLE で制約を削除して再び追加する必要はありません。  
+ 制約が削除されると、制約の要素として作成されたインデックスも削除されます。 CREATE INDEX で作成されたインデックスは、DROP INDEX で削除する必要があります。 ALTER INDEX ステートメントを使用して、制約定義のインデックス部分を再構築します。ALTER TABLE を使って制約を削除して再び追加する必要はありません。  
   
  列に基づくすべてのインデックスと制約を削除してからでないと、列は削除できません。  
   
- クラスター化インデックスを作成した制約が削除されると、クラスター化インデックスのリーフ レベルに格納されていたデータ行は、非クラスター化テーブルに格納されるようになります。 MOVE TO オプションを指定すると、1 つのトランザクションで、クラスター化インデックスを削除し、その結果生成されたテーブルを別のファイル グループまたはパーティション構成に移動できます。 MOVE TO オプションには次の制限があります。  
+ クラスター化インデックスを作成した制約を削除すると、クラスター化インデックスのリーフ レベルに格納されていたデータ行が非クラスター化テーブルに格納されます。 MOVE TO オプションを指定すると、1 つのトランザクションで、クラスター化インデックスを削除し、その結果生成されたテーブルを別のファイル グループまたはパーティション構成に移動できます。 MOVE TO オプションには次の制限があります。  
   
 -   MOVE TO は、インデックス付きビューまたは非クラスター化インデックスに対しては有効ではありません。  
 -   パーティション構成またはファイル グループは、既に存在している必要があります。  
--   MOVE TO を指定しない場合、テーブルは、クラスター化インデックスに定義されたものと同じパーティション構成またはファイル グループに配置されます。  
+-   MOVE TO を指定しない場合、テーブルは、クラスター化インデックス用に定義されたものと同じパーティション構成またはファイル グループに配置されます。  
   
-クラスター化インデックスを削除すると、ONLINE **=** ON オプションを指定できます。このため、DROP INDEX トランザクションによって、基になるデータや関連する非クラスター化インデックスに対するクエリおよび変更がブロックされることはありません。  
+クラスター化インデックスを削除する場合、ONLINE **=** ON オプションを指定して、基になるデータや関連する非クラスター化インデックスに対するクエリおよび変更を DROP INDEX トランザクションがブロックしないようにします。  
   
 ONLINE **=** ON には次の制限があります。  
  
 -   ONLINE **=** ON は、無効化されたクラスター化インデックスに対しては有効ではありません。 無効化されたインデックスは、ONLINE **=** OFF を使って削除する必要があります。  
 -   一度に 1 つのインデックスのみを削除できます。  
 -   ONLINE **=** ON は、インデックス付きビュー、非クラスター化インデックス、またはローカル一時テーブル上のインデックスに対しては有効ではありません。  
--   ONLINE **=** ON は、列ストア インデックスに対しては無効です。  
+-   ONLINE **=** ON は、列ストア インデックスに対しては有効ではありません。  
   
 既存のクラスター化インデックスを削除するには、クラスター化インデックスの大きさと同じ一時ディスク領域が必要です。 この追加領域は、操作が完了するとすぐに解放されます。  
   
 > [!NOTE]  
-> *\<drop_clustered_constraint_option>* に示されているオプションは、テーブル上のクラスター化インデックスに適用され、ビュー上のクラスター化インデックスまたは非クラスター化インデックスには適用できません。  
+> *\<drop_clustered_constraint_option>* の下にリストされているオプションは、テーブル上のクラスター化インデックスに適用され、ビュー上のクラスター化インデックスまたは非クラスター化インデックスには適用できません。  
   
 ## <a name="replicating-schema-changes"></a>スキーマ変更のレプリケート  
- 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーでパブリッシュされたテーブルに ALTER TABLE を実行すると、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーに変更が反映されます。 この機能にはいくつか制限事項があります。また、この機能は無効にできます。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーでパブリッシュされたテーブルに ALTER TABLE を実行すると、既定では、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。 この機能にはいくつか制限事項があります。 これは無効にできます。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
 ## <a name="data-compression"></a>Data Compression  
  システム テーブルで圧縮を有効にすることはできません。 テーブルがヒープの場合、ONLINE モードでは、再構築操作がシングル スレッドになります。 マルチスレッドのヒープの再構築操作では、OFFLINE モードを使用してください。 データ圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
@@ -1063,15 +1063,15 @@ ONLINE **=** ON には次の制限があります。
   
  パーティション テーブルには次の制限が適用されます。  
   
--   固定されていないインデックスがテーブルにある場合、そのパーティションの圧縮設定を変更できません。  
+-   固定されていないインデックスがテーブルにある場合、その 1 つのパーティションの圧縮設定を変更できません。  
 -   ALTER TABLE \<table> REBUILD PARTITION ... 構文は、指定されたパーティションを再構築します。  
 -   ALTER TABLE \<table> REBUILD WITH ... 構文は、すべてのパーティションを再構築します。  
   
 ## <a name="dropping-ntext-columns"></a>NTEXT 列の削除  
- NTEXT 列を削除すると、削除されたデータのクリーンアップが、シリアル化された操作としてすべての行で実行されます。 このクリーンアップは、長時間かかる場合があります。 多数の行を含むテーブルの NTEXT 列を削除する場合は、最初に NTEXT 列を NULL 値に更新し、次に列を削除します。 これを並列操作で実行すると、より速く処理することができます。  
+ NTEXT 列を削除すると、削除されたデータのクリーンアップが、シリアル化された操作としてすべての行で実行されます。 クリーンアップは多大な時間を必要とする場合があります。 多数の行を含むテーブルの NTEXT 列を削除する場合は、最初に NTEXT 列を NULL 値に更新し、次に列を削除します。 このオプションを並列操作で実行し、より高速にすることができます。  
   
 ## <a name="online-index-rebuild"></a>オンラインでのインデックス再構築  
- オンライン インデックス再構築の DDL ステートメントを実行するには、特定のテーブルで実行されているすべてのアクティブなブロック トランザクションが完了する必要があります。 オンライン インデックス再構築を実行すると、このテーブルに対する実行の開始が準備できているすべての新しいトランザクションがブロックされます。 オンライン インデックス再構築のロックの期間は非常に短いですが、特定のテーブルに対して開かれているすべてのトランザクションの完了を待機し、新しいトランザクションの開始をブロックすることで、スループットに大きな影響を与える場合があり、ワークロードの速度低下またはタイムアウトを引き起こしたり、基になるテーブルへのアクセスが大幅に制限されたりします。 **WAIT_AT_LOW_PRIORITY** オプションは、オンライン インデックス再構築に必要な S ロックおよび Sch-M ロックを DBA が管理できるようにし、3 つのオプションのいずれかを選択できるようにします。 3 つのいずれのケースでも、待機時間 (`(MAX_DURATION =n [minutes])`) 中にブロックするアクティビティがない場合は、オンライン インデックス再構築が待機なしで直ちに実行され、DDL ステートメントが完了します。  
+ オンライン インデックス再構築の DDL ステートメントを実行するには、特定のテーブルで実行されているすべてのアクティブなブロック トランザクションが完了する必要があります。 オンライン インデックス再構築を起動すると、このテーブルに対する実行の開始が準備できているすべての新しいトランザクションがブロックされます。 オンライン インデックス再構築のロックの期間は短いですが、特定のテーブル上の開いているトランザクションがすべて完了するまで待機し、新しいトランザクションの開始をブロックすることで、スループットに大きな影響を与える場合があります。 これは、ワークロードの低速化やタイムアウトの原因となり、基になるテーブルへのアクセスを大幅に制限する可能性があります。 **WAIT_AT_LOW_PRIORITY** オプションを使うと、オンライン インデックス再構築に必要な S ロックおよび Sch-M ロックを DBA が管理できるようにし、3 つのオプションのいずれかを選択できるようにすることが可能です。 3 つのいずれのケースでも、待機時間 (`(MAX_DURATION =n [minutes])`) 中にブロックするアクティビティがない場合は、オンライン インデックス再構築が待機なしですぐに実行され、DDL ステートメントが完了します。  
   
 ## <a name="compatibility-support"></a>互換性サポート  
  ALTER TABLE ステートメントでは、2 部構成 (schema.object) のテーブル名だけを使用できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、次の形式を使用してテーブル名を指定すると、コンパイル時にエラー 117 で失敗します。  
@@ -1080,9 +1080,9 @@ ONLINE **=** ON には次の制限があります。
 -   .database.schema.table  
 -   ..schema.table  
   
-以前のバージョンでは、server.database.schema.table という形式を指定すると、エラー 4902 が返されました。 .database.schema.table または ..schema.table という形式を指定すると、成功しました。  
+以前のバージョンでは、server.database.schema.table 形式を指定すると、エラー 4902 が返されました。 .database.schema.table または ..schema.table という形式を指定すると、成功しました。  
   
-問題を解決するには、4 部構成のプレフィックスの使用を削除してください。  
+この問題を解決するには、4 部構成のプレフィックスの使用を削除します。  
   
 ## <a name="permissions"></a>アクセス許可
 
@@ -1090,9 +1090,9 @@ ONLINE **=** ON には次の制限があります。
   
  ALTER TABLE 権限は、ALTER TABLE SWITCH ステートメントに含まれる両方のテーブルに適用されます。 切り替えられるデータには、対象テーブルのセキュリティが継承されます。  
   
- ALTER TABLE ステートメント内の列が、共通言語ランタイム (CLR) ユーザー定義型または別名データ型として定義されている場合は、そのデータ型に対する REFERENCES 権限が必要です。  
+ ALTER TABLE ステートメント内の任意の列を、共通言語ランタイム (CLR) ユーザー定義型または別名データ型として定義している場合は、その型に対する REFERENCES 権限が必要です。  
   
- テーブルの行を更新する列を追加するには、テーブルの **UPDATE** 権限が必要です。 たとえば、既定値の **NOT NULL** 列を追加する場合や、テーブルが空でないときに ID 列を追加する場合です。  
+ テーブルの行を更新する列を追加するには、テーブルの **UPDATE** 権限が必要です。 たとえば、既定値を持つ **NOT NULL** 列を追加する場合や、テーブルが空でないときに ID 列を追加する場合です。  
   
 ## <a name="Example_Top"></a> 使用例
   
@@ -1209,7 +1209,7 @@ GO
 ```  
   
 #### <a name="f-adding-a-nullable-column-with-default-values"></a>F. NULL 値を許容する列を既定値と共に追加する  
- 次の例では、NULL 値を許容する列を `DEFAULT` 定義と共に追加し、`WITH VALUES` を使用して、テーブル内の既存の各行に値を格納します。 WITH VALUES を使用しない場合、新しい列には NULL 値が格納されます。  
+ 次の例では、NULL 値を許容する列を `DEFAULT` 定義と共に追加し、`WITH VALUES` を使用して、テーブル内の既存の各行に値を格納します。 WITH VALUES を使用しない場合、各行は新しい列に NULL 値を持ちます。  
   
 ```sql  
 CREATE TABLE dbo.doc_exf ( column_a INT) ;  
@@ -1422,7 +1422,7 @@ GO
 ```  
   
 #### <a name="b-changing-the-size-of-a-column"></a>B. 列のサイズを変更する  
- 次の例では、**varchar** 列のサイズと、**decimal** 列の有効桁数および小数点以下桁数を拡張します。 列にデータが含まれているため、列のサイズを拡張することしかことができます。 また、`col_a` が一意インデックスで定義されていることにも注意してください。 この場合でも、`col_a` のサイズは拡張できます。データ型が **varchar** 型であり、インデックスが PRIMARY KEY 制約の結果として生じたものでないためです。  
+ 次の例では、**varchar** 列のサイズと、**decimal** 列の有効桁数および小数点以下桁数を拡張します。 列にデータが含まれているため、列のサイズを拡張することしかことができます。 また、`col_a` が一意インデックスで定義されていることにも注意してください。 `col_a` のサイズは引き続き拡張できます。データ型が **varchar** 型であり、インデックスが PRIMARY KEY 制約の結果ではないためです。  
   
 ```sql  
 -- Create a two-column table with a unique index on the varchar column.  
@@ -1460,7 +1460,7 @@ C4 int ) ;
 GO  
 ```  
   
- 次に、列 `C2` の照合順序を Latin1_General_BIN に変更します。 データ型は変更しませんが、必須であることに注意してください。  
+ 次に、列 `C2` の照合順序を Latin1_General_BIN に変更します。 データ型は変更されませんが、必須です。  
   
 ```sql  
 ALTER TABLE T3  
@@ -1481,8 +1481,8 @@ C4 int ) ;
 GO  
 ```  
   
- 次に、CEK1 という名前の列暗号化キーとランダム化された暗号化を使用して列 'C2' が暗号化されます。 以下のステートメントを成功させるには、次のことにご注意ください。
-- 列暗号化キーはエンクレーブ対応である必要があります。つまり、エンクレーブ計算を許可する列マスター キーを使用して暗号化する必要があります。
+ 次に、CEK1 という名前の列暗号化キーとランダム化された暗号化を使用して列 'C2' が暗号化されます。 次のステートメントが成功するには:
+- 列暗号化キーがエンクレーブ対応である必要があります。 つまり、これはエンクレーブ計算を許可する列マスター キーを使用して暗号化する必要があります。
 - ターゲットの SQL Server インスタンスでは、セキュア エンクレーブを使用する Always Encrypted がサポートされている必要があります。
 - ステートメントは、セキュア エンクレーブを使用する Always Encrypted 用に設定された接続経由で、サポートされているクライアント ドライバーを使用して発行される必要があります。
 - 呼び出し元のアプリケーションでは、CEK1 を保護する列マスター キーへのアクセスが必要です。
@@ -1529,7 +1529,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
  その他のデータ圧縮の例については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
 #### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>B. 列ストアを修正して保存用圧縮を変更する  
- 次の例では、追加の圧縮アルゴリズムを適用することによって、列ストア テーブル パーティションをさらに圧縮します。 これによってテーブルのサイズは小さくなりますが、保存と取得に必要な時間が増加します。 これは、アーカイブや、ストレージの容量を減らす必要があり、しかも保存と取得に時間をかける余裕がある状況には便利です。  
+ 次の例では、追加の圧縮アルゴリズムを適用することによって、列ストア テーブル パーティションをさらに圧縮します。 この圧縮によってテーブルのサイズは小さくなりますが、保存と取得に必要な時間が増加します。 これは、アーカイブや、ストレージの容量を減らす必要があり、しかも保存と取得に時間をかける余裕がある状況には便利です。  
   
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
@@ -1564,7 +1564,7 @@ GO
 ```  
   
 #### <a name="d-allowing-lock-escalation-on-partitioned-tables"></a>D. パーティション テーブルでのロック エスカレーションを許可する  
- 次の例では、パーティション テーブルで、パーティション レベルへのロック エスカレーションを有効にします。 テーブルがパーティション分割されていない場合は、ロック エスカレーションは TABLE レベルに設定されます。  
+ 次の例では、パーティション テーブルで、パーティション レベルへのロック エスカレーションを有効にします。 テーブルがパーティション分割されていない場合は、ロックのエスカレーションは TABLE レベルに設定されます。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
@@ -1674,8 +1674,8 @@ GO
  
 ### <a name="online"></a>オンライン操作  
   
-#### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. 優先度の低い待機オプションを使用してオンライン インデックス再構築を行う  
- 次の例では、優先度の低い待機オプションを指定する、オンライン インデックス再構築を実行する方法を示します。  
+#### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. 低優先度の待機オプションを使ったオンライン インデックス再構築  
+ 次の例では、低優先度の待機オプションを指定してオンライン インデックス再構築を実行する方法を示します。  
   
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
@@ -1691,7 +1691,7 @@ REBUILD WITH
 ```  
   
 #### <a name="b-online-alter-column"></a>B. オンラインでの列の変更  
- 次の例は、ONLINE オプションを使用して列の変更操作を実行する方法を示しています。  
+ 次の例では、ONLINE オプションを使用して列の変更操作を実行する方法を示します。  
   
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
@@ -1714,7 +1714,7 @@ GO
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 #### <a name="a-add-system-versioning-to-existing-tables"></a>A. システムのバージョン管理を既存のテーブルに追加します。  
- 次の例では、既存のテーブルをシステムのバージョン管理を追加し、将来の履歴テーブルを作成する方法を示します。 この例では、主キーが定義された `InsurancePolicy` という既存のテーブルがあることを前提としています。 この例では、これらの値を null にすることはできませんので、開始時刻と終了の既定値を使用してシステムのバージョン管理の場合は、新しく作成された期間列を設定します。 この例では、非表示の句を使用して、既存のアプリケーションが、現在のテーブルとの対話に与える影響がないことを確認します。  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] でのみ利用できる HISTORY_RETENTION_PERIOD も使用します。 
+ 次の例では、既存のテーブルをシステムのバージョン管理を追加し、将来の履歴テーブルを作成する方法を示します。 この例では、主キーが定義された `InsurancePolicy` という既存のテーブルがあることを前提としています。 この例では、開始と終了時刻に規定値を使って、システムのバージョン管理用に新しく期間列を設定しています。これらの値は null 値にできないためです。 この例では、非表示の句を使用して、既存のアプリケーションが、現在のテーブルとの対話に与える影響がないことを確認します。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 上でのみ利用できる HISTORY_RETENTION_PERIOD も使用しています。 
   
 ```sql  
 --Alter non-temporal table to define periods for system versioning  
@@ -1731,7 +1731,7 @@ SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));
 ```  
   
 #### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>B. システムのバージョン管理を使用する既存のソリューションを移行します。  
- 次の例では、一時的なサポートを模倣するために、トリガーを使用するソリューションからシステムのバージョン管理に移行する方法を示します。 この例では、用意された `ProjectTask` テーブルと `ProjectTaskHistory` テーブルを使用する既存のソリューションがあることを前提としています。つまり、`Changed Date` 列と `Revised Date` 列がその期間として使用され、これらの期間列には `datetime2` データ型は使用されず、`ProjectTask` テーブルに主キーが定義されています。  
+ 次の例では、一時的なサポートを模倣するために、トリガーを使用するソリューションからシステムのバージョン管理に移行する方法を示します。 この例では、既存のソリューション用に `ProjectTask` テーブルと `ProjectTaskHistory` テーブルを使い、その期間用に `Changed Date` と `Revised Date` 列を使い、これらの期間列で `datetime2` データ型が使われず、`ProjectTask` テーブルに主キーが定義されているような既存のソリューションが存在することを前提としています。  
 
 ```sql  
 -- Drop existing trigger  
@@ -1754,7 +1754,7 @@ SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSIS
 ```  
   
 #### <a name="c-disabling-and-re-enabling-system-versioning-to-change-table-schema"></a>C. 無効にして、テーブルのスキーマを変更するシステムのバージョン管理を再度有効にします。  
- この例は、`Department` テーブルでシステムのバージョン管理を無効にし、列を追加し、システムのバージョン管理を再度有効にする方法を示しています。 テーブルのスキーマを変更するのには、システムのバージョン管理を無効化が必要です。 有効にする、DBA は、データの整合性をスキップするは、システムのバージョン管理を再度有効にするときに確認して、パフォーマンスを得るためのメリットを得る、テーブルのスキーマの更新中に、両方のテーブルに更新プログラムを防ぐために、トランザクション内で次の手順を実行します。 統計を作成する、パーティションの切り替え、圧縮を 1 つまたは両方のテーブルに適用するなどのタスクをシステムのバージョン管理を無効にする必要がないことに注意してください。  
+ この例は、`Department` テーブルでシステムのバージョン管理を無効にし、列を追加し、システムのバージョン管理を再度有効にする方法を示しています。 テーブルのスキーマを変更するには、システムのバージョン管理を無効にする必要があります。 トランザクション内で次の手順を実行し、テーブルのスキーマの更新中に両方のテーブルが更新されるのを回避します。これにより、DBA は、もう一度システムのバージョン管理を有効にするときにデータの整合性チェックをスキップでき、パフォーマンス上の利点を得ることができます。 統計の作成、パーティションの切り替え、1 つまたは両方のテーブルに対する圧縮の適用などのタスクでは、システムのバージョン管理を無効にする必要はありません。  
   
 ```sql  
 BEGIN TRAN  
@@ -1775,7 +1775,7 @@ COMMIT
 ```  
   
 #### <a name="d-removing-system-versioning"></a>D. システムのバージョン管理を削除します。  
- この例は、Department テーブルからシステムのバージョン管理を完全に削除し、`DepartmentHistory` テーブルを削除する方法を示しています。 必要に応じて、システムのバージョン管理情報を記録する、システムによって使用される期間の列を削除することがもできます。 システムのバージョン管理が有効な場合は、`Department` か `DepartmentHistory` のいずれかのテーブルを削除できないことに注意してください。  
+ この例は、Department テーブルからシステムのバージョン管理を完全に削除し、`DepartmentHistory` テーブルを削除する方法を示しています。 必要に応じて、システムのバージョン管理情報を記録する、システムによって使用される期間の列を削除することがもできます。 システムのバージョン管理が有効な場合は、`Department`、`DepartmentHistory` のいずれかのテーブルを削除できません。  
   
 ```sql  
 ALTER TABLE Department  

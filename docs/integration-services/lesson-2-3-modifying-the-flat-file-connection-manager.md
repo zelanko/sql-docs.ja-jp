@@ -11,12 +11,12 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1de57ab14dc4dcfc07f838494ca48f8b12da6660
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 058f392079c466d34505fac57653d34d37401cc3
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143562"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265299"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>レッスン 2-3:フラット ファイル接続マネージャーの変更
 
@@ -27,20 +27,22 @@ ms.locfileid: "54143562"
 ## <a name="configure-the-flat-file-connection-manager-to-use-a-variable"></a>変数を使用するようにフラット ファイル接続マネージャーを構成する  
   
 1.  **接続マネージャー** ペインで、 **[Sample Flat File Source Data]** を右クリックして **[プロパティ]** をクリックします。  
+
+2.  **[プロパティ]** ウィンドウで、**PackagePath** が **\Package.Connections** で始まっていることを確認します。 該当しない場合は、**[接続マネージャー]** ウィンドウで、**[Sample Flat File Source Data]\(サンプル フラット ファイル ソース データ\)** を右クリックし、**[プロパティ]** をクリックします。
   
-2.  **[プロパティ]** ウィンドウの **[式]** で、空のセルを選択し、参照ボタン **[...]** を選択します。  
+3.  **[プロパティ]** ウィンドウの **[式]** で、空のセルを選択し、参照ボタン **[...]** を選択します。  
   
-3.  **[プロパティ式エディター]** ダイアログの **[プロパティ]** 列で **ConnectionString** を選択します。  
+4.  **[プロパティ式エディター]** ダイアログの **[プロパティ]** 列で **ConnectionString** を選択します。  
   
-4.  **[式]** 列の参照ボタン **[...]** を選択し、**[式ビルダー]** ダイアログ ボックスを開きます。  
+5.  **[式]** 列の参照ボタン **[...]** を選択し、**[式ビルダー]** ダイアログ ボックスを開きます。  
   
-5.  **[式ビルダー]** ダイアログで **[変数]** ノードを展開します。  
+6.  **[式ビルダー]** ダイアログで **[変数]** ノードを展開します。  
   
-6.  **User::varFileName** 変数を **[式]** ボックスにドラッグします。  
+7.  **User::varFileName** 変数を **[式]** ボックスにドラッグします。  
   
-7.  **[OK]** を選択し、**[式ビルダー]** ダイアログを閉じます。  
+8.  **[OK]** を選択し、**[式ビルダー]** ダイアログを閉じます。  
   
-8.  再度 **[OK]** を選択し、**[プロパティ式エディター]** ダイアログを閉じます。  
+9.  再度 **[OK]** を選択し、**[プロパティ式エディター]** ダイアログを閉じます。  
   
 ## <a name="go-to-next-task"></a>次の実習に進む  
 [手順 4:レッスン 2 で作成したチュートリアル パッケージのテスト](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  

@@ -1,21 +1,21 @@
 ---
-title: 'レッスン 4 : レポートへのテーブルの追加 (Reporting Services) | Microsoft Docs'
+title: レッスン 4:レポートへのテーブルの追加 (Reporting Services) | Microsoft Docs
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e956658d0a831835aa4c6067b17f3169de405da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4df3f6c94ff4aee674721a47421e0696cc8e2c3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772639"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287240"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>レッスン 4 : レポートへのテーブルの追加 (Reporting Services)
+# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>レッスン 4:レポートへのテーブルの追加 (Reporting Services)
 データセットを定義したら、レポートのデザインを開始できます。 レポートのレイアウトを作成するには、データ領域、テキスト ボックス、画像、およびレポートに含めるその他のアイテムを、デザイン画面にドラッグ アンド ドロップします。  
   
 基になるデータセットからデータ行を繰り返し表示するアイテムを *データ領域*と呼びます。 基本的なレポートのデータ領域は 1 つだけですが、表形式のレポートにグラフを追加する場合には、データ領域を追加できます。 データ領域を追加したら、そのデータ領域にフィールドを追加できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "47772639"
 7.  同様に \[Line Total\] フィールドを追加して、5 番目の列を作成します。 列ヘッダーは [Line Total] です。 レポート デザイナーは、LineTotal を 2 つの語に分割して、列の表示名を自動的に作成します。  
   
   
-次の図は、[Date]、[Order]、[Product]、[Qty]、および [Line Total] の各フィールドを使用して作成したテーブル データ領域を示しています。  
+次の図は、次のフィールドを使って設定されたテーブル データ領域を示しています:Date、Order、Product、Qty、および Line Total です。  
 ![rs_BasicTableDetailsDesign](../reporting-services/media/rs-basictabledetailsdesign.png)  
   
 ## <a name="preview-your-report"></a>レポートをプレビューする  
@@ -64,7 +64,7 @@ ms.locfileid: "47772639"
 > **[ファイル]** メニューの **[すべてを保存]** をクリックして、レポートを保存します。  
   
 ## <a name="next-steps"></a>Next Steps  
-[テーブル] データ領域がレポートに、フィールドがデータ領域にそれぞれ正しく追加され、レポートが正しくプレビューされました。 次は、列ヘッダー、日付、および通貨の値の書式を設定します。 「[レッスン 5: レポートの書式設定 &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)」を参照してください。  
+[テーブル] データ領域がレポートに、フィールドがデータ領域にそれぞれ正しく追加され、レポートが正しくプレビューされました。 次は、列ヘッダー、日付、および通貨の値の書式を設定します。 「[レッスン 5:レポートの書式設定 &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [テーブル &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  

@@ -2,7 +2,7 @@
 title: Microsoft SQL データベースでのアダプティブ クエリの処理 | Microsoft Docs | Microsoft Docs
 description: SQL Server (2017 以降) および Azure SQL Database のクエリ パフォーマンスを向上させるためのアダプティブ クエリ処理の機能です。
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,18 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: aba4aa388cb9ffac518b09077d535b618206ab71
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207313"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319263"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Microsoft SQL データベースでのアダプティブ クエリの処理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でクエリのパフォーマンスを向上するために使用できるアダプティブ クエリ処理の機能について説明します。
 - バッチ モード メモリ許可フィードバック
+- 行モード メモリ許可フィードバック (パブリック プレビュー、データベース互換性レベル 150 未満)
 - バッチ モード アダプティブ結合
 - インターリーブ実行
 
@@ -36,8 +37,6 @@ ms.locfileid: "53207313"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリ処理と実行モードの詳細については、「[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)」を参照してください。
 
 さまざまな理由で、クエリ オプティマイザーによって選ばれたプランが最適ではない場合があります。 たとえば、クエリ プランを通過する推定行数が正しくない可能性があります。 推定コストは、実行で使われるプランの決定に利用されます。 カーディナリティの推定が正しくない場合、当初の想定が悪くても元のプランが使われます。
-
-![アダプティブ クエリ処理の機能](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>アダプティブ クエリ処理を有効にする方法
 データベースに対して互換性レベル 140 を有効にすることにより、自動的にワークロードをアダプティブ クエリ処理の対象にすることができます。  これは Transact-SQL を使って設定できます。 例 :  
@@ -368,6 +367,7 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 USE HINT クエリ ヒントは、データベース スコープ構成またはトレース フラグ設定に優先します。
 
 ## <a name="see-also"></a>参照
+[SQL データベースでのインテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)   
 [SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)    
 [プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

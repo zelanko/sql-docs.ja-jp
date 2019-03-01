@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f58c39fb0be119da6164b62d91d3e3da8e0a5c48
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2c588a25b95e5625fa3ecd6d6b2765194a41be5a
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504107"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331512"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>警告デザイナーでのデータ警告の作成
 
@@ -69,7 +69,7 @@ ms.locfileid: "52504107"
   
      一覧表示される比較演算子は、選択した列のデータ型によって異なります。 日付データ型の列の場合、ルールのしきい値の横にカレンダーのアイコンが表示されます。 カレンダーの日付をクリックするか日付を入力してデータを入力できます。  
   
-     データ警告デザイナーでは、 **[値入力モード]** と **[フィールドの選択モード]** の 2 つの比較モードが提供されます。 既定のモードは **[値入力モード]** です。 OR 句は、 **[値入力モード]** で **is** 比較を使用している場合にのみ追加できます。  
+     データ警告デザイナーには 2 つの比較モードが用意されています。**[値入力モード]** と **[フィールドの選択モード]** です。 既定のモードは **[値入力モード]** です。 OR 句は、 **[値入力モード]** で **is** 比較を使用している場合にのみ追加できます。  
   
 9. OR 句を追加するには、下矢印をクリックし、 **[値入力モード]** をクリックします。  
   

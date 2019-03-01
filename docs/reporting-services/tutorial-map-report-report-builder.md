@@ -1,21 +1,21 @@
 ---
-title: 'チュートリアル: マップ レポート (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:マップ レポート (レポート ビルダー) | Microsoft Docs
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 25f5dbcee0144b585fc3b328a699332c3346ce36
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712713"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298650"
 ---
-# <a name="tutorial-map-report-report-builder"></a>チュートリアル: マップ レポート (レポート ビルダー)
+# <a name="tutorial-map-report-report-builder"></a>チュートリアル:マップ レポート (レポート ビルダー)
 この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] チュートリアルでは、地図を背景として、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートのデータを表示するときに使用できるマップ機能について学習できます。 
   
 マップは、空間データに基づいています。空間データは通常、ポイント、線、および多角形で構成され (郡の輪郭を表す多角形、道路を表す線、市区町村の場所を表すポイントなど)、 種類ごとに異なるマップ レイヤーにマップ要素のセットとして表示されます。  
@@ -27,9 +27,9 @@ ms.locfileid: "52712713"
 このチュートリアルでは、New York 州の郡にある店舗の場所を表示するマップ レポートを作成します。  
    
 > [!NOTE]  
-> このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成、およびウィザードの実行に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+> このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成、およびウィザードの実行に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
-このチュートリアルの推定所要時間: 30 分。  
+このチュートリアルの推定所要時間:30 分。  
   
 ## <a name="requirements"></a>必要条件  
 このチュートリアルでは、Bing マップの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「 [マップ レポートのサポートを計画する](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)」を参照してください。 
@@ -169,13 +169,13 @@ ms.locfileid: "52712713"
 9. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。  
   
     この結果セットには、消費者向けの商品を販売している New York 州内の店舗を表す 7 つの列が含まれています。 一覧を次に示します。わかりにくいものには説明を付けています。 
-    *   **StoreKey**: 店舗の識別子。  
+    *   **StoreKey**:店舗の識別子。  
     *   **StoreName**。
-    *   **SellingArea**: 製品の展示に使用できる面積。範囲は 455 ～ 1125 平方フィートです。
+    *   **SellingArea**:製品の展示に使用できる面積。範囲は 455 - 1,125 平方フィートです。
     *   **City**。
     *   **County**。
-    *   **Sales**: 総売上。 
-    *   **SpatialLocation**: 緯度と経度による位置。 
+    *   **Sales**:総売上。 
+    *   **SpatialLocation**:緯度と経度による位置。 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   

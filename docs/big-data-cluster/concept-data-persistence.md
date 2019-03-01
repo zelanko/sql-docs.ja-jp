@@ -5,17 +5,17 @@ description: SQL Server 2019 のビッグ データ クラスター内のデー�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 47fb255ea18fdf48765a1a40b1e05e06cdf7ee1e
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: bcb5ee903ab2e5c24cdc2bc705d9b29a4299ba1b
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241743"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017958"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上の SQL Server のビッグ データ クラスターでのデータ永続化
 
@@ -26,11 +26,11 @@ ms.locfileid: "54241743"
 使用してビッグ データの SQL Server クラスターは、これらの永続的なボリュームを使用する方法は、[ストレージ クラス](https://kubernetes.io/docs/concepts/storage/storage-classes/)します。 異なる種類のストレージ用のさまざまなストレージ クラスを作成し、ビッグ データ クラスターのデプロイ時にそれらを指定できます。 目的 (プール) を使用するには、どのストレージ クラスを構成することができます。 SQL Server のビッグ データ クラスターを作成します[永続ボリューム要求](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)永続ボリュームが必要なポッドごとの指定した記憶域クラス名を指定します。 ポッドに対応する永続的なボリュームをマウントします。
 
 > [!NOTE]
-> CTP 2.2、のみ`ReadWriteOnce`クラスター全体のアクセス モードがサポートされています。
+> CTP 2.3、のみの`ReadWriteOnce`クラスター全体のアクセス モードがサポートされています。
 
 ## <a name="deployment-settings"></a>展開の設定
 
-永続的なストレージを使用するには、デプロイ時に構成する、 **USE_PERSISTENT_VOLUME**と**STORAGE_CLASS_NAME**実行する前に環境変数`mssqlctl create cluster`コマンド。 **USE_PERSISTENT_VOLUME**に設定されている`true`既定。 既定値をオーバーライドしてに設定`false`と、ここでは、SQL Server のビッグ データ クラスターが emptyDir マウントを使用します。 
+永続的なストレージを使用するには、デプロイ時に構成する、 **USE_PERSISTENT_VOLUME**と**STORAGE_CLASS_NAME**実行する前に環境変数`mssqlctl cluster create`コマンド。 **USE_PERSISTENT_VOLUME**に設定されている`true`既定。 既定値をオーバーライドしてに設定`false`と、ここでは、SQL Server のビッグ データ クラスターが emptyDir マウントを使用します。 
 
 > [!WARNING]
 > 永続的な記憶域のない実行中は、テスト環境で作業できますが、非機能的なクラスターになる可能性があります。 ポッドが再起動するとクラスター メタデータ、またはユーザー データは完全に失われます。
@@ -68,7 +68,7 @@ Kubeadm は、組み込みストレージ クラスが付属していません�
 オンプレミス クラスター明らかに付属していない任意の組み込みストレージ クラス、したがってを設定する必要があります[永続ボリューム](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)/[プロビジョナー](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/)事前し、対応するを使用してSQL Server のビッグ データ クラスターのデプロイ時にストレージ クラスです。
 
 ## <a name="customize-storage-size-for-each-pool"></a>各プールの記憶域のサイズをカスタマイズします。
-既定では、各クラスターのプロビジョニングのポッドのプロビジョニングされた永続的なボリュームのサイズは 6 GB です。 これは、環境変数を設定して構成可能な`STORAGE_SIZE`を別の値。 たとえば、次のコマンドを実行する前に 10 GB に値を設定する実行することができます、`mssqlctl create cluster command`します。
+既定では、各クラスターのプロビジョニングのポッドのプロビジョニングされた永続的なボリュームのサイズは 6 GB です。 これは、環境変数を設定して構成可能な`STORAGE_SIZE`を別の値。 たとえば、次のコマンドを実行する前に 10 GB に値を設定する実行することができます、`mssqlctl cluster create --name command`します。
 
 ```bash
 export STORAGE_SIZE=10Gi
@@ -96,7 +96,7 @@ SQL Server のビッグ データ クラスターの永続的なストレージ�
 | **STORAGE_POOL_STORAGE_CLASS_NAME** | STORAGE_CLASS_NAME | TIndicates 記憶域プールのポッドに関連付けられた永続的なボリュームを使用する Kubernetes ストレージ クラスの名前。 |
 | **STORAGE_POOL_STORAGE_SIZE** | STORAGE_SIZE | 記憶域プール内の各ポッドの永続ボリュームのサイズを示します。 |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Kubernetes でのボリュームに関する詳細なドキュメントを参照してください、[ボリューム上の Kubernetes のドキュメント](https://kubernetes.io/docs/concepts/storage/volumes/)します。
 

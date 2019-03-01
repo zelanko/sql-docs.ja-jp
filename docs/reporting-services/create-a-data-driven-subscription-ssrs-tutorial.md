@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e4d15a3762c94d8a4daa6bb1837a2fd89be8fb88
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 32e4ca675330278d69994faa81b7bb3e4a13b4b6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791754"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291420"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
 この [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] チュートリアルでは、データ ドリブン サブスクリプションを作成し、フィルター処理されたレポート出力を生成してファイル共有に保存する簡単な例の手順を示すことで、データ ドリブン サブスクリプションの概念を説明します。 
@@ -29,24 +29,25 @@ ms.locfileid: "52791754"
 + .xlsx や .pdf などのさまざまな形式のレポートの生成の自動化。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
- このチュートリアルは、次の 3 つのレッスンで構成されています。  
- レッスン | コメント
- ------- | --------------
- [レッスン 1:サンプル サブスクライバー データベースを作成する](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | このレッスンでは、サブスクライバー情報を格納するテーブル ローカル [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースを作成します。 フィルター処理および出力ファイル形式に使用する情報の注文番号。
-[レッスン 2:レポート データ ソースのプロパティを構成する](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |このレッスンでは、指定したスケジュールでレポートを自動実行できるようにレポート データ ソースを構成します。 自動処理では保存された資格情報が必要です。 また、レポートのデータセットを変更して、サブスクライバーのデータが提供するパラメーターを含めます。 このパラメーターは、注文番号に基づくレポート データのフィルター処理に使用されます。
- [レッスン 3: データ ドリブン サブスクリプションを定義する](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | このレッスンでは、データ ドリブン サブスクリプションを作成します。 ここでは、データ ドリブン サブスクリプション ウィザードを 1 ページずつ順に実行します。
+このチュートリアルは、次の 3 つのレッスンで構成されています。  
 
- 次の図は、チュートリアルの基本的なワークフローです。
+| レッスン | コメント |
+| ------ | -------- |
+| [レッスン 1:サンプル サブスクライバー データベースを作成する](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | このレッスンでは、サブスクライバー情報を格納するテーブル ローカル [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースを作成します。 フィルター処理および出力ファイル形式に使用する情報の注文番号。 |
+| [レッスン 2:レポート データ ソースのプロパティを構成する](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | このレッスンでは、指定したスケジュールでレポートを自動実行できるようにレポート データ ソースを構成します。 自動処理では保存された資格情報が必要です。 また、レポートのデータセットを変更して、サブスクライバーのデータが提供するパラメーターを含めます。 このパラメーターは、注文番号に基づくレポート データのフィルター処理に使用されます。 |
+| [レッスン 3: データ ドリブン サブスクリプションを定義する](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | このレッスンでは、データ ドリブン サブスクリプションを作成します。 ここでは、データ ドリブン サブスクリプション ウィザードを 1 ページずつ順に実行します。 |
 
-手順  |[説明] 
----------|---------
-(1)     |  サブスクリプションの構成には、ソース レポート、スケジュール、およびサブスクライバー データベースへのフィールド マッピングが記述されています。        
-(2)     | OrderInfo テーブルには、フィルター処理に使用する 4 つの注文番号が含まれています (ファイルごとに 1 つ)。 テーブルには、生成されるレポートのファイル形式も含まれています。
-(3)     | Adventureworks データベースからの情報がフィルタリングされてレポートで返されます。 
-(4)     | Orderinfo テーブルで指定されたファイル形式でレポートが作成されます。
+次の図は、チュートリアルの基本的なワークフローです。
 
- 
- 
+| 手順    | [説明] |
+| --------|------------ |
+| (1)     | サブスクリプションの構成には、ソース レポート、スケジュール、およびサブスクライバー データベースへのフィールド マッピングが記述されています。 |
+| (2)     | OrderInfo テーブルには、フィルター処理に使用する 4 つの注文番号が含まれています (ファイルごとに 1 つ)。 テーブルには、生成されるレポートのファイル形式も含まれています。 |
+| (3)     | Adventureworks データベースからの情報がフィルタリングされてレポートで返されます。 |
+| (4)     | Orderinfo テーブルで指定されたファイル形式でレポートが作成されます。 |
+
+
+
    ![ssrs_tutorial_datadriven_flow](../reporting-services/media/ssrs-tutorial-datadriven-flow.png) 
   
 ## <a name="requirements"></a>必要条件  

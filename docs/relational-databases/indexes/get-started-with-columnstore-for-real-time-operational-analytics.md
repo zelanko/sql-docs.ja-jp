@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531543"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294450"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>列ストアを使用したリアルタイム運用分析の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "52531543"
   
 -   [列ストア インデックスと行グループのマージ ポリシー](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>パフォーマンス ヒント 1: フィルター処理されたインデックスを使用したクエリ パフォーマンスの改善  
+## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>パフォーマンス ヒント 1:フィルター処理されたインデックスを使用したクエリ パフォーマンスの改善  
  リアルタイム分析の運用を実行すると、OLTP ワークロードのパフォーマンスに影響を及ぼすことがあります。  この影響は最小限に抑える必要があります。 次の例では、分析をリアルタイムで実行しつつ、フィルター処理されたインデックスを使用してトランザクション ワークロード上の非クラスター化列ストア インデックスの影響を最小限に抑える方法を示します。  
   
  運用ワークロード上で非クラスター化列ストア インデックスを管理するために必要なオーバーヘッドを最小限に抑えるには、フィルター処理条件を使用して *ウォーム* データ (緩やかに変化するデータ) 対してのみ非クラスター化列ストア インデックスを作成します。 たとえば、注文管理アプリケーションの場合、既に出荷されている注文に対して非クラスター化列ストア インデックスを作成できます。 注文が出荷された後はほとんど変化しないため、ウォーム データと捉えることができます。 フィルター処理されたインデックスを使用すると、非クラスター化列ストア インデックスのデータに必要な更新プログラムの数が少なくなるため、トランザクション ワークロードへの影響が少なくなります。  
@@ -120,7 +120,7 @@ ms.locfileid: "52531543"
 > [!NOTE]  
 >  フィルター処理された非クラスター化列ストア インデックスは、ディスク ベースのテーブルに対してのみサポートされます。 メモリ最適化テーブルではサポートされていません。  
   
-### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>例 A: BTree インデックスからホット データ、列ストア インデックスからウォーム データにアクセスする  
+### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>例 A:BTree インデックスからホット データ、列ストア インデックスからウォーム データにアクセスする  
  この例では、フィルター処理条件 (accountkey > 0) を使用して、列ストア インデックスに含まれる行を確立します。 目標は、フィルター処理条件と後続のクエリを設計し、頻繁に変化する BTree インデックスからの "ホット" データにアクセスする、およびより安定した列ストア インデックスからの "ウォーム" データにアクセスすることです。  
   
  ![ウォーム データとホット データの結合インデックス](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "ウォーム データとホット データの結合インデックス")  
@@ -170,10 +170,10 @@ Group By customername
   
   [フィルター処理された非クラスター化列ストア インデックス](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
   
-## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>パフォーマンス ヒント 2: AlwaysOn 読み取り可能セカンダリに対する分析の負荷を軽減する  
+## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>パフォーマンス ヒント 2:AlwaysOn 読み取り可能セカンダリに対する分析の負荷を軽減する  
  列ストア インデックスのメンテナンスはフィルター処理された列ストア インデックスを使用して最小限に抑えることはできますが、それでも分析クエリには多大なコンピューティング リソース (CPU、IO、メモリ) が必要であり、運用ワークロードのパフォーマンスに影響します。 ほとんどのミッション クリティカルなワークロードについては、AlwaysOn 構成を使用することをお勧めします。 この構成では、負荷を読み取り可能セカンダリにオフロードすることで、実行中の分析の影響を除去できます。  
   
-## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>パフォーマンス ヒント 3: ホット データを DELTA 行グループに保持することでインデックスの断片化を削減する  
+## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>パフォーマンス ヒント 3:ホット データを DELTA 行グループに保持することでインデックスの断片化を削減する  
  列ストア インデックスのあるテーブルは、圧縮された行をワークロードが更新/削除する場合に、(削除された行によって) 大幅に断片化されることがあります。 断片化された列ストア インデックスは、メモリと記憶域の非効率的な使用につながります。 リソースの非効率的な使用だけでなく、余分な IO と結果セットから削除された行をフィルター処理する必要があるため、分析クエリのパフォーマンスにも悪影響を及ぼします。  
   
  削除された行は、REORGANIZE コマンドを使用してインデックスのデフラグを実行するか、テーブル全体または影響を受けているパーティションの列ストア インデックスを再構築するまで、物理的には削除されません。 REORGANIZE とインデックスの REBUILD は高コストな操作であり、ワークロードに使用されるリソースを取り除きます。 さらに、行の圧縮が早すぎる場合は、更新により何度も再圧縮する必要性が出てくるため、無駄な圧縮によるオーバーヘッドにつながる可能性があります。  

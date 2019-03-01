@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e1e9c58b88e7edd48fe3a1390f56e313572adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3de7c69169198302535eb7ff5dc855faa4f44974
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418813"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319113"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルのデータのクエリ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
 最初の 2 つのサブ句は指定された期間と重なる行のバージョンを返します (つまり、指定された期間より前に開始し、期間の後で終了するバージョン) が、CONTAINED IN は指定された期間の範囲内に存在するものだけを返します。  
   
 > [!IMPORTANT]  
->  現在ではない行のバージョンのみを検索する場合は、 **CONTAINED IN** を使用することをお勧めします。この構文は履歴テーブルのみを処理し、クエリのパフォーマンスが最高になります。 何の制限もなしに現在と履歴のデータをクエリする必要がある場合は、 **ALL** を使用します。  
+>  最新ではない行のバージョンのみを検索する場合は、クエリのパフォーマンスが最高になるので、履歴テーブルのクエリを直接実行することをお勧めします。 何の制限もなしに現在と履歴のデータをクエリする必要がある場合は、 **ALL** を使用します。  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cee144e7fed793cf08c246f3a83a4f9e213e80a4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703340"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298420"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートへの視覚エフェクトの追加
 グラフは、データの視覚化における重要な部分です。 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートで使用可能な、幅広いシナリオに対応した各種グラフについて説明します。 
@@ -143,7 +143,7 @@ ms.locfileid: "47703340"
 
      * **[サイズが表すもの]** でタイルのサイズに対して数値フィールドを選択します。
      * **[色が表すもの]** でタイルの色に対して数値フィールドを選択します。 
-     * [省略可能] **[カスタム中央値]**: **[カスタム中央値]** は、ビジュアル化の種類が HeatMapWithCustomCenterValue の場合にのみ使用できます。
+     * [省略可能] **[カスタム中央値]**:**[カスタム中央値]** は、ビジュアル化の種類が HeatMapWithCustomCenterValue の場合にのみ使用できます。
      
          中央値によって、ボックスの色が決まります。 中央値と比べてよい測定値であるほど、緑色に近くなります。 悪い測定値であるほど、赤色に近くなります。
      

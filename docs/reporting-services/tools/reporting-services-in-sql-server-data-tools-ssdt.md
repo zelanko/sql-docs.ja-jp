@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ab97e64bacf15cf95c6594f45edceac05a24eef2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b57f42345b487867b5362e24963790e5f525f973
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403007"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292330"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
 
@@ -43,7 +43,7 @@ ms.locfileid: "52403007"
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> レポート デザイナーのウィンドウとペイン  
- レポート デザイナーでは、レポート データとレポート レイアウトを定義するための **[デザイン]** ビューと、描画されたレポートのビューを表示するための **[プレビュー]** ビューがサポートされています。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
+ レポート デザイナーは 2 つのビューをサポートしています。レポート データとレポート レイアウトを定義するための **[デザイン]** ビューと、描画されたレポートのビューを表示するための **[プレビュー]** ビューです。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
   
 ###  <a name="bkmk_ReportDataPane"></a> レポート データ ペイン  
  [レポート データ] ペインには、組み込みフィールド、データ ソース、データセット、フィールド コレクション、レポート パラメーター、および画像が表示されます。  
@@ -175,7 +175,7 @@ ms.locfileid: "52403007"
   
 -   **[レポートのプロパティ]** **[レポートのプロパティ]** ダイアログ ボックスを開きます。 このダイアログ ボックスでは、一般的なレポートのプロパティ (作成者の名前やグリッドの間隔など) を割り当てたり、レポート レイアウトのプロパティ (列数やページ サイズなど) を指定したりできます。 また、カスタム コード、アセンブリやクラスへの参照、データ出力要素の名前、データ変換の名前、およびデータ スキーマの名前も含めることができます。  
   
--   **[表示]** レポート デザイナーの [デザイン] タブと [プレビュー] タブを切り替えます。  
+-   **[表示]** レポート デザイナーのタブ[デザイン] と [プレビュー] を切り替えます。  
   
 -   **[ページ ヘッダー]** レポートのページ ヘッダーを追加または削除します。 ページ ヘッダーを削除すると、ページ ヘッダー内のすべてのアイテムが削除されます。  
   

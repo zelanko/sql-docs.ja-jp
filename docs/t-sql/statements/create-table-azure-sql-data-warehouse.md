@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 372ebf82b2903c8e3f6b235978d39bb578508acd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 18b8bd5627207f13e5f6b1b9781ae5988f5a9d2c
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025513"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231079"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>テーブル (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "56025513"
 
 注:この記事での SQL Data Warehouse に関する説明は、特に明記がない限り、SQL Data Warehouse および Parallel Data Warehouse の両方に適用されます。 
  
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 <a name="Syntax"></a>   
 ## <a name="syntax"></a>構文  
@@ -116,48 +116,48 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  | 引数 | 説明 |
  | -------- | ----------- |
  | *constraint_name* | (省略可能) 制約の名前です。 制約名は、データベース内で一意です。 名前は、他のデータベース内で再利用できます。 |
- | *constant_expression* | 列の既定値。 式は、リテラル値または定数である必要があります。 たとえば、`'CA'` や `4` などの定数式は許可されます。 `2+3` や `CURRENT_TIMESTAMP` などは許可されません。 |
+ | *constant_expression* | 列の既定値。 式は、リテラル値または定数である必要があります。 たとえば、`'CA'` や `4` などの定数式は許可されます。 `2+3` や `CURRENT_TIMESTAMP` などの定数式は許可されません。 |
   
 
 ### <a name="TableOptions"></a> テーブル構造のオプション
 テーブルの種類を選択する方法の詳細については、「[SQL Data Warehouse でのテーブルのインデックス作成](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)」を参照してください。
   
  `CLUSTERED COLUMNSTORE INDEX`  
-クラスター化列ストア インデックスとしてテーブルを格納します。 クラスター化列ストア インデックスは、すべてのテーブルのデータに適用されます。 これは、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] での既定値です。   
+クラスター化列ストア インデックスとしてテーブルを格納します。 クラスター化列ストア インデックスは、すべてのテーブルのデータに適用されます。 この動作は [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の既定の動作です。   
  
  `HEAP`   
-  テーブルをヒープとして格納します。 これは、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] での既定値です。  
+  テーブルをヒープとして格納します。 この動作は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の既定の動作です。  
   
  `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
- 1 つまたは複数のキー列を含むクラスター化インデックスとしてテーブルを格納します。 これは、行によって、データを格納します。 *index_column_name* を使用して、インデックスに 1 つまたは複数のキー列の名前を指定します。  詳細については、「全般的な解説」の「行ストア テーブル」を参照してください。
+ 1 つまたは複数のキー列を含むクラスター化インデックスとしてテーブルを格納します。 この動作は、行によってデータを格納します。 *index_column_name* を使用して、インデックスに 1 つまたは複数のキー列の名前を指定します。  詳細については、「全般的な解説」の「行ストア テーブル」を参照してください。
  
  `LOCATION = USER_DB`   
- このオプションは非推奨とされます。 この構文は受け入れられますが、不要になっていて動作に影響しません。   
+ このオプションは非推奨とされます。 この構文は容認されますが、現在は不要であり、動作にも影響しません。   
   
 ### <a name="TableDistributionOptions"></a> テーブル分散オプション
 最適な分散メソッドを選択する方法および分散テーブルを使用する方法を理解するには、「[Azure SQL Data Warehouse での分散テーブルの設計に関するガイダンス](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)」を参照してください。
 
 `DISTRIBUTION = HASH` ( *distribution_column_name* )   
-*distribution_column_name* に格納された値をハッシュすることにより、各行を 1 つの分散に割り当てます。 決定論的アルゴリズムが使用されいます。つまり、常に同じ値が同じ分散にハッシュされます。  NULL を持つ行はすべて同じ分散に割り当てられるので、分散列は NOT NULL として定義する必要があります。
+*distribution_column_name* に格納された値をハッシュすることにより、各行を 1 つの分散に割り当てます。 これは決定的アルゴリズムであり、常に同じ値が同じ分散にハッシュされることを意味します。  NULL を持つ行はすべて同じディストリビューションに割り当てられるので、ディストリビューション列は NOT NULL として定義する必要があります。
 
 `DISTRIBUTION = ROUND_ROBIN`   
-行に、ラウンド ロビン方式でのすべてのディストリビューションに均等に分散します。 これは、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] での既定値です。
+行に、ラウンド ロビン方式でのすべてのディストリビューションに均等に分散します。 この動作は [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の既定の動作です。
 
 `DISTRIBUTION = REPLICATE`    
-テーブルの 1 つのコピーを各コンピューティング ノードに格納します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の場合、テーブルは各コンピューティング ノード上のディストリビューション データベースに格納されます。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の場合、テーブルはコンピューティング ノードにまたがる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイルグループに格納されます。 これは、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] での既定値です。
+テーブルの 1 つのコピーを各コンピューティング ノードに格納します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の場合、テーブルは各コンピューティング ノード上のディストリビューション データベースに格納されます。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の場合、テーブルはコンピューティング ノードにまたがる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイルグループに格納されます。 この動作は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の既定の動作です。
   
 ### <a name="TablePartitionOptions"></a>テーブル パーティションのオプション
 テーブル パーティションの使用の詳細については、「[SQL Data Warehouse でのテーブルのパーティション分割](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)」を参照してください。
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
-1 つまたは複数のテーブルのパーティションを作成します。 これらは横方向のテーブル スライスであり、テーブルがヒープ、クラスター化インデックス、またはクラスター化列ストア インデックスのいずれで格納されているかに関係なく、行のサブセットに対して操作を実行することができます。 配布 列とは異なりテーブルのパーティションは、各行が格納されている配布を特定できません。 代わりに、テーブルのパーティションは、行をグループ化し、各配布内に格納する方法を決定します。  
+1 つまたは複数のテーブルのパーティションを作成します。 これらのパーティションは横方向のテーブル スライスであり、テーブルがヒープ、クラスター化インデックス、またはクラスター化列ストア インデックスのいずれで格納されているかに関係なく、行のサブセットに対して操作を適用できます。 ディストリビューション列とは異なり、テーブルのパーティションは、各行が格納されるディストリビューションを決定しません。 代わりに、テーブルのパーティションは、行をグループ化し、各配布内に格納する方法を決定します。  
  
 | 引数 | 説明 |
 | -------- | ----------- |
-|*partition_column_name*| [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] で行をパーティション分割するのに使用する列を指定します。 このコラムでは、任意のデータ型を指定できます。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、パーティション列の値が昇順に並べ替えられます。 小さい順に並べる場合は、`RANGE` 指定のために `LEFT` から `RIGHT` に向かって並べられます。 |  
+|*partition_column_name*| [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] で行をパーティション分割するのに使用する列を指定します。 このコラムでは、任意のデータ型を指定できます。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、パーティション列の値が昇順に並べ替えられます。 小さい順に並べる場合は、`RANGE` 指定の `LEFT` から `RIGHT` に並べられます。 |  
 | `RANGE LEFT` | 左側 (値が小さくなっていく) のパーティションに属する境界値を指定します。 既定値は LEFT です。 |
 | `RANGE RIGHT` | 左側 (値が大きくなっていく) のパーティションに属する境界値を指定します。 | 
-| `FOR VALUES` ( *boundary_value* [,...*n*] ) | パーティションの境界値を指定します。 *boundary_value* は定数式です。 この式は NULL になることはできません。 また、*partition_column_name* のデータ型に一致するか、またはそのデータ型に暗黙的に変換可能である必要があります。 さらに、暗黙的な変換時には切り詰めることができないため、値のサイズおよびスケールは *partition_column_name* のデータ型と一致しません。<br></br><br></br>`PARTITION` 句を指定するときに、境界値を指定しない場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ではパーティションを 1 つ含むパーティション テーブルが作成されます。 必要に応じて、後で 2 つのパーティションにテーブルを分割することができます。<br></br><br></br>境界値を 1 つ指定した場合、生成されるテーブルには 2 つのパーティションが含まれます。境界値よりも小さい値に対するパーティションと、境界値よりも大きい値に対するパーティションです。 非パーティション テーブルにパーティションを移動した場合、非パーティション テーブルはデータを受け取りますが、そのメタデータ内にパーティション境界は設定されません。| 
+| `FOR VALUES` ( *boundary_value* [,...*n*] ) | パーティションの境界値を指定します。 *boundary_value* は定数式です。 NULL にすることはできません。 また、*partition_column_name* のデータ型に一致するか、またはそのデータ型に暗黙的に変換可能である必要があります。 さらに、暗黙的な変換時には切り詰めることができないため、値のサイズおよびスケールは *partition_column_name* のデータ型と一致しません。<br></br><br></br>`PARTITION` 句は指定したが、境界値を指定しない場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ではパーティションを 1 つ含むパーティション テーブルが作成されます。 必要に応じて、後でテーブルを 2 つのパーティションに分割できます。<br></br><br></br>境界値を 1 つ指定した場合、生成されるテーブルには 2 つのパーティションが含まれます。境界値よりも小さい値に対するパーティションと、境界値よりも大きい値に対するパーティションです。 非パーティション テーブルにパーティションを移動する場合、非パーティション テーブルは、データが表示されますが、メタデータ パーティション境界はありません。| 
  
  「例」セクションの「[パーティション テーブルの作成](#PartitionedTable)」を参照してください。
 
@@ -172,7 +172,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  `datetime2` [ ( *n* ) ]  
 `datetime` と同じ。ただし、秒の小数部の値を指定することができます。 *n* の既定値は `7` です。  
   
-|*n* 値|有効桁数|Scale|  
+|*n* 値|有効桁数|小数点以下桁数|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -196,11 +196,11 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  *n* の既定値は `7` です。  
   
  `float` [ ( *n* ) ]  
- 浮動小数点数値データで使用するおおよその数のデータを入力します。 浮動小数点データは概数、つまりデータ型の範囲内のすべての値を正確に表すことができます。 *n* では、`float` の仮数を指数表記で格納するために使用するビット数を指定します。 そのため、*n* は、有効桁数およびストレージのサイズを決定します。 *n* を指定する場合、`1` から `53` までの値にする必要があります。 *n* の既定値は `53` です。  
+ 浮動小数点数値データで使用するおおよその数のデータを入力します。 浮動小数点データは概数、つまりデータ型の範囲内のすべての値を正確に表すことができます。 *n* では、`float` の仮数を指数表記で格納するために使用するビット数を指定します。 *n* によって、有効桁数と記憶域のサイズが決まります。 *n* を指定する場合、`1` から `53` までの値にする必要があります。 *n* の既定値は `53` です。  
   
 | *n* 値 | 有効桁数 | ストレージのサイズ |  
 | --------: | --------: | -----------: |  
-| 1-24   | 7 桁の数字  | 4 バイト      |  
+| 1-24   | 7 桁  | 4 バイト      |  
 | 25-53  | 15 桁 | 8 バイト      |  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、*n* は次の 2 つの値のいずれかの値として扱われます。 `1`<= *n* <= `24` の場合、*n* は `24` として処理されます。 `25` <= *n* <= `53` の場合、*n* は `53` として処理されます。  
@@ -294,10 +294,10 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 
   
  ### <a name="rowstore-table-heap-or-clustered-index"></a>行ストア テーブル (ヒープまたはクラスター化インデックス)  
- 行ストア テーブルは、行単位で格納されるテーブルです。 ヒープまたはクラスター化インデックスが該当します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、ページ圧縮によってすべての行ストア テーブルを作成します。これはユーザー構成可能な設定ではありません。   
+ 行ストア テーブルは、行単位で格納されるテーブルです。 ヒープまたはクラスター化インデックスが該当します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、ページ圧縮によってすべての行ストア テーブルを作成します。この動作はユーザーが構成できる設定ではありません。   
  
  ### <a name="columnstore-table-columnstore-index"></a>列ストア テーブル (列ストア インデックス)
-列ストア テーブルは、列単位で格納されるテーブルです。 列ストア インデックスは、列ストア テーブルに格納されているデータを管理する技術です。  クラスター化列ストア インデックスはデータの配布方法には影響しませんが、各ディストリビューションへのデータの格納方法に影響します。
+列ストア テーブルは、列単位で格納されるテーブルです。 列ストア インデックスは、列ストア テーブルに格納されているデータを管理する技術です。  クラスター化列ストア インデックスはデータの配布方法には影響しません。むしろ、各ディストリビューションへのデータの格納方法に影響します。
 
 行ストア テーブルを列ストア テーブルに変更するには、テーブル上の既存のインデックスをすべて削除してから、クラスター化列ストア インデックスを作成します。 例については、「[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)」を参照してください。
 
@@ -308,10 +308,10 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  
 <a name="LimitationsRestrictions"></a>  
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- ディストリビューション列の既定の制約を定義することはできません。  
+ ディストリビューション列の DEFAULT 制約を定義することはできません。  
   
- ### <a name="partitions"></a>[メジャー グループ]
- パーティションを使用する場合、パーティション列は、Unicode 専用の照合順序はできません。 たとえば、次のステートメントは失敗します。  
+ ### <a name="partitions"></a>パーティション
+ パーティションを使用する場合、パーティション列には、Unicode のみの照合順序は設定できません。 たとえば、次のステートメントは失敗します。  
   
  `CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))`  
  
@@ -319,14 +319,14 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  
   
  ### <a name="temporary-tables"></a>一時テーブル
- グローバルの一時テーブルで始まる ## はサポートされていません。  
+ ## で始まるグローバル一時テーブルはサポートされていません。  
   
  ローカル一時テーブルには、次のような制限事項と制約があります。  
   
 -   現在のセッションにのみ表示されます。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、セッションの終了時にローカル一時テーブルを自動的に削除します。 明示的に削除するには、DROP TABLE ステートメントを使用します。   
--   名前変更できません。 
--   これらは、パーティションまたはビューにはできません。  
--   そのアクセス許可を変更することはできません。 ローカル一時テーブルでは、`GRANT`、`DENY`、および `REVOKE` ステートメントを使用できません。   
+-   名前を変更することはできません。 
+-   パーティションまたはビューを持つことはできません。  
+-   それらのアクセス許可を変更することはできません。 ローカル一時テーブルでは、`GRANT`、`DENY`、および `REVOKE` ステートメントは使用できません。   
 -   データベース コンソール コマンドは、一時テーブルがブロックされます。   
 -   バッチ内で 1 つ以上のローカル一時テーブルを使用した場合、一意の名前でそれぞれ必要があります。 複数のセッションが同じバッチを実行していて、同じローカル一時テーブルを作成する場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の内部では、ローカル一時テーブルごとに一意の名前を維持するために、ローカル一時テーブル名に数値サフィックスを追加します。  
     
@@ -368,8 +368,8 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>一時テーブルの例
 
-### <a name="TemporaryTable"></a> C. ローカル一時テーブルを作成します。  
- 次に、#myTable をという名前のローカル一時テーブルを作成します。 テーブルは、3 部構成の名前を指定します。 一時テーブル名は # で開始します。   
+### <a name="TemporaryTable"></a> C. ローカル一時テーブルを作成する  
+ 次の例は、#myTable という名前のローカル一時テーブルを作成します。 テーブルは、3 つの部分で構成される名前によって指定され、# で始まります。   
   
 ```  
 CREATE TABLE AdventureWorks.dbo.#myTable   
@@ -392,7 +392,7 @@ WITH
 ### <a name="ClusteredColumnstoreIndex"></a> D. クラスター化列ストア インデックスを持つテーブルを作成します。  
  次の例では、クラスター化列ストア インデックスを持つ分散型のテーブルを作成します。 各配布は、列ストアとして格納されます。  
   
- クラスター化列ストア インデックスには影響しませんデータを配布する方法です。データは、行を常に分散されます。 クラスター化列ストア インデックスでは、各配布内でのデータの格納方法に影響します。  
+ クラスター化列ストア インデックスは、データの配布方法には影響しません。データは常に行によって配布されます。 クラスター化列ストア インデックスでは、各配布内でのデータの格納方法に影響します。  
   
 ```  
   
@@ -443,7 +443,7 @@ WITH
 ```  
   
 ### <a name="Replicated"></a> G. レプリケート テーブルを作成します。  
- 次の例では、前の例のようなレプリケート テーブルを作成します。 レプリケート テーブルは、各計算ノードに完全にコピーされます。 各計算ノードにこのコピーがあれば、クエリにおけるデータ移動を減らすことができます。 この例は CLUSTERED INDEX を使用して作成されます。この場合、ヒープよりも優れたデータ圧縮が得られますが、行数不足のために適切な CLUSTERED COLUMNSTORE INDEX 圧縮を達成できないことがあります。  
+ 次の例では、前の例のようなレプリケート テーブルを作成します。 レプリケート テーブルは、各計算ノードに完全にコピーされます。 各計算ノードにこのコピーがあれば、クエリにおけるデータ移動を減らすことができます。 この例は CLUSTERED INDEX を使用して作成され、ヒープよりもデータの圧縮率が高くなっています。 ヒープでは、適切な CLUSTERED COLUMNSTORE INDEX 圧縮を実現するための十分な列が含まれていない場合があります。  
   
 ```  
 CREATE TABLE myTable   
@@ -497,7 +497,7 @@ WITH
 -   パーティション 5:40 <= col  
   
 ### <a name="OnePartition"></a> I. 1 つのパーティションを持つパーティション テーブルを作成します。  
- 次の例では、1 つのパーティションをパーティション テーブルを作成します。 指定しません任意の境界値では、1 つのパーティションになります。  
+ 次の例では、1 つのパーティションを持つパーティション テーブルを作成します。 境界値は指定されていないため、結果は 1 つのパーティションになります。  
   
 ```  
 CREATE TABLE myTable (  
@@ -557,5 +557,4 @@ WITH
  [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-  
   

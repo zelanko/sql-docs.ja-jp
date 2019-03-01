@@ -29,12 +29,12 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: de18602606fb380bc8b87eb7dcb18b84febf658e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6225fee2ece7ce1af163804c50def198c00a43d8
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636280"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154868"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -79,7 +79,7 @@ DBCC CHECKIDENT
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|現在の ID 値はリセットされません。 DBCC CHECKIDENT は、ID 列の現在の ID 値と現在の最大値を返します。 2 つの値が異なる場合は、エラーが発生しないよう、または連続値の一部が欠落しないように、ID 値をリセットする必要があります。|  
 |DBCC CHECKIDENT ( *table_name* )<br /><br /> 内の複数の<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|テーブルの現在の ID 値が、ID 列に格納されている最大の ID 値より小さい場合、テーブルの現在の ID 値は ID 列の最大値にリセットされます。 後の「例外」のセクションを参照してください。|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|現在の ID 値は *new_reseed_value* に設定されます。 テーブルが作成された後、そのテーブルに行が挿入されていない、または TRUNCATE TABLE ステートメントを使用してすべての行が削除された場合、DBCC CHECKIDENT を実行した後に挿入された最初の行が ID として *new_reseed_value* を使用します。<br /><br /> 行がテーブルに存在する場合、次の行が *new_reseed_value* で挿入されます。 バージョン [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以前では、挿入された次の行で *new_reseed_value* + [現在のインクリメント](../../t-sql/functions/ident-incr-transact-sql.md)の値を使用します。<br /><br /> テーブルが空でない場合、ID 値に ID 列の最大値より小さな値を設定すると、次の状況のいずれかが発生する可能性があります。<br /><br /> ID 列に PRIMARY KEY 制約または UNIQUE 制約が設定されている場合、生成される ID 値と既存の値との競合が原因で、テーブルに対する後続の挿入操作でエラー メッセージ 2627 が生成されます。<br /><br /> PRIMARY KEY 制約または UNIQUE 制約が設定されていない場合、後続の挿入操作では重複した ID 値が挿入されます。|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|現在の ID 値は *new_reseed_value* に設定されます。 テーブルが作成された後、そのテーブルに行が挿入されていない、または TRUNCATE TABLE ステートメントを使用してすべての行が削除された場合、DBCC CHECKIDENT を実行した後に挿入された最初の行が ID として *new_reseed_value* を使用します。<br /><br /> 行がテーブルに存在する場合、*new_reseed_value* と[現在の増分](../../t-sql/functions/ident-incr-transact-sql.md)値を使用して、次の行が挿入されます。 バージョン [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以前では、挿入される次の行では *new_reseed_value* と[現在の増分](../../t-sql/functions/ident-incr-transact-sql.md)値が使用されます。<br /><br /> テーブルが空でない場合、ID 値に ID 列の最大値より小さな値を設定すると、次の状況のいずれかが発生する可能性があります。<br /><br /> ID 列に PRIMARY KEY 制約または UNIQUE 制約が設定されている場合、生成される ID 値と既存の値との競合が原因で、テーブルに対する後続の挿入操作でエラー メッセージ 2627 が生成されます。<br /><br /> PRIMARY KEY 制約または UNIQUE 制約が設定されていない場合、後続の挿入操作では重複した ID 値が挿入されます。|  
   
 ## <a name="exceptions"></a>例外  
  次の表に、DBCC CHECKIDENT で現在の ID 値が自動的にリセットされないときの条件と、ID 値をリセットする方法を示します。  

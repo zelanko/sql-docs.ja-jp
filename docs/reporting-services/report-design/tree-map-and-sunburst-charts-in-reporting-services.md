@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c255369e8292aa2b7275a58d5e8375890153a5aa
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 012963436b26952cd730a82bbf407803ac600fe2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814105"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295550"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services のツリー マップとサンバースト グラフ
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -40,11 +40,11 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
 3.  サンプル データから、次のフィールドを追加します。  
   
-    * **値:** LineTotal
+    * **値**:LineTotal
     * **カテゴリ グループ** (次の順序を使用):
         1. CategoryName
         2. SubcategoryName
-    * **系列グループ:** TerritoryName  
+    * **系列グループ**:TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -85,12 +85,12 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
 3.  サンプル データから、次のフィールドを追加します。  
 
-    * **値:** LineTotal
+    * **値**:LineTotal
     * **カテゴリ グループ** (次の順序を使用):
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **系列グループ:** TerritoryName  
+    * **系列グループ**:TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -114,7 +114,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
 1.  **データを取得します**。  
   
-     このセクションのクエリは、「[Adventure Works 2016 Full Database Backup](https://github.com/Microsoft/sql-server-samples/releases)」 (Adventure Works 2016: データベースの完全なバックアップ) からダウンロードできる AdventureWorks データベースに基づいています。  
+     このセクションのクエリは、AdventureWorks データベースに基づいています。このデータベースは GitHub の「[AdventureWorks 2016 full database backup (AdventureWorks 2016 の完全なデータベース バックアップ)](https://github.com/Microsoft/sql-server-samples/releases)」からダウンロードできます。  
   
   
 2.  **データ ソースを作成します**。  
@@ -177,7 +177,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
 * [共有データセット デザイン ビュー &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [系列へのツールヒントの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 * [チュートリアル: Power BI でのツリー マップ](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
-* [ツリー マップ: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
+* [ツリーマップ:Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
 <br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

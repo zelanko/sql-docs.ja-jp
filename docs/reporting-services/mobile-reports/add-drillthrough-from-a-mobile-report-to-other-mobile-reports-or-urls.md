@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9bf66cdaad2f0ad85ff0213bb0711723e6ed3d05
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085418"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291956"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>モバイル レポートから他のモバイル レポートまたは URL にドリルスルーを追加する
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポート内の任意のゲージ、グラフ、またはデータ グリッドから、別のモバイル レポートまたはカスタム URL にドリルスルーを追加することができます。 
@@ -26,7 +26,7 @@ URL または別のモバイル レポートに対するドリルスルーがあ
 
 ![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
 
->**ヒント**: ターゲット レポートを作成し、それを最初に [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web ポータルに保存します。 ソース レポートからのパラメーターを渡す場合は、そのパラメーターをターゲット レポートにも追加します。 ソース レポートからターゲット レポートへのドリルスルーをセットアップできます。 [モバイル レポートへのパラメーターの追加](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)を行います。
+>**ヒント**:ターゲット レポートを作成し、それを最初に [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web ポータルに保存します。 ソース レポートからのパラメーターを渡す場合は、そのパラメーターをターゲット レポートにも追加します。 ソース レポートからターゲット レポートへのドリルスルーをセットアップできます。 [モバイル レポートへのパラメーターの追加](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)を行います。
  
 ## <a name="set-up-drillthrough-to-a-mobile-report"></a>モバイル レポートへのドリルスルーを設定する  
 
@@ -37,7 +37,7 @@ URL または別のモバイル レポートに対するドリルスルーがあ
 2. **[ビジュアルのプロパティ]** ウィンドウで、**[ドリルスルー ターゲット]** > **[モバイル レポート]** の順に選択します。  
 3. サーバーとターゲット モバイル レポートを選択します。  
 
-   >注: ターゲット モバイル レポートがソース モバイル レポートと同じサーバー上にない場合は、次のセクションの説明に従って、カスタム URL を使用してそれに接続します。  
+   >注:ターゲット モバイル レポートがソース モバイル レポートと同じサーバー上にない場合は、次のセクションの説明に従って、カスタム URL を使用してそれに接続します。  
  
 4. ターゲット モバイル レポートを選択すると、使用可能な入力パラメーターが表示されます。これには、ターゲット モバイル レポートのデータセットに対して構成されたナビゲーター コントロールおよびパラメーターにバインドすることができるプロパティも含まれます。  
 

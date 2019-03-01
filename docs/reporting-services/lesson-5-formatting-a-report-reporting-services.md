@@ -1,21 +1,21 @@
 ---
-title: 'レッスン 5 : レポートの書式設定 (Reporting Services) | Microsoft Docs'
+title: 'レッスン 5: レポートの書式設定 (Reporting Services) | Microsoft Docs'
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8b04fa0c468c9e18264809f69ea42797ba83b452
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1c5a41b39b5c22c05ac4b13a9e57606110b60a2b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842630"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291110"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>レッスン 5 : レポートの書式設定 (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>レッスン 5: レポートの書式設定 (Reporting Services)
 Sales Orders レポートに 1 つのデータ領域といくつかのフィールドを追加した後、日付および通貨のフィールド、および列ヘッダーを書式設定できます。  
   
 ## <a name="bkmk_format_date"></a>日付の書式設定  
@@ -46,7 +46,7 @@ Sales Orders レポートに 1 つのデータ領域といくつかのフィー�
   
 3.  地域設定が英語 (米国) の場合、既定値は次のようになります。  
   
-    -   **小数点以下の桁数 : 2**  
+    -   **小数点以下の桁数 :2**  
   
     -   **負の数値 : ($12345.00)**  
   
@@ -80,7 +80,7 @@ Sales Orders レポートに 1 つのデータ領域といくつかのフィー�
 5.  **[ファイル]** メニューの **[すべてを保存]** をクリックして、レポートを保存します。  
   
 ## <a name="next-steps"></a>Next Steps  
-ここでは、列ヘッダー、日付値、および通貨値を書式設定しました。 次に、レポートにグループ化および合計を追加します。 「[レッスン 6: グループと合計の追加 &#40;Reporting Services&#41;」](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) を参照してください。  
+ここでは、列ヘッダー、日付値、および通貨値を書式設定しました。 次に、レポートにグループ化および合計を追加します。 「[レッスン 6:グループと合計の追加 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 381f0070a8e045aeec707c1f8dc9a6df9cd157d9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f37319c07856f0e31abcb2afb047bdea2904063a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711420"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290300"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server のレポート ビルダー
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] は、Visual Studio のレポート デザイナーよりもスタンドアロン環境での作業を好むビジネス ユーザー向けの、ページ分割されたレポートを作成するためのツールです。  改ページ調整されたレポートをデザインすることは、データの取得場所、取得するデータ、およびデータの表示方法を指定するレポート定義を作成することです。 レポートを実行するとき、レポート プロセッサは、指定されたレポート定義を受け取り、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートをプレビューできます。 その後、ネイティブ モードまたは SharePoint 統合モード (2016 以前) でレポートを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーにパブリッシュします。 ページ分割されたレポートを Power BI サービスにパブリッシュすることもできます。 詳しくは、[Power BI Premium のページ分割されたレポート](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (プレビュー) に関するページをご覧ください。

@@ -1,7 +1,7 @@
 ---
 title: クラスター化インデックスと非クラスター化インデックスの概念 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
@@ -15,18 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e8daf01c2676c72630beb80d7511e2fa84afe9c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 21d9db627e55b9f4544fd52686dff9b76d55a76f
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299269"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802299"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>クラスター化インデックスと非クラスター化インデックスの概念
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
   インデックスとは、テーブルまたはビューに関連付けられたディスク上の構造で、テーブルやビューからの行の取得を高速化します。 インデックスには、テーブル内またはビュー内の 1 つ以上の列から構築されたキーが含まれています。 これらのキーは 1 つの構造 (B-Tree) 内に格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はその構造を使用して、キー値に関連した 1 つ以上の行を効率よく迅速に検出できます。  
   
@@ -53,7 +50,10 @@ ms.locfileid: "54299269"
  特別な用途のインデックスのその他の種類については、「 [インデックス](../../relational-databases/indexes/indexes.md) 」を参照してください。  
   
 ## <a name="indexes-and-constraints"></a>インデックスと制約  
- PRIMARY KEY 制約と UNIQUE 制約がテーブル列に定義されると、インデックスが自動的に作成されます。 たとえば、テーブルを作成し、特定の列を主キーとして識別すると、その列に PRIMARY KEY 制約とインデックスが [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的に作成されます。 詳細については、「 [主キーの作成](../../relational-databases/tables/create-primary-keys.md) 」および「 [UNIQUE 制約の作成](../../relational-databases/tables/create-unique-constraints.md)」を参照してください。  
+
+PRIMARY KEY 制約と UNIQUE 制約がテーブル列に定義されると、インデックスが自動的に作成されます。 たとえば、UNIQUE 制約があるテーブルを作成すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって非クラスター化インデックスが自動的に作成されます。 PRIMARY KEY を構成した場合、クラスター化インデックスが既に存在しない限り、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的に作成されます。 既存のテーブルに PRIMARY KEY 制約を適用しようとしたときに、そのテーブルにクラスター化インデックスが既に存在する場合、SQL Server によって、非クラスター化インデックスを使用するプライマリ キーが適用されます。
+
+詳細については、「 [主キーの作成](../../relational-databases/tables/create-primary-keys.md) 」および「 [UNIQUE 制約の作成](../../relational-databases/tables/create-unique-constraints.md)」を参照してください。  
   
 ## <a name="how-indexes-are-used-by-the-query-optimizer"></a>クエリ オプティマイザーでのインデックスの使用方法  
  インデックスを適切に設計すると、ディスク I/O 操作が減少し、使用するシステム リソースが少なくなります。その結果、クエリのパフォーマンスが向上します。 インデックスは、SELECT、UPDATE、DELETE、または MERGE の各ステートメントを含むさまざまなクエリで役立ちます。 `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` データベースのクエリ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] について考えてみましょう。 このクエリが実行されるときに、クエリ オプティマイザーでは、データの取得に使用できる方法がそれぞれ評価され、最も効率的な方法が選択されます。 選択される方法には、テーブルのスキャン、1 つ以上のインデックスのスキャン (存在する場合) などがあります。  

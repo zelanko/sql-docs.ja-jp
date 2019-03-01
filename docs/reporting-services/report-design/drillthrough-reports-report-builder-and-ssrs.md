@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 05335f661a522cf91bef1b6d18dadccbb34b722d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c44196f8a61208e378936ad9cb40bf75ad28e36f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640810"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290280"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>詳細レポート (レポート ビルダーおよび SSRS)
   詳細レポートは、ユーザーが別のレポート内のリンクをクリックすることで開かれるレポートのことです。 詳細レポートには、通常、元の要約レポートに含まれるアイテムについての詳細が含まれています。 たとえば、次の図では、売り上げ要約レポートに販売注文と合計の一覧が含まれています。 この要約一覧で任意の注文番号をクリックすると、この注文に関する詳細が含まれた別のレポートが開きます。  
@@ -25,7 +25,7 @@ ms.locfileid: "47640810"
 > [!NOTE]  
 >  レポート ビルダーで作業しているときに、メイン レポートのドリルスルー リンクをクリックしたときに開く詳細レポートを表示するには、レポート サーバーに接続している必要があります。  
   
- 今すぐ詳細レポートを表示するには、「[チュートリアル: 詳細レポートとメイン レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)」を参照してください。 
+ 詳細レポートをすぐに使い始めるには、「[チュートリアル:詳細レポートとメイン レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)」を参照してください。 
    
 ## <a name="parameters-in-drillthrough-reports"></a>詳細レポートのパラメーター  
  詳細レポートには、通常、要約レポートから渡されるパラメーターが含まれています。 売り上げ要約レポートの例では、要約レポートには、テーブル セルのテキスト ボックス内のフィールド [OrderNumber] が含まれます。 詳細レポートには注文番号 (Order Number) を値として受け取るパラメーターが含まれています。 [OrderNumber] のテキスト ボックスに詳細レポート リンクを設定するとき、対象のレポートのパラメーターも [OrderNumber] に設定します。 ユーザーが要約レポート内の注文番号をクリックすると、対象の詳細レポートが開き、その注文番号の情報が表示されます。 パラメーターの値に基づいて詳細レポートをカスタマイズする方法については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」と「[InScope 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-inscope-function.md)」を参照してください。  

@@ -1,12 +1,15 @@
 ---
 title: Power Query ソース | Microsoft Docs
 description: SQL Server Integration Services データ フロー内の Power Query ソースを構成する方法について説明します
-ms.date: 02/02/2019
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
+- sql13.ssis.designer.powerqueryconnmgr.f1
+- sql13.ssis.designer.powerquerysource.queries.f1
+- sql13.ssis.designer.powerquerysource.connmgrs.f1
 - sql14.ssis.designer.powerqueryconnmgr.f1
 - sql14.ssis.designer.powerquerysource.queries.f1
 - sql14.ssis.designer.powerquerysource.connmgrs.f1
@@ -14,12 +17,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 00b24bdc5da2c717f43ca30e9159aa845faf171b
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 072cf951eabd5d7d0ae2211427a66e63900cfb72
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570705"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319313"
 ---
 # <a name="power-query-source-preview"></a>Power Query ソース (プレビュー)
 
@@ -68,9 +71,6 @@ SSDT で Power Query ソースを含むデータ フローを設計するとき�
 
 一部のソース (**Oracle**、**DB2**、**MySQL**、**PostgreSQL**、**Teradata**、**Sybase**) では、[Power Query の前提条件](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a)に関する記事から取得できる ADO.NET ドライバーを追加でインストールする必要があります。 カスタム セットアップ インターフェイスを使用して Azure-SSIS IR にインストールできます。[Azure-SSIS IR のカスタマイズ](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)に関する記事を参照してください。
 
-> [!NOTE]
-> **Oracle** データ ソースでは、現時点では Azure-SSIS IR に Oracle ADO.NET ドライバーはインストールできないため、代わりに Oracle ODBC ドライバーをインストールし、当面は **ODBC** データ ソースを使用して Oracle に接続してください。[Azure-SSIS IR のカスタマイズ](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)に関する記事の **ORACLE STANDARD ODBC** の例を参照してください。
-
 **[データ ソース パス]** では、接続文字列を形成するデータ ソース固有のプロパティを認証情報なしで入力できます。 たとえば、**SQL** データ ソースのパスは、`<Server>;<Database>` 形式になります。 **[編集]** ボタンを選択して、パスを形成するデータ ソース固有のプロパティに値を割り当てることできます。
 
 ![PQ ソース接続マネージャー エディター (パス)](media/power-query-source/pq-source-connection-manager-editor-path.png)
@@ -78,6 +78,12 @@ SSDT で Power Query ソースを含むデータ フローを設計するとき�
 最後に、**[認証の種類]** では、ドロップダウン メニューから **[匿名]**/**[Windows 認証]**/**[ユーザー名とパスワード]**/**[キー]** のいずれかを選択し、適切なアクセス資格情報を入力し、**[テスト接続]** ボタンを選択して Power Query ソースが適切に構成されていることを確認します。
 
 ![PQ ソース接続マネージャー エディター (認証)](media/power-query-source/pq-source-connection-manager-editor-authentication.png)
+
+### <a name="current-limitations"></a>現在の制限
+
+-   **Oracle** データ ソースは現時点では使用できません。Azure-SSIS IR に Oracle ADO.NET ドライバーはインストールできないため、代わりに Oracle ODBC ドライバーをインストールし、当面は **ODBC** データ ソースを使用して Oracle に接続してください。[Azure-SSIS IR のカスタマイズ](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)に関する記事の **ORACLE STANDARD ODBC** の例を参照してください。
+
+-   **Web** データ ソースは、現時点ではカスタム セットアップのある Azure-SSIS IR 上では使用できないため、現在のところはカスタム設定のない Azure-SSIS IR 上で使用してください。
 
 ## <a name="next-steps"></a>次の手順
 Azure-SSIS IR で、ADF パイプラインのファーストクラスのアクティビティとして SSIS パッケージを実行する方法を確認します。 [SSIS パッケージのアクティビティ ランタイムの実行](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)に関する記事を参照してください。

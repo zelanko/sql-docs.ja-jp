@@ -1,7 +1,7 @@
 ---
 title: クエリ調整アシスタントを使用したデータベースのアップグレード | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2018
+ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317802"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295670"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>クエリ調整アシスタントを使用したデータベースのアップグレード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "54317802"
 
 このアップグレードの制御は、[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)が導入されており、上記の推奨されるワークフローの最後のステップを自動化できる [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] でさらに強化されました。
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、新しい **クエリ調整アシスタント (QTA)** 機能を利用して、推奨されるワークフローに従うことで、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンへのアップグレード時のパフォーマンスの安定性を維持できます。これについては、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」の「*新しい SQL Server にアップグレードするときにパフォーマンスの安定性を維持する*」セクションに記載されています。 
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、新しい **クエリ調整アシスタント (QTA)** 機能を利用して、推奨されるワークフローに従うことで、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンへのアップグレード時のパフォーマンスの安定性を維持できます。これについては、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」の「*新しい SQL Server にアップグレードするときにパフォーマンスの安定性を維持する*」セクションに記載されています。 ただし、推奨されるワークフローの最後の手順で示されているように、QTA は以前の既知の適切なプランにロールバックしません。 代わりに、QTA は [クエリ ストアの **[低下したクエリ]**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) ビューで見つかった回帰をすべて追跡し、適用できるオプティマイザー モデル バリエーションの可能な順列を反復処理することで、新しいより良いプランを作成できます。
 
 > [!IMPORTANT]
 > QTA では、ユーザー ワークロードは生成されません。 アプリケーションで使用されていない環境で QTA を実行する場合は、別の方法でターゲットとなる [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で代表的なテスト ワークロードを引き続き確実に実行できるようにします。 
@@ -122,7 +122,7 @@ QTA はセッション ベースの機能であり、セッションが初めて
     -  **セッション ID**
     -  **セッション名**: データベースの名前とセッションの作成日時で構成された、システムによって生成される名前。
     -  **状態**: セッションの状態 (アクティブまたは終了)。
-    -  **説明**: システムによって生成され、ユーザーが選択したターゲット データベース互換レベルと、ビジネス サイクル ワークロードの日数で構成されます。
+    -  **説明**:システムによって生成され、ユーザーが選択したターゲット データベース互換レベルと、ビジネス サイクル ワークロードの日数で構成されます。
     -  **開始した時刻**: セッションが作成された日時。
 
     ![QTA のセッション管理ページ](../../relational-databases/performance/media/qta-session-management.png "QTA のセッション管理ページ")
