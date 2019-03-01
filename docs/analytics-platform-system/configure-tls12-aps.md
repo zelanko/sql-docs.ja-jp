@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 24e93c91c916272f71f137dd10bf402d693bbcd8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 5b6ea2144fe333f87123abdf92e16aa7122e98b4
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52615982"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007555"
 ---
 # <a name="configure-tls-12-in-aps"></a>AP で TLS 1.2 を構成します。
 
-TLS 1.2 のみを使用するアクセス ポイントをセキュリティで保護するには、すべての物理および仮想ホストでは、その他のプロトコルを明示的に無効にする必要があります。 プロトコルを無効にするには、レジストリ設定の変更が必要です。
+TLS 1.2 のみを使用するアクセス ポイントをセキュリティで保護するには、すべての物理および仮想ホストでは、その他のプロトコルを明示的に無効にする必要があります。 プロトコルを無効にするには、レジストリ設定の変更が必要です。 レジストリの変更には、仮想および物理ホストの再起動が必要です。
 
 > [!WARNING]
 > ここでは、レジストリの変更方法を示す手順について説明します。 ただし、深刻な問題は、レジストリが正しくないデータの損失が発生し、オペレーティング システムの再インストールする必要がありますを変更する場合に発生する可能性があります。 強くお勧め、レジストリのバックアップを変更する前にします。 バックアップがあれば、問題が発生してもレジストリを復元できます。 バックアップし、レジストリを復元する方法の詳細については、以下の記事では、マイクロソフト サポート技術情報番号をクリックします。<br>

@@ -1,21 +1,21 @@
 ---
 title: Learning サービス (R、Python、Java) を Linux 上の SQL Server マシンのインストール |Microsoft Docs
-description: この記事では、Red Hat、Ubuntu 上の SQL Server Machine Learning サービス (R、Python、Java) をインストールする方法を説明します。
+description: Red Hat、Ubuntu 上の SQL Server Machine Learning サービス (R、Python、Java) をインストールする方法について説明します。
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 01/18/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e140a4eeb8fe6481b52be378c6ad9569160e9e3
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: b27c2f897f3a96003eefe879aba4f1d5dba7512d
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397661"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018058"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>SQL Server 2019 の Machine Learning サービス (R、Python、Java) Linux 上のインストールします。
 
@@ -27,7 +27,7 @@ R、Python、および Java 拡張機能パッケージの場所は、SQL Server
 
 ## <a name="uninstall-previous-ctp"></a>以前の CTP をアンインストールします。
 
-パッケージ一覧は、最近 CTP のリリース、結果としてパッケージ数が少ない経由で変更されました。 CTP 2.2 以降をインストールする前に、前のすべてのパッケージを削除するには、CTP 2.0 または 2.1 をアンインストールすることをお勧めします。 複数のバージョンのサイド バイ サイドでインストールがサポートされていません。
+パッケージ一覧は、最近 CTP のリリース、結果としてパッケージ数が少ない経由で変更されました。 CTP をアンインストールすることをお勧めします。 2.x CTP 2.3 をインストールする前に、前のすべてのパッケージを削除します。 複数のバージョンのサイド バイ サイドでインストールがサポートされていません。
 
 ### <a name="1-confirm-package-installation"></a>1.パッケージのインストールを確認します。
 
@@ -61,7 +61,7 @@ ls /opt/microsoft/mssql/bin
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-22-install"></a>3.CTP 2.2 のインストールを続行します。
+### <a name="3-proceed-with-ctp-23-install"></a>3.CTP 2.3 インストールを続行します。
 
 この記事の手順を使用して、オペレーティング システムの最上位のパッケージ レベルでインストールします。
 
@@ -298,42 +298,50 @@ sudo zypper install mssql-server-extensibility-java
 
 1. SQL Server サービスを実行するために使用する mssql ユーザー アカウントを追加します。 以前のセットアップを実行していない場合に必要です。
 
-  ```bash
-  sudo /opt/mssql/bin/mssql-conf setup
-  ```
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf setup
+   ```
 
 2. オープン ソース R と Python のライセンス契約に同意します。 これを行ういくつかの方法はあります。 以前 SQL Server ライセンスを受け入れ、R または Python の拡張機能を追加するようになりましたすると、次のコマンドは、その条項に同意は。
 
-  ```bash
-  # Run as SUDO or root
-  # Use set + EULA 
-    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
-  ```
+   ```bash
+   # Run as SUDO or root
+   # Use set + EULA 
+   sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+   ```
 
-  別のワークフローは、SQL Server データベース エンジンの使用許諾契約書を許可していない場合は、セットアップによって検出されたこと、mssql mlservices パッケージおよび EULA 同意のプロンプト時に`mssql-conf setup`を実行します。 使用許諾契約書パラメーターに関する詳細については、次を参照してください。 [mssql-conf ツールで SQL Server の構成](sql-server-linux-configure-mssql-conf.md#mlservices-eula)します。
+   別のワークフローは、SQL Server データベース エンジンの使用許諾契約書を許可していない場合は、セットアップによって検出されたこと、mssql mlservices パッケージおよび EULA 同意のプロンプト時に`mssql-conf setup`を実行します。 使用許諾契約書パラメーターに関する詳細については、次を参照してください。 [mssql-conf ツールで SQL Server の構成](sql-server-linux-configure-mssql-conf.md#mlservices-eula)します。
 
-3. R の機能の統合のみ、設定、 **MKL_CBWR**環境変数を[出力を一貫性のある](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)Intel 数値演算ライブラリ (MKL) 計算から。
+3. 発信ネットワーク アクセスを有効にします。 既定では、発信ネットワーク アクセスが無効です。 送信要求を有効にするには、"outboundnetworkaccess"mssql-conf ツールを使用してブール型プロパティを設定します。 詳細については、次を参照してください。 [mssql-conf での Linux 上の SQL Server の構成](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access)します。
 
-  + という名前のファイルを編集または **.bash_profile** 、ユーザーのホーム ディレクトリ内の行を追加する`export MKL_CBWR="AUTO"`ファイルにします。
+   ```bash
+   # Run as SUDO or root
+   # Enable outbound requests over the network
+   sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+   ```
 
-  + このファイルを入力して実行`source .bash_profile`bash コマンド プロンプトでします。
+4. R の機能の統合のみ、設定、 **MKL_CBWR**環境変数を[出力を一貫性のある](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)Intel 数値演算ライブラリ (MKL) 計算から。
 
-4. SQL Server スタート パッド サービスとデータベース エンジンのインスタンスを再起動します。 
+   + という名前のファイルを編集または **.bash_profile** 、ユーザーのホーム ディレクトリ内の行を追加する`export MKL_CBWR="AUTO"`ファイルにします。
 
-  ```bash
-  systemctl restart mssql-launchpadd
+   + このファイルを入力して実行`source .bash_profile`bash コマンド プロンプトでします。
 
-  systemctl restart mssql-server.service
-  ```
+5. SQL Server スタート パッド サービスと、INI ファイルの更新された値を読み取るデータベース エンジンのインスタンスを再起動します。 再起動のメッセージを通知する、拡張機能に関連する設定を変更するたびにします。  
 
-5. Azure Data Studio または SQL Server Management Studio (Windows のみ) などの別のツールを使用して外部スクリプトの実行を有効にする Transact SQL を実行します。 
+   ```bash
+   systemctl restart mssql-launchpadd
 
-  ```bash
-  EXEC sp_configure 'external scripts enabled', 1 
-  RECONFIGURE WITH OVERRIDE 
-  ```
+   systemctl restart mssql-server.service
+   ```
 
-6. スタート パッド サービスを再起動します。
+6. Azure Data Studio または SQL Server Management Studio (Windows のみ) などの別のツールを使用して外部スクリプトの実行を有効にする Transact SQL を実行します。 
+
+   ```bash
+   EXEC sp_configure 'external scripts enabled', 1 
+   RECONFIGURE WITH OVERRIDE 
+   ```
+
+7. スタート パッド サービスを再起動します。
 
 ## <a name="verify-installation"></a>インストールの確認
 
@@ -560,7 +568,7 @@ Linux および Windows の間の類似性がある[リソース ガバナンス
 |total_cpu_user_ms | リソース ガバナー統計がリセットされた後のミリ秒単位で累積的な CPU ユーザー時間。| Linux では、この統計は、システムの行の値に値が cpuacct.stat は、CGroups cpuacct サブシステムからソースします。 | 
 |active_processes_count | 要求の時点で実行されている外部プロセスの数。| Linux では、この統計は、値が pids.current GGroups pid サブシステムからソースします。 | 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 R 開発者は、簡単な例で作業を開始し、SQL Server での R の動作の基本を学習します。 次の手順で、次のリンクを参照してください。
 

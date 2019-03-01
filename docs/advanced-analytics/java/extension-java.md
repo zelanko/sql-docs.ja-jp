@@ -3,18 +3,18 @@ title: SQL Server 2019 - SQL Server Machine Learning Services での Java 言語
 description: インストール、構成、および Linux と Windows の両方のシステムでは、SQL Server 2019 Java 言語拡張機能を検証します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a258573ff7506f2533c2f91edb5751cfd1121dc8
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: a18886ea4daff3fb87853a556b67ad0562c2efd3
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53431716"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017838"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>SQL Server 2019 で Java 言語の拡張機能 
 
@@ -24,23 +24,27 @@ Windows と Linux の両方で SQL Server 2019 preview 以降で実行できる�
 
 プログラミング言語拡張子と同様、システム ストアド プロシージャ[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)はコンパイル済みの Java コードを実行するためのインターフェイスです。
 
+<a name="prerequisites"></a>
+
 ## <a name="prerequisites"></a>前提条件
 
-SQL Server 2019 プレビュー インスタンスが必要です。 以前のバージョンの Java 統合ではありません。 
+SQL Server 2019 プレビュー インスタンスが必要です。 以前のバージョンの Java 統合ではありません。
 
-Java バージョンの要件は、Windows および Linux 全体では異なります。 Java ランタイム環境 (JRE) が最低限の要件が、Jdk、Java コンパイラまたはパッケージを開発する必要がある場合に便利です。 JDK は、JDK をインストールする場合、すべて紹介するため、JRE の必要はありません。
+Java 8 がサポートされています。 Java ランタイム環境 (JRE) が最低限の要件が、Jdk、Java コンパイラまたはパッケージを開発する必要がある場合に便利です。 JDK は、JDK をインストールする場合、すべて紹介するため、JRE の必要はありません。
 
-| オペレーティング システム | Java のバージョン | JRE のダウンロード | JDK ダウンロード |
-|------------------|--------------|--------------|--------------|
-| Windows          | 1.10         | [JRE 10](https://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](https://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
-| Linux            | 1.8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
+優先、Java 8 の配布を使用することができます。 推奨される 2 つのディストリビューションを次に示します。
 
-Linux では、 **mssql server extensibility java**がインストールされていない場合にパッケージが JRE 1.8 に自動的にインストールされます。 インストール スクリプトは、JAVA_HOME という環境変数に JVM パスを追加する必要があります。
+| Distribution | Java のバージョン | オペレーティング システム | JDK | JRE |
+|-|-|-|-|-|
+| [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows および Linux | はい | はい |
+| [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows および Linux | はい | いいえ |
 
-Windows をお勧め/Program ファイルの既定の JDK をインストール/フォルダーを可能な場合。 それ以外の場合、実行可能ファイルへのアクセス許可を付与するには、追加の構成が必要です。 詳細については、次を参照してください。、 [(Windows) のアクセス許可を付与](#perms-nonwindows)このドキュメントの「します。
+Linux では、 **mssql server extensibility java**パッケージがインストールされていない場合は、自動的に JRE 8 をインストールします。 インストール スクリプトは、JAVA_HOME という環境変数に JVM パスを追加する必要があります。
+
+Windows、お勧めする既定の JDK をインストールする`/Program Files/`可能であればフォルダー。 それ以外の場合、実行可能ファイルへのアクセス許可を付与するには、追加の構成が必要です。 詳細については、次を参照してください。、 [(Windows) のアクセス許可を付与](#perms-nonwindows)このドキュメントの「します。
 
 > [!Note]
-> Java は、下位互換性があること、以前のバージョンは使えるかもしれませんが、この初期の CTP リリースのサポートされていると、テスト対象のバージョンは、表に示すを指定します。
+> Java は、下位互換性があること、以前のバージョンは使えるかもしれませんが、この初期の CTP リリースのサポートされていると、テスト対象のバージョン番号は Java 8 を指定します。 
 
 <a name="install-on-linux"></a>
 
@@ -55,11 +59,11 @@ sudo yum install mssql-server-extensibility-java
 # Ubuntu install commands
 sudo apt-get install mssql-server-extensibility-java
 
-# USE install commands
+# SUSE install commands
 sudo zypper install mssql-server-extensibility-java
 ```
 
-インストールするときに**mssql server extensibility java**がインストールされていない場合に、パッケージが JRE 1.8 に自動的にインストールされます。 JVM のパスは、JAVA_HOME という環境変数にそれも追加されます。
+インストールするときに**mssql server extensibility java**がインストールされていない場合に、パッケージが JRE 8 に自動的にインストールされます。 JVM のパスは、JAVA_HOME という環境変数にそれも追加されます。
 
 次の手順は、インストールを完了すると、[外部スクリプト実行を構成する](#configure-script-execution)します。
 
@@ -93,31 +97,35 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 ## <a name="install-on-windows"></a>Windows へのインストール
 
-1. [セットアップを実行](../install/sql-machine-learning-services-windows-install.md)SQL Server 2019 をインストールします。
+1. サポートされているバージョンの Java がインストールされていることを確認します。 詳細については、次を参照してください。、[の前提条件](#prerequisites)します。
 
-2. 機能の選択を取得するときに選択**Machine Learning サービス (データベース)** します。 
+2. [セットアップを実行](../install/sql-machine-learning-services-windows-install.md)SQL Server 2019 をインストールします。
+
+3. 機能の選択を取得するときに選択**Machine Learning サービス (データベース)** します。 
 
    Java の統合は、機械学習ライブラリが付属していません、これは、機能拡張フレームワークを提供するセットアップ オプションです。 希望する場合は、R と Python を省略できます。
 
-3. インストール ウィザードを終了し、次の 2 つのタスクを続行します。
+4. インストール ウィザードを終了し、次の 2 つのタスクを続行します。
 
 ### <a name="add-the-javahome-variable"></a>JAVA_HOME 変数を追加します。
 
 JAVA_HOME は、Java のインタープリターの場所を指定する環境変数です。 この手順で、Windows 上のシステム環境変数を作成します。
 
-1. 検索し、JDK と JRE のインストール パス (たとえば、C:\Program Files\Java\jdk-10.0.2) をコピーします。
+1. JDK と JRE パスのコピーを見つけて (たとえば、 `C:\Program Files\Java\jdk1.8.0_201`)。
 
-  CTP 2.0 で基本 jdk フォルダーに JAVA_HOME を設定だけが、Java 1.10 します。 
-
-  Java 1.8 の場合、JDK (たとえば、"C:\Program Files\Java\jdk1.8.0_181\bin\server"での Windows で jvm.dll に到達するパスを拡張します。 または、JRE のベース フォルダーをポイントすることができます。"C:\Program Files\Java\jre1.8.0_181"。
+    優先の Java ディストリビューションによって JDK、JRE の場所は上記の例のパスと異なるにあります。
 
 2. コントロール パネルで、開く**システムとセキュリティ**、オープン**システム**、 をクリック**システム プロパティの高度な**します。
 
 3. クリックして**環境変数**します。
 
-4. JAVA_HOME の新しいシステム変数を作成します。
+4. 新しいシステム変数を作成`JAVA_HOME`(手順 1 で見つかった) JDK と JRE パスの値。
 
-   ![Java ホームの環境変数を](../media/java/env-variable-java-home.png "Java 用のセットアップ")
+5. 再起動[スタート パッド](../concepts/extensibility-framework.md#launchpad)します。
+
+    1. [[SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)] を開きます。
+
+    2. SQL Server のサービス の下には、SQL Server スタート パッドを右クリックして**再起動**します。
 
 <a name="perms-nonwindows"></a>
 
@@ -141,13 +149,6 @@ icacls "<PATH TO CLASS or JAR FILES>" /grant "SQLRUsergroup":(OI)(CI)RX /T
 icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 ```
 
-### <a name="add-the-jre-path-to-javahome"></a>JAVA_HOME を JRE のパスを追加します。
-JAVA_HOME のシステム環境変数に JRE へのパスを追加する必要があります。 インストールされている JRE のみの場合は、JRE フォルダーのパスを行うことができます。 ただし、JDK をインストールした場合はこのような JDK、JRE フォルダーに、jvm の完全パスを指定する必要があります。"C:\Program Files\Java\jdk1.8.0_191\jre\bin\server"。
-
-システム変数を作成するには、コントロール パネルを使用 > システムとセキュリティ > にアクセスするシステム**システム プロパティの高度な**します。 クリックして**環境変数**し、JAVA_HOME を新しいシステム変数を作成します。
-
-![Java ホームの環境変数を](../media/java/env-variable-java-home.png "Java 用のセットアップ")
-
 <a name="configure-script-execution"></a>
 
 ## <a name="configure-script-execution"></a>スクリプトの実行を構成します。
@@ -164,17 +165,15 @@ JAVA_HOME のシステム環境変数に JRE へのパスを追加する必要�
 
 インストールが動作を確認するには、作成して実行を[サンプル アプリケーション](java-first-sample.md)JDK をインストールした、ファイルを配置する前に構成した classpath を使用します。
 
-## <a name="differences-in-ctp-20"></a>CTP 2.0 での相違点
+## <a name="differences-in-ctp-23"></a>CTP 2.3 の相違点
 
 Machine Learning サービス理解している場合は、拡張機能の承認および分離モデルがこのリリースで変更されました。 詳細については、次を参照してください。 [SQL Server Machine 2019 Learning サービスのインストールの違い](../install/sql-machine-learning-services-ver15.md)します。
 
-## <a name="limitations-in-ctp-20"></a>CTP 2.0 の制限事項
+## <a name="limitations-in-ctp-23"></a>CTP 2.3 の制限事項
 
 * 入力と出力バッファーの値の数を超えることはできません`MAX_INT (2^31-1)`は Java で配列に割り当てることができる要素の最大数。
 
 * 出力パラメーターで[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)は、このバージョンではサポートされていません。
-
-* LOB データ型がこのバージョンでは、入力と出力のデータ セットはサポートされません。 参照してください[Java および SQL Server データ型](java-sql-datatypes.md)詳細についてはこの CTP ではデータの種類がサポートされています。
 
 * Sp_execute_external_script パラメーターを使用してストリーミング@r_rowsPerReadは、この CTP ではサポートされていません。
 
@@ -190,9 +189,9 @@ Machine Learning サービス理解している場合は、拡張機能の承認
 jar -cf <MyJar.jar> *.class
 ```
 
-パスを必ず**jar.exe**はシステムの path 変数の一部です。 または、/bin JDK フォルダーの下では jar への完全パスを指定します。 `C:\Users\MyUser\Desktop\jdk-10.0.2\bin\jar -cf <MyJar.jar> *.class`
+パスを必ず**jar.exe**はシステムの path 変数の一部です。 または、/bin JDK フォルダーの下では jar への完全パスを指定します。 `C:\Users\MyUser\Desktop\jdk1.8.0_201\bin\jar -cf <MyJar.jar> *.class`
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [SQL Server で Java を呼び出す方法](howto-call-java-from-sql.md)
 + [SQL Server での Java サンプル](java-first-sample.md)

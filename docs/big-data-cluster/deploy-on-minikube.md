@@ -5,17 +5,17 @@ description: 1 台のコンピューターでのビッグ データ クラスタ
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/11/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 66a0e955c77d98e7c3a311047fa3b93dd299ce76
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: eb8cd26b903afff6c4ad7427a3d12f74c476205d
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241164"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017748"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Minikube の SQL Server 2019 ビッグ データ クラスターのデプロイを構成します。
 
@@ -23,10 +23,9 @@ ms.locfileid: "54241164"
 
 ## <a name="prerequisites"></a>前提条件
 
-- SQL Server 2019 (プレビュー) のビッグ データ クラスター Minikube クラスターを実行するには、コンピューターに少なくとも 32 GB の RAM があることをお勧めします。
+- 32 GB のメモリ (64 GB を推奨)。
 
-   > [!TIP] 
-   > コンピューターに推奨されるメモリの最小値のみがある場合は、プールのコンピューティング インスタンスの 1 つだけ、1 つのデータ プール インスタンスと 1 の記憶域プールのインスタンスがクラスターのデプロイを構成します。 この構成のみ使用してください評価環境の持続性とデータの可用性が重要です。 参照してください、[のデプロイに関するドキュメント](deployment-guidance.md#env)データ プールのレプリカの数を構成する設定を環境変数の詳細については、プール、および記憶域プールを計算します。
+- コンピューターに推奨されるメモリの最小値のみがある場合は、プールのコンピューティング インスタンスの 1 つだけ、1 つのデータ プール インスタンスと 1 の記憶域プールのインスタンスがクラスターのデプロイを構成します。 この構成のみ使用してください評価環境の持続性とデータの可用性が重要です。 参照してください、[のデプロイに関するドキュメント](deployment-guidance.md#env)データ プールのレプリカの数を構成する設定を環境変数の詳細については、プール、および記憶域プールを計算します。
 
 - -X VT または amd-v の仮想化は、コンピューターの BIOS で有効にする必要があります。
 
@@ -71,7 +70,7 @@ Windows 10 では、自動チェックポイントは、VM で有効にします
 Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $false
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 この記事の手順では、Minikube クラスターを構成します。 次の手順では、SQL Server 2019 ビッグ データのクラスターにデプロイします。 手順については、次の記事を参照してください。
 

@@ -5,17 +5,17 @@ description: この記事では、監視、および SQL Server 2019 ビッグ �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f6556d271426157424bbc5f5dcbf1abbb4ffdc01
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 624c4ad4f53c0ad78cf5b972c976aadc57fd35d3
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242004"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017908"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>監視とトラブルシューティングのビッグ データの SQL Server クラスターの Kubectl コマンド
 
@@ -39,7 +39,7 @@ kubectl get pods --all-namespaces
 
 ### <a name="show-status-of-all-pods-in-the-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスター内のすべてのポッドの状態を表示します。
 
-使用して、`-n`パラメーターを特定の名前空間を指定します。 SQL Server のクラスターのブートス トラップ時に作成された新しい名前空間でビッグ データ クラスター ポッドが作成されますで指定されたクラスター名に基づくことに注意してください、`mssqlctl create cluster <cluster_name>`コマンド。
+使用して、`-n`パラメーターを特定の名前空間を指定します。 SQL Server のクラスターのブートス トラップ時に作成された新しい名前空間でビッグ データ クラスター ポッドが作成されますで指定されたクラスター名に基づくことに注意してください、`mssqlctl cluster create --name <cluster_name>`コマンド。
 
 ```bash
 kubectl get pods -n <namespace_name>
@@ -67,7 +67,7 @@ kubectl describe pod  mssql-data-pool-master-0 -n big_data_cluster
 
 ## <a name="get-status-of-services"></a>サービスの状態を取得します。
 
-ビッグ データ クラスター サービスの詳細を取得するには、次のコマンドを実行します。 これらの詳細は、その型を含めるし、ip アドレスは、それぞれのサービスとポートに関連付けられています。 SQL Server のビッグ データ クラスター サービスがで指定されたクラスター名に基づくクラスターのブートス トラップ時に作成された新しい名前空間で作成されたことに注意してください、`mssqlctl create cluster <cluster_name>`コマンド。
+ビッグ データ クラスター サービスの詳細を取得するには、次のコマンドを実行します。 これらの詳細は、その型を含めるし、ip アドレスは、それぞれのサービスとポートに関連付けられています。 SQL Server のビッグ データ クラスター サービスがで指定されたクラスター名に基づくクラスターのブートス トラップ時に作成された新しい名前空間で作成されたことに注意してください、`mssqlctl cluster create --name <cluster_name>`コマンド。
 
 ```bash
 kubectl get svc -n <namespace_name>
@@ -208,6 +208,6 @@ kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterr
 kubectl proxy
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 監視とトラブルシューティングは SQL Server に固有ビッグ データ クラスターを参照してください、[クラスター管理ポータル](cluster-admin-portal.md)します。

@@ -3,18 +3,18 @@ title: Java サンプルとチュートリアルを SQL Server 2019 - SQL Server
 description: SQL Server のデータを Java 言語の拡張機能を使用するための手順については、SQL Server 2019 の Java サンプル コードを実行します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069061"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018038"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server の Java サンプルのチュートリアル
 
@@ -26,7 +26,7 @@ ms.locfileid: "54069061"
 
 + SQL Server Management Studio または T-SQL を実行するための別のツール。
 
-+ Java SE Development Kit (JDK) 1.10 で、Windows または Linux 上の JDK 1.8。
++ Java SE Development Kit (JDK) 8 on Windows または Linux。
 
 コマンド ライン コンパイルを使用して**javac**でこのチュートリアルでは十分です。 
 
@@ -47,7 +47,7 @@ INSERT INTO reviews(id, "text") VALUES (3, 'MMM NNN OOO PPP QQQ RRR')
 GO
 ```
 
-## <a name="2---class-ngramjava"></a>2-クラス Ngram.java
+## <a name="2---class-ngramjava"></a>2 - Class Ngram.java
 
 まず、メイン クラスを作成します。 これは、最初の 3 つのクラスです。
 
@@ -209,7 +209,7 @@ Classpath の詳細については、次を参照してください。[クラス
 
 スクリプトの実行は、プロセス id が、コードにアクセスしている場合にのみ成功します。 
 
-### <a name="on-linux"></a>Linux 上
+### <a name="on-linux"></a>On Linux
 
 クラスパスをに対する読み取り/実行の権限の付与、 **mssql_satellite**ユーザー。
 
@@ -232,7 +232,7 @@ Classpath の詳細については、次を参照してください。[クラス
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7-呼び出し*getNgrams()*
+## <a name="7---call-getngrams"></a>7 - Call *getNgrams()*
 
 SQL Server からコードを呼び出す Java メソッドを指定**getNgrams()** sp_execute_external_script の「スクリプト」パラメーターにします。 このメソッドは、「パッケージ」と"という名前のクラス ファイル"というパッケージに属する**Ngram.java**します。
 
@@ -240,7 +240,7 @@ SQL Server からコードを呼び出す Java メソッドを指定**getNgrams(
 
 + Linux では、SQL Server Management Studio または TRANSACT-SQL を実行するために使用されるもう 1 つのツールで次のコードを実行します。 
 
-+ Windows では、変更**@myClassPath** N'C:\myJavaCode に\'(\pkg の親フォルダーがあると仮定) SQL Server Management Studio または他のツールでクエリを実行する前にします。
++ Windows では、変更@myClassPathN'C:\myJavaCode に\'(\pkg の親フォルダーがあると仮定) SQL Server Management Studio または他のツールでクエリを実行する前にします。
 
 ```sql
 DECLARE @myClassPath nvarchar(50)

@@ -3,20 +3,20 @@ title: どのような&#39;s - 新しい SQL Server Machine Learning サービ�
 description: 新しい機能のお知らせの各リリースの SQL Server 2016 R Services、R Server、SQL Server 2017 Machine Learning サービス。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/18/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a3450b308918e51b370865db4ad2bedeb8e004c
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 43f1f5fb9ace80da357ecca9e4abd715bd4a6048
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397621"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018048"
 ---
-# <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の新機能新機能 
+# <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の新機能新機能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -29,6 +29,11 @@ ms.locfileid: "54397621"
 
 | リリース | 機能更新プログラム |
 |---------|----------------|
+| CTP 2.3 | サポートする新しい[Java データ型](java/java-sql-datatypes.md)します。 |
+| | Windows の場合のみ、上の Java コードを外部ライブラリを使用して、アクセスできる、[外部ライブラリの作成 (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md)ステートメント。 同等の機能は今後の CTP での Linux で利用可能になります。 詳細情報:[SQL Server から Java を呼び出す方法](java/howto-call-java-from-sql.md)します。 |
+| | Windows の場合のみでの Python コードを外部ライブラリを使用して、アクセスできる、[外部ライブラリの作成 (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md)ステートメント。 同等の機能は今後の CTP での Linux で利用可能になります。 |
+| CTP 2.2 | 変更はありません。 |
+| CTP 2.1 | 変更はありません。 |
 | CTP 2.0 | R と Python の機械学習用の Linux プラットフォームのサポート。 概要[インストール SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md)します。 |
 |   | [Java 言語の拡張機能](java/extension-java.md)Windows と Linux の両方では、SQL Server 2019 プレビューの新機能です。 できるコードのコンパイル済みの Java 利用できるようにする SQL Server アクセス許可の割り当てをパスを設定します。 SQL Server のアクセス権を持つクライアント アプリはデータを使用でき、コードを呼び出すことによって実行[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)、SQL Server で R と Python の統合に使用する同じ手順です。 | 
 |  | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)簡単にパーティション分割されたデータから複数のモデルを生成するための 2 つの新しいパラメーターが導入されています。 このチュートリアルで詳しく[を R でのパーティションに基づくモデルを作成する](tutorials/r-tutorial-create-models-per-partition.md)します。 |
@@ -100,7 +105,7 @@ T-SQL を使用することができます[PREDICT](../t-sql/queries/predict-tra
 
 ## <a name="linux-support-roadmap"></a>Linux サポートのロードマップ
 
-SQL Server 2019 CTP 2.0 は、機械学習、データベース エンジンのインスタンスを使用してパッケージをインストールするときに、R、Python、および Java の Linux サポートを追加します。 詳細については、次を参照してください。[インストール SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md)します。
+SQL Server 2019 CTP 2.3 は、機械学習、データベース エンジンのインスタンスを使用してパッケージをインストールするときに、R、Python、および Java の Linux サポートを追加します。 詳細については、次を参照してください。[インストール SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md)します。
 
 Linux では、SQL Server 2017 が R または Python の統合が使用できます[ネイティブ スコアリング](sql-native-scoring.md)on Linux でその機能は、T-SQL で使用できるため、 [PREDICT](../t-sql/queries/predict-transact-sql.md)、on Linux を実行します。 ネイティブ スコアリングを使用しなくても呼び出すことも、R ランタイムから事前トレーニング済みモデルでは、高パフォーマンスのスコア付けできます。
 
@@ -110,7 +115,7 @@ Linux では、SQL Server 2017 が R または Python の統合が使用でき�
 
 (R) を使用した Azure SQL Database での machine Learning サービスはパブリック プレビュー段階です。 詳細については、次を参照してください。[クイック スタート。Azure SQL database (preview) (R) を使用した Machine Learning サービスを使用して](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [SQL Server 2017 Machine Learning Services (In-database) をインストールします。](install/sql-machine-learning-services-windows-install.md)
 + [Machine learning のチュートリアルとサンプル](tutorials/machine-learning-services-tutorials.md)

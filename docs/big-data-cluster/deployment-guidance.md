@@ -5,17 +5,17 @@ description: Kubernetes での SQL Server 2019 ビッグ データ クラスタ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087861"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018008"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法
 
@@ -84,14 +84,14 @@ kubectl config view
 
 | 環境変数 | 必須 | 既定値 | 説明 |
 |---|---|---|---|
-| **ACCEPT_EULA** | はい | なし | SQL Server のライセンス契約 (たとえば、"Y") をそのまま使用します。  |
+| **ACCEPT_EULA** | はい | なし | (たとえば、'Yes') の SQL Server のライセンス条項に同意します。  |
 | **CLUSTER_NAME** | はい | なし | SQLServer にビッグ データのクラスターをデプロイする Kubernetes 名前空間の名前。 |
 | **CLUSTER_PLATFORM** | はい | なし | Kubernetes クラスターが展開されているプラットフォームです。 `aks`、 `minikube`、 `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | いいえ | 1 | 構築するためのコンピューティング プールのレプリカの数。CTP 2.2 の値のみが許可されている、1 です。 |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | いいえ | 1 | 構築するためのコンピューティング プールのレプリカの数。CTP 2.3 の値のみが許可されているは 1 をクリックします。 |
 | **CLUSTER_DATA_POOL_REPLICAS** | いいえ | 2 | データの数はプールを構築するためのレプリカです。 |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | いいえ | 2 | 構築するための記憶域プールのレプリカの数。 |
-| **DOCKER_REGISTRY** | はい | TBD | クラスターのデプロイに使用されるイメージが格納されているプライベート レジストリです。 |
-| **DOCKER_REPOSITORY** | はい | TBD | イメージを格納、上記のレジストリ内のプライベート リポジトリ。  ゲートのパブリック プレビューの期間が必要です。 |
+| **DOCKER_REGISTRY** | はい | 未定 | クラスターのデプロイに使用されるイメージが格納されているプライベート レジストリです。 |
+| **DOCKER_REPOSITORY** | はい | 未定 | イメージを格納、上記のレジストリ内のプライベート リポジトリ。  ゲートのパブリック プレビューの期間が必要です。 |
 | **DOCKER_USERNAME** | はい | なし | これらはプライベート リポジトリに格納されている場合に、コンテナー イメージにアクセスするユーザー名。 ゲートのパブリック プレビューの期間が必要です。 |
 | **DOCKER_PASSWORD** | はい | なし | 上記のプライベート リポジトリにアクセスするパスワード。 ゲートのパブリック プレビューの期間が必要です。|
 | **DOCKER_EMAIL** | はい | なし | 上記のプライベート リポジトリに関連付けられた電子メール アドレス。 ゲートのプライベート プレビューの期間が必要です。 |
@@ -189,7 +189,7 @@ Kubernetes ストレージ クラスの事前プロビジョニングし、を�
 Kubernetes 名前空間を初期化して、名前空間にすべてのアプリケーション ポッドをデプロイする作成クラスター API が使用されます。 Kubernetes クラスターで SQL Server のビッグ データ クラスターをデプロイするには、次のコマンドを実行します。
 
 ```bash
-mssqlctl create cluster <your-cluster-name>
+mssqlctl cluster create --name <your-cluster-name>
 ```
 
 クラスターのブートス トラップ中には、クライアントのコマンド ウィンドウが展開ステータスを出力します。 展開プロセス中には、コント ローラーのポッドの待機中は、一連のメッセージ表示されます。
@@ -202,7 +202,7 @@ mssqlctl create cluster <your-cluster-name>
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -215,21 +215,23 @@ mssqlctl create cluster <your-cluster-name>
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-## <a id="masterip"></a> SQL Server マスター インスタンスと SQL Server のビッグ データ クラスター IP アドレスを取得します。
+## <a id="masterip"></a> ビッグ データ クラスター エンドポイントを取得します。
 
-配置スクリプトが正常に完了したら、次の手順を使用して、SQL Server マスター インスタンスの IP アドレスを取得できます。 この IP アドレスとポート番号 31433 master の SQL Server インスタンスへの接続に使用する (例:  **\<ip アドレス\>31433、**)。 同様に、SQL Server のビッグ データ クラスターの IP を実行します。 クラスターの管理ポータルもサービス エンドポイント タブでは、クラスターのすべてのエンドポイントが記載されています。 クラスターの管理ポータルを使用すると、展開を監視します。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `service-proxy-lb` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
+配置スクリプトが正常に完了したら、次の手順を使用して、SQL Server マスター インスタンスの IP アドレスを取得できます。 この IP アドレスとポート番号 31433 master の SQL Server インスタンスへの接続に使用する (例:  **\<ip-address-of-endpoint-master-pool\>31433、**)。 同様に、ビッグ データ クラスター (Spark HDFS/ゲートウェイ) IP に関連付けられている SQL Server に接続することができます、**エンドポイント セキュリティ**サービス。
 
-### <a name="aks"></a>AKS
-
-AKS を使用している場合、Azure は、Azure ロード バランサーのサービスを提供します。 次のコマンドを実行します。
+次の kubectl コマンドは、ビッグ データ クラスターの一般的なエンドポイントを取得します。
 
 ```bash
 kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-security -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
-探して、 **EXTERNAL-IP**サービスに割り当てられている値。 ポート 31433 で IP アドレスを使用して、SQL Server マスター インスタンスに接続し (例:  **\<ip アドレス\>31433、**) との外部 ip アドレスを使用して SQL Server ビッグ データ クラスター エンドポイントに`service-security-lb`サービス。 
+探して、 **EXTERNAL-IP**各サービスに割り当てられている値。
+
+クラスターのすべてのエンドポイントにも記載されている、**サービス エンドポイント** タブで、クラスターの管理ポータル。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `endpoint-service-proxy` (例: **https://\<ip-address-of-endpoint-service-proxy\>: 30777/ポータル**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。 展開の監視、クラスターの管理ポータルを使用することもできます。
+
+接続する方法の詳細については、次を参照してください。 [Azure データ Studio を使用した SQL Server クラスターのビッグ データへの接続](connect-to-big-data-cluster.md)します。
 
 ### <a name="minikube"></a>Minikube
 
@@ -253,8 +255,11 @@ kubectl get svc -n <your-cluster-name>
 1. 以前のクラスターを削除、`mssqlctl delete cluster`コマンド。
 
    ```bash
-    mssqlctl delete cluster <old-cluster-name>
+    mssqlctl cluster delete --name <old-cluster-name>
    ```
+
+   > [!Important]
+   > バージョンを使用して、 **mssqlctl**クラスターに一致します。 新しいバージョンので、古いクラスターを削除しないでください**mssqlctl**します。
 
 1. 以前のバージョンをアンインストール**mssqlctl**します。
 
@@ -270,13 +275,13 @@ kubectl get svc -n <your-cluster-name>
    **Windows:**
 
    ```powershell
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
    ```
 
    **Linux の場合:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
    ```
 
    > [!IMPORTANT]
@@ -328,18 +333,15 @@ kubectl get svc -n <your-cluster-name>
    | サービス | 説明 |
    |---|---|
    | **endpoint-master-pool** | マスター インスタンスへのアクセスを提供します。<br/>(**EXTERNAL-IP、31433**と**SA**ユーザー) |
-   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | ツールと、クラスターを管理するクライアントをサポートしています。 |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | アクセスできるように、[クラスター管理ポータル](cluster-admin-portal.md)します。<br/>(https://**EXTERNAL-IP**: 30777/ポータル)|
-   | **service-security-lb**<br/>**service-security-nodeport** | HDFS/Spark ゲートウェイへのアクセスを提供します。<br/>(**EXTERNAL-IP**と**ルート**ユーザー) |
+   | **endpoint-controller** | ツールと、クラスターを管理するクライアントをサポートしています。 |
+   | **endpoint-service-proxy** | アクセスできるように、[クラスター管理ポータル](cluster-admin-portal.md)します。<br/>(https://**EXTERNAL-IP**: 30777/ポータル)|
+   | **endpoint-security** | HDFS/Spark ゲートウェイへのアクセスを提供します。<br/>(**EXTERNAL-IP**と**ルート**ユーザー) |
 
-   > [!NOTE]
-   > サービス名は、Kubernetes 環境によって異なります。 Azure Kubernetes Service (AKS) をデプロイするときに、サービス名が終わる**lb**します。サービス名が終わる minikube と kubeadm 展開で **- nodeport**します。
-
-1. 使用して、[クラスター管理ポータル](cluster-admin-portal.md)で展開を監視するため、**展開**タブ。待機しなければ、**サービス プロキシ-lb**展開の開始時に利用できないようにするために、このポータルにアクセスする前に開始するサービス。
+1. 使用して、[クラスター管理ポータル](cluster-admin-portal.md)で展開を監視するため、**展開**タブ。待機しなければ、**エンドポイント サービスのプロキシ**展開の開始時に利用できないようにするために、このポータルにアクセスする前に開始するサービス。
 
 > [!TIP]
 > クラスターのトラブルシューティングの詳細については、次を参照してください。[監視とトラブルシューティングのビッグ データの SQL Server クラスターの Kubectl コマンド](cluster-troubleshooting-commands.md)します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 新しい機能のいくつかごお試しください[SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。

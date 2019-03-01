@@ -5,17 +5,17 @@ description: クラスターの管理ポータルを使用して、SQL Server 20
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b8f50b74f733647e8a24b58b04147937be58ba98
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 9048de9c5f1a1241a6d7049f8eeb15efef87cabb
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241573"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017858"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>クラスターの管理ポータルを使用してビッグ データの SQL Server クラスターを監視する方法
 
@@ -32,10 +32,10 @@ ms.locfileid: "54241573"
 
 に従って、 [、ビッグ データ クラスターをデプロイするクイック スタート](quickstart-big-data-cluster-deploy.md)に到達するまで、**クラスター管理ポータル**セクション。 Mssqlctl で実行されているビッグ データ クラスターを作成したら、次の手順に従います。
 
-コント ローラーのポッドが実行されている展開の監視、クラスターの管理ポータルを使用できます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `service-proxy-lb` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
+コント ローラーのポッドが実行されている展開の監視、クラスターの管理ポータルを使用できます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `endpoint-service-proxy` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
 
 > [!NOTE]
-> CTP 2.2 はセキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするときです。
+> CTP 2.3 以降はセキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするときです。
 
 ## <a name="overview"></a>概要
 
@@ -109,7 +109,7 @@ Spark のエンドポイント、Grafana ダッシュ ボードへのリンク�
 
 ここで、ドキュメントを別のバージョン番号、コンテナー、およびリンクなど、クラスターに関する情報を表示できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 だけでなく、クラスターの管理ポータルの状態や、クラスターの正常性を調べるいくつかの便利な Kubernetes コマンドを実行することもできます。 詳細については、次を参照してください。[監視とトラブルシューティングのビッグ データの SQL Server クラスターの Kubectl コマンド](cluster-troubleshooting-commands.md)します。
 

@@ -5,16 +5,16 @@ description: SQL Server のマスター インスタンスと SQL Server 2019 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/12/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 103e02d456f1176c3bb49c1e67f84215399ab5cd
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231039"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017708"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio での SQL Server のビッグ データ クラスターに接続します。
 
@@ -79,17 +79,9 @@ Azure Data Studio の 2019年 2 月リリースでは、SQL Server のマスタ�
 ほとんどの場合、SQL Server のマスター インスタンスへの接続にアクセスできる、HDFS と Spark の使用も、 **Data Services**ノード。 、への専用接続がまだ作成することができます、 **HDFS/Spark ゲートウェイ**必要な場合。 次の手順では、Azure Data Studio に接続する方法について説明します。
 
 1. コマンドラインから次のコマンドのいずれかを使用して、HDFS/Spark gateway の IP アドレスを検索します。
-   
-   **AKS のデプロイ:**
 
    ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
-
-   **非 AKS デプロイ**:
-
-   ```
-   kubectl get svc service-security-nodeport -n <your-cluster-name>
+   kubectl get svc endpoint-security -n <your-cluster-name>
    ```
  
 1. Azure Data Studio でキーを押して**F1** > **新しい接続**します。

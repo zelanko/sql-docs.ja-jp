@@ -2,17 +2,17 @@
 title: Machine learning - SQL Server Machine Learning Services のデータ コレクションをトラブルシューティングします。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2723131e66cc149209e77884a3a9c160d4c27a0e
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644991"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017938"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Machine learning のデータ コレクションをトラブルシューティングします。
 
@@ -90,7 +90,7 @@ R バージョンと RevoScaleR のバージョンを取得するには、R コ�
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-R コンソールには、起動時にバージョン情報が表示されます。 たとえば、次のバージョンは、SQL Server 2017 CTP 2.0 の既定の構成を表します。
+R コンソールには、起動時にバージョン情報が表示されます。 たとえば、次のバージョンは、SQL Server 2017 の既定の構成を表します。
 
     *Microsoft R Open 3.3.3*
 

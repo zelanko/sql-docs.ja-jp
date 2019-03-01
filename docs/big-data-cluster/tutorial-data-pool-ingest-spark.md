@@ -5,17 +5,17 @@ description: このチュートリアルでは、Azure Data Studio で Spark ジ
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1e6f75f21a02b30a6f75d79a9da5be0320485c5b
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241683"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017738"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>チュートリアル:Spark ジョブの SQL Server のデータ プールにデータを取り込む
 
@@ -64,7 +64,7 @@ ms.locfileid: "54241683"
       );
    ```
   
-1. CTP 2.2 でのデータ プールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
+1. CTP 2.3 以降でのデータ プールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
 
 ## <a name="start-a-spark-streaming-job"></a>Spark ストリーミングのジョブを開始します。
 
@@ -138,7 +138,7 @@ ms.locfileid: "54241683"
 DROP EXTERNAL TABLE [dbo].[web_clickstreams_spark_results];
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Data Studio でサンプルの notebook を実行する方法について説明します。
 > [!div class="nextstepaction"]

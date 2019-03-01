@@ -5,19 +5,19 @@ description: SQL Server 2019 ビッグ データ クラスター (プレビュ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/17/2018
+ms.date: 02/28/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 28048a7d29089511eb0037bac47c3efdd543a6f2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231069"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017878"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート:SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。
+# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート: SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。
 
 このクイック スタートでは、サンプル デプロイ スクリプトを使用して Azure Kubernetes Service (AKS) を SQL Server 2019 ビッグ データ クラスター (プレビュー) をデプロイします。 
 
@@ -108,7 +108,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -151,16 +151,16 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ### <a name="use-the-cluster-administration-portal"></a>クラスターの管理ポータルを使用してください。
 
-コント ローラーのポッドが実行されている場合は、展開の監視、クラスターの管理ポータルを使用することもできます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `service-proxy-lb` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 ポータルにログインするために使用する資格情報の値と一致する**コント ローラーのユーザー**と**パスワード**配置スクリプトで指定されています。
+コント ローラーのポッドが実行されている場合は、展開の監視、クラスターの管理ポータルを使用することもできます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `endpoint-service-proxy` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 ポータルにログインするために使用する資格情報の値と一致する**コント ローラーのユーザー**と**パスワード**配置スクリプトで指定されています。
 
-IP アドレスを取得することができます、**サービス プロキシ-lb** bash または cmd ウィンドウでこのコマンドを実行してサービス。
+IP アドレスを取得することができます、**エンドポイント サービスのプロキシ**bash または cmd ウィンドウでこのコマンドを実行してサービス。
 
 ```bash
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> CTP 2.2 で表示されますセキュリティの警告を web ページにアクセスするときにビッグ データ クラスターが現在自動生成された SSL 証明書を使用しているためです。 また、CTP 2.2 でそれは表示されません、SQL Server のマスター インスタンスの状態。
+> CTP 2.3 以降で表示されますセキュリティの警告を web ページにアクセスするときにビッグ データ クラスターが現在自動生成された SSL 証明書を使用しているためです。 また、CTP 2.3 以降でそのは表示されません、SQL Server のマスター インスタンスの状態。
 
 ## <a name="connect-to-the-cluster"></a>クラスターに接続します。
 

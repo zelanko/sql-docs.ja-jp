@@ -5,17 +5,17 @@ description: この記事では、SQL Server 2019 ビッグ データ クラス�
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 84162981b68a309f4a21efc0c0610837be308ddb
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241283"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017868"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 のビッグ データ クラスター上のコント ローラーとは何ですか。
 
@@ -29,15 +29,15 @@ ms.locfileid: "54241283"
 - クラスターの状態を監視する監視ツールを公開します。
 - トラブルシューティング ツールを検出し、予期しない問題の修復の公開します。
 - クラスターのセキュリティの管理: セキュリティで保護されたクラスター エンドポイントを確認、ユーザーとロールの管理、クラスター内通信の資格情報構成
-- 安全に実装されているため、アップグレードのワークフローの管理 (CTP 2.2 では使用できません)
-- (CTP 2.2 では使用できません)、クラスター内のステートフル サービスの高可用性と災害復旧を管理します。
+- 安全に実装されているため、アップグレードのワークフローの管理 (CTP 2.3 では使用できません)
+- (CTP 2.3 では使用できません)、クラスター内のステートフル サービスの高可用性と災害復旧を管理します。
 
 ## <a name="deploying-the-controller-service"></a>コント ローラー サービスのデプロイ
 
 コント ローラーが展開され、ビッグ データ クラスターを構築するためのユーザーが同じの Kubernetes 名前空間でホストされています。 このサービスは、mssqlctl コマンド ライン ユーティリティを使用して、クラスターのブートス トラップ中には、Kubernetes には、管理者がインストールされています。
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl cluster create --name <name of your cluster>
 ```
 
 年間のワークフローは Kubernetes の上にレイアウトで説明されているすべてのコンポーネントを含む完全に機能の SQL Server ビッグ データ クラスター、[概要](big-data-cluster-overview.md)記事。 ブートス トラップのワークフローが最初に、コント ローラー サービスを作成し、コント ローラー サービスでのインストールとマスター、コンピューティング、データ、および記憶域プールのサービスの一部の残りの部分の構成を調整はこれが配置されるとします。
@@ -65,7 +65,7 @@ mssqlctl create cluster <name of your cluster>
 > [!NOTE]
 > 準拠しているパスワードを指定する必要があります[SQL Server パスワードの複雑さの要件](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017)します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server のビッグ データ クラスターに関する詳細については、次の概要を参照してください。
 

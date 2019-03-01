@@ -3,17 +3,17 @@ title: インストール SQL Server Machine Learning サービス (In-database)
 description: SQL Server または Windows の SQL Server 2017 Machine Learning Services の SQL Server インストールの手順での Python での R です。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/17/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6fd14582fdae0d76463b8d8739d214882b78f999
-ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
+ms.openlocfilehash: 00cc9989730825136ac1ce98f1250063c37144fb
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55147010"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017978"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>SQL Server Machine Learning では、Windows サービスをインストールします。
 
@@ -251,6 +251,7 @@ I will inform HeidiSteen  [GeneMi, 2019/01/17]
 * [SQL Server Machine Learning サービスのファイアウォールの構成](../../advanced-analytics/security/firewall-configuration.md)
 * [その他のネットワーク プロトコルを有効にします。](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [リモート接続を有効にします。](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+* [SQLRUserGroup のログインを作成します。](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
@@ -258,7 +259,6 @@ I will inform HeidiSteen  [GeneMi, 2019/01/17]
 データベースでは、次の構成の更新する必要があります。
 
 * [SQL Server Machine Learning サービスへのアクセス許可をユーザーに付与します。](../../advanced-analytics/security/user-permission.md)
-* [データベース ユーザーとしての SQLRUserGroup の追加](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
 > 追加の構成が必要かどうかは、SQL Server、およびユーザーがデータベースに接続し、外部スクリプトの実行が予想される方法をインストールした、セキュリティ スキーマに依存します。
@@ -294,7 +294,7 @@ SQL Server で使用するパッケージは、インスタンスによって使
 インストールして、R パッケージを管理するためのプロセスでは、SQL Server 2016 および SQL Server 2017 で異なります。 SQL Server 2016 では、データベース管理者は、ユーザーが必要な R パッケージをインストールする必要があります。 SQL Server 2017 では、データベースごとのレベルでパッケージを共有するユーザー グループを設定するか、または独自のパッケージをインストールするユーザーを有効にするデータベース ロールを構成します。 詳細については、次を参照してください。 [SQL サーバーに新しい R パッケージをインストールする](../r/install-additional-r-packages-on-sql-server.md)します。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 R 開発者は、簡単な例で作業を開始し、SQL Server での R の動作の基本を学習します。 次の手順で、次のリンクを参照してください。
 

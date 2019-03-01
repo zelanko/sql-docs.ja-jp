@@ -4,18 +4,18 @@ description: この記事では、mssql-conf ツールを使用して、Linux �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 94d5aa81e6d9da31593f03b867a1f25b5ecc85b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401897"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018078"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Linux 上の SQL Server を mssql-conf ツールを構成します。
 
@@ -74,6 +74,7 @@ ms.locfileid: "52401897"
 | [メモリの制限](#memorylimit) | SQL Server のメモリ制限を設定します。 |
 | [Microsoft 分散トランザクション コーディネーター](#msdtc) | 構成し、Linux 上の MSDTC をトラブルシューティングします。 |
 | [MLServices Eula](#mlservices-eula) | Mlservices パッケージの R と Python の Eula を受け入れます。 SQL Server 2019 のみに適用されます。|
+| [outboundnetworkaccess](#mlservices-outbound-access) |発信ネットワーク アクセスを有効にする[mlservices](sql-server-linux-setup-machine-learning.md) R、Python、および Java の拡張機能。|
 | [TCP ポート](#tcpport) | SQL Server が接続をリッスンするポートを変更します。 |
 | [TLS](#tls) | トランスポート レベルのセキュリティを構成します。 |
 | [トレース フラグ](#traceflags) | サービスが使用しているトレース フラグを設定します。 |
@@ -508,7 +509,7 @@ sudo systemctl restart mssql-server
 
 Mssql conf を監視し、MSDTC をトラブルシューティングする際の他のいくつかの設定があります。 次の表は、これらの設定を簡単に説明します。 使用の詳細については、Windows のサポートの記事で詳細をご覧ください。 [MS DTC の診断トレースを有効にする方法](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)します。
 
-| mssql conf 設定 | 説明 |
+| mssql-conf setting | 説明 |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | 分散トランザクションのセキュリティで保護された唯一の rpc 呼び出しを構成します。 |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | 分散型のセキュリティのみ rpc 呼び出しを構成します。 |トランザクション
@@ -544,10 +545,10 @@ sudo /opt/mssql/bin/mssql-conf setup
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 # Alternative valid syntax
-# Add R or Python to an existing installation
+# Adds the EULA section to the INI and sets acceptulam to yes
 sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
 
-# Rescind EULA acceptance
+# Rescind EULA acceptance and removes the setting
 sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 ```
 
@@ -558,7 +559,34 @@ sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 accepteula = Y
 accepteulaml = Y
 ```
+:::moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+## <a id="mlservices-outbound-access"></a> 発信ネットワーク アクセスを有効にします。
+
+R、Python、および Java の拡張機能の発信ネットワーク アクセス、 [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md)機能が既定で無効になっています。 送信要求を有効にするには、設定"outboundnetworkaccess"mssql 会議を使用してブール型プロパティ
+
+プロパティを設定した後は、INI ファイルから、更新された値を読み取る SQL Server スタート パッド サービスを再起動します。 再起動のメッセージを通知する、拡張機能に関連する設定を変更するたびにします。
+
+```bash
+# Adds the extensibility section and property.
+# Sets "outboundnetworkaccess" to true.
+# This setting is required if you want to access data or operations off the server.
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+
+# Turns off network access but preserves the setting
+/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+
+# Removes the setting and rescinds network access
+sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess
+```
+
+直接"outboundnetworkaccess"を追加することも、 [mssql.conf ファイル](#mssql-conf-format):
+
+```ini
+[extensibility]
+outboundnetworkaccess = 1
+```
 :::moniker-end
 
 ## <a id="tcpport"></a> TCP ポートを変更します。
@@ -653,7 +681,7 @@ sudo cat /var/opt/mssql/mssql.conf
 このファイルに表示されていないすべての設定が既定値を使用していることに注意してください。 次のセクションで、サンプル**mssql.conf**ファイル。
 
 
-## <a id="mssql-conf-format"></a> mssql.conf 形式
+## <a id="mssql-conf-format"></a> mssql.conf format
 
 次 **/var/opt/mssql/mssql.conf**ファイルは、各設定の例を示します。 変更を手動で行うこの形式を使用することができます、 **mssql.conf**に応じてファイルします。 場合は、ファイルを手動で変更しないでください、変更が適用される前に SQL Server を再起動する必要があります。 使用する、 **mssql.conf**ファイル Docker を使用する必要があります Docker[のデータを保存](sql-server-linux-configure-docker.md)します。 最初に完全な追加**mssql.conf**ホスト ディレクトリにファイルを開き、コンテナーを実行します。 この例は[お客様からのフィードバック](sql-server-linux-customer-feedback.md)します。
 
@@ -767,7 +795,7 @@ traceflag = 3456
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 代わりにこれらの構成変更の一部を環境変数を使用して、次を参照してください。[環境変数と SQL Server の構成設定](sql-server-linux-configure-environment-variables.md)します。
 
