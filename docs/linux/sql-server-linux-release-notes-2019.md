@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 21e28b73019ac02c5269f1c7e1a76529f8181315
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 3f3c66aa7ac4931c29d02525980dd3827c6d0322
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306199"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227184"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Linux 上の SQL Server 2019 preview リリース ノート
 
@@ -48,6 +48,7 @@ SQL Server を対象とするほとんどの既存クライアント ツール�
 
 | リリース               | バージョン       | リリース日 |
 |-----------------------|---------------|--------------|
+| [CTP 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |
 | [CTP 2.2](#CTP22)     | 15.0.1200.24  | 2018-12-11   |
 | [CTP 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |
 | [CTP 2.0](#CTP20)     | 15.0.1000.34  | 2018-09-24   |
@@ -64,7 +65,27 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 - [Linux 上の SQL Server 2019 プレビューの Machine Learning サービスの R と Python のサポートをインストールします。](sql-server-linux-setup-machine-learning.md)
 - [SQL Server エージェントを有効にします。](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CTP22"></a> CTP 2.2 (2018 の年 12 月)
+## <a id="CTP23"></a> CTP 2.3 (Mar 2019)
+
+次のセクションでは、パッケージの場所を提供し、CTP 2.3 に関する既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、次を参照してください。、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)します。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージのインストールでの次の表の情報の RPM および Debian パッケージをダウンロードできます。
+
+| [パッケージ] | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat の RPM パッケージ | 15.0.1300.359-1 | [エンジンの RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1300.359-1.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1300.359-1.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1300.359-1.x86_64.rpm)</br>[機能拡張の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1300.359-1.x86_64.rpm)</br>[Java の機能拡張の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1300.359-1.x86_64.rpm)|
+| SLES RPM パッケージ | 15.0.1300.359-1 | [mssql server エンジンの RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1300.359-1.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1300.359-1.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1300.359-1.x86_64.rpm)</br>[機能拡張の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1300.359-1.x86_64.rpm)</br>[Java の機能拡張の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1300.359-1.x86_64.rpm)|
+| Debian パッケージを Ubuntu 16.04 | 15.0.1300.359-1 | [エンジンの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1300.359-1_amd64.deb)</br>[高可用性の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1300.359-1_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1300.359-1_amd64.deb)</br>[Debian パッケージの機能拡張](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1300.359-1_amd64.deb)</br>[Java の機能拡張の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1300.359-1_amd64.deb)|
+
+### <a name="known-issues"></a>既知の問題
+
+#### <a id="msdtc"></a> Microsoft 分散トランザクション コーディネーター
+
+現時点では、MSDTC では、認証できないトランザクションが必要です。 たとえばで Windows SQL Server on Linux に SQL Server からのリンク サーバーを使用している Windows クライアント アプリケーションを使用して Linux 上の SQL Server に対して分散トランザクションを開始するか、し、Windows サーバー/クライアントの MSDTC は"No オプションを使用するために必要認証が必要です"。
+
+## <a id="CTP22"></a> CTP 2.2 (12/2018)
 
 次のセクションでは、パッケージの場所を提供し、CTP 2.2 の既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、次を参照してください。、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)します。
 
@@ -84,7 +105,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 現時点では、MSDTC では、認証できないトランザクションが必要です。 たとえばで Windows SQL Server on Linux に SQL Server からのリンク サーバーを使用している Windows クライアント アプリケーションを使用して Linux 上の SQL Server に対して分散トランザクションを開始するか、し、Windows サーバー/クライアントの MSDTC は"No オプションを使用するために必要認証が必要です"。
 
-## <a id="CTP21"></a> CTP 2.1 (2018 年 11 月)
+## <a id="CTP21"></a> CTP 2.1 (2018 の年 11 月)
 
 次のセクションでは、パッケージの場所を提供し、CTP 2.1 の既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、次を参照してください。、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)します。
 
@@ -104,7 +125,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 現時点では、MSDTC では、認証できないトランザクションが必要です。 たとえばで Windows SQL Server on Linux に SQL Server からのリンク サーバーを使用している Windows クライアント アプリケーションを使用して Linux 上の SQL Server に対して分散トランザクションを開始するか、し、Windows サーバー/クライアントの MSDTC は"No オプションを使用するために必要認証が必要です"。
 
-## <a id="CTP20"></a> CTP 2.0 (2018 の年 9 月)
+## <a id="CTP20"></a> CTP 2.0 (2018年 9 月)
 
 次のセクションでは、パッケージの場所を提供し、CTP 2.0 の既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、次を参照してください。、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)します。
 
@@ -124,7 +145,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 現時点では、MSDTC では、認証できないトランザクションが必要です。 たとえばで Windows SQL Server on Linux に SQL Server からのリンク サーバーを使用している Windows クライアント アプリケーションを使用して Linux 上の SQL Server に対して分散トランザクションを開始するか、し、Windows サーバー/クライアントの MSDTC は"No オプションを使用するために必要認証が必要です"。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 開始するには、次のクイック スタートを参照してください。
 

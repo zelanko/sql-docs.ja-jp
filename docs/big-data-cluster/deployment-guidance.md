@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 4aba7c8bbe7af361dc118111c8502546c83dd61c
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018008"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227204"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法
 
@@ -94,20 +94,22 @@ kubectl config view
 | **DOCKER_REPOSITORY** | はい | 未定 | イメージを格納、上記のレジストリ内のプライベート リポジトリ。  ゲートのパブリック プレビューの期間が必要です。 |
 | **DOCKER_USERNAME** | はい | なし | これらはプライベート リポジトリに格納されている場合に、コンテナー イメージにアクセスするユーザー名。 ゲートのパブリック プレビューの期間が必要です。 |
 | **DOCKER_PASSWORD** | はい | なし | 上記のプライベート リポジトリにアクセスするパスワード。 ゲートのパブリック プレビューの期間が必要です。|
-| **DOCKER_EMAIL** | はい | なし | 上記のプライベート リポジトリに関連付けられた電子メール アドレス。 ゲートのプライベート プレビューの期間が必要です。 |
 | **DOCKER_IMAGE_TAG** | いいえ | 最新 | イメージにタグ付けに使用されるラベル。 |
 | **DOCKER_IMAGE_POLICY** | いいえ | 毎回 | イメージのプルは常に強制します。  |
-| **DOCKER_PRIVATE_REGISTRY** | はい | 1 | ゲートのパブリック プレビューの期間、この値は 1 に設定するのには。 |
+| **DOCKER_PRIVATE_REGISTRY** | はい | なし | ゲートのパブリック プレビューの期間、この値を「1」を設定する必要があります。 |
 | **CONTROLLER_USERNAME** | はい | なし | クラスター管理者のユーザー名。 |
 | **CONTROLLER_PASSWORD** | はい | なし | クラスター管理者のパスワード。 |
 | **KNOX_PASSWORD** | はい | なし | Knox ユーザーのパスワード。 |
 | **MSSQL_SA_PASSWORD** | はい | なし | SQL のマスター インスタンスの SA ユーザーのパスワードです。 |
 | **USE_PERSISTENT_VOLUME** | いいえ | true | `true` Kubernetes 永続ボリュームを使用するには、ポッドの記憶域を要求します。  `false` ポッドの記憶域の一時的なホストの記憶域を使用します。 参照してください、[データ永続化](concept-data-persistence.md)詳細については資料。 SQL Server が minikube 上でビッグ データ クラスターおよび USE_PERSISTENT_VOLUME 展開する場合は、= true に設定する必要があります値を設定するの`STORAGE_CLASS_NAME=standard`します。 |
 | **STORAGE_CLASS_NAME** | いいえ | 既定値 (default) | 場合`USE_PERSISTENT_VOLUME`は`true`を使用する Kubernetes ストレージ クラスの名前を示します。 参照してください、[データ永続化](concept-data-persistence.md)詳細については資料。 SQL Server が minikube 上でビッグ データ クラスターをデプロイする場合、既定のストレージ クラス名が異なると設定をオーバーライドする必要があります`STORAGE_CLASS_NAME=standard`します。 |
+| **CONTROLLER_PORT** | いいえ | 30080 | パブリック ネットワークで、コント ローラー サービスがリッスンする TCP/IP ポート。 |
 | **MASTER_SQL_PORT** | いいえ | 31433 | Master の SQL インスタンスがパブリック ネットワークをリッスンする TCP/IP ポート。 |
 | **KNOX_PORT** | いいえ | 30443 | Apache Knox がパブリック ネットワークをリッスンする TCP/IP ポート。 |
+| **PROXY_PORT** | いいえ | 30777 | パブリック ネットワークでプロキシ サービスがリッスンする TCP/IP ポート。 これは、ポータルを計算するために使用されるポートの URL。 |
 | **GRAFANA_PORT** | いいえ | 30888 | アプリケーションの監視 Grafana がパブリック ネットワークをリッスンする TCP/IP ポート。 |
 | **KIBANA_PORT** | いいえ | 30999 | Kibana のログ検索アプリケーションがパブリック ネットワークでリッスンする TCP/IP ポート。 |
+
 
 > [!IMPORTANT]
 >1. 制限付きのプライベート プレビューの期間中、プライベート Docker レジストリの資格情報はお客様に提供されるトリアージ時に、 [EAP 登録](https://aka.ms/eapsignup)します。
@@ -125,7 +127,7 @@ kubectl config view
 コマンド ウィンドウ (PowerShell ではなく) を使用して、次の環境変数を構成します。 値を囲む引用符は使用しないでください。
 
 ```cmd
-SET ACCEPT_EULA=Y
+SET ACCEPT_EULA=yes
 SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
@@ -137,7 +139,6 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -146,7 +147,7 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 次の環境変数を初期化します。 Bash では、各値を囲む引用符を使用できます。
 
 ```bash
-export ACCEPT_EULA=Y
+export ACCEPT_EULA=yes
 export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
@@ -158,7 +159,6 @@ export DOCKER_REGISTRY="private-repo.microsoft.com"
 export DOCKER_REPOSITORY="mssql-private-preview"
 export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
 export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -271,17 +271,17 @@ kubectl get svc -n <your-cluster-name>
    > 新しいバージョンをインストールしないでください**mssqlctl**古いバージョンをまずアンインストールすることがなく。
 
 1. 最新バージョンのインストール**mssqlctl**します。 
-   
+
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
    **Linux の場合:**
-   
+
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

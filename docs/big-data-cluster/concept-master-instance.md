@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 67109dc6af3c03960435116c79e9f92ae79f595c
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 24b5799b71f9102785bdcb6103324d8bf8b1ad96
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017798"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227304"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 ビッグ データ クラスター内のマスター インスタンスとは何ですか。
 
@@ -29,7 +29,7 @@ SQL Server のマスター インスタンスは、クラスターの外部か�
 
 ## <a name="scale-out-query-management"></a>スケール アウト クエリの管理
 
-SQL Server のマスター インスタンスには内のノード上の SQL Server インスタンス間でクエリを配布するために使用するスケール アウト クエリ エンジンが含まれています、[プールのコンピューティング](concept-compute-pool.md)します。 スケール アウト クエリ エンジンには、TRANSACT-SQL で、追加の構成なしでクラスター内のすべての Hive テーブルへのアクセスも提供します。 (Hive テーブルのサポートは、CTP 2.3 ではありません)
+SQL Server のマスター インスタンスには内のノード上の SQL Server インスタンス間でクエリを配布するために使用するスケール アウト クエリ エンジンが含まれています、[プールのコンピューティング](concept-compute-pool.md)します。 スケール アウト クエリ エンジンには、TRANSACT-SQL で、追加の構成なしでクラスター内のすべての Hive テーブルへのアクセスも提供します。
 
 ## <a name="metadata-and-user-databases"></a>データベース メタデータとユーザー データベース
 

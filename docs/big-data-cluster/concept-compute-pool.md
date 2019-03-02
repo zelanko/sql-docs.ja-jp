@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7d5a81479e798d3d97547eb67b17e62444cd2941
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 272f10cfed8f7cd1b07633b81642323a8c74b6d7
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017578"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227134"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 のビッグ データ クラスター内のコンピューティング プールとは
 
@@ -24,9 +24,6 @@ ms.locfileid: "57017578"
 ## <a name="compute-pool-architecture"></a>コンピューティング プール アーキテクチャ
 
 Kubernetes で実行されるポッド コンピューティングまたはいずれかのコンピューティング プールが行われます。 によって調整が自動作成されるとこれらのポッドの管理、 [SQL Server のマスター インスタンス](concept-master-instance.md)します。 それぞれのポッドには、一連の基本サービスと、SQL Server データベース エンジンのインスタンスが含まれています。
-
-> [!NOTE]
-> CTP 2.3 には、クラスターあたり 1 つのコンピューティング プールのみサポートされます。
 
 ## <a name="scale-out-groups"></a>スケール アウト グループ
 

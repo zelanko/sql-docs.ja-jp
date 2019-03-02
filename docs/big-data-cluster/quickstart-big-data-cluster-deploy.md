@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 28048a7d29089511eb0037bac47c3efdd543a6f2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: d3567b3bc82a97c831abac252bebd0c523ed3fac
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017878"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227115"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート: SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。
 
@@ -85,7 +85,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **コント ローラーのユーザー** | コント ローラーのユーザーのユーザー名 (既定:**管理者**)。 |
 
    > [!IMPORTANT]
-   > 既定の**Standard_L4s**マシンのサイズはすべての Azure リージョンでは使用できません。 別のマシン サイズを選択した場合、クラスター内のノード間で接続できるディスクの合計数が 21 以上であることを確認します。 クラスター内各永続ボリューム要求は、接続されたディスクが必要です。 現時点では、ビッグ データ クラスターには、21 の永続ボリューム要求が必要です。 たとえば、 [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)マシンのサイズは、3 つのノードでは、48 のディスクを接続できることを意味するため、16 の接続されたディスクをサポートしています。
+   > 既定の**Standard_L4s**マシンのサイズはすべての Azure リージョンでは使用できません。 別のマシン サイズを選択した場合、クラスター内のノード間で接続できるディスクの合計数が 24 以上であることを確認します。 クラスター内各永続ボリューム要求は、接続されたディスクが必要です。 現時点では、ビッグ データ クラスターには、24 の永続ボリューム要求が必要です。 たとえば、 [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)マシンのサイズは、3 つのノードでは、48 のディスクを接続できることを意味するため、16 の接続されたディスクをサポートしています。
 
    > [!NOTE]
    > `sa`アカウントは、システム管理者は、セットアップ時に作成される SQL Server のマスター インスタンス。 展開を作成した後、`MSSQL_SA_PASSWORD`を実行して環境変数が探索可能な`echo $MSSQL_SA_PASSWORD`マスター インスタンス コンテナーにします。 セキュリティのため、変更、`sa`デプロイ後に、マスター インスタンス上のパスワード。 詳細については、次を参照してください。 [SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)します。
@@ -160,7 +160,7 @@ kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> CTP 2.3 以降で表示されますセキュリティの警告を web ページにアクセスするときにビッグ データ クラスターが現在自動生成された SSL 証明書を使用しているためです。 また、CTP 2.3 以降でそのは表示されません、SQL Server のマスター インスタンスの状態。
+> CTP 2.3 以降で表示されますセキュリティの警告を web ページにアクセスするときにビッグ データ クラスターが現在自動生成された SSL 証明書を使用しているためです。
 
 ## <a name="connect-to-the-cluster"></a>クラスターに接続します。
 

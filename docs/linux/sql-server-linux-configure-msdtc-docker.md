@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 65bd8b35c0ab211a522a380521b5e2246c31bdf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbe682f39c496441a209ca52bede9a0726671c62
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793780"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227105"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>SQL Server on Docker での分散トランザクションを使用する方法
 
@@ -41,7 +41,7 @@ docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
-   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 > [!IMPORTANT]
@@ -79,6 +79,6 @@ sudo firewall-cmd --reload
 
 ただし、コンテナーのポート 135 を 13500 など、ホスト上の別のポートにマップした場合は、し構成する必要ポートがホストにルーティングします。 これにより、docker コンテナーのホストおよびその他の外部のサーバーと分散トランザクションに参加できます。 詳細については、次を参照してください。[ポート ルーティングを構成する](sql-server-linux-configure-msdtc.md#configure-port-routing)します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Linux 上の MSDTC に関する詳細については、次を参照してください。 [Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法](sql-server-linux-configure-msdtc.md)します。

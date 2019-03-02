@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a6f40d4f113942fe774665358d8f1202ba8c4632
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017948"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227214"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -41,6 +41,7 @@ ms.locfileid: "57017948"
 - [SQL Server のビッグ データ クラスターにアプリケーションを展開する VS Code 拡張機能](app-deployment-extension.md)します。
 - 新しいパラメーターの順序、 **mssqlctl**ツール。
 - [Sparklyr を使用して、SQL Server 2019 ビッグ データ クラスターで](sparklyr-from-RStudio.md)します。
+- ビッグ データ クラスター外部の HDFS と互換性のあるストレージにマウント[HDFS が階層化](hdfs-tiering.md)します。
 - 統一された接続の新しいエクスペリエンス、 [master の SQL Server インスタンスと HDFS/Spark ゲートウェイ](connect-to-big-data-cluster.md)します。
 - クラスターを削除して**mssqlctl クラスター削除**名前空間内のビッグ データ クラスターの一部であったオブジェクトのみが削除されますが、名前空間を離れるようになりました。 以前は、このコマンドは、名前空間の全体を削除します。
 - エンドポイントの名前が変更され、このリリースで統合します。
@@ -74,14 +75,6 @@ ms.locfileid: "57017948"
 
 - ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間は削除されません。 これは、結果、クラスターの孤立した、名前空間。 回避策では、同じ名前のクラスターをデプロイする前に、名前空間を手動で削除します。
 
-#### <a name="cluster-administration-portal"></a>クラスターの管理ポータル
-
-クラスターの管理ポータルでは、SQL Server のマスター インスタンスのエンドポイントは表示されません。 マスター インスタンスの IP アドレスとポートを検索するには、次を使用**kubectl**コマンド。
-
-```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-```
-
 #### <a name="external-tables"></a>外部テーブル
 
 - 列の型はサポートされていないテーブルのデータ プール外部テーブルを作成することになります。 外部テーブルを照会する場合はメッセージが表示、次のような。
@@ -91,6 +84,8 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 - 記憶域プールの外部テーブルをクエリすると、同時に、基になるファイルを HDFS にコピーするは場合にエラーが発生する可能性があります。
 
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- 文字データ型を使用して Oracle に外部テーブルを作成する場合、Data Studio の Azure の仮想化ウィザードはこれらの列を VARCHAR として、外部テーブル定義で解釈されます。 外部テーブル DDL にエラーがなります。 いずれか NVARCHAR2 の種類を使用または EXTERNAL TABLE ステートメントを手動で作成し、ウィザードを使用してではなく NVARCHAR を指定するには、Oracle スキーマを変更します。
 
 #### <a name="spark-and-notebooks"></a>Spark と notebook
 
