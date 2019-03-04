@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 87e4d1ed1bdb1ce78e2f45fcb49019175fcdfefd
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 25e762b48edb777d701a1482315150623c8c0484
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269695"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227344"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux 上の SQL Server の設定を環境変数で構成する
 
@@ -49,7 +49,7 @@ Linux 上の SQL Server 2019 プレビューを構成するのには、いくつ
 |-----|-----|
 | **ACCEPT_EULA** | 任意の値 (たとえば、' Y') を設定すると SQL Server のライセンス契約に同意します。 |
 | **MSSQL_SA_PASSWORD** | SA ユーザーのパスワードを構成します。 |
-| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 有効な値は次のとおりです。 </br></br>**Evaluation**</br>**Developer**</br>**Express**</br>Web</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、###-###-###-###-###、この '#' は、数値または文字の形式でなければなりません。|
+| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 有効な値は次のとおりです。 </br></br>**Evaluation**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、###-###-###-###-###、この '#' は、数値または文字の形式でなければなりません。|
 | **MSSQL_LCID** | SQL Server に使用する言語 ID を設定します。 たとえば 1036 はフランス語です。 |
 | **MSSQL_COLLATION** | SQL Server の既定の照合順序を設定します。 照合順序には、言語 id (LCID) の既定のマッピングが上書きされます。 |
 | **MSSQL_MEMORY_LIMIT_MB** | SQL Server が使用できる最大メモリサイズ (MB) を設定します。 既定は、合計物理メモリの 80% となります。 |
@@ -73,7 +73,7 @@ Linux 上の SQL Server 2019 プレビューを構成するのには、いくつ
 |-----|-----|
 | **ACCEPT_EULA** | 任意の値 (たとえば、' Y') を設定すると SQL Server のライセンス契約に同意します。 |
 | **MSSQL_SA_PASSWORD** | SA ユーザーのパスワードを構成します。 |
-| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 有効な値は次のとおりです。 </br></br>**Evaluation**</br>**Developer**</br>**Express**</br>Web</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、###-###-###-###-###、この '#' は、数値または文字の形式でなければなりません。|
+| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 有効な値は次のとおりです。 </br></br>**Evaluation**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、###-###-###-###-###、この '#' は、数値または文字の形式でなければなりません。|
 | **MSSQL_LCID** | SQL Server に使用する言語 ID を設定します。 たとえば 1036 はフランス語です。 |
 | **MSSQL_COLLATION** | SQL Server の既定の照合順序を設定します。 照合順序には、言語 id (LCID) の既定のマッピングが上書きされます。 |
 | **MSSQL_MEMORY_LIMIT_MB** | SQL Server が使用できる最大メモリサイズ (MB) を設定します。 既定は、合計物理メモリの 80% となります。 |
@@ -138,18 +138,18 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 Linux/macos で Docker を実行している場合は、単一引用符を使って次の構文を使用します。
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 Windows で Docker を実行している場合は、二重引用符で次の構文を使用します。
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 記載されていない、その他の SQL Server の設定は、次を参照してください。 [mssql-conf ツールを使用して Linux 上の SQL Server を構成](sql-server-linux-configure-mssql-conf.md)
 

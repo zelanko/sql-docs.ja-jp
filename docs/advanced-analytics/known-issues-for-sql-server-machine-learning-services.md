@@ -2,22 +2,22 @@
 title: R 言語と Python の統合 - SQL Server Machine Learning Services の既知の問題
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/13/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6dc02c56bda3cdf904e0c53115d4fbbfcfafe9fc
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: fd6f67e3095af0f1a53ed533ea9b763d52547e39
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645528"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018068"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning サービスの既知の問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、既知の問題またはオプションとして提供される machine learning コンポーネントと制限事項について説明します[SQL Server 2016 R Services](install/sql-r-services-windows-install.md)と[SQL Server マシン 2017 Learning Services の R と Python。](install/sql-machine-learning-services-windows-install.md).
+この記事では、既知の問題またはオプションとして提供される machine learning コンポーネントと制限事項について説明します[SQL Server 2016 R Services](install/sql-r-services-windows-install.md)と[SQL Server マシン 2017 Learning Services の R と Python](install/sql-machine-learning-services-windows-install.md).
 
 ## <a name="setup-and-configuration-issues"></a>セットアップと構成の問題
 
@@ -408,7 +408,7 @@ R --max-ppsize=500000
 
 ## <a name="python-script-execution-issues"></a>Python スクリプトの実行に関する問題
 
-このセクションには、SQL Server、および、マイクロソフトによって発行された Python パッケージに関連する問題に Python を実行している固有の既知の問題が含まれていますなど[revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)と[microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
+このセクションには、SQL Server、および、マイクロソフトによって発行された Python パッケージに関連する問題に Python を実行している固有の既知の問題が含まれていますなど[revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)と[microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)。
 
 ### <a name="1-call-to-pretrained-model-fails-if-path-to-model-is-too-long"></a>1.モデルへのパスが長すぎる場合、事前トレーニング済みモデルへの呼び出しが失敗します。
 
