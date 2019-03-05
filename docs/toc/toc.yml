@@ -1,7 +1,8 @@
 items:
 - name: '[ようこそ]'
-  href: ../sql-server/sql-server-technical-documentation.md
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: 概要
+  href: ../toc/redirectfrom-overview-10.md
   items:
   - name: 新機能
     items:
@@ -15,6 +16,8 @@ items:
       href: ../sql-server/what-s-new-in-sql-server-2016.md
     - name: SQL Server 2016 のデータベース エンジン
       href: ../database-engine/whats-new-in-sql-server-2016.md
+  - name: データベース エンジン
+    href: ../database-engine/sql-server-database-engine-overview.md
   - name: SQL Server 2017 のエディションと機能
     href: ../sql-server/editions-and-components-of-sql-server-2017.md
   - name: SQL Server 2016 のエディションと機能
@@ -32,7 +35,7 @@ items:
   - name: SQL Server 2019
     href: ../sql-server/sql-server-ver15-release-notes.md
   - name: SQL Server 2017
-    href: ../sql-server/sql-server-2017-release-notes.md
+    href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
   - name: SQL Server 2016
     href: ../sql-server/sql-server-2016-release-notes.md
   - name: SQL Server 2014
@@ -44,14 +47,16 @@ items:
   - name: SQL Server 2008 R2 SP2
     href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: ビジネス継続性
+  href: redirectfrom-business-continuity-10.md
   items:
   - name: 概要
     href: ../database-engine/sql-server-business-continuity-dr.md
   - name: バックアップと復元
+    href: ../toc/redirectfrom-backup-restore-10.md
     items:
     - name: 概要
       href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
-    - name: Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元
+    - name: Azure Blob Storage を使用したバックアップと復元
       href: ../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
       items:
       - name: Microsoft Azure サブスクリプションへの接続
@@ -59,9 +64,9 @@ items:
       - name: SQL Server Backup to URL
         href: ../relational-databases/backup-restore/sql-server-backup-to-url.md
         items:
-        - name: PowerShell の使用による Microsoft Azure BLOB ストレージ サービスへの複数データベースのバックアップ
+        - name: PowerShell を使用した Azure Blob Storage サービスへのバックアップ
           href: ../relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
-        - name: SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
+        - name: Backup to URL に関するベスト プラクティスとトラブルシューティング
           href: ../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md
         - name: アクティブなリースを保持しているバックアップ BLOB ファイルの削除
           href: ../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
@@ -92,14 +97,14 @@ items:
       items:
       - name: 復元シーケンスの計画と実行 (完全復旧モデル)
         href: ../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md
-      - name: 中断された復元操作の再開 (Transact-SQL)
+      - name: 中断された復元操作の再開 (T-SQL)
         href: ../relational-databases/backup-restore/restart-an-interrupted-restore-operation-transact-sql.md
     - name: バックアップの圧縮
       href: ../relational-databases/backup-restore/backup-compression-sql-server.md
       items:
       - name: バックアップの圧縮の構成
         href: ../relational-databases/backup-restore/configure-backup-compression-sql-server.md
-      - name: リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 (Transact-SQL)
+      - name: Resource Governor を使用してバックアップの圧縮により CPU 使用率を制限する (T-SQL)
         href: ../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md
     - name: バックアップの暗号化
       href: ../relational-databases/backup-restore/backup-encryption.md
@@ -181,7 +186,7 @@ items:
     - name: ミラー化バックアップ メディア セット (SQL Server)
       href: ../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md
       items:
-      - name: ミラー化メディア セットへのバックアップ (Transact-SQL)
+      - name: ミラー化メディア セットへのバックアップ (T-SQL)
         href: ../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
     - name: バックアップの履歴とヘッダーの情報 (SQL Server)
       href: ../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md
@@ -198,7 +203,7 @@ items:
     - name: データベースの全体復元 (単純復旧モデル)
       href: ../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md
       items:
-      - name: 単純復旧モデルでのデータベース バックアップの復元 (Transact-SQL)
+      - name: 単純復旧モデルでのデータベース バックアップの復元 (T-SQL)
         href: ../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md
       - name: SSMS を使用してデータベース バックアップを復元する
         href: ../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md
@@ -220,7 +225,7 @@ items:
     - name: データベースの全体復元 (完全復旧モデル)
       href: ../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md
       items:
-      - name: 完全復旧モデルで障害発生時点までデータベースを復元する方法 (Transact-SQL)
+      - name: 完全復旧モデルで障害発生時点までデータベースを復元する (T-SQL)
         href: ../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md
     - name: ファイルの復元 (単純復旧モデル)
       href: ../relational-databases/backup-restore/file-restores-simple-recovery-model.md
@@ -281,12 +286,12 @@ items:
         href: ../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
       - name: 例:一部のファイル グループのみを復元する段階的な部分復元 (単純復旧モデル)
         href: ../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
-    - name: データを復元しないデータベースの復旧 (Transact-SQL)
+    - name: データを復元しないデータベースの復旧 (T-SQL)
       href: ../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md
     - name: システム データベースのバックアップと復元
       href: ../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
       items:
-      - name: master データベースの復元 (Transact-SQL)
+      - name: master データベースの復元 (T-SQL)
         href: ../relational-databases/backup-restore/restore-the-master-database-transact-sql.md
     - name: 'バックアップと復元: 相互運用性と共存'
       href: ../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md
@@ -301,6 +306,8 @@ items:
         href: ../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md
       - name: 前提条件、制限事項、推奨事項
         href: ../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md
+      - name: 相互運用性
+        href: ../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md
     - name: クイック スタート
       items:
       - name: 作業の開始
@@ -312,7 +319,7 @@ items:
           href: ../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md
         - name: ダイアログ
           href: ../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md
-        - name: Transact-SQL
+        - name: T-SQL
           href: ../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md
         - name: PowerShell
           href: ../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md
@@ -343,6 +350,8 @@ items:
           href: ../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md
         - name: 読み取り専用ルーティングを構成する
           href: ../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md
+        - name: リスナーを作成する
+          href: ../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md
         - name: リスナーを削除する
           href: ../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md
         - name: セカンダリ データベースを結合する
@@ -371,7 +380,7 @@ items:
       - name: 監視
         href: ../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md
         items:
-        - name: Transact-SQL
+        - name: T-SQL
           href: ../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md
         - name: SQL Server Management Studio
           href: ../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md
@@ -445,6 +454,8 @@ items:
           href: ../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
         - name: 読み取りスケールのみ
           href: ../database-engine/availability-groups/windows/read-scale-availability-groups.md
+        - name: 読み取り/書き込み接続のリダイレクト
+          href: ../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md
       - name: 管理
         items:
         - name: セカンダリ レプリカでのバックアップ
@@ -507,7 +518,7 @@ items:
       items:
       - name: PowerShell コマンドレット
         href: ../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
-      - name: Transact-SQL
+      - name: T-SQL
         href: ../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md
       - name: ダイアログとウィザード
         items:
@@ -716,9 +727,9 @@ items:
           - name: データベース ミラーリング セッションを確立する
             href: ../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md
             items:
-            - name: 例:Windows 認証を使用したデータベース ミラーリングの設定 (Transact-SQL)
+            - name: 例:Windows 認証を使用したデータベース ミラーリングの設定 (T-SQL)
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
-            - name: 例:証明書を使用したデータベース ミラーリングの設定 (Transact-SQL)
+            - name: 例:証明書を使用したデータベース ミラーリングの設定 (T-SQL)
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
           - name: ミラー化されたインスタンスのアップグレード
             href: ../database-engine/database-mirroring/upgrading-mirrored-instances.md
@@ -867,6 +878,7 @@ items:
       - name: ログ配布の SQL Server 2016 へのアップグレード
         href: ../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md
 - name: データベースの設計
+  href: ../toc/redirectfrom-database-design.md
   items:
   - name: 階層データ
     href: ../relational-databases/hierarchical-data-sql-server.md
@@ -882,7 +894,7 @@ items:
       href: ../relational-databases/collations/set-or-change-the-column-collation.md
     - name: 照合順序情報の表示
       href: ../relational-databases/collations/view-collation-information.md
-    - name: 国際化に対応した Transact-SQL ステートメントの記述
+    - name: 国際化に対応した T-SQL ステートメントの記述
       href: ../relational-databases/collations/write-international-transact-sql-statements.md
     - name: セッション言語の設定
       href: ../relational-databases/collations/set-a-session-language.md
@@ -949,9 +961,9 @@ items:
     - name: データベースのインポートとデタッチ
       href: ../relational-databases/databases/database-detach-and-attach-sql-server.md
       items:
-      - name: デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL)
+      - name: デタッチとアタッチを使用したデータベースの移動 (T-SQL)
         href: ../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md
-      - name: デタッチとアタッチを使用したデータベースのアップグレード (Transact-SQL)
+      - name: デタッチとアタッチを使用したデータベースのアップグレード (T-SQL)
         href: ../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md
       - name: データベースのデタッチ
         href: ../relational-databases/databases/detach-a-database.md
@@ -1027,15 +1039,15 @@ items:
     - name: データベース スナップショット
       href: ../relational-databases/databases/database-snapshots-sql-server.md
       items:
-      - name: データベース スナップショットのスパース ファイルのサイズを表示する方法 (Transact-SQL)
+      - name: データベース スナップショットのスパース ファイルのサイズを表示する (T-SQL)
         href: ../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md
-      - name: データベース スナップショットの作成 (Transact-SQL)
+      - name: データベース スナップショットの作成 (T-SQL)
         href: ../relational-databases/databases/create-a-database-snapshot-transact-sql.md
       - name: データベース スナップショットの表示 (SQL Server)
         href: ../relational-databases/databases/view-a-database-snapshot-sql-server.md
       - name: データベースをデータベース スナップショットに戻す
         href: ../relational-databases/databases/revert-a-database-to-a-database-snapshot.md
-      - name: データベース スナップショットの削除 (Transact-SQL)
+      - name: データベース スナップショットの削除 (T-SQL)
         href: ../relational-databases/databases/drop-a-database-snapshot-transact-sql.md
     - name: データベースのファイルの瞬時初期化
       href: ../relational-databases/databases/database-instant-file-initialization.md
@@ -1059,7 +1071,7 @@ items:
         href: ../relational-databases/blob/create-a-filestream-enabled-database.md
       - name: FILESTREAM データを格納するテーブルを作成する方法
         href: ../relational-databases/blob/create-a-table-for-storing-filestream-data.md
-      - name: Transact-SQL による FILESTREAM データへのアクセス
+      - name: T-SQL による FILESTREAM データへのアクセス
         href: ../relational-databases/blob/access-filestream-data-with-transact-sql.md
       - name: FILESTREAM データ用のクライアント アプリケーションの作成
         href: ../relational-databases/blob/create-client-applications-for-filestream-data.md
@@ -1089,7 +1101,7 @@ items:
         href: ../relational-databases/blob/load-files-into-filetables.md
       - name: FileTable 内のディレクトリとパスの操作
         href: ../relational-databases/blob/work-with-directories-and-paths-in-filetables.md
-      - name: Transact SQL を使用した FileTable へのアクセス
+      - name: T-SQL による FileTable へのアクセス
         href: ../relational-databases/blob/access-filetables-with-transact-sql.md
       - name: ファイル I/O API を使用した FileTable へのアクセス
         href: ../relational-databases/blob/access-filetables-with-file-input-output-apis.md
@@ -1248,9 +1260,9 @@ items:
       href: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
     - name: 作成
       href: ../relational-databases/stored-procedures/create-a-stored-procedure.md
-    - name: '[変更]'
+    - name: 変更
       href: ../relational-databases/stored-procedures/modify-a-stored-procedure.md
-    - name: DELETE
+    - name: 削除
       href: ../relational-databases/stored-procedures/delete-a-stored-procedure.md
     - name: Execute
       href: ../relational-databases/stored-procedures/execute-a-stored-procedure.md
@@ -1272,7 +1284,7 @@ items:
       href: ../relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md
     - name: 依存関係の表示
       href: ../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md
-    - name: Transact-SQL での OLE オートメーション オブジェクト
+    - name: T-SQL での OLE オートメーション オブジェクト
       href: ../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md
       items:
       - name: OLE オートメーションのリターン コードとエラー情報
@@ -1329,9 +1341,9 @@ items:
       items:
       - name: 作成
         href: ../relational-databases/tables/create-edge-constraints.md
-      - name: DELETE
+      - name: 削除
         href: ../relational-databases/tables/delete-edge-constraint.md
-      - name: '[変更]'
+      - name: 変更
         href: ../relational-databases/tables/modify-edge-constraint.md
       - name: 表示
         href: ../relational-databases/tables/view-edge-constraint-properties.md
@@ -1742,9 +1754,10 @@ items:
       - name: OPENXML での value() メソッドと nodes() メソッドの使用
         href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: 開発
+  href: redirectfrom-development-10.md
   items:
-  - name: SQL Server と対話するプログラミング +
-    href: ../connect/homepage-sql-connection-programming.md
+  - name: SQL Server と対話するプログラミング ++
+    href: ../connect/index.md
   - name: データ層アプリケーション
     items:
     - name: 概要
@@ -2090,6 +2103,8 @@ items:
         href: ../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md
       - name: SQL Server Express LocalDB ヘッダーとバージョン情報
         href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md
+      - name: LocalDB API のサンプル
+        href: ../relational-databases/sql-server-express-localdb-reference.md
       - name: LocalDB 関数
         items:
         - name: LocalDBCreateInstance
@@ -3124,6 +3139,12 @@ items:
         href: ../relational-databases/server-management-objects-smo/tasks/using-user-defined-tables.md
       - name: XML スキーマの使用方法
         href: ../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md
+  - name: Visual Studio のネイティブ ヘルパー
+    items:
+    - name: SqlToolsVSNativeHelpers
+      href: ../relational-databases/sqltoolsvsnativehelpers.md
+    - name: FrameWindowVisible
+      href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
   - name: SQLXML
     items:
     - name: SQLXML のサンプル実行のための必要条件
@@ -3797,8 +3818,10 @@ items:
   - name: トランザクションのロックおよび行のバージョン管理ガイド
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
 - name: インストール
+  href: redirectfrom-installation-10.md
   items:
   - name: リリース ノート
+    href: redirectfrom-release-notes-10.md
     items:
     - name: 旧バージョンとの互換性
       href: ../database-engine/sql-server-database-engine-backward-compatibility.md
@@ -3814,6 +3837,8 @@ items:
       href: ../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md
   - name: 計画
     items:
+    - name: リファレンス
+      href: ../sql-server/install/planning-a-sql-server-installation.md
     - name: SQL Server インストールの新機能
       href: ../sql-server/install/what-s-new-in-sql-server-installation.md
     - name: SQL Server のインストールに必要なハードウェアおよびソフトウェア
@@ -3832,6 +3857,8 @@ items:
     items:
     - name: 概要
       href: ../database-engine/install-windows/install-sql-server.md
+    - name: リファレンス
+      href: ../database-engine/install-windows/installation-for-sql-server.md
     - name: インストール ウィザードのヘルプ
       href: ../sql-server/install/instance-configuration.md
     - name: SQL Server データベース エンジンのインストール
@@ -3878,13 +3905,15 @@ items:
       href: ../sql-server/install/install-sql-server-business-intelligence-features.md
   - name: SQL Server をアップグレードする
     items:
+    - name: リファレンス
+      href: ../database-engine/install-windows/upgrade-sql-server.md
     - name: サポートされているバージョンとエディションのアップグレード SQL Server 2017
       href: ../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: サポートされているバージョンとエディションのアップグレード SQL Server 2016
       href: ../database-engine/install-windows/supported-version-and-edition-upgrades.md
     - name: Data Migration Assistant を実行してアップグレードを準備する
       href: ../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
-    - name: SQL 2005、2008、または 2008 R2 からアップグレードしますか?
+    - name: SQL 2005、2008、または 2008 R2 からのアップグレード
       href: ../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md
     - name: Analysis Services のアップグレード
       href: ../database-engine/install-windows/upgrade-analysis-services.md
@@ -3993,7 +4022,7 @@ items:
         href: ../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md
       - name: ft notify bandwidth サーバー構成オプション
         href: ../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md
-      - name: PolyBase 接続構成 (Transact-SQL)
+      - name: PolyBase 接続構成 (T-SQL)
         href: ../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
       - name: in-doubt xact resolution サーバー構成オプション
         href: ../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md
@@ -4209,6 +4238,8 @@ items:
       href: ../database-engine/configure-windows/buffer-pool-extension.md
   - name: SQL Server のアンインストール
     items:
+    - name: 概要
+      href: ../sql-server/install/uninstall-sql-server.md
     - name: SQL Server の既存のインスタンスのアンインストール (セットアップ)
       href: ../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md
     - name: Data Quality Server オブジェクトの削除
@@ -4221,8 +4252,8 @@ items:
       href: ../sql-server/install/uninstall-reporting-services.md
 - name: データの読み込みと移行
   items:
-  - name: SQL Server Integration Services +
-    href: ../integration-services/sql-server-integration-services.md
+  - name: SQL Server Integration Services (SSIS) ++
+    href: ../integration-services/index.md
   - name: のレプリケーション
     items:
     - name: 概要
@@ -4244,6 +4275,8 @@ items:
         items:
         - name: 情報スクリプトの配布および発行
           href: ../relational-databases/replication/administration/distributor-and-publisher-information-script.md
+        - name: スクリプトのレプリケーション
+          href: ../relational-databases/replication/scripting-replication.md
         - name: レプリケートされたテーブルの比較
           href: ../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md
         - name: 定義済みの警告の構成 (SSMS)
@@ -4284,9 +4317,13 @@ items:
       - name: モニター
         href: ../relational-databases/replication/monitor/monitoring-replication.md
         items:
+        - name: レプリケーション エージェントの監視
+          href: ../relational-databases/replication/monitor/monitor-replication-agents.md
         - name: レプリケーション モニター
           href: ../relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md
           items:
+          - name: レプリケーション モニターの開始
+            href: ../relational-databases/replication/monitor/start-the-replication-monitor.md
           - name: 権限の管理
             href: ../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md
           - name: パブリッシャーの追加または削除
@@ -4351,6 +4388,12 @@ items:
             href: ../relational-databases/replication/publish/create-a-publication.md
           - name: プロパティの表示および変更
             href: ../relational-databases/replication/publish/view-and-modify-publication-properties.md
+          - name: スナップショットのプロパティの構成
+            href: ../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md
+          - name: パブリケーションの管理
+            href: ../relational-databases/replication/publish/maintain-publications.md
+          - name: FTP でのスナップショットの配信
+            href: ../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md
           - name: パブリケーションの削除
             href: ../relational-databases/replication/publish/delete-a-publication.md
           - name: サブスクリプションの有効期限の設定
@@ -4367,8 +4410,6 @@ items:
             href: ../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md
           - name: パラメーター化された行フィルターの最適化
             href: ../relational-databases/replication/publish/optimize-parameterized-row-filters.md
-          - name: アーティクルの追加または削除
-            href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md
           - name: パブリケーションおよびアーティクルのプロパティの変更
             href: ../relational-databases/replication/publish/change-publication-and-article-properties.md
         - name: アーティクルの管理
@@ -4377,8 +4418,12 @@ items:
             href: ../relational-databases/replication/publish/define-an-article.md
           - name: アーティクルの種類の指定
             href: ../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md
+          - name: アーティクルの追加または削除
+            href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md
           - name: プロパティの表示および変更
             href: ../relational-databases/replication/publish/view-and-modify-article-properties.md
+          - name: 既存のパブリケーションに対するアーティクルの追加または削除
+            href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-a-publication.md
           - name: アーティクルの削除
             href: ../relational-databases/replication/publish/delete-an-article.md
         - name: サブスクリプションを管理する
@@ -4392,6 +4437,12 @@ items:
             href: ../relational-databases/replication/view-and-modify-pull-subscription-properties.md
           - name: プッシュ サブスクリプションのプロパティの表示または変更
             href: ../relational-databases/replication/view-and-modify-push-subscription-properties.md
+          - name: サブスクリプションの再初期化
+            href: ../relational-databases/replication/reinitialize-a-subscription.md
+          - name: プル サブスクリプションの同期
+            href: ../relational-databases/replication/synchronize-a-pull-subscription.md
+          - name: プッシュ サブスクリプションの同期
+            href: ../relational-databases/replication/synchronize-a-push-subscription.md
           - name: プル サブスクリプションの削除
             href: ../relational-databases/replication/delete-a-pull-subscription.md
           - name: プッシュ サブスクリプションの削除
@@ -4409,6 +4460,8 @@ items:
           - name: サブスクリプションの初期化
             href: ../relational-databases/replication/initialize-a-subscription.md
             items:
+            - name: 手動での初期化
+              href: ../relational-databases/replication/initialize-a-subscription-manually.md
             - name: 初期スナップショットの作成および適用
               href: ../relational-databases/replication/create-and-apply-the-initial-snapshot.md
             - name: スナップショット オプションの変更
@@ -4464,12 +4517,18 @@ items:
         items:
         - name: データ変更の反映方法の構成
           href: ../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md
+        - name: レプリケートされたコマンドの表示
+          href: ../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md
         - name: 更新サブスクリプションの有効化
           href: ../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md
         - name: 更新可能なサブスクリプションの作成
           href: ../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md
         - name: SP の実行のパブリッシュ
           href: ../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md
+        - name: バックアップ ファイルからの初期化の有効化
+          href: ../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md
+        - name: バックアップからの初期化
+          href: ../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md
         - name: データの競合の表示
           href: ../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md
         - name: トランザクション レプリケーションでエラーを見つける
@@ -4496,6 +4555,8 @@ items:
           href: ../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md
         - name: アーティクル間の結合フィルターの自動生成
           href: ../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
+        - name: 論理レコード リレーションシップの定義
+          href: ../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
         - name: Web 同期の構成
           href: ../relational-databases/replication/configure-web-synchronization.md
         - name: Web 同期用の IIS の構成
@@ -4518,6 +4579,8 @@ items:
           href: ../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md
         - name: パブリッシュされたデータのフィルター処理
           href: ../relational-databases/replication/merge/filter-published-data-for-merge-replication.md
+        - name: 競合情報の表示
+          href: ../relational-databases/replication/view-conflict-information-for-merge-publications.md
         - name: 競合の解決
           items:
           - name: 競合回避モジュールの選択
@@ -4602,8 +4665,10 @@ items:
         - name: Web 同期トポロジ
           href: ../relational-databases/replication/topologies-for-web-synchronization.md
       - name: Replication Agents
-        href: ../relational-databases/replication/agents/replication-agents-overview.md
+        href: ../relational-databases/replication/agents/replication-agent-administration.md
         items:
+        - name: 概要
+          href: ../relational-databases/replication/agents/replication-agents-overview.md
         - name: ディストリビューション エージェント
           href: ../relational-databases/replication/agents/replication-distribution-agent.md
         - name: ログ リーダー エージェント (Log Reader Agent)
@@ -4614,6 +4679,8 @@ items:
           href: ../relational-databases/replication/agents/replication-queue-reader-agent.md
         - name: スナップショット エージェント
           href: ../relational-databases/replication/agents/replication-snapshot-agent.md
+        - name: エージェント プロファイル
+          href: ../relational-databases/replication/agents/replication-agent-profiles.md
       - name: 開発者の概念
         href: ../relational-databases/replication/concepts/replication-developer-documentation.md
         items:
@@ -4648,6 +4715,8 @@ items:
           - name: Oracle
             href: ../relational-databases/replication/non-sql/oracle-publishing-overview.md
             items:
+            - name: 注意点と制限事項
+              href: ../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md
             - name: 用語集
               href: ../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md
             - name: 管理上の注意点
@@ -4682,6 +4751,8 @@ items:
         href: ../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
     - name: リファレンス
       items:
+      - name: レプリケーション言語
+        href: ../relational-databases/replication/replication-language-reference.md
       - name: レプリケーション オブジェクトのプロパティ
         items:
         - name: '[ディストリビューターのプロパティ]'
@@ -4701,11 +4772,21 @@ items:
           href: ../relational-databases/replication/article-properties-article.md
         - name: '[サブスクリプションのプロパティ]'
           href: ../relational-databases/replication/subscription-properties-subscriber.md
+        - name: フィルターの設定
+          href: ../relational-databases/replication/filter-settings.md
+        - name: ログ リーダー エージェント
+          href: ../relational-databases/replication/log-reader-agent.md
+        - name: スナップショット エージェント
+          href: ../relational-databases/replication/snapshot-agent.md
+        - name: キュー リーダー エージェント
+          href: ../relational-databases/replication/queue-reader-agent.md
       - name: ツール リファレンス
         items:
         - name: レプリケーション モニター
           href: ../relational-databases/replication/replication-monitor.md
           items:
+          - name: メイン ページ
+            href: ../relational-databases/replication/replication-monitor-main-page.md
           - name: '[パブリッシャーの追加]'
             href: ../relational-databases/replication/add-publisher.md
           - name: ディストリビューターの設定
@@ -4716,25 +4797,30 @@ items:
             href: ../relational-databases/replication/publisher-settings.md
           - name: パブリッシャー情報
             href: ../relational-databases/replication/publisher-information-publications.md
+          - name: パブリッシャーのエージェント
+            href: ../relational-databases/replication/publisher-information-agents.md
+          - name: 列の並べ替え
+            href: ../relational-databases/replication/sort-columns.md
+        - name: パブリケーション情報
+          items:
+          - name: トランザクション レプリケーション
             items:
-            - name: トランザクション レプリケーション
-              items:
-              - name: サブスクリプション ウォッチ リスト
-                href: ../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
-              - name: サブスクリプション
-                href: ../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
-              - name: Warnings
-                href: ../relational-databases/replication/publication-information-warnings-transactional-publication.md
-              - name: '[エージェント]'
-                href: ../relational-databases/replication/publication-information-agents-transactional-publication.md
-              - name: トレーサー トークン
-                href: ../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md
-              - name: 未配布のコマンド
-                href: ../relational-databases/replication/subscription-undistributed-commands-transactional-subscription.md
-              - name: パブリッシャーからディストリビューターまでの履歴
-                href: ../relational-databases/replication/subscription-publisher-to-distributor-history-transactional-subscription.md
-              - name: ディストリビューターからサブスクライバーまでの履歴
-                href: ../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md
+            - name: サブスクリプション ウォッチ リスト
+              href: ../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
+            - name: サブスクリプション
+              href: ../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
+            - name: Warnings
+              href: ../relational-databases/replication/publication-information-warnings-transactional-publication.md
+            - name: '[エージェント]'
+              href: ../relational-databases/replication/publication-information-agents-transactional-publication.md
+            - name: トレーサー トークン
+              href: ../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md
+            - name: 未配布のコマンド
+              href: ../relational-databases/replication/subscription-undistributed-commands-transactional-subscription.md
+            - name: パブリッシャーからディストリビューターまでの履歴
+              href: ../relational-databases/replication/subscription-publisher-to-distributor-history-transactional-subscription.md
+            - name: ディストリビューターからサブスクライバーまでの履歴
+              href: ../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md
             - name: マージ レプリケーション
               items:
               - name: サブスクリプション ウォッチ リスト
@@ -5122,7 +5208,8 @@ items:
   - name: 一括コピー ユーティリティ (bcp)
     href: ../tools/bcp-utility.md
   - name: Azure Integration Services +
-    href: https://docs.microsoft.com/en-us/azure/dms/dms-overview
+    displayName: DMS, Data Migration Service
+    href: /azure/dms/dms-overview
   - name: Stretch Database
     items:
     - name: 概要
@@ -6378,11 +6465,11 @@ items:
           href: ../relational-databases/data-collection/view-or-change-collection-set-schedules-sql-server-management-studio.md
         - name: コレクション セット レポートの表示 (SQL Server Management Studio)
           href: ../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md
-        - name: データ コレクションのパラメーターの構成 (Transact-SQL)
+        - name: データ コレクションのパラメーターの構成 (T-SQL)
           href: ../relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md
-        - name: ジェネリック T-SQL Query コレクター型を使用するカスタム コレクション セットの作成 (Transact-SQL)
+        - name: ジェネリック T-SQL Query コレクター型を使用するカスタム コレクション セットの作成 (T-SQL)
           href: ../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md
-        - name: コレクション アイテムをコレクション セットに追加する (Transact-SQL)
+        - name: コレクション アイテムのコレクション セットへの追加 (T-SQL)
           href: ../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md
       - name: システム データ コレクション セット レポート
         href: ../relational-databases/data-collection/system-data-collection-set-reports.md
@@ -6437,7 +6524,7 @@ items:
       items:
       - name: 概要
         href: ../relational-databases/sql-trace/sql-trace.md
-      - name: Transact-SQL ストアド プロシージャを使用したトレースの作成と実行
+      - name: T-SQL ストアド プロシージャを使用したトレースの作成と実行
         href: ../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md
       - name: ストアド プロシージャを使用した手動トレースの作成
         href: ../relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md
@@ -6445,17 +6532,17 @@ items:
         href: ../relational-databases/sql-trace/save-trace-results-to-a-file.md
       - name: トレース データへのアクセスを向上させる
         href: ../relational-databases/sql-trace/improve-access-to-trace-data.md
-      - name: トレースの作成 (Transact-SQL)
+      - name: トレースの作成 (T-SQL)
         href: ../relational-databases/sql-trace/create-a-trace-transact-sql.md
-      - name: トレース フィルターの設定 (Transact-SQL)
+      - name: トレース フィルターの設定 (T-SQL)
         href: ../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md
-      - name: 既存のトレースの変更 (Transact-SQL)
+      - name: 既存のトレースの変更 (T-SQL)
         href: ../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md
-      - name: 保存されているトレースの表示 (Transact-SQL)
+      - name: 保存されているトレースの表示 (T-SQL)
         href: ../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md
-      - name: フィルター情報の表示 (Transact-SQL)
+      - name: フィルター情報の表示 (T-SQL)
         href: ../relational-databases/sql-trace/view-filter-information-transact-sql.md
-      - name: トレースの削除 (Transact-SQL)
+      - name: トレースの削除 (T-SQL)
         href: ../relational-databases/sql-trace/delete-a-trace-transact-sql.md
       - name: SQL トレースの最適化
         href: ../relational-databases/sql-trace/optimize-sql-trace.md
@@ -6682,7 +6769,7 @@ items:
       items:
       - name: 概要
         href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
-      - name: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジのインベントリ
+      - name: T-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジのインベントリ
         href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
       - name: 概要と使用シナリオ
         href: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
@@ -6798,18 +6885,18 @@ items:
           href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
         - name: インメモリ OLTP データベースにおける高可用性のサポート
           href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
-        - name: Transact-SQL によるインメモリ OLTP のサポート
+        - name: T-SQL によるインメモリ OLTP のサポート
           href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
           items:
           - name: インメモリ OLTP に対してサポートされるデータ型
             href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
-          - name: 解釈された Transact-SQL を使用したメモリ最適化テーブルへのアクセス
+          - name: 解釈された T-SQL を使用したメモリ最適化テーブルへのアクセス
             href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
           - name: ネイティブ コンパイル T-SQL モジュールでサポートされる機能
             href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
           - name: ネイティブ コンパイル T-SQL モジュールでサポートされる DDL
             href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
-          - name: インメモリ OLTP でサポートされていない Transact-SQL の構造
+          - name: インメモリ OLTP でサポートされていない T-SQL の構造
             href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
       - name: インメモリ OLTP への移行
         href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
@@ -6926,9 +7013,9 @@ items:
         href: ../relational-databases/statistics/statistics.md
       - name: 作成
         href: ../relational-databases/statistics/create-statistics.md
-      - name: '[変更]'
+      - name: 変更
         href: ../relational-databases/statistics/modify-statistics.md
-      - name: DELETE
+      - name: 削除
         href: ../relational-databases/statistics/delete-statistics.md
       - name: プロパティの表示
         href: ../relational-databases/statistics/view-statistics-properties.md
@@ -6975,14 +7062,15 @@ items:
       href: ../relational-databases/synonyms/create-synonyms.md
 - name: レポートと分析
   items:
-  - name: 高度な分析と機械学習 +
+  - name: 高度な分析と機械学習 ++
     href: ../advanced-analytics/index.md
-  - name: 分析プラットフォーム システム +
-    href: ../analytics-platform-system/whats-new-analytics-platform-system.md
-  - name: SQL Server Analysis Services (SSAS) +
-    href: ../analysis-services/analysis-services.md
-  - name: SQL Server Reporting Services (SSRS) +
-    href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+  - name: 分析プラットフォーム システム ++
+    displayName: APS, PDW, Parallel Data Warehouse
+    href: ../analytics-platform-system/index.md
+  - name: SQL Server Analysis Services (SSAS) ++
+    href: ../analysis-services/index.md
+  - name: SQL Server Reporting Services (SSRS) ++
+    href: ../reporting-services/index.md
   - name: ビッグ データ クラスター
     items:
     - name: 概要
@@ -7048,25 +7136,33 @@ items:
       - name: データの仮想化
         items:
         - name: リレーショナル データを仮想化する
-          href: ../big-data-cluster/../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+          href: ../relational-databases/polybase/data-virtualization.md
         - name: CSV データを仮想化する
-          href: ../big-data-cluster/../relational-databases/polybase/data-virtualization-csv.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+          href: ../relational-databases/polybase/data-virtualization-csv.md
+        - name: HDFS の階層
+          href: ../big-data-cluster/hdfs-tiering.md
       - name: データ インジェスト
         items:
         - name: CURL を使用したデータの読み込み
           href: ../big-data-cluster/data-ingestion-curl.md
         - name: データベースを復元する
           href: ../big-data-cluster/data-ingestion-restore-database.md
+      - name: アプリを展開する
+        items:
+        - name: mssqlctl を使用する
+          href: ../big-data-cluster/big-data-cluster-create-apps.md
+        - name: VS Code を使用する
+          href: ../big-data-cluster/app-deployment-extension.md
       - name: ビッグ データ/Machine Learning
         items:
         - name: PROSE コード アクセラレータを使用したデータ ラングリング
           href: ../big-data-cluster/use-prose-for-big-data-automation.md
-        - name: アプリを展開する
-          href: ../big-data-cluster/big-data-cluster-create-apps.md
         - name: Spark による機械学習モデルのトレーニングと作成
           href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
         - name: Spark/Mleap による ML モデルのエクスポート
           href: ../big-data-cluster/export-model-with-spark-mleap.md
+        - name: RStudio から Sparklyr を使用する
+          href: ../big-data-cluster/sparklyr-from-RStudio.md
       - name: SQL Server ビッグ データ クラスターを管理する
         items:
         - name: ビッグ データ クラスターに接続する
@@ -7083,14 +7179,12 @@ items:
           href: ../big-data-cluster/notebooks-how-to-manage.md
       - name: Spark ジョブ
         items:
-        - name: Spark ジョブを送信する
+        - name: Azure Data Studio で Spark ジョブを送信する
           href: ../big-data-cluster/spark-submit-job.md
+        - name: IntelliJ で Spark ジョブを送信する
+          href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
         - name: 拡張された Spark History Server を使用する
           href: ../big-data-cluster/spark-history-server.md
-    - name: リソース
-      items:
-      - name: ビッグ データ クラスターへのアクセスを要求する
-        href: https://aka.ms/eapsignup
   - name: マスター データ サービス
     items:
     - name: 概要
@@ -7658,7 +7752,7 @@ items:
           href: ../relational-databases/polybase/polybase-faq.md
     - name: リファレンス
       items:
-      - name: Transact-SQL リファレンス
+      - name: T-SQL リファレンス
         href: ../relational-databases/polybase/polybase-t-sql-objects.md
     - name: リソース
       items:
@@ -7667,7 +7761,7 @@ items:
       - name: Stack Overflow +
         href: https://stackoverflow.com/questions/tagged/sql-server
       - name: MSDN フォーラム +
-        href: https://social.msdn.microsoft.com/Forums/en-us/home?category=sqlserver
+        href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
       - name: フィードバックの送信 +
         href: https://feedback.azure.com/forums/908035-sql-server
       - name: Reddit +
@@ -7757,11 +7851,11 @@ items:
         - name: 暗号化を使用する SQL Server コネクタ
           href: ../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
         - name: Bring Your Own Key +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
+          href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
         - name: TDE BYOK キーの交換 +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
+          href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
         - name: TDE の保護機能の削除 +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
+          href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
         - name: Azure Key Vault を使用した EKM
           href: ../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
       - name: 監査
@@ -7837,10 +7931,10 @@ items:
         - name: 透過的なデータ暗号化 (TDE)
           href: ../relational-databases/security/encryption/transparent-data-encryption.md
         - name: Azure SQL Database での TDE +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql
+          href: /azure/sql-database/transparent-data-encryption-azure-sql
           items:
           - name: Bring Your Own Key +
-            href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql
+            href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
         - name: 暗号化キー
           href: ../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
           items:
@@ -8257,7 +8351,7 @@ items:
       href: ../ssms/scripting/sqlcmd-use-the-utility.md
     - name: データベース エンジンへの接続
       href: ../ssms/scripting/sqlcmd-connect-to-the-database-engine.md
-    - name: Transact-SQL スクリプト ファイルの実行
+    - name: T-SQL スクリプト ファイルの実行
       href: ../ssms/scripting/sqlcmd-run-transact-sql-script-files.md
     - name: スクリプト変数の使用
       href: ../ssms/scripting/sqlcmd-use-with-scripting-variables.md
@@ -8308,7 +8402,7 @@ items:
         href: ../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md
       - name: '[データ ツール操作] ウィンドウ'
         href: ../ssdt/data-tools-operations-window.md
-      - name: Transact-SQL エディターのオプション
+      - name: T-SQL エディターのオプション
         href: ../ssdt/transact-sql-editor-options.md
       - name: 操作方法:新しいデータベース プロジェクトを作成する
         href: ../ssdt/how-to-create-a-new-database-project.md
@@ -8363,9 +8457,9 @@ items:
         href: ../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md
       - name: 操作方法:データの差異を表示する
         href: ../ssdt/how-to-view-data-differences.md
-      - name: Transact-SQL エディターを使用したスクリプトの編集と実行
+      - name: T-SQL エディターを使用したスクリプトの編集と実行
         href: ../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md
-      - name: 操作方法:スニペットをアウトライン表示し、Transact-SQL スクリプトに追加する
+      - name: 操作方法:スニペットをアウトライン表示し、T-SQL スクリプトに追加する
         href: ../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md
       - name: 操作方法:スクリプト間を移動する
         href: ../ssdt/how-to-navigate-between-scripts.md
@@ -8398,7 +8492,7 @@ items:
           href: ../ssdt/sql-server-unit-test-files.md
         - name: SQL Server の単体テストでのテスト条件の使用
           href: ../ssdt/using-test-conditions-in-sql-server-unit-tests.md
-        - name: SQL Server の単体テストでの Transact-SQL アサーションの使用
+        - name: SQL Server の単体テストでの T-SQL アサーションの使用
           href: ../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md
         - name: 操作方法:SQL Server の単体テストのテスト プロジェクトを作成する
           href: ../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md
@@ -8601,7 +8695,7 @@ items:
           href: ../ssms/agent/create-a-sql-server-agent-master-job.md
         - name: Create a SQL Server Agent Proxy
           href: ../ssms/agent/create-a-sql-server-agent-proxy.md
-        - name: Create a Transact-SQL Job Step
+        - name: T-SQL ジョブ ステップの作成
           href: ../ssms/agent/create-a-transact-sql-job-step.md
         - name: ユーザー定義イベントの作成
           href: ../ssms/agent/create-a-user-defined-event.md
@@ -8627,7 +8721,7 @@ items:
           href: ../ssms/agent/defect-multiple-target-servers-from-a-master-server.md
         - name: 警告に対する応答の定義 (SSMS)
           href: ../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md
-        - name: Define Transact-SQL Job Step Options
+        - name: T-SQL ジョブ ステップ オプションの定義
           href: ../ssms/agent/define-transact-sql-job-step-options.md
         - name: ジョブ カテゴリの削除
           href: ../ssms/agent/delete-a-job-category.md
@@ -8887,29 +8981,29 @@ items:
           href: ../ssms/scripting/automatic-matching-of-syntax-pairs.md
         - name: IntelliSense のトラブルシューティング (SSMS)
           href: ../ssms/scripting/troubleshooting-intellisense.md
-        - name: IntelliSense でサポートされている Transact-SQL 構文
+        - name: IntelliSense でサポートされている T-SQL 構文
           href: ../ssms/scripting/transact-sql-syntax-supported-by-intellisense.md
-      - name: Transact-SQL コード スニペット
+      - name: T-SQL コード スニペット
         href: ../ssms/scripting/transact-sql-code-snippets.md
         items:
-        - name: Transact-SQL スニペットの挿入
+        - name: T-SQL スニペットの挿入
           href: ../ssms/scripting/insert-transact-sql-snippets.md
-        - name: ブロックの挿入 Transact-SQL スニペットの挿入
+        - name: ブロックの挿入 T-SQL スニペットの挿入
           href: ../ssms/scripting/insert-surround-with-transact-sql-snippets.md
-        - name: Transact-SQL スニペットの作成
+        - name: T-SQL スニペットの作成
           href: ../ssms/scripting/complete-transact-sql-snippets.md
-        - name: Transact-SQL スニペットの追加
+        - name: T-SQL スニペットの追加
           href: ../ssms/scripting/add-transact-sql-snippets.md
-      - name: Transact-SQL デバッガー
+      - name: T-SQL デバッガー
         href: ../ssms/scripting/transact-sql-debugger.md
         items:
-        - name: TSQL デバッガーを実行する前にファイアウォール規則を構成します。
+        - name: T-SQL デバッガー実行前のファイアウォール規則の構成
           href: ../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md
-        - name: Transact-SQL デバッガーの実行
+        - name: T-SQL デバッガーの実行
           href: ../ssms/scripting/run-the-transact-sql-debugger.md
-        - name: Transact-SQL コードのステップ実行
+        - name: T-SQL コードのステップ実行
           href: ../ssms/scripting/step-through-transact-sql-code.md
-        - name: Transact-SQL ブレークポイント
+        - name: T-SQL ブレークポイント
           href: ../ssms/scripting/transact-sql-breakpoints.md
           items:
           - name: ブレークポイントの切り替え
@@ -8926,26 +9020,26 @@ items:
             href: ../ssms/scripting/specify-a-breakpoint-action.md
           - name: ブレークポイントの位置の編集
             href: ../ssms/scripting/edit-a-breakpoint-location.md
-        - name: Transact-SQL デバッガー情報
+        - name: T-SQL デバッガー - 情報
           href: ../ssms/scripting/transact-sql-debugger-information.md
           items:
-          - name: Transact-SQL デバッガー - [エラー一覧] ウィンドウ
+          - name: T-SQL デバッガー - [エラー一覧] ウィンドウ
             href: ../ssms/scripting/transact-sql-debugger-error-list-window.md
-          - name: Transact-SQL デバッガー - [ブレークポイント] ウィンドウ
+          - name: T-SQL デバッガー - [ブレークポイント] ウィンドウ
             href: ../ssms/scripting/transact-sql-debugger-breakpoints-window.md
-          - name: Transact-SQL デバッガー - [呼び出し履歴] ウィンドウ
+          - name: T-SQL デバッガー - [呼び出し履歴] ウィンドウ
             href: ../ssms/scripting/transact-sql-debugger-call-stack-window.md
-          - name: Transact-SQL デバッガー - [ローカル] ウィンドウ
+          - name: T-SQL デバッガー - [ローカル] ウィンドウ
             href: ../ssms/scripting/transact-sql-debugger-locals-window.md
-          - name: Transact-SQL デバッガー - [スレッド] ウィンドウ
+          - name: T-SQL デバッガー - [スレッド] ウィンドウ
             href: ../ssms/scripting/transact-sql-debugger-threads-window.md
-          - name: Transact-SQL デバッガー - [コマンド] ウィンドウ
+          - name: T-SQL デバッガー - [コマンド] ウィンドウ
             href: ../ssms/scripting/transact-sql-debugger-command-window.md
-          - name: Transact-SQL デバッガー - [出力] ウィンドウ
+          - name: T-SQL デバッガー - [出力] ウィンドウ
             href: ../ssms/scripting/transact-sql-debugger-output-window.md
-          - name: Transact-SQL デバッガー - [ウォッチ] ウィンドウ
+          - name: T-SQL デバッガー - [ウォッチ] ウィンドウ
             href: ../ssms/scripting/transact-sql-debugger-watch-window.md
-          - name: Transact-SQL デバッガー - [クイック ウォッチ] ダイアログ ボックス
+          - name: T-SQL デバッガー - [クイック ウォッチ] ダイアログ ボックス
             href: ../ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md
         - name: ステータス バー (データベース エンジン クエリ エディター)
           href: ../ssms/scripting/status-bar-database-engine-query-editor.md
@@ -9634,7 +9728,7 @@ items:
     - name: トレースを作成する
       href: ../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md
       items:
-      - name: トレースを実行するための Transact-SQL スクリプトを作成する
+      - name: トレースを実行するための T-SQL スクリプトを作成する
         href: ../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md
     - name: トレースの開始
       href: ../tools/sql-server-profiler/start-a-trace.md
@@ -9718,7 +9812,7 @@ items:
         href: ../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md
       - name: カーソルまで再生する
         href: ../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md
-      - name: Transact-SQL スクリプトを再生する
+      - name: T-SQL スクリプトを再生する
         href: ../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md
       - name: SQL Server Profiler ダイアログ ボックス
         href: ../tools/sql-server-profiler/sql-server-profiler-f1-help.md
@@ -9989,7 +10083,7 @@ items:
     - name: Stack Overflow +
       href: https://stackoverflow.com/questions/tagged/sql-server
     - name: MSDN フォーラム +
-      href: https://social.msdn.microsoft.com/Forums/en-US/home
+      href: https://social.msdn.microsoft.com/Forums/home
     - name: フィードバックの送信 +
       href: https://feedback.azure.com/forums/908035-sql-server
     - name: Reddit +
@@ -9997,11 +10091,11 @@ items:
 - name: Azure 上の SQL
   items:
   - name: Azure SQL Database +
-    href: https://docs.microsoft.com/en-us/azure/sql-database/
+    href: /azure/sql-database/
   - name: Azure SQL Data Warehouse +
-    href: https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+    href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
   - name: Azure VM 上の SQL Server +
-    href: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+    href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: リソース
   items:
   - name: ブログ
@@ -10017,17 +10111,19 @@ items:
   - name: 学習する
     items:
     - name: Microsoft Virtual Academy +
-      href: https://mva.microsoft.com/product-training/sql-server#!lang=1033
+      href: https://mva.microsoft.com/product-training/sql-server
     - name: Channel 9 での SQL +
       href: https://channel9.msdn.com/Search
   - name: フィードバックとヘルプ
     items:
     - name: ヘルプの参照
       href: ../sql-server/sql-server-get-help.md
-    - name: SQL ドキュメントのフィードバックの送信
+    - name: SQL ドキュメントのフィードバック +
       href: https://aka.ms/sqldocsfeedback
-    - name: SQL Server のフィードバックの送信 (UserVoice)
+    - name: SQL Server のフィードバック (UserVoice) +
       href: https://feedback.azure.com/forums/908035-sql-server
+    - name: SQL ドキュメントのアンケート +
+      href: https://aka.ms/sqldocsurvey
     - name: SQL ドキュメントへの投稿
       href: ../sql-server/sql-server-docs-contribute.md
     - name: DBA Stack Exchange +
@@ -10035,7 +10131,7 @@ items:
     - name: Stack Overflow +
       href: https://stackoverflow.com/questions/tagged/sql-server
     - name: MSDN フォーラム +
-      href: https://social.msdn.microsoft.com/Forums/en-US/home
+      href: https://social.msdn.microsoft.com/Forums/home
     - name: Reddit +
       href: https://www.reddit.com/r/SQLServer
   - name: パートナー
@@ -10051,7 +10147,51 @@ items:
   - name: ヘルプ ビューアーでのローカル コンテンツ
     href: ../sql-server/sql-server-help-installation.md
 - name: リファレンス
+  href: ../toc/redirectfrom-reference-10.md
   items:
+  - name: SQL ドキュメントのインクルード ファイル
+    href: ../sql-server/applies-to-includes.md
+  - name: アーカイブ コンテンツ (SQL 2005 から 2012) +
+    displayName: 2005, 2008, 2008 r2, 2012
+    href: https://docs.microsoft.com/previous-versions/sql/
+  - name: データベースのサンプル
+    href: ../toc/redirectfrom-database-samples.md
+    items:
+    - name: サンプルの概要
+      href: ../samples/sql-samples-where-are.md
+    - name: すべての Github サンプル +
+      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
+    - name: AdventureWorks
+      items:
+      - name: '[インストールと構成]'
+        href: ../samples/adventureworks-install-configure.md
+    - name: Wide World Importers
+      href: ../toc/redirectfrom-wide-world-importers.md
+      items:
+      - name: 概要
+        href: ../samples/wide-world-importers-what-is.md
+      - name: OLTP
+        href: ../toc/redirectfrom-oltp-10.md
+        items:
+        - name: データベース カタログ
+          href: ../samples/wide-world-importers-oltp-database-catalog.md
+        - name: '[インストールと構成]'
+          href: ../samples/wide-world-importers-oltp-install-configure.md
+        - name: SQL Server 機能
+          href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
+      - name: データ ウェアハウス (data warehouse)
+        href: ../toc/redirectfrom-data-warehouse-10.md
+        items:
+        - name: データベース カタログ
+          href: ../samples/wide-world-importers-dw-database-catalog.md
+        - name: '[インストールと構成]'
+          href: ../samples/wide-world-importers-dw-install-configure.md
+        - name: SQL Server 機能
+          href: ../samples/wide-world-importers-dw-use-of-sql-server-features.md
+      - name: データの生成
+        href: ../samples/wide-world-importers-generate-data.md
+      - name: ETL ワークフロー
+        href: ../samples/wide-world-importers-perform-etl.md
   - name: エラーとイベント
     items:
     - name: 概要
@@ -11015,35 +11155,6 @@ items:
       - name: SP:StmtStarting イベント クラス
         href: ../relational-databases/event-classes/sp-stmtstarting-event-class.md
     - name: Transactions イベント カテゴリ
-      href: ../relational-databases/event-classes/transactions-event-category.md
-      items:
-      - name: DTCTransaction イベント クラス
-        href: ../relational-databases/event-classes/dtctransaction-event-class.md
-      - name: SQLTransaction イベント クラス
-        href: ../relational-databases/event-classes/sqltransaction-event-class.md
-      - name: 'TM: Begin Tran Completed イベント クラス'
-        href: ../relational-databases/event-classes/tm-begin-tran-completed-event-class.md
-      - name: 'TM: Begin Tran Starting イベント クラス'
-        href: ../relational-databases/event-classes/tm-begin-tran-starting-event-class.md
-      - name: 'TM: Commit Tran Completed イベント クラス'
-        href: ../relational-databases/event-classes/tm-commit-tran-completed-event-class.md
-      - name: 'TM: Commit Tran Starting イベント クラス'
-        href: ../relational-databases/event-classes/tm-commit-tran-starting-event-class.md
-      - name: 'TM: Promote Tran Completed イベント クラス'
-        href: ../relational-databases/event-classes/tm-promote-tran-completed-event-class.md
-      - name: 'TM: Promote Tran Starting イベント クラス'
-        href: ../relational-databases/event-classes/tm-promote-tran-starting-event-class.md
-      - name: 'TM: Rollback Tran Completed イベント クラス'
-        href: ../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
-      - name: 'TM: Rollback Tran Starting イベント クラス'
-        href: ../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
-      - name: 'TM: Save Tran Completed イベント クラス'
-        href: ../relational-databases/event-classes/tm-save-tran-completed-event-class.md
-      - name: 'TM: Save Tran Starting イベント クラス'
-        href: ../relational-databases/event-classes/tm-save-tran-starting-event-class.md
-      - name: TransactionLog イベント クラス
-        href: ../relational-databases/event-classes/transactionlog-event-class.md
-    - name: TSQL イベント カテゴリ
       href: ../relational-databases/event-classes/tsql-event-category.md
       items:
       - name: Exec Prepared SQL イベント クラス
@@ -11194,7 +11305,7 @@ items:
         href: ../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md
       - name: sys.assembly_references
         href: ../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md
-      - name: sys.trusted_assemblies (Transact-SQL)
+      - name: sys.trusted_assemblies (T-SQL)
         href: ../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md
     - name: データ コレクター
       href: ../relational-databases/system-catalog-views/data-collector-views-transact-sql.md
@@ -11254,7 +11365,7 @@ items:
         href: ../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md
       - name: sys.database_scoped_configurations
         href: ../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md
-      - name: sys.database_automatic_tuning_options (Transact-SQL)
+      - name: sys.database_automatic_tuning_options (T-SQL)
         href: ../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md
       - name: sys.master_files
         href: ../relational-databases/system-catalog-views/sys-master-files-transact-sql.md
@@ -14535,35 +14646,37 @@ items:
     items:
     - name: 概要
       href: ../relational-databases/system-views/replication-views-transact-sql.md
-    - name: IHextendedArticleView (Transact-SQL)
+    - name: IHextendedArticleView (T-SQL)
       href: ../relational-databases/system-views/ihextendedarticleview-transact-sql.md
-    - name: IHextendedSubscriptionView (Transact-SQL)
+    - name: IHextendedSubscriptionView (T-SQL)
       href: ../relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md
-    - name: IHsyscolumns (Transact-SQL)
+    - name: IHsyscolumns (T-SQL)
       href: ../relational-databases/system-views/ihsyscolumns-transact-sql.md
-    - name: MSdatatype_mappings (Transact-SQL)
+    - name: MSdatatype_mappings (T-SQL)
       href: ../relational-databases/system-views/msdatatype-mappings-transact-sql.md
-    - name: MSdistribution_status (Transact-SQL)
+    - name: MSdistribution_status (T-SQL)
       href: ../relational-databases/system-views/msdistribution-status-transact-sql.md
-    - name: sysarticlecolumns (システム ビュー) (Transact-SQL)
+    - name: sysarticlecolumns (システム ビュー) (T-SQL)
       href: ../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md
-    - name: sysarticles (システム ビュー) (Transact-SQL)
+    - name: sysarticles (システム ビュー) (T-SQL)
       href: ../relational-databases/system-views/sysarticles-system-view-transact-sql.md
-    - name: sysdatatypemappings (Transact-SQL)
+    - name: sysdatatypemappings (T-SQL)
       href: ../relational-databases/system-views/sysdatatypemappings-transact-sql.md
-    - name: sysextendedarticlesview (Transact-SQL)
+    - name: sysextendedarticlesview (T-SQL)
       href: ../relational-databases/system-views/sysextendedarticlesview-transact-sql.md
-    - name: sysmergeextendedarticlesview (Transact-SQL)
+    - name: sysmergeextendedarticlesview (T-SQL)
       href: ../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md
-    - name: sysmergepartitioninfoview (Transact-SQL)
+    - name: sysmergepartitioninfoview (T-SQL)
       href: ../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md
-    - name: syspublications (システム ビュー) (Transact-SQL)
+    - name: syspublications (システム ビュー) (T-SQL)
       href: ../relational-databases/system-views/syspublications-system-view-transact-sql.md
-    - name: syssubscriptions (システム ビュー) (Transact-SQL)
+    - name: syssubscriptions (システム ビュー) (T-SQL)
       href: ../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
-    - name: systranschemas (Transact-SQL)
+    - name: systranschemas (T-SQL)
       href: ../relational-databases/system-views/systranschemas-transact-sql.md
   - name: Transact-SQL (T-SQL)
+    displayName: tsql
+    href: ../toc/redirectfrom-transact-sql-t-sql.md
     items:
     - name: 概要
       href: ../t-sql/language-reference.md
@@ -15059,85 +15172,87 @@ items:
         href: ../t-sql/xml/binding-relational-data-inside-xml-data.md
       - name: xml データ型メソッドの使用に関するガイドライン
         href: ../t-sql/xml/guidelines-for-using-xml-data-type-methods.md
-    - name: 概要
+    - name: DBCC の概要
+      displayName: database console commands
       href: ../t-sql/database-console-commands/database-console-commands.md
-    - name: DBCC について
-      href: ../t-sql/database-console-commands/dbcc-transact-sql.md
-    - name: DBCC CHECKALLOC
-      href: ../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md
-    - name: DBCC CHECKCATALOG
-      href: ../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md
-    - name: DBCC CHECKCONSTRAINTS
-      href: ../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md
-    - name: DBCC CHECKDB
-      href: ../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md
-    - name: DBCC CHECKFILEGROUP
-      href: ../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md
-    - name: DBCC CHECKIDENT
-      href: ../t-sql/database-console-commands/dbcc-checkident-transact-sql.md
-    - name: DBCC CHECKTABLE
-      href: ../t-sql/database-console-commands/dbcc-checktable-transact-sql.md
-    - name: DBCC CLEANTABLE
-      href: ../t-sql/database-console-commands/dbcc-cleantable-transact-sql.md
-    - name: DBCC CLONEDATABASE
-      href: ../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md
-    - name: DBCC DBREINDEX
-      href: ../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md
-    - name: DBCC dllname (FREE)
-      href: ../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md
-    - name: DBCC DROPCLEANBUFFERS
-      href: ../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
-    - name: DBCC FLUSHAUTHCACHE
-      href: ../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
-    - name: DBCC FREEPROCCACHE
-      href: ../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md
-    - name: DBCC FREESESSIONCACHE
-      href: ../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md
-    - name: DBCC FREESYSTEMCACHE
-      href: ../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md
-    - name: DBCC HELP
-      href: ../t-sql/database-console-commands/dbcc-help-transact-sql.md
-    - name: DBCC INDEXDEFRAG
-      href: ../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md
-    - name: DBCC INPUTBUFFER
-      href: ../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md
-    - name: DBCC OPENTRAN
-      href: ../t-sql/database-console-commands/dbcc-opentran-transact-sql.md
-    - name: DBCC OUTPUTBUFFER
-      href: ../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md
-    - name: DBCC PDW_SHOWEXECUTIONPLAN
-      href: ../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md
-    - name: DBCC PDW_SHOWPARTITIONSTATS
-      href: ../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md
-    - name: DBCC PDW_SHOWSPACEUSED
-      href: ../t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md
-    - name: DBCC PROCCACHE
-      href: ../t-sql/database-console-commands/dbcc-proccache-transact-sql.md
-    - name: DBCC SHOW_STATISTICS
-      href: ../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md
-    - name: DBCC SHOWCONTIG
-      href: ../t-sql/database-console-commands/dbcc-showcontig-transact-sql.md
-    - name: DBCC SHRINKDATABASE
-      href: ../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md
-    - name: DBCC SHRINKFILE
-      href: ../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md
-    - name: DBCC SHRINKLOG
-      href: ../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md
-    - name: DBCC SQLPERF
-      href: ../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md
-    - name: DBCC TRACEOFF
-      href: ../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md
-    - name: DBCC TRACEON - トレース フラグ
-      href: ../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md
-    - name: DBCC TRACEON
-      href: ../t-sql/database-console-commands/dbcc-traceon-transact-sql.md
-    - name: DBCC TRACESTATUS
-      href: ../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md
-    - name: DBCC UPDATEUSAGE
-      href: ../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md
-    - name: DBCC USEROPTIONS
-      href: ../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md
-    - name: 概要
+      items:
+      - name: DBCC について
+        href: ../t-sql/database-console-commands/dbcc-transact-sql.md
+      - name: DBCC CHECKALLOC
+        href: ../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md
+      - name: DBCC CHECKCATALOG
+        href: ../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md
+      - name: DBCC CHECKCONSTRAINTS
+        href: ../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md
+      - name: DBCC CHECKDB
+        href: ../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md
+      - name: DBCC CHECKFILEGROUP
+        href: ../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md
+      - name: DBCC CHECKIDENT
+        href: ../t-sql/database-console-commands/dbcc-checkident-transact-sql.md
+      - name: DBCC CHECKTABLE
+        href: ../t-sql/database-console-commands/dbcc-checktable-transact-sql.md
+      - name: DBCC CLEANTABLE
+        href: ../t-sql/database-console-commands/dbcc-cleantable-transact-sql.md
+      - name: DBCC CLONEDATABASE
+        href: ../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md
+      - name: DBCC DBREINDEX
+        href: ../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md
+      - name: DBCC dllname (FREE)
+        href: ../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md
+      - name: DBCC DROPCLEANBUFFERS
+        href: ../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
+      - name: DBCC FLUSHAUTHCACHE
+        href: ../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
+      - name: DBCC FREEPROCCACHE
+        href: ../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md
+      - name: DBCC FREESESSIONCACHE
+        href: ../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md
+      - name: DBCC FREESYSTEMCACHE
+        href: ../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md
+      - name: DBCC HELP
+        href: ../t-sql/database-console-commands/dbcc-help-transact-sql.md
+      - name: DBCC INDEXDEFRAG
+        href: ../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md
+      - name: DBCC INPUTBUFFER
+        href: ../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md
+      - name: DBCC OPENTRAN
+        href: ../t-sql/database-console-commands/dbcc-opentran-transact-sql.md
+      - name: DBCC OUTPUTBUFFER
+        href: ../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md
+      - name: DBCC PDW_SHOWEXECUTIONPLAN
+        href: ../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md
+      - name: DBCC PDW_SHOWPARTITIONSTATS
+        href: ../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md
+      - name: DBCC PDW_SHOWSPACEUSED
+        href: ../t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md
+      - name: DBCC PROCCACHE
+        href: ../t-sql/database-console-commands/dbcc-proccache-transact-sql.md
+      - name: DBCC SHOW_STATISTICS
+        href: ../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md
+      - name: DBCC SHOWCONTIG
+        href: ../t-sql/database-console-commands/dbcc-showcontig-transact-sql.md
+      - name: DBCC SHRINKDATABASE
+        href: ../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md
+      - name: DBCC SHRINKFILE
+        href: ../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md
+      - name: DBCC SHRINKLOG
+        href: ../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md
+      - name: DBCC SQLPERF
+        href: ../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md
+      - name: DBCC TRACEOFF
+        href: ../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md
+      - name: DBCC TRACEON - トレース フラグ
+        href: ../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md
+      - name: DBCC TRACEON
+        href: ../t-sql/database-console-commands/dbcc-traceon-transact-sql.md
+      - name: DBCC TRACESTATUS
+        href: ../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md
+      - name: DBCC UPDATEUSAGE
+        href: ../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md
+      - name: DBCC USEROPTIONS
+        href: ../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md
+    - name: T-SQL 関数の概要
       href: ../t-sql/functions/functions.md
     - name: Aggregate
       href: ../t-sql/functions/aggregate-functions-transact-sql.md
@@ -16805,7 +16920,7 @@ items:
       href: ../t-sql/statements/truncate-table-transact-sql.md
     - name: UPDATE STATISTICS
       href: ../t-sql/statements/update-statistics-transact-sql.md
-    - name: チュートリアル:Transact-SQL ステートメントの作成
+    - name: チュートリアル:T-SQL ステートメントの作成
       href: ../t-sql/tutorial-writing-transact-sql-statements.md
       items:
       - name: レッスン 1:データベース オブジェクトの作成とクエリ
@@ -16814,40 +16929,6 @@ items:
         href: ../t-sql/lesson-2-configuring-permissions-on-database-objects.md
       - name: 'レッスン 3: データベース オブジェクトの削除'
         href: ../t-sql/lesson-3-deleting-database-objects.md
-  - name: データベースのサンプル
-    items:
-    - name: サンプルの概要
-      href: ../samples/sql-samples-where-are.md
-    - name: すべての Github サンプル +
-      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
-    - name: AdventureWorks
-      items:
-      - name: '[インストールと構成]'
-        href: ../samples/adventureworks-install-configure.md
-    - name: Wide World Importers
-      items:
-      - name: 概要
-        href: ../samples/wide-world-importers-what-is.md
-      - name: OLTP
-        items:
-        - name: データベース カタログ
-          href: ../samples/wide-world-importers-oltp-database-catalog.md
-        - name: '[インストールと構成]'
-          href: ../samples/wide-world-importers-oltp-install-configure.md
-        - name: SQL Server 機能
-          href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
-      - name: データ ウェアハウス (data warehouse)
-        items:
-        - name: データベース カタログ
-          href: ../samples/wide-world-importers-dw-database-catalog.md
-        - name: '[インストールと構成]'
-          href: ../samples/wide-world-importers-dw-install-configure.md
-        - name: SQL Server 機能
-          href: ../samples/wide-world-importers-dw-use-of-sql-server-features.md
-      - name: データの生成
-        href: ../samples/wide-world-importers-generate-data.md
-      - name: ETL ワークフロー
-        href: ../samples/wide-world-importers-perform-etl.md
   - name: xQuery
     items:
     - name: 概要
@@ -17004,9 +17085,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery での名前空間の処理
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 2eebc67fe856d02dc1d525b2f56ed68a697fca40
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: bb0c24429ffaf6609be6e34dbcfcb87f9a849d87
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676309"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227394"
