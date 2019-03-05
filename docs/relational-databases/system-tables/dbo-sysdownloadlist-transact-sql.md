@@ -30,7 +30,7 @@ ms.locfileid: "47745092"
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  すべての対象サーバーに対するダウンロード命令のキューを格納します。  
+  すべてのターゲット サーバーに対するダウンロード命令のキューを格納します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

@@ -68,7 +68,7 @@ ms.locfileid: "51018567"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップグレードする前に、以下の問題点を確認して変更を行います。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが MSX/TSX リレーションシップに参加している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをアップグレードする場合は、マスター サーバーをアップグレードする前に、対象サーバーをアップグレードします。 対象サーバーより前にマスター サーバーをアップグレードすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマスター インスタンスに接続できなくなります。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが MSX/TSX リレーションシップに参加している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをアップグレードする場合は、マスター サーバーをアップグレードする前に、対象サーバーをアップグレードします。 ターゲット サーバーより前にマスター サーバーをアップグレードすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマスター インスタンスに接続できなくなります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 64 ビット版から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の 64 ビット版にアップグレードする場合は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をアップグレードしてから [!INCLUDE[ssDE](../../includes/ssde-md.md)] をアップグレードする必要があります。  
   

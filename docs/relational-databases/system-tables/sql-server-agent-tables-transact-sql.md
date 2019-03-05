@@ -36,7 +36,7 @@ ms.locfileid: "47794910"
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、ジョブ、警告、オペレーターの分類に使用されるカテゴリを格納します。  
   
  [dbo.sysdownloadlist](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)  
- すべての対象サーバーに対するダウンロード命令のキューを格納します。  
+ すべてのターゲット サーバーに対するダウンロード命令のキューを格納します。  
   
  [dbo.sysjobactivity](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
  現在の情報を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブの利用状況と状態。  
@@ -51,7 +51,7 @@ ms.locfileid: "47794910"
  によって実行されるジョブのスケジュール情報を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント  
   
  [dbo.sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
- 特定のジョブと 1 つ以上の対象サーバーとの関連付けまたはリレーションシップを格納します。  
+ 特定のジョブと 1 つ以上のターゲット サーバーとの関連付けまたはリレーションシップを格納します。  
   
  [dbo.sysjobsteps](../../relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって実行されるジョブ内の各ステップに関する情報を格納します。  
@@ -84,13 +84,13 @@ ms.locfileid: "47794910"
  使用可能なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのプロキシ サブシステムに関する情報を格納します。  
   
  [dbo.systargetservergroupmembers](../../relational-databases/system-tables/dbo-systargetservergroupmembers-transact-sql.md)  
- マルチサーバー グループに現在参加している対象サーバーを記録します。  
+ マルチサーバー グループに現在参加しているターゲット サーバーを記録します。  
   
  [dbo.systargetservergroups](../../relational-databases/system-tables/dbo-systargetservergroups-transact-sql.md)  
  マルチサーバー環境に現在参加しているターゲット サーバー グループを記録します。  
   
  [dbo.systargetservers](../../relational-databases/system-tables/dbo-systargetservers-transact-sql.md)  
- マルチサーバー操作ドメインに現在参加している対象サーバーを記録します。  
+ マルチサーバー操作ドメインに現在参加しているターゲット サーバーを記録します。  
   
  [dbo.systaskids](../../relational-databases/system-tables/dbo-systaskids-transact-sql.md)  
  以前のバージョンで作成されたタスクのマッピングを格納[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]現在のバージョンでのジョブ。  

@@ -1,5 +1,5 @@
 ---
-title: 対象サーバーでの暗号化オプションの設定 | Microsoft Docs
+title: ターゲット サーバーでの暗号化オプションの設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/09/2019
 ms.locfileid: "54133002"
 ---
-# <a name="set-encryption-options-on-target-servers"></a>対象サーバーでの暗号化オプションの設定
+# <a name="set-encryption-options-on-target-servers"></a>ターゲット サーバーでの暗号化オプションの設定
   マスター サーバーと一部またはすべてのターゲット サーバーの間で SSL (Secure Sockets Layer) 暗号通信の証明書を使用できない場合、これらの間のチャネルを暗号化するには、必要なセキュリティ レベルを使用するようにターゲット サーバーを構成します。  
   
  マスター サーバーとターゲット サーバーの間の特定の通信チャネルに求められる適切なセキュリティ レベルを構成するには、ターゲット サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのレジストリ サブキー **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<*instance_name*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** を、次のいずれかの値に設定します。 \<*instance_name*> の値は **MSSQL.**_n_ です。 たとえば、 **MSSQL.1** や **MSSQL.3**となります。  

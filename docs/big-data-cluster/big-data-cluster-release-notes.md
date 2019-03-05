@@ -5,17 +5,17 @@ description: この記事では、最新の更新プログラムと SQL Server 2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: dced44806927f7b41957c2eb8374688e8be88f1f
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227214"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334749"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -39,7 +39,7 @@ ms.locfileid: "57227214"
 - [SQL Server ビッグ データ クラスター上で IntelliJ での Spark ジョブを送信する](spark-submit-job-intellij-tool-plugin.md)します。
 - [アプリケーションの展開とクラスターの管理のための一般的な CLI](big-data-cluster-create-apps.md)します。
 - [SQL Server のビッグ データ クラスターにアプリケーションを展開する VS Code 拡張機能](app-deployment-extension.md)します。
-- 新しいパラメーターの順序、 **mssqlctl**ツール。
+- [変更、 **mssqlctl**コマンドの使用方法をツール](#mssqlctlctp23)します。
 - [Sparklyr を使用して、SQL Server 2019 ビッグ データ クラスターで](sparklyr-from-RStudio.md)します。
 - ビッグ データ クラスター外部の HDFS と互換性のあるストレージにマウント[HDFS が階層化](hdfs-tiering.md)します。
 - 統一された接続の新しいエクスペリエンス、 [master の SQL Server インスタンスと HDFS/Spark ゲートウェイ](connect-to-big-data-cluster.md)します。
@@ -74,6 +74,18 @@ ms.locfileid: "57227214"
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間は削除されません。 これは、結果、クラスターの孤立した、名前空間。 回避策では、同じ名前のクラスターをデプロイする前に、名前空間を手動で削除します。
+
+#### <a id="mssqlctlctp23"></a> mssqlctl
+
+- **Mssqlctl**名詞-動詞の注文に順序付けの動詞-名詞コマンドからツールを変更します。 たとえば、`mssqlctl create cluster`が`mssqlctl cluster create`します。
+
+- `--name`パラメーターが使用するクラスターを作成するときに必要な`mssqlctl cluster create`。
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- 最新バージョンのビッグ データ クラスターへのアップグレードに関する重要な情報と**mssqlctl**を参照してください[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)します。
 
 #### <a name="external-tables"></a>外部テーブル
 

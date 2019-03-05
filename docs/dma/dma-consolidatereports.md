@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: adfb1663d9ec1b86abf38c46c0056622105b80d5
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956033"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305360"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>エンタープライズを評価し、DMA で評価レポートの統合
 
@@ -71,6 +71,9 @@ SQL Server を評価する PowerShell スクリプトを実行する前に評価
 - SQL Server テーブル
 
 ### <a name="if-using-a-csv-file"></a>CSV ファイルを使用する場合
+> [!IMPORTANT]
+> インベントリ ファイルがコンマ区切り (CSV) ファイルとして保存されたことを確認します。
+
 を、データをインポートする csv ファイルを使用する場合は、データの 2 つの列があることを確認**インスタンス名**と**データベース名**、および列ヘッダー行があるはありません。
  
  ![csv ファイルの内容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -153,10 +156,7 @@ DmaProcessor は、評価ファイルの処理の完了をデータは DMAReport
 
 1. Power BI Desktop では、DMA レポートの Power BI テンプレートを開きます。
 2. をポイント サーバーの詳細を入力、 **DMAWarehouse**データベースし、**ロード**します。
-
-    > [!IMPORTANT]
-    > 値をそのままにしてを押さないでください。
-
+   
       ![読み込まれた DMA レポートの Power BI テンプレート](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    レポートがからデータを更新した後、 **DMAWarehouse**データベース、次のようなレポートに表示されます。

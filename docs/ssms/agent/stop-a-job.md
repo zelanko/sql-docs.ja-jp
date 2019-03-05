@@ -51,7 +51,7 @@ ms.locfileid: "51696330"
   
 -   ジョブで **CmdExec** または **PowerShell**型のステップが現在実行されている場合、実行中のプロセス (MyProgram.exe など) は途中で強制終了されます。 途中で強制終了した場合、そのプロセスによって使用されていたファイルが開いたままになるなど、予期しない結果が発生する可能性があります。  
   
--   マルチサーバー ジョブの場合、STOP 命令はそのジョブのすべての対象サーバーに通知されます。  
+-   マルチサーバー ジョブの場合、STOP 命令はそのジョブのすべてのターゲット サーバーに通知されます。  
   
 ### <a name="Security"></a>Security  
 詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  

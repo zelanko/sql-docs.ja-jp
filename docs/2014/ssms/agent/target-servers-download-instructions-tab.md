@@ -1,5 +1,5 @@
 ---
-title: '[対象サーバー] ダイアログ ボックス ([ダウンロード命令] タブ) | Microsoft Docs'
+title: '[ターゲット サーバー] ダイアログ ボックス ([ダウンロード命令] タブ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,8 +19,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52768524"
 ---
-# <a name="target-servers-download-instructions-tab"></a>[対象サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)
-  このページを使用すると、1 つ以上の対象サーバーに対するダウンロード命令の表示および更新ができます。  
+# <a name="target-servers-download-instructions-tab"></a>[ターゲット サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)
+  このページを使用すると、1 つ以上のターゲット サーバーに対するダウンロード命令の表示および更新ができます。  
   
 ## <a name="options"></a>および  
  **[対象サーバー]**  

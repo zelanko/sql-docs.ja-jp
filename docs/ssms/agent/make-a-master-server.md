@@ -94,10 +94,10 @@ ms.locfileid: "51697370"
 4.  **[対象サーバー]** ページで、マスター サーバーの対象サーバーを選択します。  
   
     **[登録済みサーバー]**  
-    Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に登録されているサーバーで、まだ対象サーバーになっていないものを一覧表示します。  
+    Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に登録されているサーバーで、まだターゲット サーバーになっていないものを一覧表示します。  
   
     **[対象サーバー]**  
-    対象サーバーであるサーバーを一覧表示します。  
+    ターゲット サーバーであるサーバーを一覧表示します。  
   
     **>**  
     選択したサーバーをターゲット サーバーの一覧に移動します。  

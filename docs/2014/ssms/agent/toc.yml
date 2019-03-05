@@ -202,7 +202,7 @@ items:
         href: enlist-a-target-server-to-a-master-server.md
       - name: マスター サーバーからのターゲット サーバーの参加の解除
         href: defect-a-target-server-from-a-master-server.md
-      - name: Defect Multiple Target Servers from a Master Server
+      - name: マスター サーバーからの複数のターゲット サーバーの参加の解除
         href: defect-multiple-target-servers-from-a-master-server.md
       - name: SQL Server エージェントのマスター ジョブの作成
         href: create-a-sql-server-agent-master-job.md
@@ -220,7 +220,7 @@ items:
       href: modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
     - name: マルチサーバー環境に適した SQL Server エージェント サービス アカウントの選択
       href: choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
-    - name: 対象サーバーでの暗号化オプションの設定
+    - name: ターゲット サーバーでの暗号化オプションの設定
       href: set-encryption-options-on-target-servers.md
     - name: エンタープライズ全体におけるジョブの管理
       href: manage-jobs-across-an-enterprise.md
@@ -236,7 +236,7 @@ items:
     - name: サーバーのポーリング
       href: poll-servers.md
       items:
-      - name: Set the Polling Interval for Target Servers
+      - name: ターゲット サーバーのポーリング間隔の設定
         href: set-the-polling-interval-for-target-servers.md
       - name: ターゲット サーバーからのマスター サーバーのポーリングの強制
         href: force-a-target-server-to-poll-the-master-server.md
@@ -332,7 +332,7 @@ items:
     href: sql-server-agent-properties-history-page.md
   - name: '[ターゲット サーバー] ([ターゲット サーバーの状態] タブ)'
     href: target-servers-target-server-status-tab.md
-  - name: '[対象サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)'
+  - name: '[ターゲット サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)'
     href: target-servers-download-instructions-tab.md
   - name: ダウンロード命令の通知
     href: post-download-instructions.md

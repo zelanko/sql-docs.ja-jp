@@ -1,5 +1,5 @@
 ---
-title: 対象サーバーでの暗号化オプションの設定 | Microsoft Docs
+title: ターゲット サーバーでの暗号化オプションの設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,7 +23,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51699840"
 ---
-# <a name="set-encryption-options-on-target-servers"></a>対象サーバーでの暗号化オプションの設定
+# <a name="set-encryption-options-on-target-servers"></a>ターゲット サーバーでの暗号化オプションの設定
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

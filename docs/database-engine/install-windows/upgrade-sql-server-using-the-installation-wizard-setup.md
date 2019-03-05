@@ -62,7 +62,7 @@ ms.locfileid: "52533969"
   
 -   すべての起動ストアド プロシージャを無効にします。アップグレード プロセスでは、サービスの起動および停止はアップグレード中の SQL Server インスタンス上で行われます。 起動時にストアド プロシージャを実行すると、アップグレード プロセスをブロックする可能性があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが MSX/TSX リレーションシップに参加している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをアップグレードする場合は、マスター サーバーをアップグレードする前に、対象サーバーをアップグレードします。 対象サーバーより前にマスター サーバーをアップグレードすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマスター インスタンスに接続できなくなります。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが MSX/TSX リレーションシップに参加している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをアップグレードする場合は、マスター サーバーをアップグレードする前に、対象サーバーをアップグレードします。 ターゲット サーバーより前にマスター サーバーをアップグレードすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマスター インスタンスに接続できなくなります。  
   
 -   SQL Server との従属関係を持つすべてのサービスを含むすべてのアプリケーションを終了します。 アップグレード実行中のインスタンスにローカル アプリケーションが接続されている場合は、アップグレード操作が失敗する場合があります。  
   

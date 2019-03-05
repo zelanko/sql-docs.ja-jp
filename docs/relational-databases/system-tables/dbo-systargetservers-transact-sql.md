@@ -30,7 +30,7 @@ ms.locfileid: "47783520"
 # <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マルチサーバー操作ドメインに現在参加している対象サーバーを記録します。  
+  マルチサーバー操作ドメインに現在参加しているターゲット サーバーを記録します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

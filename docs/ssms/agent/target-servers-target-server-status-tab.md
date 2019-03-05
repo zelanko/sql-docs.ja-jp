@@ -27,7 +27,7 @@ ms.locfileid: "47805090"
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このページを使用すると、このマスター サーバーの対象サーバーの状態を表示できます。  
+このページを使用すると、このマスター サーバーのターゲット サーバーの状態を表示できます。  
   
 ## <a name="options"></a>および  
 **[対象サーバー]**  
@@ -46,13 +46,13 @@ ms.locfileid: "47805090"
 ターゲット サーバーの状態を表示します。  
   
 **[強制的にポーリング]**  
-このボタンをクリックすると、選択されている対象サーバーがマスター サーバーをポーリングします。  
+このボタンをクリックすると、選択されているターゲット サーバーがマスター サーバーをポーリングします。  
   
 **[強制的に参加解除]**  
-このボタンをクリックすると、選択されている対象サーバーがマスター サーバーを登録解除します。  
+このボタンをクリックすると、選択されているターゲット サーバーがマスター サーバーを登録解除します。  
   
 **[命令を通知]**  
-選択されている対象サーバーに命令を通知します。  
+選択されているターゲット サーバーに命令を通知します。  
   
 **[自動更新を有効にする]**  
 このオプションをオンにすると、表示されている情報が自動的に更新されます。  

@@ -1,5 +1,5 @@
 ---
-title: ジョブの対象サーバーの変更 | Microsoft Docs
+title: ジョブのターゲット サーバーの変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -51,7 +51,7 @@ ms.locfileid: "52822906"
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### <a name="to-modify-the-target-servers-for-a-job"></a>ジョブの対象サーバーを変更するには  
+#### <a name="to-modify-the-target-servers-for-a-job"></a>ジョブのターゲット サーバーを変更するには  
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "52822906"
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### <a name="to-modify-the-target-servers-for-a-job"></a>ジョブの対象サーバーを変更するには  
+#### <a name="to-modify-the-target-servers-for-a-job"></a>ジョブのターゲット サーバーを変更するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
