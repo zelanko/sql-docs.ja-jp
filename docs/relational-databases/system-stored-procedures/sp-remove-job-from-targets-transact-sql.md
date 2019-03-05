@@ -53,7 +53,7 @@ sp_remove_job_from_targets [ @job_id = ] job_id
  指定したジョブの削除元であるターゲット サーバー グループをコンマで区切って指定します。 *target_server_groups*は**nvarchar (1024)**、既定値は NULL です。  
   
  [ **@target_servers =**] **'***target_servers***'**  
- 指定したジョブの削除元である対象サーバーをコンマで区切って指定します。 *target_servers*は**nvarchar (1024)**、既定値は NULL です。  
+ 指定したジョブの削除元であるターゲット サーバーをコンマで区切って指定します。 *target_servers*は**nvarchar (1024)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

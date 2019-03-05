@@ -86,7 +86,7 @@ sp_help_jobs_in_schedule
 |**current_retry_attempt**|**int**|ジョブの実行中にステップを再試行した場合、現在の再試行を示します。|  
 |**has_step**|**int**|ジョブのジョブ ステップ数。|  
 |**has_schedule**|**int**|ジョブのジョブ スケジュール数。|  
-|**has_target**|**int**|ジョブの対象サーバー数。|  
+|**has_target**|**int**|ジョブのターゲット サーバー数。|  
 |**type**|**int**|ジョブの種類:<br /><br /> **1** = ローカル ジョブ。<br /><br /> **2** = マルチ サーバー ジョブです。<br /><br /> **0** = ジョブには、対象サーバーがありません。|  
   
 ## <a name="remarks"></a>コメント  

@@ -30,7 +30,7 @@ ms.locfileid: "47607280"
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  特定のジョブと 1 つ以上の対象サーバーとの関連付けまたはリレーションシップを格納します。このテーブルは、msdb データベースに格納されます。  
+  特定のジョブと 1 つ以上のターゲット サーバーとの関連付けまたはリレーションシップを格納します。このテーブルは、msdb データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

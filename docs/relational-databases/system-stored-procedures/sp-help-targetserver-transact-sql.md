@@ -70,7 +70,7 @@ sp_help_targetserver
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-listing-information-for-all-registered-target-servers"></a>A. すべての登録された対象サーバーの情報を一覧表示する  
- 次の例では、すべての登録された対象サーバーの情報を一覧表示します。  
+ 次の例では、すべての登録されたターゲット サーバーの情報を一覧表示します。  
   
 ```  
 USE msdb ;  

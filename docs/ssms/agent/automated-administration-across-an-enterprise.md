@@ -68,7 +68,7 @@ ms.locfileid: "53206291"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスに管理者以外の Windows アカウントまたはローカル システム アカウントを使用することによる、マルチサーバー環境への影響について説明します。  
   
 [対象サーバーでの暗号化オプションの設定](../../ssms/agent/set-encryption-options-on-target-servers.md)  
-対象サーバーの MsxEncryptChannelOptions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのレジストリ サブキーの設定について説明します。  
+ターゲット サーバーの MsxEncryptChannelOptions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのレジストリ サブキーの設定について説明します。  
   
 [エンタープライズ全体におけるジョブの管理](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 ジョブ ステータスの確認、ジョブのターゲット サーバーの変更、ターゲット サーバーのクロックの同期、およびマスター サーバーの現在のジョブ ステータスに対するポーリングについて説明します。  

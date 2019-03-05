@@ -23,7 +23,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48061954"
 ---
-# <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>マスター サーバーをアップグレードする前にすべての対象サーバーをアップグレードする
+# <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>マスター サーバーをアップグレードする前にすべてのターゲット サーバーをアップグレードする
   マスター サーバーをアップグレードする前に、ターゲット サーバーとして構成され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているすべてのコンピューターをアップグレードしてください。  
   
 ## <a name="component"></a>コンポーネント  
