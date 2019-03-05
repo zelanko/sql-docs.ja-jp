@@ -1,5 +1,5 @@
 ---
-title: ジョブのプロパティ - [新しいジョブ]\([対象サーバー] ページ) | Microsoft Docs
+title: ジョブのプロパティ - [新しいジョブ]([対象サーバー] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -27,14 +27,14 @@ ms.locfileid: "47784750"
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このページを使用すると、ジョブの対象サーバーを管理できます。  
+このページを使用すると、ジョブのターゲット サーバーを管理できます。  
   
 ## <a name="options"></a>および  
 **[ローカル サーバーを対象とする]**  
-ローカル サーバー上でジョブを実行します。 対象サーバーがリストされていない場合は、これが唯一利用できるオプションです。  
+ローカル サーバー上でジョブを実行します。 ターゲット サーバーがリストされていない場合は、これが唯一利用できるオプションです。  
   
 **[複数のサーバーを対象とする]**  
-1 つまたは複数の対象サーバー上でジョブを実行します。 このオプションを選択した場合は、ジョブを実行するサーバーを選択します。 使用できる対象サーバーの一覧が表示されます。 ターゲット サーバーをクリックして選択します。  
+1 つまたは複数のターゲット サーバー上でジョブを実行します。 このオプションを選択した場合は、ジョブを実行するサーバーを選択します。 使用できるターゲット サーバーの一覧が表示されます。 ターゲット サーバーをクリックして選択します。  
   
 ## <a name="see-also"></a>参照  
 [ジョブの実装](../../ssms/agent/implement-jobs.md)  

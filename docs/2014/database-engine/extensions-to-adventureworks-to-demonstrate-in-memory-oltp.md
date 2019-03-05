@@ -115,7 +115,7 @@ ms.locfileid: "53363784"
   
         1.  スクリプトを開きます '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' クエリ ウィンドウで  
   
-        2.  AdventureWorks2014 データベースが含まれているサーバーに接続します  
+        2.  AdventureWorks2014 データベースが含まれているターゲット サーバーに接続します  
   
         3.  'クエリでは、SQLCMD モードを ->' をクリックして、SQLCMD モードを有効にします。  
   
