@@ -1,7 +1,7 @@
 ---
 title: 定数 (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,17 +13,17 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94be5540c0fedcf3449b8ac41398ab3f08abbd32
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 172b96b63f65b5ee8b576ba6ee9c18aad18e3531
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409529"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744452"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>定数 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-このトピックでは、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] で定義される定数について説明します。  
+このトピックでは、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]で定義される定数について説明します。  
   
 ## <a name="pdosqlsrv-driver-constants"></a>PDO_SQLSRV ドライバー定数  
 [PDO Web サイト](https://php.net/manual/book.pdo.php)に記載されている定数は、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] で有効です。  
@@ -68,6 +68,11 @@ PDO::SQLSRV_ATTR_DIRECT_QUERY 属性を使用して、直接クエリの実行�
 ### <a name="handling-numeric-fetches"></a>数値の処理をフェッチします。
 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性は、(ビット、整数、smallint、tinyint、float と real) の数値の SQL 型の列からの数値のフェッチを処理するために使用できます。 SQL のフローティングし、レアルが浮動小数点数として表される、int、として表されます PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 整数型の列からの結果は true に設定した場合。 この属性で設定できます[pdostatement::setattribute](../../connect/php/pdostatement-setattribute.md)します。 
 
+PDO::SQLSRV_ATTR_FORMAT_DECIMALS と PDO::SQLSRV_ATTR_DECIMAL_PLACES 属性を持つ既定の動作を 10 進数に書式設定を変更することができます。 これらの属性の動作は、SQLSRV 側で対応するオプションと同じです (**FormatDecimals**と**DecimalPlaces**)、書式設定するための出力パラメーターはサポートされていません。 接続またはステートメントのいずれかのレベルでこれらの属性を設定することがあります[pdo::setattribute](../../connect/php/pdo-setattribute.md)または[pdostatement::setattribute](../../connect/php/pdostatement-setattribute.md)、任意のステートメント属性は、対応するオーバーライドされますが、接続属性です。 詳細については、次を参照してください。 [10 進数値文字列の書式設定および通貨値 (PDO_SQLSRV ドライバー)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)します。
+
+### <a name="handling-date-and-time-fetches"></a>日付と時刻のフェッチの処理
+
+日付と時刻の型として取得するかどうかを指定する、PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE [PHP DateTime](http://php.net/manual/en/class.datetime.php)オブジェクト。 False のままにした場合、既定の動作では、文字列として返すことです。 接続またはステートメントのいずれかのレベルでこの属性を設定することがあります[pdo::setattribute](../../connect/php/pdo-setattribute.md)または[pdostatement::setattribute](../../connect/php/pdostatement-setattribute.md)、対応するステートメント属性が上書きされますが、接続属性です。 詳細については、次を参照してください。[方法: 取得日付と時刻型として PHP DateTime オブジェクトを使用して、PDO_SQLSRV ドライバー](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)します。
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV ドライバーの定数  
 次のセクションでは、SQLSRV ドライバーが使用する定数を一覧表示します。  
@@ -75,7 +80,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性は、(ビット、整数、smallint
 ### <a name="err-constants"></a>ERR 定数  
 次の表に、[sqlsrv_errors](../../connect/php/sqlsrv-errors.md) がエラー、警告、または両方を返す場合に、指定するために使用される定数を示します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|**sqlsrv** 関数の最後の呼び出しで生成されたエラーと警告が返されます。 これが既定値です。|  
 |SQLSRV_ERR_ERRORS|**sqlsrv** 関数の最後の呼び出しで生成されたエラーが返されます。|  

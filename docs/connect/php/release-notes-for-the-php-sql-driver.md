@@ -1,7 +1,7 @@
 ---
 title: Microsoft SQL Server 用 Drivers for PHP のリリース ノート | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,17 +13,34 @@ ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a22e88aef13c86179dc4cea71ed1003eadfd8661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2e7377b1072c30e5c5ef038b93a88f0c222260
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624060"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744352"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP のリリース ノート
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このページでは、各バージョンで追加された内容、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]します。  
+
+## <a name="whats-new-in-version-56"></a>バージョン 5.6 の新機能
+
+- PHP 7.3 のサポート
+- すべてのプラットフォームでの Microsoft ODBC Driver 17.3 のサポート
+- Mojave macOS のサポート (ODBC Driver 17.3 必要がありますまたはそれ以降)
+- Ubuntu 18.10 および Suse Linux 15 のサポート (どちらも ODBC ドライバー 17.3 以降)
+- PHP 7.0 のドロップのサポート
+- Linux Ubuntu 17.10 および El Capitan の macOS のサポート
+- Azure AD アクセス トークンのサポート (Linux および macOS では、必要と ODBC ドライバー 17.2 + と unixODBC 2.3.6+)
+- (ODBC Driver 17.3 以降が必要)、Azure リソースの管理対象 Id を使用して Azure AD での認証のサポート
+- フェッチの新機能:
+  - Datetime をオブジェクトとして返す pdo_sqlsrv の新しい PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE フラグ
+  - ReturnDatesAsStrings オプション sqlsrv のステートメント レベルに追加します。
+  - フェッチされた結果の 10 進数の値を書式設定の両方のドライバーの接続とステートメント レベルでの新しいオプション
+- ユーザーがソースから構築する場合、ドライバーの静的なコンパイルのサポート
+- Unicode 文字列の変換の高速化をフェッチでメタデータをキャッシュしてパフォーマンスの向上
 
 ## <a name="whats-new-in-version-53"></a>バージョン 5.3 の新機能
 

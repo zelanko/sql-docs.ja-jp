@@ -2,7 +2,7 @@
 title: OLE DB Driver for SQL Server の機能 |Microsoft Docs
 description: OLE DB Driver for SQL Server の機能
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fa0fcda394142cd8ac2b3df5b91f5f8c4ad25739
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8458d6293aec1180e547a80649c302015e9a521
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840910"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744462"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>OLE DB Driver for SQL Server の機能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,10 @@ ms.locfileid: "47840910"
   
  [非同期操作の実行](../../oledb/features/performing-asynchronous-operations.md)  
  OLE DB Driver for SQL Server で、非同期操作をサポートする方法について説明します。非同期操作では、呼び出し側のスレッドをブロックせずに直ちに操作を戻すことができます。  
-  
+
+[Azure Active Directory の使用](using-azure-active-directory.md)  
+より安全な既定の設定があり、フェデレーション id を使用して Azure SQL Database のインスタンスに接続できるように OLE DB driver 18.2.1 で導入された新しい認証方法について説明します。
+
  [複数のアクティブな結果セット &#40;MARS&#41; の使用](../../oledb/features/using-multiple-active-result-sets-mars.md)  
  OLE DB Driver for SQL Server が複数のアクティブな結果セット (MARS) をサポートする方法について説明します。 MARS では、単一のデータベース接続を使用して、複数の結果セットを実行したり受け取ったりできます。  
   
@@ -86,6 +89,9 @@ ms.locfileid: "47840910"
   
  [OLE DB Driver for SQL Server の UTF-16 のサポート](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] で導入された動作の変更について説明します。 列の結果または出力パラメーターをバインドするときに固定長バッファーを指定した場合、終端文字の前にバッファーに書き込まれる **wchar** 文字がサロゲート ペアの上位サロゲート コード ポイントである場合、および次の **wchar** 文字が下位サロゲート コード ポイントである場合は、OLE DB Driver for SQL Server はバッファーに上位サロゲート コード ポイントを追加しません。  
+ 
+ [OLE DB Driver for SQL Server の UTF-8 のサポート](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+ Utf-8 サーバー エンコードと構成の予防措置 utf-8 でエンコードされたデータを扱うときにユーザーが実行のサポートについて説明します。
   
  [OLE DB Driver for SQL Server の高可用性、ディザスター リカバリーに関するサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] に追加された高可用性のディザスター リカバリー機能をアプリケーションで利用するための構成方法について説明します。  

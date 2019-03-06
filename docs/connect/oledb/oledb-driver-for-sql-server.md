@@ -2,7 +2,7 @@
 title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
 description: Microsoft OLE DB Driver for SQL Server
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: befcc84662b2273f81faaded76045d4d44b03e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00be1d87dbc8ba071403722b7e575e5ab1c7a215
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687870"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744572"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

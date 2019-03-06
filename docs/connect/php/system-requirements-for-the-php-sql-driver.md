@@ -119,7 +119,7 @@ Azure SQL Database がサポートされています。 詳細については、
 
 Linux と macOS のサポートされているバージョンは、適切なドライバー インストールできる次の PHP の PECL パッケージ システムを使用して、 [Linux と macOS のインストール手順](../../connect/php/installation-tutorial-linux-mac.md)します。 または、お使いのプラットフォームからビルド済みのバイナリをダウンロード、 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github プロジェクト ページ - 次の表は、事前構築済みのバイナリ パッケージ内のファイルを一覧表示します。
 
-**Microsoft SQL Server 用 Drivers 4.3 for PHP:**  
+**Microsoft SQL Server 用 Drivers 5.6 for PHP:**  
 
 Windows では、次のバージョンのドライバーは含まれています。
 

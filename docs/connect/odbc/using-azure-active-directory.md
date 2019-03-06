@@ -11,19 +11,19 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98f7e0ac3667bc8546a7bf7ce2d8036341bb2650
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 789046b7df230b88ca1761d1d89cc147074e12a9
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206601"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663118"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC ドライバーでの Azure Active Directory の使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="purpose"></a>用途
 
-Microsoft ODBC Driver for SQL Server バージョン 13.1 以降は、ユーザー名/パスワード、Azure Active Directory アクセス トークン、または Windows Azure Active Directory でフェデレーション id を使用して SQL Azure のインスタンスに接続する ODBC アプリケーション統合認証 (_Windows ドライバーのみ_)。 ODBC ドライバー バージョン 13.1、トークン認証は、Azure Active Directory のアクセスの_Windows のみ_します。 ODBC ドライバー バージョン 17 の上には、すべてのプラットフォーム (Windows、Linux および Mac) でこの認証をサポートしています。 ログイン id と新しい Azure Active Directory 対話型認証は、Windows の ODBC ドライバー バージョン 17.1 の内容で導入されました。 これらすべては、新しい DSN と接続文字列キーワード、および接続属性を使用して行います。
+Microsoft ODBC Driver for SQL Server バージョン 13.1 以上により SQL Azure のインスタンスに接続する ODBC アプリケーションであり、Azure Active Directory でフェデレーション id を使用してユーザー名/パスワードで、Azure Active Directory アクセス トークンでは、Azure Activeディレクトリの管理対象サービス id、または Windows 統合認証 (_Windows ドライバーのみ_)。 ODBC ドライバー バージョン 13.1、トークン認証は、Azure Active Directory のアクセスの_Windows のみ_します。 ODBC ドライバー バージョン 17 の上には、すべてのプラットフォーム (Windows、Linux および Mac) でこの認証をサポートしています。 ログイン id と新しい Azure Active Directory 対話型認証は、Windows の ODBC ドライバー バージョン 17.1 の内容で導入されました。 新しい Azure Active Directory の管理サービスの id 認証方法は、ODBC ドライバーのシステムによって割り当てられた両方のバージョン 17.3.1.1 とユーザー割り当て id で追加されました。 これらすべては、新しい DSN と接続文字列キーワード、および接続属性を使用して行います。
 
 > [!NOTE]
 > Linux および macOS 上の ODBC ドライバーは、Active Directory フェデレーション サービスをサポートしていません。 Linux から Azure Active Directory ユーザー名/パスワード認証を使用している、または macOS のクライアントと、Active Directory の構成は、フェデレーション サービスが含まれています、認証が失敗する可能性があります。
@@ -34,7 +34,7 @@ Microsoft ODBC Driver for SQL Server バージョン 13.1 以降は、ユーザ�
 
 |[オブジェクト名]|値|既定|[説明]|
 |-|-|-|-|
-|`Authentication`|(設定しません) (空の文字列)、 `SqlPassword`、 `ActiveDirectoryPassword`、 `ActiveDirectoryIntegrated`、 `ActiveDirectoryInteractive`|(未設定)|認証モードを制御します。<table><tr><th>[値]<th>[説明]<tr><td>(未設定)<td>認証モードの他のキーワード (既存のレガシ接続オプション) によって決まります<tr><td>(空の文字列)<td>接続文字列: "{0}"オーバーライド設定を解除し、`Authentication`値、DSN に設定します。<tr><td>`SqlPassword`<td>ユーザー名とパスワードを使用して SQL Server インスタンスに直接認証します。<tr><td>`ActiveDirectoryPassword`<td>ユーザー名とパスワードを使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows ドライバーのみ_します。 統合認証を使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryInteractive`<td>_Windows ドライバーのみ_します。 対話型認証を使用して id を Azure Active Directory で認証します。</table>|
+|`Authentication`|(設定しません) (空の文字列)、 `SqlPassword`、 `ActiveDirectoryPassword`、 `ActiveDirectoryIntegrated`、 `ActiveDirectoryInteractive`、 `ActiveDirectoryMsi` |(未設定)|認証モードを制御します。<table><tr><th>[値]<th>[説明]<tr><td>(未設定)<td>認証モードの他のキーワード (既存のレガシ接続オプション) によって決まります<tr><td>(空の文字列)<td>接続文字列: "{0}"オーバーライド設定を解除し、`Authentication`値、DSN に設定します。<tr><td>`SqlPassword`<td>ユーザー名とパスワードを使用して SQL Server インスタンスに直接認証します。<tr><td>`ActiveDirectoryPassword`<td>ユーザー名とパスワードを使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows ドライバーのみ_します。 統合認証を使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryInteractive`<td>_Windows ドライバーのみ_します。 対話型認証を使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryMsi`<td>管理対象サービス id の認証を使用して id を Azure Active Directory で認証します。 ユーザー割り当て id、UID は、ユーザー idenity のオブジェクト ID に設定されます。</table>|
 |`Encrypt`|(未設定)、`Yes`、`No`|(説明を参照してください)|接続の暗号化を制御します。 場合の前の属性値、`Authentication`の設定が_none_ 、DSN または接続文字列は、既定値は`Yes`します。 それ以外の場合、既定値は `No` です。 場合、属性`SQL_COPT_SS_AUTHENTICATION`の前の属性値を上書き`Authentication`、明示的に DSN または接続文字列または接続属性での暗号化の値を設定します。 暗号化の前の属性値が`Yes`値が設定されている場合`Yes`DSN または接続文字列にします。|
 
 ## <a name="new-andor-modified-connection-attributes"></a>接続の新規作成または変更された属性
@@ -43,7 +43,7 @@ Microsoft ODBC Driver for SQL Server バージョン 13.1 以降は、ユーザ�
 
 |属性|型|値|既定|[説明]|
 |-|-|-|-|-|
-|`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`、`SQL_AU_PASSWORD`、`SQL_AU_AD_INTEGRATED`、`SQL_AU_AD_PASSWORD`、`SQL_AU_AD_INTERACTIVE`、`SQL_AU_RESET`|(未設定)|説明を参照してください。`Authentication`上記キーワード。 `SQL_AU_NONE` セットを明示的にオーバーライドするために提供されます`Authentication`DSN または接続文字列の値に`SQL_AU_RESET`DSN または接続文字列の値を優先できるように、設定された場合に、属性と設定解除されます。|
+|`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`､`SQL_AU_PASSWORD`、`SQL_AU_AD_INTEGRATED`、`SQL_AU_AD_PASSWORD`、`SQL_AU_AD_INTERACTIVE`、`SQL_AU_AD_MSI`、`SQL_AU_RESET`|(未設定)|説明を参照してください。`Authentication`上記キーワード。 `SQL_AU_NONE` セットを明示的にオーバーライドするために提供されます`Authentication`DSN または接続文字列の値に`SQL_AU_RESET`DSN または接続文字列の値を優先できるように、設定された場合に、属性と設定解除されます。|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|ポインター`ACCESSTOKEN`または NULL|NULL|Null 以外の場合は、使用する azure Ad アクセス トークンを指定します。 アクセス トークンを指定するエラーとも`UID`、 `PWD`、 `Trusted_Connection`、または`Authentication`接続文字列キーワードまたは同等の属性。 <br> **注:** ODBC ドライバー バージョン 13.1 に対してのみサポートしてこの_Windows_します。|
 |`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(説明を参照してください)|接続の暗号化を制御します。 `SQL_EN_OFF` `SQL_EN_ON`を無効にして、それぞれの暗号化を有効にします。 場合の前の属性値、`Authentication`の設定が_none_または`SQL_COPT_SS_ACCESS_TOKEN`が設定されていると`Encrypt`既定値は、DSN または接続文字列で指定されていない`SQL_EN_ON`します。 それ以外の場合、既定値は `SQL_EN_OFF` です。 場合接続属性`SQL_COPT_SS_AUTHENTICATION`に設定されていない_none_に明示的に設定して、`SQL_COPT_SS_ENCRYPT`目的の値を場合`Encrypt`DSN または接続文字列で指定されていません。 この属性のコントロールの有効値[接続の暗号化を使用するかどうか。](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|AAD のプリンシパルにパスワードの変更は ODBC 接続を実現できないため、Azure Active Directory でサポートされません。 <br><br>SQL Server 2005 では、SQL Server 認証におけるパスワードの期限切れが導入されました。 `SQL_COPT_SS_OLDPWD`クライアントは、接続の古いと新しいパスワードの両方を提供できるようにする属性が追加されます。 この属性が設定されている場合、接続文字列には変更された "古いパスワード" が含まれているので、プロバイダーは最初の接続またはそれ以降の接続で接続プールを使用しません。|
@@ -105,6 +105,12 @@ SQL Azure への Azure Active Directory 統合認証の場合: `Authentication=A
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
+8. AAD 管理対象サービス Id の認証には、接続を設定する認証システムによって割り当てられたか、ユーザー割り当ての id が使用されます。 ユーザー割り当て id、UID は、ユーザー id のオブジェクト ID に設定されます。<br>
+システムによって割り当てられた ID の場合:<br>
+`server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
+MyObjectId と等しいオブジェクト ID を持つユーザー割り当て id の<br>
+`server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`
+
 > [!NOTE] 
 >- Windows ODBC ドライバーを使用した Active Directory の新しいオプションを使用している場合ことを確認します。、 [for SQL Server の Active Directory 認証ライブラリ](https://go.microsoft.com/fwlink/?LinkID=513072)がインストールされています。 Linux と macOS のドライバーを使用して、ことを確認します。`libcurl`がインストールされています。 ドライバー バージョン 17.2 以降では、これは明示的な依存関係、その他の認証方法または ODBC の操作に必要ではないためです。
 >- を SQL Server アカウントのユーザー名とパスワードを使用して接続を使用できます、新しい`SqlPassword`オプションは、このオプションにより、より安全な接続の既定値から場合に、特に SQL Azure の使用することをお勧めします。
@@ -161,6 +167,14 @@ typedef struct AccessToken
 Azure Active Directory 対話型認証で使用する接続文字列の例は、次のです。 ない PWD フィールド、パスワードを入力するときは、Windows Azure Authentication 画面を使用すると、注意してください。
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
+~~~
+Azure Active Directory 管理対象サービス Id の認証で使用する接続文字列の例は、次のです。 ユーザー割り当て id のユーザー id のオブジェクト ID には UID が設定されていることに注意してください。
+~~~
+// For system-assigned identity,
+SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi"
+...
+// For user-assigned identity with object ID equals to myObjectId
+SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myObjectId;Authentication=ActiveDirectoryMsi"
 ~~~
 
 ## <a name="see-also"></a>参照

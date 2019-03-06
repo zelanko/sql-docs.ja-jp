@@ -2,7 +2,7 @@
 title: OLE DB Driver for SQL Server のインストール | Microsoft Docs
 description: インストールして、SQL Server の OLE DB ドライバーをアンインストールします。
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7dc75f03ac806c50008f7b536e7a1f0ed037d496
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 288b81c508eed681be190749b5d9618f1f5511ce
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602222"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744382"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server のインストール
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ OLE DB Driver for SQL Server ファイル (msoledbsql.dll、msoledbsqlr.rll) が
 > [!NOTE]  
 > OLE DB driver for SQL Server のすべての適切なレジストリ設定は、インストール プロセスの一部として行われます。  
 
-OLE DB Driver for SQL Server ヘッダーとライブラリ ファイル (msoledbsql.h と msoledbsql.lib) がインストールされている`%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`します。 さらに、msoledbsql.msi 内の同じファイルのインストール、x64`%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`します。  
+OLE DB Driver for SQL Server ヘッダーとライブラリ ファイル (msoledbsql.h と msoledbsql.lib) がインストールされている`%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`します。 さらに、msoledbsql.msi 内の同じファイルのインストール、x64`%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`します。  
 
 Msoledbsql.msi を介して SQL Server 用の OLE DB ドライバーを配布できます。 アプリケーションを展開するときに、SQL Server の OLE DB ドライバーをインストールする必要があります。 チェイナーとブートストラップのテクノロジを使用すると、ユーザーが 1 回のインストール手順に従うだけで複数のパッケージをまとめてインストールできるようになります。 詳細については、「[Visual Studio 2005 用のカスタム ブートストラップ パッケージの作成](https://go.microsoft.com/fwlink/?LinkId=115667)」および「[カスタムの必須コンポーネントの追加](https://go.microsoft.com/fwlink/?LinkId=115668)」をご覧ください。  
   
@@ -55,7 +55,7 @@ msoledbsql.msi を呼び出すと、既定ではクライアント コンポー�
 ## <a name="silent-install"></a>サイレント インストール  
  msiexec で /passive、/qn、/qb、または /qr オプションを指定する場合、IACCEPTMSOLEDBSQLLICENSETERMS=YES も指定して、使用許諾契約の条件に同意することを明示的に指定する必要があります。 このオプションは、すべて大文字で指定する必要があります。  
 
-## <a name="installing-ole-db-driver-for-sql-server-as-a-dependency"></a>SQL Server の依存関係として OLE DB Driver をインストールします。  
+## <a name="installing-ole-db-driver-for-sql-server-as-a-dependency"></a>SQL Server の依存関係として OLE DB ドライバーをインストールします。  
 すべての依存アプリケーションがアンインストールされるまで、SQL Server の OLE DB ドライバーをアンインストールする重要です。 ユーザーに、アプリケーションに依存している OLE DB Driver for SQL Server の警告を提供するには、よう、MSI で APPGUID インストール オプションを使用します。  
 
  `msiexec /i msoledbsql.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  

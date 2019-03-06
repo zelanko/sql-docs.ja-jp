@@ -1,8 +1,8 @@
 ---
-title: SQL Server ヘッダーとライブラリ ファイルでの OLE DB ドライバーの使用 | Microsoft Docs
+title: OLE DB Driver for SQL Server のヘッダーとライブラリ ファイルの使用 | Microsoft Docs
 description: SQL Server ヘッダーとライブラリ ファイルでの OLE DB ドライバーの使用
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9cd6a50bec611b7068b3f79f3867f9e2a6242a70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 528f55ba4a95da2f7e68de47ad25f88eae3af668
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816040"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744422"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>SQL Server ヘッダーとライブラリ ファイルでの OLE DB ドライバーの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "47816040"
   
  SQL Server ヘッダーとライブラリ ファイルの OLE DB Driver は、次の場所にインストールされます。  
   
- *%PROGRAM FILES %* \Microsoft の SQL Server\Client SDK\OLEDB\181\SDK  
+ *%PROGRAM FILES%* \Microsoft SQL Server\Client SDK\OLEDB\182\SDK  
   
  SQL Server データ アクセス機能のカスタム アプリケーションに OLE DB ドライバーを追加する、OLE DB Driver for SQL Server ヘッダー ファイル (msoledbsql.h) を使用できます。 OLE DB Driver for SQL Server ヘッダー ファイルには、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入された新しい機能を使用するために必要なすべての定義、属性、プロパティ、およびインターフェイスが含まれています。  
   
- だけでなく、OLE DB Driver for SQL Server のヘッダー ファイル、またファイルがある msoledbsql.lib ライブラリ エクスポート ライブラリであるため[OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)機能します。  
+ だけでなく、OLE DB Driver for SQL Server のヘッダー ファイル、またファイルがある msoledbsql.lib ライブラリ、エクスポート ライブラリであるため[OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)機能します。  
   
  OLE DB Driver for SQL Server ヘッダー ファイルは、MDAC (Microsoft Data Access Components) と共に使用する sqloledb.h ヘッダー ファイルに対して下位互換性がありますが、SQLOLEDB (MDAC 付属の OLE DB provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) の CLSID や (OLE DB Driver for SQL Server でサポートされない) XML 機能のシンボルは含まれていません。    
   
  OLE DB Driver for SQL Server を使用して、OLE DB アプリケーションのみ、msoledbsql.h を参照する必要があります。 1 つのアプリケーションで MDAC (SQLOLEDB) と OLE DB Driver for SQL Server の両方を使用する場合、sqloledb.h と msoledbsql.h の両方を参照できますが、sqloledb.h を先に参照する必要があります。  
   
-## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>SQL Server のヘッダー ファイルの OLE DB ドライバーを使用します。  
- OLE DB Driver for SQL Server のヘッダー ファイルを使用することを使用する必要があります、**含める**C/C++ プログラミング コード内のステートメント。 次のセクションでは、この OLE DB アプリケーションを実行する方法について説明します。  
+## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>OLE DB Driver を使用して、SQL Server のヘッダー ファイル  
+ OLE DB Driver for SQL Server のヘッダー ファイルを使用することを使用する必要があります、**含める**C/C++ プログラミング コード内のステートメント。 次のセクションでは、OLE DB アプリケーションで行う方法について説明します。  
   
 > [!NOTE]  
 >  OLE DB Driver for SQL Server ヘッダーとライブラリ ファイルは、Visual Studio C 2012 を使用してコンパイルされた以降にのみできます。  

@@ -1,5 +1,5 @@
 ---
-title: リリース ノート (ODBC Driver for SQL Server) |Microsoft Docs
+title: リリース ノート (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2018
 ms.prod: sql
@@ -11,17 +11,28 @@ ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cb599d59a374fc09dbc0009f0288296cc1df9d9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc1321ac161923499d57ab69374b8ed603d272e0
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702071"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955773"
 ---
 # <a name="release-notes"></a>リリース ノート
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Microsoft ODBC Driver for SQL Server on Windows のリリース ノート  
+
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.3 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新機能
+
+**追加された機能**:
+
+- Azure Active Directory 管理対象サービス Id (システムとユーザー割り当て) 認証モードの詳細については「[を使用して Azure Active Directory と ODBC ドライバー](../using-azure-active-directory.md)
+- 詳細については「Always Encrypted の列に対して入力パラメーターをストリーム配信機能[Always Encrypted を使用する場合は、ODBC ドライバーの制限事項](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)
+- XA 分散トランザクションの詳細については「 [XA トランザクションを使用して](../use-xa-with-dtc.md)
+
+[バグの修正](../bug-fixes.md)
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新機能
 

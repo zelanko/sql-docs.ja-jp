@@ -1,7 +1,7 @@
 ---
 title: Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4a36070adf041363953ddaaf08675a2b9d649feb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 4a6c86f3097efdc30089820432fedcb0ab530e04
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603732"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662616"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft SQL Server 用 ODBC Driver
 
@@ -46,6 +46,7 @@ ODBC ドライバーには、[**sqlcmd**](../../tools/sqlcmd-utility.md) や [**
 - [Always Encrypted の使用](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 - [Azure Active Directory の使用](../../connect/odbc/using-azure-active-directory.md)
 - [透過的なネットワーク IP の解決の使用](../../connect/odbc/using-transparent-network-ip-resolution.md)
+- [XA トランザクションの使用](../../connect/odbc/use-xa-with-dtc.md)
 
 ### <a name="linux-and-macos"></a>Linux および macOS
 

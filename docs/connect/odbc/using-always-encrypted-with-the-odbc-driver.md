@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044949"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662856"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -96,7 +96,7 @@ CREATE TABLE [dbo].[Patients](
 
 - 暗号化された列を含め、データベース列に挿入された値は、バインドされたパラメーターとして渡されます (「[SQLBindParameter 関数](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)」を参照してください)。 暗号化されていない列に値を送信する場合、パラメーターの使用は省略可能です (ただし、SQL インジェクションを防ぐのに役立つので、強くお勧めします) が、暗号化された列をターゲットとする値に対しては必須です。 SSN または BirthDate 列に挿入された値は、クエリ ステートメントに埋め込まれているリテラルとして渡された、ドライバーは、暗号化、またはそれ以外のクエリ内のリテラルの処理を試行しませんので、クエリは失敗します。 その結果、サーバーはこれらの値を、暗号化された列と互換性がないと見なして拒否します。
 
-- SSN 列に挿入されるパラメーターの SQL 型が、SQL_CHAR にマップするに設定されている、 **char** SQL Server データ型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 パラメーターの型が、SQL_WCHAR にマップするに設定されたかどうか**nchar**、Always Encrypted は nchar の暗号化された値から暗号化された char 値へのサーバー側の変換はサポートされていない、クエリは失敗します。 参照してください[ODBC プログラマ リファレンス - 付録 d:データ型](https://msdn.microsoft.com/library/ms713607.aspx)については、データ型マッピングします。
+- SSN 列に挿入されるパラメーターの SQL 型が、SQL_CHAR にマップするに設定されている、 **char** SQL Server データ型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 パラメーターの型が、SQL_WCHAR にマップするに設定されたかどうか**nchar**、Always Encrypted は nchar の暗号化された値から暗号化された char 値へのサーバー側の変換はサポートされていない、クエリは失敗します。 参照してください[ODBC プログラマ リファレンス - 付録 d: データ型](https://msdn.microsoft.com/library/ms713607.aspx)については、データ型マッピングします。
 
 ```
     SQL_DATE_STRUCT date;
@@ -286,7 +286,7 @@ Always Encrypted はクライアント側暗号化テクノロジであるため
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>クエリ パラメーターのメタデータを取得するためのラウンド トリップを制御する
 
-既定では、接続に対して Always Encrypted が有効になっている場合、ドライバーは、各パラメーター化クエリに対して [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) を呼び出し、クエリ ステートメント (パラメーター値を除く) を SQL Server に渡します。 このストアド プロシージャを調べる場合は、すべてのパラメーターを暗号化する必要がある場合、クエリ ステートメントを分析し、暗号化することができるように、各パラメーターの暗号化に関連する情報を返します。 上記の動作により、クライアント アプリケーションに対する高度な透明性が確保されます。暗号化された列をターゲットとする値がパラメーターでドライバーに渡される限り、アプリケーション (およびアプリケーション開発者) は、暗号化された列にどのクエリがアクセスするかを認識する必要はありません。
+既定では、接続に対して Always Encrypted が有効になっている場合、ドライバーは、各パラメーター化クエリに対して [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) を呼び出し、クエリ ステートメント (パラメーター値を除く) を SQL Server に渡します。 このストアド プロシージャを調べる場合は、すべてのパラメーターを暗号化する必要がある場合、クエリ ステートメントを分析し、暗号化することができるように、各パラメーターの暗号化に関連する情報を返します。 上記の動作により、クライアント アプリケーションへの透過性の概要: アプリケーション (およびアプリケーション開発者) に暗号化された列をターゲットとする値が渡される限り、暗号化された列にアクセスするクエリを意識する必要はありませんパラメーターでドライバー。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>ステートメントあたりの動作を常に暗号化します。
 
@@ -369,6 +369,8 @@ Azure Key Vault は、特にアプリケーションが Azure でホストされ
 
 - この方法でクライアント ID/シークレットの資格情報は、アプリケーション クライアント ID とアプリケーション シークレットが。
 
+- 管理対象サービス Id の資格情報がシステムによって割り当てられた id またはユーザー割り当て id、このメソッドを使用します。 ユーザー割り当て id、UID は、ユーザー id のオブジェクト ID に設定されます。
+
 列の暗号化の AKV に格納されている Cmk を使用するドライバーを許可するのには、次の接続文字列専用のキーワードを使用します。
 
 |[資格情報の種類]| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
@@ -386,7 +388,7 @@ Azure Key Vault は、特にアプリケーションが Azure でホストされ
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**ユーザー名/パスワード**
+**ユーザー名/パスワード**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -551,7 +553,7 @@ SQLPutData と部分では、データの挿入や比較を送信できません
 
 - Varbinary (max) の形式 (例: 取得された上) で暗号化テキストを挿入、設定、`BCPMODIFYENCRYPTED`オプションを TRUE にして、BCP IN 操作を実行します。 結果として得られるデータを復号可能なためには、転送先の列の CEK が元の暗号化テキストの取得元と同じことを確認します。
 
-使用する場合、 **bcp**ユーティリティ。コントロールに、`ColumnEncryption`設定、-d オプションを使用して、目的の値を含む DSN を指定します。 暗号化テキストを挿入することを確認、`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`ユーザーの設定を有効にします。
+使用する場合、 **bcp**ユーティリティ: コントロールに、`ColumnEncryption`設定、-d オプションを使用して、目的の値を含む DSN を指定します。 暗号化テキストを挿入することを確認、`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`ユーザーの設定を有効にします。
 
 次の表は、暗号化された列で動作しているときに操作の概要を示します。
 
@@ -577,7 +579,8 @@ SQLPutData と部分では、データの挿入や比較を送信できません
 |`ColumnEncryption`|許容値は`Enabled` /`Disabled`します。<br>`Enabled` -- 接続の Always Encrypted 機能を有効にします。<br>`Disabled` -- 接続の Always Encrypted 機能を無効にします。 <br><br>既定値は `Disabled` です。|  
 |`KeyStoreAuthentication` | 有効な値: `KeyVaultPassword`、`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | ときに`KeyStoreAuthentication`  =  `KeyVaultPassword`、有効な Azure Active Directory ユーザー プリンシパル名にこの値を設定します。 <br>ときに`KeyStoreAuthetication`  =  `KeyVaultClientSecret`有効な Azure Active Directory アプリケーション クライアント ID にこの値を設定 |
-|`KeyStoreSecret` | ときに`KeyStoreAuthentication`  =  `KeyVaultPassword`対応するユーザー名のパスワードにこの値を設定します。 <br>ときに`KeyStoreAuthentication`  =  `KeyVaultClientSecret`有効な Azure Active Directory アプリケーション クライアント ID に関連付けられているアプリケーションのシークレットにこの値を設定|
+|`KeyStoreSecret` | ときに`KeyStoreAuthentication`  =  `KeyVaultPassword`対応するユーザー名のパスワードにこの値を設定します。 <br>ときに`KeyStoreAuthentication`  =  `KeyVaultClientSecret`有効な Azure Active Directory アプリケーション クライアント ID に関連付けられているアプリケーションのシークレットにこの値を設定 |
+
 
 ### <a name="connection-attributes"></a>接続属性
 

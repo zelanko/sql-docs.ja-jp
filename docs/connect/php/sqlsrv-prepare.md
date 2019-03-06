@@ -62,19 +62,19 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |要素|[説明]|  
     |-----------|---------------|  
     |*&$value*|リテラル値または PHP の変数への参照。|  
-    |*$direction*[OPTIONAL]|パラメーターの方向を示すために使用する **SQLSRV_PARAM_\*** 定数 (**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**) のいずれか。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
-    |*$phpType*[OPTIONAL]|戻り値の PHP データ型を指定する **SQLSRV_PHPTYPE_\*** 定数。|  
-    |*$sqlType*[OPTIONAL]|入力値の SQL Server データ型を指定する **SQLSRV_SQLTYPE_\*** 定数。|  
+    |*$direction*[オプション]|パラメーターの方向を示すために使用する **SQLSRV_PARAM_\*** 定数 (**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**) のいずれか。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
+    |*$phpType*[オプション]|戻り値の PHP データ型を指定する **SQLSRV_PHPTYPE_\*** 定数。|  
+    |*$sqlType*[オプション]|入力値の SQL Server データ型を指定する **SQLSRV_SQLTYPE_\*** 定数。|  
   
 *$options* (省略可能): クエリのプロパティを設定する連想配列。 次の表に、サポートされているキーと対応する値を示します。  
   
 |Key|サポートされている値|[説明]|  
 |-------|--------------------|---------------|  
-|ClientBufferMaxKBSize|正の整数|クライアント側カーソルの結果セットを保持するバッファーのサイズを設定します。<br /><br />既定値は 128 KB です。 詳細については、読み取る[、Cursor Type and Selecting Rows を指定する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)します。|
+|ClientBufferMaxKBSize|正の整数|クライアント側カーソルの結果セットを保持するバッファーのサイズを設定します。<br /><br />既定値は 10240 KB です。 詳細については、読み取る[、Cursor Type and Selecting Rows を指定する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)します。|
 |小数点以下表示桁数|0 ~ 4 の (範囲) の整数|フェッチされる money 値を書式設定時に、小数点以下桁数を指定します。<br /><br />任意の負の整数値または値が 4 よりも詳細は無視されます。<br /><br />このオプションは、FormatDecimals が場合にのみ**true**します。|
 |FormatDecimals|**true** または **false**<br /><br />既定値は **false**です。|該当する場合に、10 進数値の文字列をゼロで埋めでき、先頭に追加するかどうかを指定します、 `DecimalPlaces` money 型の書式を設定するためのオプション。<br /><br />詳細については、次を参照してください。 [10 進数値文字列の書式設定および通貨値 (SQLSRV ドライバー)](../../connect/php/formatting-decimals-sqlsrv-driver.md)します。|
 |QueryTimeout|正の整数|クエリのタイムアウト (秒単位) を設定します。 既定で、ドライバーは、結果を無制限に待機します。|  
-|ReturnDatesAsStrings|**true** または **false**<br /><br />既定値は **false**です。|日付と時刻の型を文字列として取得するステートメントを構成します (**true**)。 詳細については、「 [方法: SQLSRV ドライバーを利用し、日付/時刻型を取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)」を参照してください。
+|ReturnDatesAsStrings|**true** または **false**<br /><br />既定値は **false**です。|日付と時刻の型を文字列として取得するステートメントを構成します (**true**)。 詳細については、「[方法: SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)」をご覧ください。
 |スクロール可能|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|これらの値の詳細については、「 [カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。|  
 |SendStreamParamsAtExec|**true** または **false**<br /><br />既定値は **true**です。|実行時にすべてのストリーム データを送信する (**true**)、またはストリーム データをチャンク単位で送信する (**false**) ように、ドライバーを構成します。 既定では、この値は **true**に設定されています。 詳細については、「 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)」を参照してください。|  
   

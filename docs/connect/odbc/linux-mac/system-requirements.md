@@ -15,12 +15,12 @@ ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18016780c53575b0416d9a0aa7a8f4499c41de51
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 287e6d44e3d816952f5802edd739a0af1160e82b
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603712"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955796"
 ---
 # <a name="system-requirements"></a>システム要件
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -37,17 +37,22 @@ Linux と macOS のドライバーは、次のオペレーティング システ
 |Apple OS X 10.11 (El Capitan)|13、13.1、17|
 |Apple macOS 10.12 (Sierra)|13、13.1、17|
 |Apple macOS 10.13 (High Sierra)|17| 
+|Apple macOS 10.14 (Mojave)|17| 
 |Debian Linux 8|13、13.1、17|
 |Debian Linux 9|17|
 |RedHat Enterprise Linux 6|13、13.1、17|
 |RedHat Enterprise Linux 7|13、13.1、17|
 |SuSE Linux Enterprise Server 11|13、13.1、17 <br /><br /> **注:** のみ ODBC Driver 17 に SuSE Linux Enterprise Server 11 SP4 がサポートしています|
 |SuSE Linux Enterprise Server 12|13、13.1、17|
+|SuSE Linux Enterprise Server 15|17|
 |Ubuntu Linux 14.04|13、13.1、17|
 |Ubuntu Linux 15.10|13、13.1|
 |Ubuntu Linux 16.04|13、13.1、17|
 |Ubuntu Linux 16.10|13、13.1|
+|Ubuntu Linux 17.04|17| 
 |Ubuntu Linux 17.10|17|
+|Ubuntu Linux 18.04|17| 
+|Ubuntu Linux 18.10|17| 
 
 パッケージのインストール、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13、13.1、17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Linux と macOS で、ドライバーの依存関係」の説明に従って、お使いのディストリビューションのパッケージ管理システムを使用してインストールされているときに自動的に解決します。[ドライバーをインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)します。
 

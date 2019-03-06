@@ -269,7 +269,7 @@ Microsoft driver 5.3.0 for PHP for SQL Server、Windows 証明書ストアのプ
 
 Windows 上の SQL Server 用 ODBC ドライバーには、Windows 証明書ストア、という名前の組み込み列マスター キー ストア プロバイダーが含まれています。`MSSQL_CERTIFICATE_STORE`します。 (このプロバイダーは macOS または Linux で使用できません) です。このプロバイダーでは、CMK がクライアント コンピューターでローカルに格納されているし、ドライバーで使用するために必要な追加の構成、アプリケーションではありません。 ただし、アプリケーションと、ストアに証明書とその秘密キーにアクセスできる場合があります。 詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。
 
-### <a name="using-azure-key-vault"></a>Azure Key Vault を使用した EKM
+### <a name="using-azure-key-vault"></a>Azure Key Vault の使用
 
 Azure Key Vault では、暗号化キー、パスワード、および Azure を使用してその他のシークレットを格納する方法を提供および Always Encrypted のキーを格納するために使用できます。 ODBC Driver for SQL Server (バージョン 17 以降) には、Azure Key Vault の組み込みのマスター _ キー ストア プロバイダーが含まれています。 次の接続オプションは、Azure Key Vault の構成の処理: `KeyStoreAuthentication`、 `KeyStorePrincipalId`、および`KeyStoreSecret`します。 
  -   `KeyStoreAuthentication` 2 つの可能な文字列値のいずれかを実行できます:`KeyVaultPassword`と`KeyVaultClientSecret`します。 これらの値は、認証資格情報の種類は他の 2 つのキーワードで使用を制御します。

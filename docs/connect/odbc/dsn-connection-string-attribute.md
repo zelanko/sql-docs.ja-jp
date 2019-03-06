@@ -1,7 +1,7 @@
 ---
 title: DSN と接続文字列キーワードの ODBC ドライバー - SQL Server |Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 manager: craigg
-ms.openlocfilehash: 0dedb58cf0a9825625027e363db20a56f06839dd
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: e2db3b8df9ea63c16e0e96af9df42b7c22adaf80
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306239"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662876"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN と接続文字列のキーワードと属性
 
@@ -23,7 +23,7 @@ ms.locfileid: "53306239"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>DSN または接続文字列のキーワードと接続属性をサポート
 
-次の表は、使用可能なキーワードと各プラットフォーム (l: 属性Linux ; M:Mac。属性:Windows: キーワードの詳細属性をクリックします。
+次の表は、使用可能なキーワードと各プラットフォーム (l: Linux での属性M: Mac。W: Windows の場合)。 キーワードの詳細属性をクリックします。
 
 | DSN / 接続文字列のキーワード | 接続属性 | プラットフォーム |
 |-|-|-|
@@ -105,7 +105,7 @@ ms.locfileid: "53306239"
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
-| | [SQL_COPT_SS_ENLIST_IN_XA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistinxa) | W |
+| | [SQL_COPT_SS_ENLIST_IN_XA](dsn-connection-string-attribute.md#sql_copt_ss_enlist_in_xa) | LMW |
 | | [SQL_COPT_SS_FALLBACK_CONNECT](dsn-connection-string-attribute.md#sqlcoptssfallbackconnect) | LMW |
 | | [SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | | [SQL_COPT_SS_MUTUALLY_AUTHENTICATED](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
@@ -156,6 +156,7 @@ SQL Server に接続するときに使用する認証モードを設定します
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory 統合認証。|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory パスワード認証。|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 対話型認証。|
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory 管理対象サービス Id 認証します。 ユーザー割り当て id、UID は、ユーザー id のオブジェクト ID に設定されます。 |
 | |SQL_AU_RESET|未設定。 任意の DSN または接続文字列の設定をオーバーライドします。|
 
 > [!NOTE]
@@ -214,4 +215,21 @@ SQL Server 2012 への接続と新しい場合は、メタデータに SET FMTON
 |-|-|
 | char * | キーストア プロバイダー ライブラリへのパス |
 
+### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
+XA トランザクション XA 準拠のトランザクション プロセッサ (TP) を有効にする、アプリケーションを呼び出す必要がある**SQLSetConnectAttr** SQL_COPT_SS_ENLIST_IN_XA とへのポインター、`XACALLPARAM`オブジェクト。 このオプションは、Windows、Linux の (17.3 以降) およびファルダにサポートされます。
+```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
+``` 
+ 関連付ける、XA トランザクションと ODBC 接続のみ、TRUE または FALSE SQL_COPT_SS_ENLIST_IN_XA にポインターではなく呼び出し時に指定**SQLSetConnectAttr**します。 これは Windows では有効なだけであり、クライアント アプリケーションを通じて XA 操作を指定するのには使用できません。 
+ ```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
+``` 
+
+|[値]|[説明]|プラットフォーム|  
+|-----------|-----------------|-----------------|  
+|XACALLPARAM オブジェクト *|ポインター`XACALLPARAM`オブジェクト。|Windows、Linux および Mac|
+|TRUE|XA トランザクションを ODBC 接続に関連付けます。 関連するすべてのデータベース アクティビティは、XA トランザクションの保護下で実行されます。|Windows|  
+|FALSE|ODBC 接続を使用してトランザクションの関連付けを解除します。|Windows|
+
+ 参照してください[XA トランザクションを使用して](../../connect/odbc/use-xa-with-dtc.md)XA トランザクションについての詳細。

@@ -2,7 +2,7 @@
 title: OLE DB Driver for SQL Server を使用したアプリケーションのビルド | Microsoft Docs
 description: OLE DB Driver for SQL Server を使用したアプリケーションのビルド
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8be648639f3b345f6d6eb16c6f51c58064d9270a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2e9b88c12a4abb25fed87c8f273a9949b85c4ee
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691791"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744412"
 ---
-# <a name="building-applications-with-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server を使用したアプリケーションの構築
+# <a name="building-applications-with-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server を使用したアプリケーションのビルド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47691791"
  [OLE DB Driver for SQL Server での接続文字列キーワードの使用](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
  OLE DB Driver for SQL Server 経由でデータベースに接続するときに使用できる、さまざまな接続文字列について説明します。  
 
- [SQL Server ヘッダーとライブラリ ファイルでの OLE DB ドライバーの使用](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
+ [OLE DB Driver for SQL Server のヘッダーとライブラリ ファイルの使用](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
  SQL Server ヘッダーとライブラリ ファイル、アプリケーション内での OLE DB ドライバーを使用する方法について説明します。  
 
  [MDAC から OLE DB Driver for SQL Server へのアプリケーションの更新](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  

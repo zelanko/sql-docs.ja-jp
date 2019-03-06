@@ -1,7 +1,7 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server のサポート マトリックス |Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.openlocfilehash: 82a8576365889d02381e3b18b622fd541b5b9235
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec5a151d79d9a66bfd65342336ad7aa3afcf567d
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728700"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744402"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server のサポート マトリックス
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,8 @@ ms.locfileid: "47728700"
  次の Microsoft PHP Driver は、表示されているサポートの終了日までサポートされます。
 
 |ドライバー名|ドライバー パッケージのバージョン|メイン ストリーム サポートの終了|
-|-|-|-|
+|-|:-:|-|
+|SQL Server 用 Microsoft PHP ドライバー 5.6|5.6|2024 年 2 月 21日|
 |SQL Server 用 Microsoft PHP ドライバー 5.3|5.3|2023 年 7 月 20日|
 |SQL Server 用 Microsoft PHP ドライバー 5.2|5.2|2023 年 2 月 9日|
 |SQL Server 用 Microsoft PHP ドライバー 4.3|4.3|2022 年 7 月 6 日|
@@ -41,7 +42,7 @@ ms.locfileid: "47728700"
  次の Microsoft PHP ドライバーはサポートされなくなりました。
 
 |ドライバー名|ドライバー パッケージのバージョン|メイン ストリーム サポートの終了|
-|-|-|-|
+|-|:-:|-|
 |Microsoft PHP Drivers 3.0 for SQL Server|3.0|2017 年 3 月 6 日|
 |Microsoft PHP Drivers 2.0 for SQL Server|2.0|2015 年 8 月 10 日|
 |SQL Server 用 Microsoft PHP ドライバー 1.0|1.0|2014 年 4 月 28 日|
@@ -49,67 +50,73 @@ ms.locfileid: "47728700"
 ## <a name="sql-server-version-certified-compatibility"></a>SQL Server のバージョンの互換性を認定
  次の表は、テストして、対応するバージョンのドライバーと互換性のあるものとして認定されている SQL Server のバージョンを一覧表示します。 以前のバージョンのドライバーとの下位互換性を維持するために努力しますが、最新サポートされているドライバーのみをテストして、SQL Server がリリースされると、新しい SQL Server のバージョンを認定します。
 
-|SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595; SQL Server のバージョン|5.3 および 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
-|---|---|---|---|---|---|---|---|
-|Azure SQL Managed Instance<br/> (延長プライベート プレビュー)|Y|Y| | | | | |
-|Azure SQL データ ウェアハウス|Y|Y| | | | | |
-|SQL Server 2017   |Y|Y| | | | | |
-|SQL Server 2016   |Y|Y|Y| | | | |
-|SQL Server 2014   |Y|Y|Y|Y|Y| | |
-|SQL Server 2012   |Y|Y|Y|Y|Y|Y| |
-|SQL Server 2008 R2|Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2008:   | | |Y|Y|Y|Y|Y|
+|SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595; SQL Server のバージョン|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Azure SQL Managed Instance<br/> (延長プライベート プレビュー)|Y|Y|Y|Y| | | | | |
+|Azure SQL Data Warehouse|Y|Y|Y|Y| | | | | |
+|SQL Server 2017         |Y|Y|Y|Y| | | | | |
+|SQL Server 2016         |Y|Y|Y|Y|Y| | | | |
+|SQL Server 2014         |Y|Y|Y|Y|Y|Y|Y| | |
+|SQL Server 2012         |Y|Y|Y|Y|Y|Y|Y|Y| |
+|SQL Server 2008 R2      |Y|Y|Y|Y|Y|Y|Y|Y|Y|
+|SQL Server 2008:         | | | | |Y|Y|Y|Y|Y|
 
 ## <a name="php-version-support"></a>PHP バージョンのサポート
  Microsoft PHP ドライバーの一覧表示されているバージョンでは、次のバージョンの PHP がサポートされています。
 
-|SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595; PHP バージョン|5.3 および 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
-|---|---|---|---|---|---|---|---|
-|7.2|Windows で 7.2.1+<br/>他のプラットフォームで 7.2.0+| | | | | | |
-|7.1|7.1.0+ |7.1.0+ |       |        |        |        |        |
-|7.0|7.0.0+ |7.0.0+ |7.0.0+ |        |        |        |        |
-|5.6|       |       |       |5.6.4+  |        |        |        |
-|5.5|       |       |       |5.5.16+ |5.5.16+ |        |        |
-|5.4|       |       |       |5.4.32  |5.4.32  |5.4.32  |        |
-|5.3|       |       |       |        |        |5.3.0   |5.3.0   |
-|5.2|       |       |       |        |        |        |5.2.4<br />5.2.13|
+|SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595; PHP バージョン|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
+|:---:|---|---|---|---|---|---|---|---|---|
+|7.3|7.3.0+          |                |                |       |       | | | | |
+|7.2|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|       |       | | | | |
+|7.1|7.1.0+          |7.1.0+          |7.1.0+          |7.1.0+ |       |        |        |        |        |
+|7.0|                |7.0.0+          |7.0.0+          |7.0.0+ |7.0.0+ |        |        |        |        |
+|5.6|                |                |                |       |       |5.6.4+  |        |        |        |
+|5.5|                |                |                |       |       |5.5.16+ |5.5.16+ |        |        |
+|5.4|                |                |                |       |       |5.4.32  |5.4.32  |5.4.32  |        |
+|5.3|                |                |                |       |       |        |        |5.3.0   |5.3.0   |
+|5.2|                |                |                |       |       |        |        |        |5.2.4<br />5.2.13|
+
+1. 7.2.1 のバージョン、Windows でバージョン 7.2.0 中に後でサポートされ、後で、Linux と macOS でサポートされます。
 
 ## <a name="supported-operating-systems"></a>サポートされるオペレーティング システム
  Microsoft PHP ドライバーの一覧表示されているバージョンでは、次の Windows オペレーティング システムのバージョンがサポートされています。
 
-|SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595; オペレーティング システム|5.3 および 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
-|---|---|---|---|---|---|---|---|
-|Windows Server 2016                 |Y  |Y  |   |   |   |   |   |
-|Windows Server 2012 R2              |Y  |Y  |Y  |Y  |Y  |   |   |
-|Windows Server 2012                 |Y  |Y  |Y  |Y  |Y  |   |   |
-|Windows Server 2008 R2 SP1          |   |   |Y  |Y  |Y  |Y  |   |
-|Windows Server 2008 R2              |   |   |   |   |   |   |Y  |
-|Windows Server 2008 SP2             |   |   |Y  |Y  |Y  |Y  |   |
-|Windows Server 2008                 |   |   |   |   |   |   |Y  |
-|Windows Server 2003 SP1             |   |   |   |   |   |   |Y  |
-|Windows 10                          |Y  |Y  |Y  |   |   |   |   |
-|Windows 8.1                         |Y  |Y  |Y  |Y  |Y  |   |   |
-|Windows 8                           |   |Y  |Y  |Y  |Y  |   |   |
-|Windows 7 SP1                       |   |   |Y  |Y  |Y  |Y  |   |
-|Windows Vista SP2                   |   |   |Y  |Y  |Y  |Y  |Y  |
-|Windows XP SP3                      |   |   |   |   |   |   |Y  |
+|SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595; オペレーティング システム|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Windows Server 2016                 |Y  |Y  |Y  |Y  |   |   |   |   |   |
+|Windows Server 2012 R2              |Y  |Y  |Y  |Y  |Y  |Y  |Y  |   |   |
+|Windows Server 2012                 |Y  |Y  |Y  |Y  |Y  |Y  |Y  |   |   |
+|Windows Server 2008 R2 SP1          |   |   |   |   |Y  |Y  |Y  |Y  |   |
+|Windows Server 2008 R2              |   |   |   |   |   |   |   |   |Y  |
+|Windows Server 2008 SP2             |   |   |   |   |Y  |Y  |Y  |Y  |   |
+|Windows Server 2008                 |   |   |   |   |   |   |   |   |Y  |
+|Windows Server 2003 SP1             |   |   |   |   |   |   |   |   |Y  |
+|Windows 10                          |Y  |Y  |Y  |Y  |Y  |   |   |   |   |
+|Windows 8.1                         |Y  |Y  |Y  |Y  |Y  |Y  |Y  |   |   |
+|Windows 8                           |   |   |   |Y  |Y  |Y  |Y  |   |   |
+|Windows 7 SP1                       |   |   |   |   |Y  |Y  |Y  |Y  |   |
+|Windows Vista SP2                   |   |   |   |   |Y  |Y  |Y  |Y  |Y  |
+|Windows XP SP3                      |   |   |   |   |   |   |   |   |Y  |
 
  Microsoft PHP ドライバーの一覧表示されているバージョンでは、次の Linux と Mac のオペレーティング システムのバージョン (64 ビットのみ) がサポートされています。
 
-|SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595; オペレーティング システム|5.3<br />&nbsp;|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
-|--|---|---|---|---|---|---|---|---|
-|Ubuntu 18.04 (64 ビット)               |Y  |   |   |   |   |   |   |   |
-|Ubuntu 17.10 (64 ビット)               |Y  |Y  |   |   |   |   |   |   |
-|Ubuntu 16.04 (64 ビット)               |Y  |Y  |Y  |Y  |   |   |   |   |
-|Ubuntu 15.10 (64 ビット)               |   |   |Y  |   |   |   |   |   |
-|Ubuntu 15.04 (64 ビット)               |   |   |   |Y  |   |   |   |   |
-|Debian 9 (64 ビット)                   |Y  |Y  |   |   |   |   |   |   |
-|Debian 8 (64 ビット)                   |Y  |Y  |Y  |   |   |   |   |   |
-|Red Hat Enterprise Linux 7 (64 ビット) |Y  |Y  |Y  |Y  |   |   |   |   |
-|Suse Enterprise Linux (64 ビット) の 12   |Y  |Y  |   |   |   |   |   |   |
-|macOS High Sierra (64 ビット)          |Y  |   |   |   |   |   |   |   |
-|macOS Sierra (64 ビット)               |Y  |Y  |Y  |   |   |   |   |   |
-|macOS El Capitan (64 ビット)           |Y  |Y  |Y  |   |   |   |   |   |
+|SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595; オペレーティング システム|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
+|--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Ubuntu 18.10 (64 ビット)               |Y  |   |   |   |   |   |   |   |   |
+|Ubuntu 18.04 (64 ビット)               |Y  |Y  |   |   |   |   |   |   |   |
+|Ubuntu 17.10 (64 ビット)               |   |Y  |Y  |   |   |   |   |   |   |
+|Ubuntu 16.04 (64 ビット)               |Y  |Y  |Y  |Y  |Y  |   |   |   |   |
+|Ubuntu 15.10 (64 ビット)               |   |   |   |Y  |   |   |   |   |   |
+|Ubuntu 15.04 (64 ビット)               |   |   |   |   |Y  |   |   |   |   |
+|Debian 9 (64 ビット)                   |Y  |Y  |Y  |   |   |   |   |   |   |
+|Debian 8 (64 ビット)                   |Y  |Y  |Y  |Y  |   |   |   |   |   |
+|Red Hat Enterprise Linux 7 (64 ビット) |Y  |Y  |Y  |Y  |Y  |   |   |   |   |
+|Suse Enterprise Linux 15 (64 ビット)   |Y  |   |   |   |   |   |   |   |   |
+|Suse Enterprise Linux (64 ビット) の 12   |Y  |Y  |Y  |   |   |   |   |   |   |
+|macOS Mojave (64 ビット)               |Y  |   |   |   |   |   |   |   |   |
+|macOS High Sierra (64 ビット)          |Y  |Y  |   |   |   |   |   |   |   |
+|macOS Sierra (64 ビット)               |Y  |Y  |Y  |Y  |   |   |   |   |   |
+|macOS El Capitan (64 ビット)           |   |Y  |Y  |Y  |   |   |   |   |   |
 
 ## <a name="see-also"></a>参照  
 [リリース ノート](../../connect/php/release-notes-for-the-php-sql-driver.md)

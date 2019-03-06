@@ -11,12 +11,12 @@ ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6ac8e52e46108e88693a96d587e3af2b79e4ff4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbc6d4e971a810d581b8ace2de8fd7882171c460
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833110"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676060"
 ---
 # <a name="retrieving-data"></a>データの取得
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,8 +74,11 @@ ms.locfileid: "47833110"
 |---------|---------------|  
 |[文字列としてデータを取得する](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|サーバーからデータをストリーミングする方法の概要を説明し、特定のユース ケースへのリンクを示します。|  
 |[方向パラメーターを使用する](../../connect/php/using-directional-parameters.md)|ストアド プロシージャを呼び出す際に、方向パラメーターを使用する方法について説明します。|  
-|[カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|SQLSRV ドライバーを使用する場合に、任意の順序でアクセスできる行を含む結果セットを作成する方法を説明します。|  
-|[方法: SQLSRV ドライバーを利用し、日付/時刻型を取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|日付と時刻型を文字列として取得する方法について説明します。|  
+|[カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|任意の順序でアクセスできる行を含む結果セットを作成する方法を示します。|  
+|[方法: SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する方法について説明します。|  
+|[方法: PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP DateTime オブジェクトとして取得する](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|PDO_SQLSRV ドライバーを使用してオブジェクトとしての日付と時刻型を取得する方法について説明します。|  
+|[SQLSRV ドライバーを使用した 10 進数値の文字列を書式設定](../../connect/php/formatting-decimals-sqlsrv-driver.md)|SQLSRV ドライバーを使用して、10 進数または money の値の書式設定する方法を示します。|  
+|[PDO_SQLSRV ドライバーを使用した 10 進数値の文字列を書式設定](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|PDO_SQLSRV ドライバーを使用して、10 進数または money の値の書式設定する方法を示します。|  
   
 ## <a name="related-sections"></a>関連項目  
 [方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)  

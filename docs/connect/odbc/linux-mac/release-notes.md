@@ -12,7 +12,7 @@ ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 12f45cd1014a312eec7854685d8c7fe2e64b9714
 ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/22/2019
 ms.locfileid: "56662756"
@@ -20,7 +20,7 @@ ms.locfileid: "56662756"
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS 上の Microsoft ODBC Driver for SQL Server のリリース ノートです
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux および macOS での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新機能
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux および macOS 上の [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.3 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新機能
 
 **新しいディストリビューションがサポートされている**: 15 の SuSE、Ubuntu 18.10、macOS 10.14
 

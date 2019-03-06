@@ -21,7 +21,7 @@ ms.locfileid: "56464768"
 # <a name="system-requirements-installation-and-driver-files"></a>インストール、ドライバー ファイルの基本的なシステム要件
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、SQL Server 2014、SQL Server 2012 R2、 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]、 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]への接続をサポートします。  
+ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、SQL Server 2014、SQL Server 2012、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] への接続をサポートしています。  
   
 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の 1 つまたは複数のバージョンもインストールされているコンピューターにインストールできます。  
   

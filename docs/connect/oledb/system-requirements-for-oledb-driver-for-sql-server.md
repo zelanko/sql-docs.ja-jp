@@ -2,7 +2,7 @@
 title: OLE DB Driver for SQL Server のシステム要件 | Microsoft Docs
 description: OLE DB Driver for SQL Server の要件
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a2ff38f4322209c7ed6eb46a5ba97f360ca3650b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6462901ba1e3e73ca8c0a4ca448d8bc689bd8868
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821030"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744432"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server のシステム要件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,13 +37,17 @@ ms.locfileid: "47821030"
 > [!NOTE]  
 >  このソフトウェアは、必ず管理者特権でログオンしてからインストールしてください。  
 
-## <a name="operating-system-requirements"></a>必要なオペレーティング システム  
- OLE DB Driver for SQL Server をサポートしているオペレーティング システムの一覧では、次を参照してください。 [OLE DB driver for SQL Server のサポート ポリシー](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)します。  
+## <a name="operating-system-requirements"></a>オペレーティング システムの要件  
+ OLE DB Driver for SQL Server をサポートしているオペレーティング システムの一覧では、次を参照してください。[の OLE DB Driver for SQL Server のサポート ポリシー](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)します。  
 
-## <a name="sql-server-requirements"></a>SQL Server の要件  
+ ## <a name="azure-active-directory-authentication-requirements"></a>Azure Active Directory 認証の要件  
+ OLE DB ドライバーを使用した Azure Active Directory の認証方法を使用する場合ことを確認します。、 [for SQL Server の Active Directory 認証ライブラリ](https://go.microsoft.com/fwlink/?LinkID=513072)がインストールされています。 ADAL は、他の認証方法または OLE DB の操作の必要はありません。
+詳細については、「[Azure Active Directory の使用](features/using-azure-active-directory.md)」をご覧ください。
+
+## <a name="sql-server-requirements"></a>SQL Server 要件  
  SQL Server のデータにアクセスする OLE DB ドライバーを使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データベースのインスタンスがある必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールします。  
 
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は、MDAC、Windows Data Access Components、および OLE DB Driver for SQL Server のすべてのバージョンからの接続をサポートします。 古いクライアント バージョンで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する場合、クライアントで認識されないサーバーのデータ型は、クライアント バージョンと互換する型にマップされます。 詳細については、このトピックの「クライアント バージョンのデータ型の互換性」をご覧ください。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は、MDAC、Windows Data Access Components、および OLE DB Driver for SQL Server のすべてのバージョンからの接続をサポートします。 古いクライアント バージョンで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する場合、クライアントで認識されないサーバーのデータ型は、クライアント バージョンと互換する型にマップされます。 詳細については、「[クライアント バージョンのデータ型の互換性](#data-type-compatibility-for-client-versions)」をご覧ください。  
 
 ## <a name="cross-language-requirements"></a>言語間の要件  
  OLE DB Driver for SQL Server の英語版は、サポートされるオペレーティング システムのすべてのローカライズされたバージョンでサポートされます。 OLE DB Driver for SQL Server のローカライズ版は、ローカライズされた OLE DB Driver for SQL Server のバージョンと同じ言語であるローカライズされたオペレーティング システムでサポートされます。 また、対応する言語設定がインストールされていれば、サポートされているオペレーティング システムの英語版でも利用できます。  
@@ -68,12 +72,12 @@ ms.locfileid: "47821030"
 
 |データ型|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|OLE DB Driver for SQL Server|Windows Data Access Components、MDAC、<br /><br /> OLE DB Driver for SQL Server OLE DB アプリケーションでは、DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8Kb)|udt|udt|udt|Varbinary|  
+|CLR UDT (\<8 kb)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|varchar|Text|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|xml|Ntext|  
-|CLR UDT (8 KB を超える)|varbinary|udt|udt|image|  
+|CLR UDT (> 8 Kb)|varbinary|udt|udt|image|  
 |日付|varchar|日付|日付|Varchar|  
 |datetime2|varchar|datetime2|datetime2|Varchar|  
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
