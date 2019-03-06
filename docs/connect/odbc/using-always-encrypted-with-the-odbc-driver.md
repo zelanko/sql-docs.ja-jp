@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
-ms.translationtype: HT
+ms.openlocfilehash: dd6037cbc40c9cf422c38827d5c96115db33db73
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662856"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956063"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -461,7 +461,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`Attribute`|[入力]取得する属性:`SQL_COPT_SS_CEKEYSTOREPROVIDER`定数。|
 |`ValuePtr`|[出力]次のプロバイダー名を返すメモリへのポインター。|
 |`BufferLength`|[入力]ValuePtr バッファーの長さ。|
-|`StringLengthPtr`|[出力]\(Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\*ValuePtr します。 ValuePtr が null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数が null 終了の長さマイナス BufferLength より大きい場合、文字でデータ\*ValuePtr がの長さマイナス BufferLength に切り捨てられます、null 終端文字は、ドライバーが null で終わるとします。|
+|`StringLengthPtr`|[出力] (Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\*ValuePtr します。 ValuePtr が null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数が null 終了の長さマイナス BufferLength より大きい場合、文字でデータ\*ValuePtr がの長さマイナス BufferLength に切り捨てられます、null 終端文字は、ドライバーが null で終わるとします。|
 
 全体の一覧の取得を許可するのには、すべての Get 操作は、現在のプロバイダー名を返し、次の内部のカウンターをインクリメントします。 このカウンターが空の文字列、リストの末尾に達すると ("") が返されると、カウンターがリセットされます。一連の Get 操作は、リストの先頭からもう一度に進みます。
 
@@ -538,7 +538,7 @@ ODBC ドライバーが使用できるように、中に[非同期操作](../../
 ODBC Driver 17 for SQL Server では、暗号化前に文字とバイナリ列は、SQLGetData を使用してパーツを取得できません。 列全体のデータを格納するための十分な長さのバッファーを使って、SQLGetData を 1 つだけの呼び出しを行んだことができます。
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>SQLPutData を使用して、パーツでデータを送信します。
-SQLPutData と部分では、データの挿入や比較を送信できません。 全体のデータを格納するバッファーと、SQLPutData に 1 つだけの呼び出しを実現できますが。 暗号化された列に長いデータを挿入するためには、入力データ ファイルを使用した次のセクションで説明されている、一括コピー API を使用します。
+SQL Server 用 ODBC ドライバー 17.3、前に、SQLPutData を使用して、パーツにデータを挿入または比較を送信できません。 全体のデータを格納するバッファーと、SQLPutData に 1 つだけの呼び出しを実現できますが。 暗号化された列に長いデータを挿入するためには、入力データ ファイルを使用した次のセクションで説明されている、一括コピー API を使用します。
 
 ### <a name="encrypted-money-and-smallmoney"></a>暗号化された money と smallmoney
 暗号化された**money**または**smallmoney**列は、パラメーターの対象となることはできません、ODBC データ型のオペランド型の競合エラーを発生させる、それらの型にマップされますの関連であるためです。
