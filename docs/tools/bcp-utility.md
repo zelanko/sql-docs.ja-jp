@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 6d96aabb002cafa5ea8d6b3043b39d89a0a86a15
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
-ms.translationtype: HT
+ms.openlocfilehash: 5b1c1112e886c7874471c82b442e7583a8232dc8
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801546"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955993"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "56801546"
 SQLCMD の新しいバージョンでは、SQL Database、SQL Data Warehouse、および Always Encrypted 機能の多要素認証 (MFA) のサポートを含む、Azure AD の認証をサポートします。
 新しい BCP では、SQL Database と SQL Data Warehouse 用の Multi-factor Authentication (MFA) のサポートなど、Azure AD の認証をサポートします。
 
-**システム要件**Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 このコンポーネントには、 [Windows インストーラー4.5](https://www.microsoft.com/download/details.aspx?id=8483)と[SQL Server 用 Microsoft ODBC Driver 17.2](https://www.microsoft.com/download/details.aspx?id=56567)します。
+**システム要件**Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 このコンポーネントには、 [Windows インストーラー4.5](https://www.microsoft.com/download/details.aspx?id=8483)と[SQL Server 用 Microsoft ODBC Driver 17.3](https://www.microsoft.com/download/details.aspx?id=56567)します。
  
 BCP のバージョンの実行をチェックする`bcp /v`コマンドしその 15.0.1000.34 を確認または以降が使用されます。
 
