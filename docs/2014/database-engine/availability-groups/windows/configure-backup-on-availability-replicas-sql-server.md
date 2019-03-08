@@ -18,18 +18,18 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 29868763c34944b0a33953e7a56c3d365afcd4d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 223bc3aa5e404f2723996073628e64906a60aa64
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363924"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579592"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>可用性レプリカでのバックアップの構成 (SQLServer)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループのセカンダリ レプリカでバックアップを構成する方法について説明します。  
   
 > [!NOTE]  
->  セカンダリ レプリカでバックアップの概要については、次を参照してください。[アクティブなセカンダリ。セカンダリ レプリカ (AlwaysOn 可用性グループ) でバックアップ](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)します。  
+>  セカンダリ レプリカのバックアップの概要については、「[アクティブなセカンダリ:セカンダリ レプリカ (AlwaysOn 可用性グループ) でバックアップ](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)します。  
   
  
   
@@ -78,7 +78,7 @@ ms.locfileid: "53363924"
      バックアップを実行するレプリカを選択するときにバックアップ ジョブが可用性レプリカのロールを無視するように指定します。 バックアップ ジョブは、動作状態および接続状態と組み合わせて、各可用性レプリカのバックアップ優先順位などの他の要素を評価する場合があります。  
   
     > [!IMPORTANT]  
-    >  自動バックアップ設定の適用はありません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ロジックが存在する場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、次を参照してください。[フォロー アップ。セカンダリ レプリカでバックアップを構成した後](#FollowUp)このトピックで後述します。  
+    >  自動バックアップ設定の適用はありません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ロジックが存在する場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、このトピックで後述する「[補足情報:セカンダリ レプリカでバックアップを構成した後](#FollowUp)」を参照してください。  
   
 6.  **[レプリカのバックアップの優先順位]** グリッドを使用して、可用性レプリカのバックアップの優先順位を変更します。 このグリッドには、可用性グループのレプリカをホストする各サーバー インスタンスの現在のバックアップの優先順位が表示されます。 グリッドの列は次のとおりです。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "53363924"
      バックアップを実行するレプリカを選択するときにバックアップ ジョブが可用性レプリカのロールを無視するように指定します。 バックアップ ジョブは、動作状態および接続状態と組み合わせて、各可用性レプリカのバックアップ優先順位などの他の要素を評価する場合があります。  
   
     > [!IMPORTANT]  
-    >  `AutomatedBackupPreference` は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ロジックが存在する場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、次を参照してください。[フォロー アップ。セカンダリ レプリカでバックアップを構成した後](#FollowUp)このトピックで後述します。  
+    >  `AutomatedBackupPreference` は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ロジックが存在する場合)。 自動バックアップ設定はアドホック バックアップには影響しません。 詳細については、このトピックで後述する「[補足情報:セカンダリ レプリカでバックアップを構成した後](#FollowUp)」を参照してください。  
   
      たとえば、次のコマンドは、可用性グループ `MyAg` の `AutomatedBackupPreference` プロパティを `SecondaryOnly` に設定します。 この可用性グループ内のデータベースの自動バックアップはプライマリ レプリカでは行われませんが、バックアップの優先度設定が最も高いセカンダリ レプリカにリダイレクトされます。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "53363924"
   
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> フォローしてください：セカンダリ レプリカでバックアップを構成した後  
+##  <a name="FollowUp"></a> 補足情報:セカンダリ レプリカでバックアップを構成した後  
  特定の可用性グループの自動バックアップ設定を考慮に入れるには、バックアップ優先度が 0 を超える (>0) 可用性レプリカをホストする各サーバー インスタンスで、可用性グループのデータベースのバックアップ ジョブを実行するスクリプトを作成する必要があります。 現在のレプリカが優先バックアップ レプリカかどうかを確認すには、バックアップ スクリプトで [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 関数を使用します。 現在のサーバー インスタンスでホストされている可用性レプリカがバックアップ用の優先レプリカである場合、この関数は 1 を返します。 そうでない場合、関数は 0 を返します。 この関数に対してクエリを実行する各可用性レプリカを対象にしてシンプルなスクリプトを実行することによって、特定のバックアップ ジョブの実行に適したレプリカを特定できます。 たとえば、バックアップ ジョブ スクリプトの典型的なスニペットは次のようになります。  
   
 ```  
@@ -201,6 +201,6 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [ アクティブなセカンダリ:セカンダリ レプリカ (AlwaysOn 可用性グループ) でのバックアップ](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [アクティブなセカンダリ:セカンダリ レプリカ (AlwaysOn 可用性グループ) でのバックアップ](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

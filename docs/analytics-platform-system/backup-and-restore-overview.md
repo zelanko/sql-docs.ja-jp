@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4bb0ee8ad06d217cd6441527a1505311dac8e926
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044399"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579182"
 ---
 # <a name="backup-and-restore"></a>バックアップと復元
 
@@ -132,7 +132,7 @@ PDW では、SQL Server のバックアップ テクノロジを使用して、�
   
 |バックアップと復元タスク|説明|  
 |---------------------------|---------------|  
-|バックアップ サーバーとして、サーバーを準備します。|[取得し、バックアップ サーバーの構成 ](acquire-and-configure-backup-server.md)|  
+|バックアップ サーバーとして、サーバーを準備します。|[バックアップ サーバーの取得と構成](acquire-and-configure-backup-server.md)|  
 |データベースをバックアップします。|[データベースのバックアップ](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |データベースを復元します。|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 

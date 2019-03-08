@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 891f86328042091bb1e7a67f725f13ee160dccf3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 79b55906477d091f4e61883a2f24d991f655054b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665831"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579462"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上の always On 可用性グループのフェールオーバー
 
@@ -38,7 +38,7 @@ ms.locfileid: "51665831"
 
 手動で 2 つの手順でフェールオーバーします。
 
-   まず、[ AG リソースを移動して手動フェールオーバーを](#manualMove)新しいノードにリソースを所有するクラスター ノードから。
+   まず、 [AG リソースを移動して手動フェールオーバーを](#manualMove)新しいノードにリソースを所有するクラスター ノードから。
 
    クラスターでは、可用性グループ リソースをフェールオーバーし、場所の制約を追加します。 この制約は、新しいノードで実行するリソースを構成します。 将来的で正常にフェールオーバーするには、この制約を削除します。
 
@@ -118,13 +118,13 @@ ms.locfileid: "51665831"
 
 1. 以上、可用性グループ リソースをクラスターによって管理されませんを確認します。 
 
-      - ターゲット クラスターのノードで、リソースを非管理対象モードに設定します。 このコマンドは、停止リソースの監視および管理するリソース エージェントを通知します。 以下に例を示します。 
+      - ターゲット クラスターのノードで、リソースを非管理対象モードに設定します。 このコマンドは、停止リソースの監視および管理するリソース エージェントを通知します。 例 : 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - リソース モードを非管理対象モードに設定しようとすると、失敗した場合、リソースを削除します。 以下に例を示します。
+      - リソース モードを非管理対象モードに設定しようとすると、失敗した場合、リソースを削除します。 例 :
 
       ```bash
       sudo pcs resource delete <resourceName>
@@ -167,7 +167,7 @@ ms.locfileid: "51665831"
 
 自動フェールオーバーでは、少なくとも 1 つの同期レプリカが必要です。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server 可用性グループのクラスター リソースの Red Hat Enterprise Linux クラスターを構成します。](sql-server-linux-availability-group-cluster-rhel.md)
 

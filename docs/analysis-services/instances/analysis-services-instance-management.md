@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 10623ea2c0dcb413bad08e1d68dfd9d5c9a9984a
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 2a93a7ddb0af87ae15f8d793f21a008d9a4bc25c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852887"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579072"
 ---
 # <a name="sql-server-analysis-services-server-management"></a>SQL Server Analysis Services サーバーの管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ Azure Analysis Services では、次を参照してください。 [Azure Analys
   
   
 ## <a name="see-also"></a>関連項目  
- [テーブルと多次元ソリューションのソリューションの比較 ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
+ [テーブルと多次元ソリューションのソリューションの比較](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

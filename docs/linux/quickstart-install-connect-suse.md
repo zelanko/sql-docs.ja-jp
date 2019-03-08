@@ -11,14 +11,14 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: d73a1a3b75bbdce6604677464b6947c789bedbac
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 66d4015f31c08d0d67069147effac15ff5edd8ea
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160560"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579472"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>クイック スタート:SQL Server をインストールし、SUSE Linux Enterprise Server にデータベースを作成
+# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>クイック スタート: SQL Server をインストールし、SUSE Linux Enterprise Server にデータベースを作成
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77889113dd7987827426bae2357e89590754a545
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 0fc639564c1ac37af1cf29cc119cbf48cbf3baee
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072346"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579540"
 ---
 # <a name="tabular-model-solution-deployment"></a>表形式モデル ソリューションの配置 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -86,6 +86,6 @@ ms.locfileid: "53072346"
 |[Analysis Services データベースの同期](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|データベースの同期ウィザードを使用して、2 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テーブル データベースと多次元データベース間でメタデータとデータを同期する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [表形式モデル データベースへの接続します。 ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
+ [テーブル モデル データベースへの接続](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

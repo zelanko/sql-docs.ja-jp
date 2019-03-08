@@ -12,12 +12,12 @@ ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9f8c468a3de4ce2d0e7e602e9244c23b6c06b8d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 51b62a64ae008e0994054d40344d1e0d68bb296b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784884"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579172"
 ---
 # <a name="mssqleng014114"></a>MSSQL_ENG014114
     
@@ -61,7 +61,7 @@ ms.locfileid: "52784884"
   
      [sp_addserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql) ストアド プロシージャを実行したら、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再起動し、@@SERVERNAME への変更を有効にする必要があります。  
   
-     @@SERVERNAME の値がクラスター化されたインスタンスに対して適切でない場合は、クラスター アドミニストレーターを使用して名前を変更する必要があります。 詳細については、次を参照してください。 [ AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)します。  
+     @@SERVERNAME の値がクラスター化されたインスタンスに対して適切でない場合は、クラスター アドミニストレーターを使用して名前を変更する必要があります。 詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  

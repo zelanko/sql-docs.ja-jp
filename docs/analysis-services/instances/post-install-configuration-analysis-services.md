@@ -1,5 +1,5 @@
 ---
-title: インストール後の構成 (Analysis Services) |Microsoft ドキュメント
+title: インストール後の構成 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 00c6986fdb3cba910df98165d64afdb154ded68d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aadcdb901c39af148b22640413b921aae288f016
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016609"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579482"
 ---
 # <a name="post-install-configuration-analysis-services"></a>インストール後の構成 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Analysis Services のインストール後、サーバーを一般的な用途で使用できるように動作させるためには、追加の構成が必要です。 このセクションでは、インストールを完了するための追加の作業について説明します。 接続要件によっては、認証も構成する必要がある場合があります (「 [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)」を参照)。  
   
- 後で、データベースの配置の準備ができたら、追加の作業が必要になります。 つまり、データベースのロール メンバーシップをデータへのユーザー アクセスを許可するように構成し、データベースのバックアップおよび復旧の方法を設計すると共に、データを定期的に更新するためにスケジュールされた処理ワークロードが必要であるかどうかを判断することが求められます。 データベースの配置と管理の詳細については、これらのリンクで参照できます:[多次元モデル データベース](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)と[表形式モデル データベース](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)です。  
+ 後で、データベースの配置の準備ができたら、追加の作業が必要になります。 つまり、データベースのロール メンバーシップをデータへのユーザー アクセスを許可するように構成し、データベースのバックアップおよび復旧の方法を設計すると共に、データを定期的に更新するためにスケジュールされた処理ワークロードが必要であるかどうかを判断することが求められます。 データベースの配置と管理の詳細については、次のリンクを参照してください。[多次元モデル データベース](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)と[表形式モデル データベース](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)します。  
   
 ## <a name="instance-configuration"></a>インスタンスの構成  
  Analysis Services はレプリケート可能なサービスであり、サービスの複数のインスタンスを 1 台のサーバーにインストールできます。 追加の各インスタンスは、SQL Server セットアップを使用して名前付きインスタンスとして個別にインストールされ、用途に合わせて構成されます。 たとえば、開発用サーバーでは、フライト レコーダーを実行したり、実稼働ワークロードをサポートするサーバーでは変更するようなデータ ストレージ用の既定値を使用したりします。 また、他のサービスによって共有されるハードウェアに Analysis Services インスタンスをインストールする場合は、システム構成の調整が必要です。 同じハードウェア上で複数のデータ集中型のアプリケーションをホストする場合、すべてのアプリケーションを通じて使用可能なリソースを最適化するために、メモリしきい値を減少させるサーバー プロパティの構成が必要になることがあります。  

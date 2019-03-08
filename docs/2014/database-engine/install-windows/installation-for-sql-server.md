@@ -16,15 +16,15 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48bfd8ddc0a7e68bc2747543f5e079f24041c20a
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: e5a7e72b429789477a9ae1245be30b18965560ee
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018167"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578540"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 のインストール
- ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ SQL Server 2014 Express をダウンロードします。 ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+ ## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[SQL Server 2014 Express をダウンロードします。](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **よろしくお願いする[Scott Hanselman](http://www.hanselman.com/)すべてのインストーラー パッケージ リンクを 1 か所に収集するためです。**
   
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの 1 つの機能ツリーから、次のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをインストールできます。  

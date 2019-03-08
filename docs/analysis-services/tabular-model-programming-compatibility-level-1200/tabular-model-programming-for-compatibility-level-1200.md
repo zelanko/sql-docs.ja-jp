@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eba8822f7fe21e089d9c02b8f6df6cf5ec0e5294
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: f7493c09964db2e0a8cbd17c6a2278dd554a2dcc
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072109"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579452"
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>テーブル モデルのプログラミング互換性レベル 1200 以降
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53072109"
 ## <a name="see-also"></a>参照  
  [Analysis Services Developer Documentation (Analysis Services の開発者向けドキュメント)](../../analysis-services/analysis-services-developer-documentation.md)   
  [表形式のモデルのプログラミング互換性レベル 1050 から 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [テクニカル リファレンス](../../analysis-services/powershell/technical-reference-ssas.md) [Analysis Services のアップグレード](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [テクニカル リファレンス](../../analysis-services/powershell/technical-reference-ssas.md)[Analysis Services のアップグレード](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [表形式モデルとデータベースの互換性レベル](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   

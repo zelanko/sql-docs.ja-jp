@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2bd9e43232b77bc77611b0c4cd5285b69c9a6261
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 0f461a00c1b9ecca1569b2b4f6257966c075491c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046920"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579692"
 ---
-# <a name="quickstart-verify-r-exists-in-sql-server"></a>クイック スタート:SQL Server で R が存在することを確認します。 
+# <a name="quickstart-verify-r-exists-in-sql-server"></a>クイック スタート: SQL Server に R が存在することを確認する 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server には、常駐の SQL Server データでのデータ サイエンス分析のための R 言語サポートが含まれています。 R スクリプトで構成できますのオープン ソース R 関数、サード パーティ製の R ライブラリ、または Microsoft R の組み込みライブラリなど[RevoScaleR](../r/revoscaler-overview.md)規模で予測分析用です。
@@ -98,9 +98,9 @@ Microsoft では、さまざまな SQL Server インスタンスで Machine Lear
 
     ![インストールされている r パッケージ](./media/rsql-installed-packages.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 インスタンスが R を使用する準備が確認した後、これで、詳しく見て基本的な R 対話します。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:SQL Server で R スクリプトの"hello world" ](quickstart-r-run-using-tsql.md)
+> [クイック スタート:SQL Server で R スクリプトの"hello world"](quickstart-r-run-using-tsql.md)

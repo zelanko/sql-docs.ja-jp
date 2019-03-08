@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0932c9ebcd2d516a5bfb0e6ea5608501e4f514a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 8822a85e39efde36a04b92e8a926adca6839cf58
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146098"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578102"
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services の開発者向けドキュメント
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -72,5 +72,5 @@ Analysis Services には、コードのソリューションをカスタマイ�
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md)ドキュメント管理機能に加えて、汎用的な使用するコマンドレット**Invoke ASCmd**を任意のスクリプトまたはクエリの入力として受け取るコマンドレット。
 
 ## <a name="see-also"></a>参照
-[テクニカル リファレンス](../analysis-services/powershell/technical-reference-ssas.md) 
+[テクニカル リファレンス](../analysis-services/powershell/technical-reference-ssas.md)
 [クエリと式言語のリファレンス&#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

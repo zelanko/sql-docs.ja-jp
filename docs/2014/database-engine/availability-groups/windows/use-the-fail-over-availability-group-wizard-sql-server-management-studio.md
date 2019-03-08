@@ -20,12 +20,12 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38a5c58f7376fa44438dff5d6ef9e94f0c2809c0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519298"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579652"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>可用性グループのフェールオーバー ウィザードの使用 (SQL Server Management Studio)
   このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 SYNCHRONIZED 状態のセカンダリ レプリカにフェールオーバーする場合は、ウィザードで計画的な手動フェールオーバー (データ損失なし) を実行します。 UNSYNCHRONIZED 状態または NOT SYNCHRONIZING 状態のセカンダリ レプリカにフェールオーバーする場合は、ウィザードで "*強制フェールオーバー*" とも呼ばれる強制手動フェールオーバー (データ損失の可能性あり) を実行します。 どちらの形式の手動フェールオーバーでも、接続先のセカンダリ レプリカはプライマリ ロールに移行します。 計画的な手動フェールオーバーでは、同時に、元のプライマリ レプリカはセカンダリ ロールに移行します。 強制フェールオーバー後は、元のプライマリ レプリカはオンラインになると、セカンダリ ロールに移行します。  
@@ -50,7 +50,7 @@ ms.locfileid: "52519298"
 ##  <a name="BeforeYouBegin"></a> はじめに  
  計画的な手動フェールオーバーを初めて実行する前に、「 [可用性グループの計画的な手動フェールオーバーの実行 &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。  
   
- 最初、強制フェールオーバーの前に、「開始する前に」を参照してくださいと"フォロー アップ。強制フェールオーバー後の必須タスク」のセクションは[可用性グループの強制手動フェールオーバーを実行&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)します。  
+ 強制手動フェールオーバーを初めて実行する前に、「[可用性グループの強制手動フェールオーバーの実行 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)」の「補足情報: 強制フェールオーバー後の必須タスク」セクションを参照してください。  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52519298"
   
      詳細については、「[[結果] ページ &#40;AlwaysOn 可用性グループ ウィザード&#41;](results-page-always-on-availability-group-wizards.md)」を参照してください。  
   
-11. 強制フェールオーバー後、次を参照してください。、"フォロー アップ。強制フェールオーバー"後セクションで、[可用性グループの強制手動フェールオーバーを実行&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)します。  
+11. 強制フェールオーバーの後は、「[可用性グループの強制手動フェールオーバーの実行 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)」の「補足情報: 強制フェールオーバー後」セクションを参照してください。  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>このウィザードに固有のページのヘルプ  
  ここでは、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]に固有のページについて説明します。  
@@ -201,7 +201,7 @@ ms.locfileid: "52519298"
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [ 可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)   
+ [可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)   
  [フェールオーバーとフェールオーバー モード&#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [可用性グループの計画的な手動フェールオーバーの実行 &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [可用性グループの強制手動フェールオーバーの実行 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   

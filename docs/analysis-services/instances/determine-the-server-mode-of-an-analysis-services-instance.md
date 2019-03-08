@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 434996f53cefc3c30cc649411db7699ed2bd3f7e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b292e20880dcb77c4f448f7e141355edff67417f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401025"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579002"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services インスタンスのサーバー モードの決定
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "52401025"
  [Power Pivot for SharePoint 2010 のインストール](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)   
  [テーブル モデル ソリューション](../../analysis-services/tabular-models/tabular-models-ssas.md)   
- [多次元モデル ソリューション ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [多次元モデル ソリューション](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [マイニング モデル (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

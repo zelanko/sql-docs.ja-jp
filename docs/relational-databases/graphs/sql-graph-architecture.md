@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044548"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579352"
 ---
 # <a name="sql-graph-architecture"></a>SQL グラフ アーキテクチャ  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 
 |タスク   |関連記事  |メモ
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` AS ノードまたは AS エッジ テーブルの作成をサポートするために拡張されています。 エッジ テーブルは可能性がありますか、任意のユーザー定義の属性がない可能性がありますに注意してください。  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` AS ノードまたは AS エッジ テーブルの作成をサポートするために拡張されています。 エッジ テーブルは可能性がありますか、任意のユーザー定義の属性がない可能性がありますに注意してください。  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|ノードとエッジ テーブルには、リレーショナル テーブルを使用して、同じ方法を変更できる、`ALTER TABLE`します。 ユーザーでは、追加したり、ユーザー定義の列、インデックスまたは制約を変更することができます。 ただし、内部グラフ列を変更するには、ような`$node_id`または`$edge_id`エラーになります。  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |ユーザーは、擬似列およびノードとエッジ テーブル内のユーザー定義の列にインデックスを作成できます。 非クラスター化列ストア インデックスを含むすべてのインデックスの種類がサポートされます。  |
 |エッジの制約を作成します。    |[エッジ制約&#40;TRANSACT-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |ユーザーが特定のセマンティクスを適用するエッジ テーブルでのエッジの制約を作成およびもデータの整合性を維持  |

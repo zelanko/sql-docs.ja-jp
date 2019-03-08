@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 75e71b4a17aa74ecb33f0a0d8c195b2e60b0e5a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3f2fd0817aeae714ca1e217b9dc2011df92c4b28
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506930"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579382"
 ---
 # <a name="data-mining-projects"></a>データ マイニング プロジェクト
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -213,7 +213,7 @@ ms.locfileid: "52506930"
 |各マイニング モデル ビューアーに関する情報へのリンクを提供します。|[データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |リフト チャート、利益チャート、または分類マトリックスを作成する方法、またはマイニング構造をテストする方法について説明します。|[テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |処理オプションと権限について説明します。|[データ マイニング オブジェクトの処理](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Analysis Services について詳しく説明します。|[多次元モデル データベース ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Analysis Services について詳しく説明します。|[多次元モデル データベース](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>参照  
  [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c9bcc5ba99736a6bb65bde4aff20e220d70303d4
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1ef8f66d220561407c0bcafedde8a402f871924a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242023"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578112"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>トレーニングし、Spark を使用した機械学習モデルを作成します。
 
@@ -88,7 +88,7 @@ data = data_all.select(select_cols)
 
 ## <a name="step-4---split-as-training-and-test-set"></a>手順 4 - トレーニングとテスト セットとして分割
 
-行の 75% を使用して、モデルと、モデルの評価を 25% の残りの部分をトレーニングします。 さらに、トレーニングを保持し、HDFS ストレージにデータ セットをテストします。 ステップがないと、必要に応じてを示すために表示される ORC 形式で読み込んで保存します。 たとえば、他の形式`Parquet `こともできます。
+行の 75% を使用して、モデルと、モデルの評価を 25% の残りの部分をトレーニングします。 さらに、トレーニングを保持し、HDFS ストレージにデータ セットをテストします。 ステップがないと、必要に応じてを示すために表示される ORC 形式で読み込んで保存します。 たとえば、他の形式`Parquet`こともできます。
 
 この手順を参照する必要があります AdultCensusIncomeTest と AdultCensusIncomeTrain を名前で作成された 2 つのディレクトリを投稿します。
 
@@ -210,6 +210,6 @@ assert str(model2) == str(model)
 print("loaded model from {}".format(model_fs))
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PySpark ノートブックを使用する方法の詳細については、次を参照してください。 [notebook を使用する方法](notebooks-guidance.md)します。

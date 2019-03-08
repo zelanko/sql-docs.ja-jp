@@ -14,12 +14,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c8bcf9fc52ef26837d32fa765472e0056469a2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc4392b2c78fc2d2709a37a27b17d930af0681dd
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511321"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578415"
 ---
 # <a name="object-naming-rules-analysis-services"></a>オブジェクトの名前付け規則 (Analysis Services)
   このトピックでは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のコードまたはスクリプトにおけるオブジェクトの名前付け規則、および、オブジェクト名で使用できない予約語と文字について説明します。  
@@ -71,10 +71,10 @@ ms.locfileid: "52511321"
 |オブジェクト|無効な文字|  
 |------------|------------------------|  
 |`Server`|サーバー オブジェクトに名前を付けるときは、Windows サーバーの名前付け規則に従います。 参照してください[名前付け規則 (Windows)](/windows/desktop/DNS/naming-conventions)詳細についてはします。|  
-|`DataSource`|: / \ * &#124; ? "() {} <>|  
-|`Level` または `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
-|`Dimension` または `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} \<、>|  
-|他のすべてのオブジェクト|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
+|`DataSource`|`: / \ * | ? " () [] {} <>`|  
+|`Level` または `Attribute`|```. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >```|  
+|`Dimension` または `Hierarchy`|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>```|  
+|他のすべてのオブジェクト|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >```|  
   
  **例外処理:予約済みの文字を使用する場合**  
   

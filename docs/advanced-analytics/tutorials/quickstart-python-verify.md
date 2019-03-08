@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b0ef5d33757d9f8c4e3aed53d3867bfd5b1297b2
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 25bf5a7e7d18810c782d1ce2f4986fc433421395
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513762"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57577932"
 ---
-# <a name="quickstart-verify-python-exists-in-sql-server"></a>クイック スタート:SQL Server に Python が存在することを確認する 
+# <a name="quickstart-verify-python-exists-in-sql-server"></a>クイック スタート: SQL Server に Python が存在することを確認する 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server には、常駐の SQL Server データでのデータ科学分析用の Python 言語サポートが含まれています。 スクリプトの実行は、次の方法のいずれかを使用して、ストアド プロシージャです。
@@ -146,4 +146,4 @@ Microsoft は、多くの SQL Server インスタンスで Machine Learning サ�
 これで、インスタンスは、Python を使用する準備が確認した後、基本的な Python の対話について詳しく見てを実行します。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:SQL Server での Python スクリプトの"hello world" ](quickstart-python-run-using-t-sql.md)
+> [クイック スタート:SQL Server での Python スクリプトの"hello world"](quickstart-python-run-using-t-sql.md)

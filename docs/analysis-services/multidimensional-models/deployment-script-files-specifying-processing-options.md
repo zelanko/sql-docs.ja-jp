@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 37ca9200dc142f1a1bb2f673b3b772644385d8ba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 54be969446b9c1b234860ce2a68c1208634246ce
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537360"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572775"
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>配置スクリプト ファイル - 処理オプションの指定
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,12 +26,13 @@ ms.locfileid: "52537360"
   
 -   **処理方法** この設定では、配置するオブジェクトを配置後に処理するかどうかと、実行する処理の種類を制御します。 処理オプションには次の 3 つがあります。  
   
-    -   既定の処理 (既定)  
+    -   既定の処理 (既定値) は、データベース オブジェクトの処理状態を検出し、未処理または部分的に処理されたオブジェクトを完全に処理された状態に配信するために必要な処理を実行します。
   
-    -   完全処理  
+    -   完全処理では、オブジェクトとそれに含まれるすべてのオブジェクトを処理します。 既に処理されているオブジェクトに対して完全処理を実行すると、Analysis Services によってそのオブジェクトに含まれているすべてのデータが削除されてから、オブジェクトの処理が開始されます。 
   
-    -   なし  
-  
+    -   [なし] は、処理は実行されませんを意味します。
+
+
 -   **書き戻しテーブル オプション** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトで書き戻しが有効になっている場合、この設定では書き戻しの処理方法を定義します。 書き戻しテーブル オプションには次の 3 つがあります。  
   
     -   既定では、書き戻しテーブルが存在する場合、そのテーブルが使用されます。 書き戻しテーブルが存在しない場合は、新しい書き戻しテーブルが作成されます。  

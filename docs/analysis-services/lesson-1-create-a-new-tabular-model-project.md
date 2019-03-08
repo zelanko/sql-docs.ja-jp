@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410778"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579432"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>レッスン 1:新しいテーブル モデル プロジェクトの作成
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

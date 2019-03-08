@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: db75799b3f26543f1e4a3ba9995fee99a909ee1d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6127a46d946da5746daa3cc01d837f5b41e7bbcb
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206945"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579332"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services の機能とタスク
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53206945"
   Analysis Services に関する基本ドキュメントは、インストールしたモードで使用できるツール、タスク、および機能に関する情報だけを参照できるように、モデルの種類およびサーバーのモード別に分類されています。 複数のモードに関連するサーバー管理タスクは、インスタンス管理にあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [テーブルと多次元ソリューションのソリューションの比較 ](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ [テーブル ソリューションと多次元ソリューションの比較](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
  [Analysis Services で使用するツールとアプリケーション](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
@@ -32,9 +32,9 @@ ms.locfileid: "53206945"
 
 [多次元モデル](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
   
- [データ マイニング ](../analysis-services/data-mining/data-mining-ssas.md)  
+ [データ マイニング](../analysis-services/data-mining/data-mining-ssas.md)  
   
- [Power Pivot for SharePoint ](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ [Power Pivot for SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services](../analysis-services/analysis-services.md)   

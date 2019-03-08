@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a4fdd31cddaba1c46cc14ae6dbdeeb6ad92449da
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017938"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579132"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Machine learning のデータ コレクションをトラブルシューティングします。
 
@@ -121,7 +121,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 Machine Learning サービスが実行されていない場合は、pythonlauncher.config ファイルを調べることで、インストールされた Python バージョンを指定できます。 任意のプロパティを誤って変更しないように、ファイルのコピーを開くことをお勧めします。
 
-1. SQL server 2017 ののみ。 `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. SQL server 2017 ののみ。 `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config`
 2. 値を取得**PYTHONHOME**します。
 3. 現在の作業ディレクトリの値を取得します。
 
@@ -209,7 +209,7 @@ SQL Server では、外部スクリプト言語のランタイムに個別のロ
 
 * SQL Server 2017
   
-  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog `
+  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
 > [!NOTE]
 > 正確なフォルダー名は、インスタンス名によって異なります。 構成によっては、別のドライブにフォルダーがあります。

@@ -13,15 +13,15 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f631209a655b11062ffd17fa9f83f3e355011cf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7b9fb6be3970ea12ce3252e70f7773f1687dbe83
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356692"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578355"
 ---
 # <a name="install-sql-server-2014"></a>SQL Server 2014 のインストール
-## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ SQL Server 2014 Express をダウンロードします。 ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[SQL Server 2014 Express をダウンロードします。](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **よろしくお願いする[Scott Hanselman](http://www.hanselman.com/)すべてのインストーラー パッケージ リンクを 1 か所に収集するためです。**
   
  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の各種インストール オプションについて概説します。 詳細については、さまざまな[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールできるコンポーネントと、インストール プロセスを参照してください。 [SQL Server 2014 のインストール](installation-for-sql-server.md)。  

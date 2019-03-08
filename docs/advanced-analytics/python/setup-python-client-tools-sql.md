@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 569b3d2fbd11cc978f1a810bab6b30ec1d33d2b5
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: c61275d1a52a3e248e2c1f551d30ece20c92b7fb
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046532"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579562"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での Python 開発用のデータ サイエンス クライアントの設定します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ SSMS は、個別のダウンロード、作成して、Python コードを格�
 
 2. 管理者特権での管理者権限で PowerShell ウィンドウを開き (右クリックして**管理者として実行**)。
 
-3. インストーラーをダウンロードしたフォルダーに移動し、スクリプトを実行します。 追加、`-InstallFolder`ライブラリのフォルダーの場所を指定するコマンドライン引数。 以下に例を示します。 
+3. インストーラーをダウンロードしたフォルダーに移動し、スクリプトを実行します。 追加、`-InstallFolder`ライブラリのフォルダーの場所を指定するコマンドライン引数。 例 : 
 
    ```python
    cd {{download-directory}}
@@ -248,7 +248,7 @@ display.Image(data=image)
 
 次のスクリーン ショットでは、入力と散布図のプロットの出力を示します。
 
-  ![jupyter notebook の散布図のプロットの出力を表示](media/jupyter-notebook-scatterplot.png)
+  ![jupyter notebook showing scatter plot output](media/jupyter-notebook-scatterplot.png)
 
 
 <a name="install-ide"></a>
@@ -300,9 +300,9 @@ PyCharm、Machine Learning Server によってインストールされている�
 
 これでインポートできます**revoscalepy**、 **microsoftml**、または**azureml**モジュール。 選択することもできます**ツール** > **Python コンソール**対話型ウィンドウを開きます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ツールと SQL Server への接続を稼働したら、Python のクイック スタートを使用してを実行して、スキルを展開[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)します。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:Python は、SQL Server に存在することを確認します。 ](../tutorials/quickstart-python-verify.md)
+> [クイック スタート:Python は、SQL Server に存在することを確認します。](../tutorials/quickstart-python-verify.md)

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0567ab525c4c8d1c2a9efdbfc3011a925f70401c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: aca12552338eb05549199b22af3a63e9f4b4a101
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397757"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579442"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>論理アーキテクチャの概要 (Analysis Services - 多次元データ)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "52397757"
 ### <a name="measures"></a>メジャー  
  キューブ セル内の値は、Packages と Last という 2 つのメジャーを表します。 Packages メジャーは、インポートされたパッケージの数を表す、**合計**関数はファクトを集計するために使用します。 Last メジャーは受入日を表す、**最大**関数はファクトを集計するために使用します。  
   
-### <a name="dimensions"></a>ディメンション  
+### <a name="dimensions"></a>Dimensions  
  Route ディメンションは、輸入品が宛先に搬送される手段を表します。 このディメンションのメンバーには、ground、nonground、air、sea、road、rail があります。 Source ディメンションは、Africa または Asia など、輸入品の製造場所を表します。 Time ディメンションは、年間の四半期と上半期または下半期を表します。  
   
 ### <a name="aggregates"></a>集計  
@@ -121,6 +121,6 @@ ms.locfileid: "52397757"
  ここで示す例には、1 つのファクト テーブルだけが含まれています。 キューブに複数のファクト テーブルがある場合、各ファクト テーブルからのメジャーはメジャー グループに編成され、メジャー グループは定義済みのディメンション リレーションシップによって、特定のセットのディメンションに関連付けられます。 これらのリレーションシップは、データ ソース ビューの参加テーブルとリレーションシップの粒度を指定することによって定義します。 **関連トピック:**[ディメンション リレーションシップ](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)します。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル データベース ](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [多次元モデル データベース](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

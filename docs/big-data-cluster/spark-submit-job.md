@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7d37843aff49f27ec05cdcf7b89febd86c72fbf
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241588"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578242"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio での SQL Server のビッグ データ クラスターで Spark ジョブを送信します。
 
@@ -34,7 +34,7 @@ Spark ジョブの送信 ダイアログを開くのいくつかの方法はあ�
 
 + をクリックして**Spark ジョブを新しい**ダッシュ ボードを Spark ジョブの送信ダイアログを開きます。
 
-    ![ダッシュ ボードをクリックしてメニューを送信します。 ](./media/submit-spark-job/new-spark-job.png)
+    ![ダッシュ ボードをクリックしてメニューを送信します。](./media/submit-spark-job/new-spark-job.png)
  
 + オブジェクト エクスプ ローラーで、クラスターを右クリックし、選択**Submit Spark Job**コンテキスト メニュー。 Spark ジョブの送信ダイアログが開きます。  
  
@@ -68,6 +68,6 @@ Spark ジョブを送信すると、左側のタスクの履歴で Spark ジョ�
 
 ![出力で Spark ジョブのリンク](./media/submit-spark-job/monitor-spark-job-submission-2.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 SQL Server のビッグ データ クラスターと関連するシナリオの詳細については、次を参照してください。[ビッグ データの SQL Server クラスターを新](big-data-cluster-overview.md)でしょうか。
 

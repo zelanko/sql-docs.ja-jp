@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617628"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579582"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters データベース カタログ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -202,7 +202,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 |Configuration_ApplyAuditing|監査を追加します。 Standard edition のデータベースのサーバー監査が適用されます。その他のデータベースの監査は、enterprise edition 用追加されます。|
 |Configuration_ApplyColumnstoreIndexing|列ストア インデックスに適用される`Sales.OrderLines`と`Sales.InvoiceLines`と適切に再作成します。|
 |Configuration_ApplyFullTextIndexing|フルテキスト インデックスに適用される`Application.People`、 `Sales.Customers`、 `Purchasing.Suppliers`、および`Warehouse.StockItems`します。 置換`Website.SearchForPeople`、 `Website.SearchForSuppliers`、 `Website.SearchForCustomers`、 `Website.SearchForStockItems`、`Website.SearchForStockItemsByTags`フルテキスト インデックス作成を使用して、交換手順とします。|
-|Configuration_ApplyPartitioning|適用するテーブルのパーティション分割`Sales.CustomerTransactions and `に合わせて Purchasing.SupplierTransactions' と、インデックスを再配置します。|
+|Configuration_ApplyPartitioning|適用するテーブルのパーティション分割`Sales.CustomerTransactions`と`Purchasing.SupplierTransactions`に合うようにインデックスを再配置するとします。|
 |Configuration_ApplyRowLevelSecurity|フィルターの顧客に販売で行レベルのセキュリティを適用 territory に関連するロール。|
 |Configuration_ConfigureForEnterpriseEdition|列ストア インデックス、フルテキスト、メモリ内、polybase、およびパーティション分割を適用します。|
 |Configuration_EnableInMemory|(Azure では機能していない) 場合は、メモリ最適化ファイル グループを追加、置換`Warehouse.ColdRoomTemperatures`、 `Warehouse.VehicleTemperatures` 、対応するメモリ内でのデータを移行、再作成、 `Website.OrderIDList`、 `Website.OrderList`、 `Website.OrderLineList`、`Website.SensorDataList`テーブルでの型対応するメモリが最適化された、削除操作を行うと、プロシージャが再作成される`Website.InvoiceCustomerOrders`、 `Website.InsertCustomerOrders`、および`Website.RecordColdRoomTemperatures`これらのテーブル型を使用します。|

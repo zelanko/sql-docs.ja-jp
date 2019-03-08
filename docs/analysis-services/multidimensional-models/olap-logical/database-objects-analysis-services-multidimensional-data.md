@@ -1,5 +1,5 @@
 ---
-title: データベース オブジェクト (Analysis Services - 多次元データ) |Microsoft ドキュメント
+title: データベース オブジェクト (Analysis Services - 多次元データ) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 26d5f468710c63b540bb8b1d75f9e1afeca0f0d8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2c7b9bab0da5b00e77696217974dee5eb5d1d522
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025949"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578742"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>データベース オブジェクト (Analysis Services - 多次元データ)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -49,19 +49,19 @@ ms.locfileid: "34025949"
 ## <a name="in-this-section"></a>このセクションの内容  
  次のトピックでは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] で OLAP とデータ マイニング機能の両方によって共有されるオブジェクトについて説明します。  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[多次元モデル内のデータ ソース](../../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のデータ ソースについて説明します。|  
-|[多次元モデル内のデータ ソース ビュー](../../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] で、1 つ以上のデータ ソースに基づく論理データ モデルについて説明します。|  
+|[多次元モデルのデータ ソース](../../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のデータ ソースについて説明します。|  
+|[多次元モデルのデータ ソース ビュー](../../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] で、1 つ以上のデータ ソースに基づく論理データ モデルについて説明します。|  
 |[多次元モデルのキューブ](../../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)|キューブと、メジャー、メジャー グループ、ディメンションの使用法とリレーションシップ、計算、主要業績評価指標 (KPI)、アクション、翻訳、パーティション、パースペクティブなどのキューブ オブジェクトについて説明します。|  
-|[ディメンションと #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|ディメンションと、属性、属性リレーションシップ、階層、レベル、メンバーなどのディメンション オブジェクトについて説明します。|  
-|[マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)|マイニング構造と、マイニング モデルなどのマイニング オブジェクトについて説明します。|  
-|[セキュリティ ロール &#40;Analysis Services - 多次元データ&#41;](../../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)|ロールについて説明します。これは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でオブジェクトへのアクセスを制御するために使用するセキュリティ メカニズムです。|  
+|[ディメンション &#40;Analysis Services - 多次元データ&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|ディメンションと、属性、属性リレーションシップ、階層、レベル、メンバーなどのディメンション オブジェクトについて説明します。|  
+|[マイニング構造 (Analysis Services - データ マイニング)](../../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)|マイニング構造と、マイニング モデルなどのマイニング オブジェクトについて説明します。|  
+|[セキュリティ ロール (Analysis Services - 多次元データ)](../../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)|ロールについて説明します。これは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] でオブジェクトへのアクセスを制御するために使用するセキュリティ メカニズムです。|  
 |[多次元モデルのアセンブリの管理](../../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)|アセンブリについて説明します。これは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] で、MDX 言語と DMX 言語を拡張するために使用するユーザー定義関数のコレクションです。|  
   
 ## <a name="see-also"></a>参照  
- [サポートされているデータ ソース&#40;SSAS - 多次元&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [多次元モデル ソリューション ](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [サポートされるデータ ソース &#40;SSAS - 多次元&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
+ [多次元モデル ソリューション](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [データ マイニング ソリューション](../../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

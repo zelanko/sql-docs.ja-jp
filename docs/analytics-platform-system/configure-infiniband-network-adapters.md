@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518273"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579402"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System の InfiniBand ネットワーク アダプターを構成します。
 コントロールのノードで並列データ ウェアハウス (PDW) に接続するクライアントの非アプライアンス サーバーで、InfiniBand ネットワーク アダプターを構成する方法について説明します。 読み込むように基本的な接続性と高可用性のために次の手順を使用して、バックアップ、およびその他のプロセスが自動的にアクティブな InfiniBand ネットワークに接続します。  
@@ -182,5 +182,5 @@ SQLCTL01 を使用すると、Analytics Platform System の DNS は、コント�
     -   MyPDW SQLCTL01  
   
 ## <a name="see-also"></a>参照  
-[取得し、読み込みサーバーの構成 ](acquire-and-configure-loading-server.md)  
+[取得し、読み込みサーバーの構成](acquire-and-configure-loading-server.md)  
   

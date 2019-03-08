@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 91ff8bfa90fd691d4314e56e751d3ebde1079180
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: 0e61b42cb7a0d0f0262a4ac4a38c413bf4c4b512
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759955"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579708"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>サンプル:SUSE Linux Enterprise Server の無人インストール用の SQL Server のインストール スクリプト
 
@@ -178,7 +178,7 @@ echo Done!
    ```
 
 ### <a name="understanding-the-script"></a>スクリプトをについてください。
-Bash スクリプトでは、まず変数を設定します。 これらの変数は、このサンプルのようにスクリプト変数として指定することもできますし、環境変数として指定することもできます。 変数 ``` MSSQL_SA_PASSWORD ``` は SQL Server インストールでは **必須** です。その他は、スクリプト用に作成されたカスタム変数です。 サンプル スクリプトは、次の手順を実行します。
+Bash スクリプトでは、まず変数を設定します。 これらの変数は、このサンプルのようにスクリプト変数として指定することもできますし、環境変数として指定することもできます。 変数 `MSSQL_SA_PASSWORD` は SQL Server インストールでは **必須** です。その他は、スクリプト用に作成されたカスタム変数です。 サンプル スクリプトは、次の手順を実行します。
 
 1. Microsoft GPG の公開鍵をインポートします。
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ea15a8fc5eaf066b5a64cf73192f64dd0078434e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534081"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578492"
 ---
 # <a name="transparent-data-encryption"></a>透過的なデータ暗号化
 データベースをセキュリティで保護するために、安全なシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの予防策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープ) などが盗まれるシナリオで悪意のあるパーティできますだけ復元またはデータベースをアタッチし、データを参照します。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
@@ -238,15 +238,15 @@ DMK がアップグレードまたは置換の VM が実行されたアプライ
   
 アップグレード アクションの例です。 置換`**********`DMK パスワードを使用します。  
   
-`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'`  
   
 仮想マシンを置換するアクションの例です。  
   
-`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
 アップグレード中に、ユーザー データベースが暗号化されており、DMK パスワードが指定されていない場合、アップグレード アクションは失敗します。 置換、中に、DMK が存在する場合は、正しいパスワードが指定されていない操作がその DMK 復旧手順をスキップします。 その他のすべての手順は、アクションを追加の手順が必要なことを示すために、最後にエラーが報告されますが、置換 VM アクションの最後に完了できません。 セットアップ ログで (である**\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< タイムスタンプ > \Detail-Setup**)、末尾付近に次の警告が表示されます。  
   
-`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!  `
+`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
 PDW で手動でこれらのステートメントを実行し、DMK を復旧するには、その後アプライアンスを再起動します。  
   

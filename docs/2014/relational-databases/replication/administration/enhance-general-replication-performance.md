@@ -21,19 +21,19 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71bd15f01cc69371765c4af17fb184ce28481f65
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129282"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579372"
 ---
 # <a name="enhance-general-replication-performance"></a>レプリケーションの全般的パフォーマンスの向上
   このトピックで解説するガイドラインに従うことによって、アプリケーションおよびネットワーク上にある全種類のレプリケーションの全般的なパフォーマンスを向上させることができます。  
   
 ## <a name="server-and-network"></a>サーバーおよびネットワーク  
   
--    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に割り当てるメモリの最大容量と最小容量を設定する。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に割り当てるメモリの最大容量と最小容量を設定する。  
   
      既定では、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更します。 レプリケーション作業中に使用できるメモリ容量が少なくなるのを防ぐには、 **min server memory** オプションを使用して最小メモリ容量を設定します。 オペレーティング システムによるディスクへのメモリ書き出しを防ぐために、 **max server memory** オプションを使用して最大メモリ容量を設定することもできます。 詳細については、「[サーバー メモリに関するサーバー構成オプション](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)」を参照してください。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "54129282"
   
     -   マージ レプリケーションの場合には、ビジネス ロジック ハンドラーを使用する方がより効率的です。 詳細については、「[マージ同期中のビジネス ロジックの実行](../merge/execute-business-logic-during-merge-synchronization.md)」を参照してください。  
   
-     マージ レプリケーションにパブリッシュされるテーブルの参照整合性を維持する目的でトリガーを使用する場合は、テーブルの処理順序を指定してマージ エージェントが必要とする再試行の回数を削減します。 詳細については、次を参照してください。[マージ レプリケーションの指定プロパティ](../publish/specify-merge-replication-properties.md)します。  
+     マージ レプリケーションにパブリッシュされるテーブルの参照整合性を維持する目的でトリガーを使用する場合は、テーブルの処理順序を指定してマージ エージェントが必要とする再試行の回数を削減します。 詳細については、「[Specify Merge Replication properties](../publish/specify-merge-replication-properties.md)」 (マージ レプリケーションのプロパティの指定) を参照してください。  
   
 -   Large Object (LOB) データ型の使用を制限する。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "54129282"
   
      大量の変更をサブスクライバーに送信する必要があるときには、サブスクライバーを新しいスナップショットで再初期化する方が、レプリケーションを使用して個々の変更を移動するよりも高速な場合があります。 詳細については、「 [サブスクリプションの再初期化](../reinitialize-subscriptions.md)」を参照してください。  
   
-     トランザクション レプリケーションの場合は、レプリケーション モニターの **[未配布のコマンド]** タブに、サブスクライバーにまだ配布されていないディストリビューション データベース内のトランザクションの数と、これらのトランザクションの予測配布時間が表示されます。 詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
+     トランザクション レプリケーションの場合は、レプリケーション モニターの **[未配布のコマンド]** タブに、サブスクライバーにまだ配布されていないディストリビューション データベース内のトランザクションの数と、これらのトランザクションの予測配布時間が表示されます。 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 ## <a name="snapshot-considerations"></a>スナップショットに関する注意点  
   

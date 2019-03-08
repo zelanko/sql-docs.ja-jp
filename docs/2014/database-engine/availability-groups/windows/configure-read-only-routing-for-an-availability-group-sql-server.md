@@ -17,12 +17,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3af17b9ee12846fc89e406420fa6405cb59e0af3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a129386b5c88939d68f5d7f23a5fe2b4d8ce7cca
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367928"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579122"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>可用性グループの読み取り専用ルーティングの構成 (SQL Server)
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]で読み取り専用ルーティングをサポートするように AlwaysOn 可用性グループを構成するには、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] または PowerShell を使用します。 *読み取り専用ルーティング*は、対象の読み取り専用接続要求を、AlwaysOn の[読み取り可能なセカンダリ レプリカ](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) (セカンダリ ロールで実行されているときに、読み取り専用ワークロードを許可するように構成されているレプリカ) にルーティングする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の機能です。 読み取り専用ルーティングをサポートするには、可用性グループに[可用性グループ リスナー](../../listeners-client-connectivity-application-failover.md)が存在する必要があります。 読み取り専用クライアントは、このリスナーに接続要求を送信する必要があります。クライアントの接続文字列では、アプリケーションの目的として "読み取り専用" を指定する必要があります。 つまり、 *読み取りを目的とした接続要求*であることが必要です。  
@@ -82,7 +82,7 @@ ms.locfileid: "53367928"
   
     -   セカンダリ ロールの読み取り専用ルーティングを構成するには、ADD REPLICA 句または MODIFY REPLICA WITH 句で、SECONDARY_ROLE オプションを次のように指定します。  
   
-         前に示した SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://*`system-address`*:*`port`*')**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://*`system-address`*:*`port`*')**  
   
          読み取り専用ルーティング URL のパラメーターは次のとおりです。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "53367928"
   
     -   プライマリ ロールの読み取り専用ルーティングを構成するには、ADD REPLICA 句または MODIFY REPLICA WITH 句で、PRIMARY_ROLE オプションを次のように指定します。  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **= ('*`server`*'** [ **、**.*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('*`server`*'** [ **,**...*n* ] **))**  
   
          *server* は、可用性グループの読み取り専用セカンダリ レプリカをホストするサーバー インスタンスを識別します。  
   
@@ -187,7 +187,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingConnectionUrl "TCP://SecondaryServer.
 Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer" -InputObject $primaryReplica  
 ```  
   
-##  <a name="FollowUp"></a> フォローしてください：読み取り専用ルーティングを構成した後  
+##  <a name="FollowUp"></a>補足情報: 読み取り専用ルーティングを構成した後  
  現在のプライマリ レプリカと読み取り可能なセカンダリ レプリカをそれぞれのロールで読み取り専用ルーティングをサポートするように設定すると、読み取り可能なセカンダリ レプリカは、可用性グループ リスナーを介して接続するクライアントからの読み取りを目的とした接続要求を受信できるようになります。  
   
 > [!TIP]  
@@ -215,7 +215,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
  読み取り専用のアプリケーションの目的と読み取り専用のルーティングの詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)が存在する必要があります。  
   
 ### <a name="if-read-only-routing-is-not-working-correctly"></a>読み取り専用ルーティングが正常に動作しない場合  
- 読み取り専用ルーティングの構成のトラブルシューティングについては、次を参照してください。[読み取り専用ルーティングがない正常に動作](troubleshoot-always-on-availability-groups-configuration-sql-server.md)します。  
+ 読み取り専用ルーティング構成のトラブルシューティングの詳細については、「 [読み取り専用ルーティングが正常に動作しない](troubleshoot-always-on-availability-groups-configuration-sql-server.md)」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **読み取り専用ルーティングの構成を表示するには**  

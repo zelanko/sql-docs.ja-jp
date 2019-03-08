@@ -27,12 +27,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad056a757a25b8bc1c358fd37d9073370d9ed279
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 24367bfec4b0e25fec60eb49c77a74e1ccd54f46
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133842"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579761"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
   **Bcp**のインスタンス間でデータをユーティリティの一括コピー [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]とユーザー指定の形式でデータ ファイル。 **bcp** ユーティリティを使うと、多数の新規行を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルにインポートしたり、データをテーブルからデータ ファイルにエクスポートしたりできます。 このユーティリティでは **の知識は必要ありません。ただし、** queryout [!INCLUDE[tsql](../includes/tsql-md.md)]オプションと同時に使う場合はその知識が必要になります。 データをテーブルにインポートするには、そのテーブル用に作成されたフォーマット ファイルを使用するか、テーブルの構造およびテーブルの列に有効なデータの型を理解しておく必要があります。  
@@ -218,7 +218,7 @@ ms.locfileid: "54133842"
  一括コピー操作時、空の列には、挿入される列の既定値ではなく、NULL 値が保持されます。 詳細については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」をご覧ください。  
   
  **-K** _application_intent_  
- アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は、 **ReadOnly**だけです。 **-K** を指定しない場合、bcp ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、次を参照してください。[アクティブなセカンダリ。読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)します。  
+ アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は、 **ReadOnly**だけです。 **-K** を指定しない場合、bcp ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)します。  
   
  **-L** _last_row_  
  テーブルからエクスポートする最後の行、またはデータ ファイルからインポートする最後の行の番号を指定します。 このパラメーターには、大なり (>) 0 値が必要ですより小さい (\<) か、または等しい (=)、最後の行の数。 このパラメーターがない場合、既定ではファイルの最後の行となります。  

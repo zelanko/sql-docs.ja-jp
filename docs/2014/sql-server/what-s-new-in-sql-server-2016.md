@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 57acb73332f90f4084243184f480edf0a1395a7b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 26d0c84194f6f2aafb8bc499ff5404a1438ee577
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124822"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578842"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>どのような&#39;s SQL Server 2014 の新機能
   このトピックでは、新機能の詳細なリンクをまとめたものです[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]しのサービス パックの概要を示します。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
@@ -44,12 +44,12 @@ ms.locfileid: "54124822"
 ## <a name="includesssql14includessssql14-mdmd-service-pack-1-sp1"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 1 (SP1)
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP1) は重要な新機能を含めていません。
 -  [SQL Server 2014 Service Pack 1 リリース情報](https://support.microsoft.com/en-us/kb/3058865)します。
--  [![Microsoft Service Pack 1 をダウンロードしていますか。SQL Server??2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [microsoft Service Pack 1 をダウンロードします。SQL Server??2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694)します。
+-  [![Microsoft Service Pack 1 をダウンロードしていますか。SQL Server??2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [microsoft Service Pack 1 をダウンロードします。SQL Server??2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
 
 
 ## <a name="includesssql14includessssql14-mdmd-service-pack-2-sp2"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 2 (SP2)
 - [SQL Server 2014 Service Pack 2 リリース情報](https://support.microsoft.com/en-us/kb/3171021)します。
--  [![Microsoft の Service Pack 2 をダウンロードするには [概要] タブSQL Server??2014](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [microsoft Service Pack 2 をダウンロードします。SQL Server??2014](https://go.microsoft.com/fwlink/?LinkID=821558)します。
+-  [![Microsoft の Service Pack 2 をダウンロードするには [概要] タブSQL Server??2014](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [microsoft Service Pack 2 をダウンロードします。SQL Server??2014](https://go.microsoft.com/fwlink/?LinkID=821558).
 -  [![SQL Server 2014 SP2 Feature Pack ダウンロード](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=53164) [SQL Server 2014 SP2 Feature Pack ダウンロード](https://www.microsoft.com/en-us/download/details.aspx?id=53164)します。
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP2)次の機能強化が含まれています。
@@ -57,7 +57,7 @@ ms.locfileid: "54124822"
 ### <a name="performance-and-scalability-improvements"></a>パフォーマンスとスケーラビリティの向上 
 -   **自動ソフト NUMA のパーティション分割:**[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]インスタンスの起動中にトレース フラグ 8079 が有効にしたときに SP2 で自動ソフト NUMA を有効にします。 起動時に、トレース フラグ 8079 が有効にすると[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2 はハードウェア レイアウトを問い合わせて、NUMA ノードあたり 8 個以上の Cpu をレポートするシステムのソフト NUMA を自動的に構成します。 自動的に、ソフト NUMA の動作は、ハイパー スレッド (HT/論理プロセッサ) に注意してください。 パーティション分割と追加ノードの作成により、リスナーの数の増加、スケーリング、およびネットワークと暗号化機能の向上により、バックグラウンド処理が拡張されます。 お勧めの最初のテストをパフォーマンス ワークロード自動ソフト NUMA を実稼働環境でこれを有効にする前にします。 [詳細については、ブログを参照してください。](https://blogs.msdn.microsoft.com/psssql/2016/03/30/sql-2016-it-just-runs-faster-automatic-soft-numa/)します。 
 -  **動的メモリ オブジェクトのスケーリングします。**[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 には、最新のハードウェア上でスケール アップするノードとコアの数に基づいて、オブジェクトのメモリが動的にパーティション分割します。 動的な昇格の目的は、ボトルネックとなる場合、スレッド セーフ メモリ オブジェクト (CMEMTHREAD) を自動的に分割します。 ノード (NUMA ノード数のパーティションと等しい数)、パーティションに分割するパーティション分割されていないメモリ オブジェクトを動的に昇格し、(の等しい数のパーティションの数を CPU によってパーティションに分割する昇格させたノードでパーティション分割されたオブジェクトが、さらにメモリCpu)。 [詳細については、ブログを参照してください。](https://blogs.msdn.microsoft.com/psssql/2016/04/06/sql-2016-it-just-runs-faster-dynamic-memory-object-cmemthread-partitioning/)します。
--  **DBCC CHECK の MAXDOP ヒント\*コマンド。** この機能強化がアドレス[connect フィードバック (468694)](https://connect.microsoft.com/SQLServer/feedback/details/468694/maxdop-option-in-dbcc-checkdb)します。 指定した DBCC CHECKDB を実行して、sp_configure 値以外の MAXDOP 設定します。 MAXDOP では、リソース ガバナーで構成されている値を超えると、データベース エンジンは、ALTER WORKLOAD GROUP (TRANSACT-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、次を参照してください。 [DBCC CHECKDB (TRANSACT-SQL)](https://msdn.microsoft.com/library/ms176064.aspx)します。
+-  **DBCC CHECK の MAXDOP ヒント\*コマンド。** この機能強化がアドレス[connect フィードバック (468694)](https://connect.microsoft.com/SQLServer/feedback/details/468694/maxdop-option-in-dbcc-checkdb)します。 指定した DBCC CHECKDB を実行して、sp_configure 値以外の MAXDOP 設定します。 MAXDOP では、リソース ガバナーで構成されている値を超えている場合、データベース エンジンは、ALTER WORKLOAD GROUP (TRANSACT-SQL) で説明されている、リソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、次を参照してください。 [DBCC CHECKDB (TRANSACT-SQL)](https://msdn.microsoft.com/library/ms176064.aspx)します。
 -   **有効にする > のバッファー プールの 8 TB。**[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 では、128 TB のバッファー プールの使用の仮想アドレス空間を使用できます。 この機能強化では、最新のハードウェアで 8 TB を超えてスケールする SQL Server バッファー プールを使用できます。
 -   **SOS_RWLock スピンロックの向上:** SOS_RWLock は、SQL Server のコード ベースのさまざまな場所で使用される同期プリミティブです。  名前が示すように、コードは、複数の共有 (リーダー) または 1 つ (ライター) 所有権ことができます。 この機能強化は SOS_RWLock スピンロックの必要を削除し、代わりに、インメモリ OLTP のようなロック制御不要の手法を使用します。 この変更により、多数のスレッドが互いをブロックして、それによってスケーラビリティの向上を提供することがなく SOS_RWLock で並列で保護されたデータ構造を読み取ることができます。 今回の変更前は、スピンロックの実装は、データ構造の読み取りにも、時、SOS_RWLock を取得する 1 つのスレッドを許可します。  [詳細については、ブログを参照してください。](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)します。
 -    **空間のネイティブ実装。** 空間クエリのパフォーマンスが大幅に向上がで導入された[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2 ネイティブ実装から。 詳細については、次を参照してください。、[サポート技術情報記事 KB3107399](https://support.microsoft.com/en-us/kb/3107399)します。
