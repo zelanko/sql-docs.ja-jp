@@ -11,10 +11,10 @@ ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
 ms.openlocfilehash: 874fd8948d4098e9003fb2c54e1feb8b5cbbe4e3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
+ms.lasthandoff: 03/07/2019
 ms.locfileid: "52750364"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio を使用して、Linux 上の SQL Server のデータベースを作成するには
@@ -27,7 +27,7 @@ SQL Server Data Tools (SSDT) は、Visual Studio を SQL Server on Linux の強�
 
 1. 既にインストールしていない Visual Studio、Windows コンピューターの場合[ダウンロードして Visual Studio のインストール]します。 Visual Studio Community エディションは、受講者、完全に機能を備えた無料の IDE、Visual Studio のライセンスがない、オープン ソース、個人の開発者。
 
-2. Visual Studio のインストール中に次のように選択します。**カスタム**の、**インストールの種類を選択**オプション。  **[次へ]** をクリックします。
+2. Visual Studio のインストール中に次のように選択します。**カスタム**の、**インストールの種類を選択**オプション。 **[次へ]** をクリックします。
 
 3. 選択**Microsoft SQL Server Data Tools**、 **Git for Windows**、および**Visual Studio 向け GitHub 拡張**機能の選択項目の一覧。
 
@@ -105,14 +105,14 @@ Linux 上の SQL Server は、SSDT 17.0 RC またはそれ以降のバージョ�
 
 Linux 上の SQL Server インスタンスに新しいデータベースを作成し、ソース管理の対象のデータベース プロジェクトへのデータベース開発の基本を学習できました。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-T-SQL に慣れていない場合は、次を参照してください。[チュートリアル:TRANSACT-SQL ステートメントの作成]と[TRANSACT-SQL リファレンス (データベース エンジン)]します。
+T-SQL に慣れていない場合は、次を参照してください。[チュートリアル: Transact-SQL ステートメントの作成]と[TRANSACT-SQL リファレンス (データベース エンジン)]します。
 
 SQL Data Tools でのデータベース開発の詳細については、次を参照してください[SSDT MSDN ドキュメント]
 
 [ダウンロードして Visual Studio のインストール]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT]:https://aka.ms/ssdt-download
 [SSDT MSDN ドキュメント]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[チュートリアル:TRANSACT-SQL ステートメントの作成]:https://msdn.microsoft.com/library/ms365303.aspx
+[チュートリアル: Transact-SQL ステートメントの作成]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL リファレンス (データベース エンジン)]:https://msdn.microsoft.com/library/bb510741.aspx

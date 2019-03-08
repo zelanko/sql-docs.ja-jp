@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652591"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579414"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System、スケール アウトの MPP データ ウェアハウスの新機能新機能
 新機能については最新のアプライアンスの更新プログラム Microsoft Analytics Platform System (APS) を参照してください。 アクセス ポイントは、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト オンプレミス アプライアンスです。 
@@ -120,7 +120,7 @@ APS AU7 は作成し、既定では、自動的に統計を更新します。 �
 ### <a name="t-sql"></a>T-SQL
 選択@varがサポートされています。 詳細については、次を参照してください。[ローカル変数を選択します。](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-ハッシュと ORDER GROUP クエリ ヒントはサポートされています。 詳細については、次を参照してください[Hints(Transact-SQL) - クエリ。 ](/sql/t-sql/queries/hints-transact-sql-query)
+ハッシュと ORDER GROUP クエリ ヒントはサポートされています。 詳細については、次を参照してください[Hints(Transact-SQL) - クエリ。](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>機能スイッチ
 APS AU7 で機能スイッチが導入されています[Configuration Manager](launch-the-configuration-manager.md)します。 AutoStatsEnabled と DmsProcessStopMessageTimeoutInSeconds が管理者によって変更できる構成可能なオプションではようになりました。

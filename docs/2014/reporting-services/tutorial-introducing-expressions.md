@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:式の概要 |Microsoft Docs
+title: チュートリアル:式の概要 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ca902670ae5947b88a306680855e92719fe44591
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 847fc357ecd8b62279827f05b5aa08d4f5e6f068
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295120"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579602"
 ---
 # <a name="tutorial-introducing-expressions"></a>チュートリアル:式の概要
   式を使用すると、強力で柔軟なレポートを作成できます。 このチュートリアルでは、一般的な関数および演算子を使用した式を作成および実装する方法を説明します。 使用する、**式**名前値の連結、見て別のデータセット内の値式を作成する ダイアログ ボックスとフィールドの値に基づいた画像を表示します。  
@@ -66,7 +66,7 @@ ms.locfileid: "56295120"
 >  このチュートリアルのクエリにはデータ値が含まれているため、外部のデータ ソースを必要としません。 このため、クエリが非常に長くなっています。 ビジネス環境でクエリにデータを含めることはありません。 これは、学習に使用することのみを目的としています。  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーを参照する方法の詳細については、データ ソースを選択し、データセットを作成するこのシリーズの最初のチュートリアルを参照してください。[チュートリアル: 基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
+>  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、およびデータセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
 #### <a name="to-create-a-new-table-report"></a>新しい表レポートを作成するには  
   
@@ -124,7 +124,7 @@ ms.locfileid: "56295120"
   
      クエリには、生年月日、名前、姓、州または郡、国または地域の識別子、性別、年度累計購入額などを示す列の名前が指定されています。  
   
-10. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。 結果セットは、20 行のデータを表示して、次の列が含まれています。FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、および LastPurchase します。  
+10. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。 結果セットは、20 行のデータを表示して、次の列が含まれています。FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、LastPurchase です。  
   
 11. **[次へ]** をクリックします。  
   
@@ -698,7 +698,7 @@ ms.locfileid: "56295120"
   
 1.  **レポート ビルダー** のボタンの **[名前を付けて保存]** をクリックします。  
   
-2.  をクリックして**デスクトップ`, `My Documents**、または**コンピューター**、レポートを保存するフォルダーを参照します。  
+2.  **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
 3.  **名前**、既定の名前を**Sales Comparison Summary**します。  
   
