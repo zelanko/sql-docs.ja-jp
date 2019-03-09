@@ -1,6 +1,6 @@
 ---
 title: Analysis Services チュートリアル-レッスン 4:リレーションシップの作成 |Microsoft Docs
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394524"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685620"
 ---
 # <a name="create-relationships"></a>リレーションシップの作成
 
@@ -102,7 +103,7 @@ ms.locfileid: "52394524"
   
 ## <a name="whats-next"></a>次の操作
 
-[レッスン 5:計算列を作成](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)です。
+[レッスン 5: 計算列を作成](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)です。
   
   
   

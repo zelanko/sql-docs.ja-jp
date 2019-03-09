@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services チュートリアル-レッスン 12: Excel で分析 |Microsoft Docs'
-ms.date: 08/27/2018
+title: Analysis Services チュートリアル レッスン 12:Excel で分析 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4b4531183c890e43158f2d9c0f9f4b18f5d303be
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084455"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685430"
 ---
 # <a name="analyze-in-excel"></a>[Excel で分析]
 
@@ -24,11 +25,11 @@ ms.locfileid: "43084455"
   
 このレッスンを完了するには、Visual Studio と同じコンピューターに Excel をインストールする必要があります。
   
-このレッスンの推定所要時間: **5 分**  
+このレッスンを完了するまでに時間を推定するには。**5 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 
-この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 11: ロールを作成](../tutorial-tabular-1400/as-lesson-11-create-roles.md)です。  
+この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 11:ロールを作成](../tutorial-tabular-1400/as-lesson-11-create-roles.md)です。  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>既定のパースペクティブと Internet Sales パースペクティブを使用した参照  
 
@@ -76,7 +77,7 @@ ms.locfileid: "43084455"
   
 ## <a name="whats-next"></a>次の操作
 
-次のレッスンに移動:[レッスン 13: デプロイ](../tutorial-tabular-1400/as-lesson-13-deploy.md)します。
+次のレッスンに移動します。[レッスン 13:デプロイ](../tutorial-tabular-1400/as-lesson-13-deploy.md)します。
 
   
   

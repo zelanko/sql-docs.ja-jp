@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services チュートリアル-レッスン 6: メジャーの作成 |Microsoft Docs'
-ms.date: 08/27/2018
+title: Analysis Services チュートリアル-レッスン 6:メジャーの作成 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9b466a703dd04a53c6ebf7c6fac624476abcc52
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43093965"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685649"
 ---
 # <a name="create-measures"></a>メジャーを作成する
 
@@ -28,11 +29,11 @@ ms.locfileid: "43093965"
   
 このレッスンでは、両方が、数式バーで DAX 数式を入力し、オート Sum 機能を使用してメジャーを作成します。  
   
-このレッスンの推定所要時間: **30 分**  
+このレッスンを完了するまでに時間を推定するには。**30 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 
-この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 5: 計算列を作成](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)です。  
+この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 5: 計算列を作成](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)です。  
   
 ## <a name="create-measures"></a>メジャーを作成する  
   
@@ -89,13 +90,13 @@ ms.locfileid: "43093965"
     |[列]|メジャー名|オート SUM (∑)|[数式]|  
     |----------------|----------|-----------------|-----------|  
     |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
-    |OrderQuantity|InternetTotalUnits|SUM|=SUM([OrderQuantity])|  
-    |DiscountAmount|InternetTotalDiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |TotalProductCost|InternetTotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |SalesAmount|InternetTotalSales|SUM|=SUM([SalesAmount])|  
-    |Margin|InternetTotalMargin|SUM|=SUM([Margin])|  
-    |TaxAmt|InternetTotalTaxAmt|SUM|=SUM([TaxAmt])|  
-    |Freight|InternetTotalFreight|SUM|=SUM([Freight])|  
+    |OrderQuantity|InternetTotalUnits|Sum|=SUM([OrderQuantity])|  
+    |DiscountAmount|InternetTotalDiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |TotalProductCost|InternetTotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |SalesAmount|InternetTotalSales|Sum|=SUM([SalesAmount])|  
+    |Margin|InternetTotalMargin|Sum|=SUM([Margin])|  
+    |TaxAmt|InternetTotalTaxAmt|Sum|=SUM([TaxAmt])|  
+    |Freight|InternetTotalFreight|Sum|=SUM([Freight])|  
   
 2.  メジャー グリッドで空のセルをクリックし、数式バーを使用して作成する順序で次のカスタム メジャー。  
   
@@ -127,6 +128,6 @@ FactInternetSales テーブルに作成したメジャーは、売上、コス�
   
 ## <a name="whats-next"></a>次の操作
 
-[レッスン 7: 主要業績評価指標を作成する](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)します。  
+[レッスン 7: 主要業績評価指標の作成](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)です。  
 
   

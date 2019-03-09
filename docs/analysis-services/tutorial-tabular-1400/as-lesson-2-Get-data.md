@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services チュートリアル-レッスン 2: データの取得 |Microsoft Docs'
-ms.date: 08/27/2018
+title: Analysis Services チュートリアル-レッスン 2:データの取得 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 01bf31c3d4f89b77ebdceae2e69d4054a578b03f
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062213"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685319"
 ---
 # <a name="get-data"></a>データを取得します。
 
@@ -27,11 +28,11 @@ ms.locfileid: "43062213"
 > [!NOTE]
 > このチュートリアルのタスクと画像は、オンプレミス サーバー上の AdventureWorksDW2014 データベースへの接続を表示します。 場合によっては、Azure SQL Data Warehouse では、AdventureWorksDW データベースが別のオブジェクトを表示します。ただし、これらは基本的に、同じです。
   
-このレッスンの推定所要時間: **10 分**  
+このレッスンを完了するまでに時間を推定するには。**10 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 
-この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 1: 新しい表形式モデル プロジェクトを作成する](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)します。  
+この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 1:新しいテーブル モデル プロジェクト作成](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)です。  
   
 ## <a name="create-a-connection"></a>接続の作成  
   
@@ -56,7 +57,7 @@ ms.locfileid: "43062213"
   
 5.  ナビゲーターで、次のように選択します。、 **AdventureWorksDW**データベースをクリックして**OK**。これは、データベースへの接続を作成します。 
   
-6.  ナビゲーターで、次のテーブルのチェック ボックスを選択します: **DimCustomer**、 **DimDate**、 **DimGeography**、 **DimProduct**、 **DimProductCategory**、 **DimProductSubcategory**、および**FactInternetSales**します。  
+6.  ナビゲーターで、次のテーブルのチェック ボックスを選択します。**DimCustomer**、 **DimDate**、 **DimGeography**、 **DimProduct**、 **DimProductCategory**、 **DimProductSubcategory**、および**FactInternetSales**します。  
 
     ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
@@ -159,7 +160,7 @@ AdventureWorksDW サンプル データベース内のテーブルは、モデ�
   
 ## <a name="whats-next"></a>次の操作
 
-[レッスン 3: 日付テーブルとしてマーク](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)します。
+[レッスン 3:日付テーブルとしてマーク](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)します。
 
   
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ab05885243d09dcc2aece09b7b8931fc17a5921c
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 9dfb6706f27006ccb876615316533bc8e15b3101
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556234"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683632"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -74,6 +74,32 @@ ms.locfileid: "57556234"
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間は削除されません。 これは、結果、クラスターの孤立した、名前空間。 回避策では、同じ名前のクラスターをデプロイする前に、名前空間を手動で削除します。
+
+#### <a name="kubeadm-deployments"></a>kubeadm 展開
+
+複数のコンピューターでの Kubernetes のデプロイに kubeadm を使用する場合、クラスターの管理ポータルのビッグ データ クラスターに接続するために必要なエンドポイントは正しく表示されません。 この問題が発生する場合は、次の回避を使用して、サービス エンドポイントの IP アドレスを検出します。
+
+- クラスター内から接続する場合は、サービスの ip アドレスに接続するエンドポイントの Kubernetes を照会します。 たとえば、次**kubectl**コマンドには、SQL Server のマスター インスタンスの IP アドレスが表示されます。
+
+   ```bash
+   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   ```
+
+- クラスターの外部から接続する場合は、次の手順を使用して接続します。
+
+   1. SQL Server のマスター インスタンスを実行しているノードの IP アドレスを取得:`kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>`します。
+
+   1. この IP アドレスを使用して SQL Server マスター インスタンスに接続します。
+
+   1. クエリ、 **cluster_endpoint_table**他の外部エンドポイントの master データベースにします。
+
+      これは、接続タイムアウトで失敗すると、そのそれぞれのノードは、ファイアウォールで隔て可能性があります。 ここでは、Kubernetes クラスター管理者に連絡して、外部に公開されているノードの IP を要求します。 これは、任意のノード。 クラスターで実行されているさまざまなサービスに接続し、その ip アドレスと対応するポートを使用できます。 たとえば、管理者は、実行して、この IP を確認できます。
+
+      ```
+      [root@m12hn01 config]# kubectl cluster-info
+      Kubernetes master is running at https://172.50.253.99:6443
+      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+      ```
 
 #### <a id="mssqlctlctp23"></a> mssqlctl
 

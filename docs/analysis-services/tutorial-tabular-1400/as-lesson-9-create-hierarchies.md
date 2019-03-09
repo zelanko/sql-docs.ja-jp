@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services チュートリアル-レッスン 9: 階層を作成する |Microsoft Docs'
-ms.date: 08/27/2018
+title: Analysis Services チュートリアル レッスン 9:階層を作成する |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: 0261da590a30e077db8332aca35ed32dcc5656c6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: cdb9f571e7bc1630ce12c0d0a4b7f57df8961907
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071815"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685419"
 ---
 # <a name="create-hierarchies"></a>階層を作成する
 
@@ -24,11 +25,11 @@ ms.locfileid: "43071815"
   
 階層を作成するには、モデル デザイナーを使用して、*ダイアグラム ビュー*します。 作成して、階層の管理は、データ ビューではサポートされていません。  
   
-このレッスンの推定所要時間: **20 分**  
+このレッスンを完了するまでに時間を推定するには。**20 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 
-この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 8: パースペクティブを作成する](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)します。  
+この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 8: パースペクティブを作成する](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)します。  
   
 ## <a name="create-hierarchies"></a>階層を作成する  
   
@@ -78,6 +79,6 @@ ms.locfileid: "43071815"
   
  ## <a name="whats-next"></a>次の操作
 
-[レッスン 10: パーティションの作成](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)です。 
+[レッスン 10:パーティションの作成](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)です。 
   
   

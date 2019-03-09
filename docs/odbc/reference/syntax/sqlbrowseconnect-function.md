@@ -11,6 +11,7 @@ apiname:
 - SQLBrowseConnect
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBrowseConnect
@@ -20,18 +21,18 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 96d46f8aaf2ab051255c1f75bcd2c4547c922cdc
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211712"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683612"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 関数
 **準拠**  
  バージョンが導入されました。ODBC 1.0 規格に準拠します。ODBC  
   
- **まとめ**  
+ **概要**  
  **SQLBrowseConnect**反復的なメソッドを検出して、属性とデータ ソースに接続するために必要な属性の値を列挙するをサポートしています。 呼び出しごとに**SQLBrowseConnect**連続するレベルの属性と属性値を返します。 すべてのレベルが列挙された、データ ソースへの接続が完了し完全な接続文字列が返されます**SQLBrowseConnect**します。 SQL_SUCCESS または SQL_SUCCESS_WITH_INFO リターン コードは、すべての接続情報が指定されており、アプリケーションがデータ ソースに接続されているようになりましたことを示します。  
   
 ## <a name="syntax"></a>構文  
@@ -112,8 +113,8 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString 引数  
  参照要求の接続文字列では、次の構文があります。  
   
- *接続文字列*:: =*属性*[`;`] &#124; *属性* `;` *接続文字列*;<br>
- *属性*:: =*属性キーワード*`=`*属性値* &#124; `DRIVER=`[`{`]*属性と値の*[`}`]<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
+ *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
  *属性キーワード*:: = `DSN` &#124; `UID` &#124; `PWD` &#124; *ドライバー-定義の属性-キーワード*<br>
  *属性値*:: =*文字の文字列*<br>
  *ドライバーの定義の属性-キーワード*:: =*識別子*<br>
@@ -127,11 +128,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>OutConnectionString 引数  
  参照結果の接続文字列は、接続属性の一覧です。 接続属性は、属性のキーワードと対応する属性値で構成されます。 参照結果の接続文字列では、次の構文があります。  
   
- *接続文字列*:: =*属性*[`;`] &#124; *属性* `;` *接続文字列*<br>
- *属性*:: = [`*`]*属性キーワード*`=`*属性値*<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
+ *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
  *属性キーワード*:: = *ODBC 属性-キーワード* &#124; *ドライバー-定義の属性-キーワード*<br>
  *ODBC 属性-キーワード*= {`UID` &#124; `PWD`} [`:`*ローカライズ識別子*]*ドライバー-定義の属性-キーワード*:: = *識別子*[`:`*ローカライズ識別子*]*属性値*:: = `{` *属性値リスト* `}` &#124; `?` (中かっこはリテラルは、ドライバーによって返される)。<br>
- *属性値リスト*:: =*文字列*[`:`*ローカライズされた文字の文字列*] &#124; *文字列*[`:`*ローカライズされた文字の文字列*] `,` *属性値リスト*<br>
+ *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   
  場所*文字列*と*ローカライズされた文字の文字列*0 個以上の文字。*識別子*と*ローカライズ識別子*1 つまたは複数の文字。*属性キーワード*小文字は区別; されず*属性値*小文字が区別されます。 接続により文字列および初期化ファイルの文法、キーワード、ローカライズされた識別子は、および属性値の文字が含まれている **:operator[]{}()、;?\*=! @** 避ける必要があります。 システム情報の文法、ため、キーワードおよびデータ ソース名が円記号を含めることはできません (\\) 文字。  
   
@@ -284,7 +285,7 @@ int main() {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|詳細|解決方法|  
 |---------------------------|---------|  
 |接続ハンドルの割り当てください。|[SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |データ ソースへの接続|[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)|  

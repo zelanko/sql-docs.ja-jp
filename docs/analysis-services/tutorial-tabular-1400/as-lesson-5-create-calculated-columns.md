@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services チュートリアル-レッスン 5: 計算列の作成 |Microsoft Docs'
-ms.date: 08/27/2018
+title: Analysis Services チュートリアル-レッスン 5:計算列の作成 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58a7f38dbbe7a68668418db4d1bef16e08784a08
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063861"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685559"
 ---
 # <a name="create-calculated-columns"></a>計算列の作成
 
@@ -26,11 +27,11 @@ ms.locfileid: "43063861"
 
 このレッスンは、Data Analysis Expressions (DAX) を最初に使用してもです。 DAX は、表形式モデルの高度にカスタマイズ可能な数式を作成するための特別な言語です。 このチュートリアルでは、計算列、メジャー、およびロール フィルターを作成するのに DAX を使用します。 詳細についてを参照してください。[テーブル モデルにおける DAX](../tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)します。 
   
-このレッスンの推定所要時間: **15 分**  
+このレッスンを完了するまでに時間を推定するには。**15 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 
-この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 4: リレーションシップの作成](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)です。 
+この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 4:リレーションシップの作成](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)です。 
   
 ## <a name="create-calculated-columns"></a>計算列の作成  
   
@@ -46,7 +47,7 @@ ms.locfileid: "43063861"
   
     **Calculated Column 1** という新しい列が、 **Calendar Quarter** 列の左側に挿入されます。  
   
-4.  テーブルの上、数式バーに次の DAX 式を入力します。 オートコンプリートは、列やテーブルの完全修飾名を入力できるようにし、使用できる関数を一覧表示されます。  
+4.  テーブルの上、数式バーには、次の DAX 数式を入力します。オートコンプリートを利用すると、列やテーブルの完全修飾名を簡単に入力できるだけでなく、使用可能な関数の一覧も表示できます。  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -130,7 +131,7 @@ ProductCategoryName 計算列は ､ DimProductCategory テーブルの EnglishP
   
 ## <a name="whats-next"></a>次の操作
 
-[レッスン 6: メジャーを作成する](../tutorial-tabular-1400/as-lesson-6-create-measures.md)します。
+[レッスン 6:メジャーを作成](../tutorial-tabular-1400/as-lesson-6-create-measures.md)です。
   
   
   

@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services チュートリアル-レッスン 7: 主要業績評価指標の作成 |Microsoft Docs'
-ms.date: 08/27/2018
+title: Analysis Services チュートリアル レッスン 7:主要業績評価指標の作成 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e0cd1cfa0c468f28b5cadfc9757671f18206d2cd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087567"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685409"
 ---
 # <a name="create-key-performance-indicators"></a>主要業績評価指標の作成
 
@@ -22,11 +23,11 @@ ms.locfileid: "43087567"
 
 このレッスンでは、主要業績評価指標 (Kpi) を作成します。 Kpi がによって定義された値のパフォーマンス測定に使用される、*ベース*メジャーに対して、*ターゲット*も、メジャーまたは絶対値によって定義されている値。 KPI を使用すると、ビジネス プロフェッショナルがレポート クライアント アプリケーションを通じて、ビジネスの成功度や傾向をすばやく簡単に把握できるようになります。 詳細についてを参照してください[Kpi。](../tabular-models/kpis-ssas-tabular.md)
   
-このレッスンの推定所要時間: **15 分**  
+このレッスンを完了するまでに時間を推定するには。**15 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 
-この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 6: メジャーを作成](../tutorial-tabular-1400/as-lesson-6-create-measures.md)です。   
+この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 6:メジャーを作成](../tutorial-tabular-1400/as-lesson-6-create-measures.md)です。   
   
 ## <a name="create-key-performance-indicators"></a>主要業績評価指標の作成  
   

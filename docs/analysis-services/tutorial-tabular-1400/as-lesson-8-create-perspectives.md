@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services のチュートリアル レッスン 8: パースペクティブを作成 |Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,28 +9,29 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 080b20dbcf7438d26102a3bf906256343271af45
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 29a49478d75d7af5670f3e693cd87a5238c4ae11
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085323"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57684939"
 ---
 # <a name="create-perspectives"></a>パースペクティブを作成する
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-このレッスンでは、Internet Sales パースペクティブを作成します。 パースペクティブとは、モデルの一部を表示可能なサブセットとして定義するものです。これにより、ビジネス固有またはアプリケーション固有のビューポイントを的を絞って作成できます。 ユーザーは、パースペクティブを使用して、モデルに接続、モデル オブジェクトのみ (テーブル、列、メジャー、階層、および Kpi) そのパースペクティブで定義されているフィールドとして表示されます。 詳細についてを参照してください。[パースペクティブ](../tabular-models/perspectives-ssas-tabular.md)します。
+このレッスンでは、Internet Sales パースペクティブを作成します。 パースペクティブとは、モデルの一部を表示可能なサブセットとして定義するものです。これにより、ビジネス固有またはアプリケーション固有のビューポイントを的を絞って作成できます。 ユーザーは、パースペクティブを使用して、モデルに接続、モデル オブジェクトのみ (テーブル、列、メジャー、階層、および Kpi) そのパースペクティブで定義されているフィールドとして表示されます。 詳細については、「 [[パースペクティブ]](../tabular-models/perspectives-ssas-tabular.md)」を参照してください。
   
 このレッスンで作成する Internet Sales パースペクティブは、DimCustomer テーブル オブジェクトを除外します。 ビューから特定のオブジェクトを除外するパースペクティブを作成するときに、そのオブジェクトはまだモデルに存在します。 ただし、レポート クライアント フィールドの一覧に表示はされません。 計算列とメジャーは、パースペクティブに含まれているかどうかに関係なく、除外されたデータ オブジェクトに基づく計算を引き続き実行できます。  
   
 このレッスンの目的は、パースペクティブの作成方法を知ることと、テーブル モデル作成ツールに慣れることです。 このモデルに追加のテーブルを後で展開する場合は、モデルの在庫および販売などの別のビュー ポイントを定義する追加のパースペクティブを作成できます。  
   
-このレッスンを完了するまでに時間を推定: **5 分**  
+このレッスンを完了するまでに時間を推定するには。**5分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 
-この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 7: 主要業績評価指標の作成](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)です。  
+この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 7: 主要業績評価指標の作成](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)です。  
   
 ## <a name="create-perspectives"></a>パースペクティブを作成する  
   
@@ -50,7 +51,7 @@ ms.locfileid: "43085323"
 
 ## <a name="whats-next"></a>次の操作
 
-[レッスン 9: 階層を作成する](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)します。
+[レッスン 9:階層を作成する](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)します。
   
   
   

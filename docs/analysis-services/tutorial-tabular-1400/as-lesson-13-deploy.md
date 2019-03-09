@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services チュートリアル-レッスン 13: デプロイ |Microsoft Docs'
-ms.date: 08/27/2018
+title: Analysis Services チュートリアル レッスン 13:展開 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bad6f58800e6a023fe5014462fbe6bbaf76bfe8e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090434"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685309"
 ---
 # <a name="deploy"></a>配置
 
@@ -22,11 +23,11 @@ ms.locfileid: "43090434"
 
 このレッスンで配置のプロパティを構成します。サーバーを展開して、モデルの名前を指定します。 サーバーにモデルを展開します。 モデルが配置されると、ユーザーはレポート クライアント アプリケーションに接続できます。 詳細についてを参照してください。 [Azure Analysis Services へのデプロイ](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy)と[表形式モデル ソリューションの配置](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)します。  
   
-このレッスンの推定所要時間: **5 分**  
+このレッスンを完了するまでに時間を推定するには。**5 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 
-この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 12: Excel で分析](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)します。  
+この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 12:Excel で分析](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)します。  
 
 > [!IMPORTANT]  
 > Azure Analysis Services へのデプロイしている場合、あります[管理者のアクセス許可](https://docs.microsoft.com/azure/analysis-services/analysis-services-server-admins)serever でします。  

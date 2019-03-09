@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services チュートリアル補足のレッスン: 不規則階層 |Microsoft Docs'
-ms.date: 08/27/2018
+title: Analysis Services チュートリアル補足のレッスン:不規則階層 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1aa9b8b0e456bb4f4aeff0a2a8e03d4938a46399
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074832"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685399"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>補足のレッスン: 不規則階層
 
@@ -26,9 +27,9 @@ ms.locfileid: "43074832"
 
 互換性レベル 1400 の表形式モデルがある追加**メンバーを隠す**階層のプロパティ。 **既定**設定では、任意のレベルで空白のメンバーが存在しない前提としています。 **空のメンバーを非表示に**設定は、ピボット テーブル レポートやレポートに追加されたときに、階層から空のメンバーを除外します。  
   
-このレッスンの推定所要時間: **20 分**  
+このレッスンを完了するまでに時間を推定するには。**20 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 この補足のレッスンの記事では、表形式モデルのチュートリアルの一部です。 この補足のレッスンの実習を行う前に作成した前のレッスンをすべて完了した Adventure Works Internet Sales サンプル モデル プロジェクトがあるか。 
 
 を、チュートリアルの一環として AW Internet Sales プロジェクトを作成した場合、モデルにはまだが含まれていないデータや不規則な階層。 この補足のレッスンを完了するには、まず、いくつかのテーブルを追加することで、問題の作成、リレーションシップ、計算列、メジャー、および新しい組織階層を作成する必要があります。 その一部は、約 15 分かかります。 それから、ほんの数分でそれを解決します。  
@@ -90,7 +91,7 @@ ms.locfileid: "43074832"
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],5,1)) 
     ```
 
-6.  **DimEmployee**テーブルで、作成、[階層](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)という**組織**します。 次の列を順番に追加: **Level1**、 **Level2**、 **Level3**、 **Level4**、 **Level5**します。
+6.  **DimEmployee**テーブルで、作成、[階層](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)という**組織**します。 次の列を順番に追加します。**Level1**、 **Level2**、 **Level3**、 **Level4**、 **Level5**します。
 
 7.  **FactResellerSales**テーブルで、次の作成、[メジャー](../tutorial-tabular-1400/as-lesson-6-create-measures.md):
 
@@ -121,6 +122,6 @@ ms.locfileid: "43074832"
     大幅に改善を検索するようになりました。
 
 ## <a name="see-also"></a>参照   
-[レッスン 9: 階層の作成](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)  
+[レッスン 9:階層を作成します。](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)  
 [補足のレッスン - 動的なセキュリティ](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [補足のレッスン - 詳細行](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)  

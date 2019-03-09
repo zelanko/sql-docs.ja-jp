@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2017 Analysis Services の旧バージョンとの互換性 |Microsoft Docs
-ms.date: 01/09/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e7903de787a1b63627bca8da23369fbee9014c6e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185078"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685739"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services の旧バージョンとの互換性 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -32,7 +33,7 @@ A*非推奨の機能*は将来のリリースで製品から廃止されます�
 |多次元|データ マイニング|
 |多次元|リモート リンク メジャー グループ|
 |テーブル|1100 と 1103 互換性レベル モデル|
-|テーブル|表形式オブジェクト モデルのプロパティ:Column.TableDetailPosition、Column.IsDefaultLabel、Column.IsDefaultImage|
+|テーブル|表形式オブジェクト モデルのプロパティ:Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
 |ツール|SQL Server Profiler for Trace Capture<br /><br /> この機能に代えて、SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。  <br /> 「 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)」を参照してください。|  
 |ツール|Server Profiler for Trace Replay <br />置換します。 これに代わる機能はありません。|  
 |トレース管理オブジェクトおよびトレース API|Microsoft.AnalysisServices.Trace オブジェクト (Analysis Services Trace および Replay オブジェクトの API を含みます)。 置き換えは、複数の手順で行います。<br /><br /> -トレース構成:Microsoft.SqlServer.Management.XEvent<br />-トレース読み取り:Microsoft.SqlServer.XEvent.Linq<br />-トレース再生。なし|  

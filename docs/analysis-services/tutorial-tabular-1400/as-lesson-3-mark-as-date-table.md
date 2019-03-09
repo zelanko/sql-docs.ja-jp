@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services チュートリアル-レッスン 3: 日付テーブルとしてマーク |Microsoft Docs'
-ms.date: 08/27/2018
+title: Analysis Services チュートリアル-レッスン 3:日付テーブルとしてマーク |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,18 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 282103baa0283e46e31b9ffe6b837e90e4bfac3c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2008f066d537b1f88b9bf674c4a864217eae9890
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069399"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685570"
 ---
 # <a name="mark-as-date-table"></a>日付テーブルとしてマーク
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-レッスン 2: データの取得、インポートしたという名前のディメンション テーブル**DimDate**します。 モデルでこのテーブルは DimDate と命名、中にそのことができますとも呼ばれます、*日付テーブル*日付と時刻のデータが含まれていることにします。  
+「レッスン 2。データを取得という名前のディメンション テーブルをインポートした**DimDate**します。 モデルでこのテーブルは DimDate と命名、中にそのことができますとも呼ばれます、*日付テーブル*日付と時刻のデータが含まれていることにします。  
   
 含むプロパティを指定する必要があります、後でメジャーを作成する場合のように、DAX タイム インテリジェンス関数を使用するたびに、*日付テーブル*および一意の識別子*日付列*そのテーブルにします。
   
@@ -28,11 +29,11 @@ ms.locfileid: "43069399"
 
 日付テーブルと日付列をマークする前に、モデルを理解しやすくする少しハウスキーピングを実行するよい機会になります。 DimDate テーブルという名前の列がわかります**FullDateAlternateKey**します。 この列には、毎日、テーブルに含まれる各カレンダー年の 1 つの行が含まれています。 メジャーの数式とレポートに、この列を多く使用します。 しかし、FullDateAlternateKey はこのコラムの優れた識別子では実際にありません。 名前を変更する**日付**、簡単に識別し、式に含めることができます。 可能であればは、SSDT でのクライアント レポート アプリケーションを識別しやすいようにするテーブルと列のようなオブジェクトの名前を変更することをお勧めです。 
   
-このレッスンを完了するまでに時間を推定: **3 分**  
+このレッスンを完了するまでに時間を推定するには。**3 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 
-この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 2: データを取得する](../tutorial-tabular-1400/as-lesson-2-get-data.md)します。 
+この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 2:データを取得する](../tutorial-tabular-1400/as-lesson-2-get-data.md)します。 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>FullDateAlternateKey 列の名前を変更するには
 
@@ -54,5 +55,5 @@ ms.locfileid: "43069399"
 
 ## <a name="whats-next"></a>次の操作
 
-[レッスン 4: リレーションシップの作成](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)です。
+[レッスン 4:リレーションシップの作成](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)です。
   
