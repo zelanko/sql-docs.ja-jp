@@ -7,12 +7,12 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
-ms.openlocfilehash: 06ce1d325caa0835381fd6f9ecd5428d2bbb6f66
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 672898e93331fdcf65b1fe978a5ebb47956fdb5b
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018478"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683622"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>SQL Server ビッグ データ クラスター上で IntelliJ での Spark ジョブを送信します。
 
@@ -21,14 +21,14 @@ SQL Server のビッグ データ クラスターの主なシナリオの 1 つ�
 ## <a name="prerequisites"></a>前提条件
 
 - SQL Server のビッグ データ クラスター。
-- Oracle Java Development Kit。 インストールすることができます、 [Oracle の web サイト](https://aka.ms/azure-jdks)します。
+- Oracle Java Development Kit。 インストールすることができます、 [Oracle の web サイト](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)します。
 - IntelliJ IDEA。 インストールすることができます、 [JetBrains の web サイト](https://www.jetbrains.com/idea/download/)します。
 - Azure Toolkit for IntelliJ の拡張機能。 インストール手順については、次を参照してください。 [Azure Toolkit for IntelliJ のインストール](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation)します。
 
 ## <a name="link-sql-server-big-data-cluster"></a>リンクの SQL Server のビッグ データ クラスター
 1. IntelliJ IDEA ツールを開きます。
 
-2. 自己署名証明書を使用している場合の SSL 証明書の検証を無効にしてください**ツール**メニューの  **Azure**、 **Spark クラスター SSL 証明書の検証**、し、**を無効にする**します。
+2. 自己署名証明書を使用している場合から SSL 証明書の検証を無効にする**ツール**メニューの  **Azure**、 **Spark クラスター SSL 証明書の検証**し、**無効にする**します。
 
     ![SQL Server のビッグ データ クラスターをリンク - SSL を無効にします。](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
@@ -66,7 +66,7 @@ SQL Server のビッグ データ クラスターの主なシナリオの 1 つ�
 
    ![Scala プラグインのインストール ダイアログ ボックス](./media/spark-submit-job-intellij-tool-plugin/Choose-Scala-Plugin.PNG)
 
-5. **新しいプロジェクト**ウィンドウで、次の操作を行います。  
+5. **新しいプロジェクト**ウィンドウで、次の手順を実行します。  
 
     ![Spark SDK の選択](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
@@ -78,7 +78,7 @@ SQL Server のビッグ データ クラスターの主なシナリオの 1 つ�
 
 6. **[完了]** を選択します。
 
-7. Spark プロジェクトでは、アーティファクトが自動的に作成します。 成果物を表示するには、次の操作を行います。
+7. Spark プロジェクトでは、アーティファクトが自動的に作成します。 成果物を表示するには、次の手順を実行します。
 
    A. **ファイル**メニューの **プロジェクト構造**します。
 
@@ -120,6 +120,75 @@ SQL Server にビッグ データ クラスターのリンクの後にそこに�
 2. クリックして**SparkJobRun**選択したクラスターにプロジェクトを送信します。 **クラスターで Spark ジョブをリモート** タブは下部にあるジョブの実行の進行状況を表示します。 アプリケーションを停止するには、赤いボタンをクリックします。  
 
     ![リンクのビッグ データ クラスターの実行](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-run.png)
+
+## <a name="spark-console"></a>Spark コンソール
+Spark ローカル Console(Scala) を実行したり、Spark Livy 対話型セッション Console(Scala) を実行できます。
+
+### <a name="spark-local-consolescala"></a>Spark ローカル Console(Scala)
+WINUTILS が満たされていることを確認します。EXE の前提条件です。
+
+1. メニュー バーに移動します**実行** > **構成の編集.。**
+
+2. **実行/デバッグ構成**に移動します ウィンドウの左側のウィンドウで、 **SQL Server のビッグ データ クラスター上の Apache Spark** > **[SQL での Spark] myApp**します。
+
+3. メイン ウィンドウで、選択、**ローカルで実行**タブ。
+
+4. 次の値を指定し、 **OK**:
+
+    |プロパティ |値 |
+    |----|----|
+    |ジョブのメイン クラス|既定値は、選択したファイルからメイン クラスです。 クラスを変更するには、省略記号ボタンを選択して (**.**) を別のクラスを選択します。|
+    |環境変数|HADOOP_HOME の値が正しいことを確認します。|
+    |WINUTILS.exe の場所|パスが正しいことを確認します。|
+
+    ![セットのローカルのコンソールの構成](./media/spark-submit-job-intellij-tool-plugin/console-set-configuration.png)
+
+5. プロジェクトに移動します**myApp** > **src** > **メイン** > **scala**  > 。 **myApp**します。  
+
+6. メニュー バーに移動します。**ツール** > **Spark コンソール** > **Spark のローカル Console(Scala) 実行**します。
+
+7. 依存関係を修正する自動かどうかを確認する 2 つのダイアログ ボックスが表示されます。 その場合は、選択**自動修正**します。
+
+    ![Spark 自動 Fix1](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix1.png)
+
+    ![Spark 自動 Fix2](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix2.png)
+
+8. コンソールは、次の図のようになります。 コンソール ウィンドウの種類で`sc.appName`、し、ctrl キーを押しながら Enter キーを押します。  結果が表示されます。 ローカルのコンソールを終了するには、赤いボタンをクリックします。
+
+    ![ローカルのコンソールの結果](./media/spark-submit-job-intellij-tool-plugin/local-console-result.png)
+
+
+### <a name="spark-livy-interactive-session-consolescala"></a>Livy 対話型セッション Console(Scala) を spark します。
+Spark Livy 対話型セッション Console(Scala) は IntelliJ 2018.2 と 2018.3 でのみサポートされます。
+
+1. メニュー バーに移動します**実行** > **構成の編集.。**
+
+2. **実行/デバッグ構成**に移動します ウィンドウの左側のウィンドウで、 **SQL Server のビッグ データ クラスター上の Apache Spark** > **[SQL での Spark] myApp**します。
+
+3. メイン ウィンドウで、選択、**クラスターにリモートで実行**タブ。
+
+4. 次の値を指定し、 **OK**:
+
+    |プロパティ |値 |
+    |----|----|
+    |Spark クラスター (Linux のみ)|アプリケーションを実行する SQL Server のビッグ データ クラスターを選択します。|
+    |メイン クラス名|既定値は、選択したファイルからメイン クラスです。 クラスを変更するには、省略記号ボタンを選択して (**.**) を別のクラスを選択します。|
+
+    ![対話型コンソール セットの構成](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
+
+5. プロジェクトに移動します**myApp** > **src** > **メイン** > **scala**  > 。 **myApp**します。  
+
+6. メニュー バーに移動します。**ツール** > **Spark コンソール** > **実行 Spark Livy 対話型セッション Console(Scala)** します。
+
+7. コンソールは、次の図のようになります。 コンソール ウィンドウの種類で`sc.appName`、し、ctrl キーを押しながら Enter キーを押します。  結果が表示されます。 ローカルのコンソールを終了するには、赤いボタンをクリックします。
+
+    ![対話型コンソールの結果](./media/spark-submit-job-intellij-tool-plugin/interactive-console-result.png)
+
+### <a name="send-selection-to-spark-console"></a>選択範囲を Spark コンソールに送信します。
+
+便宜上、Livy 対話型セッション Console(Scala)、ローカル コンソールにいくつかのコードを送信することによって、スクリプトの結果を確認できます。 Scala ファイルでいくつかのコードを強調表示は、右クリックし、**選択する Spark コンソールに送信**します。 選択したコードは、コンソールに送信され、実行します。 コンソールでのコードの後に、結果が表示されます。 既存の場合、コンソールは、エラーを確認します。  
+
+   ![選択範囲を Spark コンソールに送信します。](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>次のステップ
 SQL Server のビッグ データ クラスターと関連するシナリオの詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターは](big-data-cluster-overview.md)でしょうか。

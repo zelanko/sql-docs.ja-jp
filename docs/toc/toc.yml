@@ -156,6 +156,32 @@ items:
         href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
       - name: 拡張された Spark History Server を使用する
         href: ../big-data-cluster/spark-history-server.md
+  - name: リファレンス
+    items:
+    - name: mssqlctl リファレンス
+      items:
+      - name: mssqlctl
+        href: ../big-data-cluster/reference-mssqlctl.md
+      - name: アプリ配置
+        items:
+        - name: mssqlctl アプリ
+          href: ../big-data-cluster/reference-mssqlctl-app.md
+        - name: mssqlctl アプリ テンプレート
+          href: ../big-data-cluster/reference-mssqlctl-app-template.md
+      - name: クラスター
+        items:
+        - name: mssqlctl クラスター
+          href: ../big-data-cluster/reference-mssqlctl-cluster.md
+        - name: mssqlctl クラスターの構成
+          href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+        - name: mssqlctl クラスターのデバッグ
+          href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
+      - name: ストレージ
+        items:
+        - name: mssqlctl ストレージ
+          href: ../big-data-cluster/reference-mssqlctl-storage.md
+        - name: mssqlctl ストレージのマウント
+          href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: ビジネス継続性
   href: redirectfrom-business-continuity-10.md
   items:
@@ -6847,8 +6873,6 @@ items:
             href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: チューニング
     items:
-    - name: アダプティブ クエリ処理
-      href: ../relational-databases/performance/adaptive-query-processing.md
     - name: 自動調整
       href: ../relational-databases/automatic-tuning/automatic-tuning.md
     - name: カーディナリティ推定
@@ -7988,7 +8012,7 @@ items:
     - name: インストール
       href: ../azure-data-studio/download.md
     - name: リリース ノート
-      href: ../azure-data-studio/release-notes.md
+      href: ../azure-data-studio/release-notes-azure-data-studio.md
     - name: クイック スタート
       items:
       - name: SQL Server に対する接続およびクエリ
@@ -17159,9 +17183,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery での名前空間の処理
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 085652bdfcac1b7bea33c7e9307da37d749a65ea
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: c1bcf717605ff5c3cd1cf5722154fe518721c9e6
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401974"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579792"
