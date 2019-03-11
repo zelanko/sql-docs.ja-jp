@@ -11,6 +11,7 @@ apiname:
 - SQLBindParameter
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBindParameter
@@ -20,19 +21,19 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79f340d95cf1cd15b176069458347b2bea97055c
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: dc566c7cfd86e76df5389e56b7465dcd04b76f51
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420217"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683642"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 関数
 
 **準拠**  
  バージョンが導入されました。ODBC 2.0 の規格に準拠します。ODBC  
   
- **まとめ**  
+ **概要**  
  **SQLBindParameter**バッファーを SQL ステートメントでパラメーター マーカーにバインドします。 **SQLBindParameter**基になるドライバーが Unicode データをサポートしていない場合でも、Unicode の C データ型へのバインドをサポートしています。  
   
 > [!NOTE]  
@@ -597,7 +598,7 @@ int main() {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|詳細|解決方法|  
 |---------------------------|---------|  
 |ステートメント内のパラメーターに関する情報を返す|[SQLDescribeParam 関数](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
 |SQL ステートメントを実行します。|[SQLExecDirect 関数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
