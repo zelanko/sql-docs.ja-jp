@@ -18,18 +18,15 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 64341fd261cb1c1e419b925049cf86403a64ab3e
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e3ea6f1d57c9f6afef91d9d66a5db001302aabb6
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299600"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803117"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、指定した形式とオプションのカルチャを使用して書式設定された値を返します。 文字列としての日付/時刻と数値のロケール依存の書式指定には FORMAT 関数を使用します。 一般的なデータ型変換では、引き続き CAST または CONVERT を使用します。  
@@ -95,8 +92,8 @@ FORMAT ( value, format [, culture ] )
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-simple-format-example"></a>A. 単純な FORMAT 例  
- 次の例では、さまざまなカルチャ用にフォーマットされた単純な日付を返します。  
+### <a name="a-simple-format-example"></a>A. シンプルな FORMAT 例  
+ 次の例では、さまざまなカルチャ用にフォーマットされたシンプルな日付を返します。  
   
 ```sql  
 DECLARE @d DATETIME = '10/01/2011';  

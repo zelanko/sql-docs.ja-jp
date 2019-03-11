@@ -47,18 +47,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3d18ca29e09509c6e9d15e4064efc1efdd9960
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: a9bd4b93d90bc75e7dfc97a526cee544cb71b69a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300489"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801897"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse、および Parallel Data Warehouse で、[!INCLUDE[tsql](../../includes/tsql-md.md)] または共通言語ランタイム (CLR) のストアド プロシージャを作成します。 ストアド プロシージャは、次のことを実行できる点で、他のプログラミング言語のプロシージャに似ています。  
   
@@ -317,7 +314,7 @@ SNAPSHOT
 DATEFIRST = *number*  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 週の最初の曜日を 1 ～ 7 の数値で指定します。 DATEFIRST は省略可能です。 指定しない場合、設定は指定された言語から推定されます。  
+ 週の最初の曜日を 1 - 7 の数値で指定します。 DATEFIRST は省略可能です。 指定しない場合、設定は指定された言語から推定されます。  
   
  詳しくは、「[SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)」をご覧ください。  
   
@@ -360,7 +357,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 ## <a name="best-practices"></a>ベスト プラクティス  
  ここではベスト プラクティスをすべて網羅しているわけではありませんが、次の推奨事項に従うと、プロシージャのパフォーマンスが向上する場合があります。  
   
--   プロシージャの本体の最初のステートメントとして SET NOCOUNT ON ステートメントを使用する。 つまり、SET NOCOUNT ON ステートメントを AS キーワードの直後に配置します。 これにより、SELECT、INSERT、UPDATE、MERGE、および DELETE ステートメントの実行後に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクライアントに返すメッセージが表示されません。 この不要なネットワーク オーバーヘッドを軽減することにより、データベースとアプリケーションの全体的なパフォーマンスが向上します。 詳しくは、「[SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)」をご覧ください。  
+-   プロシージャの本体の最初のステートメントとして SET NOCOUNT ON ステートメントを使用する。 つまり、このステートメントを AS キーワードの直後に配置します。 これにより、SELECT、INSERT、UPDATE、MERGE、および DELETE ステートメントの実行後に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクライアントに返すメッセージが表示されません。 この不要なネットワーク オーバーヘッドを軽減することにより、データベースとアプリケーションの全体的なパフォーマンスが向上します。 詳しくは、「[SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)」をご覧ください。  
   
 -   プロシージャ内のデータベース オブジェクトを作成または参照するときにスキーマ名を使用する。 これにより、複数のスキーマを検索する必要がない場合に、[!INCLUDE[ssDE](../../includes/ssde-md.md)]でオブジェクト名の解決に要する時間が短縮されます。 また、スキーマを指定せずにオブジェクトを作成したときに割り当てられるユーザーの既定のスキーマが原因で発生する権限とアクセスの問題を防ぐこともできます。  
   
@@ -395,7 +392,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
   
  プロシージャは、別のプロシージャを呼び出す場合、または CLR ルーチン、型、集計を参照してマネージド コードを実行する場合に入れ子になります。 プロシージャとマネージド コード参照は、32 レベルまで入れ子にすることができます。 入れ子のレベルは、呼び出されたプロシージャまたはマネージド コード参照の実行が開始されると 1 つ増加し、呼び出されたプロシージャまたはマネージド コード参照の実行が終了されると 1 つ減少します。 マネージド コード内から呼び出されたメソッドは、この入れ子レベルの制限としてはカウントされません。 ただし、CLR ストアド プロシージャで、SQL Server マネージド プロバイダーを利用してデータ アクセス操作が実行される場合、マネージド コードから SQL への移行時に入れ子のレベルが 1 つ追加されます。  
   
- 入れ子の最高レベルを越える呼び出しを行うと、一連の呼び出しが失敗します。 @@NESTLEVEL 関数を使用すると、現在実行中のストアド プロシージャの入れ子レベルを返すことができます。  
+ 入れ子の最高レベルを超える呼び出しを行うと、一連の呼び出しが失敗します。 @@NESTLEVEL 関数を使用すると、現在実行中のストアド プロシージャの入れ子レベルを返すことができます。  
   
 ## <a name="interoperability"></a>相互運用性  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] プロシージャを作成または変更すると、[!INCLUDE[tsql](../../includes/tsql-md.md)]では SET QUOTED_IDENTIFIER と SET ANSI_NULLS の両方の設定が保存されます。 これらの元の設定は、プロシージャの実行時に使用されます。 したがって、プロシージャの実行中は、SET QUOTED_IDENTIFIER と SET ANSI_NULLS のクライアント セッションの設定は無視されます。  

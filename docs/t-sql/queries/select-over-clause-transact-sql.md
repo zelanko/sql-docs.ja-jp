@@ -26,20 +26,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53de562bb59b279f511e73a66ad308eff029b26e
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299429"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803327"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
-
-  関連するウィンドウ関数が適用される前に、行セットのパーティション処理と並べ替えを決定します。 つまり、OVER 句はクエリ結果セット内のウィンドウまたはユーザー指定の行セットを定義します。 その後、ウィンドウ関数はウィンドウ内の各行の値を計算します。 OVER 句と関数を使用して、移動平均、累積集計、集計途中経過、グループ結果ごとの上位 N などの集計値を計算できます。  
+  関連するウィンドウ関数が適用される前に、行セットのパーティション処理と並べ替えを決定します。 つまり、OVER 句はクエリ結果セット内のウィンドウまたはユーザー指定の行セットを定義します。 その後、ウィンドウ関数はウィンドウ内の各行の値を計算します。 関数で OVER 句を使用すると、移動平均、累積集計、集計途中経過、グループ結果ごとの上位 N などの集計値を計算できます。  
   
 -   [順位付け関数](../../t-sql/functions/ranking-functions-transact-sql.md)  
   
@@ -122,7 +119,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  結果セットの各パーティション内の行の論理的な順序を定義します。 つまり、ウィンドウ関数の計算が実行される論理的な順序を指定します。  
   
  *order_by_expression*  
- 並べ替えに使用する列または式を指定します。 *order_by_expression* で参照できるのは FROM 句で取得した列だけです。 整数を使用して列の名前または別名を表すことはできません。  
+ 並べ替えに使用する列または式を指定します。 *order_by_expression* で参照できるのは FROM 句で取得した列だけです。 整数を指定して列の名前または別名を表すことはできません。  
   
  COLLATE *collation_name*  
  *collation_name* で指定した照合順序に従って ORDER BY 操作を実行することを指定します。 *collation_name* には、Windows 照合順序名または SQL 照合順序名を指定できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 COLLATE は、**char**、**varchar**、**nchar**、**nvarchar** 型の列にのみ適用できます。  
@@ -135,7 +132,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  パーティション内の開始点と終了点を指定することで、パーティション内の行をさらに制限します。 これは、論理アソシエーションまたは物理アソシエーションによって現在の行を基準に行の範囲を指定することで行います。 物理アソシエーションは ROWS 句を使用することで実現されます。  
   
- ROWS 句は、現在行の前または後にある固定数の行を指定することにより、パーティション内の行を限定します。 または、RANGE 句は、現在行の値を基準とする値の範囲を指定することにより、パーティション内の行を論理的に限定します。 前後の行は、ORDER BY 句での順序に基づいて定義されます。 ウィンドウ フレーム "RANGE ...CURRENT ROW ..." には、ORDER BY 式に現在行と同じ値を持つすべての行が含まれます。 たとえば、ROWS BETWEEN 2 PRECEDING AND CURRENT ROW は、関数の操作対象である行のウィンドウが、現在行の 2 行前の行から現在行までの 3 行 (現在行を含みます) であることを意味します。  
+ ROWS 句では、現在行の前または後にある固定数の行を指定することにより、パーティション内の行が限定されます。 または、RANGE 句は、現在行の値を基準とする値の範囲を指定することにより、パーティション内の行を論理的に限定します。 前後の行は、ORDER BY 句での順序に基づいて定義されます。 ウィンドウ フレーム "RANGE ...CURRENT ROW ..." には、ORDER BY 式に現在行と同じ値を持つすべての行が含まれます。 たとえば、ROWS BETWEEN 2 PRECEDING AND CURRENT ROW は、関数の操作対象である行のウィンドウが、現在行の 2 行前の行から現在行までの 3 行 (現在行を含みます) であることを意味します。  
   
 > [!NOTE]  
 >  ROWS または RANGE を使用する場合は、ORDER BY 句を指定する必要があります。 ORDER BY に複数の順序式が含まれる場合、ROW FOR RANGE では、現在行を決定するときに ORDER BY リスト内のすべての列が考慮されます。  
@@ -161,10 +158,10 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  UNBOUNDED FOLLOWING  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
- ウィンドウがパーティションの最後の行で終了することを指定します。 UNBOUNDED FOLLOWING はウィンドウの終了位置としてのみ指定できます。 たとえば、RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING は、現在行から開始してパーティションの最後の行で終了するウィンドウを定義します。  
+ ウィンドウがパーティションの最後の行で終了することを指定します。 UNBOUNDED FOLLOWING はウィンドウの終了位置としてのみ指定できます。 たとえば、RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING では、現在行から開始してパーティションの最後の行で終了するウィンドウが定義されます。  
   
  \<unsigned value specification> FOLLOWING  
- \<unsigned value specification> は、現在行より後にある行または値の数を示します。 \<unsigned value specification> FOLLOWING をウィンドウの開始位置として指定するときは、終了位置を \<unsigned value specification> FOLLOWING にする必要があります。 たとえば、ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING は、現在行より後の 2 行目から開始して現在行より後の 10 行目で終了するウィンドウを定義します。 RANGE に対してはこの指定を使用できません。  
+ \<unsigned value specification> は、現在行より後にある行または値の数を示します。 \<unsigned value specification> FOLLOWING をウィンドウの開始位置として指定するときは、終了位置を \<unsigned value specification> FOLLOWING にする必要があります。 たとえば、ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING では、現在行より後の 2 行目から開始して現在行より後の 10 行目で終了するウィンドウが定義されます。 RANGE に対してはこの指定を使用できません。  
   
  unsigned integer literal  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -174,7 +171,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 ## <a name="general-remarks"></a>全般的な解説  
  1 つの FROM 句を使用した 1 つのクエリで、複数のウィンドウ関数を使用できます。 各関数の OVER 句は、パーティション分割や並べ替えが異なっていてもかまいません。  
   
- PARTITION BY を指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 
+ PARTITION BY を指定しない場合、関数ではクエリ結果セットのすべての行が 1 つのグループとして扱われます。 
  
 ### <a name="important"></a>重要:
 

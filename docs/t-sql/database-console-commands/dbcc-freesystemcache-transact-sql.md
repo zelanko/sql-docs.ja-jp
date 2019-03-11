@@ -25,17 +25,17 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 4656a02f268987db7375e8211aec5a275379ea00
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ce6ac47c2348f1acd082cb86e1d4756df6012a91
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209731"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662806"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-キャッシュ全体から未使用のすべてのキャッシュ エントリを解放します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、未使用のキャッシュ エントリをバックグラウンドで事前にクリーンアップし、メモリを現在のエントリで使用できるようにします。 ただし、このコマンドを使用できるのは、キャッシュ全体または指定したリソース ガバナー プール キャッシュから未使用のキャッシュ エントリを手動で削除する場合です。
+キャッシュ全体から未使用のすべてのキャッシュ エントリを解放します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、未使用のキャッシュ エントリをバックグラウンドで事前にクリーンアップし、メモリを現在のエントリで使用できるようにします。 ただし、このコマンドを使用できるのは、各キャッシュまたは指定したリソース ガバナー プール キャッシュから未使用のキャッシュ エントリを手動で削除する場合です。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,15 +49,15 @@ DBCC FREESYSTEMCACHE
 ```  
   
 ## <a name="arguments"></a>引数  
- ( 'ALL' [,*pool_name* ] )  
- ALL はサポートされるすべてのキャッシュを指定します。  
- *pool_name* は Resource Governor プール キャッシュを指定します。 このプールに関連付けられたエントリだけが解放されます。  
+( 'ALL' [,_pool\_name_ ] )  
+ALL はサポートされるすべてのキャッシュを指定します。  
+_pool\_name_ は Resource Governor プール キャッシュを指定します。 このプールに関連付けられたエントリだけが解放されます。  
   
- MARK_IN_USE_FOR_REMOVAL  
- 現在使用しているエントリが使用されなくなったら、それぞれのキャッシュから非同期に解放します。 DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL の実行後にキャッシュ内に作成された新しいエントリには影響ありません。  
+MARK_IN_USE_FOR_REMOVAL  
+現在使用しているエントリが使用されなくなったら、それぞれのキャッシュから非同期に解放します。 DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL の実行後にキャッシュ内に作成された新しいエントリには影響ありません。  
   
- NO_INFOMSGS  
- すべての情報メッセージを表示しないようにします。  
+NO_INFOMSGS  
+すべての情報メッセージを表示しないようにします。  
   
 ## <a name="remarks"></a>Remarks  
 DBCC FREESYSTEMCACHE を実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュが消去されます。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアがクリアされるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、'DBCC FREEPROCCACHE' 操作または 'DBCC FREESYSTEMCACHE' 操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。

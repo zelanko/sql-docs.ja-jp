@@ -1,8 +1,8 @@
 ---
 title: クエリ ヒント (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/04/2019
-ms.prod: sqll
+ms.date: 02/21/2019
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
@@ -53,15 +53,15 @@ helpviewer_keywords:
 - USE HINT query hint
 - QUERY_PLAN_PROFILE query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1d5dc400cde1ded385d3050a6d6dc120cf430fbb
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 953fcb26527f709abd9679da3a3f061976d3ef74
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265379"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334799"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -217,7 +217,7 @@ MAXRECURSION _number_
 NO_PERFORMANCE_SPOOL    
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-Spool 演算子がクエリ プランに追加されないようにします (ただし、有効な更新セマンティクスを保証するためにスプールが必要なプランを除きます)。 一部のシナリオでは、spool 演算子を使用するとパフォーマンスが低下する可能性があります。 たとえば、spool のサイズは、tempdb を使用し、スプール操作を実行している多くの同時実行クエリがある場合に、tempdb の競合が発生することがあります。  
+Spool 操作は、(を除く、計画、スプールが有効な更新のセマンティクスを保証するために必要な場合) のクエリ プランに追加されないようにします。 一部のシナリオでは、spool 演算子を使用するとパフォーマンスが低下する可能性があります。 たとえば、spool のサイズは、tempdb を使用し、スプール操作を実行している多くの同時実行クエリがある場合に、tempdb の競合が発生することがあります。  
   
 OPTIMIZE FOR ( _@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
 クエリをコンパイルおよび最適化するときにローカル変数に対して特定の値を使用するように、クエリ オプティマイザーに指示します。 この値はクエリを最適化する過程でのみ使用され、クエリの実行時には使用されません。  
@@ -289,6 +289,12 @@ ROBUST PLAN
    このヒント名は、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138 と同等です。
 *  'DISABLE_PARAMETER_SNIFFING'      
    1 つまたは複数のパラメーターを指定してクエリをコンパイルする際に、平均データ分布を使用するようにクエリ オプティマイザーに指示します。 この指示により、クエリをコンパイルするときに最初に使用されていたパラメーター値にクエリ プランが依存しなくなります。 このヒント名は、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 を指定した場合、または[データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を PARAMETER_SNIFFING=OFF に設定した場合と同等です。
+* 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
+  行モード メモリ許可フィードバックを無効にします。 詳細については、「[行モード メモリ許可フィードバック](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback)」を参照してください。
+* 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
+  スカラー UDF のインライン化を無効にします。 詳細については、「[スカラー UDF のインライン化](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)」を参照してください。
+* 'DISALLOW_BATCH_MODE'    
+  バッチ モード実行を無効にします。 詳細については、「[実行モード](../../relational-databases/query-processing-architecture-guide.md#execution-modes)」を参照してください。
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    カーディナリティ推定が必要なすべての先頭のインデックス列に対して、クイック統計情報 (ヒストグラム修正) を自動的に生成できるようにします。 カーディナリティを推定するために使用されるヒストグラムは、この列の実際の最大値または最小値を考慮するクエリのコンパイル時に調整されます。 このヒント名は、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 と同等です。 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     

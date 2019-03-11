@@ -18,12 +18,12 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b408b3f4d71f80bb2317a58ddd0ff0f578807946
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3737c5dabc8b88970a24cbadcc9617457cf862eb
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202811"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828132"
 ---
 # <a name="connect-to-server-database-engine"></a>[サーバーへの接続] \(データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "53202811"
   
 > [!NOTE]  
 > [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] のアクティブなユーザー インスタンスに接続するには、`np:\\.\pipe\3C3DF6B1-2262-47\tsql\query` などの、パイプ名を指定する名前付きパイプ プロトコルを使用して接続します。 詳細については、[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] のドキュメントを参照してください。  
-  
+> [!NOTE]  
+> 接続は、通常、"最近使用した (MRU)" の履歴で保持されます。 MRU からエントリを削除するには、**[サーバー名]** コンボ ボックス上をクリックし、削除するサーバーの名前を選択し、**DEL** キーを押すだけです。  
+   
 **[認証]**  
 SSMS の現在のバージョンでは、[!INCLUDE[ssDE](../../includes/ssde_md.md)] のインスタンスへの接続時に 5 つの認証モードを用意しています。 認証ダイアログ ボックスが次の一覧と一致しない場合は、[SQL Server Management Studio (SSMS) のダウンロード](../download-sql-server-management-studio-ssms.md) から SSMS の最新のバージョンをダウンロードします。  
 

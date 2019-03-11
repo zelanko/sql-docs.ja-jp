@@ -13,12 +13,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 657118f6b10b32d85f9020f01d95bf12eecb4498
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: aedefdb9234279a3be93bcfb4705e227e0badebd
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701140"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590397"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>ダイアグラムでテーブル間のリレーションシップを作成する方法 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "51701140"
   
 2.  選択した列を関連テーブルにドラッグします。  
   
-3.  **[外部キーのリレーションシップ]** ダイアログ ボックスと **[テーブルと列]** ダイアログ ボックスが表示されます。後者のダイアログ ボックスが手前に表示されます。  
+3.  2 つのダイアログ ボックス、**[外部キーのリレーションシップ]** と **[テーブルと列]** が表示されます。後者のダイアログ ボックスが手前に表示されます。  
   
-4.  **[リレーションシップ名]** には、FK_*localtable*_*foreigntable*という形式の名前が表示されます。 この値は変更できます。  
+4.  **[リレーションシップ名]** には、FK_*localtable*\_*foreigntable* という形式の名前が表示されます。 この値は変更できます。  
   
 5.  **[主キー テーブル]** に適切なテーブルが指定されていることを確認します。  
   

@@ -28,22 +28,19 @@ helpviewer_keywords:
 - matching patterns [SQL Server]
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
-author: douglaslMS
-ms.author: douglasl
+author: juliemsft
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 796b54f85cb7f2bbcaade9d6c8948857b2be2ce7
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.openlocfilehash: 1e26632a80efce073df66f3d4fd564d513e4b28e
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331552"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334549"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
   指定された文字列が指定されたパターンと一致するかどうかを判断します。 パターンは、標準の文字とワイルドカード文字を含むことができます。 パターン検索時に、標準の文字は文字列に指定された文字と正確に一致する必要があります。 しかし、ワイルドカード文字は文字列の任意の部分と一致することができます。 = や != などの文字列比較演算子を使用する場合と比べて、ワイルドカード文字を使用する方がより柔軟に LIKE 演算子を使用できます。 引数が文字列データ型でない場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は可能であれば引数を文字列データ型に変換します。  
   
@@ -87,7 +84,7 @@ match_expression [ NOT ] LIKE pattern
  *match_expression* が、指定された *pattern* と一致する場合、LIKE は TRUE を返します。  
   
 ## <a name="remarks"></a>Remarks  
- LIKE を使用して文字列の比較を行うときは、パターン文字列中のすべての文字が比較の対象になります。 重要な文字として先頭または末尾のスペースがあります。 クエリ内の比較で LIKE 'abc ' 文字列 (abc に空白が 1 つ続く) を含むすべての行が返される場合、列の値が"abc" (abc の後ろに空白がない) の行は返されません。 ただし、パターンが一致する式の中の後続する空白は無視されます。 クエリ内の比較で LIKE 'abc' 文字列 (abc の後ろに空白がない) を含むすべての行が返される場合、"abc" で始まり、0 または空白が後続するすべての行が返されます。  
+ LIKE を使用して文字列の比較を行うときは、パターン文字列中のすべての文字が比較の対象になります。 重要な文字として先頭または末尾のスペースがあります。 クエリ内の比較で LIKE 'abc ' 文字列 (abc に空白が 1 つ続く) を含むすべての行が返される場合、列の値が"abc" (abc の後ろに空白がない) の行は返されません。 ただし、パターンが一致する式の中の後続する空白は無視されます。 クエリ内の比較で LIKE 'abc' 文字列 (abc の後ろに空白がない) を含むすべての行が返される場合、"abc" で始まり、ゼロ個以上の空白が後続するすべての行が返されます。  
   
  **char** および **varchar** データのパターンを使用した文字列比較では、データ型ごとにデータの格納方法に制約があるため、LIKE 比較を渡すことができません。 次の例では、ローカル変数 **char** をストアド プロシージャに渡し、パターン検索を使用して、姓が指定された文字列で始まるすべての従業員を検索します。  
   
@@ -189,11 +186,11 @@ GO
 |LIKE '5[%]'|5%|  
 |LIKE '[_]n'|_n|  
 |LIKE '[a-cdf]'|a、b、c、d、または f|  
-|LIKE '[-acdf]'|-、a、c、d、または f|  
+|LIKE '[-acdf]'|-, a, c, d, or f|  
 |LIKE '[ [ ]'|[|  
 |LIKE ']'|]|  
 |LIKE 'abc[_]d%'|abc_d および abc_de|  
-|LIKE 'abc[def]'|abcd、abce、および abcf|  
+|LIKE 'abc[def]'|abcd、abce、abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>ESCAPE 句を使用するパターン検索  
  1 文字以上の特殊なワイルドカード文字を含む文字列を検索できます。 たとえば、customers データベース内の discounts テーブルには、パーセント記号 (%) を含む割引の値が格納されています。 ワイルドカード文字ではなく、文字としてパーセント記号を検索するには、ESCAPE キーワードとエスケープ文字を指定する必要があります。 たとえば、サンプル データベースには、"30%" というテキストを含んでいる comment という名前の列があります。 comment 列内の任意の場所で文字列 "30%" を含んでいる任意の行を検索するには、`WHERE comment LIKE '%30!%%' ESCAPE '!'` などの WHERE 句を指定します。 ESCAPE とエスケープ文字を指定していない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は文字列 "30" を含む行を返します。  

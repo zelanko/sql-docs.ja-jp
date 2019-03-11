@@ -33,18 +33,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d91c98dc07b746d070874ea27fb41793379b17f8
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 71e72818b9ab5269d898f00a4110936478da35af
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300529"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802368"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、1 つまたは複数の行をテーブルやビューに追加します。 例については、「[例](#InsertExamples)」を参照してください。  
   
@@ -778,7 +776,7 @@ INSERT INTO OPENDATASOURCE('SQLNCLI',
 GO  
 ```  
   
-#### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>P. PolyBase を使用して作成された外部のテーブルに挿入します。  
+#### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>P. PolyBase を使用して作成された外部のテーブルに挿入する  
  Hadoop または Azure ストレージに SQL Server からのデータをエクスポートします。 最初に、変換先ファイルまたはディレクトリを指す外部テーブルを作成します。 次に、ローカルの SQL Server テーブルからのデータを外部データ ソースをエクスポートするのに INSERT INTO 使用します。 INSERT INTO ステートメントでは、存在しないと、SELECT ステートメントの結果は、指定されたファイルの形式で指定した場所にエクスポートする場合、変換先ファイルまたはディレクトリを作成します。  詳細については、「 [PolyBase 入門](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
   
 **適用対象**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  

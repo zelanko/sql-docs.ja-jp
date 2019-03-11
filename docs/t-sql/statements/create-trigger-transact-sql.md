@@ -29,18 +29,16 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2c96519627b5fff5ba7e892561392d4fdb2e7c6
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 737f337369b04c59d34bb8ab4335a2491e843927
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154807"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802398"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見をお寄せください。](https://aka.ms/sqldocsurvey)
 
 DML トリガー、DDL トリガー、またはログオン トリガーを作成します。 トリガーとは、特別な種類のストアド プロシージャであり、データベース サーバーでイベントが発生したときに自動的に実行されます。 DML トリガーは、ユーザーがデータ操作言語 (DML) イベントを介してデータを変更しようとしたときに実行されます。 DML イベントは、テーブルやビューに対する INSERT、UPDATE、または DELETE ステートメントによって発生するイベントです。 これらのトリガーは、テーブル行が影響を受けるかどうかにかかわらず、有効なイベントが発生したときに起動されます。 詳しくは、「 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)」をご覧ください。  
   
@@ -401,7 +399,7 @@ RECURSIVE_TRIGGERS の設定を無効にすると、直接再帰のみが無効�
   
 いずれかのトリガーで ROLLBACK TRANSACTION が実行されると、入れ子のレベルにかかわらず、それ以降のトリガーは実行されません。  
   
-### <a name="nested-triggers"></a>入れ子にされたトリガー  
+### <a name="nested-triggers"></a>入れ子になったトリガー  
 トリガーは、最大 32 レベルの入れ子にすることができます。 トリガーによって別のトリガーが存在するテーブルが変更された場合、2 番目のトリガーがアクティブになり、3 番目のトリガーを呼び出すことができ、以下同様になります。 この連鎖的なトリガーで無限ループが発生すると、入れ子レベルを超過した時点でトリガーは取り消されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーで、CLR ルーチン、データ型、または集計を参照することによってマネージド コードが開始された場合、この参照は 32 レベルの入れ子制限の 1 レベルとしてカウントされます。 マネージド コード内から呼び出されたメソッドは、この制限としてはカウントされません。  
   
 入れ子にされたトリガーを無効にするには、sp_configure の nested triggers オプションを 0 (オフ) に設定します。 既定の構成では、入れ子になったトリガーがサポートされます。 入れ子になったトリガーがオフの場合、ALTER DATABASE によって RECURSIVE_TRIGGERS がどのように設定されていても、再帰トリガーは無効になります。  

@@ -22,18 +22,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c20122b1beaca348ccf405064143ef43af4e400b
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 88f57c22df5b6a621b5133f56f79a16ede550d77
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299589"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802289"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 この関数は、2 番目の文字式内の 1 つの文字式を検索して、見つかった場合には最初の式の開始位置を返します。
   

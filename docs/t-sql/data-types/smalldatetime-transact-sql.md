@@ -23,20 +23,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d89750c6ddac45af82824b2449c9e415561814
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d44e6621e4d5f9535752cf8b6f74c4dbcd404d8a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031003"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802259"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-日付を時刻と組み合わせて定義します。 時刻は 24 時間制です。秒数は常にゼロ (:00) で、1 秒未満の秒を持ちません。
+日付を時刻と組み合わせて定義します。 時間は 24 時制とし、秒は常にゼロ (: 00) にし、秒の小数部は使用しません。
   
 > [!NOTE]  
->  使用して、 **時間**, 、**日付**, 、**datetime2** と **datetimeoffset** 新しい作業のデータ型。 これらの型は、SQL 標準に準拠しています。 これらの型は、より高い移植性を持ちます。 **time**、**datetime2**、**datetimeoffset** は秒の有効桁数が増えています。 **datetimeoffset** グローバルに配置されるアプリケーション向けにタイム ゾーンのサポートを提供します。  
+>  使用して、 **時間**, 、**日付**, 、**datetime2** と **datetimeoffset** 新しい作業のデータ型。 これらの型は、SQL 標準に準拠しています。 これらの型は、移植性がより高いです。 **time**、**datetime2**、**datetimeoffset** は秒の有効桁数が増えています。 **datetimeoffset** グローバルに配置されるアプリケーション向けにタイム ゾーンのサポートを提供します。  
   
 ## <a name="smalldatetime-description"></a>smalldatetime の説明
   
@@ -44,12 +44,12 @@ ms.locfileid: "56031003"
 |-|-|  
 |構文|**smalldatetime**|  
 |使用方法|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
-|既定の文字列リテラル形式<br /><br /> (下位のクライアントに使用)|適用なし|  
-|日付範囲|1900-01-01 ～ 2079-06-06<br /><br /> 1900 年 1 月 1 日～ 2079 年 6 月 6 日|  
-|時刻範囲|00:00:00 ～ 23:59:59<br /><br /> 2007-05-09 23:59:59 は次のように丸められます。<br /><br /> 2007-05-10 00:00:00|  
-|要素範囲|YYYY は、1900 ～ 2079 の年を表す 4 桁の数字です。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 ～ 31 の日を表す 2 桁の数字です。<br /><br /> hh は、00 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、00 ～ 59 の分を表す 2 桁の数字です。<br /><br /> ss は、00 ～ 59 の秒を表す 2 桁の数字です。 29.998 秒以下の値は最も近い分単位の値に切り捨てられます。29.999 秒以上の値は最も近い分単位の値に切り上げられます。|  
+|既定の文字列リテラル形式<br /><br /> (下位クライアントに使用)|適用なし|  
+|日付範囲|1900-01-01 から 2079-06-06<br /><br /> 1900 年 1 月 1 日から 2079 年 6 月 6 日|  
+|時間の範囲|00:00:00 から 23:59:59<br /><br /> 2007-05-09 23:59:59 は次のように丸められます。<br /><br /> 2007-05-10 00:00:00|  
+|要素範囲|YYYY は、1900 から 2079 の年を表す 4 桁の数字です。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 ～ 31 の日を表す 2 桁の数字です。<br /><br /> hh は、00 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、分を表す 00 から 59 の 2 桁の数字です。<br /><br /> ss は、秒を表す 00 から 59 の 2 桁の数字です。 29.998 秒以下の値は、最も近い分に切り捨てられます。 29.999 秒以上の値は、最も近い分に切り上げられます。|  
 |文字長|最大 19 文字|  
-|ストレージのサイズ|4 バイト、固定|  
+|ストレージ サイズ|4 バイト、固定。|  
 |精度|1 分|  
 |既定値|1900-01-01 00:00:00|  
 |カレンダー|グレゴリオ暦<br /><br /> (完全な年の範囲は含まれません。)|  
@@ -82,7 +82,7 @@ SELECT @smalldatetime AS '@smalldatetime', @date AS 'date';
 --(1 row(s) affected)  
 ```  
   
-**time(n)** への変換では、時、分、および秒がコピーされます。 秒の小数部は 0 に設定されます。 次のコードは、`smalldatetime` 値を `time(4)` 値に変換した結果を示しています。
+**time(n)** への変換では、時、分、および秒がコピーされます。 秒未満の時間は 0 に設定されます。 次のコードは、`smalldatetime` 値を `time(4)` 値に変換した結果を示しています。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -98,7 +98,7 @@ SELECT @smalldatetime AS '@smalldatetime', @time AS 'time';
 --(1 row(s) affected)  
 ```  
   
-**datetime** に変換する場合は、**smalldatetime** 値が **datetime** 値にコピーされます。 秒の小数部は 0 に設定されます。 次のコードは、`smalldatetime` 値を `datetime` 値に変換した結果を示しています。
+**datetime** に変換する場合は、**smalldatetime** 値が **datetime** 値にコピーされます。 秒未満の時間は 0 に設定されます。 次のコードは、`smalldatetime` 値を `datetime` 値に変換した結果を示しています。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -114,7 +114,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-**datetimeoffset(n)** に変換する場合は、**smalldatetime** 値が **datetimeoffset(n)** 値にコピーされます。 秒の小数部は 0 に設定され、タイム ゾーン オフセットは +00:0 に設定されます。 次のコードは、`smalldatetime` 値を `datetimeoffset(4)` 値に変換した結果を示しています。
+**datetimeoffset(n)** に変換する場合は、**smalldatetime** 値が **datetimeoffset(n)** 値にコピーされます。 秒の小数部は 0 に設定され、タイム ゾーン オフセットは + 00:0 に設定されます。 次のコードは、`smalldatetime` 値を `datetimeoffset(4)` 値に変換した結果を示しています。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -130,7 +130,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetimeoffset AS 'datetimeoffset(4)
 --(1 row(s) affected)  
 ```  
   
-**datetime2(n)** に変換する場合は、**smalldatetime** 値が **datetime2(n)** 値にコピーされます。 秒の小数部は 0 に設定されます。 次のコードは、`smalldatetime` 値を `datetime2(4)` 値に変換した結果を示しています。
+**datetime2(n)** に変換する場合は、**smalldatetime** 値が **datetime2(n)** 値にコピーされます。 秒未満の時間は 0 に設定されます。 次のコードは、`smalldatetime` 値を `datetime2(4)` 値に変換した結果を示しています。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -164,8 +164,8 @@ SELECT
 |2007-05-08 12:35:30|2007-05-08 12:36:00|  
 |2007-05-08 12:59:59.998|2007-05-08 13:00:00|  
   
-### <a name="b-comparing-date-and-time-data-types"></a>B. 日付/時刻データ型を比較する  
-次の例では、文字列をそれぞれの日付および時刻データ型にキャストした結果を比較します。
+### <a name="b-comparing-date-and-time-data-types"></a>B. date と time のデータ型を比較する  
+次の例では、文字列をそれぞれの date および time データ型にキャストした結果を比較します。
   
 ```sql
 SELECT   
@@ -191,5 +191,4 @@ SELECT
   
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-  
   

@@ -14,12 +14,12 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 02f99b295f653719231ff19d4dae0df0e82218b8
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991875"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590487"
 ---
 # <a name="about-change-data-capture-sql-server"></a>変更データ キャプチャについて (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53991875"
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>変更データ キャプチャとキャプチャ インスタンスについて  
  データベース内の個々のテーブルの変更を追跡するには、まずそのデータベースで変更データ キャプチャを明示的に有効にする必要があります。 これは、 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)ストアド プロシージャを使用して実行します。 データベースを有効にした後、 [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)ストアド プロシージャを使用して、ソース テーブルを追跡対象テーブルとして指定できます。 テーブルに対して変更データ キャプチャを有効にすると、関連付けられたキャプチャ インスタンスが作成されます。これにより、ソース テーブルの変更データの伝播がサポートされます。 キャプチャ インスタンスは、1 つの変更テーブルと、最大 2 つのクエリ関数で構成されます。 キャプチャ インスタンスの構成の詳細を記述するメタデータは、変更データ キャプチャのメタデータ テーブル ( **cdc.change_tables**、 **cdc.index_columns**、および **cdc.captured_columns**) に保持されます。 この情報を取得するには、 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)ストアド プロシージャを使用します。  
   
- キャプチャ インスタンスに関連付けられているオブジェクトはすべて、有効にされたデータベースの変更データ キャプチャ スキーマに作成されます。 キャプチャ インスタンスの名前は、データベースのキャプチャ インスタンス間で重複しない有効なオブジェクト名である必要があります。 既定の名前は、\<*スキーマ名*_ソース テーブルの *テーブル名*> です。 関連付けられている変更テーブルの名前は、キャプチャ インスタンス名の末尾に **_CT** を付けた名前になります。 すべての変更のクエリを実行する関数の名前は、キャプチャ インスタンス名の先頭に **fn_cdc_get_all_changes_** を付けた名前になります。 キャプチャ インスタンスが **net changes** をサポートするように構成されている場合は、**net_changes** クエリ関数も作成されます。この関数の名前は、キャプチャ インスタンス名の先頭に **fn_cdc_get_net_changes\_** を付けた名前になります。  
+ キャプチャ インスタンスに関連付けられているオブジェクトはすべて、有効にされたデータベースの変更データ キャプチャ スキーマに作成されます。 キャプチャ インスタンスの名前は、データベースのキャプチャ インスタンス間で重複しない有効なオブジェクト名である必要があります。 既定の名前は、ソース テーブルの \<*スキーマ名*\_*テーブル名*> です。 関連付けられている変更テーブルの名前は、キャプチャ インスタンス名の末尾に **_CT** を付けた名前になります。 すべての変更のクエリを実行する関数の名前は、キャプチャ インスタンス名の先頭に **fn_cdc_get_all_changes_** を付けた名前になります。 キャプチャ インスタンスが **net changes** をサポートするように構成されている場合は、**net_changes** クエリ関数も作成されます。この関数の名前は、キャプチャ インスタンス名の先頭に **fn_cdc_get_net_changes\_** を付けた名前になります。  
   
 ## <a name="change-table"></a>変更テーブル  
  変更データ キャプチャの変更テーブルの最初の 5 つの列は、メタデータ列です。 これらは、記録された変更に関係する追加情報を提供します。 残りの列には、識別されたソース テーブルのキャプチャ対象列の名前 (および通常は型) が反映されます。 これらの列は、ソース テーブルから収集されたキャプチャ対象列のデータを保持します。  

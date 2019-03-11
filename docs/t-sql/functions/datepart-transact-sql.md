@@ -28,18 +28,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 92373c80cfd2de09e0222aa9af6ef0a3dca90cf6
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 91a73ebf7d840669837a43cf89427463e9b46b4e
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299949"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802906"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 この関数は、指定された *date* の指定された *datepart* を表す整数を返します。
   
@@ -164,8 +162,8 @@ ISO 8601 には、ISO 週日付方式 (週番号方式) が規定されていま
 |---|---|---|---|
 |日曜日|1 月 1 日<br /><br /> 最初の土曜日<br /><br /> 年の 1 から 7 日間|可|United States|  
 |月曜日|1 月 1 日<br /><br /> 最初の日曜日<br /><br /> 年の 1 から 7 日間|可|欧州およびイギリス|  
-|月曜日|4 月は 1 月<br /><br /> 最初の木曜日<br /><br /> 年の 4 から 7 日間|いいえ|ISO 8601、ノルウェー、およびスウェーデン|  
-|月曜日|7 月は 1 月<br /><br /> 最初の月曜日<br /><br /> 年の 7 日間|いいえ||  
+|月曜日|1 月 4 日<br /><br /> 最初の木曜日<br /><br /> 年の 4 から 7 日間|いいえ|ISO 8601、ノルウェー、およびスウェーデン|  
+|月曜日|1 月 7 日<br /><br /> 最初の月曜日<br /><br /> 年の 7 日間|いいえ||  
 |水曜日|1 月 1 日<br /><br /> 最初の火曜日<br /><br /> 年の 1 から 7 日間|可||  
 |土曜日|1 月 1 日<br /><br /> 最初の金曜日<br /><br /> 年の 1 から 7 日間|可||  
   
@@ -216,7 +214,7 @@ SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700
 ## <a name="remarks"></a>Remarks  
 `DATEPART` は、選択リスト、WHERE、HAVING、GROUP BY、および ORDER BY 句で使用できます。
   
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、DATEPART は文字列リテラルを **datetime2** 型として暗黙的にキャストします。 つまり、DATENAME では、日付が文字列として渡される場合、YDM 形式をサポートしません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、DATEPART は文字列リテラルを **datetime2** 型として暗黙的にキャストします。 つまり、DATENAME では、日付が文字列として渡される場合、YDM 形式がサポートされません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
   
 ## <a name="examples"></a>使用例  
 この例では、基準年を返します。 この基準年は、日付の計算に役立ちます。 この例では、数値で日付を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、0 を 1900 年 1 月 1 日と解釈することに注意してください。

@@ -22,18 +22,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf5737166a8613cbf20df5b6c48a720c4d366a64
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 7dbd603e92911d073cac24f8504d72d2742822d6
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299681"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802318"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 一連の条件を評価して、考えられる結果式のうちの 1 つを返します。  
   
@@ -45,7 +42,7 @@ ms.locfileid: "54299681"
   
  どちらの形式も、ELSE 引数 (省略可) をサポートしています。  
   
- CASE は、有効な式を使用できる任意のステートメントや句で使用できます。 たとえば、SELECT、UPDATE、DELETE、SET などのステートメントや、select_list、IN、WHERE、ORDER BY、HAVING などの句で使用できます。  
+ CASE は、有効な式を使用できる任意のステートメントや句で使用できます。 たとえば、SELECT、UPDATE、DELETE、SET などのステートメントや、select_list、IN、WHERE、ORDER BY、HAVING などの句で CASE を使用できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

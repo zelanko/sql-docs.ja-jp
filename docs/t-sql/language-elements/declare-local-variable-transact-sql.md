@@ -22,18 +22,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe135d53fafa22df7d967f495a7bcfd87dbb2f7
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 01de83dc56a14fca265bd73b5d5df357f869a50a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299979"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801866"
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
   変数は、バッチやプロシージャの中で DECLARE ステートメントを使用して宣言し、SET ステートメントまたは SELECT ステートメントを使用して値を割り当てます。 このステートメントでは、他のカーソル関連のステートメントで使用できるカーソル変数を宣言できます。 宣言の一部として値を指定しない場合、宣言の後、すべての変数は NULL として初期化されます。  
   
@@ -99,16 +96,16 @@ DECLARE
  インラインで値を変数に代入します。 値には定数または式を指定できますが、変数宣言の型と同じであるか、その型に暗黙的に変換できる必要があります。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
 @*cursor_variable_name*  
- カーソル変数の名前を指定します。 カーソル変数名はアット マーク (@) で始まり、識別子の規則に従っている必要があります。  
+ カーソル変数の名前です。 カーソル変数名はアット マーク (@) で始まり、識別子の規則に従っている必要があります。  
   
 CURSOR  
- 変数がローカルなカーソル変数であることを指定します。  
+ 変数がローカルのカーソル変数であることを指定します。  
   
 @*table_variable_name*  
  **table** 型の変数の名前です。 変数名はアット マーク (@) で始まり、識別子の規則に従っている必要があります。  
   
 <table_type_definition>  
-**table** データ型を定義します。 テーブルの定義には、列の定義、名前、データ型、および制約が含まれます。 指定できる制約の種類は、PRIMARY KEY、UNIQUE、NULL、および CHECK のみです。 別名データ型にルールや既定の定義がバインドされている場合、別名データ型を列のスカラー データ型として使用することはできません。
+**table** データ型を定義します。 テーブルの定義には、列の定義、名前、データ型、制約が含まれます。 指定できる制約の種類は、PRIMARY KEY、UNIQUE、NULL、CHECK のみです。 別名データ型にルールや既定の定義がバインドされている場合、別名データ型を列のスカラー データ型として使用することはできません。
   
 \<table_type_definition> は、CREATE TABLE でテーブルを定義するときに使用する情報のサブセットです。 これには要素と必須の定義が含まれます。 詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。  
   
@@ -125,7 +122,7 @@ CURSOR
  計算列の値を定義する式を指定します。 計算列は、同じテーブルの他の列を使用した式によって計算されます。 たとえば、計算列は **cost** AS **price \* qty** として定義されます。この式には、計算列以外の列の名前、定数、組み込み関数、変数、およびこれらを 1 つ以上の演算子で結合した組み合わせを使用できます。 この式はサブクエリまたはユーザー定義関数にはできません。 この式は CLR ユーザー定義型を参照できません。  
   
  [ COLLATE *collation_name*]  
- 列の照合順序を指定します。 *collation_name* には、Windows の照合順序名か SQL の照合順序名を指定できます。これは、データ型が **char**、**varchar**、**text**、**nchar**、**nvarchar**、**ntext** の列にだけ適用できます。 collation_name を指定しないと、列がユーザー定義データ型である場合はユーザー定義データ型の照合順序、または現在のデータベースの照合順序が列に割り当てられます。  
+ 列の照合順序を指定します。 *collation_name* には、Windows の照合順序名か SQL の照合順序名を指定できます。これは、データ型が **char**、**varchar**、**text**、**nchar**、**nvarchar**、**ntext** の列にだけ適用できます。 指定しないと、列がユーザー定義データ型である場合はユーザー定義データ型の照合順序、または現在のデータベースの照合順序が割り当てられます。  
   
  Windows と SQL の照合順序名については、「[COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)」を参照してください。  
   
@@ -173,7 +170,7 @@ CURSOR
   
  現在カーソルが割り当てられているカーソル変数は、次のステートメントの中でソースとして参照できます。  
   
--   CLOSE ステートメント  
+-   CLOSE ステートメント。  
   
 -   DEALLOCATE ステートメント  
   
@@ -181,9 +178,9 @@ CURSOR
   
 -   OPEN ステートメント  
   
--   位置指定の DELETE または UPDATE ステートメント  
+-   位置指定の DELETE または UPDATE ステートメント。  
   
--   SET CURSOR 変数ステートメント (右側)  
+-   SET CURSOR 変数ステートメント (右側)。  
   
  どのステートメントの場合も、参照されるカーソル変数は存在するが、現在カーソルが割り当てられていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でエラーが発生します。 参照されているカーソル変数が存在しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、宣言されていない別の型の変数に対して発生するエラーと同じエラーが発生します。  
   

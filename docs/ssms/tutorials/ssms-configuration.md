@@ -5,20 +5,20 @@ keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/16/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: f37ea9b96748e660894aed98a4bc37c7fd710aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 173123f180047c35ce93a64928770f55525f651b
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661330"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662686"
 ---
-# <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>チュートリアル: SQL Server Management Studio のコンポーネントと構成
+# <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>チュートリアル:SQL Server Management Studio のコンポーネントと構成
 このチュートリアルでは、SQL Server Management Studio (SSMS) 内のさまざまなウィンドウ コンポーネントと、ワークスペースに関する基本的な構成オプションについて説明します。 この記事では、次の方法を学習します。 
 
 > [!div class="checklist"]
@@ -42,22 +42,22 @@ ms.locfileid: "47661330"
 
     ![[表示] メニュー](media/ssms-configuration/viewmenu.png)
 
-- **[オブジェクト エクスプローラー]** (F8): オブジェクト エクスプローラーには、サーバー上のすべてのデータベース オブジェクトがツリー形式で表示されます。 このビューには、SQL Server Database Engine、SQL Server Analysis Services、SQL Server Reporting Services、SQL Server Integration Services のデータベースが含まれています。 オブジェクト エクスプローラーには、それに接続されているすべてのサーバーの情報が含まれています。 
+- **オブジェクト エクスプローラー** (F8):オブジェクト エクスプローラーには、サーバー上のすべてのデータベース オブジェクトがツリー形式で表示されます。 このビューには、SQL Server Database Engine、SQL Server Analysis Services、SQL Server Reporting Services、SQL Server Integration Services のデータベースが含まれています。 オブジェクト エクスプローラーには、それに接続されているすべてのサーバーの情報が含まれています。 
     
     ![オブジェクト エクスプローラー](media/ssms-configuration/objectexplorer.png)
-- **クエリ ウィンドウ** (Ctrl+N): **[新しいクエリ]** を選択したら、このウィンドウに Transact-SQL (T-SQL) クエリを入力します。 クエリの結果もここに表示されます。
+- **クエリ ウィンドウ** (Ctrl + N):**[新しいクエリ]** を選択したら、このウィンドウに Transact-SQL (T-SQL) クエリを入力します。 クエリの結果もここに表示されます。
     
     ![[新しいクエリ] ウィンドウ](media/ssms-configuration/newquery.png)
 
-- **プロパティ** (F4): クエリ ウィンドウが開くと、[プロパティ] ビューが表示されます。 このビューには、クエリの基本的なプロパティが表示されます。 たとえば、クエリの開始時刻、返された行数、接続の詳細などが表示されます。  
+- **プロパティ** (F4):クエリ ウィンドウが開くと、[プロパティ] ビューが表示されます。 このビューには、クエリの基本的なプロパティが表示されます。 たとえば、クエリの開始時刻、返された行数、接続の詳細などが表示されます。  
 
-    ![[プロパティ]](media/ssms-configuration/properties.png)
+    ![Properties](media/ssms-configuration/properties.png)
 
-- **テンプレート ブラウザー** (Ctrl + Alt + T): テンプレート ブラウザーには、さまざまな既成 T-SQL テンプレートが含まれています。 これらのテンプレートを使うと、データベースの作成やバックアップなど、さまざまな機能を実行できます。 
+- **テンプレート ブラウザー** (Ctrl + Alt + T):テンプレート ブラウザーには、さまざまな既成 T-SQL テンプレートが含まれています。 これらのテンプレートを使うと、データベースの作成やバックアップなど、さまざまな機能を実行できます。 
 
     ![テンプレート ブラウザー](media/ssms-configuration/templates.png)
 
-- **オブジェクト エクスプローラーの詳細** (F7): このビューは、オブジェクト エクスプローラーのビューより詳しくなっています。 オブジェクト エクスプローラーの詳細を使用し、複数のオブジェクトを同時に操作できます。 たとえば、このウィンドウで、複数のデータベースを選択し、その後、全部同時に削除するか、スクリプト化できます。 
+- **オブジェクト エクスプローラーの詳細** (F7):このビューは、オブジェクト エクスプローラーのビューより詳しくなっています。 オブジェクト エクスプローラーの詳細を使用し、複数のオブジェクトを同時に操作できます。 たとえば、このウィンドウで、複数のデータベースを選択し、その後、全部同時に削除するか、スクリプト化できます。 
 
     ![[オブジェクト エクスプローラーの詳細]](media/ssms-configuration/objectexplorerdetails.PNG) 
  

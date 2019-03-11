@@ -23,18 +23,15 @@ ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bed7d8d4a490ee3a0dc509ffc29eec2da199d3c6
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 8c4f054e6690f6b836864a69b27a22a0bb3edf07
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300319"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803227"
 ---
 # <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 テーブルの ID 列に明示的な値を追加することを許可します。  
 
@@ -55,10 +52,10 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
  テーブルが所属するスキーマの名前を指定します。  
   
  *table_name*  
- ID 列があるテーブルの名前を指定します。  
+ ID 列があるテーブルの名前です。  
   
 ## <a name="remarks"></a>Remarks  
- IDENTITY_INSERT プロパティを ON に設定できるのは、セッション内の 1 つのテーブルのみです。 1 つのテーブルで既にこのプロパティが ON に設定されている状態で、別のテーブルに対して SET IDENTITY_INSERT ON ステートメントを実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では SET IDENTITY_INSERT が既に ON であるというエラー メッセージが返され、このプロパティが ON に設定されているテーブルがレポートされます。  
+ いかなる場合も、IDENTITY_INSERT プロパティを ON に設定できるのはセッション内の 1 つのテーブルのみです。 1 つのテーブルで既にこのプロパティが ON に設定されている状態で、別のテーブルに対して SET IDENTITY_INSERT ON ステートメントを実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では SET IDENTITY_INSERT が既に ON であるというエラー メッセージが返され、このプロパティが ON に設定されているテーブルがレポートされます。  
   
  挿入する値がテーブルの現在の ID 値よりも大きい場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では新しく挿入された値が現在の ID 値として自動的に使用されます。  
   

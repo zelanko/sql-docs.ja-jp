@@ -22,18 +22,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2992aa204320379866c32e02ac2a57c68b59be40
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 270b303b90b00977335dd62dc5a3729410df03a2
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299189"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56800986"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 結果セットの出力に番号を設定します。 具体的には、結果セットのパーティション内の行について、各パーティションの最初の行を 1 とした連続する数値を返します。 
   

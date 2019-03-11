@@ -23,18 +23,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 743c812bf5fbb0ec9673c3a07d4d08a91d21aae3
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e9f7c1cd947befda6674a7b75a50509919848e1f
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299729"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802776"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 指定した文字列値をすべて別の文字列値に置き換えます。  
   
@@ -51,10 +48,10 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  検索する文字列[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *string_expression* 文字またはバイナリ データ型であることができます。  
   
  *string\_pattern*  
- 検索するサブストリングを指定します。 *string_pattern* 文字またはバイナリ データ型であることができます。 *string_pattern* には空の文字列 ("") は指定できません。また、1 ページに収まる最大バイト数を超えないようにしてください。  
+ 検索するサブストリングです。 *string_pattern* 文字またはバイナリ データ型であることができます。 *string_pattern* には空の文字列 ("") は指定できません。また、1 ページに収まる最大バイト数を超えないようにしてください。  
   
  *string\_replacement*  
- 置き換え後の文字列を指定します。 *string_replacement* 文字またはバイナリ データ型であることができます。  
+ 置き換え後の文字列です。 *string_replacement* 文字またはバイナリ データ型であることができます。  
   
 ## <a name="return-types"></a>戻り値の型  
  返します **nvarchar** が、入力引数のいずれかの場合、 **nvarchar** データが入力のそれ以外の場合を返します。 を置き換える **varchar** です。  

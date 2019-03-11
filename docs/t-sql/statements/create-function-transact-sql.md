@@ -41,18 +41,15 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cf2f90329896524a96425f69f9dc3afd46d7ac3c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 9957e69ae2cc285ecad5709a9169bd3ee01be464
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299929"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801596"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でユーザー定義関数を作成します。 ユーザー定義関数は、パラメーターを受け取り、複雑な計算などのアクションを実行し、そのアクションの結果を値として返す [!INCLUDE[tsql](../../includes/tsql-md.md)] または共通言語ランタイム (CLR) のルーチンです。 戻り値は、スカラー (単一) 値またはテーブルにすることができます。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
   
@@ -305,7 +302,7 @@ RETURNS return_data_type
 *type_schema_name* が指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は次の順序で *scalar_parameter_data_type* を探します。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型の名前を含むスキーマ  
--   現在のデータベースにおける現在のユーザーの既定のスキーマ  
+-   現在のデータベースにおける現在のユーザーの既定のスキーマ。  
 -   現在のデータベースの **dbo** スキーマ。  
   
 [ =*default* ]  
@@ -317,7 +314,7 @@ RETURNS return_data_type
  関数のパラメーターに既定値がある場合に、既定値を取得する目的でその関数を呼び出すときは、DEFAULT キーワードを指定する必要があります。 この動作は、ストアド プロシージャで既定値を持つパラメーターを使用する場合とは異なります。ストアド プロシージャの場合は、パラメーターを省略すると既定値が暗黙的に使用されます。 ただし、EXECUTE ステートメントを使用してスカラー関数を呼び出す場合は、DEFAULT キーワードは必要ありません。  
   
  READONLY  
- パラメーターを関数の定義内で更新または変更できないことを示します。 パラメーターの型がユーザー定義テーブル型の場合は、READONLY を指定する必要があります。  
+ パラメーターを関数の定義内で更新または変更できないことを示します。 パラメーターの型がユーザー定義のテーブル型の場合は、READONLY を指定する必要があります。  
   
  *return_data_type*  
  スカラー ユーザー定義関数の戻り値です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の場合は、CLR ユーザー定義型を含めたデータ型のうち、**timestamp** を除くすべてのデータ型を指定できます。 CLR 関数の場合は、CLR ユーザー定義型を含めたデータ型のうち、**text**、**ntext**、**image**、**timestamp** を除くすべてのデータ型を指定できます。 非スカラー型である **cursor** と **table** は、[!INCLUDE[tsql](../../includes/tsql-md.md)] または CLR 関数で戻りデータ型として指定できません。  
@@ -377,20 +374,20 @@ RETURNS return_data_type
   
  CLR 関数のテーブル データ型を定義します。 テーブルの定義には、列名およびデータ型のみが含まれます。 テーブルは、常にプライマリ ファイル グループに保存されます。  
   
- NULL|NULL でないです。  
- ネイティブ コンパイル、スカラー ユーザー定義関数でのみサポートされます。 詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
+ NULL|NOT NULL  
+ ネイティブにコンパイルされた、スカラー ユーザー定義関数でのみサポートされます。 詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
   
  NATIVE_COMPILATION  
- ユーザー定義の関数をネイティブでコンパイルするかどうかを示します。 この引数は、ネイティブ コンパイル、スカラー ユーザー定義関数に必要です。  
+ ユーザー定義の関数をネイティブでコンパイルするかどうかを示します。 この引数は、ネイティブにコンパイルされたスカラー ユーザー定義関数に必要です。  
   
- アトミックの開始します。  
- ユーザー定義スカラー関数、および、必要なはネイティブでコンパイルすると、のみサポートされます。 詳細については、「 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)」を参照してください。  
+ BEGIN ATOMIC WITH  
+ ネイティブにコンパイルされたスカラー ユーザー定義関数でのみサポートされます。これは必須です。 詳細については、「 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)」を参照してください。  
   
  SCHEMABINDING  
- SCHEMABINDING の引数は、ネイティブ コンパイル、スカラー ユーザー定義関数に必要です。  
+ SCHEMABINDING の引数は、ネイティブにコンパイルされたスカラー ユーザー定義関数に必要です。  
   
  EXECUTE AS  
- EXECUTE AS は、ネイティブ コンパイル、スカラー ユーザー定義関数に必要です。  
+ EXECUTE AS は、ネイティブにコンパイルされたスカラー ユーザー定義関数に必要です。  
   
  **\<function_option>::= および \<clr_function_option>::=** 
   
@@ -406,7 +403,7 @@ RETURNS return_data_type
  SCHEMABINDING  
  参照するデータベース オブジェクトに対して、その関数がバインドされるように指定します。 SCHEMABINDING を指定した場合、ベース オブジェクトに対して関数定義に影響を与えるような変更は行えません。 まず関数定義を変更または削除して、変更するオブジェクトとの依存関係を解消する必要があります。  
   
- 関数からその参照先のオブジェクトへのバインドは、次のいずれかの操作が行われた場合にのみ削除されます。 
+ 関数が参照するオブジェクトへのバインドは、次のいずれかの操作が行われた場合にのみ削除されます。 
   
 -   関数を削除した場合。  
   
@@ -442,7 +439,7 @@ INLINE = { ON | OFF }
   
  **\< column_definition >::=** 
   
- Table データ型を定義します。 テーブルの定義には、列の定義および制約が含まれます。 CLR 関数では、*column_name* と *data_type* のみを指定できます。  
+ Table データ型を定義します。 テーブルの宣言には、列の定義および制約が含まれます。 CLR 関数では、*column_name* と *data_type* のみを指定できます。  
   
  *column_name*  
  テーブルの列名です。 列名は、識別子のルールに従っていること、およびテーブル内で一意であることが必要です。 *column_name* は 1 ～ 128 文字で指定できます。  
@@ -454,7 +451,7 @@ INLINE = { ON | OFF }
  挿入の際に明示的な値を指定しない場合に、列に入力される値を指定します。 *constant_expression* は、定数、NULL、またはシステム関数値です。 DEFAULT 定義は、IDENTITY プロパティを持つ列を除くすべての列に適用できます。 CLR テーブル値関数には DEFAULT を指定できません。  
   
  COLLATE *collation_name*  
- 列の照合順序を指定します。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 照合順序の一覧と詳細については、「[Windows 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)」と「[SQL Server 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」をご覧ください。  
+ 列の照合順序を指定します。 指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 照合順序の一覧と詳細については、「[Windows 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)」と「[SQL Server 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」をご覧ください。  
   
  COLLATE 句を使用して照合順序を変更できるのは、**char**、**varchar**、**nchar**、**nvarchar** データ型の列だけです。  
   
@@ -491,7 +488,7 @@ INLINE = { ON | OFF }
  一意なインデックスによって、指定した 1 つ以上の列にエンティティの整合性を提供する制約です。 1 つのテーブルには複数の UNIQUE 制約を指定できます。 CLR テーブル値関数には UNIQUE を指定できません。  
   
  CLUSTERED | NONCLUSTERED  
- PRIMARY KEY 制約または UNIQUE 制約に対して、クラスター化インデックスまたは非クラスター化インデックスを作成することを示します。 PRIMARY KEY 制約では CLUSTERED が、UNIQUE 制約では NONCLUSTERED が、それぞれ使用されます。  
+ PRIMARY KEY または UNIQUE 制約に対して、クラスター化インデックスまたは非クラスター化インデックスを作成することを示します。 PRIMARY KEY 制約では CLUSTERED が、UNIQUE 制約では NONCLUSTERED が、それぞれ使用されます。  
   
  CLUSTERED は 1 つの制約にのみ指定できます。 UNIQUE 制約で CLUSTERED が指定され、PRIMARY KEY 制約も指定した場合には、PRIMARY KEY は NONCLUSTERED を使用します。  
   
@@ -587,7 +584,7 @@ INLINE = { ON | OFF }
   
 |プロパティ|[説明]|注|  
 |--------------|-----------------|-----------|  
-|**IsDeterministic**|関数が決定的か非決定的かを示します。|決定的関数では、ローカル データ アクセスが可能です。 たとえば、特定の一連の入力値を使用して同じ状態のデータベースで呼び出されるたびに、必ず同じ結果を返す関数は、決定的と呼ばれます。|  
+|**IsDeterministic**|関数が決定的か非決定的かを示します。|決定的関数では、ローカル データ アクセスが可能です。 決定的関数とは、たとえば、特定の一連の入力値を使用して同じ状態のデータベースで呼び出されるたびに、必ず同じ結果を返す関数です。|  
 |**IsPrecise**|関数が正確か不正確かを示します。|不正確な関数には、浮動小数点演算などの演算を含みます。|  
 |**IsSystemVerified**|関数の有効桁数のプロパティと決定性のプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で確認できます。||  
 |**SystemDataAccess**|関数が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスのシステム データ (システム カタログまたは仮想システム テーブル) にアクセスします。||  

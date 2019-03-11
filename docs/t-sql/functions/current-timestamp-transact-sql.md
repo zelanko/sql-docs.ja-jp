@@ -32,18 +32,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bf523ed04740005d2e901f95f510dc29599696a
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: aab9add326791f192b79690ade6c827e46ca7280
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299569"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802229"
 ---
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 この関数は、現在のデータベース システム タイムスタンプを **datetime** 値として、データベースのタイム ゾーン オフセットなしで返します。 `CURRENT_TIMESTAMP` は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムからこの値を派生します。
   
@@ -63,7 +60,7 @@ CURRENT_TIMESTAMP
 ```  
   
 ## <a name="arguments"></a>引数  
-この関数は引数をとりません。
+この関数は引数を取りません。
   
 ## <a name="return-type"></a>戻り値の型  
 **datetime**

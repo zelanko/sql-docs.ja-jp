@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76db4e710c2bd3d6eac25383a1db66a3720280ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d2ddd236ee002015390336c25039158bba70a998
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014505"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590367"
 ---
 # <a name="data-type-conversion-database-engine"></a>データ型の変換 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +100,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**datetime**、**smalldatetime**|**Date**|  
 |上記以外は NULL に設定|null 値に設定された **Variant**|  
   
-**binary**、**varbinary**、**image** の各型の値を除いて、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値はすべて 1 つの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 値に変換されます。 これらの値は [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の 1 次元 **Byte()** 配列に変換されます。 この配列の範囲は、**Byte(** 0 ～ *length*1 **)** です。*length* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **binary**、**varbinary**、または **image** の値のバイト数です。
+**binary**、**varbinary**、**image** の各型の値を除いて、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値はすべて 1 つの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 値に変換されます。 これらの値は [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の 1 次元 **Byte()** 配列に変換されます。 この配列の範囲は、**Byte(** 0 から _length_ 1 **)** です。*length* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **binary**、**varbinary**、または **image** の値のバイト数です。
   
 次の表は、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型への変換を示しています。
   

@@ -19,18 +19,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a1c1624965ad311bb7df039957da8fd25a3321c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 1e679c1c9090f189881ad9de3b1615d6ecfa5b72
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299019"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801276"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 この関数は、連結の結果、またはエンド ツー エンドの方法で 2 つ以上の文字列値の結合の結果の文字列を返します。 (連結時に区切り値を追加するには、「[CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)」をご覧ください。)
   

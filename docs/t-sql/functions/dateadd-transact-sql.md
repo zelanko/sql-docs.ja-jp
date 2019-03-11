@@ -27,18 +27,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6ad81ca6278b0bf712f1a143c3d683103720c97
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: efd8b2914fde70211a15aaa856f34fbaab2d6259
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299048"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801286"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 この関数は、入力 *date* 値の指定 *datepart* に指定 *number* 値 (符号付き整数として) を追加し、その変更後の値を返します。
   
@@ -129,7 +126,7 @@ SELECT DATEADD(year,2147483647, '20060731');
 SELECT DATEADD(year,-2147483647, '20060731');  
 ```  
   
-## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>smalldatetime に対する戻り値 (秒または 1 秒未満の秒)  
+## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>smalldatetime に対する戻り値 (日付および秒または 1 秒未満の秒)  
 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 値の秒の部分は常に 00 です。 **smalldatetime** *date* 値の場合、次が適用されます。 
 
 -   **second** の *datepart* と -30 から +29 の *number* 値の場合、`DATEADD` によって変更が行われることはありません。  
@@ -237,7 +234,7 @@ microsecond  2007-01-01 13:10:10.1111121
 nanosecond   2007-01-01 13:10:10.1111111  
 ```  
   
-### <a name="b-incrementing-more-than-one-level-of-datepart-in-one-statement"></a>B. 単一のステートメントで datepart を複数単位増やす  
+### <a name="b-incrementing-more-than-one-level-of-datepart-in-one-statement"></a>B. 単一のステートメントで datepart を複数レベル増やす  
 次の各ステートメントは、*date* の *datepart* を付加的に繰り上げる *number* だけ *datepart* を増やします。
   
 ```sql

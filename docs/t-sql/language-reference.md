@@ -16,18 +16,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb85ebe35b50d143f4887cba91eda08a930666a0
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: b5e9346b2ea7a6e3f881d960462fbb56b4cd7000
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299009"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802686"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL リファレンス (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 このトピックでは、Microsoft Transact-SQL (T-SQL) のリファレンス トピックを見つけて使用する方法の基本事項を説明します。 T-SQL は、Microsoft SQL の製品やサービスを使用するときの中心となる機能です。 SQL データベースと通信するツールやアプリケーションはすべて、T-SQL のコマンドを送信するという方法で通信します。  
 

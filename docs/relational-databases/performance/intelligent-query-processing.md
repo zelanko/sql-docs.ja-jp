@@ -2,7 +2,7 @@
 title: Microsoft SQL データベースでのインテリジェントなクエリ処理 | Microsoft Docs
 description: SQL Server および Azure SQL Database のクエリ パフォーマンスを向上させるためのインテリジェントなクエリ処理の機能です。
 ms.custom: ''
-ms.date: 02/14/2019
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc47ad30edc0eb4092aa1f92fef703c95cb34593
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1b92bc15079fcc85212ea3d1b51be64a3348a4b1
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291660"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305370"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL データベースでのインテリジェントなクエリ処理
 
@@ -29,13 +29,14 @@ ms.locfileid: "56291660"
 | **IQP の機能** | **Azure SQL Database でのサポート** | **SQL Server でのサポート** |
 | --- | --- | --- |
 | [適応型結合 (バッチ モード)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | あり (互換性レベル 140 未満)| あり (SQL Server 2017 以降、互換性レベル 140 未満)|
+| [個別の概算数](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | あり (パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、パブリック プレビュー)|
+| [行ストアでのバッチ モード](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|
 | [インターリーブ実行](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#interleaved-execution-for-multi-statement-table-valued-functions) | あり (互換性レベル 140 未満)| あり (SQL Server 2017 以降、互換性レベル 140 未満)|
 | [メモリ許可フィードバック (バッチ モード)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | あり (互換性レベル 140 未満)| あり (SQL Server 2017 以降、互換性レベル 140 未満)|
 | [メモリ許可フィードバック (行モード)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|
-| [個別の概算数](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | あり (パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、パブリック プレビュー)|
-| [テーブル変数の遅延コンパイル](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|
-| [行ストアでのバッチ モード](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|
 | [スカラー UDF のインライン化](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | なし (ただし今後の更新プログラムで予定されている) | あり (SQL Server 2019 CTP 2.1 以降、互換性レベル 150 未満、パブリック プレビュー)|
+| [テーブル変数の遅延コンパイル](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|
+
 
 
 ## <a name="adaptive-query-processing"></a>アダプティブ クエリ処理
@@ -101,6 +102,8 @@ ms.locfileid: "56291660"
 
 > [!NOTE]
 > 行ストアでのバッチ モードは、パブリック プレビュー機能です。  
+
+行ストアのバッチ モードでは、列ストア インデックスを要求せず、分析ワークロードをバッチ モードで実行できます。  この機能は、ディスク上のヒープと B ツリー インデックスに対するバッチ モード実行とビットマップ フィルターをサポートしています。 行ストアのバッチ モードでは、既存のすべてのバッチ モード対応演算子のサポートが有効になります。
 
 ### <a name="background"></a>背景情報
 

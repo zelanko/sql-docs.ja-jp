@@ -25,18 +25,16 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a7643cbefbaf9e7efcf78071ed097abd1a9b4496
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 85db3bb859a84ed9821f81186b311baf591583e0
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154897"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802676"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 ソース テーブルとの結合結果から、挿入、更新、または削除操作を対象テーブルに対して実行します。 たとえば、他のテーブルとの違いに基づいて、あるテーブル内の行を挿入、更新、または削除することにより、2 つのテーブルを同期します。  
   
@@ -217,7 +215,7 @@ ON \<merge_search_condition>
 \<table_source> と *target_table* を結合するための一致箇所を特定する条件を指定します。 
   
 > [!CAUTION]  
->  照合目的で使用する対象テーブルの列だけを指定することが重要です。 つまり、対象テーブルのうち、ソース テーブル内の対応する列と比較する列を指定します。 `AND NOT target_table.column_x = value` と指定するなど、ON 句で対象テーブル内の行にフィルターを適用することによって、クエリ パフォーマンスを向上させようとしないでください。 この場合、予期しない無効な結果が返されることがあります。  
+>  照合目的で使用する対象テーブルの列だけを指定することが重要です。 つまり、対象テーブルのうち、ソース テーブルの対応する列と比較する列を指定します。 `AND NOT target_table.column_x = value` と指定するなど、ON 句で対象テーブル内の行にフィルターを適用することによって、クエリ パフォーマンスを向上させようとしないでください。 この場合、予期しない無効な結果が返されることがあります。  
   
 WHEN MATCHED THEN \<merge_matched>  
 \<table_source> ON \<merge_search_condition> で返される行に一致し、追加の検索条件を満たす *target_table のすべての行を、\<merge_matched> 句に従って更新または削除するように指定します。  
@@ -301,7 +299,7 @@ MERGE の後に [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcou
 **MERGE** ステートメントは、キュー更新レプリケーションの使用時には使用しないでください。 **MERGE** とキュー更新トリガーには互換性がありません。 **MERGE** ステートメントは、挿入ステートメントまたは更新ステートメントと置き換えてください。  
   
 ## <a name="trigger-implementation"></a>トリガーの実装  
-MERGE ステートメントに指定された挿入、更新、削除の各操作に対し、対象テーブルで定義された対応する AFTER トリガーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって起動されますが、どの操作に対するトリガーからどのような順序で起動されるかは決まっていません。 同じアクションに対して定義された複数のトリガーは、指定した順序に従います。 トリガー起動順序の設定の詳細については、「[最初と最後のトリガーの指定](../../relational-databases/triggers/specify-first-and-last-triggers.md)」を参照してください。  
+MERGE ステートメントに指定された挿入、更新、削除の各操作に対し、対象テーブルで定義された対応する AFTER トリガーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって起動されますが、どの操作に対するトリガーからどのような順序で起動されるかは決まっていません。 同じ操作に対して定義された複数のトリガーは、指定した順序に従います。 トリガー起動順序の設定の詳細については、「[最初と最後のトリガーの指定](../../relational-databases/triggers/specify-first-and-last-triggers.md)」を参照してください。  
   
 MERGE ステートメントによって実行される挿入、更新、削除のいずれかの操作に対して、有効な INSTEAD OF トリガーが対象テーブルに定義されている場合、MERGE ステートメントに指定されたすべての操作に有効な INSTEAD OF トリガーを定義する必要があります。  
   

@@ -28,20 +28,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26f1b65876d9d6c6e25cc4df27a588fe17cf9d0c
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.openlocfilehash: abccf047d58d03867f08ea9a0068c5acdbe49ea8
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889953"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802566"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
-
-共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 共通テーブル式は単純なクエリから派生し、単一の SELECT、INSERT、UPDATE、DELETE、MERGE ステートメントの実行スコープ内で定義されます。 CTE は、CREATE VIEW ステートメントの中で、ビューの SELECT ステートメントの定義の一部として指定することもできます。 共通テーブル式には、自己参照を含めることができます。 これは再帰共通テーブル式と呼ばれます。  
+共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 共通テーブル式は単純なクエリから派生し、単一の SELECT、INSERT、UPDATE、DELETE、MERGE ステートメントの実行スコープ内で定義されます。 この句は、CREATE VIEW ステートメントの中で、ビューの SELECT ステートメントの定義の一部として指定することもできます。 共通テーブル式には、自己参照を含めることができます。 これは再帰共通テーブル式と呼ばれます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +58,7 @@ ms.locfileid: "55889953"
 共通テーブル式の有効な識別子です。 *expression_name* には、同一の WITH \<common_table_expression> 句内で定義される他の共通テーブル式の名前と異なる名前を指定する必要があります。ただし、*expression_name* には、ベース テーブルまたはビューと同じ名前を指定できます。 クエリの *expression_name* の参照では、ベース オブジェクトではなく、共通テーブル式が使用されます。
   
  *column_name*  
- 共通テーブル式の列名を指定します。 1 つの CTE 定義の中で、列名の重複は許可されません。 指定した列名の数は *CTE_query_definition* の結果セットの列数と一致する必要があります。 クエリ定義内で、結果セットのすべての列に対して異なる列名が指定されている場合にのみ、列名リストをオプションで使用できます。  
+ 共通テーブル式の列名を指定します。 1 つの CTE 定義の中で、列名の重複は許可されません。 指定した列名の数は *CTE_query_definition* の結果セットの列数と一致する必要があります。 クエリ定義内で、結果として得られるすべての列に対して異なる列名が指定されている場合にのみ、列名リストをオプションで使用できます。  
   
  *CTE_query_definition*  
  共通テーブル式を設定した結果セットを持つ SELECT ステートメントを指定します。 *CTE_query_definition* の SELECT ステートメントでは、CTE は別の CTE を定義できないという点を除き、ビューの作成と同じ要件を満たす必要があります。 詳細については、「解説」セクションと「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。  
@@ -93,7 +90,7 @@ ms.locfileid: "55889953"
   
 -   バッチの一部となるステートメント内で CTE が使用される場合、この句の前のステートメントの末尾にセミコロンを記述する必要があります。  
   
--   CTE を参照するクエリは、カーソル定義に使用できます。  
+-   CTE を参照するクエリは、カーソルを定義するために使用できます。  
   
 -   リモート サーバー上のテーブルは、CTE 内で参照できます。  
   
@@ -102,7 +99,7 @@ ms.locfileid: "55889953"
 ## <a name="guidelines-for-defining-and-using-recursive-common-table-expressions"></a>再帰共通テーブル式の定義および使用に関するガイドライン  
  再帰共通テーブル式の定義には、次のガイドラインが適用されます。  
   
--   再帰 CTE の定義には、少なくとも 2 つの CTE クエリ定義を含める必要があります。1 つはアンカー メンバーで、もう 1 つは再帰メンバーです。 アンカー メンバーと再帰メンバーは複数定義できます。ただし、すべてのアンカー メンバーの定義は、最初の再帰メンバーの定義よりも前に記述する必要があります。 CTE 自体を参照しない CTE クエリ定義はすべてアンカー メンバーとなります。  
+-   再帰 CTE の定義には、少なくとも 2 つの CTE クエリ定義を含める必要があります。1 つはアンカー メンバーで、もう 1 つは再帰メンバーです。 複数のアンカー メンバーと再帰メンバーを定義できます。ただし、アンカー メンバーの定義はすべて、最初の再帰メンバーの定義よりも前に記述する必要があります。 CTE 自体を参照しない CTE クエリ定義はすべてアンカー メンバーとなります。  
   
 -   アンカー メンバーは、次の set 演算子のいずれかによって結合する必要があります:UNION ALL、UNION、INTERSECT、EXCEPT。 UNION ALL は、最後のアンカー メンバーと最初の再帰メンバーを連結する場合、および複数の再帰メンバーを連結する場合に使用できる唯一の set 演算子です。  
   
@@ -136,7 +133,7 @@ ms.locfileid: "55889953"
   
 -   再帰 CTE に含まれる SELECT ステートメントが返す列で NULL 値が許容されるかどうかにかかわらず、再帰 CTE が返すすべての列で NULL 値が許可されます。  
   
--   再帰 CTE が適切に構成されていない場合、無限ループが発生する可能性があります。 たとえば、再帰メンバーのクエリ定義が親列と子列に対して同じ値を返す場合、無限ループが生成されます。 無限ループを防ぐには、MAXRECURSION ヒントを使用したり、INSERT、UPDATE、DELETE、または SELECT ステートメントの OPTION 句に 0 ～ 32,767 の値を指定したりすることにより、特定のステートメントに許可される再帰レベルの数を制限します。 これにより、無限ループの原因となったコードの問題が解決されるまで、ステートメントの実行を制御できます。 サーバー全体での既定値は 100 です。 0 を指定した場合、制限は適用されません。 MAXRECURSION の値は 1 つのステートメントに 1 つだけ指定できます。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
+-   再帰 CTE が適切に構成されていない場合、無限ループが発生する可能性があります。 たとえば、再帰メンバーのクエリ定義が親列と子列に対して同じ値を返す場合、無限ループが生成されます。 無限ループを防ぐには、MAXRECURSION ヒントを使用したり、INSERT、UPDATE、DELETE、または SELECT ステートメントの OPTION 句に 0 から 32,767 までの値を指定したりすることにより、特定のステートメントに許可される再帰レベルの数を制限します。 これにより、無限ループが作成される原因となったコードの問題が解決されるまで、ステートメントの実行を制御できます。 サーバー全体での既定値は 100 です。 0 を指定した場合、制限は適用されません。 MAXRECURSION の値は 1 つのステートメントに 1 つだけ指定できます。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 -   再帰共通テーブル式を含むビューを使用してデータを更新することはできません。  
   
@@ -144,7 +141,7 @@ ms.locfileid: "55889953"
   
 -   リモート サーバー上のテーブルは、CTE 内で参照できます。 CTE の再帰メンバーがリモート サーバーを参照する場合、各リモート テーブルごとにスプールが作成されます。そのため、ローカルからそのテーブルに繰り返しアクセスできます。 CTE クエリの場合、クエリ プランに Index Spool/Lazy Spool が表示され、WITH STACK 述語が付加されます。 これは、適切な再帰を確認する方法の 1 つです。  
   
--   CTE の再帰部分の分析関数と集計関数は、CTE のセットではなく、現在の再帰レベルのセットに適用されます。 ROW_NUMBER などの関数は、現在の再帰レベルによって渡されたデータのサブセットでのみ機能し、CTE の再帰部分に渡されたデータのセット全体では機能しません。 詳細については、例 k. を使用してで分析関数に続く CTE の再帰的なを参照してください。  
+-   CTE の再帰部分の分析関数と集計関数は、CTE のセットではなく、現在の再帰レベルのセットに適用されます。 ROW_NUMBER などの関数は、現在の再帰レベルによって渡されたデータのサブセットでのみ機能し、CTE の再帰部分に渡されたデータのセット全体では機能しません。 詳細については、「K. 再帰 CTE で分析関数を使用する」を参照してください。  
   
 ## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の共通テーブル式の機能と制限  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の CTE の現在の実装には、次のような機能と制限があります。  
@@ -219,7 +216,7 @@ FROM Sales_CTE;
 GO  
 ```  
   
-### <a name="c-using-multiple-cte-definitions-in-a-single-query"></a>C. 単一のクエリでの複数の CTE の定義  
+### <a name="c-using-multiple-cte-definitions-in-a-single-query"></a>C. 単一のクエリで複数の CTE 定義を使用する  
  次の例は、単一のクエリで複数の CTE を定義する方法を示しています。 CTE クエリ定義を区切るために、コンマを使用することに注意してください。 通貨書式で金額を表示する FORMAT 関数は、SQL Server 2012 以降で利用できます。  
   
 ```  
@@ -275,7 +272,7 @@ SalesPersonID SalesYear   TotalSales    SalesQuotaYear SalesQuota  Amt_Above_or_
 ```  
   
 ### <a name="d-using-a-recursive-common-table-expression-to-display-multiple-levels-of-recursion"></a>D. 再帰共通テーブル式を使用して、複数の再帰レベルを表示する  
- 次の例は、マネージャーおよびマネージャーにレポートする従業員の階層リストを示しています。 最初に、`dbo.MyEmployees` テーブルを作成して値を設定します。  
+ 次の例は、マネージャーおよびそのマネージャーにレポートする従業員の階層リストを示しています。 最初に、`dbo.MyEmployees` テーブルを作成して値を設定します。  
   
 ```  
 -- Create an Employee table.  
@@ -323,7 +320,7 @@ GO
 ```  
   
 ### <a name="e-using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>E. 再帰共通テーブル式を使用して、2 つの再帰レベルを表示する  
- 次の例は、マネージャーおよびマネージャーにレポートする従業員を示しています。 返されるレベルの数は 2 つに制限されます。  
+ 次の例は、マネージャーおよびそのマネージャーにレポートする従業員を示しています。 返されるレベルの数は 2 つに制限されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -660,7 +657,7 @@ AS
 GO  
 ```  
   
-### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. ステートメントでコンマ区切りの CTE を複数使用する  
+### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N.  ステートメントでコンマ区切りの CTE を複数使用する  
  次の例では、1 つのステートメントで 2 つの CTE を使用しています。 CTE は入れ子にできません (再帰なし)。  
   
 ```  

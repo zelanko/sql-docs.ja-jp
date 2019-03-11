@@ -1,7 +1,7 @@
 ---
 title: クエリ処理アーキテクチャ ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ee8109bc7d6499352b2d1caf47381faa3df9cf3a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591886"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802408"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,6 @@ ms.locfileid: "53591886"
 単一の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの処理は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で SQL ステートメントを実行する最も基本的な方法です。 ローカルのベース テーブルだけを参照する (ビューやリモート テーブルは参照しない) 単一の `SELECT` ステートメントを処理する手順が、この基本的な処理の良い例です。
 
 ### <a name="logical-operator-precedence"></a>論理演算子の優先順位
-
 1 つのステートメントで複数の論理演算子を使用すると、最初に `NOT` が評価され、次に `AND`、最後に `OR` が評価されます。 算術演算子、およびビット演算子は論理演算子より前に処理されます。 詳細については、「[Operator Precedence (Transact-SQL)](../t-sql/language-elements/operator-precedence-transact-sql.md)」 (演算子の順位 (Transact-SQL)) を参照してください。
 
 次の例では、色の条件が製品モデル 21 には該当しますが、製品モデル 20 には該当しません。これは、`AND` が `OR` よりも優先されるためです。
@@ -88,7 +87,6 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>SELECT ステートメントの最適化
-
 `SELECT` ステートメントは非手続き型であり、要求したデータを取得するときにデータベース サーバーで使用する手順が細かく指定されません。 つまり、データベース サーバーが SELECT ステートメントを分析して、要求したデータを抽出する最も効率的な方法を決定する必要があります。 これを、 `SELECT` ステートメントの最適化と呼びます。 また、最適化を行うコンポーネントをクエリ オプティマイザーと呼びます。 クエリ オプティマイザーへの入力は、クエリ、データベース スキーマ (テーブル定義やインデックスの定義)、およびデータベース統計で構成されます。 クエリ オプティマイザーの出力がクエリ実行プランです。これは、クエリ プランや単にプランと呼ばれることもあります。 クエリ プランの内容については、このトピックの後半で説明します。
 
 単一の `SELECT` ステートメントを最適化する場合のクエリ オプティマイザーの入出力は、次の図のようになります。
@@ -126,7 +124,6 @@ GO
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーを使用すると、プログラマやデータベース管理者が入力しなくても、データベース内の状態の変化に合わせてデータベース サーバーを動的に調整できるので、クエリ オプティマイザーは不可欠です。 これにより、プログラマはクエリの最終結果の記述だけに重点を置くことができます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、ステートメントを実行するたびに、データベースの状態に合わせて効率的な実行プランを構築します。
 
 ### <a name="processing-a-select-statement"></a>SELECT ステートメントの処理
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が単一の SELECT ステートメントを処理する基本的な手順は次のとおりです。 
 
 1. パーサーが `SELECT` ステートメントをスキャンし、キーワード、式、演算子、識別子などの論理単位に分解します。
@@ -135,18 +132,97 @@ GO
 4. リレーショナル エンジンによって、実行プランの実行が開始されます。 リレーショナル エンジンは、ベース テーブルからのデータを必要とする手順を処理するときに、要求した行セットのデータを渡すようにストレージ エンジンに要求します。
 5. リレーショナル エンジンでは、ストレージ エンジンから返されたデータが結果セット用に定義された形式に変換され、結果セットをクライアントに返します。
 
-### <a name="processing-other-statements"></a>その他のステートメントの処理
+### <a name="ConstantFolding"></a> 定数のたたみ込みと式の評価 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではクエリのパフォーマンスを向上するために、いくつかの定数式を前もって評価します。 これを定数のたたみ込みと呼びます。 定数は、3、'ABC'、'2005-12-31'、1.0e3、0x12345678 のような [!INCLUDE[tsql](../includes/tsql-md.md)] リテラルです。
 
-`SELECT` ステートメントの処理で説明した基本的な手順は、 `INSERT`、 `UPDATE`、 `DELETE`などの SQL ステートメントにも適用されます。 `UPDATE` ステートメントと `DELETE` ステートメントは、いずれも変更または削除する行セットを対象とする必要があります。 これらの行を特定する処理は、 `SELECT` ステートメントの結果セットを得るために使用された、基になる行を特定する処理と同じです。 `UPDATE` ステートメントと `INSERT` ステートメントのどちらにも、更新または挿入するデータ値を指定する SELECT ステートメントを埋め込むことができます。
+#### <a name="foldable-expressions"></a>たたみ込み可能な式
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、次の種類の式に定数のたたみ込みを適用します。
+- 定数のみから構成される数式 (1+1、5/3*2 など)。
+- 定数のみから構成される論理式 (1=1、1>2 AND 3>4 など)。
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってたたみ込み可能と判断された組み込み関数 (`CAST`、`CONVERT` など)。 固有の関数は、通常はたたみ込み可能です。ただし結果が関数への入力のみによって決まらず、SET オプション、言語設定、データベース オプション、暗号化キーなどの、状況によって変わりうる他の情報を交えて決まる場合は例外です。 非決定的関数はたたみ込み不可能です。 組み込みの決定的関数はたたみ込み可能ですが、一部例外があります。
+
+> [!NOTE] 
+> 例外の 1 つは LOB 型です。 たたみ込み処理の出力が LOB 型 (text、image、nvarchar(max)、varchar(max)、または varbinary(max) のいずれか) である場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では式はたたみ込まれません。
+
+#### <a name="nonfoldable-expressions"></a>たたみ込み不可能な式
+その他の種類の式は、すべてたたみ込み不可能です。 具体的には、次に示す種類の式です。
+- 定数ではない式 (結果が列の値によって変わる式など)。
+- 結果がローカル変数またはパラメーター (@x など) によって変わる式。
+- 非決定的関数。
+- ユーザー定義関数 ([!INCLUDE[tsql](../includes/tsql-md.md)] および CLR)
+- 結果が言語設定によって変わる式。
+- 結果が SET オプションによって変わる式。
+- 結果がサーバー構成オプションによって変わる式。
+
+#### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>たたみ込み可能/不可能な定数式の例
+次のクエリを考えてみます。
+
+```sql
+SELECT *
+FROM Sales.SalesOrderHeader AS s 
+INNER JOIN Sales.SalesOrderDetail AS d 
+ON s.SalesOrderID = d.SalesOrderID
+WHERE TotalDue > 117.00 + 1000.00;
+```
+
+このクエリの `PARAMETERIZATION` データベース オプションが `FORCED` に設定されていない場合、クエリをコンパイルする前に式 `117.00 + 1000.00` が評価され、その結果である `1117.00` に置き換えられます。 定数のたたみ込みには、次に示す利点があります。
+- 実行時に式を繰り返し評価する必要がありません。
+- クエリ `TotalDue > 117.00 + 1000.00` の部分の結果セットのサイズをクエリ オプティマイザーで推定するときは、評価後の式の値が使用されます。
+
+一方、ユーザー定義関数を含んだ式は決定的関数であってもたたみ込まれないので、`dbo.f` をスカラー値のユーザー定義関数とした場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、式 `dbo.f(100)` はたたみ込まれません。 パラメーター化の詳細については、この記事で後述する「[強制パラメーター化](#ForcedParam)」を参照してください。
+
+#### <a name="ExpressionEval"></a>式の評価 
+また、定数のたたみ込みは行われませんが、引数がコンパイル時に確定する式は、引数がパラメーターと定数のどちらでも、最適化のときにクエリ オプティマイザーのカーディナリティ (結果セットのサイズ) 推定機能によって評価されます。
+
+具体的には、次の組み込み関数と特殊演算子は、入力がすべて確定する場合コンパイル時に評価されます: `UPPER`、`LOWER`、`RTRIM`、`DATEPART( YY only )`、`GETDATE`、`CAST`、`CONVERT`。 次に示す演算子も、入力がすべて確定する場合コンパイル時に評価されます。
+- 算術演算子 : +、-、\*、/、単項演算子の -
+- 論理演算子: `AND`、`OR`、`NOT`
+- 比較演算子: <、>、<=、>=、<>、`LIKE`、`IS NULL`、`IS NOT NULL`
+
+上記以外の関数および演算子は、カーディナリティを推定するときにはクエリ オプティマイザーによって評価されません。
+
+#### <a name="examples-of-compile-time-expression-evaluation"></a>コンパイル時の式の評価の例
+次のストアド プロシージャについて考えてみましょう。
+
+```sql
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc( @d datetime )
+AS
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d+1;
+```
+
+このストアド プロシージャの `SELECT` ステートメントを最適化するとき、条件 `OrderDate > @d+1` に対する結果セットの予測カーディナリティがクエリ オプティマイザーによって評価されます。 式 `@d+1` は `@d` がパラメーターであるために定数がたたみ込まれません。 しかし、最適化のときにはパラメーターの値が確定しています。 したがって結果セットのサイズがクエリ オプティマイザーによって正確に推定できるので、適切なクエリ プランが選択されます。
+
+次は、上記のクエリの `@d2` をローカル変数 `@d+1` に置き換え、クエリではなく SET ステートメントで式を評価するストアド プロシージャの例を考えてみます。
+
+```sql 
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc2( @d datetime )
+AS
+BEGIN
+DECLARE @d2 datetime
+SET @d2 = @d+1
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d2
+END;
+```
+
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で *MyProc2* の `SELECT` ステートメントを最適化するとき、`@d2` の値は確定していません。 そのため、クエリ オプティマイザーでは `OrderDate > @d2` の選択度に対して既定の推定が使用されます (この場合は 30%)。
+
+### <a name="processing-other-statements"></a>その他のステートメントの処理
+`SELECT` ステートメントの処理で説明した基本的な手順は、 `INSERT`、 `UPDATE`、 `DELETE`などの SQL ステートメントにも適用されます。 `UPDATE` ステートメントと `DELETE` ステートメントは、いずれも変更または削除する行セットを対象とする必要があります。 これらの行を特定する処理は、 `SELECT` ステートメントの結果セットを得るために使用された、基になる行を特定する処理と同じです。 `UPDATE` ステートメントと `INSERT` ステートメントのどちらにも、更新または挿入するデータ値を指定する `SELECT` ステートメントを埋め込むことができます。
 
 `CREATE PROCEDURE` または `ALTER TABLE` などの DDL (データ定義言語) ステートメントも、最終的には、システム カタログ テーブル上の一連のリレーショナル操作になります。また、場合によっては `ALTER TABLE ADD COLUMN` など、データ テーブルに対する一連のリレーショナル操作になります。
 
 ### <a name="worktables"></a>作業テーブル
-
 リレーショナル エンジンは、SQL ステートメントで指定された論理操作を行う際に、作業テーブルの作成を必要とする場合があります。 作業テーブルとは、中間結果を格納するための内部テーブルです。 作業テーブルは、特定の `GROUP BY`クエリ、 `ORDER BY`クエリ、 `UNION` クエリで生成されます。 たとえば、インデックスの対象になっていない列を `ORDER BY` 句が参照している場合、要求された順番に結果セットを並べ替えるための作業テーブルが生成されることがあります。 また、クエリ プランの一部を実行した結果を一時的に格納するためのスプールとして作業テーブルが使用されることもあります。 作業テーブルは tempdb に作成され、不要になると自動的に削除されます。
 
 ### <a name="view-resolution"></a>ビューの解決
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ プロセッサでは、インデックス付きビューとインデックスなしのビューの処理方法が異なります。 
 
 * インデックス付きビューの行は、テーブルと同じ形式でデータベースに格納されます。 クエリ オプティマイザーでクエリ プランにインデックス付きビューを使用することが決定されると、インデックス付きビューはベース テーブルと同じ方法で処理されます。
@@ -192,7 +268,6 @@ WHERE OrderDate > '20020531';
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio のプラン表示機能では、リレーショナル エンジンがこの 2 つの `SELECT` ステートメントのどちらに対しても同じ実行プランを構築することが示されます。
 
 ### <a name="using-hints-with-views"></a>ビューでのヒントの使用
-
 クエリのビューに設定されるヒントは、ベース テーブルにアクセスするためにビューを展開するときに検出される他のヒントと競合することがあります。 この競合が発生すると、クエリはエラーを返します。 たとえば、定義にテーブル ヒントが含まれている、次のビューについて考えてみます。
 
 ```sql
@@ -455,7 +530,7 @@ WHERE ProductSubcategoryID = 4;
 
 パラメーターを使用して SQL ステートメントと定数を切り離すと、同一のプランをリレーショナル エンジンが認識できるようになります。 パラメーターは、次の方法で使用できます。 
 
-* Transact-SQL では、 `sp_executesql`を使用します。 
+* [!INCLUDE[tsql](../includes/tsql-md.md)] では、`sp_executesql` を次のように使用します:  
 
    ```sql
    DECLARE @MyIntParm INT
@@ -468,7 +543,7 @@ WHERE ProductSubcategoryID = 4;
      @MyIntParm
    ```
 
-   この方法は、SQL ステートメントを動的に生成する Transact-SQL スクリプト、ストアド プロシージャ、またはトリガーで使用することをお勧めします。 
+   この方法は、SQL ステートメントを動的に生成する [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト、ストアド プロシージャ、またはトリガーで使用することをお勧めします。 
 
 * ADO、OLE DB、および ODBC ではパラメーター マーカーを使用します。 パラメーター マーカーは疑問符 (?) です。SQL ステートメント内の定数の代わりに置かれ、プログラム変数にバインドされます。 たとえば、ODBC アプリケーションでは次のような操作を実行できます。 
 

@@ -22,21 +22,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df735e98cb20643f9030c77f8e5dcc22ab126fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4620f38c01f1bd7c4158387a607da12fbb95b865
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847460"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425817"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (ワイルドカード - 一致する文字列) (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  角かっこ `[ ]` で指定された範囲または集合の任意の 1 文字に一致します。 これらのワイルドカード文字は、`LIKE` や `PATINDEX` などのパターン検索を含む文字列比較で使用できます。  
+角かっこ `[ ]` で指定された範囲または集合の任意の 1 文字に一致します。 これらのワイルドカード文字は、`LIKE` や `PATINDEX` などのパターン検索を含む文字列比較で使用できます。  
   
 ## <a name="examples"></a>使用例  
-### <a name="a-simple-example"></a>A: 簡単な例   
-次の例では、文字 `m` で始まる名前を返します。 `[n-z]` は、2 番目の文字が `n` から `z` の範囲に含まれる必要があることを指定します。 パーセントのワイルドカード `%` は、2 文字に 0 個以上の任意の文字列が続くことを指定します。 `model` データベースと `msdb` データベースがこの条件を満たしています。 `master` データベースは結果セットに含まれません。
+### <a name="a-simple-example"></a>A:簡単な例   
+次の例では、文字 `m` で始まる名前が返されます。 `[n-z]` は、2 番目の文字が `n` から `z` の範囲に含まれる必要があることを指定します。 パーセントのワイルドカード `%` は、2 文字に 0 個以上の任意の文字列が続くことを指定します。 `model` データベースと `msdb` データベースがこの条件を満たしています。 `master` データベースは条件を満たさず、結果セットから除外されます。
  
 ```sql
 SELECT name FROM sys.databases
@@ -53,7 +53,7 @@ msdb
  他にも該当するデータベースがインストールされている可能性があります。
 
 
-### <a name="b-more-complex-example"></a>B: より複雑な例   
+### <a name="b-more-complex-example"></a>B:より複雑な例   
  次の例では、4 桁の郵便番号付きの住所を持つ [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] のすべての従業員の ID と名前を [] 演算子を使用して検索します。  
   
 ```sql  
@@ -67,7 +67,7 @@ INNER JOIN Person.Address AS a ON a.AddressID = ea.AddressID
 WHERE a.PostalCode LIKE '[0-9][0-9][0-9][0-9]';  
 ```  
   
- Here is the result set:  
+ 結果セットは次のようになります。  
   
 ```  
 EmployeeID      FirstName      LastName      PostalCode  

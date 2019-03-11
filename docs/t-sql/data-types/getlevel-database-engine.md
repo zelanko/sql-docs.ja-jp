@@ -18,12 +18,12 @@ ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f7c5e2cf81cd4b90a2667cb51e4110a8313802a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 527c08a55fca49f2545c0757091f67442b3a495f
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014754"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676020"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ SqlInt16 GetLevel ( )
 **CLR の戻り値の型: SqlInt16**
   
 ## <a name="remarks"></a>Remarks  
-1 つ以上のノードのレベルを確認するとき、または指定したレベルのメンバーにノードを限定するときに使用します。 階層のルートはレベル 0 です。
+1 つ以上のノードのレベルを決定したり、指定したレベルのメンバーにノードをフィルタリングしたりするために使用します。 階層のルートはレベル 0 です。
   
-GetLevel 幅優先の検索のインデックスに非常に便利です。 詳しくは、「[階層データ &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)」をご覧ください。
+GetLevel は、幅優先の検索のインデックスに便利です。 詳しくは、「[階層データ &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)」をご覧ください。
   
 ## <a name="examples"></a>使用例  
   
@@ -64,7 +64,7 @@ FROM HumanResources.EmployeeDemo;
 ```  
   
 ### <a name="b-returning-all-members-of-a-hierarchy-level"></a>B. 階層レベルのすべてのメンバーを返す  
-次の例では、テーブル内で、階層レベル 2 にあるすべての行を取得します。
+次の例では、階層レベル 2 のテーブルのすべての行を返します。
   
 ```sql
 SELECT OrgNode.ToString() AS Text_OrgNode,   
@@ -74,7 +74,7 @@ WHERE OrgNode.GetLevel() = 2;
 ```  
   
 ### <a name="c-returning-the-root-of-the-hierarchy"></a>C. 階層のルートを返す  
-次の例は、階層レベルのルートを返します。
+次の例では、階層レベルのルートを返します。
   
 ```sql
 SELECT OrgNode.ToString() AS Text_OrgNode,   
@@ -94,5 +94,4 @@ this.GetLevel()
 [hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

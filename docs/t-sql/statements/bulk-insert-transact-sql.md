@@ -27,19 +27,16 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 34ab5673d0e74de637f0de22153b9f90cd6a407d
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.openlocfilehash: 27e3eefcb9a43d8063e9f72f18f76dd8ac7e3c94
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407652"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802886"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、ユーザーが指定した形式で、データベース テーブルまたはビューにデータ ファイルをインポートします。  
 
@@ -122,7 +119,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 ```
 
  BATCHSIZE **=**_batch_size_  
- 1 つのバッチに含まれている行の数を指定します。 それぞれのバッチは、1 回のトランザクションでサーバーにコピーされます。 コピーに失敗した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では各バッチのトランザクションがコミットまたはロールバックされます。 既定では、指定のデータ ファイル内にあるすべてのデータが 1 つのバッチになります。 パフォーマンスに関する考慮事項については、後の「解説」を参照してください。  
+ 1 つのバッチに含まれている行の数を指定します。 それぞれのバッチは、1 回のトランザクションでサーバーにコピーされます。 コピーに失敗した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では各バッチのトランザクションがコミットまたはロールバックされます。 既定では、指定のデータ ファイル内にあるすべてのデータが 1 つのバッチになります。 パフォーマンスに関する考慮事項については、このトピックで後述する「解説」を参照してください。  
   
  CHECK_CONSTRAINTS  
  一括インポート操作中、対象テーブルまたはビューに対するすべての制約を検証します。 CHECK_CONSTRAINTS オプションを指定しない場合、CHECK 制約および FOREIGN KEY 制約は無視され、操作の後でテーブルの制約は信頼されていないものとしてマークされます。  
@@ -176,7 +173,7 @@ BULK INSERT で、指定したデータ ファイルの型の値に基づいて�
 ERRORFILE **='**_file_name_**'**  
 形式エラーがあり、OLE DB 行セットに変換できない行を収集するときに使用するファイルを指定します。 該当する行は、データ ファイルからこのエラー ファイルに "そのまま" コピーされます。
 
-このエラー ファイルは、コマンドが実行されたときに作成されます。 ファイルが既に存在する場合はエラーが発生し、 拡張子 .ERROR.txt の制御ファイルが作成されます。 このファイルにはエラー ファイルの各行の参照と、エラーの診断が含まれています。 エラーが修正されるとすぐ、データは読み込み可能になります。  
+このエラー ファイルは、コマンドが実行されたときに作成されます。 ファイルが既に存在する場合はエラーが発生し、 さらに、拡張子 .ERROR.txt の制御ファイルが作成されます。 このファイルにはエラー ファイルの各行の参照と、エラーの診断が含まれています。 エラーが修正されるとすぐ、データは読み込み可能になります。  
 **適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、`error_file_path` は Azure Blob Storage に格納することができます。
 
@@ -208,9 +205,9 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
  一括インポート操作時、空の列が挿入される場合は NULL 値が保持されます。その列の既定値は格納されません。 詳細については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」をご覧ください。  
   
  KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_  
- バッチあたりのデータの概算キロバイト数 (KB) を *kilobytes_per_batch* として指定します。 KILOBYTES_PER_BATCH の既定値はありません。 パフォーマンスに関する考慮事項については、後の「解説」を参照してください。  
+ バッチあたりのデータの概算キロバイト数 (KB) を *kilobytes_per_batch* として指定します。 KILOBYTES_PER_BATCH の既定値はありません。 パフォーマンスに関する考慮事項については、このトピックで後述する「解説」を参照してください。  
   
-LASTROW **=** _last_row_ 読み込み終了行の行番号を指定します。 既定値は 0 で、これは指定のデータ ファイルの最終行を表します。  
+LASTROW **=** _last_row_ 読み込み終了行の行番号を指定します。 既定値は 0 です。これは指定のデータ ファイルの最終行を表します。  
   
  MAXERRORS **=** _max_errors_  
  一括インポート操作時に許容されるデータの構文エラーの最大数を指定します。この最大数に達すると、操作は取り消されます。 一括インポート操作でインポートできない行は無視され、それぞれ 1 つのエラーとしてカウントされます。 *max_errors* を指定しない場合の既定値は 10 です。  
@@ -219,7 +216,7 @@ LASTROW **=** _last_row_ 読み込み終了行の行番号を指定します。 
 >  MAX_ERRORS オプションは、制約チェックや **money** および **bigint** のデータ型の変換には適用されません。  
   
  ORDER ( { *column* [ ASC | DESC ] } [ **,**... *n* ] )  
- データ ファイル内のデータの並べ替え方法を指定します。 インポートするデータをテーブル上のクラスター化インデックスに従って並べ替えると、一括インポートのパフォーマンスが向上します。 データ ファイルが異なる順序で並んでいる場合、つまりクラスター化インデックス キーの順序以外の順で並んでいるか、テーブルにクラスター化インデックスが存在しない場合、ORDER 句は無視されます。 指定する列の名前は、インポート先のテーブル内で有効な列の名前であることが必要です。 既定では、一括挿入操作はデータ ファイルが並べ替えられていないことを前提に実行されます。 最適な一括インポートのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、インポートするデータが並べ替えられているかどうかも検証されます。  
+ データ ファイル内のデータの並べ替え方法を指定します。 インポートするデータをテーブル上のクラスター化インデックスに従って並べ替えると、一括インポートのパフォーマンスが向上します。 データ ファイルが異なる順序 (つまりクラスター化インデックス キーの順序以外の順) で並んでいる場合またはテーブルにクラスター化インデックスが存在しない場合、ORDER 句は無視されます。 指定する列の名前は、インポート先のテーブル内で有効な列の名前であることが必要です。 既定では、一括挿入操作はデータ ファイルが並べ替えられていないことを前提に実行されます。 最適な一括インポートのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、インポートするデータが並べ替えられているかどうかも検証されます。  
   
  *n*  
  複数の列を指定できることを示すプレースホルダーです。  
@@ -227,11 +224,11 @@ LASTROW **=** _last_row_ 読み込み終了行の行番号を指定します。 
  ROWS_PER_BATCH **=** _rows_per_batch_  
  データ ファイル内にあるデータ行の概算数を示します。  
   
- 既定では、データ ファイル内のすべてのデータは単一のトランザクションとしてサーバーに送られ、バッチ内の行数はクエリ オプティマイザーには通知されません。 ROWS_PER_BATCH を値 > 0 で指定した場合、サーバーでは一括インポート操作の最適化にこの値が使用されます。 ROWS_PER_BATCH に指定する値は、実際の行数とほぼ同じにする必要があります。 パフォーマンスに関する考慮事項については、後の「解説」を参照してください。  
+ 既定では、データ ファイル内のすべてのデータは単一のトランザクションとしてサーバーに送られ、バッチ内の行数はクエリ オプティマイザーには通知されません。 ROWS_PER_BATCH を値 > 0 で指定した場合、サーバーでは一括インポート操作の最適化にこの値が使用されます。 ROWS_PER_BATCH に指定する値は、実際の行数とほぼ同じにする必要があります。 パフォーマンスに関する考慮事項については、このトピックで後述する「解説」を参照してください。  
   
  
  TABLOCK  
- 一括インポート操作中にテーブル レベルのロックを取得します。 テーブルにインデックスがなく、TABLOCK を指定した場合は、複数のクライアントで同時に 1 つのテーブルを読み込むことができます。 既定では、ロック動作はテーブル オプション **table lock on bulk load**によって決定されます。 一括インポート操作中にロックを維持すると、テーブル ロックの競合が少なくなるので、場合によってはパフォーマンスが大幅に向上します。 パフォーマンスに関する考慮事項については、後の「解説」を参照してください。  
+ 一括インポート操作中にテーブル レベルのロックを取得します。 テーブルにインデックスがなく、TABLOCK を指定した場合は、複数のクライアントで同時に 1 つのテーブルを読み込むことができます。 既定では、ロック動作はテーブル オプション **table lock on bulk load**によって決定されます。 一括インポート操作中にロックを維持すると、テーブル ロックの競合が少なくなるので、場合によってはパフォーマンスが大幅に向上します。 パフォーマンスに関する考慮事項については、このトピックで後述する「解説」を参照してください。  
   
  列ストア インデックスの場合。 複数の行セットに内部的に分かれているため、ロックの動作が異なります。  各スレッドは、行セットに対して X ロックを取得して同時実行データ読み込みセッションによる並列データ読み込みを許可することで、それぞれの行セットにデータを排他的に読み込みます。 TABLOCK オプションを使用すると、スレッドは (従来の行セットの BU ロックとは異なり) テーブルに対して X ロックを取得し、他の同時実行スレッドが同時にデータを読み込むのを防ぎます。  
 
@@ -260,7 +257,7 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
   
 -   列の区切り記号が異なる。  
   
--   データ形式に他に異なる点がある。 フォーマット ファイルは通常、**bcp** ユーティリティを使用して作成し、必要に応じてテキスト エディターで修正します。 詳細については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
+-   データ形式に他に変更点がある。 フォーマット ファイルは通常、**bcp** ユーティリティを使用して作成し、必要に応じてテキスト エディターで修正します。 詳細については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
 
 **適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、format_file_path は Azure Blob Storage に格納することができます。
@@ -284,7 +281,7 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
   
 ### <a name="string-to-decimal-data-type-conversions"></a>文字列から 10 進数へのデータ型変換  
 
- BULK INSERT で使用される文字列から 10 進数へのデータ型変換には、[!INCLUDE[tsql](../../includes/tsql-md.md)] の [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 関数と同じ規則が適用されるので、科学的表記法を使用した数値を表す文字列は拒否されます。 したがって、BULK INSERT を実行するときに、そのような文字列が無効な値として評価され、変換エラーが報告されます。  
+ BULK INSERT で使用される文字列から 10 進数へのデータ型変換には、[!INCLUDE[tsql](../../includes/tsql-md.md)] の [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 関数と同じ規則が適用されるので、科学的表記法を使用した数値を表す文字列は拒否されます。 したがって、BULK INSERT では、そのような文字列は無効な値として処理され、変換エラーが報告されます。  
   
  この問題を回避するには、科学的表記法の **float** 型のデータを 10 進数の列に一括インポートするフォーマット ファイルを使用します。 フォーマット ファイルには、列のデータを明示的に **real** または **float** 型として記述します。 これらのデータ型の詳細については、を参照してください。 [float、real および #40 です。TRANSACT-SQL と #41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
@@ -348,7 +345,7 @@ GO
   
  データを一括インポート用に準備する方法については、「[一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)」をご覧ください。  
   
- BULK INSERT ステートメントは、テーブルまたはビューにデータをインポートするために、ユーザー定義のトランザクション内で実行できます。 必要に応じて、一括インポート データの複数の一致を使用するために、トランザクションは BULK INSERT ステートメントで BATCHSIZE 句を指定できます。 複数のバッチのトランザクションをロールバックする場合、トランザクションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信したすべてのバッチがロールバックされます。  
+ BULK INSERT ステートメントは、テーブルまたはビューにデータをインポートするために、ユーザー定義のトランザクション内で実行できます。 必要に応じて、一括インポート データの複数の一致を使用するために、トランザクションでは BULK INSERT ステートメント内に BATCHSIZE 句を指定できます。 複数のバッチのトランザクションをロールバックする場合、トランザクションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信したすべてのバッチがロールバックされます。  
   
 ## <a name="interoperability"></a>相互運用性  
   
@@ -385,7 +382,7 @@ GO
   
 ### <a name="permissions"></a>アクセス許可  
 
- INSERT および ADMINISTER BULK OPERATIONS 権限が必要です。 Azure SQL Database では、INSERT および ADMINISTER DATABASE BULK OPERATIONS 権限が必要です。 ただし次の操作を 1 つ以上行う場合は、さらに ALTER TABLE 権限が必要になります。  
+ INSERT 権限および ADMINISTER BULK OPERATIONS 権限が必要です。 Azure SQL Database では、INSERT および ADMINISTER DATABASE BULK OPERATIONS 権限が必要です。 ただし次のことが 1 つまたは複数当てはまる場合は、さらに ALTER TABLE 権限が必要になります。  
   
 -   制約が存在する場合に、CHECK_CONSTRAINTS オプションを指定しない。  
   

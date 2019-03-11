@@ -36,18 +36,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce80e0d5936c0a09eefc8abb09b35846bf5dc13
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 5020bfd6f7a17538130d5f701c7b2bbbe8ff766e
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045021"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801836"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 これらの関数は、あるデータ型の式を別のデータ型に変換します。  
 
@@ -142,7 +139,7 @@ date または time データ型の *expression* の場合、*style* には次�
 <sup>5</sup> Hijri とはいくつかのバリエーションがあるカレンダー システムです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではクウェート アルゴリズムが使用されます。
 
 > [!IMPORTANT]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定では、2 桁の年は、終了年 2049 年を基準に解釈されます。 つまり、SQL Server は 2 桁の年 49 を 2049 年と解釈し、2 桁の年 50 を 1950 年と解釈します。 クライアント アプリケーションの中には、Automation オブジェクトに基づくものなど、2030 年を終了年とするものも多くあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用される基準年を変更するための 2 桁年基準構成オプションが用意されています。 これにより、日付の一貫性のある処理を行うことができます。 年は 4 桁で指定することを推奨します。
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定では、2 桁の年は、終了年 2049 年を基準に解釈されます。 つまり、SQL Server は 2 桁の年 49 を 2049 年と解釈し、2 桁の年 50 を 1950 年と解釈します。 クライアント アプリケーションの中には、Automation オブジェクトに基づくものなど、2030 年を終了年とするものも多くあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用される基準年を変更するための 2 桁年基準構成オプションが用意されています。 これにより、日付の一貫性のある処理を行うことができます。 年は 4 桁で指定することをお勧めします。
 
 <sup>6</sup> 文字データを **datetime** または **smalldatetime** 型にキャストする場合のみサポートされます。 日付部分または時刻部分のみを表す文字データを、**datetime** または **smalldatetime** データ型にキャストするとき、時刻部分が指定されていないと 00:00:00.000 に設定され、日付部分が指定されていないと 1900-01-01 に設定されます。
   
@@ -189,7 +186,7 @@ date または time データ型の *expression* の場合、*style* には次�
 |[値]|[出力]|  
 |---|---|
 |**0** (既定値)|ASCII 文字をバイナリ バイトに変換するか、バイナリ バイトを ASCII 文字に変換します。 各文字またはバイトは 1:1 で変換されます。<br /><br /> バイナリの *data_type* の場合は、文字 0x が結果の左側に追加されます。|  
-|**1**、**2**|バイナリの *data_type* の場合は、式は文字式であることが必要です。 *expression* は**偶数**桁の 16 進数 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f) である必要があります。 *style* が 1 に設定されている場合、最初の 2 文字は 0x である必要があります。 式に奇数桁の文字が含まれているか、いずれかの文字が使用できない場合は、エラーが発生します。<br /><br /> 変換された式の長さが *data_type* の長さを超える場合、結果の右側が切り捨てられます。<br /><br /> 固定長の *data_type* が変換された結果より長い場合は、結果の右側に 0 が追加されます。<br /><br /> *data_type* が文字型の場合は、バイナリ式である必要があります。 各バイナリ文字は、16 進値を表す 2 桁の英数文字に変換されます。 変換された式の長さが *data_type* の長さを超える場合、右側が切り捨てられます。<br /><br /> *data_type* が固定サイズの文字型で、変換された結果の長さが *data_type* の長さよりも短い場合、変換された式の右側に空白が追加され、偶数桁の 16 進数が維持されます。<br /><br /> *style* が 1 の場合、変換された結果の左側に文字 0x が追加されます。|  
+|**1**、**2**|バイナリの *data_type* の場合は、式は文字式であることが必要です。 *expression* は**偶数**桁の 16 進数 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f) である必要があります。 *style* が 1 に設定されている場合、最初の 2 文字は 0x である必要があります。 式に奇数桁の文字が含まれているか、いずれかの文字が使用できない場合は、エラーが発生します。<br /><br /> 変換された式の長さが *data_type* の長さを超える場合、結果の右側が切り捨てられます。<br /><br /> 固定長の *data_type* が変換された結果より長い場合は、結果の右側に 0 が追加されます。<br /><br /> *data_type* が文字型の場合は、バイナリ式である必要があります。 各バイナリ文字は、2 桁の 16 進数の英数文字に変換されます。 変換された式の長さが *data_type* の長さを超える場合、右側が切り捨てられます。<br /><br /> *data_type* が固定サイズの文字型で、変換された結果の長さが *data_type* の長さよりも短い場合、変換された式の右側に空白が追加され、偶数桁の 16 進数が維持されます。<br /><br /> *style* が 1 の場合、変換された結果の左側に文字 0x が追加されます。|  
   
 ## <a name="implicit-conversions"></a>暗黙的な変換
 暗黙的な変換では、CAST 関数または CONVERT 関数を指定する必要はありません。 明示的な変換では、CAST 関数または CONVERT 関数を指定する必要があります。 次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムで提供されるデータ型に対して許可されるすべての明示的および暗黙的なデータ型変換を示しています。 **bigint**、**sql_variant**、**xml** が含まれます。 代入時に **sql_variant** データ型からの暗黙的な変換は行われませんが、**sql_variant** への暗黙的な変換は行われます。
@@ -242,7 +239,7 @@ CAST または CONVERT 関数が文字列を入出力する場合、出力では
 ||**nchar**|E|  
 ||**nvarchar**|E|  
   
-\* = 結果が短すぎて表示できません<br /><br />E  = 結果が短すぎて表示できない場合エラーが返される。
+\* = 結果が短すぎて表示できません<br /><br />E = 結果が短すぎて表示できない場合エラーが返される。
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、元のデータから別のデータ型に変換し、再度元のデータ型に戻すラウンド トリップ変換の場合にだけ、異なるバージョンでも同じ結果が生成されることが保証されています。 次にラウンド トリップ変換の例を示します。
   
@@ -292,7 +289,7 @@ Gail        Erickson      Ms.    *
 |**money**|**int**|四捨五入|  
 |**money**|**numeric**|四捨五入|  
 |**float**|**int**|切り捨て|  
-|**float**|**numeric**|四捨五入<br /><br /> 変換 **float** 値を科学的表記法を使用する **decimal** または **数値** 17 桁のみを有効桁数の値に制限されます。 有効桁数が 17 より多い値はゼロに丸められます。|  
+|**float**|**numeric**|四捨五入<br /><br /> 科学的表記法を使用した **float** 値から **decimal** または **numeric** への変換は、有効桁数 17 桁までの値に制限されます。 有効桁数が 17 より多い値はゼロに丸められます。|  
 |**float**|**datetime**|四捨五入|  
 |**datetime**|**int**|四捨五入|  
   
@@ -722,7 +719,7 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>参照
- [データ型の変換 (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+ [データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
  [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
  [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

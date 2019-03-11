@@ -32,18 +32,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e70ce6fa8619675b1e275400635bc46d7e371dfd
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 7b197330b1acbb32be6793ad57e2b8764cfd6bbc
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299309"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801476"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 この関数は、*startdate* と *enddate* で指定された 2 つの日付間の差を、指定された datepart 境界の数で (符号付き整数値として) で返します。
   
@@ -111,7 +108,7 @@ DATEDIFF ( datepart , startdate , enddate )
 *startdate* と *enddate* で異なる日付データ型が使用されており、一方の時刻要素の数または秒の小数部の有効桁数が、もう一方のデータ型を超えている場合、`DATEDIFF` では、欠落している要素が 0 に設定されます。
   
 ## <a name="datepart-boundaries"></a>datepart の差  
-次の各ステートメントには、すべて同じ *startdate* と *enddate* の値が指定されています。 これらの日付は隣接しており、時間的な差は 1 マイクロ秒 (0.0000001 秒) です。 各ステートメントにおける *startdate* と *enddate* の差は、どの要素をとっても、*datepart* の 1 単位分となるように配慮されています。 いずれのステートメントも戻り値は 1 です。 *startdate* と *enddate* の年の値は異なるが、カレンダー週の値が同じである場合、`DATEDIFF` では、*datepart* **week** に対して 0 を返します。
+次の各ステートメントには、すべて同じ *startdate* と *enddate* の値が指定されています。 これらの日付は隣接しており、時間的な差は 1 マイクロ秒 (0.0000001 秒) です。 各ステートメントにおける *startdate* と *enddate* の差は、どの要素をとっても、*datepart* の 1 単位分となるように配慮されています。 いずれのステートメントも 1 を返します。 *startdate* と *enddate* の年の値は異なるが、カレンダー週の値が同じである場合、`DATEDIFF` では、*datepart* **week** に対して 0 を返します。
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
