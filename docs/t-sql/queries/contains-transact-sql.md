@@ -373,7 +373,7 @@ WHERE CONTAINS((Name, Color), 'Red');
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-contains-with-simpleterm"></a>A. CONTAINS を \<simple_term> と共に使用する  
- 次の例では、 `$80.99` という単語を含み、価格が `Mountain`であるすべての製品を検索します。  
+ 次の例では、 `Mountain` という単語を含み、価格が `$80.99` であるすべての製品を検索します。  
   
 ```sql  
 USE AdventureWorks2012;  
