@@ -11,12 +11,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 402cbe79a85b1c7e9cd926922fd8f2c3abca04b6
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: 5dc7979ea9778ad6f580bb4c7c4af517dc3d515f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744492"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579510"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 内の SQL Server データ ファイル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ ON
     解決方法:Azure Storage にあるアクティブなデータベース ファイルで使用中の資格情報を削除しようとすると、このエラーが発生することがあります。 資格情報を削除するには、まずこのデータベース ファイルのある関連 BLOB を削除する必要があります。 アクティブなリースを保持している BLOB を削除するには、先にリースを終了する必要があります。  
   
 -   *コンテナーに対して Shared Access Signature が正しく作成されていません。*   
-     解決方法:コンテナーに対して Shared Access Signature が正しく作成されていることを確認します。 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)」のレッスン 2 に記載されている手順をご覧ください。  
+     解決方法:コンテナーに対して Shared Access Signature が正しく作成されていることを確認します。 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)」をご覧ください。  
   
 -   *SQL Server 資格情報が正しく作成されていません。*   
     解決方法:**[ID]** フィールドに 'Shared Access Signature' を使用して、シークレットが正しく作成されたことを確認します。 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../lesson-3-database-backup-to-url.md)」をご覧ください。  

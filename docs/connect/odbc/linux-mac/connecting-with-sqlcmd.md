@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d436072e81212203aff568feba1d764b07c31b8a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512537"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579262"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,7 +46,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -C サーバー証明書を信頼します。  
 
-- -d *database_name*問題、 `USE ` *database_name*ステートメントを開始するときに`sqlcmd`します。  
+- -d *database_name*問題、 `USE` *database_name*ステートメントを開始するときに`sqlcmd`します。  
 
 - -D `sqlcmd` -S オプションに渡された値が、データ ソース名 (DSN) として解釈されるようにします。 詳細については、このトピックの最後の「`sqlcmd` および `bcp` の DSN サポート」を参照してください。  
   

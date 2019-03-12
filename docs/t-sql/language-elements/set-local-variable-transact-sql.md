@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c046b2c2288264062f9f837c7a2bd3b74de83c35
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 27fbb65a3fcdcdfd78fd825dc767e5f31590c0fb
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425867"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572825"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 *udt_name*  
 共通言語ランタイム (CLR) ユーザー定義型の名前。  
   
-{ **.** | **::** }  
+`{ . | :: }`  
 CLR ユーザー定義型のメソッドを指定します。 静的メソッド以外のインスタンス メソッドでは、ピリオド (**.**) を使用します。 静的メソッドでは、2 つのコロン (**::**) を使用します。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
   
 _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
@@ -91,7 +91,7 @@ _method_name_ **(** _argument_ [ **,**... *n* ] **)**
 *mutator_method*  
 オブジェクトの状態を変更できるアセンブリのメソッド。 このメソッドには SQLMethodAttribute.IsMutator が適用されます。  
   
-{ **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+`{ += | -= | *= | /= | %= | &= | ^= | |= }`  
 複合代入演算子です。  
   
  +=              加算して代入  
@@ -166,7 +166,7 @@ DISTINCT、UNION、GROUP BY、または HAVING を使用した場合、または
 READ ONLY  
 このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。 このキーワードは、以前は READ_ONLY と表記していましたが、今後は、READ と ONLY の間にアンダースコアではなくスペースを指定するようになりました。  
   
-UPDATE [OF *column_name*[ **,**... *n* ] ]  
+`UPDATE [OF column_name[ ,... n ] ]`  
 カーソル内で更新できる列を定義します。 OF *column_name* [**,**...*n*] を指定した場合は、指定した列に対してのみ更新ができます。 一覧を指定しないと、カーソルを READ ONLY として定義していない限り、すべての列を更新できます。  
   
 ## <a name="remarks"></a>Remarks  

@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7752dc7d83424be107190c01abfd99a787e5fba
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 7561c69a9a0e0186f9564441839816247797998b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803147"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578232"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ string
 空白文字 `char(32)` または他の指定した文字が両側から削除される、文字列引数の型を持つ文字式を返します。 入力文字列が `NULL` の場合は `NULL` を返します。
 
 ## <a name="remarks"></a>Remarks   
-`TRIM` 関数は、既定で、両側からスペース文字 `char(32)` を削除します。 この動作は `LTRIM(RTRIM(@string))` と同等です。 文字が指定された `TRIM ` 関数の動作は、`REPLACE` 関数の動作 (先頭または末尾の文字が空白の文字列で置き換えられる) と同じです。
+`TRIM` 関数は、既定で、両側からスペース文字 `char(32)` を削除します。 この動作は `LTRIM(RTRIM(@string))` と同等です。 文字が指定された `TRIM` 関数の動作は、`REPLACE` 関数の動作 (先頭または末尾の文字が空白の文字列で置き換えられる) と同じです。
 
 
 ## <a name="examples"></a>使用例

@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 19543e33782d2d175f5ddfbc065f6016cbed3fcc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029581"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556244"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI レポート サーバーの統合 (構成マネージャー)
 
@@ -20,7 +20,7 @@ ms.locfileid: "50029581"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーの **[Power BI 統合]** ページを使用して、レポート サーバーを目的の Azure Active Directory (AD) 管理対象テナントに登録すると、レポート サーバーのユーザーはサポートされるレポート アイテムを [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードにピン留めできるようになります。 ピン留めできるサポートされているアイテムの一覧については、「 [Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)」を参照してください。
 
-##  <a name="bkmk_requirements"></a> Power BI 統合の要件
+## <a name="bkmk_requirements"></a> Power BI 統合の要件
 
 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] サービスを参照できるようにするためのアクティブなインターネット接続に加え、 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]統合を完了するには次の要件があります。
 
@@ -44,7 +44,7 @@ ms.locfileid: "50029581"
 
     notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
 
-##  <a name="bkmk_steps2integrate"></a> レポート サーバーを統合および登録するには
+## <a name="bkmk_steps2integrate"></a> レポート サーバーを統合および登録するには
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで次の手順を完了します。 詳細については、「[Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。
 
@@ -61,7 +61,7 @@ ms.locfileid: "50029581"
 
 5. **[結果]** ウィンドウの **[コピー]** ボタンをクリックして、登録の詳細を Windows クリップボードにコピーし、後で参照できるように保存します。
 
-##  <a name="bkmk_unregister"></a> Power BI への登録の解除
+## <a name="bkmk_unregister"></a> Power BI への登録の解除
 
 **登録解除:** Azure Active Directory からレポート サーバーの登録を解除すると、次のようになります。
 
@@ -79,7 +79,7 @@ ms.locfileid: "50029581"
 
 レポート サーバーの構成を変更した場合は、 **[登録の更新]** を使用します。 たとえば、ユーザーが [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]を参照する際に使用する URL を追加または削除する場合は、次の手順を実行します。
 
-- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで、 **[Web ポータルの URL]** を選択します。
+-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで、 **[Web ポータルの URL]** を選択します。
 
      **[詳細設定]** を選択します。
 
@@ -145,12 +145,16 @@ ms.locfileid: "50029581"
 
 ![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+
+## <a name="considerations-and-limitations"></a>注意点と制限事項
+
+* バイラルおよび政府のテナントがサポートされていません。
 
 ## <a name="next-steps"></a>次の手順
 
 [Power BI 統合の設定](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
-[Power BI のダッシュボード](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
+[Reporting Services のアイテムを Power BI ダッシュ ボードにピン留め](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
+[Power BI のダッシュ ボード](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

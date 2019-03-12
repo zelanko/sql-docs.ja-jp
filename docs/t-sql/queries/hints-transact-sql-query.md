@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 953fcb26527f709abd9679da3a3f061976d3ef74
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 5be56de82834133127700b945440ffb0e013fa4c
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334799"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556157"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -269,13 +269,13 @@ ROBUST PLAN
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    相関関係を考慮するフィルターの AND 述語を見積もるときに、最低限の選択度を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にプランを生成させます。 このヒント名は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンのカーディナリティ推定モデルで[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 を使用した場合と同等であり、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 を [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のバージョンのカーディナリティ推定モデルで使用した場合と同じ効果があります。
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
-   バッチ モード アダプティブ結合を無効にします。 詳細については、「[バッチ モード アダプティブ結合](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)」を参照してください。
+   バッチ モード アダプティブ結合を無効にします。 詳細については、「[バッチ モード アダプティブ結合](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)」を参照してください。
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   バッチ モード メモリ許可フィードバックを無効にします。 詳細については、「[バッチ モード メモリ許可フィードバック](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)」を参照してください。   
+   バッチ モード メモリ許可フィードバックを無効にします。 詳細については、「[バッチ モード メモリ許可フィードバック](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback)」を参照してください。   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
   テーブル変数の遅延コンパイルを無効にします。 詳細については、「[テーブル変数の遅延コンパイル](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)」をご覧ください。
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
-   複数ステートメントのテーブル値関数のインターリーブ実行を無効にします。 詳細については、「[複数ステートメントのテーブル値関数のインターリーブ実行](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)」を参照してください。
+   複数ステートメントのテーブル値関数のインターリーブ実行を無効にします。 詳細については、「[複数ステートメントのテーブル値関数のインターリーブ実行](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)」を参照してください。
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
    クエリ プランを生成するときに、最適化された入れ子になったループ結合に対して並べ替え操作 (バッチ ソート) を使用しないように、クエリ プロセッサに指示します。 このヒント名は、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340 と同等です。
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -290,7 +290,7 @@ ROBUST PLAN
 *  'DISABLE_PARAMETER_SNIFFING'      
    1 つまたは複数のパラメーターを指定してクエリをコンパイルする際に、平均データ分布を使用するようにクエリ オプティマイザーに指示します。 この指示により、クエリをコンパイルするときに最初に使用されていたパラメーター値にクエリ プランが依存しなくなります。 このヒント名は、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 を指定した場合、または[データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を PARAMETER_SNIFFING=OFF に設定した場合と同等です。
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
-  行モード メモリ許可フィードバックを無効にします。 詳細については、「[行モード メモリ許可フィードバック](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback)」を参照してください。
+  行モード メモリ許可フィードバックを無効にします。 詳細については、「[行モード メモリ許可フィードバック](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)」を参照してください。
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
   スカラー UDF のインライン化を無効にします。 詳細については、「[スカラー UDF のインライン化](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)」を参照してください。
 * 'DISALLOW_BATCH_MODE'    

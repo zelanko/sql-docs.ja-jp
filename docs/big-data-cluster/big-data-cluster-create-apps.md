@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6d0f5fba93b74aa5751635c9a10f320c85036bbb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017828"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756637"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリをデプロイする方法
 
 この記事では、デプロイし、SQL Server 2019 ビッグ データ クラスター (プレビュー) 内でアプリケーションとして R と Python スクリプトを管理する方法について説明します。
- 
-## <a name="whats-new-and-improved"></a>新機能と強化 
+
+## <a name="whats-new-and-improved"></a>新機能と強化
 
 - クラスターとアプリを管理する 1 つのコマンド ライン ユーティリティです。
 - Spec ファイルで詳細に制御を提供しながら、アプリのデプロイを簡略化します。
@@ -80,13 +80,12 @@ AKS を使用している場合は、IP アドレスを取得するには、次�
 kubectl get svc endpoint-service-proxy -n <name of your cluster>
 ```
 
-
 ## <a name="kubeadm-or-minikube"></a>Kubeadm または Minikube
 
 クラスターにログインする IP アドレスを取得する Kubeadm または次のコマンドを実行して Minikube を使用する場合
 
 ```bash
-kubectl get node --selector='node-role.kubernetes.io/master' 
+kubectl get node --selector='node-role.kubernetes.io/master'
 ```
 
 ## <a name="create-an-app"></a>アプリを作成します。
@@ -101,16 +100,17 @@ mssqlctl app create -n <app_name> -v <version_number> --spec <directory containi
 
 次のコマンドは、このコマンドの例を示しています。
 
-これはという名前のファイルがあることを前提としています`spec.yaml`内、`addpy`フォルダー。 `addpy`フォルダーが含まれています、`add.py`と`spec.yaml`、`spec.yaml`のファイルの仕様、`add.py`アプリ。
+これはという名前のファイルがあることを前提としています`spec.yaml`内、`addpy`フォルダー。
+`addpy`フォルダーが含まれています、`add.py`と`spec.yaml`、`spec.yaml`のファイルの仕様、`add.py`アプリ。
 
 
-`add.py` 次の python アプリを作成します。 
+`add.py` 次の python アプリを作成します。
 
 ```py
 #add.py
 def add(x,y):
         result = x+y
-        return result;
+        return result
 result=add(x,y)
 ```
 
@@ -119,9 +119,9 @@ result=add(x,y)
 ```yaml
 #spec.yaml
 name: add-app #name of your python script
-version: v1  #version of the app 
-runtime: Python #the languge this app uses (R or Python)
-src: ./add.py #full path to the loction of the app
+version: v1  #version of the app
+runtime: Python #the language this app uses (R or Python)
+src: ./add.py #full path to the location of the app
 entrypoint: add #the function that will be called upon execution
 replicas: 1  #number of replicas needed
 poolsize: 1  #the pool size that you need your app to scale
@@ -144,13 +144,13 @@ mssqlctl app create --spec ./addpy
 mssqlctl app list
 ```
 
-デプロイが完了していない場合は表示、`state`表示`WaitingforCreate`として次の例。 
+デプロイが完了していない場合は表示、`state`表示`WaitingforCreate`として次の例。
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: "WaitingforCreate",
+    "state": "WaitingforCreate",
     "version": "v1"
   }
 ]
@@ -158,11 +158,11 @@ mssqlctl app list
 
 デプロイが成功した後が表示されます、`state`変更`Ready`状態。
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -192,11 +192,11 @@ mssqlctl app list --name add-app --version v1
 
 次の例のような出力が表示されます。
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -218,7 +218,7 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 
 実行が成功した場合、アプリの作成時に指定すると、出力が表示されます。 以下に例を示します。
 
-```
+```json
 {
   "changedFiles": [],
   "consoleOutput": "",
@@ -233,13 +233,13 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 
 ## <a name="create-an-app-skeleton"></a>アプリのスケルトンを作成します。
 
-Init コマンドでは、アプリを展開するために必要な関連する成果でスキャフォールディングを提供します。 次の例では、次のコマンドを実行してこれを行うこんにちはを作成します。
+Init コマンドでは、アプリを展開するために必要な関連する成果物とスキャフォールディングを提供します。 次の例では、次のコマンドを実行してこれを行うこんにちはを作成します。
 
-```
+```bash
 mssqlctl app init --name hello --version v1 --template python
 ```
 
-これにより、こんにちはという名前のフォルダーが作成されます。  移動することができます、ディレクトリ フォルダーに生成されたファイルを調べるとします。 spec.yaml では、名前、バージョン、およびソース コードなど、アプリを定義します。 名前、バージョン、入力と出力を変更する仕様を編集できます。
+これにより、こんにちはという名前のフォルダーが作成されます。  できます`cd`ディレクトリに表示され、フォルダーに生成されたファイルを調べる。 spec.yaml では、名前、バージョン、およびソース コードなど、アプリを定義します。 名前、バージョン、入力と出力を変更する仕様を編集できます。
 
 フォルダーに表示される init コマンドからの出力サンプルを次に示します
 
@@ -255,7 +255,7 @@ spec.yaml
 
 Describe コマンドは、クラスター内の終点を含むアプリに関する詳細情報を提供します。 これは通常使用して、アプリの開発者 swagger クライアントを使用して、rest ベースの方法で、アプリと対話する web サービスを使用してアプリをビルドします。
 
-```
+```json
 {
   "input_param_defs": [
     {
@@ -278,10 +278,9 @@ Describe コマンドは、クラスター内の終点を含むアプリに関�
       "type": "int"
     }
   ],
-  `state`: `Ready`,
+  "state": "Ready",
   "version": "v1"
 }
-
 ```
 
 ## <a name="delete-an-app"></a>アプリを削除します。

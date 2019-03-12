@@ -11,12 +11,12 @@ ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e598a2b383e0580a3be7eccc460c36ec863ffb0
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 42c28c1852c5d9c2e931973413a7671ed77b9e6a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616683"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578292"
 ---
 # <a name="sql-data-developer"></a>SQL データ開発者
 Microsoft の SQL データ プラットフォームを使用すると、モバイル デバイスとデスクトップの web サーバー、エンタープライズ サーバー、およびクラウドの間でデータ中心のソリューションを作成します。  
@@ -28,7 +28,7 @@ Microsoft の SQL データ プラットフォームを使用すると、モバ�
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): 記述して、SQL Server の完全なサーバー インスタンスを管理することがなく TRANSACT-SQL コードをテストする開発時に LocalDB を使用します。
 
 ## <a name="sql-data-tools"></a>SQL データ ツール
-* [SQL Server Data Tools ](../ssdt/download-sql-server-data-tools-ssdt.md) : ビルドのリレーショナル データベース、Azure SQL database、Integration Services パッケージ、Analysis Services データ モデル、および Reporting Services を使用して SSDT を報告します。
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : ビルドのリレーショナル データベース、Azure SQL database、Integration Services パッケージ、Analysis Services データ モデル、および Reporting Services を使用して SSDT を報告します。
 * [SQL Server Management Tools](../ssms/download-sql-server-management-studio-ssms.md): SSMS を使用した構成、監視、および SQL Server のインスタンスを管理します。
 
 ## <a name="sql-data-access"></a>SQL データ アクセス

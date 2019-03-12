@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8637754097be0837f51ef3fda06375abcb084cae
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 8d948862b4bf39d7970aae4a0b174feb6dc21639
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590437"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736802"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -175,7 +175,7 @@ GO
      ページ待機時間が長いかどうかを調べるには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
     ```  
-    Execute SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
+    SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
     ```  
   
      次の表で、主な待機の種類について説明します。  

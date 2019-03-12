@@ -11,12 +11,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ab667a25583a8415d44cbc40f1116cac2fb254c3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 870d1b5d1a7bedb0d758be7eef4cb3f7b2e0106c
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326623"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527085"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップを有効にする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,33 +50,33 @@ ms.locfileid: "54326623"
   
 4.  **Shared Access Signature (SAS) を生成する**: コンテナーにアクセスするには、SAS を作成する必要があります。 SAS は、いくつかのツール、コード、Azure PowerShell を使用して作成できます。 次の `New-AzureStorageContainerSASToken` コマンドを実行すると、1 年後に期限切れになる `backupcontainer` BLOB コンテナーの SAS トークンが作成されます。  
   
-    ```powershell  
-    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
-    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
-    ```  
-    Azure の場合、次のコマンドを使用します。
-       ```powershell
-    Connect-AzAccount
-    Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
-    $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
-    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
-    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
-   ```  
+  ```powershell  
+  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
+  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
+  ```  
+
+Azure の場合、次のコマンドを使用します。
+  ```powershell
+  Connect-AzAccount
+  Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
+  $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
+  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
+  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
+  ```  
   
-     このコマンドの出力には、コンテナーの URL と SAS トークンの両方が含まれます。 以下に例を示します。  
+このコマンドの出力には、コンテナーの URL と SAS トークンの両方が含まれます。 以下に例を示します。  
   
-    ```  
-    https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl  
-    ```  
+  `https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl`
   
-     前の例では、コンテナーの URL と SAS トークンが疑問符で区切られます (疑問符は含めないでください)。 たとえば、前の出力結果は、次の 2 つの値になります。  
+前の例では、コンテナーの URL と SAS トークンが疑問符で区切られます (疑問符は含めないでください)。 たとえば、前の出力結果は、次の 2 つの値になります。  
   
-    |||  
-    |-|-|  
-    |**コンテナーの URL:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
-    |**SAS トークン:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|||  
+|-|-|  
+|**コンテナーの URL:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
+|**SAS トークン:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|||
   
-     SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録します。 SAS の詳細については、「[Shared Access Signature、第 1 部: SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。  
+SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録します。 SAS の詳細については、「[Shared Access Signature、第 1 部: SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」を参照してください。  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>[有効化] [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
@@ -137,7 +137,7 @@ ms.locfileid: "54326623"
   
 8.  **正常性状態を監視する:** 前の手順で構成した電子メール通知から監視するか、ログに記録されているイベントをアクティブに監視することができます。 イベントを表示するための Transact-SQL ステートメントのいくつかの例を示します。  
   
-    ```  
+    ```sql  
     --  view all admin events  
     Use msdb;  
     Go  
@@ -161,7 +161,7 @@ ms.locfileid: "54326623"
   
     ```  
   
-    ```  
+    ```sql  
     -- to enable debug events  
     Use msdb;  
     Go  
@@ -169,7 +169,7 @@ ms.locfileid: "54326623"
   
     ```  
   
-    ```  
+    ```sql  
     --  View all events in the current week  
     Use msdb;  
     Go  
@@ -179,12 +179,9 @@ ms.locfileid: "54326623"
     SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
   
     EXEC managed_backup.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
-  
-    ```  
+    ```
   
  このセクションで説明した手順は、データベースで初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を構成するための特別な手順です。 同じシステム ストアド プロシージャを使用して既存の構成を変更し、新しい値を指定することができます。  
   
 ## <a name="see-also"></a>参照  
  [Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
-  
-  

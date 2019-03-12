@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df69488ebf433257ba4b1af7c13ec1c299afa831
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 04681d455fe4589135cd0b112c310e2dd0a027b3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256377"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579102"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,10 +102,10 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 
 ```
 変更されたフォーマット ファイルは次のように反映されます。
-* `myRemap.bcp` の最初のデータ フィールドは最初の列にマップされます: ` myRemap.. PersonID`
+* `myRemap.bcp` の最初のデータ フィールドは最初の列にマップされます: `myRemap.. PersonID`
 * `myRemap.bcp` の 2 番目のデータ フィールドは 3 番目の列にマップされます: `myRemap.. LastName`
 * `myRemap.bcp` の 3 番目のデータ フィールドは 2 番目の列にマップされます: `myRemap.. FirstName`
-* `myRemap.bcp` の 4 番目のデータ フィールドは 4 番目の列にマップされます: ` myRemap.. Gender`
+* `myRemap.bcp` の 4 番目のデータ フィールドは 4 番目の列にマップされます: `myRemap.. Gender`
 
 ### XML フォーマット ファイルの作成 <a name="xml_format_file"></a>  
 詳細については、「 [XML フォーマット ファイル (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) 」を参照してください。  次のコマンドでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用し、 `myRemap.xml`のスキーマに基づいて XML フォーマット ファイル `myRemap`を生成します。  さらに、修飾子 `c` を使用して文字データを指定し、 `t,` を使用してフィールド ターミネータとしてコンマを指定し、 `T` を使用して統合セキュリティによる信頼された接続を指定します。  XML ベースのフォーマット ファイルを生成する場合は、 `x` 修飾子を使用する必要があります。  コマンド プロンプトで、次のコマンドを入力します。

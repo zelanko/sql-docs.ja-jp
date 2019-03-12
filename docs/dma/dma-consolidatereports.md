@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 6c41910b17744a0ff0c86e41c321fae67d59d3a1
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305360"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756717"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>エンタープライズを評価し、DMA で評価レポートの統合
 
@@ -103,6 +103,7 @@ DmaDataCollector 関数に関連付けられているパラメーターは、次
 |パラメーター  |説明 |
 |---------|---------|
 |**getServerListFrom** | インベントリ。 指定できる値は**SqlServer**と**CSV**します。<br/>詳細については、次を参照してください。 [SQL サーバーのインベントリ作成](#create-inventory)です。 |
+|**csvPath** | CSV インベントリ ファイルへのパス。  場合にのみ使用**getServerListFrom**に設定されている**CSV**します。 |
 |**serverName** | SQL Server のインスタンス名を使用する場合は、在庫の**SqlServer**で、 **getServerListFrom**パラメーター。 |
 |**databaseName** | インベントリ テーブルをホストするデータベース。 |
 |**%Assessmentname** | DMA 評価の名前。 |

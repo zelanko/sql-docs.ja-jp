@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82df9a4dc4a7abce935e87e515cf63f71af0e4b7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d3f9c16399b47af10a882e61c9f04278479748cb
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256787"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579012"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>フォーマット ファイルを使用したデータ フィールドのスキップ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,7 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt
 
 変更されたフォーマット ファイルは次のように反映されます。
 * データ フィールドが 4 つになります。
-* `myTestSkipField.bcp` の最初のデータ フィールドは最初の列にマップされます: ` myTestSkipField.. PersonID`
+* `myTestSkipField.bcp` の最初のデータ フィールドは最初の列にマップされます: `myTestSkipField.. PersonID`
 * `myTestSkipField.bcp` の 2 番目のデータ フィールドはどの列にもマップされません。
 * `myTestSkipField.bcp` の 3 番目のデータ フィールドは 2 番目の列にマップされます: `myTestSkipField.. FirstName`
 * `myTestSkipField.bcp` の 4 番目のデータ フィールドは 3 番目の列にマップされます: `myTestSkipField.. LastName`

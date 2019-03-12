@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe9d543b9772bfef11fa31cfce0ce35c58b68b4e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: aa7bd2ea2812df56e1f4b2f642c3abca3102a8d9
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802846"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756757"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ROW_NUMBER と RANK は似ています。 ROW_NUMBER は、すべての行に順
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
@@ -66,7 +66,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ### <a name="a-ranking-rows-within-a-partition"></a>A. パーティション内の行に順位を付ける  
  次の例では、指定された在庫場所の在庫内の製品を数量に応じて順位付けしています。 結果セットは `LocationID` によってパーティションに分割され、`Quantity` によって論理的に順序付けされます。 494 と 495 の製品が同じ数量であることを確認します。 これらは数量が同じなので、両方とも順位が 1 位になっています。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -82,7 +82,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
   
 ProductID   Name                   LocationID   Quantity Rank  
 ----------- ---------------------- ------------ -------- ----  
@@ -102,7 +102,7 @@ ProductID   Name                   LocationID   Quantity Rank
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. 結果セット内のすべての行に順位を付ける  
  次の例では、給与に順位を付け、トップ 10 の従業員を返します。 PARTITION BY 句が指定されていないため、RANK 関数は結果セットのすべての行に適用されます。  
   
-```  
+```sql  
 USE AdventureWorks2012  
 SELECT TOP(10) BusinessEntityID, Rate,   
        RANK() OVER (ORDER BY Rate DESC) AS RankBySalary  
@@ -115,7 +115,7 @@ ORDER BY BusinessEntityID;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
 BusinessEntityID Rate                  RankBySalary  
 ---------------- --------------------- --------------------  
 1                125.50                1  
@@ -135,7 +135,7 @@ BusinessEntityID Rate                  RankBySalary
 ### <a name="c-ranking-rows-within-a-partition"></a>C:パーティション内の行に順位を付ける  
  次の例では、売上合計に応じて販売区域ごとに販売担当者をランク付けします。 行セットは `SalesTerritoryGroup` によってパーティション分割され、`SalesAmountQuota` によって並べ替えられます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryRegion,  
@@ -149,7 +149,7 @@ GROUP BY LastName, SalesTerritoryRegion;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```
+```sql
 LastName          TotalSales     SalesTerritoryGroup  RankResult
 ----------------  -------------  -------------------  --------
 Tsoflias          1687000.0000   Australia            1
