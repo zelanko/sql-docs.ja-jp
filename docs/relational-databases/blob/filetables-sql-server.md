@@ -16,12 +16,12 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93461858c1318b65d3fd75160e06785847c265a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 178d926dbcbfc6e599a57207369bf61e603468a9
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598290"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828452"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,6 +83,8 @@ ms.locfileid: "47598290"
 -   Windows API の操作は、本質的には非トランザクションであり、ユーザー トランザクションに関連しません。 ただし、通常のテーブルの FILESTREAM 列の場合のように、FileTable に格納されている FILESTREAM データへのトランザクション アクセスは、完全にサポートされます。  
   
 -   FileTable に対して、通常の [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスによってクエリおよび更新を実行することもできます。 また、FileTable は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールや、バックアップなどの機能と統合されています。  
+
+-   dbmail を介して電子メールの要求を送信し、filestream ディレクトリ内のファイルを添付することができません (そのため filetable 内のファイルも添付できません)。 ファイル システム フィルター ドライバーの RsFx0420 は、ファイルストリーム フォルダーに出入りする着信 I/O 要求を検査します。 SQLServer 実行可能ファイルと Filestream コードのいずれの要求でもない場合、その要求は明示的に許可されません。
   
 ##  <a name="additional"></a> FileTable の使用に関するその他の考慮事項  
   
