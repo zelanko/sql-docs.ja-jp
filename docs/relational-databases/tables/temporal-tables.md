@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 967605ee7a4857347b4f1f7ca8ffc62ea0451d91
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c7967740fc56efab93129aa6846d70f7eb55c7de
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403647"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017918"
 ---
 # <a name="temporal-tables"></a>テンポラル テーブル
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 では、現時点の正しいデータのみではなく、テーブルに保存されていた任意の時点のデータ情報を提供することを組み込みでサポートするデータベース機能として、システム バージョン管理されたテンポラル テーブルが導入されました。 テンポラルは、ANSI SQL 2011 で導入されたデータベース機能です。  
+  SQL Server 2016 では、現時点の正しいデータのみではなく、テーブルに保存されていた任意の時点のデータ情報を提供することを組み込みでサポートするデータベース機能として、テンポラル テーブル (システム バージョン管理されたテンポラル テーブルとも呼ばれています) が導入されました。 テンポラルは、ANSI SQL 2011 で導入されたデータベース機能です。  
   
  **クイック スタート**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52403647"
   
     -   [システム バージョン管理されたテンポラル テーブルのデータのクエリ](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **Adventure Works サンプル データベースをダウンロードする:** テンポラル テーブルの使用を開始するには、「[SQL Server 2016 CTP3 用の AdventureWorks データベース](https://www.microsoft.com/download/details.aspx?id=49502) 」をサンプルのスクリプトと共にダウンロードし、'Temporal' フォルダー内の指示に従ってください。  
+    -   **Adventure Works サンプル データベースをダウンロードする:** テンポラル テーブルの使用を開始するには、「[SQL Server 2016 CTP3 用の AdventureWorks データベース](https://www.microsoft.com/download/details.aspx?id=49502)」をサンプルのスクリプトと共にダウンロードし、'Temporal' フォルダー内の指示に従ってください。  
   
 -   **構文 :**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52403647"
   
     -   [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **ビデオ:** 「 [SQL Server 2016 でのテンポラル](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)」でテンポラルに関する 20 分間の説明を参照してください。  
+-   **ビデオ:** 「[SQL Server 2016 でのテンポラル](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)」でテンポラルに関する 20 分間の説明を参照してください。  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルとは  
  システム バージョン管理されたテンポラル テーブルは、データ変更の履歴を完全に保持し、特定の時点の分析を簡単に実行できるよう設計されたユーザー テーブルの一種です。 各行の有効期間はシステム (つまりデータベース エンジン) によって管理されているため、この種類のテンポラル テーブルは、システム バージョン管理されたテンポラル テーブルと呼ばれています。  
@@ -107,13 +107,13 @@ CREATE TABLE dbo.Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- **INSERTS:** システムにより、 **INSERT**では、 **SysStartTime** 列には、システム クロックに基づく現在のトランザクションの開始時間 (UTC タイム ゾーン) の値が設定され、 **SysEndTime** 列には、最大値の 9999-12-31 の値が割り当てられます。 これは行をオープンとマークします。  
+ **INSERTS:** システムにより、**INSERT** では、**SysStartTime** 列には、システム クロックに基づく現在のトランザクションの開始時間 (UTC タイム ゾーン) の値が設定され、**SysEndTime** 列には、最大値の 9999-12-31 の値が割り当てられます。 これは行をオープンとマークします。  
   
- **UPDATES:** システムにより、 **UPDATE**では、行の前の値が履歴テーブルに保存され、 **SysEndTime** 列には、システム クロックに基づく現在のトランザクションの開始時間 (UTC タイム ゾーン) の値が設定されます。 これは行をクローズドとマークし、行が有効であった期間が記録されます。 現行テーブルでは、行は新しい値で更新され、システムにより **SysStartTime** 列には、システム クロックに基づくトランザクションの開始時間 (UTC タイム ゾーン) の値が設定されます。 現行テーブル内の **SysEndTime** 列の更新された行の値は、最大値の 9999-12-31 のままです。  
+ **UPDATES:** システムにより、**UPDATE** では、行の前の値が履歴テーブルに保存され、**SysEndTime** 列には、システム クロックに基づく現在のトランザクションの開始時間 (UTC タイム ゾーン) の値が設定されます。 これは行をクローズドとマークし、行が有効であった期間が記録されます。 現行テーブルでは、行は新しい値で更新され、システムにより **SysStartTime** 列には、システム クロックに基づくトランザクションの開始時間 (UTC タイム ゾーン) の値が設定されます。 現行テーブル内の **SysEndTime** 列の更新された行の値は、最大値の 9999-12-31 のままです。  
   
- **DELETES:** システムにより、 **DELETE**では、行の前の値が履歴テーブルに保存され、 **SysEndTime** 列には、システム クロックに基づく現在のトランザクションの開始時間 (UTC タイム ゾーン) の値が設定されます。 これは行をクローズドとマークし、前の行が有効であった期間が記録されます。 現行テーブルでは、その行は削除されます。 現行テーブルに対するクエリでは、この行は返されません。 履歴データを処理するクエリのみで、クローズドの行のデータが返されます。  
+ **DELETES:** システムにより、**DELETE** では、行の前の値が履歴テーブルに保存され、**SysEndTime** 列には、システム クロックに基づく現在のトランザクションの開始時間 (UTC タイム ゾーン) の値が設定されます。 これは行をクローズドとマークし、前の行が有効であった期間が記録されます。 現行テーブルでは、その行は削除されます。 現行テーブルに対するクエリでは、この行は返されません。 履歴データを処理するクエリのみで、クローズドの行のデータが返されます。  
   
- **MERGE:** **MERGE**では、 **MERGE**ステートメントでアクションとして何が指定されているかによって、まさに最大 3 つのステートメント ( **INSERT**、 **UPDATE**、または **DELETE** 、あるいはこれらすべて) が実行されたかのような動作になります。  
+ **MERGE:** **MERGE**では、**MERGE** ステートメントでアクションとして何が指定されているかによって、まさに最大 3 つのステートメント (**INSERT**、**UPDATE**、または **DELETE**、あるいはこれらすべて) が実行されたかのような動作になります。  
   
 > [!IMPORTANT]  
 >  システム datetime2 列に記録されている時間は、トランザクション自体の開始時間に基づいています。 たとえば、1 つのトランザクションで挿入されたすべての行の、 **SYSTEM_TIME** 期間の開始に対応する列の UTC 時間は同じになります。  

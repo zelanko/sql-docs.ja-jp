@@ -19,15 +19,15 @@ helpviewer_keywords:
 - BROWSE option
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8f1ce1c1c5a572874b301f326a711bbcfbda8a1
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 866afe80cb6c93260b43eb3150b12df78ad813e5
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143552"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334769"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 句 (Transact-SQL)
 
@@ -118,7 +118,7 @@ JSON
   
 -   外部結合ステートメントの内部に存在するテーブルに一意のインデックスが定義されている場合。  
   
- ブラウズ モードでこの動作を再現するには、以下の手順を実行します。  
+ ブラウズ モードでこの動作を再現するには、以下の手順を行います。  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、SampleDB という名前のデータベースを作成します。  
   

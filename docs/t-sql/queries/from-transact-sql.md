@@ -31,16 +31,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c36325e68fbf9692c9f8f057e5aa215de2ad49b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408809"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334789"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -227,7 +227,7 @@ FROM { <table_source> [ ,...n ] }
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- データの特定のバージョンが、指定された時間的なテーブルとそのシステムのバージョン情報のリンクの履歴テーブルから返されることを指定します。  
+ データの特定のバージョンが、指定された時間的なテーブルとそのシステムのバージョン情報のリンクの履歴テーブルから返されることを指定します  
   
 ### <a name="tablesample-clause"></a>TABLESAMPLE 句
 **適用対象:** SQL Server、SQL Database 
@@ -256,7 +256,7 @@ FROM { <table_source> [ ,...n ] }
  乱数を生成するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用される整数の定数式です。 *repeat_seed* は **bigint**です。 *repeat_seed* が指定されていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってランダムに値が割り当てられます。 テーブルに変更が適用されていない場合は、特定の *repeat_seed* 値に対して、サンプル結果は常に同じになります。 *repeat_seed* 式は、0 より大きい整数値に評価される必要があります。  
   
 ### <a name="tablesample-clause"></a>TABLESAMPLE 句
-**適用対象:** SQL Data Warehouse
+**適用対象:** SQL データ ウェアハウス
 
  テーブルからのデータのサンプルが返されることを指定します。 サンプルは、概数になる可能性があります。 この句は、SELECT または UPDATE ステートメント内の主テーブルまたは結合テーブルで使用できます。 TABLESAMPLE はビューを使用して指定できません。 
 
@@ -339,7 +339,7 @@ ON (p.ProductID = v.ProductID);
  *table_source* PIVOT \<pivot_clause>  
  *table_source* が *pivot_column* に基づいてピボットされることを指定します。 *table_source* はテーブルまたはテーブル式です。 出力は、*pivot_column* および *value_column* 以外の *table_source* のすべての列を含んでいるテーブルです。 *pivot_column* および *value_column* 以外の *table_source* の列は、ピボット演算子のグループ化列と呼ばれます。 PIVOT および UNPIVOT の詳細については、「[PIVOT および UNPIVOT の使用](../../t-sql/queries/from-using-pivot-and-unpivot.md)」を参照してください。  
   
- PIVOT は、グループ化列に関する入力テーブルに対してグループ化の操作を実行し、各グループごとに 1 行のデータを返します。 さらに、出力では、*input_table* の *pivot_column* に表示される *column_list* で指定された値ごとに 1 列のデータが含まれます。  
+ PIVOT は、グループ化列に関する入力テーブルに対してグループ化の操作を実行し、グループごとに 1 行のデータを返します。 さらに、出力では、*input_table* の *pivot_column* に表示される *column_list* で指定された値ごとに 1 列のデータが含まれます。  
   
  詳細については、後の「解説」を参照してください。  
   
@@ -392,7 +392,7 @@ ON (p.ProductID = v.ProductID);
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- 開き、含まれている IN 引数の 2 つの datetime 値で定義されている指定された時間範囲内で終了したすべてのレコードのバージョンの値を持つテーブルを返します。 行が下位の境界に正確に有効になったまたは上限の境界上だけでアクティブにされているが中断されることでは、含まれています。  
+ 開かれて、CONTAINED IN 引数の 2 つの datetime 値で定義されている指定時間範囲内に閉じられた、すべてのレコードのバージョンの値が含まれるテーブルを返します。 行が下位の境界に正確に有効になったまたは上限の境界上だけでアクティブにされているが中断されることでは、含まれています。  
   
  ALL  
  現在のテーブルと、履歴テーブルの両方からのすべての行から値を持つテーブルを返します。  
@@ -607,7 +607,7 @@ OUTER APPLY dbo.GetReports(d.DeptMgrID) ;
 ```  
   
 ### <a name="l-using-cross-apply"></a>L. CROSS APPLY を使用する  
-次の例では、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得することによって、プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得します。 これにより、プラン ハンドルを `CROSS APPLY` に渡すように `sys.dm_exec_query_plan` 演算子が指定されます。 現在プラン キャッシュにある各プランの XML プラン表示の出力は、返されるテーブルの `query_plan` 列に格納されます。  
+次の例では、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得することによって、プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得します。 これにより、プラン ハンドルを `sys.dm_exec_query_plan` に渡すように `CROSS APPLY` 演算子が指定されます。 現在プラン キャッシュにある各プランの XML プラン表示の出力は、返されるテーブルの `query_plan` 列に格納されます。  
   
 ```sql
 USE master;  
@@ -618,7 +618,7 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="m-using-for-systemtime"></a>M. FOR SYSTEM_TIME を使用します。  
+### <a name="m-using-for-systemtime"></a>M. FOR SYSTEM_TIME を使用する  
   
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
@@ -687,7 +687,7 @@ WHERE ManagerID = 5;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-the-inner-join-syntax"></a>N. INNER JOIN 構文を使用する  
+### <a name="n-using-the-inner-join-syntax"></a>N.  INNER JOIN 構文を使用する  
  次の例では、`FactInternetSales` テーブルと `DimProduct` テーブルから、結合キー `ProductKey` が両方のテーブルで一致する、`SalesOrderNumber`、`ProductKey`、`EnglishProductName` の列を返します。 `SalesOrderNumber` 列と`EnglishProductName` 列はそれぞれ、どちらか一方のテーブルにしか存在しないため、示されているように、これらの列を持つテーブルの別名を指定する必要はありません。これらの別名は読みやすくするために含まれています。 別名の前の **AS** という単語は必須ではありませんが、読みやすくするためと ANSI 標準に準拠するため、推奨されています。  
   
 ```sql
@@ -772,7 +772,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-full-outer-join-syntax"></a>P. FULL OUTER JOIN 構文を使用する  
+### <a name="p-using-the-full-outer-join-syntax"></a>P.  FULL OUTER JOIN 構文を使用する  
  次の例では、両方の結合テーブルからすべての行を返しますが、別のテーブルと一致しない値には NULL を返す完全外部結合を示します。  
   
 ```sql

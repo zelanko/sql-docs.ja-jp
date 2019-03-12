@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f7e80b878583932976c85f7fa390ed546a67587
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1cd361a27a07c7b7750046d9664d77fd6d3fdc04
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401125"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007585"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted による暗号化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52401125"
   このドキュメントでは、 [および](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) において、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always Encrypted [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]機能で使用される暗号化マテリアルを派生させる暗号化アルゴリズムとメカニズムについて説明します。  
   
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>キー、キー ストアおよびキーの暗号化アルゴリズム  
- Always Encrypted では、列マスター キーと列暗号化キーという 2 種類のキーを使用します。  
+ Always Encrypted では 2 種類のキーを使用します。列マスター キーと列暗号化キーです。  
   
  列マスター キー (CMK) は、常にクライアントに制御され、外部キー ストアに格納されているキーの暗号化キー (つまり、他のキーの暗号化に使用されるキー) です。 Always Encrypted が有効なクライアント ドライバーは CMK ストア プロバイダーを介してキー ストアと対話します。このプロバイダーはドライバー ライブラリの一部 ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system プロバイダー) またはクライアント アプリケーションの一部 (カスタム プロバイダー) である場合があります。 現在、クライアント ドライバー ライブラリには、[Windows 証明書ストア](/windows/desktop/SecCrypto/using-certificate-stores)およびハードウェア セキュリティ モジュール (HSM) の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] キー ストア プロバイダーが含まれています。  (現在のプロバイダーの一覧については、「[CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)」を参照してください)。アプリケーション開発者は、任意のストアのカスタム プロバイダーを提供できます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "52401125"
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** は、以下の手順を使用して指定されたプレーンテキストの暗号化テキストの値を計算します。  
   
-### <a name="step-1-generating-the-initialization-vector-iv"></a>手順 1: 初期化ベクター (IV) の生成  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>手順 1:初期化ベクター (IV) の生成  
  Always Encrypted では、以下の 2 種類の **AEAD_AES_256_CBC_HMAC_SHA_256**がサポートされています。  
   
 -   ランダム化  
@@ -73,7 +73,7 @@ iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_
   
  決定的な暗号化は、定義済みの IV 値を使用するなどして、パターンを非表示にする場合や代替との比較を行う場合により効果的です。  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>手順 2: AES_256_CBC 暗号化テキストの計算  
+### <a name="step-2-computing-aes256cbc-ciphertext"></a>手順 2:AES_256_CBC 暗号化テキストの計算  
  IV を計算した後、 **AES_256_CBC** 暗号化テキストが次のように生成されます。  
   
 ```  
@@ -86,7 +86,7 @@ aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.
 enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorithm + CEK_length )  
 ```  
   
-### <a name="step-3-computing-mac"></a>手順 3: MAC の計算  
+### <a name="step-3-computing-mac"></a>手順 3:MAC の計算  
  その後、MAC は以下のアルゴリズムを使用して計算されます。  
   
 ```  
@@ -100,7 +100,7 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>手順 4: 連結  
+### <a name="step-4-concatenation"></a>手順 4:Concatenation  
  最後に、暗号化された値は、アルゴリズム バージョン バイト、MAC、IV および AES_256_CBC 暗号化テキストを単に連結して生成されます。  
   
 ```  

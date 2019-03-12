@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/19/2018
+ms.date: 03/02/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00fc30593980e92b5f510550a4181c4f3a5b6f91
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 8d953127249bb6f82626dfff647b15dc40aba859
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802926"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334839"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,69 +25,89 @@ ms.locfileid: "56802926"
 
 
 
-## <a name="ssms-180-preview-6download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0 (プレビュー 6)](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-180-preview-7download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0 (プレビュー 7)](download-sql-server-management-studio-ssms.md)
 
-ビルド番号:15.0.18075.0<br>
-リリース日:2018 年 12 月 18 日
+ビルド番号:15.0.18092.0<br>
+リリース日:2019 年 3 月 1 日
 
-プレビュー 6 は、SSMS 18.0 の最初のパブリック プレビューです。 最新の一般公開 (GA) バージョンの SSMS については、[SSMS 17.9.1 をダウンロードしてインストールしてください](#ssms-1791-latest-ga-release)。
+プレビュー 7 は、SSMS 18.0 の最新のパブリック プレビューです。 最新の一般公開 (GA) バージョンの SSMS については、[SSMS 17.9.1 をダウンロードしてインストールしてください](#ssms-1791-latest-ga-release)。
 
-### <a name="whats-new-in-preview-6"></a>プレビュー 6 の新機能
+### <a name="whats-new-in-preview-7"></a>プレビュー 7 の新機能
 
-このセクションでは、SSMS 18.0 プレビュー 6 の新機能を一覧表示します。 SSMS 17.9.1 以降の完全な変更ログについては、「[SSMS 18.0 preview - cumulative changelog through preview 6](#ssms-180-preview---cumulative-changelog-through-preview-6)」(SSMS 18.0 プレビュー - プレビュー 6 までの累積的な変更ログ) を参照してください。
+このセクションでは、SSMS 18.0 プレビュー 7 の新機能を一覧表示します。 SSMS 17.9.1 以降の完全な変更ログについては、「[SSMS 18.0 プレビュー - プレビュー 7 までの累積的な変更ログ](#ssms-180-preview---cumulative-changelog-through-preview-7)」を参照してください。
 
 - **SSMS**
-  - [ツール] メニューに [Azure への移行] が追加されました。[Data Migration Assistant](https://aka.ms/get-dma) と [Azure Database Migration Service](https://aka.ms/get-dms) を統合することで、すばやく簡単にアクセスして Azure により迅速に移行できるようにしました。
-  - 以前のバージョン (プレビュー 6 より前) の SSMS 18.0 では、"利用可能なデータベース" キー ショートカットが **CTRL + ALT + J** キーにバインドされていました。 プレビュー 6 以降では、キー バインドが、SSMS 17.x と同様に、**CTRL + U** キーに復元されています。
-  - "接続の変更" が使用されている場合に、ユーザーに開いているトランザクションをコミットするよう求めるロジックが追加されました。
+  - SSMS を初めて起動したときに、SSMS の以前のバージョン (17.x または 18.0 の古いプレビュー) から SSMS のユーザー設定を移行する機能が追加されました。
+  - `UTF8_BIN2` 照合順序のサポートが追加されました。
+  - SMO と SSMS の両方で[エッジ制約](../relational-databases/tables/graph-edge-constraints.md)のサポートが追加されました。
+  - SMO と SSMS の両方で、新しいクォーラムの種類および新しいリソースの種類として**クラウド監視**が追加されました。
+  - フラット ファイルのインポートで列の名前が変更される場合があることをユーザーに通知するロジックが追加されました。
+  - `DW ROLLUP` および `CUBE` の LocalCube RelOp にプラン表示のサポートが追加されました。
+  - グラフ テーブルを使用したデータ層アプリケーションのインポート/エクスポートのサポートが追加されました。
+  - 脆弱性評価スキャンの結果が SQL Azure DB と一致するように、Azure SQL Database Managed Instance で実行される一連の脆弱性評価規則を変更しました。
+  - [SQL 脆弱性評価](../relational-databases/security/sql-vulnerability-assessment.md)で Azure SQL DW がサポートされるようになりました。
+  - **データ分類**機能が SMO に追加されました。 Column オブジェクトで新たに公開されたプロパティ: `SensitivityLabelName`、`SensitivityLabelId`、`SensitivityInformationTypeName`、`SensitivityInformationTypeId`、`IsClassified` (読み取り専用)。
+    詳細については、「 https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql」を参照してください。
+  - **[データ分類]** メニューに **[Classification Report]\(分類レポート\)** メニュー項目が追加されました。
+  - SMO と SSMS で、Azure SQL Managed Instance に接続した場合の新しいログインの種類として、**AAD ログイン**が追加されました。
+  - Azure Data Studio のオブジェクト エクスプローラーでデータベースを右クリックすると、クエリの実行または新しいノートブックの作成が有効化されるようになりました。
+  - XEvent ビューアーでは、より多くの XEvent のプラン表示のウィンドウが有効化されるようになりました。
+  - データ マスク:
+    - JSON 構成ファイルがサポートされるようになりました。
+    - 今後さらに柔軟性を高めるため、XML 構成ファイルの形式が変更されました。  既存の構成ファイルは、再作成する必要があります。
+    - メモリ最適化テーブルとテンポラル テーブルを含むデータベースをマスクできるようになりました。  一部の制約は、メモリ最適化テーブルとテンポラル テーブル自体に引き続き適用されます。
+    - オンプレミスのデータベースのデータベース コピー操作で、`BACKUP DATABASE` ステップに `COPY_ONLY` オプションが使用されるようになりました。
+    - マスク操作がログ使用を削減している間に、マスクされたデータベースが `SIMPLE` 復旧モデルに設定され、完了後に元の値に戻るようになりました。
+    - 操作の進行中、マスクされたデータベースは `<output database name>-MaskInProgress` という名前が付けられ、マスク操作が正常に完了すると、`<output database name>` という名前に変更されます。
+    - 構成 UI 内の列の表示順序が、アルファベット順ではなく序数に変更されました。
+    - 予期しない動作を防ぐため、構成 UI 内の列を一括選択するオプションが削除されました。
+    - 接続エラーとコマンド エラーの内部再試行ロジックが改善されました。
 
 - **SSIS**
-  - SSMS で MI の SQL エージェントを使用するときに、SSIS エージェント ジョブ ステップでパラメーターと接続マネージャーを構成できます。
-
+    - Azure SQL DB または Azure SQL DB Managed Instance に接続するときに、`<default>` を初期データベースとして使用できます。
+    - **[Integration Services カタログ]** の下に新しい項目 **[Try SSIS in Azure Data Factory]\(Azure Data Factory で SSIS を試す\)** が追加されました。これは、**統合ランタイムの作成ウィザード**を起動して **Azure-SSIS Integration Runtime** をすばやく作成するのに使用できます。
+    - **カタログ作成ウィザード** に **[Create SSIS IR]\(SSIS IR の作成\)** ボタンが追加されました。これは、**統合ランタイムの作成ウィザード**を起動して **Azure-SSIS Integration Runtime** をすばやく作成するのに使用できます。
+    - `ISDeploymentWizard` で、SQL Server 認証、Azure Active Directory 統合認証、および Azure Active Directory パスワード認証がコマンド ライン モードでサポートされるようになりました。
 
 ### <a name="bug-fixes"></a>バグの修正
 
-- **SSMS エディター**
-  - 新しい TRANSLATE 関数が、Intellisense によって認識されるようになりました。 詳細については、 https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430 を参照してください。
-  - 組み込み関数 FORMAT の Intellisense が改善されました。 詳細については、 https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676 を参照してください。
-  - LAG と LEAD が組み込み関数として認識されるようになりました。 詳細については、 https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757 を参照してください。
-  - "ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)" の使用時に IntelliSense で警告が表示されていた問題が修正されました
+- **SMO**
+    - 外部テーブルからの転送でのパフォーマンスの低下を修正しました。
+    - Azure SQL DB をターゲットとする場合に、SMO で `SqlConnection` インスタンスのリークを引き起こしていた `ServerConnection` スレッド セーフでの問題を修正しました。
+    - 名前に中かっこ `{}` が入っているデータベースを復元しようとすると、`StringBuilder.FormatError` を引き起こしていた問題を修正しました。
+
+- **SSMS 全般**
+    - T-SQL の編集中に SSMS がハングまたはクラッシュする問題を修正しました。
+    - `Registered Servers` での接続で `ApplicationIntent` が渡されない問題を修正しました。
+    - 高 DPI モニターで**新しい XEvent セッション ウィザードの UI** フォームが正しくレンダリングされない問題を修正しました。
+    - `.bacpac` ファイルをインポートしようとする問題を修正しました。
+    - `FILEGROWTH > 2048GB` を使用してデータベースのプロパティを表示しようとすると、算術オーバーフロー エラーがスローされる問題を修正しました。
+    - SSMS で .sql ファイルをダブルクリックしたときに開けない問題を修正しました。
 
 - **オブジェクト スクリプト作成**
-  - Azure SQL Database で GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID を使用して、空間インデックスのスクリプトを作成しようとするとエラーがスローされていた問題が修正されました。
+    - **オブジェクト エクスプローラー**のスクリプト設定がソースと一致するように設定されている場合でも、SQL Azure Database のデータベース スクリプトが常にオンプレミスの SQL Server インスタンスをターゲットとする問題を修正しました。
+    - 不適切な T-SQL ステートメントを生成する、クラスター化されたインデックスおよびクラスター化されていないインデックスを含む Azure SQL Datawarehouse データベース内にテーブルをスクリプト作成しようする問題を修正しました。
+    - 不適切な T-SQL ステートメント (重複したステートメント) を生成する、クラスター化された列ストア インデックスとクラスター化されたインデックスの両方を持つ Azure SQL Datawarehouse データベース内にテーブルをスクリプト作成しようする問題を修正しました。
+    - 範囲値なしでパーティション テーブルのスクリプト作成を修正しました (Azure SQL Datawarehouse データベース)。
+    - 監査または監査の仕様 `SERVER_PERMISSION_CHANGE_GROUP` をスクリプト作成できない問題を修正しました。
+    - Azure SQL Datawarehouse からの統計をスクリプト作成できない問題を修正しました。 [Microsoft Azure フィードバック フォーラム](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296)を参照してください。
 
-- **SMO**
-  - SMO を使用して作成されたアプリケーションで、複数のスレッドで同じサーバーのデータベースを列挙しようとした場合に、各スレッドで別の SqlConnection インスタンスを使用していてもエラーが発生していた問題が修正されました。
+- **Azure SQL Database Managed Instance**
+    - データベースを右クリックして **[データ層アプリケーションのインポート]** を選択するとエラーになる問題を修正しました。
+    - `TempDB` を右クリックするとエラーが表示される問題を修正しました。
+    - SMO で `ALTER DB ADD FILE` ステートメントをスクリプト作成すると、生成された T-SQL スクリプトが空になる問題を修正しました。
 
-- **データ分類**
-  - データ分類ウィンドウで分類を保存するときに、他のデータベースで別のデータ分類ウィンドウが開いている問題が修正されました。
-
-- **Azure SQL Database**
-  - Azure の [統計] メニューの下にある統計プロパティのサブメニュー オプションを有効にしました。これは、もうだいぶ前から完全にサポートされていたためです。
-
-- **クエリ データ ストア**
-  - "DocumentFrame (SQLEditors)" 例外がスローされる可能性がある問題が修正されました。
-  - 組み込みのクエリ ストア レポートでカスタム時間間隔を設定しようとしたときに、ユーザーが開始/終了間隔で AM や PM を選択できなかった問題が修正されました。
-
-- **データベース コピー ウィザード**
-  - スクリプトの生成/転送/データベース コピー ウィザードでインメモリ テーブルを使用してテーブルを作成しようとすると、ansi_padding on が強制されません。
-  - SQL Server 2017 および SQL Server 2019 のデータベース転送タスク/データベース コピー ウィザードは壊れています。
-  - スクリプトの生成/転送/データベース コピー ウィザードでは、関連付けられている外部データ ソースが作成される前に、テーブルの作成がスクリプト化されます。
-
-- **Profiler**
-  - Profiler イベントに "Aggregate Table Rewrite Query" イベントが追加されました。
-
-- **プラン表示**
-  - 複数のスレッドが存在する場合、新しい mem grant 演算子プロパティが正しく表示されません。
-
+- **フラット ファイル ウィザード**
+    - ウィザードが 1 列の CSV ファイルからインポートできない問題を修正しました。
+    - インポート ウィザードが負の 10 進値を処理できない問題を修正しました。
+    
 ### <a name="known-issues"></a>既知の問題
 
-- .sql ファイルをダブルクリックすると SSMS が起動しますが、実際のスクリプトは開きません。
-  - 回避策: .sql ファイルをドラッグし、SSMS エディターにドロップします。
+- なし
 
-## <a name="ssms-180-preview---cumulative-changelog-through-preview-6"></a>SSMS 18.0 プレビュー - プレビュー 6 までの累積的な変更ログ
+## <a name="ssms-180-preview---cumulative-changelog-through-preview-7"></a>SSMS 18.0 プレビュー - プレビュー 7 までの累積的な変更ログ
 
-*プレビュー 5* や*プレビュー 6* のラベルがない場合は、SSMS 18.0 の最初のパブリック プレビュー (SSMS 18.0 *プレビュー 4*) での変更を示しています。
+*プレビュー 5*、*プレビュー 6*、または*プレビュー 7* のラベルがない場合は、SSMS 18.0 の最初のパブリック プレビュー (SSMS 18.0 *プレビュー 4*) での変更を示しています。
 
 ### <a name="whats-new"></a>新機能
 
@@ -140,6 +160,7 @@ ms.locfileid: "56802926"
   - (プレビュー 6 の新機能) [ツール] メニューに [Azure への移行] が追加されました。[Data Migration Assistant](https://aka.ms/get-dma) と [Azure Database Migration Service](https://aka.ms/get-dms) を統合することで、すばやく簡単にアクセスして Azure により迅速に移行できるようにしました。
   - (プレビュー 6 の新機能) 以前のバージョン (プレビュー 6 より前) の SSMS 18.0 では、"利用可能なデータベース" キー ショートカットが **CTRL + ALT + J** キーにバインドされていました。 プレビュー 6 以降では、キー バインドが、SSMS 17.x と同様に、**CTRL + U** キーに復元されています。
   - (プレビュー 6 の新機能) "接続の変更" が使用されている場合に、ユーザーに開いているトランザクションをコミットするよう求めるロジックが追加されました。
+  - (プレビュー 7 の新機能) `UTF8_BIN2` 照合順序のサポートが追加されました。
 
 - **SMO**
   - 再開可能なインデックス作成の SMO サポートを拡張します
@@ -148,16 +169,21 @@ ms.locfileid: "56802926"
   - (プレビュー 5 の新機能) 使用中の SQL のバージョンのサービス レベル (CU12、RTM など) にマップする、新しい ProductUpdateLevel プロパティをサーバー オブジェクト上に公開しました
   - (プレビュー 5 の新機能) "lastgoodcheckdbtime" データベース プロパティにマップする、新しい LastGoodCheckDbTime プロパティをデータベース オブジェクト上に公開しました。 これらのプロパティが使用できない場合、既定値の 1/1/1900 12:00:00 AM が返されます。
   - (プレビュー 5 の新機能) RegSrvr.xml ファイル (登録済みサーバーの構成ファイル) の場所を "%AppData%\Microsoft\SQL Server Management Studio" に移動しました (バージョン管理されないため、SSMS のバージョン間で共有できます)
+  - (プレビュー 7 の新機能) SMO と SSMS の両方で、新しいクォーラムの種類および新しいリソースの種類として**クラウド監視**が追加されました。
+  - (プレビュー 7 の新機能) SMO と SSMS の両方で[エッジ制約](../relational-databases/tables/graph-edge-constraints.md)のサポートが追加されました。
+
 
 - **Azure Data Studio との統合**
   - Azure Data Studio を起動/ダウンロードするためのメニュー項目が追加されました
   - (プレビュー 5 の新機能) オブジェクト エクスプローラーに [Azure Data Studio の起動] メニュー項目が追加されました
+  - (プレビュー 7 の新機能) Azure Data Studio のオブジェクト エクスプローラーでデータベースを右クリックすると、クエリの実行または新しいノートブックの作成が有効化されるようになりました。
 
 - **プラン表示**
   - 使用できる場合、ShowPlan 演算子ノードに実際の経過時間、実際の行と推定の行が追加されました。 これで、実際のプランが、ライブ クエリの統計プランと一貫した外観になります。
   - クエリが 4,000 文字を超える場合に、SQL エンジンによって ShowPlan が切り捨てられる可能性があることをユーザーに示すために、ShowPlan の [クエリの編集] ボタンをクリックしたときのツールヒントが変更され、コメントが追加されました。
   - "Materializer Operator (External Select)" を表示するロジックが追加されました
   - "行ストアに対するバッチモード スキャン" 機能を使用しているクエリを簡単に識別できるように、新しい showplan 属性 BatchModeOnRowStoreUsed を追加します。 クエリが行ストアでバッチモード スキャンを実行するたびに、新しい属性 (BatchModeOnRowStoreUsed="true") が StmtSimple 要素に追加されます。
+  - (プレビュー 7 の新機能) `DW ROLLUP` および `CUBE` の LocalCube RelOp にプラン表示のサポートが追加されました。
 
 - **データベース互換性レベルのアップグレード**
   - (プレビュー 5 の新機能) [タスク] <Database name> [データベースのアップグレード] の下に新しいオプションが追加されました。 これにより、ユーザーに次のプロセスをガイドする、新しいクエリ調整アシスタント (QTA) が開始されます。
@@ -166,15 +192,24 @@ ms.locfileid: "56802926"
     - 同じワークロードを介してパフォーマンス データの 2 番目の受け渡しを収集する。
     - ワークロードの低下を検出し、ワークロードのパフォーマンスを改善するためのテスト済みのレコメンデーションを提供する。
 
-  これは、 https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade に記載されているデータベースのアップグレード プロセスに似ていますが、最後の手順 (レコメンデーションを生成するために QTA が以前の正常起動時の状態に依存しない) が異なります。
+    これは、「[新しい SQL Server にアップグレードするときにパフォーマンスの安定性を維持する](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」に記載されているデータベースのアップグレード プロセスとほぼ同じですが、最後の手順 (レコメンデーションを生成するために QTA が以前の正常起動時の状態に依存しない) が異なります。
 
 - **クエリ ストア**
   - (プレビュー 5 の新機能) グラフの Y 軸に表示される数字に桁区切り記号を追加することで、一部のレポート (全体的なリソースの消費) の使いやすさを改善しました。
   - (プレビュー 5 の新機能) 新しいクエリ待機統計レポートが追加されました。
 
 - **データ マスク**
-  - (プレビュー 5 の新機能。2018 年 11 月 4 日に追加) 静的データ マスクが追加されました。 静的データ マスクは、ユーザーが自身の SQL データベースをコピーして、コピー上の機密データをマスクできるようにするデータ保護ツールです。 この機能は、開発/テスト チームや分析チームなどの実稼働データベースを使用していないユーザーと実稼働データベースを共有するのに役立ちます。 詳細については、「[Static Data Masking for Azure SQL Database and SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/)」 (Azure SQL Database および SQL Server 用の静的データ マスク) を参照してください。
-
+  - (プレビュー 5 の新機能) 静的データ マスキングが追加されました。 静的データ マスクは、ユーザーが自身の SQL データベースをコピーして、コピー上の機密データをマスクできるようにするデータ保護ツールです。 この機能は、開発/テスト チームや分析チームなどの実稼働データベースを使用していないユーザーと実稼働データベースを共有するのに役立ちます。 詳細については、「[Static Data Masking for Azure SQL Database and SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/)」 (Azure SQL Database および SQL Server 用の静的データ マスク) を参照してください。
+  - (プレビュー 7 の新機能) JSON 構成ファイルがサポートされるようになりました。
+  - (プレビュー 7 の新機能) 今後さらに柔軟性を高めるため、XML 構成ファイルの形式が変更されました。  既存の構成ファイルは、再作成する必要があります。
+  - (プレビュー 7 の新機能) メモリ最適化テーブルとテンポラル テーブルを含むデータベースをマスクできるようになりました。  一部の制約は、メモリ最適化テーブルとテンポラル テーブル自体に引き続き適用されます。
+  - (プレビュー 7 の新機能) オンプレミスのデータベースのデータベース コピー操作で、`BACKUP DATABASE` ステップに `COPY_ONLY` オプションが使用されるようになりました。
+  - (プレビュー 7 の新機能) マスク操作がログ使用を削減している間に、マスクされたデータベースが `SIMPLE` 復旧モデルに設定され、完了後に元の値に戻るようになりました。
+  - (プレビュー 7 の新機能) 操作の進行中、マスクされたデータベースは `<output database name>-MaskInProgress` という名前が付けられ、マスク操作が正常に完了すると、`<output database name>` という名前に変更されます。
+  - (プレビュー 7 の新機能) 構成 UI 内の列の表示順序が、アルファベット順ではなく序数に変更されました。
+  - (プレビュー 7 の新機能) 予期しない動作を防ぐため、構成 UI 内の列を一括選択するオプションが削除されました。
+  - (プレビュー 7 の新機能) 接続エラーとコマンド エラーの内部再試行ロジックが改善されました。
+ 
 - **Always On**
   - SSMS の Always on ダッシュボードで RTO (推定復旧時間) と RPO (推定データ損失) を再ハッシュします。 ドキュメントは、 https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups で更新されています
 
@@ -184,12 +219,20 @@ ms.locfileid: "56802926"
 - **SSIS**
   - (プレビュー 5 の新機能) 顧客が Azure Government クラウド内にある Azure-SSIS IR で SSIS パッケージをスケジュールできるようにするためのサポートが追加されました
   - (プレビュー 6 の新機能) SSMS で MI の SQL エージェントを使用するときに、SSIS エージェント ジョブ ステップでパラメーターと接続マネージャーを構成できます。
+  - (プレビュー 7 の新機能) Azure SQL DB/Managed Instance に接続するときに、"\<既定\>" を初期データベースとして使用できます。
+  - (プレビュー 7 の新機能) [Integration Services カタログ] の下に新しい項目 [Try SSIS in Azure Data Factory]\(Azure Data Factory で SSIS を試す\) が追加されました。これは、統合ランタイムの作成ウィザードを起動して Azure-SSIS Integration Runtime をすばやく作成するのに使用できます。
+  - (プレビュー 7 の新機能) カタログ作成ウィザードに [Create SSIS IR]\(SSIS IR の作成\) ボタンが追加されました。これは、統合ランタイムの作成ウィザードを起動して Azure-SSIS Integration Runtime をすばやく作成するのに使用できます。
+  - (プレビュー 7 の新機能) ISDeploymentWizard で、SQL 認証、Azure Active Directory 統合認証、および Azure Active Directory パスワード認証がコマンド ライン モードでサポートされるようになりました。
 
 - **データ分類**
   - データ分類タスク メニューを再構成しました。データベース タスク メニューにサブメニューが追加され、最初に分類データ ウィンドウを開かなくても、メニューからレポートを開くためのオプションが追加されました。
+  - (プレビュー 7 の新機能) SMO に新機能 'データ分類' が追加されました。 Column オブジェクトで新たに公開されたプロパティ:SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId、IsClassified (読み取り専用)。 詳細については、 https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql?view=azuresqldb-current を参照してください。 
+  - (プレビュー 7 の新機能) [データ分類] メニューに新しい [Classification Report]\(分類レポート\) メニュー項目が追加されました。
 
 - **脆弱性評価**
   - (プレビュー 5 の新機能) SQL DW で脆弱性評価タスク メニューが有効になりました。
+  - (プレビュー 7 の新機能) 脆弱性評価スキャンの結果が SQL Azure DB での結果と一致するように、SQL Azure Managed Instance サーバーで実行される一連の脆弱性評価規則を変更しました。 
+  - (プレビュー 7 の新機能) "脆弱性評価" で Azure SQL DW がサポートされるようになりました。
 
 - **Always Encrypted**
   - [サーバーに接続] ダイアログの新しい [Always Encrypted] タブにある [Always Encrypted を有効にする] チェックボックスで、データベース接続での Always Encrypted の有効化/無効化を簡単に切り替えられるようになりました。 
@@ -199,6 +242,20 @@ ms.locfileid: "56802926"
     - [サーバーに接続] ダイアログ (新しい [Always Encrypted] タブ) にエンクレーブの構成証明の URL を指定するテキスト フィールド。
     - 新しい列マスター キーでエンクレーブ計算を許可するかどうかを制御する、[新しい列マスター キー] ダイアログの新しいチェックボックス。
     - 他の Always Encrypted キー管理ダイアログに、エンクレーブ計算を許可する列マスター キーの情報が表示されるようになりました。
+
+- **フラット ファイルのインポート ウィザード**
+  - (プレビュー 7 の新機能) フラット ファイルのインポートで列の名前が変更される場合があることをユーザーに通知するロジックが追加されました。
+
+- **データ層アプリケーションのウィザード**
+  - (プレビュー 7 の新機能) グラフ テーブルを使用したデータ層アプリケーションのインポート/エクスポートのサポートが追加されました。
+
+- **Azure SQL Managed Instance**
+  - (プレビュー 7 の新機能) SMO と SSMS で、Azure SQL Managed Instance に接続した場合の新しいログインの種類として、**AAD ログイン**が追加されました。
+
+- **XEvent ビューアー**
+  - (プレビュー 7 の新機能) XEvent ビューアーでは、より多くの XEvent のプラン表示のウィンドウが有効化されるようになりました。
+
+
 
 
 ### <a name="bug-fixes"></a>バグの修正
@@ -212,6 +269,7 @@ ms.locfileid: "56802926"
   - (プレビュー 5 の新機能) 中央管理サーバーと SQL Azure サーバーを使用しようとしたときの、SSSM のクラッシュが修正されました。 詳細については、 https://feedback.azure.com/forums/908035/suggestions/33374884 を参照してください。 
   - (プレビュー 5 の新機能) IsFullTextEnabled プロパティを取得する方法を最適化することによって、オブジェクト エクスプローラーでのハングが修正されました
   - (プレビュー 5 の新機能) データベース プロパティを取得する不要なクエリの作成を回避することで、"データベース コピー ウィザード" でのハングが修正されました
+  - (プレビュー 7 の新機能) T-SQL の編集中に SSMS がハング/クラッシュする問題を修正しました。 
 
 - **接続ダイアログ**
   - Del キーを押して、以前のユーザー名リストからユーザー名を削除できるようになりました。詳細については、こちら (https://feedback.azure.com/forums/908035/suggestions/32897632) を参照してください
@@ -227,6 +285,14 @@ ms.locfileid: "56802926"
   - **[ツール] | [オプション] | [SQL Server オブジェクト エクスプローラー]** | [コマンド] ページのサイズが正しく変更されない問題を修正しました。
   - SSMS では既定で、XMLA エディターでの DTD の自動ダウンロードが無効化されるようになります。(xml 言語サービスを使用する) XMLA スクリプト エディターでは既定で、悪意がある可能性のある xmla ファイルの DTD が自動的にダウンロードされないようになります。  これは、[ツール] -> [オプション] -> [環境] -> [テキスト エディター] -> [XML] -> [その他] で [DTD とスキーマを自動的にダウンロードする] 設定をオフにすることで制御されます。  
   - (プレビュー 5 の新機能) 以前のバージョンの SSMS にあった CTRL + D のショートカットを復元しました。 詳細については、 https://feedback.azure.com/forums/908035/suggestions/35544754 を参照してください
+
+- **SSMS 全般**
+  - (プレビュー 7 の新機能) T-SQL の編集中に SSMS がハング/クラッシュする問題を修正しました。
+  - (プレビュー 7 の新機能) `Registered Servers` での接続で `ApplicationIntent` が渡されない問題を修正しました。
+  - (プレビュー 7 の新機能) 高 DPI モニターで**新しい XEvent セッション ウィザードの UI** フォームが正しくレンダリングされない問題を修正しました。
+  - (プレビュー 7 の新機能) `.bacpac` ファイルをインポートしようとする問題を修正しました。
+  - (プレビュー 7 の新機能) `FILEGROWTH > 2048GB` を使用してデータベースのプロパティを表示しようとすると、算術オーバーフロー エラーがスローされる問題を修正しました。
+  - (プレビュー 7 の新機能) SSMS で .sql ファイルをダブルクリックしたときに開けない問題を修正しました。
 
 - **SSMS エディター**
   - "SQL システム テーブル" の問題を修正しました。この問題で、既定の色を復元すると、既定の緑色ではなく、ライム グリーン色に変わり、白い背景では非常に読みにくくなります。詳細については、こちら (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906) を参照してください
@@ -249,7 +315,7 @@ ms.locfileid: "56802926"
   - オブジェクトの名前を変更しようとすると、OE で Del キーが機能しないという、長い間未解決の問題が修正されました。 詳細については、 https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510 を参照してください
   - 既存のデータベース ファイルのプロパティを表示すると、新しいデータベースの作成時に表示される [初期サイズ (MB)] ではなく [サイズ (MB)] 列にサイズが表示されます。 詳細については、 https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024 を参照してください
   - 現在のバージョンの SSMS ではこの種のテーブルをサポートしていないため、[グラフ テーブル] の [デザイン] コンテキスト メニュー項目を無効にしました。
-  - (プレビュー 5 の新機能。インサイクル) [新しいジョブ スケジュール] ダイアログが高 DPI モニターで正しくレンダリングされない問題を修正しました。 詳細については、 https://feedback.azure.com/admin/v3/suggestions/35541262 を参照してください 
+  - (プレビュー 5 の新機能) [新しいジョブ スケジュール] ダイアログが高 DPI モニターで正しくレンダリングされない問題を修正しました。 詳細については、 https://feedback.azure.com/admin/v3/suggestions/35541262 を参照してください 
   - (プレビュー 5 の新機能) オブジェクト エクスプローラーでのデータベース サイズ ([サイズ (MB)]) の表示方法を修正/改善しました。つまり、小数点以下を 2 桁のみにし、桁区切り記号を使用して書式設定しました。 詳細については、 https://feedback.azure.com/forums/908035/suggestions/34379308 を参照してください
   - (プレビュー 5 の新機能) "空間インデックス" の作成が "このアクションを完了するには、プロパティ PartitionScheme を設定してください" のようなエラーで失敗する原因となっていた問題を修正しました。
   - (プレビュー 5 の新機能) オブジェクト エクスプローラーのパフォーマンスを若干改善して、可能な場合には、余分なクエリの発行を回避するようにしました。
@@ -266,6 +332,12 @@ ms.locfileid: "56802926"
   - SQL Server 2016 以前のテーブルをスクリプト化するときに、"エッジとして" および "ノードとして" のグラフ構文を省略します。
   - MFA で AAD を使用して Azure SQL Database に接続している場合、データベース オブジェクトのスクリプト作成が失敗する問題が修正されました。
   - (プレビュー 6 の新機能) Azure SQL Database で GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID を使用して、空間インデックスのスクリプトを作成しようとしたときにエラーがスローされていた問題が修正されました。
+  - (プレビュー 7 の新機能) **オブジェクト エクスプローラー**のスクリプト設定がソースと一致するように設定されている場合でも、SQL Azure Database のデータベース スクリプトが常にオンプレミスの SQL Server インスタンスをターゲットとする問題を修正しました。
+- (プレビュー 7 の新機能) 不適切な T-SQL ステートメントを生成する、クラスター化されたおよびクラスター化されていないインデックスを含む Azure SQL Datawarehouse データベース内にテーブルをスクリプト作成しようする問題を修正しました。
+- (プレビュー 7 の新機能) 不適切な T-SQL ステートメント (重複したステートメント) を生成する、クラスター化された列ストア インデックスとクラスター化されたインデックスを持つ Azure SQL Datawarehouse データベース内にテーブルをスクリプト作成しようする問題を修正しました。
+- (プレビュー 7 の新機能) 範囲値なしでパーティション テーブルのスクリプト作成を修正しました (Azure SQL Datawarehouse データベース)。
+- (プレビュー 7 の新機能) 監査または監査の仕様 `SERVER_PERMISSION_CHANGE_GROUP` をスクリプト作成できない問題を修正しました。
+- (プレビュー 7 の新機能) Azure SQL Datawarehouse からの統計をスクリプト作成できない問題を修正しました。 [Microsoft Azure フィードバック フォーラム](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296)を参照してください。
 
 - **テーブル デザイナー (Table Designer)**
   - (プレビュー 4 より前の新機能) "200 行の編集" 時のクラッシュを修正しました
@@ -274,7 +346,10 @@ ms.locfileid: "56802926"
 - **SMO**
   - SMO/ServerConnection で SqlCredential ベースの接続が正しく行われない問題を修正しました。 詳細については、 https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941 を参照してください
   - (プレビュー 6 の新機能) SMO を使用して作成されたアプリケーションで、複数のスレッドで同じサーバーのデータベースを列挙しようとした場合に、各スレッドで別の SqlConnection インスタンスを使用していてもエラーが発生していた問題が修正されました。
-
+  - (プレビュー 7 の新機能) 外部テーブルからの転送でのパフォーマンスの低下を修正しました。
+  - (プレビュー 7 の新機能) Azure SQL DB をターゲットとする場合に、SMO で `SqlConnection` インスタンスのリークを引き起こしていた `ServerConnection` スレッド セーフでの問題を修正しました。
+  - (プレビュー 7 の新機能) 名前に中かっこ `{}` が入っているデータベースを復元しようとすると、`StringBuilder.FormatError` を引き起こしていた問題を修正しました。
+ 
 - **AS**
   - AS Xevent UI に対する [詳細設定] がクリップされてしまう問題を修正しました。
   - (プレビュー 5 の新機能) DAX の解析でファイルが見つからないことを示す例外がスローされる問題を修正しました
@@ -292,6 +367,8 @@ ms.locfileid: "56802926"
   - (浮動小数点の異なる区切り文字を使用するロケールに対する) 浮動小数点型の不適切な処理に関する問題を修正しました。
   - 値が 0 または 1 のときのビットのインポートに関する問題を修正しました。 詳細については、 https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535 を参照してください
   - 浮動小数点が null として入力された問題を修正しました。 
+  - (プレビュー 7 の新機能) インポート ウィザードが負の 10 進値を処理できない問題を修正しました。
+  - (プレビュー 7 の新機能) ウィザードが 1 列の CSV ファイルからインポートできない問題を修正しました。
 
 - **HADR / AG**
   - (プレビュー 5 の新機能) [可用性グループのフェールオーバー] ウィザードでロールが常に "解決中" と表示される問題を修正しました 
@@ -324,6 +401,9 @@ ms.locfileid: "56802926"
   - (プレビュー 5 の新機能) SMO ファイル グループ オブジェクトのスクリプト作成が改善されました。
   - (プレビュー 5 の新機能) 資格情報と監査のための UI が改善されました。
   - (プレビュー 5 の新機能) 論理レプリケーションのサポートが追加されました。
+  - (プレビュー 7 の新機能) データベースを右クリックして **[データ層アプリケーションのインポート]** を選択するとエラーになる問題を修正しました。
+  - (プレビュー 7 の新機能) `TempDB` を右クリックするとエラーが表示される問題を修正しました。
+  - (プレビュー 7 の新機能) SMO で `ALTER DB ADD FILE` ステートメントをスクリプト作成すると、生成された T-SQL スクリプトが空になる問題を修正しました。
 
 - **Azure SQL Database**
   - Azure SQL DB でマスター データベースではなくユーザー データベースに接続したときに、Azure SQL DB クエリ ウィンドウにデータベース リストが正しく入力されない問題を修正しました。
@@ -362,6 +442,9 @@ ms.locfileid: "56802926"
 - **プラン表示**
   - (プレビュー 6 の新機能) 複数のスレッドが存在する場合、新しい mem grant 演算子プロパティが正しく表示されません。
 
+- **データ マスク**
+  - (プレビュー 7 の新機能) 複数のログと filestream のメモリ最適化テーブル ファイルを持つオンプレミスのデータベースを自動的にコピーできないバグを修正しました。
+
 ### <a name="deprecated-features"></a>非推奨の機能
 
 次の機能は、SSMS で使用できなくなりました。
@@ -385,8 +468,7 @@ ms.locfileid: "56802926"
 
 ### <a name="known-issues"></a>既知の問題
 
-- .sql ファイルをダブルクリックすると SSMS が起動しますが、実際のスクリプトは開きません。
-  - 回避策: .sql ファイルをドラッグし、SSMS エディターにドロップします。
+- なし
 
 
 ## <a name="ssms-1791-latest-ga-release"></a>SSMS 17.9.1 (最新の GA リリース)
@@ -410,13 +492,6 @@ ms.locfileid: "56802926"
 
 [中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-
-
-
-
-
-
-
 ## <a name="ssms-179"></a>SSMS 17.9
 
 [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) ![のダウンロード](../ssdt/media/download.png)
@@ -433,7 +508,6 @@ ms.locfileid: "56802926"
 ### <a name="whats-new"></a>新機能
 
 **SSMS 全般**
-
 
 プラン表示:
 

@@ -1,7 +1,7 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/11/2018
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ef0833709d409e7393d71a402b823375b895fb2a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: bcab3eb3b41cf0dbbcb46a48a612d35bde66de14
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327394"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227154"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54327394"
           [ , {node_table TO node_table }]
           [ , ...n ]
         )
-        [ ON DELETE NO ACTION]
+        [ ON DELETE { NO ACTION | CASCADE } ]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
@@ -163,7 +163,7 @@ ms.locfileid: "54327394"
   
  FOREIGN KEY 制約と CHECK 制約に対して指定できます。 制約でこの句を指定すると、レプリケーション エージェントが挿入、更新、削除操作を行う際に制約が適用されません。  
 
- CONNECTION 特定のエッジ制約が接続を許可されるノード テーブルのペアを指定します。  
+ CONNECTION 特定のエッジ制約が接続を許可されるノード テーブルのペアを指定します。 ON DELETE では、エッジ テーブルのエッジ経由で接続されたノードが削除されたとき、そのエッジ テーブルの行に対して行われる動作が指定されます。 
  
  DEFAULT  
  列の既定値を指定します。 DEFAULT 定義を使用すると、既存のデータ行に新しい列の値を設定できます。 DEFAULT 定義は、**timestamp** データ型、IDENTITY プロパティ、既存の DEFAULT 定義、またはバインドされている既定値が指定されている列には追加できません。 列に既定値が既に存在する場合、新しい既定値を追加するには既存の既定値をあらかじめ削除する必要があります。 ユーザー定義型の列に既定値を指定する場合は、その型で *constant_expression* 型からユーザー定義型への暗黙的な変換がサポートされている必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の旧バージョンとの互換性を保つため、DEFAULT に制約名を割り当てることができます。  

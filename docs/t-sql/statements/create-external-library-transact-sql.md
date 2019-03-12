@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -15,48 +15,93 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - CREATE EXTERNAL LIBRARY
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd47fd06404dad6e6896d377e95de677a08c5ae3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d75671550d6e935216fd4d265777b31c81af7675
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205162"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017888"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-指定したバイト ストリームまたはファイル パスから R パッケージ ファイルをデータベースにアップロードします。 このステートメントは、データベース管理者が新しい外部言語ランタイム (現在は R のみ) に必要な成果物および [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] でサポートされる OS プラットフォームをアップロードする汎用メカニズムとして機能します。 
+指定したバイト ストリームまたはファイル パスから R、Python、Java パッケージ ファイルをデータベースにアップロードします。 このステートメントは、データベース管理者が新しい外部言語ランタイムに必要な成果物および [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] でサポートされる OS プラットフォームをアップロードする汎用メカニズムとして機能します。 
 
-SQL Server 2017 以降では、R 言語と Windows プラットフォームがサポートされています。 Python および Linux は、今後のリリースでサポートされる予定です。
+> [!NOTE]
+> SQL Server 2017 では、R 言語と Windows プラットフォームがサポートされています。 Windows プラットフォームの R、Python、Java は SQL Server 2019 CTP 2.3 でサポートされています。 Linux は今後のリリースでサポートされる予定です。
 
-## <a name="syntax"></a>構文
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 の構文
 
 ```text
 CREATE EXTERNAL LIBRARY library_name  
-    [ AUTHORIZATION owner_name ]  
-FROM <file_spec> [,...2]  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
+WITH ( LANGUAGE = <language> )  
+[ ; ]  
+
+<file_spec> ::=  
+{  
+    (CONTENT = { <client_library_specifier> | <library_bits> }  
+    [, PLATFORM = WINDOWS ])  
+}  
+
+<client_library_specifier> :: = 
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'  
+    | '[local_path\]manifest_file_name'  
+    | '<relative_path_in_external_data_source>'  
+} 
+
+<library_bits> :: =  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
+    | 'Java'
+}
+```
+::: moniker-end
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2017"></a>SQL Server 2017 の構文
+
+```text
+CREATE EXTERNAL LIBRARY library_name  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
 WITH ( LANGUAGE = 'R' )  
 [ ; ]  
 
 <file_spec> ::=  
 {  
-(CONTENT = { <client_library_specifier> | <library_bits> }  
-[, PLATFORM = WINDOWS ])  
+    (CONTENT = { <client_library_specifier> | <library_bits> }  
+    [, PLATFORM = WINDOWS ])  
 }  
 
-<client_library_specifier> :: =  
-  '[\\computer_name\]share_name\[path\]manifest_file_name'  
-| '[local_path\]manifest_file_name'  
-| '<relative_path_in_external_data_source>'  
+<client_library_specifier> :: = 
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'  
+    | '[local_path\]manifest_file_name'  
+    | '<relative_path_in_external_data_source>'  
+} 
 
 <library_bits> :: =  
-{ varbinary_literal | varbinary_expression }  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
 ```
+::: moniker-end
 
 ### <a name="arguments"></a>引数
 
@@ -64,7 +109,7 @@ WITH ( LANGUAGE = 'R' )
 
 ライブラリは、ユーザーを対象としたデータベースに追加されます。 ライブラリ名は、特定のユーザーまたは所有者のコンテキスト内で一意と見なされる必要があります。 たとえば、**RUser1** と **RUser2** の 2 人のユーザーは、どちらも個別に R ライブラリ `ggplot2` をアップロードできます。 ただし、**RUser1** が新しいバージョンの `ggplot2` をアップロードする場合は、2 番目のインスタンスの名前を別のものにするか、既存のライブラリを置き換える必要があります。 
 
-ライブラリ名は任意に割り当てることはできません。ライブラリ名は R から R ライブラリを読み込むために必要な名前と同じにする必要があります。
+ライブラリ名は任意に割り当てることはできません。ライブラリ名は外部スクリプトからライブラリを読み込むために必要な名前と同じにする必要があります。
 
 **owner_name**
 
@@ -72,7 +117,7 @@ WITH ( LANGUAGE = 'R' )
 
 データベース所有者が所有するライブラリは、データベースとランタイムに対してグローバルと見なされます。 つまり、データベース所有者は、多くのユーザーによって共有されているライブラリまたはパッケージの共通セットが含まれているライブラリを作成できます。 `dbo` ユーザー以外のユーザーによって外部ライブラリが作成されると、その外部ライブラリは、そのユーザーに対してのみプライベートになります。
 
-ユーザー **RUser1** が R スクリプトを実行するときに、`libPath` の値に複数のパスを含めることができます。 最初のパスは常に、データベースの所有者によって作成された共有のライブラリへのパスになります。 `libPath` の 2 番目の部分では、**RUser1** によって個別にアップロードされたパッケージを含むパスを指定します。
+ユーザー **RUser1** が外部スクリプトを実行するときに、`libPath` の値に複数のパスを含めることができます。 最初のパスは常に、データベースの所有者によって作成された共有のライブラリへのパスになります。 `libPath` の 2 番目の部分では、**RUser1** によって個別にアップロードされたパッケージを含むパスを指定します。
 
 **file_spec**
 
@@ -94,9 +139,19 @@ WITH ( LANGUAGE = 'R' )
 
 現在サポートされているプラットフォームは Windows のみです。
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**language**
+
+パッケージの言語を指定します。 値は `R`、`Python`、または `Java` です。
+::: moniker-end
+
 ## <a name="remarks"></a>Remarks
 
 R 言語の場合、ファイルを使用するときに、Windows の .ZIP 拡張子を使用して、ZIP アーカイブ ファイルの形式でパッケージを準備する必要があります。 現時点では、Windows プラットフォームのみがサポートされています。 
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Python 言語の場合、.whl または .zip ファイルのパッケージは zip アーカイブ ファイルの形式で準備する必要があります。 パッケージが既に .zip ファイルになっている場合、新しい .zip ファイルに含める必要があります。 現在のところ、.whl または .zip ファイルとしてパッケージを直接アップロードすることはできません。
+::: moniker-end
 
 `CREATE EXTERNAL LIBRARY` ステートメントは、ライブラリ ビットをデータベースにアップロードします。 ユーザーが [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して外部スクリプトを実行し、パッケージまたはライブラリを呼び出すと、ライブラリがインストールされます。
 
@@ -126,6 +181,10 @@ EXEC sp_execute_external_script
 @language =N'R', 
 @script=N'library(customPackage)'
 ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+SQL Server 2019 の Python 言語の場合、`'R'` を `'Python'` に替えてもこの例は機能します。
+::: moniker-end
 
 ### <a name="b-installing-packages-with-dependencies"></a>B. 依存関係を持つパッケージをインストールする
 
@@ -173,9 +232,12 @@ EXEC sp_execute_external_script
     @script=N'
     # load the desired package packageA
     library(packageA)
-    print(packageVersion("packageA"))
     '
     ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+SQL Server 2019 の Python 言語の場合、`'R'` を `'Python'` に替えてもこの例は機能します。
+::: moniker-end
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. バイト ストリームからライブラリを作成する
 
@@ -185,6 +247,10 @@ EXEC sp_execute_external_script
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+SQL Server 2019 の Python 言語の場合、**'R'** を **'Python'** に替えてもこの例は機能します。
+::: moniker-end
+
 > [!NOTE]
 > このコード サンプルは構文のみを示しています。`CONTENT =` のバイナリ値は読みやすさのため切り捨てられており、作業ライブラリを作成しません。 バイナリ変数の実際の内容はこれよりも長くなります。
 
@@ -193,6 +259,28 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE =
 `ALTER EXTERNAL LIBRARY` DDL ステートメントは、新しいライブラリのコンテンツを追加または既存のライブラリのコンテンツを変更するために使用できます。 既存のライブラリを変更するには、`ALTER ANY EXTERNAL LIBRARY` アクセス許可が必要です。
 
 詳細については、「[ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md)」を参照してください。
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+### <a name="e-add-a-java-jar-file-to-a-database"></a>E. Java .jar ファイルをデータベースに追加する  
+
+次の例では、`customJar` と呼ばれる外部 jar ファイルをデータベースに追加します。
+
+```sql
+CREATE EXTERNAL LIBRARY customJar
+FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\customJar.jar') 
+WITH (LANGUAGE = 'Java');
+```
+
+ライブラリがインスタンスに正常にアップロードされたら、ユーザーが `sp_execute_external_script` プロシージャを実行して、ライブラリをインストールします。
+
+```sql
+EXEC sp_execute_external_script
+    @language = N'Java'
+    , @script = N'customJar.MyCLass.myMethod'
+    , @input_data_1 = N'SELECT * FROM dbo.MyTable'
+WITH RESULT SETS ((column1 int))
+```
+::: moniker-end
 
 ## <a name="see-also"></a>参照
 

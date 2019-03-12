@@ -21,17 +21,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b4fddc20d2ee9adbfb0f67f88fcb75661ebc828
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 6c5d6dc066db8eb24a95172b69868237517ef7be
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154797"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852897"
 ---
 # <a name="set-operators---union-transact-sql"></a>セット演算子 - UNION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-2 つまたはそれ以上の結果セットを、単一の結果セットに結合します。 このセットには、UNION のすべてのクエリに属しているすべての行が含まれます。 これは、2 つのテーブルの列を結合した結合列とは異なります。  
+2 つまたはそれ以上の結果セットを、単一の結果セットに結合します。 このセットには、UNION のすべてのクエリに属しているすべての行が含まれます。 UNION 演算は、2 つのテーブルの列を結合した結合列とは異なります。  
   
 UNION を使用して 2 つのクエリの結果セットを結合するための基本的な規則を以下に示します。  
   
@@ -44,17 +44,16 @@ UNION を使用して 2 つのクエリの結果セットを結合するため�
 ## <a name="syntax"></a>構文  
   
 ```  
-    { <query_specification> | ( <query_expression> ) }   
-  UNION [ ALL ]   
-  <query_specification | ( <query_expression> )   
- [ UNION [ ALL ] <query_specification> | ( <query_expression> )   
-    [ ...n ] ]   
+{ <query_specification> | ( <query_expression> ) }   
+{ UNION [ ALL ]   
+  { <query_specification> | ( <query_expression> ) } 
+  [ ...n ] }
 ```  
   
 ## <a name="arguments"></a>引数  
 \<query_specification> | ( \<query_expression> ) クエリの仕様または別のクエリ定義またはクエリ式からのデータと比較するデータを返すクエリ式。 UNION 操作の一部である列の定義は同じである必要はありませんが、暗黙的な変換により一致させる必要があります。 データ型が異なるとき、最終的なデータ型は[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)ルールに基づいて決定されます。 型は同じだが、有効桁数、小数点以下桁数、または長さが異なる場合、結果は式の結合と同じルールに基づいて決定されます。 詳しくは、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」をご覧ください。  
   
-**xml** データ型の列は同じである必要があります。 また、すべての列が XML スキーマに従って型指定されているか、型指定されていないかのいずれかでなければなりません。 型指定されている場合は、同じ XML スキーマ コレクションに従って型指定されている必要があります。  
+**xml** データ型の列は同じである必要があります。 すべての列が XML スキーマに型指定されているか、型指定されていない必要があります。 型指定されている場合は、同じ XML スキーマ コレクションに従って型指定されている必要があります。  
   
 UNION  
 複数の結果セットを結合し、1 つの結果セットとして返すことを指定します。  

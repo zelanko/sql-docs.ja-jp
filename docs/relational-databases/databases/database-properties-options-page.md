@@ -13,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ce814d567aa695be417fa4fa92d988938dfec6bf
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659371"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007595"
 ---
 # <a name="database-properties-options-page"></a>[データベースのプロパティ] \([オプション] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51659371"
  データベースの照合順序を一覧から選択して指定します。 詳細については、「 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)」を参照してください。  
   
  **復旧モデル**  
- データベースの復旧に対して、 **[完全]**、 **[一括ログ]**、または **[単純]** のいずれかのモデルを指定します。 復旧モデルの詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」をご覧ください。  
+ データベースを復旧するための、次のいずれかのモデルを指定します。**[完全]**、**[一括ログ]**、**[単純]**。 復旧モデルの詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」をご覧ください。  
   
  **互換性レベル**  
  データベースがサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新バージョンを指定します。 使用可能な値については、「[ALTER DATABASE (Transact-SQL) Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」 (ALTER DATABASE (TRANSACT-SQL) 互換性レベル) を参照してください。 SQL Server データベースがアップグレードされると、そのデータベースの互換性レベルが保持される (可能な場合) か、新しいサポートされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最小レベルに変更されます。 
@@ -44,7 +44,7 @@ ms.locfileid: "51659371"
 ## <a name="automatic"></a>自動  
  **[自動終了]**  
  最後のユーザーが終了した後で、データベースを即座にシャットダウンしてリソースを解放するかどうかを指定します。 指定できる値は、 **[True]** および **[False]** です。 **[True]** を指定すると、最後のユーザーがログオフした後でデータベースは正常にシャットダウンされてリソースが解放されます。  
-  
+
  **[増分統計の自動作成]**  
  パーティションごとの統計を作成するときに増分オプションを使用するかどうかを指定します。 増分統計の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。  
   
@@ -63,6 +63,15 @@ ms.locfileid: "51659371"
  **[False]** が指定された場合、古い統計の自動更新を開始するクエリは、更新された統計をクエリ最適化プランで使用できるようになるまで待機します。  
   
  このオプションを **[True]** に設定しても、 **[統計の自動更新]** も **[True]** に設定しない限り、効力はありません。  
+
+## <a name="azure"></a>Azure
+Azure SQL Database に接続している場合、このセクションにはサービスレベル目標 (SLO) を制御するための設定があります。 新しいデータベースの既定の SLO は、Standard S2 です。
+
+  **[現在のサービス レベル目標]** は、使用する特定の SLO です。 有効な値は、選択したエディションによって制限されます。 目的の SLO 値が一覧にない場合は、値を入力することができます。
+
+  **[エディション]** は、Basic や Premium などの、使用する Azure SQL Database エディションです。 必要なエディションの値が一覧にない場合は、値を入力できます。その値は、Azure REST API で使用される値に一致している必要があります。
+  
+  **[最大サイズ]** は、データベースの最大サイズです。 目的のサイズの値が一覧にない場合は、値を入力できます。 特定のエディションと SLO の既定サイズは空白のままにします。
   
 ## <a name="containment"></a>Containment  
  包含データベースでは、通常サーバー レベルで構成する設定の一部をデータベース レベルで構成できます。  
@@ -123,7 +132,7 @@ ms.locfileid: "51659371"
  選択したデータベースと関連付けられている FILESTREAM データのディレクトリ名を指定します。  
   
  **[FILESTREAM 非トランザクション アクセス]**  
- FileTable に格納されている FILESTREAM データへの、ファイル システムを通じた非トランザクション アクセスに対するオプションとして、 **OFF**、 **READ_ONLY**、または **FULL**を指定します。 FILESTREAM がサーバー上で有効になっていない場合、この値は OFF に設定され、変更できません。 詳細については、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。  
+ FileTable に格納されている FILESTREAM データへの、ファイル システムを通じた非トランザクション アクセスに対するオプションとして、次のいずれかを指定します。**OFF**、**READ_ONLY**、**FULL**。 FILESTREAM がサーバー上で有効になっていない場合、この値は OFF に設定され、変更できません。 詳細については、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。  
   
 ## <a name="miscellaneous"></a>その他  
 **[スナップショット分離を許可]**  

@@ -2,7 +2,7 @@
 title: Microsoft SQL データベースでのスカラー UDF のインライン化 | Microsoft Docs
 description: SQL Server (2018 以降) および Azure SQL Database 内でスカラー UDF を呼び出すスカラー UDF インライン化機能を使用すると、クエリのパフォーマンスが向上します。
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 709f4a25ec4536c9ff1ba10cdaddd2ef8c104db2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51222110"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017928"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
@@ -141,16 +141,17 @@ UDF 内のロジックの複雑さによっては、結果として得られる�
 以下のすべての条件に該当する場合、そのスカラー T-SQL UDF はインライン化できます。
 
 - UDF が、次のコンストラクトを使用して書かれている。
-    - `DECLARE`、`SET`: 変数の宣言と代入。
-    - `SELECT`: 単一/複数の変数代入を含む SQL クエリ<sup>1</sup>。
-    - `IF`/`ELSE`: 任意の入れ子レベルでの分岐。
-    - `RETURN`: 1 つまたは複数の return ステートメント。
-    - `UDF`: 入れ子/再帰関数呼び出し<sup>2</sup>。
-    - その他: `EXISTS`、`ISNULL` などの関係演算。
+    - `DECLARE`、`SET`:変数の宣言と代入。
+    - `SELECT`[ ] :単一/複数の変数代入を含む SQL クエリ<sup>1</sup>。
+    - `IF`/`ELSE`:任意の入れ子レベルでの分岐。
+    - `RETURN`[ ] :1 つまたは複数の return ステートメント。
+    - `UDF`[ ] :入れ子/再帰関数呼び出し<sup>2</sup>。
+    - その他:`EXISTS`、`ISNULL` などの関係演算。
 - UDF で、時間に依存する組み込み関数 (`GETDATE()` など) または副作用のある組み込み関数<sup>3</sup> (`NEWSEQUENTIALID()` など) が呼び出されていない。
 - UDF で、`EXECUTE AS CALLER` 句が使用されている (`EXECUTE AS` 句が指定されていない場合の既定の動作)。
 - UDF で、テーブル変数またはテーブル値パラメーターが参照されていない。
 - スカラー UDF を呼び出すクエリの `GROUP BY` 句で、スカラー UDF 呼び出しが参照されていない。
+- `DISTINCT` 句でその選択リストのスカラー UDF を呼び出すクエリにより、その `ORDER BY` 句のスカラー UDF 呼び出しが参照されていない。
 - UDF がネイティブでコンパイルされていない (相互運用機能はサポートされます)。
 - UDF が、計算列または CHECK 制約定義で使用されていない。
 - UDF で、ユーザー定義型が参照されていない。

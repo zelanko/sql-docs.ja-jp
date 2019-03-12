@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -13,16 +13,16 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - ALTER EXTERNAL LIBRARY
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6243f4b6fe34197e476c38dde9e2b4c717192944
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc590bb618f9a95a0fbe7b0a9c173a64698cdf1e
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686760"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017968"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -30,7 +30,48 @@ ms.locfileid: "47686760"
 
 既存の外部パッケージ ライブラリのコンテンツを変更します。
 
-## <a name="syntax"></a>構文
+> [!NOTE]
+> SQL Server 2017 では、R 言語と Windows プラットフォームがサポートされています。 Windows プラットフォームの R、Python、Java は SQL Server 2019 CTP 2.3 でサポートされています。 Linux は今後のリリースでサポートされる予定です。
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 の構文
+
+```text
+ALTER EXTERNAL LIBRARY library_name
+[ AUTHORIZATION owner_name ]
+SET <file_spec>
+WITH ( LANGUAGE = <language> )
+[ ; ]
+
+<file_spec> ::=
+{
+    (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
+    [, PLATFORM = WINDOWS )
+}
+
+<client_library_specifier> :: =
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'
+    | '[local_path\]manifest_file_name'
+    | '<relative_path_in_external_data_source>'
+}
+
+<library_bits> :: =
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
+    | 'Java'
+}
+```
+::: moniker-end
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2017"></a>SQL Server 2017 の構文
 
 ```text
 ALTER EXTERNAL LIBRARY library_name
@@ -41,18 +82,24 @@ WITH ( LANGUAGE = 'R' )
 
 <file_spec> ::=
 {
-(CONTENT = { <client_library_specifier> | <library_bits> | NONE}
-[, PLATFORM = WINDOWS )
+    (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
+    [, PLATFORM = WINDOWS )
 }
 
 <client_library_specifier> :: =
-  '[\\computer_name\]share_name\[path\]manifest_file_name'
-| '[local_path\]manifest_file_name'
-| '<relative_path_in_external_data_source>'
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'
+    | '[local_path\]manifest_file_name'
+    | '<relative_path_in_external_data_source>'
+}
 
 <library_bits> :: =
-{ varbinary_literal | varbinary_expression }
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
 ```
+::: moniker-end
 
 ### <a name="arguments"></a>引数
 
@@ -86,9 +133,19 @@ WITH ( LANGUAGE = 'R' )
 
 ライブラリのコンテンツのプラットフォームを指定します。 この値は、さまざまなプラットフォームを追加する既存のライブラリを変更する場合に必要です。 サポートされているプラットフォームは Windows のみです。
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**language**
+
+パッケージの言語を指定します。 値には **R**、**Python**、**Java** があります。
+::: moniker-end
+
 ## <a name="remarks"></a>Remarks
 
 R 言語の場合、Windows の .ZIP 拡張子を使用して、ZIP アーカイブ ファイルの形式でパッケージを準備する必要があります。 現時点では、Windows プラットフォームのみがサポートされています。  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Python 言語の場合、.whl または .zip ファイルのパッケージは zip アーカイブ ファイルの形式で準備する必要があります。 パッケージが既に .zip ファイルになっている場合、新しい .zip ファイルに含める必要があります。 現在のところ、.whl または .zip ファイルとしてパッケージを直接アップロードすることはできません。
+::: moniker-end
 
 `ALTER EXTERNAL LIBRARY` ステートメントは、ライブラリ ビットのデータベースへのアップロードのみを行います。 ユーザーがライブラリを呼び出す [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) でコードを実行すると、変更したライブラリがインストールされます。
 
@@ -120,6 +177,9 @@ EXEC sp_execute_external_script
 ;
 ```
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+SQL Server 2019 の Python 言語の場合、`'R'` を `'Python'` に替えてもこの例は機能します。
+::: moniker-end
 ### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. バイト ストリームを使用して既存のライブラリを変更する
 
 次の例では、新しいビットを 16 進数リテラルとして渡すことで、ライブラリを変更します。
@@ -128,6 +188,10 @@ EXEC sp_execute_external_script
 ALTER EXTERNAL LIBRARY customLibrary 
 SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+SQL Server 2019 の Python 言語の場合、`'R'` を `'Python'` に替えてもこの例は機能します。
+::: moniker-end
 
 > [!NOTE]
 > このコード サンプルは構文のみを示しています。`CONTENT =` のバイナリ値は読みやすさのため切り捨てられており、作業ライブラリを作成しません。 バイナリ変数の実際の内容はこれよりも長くなります。

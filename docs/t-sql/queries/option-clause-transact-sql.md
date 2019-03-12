@@ -18,23 +18,23 @@ helpviewer_keywords:
 - clauses [SQL Server], OPTION
 - OPTION clause
 ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29496ec8f2bdb4258dfc92570f33c32fb3a8d60b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 771eaedd3c5bc723422c9fd82a1c979e331eabf0
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708670"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334347"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   クエリ全体で、指定のクエリ ヒントを使用する必要があることを指定します。 複数のクエリ ヒントを使用できますが、各クエリ ヒントを指定できるのは 1 回だけです。 OPTION 句はステートメントで 1 回だけ指定できます。  
   
- この句は SELECT、DELETE、UPDATE、および MERGE ステートメントで指定できます。  
+ この句は SELECT、DELETE、UPDATE、MERGE ステートメントで指定できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

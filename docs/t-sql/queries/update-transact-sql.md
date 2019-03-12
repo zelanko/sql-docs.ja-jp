@@ -35,16 +35,16 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5e69a2ebd97a554620914ffba5ea20c6a08aa21
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: b408c61d265506f19c7c9c5a115381fe6b438a7b
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980328"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334679"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -169,8 +169,8 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
  複合代入演算子です。  
- + = 加算して、割り当てる  
- -= 減算して代入  
+ +=                       加算して、割り当てる  
+ -=                        減算して代入  
  *=                        乗算して代入  
  /=                         除算して代入  
  %=                       剰余を代入  
@@ -320,7 +320,7 @@ GO
   
  ANSI_PADDING を OFF に設定した場合、スペースだけの文字列を除いて、**varchar** 列と **nvarchar** 列に挿入したデータからは後続のスペースがすべて削除されます。 スペースだけで構成される文字列は空の文字列に切り捨てられます。 ANSI_PADDING を ON に設定すると、後続にスペースが挿入されます。 Microsoft SQL Server ODBC ドライバーおよび OLE DB Provider for SQL Server は、接続するたびに自動的に SET ANSI_PADDING を ON にします。 これは、ODBC データ ソースで構成するか、または接続属性やプロパティで設定することができます。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)」を参照してください。  
   
-### <a name="updating-text-ntext-and-image-columns"></a>text 型、ntext 型、および image 型の列を更新する  
+### <a name="updating-text-ntext-and-image-columns"></a>text 型、ntext 型、image 型の列を更新する  
  UPDATE で **text**、**ntext**、**image** 型の列を変更する場合、NULL で列を更新しない限り、列が初期化され、有効なテキスト ポインターが割り当てられます。また、少なくとも 1 つのデータ ページが割り当てられます。  
   
  **text**、**ntext**、**image** 型のデータの大きな部分を置換または変更するには、UPDATE ステートメントではなく [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) または [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) ステートメントを使用してください。  
@@ -334,8 +334,8 @@ GO
  **\.** WRITE (_expression_**,** _@Offset_**,**_@Length_) 句を使用し、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** データ型の部分または完全更新を実行します。 たとえば、**varchar(max)** 列の部分的な更新では、列の最初の 200 文字だけを削除または変更しますが、完全な更新では、列のすべてのデータを削除または変更します。 データベースの復旧モデルに一括ログ復旧モデルまたは単純復旧モデルが設定されている場合、**.** WRITE で新しいデータを挿入または追加する際には、最小限しかログに記録されません。 既存の値を更新するときには、最小限のログ記録は使用されません。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、UPDATE ステートメントで次のいずれかのアクションが発生するとき、部分更新が完全更新に変更されます。  
--   パーティション ビューまたはパーティション テーブルのキー列が変更される場合  
--   複数の行が変更され、定数以外の値に対する一意でないクラスター化インデックスのキーも更新される場合  
+-   パーティション ビューまたはパーティション テーブルのキー列が変更される場合。  
+-   複数の行が変更され、定数以外の値に対する一意でないクラスター化インデックスのキーも更新される場合。  
   
 **.** WRITE 句を使用して NULL 列を更新したり、*column_name* の値を NULL に設定したりすることはできません。  
   
@@ -478,7 +478,7 @@ ID     Value
 |[標準的なテーブル以外の対象オブジェクトを指定する](#TargetObjects)|ビュー • テーブル変数 • テーブルの別名|  
 |[他のテーブルのデータに基づいてデータを更新する](#OtherTables)|FROM|  
 |[リモート テーブルの行を更新する](#RemoteTables)|リンク サーバー • OPENQUERY • OPENDATASOURCE|  
-|[ラージ オブジェクト データ型を更新する](#LOBValues)|.• OPENROWSET を記述します。|  
+|[ラージ オブジェクト データ型を更新する](#LOBValues)|.WRITE • OPENROWSET|  
 |[ユーザー定義型を更新する](#UDTs)|ユーザー定義型|  
 |[ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする](#TableHints)|テーブル ヒント • クエリ ヒント|  
 |[UPDATE ステートメントの結果をキャプチャする](#CaptureResults)|OUTPUT 句|  
@@ -761,7 +761,7 @@ GO
 ###  <a name="RemoteTables"></a> リモート テーブルの行を更新する  
  このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../../t-sql/functions/rowset-functions-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルの行を更新する方法を示します。  
   
-#### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O.  リンク サーバーを使用してリモート テーブルのデータを更新する  
+#### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. リンク サーバーを使用してリモート テーブルのデータを更新する  
  次の例では、リモート サーバー上のテーブルを更新します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 server.catalog.schema.object という形式の 4 部構成のオブジェクト名の一部として、リンク サーバー名 `MyLinkedServer` を指定します。 `@datasrc` には有効なサーバー名を指定する必要があります。  
   
 ```sql  
@@ -794,7 +794,7 @@ UPDATE OPENQUERY (MyLinkedServer, 'SELECT GroupName FROM HumanResources.Departme
 SET GroupName = 'Sales and Marketing';  
 ```  
   
-#### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>Q.  OPENDATASOURCE 関数を使用してリモート テーブルのデータを更新する  
+#### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>Q. OPENDATASOURCE 関数を使用してリモート テーブルのデータを更新する  
  次の例では、[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行セット関数を指定してリモート テーブルの行を更新します。 *server_name* または *server_name\instance_name* という形式を使用して、データ ソースの有効なサーバー名を指定します。 場合によっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを Ad Hoc Distributed Queries 用に構成する必要があります。 詳細については、「[ad hoc distributed queries サーバー構成オプション](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)」を参照してください。  
 
 ```sql
@@ -805,7 +805,7 @@ SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;
 ###  <a name="LOBValues"></a> ラージ オブジェクト データ型を更新する  
  このセクションの例では、ラージ オブジェクト (LOB) データ型で定義された列の値を更新する方法を示します。  
   
-#### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>R.  UPDATE を .WRITE と共に使用し、nvarchar(max) 列のデータを変更する  
+#### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>R. UPDATE を .WRITE と共に使用し、nvarchar(max) 列のデータを変更する  
  次の例では、.WRITE 句を使用して、`Production.Document` テーブルの `DocumentSummary` 型の **nvarchar(max)** 列の値を部分的に更新します。 置換する語、既存データ内で置換される語の開始位置 (オフセット)、置換する文字数 (長さ) を指定することにより、`components` という語が、`features` という語で置換されます。 また、この例では、OUTPUT 句を使用して、`DocumentSummary` 列の前イメージと後イメージを `@MyTableVar` テーブル変数に返します。  
   
 ```sql  
@@ -825,8 +825,8 @@ FROM @MyTableVar;
 GO  
 ```  
   
-#### <a name="s-using-update-with-write-to-add-and-remove-data-in-an-nvarcharmax-column"></a>S.  UPDATE を .WRITE と共に使用し、nvarchar(max) 列のデータを追加および削除する  
- 次の例は、現在、値に NULL が設定されている **nvarchar(max)** 列のデータを追加し、削除します。 します。NULL 列を変更する句を使用することはできません、まず、列は一時的なデータを設定を記述します。 次に .WRITE 句を使用して、このデータを正しいデータで置換します。 その後の例では、列の値の最後にデータを追加し、列からデータを削除 (切り捨て) し、最後に列から部分的なデータを削除します。 SELECT ステートメントは、各 UPDATE ステートメントで生成されたデータ変更を表示します。  
+#### <a name="s-using-update-with-write-to-add-and-remove-data-in-an-nvarcharmax-column"></a>S. UPDATE を .WRITE と共に使用し、nvarchar(max) 列のデータを追加および削除する  
+ 次の例は、現在、値に NULL が設定されている **nvarchar(max)** 列のデータを追加し、削除します。 .WRITE 句を使用して NULL 列を変更することはできないため、まず列に一時的なデータを設定します。 次に .WRITE 句を使用して、このデータを正しいデータで置換します。 その後の例では、列の値の最後にデータを追加し、列からデータを削除 (切り捨て) し、最後に列から部分的なデータを削除します。 SELECT ステートメントは、各 UPDATE ステートメントで生成されたデータ変更を表示します。  
   
 ```sql  
 USE AdventureWorks2012;  

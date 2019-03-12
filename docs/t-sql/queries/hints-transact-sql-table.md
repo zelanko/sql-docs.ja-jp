@@ -34,15 +34,15 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b866f40fddcd5fa12082c296036492ec894d2989
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: be67801f6f386bd4d63a5edc3459820075628864
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306269"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334779"
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>引数  
-WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
+WITH **(** \<table_hint> **)**  **[,]**...*n* ]  
 いくつかの例外を除き、テーブル ヒントは、FROM 句で WITH キーワードを使用して指定した場合にのみサポートされます。 また、テーブル ヒントはかっこを使用して指定する必要があります。  
   
 > [!IMPORTANT]  
