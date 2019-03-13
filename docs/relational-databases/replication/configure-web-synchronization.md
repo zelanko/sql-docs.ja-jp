@@ -87,9 +87,9 @@ ms.locfileid: "54135582"
   
  **Web 同期用に IIS を構成するには**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][ ] :[Web 同期用の IIS の構成](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期用の IIS の構成](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][ ] :[Web 同期用の IIS 7 の構成](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期用の IIS 7 の構成](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>Web ガーデンの作成  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーでは、スレッドごとに同時に 2 つの同期処理がサポートされます。 この制限を超えると、レプリケーション リスナーが応答しなくなる可能性があります。 replisapi.dll に割り当てられるスレッドの数は、アプリケーション プールの "ワーカー プロセスの最大数" プロパティで決まります。 既定では、このプロパティは 1 に設定されます。  

@@ -42,7 +42,7 @@ ms.locfileid: "54135612"
 
 スナップショット フォルダーの既定の場所を表示または変更するには、「  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][ ] :[スナップショット オプションの変更](../../relational-databases/replication/snapshot-options.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[スナップショット オプションの変更](../../relational-databases/replication/snapshot-options.md)  
   
 -   レプリケーション プログラミングおよび RMO プログラミング:[パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)  
 

@@ -68,7 +68,7 @@ ms.locfileid: "54136082"
   
      エージェントを連続的に実行するようにし、高い頻度のスケジュール、たとえば毎分などのスケジュールの作成を避けることで、レプリケーションのパフォーマンスが向上します。これは、エージェントが開始および停止する必要がなくなるからです。 ディストリビューション エージェントを連続的に実行するように設定すると、トポロジ内で接続しているその他のサーバーに、短い待機時間で変更が反映されます。 詳細については、以下をご覧ください。  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)][ ] :[同期スケジュールの指定](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[同期スケジュールの指定](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>ディストリビューション エージェントおよびログ リーダー エージェントのパラメーター  
 トラフィックが多い OLTP システムでは、ログ リーダーとディストリビューション エージェントのスループットを増やすため、エージェント プロファイルのパラメーターが調節されることがよくあります。 

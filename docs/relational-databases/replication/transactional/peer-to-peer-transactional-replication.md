@@ -159,7 +159,7 @@ ms.locfileid: "54129312"
   
 ||SQL Server 2005 ピアのみ、または SQL Server 2005 ピアと SQL Server 2008 以降のピアの組み合わせ|SQL Server 2005 ピアのみ、または SQL Server 2005 ピアと SQL Server 2008 以降のピアの組み合わせ|SQL2008 以降のピア|SQL2008 以降のピア|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
-|トポロジへのノードの追加|完全なトポロジで 2 つのノード: 休止処理は必要ありません。 `sync_type = 'initialize with backup'`を使用します。|2 つを超えるノード: 休止処理が必要です。|`sync_type = 'replication support only'`[ ] :休止処理が必要です。|`sync_type = 'initialize with backup'` および `'initialize from lsn'`:休止処理は必要ありません。|  
+|トポロジへのノードの追加|完全なトポロジで 2 つのノード: 休止処理は必要ありません。 `sync_type = 'initialize with backup'`を使用します。|2 つを超えるノード: 休止処理が必要です。|`sync_type = 'replication support only'`:休止処理が必要です。|`sync_type = 'initialize with backup'` および `'initialize from lsn'`:休止処理は必要ありません。|  
   
  トポロジのスキーマを変更する場合 (アーティクルの追加または削除)、休止処理が必要です。 詳細については、「[Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)」 (ピア ツー ピア トポロジの管理 &#40;レプリケーション Transact-SQL プログラミング&#41;) を参照してください。  
   
