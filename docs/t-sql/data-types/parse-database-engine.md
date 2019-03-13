@@ -47,7 +47,7 @@ static SqlHierarchyId Parse ( SqlString input )
   
 ## <a name="arguments"></a>引数  
 *input*  
-[!INCLUDE[tsql](../../includes/tsql-md.md)][ ] :変換対象となる文字データ型の値。
+[!INCLUDE[tsql](../../includes/tsql-md.md)]:変換対象となる文字データ型の値。
   
 CLR:評価される String 値。
   

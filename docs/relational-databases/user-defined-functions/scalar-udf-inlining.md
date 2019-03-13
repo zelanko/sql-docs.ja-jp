@@ -142,10 +142,10 @@ UDF 内のロジックの複雑さによっては、結果として得られる�
 
 - UDF が、次のコンストラクトを使用して書かれている。
     - `DECLARE`、`SET`:変数の宣言と代入。
-    - `SELECT`[ ] :単一/複数の変数代入を含む SQL クエリ<sup>1</sup>。
+    - `SELECT`:単一/複数の変数代入を含む SQL クエリ<sup>1</sup>。
     - `IF`/`ELSE`:任意の入れ子レベルでの分岐。
-    - `RETURN`[ ] :1 つまたは複数の return ステートメント。
-    - `UDF`[ ] :入れ子/再帰関数呼び出し<sup>2</sup>。
+    - `RETURN`:1 つまたは複数の return ステートメント。
+    - `UDF`:入れ子/再帰関数呼び出し<sup>2</sup>。
     - その他:`EXISTS`、`ISNULL` などの関係演算。
 - UDF で、時間に依存する組み込み関数 (`GETDATE()` など) または副作用のある組み込み関数<sup>3</sup> (`NEWSEQUENTIALID()` など) が呼び出されていない。
 - UDF で、`EXECUTE AS CALLER` 句が使用されている (`EXECUTE AS` 句が指定されていない場合の既定の動作)。

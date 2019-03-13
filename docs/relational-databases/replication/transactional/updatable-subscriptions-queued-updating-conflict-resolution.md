@@ -56,13 +56,13 @@ ms.locfileid: "54125533"
   
  **キュー更新の競合解決方法を設定するには**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)][ ] :[キュー更新の競合解決オプションの設定 (SQL Server Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[キュー更新の競合解決オプションの設定 (SQL Server Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 -   レプリケーション Transact-SQL プログラミング: [トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **データの競合を表示するには**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)][ ] :[トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>パブリッシャー優先  
  競合解決方法がパブリッシャー優先の場合は、トランザクションの一貫性はパブリッシャーのデータに基づいて維持されます。 競合を起こしたトランザクションは、それを開始したサブスクライバーにロールバックされます。  
