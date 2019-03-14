@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:書式文字列 (レポート ビルダー) | Microsoft Docs
+title: 'チュートリアル: 書式文字列 (レポート ビルダー) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddc7aefa65f87e5647186358e0f7ae0019964ff0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.openlocfilehash: 42d55cf53d282b2c092769cf4435fd240ba0cbce
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289644"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579342"
 ---
-# <a name="tutorial-format-text-report-builder"></a>チュートリアル:テキストを書式設定する (レポート ビルダー)
+# <a name="tutorial-format-text-report-builder"></a>チュートリアル: テキストの書式設定 (レポート ビルダー)
 
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、さまざまなテキストの書式設定方法を実習します。 さまざまな書式を実験できます。 
 
@@ -25,7 +25,7 @@ ms.locfileid: "56289644"
   
 途中の手順で一度わざと正しくない方法を試し、それがなぜ問題なのかを確認します。 その後、必要な効果が得られるように問題を修正します。  
     
-このチュートリアルの推定所要時間:20 分  
+このチュートリアルの推定所要時間 : 20 分  
   
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
@@ -50,7 +50,7 @@ ms.locfileid: "56289644"
 
     **[レポート データ]** ペインが表示されていない場合は、 **[表示]** タブの **[レポート データ]** をオンにします。
   
-2.  **[名前]** ボックスに、「**TextDataSource**」と入力します。  
+2.  **[名前]** ボックスに「 **TextDataSource**」と入力します。  
   
 3.  **[レポートに埋め込まれた接続を使用する]** をクリックします。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "56289644"
   
 2.  データ ソースが **TextDataSource**であることを確認します。  
   
-3.  **[名前]** ボックスに、「**TextDataset**」と入力します。  
+3.  **[名前]** ボックスに「 **TextDataset**」と入力します。  
   
 4.  クエリの種類に **[テキスト]** が選択されていることを確認してから、 **[クエリ デザイナー]** をクリックします。  
   
@@ -355,7 +355,7 @@ ms.locfileid: "56289644"
 
 ## <a name="next-steps"></a>Next Steps
 
-レポート ビルダーでは、さまざまな方法でテキストの書式を設定できます。 「[チュートリアル: 自由形式のレポートの作成](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)」にはその他の例が紹介されています。  
+レポート ビルダーでは、さまざまな方法でテキストの書式を設定できます。 詳細な例については、「[チュートリアル: 自由形式のレポートの作成](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)」を参照してください。  
 
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 
 [レポート アイテムの書式設定](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

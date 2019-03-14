@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 の新機能 | Microsoft Docs
-ms.date: 02/28/2019
-ms.prod: sql-server-2018
+ms.date: 03/01/2019
+ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
 ms.topic: article
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fdc1191b5f0ef7d475e23bbcb56081821d6882b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 8f7302384bbf264061c73b79a919855aa762994f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334819"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579772"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -189,7 +189,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 #### <a name="static-data-masking-vs-dynamic-data-masking"></a>静的データ マスクと動的データ マスクの比較
 
-データ マスクとは、データベースに対してマスクを適用することで機密情報を非表示にすると共に、機密情報を新しいデータまたはスクラブ データに置換するプロセスです。 Microsoft では 2 つのマスク オプションを提供しています。静的データ マスクと動的データ マスクです。 動的データ マスクは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] で導入されています。 次の表で、この 2 つのソリューションを比較します。
+データ マスクとは、データベースに対してマスクを適用することで機密情報を非表示にすると共に、機密情報を新しいデータまたはスクラブ データに置換するプロセスです。 Microsoft では 2 つのマスク オプションを提供しています。静的データ マスクと動的データ マスクです。 動的データ マスクは、[!INCLUDE[ssSQL16](../includes/sssql16-md.md)] で導入されています。 次の表で、この 2 つのソリューションを比較します。
 
 |静的データ マスク |動的なデータ マスキング|
 |:----|:----|
@@ -463,7 +463,7 @@ FROM sys.dm_exec_requests AS d
   - SQL Server ビッグ データ クラスターを使用するシナリオをサポートします。 (CTP 2.0)
   
   > [!TIP]
-  > Azure Data Studio の最新の機能向上については、「[Azure Data Studio のリリース ノート](../azure-data-studio/release-notes.md)」をご覧ください。
+  > Azure Data Studio の最新の機能向上については、「[Azure Data Studio のリリース ノート](../azure-data-studio/release-notes-azure-data-studio.md)」をご覧ください。
 
 - [**SQL Server Management Studio (SSMS) 18.0 (プレビュー)**](../ssms/sql-server-management-studio-ssms.md): [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]をサポートします。
 

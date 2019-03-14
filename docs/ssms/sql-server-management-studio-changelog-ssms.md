@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d953127249bb6f82626dfff647b15dc40aba859
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 048e3b88ff45147e30121c3b754527b71d30ea7b
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334839"
+ms.locfileid: "57401934"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "57334839"
   - ダウンロード サイズの縮小
     - バンドルの現在のサイズは SSMS 17.x の半分未満です (400 MB 以下)。 このサイズは、IS コンポーネントが SSMS に再び追加されると最終的に少し大きくなりますが、従来ほど大きくなりません。
   - SSMS は新しい VS 2017 Isolated Shell に基づいています
-    - つまり、最新のシェルです (VS 2107 15.6.4 を選択しました)。 新しいシェルで、SSMS と Visual Studio の両方で行われたアクセシビリティに関するすべての修正のロックが解除されます。
+    - つまり、最新のシェルです (VS 2017 15.6.4 を選択しました)。 新しいシェルで、SSMS と Visual Studio の両方で行われたアクセシビリティに関するすべての修正のロックが解除されます。
   - SSMS アクセシビリティの機能強化
     - すべてのツール (SSMS、DTA、Profiler) のアクセシビリティの問題を解決するためにさまざまな作業が行われました
   - SSMS はカスタム フォルダーにインストールできます
