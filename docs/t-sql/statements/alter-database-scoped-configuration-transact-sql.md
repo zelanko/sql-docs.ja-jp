@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d8d0a557640795462f4da21345f07df9db96be97
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 5ac0dbfdc3a4acd94a7892372ddb336a3bb70642
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421319"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579681"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -223,31 +223,31 @@ DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-複数ステートメントのテーブル値関数のインターリーブ実行は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で有効または無効にできます。 インターリーブ実行は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のアダプティブ クエリ処理の一部の機能です。 詳細については、[アダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)に関するページをご覧ください。
+複数ステートメントのテーブル値関数のインターリーブ実行は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で有効または無効にできます。 インターリーブ実行は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のアダプティブ クエリ処理の一部の機能です。 詳細については、[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)に関するページをご覧ください
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-適応結合は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で有効または無効にできます。 適応型結合は、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] で導入された[アダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)の一部の機能です。
+適応結合は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で有効または無効にできます。 適応型結合は、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です。
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
 
-行モード メモリ許可フィードバックは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 行モード メモリ許可フィードバックは、SQL Server 2017 で導入された[アダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)の一部の機能です (行モードは SQL Server 2019 と Azure SQL Database でサポートされます)。
+行モード メモリ許可フィードバックは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 行モード メモリ許可フィードバックは、SQL Server 2017 で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です (行モードは SQL Server 2019 と Azure SQL Database でサポートされます)。
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-バッチ モード メモリ許可フィードバックは、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モード メモリ許可フィードバックは、SQL Server 2017 で導入された[アダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)の一部の機能です。
+バッチ モード メモリ許可フィードバックは、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モード メモリ許可フィードバックは、SQL Server 2017 で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です。
 
 BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
 
 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-バッチ モードの適応結合は、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モードの適応結合は、SQL Server 2017 で導入された[アダプティブ クエリの処理](../../relational-databases/performance/adaptive-query-processing.md)の一部の機能です。
+バッチ モードの適応結合は、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モードの適応結合は、SQL Server 2017 で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です。
 
 BATCH_MODE_ON_ROWSTORE = { ON | OFF}
 

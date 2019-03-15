@@ -17,12 +17,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ab315e41607d528a1d34be6e61a6344350eb240
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 69efd860fe91080960ffb12995bea675e4686878
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215259"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579669"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループの概要 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "53215259"
  Windows の HA のために [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を配置するには、Windows Server フェールオーバー クラスター (WSFC) が必要です。 指定された可用性グループの各可用性レプリカは、同一の WSFC の異なるノード上に存在する必要があります。 唯一の例外は、別の WSFC クラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。 
 
  >[!NOTE]
- >Linux の可用性グループの詳細については、「[Always On availability group for SQL Server on Linux](../../../linux/sql-server-linux-availability-group-overview.md)」 (Linux の SQL Server の Always On 可用性グループ) を参照してください。 
+ >Linux の可用性グループについては、[SQL Server on Linux の Always On 可用性グループ](../../../linux/sql-server-linux-availability-group-overview.md)に関するページを参照してください。 
 
  HA 構成では、作成されたすべての可用性グループに対してクラスター ロールが作成されます。 WSFC クラスターは、このロールを監視し、プライマリ レプリカの正常性を評価します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のクォーラムは、クラスター ノードが可用性レプリカをホストしているかどうかに関係なく、WSFC クラスター内のすべてのノードに基づきます。 データベース ミラーリングとは異なり、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]には監視ロールはありません。  
   

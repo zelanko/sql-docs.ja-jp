@@ -1,7 +1,7 @@
 ---
 title: DBCC CHECKIDENT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/10/2018
+ms.date: 03/07/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - identity values [SQL Server], reseeding
 - reporting current identity values
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: c59313042ca91b1cf192ab140eb372ca7a0cf5c1
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 89545e2bb480dc038219a3724f500c43d4b01319
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800996"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736779"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -77,9 +77,9 @@ DBCC CHECKIDENT
   
 |DBCC CHECKIDENT コマンド|ID の修正または加えられた修正|  
 |-----------------------------|---------------------------------------------|  
-|DBCC CHECKIDENT ( *table_name*, NORESEED )|現在の ID 値がリセットされていません。 DBCC CHECKIDENT は、ID 列の現在の ID 値と現在の最大値を返します。 2 つの値が異なる場合は、エラーが発生しないよう、または連続値の一部が欠落しないように、ID 値をリセットする必要があります。|  
-|DBCC CHECKIDENT ( *table_name* )<br /><br /> 内の複数の<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|テーブルの現在の ID 値が、ID 列に格納されている最大の ID 値より小さい場合、ID 列の最大値を使用してリセットされます。 後の「例外」のセクションを参照してください。|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|現在の ID 値は *new_reseed_value* に設定されます。 テーブルが作成された後、そのテーブルに行が挿入されていない、または TRUNCATE TABLE ステートメントを使用してすべての行が削除された場合、DBCC CHECKIDENT を実行した後に挿入された最初の行は ID として *new_reseed_value* を使用します。<br /><br /> 行がテーブルに存在する場合、*new_reseed_value* と[現在の増分](../../t-sql/functions/ident-incr-transact-sql.md)値を使用して、次の行が挿入されます。 バージョン [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以前では、挿入された次の行で *new_reseed_value* + [現在のインクリメント](../../t-sql/functions/ident-incr-transact-sql.md)の値を使用します。<br /><br /> テーブルが空でない場合、ID 値に ID 列の最大値より小さな値を設定すると、次の状況のいずれかが発生する可能性があります。<br /><br /> ‐ID 列に PRIMARY KEY 制約または UNIQUE 制約がある場合、テーブルに対する後続の挿入操作でエラー メッセージ 2627 が生成されます。 このエラーは、生成される ID 値と既存の値が競合するためです。<br /><br /> ‐PRIMARY KEY 制約または UNIQUE 制約がない場合、後続の挿入操作では ID 値が重複されます。|  
+|DBCC CHECKIDENT ( *table_name*, NORESEED )|現在の ID 値はリセットされません。 DBCC CHECKIDENT は、ID 列の現在の ID 値と現在の最大値を返します。 2 つの値が異なる場合は、エラーが発生しないよう、または連続値の一部が欠落しないように、ID 値をリセットする必要があります。|  
+|DBCC CHECKIDENT ( *table_name* )<br /><br /> 内の複数の<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|テーブルの現在の ID 値が、ID 列に格納されている最大の ID 値より小さい場合、テーブルの現在の ID 値は ID 列の最大値にリセットされます。 後の「例外」のセクションを参照してください。|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|現在の ID 値は *new_reseed_value* に設定されます。 テーブルが作成された後、そのテーブルに行が挿入されていない、または TRUNCATE TABLE ステートメントを使用してすべての行が削除された場合、DBCC CHECKIDENT を実行した後に挿入された最初の行が ID として *new_reseed_value* を使用します。<br /><br /> テーブルに行が存在する場合、または DELETE ステートメントを使用してすべての行が削除された場合は、挿入される次の行に *new_reseed_value* + [現在の増分](../../t-sql/functions/ident-incr-transact-sql.md)の値が使用されます。<br /><br /> テーブルが空でない場合、ID 値に ID 列の最大値より小さな値を設定すると、次の状況のいずれかが発生する可能性があります。<br /><br /> ID 列に PRIMARY KEY 制約または UNIQUE 制約が設定されている場合、生成される ID 値と既存の値との競合が原因で、テーブルに対する後続の挿入操作でエラー メッセージ 2627 が生成されます。<br /><br /> PRIMARY KEY 制約または UNIQUE 制約が設定されていない場合、後続の挿入操作では重複した ID 値が挿入されます。|  
   
 ## <a name="exceptions"></a>例外  
  次の表に、DBCC CHECKIDENT で現在の ID 値が自動的にリセットされないときの条件と、ID 値をリセットする方法を示します。  
@@ -136,8 +136,8 @@ GO
 ```  
   
 ### <a name="c-forcing-the-current-identity-value-to-a-new-value"></a>C. 現在の ID 値を強制的に新しい値に設定する  
- 次の例では、 `AddressType` テーブルの `AddressTypeID` 列の現在の ID 値を強制的に 10 に設定します。 テーブルには既に行があるため、次に挿入される行では値に 11 が使用されます。つまり、列の値に対して定義されている新しい現在の増分値に 1 を加えた値です。  
-  
+ 次の例では、 `AddressType` テーブルの `AddressTypeID` 列の現在の ID 値を強制的に 10 に設定します。 テーブルには既存の行があるため、挿入される次の行には値として 11 が使用されます。列に定義された新しい現在の ID 値に 1 (列の増分値) を加えた値です。  
+
 ```  
 USE AdventureWorks2012;  
 GO  
@@ -167,4 +167,5 @@ GO
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
 [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)  
 [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
+
   

@@ -25,12 +25,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 91cc75f835320b6cf15c20cbb7d72101dc2868df
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e9fba374be6a12a440138e3fa6a70975c5d3fdd7
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327783"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556164"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ WITH IDENTITY = 'identity_name'
   
 ## <a name="arguments"></a>引数  
  *credential_name*  
- 作成する資格情報の名前を指定します。 *credential_name* はシャープ (#) 記号で始めることはできません。 ## で始まる資格情報はシステム資格情報です。  共有アクセス署名 (SAS) を使用する場合、この名前は、コンテナーのパスを一致する必要があります https で起動し、スラッシュを含めることはできません。 D は次の例を参照してください。  
+ 作成する資格情報の名前を指定します。 *credential_name* はシャープ (#) 記号で始めることはできません。 システム資格情報は ## で始まります。  共有アクセス署名 (SAS) を使用する場合、この名前はコンテナー パスと一致し、https で始まる必要があります。スラッシュを含めることはできません。 後述の D の例を参照してください。  
   
  IDENTITY **='**_identity\_name_**'**  
- サーバーの外部に接続するときに使用するアカウントの名前を指定します。 Azure Key Vault へのアクセスに資格情報を使うときは、**IDENTITY** はキー コンテナーの名前です。 後半の例 C を参照してください。 資格情報で Shared Access Signature (SAS) を使っているときは、**IDENTITY** は *SHARED ACCESS SIGNATURE* です。 D は次の例を参照してください。  
+ サーバーの外部に接続するときに使用するアカウントの名前を指定します。 Azure Key Vault へのアクセスに資格情報を使うときは、**IDENTITY** はキー コンテナーの名前です。 後述の C の例を参照してください。 資格情報で Shared Access Signature (SAS) を使っているときは、**IDENTITY** は *SHARED ACCESS SIGNATURE* です。 後述の D の例を参照してください。  
  
 > [!IMPORTANT]
 > Azure SQL Database でサポートされるのは、Azure Key Vault と Shared Access Signature の ID のみです。 Windows ユーザー ID はサポートされません。
@@ -65,14 +65,14 @@ WITH IDENTITY = 'identity_name'
  SECRET **='**_secret_**'**  
  送信の認証に必要なシークレットを指定します。  
   
- Azure Key Vault へのアクセスに資格情報を使うときは、**CREATE CREDENTIAL** の **SECRET** 引数に、Azure Active Directory の**サービス プリンシパル**の \<*クライアント ID*> (ハイフンなし) と \<*シークレット*> を間のスペースなしで渡す必要があります。 後半の例 C を参照してください。 資格情報が Shared Access Signature を使っている場合は、**SECRET** は Shared Access Signature トークンです。 D は次の例を参照してください。  Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成する方法について詳しくは、「[レッスン 1:Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)」をご覧ください。  
+ Azure Key Vault へのアクセスに資格情報を使うときは、**CREATE CREDENTIAL** の **SECRET** 引数に、Azure Active Directory の**サービス プリンシパル**の \<*クライアント ID*> (ハイフンなし) と \<*シークレット*> を間のスペースなしで渡す必要があります。 後述の C の例を参照してください。 資格情報が Shared Access Signature を使っている場合は、**SECRET** は Shared Access Signature トークンです。 後述の D の例を参照してください。  Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成する方法について詳しくは、「[レッスン 1:Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)」をご覧ください。  
   
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
  "*拡張キー管理プロバイダー (EKM)*" の名前を指定します。 キーの管理について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
   
 ## <a name="remarks"></a>Remarks  
 
- IDENTITY が Windows ユーザーの場合、このシークレットにはパスワードを指定できます。 シークレットはサービス マスター キーを使用して暗号化されます。 サービス マスター キーが再生成された場合、シークレットは新しいサービス マスター キーを使用して再度暗号化されます。  
+ IDENTITY が Windows ユーザーの場合、このシークレットはパスワードにすることができます。 シークレットはサービス マスター キーを使用して暗号化されます。 サービス マスター キーが再生成された場合、シークレットは新しいサービス マスター キーを使用して再度暗号化されます。  
   
  資格情報を作成した後、[CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) または [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) を使って、この資格情報を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにマップすることができます。 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインは 1 つの資格情報だけにマップできますが、1 つの資格情報は複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにマップできます。 詳しくは、「[資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)」をご覧ください。 サーバー レベルの資格情報は、ログインにのみマップでき、データベース ユーザーにはマップできません。 
   
@@ -87,7 +87,7 @@ WITH IDENTITY = 'identity_name'
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-basic-example"></a>A. 基本の例  
+### <a name="a-basic-example"></a>A. 基本的な例  
  次の例では、資格情報 `AlterEgo` を作成します。 この資格情報には Windows ユーザー `Mary5` とパスワードが含まれます。  
   
 ```  
@@ -115,7 +115,7 @@ WITH CREDENTIAL = AlterEgo;
 GO  
 ```  
   
-### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>C. Azure のキー コンテナーを使用して EKM の資格情報の作成  
+### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>C. Azure キー コンテナーを使用する EKM の資格情報の作成  
  次の例では、**SQL Server コネクタ for Microsoft Azure Key Vault** を使って Azure Key Vault にアクセスするときに使う、[!INCLUDE[ssDE](../../includes/ssde-md.md)]用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コネクタの完全な使用例については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」をご覧ください。  
   
 > [!IMPORTANT]  
@@ -143,13 +143,15 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;');  
 ```  
   
-### <a name="d-creating-a-credential-using-a-sas-token"></a>D. SAS トークンを使用して資格情報の作成  
+### <a name="d-creating-a-credential-using-a-sas-token"></a>D. SAS トークンを使用する資格情報の作成  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで。  
   
  次の例では、SAS トークンを使用して共有アクセス署名資格情報を作成します。  Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成してから、Shared Access Signature を使って資格情報を作成するチュートリアルについては、「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
   
 > [!IMPORTANT]  
 >  **CREDENTIAL NAME** 引数では、名前がコンテナーのパス (https で始まり、末尾のスラッシュを含まないもの) と一致する必要があります。 **IDENTITY** 引数には、名前 *SHARED ACCESS SIGNATURE* が必要です。 **SECRET** 引数には、Shared Access Signature トークンが必要です。  
+>
+>  **SHARED ACCESS SIGNATURE シークレット**の先頭を **?** にすることはできません。
   
 ```  
 USE master  

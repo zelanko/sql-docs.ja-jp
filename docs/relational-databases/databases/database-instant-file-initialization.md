@@ -1,7 +1,7 @@
 ---
 title: データベースのファイルの瞬時初期化 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 03/07/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e365ef2eed7dcd3f20dd5a9ad9a94627191c4df9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9b75512b0b0e4f4975074bd35f797f526d25ffc2
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204921"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683602"
 ---
 # <a name="database-file-initialization"></a>データベース ファイルの初期化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +52,17 @@ ms.locfileid: "53204921"
   
 アカウントに `Perform volume maintenance tasks` 権限を許可する方法。  
   
-1.  バックアップ ファイルを作成するコンピューター上で、 **ローカル セキュリティ ポリシー** アプリケーション (`secpol.msc`) を開きます。  
+1.  データ ファイルを作成するコンピューター上で、**ローカル セキュリティ ポリシー** アプリケーション (`secpol.msc`) を開きます。  
   
 2.  左側のペインで **[ローカル ポリシー]** を展開し、 **[ユーザー権利の割り当て]** をクリックします。  
   
 3.  右側のペインで、 **[ボリュームの保守タスクを実行]** をダブルクリックします。  
   
-4.  **[ユーザーまたはグループの追加]** をクリックし、バックアップに使用される任意のユーザー アカウントを追加します。  
+4.  **[ユーザーまたはグループの追加]** をクリックして、SQL Server サービスを実行するアカウントを追加します。  
   
 5.  **[適用]** をクリックし、 **[ローカル セキュリティ ポリシー]** ダイアログ ボックスをすべて閉じます。  
+
+1. SQL Server サービスを再起動します。
 
 > [!NOTE]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、インストール時、セットアップ中にサービス アカウントにこのアクセス許可を付与できます。 [コマンド プロンプト インストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)を利用する場合、/SQLSVCINSTANTFILEINIT 引数を追加するか、[インストール ウィザード](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)で *[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]* ボックスを選択します。
@@ -71,15 +73,11 @@ ms.locfileid: "53204921"
 ## <a name="remarks"></a>Remarks
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントに *SE_MANAGE_VOLUME_NAME* が与えられる場合、開始時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに次のような情報メッセージが記録されます。 
 
-```
-Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントに *SE_MANAGE_VOLUME_NAME* が与えられて**いない**場合、開始時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに次のような情報メッセージが記録されます。 
 
-```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 **適用対象:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 以降、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 

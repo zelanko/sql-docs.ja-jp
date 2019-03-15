@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356022"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579392"
 ---
 # <a name="subqueries-sql-server"></a>サブクエリ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -490,7 +490,7 @@ GO
 このステートメントは結合に変換できません。 非等価結合はこれとよく似ていますが、意味は異なります。つまり、自転車 (完成品) 以外のサブカテゴリに属する製品名が検索されます。      
 
 ### <a name="upsert"></a> UPDATE、DELETE、および INSERT ステートメントでのサブクエリ
-サブクエリは、`UPDATE`、`DELETE`、`INSERT`、`SELECT ` の各データ操作言語 (DML) ステートメントで入れ子にできます。    
+サブクエリは、`UPDATE`、`DELETE`、`INSERT`、`SELECT` の各データ操作言語 (DML) ステートメントで入れ子にできます。    
 
 次の例では、*ListPrice* テーブルの *Production.Product* 列の値が 2 倍になります。 `WHERE` 句のサブクエリでは *Purchasing.ProductVendor* テーブルを参照して、*Product* テーブルで更新される行を *BusinessEntity* 1540 の行だけに制限しています。
 

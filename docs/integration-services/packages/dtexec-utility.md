@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e213eb323de92abf048bdd94e8e2463f42f5cb3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cf64e248d8fb9cb727114521cac9b6444fc1f710
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591426"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401884"
 ---
 # <a name="dtexec-utility"></a>dtexec ユーティリティ
   **dtexec** コマンド プロンプト ユーティリティは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの構成と実行に使用します。 **dtexec** ユーティリティを使用すると、パラメーター、接続、プロパティ、変数、ログ記録、進行状況インジケーターなど、パッケージの構成と実行に関するすべての機能にアクセスできます。 また **dtexec** ユーティリティでは、さまざまな変換元 ( [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー、.ispac プロジェクト ファイル、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システム) からパッケージを読み込むことができます。  
@@ -38,6 +38,8 @@ ms.locfileid: "53591426"
 -   [構文規則](#syntaxRules)  
   
 -   [xp_cmdshell での dtexec の使用](#cmdshell)  
+
+-   [Bash からの dtexec の使用](#bash)
   
 -   [構文](#syntax)  
   
@@ -139,7 +141,15 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > **重要!!** [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を新しくインストールした場合、 **xp_cmdshell** オプションは既定により無効になっています。 オプションを有効にするには、 **sp_configure** システム ストアド プロシージャを実行します。 詳細については、「 [xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  
-  
+
+##  <a name="bash"></a> Bash からの dtexec の使用
+
+**Bash** シェルは、Linux では一般的なシェルです。 Windows でも使用できます。 Bash プロンプトから dtexec を実行できます。 Bash ではセミコロン (`;`) がコマンド区切り演算子となることに注意してください。 これは特に、`/Conn[ection]`、`/Par[arameter]` または '`/Set` オプションを使用してパッケージに値を渡すときに重要です。セミコロンを使用して、名前と、指定された項目の値を区切るためです。 次の例では、Bash を使って値をパッケージに渡すときに、セミコロンとその他の項目を正しくエスケープする方法を示します。
+
+```bash
+dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
+```
+
 ##  <a name="syntax"></a> 構文  
   
 ```  
@@ -293,13 +303,13 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID: {59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
-    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
+    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)][ ] :  
   
         -   ProgID:DTS.LogProviderSQLProfiler.1  
   
         -   ClassID: {5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ ] :  
   
         -   ProgID:DTS.LogProviderSQLServer.1  
   

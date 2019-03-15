@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 71e394c613f40b56fee354101410aa422d918e86
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 52628b3742574bc4e3079750526a5424d65012fe
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464788"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579670"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -162,7 +162,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  「例」セクションの「[パーティション テーブルの作成](#PartitionedTable)」を参照してください。
 
 ### <a name="DataTypes"></a> データ型
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、最も一般的に使用されるデータ型をサポートしています。 以下に、サポートされるデータ型を一覧し、その詳細説明および格納バイトを示します。 データ型とその使用方法をよく理解するには、「[SQL Data Warehouse でのテーブルのデータ型の定義に関するガイダンス](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)」を参照してください。
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、最も一般的に使用されるデータ型をサポートしています。 以下に、サポートされるデータ型を一覧し、その詳細説明および格納バイトを示します。 データ型とその使用方法をよく理解するには、[SQL Data Warehouse でのテーブルのデータ型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)に関するページを参照してください。
 
 データ型変換のテーブルについては、「[CAST および CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/)」の「暗黙的な変換」セクションを参照してください。
 

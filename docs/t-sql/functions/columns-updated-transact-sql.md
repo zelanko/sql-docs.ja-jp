@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 02cc6ae014dc52df01e08c13b9610be5ffa50c6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720320"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736764"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED` は、左から右に順序付けられた 1 つまたは複数のバイトを返します。 各バイトの右端のビットは、最下位ビットです。 左端のバイトの右端のビットがテーブル内の最初のテーブル列を表し、右から 2 番目のビットは 2 番目の列を、それ以下のビットも同様の順で列を表します。 トリガーが作成されるテーブルに列が 9 個以上ある場合、`COLUMNS_UPDATED` は複数のバイトを返します。最下位バイトが左端になります。 INSERT 動作では、列には明示的な値または暗黙的な (NULL) 値が挿入されるので、`COLUMNS_UPDATED` は、すべての列に対して TRUE を返します。
   
-特定の列に対する更新または挿入をテストするには、テスト対象列のビットごとの演算子および整数ビットマスクを使用した構文に従います。 たとえば、テーブル **t1** に、列 **C1**、**C2**、**C3**、**C4**、および **C5** があるとします。 列 **C2**、**C3**、および **C4** がすべて正常に更新されている (テーブル **t1** に UPDATE トリガーがある場合) かどうかを検証するには、**& 14** を使用した構文に従います。 列 **C2** が更新されているかどうかだけをテストするには、**& 2** を指定します。 実際の例については、[例 A](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) と[例 B](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#b-using-columns_updated-to-test-more-than-eight-columns) を参照してください。
+特定の列に対する更新または挿入をテストするには、テスト対象列のビットごとの演算子および整数ビットマスクを使用した構文に従います。 たとえば、テーブル **t1** に、列 **C1**、**C2**、**C3**、**C4**、および **C5** があるとします。 列 **C2**、**C3**、および **C4** がすべて正常に更新されている (テーブル **t1** に UPDATE トリガーがある場合) かどうかを検証するには、**& 14** を使用した構文に従います。 列 **C2** が更新されているかどうかだけをテストするには、**& 2** を指定します。 実際の例については、[例 A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) と[例 B](#b-using-columns_updated-to-test-more-than-eight-columns) を参照してください。
   
 `COLUMNS_UPDATED` は、[!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT または UPDATE トリガーの内部のどこでも使用できます。
   

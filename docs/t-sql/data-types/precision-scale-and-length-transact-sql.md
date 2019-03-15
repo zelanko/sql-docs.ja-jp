@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a5023afdfe6b1ebe4267c0bff9741f6651e4bde
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a27c434bb10b863459b138f98b9974b4d25794c3
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020423"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401794"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Precision、scale、および長さ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ precision は、数値全体の桁数です。 scale は、数値の中で小数
 -   両方の式が **decimal** である。  
 -   一方の式が **decimal** で、もう一方が **decimal** よりも優先順位の低いデータ型である。  
   
-オペランド式は、precision が p1 で scale が s1 の式 e1 と、precision が p2 で scale が s2 の式 e2 で表されます。 **decimal** でない任意の式の precision と scale は、その式のデータ型のものです。
+オペランド式は、precision が p1 で scale が s1 の式 e1 と、precision が p2 で scale が s2 の式 e2 で表されます。 **decimal** でない任意の式の precision と scale は、その式のデータ型に定義された precision と scale です。 関数 max(a,b) は、"a" と "b" のうち、大きいほうの値を取ることを意味します。 同様に、min(a,b) は、"b" と "a"のうち、小さいほうの値を取ることを示しています。
   
 |演算|結果の precision|結果の scale *|  
 |---|---|---|

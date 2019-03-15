@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 1 : "既定でオフ" ポリシーの作成と適用 | Microsoft Docs'
+title: レッスン 1:"既定でオフ" ポリシーの作成と適用 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 678f9da12655cc733dcdf95aca5f61e5aa1cd45e
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158624"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579536"
 ---
-# <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>レッスン 1 : "既定でオフ" ポリシーの作成と適用
+# <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>レッスン 1:"既定でオフ" ポリシーの作成と適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 ポリシー ベースの管理ポリシーを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の複数のインスタンス、複数のインスタンス オブジェクト、1 つのサーバー インスタンス、複数のデータベース、または複数のデータベース オブジェクトを管理できます。 データベース管理者は、特定のサーバーでデータベース メールが有効化されないようにすることができます。 このレッスンでは、このようなサーバー オプションを設定する条件およびポリシーを作成し、 サーバーがこのポリシーに準拠しているかどうかを確認するためにサーバーをテストします。 次に、このポリシーを使用してサーバーを再構成し、サーバーがポリシーに準拠するようにします。  
 
@@ -79,7 +79,7 @@ ms.locfileid: "52158624"
   
 6.  **[対象の詳細]** 領域では、エラーが発生すると、 **[メッセージ]** 列に詳細情報が表示されます。 **[メッセージ]** 列では、 **[表示]** をクリックすると、確認された各ファセット プロパティの確認結果を示すレポートが表示されます。 
 
-    ![ポリシーの評価結果の表示 ](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
+    ![ポリシーの評価結果の表示](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
   
 7.  ページの下部にポリシーの説明が表示され、 **[追加のヘルプ]** セクションにポリシーに対して構成したハイパーリンクが表示されます。 メッセージ ハイパーリンクをクリックすると、ポリシー作成時に指定した Web ページが開きます。   
 
@@ -91,7 +91,7 @@ ms.locfileid: "52158624"
 
    
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 2: 名前付け基準ポリシーの作成と適用](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
+[レッスン 2:名前付け基準ポリシーの作成と適用](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   
   

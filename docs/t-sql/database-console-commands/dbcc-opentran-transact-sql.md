@@ -23,15 +23,15 @@ helpviewer_keywords:
 - checking open transactions
 - oldest transactions [SQL Server]
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 1cebd9e5b52e2aa80308e266858da014b13f267c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2199535e258dfce91d0fbf4f7c8b62b30da78528
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206731"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756647"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ DBCC OPENTRAN はアクティブなトランザクションを識別するのに
 ```sql
 DBCC OPENTRAN   
 [   
-    ( [ database_name | database_id | 0 ] ) ]  
+    ( [ database_name | database_id | 0 ] )   
     { [ WITH TABLERESULTS ]  
       [ , [ NO_INFOMSGS ] ]  
     }  

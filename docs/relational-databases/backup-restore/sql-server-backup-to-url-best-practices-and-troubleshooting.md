@@ -11,12 +11,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2d0f3ffdb4c8c026ce12f2f347cbeae0548ede7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12716c1250d60cd59b9b8786c8f88dae7982473a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672781"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578522"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "51672781"
   
         このエラーを解決するには、**BLOCKSIZE = 65536** を指定した **RESTORE** ステートメントを再実行してください。  
   
--   アクティブなリースを保持している BLOB が原因でバックアップ中に発生するエラー: バックアップ処理に失敗すると、アクティブなリースを保持する BLOB が生成されます。  
+-   アクティブなリースを保持している BLOB が原因でバックアップ中に発生するエラー:バックアップ処理に失敗すると、アクティブなリースを保持する BLOB が生成されます。  
   
      BACKUP ステートメントが再実行されると、バックアップ操作が次のようなエラーで失敗することがあります。  
   
@@ -152,7 +152,7 @@ BackupIoRequest::ReportIoError: write failure on backup device https://storageac
   
 トレース フラグ 3051 を使用して詳細ログを有効にすると、ログに次のメッセージが表示される場合もあります。  
   
-`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.) ` 
+`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.)` 
   
  **選択されていない既定のプロキシ設定:**  
   

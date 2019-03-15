@@ -1,7 +1,7 @@
 ---
 title: Windows 照合順序名 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b871541215597d82d1ccda81cebe1b9cbe3a433
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827992"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572845"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 照合順序名 (Transact-SQL)
 
@@ -42,7 +42,7 @@ ms.locfileid: "56827992"
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
 }
 | { _BIN | _BIN2 }
 ```
@@ -51,41 +51,53 @@ CollationDesignator_<ComparisonStyle>
 
 *CollationDesignator* Windows 照合順序によって使用される基本照合順序規則を指定します。 基本照合順序規則には、次の要素が含まれます。
 
-- 辞書順での並べ替えを指定した場合に適用される並べ替え規則。 並べ替え規則は、アルファベットまたは言語に基づきます。
-- Unicode 以外の文字データの格納に使用するコード ページ。
+- 辞書順での並べ替えを指定した場合に適用される並べ替えおよび比較規則。 並べ替え規則は、アルファベットまたは言語に基づきます。
+- **varchar** データを格納するために使用されるコード ページ。
 
 次にいくつかの例を挙げます。
 
-- Latin1_General または French: 両方ともコード ページ 1252 が使用されます。
+- Latin1\_General または French: 両方でコード ページ 1252 が使用されます。
 - Turkish: コード ページ 1254 が使用されます。
 
-*CaseSensitivity*
+*CaseSensitivity*  
 **CI** を指定すると大文字小文字は区別されず、**CS** を指定すると大文字小文字が区別されます。
 
-*AccentSensitivity*
+*AccentSensitivity*  
 **AI** を指定するとアクセントは区別されず、**AS** を指定するとアクセントが区別されます。
 
-*KanatypeSensitive*
+*KanatypeSensitive*  
 **Omitted** を指定するとかなは区別されず、**KS** を指定するとかなが区別されます。
 
-*WidthSensitivity*
+*WidthSensitivity*  
 **Omitted** を指定すると文字幅は区別されず、**WS** を指定すると文字幅が区別されます。
 
-**BIN** 旧バージョンとの互換性のあるバイナリ並べ替え順を使用します。
+*VariationSelectorSensitivity*  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**BIN2** コード ポイントの比較セマンティクスを使用するバイナリ並べ替え順を指定します。
+**Omitted** を指定すると異体字セレクターは区別されず、**VSS** を指定すると異体字セレクターが区別されます。
+
+**BIN**  
+旧バージョンとの互換性のあるバイナリ並べ替え順を使用します。
+
+**BIN2**  
+コード ポイントの比較セマンティクスを使用するバイナリ並べ替え順を指定します。
 
 ## <a name="remarks"></a>Remarks
 
- 照合順序のバージョンによっては、一部のコード ポイントは未定義の場合があります。 たとえば、次の比較を行います。
+照合順序のバージョンによっては、一部のコード ポイントで、並べ替え加重や大文字/小文字マッピングが定義されない可能性があります。 たとえば、次のような `LOWER` 関数の出力を比較してみます。この場合、同じ文字が指定されていますが、同じ照合順序でもバージョンは異なります。
 
 ```sql
-SELECT LOWER(nchar(504) COLLATE Latin1_General_CI_AS);
-SELECT LOWER (nchar(504) COLLATE Latin1_General_100_CI_AS);
-GO
+SELECT NCHAR(504) COLLATE Latin1_General_CI_AS AS [Uppercase],
+       NCHAR(505) COLLATE Latin1_General_CI_AS AS [Lowercase];
+-- Ǹ    ǹ
+
+
+SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
+       LOWER(NCHAR(504) COLLATE Latin1_General_100_CI_AS) AS [Version100Collation];
+-- Ǹ    ǹ
 ```
 
-照合順序が Latin1_General_CI_AS の場合、最初の行によって大文字が返されます。このコード ポイントはこの照合順序では未定義であるためです。
+最初のステートメントには、古い照合順序のこの文字の大文字と小文字の両方の形式が示されています (Unicode データを操作する場合、照合順序は文字の可用性には影響しません)。 しかし、2 番目のステートメントでは、照合順序が Latin1\_General\_CI\_AS である場合、大文字が返されます。これは、このコード ポイントのその照合順序には、小文字のマッピングが定義されていないためです。
 
 一部の言語では、古い照合順序を回避すると重大な結果となる可能性があります。 たとえば、Telegu がこれに該当します。
 
@@ -95,24 +107,24 @@ Windows 照合順序と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
 
 次に Windows 照合順序名の例をいくつか示します。
 
-- **Latin1_General_100_**
+- **Latin1\_General\_100\_CI\_AS**
 
-  照合順序に、Latin1 一般辞書の並べ替え規則とコード ページ 1252 が使用されます。 大文字と小文字は区別されず、アクセントは区別されます。 照合順序に、Latin1 一般辞書の並べ替え規則が使用され、コード ページ 1252 と対応付けられます。 Windows 照合順序の場合は、照合順序のバージョン番号 (_90 または _100) が表示されます。 大文字と小文字は区別されず (CI)、アクセントは区別されます (AS)。
+  照合順序に、Latin1 一般辞書の並べ替え規則が使用され、コード ページ 1252 と対応付けられます。 これはバージョン \_100 の照合順序であり、大文字と小文字は区別されず (CI)、アクセントは区別されます (AS)。
 
-- **Estonian_CS_AS**
+- **Estonian\_CS\_AS**
 
-  照合順序に、エストニア語辞書の並べ替え規則とコード ページ 1257 が使用されます。 大文字と小文字およびアクセントが区別されます。
+  照合順序ではエストニア語辞書の並べ替え規則が使用され、コード ページ 1257 にマップされます。 これはバージョン \_80 の照合順序であり (名前にバージョン番号がないことで暗黙的に示されている)、大文字と小文字が区別され (CS)、アクセントが区別されます (AS)。
 
-- **Latin1_General_BIN**
+- **Japanese\_Bushu\_Kakusu\_140\_BIN2**
 
-  照合順序に、コード ページ 1252 とバイナリ並べ替え規則が使用されます。 Latin1 一般辞書の並べ替え規則は無視されます。
+  照合順序ではバイナリ コード ポイントの並べ替え規則が使用され、コード ページ 932 にマップされます。 これはバージョン \_140 の照合順序であり、日本語の部首画数辞書並べ替え規則は無視されます。
 
 ## <a name="windows-collations"></a>Windows 照合順序
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでサポートされている Windows 照合順序の一覧を表示するには、次のクエリを実行します。
 
 ```sql
-SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
+SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
 次の表に、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされるすべての Windows 照合順序を示します。

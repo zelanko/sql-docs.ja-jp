@@ -21,15 +21,15 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 9ae3cd167b7f8b2dc633eb50063b4bcaee143acf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0cc3055f6d6d6f293500cdd6aabca5c0e51df11a
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213851"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685789"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ TABLERESULTS を指定した場合、DBCC SHOWCONTIG は次の列に加え、前
 |**LogicalFragmentation**|インデックスのリーフ ページをスキャンするときに返される、順序が無効なページのパーセンテージです。 この数値はヒープとは関係ありません。 順序が不正なページとは、インデックスに割り当てられている次の物理的なページと、現在のリーフ ページの*次ページ* ポインターが示すページが異なるページのことです。|  
 |**ExtentFragmentation**|インデックスのリーフ ページをスキャンするときの順序が無効なエクステントのパーセンテージです。 この数値はヒープとは関係ありません。 順序が無効なエクステントとは、インデックス上の現在のページを含むエクステントの物理的な位置が、インデックス上の前のページを含むエクステントの直後でない状態を指します。<br /><br /> 注:インデックスが複数のファイルにわたっている場合、この数値は無意味です。|  
   
-WITH TABLERESULTS および FAST を指定した場合の結果セットは WITH TABLERESULTS を指定した場合と同じです。ただし、次の列が NULL 値になります。
+WITH TABLERESULTS および FAST を指定した場合の結果セットは WITH TABLERESULTS を指定した場合と同じです。ただし、次の列が null 値になります。
 
 | [行]| Extents |
 |---|---|
