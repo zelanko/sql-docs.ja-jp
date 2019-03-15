@@ -1,7 +1,7 @@
 ---
 title: Data Migration Assistant (SQL Server) の新 |Microsoft Docs
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ac3f4b2ab00b7a2c792788d6e778857c7d563f66
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410409"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973211"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant の新機能
 この記事では、各リリースで追加の Data Migration Assistant (DMA) を示します。

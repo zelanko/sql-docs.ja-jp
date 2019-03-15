@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f148c4cee111febc5d1e0203cc5eb484ec556d4f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 16f3ffbbd1435e9006bcbc26c86fb53dfca9bf65
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801347"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973132"
 ---
 # <a name="download-and-install-azure-data-studio"></a>ダウンロードし、Azure Data Studio のインストール
 
@@ -38,11 +38,12 @@ ms.locfileid: "56801347"
 
 ## <a name="get-azure-data-studio-for-windows"></a>Windows 用 Azure Data Studio を入手します。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]のこのリリースは標準的な Windows インストーラーと .zip を含んでいます。
+このリリースの[!INCLUDE[name-sos](../includes/name-sos-short.md)]標準の Windows インストーラー エクスペリエンスと、.zip ファイルが含まれています。
+
+*ユーザー インストーラー*は必要ありません、管理者特権がのインストールとアップグレードの両方を簡略化されますのでお勧めします。 ユーザーのインストーラーは、ユーザーのローカル AppData (%%LOCALAPPDATA%%) フォルダーの下の場所は、管理者特権は必要ありません。 ユーザーのインストーラーより滑らかなバック グラウンド更新プログラムのエクスペリエンスも提供します。 詳細については、次を参照してください。 [Windows のユーザー セットアップ](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows)します。
+
 
 **ユーザーのインストーラー** (推奨)
-
-必要ありません、管理者特権のインストールとアップグレードの両方を簡略化するためには、ユーザーのインストーラーをお勧めします。
 
 1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *ユーザー* Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=2072725)します。
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]のアプリを開始します。

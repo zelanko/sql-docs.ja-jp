@@ -12,12 +12,12 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 237924a1bc4309b4e4d686076d1e0862ea3afe92
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: d3b3aaf9688d3517127495fe4b963f5b6de56f0f
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160604"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973591"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>チュートリアル:SQL Server on Linux で Active Directory 認証を使用します。
 
@@ -166,8 +166,22 @@ AD 認証を構成する前にする必要があります。
    >
    > チェック アウトを構成するには、次[SSSD 手動で](https://access.redhat.com/articles/3023951)、および[SSSD を使用する NSS を構成します。](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
+5. ドメインが構成されていることを確認します。 `/etc/krb5.conf`
+    ```/etc/krb5.conf
+    [libdefaults]
+    default_realm = CONTOSO.COM
+
+    [realms]
+    CONTOSO.COM = {
+    }
+
+    [domain_realm]
+    contoso.com = CONTOSO.COM
+    .contoso.com = CONTOSO.COM
+    ```
+
   
-5. ドメインからユーザーに関する情報を収集できますようになりましたこととそのユーザーとして Kerberos チケットを取得することを確認します。
+6. ドメインからユーザーに関する情報を収集できますようになりましたこととそのユーザーとして Kerberos チケットを取得することを確認します。
 
    次の例では**id**、  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**、および**[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** このコマンド。
 
@@ -352,7 +366,7 @@ AD の構成は手順で有効な AD アカウントの参照は、しばらく�
 disablesssd = true
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このチュートリアルでは、SQL Server on Linux での Active Directory 認証を設定する方法を説明しました。 学習したします。
 > [!div class="checklist"]

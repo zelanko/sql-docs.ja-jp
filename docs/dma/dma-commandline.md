@@ -2,7 +2,7 @@
 title: コマンドライン (SQL Server) から Data Migration Assistant を実行 |Microsoft Docs
 description: SQL Server データベースの移行を評価するためのコマンドラインから Data Migration Assistant を実行する方法について説明します
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 505ea8d199ee2fe666d65c474e7f11dfaadcf18f
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464728"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974181"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>コマンドラインから Data Migration Assistant を実行します。
 Data Migration Assistant をインストールするバージョン 2.1 以降で、ときで dmacmd.exe もインストールされます *%programfiles%\\Microsoft Data Migration Assistant\\*します。 Dmacmd.exe を使用して、無人モードでデータベースを評価し、JSON または CSV ファイルに結果を出力します。 このメソッドは、いくつかのデータベースや巨大なデータベースを評価するときに便利です。 
@@ -34,6 +34,7 @@ Data Migration Assistant をインストールするバージョン 2.1 以降�
 ```
 DmaCmd.exe /AssessmentName="string"
 /AssessmentDatabases="connectionString1" \["connectionString2"\]
+\[/AssessmentSourcePlatform="SourcePlatform"]
 \[/AssessmentTargetPlatform="TargetPlatform"\]
 /AssessmentEvaluateRecommendations|/AssessmentEvaluateCompatibilityIssues
 \[/AssessmentOverwriteResult\]
@@ -45,8 +46,9 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Dmacmd.exe ヘルプ テキストを使用する方法        | N
 |`/AssessmentName`     |   評価プロジェクトの名前   | Y
 |`/AssessmentDatabases`     | 接続文字列のスペースで区切られた一覧。 データベース名 (初期カタログ) と小文字は区別されます。 | Y
-|`/AssessmentTargetPlatform`     | 評価では、サポートされている値のターゲット プラットフォーム:AzureSqlDatabase、ManagedSqlServer、SqlServer2012、SqlServer2014、SqlServer2016、SqlServerLinux2017 および SqlServerWindows2017 します。 既定値は SqlServerWindows2017   | N
-|`/AssessmentEvaluateFeatureParity`  | 機能パリティ ルールを実行します。  | N
+|`/AssessmentSourcePlatform`     | 評価では、サポートされている値のソースのプラットフォーム:SqlOnPrem、RdsSqlServer します。 ターゲットの準備状態評価は、ソースのプラットフォームとしても Cassandra をサポートします。 既定値は SqlOnPrem   | N
+|`/AssessmentTargetPlatform`     | 評価では、サポートされている値のターゲット プラットフォーム:AzureSqlDatabase、ManagedSqlServer、SqlServer2012、SqlServer2014、SqlServer2016、SqlServerLinux2017 および SqlServerWindows2017 します。 ターゲットの準備状態評価は、ターゲット プラットフォームとしても cosmos Db をサポートします。 既定値は SqlServerWindows2017   | N
+|`/AssessmentEvaluateFeatureParity`  | 機能パリティ ルールを実行します。 ターゲット プラットフォーム AzureSqlDatabase の機能パリティの評価はサポートされていませんソースのプラットフォームが RdsSqlServer の場合は、  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | 互換性規則を実行します。  | Y <br> (AssessmentEvaluateCompatibilityIssues または AssessmentEvaluateRecommendations が必要です)。
 |`/AssessmentEvaluateRecommendations`     | 機能のお勧めを実行します。        | Y <br> (AssessmentEvaluateCompatibilityIssues または必要な AssessmentEvaluateRecommendationsis)
 |`/AssessmentOverwriteResult`     | 結果ファイルを上書きします    | N
@@ -146,15 +148,33 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
+**ターゲット プラットフォームは、SQL Azure データベースの単一データベースの評価結果を .json および .csv のファイルに保存します。**
+
+```
+DmaCmd.exe /AssessmentName="TestAssessment" 
+/AssessmentDatabases="Server=SQLServerInstanceName;Initial
+Catalog=DatabaseName;Integrated Security=true"
+/AssessmentSourcePlatform="SqlOnPrem"
+/AssessmentTargetPlatform="AzureSqlDatabase"
+/AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentResultJson="C:\\temp\\AssessmentReport.json"
+
+```
+
 **複数データベースのターゲットの準備状態評価**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
 /AssessmentName="TestAssessment" 
+/AssessmentSourcePlatform=SourcePlatform
+/AssessmentTargetPlatform=TargetPlatform
 /SourceConnections="Server=SQLServerInstanceName1;Initial Catalog=DatabaseName1;Integrated Security=true" "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated Security=true" "Server=SQLServerInstanceName2;Initial Catalog=DatabaseName3;Integrated Security=true" 
 /AssessmentOverwriteResult  
 /AssessmentResultJson="C:\Results\test2016.json"
 
+(/AssessmentSourcePlatform and /AssessmentTargetPlatform are optional.)
 ```
 
 **Windows 認証を使用してサーバー上のすべてのデータベースのターゲットの準備状態評価**
@@ -191,6 +211,8 @@ DmaCmd.exe /Action=AssessTargetReadiness
 <?xml version="1.0" encoding="utf-8" ?>
 <TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
+  <SourcePlatform>Source Platform</SourcePlatform> <!-- Optional. The default is SqlOnPrem -->
+  <TargetPlatform>TargetPlatform</TargetPlatform> <!-- Optional. The default is ManagedSqlServer -->
   <SourceConnections>
     <SourceConnection>connection string 1</SourceConnection>
     <SourceConnection>connection string 2</SourceConnection>

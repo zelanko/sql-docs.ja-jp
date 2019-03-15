@@ -3,7 +3,7 @@ title: SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー |Mi
 ms.custom: ''
 ms.date: 03/15/2017
 ms.service: sql-data-warehouse
-ms.reviewer: ''
+ms.reviewer: jrasnick
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -12,17 +12,17 @@ aauthor: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: db01843c9ef67a7246544b5ce73fafab7655ac8b
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 053eb234dee34d95e0fc3372a4626b8dee02a4ab
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590371"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973561"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  このトピックで、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログ ビューです。  
+ このトピックで、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログ ビューです。  
   
  すべて[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログ ビューが始まる**sys.pdw**します。  
   
@@ -59,8 +59,12 @@ ms.locfileid: "56590371"
   
  [sys.pdw_table_distribution_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md)  
   
- [sys.pdw_table_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)  
-  
+ [sys.pdw_table_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
+
+[sys.workload_management_workload_classifier_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) (プレビュー)
+
+[sys.workload_management_workload_classifiers &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (プレビュー)
+ 
 ## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] カタログ ビュー  
  次のカタログ ビューに適用[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]のみ。
 

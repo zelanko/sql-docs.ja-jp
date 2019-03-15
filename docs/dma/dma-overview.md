@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server) の概要 |Microsoft Docs
 description: Data Migration Assistant を使用して、その他の SQL Server または Azure のデータベースに SQL Server データベースを移行する方法について説明します
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 7ea185bd40dc9477b00b91069fa0ce8d93986aa5
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: 0bb91177a204f93bd141d57b90420678dcd0b722
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321618"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973791"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant の概要
 Data Migration Assistant (DMA) によっては、新しいバージョンの SQL Server または Azure SQL Database でデータベースの機能に影響する可能性のある互換性の問題を検出することにより、最新のデータ プラットフォームにアップグレードします。 DMA では、パフォーマンスと信頼性の向上、ターゲット環境のことをお勧めし、移行元サーバーからターゲット サーバーに、スキーマ、データ、および非包含オブジェクトを移動することができます。

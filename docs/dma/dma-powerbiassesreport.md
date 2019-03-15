@@ -2,7 +2,7 @@
 title: Data Migration Assistant 評価レポートを Power BI (SQL Server) の統合の分析 |Microsoft Docs
 description: Power BI を使用して、インポートして、SQL Server に統合したデータ移行の評価レポートを分析する方法について説明します
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 1094d6fd52841a65afa58768dfaee9a05aa20810
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 786e86fb6f0326e2f8ea568f4c069828ff1ff4c6
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208291"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974121"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Data Migration Assistant を Power BI で作成された統合評価レポートを分析します。
 

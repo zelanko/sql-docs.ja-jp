@@ -2,7 +2,7 @@
 title: (Data Migration Assistant)、オンプレミス データベースの適切な Azure SQL データベース SKU の識別 |Microsoft Docs
 description: Data Migration Assistant を使用して、オンプレミス データベースの右側の Azure SQL データベースの SKU を特定する方法について説明します
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 578e6ac47e84ad764cb050112eae768ff21444f3
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226499"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973826"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>オンプレミス データベースの適切な Azure SQL データベース SKU の識別します。
 
@@ -163,6 +163,6 @@ HTML ファイルには、グラフィカルな形式では、この情報が含
 
 すべての手順を実行するには 1 台のコンピューター上でこのプロセスでまたは大規模の SKU の推奨事項を決定する複数のコンピューター上で実行することができます。 DMA によって、コマンド ライン インターフェイスを使用してこれらすべての手順をサポートすることで、シンプルかつスケーラブルなエクスペリエンスがなります。 ここでも、DMA のユーザー インターフェイスを使用してこの機能のサポートは、今年の後半で使用してになります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - 最新バージョンのダウンロード[Data Migration Assistant](https://aka.ms/get-dma)します。
 - 記事をご覧ください[実行 Data Migration Assistant、コマンドラインから](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017)CLI から DMA を実行するためのコマンドの完全な一覧についてはします。

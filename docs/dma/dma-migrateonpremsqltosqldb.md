@@ -2,7 +2,7 @@
 title: オンプレミスの SQL Server または Azure Vm 上の SQL Server を Azure SQL Database を使用して移行 Data Migration Assistant |Microsoft Docs
 description: Data Migration Assistant を使用して Azure SQL Database に、オンプレミスの SQL Server を移行する方法について説明します
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: db4b48d736b46c0381749943916272e763a077c7
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: d807396f7c8bd334de38cdc1744f6bee90d619e0
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643850"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974062"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して Azure SQL Database へのオンプレミスの SQL Server または Azure Vm 上の SQL Server を移行します。
 
 Data Migration Assistant は、Azure Vm または Azure SQL Database で SQL Server オンプレミスと以降のバージョンの SQL Server へのアップグレードまたは SQL Server への移行のシームレスな評価を提供します。
 
-Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server をオンプレミスの詳細な手順を説明します。   
+Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server をオンプレミスの詳細な手順を説明します。   
 
 ## <a name="create-a-new-migration-project"></a>新しい移行プロジェクトを作成します。
 
@@ -122,5 +122,5 @@ Data Migration Assistant を使用して Azure SQL Database に移行する SQL 
 ## <a name="see-also"></a>関連項目
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-- [Data Migration Assistant: 構成の設定](../dma/dma-configurationsettings.md)
-- [Data Migration Assistant: ベスト プラクティス](../dma/dma-bestpractices.md)
+- [Data Migration Assistant:構成設定](../dma/dma-configurationsettings.md)
+- [Data Migration Assistant:ベスト プラクティス](../dma/dma-bestpractices.md)

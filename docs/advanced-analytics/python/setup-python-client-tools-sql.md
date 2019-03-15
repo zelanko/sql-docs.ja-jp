@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c61275d1a52a3e248e2c1f551d30ece20c92b7fb
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 6642a91e61900847b2eeb8875d731634cc03b38e
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579562"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976312"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での Python 開発用のデータ サイエンス クライアントの設定します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ Python の統合での Python のオプションを追加するときに、SQL S
 この記事で説明に従って、インストールを検証するには、組み込みの Jupyter Notebook を使用することができますまたは[、ライブラリをリンク](#install-ide)PyCharm に通常使用する別の IDE です。
 
 > [!Tip]
-> これらの演習ビデオ デモについては、次を参照してください。 [R の実行と Jupyter Notebook から SQL Server にリモートで Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)します。
+> これらの演習ビデオ デモについては、次を参照してください。 [R の実行と Jupyter Notebook から SQL Server にリモートで Python](https://youtu.be/D5erljpJDjE)します。
 
 > [!Note]
 > クライアント ライブラリをインストールする代わりを使用して、[スタンドアロン サーバー](../install/sql-machine-learning-standalone-windows-install.md)シナリオの詳細な作業を使用します。 一部のお客様のリッチ クライアントとして。 スタンドアロン サーバーは、SQL Server から切り離されます完全が同じ Python ライブラリがあるため、使用できますがクライアントとしての SQL Server データベース内分析。 インポートおよびその他のデータ プラットフォームからのデータをモデル化する機能など、SQL に関連しない作業にも使用できます。 スタンドアロン サーバーをインストールする場合は、この場所に、Python の実行可能ファイルを見つけることができます:`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`します。 インストールを検証する[Jupyter notebook を開いて](#python-tools)Python.exe をその場所で使用するコマンドを実行します。

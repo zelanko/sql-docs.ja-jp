@@ -3,17 +3,17 @@ title: R 言語とインターネットにアクセスできない - SQL Server 
 description: オフラインまたは未接続 Machine Learning R と Python でセットアップ ネットワーク ファイアウォールの背後にある SQL Server インスタンスを分離します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 37cd555ec099b11c6dbf792ff5f4e0ac869a0792
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596993"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976322"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>SQL Server マシンがインターネットにアクセスできないコンピューターでの R と Python の学習のインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,8 +22,8 @@ ms.locfileid: "53596993"
 
 データベース内分析は、データベース エンジンのインスタンスと SQL Server のバージョンに応じて、R と Python の統合のための追加のコンポーネントで構成されます。 
 
-+ SQL Server 2017 には、R と Python が含まれています。 
-+ SQL Server 2016 は R のみです。 
++ SQL Server 2017 には、R と Python が含まれています 
++ SQL Server 2016 は R のみです。
 
 分離されたサーバーで、CAB ファイルを machine learning と R および Python 言語固有の機能が追加されます。 
 
@@ -75,7 +75,9 @@ SQL Server 2016 RTM、SP 1、または SP 2 は、ターゲット コンピュ�
 
 ## <a name="transfer-files"></a>ファイルを転送します。
 
-対象のコンピュータに SQL Server インストール メディア (.iso または .cab) とデータベース内分析 CAB ファイルをコピーします。 など、ターゲット マシン上の同じフォルダーに CAB ファイルとインストール メディアのファイルを配置**ダウンロード**またはセットアップのユーザーの temp * フォルダー。
+対象のコンピュータに SQL Server インストール メディア (.iso または .cab) とデータベース内分析 CAB ファイルをコピーします。 セットアップのユーザーの TEMP * フォルダーなど、ターゲット コンピューター上の同じフォルダーに CAB ファイルとインストール メディアのファイルを配置します。
+
+%TEMP% フォルダーが Python の CAB ファイルに必要です。 R、%temp% を使用するか、CAB パスに myrcachedirectory パラメーターを設定します。
 
 次のスクリーン ショットでは、SQL Server 2017 の cab ファイルと ISO ファイルが表示されます。 SQL Server 2016 のダウンロードが異なって: ファイルの数を減らして (なしの Python) と、インストール メディアのファイル名は、2016年の。
 
@@ -150,7 +152,7 @@ SQL Server 2017 Machine Learning Services または SQL Server 2016 R Services �
 + [インストールの確認](sql-machine-learning-services-windows-install.md#verify-installation)(SQL Server 2016 では、次のようにクリックします。[ここ](sql-r-services-windows-install.md#verify-installation))。
 + [必要に応じて追加の構成](sql-machine-learning-services-windows-install.md#additional-configuration)(SQL Server 2016 では、次のようにクリックします。[ここ](sql-r-services-windows-install.md#bkmk_FollowUp))。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 インスタンスのインストール状態を確認し、一般的な問題を修正を参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)します。
 
