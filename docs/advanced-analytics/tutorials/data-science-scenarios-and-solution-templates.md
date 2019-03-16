@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 936bc010838b3869c567117a9e87cdc2c4ce6d52
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1c98f6110aa6cc0bbb86f04a685211d7dc58447a
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596126"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072156"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>データ サイエンスのシナリオとソリューション テンプレート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "53596126"
 
 ## <a name="customer-churn"></a>顧客離れ
 
-[顧客離れ予測テンプレート (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
+[顧客離れ予測テンプレート (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
 
 **内容。** 分析と予測の顧客離れ、競合他社のお客様の損失を管理および防止する必要があります業界で重要: 銀行、電気通信、および量販店、いくつかの名前。 顧客離れ分析の目標は、離れる可能性が高い顧客を特定し、そのような顧客が離れないようにして、ビジネスを維持することです。
 
@@ -64,7 +64,7 @@ ms.locfileid: "53596126"
   
 ## <a name="predictive-maintenance"></a>予測メンテナンス
 
-[予測メンテナンス テンプレート (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
+[予測メンテナンス テンプレート (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **内容。** 予測的なメンテナンスでは、過去のエラーをキャプチャしてその情報を使用して、デバイスが失敗するタイミングと場所を予測するメンテナンス タスクの効率を向上させる目的としています。 デバイスの陳腐化を予測する機能は、分散データやセンサーに依存するアプリケーションに対して特に有効です。 このメソッドは、監視または IoT (モ ノのインターネット) デバイスでエラーを予測にも適用可能性があります。
 
@@ -101,7 +101,7 @@ ms.locfileid: "53596126"
   
     このフォルダーには、すべてのスクリプトを呼び出し、包括的な環境を作成できる PowerShell スクリプトも含まれています。 スクリプトは、必ず実際の環境似合わせて編集してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [SQL Server machine learning のチュートリアル](machine-learning-services-tutorials.md)
 

@@ -1,6 +1,6 @@
 ---
 title: Analysis Services のメモリのプロパティ |Microsoft Docs
-ms.date: 01/15/2018
+ms.date: 03/15/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 055b46ab1464f360cfb89f9bf4d42c0b8997f841
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b33bf47f77d65679bc079b526d480841af71c0c4
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327867"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072296"
 ---
 # <a name="memory-properties"></a>メモリのプロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -58,14 +58,12 @@ HardMemoryLimit | Analysis Services がメモリ不足のために、完全に�
  インスタンスが、メモリ使用量を減らすために、アクティブなユーザー セッションを積極的に終了し始めるメモリのしきい値を指定します。 終了されたすべてのセッション メモリの負荷で取り消されるに関するエラーが表示されます。 既定値 (0) は、 **HardMemoryLimit** が **TotalMemoryLimit** とシステムの物理メモリ合計の間の値に設定されることを意味します。システムの物理メモリがプロセスの仮想アドレス領域を超える場合は、 **HardMemoryLimit**を計算せずに、仮想アドレス空間が使用されます。  
 
 **QueryMemoryLimit**   
-Azure Analysis Services の場合のみです。 メモリの量は、クエリ中に一時的な結果で使用できるかを制御する高度なプロパティです。 DAX メジャーとクエリにのみ適用されます。 クエリで使用される一般的なメモリ割り当ては考慮しません。 パーセンテージで指定された、既定値は、プランによって決まります。 
+Azure Analysis Services の場合のみです。 メモリの量は、クエリ中に一時的な結果で使用できるかを制御する高度なプロパティです。 DAX メジャーとクエリにのみ適用されます。 クエリで使用される一般的なメモリ割り当ては考慮しません。 最大 100 パーセントで指定します。 さらに、バイトになります。 値 0 は制限なしの設定を指定します。 Azure の分析には、既定値をご利用のプランによって決まります。 
 
-|プラン  |既定値  |
+|プラン  |既定  |
 |---------|---------|
 |D1     |   80      |
-|その他のすべてのプラン     |    20     |
-
-このプロパティを変更できます。 値 0 は制限なしの設定を指定します。
+|その他のすべてのプラン     |    20     | 
 
  **VirtualMemoryLimit**  
   詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  

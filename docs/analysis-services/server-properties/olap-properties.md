@@ -1,6 +1,6 @@
 ---
 title: Analysis Services OLAP のプロパティ |Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 03/15/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936b05f8d54d3a5e67e7e03a02cc7907c56eab02
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 8e2643488710548b3a773730e9b9898125783dc3
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072519"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072346"
 ---
 # <a name="olap-properties"></a>OLAP のプロパティ
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示す OLAP サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
@@ -266,7 +266,10 @@ ms.locfileid: "53072519"
   
  **MaxRolapOrConditions**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
-  
+ 
+ **RowsetSerializationLimit**   
+ Azure Analysis Services に適用されます。 行セットをクライアントに返される行の数を制限します。 既定値は-1、適用は無制限を意味します。 DAX と MDX の両方のクエリに適用されます。 広範なデータのエクスポートからサーバー リソースを保護するために使用します。 サーバーに送信された制限を超えるクエリが取り消され、エラーが返されます。  
+
  **UseCalculationCacheRegistry**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   

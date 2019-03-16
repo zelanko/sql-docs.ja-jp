@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8bb66c5bb9b4f69b32efd7761ae08677ee243fee
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044628"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072306"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|
-|session_id|**smallint**|セッションの ID を指定します。 Null を許容しません。|
+|session_id|**smallint**|セッションの ID。 Null を許容しません。|
 |request_id|**int**|要求の ID。 Null を許容しません。|
 |sql_handle|**varbinary(64)**|要求の SQL テキストのハッシュ マップ。 Null 値を許容します。|
 |plan_handle|**varbinary(64)**|クエリ プランのハッシュ マップ。 Null 値を許容します。|
@@ -58,23 +58,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="remarks"></a>コメント
 このシステム関数は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降で利用可能です。 サポート技術情報を参照してください[3190871。](https://support.microsoft.com/en-us/help/3190871)
 
-このシステム関数が両方の下で動作**標準**と**軽量**実行統計プロファイリング インフラストラクチャをクエリします。  
-  
-**標準**を使用して、統計プロファイリング インフラストラクチャを有効にすることができます。
-  -  [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)
-  -  [統計プロファイルの設定](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-  -  `query_post_execution_showplan`拡張イベント。  
-  
-**ライトウェイト**統計プロファイリング インフラストラクチャは[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 と有効にすることができます。
-  -  グローバルにトレースを使用して 7412 フラグを設定します。
-  -  [*query_thread_profile*](https://support.microsoft.com/kb/3170113) 拡張イベント を使用します。
-  
-> [!NOTE]
-> クエリ実行統計の DMV などの標準的なプロファイルではなくインフラストラクチャをプロファイリングのすべてのコンシューマーに軽量プロファイリングを有効、トレース フラグ 7412 を有効にすると[sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)します。
-> ただし、標準的なプロファイルは引き続き使用 SET STATISTICS XML を*実際のプランを含める*アクション[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]、および`query_post_execution_showplan`xEvent。
-
-> [!IMPORTANT]
-> TPC c ワークロードのテストと同様に、軽量版統計プロファイリング インフラストラクチャを有効にすると、1.5 ~ 2% オーバーヘッドを追加します。 これに対し、標準的な統計プロファイル インフラストラクチャでは、同じワークロード シナリオのオーバーヘッドを最大 90% を追加できます。
+このシステム関数が両方の下で動作**標準**と**軽量**実行統計プロファイリング インフラストラクチャをクエリします。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)」を参照してください。  
 
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  

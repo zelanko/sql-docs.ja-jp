@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +15,12 @@ ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48467d7636f7e4a633ea6f5058c27c7a86f46a73
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6465432962ad02d4bc4035197f7fc04a30036b92
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606685"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57974001"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout プロパティの例 (VC++)
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "51606685"
   
  この例では、 [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md)に存在するプロパティ、 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)と[DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクト。 ここで、 **InternetTimeout**でプロパティが示されています、 **DataControl**オブジェクトと、タイムアウトは 20 秒に設定されます。  
   
-```  
+```cpp
 // BeginInternetTimeoutCpp  
 #import "c:\Program Files\Common Files\System\ADO\msado15.dll" \  
     no_namespace rename("EOF", "EndOfFile")  

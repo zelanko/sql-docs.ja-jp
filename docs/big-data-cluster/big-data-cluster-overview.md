@@ -5,23 +5,23 @@ description: Kubernetes で実行して、リレーショナルの両方でス�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/07/2018
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4e5f45d51e80753bb65e5fa1d620ca105af28344
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241993"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072127"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスターとは
 
 以降で[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]、ビッグ データの SQL Server クラスターでは、Kubernetes で実行されている SQL Server、Spark、および HDFS のコンテナーの拡張性の高いクラスターをデプロイできます。 これらのコンポーネントを使用すると、読み取り、書き込み、および TRANSACT-SQL または Spark からビッグ データの処理、結合および価値の高いリレーショナル データを大量のビッグ データ分析を簡単にすることができますを並行して実行されます。
 
-新機能と最新のリリースの既知の問題の詳細については、次を参照してください。、[リリース ノート](big-data-cluster-release-notes.md)します。
+新機能と最新のリリースの既知の問題の詳細については、次を参照してください。、[リリース ノート](release-notes-big-data-cluster.md)します。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -75,10 +75,11 @@ SQL Server のビッグ データ クラスターはクラスターによって�
 Kubernetes は、ニーズに合わせてコンテナーのデプロイでスケールできる、オープン ソース コンテナー オーケストレーターです。 次の表では、Kubernetes の重要な用語を定義します。
 
 |||
-|--|--|
+|:--|:--|
 | **Cluster** | Kubernetes クラスターは、一連のノードと呼ばれるマシンです。 1 つのノードがクラスターを制御し、マスター ノードが指定されます。残りのノードは、ワーカー ノードです。 Kubernetes マスターは、ワーカー間の作業を配布して、クラスターの正常性を監視します。 |
 | **[Node]** | ノードには、コンテナー化されたアプリケーションが実行されます。 物理マシンまたは仮想マシンのいずれかを指定できます。 Kubernetes クラスターには、物理マシンと仮想マシン ノードの組み合わせを含めることができます。 |
 | **pod 型** | ポッドは、Kubernetes のデプロイのアトミック単位です。 ポッドは、1 つまたは複数のコンテナーの論理グループ-リソース必要なアプリケーションの実行に関連付けられているとします。 それぞれのポッドが; ノードで実行します。ノードには、1 つまたは複数のポッドを実行できます。 Kubernetes マスターは、クラスター内のノードにポッドを自動的に割り当てます。 |
+| &nbsp; ||
 
 ビッグ データの SQL Server クラスター、Kubernetes は SQL Server のビッグ データ クラスター; の状態を担当Kubernetes で、ビルド、クラスター ノードを構成およびノードにポッドを割り当てます、および、クラスターの正常性を監視します。
 
@@ -100,6 +101,6 @@ Kubernetes は、ニーズに合わせてコンテナーのデプロイでスケ
 
 データ プレーンは、データの永続化とキャッシュに使用されます。 SQL データのプールと記憶域プールが含まれています。  SQL のデータ プールは、Linux 上の SQL Server を実行している 1 つまたは複数のポッドで構成されます。 SQL クエリまたは Spark ジョブからデータを取り込むために使用されます。 ビッグ データの SQL Server クラスターのデータ マートは、データのプールに保存されます。 記憶域プールは、Linux、Spark、および HDFS 上の SQL Server から成る記憶域プールのポッドで構成されます。 SQL Server のビッグ データ クラスター内のすべての記憶域ノードは、HDFS クラスターのメンバーです。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server のビッグ データ クラスターは、SQL Server 2019 Early Adoption Program を通じて限定パブリック プレビューとして利用可能なは first です。 アクセス権を要求するには、登録[ここ](https://aka.ms/eapsignup)、ビッグ データ クラスターに関心を指定します。 Microsoft はすべての要求をトリアージし、できるだけ早く対応します。
