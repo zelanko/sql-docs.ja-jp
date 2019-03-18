@@ -939,7 +939,7 @@ items:
           href: ../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md
         - name: データベース スナップショット
           href: ../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md
-        - name: のレプリケーション
+        - name: レプリケーション
           href: ../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md
       - name: 管理
         items:
@@ -1037,7 +1037,7 @@ items:
   items:
   - name: 階層データ
     href: ../relational-databases/hierarchical-data-sql-server.md
-  - name: '[照合順序]'
+  - name: 照合順序
     href: ../relational-databases/collations/collation-and-unicode-support.md
     items:
     - name: '[サーバー照合順序]'
@@ -1059,7 +1059,7 @@ items:
       href: ../relational-databases/databases/databases.md
     - name: 操作方法ガイド
       items:
-      - name: '[管理]'
+      - name: 管理する
         items:
         - name: データベースの作成
           href: ../relational-databases/databases/create-a-database.md
@@ -1269,7 +1269,7 @@ items:
         href: ../relational-databases/blob/access-filetables-with-transact-sql.md
       - name: ファイル I/O API を使用したアクセス
         href: ../relational-databases/blob/access-filetables-with-file-input-output-apis.md
-      - name: '[管理]'
+      - name: 管理する
         href: ../relational-databases/blob/manage-filetables.md
       - name: スキーマ
         href: ../relational-databases/blob/filetable-schema.md
@@ -1453,7 +1453,7 @@ items:
   - name: テーブル
     href: ../relational-databases/tables/tables.md
     items:
-    - name: '[管理]'
+    - name: 管理する
       items:
       - name: 作成
         href: ../relational-databases/tables/create-tables-database-engine.md
@@ -1547,7 +1547,7 @@ items:
     - name: テンポラル テーブル
       href: ../relational-databases/tables/temporal-tables.md
       items:
-      - name: '[管理]'
+      - name: 管理する
         items:
         - name: 作業の開始
           href: ../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
@@ -1617,7 +1617,7 @@ items:
       items:
       - name: 有効化と無効化
         href: ../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md
-      - name: '[管理]'
+      - name: 管理する
         href: ../relational-databases/track-changes/manage-change-tracking-sql-server.md
       - name: 操作
         href: ../relational-databases/track-changes/work-with-change-tracking-sql-server.md
@@ -2054,7 +2054,7 @@ items:
     - name: 統合アセンブリの管理
       href: ../relational-databases/clr-integration/assemblies-database-engine.md
       items:
-      - name: '[管理]'
+      - name: 管理する
         href: ../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md
       - name: Alter
         href: ../relational-databases/clr-integration/assemblies/altering-an-assembly.md
@@ -2117,7 +2117,7 @@ items:
         href: ../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md
       - name: 実行の特性
         href: ../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md
-      - name: '[クエリ]'
+      - name: クエリ
         href: ../relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md
       - name: '[削除]'
         href: ../relational-databases/extended-stored-procedures-programming/removing-an-extended-stored-procedure-from-sql-server.md
@@ -2303,7 +2303,7 @@ items:
   - name: JSON
     href: ../relational-databases/json/json-data-sql-server.md
     items:
-    - name: '[管理]'
+    - name: 管理する
       items:
       - name: ドキュメントの格納
         href: ../relational-databases/json/store-json-documents-in-sql-tables.md
@@ -3940,6 +3940,11 @@ items:
     href: ../relational-databases/sql-server-index-design-guide.md
   - name: ページおよびエクステントのアーキテクチャ
     href: ../relational-databases/pages-and-extents-architecture-guide.md
+    items:
+    - name: ページの読み取り
+      href: ../relational-databases/reading-pages.md
+    - name: ページの書き込み
+      href: ../relational-databases/writing-pages.md
   - name: 移行後の検証と最適化
     href: ../relational-databases/post-migration-validation-and-optimization-guide.md
   - name: クエリ処理のアーキテクチャ
@@ -3952,11 +3957,6 @@ items:
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: メモリ管理アーキテクチャ
     href: ../relational-databases/memory-management-architecture-guide.md
-    items:
-    - name: ページの読み取り
-      href: ../relational-databases/reading-pages.md
-    - name: ページの書き込み
-      href: ../relational-databases/writing-pages.md
 - name: インストール
   href: redirectfrom-installation-10.md
   items:
@@ -4397,6 +4397,7 @@ items:
       - name: '[詳細設定] ページ'
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: データの移行と読み込み
+  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SQL Server Integration Services (SSIS) ++
     href: ../integration-services/index.md
@@ -4563,7 +4564,7 @@ items:
           href: ../data-quality-services/detaching-and-attaching-dqs-databases.md
     - name: DQS セキュリティ
       href: ../data-quality-services/dqs-security.md
-  - name: のレプリケーション
+  - name: レプリケーション
     href: ../toc/redirectfrom-replication.md
     items:
     - name: 概要
@@ -4698,7 +4699,7 @@ items:
               href: ../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
             - name: サブスクリプションの再初期化
               href: ../relational-databases/replication/reinitialize-subscriptions.md
-      - name: Administer
+      - name: 管理
         items:
         - name: 情報スクリプトの配布および発行
           href: ../relational-databases/replication/administration/distributor-and-publisher-information-script.md
@@ -5542,7 +5543,7 @@ items:
           href: ../sql-server/stretch-database/enable-stretch-database-for-a-table.md
         - name: 移行する行を選択する
           href: ../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md
-      - name: '[管理]'
+      - name: 管理する
         items:
         - name: 移行の監視
           href: ../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md
@@ -6263,7 +6264,7 @@ items:
           href: ../ssma/sybase/global-settings-tester-sybasetosql.md
 - name: 管理、監視、チューニング
   items:
-  - name: '[管理]'
+  - name: 管理する
     items:
     - name: 中央管理サーバー
       href: ../relational-databases/administer-multiple-servers-using-central-management-servers.md
@@ -6362,7 +6363,7 @@ items:
     - name: ポリシー ベースの管理
       href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
       items:
-      - name: '[管理]'
+      - name: 管理する
         items:
         - name: ポリシーの作成
           href: ../relational-databases/policy-based-management/create-a-policy-based-management-policy.md
@@ -6614,7 +6615,7 @@ items:
         href: ../relational-databases/data-collection/management-data-warehouse.md
       - name: データ コレクターのセキュリティ
         href: ../relational-databases/data-collection/data-collector-security.md
-      - name: '[管理]'
+      - name: 管理する
         href: ../relational-databases/data-collection/manage-data-collection.md
         items:
         - name: 開始または停止
@@ -7277,7 +7278,7 @@ items:
         href: ../relational-databases/search/get-started-with-full-text-search.md
       - name: SQL Server 2016 の非推奨の機能
         href: ../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md
-    - name: '[クエリ]'
+    - name: クエリ
       href: ../relational-databases/search/query-with-full-text-search.md
       items:
       - name: NEAR による他の単語の近くにある単語の検索
@@ -7959,7 +7960,7 @@ items:
       items:
       - name: Hierarchy
         href: ../relational-databases/security/encryption/encryption-hierarchy.md
-      - name: 透過的なデータ暗号化 (TDE)
+      - name: Transparent Data Encryption (TDE)
         href: ../relational-databases/security/encryption/transparent-data-encryption.md
       - name: Azure SQL Database での TDE +
         href: /azure/sql-database/transparent-data-encryption-azure-sql
@@ -8420,22 +8421,14 @@ items:
     items:
     - name: SSDT のダウンロード
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: 概要
-      items:
-      - name: SSDT の変更ログ
-        href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
-      - name: データ層アプリケーション フレームワーク - ライセンス条項
-        href: ../ssdt/data-tier-application-framework-license-terms.md
-      - name: SSDT と SSDT-BI の以前のリリース
-        href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
-      - name: Azure Active Directory のサポート
-        href: ../ssdt/azure-active-directory.md
-      - name: SQL Server のツール
-        href: ../ssdt/sql-server-tools.md
-      - name: ライセンス条項 - SSDT
-        href: ../ssdt/sql-server-data-tools-license-terms.md
-      - name: ライセンス条項 - SSDT (VS 2017)
-        href: ../ssdt/sql-server-data-tools-license-terms-vs2017.md
+    - name: SSDT の変更ログ
+      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: SSDT と SSDT-BI の以前のリリース
+      href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+    - name: Azure Active Directory のサポート
+      href: ../ssdt/azure-active-directory.md
+    - name: SQL Server のツール
+      href: ../ssdt/sql-server-tools.md
     - name: プロジェクト指向のオフライン データベース開発
       href: ../ssdt/project-oriented-offline-database-development.md
       items:
@@ -9775,8 +9768,6 @@ items:
           href: ../ssms/visual-db-tools/print-query-results-visual-database-tools.md
     - name: リソース
       items:
-      - name: ライセンス条項
-        href: ../ssms/sql-server-management-studio-license-terms.md
       - name: SSMS のユーザー サポート
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: 匿名の利用状況データ
@@ -9789,7 +9780,7 @@ items:
       href: ../tools/sqlpackage-release-notes.md
     - name: sqlpackage ref
       href: ../tools/sqlpackage.md
-  - name: SQL Server Profiler
+  - name: SQL Server プロファイラー
     href: ../tools/sql-server-profiler/sql-server-profiler.md
     items:
     - name: SQL Server Profiler の実行
@@ -9947,7 +9938,7 @@ items:
       href: ../t-sql/lesson-2-configuring-permissions-on-database-objects.md
     - name: 'レッスン 3: データベース オブジェクトの削除'
       href: ../t-sql/lesson-3-deleting-database-objects.md
-- name: SQL Server on Linux
+- name: Linux 上の SQL Server
   href: ../linux/sql-server-linux-overview.md
   items:
   - name: 概要
@@ -10052,7 +10043,7 @@ items:
         href: ../linux/sql-server-linux-develop-use-vscode.md
       - name: SSDT の使用
         href: ../linux/sql-server-linux-develop-use-ssdt.md
-    - name: '[管理]'
+    - name: 管理する
       href: ../linux/sql-server-linux-management-overview.md
       items:
       - name: SSMS を使用した管理
@@ -10138,9 +10129,9 @@ items:
           items:
           - name: 配置
             href: ../linux/sql-server-linux-kubernetes-deploy.md
-          - name: '[管理]'
+          - name: 管理する
             href: ../linux/sql-server-linux-kubernetes-manage.md
-          - name: '[接続]'
+          - name: 接続する
             href: ../linux/sql-server-linux-kubernetes-connect.md
           - name: 配置スクリプトを作成する
             href: ../linux/sql-server-linux-kubernetes-create-deployment.md
@@ -10161,7 +10152,7 @@ items:
         href: ../linux/sql-server-linux-performance-best-practices.md
       - name: パフォーマンス機能の概要
         href: ../linux/sql-server-linux-performance-get-started.md
-    - name: のレプリケーション
+    - name: レプリケーション
       href: ../linux/sql-server-linux-replication.md
       items:
       - name: '[構成]'
@@ -11322,17 +11313,13 @@ items:
         href: ../powershell/encode-and-decode-sql-server-identifiers.md
       - name: SQL Server 識別子のエスケープ
         href: ../powershell/escape-sql-server-identifiers.md
-    - name: リソース
-      items:
-      - name: SQL Server PowerShell ライセンス条項
-        href: ../powershell/sql-server-powershell-license-terms.md
     - name: コマンドレット参照
       items:
       - name: SqlServer のコマンドレット
         href: /powershell/module/sqlserver/
       - name: SQLPS のコマンドレット
         href: /powershell/module/sqlps/
-  - name: システム カタログ ビュー。
+  - name: システム カタログ ビュー
     href: ../relational-databases/system-catalog-views/catalog-views-transact-sql.md
     items:
     - name: SQL Server システム カタログに対するクエリに関してよく寄せられる質問
@@ -11906,7 +11893,7 @@ items:
         href: ../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md
       - name: sys.spatial_reference_systems
         href: ../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md
-    - name: SQL データ ウェアハウス
+    - name: SQL Data Warehouse
       href: ../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md
       items:
       - name: sys.pdw_column_distribution_properties
@@ -11961,6 +11948,10 @@ items:
         href: ../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md
       - name: sys.pdw_table_mappings
         href: ../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md
+      - name: sys.workload-management-workload-classifier-details
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
+      - name: sys.workload-management-workload-classifiers
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
     - name: Stretch Database
       items:
       - name: sys.remote_data_archive_databases
@@ -12412,7 +12403,7 @@ items:
       items:
       - name: sys.dm_qn_subscriptions
         href: ../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md
-    - name: のレプリケーション
+    - name: レプリケーション
       href: ../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md
       items:
       - name: sys.dm_repl_articles
@@ -13570,7 +13561,7 @@ items:
         href: ../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md
       - name: sp_query_store_unforce_plan
         href: ../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md
-    - name: のレプリケーション
+    - name: レプリケーション
       href: ../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md
       items:
       - name: sp_add_agent_parameter
@@ -14148,7 +14139,7 @@ items:
         href: ../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
       - name: sp_delete_backup
         href: ../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-    - name: SQL データ ウェアハウス
+    - name: SQL Data Warehouse
       href: ../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
       items:
       - name: sp_datatype_info_90
@@ -14322,7 +14313,7 @@ items:
         href: ../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md
       - name: sp_update_targetservergroup
         href: ../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md
-    - name: SQL Server Profiler
+    - name: SQL Server プロファイラー
       href: ../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md
       items:
       - name: sp_trace_create
@@ -15407,7 +15398,7 @@ items:
           href: ../t-sql/functions/percentile-disc-transact-sql.md
         - name: PERCENT_RANK
           href: ../t-sql/functions/percent-rank-transact-sql.md
-      - name: '[照合順序]'
+      - name: 照合順序
         items:
         - name: 照合順序 - COLLATIONPROPERTY
           href: ../t-sql/functions/collation-functions-collationproperty-transact-sql.md
@@ -15751,7 +15742,7 @@ items:
           href: ../t-sql/functions/rank-transact-sql.md
         - name: ROW_NUMBER
           href: ../t-sql/functions/row-number-transact-sql.md
-      - name: のレプリケーション
+      - name: レプリケーション
         items:
         - name: PUBLISHINGSERVERNAME
           href: ../t-sql/functions/replication-functions-publishingservername.md
@@ -16301,7 +16292,7 @@ items:
         items:
         - name: 結合
           href: ../t-sql/queries/hints-transact-sql-join.md
-        - name: '[クエリ]'
+        - name: クエリ
           href: ../t-sql/queries/hints-transact-sql-query.md
         - name: ヒント - テーブル
           href: ../t-sql/queries/hints-transact-sql-table.md
@@ -16639,6 +16630,8 @@ items:
           href: ../t-sql/statements/create-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/create-view-transact-sql.md
+        - name: ワークロードの分類子
+          href: ../t-sql/statements/create-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/create-workload-group-transact-sql.md
         - name: XML INDEX
@@ -16781,6 +16774,8 @@ items:
           href: ../t-sql/statements/drop-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/drop-view-transact-sql.md
+        - name: ワークロードの分類子
+          href: ../t-sql/statements/drop-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/drop-workload-group-transact-sql.md
         - name: XML SCHEMA COLLECTION
@@ -17183,9 +17178,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery での名前空間の処理
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: c1bcf717605ff5c3cd1cf5722154fe518721c9e6
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d658d240d44697d6d3632142b1d4034468ffc91f
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579792"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974571"
