@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79280cd1e9499cf9a76f50c6aad255dbd3db81ef
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: db8b22746702fa0df86478dadee700938cd63c40
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556174"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974501"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 の各エディションとサポートされている機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -195,6 +195,8 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |NUMA 対応のラージ ページ メモリとバッファー配列の割り当て|はい|いいえ|いいえ|いいえ|いいえ|
 |バッファー プール拡張|はい|[はい]|いいえ|いいえ|いいえ|
 |IO リソース管理|はい|いいえ|いいえ|いいえ|いいえ|  
+|先行読み取り|可|いいえ|いいえ|いいえ|いいえ|
+|拡張スキャン|可|いいえ|いいえ|いいえ|いいえ|
 |遅延持続性|はい|[はい]|[はい]|[はい]|はい|
 |自動調整|はい|いいえ|いいえ|いいえ|いいえ|
 |バッチ モードの適応型結合|はい|いいえ|いいえ|いいえ|いいえ|
@@ -407,7 +409,3 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-
-
-これはテストです

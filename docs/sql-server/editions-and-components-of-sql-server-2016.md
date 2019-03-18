@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 78a5b1462316f859339f5922a0fa9aa098c6e854
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a5c0b2714637068f72aa9e8caf7f7213c865131f
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803287"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974481"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 の各エディションとサポートされている機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,9 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |複数の Filestream コンテナー|はい|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|
 |NUMA 対応のラージ ページ メモリとバッファー配列の割り当て|可|いいえ <sup>4</sup>|いいえ|いいえ|いいえ|
 |バッファー プール拡張|はい|[はい]|いいえ|いいえ|いいえ|
-|IO リソース管理|はい|いいえ|いいえ|いいえ|いいえ|  
+|IO リソース管理|はい|いいえ|いいえ|いいえ|いいえ|
+|先行読み取り|可|いいえ|いいえ|いいえ|いいえ|
+|拡張スキャン|可|いいえ|いいえ|いいえ|いいえ|
 |遅延持続性|はい|[はい]|[はい]|[はい]|はい|
 
 <sup>1</sup> インメモリ OLTP データ サイズおよび列ストア セグメント キャッシュは、「スケールの制限」セクションでエディションごとに指定されているメモリ量に制限されます。 並列処理には最大限度があります。 インデックス構築のための並列処理の度合い (DOP) は、Standard Edition では 2 DOP に、Web および Express Edition では 1 DOP に制限されます。 これは、ディスク ベース テーブルとメモリ最適化テーブルで作成された列ストア インデックスに当てはまります。
