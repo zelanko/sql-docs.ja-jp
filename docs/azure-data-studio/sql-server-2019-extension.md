@@ -3,7 +3,7 @@ title: SQL Server 2019 拡張機能 (プレビュー)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 用 SQL Server 2019 Preview の拡張機能
 ms.custom: seodec18
-ms.date: 02/13/2019
+ms.date: 03/18/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,13 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c90be7f91c4f3bb465e2cf29b8ee69e2f8d8b6e9
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231059"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161550"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 拡張機能 (プレビュー)
 
@@ -31,9 +30,9 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 
    |プラットフォーム|ダウンロード|リリース日|バージョン
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072794)|2019 年 2 月 13日 |0.10.2
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072793)|2019 年 2 月 13日 |0.10.2
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072792)|2019 年 2 月 13日 |0.10.2
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|2019 年 3 月 18日 |0.11.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|2019 年 3 月 18日 |0.11.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|2019 年 3 月 18日 |0.11.0
 
 1. Azure Data Studio で次のように選択します。 **VSIX パッケージからの拡張機能のインストール**から、**ファイル**メニューとダウンロードした .vsix ファイルを選択します。
 
@@ -44,6 +43,14 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 1. 再読み込みした後、拡張機能の依存関係がインストールされます。 [出力] ウィンドウで進行状況を表示して、まで時間がかかる可能性があります。
 
 1. インストールが完了したら、依存関係、Azure Data Studio を閉じて。 **SQL Server のビッグ データ クラスター**接続の種類は、Azure Data Studio を再起動するまでは使用できません。
+
+## <a name="release-notes-v0110"></a>リリース ノート (v0.11.0)
+  * Jupyter Notebook のサポート、Python3 および Spark カーネルでは、具体的にはサポートは、Azure Data Studio に移動されました。 この拡張機能では、Notebook を使用するには必要なくなりました。
+  * 外部データ ウィザードでは、複数のバグ修正:
+    * Oracle 型のマッピングは、SQL Server 2019 CTP 2.3 で出荷された変更に合わせて更新されました。
+    * テーブルのマッピング コントロールに入力した新しいスキーマが失われるされる問題を修正しました。
+    * テーブルのマッピングでデータベース ノードのチェックになりませんでしたすべてのテーブルとビューがチェックされる問題を修正しました。
+
 
 ## <a name="release-notes-v0102"></a>リリース ノート (v0.10.2)
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 のサポート

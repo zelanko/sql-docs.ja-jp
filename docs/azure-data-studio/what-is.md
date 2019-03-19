@@ -11,12 +11,12 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca279b9bbc945cbd9aad5be0bce3165820598fe1
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: f7369893be3cd42dab0e0c0cd870a52c639083b5
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030776"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161609"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio とは何ですか。
 
@@ -27,15 +27,15 @@ SQL Operations Studio のプレビューの名前でリリースされていた�
 **[ダウンロードとインストール [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
 
-## <a name="transact-sql-t-sql-code-editor-with-intellisense"></a>IntelliSense を備えた TRANSACT-SQL (T-SQL) のコード エディター
+## <a name="sql-code-editor-with-intellisense"></a>IntelliSense を備えた SQL コード エディター
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 最新、キーボード フォーカスされた T-SQL コーディング エクスペリエンスを日常的なタスクの複数のタブ ウィンドウ、リッチ T-SQL エディター、IntelliSense、キーワード補完、コード スニペット、コード ナビゲーション、およびソース管理などの組み込み機能を簡単に提供しています(Git) を統合します。 オンデマンドで T-SQL クエリを実行して、表示およびテキスト、JSON、または Excel として結果を保存します。 データの編集、お気に入りのデータベースの接続を整理し、使い慣れたオブジェクト ブラウジング操作でデータベース オブジェクトを参照します。 T-SQL エディターを使用する方法については、次を参照してください。 [T-SQL エディターを使用して、データベース オブジェクトを作成する](tutorial-sql-editor.md)します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] コーディング エクスペリエンスを日常的なタスクの複数のタブ ウィンドウ、豊富な SQL エディター、IntelliSense、キーワード補完、コード スニペット、コード ナビゲーション、およびソース管理などの組み込み機能を簡単に、キーボード フォーカスされた最新の SQL を提供しています(Git) を統合します。 オンデマンドでの SQL クエリを実行、表示テキスト、JSON、または Excel として結果を保存します。 データの編集、お気に入りのデータベースの接続を整理し、使い慣れたオブジェクト ブラウジング操作でデータベース オブジェクトを参照します。 SQL エディターを使用する方法については、次を参照してください。[データベース オブジェクトを作成するには、SQL エディターを使用して](tutorial-sql-editor.md)します。
 
-## <a name="smart-t-sql-code-snippets"></a>スマートな T-SQL のコード スニペット
+## <a name="smart-sql-code-snippets"></a>スマート SQL コード スニペット
 
-T-SQL コード スニペットでは、データベース、テーブル、ビュー、ストアド プロシージャ、ユーザー、ログイン、ロールなどを作成し、既存のデータベース オブジェクトを更新する適切な T-SQL 構文を生成します。 開発やテスト目的で、データベースのコピーをすばやく作成および生成し、実行するスマート スニペットを使用して作成し、スクリプトを挿入します。
+SQL コード スニペットでは、データベース、テーブル、ビュー、ストアド プロシージャ、ユーザー、ログイン、ロールなどを作成し、既存のデータベース オブジェクトを更新する適切な SQL 構文を生成します。 開発やテスト目的で、データベースのコピーをすばやく作成および生成し、実行するスマート スニペットを使用して作成し、スクリプトを挿入します。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] カスタムの T-SQL コード スニペットを作成する機能を提供します。 詳細についてを参照してください。[コード スニペットを作成および使用](code-snippets.md)します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] カスタムの SQL コード スニペットを作成する機能を提供します。 詳細についてを参照してください。[コード スニペットを作成および使用](code-snippets.md)します。
 
 
 ## <a name="customizable-server-and-database-dashboards"></a>カスタマイズ可能なサーバーとデータベースのダッシュ ボード
@@ -57,10 +57,112 @@ T-SQL コード スニペットでは、データベース、テーブル、ビ�
 機能拡張の詳細については[!INCLUDE[name-sos](../includes/name-sos-short.md)]を参照してください[Extensibility](extensibility.md)します。
 拡張機能を作成する方法については、次を参照してください。[拡張機能作成](extension-authoring.md)です。
 
+## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) での機能の比較
+
+**場合は、Azure Data Studio を使用します。**
+- MacOS または Linux で実行する必要があります。
+- SQL Server 2019 のビッグ データ クラスターに接続します。
+- ほとんどの編集、またはクエリの実行時間を費やす
+- 結果セットを視覚化してグラフを簡単にする必要があります。
+- Sqlcmd または Powershell を使用して、統合ターミナルを使用して、ほとんどの管理タスクを実行することができます。
+- ウィザードのエクスペリエンスを最小限に抑える必要があります。
+- 詳細な管理を構成する必要はありません。
+
+**場合は、SQL Server Management Studio を使用します。**
+- データベース管理タスクのほとんどの時間を費やす
+- 管理の詳細な構成を行う
+- ユーザー管理、脆弱性評価、セキュリティ機能の構成など、セキュリティの管理を行う
+- SQL Server クエリ ストアをレポートの使用します。
+- 作成する必要がありますパフォーマンス チューニング アドバイザーとダッシュ ボードの使用
+- Dacpac のインポート/エクスポートを行う
+- 登録済みサーバーへのアクセスし、Windows 上のサービスに、SQL Server を制御する必要があります。
+
+### <a name="shell"></a>Shell
+
+|機能|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|Azure サインイン|はい|はい|
+|ダッシュボード|はい||
+|拡張機能|はい||
+|統合ターミナル|はい||
+|オブジェクト エクスプローラー|はい|はい|
+|オブジェクト スクリプト作成|はい|はい|
+|プロジェクト システム|はい||
+|テーブルから選択します|はい|はい|
+|ソース コード管理|はい||
+|作業ウィンドウ|はい||
+|テーマ|はい||
+|ダーク モード|はい||
+|Azure リソース エクスプ ローラー|[プレビュー]||
+|スクリプト生成ウィザード||はい|
+|Import\Export DACPAC||はい|
+|オブジェクトのプロパティ||はい|
+|テーブル デザイナー (Table Designer)||はい|
+
+
+### <a name="query-editor"></a>クエリ エディター
+
+|機能|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|グラフ ビューアー|はい||
+|CSV、JSON、XLSX に結果をエクスポートします。|はい||
+|IntelliSense|はい|はい|
+|スニペット|はい|はい|
+|プランを表示します。|[プレビュー]|はい|
+|クライアント統計||はい|
+|ライブ クエリ統計||はい|
+|[クエリ オプション]||はい|
+|[結果をファイルに出力]||はい|
+|[結果をテキストで表示]||はい|
+|空間ビューアー||はい|
+|sqlcmd||はい|
+
+### <a name="operating-system-support"></a>オペレーティング システムのサポート
+
+|機能|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|Linux|はい||
+|macOS|はい||
+|Windows|はい|はい|
+
+### <a name="data-engineering"></a>データ エンジニア リング
+
+|機能|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|ウィザードの外部テーブルを作成します。|[プレビュー]||
+|HDFS の統合|[プレビュー]||
+|ノートブック|[プレビュー]||
+
+### <a name="database-administration"></a>データベースの管理
+
+|機能|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|バックアップ/復元|はい|はい|
+|フラット ファイルのインポート|[プレビュー]|はい|
+|SQL エージェント|[プレビュー]|はい|
+|SQL Profiler|[プレビュー]|はい|
+|Always On||はい|
+|Always Encrypted||はい|
+|データのコピー ウィザード||はい|
+|チューニング アドバイザーのデータ||はい|
+|エラー ログの表示||はい|
+|メンテナンス プラン||はい|
+|マルチ サーバー クエリ||はい|
+|ポリシー ベースの管理||はい|
+|PolyBase||はい|
+|クエリ ストア||はい|
+|[登録済みサーバー]||はい|
+|のレプリケーション||はい|
+|セキュリティの管理||はい|
+|Service Broker||はい|
+|SQL Mail||はい|
+|テンプレート エクスプローラー||はい|
+|脆弱性評価||はい|
+|XEvent 管理||はい|
 
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [ダウンロードとインストール [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [接続し、SQL Server のクエリ](quickstart-sql-server.md)
 - [Azure SQL Database 接続およびクエリ](quickstart-sql-database.md)

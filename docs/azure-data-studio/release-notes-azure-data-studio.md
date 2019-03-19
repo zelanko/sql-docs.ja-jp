@@ -11,16 +11,47 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b481151636db4f54212c96b0ea21f989afb917d3
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581673"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161629"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新のリリースをインストールをダウンロードしてください。](download.md)**
+
+## <a name="march-2019"></a>3 月 2019
+
+2019 年 3 月 18日&nbsp;  /  &nbsp;バージョン。1.5.1
+
+&nbsp;
+
+| [変更] | 詳細 |
+| :----- | :------ |
+| 追加[Data Studio の Azure の PostgreSQL 拡張機能](postgres-extension.md) | サポートされている機能: <br/>&bull; &nbsp; 接続ダイアログ <br/>&bull; &nbsp; オブジェクト エクスプ ローラー <br/>&bull; &nbsp; クエリ エディター <br/>&bull; &nbsp; グラフ作成 <br/>&bull; &nbsp; ダッシュ ボード <br/>&bull; &nbsp; スニペット <br/>&bull; &nbsp; データを編集します。 <br/>&bull; &nbsp; Notebook |
+| 追加の SQL のノートブック | Notebook の組み込みビューアーを SQL のカーネル サポートが追加されました。 <br/>&bull; &nbsp; サポートする T-SQL <br/>&bull; &nbsp; PGSQL のサポート |
+| PowerShell の拡張機能を追加しました  | 経由では、 [PowerShell 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)VS コードから発生します。  |
+| SQL Server dacpac の拡張機能が追加  | 新しい拡張機能に SQL Server インポート拡張機能からのデータ層アプリケーションのウィザードを削除します。  |
+| 追加されたコミュニティ拡張子 QueryPlan.show | クエリ プランを視覚化する統合サポートを追加します。  |
+| 更新された SQL Server 2019 Preview の拡張機能 | &bull; &nbsp; Jupyter Notebook のサポート、具体的には Python3 および Spark カーネルでは、中核となる Azure データ Studio ツールに移動します。 <br/>&bull; &nbsp; 外部のデータ ウィザードのバグ修正  |
+| 解決済みバグと問題。 | 参照してください[バグと github の問題](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1)します。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>既知の問題
+- [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427):準備完了にはセルの前にカーネルで実行 をクリックしての致命的なエラーの結果を Spark**回避策。** 任意のセルを実行するまでのカーネルが読み込まれるまでの待機
+- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493):SQL 認証 - ユーザー パスワードのプロンプトを使用して SSMS から起動された広告**回避策。** ここでは、Windows 認証を使用します。 
+- [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494):SQL のノートブック機能をインストールすることができません。 <br/>
+**回避策:** 回避策の手順に従います[ここ](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832)します。 
+- [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503):Azure Data Studio をダウンロード フォルダー (Mac) から直接開かれたにすることはできません。 <br />
+**回避策:** アプリを解凍した後、コンピューターを再起動します。 調査されます。 
+- [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539):Notebook 名を付けて接続コンテキストを失った <br />
+**回避策:** 次のリリースで修正される予定です。 
+- [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458):無効なバージョンを使用する場合、Dacpac の抽出が SqlToolsService をクラッシュします。 <br/>
+**回避策:** Azure Data Studio を再起動し、正しいバージョンを使用することを確認します。
+- 新しい Notebook とノートブックを開くアイコンは失われます <br/> 
+**回避策:** 従来の接続の種類が非推奨とされます。 SQL Server エンドポイントに接続することをお勧めします。 および、期待どおりに、すべてのアクション (新しい Notebook、Spark ジョブ) が表示されます。 
 
 ## <a name="february-2019"></a>2 月 2019
 

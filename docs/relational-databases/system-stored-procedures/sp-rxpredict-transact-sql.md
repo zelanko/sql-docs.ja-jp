@@ -1,6 +1,5 @@
 ---
 title: sp_rxPredict |Microsoft Docs
-ms.custom: ''
 ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: HeidiSteen
 ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: addca46cd1ebf05212b0e8721d1799eefbad3bb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 50e25162f88c42c0728f951702d304975fb7091b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842930"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161599"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,6 @@ Machine learning モデルを SQL Server データベースにバイナリ形式
 R と Python の機械学習のモデルがほぼリアルタイムでのスコア付けを提供します。 `sp_rxPredict` ストアド プロシージャのラッパーとして提供されるは、`rxPredict`で R 関数[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)と[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)、および[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) でのPython関数[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)と[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)します。 C++ で記述され、専用の操作をスコア付けは最適化されています。
 
 シリアル化され、ターゲット データベース エンジンのインスタンスでバイナリ形式で格納すると、R や Python を使用して、モデルを作成する必要があります、R または Python の統合がインストールされていない場合でもデータベース エンジンのインスタンスから使用できます。 詳細については、次を参照してください。 [sp_rxPredict とリアルタイム スコアリング](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)します。
-
 
 ## <a name="syntax"></a>構文
 
@@ -64,13 +62,11 @@ sp_rxPredict  ( @model, @input )
 
 ユーザーのニーズ`EXECUTE`データベースに対する権限。
 
-
 ### <a name="supported-algorithms"></a>サポートされているアルゴリズム
 
 作成しモデルのトレーニング、R や Python のサポートされるアルゴリズムのいずれかを使用するのには、用意[SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017)、 [SQL Server 2016 R Server (スタンドアロン)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)、 [SQL Server 2017 MachineLearning サービス (R または Python)](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017)、または[SQL Server 2017 Server (スタンドアロン) (R または Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017)します。
 
-
-#### <a name="r-revoscaler-models"></a>R: RevoScaleR のモデル
+#### <a name="r-revoscaler-models"></a>R:RevoScaleR のモデル
 
   + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)
@@ -78,7 +74,7 @@ sp_rxPredict  ( @model, @input )
   + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
   + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
 
-#### <a name="r-microsoftml-models"></a>R: MicrosoftML モデル
+#### <a name="r-microsoftml-models"></a>R:MicrosoftML のモデル
 
   + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
@@ -87,7 +83,7 @@ sp_rxPredict  ( @model, @input )
   + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
   + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
-#### <a name="r-transformations-supplied-by-microsoftml"></a>R: MicrosoftML によって提供される変換
+#### <a name="r-transformations-supplied-by-microsoftml"></a>R:MicrosoftML によって提供される変換
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
@@ -113,7 +109,7 @@ sp_rxPredict  ( @model, @input )
   + [rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
   + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
 
-#### <a name="python-transformations-supplied-by-microsoftml"></a>Microsoftml によって提供される Python: 変換
+#### <a name="python-transformations-supplied-by-microsoftml"></a>Python:Microsoftml によって提供される変換
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)

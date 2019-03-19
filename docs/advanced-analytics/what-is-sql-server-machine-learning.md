@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb98f2dad8f16ac7f9e06920d56bd225962dca7b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032953"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161849"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL Server 2017 での machine Learning サービス (R、Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,16 @@ SQL Server 2017 Machine Learning Services とは、データベース エンジ�
 
 Azure SQL Database で[(R) を使用した Machine Learning サービス](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)は現在パブリック プレビュー段階です。
 
-Machine Learning サービスのキーの価値提案は、スケール、および計算と、データが存在する処理を統合する機能での高度な分析を提供する、企業の R と Python パッケージの電源間でデータをプルする必要はありませんネットワーク。
+## <a name="bring-compute-power-to-the-data"></a>データにコンピューティング能力をもたらす
+
+Machine Learning サービスのキーの価値提案は、スケール、および計算と、データが存在する処理を統合する機能での高度な分析を提供する、企業の R と Python パッケージの電源間でデータをプルする必要はありませんネットワーク。 これは、複数の利点を提供します。
+
++ データのセキュリティ。 R および Python のデータ ソースに近い実行は無駄や安全でないデータ移動を回避します。
++ 速さ。 データベースは、セットベースの操作用に最適化されています。 インメモリ テーブルなどのデータベースの最新技術の概要と集計、処理が非常を行い、データ サイエンスを補完します。
++ 展開との統合が容易。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] その他の多くのデータ管理タスクやアプリケーションの操作のサーバーの全体のポイントです。 レポート ウェアハウスまたはデータベースに存在するデータを使用すると、機械学習ソリューションによって使用されるデータが一貫して最新の状態であることを確認します。 
++ クラウドとオンプレミス間の効率。 R または Python のセッションでデータの処理ではなくなどのエンタープライズ データ パイプラインに依存できます[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]と Azure Data Factory。 Power BI や [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を使用して、結果や分析を簡単にレポートできます。
+
+さまざまなデータ処理や分析タスクで SQL と R を正しく組み合わて使用することで、データ サイエンティストと開発者の両方の生産性がさらに向上します。
 
 <a name="components"></a>
 

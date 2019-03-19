@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: def60a6de7d5a6f3641a6de88410543e9e592ba4
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: ed1fbe8be63cd184fd49b1e76f94583bd50cf380
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645161"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161519"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>リアルタイムのスコアリングでは、SQL Server machine learning で sp_rxPredict
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53645161"
 
 ## <a name="how-real-time-scoring-works"></a>リアルタイムのスコアリング動作
 
-SQL Server 2017 と SQL Server 2016 でのリアルタイム スコアリングはサポートされて[モデルの種類がサポートされている](#bkmk_py_supported_algos)線形およびロジスティック回帰、デシジョン ツリー モデル化の。 Machine learning の特別なバイナリ形式で格納されているモデルに提供されるユーザー入力に基づいてスコアを生成するのにネイティブの C++ ライブラリを使用します。
+SQL Server 2017 と SQL Server 2016 の両方で RevoScaleR または MicrosoftML 関数をなどに基づいて特定のモデルの種類でのリアルタイム スコアリングはサポートされて[rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Machine learning の特別なバイナリ形式で格納されているモデルに提供されるユーザー入力に基づいてスコアを生成するのにネイティブの C++ ライブラリを使用します。
 
 トレーニング済みモデルは、外部言語のランタイムを呼び出さずにスコア付けに使用できます、ため、複数のプロセスのオーバーヘッドが減少します。 運用環境のシナリオをスコア付け用の予測パフォーマンスを向上させる多くをサポートしています。 データが SQL Server を越える、ため、結果は生成され、R と SQL の間のデータ変換されることがなく新しいテーブルに挿入します。
 
@@ -200,7 +200,7 @@ EXEC sp_rxPredict
 
 リアルタイムのスコア付け機能を無効にするには、管理者特権でコマンド プロンプトを開きし、次のコマンドを実行します。 `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 RxPredict を使用して、スコア付け方法の例は、次を参照してください。[エンド ツー エンド ローン償却予測ビルドを使用して Azure HDInsight Spark クラスターと SQL Server 2016 R サービス](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)します。
 
