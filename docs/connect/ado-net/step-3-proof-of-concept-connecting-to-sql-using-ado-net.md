@@ -162,7 +162,7 @@ SqlCommand.ExecuteReader メソッド:
   
   
   
-```CSharp  
+```C#  
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  
