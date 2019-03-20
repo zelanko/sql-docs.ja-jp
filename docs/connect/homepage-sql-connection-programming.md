@@ -96,7 +96,7 @@ C# および Visual Basic の場合など、.NET マネージ言語とは、ADO.
 
 <a name="an-116-csharp-ef-orm" />
 
-## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![Entity Framework のロゴ][image-ref-333-ef] C では、entity Framework (EF)&#x23;
+## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![Entity Framework のロゴ][image-ref-333-ef] C# では、Entity Framework(EF)
 
 Entity Framework (EF) は、オブジェクト リレーショナル マッピング (ORM) を提供します。 ORM によって、リレーショナル SQL database から取得されたデータを操作するオブジェクト指向プログラミング (OOP) ソース コードを簡単にできます。
 
