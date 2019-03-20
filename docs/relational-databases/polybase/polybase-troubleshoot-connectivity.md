@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 980bbb179c92e95d0386e672ed0b62d7ac8cc968
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803157"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57976332"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 
@@ -38,7 +38,7 @@ Kerberos によるセキュリティで保護された Hadoop クラスターに
 1. セキュリティで保護されたリソース (HDFS、MR2、YARN、ジョブ履歴など)
 1. キー配布センター (Active Directory のドメイン コント ローラーと呼ばれる)
 
-Hadoop によるセキュリティで保護された各リソースは、Hadoop クラスターで Kerberos が構成されている場合、一意の **サービス プリンシパル名 (SPN)** を使用して **キー配布センター (KDC)**  に登録されます。 この目的は、クライアントが **チケット保証チケット (TGT)** と呼ばれる一時的なユーザー チケットを取得することです。TGT は、クライアントがアクセスする対象の特定の SPN に対して、KDC から **サービス チケット (ST)** と呼ばれる別の一時的なチケットを要求するために必要です。  
+Hadoop によるセキュリティで保護された各リソースは、Hadoop クラスター上で Kerberos が構成されている場合、一意の**サービス プリンシパル名 (SPN)** を使用して**キー配布センター (KDC)** に登録されます。 この登録は、クライアントが KDC から**チケット保証チケット (TGT)** と呼ばれる一時的なユーザー チケットを取得することを目標に行われます。TGT は、クライアントがアクセスする対象の特定の SPN に対して、**サービス チケット (ST)** と呼ばれる別の一時的なチケットを要求するために必要です。  
 
 PolyBase では、Kerberos によるセキュリティで保護されたリソースに対する認証が要求されたときに、次の 4 ラウンドトリップ ハンドシェイクが行われます。
 
@@ -102,7 +102,7 @@ PolyBase には、Hadoop クラスターのプロパティを含む次の構成 
 | *名前ノードのポート* | 名前ノードのポートです。 CREATE EXTERNAL DATA SOURCE T-SQL の "LOCATION" 引数を参照します。 例: 8020。 |
 | *サービス プリンシパル* | KDC に対する管理サービス プリンシパルです。 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL の "IDENTITY" 引数と一致します。|
 | *サービスのパスワード* | コンソールにパスワードを入力するのではなく、パスワードをファイルに保存し、そのファイルのパスをここに指定します。 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL で "SECRET" 引数として使用するプリンシパルと一致する必要があります。 |
-| *リモート HDFS ファイル パス (省略可能) * | アクセスする対象である既存のファイルのパスです。 指定しない場合、ルート "/" が使用されます。 |
+| *リモート HDFS ファイル パス (省略可能) * | アクセスする対象である既存のファイルのパスです。 指定しない場合、ルート "/" が使用されます。 |
 
 ## <a name="example"></a>例
 
@@ -210,11 +210,12 @@ PolyBase は HDFS へのアクセスを試行しますが、必要なサービ�
 
 ## <a name="debugging-tips"></a>デバッグのヒント
 
-### <a name="mit-kdc"></a>MIT KDC  
+### <a name="mit-kdc"></a>MIT KDC  
 
-KDC に登録された SPN はすべて、管理者を含め、KDC ホストまたは構成されている任意の KDC クライアントで  **kadmin.local**  > (管理者ログイン) >  **listprincs**  を実行することで表示できます。 Hadoop クラスターで Kerberos が適切に構成されている場合は、クラスター内で使用可能なサービス (例: `nn`、`dn`、`rm`、`yarn`、`spnego` など) のそれぞれに、1 つの SPN が存在します。それらに対応する keytab ファイル (パスワード代用) は、既定で  **/etc/security/keytabs** で確認できます。 それらのファイルは KDC の秘密キーを使用して暗号化されます。  
+KDC に登録されたすべての SPN は、管理者を含めて、KDC ホストまたは構成されている任意の KDC クライアントで **kadmin.local** > (管理者ログイン) > **listprincs** を実行して表示できます。 Hadoop クラスターで Kerberos が適切に構成されている場合は、クラスター内で使用可能なサービス (例: `nn`、`dn`、`rm`、`yarn`、`spnego` など) のそれぞれに、1 つの SPN が存在します。それらに対応する keytab ファイル (パスワード代用) は、既定で **/etc/security/keytabs** にあります。 それらのファイルは KDC の秘密キーを使用して暗号化されます。  
 
-[`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) を使用して、KDC 上でローカルに管理者の資格情報を検証することも検討します。 たとえば、 `kinit identity@MYREALM.COM` のように使用します。 パスワードのプロンプトは、ID が存在することを示します。  KDC ログは既定で  **/var/log/krb5kdc.log** にあり、要求を行ったクライアント IP など、チケットに対するすべての要求が含まれています。 ツールが実行された SQL Server コンピューターの IP から 2 つの要求が行われています。1 つ目は認証サーバーからの TGT に対する要求 ( **AS\_REQ**) であり、その後にチケット保証サーバーから ST に対して要求する  **TGS\_REQ**  が続きます。
+[`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) を使用して、KDC 上でローカルに管理者の資格情報を検証することも検討します。 たとえば、`kinit identity@MYREALM.COM` のように使用します。 パスワードのプロンプトは、ID が存在することを示します。  
+KDC ログは既定で **/var/log/krb5kdc.log** にあり、要求を行ったクライアント IP を含め、チケットに対するすべての要求が記録されています。 ツールが実行された SQL Server コンピューターの IP から 2 つの要求が行われています。1 つ目は認証サーバーに対する TGT の要求 (**AS\_REQ**) であり、その後にチケット保証サーバーに ST を要求する **TGS\_REQ** が続きます。
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -224,7 +225,7 @@ KDC に登録された SPN はすべて、管理者を含め、KDC ホストま�
 
 ### <a name="active-directory"></a>Active Directory 
 
-Active Directory では、[コントロール パネル] > [Active Directory ユーザーとコンピューター] > [ *MyRealm*] >[ *MyOrganizationalUnit*] を参照することで、SPN を表示できます。 Hadoop クラスターで Kerberos が適切に構成されている場合は、使用可能なサービス (例: `nn`、`dn`、`rm`、`yarn`、`spnego` など) のそれぞれに、1 つの SPN が存在します。
+Active Directory では、[コントロール パネル] > [Active Directory ユーザーとコンピューター] > [*MyRealm*] > [*MyOrganizationalUnit*] を参照して SPN を表示できます。 Hadoop クラスターで Kerberos が適切に構成されている場合は、使用可能なサービス (例: `nn`、`dn`、`rm`、`yarn`、`spnego` など) のそれぞれに、1 つの SPN が存在します。
 
 ### <a name="general-debugging-tips"></a>一般的なデバッグのヒント
 

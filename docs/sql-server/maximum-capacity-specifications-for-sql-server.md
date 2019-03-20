@@ -21,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cb5b9ecbcc187a059747e9d3121ac50611a0418
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319403"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973811"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "56319403"
 |メモリ最適化テーブルのインデックス キーごとのバイト数||1 つの非クラスター化インデックスにつき 2,500 バイト。 すべてのインデックス キーが行内に収まる限り、ハッシュ インデックスに制限はなし。|メモリ最適化テーブルでは、非クラスター化インデックスは、宣言された最大サイズが 2,500 バイトを超えるキー列を持つことはできません。 キー列の実際のデータが、宣言されている最大サイズよりも小さいかどうかには関係ありません。<br /><br /> ハッシュ インデックス キーの場合、サイズにハード リミットはありません。<br /><br /> メモリ最適化テーブルのインデックスの場合、すべてのインデックスがすべての列を本質的にカバーするため、付加列の概念はありません。<br /><br /> メモリ最適化テーブルの場合、行のサイズが 8,060 バイトでも、一部の可変長列をこの 8,060 バイトの外側に物理的に保存できます。 ただし、テーブルのすべてのインデックスのすべてのキー列の宣言された最大サイズと、テーブル内の追加の固定長列のすべてが、8,060 バイトに収まる必要があります。|  
 |外部キーごとのバイト数||900||  
 |主キーごとのバイト数||900||  
-|行ごとのバイト数||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 行オーバーフロー ストレージがサポートされています。これにより、可変長列の行外への移動が可能になります。 行外に移動される可変長列のうち、ルートの 24 バイトだけが本体のレコードに格納されます。これにより、実際の行制限は、以前のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]よりも大きい値になります。 詳細については、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックの「8 KB を超える場合の行オーバーフロー データ」を参照してください。|  
+|行ごとのバイト数||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 行オーバーフロー ストレージがサポートされています。これにより、可変長列の行外への移動が可能になります。 行外に移動される可変長列のうち、ルートの 24 バイトだけが本体のレコードに格納されます。これにより、実際の行制限は、以前のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]よりも大きい値になります。 詳細については、[大量の行のサポート](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support)に関する記事を参照してください。|  
 |メモリ最適化テーブル内の行ごとのバイト数||8,060|[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] から、メモリ最適化テーブルで行外ストレージがサポートされます。 テーブル内のすべての列の最大サイズが 8,060 バイトを超える場合、可変長列が行外に押し出されます。コンパイル時の決定です。 行外に保存された列用に、8 バイトの参照だけが行内に保存されます。 詳細については、「 [メモリ最適化テーブルのテーブルと行のサイズ](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)」を参照してください。|  
 |ストアド プロシージャのソース テキスト内のバイト数||バッチ サイズまたは 250 MB のいずれか小さい方||  
 |**varchar (max)**、 **varbinary (max)**、 **xml**、 **テキスト**、または **イメージ** あたりのバイト数||2^31-1||  

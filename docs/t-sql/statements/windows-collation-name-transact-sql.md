@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572845"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974351"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 照合順序名 (Transact-SQL)
 
@@ -42,8 +42,9 @@ ms.locfileid: "57572845"
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
 }
+| { _UTF8 }
 | { _BIN | _BIN2 }
 ```
 
@@ -72,9 +73,14 @@ CollationDesignator_<ComparisonStyle>
 **Omitted** を指定すると文字幅は区別されず、**WS** を指定すると文字幅が区別されます。
 
 *VariationSelectorSensitivity*  
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+**適用対象**:[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 以降 
 
 **Omitted** を指定すると異体字セレクターは区別されず、**VSS** を指定すると異体字セレクターが区別されます。
+
+**UTF8**  
+**適用対象**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降   
+
+UTF-8 のエンコードが対象となるデータ型で使用されるように指定します。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
 
 **BIN**  
 旧バージョンとの互換性のあるバイナリ並べ替え順を使用します。
@@ -83,7 +89,6 @@ CollationDesignator_<ComparisonStyle>
 コード ポイントの比較セマンティクスを使用するバイナリ並べ替え順を指定します。
 
 ## <a name="remarks"></a>Remarks
-
 照合順序のバージョンによっては、一部のコード ポイントで、並べ替え加重や大文字/小文字マッピングが定義されない可能性があります。 たとえば、次のような `LOWER` 関数の出力を比較してみます。この場合、同じ文字が指定されていますが、同じ照合順序でもバージョンは異なります。
 
 ```sql

@@ -2,7 +2,7 @@
 title: エンタープライズを評価し、評価レポート (SQL Server) の統合 |Microsoft Docs
 description: DMA を使用して、企業を評価し、Azure SQL Database に SQL Server をアップグレードまたは移行する前に評価レポートを統合する方法について説明します。
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 03/19/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: b2723d437a8171570436fb42f7cd9e305e3a8fea
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
+ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974291"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58198201"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>エンタープライズを評価し、DMA で評価レポートの統合
 
@@ -37,15 +37,15 @@ ms.locfileid: "57974291"
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)します。
     - [Azure PowerShell モジュール](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - ダウンロードして抽出します。
-    - [DMA レポートの Power BI テンプレート](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports.zip)します。
-    - [LoadWarehouse スクリプト](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse1.zip)します。
+    - [DMA レポートの Power BI テンプレート](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)します。
+    - [LoadWarehouse スクリプト](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip)します。
 
 ## <a name="loading-the-powershell-modules"></a>PowerShell モジュールの読み込み
 PowerShell モジュールを PowerShell モジュールのディレクトリに保存するを使用する前にそれらを明示的に読み込むことがなくモジュールを呼び出すことができます。
 
 モジュールを読み込むには、次の手順に従います。
 1. C:\Program \windowspowershell\modules に移動し、という名前のフォルダーを作成し、 **DataMigrationAssistant**します。
-2. 開く、 [PowerShell モジュール](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules2.zip)、し、作成したフォルダーに保存します。
+2. 開く、 [PowerShell モジュール](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/3/PowerShell-Modules2.zip)、し、作成したフォルダーに保存します。
 
       ![PowerShell モジュール](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 

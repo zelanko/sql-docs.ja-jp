@@ -11,12 +11,12 @@ ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f2b44f49f7fb439472028a220392723529f68b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e937a9fa9d3eba7c766192c83d69a514054f762a
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819790"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973021"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ catalog.validate_project [ @folder_name = ] folder_name
     , [ @validate_type = ] validate_type  
     , [ @validation_id = ] validation_id OUTPUT  
  [  , [ @use32bitruntime = ] use32bitruntime ]  
- [  , [ @target_environment = ] target_environment ]  
+ [  , [ @environment_scope = ] environment_scope ]  
  [  , [ @reference_id = ] reference_id ]  
 ```  
   
@@ -43,7 +43,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  プロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
   
  [ @validate_type = ] *validate_type*  
- 実行する検証の種類を示します。 文字 `F` を使用すると、完全な検証を実行します。 *validate_type* は **char (1)** です。  
+ 実行する検証の種類を示します。 文字 `F` を使用すると、完全な検証を実行します。 このパラメーターは省略可能です。文字 `F` が既定で使用されます。 *validate_type* は **char (1)** です。  
   
  [ @validation_id = ] *validation_id*  
  検証の一意識別子 (ID) を返します。 *validation_id* は **bigint** です。  
@@ -52,7 +52,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  64 ビット オペレーティング システムで 32 ビットのランタイムを使用してパッケージを実行すべきかどうかを示します。 値 `1` を使用して 64 ビットのオペレーティング システムで実行されているときに、32 ビット ランタイムを使用してパッケージを実行します。 値 `0` を使用すると、64 ビット オペレーティング システムで実行しているときに、64 ビット ランタイムでパッケージが実行されます。 このパラメーターはオプションです。 *use32bitruntime* は **bit** です。  
   
  [ @environment_scope = ] *environment_scope*  
- 検証が考慮する環境参照を示します。 値が `A` の場合は、プロジェクトに関連するすべての環境参照が検証に含まれます。 値が `S` の場合は、1 つの環境参照のみが含まれます。 値が `D` の場合、環境参照は含まれず、各パラメーターには、検証に合格するため、既定のリテラル値を指定する必要があります。 このパラメーターは省略可能です。文字 `D` が既定で使用されます。 *environment_scope* は **Char(1)** です。  
+ 検証が考慮する環境参照を示します。 値が `A` の場合は、プロジェクトに関連するすべての環境参照が検証に含まれます。 値が `S` の場合は、1 つの環境参照のみが含まれます。 値が `D` の場合、環境参照は含まれず、各パラメーターには、検証に合格するため、既定のリテラル値を指定する必要があります。 このパラメーターは省略可能です。文字 `D` が既定で使用されます。 *environment_scope* は **char(1)** です。  
   
  [ @reference_id = ] *reference_id*  
  環境参照の一意の ID。 このパラメーターは、検証に 1 つの環境参照が含まれていて、*environment_scope* が `S` の場合にのみ必要です。 *reference_id* は **bigint** です。  

@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 12a3fff2ff310f2aa096ec4bc49b76b9895cf3f7
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802378"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974521"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,23 +54,23 @@ ms.locfileid: "56802378"
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Sqlcmd ユーティリティの最新バージョンをダウンロードします。
 
-**[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15.0 for SQL Server (x64) (2.4 MB)をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2043518)**
-<br>**[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15.0 for SQL Server (x86) (2.2 MB)をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2043622)**
+**[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15.0 for SQL Server (x64) (2.6 MB) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15.0 for SQL Server (x86) (2.3 MB) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 コマンド ライン ツールは一般公開 (GA) のインストーラー パッケージでリリースされる[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]します。
 
 **バージョン情報**
 
 リリース番号: 15.0 <br>
-ビルド番号: 15.0.1000.34<br>
-リリース日: 2018 年 10 月 18 日
+ビルド番号: 15.0.1300.359<br>
+リリース日: 2019 年 3 月 13 日
 
 SQLCMD の新しいバージョンでは、SQL Database、SQL Data Warehouse、および Always Encrypted 機能の多要素認証 (MFA) のサポートを含む、Azure AD の認証をサポートします。
 新しい BCP では、SQL Database と SQL Data Warehouse 用の Multi-factor Authentication (MFA) のサポートなど、Azure AD の認証をサポートします。
 
-**システム要件**Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 このコンポーネントには、 [Windows インストーラー4.5](https://www.microsoft.com/download/details.aspx?id=8483)と[SQL Server 用 Microsoft ODBC Driver 17.2](https://www.microsoft.com/download/details.aspx?id=56567)します。
+**システム要件**Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 このコンポーネントには、 [Windows インストーラー4.5](https://www.microsoft.com/download/details.aspx?id=8483)と[SQL Server 用 Microsoft ODBC Driver 17.3.1.1](https://www.microsoft.com/download/details.aspx?id=56567)します。
  
-SQLCMD のバージョンの実行を確認する`sqlcmd -?`コマンドし、その 15.0.1000.34 のことを確認します。 バージョン以降使用ができます。
+SQLCMD のバージョンの実行を確認する`sqlcmd -?`コマンドし、その 15.0.1300.359 のことを確認します。 バージョン以降使用ができます。
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: コマンド プロンプトからの SQL Server のインストール | Microsoft Docs
 ms.custom: ''
-ms.date: 01/17/2018
+ms.date: 03/13/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1aa7350ca8232f0b57a8d7ecf960d69838b26d8b
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: a0aa770bfbf3486dedf045b6a6da3f88c89bbade
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662986"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57976436"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 
@@ -274,7 +274,7 @@ ms.locfileid: "56662986"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の開始アカウントを指定します。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必須](#Accounts)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの開始アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **省略可**|[の](#Accounts) スタートアップ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]モードを指定します。|  
-|Python/Machine Learning Services (データベース内)|MPYCACHEDIRECTORY|このパラメーターを使用して、SQL Server 2017 Machine Learning Services または Machine Learning Server (スタンドアロン) で Python 機能をサポートするためのキャッシュ ディレクトリを指定します。 通常、この設定を使用するのは、[インターネット アクセスを使用していないコンピューターでコマンド ラインから](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access) Python コンポーネントをインストールする場合です。|  
+|Python/Machine Learning Services (データベース内)|MPYCACHEDIRECTORY|将来の使用のために予約されています。 インターネットに接続されていないコンピューター上にインストール用の Python .CAB ファイルを格納するには %TEMP% を使用します。 |  
 |R/Machine Learning Services (データベース内)|MRCACHEDIRECTORY|このパラメーターを使用して、SQL Server 2017 Machine Learning Services または Machine Learning Server (スタンドアロン) で Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (スタンドアロン)、または R の機能をサポートするためのキャッシュ ディレクトリを指定します。 通常、この設定を使用するのは、[インターネット アクセスを使用していないコンピューターでコマンド ラインから](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access) R コンポーネントをインストールする場合です。|  
   
 ###### <a name="sample-syntax"></a>サンプル構文:  
@@ -846,7 +846,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |:---|:---|:---|  
 |SQL||[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、レプリケーション、フルテキスト、および [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]をインストールします。|  
 ||SQLEngine|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のみをインストールします。|  
-||のレプリケーション|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]と共にレプリケーション コンポーネントをインストールします。|  
+||レプリケーション|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]と共にレプリケーション コンポーネントをインストールします。|  
 ||FullText|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]と共にフルテキスト コンポーネントをインストールします。|  
 ||DQ|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了するために必要なファイルをコピーします。 SQL Server のインストールが完了したら、DQSInstaller.exe ファイルを実行して、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了させる必要があります。 詳細については、「 [Data Quality Server のインストールを完了するための DQSInstaller.exe の実行](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)」をご覧ください。 このパラメーターでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]もインストールされます。|  
 ||PolyBase|PolyBase コンポーネントをインストールします。|  

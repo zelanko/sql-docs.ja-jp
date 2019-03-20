@@ -13,18 +13,18 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046582"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072316"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 このチュートリアルでは、[セキュア エンクレーブを使用する Always Encrypted](encryption/always-encrypted-enclaves.md) の開始方法について説明します。 次のことを示します。
-- セキュア エンクレーブを使用する Always Encrypted をテストおよび評価する単純な環境を作成する方法。
+- セキュア エンクレーブを使用する Always Encrypted をテストおよび評価する基本的な環境を作成する方法。
 - SQL Server Management Studio (SSMS) を使用して、データのインプレース暗号化を行い、暗号化された列に対して高度なクエリを実行する方法。
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -40,7 +40,7 @@ ms.locfileid: "54046582"
 - Windows 10 Enterprise バージョン 1809、または Windows Server 2019 Datacenter
 - [SQL Server Management Studio (SSMS) 18.0 以降](../../ssms/download-sql-server-management-studio-ssms.md)。
 
-または、別のマシンに SSMS をインストールすることができます。
+代わりに、別のコンピューター上に SSMS をインストールすることができます。
 
 >[!WARNING] 
 >運用環境では、SSMS またはその他のツールを使用して Always Encrypted キーを管理したり、SQL Server コンピューター上の暗号化されたデータに対してクエリを実行したりしないでください。これらの操作を行うと、Always Encrypted の使用目的が一部または完全に達成されなくなることがあります。
@@ -139,11 +139,11 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 この手順では、SQL Server インスタンス上でエンクレーブを使用する Always Encrypted の機能を有効にします。
 
 1. SSMS を開き、sysadmin として SQL Server インスタンスに接続し、新しいクエリ ウィンドウを開きます。
-2. セキュア エンクレーブの型を VBS に構成します。
+2. セキュア エンクレーブの型を仮想化ベースのセキュリティ (VBS) に構成します。
 
    ```sql
-   EXEC sys.sp_configure 'column encryption enclave type', 1
-   RECONFIGURE
+   EXEC sys.sp_configure 'column encryption enclave type', 1;
+   RECONFIGURE;
    ```
 
 3. SQL Server インスタンスを再起動して、前の変更を反映します。 SSMS でインスタンスを再起動するには、オブジェクト エクスプローラー上でそのインスタンスを右クリックし、[再起動] を選択します。 インスタンスの再起動後に、再接続します。
@@ -152,10 +152,10 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
-   WHERE [name] = 'column encryption enclave type'
+   WHERE [name] = 'column encryption enclave type';
    ```
 
-    クエリによって、次のような行が返されます。  
+    クエリでは、次の結果が返されるはずです。  
 
     | NAME                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
@@ -164,7 +164,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 5. 暗号化された列に対して高度な計算を有効にするには、次のクエリを実行します。
 
    ```sql
-   DBCC traceon(127,-1)
+   DBCC traceon(127,-1);
    ```
 
     > [!NOTE]
@@ -177,7 +177,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 2. ContosoHR という名前の新しいデータベースを作成します。
 
     ```sql
-    CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2
+    CREATE DATABASE [ContosoHR];
     ```
 
 3. 新規に作成したデータベースに接続していることを確認します。 Employees という名前の新しいテーブルを作成します。
@@ -190,8 +190,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
         [FirstName] [nvarchar](50) NOT NULL,
         [LastName] [nvarchar](50) NOT NULL,
         [Salary] [money] NOT NULL
-    ) ON [PRIMARY]
-    GO
+    ) ON [PRIMARY];
     ```
 
 4. いくつかの従業員レコードを Employees テーブルに追加します。
@@ -206,9 +205,8 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
             ('795-73-9838'
             , N'Catherine'
             , N'Abel'
-            , $31692)
-    GO
-
+            , $31692);
+ 
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -218,8 +216,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
             ('990-00-6818'
             , N'Kim'
             , N'Abercrombie'
-            , $55415)
-    GO
+            , $55415);
     ```
 
 ## <a name="step-5-provision-enclave-enabled-keys"></a>手順 5:エンクレーブ対応キーをプロビジョニングする
@@ -238,7 +235,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     7. **[OK]** を選択します。
 
         ![エンクレーブ計算を許可する](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-
+    
 4. 新しいエンクレーブ対応の列暗号化キーを作成します。
 
     1. **[Always Encrypted キー]** を右クリックし、**[新しい列の暗号化キー]** を選択します。
@@ -254,40 +251,40 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     1. SSM で、新しいクエリ ウィンドウを開きます。
     2. 新しいクエリ ウィンドウ内の任意の場所を右クリックします。
     3. [接続] \> [接続の変更] の順に選択します。
-    4. **[オプション]** を選択します。 **[Always Encrypted]** タブに移動し、**[Always Encrypted を有効にする]** を選択し、エンクレーブ構成証明 URL を指定します。
+    4. **[オプション]** を選択します。 **[Always Encrypted]** タブに移動し、**[Always Encrypted を有効にする]** を選択し、エンクレーブ構成証明 URL (たとえば、ht<span>tp://</span>hgs.bastion.local/Attestation) を指定します。
     5. **[接続]** を選択します。
-2. SSMS 上で、データベース接続に対して Always Encrypted が無効になっている別のクエリ ウィンドウを構成します。
+    6. データベース コンテキストを ContosoHR データベースに変更します。
+1. SSMS 上で、データベース接続に対して Always Encrypted が無効になっている別のクエリ ウィンドウを構成します。
     1. SSM で、新しいクエリ ウィンドウを開きます。
     2. 新しいクエリ ウィンドウ内の任意の場所を右クリックします。
     3. [接続] \> [接続の変更] の順に選択します。
     4. **[オプション]** を選択します。 **[Always Encrypted]** タブに移動し、**[Always Encrypted を有効にする]** が選択されていないことを確認します。
     5. **[接続]** を選択します。
-3. SSN と給与の列を暗号化します。 Always Encrypted を有効にしたクエリ ウィンドウで、次のステートメントを貼り付けて実行します。
+    6. データベース コンテキストを ContosoHR データベースに変更します。
+1. SSN と給与の列を暗号化します。 [Always Encrypted] を有効にしたクエリ ウィンドウで、次のスクリプトを貼り付けて実行します。
 
     ```sql
     ALTER TABLE [dbo].[Employees]
-    ALTER COLUMN [SSN] [char] (11)
+    ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
-
+    (ONLINE = ON);
+     
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
+    (ONLINE = ON);
+ 
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+    > [!NOTE]
+    > 上記のスクリプト内でデータベース用のクエリ プラン キャッシュをクリアする ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ステートメントに注目してください。 テーブルを変更したら、テーブルにアクセスするすべてのバッチおよびストアド プロシージャのプランをクリアして、パラメーター暗号化情報を更新する必要があります。 
 
 4. SSN と給与の列が暗号化されていることを確認するには、Always Encrypted を無効にしたクエリ ウィンドウで、次のステートメントを貼り付け、実行します。 クエリ ウィンドウで、SSN と給与の列に暗号化された値が返されます。 Always Encrypted が有効なクエリ ウィンドウで、同じクエリを試して復号化されたデータを確認します。
 
     ```sql
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [dbo].[Employees];
     ```
 
 ## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>手順 7:暗号化された列に対して高度なクエリを実行する
@@ -298,13 +295,13 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     1. SSMS のメイン メニューから **[クエリ]** を選択します。
     2. **[クエリ オプション...]** を選択します。
     3. **[実行]** > **[詳細]** の順に移動します。
-    4. [Always Encrypted のパラメーター化を有効にする]をオンまたはオフにします。
-    5. [OK] を選択します。
+    4. **[Always Encrypted のパラメーター化を有効にする]** をオンにします。
+    5. **[OK]** を選択します。
 2. Always Encrypted を有効にしたクエリ ウィンドウで、次のクエリを貼り付けて実行します。 クエリでは、指定した検索条件を満たすプレーンテキスト値と行が返されます。
 
     ```sql
-    DECLARE @SSNPattern [char](11) = '%6818'
-    DECLARE @MinSalary [money] = $1000
+    DECLARE @SSNPattern [char](11) = '%6818';
+    DECLARE @MinSalary [money] = $1000;
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```

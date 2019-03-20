@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1342d023b1edc828105dbbda2e18b0ca09877de
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 4eb114e5309b1733e90b417517c885e23ec09a42
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591646"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072209"
 ---
 # <a name="server-memory-server-configuration-options"></a>サーバー メモリに関するサーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,26 +121,29 @@ lock pages in memory オプションを有効にするには:
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>SQL Server に対する最大メモリ容量の指定  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで、プロセス仮想アドレス空間の制限までメモリを構成できます。 詳細については、「[Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016)」 (Windows リリースと Windows Server リリースのメモリ上限) を参照してください。
-  
-## <a name="examples"></a>使用例  
-  
-### <a name="example-a"></a>例 A  
- 次の例では、 `max server memory` オプションを 4 GB に設定します。  
-  
-```sql  
-sp_configure 'show advanced options', 1;  
-GO  
-RECONFIGURE;  
-GO  
-sp_configure 'max server memory', 4096;  
-GO  
-RECONFIGURE;  
-GO  
-```  
-  
+
+## <a name="examples"></a>使用例
+
+### <a name="example-a-set-the-max-server-memory-option-to-4-gb"></a>例 A: max server memory オプションを 4 GB に設定する
+ 次の例では、`max server memory` オプションを 4 GB に設定します。  `sp_configure` ではオプションの名前は `max server memory (MB)` として指定されますが、例では `(MB)` が省略されていることに注目してください。
+
+```sql
+sp_configure 'show advanced options', 1;
+GO
+RECONFIGURE;
+GO
+sp_configure 'max server memory', 4096;
+GO
+RECONFIGURE;
+GO
+```
+これにより、次のようなステートメントが出力されます: 
+
+> 構成オプション 'max server memory (MB)' は 2147483647 から 4096 に変更されました。 RECONFIGURE ステートメントを実行してインストールしてください。
+
 ### <a name="example-b-determining-current-memory-allocation"></a>例 B: 現在のメモリ割り当てを確認する  
  次のクエリでは、現在割り当てられているメモリに関する情報を返します。  
-  
+
 ```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
@@ -155,6 +158,14 @@ SELECT
     process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
+
+### <a name="example-c-determining-value-for-max-server-memory-mb"></a>例 C: 'max server memory (MB)' の値を確認する
+次のクエリでは、現在構成されている値と SQL Server で使用中の値に関する情報が返されます。  このクエリでは、'show advanced options' が true であるかどうかに関係なく結果が返されます。
+
+```sql
+SELECT c.value, c.value_in_use
+FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
+```
   
 ## <a name="see-also"></a>参照  
  [メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md)   

@@ -14,12 +14,12 @@ ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06fa7266cf88cacae049df1c9bf98a2979e3fa0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: befdec64de1b12370eea84a64cb8502172a4d3b3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766490"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974081"
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ catalog.validate_package [ @folder_name = ] folder_name
     , [ @package_name = ] package_name  
     , [ @validation_id = ] validation_id OUTPUT  
  [  , [ @use32bitruntime = ] use32bitruntime ]  
- [  , [ @target_environment = ] target_environment ]  
+ [  , [ @environment_scope = ] environment_scope ]  
  [  , [ @reference_id = ] reference_id ]  
 ```  
   
@@ -55,7 +55,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  64 ビット オペレーティング システムで 32 ビットのランタイムを使用してパッケージを実行すべきかどうかを示します。 値 `1` を使用して 64 ビットのオペレーティング システムで実行されているときに、32 ビット ランタイムを使用してパッケージを実行します。 値 `0` を使用すると、64 ビット オペレーティング システムで実行しているときに、64 ビット ランタイムでパッケージが実行されます。 このパラメーターはオプションです。 *use32bitruntime* は **bit** です。  
   
  [ @environment_scope = ] *environment_scope*  
- 検証が考慮する環境参照を示します。 値が `A` の場合は、プロジェクトに関連するすべての環境参照が検証に含まれます。 値が `S` の場合は、1 つの環境参照のみが含まれます。 値が `D` の場合、環境参照は含まれず、各パラメーターには、検証に合格するため、既定のリテラル値を指定する必要があります。 このパラメーターはオプションです。 文字 `D` が既定で使用されます。 *environment_scope* は **char (1)** です。  
+ 検証が考慮する環境参照を示します。 値が `A` の場合は、プロジェクトに関連するすべての環境参照が検証に含まれます。 値が `S` の場合は、1 つの環境参照のみが含まれます。 値が `D` の場合、環境参照は含まれず、各パラメーターには、検証に合格するため、既定のリテラル値を指定する必要があります。 このパラメーターはオプションです。 文字 `D` が既定で使用されます。 *environment_scope* は **char(1)** です。  
   
  [ @reference_id = ] *reference_id*  
  環境参照の一意の ID。 このパラメーターは、検証に 1 つの環境参照が含まれていて、*environment_scope* が `S` の場合にのみ必要です。 *reference_id* は **bigint** です。  

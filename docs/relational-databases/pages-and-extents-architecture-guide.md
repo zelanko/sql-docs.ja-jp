@@ -1,7 +1,7 @@
 ---
 title: ページとエクステントのアーキテクチャ ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748484"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974371"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>ページとエクステントのアーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,6 +64,18 @@ ms.locfileid: "52748484"
 varchar 型、nvarchar 型、varbinary 型、または sql_variant 型の列を含むテーブルでは、この制限は緩和されます。 テーブル内のすべての固定長列と可変長列の行サイズの合計が、8,060 バイトの制限を超過した場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、サイズの最も大きなものから順に動的に 1 つ以上の可変長列を ROW_OVERFLOW_DATA アロケーション ユニットのページに移動します。 
 
 挿入操作または更新操作により行の合計サイズが 8,060 バイトの制限を超えると、必ずこの処理が実行されます。 列が ROW_OVERFLOW_DATA アロケーション ユニットのページに移動された場合、IN_ROW_DATA アロケーション ユニットに元のページの 24 バイトのポインターが保持されます。 その後の操作により、行サイズが削減されると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は動的に列を元のデータ ページに戻します。 
+
+##### <a name="row-overflow-considerations"></a>行のオーバーフローに関する注意点 
+
+varchar 型、nvarchar 型、varbinary 型、sql_variant 型、または CLR ユーザー定義型の列の組み合わせが 1 行あたり 8,060 バイトを超える場合は、次のことを考慮してください。 
+-  更新操作に基づいてレコードが大きくなると、大きなレコードが別のページに動的に移動されます。 レコードが短くなる更新操作が発生すると、レコードが IN_ROW_DATA アロケーション ユニット内の元のページに移動することがあります。 行オーバーフロー データを含む大きなレコードで、クエリを実行したり並べ替えや結合などの他の選択操作を実行すると、処理に時間がかかります。これは、これらのレコードが非同期にではなく同期的に処理されるためです。   
+   したがって、複数の varchar 型、nvarchar 型、varbinary 型、sql_variant 型、または CLR ユーザー定義型の列を含むテーブルをデザインするときは、オーバーフローする可能性が高い行の割合と、このオーバーフロー データへのクエリが実行される頻度を考慮します。 行オーバーフロー データの多くの行にクエリが頻繁に実行される可能性が高い場合は、いくつかの列を別のテーブルに移動して、テーブルのサイズを正規化することを検討します。 これにより、非同期結合操作でクエリを行えるようになります。 
+-  varchar 型、nvarchar 型、varbinary 型、sql_variant 型、および CLR ユーザー定義型の個々の列の長さは、8,000 バイトの制限の範囲内に収まる必要があります。 8,060 バイトというテーブル行の制限を超えることができるのは、これらの列を組み合わせた長さだけです。
+-  char 型や nchar 型のデータなど、他のデータ型の列の合計は、8,060 バイトの行の制限の範囲内に収まる必要があります。 ラージ オブジェクト データにも、8,060 バイトの行の制限は適用されません。 
+-  クラスター化インデックスのインデックス キーには、ROW_OVERFLOW_DATA アロケーション ユニットに既存のデータを持つ varchar 列を含めることはできません。 クラスター化インデックスが varchar 列に作成され、既存のデータが IN_ROW_DATA アロケーション ユニットにある場合に、データを行外に押し出すような挿入処理や更新処理をその列に対して行うと失敗します。 アロケーション ユニットの詳細については、「テーブルとインデックスの編成」を参照してください。
+-  行オーバーフロー データを含む列を、非クラスター化インデックスのキー列または非キー列として含めることができます。
+-  スパース列を使用するテーブルのレコード サイズの制限は 8,018 バイトです。 変換したデータに既存のレコード データを加えると 8,018 バイトを超える場合は、[MSSQLSERVER ERROR 576](../relational-databases/errors-events/database-engine-events-and-errors.md) が返されます。 列がスパース型と非スパース型の間で変換される場合は、データベース エンジンによって現在のレコード データのコピーが保持されます。 このため、レコードのために必要なストレージは一時的に 2 倍になります。
+-  行オーバーフロー データを含んでいる可能性のあるテーブルまたはインデックスに関する情報を取得するには、[sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 動的管理関数を使用します。
 
 ### <a name="extents"></a>Extents 
 
@@ -177,4 +189,6 @@ DCM ページと BCM ページ間の間隔は、GAM ページと SGAM ページ�
 
 ## <a name="see-also"></a>参照
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
-[ヒープ &#40;クラスター化インデックスなしのテーブル&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    
+[ヒープ &#40;クラスター化インデックスなしのテーブル&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[ページの読み取り](../relational-databases/reading-pages.md)   
+[ページの書き込み](../relational-databases/writing-pages.md)   

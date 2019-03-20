@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f7302384bbf264061c73b79a919855aa762994f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: a69835d1952a860bebe36aaf6793c548e09a5743
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579772"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974451"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -209,13 +209,15 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 たとえば、`LATIN1_GENERAL_100_CI_AS_SC` を `LATIN1_GENERAL_100_CI_AS_SC_UTF8` に変更するような場合です。 UTF-8 は、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で導入された補助文字をサポートする Windows 照合順序にのみ使用できます。 `NCHAR` および `NVARCHAR` では UTF-16 エンコードのみが許可され、変更されていません。
 
-使用されている文字セットによっては、この機能によりストレージを大幅に節約できます。 たとえば、ラテン文字列の既存の列データ型を、UTF-8 対応の照合順序を使用して `NCHAR(10)` から `CHAR(10)` に変更すると、必要なストレージが 50% 削減されます。 このように減るのは、`NCHAR(10)` を保存するには 20 バイト必要であるのに対し、`CHAR(10)` では同じ Unicode 文字列に 10 バイトしか必要ないためです。
+使用されている文字セットによっては、この機能によりストレージを大幅に節約できます。 たとえば、ASCII (ラテン) 文字列の既存の列データ型を、UTF-8 対応の照合順序を使用して `NCHAR(10)` から `CHAR(10)` に変更すると、必要なストレージが 50% 削減されます。 このように減るのは、`NCHAR(10)` を保存するには 20 バイト必要であるのに対し、`CHAR(10)` では同じ Unicode 文字列に 10 バイトしか必要ないためです。
 
 詳細については、「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
 
-CTP 2.1 既定で [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の設定中に UTF-8 照合順序を選択するためのサポートが追加されました。
+**CTP 2.1** 既定で [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の設定中に UTF-8 照合順序を選択するためのサポートが追加されました。
 
-CTP 2.2 SQL Server レプリケーションで UTF-8 文字エンコードを使用するサポートが追加されました。
+**CTP 2.2** SQL Server レプリケーションで UTF-8 文字エンコードを使用するためのサポートが追加されました。
+
+**CTP 2.3** BIN2 照合順序 (UTF8_BIN2) で UTF-8 文字エンコードを使用するためのサポートが追加されました。
 
 ### <a name="resumable-online-index-create-ctp-20"></a>再開可能なオンライン インデックスの作成 (CTP 2.0)
 
@@ -383,6 +385,8 @@ CTP 2.2 SQL Server レプリケーションで UTF-8 文字エンコードを使
 軽量クエリ プロファイリング インフラストラクチャ (LWP) では、標準のプロファイリング メカニズムよりも効率的にクエリのパフォーマンス データが提供されます。 軽量プロファイリングが既定で有効になるようになりました。 この機能は、[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 で導入されました。 軽量プロファイリングでは推定 2% の CPU オーバーヘッドでクエリ実行統計コレクション メカニズムが提供されるのに対し、標準クエリ プロファイリング メカニズムでは最大 75% の CPU オーバーヘッドが発生します。 以前のバージョンでは、既定ではオフでした。 データベース管理者は、[トレース フラグ 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) でこの機能を有効にできます。 
 
 軽量プロファイリングの詳細については、[クエリ プロファイリング インフラストラクチャ](../relational-databases/performance/query-profiling-infrastructure.md)に関するページを参照してください。
+
+**CTP 2.3** 新しいデータベース スコープの構成 `LIGHTWEIGHT_QUERY_PROFILING` が、軽量クエリ プロファイリング インフラストラクチャを有効または無効にするために導入されました。
 
 ### <a id="polybase"></a>新しい PolyBase コネクタ
 

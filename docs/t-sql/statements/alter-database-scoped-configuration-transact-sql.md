@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 03/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5ac0dbfdc3a4acd94a7892372ddb336a3bb70642
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579681"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974391"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -45,7 +45,9 @@ ms.locfileid: "57579681"
 - ネイティブ コンパイル T-SQL モジュールの実行統計コレクションを有効または無効にします。
 - ONLINE= 構文に対応している DDL ステートメントの既定のオプションでオンラインの有効/無効を変更します。
 - RESUMABLE= 構文に対応している DDL ステートメントの既定のオプションで再開可能性の有効/無効を変更します。
-- グローバル一時テーブルの自動削除機能を有効または無効にします
+- グローバル一時テーブルの自動削除機能を有効または無効にします。 
+- [インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の機能を有効または無効にします。
+- [軽量クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)を有効または無効にします。
 
 ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,18 +69,20 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
+    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }
-    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
-    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
-    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
-    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
+    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
 }
 ```
 
@@ -87,6 +91,10 @@ ALTER DATABASE SCOPED CONFIGURATION
 セカンダリの場合
 
 セカンダリ データベースの設定を指定します (すべてのセカンダリ データベースに同じ値を与える必要があります)。
+
+CLEAR PROCEDURE_CACHE    
+
+データベースのプロシージャ (プラン) キャッシュがクリアされ、プライマリとセカンダリの両方で実行することができます。  
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -139,10 +147,6 @@ PRIMARY
 
 データベースがプライマリにあるとき、この値はセカンダリでのみ有効になります。すべてのセカンダリでこの設定の値がプライマリに設定されている値になることを示します。 プライマリの構成が変更されると、セカンダリの値も適宜変更されます。セカンダリの値を明示的に設定する必要はありません。 PRIMARY はセカンダリの既定の設定です。
 
-CLEAR PROCEDURE_CACHE
-
-データベースのプロシージャ (プラン) キャッシュがクリアされ、プライマリとセカンダリの両方で実行することができます。
-
 IDENTITY_CACHE **=** { **ON** | OFF }
 
 **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -151,6 +155,76 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 
 > [!NOTE]
 > このオプションはプライマリにのみ設定できます。 詳細については、「[ID 列](create-table-transact-sql-identity-property.md)」を参照してください。
+
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
+
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+複数ステートメントのテーブル値関数のインターリーブ実行は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で有効または無効にできます。 インターリーブ実行は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のアダプティブ クエリ処理の一部の機能です。 詳細については、[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)に関する記事をご覧ください。
+
+> [!NOTE]
+> データベース互換性レベルが 130 以下である場合は、このデータベース スコープの構成に影響がありません。
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+バッチ モード メモリ許可フィードバックは、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モード メモリ許可フィードバックは、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です。
+
+> [!NOTE]
+> データベース互換性レベルが 130 以下である場合は、このデータベース スコープの構成に影響がありません。
+
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
+
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+バッチ モードの適応結合は、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モードの適応結合は、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です。
+
+> [!NOTE]
+> データベース互換性レベルが 130 以下である場合は、このデータベース スコープの構成に影響がありません。
+
+TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
+
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
+
+データベースの互換性レベル 150 以上を維持しながら、データベース範囲で T-SQL スカラー UDF のインライン化を有効または無効にできます。 T-SQL スカラー UDF のインライン化は、[インテリジェント クエリの処理](../../relational-databases/performance/intelligent-query-processing.md)機能ファミリの一部の機能です。
+
+> [!NOTE] 
+> データベース互換性レベルが 140 以下である場合は、このデータベース スコープの構成に影響がありません。
+
+ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
+
+サポートされている操作からオンラインにエンジンを自動的に昇格させるオプションを選択できます。 既定は OFF であり、ステートメントで指定されない限り、操作はオンラインに昇格されません。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) は ELEVATE_ONLINE の現在の値を反映します。 これらのオプションは、オンラインでサポートされている操作にのみ適用されます。
+
+FAIL_UNSUPPORTED
+
+この値のとき、サポートされているすべての DDL 操作が ONLINE に昇格されます。 オンライン実行に対応していない操作は失敗し、警告が出ます。
+
+WHEN_SUPPORTED
+
+この値のとき、ONLINE 対応の操作が昇格されます。 オンライン対応ではない操作はオフラインで実行されます。
+
+> [!NOTE]
+> ONLINE オプションが指定されたステートメントを送信することで、既定の設定をオーバーライドできます。
+
+ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
+
+サポートされている操作から再開可能にエンジンを自動的に昇格させるオプションを選択できます。 既定は OFF であり、ステートメントで指定されない限り、操作は再開可能に昇格されません。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) は ELEVATE_RESUMABLE の現在の値を反映します。 これらのオプションは、再開可能実行でサポートされている操作にのみ適用されます。
+
+FAIL_UNSUPPORTED
+
+この値のとき、サポートされているすべての DDL 操作が RESUMABLE に昇格されます。 再開可能実行に対応していない操作は失敗し、警告が出ます。
+
+WHEN_SUPPORTED
+
+この値のとき、RESUMABLE 対応の操作が昇格されます。 再開可能対応ではない操作は再開不可能として実行されます。
+
+> [!NOTE]
+> RESUMABLE オプションが指定されたステートメントを送信することで、既定の設定をオーバーライドできます。
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
@@ -176,41 +250,34 @@ XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 ネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールのパフォーマンスの監視の詳細については、「[ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)」を参照してください。
 
-ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
 
-サポートされている操作からオンラインにエンジンを自動的に昇格させるオプションを選択できます。 既定は OFF であり、ステートメントで指定されない限り、操作はオンラインに昇格されません。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) は ELEVATE_ONLINE の現在の値を反映します。 これらのオプションは、オンラインでサポートされている操作にのみ適用されます。
-
-FAIL_UNSUPPORTED
-
-この値のとき、サポートされているすべての DDL 操作が ONLINE に昇格されます。 オンライン実行に対応していない操作は失敗し、警告が出ます。
-
-WHEN_SUPPORTED
-
-この値のとき、ONLINE 対応の操作が昇格されます。 オンライン対応ではない操作はオフラインで実行されます。
+行モード メモリ許可フィードバックは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 行モード メモリ許可フィードバックは、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です (行モードは [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でサポートされています)。
 
 > [!NOTE]
-> ONLINE オプションが指定されたステートメントを送信することで、既定の設定をオーバーライドできます。
+> データベース互換性レベルが 140 以下である場合は、このデータベース スコープの構成に影響がありません。
 
-ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (パブリック プレビュー機能)
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
 
-サポートされている操作から再開可能にエンジンを自動的に昇格させるオプションを選択できます。 既定は OFF であり、ステートメントで指定されない限り、操作は再開可能に昇格されません。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) は ELEVATE_RESUMABLE の現在の値を反映します。 これらのオプションは、再開可能実行でサポートされている操作にのみ適用されます。
-
-FAIL_UNSUPPORTED
-
-この値のとき、サポートされているすべての DDL 操作が RESUMABLE に昇格されます。 再開可能実行に対応していない操作は失敗し、警告が出ます。
-
-WHEN_SUPPORTED
-
-この値のとき、RESUMABLE 対応の操作が昇格されます。 再開可能対応ではない操作は再開不可能として実行されます。
+行ストアのバッチ モードは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 行ストアのバッチ モードは、[インテリジェント クエリの処理](../../relational-databases/performance/intelligent-query-processing.md)機能ファミリの一部の機能です。
 
 > [!NOTE]
-> RESUMABLE オプションが指定されたステートメントを送信することで、既定の設定をオーバーライドできます。
+> データベース互換性レベルが 140 以下である場合は、このデータベース スコープの構成に影響がありません。
 
-GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
+
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
+
+テーブル変数の遅延コンパイルは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 テーブル変数の遅延コンパイルは、[インテリジェント クエリの処理](../../relational-databases/performance/intelligent-query-processing.md)機能ファミリの一部の機能です。
+
+> [!NOTE]
+> データベース互換性レベルが 140 以下である場合は、このデータベース スコープの構成に影響がありません。
+
+GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
 
@@ -219,47 +286,11 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 単一データベースおよびエラスティック プールでは、このオプションを SQL Database サーバーの個々のユーザー データベース内で設定できます。
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] マネージド インスタンス上では、このオプションは `TempDB` 内で設定され、個々のユーザー データベースの設定に影響を与えません。
 
-DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
-複数ステートメントのテーブル値関数のインターリーブ実行は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で有効または無効にできます。 インターリーブ実行は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のアダプティブ クエリ処理の一部の機能です。 詳細については、[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)に関するページをご覧ください
-
-DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
-適応結合は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で有効または無効にできます。 適応型結合は、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です。
-
-ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
-
-行モード メモリ許可フィードバックは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 行モード メモリ許可フィードバックは、SQL Server 2017 で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です (行モードは SQL Server 2019 と Azure SQL Database でサポートされます)。
-
-BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-バッチ モード メモリ許可フィードバックは、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モード メモリ許可フィードバックは、SQL Server 2017 で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です。
-
-BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
-
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-バッチ モードの適応結合は、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モードの適応結合は、SQL Server 2017 で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です。
-
-BATCH_MODE_ON_ROWSTORE = { ON | OFF}
-
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
-
-行ストアのバッチ モードは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 行ストアのバッチ モードは、[インテリジェント クエリの処理](../../relational-databases/performance/intelligent-query-processing.md)機能ファミリの一部の機能です。
-
-DEFERRED_COMPILATION_TV = { ON | OFF}
-
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
-
-テーブル変数の遅延コンパイルは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 テーブル変数の遅延コンパイルは、[インテリジェント クエリの処理](../../relational-databases/performance/intelligent-query-processing.md)機能ファミリの一部の機能です。
+[軽量クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)を有効または無効にできます。 軽量クエリ プロファイリング インフラストラクチャ (LWP) は、標準のプロファイリング メカニズムよりも効率的にクエリのパフォーマンス データを提供するもので、既定で有効になっています。
 
 ## <a name="Permissions"></a> Permissions
 

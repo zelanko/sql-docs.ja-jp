@@ -1,10 +1,8 @@
 ---
 title: フルテキスト インデックス作成ウィザードの使用 | Microsoft Docs
-ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 f1_keywords:
@@ -21,16 +19,17 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fcbe86b8a0deb419854e3ec364317872507a20e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 250334bceefa2a3cac6226d32792a8be5ef89206
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731760"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973851"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>フルテキスト インデックス作成ウィザードの使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47731760"
 4. **[ワード ブレーカーの言語]。** ドロップダウン リストから言語を選択します。 この選択は、インデックスに適したワード ブレーカーを識別するために使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ワード ブレーカーを使用してフルテキスト インデックス付きデータ内の単語の境界を識別します。  
   
 5.  **[型列]。** フルテキスト インデックスの付いた列の文書型を保持する列の名前を選択します。  
-> **注:** **[型列]** は、 **[使用できる列]** 列内の名前の付いた列の型が **varbinary(max)** または **image**である場合のみ有効です。  
+> **注:** **[型列]** は、**[使用できる列]** 列内の名前の付いた列の型が **varbinary(max)** または **image** である場合のみ有効です。  
   
 6. **[統計的セマンティクス]。** 選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)」を参照してください。  
   
@@ -79,9 +78,9 @@ ms.locfileid: "47731760"
   
 9.  **[フルテキスト カタログの選択]**  
 
-     **[カタログの選択]:** フルテキスト カタログを一覧から選択します。 データベースの既定のカタログが一覧の既定の選択項目となります。 カタログが存在しない場合、一覧は無効になり、 **[カタログの新規作成]** チェック ボックスはオンのまま変更できなくなります。  
+     **カタログの選択:** フルテキスト カタログを一覧から選択します。 データベースの既定のカタログが一覧の既定の選択項目となります。 カタログが存在しない場合、一覧は無効になり、 **[カタログの新規作成]** チェック ボックスはオンのまま変更できなくなります。  
   
-  スイッチまたは
+  OR
   
  10. **[カタログの新規作成]**
  - [フルテキスト カタログの選択]。  
@@ -99,7 +98,7 @@ ms.locfileid: "47731760"
      フルテキスト インデックスを作成するファイル グループを指定します。  
   
      e. 値を選択します。  
-      |ReplTest1|[説明]|  
+      |[値]|[説明]|  
       |-----------|-----------------|
       |**<default>**| テーブルまたはビューがパーティション分割されていない場合に、基になるテーブルまたはビューと同じファイル グループを使用するには、この値を選択します。 テーブルまたはビューがパーティション分割されている場合は、プライマリ ファイル グループが使用されます。|
       |**PRIMARY**|新しいフルテキスト インデックスにプライマリ ファイル グループを使用する場合に選択します。|
@@ -113,7 +112,7 @@ ms.locfileid: "47731760"
   
      次のいずれかの値を選択します。  
   
-   |ReplTest1|[説明]|  
+   |[値]|[説明]|  
     |-----------|-----------------|  
     |**<system>**|新しいフルテキスト インデックスに対してシステム ストップリストを使用する場合に選択します。 これは既定値です。|  
     |**<off>**|新しいフルテキスト インデックスに対してストップリストを無効にする場合に選択します。|  
