@@ -68,7 +68,7 @@ ms.locfileid: "51607102"
 注: サーバー名の接続文字列を対象とした Azure SQL Database では、4 つの文字のプレフィックスが含まれているため**tcp:** します。 Microsoft SQL Server に接続するサーバーの文字列を調整することができます。  
   
   
-```CSharp  
+```C#  
     using System;  // C#  
     using CG = System.Collections.Generic;  
     using QC = System.Data.SqlClient;  
