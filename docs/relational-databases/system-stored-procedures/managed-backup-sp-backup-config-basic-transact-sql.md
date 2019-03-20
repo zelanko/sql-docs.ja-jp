@@ -66,7 +66,7 @@ EXEC managed_backup.sp_backup_config_basic
  Windows Azure ストレージ アカウントへの認証に使用する SQL 資格情報の名前。 @credentail_name **SYSNAME**します。 指定した場合、バックアップは、ページ blob に格納されます。 このパラメーターが NULL の場合、バックアップは、ブロック blob として格納されます。 ページ blob へのバックアップには非推奨とされているので、新しいブロック blob のバックアップ機能を使用することをお勧めします。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の構成を変更するために使用する場合、このパラメーターは省略可能です。 指定しない場合、既存の構成値は保持されます。  
   
 > [!WARNING]
->  **@credential_name**パラメーターは、この時点ではサポートされていません。 ブロック blob のみのバックアップはサポートされて、このパラメーターを NULL にする必要があります。  
+>  **\@credential_name**パラメーターは、この時点ではサポートされていません。 ブロック blob のみのバックアップはサポートされて、このパラメーターを NULL にする必要があります。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
