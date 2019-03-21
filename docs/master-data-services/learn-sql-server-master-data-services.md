@@ -13,12 +13,12 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c38c1ee94399023fd3ac529a1f7d9cf914f5130f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 6c32d4cf8fe16ec52d8af3ade01cea82badd40cd
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809444"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305840"
 ---
 # <a name="learn-sql-server-master-data-services"></a>SQL Server マスター データ サービスについて
 
@@ -27,8 +27,8 @@ ms.locfileid: "52809444"
   
   
 ## <a name="training"></a>トレーニング  
-*  [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]で導入された新しい機能の探索には、こちらの [**TechNet 仮想ラボ**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) をお試しください (Microsoft アカウントでのサインインが必要)。  
-* Excel 用のアドインと [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] を使用して地理データのマスター リストを格納および管理する [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]ソリューションを開発する場合は、こちらの [**TechNet 仮想ラボ**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true)をお試しください。 エンティティと階層を作成し、 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] を使用してディメンション テーブルに入力します。  
+* 導入された機能、新しい機能を探索する[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]、試し、 [Self-paced ラボ](https://www.microsoft.com/handsonlabs/selfpacedlabs)(Microsoft アカウントでサインインが必要です)。  
+* 開発する、[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]を格納および Excel 用アドインを使用して、地理的なデータのマスター リストの管理ソリューションと[!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]、試し、 [Self-paced ラボ](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 エンティティと階層を作成し、 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] を使用してディメンション テーブルに入力します。  
   
 ## <a name="videos"></a>ビデオ  
 * [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] リリースの [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]の新しい機能の詳細についてはは、 [**こちらのビデオを視聴**](https://www.youtube.com/watch?v=cKA72FpOVxI)してください。  

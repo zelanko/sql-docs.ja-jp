@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 92112b0211536bcb964d71e538a92311b2579117
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027133"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305940"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS の参照データ サービス
 
@@ -59,7 +59,7 @@ ms.locfileid: "56027133"
   
 1.  **DQS で参照データ プロバイダーの詳細を構成する**: DQS で参照データを使用する前に、DQS で参照データ サービスの詳細を構成する必要があります。  
   
-    1.  Marketplace を使用している場合は、有効な Marketplace アカウント キーを指定し、Marketplace で [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) データ カテゴリを参照して、必要なプロバイダーをサブスクライブします。  
+    1.  Marketplace を使用している場合は、有効な Marketplace アカウント キーを入力を参照、 [Data Services](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services) Marketplace では、データに分類し、必要なプロバイダーをサブスクライブします。  
   
     2.  ダイレクト オンライン参照データ プロバイダーを使用する場合は、ダイレクト参照データ プロバイダーを DQS に追加してから使用する必要があります。  
   

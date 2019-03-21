@@ -14,12 +14,12 @@ ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f355e7fcb46c12e34b23d332cf10da536697ac3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 79e95ac14691a4e712710303542c5743f57aacf6
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663782"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305980"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>マネージド データベース オブジェクトの監視とトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51663782"
   
 |イベント|説明|  
 |-----------|-----------------|  
-|[Assembly Load イベント クラス](https://msdn.microsoft.com/library/cfb0b69d-4ce0-4067-a3df-d82775e57886)|アセンブリの読み込み要求 (成功と失敗) の監視に使用されます。|  
+|[Assembly Load イベント クラス](/sql/database-engine/assembly-load-event-class)|アセンブリの読み込み要求 (成功と失敗) の監視に使用されます。|  
 |[SQL:BatchStarting イベント クラスは](../../relational-databases/event-classes/sql-batchstarting-event-class.md)、 [SQL:BatchCompleted イベント クラス](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|開始または完了した [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチに関する情報を提供します。|  
 |[SP: Starting イベント クラス](../../relational-databases/event-classes/sp-starting-event-class.md)、 [SP: Completed イベント クラス](../../relational-databases/event-classes/sp-completed-event-class.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャの実行の監視に使用されます。|  
 |[SQL:StmtStarting イベント クラス](../../relational-databases/event-classes/sql-stmtstarting-event-class.md)、 [SQL:StmtCompleted イベント クラス](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|CLR および [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンの実行の監視に使用されます。|  
@@ -54,7 +54,7 @@ ms.locfileid: "51663782"
 |.NET Data Provider for SQL Server|1 秒あたりの接続数と切断数を追跡します。 このオブジェクトを使用すると、データベースの利用状況を監視できます。|  
   
 ## <a name="catalog-views"></a>カタログ ビュー  
- カタログ ビューは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンによって使用される情報を返します。 カタログ ビューはカタログ メタデータへの最も一般的なインターフェイスであり、この情報を取得、変換、およびカスタマイズした形式で表示するための、最も効率的な方法となります。したがって、カタログ ビューを使用することをお勧めします。 ユーザーが利用できるすべてのカタログ メタデータがカタログ ビューを通じて公開されています。 詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。  
+ カタログ ビューは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンによって使用される情報を返します。 カタログ メタデータに最も一般的なインターフェイスであるために、カタログ ビューを使用し、取得、変換、およびカスタマイズされた形式のこの情報を表示する最も効率的な方法を提供することをお勧めします。 すべてのユーザーが利用できるカタログのメタデータは、カタログ ビューを通じて公開されます。 詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。  
   
 |カタログ ビュー|説明|  
 |------------------|-----------------|  

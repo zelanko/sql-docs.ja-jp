@@ -5,18 +5,18 @@ description: Red Hat Enterprise Linux (RHEL) を実行するときに、可用�
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 06/14/2017
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 44d39a44597a789c031ee10b862bffa2af6da883
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160603"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305631"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループの RHEL のクラスターを構成します。
 
@@ -89,7 +89,7 @@ RHEL の高可用性を構成するには、高可用性のサブスクリプシ
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-詳細については、次を参照してください。 [Pacemaker -、オープン ソースの高可用性クラスター](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)します。 
+詳細については、次を参照してください。 [Pacemaker -、オープン ソースの高可用性クラスター](https://clusterlabs.org/pacemaker/)します。 
 
 サブスクリプションを構成した後は、 Pacemaker を構成するため次の手順を実行します。
 
@@ -111,7 +111,7 @@ Pacemaker クラスターのベンダーは、STONITH を有効にして、サ�
 
 STONITH、およびフェンス操作については、次の記事を参照してください。
 
-* [Pacemaker クラスターを最初から作成](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [Pacemaker クラスターを最初から作成](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
 * [フェンスと STONITH](https://clusterlabs.org/doc/crm_fencing.html)
 * [Pacemaker の高可用性アドオンを Red Hat:フェンス操作](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
@@ -143,10 +143,10 @@ sudo pcs property set cluster-recheck-interval=2min
 sudo pcs property set start-failure-is-fatal=true
 ```
 
-更新する、`ag1`リソース プロパティ`failure-timeout`に`60s`を実行します。
+更新する、`ag_cluster`リソース プロパティ`failure-timeout`に`60s`を実行します。
 
 ```bash
-pcs resource update ag1 meta failure-timeout=60s
+pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
 
@@ -217,6 +217,6 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 
 `pcs`を使って、可用性グループを手動でフェールオーバーしてください。 Transact-SQL を使用したフェールオーバーを開始してはいけません。 手順については、[フェールオーバー](sql-server-linux-availability-group-failover-ha.md#failover)を参照してください。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [HA の可用性グループを操作します。](sql-server-linux-availability-group-failover-ha.md)
