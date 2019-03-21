@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 4e4de2fbb87fb7716ccde8de52924cd2402424fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675461"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280626"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンスについて
 
@@ -38,7 +38,7 @@ SQL Server 2017 は、Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Se
 
 | プラットフォーム | サポートされているバージョン | 取得
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 または 7.4 | [RHEL 7.4 を取得します。](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [RHEL 7.6 を取得します。](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 を入手します。](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Get Ubuntu 16.04](https://www.ubuntu.com/download/server)
 | **Docker エンジン** | 1.8+ | [Docker を取得します。](https://www.docker.com/products/overview)
@@ -193,7 +193,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
     > [!NOTE]
     > (RHEL および SLES) の RPM パッケージをインストールすることも、`rpm -ivh`コマンドが、前の表のコマンドを自動的にインストールの依存関係から使用可能なリポジトリを承認された場合。
 
-1. **解決するには依存関係がない**: 依存関係をこの時点で不足している必要があります。 それ以外の場合は、この手順をスキップすることができます。 Ubuntu の場合、それらの依存関係を含む承認済みのリポジトリにアクセスする場合、最も簡単なソリューションは、使用する、`apt-get -f install`コマンド。 このコマンドでは、SQL Server のインストールも完了します。 依存関係を手動で検査するには、次のコマンドを使用します。
+1. **解決するには依存関係がない**:この時点での依存関係が不足しているがあります。 それ以外の場合は、この手順をスキップすることができます。 Ubuntu の場合、それらの依存関係を含む承認済みのリポジトリにアクセスする場合、最も簡単なソリューションは、使用する、`apt-get -f install`コマンド。 このコマンドでは、SQL Server のインストールも完了します。 依存関係を手動で検査するには、次のコマンドを使用します。
 
    | プラットフォーム | 依存関係の一覧表示コマンド |
    |-----|-----|

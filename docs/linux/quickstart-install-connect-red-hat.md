@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 03e3b5d578c8fee68098674e9b82501a290bafda
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: dce4418dee10ff356d5c922350cd2fda29b44795
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579243"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277310"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート: SQL Server をインストールし、Red Hat でデータベースを作成
 
@@ -25,7 +25,7 @@ ms.locfileid: "57579243"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-このクイック スタートでインストールする SQL Server 2017 または SQL Server 2019 の Red Hat Enterprise Linux (RHEL) 7.3 以降。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
+このクイック スタートでインストールする SQL Server 2017 または SQL Server 2019 Red Hat Enterprise Linux (RHEL) にします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -40,7 +40,7 @@ ms.locfileid: "57579243"
 
 ## <a name="prerequisites"></a>前提条件
 
-RHEL 7.3 または 7.4 マシンで **少なくとも 2 GB** のメモリが必要です。
+RHEL 7.3、7.4、7.5、または 7.6 マシンがある必要があります**に少なくとも 2 GB**メモリ。
 
 自分のコンピューターで Red Hat Enterprise Linux をインストールするには[ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)します。 Azure で RHEL 仮想マシンを作成することもできます。 参照してください[の作成と Azure CLI を使用した Linux Vm の管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)、および使用`--image RHEL`への呼び出しで`az vm create`します。
 
