@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: 3ebebd290788511682098f2300d41dc0e9908517
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: bc55e90ad8aced555858008bc77715299a064b2a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222255"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342835"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>RESTful web サービスを使用して SQL Server のビッグ データ クラスターにデプロイされたアプリを使用します。
 
@@ -67,8 +67,8 @@ mssqlctl app describe --name addpy --version v1
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+    "app": "https://10.1.1.3:30777/api/app/addpy/v1",
+    "swagger": "https://10.1.1.3:30777/api/app/addpy/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -86,7 +86,7 @@ IP アドレスに注意してください (`10.1.1.3`この例では) とポー
 
 ## <a name="generate-a-jwt-access-token"></a>JWT アクセス トークンを生成します。
 
-展開しているアプリの RESTful web サービスにアクセスするには、次の URL をブラウザーで開きます: `https://[IP]:[PORT]/api/docs/swagger.json` IP アドレスとポートの実行中に取得したを使用して、`describe`上記のコマンド。 使用した同じ資格情報でログインする必要があります`mssqlctl login`します。
+アプリの RESTful web サービスにアクセスするためには、JWT アクセス トークンを生成するには、最初に導入しています。 次の URL をブラウザーで開きます: `https://[IP]:[PORT]/api/docs/swagger.json` IP アドレスとポートの実行中に取得したを使用して、`describe`上記のコマンド。 使用した同じ資格情報でログインする必要があります`mssqlctl login`します。
 
 内容を貼り付けて、`swagger.json`に、 [Swagger Editor](https://editor.swagger.io)はどのような方法を理解します。
 
@@ -101,9 +101,9 @@ IP アドレスに注意してください (`10.1.1.3`この例では) とポー
 ## <a name="execute-the-app-using-the-restful-web-service"></a>RESTful web サービスを使用して、アプリを実行します。
 
 > [!NOTE]
-> する場合は、URL を開くことができます、`swagger`実行したときに返された`mssqlctl app describe --name addpy --version [version]`お使いのブラウザーでします。 使用した同じ資格情報でログインする必要があります`mssqlctl login`します。 内容、`swagger.json`に貼り付けること[Swagger Editor](https://editor.swagger.io)します。 Web サービスを公開すると表示されます、`run`メソッド。
+> する場合は、URL を開くことができます、`swagger`実行したときに返された`mssqlctl app describe --name [appname] --version [version]`ブラウザーでいるようになります`https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`します。 使用した同じ資格情報でログインする必要があります`mssqlctl login`します。 内容、`swagger.json`に貼り付けること[Swagger Editor](https://editor.swagger.io)します。 Web サービスを公開すると表示されます、`run`メソッド。
 
-好みのツールを使用して呼び出すことができます、`run`メソッド (`https://[IP]:[PORT]/api/app/addpy/[version]/run`)、json として POST 要求の本文内のパラメーターに渡します。 この例では使用[Postman](https://www.getpostman.com/)します。 呼び出しを行う前に設定する必要があります、`Authorization`に`Bearer Token`以前に取得したトークンに貼り付けます。 これにより、要求ヘッダーが設定されます。 次のスクリーンショットを見てください。
+好みのツールを使用して呼び出すことができます、`run`メソッド (`https://[IP]:[PORT]/api/app/[appname]/[version]/run`)、json として POST 要求の本文内のパラメーターに渡します。 この例では使用[Postman](https://www.getpostman.com/)します。 呼び出しを行う前に設定する必要があります、`Authorization`に`Bearer Token`以前に取得したトークンに貼り付けます。 これにより、要求ヘッダーが設定されます。 次のスクリーンショットを見てください。
 
 ![Postman のヘッダーを実行します。](media/big-data-cluster-consume-apps/postman_run_1.png)
 
