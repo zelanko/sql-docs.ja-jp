@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 03/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,25 +20,25 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b05472f52bf182768740c8c01e8b60021dc898f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030153"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58325505"
 ---
-# <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL データベース)
+# <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  CPU、I/O、およびメモリの消費量を返す、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] データベース。 1 つの行は、データベース内にアクティビティがない場合でも、15 秒ごとに存在します。 1 時間では、履歴データは維持されます。  
+  CPU、I/O、およびメモリの消費量を返す、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]データベース。 データベースのアクティビティがない場合でも、15 秒ごとに 1 つの行が存在します。 履歴データは 1 時間保持されます。  
   
 |[列]|データ型|説明|  
 |-------------|---------------|-----------------|  
-|end_time|**datetime**|UTC 時刻では、現在のレポートの間隔の終了を示します。|  
-|avg_cpu_percent|**10 進数 (5,2)**|サービス層の上限に対するパーセンテージで示した、平均コンピューティング使用率。|  
+|end_time|**datetime**|UTC 時刻では、現在のレポート間隔の終了を示します。|  
+|avg_cpu_percent|**10 進数 (5,2)**|サービス層の制限の割合で表した平均コンピューティング使用率。|  
 |avg_data_io_percent|**10 進数 (5,2)**|データ サービス層の制限の割合での I/O 使用率は平均です。|  
 |avg_log_write_percent|**10 進数 (5,2)**|平均は、I/O スループットの使用率のサービス層の上限に対するパーセンテージとしてを記述します。|  
-|avg_memory_usage_percent|**10 進数 (5,2)**|サービス層の上限に対するパーセンテージで示した、平均メモリ使用率。<br /><br /> これには、インメモリ OLTP オブジェクトのストレージに使用されるメモリが含まれます。|  
+|avg_memory_usage_percent|**10 進数 (5,2)**|サービス層の制限の割合の平均メモリ使用率。<br /><br /> これには、バッファー プール ページと、インメモリ OLTP オブジェクトのストレージに使用されるメモリが含まれます。|  
 |xtp_storage_percent|**10 進数 (5,2)**|記憶域使用率、インメモリ OLTP のサービス層の制限の割合で (レポートの期間の最後)。 これには、次のインメモリ OLTP オブジェクトの記憶域として使用されるメモリが含まれます。 メモリ最適化テーブル、インデックス、およびテーブル変数。 ALTER TABLE 操作を処理するために使用されるメモリも含まれています。<br /><br /> データベースでインメモリ OLTP を使用しない場合は、0 を返します。|  
 |max_worker_percent|**10 進数 (5,2)**|データベースのサービス層の制限の割合で表した最大同時実行ワーカー (要求)。|  
 |max_session_percent|**10 進数 (5,2)**|データベースのサービス層の制限の割合で表した最大同時セッション数。|  
@@ -55,7 +55,7 @@ ms.locfileid: "56030153"
 ## <a name="remarks"></a>コメント  
  によって返されるデータ**sys.dm_db_resource_stats**実行しているサービス階層/パフォーマンス レベルの制限が許容される最大の割合として表されます。
  
- データベースは、最後の 60 分内の別のサーバーにフェールオーバーしたが、ビューはそのフェールオーバー以降、プライマリ データベースがされた時間のデータを返すのみです。  
+ データベースは、過去 60 分以内の別のサーバーにフェールオーバーしたが、ビューはそのフェールオーバー以降、プライマリ データベースがされた時間のデータを返すだけです。  
   
  このデータの詳細度の低いビューは、使用**sys.resource_stats**カタログ ビューで、**マスター**データベース。 このビューでは、5 分ごとにデータをキャプチャし、履歴データを 14 日間保持します。  詳細については、次を参照してください。 [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)します。  
   
@@ -63,14 +63,14 @@ ms.locfileid: "56030153"
   
 ## <a name="example"></a>例  
   
-次の例では、現在接続しているデータベースの最新の時間によって並べ替えられてリソース使用率のデータを返します。  
+次の例では、現在接続されているデータベースの最新の時間によって並べ替えられてリソース使用率データを返します。  
   
 ```  
 SELECT * FROM sys.dm_db_resource_stats ORDER BY end_time DESC;  
   
 ```  
   
- 次の例では、過去の 1 時間以上のユーザー データベースのパフォーマンス レベルで許可された最大の DTU の数の割合の観点から、平均 DTU 消費を識別します。 一貫性のあるごとに 100% 近くには、この割合として、パフォーマンス レベルを大きくしてください。  
+ 次の例では、過去 1 時間のユーザー データベースのパフォーマンス レベルで許可される最大の DTU の上限の割合の観点から、平均 DTU 消費を識別します。 一貫性のあるごとに 100% 近くには、この割合として、パフォーマンス レベルを増やすことを検討します。  
   
 ```  
 SELECT end_time,   
@@ -81,7 +81,7 @@ FROM sys.dm_db_resource_stats;
   
 ```  
   
- 次の例では、CPU の割合、データおよびログ、I/O の平均値と最大の値と、過去 1 時間のメモリ消費量を返します。  
+ 次の例では、過去 1 時間のメモリ消費量と CPU の割合、データおよびログ、I/O の平均と最大値を返します。  
   
 ```  
 SELECT    

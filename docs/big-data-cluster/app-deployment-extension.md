@@ -9,12 +9,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f45817510cb63937544fa4f0f7af5bb42a0c883
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018468"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222026"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>VS Code を使用してビッグ データの SQL Server クラスターにアプリケーションを展開する方法
 
@@ -105,7 +105,7 @@ VS Code は、適切なエンドポイント、username、およびパスワー�
 
 ![アプリのボタンを配置します。](media/vs-extension/deploy_app_lightning.png)
 
-![Codelens のアプリをデプロイします。](media/vs-extension/deploy_app_codelens.png)
+![CodeLens のアプリをデプロイします。](media/vs-extension/deploy_app_codelens.png)
 
 アプリは、サイドバーで、アプリの状態に基づいて使用可能な状態が通知されます。
 
@@ -127,9 +127,11 @@ VS Code は、適切なエンドポイント、username、およびパスワー�
   - Swagger
   - 詳細情報
 
-クリックすると`Links`にアクセスできることが表示されます、`swagger.json`デプロイされているアプリのためを作成するアプリを呼び出す独自のクライアント。
+をクリックすると`Links`にアクセスできることが表示されます、`swagger.json`デプロイされているアプリのアプリを呼び出すクライアントを記述するようにします。
 
 ![Swagger](media/vs-extension/swagger.png)
+
+参照してください[ビッグ データ クラスター上でアプリケーションを消費する](big-data-cluster-consume-apps.md)詳細についてはします。
 
 ### <a name="app-run"></a>アプリの実行
 
@@ -173,7 +175,7 @@ VS Code は、適切なエンドポイント、username、およびパスワー�
 
 ## <a name="next-steps"></a>次のステップ
 
-その他のサンプルを参照することもできます。[アプリの展開サンプル](https://aka.ms/sql-app-deploy)に拡張機能でお試しください。
+独自のアプリケーションでのクラスターのビッグ データ、SQL Server に展開されているアプリを統合する方法について説明[ビッグ データ クラスター上でアプリケーションを消費する](big-data-cluster-consume-apps.md)詳細についてはします。 その他のサンプルを参照することもできます。[アプリの展開サンプル](https://aka.ms/sql-app-deploy)に拡張機能でお試しください。
 
 ビッグ データの SQL Server クラスターの詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)します。
 
