@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35627cefd3bbdf4bec280baaa9dcdb1b43391e05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24a8b6eb8c0f6cde72a6760270873c05c5de44a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176842"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390080"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>[OLE DB 変換先エディター] ([エラー出力] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "48176842"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](data-flow/error-handling-in-data.md)  
+ **関連項目:**[データのエラー処理](data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  使用されていません。  
@@ -53,8 +53,8 @@ ms.locfileid: "48176842"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 変換先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [OLE DB 変換先エディター&#40;マッピング ページ&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [OLE DB 変換先エディター ([接続マネージャー] ページ)](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
+ [OLE DB 変換先エディター ([マッピング] ページ)](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [OLE DB 変換先を使用してデータを読み込む](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

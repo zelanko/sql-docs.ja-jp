@@ -12,15 +12,15 @@ helpviewer_keywords:
 - service [Integration Services], events
 - Integration Services service, events
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 887fa745a0f4fab9d7faf716fd7ad26fb3be1fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c00739cefe457575e6b05dee368d8965775a387
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158472"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389191"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Integration Services サービスのイベントを表示する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスのイベントを表示できるツールには、次の 2 つがあります。  
@@ -64,7 +64,7 @@ ms.locfileid: "48158472"
 9. **[ファイル]** メニューの **[終了]** をクリックして、 **[イベント ビューアー]** ダイアログ ボックスを閉じます。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services サービスを管理します。](../../2014/integration-services/manage-the-integration-services-service.md)   
+ [Integration Services サービスを管理する](../../2014/integration-services/manage-the-integration-services-service.md)   
  [データ フロー パフォーマンス カウンターのログを追加する](performance/performance-counters.md)  
   
   

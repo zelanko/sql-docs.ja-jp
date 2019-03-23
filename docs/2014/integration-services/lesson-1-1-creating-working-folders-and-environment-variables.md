@@ -1,5 +1,5 @@
 ---
-title: 手順 1:作成する作業フォルダーと環境変数 |Microsoft Docs
+title: 手順 1:作業フォルダーと環境変数の作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fa27d9c38c7c1b147432295d5ec636c8c73863c6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350929"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392130"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>手順 1:作成する作業フォルダーと環境変数
   このタスクでは、この後のチュートリアル タスクで使用する作業フォルダー (C:\DeploymentTutorial) と新しいシステム環境変数 (`DataTransfer` および `LoadXMLData`) を作成します。  

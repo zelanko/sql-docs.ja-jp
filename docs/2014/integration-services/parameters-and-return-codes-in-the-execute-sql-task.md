@@ -13,15 +13,15 @@ helpviewer_keywords:
 - parameterized SQL statements [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f0899922eb2cdec88e73901f14ebeb6dfe953622
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e09e00b4c5dcaf355b5a7691413ed2f8f972d5a6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367215"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389690"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>SQL 実行タスクのパラメーターとリターン コード
   SQL ステートメントとストアド プロシージャでは多くの場合、`input` パラメーター、`output` パラメーター、およびリターン コードを使用します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の SQL 実行タスクでは、`Input`、`Output`、および `ReturnValue` という、パラメーターの型がサポートされています。 入力パラメーターには `Input` 型、出力パラメーターには `Output` 型、およびリターン コードには `ReturnValue` 型を使用します。  
@@ -108,7 +108,7 @@ ms.locfileid: "53367215"
     |-------------------------------|--------------------|  
     |DBDATE|`date`|  
     |DBTIME2|`time`|  
-    |DBTIMESTAMP|`datetime`, `datetime2`|  
+    |DBTIMESTAMP|`datetime`、 `datetime2`|  
     |DBTIMESTAMPOFFSET|`datetimeoffset`|  
   
  データが適切な入力パラメーターまたは出力パラメーターに格納されないと、パッケージは失敗します。  
@@ -124,7 +124,7 @@ ms.locfileid: "53367215"
     |-------------------------------|--------------------|  
     |SQL_DATE|`date`|  
     |SQL_SS_TIME2|`time`|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> - または -<br /><br /> SQL_TIMESTAMP|`datetime`, `datetime2`|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> - または -<br /><br /> SQL_TIMESTAMP|`datetime`、 `datetime2`|  
     |SQL_SS_TIMESTAMPOFFSET|`datetimeoffset`|  
   
  データが適切な入力パラメーターまたは出力パラメーターに格納されないと、パッケージは失敗します。  

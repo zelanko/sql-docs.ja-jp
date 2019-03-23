@@ -13,21 +13,21 @@ helpviewer_keywords:
 - default precedence constraints
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0c61c5db632121f99f8c22c8dd474d5597cb547
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a900b6c2bb6e55d57bcf32aff0ac6ea4667bdd7f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221542"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389240"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>既定の優先順位制約を使用してタスクとコンテナーを連結する
   優先順位制約は、2 つの実行可能ファイルを連結します。 実行可能ファイルには、任意のタスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーが含まれます。 この手順では、優先順位制約の既定の動作を設定する方法と、既定の優先順位制約を使用して実行可能ファイルを連結する方法について説明します。  
   
 ## <a name="creating-default-precedence-constraints"></a>既定の優先順位制約の作成  
- 使用すると[!INCLUDE[ssIS](../includes/ssis-md.md)]デザイナー、優先順位制約の既定値は`Success`します。 別の既定値を使用するように [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを構成するには、次の手順に従います。  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを初めて使用する場合、優先順位制約の既定値は `Success` です。 別の既定値を使用するように [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを構成するには、次の手順に従います。  
   
 #### <a name="to-set-the-default-value-for-precedence-constraints"></a>優先順位制約の既定値を設定するには  
   

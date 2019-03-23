@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366864"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392107"
 ---
 # <a name="data-flow-task"></a>[データ フロー タスク]
   データ フロー タスクは、変換元と変換先との間でデータを移動するデータ フロー エンジンをカプセル化して、データの移動時にユーザーがデータを変換、クリーンアップ、および変更できるようにします。 データ フロー タスクをパッケージの制御フローに追加すると、パッケージでデータの抽出、変換、および読み込みを行うことができます。  
@@ -86,7 +86,7 @@ ms.locfileid: "53366864"
   
  ログ イベントの多くは複数のエントリを書き込み、多数のログ エントリのメッセージに複雑なデータが含まれています。 メッセージ テキストを解析することで、複雑なメッセージの内容をより簡単に理解して伝えられるようになります。 ログの場所によっては、Transact-SQL ステートメントまたはスクリプト コンポーネントを使用して、複雑なテキストを列、またはより有効なその他の形式に分けることができます。  
   
- たとえば、次の表に含まれるメッセージ "行がデータ フロー コンポーネントに入力として指定されました。 :  :1185:OLE DB ソースの出力:1180:並べ替え:1181:並べ替えの入力:76"は、列に解析します。 このメッセージは、OLE DB ソースから並べ替え変換に行が送信されるときに `OnPipelineRowsSent` イベントによって書き込まれました。  
+ たとえば、次の表に含まれるメッセージ "行がデータ フロー コンポーネントに入力として指定されました。 :  :1185 :OLE DB ソースの出力:1180 :並べ替え:1181 :並べ替えの入力:76"は、列に解析します。 このメッセージは、OLE DB ソースから並べ替え変換に行が送信されるときに `OnPipelineRowsSent` イベントによって書き込まれました。  
   
 |[列]|説明|値|  
 |------------|-----------------|-----------|  

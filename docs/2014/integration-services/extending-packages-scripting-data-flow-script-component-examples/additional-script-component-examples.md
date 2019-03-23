@@ -11,15 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], examples
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 508df9de58a94d3d0bed88dcd410963b160ae1d9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f0cab4451b78b662a426612aee0f0a72aae8cf80
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363874"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393880"
 ---
 # <a name="additional-script-component-examples"></a>その他のスクリプト コンポーネントの例
   スクリプト コンポーネントは構成可能なツールです。パッケージのデータ フローで使用すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に備わっている変換元、変換、および変換先では満たせないほとんどすべての要件に対応できます。 ここでは、使用できるさまざまな種類の機能を説明する、スクリプト コンポーネントのコード例を示します。  

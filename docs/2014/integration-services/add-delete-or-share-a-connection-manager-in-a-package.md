@@ -11,15 +11,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fdbea022082e2606fe991176524127a615464a98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fdcc6285ba1a75827f91f856319d296c0cbbff5d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533388"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391690"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>パッケージの接続マネージャーを追加、削除、または共有する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、リレーショナル データベース、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース、CSV 形式のファイル、XML 形式のファイルなど、さまざまなデータ ソースに接続するための各種接続マネージャーがあります。 接続マネージャーは、パッケージ レベルまたはプロジェクト レベルで作成できます。 プロジェクト レベルで作成した接続マネージャーは、プロジェクト内のすべてのパッケージで使用できます。 一方、パッケージ レベルで作成した接続マネージャーは、特定のパッケージでのみ使用できます。  

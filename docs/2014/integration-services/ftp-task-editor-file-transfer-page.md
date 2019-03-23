@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4de5cf0a8e932c30c0eea619b185aa37f0cf875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a7797245901cd4d01f82995defcf44498fba1e1f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533336"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390030"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>[FTP タスク エディター] ([ファイル転送] ページ)
   **[FTP タスク エディター]** ダイアログ ボックスの **[ファイル転送]** ページを使用すると、タスクで実行される FTP 操作を構成できます。  
@@ -70,13 +70,13 @@ ms.locfileid: "52533336"
  **[RemoteVariable]**  
  既存のユーザー定義変数を選択するか、[\<**新しい変数...**>] をクリックしてユーザー定義変数を作成します。  
   
- **関連項目:**[Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、変数の追加  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、変数の追加  
   
 ### <a name="isremotepathvariable--false"></a>[IsRemotePathVariable] = [False]  
  **[RemotePath]**  
  既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして接続マネージャーを作成します。  
   
- **関連項目:**[FTP 接続マネージャー](connection-manager/ftp-connection-manager.md)、 [FTP 接続マネージャー エディター](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **関連トピック:** [FTP 接続マネージャー](connection-manager/ftp-connection-manager.md)、[FTP 接続マネージャー エディター](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
 ## <a name="islocalpathvariable-dynamic-options"></a>[IsLocalPathVariable] の動的オプション  
   
@@ -84,13 +84,13 @@ ms.locfileid: "52533336"
  **[LocalVariable]**  
  既存のユーザー定義変数を選択するか、[\<**新しい変数...**>] をクリックして変数を作成します。  
   
- **関連項目:**[Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、変数の追加  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、変数の追加  
   
 ### <a name="islocalpathvariable--false"></a>[IsLocalPathVariable] = [False]  
  **[LocalPath]**  
  既存のファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして、接続マネージャーを作成します。  
   
- **関連トピック**:[フラット ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
+ **関連トピック:** [フラット ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   

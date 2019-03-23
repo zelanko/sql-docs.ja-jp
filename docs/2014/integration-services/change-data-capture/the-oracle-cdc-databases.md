@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e35293fb7f59475ebdcfea70c1b27d4798e3b93
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 716aea984073d557e45dc30c1972b2151173fd58
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370174"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377120"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC データベース
   Oracle CDC インスタンスは、ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの同名の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連付けられます。 このデータベースは、Oracle CDC データベース (または CDC データベース) と呼ばれます。  
@@ -107,7 +107,7 @@ ms.locfileid: "53370174"
   
  次の表では、使用可能なオプションについて説明しています。  
   
-|名前|既定値|Min|Max|静的|説明|  
+|名前|既定|Min|Max|静的|説明|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |trace|False|-|-|False|使用可能な値:<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **off**|  
 |cdc_update_state_interval|10|1|120|False|トランザクションに割り当てられるメモリのチャンクのサイズ (KB) です (トランザクションは複数のチャンクを割り当てることができます)。 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) テーブルの memory_limit 列を参照してください。|  

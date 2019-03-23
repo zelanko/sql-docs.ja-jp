@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: ceaf172fc36ee92d15be326d4356061ea1674df1
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162114"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392720"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio で notebook を使用する方法
 
@@ -85,7 +85,7 @@ PostgreSQL のサーバー インスタンスに接続する SQL カーネル
 
 |カーネル|説明
 |:-----|:-----
-| SQL のカーネル | SQL Server に対して SQL コードを記述します。
+| SQL のカーネル | リレーショナル データベースを対象とする SQL コードを記述します。
 |PySpark3、および PySpark カーネル| クラスターからの Spark のコンピューティングを使用して Python コードを記述します。
 |Spark カーネル|クラスターからの Spark のコンピューティングを使用して Scala と R コードを記述します。
 |Python カーネル|ローカル開発用の Python コードを記述します。

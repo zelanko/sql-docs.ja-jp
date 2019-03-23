@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - connOra
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0ab9dce0de35ee8b6d63023e37c0a2a7742b1f13
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1ca7eb5b4883edf9ab718c731049da4c3be44324
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779926"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391040"
 ---
 # <a name="connect-to-oracle"></a>Oracle への接続
   CDC インスタンスに使用するテーブルを初めて追加または編集するとき、Oracle データベースへの接続を要求されることがあります。 キャプチャするテーブルのスキーマにアクセスできる Oracle ユーザーの資格情報を入力する必要があります。 このダイアログ ボックスでは次の情報を入力します。  
@@ -26,9 +26,9 @@ ms.locfileid: "52779926"
   
  次のいずれかを選択します。  
   
--   **Windows 認証**:現在の Windows ドメイン資格情報を使用する場合に選択します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。  
+-   **[Windows 認証]**:現在の Windows ドメイン資格情報を使用する場合に選択します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。  
   
--   **Oracle 認証**:このオプションを選択する場合は入力、**ユーザー名**と**パスワード**に接続している Oracle データベースでユーザーにします。  
+-   **[Oracle 認証]**:このオプションを選択する場合、接続先の Oracle データベースのユーザーの **[ユーザー名]** と **[パスワード]** を入力する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [CDC へのテーブルの追加](add-tables-to-a-cdc-instance.md)  

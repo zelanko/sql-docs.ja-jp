@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43403bd87ba8cd836e035f14a9456b6338e0c92d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3268aa2ffcb69ccde4ae08513ff17a4c9572b10e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216752"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393280"
 ---
 # <a name="data-flow-path-editor-general-page"></a>[データ フロー パス エディター] ([全般] ページ)
   **[データ フロー パス エディター]** ダイアログ ボックスを使用すると、パス プロパティの設置、列メタデータの表示、およびパスにアタッチされるデータ ビューアーの管理を行うことができます。  

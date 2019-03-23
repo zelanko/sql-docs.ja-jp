@@ -10,15 +10,15 @@ f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 771b7425ca166a05eb5290f576a7fa2cad3f19be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787044"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394527"
 ---
 # <a name="azure-feature-pack"></a>Azure Feature Pack
 SQL Server Integration Services (SSIS) Feature Pack for Azure は、このページにリストされている SSIS のコンポーネントを提供して、Azure サービスへの接続、Azure とオンプレミスのデータ ソース間でのデータ転送、および Azure に格納されたデータの処理を行うための拡張機能です。
@@ -94,17 +94,17 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure をダウンロー
   
 5.  Azure HDInsight Blob Download Task を使用して、Azure Blob ストレージから Pig/Hive の出力データをダウンロードします。  
   
- ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "BigDataScenario AzureConnector-SSIS-")  
+ ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "SSIS-AzureConnector-BigDataScenario")  
   
 ### <a name="cloud-data-archiving"></a>クラウド データのアーカイブ  
  SSIS パッケージ内の Azure Blob Destination を使用して、出力データを Azure Blob ストレージに書き込みむか、または Azure Blob Source を使用して、Azure Blob ストレージからデータを読み取ります。  
   
- ![SSIS AzureConnector CloudArchive 1](media/ssis-azureconnector-cloudarchive-1.png "SSIS AzureConnector CloudArchive 1")  
+ ![SSIS-AzureConnector-CloudArchive-1](media/ssis-azureconnector-cloudarchive-1.png "SSIS-AzureConnector-CloudArchive-1")  
   
- ![SSIS AzureConnector CloudArchive 2](media/ssis-azureconnector-cloudarchive-2.png "SSIS AzureConnector CloudArchive 2")  
+ ![SSIS-AzureConnector-CloudArchive-2](media/ssis-azureconnector-cloudarchive-2.png "SSIS-AzureConnector-CloudArchive-2")  
   
  また、Azure Blob 列挙子とともに Foreach ループ コンテナーを使用して、複数の bob ファイルのデータを処理します。  
   
- ![SSIS AzureConnector CloudArchive 3](media/ssis-azureconnector-cloudarchive-3.png "SSIS AzureConnector CloudArchive 3")  
+ ![SSIS-AzureConnector-CloudArchive-3](media/ssis-azureconnector-cloudarchive-3.png "SSIS-AzureConnector-CloudArchive-3")  
   
   

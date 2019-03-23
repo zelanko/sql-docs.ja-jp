@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1309a746aa60ee1a7c49a0d6569b51d0a57b3a39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b64b1f8511c9d079118881a9862eee11fdb636d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054202"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388740"
 ---
 # <a name="ftp-task-editor-general-page"></a>[FTP タスク エディター] ([全般] ページ)
   **[FTP タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクの通信先の FTP サーバーに接続する FTP 接続マネージャーを指定できます。 また、FTP タスクの名前と説明を入力することもできます。  
@@ -34,7 +34,7 @@ ms.locfileid: "48054202"
 > [!IMPORTANT]  
 >  FTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
   
- **関連トピック**: [FTP 接続マネージャー](connection-manager/ftp-connection-manager.md)、 [FTP 接続マネージャー エディター](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **関連トピック:** [FTP 接続マネージャー](connection-manager/ftp-connection-manager.md)、[FTP 接続マネージャー エディター](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
  **[StopOnFailure]**  
  FTP 操作が失敗した場合に FTP タスクを終了するかどうかを示します。  
@@ -50,7 +50,7 @@ ms.locfileid: "48054202"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [FTP タスク エディター&#40;ファイル転送 ページ&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
+ [FTP タスク エディター ([ファイル転送] ページ)](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [[式] ページ](expressions/expressions-page.md)  
   
   

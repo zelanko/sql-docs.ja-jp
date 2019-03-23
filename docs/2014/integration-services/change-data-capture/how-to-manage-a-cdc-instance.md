@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 058010d0e32fb26cf4c12e720342af04bd784768
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fd64fe5cad5f85c41830d25dce279ba09915626b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804784"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391530"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   この手順では、CDC デザイナー コンソールを使用して CDC インスタンスの操作を実行時に管理する方法について説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "52804784"
   
     -   **リセット**:CDC インスタンスを初期 (空) の状態にリセットするには、 **[リセット]** をクリックします。 このオプションは、CDC インスタンスが停止しているときに使用できます。 変更テーブル内のすべての変更および CDC インスタンスの内部状態が削除されます。 CDC インスタンスが後から開始されると、変更キャプチャはその時点から開始され、CDC インスタンスの開始後に開始されたトランザクションのみがキャプチャの対象となります。  
   
-    -   **削除**:CDC インスタンスを削除します。  
+    -   **[削除]**:CDC インスタンスを削除します。  
   
     -   **[Oracle ログ スクリプト**:クリックして**Oracle ログ スクリプト**Oracle の補足ログ スクリプトを使用して Oracle ログ スクリプト] ダイアログ ボックスを表示します。 このダイアログ ボックスで実行できる操作の詳細については、「 [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md)」を参照してください。  
   

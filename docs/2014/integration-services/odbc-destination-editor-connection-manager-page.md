@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.connection.f1
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0c778d51d5fb8f8c0598fb8aefb747e41271c815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc651d10df7433bdb0217414f251d16ed6abdf70
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060712"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390870"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>[ODBC 変換先エディター]\([接続マネージャー] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、入力先の ODBC 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -49,16 +49,16 @@ ms.locfileid: "48060712"
 |オプション|説明|  
 |------------|-----------------|  
 |[テーブル名 - バッチ]|バッチ モードで動作する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択した場合は、次のオプションを指定できます。|  
-||**[テーブル名またはビュー名]**: 使用できるテーブルまたはビューを一覧から選択します。<br /><br /> この一覧には、最初の 1,000 個のテーブルのみが含まれます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (\*) を使用すると、目的のテーブルが表示されます。<br /><br /> **[バッチ サイズ]**: 一括読み込みのバッチのサイズを入力します。 これは、バッチとして読み込まれる行数です。|  
+||**テーブルまたはビューの名前**:一覧から、使用できるテーブルまたはビューを選択します。<br /><br /> この一覧には、最初の 1,000 個のテーブルのみが含まれます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (\*) を使用すると、目的のテーブルが表示されます。<br /><br /> **バッチ サイズ**:一括読み込みのバッチのサイズを入力します。 これは、バッチとして読み込まれる行数です。|  
 |[テーブル名 - 行ごと]|一度に 1 行ずつ、入力先テーブルに各行を挿入するように ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択した場合は、次のオプションを指定できます。|  
-||**[テーブル名またはビュー名]**: 使用できるテーブルまたはビューを一覧のデータベースから選択します。<br /><br /> この一覧には、最初の 1,000 個のテーブルのみが含まれます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (*) を使用すると、目的のテーブルが表示されます。|  
+||**テーブルまたはビューの名前**:データベースの一覧から、使用できるテーブルまたはビューを選択します。<br /><br /> この一覧には、最初の 1,000 個のテーブルのみが含まれます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (*) を使用すると、目的のテーブルが表示されます。|  
   
-### <a name="preview"></a>プレビュー  
+### <a name="preview"></a>[プレビュー]  
  **[プレビュー]** をクリックすると、選択したテーブルのデータが最大で 200 行表示されます。  
   
 ## <a name="see-also"></a>参照  
- [Odbc 入力先のカスタム プロパティ](data-flow/odbc-destination-custom-properties.md)   
+ [ODBC 入力先のカスタム プロパティ](data-flow/odbc-destination-custom-properties.md)   
  [[ODBC 変換先エディター] &#40;[マッピング] ページ&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
- [Odbc 入力先エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
+ [ODBC 変換先エディター &#40;[エラー出力] ページ&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb49a9bcda16472f06611f320436b9bd918d126b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374024"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388100"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>SQL Server エージェントを使用してパッケージのスケジュールを設定する
   以下の手順は、パッケージを実行する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブ ステップを使用して、パッケージの実行を自動化する方法を示しています。  
@@ -64,7 +64,7 @@ ms.locfileid: "53374024"
     > [!IMPORTANT]  
     >  パッケージがパスワードで保護されている場合、**[新しいジョブ ステップ]** ダイアログ ボックスの **[全般]** ページのいずれかのタブ (**[パッケージ]** タブを除く) をクリックすると、**[パッケージ パスワード]** ダイアログ ボックスが表示されるので、パスワードを入力する必要があります。 入力しないと、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブはパッケージの実行に失敗します。  
   
-     **パッケージ ソース**:SSIS カタログ  
+     **パッケージ ソース:** SSIS カタログ  
   
     |タブ|および|  
     |---------|-------------|  
@@ -77,7 +77,7 @@ ms.locfileid: "53374024"
     ||**エラー時にダンプ**:パッケージの実行中にエラーが発生した場合に、デバッグ ダンプ ファイルを生成するかどうかを指定します。<br /><br /> ファイルには、問題のトラブルシューティングに役立つ、パッケージの実行に関する情報が含まれます。<br /><br /> このオプションを選択した場合、実行中にエラーが発生すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によって .mdmp ファイル (バイナリ ファイル) および .tmp ファイル (テキスト ファイル) が作成されます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の既定では、これらのファイルは *\<ドライブ>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps フォルダーに格納されます。|  
     ||**32 ビット ランタイム**の 64 ビット バージョンが 64 ビット コンピューターで 32 ビット バージョンの dtexec ユーティリティを使用してパッケージを実行するかどうかを示す[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]と[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]エージェントをインストールします。<br /><br /> たとえば、パッケージが 64 ビット バージョンでは使用できないネイティブ OLE DB プロバイダーを使用している場合に、32 ビット バージョンの dtexec を使用してパッケージを実行する必要がある場合があります。 詳細については、「 [64 ビット コンピューター上の Integration Services に関する注意点](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)」を参照してください。<br /><br /> 既定では、ジョブ ステップの種類として **[SQL Server Integration Services パッケージ]** を選択した場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントはシステムによって自動的に呼び出されるバージョンの dtexec ユーティリティを使用してパッケージを実行します。 システムは、コンピューター プロセッサと、コンピューター上で実行されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントのバージョンに応じて、32 ビットまたは 64 ビット バージョンのユーティリティを呼び出します。|  
   
-     **パッケージ ソース**:SQL Server、SSIS パッケージ ストア、またはファイル システム  
+     **パッケージ ソース:** SQL Server、SSIS パッケージ ストア、またはファイル システム  
   
      SQL Server、SSIS パッケージ ストア、またはファイル システムに格納されるパッケージに設定できるオプションの多くは、`dtexec` コマンド プロンプト ユーティリティのコマンド ライン オプションに対応しています。 ユーティリティとコマンド ライン オプションの詳細については、「 [dtexec ユーティリティ](packages/dtexec-utility.md)」を参照してください。  
   

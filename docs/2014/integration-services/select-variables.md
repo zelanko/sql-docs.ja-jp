@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Variables dialog box
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b25d629c510e6220ee361643502a2e178a7ae172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afae34484d4513c9ef6a33435fb023dbb8190fd4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176142"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390810"
 ---
 # <a name="select-variables"></a>[変数の選択]
   **[変数の選択]** ダイアログ ボックスを使用すると、メッセージ キュー タスクの 2 番目のメッセージ操作で使用する変数を指定できます。 **[利用可能な変数]** の一覧には、メッセージ キュー タスクまたは親コンテナーのスコープのシステム変数とユーザー定義変数が含まれます。 タスクは、 **[選択された変数]** の一覧の変数を使用します。  
@@ -41,7 +41,7 @@ ms.locfileid: "48176142"
  **[新しい変数]**  
  新しい変数を作成します。  
   
- **関連項目:** [変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [変数の追加](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>参照  
  [メッセージ キュー タスク](control-flow/message-queue-task.md)  

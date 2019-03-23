@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - event handlers [Integration Services], creating
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ca66bfd954ff9c6da23aeecd3997454539f48adc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c64d535e7e712dde5dd98e8b4c14b3319d5947db
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123452"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391008"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>パッケージにイベント ハンドラーを追加する
   コンテナーとタスクは実行時にイベントを発生させます。 こうしたイベントが発生したときにワークフローを実行して、イベントに応答するカスタム イベント ハンドラーを作成できます。 たとえば、タスクが失敗したときに電子メール メッセージを送信するイベント ハンドラーを作成できます。  

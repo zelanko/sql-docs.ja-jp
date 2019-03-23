@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - SMO Connection Manager Editor
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 21b444376ce04c2a61f6b9f7c0b4ce3bbdb0fa23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a9fca0d602f54d6bab7f21c57838a50212dfd5a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204032"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391933"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 接続マネージャー エディター
   **[SMO 接続マネージャー エディター]** を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトを転送するさまざまなタスクで使用される [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 接続を構成します。  
@@ -50,6 +50,6 @@ ms.locfileid: "48204032"
  構成されたとおりに接続をテストします。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services のエラーとメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

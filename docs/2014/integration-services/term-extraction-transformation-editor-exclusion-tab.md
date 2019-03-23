@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a96d82cf2296fa8b0775e4fac025ebb53577344
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6292fa7798c9f9d76868b4230317eb99a1f8b3d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201572"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392740"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>[用語抽出変換エディター] ([除外] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[除外]** タブを使用すると、除外テーブルへの接続を設定し、除外用語が含まれている列を指定できます。  
@@ -48,8 +48,8 @@ ms.locfileid: "48201572"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [用語抽出変換エディター&#40;用語抽出 タブ&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [用語抽出変換エディター&#40;詳細設定 タブ&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
+ [[用語抽出変換エディター] &#40;[用語抽出] タブ&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [[用語抽出変換エディター] &#40;[詳細設定] タブ&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
  [用語参照変換](data-flow/transformations/lookup-transformation.md)  
   
   

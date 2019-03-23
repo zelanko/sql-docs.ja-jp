@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: 40ce93e9232d0492bd693e7920b62dc9805aa7ac
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
-ms.translationtype: HT
+ms.openlocfilehash: a9ef02cae7899a1deb5ce6d84b10dac2297b9d2f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356405"
+ms.locfileid: "58389960"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>RESTful web サービスを使用して SQL Server のビッグ データ クラスターにデプロイされたアプリを使用します。
 
@@ -101,9 +101,9 @@ IP アドレスに注意してください (`10.1.1.3`この例では) とポー
 ## <a name="execute-the-app-using-the-restful-web-service"></a>RESTful web サービスを使用して、アプリを実行します。
 
 > [!NOTE]
-> する場合は、URL を開くことができます、`swagger`実行したときに返された`mssqlctl app describe --name [appname] --version [version]`ブラウザーでいるようになります`https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`します。 使用した同じ資格情報でログインする必要があります`mssqlctl login`します。 内容、`swagger.json`に貼り付けること[Swagger Editor](https://editor.swagger.io)します。 Web サービスを公開すると表示されます、`run`メソッド。
+> する場合は、URL を開くことができます、`swagger`実行したときに返された`mssqlctl app describe --name [appname] --version [version]`ブラウザーでいるようになります`https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`します。 使用した同じ資格情報でログインする必要があります`mssqlctl login`します。 内容、`swagger.json`に貼り付けること[Swagger Editor](https://editor.swagger.io)します。 Web サービスを公開すると表示されます、`run`メソッド。 ベース URL の上部に表示にも注意してください。
 
-好みのツールを使用して呼び出すことができます、`run`メソッド (`https://[IP]:[PORT]/api/app/[appname]/[version]/run`)、json として POST 要求の本文内のパラメーターに渡します。 この例では使用[Postman](https://www.getpostman.com/)します。 呼び出しを行う前に設定する必要があります、`Authorization`に`Bearer Token`以前に取得したトークンに貼り付けます。 これにより、要求ヘッダーが設定されます。 次のスクリーンショットを見てください。
+好みのツールを使用して呼び出すことができます、`run`メソッド (`https://[IP]:30778/api/app/[appname]/[version]/run`)、json として POST 要求の本文内のパラメーターに渡します。 この例では使用[Postman](https://www.getpostman.com/)します。 呼び出しを行う前に設定する必要があります、`Authorization`に`Bearer Token`以前に取得したトークンに貼り付けます。 これにより、要求ヘッダーが設定されます。 次のスクリーンショットを見てください。
 
 ![Postman のヘッダーを実行します。](media/big-data-cluster-consume-apps/postman_run_1.png)
 

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - deploying packages [Integration Services], configurations
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5bf5ca4c2e27f366a6f5ded97f9a9aa5213db122
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c4bf8041fbac675653bb620d3aca7b1abba21a0a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361074"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388050"
 ---
 # <a name="create-package-configurations"></a>パッケージ構成を作成する
   パッケージの構成は、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスまたはパッケージ構成ウィザードを使用して作成します。 これらのツールにアクセスするには、 **で** [SSIS] **メニューの** [パッケージ構成] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]をクリックします。  

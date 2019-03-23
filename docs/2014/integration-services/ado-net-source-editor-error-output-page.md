@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9440400dde3605bbd60049290bc6546eb47ea3e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d033401c87b2cd4e9fe7047ab7a19f474a3ae156
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191262"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388700"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>[ADO NET 変換元エディター] ([エラー出力] ページ)
   **[ADO NET 変換元エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
@@ -43,7 +43,7 @@ ms.locfileid: "48191262"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](data-flow/error-handling-in-data.md)  
+ **関連項目:**[データのエラー処理](data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
@@ -58,8 +58,8 @@ ms.locfileid: "48191262"
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="see-also"></a>参照  
- [ADO net 変換元エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [ADO net 変換元エディター&#40;列 ページ&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [[ADO NET 変換元エディター] ([接続マネージャー] ページ)](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [[ADO NET 変換元エディター] ([列] ページ)](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)  
   
   
