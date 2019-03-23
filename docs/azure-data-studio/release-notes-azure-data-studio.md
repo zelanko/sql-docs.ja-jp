@@ -3,7 +3,7 @@ title: リリース ノート
 titleSuffix: Azure Data Studio
 description: Azure Data Studio リリース ノート
 ms.custom: seodec18
-ms.date: 03/06/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,27 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161629"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381590"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新のリリースをインストールをダウンロードしてください。](download.md)**
+
+## <a name="march-2019-hotfix"></a>3 月 2019 (修正プログラム)
+
+2019 年 3 月 22日&nbsp;  /  &nbsp;バージョン。1.5.2 &nbsp;  /  &nbsp;修正プログラムのリリース
+
+&nbsp;
+
+| [変更] | 詳細 |
+| :----- | :------ |
+| 1.5.1 で発見されたいくつかの問題を修正しました。 | 参照してください[GitHub の修正プログラムのリリースでは、年 3 月](https://github.com/Microsoft/azuredatastudio/milestone/28)します。<br/> <br/>&bull; &nbsp; ユーザーとダッシュ ボードに「ノートブックを開く」のタスクから開かれた notebook が終了できなかった問題を修正しました <br/>&bull; &nbsp; Notebook の JSON に余分ながある問題を修正しました} 保存後 <br/>&bull; &nbsp; Notebook のグリッドがテーマの変更に応答しない、問題を修正しました <br/>&bull; &nbsp; タブ ヘッダーで notebook の完全なパスが示すように問題を修正しました。 ファイル名のみが表示されるようになりました。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>3 月 2019
 
@@ -53,7 +64,7 @@ ms.locfileid: "58161629"
 - 新しい Notebook とノートブックを開くアイコンは失われます <br/> 
 **回避策:** 従来の接続の種類が非推奨とされます。 SQL Server エンドポイントに接続することをお勧めします。 および、期待どおりに、すべてのアクション (新しい Notebook、Spark ジョブ) が表示されます。 
 
-## <a name="february-2019"></a>2 月 2019
+## <a name="february-2019"></a>2019 年 2 月
 
 2019 年 2 月 13日&nbsp;  /  &nbsp;バージョン。1.4.5
 

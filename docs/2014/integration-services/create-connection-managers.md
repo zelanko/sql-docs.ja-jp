@@ -16,15 +16,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], creating
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 807241aec9544c8a6366b8d12c0aaddb4b0d228a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef2ea7fa43556f0c4f12ee41101aedf396a23382
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074466"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374090"
 ---
 # <a name="create-connection-managers"></a>接続マネージャーを作成する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、さまざまな種類のサーバーやデータ ソースに接続するタスクのニーズに合わせるため、さまざまな接続マネージャーが用意されています。 接続マネージャーは、データを抽出してさまざまな種類のデータ ストアに読み込むデータ フロー コンポーネントや、ログをサーバー、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブル、またはファイルに書き込むログ プロバイダーによって使用されます。 たとえば、メール送信タスクが含まれるパッケージには、簡易メール転送プロトコル (SMTP) サーバーに接続するタイプの SMTP 接続マネージャーを使用します。 SQL 実行タスクが含まれるパッケージでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースに接続する OLE DB 接続マネージャーを使用できます。 詳細については、「[Integration Services (SSIS) の接続](connection-manager/integration-services-ssis-connections.md)」を参照してください。  
@@ -56,8 +56,8 @@ ms.locfileid: "48074466"
  どちらのバージョンのプロバイダーも ID は同じです。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ランタイムで使用可能な 64 ビット バージョンのプロバイダーを使用するかどうかを指定するには、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの Run64BitRuntime プロパティを設定します。 Run64BitRuntime プロパティ設定されている場合`true`、ランタイムが見つけて Run64BitRuntime がある場合は 64 ビット プロバイダーを使用して`false`ランタイムが検索し、32 ビット プロバイダーを使用します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトで設定できるプロパティの詳細については、「[Integration Services (SSIS) と Studio の環境](integration-services-ssis-development-and-management-tools.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [制御フロー](control-flow/control-flow.md)   
+ [[制御フロー]](control-flow/control-flow.md)   
  [データ フロー](data-flow/data-flow.md)   
- [Integration Services &#40;SSIS&#41;イベント ハンドラー](integration-services-ssis-event-handlers.md)  
+ [Integration Services (SSIS) のイベント ハンドラー](integration-services-ssis-event-handlers.md)  
   
   

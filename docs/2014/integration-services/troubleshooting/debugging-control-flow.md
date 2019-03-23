@@ -14,15 +14,15 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 791c5955cae2b1e7fec4575f43400ced245dcef5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1d338cc5c194b29b438af7593b80aaf580c64bca
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124122"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382349"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。  
@@ -50,7 +50,7 @@ ms.locfileid: "54124122"
 |タスクまたはコンテナーが `OnTaskFailed` イベントを受け取ったとき|タスク ホストが失敗したとき、タスク ホストによって呼び出されます。|  
 |タスクまたはコンテナーが `OnProgress` イベントを受け取ったとき|タスクの実行の進行状況を更新するために呼び出されます。|  
 |タスクまたはコンテナーが `OnQueryCancel` イベントを受け取ったとき|タスク処理の実行をキャンセルできる場合、任意のタイミングで呼び出されます。|  
-|タスクまたはコンテナーが `OnVariableValueChanged` イベントを受け取ったとき|変数の値が変更されたとき、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 変数の RaiseChangeEvent に設定する必要があります`true`このイベントを発生させる。<br /><br /> **&#42;&#42;警告&#42; &#42;** でこのブレークポイントに関連付けられている変数を定義する必要があります、**コンテナー**スコープ。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|  
+|タスクまたはコンテナーが `OnVariableValueChanged` イベントを受け取ったとき|変数の値が変更されたとき、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 変数の RaiseChangeEvent に設定する必要があります`true`このイベントを発生させる。<br /><br /> **&#42;&#42; 警告 &#42;&#42;** このブレークポイントに関連付けられている変数は、**コンテナー** スコープで定義する必要があります。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|  
 |タスクまたはコンテナーが `OnCustomEvent` イベントを受け取ったとき|タスクによって定義されたカスタム イベントを起動するため、タスクによって呼び出されます。|  
   
  一部のタスクとコンテナーには、すべてのタスクとコンテナーで使用できるブレークの条件以外に、ブレークポイントを設定するための特殊なブレーク条件が含まれています。 たとえば、For ループ コンテナーでは、ループの各反復処理の開始点で実行を中断するブレークポイントを設定するための、ブレークの条件を有効にできます。  

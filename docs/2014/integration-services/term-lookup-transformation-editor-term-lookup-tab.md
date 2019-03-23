@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 245d3466-d51f-4073-978a-694a8d9dfaec
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 355b736066084ed0a30a72c2d3b30010a8277674
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b792290b4c774a9a16dfed685fff83a5a8495f0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217314"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379770"
 ---
 # <a name="term-lookup-transformation-editor-term-lookup-tab"></a>[用語参照変換エディター] ([用語参照] タブ)
   **[用語参照変換エディター]** ダイアログ ボックスの **[用語参照]** タブを使用すると、入力列を参照テーブルの参照列にマップし、各出力列の別名を提供できます。  
@@ -45,8 +45,8 @@ ms.locfileid: "48217314"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [用語参照変換エディター&#40;参照テーブル タブ&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
- [用語参照変換エディター&#40;詳細設定 タブ&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
+ [用語参照変換エディター ([参照テーブル] タブ)](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
+ [用語参照変換エディター ([詳細設定] タブ)](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [用語抽出変換](data-flow/transformations/term-extraction-transformation.md)  
   
   

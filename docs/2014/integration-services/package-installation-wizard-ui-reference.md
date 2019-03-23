@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 000207f277cd0c54428cdc81b16027b7efa3aa3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f464d49680e3563f44768e9d8ad29d947a8b24
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129632"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380190"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>パッケージ インストール ウィザードの UI リファレンス
   **パッケージ インストール ウィザード**を使用すると、プロジェクトに含まれるパッケージおよびその他のファイル、パッケージの従属ファイルを含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを配置できます。  
@@ -57,7 +57,7 @@ ms.locfileid: "48129632"
  **[構成ファイル]**  
  一覧からファイルを選択して、構成ファイルの内容を編集します。  
   
- **関連項目:** [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)  
+ **関連項目:**[パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)  
   
  **[パス]**  
  構成するプロパティのパスを表示します。  

@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: c9dcca4d-f1a0-45ec-b078-f4d372589baf
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5cb12795b0aba94da115916b2b09dc0c2675e8ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5e7248868a368ee0ea956b46b63c9c8d024393b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151808"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379930"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>プロジェクトを配置した後にパラメーターの値を設定する
   配置ウィザードを使用すると、プロジェクトをカタログに配置するときにサーバーの既定のパラメーター値を設定できます。 プロジェクトをカタログに配置した後、SQL Server Management Studio (SSMS) オブジェクト エクスプローラーまたは Transact-SQL を使用して、サーバーの既定値を設定できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "48151808"
   
 3.  **[ページの選択]** の **[パラメーター]** をクリックして、パラメーター ページを開きます。  
   
-4.  **[パラメーター]** の一覧で目的のパラメーターを選択します。 注: **[コンテナー]** 列を使用すると、プロジェクト パラメーターとパッケージパラメーターを区別できます。  
+4.  **[パラメーター]** の一覧で目的のパラメーターを選択します。 注:**コンテナー**列は、パッケージ パラメーターからプロジェクト パラメーターを識別するのに役立ちます。  
   
 5.  **[値]** 列で、目的のサーバーの既定のパラメーター値を指定します。  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb93cd75ea407576b8b466defa48171e4d94a1ac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c855cdfbcf622465390e433312d75343242aee50
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361391"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380270"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>[Foreach ループ エディター] ([コレクション] ページ)
   **[Foreach ループ エディター]** ダイアログ ボックスの **[コレクション]** ページを使用すると、列挙子の型を指定して列挙子を構成できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "53361391"
  **式**  
  **[式]** をクリックして展開すると、既存のプロパティ式のリストが表示されます。 参照ボタン ( **[...]** ) ボタンをクリックして、列挙子プロパティのプロパティ式を追加するか、既存のプロパティ式を編集して評価します。  
   
- **関連項目:**[Integration Services &#40;SSIS&#41;式](expressions/integration-services-ssis-expressions.md)、[プロパティ式エディター](expressions/property-expressions-editor.md)、[式ビルダー](expressions/expression-builder.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41;式](expressions/integration-services-ssis-expressions.md)、[プロパティ式エディター](expressions/property-expressions-editor.md)、[式ビルダー](expressions/expression-builder.md)  
   
 ## <a name="enumerator-dynamic-options"></a>列挙子の動的オプション  
   
@@ -110,7 +110,7 @@ ms.locfileid: "53361391"
  **[列]**  
  アイテム内の列のデータ型を構成する場合にクリックします。  
   
- **関連項目:**[[For Each Item 列] ダイアログ ボックスの UI リファレンス](../../2014/integration-services/for-each-item-columns-dialog-box-ui-reference.md)  
+ **関連トピック:** [[For Each Item 列] ダイアログ ボックスの UI リファレンス](../../2014/integration-services/for-each-item-columns-dialog-box-ui-reference.md)  
   
 ### <a name="enumerator--foreach-ado-enumerator"></a>[Enumerator] = [Foreach ADO 列挙子]  
  Foreach ADO 列挙子は、変数に格納されている ADO オブジェクトまたは ADO.NET オブジェクト内の行またはテーブルを列挙するために使用します。 たとえば、変数にデータセットを書き込むスクリプト タスクが Foreach ループに含まれている場合、Foreach ADO 列挙子を使用して、データセット内の行を列挙できます。 変数に ADO.NET データセットが格納されている場合は、複数のテーブル内の行を列挙するか、テーブルを列挙するようにこの列挙子を構成できます。  
@@ -121,7 +121,7 @@ ms.locfileid: "53361391"
 > [!NOTE]  
 >  変数は、Object データ型にする必要があります。それ以外の場合はエラーが発生します。  
   
- **関連項目:**[Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
  **[最初のテーブル内の行]**  
  最初のテーブルの行のみを列挙する場合に選択します。  
@@ -141,7 +141,7 @@ ms.locfileid: "53361391"
 > [!IMPORTANT]  
 >  ADO.NET 接続マネージャーでは、OLE DB の .NET プロバイダーを使用する必要があります。 SQL Server に接続する場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client の使用をお勧めします。このプロバイダーは、 **[接続マネージャー]** ダイアログ ボックスの **[OleDb の .Net プロバイダー]** セクションに一覧表示されます。  
   
- **関連項目:**[ADO 接続マネージャー](connection-manager/ado-connection-manager.md)、 [ADO.NET 接続マネージャーの構成](configure-ado-net-connection-manager.md)  
+ **関連トピック:** [ADO 接続マネージャー](connection-manager/ado-connection-manager.md)、 [ADO.NET 接続マネージャーの構成](configure-ado-net-connection-manager.md)  
   
  **[スキーマ]**  
  列挙するスキーマを選択します。  
@@ -149,7 +149,7 @@ ms.locfileid: "53361391"
  **[制限の設定]**  
  指定したスキーマに適用する制約を設定します。  
   
- **関連項目:**[[スキーマの制限] ダイアログ ボックス](../../2014/integration-services/schema-restrictions-dialog-box.md)  
+ **関連トピック:** [[スキーマの制限] ダイアログ ボックス](../../2014/integration-services/schema-restrictions-dialog-box.md)  
   
 ### <a name="enumerator--foreach-from-variable-enumerator"></a>[Enumerator] = [Foreach From Variable 列挙子]  
  Foreach From Variable 列挙子は、指定した変数に含まれる列挙可能なオブジェクトを列挙するために使用します。 たとえば、クエリを実行し、その結果を変数に格納する SQL 実行タスクが Foreach ループに含まれている場合、Foreach From Variable 列挙子を使用してクエリの結果を列挙できます。  
@@ -157,7 +157,7 @@ ms.locfileid: "53361391"
  **変数**  
  一覧で変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連項目:**[Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>[Enumerator] = [Foreach NodeList 列挙子]  
  Foreach Nodelist 列挙子は、XPath 式を XML ファイルに適用した結果として生成された XML ノードのセットを列挙するために使用します。 たとえば、Foreach ループにスクリプト タスクが含まれている場合、Foreach NodeList 列挙子を使用して、XPath 式の条件を満たす値を XML ファイルからスクリプト タスクに渡すことができます。  
@@ -180,11 +180,11 @@ ms.locfileid: "53361391"
   
  **[DocumentSourceType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連項目:**[ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **[DocumentSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連項目:**[Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数を追加](../../2014/integration-services/add-variable.md)します。  
+ **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数を追加](../../2014/integration-services/add-variable.md)します。  
   
  **[EnumerationType]**  
  一覧から列挙型を選択します。 このプロパティのオプションを次の表に示します。  
@@ -210,11 +210,11 @@ ms.locfileid: "53361391"
   
  **[OuterXPathStringSourceType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連項目:**[ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **[OuterXPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、\<**[新しい変数...]** をクリックして新しい変数を作成します。  
   
- **関連項目:**[Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数を追加](../../2014/integration-services/add-variable.md)します。  
+ **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数を追加](../../2014/integration-services/add-variable.md)します。  
   
  **[InnerElementType]**  
  場合**EnumerationType**に設定されている`ElementCollection`一覧で、内部要素の型を選択します。  
@@ -233,11 +233,11 @@ ms.locfileid: "53361391"
   
  **[InnerXPathStringSourceType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、\<**[新しい接続...]**> をクリックして新しい接続マネージャーを作成します。  
   
- **関連項目:**[ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **[InnerXPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、\<**[新しい変数...]** をクリックして新しい変数を作成します。  
   
- **関連項目:**[Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数を追加](../../2014/integration-services/add-variable.md)します。  
+ **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数を追加](../../2014/integration-services/add-variable.md)します。  
   
 ### <a name="enumerator--foreach-smo-enumerator"></a>[Enumerator] = [Foreach SMO 列挙子]  
  Foreach SMO 列挙子は、SQL Server 管理オブジェクト (SMO) のオブジェクトを列挙するために使用します。 たとえば、Foreach ループに SQL 実行タスクが含まれている場合、Foreach SMO 列挙子を使用して、 **AdventureWorks** データベース内のテーブルを列挙し、各テーブル内の行数をカウントするクエリを実行できます。  
@@ -253,7 +253,7 @@ ms.locfileid: "53361391"
  **[参照]**  
  SMO 列挙を選択します。  
   
- **関連項目:**[[SMO 列挙の選択] ダイアログ ボックス](../../2014/integration-services/select-smo-enumeration-dialog-box.md)  
+ **関連トピック:** [[SMO 列挙の選択] ダイアログ ボックス](../../2014/integration-services/select-smo-enumeration-dialog-box.md)  
   
 ### <a name="enumerator--foreach-azure-blob-enumerator"></a>列挙子 = Foreach Azure BLOB 列挙子  
  **Azure BLOB 列挙子**を使用すると、SSIS パッケージは指定された BLOB の場所に BLOB ファイルを列挙できるようになります。 列挙された BLOB ファイルの名前は変数に格納され、Foreach ループ コンテナー内のタスクで使用されます。  

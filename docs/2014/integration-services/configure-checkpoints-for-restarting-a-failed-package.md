@@ -12,15 +12,15 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9204220c7ea32c59f75785ad0b50fa050a47840f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 220440313f0a06efb4ad55156a41fee18c61ab62
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123402"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376680"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>失敗したパッケージを再開するためのチェックポイントを構成する
   パッケージ全体を再実行するのではなく、障害が発生した時点からパッケージを再開するように [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを構成するには、チェックポイントに適用するプロパティを設定します。  
@@ -46,7 +46,7 @@ ms.locfileid: "48123402"
         > [!IMPORTANT]  
         >  チェックポイント ファイルが使用できない場合はエラーが発生します。  
   
-    -   選択`IfExists`チェックポイント ファイルが使用可能な場合にのみ、パッケージを再開します。  
+    -   チェックポイント ファイルが使用できる場合のみパッケージを再開するには、`IfExists` を選択します。  
   
 8.  パッケージが再開できる地点のタスクおよびコンテナーを構成します。  
   

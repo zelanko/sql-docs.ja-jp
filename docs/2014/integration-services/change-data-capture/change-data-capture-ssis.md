@@ -10,15 +10,15 @@ helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a65ec13f342dc890511e7b99258a41456cd989b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 391bf9204beeb6222a6e736125e5630bd5b1565e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362394"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375882"
 ---
 # <a name="change-data-capture-ssis"></a>変更データ キャプチャ (SSIS)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、変更データ キャプチャによって、ソース テーブルからデータ マートおよびデータ ウェアハウスへの増分読み込みを効率的に実行するための効果的なソリューションが実現します。  
@@ -61,7 +61,7 @@ ms.locfileid: "53362394"
   
      **詳細:**[変更データのクエリを準備する](prepare-to-query-for-the-change-data.md)  
   
- **手順 2:変更データ クエリの設定**  
+ **手順 2:変更データのクエリの設定**  
  データのクエリを実行するテーブル値関数を作成します。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してクエリを作成および保存します。  

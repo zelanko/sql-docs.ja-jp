@@ -12,15 +12,15 @@ helpviewer_keywords:
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff0f1ef3f7baff1c39b3d338f47eb5eddde286e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c78fb92078c604d881f18ea3472e23619771b49
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098182"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374620"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする
   この手順では、パッケージ、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーにブレークポイントを設定する方法について説明します。  
@@ -47,8 +47,8 @@ ms.locfileid: "48098182"
   
 ## <a name="see-also"></a>参照  
  [パッケージ開発のトラブルシューティング ツール](troubleshooting/troubleshooting-tools-for-package-development.md)   
- [スクリプト タスクおよびスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグします。](data-flow/transformations/script-component.md)   
- [コーディングとスクリプト タスクのデバッグ](control-flow/script-task.md)   
+ [スクリプト タスクとスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグする](data-flow/transformations/script-component.md)   
+ [スクリプト タスクのコーディングおよびデバッグ](control-flow/script-task.md)   
  [スクリプト コンポーネントのコーディングおよびデバッグ](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

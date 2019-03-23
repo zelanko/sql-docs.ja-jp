@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ecdc542e8bea3717a37c40c6addb2b35b9a5f03b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f758e70c4133c28182a4d8e0019dd1e568441025
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195312"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379760"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>[フラット ファイル変換先エディター] ([マッピング] ページ)
   **[フラット ファイル変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -42,6 +42,6 @@ ms.locfileid: "48195312"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [フラット ファイル変換先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
+ [[フラット ファイル変換先エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
   
   

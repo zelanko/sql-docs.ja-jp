@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure OLE DB Connection Manager dialog box
 ms.assetid: 66b60dda-1f1b-45d0-9818-8434ea1121eb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e486f723f9001158bc13e8e35a03fb09bb57dc0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a21e362d870337420bec17f6210972a73055dc32
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201222"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376081"
 ---
 # <a name="configure-ole-db-connection-manager"></a>[OLE DB 接続マネージャーの構成]
   **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用すると、データ ソースへの接続を追加できます。新しい接続を設定するか、既存の接続のコピーを使用できます。  
@@ -41,6 +41,6 @@ ms.locfileid: "48201222"
  データ接続を選択して **[削除]** ボタンをクリックすると、接続が削除されます。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services のエラーとメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

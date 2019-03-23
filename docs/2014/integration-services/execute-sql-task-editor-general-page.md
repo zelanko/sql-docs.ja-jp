@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dcf15af9fb5e351dd4c965d0eb6ef520b62b65b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 559f13c3c777931270f4bc289f890f2360361030
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531371"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382278"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>[SQL 実行タスク エディター] ([全般] タブ)
   **[SQL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、SQL 実行タスクを構成したり、タスクが実行する SQL ステートメントを指定したりできます。  
@@ -55,7 +55,7 @@ ms.locfileid: "52531371"
  **ConnectionType**  
  データ ソースへの接続に使用する接続マネージャーの種類を選択します。 使用可能な接続の種類は、 **[OLE DB]**、 **[ODBC]**、 **[ADO]**、 **[ADO.NET]** 、および **[SQLMOBILE]** です。  
   
- **関連項目:**[OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、 [ODBC 接続マネージャー](connection-manager/odbc-connection-manager.md)、 [ADO 接続マネージャー](connection-manager/ado-connection-manager.md)、 [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)、 [SQL ServerCompact Edition 接続マネージャー](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、 [ODBC 接続マネージャー](connection-manager/odbc-connection-manager.md)、 [ADO 接続マネージャー](connection-manager/ado-connection-manager.md)、 [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)、 [SQL ServerCompact Edition 接続マネージャー](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **[接続]**  
  定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、[\<**新しい接続...**>] を選択します。  
@@ -65,7 +65,7 @@ ms.locfileid: "52531371"
   
  SQL 実行タスクが使用する接続マネージャーの種類によって、パラメーター化された SQL ステートメントで特定のパラメーター マーカーを使用する必要があります。  
   
- **関連項目:** パラメーター化 SQL コマンドのセクションを実行している[SQL 実行タスク](control-flow/execute-sql-task.md)  
+ **関連トピック:** パラメーター化 SQL コマンドのセクションを実行している[SQL 実行タスク](control-flow/execute-sql-task.md)  
   
  このプロパティのオプションを次の表に示します。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "52531371"
  **[BypassPrepare]**  
  SQL ステートメントが準備されているかどうかを示します。  `true` の場合は準備がスキップされ、`false` の場合は実行の前に SQL ステートメントが準備されます。 このオプションは、準備をサポートしている OLE DB 接続の場合のみ使用可能です。  
   
- **関連項目:**[準備実行](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **関連トピック:** [準備実行](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **[参照]**  
  **[開く]** ダイアログ ボックスを使用して、SQL ステートメントを含むファイルの場所を指定します。 ファイルを選択して、ファイルの内容を SQL ステートメントとして **[SQLStatement]** プロパティにコピーします。  
@@ -98,19 +98,19 @@ ms.locfileid: "52531371"
  **[SQLStatement]**  
  実行する SQL ステートメントをオプション ボックスに入力するか、参照ボタン ([...]) をクリックして **[SQL クエリの入力]** ダイアログ ボックスに SQL ステートメントを入力するか、**[クエリの作成]** をクリックして **[クエリ ビルダー]** ダイアログ ボックスでステートメントを作成します。  
   
- **関連項目:**[クエリ ビルダー](../../2014/integration-services/query-builder.md)  
+ **関連トピック:** [クエリ ビルダー](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>[SQLSourceType] = [ファイル接続]  
  **[FileConnection]**  
  既存のファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連項目:**[ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>[SQLSourceType] = [変数]  
  **[SourceVariable]**  
  既存の変数を選択するか、\<**新しい変数...**> をクリックして新しい変数を作成します。  
   
- **関連項目:**[Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   

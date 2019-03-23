@@ -17,22 +17,22 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d561840bfe2c10d7b269bb952b934d22dd957d32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135202"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378600"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>式を使って設定できるデータ フロー プロパティ
   データ フロー タスク コンテナーで使用できるプロパティ式を使用して、データ フロー オブジェクトの特定のプロパティの値を指定できます。  
   
  プロパティ式の使用の詳細については、「 [パッケージでプロパティ式を使用する](expressions/use-property-expressions-in-packages.md)」を参照してください。  
   
- プロパティ式を使用して、パッケージを配置するインスタンスごとに構成をカスタマイズできます。 また、コマンド プロンプト ユーティリティ **dtexec** に **/set** オプションを付けて使用すると、プロパティ式を使用してパッケージの実行時制約を指定することもできます。 たとえば、制限、 `MaximumThreads` 、並べ替え変換で使用される、または`MaxMemoryUsage`あいまいグループ化とあいまい参照変換の。 制約を行わないと、これらの変換により大容量のデータがメモリ内にキャッシュされる場合があります。  
+ プロパティ式を使用して、パッケージを配置するインスタンスごとに構成をカスタマイズできます。 また、コマンド プロンプト ユーティリティ **dtexec** に **/set** オプションを付けて使用すると、プロパティ式を使用してパッケージの実行時制約を指定することもできます。 たとえば、並べ替え変換で使用される `MaximumThreads`、または、あいまいグループ化変換およびあいまい参照変換の `MaxMemoryUsage` を制約できます。 制約を行わないと、これらの変換により大容量のデータがメモリ内にキャッシュされる場合があります。  
   
  このトピックに示すデータ フロー オブジェクトのプロパティの 1 つに対するプロパティ式を指定するには、デザイナーの **[制御フロー]** 画面でデータ フロー タスクを選択するか、コンポーネントやパスを個別に選択せずにデザイナーの **[データ フロー]** タブを選択して、データ フロー タスクの **[プロパティ]** ウィンドウを表示します。 **[式]** プロパティを選択し、省略記号 (...) をクリックして、 **[プロパティ式エディター]** ダイアログ ボックスを表示します。 **[プロパティ]** の一覧からプロパティを選択し、 **[式]** テキスト ボックスに式を入力するか、省略記号 (...) をクリックして **[式ビルダー]** ダイアログ ボックスを表示します。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48135202"
  pragmaticworks.com の技術記事「 [SSIS 式チート シート](http://pragmaticworks.com/cheatsheet/)」  
   
 ## <a name="see-also"></a>参照  
- [パッケージでプロパティ式を使用します。](expressions/use-property-expressions-in-packages.md)   
+ [パッケージでプロパティ式を使用する](expressions/use-property-expressions-in-packages.md)   
  [共通プロパティ](../../2014/integration-services/common-properties.md)   
  [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)   
  [パスのプロパティ](../../2014/integration-services/path-properties.md)  
