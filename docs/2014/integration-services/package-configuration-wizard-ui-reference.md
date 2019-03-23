@@ -13,18 +13,18 @@ f1_keywords:
 - sql12.dts.configwizard.finishdtsconfiguration.f1
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f984034b21680842bdb4813f4f8d9489edb0913b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 042f1146295d0a8358a7f89a38929a77e6f761a1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160382"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376190"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>パッケージ構成ウィザードの UI リファレンス
-  **パッケージ構成ウィザード**を使用すると、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。 このウィザードは、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスで新しい構成を追加するか既存の構成を変更するときに実行されます。 **[パッケージ構成オーガナイザー]** ダイアログ ボックスを開くには、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で **[SSIS]** メニューの **[パッケージ構成]** をクリックします。 詳細については、「[パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)」を参照してください。  
+  **パッケージ構成ウィザード**を使用すると、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。 このウィザードは、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスで新しい構成を追加するか既存の構成を変更するときに実行されます。 **[パッケージ構成オーガナイザー]** ダイアログ ボックスを開くには、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で **[SSIS]** メニューの **[パッケージ構成]** をクリックします。 詳細については、「 [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)」を参照してください。  
   
 > [!NOTE]  
 >  パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
@@ -56,7 +56,7 @@ ms.locfileid: "48160382"
 |**環境変数**|構成を環境変数の 1 つに格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
 |**レジストリ エントリ**|構成をレジストリに格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
 |**親パッケージ変数**|構成をタスクを含むパッケージに変数として格納します。  この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
-|**SQL Server**|構成を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のテーブルに格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
+|**SQL Server**|構成を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のテーブルに格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
   
  **Next**  
  ウィザードのシーケンスの次のページを表示します。  

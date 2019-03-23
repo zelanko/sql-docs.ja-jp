@@ -12,15 +12,15 @@ helpviewer_keywords:
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a166c760ecb3dafabbfaa8e131f1a8948429dc61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c6114fac83862198b37647f6350d657df878ca5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069662"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379637"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>結果セットを SQL 実行タスクの変数にマップする
   このトピックでは、結果セットと SQL 実行タスクの変数との間のマッピングを作成する方法について説明します。 結果セットを変数にマップすることで、結果セットをパッケージ内の他の要素で使用できるようになります。 たとえば、スクリプト タスクのスクリプトでは、変数を読み取ってから、結果セットからの値を使用できます。XML ソースでは、変数に格納された結果セットを利用できます。 親パッケージで結果セットが生成される場合、パッケージ実行タスクから呼び出された子パッケージでその結果セットを使用できるようにするには、結果セットを親パッケージ内の変数にマップしてから、子パッケージ内で親パッケージの変数構成を作成して、親変数の値を格納します。  
@@ -64,9 +64,9 @@ ms.locfileid: "48069662"
  [SQL 実行タスク](control-flow/execute-sql-task.md)   
  [結果セットで、SQL 実行タスク](result-sets-in-the-execute-sql-task.md)   
  [パッケージ実行タスク](control-flow/execute-package-task.md)   
- [パッケージの構成](../../2014/integration-services/package-configurations.md)   
- [パッケージ構成を作成します。](../../2014/integration-services/create-package-configurations.md)   
+ [[パッケージ構成]](../../2014/integration-services/package-configurations.md)   
+ [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)   
  [子パッケージで変数とパラメーターの値を使用します。](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
- [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)  
+ [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)  
   
   

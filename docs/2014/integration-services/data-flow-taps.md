@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e807fad8929ccb087b9ba55615b235a2950cdb1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 171bb649f5e4f91df947ed2a0a3113786755efe4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376784"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378130"
 ---
 # <a name="data-flow-taps"></a>データ フロー タップ
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] の新機能を使用して、ランタイム時にパッケージのデータ フロー パスのデータ タップを追加し、データ タップから外部ファイルに出力できます。 この機能を使用するには、プロジェクト配置モデルを使用して、SSIS サーバーに SSIS プロジェクトを配置する必要があります。 サーバーにパッケージを配置した後、そのパッケージを実行する前に、SSISDB データベースに対して T-SQL スクリプトを実行してデータ タップを追加する必要があります。 次にシナリオの例を示します。  
@@ -68,7 +68,7 @@ EXEC [SSISDB].[catalog].remove_data_tap @tap_id
 ```  
   
 ## <a name="listing-all-data-taps"></a>すべてのデータ タップを一覧表示する  
- catalog.execution_data_taps ビューを使用して、すべてのデータ タップを一覧することもできます。 次の例は、仕様の実行インスタンスのデータ タップを抽出します (ID:。54)。  
+ catalog.execution_data_taps ビューを使用して、すべてのデータ タップを一覧することもできます。 次の例は、仕様の実行インスタンスのデータ タップを抽出します (ID:。54).  
   
 ```  
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  

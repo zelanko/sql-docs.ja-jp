@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aaf14095eab05110845178f4115fc87ea19947a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db633e9afa480d03b31cf02a84db2813b1e30516
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224462"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378038"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>[集計変換エディター] ([集計] タブ)
   **[集計変換エディター]** ダイアログ ボックスの **[集計]** タブを使用すると、集計列および集計プロパティを指定できます。 複数の集計を適用することができます。 この変換ではエラー出力を生成しません。  
@@ -85,7 +85,7 @@ ms.locfileid: "48224462"
   
 |値|説明|  
 |-----------|-----------------|  
-|[未指定]|`CountDistinctScale`プロパティは使用されません。|  
+|[未指定]|`CountDistinctScale` プロパティは使用されません。|  
 |Low|集計では約 500,000 の個別の値を書き込むことができます。|  
 |Medium|集計では約 5,000,000 の個別の値を書き込むことができます。|  
 |高|集計では 25,000,000 を超える個別の値を書き込むことができます。|  
@@ -95,7 +95,7 @@ ms.locfileid: "48224462"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [集計変換エディター&#40;詳細設定 タブ&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
+ [[集計変換エディター] &#40;[詳細設定] タブ&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [集計変換を使用してデータセットの値を集計する](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

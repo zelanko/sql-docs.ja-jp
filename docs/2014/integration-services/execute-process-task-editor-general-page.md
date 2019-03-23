@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8724345c7fc043e4e87f2026fe07d5fc1c8e80b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b482fcd6f03a3a5b20a1b1825cc9a045b891224
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202362"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379440"
 ---
 # <a name="execute-process-task-editor-general-page"></a>[プロセス実行タスク エディター]\([全般] ページ)
   **[プロセス実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、プロセス実行タスクの名前と説明を入力できます。  
@@ -37,9 +37,9 @@ ms.locfileid: "48202362"
  **[説明]**  
  プロセス実行タスクの説明を入力します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [プロセス実行タスク エディター&#40;ページの処理&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
+ [[プロセス実行タスク エディター] ([処理] ページ)](../../2014/integration-services/execute-process-task-editor-process-page.md)   
  [[式] ページ](expressions/expressions-page.md)  
   
   

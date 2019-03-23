@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.connection.f1
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 17cb397a383df0618b9abc9e2eef6ba5094ed82a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aaf49a9894e5b2f3f35687b8575c35b5f19ebe81
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129552"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378590"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>[ODBC ソース エディター] ([接続マネージャー] ページ)
   **[ODBC 入力元エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、入力元の ODBC 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -46,19 +46,19 @@ ms.locfileid: "48129552"
 |オプション|説明|  
 |------------|-----------------|  
 |テーブル名|ODBC データ ソースのテーブルまたはビューからデータを取得します。 このオプションを選択する場合は、以下の一覧から値を選択します。|  
-||**[テーブル名またはビュー名]**: 使用できるテーブルまたはビューを一覧から選択するか、正規表現を入力してテーブルを特定します。|  
+||**テーブルまたはビューの名前**:一覧から使用できるテーブルまたはビューを選択するか、テーブルを識別する正規表現を入力します。|  
 ||この一覧には、最初の 1,000 個のテーブルのみが含まれます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (*) を使用すると、目的のテーブルが表示されます。|  
 |[SQL コマンド]|SQL クエリを使用して、ODBC データ ソースからデータを取得します。 使用しているソース データベースの構文でクエリを記述してください。 このオプションを選択する場合は、以下のいずれかの方法でクエリを入力します。|  
 ||**[SQL コマンド テキスト]** フィールドに SQL クエリのテキストを入力します。|  
 ||**[参照]** をクリックして、テキスト ファイルから SQL クエリを読み込みます。|  
 ||**[クエリの解析]** をクリックして、クエリ テキストの構文を検証します。|  
   
-### <a name="preview"></a>プレビュー  
+### <a name="preview"></a>[プレビュー]  
  **[プレビュー]** をクリックすると、選択したテーブルまたはビューから抽出されたデータを先頭から最大で 200 行表示できます。  
   
 ## <a name="see-also"></a>参照  
- [Odbc 入力元のカスタム プロパティ](data-flow/odbc-source-custom-properties.md)   
+ [ODBC 入力元のカスタム プロパティ](data-flow/odbc-source-custom-properties.md)   
  [[ODBC ソース エディター] &#40;[列] ページ&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
- [Odbc 入力元エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
+ [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   
