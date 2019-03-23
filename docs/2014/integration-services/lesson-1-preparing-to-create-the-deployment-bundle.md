@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4549800144012991b4d154eecb2f9bd67dee352
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9e4695575aba2e43435c4e26d5a47ccb2cfa39d6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364904"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387780"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>レッスン 1:配置バンドルを作成する準備
   このレッスンでは、チュートリアルをサポートする作業フォルダーと環境変数を作成し、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成します。さらに、いくつかのパッケージとそのサポート ファイルをプロジェクトに追加し、パッケージに構成を実装します。  
@@ -35,11 +35,11 @@ ms.locfileid: "53364904"
   
 -   [手順 2:配置プロジェクトの作成](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
--   [手順 3:パッケージとその他のファイルの追加](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
+-   [ステップ 3:パッケージとその他のファイルの追加](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
 -   [手順 4:パッケージ構成の追加](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
--   [手順 5:更新パッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+-   [手順 5:更新したパッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
  [ステップ 1: 作成する作業フォルダーと環境変数](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  

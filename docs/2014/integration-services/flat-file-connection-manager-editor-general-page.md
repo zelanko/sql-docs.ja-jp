@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d4d588812d9271c4089b036a1570e2dff1ace84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8282cf7060f106798f2fa482f474bc5e364492ee
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089132"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387080"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>[フラット ファイル接続マネージャー エディター] ([全般] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ファイルおよびデータ形式を選択できます。 フラット ファイル接続により、パッケージをテキスト ファイルに接続できるようになります。  
@@ -86,8 +86,8 @@ ms.locfileid: "48089132"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [フラット ファイル接続マネージャー エディター&#40;列 ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
- [フラット ファイル接続マネージャー エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
- [[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
+ [[フラット ファイル接続マネージャー エディター] ([列] ページ)](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [[フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
+ [[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

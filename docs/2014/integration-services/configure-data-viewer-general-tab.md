@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98194dfc8ac2bfcfecc1d60e14f8bacd17c45113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144472"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385902"
 ---
 # <a name="configure-data-viewer-general-tab"></a>[データ ビューアーの構成] ([全般] タブ)
   データ ビューアーは、パッケージ実行中にデータが 2 つのデータ フロー コンポーネントを接続するパスを移動するときに、データを表示します。  

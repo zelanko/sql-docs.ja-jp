@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3538e768fafbf310850fecf9899e70409b7b2758
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f790e0cc9193f2f31c7f021c4d4901e7a825fb13
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157822"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387170"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>[Excel 変換先エディター] ([接続マネージャー] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、データ ソース情報を指定したり、結果をプレビューしたりできます。 Excel 変換先では、 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] ブックのワークシートまたは名前付き範囲にデータが読み込まれます。  
@@ -43,7 +43,7 @@ ms.locfileid: "48157822"
 |オプション|説明|  
 |------------|-----------------|  
 |[テーブルまたはビュー]|Excel データ ソースのワークシートまたは名前付き範囲にデータを読み込みます。|  
-|[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)|  
+|[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報**:[パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)|  
 |[SQL コマンド]|SQL クエリを使用して、Excel 変換先にデータを読み込みます。|  
   
  **[Excel シートの名前]**  
@@ -83,8 +83,8 @@ ms.locfileid: "48157822"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 変換先エディター&#40;マッピング ページ&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
- [Excel 変換先エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [[Excel 変換先エディター] &#40;[マッピング] ページ&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [[Excel 変換先エディター] &#40;[エラー出力] ページ&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する](control-flow/foreach-loop-container.md)  
   
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b92f8d272faf79388939ff3378b489d28ff3697
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 56aa708d39756932d28c8a94da534cb758916fcd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813374"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384080"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS パッケージ アップグレード ウィザードの F1 ヘルプ
   アップグレードする SSIS パッケージ アップグレード ウィザードを使用して[!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)]パッケージと[!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)]の現在のリリースのパッケージ形式にパッケージ[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]します。  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.f1
 ms.assetid: 281a36c6-c2c2-4a25-8f48-5f372ed8b63f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 780cb5cfc35f67ba53b9c0e48c410fa1720847d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bfff87c2b1e37b238d2f5a46581f3da8ceb2f3e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154252"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389027"
 ---
 # <a name="select-script-component-type"></a>[スクリプト コンポーネントの種類を選択]
   **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスを使用すると、変換元、変換、または変換先として構成済みのスクリプト変換を作成するかどうかを指定できます。  
@@ -30,10 +30,10 @@ ms.locfileid: "48154252"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [スクリプト変換エディター&#40;入力列 ページ&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [スクリプト変換エディター&#40;入力し、出力のページ&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [スクリプト変換エディター &#40;[スクリプト] ページ&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [スクリプト変換エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [[スクリプト変換エディター] &#40;[入力列] ページ&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [スクリプト変換エディター &#40;[入力および出力] ページ&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [スクリプト変換エディター ([スクリプト] ページ)](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [スクリプト変換エディター ([接続マネージャー] ページ)](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [その他のスクリプト コンポーネントの例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

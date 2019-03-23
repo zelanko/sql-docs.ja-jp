@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, firewalls
 - SSIS, firewalls
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7160e4622cea397f7b300a1221797349107d38d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3aab23efecc139e4aaf4a4c3d6d0075cf02a7e7f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369994"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387460"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>SSIS サービスにアクセスするように Windows ファイアウォールを構成する
     
@@ -66,11 +66,11 @@ ms.locfileid: "53369994"
   
 1.  コントロール パネルの **[Windows ファイアウォール]** をダブルクリックします。  
   
-2.   **[Windows ファイアウォール]** ダイアログ ボックスで、 **[例外]** タブをクリックし、 **[プログラムの追加]** をクリックします。  
+2.  **[Windows ファイアウォール]** ダイアログ ボックスで、 **[例外]** タブをクリックし、 **[プログラムの追加]** をクリックします。  
   
 3.  **[プログラムの追加]** ダイアログ ボックスで、 **[参照]** をクリックし、Program Files\Microsoft SQL Server\100\DTS\Binn フォルダーに移動します。次に MsDtsSrvr.exe をクリックし、 **[開く]** をクリックします。 **[OK]** をクリックして、 **[プログラムの追加]** ダイアログ ボックスを閉じます。  
   
-4.   **[例外]** タブで、 **[ポートの追加]** をクリックします。  
+4.  **[例外]** タブで、 **[ポートの追加]** をクリックします。  
   
 5.  **[ポートの追加]** ダイアログ ボックスの **[名前]** ボックスに、「 **RPC(TCP/135)**」またはその他のわかりやすい名前を入力します。次に、 **[ポート番号]** ボックスに「 **135** 」と入力し、 **[TCP]** をクリックにします。  
   

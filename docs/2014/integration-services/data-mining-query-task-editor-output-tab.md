@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e87ebbf69eaaee40c42344a8334a0309300ddd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7be72475f5aa6db32b65d4a9f542cd9fe82756c0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203752"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393600"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>[データ マイニング クエリ タスク エディター] ([出力] タブ)
   **[データ マイニング クエリ タスク エディター]** ダイアログ ボックスの **[出力]** タブを使用すると、予測クエリの出力先を指定できます。  
@@ -52,8 +52,8 @@ ms.locfileid: "48203752"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [データ マイニング クエリ タスク エディター&#40;マイニング モデル タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [データ マイニング クエリ タスク エディター&#40;クエリ タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [データ マイニング クエリ タスク エディター ([マイニング モデル] タブ)](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [データ マイニング クエリ タスク エディター ([クエリ] タブ)](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [データ マイニング デザイナー](../analysis-services/data-mining/data-mining-designer.md)  
   
   

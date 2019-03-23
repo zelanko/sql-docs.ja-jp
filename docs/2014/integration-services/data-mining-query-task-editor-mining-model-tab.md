@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7cb49325f8ead610840b8d14213ccbf630813daf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 722f7990076882f5f9c3db29fdeb165728f5fc48
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114392"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387340"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>[データ マイニング クエリ タスク エディター] ([マイニング モデル] タブ)
   **[データ マイニング クエリ タスク]** ダイアログ ボックスの **[マイニング モデル]** タブを使用すると、使用するマイニング構造とマイニング モデルを指定できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "48114392"
  **[接続]**  
  既存の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:**  [Analysis Services 接続マネージャーの追加](connection-manager/analysis-services-connection-manager.md)  
+ **関連トピック:** [Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)  
   
  **[新規作成]**  
  新しい [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接続マネージャーを作成します。  
@@ -56,8 +56,8 @@ ms.locfileid: "48114392"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [データ マイニング クエリ タスク エディター&#40;クエリ タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [データ マイニング クエリ タスク エディター &#40;[出力] タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [データ マイニング クエリ タスク エディター ([クエリ] タブ)](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [データ マイニング クエリ タスク エディター ([出力] タブ)](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [データ マイニング デザイナー](../analysis-services/data-mining/data-mining-designer.md)  
   
   

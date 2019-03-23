@@ -11,22 +11,22 @@ helpviewer_keywords:
 - modifying variables
 - variables [Integration Services], properties
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cd85ac29d34f40e9473f28444c8b727543d6ecf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075602"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385530"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>ユーザー定義変数のプロパティを設定する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] でユーザー定義変数のプロパティを設定するには、次の機能のいずれかを使用します。  
   
 -   [変数] ウィンドウ。  
   
--   [プロパティ] ウィンドウ。 **[プロパティ]** ウィンドウには、 **[変数]** ウィンドウでは使用できない変数 (Description、EvaluateAsExpression、Expression、ReadOnly、ValueType、および IncludeInDebugDump) を構成するためのプロパティが一覧表示されています。  
+-   [プロパティ] ウィンドウ。 **プロパティ**ウィンドウでは使用できない変数を構成するためのプロパティの一覧、**変数**ウィンドウ。Description、EvaluateAsExpression、式、ReadOnly、ValueType、および [includeindebugdump]。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、RaiseChangedEvent プロパティを除き、更新できないプロパティを持つ一連のシステム変数もあります。  
@@ -53,7 +53,7 @@ ms.locfileid: "48075602"
   
  **Namespace と名のプロパティの設定**  
   
- 値、`Name`と`Namespace`プロパティは、Unicode Standard 2.0、またはアンダー スコア (_) で定義されているアルファベット文字で始まる必要があります。 2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (\_) を使用できます。  
+ `Name` プロパティと `Namespace` プロパティの値の最初の文字は、Unicode Standard 2.0 に定義されているアルファベット文字か、アンダースコア (_) にする必要があります。 2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (\_) を使用できます。  
   
 ## <a name="using-the-variables-window-to-set-properties"></a>[変数] ウィンドウを使用したプロパティの設定  
   
@@ -98,8 +98,8 @@ ms.locfileid: "48075602"
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)   
- [パッケージで変数を使用します。](../../2014/integration-services/use-variables-in-packages.md)   
+ [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)   
+ [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)   
  [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

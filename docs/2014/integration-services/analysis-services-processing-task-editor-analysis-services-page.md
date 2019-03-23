@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ead79b77838d90beddbd5317608331c3b925bbea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 386854ec9a20931571ececf4bca943f95fc0dbf7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187632"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380900"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>[Analysis Services 処理タスク エディター] ([Analysis Services] ページ)
   **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[Analysis Services]** ページを使用すると、Analysis Services 接続マネージャーの指定、処理する分析オブジェクトの選択、処理およびエラー処理オプションの設定を行うことができます。  
@@ -44,14 +44,14 @@ ms.locfileid: "48187632"
  **[新規作成]**  
  新しい Analysis Services 接続マネージャーを作成します。  
   
- **関連トピック:** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md)、 [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **関連トピック:** [Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)、 [[Analysis Services 接続マネージャー] ダイアログ ボックスの UI リファレンスの追加](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **[オブジェクト一覧]**  
  |プロパティ|説明|  
 |--------------|-----------------|  
 |**Object Name**|指定されたオブジェクト名を表示します。|  
 |**型**|指定されたオブジェクトの種類を表示します。|  
-|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック**:[多次元モデル オブジェクトの処理](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック:** [多次元モデル オブジェクトの処理](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
 |**[設定]**|指定されたオブジェクトの処理設定を表示します。|  
   
  **[追加]**  
@@ -63,7 +63,7 @@ ms.locfileid: "48187632"
  **[影響分析]**  
  選択したオブジェクトに対して影響分析を実行します。  
   
- **関連トピック:** [[影響分析] ダイアログ ボックス (Analysis Services - 多次元データ)](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **関連トピック:** [影響分析 ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **[バッチ設定の概要]**  
  |プロパティ|説明|  
@@ -77,11 +77,11 @@ ms.locfileid: "48187632"
  **[設定の変更]**  
  処理オプションおよびディメンション キー内のエラー処理を変更します。  
   
- **関連トピック:** [[設定の変更] ダイアログ ボックス (Analysis Services - 多次元データ)](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **関連トピック:** [変更の設定 ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services 処理タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [[Analysis Services 処理タスク エディター] ([全般] ページ)](general-page-of-integration-services-designers-options.md)   
  [Analysis Services DDL 実行タスク](control-flow/analysis-services-execute-ddl-task.md)  
   
   

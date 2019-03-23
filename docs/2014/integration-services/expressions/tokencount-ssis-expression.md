@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d449e6245b779fd281fc9c8f047a9eb352d56846
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6e90b37f594bf2dd80963d7acf7357a050a3e290
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822766"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381059"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 式)
   指定された区切り記号で区切られたトークンを含んでいる文字列内のトークン数を返します。  
@@ -50,7 +50,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   この式の引数として、変数と列を使用できます。  
   
 ## <a name="expression-examples"></a>式の例  
- 次の例では、TOKENCOUNT 関数は、文字列には、3 つのトークンが含まれているために 3 を返します。「01」、「12」、「2011」。  
+ 次の例では、TOKENCOUNT 関数は、文字列には、3 つのトークンが含まれているために 3 を返します。"01", "12", "2011".  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  

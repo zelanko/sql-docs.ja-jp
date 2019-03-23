@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0824811762ff693a55fa67750be5a654f27ea5e7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375554"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385408"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>レッスン 2:配置バンドルを作成します。
-  [レッスン 1。配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)、作成した、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]プロジェクトの Deployment Tutorial という名前、パッケージとサポート ファイルをプロジェクトに追加、およびパッケージ構成を実装しました。  
+  「[レッスン 1: 配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)、作成した、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]プロジェクトの Deployment Tutorial という名前、パッケージとサポート ファイルをプロジェクトに追加、およびパッケージ構成を実装しました。  
   
  このレッスンでは、配置バンドルを作成します。配置バンドルとは、他のコンピューターにパッケージをインストールするために必要なアイテムが含まれているフォルダーです。 配置バンドルには、Deployment Tutorial プロジェクトの配置マニフェスト、パッケージのコピー、サポート ファイルのコピーを含めます。 配置マニフェストとは、配置バンドルに含まれているパッケージ、その他のファイル、および構成の一覧です。  
   

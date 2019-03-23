@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Digital Signing dialog box
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f0125281c3438f12e8dd7b27ec3d9bff89790d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ccb874a18fcc7c9ded489b758852ad24ea35c45f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218042"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387390"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>[デジタル署名] ダイアログ ボックスの UI リファレンス
   **[デジタル署名]** ダイアログ ボックスを使用すると、デジタル署名を使用してパッケージに署名したり、署名を削除したりできます。 **[デジタル署名]** ダイアログ ボックスは、 **の** [SSIS] **メニューの** [デジタル署名] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]から使用できます。  
@@ -35,6 +35,6 @@ ms.locfileid: "48218042"
  デジタル署名を削除します。  
   
 ## <a name="see-also"></a>参照  
- [セキュリティの概要&#40;Integration Services&#41;](security/security-overview-integration-services.md)  
+ [セキュリティの概要 &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

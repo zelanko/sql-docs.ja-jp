@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetranscon.f1
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91c6b0b4e81f9535ad3aa8313dd9202da388b172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e023624402d965aed6629d42ef97204413432e5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183252"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392750"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>[キャッシュ変換エディター] ([接続マネージャー] ページ)
   **[キャッシュ変換エディター]** ダイアログ ボックスの **[接続マネージャー]** タブを使用すると、既存のキャッシュ接続マネージャーを選択したり、新しいキャッシュ接続マネージャーを作成したりできます。  
@@ -37,7 +37,7 @@ ms.locfileid: "48183252"
  **[編集]**  
  既存の接続を編集します。  
   
-## <a name="see-also"></a>関連項目  
- [[キャッシュ変換エディター&#40;マッピング] ページ&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+## <a name="see-also"></a>参照  
+ [[キャッシュ変換エディター] &#40;[マッピング] ページ&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

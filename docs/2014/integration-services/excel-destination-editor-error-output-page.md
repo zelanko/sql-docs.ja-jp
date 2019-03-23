@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7807d702a09fabce5c1aba6c6782e7379d540b8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b587a81fbafd583e82a8f4af98f4b58077807d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125032"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387370"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>[Excel 変換先エディター] ([エラー出力] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理オプションを指定できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "48125032"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](data-flow/error-handling-in-data.md)  
+ **関連項目:**[データのエラー処理](data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
@@ -53,8 +53,8 @@ ms.locfileid: "48125032"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 変換先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Excel 変換先エディター&#40;マッピング ページ&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [[Excel 変換先エディター] ([接続マネージャー] ページ)](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [[Excel 変換先エディター] ([マッピング] ページ)](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する](control-flow/foreach-loop-container.md)  
   
   

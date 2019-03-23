@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a24e5e554af43cd95a65c6d392106217af9ab2cd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c7e529850f1d6e476004409a3484f0627446bc24
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532182"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390769"
 ---
 # <a name="save-a-copy-of-a-package"></a>パッケージのコピーを保存する
   この手順では、パッケージのコピーをファイル システム、パッケージ ストア、または [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の **msdb** データベースに保存する方法について説明します。 パッケージのコピーを保存する場所を指定するとき、パッケージの名前を更新することもできます。  

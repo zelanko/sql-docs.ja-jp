@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8227fe1c7cfe63772ff092d9cd30b6ea8b07271a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f2eec4fbeb300ce2a43e1007245fad573f1c5a44
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545631"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387110"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>[メッセージ キュー タスク エディター] ([受信] ページ)
   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[受信]** ページを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) メッセージを受信するためのメッセージ キュー タスクを構成します。  
@@ -56,7 +56,7 @@ ms.locfileid: "52545631"
  **Overwrite**  
  データ ファイル メッセージの内容を保存するとき、既存のファイルのデータを上書きするかどうかを示します。 既定値は `False` です。  
   
- **Assert**  
+ **[フィルター]**  
  メッセージにフィルターを適用するかどうかを指定します。 このプロパティのオプションを次の表に示します。  
   
 |ReplTest1|説明|  
@@ -74,10 +74,10 @@ ms.locfileid: "52545631"
  **[Identifier]**  
  フィルターの適用を選択した場合、メッセージの受信元のパッケージを表す固有の識別子を入力するか、省略記号ボタン ( **[...]** ) をクリックしてパッケージを指定します。  
   
- **関連項目:**[パッケージの選択](control-flow/select-a-package.md)  
+ **関連トピック:** [パッケージの選択](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>[MessageType] = [変数メッセージ]  
- **Assert**  
+ **[フィルター]**  
  メッセージにフィルターを適用するかどうかを指定します。 このプロパティのオプションを次の表に示します。  
   
 |ReplTest1|説明|  
@@ -88,7 +88,7 @@ ms.locfileid: "52545631"
  **変数**  
  変数の名前を入力するか、[\<**新しい変数...**>] をクリックして新しい変数を設定します。  
   
- **関連項目:**[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [変数の追加](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>[Filter] の動的オプション  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52545631"
  **[Identifier]**  
  フィルターの適用を選択した場合、メッセージの受信元のパッケージを表す固有の識別子を入力するか、省略記号ボタン ( **[...]** ) をクリックしてパッケージを指定します。  
   
- **関連項目:**[パッケージの選択](control-flow/select-a-package.md)  
+ **関連トピック:** [パッケージの選択](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>[MessageType] = [文字列メッセージ]  
  **[Compare]**  
@@ -133,7 +133,7 @@ ms.locfileid: "52545631"
  **変数**  
  受信したメッセージを格納する変数の名前を入力するか、\<[**新しい変数...>]** をクリックして新しい変数を設定します。  
   
- **関連項目:**[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [変数の追加](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   

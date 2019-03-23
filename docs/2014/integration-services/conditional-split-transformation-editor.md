@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9098fcc54fde98a8fa04579fe49154e41fa78943
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9307dd8c31d1f84f989e15dc36086066f6969ba
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097463"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392965"
 ---
 # <a name="conditional-split-transformation-editor"></a>条件分割変換エディター
   **[条件分割変換エディター]** を使用すると、式の作成、式が評価される順序の設定、条件分割の出力の名前付けを行うことができます。 このダイアログ ボックスには、式の作成に使用する、数学関数、文字列関数、日付/時刻関数や演算子が含まれています。 True として評価される最初の条件は、行が送信される出力を決定します。  
@@ -42,7 +42,7 @@ ms.locfileid: "48097463"
   
  このプロパティの値は、プロパティ式を使用して指定することができます。  
   
- **:**   [Integration Services &#40;SSIS&#41; の式](expressions/integration-services-ssis-expressions.md)、[ &#40;SSIS 式&#41;](expressions/operators-ssis-expression.md)、および [ &#40;SSIS 式&#41;](expressions/functions-ssis-expression.md)  
+ **関連項目:**[Integration Services &#40;SSIS&#41;式](expressions/integration-services-ssis-expressions.md)、[演算子&#40;Ssis&#41;](expressions/operators-ssis-expression.md)、および[関数&#40;SSIS 式&#41;](expressions/functions-ssis-expression.md)  
   
  **[既定の出力名]**  
  既定の出力の名前を入力するか、既定を使用します。  

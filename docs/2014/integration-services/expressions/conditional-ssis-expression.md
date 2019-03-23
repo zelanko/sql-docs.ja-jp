@@ -10,17 +10,17 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f644dc95d5c137c8ee1cdb5ecf8b0e2659e28e40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811194"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387400"
 ---
-# <a name="--conditional-ssis-expression"></a>? :(条件付き)(SSIS 式)
+# <a name="--conditional-ssis-expression"></a>? :(条件) (SSIS 式)
   ブール式の評価に基づいて 2 つの式のうちのいずれかの式を返します。 ブール式が TRUE に評価された場合、最初の式が評価対象となり、その結果が式の結果になります。 ブール式が FALSE に評価された場合、2 番目の式が評価対象となり、その結果が式の結果になります。  
   
 ## <a name="syntax"></a>構文  

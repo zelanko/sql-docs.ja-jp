@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 1ba45350-dae8-437a-8984-64e6d8d180c1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 579957b3aa6c1cc34686b85564fc007dd74571dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87aabe302817a8d71a5a92058004b6e92dd95b2c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214969"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385340"
 ---
 # <a name="save-a-package-to-the-file-system"></a>ファイル システムにパッケージを保存する
   この手順では、既存のパッケージを、.dtsx ファイルとしてファイル システムに保存する方法について説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "48214969"
     >  パッケージが保存されたファイルのパスと名前は、[プロパティ] ウィンドウで確認できます。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41;パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;SSIS&#41; パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)   
  [パッケージのコピーを保存する](../../2014/integration-services/save-a-copy-of-a-package.md)  
   
   

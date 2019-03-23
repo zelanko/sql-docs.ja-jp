@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select SMO Enumeration dialog box
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8165829254c1e67cd513852d338a5ea3489de751
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 274a56641ae4f452b8eda8bca00663b1a9e83380
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201752"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387287"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>[SMO 列挙の選択] ダイアログ ボックス
   **[SMO 列挙の選択]** ダイアログ ボックスを使用すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスの列挙対象となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトを指定し、列挙型を選択できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "48201752"
  **[場所]**  
  Locations 列挙型を使用します。 このオプションは、ファイルに対してのみ使用できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Foreach ループ コンテナー](control-flow/foreach-loop-container.md)   
  [SQL Server 管理オブジェクト &#40;SMO&#41; プログラミング ガイド](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
