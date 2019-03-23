@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e362438b12c103dd6210766da888086da79df126
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785464"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379378"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service の作成と編集
   新しい Oracle CDC Windows Service の作成と編集は CDC Service 構成コンソールで行います。  
@@ -61,7 +61,7 @@ ms.locfileid: "52785464"
  **[認証]**  
  次のいずれかを選択します。  
   
--   **Windows 認証**:このオプションを選択する場合、Oracle CDC service は、ターゲットに接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス サービス アカウント id を使用しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが異なるコンピューターで実行されている場合、Windows 認証をドメイン アカウントと共に使用する必要があります。  
+-   **[Windows 認証]**:このオプションを選択する場合、Oracle CDC service は、ターゲットに接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス サービス アカウント id を使用しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが異なるコンピューターで実行されている場合、Windows 認証をドメイン アカウントと共に使用する必要があります。  
   
 -   **SQL Server 認証**:このオプションを選択する場合は入力、**ユーザー名**と**パスワード**の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用するログイン。 Oracle CDC Service は、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続するときに、これらの資格情報を使用します。  
   

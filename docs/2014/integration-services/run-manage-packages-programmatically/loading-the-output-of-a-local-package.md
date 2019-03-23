@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3fecc2dcd609cb297aba7c2a2aa63fb8fdcf32e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 57b318ac8062203bd11a0717a4c8077bca9880d3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350590"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382050"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>ローカル パッケージの出力の読み込み
   クライアント アプリケーションは、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先に出力が保存された場合、または **System.IO** 名前空間のクラスを使用してフラット ファイル変換先に出力が保存された場合に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの出力を読み取ることができます。 ただし、メモリから直接、パッケージの出力を読み取ることもできます。その際、データを保持するための中間手段を必要としません。 このソリューションにキーが、`Microsoft.SqlServer.Dts.DtsClient`の特殊な実装を含む名前空間、 `IDbConnection`、 `IDbCommand`、および**IDbDataParameter**からインターフェイス、 **System.Data**名前空間。 既定では、アセンブリ Microsoft.SqlServer.Dts.DtsClient.dll は、**%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** にインストールされています。  
@@ -45,7 +45,7 @@ ms.locfileid: "53350590"
   
 4.  前に作成した `DtsClient.DtsCommand` を使用する `DtsConnection` という種類のオブジェクトを作成し、その `CommandText` プロパティに、パッケージ内の DataReader 変換先の名前を設定します。 次に、コマンド オブジェクトの `ExecuteReader` メソッドを呼び出して、パッケージの結果を新しい DataReader に読み込みます。  
   
-5.  必要に応じて、`DtsDataParameter` オブジェクトで `DtsCommand` オブジェクトのコレクションを使用して、パッケージに定義された変数に値を渡すことによって、パッケージの出力を間接的にパラメーター化できます。 パッケージ内では、これらの変数をクエリ パラメーターとして、または式で使用して、DataReader 変換先に返される結果に影響を与えることができます。 パッケージにこれらの変数を定義する必要があります、 **DtsClient**名前空間を使用する前に、`DtsDataParameter`クライアント アプリケーションからのオブジェクト。 (**[名前空間]** 列を表示するには、**[変数]** ウィンドウの **[変数列の選択]** ツール バー ボタンをクリックする必要がある場合があります)。クライアント コードで、`DtsDataParameter` を `Parameters` の `DtsCommand` コレクションに追加する場合、変数名からの DtsClient 名前空間参照を省略してください。 以下に例を示します。  
+5.  必要に応じて、`DtsDataParameter` オブジェクトで `DtsCommand` オブジェクトのコレクションを使用して、パッケージに定義された変数に値を渡すことによって、パッケージの出力を間接的にパラメーター化できます。 パッケージ内では、これらの変数をクエリ パラメーターとして、または式で使用して、DataReader 変換先に返される結果に影響を与えることができます。 パッケージにこれらの変数を定義する必要があります、 **DtsClient**名前空間を使用する前に、`DtsDataParameter`クライアント アプリケーションからのオブジェクト。 (**[名前空間]** 列を表示するには、**[変数]** ウィンドウの **[変数列の選択]** ツール バー ボタンをクリックする必要がある場合があります)。クライアント コードで、`DtsDataParameter` を `Parameters` の `DtsCommand` コレクションに追加する場合、変数名からの DtsClient 名前空間参照を省略してください。 例 :  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.connectionstray.f1
 ms.assetid: 0d0c4862-19c0-4513-a5f4-3fe97f635cf6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c2d2845c7414787d53fddced21de1abc3d9da51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b336e2e1388457c1fbb6e845bc25eb67bd02c69
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203654"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382180"
 ---
 # <a name="connection-managers-area"></a>[接続マネージャー] 領域
   パッケージでは、接続マネージャーを使用してファイル、リレーショナル データベース、サーバーなどのデータ ソースに接続します。  
@@ -27,7 +27,7 @@ ms.locfileid: "48203654"
   
  この領域を右クリックし、メニューから実行する作業のオプションをクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の接続](connection-manager/integration-services-ssis-connections.md)   
  [SSIS デザイナー](ssis-designer.md)  
   
