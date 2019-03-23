@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9eb4de07ad7bd564578462b053637bb472b22f6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353983"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377483"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   `SSISDB`カタログが操作するための中心点[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) プロジェクトを展開している、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
@@ -45,7 +45,7 @@ ms.locfileid: "53353983"
   
 -   フォルダー  
   
--   プロジェクト  
+-   Project  
   
 -   環境  
   
