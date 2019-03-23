@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: bc55e90ad8aced555858008bc77715299a064b2a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
-ms.translationtype: MT
+ms.openlocfilehash: 40ce93e9232d0492bd693e7920b62dc9805aa7ac
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342835"
+ms.locfileid: "58356405"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>RESTful web サービスを使用して SQL Server のビッグ データ クラスターにデプロイされたアプリを使用します。
 
@@ -86,7 +86,7 @@ IP アドレスに注意してください (`10.1.1.3`この例では) とポー
 
 ## <a name="generate-a-jwt-access-token"></a>JWT アクセス トークンを生成します。
 
-アプリの RESTful web サービスにアクセスするためには、JWT アクセス トークンを生成するには、最初に導入しています。 次の URL をブラウザーで開きます: `https://[IP]:[PORT]/api/docs/swagger.json` IP アドレスとポートの実行中に取得したを使用して、`describe`上記のコマンド。 使用した同じ資格情報でログインする必要があります`mssqlctl login`します。
+展開しているアプリの RESTful web サービスにアクセスするためには、まず、JWT アクセス トークンを生成する必要があります。 次の URL をブラウザーで開きます: `https://[IP]:[PORT]/api/docs/swagger.json` IP アドレスとポートの実行中に取得したを使用して、`describe`上記のコマンド。 使用した同じ資格情報でログインする必要があります`mssqlctl login`します。
 
 内容を貼り付けて、`swagger.json`に、 [Swagger Editor](https://editor.swagger.io)はどのような方法を理解します。
 
