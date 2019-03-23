@@ -14,15 +14,15 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bd7508b806d3dbfc488dd8e1358d3bab4d624b06
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359794"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386570"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>プロパティ式における列挙定数
   プロパティ式に列挙子メンバー リストの値が含まれている場合、この式ではメンバーの表示名ではなく、列挙子メンバーの数値を使用する必要があります。 たとえば、式で `LoggingMode` プロパティを設定する場合、表示名 Disabled ではなく、数値 2 を使用する必要があります。  
@@ -50,7 +50,7 @@ ms.locfileid: "53359794"
   
 |DTSPackageType の表示名|数値|  
 |-------------------------------------|-------------------|  
-|既定値|0|  
+|既定|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -69,7 +69,7 @@ ms.locfileid: "53359794"
   
 |DTSPriorityClass の表示名|数値|  
 |---------------------------------------|-------------------|  
-|既定値|0|  
+|既定|0|  
 |AboveNormal|1|  
 |標準|2|  
 |BelowNormal|3|  

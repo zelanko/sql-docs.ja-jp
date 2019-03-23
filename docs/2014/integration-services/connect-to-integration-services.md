@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 2effee7d-16bc-46e1-913c-28470faea345
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5959d49f6bc9c2ac140da6b16e7926cfa94634e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02ab48e21ff7c0f881cb0d0b830ce03207666c7c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155922"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389200"
 ---
 # <a name="connect-to-integration-services"></a>Integration Services に接続する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスに接続する前に、管理者からこのサービスに対するアクセス権を付与してもらう必要があります。 詳細については、「 [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md)」を参照してください。  
@@ -29,7 +29,7 @@ ms.locfileid: "48155922"
   
 3.  [オブジェクト エクスプローラー] のツール バーの **[接続]** をクリックし、 **[Integration Services]** をクリックします。  
   
-4.  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名を指定します。 (Local)、ピリオド (.) を使用するまたは`localhost`をローカル サーバーを指定します。  
+4.  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名を指定します。 ピリオド (.)、(local)、または `localhost` を使用すると、ローカル サーバーを指定できます。  
   
 5.  **[接続]** をクリックします。  
   

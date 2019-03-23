@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f36c00689d372f407fd4f1d062a937be390f5f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a47ce85dbd2979fe5ff9c1a048c60d0720ae32f2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121062"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377110"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>[フラット ファイル ソース エディター]\ ([エラー出力] ページ)
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページでは、エラー処理オプションの選択や、エラー出力列に対するプロパティの設定を行えます。  
@@ -37,7 +37,7 @@ ms.locfileid: "48121062"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](data-flow/error-handling-in-data.md)  
+ **関連項目:**[データのエラー処理](data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
@@ -53,8 +53,8 @@ ms.locfileid: "48121062"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [[フラット ファイル ソース エディター&#40;接続マネージャー] ページ&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
- [[フラット ファイル ソース エディター&#40;列] ページ&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [フラット ファイル ソース エディター &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
+ [フラット ファイル ソース エディター &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
  [フラット ファイル接続マネージャー](connection-manager/file-connection-manager.md)  
   
   

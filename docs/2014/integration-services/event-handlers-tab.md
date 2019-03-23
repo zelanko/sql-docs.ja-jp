@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.eventhandlerwindow.f1
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a258c768f46e2310095c6aadc0c57c65cea2bac6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f13aa09f7b424da63348c5363bc6d5077ed9f2c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131142"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380740"
 ---
 # <a name="event-handlers-tab"></a>[イベント ハンドラー] タブ
   **デザイナーの** [イベント ハンドラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの制御フローを構築できます。 イベント ハンドラーは、パッケージによって生成されたイベントまたはパッケージ内のタスクまたはコンテナーによって生成されたイベントに応答して実行されます。  
@@ -44,6 +44,6 @@ ms.locfileid: "48131142"
  [Integration Services &#40;SSIS&#41; のイベント ハンドラー](integration-services-ssis-event-handlers.md)   
  [制御フロー](control-flow/control-flow.md)   
  [SSIS デザイナー](ssis-designer.md)   
- [Integration Services &#40;SSIS&#41;イベント ハンドラー](integration-services-ssis-event-handlers.md)  
+ [Integration Services (SSIS) のイベント ハンドラー](integration-services-ssis-event-handlers.md)  
   
   

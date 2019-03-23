@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Protection Level dialog box
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a43cbed2f9cef449bee1b0a971f5edd7f1044f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: effe6c8e07ea9303bb77842934afebb7c2e6bec1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084902"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386775"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>[パッケージの保護レベル] ダイアログ ボックス
   **[パッケージの保護レベル]** ダイアログ ボックスを使用すると、パッケージの保護レベルを更新できます。 保護レベルによって、パッケージ保護の方法、パスワードまたはユーザー キー、適用範囲が決定されます。 保護対象には、すべてのデータを含めることも機密データのみを含めることもできます。  
@@ -39,6 +39,6 @@ ms.locfileid: "48084902"
  パスワードを再度入力します。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41; パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)  
+ [Integration Services (SSIS) パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

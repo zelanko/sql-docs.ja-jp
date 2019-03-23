@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac3a7fd31f13ec513c1590d265b1984969ae8e12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193062"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377230"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>[データ マイニング クエリ タスク エディター] ([クエリ] タブ)
   **[データ マイニング クエリ タスク]** ダイアログ ボックスの **[クエリ]** タブを使用すると、マイニング モデルに基づいて予測クエリを作成できます。 このダイアログ ボックスでは、パラメーターおよび結果セットを変数にバインドすることもできます。  
@@ -41,12 +41,12 @@ ms.locfileid: "48193062"
  **[データ マイニング クエリ]**  
  データ マイニング クエリを入力します。  
   
- **関連項目:**  [データ マイニング拡張機能 (DMX) リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **関連トピック:** [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **[新しいクエリの作成]**  
  グラフィカル ツールを使用してデータ マイニング クエリを作成します。  
   
- **関連項目:** [Data Mining Query](control-flow/data-mining-query.md)  
+ **関連トピック:** [データ マイニング クエリ](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>[パラメーター マッピング] タブのオプション  
  **[パラメーター名]**  
@@ -81,8 +81,8 @@ ms.locfileid: "48193062"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [データ マイニング クエリ タスク エディター&#40;マイニング モデル タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [データ マイニング クエリ タスク エディター &#40;[出力] タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [データ マイニング クエリ タスク エディター ([マイニング モデル] タブ)](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [データ マイニング クエリ タスク エディター ([出力] タブ)](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [データ マイニング デザイナー](../analysis-services/data-mining/data-mining-designer.md)  
   
   

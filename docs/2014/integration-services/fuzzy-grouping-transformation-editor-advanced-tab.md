@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79b71caf3fa8772bd55627b5c1527eea61ac4ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 074a3d460a04180a5cfce1406b546fb6a3a3986a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150832"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389026"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>[あいまいグループ化変換エディター] ([詳細設定] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、入力列と出力列の指定、類似性のしきい値の設定、区切り記号の定義ができます。  
@@ -32,7 +32,7 @@ ms.locfileid: "48150832"
   
 ## <a name="options"></a>および  
  **[入力キー列名]**  
- 各入力行の一意の識別子を含む、出力列の名前を指定します。 `_key_in`列は各行を一意に識別する値。  
+ 各入力行の一意の識別子を含む、出力列の名前を指定します。 [`_key_in`] 列は各行を一意に識別する値を持ちます。  
   
  **[出力キー列名]**  
  重複する行グループの正規行の一意識別子を含む、出力列の名前を指定します。 [`_key_out`] 列は、正規データ行の `_key_in` 値に対応します。  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce44e2709013a6d56d47ad30c90ecf5d92825503
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185332"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385040"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>[用語抽出変換エディター] ([詳細設定] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、頻度、長さ、語または句の抽出の有無など、抽出に関するプロパティを指定できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "48185332"
  スコアが用語の頻度であることを指定します。  
   
  **[TFIDF]**  
- スコアが用語の TFIDF 値であることを指定します。 TFIDF スコアは、Term Frequency と Inverse Document Frequency の積です。"用語 T の TFIDF = (T の頻度) * log( (入力の行数) / (T を含む行数) )" として定義されます。  
+ スコアが用語の TFIDF 値であることを指定します。 TFIDF スコアは、Term Frequency と Inverse Document Frequency、として定義されている製品です。TFIDF of a Term T = (frequency of T) * log( (#rows in Input) / (#rows having T) )  
   
  **[頻度のしきい値]**  
  語または句を抽出する前の語または句の出現回数を指定します。 既定値は 2 です。  
@@ -57,8 +57,8 @@ ms.locfileid: "48185332"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [用語抽出変換エディター&#40;用語抽出 タブ&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [用語抽出変換エディター &#40;[除外] タブ&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [[用語抽出変換エディター] &#40;[用語抽出] タブ&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [[用語抽出変換エディター] &#40;[除外] タブ&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [用語参照変換](data-flow/transformations/lookup-transformation.md)  
   
   

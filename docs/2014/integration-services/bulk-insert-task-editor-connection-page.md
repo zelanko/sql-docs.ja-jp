@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 047c5a572195520f194660753315fbe73ffe7c15
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bf5d6f0a92b18cc41f74d068686c3c8c9589228a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523643"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377250"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>[一括挿入タスク エディター] ([接続] ページ)
   **[一括挿入タスク エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、一括挿入操作の挿入元と挿入先、および使用するフォーマットを指定できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "52523643"
  **[接続]**  
  OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...**>] をクリックして新しい接続を作成します。  
   
- **関連項目:**[OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、 [OLE DB 接続マネージャーの構成](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、 [OLE DB 接続マネージャーの構成](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **[DestinationTable]**  
  挿入先のテーブルまたはビューの名前を入力するか、テーブルまたはビューを一覧から選択します。  
@@ -51,7 +51,7 @@ ms.locfileid: "52523643"
   
  フラット ファイル接続マネージャーを使用してソース ファイルにアクセスした場合、フラット ファイル接続マネージャーに指定されたフォーマットは一括挿入タスクで使用されません。 その代わり、フォーマット ファイルに指定されたフォーマットか、またはタスクの RowDelimiter プロパティおよび ColumnDelimiter プロパティの値が一括挿入タスクで使用されます。  
   
- **関連項目:**[ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)、[フラット ファイル接続マネージャー](connection-manager/flat-file-connection-manager.md)、[フラット ファイル接続マネージャー エディター &#40;&#41; ](general-page-of-integration-services-designers-options.md)、[フラット ファイル接続マネージャー エディター&#40;列ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)、[フラット ファイル接続マネージャー エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)、[フラット ファイル接続マネージャー](connection-manager/flat-file-connection-manager.md)、[フラット ファイル接続マネージャー エディター &#40;&#41; ](general-page-of-integration-services-designers-options.md)、[フラット ファイル接続マネージャー エディター&#40;列 ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)、[フラット ファイル接続マネージャー エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
  **[テーブルの更新]**  
  データベースおよびビューの一覧を更新します。  
