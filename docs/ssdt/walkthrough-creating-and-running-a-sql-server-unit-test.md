@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143592"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305960"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>チュートリアル :SQL Server の単体テストの作成と実行
 このチュートリアルでは、複数のストアド プロシージャの動作を検証する SQL Server の単体テストを作成します。 SQL Server の単体テストを作成すると、アプリケーションの不適切な動作の原因となる可能性があるコードの欠陥を特定するのに役立ちます。 SQL Server の単体テストとアプリケーション テストは、自動テスト スイートの一部として実行できます。  
@@ -968,7 +968,7 @@ ms.locfileid: "54143592"
     特定の例外が表示されることを予期するよう指定します。 必要に応じて、特定のエラー番号を指定することもできます。 この属性を追加しないと、単体テストは失敗し、メッセージが [テスト結果] ウィンドウに表示されます。  
   
     > [!IMPORTANT]  
-    > 現在、Visual Studio 2012 では ExpectedSqlException 属性がサポートされていません。 これに対処する方法については、「 ["予期されるエラー" データベース単体テストを実行できない](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)」を参照してください。  
+    > 現在、Visual Studio 2012 では ExpectedSqlException 属性がサポートされていません。 これに対処する方法については、「 ["予期されるエラー" データベース単体テストを実行できない](https://social.msdn.microsoft.com/Forums/en-US/e74e06ad-e3c9-4cb0-97ad-a6f235a52345/unable-to-run-quotexpected-failurequot-database-unit-test)」を参照してください。  
   
 3.  [ファイル] メニューの [SqlServerUnitTests1.cs の保存] をクリックします。  
   
