@@ -10,22 +10,22 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.mapping.f1
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3fc54d5b287cd71ba303d34693e815c07b9cc3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2d95909e76c6b5c3665926783fb42ff247d1ba9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068080"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386700"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>[ForEach ループ エディター] ([変数のマッピング] ページ)
   **[Foreach ループ エディター]** ダイアログ ボックスの **[変数のマッピング]** ページを使用すると、コレクションの値に変数をマップできます。 変数の値は、ループの各反復処理でコレクションの値を使用して更新されます。  
   
  Integration Services パッケージでの Foreach Loop コンテナーの使用方法の詳細については、「 [Foreach Loop Container](control-flow/foreach-loop-container.md) 」を参照してください。 構成方法の詳細については、「 [Foreach ループ コンテナーを構成する](../../2014/integration-services/configure-a-foreach-loop-container.md)」を参照してください。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] チュートリアルの「簡単な ETL パッケージの作成」には、Foreach ループの追加および構成について説明するレッスンが含まれています。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] チュートリアルの「簡単な ETL パッケージの作成」には、Foreach ループの追加および構成について説明するレッスンが含まれています。  
   
 ## <a name="options"></a>および  
  **変数**  
@@ -34,7 +34,7 @@ ms.locfileid: "48068080"
 > [!NOTE]  
 >  変数をマップした後、新しい行が **[変数]** リストに自動的に追加されます。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
  **Index**  
  Foreach Item 列挙子を使用する場合、変数にマップするコレクションの値に列のインデックスを指定します。 他の列挙子の型では、インデックスは読み取り専用です。  
@@ -42,7 +42,7 @@ ms.locfileid: "48068080"
 > [!NOTE]  
 >  インデックスは 0 から始まります。  
   
- **関連トピック**: [Foreach ループ コンテナーを使用して Excel ファイルおよびテーブルをループ処理します。](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **関連トピック:** [Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **削除**  
  変数を選択し、 **[削除]** をクリックします。  

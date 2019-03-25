@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: 44aab631-d62d-4895-8fc7-7f1f3b1b68ce
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1687baf77bcecedb61a3d1ecee3a9e3c9e155431
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e48018f3bbc3f266a4e537f067b3fa9466dea275
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133732"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381964"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>[ディメンション処理変換先エディター] ([接続マネージャー] ページ)
-  **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスへの接続を指定できます。  
+   **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスへの接続を指定できます。  
   
  ディメンション処理変換先の詳細については、「 [Dimension Processing Destination](data-flow/dimension-processing-destination.md)」を参照してください。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48133732"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [ディメンション処理変換先エディター&#40;マッピング ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
- [ディメンション処理変換先エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [ディメンション処理変換先エディター ([マッピング] ページ)](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
+ [ディメンション処理変換先エディター ([詳細設定] ページ)](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

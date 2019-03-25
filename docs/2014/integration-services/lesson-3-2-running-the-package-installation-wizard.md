@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d1af58b00b41b741ea0540a2fa29503dc33badcf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351805"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385540"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>手順 2:パッケージ インストール ウィザードの実行
   この実習では、パッケージ インストール ウィザードを実行して、Deployment Tutorial プロジェクトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスにパッケージを配置します。 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの sysssispackages テーブルにインストールできるのはパッケージだけです。配置バンドルに含まれるサポート ファイルは、ファイル システムに配置されます。  
@@ -81,7 +81,7 @@ ms.locfileid: "53351805"
   
      配置先コンピューターの環境変数の値は開発用コンピューターの環境変数の値と異なるため、[パッケージの検証] ページに複数の警告が表示されます。 次の 4 つの警告が表示されます。  
   
-    -   構成ファイル:"C:\DeploymentTutorial\DataTransferConfig.dtsConfig"は無効です。 構成ファイルの名前を確認してください。  
+    -   構成ファイル:"C:\DeploymentTutorial\DataTransferConfig.dtsConfig" is not valid. 構成ファイルの名前を確認してください。  
   
     -   パッケージの少なくとも 1 つの構成エントリを読み込めませんでした。 構成エントリとそれ以前に発生した警告を確認して、読み込めなかった構成に関する説明を参照してください。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "53351805"
     >  パッケージの検証に使用する一時ログ ファイルが作成されます。 このファイルは、パッケージの実行時には使用されません。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 3:配置パッケージのテスト](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+ [ステップ 3:配置パッケージのテスト](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   

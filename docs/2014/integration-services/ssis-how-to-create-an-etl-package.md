@@ -14,15 +14,15 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a99169168eb21f0a7d42f133e7e882141c776e6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357912"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379950"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS チュートリアル:簡単な ETL パッケージを作成します。
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) は、高パフォーマンスの抽出、変換、およびデータ ウェアハウジング用パッケージの読み込み (ETL) を含む、データ統合ソリューションを構築するためのプラットフォームです。 SSIS には、パッケージを作成およびデバッグするためのグラフィカルなツールやウィザード、FTP 操作などのワークフロー機能の実行、SQL ステートメントの実行、および電子メール メッセージの送信を実行するためのタスク、データの抽出や読み込みに使用するデータの変換元と変換先、データのクリーニング、集計、マージ、コピーを行う変換、パッケージの実行と保存を管理するための [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービス、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクト モデルをプログラミングするための API (アプリケーション プログラミング インターフェイス) が用意されています。  
@@ -67,7 +67,7 @@ ms.locfileid: "53357912"
  [レッスン 4:エラー フロー リダイレクションの追加](lesson-4-add-error-flow-redirection-with-ssis.md)  
  このレッスンでは、レッスン 3 で作成したパッケージを拡張し、新しいエラー出力構成を活用するパッケージを作成します。  
   
- [レッスン 5:パッケージ配置モデルのパッケージ構成の追加](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [レッスン 5: パッケージ配置モデルのパッケージ構成の追加](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  このレッスンでは、レッスン 4 で作成したパッケージを拡張し、新しいパッケージ構成オプションを活用するパッケージを作成します。  
   
  [レッスン 6:プロジェクト配置モデルでパラメーターの使用](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
