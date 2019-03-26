@@ -13,22 +13,22 @@ helpviewer_keywords:
 - Select variables
 - Variable selection
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d75e66a4641ae5624a99b6c4bea88d14f93bbc1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7e28a0043cef8fc26dc5b98c255d516c5dd523b0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528213"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270455"
 ---
 # <a name="select-variables-page"></a>[変数の選択] ページ
   **[変数の選択]** ダイアログ ボックスを使用すると、スクリプト タスクまたはスクリプト コンポーネントを構成するときに、 **ReadOnlyVariables** プロパティおよび **ReadWriteVariables** プロパティで 1 つ以上の変数を選択できます。  
   
  **[変数の選択]** ダイアログ ボックスを開くには、**[スクリプト変換エディター]** ダイアログ ボックスの **[スクリプト]** ページで、 **[カスタム プロパティ]** の下にある **ReadOnlyVariables** プロパティまたは **ReadWriteVariables** プロパティのいずれかを探して、そのプロパティに関連付けられている参照ボタン ( [...] ) をクリックします。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  選択ボックス  
  特定の変数またはすべての変数を選択したり、すべての変数の選択を解除したりします。  
   

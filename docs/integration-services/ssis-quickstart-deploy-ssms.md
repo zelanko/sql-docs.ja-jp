@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06a8c045c9bd8e51a1ae924ec81cbdebcbf040da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 483a36678484dca38a0321fc539330fb34725d7e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605940"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281776"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する
 このクイックスタートでは、SQL Server Management Studio (SSMS) を使用して SSIS Catalog データベースに接続し、Integration Services Deployment Wizard を実行して SSIS プロジェクトを SSIS Catalog にデプロイする方法について説明します。 
@@ -68,7 +68,7 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
    | **サーバー名** | 完全修飾サーバー名 | Azure SQL Database サーバーに接続する場合、名前は次の形式になります。`<server_name>.database.windows.net` |
    | **[認証]** | SQL Server 認証 (SQL Server Authentication) | SQL Server 認証を使用すると、SQL Server または Azure SQL Database に接続できます。 この記事の「[デプロイ ウィザードでの認証方法](#wizard_auth)」を参照してください。 |
    | **Login** | サーバー管理者アカウント | このアカウントは、サーバーの作成時に指定したアカウントです。 |
-   | **Password** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーの作成時に指定したパスワードです。 |
+   | **パスワード** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーの作成時に指定したパスワードです。 |
 
 3. **[接続]** をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。 
 

@@ -3,20 +3,19 @@ title: SQL Server データ ソースに接続する (SQL Server インポート
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b49d5a4bee30a8fc5b225bf12e15c29bf942631b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebdf33cf262d000af9b1604299e95883f8ab0d12
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750560"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221986"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>SQL Server データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **Microsoft SQL Server** データ ソースに接続する方法を説明します。 SQL Server への接続に使用できるいくつかのデータ プロバイダーがあります。
@@ -57,7 +56,7 @@ ms.locfileid: "47750560"
  **[ユーザー ID]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を入力します。  
   
- **Password**  
+ **パスワード**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを入力します。  
 
 ## <a name="connect-to-sql-server-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーを使用して SQL Server に接続する 

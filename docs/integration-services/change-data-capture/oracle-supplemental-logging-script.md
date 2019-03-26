@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 10e742d11000214bf663627d842e6ace3e68e13e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7715008903a51377a5819493a61d2cead90f604d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619281"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271659"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle の補足ログ スクリプト
   このダイアログ ボックスには、Oracle の補足ログ スクリプトが表示されます。  
@@ -25,7 +25,7 @@ ms.locfileid: "47619281"
   
  組織の Oracle DBA ポリシーによっては、補足ログ スクリプトを実行するために、Oracle DBA による確認と承認が必要な場合があります。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  スクリプトの実行方法について使用可能なオプションを次に示します。  
   
  **[スクリプトの実行]**  
@@ -38,7 +38,7 @@ ms.locfileid: "47619281"
  スクリプトをクリップボードにコピーします。 Oracle 管理者 (DBA) が補足ログ スクリプトを調べて実行する必要がある場合は、必要な場所にスクリプトを貼り付けることができます。  
   
 ## <a name="see-also"></a>参照  
- [CDC インスタンスを管理する方法](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [CDC インスタンスの管理](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   
   

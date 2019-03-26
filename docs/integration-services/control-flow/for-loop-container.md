@@ -15,15 +15,15 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 914a8eab85e26e97c1f36f95b75366d6fdd98bce
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 47c0bd557cede1a7ecc3fe287960267112293cd4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640499"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276318"
 ---
 # <a name="for-loop-container"></a>For ループ コンテナー
   For ループ コンテナーは、パッケージ内で繰り返す制御フローを定義します。 ループの実装は、プログラミング言語の **For** ループ構造と同じです。 For ループ コンテナーは、ループの各繰り返しで式を評価し、式が **False**に評価されるまでそのワークフローを繰り返します。  
@@ -94,7 +94,7 @@ ms.locfileid: "51640499"
   
  For ループ コンテナーの概要とパッケージ内で For ループ コンテナーを使用する方法の詳細については、「 [For Loop Container](../../integration-services/control-flow/for-loop-container.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[InitExpression]**  
  必要に応じて、ループが使用する値を初期化する式を指定します。  
   

@@ -10,22 +10,22 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.loaddimwizard.finish.f1
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3d3f589365ba38178aa7e29b05b1553151c22af8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ffe94079514d25b49cae9e792aa3e3b8e5a6e74
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689310"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274138"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>[緩やかに変化するディメンション ウィザードの完了]
   **[緩やかに変化するディメンション ウィザードの完了]** ダイアログ ボックスを使用すると、緩やかに変化するディメンションのサポートをウィザードで構築する前に選択内容を確認できます。  
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[次の出力を構成します]**  
  処理の目的に合った出力の一覧が得られることを確認します。  
   

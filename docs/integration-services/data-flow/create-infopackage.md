@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fea75b95492aa3ee689a785155bdb6b37670ba34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eced99b566e94b6b4010b209e942e2518e33df1d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853388"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274837"
 ---
 # <a name="create-infopackage"></a>インフォパッケージの作成
   SAP Netweaver BW システムで新しいインフォパッケージを作成するには、**[インフォパッケージの作成]** ダイアログ ボックスを使用します。  
@@ -36,7 +36,7 @@ ms.locfileid: "47853388"
   
 4.  **[接続マネージャー]** ページの **[SAP BW オブジェクトの作成]** で、 **[インフォパッケージ]** を選択し、 **[作成]** をクリックします。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **インフォソース**  
  新しいインフォパッケージの基にするインフォソースの名前を入力します。  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f351b2e30e5ccb3dc80cb61e48ef65d4c185e6b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f373cf121a0368508e9b4b3380ef5c674a9fc9f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614196"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271674"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC インスタンスのデータ型
   Oracle CDC インスタンスでは、ほとんどの Oracle データ型がサポートされます。 次のセクションでは、サポートされるデータ型とサポートされないデータ型について説明します。  
@@ -27,17 +27,17 @@ ms.locfileid: "47614196"
 |Oracle データベース データ型|SQL Server データ型|  
 |-------------------------------|--------------------------|  
 |BINARY_FLOAT|real|  
-|BINARY_DOUBLE|[FLOAT]|  
+|BINARY_DOUBLE|FLOAT|  
 |CHAR|NVARCHAR|  
-|[DATE]|DATETIME|  
-|[FLOAT]|[FLOAT]|  
+|DATE|DATETIME|  
+|FLOAT|FLOAT|  
 |INT|NUMERIC (38)|  
 |INTERVAL|DATETIME|  
 |NCHAR|NVARCHAR|  
-|NUMBER|[FLOAT]|  
+|NUMBER|FLOAT|  
 |NAVARCHAR2|NVARCHAR|  
 |RAW|VARBINARY|  
-|real|[FLOAT]|  
+|real|FLOAT|  
 |TIMESTAMP|DATETIME2|  
 |TIMESTAMP WITH TIME ZONE|VARCHAR (37)|  
 |TIMESTAMP WITH LOCAL TIME ZONE|VARCHAR (37)|  

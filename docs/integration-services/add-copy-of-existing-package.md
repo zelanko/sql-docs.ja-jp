@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8df0a074741f135d9c445a65c31b796f02bb5782
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8602665ef47ec206c1a6c751b9c3e3ffb0aa74e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523511"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280906"
 ---
 # <a name="add-copy-of-existing-package"></a>[既存のパッケージのコピーを追加]
   **[既存のパッケージのコピーを追加]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のファイル システムまたは SSIS パッケージ ストアに格納されたパッケージのコピーを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに追加できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[パッケージの場所]**  
  パッケージのコピー元である格納場所の種類を選択します。  
   

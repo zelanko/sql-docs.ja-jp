@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f3a47492ab278ec37480eb3e533803626e94fff9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70b018f595f5db67e2674dd0488a81798306c080
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687390"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272733"
 ---
 # <a name="edit-instance-properties"></a>インスタンスのプロパティの編集
   プロパティ エディターを使用すると、初期構成を作成した後に CDC インスタンスを変更することができます。 プロパティ エディターでは、次の操作を実行できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "47687390"
   
      左ペインでサービスを右クリックし、 **[プロパティ]** をクリックすることもできます。  
   
-### <a name="or"></a>スイッチまたは  
+### <a name="or"></a>OR  
   
 1.  CDC デザイナー コンソールの左側のペインで、操作するサービスを選択します。  
   

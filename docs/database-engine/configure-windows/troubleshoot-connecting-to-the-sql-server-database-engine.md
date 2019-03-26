@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd08989eb41f5b5a2b1c3f677f8dcff64b25b6ea
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 34f57edd8b58476a7077f601692086c80c89d0c0
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802756"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306000"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server データベース エンジンへの接続のトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ TCP/IP を使用して SQL Server に接続するには、Windows が接続を�
 この時点でエラーが発生する場合、続行する前に解決する必要があります。 問題にはさまざまな要因が考えられます。 ログインの接続が認証されないことがあります。 既定のデータベースがないことがあります。
 
 > [!NOTE]
->    クライアントに渡されるエラー メッセージの一部は、問題を解決するために十分な情報を意図的に与えません。 これはセキュリティ機能であり、SQL Server に関する情報を攻撃者に与えることを回避します。 エラーに関する完全な情報は、SQL Server エラー ログを調べてください。 そこに詳細があります。 エラー **18456 ユーザーはログインできませんでした**を受け取った場合、オンライン ブックのトピック、 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) にエラー コードに関する追加情報があります。 また、Aaron Bertrand のブログで、非常に広範囲なエラー コード リストが紹介されています ( [エラー 18456 のトラブルシューティング](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx))。 オブジェクト エクスプローラーの管理セクションで、SSMS (接続できる場合) のエラー ログを見ることができます。 接続できない場合、Windows のメモ帳プログラムでエラー ログを表示できます。 既定の場所はバージョンによって異なり、セットアップ中に変更できます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] の既定の場所は `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`です。  
+>    クライアントに渡されるエラー メッセージの一部は、問題を解決するために十分な情報を意図的に与えません。 これはセキュリティ機能であり、SQL Server に関する情報を攻撃者に与えることを回避します。 エラーに関する完全な情報は、SQL Server エラー ログを調べてください。 そこに詳細があります。 エラー **18456 ユーザーはログインできませんでした**を受け取った場合、オンライン ブックのトピック、 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) にエラー コードに関する追加情報があります。 また、Aaron Bertrand のブログで、非常に広範囲なエラー コード リストが紹介されています ( [エラー 18456 のトラブルシューティング](https://sqlblog.org/2011/01/14/troubleshooting-error-18456))。 オブジェクト エクスプローラーの管理セクションで、SSMS (接続できる場合) のエラー ログを見ることができます。 接続できない場合、Windows のメモ帳プログラムでエラー ログを表示できます。 既定の場所はバージョンによって異なり、セットアップ中に変更できます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] の既定の場所は `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`です。  
 
 4.   共有メモリで接続できない場合、TCP による接続をテストしてください。 名前の前に **tcp:** を指定すると、TCP 接続を強制できます。 例 :
 

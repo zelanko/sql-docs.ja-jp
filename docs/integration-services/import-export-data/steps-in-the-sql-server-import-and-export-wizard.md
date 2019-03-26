@@ -3,20 +3,19 @@ title: SQL Server インポートおよびエクスポート ウィザードの�
 ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73b43cd2f14f8c7afd531a295d9eaf118d5e91d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e75ab1dd193cd8691166eff42fe30d11c89503dc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694160"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290518"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードの手順
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードを使用して、データをインポートおよびエクスポートする一連の手順について説明します。 また、ウィザードで表示される各ページやダイアログ ボックスを説明するドキュメントの個々のページへのリンクも含まれます。
@@ -47,7 +46,7 @@ ms.locfileid: "47694160"
 
     -   **スクリーン ショットを参照する場合。** この単純なエンド ツー エンドの例を 1 つのページ示した「[簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)」をご覧ください。
 
-    -   **ビデオを視聴する場合。** ウィザードを実行し、わかりやすく簡単な手順でデータを Excel にエクスポートする方法を説明した YouTube の 4 分間のビデオ「[Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049)」 (SQL Server インポートおよびエクスポート ウィザードを使用して Excel にエクスポートする) をご覧ください。
+    -   **ビデオを視聴する場合。** ウィザードを実行し、わかりやすく簡単な手順でデータを Excel にエクスポートする方法を説明した YouTube の 4 分間のビデオ「[SQL Server インポートおよびエクスポート ウィザードを使用して Excel にエクスポートする](https://go.microsoft.com/fwlink/?linkid=829049)」 をご覧ください。
 
 -   **ウィザードのしくみについては、以下を参照してください。**
 

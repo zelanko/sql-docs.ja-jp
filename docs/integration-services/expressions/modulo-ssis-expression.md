@@ -12,15 +12,15 @@ helpviewer_keywords:
 - remainder of division operation
 - modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 343645c5fbf7e3757a255fd460ec481994b96d08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 855e96dbc95b7b6b76fce213524705b289bce42b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599645"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277541"
 ---
 # <a name="modulo-ssis-expression"></a>(剰余) (SSIS 式)
   最初の数値式を 2 番目の数値式で割った剰余を整数値で返します。  
@@ -77,6 +77,6 @@ SalesQuota % 12
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
