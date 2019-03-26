@@ -3,22 +3,21 @@ title: 列マッピング (SQL Server インポートおよびエクスポート
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 790542daa3cf69f5d1cd149a3356545fe69b03e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 852e150955371d78fe8170a2f4fc3be037d35ccd
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733870"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222096"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>[列マッピング]\(SQL Server インポートおよびエクスポート ウィザード)
   指定したクエリをコピーまたは確認する既存のテーブルやビューを選択した後、 **[マッピングの編集]** をクリックすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインポートおよびエクスポート ウィザードに **[列マッピング]** ダイアログ ボックスが表示されます。 このページでは、コピー元の列からコピーしたデータを受け取るためのコピー先列を指定し、構成します。 多くの場合、このページでは何も変更する必要はありません。

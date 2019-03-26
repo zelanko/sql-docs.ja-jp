@@ -16,15 +16,15 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 28b21fbe189151578b073a51050b3b7aeb95b79b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cb26cf898282273ea94b07c7d3b6c618d476a35b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640439"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272999"
 ---
 # <a name="character-map-transformation"></a>文字マップ変換
   文字マップ変換は、小文字から大文字への変換関数などの文字列関数を、文字データに適用します。 この変換は、文字列データ型の列データにのみ実行されます。  
@@ -87,7 +87,7 @@ ms.locfileid: "51640439"
 ## <a name="character-map-transformation-editor"></a>文字マップ変換エディター
   **[文字マップ変換エディター]** ダイアログ ボックスを使用すると、列のデータに適用する文字列関数を選択し、マッピングが埋め込み先の変更か新しい列として追加されるかを指定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる入力列**  
  チェック ボックスを使用し、文字列関数を使用して変換する列を選択します。 選択は下の表に表示されます。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "51640439"
  **変換先**  
  文字列処理の結果を、既定の列を使用して所定の場所に保存するか、変更されたデータを新しい列として保存するかを指定します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |[新しい列]|データを新しい列に保存します。 **[出力の別名]** で、列名を割り当てます。|  
 |[埋め込み先変更]|変更されたデータを既存の列に保存します。|  
@@ -105,7 +105,7 @@ ms.locfileid: "51640439"
  **操作**  
  列のデータに適用する文字列関数を一覧から選択します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |小文字|小文字に変換します。|  
 |大文字|大文字に変換します。|  

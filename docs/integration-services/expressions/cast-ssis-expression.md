@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ba1021832b0018f499dde65c09a46b5817bf073
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15e1ef5983228eb9da820897e7f4a78358c12513
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742370"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270679"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 式)
   式のあるデータ型を別のデータ型に明示的に変換します。 キャスト演算子は、切り捨て演算子としても機能できます。  
@@ -57,7 +57,7 @@ ms.locfileid: "47742370"
 |DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252) は、1252 コード ページを使用して、30 バイトまたは 30 文字を DT_STR データ型にキャストします。|  
 |DT_WSTR|*Charcount*|(DT_WSTR,20) は、20 バイト ペアまたは 20 Unicode 文字を DT_WSTR データ型にキャストします。|  
 |DT_BYTES|*Bytecount*|(DT_BYTES,50) は、50 バイトを DT_BYTES データ型にキャストします。|  
-|DT_DECIMAL|*Scale*|(DT_DECIMAL,2) は、数値を小数点以下 2 桁の DT_DECIMAL データ型にキャストします。|  
+|DT_DECIMAL|*[スケール]*|(DT_DECIMAL,2) は、数値を小数点以下 2 桁の DT_DECIMAL データ型にキャストします。|  
 |DT_NUMERIC|*有効桁数*<br /><br /> *Scale*|(DT_NUMERIC,10,3) は、数値を有効桁数 10 桁で小数点以下 3 桁の DT_NUMERIC データ型にキャストします。|  
 |DT_TEXT|*Codepage*|(DT_TEXT,1252) は、1252 コード ページを使用して、値を DT_TEXT データ型にキャストします。|  
   

@@ -8,22 +8,22 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2318f93e1bd8b5a11e14c17cb8b662db27b12fdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e799ce450bfca9301218fe1b2c29aaf9a49562d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728803"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270788"
 ---
 # <a name="map-columns-to-composite-domains"></a>複合ドメインへの列のマップ
   複合ドメインは 2 つ以上の単一ドメインで構成されています。 ドメインに複数の列をマップすることも、区切られた値を含む単一の列をドメインにマップすることもできます。  
   
  複数の列がある場合は、複合ドメインの各単一ドメインに列をマップして、データ クレンジングに複合ドメイン ルールを適用する必要があります。 Data Quality Client の複合ドメインに含まれる単一ドメインを選択します。 詳細については、「 [複合ドメインの作成](../../../data-quality-services/create-a-composite-domain.md)」をご覧ください。  
   
- 区切られた値を含む単一の列がある場合は、その単一の列を複合ドメインにマップする必要があります。 値は、単一ドメインが複合ドメインに表示されるのと同じ順序で表示される必要があります。 データ ソースの区切り記号は、複合ドメインの値の解析に使用される区切り記号と一致する必要があります。 複合ドメインの区切り記号を選択し、Data Quality Client で他のプロパティを設定します。 詳細については、「 [複合ドメインの作成](../../../data-quality-services/create-a-composite-domain.md)」を参照してください。  
+ 区切られた値を含む単一の列がある場合は、その単一の列を複合ドメインにマップする必要があります。 値は、単一ドメインが複合ドメインに表示されるのと同じ順序で表示される必要があります。 データ ソースの区切り記号は、複合ドメインの値の解析に使用される区切り記号と一致する必要があります。 複合ドメインの区切り記号を選択し、Data Quality Client で他のプロパティを設定します。 詳細については、「 [複合ドメインの作成](../../../data-quality-services/create-a-composite-domain.md)」をご覧ください。  
   
 ### <a name="to-map-multiple-columns-to-a-composite-domain"></a>複数の列を複合ドメインにマップするには  
   

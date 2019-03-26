@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ac0343ffe46613e85fc1985a836dd3f05f3d46e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 291dc0fb1be05a9818d7f351867c5c6d25276ee2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623680"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271207"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>パッケージとその他の操作を実行するモニター
   次の 1 つ以上のツールを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行、プロジェクトの検証、およびその他の操作を監視できます。 データ タップなどの特定のツールは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されたプロジェクトに対してのみ使用できます。  
@@ -152,7 +152,7 @@ ms.locfileid: "47623680"
   
 |セクション|[説明]|  
 |-------------|-----------------|  
-|[フィルター]|レポートに適用される現在のフィルターを示します (開始時間範囲など)。|  
+|Assert|レポートに適用される現在のフィルターを示します (開始時間範囲など)。|  
 |実行情報|各パッケージの実行の開始時刻、終了時刻、および持続時間を示します。パッケージの実行で使用されたパラメーター値 (パッケージ実行タスクで子パッケージに渡された値など) の一覧を表示できます。 パラメーターの一覧を表示するには、[概要] をクリックします。|  
   
  パッケージ実行タスクを使用して子パッケージで値を使用できるようにする方法の詳細については、「 [パッケージ実行タスク](../../integration-services/control-flow/execute-package-task.md)」を参照してください。  
@@ -184,7 +184,7 @@ ms.locfileid: "47623680"
  カスタム レポートの作成および追加方法については、「 [Add a Custom Report to Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)」(Management Studio へのカスタム レポートの追加) を参照してください。  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートの表示
-  現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用できるようになりました。  レポートの詳細については、「 [Integration Services サーバーのレポート](#reports)」を参照してください。  
+  現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用できるようになりました。  レポートの詳細については、「 [Integration Services サーバーのレポート](#reports)」をご覧ください。  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートを表示するには  
   

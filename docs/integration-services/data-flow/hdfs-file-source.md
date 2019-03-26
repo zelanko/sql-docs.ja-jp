@@ -10,24 +10,24 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hdfsfilesrc.f1
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cb4cf4a297a362ada965c3135f7e03fc8304ac2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 400f3158e6196ff42c702ce675b28125167bd861
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720520"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276851"
 ---
 # <a name="hdfs-file-source"></a>HDFS ファイル ソース
-  HDFS ファイル ソース コンポーネントは、SSIS パッケージが HDFS ファイルからデータを読み取ることを可能にします。 サポートされるファイル形式は、テキストと Avro です  (ODBC ソースはサポートされません)。  
+  HDFS ファイル ソース コンポーネントは、SSIS パッケージが HDFS ファイルからデータを読み取ることを可能にします。 サポートされるファイル形式は、テキストと Avro です (ODBC ソースはサポートされません)。  
   
  HDFS ファイル ソースを構成するには、HDFS ファイル ソースをデータ フロー デザイナー上にドラッグ アンド ドロップし、そのコンポーネントをダブルクリックしてエディターを開きます。  
   
  ![HDFS ファイル ソース エディター](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS ファイル ソース エディター")  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[Hadoop ファイル ソース エディター]** ダイアログ ボックスの **[全般]** タブで、次のオプションを構成します。  
   
 |フィールド|[説明]|  

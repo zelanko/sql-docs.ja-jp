@@ -16,15 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4b7e72842412f829a51a0c7befdea30818d903ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a97fe11d254d16fa6242513a9542b30f5efd3cf4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512074"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271098"
 ---
 # <a name="transfer-database-task"></a>データベース転送タスク
   データベース転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 2 つのインスタンスの間で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを転送します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトをコピーして転送するだけの他のタスクに対し、データベース転送タスクでは、データベースをコピーまたは移動できます。 このタスクを使用して、同じサーバー内でデータベースをコピーすることもできます。  
@@ -90,7 +90,7 @@ ms.locfileid: "52512074"
 ## <a name="transfer-database-task-editor-general-page"></a>[データベース転送タスク エディター] ([全般] ページ)
   **[データベース転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、データベース転送タスクの名前と説明を入力できます。 データベース転送タスクは、2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの間で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースをコピーまたは移動します。 このタスクを使用して、同じサーバー内でデータベースをコピーすることもできます。   
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **名前**  
  データベース転送タスクの一意な名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "52512074"
 ## <a name="transfer-database-task-editor-databases-page"></a>[データベース転送タスク エディター] ([データベース] ページ)
   **[データベース転送タスク エディター]** ダイアログ ボックスの **[データベース]** ページを使用すると、データベース転送タスクに使用される転送元および転送先のデータベースのプロパティを指定できます。 データベース転送タスクは、2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの間で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースをコピーまたは移動します。 このタスクを使用して、同じサーバー内でデータベースをコピーすることもできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **SourceConnection**  
  SMO 接続マネージャーを一覧から選択するか、**\<[新しい接続...]>** をクリックしてコピー元のサーバーへの新しい接続を作成します。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "52512074"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|ReplTest1|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |**True**|転送先サーバーのデータベースを上書きします。|  
 |**False**|転送先サーバーのデータベースを上書きしません。|  
@@ -161,7 +161,7 @@ ms.locfileid: "52512074"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|ReplTest1|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |**True**|ソース データベースを再アタッチします。|  
 |**False**|ソース データベースを再アタッチしません。|  
@@ -171,7 +171,7 @@ ms.locfileid: "52512074"
   
  このダイアログ ボックスにソース サーバーのデータベース ファイルの名前と場所を入力するには、最初に **[データベース転送タスク エディター]** ダイアログ ボックスの **[データベース]** ページで **[SourceConnection]** および **[SourceDatabaseName]** を指定します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[転送元ファイル]**  
  転送する対象のソース サーバーのデータベース ファイル名です。 **[転送元ファイル]** は読み取り専用です。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "52512074"
   
  このダイアログ ボックスで転送元サーバーのデータベース ファイルの名前と場所を自動的に入力するには、最初に **[データベース転送タスク エディター]** ダイアログ ボックスの **[データベース]** ページで、 **[SourceConnection]** 、 **[SourceDatabaseName]** 、および **[SourceDatabaseFiles]** を指定します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[転送先ファイル]**  
  転送先サーバーの転送されたデータベース ファイルの名前です。  
   
