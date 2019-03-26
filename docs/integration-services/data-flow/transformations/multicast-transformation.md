@@ -16,15 +16,15 @@ helpviewer_keywords:
 - datasets [Integration Services], multiple outputs
 - multiple transformations
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab41c2219ecc43988af30ad071dbea17a5c4f63e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9ec8eb1970bc1c6ab3933c4cd2b43e810e31b91e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638140"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281456"
 ---
 # <a name="multicast-transformation"></a>マルチキャスト変換
   マルチキャスト変換は、入力を 1 つ以上の出力に配信します。 この変換は条件分割変換と似ています。 いずれの変換も、1 つの入力を複数の出力に送信します。 この 2 つの変換の違いは、マルチキャスト変換は各行を各出力に送信するのに対し、条件分割変換は 1 行を単一の出力に送信する点です。 詳細については、「 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)」を参照してください。  
@@ -46,7 +46,7 @@ ms.locfileid: "51638140"
 ## <a name="multicast-transformation-editor"></a>マルチキャスト変換エディター
   **[マルチキャスト変換エディター]** ダイアログ ボックスを使用すると、各変換出力のプロパティを表示したり設定したりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **出力**  
  左側で出力を選択すると、右側の表にプロパティが表示されます。  
   

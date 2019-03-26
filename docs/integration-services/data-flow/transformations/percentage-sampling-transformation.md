@@ -19,15 +19,15 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db2feb442aceb42d24757e59245914351e5100dc
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 98bd158b4b83a9d1fdef3911b7a2b3105aca28d2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638079"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275275"
 ---
 # <a name="percentage-sampling-transformation"></a>比率サンプリング変換
   比率サンプリング変換は、変換入力行の比率を選択することにより、サンプル データセットを作成します。 サンプル データセットとは、変換入力からランダムに行を選択し、その結果、入力のサンプルとなるデータセットのことです。  
@@ -61,7 +61,7 @@ ms.locfileid: "51638079"
 ## <a name="percentage-sampling-transformation-editor"></a>比率サンプリング変換エディター
   **[比率サンプリング変換エディター]** ダイアログ ボックスを使用すると、指定された行の割合を使用して、入力の一部をサンプルに分割できます。 この変換は、入力を 2 つの別個の出力に分割します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[行の割合]**  
  サンプルとして使用する入力における行の割合を指定します。  
   

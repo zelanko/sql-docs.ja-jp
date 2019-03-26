@@ -15,15 +15,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4e17af8134194e00fada93fd07904d95f478435
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9d1c5ab11bd6fb6447e991eea64ba2d8a10dfca5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638739"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289435"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) のクエリ
   SQL 実行タスク、OLE DB ソース、OLE DB 変換先、および参照変換では、SQL クエリを使用できます。 SQL 実行タスクでは、SQL ステートメントによってデータベース オブジェクトとデータを作成、更新、および削除したり、ストアド プロシージャを実行したり、SELECT ステートメントを実行したりすることができます。 OLE DB ソースと参照変換の場合、通常 SQL ステートメントは SELECT ステートメントまたは EXEC ステートメントです。 EXEC ステートメントで最もよく実行するのは、結果セットを返すストアド プロシージャです。  
@@ -87,11 +87,11 @@ SQL ステートメントは次の方法で提供できます。
   
  参照変換およびあいまい参照変換でも、パラメーターとリターン コードに変数を使用できます。 OLE DB ソースに関する情報は、これら 2 つの変換にも適用されます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[ツール バー]**  
  ツール バーは、データセットの管理、表示するペインの選択、クエリ機能の制御に使用します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**[ダイアグラム ペインの表示/非表示]**|**[ダイアグラム]** ペインの表示と非表示を切り替えます。|  
 |**[グリッド ペインの表示/非表示]**|**[グリッド]** ペインの表示と非表示を切り替えます。|  

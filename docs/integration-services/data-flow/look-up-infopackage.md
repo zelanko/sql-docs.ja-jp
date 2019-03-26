@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d435a4228ec53f19f56b6b4ab1621061a09d93c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08b40a56d9a6c8bc3c3fed0940cc9afdef115a05
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630640"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275053"
 ---
 # <a name="look-up-infopackage"></a>[インフォパッケージの参照]
   SAP Netweaver BW システムで定義されたインフォパッケージを参照する場合、 **[インフォパッケージの参照]** ダイアログ ボックスを使用します。 インフォパッケージの一覧が表示されたら、目的のインフォパッケージを選択します。変換先の関連するオプションに必要な値が設定されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "47630640"
  **型**  
  インフォパッケージの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |Trans.|トランザクション データ。|  
 |Attr.|属性データ。|  

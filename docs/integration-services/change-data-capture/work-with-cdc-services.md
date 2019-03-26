@@ -10,20 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 81ce36e13411afa9fb02258e69ff72798542f1fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eef1093a9ce223ac922ff41d5143f6f4e312eedf
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788590"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275297"
 ---
 # <a name="work-with-cdc-services"></a>CDC Service の操作
   CDC Service 構成コンソールを使用すると、新しい CDC サービスを作成したり、CDC 用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを準備したりできます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[SQL Server の準備]**  
  CDC Service 構成コンソールの右側にある **[アクション]** ペインで、このオプションを選択します。  
   

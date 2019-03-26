@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 200ac8d4c430c739bc7a886025a72cc18709faaa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81208bc35b86927aa797ef7a2ee2efdf46804eda
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757386"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270344"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>全体結合変換を使用してデータをマージする
   全体結合変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 2 つのデータ ソースがあらかじめ含まれている必要があります。  
@@ -59,6 +59,6 @@ ms.locfileid: "47757386"
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
- [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)  
+ [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)  
   
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - AND, logical AND
 - logical AND (&&)
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d69bf01d9a62381c431465dc3f0edc694ed98a3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c39db8b0bc318b9bf3adb117e72e8f8af3f62c6b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823200"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279086"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (論理 AND) (SSIS 式)
   論理 AND 演算を実行します。 両方の条件が TRUE の場合、式は TRUE に評価されます。  
@@ -67,6 +67,6 @@ StandardCost < @SPrice && ListPrice > @LPrice
 ## <a name="see-also"></a>参照  
  [& (ビット演算子 AND) (SSIS 式)](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2e09b272d8daa0f24936b0489dfe40ce58506bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b7494eb9879c8ceb5e80e28b071d4ae6817bf75
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750410"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283116"
 ---
 # <a name="convert-data-type-by-using-data-conversion-transformation"></a>データ変換の変換を使用してデータ型を変換する
   データ変換の変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -59,6 +59,6 @@ ms.locfileid: "47750410"
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
  [Integration Services のデータ型](../../../integration-services/data-flow/integration-services-data-types.md)   
- [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)  
+ [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)  
   
   

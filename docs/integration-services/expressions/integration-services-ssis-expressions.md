@@ -14,15 +14,15 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 315ce164146e7d08096b6e927400dc3507ea74e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d6bf32e59bd433ec0916568e8eb873724beac13b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523021"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290348"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) の式
   式は、単一のデータ値が得られる、識別子、リテラル、関数、演算子などの記号の組み合わせです。 単純式には、1 つの定数、変数、または関数を指定できます。 より頻繁に使用されるのは複雑な式で、複数の演算子や関数を使用し、複数の列や変数を参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、CASE ステートメントの条件の定義、データ列値の生成および更新、変数への値の代入、実行時のプロパティの更新および作成、優先順位制約の制約の定義、および For ループ コンテナーでの利用に式を使用できます。  

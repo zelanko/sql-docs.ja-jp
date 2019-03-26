@@ -10,22 +10,22 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.loaddimwizard.attriboption.f1
 ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 350240ebfbef8127dca8a09050ee6c5774ae118c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5057ade3b02e3d6b4348ec1a199da07920a4ced4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805998"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273942"
 ---
 # <a name="fixed-and-changing-attribute-options-slowly-changing-dimension-wizard"></a>[固定属性と変化する属性のオプション] (緩やかに変化するディメンション ウィザード)
   **[固定属性と変化する属性のオプション]** ダイアログ ボックスを使用すると、固定属性と変化する属性において変更に応答する方法を指定します。  
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[固定属性]**  
  固定属性の場合は、固定属性で変更が検出された場合に、タスクが失敗するかどうかを示します。  
   
