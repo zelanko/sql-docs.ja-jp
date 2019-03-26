@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24fce778851f514d680a2701cc9c4dcc9ccb277c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2ffaf0e89e1fdbd0a1722ad038ad9e360decf237
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419073"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305890"
 ---
 # <a name="using-integrated-authentication"></a>統合認証を使用する
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,7 +67,7 @@ DSN、接続するときに追加することも**Trusted_Connection = yes**の 
   
 システム アカウント以外のユーザーに代わって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内のアクティビティを監査するには、アプリケーションで [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS** を使用する必要があります。  
   
-アプリケーションのパフォーマンスを向上させるため、アプリケーションで接続プールを統合認証と監査とともに使用できます。 ただし、接続プール、統合認証、監査を組み合わせると、unixODBC ドライバー マネージャーがさまざまなユーザーにプールされた接続の再利用を許可するため、セキュリティ上のリスクが発生します。 詳細については、「 [ODBC Connection Pooling (ODBC 接続プール)](https://www.unixodbc.org/doc/conn_pool.html)」を参照してください。  
+アプリケーションのパフォーマンスを向上させるため、アプリケーションで接続プールを統合認証と監査とともに使用できます。 ただし、接続プール、統合認証、監査を組み合わせると、unixODBC ドライバー マネージャーがさまざまなユーザーにプールされた接続の再利用を許可するため、セキュリティ上のリスクが発生します。 詳細については、「 [ODBC Connection Pooling (ODBC 接続プール)](http://www.unixodbc.org/doc/conn_pool.html)」を参照してください。  
 
 再利用する前に、アプリケーションは `sp_reset_connection` を実行してプールされた接続をリセットする必要があります。  
 
@@ -83,7 +83,7 @@ DSN、接続するときに追加することも**Trusted_Connection = yes**の 
   
 -   アプリケーション サーバーは異なるデータベースとして認証し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続します。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は別のデータベース ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) のデータベース ユーザーとして認証します。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、別のデータベース ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) に対するデータベース ユーザーとして認証を行います。  
   
 統合認証を構成すると、資格情報がリンク サーバーに渡されます。  
   
@@ -126,7 +126,7 @@ Linux または macOS コンピューターの時刻と時刻の Kerberos キー
 
 Kerberos 認証が失敗すると、Linux または macOS 上の ODBC ドライバーで NTLM 認証が使用されません。  
 
-Linux または macOS のコンピューターと Active Directory の認証の詳細については、次を参照してください[Active Directory と Linux クライアントを認証](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)と[OS X と Active Directoryに統合するためのベストプラクティス。](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Kerberos を構成する方法の詳細については、次を参照してください。、 [MIT Kerberos ドキュメント](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)します。
+Linux または macOS のコンピューターと Active Directory の認証の詳細については、次を参照してください[Active Directory と Linux クライアントを認証](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)と[OS X と Active Directoryに統合するためのベストプラクティス](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf)。 Kerberos を構成する方法の詳細については、次を参照してください。、 [MIT Kerberos ドキュメント](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)します。
 
 ## <a name="see-also"></a>参照  
 [プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)

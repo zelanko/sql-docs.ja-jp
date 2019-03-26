@@ -50,7 +50,7 @@ ms.locfileid: "58342869"
 次の手順でサンプルをコンパイルすることができます。  
   
 1. [無料の Visual Studio Community edition](https://www.visualstudio.com/products/visual-studio-community-vs)、C# コンソール アプリケーション テンプレートから新しいプロジェクトを作成します。  
-    - ファイル > 新規 > プロジェクト > インストール > テンプレート > Visual c# > Windows > クラシック デスクトップ > コンソール アプリケーション  
+    - ファイル > 新規 > プロジェクト > インストール > テンプレート > Visual C# > Windows > クラシック デスクトップ > コンソール アプリケーション  
     - プロジェクトに名前を**RetryAdo2**します。  
 2. ソリューション エクスプ ローラー ウィンドウを開きます。  
     - プロジェクトの名前を参照してください。  

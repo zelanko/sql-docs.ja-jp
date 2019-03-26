@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dts.designer.toolbox.F1
 - sql13.dts.designer.toolboxcommon.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96ad709b12fc8bcbdb588fc1abb511b4b4ee081e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f1ae0a9f644234a7e887758cf56ebcbc89593ee4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640829"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289638"
 ---
 # <a name="ssis-toolbox"></a>SSIS ツールボックス
   **SSIS ツールボックス**には、ローカル コンピューターにインストールされているすべてのコンポーネントが表示されます。 他のコンポーネントをインストールするときは、ツールボックスの内側を右クリックし、 **[ツールボックスの更新]** をクリックして、コンポーネントを追加します。  
@@ -38,7 +38,7 @@ ms.locfileid: "51640829"
 ## <a name="toolbox-categories"></a>ツールボックス カテゴリ
  **SSIS ツールボックス**では、制御フローとデータ フローのコンポーネントがカテゴリ別にまとめられています。  カテゴリを展開したり折りたたんだり、コンポーネントを再配置することができます。  ツールボックスの内側を右クリックして **[既定のツールボックスの復元]** をクリックして、既定の編成に戻します。  
   
- **[制御フロー]** タブ、 **[データ フロー]** タブ、および **[イベント ハンドラー]** タブを選択すると、 **[お気に入り]** カテゴリおよび **[共通]** カテゴリがツールボックスに表示されます。 **[制御フロー]** タブまたは **[イベント ハンドラー]** タブを選択すると、 **[その他のタスク]** カテゴリがツールボックスに表示されます。[データ フロー]タブを選択すると、 **[その他の変換]**、 **[その他の変換元]** 、 **[その他の変換先]** の各カテゴリがツールボックスに表示されます。  
+ **[制御フロー]** タブ、 **[データ フロー]** タブ、および **[イベント ハンドラー]** タブを選択すると、 **[お気に入り]** カテゴリおよび **[共通]** カテゴリがツールボックスに表示されます。 **[制御フロー]** タブまたは **[イベント ハンドラー]** タブを選択すると、 **[その他のタスク]** カテゴリがツールボックスに表示されます。**[データ フロー]** タブを選択すると、 **[その他の変換]**、 **[その他の変換元]** 、 **[その他の変換先]** の各カテゴリがツールボックスに表示されます。  
 
  ## <a name="add-azure-components-to-the-toolbox"></a>Azure のコンポーネントをツールボックスに追加する  
  Integration Services 用の Azure Feature Pack には、Azure データソースとタスクに接続して、Azure の一般的な操作を実行するための接続マネージャーが含まれています。 これらのアイテムをツールボックスに追加するには機能パックをインストールします。 詳細については、「[Azure Feature Pack for Integration Services &#40;SSIS&#41; (Integration Services 用の Azure Feature Pack &#40;SSIS&#41;)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)」を参照してください。  
