@@ -18,15 +18,15 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a5fcda8f88d1e16dc39bd4de431239a30cfd218d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3aa227c82d9481863c6cca360fdac41cec3ace13
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658626"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282456"
 ---
 # <a name="integration-services-paths"></a>Integration Services のパス
   パスは、データ フロー コンポーネントの出力を別のコンポーネントの入力に連結することにより、データ フロー内の 2 つのコンポーネントを連結します。 パスには連結元と連結先があります。 たとえば、パスが OLE DB ソースと並べ替え変換を連結する場合、OLE DB ソースはパスの連結元であり、並べ替え変換はパスの連結先になります。 連結元とはパスが開始するコンポーネントで、連結先とはパスが終了するコンポーネントのことです。  
@@ -62,7 +62,7 @@ ms.locfileid: "47658626"
   
  **[データ フロー パス エディター]** ダイアログ ボックスの **[全般]** ノードを使用して、パスに名前を付けて説明を記述したり、パスの注釈のオプションを指定したりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **名前**  
  パスの一意な名前を指定します。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "47658626"
 ## <a name="metadata-page---data-flow-path-editor"></a>[メタデータ] ページ - [データ フロー パス エディター]
 **[データ フロー パス エディター]** ダイアログ ボックスの **[メタデータ]** ページを使用すると、パス列のメタデータを表示できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[パスのメタデータ]**  
  列のメタデータが一覧表示されます。 列のデータを並べ替えるには、列ヘッダーをクリックします。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "47658626"
 ## <a name="data-viewers-page---data-flow-path-editor"></a>[データ ビューアー] ページ - [データ フロー パス エディター]
 **[データ フロー パス エディター]** ダイアログ ボックスの **[データ ビューアー]** ページを使用すると、パスにアタッチされているデータ ビューアーを管理できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **名前**  
  データ ビューアーが一覧表示されます。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "47658626"
  クリックすると、選択したデータ ビューアーを **[データ ビューアーの構成]** ダイアログ ボックスを使用して構成できます。  
  
 ## <a name="path-properties"></a>パスのプロパティ
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、データ フロー オブジェクトのコンポーネント、入力、出力、入力列、および出力列の各レベルに、共通プロパティとカスタム プロパティがあります。 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、データ フロー オブジェクトのコンポーネント、入力、出力、入力列、および出力列の各レベルに、共通プロパティとカスタム プロパティがあります。 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
  このトピックでは、データ フロー オブジェクトを連結するパスのカスタム プロパティの一覧を示し、それらのプロパティについて説明します。  
   

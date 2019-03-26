@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 932f2384b24b55a6516fe84cd16f608a1a8e2d0e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8cc018a1c9fddd35c80f73ce4f141b0b526ad4f
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533340"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306220"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core への SQL Server のインストール
 
@@ -42,15 +42,15 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
 |機能|Supported|追加情報|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス|[ユーザー アカウント制御]||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション|[ユーザー アカウント制御]||  
-|フルテキスト検索|[ユーザー アカウント制御]||  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス|可||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション|可||  
+|フルテキスト検索|可||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[はい]||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|[はい]||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|いいえ||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|いいえ||  
-|クライアント ツール接続|[ユーザー アカウント制御]||  
-|Integration Services サーバー|[ユーザー アカウント制御]||  
+|クライアント ツール接続|可||  
+|Integration Services サーバー|可||  
 |クライアント ツールの旧バージョンとの互換性|いいえ||  
 |クライアント ツール SDK|いいえ||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブック|いいえ||  
@@ -58,8 +58,8 @@ Server Core インストール オプションでは、特定のサーバー ロ
 |管理ツール - 完全|リモートのみ|Server Core へのこれらの機能のインストールはサポートされていません。 これらのコンポーネントは、Server Core ではない別のサーバーにインストールし、Server Core にインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスに接続できます。|  
 |分散再生コントローラー|いいえ||  
 |分散再生クライアント|リモートのみ|Server Core へのこれらの機能のインストールはサポートされていません。 これらのコンポーネントは、Server Core ではない別のサーバーにインストールし、Server Core にインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスに接続できます。|  
-|SQL クライアント接続 SDK|[ユーザー アカウント制御]||  
-|Microsoft Sync Framework|[ユーザー アカウント制御]|Microsoft Sync Framework は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール パッケージに含まれていません。 適切なバージョンの Sync Framework は、この [Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) からダウンロードして、Server Core を実行しているコンピューターにインストールできます。|  
+|SQL クライアント接続 SDK|可||  
+|Microsoft Sync Framework|可|Microsoft Sync Framework は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール パッケージに含まれていません。 適切なバージョンの Sync Framework は、この [Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) からダウンロードして、Server Core を実行しているコンピューターにインストールできます。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|いいえ||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|いいえ||  
   
@@ -262,7 +262,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
 ## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>Server Core で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート アクセスを構成する  
  Server Core で実行している [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスのリモート アクセスを構成するには、以下で説明する操作を実行します。  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>のインスタンスでリモート接続を有効にする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 リモート接続を有効にするには、SQLCMD.exe をローカルで使用して、Server Core インスタンスに対して次のステートメントを実行します。  
 
@@ -333,7 +333,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [エディションと SQL Server 2017 のサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [Server Core のインストール](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
  [Sconfig.cmd を使用して Windows Server 2016 の Server Core インストールを構成する](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
- [Windows PowerShell でのフェールオーバー クラスター コマンドレット](https://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
+ [Windows PowerShell でのフェールオーバー クラスター コマンドレット](/powershell/module/failoverclusters/)
 
   
   

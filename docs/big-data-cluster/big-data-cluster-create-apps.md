@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 83dc07ed6336c637aaf17fdcfc1075854fe542b7
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222062"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434433"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリをデプロイする方法
 
@@ -137,6 +137,9 @@ output: #output parameter the app expects and the type
 ```bash
 mssqlctl app create --spec ./addpy
 ```
+
+> [!NOTE]
+> `spec.yaml`ファイルでは、両方を指定します、`poolsize`と多数の`replicas`します。 数`replicas`サービスのコピーの数をデプロイする必要がありますを指定します。 `poolsize`レプリカごとに作成するプールの数を指定します。 これらの設定は、デプロイが並列で処理できる要求の量に影響を与えます。 1 つの特定の時点での要求の最大数は等しい`replicas`回`poolsize`、つまり、 5 つのレプリカと 2 つのプールあたりのレプリカがある場合、展開は、並列で 10 件の要求を処理できます。 グラフィカル表現は、以下のイメージを参照してください`replicas`と`poolsize`:。![Poolsize とレプリカ](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
 一覧のコマンドを使用して、アプリをデプロイするかどうかを確認できます。
 

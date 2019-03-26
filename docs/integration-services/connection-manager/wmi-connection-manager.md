@@ -14,18 +14,18 @@ helpviewer_keywords:
 - connection managers [Integration Services], WMI
 - WMI connection manager [Integration Services]
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 426faaf74fce61361f07ee6936c7a6a140753950
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 659eb7ee0c6e75c4df778d04b50b30efc35c3f97
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119599"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270616"
 ---
 # <a name="wmi-connection-manager"></a>WMI 接続マネージャー
-  WMI 接続マネージャーを使用すると、パッケージは Windows Management Instrumentation (WMI) を使用して、企業環境の情報を管理できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクでは、WMI 接続マネージャーを使用します。  
+  WMI 接続マネージャーを使用すると、パッケージは Windows Management Instrumentation (WMI) を使用して、企業環境の情報を管理できます。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクでは、WMI 接続マネージャーを使用します。  
   
  WMI 接続マネージャーをパッケージに追加すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に WMI 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの **Connections** コレクションに追加します。 接続マネージャーの **ConnectionManagerType** プロパティは、 **WMI**に設定されます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "49119599"
   
  WMI 接続マネージャーの詳細については、「 [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **名前**  
  接続マネージャーの一意な名前を指定します。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "49119599"
  **User name**  
  Windows 認証を使用しない場合、接続に使用するユーザー名を入力する必要があります。  
   
- **Password**  
+ **パスワード**  
  Windows 認証を使用しない場合、接続に使用するパスワードを入力する必要があります。  
   
  **テスト**  

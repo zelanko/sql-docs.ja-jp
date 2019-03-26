@@ -11,20 +11,20 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - managing packages [Integration Services]
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1dab0e7496a41d897b927c4a53d6cc75ca8bdc4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 25d76f4ad37b5fb8631dfacb526576c1fd52d2bf
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640770"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270838"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) サーバーとカタログ
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でパッケージをデザインしてテストしたら、パッケージを含むプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置できます。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] データベースをホストする **ssDEnoversion** のインスタンスです。 データベースには、パッケージ、プロジェクト、パラメーター、権限、サーバーのプロパティ、および運用履歴というオブジェクトが格納されます。  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] データベースをホストする **ssDEnoversion** のインスタンスです。 データベースには、パッケージ、プロジェクト、パラメーター、権限、サーバーのプロパティ、および運用履歴というオブジェクトが格納されます。  
   
  **SSISDB** データベース内のオブジェクト情報は、パブリック ビューに対してクエリを実行することで公開されます。 また、データベースには、オブジェクトを管理するために呼び出すことができるストアド プロシージャも用意されています。  
   

@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 483c7f84d171b34135d16fd6f392b6f5f180d217
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: fceeefd7c9dd0d3bd7df761273f69355c4e6024a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607102"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342869"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>ステップ 4: ADO.NET で SQL に弾性的に接続する
 
@@ -50,7 +50,7 @@ ms.locfileid: "51607102"
 次の手順でサンプルをコンパイルすることができます。  
   
 1. [無料の Visual Studio Community edition](https://www.visualstudio.com/products/visual-studio-community-vs)、C# コンソール アプリケーション テンプレートから新しいプロジェクトを作成します。  
-    - ファイル > 新規 > プロジェクト > インストール > テンプレート > Visual C# > Windows > クラシック デスクトップ > コンソール アプリケーション  
+    - ファイル > 新規 > プロジェクト > インストール > テンプレート > Visual c# > Windows > クラシック デスクトップ > コンソール アプリケーション  
     - プロジェクトに名前を**RetryAdo2**します。  
 2. ソリューション エクスプ ローラー ウィンドウを開きます。  
     - プロジェクトの名前を参照してください。  
@@ -68,7 +68,7 @@ ms.locfileid: "51607102"
 注: サーバー名の接続文字列を対象とした Azure SQL Database では、4 つの文字のプレフィックスが含まれているため**tcp:** します。 Microsoft SQL Server に接続するサーバーの文字列を調整することができます。  
   
   
-```C#  
+```csharp
     using System;  // C#  
     using CG = System.Collections.Generic;  
     using QC = System.Data.SqlClient;  

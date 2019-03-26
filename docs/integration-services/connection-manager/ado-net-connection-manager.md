@@ -14,20 +14,20 @@ helpviewer_keywords:
 - ADO.NET connection manager [Integration Services]
 - connections [Integration Services], ADO.NET
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6eaec2f60006bb43514a4f147e98647efb0c2499
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d5811c4ea89a177f9862f27ba75f6baaddef7208
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638469"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272379"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 接続マネージャー
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用すると、パッケージは .NET プロバイダーを使用してデータ ソースにアクセスできます。 この接続マネージャーは通常、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのデータ ソースへのアクセスに使用されます。また、C# などの言語を使用してマネージド コードに記述されたカスタム タスク内で、OLE DB や XML を介して公開されているデータ ソースにもアクセスできます。  
   
- [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続として解決される接続マネージャーを作成し、接続マネージャーのプロパティを設定し、接続マネージャーをパッケージの **Connections** コレクションに追加します。  
+  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続として解決される接続マネージャーを作成し、接続マネージャーのプロパティを設定し、接続マネージャーをパッケージの **Connections** コレクションに追加します。  
   
  接続マネージャーの **ConnectionManagerType** プロパティは、 **ADO.NET**に設定されます。 **ConnectionManagerType** の値には、接続マネージャーが使用する .NET プロバイダーの名前を含めることができます。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "51638469"
   
  ADO.NET 接続マネージャーの詳細については、「 [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[データ接続]**  
  一覧から既存の ADO.NET データ接続を選択します。  
   

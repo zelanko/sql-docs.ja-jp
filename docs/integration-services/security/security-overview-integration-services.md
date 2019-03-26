@@ -18,18 +18,18 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86272ee2bd936b84c72e6cbc3fd9083d2d1c39bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 202ea098033914875e99510377dcfcd2db6d7506
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616490"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273568"
 ---
 # <a name="security-overview-integration-services"></a>セキュリティの概要 (Integration Services)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、豊富かつ柔軟なセキュリティ環境を提供できるように、複数の階層でセキュリティが構成されています。 このようなセキュリティの階層では、デジタル署名、パッケージのプロパティ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロール、およびオペレーティング システム権限が使用されます。 こうしたセキュリティ機能のほとんどは、ID およびアクセス制御のカテゴリに分類されます。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、豊富かつ柔軟なセキュリティ環境を提供できるように、複数の階層でセキュリティが構成されています。 このようなセキュリティの階層では、デジタル署名、パッケージのプロパティ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロール、およびオペレーティング システム権限が使用されます。 こうしたセキュリティ機能のほとんどは、ID およびアクセス制御のカテゴリに分類されます。  
 
 ## <a name="threat-and-vulnerability-mitigation"></a>脅威と脆弱性の対策
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はさまざまなセキュリティ メカニズムを備えていますが、パッケージおよびそのパッケージで作成または使用されるファイルが悪用される可能性はあります。  

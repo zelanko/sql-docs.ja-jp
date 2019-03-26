@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e46ec694b130ca684f5437e04159436a36afd44
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6e9c75fdd486c88e2f4cd0d58d7e310b44ea140a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641179"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280646"
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
   スクリプト コンポーネントはスクリプトをホストします。これにより、パッケージにカスタム スクリプト コードを含めて実行できます。 スクリプト コンポーネントは、パッケージ内で次の目的に使用できます。  
@@ -208,13 +208,13 @@ ms.locfileid: "51641179"
 |**LocaleID**|ロケールを指定して、順序付けおよび日時の変換に関する地域固有の情報を提供します。|  
 |**名前**|わかりやすいコンポーネント名を入力します。|  
 |**[ValidateExternalMetadata]**|スクリプト変換において、デザイン時に外部データ ソースに対して列のメタデータを検証するかどうかを示します。 値 **false** を設定した場合、検証は実行時まで延期されます。|  
-|**[ReadOnlyVariables]**|スクリプト変換が読み取り専用でアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注: 変数名では大文字と小文字が区別されます。|  
-|**[ReadWriteVariables]**|スクリプト変換が読み取り/書き込み用にアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注: 変数名では大文字と小文字が区別されます。|  
+|**[ReadOnlyVariables]**|スクリプト変換が読み取り専用でアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注:変数名の大文字と小文字は区別されます。|  
+|**[ReadWriteVariables]**|スクリプト変換が読み取り/書き込み用にアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注:変数名の大文字と小文字は区別されます。|  
 |**[ScriptLanguage]**|スクリプト コンポーネントが使用するスクリプト言語を選択します。<br /><br /> スクリプト コンポーネントとスクリプト タスクの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。|  
 |**[UserComponentTypeName]**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インフラストラクチャをサポートする <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> クラスと **Microsoft.SqlServer.TxScript** アセンブリを指定します。|  
   
  **[スクリプトの編集]**  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) を使用して、スクリプトを作成または変更します。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) を使用して、スクリプトを作成または変更します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

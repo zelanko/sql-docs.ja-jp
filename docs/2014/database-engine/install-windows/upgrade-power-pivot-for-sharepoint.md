@@ -1,7 +1,7 @@
 ---
 title: PowerPivot for SharePoint のアップグレード |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 03/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
@@ -10,12 +10,12 @@ ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7e1459462b057dee39502805cc7746d7e0afa618
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366124"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434503"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>PowerPivot for SharePoint のアップグレード
   このトピックでは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置を [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]にアップグレードするために必要な手順について説明します。 特定の手順は、環境が現在実行されている SharePoint のバージョンに依存および PowerPivot for SharePoint アドインは、(**spPowerPivot.msi**)。  
@@ -74,7 +74,7 @@ ms.locfileid: "53366124"
   
 2.  サーバーを再起動します。  
   
-3.  SharePoint 2013 ファーム内の各サーバーで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerPivot.msi**) を実行し、データ プロバイダーをインストールします。 データ プロバイダーもアップグレードする SQL Server セットアップ ウィザードを実行したサーバーは例外です。 詳細については、次を参照してください[ダウンロード Microsoft SQL Server 2014 PowerPivot for Microsoft SharePoint 2013 では、](https://www.microsoft.com/download/details.aspx?id=40737)と[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41; ](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  SharePoint 2013 ファーム内の各サーバーで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerPivot.msi**) を実行し、データ プロバイダーをインストールします。 データ プロバイダーもアップグレードする SQL Server セットアップ ウィザードを実行したサーバーは例外です。 詳細については、次を参照してください。[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)します。  
   
 4.  **PowerPivot for SharePoint 2013 構成実行**アドインがインストールされている更新されたソリューション ファイルを SharePoint ファームを構成する SharePoint アプリケーション サーバーのいずれかのツール。 この手順に SharePoint サーバーの全体管理を使用することはできません。 詳細については、以下を参照してください。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "53366124"
         > [!IMPORTANT]  
         >  最初のアクションである **[ファーム ソリューションのアップグレード]** は、常に最初に処理する必要があります。 このアクションを実行すると、サーバーの構成に使用する PowerShell コマンドレットを登録できます。 このアクションを実行したときにエラーが発生する場合は、続行しないでください。 タスク一覧の残りのアクションを処理する前に、エラーとして返された情報に基づいて問題を診断し、解決してください。  
   
-    7.  **[実行]** をクリックして、このタスクで有効なすべてのアクションを実行します。 **[実行]** は、検証チェックに合格した後でのみ使用可能になります。 クリックすると**実行**、次の警告が表示されたら、ことを示すアクションがバッチ モードで処理されます。"**ツールで有効なものとしてフラグが設定されている構成設定のすべてを SharePoint ファームに適用されます。続行しますか?**"  
+    7.  **[実行]** をクリックして、このタスクで有効なすべてのアクションを実行します。 **[実行]** は、検証チェックに合格した後でのみ使用可能になります。 **[実行]** をクリックすると、アクションがバッチ モードで処理されることを示す次の警告が表示されます: "**ツールで有効としてフラグが立てられている構成設定はすべて SharePoint ファームに適用されます。続行しますか?**"  
   
     8.  **[はい]** をクリックして続行します。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "53366124"
         > [!IMPORTANT]  
         >  最初のアクションである **[ファーム ソリューションのアップグレード]** は、常に最初に処理する必要があります。 このアクションを実行すると、サーバーの構成に使用する PowerShell コマンドレットを登録できます。 このアクションを実行したときにエラーが発生する場合は、続行しないでください。 タスク一覧の残りのアクションを処理する前に、エラーとして返された情報に基づいて問題を診断し、解決してください。  
   
-    8.  **[実行]** をクリックして、このタスクで有効なすべてのアクションを実行します。 **[実行]** は、検証チェックに合格した後でのみ使用可能になります。 クリックすると**実行**、次の警告が表示されたら、ことを示すアクションがバッチ モードで処理されます。"SharePoint ファームへのツールで有効なものとしてフラグが設定された構成設定をすべて適用されます。 続行しますか?"  
+    8.  **[実行]** をクリックして、このタスクで有効なすべてのアクションを実行します。 **[実行]** は、検証チェックに合格した後でのみ使用可能になります。 **[実行]** をクリックすると、アクションがバッチ モードで処理されることを示す次の警告が表示されます: "ツールで有効としてフラグが立てられている構成設定はすべて SharePoint ファームに適用されます。 続行しますか?"  
   
     9. **[はい]** をクリックして続行します。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "53366124"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  既存の配置について、**型**が"取り消し"または展開、**ファイル**が powerpivotwebapp.wsp または powerpivotfarm.wsp であること。  
+    2.  既存の配置について、**[種類]** が "取り消し" または "展開" であり、**[ファイル]** が powerpivotwebapp.wsp または powerpivotfarm.wsp であることを確認します。  
   
     3.  デプロイまたは取り消しの場合、PowerPivot ソリューションに関連するコピーの GUID 値**JobId**次のコマンドに貼り付けます (GUID をコピーします [シェルの編集] メニュー、マーク、コピー、および貼り付けコマンドを使用)。  
   
@@ -278,7 +278,7 @@ Get-PowerPivotSystemService
   
  ProductVersion   FileVersion           FileName  
   
- **12.0.2000.8** 2014.0120.200 C:\Program files \microsoft SQL Server\MSAS12 します。POWERPIVOT2000\OLAP\bin\msmdsrv.exe  
+ **12.0.2000.8** 2014.0120.200    C:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT2000\OLAP\bin\msmdsrv.exe  
   
 ### <a name="verify-the-msolap-data-provider-version-on-sharepoint"></a>SharePoint での MSOLAP データ プロバイダーのバージョン確認  
  Excel Services によって信頼されている Analysis Services OLE DB プロバイダーのバージョンを確認するには、次の手順に従います。 Excel Services の信頼できるデータ プロバイダーの設定を確認するには、ファームまたはサービス アプリケーションの管理者である必要があります。  

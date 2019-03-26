@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSIS, SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 60fe77867a37e76aeef6594524ad3cbea8246554
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9d8e8a699ababd04002cd85582f55ae7903f0474
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638439"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275423"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services のユーザー インターフェイス
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーのタブ上にあるデザイン画面以外にも、パッケージに機能を追加したり、パッケージ オブジェクトのプロパティを構成するための、次に示すようなウィンドウやダイアログ ボックスが用意されています。  
@@ -115,7 +115,7 @@ ms.locfileid: "51638439"
  その他のウィンドウおよびメニューの詳細については、Visual Studio のマニュアルを参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]でパッケージを作成する方法については、「 [SQL Server データ ツールでのパッケージの作成](../integration-services/create-packages-in-sql-server-data-tools.md)」を参照してください。  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]でパッケージを作成する方法については、「 [SQL Server データ ツールでのパッケージの作成](../integration-services/create-packages-in-sql-server-data-tools.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SSIS デザイナー](../integration-services/ssis-designer.md)  

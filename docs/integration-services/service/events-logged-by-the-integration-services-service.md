@@ -12,15 +12,15 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43a0c3f454eb804df53eedb8736d8bf468f89111
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18d4e70daf68267675678803134b3f04c0c48f24
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714870"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277211"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services サービスによってログに記録されるイベント
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、各種のメッセージを Windows アプリケーション イベント ログに記録します。 これらのメッセージは、サービスの起動時、サービスの停止時、および特定の問題の発生時にログに記録されます。  
@@ -34,10 +34,10 @@ ms.locfileid: "47714870"
   
 |イベント ID|シンボル名|Text|注|  
 |--------------|-------------------|----------|-----------|  
-|256|DTS_MSG_SERVER_STARTING|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスを開始しています。|サービスが開始されようとしています。|  
+|256|DTS_MSG_SERVER_STARTING| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスを開始しています。|サービスが開始されようとしています。|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスが開始されました。|サービスが開始されました。|  
 |260|DTS_MSG_SERVER_START_FAILED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスを開始できませんでした。%nエラー: %1|サービスを開始できませんでした。 開始できないのは、インストールが破損したか、サービス アカウントが適切でないことが原因である可能性があります。|  
-|258|DTS_MSG_SERVER_STOPPING|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスを停止しています。%n%n実行中のパッケージはサーバー終了時にすべて停止します: %1|サービスを停止しています。また、パッケージを停止するようにサービスを構成している場合は、実行中のパッケージもサービスによってすべて停止されます。 構成ファイルで true 値または false 値を設定して、サービスの停止時に実行中のパッケージを停止するかどうかを指定できます。 このイベントのメッセージには、この設定値が含まれています。|  
+|258|DTS_MSG_SERVER_STOPPING| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスを停止しています。%n%n実行中のパッケージはサーバー終了時にすべて停止します: %1|サービスを停止しています。また、パッケージを停止するようにサービスを構成している場合は、実行中のパッケージもサービスによってすべて停止されます。 構成ファイルで true 値または false 値を設定して、サービスの停止時に実行中のパッケージを停止するかどうかを指定できます。 このイベントのメッセージには、この設定値が含まれています。|  
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスが停止しました。%nサーバーのバージョン %1|サービスが停止しました。|  
   
 ## <a name="settings-file-messages"></a>設定ファイルのメッセージ  

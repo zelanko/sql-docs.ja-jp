@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ddbb902789cfc4cbef5135d024ba8f6e2e1c7e98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc77716e8df17175c0951645eb1034b6ecb9e183
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530273"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282666"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>データ フロー コンポーネントのプロパティを設定する
   変換元、変換先、変換などを含むデータ フロー コンポーネントのプロパティを設定するには、次の機能のいずれかを使用します。  

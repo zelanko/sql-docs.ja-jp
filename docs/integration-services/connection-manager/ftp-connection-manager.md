@@ -14,18 +14,18 @@ helpviewer_keywords:
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7749ca5009a0334fe555a66dc2e06afa3278f922
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20461216a802bde79005d7539ce2d09cd032c771
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653085"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290648"
 ---
 # <a name="ftp-connection-manager"></a>FTP 接続マネージャー
-  FTP 接続マネージャーを使用すると、パッケージは、ファイル転送プロトコル (FTP) サーバーに接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる FTP タスクでは、この接続マネージャーを使用します。  
+  FTP 接続マネージャーを使用すると、パッケージは、ファイル転送プロトコル (FTP) サーバーに接続できます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる FTP タスクでは、この接続マネージャーを使用します。  
   
  FTP 接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に FTP 接続として解決される接続マネージャーを作成し、接続マネージャーのプロパティを設定し、接続マネージャーをパッケージの **Connections** コレクションに追加します。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47653085"
   
  FTP 接続マネージャーの詳細については、「 [FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **サーバー名**  
  FTP サーバーの名前を指定します。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47653085"
  **User name**  
  FTP サーバーにアクセスするために使用するユーザー名を指定します。 このプロパティの既定値は **anonymous**です。  
   
- **Password**  
+ **パスワード**  
  FTP サーバーにアクセスするために使用するパスワードを指定します。  
   
  **[タイムアウト (秒)]**  

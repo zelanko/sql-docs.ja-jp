@@ -24,15 +24,15 @@ helpviewer_keywords:
 - data preparation tasks [Integration Services]
 - directory operations [Integration Services]
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 656a25127299bedc122a38aafa4534adbe181ccf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 90726ed8ff3b8180e8c65c35d055dcb985001f92
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545272"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276130"
 ---
 # <a name="integration-services-tasks"></a>Integration Services タスク
   タスクとは、パッケージ制御フローで実行される作業の単位を定義する、制御フローの要素のことです。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、1 つ以上のタスクで構成されます。 パッケージに複数のタスクが含まれる場合、それらのタスクは優先順位制約によって順序が決定され、制御フロー内で連結されます。  
@@ -44,7 +44,7 @@ ms.locfileid: "52545272"
 ## <a name="types-of-tasks"></a>タスクの種類  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、次の種類のタスクが含まれます。  
   
- データ フロー タスク  
+ [データ フロー タスク]  
  データ フローを実行して、データの抽出、列レベルの変換の適用、およびデータの読み込みを行うタスクです。  
   
  データ準備タスク  
