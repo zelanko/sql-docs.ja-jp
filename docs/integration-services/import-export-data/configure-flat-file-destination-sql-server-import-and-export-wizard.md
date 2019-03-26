@@ -3,22 +3,21 @@ title: フラット ファイルの変換先の構成 (SQL Server インポー�
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8dd326b588880ca2f095c83c6a2d9ad8f02ac32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23acf4037b9e759fe60847c4d3791528770f89b9
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694150"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222036"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>[フラット ファイルの変換先の構成] (SQL Server インポートおよびエクスポート ウィザード)
   フラット ファイルの変換先を選択した場合、テーブルをコピーするように指定した後で、またはクエリを指定した後で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、**[フラット ファイルの変換先の構成]** が表示されます。 このページで、宛先のフラット ファイルの書式設定オプションを指定します 必要に応じて、個々の列のマッピングを確認し、サンプル データをプレビューします。  
@@ -41,7 +40,7 @@ ms.locfileid: "47694150"
  **[行区切り記号]**  
  出力で行を区切るための区切り記号を一覧から選択します。 *カスタム*の行区切り記号を指定するオプションはありません。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**{CR}{LF}**|復帰と改行の組み合わせで行を区切ります。|  
 |**{CR}**|復帰で行を区切ります。|  
@@ -55,7 +54,7 @@ ms.locfileid: "47694150"
  **列区切り記号**  
  出力で列を区切るための区切り記号を一覧から選択します。 *カスタム*の列区切り記号を指定するオプションはありません。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**{CR}{LF}**|復帰と改行の組み合わせで列を区切ります。|  
 |**{CR}**|復帰で列を区切ります。|  

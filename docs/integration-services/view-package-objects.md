@@ -17,15 +17,15 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d25f5360e2582cb752dfdc5c92be928da437e06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 582d0a4475ba6e6c20198ffdf50dd2e776cad480
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664490"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283096"
 ---
 # <a name="view-package-objects"></a>パッケージ オブジェクトを表示する
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでは、 **[パッケージ エクスプローラー]** タブで、パッケージをエクスプローラー表示できます。 この表示には、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アーキテクチャのコンテナー階層が反映されます。 パッケージ コンテナーはこの階層の最上層にあり、パッケージを展開すると、そのパッケージ内にある接続、実行可能ファイル、イベント ハンドラー、ログ プロバイダー、優先順位制約、および変数が表示されます。  
@@ -62,8 +62,8 @@ ms.locfileid: "47664490"
  [Integration Services タスク](../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services コンテナー](../integration-services/control-flow/integration-services-containers.md)   
  [優先順位制約](../integration-services/control-flow/precedence-constraints.md)   
- [Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)   
- [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services (SSIS) の変数](../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) のイベント ハンドラー](../integration-services/integration-services-ssis-event-handlers.md)   
  [Integration Services &#40;SSIS&#41; のログ記録](../integration-services/performance/integration-services-ssis-logging.md)  
   
   

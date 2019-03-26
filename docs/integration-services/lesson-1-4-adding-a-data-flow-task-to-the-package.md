@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f9bfb46276de6804aa9222a298bec96d970fd51
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 8ba4cadf966bdeec08cee922d091a3b01820e082
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143082"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277671"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>レッスン 1-4:データ フロー タスクをパッケージに追加する
 
@@ -41,7 +41,7 @@ ms.locfileid: "54143082"
 4.  データ フロー タスクを右クリックして **[プロパティ]** を選択し、[プロパティ] ウィンドウで **LocaleID** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
   
 ## <a name="go-to-next-task"></a>次のタスクに進む
-[手順 5: フラット ファイルの変換元を追加し、構成する](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+[手順 5:フラット ファイルの変換元を追加し、構成する](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 ## <a name="see-also"></a>参照  
 [データ フロー タスク](../integration-services/control-flow/data-flow-task.md)  
