@@ -11,27 +11,27 @@ ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f38de8f15e6e14d3822254812f98364104ea603
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80ef78038cad742dbe2105b6999d021ec41e8a3a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603970"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342883"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>ステップ 3: ADO.NET を使用した SQL への接続を概念実証する
 
-- 前の記事:&nbsp;&nbsp;&nbsp;[手順 2: ADO.NET 開発用の SQL database の作成](step-2-create-a-sql-database-for-ado-net-development.md)  
+- 前の記事:&nbsp;&nbsp;&nbsp;[ステップ 2: ADO.NET 開発用の SQL データベースを作成する](step-2-create-a-sql-database-for-ado-net-development.md)  
 - 次の記事:&nbsp;&nbsp;&nbsp;[ステップ 4: ADO.NET で SQL に弾性的に接続する](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
-この c# コード例は、のみの概念実証を検討してください。 サンプル コードがわかりやすくするために、簡略化し、Microsoft によって推奨されるベスト プラクティスに表すとは限りません。  
+この C# コードの例は、概念実証としてのみ検討してください。 わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。  
   
-## <a name="step-1-connect"></a>手順 1: 接続
+## <a name="step-1-connect"></a>手順 1: 接続する
   
 メソッド**SqlConnection.Open** SQL database に接続するために使用します。  
 
 
-```CSharp  
+```csharp
     // C# , ADO.NET  
     using System;
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -74,7 +74,7 @@ SqlCommand.ExecuteReader メソッド:
   
   
   
-```CSharp  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -151,7 +151,7 @@ SqlCommand.ExecuteReader メソッド:
   
   
   
-## <a name="step-3-insert-a-row"></a>手順 3: 行を挿入します。  
+## <a name="step-3-insert-a-row"></a>手順 3: 行を挿入する  
   
   
 この例では、次の方法を示します。  
@@ -162,7 +162,7 @@ SqlCommand.ExecuteReader メソッド:
   
   
   
-```C#  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  

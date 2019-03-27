@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2a6762f20c05a66c597474d33bd98e9bb8f2c5f4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 88e309d5a7d2f0b1464298ebd1ded5ae31139e78
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589996"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356465"
 ---
 # <a name="osql-utility"></a>osql ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -262,7 +262,7 @@ osql -E -i titles.qry -o titles.res
 >  **osql**を使用するとき、GO によって SQL スクリプト ファイルに構文エラーが発生する場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は GO をバッチ区切り記号として処理しています。  
   
 ## <a name="inserting-comments"></a>コメントの挿入  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **で**に送られる Transact-SQL ステートメントには、コメントを挿入することができます。 -- (コメント) と /*...\*/ (コメント) の 2 種類のコメント形式があります。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **で**に送られる Transact-SQL ステートメントには、コメントを挿入することができます。 2 種類のコメント スタイルがあります: `--` と `/*...*/` です。  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>EXIT によって osql から返される結果  
  **osql**からの戻り値に、SELECT ステートメントの結果を使用できます。 数値の場合、結果行の最終行の最終列は、4 バイトの (長) 整数に変換されます。 MS-DOS は、下位バイトを親プロセスやオペレーティング システムのエラー レベルに渡します。 Windows では、4 バイトの整数全体を渡します。 構文は次のとおりです。  

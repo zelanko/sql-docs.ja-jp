@@ -6644,50 +6644,57 @@ items:
           href: ../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md
         - name: コレクション アイテムのコレクション セットへの追加 (T-SQL)
           href: ../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md
-    - name: 拡張イベント
+    - name: 拡張イベント (XEvent) の概要
       href: ../relational-databases/extended-events/extended-events.md
       items:
-      - name: 'クイック スタート: SQL Server の拡張イベント'
-        href: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
-      - name: '[構成]'
+      - name: クイック スタート
         items:
-        - name: イベント セッションの管理
-          href: ../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md
-        - name: ターゲット データの詳細表示
+        - name: 'クイック スタート: SQL Server の拡張イベント'
+          href: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+      - name: チュートリアル
+        items:
+        - name: XEvent からのターゲット データの詳細表示
           href: ../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md
+        - name: SQL トレース スクリプトをセッションに変換する
+          href: ../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+      - name: 概念
+        items:
         - name: パッケージ
           href: ../relational-databases/extended-events/sql-server-extended-events-packages.md
         - name: 対象サーバー
           href: ../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md
-        - name: Event Tracing for Windows ターゲット
+        - name: Windows イベント トレーシングのターゲット
           href: ../relational-databases/extended-events/event-tracing-for-windows-target.md
         - name: エンジン
           href: ../relational-databases/extended-events/sql-server-extended-events-engine.md
         - name: セッション
           href: ../relational-databases/extended-events/sql-server-extended-events-sessions.md
+        - name: SQL トレースのイベント クラスと等価な XEvent
+          href: ../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+        - name: ツール
+          href: ../relational-databases/extended-events/extended-events-tools.md
+      - name: 操作方法ガイド
+        items:
+        - name: XEvent セッションを管理する
+          href: ../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md
         - name: セッションの変更
           href: ../relational-databases/extended-events/alter-an-extended-events-session.md
         - name: システム ビューからの SELECT と JOIN
           href: ../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md
-        - name: SQL トレースのイベント クラスと等価な拡張イベント
-          href: ../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md
-        - name: SQL トレース スクリプトからセッションへの変換
-          href: ../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md
-        - name: ロックを保持しているクエリの特定
+        - name: ロックを保持しているクエリを特定する
           href: ../relational-databases/extended-events/determine-which-queries-are-holding-locks.md
         - name: ロックがかけられたオブジェクトの検索
           href: ../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md
-        - name: システム利用状況の監視
+        - name: システム利用状況を監視する
           href: ../relational-databases/extended-events/monitor-system-activity-using-extended-events.md
-      - name: ツール
-        href: ../relational-databases/extended-events/extended-events-tools.md
-        items:
-        - name: SSMS XEvent Profiler の使用
+        - name: SSMS XEvent プロファイラーを使用する
           href: ../relational-databases/extended-events/use-the-ssms-xe-profiler.md
-        - name: system_health セッションの使用
+        - name: system_health セッションを使用する
           href: ../relational-databases/extended-events/use-the-system-health-session.md
-        - name: 拡張イベントへの PowerShell プロバイダーの使用
+        - name: XEvent への PowerShell プロバイダーを使用する
           href: ../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md
+      - name: References
+        href: ../relational-databases/extended-events/xevents-references-system-objects.md
     - name: SQL トレース (SQL Trace)
       href: ../relational-databases/sql-trace/sql-trace.md
       items:
@@ -8433,8 +8440,8 @@ items:
     items:
     - name: SSDT のダウンロード
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: SSDT の変更ログ
-      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: SSDT のリリース ノート
+      href: ../ssdt/release-notes-ssdt.md
     - name: SSDT と SSDT-BI の以前のリリース
       href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
     - name: Azure Active Directory のサポート
@@ -17219,9 +17226,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery での名前空間の処理
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: bde69d4b13a3ab5bf680d3816c47364b07e093a7
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356545"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417234"
