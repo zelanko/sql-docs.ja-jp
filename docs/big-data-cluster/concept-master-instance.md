@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 24b5799b71f9102785bdcb6103324d8bf8b1ad96
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 9c3809e481e00c94f01c1968a82638df3e37f80f
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227304"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477948"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 ビッグ データ クラスター内のマスター インスタンスとは何ですか。
 
@@ -66,6 +66,7 @@ SQL Server 2019 ビッグ データのクラスターで行うことができま
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server のビッグ データ クラスターに関する詳細については、次の概要を参照してください。
+SQL Server のビッグ データ クラスターに関する詳細については、次のリソースを参照してください。
 
 - [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
+- [ワーク ショップ:Microsoft SQL Server のビッグ データ クラスターのアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

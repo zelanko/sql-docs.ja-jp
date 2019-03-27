@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c3df07da100bf0bbfc0b2238cb4154b4c3a363e3
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 906b27c186668518702c7ab3a757e6eeb4e5b278
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241613"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478227"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 のビッグ データ クラスター内のデータ プールとは
 
@@ -31,8 +31,9 @@ ms.locfileid: "54241613"
 
 ![スケール アウト データ マート](media/concept-data-pool/data-virtualization-improvements.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-SQL Server のビッグ データ クラスターに関する詳細については、次の概要を参照してください。
+SQL Server のビッグ データ クラスターに関する詳細については、次のリソースを参照してください。
 
 - [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
+- [ワーク ショップ:Microsoft SQL Server のビッグ データ クラスターのアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072127"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477647"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスターとは
 
@@ -100,6 +100,9 @@ Kubernetes は、ニーズに合わせてコンテナーのデプロイでスケ
 ### <a id="dataplane"></a> データ プレーン
 
 データ プレーンは、データの永続化とキャッシュに使用されます。 SQL データのプールと記憶域プールが含まれています。  SQL のデータ プールは、Linux 上の SQL Server を実行している 1 つまたは複数のポッドで構成されます。 SQL クエリまたは Spark ジョブからデータを取り込むために使用されます。 ビッグ データの SQL Server クラスターのデータ マートは、データのプールに保存されます。 記憶域プールは、Linux、Spark、および HDFS 上の SQL Server から成る記憶域プールのポッドで構成されます。 SQL Server のビッグ データ クラスター内のすべての記憶域ノードは、HDFS クラスターのメンバーです。
+
+> [!TIP]
+> ビッグ データ クラスターのアーキテクチャとインストールの詳細については、次を参照してください。[ワーク ショップ。Microsoft SQL Server のビッグ データ クラスター アーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)します。
 
 ## <a name="next-steps"></a>次のステップ
 

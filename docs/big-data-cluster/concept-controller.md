@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8f9a8a82315f98f6013f70a7bc7aa38443849edc
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017868"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478057"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 のビッグ データ クラスター上のコント ローラーとは何ですか。
 
@@ -67,6 +67,7 @@ mssqlctl cluster create --name <name of your cluster>
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server のビッグ データ クラスターに関する詳細については、次の概要を参照してください。
+SQL Server のビッグ データ クラスターに関する詳細については、次のリソースを参照してください。
 
 - [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
+- [ワーク ショップ:Microsoft SQL Server のビッグ データ クラスターのアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 817ffcc1ea17a8526304b4bc9064c1becfff90f9
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: fb09a5b13adc7f673c83a91635451435e4a8c945
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161645"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477697"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法
 
@@ -347,4 +347,7 @@ kubectl get svc -n <your-cluster-name>
 
 ## <a name="next-steps"></a>次のステップ
 
-新しい機能のいくつかごお試しください[SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。
+SQL Server のビッグ データ クラスターに関する詳細については、次のリソースを参照してください。
+
+- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
+- [ワーク ショップ:Microsoft SQL Server のビッグ データ クラスターのアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

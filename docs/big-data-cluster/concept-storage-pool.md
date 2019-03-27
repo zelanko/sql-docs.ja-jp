@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c89ddc5d155af4542b5101e9a6e394effc5d9fd3
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 7dfb89103bb83fc77c590e5c5b5984cbd96b197d
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241523"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477927"
 ---
 # <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>記憶域プール (SQL Server 2019 ビッグ データ クラスター) とは何ですか。
 
@@ -35,8 +35,9 @@ ms.locfileid: "54241523"
 - HDFS (Parquet 形式) でデータ ストレージ。 HDFS では、HDFS のデータが SQL のビッグ データ クラスター内のすべての記憶域ノードに分散され、データの永続性も提供します。
 - HDFS と SQL Server エンドポイント経由のデータ アクセス。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-SQL Server のビッグ データ クラスターに関する詳細については、次の概要を参照してください。
+SQL Server のビッグ データ クラスターに関する詳細については、次のリソースを参照してください。
 
 - [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
+- [ワーク ショップ:Microsoft SQL Server のビッグ データ クラスターのアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

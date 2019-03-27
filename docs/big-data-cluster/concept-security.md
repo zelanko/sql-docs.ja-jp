@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8ad12de9456fef0d4803ae83479e615bffa0edcc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241423"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477987"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>ビッグ データの SQL Server クラスターのセキュリティの概念
 
@@ -53,13 +53,13 @@ ms.locfileid: "54241423"
 クラスターをプロビジョニングするには、上のエンドユーザーのパスワードの数は環境変数を使用して設定する必要があります。 これらは、SQL 管理者とクラスターの管理者サービスへのアクセスに使用するパスワードです。
 
 コント ローラーのユーザー名:
- + CONTROLLER_USERNAME = < controller_username >
+ + CONTROLLER_USERNAME=<controller_username>
 
 コント ローラーのパスワード:  
- + CONTROLLER_PASSWORD = < controller_password >
+ + CONTROLLER_PASSWORD=<controller_password>
 
 SQL マスター SA パスワード: 
- + MSSQL_SA_PASSWORD = < controller_sa_password >
+ + MSSQL_SA_PASSWORD=<controller_sa_password>
 
 HDFS/Spark エンドポイントへのアクセスのパスワード:
  + KNOX_PASSWORD = < knox_password >
@@ -79,9 +79,9 @@ HDFS/Spark エンドポイントへのアクセスのパスワード:
 
 証明書を使用して、Livy Spark には記憶域プールでは、Spark など、ビッグ データ クラスター内の非 SQL サービスとの通信が保護されます。 すべての SQL Server と SQL Server 間の通信は、SQL ログインを使用して保護されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-SQL Server のビッグ データ クラスターに関する詳細については、次の記事を参照してください。
+SQL Server のビッグ データ クラスターに関する詳細については、次のリソースを参照してください。
 
 - [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
-- [クイック スタート:Kubernetes での SQL Server ビッグ データ クラスターをデプロイします。](quickstart-big-data-cluster-deploy.md)
+- [ワーク ショップ:Microsoft SQL Server のビッグ データ クラスターのアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
