@@ -16,17 +16,17 @@ ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0869cfb6914766e2ab43e138831e2992aa6977b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 698a5941bc8e9920942e7ec7c962144b4ab24b62
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209201"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492884"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パブリッシュされたデータをテーブル アーティクルに基づいてフィルター選択します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  公開されているフィルター データは、テーブル アーティクルに基づいています。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,34 +44,27 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'**_パブリケーション_**'**  
- 目的のアーティクルを含むパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` アーティクルを含むパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@article=**] **'**_記事_**'**  
- アーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
+`[ @article = ] 'article'` アーティクルの名前です。 *記事*は**sysname**、既定値はありません。  
   
- [  **@filter_name=**] **'**_filter_name_**'**  
- 作成されるフィルター ストアド プロシージャの名前を指定します、 *filter_name*します。 *filter_name*は**nvarchar (386)**、既定値は NULL です。 アーティクル フィルターには一意の名前を指定する必要があります。  
+`[ @filter_name = ] 'filter_name'` 作成されるフィルター ストアド プロシージャの名前を指定します、 *filter_name*します。 *filter_name*は**nvarchar (386)**、既定値は NULL です。 アーティクルのフィルターの一意の名前を指定する必要があります。  
   
- [  **@filter_clause=**] **'**_filter_clause_**'**  
- 行フィルターを定義する制限句 (WHERE) を指定します。 制限句を入力する場合は、WHERE キーワードを省略します。 *filter_clause*は**ntext**、既定値は NULL です。  
+`[ @filter_clause = ] 'filter_clause'` 制限は、水平方向のフィルターを定義する (、) where 句。 制限句を入力するときに、キーワードを省略する場所。 *filter_clause*は**ntext**、既定値は NULL です。  
   
- [ **@force_invalidate_snapshot =** ]*更によって*  
- このストアド プロシージャが実行する操作によって既存のスナップショットが無効になることを許可します。 *更によって*は、**ビット**、既定値は**0**します。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` このストアド プロシージャが実行する操作が既存のスナップショットが無効になることを確認します。 *更によって*は、**ビット**、既定値は**0**します。  
   
- **0**スナップショットが無効であることをアーティクルへの変更が発生しないことを指定します。 ストアド プロシージャで、変更に新しいスナップショットが必要であることが検出されると、エラーが発生し、変更は加えられません。  
+ **0**スナップショットが無効であることをアーティクルへの変更が発生しないことを指定します。 ストアド プロシージャは、変更は、新しいスナップショットを必要になることを検出する場合は、エラーが発生し、変更は行われません。  
   
  **1**アーティクルへの変更はスナップショットが無効であることがあり、新しいスナップショットを必要とする既存のサブスクリプションがある場合は、アクセス許可を付与 obsolete としてマーク済みである既存のスナップショットを新しいスナップショットを生成を指定します。  
   
- [  **@force_reinit_subscription =** ]*更によって*  
- このストアド プロシージャが実行する操作によって、既存のサブスクリプションの再初期化が必要になることを許可します。 *更によって*は、**ビット**、既定値は**0**します。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` このストアド プロシージャが実行されるアクションでは、既存のサブスクリプションの再初期化される場合がありますかを確認します。 *更によって*は、**ビット**、既定値は**0**します。  
   
  **0**アーティクルへの変更がサブスクリプションの再初期化の必要性を発生しないことを指定します。 ストアド プロシージャが、変更がサブスクリプションの再初期化する必要になることを検出した場合は、エラーが発生し、変更は行われません。  
   
  **1**アーティクルの変更の場合、既存のサブスクリプションが初期化されることを指定します。 サブスクリプションの再初期化を許可します。  
   
- [  **@publisher=** ] **'**_パブリッシャー_**'**  
- 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  *パブリッシャー*では使用できません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  

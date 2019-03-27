@@ -18,12 +18,12 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fc52fd7af36d2238c53d8cbd877b7a6d43cd1dd
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 16468053ee1e0d09b5be37c034800c122c1d16c9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591486"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493291"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +55,11 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@schedule_name =** ] **'**_schedule_name_**'**  
- スケジュールの名前です。 *schedule_name*は**sysname**、既定値はありません。  
+`[ @schedule_name = ] 'schedule_name'` スケジュールの名前。 *schedule_name*は**sysname**、既定値はありません。  
   
- [ **@enabled =** ] *enabled*  
- スケジュールの現在の状態を指定します。 *有効になっている*は**tinyint**、既定値は**1** (有効)。 場合**0**スケジュールが有効になっていません。 スケジュールが無効な場合、このスケジュールでジョブは実行されません。  
+`[ @enabled = ] enabled` スケジュールの現在の状態を示します。 *有効になっている*は**tinyint**、既定値は**1** (有効)。 場合**0**スケジュールが有効になっていません。 スケジュールが有効でない場合、このスケジュールでジョブは実行されません。  
   
- [ **@freq_type =** ] *freq_type*  
- ジョブの場合は、実行することを示す値。 *freq_type*は**int**、既定値は**0**、これらの値のいずれかを指定できます。  
+`[ @freq_type = ] freq_type` ジョブの場合は、実行することを示す値。 *freq_type*は**int**、既定値は**0**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -71,11 +68,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**8**|毎週。|  
 |**16**|毎月。|  
 |**32**|毎月、に対して相対的な*freq_interval*|  
-|**64**|SQL Server エージェント サービスの起動時に実行|  
-|**128**|コンピューターがアイドル状態のときに実行|  
+|**64**|SQLServerAgent サービスの起動時に実行します。|  
+|**128**|コンピューターがアイドル状態のときに実行します。|  
   
- [ **@freq_interval =** ] *freq_interval*  
- ジョブを実行する日です。 *freq_interval*は**int**、既定値は**1**の値に依存して*freq_type*します。  
+`[ @freq_interval = ] freq_interval` ジョブを実行する日です。 *freq_interval*は**int**、既定値は**1**の値に依存して*freq_type*します。  
   
 |値*freq_type*|影響を与える*freq_interval*|  
 |---------------------------|--------------------------------|  
@@ -87,60 +83,48 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64** (SQLServerAgent サービスの開始時)|*freq_interval*は使用されません。|  
 |**128**|*freq_interval*は使用されません。|  
   
- [ **@freq_subday_type =** ] *freq_subday_type*  
- 単位を指定します*freq_subday_interval*します。 *freq_subday_type*は**int**、既定値は**0**、これらの値のいずれかを指定できます。  
+`[ @freq_subday_type = ] freq_subday_type` 単位を指定します*freq_subday_interval*します。 *freq_subday_type*は**int**、既定値は**0**、これらの値のいずれかを指定できます。  
   
 |値|説明 (単位)|  
 |-----------|--------------------------|  
-|**0x1**|指定した時間|  
+|**0x1**|指定された時刻|  
 |**0x2**|Seconds|  
 |**0x4**|Minutes|  
 |**0x8**|Hours|  
   
- [ **@freq_subday_interval =** ] *freq_subday_interval*  
- 数*freq_subday_type*にジョブの各実行間に発生する期間。 *freq_subday_interval*は**int**、既定値は**0**します。 注:間隔は、10 秒より長くする必要があります。 *freq_subday_interval*そのような場合は無視されます、 *freq_subday_type*と等しい**1**します。  
+`[ @freq_subday_interval = ] freq_subday_interval` 数*freq_subday_type*にジョブの各実行間に発生する期間。 *freq_subday_interval*は**int**、既定値は**0**します。 注:間隔は、10 秒より長くする必要があります。 *freq_subday_interval*そのような場合は無視されます、 *freq_subday_type*と等しい**1**します。  
   
- [ **@freq_relative_interval =** ] *freq_relative_interval*  
- ジョブの発生*freq_interval* 、各月場合*freq_interval* 32 (月単位)。 *freq_relative_interval*は**int**、既定値は**0**、これらの値のいずれかを指定できます。 *freq_relative_interval*そのような場合は無視されます、 *freq_type*が 32 と等しくありません。  
+`[ @freq_relative_interval = ] freq_relative_interval` ジョブの発生*freq_interval* 、各月場合*freq_interval* 32 (月単位)。 *freq_relative_interval*は**int**、既定値は**0**、これらの値のいずれかを指定できます。 *freq_relative_interval*そのような場合は無視されます、 *freq_type*が 32 と等しくありません。  
   
 |値|説明 (単位)|  
 |-----------|--------------------------|  
 |**1**|First|  
 |**2**|第 2 週|  
 |**4**|第 3 週|  
-|**8**|第 4 週|  
+|**8**|4 番目|  
 |**16**|Last|  
   
- [ **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
- ジョブを実行する週間隔または月間隔を指定します。 *freq_recurrence_factor*場合にのみ使用が*freq_type*は**8**、 **16**、または**32**します。 *freq_recurrence_factor*は**int**、既定値は**0**します。  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor` 週間隔または月間隔は、ジョブのスケジュールされた実行の数。 *freq_recurrence_factor*場合にのみ使用が*freq_type*は**8**、 **16**、または**32**します。 *freq_recurrence_factor*は**int**、既定値は**0**します。  
   
- [ **@active_start_date =** ] *active_start_date*  
- ジョブの実行を開始できる日付を指定します。 *active_start_date*は**int**の既定値は NULL には、今日の日付を示します。 日付は yyyymmdd です。 場合*active_start_date*が NULL でない日付は 19900101 以上する必要があります。  
+`[ @active_start_date = ] active_start_date` ジョブの実行が開始できる日付。 *active_start_date*は**int**の既定値は NULL には、今日の日付を示します。 日付は yyyymmdd です。 場合*active_start_date*が NULL でない日付は 19900101 以上する必要があります。  
   
- スケジュールの作成後は、開始日が正しい日付であることを確認するようにしてください。 詳細については、「開始日のスケジュール設定」セクションを参照してください[の作成とジョブ スケジュールをアタッチ](../../ssms/agent/create-and-attach-schedules-to-jobs.md)します。  
+ スケジュールを作成した後は、開始日を確認し、正しい日付であることを確認します。 詳細については、「開始日のスケジュール設定」セクションを参照してください[の作成とジョブ スケジュールをアタッチ](../../ssms/agent/create-and-attach-schedules-to-jobs.md)します。  
   
- 週単位または月単位のスケジュールでは、エージェントは、active_start_date が過去の日付の場合は無視し、代わりに現在の日付を使用します。 SQL エージェントのスケジュールが sp_add_schedule を使用して作成されるときに、ジョブの実行が開始される日付を表す active_start_date パラメーターを指定することができます。 スケジュールの種類が週単位または月単位で、active_start_date パラメーターが過去の日付になっている場合、active_start_date パラメーターは無視され、現在の日付が active_start_date に使用されます。  
+ 毎週または月単位のスケジュールでは、エージェントは、active_start_date が過去、し、代わりに、現在の日付を使用する場合は無視されます。 SQL エージェントのスケジュールが sp_add_schedule を使用して作成されたときにジョブの実行を開始する日付が active_start_date パラメーターを指定するオプションがあります。 スケジュールの種類が毎週または毎月、active_start_date パラメーターは、過去の日付に設定されて、active_start_date パラメーターは無視され、現在の日付が active_start_date に使用します。  
   
- [ **@active_end_date =** ] *active_end_date*  
- ジョブの実行が停止できる日付。 *active_end_date*は**int**、既定値は**99991231**、示す年 12 月 31 日 9999 です。 形式は YYYYMMDD です。  
+`[ @active_end_date = ] active_end_date` ジョブの実行が停止できる日付。 *active_end_date*は**int**、既定値は**99991231**、示す年 12 月 31 日 9999 です。 Yyyymmdd 形式で指定として書式設定します。  
   
- [ **@active_start_time =** ] *active_start_time*  
- 間の日で時間*active_start_date*と*active_end_date*ジョブの実行を開始します。 *active_start_time*は**int**、既定値は**000000**12時 00分: 00 AM を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+`[ @active_start_time = ] active_start_time` 間の日で時間*active_start_date*と*active_end_date*ジョブの実行を開始します。 *active_start_time*は**int**、既定値は**000000**12時 00分: 00 AM を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
- [ **@active_end_time =** ] *active_end_time*  
- 間の日で時間*active_start_date*と*active_end_date*ジョブの実行を終了します。 *active_end_time*は**int**、既定値は**235959**、午後 11時 59分: 59 を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+`[ @active_end_time = ] active_end_time` 間の日で時間*active_start_date*と*active_end_date*ジョブの実行を終了します。 *active_end_time*は**int**、既定値は**235959**、午後 11時 59分: 59 を示します を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
- [ **@owner_login_name**=] **'**_owner_login_name_**'**  
- スケジュールを所有するサーバー プリンシパルの名前を指定します。 *owner_login_name*は**sysname**で、既定値は NULL には、スケジュールが作成者によって所有されていることを示します。  
+`[ @owner_login_name = ] 'owner_login_name'` スケジュールを所有するサーバー プリンシパルの名前。 *owner_login_name*は**sysname**で、既定値は NULL には、スケジュールが作成者によって所有されていることを示します。  
   
- [ **@schedule_uid**=] _schedule_uid_**出力**  
- スケジュールの一意識別子を指定します。 *schedule_uid*型の変数は、 **uniqueidentifier**します。  
+`[ @schedule_uid = ] _schedule_uidOUTPUT` スケジュールの一意の識別子。 *schedule_uid*型の変数は、 **uniqueidentifier**します。  
   
- [ **@schedule_id**=] _schedule_id_**出力**  
- スケジュールの識別子を指定します。 *schedule_id*型の変数は、 **int**します。  
+`[ @schedule_id = ] _schedule_idOUTPUT` スケジュールの識別子。 *schedule_id*型の変数は、 **int**します。  
   
- [ **@originating_server**= ] *server_name*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @originating_server = ] server_name` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -164,8 +148,8 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-creating-a-schedule"></a>A. スケジュールを作成する  
- 次の例では、`RunOnce` というスケジュールを作成します。 スケジュールは 1 回のみ、スケジュールが作成された日の `23:30` に実行されます。  
+### <a name="a-creating-a-schedule"></a>A. スケジュールを作成します。  
+ 次の例は、名前付きのスケジュールを作成`RunOnce`です。 スケジュールは 1 回のみ、スケジュールが作成された日の `23:30` に実行されます。  
   
 ```  
 USE msdb ;  
@@ -179,11 +163,11 @@ EXEC dbo.sp_add_schedule
 GO  
 ```  
   
-### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>B. スケジュールを作成し、複数のジョブに適用する  
- 次の例では、`NightlyJobs` というスケジュールを作成します。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 この例では、スケジュールをジョブ `BackupDatabase` とジョブ `RunReports` にアタッチします。  
+### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>B. 複数のジョブにスケジュールをアタッチし、スケジュールを作成します。  
+ 次の例は、名前付きのスケジュールを作成`NightlyJobs`です。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 例では、ジョブにスケジュールをアタッチする`BackupDatabase`とジョブ`RunReports`します。  
   
 > [!NOTE]  
->  この例では、ジョブ `BackupDatabase` とジョブ `RunReports` が既に存在することを前提としています。  
+>  この例では、ジョブ`BackupDatabase`とジョブ`RunReports`既に存在します。  
   
 ```  
 USE msdb ;  

@@ -16,17 +16,17 @@ ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9424228f5f1bd70c17ebb0f4f421f4f0f923930c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5ce192a0d3510f6034ff223f6573bf1e058516e9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822326"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494324"
 ---
 # <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定したディストリビューターにキュー リーダー エージェントを追加します。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されるか、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  特定のディストリビューターに対するキュー リーダー エージェントを追加します。 このストアド プロシージャは、ディストリビューターのディストリビューション データベースで、またはパブリケーション データベースに対して、パブリッシャー側で実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,20 +41,16 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_login**=] **'***job_login***'**  
- エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**、既定値はありません。 この Windows アカウントはディストリビューターへのエージェント接続で常に使用されます。  
+`[ @job_login = ] 'job_login'` 用のログイン、[!INCLUDE[msCoName](../../includes/msconame-md.md)]エージェントを実行する Windows アカウントします。 *job_login*は**nvarchar (257)**、既定値はありません。 この Windows アカウントは常に、ディストリビューターへのエージェント接続で使用します。  
   
- [ **@job_password**=] **'***job_password***'**  
- エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値はありません。  
+`[ @job_password = ] 'job_password'` エージェントを実行する Windows アカウントのパスワードです。 *job_password* は **sysname** 、既定値はありません。  
   
 > [!IMPORTANT]  
->  スクリプト ファイルに認証情報を格納しないでください。 最大限のセキュリティを得るには、ログイン名とパスワードを実行時に指定します。  
+>  スクリプト ファイルでは、認証情報を格納しないでください。 安全性を高めるためには、ログイン名とパスワードを実行時に指定する必要があります。  
   
- [ **@job_name**=] **'***job_name***'**  
- 既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成したジョブ (既定値) の代わりに既存のジョブを使ってエージェントを作成するときにだけ指定します。  
+`[ @job_name = ] 'job_name'` 既存のエージェント ジョブの名前です。 *job_name* は **sysname** 既定値は NULL です。 新しく作成されたジョブ (既定値) の代わりに、既存のジョブを使用して、エージェントが作成されたときにのみこのパラメーターを指定します。  
   
- [  **@frompublisher=** ] *frompublisher*  
- プロシージャがパブリッシャーで実行されているかどうかを指定します。 *frompublisher*は bit で、既定値は、 **0**します。 値**1**プロシージャがパブリッシャーのパブリケーション データベースから実行されていることを意味します。  
+`[ @frompublisher = ] frompublisher` プロシージャがパブリッシャーで実行されているかどうかを指定します。 *frompublisher*は bit で、既定値は、 **0**します。 値**1**プロシージャがパブリッシャーのパブリケーション データベースから実行されていることを意味します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

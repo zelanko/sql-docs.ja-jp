@@ -16,17 +16,17 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 849564fcda37c022413d9e0758abe50279497a0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be3ccf8b0c85b61f536c381e4a42d1b5e37fbacf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125112"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493272"
 ---
-# <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
+# <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたアーティクルに対する検証の要求を開始します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて、およびサブスクライバー側でサブスクリプション データベースについて実行されます。  
+  指定されたアーティクルに対する検証の要求を開始します。 このストアド プロシージャは、パブリッシャー側のパブリケーション データベースとサブスクライバーのサブスクリプション データベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,14 +45,11 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'**_パブリケーション_**'**  
- アーティクルが存在するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` アーティクルが存在するパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@article=**] **'**_記事_**'**  
- 検証するアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
+`[ @article = ] 'article'` 検証するアーティクルの名前です。 *記事*は**sysname**、既定値はありません。  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
- テーブルの行数のみを返す場合に指定します。 *type_of_check_requested*は**smallint**、既定値は**1**します。  
+`[ @rowcount_only = ] type_of_check_requested` テーブルの行数が返される場合のみに指定します。 *type_of_check_requested*は**smallint**、既定値は**1**します。  
   
  場合**0**、行数を実行し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 互換のチェックサム。  
   
@@ -60,26 +57,21 @@ sp_article_validation [ @publication = ] 'publication'
   
  場合**2**行数とバイナリ チェックサムを実行します。  
   
- [  **@full_or_fast=**] *full_or_fast*  
- 行数の計算で使用する方法を指定します。 *full_or_fast*は**tinyint**、これらの値のいずれかを指定できます。  
+`[ @full_or_fast = ] full_or_fast` 行数を計算するために使用するメソッド。 *full_or_fast*は**tinyint**、これらの値のいずれかを指定できます。  
   
 |**[値]**|**[説明]**|  
 |---------------|---------------------|  
 |**0**|COUNT(*) を使用してフル カウントを実行します。|  
 |**1**|高速カウントを実行します。 **sysindexes.rows**します。 行のカウント**sysindexes**は実際のテーブル内の行のカウントよりも高速です。 ただし、 **sysindexes**の更新は時間、および行カウントが正しくない可能性があります。|  
-|**2** (既定値)|最初に高速カウントを試み、条件高速カウントを実行します。 高速カウントに違いが見られる場合、フル カウントに戻されます。 場合*expected_rowcount*ストアド プロシージャの中を NULL 値を取得する、フル カウント(\*) が常に使用します。|  
+|**2** (既定値)|最初に高速カウントを試み、条件高速カウントを実行します。 高速メソッドは、相違点を示している場合は、完全なメソッドに戻ります。 場合*expected_rowcount*ストアド プロシージャの中を NULL 値を取得する、フル カウント(\*) が常に使用します。|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- 検証の完了後、ディストリビューション エージェント、直ちにシャットかどうかを指定します。 *shutdown_agent*は**ビット**、既定値は**0**します。 場合**0**、ディストリビューション エージェントがシャット ダウンされません。 場合**1**アーティクルの検証後にディストリビューション エージェントがシャット ダウンします。  
+`[ @shutdown_agent = ] shutdown_agent` 検証の完了後、ディストリビューション エージェント、直ちにシャットかどうかを指定します。 *shutdown_agent*は**ビット**、既定値は**0**します。 場合**0**、ディストリビューション エージェントがシャット ダウンされません。 場合**1**アーティクルの検証後にディストリビューション エージェントがシャット ダウンします。  
   
- [  **@subscription_level=**] *subscription_level*  
- 一部のサブスクライバーだけに検証を適用するかどうかを指定します。 *subscription_level*は**ビット**、既定値は**0**します。 場合**0**、すべてのサブスクライバーに検証が適用されます。 場合**1**、検証は、サブスクライバーへの呼び出しで指定されたサブセットにのみ適用**sp_marksubscriptionvalidation**で現在開いているトランザクションです。  
+`[ @subscription_level = ] subscription_level` 検証は、一連のサブスクライバーによってピックアップしているかどうかを指定します。 *subscription_level*は**ビット**、既定値は**0**します。 場合**0**、すべてのサブスクライバーに検証が適用されます。 場合**1**、検証は、サブスクライバーへの呼び出しで指定されたサブセットにのみ適用**sp_marksubscriptionvalidation**で現在開いているトランザクションです。  
   
- [  **@reserved=**]*予約済み*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@publisher**=] **'**_パブリッシャー_**'**  
- 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  *パブリッシャー*で検証を要求するときに使用されません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  

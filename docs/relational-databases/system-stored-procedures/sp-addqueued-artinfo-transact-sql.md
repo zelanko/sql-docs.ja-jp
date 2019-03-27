@@ -16,14 +16,14 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c326a8e3a5fa2bd95f536d434ff9782952ba70d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e44891f5a16625cb6c3176fac8188fa568822add
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590897"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493185"
 ---
-# <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
+# <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   
@@ -31,7 +31,7 @@ ms.locfileid: "53590897"
 > [!IMPORTANT]  
 >  [Sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)の代わりにプロシージャを使用する必要があります**sp_addqueued_artinfo**します。 [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)を含むスクリプトを生成、 **sp_addqueued_artinfo**と**sp_addsynctrigger**呼び出し。  
   
- 作成、 [MSsubscription_articles](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)アーティクルのサブスクリプション情報 (キュー更新、およびフェールオーバーとしてキュー更新を使用する即時更新) を追跡するために使用されるサブスクライバーのテーブルにします。 このストアド プロシージャは、サブスクライバー側でサブスクリプション データベースについて実行されます。  
+ 作成、 [MSsubscription_articles](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)アーティクルのサブスクリプション情報 (キュー更新、およびフェールオーバーとしてキュー更新を使用する即時更新) を追跡するために使用されるサブスクライバーのテーブルにします。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,29 +50,22 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@artid=** ] **'**_artid_**'**  
- アーティクル ID の名前を指定します。 *artid*は**int**、既定値はありません  
+`[ @artid = ] 'artid'` アーティクル ID の名前を指定します *artid*は**int**、既定値はありません  
   
- [  **@article=**] **'**_記事_**'**  
- スクリプト作成の対象となるアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません  
+`[ @article = ] 'article'` スクリプトを生成するアーティクルの名前です。 *記事*は**sysname**、既定値はありません  
   
- [  **@publisher=**] **'**_パブリッシャー_**'**  
- パブリッシャー サーバーの名前を指定します。 *パブリッシャー*は**sysname**、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャー サーバーの名前です。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャー データベースの名前です。 *publisher_db* は **sysname** 、既定値はありません。  
   
- [  **@publication=**] **'**_パブリケーション_**'**  
- スクリプト作成の対象となるパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` スクリプトを生成するパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@dest_table=** ] _' dest_table_**'**  
- 対象テーブルの名前を指定します。 *dest_table*は**sysname**、既定値はありません。  
+`[ @dest_table = ] _'dest_table'` レプリケーション先テーブルの名前です。 *dest_table*は**sysname**、既定値はありません。  
   
  [ **@owner =** ] **'**_所有者_**'**  
- サブスクリプションの所有者を指定します。 *所有者*は**sysname**、既定値はありません。  
+ サブスクリプションの所有者です。 *所有者*は**sysname**、既定値はありません。  
   
- [  **@cft_table=** ] **'**_cft_table_**'**  
- このアーティクルに対するキュー更新の競合テーブルの名前を指定します。 *cft_table*は**sysname**、既定値はありません。  
+`[ @cft_table = ] 'cft_table'` この記事のキューに置かれた更新の競合テーブルの名前。 *cft_table*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

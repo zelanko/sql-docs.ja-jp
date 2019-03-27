@@ -18,14 +18,14 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eefd9b73f4e249df57aa03ef0453a864eab2fd77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ead23c8feb428772fcde5bcdb59f19e1a23b6cd9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838850"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492844"
 ---
-# <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
+# <a name="spaddtype-transact-sql"></a>sp_addtype (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   別名データ型を作成します。  
@@ -45,11 +45,9 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@typename=** ]*型*  
- 別名データ型の名前を指定します。 データ型の名前がの規則に従う必要がありますエイリアス[識別子](../../relational-databases/databases/database-identifiers.md)し、各データベース内で一意である必要があります。 *型*は**sysname**、既定値はありません。  
+`[ @typename = ] type` 別名データ型の名前です。 データ型の名前がの規則に従う必要がありますエイリアス[識別子](../../relational-databases/databases/database-identifiers.md)し、各データベース内で一意である必要があります。 *型*は**sysname**、既定値はありません。  
   
- [  **@phystype=**] *system_data_type*  
- 物理または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]別名データ型の基になるデータ型を指定します *。system_data_type*は**sysname**, で、既定値はありませんはこれらの値のいずれかを指定します。  
+`[ @phystype = ] system_data_type` 物理または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]別名データ型の基になるデータ型を指定します *。system_data_type*は**sysname**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
 ||||  
 |-|-|-|  
@@ -62,22 +60,21 @@ sp_addtype [ @typename = ] type,
 |**sql_variant**|**text**|**tinyint**|  
 |**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
   
- 空白または区切り記号を含むパラメーターはすべて、引用符で囲む必要があります。 使用可能なデータの種類の詳細については、次を参照してください。[データ型&#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)します。  
+ 空白や句読点が埋め込まれているすべてのパラメーターには、引用符が必要です。 使用可能なデータの種類の詳細については、次を参照してください。[データ型&#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)します。  
   
  *n*  
- 選択したデータ型の長さを示す、負以外の整数を指定します。  
+ 選択したデータ型の長さを示す負でない整数です。  
   
  *P*  
  小数点の左側と右側に格納できる 10 進数の最大合計桁数を示す、負以外の整数を指定します。 詳細については、次を参照してください[decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  *s*  
- 小数点の右側に格納できる 10 進数の最大桁数を示す、負以外の整数を指定します。有効桁数以下であることが必要です。 詳細については、次を参照してください[decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ 小数点の右側に格納できる 10 進数字の最大数を示す負以外の整数であり、有効桁数以下する必要があります。 詳細については、次を参照してください[decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- [  **@nulltype =** ] **'***null_type***'**  
- 別名データ型で NULL 値をどのように処理するかを指定します。 *null_type*は**varchar (** 8 **)** NULL の場合、既定値と、単一の引用符 ('NULL'、'NOT NULL' または 'NONULL') で囲む必要があります。 場合*null_type*によって明示的に定義されていない**sp_addtype**、現在の既定の null 値に設定されます。 既定の NULL 値の許容属性を確認するには、GETANSINULL システム関数を使用します。 この設定は、SET ステートメントまたは ALTER DATABASE を使用して変更できます。 NULL 値の許容属性は、明示的に定義してください。 場合**@phystype**は**ビット**、および**@nulltype**が指定されていない、既定値は NULL。  
+`[ @nulltype = ] 'null_type'` 別名データ型で null 値の処理方法を示します。 *null_type*は**varchar (** 8 **)** NULL の場合、既定値と、単一の引用符 ('NULL'、'NOT NULL' または 'NONULL') で囲む必要があります。 場合*null_type*によって明示的に定義されていない**sp_addtype**、現在の既定の null 値に設定されます。 現在の既定の null 値を確認するのにには、GETANSINULL システム関数を使用します。 これは、SET ステートメントまたは ALTER DATABASE を使用して調整できます。 NULL 値の許容属性は、明示的に定義してください。 場合**@phystype**は**ビット**、および**@nulltype**が指定されていない、既定値は NULL。  
   
 > [!NOTE]  
->  *Null_type*パラメーターには、このデータ型の既定の null 値のみを定義します。 ただし別名データ型を使用してテーブルを作成する際に NULL 値の許容属性を明示的に定義した場合は、このパラメーターで定義した NULL 値の許容属性よりも優先されます。 詳細については、次を参照してください。 [ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)と[CREATE TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)します。  
+>  *Null_type*パラメーターには、このデータ型の既定の null 値のみを定義します。 Null 値許容属性は明示的に定義されている別名データ型を使用してテーブルを作成する際に場合よりも優先、定義済みの null 値。 詳細については、次を参照してください。 [ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)と[CREATE TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -90,7 +87,7 @@ sp_addtype [ @typename = ] type,
   
  実行**sp_addtype**に表示される別名データ型を作成、 **sys.types**カタログ ビューを特定のデータベース。 別名データ型は、すべての新しいユーザー定義データベースで使用できる必要がある場合に、追加**モデル**します。 作成した別名データ型は、CREATE TABLE または ALTER TABLE で使用できます。別名データ型にデフォルトやルールをバインドすることもできます。 すべてのスカラー別名データ型を使用して作成される**sp_addtype**に含まれる、 **dbo**スキーマ。  
   
- 別名データ型は、データベースの既定の照合順序を継承します。 列の照合順序と別名型の変数がで定義されている、 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE、ALTER TABLE、DECLARE @*local_variable*ステートメント。 データベースの既定の照合順序を変更すると、該当するデータ型の新しい列と変数にだけ新しい照合順序が適用されます。既存の列と変数の照合順序は変更されません。  
+ 別名データ型は、データベースの既定の照合順序を継承します。 列の照合順序と別名型の変数がで定義されている、 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE、ALTER TABLE、DECLARE @*local_variable*ステートメント。 新しい列と型の変数にのみ適用されます、データベースの既定の照合順序を変更します。既存の照合順序は変わりません。  
   
 > [!IMPORTANT]  
 >  旧バージョンとの互換性のため、**パブリック**データベース ロールには、使用して作成した別名データ型に対する REFERENCES 権限が自動的に付与**sp_addtype**します。 代わりに CREATE TYPE ステートメントを使用して別名データ型を作成するときに注意してください。 **sp_addtype**、自動的に権限がありません。  
@@ -102,7 +99,7 @@ sp_addtype [ @typename = ] type,
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. NULL 値を許容しない別名データ型を作成する  
+### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. Null 値を許容しない別名データ型を作成  
  次の例は、という別名データ型を作成します。 `ssn` (社会保障番号) に基づく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-指定された**varchar**データ型。 `ssn` 型は、11 桁の社会保障番号 (999-99-9999) を格納する列で使用されます。 この列で NULL 値は許容されません。  
   
  `varchar(11)` には区切り記号 (かっこ) が含まれているため、単一引用符で囲みます。  

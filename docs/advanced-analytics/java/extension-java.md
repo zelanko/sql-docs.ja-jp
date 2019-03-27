@@ -3,18 +3,18 @@ title: SQL Server 2019 - SQL Server Machine Learning Services での Java 言語
 description: インストール、構成、および Linux と Windows の両方のシステムでは、SQL Server 2019 Java 言語拡張機能を検証します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a18886ea4daff3fb87853a556b67ad0562c2efd3
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 9b5d5fe9a3bf3b775c9d7afb1035e09120157aac
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017838"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494264"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>SQL Server 2019 で Java 言語の拡張機能 
 
@@ -39,7 +39,7 @@ Java 8 がサポートされています。 Java ランタイム環境 (JRE) が
 | [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows および Linux | はい | はい |
 | [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows および Linux | はい | いいえ |
 
-Linux では、 **mssql server extensibility java**パッケージがインストールされていない場合は、自動的に JRE 8 をインストールします。 インストール スクリプトは、JAVA_HOME という環境変数に JVM パスを追加する必要があります。
+Linux では、 **mssql server extensibility java**パッケージがインストールされていない場合は、自動的に JRE 8 をインストールします。 インストール スクリプトは、という JRE_HOME 環境変数に JVM パスを追加する必要があります。
 
 Windows、お勧めする既定の JDK をインストールする`/Program Files/`可能であればフォルダー。 それ以外の場合、実行可能ファイルへのアクセス許可を付与するには、追加の構成が必要です。 詳細については、次を参照してください。、 [(Windows) のアクセス許可を付与](#perms-nonwindows)このドキュメントの「します。
 
@@ -72,22 +72,18 @@ sudo zypper install mssql-server-extensibility-java
 
 ### <a name="grant-permissions-on-linux"></a>Linux 上のアクセス許可の付与
 
-Java クラスを実行するアクセス許可を持つ SQL Server を指定するには、アクセス許可を設定する必要があります。
+外部ライブラリを使用している場合は、この手順を実行する必要はありません。 作業に推奨される方法は、外部ライブラリを使用しています。 Jar ファイルから外部ライブラリの作成については、次を参照してください[CREATE EXTERNAL LIBRARY。](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)
 
-読み取りを許可し、jar ファイルまたはクラス ファイルへのアクセスを実行するには、次を実行**chmod**クラスや jar ファイルの各コマンド。 SQL Server を使用するときに、jar のクラス ファイルを配置することをお勧めします。 Jar の作成については、次を参照してください。 [jar ファイルを作成する方法](#create-jar)します。
+外部ライブラリを使用していない場合は、jar で Java クラスを実行するアクセス許可を持つ SQL Server を指定する必要があります。
+
+読み取りを許可し、jar ファイルへのアクセスを実行するには、次を実行**chmod** jar ファイルをコマンド。 常に SQL Server を使用する場合、クラス ファイルを jar に配置することをお勧めします。 Jar の作成については、次を参照してください。 [jar ファイルを作成する方法](#create-jar)します。
 
 ```cmd
 chmod ug+rx <MyJarFile.jar>
 ```
-ディレクトリまたは jar ファイルを読み取り/実行 mssql_satellite アクセス許可を付与する必要があります。
+Jar ファイルを読み取り/実行 mssql_satellite アクセス許可を付与する必要があります。
 
-* SQL Server からのクラス ファイルを呼び出す場合 mssql_satellite は必要がある読み取り/実行アクセス許可で*すべて*直接の親までのルートから、フォルダー階層内のディレクトリ。
 
-* SQL Server から jar ファイルを呼び出す場合は、jar ファイル自体で、コマンドを実行するで十分です。
-
-```cmd
-chown mssql_satellite:mssql_satellite <directory>
-```
 
 ```cmd
 chown mssql_satellite:mssql_satellite <MyJarFile.jar>
@@ -107,19 +103,21 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 4. インストール ウィザードを終了し、次の 2 つのタスクを続行します。
 
-### <a name="add-the-javahome-variable"></a>JAVA_HOME 変数を追加します。
+### <a name="add-the-jrehome-variable"></a>JRE_HOME 変数を追加します。
 
-JAVA_HOME は、Java のインタープリターの場所を指定する環境変数です。 この手順で、Windows 上のシステム環境変数を作成します。
+JRE_HOME は、Java のインタープリターの場所を指定する環境変数です。 この手順で、Windows 上のシステム環境変数を作成します。
 
-1. JDK と JRE パスのコピーを見つけて (たとえば、 `C:\Program Files\Java\jdk1.8.0_201`)。
+1. JRE ホーム パスのコピーを見つけて (たとえば、 `C:\Program Files\Zulu\zulu-8\jre\`)。
 
-    優先の Java ディストリビューションによって JDK、JRE の場所は上記の例のパスと異なるにあります。
+    優先の Java ディストリビューションによって JDK、JRE の場所は上記の例のパスと異なるにあります。 
+    JDK インストールがある場合でも多くの場合、時間が表示されます、インストールの一部として JRE サブ フォルダー。 
+    Java 拡張機能は、パス %jre_home%\bin\server から、jvm.dll をロードしようとしています。
 
 2. コントロール パネルで、開く**システムとセキュリティ**、オープン**システム**、 をクリック**システム プロパティの高度な**します。
 
 3. クリックして**環境変数**します。
 
-4. 新しいシステム変数を作成`JAVA_HOME`(手順 1 で見つかった) JDK と JRE パスの値。
+4. 新しいシステム変数を作成`JRE_HOME`(手順 1 で見つかった) JDK と JRE パスの値。
 
 5. 再起動[スタート パッド](../concepts/extensibility-framework.md#launchpad)します。
 
@@ -129,24 +127,24 @@ JAVA_HOME は、Java のインタープリターの場所を指定する環境�
 
 <a name="perms-nonwindows"></a>
 
-### <a name="grant-access-to-non-default-jdk-folder-windows-only"></a>既定ではない JDK フォルダー (Windows のみ) にアクセスを許可
+### <a name="grant-access-to-non-default-jre-folder-windows-only"></a>既定ではない JRE フォルダー (Windows のみ) にアクセスを許可
 
-既定のフォルダーで、JDK と JRE をインストールした場合は、この手順をスキップすることができます。 
-
-既定のフォルダー以外のインストールでは、実行、 **icacls**からコマンドを*管理者特権で*行へのアクセス許可を**SQLRUsergroup**と ( SQLServerサービスアカウント**ALL_APPLICATION_PACKAGES**) JVM や Java classpath にアクセスします。 コマンドは、再帰的には、すべてのファイルと、指定したディレクトリ パスの下のフォルダーへのアクセスを許可します。
+実行、 **icacls**からコマンドを*管理者特権で*行へのアクセス許可を**SQLRUsergroup**および SQL Server サービス アカウント (で**ALL_APPLICATION_パッケージ**) JRE にアクセスするためです。 コマンドは、再帰的には、すべてのファイルと、指定したディレクトリ パスの下のフォルダーへのアクセスを許可します。
 
 #### <a name="sqlrusergroup-permissions"></a>SQLRUserGroup のアクセス許可
 
 名前付きインスタンスの場合、SQLRUsergroup にインスタンス名を追加します (たとえば、 `SQLRUsergroupINSTANCENAME`)。
 
 ```cmd
-icacls "<PATH TO CLASS or JAR FILES>" /grant "SQLRUsergroup":(OI)(CI)RX /T
+icacls "<PATH to JRE>" /grant "SQLRUsergroup":(OI)(CI)RX /T
 ```
+
+Windows 上の program files の下の既定のフォルダーで、JDK と JRE をインストールした場合は、この手順をスキップすることができます。
 
 #### <a name="appcontainer-permissions"></a>AppContainer アクセス許可
 
 ```cmd
-icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 ```
 
 <a name="configure-script-execution"></a>
@@ -165,11 +163,11 @@ icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 インストールが動作を確認するには、作成して実行を[サンプル アプリケーション](java-first-sample.md)JDK をインストールした、ファイルを配置する前に構成した classpath を使用します。
 
-## <a name="differences-in-ctp-23"></a>CTP 2.3 の相違点
+## <a name="differences-in-ctp-24"></a>CTP 2.4 の相違点
 
 Machine Learning サービス理解している場合は、拡張機能の承認および分離モデルがこのリリースで変更されました。 詳細については、次を参照してください。 [SQL Server Machine 2019 Learning サービスのインストールの違い](../install/sql-machine-learning-services-ver15.md)します。
 
-## <a name="limitations-in-ctp-23"></a>CTP 2.3 の制限事項
+## <a name="limitations-in-ctp-24"></a>CTP 2.4 の制限事項
 
 * 入力と出力バッファーの値の数を超えることはできません`MAX_INT (2^31-1)`は Java で配列に割り当てることができる要素の最大数。
 
@@ -183,7 +181,8 @@ Machine Learning サービス理解している場合は、拡張機能の承認
 
 ## <a name="how-to-create-a-jar-file-from-class-files"></a>クラス ファイルから jar ファイルを作成する方法
 
-クラス ファイルを含むフォルダーに移動し、このコマンドを実行します。
+Jar の中に SQL Server から実行するときに、クラス ファイルを常にパッケージをお勧めします。
+クラス ファイルから jar を作成するには、クラス ファイルを含むフォルダーに移動し、このコマンドを実行します。
 
 ```cmd
 jar -cf <MyJar.jar> *.class

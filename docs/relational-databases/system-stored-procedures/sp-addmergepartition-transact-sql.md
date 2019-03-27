@@ -16,14 +16,14 @@ ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 486faeb7d46ee32b40923cd54a018c2005c44621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5599370f892d174336411573883e2feffa27b886
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760514"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492653"
 ---
-# <a name="spaddmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
+# <a name="spaddmergepartition-transact-sql"></a>sp_addmergepartition (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   値によってフィルター処理されるサブスクリプションに対して動的にフィルター選択されたパーティションを作成します。 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)または[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)サブスクライバー。 このストアド プロシージャは、パブリッシュされるデータベース上のパブリッシャー側で実行されるもので、手動でパーティションを生成する場合に使用します。  
@@ -40,14 +40,11 @@ sp_addmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication**=] **'***パブリケーション***'**  
- パーティションが作成されるマージ パブリケーションを指定します。 *パブリケーション*は**sysname**、既定値はありません。 場合*suser_sname*が指定されている値の*ホスト名*NULL にする必要があります。  
+`[ @publication = ] 'publication'` パーティションが作成されているマージ パブリケーションです。 *パブリケーション* は **sysname** 、既定値はありません。 場合*suser_sname*が指定されている値の*ホスト名*NULL にする必要があります。  
   
- [ **@suser_sname**=] **'***suser_sname***'**  
- 値によってフィルター選択は、サブスクリプションのパーティションを作成するときに使用される値は、 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)サブスクライバーでの関数。 *suser_sname*は**sysname**、既定値はありません。  
+`[ @suser_sname = ] 'suser_sname'` 値によってフィルター選択は、サブスクリプションのパーティションを作成するときに使用される値は、 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)サブスクライバーでの関数。 *suser_sname*は**sysname**、既定値はありません。  
   
- [ **@host_name**=] **'***host_name***'**  
- 値によってフィルター選択は、サブスクリプションのパーティションを作成するときに使用される値は、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)サブスクライバーでの関数。 *host_name*は**sysname**、既定値はありません。  
+`[ @host_name = ] 'host_name'` 値によってフィルター選択は、サブスクリプションのパーティションを作成するときに使用される値は、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)サブスクライバーでの関数。 *host_name*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

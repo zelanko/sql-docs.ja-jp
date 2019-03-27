@@ -18,17 +18,17 @@ ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f383540c9fe7a83187bad55e62ed83933d872c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c654f8e76a25c0588011afecc632d3f85a33455
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689670"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492920"
 ---
 # <a name="spaddlogshippingalertjob-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サーバーに警告ジョブが作成されたかどうかを確認します。 このストアド プロシージャが警告ジョブを作成し、そのジョブ ID を追加します。 警告ジョブが存在しない場合、 **log_shipping_monitor_alert**テーブル。 既定では、警告ジョブは有効になっており、2 分間隔で実行されるようスケジュールされています。  
+  このストアド プロシージャは、このサーバーで警告ジョブが作成されているかどうかを確認します。 このストアド プロシージャが警告ジョブを作成し、そのジョブ ID を追加します。 警告ジョブが存在しない場合、 **log_shipping_monitor_alert**テーブル。 警告ジョブは既定で有効にし、2 分ごとに 1 回のスケジュールで実行します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,8 +41,7 @@ sp_add_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@alert_job_id =** ] *alert_job_id* OUTPUT  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブのログ配布警告ジョブ ID。  
+`[ @alert_job_id = ] alert_job_id OUTPUT` [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブのログ配布警告ジョブ ID。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

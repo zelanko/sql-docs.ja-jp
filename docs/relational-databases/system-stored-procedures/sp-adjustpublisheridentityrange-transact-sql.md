@@ -16,17 +16,17 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 508eaa25657393dba0d84e0bda6eb0582b3f90fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 399fe5322cb8cb5c3d20a486aac3baa810439ce7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822076"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492355"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パブリケーションの ID 範囲を調整し、パブリケーションのしきい値に基づいて新しい範囲を再割り当てします。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  パブリケーションの ID 範囲を調整し、パブリケーションのしきい値に基づいて新しい範囲を再割り当てします。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,14 +40,11 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
- 新しい ID 範囲が再割り当てされるパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は NULL です。  
+`[ @publication = ] 'publication'` 新しい id 範囲が再割り当てされるパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。  
   
- [ **@table_name=**] **'***table_name***'**  
- 新しい ID 範囲が再割り当てされるテーブルの名前を指定します。 *table_name*は**sysname**、既定値は NULL です。  
+`[ @table_name = ] 'table_name'` 新しい id 範囲が再割り当てされるテーブルの名前です。 *table_name*は**sysname**、既定値は NULL です。  
   
- [ **@table_owner=**] **'***table_owner***'**  
- パブリッシャーのテーブルの所有者を指定します。 *table_owner*は**sysname**、既定値は NULL です。 場合*table_owner*が指定されていない、現在のユーザーの名前を使用します。  
+`[ @table_owner = ] 'table_owner'` パブリッシャーのテーブルの所有者です。 *table_owner*は**sysname**、既定値は NULL です。 場合*table_owner*が指定されていない、現在のユーザーの名前を使用します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -57,7 +54,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
   
  自動 ID 範囲が有効になっているパブリケーションの場合は、ディストリビューション エージェントまたはマージ エージェントが、パブリケーションのしきい値に基づいてパブリケーションの ID 範囲を自動的に調整します。 ただし、何らかの理由により、ディストリビューション エージェントまたはマージ エージェントが実行されていない、期間のしきい値のポイントに id 範囲リソースが大きく消費される場合は、ユーザーが呼び出せる**sp_adjustpublisheridentityrange**パブリッシャーを新しい範囲の値を割り当てられません。  
   
- 実行時に**sp_adjustpublisheridentityrange**, か、*パブリケーション*または*table_name*指定する必要があります。 両方を指定した場合、または両方とも指定しなかった場合は、エラーが返されます。  
+ 実行時に**sp_adjustpublisheridentityrange**, か、*パブリケーション*または*table_name*指定する必要があります。 指定されたエラーの両方またはどちらもが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_adjustpublisheridentityrange**します。  

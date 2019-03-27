@@ -16,17 +16,17 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f699a4f7dcf333301889211a0db45248935acdce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130202"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493144"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パブリケーションへのサブスクリプション用にスナップショットを生成するエージェント ジョブを、パラメーター化された行フィルターを使って変更します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  パラメーター化された行フィルターを使用したパブリケーションに対するサブスクリプションのスナップショットを生成するエージェント ジョブを変更します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,17 +52,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication =** ] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- 変更するスナップショット ジョブの名前を指定します。 *dynamic_snapshot_jobname*は**sysname**既定値は N '%' です。 場合*dynamic_snapshot_jobid*の既定値を使用する必要があります指定*dynamic_snapshot_jobname*します。  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` スナップショット ジョブの名前は変更されています。 *dynamic_snapshot_jobname*は**sysname**既定値は N '%' です。 場合*dynamic_snapshot_jobid*の既定値を使用する必要があります指定*dynamic_snapshot_jobname*します。  
   
- [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- 変更するスナップショット ジョブの ID を指定します。 *dynamic_snapshot_jobid*は**uniqueidentifier**既定値は NULL です。 場合*dynamic_snapshot_jobname*の既定値を使用する必要があります指定*dynamic_snapshot_jobid*します。  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 変更するスナップショット ジョブの ID。 *dynamic_snapshot_jobid*は**uniqueidentifier**既定値は NULL です。 場合*dynamic_snapshot_jobname*の既定値を使用する必要があります指定*dynamic_snapshot_jobid*します。  
   
- [  **@frequency_type =** ] *frequency_type*  
- エージェントをスケジュールに組み込む頻度を指定します。 *frequency_type*は**int**値は次のいずれかを指定できます。  
+`[ @frequency_type = ] frequency_type` エージェントをスケジュールする頻度です。 *frequency_type*は**int**値は次のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -72,12 +68,11 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|毎週。|  
 |**16**|毎月。|  
 |**32**|月単位|  
-|**64**|自動的に起動|  
-|**128**|定期的|  
+|**64**|自動開始|  
+|**128**|定期的な|  
 |NULL (既定値)||  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- エージェントを実行する日を指定します。 *frequency_interval*は**int**値は次のいずれかを指定できます。  
+`[ @frequency_interval = ] frequency_interval` エージェントを実行する曜日。 *frequency_interval*は**int**値は次のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -93,8 +88,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |"**10**"|週末の曜日|  
 |NULL (既定値)||  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- 定義した期間にスケジュールを組み直す頻度を指定します。 *frequency_subday*は**int**値は次のいずれかを指定できます。  
+`[ @frequency_subday = ] frequency_subday` 定義した期間中に再スケジュールするには、多くの場合、方法です。 *frequency_subday*は**int**値は次のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -104,41 +98,32 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Hour|  
 |NULL (既定値)||  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- 間隔は、 *frequency_subday*します。 *frequency_subday_interval*は**int**、既定値は NULL です。  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 間隔は、 *frequency_subday*します。 *frequency_subday_interval*は**int**、既定値は NULL です。  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- マージ エージェントを実行する日付を指定します。 このパラメーターが使用されるときに*frequency_type*に設定されている**32** (月単位)。 *frequency_relative_interval*は**int**値は次のいずれかを指定できます。  
+`[ @frequency_relative_interval = ] frequency_relative_interval` マージ エージェントを実行する日付です。 このパラメーターが使用されるときに *frequency_type* に設定されている **32** (月単位)。 *frequency_relative_interval*は**int**値は次のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|第 2 週|  
 |**4**|第 3 週|  
-|**8**|第 4 週|  
+|**8**|4 番目|  
 |**16**|Last|  
 |NULL (既定値)||  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- 使用される定期実行係数*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値は NULL です。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 使用される定期実行係数*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値は NULL です。  
   
- [ **@active_start_date =** ] *active_start_date*  
- マージ エージェントを最初にスケジュール設定する日付を YYYYMMDD 形式で指定します。 *active_start_date*は**int**、既定値は NULL です。  
+`[ @active_start_date = ] active_start_date` マージ エージェントの最初の日付スケジュール設定を yyyymmdd 形式で指定として書式設定されます。 *active_start_date*は**int**、既定値は NULL です。  
   
- [ **@active_end_date =** ] *active_end_date*  
- マージ エージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値は NULL です。  
+`[ @active_end_date = ] active_end_date` マージ エージェントが停止した日付、スケジュールに yyyymmdd です。 *active_end_date*は**int**、既定値は NULL です。  
   
- [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- マージ エージェントを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**、既定値は NULL です。  
+`[ @active_start_time_of_day = ] active_start_time_of_day` マージ エージェントを最初のスケジュール設定する時刻、hhmmss 形式で指定として書式設定します。 *active_start_time_of_day* は **int** 、既定値は NULL です。  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- マージ エージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**、既定値は NULL です。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` マージ エージェントが停止する時刻 hhmmss 形式で指定として書式設定、スケジュール設定します。 *active_end_time_of_day*は**int**、既定値は NULL です。  
   
- [  **@job_login=** ] **'***job_login***'**  
- パラメーター化された行フィルターを使用してサブスクリプション用のスナップショットを生成するときに、スナップショット エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを指定します。 *job_login*は**nvarchar (257)** 既定値は NULL です。  
+`[ @job_login = ] 'job_login'` [!INCLUDE[msCoName](../../includes/msconame-md.md)]パラメーター化された行フィルターを使用してサブスクリプション用のスナップショットを生成するときに、スナップショット エージェントを実行する Windows アカウント。 *job_login*は**nvarchar (257)** 既定値は NULL です。  
   
- [  **@job_password=** ] **'***job_password***'**  
- パラメーター化された行フィルターを使ってサブスクリプション用のスナップショットを生成するときに、スナップショット エージェントを実行する Windows アカウントのパスワードを指定します。 *job_password*は**nvarchar (257)** 既定値は NULL です。  
+`[ @job_password = ] 'job_password'` パラメーター化された行フィルターを使用してサブスクリプション用のスナップショットを生成するときに、スナップショット エージェントを実行する Windows アカウントのパスワード。 *job_password*は**nvarchar (257)** 既定値は NULL です。  
   
 > [!IMPORTANT]  
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  

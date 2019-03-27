@@ -18,17 +18,17 @@ ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db37da85e4b707970436b926f6e772bd74402311
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ada0d0323f4fe8e7f73150560161d8b65738dc13
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774434"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494315"
 ---
-# <a name="spadddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
+# <a name="spadddistributor-transact-sql"></a>sp_adddistributor (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  エントリを作成、 [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md)テーブル (が存在しない) 場合は、ディストリビューターとしてサーバー エントリをマークし、プロパティ情報を格納します。 このストアド プロシージャは、ディストリビューター側で master データベースについて実行され、サーバーをディストリビューターとして登録し、サーバーにディストリビューターのマークを付けます。 リモート ディストリビューターの場合、このストアド プロシージャは、master データベースからパブリッシャー側でも実行され、リモート ディストリビューターを登録します。  
+  エントリを作成、 [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md)テーブル (が存在しない) 場合は、ディストリビューターとしてサーバー エントリをマークし、プロパティ情報を格納します。 このストアド プロシージャは、master データベースでディストリビューターに登録し、サーバーをディストリビューターとしてのマークで実行されます。 リモート ディストリビューターの場合、このストアド プロシージャは、master データベースからパブリッシャー側でも実行され、リモート ディストリビューターを登録します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,20 +43,16 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@distributor=**] **'***ディストリビューター***'**  
- ディストリビューション サーバー名です。 *ディストリビューター*は**sysname**、既定値はありません。 このパラメーターは、リモート ディストリビューターを設定する場合にのみ使用します。 ディストリビューターのプロパティ エントリを追加します、 **msdb.MSdistributor**テーブル。  
+`[ @distributor = ] 'distributor'` ディストリビューション サーバー名です。 *ディストリビューター*は**sysname**、既定値はありません。 このパラメーターは、リモート ディストリビューターを設定する場合にのみ使用します。 ディストリビューターのプロパティ エントリを追加します、 **msdb.MSdistributor**テーブル。  
   
- [  **@heartbeat_interval=**] *heartbeat_interval*  
- エージェントが進捗状況を示すメッセージをログに記録しなくてもよい最大時間を分単位で示します。 *heartbeat_interval*は**int**、既定値は 10 分です。 この間隔で実行され、実行中のレプリケーション エージェントの状態を確認する SQL Server エージェント ジョブが作成されます。  
+`[ @heartbeat_interval = ] heartbeat_interval` エージェントは、進行状況メッセージをログ記録しなくてもよい分の最大数です。 *heartbeat_interval*は**int**、既定値は 10 分です。 実行されているレプリケーション エージェントの状態を確認するには、この間隔で実行されている SQL Server エージェント ジョブが作成されます。  
   
- [  **@password=**] **'***パスワード***'**]  
- パスワード、 **distributor_admin**ログインします。 *パスワード*は**sysname**、既定値は NULL です。 NULL または空の文字列である場合、パスワードはランダムな値に再設定されます。 パスワードは最初のリモート ディストリビューターを追加するときに構成する必要があります。 **distributor_admin**ログインと*パスワード*に使用されるリンク サーバー エントリ用の保存されて、*ディストリビューター*ローカル接続を含む、RPC 接続します。 場合*ディストリビューター*がローカルでのパスワードを**distributor_admin**が新しい値に設定します。 同じ値をリモート ディストリビューターとパブリッシャーの場合、*パスワード*を実行するときに指定する必要があります**sp_adddistributor**パブリッシャーとディストリビューターの両方でします。 [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)ディストリビューターのパスワードを変更するために使用できます。  
+`[ @password = ] 'password']` パスワード、 **distributor_admin**ログインします。 *パスワード*は**sysname**、既定値は NULL です。 NULL または空の文字列にパスワードをリセットかどうか、ランダムな値。 パスワードは最初のリモート ディストリビューターを追加するときに構成する必要があります。 **distributor_admin**ログインと*パスワード*に使用されるリンク サーバー エントリ用の保存されて、*ディストリビューター*ローカル接続を含む、RPC 接続します。 場合*ディストリビューター*がローカルでのパスワードを**distributor_admin**が新しい値に設定します。 同じ値をリモート ディストリビューターとパブリッシャーの場合、*パスワード*を実行するときに指定する必要があります**sp_adddistributor**パブリッシャーとディストリビューターの両方でします。 [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)ディストリビューターのパスワードを変更するために使用できます。  
   
 > [!IMPORTANT]  
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
- [  **@from_scripting=** ] *from_scripting*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

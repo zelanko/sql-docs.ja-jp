@@ -18,17 +18,17 @@ ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07719bb41e0a83160a0f2e081c15d82a3455e9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aac9866026949b278e9a8eba4310f158254a521
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666560"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494054"
 ---
-# <a name="spaddlogshippingprimarysecondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
+# <a name="spaddlogshippingprimarysecondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  プライマリ サーバーにセカンダリ データベースのエントリを追加します。  
+  このストアド プロシージャは、プライマリ サーバー上のセカンダリ データベースのエントリを追加します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,14 +43,11 @@ sp_add_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@primary_database** =] '*primary_database*'  
- プライマリ サーバー上のデータベースの名前を指定します。 *primary_database*は**sysname**、既定値はありません。  
+`[ @primary_database = ] 'primary_database'` プライマリ サーバー上のデータベースの名前です。 *primary_database*は**sysname**、既定値はありません。  
   
- [ **@secondary_server** =] '*secondary_server*'、  
- セカンダリ サーバーの名前を指定します。 *secondary_server*は**sysname**、既定値はありません。  
+`[ @secondary_server = ] 'secondary_server',` セカンダリ サーバーの名前です。 *secondary_server*は**sysname**、既定値はありません。  
   
- [ **@secondary_database** =] '*secondary_database*'  
- セカンダリ データベースの名前を指定します。 *secondary_database*は**sysname**、既定値はありません。  
+`[ @secondary_database = ] 'secondary_database'` セカンダリ データベースの名前です。 *secondary_database*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

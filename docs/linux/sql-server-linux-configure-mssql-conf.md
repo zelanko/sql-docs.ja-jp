@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 4db08a718f834d03ddef103b2a4dc16a2c3733b8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018078"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494394"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Linux 上の SQL Server を mssql-conf ツールを構成します。
 
@@ -511,8 +511,8 @@ Mssql conf を監視し、MSDTC をトラブルシューティングする際の
 
 | mssql-conf setting | 説明 |
 |---|---|
-| distributedtransaction.allowonlysecurerpccalls | 分散トランザクションのセキュリティで保護された唯一の rpc 呼び出しを構成します。 |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | 分散型のセキュリティのみ rpc 呼び出しを構成します。 |トランザクション
+| distributedtransaction.allowonlysecurerpccalls | 分散トランザクションの唯一の RPC 呼び出しをセキュリティで保護を構成します。 |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | 分散型のみ RPC 呼び出しのセキュリティを構成します。 |トランザクション
 | distributedtransaction.maxlogsize | DTC トランザクション ログ ファイルのサイズ (MB 単位)。 既定値は 64 MB です。 |
 | distributedtransaction.memorybuffersize | トレースを格納する循環バッファー サイズ。 このサイズを mb 単位では、既定値は 10 MB |
 | distributedtransaction.servertcpport | MSDTC rpc サーバー ポート |

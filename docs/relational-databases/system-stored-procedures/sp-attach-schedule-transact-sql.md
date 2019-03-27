@@ -18,12 +18,12 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f04aefa642e21901a3070d71164f50f01cbc2ec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4102c272fe9d880e6213917091b6078a413aebf8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732845"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494304"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,28 +43,24 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_id=** ] *job_id*  
- スケジュールを追加するジョブのジョブ識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id` スケジュールを追加するジョブのジョブ識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [ **@job_name =** ] **'***job_name***'**  
- スケジュールを追加するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` スケジュールを追加するジョブの名前。 *job_name*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
- [ **@schedule_id =** ] *schedule_id*  
- ジョブに設定するスケジュールの識別番号を指定します。 *schedule_id*は**int**、既定値は NULL です。  
+`[ @schedule_id = ] schedule_id` ジョブに設定するスケジュールのスケジュールの識別番号。 *schedule_id*は**int**、既定値は NULL です。  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
- ジョブに設定するスケジュールの名前を指定します。 *schedule_name*は**sysname**、既定値は NULL です。  
+`[ @schedule_name = ] 'schedule_name'` ジョブに設定するスケジュールの名前。 *schedule_name*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  いずれか*schedule_id*または*schedule_name*指定する必要がありますが、両方を指定することはできません。  
   
 ## <a name="remarks"></a>コメント  
- スケジュールとジョブは同じ所有者であることが必要です。  
+ スケジュールとジョブは、所有者が同じである必要があります。  
   
- スケジュールは複数のジョブに対して設定できます。 ジョブは複数のスケジュールで実行できます。  
+ スケジュールは複数のジョブに対して設定できます。 ジョブは、1 つ以上のスケジュールで実行できます。  
   
  このストアド プロシージャを実行する必要があります、 **msdb**データベース。  
   
@@ -77,7 +73,7 @@ sp_attach_schedule
   
 -   **SQLAgentOperatorRole**  
   
- ジョブ所有者は、同時にスケジュール所有者にならなくても、ジョブをスケジュールにアタッチしたり、スケジュールからデタッチしたりできます。 ただし、呼び出し元がスケジュール所有者ではない場合、デタッチによってスケジュールにジョブがなくなっても、スケジュールを削除することはできません。  
+ ジョブの所有者が、ジョブをスケジュールにアタッチおよびにスケジュール所有者にならなくても、ジョブ、スケジュールをデタッチできますに注意してください。 ただし、スケジュールを削除できない場合は、デタッチがのままに、ジョブはありません、呼び出し元が、スケジュール所有者でない限り、します。  
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   

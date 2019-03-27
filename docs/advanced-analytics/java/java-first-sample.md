@@ -3,18 +3,18 @@ title: Java サンプルとチュートリアルを SQL Server 2019 - SQL Server
 description: SQL Server のデータを Java 言語の拡張機能を使用するための手順については、SQL Server 2019 の Java サンプル コードを実行します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a2fd078d0b9c61678a83cc1b3b5da70adbd69779
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018038"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493427"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server の Java サンプルのチュートリアル
 
@@ -205,9 +205,22 @@ Classpath の詳細については、次を参照してください。[クラス
 
 クラスと依存関係に .jar ファイルをパッケージ化する場合は、sp_execute_external_script のクラスパス パラメーター内の .jar ファイルへの完全パスを提供します。 たとえば、jar ファイルには、'ngram.jar' を呼び出すと、クラスパスなります '/home/myclasspath/ngram.jar' on Linux。
 
-## <a name="6---set-permissions"></a>6-アクセス許可を設定
+## <a name="6---create-external-library"></a>6 - 外部ライブラリを作成します。
 
-スクリプトの実行は、プロセス id が、コードにアクセスしている場合にのみ成功します。 
+外部ライブラリを作成すると、SQL Server は自動的に、jar にやアクセスのクラスパスに特殊なアクセス許可を設定する必要はありません。
+
+```sql 
+CREATE EXTERNAL LIBRARY ngram
+FROM (CONTENT = '<path>/ngram.jar') 
+WITH (LANGUAGE = 'Java'); 
+GO
+```
+
+## <a name="7---set-permissions-skip-if-you-performed-step-6"></a>7-アクセス許可 (スキップ手順 6 を実行した場合) を設定します。
+
+外部ライブラリを使用する場合は、この手順は必要ありません。 推奨作業の方法では、jar をから外部ライブラリを作成します。 
+
+外部ライブラリを使用しない場合は、必要なアクセス許可を設定する必要があります。 スクリプトの実行は、プロセス id が、コードにアクセスしている場合にのみ成功します。 
 
 ### <a name="on-linux"></a>On Linux
 
@@ -232,7 +245,7 @@ Classpath の詳細については、次を参照してください。[クラス
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7 - Call *getNgrams()*
+## <a name="8---call-getngrams"></a>8 - Call *getNgrams()*
 
 SQL Server からコードを呼び出す Java メソッドを指定**getNgrams()** sp_execute_external_script の「スクリプト」パラメーターにします。 このメソッドは、「パッケージ」と"という名前のクラス ファイル"というパッケージに属する**Ngram.java**します。
 
@@ -246,8 +259,6 @@ SQL Server からコードを呼び出す Java メソッドを指定**getNgrams(
 DECLARE @myClassPath nvarchar(50)
 DECLARE @n int 
 --This is where you store your classes or jars.
---Update this to your own classpath
-SET @myClassPath = N'/home/myclasspath/'
 --This is the size of the ngram
 SET @n = 3
 EXEC sp_execute_external_script
@@ -255,8 +266,7 @@ EXEC sp_execute_external_script
 , @script = N'pkg.Ngram.getNGrams'
 , @input_data_1 = N'SELECT id, text FROM reviews'
 , @parallel = 0
-, @params = N'@CLASSPATH nvarchar(30), @param1 INT'
-, @CLASSPATH = @myClassPath
+, @params = N'@param1 INT'
 , @param1 = @n
 with result sets ((ID int, ngram varchar(20)))
 GO
@@ -270,11 +280,7 @@ GO
 
 ### <a name="if-you-get-an-error"></a>エラーが発生する場合
 
-クラスパスに関連する問題を排除します。 
-
-+ クラスパスは、親フォルダーとすべてのサブフォルダーが「パッケージ」のサブフォルダーではないで構成されます。 Pkg サブフォルダーが存在する必要があります、中にストアド プロシージャで指定された classpath 値であることになりません。
-
-+ 「パッケージ」サブフォルダーには、次の 3 つのすべてのクラスのコンパイル済みコードを含める必要があります。
++ クラスをコンパイルするときに、「パッケージ」サブフォルダーは、コンパイルされたコードの 3 つすべてのクラスを含める必要があります。
 
 + Classpath の長さは、宣言された値を超えることはできません (`DECLARE @myClassPath nvarchar(50)`)。 場合は、パスは、最初の 50 文字に切り捨てられ、コンパイル済みのコードは読み込まれません。 行うことができます、`SELECT @myClassPath`値をチェックします。 50 文字が十分でない場合は、長さを拡張します。 
 

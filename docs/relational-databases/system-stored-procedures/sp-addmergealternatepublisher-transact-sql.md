@@ -16,17 +16,17 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21d0ea34f3521333976ce00a3f5b823c3fcb816a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: efbf4195294ce8bc279a2ed995ce09a5f384a82c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129302"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491976"
 ---
-# <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
+# <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サブスクライバーで代替同期パートナーを使用する機能を追加します。 パブリケーションのプロパティでは、サブスクライバーが他のパブリッシャーと同期できるように指定する必要があります。 このストアド プロシージャは、サブスクライバー側でサブスクリプション データベースについて実行されます。  
+  代替同期パートナーを使用するサブスクライバーの機能を追加します。 パブリケーションのプロパティでは、サブスクライバーが他のパブリッシャーと同期できるように指定する必要があります。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,32 +46,23 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=**] **'**_パブリッシャー_**'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリケーション データベースの名前です。 *publisher_db* は **sysname** 、既定値はありません。  
   
- [  **@publication=**] **'**_パブリケーション_**'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@alternate_publisher=**] **'**_alternate_synchronization_partner_**'**  
- 代替パブリッシャーの名前を指定します。 *alternate_synchronization_partner*は**sysname**、既定値はありません。  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` 代替パブリッシャーの名前です。 *alternate_synchronization_partner*は**sysname**、既定値はありません。  
   
- [  **@alternate_publisher_db=**] **'**_alternate_publisher_db_**'**  
- 代替パブリッシャーのパブリケーション データベースの名前を指定します。 *alternate_publisher_db*は**sysname**、既定値はありません。  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` 代替パブリッシャーのパブリケーション データベースの名前です。 *alternate_publisher_db*は**sysname**、既定値はありません。  
   
- [  **@alternate_publication=**] **'**_alternate_synchronization_partner_**'**  
- 代替同期パートナーのパブリケーションの名前を指定します。 *alternate_synchronization_partner*は**sysname**、既定値はありません。  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` 代替同期パートナー パブリケーションの名前です。 *alternate_synchronization_partner*は**sysname**、既定値はありません。  
   
- [  **@alternate_distributor=**] **'**_alternate_distributor_**'**  
- 代替同期パートナーのディストリビューターの名前を指定します。 *alternate_distributor*は**sysname**、既定値はありません。  
+`[ @alternate_distributor = ] 'alternate_distributor'` 代替同期パートナーは、ディストリビューターの名前です。 *alternate_distributor*は**sysname**、既定値はありません。  
   
- [  **@friendly_name=**] **'**_friendly_name_**'**  
- 代替同期パートナーを構成するパブリッシャー、パブリケーション、ディストリビューターの関連を識別するための表示名を指定します。 *friendly_name*は**nvarchar (255)**、既定値は NULL です。  
+`[ @friendly_name = ] 'friendly_name'` パブリッシャー、パブリケーション、および代替同期パートナーを構成するディストリビューターの関連付けを識別する表示名です。 *friendly_name*は**nvarchar (255)**、既定値は NULL です。  
   
- [  **@reserved=**] **'**_予約_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

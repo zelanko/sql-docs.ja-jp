@@ -3,18 +3,18 @@ title: SQL - SQL Server Machine Learning サービスから Java を呼び出す
 description: Java のクラスを Java プログラミング言語の拡張機能で SQL Server 2019 を使用して SQL Server のストアド プロシージャから呼び出す方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 801ffe50ca83fbeda69a3172b5914d39373d643f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 36a949f4d046d4071ffd7d52d34233e993ee700f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017758"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493004"
 ---
 # <a name="how-to-call-java-from-sql-server-2019-preview"></a>SQL Server 2019 プレビューから Java を呼び出す方法
 
@@ -26,7 +26,7 @@ SQL Server での Java クラスを呼び出すための 2 つの方法はあり
 
 1. .Class または .jar ファイルを配置、 [Java classpath](#classpath)します。 これは、Windows と Linux の両方を使用できます。
 
-2. .Jar ファイルおよびその他の依存関係を使用して、データベースにコンパイル済みのクラスをアップロード、[外部ライブラリ](#external-library)DDL。 このオプションは、Windows CTP 2.3 でのみ使用できます。 Linux サポートは、以降の CTP で追加されます。
+2. .Jar ファイルおよびその他の依存関係を使用して、データベースにコンパイル済みのクラスをアップロード、[外部ライブラリ](#external-library)DDL。 このオプションは、Windows および Linux に CTP 2.4 で使用できます。
 
 > [!NOTE]
 > 一般的な推奨事項、として、.jar ファイルおよび .class を単独ではないファイルを使用します。 これは Java での一般的な方法であり、簡単に全体的なエクスペリエンスが実現されます。 関連項目:[クラス ファイルから jar ファイルを作成する方法](extension-java.md#create-jar)します。
@@ -93,7 +93,7 @@ JDK の実行可能ファイルのシステム変数を作成したのと同様�
 
 ## <a name="external-library"></a>外部ライブラリ
 
-SQL Server 2019 の CTP 2.3 では、Windows 上の Java 言語の外部ライブラリを使用できます。 同じ機能は今後の CTP での Linux で利用可能になります。 .Jar ファイルに、クラスをコンパイルして、.jar ファイルとその他の依存関係を使用して、データベースにアップロード、 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL。
+SQL Server 2019 CTP 2.4 では、Windows および Linux で Java 言語の外部ライブラリを使用できます。 同じ機能は今後の CTP での Linux で利用可能になります。 .Jar ファイルに、クラスをコンパイルして、.jar ファイルとその他の依存関係を使用して、データベースにアップロード、 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL。
 
 外部ライブラリを使用した .jar ファイルをアップロードする方法の例:
 

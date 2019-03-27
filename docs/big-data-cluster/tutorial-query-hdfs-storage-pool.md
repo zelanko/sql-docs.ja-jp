@@ -5,17 +5,17 @@ description: このチュートリアルでは、SQL Server 2019 ビッグ デ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bb0a028f45567e967f80f11425865098265ab35a
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a8752f4879f4b03f89378e4f30c44c10dc272694
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241673"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494404"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>チュートリアル:ビッグ データの SQL Server クラスターで HDFS のクエリ
 
@@ -44,18 +44,18 @@ ms.locfileid: "54241673"
 
 1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、次を参照してください。 [master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)します。
 
-2. 内の接続をダブルクリックして、**サーバー**ウィンドウに SQL Server のマスター インスタンスのサーバー ダッシュ ボードを表示します。 選択**新しいクエリ**します。
+1. 内の接続をダブルクリックして、**サーバー**ウィンドウに SQL Server のマスター インスタンスのサーバー ダッシュ ボードを表示します。 選択**新しいクエリ**します。
 
    ![SQL Server マスター インスタンスのクエリ](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-3. コンテキストを変更するのには、次の TRANSACT-SQL コマンドを実行、 **Sales**マスター インスタンス内のデータベース。
+1. コンテキストを変更するのには、次の TRANSACT-SQL コマンドを実行、 **Sales**マスター インスタンス内のデータベース。
 
    ```sql
    USE Sales
    GO
    ```
 
-4. HDFS からの読み取り、CSV ファイルの形式を定義します。 F5 キーを押して、ステートメントを実行します。
+1. HDFS からの読み取り、CSV ファイルの形式を定義します。 F5 キーを押して、ステートメントを実行します。
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -69,7 +69,15 @@ ms.locfileid: "54241673"
    );
    ```
 
-5. 読み取ることができる外部テーブルを作成、`/clickstream_data`記憶域プールから。 **SqlStoragePool**はビッグ データ クラスターのマスター インスタンスからアクセスできます。
+1. 存在しない場合は、記憶域プールに外部データ ソースを作成します。
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   ```
+
+1. 読み取ることができる外部テーブルを作成、`/clickstream_data`記憶域プールから。 **SqlStoragePool**はビッグ データ クラスターのマスター インスタンスからアクセスできます。
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]
@@ -116,7 +124,7 @@ DROP EXTERNAL TABLE [dbo].[web_clickstreams_hdfs];
 GO
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ビッグ データ クラスターから Oracle クエリを実行する方法については、次の記事に進んでください。
 > [!div class="nextstepaction"]

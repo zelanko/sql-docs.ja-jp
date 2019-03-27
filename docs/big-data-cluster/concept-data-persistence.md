@@ -5,17 +5,17 @@ description: SQL Server 2019 のビッグ データ クラスター内のデー�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bcb5ee903ab2e5c24cdc2bc705d9b29a4299ba1b
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017958"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494164"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上の SQL Server のビッグ データ クラスターでのデータ永続化
 
@@ -26,7 +26,7 @@ ms.locfileid: "57017958"
 使用してビッグ データの SQL Server クラスターは、これらの永続的なボリュームを使用する方法は、[ストレージ クラス](https://kubernetes.io/docs/concepts/storage/storage-classes/)します。 異なる種類のストレージ用のさまざまなストレージ クラスを作成し、ビッグ データ クラスターのデプロイ時にそれらを指定できます。 目的 (プール) を使用するには、どのストレージ クラスを構成することができます。 SQL Server のビッグ データ クラスターを作成します[永続ボリューム要求](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)永続ボリュームが必要なポッドごとの指定した記憶域クラス名を指定します。 ポッドに対応する永続的なボリュームをマウントします。
 
 > [!NOTE]
-> CTP 2.3、のみの`ReadWriteOnce`クラスター全体のアクセス モードがサポートされています。
+> CTP 2.4、のみの`ReadWriteOnce`クラスター全体のアクセス モードがサポートされています。
 
 ## <a name="deployment-settings"></a>展開の設定
 

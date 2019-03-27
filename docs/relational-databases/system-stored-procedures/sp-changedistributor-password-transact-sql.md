@@ -16,17 +16,17 @@ ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bea1a781959cb345ceae785e97766ba659cb94c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 38ef611dd7dd181b164bd0eec459d68c49c6b5df
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133042"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493305"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ディストリビューターのパスワードを変更します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  ディストリビューターのパスワードを変更します。 このストアド プロシージャは、ディストリビューターのすべてのデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,8 +38,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@password=**] **'**_パスワード_**'**  
- 新しいパスワードです。 *パスワード*は**sysname**、既定値はありません。 場合は、ディストリビューターがローカルでのパスワード、 **distributor_admin**システム ログインを変更します。  
+`[ @password = ] 'password'` 新しいパスワードです。 *パスワード*は**sysname**、既定値はありません。 場合は、ディストリビューターがローカルでのパスワード、 **distributor_admin**システム ログインを変更します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

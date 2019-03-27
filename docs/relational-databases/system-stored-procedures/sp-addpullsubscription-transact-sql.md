@@ -16,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26ced1d422c1f47ebd88404b7cf3996df8b9c649
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dbdd156c20378eda748cef17ec58f6ecf7129cb9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126057"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494384"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,37 +45,29 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher=**] **'***publisher***'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は NULL です。 *publisher_db* Oracle パブリッシャーでは無視されます。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は NULL です。 *publisher_db* Oracle パブリッシャーでは無視されます。  
   
- [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@independent_agent=**] **'***independent_agent***'**  
- このパブリケーションに対して、スタンドアロン ディストリビューション エージェントが存在するかどうかを指定します。 *independent_agent*は**nvarchar (5)**、既定値は TRUE。 場合**true**、このパブリケーション用のスタンドアロン ディストリビューション エージェントが存在します。 場合**false**、パブリッシャー データベース/サブスクライバー データベースの各ペアの 1 つのディストリビューション エージェントが存在します。 *independent_agent*パブリケーションのプロパティは、値が同じである必要がありますが、パブリッシャーであるためここでします。  
+`[ @independent_agent = ] 'independent_agent'` このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを指定します。 *independent_agent*は**nvarchar (5)**、既定値は TRUE。 場合**true**、このパブリケーション用のスタンドアロン ディストリビューション エージェントが存在します。 場合**false**、パブリッシャー データベース/サブスクライバー データベースの各ペアの 1 つのディストリビューション エージェントが存在します。 *independent_agent*パブリケーションのプロパティは、値が同じである必要がありますが、パブリッシャーであるためここでします。  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
- サブスクリプションの種類を指定します。 *subscription_type*は**nvarchar (9)**、既定値は**匿名**します。 値を指定する必要があります**プル**の*subscription_type*パブリッシャー側でサブスクリプションを登録せずにサブスクリプションを作成する場合を除き、します。 ここでは、値を指定する必要があります**匿名**します。 これは、サブスクリプションの構成時にパブリッシャーに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続を確立できない場合に必要です。  
+`[ @subscription_type = ] 'subscription_type'` サブスクリプションの種類です。 *subscription_type*は**nvarchar (9)**、既定値は**匿名**します。 値を指定する必要があります**プル**の*subscription_type*パブリッシャー側でサブスクリプションを登録せずにサブスクリプションを作成する場合を除き、します。 ここでは、値を指定する必要があります**匿名**します。 これは、サブスクリプションの構成時にパブリッシャーに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続を確立できない場合に必要です。  
   
- [  **@description=**] **'***説明***'**  
- パブリケーションの説明です。 *説明*は**nvarchar (100)**、既定値は NULL です。  
+`[ @description = ] 'description'` パブリケーションの説明です。 *説明*は**nvarchar (100)**、既定値は NULL です。  
   
- [  **@update_mode=**] **'***update_mode***'**  
- 更新の種類を指定します。 *update_mode*は**nvarchar (30)** 値は次のいずれかを指定できます。  
+`[ @update_mode = ] 'update_mode'` 更新プログラムの種類です。 *update_mode*は**nvarchar (30)** 値は次のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**読み取り専用**(既定値)|サブスクリプションは読み取り専用です。 サブスクライバーで加えられた変更はパブリッシャーには送り返されません。 サブスクライバーで更新を行わない場合に使用します。|  
+|**読み取り専用**(既定値)|サブスクリプションとは、読み取り専用です。 サブスクライバーの変更はパブリッシャーには送信されません。 サブスクライバーの更新プログラムを許可しないときに使用する必要があります。|  
 |**synctran**|即時更新サブスクリプションのサポートを有効にします。|  
-|**キューに置かれた tran**|サブスクリプションのキュー更新を有効にします。 サブスクライバーでデータを変更し、キューに格納し、それをパブリッシャーに配信することができます。|  
-|**フェールオーバー**|キュー更新をフェールオーバーとするサブスクリプションの即時更新を有効にします。 サブスクライバーでデータを変更し、それを直ちにパブリッシャーに配信することができます。 パブリッシャーとサブスクライバーが接続されていない場合は、サブスクライバーとパブリッシャーが接続されるまで、サブスクライバーで加えられたデータの変更をキューに格納することができます。|  
-|**キューに置かれたフェールオーバー**|即時更新モードへの変更が可能なキュー更新サブスクリプションとしてサブスクリプションを有効にします。 サブスクライバーでデータを変更し、サブスクライバーとパブリッシャーの間の接続が確立されるまで、その変更をキューに格納することができます。 継続的な接続が確立されると、更新モードを即時更新に変更できます。 *Oracle パブリッシャーに対してはサポートされていません*します。|  
+|**キューに置かれた tran**|サブスクリプションのキュー更新を有効にします。 データの変更は、サブスクライバーで行われた、キューに格納されているし、その後、パブリッシャーに反映されます。|  
+|**failover**|キュー更新をフェールオーバーとするサブスクリプションの即時更新を有効にします。 サブスクライバーでデータを変更し、それを直ちにパブリッシャーに配信することができます。 パブリッシャーとサブスクライバーが接続されていない場合は、サブスクライバーとパブリッシャーが接続されるまで、サブスクライバーで加えられたデータの変更をキューに格納することができます。|  
+|**キューに置かれたフェールオーバー**|即時更新モードへの変更が可能なキュー更新サブスクリプションとしてサブスクリプションを有効にします。 データの変更は、サブスクライバーで行われ、サブスクライバーとパブリッシャーの間の接続が確立されるまで、キューに格納されていることができます。 継続的な接続が確立されたときに、即時更新に、更新モードを変更できます。 *Oracle パブリッシャーに対してはサポートされていません*します。|  
   
- [  **@immediate_sync =**] *immediate_sync*  
- スナップショット エージェントを実行するたびに同期ファイルを作成または再作成するかどうかを指定します。 *immediate_sync*は**ビット**は 1 で、既定値と同じ値に設定する必要があります*immediate_sync*で**sp_addpublication**.*immediate_sync*パブリケーションのプロパティは、値が同じである必要がありますが、パブリッシャーであるためここでします。  
+`[ @immediate_sync = ] immediate_sync` 同期ファイルが作成またはスナップショット エージェントを実行するたびに再作成するかどうか。 *immediate_sync*は**ビット**は 1 で、既定値と同じ値に設定する必要があります*immediate_sync*で**sp_addpublication**.*immediate_sync*パブリケーションのプロパティは、値が同じである必要がありますが、パブリッシャーであるためここでします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -95,7 +87,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addpullsubscription**します。  
   
 ## <a name="see-also"></a>参照  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create an Updatable Subscription to a Transactional Publication](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   

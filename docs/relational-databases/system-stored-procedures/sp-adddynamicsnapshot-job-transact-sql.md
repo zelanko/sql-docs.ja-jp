@@ -16,20 +16,20 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26026329ec092c769d545b4dbe99bd317b095bbe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0fc4df3d84e2652c8ee328d0dbe79a71c068994a
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134062"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493354"
 ---
-# <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
+# <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パラメーター化された行フィルターを使用したパブリケーションに対して、フィルター選択されたデータ スナップショットを生成するエージェント ジョブを作成します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。 このストアド プロシージャは管理者によって使用されるもので、フィルター選択されたデータ スナップショット ジョブを、サブスクライバーに対して手動で作成することができます。  
+  パラメーター化された行フィルターを使用したパブリケーションのフィルター選択されたデータ スナップショットを生成するエージェント ジョブを作成します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。 このストアド プロシージャは、サブスクライバーのフィルター選択されたデータ スナップショット ジョブを手動で作成する、管理者が使用されます。  
   
 > [!NOTE]  
->  フィルター選択されたデータ スナップショット ジョブを作成するには、パブリケーションに対する標準スナップショット ジョブが既に存在している必要があります。  
+>  フィルター選択されたデータ スナップショット ジョブを作成するためには、パブリケーションの標準スナップショット ジョブが既に存在する必要があります。  
   
  詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
@@ -57,30 +57,24 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
- フィルター選択されたデータ スナップショット ジョブを追加するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` フィルター選択されたデータ スナップショット ジョブを追加するパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [ **@suser_sname**=] **'***suser_sname***'**  
- 値によってフィルター選択は、サブスクリプションのフィルター選択されたデータ スナップショットを作成するときに使用される値は、 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)サブスクライバーでの関数。 *suser_sname*は**sysname**、既定値はありません。 *suser_sname*この関数は、パブリケーションを動的にフィルター選択に使用しない場合は NULL になります。  
+`[ @suser_sname = ] 'suser_sname'` 値によってフィルター選択は、サブスクリプションのフィルター選択されたデータ スナップショットを作成するときに使用される値は、 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)サブスクライバーでの関数。 *suser_sname*は**sysname**、既定値はありません。 *suser_sname*この関数は、パブリケーションを動的にフィルター選択に使用しない場合は NULL になります。  
   
- [ **@host_name**=] **'***host_name***'**  
- 値によってフィルター選択は、サブスクリプションのフィルター選択されたデータ スナップショットを作成するときに使用される値は、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)サブスクライバーでの関数。 *host_name*は**sysname**、既定値はありません。 *host_name*この関数は、パブリケーションを動的にフィルター選択に使用しない場合は NULL になります。  
+`[ @host_name = ] 'host_name'` 値によってフィルター選択は、サブスクリプションのフィルター選択されたデータ スナップショットを作成するときに使用される値は、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)サブスクライバーでの関数。 *host_name*は**sysname**、既定値はありません。 *host_name*この関数は、パブリケーションを動的にフィルター選択に使用しない場合は NULL になります。  
   
- [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
- 作成するフィルター選択されたデータ スナップショット ジョブの名前です。 *dynamic_snapshot_jobname*は**sysname**、既定値は NULL の場合は省略可能な出力パラメーター。 指定した場合*dynamic_snapshot_jobname*ディストリビューター側で一意なジョブに解決する必要があります。 指定しない場合、ジョブ名が自動的に生成され、結果セットに返されます。この場合、次のような名前が作成されます。  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 作成するフィルター選択されたデータ スナップショット ジョブの名前です。 *dynamic_snapshot_jobname*は**sysname**、既定値は NULL の場合は省略可能な出力パラメーター。 指定した場合*dynamic_snapshot_jobname*ディストリビューター側で一意なジョブに解決する必要があります。 指定しない場合、ジョブ名が自動的に生成され、名前が作成されている次のように、結果セットで返されます。  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
 > [!NOTE]  
->  動的スナップショット ジョブの名前を生成すると、標準スナップショット ジョブの名前が切り捨てられる場合があります。  
+>  動的スナップショット ジョブの名前を生成するときに、標準スナップショット ジョブの名前が切り捨てられる可能性があります。  
   
- [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
- 作成するフィルター選択されたデータ スナップショット ジョブの識別子です。 *dynamic_snapshot_jobid*は**uniqueidentifier**、既定値は NULL の場合は省略可能な出力パラメーター。  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 作成するフィルター選択されたデータ スナップショット ジョブの識別子です。 *dynamic_snapshot_jobid*は**uniqueidentifier**、既定値は NULL の場合は省略可能な出力パラメーター。  
   
- [  **@frequency_type=**] *frequency_type*  
- フィルター選択されたデータ スナップショット ジョブをスケジュールに組み込む頻度を指定します。 *frequency_type*は**int**、これらの値のいずれかを指定できます。  
+`[ @frequency_type = ] frequency_type` フィルター選択されたデータ スナップショット ジョブをスケジュールする頻度です。 *frequency_type*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -90,11 +84,10 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|毎週。|  
 |**16**|毎月。|  
 |**32**|月単位|  
-|**64**|自動的に起動|  
-|**128**|定期的|  
+|**64**|自動開始|  
+|**128**|定期的な|  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- フィルター選択されたデータ スナップショット ジョブを実行する場合の日数を指定します。 *frequency_interval*は**int**、既定値は 1、の値に依存して*frequency_type*します。  
+`[ @frequency_interval = ] frequency_interval` フィルター選択されたデータ スナップショット ジョブが実行されると期間 (日単位) です。 *frequency_interval*は**int**、既定値は 1、の値に依存して*frequency_type*します。  
   
 |値*frequency_type*|影響を与える*frequency_interval*|  
 |--------------------------------|-------------------------------------|  
@@ -106,8 +99,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|*frequency_interval*は使用されません。|  
 |**128**|*frequency_interval*は使用されません。|  
   
- [  **@frequency_subday=**] *frequency_subday*  
- 単位を指定します*frequency_subday_interval*します。 *frequency_subday*は**int**、これらの値のいずれかを指定できます。  
+`[ @frequency_subday = ] frequency_subday` 単位を指定します*frequency_subday_interval*します。 *frequency_subday*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -116,41 +108,34 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**4** (既定値)|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 数は、 *frequency_subday*ジョブの実行の間で発生する期間。 *frequency_subday_interval*は**int**、既定値は 5 です。  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 数は、 *frequency_subday*ジョブの実行の間で発生する期間。 *frequency_subday_interval*は**int**、既定値は 5 です。  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- 毎月の、フィルター選択されたデータ スナップショット ジョブの発生日を指定します。 このパラメーターが使用されるときに*frequency_type*に設定されている**32** (月単位)。 *frequency_relative_interval*は**int**、これらの値のいずれかを指定できます。  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 1 か月あたりで、フィルター選択されたデータ スナップショット ジョブの発生です。 このパラメーターが使用されるときに *frequency_type* に設定されている **32** (月単位)。 *frequency_relative_interval*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|First|  
 |**2**|第 2 週|  
 |**4**|第 3 週|  
-|**8**|第 4 週|  
+|**8**|4 番目|  
 |**16**|Last|  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- 使用される定期実行係数*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値は 0。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 使用される定期実行係数*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値は 0。  
   
- [  **@active_start_date=**] *active_start_date*  
- フィルター選択されたデータ スナップショット ジョブが最初にスケジュールに組み込まれる日を YYYYMMDD 形式で指定します。 *active_start_date*は**int**、既定値は NULL です。  
+`[ @active_start_date = ] active_start_date` フィルター選択されたデータ スナップショット ジョブの最初の日付スケジュール設定を yyyymmdd 形式で指定として書式設定されます。 *active_start_date*は**int**、既定値は NULL です。  
   
- [  **@active_end_date=**] *active_end_date*  
- フィルター選択されたデータ スナップショット ジョブがスケジュールに組み込まれなくなる日を YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値は NULL です。  
+`[ @active_end_date = ] active_end_date` フィルター選択されたデータ スナップショット ジョブが停止されているスケジュール設定を yyyymmdd 形式で指定として書式設定されます。 *active_end_date*は**int**、既定値は NULL です。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- フィルター選択されたデータ スナップショット ジョブが最初にスケジュールに組み込まれる時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**、既定値は NULL です。  
+`[ @active_start_time_of_day = ] active_start_time_of_day` フィルター選択されたデータ スナップショット ジョブの時間を最初にスケジュール、hhmmss 形式で指定として書式設定します。 *active_start_time_of_day* は **int** 、既定値は NULL です。  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- フィルター選択されたデータ スナップショット ジョブがスケジュールに組み込まれなくなる時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**、既定値は NULL です。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` フィルター選択されたデータ スナップショット ジョブが停止されているスケジュールに、hhmmss 形式で指定として書式設定します。 *active_end_time_of_day*は**int**、既定値は NULL です。  
   
 ## <a name="result-set"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|フィルター選択されたデータ スナップショット ジョブの識別、 [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)システム テーブル。|  
-|**dynamic_snapshot_jobname**|**sysname**|フィルター処理されたスナップショット ジョブの名前。|  
+|**dynamic_snapshot_jobname**|**sysname**|フィルター選択されたデータ スナップショット ジョブの名前です。|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|一意に識別する、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディストリビューターでエージェント ジョブ。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  

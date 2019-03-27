@@ -6,20 +6,20 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 02/29/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 04f493109997d4b673a6a308de5c9ebee6eac7e4
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57239129"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493776"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスター上での階層制御 HDFS を構成します。
 
-HDFS の階層制御では、HDFS ファイル システムの HDFS と互換性のある、外部にマウントする機能を提供します。 この記事では、HDFS の SQL Server 2019 ビッグ データ クラスター (プレビュー) の階層化を構成する方法について説明します。 この時点で、この記事の焦点である Azure Data Lake ストレージ Gen2 への接続を CTP 2.3 はのみサポートします。
+HDFS の階層制御では、HDFS ファイル システムの HDFS と互換性のある、外部にマウントする機能を提供します。 この記事では、HDFS の SQL Server 2019 ビッグ データ クラスター (プレビュー) の階層化を構成する方法について説明します。 この時点で、この記事の焦点である Azure Data Lake ストレージ Gen2 への接続を CTP 2.4 はのみサポートします。
 
 ## <a name="hdfs-tiering-overview"></a>HDFS の階層化の概要
 
@@ -78,7 +78,7 @@ HDFS の階層制御では、HDFS ファイル システムの HDFS と互換性
 1. 使用して Azure でリモートの HDFS の記憶域をマウント**mssqlctl ストレージ マウント作成**です。 次のコマンドを実行する前に、プレース ホルダーの値に置き換えます。
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --local-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -97,7 +97,7 @@ mssqlctl storage mount status
 HDFS 内の特定のパスでのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
 ```bash
-mssqlctl storage mount status --local-path <mount-path-in-hdfs>
+mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> マウントを削除します。
@@ -105,7 +105,7 @@ mssqlctl storage mount status --local-path <mount-path-in-hdfs>
 マウントを削除するには、使用、 **mssqlctl ストレージ マウント delete**コマンド、および HDFS のマウント パスを指定します。
 
 ```bash
-mssqlctl storage mount delete --local-path <mount-path-in-hdfs>
+mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="issues"></a> 既知の問題と制限事項

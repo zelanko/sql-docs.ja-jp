@@ -16,17 +16,17 @@ ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30b9216b2c33998b45a07c0b16d58f1b9c1139be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819118"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493464"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  格納されているレプリケーション エージェント プロファイルのパラメーターの変更、 [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)システム テーブル。 このストアド プロシージャは、エージェントが動作しているディストリビューター側で任意のデータベースについて実行されます。  
+  格納されているレプリケーション エージェント プロファイルのパラメーターの変更、 [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)システム テーブル。 このストアド プロシージャは、エージェントが実行されている、任意のデータベース上のディストリビューターで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,11 +38,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@profile_id=**] *profile_id*、  
- プロファイルの ID を指定します。 *profile_id*は**int**、既定値はありません。  
+`[ @profile_id = ] profile_id,` プロファイルの ID です。 *profile_id*は**int**、既定値はありません。  
   
- [  **@parameter_name=**] **'***parameter_name***'**  
- パラメーターの名前を指定します。 *parameter_name*は**sysname**、既定値はありません。 システム プロファイルの場合、変更できるパラメーターはエージェントの種類によって異なります。 このエージェントの種類を確認する*profile_id*表す、検索、 *profile_id*内の列、 **Msagent_profiles**テーブルとに注意してください、 *agent_type*値。  
+`[ @parameter_name = ] 'parameter_name'` パラメーターの名前です。 *parameter_name*は**sysname**、既定値はありません。 システム プロファイルの場合は、変更可能なパラメーターはエージェントの種類によって異なります。 このエージェントの種類を確認する*profile_id*表す、検索、 *profile_id*内の列、 **Msagent_profiles**テーブルとに注意してください、 *agent_type*値。  
   
 > [!NOTE]  
 >  パラメーターがサポートされている場合、指定された*agent_type*エージェントのプロファイルが定義されていませんが、エラーが返されます。 実行する必要があります、エージェントのプロファイルにパラメーターを追加する[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)します。  
@@ -135,7 +133,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  マージ エージェント (*agent_type*=**4**)、プロファイルで定義されているの場合は、次のプロパティを変更できます。  
   
--   **してください。**  
+-   **AltSnapshotFolder**  
   
 -   **BcpBatchSize**  
   
@@ -243,8 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  指定されたプロファイルに定義されているどのようなパラメーターを表示するには、次のように実行します。 **sp_help_agent_profile**とに注意してください、 *profile_name*に関連付けられている、 *profile_id*します。 適切な*profile_id*、次回の実行**sp_help_agent_parameters**を使用している*profile_id*プロファイルに関連付けられたパラメーターを表示します。 パラメーターは、実行することによって、プロファイルに追加できます[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)します。  
   
- [  **@parameter_value=**] **'***parameter_value***'**  
- 新しいパラメーターの値です。 *parameter_value*は**nvarchar (255)**、既定値はありません。  
+`[ @parameter_value = ] 'parameter_value'` 新しいパラメーターの値です。 *parameter_value*は**nvarchar (255)**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

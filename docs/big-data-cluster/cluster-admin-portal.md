@@ -5,17 +5,17 @@ description: クラスターの管理ポータルを使用して、SQL Server 20
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9048de9c5f1a1241a6d7049f8eeb15efef87cabb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 2ed73006850a5174c6df07ed09302ea48decf6d2
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017858"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492864"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>クラスターの管理ポータルを使用してビッグ データの SQL Server クラスターを監視する方法
 
@@ -35,7 +35,7 @@ ms.locfileid: "57017858"
 コント ローラーのポッドが実行されている展開の監視、クラスターの管理ポータルを使用できます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `endpoint-service-proxy` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
 
 > [!NOTE]
-> CTP 2.3 以降はセキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするときです。
+> CTP 2.4 はセキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするときです。
 
 ## <a name="overview"></a>概要
 

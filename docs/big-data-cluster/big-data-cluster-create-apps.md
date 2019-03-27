@@ -5,17 +5,17 @@ description: SQL Server 2019 ビッグ データ クラスター (プレビュ�
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9666192d667a5a2592ab32f346338d1b9963fa3d
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: acd7bef7219827eb7a4666d33d6e8477a522e268
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477657"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492804"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリをデプロイする方法
 
@@ -42,7 +42,7 @@ ms.locfileid: "58477657"
 
 ## <a name="capabilities"></a>Capabilities
 
-SQL Server 2019 (プレビュー) CTP 2.3 作成、削除、説明、初期化では、一覧を実行し、アプリケーションを更新します。 次の表は、アプリケーションの展開コマンドで使用できる**mssqlctl**します。
+SQL Server 2019 (プレビュー) CTP 2.4 作成、削除、説明、初期化では、一覧を実行し、アプリケーションを更新します。 次の表は、アプリケーションの展開コマンドで使用できる**mssqlctl**します。
 
 |コマンド |説明 |
 |:---|:---|

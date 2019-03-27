@@ -16,17 +16,17 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ad6e8fe499e3ffe57a745cfb924bdc792938dd9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810944"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493514"
 ---
-# <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
+# <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在追跡テーブルに含まれていないソース テーブル内の行への参照をマージ追跡テーブルに挿入します。 このオプションを使用して一括で読み込んだ大量のデータを使用して**bcp**がマージ追跡トリガーは起動しません。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  現在追跡テーブルに含まれていないソース テーブル内の行への参照をマージ追跡テーブルに挿入します。 このオプションを使用して一括で読み込んだ大量のデータを使用して**bcp**がマージ追跡トリガーは起動しません。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,14 +40,11 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@table_name=**] **'**_table_name_**'**  
- テーブルの名前を指定します。 *table_name*は**sysname**、既定値はありません。  
+`[ @table_name = ] 'table_name'` テーブルの名前です。 *table_name*は**sysname**、既定値はありません。  
   
- [  **@owner_name=**] **'**_owner_name_**'**  
- テーブルの所有者の名前を指定します。 *owner_name*は**sysname**、既定値は NULL です。  
+`[ @owner_name = ] 'owner_name'` テーブルの所有者の名前です。 *owner_name*は**sysname**、既定値は NULL です。  
   
- [  **@filter_clause=** ] **'**_filter_clause_**'**  
- 新たに読み込まれたデータのうち、どの行をマージ追跡テーブルに追加するかを制御するフィルター句を指定します。 *filter_clause*は**nvarchar (4000)** 既定値は NULL です。 場合*filter_clause*は**null**、すべての一括が読み込まれた行が追加されます。  
+`[ @filter_clause = ] 'filter_clause'` 新しく読み込まれたデータの行をマージ追跡テーブルに追加するかを制御するフィルター句を指定します。 *filter_clause*は**nvarchar (4000)** 既定値は NULL です。 場合*filter_clause*は**null**、すべての一括が読み込まれた行が追加されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

@@ -5,17 +5,17 @@ description: このチュートリアルでは、sp_data_pool_table_insert_data 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 086db0838eb02b0e83ffbb2f00b92d39e1e4d202
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 0a3e39e5eb38f44c439dabd9e4fc3bdcb23d283a
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017670"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493814"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>チュートリアル:Transact SQL を使用した SQL Server のデータ プールにデータを取り込む
 
@@ -69,7 +69,7 @@ ms.locfileid: "57017670"
       );
    ```
   
-1. CTP 2.3 以降でのデータ プールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
+1. CTP 2.4、データのプールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
 
 ## <a name="load-data"></a>データの読み込み
 

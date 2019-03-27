@@ -16,17 +16,17 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c87a0968f2541507c59384bfad82780377301dc7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128222"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493064"
 ---
-# <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
+# <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  プル サブスクリプションの情報を更新します。 このストアド プロシージャは、サブスクライバー側でサブスクリプション データベースについて実行されます。  
+  プル サブスクリプションの情報を更新します。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,68 +43,62 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=**] **'**_パブリッシャー_**'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャー データベースの名前です。 *publisher_db* は **sysname** 、既定値はありません。  
   
- [  **@publication=**] **'**_パブリケーション_**'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@property=**] **'**_プロパティ_**'**  
- 変更するプロパティを指定します。 *プロパティ*は**sysname**します。  
+`[ @property = ] 'property'` 変更するプロパティです。 *プロパティ*は**sysname**します。  
   
- [  **@value=**] **'**_値_**'**  
- プロパティの新しい値を指定します。 *値*は**nvarchar (1000)**、既定値はありません。  
+`[ @value = ] 'value'` プロパティの新しい値です。 *値*は**nvarchar (1000)**、既定値はありません。  
   
- [  **@publication_type =** ] *publication_type*  
- パブリケーションのレプリケーションの種類を指定します。 *publication_type*は**int**、これらの値のいずれかを指定できます。  
+`[ @publication_type = ] publication_type` パブリケーションのレプリケーションの種類を指定します。 *publication_type*は**int**、これらの値のいずれかを指定できます。  
   
 |値|パブリケーションの種類|  
 |-----------|----------------------|  
 |**0**|トランザクション|  
 |**1**|スナップショット|  
 |**2**|Merge|  
-|NULL (既定値)|この場合、レプリケーションによってパブリケーションの種類が決まります。 このストアド プロシージャでは複数のテーブルを検索する必要があるため、このオプションを指定すると、パブリケーションの種類を直接指定したときに比べて動作が遅くなります。|  
+|NULL (既定値)|レプリケーションは、パブリケーションの種類を決定します。 このストアド プロシージャでは複数のテーブルを検索する必要があるため、このオプションを指定すると、パブリケーションの種類を直接指定したときに比べて動作が遅くなります。|  
   
- 次の表に、アーティクルのプロパティと、それぞれの値を示します。  
+ このテーブルには、記事、これらのプロパティの値のプロパティについて説明します。  
   
 |プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
-|**alt_snapshot_folder**||スナップショットの代替フォルダーの場所を指定します。 NULL に設定すると、スナップショット ファイルはパブリッシャーで指定された既定の場所から取得されます。|  
+|**alt_snapshot_folder**||スナップショットの代替フォルダーの場所を指定します。 かどうかは NULL に設定すると、スナップショット ファイルから取得されます、発行元によって指定された既定の場所。|  
 |**distrib_job_login**||エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのログイン。|  
 |**distrib_job_password**||エージェントを実行する Windows アカウントのパスワード。|  
-|**distributor_login**||ディストリビューター ログイン。|  
+|**distributor_login**||ディストリビューター ログインします。|  
 |**distributor_password**||ディストリビューター パスワード。|  
-|**distributor_security_mode**|**1**|ディストリビューターに接続するときに Windows 認証を使用。|  
-||**0**|ディストリビューターに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用。|  
-|**dts_package_name**||SQL Server 2000 データ変換サービス (DTS) パッケージの名前。 トランザクション パブリケーションまたはスナップショット パブリケーションの場合のみ、この値を指定できます。|  
-|**dts_package_password**||パッケージのパスワードを指定します。 *dts_package_password*は**sysname**既定値は null の場合、変更せずに残すパスワード プロパティが指定します。<br /><br /> 注:DTS パッケージにはパスワードが必要です。<br /><br /> トランザクション パブリケーションまたはスナップショット パブリケーションの場合のみ、この値を指定できます。|  
-|**dts_package_location**||DTS パッケージが格納されている場所です。 トランザクション パブリケーションまたはスナップショット パブリケーションの場合のみ、この値を指定できます。|  
-|**dynamic_snapshot_location**||スナップショット ファイルが保存されるフォルダーへのパス。 マージ パブリケーションの場合のみ、この値を指定できます。|  
+|**distributor_security_mode**|**1**|ディストリビューターに接続するときに、Windows 認証を使用します。|  
+||**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディストリビューターに接続するときに認証します。|  
+|**dts_package_name**||SQL Server 2000 データ変換サービス (DTS) パッケージの名前。 この値は、パブリケーションがトランザクションまたはスナップショットのかどうかにのみ指定します。|  
+|**dts_package_password**||パッケージのパスワードを指定します。 *dts_package_password*は**sysname**既定値は null の場合、変更せずに残すパスワード プロパティが指定します。<br /><br /> 注:DTS パッケージには、パスワードが必要です。<br /><br /> この値は、パブリケーションがトランザクションまたはスナップショットのかどうかにのみ指定します。|  
+|**dts_package_location**||DTS パッケージが格納されている場所です。 この値は、パブリケーションがトランザクションまたはスナップショットのかどうかにのみ指定します。|  
+|**dynamic_snapshot_location**||スナップショット ファイルが保存されるフォルダーへのパスを指定します。 この値は、パブリケーションの場合、マージ パブリケーションのみを指定します。|  
 |**ftp_address**||これは旧バージョンとの互換性のためにだけ用意されています。|  
 |**ftp_login**||これは旧バージョンとの互換性のためにだけ用意されています。|  
 |**ftp_password**||これは旧バージョンとの互換性のためにだけ用意されています。|  
 |**ftp_port**||これは旧バージョンとの互換性のためにだけ用意されています。|  
-|**ホスト名**||パブリッシャーに接続するときに使用されるホスト名。|  
-|**internet_login**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージ エージェントが使用するログインです。|  
-|**internet_password**||基本認証を使用して Web 同期をホストしている Web サーバーに、マージ エージェントが接続するときのパスワード。|  
-|**internet_security_mode**|**1**|Web 同期に Windows 統合認証を使用。 基本認証を Web 認証と共に使用することをお勧めします。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。|  
+|**hostname**||ホスト名がパブリッシャーに接続するときに使用します。|  
+|**internet_login**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときに、マージ エージェントを使用してログインします。|  
+|**internet_password**||マージ エージェントが基本認証を使用して Web 同期をホストしている Web サーバーに接続するときに使用するパスワード。|  
+|**internet_security_mode**|**1**|Web 同期には、Windows 統合認証を使用します。 Web 同期で基本認証を使用することをお勧めします。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。|  
 ||**0**|Web 同期に基本認証を使用。<br /><br /> 注:Web 同期には、Web サーバーへの SSL 接続が必要です。|  
-|**internet_timeout**||Web 同期要求が期限切れとなるまでの時間 (秒単位)。|  
-|**internet_url**||Web 同期中にレプリケーション リスナーの位置を表す URL です。|  
-|**merge_job_login**||エージェントを実行する Windows アカウントのログイン。|  
+|**internet_timeout**||Web 同期要求の有効期限が切れるまでの秒数で、時間の長さ。|  
+|**internet_url**||Web 同期レプリケーション リスナーの位置を表す URL です。|  
+|**merge_job_login**||エージェントを実行する Windows アカウントにログインします。|  
 |**merge_job_password**||エージェントを実行する Windows アカウントのパスワード。|  
 |**publisher_login**||パブリッシャーのログイン。 変更する*publisher_login*はマージ パブリケーションに対するサブスクリプションの場合のみ使用します。|  
 |**publisher_password**||パブリッシャーのパスワード。 変更する*publisher_password*はマージ パブリケーションに対するサブスクリプションの場合のみ使用します。|  
 |**publisher_security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。 変更する*publisher_security_mode*はマージ パブリケーションに対するサブスクリプションの場合のみ使用します。|  
-||**0**|パブリッシャーに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用。|  
-|**@use_ftp**|**true**|標準のプロトコルの代わりに FTP を使用してスナップショットを取得。|  
+||**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証します。|  
+|**use_ftp**|**true**|標準のプロトコルの代わりに FTP を使用して、スナップショットを取得します。|  
 ||**false**|標準のプロトコルを使用してスナップショットを取得。|  
-|**@use_web_sync**|**true**|Web 同期を有効にする。|  
-||**false**|Web 同期を無効にする。|  
-|**working_directory**||スナップショットのファイル転送でファイル転送プロトコル (FTP) を使用する場合、パブリケーションのデータとスキーマ ファイルを一時的に保存するために使用する作業ディレクトリの名前。|  
+|**use_web_sync**|**true**|Web 同期を有効にします。|  
+||**false**|Web 同期を無効にします。|  
+|**working_directory**||ファイル転送プロトコル (FTP) を使用してスナップショット ファイルを転送する場合、パブリケーションのデータとスキーマ ファイルを一時的に格納するために使用する作業ディレクトリの名前。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

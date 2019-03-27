@@ -1,7 +1,7 @@
 ---
 title: SQL Server Machine Learning Services の新機能 - |Microsoft Docs
 description: 新しい機能のお知らせの各リリースの SQL Server 2016 R Services、R Server、SQL Server 2017 Machine Learning サービス。
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64e98073dabd490965fb5d582102a6eb962c5a13
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: be7ecb1f4a1a42c4018e6a549a7ad2ea76b04ef5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161830"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494134"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の新機能新機能
 
@@ -30,6 +30,8 @@ ms.locfileid: "58161830"
 
 | リリース | 機能更新プログラム |
 |---------|----------------|
+| CTP 2.4 | Linux サポート[外部ライブラリの作成 (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md) R、Python、および Java の。 |
+| | Java インタープリターの場所を指定する環境変数がから変更`JAVA_HOME`に`JRE_HOME`します。 |
 | CTP 2.3 | サポートする新しい[Java データ型](java/java-sql-datatypes.md)します。 |
 | | Windows の場合のみ、上の Java コードを外部ライブラリを使用して、アクセスできる、[外部ライブラリの作成 (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md)ステートメント。 同等の機能は今後の CTP での Linux で利用可能になります。 詳細情報:[SQL Server から Java を呼び出す方法](java/howto-call-java-from-sql.md)します。 |
 | | Windows の場合のみでの Python コードを外部ライブラリを使用して、アクセスできる、[外部ライブラリの作成 (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md)ステートメント。 同等の機能は今後の CTP での Linux で利用可能になります。 |

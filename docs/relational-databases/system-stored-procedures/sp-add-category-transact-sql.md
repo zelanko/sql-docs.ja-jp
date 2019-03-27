@@ -18,14 +18,14 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 295f29b86e53a8d58622e4c79c1b36734acdbe3e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ac78863fd2bad39675bfe3f486a8a88a8d026e37
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591016"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492984"
 ---
-# <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
+# <a name="spaddcategory-transact-sql"></a>sp_add_category (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定されたジョブ、警告、またはオペレーターのカテゴリをサーバーに追加します。  
@@ -43,26 +43,23 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@class =** ] **'**_クラス_**'**  
- 追加するカテゴリのクラスを指定します。 *クラス*は**varchar (8)** でジョブの既定値は、これらの値のいずれかを指定できます。  
+`[ @class = ] 'class'` 追加するカテゴリのクラス。 *クラス*は**varchar (8)** でジョブの既定値は、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|JOB|ジョブ カテゴリを追加します。|  
-|ALERT|警告カテゴリを追加します。|  
-|OPERATOR|オペレーター カテゴリを追加します。|  
+|ジョブ|ジョブ カテゴリを追加します。|  
+|ALERT|アラートのカテゴリを追加します。|  
+|演算子|オペレーター カテゴリを追加します。|  
   
- [  **@type =** ] **'**_型_**'**  
- 追加するカテゴリの種類を指定します。 *型*は**varchar (12)** の既定値を持つ**ローカル**、これらの値のいずれかを指定できます。  
+`[ @type = ] 'type'` 追加するカテゴリの種類。 *型*は**varchar (12)** の既定値を持つ**ローカル**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |LOCAL|ローカル ジョブ カテゴリ|  
-|マルチ サーバー|マルチサーバー ジョブ カテゴリ|  
+|マルチ サーバー|マルチ サーバー ジョブ カテゴリ。|  
 |なし|JOB 以外のクラスのカテゴリ**します。**|  
   
- [  **@name =** ] **'**_名前_**'**  
- 追加するカテゴリの名前を指定します。 名前は指定したクラス内で一意であることが必要です。 *名前*は**sysname**、既定値はありません。  
+`[ @name = ] 'name'` 追加するカテゴリの名前。 名前は、指定したクラス内で一意である必要があります。 *名前*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

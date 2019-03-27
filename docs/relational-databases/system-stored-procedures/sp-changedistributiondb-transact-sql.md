@@ -16,17 +16,17 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 031fc14eba8cdea8cdbff41d18d6e6ab6bc42a68
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2966a784f647d402b849d5899b76b0614122b932
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133852"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492494"
 ---
-# <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
+# <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ディストリビューション データベースのプロパティを変更します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  ディストリビューション データベースのプロパティを変更します。 このストアド プロシージャは、ディストリビューターのすべてのデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,21 +40,18 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@database=**] **'**_データベース_**'**  
- ディストリビューション データベースの名前を指定します。 *データベース*は**sysname**、既定値はありません。  
+`[ @database = ] 'database'` ディストリビューション データベースの名前です。 *データベース*は**sysname**、既定値はありません。  
   
- [  **@property=**] **'**_プロパティ_**'**  
- 指定されたデータベースの変更の対象となるプロパティです。 *プロパティ*は**sysname**、これらの値のいずれかを指定できます。  
+`[ @property = ] 'property'` 特定のデータベースを変更するプロパティです。 *プロパティ*は**sysname**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**history_retention**|履歴テーブルの保持期間です。|  
-|**max_distretention**|ディストリビューションの最長保持期間です。|  
-|**min_distretention**|ディストリビューションの最短保持期間です。|  
+|**max_distretention**|最大ディストリビューション保有期間。|  
+|**min_distretention**|ディストリビューションの最小保有期間。|  
 |NULL (既定値)|使用可能なすべて*プロパティ*値が出力されます。|  
   
- [  **@value=**] **'**_値_**'**  
- 指定したプロパティの新しい値です。 *値*は**nvarchar (255)**、既定値は NULL です。  
+`[ @value = ] 'value'` 指定したプロパティの新しい値です。 *値*は**nvarchar (255)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

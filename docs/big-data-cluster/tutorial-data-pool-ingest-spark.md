@@ -5,17 +5,17 @@ description: このチュートリアルでは、Azure Data Studio で Spark ジ
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1611a8b0513e8f1a9e50d3cc612b114c88698df5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017738"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491905"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>チュートリアル:Spark ジョブの SQL Server のデータ プールにデータを取り込む
 
@@ -49,7 +49,15 @@ ms.locfileid: "57017738"
 
    ![SQL Server マスター インスタンスのクエリ](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
-1. という名前の外部テーブルを作成**web_clickstreams_spark_results**データ プールにします。 `SqlDataPool`データ ソースは、ビッグ データ クラスターのマスター インスタンスから使用できる特殊なデータ ソースの種類。
+1. 存在しない場合は、データのプールに外部データ ソースを作成します。
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. という名前の外部テーブルを作成**web_clickstreams_spark_results**データ プールにします。
 
    ```sql
    USE Sales
@@ -64,7 +72,7 @@ ms.locfileid: "57017738"
       );
    ```
   
-1. CTP 2.3 以降でのデータ プールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
+1. CTP 2.4、データのプールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
 
 ## <a name="start-a-spark-streaming-job"></a>Spark ストリーミングのジョブを開始します。
 

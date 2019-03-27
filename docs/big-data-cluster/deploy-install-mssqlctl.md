@@ -5,16 +5,16 @@ description: インストールして、SQL Server 2019 ビッグ データ ク�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a355d8281acf02919f559f8ce9d4f33c923f5168
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: 8aadf4969b2232ae53b98a632b9c8220a300fe4e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756627"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494124"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスターを管理する mssqlctl をインストールします。
 
@@ -37,18 +37,21 @@ ms.locfileid: "57756627"
 1. 以前のリリースがあれば**mssqlctl**をインストールすることが重要アンインストール**mssqlctl**最初、最新バージョンをインストールする前にします。
 
    CTP 2.2 またはそれ以下のバージョンに対応する unisntalling mssqlctl をする場合は次のコマンドを実行します。
+
    ```powershell
    pip3 uninstall mssqlctl
    ```
-   
-   CTP2.3 または高い実行。
+
+   CTP2.3 または高い実行 (置換`ctp-2.3`バージョンをアンインストールする mssqlctl のコマンドで)。
+
    ```powershell
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
+
 1. インストール**mssqlctl**次のコマンドを使用します。
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Linux mssqlctl のインストール
@@ -72,11 +75,13 @@ Linux は、Python 3.5 をインストールしてから pip をアップグレ�
 1. 以前のリリースがあれば**mssqlctl**をインストールすることが重要アンインストール**mssqlctl**最初、最新バージョンをインストールする前にします。
 
    CTP 2.2 またはそれ以下のバージョンに対応する unisntalling mssqlctl をする場合は次のコマンドを実行します。
+
    ```bash
    pip3 uninstall mssqlctl
    ```
-   
-   CTP2.3 または高い実行。
+
+   CTP2.3 または高い実行 (置換`ctp-2.3`バージョンをアンインストールする mssqlctl のコマンドで)。
+
    ```bash
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
@@ -84,7 +89,7 @@ Linux は、Python 3.5 をインストールしてから pip をアップグレ�
 1. インストール**mssqlctl**次のコマンドを使用します。
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]

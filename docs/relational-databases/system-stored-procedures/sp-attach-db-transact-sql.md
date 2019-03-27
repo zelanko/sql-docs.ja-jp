@@ -18,17 +18,17 @@ ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b0a6fdf71643f438201aae39010f25d2e43d15c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588836"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494354"
 ---
-# <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
+# <a name="spattachdb-transact-sql"></a>sp_attach_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベースをサーバーにアタッチします。  
+  サーバーにデータベースをアタッチします。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] CREATE DATABASE を使用することをお勧めします。 *database_name* FOR ATTACH 代わりにします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
@@ -48,11 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@dbname=** ] **'**_dbnam_ **'**  
- サーバーにアタッチされるデータベースの名前を指定します。 名前は一意である必要があります。 *dbname*は**sysname**、既定値は NULL です。  
+`[ @dbname = ] 'dbnam_ '` サーバーに接続するデータベースの名前です。 名前は一意である必要があります。 *dbname*は**sysname**、既定値は NULL です。  
   
- [  **@filename1=** ] **'**_filename_n_**'**  
- データベース ファイルの物理名を、パスも含めて指定します。 *filename_n*は**nvarchar (260)**、既定値は NULL です。 ファイル名は 16 個まで指定できます。 最初のパラメーター名**@filename1**にインクリメント **@filename16**します。 指定するファイルには少なくともプライマリ ファイルが含まれている必要があります。 プライマリ ファイルには、データベース内の他のファイルを参照するシステム テーブルが含まれています。 また、データベースがデタッチされた後で移動したファイルも指定する必要があります。  
+`[ @filename1 = ] 'filename_n'` データベース ファイルのパスを含む、物理名です。 *filename_n*は**nvarchar (260)**、既定値は NULL です。 ファイル名は 16 個まで指定できます。 最初のパラメーター名**@filename1**にインクリメント **@filename16**します。 ファイル名の一覧は、少なくともプライマリ ファイルを含める必要があります。 プライマリ ファイルには、データベース内の他のファイルをポイントしているシステム テーブルが含まれています。 一覧には、データベースをデタッチした後で移動したファイルも指定する必要があります。  
   
 > [!NOTE]  
 >  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
@@ -68,7 +66,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="remarks"></a>コメント  
  **Sp_attach_db**ストアド プロシージャは、明示的なを使用して、データベース サーバーからデタッチされたデータベースでのみ実行する必要があります**sp_detach_db**オペレーション データベース、またはコピーします。 16 ファイル以上を指定する必要が場合は、CREATE DATABASE を使用して*database_name* FOR ATTACH または CREATE DATABASE *database_name* for_attach_rebuild_log を使用します。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
   
- 指定されていないファイルは、最後に指定された場所にあることが想定されます。 異なる場所にあるファイルを使用するには、新しい場所を指定する必要があります。  
+ 指定されていないファイルは、その最後の既知の場所にあると見なされます。 異なる場所にあるファイルを使用するには、新しい場所を指定する必要があります。  
   
  新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成したデータベースは、それ以前のバージョンでアタッチすることはできません。  
   
@@ -89,7 +87,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  データベースをアタッチするときにアクセス許可を処理する方法については、次を参照してください。 [CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] から現在のサーバーにファイルをアタッチします。  
+ 次の例からのファイルをアタッチする[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]現在のサーバーにします。  
   
 ```  
 EXEC sp_attach_db @dbname = N'AdventureWorks2012',   

@@ -18,12 +18,12 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691410"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493256"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@dbname=**] **'***dbname***'**  
- 確認するデータベースを指定します。 *dbname*は**sysname**します。  
+`[ @dbname = ] 'dbname'` 確認するデータベースを指定します。 *dbname*は**sysname**します。  
   
- [  **@autofix=**] **'auto'**  
- データベースとすべてのデータベース オブジェクトの所有権をシステム管理者に与え、ユーザー作成のデータベース ユーザーと既定値以外の権限を削除します。 *自動*は**nvarchar (4)**、既定値は NULL です。  
+`[ @autofix = ] 'auto'` システム管理者に、データベースとすべてのデータベース オブジェクトの所有権を与え、ユーザーが作成したデータベース ユーザーと既定以外の権限を削除します。 *自動*は**nvarchar (4)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -56,7 +54,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="remarks"></a>コメント  
  データベースが正しく構成されている場合**sp_certify_removable**次を実行します。  
   
--   データベースをオフラインに設定し、ファイルをコピーできるようにする。  
+-   ファイルをコピーできるように、データベースをオフラインに設定します。  
   
 -   すべてのテーブルに関する統計を更新し、所有権やユーザーに関する問題をレポートする。  
   
@@ -66,21 +64,21 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  実行する場合**sp_certify_removable**せず、**自動**値とは、次の条件のいずれかに関する情報を返します。  
   
--   システム管理者がデータベース所有者ではない。  
+-   システム管理者は、データベース所有者ではありません。  
   
--   ユーザーが作成したユーザーが存在する。  
+-   すべてのユーザーが作成したユーザーが存在します。  
   
--   システム管理者がデータベースのすべてのオブジェクトを所有していない。  
+-   システム管理者は、データベース内のすべてのオブジェクトを所有していません。  
   
 -   既定値以外の権限が与えられている。  
   
- これらの問題は次の方法で解決できます。  
+ 次の方法では、これらの条件を修正できます。  
   
 -   使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ツールと手順、および実行し**sp_certify_removable**もう一度です。  
   
 -   実行するだけで**sp_certify_removable**で、**自動**値。  
   
- このストアド プロシージャでは、ユーザーとユーザーの権限だけがチェックされます。 データベースにはグループを追加でき、そのグループに権限を与えることができます。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
+ このストアド プロシージャが、ユーザーおよびユーザーのアクセス許可のチェックだけに注意してください。 データベースにはグループを追加でき、そのグループに権限を与えることができます。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
   
 ## <a name="permissions"></a>アクセス許可  
  実行のアクセス許可がのメンバーに制限されます、 **sysadmin**固定サーバー ロール。  

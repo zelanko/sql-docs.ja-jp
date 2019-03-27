@@ -16,17 +16,17 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: edb5fc6c24ce8e59c82b35ac10e6dddb67adeaf4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ab2d928770a8e10c04e03aa2ccb5f36374fe1227
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752154"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493605"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  レプリケーション エージェントの新しいプロファイルを作成します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  レプリケーション エージェントの新しいプロファイルを作成します。 このストアド プロシージャは、ディストリビューターのすべてのデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,14 +43,11 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@profile_id=** ] *profile_id*  
- 新たに挿入されたプロファイルに関連付けられている ID を指定します。 *profile_id*は**int**は省略可能な出力パラメーター。 指定した場合、値が新しいプロファイル ID として設定されます。  
+`[ @profile_id = ] profile_id` 新しく挿入されたプロファイルに関連付けられている ID。 *profile_id*は**int**は省略可能な出力パラメーター。 指定すると場合、値は、新しいプロファイル ID に設定されます。  
   
- [  **@profile_name=** ] **'**_profile_name_**'**  
- プロファイルの名前を指定します。 *profile_name*は**sysname**、既定値はありません。  
+`[ @profile_name = ] 'profile_name'` プロファイルの名前です。 *profile_name*は**sysname**、既定値はありません。  
   
- [  **@agent_type=** ] **'**_agent_type_**'**  
- レプリケーション エージェントの種類です。 *agent_type*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
+`[ @agent_type = ] 'agent_type'` レプリケーション エージェントの種類です。 *agent_type*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -60,16 +57,13 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 |**4**|[マージ エージェント]|  
 |**9**|キュー リーダー エージェント (Queue Reader Agent)|  
   
- [  **@profile_type=** ] *@profile_type*  
- プロファイルの種類です。*@profile_type*は**int**、既定値は**1**します。  
+`[ @profile_type = ] profile_type` プロファイルの種類です。*@profile_type*は**int**、既定値は**1**します。  
   
  **0**システム プロファイルを示します。 **1**カスタム プロファイルを示します。 このストアド プロシージャを使用してカスタム プロファイルだけを作成することができます。したがって、唯一の有効な値は**1**します。 のみ[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム プロファイルを作成します。  
   
- [  **@description=** ] **'**_説明_**'**  
- プロファイルの説明を指定します。 *説明*は**nvarchar (3000)**、既定値はありません。  
+`[ @description = ] 'description'` プロファイルの説明。 *説明*は**nvarchar (3000)**、既定値はありません。  
   
- [  **@default=** ]*既定*  
- 既定のプロファイルかどうかを示します*agent_type * *。* *既定*は**ビット**、既定値は**0**します。 **1**追加されるプロファイルがで指定されたエージェントの新しい既定のプロファイルになることを示します*agent_type*します。  
+`[ @default = ] default` 既定のプロファイルかどうかを示します*agent_type * *。* *既定*は**ビット**、既定値は**0**します。 **1**追加されるプロファイルがで指定されたエージェントの新しい既定のプロファイルになることを示します*agent_type*します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

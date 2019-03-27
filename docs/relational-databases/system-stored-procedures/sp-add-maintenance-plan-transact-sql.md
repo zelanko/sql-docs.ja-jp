@@ -18,20 +18,20 @@ ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18467e53e2edec21ab91e91a0fe912e9382b35d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dea1ce298f9c032b785ced601a0d50d52fbb6f96
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642401"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492904"
 ---
-# <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
+# <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   メンテナンス プランを追加し、プラン ID を返します。  
   
 > [!NOTE]  
->  このストアド プロシージャは、データベース メンテナンス プランと共に使用できます。 ただし、この機能は、このストアド プロシージャを使用しないメンテナンス プランでも実行できます。 このプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
+>  このストアド プロシージャは、データベース メンテナンス プランで使用されます。 この機能は、このストアド プロシージャを使用しないメンテナンス プランに置き換わりました。 このプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -46,8 +46,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@plan_name =**] **'***plan_name***'**  
- 追加するメンテナンス プランの名前を指定します。 *plan_name*は**varchar (128)** します。  
+`[ @plan_name = ] 'plan_name'` 追加するメンテナンス プランの名前を指定します。 *plan_name*は**varchar (128)** します。  
   
  **@plan_id = '** *plan_id* **'**  
  メンテナンス プランの ID を指定します。 *plan_id*は**uniqueidentifier**します。  

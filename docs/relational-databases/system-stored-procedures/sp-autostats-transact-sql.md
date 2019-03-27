@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d628f2b5dffc976e32b15bea08407c5d0740c297
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6264266f85edc1cae0821bbcf81c8c0993dba151
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123993"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492344"
 ---
-# <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
+# <a name="spautostats-transact-sql"></a>sp_autostats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   インデックス、統計オブジェクト、テーブル、またはインデックス付きビューの自動統計更新オプション (AUTO_UPDATE_STATISTICS) を表示または変更します。  
@@ -45,11 +45,9 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@tblname=** ] **'**_table_or_indexed_view_name_**'**  
- AUTO_UPDATE_STATISTICS オプションを表示するテーブルまたはインデックス付きビューの名前を指定します。 *table_or_indexed_view_name*は**nvarchar (776)**、既定値はありません。  
+`[ @tblname = ] 'table_or_indexed_view_name'` テーブルの名前またはインデックス付きビュー、AUTO_UPDATE_STATISTICS オプションを表示します。 *table_or_indexed_view_name*は**nvarchar (776)**、既定値はありません。  
   
- [  **@flagc=** ] **'**_stats_value_**'**  
- AUTO_UPDATE_STATISTICS オプションを次のいずれかの値に更新します。  
+`[ @flagc = ] 'stats_value'` これらの値のいずれかには、AUTO_UPDATE_STATISTICS オプションを更新します。  
   
  **ON** = ON  
   
@@ -57,8 +55,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  ときに*stats_flag*が指定されていない場合、AUTO_UPDATE_STATISTICS の現在の設定を表示します。 *stats_value*は**varchar (10)**、既定値は NULL です。  
   
- [  **@indname=** ] **'**_statistics_name_**'**  
- AUTO_UPDATE_STATISTICS オプションを表示または更新する統計の名前を指定します。 インデックスの統計を表示する場合は、インデックスの名前を使用できます。インデックスの名前は、対応する統計オブジェクトの名前と同じです。  
+`[ @indname = ] 'statistics_name'` 表示またはの AUTO_UPDATE_STATISTICS オプションを更新する統計情報の名前です。 インデックスの統計を表示する場合は、インデックスの名前を使用できます。インデックスの名前は、対応する統計オブジェクトの名前と同じです。  
   
  *statistics_name*は**sysname**、既定値は NULL です。  
   
@@ -73,8 +70,8 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**Index Name**|**varchar(60)**|インデックスまたは統計の名前です。|  
-|**AUTOSTATS**|**varchar (3)**|AUTO_UPDATE_STATISTICS オプションの現在の値。|  
-|**最終更新日**|**datetime**|統計が最後に更新された日付。|  
+|**AUTOSTATS**|**varchar(3)**|AUTO_UPDATE_STATISTICS オプションの現在の値。|  
+|**最終更新日**|**datetime**|最新の統計情報の更新の日付。|  
   
  結果セットのテーブルまたはインデックス付きビューは、AUTO_CREATE_STATISTICS オプションを使用して生成された単一列統計のインデックスに対して作成された統計が含まれていますとで作成された統計情報、 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)ステートメント。  
   
@@ -88,8 +85,8 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-display-the-status-of-all-statistics-on-a-table"></a>A. テーブルのすべての統計の状態を表示する  
- 次の例では、`Product` テーブルのすべての統計の状態を表示します。  
+### <a name="a-display-the-status-of-all-statistics-on-a-table"></a>A. テーブルのすべての統計情報のステータスを表示します。  
+ 次は、のすべての統計情報のステータスを表示します。、`Product`テーブル。  
   
 ```  
 USE AdventureWorks2012;  
@@ -98,7 +95,7 @@ EXEC sp_autostats 'Production.Product';
 GO  
 ```  
   
-### <a name="b-enable-autoupdatestatistics-for-all-statistics-on-a-table"></a>B. テーブルのすべての統計の AUTO_UPDATE_STATISTICS を有効にする  
+### <a name="b-enable-autoupdatestatistics-for-all-statistics-on-a-table"></a>B. テーブルのすべての統計の AUTO_UPDATE_STATISTICS を有効にします。  
  次の例では、`Product` テーブルのすべての統計の AUTO_UPDATE_STATISTICS オプションを有効にします。  
   
 ```  
@@ -109,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-disable-autoupdatestatistics-for-a-specific-index"></a>C. 特定のインデックスの AUTO_UPDATE_STATISTICS を無効にする  
- 次の例では、`AK_Product_Name` テーブルにある `Product` インデックスの AUTO_UPDATE_STATISTICS オプションを無効にします。  
+ 次の例の AUTO_UPDATE_STATISTICS オプションを無効になります、`AK_Product_Name`のインデックス、`Product`テーブル。  
   
 ```  
 USE AdventureWorks2012;  

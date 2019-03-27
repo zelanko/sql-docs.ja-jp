@@ -16,17 +16,17 @@ ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12ba78e62b0441a76cea2b10ebaf13caec767443
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0c637755741332800a1c3eca2b80c9c001b550d3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133902"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492684"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ディストリビューターのプロパティを変更します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  ディストリビューターのプロパティを変更します。 このストアド プロシージャは、ディストリビューターのすべてのデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,16 +39,14 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@property=**] **'**_プロパティ_**'**  
- 対象となるディストリビューターのプロパティを指定します。 *プロパティ*は**sysname**、これらの値のいずれかを指定できます。  
+`[ @property = ] 'property'` ディストリビューターのプロパティです。 *プロパティ*は**sysname**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**heartbeat_interval**|エージェントが進行状況のメッセージをログに記録せずに実行を継続できる最大時間 (分) です。|  
 |NULL (既定値)|使用可能なすべて*プロパティ*値が出力されます。|  
   
- [  **@value=**] **'**_値_**'**  
- 対象となるディストリビューター プロパティの値を指定します。 *値*は**varchar (255)**、既定値は NULL です。  
+`[ @value = ] 'value'` 特定のディストリビューターのプロパティの値です。 *値*は**varchar (255)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
