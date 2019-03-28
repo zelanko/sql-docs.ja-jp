@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/30/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 897f83e7272a47428d696802adf79ff816805486
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: da28d6f0ae423ce9cca0c6d571af944a2d7acd3d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645451"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512039"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server インスタンス内のマシン ラーニング (R および Python) コンポーネントをアップグレードします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ SQL Server 2016 R Services の顧客のバインドが提供更新された R �
 
 コンポーネント |最初のリリース | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
-R 経由で Microsoft R Open (MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R から 3.4.3 |
+R 経由で Microsoft R Open (MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [事前トレーニング済みモデル](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
@@ -65,7 +65,7 @@ R 経由で Microsoft R Open (MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.
 
 コンポーネント |最初のリリース | MLS 9.3 | | | |
 ----------|----------------|---------|-|-|-|-|
-R 経由で Microsoft R Open (MRO) | R 3.3.3 | R から 3.4.3 | | | |
+R 経由で Microsoft R Open (MRO) | R 3.3.3 | R 3.4.3 | | | |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | | | |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | | | |
@@ -228,7 +228,7 @@ SQL Server セットアップによって確立されている R と Python コ�
 
 + [ステップ 1: Microsoft Machine Learning Server からバインド解除します。](#step-1-unbind)
 + [手順 2:インスタンスを元の状態に復元します。](#step-2-restore)
-+ [手順 3:インストールに追加したすべてのパッケージを再インストールします。](#step-3-reinstall-packages)
++ [ステップ 3:インストールに追加したすべてのパッケージを再インストールします。](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 

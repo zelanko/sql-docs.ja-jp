@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/28/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a00a91564cff37669f92cdfb4cba04fb3ada26fd
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 911086beaaaeb28a036a764e066402d7ba6f1da7
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732059"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510879"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Machine Learning Server (スタンドアロン) または SQL Server セットアップを使用して R Server (スタンドアロンを) インストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -208,18 +208,18 @@ R と Python の開発では、同じコンピューター上の複数のバー�
 
 開発 IDE はセットアップの一部としてインストールされていません。 開発環境を構成する方法の詳細については、次を参照してください。 [R tools セットアップ](../r/set-up-a-data-science-client.md)と[Python ツールのセットアップ](../python/setup-python-client-tools-sql.md)します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 R 開発者は、簡単な例で作業を開始し、SQL Server での R の動作の基本を学習します。 次の手順で、次のリンクを参照してください。
 
-+ [チュートリアル:T-SQL での R を実行します。](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [チュートリアル:R の開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル: T-SQL での R を実行します。](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [チュートリアル: R の開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Python の開発者は、これらのチュートリアルに従って、SQL Server で Python を使用する方法を学ぶことができます。
 
-+ [チュートリアル:T-SQL での Python を実行します。](../tutorials/run-python-using-t-sql.md)
-+ [チュートリアル:Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [チュートリアル: T-SQL での Python を実行します。](../tutorials/run-python-using-t-sql.md)
++ [チュートリアル: Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
 実際のシナリオに基づく機械学習の例を表示するを参照してください。 [Machine learning のチュートリアル](../tutorials/machine-learning-services-tutorials.md)します。
