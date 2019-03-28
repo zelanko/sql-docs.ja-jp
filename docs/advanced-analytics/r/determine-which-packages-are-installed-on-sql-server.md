@@ -6,15 +6,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/08/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 47badb15b5f5a2d0eabc63b8fd1be3e83a0caffb
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 3e7dd580cd7d03235be704a7c46e5171a6526ae8
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645371"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512999"
 ---
 #  <a name="get-r-and-python-package-information"></a>R と Python のパッケージ情報を取得します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -196,7 +196,7 @@ print(sys.version)
 '
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [新しい R パッケージのインストール](install-additional-r-packages-on-sql-server.md)
 + [新しい Python パッケージのインストール](../python/install-additional-python-packages-on-sql-server.md)

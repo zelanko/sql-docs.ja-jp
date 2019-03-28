@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0228a3f0719bd6a56142e571323fdf809e534337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61301b0c6916ba11cb54cc0c8d8ab961cc3ae659
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635692"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534324"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -46,8 +46,7 @@ sp_help_fulltext_system_components
  'all'  
  すべてのフルテキスト コンポーネントについての情報を返します。  
   
- [ **@component_type=** ] *component_type*  
- コンポーネントの種類を指定します。 *component_type*次のいずれかを指定できます。  
+`[ @component_type = ] component_type` コンポーネントの種類を指定します。 *component_type*次のいずれかを指定できます。  
   
 -   **wordbreaker**  
   
@@ -59,8 +58,7 @@ sp_help_fulltext_system_components
   
  完全なパスが指定されている場合*param* DLL コンポーネントへの完全パスも指定する必要がありますまたはエラー メッセージが返されます。  
   
- [ **@param=** ] *param*  
- コンポーネントの種類に応じて、ロケール識別子 (LCID)、"." プレフィックス付きのファイル拡張子、プロトコル ハンドラーの完全なコンポーネント名、または DLL コンポーネントへの完全なパスのいずれかを指定します。  
+`[ @param = ] param` コンポーネントの種類に応じてこれは、次のいずれか: ロケール識別子 (LCID) を使用して、ファイル拡張子"."プロトコル ハンドラー、または DLL コンポーネントへの完全なパスの完全なコンポーネント名のプレフィックスします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または (1) の失敗  
@@ -75,7 +73,7 @@ sp_help_fulltext_system_components
 |**clsid**|**uniqueidentifier**|コンポーネントのクラス ID。|  
 |**fullpath**|**nvarchar (256)**|コンポーネントの場所へのパス。<br /><br /> NULL のメンバーでない呼び出し元を = **serveradmin**固定サーバー ロール。|  
 |**version**|**nvarchar(30)**|コンポーネントのバージョンです。|  
-|**manufacturer**|**sysname**|コンポーネントの製造元の名前。|  
+|**manufacturer**|**sysname**|コンポーネントの製造元の名前です。|  
   
  1 つがある場合にのみ、次の結果セットが返される、または 1 つ以上のフルテキスト カタログを使用してが存在する*component_type*します。  
   
@@ -88,7 +86,7 @@ sp_help_fulltext_system_components
  メンバーシップが必要です、**パブリック**ロールです。 ただし、ユーザーには VIEW DEFINITION 権限がある、フルテキスト カタログに関する情報が表示できるのみです。 メンバーのみ、 **serveradmin**固定サーバー ロールが内の値を参照してください、 **fullpath**列。  
   
 ## <a name="remarks"></a>コメント  
- アップグレードの準備をする場合、このメソッドは特に重要です。 特定のデータベース内でこのストアド プロシージャを実行し、その結果を使用して、特定のカタログがアップグレードの影響を受けているかどうかを判断します。  
+ アップグレードを準備するときにこのメソッドは特に重要です。 特定のデータベース内でストアド プロシージャを実行し、出力を使用して、アップグレード、特定のカタログの影響を受けるかどうかを判断します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -101,7 +99,7 @@ GO
 ```  
   
 ### <a name="b-listing-word-breakers"></a>B. ワード ブレーカーを一覧表示する  
- 次の例では、サービス インスタンスに登録されたワード ブレーカーをすべて一覧表示します。  
+ 次の例は、サービス インスタンスに登録されているすべてのワード ブレーカーを一覧表示します。  
   
 ```  
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
@@ -116,10 +114,10 @@ EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param 
 GO  
 ```  
   
- 既定では、このワード ブレーカーはインストールされていないので、結果セットは空になります。  
+ 既定では、このワード ブレーカーがインストールされていないので、結果セットは空。  
   
 ### <a name="d-determining-whether-a-specific-filter-has-been-registered"></a>D. 特定のフィルターが登録されているかどうかを確認する  
- 次の例では、.xdoc コンポーネントのフィルターがシステムに手動でインストールされ、サーバー インスタンスに登録されている場合の、.xdoc コンポーネントのフィルターを一覧表示します。  
+ 次の例では、ことが手動でシステムにインストールされ、サーバー インスタンスに登録されている場合、.xdoc コンポーネントのフィルターが一覧表示します。  
   
 ```  
 EXEC sp_help_fulltext_system_components 'filter', '.xdoc';  

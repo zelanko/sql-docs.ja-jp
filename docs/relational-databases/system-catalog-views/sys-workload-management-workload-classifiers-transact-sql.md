@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 7f655c94d0c77747a4e64c93bf7ad880419aacb4
-ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
+ms.openlocfilehash: f3ce2327034a9c7197e754dac01dfb9e6f9dc3e5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57988754"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509589"
 ---
 # <a name="sysworkloadmanagementworkloadclassifiers-transact-sql-preview"></a>sys.workload_management_workload_classifiers (TRANSACT-SQL) (プレビュー)
 
@@ -28,7 +28,7 @@ ms.locfileid: "57988754"
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|分類器の一意の ID。 値が許容されません。||
-group_name|**sysname**|分類器は、ワークロード グループの名前が割り当てられます。 NULL 値は許可されません。 |静的リソース クラス</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br>動的リソース クラス</br>smallrc</br>mediumrc</br>Largerc</br>xlargerc|
+group_name|**sysname**|分類器は、ワークロード グループの名前が割り当てられます。 NULL 値は許可されません。 |静的リソース クラス</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>動的リソース クラス</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
 NAME|**sysname**|分類子の名前です。 インスタンスに対して一意である必要があります。 NULL 値は許可されません。||
 |importance|**sysname**|このワークロード グループと共有リソースのワークロード グループ間での要求の相対的な重要度です。  分類子で指定された重要度は、ワークロード グループの重要度の設定をオーバーライドします。|低、below_normal、normal、しなく、高 |
 |create_time|**datetime**|分類子が作成された時刻。 NULL 値は許可されません。||

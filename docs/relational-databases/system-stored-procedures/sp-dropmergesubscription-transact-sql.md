@@ -16,17 +16,17 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34ba40387c246fe5f7f2de8dd74197b7cd43c0f5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1b360eed1619317e7ca3092bc47da086c520bf04
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130742"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535554"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マージ パブリケーションのサブスクリプションおよびこれと関連するマージ エージェントを削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  マージ パブリケーションのサブスクリプションおよびこれと関連するマージ エージェントを削除します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,31 +43,25 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=** ] **'**_パブリケーション_**'**  
- パブリケーション名を指定します。 *パブリケーション*は**sysname**、既定値は NULL です。 パブリケーションが存在し、識別子の規則に従っている必要があります。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。 パブリケーションは既に存在し、識別子の規則に準拠している必要があります。  
   
- [  **@subscriber=**] **'**_サブスクライバー_**'**  
- サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は NULL です。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前です。 *サブスクライバー* は **sysname** 、既定値は NULL です。  
   
- [  **@subscriber_db=** ] **'**_@subscriber_db_**'**  
- サブスクリプション データベースの名前です。 *subscription_database*は**sysname**、既定値は NULL です。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクリプション データベースの名前です。 *subscription_database*は**sysname**、既定値は NULL です。  
   
- [  **@subscription_type=** ] **'**_subscription_type_**'**  
- サブスクリプションの種類を指定します。 *subscription_type*は**nvarchar (15)**、これらの値のいずれかを指定できます。  
+`[ @subscription_type = ] 'subscription_type'` サブスクリプションの種類です。 *subscription_type*は**nvarchar (15)**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**すべての**|プッシュ サブスクリプション、プル サブスクリプション、および匿名サブスクリプションです。|  
-|**匿名**|匿名サブスクリプションです。|  
-|**プッシュ**|プッシュ サブスクリプションです。|  
+|**すべての**|プッシュ、プル、および匿名サブスクリプション|  
+|**anonymous**|匿名サブスクリプションです。|  
+|**プッシュ**|サブスクリプションをプッシュします。|  
 |**プル**|プル サブスクリプションです。|  
 |**どちらも**(既定値)|プッシュ サブスクリプションおよびプル サブスクリプションです。|  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- ディストリビューターに接続せずに、このストアド プロシージャを実行するかどうかを指定します。 *ignore_distributor*は**ビット**、既定値は**0**します。 このパラメーターは、ディストリビューターでクリーンアップ タスクを実行せずにサブスクリプションを削除するために使用できます。 また、ディストリビューターを再インストールする必要がある場合も便利です。  
+`[ @ignore_distributor = ] ignore_distributor` ディストリビューターに接続しなくてもこのストアド プロシージャを実行するかどうかを示します。 *ignore_distributor*は**ビット**、既定値は**0**します。 このパラメーターは、ディストリビューターでクリーンアップ タスクを実行せずにサブスクリプションを削除する使用できます。 ディストリビューターを再インストールした場合にも便利です。  
   
- [  **@reserved=** ]*予約済み*  
- 将来の使用に備えて予約されています。 *予約済み*は**ビット**、既定値は**0**します。  
+`[ @reserved = ] reserved` 将来使用するために予約されています。 *予約済み*は**ビット**、既定値は**0**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

@@ -20,17 +20,17 @@ ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cfbf93fc858f52cd35401bd80fe5ede7dee86a3d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591746"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536104"
 ---
-# <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
+# <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のデータベースに、変更データ キャプチャ機能のクリーンアップ ジョブまたはキャプチャ ジョブの構成を変更します。 ジョブの現在の構成を表示するには、クエリ、 [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)テーブル、または使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)します。  
+  現在のデータベースで変更データ キャプチャ クリーンアップまたはキャプチャ ジョブの構成を変更します。 ジョブの現在の構成を表示するには、クエリ、 [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)テーブル、または使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,21 +48,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_type=** ] **'**_job_type_**'**  
- 変更するジョブの種類を指定します。 *job_type*は**nvarchar (20)** 既定値は 'capture' です。 有効な入力値は 'capture' と 'cleanup' です。  
+`[ @job_type = ] 'job_type'` 変更するジョブの種類。 *job_type*は**nvarchar (20)** 既定値は 'capture' です。 有効な入力は 'capture' と 'cleanup' です。  
   
- [ **@maxtrans** ] **=** _max_trans_  
- 各スキャン サイクルで処理する最大トランザクション数を指定します。 *max_trans*は**int**既定値は NULL でないことを示しますこのパラメーターに変更します。 指定する場合、値は正の整数にする必要があります。  
+`[ @maxtrans ] = max_trans_` 各スキャン サイクルで処理するトランザクションの最大数。 *max_trans*は**int**既定値は NULL でないことを示しますこのパラメーターに変更します。 指定した場合、値は正の整数である必要があります。  
   
  *max_trans*はキャプチャ ジョブでのみ有効です。  
   
- [ **@maxscans** ] **=** _max_scans_  
- ログからすべての行を抽出するために実行する最大スキャン サイクル数を指定します。 *max_scans*は**int**既定値は NULL でないことを示しますこのパラメーターに変更します。  
+`[ @maxscans ] = max_scans_` ログからすべての行を抽出するために実行するスキャン サイクルの最大数。 *max_scans*は**int**既定値は NULL でないことを示しますこのパラメーターに変更します。  
   
  *max_scan*はキャプチャ ジョブでのみ有効です。  
   
- [ **@continuous** ] **=**_継続的な_  
- キャプチャ ジョブを連続的に実行するか (1)、1 回だけ実行するか (0) を指定します。 *継続的な*は**ビット**既定値は NULL でないことを示しますこのパラメーターに変更します。  
+`[ @continuous ] = continuous_` キャプチャ ジョブが継続的に実行するかどうかを示します (1) または 1 回だけ実行 (0)。 *継続的な*は**ビット**既定値は NULL でないことを示しますこのパラメーターに変更します。  
   
  ときに*連続*= 1、 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)ジョブは、ログをスキャンし、最大処理 (*max_trans* \* *max_scans*)トランザクション。 指定された秒数待機し、 *polling_interval*次のログ スキャンを開始する前にします。  
   
@@ -74,18 +70,15 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *継続的な*はキャプチャ ジョブでのみ有効です。  
   
- [ **@pollinginterval** ] **=** _polling_interval_  
- ログ スキャン サイクルの間隔を秒数で指定します。 *polling_interval*は**bigint**既定値は NULL でないことを示しますこのパラメーターに変更します。  
+`[ @pollinginterval ] = polling_interval_` ログ スキャン サイクルの間隔の秒数です。 *polling_interval*は**bigint**既定値は NULL でないことを示しますこのパラメーターに変更します。  
   
  *polling_interval*キャプチャに対してのみ有効ですがジョブの場合に*連続*が 1 に設定します。  
   
- [ **@retention** ] **=**_保有期間_  
- 変更行が変更テーブルに保持される分数を指定します。 *保有期間*は**bigint**既定値は NULL でないことを示しますこのパラメーターに変更します。 最大値は 52494800 (100 年) です。 指定する場合、値は正の整数にする必要があります。  
+`[ @retention ] = retention_` 行を変更する時間を分単位では、変更テーブルに保持されます。 *保有期間*は**bigint**既定値は NULL でないことを示しますこのパラメーターに変更します。 最大値は 52494800 (100 年) です。 指定した場合、値は正の整数である必要があります。  
   
  *保有期間*はクリーンアップ ジョブでのみ有効です。  
   
- [  **@threshold=** ] **'**_しきい値を削除_**'**  
- クリーンアップ時に 1 つのステートメントを使用して削除できる最大削除エントリ数を指定します。 *しきい値を削除*は**bigint**既定値は NULL でないことを示しますこのパラメーターに変更します。 *しきい値を削除*はクリーンアップ ジョブでのみ有効です。  
+`[ @threshold = ] 'delete threshold'` クリーンアップ時に 1 つのステートメントを使用して削除できるエントリの削除の最大数。 *しきい値を削除*は**bigint**既定値は NULL でないことを示しますこのパラメーターに変更します。 *しきい値を削除*はクリーンアップ ジョブでのみ有効です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -94,9 +87,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  なし  
   
 ## <a name="remarks"></a>コメント  
- パラメーターを省略すると、関連する値で、 [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)テーブルが更新されません。 明示的に NULL が設定されたパラメーターは、省略されたものとして扱われます。  
+ パラメーターを省略すると、関連する値で、 [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)テーブルが更新されません。 パラメーターは、NULL は、パラメーターを省略したものとして扱われます。 明示的に設定します。  
   
- 指定したパラメーターが、そのジョブの種類では無効であった場合、ステートメントでエラーが発生します。  
+ ジョブの種類には無効なパラメーターを指定すると、ステートメントは失敗します。  
   
  使用して、ジョブが停止されるまで、ジョブへの変更は有効になりません[sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)で再開[sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)します。  
   
@@ -106,7 +99,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-changing-a-capture-job"></a>A. キャプチャ ジョブを変更する  
- 次の例の更新プログラム、 `@job_type`、 `@maxscans`、および`@maxtrans`でキャプチャ ジョブのパラメーター、`AdventureWorks2012`データベース。 キャプチャ ジョブで有効な他のパラメーター (`@continuous` および `@pollinginterval`) については、指定が省略されているため値は変更されません。  
+ 次の例の更新プログラム、 `@job_type`、 `@maxscans`、および`@maxtrans`でキャプチャ ジョブのパラメーター、`AdventureWorks2012`データベース。 キャプチャ ジョブでは、その他の有効なパラメーター`@continuous`と`@pollinginterval`、省略しています。 その値は変更されません。  
   
 ```  
 USE AdventureWorks2012;  
@@ -118,8 +111,8 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-### <a name="b-changing-a-cleanup-job"></a>B. クリーンアップ ジョブを変更する  
- 次の例では、`AdventureWorks2012` データベースのクリーンアップ ジョブを更新します。 この有効なパラメーターをすべてのジョブ以外の種類、  **@threshold**が指定されています。 値**@threshold**は変更されません。  
+### <a name="b-changing-a-cleanup-job"></a>B. クリーンアップ ジョブを変更します。  
+ 次の例のクリーンアップ ジョブの更新、`AdventureWorks2012`データベース。 この有効なパラメーターをすべてのジョブ以外の種類、  **@threshold**が指定されています。 値**@threshold**は変更されません。  
   
 ```  
 USE AdventureWorks2012;  

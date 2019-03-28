@@ -18,17 +18,17 @@ ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4af05ca0f4b4f042bcd2a59cda213f35537592ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cb53d5d24bb450773bd1b421d749f7c8195fccc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743386"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532494"
 ---
-# <a name="spsyspolicysubscribetopolicycategory-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
+# <a name="spsyspolicysubscribetopolicycategory-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category は (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定したデータベースにポリシー カテゴリのサブスクリプションを追加します。  
+  指定したデータベースのポリシー カテゴリ サブスクリプションを追加します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,8 +40,7 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@policy_category=** ] **'***policy_category***'**  
- データベースでサブスクライブするポリシー カテゴリの名前を指定します。 *policy_category*は**sysname**、必要があります。  
+`[ @policy_category = ] 'policy_category'` データベースでサブスクライブするポリシー カテゴリの名前です。 *policy_category*は**sysname**、必要があります。  
   
  値を取得する*policy_category*、msdb.dbo.syspolicy_policy_categories システム ビューをクエリします。  
   

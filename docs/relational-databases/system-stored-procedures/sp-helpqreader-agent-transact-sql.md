@@ -16,12 +16,12 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 772dc410690a4a29811e2a1bd84ec1ac6d12b3fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f40856b20a76abdb7a3788f2564c02fe2e090619
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779654"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529344"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@frompublisher=** ] *frompublisher*  
- ストアド プロシージャをパブリッシャー側とディストリビューター側のどちらで呼び出すかを指定します。 *frompublisher*は bit で、既定値は 0 です。 **1**パブリッシャーで、ストアド プロシージャを呼び出すことを意味し、 **0**ディストリビューターからストアド プロシージャを呼び出すことを意味します。  
+`[ @frompublisher = ] frompublisher` パブリッシャーまたはディストリビューターで、ストアド プロシージャを呼び出すかどうかを指定します。 *frompublisher*は bit で、既定値は 0 です。 **1**パブリッシャーで、ストアド プロシージャを呼び出すことを意味し、 **0**ディストリビューターからストアド プロシージャを呼び出すことを意味します。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -47,7 +46,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 |-----------------|---------------|-----------------|  
 |**id**|**int**|エージェントの ID。|  
 |**name**|**nvarchar(100)**|エージェントの名前。|  
-|**job_id**|**uniqueidentifier**|エージェント ジョブの一意な ID。|  
+|**job_id**|**uniqueidentifier**|エージェント ジョブの一意の ID。|  
 |**job_login**|**nvarchar(512)**|形式で返されるディストリビューション エージェントを実行する Windows アカウントは、*ドメイン*\\*username*します。|  
 |**job_password**|**sysname**|セキュリティ上の理由から、値の**\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
   

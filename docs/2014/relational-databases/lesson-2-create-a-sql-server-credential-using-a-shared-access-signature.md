@@ -11,12 +11,12 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bb40218b2547f14634c060f2c242318101d0ea7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05afd5377ee1d64a28349b46fbc79a9f048c5577
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524921"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529864"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>レッスン 3: SQL Server 資格情報の作成
   このレッスンでは、Windows Azure ストレージ アカウントにアクセスするために使用するセキュリティ情報を格納する資格情報を作成します。  
@@ -38,7 +38,7 @@ ms.locfileid: "52524921"
   
 4.  次の例をコピーしてクエリ ウィンドウに貼り付け、必要に応じて変更します。 次のステートメントでは、ストレージ コンテナーの共有アクセス証明書を格納する SQL Server の資格情報を作成します。  
   
-    ```tsql  
+    ```sql  
   
     USE master  
     CREATE CREDENTIAL credentialname - this name should match the container path and it must start with https.   
@@ -52,7 +52,7 @@ ms.locfileid: "52524921"
   
 5.  使用可能なすべての資格情報を表示するには、クエリ ウィンドウで次のステートメントを実行します。  
   
-    ```tsql  
+    ```sql  
     SELECT * from sys.credentials  
     ```  
   

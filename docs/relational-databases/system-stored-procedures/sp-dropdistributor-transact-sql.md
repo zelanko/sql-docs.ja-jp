@@ -16,17 +16,17 @@ ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e2bde09ee15af5ebf6ef48cfd52222fe030a937
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8f1a1baec088af48cd18972c177463fbb3f574eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783014"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530684"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ディストリビューターをアンインストールします。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースを除くすべてのデータベースについて実行されます。  
+  ディストリビューターをアンインストールします。 このストアド プロシージャは、ディストリビューターのディストリビューション データベースを除く任意のデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,19 +39,17 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@no_checks=**] *no_checks*  
- ディストリビューターを削除する前に、従属オブジェクトを確認するかどうかを指定します。 *no_checks*は**ビット**、既定値は 0。  
+`[ @no_checks = ] no_checks` ディストリビューターを削除する前に依存するオブジェクトをチェックするかどうかを示します。 *no_checks*は**ビット**、既定値は 0。  
   
  場合**0**、 **sp_dropdistributor**ディストリビューター以外のすべてのパブリッシングおよびディストリビューション オブジェクトが破棄されたことを確認します。  
   
  場合**1**、 **sp_dropdistributor**ディストリビューターをアンインストールする前にすべてのパブリッシングおよびディストリビューション オブジェクトを削除します。  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- ディストリビューターに接続せずに、このストアド プロシージャを実行するかどうかを指定します。 *ignore_distributor*は**ビット**、既定値は**0**します。  
+`[ @ignore_distributor = ] ignore_distributor` ディストリビューターに接続しなくてもこのストアド プロシージャを実行するかどうかを示します。 *ignore_distributor*は**ビット**、既定値は**0**します。  
   
  場合**0**、 **sp_dropdistributor**ディストリビューターに接続して、すべてのレプリケーション オブジェクトを削除します。 場合**sp_dropdistributor**は、ストアド プロシージャは失敗、ディストリビューターに接続できません。  
   
- 場合**1**ディストリビューターに接続が確立されませんし、レプリケーション オブジェクトは削除されません。 これが使用されるのは、ディストリビューターがアンインストールされているか、完全にオフラインになっている場合です。 ディストリビューターでのパブリッシャーに関連するオブジェクトは、後でディストリビューターが再インストールされるまで削除されません。  
+ 場合**1**ディストリビューターに接続が確立されませんし、レプリケーション オブジェクトは削除されません。 これは、ディストリビューターがアンインストールされるかが完全にオフラインの場合に使用されます。 ディストリビューターが後で再インストールするまで、このパブリッシャー、ディストリビューター側でのオブジェクトは削除されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

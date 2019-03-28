@@ -18,17 +18,17 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6d514adfed27693456338ece6fa58638e319475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629810"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533434"
 ---
-# <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
+# <a name="sphelpdb-transact-sql"></a>sp_helpdb (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたデータベースまたはすべてのデータベースに関する情報を返します。  
+  指定されたデータベースまたはすべてのデータベースに関する情報が報告されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,8 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@dbname=** ] **'***name***'**  
- 情報を報告するデータベースの名前を指定します。 *名前*は**sysname**、既定値はありません。 場合*名前*が指定されていない**sp_helpdb**のすべてのデータベース上のレポート、 **sys.databases**カタログ ビューです。  
+`[ @dbname = ] 'name'` 情報を報告するデータベースの名前です。 *名前*は**sysname**、既定値はありません。 場合*名前*が指定されていない**sp_helpdb**のすべてのデータベース上のレポート、 **sys.databases**カタログ ビューです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -51,25 +50,25 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|データベース名。|  
-|**db_size**|**nvarchar (13)**|データベースの総サイズです。|  
+|**db_size**|**nvarchar(13)**|データベースの合計サイズ。|  
 |**所有者**|**sysname**|データベースの所有者は、 **sa**します。|  
-|**dbid**|**smallint**|データベース ID。|  
-|**created**|**nvarchar (11)**|データベースの作成日です。|  
-|**status**|**nvarchar (600)**|データベースで現在設定されているデータベース オプションの、コンマで区切られたリストです。<br /><br /> ブール値を持つオプションは、有効になっている場合にのみリストに追加されます。 形式でそれらの値、ブール型以外のオプションが表示*option_name*=*値*します。<br /><br /> 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
-|**compatibility_level**|**tinyint**|データベースの互換性レベル (60、65、70、80、および 90) です。|  
+|**dbid**|**smallint**|データベース id。|  
+|**created**|**nvarchar(11)**|データベースの作成日です。|  
+|**status**|**nvarchar(600)**|データベースで現在設定されているデータベース オプションの値のコンマ区切りリスト。<br /><br /> ブール値を持つオプションは、有効になっている場合にのみリストに追加されます。 形式でそれらの値、ブール型以外のオプションが表示*option_name*=*値*します。<br /><br /> 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
+|**compatibility_level**|**tinyint**|データベース互換性レベル:60、65、70、80、または 90 です。|  
   
  場合*名前*を指定すると、指定されたデータベースのファイルの割り当てを表示する追加の結果セットが存在します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nchar(128)**|論理ファイル名です。|  
-|**fileid**|**smallint**|ファイル ID。|  
-|**filename**|**nchar(260)**|オペレーティング システム ファイル名 (物理ファイル名) です。|  
-|**filegroup**|**nvarchar(128)**|ファイルが属するファイル グループです。<br /><br /> NULL = ファイルはログ ファイルです。 ログ ファイルはファイル グループのメンバーにはなりません。|  
-|**size**|**nvarchar(18)**|ファイル サイズ (MB 単位) です。|  
+|**fileid**|**smallint**|ファイル id。|  
+|**filename**|**nchar(260)**|オペレーティング システムのファイルの名前 (物理ファイル名)。|  
+|**filegroup**|**nvarchar(128)**|ファイルが属しているファイル グループ。<br /><br /> NULL = ファイルは、ログ ファイル。 ファイル グループの一部ではありません。|  
+|**size**|**nvarchar(18)**|ファイル サイズ (メガバイト単位)。|  
 |**maxsize**|**nvarchar(18)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
-|**growth**|**nvarchar(18)**|ファイルを拡張するときの増分です。 これは、新たに領域が必要になるたびにファイルに追加する容量を示します。|  
-|**使用状況**|**varchar (9)**|ファイルの使い方を示します。 データ ファイルの場合、値は **'data only'** とログ ファイルの値が **'ログのみ'** します。|  
+|**growth**|**nvarchar(18)**|ファイルの拡張増分値。 これは、新しい領域が必要なファイルに追加される領域の容量を示します。|  
+|**usage**|**varchar(9)**|ファイルの使用量。 データ ファイルの場合、値は **'data only'** とログ ファイルの値が **'ログのみ'** します。|  
   
 ## <a name="remarks"></a>コメント  
  **状態**結果の列は、オプションは、データベースで ON に設定されているレポートを設定します。 すべてのデータベース オプションがによって報告されていない、**状態**列。 現在のデータベース オプションの設定の完全な一覧を表示する、 **sys.databases**カタログ ビューです。  
@@ -81,7 +80,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-returning-information-about-a-single-database"></a>A. 特定のデータベースに関する情報を返す  
+### <a name="a-returning-information-about-a-single-database"></a>A. 1 つのデータベースに関する情報を返す  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに関する情報を表示します。  
   
 ```sql  

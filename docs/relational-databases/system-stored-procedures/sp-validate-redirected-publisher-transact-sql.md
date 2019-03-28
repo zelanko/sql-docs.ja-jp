@@ -16,14 +16,14 @@ ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47bf5c0ada106a11bdef72debf401de0640ff11f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 56e490fa3a860b3fc4e18e72d674c70d29130f5b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818924"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527304"
 ---
-# <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
+# <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   パブリッシング データベースの現在のホストがレプリケーションをサポートできることを確認します。 ディストリビューション データベースから実行する必要があります。 このプロシージャを呼び出す**sp_get_redirected_publisher**します。  
@@ -41,14 +41,11 @@ ms.locfileid: "52818924"
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@original_publisher** =] **'***original_publisher***'**  
- 最初にデータベースをパブリッシュした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。 *original_publisher*は**sysname**、既定値はありません。  
+`[ @original_publisher = ] 'original_publisher'` インスタンスの名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを最初に発行します。 *original_publisher*は**sysname**、既定値はありません。  
   
- [ **@publisher_db** =] **'***publisher_db***'**  
- パブリッシュされるデータベースの名前。 *publisher_db*は**sysname**、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシュするデータベースの名前。 *publisher_db* は **sysname** 、既定値はありません。  
   
- [ **@redirected_publisher** =] **'***redirected_publisher***'**  
- リダイレクトの対象では、ときに指定された**sp_redirect_publisher**パブリッシャー/データベース ペアに対して呼び出されました。 *redirected_publisher*は**sysname**、既定値はありません。  
+`[ @redirected_publisher = ] 'redirected_publisher'` リダイレクトの対象では、ときに指定された**sp_redirect_publisher**パブリッシャー/データベース ペアに対して呼び出されました。 *redirected_publisher*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -57,11 +54,11 @@ ms.locfileid: "52818924"
  [なし] :  
   
 ## <a name="remarks"></a>コメント  
- パブリッシャーとパブリッシングのデータベースのエントリが存在しない場合**sp_validate_redirected_publisher** 、出力パラメーターで null を返します *@redirected_publisher*します。 エントリが存在する場合は、成功した場合も失敗した場合も出力パラメーターでそのエントリが返されます。  
+ パブリッシャーとパブリッシングのデータベースのエントリが存在しない場合**sp_validate_redirected_publisher** 、出力パラメーターで null を返します *@redirected_publisher*します。 エントリが存在する場合、成功と失敗の両方の場合、出力パラメーターで返されます。  
   
  検証が成功すると、 **sp_validate_redirected_publisher**成功を示す値を返します。  
   
- 検証が失敗した場合は、失敗を説明するエラーが発生します。  
+ 検証に失敗した場合、エラーを説明のエラーが発生します。  
   
 ## <a name="permissions"></a>アクセス許可  
  呼び出し元する必要がありますいずれかのメンバーである、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロールには、ディストリビューション データベースまたは定義済みパブリケーションのパブリケーション アクセス リストのメンバーパブリッシャー データベースと関連付けられています。  

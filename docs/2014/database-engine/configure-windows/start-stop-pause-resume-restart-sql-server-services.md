@@ -40,15 +40,15 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b70ae7a69ce316b98c892c4dbf4059bfbc97ca4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360904"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530485"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動
-  このトピックでは、開始、停止、一時停止、再開、または再起動する方法を説明します、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser サービスを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 **net**コマンド プロンプトでコマンド[!INCLUDE[tsql](../../includes/tsql-md.md)]、または P83owerShell。  
+  このトピックでは、開始、停止、一時停止、再開、または再起動する方法を説明します、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser サービスを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 **net**コマンド プロンプトでコマンド[!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell。  
   
 -   **作業を開始する準備:**  
   
@@ -254,13 +254,13 @@ ms.locfileid: "53360904"
   
 -   現在実行中の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびストアド プロシージャが終了するまで待機してから [!INCLUDE[ssDE](../../includes/ssde-md.md)]を停止するには、次のステートメントを実行します。  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]を直ちに停止するには、次のステートメントを実行します。  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   

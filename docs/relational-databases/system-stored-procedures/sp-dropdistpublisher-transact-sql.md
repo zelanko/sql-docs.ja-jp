@@ -16,17 +16,17 @@ ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93124cff94bdf9df97cc1cbb0cf55c40414f1819
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8acc73e057ff8b91987406e74a28563fecfc9278
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127562"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526454"
 ---
-# <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
+# <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ディストリビューション パブリッシャーを削除します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  ディストリビューション パブリッシャーを削除します。 このストアド プロシージャは、ディストリビューターのすべてのデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,18 +40,15 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=** ] **'**_パブリッシャー_**'**  
- 削除するパブリッシャーを指定します。 *パブリッシャー*は**sysname**、既定値はありません。  
+`[ @publisher = ] 'publisher'` 削除するパブリッシャーです。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
- [  **@no_checks=** ] *no_checks*  
- 指定するかどうか**sp_dropdistpublisher**パブリッシャーがディストリビューターとしてサーバーをアンインストールしたことを確認します。 *no_checks*は**ビット**、既定値は**0**します。  
+`[ @no_checks = ] no_checks` 指定するかどうか**sp_dropdistpublisher**パブリッシャーがディストリビューターとしてサーバーをアンインストールしたことを確認します。 *no_checks*は**ビット**、既定値は**0**します。  
   
- 場合**0**レプリケーションでは、リモート パブリッシャーがディストリビューターとしてローカル サーバーをアンインストールしたことが確認されます。 パブリッシャーがローカルの場合、レプリケーションでは、ローカル サーバーにパブリケーションまたはディストリビューション オブジェクトが残っていないことが確認されます。  
+ 場合**0**レプリケーションでは、リモート パブリッシャーがディストリビューターとしてローカル サーバーをアンインストールしたことが確認されます。 パブリッシャーがローカルの場合は、レプリケーションでは、ローカル サーバーに残っているパブリケーションまたはディストリビューション オブジェクトがないことが確認されます。  
   
  場合**1**、リモート パブリッシャーに到達できない場合でも、ディストリビューション パブリッシャーに関連付けられているすべてのレプリケーション オブジェクトが削除されます。 レプリケーションを使用してこれを行うリモート パブリッシャーをアンインストールする必要があります[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)で**@ignore_distributor**  =  **1**します。  
   
- [  **@ignore_distributor=** ] *ignore_distributor*  
- パブリッシャーが削除されるとき、ディストリビューターにディストリビューション オブジェクトを残すかどうかを指定します。 *ignore_distributor*は**ビット**これらの値のいずれかを指定できます。  
+`[ @ignore_distributor = ] ignore_distributor` パブリッシャーが削除されるときに、ディストリビューターでディストリビューション オブジェクトを残すかどうかを指定します。 *ignore_distributor*は**ビット**これらの値のいずれかを指定できます。  
   
  **1**に属するディストリビューション オブジェクトが =、*パブリッシャー*がディストリビューターに残ります。  
   

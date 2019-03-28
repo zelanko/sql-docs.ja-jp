@@ -1,5 +1,5 @@
 ---
-title: 例:Xml 型の列のクエリを実行する |Microsoft Docs
+title: '例: XML 型の列のクエリ | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0457f9eddad9130e5b486cd09e754c2059a586a5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373854"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526784"
 ---
-# <a name="example-querying-xmltype-columns"></a>例:Xml 型の列のクエリを実行します。
+# <a name="example-querying-xmltype-columns"></a>例: XML 型の列のクエリ
   次のクエリには、`xml` 型の列が含まれています。 クエリでは、`xml` 型の `Instructions` 列から、製品モデル ID、名前、および最初の場所での製造手順を取得しています。  
   
 ## <a name="example"></a>例  

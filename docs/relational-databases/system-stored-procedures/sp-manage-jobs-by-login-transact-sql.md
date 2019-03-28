@@ -18,17 +18,17 @@ ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc6538cbc62be98414b180d44725d987e660ff99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742440"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530264"
 ---
-# <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
+# <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたログインに属するジョブを削除または再割り当てします。  
+  指定されたログインに属するジョブを再割り当てまたは削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,14 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@action=** ] **'***アクション***'**  
- 指定されたログインに対して実行する動作を指定します。 *アクション*は**varchar (10)**、既定値はありません。 ときに*アクション*は**削除**、 **sp_manage_jobs_by_login**によって所有されているすべてのジョブを削除*current_owner_login_name*します。 ときに*アクション*は**再割り当て**に割り当てられているすべてのジョブ*new_owner_login_name*します。  
+`[ @action = ] 'action'` 指定されたログインに対して実行するアクション。 *アクション*は**varchar (10)**、既定値はありません。 ときに*アクション*は**削除**、 **sp_manage_jobs_by_login**によって所有されているすべてのジョブを削除*current_owner_login_name*します。 ときに*アクション*は**再割り当て**に割り当てられているすべてのジョブ*new_owner_login_name*します。  
   
- [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
- 現在のジョブ所有者のログイン名を指定します。 *current_owner_login_name* is **sysname**, with no default.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` 現在のジョブ所有者のログイン名。 *current_owner_login_name* is **sysname**, with no default.  
   
- [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
- 新しいジョブ所有者のログイン名を指定します。 場合にのみ、このパラメーターを使用して、*アクション*は**再割り当て**します。 *new_owner_login_name*は**sysname**、既定値は NULL です。  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` 新しいジョブ所有者のログイン名。 場合にのみ、このパラメーターを使用して、*アクション*は**再割り当て**します。 *new_owner_login_name*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

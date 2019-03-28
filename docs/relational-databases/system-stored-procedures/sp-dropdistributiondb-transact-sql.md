@@ -16,17 +16,17 @@ ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2b561d83167caf1fa9c3f7a41a9490873fbc484
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f35e6acad099f1a5d68659fa20b9213ff78e0b6c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133072"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529894"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ディストリビューション データベースを削除します。 データベースが使用している物理ファイルを、別のデータベースが使用していない場合に削除します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  ディストリビューション データベースを削除します。 別のデータベースでは使用しない場合に、データベースで使用される物理ファイルを削除します。 このストアド プロシージャは、ディストリビューターのすべてのデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,8 +38,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@database=**] **'**_データベース_**'**  
- 削除するデータベースを指定します。 *データベース*は**sysname**、既定値はありません。  
+`[ @database = ] 'database'` データベースを削除します。 *データベース*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -51,7 +50,7 @@ sp_dropdistributiondb [ @database= ] 'database'
   
  **sp_dropdistributiondb**も存在する場合に、ディストリビューション データベースのキュー リーダー エージェント ジョブを削除します。  
   
- ディストリビューションを無効にするには、ディストリビューション データベースがオンラインであることが必要です。 ディストリビューション データベースに対してデータベース スナップショットが存在する場合は、ディストリビューションを無効にする前に、このスナップショットを削除する必要があります。 データベース スナップショットは、データベースの読み取り専用のオフライン コピーであり、レプリケーション スナップショットには関係していません。 詳細については、「[データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)」を参照してください。  
+ ディストリビューションを無効にするには、ディストリビューション データベースをオンラインにある必要があります。 ディストリビューション データベースのデータベース スナップショットが存在する場合は、配布を無効にする前に削除する必要があります。 データベース スナップショットは、データベースの読み取り専用のオフライン コピーであるし、レプリケーション スナップショットは関係ありません。 詳細については、「[データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  

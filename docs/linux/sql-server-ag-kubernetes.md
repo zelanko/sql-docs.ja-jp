@@ -11,16 +11,16 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d4c460b272650874fd3b8b4d390879abf5a8fcc3
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 4b3d01538df675149a3cc7f555774c8d27bf4e14
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160580"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511069"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>SQL Server のコンテナーの always On 可用性グループ
 
-SQL Server 2019 では、Kubernetes でコンテナーの可用性グループをサポートしています。 可用性グループには、SQL Server を展開[Kubernetes 演算子](https://coreos.com/blog/introducing-operators.html)Kubernetes クラスターにします。 演算子では、パッケージ、展開、およびクラスター内の可用性グループを管理することができます。
+SQL Server 2019 では、Kubernetes クラスター内のコンテナーの可用性グループをサポートしています。 可用性グループには、SQL Server を展開[Kubernetes 演算子](https://coreos.com/blog/introducing-operators.html)Kubernetes クラスターにします。 演算子では、パッケージ、展開、およびクラスター内の可用性グループを管理することができます。
 
 ![Kubernetes コンテナーでの AG](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
@@ -67,7 +67,7 @@ Kubernetes で可用性グループを展開するには。
 
 StatfulSet が含まれます。
 
-* mssql server コンテナー
+* mssql-server container
 
 * mssql-ha-スーパーバイザー コンテナー
 
@@ -114,6 +114,6 @@ AG の構成に関係なく、演算子は、HA supervisor を常にデプロイ
 
 演算子のイメージのバージョンでは、SQL Server イメージのバージョンと同じです。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [Kubernetes での SQL Server のコンテナー](tutorial-sql-server-containers-kubernetes.md)

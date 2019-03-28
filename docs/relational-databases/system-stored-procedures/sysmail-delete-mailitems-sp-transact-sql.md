@@ -18,12 +18,12 @@ ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c1e161a678b6834123aabf1eb5126445927a7fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650783"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531764"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@sent_before=** ] **'***sent_before***'**  
- として指定された日時まで電子メールを削除、 *@sent_before*引数。 *@sent_before*は**datetime**で、既定値は NULL です。 NULL はすべての日付を表します。  
+`[ @sent_before = ] 'sent_before'` として指定された日時まで電子メールを削除、 *@sent_before*引数。 *@sent_before*は**datetime**で、既定値は NULL です。 NULL はすべての日付を表します。  
   
- [ **@sent_status=** ] **'***sent_status***'**  
- 指定された型の電子メールを削除*sent_status*します。 *sent_status*は**varchar (8)** 既定値はありません。 有効なエントリは**送信**、**未送信**、**再試行**と**失敗**します。 NULL はすべての状態を表します。  
+`[ @sent_status = ] 'sent_status'` 指定された型の電子メールを削除*sent_status*します。 *sent_status*は**varchar (8)** 既定値はありません。 有効なエントリは**送信**、**未送信**、**再試行**と**失敗**します。 NULL はすべての状態を表します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -70,7 +68,7 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @GETDATE;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-e-mails"></a>B. 古い電子メールを削除する  
+### <a name="b-deleting-the-oldest-e-mails"></a>B. 最も古い電子メールを削除します。  
  次の例よりも古いデータベース メール ログに電子メールを削除します。`October 9, 2005`します。  
   
 ```  
@@ -79,8 +77,8 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp
 GO  
 ```  
   
-### <a name="c-deleting-all-e-mails-of-a-certain-type"></a>C. 特定の種類のすべての電子メールを削除する  
- 次の例では、データベース メール ログにある失敗した電子メールをすべて削除します。  
+### <a name="c-deleting-all-e-mails-of-a-certain-type"></a>C. 特定の種類のすべての電子メールを削除します。  
+ 次の例では、データベース メール ログに失敗した電子メールをすべて削除します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_delete_mailitems_sp   

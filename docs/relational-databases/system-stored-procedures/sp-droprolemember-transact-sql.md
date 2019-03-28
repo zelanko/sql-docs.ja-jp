@@ -18,12 +18,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a279a57e014675cc86f72f79ce602bec1bebb1f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d01ad425d42c45b1e265fe25345b2d34ca8b4d7f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756680"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526114"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,19 +52,17 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@rolename =** ] **'***ロール***'**  
- メンバーを削除するロールの名前を指定します。 *ロール*は**sysname**、既定値はありません。 *ロール*現在のデータベースに存在する必要があります。  
+`[ @rolename = ] 'role'` メンバーの削除元となるロールの名前です。 *ロール*は**sysname**、既定値はありません。 *ロール*現在のデータベースに存在する必要があります。  
   
- [  **@membername =** ] **'***これ***'**  
- ロールから削除するセキュリティ アカウントの名前を指定します。 *これ*は**sysname**、既定値はありません。 *これ*データベース ユーザー、別のデータベース ロール、Windows ログイン、または Windows グループにすることができます。 *これ*現在のデータベースに存在する必要があります。  
+`[ @membername = ] 'security_account'` ロールから削除されているセキュリティ アカウントの名前。 *これ*は**sysname**、既定値はありません。 *これ*データベース ユーザー、別のデータベース ロール、Windows ログイン、または Windows グループにすることができます。 *これ*現在のデータベースに存在する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- sp_droprolemember の各は、sysmembers テーブルから行を削除することによって、データベース ロールからメンバーを削除します。 メンバーがロールから削除されると、メンバーはそのロール内のメンバーシップに基づくすべての権限を失います。  
+ sp_droprolemember の各は、sysmembers テーブルから行を削除することによって、データベース ロールからメンバーを削除します。 メンバーがロールから削除されたときに、メンバーには、そのロールのメンバーシップがあるすべてのアクセス許可が失われます。  
   
- 固定サーバー ロールからユーザーを削除するには、sp_dropsrvrolemember を使用します。 パブリック ロールからユーザーを削除して、dbo は、任意のロールから削除することはできません。  
+ 固定サーバー ロールからユーザーを削除するには、sp_dropsrvrolemember を使用します。 パブリックのロールからユーザーを削除して、dbo はどのロールから削除することはできません。  
   
  メンバーを表示する sp_helpuser を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ロール、および使用する ALTER ROLE をロールにメンバーを追加します。  
   

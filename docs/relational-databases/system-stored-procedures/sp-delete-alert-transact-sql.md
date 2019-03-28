@@ -18,14 +18,14 @@ ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e912c8d849ec30554e4213979e626d1710f9a9df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a72db6e0579afb27aac281dade5f21fd1ab1b099
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718930"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532944"
 ---
-# <a name="spdeletealert-transact-sql"></a>sp_delete_alert (Transact-SQL)
+# <a name="spdeletealert-transact-sql"></a>sp_delete_alert (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   警告を削除します。  
@@ -40,8 +40,7 @@ sp_delete_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@name=** ] **'***name***'**  
- 警告の名前を指定します。 *名前*は**sysname**、既定値はありません。  
+`[ @name = ] 'name'` アラートの名前。 *名前*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

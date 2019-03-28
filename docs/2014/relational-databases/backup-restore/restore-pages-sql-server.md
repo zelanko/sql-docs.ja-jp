@@ -19,12 +19,12 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d30c8adfc19daa58f4aa3782072c6a9b08f11d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108732"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536394"
 ---
 # <a name="restore-pages-sql-server"></a>ページ復元 (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してページを復元する方法について説明します。 ページ復元の目的は、データベース全体を復元することなく 1 つ以上の損傷したページを復元することです。 通常、復元候補のページは、そのページにアクセスする際に発生したエラーによって、"問題あり" に設定されています。 問題ありに設定されているページは、 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) データベースの **suspect_pages** テーブルで特定できます。  
@@ -60,9 +60,9 @@ ms.locfileid: "48108732"
   
 -   復元できるのはデータベース ページのみです。 ページ復元を使用して、次のものを復元することはできません。  
   
-    -   トランザクション ログ  
+    -   [トランザクション ログ]  
   
-    -   アロケーション ページ。これには、グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページなどが含まれます。  
+    -   アロケーション ページ:グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページなどが含まれます。  
   
     -   すべてのデータ ファイルのページ 0 (ファイルのブート ページ)  
   
@@ -133,8 +133,8 @@ ms.locfileid: "48108732"
     |Header|値|  
     |------------|------------|  
     |**名前**|バックアップ セットの名前です。|  
-    |**コンポーネント**|バックアップされるコンポーネント。**[データベース]**、**[ファイル]**、または **[\<空白>]** \(トランザクション ログ用) のいずれかを指定します。|  
-    |**型**|実行するバックアップの種類です。 **[完全]**、 **[差分]**、または **[トランザクション ログ]** のいずれかを指定します。|  
+    |**コンポーネント**|バックアップされるコンポーネント:**[データベース]**、**[ファイル]**、または **[\<空白>]** (トランザクション ログ用)。|  
+    |**型**|実行するバックアップの種類: **[完全]**、**[差分]**、**[トランザクション ログ]**。|  
     |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  
     |**[Position]**|ボリューム内でのバックアップ セットの位置。|  
@@ -155,7 +155,7 @@ ms.locfileid: "48108732"
     > [!WARNING]  
     >  破損していない特定のページを復元するには、 **[追加]** をクリックし、復元するページの **[ファイル ID]** と **[ページ ID]** を入力します。  
   
-5.  ページ グリッドを使用して、復元対象のページを特定します。 最初、このグリッドには、 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) システム テーブルから取得されたデータが表示されます。 このグリッドにページを追加したりグリッドからページを削除したりするには、 **[追加]** または **[削除]** をクリックします。 詳細については、「[suspect_pages テーブルの管理 &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)」を参照してください。  
+5.  ページ グリッドを使用して、復元対象のページを特定します。 最初、このグリッドには、 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) システム テーブルから取得されたデータが表示されます。 このグリッドにページを追加したりグリッドからページを削除したりするには、 **[追加]** または **[削除]** をクリックします。 詳細については、「 [suspect_pages テーブルの管理 &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)を使用してページを復元する方法について説明します。  
   
 6.  **[バックアップ セット]** グリッドに、既定の復元プランのバックアップ セットが一覧表示されます。 必要に応じて **[確認]** をクリックし、バックアップが読み取り可能かどうか、また、バックアップ セットに不備がないかどうかを、実際には復元せずに確認します。 詳細については、「[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)」をご覧ください。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "48108732"
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、 `B` を指定して、ファイル `NORECOVERY`の 4 つの損傷したページを復元します。 次に、 `NORECOVERY`を使用して 2 つのログ バックアップを適用してから、 `RECOVERY`を使用してログ末尾のバックアップを復元します。 次の例では、オンライン復元を実行します。 この例では、ファイル `B` のファイル ID が `1`で、損傷したページのページ ID は `57`、 `202`、 `916`、および `1016`です。  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  

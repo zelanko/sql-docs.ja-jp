@@ -18,12 +18,12 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05e5ef298e9365b63b4e66b93c0f2aa637be8312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707000"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534144"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,15 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@class=**] **'***クラス***'**  
- 要求する情報のクラスを指定します。 *クラス*は**varchar (8)** の既定値を持つ**ジョブ**します。 *クラス*これらの値のいずれかを指定できます。  
+`[ @class = ] 'class'` に関する情報が要求されたクラスです。 *クラス*は**varchar (8)** の既定値を持つ**ジョブ**します。 *クラス*これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**JOB**|ジョブ カテゴリに関する情報|  
-|**アラートを生成します。**|警告カテゴリに関する情報|  
+|**JOB**|ジョブ カテゴリに関する情報を提供します。|  
+|**アラートを生成します。**|警告カテゴリに関する情報を提供します。|  
 |**演算子**|オペレーター カテゴリに関する情報|  
   
- [ **@type=** ] **'***type***'**  
- 要求する情報に関するカテゴリの種類を指定します。 *型*は**varchar (12)**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @type = ] 'type'` 情報を要求する対象のカテゴリの種類。 *型*は**varchar (12)**、既定値は null の場合、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -61,11 +59,9 @@ sp_help_category [ [ @class = ] 'class' ]
 |**複数のサーバー**|マルチ サーバー ジョブ カテゴリ。|  
 |**NONE**|以外のクラスのカテゴリ**ジョブ**します。|  
   
- [ **@name=** ] **'***name***'**  
- 要求する情報に関するカテゴリの名前を指定します。 *名前*は**sysname**、既定値は NULL です。  
+`[ @name = ] 'name'` 情報を要求する対象のカテゴリの名前。 *名前* は **sysname** 、既定値は NULL です。  
   
- [ **@suffix=** ] *suffix*  
- 指定するかどうか、 **category_type**結果セット内の列が ID と名前。 *サフィックス*は**ビット**、既定値は**0**します。 **1**を示しています、 **category_type** 、名前と、 **0** ID として表示します。  
+`[ @suffix = ] suffix` 指定するかどうか、 **category_type**結果セット内の列が ID と名前。 *サフィックス*は**ビット**、既定値は**0**します。 **1**を示しています、 **category_type** 、名前と、 **0** ID として表示します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -77,7 +73,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリ ID。|  
 |**category_type**|**tinyint**|カテゴリの種類:<br /><br /> **1** = ローカル<br /><br /> **2** = マルチ サーバー<br /><br /> **3** = なし|  
-|**name**|**sysname**|カテゴリ名。|  
+|**name**|**sysname**|カテゴリ名|  
   
  ときに**@suffix**は**1**、 **sp_help_category**次の結果セットを返します。  
   
@@ -85,7 +81,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリ ID。|  
 |**category_type**|**sysname**|カテゴリの種類。 いずれかの**ローカル**、 **MULTI-SERVER**、または**NONE**|  
-|**name**|**sysname**|カテゴリ名。|  
+|**name**|**sysname**|カテゴリ名|  
   
 ## <a name="remarks"></a>コメント  
  **sp_help_category**から実行する必要があります、 **msdb**データベース。  
@@ -117,8 +113,8 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>B. 警告情報を返す  
- 次の例では、レプリケーション警告カテゴリに関する情報を返します。  
+### <a name="b-returning-alert-information"></a>B. アラートの情報を返す  
+ 次の例では、レプリケーションの警告カテゴリに関する情報を返します。  
   
 ```  
 USE msdb ;  

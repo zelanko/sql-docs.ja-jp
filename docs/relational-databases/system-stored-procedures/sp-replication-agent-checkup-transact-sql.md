@@ -16,17 +16,17 @@ ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c35b08bf98079af5f72c48c3912613cca6ec7db0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 73335322d9e4c8602e299255ebcd3b3b183aaaec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789244"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529874"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  実行中であるが、指定された期間内に履歴をログに記録していないレプリケーション エージェントがあるかどうか、各ディストリビューション データベースを調べます。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  レプリケーション エージェントを実行しているが、指定された期間内で履歴ログインしていないのは、各ディストリビューション データベースを確認します。 このストアド プロシージャは、ディストリビューターのすべてのデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,8 +38,7 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@heartbeat_interval** =] **'***heartbeat_interval***'**  
- エージェントが進捗状況を示すメッセージをログに記録しなくてもよい最大時間を分単位で示します。 *heartbeat_interval*は**int**、既定値は 10 分です。  
+`[ @heartbeat_interval = ] 'heartbeat_interval'` エージェントは、進行状況メッセージをログ記録しなくてもよい分の最大数です。 *heartbeat_interval*は**int**、既定値は 10 分です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **sp_replication_agent_checkup** suspect として検出された各エージェントに対してエラー 14151 を発生させます。 また、これらのエージェントに関する障害履歴メッセージをログに記録します。  

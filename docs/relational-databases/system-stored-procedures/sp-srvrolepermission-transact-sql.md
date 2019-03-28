@@ -18,17 +18,17 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c025f6f1e7652e9b60ad8f8e9aea65aca112af81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f23d8766a89619654ba89bc6d70cec342b11b8fe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821840"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534644"
 ---
-# <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
+# <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  固定サーバー ロールの権限を表示します。  
+  固定サーバー ロールのアクセス許可を表示します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -43,13 +43,12 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@srvrolename =** ] **'***ロール***'**  
- 権限を返す固定サーバー ロールの名前を指定します。 *ロール*は**sysname**、既定値は NULL です。 ロールを指定しない場合、すべての固定サーバー ロールの権限が返されます。 *ロール*値は次のいずれかであることができます。  
+`[ @srvrolename = ] 'role'` 権限を返す固定サーバー ロールの名前です。 *ロール*は**sysname**、既定値は NULL です。 ロールが指定されていない場合は、すべての固定サーバー ロールの権限が返されます。 *ロール*値は次のいずれかであることができます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**sysadmin**|システム管理者。|  
-|**securityadmin**|セキュリティ管理者。|  
+|**sysadmin**|システム管理者|  
+|**securityadmin**|セキュリティ管理者|  
 |**serveradmin**|サーバー管理者。|  
 |**setupadmin**|セットアップ管理者。|  
 |**processadmin**|プロセス管理者。|  
@@ -64,7 +63,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ServerRole**|**sysname**|固定サーバー ロールの名前。|  
+|**ServerRole**|**sysname**|固定サーバー ロールの名前|  
 |**権限**|**sysname**|アクセス許可に関連付けられている**ServerRole**|  
   
 ## <a name="remarks"></a>コメント  

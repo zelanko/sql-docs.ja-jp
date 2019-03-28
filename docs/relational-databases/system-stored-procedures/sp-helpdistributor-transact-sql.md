@@ -16,14 +16,14 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63441a20a5ac4f6faed366c06fc55638073b09f4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c86f2b8ba6b9cc7223fa9fa16794ee69aa9cf46e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591396"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533264"
 ---
-# <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
+# <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ディストリビューター、ディストリビューション データベース、作業ディレクトリに関する情報を表示し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ユーザー アカウント。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースまたは任意のデータベースに対して実行されます。  
@@ -50,44 +50,31 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@distributor=**] **'**_ディストリビューター_**'** 出力  
- ディストリビューターの名前です。 ディストリビューターは**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @distributor = ] 'distributor' OUTPUT` ディストリビューターの名前です。 ディストリビューターは**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [  **@distribdb=**] **'**_distribdb_**'** 出力  
- ディストリビューション データベースの名前を指定します。 *distribdb*は**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @distribdb = ] 'distribdb' OUTPUT` ディストリビューション データベースの名前です。 *distribdb*は**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [  **@directory=**] **'**_ディレクトリ_**'** 出力  
- 作業ディレクトリです。 *ディレクトリ*は**nvarchar (255)**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @directory = ] 'directory' OUTPUT` 作業ディレクトリです。 *ディレクトリ*は**nvarchar (255)**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [  **@account=**] **'**_アカウント_**' 出力**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー アカウントです。 *アカウント*は**nvarchar (255)**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @account = ] 'account' OUTPUT` [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー アカウント。 *アカウント*は**nvarchar (255)**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [  **@min_distretention=**] _min_distretention_**出力**  
- ディストリビューションの最小保有期間を時間単位で示します。 *min_distretention*は**int**、既定値は **-1**します。  
+`[ @min_distretention = ] _min_distretentionOUTPUT` ディストリビューションの最小保有期間を時間単位です。 *min_distretention*は**int**、既定値は **-1**します。  
   
- [  **@max_distretention=**] _max_distretention_**出力**  
- ディストリビューションの最大保有期間を時間単位で示します。 *max_distretention*は**int**、既定値は **-1**します。  
+`[ @max_distretention = ] _max_distretentionOUTPUT` 最大ディストリビューション保有期間の時間です。 *max_distretention*は**int**、既定値は **-1**します。  
   
- [  **@history_retention=**] _history_retention_**出力**  
- 履歴の保有期間を時間単位で示します。 *history_retention*は**int**、既定値は **-1**します。  
+`[ @history_retention = ] _history_retentionOUTPUT` 時間の履歴の保有期間です。 *history_retention*は**int**、既定値は **-1**します。  
   
- [  **@history_cleanupagent=**] **'**_history_cleanupagent_**' 出力**  
- 履歴クリーンアップ エージェントの名前です。 *history_cleanupagent*は**nvarchar (100)**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` 履歴クリーンアップ エージェントの名前です。 *history_cleanupagent*は**nvarchar (100)**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [  **@distrib_cleanupagent =**] **'**_distrib_cleanupagent_**' 出力**  
- ディストリビューション クリーンアップ エージェントの名前です。 *distrib_cleanupagent*は**nvarchar (100)**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` ディストリビューション クリーンアップ エージェントの名前です。 *distrib_cleanupagent*は**nvarchar (100)**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [  **@publisher=**] **'**_パブリッシャー_**'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
- [  **@local=**] **'**_ローカル_**'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がローカル サーバーの値を取得するかどうかを示します。 *ローカル*は**nvarchar (5)**、既定値は NULL です。  
+`[ @local = ] 'local'` あるかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカル サーバーの値を取得する必要があります。 *ローカル*は**nvarchar (5)**、既定値は NULL です。  
   
- [  **@rpcsrvname=**] **'**_rpcsrvname_**' 出力**  
- リモート プロシージャ コールを実行するサーバーの名前です。 *rpcsrvname*は**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` リモート プロシージャ呼び出しを発行するサーバーの名前です。 *rpcsrvname*は**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [ **@publisher_type**=] **'**_publisher_type_**' 出力**  
- パブリッシャーの種類です。 *publisher_type*は**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` 発行元のパブリッシャーの種類です。 *publisher_type*は**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -95,15 +82,15 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |-----------------|---------------|-----------------|  
 |**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
 |**ディストリビューション データベース**|**sysname**|ディストリビューション データベースの名前です。|  
-|**ディレクトリ**|**nvarchar (255)**|作業ディレクトリの名前です。|  
-|**アカウント**|**nvarchar (255)**|Windows ユーザー アカウントの名前です。|  
-|**min 配布 retention**|**int**|ディストリビューションの最短保持期間です。|  
-|**max 配布 retention**|**int**|ディストリビューションの最長保持期間です。|  
-|**履歴の保有期間**|**int**|履歴の保有期間です。|  
-|**履歴クリーンアップ エージェント**|**nvarchar(100)**|履歴後処理エージェントの名前。|  
-|**ディストリビューション クリーンアップ エージェント**|**nvarchar(100)**|ディストリビューション後処理エージェントの名前。|  
-|**rpc サーバー名**|**sysname**|リモート ディストリビューターまたはローカル ディストリビューターの名前です。|  
-|**rpc ログイン名**|**sysname**|リモート ディストリビューターに対するリモート プロシージャ呼び出しで使用するログインです。|  
+|**directory**|**nvarchar (255)**|作業ディレクトリの名前です。|  
+|**account**|**nvarchar (255)**|Windows ユーザー アカウントの名前です。|  
+|**min 配布 retention**|**int**|ディストリビューションの最小保有期間。|  
+|**max 配布 retention**|**int**|最大ディストリビューション保有期間。|  
+|**履歴の保有期間**|**int**|履歴の保有期間。|  
+|**履歴クリーンアップ エージェント**|**nvarchar(100)**|履歴クリーンアップ エージェントの名前です。|  
+|**ディストリビューション クリーンアップ エージェント**|**nvarchar(100)**|ディストリビューション クリーンアップ エージェントの名前です。|  
+|**rpc サーバー名**|**sysname**|リモートまたはローカルのディストリビューターの名前です。|  
+|**rpc login name**|**sysname**|リモート ディストリビューターに対するリモート プロシージャ呼び出しで使用するログインです。|  
 |**パブリッシャーの種類**|**sysname**|パブリッシャーの種類次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -112,7 +99,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ## <a name="remarks"></a>コメント  
  **sp_helpdistributor**はあらゆる種類のレプリケーションで使用します。  
   
- 実行するときに 1 つまたは複数の出力パラメーターが指定されている場合**sp_helpdistributor**、終了時に値を割り当てられているすべての出力パラメーターを NULL に設定され、結果セットは返されません。 出力パラメーターを指定しない場合、結果セットが返されます。  
+ 実行するときに 1 つまたは複数の出力パラメーターが指定されている場合**sp_helpdistributor**、終了時に値を割り当てられているすべての出力パラメーターを NULL に設定され、結果セットは返されません。 出力パラメーターが指定されていない場合、結果セットが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  次の結果セットの列または出力パラメーターがのメンバーに返される、 **sysadmin** 、パブリッシャーの固定サーバー ロールおよび**db_owner**パブリケーション データベースの固定データベース ロール。  
@@ -120,12 +107,12 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |結果セット列|出力パラメーター|  
 |-----------------------|----------------------|  
 |account|**@account**|  
-|min distrib retention|**@min_distretention**|  
-|max distrib retention|**@max_distretention**|  
+|min 配布 retention|**@min_distretention**|  
+|max 配布 retention|**@max_distretention**|  
 |history retention|**@history_retention**|  
 |history cleanup agent|**@history_cleanupagent**|  
 |ディストリビューション クリーンアップ エージェント (distribution cleanup agent)|**@distrib_cleanupagent**|  
-|rpc login name|なし|  
+|rpc ログイン名|なし|  
   
  次の結果セット列は、ディストリビューターのパブリケーション用のパブリケーション アクセス リストのユーザーに返されます。  
   

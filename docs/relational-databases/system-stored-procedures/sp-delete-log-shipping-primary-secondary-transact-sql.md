@@ -18,17 +18,17 @@ ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d917920317485189b6eff1735e63c28fc7a09a05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0b65901467f7c343fb7492a02898df37decbd89
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830550"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531034"
 ---
-# <a name="spdeletelogshippingprimarysecondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
+# <a name="spdeletelogshippingprimarysecondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  プライマリ サーバー上の、セカンダリ データベースのエントリを削除します。  
+  プライマリ サーバー上のセカンダリ データベースのエントリを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,14 +43,11 @@ sp_delete_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@primary_database =** ] **'***primary_database***'**  
- プライマリ サーバー上のデータベースの名前を指定します。 *primary_database*は**sysname**、既定値はありません。  
+`[ @primary_database = ] 'primary_database'` プライマリ サーバー上のデータベースの名前です。 *primary_database*は**sysname**、既定値はありません。  
   
- [ **@secondary_server =** ] **'***secondary_server***'**  
- セカンダリ サーバーの名前を指定します。 *secondary_server*は**sysname**、既定値はありません。  
+`[ @secondary_server = ] 'secondary_server'` セカンダリ サーバーの名前です。 *secondary_server*は**sysname**、既定値はありません。  
   
- [  **@secondary_database =** ] **'***secondary_database***'**  
- セカンダリ データベースの名前を指定します。 *secondary_database*は**sysname**、既定値はありません。  
+`[ @secondary_database = ] 'secondary_database'` セカンダリ データベースの名前です。 *secondary_database*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

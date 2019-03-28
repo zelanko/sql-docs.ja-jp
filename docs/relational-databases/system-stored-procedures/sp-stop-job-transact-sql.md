@@ -18,12 +18,12 @@ ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c5f625b2fa697a305cf6ea96b3ace59f9f5ee0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843922"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529514"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_name =**] **'***job_name***'**  
- 停止するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` 停止するジョブの名前。 *job_name*は**sysname**、既定値は NULL です。  
   
- [ **@job_id =**] *job_id*  
- 停止するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id` 停止するジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [ **@originating_server =**] **'***master_server***'**  
- マスター サーバーの名前を指定します。 指定した場合、すべてのマルチサーバー ジョブが停止します。 *master_server*は**nvarchar (128)**、既定値は NULL です。 呼び出すときにのみ、このパラメーターを指定**sp_stop_job**をターゲット サーバーにします。  
+`[ @originating_server = ] 'master_server'` マスター サーバーの名前。 指定した場合、すべてのマルチサーバー ジョブが停止します。 *master_server*は**nvarchar (128)**、既定値は NULL です。 呼び出すときにのみ、このパラメーターを指定**sp_stop_job**をターゲット サーバーにします。  
   
 > [!NOTE]  
 >  最初の 3 つのパラメーターは、いずれか 1 つだけを指定できます。  
   
- [ **@server_name =**] **'***target_server***'**  
- マルチサーバー ジョブを停止する特定のターゲット サーバーの名前を指定します。 *target_server*は**nvarchar (128)**、既定値は NULL です。 呼び出すときにのみ、このパラメーターを指定**sp_stop_job**マルチ サーバー ジョブのマスター サーバーでします。  
+`[ @server_name = ] 'target_server'` マルチ サーバー ジョブを停止する特定の対象サーバーの名前。 *target_server*は**nvarchar (128)**、既定値は NULL です。 呼び出すときにのみ、このパラメーターを指定**sp_stop_job**マルチ サーバー ジョブのマスター サーバーでします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

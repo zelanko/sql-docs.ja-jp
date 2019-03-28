@@ -18,12 +18,12 @@ ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b560b807dc1efbb2f89b0d446b962e2791a8e46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4eb1854e0e0062b7c9a59263b6f8847e26de94ee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810570"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535024"
 ---
 # <a name="spdeletelogshippingprimarydatabase-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@database =** ] '*データベース*'  
- ログ配布プライマリ データベースの名前を指定します。 *データベース*は**sysname**、既定値はありません、NULL にすることはできません。  
+`[ @database = ] 'database'` ログ配布プライマリ データベースの名前です。 *データベース*は**sysname**、既定値はありません、NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -53,7 +52,7 @@ sp_delete_log_shipping_primary_database
 ## <a name="remarks"></a>コメント  
  **sp_delete_log_shipping_primary_database**から実行する必要があります、**マスター**プライマリ サーバー上のデータベース。 このストアド プロシージャでは次の処理が行われます。  
   
-1.  指定したプライマリ データベースのバックアップ ジョブを削除する。  
+1.  指定したプライマリ データベースのバックアップ ジョブを削除します。  
   
 2.  ローカル監視レコードを削除します。 **log_shipping_monitor_primary**プライマリ サーバーでします。  
   

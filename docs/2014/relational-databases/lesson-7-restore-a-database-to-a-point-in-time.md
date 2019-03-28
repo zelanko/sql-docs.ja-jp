@@ -11,12 +11,12 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12a6d8fdaf0bf1c09c5de706d7dad811c09def2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056662"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532564"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>レッスン 8: Windows Azure ストレージにデータベースを復元する
   このレッスンでは、バックアップ ファイルをローカルで作成して、それを Windows Azure ストレージに復元する方法を学習します。 データベースの場所は、内部設置でも、Windows Azure の仮想マシンでもかまいません。 このレッスンを続行するには、レッスン 4、5、6 および 7 を実行する必要はありません。  
@@ -39,7 +39,7 @@ ms.locfileid: "48056662"
   
 2.  新しく作成したデータベースに接続すると、クエリ ウィンドウが開きます。 次のステートメントを実行します。  
   
-    ```tsql  
+    ```sql  
   
     USE TestDB3Restore;   
     GO   
@@ -53,7 +53,7 @@ ms.locfileid: "48056662"
   
 3.  次に、クエリ ウィンドウに次のステートメントをコピーして実行します。  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     GO   

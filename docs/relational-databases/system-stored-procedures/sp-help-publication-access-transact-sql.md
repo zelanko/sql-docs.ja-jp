@@ -16,17 +16,17 @@ ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d9c6a12ae648ab11fbdf28f04e6c29733fad8ce0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fb281923e5b6d48a23cb6aa3f60bf36bbe9764da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786371"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531874"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パブリケーションに対して許可されたすべてのログインの一覧を返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  パブリケーションのすべてのログインを許可した権限の一覧を返します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +41,13 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
- アクセスするパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` アクセスするパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@return_granted=**] **'***return_granted***'**  
- ログイン ID です。 *return_granted*は**ビット**、既定値は 1 です。 場合**0**を指定し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を使用すると、ディストリビューターではなく、パブリッシャー側で表示されるが、使用可能なログインが返されます。 場合**0**が指定されて Windows 認証を使用しでパブリッシャー アクセスが拒否しないログインまたはディストリビューターが返されます。  
+`[ @return_granted = ] 'return_granted'` ログイン ID です。 *return_granted*は**ビット**、既定値は 1 です。 場合**0**を指定し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を使用すると、ディストリビューターではなく、パブリッシャー側で表示されるが、使用可能なログインが返されます。 場合**0**が指定されて Windows 認証を使用しでパブリッシャー アクセスが拒否しないログインまたはディストリビューターが返されます。  
   
- [  **@login=**] **'***ログイン***'**  
- 標準的なセキュリティ ログイン ID です。 *ログイン*は**sysname**、既定値は **%** します。  
+`[ @login = ] 'login'` 標準的なセキュリティ ログイン ID です。 *ログイン*は**sysname**、既定値は **%** します。  
   
- [  **@initial_list =**] *initial_list*  
- パブリケーションのアクセス権のあるすべてのメンバーを返すのか、新しいメンバーを一覧に追加する前にアクセスしたメンバーのみを返すのかを指定します。 *initial_list*は bit で、既定値は、 **0**します。  
+`[ @initial_list = ] initial_list` パブリケーションのアクセス権または新しいメンバーが一覧に追加された前にアクセスしたものだけを持つすべてのメンバーを返すかどうかを指定します。 *initial_list*は bit で、既定値は、 **0**します。  
   
  **1**のすべてのメンバーの情報を返します、 **sysadmin**現在のログインと同様に、パブリケーションを作成したときに存在していたディストリビューターでの有効なログインの固定サーバー ロール。  
   

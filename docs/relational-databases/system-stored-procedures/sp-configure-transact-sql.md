@@ -19,17 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f3b983411fade381b926e05a3bdbb81355bf4c02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852340"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530244"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
 
-  現在のサーバーのグローバル構成設定を表示または変更します。
+  表示または現在のサーバーのグローバル構成設定を変更します。
 
 > [!NOTE]  
 >  データベース レベルの構成のオプションを参照してください[データベース スコープの構成の変更&#40;Transact SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 ソフト NUMA を構成するのにを参照してください[ソフト NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)。  
@@ -61,13 +61,11 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@configname=** ] **'***option_name***'**  
- 構成オプションの名前を指定します。 *option_name* は **varchar(35)**、既定値は NULL です。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の構成名に含まれている一意の文字列を認識します。 指定しない場合、オプションの完全な一覧が返されます。  
+`[ @configname = ] 'option_name'` 構成オプションの名前です。 *option_name* は **varchar(35)**、既定値は NULL です。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の構成名に含まれている一意の文字列を認識します。 指定しない場合、オプションの完全な一覧が返されます。  
   
  使用可能な構成オプションとその設定方法についてを参照してください[サーバーの構成オプション&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
- [ **@configvalue=** ] **'***value***'**  
- 新しい構成設定を指定します。 *value* のデータ型は **int**で、既定値は NULL です。 最大値はオプションごとに異なります。  
+`[ @configvalue = ] 'value'` 新しい構成の設定です。 *value* のデータ型は **int**で、既定値は NULL です。 最大値はオプションごとに異なります。  
   
  各オプションの最大値を表示するを参照してください、**最大**の列、 **sys.configurations**カタログを表示します。  
   
@@ -93,10 +91,10 @@ RECONFIGURE
 ## <a name="updating-the-running-configuration-value"></a>実行中の構成値の更新  
  新しいを指定すると*値*の*オプション*、結果セット内でこの値には、 **config_value**列。 この値は、最初の値と異なる、 **run_value**列は、現在実行中の構成値が表示されます。 実行中の構成値を更新する、 **run_value**列、RECONFIGURE または RECONFIGURE WITH OVERRIDE のどちらか、システム管理者を実行する必要があります。  
   
- RECONFIGURE と RECONFIGURE WITH OVERRIDE は、どちらもすべての構成オプションと共に使用できます。 ただし、基本的な RECONFIGURE ステートメントでは、適切な範囲にないオプション値やオプション間の競合を招く可能性のあるオプション値は使用できません。 たとえば、再構成エラーが発生、**復旧間隔**の値は 60 分を超える場合は、**アフィニティ マスク**と値が重複して、**アフィニティ I/O マスク**値です。 これに対し、RECONFIGURE WITH OVERRIDE では、データ型が適切であればすべてのオプション値を使用でき、指定した値で再構成が行われます。  
+ 再構成し、再設定を上書きするすべての構成オプションを使用して動作します。 ただし、基本的な RECONFIGURE ステートメントでは、妥当な範囲外であるかのオプション間の競合が発生する可能性があります、オプションの値を拒否します。 たとえば、再構成エラーが発生、**復旧間隔**の値は 60 分を超える場合は、**アフィニティ マスク**と値が重複して、**アフィニティ I/O マスク**値です。 再設定を上書きする、対照的に、正しいデータ型を持つ任意のオプションの値を受け入れるし、強制的に指定した値の再設定します。  
   
 > [!CAUTION]  
->  オプション値が適切でない場合、サーバー インスタンスの構成に悪影響を及ぼす可能性があります。 RECONFIGURE WITH OVERRIDE を使用する際は注意が必要です。  
+>  オプション値が適切でない場合、サーバー インスタンスの構成に悪影響を及ぼす可能性があります。 使用して、再設定を上書きする注意が必要です。  
   
  一部のオプションは、RECONFIGURE ステートメントにより動的に更新されます。その他のオプションを使用する場合は、サーバーの停止と再起動が必要になります。 などの**最小サーバー メモリ**と**サーバーのメモリを最大**サーバー メモリ オプションが動的に更新される、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]; したがって、サーバーを再起動することがなく変更することができます。 対照的に、実行中の値の再設定、**フィル ファクター**オプションは、再起動する必要があります、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -108,7 +106,7 @@ RECONFIGURE
  詳細についてを参照してください[再構成&#40;Transact SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)。  
   
 ## <a name="advanced-options"></a>[詳細設定オプション]  
- いくつかの環境設定オプションは、次のように**アフィニティ マスク**と**復旧間隔**、高度なオプションとして指定されます。 既定では、これらのオプションを表示や変更に使用することはできません。 利用できるように、設定、 **ShowAdvancedOptions**構成オプションを 1 にします。  
+ いくつかの環境設定オプションは、次のように**アフィニティ マスク**と**復旧間隔**、高度なオプションとして指定されます。 既定では、これらのオプションは表示および変更に使用できます。 利用できるように、設定、 **ShowAdvancedOptions**構成オプションを 1 にします。  
   
  構成オプションとその設定に関する詳細についてを参照してください[サーバーのコンフィギュレーション オプション&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
@@ -117,8 +115,8 @@ RECONFIGURE
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-listing-the-advanced-configuration-options"></a>A. 詳細構成オプションを一覧表示する  
- 次の例では、すべての構成オプションを設定および一覧表示する方法を示します。 最初の設定で詳細設定オプションが表示されます`show advanced option`を`1`。 このオプションが変更された後に実行する`sp_configure`パラメーターを指定せずにすべての構成オプションが表示されます。  
+### <a name="a-listing-the-advanced-configuration-options"></a>A. 詳細設定オプションの一覧を表示  
+ 設定し、すべての構成オプションの一覧を次の例を次に示します。 最初の設定で詳細設定オプションが表示されます`show advanced option`を`1`。 このオプションが変更された後に実行する`sp_configure`パラメーターを指定せずにすべての構成オプションが表示されます。  
   
 ```  
 USE master;  
@@ -126,7 +124,7 @@ GO
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- "構成オプション 'show advanced options' が 0 から 1 に変更されました。 RECONFIGURE ステートメントを実行してインストールしてください。" というメッセージが表示されます。  
+ メッセージを次に示します。"構成オプション 'show advanced options'、0 から 1 に変更します。 実行するインストールするのには、RECONFIGURE ステートメント。  
   
  `RECONFIGURE` を実行し、すべての構成オプションを表示します。  
   
@@ -135,7 +133,7 @@ RECONFIGURE;
 EXEC sp_configure;  
 ```  
   
-### <a name="b-changing-a-configuration-option"></a>B. 構成オプションを変更する  
+### <a name="b-changing-a-configuration-option"></a>B. 構成オプションを変更します。  
  次の例では、システムの `recovery interval` を `3` 分に設定します。  
   
 ```  

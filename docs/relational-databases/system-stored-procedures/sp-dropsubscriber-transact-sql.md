@@ -16,20 +16,20 @@ ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc236b4b022a80c7c1cbd4aa4239200b17840db6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c6b9190a22d89e98a683361ba9460d2fd68a9dde
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126882"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534404"
 ---
-# <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
+# <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サブスクライバーの指定を登録されたサーバーから削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  登録済みサーバーから、サブスクライバーの指定を削除します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
 > [!IMPORTANT]  
->  このストアド プロシージャの使用は非推奨とされます。 パブリッシャー側でサブスクライバーを明示的に登録する必要はなくなりました。  
+>  このストアド プロシージャは非推奨とされました。 パブリッシャーでサブスクライバーを明示的に登録する必要はなくなりました。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,14 +43,11 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@subscriber=** ] **'**_サブスクライバー_**'**  
- 削除するサブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**、既定値はありません。  
+`[ @subscriber = ] 'subscriber'` 削除するサブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。  
   
- [  **@reserved=** ] **'**_予約_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

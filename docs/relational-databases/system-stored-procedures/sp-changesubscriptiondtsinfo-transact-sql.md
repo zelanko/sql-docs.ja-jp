@@ -16,17 +16,17 @@ ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e691c78e0ef0ddf775b5a23baa7dde1d96f72a9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f252d55a41def8e816e6e7843fb57574caacf385
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129247"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536064"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サブスクリプションのデータ変換サービス (DTS) パッケージのプロパティを変更します。 このストアド プロシージャは、サブスクライバー側でサブスクリプション データベースについて実行されます。  
+  サブスクリプションのデータ変換サービス (DTS) パッケージのプロパティを変更します。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,20 +41,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_id=**] *job_id*  
- プッシュ サブスクリプションのディストリビューション エージェントのジョブ ID を指定します。 *job_id*は**varbinary (16)**、既定値はありません。 ディストリビューション ジョブ ID を見つけるには実行**sp_helpsubscription**または**sp_helppullsubscription**します。  
+`[ @job_id = ] job_id` プッシュ サブスクリプションのディストリビューション エージェントのジョブの ID です。 *job_id*は**varbinary (16)**、既定値はありません。 ディストリビューション ジョブ ID を見つけるには実行**sp_helpsubscription**または**sp_helppullsubscription**します。  
   
- [ **@dts_package_name**=] **'**_dts_package_name_**'**  
- DTS パッケージの名前を指定します。 *dts_package_name*は、 **sysname**、既定値は NULL です。 たとえば、パッケージを指定する名前付き**DTSPub_Package**、するには指定`@dts_package_name = N'DTSPub_Package'`します。  
+`[ @dts_package_name = ] 'dts_package_name'` DTS パッケージの名前を指定します。 *dts_package_name*は、 **sysname**、既定値は NULL です。 たとえば、パッケージを指定する名前付き**DTSPub_Package**、するには指定`@dts_package_name = N'DTSPub_Package'`します。  
   
- [ **@dts_package_password**=] **'**_dts_package_password_**'**  
- パッケージのパスワードを指定します。 *dts_package_password*は**sysname**既定値は null の場合、変更せずに残すパスワード プロパティが指定します。  
+`[ @dts_package_password = ] 'dts_package_password'` パッケージのパスワードを指定します。 *dts_package_password*は**sysname**既定値は null の場合、変更せずに残すパスワード プロパティが指定します。  
   
 > [!NOTE]  
->  DTS パッケージにはパスワードが必要です。  
+>  DTS パッケージには、パスワードが必要です。  
   
- [ **@dts_package_location**=] **'**_dts_package_location_**'**  
- パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)**、既定値は null の場合、変更せずに残す、パッケージの場所が指定します。 パッケージの場所を変更できます**ディストリビューター**または**サブスクライバー**します。  
+`[ @dts_package_location = ] 'dts_package_location'` パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)**、既定値は null の場合、変更せずに残す、パッケージの場所が指定します。 パッケージの場所を変更できます**ディストリビューター**または**サブスクライバー**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

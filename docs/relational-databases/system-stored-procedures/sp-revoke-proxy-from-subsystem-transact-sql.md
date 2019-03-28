@@ -18,12 +18,12 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8b2444785cf5b640614ee57192832151e3bc9e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4079a6afda1f303369a2d8b9defc8bbeb3c4608d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812429"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527235"
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@proxy_id** =] *id*  
- アクセス権を取り消すプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**、既定値は NULL です。 いずれか*proxy_id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。  
+`[ @proxy_id = ] id` アクセスを取り消すプロキシのプロキシ識別番号。 *Proxy_id*は**int**、既定値は NULL です。 いずれか*proxy_id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。  
   
- [ **@proxy_name** =] **'***proxy_name***'**  
- アクセス権を取り消すプロキシの名前を指定します。 *Proxy_name*は**sysname**、既定値は NULL です。 いずれか*proxy_id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。  
+`[ @proxy_name = ] 'proxy_name'` アクセスを取り消すプロキシの名前。 *Proxy_name*は**sysname**、既定値は NULL です。 いずれか*proxy_id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。  
   
- [ **@subsystem_id** =] *id*  
- 取り消すアクセス権の対象となるサブシステムの ID 番号を指定します。 *Subsystem_id*は**int**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表は、各サブシステムの ID に指定できる値の一覧です。  
+`[ @subsystem_id = ] id` アクセスを取り消す対象となるサブシステムの id 番号。 *Subsystem_id*は**int**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表では、各サブシステムの値を示します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -67,8 +64,7 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
 |**12**|PowerShell スクリプト|  
   
- [ **@subsystem_name**=] **'***subsystem_name***'**  
- 取り消すアクセス権の対象となるサブシステムの名前を指定します。 *Subsystem_name*は**sysname**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表は、各サブシステムの ID に指定できる値の一覧です。  
+`[ @subsystem_name = ] 'subsystem_name'` アクセスを取り消す対象となるサブシステムの名前。 *Subsystem_name*は**sysname**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表では、各サブシステムの値を示します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -85,7 +81,7 @@ sp_revoke_proxy_from_subsystem
 |PowerShell|PowerShell スクリプト|  
   
 ## <a name="remarks"></a>コメント  
- サブシステムへのアクセス権を取り消しても、プロキシで指定されているプリンシパルに対する権限は変更されません。  
+ サブシステムへのアクセスを取り消す場合は、プロキシで指定されるプリンシパルのアクセス許可は変更されません。  
   
 > [!NOTE]  
 >  プロキシを参照するジョブ ステップを確認するを右クリックし、**プロキシ**ノードの下**SQL Server エージェント**microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 をクリックし、**プロパティ**。 **プロキシ アカウントのプロパティ**ダイアログ ボックスで、**参照**このプロキシを参照するすべてのジョブ ステップを表示するページ。  

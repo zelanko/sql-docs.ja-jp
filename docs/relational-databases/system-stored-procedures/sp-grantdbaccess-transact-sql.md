@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b35e2baef80dbacf039b9c767f7798ddba0d90a9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cb77f5d8bda6b05794499faa6e6e04d1fafa53ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591556"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534884"
 ---
-# <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
+# <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースにデータベース ユーザーを追加します。  
@@ -43,11 +43,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@loginame =** ] **'**_ログイン_ **'**  
- 新しいデータベース ユーザーにマップされる Windows グループ、Windows ログイン、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前を指定します。 Windows グループと Windows ログインの名前は、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ログイン*。 たとえば、 **\joeb**します。 既にデータベース内のユーザーにマップされているログインは指定できません。 *ログイン*は、 **sysname**、既定値はありません。  
+`[ @loginame = ] 'login_ '` Windows ログイン、Windows グループの名前を指定または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新しいデータベース ユーザーにマップされるログイン。 Windows グループと Windows ログインの名前は、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ログイン*。 たとえば、 **\joeb**します。 ログインは、データベース内のユーザーに既にマップできません。 *ログイン*は、 **sysname**、既定値はありません。  
   
- [  **@name_in_db=**] **'**_name_in_db_**'** **[出力]**  
- 新しいデータベース ユーザーの名前です。 *name_in_db* OUTPUT 変数のデータ型では、 **sysname**、および既定値は NULL です。 指定しない場合、*ログイン*使用されます。 値は null の場合、出力変数として指定されている場合**@name_in_db**に設定されている*ログイン*します。 *name_in_db*現在のデータベースに既に存在する必要があります。  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` 新しいデータベース ユーザーの名前です。 *name_in_db* OUTPUT 変数のデータ型では、 **sysname**、および既定値は NULL です。 指定しない場合、*ログイン*使用されます。 値は null の場合、出力変数として指定されている場合**@name_in_db**に設定されている*ログイン*します。 *name_in_db*現在のデータベースに既に存在する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -61,7 +59,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
  メンバーシップが必要です、 **db_owner**固定データベース ロール、または**db_accessadmin**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`CREATE USER` を使用して、Windows ログイン `Edmonds\LolanSo` 用のデータベース ユーザーを現在のデータベースに追加します。 新しいユーザーの名前は `Lolan` です。 データベース ユーザーの作成には、この方法を使用することをお勧めします。  
+ 次の例では`CREATE USER`Windows ログインのデータベース ユーザーを追加する`Edmonds\LolanSo`現在のデータベースにします。 新しいユーザーの名前は `Lolan` です。 これは、データベース ユーザーを作成するための推奨される方法です。  
   
 ```  
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  

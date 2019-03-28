@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/17/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 86b2ba305263b4699a3fe85328e854ba3105e4ab
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 12fefddcc01caeb9705c823a4e7283169dda1cc3
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645515"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510439"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server での R 開発用データ サイエンス クライアントのセットアップします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -243,9 +243,9 @@ RStudio を再度開くと、R R クライアント (またはスタンドアロ
   + 現在のライブラリ内のパッケージで ctrl キーを押しながら 3 を押してヘルプを表示します。
   + R の変数を参照してください、**変数エクスプ ローラー**CTRL + 8。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 異なる 2 つのチュートリアルには、リモートの SQL Server インスタンスからローカルのコンピューティング コンテキストの切り替えを行うように、演習が含まれます。
 
-+ [チュートリアル:SQL Server データで RevoScaleR R 関数を使用します。](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
++ [チュートリアル: SQL Server データで RevoScaleR R 関数を使用します。](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 + [データ サイエンスのエンド ツー エンド チュートリアル](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

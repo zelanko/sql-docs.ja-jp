@@ -18,12 +18,12 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ec03794e60027ea578988dbe38855d8ad14cb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c856e11b55040bf699eace2fb1f917f058c2fc9a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596800"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536374"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@devname =** ] **'***name***'**  
- 情報をレポートするバックアップ デバイスの名前を指定します。 値*名前*は常に**sysname**します。  
+`[ @devname = ] 'name'` 情報をレポートするバックアップ デバイスの名前です。 値*名前*は常に**sysname**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -53,12 +52,12 @@ sp_helpdevice [ [ @devname = ] 'name' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**device_name**|**sysname**|論理デバイス名|  
-|**physical_name**|**nvarchar(260)**|物理ファイル名|  
+|**device_name**|**sysname**|論理デバイス名。|  
+|**physical_name**|**nvarchar(260)**|物理ファイル名。|  
 |**description**|**nvarchar (255)**|デバイスの説明|  
 |**status**|**int**|ステータスの説明に対応する番号、**説明**列。|  
 |**cntrltype**|**smallint**|デバイスのコントローラーの種類<br /><br /> 2 = ディスク デバイス<br /><br /> 5 = テープ デバイス|  
-|**size**|**int**|デバイス サイズ (2 KB ページ単位)|  
+|**size**|**int**|デバイス 2 KB ページ単位のサイズ。|  
   
 ## <a name="remarks"></a>コメント  
  場合*名前*が指定されている**sp_helpdevice**指定したダンプ デバイスに関する情報が表示されます。 場合*名前*が指定されていない**sp_helpdevice**内のすべてのダンプ デバイスに関する情報を表示、 **sys.backup_devices**カタログ ビューです。  

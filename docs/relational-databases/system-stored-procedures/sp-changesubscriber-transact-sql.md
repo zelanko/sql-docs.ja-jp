@@ -16,17 +16,17 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 466b2c0316cb5de9b38200fd643d0302c5b1ae93
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203101"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534534"
 ---
-# <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
+# <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サブスクライバーのオプションを変更します。 このパブリッシャーのサブスクライバーに対するディストリビューション タスクはすべて更新されます。 このストアド プロシージャが書き込む、 **MSsubscriber_info**ディストリビューション データベース内のテーブル。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  サブスクライバーのオプションを変更します。 このパブリッシャーのサブスクライバーに対するディストリビューション タスクはすべて更新されます。 このストアド プロシージャが書き込む、 **MSsubscriber_info**ディストリビューション データベース内のテーブル。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,29 +57,21 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@subscriber=**] **'***サブスクライバー***'**  
- オプションを変更するサブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**、既定値はありません。  
+`[ @subscriber = ] 'subscriber'` オプションを変更するサブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。  
   
- [  **@type=**]*型*  
- サブスクライバーの種類です。 *型*は**tinyint**、既定値は NULL です。 **0**を示します、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー。 **1**以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]またはその他の ODBC データ ソース サーバー サブスクライバーです。  
+`[ @type = ] type` サブスクライバーの種類です。 *型*は**tinyint**、既定値は NULL です。 **0**を示します、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー。 **1**以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]またはその他の ODBC データ ソース サーバー サブスクライバーです。  
   
- [  **@login=**] **'***ログイン***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID を指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。  
+`[ @login = ] 'login'` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログイン id です。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
- [  **@password=**] **'***パスワード***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証のパスワード。 *パスワード*は**sysname**、既定値は **%** します。 **%** パスワード プロパティに変更がないことを示します。  
+`[ @password = ] 'password'` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証のパスワード。 *パスワード*は**sysname**、既定値は **%** します。 **%** パスワード プロパティに変更がないことを示します。  
   
- [  **@commit_batch_size=**] *commit_batch_size*  
- 旧バージョンとの互換性のためにのみサポートされています。  
+`[ @commit_batch_size = ] commit_batch_size` 旧バージョンとの互換性を保つのためサポートされています。  
   
- [  **@status_batch_size=**] *status_batch_size*  
- 旧バージョンとの互換性のためにのみサポートされています。  
+`[ @status_batch_size = ] status_batch_size` 旧バージョンとの互換性を保つのためサポートされています。  
   
- [  **@flush_frequency=**] *flush_frequency*  
- 旧バージョンとの互換性のためにのみサポートされています。  
+`[ @flush_frequency = ] flush_frequency` 旧バージョンとの互換性を保つのためサポートされています。  
   
- [  **@frequency_type=**] *frequency_type*  
- ディストリビューション タスクをスケジュールに組み込む頻度を指定します。 *frequency_type*は**int**、これらの値のいずれかを指定できます。  
+`[ @frequency_type = ] frequency_type` ディストリビューション タスクをスケジュールする頻度です。 *frequency_type*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -89,28 +81,24 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**8**|毎週。|  
 |**16**|毎月。|  
 |**32**|月単位|  
-|**64**|自動的に起動|  
-|**128**|定期的|  
+|**64**|自動開始|  
+|**128**|定期的な|  
   
- [  **@frequency_interval=**] *frequency_interval*  
- 間隔は、 *frequency_type*します。 *frequency_interval*は**int**、既定値は NULL です。  
+`[ @frequency_interval = ] frequency_interval` 間隔は、 *frequency_type*します。 *frequency_interval*は**int**、既定値は NULL です。  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- ディストリビューション タスクを実施する日を指定します。 このパラメーターが使用されるときに*frequency_type*に設定されている**32** (月単位)。 *frequency_relative_interval*は**int**、これらの値のいずれかを指定できます。  
+`[ @frequency_relative_interval = ] frequency_relative_interval` ディストリビューション タスクの日です。 このパラメーターが使用されるときに *frequency_type* に設定されている **32** (月単位)。 *frequency_relative_interval*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|第 2 週|  
 |**4**|第 3 週|  
-|**8**|第 4 週|  
+|**8**|4 番目|  
 |**16**|Last|  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- 定義済みの中にディストリビューション タスクを繰り返す頻度*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値は NULL です。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 定義済みの中にディストリビューション タスクを繰り返す頻度*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値は NULL です。  
   
- [  **@frequency_subday=**] *frequency_subday*  
- 定義した期間にスケジュールを組み直す頻度を指定します。 *frequency_subday*は**int**、これらの値のいずれかを指定できます。  
+`[ @frequency_subday = ] frequency_subday` 定義した期間中に再スケジュールするには、多くの場合、方法です。 *frequency_subday*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -119,34 +107,26 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**4**|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 間隔は、 *frequence_subday*します。 *frequency_subday_interval*は**int**、既定値は NULL です。  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 間隔は、 *frequence_subday*します。 *frequency_subday_interval*は**int**、既定値は NULL です。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- ディストリビューション タスクを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**、既定値は NULL です。  
+`[ @active_start_time_of_day = ] active_start_time_of_day` ディストリビューション タスクを最初のスケジュール設定しますする時刻を hhmmss 形式で指定として書式設定。 *active_start_time_of_day* は **int** 、既定値は NULL です。  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- ディストリビューション タスクのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**、既定値は NULL です。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 配布タスクが停止したときの時刻 hhmmss 形式で指定として書式設定、スケジュール設定します。 *active_end_time_of_day*は**int**、既定値は NULL です。  
   
- [  **@active_start_date=**] *active_start_date*  
- ディストリビューション タスクを最初にスケジュール設定する日付を YYYYMMDD 形式で指定します。 *active_start_date*は**int**、既定値は NULL です。  
+`[ @active_start_date = ] active_start_date` ディストリビューション タスクの最初の日付スケジュール設定を yyyymmdd 形式で指定として書式設定されます。 *active_start_date*は**int**、既定値は NULL です。  
   
- [  **@active_end_date=**] *active_end_date*  
- ディストリビューション タスクのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値は NULL です。  
+`[ @active_end_date = ] active_end_date` ディストリビューション タスクを停止した日付スケジュールに yyyymmdd です。 *active_end_date*は**int**、既定値は NULL です。  
   
- [  **@description=**] **'***説明***'**  
- 説明テキストを指定します (省略可能)。 *説明*は**nvarchar (255)**、既定値は NULL です。  
+`[ @description = ] 'description'` オプションの説明テキストです。 *説明*は**nvarchar (255)**、既定値は NULL です。  
   
- [  **@security_mode=**] *security_mode*  
- 実装されているセキュリティ モードを指定します。 *security_mode*は**int**、これらの値のいずれかを指定できます。  
+`[ @security_mode = ] security_mode` 実装されているセキュリティ モードです。 *security_mode*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [認証]|  
 |**1**|[Windows 認証]|  
   
- [ **@publisher**=] **'***パブリッシャー***'**  
- 以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  *パブリッシャー*でアーティクルのプロパティを変更する場合、使用されませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  

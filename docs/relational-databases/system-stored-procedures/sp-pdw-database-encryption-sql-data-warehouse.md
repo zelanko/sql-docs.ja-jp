@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a76b34f09fb78bb63dca88947eef044acb6cd304
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a2ab88ca9a65d65e80f715ff4f8eb13c31b2d903
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019023"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536404"
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,8 +33,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- [ **@enabled=** ] *enabled*  
- 透過的なデータ暗号化が有効になっているかどうかを判断します。 *有効になっている*は**int**値は次のいずれかを指定できます。  
+`[ @enabled = ] enabled` 透過的なデータ暗号化が有効になっているかどうかを判断します。 *有効になっている*は**int**値は次のいずれかを指定できます。  
   
 -   0 = 無効  
   
@@ -46,13 +45,13 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- 使用して、TDE が有効にすると**sp_pdw_database_encryption**、tempdb データベースの削除、再作成および暗号化します。 そのためは、TDE を有効にアプライアンスでは、tempdb を使用してアクティブなセッションはその他のことはできません。 有効化またはアプライアンスで TDE を無効にすると、ほとんどの場合、アプライアンスの状態を変更する操作アプライアンスの有効期間に 1 度だけ実行する予定がアプライアンス上のトラフィックがない場合に実行する必要があります。  
+ 使用して、TDE が有効にすると**sp_pdw_database_encryption**、tempdb データベースの削除、再作成および暗号化します。 そのためは、TDE を有効にアプライアンスで tempdb を使用して他のアクティブなセッション中にことはできません。 有効化またはアプライアンスで TDE を無効にすると、ほとんどの場合、アプライアンスの状態を変更する操作アプライアンスの有効期間に 1 回実行する予定がアプライアンスにトラフィックがないときに実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーシップが必要です、 **sysadmin**固定データベース ロール、または**CONTROL SERVER**権限。  
   
 ## <a name="example"></a>例  
- 次の例では、アプライアンス上 TDE が有効です。  
+ 次の例では、アプライアンス上 TDE を有効。 にします。  
   
 ```sql  
 EXEC sys.sp_pdw_database_encryption 1;  

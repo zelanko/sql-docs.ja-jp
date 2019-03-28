@@ -16,17 +16,17 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51b5b2aa6c6f815f1b2f5f37c9093698955ffd3b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0d009b05fea2a2c587f97dc4b2416588932ad0bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136112"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530364"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マージ レプリケーション内のアーティクルとして使用されているテーブル内の行に関する情報を表示します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  マージ レプリケーション内のアーティクルとして使用されているテーブルの行についての情報を表示します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,29 +41,25 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@ownername**=] **'***ownername***'**  
- テーブルの所有者の名前です。 *ownername*は**sysname**、既定値は NULL です。 このパラメーターは、データベースに、テーブル名は同じだがテーブル所有者がそれぞれ異なる複数のテーブルが含まれる場合、テーブルを区別するのに効果的です。  
+`[ @ownername = ] 'ownername'` テーブルの所有者の名前です。 *ownername*は**sysname**、既定値は NULL です。 このパラメーターは、データベースに同じ名前を持つ複数のテーブルが含まれていますが、各テーブルには所有者が異なる場合は、テーブルを区別するために便利です。  
   
- [  **@tablename =**] **'***tablename***'**  
- 情報を返す行を含むテーブルの名前を指定します。 *tablename*は**sysname**、既定値は NULL です。  
+`[ @tablename = ] 'tablename'` 情報が返される行を含むテーブルの名前です。 *tablename*は**sysname**、既定値は NULL です。  
   
- [  **@rowguid =**] *rowguid*  
- 行の一意識別子です。 *rowguid*は**uniqueidentifier**、既定値はありません。  
+`[ @rowguid = ] rowguid` 行の一意の識別子です。 *rowguid*は**uniqueidentifier**、既定値はありません。  
   
- [ **@show**=] **'***表示***'**  
- 結果セットに返す情報量を指定します。 *表示*は**nvarchar (20)** 両方の既定値。 場合**行**行のバージョン情報のみが返されます。 場合**列**列のバージョン情報のみが返されます。 場合**両方**、両方の行および列情報が返されます。  
+`[ @show = ] 'show'` 結果セットで返される情報の量を決定します。 *表示*は**nvarchar (20)** 両方の既定値。 場合**行**行のバージョン情報のみが返されます。 場合**列**列のバージョン情報のみが返されます。 場合**両方**、両方の行および列情報が返されます。  
   
 ## <a name="result-sets-for-row-information"></a>行情報の結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**server_name**|**sysname**|行バージョン エントリを作成したデータベースを処理するサーバーの名前です。|  
+|**server_name**|**sysname**|行バージョン エントリを作成したデータベースをホストしているサーバーの名前です。|  
 |**db_name**|**sysname**|このエントリを作成したデータベースの名前です。|  
 |**db_nickname**|**binary(6)**|このエントリを作成したデータベースのニックネームです。|  
 |**version**|**int**|エントリのバージョンです。|  
-|**current_state**|**nvarchar (9)**|行の現在の状態に関する情報を返します。<br /><br /> **y** -行データが行の現在の状態を表します。<br /><br /> **n** -行データは、行の現在の状態を表しません。<br /><br /> **\<該当なし >** は適用されません。<br /><br /> **\<不明な >** -現在の状態を特定できません。|  
+|**current_state**|**nvarchar(9)**|行の現在の状態に関する情報を返します。<br /><br /> **y** -行データが行の現在の状態を表します。<br /><br /> **n** -行データは、行の現在の状態を表しません。<br /><br /> **\<該当なし >** は適用されません。<br /><br /> **\<不明な >** -現在の状態を特定できません。|  
 |**rowversion_table**|**nchar(17)**|格納される行バージョンであるかどうかを示す、 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)テーブルまたは[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)テーブル。|  
-|**comment**|**nvarchar (255)**|この行バージョン エントリに関する追加情報です。 通常、このフィールドは空です。|  
+|**comment**|**nvarchar (255)**|この行バージョン エントリに関する追加情報。 通常、このフィールドが空です。|  
   
 ## <a name="result-sets-for-column-information"></a>列情報の結果セット  
   
@@ -73,8 +69,8 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|このエントリを作成したデータベースの名前です。|  
 |**db_nickname**|**binary(6)**|このエントリを作成したデータベースのニックネームです。|  
 |**version**|**int**|エントリのバージョンです。|  
-|**colname**|**sysname**|列バージョン エントリに対応するアーティクル列の名前です。|  
-|**comment**|**nvarchar (255)**|この列バージョン エントリに関する追加情報です。 通常、このフィールドは空です。|  
+|**colname**|**sysname**|列バージョン エントリを表すアーティクル列の名前です。|  
+|**comment**|**nvarchar (255)**|この列バージョン エントリに関する追加情報です。 通常、このフィールドが空です。|  
   
 ## <a name="result-set-for-both"></a>両方の結果セット  
  場合、値**両方**に選択されている*表示*行と列の両方の結果セットが返されます。  

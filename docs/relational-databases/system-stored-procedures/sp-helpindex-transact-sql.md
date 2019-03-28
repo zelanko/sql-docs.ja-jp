@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 064018cdc595935ce3987fc44bc7be7da74bbd02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d4191a53db7c4921f026e4b6e6f8406b2ce5c24
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727700"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534024"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@objname=** ] **'***name***'**  
- ユーザー定義テーブルやビューの、修飾付きまたは修飾なしの名前を指定します。 引用符は、テーブルまたはビューの修飾名を指定したときにのみ必要です。 データベース名を含む完全修飾名を指定する場合、データベース名は現在のデータベースの名前である必要があります。 *名前*は**nvarchar (776)**、既定値はありません。  
+`[ @objname = ] 'name'` ユーザー定義テーブルまたはビューの修飾付きまたは修飾なしの名前です。 引用符は、テーブルまたはビューの修飾名を指定したときにのみ必要です。 データベース名を含む、完全修飾名が指定されている場合、データベース名は、現在のデータベースの名前である必要があります。 *名前*は**nvarchar (776)**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -52,10 +51,10 @@ sp_helpindex [ @objname = ] 'name'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|インデックスの名前。|  
-|**index_description**|**varchar(210)**|インデックスがあるファイル グループを含むインデックスの説明。|  
-|**index_keys**|**nvarchar (2078)**|インデックスの作成で使用するテーブルまたはビュー内の列。|  
+|**index_description**|**varchar(210)**|上にあるファイル グループを含むインデックスの説明。|  
+|**index_keys**|**nvarchar(2078)**|インデックスの作成で使用するテーブルまたはビュー内の列。|  
   
- 降順のインデックス列は結果セットに表示され、列名の後にマイナス記号 (-) が付けられます。既定の昇順のインデックス列の場合は、その名前だけが表示されます。  
+ 降順のインデックス付き列はその名前の後にマイナス記号 (-) を使用して結果セットに表示します。昇順のインデックス列で、既定値は、その名前だけが表示されます。  
   
 ## <a name="remarks"></a>コメント  
  その情報が含まれている UPDATE STATISTICS の NORECOMPUTE オプションを使用してインデックスが設定されている場合、 **index_description**列。  

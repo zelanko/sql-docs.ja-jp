@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/25/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 18c5b801198946313e4f489902eb5f7c9ff0d7af
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: f0d9916414514e0ad0d73c3bb849b9c6e546289d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596833"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512455"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Revoscalepy で Python を使用して、SQL Server でリモートで実行されているモデルの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -171,7 +171,7 @@ SQL Server 計算コンテキストでは、バッチ サイズを設定する�
 + サンプルは、4 つのプロセッサを搭載したコンピューターで実行されたため、`num_tasks`パラメーターは、リソースの最大の使用を許可する 4 に設定されます。 
 + この値を 0 に設定する場合、SQL Server には、サーバーの現在の MAXDOP 設定で、できるだけ多くのタスクを並列で実行するには既定値が使用されます。 ただし、割り当てがタスクの正確な数は、サーバーの設定など、他の多くの要因とを実行している他のジョブに依存します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これらの追加の Python のサンプルとチュートリアルは、リモート コンピューティング コンテキストの使用だけでなくより複雑なデータ ソース、使用するエンド ツー エンド シナリオを示します。
 

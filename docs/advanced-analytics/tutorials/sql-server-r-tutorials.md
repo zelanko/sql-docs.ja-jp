@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/18/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4353d50ecfd8aac3ada1c71baf1be78f13c51b11
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 99dc3aa20bd3f31766ed66a6cdabea5cf38553f6
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596533"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510159"
 ---
 # <a name="sql-server-r-language-tutorials"></a>SQL Server の R 言語のチュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "53596533"
 | リンク | 説明 |
 |------|-------------|
 | [クイック スタート:T-SQL での R の使用](rtsql-using-r-code-in-transact-sql-quickstart.md) | この 1 つの SQL Server Management Studio などの T-SQL クエリ エディターを使用して、R 関数を呼び出す基本的な構文を示す、いくつかのクイック スタートの最初の数値。 |
-| [チュートリアル:データ サイエンティスト向けデータベース内の R 分析について説明します](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | R の開発者は新しい SQL Server に、このチュートリアルで説明します共通のデータ サイエンスのタスクでは、SQL Server へ実行する方法。 読み込むとデータを視覚化して、トレーニングし、SQL サーバーにモデルを保存および予測分析モデルを使用します。 |
-| [チュートリアル:SQL 開発者向けのデータベース内の R 分析について説明します](../tutorials/sqldev-in-database-r-for-sql-developers.md) | ビルドおよび配置のみを使用して、完全な R ソリューション[!INCLUDE[tsql](../../includes/tsql-md.md)]ツール。 運用環境にソリューションを移動することに注目します。 ストアド プロシージャに R コードをラップし、R モデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに保存し、パラメーター化された呼び出しを R モデルに行い、予測を実行する方法について学習します。 |
-| [チュートリアル:RevoScalepR deep dive](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | RevoScaleR パッケージの関数を使用する方法について説明します。 R と SQL Server、およびスイッチ間でデータの移動は、特定のタスクに合わせてコンテキストを計算します。 モデルとプロットを作成し、開発環境とデータベース サーバーの間で移動します。 |
+| [チュートリアル: データ サイエンティスト向けデータベース内の R 分析について説明します](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | R の開発者は新しい SQL Server に、このチュートリアルで説明します共通のデータ サイエンスのタスクでは、SQL Server へ実行する方法。 読み込むとデータを視覚化して、トレーニングし、SQL サーバーにモデルを保存および予測分析モデルを使用します。 |
+| [チュートリアル: SQL 開発者向けのデータベース内の R 分析について説明します](../tutorials/sqldev-in-database-r-for-sql-developers.md) | ビルドおよび配置のみを使用して、完全な R ソリューション[!INCLUDE[tsql](../../includes/tsql-md.md)]ツール。 運用環境にソリューションを移動することに注目します。 ストアド プロシージャに R コードをラップし、R モデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに保存し、パラメーター化された呼び出しを R モデルに行い、予測を実行する方法について学習します。 |
+| [チュートリアル: RevoScalepR deep dive](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | RevoScaleR パッケージの関数を使用する方法について説明します。 R と SQL Server、およびスイッチ間でデータの移動は、特定のタスクに合わせてコンテキストを計算します。 モデルとプロットを作成し、開発環境とデータベース サーバーの間で移動します。 |
 
 <a name ="bkmk_samples"></a>
 

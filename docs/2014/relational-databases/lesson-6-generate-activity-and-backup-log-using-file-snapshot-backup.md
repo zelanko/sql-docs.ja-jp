@@ -1,5 +1,5 @@
 ---
-title: レッスン 7:Windows Azure ストレージへのデータ ファイルの移動 |Microsoft Docs
+title: 'レッスン 7: Windows Azure ストレージへのデータ ファイルの移動 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d88e1fa7853c1207f1a8c95da2f96bb77dd7d49c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 45004f8544efc0f0cc02292dbe28fdd75d6dc1de
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355332"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534074"
 ---
-# <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>レッスン 7:Microsoft Azure ストレージへのデータ ファイルの移動
+# <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>レッスン 7: Microsoft Azure ストレージへのデータ ファイルの移動
   このレッスンでは、Windows Azure ストレージ (SQL Server インスタンスではなく) にデータ ファイルを移動する方法について学習します。 このレッスンを続行するには、レッスン 4、5、および 6 を実行する必要はありません。  
   
  Windows Azure ストレージにデータ ファイルを移動するには、データ ファイルの場所を変更できる `ALTER DATABASE` ステートメントを使用できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "53355332"
   
 1.  まず、ソース コンピューターにテスト データベースを作成し、それにデータを追加します。  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     CREATE DATABASE TestDB1Alter;   
@@ -53,7 +53,7 @@ ms.locfileid: "53355332"
   
 2.  次のコードを実行します。  
   
-    ```tsql  
+    ```sql  
   
     -- In the following statement, modify the path specified in FILENAME to   
     -- the new location of the file in Windows Azure Storage container.   
@@ -68,7 +68,7 @@ ms.locfileid: "53355332"
   
 4.  続いて、データベースをオフラインにします。  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET OFFLINE;   
     GO  
@@ -81,7 +81,7 @@ ms.locfileid: "53355332"
   
 6.  続いて、データベースをオンラインにします。  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET ONLINE;   
     GO  

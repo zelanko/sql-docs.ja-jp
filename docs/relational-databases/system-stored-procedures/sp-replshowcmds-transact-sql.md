@@ -16,17 +16,17 @@ ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18ccbda41c5b7683c33bc0258a05738ab227ec69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e73b67cce73005b7a992c09a436dbda1db5c4e52
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813319"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526614"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  レプリケーション対象のマークが付けられたトランザクションのコマンドを判読可能な形式で返します。 **sp_replshowcmds**ログからレプリケートされたトランザクションを (現在の接続を含む) のクライアント接続が読んでいない場合にだけ実行できます。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  レプリケーション対象のマークが付けられたトランザクションのコマンドを判読可能な形式で返します。 **sp_replshowcmds**ログからレプリケートされたトランザクションを (現在の接続を含む) のクライアント接続が読んでいない場合にだけ実行できます。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,20 +38,19 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@maxtrans** =] *maxtrans*  
- 情報を返すトランザクションの数です。 *maxtrans*は**int**、既定値は**1**、レプリケーションが保留中のトランザクションの最大数を指定する**sp_replshowcmds**情報を返します。  
+`[ @maxtrans = ] maxtrans` に関する情報を返すトランザクションの数です。 *maxtrans*は**int**、既定値は**1**、レプリケーションが保留中のトランザクションの最大数を指定する**sp_replshowcmds**情報を返します。  
   
 ## <a name="result-sets"></a>結果セット  
  **sp_replshowcmds**実行元のパブリケーション データベースに関する情報を返す診断プロシージャです。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**binary(10)**|コマンドのシーケンス番号です。|  
+|**xact_seqno**|**binary(10)**|コマンドのシーケンス番号。|  
 |**originator_id**|**int**|常にコマンド オリジネータの ID **0**します。|  
 |**publisher_database_id**|**int**|常にパブリッシャー データベースの ID **0**します。|  
-|**article_id**|**int**|アーティクルの ID です。|  
-|**type**|**int**|コマンドの種類です。|  
-|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドです。|  
+|**article_id**|**int**|アーティクルの ID。|  
+|**type**|**int**|コマンドの種類。|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] コマンド。|  
   
 ## <a name="remarks"></a>コメント  
  **sp_replshowcmds**はトランザクション レプリケーションで使用します。  

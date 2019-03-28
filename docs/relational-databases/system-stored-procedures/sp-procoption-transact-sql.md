@@ -18,12 +18,12 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aee8c496db092787720ea8f778697b5a7b3fdd22
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 218371ab6d8133dbaf1865eeffc11f92883b4305
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973921"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533674"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@ProcName =** ] **'**_procedure_**'**  
- オプションを設定する対象のプロシージャの名前です。 *プロシージャ*は**nvarchar (776)**、既定値はありません。  
+`[ @ProcName = ] 'procedure'` オプションを設定する対象のプロシージャの名前です。 *プロシージャ*は**nvarchar (776)**、既定値はありません。  
   
- [ **@OptionName =** ] **'**_option_**'**  
- 設定するオプションの名前です。 値だけ*オプション*は**スタートアップ**します。  
+`[ @OptionName = ] 'option'` 設定するオプションの名前です。 値だけ*オプション*は**スタートアップ**します。  
   
- [ **@OptionValue =** ] **'**_value_**'**  
- オプションを設定するかどうか (**true**または**で**) かオフ (**false**または**オフ**)。 *値*は**varchar (12)**、既定値はありません。  
+`[ @OptionValue = ] 'value'` オプションを設定するかどうか (**true**または**で**) かオフ (**false**または**オフ**)。 *値*は**varchar (12)**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) またはエラーの数 (失敗)  

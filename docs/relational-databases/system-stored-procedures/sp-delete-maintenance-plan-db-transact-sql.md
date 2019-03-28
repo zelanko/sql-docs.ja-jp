@@ -21,12 +21,12 @@ ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81631efabd541ace5dd7296b54d806ec3750d327
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 8a260e68064b0a9218da07a8a65cf6b584382b4b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169063"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528644"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "49169063"
   指定されたデータベースから、指定されたメンテナンス プランの関連付けを解除します。  
   
 > [!NOTE]  
->  このストアド プロシージャは、データベース メンテナンス プランと共に使用できます。 ただし、この機能は、このストアド プロシージャを使用しないメンテナンス プランでも実行できます。 このプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
+>  このストアド プロシージャは、データベース メンテナンス プランで使用されます。 この機能は、このストアド プロシージャを使用しないメンテナンス プランに置き換わりました。 このプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -49,11 +49,9 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@plan_id =**] **'**_プラン\_id_**'**  
- メンテナンス プランの ID を指定します。 *plan_id*は**uniqueidentifier**します。  
+`[ @plan_id = ] 'plan\_id'` メンテナンス プランの ID を指定します *plan_id*は**uniqueidentifier**します。  
   
- [  **@db_name =**] **'**_データベース\_名前_**'**  
- メンテナンス プランから削除するデータベース名を指定します。 *database_name* は **sysname** です。  
+`[ @db_name = ] 'database\_name'` メンテナンス プランから削除するデータベース名を指定します。 *database_name* は **sysname** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

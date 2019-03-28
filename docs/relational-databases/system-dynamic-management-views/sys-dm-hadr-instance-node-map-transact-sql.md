@@ -15,33 +15,33 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
-- Availability Groups [SQL Server], WSFC clusters
+- Availability Groups [SQL Server], WSFC
 - sys.sys.dm_hadr_instance_node_map dynamic management view
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e857682f5bb03256b129521840f8969e797e1a5f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c3e0b022996ab5b0f6de91773871fc7357c29e7f
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535739"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511389"
 ---
-# <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
+# <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  すべてのインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Always On 可用性グループに参加している場合は、サーバー インスタンスをホストする Windows Server フェールオーバー クラスタ リング (WSFC) ノードの名前を取得する可用性レプリカをホストします。 この動的管理ビューには、次の用途があります。  
+  すべてのインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Always On 可用性グループに参加している場合は、サーバー インスタンスをホストする Windows Server フェールオーバー クラスター (WSFC) ノードの名前を取得する可用性レプリカをホストします。 この動的管理ビューには、次の用途があります。  
   
 -   この動的管理ビューは、同一の WSFC ノードでホストされている複数の可用性レプリカを持つ可用性グループを検出するために役に立ちます。これはサポート外の構成であり、可用性グループが間違って構成されているときに FCI フェールオーバーが発生した場合にこの状態になることがあります。 詳細については、「[フェールオーバー クラスタリングと Always On 可用性グループ #40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」を参照してください。  
   
--   複数の SQL Server インスタンスが同一の WSFC ノードでホストされている場合、Resource DLL はこの動的管理ビューを使用して接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを決定します。  
+-   インスタンスを確認するリソース DLL がこの動的管理ビューを使用して同一の WSFC ノードでは、複数の SQL Server インスタンスがホストされている、ときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続します。  
    
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ag_resource_id**|**nvarchar (256)**|WSFC クラスターのリソースとしての可用性グループの一意な ID。|  
+|**ag_resource_id**|**nvarchar (256)**|WSFC のリソースとして可用性グループの一意の ID。|  
 |**instance_name**|**nvarchar (256)**|名前 -*server*/*インスタンス*-可用性グループのレプリカをホストするサーバー インスタンスのです。|  
-|**node_name**|**nvarchar (256)**|WSFC クラスター ノードの名前。|  
+|**node_name**|**nvarchar (256)**|WSFC ノードの名前。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  

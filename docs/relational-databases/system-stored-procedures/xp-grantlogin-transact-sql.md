@@ -18,17 +18,17 @@ ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 17fe4fd7edad9df6bccace9d301516ae7683edf3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: c6a6e31b4dc36e0f280dfb03d8eadf09a7d4ff7c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255667"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534864"
 ---
-# <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
+# <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Windows グループまたはユーザーに対し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセスを許可します。  
+  Windows グループまたはユーザー アクセス権を付与する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)代わりにします。  
@@ -43,11 +43,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@loginame =** ] **'**_login_**'**  
- 追加する Windows ユーザーまたはグループの名前を指定します。 Windows ユーザーまたはグループは、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ユーザー*します。 *ログイン*は**sysname**、既定値はありません。  
+`[ @loginame = ] 'login'` 追加するには、Windows ユーザーまたはグループの名前です。 Windows ユーザーまたはグループは、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ユーザー*します。 *ログイン*は**sysname**、既定値はありません。  
   
- [ **@logintype =** ] **'**_logintype_**'**  
- アクセス権が与えられるログインのセキュリティ レベルを指定します。 *logintype*は**varchar (5)**、既定値は NULL です。 のみ**管理者**を指定できます。 場合**管理者**が指定されている*ログイン*へのアクセスを許可するが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のメンバーとして追加して、 **sysadmin**固定サーバー ロール。  
+`[ @logintype = ] 'logintype'` ログインのセキュリティ レベルは、アクセスを許可されています。 *logintype*は**varchar (5)**、既定値は NULL です。 のみ**管理者**を指定できます。 場合**管理者**が指定されている*ログイン*へのアクセスを許可するが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のメンバーとして追加して、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

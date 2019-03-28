@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d89fefdf575cdb7961df0ceae811184ca31fc51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822536"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530344"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>メモリ最適化テーブルのテーブルと行のサイズ
   メモリ最適化テーブルは、行のコレクションと、行へのポインターを格納するインデックスで構成されています。 メモリ最適化テーブルでは、行を 8,060 バイトより長くすることはできません。 メモリ最適化テーブルのサイズを知ることで、コンピューターに十分なメモリがあるかどうかがわかります。  
@@ -130,12 +130,12 @@ ms.locfileid: "52822536"
 |Jane|Prague|  
 |Susan|Bogata|  
   
-##  <a name="bkmk_ExampleComputation"></a> 例:テーブルと行サイズの計算  
+##  <a name="bkmk_ExampleComputation"></a> 例: テーブルと行サイズの計算  
  ハッシュ インデックスの場合、実際のバケット数は最も近い 2 のべき乗に切り上げられます。 たとえば、指定された bucket_count が 100,000 の場合、インデックスの実際のバケット数は 131,072 です。  
   
  次の定義を含む Orders テーブルがあるとします。  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -149,7 +149,7 @@ GO
   
  このテーブルには 1 つのハッシュ インデックスと 1 つの非クラスター化インデックス (主キー) が含まれていることを注意してください。 さらに、3 個の固定長列および 1 個の可変長列があり、そのうちの 1 個の列は NULL 値を許容します (OrderDescription)。 Orders テーブルに 8,379 行、および、OrderDescription 列の値の平均の長さが 78 文字と仮定します。  
   
- このテーブルのサイズを判断するには、最初にインデックスのサイズを調べます。 両方のインデックスの bucket_count は 10,000 と指定されています。 これは、最も近い 2 のべき乗に切り上げられます。16384 です。 したがって、Orders テーブルのインデックスの合計サイズは次のとおりです。  
+ このテーブルのサイズを判断するには、最初にインデックスのサイズを調べます。 両方のインデックスの bucket_count は 10,000 と指定されています。 これは、最も近い 2 のべき乗に切り上げられます。16384. したがって、Orders テーブルのインデックスの合計サイズは次のとおりです。  
   
 ```  
 8 * 16384 = 131072 bytes  
@@ -198,7 +198,7 @@ GO
   
     -   合計余白は 24 - 22 = 2 バイトです。  
   
--   固定長のディープ型の列はありません (固定長のディープ型の列。0 を返します。)。  
+-   固定長のディープ型の列はありません (固定長のディープ型の列。0.).  
   
 -   ディープ型の列の実際のサイズは 2 * 78 = 156 です。 単一のディープ型の列である OrderDescription は nvarchar 型です。  
   
@@ -217,7 +217,7 @@ GO
   
  実際にこのテーブルおよびインデックスに割り当てられ、使用されるメモリは、次のクエリを使用して取得することができます。  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  

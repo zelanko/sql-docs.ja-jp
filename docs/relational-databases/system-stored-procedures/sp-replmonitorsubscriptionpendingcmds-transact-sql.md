@@ -16,17 +16,17 @@ ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 175718b9d53556c5b24e65cb31e117fdf9a27418
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 73494ded33f5fc67c86bc5976f16c2e3b0e8b083
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794884"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532624"
 ---
-# <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
+# <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  トランザクション パブリケーションへのサブスクリプションで保留になっているコマンド数に関する情報と、コマンドの処理に要する予想時間の概算を返します。 このストアド プロシージャは、返されたサブスクリプションごとに 1 行のデータを返します。 このストアド プロシージャはレプリケーションの監視に使用し、ディストリビューター側でディストリビューション データベースについて実行されます。  
+  トランザクション パブリケーションおよびそれらの処理にかかる時間の大まかな推定値へのサブスクリプションの保留コマンドの数に関する情報を返します。 このストアド プロシージャは、返されたサブスクリプションごとに 1 行を返します。 レプリケーションの監視に使用される、このストアド プロシージャはディストリビューターのディストリビューション データベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,23 +43,17 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher** =] **'***パブリッシャー***'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
- [ **@publisher_db** =] **'***publisher_db***'**  
- パブリッシャー データベースの名前を指定します。 *publisher_db*は**sysname**、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシュされたデータベースの名前です。 *publisher_db* は **sysname** 、既定値はありません。  
   
- [ **@publication** =] **'***パブリケーション***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [ **@subscriber** =] **'***サブスクライバー***'**  
- サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。  
   
- [ **@subscriber_db** =] **'***@subscriber_db***'**  
- サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値はありません。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値はありません。  
   
- [ **@subscription_type** =] *subscription_type*  
- 場合、サブスクリプションの種類。 *publication_type*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
+`[ @subscription_type = ] subscription_type` 場合、サブスクリプションの種類。 *publication_type*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -71,7 +65,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**pendingcmdcount**|**int**|サブスクリプションで保留中のコマンドの数。|  
-|**estimatedprocesstime**|**int**|保留中のコマンドをサブスクライバーに配信するのに必要な予想時間 (秒単位)。|  
+|**estimatedprocesstime**|**int**|すべての保留中のコマンドをサブスクライバーに配信するために必要な秒数の見積もりです。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

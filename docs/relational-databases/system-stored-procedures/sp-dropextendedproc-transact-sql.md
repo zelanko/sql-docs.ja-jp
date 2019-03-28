@@ -18,12 +18,12 @@ ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e6d007688f3c86b17578231f31da4f1ff5db0d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3690d4c954ae3cde5159100280597af14a796d3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748920"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529764"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@functname =**] **'***プロシージャ***'**  
- 削除する拡張ストアド プロシージャの名前を指定します。 *プロシージャ*は**nvarchar (517)**、既定値はありません。  
+`[ @functname = ] 'procedure'` 削除する拡張ストアド プロシージャの名前です。 *プロシージャ*は**nvarchar (517)**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -66,7 +65,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
  次の例では、削除、`xp_hello`拡張ストアド プロシージャ。  
   
 > [!NOTE]  
->  この拡張ストアド プロシージャは既に存在している必要があります。存在しない場合はエラー メッセージが返されます。  
+>  既に存在する必要がありますこの拡張ストアド プロシージャまたは例では、エラー メッセージを返します。  
   
 ```  
 USE master;  

@@ -16,17 +16,17 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c868fe69df1f3fd34fe0c1f550507e7db7b6c944
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 42d64a5a62fd1d1371604c7d8311ba42dabf7861
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823426"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529714"
 ---
-# <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
+# <a name="spreplcmds-transact-sql"></a>sp_replcmds (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  レプリケーションするようマークが付けられたトランザクションのコマンドを返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  トランザクション レプリケーション用のコマンドを返します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
 > [!IMPORTANT]  
 >  **Sp_replcmds**プロシージャがレプリケーションに関する問題のトラブルシューティングにのみ実行する必要があります。  
@@ -41,8 +41,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@maxtrans=**] *maxtrans*  
- 情報を返すトランザクションの数です。 *maxtrans*は**int**、既定値は**1**、ディストリビューション待ちの次のトランザクションを指定します。  
+`[ @maxtrans = ] maxtrans` 情報を返すトランザクションの数です。 *maxtrans*は**int**、既定値は**1**、ディストリビューション待ちの次のトランザクションを指定します。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -52,23 +51,23 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**partial_command**|**bit**|これが部分的なコマンドかどうかを示します。|  
 |**command**|**varbinary(1024)**|コマンドの値。|  
 |**xactid**|**binary(10)**|トランザクション id。|  
-|**xact_seqno**|**varbinary(16)**|トランザクション シーケンス番号です。|  
+|**xact_seqno**|**varbinary(16)**|トランザクション シーケンス番号。|  
 |**publication_id**|**int**|パブリケーションの ID。|  
 |**command_id**|**int**|内のコマンドの ID [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)します。|  
-|**command_type**|**int**|コマンドの種類です。|  
-|**originator_srvname**|**sysname**|トランザクションが発生したサーバーです。|  
-|**originator_db**|**sysname**|トランザクションが発生したデータベースです。|  
+|**command_type**|**int**|コマンドの種類。|  
+|**originator_srvname**|**sysname**|サーバーはトランザクションが発生します。|  
+|**originator_db**|**sysname**|データベースのトランザクションが発生します。|  
 |**pkHash**|**int**|内部使用のみです。|  
-|**originator_publication_id**|**int**|トランザクションが発生したパブリケーションの ID です。|  
+|**originator_publication_id**|**int**|トランザクションが発生したパブリケーションの ID。|  
 |**originator_db_version**|**int**|トランザクションが発生したデータベースのバージョンです。|  
-|**originator_lsn**|**varbinary(16)**|発生元パブリケーションでのコマンドのログ シーケンス番号 (LSN) を識別します。|  
+|**originator_lsn**|**varbinary(16)**|発生元パブリケーションで、コマンドのログ シーケンス番号 (LSN) を識別します。|  
   
 ## <a name="remarks"></a>コメント  
  **sp_replcmds**トランザクション レプリケーションでログ読み取りプロセスによって使用されます。  
   
  レプリケーション処理を実行する最初のクライアント**sp_replcmds**ログ リーダーとして特定のデータベースでします。  
   
- このプロシージャは、所有者限定テーブルまたはテーブル名が限定されていないテーブル (既定値) に対するコマンドを生成します。 限定されたテーブル名を追加することにより、あるデータベースの特定のユーザーが所有するテーブルから、別のデータベースで同じユーザーが所有するテーブルにデータのレプリケーションが可能になります。  
+ この手順では、テーブルの所有者で修飾されたコマンドを生成したり、テーブル名 (既定値) で修飾しませんすることができます。 修飾テーブル名を追加すると、別のデータベースで同じユーザーが所有するテーブルに 1 つのデータベースの特定のユーザーが所有するテーブルからデータのレプリケーションができます。  
   
 > [!NOTE]  
 >  レプリケーション元データベースのテーブル名は、所有者名により限定されるので、レプリケーション先データベースのテーブルの所有者も同じ所有者名である必要があります。  

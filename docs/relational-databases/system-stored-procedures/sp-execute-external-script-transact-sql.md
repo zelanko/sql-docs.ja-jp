@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4421ac28e3ee8914cf016f5df23e5f163bacfd9b
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: f11b09d93510fe1da89abc1a723e7698f1fdd915
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864400"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531044"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-プロシージャへの入力引数として指定されたスクリプトを実行します。 スクリプトで実行される、[拡張性フレームワーク](../../advanced-analytics/concepts/extensibility-framework.md)します。 スクリプトは、少なくとも 1 つの拡張機能を持つ、データベース エンジン、サポートされていると、登録済みの言語で記述する必要があります: [ **R**](../../advanced-analytics/concepts/extension-r.md)、 [ **Python** ](../../advanced-analytics/concepts/extension-python.md)、または[ **Java** (SQL Server 2019 のプレビューのみ)](../../advanced-analytics/java/extension-java.md)します。 
+プロシージャへの入力引数として指定されたスクリプトを実行します。 スクリプトで実行される、[拡張性フレームワーク](../../advanced-analytics/concepts/extensibility-framework.md)します。 少なくとも 1 つの拡張機能を持つデータベース エンジンでサポートされていると、登録済みの言語でスクリプトを記述する必要があります。[**R**](../../advanced-analytics/concepts/extension-r.md)、 [ **Python**](../../advanced-analytics/concepts/extension-python.md)、または[ **Java** (SQL Server 2019 のプレビューのみ)](../../advanced-analytics/java/extension-java.md)します。 
 
 実行する**sp_execute_external_script**、ステートメントを使用して外部スクリプトを有効にする必要があります最初`sp_configure 'external scripts enabled', 1;`します。  
   
@@ -80,35 +80,27 @@ sp_execute_external_script
   
  **@script** = N'*スクリプト*' 外部言語のスクリプト リテラルまたは変数の入力として指定します。 *スクリプト*は**nvarchar (max)** します。  
 
-  [ **@input_data_1** = N'*input_data_1*']  
- 形式で外部のスクリプトで使用する入力データを指定します、[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。 データ型*input_data_1*は**nvarchar (max)** します。
+`[ @input_data_1 =  N'input_data_1' ]` 形式で外部のスクリプトで使用する入力データを指定します、[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。 データ型*input_data_1*は**nvarchar (max)** します。
 
- [ **@input_data_1_name** = N'*input_data_1_name*']  
- によって定義されたクエリを表すために使用する変数の名前を示す@input_data_1します。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力を表形式でなければなりません。 *input_data_1_name*は**sysname**します。  既定値は*InputDataSet*します。  
+`[ @input_data_1_name = N'input_data_1_name' ]` によって定義されたクエリを表すために使用する変数の名前を示す@input_data_1します。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力を表形式でなければなりません。 *input_data_1_name*は**sysname**します。  既定値は*InputDataSet*します。  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-  [ **@input_data_1_order_by_columns** = N'*input_data_1_order_by_columns*']  
- SQL Server 2019 にのみ適用されます、パーティションごとのモデルの構築に使用されます。 たとえば、製品名を結果セットの並べ替えに使用される列の名前を指定します。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力を表形式でなければなりません。
+`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]` SQL Server 2019 にのみ適用されます、パーティションごとのモデルの構築に使用されます。 たとえば、製品名を結果セットの並べ替えに使用される列の名前を指定します。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力を表形式でなければなりません。
 
-  [ **@input_data_1_partition_by_columns** = N'*input_data_1_partition_by_columns*']  
- SQL Server 2019 にのみ適用されます、パーティションごとのモデルの構築に使用されます。 地理的リージョンや日付など、データを分割するために使用する列の名前を指定します。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力を表形式でなければなりません。 
+`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]` SQL Server 2019 にのみ適用されます、パーティションごとのモデルの構築に使用されます。 地理的リージョンや日付など、データを分割するために使用する列の名前を指定します。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力を表形式でなければなりません。 
 ::: moniker-end
 
- [ **@output_data_1_name** = N'*output_data_1_name*']  
- 返されるデータを含む外部スクリプトで変数の名前を指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストアド プロシージャの呼び出しの完了時にします。 外部のスクリプトで変数のデータ型は、言語に依存します。 R、出力は、データ フレームである必要があります。 Python、出力は、pandas データ フレームである必要があります。 *output_data_1_name*は**sysname**します。  既定値は*OutputDataSet*します。  
+`[ @output_data_1_name =  N'output_data_1_name' ]` 返されるデータを含む外部スクリプトで変数の名前を指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストアド プロシージャの呼び出しの完了時にします。 外部のスクリプトで変数のデータ型は、言語に依存します。 R、出力は、データ フレームである必要があります。 Python、出力は、pandas データ フレームである必要があります。 *output_data_1_name*は**sysname**します。  既定値は*OutputDataSet*します。  
 
- [ **@parallel** = 0 | 1]  
- R スクリプトの並列実行を有効に設定して、`@parallel`パラメーターを 1 にします。 このパラメーターに既定では 0 (並列処理です)。 場合`@parallel = 1`出力が、クライアント コンピューターに直接ストリーミングされていると、`WITH RESULT SETS`句は必須であり、出力スキーマを指定する必要があります。  
+`[ @parallel = 0 | 1 ]` R スクリプトの並列実行を有効に設定して、`@parallel`パラメーターを 1 にします。 このパラメーターに既定では 0 (並列処理です)。 場合`@parallel = 1`出力が、クライアント コンピューターに直接ストリーミングされていると、`WITH RESULT SETS`句は必須であり、出力スキーマを指定する必要があります。  
 
  + R スクリプトを使用して、RevoScaleR 関数を使用して、`@parallel`パラメーターをスクリプトが普通に並列化と仮定すると、大規模なデータセットを処理するために役立つことができます。 たとえば、R を使用して`predict`に新しい予測を生成して設定するには、モデルで関数を`@parallel = 1`クエリ エンジンへのヒントとして。 に従って行が分散クエリを並列に処理できる場合、 **MAXDOP**設定します。  
   
  + RevoScaleR 関数を使用する R スクリプトでは、並列処理は自動的に処理され、指定しないでください`@parallel = 1`を**sp_execute_external_script**呼び出します。  
   
-[ **@params** = N' *@parameter_name data_type* [OUT |出力] [、.. .n]']  
- 外部のスクリプトで使用される入力パラメーターの宣言の一覧。  
+`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]` 外部のスクリプトで使用される入力パラメーターの宣言の一覧。  
   
-[ **@parameter1** = '*value1*' [OUT |出力] [、.. .n]  
- 外部のスクリプトで使用される入力パラメーターの値の一覧。  
+`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` 外部のスクリプトで使用される入力パラメーターの値の一覧。  
 
 ## <a name="remarks"></a>コメント
 
@@ -132,7 +124,7 @@ sp_execute_external_script
 
  SQL Server の 2019 で現在パブリック プレビュー中パラメーターを設定できます 2 つ追加パーティションは 1 つに基づいてまたは位置を論理パーティションに自然なセグメントのデータ セットを提供する多くの列が作成し、使用して、パーティション分割されたデータのモデリングを有効にします。スクリプトの実行中にのみ 年齢、性別、地域、日付や時刻などの繰り返しの値を含む列は、パーティション分割されたデータ セットに役立つ、いくつかの例を示します。
  
- 2 つのパラメーターが**input_data_1_partition_by_columns**と**input_data_1_order_by_columns**2 番目のパラメーターが、結果セットの並べ替えに使用されます。 入力として渡されたパラメーター`sp_execute_external_script`外部スクリプトの実行に 1 回のすべてのパーティション。 詳細と例については、次を参照してください。[チュートリアル: パーティションに基づくモデルを作成する](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)します。
+ 2 つのパラメーターが**input_data_1_partition_by_columns**と**input_data_1_order_by_columns**2 番目のパラメーターが、結果セットの並べ替えに使用されます。 入力として渡されたパラメーター`sp_execute_external_script`外部スクリプトの実行に 1 回のすべてのパーティション。 詳細と例については、次を参照してください。[チュートリアル。パーティション ベースのモデルを作成する](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)します。
 
  並列でスクリプトを実行するには指定することによって`@parallel=1`します。 設定する必要がある場合は、入力クエリを並列化できる、`@parallel=1`に渡す引数の一部として`sp_execute_external_script`します。 既定では、クエリ オプティマイザーがの下で稼働`@parallel=1`このスクリプトにはでこれを明示的に処理する場合は、256 個を超える行を持つテーブルには示されているように、パラメーターが含まれています。
 
@@ -158,7 +150,7 @@ sp_execute_external_script
 
 この問題を回避するには、**キャスト**列または値でサポートされている型[!INCLUDE[tsql](../../includes/tsql-md.md)]外部スクリプトを送信する前にします。  
   
--   **カーソル (cursor)**  
+-   **cursor**  
   
 -   **timestamp**  
   

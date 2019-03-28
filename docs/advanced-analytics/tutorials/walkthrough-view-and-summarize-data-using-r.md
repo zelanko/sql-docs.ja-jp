@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 368caa21545e534c393aca29ce8fd3a59f9d9837
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 613053b05d675963ceef89a71de4e8ac73352fad
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644561"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510909"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>表示し、R (チュートリアル) を使用した SQL Server データの概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -208,7 +208,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 > 
 > これらを使用して SQL Server で実行される R ジョブを監視することも[カスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [R を利用してグラフやプロットを作成する](walkthrough-create-graphs-and-plots-using-r.md)

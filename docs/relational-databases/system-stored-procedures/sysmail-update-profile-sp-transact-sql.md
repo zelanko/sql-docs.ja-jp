@@ -18,12 +18,12 @@ ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c979104c30ec9b134f2d73acb2d85ecd22490371
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2b1616fdf7b690d61c6a2605cc15da2508a3fb9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854210"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534664"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,17 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@profile_id** = ] *profile_id*  
- 更新するプロファイル ID を指定します。 *profile_id*は**int**、既定値は NULL です。 少なくとも 1 つの*profile_id*または*profile_name*指定する必要があります。 両方を指定した場合、プロシージャではプロファイルの名前が変更されます。  
+`[ @profile_id = ] profile_id` 更新するプロファイルの id。 *profile_id*は**int**、既定値は NULL です。 少なくとも 1 つの*profile_id*または*profile_name*指定する必要があります。 両方が指定されている場合、手順は、プロファイルの名前を変更します。  
   
- [ **@profile_name** =] **'***profile_name***'**  
- 更新するプロファイルの名前、またはプロファイルの新しい名前を指定します。 *profile_name*は**sysname**、既定値は NULL です。 少なくとも 1 つの*profile_id*または*profile_name*指定する必要があります。 両方を指定した場合、プロシージャではプロファイルの名前が変更されます。  
+`[ @profile_name = ] 'profile_name'` 更新するプロファイルの名前またはプロファイルの新しい名前。 *profile_name*は**sysname**、既定値は NULL です。 少なくとも 1 つの*profile_id*または*profile_name*指定する必要があります。 両方が指定されている場合、手順は、プロファイルの名前を変更します。  
   
- [ **@description** =] **'***説明***'**  
- プロファイルの新しい説明を指定します。 *説明*は**nvarchar (256)**、既定値は NULL です。  
+`[ @description = ] 'description'` プロファイルの新しい説明します。 *説明*は**nvarchar (256)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- プロファイル ID とプロファイル名の両方を指定した場合、このプロシージャでは、プロファイルの名前が指定の名前に変更され、プロファイルの説明が更新されます。 一方の引数だけを指定した場合は、プロファイルの説明が更新されます。  
+ プロファイルの id とプロファイル名の両方を指定すると、プロシージャが指定された名前に、プロファイルの名前を変更し、プロファイルの説明を更新します。 これらの引数の 1 つだけを指定した場合、手順は、プロファイルの説明を更新します。  
   
  ストアド プロシージャ**sysmail_update_profile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
   

@@ -18,17 +18,17 @@ ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43d9180ace10e61bbb9a9e65f48e718b8b426ea8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fc6f82a6f39755b6810a3a1043833fcc13213a0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763880"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529134"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在定義されている拡張ストアド プロシージャと、そのストアド プロシージャ (関数) を所有しているダイナミック リンク ライブラリ (DLL) の名前をレポートします。  
+  現在定義されているレポートは拡張ストアド プロシージャおよびダイナミック リンク ライブラリ (DLL) の名前を使用して、プロシージャ (関数) が属しています。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [CLR 統合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) を使用してください。  
@@ -43,8 +43,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@funcname =**] **'***プロシージャ***'**  
- 情報をレポートする拡張ストアド プロシージャの名前です。 *プロシージャ*は**sysname**、既定値は NULL です。  
+`[ @funcname = ] 'procedure'` 情報を報告する、拡張ストアド プロシージャの名前です。 *プロシージャ*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -54,7 +53,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|拡張ストアド プロシージャの名前です。|  
-|**dll**|**nvarchar (255)**|DLL の名前です。|  
+|**dll**|**nvarchar (255)**|DLL の名前。|  
   
 ## <a name="remarks"></a>コメント  
  ときに*プロシージャ*が指定されている**sp_helpextendedproc**拡張ストアド プロシージャの指定したレポートします。 このパラメーターが指定されていないときに**sp_helpextendedproc**が属するすべての拡張ストアド プロシージャの名前と各拡張ストアド プロシージャ DLL の名前を返します。  
@@ -74,7 +73,7 @@ EXEC sp_helpextendedproc;
 GO  
 ```  
   
-### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>B. 特定の拡張ストアド プロシージャに関するヘルプをレポートする  
+### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>B. 1 つの拡張ストアド プロシージャのヘルプをレポートします。  
  次の例では、報告、`xp_cmdshell`拡張ストアド プロシージャ。  
   
 ```  

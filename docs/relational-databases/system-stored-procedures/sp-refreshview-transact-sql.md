@@ -18,17 +18,17 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e707eb96cd07f784e1089a5131a44eb0ce248b7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e41bcab4680d1e3bbaf08e2fbab112799fd5976
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640832"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533154"
 ---
-# <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
+# <a name="sprefreshview-transact-sql"></a>sp_refreshview (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定された非スキーマ バインド ビューのメタデータを更新します。 ビューの生成元であるオブジェクトを変更すると、ビューに固有のメタデータが古くなることがあります。  
+  指定された非スキーマ バインド ビューのメタデータを更新します。 ビューのメタデータを永続的なは、ビューが依存している基になるオブジェクトが変更されたのため、古くなることができます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,14 +40,13 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@viewname=** ] **'***viewname***'**  
- ビューの名前を指定します。 *viewname*は**nvarchar**、既定値はありません。 *viewname* 、マルチパート識別子を指定できますが、現在のデータベース内のビューに参照できるのみです。  
+`[ @viewname = ] 'viewname'` ビューの名前です。 *viewname*は**nvarchar**、既定値はありません。 *viewname* 、マルチパート識別子を指定できますが、現在のデータベース内のビューに参照できるのみです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または 0 以外の数値 (失敗)  
+ 0 (成功) または 0 以外の値の数 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- ビューは、schemabinding を指定して作成されていない場合**sp_refreshview**ビューの定義に影響を与える、ビューの基になるオブジェクトに変更されたときに実行する必要があります。 この操作を行わないと、ビューのクエリ時に、予期しない結果が表示される可能性があります。  
+ ビューは、schemabinding を指定して作成されていない場合**sp_refreshview**ビューの定義に影響を与える、ビューの基になるオブジェクトに変更されたときに実行する必要があります。 それ以外の場合、ビューは、クエリが実行時に、予期しない結果を生成可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  ビューに対する ALTER 権限と、共通言語ランタイム (CLR) ユーザー定義型およびビュー列で参照される XML スキーマ コレクションに対する REFERENCES 権限が必要です。  
@@ -63,7 +62,7 @@ GO
 EXECUTE sp_refreshview N'Sales.vIndividualCustomer';  
 ```  
   
-### <a name="b-creating-a-script-that-updates-all-views-that-have-dependencies-on-a-changed-object"></a>B. 変更されたオブジェクトに対する依存関係があるすべてのビューを更新するスクリプトの作成  
+### <a name="b-creating-a-script-that-updates-all-views-that-have-dependencies-on-a-changed-object"></a>B. 変更されたオブジェクトに対する依存関係のあるすべてのビューを更新するスクリプトの作成  
  テーブル `Person.Person` に対して作成された任意のビューの定義に影響を与える形で、このテーブルが変更されたとします。 次の例では、テーブル `Person.Person` に対する依存関係があるすべてのビューについて、メタデータを更新するスクリプトを作成しています。  
   
 ```  

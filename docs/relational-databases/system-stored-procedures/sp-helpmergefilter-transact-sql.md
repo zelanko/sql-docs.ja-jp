@@ -16,17 +16,17 @@ ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3785eb45e8ecca7a573f499d8c48b184a22e6efc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779364"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534704"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マージ フィルターに関する情報を返します。 このストアド プロシージャは、任意のデータベース上のパブリッシャー側で実行されます。  
+  マージ フィルターに関する情報を返します。 このストアド プロシージャは、任意のデータベースのパブリッシャーで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,14 +40,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@article=**] **'***記事***'**  
- アーティクルの名前を指定します。 *記事*は**sysname**、既定値は**%**、すべてのアーティクルの名前が返されます。  
+`[ @article = ] 'article'` アーティクルの名前です。 *記事*は**sysname**、既定値は**%**、すべてのアーティクルの名前が返されます。  
   
- [  **@filtername=**] **'***filtername***'**  
- 情報を返すフィルターの名前を指定します。 *filtername*は**sysname**、既定値は**%**、アーティクルまたはパブリケーションで定義されているすべてのフィルターに関する情報が返されます。  
+`[ @filtername = ] 'filtername'` に関する情報を返すフィルターの名前です。 *filtername*は**sysname**、既定値は**%**、アーティクルまたはパブリケーションで定義されているすべてのフィルターに関する情報が返されます。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -55,15 +52,15 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|結合フィルターの ID。|  
 |**filtername**|**sysname**|フィルターの名前。|  
-|**結合アーティクル名**|**sysname**|結合アーティクルの名前。|  
+|**結合アーティクル名**|**sysname**|結合アーティクルの名前です。|  
 |**join_filterclause**|**nvarchar(2000)**|結合を修飾するフィルター句。|  
 |**join_unique_key**|**int**|一意なキーを基に結合を行うかどうかを示します。|  
-|**ベース テーブルの所有者**|**sysname**|テーブル所有者の名前。|  
-|**ベース テーブルの名前**|**sysname**|ベース テーブルの名前。|  
+|**ベース テーブルの所有者**|**sysname**|ベース テーブルの所有者の名前。|  
+|**ベース テーブルの名前**|**sysname**|ベース テーブルの名前です。|  
 |**結合テーブルの所有者**|**sysname**|ベース テーブルに結合するテーブルの所有者の名前。|  
 |**結合テーブルの名前**|**sysname**|ベース テーブルに結合するテーブルの名前。|  
-|**アーティクルの名前**|**sysname**|ベース テーブルに結合するテーブル アーティクルの名前。|  
-|**filter_type**|**tinyint**|マージ フィルターの種類。次のいずれかになります。<br /><br /> **1** = 結合フィルターのみ<br /><br /> **2** = 論理レコードのリレーションシップ<br /><br /> **3** = 両方|  
+|**アーティクルの名前**|**sysname**|ベース テーブルに結合するテーブル アーティクルの名前です。|  
+|**filter_type**|**tinyint**|マージ フィルターは、次のいずれかの種類です。<br /><br /> **1** = 結合フィルターのみ<br /><br /> **2** = 論理レコードのリレーションシップ<br /><br /> **3** = 両方|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

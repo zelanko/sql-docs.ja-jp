@@ -12,12 +12,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5949bbc7d448c60c5ffbdc028f880a09181c986e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46d9b46698e4416f2ad9ab15b2fb8a223ab7b7c7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528389"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529584"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>テーブルおよび列に対するセマンティック検索の有効化
   ドキュメントまたはテキストが格納されている選択した列に対して統計的セマンティック インデックス作成を有効または無効にする方法について説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "52528389"
   
 -   セマンティック インデックスは、フルテキスト インデックス作成でサポートされるいずれかのデータ型の列に作成できます。 詳細については、「 [フルテキスト インデックスの作成と管理](create-and-manage-full-text-indexes.md)」をご覧ください。  
   
--   `varbinary(max)` 列のフルテキスト インデックス作成でサポートされるいずれかのドキュメントの種類を指定できます。 詳細については、次を参照してください[How To:。決定されるドキュメント型インデックスを作成できる](#doctypes)このトピックの「します。  
+-   `varbinary(max)` 列のフルテキスト インデックス作成でサポートされるいずれかのドキュメントの種類を指定できます。 詳細については、このトピックの「[方法: どのドキュメントの種類でインデックス作成ができるかを判断する](#doctypes)」を参照してください。  
   
 -   セマンティック インデックス作成では、選択した列に対し、キー フレーズのインデックスとドキュメントの類似性のインデックスの 2 種類のインデックスが作成されます。 セマンティック インデックス作成を有効にするときに 1 種類のインデックスだけを選択することはできません。 ただし、これらの 2 つのインデックスに対するクエリは別々に実行できます。 詳細については、「 [セマンティック検索を使用したドキュメント内のキー フレーズの検索](find-key-phrases-in-documents-with-semantic-search.md) 」および「 [セマンティック検索による類似および関連したドキュメントの検索](find-similar-and-related-documents-with-semantic-search.md)」をご覧ください。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "52528389"
  **TRANSACT-SQL を使用して新しいセマンティック インデックスを作成します。**  
  **CREATE FULLTEXT INDEX** ステートメントを呼び出し、セマンティック インデックスを作成するそれぞれの列に対して **STATISTICAL_SEMANTICS** を指定します。 このステートメントのすべてのオプションの詳細については、「[CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)」をご覧ください。  
   
- **例 1:一意インデックス、フルテキスト インデックスとセマンティック インデックスを作成します。**  
+ **例 1: 一意のインデックス、フルテキスト インデックス、およびセマンティック インデックスを作成する**  
   
  次の例では、既定のフルテキスト カタログ、**ft** を作成します。次に、AdventureWorks2012 サンプル データベースの **HumanResources.JobCandidate** テーブルの **JobCandidateID** 列に一意のインデックスを作成します。 この一意のインデックスは、フルテキスト インデックスのキー列として必要です。 次に、 **Resume** 列にフルテキスト インデックスとセマンティック インデックスを作成します。  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -78,13 +78,13 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
- **例 2:遅延インデックス作成のいくつかの列に、フルテキストおよびセマンティック インデックスを作成します。**  
+ **例 2: インデックスの作成を遅延させて、いくつかの列でフルテキスト インデックスとセマンティック インデックスを作成する**  
   
  次の例では、AdventureWorks2012 サンプル データベースにフルテキスト カタログ **documents_catalog**を作成します。 その後、この新しいカタログを使用するフルテキスト インデックスを作成します。 フルテキスト インデックスは、 **Production.Document**テーブルの **Title**、 **DocumentSummary** 、 **Document** の各列に作成します。セマンティック インデックスは、 **Document** 列にのみ作成します。 このフルテキスト インデックスは、新たに作成されたフルテキスト カタログおよび既存の一意なキー インデックス、 **PK_Document_DocumentID**を使用します。 推奨されているように、このインデックス キーは整数列、 **DocumentID**に作成されます。 この例では、列のデータの言語である英語の LCID、1033 を指定します。  
   
  さらに、この例では、変更の追跡が OFF で、NO POPULATION を指定しています。 代わりに、 **ALTER FULLTEXT INDEX** ステートメントを指定して、後のピーク タイム以外の時間に新しいインデックスの完全作成を開始し、自動変更追跡を有効にしています。  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -107,7 +107,7 @@ GO
   
  後のピーク タイム以外の時間にインデックスを作成  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -129,11 +129,11 @@ GO
   
 -   フルテキスト インデックス作成が既に有効になっている列にセマンティック インデックス作成を追加するには、 **ADD STATISTICAL_SEMANTICS** オプションを使用します。 1 つの **ALTER** ステートメントでは 1 つの列にのみセマンティック インデックス作成を追加できます。  
   
- **例:フルテキスト インデックス作成が既に列にセマンティック インデックス作成を追加します。**  
+ **例:フルテキスト インデックス作成が既に存在する列にセマンティック インデックス作成を追加する**  
   
  次の例では、AdventureWorks2012 サンプル データベースの **Production.Document** テーブルの既存のフルテキスト インデックスを変更します。 この例では、フルテキスト インデックスが既に存在している **Production.Document** テーブルの **Document** 列にセマンティック インデックスを追加します。 この例では、インデックスが自動的に再作成されないように指定します。  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -158,7 +158,7 @@ GO
  **TRANSACT-SQL を使用して、セマンティック インデックスを削除します。**  
  -   1 つまたは複数の列からセマンティック インデックス作成だけを削除するには、**ALTER COLUMN ***<列名>*** DROP STATISTICAL_SEMANTICS** オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。 1 つの **ALTER** ステートメントを使用して複数の列からインデックス作成を削除できます。  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -170,7 +170,7 @@ GO
   
 -   列からフルテキスト インデックス作成とセマンティック インデックス作成の両方を削除するには、**ALTER COLUMN ***<列名>*** DROP** オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -197,7 +197,7 @@ GO
   
  戻り値 1 は、データベースに対してフルテキスト検索とセマンティック検索が有効化されていることを示します。戻り値 0 は、フルテキスト検索とセマンティック検索が有効化されていないことを示します。  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -219,7 +219,7 @@ GO
   
      戻り値 1 は、列に対してセマンティック検索が有効化されていることを示します。戻り値 0 は、セマンティック検索が有効化されていないことを示します。  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -228,7 +228,7 @@ GO
   
      **statistical_semantics** 列の値 1 は、指定された列に対してフルテキスト インデックス作成とセマンティック インデックス作成が有効になっていることを示します。  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -246,7 +246,7 @@ GO
   
  カタログ ビュー [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql) のクエリを実行します。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  

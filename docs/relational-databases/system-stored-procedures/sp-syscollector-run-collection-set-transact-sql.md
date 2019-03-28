@@ -19,12 +19,12 @@ ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 706a10db6bc16deb34a428444b2918c5c1ff6b37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2ad81b1d92bb45d9ab15ca11897804cc0d333a9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716780"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531404"
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47716780"
   コレクターが既に有効になっており、コレクション セットが非キャッシュ コレクション モード用に構成されている場合、コレクション セットを開始します。  
   
 > [!NOTE]  
->  このプロシージャをキャッシュ コレクション モード用に構成されているコレクション セットに対して実行すると、失敗します。  
+>  キャッシュ コレクション モード用に構成されたコレクション セットに対して実行した場合、この手順は失敗します。  
   
  sp_syscollector_run_collection_set を使用すると、ユーザーはオンデマンドのデータ スナップショットを取得できます。  
   
@@ -47,11 +47,9 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@collection_set_id =** ] *collection_set_id*  
- コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**場合、値が必要と*名前*は NULL です。  
+`[ @collection_set_id = ] collection_set_id` コレクション セットの一意なローカル識別子です。 *collection_set_id*は**int**場合、値が必要と*名前*は NULL です。  
   
- [ **@name =** ] **'***name***'**  
- コレクション セットの名前を指定します。 *名前*は**sysname**場合、値が必要と*collection_set_id*は NULL です。  
+`[ @name = ] 'name'` コレクション セットの名前です。 *名前*は**sysname**場合、値が必要と*collection_set_id*は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

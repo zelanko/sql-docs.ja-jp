@@ -16,17 +16,17 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 128efbfb754508cf3ad395c89b2085f7f8b6297e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783035"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532733"
 ---
-# <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
+# <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ビジネス ロジック ハンドラーの情報、またはディストリビューターで登録されている COM ベースのカスタム競合回避モジュールのクラス ID (CLSID) の値を返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  ビジネス ロジック ハンドラーの情報、またはディストリビューターで登録されている COM ベースのカスタム競合回避モジュールのクラス ID (CLSID) の値を返します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,23 +43,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@article_resolver =** ] **'***article_resolver***'**  
- 登録を解除するカスタム ビジネス ロジックの名前を指定します。 *article_resolver*は**nvarchar (255)**、既定値はありません。 削除されるビジネス ロジックが COM コンポーネントの場合、そのコンポーネントの表示名です。 そのビジネス ロジックが [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework アセンブリの場合、そのアセンブリの名前です。  
+`[ @article_resolver = ] 'article_resolver'` 登録を解除するカスタム ビジネス ロジックの名前を指定します。 *article_resolver*は**nvarchar (255)**、既定値はありません。 削除されるビジネス ロジックが COM コンポーネントの場合は、このパラメーターは、コンポーネントのフレンドリ名です。 ビジネス ロジックがある場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework アセンブリでは、このパラメーターは、アセンブリの名前。  
   
- [ **@resolver_clsid**=] **'***resolver_clsid***'** 出力  
- 指定されたカスタム ビジネス ロジックの名前に関連付けられている COM オブジェクトの CLSID 値は、 *article_resolver*パラメーター。 *resolver_clsid*は**nvarchar (50)**、既定値は NULL です。  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` 指定されたカスタム ビジネス ロジックの名前に関連付けられている COM オブジェクトの CLSID 値は、 *article_resolver*パラメーター。 *resolver_clsid*は**nvarchar (50)**、既定値は NULL です。  
   
- [  **@is_dotnet_assembly=** ] **'***@is_dotnet_assembly***'** 出力  
- 登録するカスタム ビジネス ロジックの種類を指定します。 *is_dotnet_assembly*は**ビット**、既定値は 0。 **1**登録されているカスタム ビジネス ロジックがビジネス ロジック ハンドラー アセンブリであることを示します**0**は COM コンポーネントであることを示します。  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` 登録されているカスタム ビジネス ロジックの種類を指定します。 *is_dotnet_assembly*は**ビット**、既定値は 0。 **1**登録されているカスタム ビジネス ロジックがビジネス ロジック ハンドラー アセンブリであることを示します**0**は COM コンポーネントであることを示します。  
   
- [  **@dotnet_assembly_name=** ] **'***@dotnet_assembly_name***'** 出力  
- ビジネス ロジック ハンドラーを実装するアセンブリの名前を指定します。 *@dotnet_assembly_name*は**nvarchar (255)** 既定値は NULL です。  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` ビジネス ロジック ハンドラーを実装するアセンブリの名前です。 *@dotnet_assembly_name*は**nvarchar (255)** 既定値は NULL です。  
   
- [  **@dotnet_class_name=** ] **'***@dotnet_class_name***'** 出力  
- <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> をオーバーライドして、ビジネス ロジック ハンドラーを実装するクラスの名前です。 *@dotnet_class_name*は**nvarchar (255)** 既定値は NULL です。  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` オーバーライドするクラスの名前を指定<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>ビジネス ロジック ハンドラーを実装します。 *@dotnet_class_name*は**nvarchar (255)** 既定値は NULL です。  
   
- [  **@publisher=** ] **'***パブリッシャー***'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**既定値は NULL です。 このパラメーターは、ストアド プロシージャをパブリッシャーから呼び出さないときに使用します。 指定しない場合、ローカル サーバーがパブリッシャーであると見なされます。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー*は**sysname**既定値は NULL です。 このパラメーターは、ストアド プロシージャをパブリッシャーから呼び出さないときに使用します。 指定しない場合、ローカル サーバーがパブリッシャーであると見なされます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

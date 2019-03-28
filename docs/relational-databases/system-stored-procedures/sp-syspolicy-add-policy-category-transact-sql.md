@@ -18,17 +18,17 @@ ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ff44121317827976f65db8ebb49bc2eda37d42bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b223f8429d010382e444dd2e57a6fa7735200151
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779890"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526094"
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ポリシー ベースの管理で使用できるポリシー カテゴリを追加します。 ポリシー カテゴリを使用すると、ポリシーの整理や、ポリシー スコープの設定を行うことができす。  
+  ポリシー ベースの管理で使用できるポリシー カテゴリを追加します。 ポリシー カテゴリを使用すると、ポリシーのスコープを設定して、ポリシーを整理することができます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,14 +42,11 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@name=** ] **'***name***'**  
- ポリシー カテゴリの名前を指定します。 *名前*は**sysname**、必要があります。 *名前*NULL または空の文字列にすることはできません。  
+`[ @name = ] 'name'` ポリシー カテゴリの名前です。 *名前*は**sysname**、必要があります。 *名前*NULL または空の文字列にすることはできません。  
   
- [  **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
- データベース サブスクリプションがポリシー カテゴリに対して必須であるかどうかを指定します。 *mandate_database_subscriptions*は、**ビット**既定値は 1 (有効) の値。  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` データベース サブスクリプションがポリシー カテゴリに対して必須かどうかを判断します。 *mandate_database_subscriptions*は、**ビット**既定値は 1 (有効) の値。  
   
- [ **@policy_category_id=** ] *policy_category_id*  
- ポリシー カテゴリの識別子を指定します。 *policy_category_id*は**int**、出力として返されます。  
+`[ @policy_category_id = ] policy_category_id` ポリシー カテゴリの識別子です。 *policy_category_id*は**int**、出力として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -61,10 +58,10 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
  PolicyAdministratorRole 固定データベース ロールのメンバーシップが必要です。  
   
 > [!IMPORTANT]  
->  資格情報が昇格される可能性について: PolicyAdministratorRole ロールに割り当てられているユーザーは、サーバー トリガーを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの動作に影響する可能性があるポリシーの実行をスケジュールできます。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 構成の制御について信頼できるユーザーにのみこの昇格される可能性の資格情報、ため PolicyAdministratorRole ロールを付与する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
+>  資格情報が昇格される可能性:PolicyAdministratorRole ロールのユーザーがサーバー トリガーを作成しのインスタンスの運用に影響する可能性のあるポリシーの実行をスケジュール設定、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 構成の制御について信頼できるユーザーにのみこの昇格される可能性の資格情報、ため PolicyAdministratorRole ロールを付与する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、カテゴリのサブスクリプションが必須ではないポリシー カテゴリを作成します。 つまり、カテゴリでポリシーを有効または無効にして個々のデータベースを構成できます。  
+ 次の例では、カテゴリにサブスクリプションが必須でないポリシー カテゴリを作成します。 つまり、オプトインまたはカテゴリ内のポリシーを無効にする個々 のデータベースを構成することができます。  
   
 ```  
 DECLARE @policy_category_id int;  

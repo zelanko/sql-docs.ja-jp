@@ -16,17 +16,17 @@ ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ded79b417b868cc82cb1a59e34d72c3a5bf9f045
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0f72558a573e0cee0ab7fb2ab9b762246964a884
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748204"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526184"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  双方向のトランザクション レプリケーションでのループバックの検出および処理を開始するために使用されます。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  双方向のトランザクション レプリケーションでのループバックの検出および処理を開始するために使用されます。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,11 +39,9 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@server_name=**] **'***server_name***'**  
- トランザクションが適用されるサーバーの名前を指定します。 *originating_server*は**sysname**、既定値はありません。  
+`[ @server_name = ] 'server_name'` トランザクションが適用されているサーバーの名前です。 *originating_server*は**sysname**、既定値はありません。  
   
- [  **@database_name=**] **'***database_name***'**  
- トランザクションが適用されるデータベースの名前を指定します。 *originating_db*は**sysname**、既定値はありません。  
+`[ @database_name = ] 'database_name'` トランザクションが適用されているデータベースの名前です。 *originating_db*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

@@ -16,17 +16,17 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125712"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531814"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  保存されたパスワードの変更、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントまたは[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レプリケーション トポロジ内のサーバーに接続するときに、レプリケーション エージェントで使用されるログイン。 通常は、サーバーで実行中のエージェントがすべて同じログインまたはアカウントを使用している場合でも、個々のエージェントごとにパスワードを変更する必要があります。 このストアド プロシージャにより、サーバーで実行中のすべてのレプリケーション エージェントが使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows アカウントのすべてのインスタンスに対するパスワードを変更することができます。 このストアド プロシージャは、レプリケーション トポロジ内の任意のサーバー側で master データベースについて実行されます。  
+  保存されたパスワードの変更、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントまたは[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レプリケーション トポロジ内のサーバーに接続するときに、レプリケーション エージェントで使用されるログイン。 通常は、サーバーで実行中のエージェントがすべて同じログインまたはアカウントを使用している場合でも、個々のエージェントごとにパスワードを変更する必要があります。 このストアド プロシージャにより、サーバーで実行中のすべてのレプリケーション エージェントが使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows アカウントのすべてのインスタンスに対するパスワードを変更することができます。 このストアド プロシージャは、master データベースでレプリケーション トポロジ内の任意のサーバーで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,30 +41,26 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@login_type** =] *login_type*  
- 与えられた資格情報の認証の種類を指定します。 *login_type*は**tinyint**、既定値はありません。  
+`[ @login_type = ] login_type` 指定された資格情報の認証の種類です。 *login_type*は**tinyint**、既定値はありません。  
   
  **1** = Windows 統合認証  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証  
   
- [ **@login** =] **'**_ログイン_**'**  
- 変更する Windows アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前を指定します。 *ログイン*は**nvarchar (257)**、既定値はありません  
+`[ @login = ] 'login'` Windows アカウントの名前を指定または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を変更するログイン。 *ログイン*は**nvarchar (257)**、既定値はありません  
   
- [ **@password** =] **'**_パスワード_**'**  
- 新しいパスワードを格納する、指定された*ログイン*します。 *パスワード*は**sysname**、既定値はありません。  
+`[ @password = ] 'password'` 新しいパスワードを格納する、指定された*ログイン*します。 *パスワード*は**sysname**、既定値はありません。  
   
 > [!NOTE]  
 >  レプリケーション パスワードを変更したら、そのパスワードを使用する各エージェントを停止して再起動し、エージェントに対して変更を反映させる必要があります。  
   
- [ **@server** =] **'**_server_**'**  
- 保存パスワードを変更するサーバー接続を指定します。 *server*は**sysname**、これらの値のいずれかを指定できます。  
+`[ @server = ] 'server'` 保存されたパスワードが変更されているサーバーの接続です。 *server*は**sysname**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**ディストリビューター**|ディストリビューターへのすべてのエージェント接続です。|  
+|**ディストリビューター**|すべてのエージェントがディストリビューターに接続します。|  
 |**パブリッシャー**|パブリッシャーへのすべてのエージェント接続です。|  
-|**サブスクライバー**|サブスクライバーへのすべてのエージェント接続です。|  
+|**サブスクライバー**|すべてのエージェントがサブスクライバーに接続します。|  
 |**%** (既定値)|レプリケーション トポロジ内のすべてのサーバーへのすべてのエージェント接続です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  

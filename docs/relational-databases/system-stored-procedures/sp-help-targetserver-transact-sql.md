@@ -18,12 +18,12 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aacb30e4c809f965635b9d8640d8fcd690cd340f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747430"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529694"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@server_name=** ] **'***server_name***'**  
- 情報を返すサーバーの名前を指定します。 *server_name*は**nvarchar (30)**、既定値は NULL です。  
+`[ @server_name = ] 'server_name'` 情報を返す対象のサーバーの名前。 *server_name*は**nvarchar (30)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

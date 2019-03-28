@@ -16,14 +16,14 @@ ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fddf00f340fa4e8ea47402c4da9a67955b4ba68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1188bb26c8c63267f30110bf890589d1670fdf8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808674"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531444"
 ---
-# <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
+# <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   マージ エージェントの次回実行時に再初期化するように、マージ サブスクリプションにマークを付けます。 このストアド プロシージャは、パブリッシャー側のパブリケーション データベースで実行されます。  
@@ -41,17 +41,13 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication =** ] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**すべて**します。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**すべて**します。  
   
- [  **@subscriber =** ] **'***サブスクライバー***'**  
- サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は**すべて**します。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は**すべて**します。  
   
- [  **@subscriber_db =** ] **'***@subscriber_db***'**  
- サブスクライバー データベースの名前です。 *@subscriber_db*は**sysname**、既定値は**すべて**します。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクライバー データベースの名前です。 *@subscriber_db*は**sysname**、既定値は**すべて**します。  
   
- [  **@upload_first =** ] **'***@upload_first***'**  
- サブスクリプションを再初期化する前にサブスクライバーの変更をアップロードするかどうかを指定します。 *@upload_first*は**nvarchar (5)**、既定値は FALSE。 場合**true**変更をアップロードして、サブスクリプションを再初期化します。 場合**false**変更はアップロードされません。  
+`[ @upload_first = ] 'upload_first'` サブスクリプションを再初期化する前に、サブスクライバーでの変更をアップロードするかどうか。 *@upload_first*は**nvarchar (5)**、既定値は FALSE。 場合**true**変更をアップロードして、サブスクリプションを再初期化します。 場合**false**変更はアップロードされません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -59,7 +55,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ## <a name="remarks"></a>コメント  
  **sp_reinitmergesubscription**はマージ レプリケーションで使用します。  
   
- **sp_reinitmergesubscription**マージ サブスクリプションを再初期化し、パブリッシャーから呼び出すことができます。 その際には、スナップショット エージェントも再実行することをお勧めします。  
+ **sp_reinitmergesubscription**マージ サブスクリプションを再初期化し、パブリッシャーから呼び出すことができます。 スナップショット エージェントを再実行することをお勧めします。  
   
  パラメーター化フィルターを追加、削除、変更する場合は、再初期化の際、サブスクライバーで保留中の変更をパブリッシャーにアップロードできません。 保留中の変更をアップロードしたい場合は、フィルターを変更する前にすべてのサブスクリプションを同期してください。  
   

@@ -18,17 +18,17 @@ ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 794a7c9013fff188500c26232a597a7dd4c6283d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf12b97028d3d98f7d5cc5ab034db95411d913dc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756278"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528504"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベース ユーザーやロールに対して、データベース メール プロファイルを使用する権限を与えます。  
+  データベース メール プロファイルを使用するデータベース ユーザーまたはロールのアクセス許可を付与します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,20 +42,15 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@principal_id** =] *principal_id*  
- データベース ユーザーまたはロールの ID、 **msdb**アソシエーションのデータベースです。 *principal_id*は**int**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定する必要があります。 A *principal_id*の**0**使用するこのプロファイルはパブリック プロファイルをデータベース内のすべてのプリンシパルにアクセスを許可します。  
+`[ @principal_id = ] principal_id` データベース ユーザーまたはロールの ID、 **msdb**アソシエーションのデータベースです。 *principal_id*は**int**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定する必要があります。 A *principal_id*の**0**使用するこのプロファイルはパブリック プロファイルをデータベース内のすべてのプリンシパルにアクセスを許可します。  
   
- [ **@principal_name** =] **'***principal_name***'**  
- データベース ユーザーまたはロールの名前、 **msdb**アソシエーションのデータベースです。 *principal_name*は**sysname**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定する必要があります。 A *principal_name*の **'public'** 使用するこのプロファイルはパブリック プロファイルをデータベース内のすべてのプリンシパルにアクセスを許可します。  
+`[ @principal_name = ] 'principal_name'` データベース ユーザーまたはロールの名前、 **msdb**アソシエーションのデータベースです。 *principal_name*は**sysname**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定する必要があります。 A *principal_name*の **'public'** 使用するこのプロファイルはパブリック プロファイルをデータベース内のすべてのプリンシパルにアクセスを許可します。  
   
- [ **@profile_id** = ] *profile_id*  
- 関連付けに使用するプロファイルの ID を指定します。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_id = ] profile_id` 関連付けのプロファイルの id。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [ **@profile_name** =] **'***profile_name***'**  
- 関連付けに使用するプロファイルの名前を指定します。 *profile_name*は**sysname**、既定値はありません。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_name = ] 'profile_name'` 関連付けのプロファイルの名前。 *profile_name*は**sysname**、既定値はありません。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [ **@is_default** =] *is_default*  
- このプロファイルをプリンシパルの既定のプロファイルとするかどうかを指定します。 プリンシパルは既定のプロファイルを 1 つだけ持つ必要があります。 *is_default*は**ビット**、既定値はありません。  
+`[ @is_default = ] is_default` このプロファイルはプリンシパルの既定のプロファイルであるかどうかを指定します。 プリンシパルを正確に 1 つの既定のプロファイルが必要です。 *is_default*は**ビット**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -63,7 +58,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="remarks"></a>コメント  
  プロファイルをパブリックにするために、指定、 **@principal_id**の**0**または**@principal_name**の**パブリック**します。 パブリック プロファイルは、すべてのユーザーに使用可能な**msdb**データベース、ユーザーは、のメンバーでもある必要がありますが**DatabaseMailUserRole**を実行する**sp_send_dbmail**します。  
   
- データベース ユーザーが持つことのできる既定のプロファイルは 1 つだけです。 ときに**@is_default**は '**1**' し、ユーザーは、既に 1 つまたは複数のプロファイルに関連付け、指定されたプロファイルがユーザーの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きこのユーザーに関連付けられますが、既定のプロファイルではなくなります。  
+ データベース ユーザーは、既定のプロファイルを 1 つのみあります。 ときに**@is_default**は '**1**' し、ユーザーは、既に 1 つまたは複数のプロファイルに関連付け、指定されたプロファイルがユーザーの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きこのユーザーに関連付けられますが、既定のプロファイルではなくなります。  
   
  ときに**@is_default**は '**0**' とその他の関連付けがない場合、ストアド プロシージャには、エラーが返されます。  
   
@@ -75,7 +70,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="examples"></a>使用例  
  **A.既定のプロファイルを設定して、アソシエーションの作成**  
   
- 次の例では、という名前のプロファイル間のアソシエーションを作成する`AdventureWorks Administrator Profile`と**msdb**データベース ユーザー`ApplicationUser`します。 このプロファイルは、このユーザーの既定のプロファイルです。  
+ 次の例では、という名前のプロファイル間のアソシエーションを作成する`AdventureWorks Administrator Profile`と**msdb**データベース ユーザー`ApplicationUser`します。 プロファイルは、ユーザーの既定のプロファイルです。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  

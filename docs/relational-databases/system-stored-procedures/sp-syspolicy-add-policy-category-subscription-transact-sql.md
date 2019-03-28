@@ -18,12 +18,12 @@ ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8299578d8becf6ef0f1572596795454ff9d98fc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dca1196f986da94ed17b1efb6f4284362e68b84
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595340"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530254"
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,15 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@target_type=** ] **'***target_type***'**  
- カテゴリ サブスクリプションの対象の種類を指定します。 *target_type*は**sysname**、必要なおよび 'DATABASE' に設定する必要があります。  
+`[ @target_type = ] 'target_type'` カテゴリのサブスクリプションのターゲット型です。 *target_type*は**sysname**、必要なおよび 'DATABASE' に設定する必要があります。  
   
- [ **@target_object=** ] **'***target_object***'**  
- カテゴリにサブスクライブするデータベースの名前です。 *target_object*は**sysname**、必要があります。  
+`[ @target_object = ] 'target_object'` カテゴリにサブスクライブするデータベースの名前です。 *target_object*は**sysname**、必要があります。  
   
- [ **@policy_category=** ] **'***policy_category***'**  
- サブスクライブするポリシー カテゴリの名前です。 *policy_category*は**sysname**、必要があります。  
+`[ @policy_category = ] 'policy_category'` サブスクライブするポリシー カテゴリの名前です。 *policy_category*は**sysname**、必要があります。  
   
  値を取得する*policy_category*、msdb.dbo.syspolicy_policy_categories システム ビューをクエリします。  
   
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- カテゴリ サブスクリプションの識別子を指定します。 *policy_category_subscription_id*は**int**、出力として返されます。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` カテゴリのサブスクリプションの識別子です。 *policy_category_subscription_id*は**int**、出力として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

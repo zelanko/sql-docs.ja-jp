@@ -20,17 +20,17 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 930ae56634ae6bee70ceca750522aa90a3ed159d
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168796"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532144"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のデータベースに、変更データ キャプチャ機能のクリーンアップ ジョブまたはキャプチャ ジョブを作成します。  
+  現在のデータベースで変更データ キャプチャ クリーンアップまたはキャプチャ ジョブを作成します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,24 +49,19 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_type=** ] **'**_ジョブ\_型_**'**  
- 追加するジョブの種類を指定します。 *job_type*は**nvarchar (20)** NULL にすることはできません。 有効な入力は **'capture'** と **'cleanup'** します。  
+`[ @job_type = ] 'job\_type'` 追加するジョブの種類。 *job_type*は**nvarchar (20)** NULL にすることはできません。 有効な入力は **'capture'** と **'cleanup'** します。  
   
- [  **@start_job=** ] *start_job*  
- ジョブの追加後、そのジョブを直ちに開始するかどうかを指定するフラグです。 *start_job*は**ビット**既定値は 1 です。  
+`[ @start_job = ] start_job` 追加された後すぐにジョブを開始するかどうかを示すフラグします。 *start_job*は**ビット**既定値は 1 です。  
   
- [ **@maxtrans** ] = *max_trans*  
- 各スキャン サイクルで処理する最大トランザクション数を指定します。 *max_trans*は**int**既定値は 500 です。 指定する場合、値は正の整数にする必要があります。  
+`[ @maxtrans ] = max_trans` 各スキャン サイクルで処理するトランザクションの最大数。 *max_trans*は**int**既定値は 500 です。 指定した場合、値は正の整数である必要があります。  
   
  *max_trans*はキャプチャ ジョブでのみ有効です。  
   
- [ **@maxscans** ] **=** _max\_スキャン_  
- ログからすべての行を抽出するために実行する最大スキャン サイクル数を指定します。 *max_scans*は**int**既定値は 10 です。  
+`[ @maxscans ] = max\_scans_` ログからすべての行を抽出するために実行するスキャン サイクルの最大数。 *max_scans*は**int**既定値は 10 です。  
   
  *max_scan*はキャプチャ ジョブでのみ有効です。  
   
- [ **@continuous** ] **=**_継続的な_  
- キャプチャ ジョブを連続的に実行するか (1)、1 回だけ実行するか (0) を指定します。 *継続的な*は**ビット**既定値は 1 です。  
+`[ @continuous ] = continuous_` キャプチャ ジョブが継続的に実行するかどうかを示します (1) または 1 回だけ実行 (0)。 *継続的な*は**ビット**既定値は 1 です。  
   
  ときに*連続*= 1、 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)ジョブは、ログをスキャンし、最大処理 (*max_trans* \* *max_scans*)トランザクション。 指定された秒数待機し、 *polling_interval*次のログ スキャンを開始する前にします。  
   
@@ -74,18 +69,15 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *継続的な*はキャプチャ ジョブでのみ有効です。  
   
- [ **@pollinginterval** ] **=**_ポーリング\_間隔_  
- ログ スキャン サイクルの間隔を秒数で指定します。 *polling_interval*は**bigint**既定値は 5 です。  
+`[ @pollinginterval ] = polling\_interval_` ログ スキャン サイクルの間隔の秒数です。 *polling_interval*は**bigint**既定値は 5 です。  
   
- *polling_interval*キャプチャに対してのみ有効ですがジョブの場合に*連続*が 1 に設定します。 指定する場合、値には負の数を指定できず、24 時間が上限になります。 値 0 を指定した場合、ログ スキャンの間に待機時間はありません。  
+ *polling_interval*キャプチャに対してのみ有効ですがジョブの場合に*連続*が 1 に設定します。 指定した場合、値が負の値にすることはできず、24 時間を超えることはできません。 値 0 を指定した場合、ログ スキャンの間に待機時間はありません。  
   
- [ **@retention** ] **=**_保有期間_  
- 変更データ行が変更テーブルに保持される分数を指定します。 *保有期間*は**bigint**既定値は 4320 (72 時間)。 最大値は 52494800 (100 年) です。 指定する場合、値は正の整数にする必要があります。  
+`[ @retention ] = retention_` 変更データ行が保持する分数は、テーブルを変更します。 *保有期間*は**bigint**既定値は 4320 (72 時間)。 最大値は 52494800 (100 年) です。 指定した場合、値は正の整数である必要があります。  
   
  *保有期間*はクリーンアップ ジョブでのみ有効です。  
   
- [  **@threshold =** ] **'**_削除\_しきい値_**'**  
- クリーンアップ時に 1 つのステートメントを使用して削除できる最大削除エントリ数を指定します *delete_threshold*は**bigint**既定値は 5000 です。  
+`[ @threshold = ] 'delete\_threshold'` クリーンアップ時に 1 つのステートメントを使用して削除できるエントリの削除の最大数。 *delete_threshold*は**bigint**既定値は 5000 です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -94,7 +86,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
  なし  
   
 ## <a name="remarks"></a>コメント  
- クリーンアップ ジョブは、データベースの最初のテーブルの変更データ キャプチャを有効にしたときに既定値を使って作成されます。 キャプチャ ジョブは、データベースの最初のテーブルの変更データ キャプチャを有効にしたとき、そのデータベースにトランザクション パブリケーションが存在しなかった場合に、既定値を使って作成されます。 トランザクション パブリケーションが存在する場合、トランザクション ログ リーダーを使ってキャプチャ メカニズムが実現されます。別個のキャプチャ ジョブは必要ありません (使用することもできません)。  
+ データベース内の最初のテーブルが変更データ キャプチャを有効にすると、既定値を使用して、クリーンアップ ジョブが作成されます。 キャプチャ ジョブは、データベースの最初のテーブルの変更データ キャプチャを有効にしたとき、そのデータベースにトランザクション パブリケーションが存在しなかった場合に、既定値を使って作成されます。 トランザクション パブリケーションが存在する場合、トランザクション ログ リーダーを使ってキャプチャ メカニズムが実現されます。別個のキャプチャ ジョブは必要ありません (使用することもできません)。  
   
  クリーンアップ ジョブとキャプチャ ジョブは既定で作成されるため、このストアド プロシージャが必要となるのは、ジョブを明示的に削除した後で、再び作成する必要が生じた場合だけです。  
   
@@ -117,7 +109,7 @@ EXEC sys.sp_cdc_add_job @job_type = N'capture';
 GO  
 ```  
   
-### <a name="b-creating-a-cleanup-job"></a>B. クリーンアップ ジョブを作成する  
+### <a name="b-creating-a-cleanup-job"></a>B. クリーンアップ ジョブを作成します。  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにクリーンアップ ジョブを作成します。 パラメーター `@start_job` は 0 に、`@retention` は 5760 分 (96 時間) に設定します。 明示的に削除された既存のクリーンアップ ジョブを改めて作成するという状況を想定しています。  
   
 ```  

@@ -18,12 +18,12 @@ ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33fc8e5f4b454cd4780948291fa84af34154bac2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23eb166d4e601f9e126c8b4254a08153664ace19
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833480"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535154"
 ---
 # <a name="spdeletetargetservergroup-transact-sql"></a>sp_delete_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_delete_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@name=** ] **'***name***'**  
- 削除するターゲット サーバー グループの名前。 *名前*は**sysname**、既定値はありません。  
+`[ @name = ] 'name'` 削除する対象サーバー グループの名前。 *名前*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

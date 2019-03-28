@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dfb494c7b25d3a580059e4d1ad3250abbe91ee54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828980"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528594"
 ---
-# <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
+# <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在のデータベースにある、指定したテーブルに定義されている DML トリガーの種類を返します。 sp_helptrigger は DDL トリガーでは使用できません。 クエリ、[システム ストアド プロシージャ](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)カタログ ビューを代わりにします。  
@@ -42,11 +42,9 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@tabname=** ] **'***テーブル***'**  
- トリガー情報を返す現在のデータベース内にあるテーブルの名前を指定します。 *テーブル*は**nvarchar (776)**、既定値はありません。  
+`[ @tabname = ] 'table'` トリガー情報を返す対象の現在のデータベース内のテーブルの名前です。 *テーブル*は**nvarchar (776)**、既定値はありません。  
   
- [ **@triggertype=** ] **'***type***'**  
- 情報を返す DML トリガーの種類を指定します。 *型*は**char (6)**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @triggertype = ] 'type'` 情報を返す DML トリガーの種類です。 *型*は**char (6)**、既定値は null の場合、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -58,18 +56,18 @@ sp_helptrigger [ @tabname = ] 'table'
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- 次の表は、結果セットに表示される情報です。  
+ 次の表では、結果セット内に含まれる情報を示します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|トリガーの名前。|  
 |**trigger_owner**|**sysname**|トリガーが定義されたテーブルの所有者の名前。|  
-|**isupdate**|**int**|1 = UPDATE トリガー。<br /><br /> 0 = UPDATE トリガー以外。|  
-|**isdelete**|**int**|1 = DELETE トリガー。<br /><br /> 0 = DELETE トリガー以外。|  
+|**isupdate**|**int**|1 = UPDATE トリガー<br /><br /> 0 = UPDATE トリガーではありません|  
+|**isdelete**|**int**|1 = DELETE トリガー<br /><br /> 0 = DELETE トリガーではありません|  
 |**isinsert**|**int**|1 = INSERT トリガー。<br /><br /> 0 = INSERT トリガー以外。|  
-|**isafter**|**int**|1 = AFTER トリガー。<br /><br /> 0 = AFTER トリガー以外。|  
-|**isinsteadof**|**int**|1 = INSTEAD OF トリガー。<br /><br /> 0 = INSTEAD OF トリガー以外。|  
-|**trigger_schema**|**sysname**|トリガーが属するスキーマの名前。|  
+|**isafter**|**int**|1 = AFTER トリガー<br /><br /> 0 = AFTER トリガーではありません|  
+|**isinsteadof**|**int**|1 = instead OF トリガー<br /><br /> 0 = INSTEAD OF トリガー以外。|  
+|**trigger_schema**|**sysname**|トリガーが属するスキーマの名前です。|  
   
 ## <a name="permissions"></a>アクセス許可  
  必要があります[Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)テーブルに対する権限。  

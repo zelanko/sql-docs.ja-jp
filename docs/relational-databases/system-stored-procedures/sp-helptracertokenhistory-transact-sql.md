@@ -16,17 +16,17 @@ ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04bd9a7d072f31fd6791e8cea7b17e14650e63c7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 268f94665641e29156c20ea55debf26db63e1142
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215408"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526634"
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたトレーサー トークンの詳細な待機時間情報を、各サブスクライバーに対して 1 行ずつ返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。または、ディストリビューター側でディストリビューション データベースについて実行されます。  
+  指定されたトレーサー トークンの詳細な待機時間情報を、各サブスクライバーに対して 1 行ずつ返します。 このストアド プロシージャは、パブリケーション データベースに対して、パブリッシャーまたはディストリビューターのディストリビューション データベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,30 +41,26 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=** ] **'***パブリケーション***'**  
- トレーサー トークンが挿入されたパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` トレーサー トークンが挿入されたパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@tracer_id=** ] *tracer_id*  
- におけるトレーサー トークンの id、 [MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)テーブルの履歴の情報が返されます。 *tracer_id*は**int**、既定値はありません。  
+`[ @tracer_id = ] tracer_id` におけるトレーサー トークンの id、 [MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)テーブルの履歴の情報が返されます。 *tracer_id*は**int**、既定値はありません。  
   
- [  **@publisher=** ] **'***パブリッシャー***'**  
- パブリッシャーの名前。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]
 >  このパラメーターは、に対してのみ指定する必要があります以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- パブリケーション データベースの名前です。 *publisher_db*は**sysname**既定値は NULL です。 ストアド プロシージャがパブリッシャーで実行される場合、このパラメーターは無視されます。  
+`[ @publisher_db = ] 'publisher_db'` パブリケーション データベースの名前。 *publisher_db*は**sysname**既定値は NULL です。 ストアド プロシージャがパブリッシャーで実行される場合、このパラメーターは無視されます。  
   
 ## <a name="result-set"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**distributor_latency**|**bigint**|トレーサー トークン レコードがパブリッシャーでコミットされてからディストリビューターでコミットされるまでの秒数です。|  
+|**distributor_latency**|**bigint**|トレーサー トークン レコードをパブリッシャー側でコミットされると、ディストリビューター側でコミットされるまでの秒数。|  
 |**サブスクライバー**|**sysname**|トレーサー トークンを受信したサブスクライバーの名前です。|  
-|**@subscriber_db**|**sysname**|トレーサー トークン レコードが挿入されるサブスクリプション データベースの名前です。|  
-|**subscriber_latency**|**bigint**|トレーサー トークン レコードがディストリビューターでコミットされてからサブスクライバーでコミットされるまでの秒数です。|  
-|**overall_latency**|**bigint**|トレーサー トークン レコードがパブリッシャーでコミットされてからサブスクライバーでコミットされるまでの秒数です。|  
+|**subscriber_db**|**sysname**|トレーサー トークン レコードが挿入されたサブスクリプション データベースの名前。|  
+|**subscriber_latency**|**bigint**|トレーサー トークン レコードをディストリビューターでコミットされると、サブスクライバーでコミットされるまでの秒数。|  
+|**overall_latency**|**bigint**|トレーサー トークン レコードをパブリッシャーとサブスクライバーでコミットされるトークンのレコードでコミットされるまでの秒数。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -74,7 +70,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
  実行[sp_helptracertokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) 、パブリケーションのトレーサー トークンの一覧を取得します。  
   
- 結果セットの値が NULL の場合は、待機時間の統計を計算することができません。 これは、トレーサー トークンが、ディストリビューターまたはいずれかのサブスクライバーで受信されなかったためです。  
+ NULL の結果セット内の値は、待機時間の統計を計算することはできませんを意味します。 トレーサー トークンが、ディストリビューターまたはサブスクライバーのいずれかで受信されていないためにです。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokenhistor_1.sql)]  

@@ -18,12 +18,12 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b953f619ab422eba81a925375d9ae8b0cd60e82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2bd1919210f08dc0323400ceddeb47f74d21cc9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836460"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536454"
 ---
 # <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@profile_id** = ] *profile_id*  
- 情報を返すプロファイル ID を指定します。 *profile_id*は**int**、既定値は NULL です。  
+`[ @profile_id = ] profile_id` 情報を返すプロファイル id です。 *profile_id*は**int**、既定値は NULL です。  
   
- [ **@profile_name** =] **'***profile_name***'**  
- 情報を返すプロファイル名を指定します。 *profile_name*は**sysname**、既定値は NULL です。  
+`[ @profile_name = ] 'profile_name'` 情報を返すプロファイル名。 *profile_name*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -55,9 +53,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ||||  
 |-|-|-|  
 |列名|データ型|説明|  
-|**profile_id**|**int**|プロファイルのプロファイル ID|  
-|**name**|**sysname**|プロファイルのプロファイル名|  
-|**description**|**nvarchar (256)**|プロファイルの説明|  
+|**profile_id**|**int**|プロファイルのプロファイル id です。|  
+|**name**|**sysname**|プロファイルのプロファイル名。|  
+|**description**|**nvarchar (256)**|プロファイルの説明。|  
   
 ## <a name="remarks"></a>コメント  
  プロファイル名またはプロファイル id を指定すると、 **sysmail_help_profile_sp**そのプロファイルに関する情報を返します。 それ以外の場合、 **sysmail_help_profile_sp**のすべてのプロファイルに関する情報を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。  
@@ -70,7 +68,7 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="examples"></a>使用例  
  **A.すべてのプロファイルを一覧表示**  
   
- 次の例では、インスタンス内のすべてのプロファイルを一覧表示します。  
+ 次の例では、インスタンス内のすべてのプロファイルを一覧表示を示します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_help_profile_sp;  

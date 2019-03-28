@@ -16,17 +16,17 @@ ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d57034b65559e696a9692a1c71e612c7d921661b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3ef656dd25ea3d0a62baf7ca52653c22b9d895ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754644"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532849"
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ディストリビューター側の特定のパブリケーションに属するパブリッシュ メタデータを削除します。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されます。  
+  ディストリビューター側の特定のパブリケーションに属するパブリッシュ メタデータを削除します。 このストアド プロシージャは、ディストリビューターのディストリビューション データベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,11 +39,9 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=** ] **'***パブリッシャー***'**  
- パブリッシャー サーバーの名前を指定します。 *パブリッシャー*は**sysname**、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャー サーバーの名前です。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- パブリケーション データベースの名前です。 *publisher_db*は**sysname**既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリケーション データベースの名前です。 *publisher_db*は**sysname**既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -57,9 +55,9 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
   
 -   そのパブリケーションに属するすべてのアーティクルのメタデータ  
   
--   そのパブリケーションのすべてのサブスクリプションのメタデータ  
+-   パブリケーションに対するすべてのサブスクリプションのメタデータ。  
   
--   そのパブリケーションに属するすべてのレプリケーション エージェント ジョブのメタデータ  
+-   パブリケーションに属しているすべてのレプリケーション エージェント ジョブのメタデータ。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**のメンバー、またはディストリビューターの固定サーバー ロール、 **db_owner**ディストリビューション データベースの固定データベース ロールが実行できる**sp _removedistpublisherdbreplication**します。  

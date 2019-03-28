@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7b14b70fc5ba8ac39535d9dd6dedbfa1bd309aa4
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: f1c684aff9c4b31049a04add04e8def642dca1d2
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645202"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510599"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R モデルを展開し、SQL Server (チュートリアル) で使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -217,7 +217,7 @@ ms.locfileid: "53645202"
     >[!TIP]
     > R Tools for Visual Studio (RTVS) は、SQL Server と R. の両方の優れた統合を提供します。RODBC を使用して、SQL Server 接続の例については、この記事を参照してください。[SQL Server と R の使用](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 操作する方法を学習する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データをトレーニング済みの R モデルを永続化と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このデータ セットに基づく新しいモデルを作成するには比較的簡単である必要があります。 たとえば、これらの追加のモデルを作成してみてください可能性があります。
 
@@ -228,5 +228,5 @@ ms.locfileid: "53645202"
 
 + [データ サイエンスのシナリオとソリューション テンプレート](data-science-scenarios-and-solution-templates.md)
 + [高度な分析 (データベース内)](sqldev-in-database-r-for-sql-developers.md)
-+ [Microsoft R - Diving into Data Analysis](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
-+ [その他のリソース](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)
++ [Machine Learning Server ハウツー ガイドします。](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
++ [Machine Learning Server の他のリソース](https://docs.microsoft.com//machine-learning-server/resources-more)

@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: d0f097c64d48a3a2e87f01965914b3100c8a28dc
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 40852f62cc985f300d04eac4dbef5810f823e124
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645211"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512309"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>SQL Server と XDF ファイル (SQL Server と RevoScaleR チュートリアル) の間でデータを移動します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "53645211"
     rxSummary(~gender + cardholder + balance + state, data = localDS)
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このレッスンで、マルチパートのチュートリアル シリーズの最後に**RevoScaleR**と SQL Server。 独自のデータとプロジェクトの要件を進めるための基盤を提供、さまざまなデータ関連およびコンピューティング概念が導入されました。
 

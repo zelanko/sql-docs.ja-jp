@@ -19,14 +19,14 @@ ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee0703a0dca2c6ba958f52dee0f8850ea2c8244e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 633dff3e79a32f73c9ec7c4c376a60969db45aef
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536393"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531774"
 ---
-# <a name="spdropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
+# <a name="spdropdevice-transact-sql"></a>sp_dropdevice (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   インスタンスからデータベース デバイスまたはバックアップ デバイスを削除、[!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)]からエントリを削除して**master.dbo.sysdevices**します。  
@@ -42,11 +42,9 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@logicalname=** ] **'**_デバイス_**'**  
- 記載されているデータベース デバイスまたはバックアップ デバイスの論理名は、 **master.dbo.sysdevices.name**します。 *デバイス*は**sysname**、既定値はありません。  
+`[ @logicalname = ] 'device'` 記載されているデータベース デバイスまたはバックアップ デバイスの論理名は、 **master.dbo.sysdevices.name**します。 *デバイス*は**sysname**、既定値はありません。  
   
- [  **@delfile=** ] **'**_delfile_**'**  
- 物理バックアップ デバイス ファイルを削除するかどうかを指定します。 *delfile*は**varchar (7)** します。 として指定されている場合**DELFILE**、物理バックアップ デバイス ディスク ファイルは削除されます。  
+`[ @delfile = ] 'delfile'` 物理バックアップ デバイス ファイルを削除するかどうかを指定します。 *delfile*は**varchar (7)** します。 として指定されている場合**DELFILE**、物理バックアップ デバイス ディスク ファイルは削除されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2adf081f68ec0941b287102f515da2cabbfbbe18
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494184"
+ms.locfileid: "58510339"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>ビッグ データ クラスターは、SQL Server のリリース ノート
 
@@ -29,7 +29,7 @@ ms.locfileid: "58494184"
 
 ### <a name="whats-new"></a>新機能
 
-| 新しい機能または更新 | 詳細 |
+| 新機能または更新 | 詳細 |
 |:---|:---|
 | GPU 上でのガイダンスは、ディープ ラーニングと Spark で TensorFlow を実行するためサポートします。 | [GPU サポートと共に、ビッグ データ クラスターをデプロイして TensorFlow の実行](spark-gpu-tensorflow.md) |
 | **SqlDataPool**と**SqlStoragePool**データ ソースは、既定では作成されません。 | これらを必要に応じて手動で作成します。 参照してください、[既知の問題](#externaltablesctp24)します。 |
@@ -80,19 +80,44 @@ ms.locfileid: "58494184"
       KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
       ```
 
+#### <a name="delete-cluster-fails"></a>削除クラスターが失敗しました。
+
+使用するクラスターを削除しようとする**mssqlctl**、次のエラーで失敗します。
+
+```
+2019-03-26 20:38:11.0614 UTC | INFO | Deleting cluster ...
+Error processing command: "TypeError"
+delete_namespaced_service() takes 3 positional arguments but 4 were given
+Makefile:61: recipe for target 'delete-cluster' failed
+make[2]: *** [delete-cluster] Error 1
+Makefile:223: recipe for target 'deploy-clean' failed
+make[1]: *** [deploy-clean] Error 2
+Makefile:203: recipe for target 'deploy-clean' failed
+make: *** [deploy-clean] Error 2
+```
+
+新しい Python Kubernetes クライアント (バージョン 9.0.0) に変更されており、現在それが削除名前空間 API、 **mssqlctl**します。 これは、新しい Kubernetes python クライアントをインストールした場合にのみ発生します。 この問題を回避するには、クラスターを使用して、直接削除することによって**kubectl** (`kubectl delete ns <ClusterName>`) を使用して古いバージョンをインストールすることも`sudo pip install kubernetes==8.0.1`します。
+
 #### <a id="externaltablesctp24"></a> 外部テーブル
 
 - ビッグ データ クラスターのデプロイを作成しなく、 **SqlDataPool**と**SqlStoragePool**外部データ ソース。 データのプールと記憶域プールへのデータ仮想化をサポートするために手動でこれらのデータ ソースを作成することができます。
 
    ```sql
-   -- Create data sources for SQL Big Data Cluster
+   -- Create the SqlDataPool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
      WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
+   -- Create the SqlStoragePool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   BEGIN
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+   END
    ```
 
 - 列の型はサポートされていないテーブルのデータ プール外部テーブルを作成することになります。 外部テーブルを照会する場合はメッセージが表示、次のような。
@@ -137,9 +162,9 @@ ms.locfileid: "58494184"
 
 次のセクションでは、新機能と SQL Server 2019 CTP 2.3 でビッグ データ クラスターの既知の問題について説明します。
 
-### <a name="new-features"></a>新しい機能
+### <a name="whats-new"></a>新機能
 
-| 新機能 | 詳細 |
+| 新機能または更新 | 詳細 |
 | :---------- | :------ |
 | IntelliJ でのビッグ データ クラスターで Spark ジョブを送信します。 | [IntelliJ での SQL Server のビッグ データ クラスターで Spark ジョブを送信します。](spark-submit-job-intellij-tool-plugin.md) |
 | アプリケーションの展開およびクラスター管理用の一般的な CLI。 | [SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリをデプロイする方法](big-data-cluster-create-apps.md) |

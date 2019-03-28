@@ -16,12 +16,12 @@ ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8eb21085625c7f2f0071c18da80501774088fdc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3f174940b27adbaba75efd6660f09140c403bf8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789374"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529884"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,26 +42,22 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher** =] **'***パブリッシャー***'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。 サーバーはパブリッシング用に構成されている必要があります。 NULL はすべてのパブリッシャーを表します。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。 サーバーはパブリッシング用に構成されている必要があります。 NULL はすべてのパブリッシャーを表します。  
   
- [ **@publisherdb** =] **'***publisher_db***'** ]  
- パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値は NULL です。 NULL はすべてのパブリケーション データベースを表します。  
+`[ @publisherdb = ] 'publisher_db' ]` パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値は NULL です。 すべてのパブリケーション データベースの場合は NULL です。  
   
- [ **@publication** =] **'***パブリケーション***'** ]  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。 NULL はすべてのパブリケーションを表します。  
+`[ @publication = ] 'publication' ]` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。 NULL はすべてのパブリケーションを表します。  
   
- [ **@tranid** =] **'***tranid***'** ]  
- トランザクション ID です。 *tranid*は**sysname**、既定値は NULL です。 NULL はすべてのトランザクションを表します。  
+`[ @tranid = ] 'tranid' ]` トランザクション ID です。 *tranid*は**sysname**、既定値は NULL です。 すべてのトランザクションの場合は NULL です。  
   
  [**@queuetype=** ] **'***queuetype***'** ]  
  トランザクションを格納するキューの種類です。 *queuetype*は**tinyint** 、既定値は**0**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**0**|すべての種類のキューです。|  
+|**0**|すべての種類のキュー|  
 |**1**|メッセージ キューイング (Message Queuing)|  
-|**2**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キューです。|  
+|**2**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キュー|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

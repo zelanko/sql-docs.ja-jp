@@ -16,17 +16,17 @@ ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85a6eaf76497b1fa763047a255cdb7784316541e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 54222842aa51e6904944a8b97507a3368e144612
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802744"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526474"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ディストリビューターを使用するパブリッシャーのプロパティを返します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  ディストリビューターを使用しているパブリッシャーのプロパティを返します。 このストアド プロシージャは、ディストリビューターのすべてのデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,11 +39,9 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=** ] **'***パブリッシャー***'**  
- プロパティが返されるパブリッシャーです。 *パブリッシャー*は**sysname**、既定値は **%** します。  
+`[ @publisher = ] 'publisher'` プロパティが返されるパブリッシャーです。 *パブリッシャー*は**sysname**、既定値は **%** します。  
   
- [  **@check_user=** ] *check_user*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -51,10 +49,10 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|パブリッシャーの名前。|  
 |**distribution_db**|**sysname**|指定されたパブリッシャーのディストリビューション データベースです。|  
-|**security_mode**|**int**|キュー更新サブスクリプションのパブリッシャーへの接続、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーとの接続のため、レプリケーション エージェントで使用されるセキュリティ モードです。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
+|**security_mode**|**int**|キュー更新サブスクリプションの場合、または以外のパブリッシャーに接続するレプリケーション エージェントによって使用されるセキュリティ モード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
 |**login**|**sysname**|キュー更新サブスクリプションのパブリッシャーへの接続、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーとの接続のため、レプリケーション エージェントで使用されるログイン名です。|  
-|**password**|**nvarchar (524)**|単純な暗号化形式で返されるパスワードです。 パスワードは NULL ですユーザー以外の**sysadmin**します。|  
-|**アクティブ**|**bit**|リモート パブリッシャーがディストリビューターとしてローカル サーバーを使用しているかどうかを示します。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
+|**password**|**nvarchar(524)**|単純な暗号化形式で返されるパスワードです。 パスワードは NULL ですユーザー以外の**sysadmin**します。|  
+|**active**|**bit**|かどうかリモート パブリッシャーをディストリビューターとしてローカル サーバーの使用は。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
 |**working_directory**|**nvarchar (255)**|作業ディレクトリの名前です。|  
 |**信頼されています。**|**bit**|パブリッシャーがディストリビューターに接続するときにパスワードが必要かどうかを示します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と以降のバージョンでこのを常に返します**0**、つまり、パスワードが必要であります。|  
 |**thirdparty_flag**|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはサード パーティのアプリケーションによってパブリケーションが有効にされるかどうかを示します。<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oracle、または Oracle Gateway Publisher です。<br /><br /> **1** = パブリッシャーと統合されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サード パーティ製アプリケーションを使用します。|  

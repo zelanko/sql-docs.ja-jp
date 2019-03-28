@@ -1,19 +1,19 @@
 ---
 title: Python および R のチュートリアル - SQL Server Machine Learning のあやめのデモ データ セット
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
+Description: Iris データセットとモデルを格納するテーブルを含むデータベースを作成します。 このデータセットは、SQL Server ストアド プロシージャで R 言語または Python コードをラップする方法を示す演習で使用されます。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ce0469b5625af3f38047233737f3afbd209e11b9
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f4a57f89a89ed8d5cbf81cc3d63fc1f19b42e51a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046572"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510099"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server での Python および R のチュートリアル: あやめのデモ データ 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -152,7 +152,7 @@ ms.locfileid: "54046572"
     SELECT COUNT(*) FROM iris_data;
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 次のクイック スタートでは、機械学習モデルを作成し、し、テーブルに保存から予測される結果を生成するモデルを使用します。
 

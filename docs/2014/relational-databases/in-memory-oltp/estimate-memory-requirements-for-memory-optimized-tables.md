@@ -10,12 +10,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509229"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533474"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>メモリ最適化テーブルのメモリ必要量の推定
   かどうかを作成する新しい[!INCLUDE[hek_2](../../includes/hek-2-md.md)]メモリ最適化テーブルまたは既存のディスク ベース テーブルをメモリ最適化テーブルに移行するための十分な使用して、サーバーをプロビジョニングするために各テーブルのメモリ必要量に関する適切に推定を理解しておくことはメモリ。 ここでは、メモリ最適化テーブルのデータを保持するために必要とされるメモリの量を推定する方法について説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "52509229"
 ##  <a name="bkmk_ExampleTable"></a> サンプルのメモリ最適化テーブル  
  次のメモリ最適化テーブルのスキーマを考えてみます。  
   
-```tsql  
+```sql  
   
 CREATE TABLE t_hk (  
 col1 int NOT NULL PRIMARY KEY NONCLUSTERED,  
@@ -86,7 +86,7 @@ GO
   
  ハッシュ インデックスは、次のように等値参照を実行する場合は非常に高速です。  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 = 3  
@@ -95,7 +95,7 @@ SELECT * FROM t_hk
   
  非クラスター化インデックスは、次のように範囲参照を実行する場合はより高速になります。  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 >= 3  
@@ -104,7 +104,7 @@ SELECT * FROM t_hk
   
  ディスク ベース テーブルを移行する場合は、t1c2_index インデックスに対応する一意の値の数を決定するために、次を使用できます。  
   
-```tsql  
+```sql  
   
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk  
@@ -144,7 +144,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  非クラスター化インデックスは、次のクエリで例示する範囲参照の場合に使用するのが最適です。  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE c2 > 5  

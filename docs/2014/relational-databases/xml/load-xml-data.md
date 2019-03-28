@@ -10,18 +10,18 @@ helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50063c63ce7e541e997f23a4995620dc6d003823
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517119"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526434"
 ---
 # <a name="load-xml-data"></a>XML データの読み込み
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へは、いくつかの方法で XML データを転送できます。 以下に例を示します。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へは、いくつかの方法で XML データを転送できます。 例 :  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの [n]text 型または image 型の列にデータが含まれている場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用してテーブルをインポートできます。 ALTER TABLE ステートメントを使用して列の型を XML に変更します。  
   
@@ -44,7 +44,7 @@ FROM    (SELECT *
 ```  
   
 ## <a name="text-encoding"></a>テキスト エンコード  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では XML データを Unicode (UTF-16) で保存します。 サーバーから取得する XML データは UTF-16 エンコードで出力されます。 それ以外のエンコードが必要な場合、取得したデータに必要な変換を行う必要があります。 変換した XML データのエンコードが異なる場合があります。 その場合は、注意してデータを読み込む必要があります。 以下に例を示します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では XML データを Unicode (UTF-16) で保存します。 サーバーから取得する XML データは UTF-16 エンコードで出力されます。 それ以外のエンコードが必要な場合、取得したデータに必要な変換を行う必要があります。 変換した XML データのエンコードが異なる場合があります。 その場合は、注意してデータを読み込む必要があります。 例 :  
   
 -   Unicode (UCS-2、UTF-16) のテキスト XML は、問題なく XML 列、変数、またはパラメーターに代入できます。  
   
@@ -62,14 +62,14 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### <a name="string-encoding-incompatibilities"></a>文字列エンコードの非互換性  
- XML をコピーし、文字列リテラルとして [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディター ウィンドウに貼り付けると、[N]VARCHAR 文字列エンコードの非互換性の問題が発生する可能性があります。 この問題が発生するかどうかは、XML インスタンスのエンコードによって決まります。 多くの場合、XML 宣言の削除が必要になります。 以下に例を示します。  
+ XML をコピーし、文字列リテラルとして [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディター ウィンドウに貼り付けると、[N]VARCHAR 文字列エンコードの非互換性の問題が発生する可能性があります。 この問題が発生するかどうかは、XML インスタンスのエンコードによって決まります。 多くの場合、XML 宣言の削除が必要になります。 例 :  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
   <xsd:schema ...  
 ```  
   
- 続いて、N を指定し、XML インスタンスを Unicode 形式のインスタンスにします。 以下に例を示します。  
+ 続いて、N を指定し、XML インスタンスを Unicode 形式のインスタンスにします。 例 :  
   
 ```  
 -- Assign XML instance to a variable.  

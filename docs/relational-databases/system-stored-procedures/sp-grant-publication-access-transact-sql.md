@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 64a1e4f2b1d7b31461cbcc23b21e996aea060b4a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c86bf467eb83e372b7c90375ae95d659c98532a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791694"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534009"
 ---
-# <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
+# <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パブリケーションのアクセス リストにログインを追加します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  ログインをパブリケーション アクセス リストに追加します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,14 +38,11 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication**=] **'***パブリケーション***'**  
- アクセスするパブリケーションの名前です。 **'***パブリケーション***'** は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` アクセスするパブリケーションの名前です。 **'***パブリケーション***'** は**sysname**、既定値はありません。  
   
- [ **@login**=] **'***ログイン***'**  
- ログイン ID です。 **'***ログイン***'** は**sysname**、既定値はありません。  
+`[ @login = ] 'login'` ログイン ID です。 **'***ログイン***'** は**sysname**、既定値はありません。  
   
- [  **@reserved =**] **'***予約***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -53,7 +50,7 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ## <a name="remarks"></a>コメント  
  **sp_grant_publication_access**スナップショット、トランザクション、およびマージ レプリケーションで使用されます。  
   
- このストアド プロシージャは繰り返し呼び出すことができます。  
+ このストアド プロシージャを繰り返し呼び出すことができます。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_grant_publication_access**します。  

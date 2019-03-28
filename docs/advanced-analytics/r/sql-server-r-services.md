@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/10/2018
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f3575d91122badac6fcba2e1ca7463114a08c26b
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 14be74e19219fee834a4ab82e74c004a4e426483
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596513"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510529"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,8 +60,8 @@ SQL Server 2016 には R のみです。 次の表では、SQL Server 2016 の�
 
 **手順 2:** これらのチュートリアルのいずれかを使用して実際に体験が得られます。
 
-+ [チュートリアル:R を使用してデータベース内分析について説明します](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-+ [チュートリアル:R を使用したエンド ツー エンド チュートリアル](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [チュートリアル: R を使用してデータベース内分析について説明します](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル: R を使用したエンド ツー エンド チュートリアル](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
 **手順 3:** お気に入りの R パッケージを追加し、Microsoft によって提供されるパッケージと共に使用
 

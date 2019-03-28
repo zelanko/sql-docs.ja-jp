@@ -16,14 +16,14 @@ ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac0fe99f835dae638cb65b24e569857fb77b098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ef51624f3d14ef12be1c37b17727b70f5f31df10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759962"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526424"
 ---
-# <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
+# <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ユーザー定義トリガーまたはストアド プロシージャが、即時更新サブスクリプションに使われるレプリケーション トリガーのコンテキストで呼び出されているかどうかを判別します。 このストアド プロシージャは、パブリケーション データベースに対して、パブリッシャーまたはサブスクライバーのサブスクリプション データベースで実行されます。  
@@ -53,19 +53,18 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**Del**|DELETE トリガーです。|  
 |NULL (既定値)||  
   
- [  **@fonpublisher =** ] *fonpublisher*  
- ストアド プロシージャの実行場所を指定します。 *fonpublisher*は**ビット**既定値は 0 です。 0 の場合はサブスクライバー側、1 の場合はパブリッシャー側で実行します。  
+`[ @fonpublisher = ] fonpublisher` ストアド プロシージャを実行する場所を指定します。 *fonpublisher*は**ビット**既定値は 0 です。 サブスクライバーで、実行は、0 の場合、および 1 の場合、パブリッシャー側では、実行します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 の場合、ストアド プロシージャが即時更新トリガーのコンテキスト内で呼び出されていないことを示します。 1 が即時更新トリガーのコンテキスト内で呼び出されるで返されるトリガーの種類は、そのことを示します。  *@trigger_op*します。  
+ 0 は、ストアド プロシージャが即時更新トリガーのコンテキスト内で呼び出されていないことを示します。 1 が即時更新トリガーのコンテキスト内で呼び出されるで返されるトリガーの種類は、そのことを示します。  *@trigger_op*します。  
   
 ## <a name="remarks"></a>コメント  
  **sp_check_for_sync_trigger**スナップショット レプリケーションおよびトランザクション レプリケーションで使用されます。  
   
- **sp_check_for_sync_trigger**レプリケーションとユーザー定義トリガー間を調整するために使用します。 このストアド プロシージャは、レプリケーション トリガーのコンテキスト内で呼び出されているかどうかを判別します。 たとえば、プロシージャを呼び出すことができます**sp_check_for_sync_trigger**ユーザー定義トリガーの本文にします。 場合**sp_check_for_sync_trigger**返します**0**、ユーザー定義トリガーは処理を続行します。 場合**sp_check_for_sync_trigger**返します**1**、ユーザー定義トリガーは終了します。 ユーザー定義トリガーは、レプリケーション トリガーがテーブルを更新するときには起動されません。  
+ **sp_check_for_sync_trigger**レプリケーションとユーザー定義トリガー間を調整するために使用します。 このストアド プロシージャは、レプリケーション トリガーのコンテキスト内で呼び出されているかどうかを判別します。 たとえば、プロシージャを呼び出すことができます**sp_check_for_sync_trigger**ユーザー定義トリガーの本文にします。 場合**sp_check_for_sync_trigger**返します**0**、ユーザー定義トリガーは処理を続行します。 場合**sp_check_for_sync_trigger**返します**1**、ユーザー定義トリガーは終了します。 これにより、ユーザー定義トリガーは、レプリケーション トリガーがテーブルを更新するときに発生しません。  
   
 ## <a name="example"></a>例  
- 次の例は、サブスクライバー テーブルのトリガーで使用できるコードを示しています。  
+ 次の例では、サブスクライバー テーブルのトリガーで使用できるコードを示します。  
   
 ```  
 DECLARE @retcode int, @trigger_op char(10), @table_id int  

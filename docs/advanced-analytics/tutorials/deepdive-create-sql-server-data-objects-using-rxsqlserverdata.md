@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cbd6f8bb9fd44be44132fd71e7e8eca3c9625b43
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 45643dbcdc2876fe0794ddb731abe6334537169c
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596393"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510359"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>RxSqlServerData (SQL Server と RevoScaleR チュートリアル) を使用した SQL Server のデータ オブジェクトを作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -191,7 +191,7 @@ R IDE を使用するか、 **Rgui**これらの検索を完了します。 こ�
 
 引数の中で R 関数を使用して、データに対して変換を指定する必要に応じて、 **rxDataStep**します。 これらの操作の例については、このチュートリアルの後半で提供されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [SQL Server データに対するクエリおよび変更](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)

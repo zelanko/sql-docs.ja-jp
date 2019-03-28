@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 90790c2b96843ea1821b8b4ed05052a7611cdf74
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 5773641f442fe844657e6aabd6b9dcea24f4475b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596443"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509909"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>RxExec を使用して SQL Server でカスタム R 関数を実行します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -152,6 +152,6 @@ SQL Server のコンテキストでカスタム R 関数を実行するには、
 
 + スクリプトを開発環境から運用環境のセキュリティを強化した環境に移行と、ファイアウォールとネットワークの制限が生じる場合があります。 スクリプトが期待どおりに実行できるかどうかを確認するには、慎重にテストします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 使用するより複雑な例については**rxExec**、この記事を参照してください。[Foreach と rxExec 粒度が粗い並列処理](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)

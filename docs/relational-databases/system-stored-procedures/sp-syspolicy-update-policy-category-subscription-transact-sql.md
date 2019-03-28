@@ -18,17 +18,17 @@ ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 496515aaf8abc1e9f5eec313655199e97b5a5bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a5e3db87aedd9a13ac7af90284362bb82ab3a13
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658960"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526704"
 ---
-# <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
+# <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定したデータベースのポリシー カテゴリのサブスクリプションを更新します。  
+  指定したデータベースのポリシー カテゴリ サブスクリプションを更新します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,19 +43,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- 更新するポリシー カテゴリのサブスクリプションの識別子を指定します。 *policy_category_subscription_id*は**int**、必要があります。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` 更新するポリシー カテゴリのサブスクリプションの識別子です。 *policy_category_subscription_id*は**int**、必要があります。  
   
- [ **@target_type=** ] **'** target_type **'**  
- カテゴリ サブスクリプションの対象の種類を指定します。 *target_type*は**sysname**、既定値は NULL です。  
+`[ @target_type = ] 'target_type'` カテゴリのサブスクリプションのターゲット型です。 *target_type*は**sysname**、既定値は NULL です。  
   
  指定した場合*target_type*、'DATABASE' に値を設定する必要があります。  
   
- [ **@target_object=** ] **'** target_object **'**  
- ポリシー カテゴリにサブスクライブするデータベースの名前です。 *target_object*は**sysname**、既定値は NULL です。  
+`[ @target_object = ] 'target_object'` ポリシー カテゴリにサブスクライブするデータベースの名前です。 *target_object*は**sysname**、既定値は NULL です。  
   
- [ **@policy_category=** ] **'** policy_category **'**  
- データベースでサブスクライブするポリシー カテゴリの名前を指定します。 *policy_category*は**sysname**、既定値は NULL です。  
+`[ @policy_category = ] 'policy_category'` データベースでサブスクライブするポリシー カテゴリの名前です。 *policy_category*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -77,7 +73,7 @@ ON a.policy_category_id = b.policy_category_id;
  PolicyAdministratorRole 固定データベース ロールのメンバーシップが必要です。  
   
 > [!IMPORTANT]  
->  資格情報が昇格される可能性について: PolicyAdministratorRole ロールに割り当てられているユーザーは、サーバー トリガーを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの動作に影響する可能性があるポリシーの実行をスケジュールできます。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 構成の制御について信頼できるユーザーにのみこの昇格される可能性の資格情報、ため PolicyAdministratorRole ロールを付与する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
+>  資格情報が昇格される可能性:PolicyAdministratorRole ロールのユーザーがサーバー トリガーを作成しのインスタンスの運用に影響する可能性のあるポリシーの実行をスケジュール設定、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 構成の制御について信頼できるユーザーにのみこの昇格される可能性の資格情報、ため PolicyAdministratorRole ロールを付与する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、AdventureWorks2012 データベースが 'Finance' ポリシー カテゴリをサブスクライブするように既存のポリシー カテゴリのサブスクリプションを更新します。  

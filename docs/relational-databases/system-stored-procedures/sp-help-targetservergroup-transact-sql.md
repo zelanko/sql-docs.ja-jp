@@ -18,12 +18,12 @@ ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c2b16617a4676e50a105affd5a885c8627b3120
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcb699741435bace786241ac01a57ad66dd5631d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784723"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528864"
 ---
 # <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>引数  
- [ **@name=** ] **'***name***'**  
- 情報を返すターゲット サーバー グループの名前を指定します。 *名前*は**sysname**、既定値は NULL です。  
+`[ @name = ] 'name'` 情報を返す対象サーバー グループの名前です。 *名前* は **sysname** 、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

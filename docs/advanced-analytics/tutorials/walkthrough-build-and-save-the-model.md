@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b02b1e0298af6fbb96ba5ddd8d5a18dc8e154598
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 039e5a8970b2161bfe54b1836f3bd12b48477e1a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645481"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513059"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R モデルを構築し、SQL Server (チュートリアル) に保存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -240,7 +240,7 @@ GO
 
 モデルをテーブルへの保存に必要なステートメントは、INSERT のみです。 ただしなどのストアド プロシージャでラップされたときに簡単には多くの場合、 *PersistModel*します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 では、最後のレッスンを使用して、保存済みのモデルに対してスコアリングを実行する方法を説明します。[!INCLUDE[tsql](../../includes/tsql-md.md)]します。
 

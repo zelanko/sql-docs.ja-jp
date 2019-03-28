@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 150fd6e01efb67281146e5b7dfff79bde27636dc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5cc9f79ab588a042894c199564820d06d9585bf1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130602"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533388"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  アプリケーション ロールを現在のデータベースから削除します。  
+  現在のデータベースからアプリケーション ロールを削除します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[DROP APPLICATION ROLE](../../t-sql/statements/drop-application-role-transact-sql.md)代わりにします。  
@@ -42,14 +42,13 @@ sp_dropapprole [@rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@rolename =** ] **'**_ロール_**'**  
- アプリケーションの役割を削除します。 *ロール*は、 **sysname**、既定値はありません。 *ロール*現在のデータベースに存在する必要があります。  
+`[ @rolename = ] 'role'` アプリケーションの役割を削除します。 *ロール*は、 **sysname**、既定値はありません。 *ロール*現在のデータベースに存在する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_dropapprole**アプリケーション ロールの削除にのみ使用できます。 ロールがセキュリティ保護可能なリソースを所有している場合、そのロールを削除することはできません。 セキュリティ保護可能なリソースを所有しているアプリケーション ロールを削除するには、先にセキュリティ保護可能なリソースの所有権を譲渡するか削除する必要があります。  
+ **sp_dropapprole**アプリケーション ロールの削除にのみ使用できます。 ロールがセキュリティ保護可能なリソースを所有している場合、そのロールを削除することはできません。 セキュリティ保護可能リソースを所有しているアプリケーション ロールを削除する前に、最初のセキュリティ保護可能な所有権を譲渡する必要があります。 またはにドロップします。  
   
  **sp_dropapprole**ユーザー定義のトランザクション内で実行することはできません。  
   
@@ -57,7 +56,7 @@ sp_dropapprole [@rolename = ] 'role'
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、現在のデータベースからアプリケーション ロール `SalesApp` を削除します。  
+ 次の例では、削除、`SalesApp`現在のデータベースからアプリケーション ロールです。  
   
 ```  
 EXEC sp_dropapprole 'SalesApp';  

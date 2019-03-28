@@ -18,14 +18,14 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa5df082287f0ddf3e37bc246d53bd31fac2a510
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 618ec7d83ab8abce8cf201cb0b59033b808178c0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723770"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533494"
 ---
-# <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
+# <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定サーバー ロールのメンバーに関する情報を返します。  
@@ -40,15 +40,14 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@srvrolename =** ] **'***ロール***'**  
- 固定サーバー ロールの名前です。 *ロール*は**sysname**、既定値は NULL です。 場合*ロール*が指定されていない、結果セットには、すべての固定サーバー ロールに関する情報が含まれています。  
+`[ @srvrolename = ] 'role'` 固定サーバー ロールの名前です。 *ロール*は**sysname**、既定値は NULL です。 場合*ロール*が指定されていない、結果セットには、すべての固定サーバー ロールに関する情報が含まれています。  
   
  *ロール*値は次のいずれかを指定できます。  
   
 |固定サーバー ロール|説明|  
 |-----------------------|-----------------|  
-|sysadmin|システム管理者。|  
-|securityadmin|セキュリティ管理者。|  
+|sysadmin|システム管理者|  
+|securityadmin|セキュリティ管理者|  
 |serveradmin|サーバー管理者。|  
 |setupadmin|セットアップ管理者。|  
 |processadmin|プロセス管理者。|  
@@ -63,8 +62,8 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|ServerRole|**sysname**|サーバー ロールの名前。|  
-|MemberName|**sysname**|サーバー ロールのメンバーの名前|  
+|ServerRole|**sysname**|サーバー ロールの名前|  
+|メンバー名|**sysname**|サーバー ロールのメンバーの名前|  
 |MemberSID|**varbinary(85)**|メンバー名のセキュリティ識別子|  
   
 ## <a name="remarks"></a>コメント  

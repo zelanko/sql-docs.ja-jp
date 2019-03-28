@@ -19,12 +19,12 @@ ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d947f319c56c29c0d3dbe4ce88c38055c59dfc5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2b2594ca16f3cd7378dbd8632af448471b8f1654
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124112"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529264"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@server =** ] **'**_server_**'**  
- オプションを設定するサーバーの名前です。 *server* のデータ型は **sysname**で、既定値はありません。  
+`[ @server = ] 'server'` オプションを設定する対象のサーバーの名前です。 *server* のデータ型は **sysname**で、既定値はありません。  
   
- [  **@optname =** ] **'**_option_name_**'**  
- 指定したサーバーに設定するオプションです。 *option_name*は**varchar (** 35 **)**、既定値はありません。 *option_name*値は次のいずれかを指定できます。  
+`[ @optname = ] 'option_name'` 指定したサーバーに設定するオプションです。 *option_name*は**varchar (** 35 **)**、既定値はありません。 *option_name*値は次のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -59,15 +57,14 @@ sp_serveroption [@server = ] 'server'
 |**lazy schema validation**|リモート テーブルのスキーマをチェックするかどうかを指定します。<br /><br /> **true** の場合、クエリの先頭でのリモート テーブルのチェックをスキップします。|  
 |**pub**|パブリッシャーです。|  
 |**query timeout**|リンク サーバーに対するクエリのタイムアウト値です。<br /><br /> 値が **0** の場合は、**sp_configure** の規定値を使用します。|  
-|**rpc**|指定されたサーバーからの RPC を有効にします。|  
+|**rpc**|特定のサーバーから RPC を有効にします。|  
 |**rpc out**|特定のサーバーへの RPC を有効にします。|  
-|**sub**|サブスクライバーです。|  
+|**sub**|サブスクライバー。|  
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**use remote collation**|リモート列とローカル サーバーのどちらの照合順序を使用するかを指定します。<br /><br /> **true** の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースに対してはリモート列の照合順序を使用し、**以外のデータ ソースに対しては**collation name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で指定した照合順序を使用します。<br /><br /> **false** の場合、分散クエリは常にローカル サーバーの既定の照合順序を使用します。**collation name** とリモート列の照合順序は無視されます。 既定値は **false**です。 **false** の値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 で使用される照合順序セマンティクスと互換性があります。|  
-|**remote proc transaction promotion**|このオプションを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トランザクションにより、サーバー間のプロシージャのアクションを保護します。  このオプションが TRUE (またはON) の場合はリモート ストアド プロシージャを呼び出す分散トランザクションを開始し、トランザクションは MS DTC に参加します。 リモート ストアド プロシージャを呼び出す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、トランザクションを実行したインスタンスであり、このインスタンスによってトランザクションが制御されます。 この接続に対して引き続き COMMIT TRANSACTION または ROLLBACK TRANSACTION ステートメントを実行すると、制御側のインスタンスは MS DTC 対して、コンピューター間の分散トランザクションの完了を管理することを要求します。<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)]分散トランザクションが開始された後は、リンク サーバーとして定義されている他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対し、リモート ストアド プロシージャを呼び出すことができます。 リンク サーバーはすべて [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散トランザクション、および MS DTC により、各リンク サーバーに対して、トランザクションが完了したことです。<br /><br /> このオプションが FALSE (OFF) の場合は、リンク サーバーに対するリモート プロシージャ コールの呼び出し中、ローカル トランザクションは分散トランザクションに昇格されません。<br /><br /> サーバー間のプロシージャ コールを行う前にトランザクションが既に分散トランザクションである場合、このオプションに効力はありません。 リンク サーバーに対するプロシージャ コールは、同じ分散トランザクションで実行されます。<br /><br /> サーバー間のプロシージャ コールを行う前に接続にアクティブなトランザクションがない場合、このオプションに効力はありません。 プロシージャは、アクティブなトランザクションなしにリンク サーバーに対して実行されます。<br /><br /> このオプションの既定値は TRUE (ON) です。|  
+|**remote proc transaction promotion**|このオプションを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トランザクションにより、サーバー間のプロシージャのアクションを保護します。  このオプションが TRUE (またはON) の場合はリモート ストアド プロシージャを呼び出す分散トランザクションを開始し、トランザクションは MS DTC に参加します。 リモート ストアド プロシージャを呼び出す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、トランザクションを実行したインスタンスであり、このインスタンスによってトランザクションが制御されます。 接続の後続の COMMIT TRANSACTION または ROLLBACK TRANSACTION ステートメントが発行されると、制御側のインスタンスは MS DTC が関係するコンピューター間で分散トランザクションの完了を管理することを要求します。<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)]分散トランザクションが開始された後は、リンク サーバーとして定義されている他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対し、リモート ストアド プロシージャを呼び出すことができます。 リンク サーバーはすべて [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散トランザクション、および MS DTC により、各リンク サーバーに対して、トランザクションが完了したことです。<br /><br /> このオプションが FALSE (または OFF) に設定されている場合、ローカル トランザクションは、リンク サーバー上のリモート プロシージャ コールの呼び出し中に分散トランザクションに昇格されません。<br /><br /> サーバー間のプロシージャ コールを行う前にトランザクションが既に分散トランザクションである場合、このオプションに効力はありません。 リンク サーバーに対するプロシージャ コールは、同じ分散トランザクションで実行されます。<br /><br /> サーバー間のプロシージャ コールを行う前場合に、の接続でアクティブなトランザクションがないし、このオプションに影響がありません。 プロシージャは、アクティブなトランザクションなしのリンク サーバーに対してし実行します。<br /><br /> このオプションの既定値は TRUE (ON) です。|  
   
- [  **@optvalue =**] **'**_option_value_**'**  
- *option_name* が有効 (**TRUE** または **on**) であるか、無効 (**FALSE** または **off**) であるかを指定します。 *option_value*は**varchar (** 10 **)**、既定値はありません。   
+`[ @optvalue = ] 'option_value'` 指定するかどうか、 *option_name*を有効にする (**TRUE**または**で**) か無効 (**FALSE**または**オフ**). *option_value*は**varchar (** 10 **)**、既定値はありません。   
   
  *option_value*には、**connect timeout** および **query timeout** オプションの場合、負でない整数を指定できます。 **collation name** オプションの場合、*option_value* には照合順序名または NULL を指定できます。   
   

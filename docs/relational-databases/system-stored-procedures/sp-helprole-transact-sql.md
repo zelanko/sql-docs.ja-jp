@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d298e167e17bea6cc3995479d8ddf8abf4e3531
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc8cae9353ad780a0711c77e138246f0be0d7d15
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594351"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534424"
 ---
-# <a name="sphelprole-transact-sql"></a>sp_helprole (Transact-SQL)
+# <a name="sphelprole-transact-sql"></a>sp_helprole (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在のデータベース内のロールに関する情報を返します。  
@@ -41,8 +41,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@rolename =** ] **'***ロール***'**  
- 現在のデータベースに含まれるロールの名前を指定します。 *ロール*は**sysname**、既定値は NULL です。 *ロール*現在のデータベースに存在する必要があります。 場合*ロール*が指定されていない、現在のデータベースのすべてのロールに関する情報が返されます。  
+`[ @rolename = ] 'role'` 現在のデータベース内のロールの名前です。 *ロール*は**sysname**、既定値は NULL です。 *ロール*現在のデータベースに存在する必要があります。 場合*ロール*が指定されていない、現在のデータベースのすべてのロールに関する情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -51,7 +50,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**RoleName**|**sysname**|現在のデータベースに存在するロールの名前。|  
+|**RoleName**|**sysname**|現在のデータベース ロールの名前。|  
 |**RoleId**|**smallint**|ID **RoleName**します。|  
 |**IsAppRole**|**int**|0 = **RoleName**アプリケーション ロールではありません。<br /><br /> 1 = **RoleName**アプリケーション ロールです。|  
   

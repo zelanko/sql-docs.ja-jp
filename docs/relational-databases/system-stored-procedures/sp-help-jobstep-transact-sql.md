@@ -18,14 +18,14 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc4acac420f31735a446f3cdff3e687fa5f3efef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7ddacb0951b25469404b96d41ec81d2eaaba9cc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740530"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530581"
 ---
-# <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
+# <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   によって使用されるジョブの手順については、情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自動化された操作を実行するエージェントのサービスです。  
@@ -43,23 +43,18 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_id =**] **'***job_id***'**  
- ジョブ情報を返すジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] 'job_id'` ジョブ情報を返す対象のジョブ識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [ **@job_name =**] **'***job_name***'**  
- ジョブの名前を指定します。 *job_name*は**sysname**、既定値 NULL。  
+`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name*は**sysname**、既定値 NULL。  
   
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
- [ **@step_id =**] *step_id*  
- ジョブ ステップの識別番号を指定します。 指定しない場合は、ジョブのすべてのステップが対象となります。 *step_id*は**int**、既定値は NULL です。  
+`[ @step_id = ] step_id` ジョブ ステップの識別番号。 含まれていない場合、ジョブのすべての手順が含まれます。 *step_id*は**int**、既定値は NULL です。  
   
- [ **@step_name =**] **'***step_name***'**  
- ジョブ ステップの名前を指定します。 *step_name*は**sysname**、既定値は NULL です。  
+`[ @step_name = ] 'step_name'` ジョブのステップの名前。 *step_name*は**sysname**、既定値は NULL です。  
   
- [ **@suffix =**] *suffix*  
- テキストの説明を追加するかどうかをフラグ、**フラグ**出力内の列。 *サフィックス*は**ビット**、既定値は**0**します。 場合*サフィックス*は**1**説明が追加されます。  
+`[ @suffix = ] suffix` テキストの説明を追加するかどうかをフラグ、**フラグ**出力内の列。 *サフィックス*は**ビット**、既定値は**0**します。 場合*サフィックス*は**1**説明が追加されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -69,20 +64,20 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|ステップの一意識別子。|  
-|**step_name**|**sysname**|ジョブ ステップの名前。|  
+|**step_name**|**sysname**|ジョブのステップの名前です。|  
 |**subsystem**|**nvarchar(40)**|ステップ コマンドを実行するサブシステム。|  
-|**command**|**nvarchar(max)**|ステップで実行するコマンド。|  
+|**command**|**nvarchar(max)**|手順で実行されるコマンド。|  
 |**flags**|**int**|ステップの動作を制御する値のビットマスク。|  
 |**cmdexec_success_code**|**int**|**CmdExec**手順では、これは、コマンドの成功のプロセス終了コード。|  
-|**on_success_action**|**tinyint**|ステップが成功した場合に実行する動作。<br /><br /> **1** = 成功を報告するジョブを終了します。<br /><br /> **2** = 失敗を報告するジョブを終了します。<br /><br /> **3** = 次の手順に移動します。<br /><br /> **4** = 手順に進みます。|  
+|**on_success_action**|**tinyint**|ステップが成功した場合に実行するアクション:<br /><br /> **1** = 成功を報告するジョブを終了します。<br /><br /> **2** = 失敗を報告するジョブを終了します。<br /><br /> **3** = 次の手順に移動します。<br /><br /> **4** = 手順に進みます。|  
 |**on_success_step_id**|**int**|場合**on_success_action** 4 は、これは、実行する次の手順を示します。|  
-|**on_fail_action**|**tinyint**|ステップが失敗した場合に実行する操作。 値は同じ**on_success_action**します。|  
+|**on_fail_action**|**tinyint**|ステップが失敗した場合の対処方法。 値は同じ**on_success_action**します。|  
 |**on_fail_step_id**|**int**|場合**on_fail_action** 4 は、これは、実行する次の手順を示します。|  
 |**server**|**sysname**|予約されています。|  
 |**database_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース。|  
 |**database_user_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース ユーザー コンテキスト。|  
 |**retry_attempts**|**int**|正常に実行できない場合にコマンドを再試行する最大回数。|  
-|**retry_interval**|**int**|再試行する間隔 (分単位)。|  
+|**retry_interval**|**int**|再試行の間隔 (分単位) のいずれかです。|  
 |**os_run_priority**|**int**|予約されています。|  
 |**output_file_name**|**nvarchar(200)**|コマンド出力を書き込むファイル ([!INCLUDE[tsql](../../includes/tsql-md.md)]、 **CmdExec**、および**PowerShell**ステップのみ)。|  
 |**last_run_outcome**|**int**|最後に実行したときのステップの結果。<br /><br /> **0** = に失敗しました<br /><br /> **1** = に成功しました<br /><br /> **2** = 再試行<br /><br /> **3** = キャンセル<br /><br /> **5** = unknown|  
@@ -110,7 +105,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-return-information-for-all-steps-in-a-specific-job"></a>A. 特定のジョブのすべてのステップに関する情報を返す  
+### <a name="a-return-information-for-all-steps-in-a-specific-job"></a>A. 特定のジョブ内のすべての手順の情報を返します  
  次の例では、`Weekly Sales Data Backup` という名前のジョブに関する、すべてのジョブ ステップを返します。  
   
 ```  

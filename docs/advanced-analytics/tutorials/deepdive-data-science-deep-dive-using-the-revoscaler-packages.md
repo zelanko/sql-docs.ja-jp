@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4ce2eea1638c301f85741dc22f7541af0cf7e5d6
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 48d65bfe54890c5ea0d8bfdca9c76fa0978a917d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596623"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511729"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>チュートリアル:SQL Server データで RevoScaleR R 関数を使用します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "53596623"
 同じコンピューターにクライアントとサーバーを配置する必要がある場合は、「リモート」のクライアントから R スクリプトを送信するための Microsoft R ライブラリの 2 番目のセットをインストールすることを確認します。 SQL Server インスタンスのプログラム ファイルにインストールされている R ライブラリを使用しません。 具体的には、1 台のコンピューターを使用している場合、 **RevoScaleR**クライアントとサーバーの操作をサポートするためにこれらの場所の両方でのライブラリです。
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
-+ C:\Program files \microsoft SQL Server\MSSQL14 します。MSSQLSERVER\R_SERVICES\library\RevoScaleR
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 クライアントの構成については、次を参照してください。 [R 開発用のデータ サイエンス クライアント セットアップ](../r/set-up-a-data-science-client.md)します。
 
@@ -67,7 +67,7 @@ R 開発者は、通常記述および R コードをデバッグするための
 + スコアリングには、ODBC 接続を開くことで新しいデータの取得、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 スコア付けは、ローカル ワークステーションで行われます。
 + カスタム R 関数を作成し、コンピューティング コンテキストをシミュレーションを実行するサーバーで実行します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [レッスン 1:データベースとアクセス許可を作成します。](deepdive-work-with-sql-server-data-using-r.md)

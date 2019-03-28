@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591466"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530374"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,38 +48,37 @@ sp_OAMethod objecttoken , methodname
  *Methodname*  
  呼び出す OLE オブジェクトのメソッド名です。  
   
- _returnvalue_**出力**  
+ _returnvalue_  **OUTPUT**  
  OLE オブジェクトのメソッドの戻り値です。 指定する場合は、適切なデータ型のローカル変数でなければなりません。  
   
  ローカル変数を指定するいずれかのメソッドが 1 つの値を返す場合*returnvalue*、ローカル変数の値を返すかを指定しないメソッドを返す*returnvalue*、返された、メソッドは、単一列、単一行の結果セットとしてクライアントに値を返します。  
   
- メソッドの戻り値が OLE オブジェクト場合*returnvalue*データ型のローカル変数にする必要があります**int**します。オブジェクト トークンがローカル変数に格納され、このオブジェクト トークンを他の OLE オートメーション ストアド プロシージャで使用できます。  
+ メソッドの戻り値が OLE オブジェクト場合*returnvalue*データ型のローカル変数にする必要があります**int**します。オブジェクト トークンが、ローカル変数に格納されているし、その他の OLE オートメーション ストアド プロシージャでは、このオブジェクト トークンを使用できます。  
   
  メソッドの戻り値が配列では場合、 *returnvalue*を指定すると、NULL に設定されます。  
   
- 次のいずれかの状況になると、エラーが発生します。  
+ 次のいずれかが発生した場合、エラーが発生します。  
   
 -   *returnvalue*が指定されているが、メソッドが値を返しません。  
   
--   メソッドが 3 次元以上の配列を返す場合  
+-   メソッドは、2 つ以上の次元の配列を返します。  
   
 -   メソッドが出力パラメーターとして配列を返す場合  
   
- [ _@parametername_ **=** ]*パラメーター***[出力]**  
- メソッドのパラメーターです。 指定した場合*パラメーター*適切なデータ型の値を指定する必要があります。  
+`[ _@parametername = ] parameter[ OUTPUT ]` メソッドのパラメーターです。 指定した場合*パラメーター*適切なデータ型の値を指定する必要があります。  
   
  出力パラメーターの戻り値を取得する*パラメーター*適切なデータ型のローカル変数にする必要がありますと**出力**指定する必要があります。 定数パラメーターが指定されている場合、または場合**出力**が指定されていない、戻り値出力パラメーターからは無視されます。  
   
- 指定した場合*parametername*の名前を指定する必要があります、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]名前付きパラメーター。 なお**@**_parametername_is されません、[!INCLUDE[tsql](../../includes/tsql-md.md)]ローカル変数。 アット マーク (**@**) が削除されると*parametername*パラメーター名として OLE オブジェクトに渡されます。 すべての名前付きのパラメーターは、位置で決まるパラメーターをすべて指定した後で指定する必要があります。  
+ 指定した場合*parametername*の名前を指定する必要があります、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]名前付きパラメーター。 なお**@**_parametername_is されません、[!INCLUDE[tsql](../../includes/tsql-md.md)]ローカル変数。 アット マーク (**@**) が削除されると*parametername*パラメーター名として OLE オブジェクトに渡されます。 すべての位置指定パラメーターを指定した後、すべての名前付きパラメーターを指定する必要があります。  
   
  *n*  
- 複数のパラメーターを指定できることを示すプレースホルダーです。  
+ 複数のパラメーターを指定できることを示すプレース ホルダーです。  
   
 > [!NOTE]
->  *@parametername* 指定したメソッドの一部であり、オブジェクトに渡されますために、名前付きパラメーターを指定できます。 このストアド プロシージャのその他のパラメーターは、名前ではなく位置で指定します。  
+>  *@parametername* 指定したメソッドの一部であり、オブジェクトに渡されますために、名前付きパラメーターを指定できます。 このストアド プロシージャの他のパラメーターは、名前ではなく位置で指定されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 成功した場合は 0、失敗した場合は OLE オートメーション オブジェクトによって返される HRESULT の 0 以外の整数値を返します。  
+ 0 (成功) または OLE オートメーション オブジェクトによって返される HRESULT の整数値である 0 以外の値の数 (失敗)。  
   
  HRESULT のリターン コードの詳細については[OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
   
@@ -88,11 +87,11 @@ sp_OAMethod objecttoken , methodname
   
 -   1 次元の配列の場合は、配列内の要素数と同数の列を持つ 1 行の結果セットとしてクライアントに返されます。 つまり、配列は (列数) として返されます。  
   
--   2 次元の配列の場合は、最初の次元の配列の要素数を列数とし、2 番目の次元の配列の要素数を行数とした結果セットとしてクライアントに返します。 つまり、配列を (列数,行数) として返します。  
+-   2 次元の配列の場合は、最初の次元の配列の要素数を列数とし、2 番目の次元の配列の要素数を行数とした結果セットとしてクライアントに返します。 つまり、(列、行) として、配列が返されます。  
   
  ときに、プロパティの戻り値またはメソッドの戻り値は、配列**sp_OAGetProperty**または**sp_OAMethod**クライアントに結果セットを返します。 メソッドの出力パラメーターを配列にすることはできません。これらのプロシージャは、配列内のすべてのデータ値をスキャンし、結果セットのそれぞれの列に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の適切なデータ型とデータ長を決定します。 これらのプロシージャは必要なデータ型とデータ長を使用して、特定の列内のすべてのデータ値を表現します。  
   
- 列内のすべてのデータ値が同じデータ型を共有する場合は、そのデータ型を列全体で使用します。 1 列のデータ値がそれぞれ異なるデータ型である場合、列全体に適用されるデータ型は次の表を基に選択されます。  
+ 列内のすべてのデータ値が同じデータ型を共有する場合は、そのデータ型を列全体で使用します。 列のデータ値は、異なるデータ型が場合、は、次の表に基づいて列全体のデータ型が選択します。  
   
 ||ssNoversion|FLOAT|money|DATETIME|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
@@ -124,7 +123,7 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>B. プロパティを取得する  
+### <a name="b-getting-a-property"></a>B. プロパティを取得します。  
  次の例では、取得、`HostName`プロパティ (の前に作成**SQLServer**オブジェクト)、ローカル変数に格納します。  
   
 ```  

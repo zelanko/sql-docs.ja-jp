@@ -19,17 +19,17 @@ ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de6aff356e5de49802f0bc2813ff481bd45244c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2806d42e58bbd60b962f83e8ab58fbe4511e44b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803800"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526404"
 ---
-# <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
+# <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  コレクターが既に有効になっており、コレクション セットがまだ実行されていない場合、コレクション セットを開始します。 コレクターが有効でない場合は、実行して、コレクターを有効に[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)し、このストアド プロシージャを使用して、コレクション セットを開始します。  
+  コレクターが既に有効になっている場合、コレクション セットを開始し、コレクション セットが実行されていません。 コレクターが有効でない場合は、実行して、コレクターを有効に[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)し、このストアド プロシージャを使用して、コレクション セットを開始します。  
 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -44,11 +44,9 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@collection_set_id =** ] *collection_set_id*  
- コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**既定値は NULL です。 *collection_set_id*場合、値が必要*名前*は NULL です。  
+`[ @collection_set_id = ] collection_set_id` コレクション セットの一意なローカル識別子です。 *collection_set_id*は**int**既定値は NULL です。 *collection_set_id*場合、値が必要*名前*は NULL です。  
   
- [  **@name =** ] '*名前*'  
- コレクション セットの名前を指定します。 *名前*は**sysname**既定値は NULL です。 *名前*場合、値が必要*collection_set_id*は NULL です。  
+`[ @name = ] 'name'` コレクション セットの名前です。 *名前*は**sysname**既定値は NULL です。 *名前*場合、値が必要*collection_set_id*は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -66,7 +64,7 @@ sp_syscollector_start_collection_set
  このプロシージャを実行するには、dc_operator 固定データベース ロールのメンバーシップが必要です。 コレクション セットにプロキシ アカウントがない場合は、sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、識別子を使用してコレクション セットを開始します。  
+ 次の例では、その識別子を使用して設定コレクションを開始します。  
   
 ```  
 USE msdb;  

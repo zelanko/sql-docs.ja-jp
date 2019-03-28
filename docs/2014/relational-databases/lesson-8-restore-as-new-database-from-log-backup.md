@@ -11,12 +11,12 @@ ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b25bd1ad06b92aa3d9e1ba9cb4be4caa5d587d1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38d807fae60099022e847e4799196305ccfbadf8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207922"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534444"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>レッスン 9:  Windows Azure ストレージからデータベースを復元する
   このレッスンでは、Windows Azure ストレージにあるデータベース バックアップ ファイルを内部設置型または Windows Azure の仮想マシンに存在するデータベースに復元する方法を学習します。 このレッスンを続行するには、レッスン 4、5、6、7 および 8 を実行する必要はありません。  
@@ -43,9 +43,9 @@ ms.locfileid: "48207922"
   
 3.  次の完全なスクリプトをコピーして、クエリ ウィンドウに貼り付けます。 必要に応じて、スクリプトを変更します。  
   
-     **注:** を実行する、`RESTORE`別のコンピューターのデータベース インスタンスを Windows Azure ストレージにデータベースのバックアップ (.bak) を復元するステートメント。  
+     **注:** 実行する、`RESTORE`別のコンピューターのデータベース インスタンスを Windows Azure ストレージにデータベースのバックアップ (.bak) を復元するステートメント。  
   
-    ```tsql  
+    ```sql  
   
     USE master   
     GO   
@@ -96,6 +96,6 @@ ms.locfileid: "48207922"
   
     ```  
   
- **チュートリアルの末尾: Windows Azure ストレージ サービスでは、SQL Server データ ファイル**  
+ **チュートリアルの終了:Windows Azure ストレージ サービスでは、SQL Server データ ファイル**  
   
   

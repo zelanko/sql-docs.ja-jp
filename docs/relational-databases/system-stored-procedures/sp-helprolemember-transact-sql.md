@@ -18,12 +18,12 @@ ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a821d6b114b1975dd9700b5f59d1cf66ebadb76a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 547ac1bce010e1f25eb2fce178844ff2b3f77bd1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745270"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526944"
 ---
 # <a name="sphelprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@rolename =** ] **'** *ロール* **'**  
- 現在のデータベースに含まれるロールの名前を指定します。 *ロール*は**sysname**、既定値は NULL です。 *ロール*現在のデータベースに存在する必要があります。 場合*ロール*が指定されていない、現在のデータベースから少なくとも 1 つのメンバーが含まれているすべてのロールが返されます。  
+`[ @rolename = ] ' role '` 現在のデータベース内のロールの名前です。 *ロール*は**sysname**、既定値は NULL です。 *ロール*現在のデータベースに存在する必要があります。 場合*ロール*が指定されていない、現在のデータベースから少なくとも 1 つのメンバーが含まれているすべてのロールが返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -50,7 +49,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**DbRole**|**sysname**|現在のデータベースに存在するロールの名前。|  
+|**DbRole**|**sysname**|現在のデータベース ロールの名前。|  
 |**メンバー名**|**sysname**|メンバーの名前**DbRole します。**|  
 |**MemberSID**|**varbinary(85)**|セキュリティ識別子**MemberName します。**|  
   

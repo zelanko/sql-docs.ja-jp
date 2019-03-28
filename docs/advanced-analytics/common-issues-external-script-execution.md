@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: ''
 ms.date: 05/31/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a3437e5f7081aa47cb33e33546a79aca0b100309
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: bddc2d2e4021ee0df196078b47e3ecbba96833b6
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644922"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509699"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>スタート パッド サービスと SQL Server の外部スクリプトの実行に関する一般的な問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -227,7 +227,7 @@ R をインストールしているボリュームが短いファイル名をサ
 4. WORKING_DIRECTORY のプロパティで入力した同じ作業ディレクトリを指定する構成ファイルを編集します。 または、別の作業ディレクトリを指定し、8dot3 表記と互換性が既に既存のパスを選択します。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Machine Learning サービスのトラブルシューティングと既知の問題](machine-learning-troubleshooting-faq.md)
 

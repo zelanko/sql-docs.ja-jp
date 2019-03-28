@@ -18,17 +18,17 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209841"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534044"
 ---
-# <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
+# <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  キュー更新トランザクション レプリケーションに関係する、スナップショットのプロパティまたはトランザクションのプッシュ サブスクリプションやプル サブスクリプションのプロパティを変更します。 その他のすべての種類のプル サブスクリプションのプロパティを変更する[sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)します。 **sp_changesubscription**パブリッシャーのパブリケーション データベースで実行されます。  
+  スナップショットまたはトランザクション プッシュ サブスクリプションまたはキュー更新トランザクション レプリケーションに関連するプル サブスクリプションのプロパティを変更します。 その他のすべての種類のプル サブスクリプションのプロパティを変更する[sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)します。 **sp_changesubscription**パブリッシャーのパブリケーション データベースで実行されます。  
   
 > [!IMPORTANT]  
 >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
@@ -49,44 +49,37 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication**=] **'**_パブリケーション_**'**  
- 変更するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません  
+`[ @publication = ] 'publication'` 変更するパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません  
   
- [ **@article** =] **'**_記事_**'**  
- 変更するアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
+`[ @article = ] 'article'` 変更するアーティクルの名前です。 *記事*は**sysname**、既定値はありません。  
   
- [ **@subscriber** =] **'**_サブスクライバー_**'**  
- サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。  
   
- [ **@destination_db** =] **'**_destination_db_**'**  
- サブスクリプション データベースの名前です。 *destination_db*は**sysname**、既定値はありません。  
+`[ @destination_db = ] 'destination_db'` サブスクリプション データベースの名前です。 *destination_db*は**sysname**、既定値はありません。  
   
- [  **@property=**] **'**_プロパティ_**'**  
- 指定したサブスクリプションの変更対象となるプロパティを指定します。 *プロパティ*は**nvarchar (30)** テーブル内の値のいずれかを指定できます。  
+`[ @property = ] 'property'` 特定のサブスクリプションを変更するプロパティです。 *プロパティ*は**nvarchar (30)** テーブル内の値のいずれかを指定できます。  
   
- [  **@value=**] **'**_値_**'**  
- 指定した新しい値は、*プロパティ*します。 *値*は**nvarchar (4000)** テーブル内の値のいずれかを指定できます。  
+`[ @value = ] 'value'` 指定した新しい値は、*プロパティ*します。 *値*は**nvarchar (4000)** テーブル内の値のいずれかを指定できます。  
   
 |プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのログイン。|  
 |**distrib_job_password**||エージェントを実行する Windows アカウントのパスワード。|  
-|**対応します。**||OLE DB プロバイダーに接続するときに使用されるカタログ。 このプロパティは有効でのみ非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー。|  
+|**subscriber_catalog**||OLE DB プロバイダーに接続するときに使用されるカタログします。 このプロパティは有効でのみ非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー。|  
 |**subscriber_datasource**||OLE DB プロバイダーで認識されるデータ ソースの名前。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
-|**subscriber_location**||OLE DB プロバイダーで認識されるデータベースの場所。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
-|**subscriber_login**||サブスクライバーでのログイン名。|  
-|**@subscriber_password**||指定したログインに対する複雑なパスワード。|  
+|**subscriber_location**||OLE DB プロバイダーで認識されるデータベースの場所です。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
+|**subscriber_login**||サブスクライバーのログイン名です。|  
+|**subscriber_password**||指定したログインに対する複雑なパスワード。|  
 |**subscriber_security_mode**|**1**|サブスクライバーに接続するときに Windows 認証を使用。|  
-||**0**|サブスクライバーに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用。|  
-|**subscriber_provider**||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータ ソース用の OLE DB プロバイダーを登録するときに使用される、一意なプログラム識別子 (PROGID)。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
-|**subscriber_providerstring**||データ ソースを識別する、OLE DB プロバイダー固有の接続文字列。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
-|**subscriptionstreams**||変更のバッチをサブスクライバーに並列的に適用するために、ディストリビューション エージェントごとに許可される接続の数。 値の範囲**1**に**64**はサポートされて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 このプロパティである必要があります**0**の非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー、Oracle パブリッシャー、またはピア ツー ピア サブスクリプションです。|  
+||**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーに接続するときに認証します。|  
+|**subscriber_provider**||一意なプログラム識別子 (PROGID) を OLE DB provider for 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソースを登録します。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
+|**subscriber_providerstring**||データ ソースを識別する OLE DB プロバイダーに固有の接続文字列。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
+|**subscriptionstreams**||変更をサブスクライバーに並列のバッチを適用するディストリビューション エージェントで使用できる接続の数です。 値の範囲**1**に**64**はサポートされて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 このプロパティである必要があります**0**の非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー、Oracle パブリッシャー、またはピア ツー ピア サブスクリプションです。|  
 |**subscriber_type**|**1**|ODBC データ ソース サーバー|  
 ||**3**|OLE DB プロバイダー|  
 |**メモリ最適化**|**bit**|サブスクリプションがメモリ最適化テーブルをサポートしていることを示します。 *memory_optimized*は**ビット**、場所 1 が true (サブスクリプションでは、メモリ最適化テーブルをサポートします)。|  
   
- [  **@publisher =** ] **'**_パブリッシャー_**'**  
- 以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  *パブリッシャー*を指定しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  

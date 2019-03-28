@@ -19,14 +19,14 @@ ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 06520164758a50d604b2effbdae23f73dde7128c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763526"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534464"
 ---
-# <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
+# <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   既存のプロキシのプロパティを変更します。  
@@ -48,26 +48,19 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@proxy_id**=] *id*  
- 変更するプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**、既定値は NULL です。  
+`[ @proxy_id = ] id` 変更するプロキシのプロキシ識別番号。 *Proxy_id*は**int**、既定値は NULL です。  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
- 変更するプロキシの名前を指定します。 *Proxy_name*は**sysname**、既定値は NULL です。  
+`[ @proxy_name = ] 'proxy_name'` 変更するプロキシの名前。 *Proxy_name*は**sysname**、既定値は NULL です。  
   
- [ **@credential_name** =] **'***credential_name***'**  
- プロキシの新しい資格情報の名前を指定します。 *Credential_name*は**sysname**、既定値は NULL です。 いずれか*credential_name*または*credential_id*指定することがあります。  
+`[ @credential_name = ] 'credential_name'` プロキシの新しい資格情報の名前。 *Credential_name*は**sysname**、既定値は NULL です。 いずれか*credential_name*または*credential_id*指定することがあります。  
   
- [ **@credential_id** =] *credential_id*  
- プロキシの新しい資格情報の識別番号を指定します。 *Credential_id*は**int**、既定値は NULL です。 いずれか*credential_name*または*credential_id*指定することがあります。  
+`[ @credential_id = ] credential_id` プロキシの新しい資格情報の識別番号。 *Credential_id*は**int**、既定値は NULL です。 いずれか*credential_name*または*credential_id*指定することがあります。  
   
- [ **@new_name**=] **'***new_name***'**  
- プロキシの新しい名前を指定します。 *New_name*は**sysname**、既定値は NULL です。 プロシージャが変更するプロキシの名前で指定した場合、 *new_name*します。 この引数が NULL の場合、プロキシの名前は変更されません。  
+`[ @new_name = ] 'new_name'` プロキシの新しい名前。 *New_name*は**sysname**、既定値は NULL です。 プロシージャが変更するプロキシの名前で指定した場合、 *new_name*します。 この引数が NULL の場合、プロキシの名前は変更されません。  
   
- [ **@enabled** =] *is_enabled*  
- プロキシが有効になっているかどうか。 *Is_enabled*フラグが**tinyint**、既定値は NULL です。 ときに*is_enabled*は**0**プロキシが有効でないと、ジョブ ステップでは使用できません。 この引数が NULL の場合、プロキシの状態は変更されません。  
+`[ @enabled = ] is_enabled` プロキシが有効になっているかどうか。 *Is_enabled*フラグが**tinyint**、既定値は NULL です。 ときに*is_enabled*は**0**プロキシが有効でないと、ジョブ ステップでは使用できません。 この引数が NULL の場合、プロキシの状態は変更されません。  
   
- [ **@description**=] **'***説明***'**  
- プロキシの新しい説明を指定します。 *説明*は**nvarchar (512)**、既定値は NULL です。 この引数が NULL の場合、プロキシの説明は変更されません。  
+`[ @description = ] 'description'` プロキシの新しい説明します。 *説明*は**nvarchar (512)**、既定値は NULL です。 この引数が NULL の場合は、プロキシの説明は変更されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

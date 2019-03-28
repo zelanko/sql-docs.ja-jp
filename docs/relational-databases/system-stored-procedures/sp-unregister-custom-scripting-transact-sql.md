@@ -16,17 +16,17 @@ ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28ff96d07aa1b7e65097fbf7946b40dfb56adea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3d9af0e5eff8aff2715ff2be6caa1757702fb8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808744"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529564"
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  このストアド プロシージャは、ユーザー定義カスタム ストアド プロシージャを削除または[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト ファイルを実行して登録された[sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  このストアド プロシージャは、ユーザー定義カスタム ストアド プロシージャを削除または[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト ファイルを実行して登録された[sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,21 +40,18 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@type** =] **'***型***'**  
- 削除するカスタム ストアド プロシージャまたはスクリプトの種類を指定します。 *型*は**varchar (16)**, で、既定値はありませんは、次の値のいずれかを指定します。  
+`[ @type = ] 'type'` カスタム ストアド プロシージャまたはスクリプトの種類を削除しています。 *型*は**varchar (16)**, で、既定値はありませんは、次の値のいずれかを指定します。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**insert**|登録したカスタム ストアド プロシージャまたはスクリプトを、INSERT ステートメントがレプリケートされるときに実行。|  
-|**更新プログラム**|登録したカスタム ストアド プロシージャまたはスクリプトを、UPDATE ステートメントがレプリケートされるときに実行。|  
-|**delete**|登録したカスタム ストアド プロシージャまたはスクリプトを、DELETE ステートメントがレプリケートされるときに実行。|  
-|**custom_script**|登録したカスタム ストアド プロシージャまたはスクリプトを、データ定義言語 (DDL) トリガーの最後に実行。|  
+|**insert**|登録済みのカスタム ストアド プロシージャまたはスクリプトは、INSERT ステートメントがレプリケートされるときに実行されます。|  
+|**update**|登録済みのカスタム ストアド プロシージャまたはスクリプトは、UPDATE ステートメントがレプリケートされるときに実行されます。|  
+|**delete**|登録済みのカスタム ストアド プロシージャまたはスクリプトは、DELETE ステートメントがレプリケートされるときに実行されます。|  
+|**custom_script**|登録済みのカスタム ストアド プロシージャまたはスクリプトは、データ定義言語 (DDL) トリガーの最後に実行されます。|  
   
- [ **@publication** =] **'***パブリケーション***'**  
- カスタム ストアド プロシージャまたはスクリプトを削除するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は NULL です。  
+`[ @publication = ] 'publication'` カスタム ストアド プロシージャまたはスクリプトをパブリケーションの名前を削除しています。 *パブリケーション*は**sysname**、既定値は NULL です。  
   
- [ **@article** =] **'***記事***'**  
- カスタム ストアド プロシージャまたはスクリプトを削除するアーティクルの名前を指定します。 *記事*は**sysname**、既定値は NULL です。  
+`[ @article = ] 'article'` カスタム ストアド プロシージャまたはスクリプトをアーティクルの名前を削除しています。 *記事*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
