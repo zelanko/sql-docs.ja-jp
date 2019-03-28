@@ -16,14 +16,14 @@ ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ee9596b578396786da8562f2ecf73c3b85f0241
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 182f13347a1fdf4dc06e6d3276e481ce54f01e45
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588036"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527974"
 ---
-# <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
+# <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   パラメーターとして渡されたエージェント タイプについて、既定の構成の ID を取得します。 このストアド プロシージャは、任意のデータベース上のディストリビューター側で実行されます。  
@@ -39,16 +39,14 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@profile_id=**] _profile_id_**出力**  
- エージェントの種類の既定の構成の ID を指定します。 *profile_id*は**int**、既定値はありません *。profile_id*は出力パラメーターでも、エージェントの種類の既定の構成の ID を返します。  
+`[ @profile_id = ] _profile_idOUTPUT` エージェントの種類の既定の構成の ID です。 *profile_id*は**int**、既定値はありません *。profile_id*は出力パラメーターでも、エージェントの種類の既定の構成の ID を返します。  
   
- [  **@agent_type=**] **'**_agent_type_**'**  
- エージェントの種類を指定します。 *agent_type*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
+`[ @agent_type = ] 'agent_type'` エージェントの種類です。 *agent_type*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**1**|スナップショット エージェント。|  
-|**2**|ログ リーダー エージェント|  
+|**2**|ログ リーダー エージェント。|  
 |**3**|ディストリビューション エージェント。|  
 |**4**|マージ エージェントです。|  
 |**9**|キュー リーダー エージェント (Queue Reader Agent)|  

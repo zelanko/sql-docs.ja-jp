@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa52c7e66a690b54c33330e09fe4373962ea2f9b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 910f4f02c17ba0f6524648b9ac1eb201d735b238
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589316"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527924"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@remoteserver =** ] **'**_remoteserver_**'**  
- 削除するリモート ログインにマップされているリモート サーバーの名前を指定します。 *remoteserver*は**sysname**、既定値はありません。 *remoteserver*既に存在する必要があります。  
+`[ @remoteserver = ] 'remoteserver'` 削除するリモート ログインにマップされているリモート サーバーの名前です。 *remoteserver*は**sysname**、既定値はありません。 *remoteserver*既に存在する必要があります。  
   
- [  **@loginame =** ] **'**_ログイン_**'**  
- リモート サーバーに関連付けられているローカル サーバー上のログイン名を指定します (省略可能)。 *login* のデータ型は **sysname** で、既定値は NULL です。 *ログイン*指定されている場合に既に存在する必要があります。  
+`[ @loginame = ] 'login'` リモート サーバーに関連付けられているローカル サーバー上の省略可能なログイン名です。 *login* のデータ型は **sysname** で、既定値は NULL です。 *ログイン*指定されている場合に既に存在する必要があります。  
   
- [  **@remotename =** ] **'**_remote_name_**'**  
- マップされているリモート ログインの名前を省略可能な*ログイン*リモート サーバーからにログインします。 *remote_name*は**sysname**、既定値は NULL です。  
+`[ @remotename = ] 'remote_name'` マップされているリモート ログインの名前を省略可能な*ログイン*リモート サーバーからにログインします。 *remote_name*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -70,22 +67,22 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>A. リモート サーバーのすべてのリモート ログインを削除する  
- 次の例では、リモート サーバー `ACCOUNTS` のエントリを削除します。この場合、ローカル サーバー上のログインとリモート サーバー上のリモート ログイン間のすべてのマッピングが削除されます。  
+### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>A. リモート サーバーのリモート ログインをすべて削除します。  
+ 次の例は、リモート サーバー エントリを削除します。 `ACCOUNTS`、し、そのため、ローカル サーバー上のログインとリモート サーバー上のリモート ログイン マッピングをすべて削除します。  
   
 ```  
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-dropping-a-login-mapping"></a>B. ログインのマッピングを削除する  
+### <a name="b-dropping-a-login-mapping"></a>B. ログインのマッピングを削除します。  
  次の例では、リモート サーバー `ACCOUNTS` からのリモート ログインとローカル ログイン `Albert` をマップしているエントリを削除します。  
   
 ```  
 EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';  
 ```  
   
-### <a name="c-dropping-a-remote-user"></a>C. リモート ユーザーを削除する  
- 次の例では、ローカル ログイン `Chris` にマップされている、リモート サーバー `ACCOUNTS` のリモート ログイン `salesmgr` に対応するログインを削除します。  
+### <a name="c-dropping-a-remote-user"></a>C. リモート ユーザーを削除  
+ 次の例では、リモート ログインのログインを削除する`Chris`、リモート サーバーで`ACCOUNTS`ローカル ログインにマップされている`salesmgr`します。  
   
 ```  
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  

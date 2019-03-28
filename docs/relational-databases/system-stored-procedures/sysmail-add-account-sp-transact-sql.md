@@ -18,17 +18,17 @@ ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a388fb39082ec936b473afd7fc96ff99e7d92350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b41b0c0ae805923a10d0ee9c4fd066b1202fa94
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830020"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537894"
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SMTP アカウントの情報を保持する新しいデータベース メール アカウントを作成します。  
+  SMTP アカウントに関する情報を保持する新しいデータベース メール アカウントを作成します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,50 +52,37 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@account_name** =] **'***account_name***'**  
- 追加するアカウントの名前を指定します。 *account_name*は**sysname**、既定値はありません。  
+`[ @account_name = ] 'account_name'` 追加するアカウントの名前。 *account_name*は**sysname**、既定値はありません。  
   
- [ **@email_address** =] **'***email_address***'**  
- メッセージ送信元の電子メール アドレスを指定します。 このアドレスにはインターネット電子メール アドレスを指定する必要があります。 *email_address*は**nvarchar (128)**、既定値はありません。 たとえば、アカウントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、アドレスから電子メールを送信することがあります **SqlAgent@Adventure-Works.com**します。  
+`[ @email_address = ] 'email_address'` メッセージを送信する電子メール アドレス。 このアドレスは、インターネットの電子メール アドレスを指定する必要があります。 *email_address*は**nvarchar (128)**、既定値はありません。 たとえば、アカウントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、アドレスから電子メールを送信することがあります **SqlAgent@Adventure-Works.com**します。  
   
- [ **@display_name** =] **'***display_name***'**  
- このアカウントから送信する電子メール メッセージの表示名を指定します。 *display_name*は**nvarchar (128)**、既定値は NULL です。 たとえば、アカウントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、名前を表示できます**SQL Server Agent Automated Mailer**送信する電子メール メッセージ。  
+`[ @display_name = ] 'display_name'` このアカウントから電子メール メッセージで使用する表示名。 *display_name*は**nvarchar (128)**、既定値は NULL です。 たとえば、アカウントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、名前を表示できます**SQL Server Agent Automated Mailer**送信する電子メール メッセージ。  
   
- [ **@replyto_address** =] **'***replyto_address***'**  
- このアカウントから送信するメッセージに対する返信アドレスを指定します。 *replyto_address*は**nvarchar (128)**、既定値は NULL です。 などのアカウントへの返信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、データベース管理者に進んでください **danw@Adventure-Works.com**します。  
+`[ @replyto_address = ] 'replyto_address'` このアカウントからのメッセージへの応答に送信されるアドレスです。 *replyto_address*は**nvarchar (128)**、既定値は NULL です。 などのアカウントへの返信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、データベース管理者に進んでください **danw@Adventure-Works.com**します。  
   
- [ **@description** =] **'***説明***'**  
- アカウントの説明を指定します。 *説明*は**nvarchar (256)**、既定値は NULL です。  
+`[ @description = ] 'description'` アカウントの説明。 *説明*は**nvarchar (256)**、既定値は NULL です。  
   
- [ **@mailserver_name** =] **'***server_name***'**  
- このアカウントで使用する SMTP メール サーバーの名前または IP アドレスを指定します。 実行するコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]解決できる必要があります、 *server_name* IP アドレス。 *server_name*は**sysname**、既定値はありません。  
+`[ @mailserver_name = ] 'server_name'` 名前またはこのアカウントを使用する SMTP メール サーバーの IP アドレス。 実行するコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]解決できる必要があります、 *server_name* IP アドレス。 *server_name*は**sysname**、既定値はありません。  
   
- [ **@mailserver_type** =] '*server_type*'  
- 電子メール サーバーの種類を指定します。 *server_type*は**sysname**、既定値は **'SMTP'**.  
+`[ @mailserver_type = ] 'server_type'` 電子メール サーバーの種類。 *server_type*は**sysname**、既定値は **'SMTP'**.  
   
- [ **@port** =] *port_number*  
- 電子メール サーバーのポート番号を指定します。 *port_number*は**int**、既定値は 25 です。  
+`[ @port = ] port_number` 電子メール サーバーのポート番号。 *port_number*は**int**、既定値は 25 です。  
   
- [ **@username** =] **'***username***'**  
- 電子メール サーバーへのログオンに使用するユーザー名を指定します。 *ユーザー名*は**nvarchar (128)**、既定値は NULL です。 このパラメーターが NULL の場合、データベース メールではこのアカウントに対して認証が使用されません。 メール サーバーが認証を必要としない場合、ユーザー名には NULL を使用します。  
+`[ @username = ] 'username'` 使用して、電子メール サーバーにログオンするユーザー名。 *ユーザー名*は**nvarchar (128)**、既定値は NULL です。 このパラメーターが NULL の場合は、データベース メールでは、このアカウントは、認証は使いません。 メール サーバーに認証が必要としない場合は、ユーザー名に NULL を使用します。  
   
- [ **@password** =] **'***パスワード***'**  
- 子メール サーバーへのログオンに使用するパスワードを指定します。 *パスワード*は**nvarchar (128)**、既定値は NULL です。 ユーザー名を指定しない場合、パスワードを設定する必要はありません。  
+`[ @password = ] 'password'` 電子メール サーバーへのログオンに使用するパスワード。 *パスワード*は**nvarchar (128)**、既定値は NULL です。 ユーザー名が指定されていない場合は、パスワードを入力する必要はありません。  
   
- [ **@use_default_credentials** =] use_default_credentials  
- 資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定します、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 **use_default_credentials**ビットは、既定値は 0。 データベース メールでの資格情報を使用してこのパラメーターが 1 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 データベース メールではこのパラメーターが 0 の場合、 **@username**と**@password**存在する場合は、パラメーターなしのメールが送信されます**@username**と**@password**パラメーター。  
+`[ @use_default_credentials = ] use_default_credentials` 資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定します、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 **use_default_credentials**ビットは、既定値は 0。 データベース メールでの資格情報を使用してこのパラメーターが 1 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 データベース メールではこのパラメーターが 0 の場合、 **@username**と**@password**存在する場合は、パラメーターなしのメールが送信されます**@username**と**@password**パラメーター。  
   
- [ **@enable_ssl** =] enable_ssl  
- データベース メールで Secure Sockets Layer を使用して通信を暗号化するかどうかを指定します。 **Enable_ssl**ビットは、既定値は 0。  
+`[ @enable_ssl = ] enable_ssl` データベース メールで Secure Sockets Layer を使用して通信を暗号化するかどうかを指定します。 **Enable_ssl**ビットは、既定値は 0。  
   
- [ **@account_id** =] *account_id*出力  
- 新しいアカウントのアカウント ID を返します。 *account_id*は**int**、既定値は NULL です。  
+`[ @account_id = ] account_id OUTPUT` 新しいアカウントのアカウント id を返します。 *account_id*は**int**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- データベース メールは、個別のパラメーターを提供します。 **@email_address**、 **@display_name**、および **@replyto_address**します。 **@email_address**パラメーターは、メッセージの送信元アドレス。 **@display_name**パラメーターは、名前に示すように、**から:** 電子メール メッセージのフィールド。 **@replyto_address**パラメーターは、アドレス、電子メール メッセージに返信が送信されます。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するアカウントでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでのみ使用される電子メール アドレスから電子メール メッセージを送信できます。 受信者が簡単に判断するため、そのアドレスからのメッセージは、フレンドリ名を表示する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、メッセージを送信します。 受信者がメッセージに返信した場合、その返信は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用されるアドレスではなくデータベース管理者に送られます。 このシナリオで、アカウントを使用して**SqlAgent@Adventure-Works.com**として電子メール アドレス。 表示名に設定されて**SQL Server Agent Automated Mailer**します。 アカウントが使用する**danw@Adventure-Works.com**として、返信先アドレスでは、このアカウントから送信されたメッセージに返信ですからの電子メール アドレスではなく、データベース管理者に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。 データベース メールではこれら 3 つのパラメーターに対して個別の値を設定できるため、ユーザーの必要に応じてメッセージを構成できます。  
+## <a name="remarks"></a>コメント  
+ データベース メールは、個別のパラメーターを提供します。 **@email_address**、 **@display_name**、および **@replyto_address**します。 **@email_address**パラメーターは、メッセージの送信元アドレス。 **@display_name**パラメーターは、名前に示すように、**から:** 電子メール メッセージのフィールド。 **@replyto_address**パラメーターは、アドレス、電子メール メッセージに返信が送信されます。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するアカウントでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでのみ使用される電子メール アドレスから電子メール メッセージを送信できます。 受信者が簡単に判断するため、そのアドレスからのメッセージは、フレンドリ名を表示する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、メッセージを送信します。 受信者がメッセージに返信した場合、その返信は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用されるアドレスではなくデータベース管理者に送られます。 このシナリオで、アカウントを使用して**SqlAgent@Adventure-Works.com**として電子メール アドレス。 表示名に設定されて**SQL Server Agent Automated Mailer**します。 アカウントが使用する**danw@Adventure-Works.com**として、返信先アドレスでは、このアカウントから送信されたメッセージに返信ですからの電子メール アドレスではなく、データベース管理者に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。 データベース メールでは、これら 3 つのパラメーターの独立した設定を指定して、ニーズに合わせてメッセージを構成できます。  
   
  **@mailserver_type**パラメーターに値がサポートしている **'SMTP'** します。  
   
@@ -118,7 +105,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベース メール アカウントを作成します。](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

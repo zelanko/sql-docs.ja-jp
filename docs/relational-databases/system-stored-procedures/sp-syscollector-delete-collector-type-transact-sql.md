@@ -19,12 +19,12 @@ ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 909f85ee78348ac81822b5ebbd09a98b121bb76d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7f36eb20b4a5f72ce980f8e35cb39580f4f5142
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738320"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537184"
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
- コレクター型の GUID です。 *collector_type_uid*は**uniqueidentifier**場合、値が必要と*名前*は NULL です。  
+`[ @collector_type_uid = ] 'collector_type_uid'` コレクター型の GUID です。 *collector_type_uid*は**uniqueidentifier**場合、値が必要と*名前*は NULL です。  
   
- [ **@name =** ] **'***name***'**  
- コレクター型の名前を指定します。 *名前*は**sysname**場合、値が必要と*collector_type_uid*は NULL です。  
+`[ @name = ] 'name'` コレクター型の名前です。 *名前*は**sysname**場合、値が必要と*collector_type_uid*は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -54,7 +52,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ## <a name="remarks"></a>コメント  
  いずれか*collector_type_uid*または*名前*する必要があります値を持つ、どちらも NULL をすることはできません。  
   
- このコレクション型のコレクション アイテムが存在する場合は、エラーがスローされます。  
+ このコレクション型のコレクション アイテムが存在しない場合、この手順はエラーをスローします。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーシップが必要です、 **dc_admin** (EXECUTE 権限) を持つ固定データベース ロールにこのプロシージャを実行します。  

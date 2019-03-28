@@ -16,17 +16,17 @@ ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c04df4cb844faf42506c781607a220e98a7db17
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5458d7a7693c742768a9a8a5e0c2f8583f1ca9ba
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779114"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535614"
 ---
-# <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
+# <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  既存のパブリッシャーとデータベースのペアのリダイレクトされたパブリッシャーを指定します。 パブリッシャー データベースが Always On 可用性グループに所属している場合、リダイレクトされたパブリッシャーは可用性グループに関連付けられている可用性グループ リスナー名にします。  
+  既存のパブリッシャー/データベース ペアのリダイレクトされたパブリッシャーを指定します。 パブリッシャー データベースが Always On 可用性グループに所属している場合、リダイレクトされたパブリッシャーは可用性グループに関連付けられている可用性グループ リスナー名にします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,14 +41,11 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@original_publisher** =] **'***original_publisher***'**  
- 最初にデータベースをパブリッシュした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。 *original_publisher*は**sysname**、既定値はありません。  
+`[ @original_publisher = ] 'original_publisher'` インスタンスの名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを最初に発行します。 *original_publisher*は**sysname**、既定値はありません。  
   
- [ **@publisher_db** =] **'***publisher_db***'**  
- パブリッシュされるデータベースの名前。 *publisher_db*は**sysname**、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシュするデータベースの名前。 *publisher_db* は **sysname** 、既定値はありません。  
   
- [ **@redirected_publisher** =] **'***redirected_publisher***'**  
- 新しいパブリッシャーになる、可用性グループに関連付けられている可用性グループ リスナーの名前。 *redirected_publisher*は**sysname**、既定値はありません。 可用性グループ リスナーが既定以外のポートに対して構成されている場合は、`'Listenername,51433'` のように、リスナー名と共にポート番号を指定します。  
+`[ @redirected_publisher = ] 'redirected_publisher'` 新しい発行元となる可用性グループに関連付けられている可用性グループ リスナーの名前。 *redirected_publisher*は**sysname**、既定値はありません。 可用性グループ リスナーが既定以外のポートに対して構成されている場合は、`'Listenername,51433'` のように、リスナー名と共にポート番号を指定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

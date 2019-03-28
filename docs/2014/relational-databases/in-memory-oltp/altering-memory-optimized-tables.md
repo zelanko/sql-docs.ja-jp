@@ -10,12 +10,12 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dfd0d92f5dcf82cbfdd5786fed26e3b41048f8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dab550be7e867486d7a155c2113e2d7e3b63a038
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136484"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533044"
 ---
 # <a name="altering-memory-optimized-tables"></a>メモリ最適化テーブルの変更
   メモリ最適化テーブルに対する ALTER 操作はサポートされていません。 これには、bucket_count の変更、インデックスの追加または削除、列の追加または削除などが含まれます。 このトピックでは、メモリ最適化テーブルを更新する方法のガイドラインについて説明します。  
@@ -33,7 +33,7 @@ ms.locfileid: "48136484"
   
      テーブルを参照するスキーマ バインド オブジェクトは、次のクエリを使用して見つけることができます。  
   
-    ```tsql  
+    ```sql  
     declare @t nvarchar(255) = N'<table name>'  
   
     select r.referencing_schema_name, r.referencing_entity_name  
@@ -43,7 +43,7 @@ ms.locfileid: "48136484"
   
      ストアド プロシージャの権限は、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してスクリプト化できます。  
   
-    ```tsql  
+    ```sql  
     declare @sp nvarchar(255) = N'<procedure name>'  
     declare @permissions nvarchar(max) = N''  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48136484"
   
 4.  テーブルのコピーを作成し、元のテーブルからテーブルのコピーにデータをコピーします。 次を使用して、コピーを作成できます[!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>します。  
   
-    ```tsql  
+    ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48136484"
   
  目的のスキーマの変更を反映するように、手順 4. のスクリプトを更新する必要があります。 テーブルの列にすべての変更がある場合 (一時テーブルからデータをコピーする) のスクリプトの手順 5 と 6 (ストアド プロシージャを再作成) する必要がありますが必要に応じて更新されます。  
   
-```tsql  
+```sql  
 # Prepare for schema changes by scripting out the table, as well as associated permissions  
 # --------  
 # Usage: prepare_schema_change.ps1 server_name db_name schema_name table_name  
@@ -224,9 +224,9 @@ write-host ""
   
  次の PowerShell スクリプトでは、前のサンプルでスクリプトを作成したスキーマの変更を実行します。 このスクリプトは、テーブルを引数として受け取り、このテーブルや関連付けられたストアド プロシージャ用に生成されたスキーマ変更スクリプトを実行します。  
   
- 使用法: execute_schema_change.ps1 *server_name * * db_name`schema_name`table_name*  
+ Usage: execute_schema_change.ps1 *server_name**db_name`schema_name`table_name*  
   
-```tsql  
+```sql  
 # stop execution once an error occurs  
 $ErrorActionPreference="Stop"  
   

@@ -19,17 +19,17 @@ ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b234caaa0de9f111c047cf54aeafca6d4fdce8b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be3f468db321f1e8ba7af3d7b5b80c97803a0b4b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730430"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531244"
 ---
-# <a name="spsyscollectordeleteexecutionlogtree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)
+# <a name="spsyscollectordeleteexecutionlogtree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  単一コレクション セットの実行に対応するすべてのログ エントリを削除します。 ログ エントリの削除も、[!INCLUDE[ssIS](../../includes/ssis-md.md)]を実行するためのテーブル。  
+  1 つのコレクション セットの実行のすべてのログ エントリを削除します。 ログ エントリの削除も、[!INCLUDE[ssIS](../../includes/ssis-md.md)]を実行するためのテーブル。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,9 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@log_id =** ] *log_id*  
- コレクション セット ログの一意の識別子を指定します。 *log_id*は**int**します。  
+`[ @log_id = ] log_id` コレクションの一意の識別子は、ログを設定します。 *log_id*は**int**します。  
   
- [ **@from_collection_set =** ] *from_collection_set*  
- コレクション セットの識別子を指定します。 *from_collection_set*は**ビット 1 =** します。  
+`[ @from_collection_set = ] from_collection_set` コレクション セットの識別子です。 *from_collection_set*は**ビット 1 =** します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

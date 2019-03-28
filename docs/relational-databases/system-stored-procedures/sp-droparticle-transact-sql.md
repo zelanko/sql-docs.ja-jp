@@ -16,17 +16,17 @@ ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06f12eef5e4c025797e22dca8bd5564544581634
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cbfeeaa70544c5e2bb19251dfbbccc2e40c22af9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205231"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535744"
 ---
 # <a name="spdroparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  スナップショット パブリケーションまたはトランザクション パブリケーションからアーティクルを削除します。 1 つでもサブスクリプションがあると、そのアーティクルは削除できません。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  スナップショット パブリケーションまたはトランザクション パブリケーションからアーティクルを削除します。 1 つでもサブスクリプションがあると、そのアーティクルは削除できません。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,30 +43,24 @@ sp_droparticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
- 削除するアーティクルを含むパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` 削除するアーティクルを含むパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@article=**] **'***記事***'**  
- 削除するアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
+`[ @article = ] 'article'` 削除するアーティクルの名前です。 *記事*は**sysname**、既定値はありません。  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@force_invalidate_snapshot =** ]*更によって*  
- このストアド プロシージャが実行する操作によって既存のスナップショットが無効になることを許可します。 *更によって*は、**ビット**、既定値は**0**します。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` このストアド プロシージャが実行する操作が既存のスナップショットが無効になることを確認します。 *更によって*は、**ビット**、既定値は**0**します。  
   
- **0**スナップショットが無効であることをアーティクルへの変更が発生しないことを指定します。 ストアド プロシージャで、変更に新しいスナップショットが必要であることが検出されると、エラーが発生し、変更は加えられません。  
+ **0**スナップショットが無効であることをアーティクルへの変更が発生しないことを指定します。 ストアド プロシージャは、変更は、新しいスナップショットを必要になることを検出する場合は、エラーが発生し、変更は行われません。  
   
  **1**アーティクルへの変更はスナップショットが無効であることがあり、新しいスナップショットを必要とする既存のサブスクリプションがある場合は、アクセス許可を付与 obsolete としてマーク済みである既存のスナップショットを新しいスナップショットを生成を指定します。  
   
- [ **@publisher**=] **'***パブリッシャー***'**  
- 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  *パブリッシャー*でアーティクルのプロパティを変更する場合、使用されませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
- [ **@from_drop_publication**=] *from_drop_publication*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_drop_publication = ] from_drop_publication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -74,7 +68,7 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="remarks"></a>コメント  
  **sp_droparticle**スナップショットおよびトランザクション レプリケーションで使用されます。  
   
- 水平方向にフィルター選択されたアーティクルで**sp_droparticle**チェック、**型**内のアーティクルの列、 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルビューやフィルターを削除することもどうを決定します。 自動作成されたビューまたはフィルターは、アーティクルと共に削除されます。 手動で作成した場合は、削除されません。  
+ 水平方向にフィルター選択されたアーティクルで**sp_droparticle**チェック、**型**内のアーティクルの列、 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルビューやフィルターを削除することもどうを決定します。 ビューやフィルターの自動生成された場合、アーティクルと共に削除されます。 手動で作成した場合は削除されません。  
   
  実行**sp_droparticle**パブリケーションからアーティクルを削除してから削除されません、オブジェクト、パブリケーション データベースまたはサブスクリプション データベースから対応するオブジェクト。 これらのオブジェクトは、必要に応じて `DROP <object>` を使用して手動で削除します。  
   

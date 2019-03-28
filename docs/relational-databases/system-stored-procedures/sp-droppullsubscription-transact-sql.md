@@ -16,17 +16,17 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0343855bbc3d82e58a0a0252109dee6255ee766f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2afa58b9fe8844aa4bb74187ef77393f0bc5681f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134052"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527535"
 ---
-# <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
+# <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サブスクライバーの現在のデータベースでサブスクリプションを削除します。 このストアド プロシージャは、サブスクライバー側でプル サブスクリプション データベースについて実行されます。  
+  サブスクライバーの現在のデータベースでは、サブスクリプションを削除します。 このストアド プロシージャは、サブスクライバー側でプル サブスクリプション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +41,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=** ] **'**_パブリッシャー_**'**  
- リモート サーバー名を指定します。 *パブリッシャー*は**sysname**、既定値はありません。 場合**すべて**、サブスクリプションがすべてのパブリッシャーで削除されます。  
+`[ @publisher = ] 'publisher'` リモート サーバーの名前です。 *パブリッシャー* は **sysname** 、既定値はありません。 場合**すべて**、サブスクリプションがすべてのパブリッシャーで削除されます。  
   
- [  **@publisher_db=** ] **'**_publisher_db_**'**  
- パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。 **すべて**はすべてのパブリッシャー データベースを意味します。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャー データベースの名前です。 *publisher_db* は **sysname** 、既定値はありません。 **すべて**はすべてのパブリッシャー データベースを意味します。  
   
- [  **@publication=** ] **'**_パブリケーション_**'**  
- パブリケーション名を指定します。 *パブリケーション*は**sysname**、既定値はありません。 場合**すべて**、すべてのパブリケーションに対するサブスクリプションが削除されます。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。 場合**すべて**、すべてのパブリケーションに対するサブスクリプションが削除されます。  
   
- [  **@reserved=** ]*予約済み*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

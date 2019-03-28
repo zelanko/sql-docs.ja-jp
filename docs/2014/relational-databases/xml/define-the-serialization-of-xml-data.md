@@ -15,15 +15,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], serialization
 - typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 268204e17083d5ddfe02fefca97a3cea6c857c88
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 759c0200c644913e21262c914957cfa1dcbada5c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814554"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538594"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>XML データのシリアル化の定義
   XML データ型を SQL 文字列型やバイナリ型に明示的または暗黙にキャストすると、XML データ型のコンテンツはこのトピックで説明する規則に従ってシリアル化されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "52814554"
 ## <a name="serialization-encoding"></a>シリアル化のエンコード  
  SQL の対象型が VARBINARY の場合、結果は UTF-16 バイト順マークを前に付け、XML 宣言を付けずに、UTF-16 でシリアル化されます。 対象型が小さすぎる場合は、エラーが発生します。  
   
- 以下に例を示します。  
+ 例 :  
   
 ```  
 select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
@@ -45,7 +45,7 @@ select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))
   
  SQL の対象型が NVARCHAR または NCHAR の場合、結果はバイト順マークを前に付けず、XML 宣言を付けずに、UTF-16 でシリアル化されます。 対象型が小さすぎる場合は、エラーが発生します。  
   
- 以下に例を示します。  
+ 例 :  
   
 ```  
 select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
@@ -59,7 +59,7 @@ select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))
   
  SQL の対象型が VARCHAR または NCHAR の場合、結果はバイト順マークまたは XML 宣言を付けずに、データベースの照合順序のコード ページに対応するエンコードでシリアル化されます。 対象型が小さすぎるか、または対象の照合順序のコード ページに値をマップできない場合、エラーが発生します。  
   
- 以下に例を示します。  
+ 例 :  
   
 ```  
 select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
@@ -87,7 +87,7 @@ select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))
   
 -   空白文字だけが含まれているテキスト ノードを保護するために、空白文字の 1 つ (通常は最後の空白文字) が数字参照としてエンティティ変換されます。 このようにすると、解析時の空白文字の処理の設定とは無関係に、再解析時に空白文字のテキスト ノードが保持されます。  
   
- 以下に例を示します。  
+ 例 :  
   
 ```  
 declare @u NVARCHAR(50)  

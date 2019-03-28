@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b421d32e8c8ac3d4f56ecaf95448ecafc92c8e17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab2f2fcb07fb181fd32d5a60f9fd2d8f25725f96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663397"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535684"
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,17 +44,14 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_name=** ] **'***job_name***'**  
- 履歴レコードを削除するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
+`[ @job_name = ] 'job_name'` 履歴レコードを削除するジョブの名前。 *job_name*は**sysname**、既定値は NULL です。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
 > [!NOTE]  
 >  メンバー、 **sysadmin**固定サーバー ロールのメンバーや、 **SQLAgentOperatorRole**固定データベース ロールが実行できる**sp_purge_jobhistory** を指定せず*job_name*または*job_id*します。 ときに**sysadmin**ユーザーは、これらの引数を指定しない、によって指定された時間内のすべてのローカルおよびマルチ サーバー ジョブのジョブ履歴が削除された*oldest_date*します。 ときに**SQLAgentOperatorRole**ユーザーは、これらの引数を指定しない、によって指定された時間内のすべてのローカル ジョブのジョブ履歴が削除された*oldest_date*します。  
   
- [ **@job_id=** ] *job_id*  
- 削除するレコードを持つジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 注の説明を参照してください**@job_name**について**sysadmin**または**SQLAgentOperatorRole**ユーザーは、この引数を使用できます。  
+`[ @job_id = ] job_id` 削除するレコードのジョブのジョブ識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 注の説明を参照してください**@job_name**について**sysadmin**または**SQLAgentOperatorRole**ユーザーは、この引数を使用できます。  
   
- [ **@oldest_date** =] *oldest_date*  
- 履歴の中で保持する最も古いレコードを指定します。 *oldest_date*は**datetime**、既定値は NULL です。 ときに*oldest_date*が指定されている**sp_purge_jobhistory**のみに指定された値よりも古いレコードを削除します。  
+`[ @oldest_date = ] oldest_date` 履歴に保持する最も古いレコード。 *oldest_date*は**datetime**、既定値は NULL です。 ときに*oldest_date*が指定されている**sp_purge_jobhistory**のみに指定された値よりも古いレコードを削除します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -74,7 +71,7 @@ sp_purge_jobhistory
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-remove-history-for-a-specific-job"></a>A. 特定のジョブの履歴を削除する  
+### <a name="a-remove-history-for-a-specific-job"></a>A. 特定のジョブの履歴を削除します。  
  次の例は、という名前のジョブの履歴を削除します。`NightlyBackups`します。  
   
 ```  
@@ -91,7 +88,7 @@ GO
 > [!NOTE]  
 >  メンバーのみ、 **sysadmin**固定サーバー ロールのメンバーと、 **SQLAgentOperatorRole**すべてのジョブの履歴を削除することができます。 ときに**sysadmin**パラメーターなしでこのストアド プロシージャを実行するユーザー、すべてローカル ジョブおよびマルチ サーバー ジョブのジョブ履歴を削除します。 ときに**SQLAgentOperatorRole**ユーザー パラメーターなしでこのストアド プロシージャを実行するとのすべてのローカル ジョブのジョブ履歴のみを削除します。  
   
- 次の例では、パラメーターを指定せずにプロシージャを実行して、すべての履歴レコードを削除します。  
+ 次の例では、すべての履歴レコードを削除するパラメーターなしでプロシージャを実行します。  
   
 ```  
 USE msdb ;  

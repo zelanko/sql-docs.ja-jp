@@ -18,14 +18,14 @@ ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea326db0d0e093e4d6371d0dda10a4b9faccc572
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817549"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536036"
 ---
-# <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
+# <a name="spupdatenotification-transact-sql"></a>sp_update_notification (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   警告通知の通知方法を更新します。  
@@ -44,21 +44,18 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@alert_name =**] **'***アラート***'**  
- この通知に関連付けられている警告の名前を指定します。 *アラート*は**sysname**、既定値はありません。  
+`[ @alert_name = ] 'alert'` この通知に関連付けられているアラートの名前。 *アラート*は**sysname**、既定値はありません。  
   
- [  **@operator_name =**] **'***演算子***'**  
- 警告が発生したときに通知するオペレーター。 *演算子*は**sysname**、既定値はありません。  
+`[ @operator_name = ] 'operator'` 警告が発生したときに通知するオペレーター。 *演算子*は**sysname**、既定値はありません。  
   
- [  **@notification_method =**]*通知*  
- オペレーターが通知を受ける方法を指定します。 *通知*は**tinyint**, で、既定値はありませんはこれらの値の 1 つ以上指定します。  
+`[ @notification_method = ] notification` オペレーターに通知するメソッド。 *通知*は**tinyint**, で、既定値はありませんはこれらの値の 1 つ以上指定します。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**1**|[電子メール]|  
 |**2**|[ポケットベル]|  
 |**4**|**net send**|  
-|**7**|すべての方法|  
+|**7**|すべてのメソッド|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -66,7 +63,7 @@ sp_update_notification
 ## <a name="remarks"></a>コメント  
  **sp_update_notification**から実行する必要があります、 **msdb**データベース。  
   
- 通知を更新するには、指定した必要なアドレス情報を持っていないユーザーの演算子の*notification_method*します。 電子メールのメッセージやポケットベルによる通知に失敗した場合は、Microsoft SQL Server エージェント エラー ログに失敗がレポートされます。  
+ 通知を更新するには、指定した必要なアドレス情報を持っていないユーザーの演算子の*notification_method*します。 電子メール メッセージやポケットベルによる通知を送信するときに、障害が発生した場合、Microsoft SQL Server エージェント エラー ログで、エラーが報告されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  

@@ -19,14 +19,14 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201911"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538224"
 ---
-# <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
+# <a name="spdetachdb-transact-sql"></a>sp_detach_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバー インスタンスから現在使用されていないデータベースを切り離します。必要に応じて、切り離す前に、すべてのテーブルに対して UPDATE STATISTICS を実行します。  
@@ -46,19 +46,16 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@dbname =** ] **'***database_name***'**  
- デタッチするデータベースの名前を指定します *database_name*は、 **sysname**値、既定値は NULL です。  
+`[ @dbname = ] 'database_name'` デタッチするデータベースの名前です。 *database_name*は、 **sysname**値、既定値は NULL です。  
   
- [  **@skipchecks =** ] **'***skipchecks***'**  
- UPDATE STATISTIC をスキップするか、実行するかを指定します。 *skipchecks*は、 **nvarchar (10)** 値、既定値は NULL です。 UPDATE STATISTICS をスキップするには、指定**true**します。 UPDATE STATISTICS を明示的に実行する指定**false**します。  
+`[ @skipchecks = ] 'skipchecks'` スキップまたは統計の更新プログラムを実行するかどうかを指定します。 *skipchecks*は、 **nvarchar (10)** 値、既定値は NULL です。 UPDATE STATISTICS をスキップするには、指定**true**します。 UPDATE STATISTICS を明示的に実行する指定**false**します。  
   
- 既定では、UPDATE STATISTICS が実行されると、テーブルおよびインデックスにあるデータに関する情報が更新されます。 UPDATE STATISTICS の実行は、データベースを読み取り専用メディアに移動する場合に使用すると便利です。  
+ 既定では、テーブルおよびインデックス内のデータに関する情報を更新する UPDATE STATISTICS を実行します。 UPDATE STATISTICS の実行は、データベースを読み取り専用メディアに移動する場合に使用すると便利です。  
   
- [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- データベースをデタッチするとき、そのデータベースに関連付けられているフルテキスト インデックス ファイルを削除しないことを指定します。 *KeepFulltextIndexFile*は、 **nvarchar (10)** 値、既定値は**true**します。 場合*KeepFulltextIndexFile*は**false**データベースに関連付けられているフルテキスト インデックスのすべてのファイルおよびデータベースが読み取り専用でない限り、フルテキスト インデックスのメタデータを削除します。 NULL の場合、または**true**、フルテキスト関連するメタデータが保持されます。  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` デタッチされているデータベースに関連付けられているフルテキスト インデックス ファイルをデータベースの中に削除しないを指定します。 操作をデタッチします。 *KeepFulltextIndexFile*は、 **nvarchar (10)** 値、既定値は**true**します。 場合*KeepFulltextIndexFile*は**false**データベースに関連付けられているフルテキスト インデックスのすべてのファイルおよびデータベースが読み取り専用でない限り、フルテキスト インデックスのメタデータを削除します。 NULL の場合、または**true**、フルテキスト関連するメタデータが保持されます。  
   
 > [!IMPORTANT]
->  **@keepfulltextindexfile**パラメーターは将来のバージョンで削除される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新規の開発作業ではこのパラメーターを使用しないようにし、現在このパラメーターを使用しているアプリケーションはできるだけ早く修正してください。  
+>  **@keepfulltextindexfile**パラメーターは将来のバージョンで削除される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業でこのパラメーターを使用しないようにし、できるだけ早くこのパラメーターを使用されているアプリケーションを変更します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -73,11 +70,11 @@ sp_detach_db [ @dbname= ] 'database_name'
 >  すべてのログイン アカウントの既定のデータベースを表示する方法については、次を参照してください。 [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)します。 使用することが必要なアクセス許可があれば、 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)に新しい既定のデータベースをログインに割り当てます。  
   
 ## <a name="restrictions"></a>制限  
- 次のいずれかに該当する場合は、データベースをデタッチできません。  
+ 次のいずれかに該当する場合、データベースをデタッチできません。  
   
--   データベースが現在使用されている。 詳細については、後の「排他アクセスの取得」を参照してください。  
+-   データベースは現在使用中です。 詳細については、このトピックの「「排他アクセスを取得する」を参照してください。  
   
--   データベースがレプリケートされ、パブリッシュ済みとなっている。  
+-   レプリケートされる場合、データベースはパブリッシュされます。  
   
      実行してパブリッシングを無効にする必要があります、データベースをデタッチする前に[sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)します。  
   
@@ -93,7 +90,7 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   データベースがミラー化されている。  
   
-     データベース ミラーリングのセッションが終了するまでは、データベースはデタッチできません。 詳細については、「 [データベース ミラーリングの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)」を参照してください。  
+     データベース ミラーリング セッションが終了するまで、データベースをデタッチできません。 詳細については、「 [データベース ミラーリングの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)」を参照してください。  
   
 -   データベースに問題がある。  
   
@@ -102,7 +99,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 -   データベースがシステム データベースである。  
   
 ## <a name="obtaining-exclusive-access"></a>排他アクセスの取得  
- データベースのデタッチには、データベースに対する排他アクセスが必要です。 デタッチするデータベースが使用されている場合、デタッチするには、データベースを SINGLE_USER モードに設定して排他アクセスを取得する必要があります。  
+ データベースをデタッチするには、データベースへの排他アクセスが必要です。 デタッチするデータベースが使用しての場合、デタッチする前に、データベースを排他アクセスを取得する SINGLE_USER モードに設定します。  
   
  たとえば、次`ALTER DATABASE`ステートメントへの排他アクセスの取得、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースの現在のすべてのユーザーがデータベースから切断した後。  
   
@@ -117,7 +114,7 @@ GO
 >  現在ユーザー データベースから直ちに、または指定された数 (秒単位) の使用しても、ROLLBACK オプション。ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*します。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
 ## <a name="reattaching-a-database"></a>データベースの再アタッチ  
- デタッチされたファイルはそのまま残り、FOR ATTACH または FOR ATTACH_REBUILD_LOG オプションを指定した CREATE DATABASE によって再アタッチできます。 ファイルを別のサーバーに移動し、そこにアタッチすることもできます。  
+ デタッチされたファイルのままし、データベースの作成 (FOR ATTACH または FOR ATTACH_REBUILD_LOG オプション) を使用して再アタッチできます。 ファイルを別のサーバーに移動し、そこにアタッチすることもできます。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーシップが必要です、 **sysadmin**固定サーバー ロールのメンバーシップまたは、 **db_owner**データベースの役割。  
@@ -129,7 +126,7 @@ GO
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースをデタッチし、フルテキスト インデックス ファイルおよびフルテキスト インデックスのメタデータは保持します。 このコマンドでは、UPDATE STATISTICS が実行されます。これは既定の動作です。  
+ 次の例のデタッチ、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースし、フルテキスト インデックス ファイルおよびフルテキスト インデックスのメタデータが保持されます。 このコマンドでは、UPDATE STATISTICS が実行されます。これは既定の動作です。  
   
 ```  
 exec sp_detach_db @dbname='AdventureWorks2012'  

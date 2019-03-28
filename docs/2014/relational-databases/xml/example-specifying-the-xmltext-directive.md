@@ -1,5 +1,5 @@
 ---
-title: '例 : XMLTEXT ディレクティブの指定 | Microsoft Docs'
+title: 例:XMLTEXT ディレクティブの指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc9d79c82df85e680ccf298f3d7f7997be87610b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075822"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537354"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>例: XMLTEXT ディレクティブの指定
-  この例を使用してオーバーフロー列にデータを指定する方法、`XMLTEXT`ディレクティブで、 `SELECT` EXPLICIT モードを使用してステートメントです。  
+# <a name="example-specifying-the-xmltext-directive"></a>例:XMLTEXT ディレクティブの指定
+  この例では、EXPLICIT モードを使用した `SELECT` ステートメントで、`XMLTEXT` ディレクティブによりオーバーフロー列のデータを指定する方法を示します。  
   
  `Person` テーブルについて考えます。 このテーブルには、XML ドキュメントの未使用部分を格納している `Overflow` 列があります。  
   

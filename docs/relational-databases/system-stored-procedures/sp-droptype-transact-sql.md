@@ -18,14 +18,14 @@ ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00062834702d9d9610994e59bdc5c0f77b85e37d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5004bbdefe29ec13142c66d333f346643261aeb2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856940"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527904"
 ---
-# <a name="spdroptype-transact-sql"></a>sp_droptype (Transact-SQL)
+# <a name="spdroptype-transact-sql"></a>sp_droptype (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   別名データ型からの削除**systypes**します。  
@@ -40,8 +40,7 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@typename=**] **'***型***'**  
- 所有している別名データ型の名前を指定します。 *型*は**sysname**、既定値はありません。  
+`[ @typename = ] 'type'` 所有している別名データ型の名前です。 *型*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-type"></a>リターン コードの種類  
  0 (成功) または 1 (失敗)  
@@ -53,7 +52,7 @@ sp_droptype [ @typename = ] 'type'
  **型**エイリアス テーブルやその他のデータベース オブジェクトが参照している場合のデータ型を削除することはできません。  
   
 > [!NOTE]  
->  別名データ型は、テーブル定義内で使用されている場合や、ルールやデフォルトがバインドされている場合は削除できません。  
+>  別名データ型は、テーブル定義内で使用されている場合、またはをルールまたはデフォルトがバインドされている場合、別名データ型を削除できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーシップが必要です、 **db_owner**固定データベース ロール、または**db_ddladmin**固定データベース ロール。  

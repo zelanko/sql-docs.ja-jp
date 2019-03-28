@@ -18,12 +18,12 @@ ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de13b3b3ff39ac9aacdbcd7beb996a353593f609
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4395114f266345cb7583c45285366c5bd2b7afff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677160"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537134"
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@profile_id** = ] *profile_id*  
- 削除するプロファイルのプロファイル ID です。 *profile_id*は**int**、既定値は NULL です。 いずれか、 *profile_id*または*profile_name*指定することがあります。  
+`[ @profile_id = ] profile_id` 削除するプロファイルのプロファイル ID です。 *profile_id*は**int**、既定値は NULL です。 いずれか、 *profile_id*または*profile_name*指定することがあります。  
   
- [ **@profile_name** =] **'***profile_name***'**  
- 削除するプロファイルのプロファイル名を指定します。 *profile_name*は**sysname**、既定値は NULL です。 いずれか、 *profile_id*または*profile_name*指定することがあります。  
+`[ @profile_name = ] 'profile_name'` 削除するプロファイルのプロファイル名。 *profile_name*は**sysname**、既定値は NULL です。 いずれか、 *profile_id*または*profile_name*指定することがあります。  
   
- [ **@account_id** =] *account_id*  
- 削除するアカウント ID を指定します。 *account_id*は**int**、既定値は NULL です。 いずれか、 *account_id*または*account_name*指定することがあります。  
+`[ @account_id = ] account_id` 削除するアカウント ID。 *account_id*は**int**、既定値は NULL です。 いずれか、 *account_id*または*account_name*指定することがあります。  
   
- [ **@account_name** =] **'***account_name***'**  
- 削除するアカウントの名前を指定します。 *account_name*は**sysname**、既定値は NULL です。 いずれか、 *account_id*または*account_name*指定することがあります。  
+`[ @account_name = ] 'account_name'` 削除するアカウントの名前。 *account_name*は**sysname**、既定値は NULL です。 いずれか、 *account_id*または*account_name*指定することがあります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -60,11 +56,11 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
  なし  
   
 ## <a name="remarks"></a>コメント  
- 指定したアカウントと指定したプロファイルが関連付けられていない場合は、エラーが返されます。  
+ 指定されたプロファイルで指定されたアカウントが関連付けられていない場合は、エラーを返します。  
   
  アカウントを指定し、プロファイルを指定しなかった場合、このストアド プロシージャでは指定したアカウントがすべてのプロファイルから削除されます。 たとえば、既存の SMTP サーバーをシャットダウンする前に、その SMTP サーバーを使用しているアカウントを各プロファイルから個別に削除するのではなく、すべてのプロファイルからまとめて削除できます。  
   
- プロファイルを指定し、アカウントを指定しなかった場合、このストアド プロシージャでは指定したプロファイルからすべてのアカウントが削除されます。 たとえば、プロファイルが使用している SMTP サーバーを変更する場合は、そのプロファイルからすべてのアカウントを削除してから必要に応じて新しいアカウントを追加するほうが便利な場合があります。  
+ プロファイルを指定し、アカウントを指定しなかった場合、このストアド プロシージャでは指定したプロファイルからすべてのアカウントが削除されます。 例: SMTP サーバーを変更する場合は、プロファイルが使用して、プロファイルからすべてのアカウントを削除し、必要に応じて新しいアカウントを追加する便利な場合があります。  
   
  ストアド プロシージャ**sysmail_delete_profileaccount_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
   

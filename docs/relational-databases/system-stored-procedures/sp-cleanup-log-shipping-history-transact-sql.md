@@ -18,17 +18,17 @@ ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6a0d2c93c5ce00897136fc1c40611a1ef94e0fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5247959cacb4df4fd51275c3f826280bffbb9fd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717540"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538484"
 ---
-# <a name="spcleanuplogshippinghistory-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
+# <a name="spcleanuplogshippinghistory-transact-sql"></a>sp_cleanup_log_shipping_history (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  このストアド プロシージャでは、保有期間に基づいて、ローカルおよび監視サーバー上の履歴をクリーンアップします。  
+  このストアド プロシージャは、ローカルおよび保有期間に基づいて、監視サーバー上の履歴をクリーンアップします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,9 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@agent_id =** ] '*agent_id*'、  
- バックアップの場合はプライマリ ID、コピーまたは復元の場合はセカンダリ ID。 *agent_id*は**uniqueidentifier** NULL にすることはできません。  
+`[ @agent_id = ] 'agent_id',` バックアップ用のプライマリ ID、またはコピーまたは復元用のセカンダリ ID。 *agent_id*は**uniqueidentifier** NULL にすることはできません。  
   
- [ **@agent_type =** ] '*agent_type*'  
- ログ配布ジョブの種類を指定します。 0 = バックアップ、1 = コピー、2 = 復元です。 *agent_type*は**tinyint** NULL にすることはできません。  
+`[ @agent_type = ] 'agent_type'` ログ配布ジョブの種類。 0 = バックアップ、1 = コピー、2 = 復元です。 *agent_type*は**tinyint** NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

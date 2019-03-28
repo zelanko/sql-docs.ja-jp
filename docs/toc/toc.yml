@@ -6894,6 +6894,7 @@ items:
     - name: テスト サーバーの使用に関する注意点
       href: ../relational-databases/performance/considerations-for-using-test-servers.md
     - name: インテリジェントなクエリ処理
+      displayName: adaptive
       href: ../relational-databases/performance/intelligent-query-processing.md
     - name: パフォーマンス センター
       href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
@@ -9791,12 +9792,12 @@ items:
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: 匿名の利用状況データ
         href: ../ssms/sql-server-management-studio-telemetry-ssms.md
-  - name: sqlpackage
+  - name: SqlPackage.exe
     items:
     - name: sqlpackage のインストール
       href: ../tools/sqlpackage-download.md
     - name: リリース ノート
-      href: ../tools/sqlpackage-release-notes.md
+      href: ../tools/release-notes-sqlpackage.md
     - name: sqlpackage ref
       href: ../tools/sqlpackage.md
   - name: SQL Server プロファイラー
@@ -15899,7 +15900,7 @@ items:
           href: ../t-sql/functions/rtrim-transact-sql.md
         - name: SOUNDEX
           href: ../t-sql/functions/soundex-transact-sql.md
-        - name: Space
+        - name: SPACE
           href: ../t-sql/functions/space-transact-sql.md
         - name: STR
           href: ../t-sql/functions/str-transact-sql.md
@@ -17226,9 +17227,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery での名前空間の処理
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417234"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538684"

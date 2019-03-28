@@ -18,12 +18,12 @@ ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 258a9e6002fccd27b4980140c49679b26c78f64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792000"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535964"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@name_in_db =** ] **'***これ***'**  
- 現在のデータベースに存在するデータベース ユーザーまたはデータベース ロールの名前を指定します。 *これ*現在のデータベースに存在する必要があります。 *これ*は**sysname**、既定値は NULL です。 場合*これ*が指定されていない**sp_helpuser**すべてのデータベース プリンシパルに関する情報を返します。  
+`[ @name_in_db = ] 'security_account'` データベース ユーザーまたは現在のデータベース内のデータベース ロールの名前です。 *これ*現在のデータベースに存在する必要があります。 *これ*は**sysname**、既定値は NULL です。 場合*これ*が指定されていない**sp_helpuser**すべてのデータベース プリンシパルに関する情報を返します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -54,7 +53,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**UserName**|**sysname**|現在のデータベースに存在するユーザー。|  
+|**UserName**|**sysname**|現在のデータベース内のユーザー。|  
 |**RoleName**|**sysname**|ロール**UserName**が属しています。|  
 |**LoginName**|**sysname**|ログイン**UserName**します。|  
 |**DefDBName**|**sysname**|既定のデータベース**UserName**します。|  
@@ -62,20 +61,20 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**UserID**|**smallint**|ID **UserName**現在のデータベースでします。|  
 |**SID**|**smallint**|ユーザーのセキュリティ識別番号 (SID)。|  
   
- 次の表は、ユーザー アカウントを指定せず、別名が現在のデータベース内に存在する場合の結果セットです。  
+ 次の表では、ユーザー アカウントが指定されていないと、エイリアスは、現在のデータベースに存在する場合の結果セットを示します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|現在のデータベースに存在するユーザーの別名であるログイン。|  
-|**UserNameAliasedTo**|**sysname**|ログインを別名として使用する、現在のデータベース内のユーザー名。|  
+|**UserNameAliasedTo**|**sysname**|ログインがエイリアス化される現在のデータベース内のユーザー名。|  
   
  次の表は、ロールが指定されている場合の結果セット*これ*します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**Role_name**|**sysname**|現在のデータベースに存在するロールの名前。|  
-|**Role_id**|**smallint**|現在のデータベースに存在するロールの ID。|  
-|**Users_in_role**|**sysname**|現在のデータベースに存在するロールのメンバー。|  
+|**Role_name**|**sysname**|現在のデータベース ロールの名前。|  
+|**Role_id**|**smallint**|現在のデータベースで、ロールのロール ID。|  
+|**Users_in_role**|**sysname**|現在のデータベース ロールのメンバー。|  
 |**ユーザー Id**|**smallint**|ロールのメンバーのユーザー ID。|  
   
 ## <a name="remarks"></a>コメント  
@@ -84,7 +83,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
- 返される情報は、メタデータへのアクセスに関する制限の対象となります。 プリンシパルに権限がないエンティティは表示されません。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ 返される情報は、メタデータへのアクセスの制限が適用されます。 これで、権限がプリンシパルにないエンティティは表示されません。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -102,7 +101,7 @@ EXEC sp_helpuser;
 EXEC sp_helpuser 'dbo';  
 ```  
   
-### <a name="c-listing-information-for-a-database-role"></a>C. データベース ロールに関する情報を表示する  
+### <a name="c-listing-information-for-a-database-role"></a>C. データベース ロールに関する情報を表示  
  次の例では、`db_securityadmin` 固定データベース ロールに関する情報を表示します。  
   
 ```  

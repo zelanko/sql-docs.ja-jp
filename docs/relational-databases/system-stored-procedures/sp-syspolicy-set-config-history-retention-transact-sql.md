@@ -18,14 +18,14 @@ ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0a754e7a0e66e0ca59d1b973fafb32cd7ce00d4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f810cc775e79da6d01a2856afb04f80756be68a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782750"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533114"
 ---
-# <a name="spsyspolicysetconfighistoryretention-transact-sql"></a>sp_syspolicy_set_config_history_retention (Transact-SQL)
+# <a name="spsyspolicysetconfighistoryretention-transact-sql"></a>sp_syspolicy_set_config_history_retention (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ポリシー ベースの管理のポリシーの評価履歴を保持する日数を指定します。  
@@ -40,8 +40,7 @@ sp_syspolicy_set_config_history_retention [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@value=** ] *value*  
- ポリシー ベースの管理の履歴を保持する日数を指定します。 *値*は**sqlvariant**します。  
+`[ @value = ] value` ポリシー ベースの管理の履歴を保持する日数の数です。 *値*は**sqlvariant**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -51,7 +50,7 @@ sp_syspolicy_set_config_history_retention [ @value = ] value
   
  場合*値*設定が 0 の場合に、履歴は自動的に削除されません。  
   
- 履歴の保有の現在の値を表示するには、次のクエリを実行します。  
+ 履歴の保有期間の現在の値を表示するには、次のクエリを実行します。  
   
 ```  
 SELECT current_value FROM msdb.dbo.syspolicy_configuration  
@@ -62,7 +61,7 @@ WHERE name = 'HistoryRetentionInDays'
  PolicyAdministratorRole 固定データベース ロールのメンバーシップが必要です。  
   
 > [!IMPORTANT]  
->  資格情報が昇格される可能性について: PolicyAdministratorRole ロールに割り当てられているユーザーは、サーバー トリガーを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの動作に影響する可能性があるポリシーの実行をスケジュールできます。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 構成の制御について信頼できるユーザーにのみこの昇格される可能性の資格情報、ため PolicyAdministratorRole ロールを付与する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
+>  資格情報が昇格される可能性:PolicyAdministratorRole ロールのユーザーがサーバー トリガーを作成しのインスタンスの運用に影響する可能性のあるポリシーの実行をスケジュール設定、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 構成の制御について信頼できるユーザーにのみこの昇格される可能性の資格情報、ため PolicyAdministratorRole ロールを付与する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、ポリシーの評価履歴の保有期間を 28 日に設定します。  

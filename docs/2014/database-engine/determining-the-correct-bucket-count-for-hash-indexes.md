@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377902"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536694"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>ハッシュ インデックスの適切なバケット数の決定
   メモリ最適化テーブルを作成するときに `BUCKET_COUNT` パラメーターの値を指定する必要があります。 このトピックでは、`BUCKET_COUNT` パラメーターの適切な値を判断する際の推奨事項を示します。 適切なバケット数を決定できない場合は、代わりに非クラスター化インデックスを使用してください。  `BUCKET_COUNT` の値が不適切な場合 (特に小さすぎる場合)、ワークロードのパフォーマンス、およびデータベースの復旧時間に大きな影響を与えることがあります。 バケット数は大きめに設定することをお勧めします。  
@@ -38,7 +38,7 @@ ms.locfileid: "53377902"
 ### <a name="primary-key-and-unique-indexes"></a>主キーと一意インデックス  
  主キー インデックスは一意であるため、そのキーでの別個の値の数はテーブル内の行の数に相当します。 AdventureWorks データベースの Sales.SalesOrderDetail テーブル内の (SalesOrderID, SalesOrderDetailID) の主キーの例の場合は、次のクエリを発行して、テーブル内の行数に相当する別個の主キーの値の数を計算します。  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [row count]   
 FROM Sales.SalesOrderDetail  
 ```  
@@ -48,7 +48,7 @@ FROM Sales.SalesOrderDetail
 ### <a name="non-unique-indexes"></a>一意ではないインデックス  
  (SpecialOfferID, ProductID) の複数列のインデックスなど、その他のインデックスの場合は、次のクエリを発行して一意なインデックス キーの値の数を決定します。  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [SpecialOfferID_ProductID index key count]  
 FROM   
    (SELECT DISTINCT SpecialOfferID, ProductID   
@@ -65,7 +65,7 @@ FROM
 ## <a name="troubleshooting-the-bucket-count"></a>バケット数のトラブルシューティング  
  メモリ最適化テーブルのバケット数の問題をトラブルシューティングするには、 [sys.dm_db_xtp_hash_index_stats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql)空のバケットと行チェーンの長さに関する統計情報を取得します。 次のクエリを使用して、現在のデータベースのすべてのハッシュ インデックスに関する統計情報を取得できます。 データベースに大きなテーブルがある場合、このクエリの実行には数分かかることがあります。  
   
-```tsql  
+```sql  
 SELECT   
    object_name(hs.object_id) AS 'object name',   
    i.name as 'index name',   
@@ -99,7 +99,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
   
  例として、次のテーブルとテーブルのサンプル行を挿入するスクリプトを考えます。  
   
-```tsql  
+```sql  
 CREATE TABLE [Sales].[SalesOrderHeader_test]  
 (  
    [SalesOrderID] [uniqueidentifier] NOT NULL DEFAULT (newid()),  

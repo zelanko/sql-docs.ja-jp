@@ -16,17 +16,17 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d557fccc94c6502bb664f8345d1d7a6bd982124
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 587c66322a7d40f42f81bceb48e1c0d422322d46
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789334"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538474"
 ---
-# <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
+# <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パブリケーションの監視しきい値を変更します。 このストアド プロシージャはレプリケーションの監視に使用し、ディストリビューター側でディストリビューション データベースについて実行されます。  
+  パブリケーションの監視しきい値を変更します。 レプリケーションの監視に使用される、このストアド プロシージャはディストリビューターのディストリビューション データベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,29 +46,24 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher** =] **'***パブリッシャー***'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
- [ **@publisher_db** =] **'***publisher_db***'**  
- パブリッシャー データベースの名前を指定します。 *publisher_db*は**sysname**、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシュされたデータベースの名前です。 *publisher_db* は **sysname** 、既定値はありません。  
   
- [ **@publication** =] **'***パブリケーション***'**  
- 監視しきい値属性を変更するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` 監視しきい値属性が変更されているパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [ **@publication_type** =] *publication_type*  
- パブリケーションの種類を指定します。 *publication_type*は**int**、これらの値のいずれかを指定できます。  
+`[ @publication_type = ] publication_type` 場合、パブリケーションの種類。 *publication_type*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**0**|トランザクション パブリケーションです。|  
-|**1**|スナップショット パブリケーションです。|  
+|**0**|トランザクション パブリケーション。|  
+|**1**|スナップショット パブリケーション。|  
 |**2**|マージ パブリケーションです。|  
-|NULL (既定値)|レプリケーションは、パブリケーションの種類を決定しようと試みます。|  
+|NULL (既定値)|レプリケーションは、パブリケーションの種類を決定しようとします。|  
   
- [ **@metric_id** =] *metric_id*  
- 変更するパブリケーションしきい値の ID を指定します。 *metric_id*は**int**既定値は NULL でこれらの値のいずれかを指定できます。  
+`[ @metric_id = ] metric_id` 変更するパブリケーションしきい値の ID。 *metric_id*は**int**既定値は NULL でこれらの値のいずれかを指定できます。  
   
-|値|基準名|  
+|値|メトリック名|  
 |-----------|-----------------|  
 |**1**|**expiration** - トランザクション パブリケーションへのサブスクリプションに期限が迫っていないかを監視します。|  
 |**2**|**latency** - トランザクション パブリケーションへのサブスクリプションのパフォーマンスを監視します。|  
@@ -80,17 +75,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  いずれかを指定する必要があります*metric_id*または*thresholdmetricname*します。 場合*thresholdmetricname*が指定されると、 *metric_id*は NULL になります。  
   
- [ **@thresholdmetricname** =] **'***thresholdmetricname***'**  
- 変更するパブリケーションしきい値の名前を指定します。 *thresholdmetricname*は**sysname**既定値は NULL です。 いずれかを指定する必要があります*thresholdmetricname*または*metric_id*します。 場合*metric_id*が指定されると、 *thresholdmetricname*は NULL になります。  
+`[ @thresholdmetricname = ] 'thresholdmetricname'` パブリケーションしきい値の名前は変更されています。 *thresholdmetricname*は**sysname**既定値は NULL です。 いずれかを指定する必要があります*thresholdmetricname*または*metric_id*します。 場合*metric_id*が指定されると、 *thresholdmetricname*は NULL になります。  
   
- [ **@value** =]*値*  
- パブリケーションしきい値の新しい値を指定します。 *値*は**int**既定値は NULL です。 場合**null**、メトリックの値は更新されません。  
+`[ @value = ] value` パブリケーションしきい値の新しい値です。 *値*は**int**既定値は NULL です。 場合**null**、メトリックの値は更新されません。  
   
- [ **@shouldalert** =] *shouldalert*  
- パブリケーションしきい値に達したときに警告を生成するかどうかを指定します。 *shouldalert*は**ビット**、既定値は NULL です。 値**1**アラートが生成されることを意味し、値**0**アラートが生成しないことを意味します。  
+`[ @shouldalert = ] shouldalert` パブリケーションしきい値に達したときにアラートが生成されます。 *shouldalert*は**ビット**、既定値は NULL です。 値**1**アラートが生成されることを意味し、値**0**アラートが生成しないことを意味します。  
   
- [ **@mode** =]*モード*  
- パブリケーションしきい値を有効にするかどうかを指定します。 *モード*は**tinyint**、既定値は**1**します。 値**1**このメトリックの監視が有効であることを意味し、値**2**このメトリックの監視が無効になっていることを意味します。  
+`[ @mode = ] mode` パブリケーションのしきい値が有効になっているかどうかです。 *モード*は**tinyint**、既定値は**1**します。 値**1**このメトリックの監視が有効であることを意味し、値**2**このメトリックの監視が無効になっていることを意味します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

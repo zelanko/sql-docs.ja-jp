@@ -16,17 +16,17 @@ ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fde5daf72455af7c4c46c9ef19e4975a3f87a2dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9a51015d8c1e6e6df7f23f32fc7febf7fe9e429f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802234"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537164"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ピア ツー ピア レプリケーション トポロジでは、これらの要求を実行することによって開始された場所で参加者が受信したすべての状態要求に関する情報を返します[sp_requestpeerresponse &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)いつでもトポロジでパブリッシュされたデータベース。 このストアド プロシージャは、ピア ツー ピア レプリケーション トポロジに参加しているパブリッシャー側のパブリケーション データベースで実行されます。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
+  ピア ツー ピア レプリケーション トポロジでは、これらの要求を実行することによって開始された場所で参加者が受信したすべての状態要求に関する情報を返します[sp_requestpeerresponse &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)いつでもトポロジでパブリッシュされたデータベース。 このストアド プロシージャは、ピア ツー ピア レプリケーション トポロジに参加しているパブリッシャーでパブリケーション データベースで実行されます。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,20 +39,18 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication**=] **'***パブリケーション***'**  
- 状態要求の送信の対象となったピア ツー ピア トポロジ内のパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` 状態要求を送信したピア ツー ピア トポロジ内のパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [ **@description**=] **'***説明***'**  
- 呼び出すときに提供される情報を定義したユーザーに基づいて、返された応答をフィルター選択できる、個々 の状態要求を識別するために使用できる値[sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)します。 *説明*は**nvarchar (4000)**、既定値は **%** します。 既定では、パブリケーションに対するすべての状態要求が返されます。 指定された値に一致する説明で状態要求のみを返すためにこのパラメーターを使用します*説明*を使用して文字の文字列が一致する、[など&#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)。句。  
+`[ @description = ] 'description'` 呼び出すときに提供される情報を定義したユーザーに基づいて、返された応答をフィルター選択できる、個々 の状態要求を識別するために使用できる値[sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)します。 *説明*は**nvarchar (4000)**、既定値は **%** します。 既定では、パブリケーションのすべての状態要求が返されます。 指定された値に一致する説明で状態要求のみを返すためにこのパラメーターを使用します*説明*を使用して文字の文字列が一致する、[など&#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)。句。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|要求を識別する値|  
-|**パブリケーション**|**sysname**|状態要求の送信の対象となったパブリケーションの名前です。|  
-|**sent_date**|**datetime**|状態要求が送信された日付と時刻です。|  
-|**description**|**nvarchar (4000)**|個々の状態要求を識別するために使用できるユーザー定義の情報です。|  
+|**id**|**int**|要求を識別します。|  
+|**パブリケーション**|**sysname**|状態要求の送信をパブリケーションの名前です。|  
+|**sent_date**|**datetime**|日付と状態要求が送信された時刻。|  
+|**description**|**nvarchar (4000)**|ユーザーは、個々 の状態要求を識別するために使用できる情報を定義します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

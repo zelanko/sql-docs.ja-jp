@@ -17,12 +17,12 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358584"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533244"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>アクティブなセカンダリ:読み取り可能なのセカンダリ レプリカ (Always On 可用性グループ)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のアクティブなセカンダリ機能では、1 つ以上のセカンダリ レプリカ (*読み取り可能なセカンダリ レプリカ*) への読み取り専用アクセスをサポートしています。 読み取り可能なセカンダリ レプリカは、すべてのセカンダリ データベースへの読み取り専用アクセスを許可します。 ただし、読み取り可能なセカンダリ データベースは読み取り専用に設定されません。 これらは動的です。 セカンダリ データベースは、対応するプライマリ データベースに対する変更がそのセカンダリ データベースに適用されると変更されます。 一般的なセカンダリ レプリカでは、持続性のあるメモリ最適化テーブルを含めて、セカンダリ データベースのデータはほぼリアルタイムです。 また、フルテキスト インデックスはセカンダリ データベースと同期されます。 多くの場合、プライマリ データベースと対応するセカンダリ データベース間のデータ待機時間は数秒です。  
@@ -210,7 +210,7 @@ GO
   
 -   メモリ最適化テーブルでのみ実行されるクエリの場合、サポートされている分離レベルは SNAPSHOT、REPEATABLE READ、および SERIALIZABLE のみです。 データベース レベルで MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT オプションを有効にしていなければ、READ UNCOMMITTED または READ COMMITTED 分離レベルのクエリではエラーが返されます。  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL READ_COMMITTED  
     -- This is not allowed  
     BEGIN TRAN  
@@ -228,7 +228,7 @@ GO
   
 -   メモリ最適化テーブルでロック ヒントはサポートされません。 たとえば、次のクエリはすべて、エラーが発生し失敗します。 NOLOCK ヒントのみ使用でき、メモリ最適化テーブルとの使用では NOOP になります。  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM t_hk WITH (PAGLOCK)  
     SELECT * FROM t_hk WITH (READPAST)  
     SELECT * FROM t_hk WITH (ROWLOCK)  
@@ -240,7 +240,7 @@ GO
   
 -   コンテナーにまたがるトランザクションのトランザクションとセッションの分離レベル「スナップショット」そのアクセスをメモリ最適化テーブルではサポートされていません。 例えば以下のようにします。  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
     -- This is not allowed  
     BEGIN TRAN  

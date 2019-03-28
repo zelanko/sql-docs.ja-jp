@@ -18,12 +18,12 @@ ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e56bfe08d9279408cc7bdbc4b57a9719a04946fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b5ccd47f2b702c998a9e9268db523da1bfceaec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857057"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536684"
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,25 +43,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_id=** ] *job_id*  
- 削除するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id` 削除するジョブの id 番号です。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [ **@job_name=** ] **'***job_name***'**  
- 削除するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` 削除するジョブの名前です。 *job_name*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要があります。 両方を指定することはできません。  
   
- [ **@originating_server=** ] **'***server***'**  
- 内部使用です。  
+`[ @originating_server = ] 'server'` 内部で使用します。  
   
- [ **@delete_history=** ] *delete_history*  
- ジョブの履歴を削除するかどうかを指定します。 *delete_history*は**ビット**、既定値は**1**します。 ときに*delete_history*は**1**ジョブのジョブ履歴は削除します。 ときに*delete_history*は**0**、ジョブ履歴は削除されません。  
+`[ @delete_history = ] delete_history` ジョブの履歴を削除するかどうかを指定します。 *delete_history*は**ビット**、既定値は**1**します。 ときに*delete_history*は**1**ジョブのジョブ履歴は削除します。 ときに*delete_history*は**0**、ジョブ履歴は削除されません。  
   
  ジョブの削除し、履歴は削除されませんが、ジョブの履歴情報が表示されないように注意してください、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント グラフィカル ユーザー インターフェイスのジョブ履歴が、この情報は存在、 **sysjobhistory**テーブルに、 **msdb**データベース。  
   
- [  **@delete_unused_schedule=** ] *@delete_unused_schedule*  
- このジョブにアタッチされたスケジュールが他のジョブにはアタッチされていない場合、そのスケジュールを削除するかどうかを指定します。 *@delete_unused_schedule*は**ビット**、既定値は**1**します。 ときに *@delete_unused_schedule*は**1**、他のジョブにスケジュールが参照されていない場合、このジョブにアタッチされたスケジュールは削除されます。 ときに *@delete_unused_schedule*は**0**スケジュールは削除されません。  
+`[ @delete_unused_schedule = ] delete_unused_schedule` かどうか、スケジュールを削除するジョブにアタッチされたこの、他のジョブにアタッチされていない場合を指定します。 *@delete_unused_schedule*は**ビット**、既定値は**1**します。 ときに *@delete_unused_schedule*は**1**、他のジョブにスケジュールが参照されていない場合、このジョブにアタッチされたスケジュールは削除されます。 ときに *@delete_unused_schedule*は**0**スケジュールは削除されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

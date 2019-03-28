@@ -18,12 +18,12 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c136a58e8d23f67a5c703d6f840858757661686b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5fdea72621ef18cc032fbf806ec0cb7faad4739
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769560"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537874"
 ---
 # <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@name=** ] **'***name***'**  
- 名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン、サーバー ロール、または**msdb**へのアクセスを削除するデータベース ロール。 *名前*は**nvarchar (256)** 既定値はありません。  
+`[ @name = ] 'name'` 名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン、サーバー ロール、または**msdb**へのアクセスを削除するデータベース ロール。 *名前*は**nvarchar (256)** 既定値はありません。  
   
- [ **@proxy_id=** ] *id*  
- アクセスを取り消すプロキシの ID を指定します。 いずれか*id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。 *Id*は**int**、既定値は NULL です。  
+`[ @proxy_id = ] id` アクセスを取り消すプロキシの id。 いずれか*id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。 *Id*は**int**、既定値は NULL です。  
   
- [ **@proxy_name=** ] **'***proxy_name***'**  
- アクセスを取り消すプロキシの名前を指定します。 いずれか*id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。 *Proxy_name*は**sysname**、既定値は NULL です。  
+`[ @proxy_name = ] 'proxy_name'` アクセスを取り消すプロキシの名前。 いずれか*id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。 *Proxy_name*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

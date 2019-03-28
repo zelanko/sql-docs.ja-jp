@@ -16,14 +16,14 @@ ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf771f02ec63260dcda1f8b7fa633f9fb6bf9a07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bb4874233f85a2565c3d30546749fa9bffe79ebb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817774"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58525774"
 ---
-# <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
+# <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定した行でダミーを更新し、その更新が次のマージで再送されるようにします。 パブリッシャーのパブリケーション データベースまたはサブスクライバーのサブスクリプション データベースに対して、このストアド プロシージャを実行できます。  
@@ -38,11 +38,9 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@source_object=**] **'***source_object***'**  
- ソース オブジェクトの名前を指定します。 *source_object*は**nvarchar (386)**、既定値はありません。  
+`[ @source_object = ] 'source_object'` ソース オブジェクトの名前です。 *source_object*は**nvarchar (386)**、既定値はありません。  
   
- [  **@rowguid=**] **'***rowguid***'**  
- 行の識別子を指定します。 *rowguid*は**uniqueidentifier**、既定値はありません。  
+`[ @rowguid = ] 'rowguid'` 行識別子です。 *rowguid*は**uniqueidentifier**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

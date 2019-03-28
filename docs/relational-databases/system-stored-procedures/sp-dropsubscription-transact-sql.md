@@ -16,17 +16,17 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08e25ee6f2de589c3d7367c140bd0ea63d4cec1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 30640cac3b2d8d39ec06d5a05f49c38665b39683
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812972"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537144"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パブリッシャー上の特定のアーティクル、パブリケーション、またはサブスクリプションの集合へのサブスクリプションを削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  パブリッシャー上の特定のアーティクル、パブリケーション、またはサブスクリプションの集合へのサブスクリプションを削除します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,23 +43,17 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=** ] **'**_パブリケーション_**'**  
- 関連付けられているパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は NULL です。 場合**すべて**、指定のサブスクライバーのすべてのパブリケーションのすべてのサブスクリプションが取り消されました。 *パブリケーション*必須パラメーターです。  
+`[ @publication = ] 'publication'` 関連付けられているパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。 場合**すべて**、指定のサブスクライバーのすべてのパブリケーションのすべてのサブスクリプションが取り消されました。 *パブリケーション*必須パラメーターです。  
   
- [  **@article=** ] **'**_記事_**'**  
- アーティクルの名前を指定します。 *記事*は**sysname**既定値は NULL です。 場合**すべて**、ごとにすべてのアーティクルに対してサブスクリプションがパブリケーションとサブスクライバーの削除を指定します。 使用**すべて**即時を許可するパブリケーションを更新します。  
+`[ @article = ] 'article'` アーティクルの名前です。 *記事*は**sysname**既定値は NULL です。 場合**すべて**、ごとにすべてのアーティクルに対してサブスクリプションがパブリケーションとサブスクライバーの削除を指定します。 使用**すべて**即時を許可するパブリケーションを更新します。  
   
- [  **@subscriber=** ] **'**_subscribe_r **'**  
- 削除するサブスクリプションがあるサブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。 場合**すべて**、すべてのサブスクライバーのすべてのサブスクリプションが削除されます。  
+`[ @subscriber = ] 'subscribe_r'` 削除するサブスクリプションを持つサブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。 場合**すべて**、すべてのサブスクライバーのすべてのサブスクリプションが削除されます。  
   
- [  **@destination_db=** ] **'**_destination_db_**'**  
- 対象データベース名を指定します。 *destination_db*は**sysname**、既定値は NULL です。 NULL を指定する場合、そのサブスクライバーからすべてのサブスクリプションが削除されます。  
+`[ @destination_db = ] 'destination_db'` 転送先データベースの名前です。 *destination_db*は**sysname**、既定値は NULL です。 NULL の場合、そのサブスクライバーからのすべてのサブスクリプションが削除されます。  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@reserved=** ] **'**_予約_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -67,7 +61,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="remarks"></a>コメント  
  **sp_dropsubscription**スナップショットおよびトランザクション レプリケーションで使用されます。  
   
- 即時同期パブリケーションでアーティクルのサブスクリプションを削除した場合は、パブリケーション内のすべてのアーティクルのサブスクリプションを削除するのと同時に、これらすべてのサブスクリプションを追加し直さない限り、元に戻すことはできません。  
+ 即時同期パブリケーションでアーティクルに対するサブスクリプションを削除した場合、パブリケーション内のすべてのアーティクルのサブスクリプションを削除し、それらすべてを一度に追加しない限りバックアップに追加できません。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  

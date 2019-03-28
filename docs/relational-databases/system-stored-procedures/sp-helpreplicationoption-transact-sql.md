@@ -16,14 +16,14 @@ ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14357c7700980a1e3cc241d2e6b300e830aa4319
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b125eeaab0ea833a801123ea4540f076696894d0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818894"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535894"
 ---
-# <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
+# <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバーで有効なレプリケーション オプションの種類を示します。 このストアド プロシージャは、任意のデータベース上の任意のサーバーで実行されます。  
@@ -38,24 +38,23 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@optname =**] **'***option_name***'**  
- クエリするレプリケーション オプションの名前を指定します。 *option_name*は**sysname**、既定値は NULL です。  
+`[ @optname = ] 'option_name'` クエリするレプリケーション オプションの名前です。 *option_name*は**sysname**、既定値は NULL です。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**トランザクション**|結果セットは、トランザクション レプリケーションが有効な場合に返されます。|  
-|**マージ**|結果セットは、マージ レプリケーションが有効な場合に返されます。|  
+|**トランザクション**|トランザクション レプリケーションが有効にすると、結果セットが返されます。|  
+|**merge**|マージ レプリケーションを有効にすると、結果セットが返されます。|  
 |NULL (既定値)|結果セットは返されません。|  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|レプリケーション オプションの名前。次のいずれかになります。<br /><br /> **トランザクション**<br /><br /> **マージ**|  
+|**optname**|**sysname**|レプリケーション オプションの名前。次のいずれかになります。<br /><br /> **トランザクション**<br /><br /> **merge**|  
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**よう**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**リビジョン**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>リターン コードの値  

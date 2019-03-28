@@ -16,17 +16,17 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29fcbe7f5e7b2b7e72c88390df9d5fe20c0f7352
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812034"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536704"
 ---
-# <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
+# <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パブリッシャー側のデータベースでレプリケーションが有効になっているかどうかを示します。 このストアド プロシージャは、任意のデータベース上のパブリッシャー側で実行されます。 *Oracle パブリッシャーに対してはサポートされていません。*  
+  パブリッシャー側のデータベースでレプリケーションが有効になっているかどうかを示します。 このストアド プロシージャは、任意のデータベースのパブリッシャーで実行されます。 *Oracle パブリッシャーに対してはサポートされていません。*  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,11 +40,9 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@dbname=**] **'***dbname***'**  
- データベースの名前です。 *dbname*は**sysname**、既定値は **%** します。 場合**%**、その結果、パブリッシャーのすべてのデータベースには、それ以外の場合、指定されたデータベースに関する情報のみが返されます。 ユーザーに適切な権限がないデータベースについての情報は返されません。詳細については以下を参照してください。  
+`[ @dbname = ] 'dbname'` データベースの名前です。 *dbname*は**sysname**、既定値は **%** します。 場合**%**、その結果、パブリッシャーのすべてのデータベースには、それ以外の場合、指定されたデータベースに関する情報のみが返されます。 以下に示すように、ユーザーが適切なアクセス許可で、すべてのデータベースの情報は返されません。  
   
- [  **@type=**] **'***型***'**  
- 結果セットをいるデータベースのみに制限指定したレプリケーション オプション*型*値が有効になっています。 *型*は**sysname**値は次のいずれかを指定できます。  
+`[ @type = ] 'type'` 結果セットをいるデータベースのみに制限指定したレプリケーション オプション*型*値が有効になっています。 *型*は**sysname**値は次のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -52,8 +50,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |**マージ パブリッシュします。**|マージ レプリケーションを許可します。|  
 |**レプリケーションを許可**(既定値)|トランザクション レプリケーションまたはマージ レプリケーションを許可します。|  
   
- [  **@reserved=** ]*予約済み*  
- 既存のパブリケーションとサブスクリプションに関する情報を返すかどうかを指定します。 *予約済み*は**ビット**既定値は 0 です。 場合**1**、結果セットに指定されたデータベースが任意の既存のパブリケーションまたはサブスクリプションにあるかどうかに関する情報が含まれています。  
+`[ @reserved = ] reserved` 既存のパブリケーションとサブスクリプションに関する情報が返されるかどうかを指定します。 *予約済み*は**ビット**既定値は 0 です。 場合**1**、結果セットに指定されたデータベースが任意の既存のパブリケーションまたはサブスクリプションにあるかどうかに関する情報が含まれています。  
   
 ## <a name="result-sets"></a>結果セット  
   

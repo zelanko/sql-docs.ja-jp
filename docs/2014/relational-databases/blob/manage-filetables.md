@@ -13,12 +13,12 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfb5fa710122df0e467b27a99c08d75cc2897adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416723"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537604"
 ---
 # <a name="manage-filetables"></a>FileTable の管理
   FileTable を管理するための一般的な管理タスクについて説明します。  
@@ -30,7 +30,7 @@ ms.locfileid: "52416723"
   
 -   [sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql) (**is_filetable** 列の値を確認)  
   
-```tsql  
+```sql  
 SELECT * FROM sys.filetables;  
 GO  
   
@@ -40,7 +40,7 @@ GO
   
  関連付けられている FileTable の作成時に作成されたシステム定義オブジェクトの一覧を取得するには、カタログ ビュー [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql) に対してクエリを実行します。  
   
-```tsql  
+```sql  
 SELECT object_id, OBJECT_NAME(object_id) AS 'Object Name'  
     FROM sys.filetable_system_defined_objects  
     WHERE object_id = filetable_object_id;  
@@ -85,7 +85,7 @@ GO
  **完全な非トランザクション アクセスを無効化するには**  
  **ALTER DATABASE** ステートメントを呼び出し、 **NON_TRANSACTED_ACCESS** の値を **READ_ONLY** または **OFF**に設定します。  
   
-```tsql  
+```sql  
 -- Disable write access.  
 ALTER DATABASE database_name  
     SET FILESTREAM ( NON_TRANSACTED_ACCESS = READ_ONLY );  
@@ -100,7 +100,7 @@ GO
  **完全な非トランザクション アクセスを再有効化するには**  
  **ALTER DATABASE** ステートメントを呼び出し、 **NON_TRANSACTED_ACCESS** の値を **FULL**に設定します。  
   
-```tsql  
+```sql  
 ALTER DATABASE database_name  
     SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );  
 GO  
@@ -142,14 +142,14 @@ GO
  **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** オプションを指定して ALTER TABLE ステートメントを呼び出します。  
   
  **FileTable 名前空間を無効にするには**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
     DISABLE FILETABLE_NAMESPACE;  
 GO  
 ```  
   
  **FileTable 名前空間を再有効化するには**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
     ENABLE FILETABLE_NAMESPACE;  
 GO  
@@ -164,7 +164,7 @@ GO
 ###  <a name="HowToListOpen"></a> 操作方法：FileTable に関連付けられている開いているファイル ハンドルの一覧を取得します。  
  カタログ ビュー [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) に対してクエリを実行します。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_filestream_non_transacted_handles;  
 GO  
 ```  
@@ -194,7 +194,7 @@ GO
  **開いているファイルおよび関連付けられているロックを識別するには**  
  動的管理ビュー [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) の **request_owner_id** フィールドを [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) の **fcb_id** フィールドと結合します。 場合によっては、ロックが単一の開いているファイル ハンドルと対応しないこともあります。  
   
-```tsql  
+```sql  
 SELECT opened_file_name  
     FROM sys.dm_filestream_non_transacted_handles  
     WHERE fcb_id IN  

@@ -14,12 +14,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0af353d79fcb84d1ca4b8921048c3c5f502c29f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2c2abc45712be58eabd4ed6ef4c9b276438e8afe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771554"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535724"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>静的行フィルターの定義および変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、静的行フィルターを定義および変更する方法について説明します。  
@@ -70,19 +70,19 @@ ms.locfileid: "52771554"
   
     -   **[フィルター ステートメント]** テキスト領域には、次の形式の既定のテキストが表示されます。  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [schema].[tablename] WHERE  
         ```  
   
     -   既定のテキストは変更できません。標準の SQL 構文を使用して WHERE キーワードの後にフィルター句を入力してください。 完成したフィルター句は、次のように表示されます。  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE [LoginID] = 'adventure-works\ranjit0'  
         ```  
   
     -   静的行フィルターには、ユーザー定義関数を含めることができます。 ユーザー定義関数を指定して完成した静的行フィルターのフィルター句は、次のように表示されます。  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [Sales].[SalesOrderHeader] WHERE MyFunction([Freight]) > 100  
         ```  
   

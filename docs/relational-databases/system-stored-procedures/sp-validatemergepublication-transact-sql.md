@@ -16,17 +16,17 @@ ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 866df9e4ad124c031eab3068ac9156f0628dbca4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5706ea4c1fab79735afe9f9ec4873f112c9114cd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135699"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531091"
 ---
 # <a name="spvalidatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  1 つのパブリケーション全体の検証を実行し、すべてのサブスクリプション (プッシュ、プル、および匿名) を 1 回で検証します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  1 つのパブリケーション全体の検証を実行し、すべてのサブスクリプション (プッシュ、プル、および匿名) を 1 回で検証します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,17 +39,16 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@publication=**] **'***パブリケーション***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+ [**@publication=**] **'***publication***'**  
+ パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@level=** ]*レベル*  
- 実行する検証の種類を指定します。 *レベル*は**tinyint**、既定値はありません。 レベルには次のいずれかの値を指定できます。  
+`[ @level = ] level` 実行する検証の種類です。 *レベル*は**tinyint**、既定値はありません。 レベルには次のいずれかの値を指定できます。  
   
 |レベル値|説明|  
 |-----------------|-----------------|  
 |**1**|行数のみの検証。|  
 |**2**|行数とチェックサムの検証。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]サブスクライバー、これは自動的に設定**3**します。|  
-|**3**|これは推奨値です。|  
+|**3**|これは、推奨値です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

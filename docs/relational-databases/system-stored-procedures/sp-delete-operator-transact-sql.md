@@ -18,12 +18,12 @@ ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b55d44a837cc721761ebe77352962d1dea88f55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca9780759c6d35d6006a0ba2a9af2540c6a4e208
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704660"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531196"
 ---
 # <a name="spdeleteoperator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@name=** ] **'***name***'**  
- 削除するオペレーターの名前を指定します。 *名前*は**sysname**、既定値はありません。  
+`[ @name = ] 'name'` 削除するオペレーターの名前。 *名前*は**sysname**、既定値はありません。  
   
- [ **@reassign_to_operator=** ]  **'***reassign_operator***'**  
- 指定したオペレーターの警告を再割り当てできるオペレーターの名前を指定します。 *reassign_operator*は**sysname**、既定値は NULL です。  
+`[ @reassign_to_operator = ] 'reassign_operator'` 指定したオペレーターの警告の再割り当てするオペレーターの名前。 *reassign_operator*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

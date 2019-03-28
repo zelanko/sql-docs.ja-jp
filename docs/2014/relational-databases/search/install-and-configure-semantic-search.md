@@ -13,12 +13,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 17252769c0f9347f5f67dbf073a207d827963630
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 80a7b0dd13688dca542587fbebd20c5b1818972a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377544"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537590"
 ---
 # <a name="install-and-configure-semantic-search"></a>セマンティック検索のインストールと構成
   統計的セマンティック検索の前提条件と、これらをインストールまたは確認する方法について説明します。  
@@ -30,7 +30,7 @@ ms.locfileid: "53377544"
   
  戻り値 1 は、データベースに対してフルテキスト検索とセマンティック検索がインストールされていることを示します。戻り値 0 は、フルテキスト検索とセマンティック検索がインストールされていないことを示します。  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('IsFullTextInstalled');  
 GO  
 ```  
@@ -79,7 +79,7 @@ GO
   
  既定では、データベースの名前が **semanticsdb**になります。 データベースをアタッチする際、必要に応じて、別の名前を付けてください。 この名前は、後続の手順でデータベースを登録する際に必要になります。  
   
-```tsql  
+```sql  
 CREATE DATABASE semanticsdb  
             ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb.mdf' )  
             LOG ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb_log.ldf' )  
@@ -92,7 +92,7 @@ GO
  **3.セマンティック言語統計データベースを登録します。**  
  データベースのアタッチ時に指定した名前を使用して、ストアド プロシージャ [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql) を次のように呼び出します。  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
 GO  
 ```  
@@ -101,7 +101,7 @@ GO
  **セマンティック言語統計データベースの登録を解除します。**  
  ストアド プロシージャ [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql) を呼び出します。 セマンティック言語統計データベースは 1 つのインスタンスにつき 1 つしか存在しないため、データベースの名前を指定する必要はありません。  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
@@ -109,7 +109,7 @@ GO
  **セマンティック言語統計データベースをデタッチします。**  
  ストアド プロシージャ [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql) を呼び出し、データベース名を指定します。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

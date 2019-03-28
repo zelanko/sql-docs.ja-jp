@@ -12,12 +12,12 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa4fd0543c45e26f305506280bccce1f83107e55
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ca25b7c537c333d6bc9eb7745ea2ec6ad6055c4b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393295"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536504"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable 内のディレクトリとパスの操作
   FileTable 内でファイルが格納されるディレクトリ構造について説明します。  
@@ -34,7 +34,7 @@ ms.locfileid: "52393295"
 ##  <a name="BestPracticeRelativePaths"></a> 操作方法：相対パスを使用した移植可能なコードの実現  
  コードとアプリケーションが現在のコンピューターとデータベースから切り離された状態を維持するには、絶対ファイル パスに依存したコードを記述しないでください。 代わりに、以下の例に示すように [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 関数および [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 関数を併用して、実行時にファイルの完全なパスを取得します。 既定では、`GetFileNamespacePath` 関数はデータベースのルート パスにあるファイルの相対パスを返します。  
   
-```tsql  
+```sql  
 USE database_name;  
 DECLARE @root nvarchar(100);  
 DECLARE @fullpath nvarchar(1000);  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dea24689dc1dad9836c6ef2a53cf5e40f078c47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077132"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538624"
 ---
 # <a name="create-instances-of-xml-data"></a>XML データのインスタンスの作成
   このトピックでは、XML インスタンスを生成する方法について説明します。  
@@ -71,7 +71,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
 -   要素またはその先祖の要素の 1 つで有効になっている `xml:space` 属性に既定値が設定されている。  
   
- 以下に例を示します。  
+ 例 :  
   
 ```  
 declare @x xml  
@@ -79,13 +79,13 @@ set @x = '<root>      <child/>     </root>'
 select @x   
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <root><child/></root>  
 ```  
   
- ただし、この動作は変更できます。 xml DT インスタンスの空白文字を保持するには、CONVERT 演算子を使用し、省略可能な *style* パラメーターを値 1 に設定します。 以下に例を示します。  
+ ただし、この動作は変更できます。 xml DT インスタンスの空白文字を保持するには、CONVERT 演算子を使用し、省略可能な *style* パラメーターを値 1 に設定します。 例 :  
   
 ```  
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  *style* パラメーターが使用されていないか、この値が 0 に設定されていると、xml DT インスタンスの変換では重要でない空白文字は保持されません。 文字列データを xml DT インスタンスに変換するときの、CONVERT 演算子と *style* パラメーターの使用方法の詳細については、「[CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>例 : 型指定された xml に文字列値をキャストし、列に割り当てる  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>例:型指定された xml に文字列値をキャストし、列に割り当てる  
  次の例は、XML フラグメントを含む文字列変数をキャスト、`xml`データ型に格納し、`xml`型の列。  
   
 ```  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>例 : 型指定された xml に文字列を変換し、変数に割り当てる  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>例:型指定された xml 文字列に変換し、変数に割り当てます  
  次の例では、文字列に変換が`xml`の変数に割り当てられているし、入力、`xml`データ型。  
   
 ```  
@@ -133,7 +133,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>FOR XML 句を指定した SELECT ステートメントの使用  
- SELECT ステートメントに FOR XML 句を使用すると、結果を XML として返すことができます。 以下に例を示します。  
+ SELECT ステートメントに FOR XML 句を使用すると、結果を XML として返すことができます。 例 :  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -157,7 +157,7 @@ SET @xmlDoc = (SELECT ProductModelID, Name
 SELECT @xmlDoc  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 <Production.ProductModel ProductModelID="19" Name="Mountain-100" />...  
@@ -180,10 +180,10 @@ go
  FOR XML の詳細については、「[FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TYPE ディレクティブを使用する FOR XML クエリや、`xml` データ型を使用して SQL 列、変数、および出力パラメーターから XML を返す FOR XML クエリなど、異なるサーバー構成の結果として、`xml` データ型インスタンスをクライアントに返します。 ADO.NET プロバイダーでは、クライアント アプリケーション コードで要求をこの`xml`データ型情報は、サーバーからバイナリ エンコード形式で送信します。 ただし、TYPE ディレクティブを指定しないで FOR XML を使用した場合、XML データは文字列型のデータとして返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TYPE ディレクティブを使用する FOR XML クエリや、`xml` データ型を使用して SQL 列、変数、および出力パラメーターから XML を返す FOR XML クエリなど、異なるサーバー構成の結果として、`xml` データ型インスタンスをクライアントに返します。 クライアント アプリケーションのコードでは、ADO.NET プロバイダーがこの `xml` データ型情報をサーバーからバイナリ エンコード形式で送信するよう要求します。 ただし、TYPE ディレクティブを指定しないで FOR XML を使用した場合、XML データは文字列型のデータとして返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。  
   
 ## <a name="using-constant-assignments"></a>定数の代入の使用  
- インスタンスが、文字列定数を使用できます、`xml`データ型が必要です。 これは、文字列から XML への暗黙の CAST と同じです。 以下に例を示します。  
+ インスタンスが、文字列定数を使用できます、`xml`データ型が必要です。 これは、文字列から XML への暗黙の CAST と同じです。 例 :  
   
 ```  
 DECLARE @xmlDoc xml  

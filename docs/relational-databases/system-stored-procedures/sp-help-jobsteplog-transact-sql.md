@@ -18,14 +18,14 @@ ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 905386a1e346ed982c3ad84baf57f532aa5b020f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6480c498914c4ec0bc02ba21552615bbdd28f6e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828360"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535694"
 ---
-# <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
+# <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   特定のメタデータを返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブ ステップのログ。 **sp_help_jobsteplog**実際のログは返されません。  
@@ -43,20 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_id =**] **'***job_id***'**  
- ジョブ ステップ ログ情報を返すジョブの識別番号を指定します。 *job_id*は**int**、既定値は NULL です。  
+`[ @job_id = ] 'job_id'` ジョブ ステップ ログ情報を返す対象のジョブ識別番号。 *job_id*は**int**、既定値は NULL です。  
   
- [ **@job_name =**] **'***job_name***'**  
- ジョブの名前を指定します。 *job_name*は**sysname**、既定値 NULL。  
+`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name*は**sysname**、既定値 NULL。  
   
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
- [ **@step_id =**] *step_id*  
- ジョブ ステップの識別番号を指定します。 指定しない場合は、ジョブのすべてのステップが対象となります。 *step_id*は**int**、既定値は NULL です。  
+`[ @step_id = ] step_id` ジョブ ステップの識別番号。 含まれていない場合、ジョブのすべての手順が含まれます。 *step_id*は**int**、既定値は NULL です。  
   
- [ **@step_name =**] **'***step_name***'**  
- ジョブ ステップの名前を指定します。 *step_name*は**sysname**、既定値は NULL です。  
+`[ @step_name = ] 'step_name'` ジョブのステップの名前。 *step_name*は**sysname**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -65,15 +61,15 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**uniqueidentifier**|ジョブの一意識別子。|  
+|**job_id**|**uniqueidentifier**|ジョブの一意の識別子。|  
 |**job_name**|**sysname**|ジョブの名前。|  
-|**step_id**|**int**|ジョブ ステップの識別子。 たとえば、次のステップ、ジョブの最初の手順は、その*step_id*は 1 です。|  
-|**step_name**|**sysname**|ジョブ ステップの名前。|  
-|**step_uid**|**uniqueidentifier**|システムによって生成される、ジョブ ステップの一意識別子。|  
+|**step_id**|**int**|ジョブ内のステップの識別子。 たとえば、次のステップ、ジョブの最初の手順は、その*step_id*は 1 です。|  
+|**step_name**|**sysname**|ジョブのステップの名前です。|  
+|**step_uid**|**uniqueidentifier**|(システムによって生成される) のステップの一意識別子ジョブにします。|  
 |**date_created**|**datetime**|ステップが作成された日付。|  
 |**date_modified**|**datetime**|ステップが最後に変更された日付。|  
 |**log_size**|**float**|ジョブ ステップ ログのサイズ (MB 単位)。|  
-|**log**|**nvarchar(max)**|ジョブ ステップのログ出力。|  
+|**log**|**nvarchar(max)**|ジョブ ステップのログ出力します。|  
   
 ## <a name="remarks"></a>コメント  
  **sp_help_jobsteplog**では、 **msdb**データベース。  
@@ -93,7 +89,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-returns-job-step-log-information-for-all-steps-in-a-specific-job"></a>A. 特定のジョブ内にあるすべてのステップに関するジョブ ステップ ログ情報を返す  
+### <a name="a-returns-job-step-log-information-for-all-steps-in-a-specific-job"></a>A. 特定のジョブ内のすべてのステップに関するジョブ ステップ ログ情報を返します  
  次の例では、`Weekly Sales Data Backup` という名前のジョブに関する、すべてのジョブ ステップ ログ情報を返します。  
   
 ```  

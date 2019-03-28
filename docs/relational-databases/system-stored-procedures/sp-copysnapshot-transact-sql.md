@@ -16,17 +16,17 @@ ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3c8037bdccc0b04e2c11399f09e5a99c109df65
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 429a0c439f5257989e6fb7e85d34a8ea576ad41a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134112"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526994"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  表示されているフォルダーに、指定されたパブリケーションのスナップショット フォルダーをコピー、  **@destination_folder**します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。 このストアド プロシージャは、スナップショットを CD-ROM などのリムーバブル メディアにコピーするときに効果的です。  
+  表示されているフォルダーに、指定されたパブリケーションのスナップショット フォルダーをコピー、  **@destination_folder**します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。 このストアド プロシージャは、スナップショットを CD-ROM などのリムーバブル メディアにコピーするときに効果的です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,17 +40,13 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'**_パブリケーション_**'**  
- スナップショットの内容をコピーするパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` スナップショットの内容をコピーするパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@destination_folder=**] **'**_destination_folder_**'**  
- パブリケーションのスナップショットの内容をコピーするフォルダーの名前です。 *destination_folder*は**nvarchar (255)**、既定値はありません。 *Destination_folder*別の場所などの別のサーバー、ネットワーク ドライブ、またはリムーバブル メディア (Cd-rom やリムーバブル ディスク) を指定できます。  
+`[ @destination_folder = ] 'destination_folder'` パブリケーションのスナップショットの内容をコピーするフォルダーの名前です。 *destination_folder*は**nvarchar (255)**、既定値はありません。 *Destination_folder*別の場所などの別のサーバー、ネットワーク ドライブ、またはリムーバブル メディア (Cd-rom やリムーバブル ディスク) を指定できます。  
   
- [  **@subscriber=**] **'**_サブスクライバー_**'**  
- サブスクライバーの名前です。 *サブスクライバー*が sysname で、既定値は NULL です。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前です。 *サブスクライバー*が sysname で、既定値は NULL です。  
   
- [  **@subscriber_db=**] **'**_@subscriber_db_**'**  
- サブスクリプション データベースの名前です。 *@subscriber_db*が sysname で、既定値は NULL です。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクリプション データベースの名前です。 *@subscriber_db*が sysname で、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

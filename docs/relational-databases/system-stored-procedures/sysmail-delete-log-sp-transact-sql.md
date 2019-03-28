@@ -18,17 +18,17 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb2db3e60d416324a413bf9d6eb69f6125bc00b5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6c6c183034b93f06f7c8bc62b73f97316a204005
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588460"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537725"
 ---
-# <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
+# <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベース メール ログからイベントを削除します。 ログ内のすべてのイベントを削除するか、日付または種類の条件に該当するイベントを削除することができます。  
+  データベース メール ログからイベントを削除します。 日付または種類の条件を満たすそれらのイベント ログ内のすべてのイベントを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,9 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@logged_before** =] **'**_logged_before_**'**  
- 日付と時刻で指定されたエントリを削除、 *logged_before*引数。 *logged_before*は**datetime**で、既定値は NULL です。 NULL はすべての日付を表します。  
+`[ @logged_before = ] 'logged_before'` 日付と時刻で指定されたエントリを削除、 *logged_before*引数。 *logged_before*は**datetime**で、既定値は NULL です。 NULL はすべての日付を表します。  
   
- [ **@event_type** =] **'**_event_type_**'**  
- ログとして指定された型のエントリを削除、 *event_type*します。 *event_type*は**varchar (15)** 既定値はありません。 有効なエントリは**成功**、**警告**、**エラー**、および**情報**します。 NULL はすべてのイベントの種類を表します。  
+`[ @event_type = ] 'event_type'` ログとして指定された型のエントリを削除、 *event_type*します。 *event_type*は**varchar (15)** 既定値はありません。 有効なエントリは**成功**、**警告**、**エラー**、および**情報**します。 NULL はすべてのイベントの種類を表します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -61,15 +59,15 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-deleting-all-events"></a>A. すべてのイベントを削除する  
- 次の例では、データベース メール ログにあるすべてのイベントを削除します。  
+### <a name="a-deleting-all-events"></a>A. すべてのイベントを削除します。  
+ 次の例では、データベース メール ログのすべてのイベントを削除します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_delete_log_sp ;  
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-events"></a>B. 古いイベントを削除する  
+### <a name="b-deleting-the-oldest-events"></a>B. 最も古いイベントを削除します。  
  次の例では、データベース メール ログにあるイベントのうち、2005 年 10 月 9 日より前のイベントを削除します。  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: '例: EXPLICIT モードを使用した兄弟の構築 | Microsoft Docs'
+title: 例:EXPLICIT モードを使用した兄弟の構築 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffc0ca60beabfb8cc535026ec4b6004103051d06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f5ff9f8c153ab80adf5bc19fa5f78f58ddb58b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162602"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536054"
 ---
-# <a name="example-constructing-siblings-with-explicit-mode"></a>例: EXPLICIT モードを使用した兄弟の構築
+# <a name="example-constructing-siblings-with-explicit-mode"></a>例:EXPLICIT モードを使用した兄弟の構築
   販売注文情報を提供する XML を生成するとします。 <`SalesPerson`> 要素と <`OrderDetail`> 要素は兄弟です。 各注文には、<`OrderHeader`> 要素が 1 つ、<`SalesPerson`> 要素が 1 つ、<`OrderDetail`> 要素が 1 つ以上あります。  
   
 ```  

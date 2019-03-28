@@ -18,17 +18,17 @@ ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9075b653b6cdb9baec70a182b560201efcb6c965
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4409b44a04411357d0109fb643fd13fcff6451b9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724270"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538194"
 ---
-# <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
+# <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  トランザクション内の、指定した行内テキスト ポインターまたはすべてのテキスト ポインターを無効にします。 **sp_invalidate_textptr**行内テキスト ポインターに対してのみ使用できます。 これらのポインターがあるテーブルからは、**行内テキスト**オプションを有効にします。  
+  指定した行内テキスト ポインター、またはトランザクション内のすべての行内テキスト ポインターを無効にします。 **sp_invalidate_textptr**行内テキスト ポインターに対してのみ使用できます。 これらのポインターがあるテーブルからは、**行内テキスト**オプションを有効にします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,8 +40,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@TextPtrValue=** ] *textptr_value*  
- 無効にする行内テキスト ポインターを指定します。 *textptr_value*は**varbinary (** 16 **)**、既定値は NULL です。 NULL の場合、 **sp_invalidate_textptr**トランザクション内のすべての行内テキスト ポインターが無効になります。  
+`[ @TextPtrValue = ] textptr_value` 行内テキスト ポインターは無効にします。 *textptr_value*は**varbinary (** 16 **)**、既定値は NULL です。 NULL の場合、 **sp_invalidate_textptr**トランザクション内のすべての行内テキスト ポインターが無効になります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

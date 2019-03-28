@@ -20,17 +20,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03d79ee58cdaf1237581bd59fbd696325e9e3f80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66ec81fdc6ebdbecf83791c6fffa5735a37723bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700730"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527944"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-  シーケンス オブジェクトからシーケンス値の範囲を返します。 シーケンス オブジェクトでは、要求された値の数を生成して発行し、その範囲に関連するメタデータをアプリケーションに提供します。  
+  シーケンス オブジェクトからシーケンス値の範囲を返します。 シーケンス オブジェクトが生成されますが要求の値の数の問題し、範囲に関連するメタデータを持つアプリケーションを提供します。  
   
  シーケンス番号の詳細については、次を参照してください。[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)します。  
   
@@ -52,29 +52,21 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@sequence_name** =] **N**'*シーケンス*'  
- シーケンス オブジェクトの名前。 スキーマは省略可能です。 *sequence_name*は**nvarchar (776)** します。  
+`[ @sequence_name = ] N'sequence'` シーケンス オブジェクトの名前。 スキーマは省略可能です。 *sequence_name*は**nvarchar (776)** します。  
   
- [ **@range_size** = ] *range_size*  
- シーケンスからフェッチする値の数。 **@range_size** **bigint**します。  
+`[ @range_size = ] range_size` シーケンスからフェッチする値の数。 **@range_size** **bigint**します。  
   
- [ **@range_first_value** = ] *range_first_value*  
- 出力パラメーター。要求された範囲の計算に使用するシーケンス オブジェクトの最初 (最小または最大) の値を返します。 **@range_first_value** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
+`[ @range_first_value = ] range_first_value` 出力パラメーターは、要求された範囲の計算に使用するシーケンス オブジェクトの最初の (最小または最大) の値を返します。 **@range_first_value** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
   
- [ **@range_last_value** =] *range_last_value*  
- 省略可能な出力パラメーター。要求された範囲の最後の値を返します。 **@range_last_value** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
+`[ @range_last_value = ] range_last_value` 省略可能な出力パラメーターは、要求された範囲の最後の値を返します。 **@range_last_value** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
   
- [ **@range_cycle_count** =] range_cycle_count  
- 省略可能な出力パラメーター。要求された範囲を返すためにシーケンス オブジェクトを循環した回数を返します。 **@range_cycle_count** **int**します。  
+`[ @range_cycle_count = ] range_cycle_count` 省略可能な出力パラメーターは、要求された範囲を返すために、シーケンス オブジェクトを循環した回数の合計を返します。 **@range_cycle_count** **int**します。  
   
- [ **@sequence_increment** =] *sequence_increment*  
- 省略可能な出力パラメーター。要求された範囲の計算に使用するシーケンス オブジェクトの増分を返します。 **@sequence_increment** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
+`[ @sequence_increment = ] sequence_increment` 省略可能な出力パラメーターは、要求された範囲の計算に使用するシーケンス オブジェクトの増分値を返します。 **@sequence_increment** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
   
- [ **@sequence_min_value** = ] *sequence_min_value*  
- 省略可能な出力パラメーター。シーケンス オブジェクトの最小値を返します。 **@sequence_min_value** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
+`[ @sequence_min_value = ] sequence_min_value` 省略可能な出力パラメーターは、シーケンス オブジェクトの最小値を返します。 **@sequence_min_value** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
   
- [ **@sequence_max_value** = ] *sequence_max_value*  
- 省略可能な出力パラメーター。シーケンス オブジェクトの最大値を返します。 **@sequence_max_value** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
+`[ @sequence_max_value = ] sequence_max_value` 省略可能な出力パラメーターは、シーケンス オブジェクトの最大値を返します。 **@sequence_max_value** **sql_variant**との要求で使用されているシーケンス オブジェクトの同じ基本型。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -83,13 +75,13 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  sys sp_sequence_get_rangeis します。 スキーマ sys.sp_sequence_get_range として参照することができます。  
   
 ### <a name="cycling-sequences"></a>循環するシーケンス  
- 必要な場合は、要求された範囲を返すために、シーケンス オブジェクトを適切な回数循環します。 循環した回数は、`@range_cycle_count` パラメーターを通じて、呼び出し元に返されます。  
+ 必要な場合、シーケンス オブジェクトは、要求された範囲の適切な回数循環します。 循環した回数は、`@range_cycle_count` パラメーターを通じて、呼び出し元に返されます。  
   
 > [!NOTE]  
->  循環する場合、シーケンス オブジェクトは、シーケンス オブジェクトの開始値ではなく、昇順のシーケンスの最小値および降順のシーケンスの最大値から開始されます。  
+>  循環する場合、シーケンス オブジェクトの開始値ではなく、昇順のシーケンスの最小値および降順のシーケンスの最大値のシーケンス オブジェクトを再起動します。  
   
 ### <a name="non-cycling-sequences"></a>循環しないシーケンス  
- 要求された範囲の値の数がシーケンス オブジェクト内の残りの利用可能な値を超える場合、要求された範囲がシーケンス オブジェクトから推論されることはなく、次のエラー 11732 が返されます。  
+ 要求された範囲の値の数が、残りの使用可能な値より大きい場合は、シーケンス オブジェクトで要求された範囲がシーケンス オブジェクトから控除しないと次のエラー 11732 が返されます。  
   
  `The requested range for sequence object '%.*ls' exceeds the maximum or minimum limit. Retry with a smaller range.`  
   
@@ -115,7 +107,7 @@ CREATE SEQUENCE Test.RangeSeq
 ```  
   
 ### <a name="a-retrieving-a-range-of-sequence-values"></a>A. シーケンス値の範囲を取得する  
- 次のステートメントでは、Test.RangeSeq シーケンス オブジェクトから 4 つのシーケンス番号を取得し、ユーザーに最初の番号を返します。  
+ 次のステートメントは、Test.RangeSeq シーケンス オブジェクトから 4 つのシーケンス番号を取得し、ユーザーに最初の番号を返します。  
   
 ```  
 DECLARE @range_first_value sql_variant ,   
@@ -165,7 +157,7 @@ SELECT
   
  引数 `@range_size` を 75 などの大きな数に変更すると、シーケンス オブジェクトを循環します。 シーケンス オブジェクトを循環したかどうか、およびその回数を調べるには、引数 `@range_cycle_count` をチェックします。  
   
-### <a name="c-example-using-adonet"></a>C. ADO.NET を使用する例  
+### <a name="c-example-using-adonet"></a>C. ADO.NET を使用した例  
  次の例では、ADO.NET を使用して、Test.RangeSeq から範囲を取得します。  
   
 ```  

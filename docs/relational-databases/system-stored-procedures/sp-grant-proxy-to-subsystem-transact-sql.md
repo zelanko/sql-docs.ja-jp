@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 883496e1a0f31e69b09c8e4f5eeebdb94e006e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7eecd8743d24ab783e163ab10abc0441362b37a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732740"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528134"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@proxy_id =** ] *id*  
- アクセス権を与えるプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**、既定値は NULL です。 いずれか*proxy_id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。  
+`[ @proxy_id = ] id` アクセス権を与えるプロキシのプロキシ識別番号。 *Proxy_id*は**int**、既定値は NULL です。 いずれか*proxy_id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。  
   
- [  **@proxy_name =** ] **'***proxy_name***'**  
- アクセス権の対象となるプロキシの名前を指定します。 *Proxy_name*は**sysname**、既定値は NULL です。 いずれか*proxy_id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。  
+`[ @proxy_name = ] 'proxy_name'` アクセス権を与えるプロキシの名前。 *Proxy_name*は**sysname**、既定値は NULL です。 いずれか*proxy_id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。  
   
- [ **@subsystem_id =** ] *id*  
- アクセス権の対象となるサブシステムの識別番号を指定します。 *Subsystem_id*は**int**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表は、各サブシステムの ID に指定できる値の一覧です。  
+`[ @subsystem_id = ] id` アクセスを許可するサブシステムの id 番号。 *Subsystem_id*は**int**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表では、各サブシステムの値を示します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -64,8 +61,7 @@ sp_grant_proxy_to_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
 |**12**|PowerShell スクリプト|  
   
- [  **@subsystem_name =** ] **'***subsystem_name***'**  
- アクセス権の対象となるサブシステムの名前を指定します。 **Subsystem_name**は**sysname**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表は、各サブシステムの ID に指定できる値の一覧です。  
+`[ @subsystem_name = ] 'subsystem_name'` アクセスを許可するサブシステムの名前。 **Subsystem_name**は**sysname**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表では、各サブシステムの値を示します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -82,14 +78,14 @@ sp_grant_proxy_to_subsystem
 |**PowerShell**|PowerShell スクリプト|  
   
 ## <a name="remarks"></a>コメント  
- サブシステムへのアクセス権をプロキシに与えても、プロキシで指定されているプリンシパルに対する権限は変更されません。  
+ サブシステムに対するプロキシ アクセスを許可する場合は、プロキシで指定されるプリンシパルのアクセス許可は変更されません。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_grant_proxy_to_subsystem**します。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-granting-access-to-a-subsystem-by-id"></a>A. ID を使用してサブシステムへのアクセス権を与える  
+### <a name="a-granting-access-to-a-subsystem-by-id"></a>A. 使用して ID サブシステムへのアクセスを許可  
  次の例は、プロキシを許可`Catalog application proxy`ActiveX スクリプティング サブシステムにアクセスします。  
   
 ```  
@@ -102,7 +98,7 @@ EXEC dbo.sp_grant_proxy_to_subsystem
 GO  
 ```  
   
-### <a name="b-granting-access-to-a-subsystem-by-name"></a>B. 名前を使用してサブシステムへのアクセス権を与える  
+### <a name="b-granting-access-to-a-subsystem-by-name"></a>B. 名前では、サブシステムへのアクセスを許可します。  
  次の例は、プロキシを許可`Catalog application proxy`SSIS パッケージ実行サブシステムへのアクセス。  
   
 ```  

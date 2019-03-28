@@ -1,5 +1,5 @@
 ---
-title: '例 : ID ディレクティブと IDREFS ディレクティブの指定 | Microsoft Docs'
+title: 例:ID と IDREFS ディレクティブの指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27c4cd38ee8995e9d60bf2f80297c1140e53f5d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056272"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531254"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>例 : ID ディレクティブと IDREFS ディレクティブの指定
-  要素の属性として指定できます、`ID`型の属性と`IDREFS`属性を参照し、使用できます。 これにより、ドキュメント内のリンク作成が可能になります。これは、リレーショナル データベースにおける主キーと外部キーのリレーションシップに似ています。  
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>例:ID ディレクティブと IDREFS ディレクティブの指定
+  要素の属性は、`ID` 型の属性として指定することができます。さらに、この属性を参照する `IDREFS` 属性を使用できます。 これにより、ドキュメント内のリンク作成が可能になります。これは、リレーショナル データベースにおける主キーと外部キーのリレーションシップに似ています。  
   
  この例では、`ID` ディレクティブと `IDREFS` ディレクティブを使用して、`ID` 型と `IDREFS` 型の属性を作成する方法を示します。 ID は整数値にできないので、この例では ID 値を変換します。 つまり、型キャストを行っています。 ID 値にはプレフィックスを使用します。  
   

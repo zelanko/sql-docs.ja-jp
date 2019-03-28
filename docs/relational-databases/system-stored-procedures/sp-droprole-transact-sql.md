@@ -18,14 +18,14 @@ ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a823427067ca1c6d06a6d26b6ab3553d17df9489
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f07ccd19a419f3b6d332213e9846aec740b0c152
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535775"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538403"
 ---
-# <a name="spdroprole-transact-sql"></a>sp_droprole (Transact-SQL)
+# <a name="spdroprole-transact-sql"></a>sp_droprole (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースからデータベース ロールを削除します。  
@@ -43,8 +43,7 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@rolename =** ] **'**_ロール_**'**  
- 現在のデータベースから削除するデータベース ロールの名前を指定します。 *ロール*は、 **sysname**、既定値はありません。 *ロール*現在のデータベースに既に存在する必要があります。  
+`[ @rolename = ] 'role'` 現在のデータベースから削除するデータベース ロールの名前です。 *ロール*は、 **sysname**、既定値はありません。 *ロール*現在のデータベースに既に存在する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -56,7 +55,7 @@ sp_droprole [ @rolename= ] 'role'
   
  固定ロールと**パブリック**ロールは削除できません。  
   
- ロールがセキュリティ保護可能なリソースを所有している場合、そのロールは削除できません。 セキュリティ保護可能なリソースを所有しているアプリケーション ロールを削除するには、先にセキュリティ保護可能なリソースの所有権を譲渡するか削除する必要があります。 削除禁止のオブジェクトの所有者を変更するには、ALTER AUTHORIZATION を使用します。  
+ 保護可能なアイテムが所有している場合、ロールを削除できません。 セキュリティ保護可能リソースを所有しているアプリケーション ロールを削除する前に、最初のセキュリティ保護可能な所有権を譲渡する必要があります。 またはにドロップします。 削除する必要がないオブジェクトの所有者を変更するのにには、ALTER AUTHORIZATION を使用します。  
   
  **sp_droprole**ユーザー定義のトランザクション内で実行することはできません。  
   

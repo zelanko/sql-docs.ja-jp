@@ -13,15 +13,15 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15c3a98ad0e74ba7a1d5ee6d683f6de2e7353984
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107622"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535384"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML 内でのメタプロパティの指定
   XML ドキュメントに含まれるメタプロパティ属性は、XML アイテム (要素、属性、その他の DOM ノードなど) のプロパティを示す属性です。 これらの属性は、物理的に XML ドキュメントのテキスト内に存在するものではありません。 ただし、OPENXML では、すべての XML アイテムに、これらのメタプロパティが提供されます。 これらのメタプロパティを使用すると、XML ノードの情報 (ローカルの位置や名前空間の情報など) を抽出できます。 これらの情報からは、テキストで表現されている情報よりも詳細な情報を得られます。  
@@ -102,7 +102,7 @@ FROM OPENXML (@idoc, '/root/Customer/Order', 9)
 EXEC sp_xml_removedocument @idoc  
 ```  
   
- 結果を次に示します。  
+ これは、結果です。  
   
 ```  
 id   oid         date                amount    parentIDNo  parentLocalName    

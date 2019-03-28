@@ -18,12 +18,12 @@ ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c3a8e3db9e0e66f3a3e300e972ca1d2f02f1d03b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96dc0a33c15f1547088c3fe7c79824da55cd1d35
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615530"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538124"
 ---
 # <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,15 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@profile_id** = ] *profile_id*  
- 更新するプロファイルのプロファイル ID を指定します。 *profile_id*は**int**、既定値は NULL です。 いずれか、 *profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_id = ] profile_id` 更新するプロファイルのプロファイル ID。 *profile_id*は**int**、既定値は NULL です。 いずれか、 *profile_id*または*profile_name*指定する必要があります。  
   
- [ **@profile_name** =] **'***profile_name***'**  
- 更新するプロファイルのプロファイル名を指定します。 *profile_name*は**sysname**、既定値は NULL です。 いずれか、 *profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_name = ] 'profile_name'` 更新するプロファイルのプロファイルの名前。 *profile_name*は**sysname**、既定値は NULL です。 いずれか、 *profile_id*または*profile_name*指定する必要があります。  
   
- [ **@account_id** =] *account_id*  
- 更新するアカウント ID を指定します。 *account_id*は**int**、既定値は NULL です。 いずれか、 *account_id*または*account_name*指定する必要があります。  
+`[ @account_id = ] account_id` 更新するアカウント ID。 *account_id*は**int**、既定値は NULL です。 いずれか、 *account_id*または*account_name*指定する必要があります。  
   
- [ **@account_name** =] **'***account_name***'**  
- 更新するアカウントの名前を指定します。 *account_name*は**sysname**、既定値は NULL です。 いずれか、 *account_id*または*account_name*指定する必要があります。  
+`[ @account_name = ] 'account_name'` 更新するアカウントの名前。 *account_name*は**sysname**、既定値は NULL です。 いずれか、 *account_id*または*account_name*指定する必要があります。  
   
- [ **@sequence_number** =] *sequence_number*  
- アカウントの新しいシーケンス番号を指定します。 *sequence_number*は**int**、既定値はありません。 シーケンス番号によって、プロファイルで使用されるアカウントの順番が決まります。  
+`[ @sequence_number = ] sequence_number` アカウントの新しいシーケンス番号。 *sequence_number*は**int**、既定値はありません。 シーケンス番号は、プロファイルのアカウントを使用する順序を決定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -65,7 +60,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
  なし  
   
 ## <a name="remarks"></a>コメント  
- 指定したアカウントと指定したプロファイルが関連付けられていない場合は、エラーが返されます。  
+ 指定されたプロファイルで指定されたアカウントが関連付けられていない場合は、エラーを返します。  
   
  シーケンス番号によって、データベース メールではプロファイル内のアカウントがどの順番で使用されるかが決まります。 新しい電子メール メッセージの場合、データベース メールでは、一番小さなシーケンス番号の付いたアカウントから処理が開始されます。 そのアカウントが失敗すると、データベース メールでは、このアカウントよりも大きいシーケンス番号を持つアカウントに処理が移ります。このように、データベース メールによってメッセージが正常に送信されるか、一番大きなシーケンス番号のアカウントが失敗するまで順に処理されます。 一番大きなシーケンス番号のアカウントが失敗した場合、電子メール メッセージは失敗します。  
   

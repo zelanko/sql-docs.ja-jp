@@ -16,17 +16,17 @@ ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 811a6c78400e0030d89067d2998ed8cc0ad32be2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e6a3c403fde55213e093b70ced1cb6a59d15fd28
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789682"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537194"
 ---
-# <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
+# <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パブリケーション データベースに対するログ リーダー エージェント ジョブのプロパティを返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  パブリケーション データベースに対してログ リーダー エージェント ジョブのプロパティを返します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,8 +38,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher**=] **'***パブリッシャー***'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -49,8 +48,8 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |**name**|**nvarchar(100)**|エージェントの名前。|  
 |**publisher_security_mode**|**smallint**|次のいずれかの値と、パブリッシャーに接続するときに、エージェントで使用されるセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証。|  
 |**publisher_login**|**sysname**|パブリッシャーに接続するときに使用されるログイン。|  
-|**publisher_password**|**nvarchar (524)**|セキュリティ上の理由から、値の**\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
-|**job_id**|**uniqueidentifier**|エージェント ジョブの一意な ID。|  
+|**publisher_password**|**nvarchar(524)**|セキュリティ上の理由から、値の**\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
+|**job_id**|**uniqueidentifier**|エージェント ジョブの一意の ID。|  
 |**job_login**|**nvarchar(512)**|形式で返される、ログ リーダー エージェントを実行する Windows アカウントは、*ドメイン*\\*username*します。|  
 |**job_password**|**sysname**|セキュリティ上の理由から、値の**\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
   

@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ee4e94ff48db339bbe5c012f821368306bfb253
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406558"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536573"
 ---
 # <a name="recompile-a-stored-procedure"></a>ストアド プロシージャの再コンパイル
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを再コンパイルする方法について説明します。 これを行う 3 つの方法:`WITH RECOMPILE`プロシージャ定義内またはプロシージャが呼び出されると、オプション、`RECOMPILE`を使用して個々 のステートメントでクエリ ヒント、`sp_recompile`システム ストアド プロシージャ。 このトピックでは、プロシージャ定義の作成時および既存のプロシージャの実行時に WITH RECOMPILE オプションを使用する方法について説明します。 さらに、sp_recompile システム ストアド プロシージャを使用して既存のプロシージャを再コンパイルする方法についても説明します。  
@@ -105,7 +105,7 @@ AS
   
      次に、2 番目のコード例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 これにより、プロシージャが実行され、プロシージャのクエリ プランが再コンパイルされます。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
@@ -123,7 +123,7 @@ GO
   
      次に、次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この場合、プロシージャは実行されません。代わりに、プロシージャが次回実行されるときにクエリ プランが更新されるように、再コンパイルの対象としてマークされます。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  

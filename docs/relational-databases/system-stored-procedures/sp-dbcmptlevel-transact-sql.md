@@ -18,14 +18,14 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 094235cd508f4265a68861de60e9e4c2d35ee4b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96bd1aa87dba90963588db74935294c0dcdd8f0b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841792"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527429"
 ---
-# <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
+# <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   データベースの特定の動作に、指定したバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性を設定します。  
@@ -44,11 +44,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@dbname=** ]*名*  
- 互換性レベルを変更するデータベースの名前を指定します。 データベース名は識別子の規則に従っている必要があります。 *名前*は**sysname**、既定値は NULL です。  
+`[ @dbname = ] name` 互換性レベルを変更するデータベースの名前です。 データベース名は、識別子の規則に従っている必要があります。 *名前* は **sysname** 、既定値は NULL です。  
   
- [  **@new_cmptlevel=** ]*バージョン*  
- データベースの互換性の対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンを指定します。 *バージョン*は**tinyint**、既定値は NULL です。 次のいずれかの値を指定する必要があります。  
+`[ @new_cmptlevel = ] version` バージョンは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に互換性のある、データベースが使用されます。 *バージョン*は**tinyint**、既定値は NULL です。 値は、次のいずれかである必要があります。  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   

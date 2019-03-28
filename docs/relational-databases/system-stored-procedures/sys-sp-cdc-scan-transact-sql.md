@@ -20,12 +20,12 @@ ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7eaa167c46937d48bd760d29bd17828a2d555538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e7651c6df4a277d72a71c0cdb8a5910ae19ba76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763079"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536784"
 ---
 # <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,13 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@maxtrans=** ] *max_trans*  
- 各スキャン サイクルで処理する最大トランザクション数を指定します。 *max_trans*は**int**既定値は 500 です。  
+`[ @maxtrans = ] max_trans` 各スキャン サイクルで処理するトランザクションの最大数。 *max_trans*は**int**既定値は 500 です。  
   
- [  **@maxscans=** ] *max_scans*  
- ログからすべての行を抽出するために実行する最大スキャン サイクル数を指定します。 *max_scans*は**int**既定値は 10 です。  
+`[ @maxscans = ] max_scans` ログからすべての行を抽出するために実行するスキャン サイクルの最大数。 *max_scans*は**int**既定値は 10 です。  
   
- [  **@continuous=** ]*継続的な*  
- ストアド プロシージャが単一のスキャン サイクル (0) 後に終了する必要があるかどうか、または連続して実行で指定された時間一時停止かどうかを示す*polling_interval*してスキャン サイクル (1) する前にします。 *継続的な*は**tinyint**既定値は 0。  
+`[ @continuous = ] continuous` ストアド プロシージャが単一のスキャン サイクル (0) 後に終了する必要があるかどうか、または連続して実行で指定された時間一時停止かどうかを示す*polling_interval*してスキャン サイクル (1) する前にします。 *継続的な*は**tinyint**既定値は 0。  
   
- [  **@pollinginterval=** ] *polling_interval*  
- ログ スキャン サイクルの間隔を秒数で指定します。 *polling_interval*は**bigint**既定値は 0。  
+`[ @pollinginterval = ] polling_interval` ログ スキャン サイクルの間隔の秒数です。 *polling_interval*は**bigint**既定値は 0。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

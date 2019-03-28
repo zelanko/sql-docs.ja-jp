@@ -18,17 +18,17 @@ ms.assetid: ddace1cc-ff23-4b61-8efb-8ded3df438bb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8d4d4f2deb5c81ff737251ea39422567b4d0a9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc78d8620bdb4f8b028bc188f115ed3f1f1d2318
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667565"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537914"
 ---
 # <a name="spsyspolicysetconfigenabled-transact-sql"></a>sp_syspolicy_set_config_enabled (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ポリシー ベースの管理を有効または無効にします。  
+  有効またはポリシー ベースの管理を無効にします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,8 +40,7 @@ sp_syspolicy_set_config_enabled [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@value=** ] *value*  
- ポリシー ベースの管理を有効にするかどうかを指定します。 *値*は**sqlvariant**値は次のいずれかを指定できます。  
+`[ @value = ] value` ポリシー ベースの管理が有効になっているかどうかを判断します。 *値*は**sqlvariant**値は次のいずれかを指定できます。  
   
 -   0 (または 'false') = 無効  
   
@@ -57,10 +56,10 @@ sp_syspolicy_set_config_enabled [ @value = ] value
  PolicyAdministratorRole 固定データベース ロールのメンバーシップが必要です。  
   
 > [!IMPORTANT]  
->  資格情報が昇格される可能性について: PolicyAdministratorRole ロールに割り当てられているユーザーは、サーバー トリガーを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの動作に影響する可能性があるポリシーの実行をスケジュールできます。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 構成の制御について信頼できるユーザーにのみこの昇格される可能性の資格情報、ため PolicyAdministratorRole ロールを付与する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
+>  資格情報が昇格される可能性:PolicyAdministratorRole ロールのユーザーがサーバー トリガーを作成しのインスタンスの運用に影響する可能性のあるポリシーの実行をスケジュール設定、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 構成の制御について信頼できるユーザーにのみこの昇格される可能性の資格情報、ため PolicyAdministratorRole ロールを付与する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ポリシー ベースの管理を有効にします。  
+ 次の例には、ポリシー ベースの管理ができるようにします。  
   
 ```  
 EXEC msdb.dbo.sp_syspolicy_set_config_enabled @value = 1;  

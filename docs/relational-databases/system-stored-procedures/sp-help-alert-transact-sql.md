@@ -18,12 +18,12 @@ ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 522dcff230177b807299d1647e0333517f93d8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728970"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538464"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@alert_name =**] **'***alert_name***'**  
- 警告名を指定します。 *alert_name*は**nvarchar (128)** します。 場合*alert_name*が指定されていないすべてのアラートに関する情報が返されます。  
+`[ @alert_name = ] 'alert_name'` アラートの名前。 *alert_name*は**nvarchar (128)** します。 場合*alert_name*が指定されていないすべてのアラートに関する情報が返されます。  
   
- [  **@order_by =**] **'***order_by***'**  
- 結果を作成するときの並べ替え順を指定します。 *order_by*は**sysname**、既定値は N '*名前*'。  
+`[ @order_by = ] 'order_by'` 結果を生成するために使用する並べ替え順。 *order_by*は**sysname**、既定値は N '*名前*'。  
   
- [ **@alert_id =**] *alert_id*  
- 情報をレポートする警告の識別番号を指定します。 *alert_id*は**int**、既定値は NULL です。  
+`[ @alert_id = ] alert_id` 情報をレポートする警告の識別番号。 *alert_id*は**int**、既定値は NULL です。  
   
- [  **@category_name =**] **'***カテゴリ***'**  
- 警告のカテゴリを指定します。 *カテゴリ*は**sysname**、既定値は NULL です。  
+`[ @category_name = ] 'category'` アラートのカテゴリ。 *カテゴリ*は**sysname**、既定値は NULL です。  
   
- [ **@legacy_format**=] *legacy_format*  
- レガシ バージョンの結果セットを作成するかどうかを指定します。 *legacy_format*は**ビット**、既定値は**0**します。 ときに*legacy_format*は**1**、 **sp_help_alert**によって返される結果セットを返す**sp_help_alert** Microsoft SQL Server 2000 でします。  
+`[ @legacy_format = ] legacy_format` レガシ バージョンの結果セットを生成するかどうかです。 *legacy_format*は**ビット**、既定値は**0**します。 ときに*legacy_format*は**1**、 **sp_help_alert**によって返される結果セットを返す**sp_help_alert** Microsoft SQL Server 2000 でします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -68,28 +63,28 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|システムによって割り当てられた一意な整数識別子。|  
-|**name**|**sysname**|アラート名 (たとえば、デモ: 完全な**msdb**ログ)。|  
+|**name**|**sysname**|アラート名 (たとえば、デモします。完全な**msdb**ログ)。|  
 |**event_source**|**nvarchar(100)**|イベントのソース。 常に**MSSQLServer**の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**message_id**|**int**|警告を定義するメッセージ エラー番号。 (通常、エラー番号に対応して、 **sysmessages**テーブル)。 重大度を使用して、警告を定義する場合**message_id**は**0**または NULL。|  
+|**message_id**|**int**|警告を定義したメッセージ エラー番号。 (通常、エラー番号に対応して、 **sysmessages**テーブル)。 重大度を使用して、警告を定義する場合**message_id**は**0**または NULL。|  
 |**severity**|**int**|重大度レベル (から**9**を通じて**25**、 **110**、 **120**、 **130**、または**140**)アラートを定義するとします。|  
 |**enabled**|**tinyint**|警告が現在有効かどうかの状態 (**1**) かどうか (**0**)。 有効でない警告は送信されません。|  
-|**delay_between_responses**|**int**|警告に対する 1 つの応答から次の応答までの待ち時間 (秒単位)。|  
+|**delay_between_responses**|**int**|警告に応答までの秒の期間、待機します。|  
 |**last_occurrence_date**|**int**|警告が最後に発生した日付。|  
-|**last_occurrence_time**|**int**|警告が最後に発生した時刻。|  
+|**last_occurrence_time**|**int**|最後に、アラートが発生した時刻。|  
 |**last_response_date**|**int**|によって日付が最後に警告が応答する、 **SQLServerAgent**サービス。|  
 |**last_response_time**|**int**|によって、時間が最後に警告が応答する、 **SQLServerAgent**サービス。|  
-|**notification_message**|**nvarchar(512)**|電子メールやポケットベルによる通知の一部としてオペレーターに送信する追加メッセージ (省略可)。|  
+|**notification_message**|**nvarchar(512)**|省略可能な追加メッセージが電子メールまたはポケットベルの通知の一部としてオペレーターに送信します。|  
 |**include_event_description**|**tinyint**|Microsoft Windows アプリケーション ログからの SQL Server エラーの説明を通知メッセージに含めるかどうか。|  
-|**database_name**|**sysname**|警告対象のエラーが発生したと考えられるデータベース。 データベース名が NULL の場合は、エラー発生の場所に関係なく警告が発生します。|  
+|**database_name**|**sysname**|データベースの警告が、エラーが発生する必要があります。 データベース名が NULL の場合は、エラーの発生場所に関係なく警告が発生します。|  
 |**event_description_keyword**|**nvarchar(100)**|Windows アプリケーション ログ内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの説明。これには、提供されたものと同様の文字シーケンスが含まれている必要があります。|  
 |**occurrence_count**|**int**|警告が発生した回数。|  
 |**count_reset_date**|**int**|日付、 **occurrence_count**が最後にリセットします。|  
 |**count_reset_time**|**int**|時間、 **occurrence_count**が最後にリセットします。|  
-|**job_id**|**uniqueidentifier**|警告に応答して実行されるジョブの識別番号。|  
+|**job_id**|**uniqueidentifier**|警告に応答して実行するジョブの識別番号。|  
 |**job_name**|**sysname**|警告に応答して実行されるジョブの名前。|  
-|**has_notification**|**int**|1 人以上のオペレーターに対して警告が通知される場合は、0 以外の値になります。 値は、次の値 (和) の 1 つ以上です。<br /><br /> **1**= 電子メールによる通知<br /><br /> **2**= ポケットベルによる通知<br /><br /> **4**= が**net send**通知します。|  
+|**has_notification**|**int**|1 つまたは複数の演算子はこのアラートの通知を受け取る場合は 0 以外の値。 値は、次の値 (和) の 1 つ以上です。<br /><br /> **1**= 電子メールによる通知<br /><br /> **2**= ポケットベルによる通知<br /><br /> **4**= が**net send**通知します。|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**performance_condition**|**nvarchar(512)**|場合**型**は**2**、この列は、パフォーマンス条件の定義を示しています。 それ以外の場合、列が NULL です。|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 の場合は常に '[Uncategorized]' となります。|  
@@ -102,32 +97,32 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|システムによって割り当てられた一意な整数識別子。|  
-|**name**|**sysname**|アラート名 (たとえば、デモ: 完全な**msdb**ログ)。|  
+|**name**|**sysname**|アラート名 (たとえば、デモします。完全な**msdb**ログ)。|  
 |**event_source**|**nvarchar(100)**|イベントのソース。 常に**MSSQLServer**の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]version 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**message_id**|**int**|警告を定義するメッセージ エラー番号。 (通常、エラー番号に対応して、 **sysmessages**テーブル)。 重大度を使用して、警告を定義する場合**message_id**は**0**または NULL。|  
+|**message_id**|**int**|警告を定義したメッセージ エラー番号。 (通常、エラー番号に対応して、 **sysmessages**テーブル)。 重大度を使用して、警告を定義する場合**message_id**は**0**または NULL。|  
 |**severity**|**int**|重大度レベル (から**9**を通じて**25**、 **110**、 **120**、 **130**、または 1**40**)アラートを定義するとします。|  
 |**enabled**|**tinyint**|警告が現在有効かどうかの状態 (**1**) かどうか (**0**)。 有効でない警告は送信されません。|  
-|**delay_between_responses**|**int**|警告に対する 1 つの応答から次の応答までの待ち時間 (秒単位)。|  
+|**delay_between_responses**|**int**|警告に応答までの秒の期間、待機します。|  
 |**last_occurrence_date**|**int**|警告が最後に発生した日付。|  
-|**last_occurrence_time**|**int**|警告が最後に発生した時刻。|  
+|**last_occurrence_time**|**int**|最後に、アラートが発生した時刻。|  
 |**last_response_date**|**int**|によって日付が最後に警告が応答する、 **SQLServerAgent**サービス。|  
 |**last_response_time**|**int**|によって、時間が最後に警告が応答する、 **SQLServerAgent**サービス。|  
-|**notification_message**|**nvarchar(512)**|電子メールやポケットベルによる通知の一部としてオペレーターに送信する追加メッセージ (省略可)。|  
+|**notification_message**|**nvarchar(512)**|省略可能な追加メッセージが電子メールまたはポケットベルの通知の一部としてオペレーターに送信します。|  
 |**include_event_description**|**tinyint**|あるかどうかの説明、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows アプリケーション ログからのエラーを通知メッセージの一部として含めることがあります。|  
-|**database_name**|**sysname**|警告対象のエラーが発生したと考えられるデータベース。 データベース名が NULL の場合は、エラー発生の場所に関係なく警告が発生します。|  
+|**database_name**|**sysname**|データベースの警告が、エラーが発生する必要があります。 データベース名が NULL の場合は、エラーの発生場所に関係なく警告が発生します。|  
 |**event_description_keyword**|**nvarchar(100)**|Windows アプリケーション ログ内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの説明。これには、提供されたものと同様の文字シーケンスが含まれている必要があります。|  
 |**occurrence_count**|**int**|警告が発生した回数。|  
 |**count_reset_date**|**int**|日付、 **occurrence_count**が最後にリセットします。|  
 |**count_reset_time**|**int**|時間、 **occurrence_count**が最後にリセットします。|  
 |**job_id**|**uniqueidentifier**|ジョブ識別番号。|  
-|**job_name**|**sysname**|警告に応答して実行されるオン デマンド ジョブ。|  
-|**has_notification**|**int**|1 人以上のオペレーターに対して警告が通知される場合は、0 以外の値になります。 値は次のとおりです。複数の場合は OR で表されます。<br /><br /> **1**= 電子メールによる通知<br /><br /> **2**= ポケットベルによる通知<br /><br /> **4**= が**net send**通知します。|  
-|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]。|  
-|**performance_condition**|**nvarchar(512)**|場合**型**は**2**、この列は、パフォーマンス条件の定義を示しています。 場合**型**は**3**、この列は、WMI イベントのクエリを示しています。 それ以外の場合は NULL。|  
+|**job_name**|**sysname**|警告に応答して実行するオンデマンド ジョブ。|  
+|**has_notification**|**int**|1 つまたは複数の演算子はこのアラートの通知を受け取る場合は 0 以外の値。 値は次のとおりです。複数の場合は OR で表されます。<br /><br /> **1**= 電子メールによる通知<br /><br /> **2**= ポケットベルによる通知<br /><br /> **4**= が**net send**通知します。|  
+|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 。|  
+|**performance_condition**|**nvarchar(512)**|場合**型**は**2**、この列は、パフォーマンス条件の定義を示しています。 場合**型**は**3**、この列は、WMI イベントのクエリを示しています。 それ以外の場合、列が NULL です。|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 常に '**[未分類]**' の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。|  
-|**type**|**int**|警告の種類。<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]イベント警告<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パフォーマンス警告<br /><br /> **3** = WMI イベント警告|  
+|**type**|**int**|アラートの種類:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]イベント警告<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パフォーマンス警告<br /><br /> **3** = WMI イベント警告|  
   
 ## <a name="remarks"></a>コメント  
  **sp_help_alert**から実行する必要があります、 **msdb**データベース。  

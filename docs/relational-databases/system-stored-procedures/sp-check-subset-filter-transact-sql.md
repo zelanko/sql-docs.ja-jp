@@ -21,17 +21,17 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d3e6ad6a0cf8ed5c84279b621badc939b1e97a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee22bbf5028959d0aab178924d38465c9d98b432
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791714"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527454"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  テーブルに対してフィルター句を確認して、フィルター句がテーブルに対して有効であるかどうかを判定するのに使用します。 このストアド プロシージャは、フィルターが事前計算済みパーティションでの使用条件を満たすかどうかも含め、指定されたフィルターに関する情報を返します。 このストアド プロシージャは、パブリッシャー側でパブリケーションを含むデータベースについて実行されます。  
+  テーブルに対してフィルター句を確認して、フィルター句がテーブルに対して有効であるかどうかを判定するのに使用します。 このストアド プロシージャは、フィルターが事前計算済みパーティションでの使用条件を満たすかどうかも含め、指定されたフィルターに関する情報を返します。 このストアド プロシージャは、パブリッシャーのパブリケーションを含むデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,14 +45,11 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@filtered_table**=] **'***filtered_table***'**  
- フィルター済みテーブルの名前を指定します。 *filtered_table*は**nvarchar (400)**、既定値はありません。  
+`[ @filtered_table = ] 'filtered_table'` フィルター選択されたテーブルの名前です。 *filtered_table*は**nvarchar (400)**、既定値はありません。  
   
- [ **@subset_filterclause** =] **'***subset_filterclause***'**  
- テストの対象となるフィルター句を指定します。 *subset_filterclause*は**nvarchar (1000)**、既定値はありません。  
+`[ @subset_filterclause = ] 'subset_filterclause'` テスト対象フィルター句を指定します。 *subset_filterclause*は**nvarchar (1000)**、既定値はありません。  
   
- [ **@has_dynamic_filters**=] *has_dynamic_filters*  
- フィルター句がパラメーター化された行フィルターであるかどうかを示します。 *has_dynamic_filters*は**ビット**、既定値は NULL は出力パラメーター。 値を返します**1**フィルター句がパラメーター化された行フィルターの場合。  
+`[ @has_dynamic_filters = ] has_dynamic_filters` フィルター句がパラメーター化された行フィルターがかどうかです。 *has_dynamic_filters*は**ビット**、既定値は NULL は出力パラメーター。 値を返します**1**フィルター句がパラメーター化された行フィルターの場合。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -70,7 +67,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="remarks"></a>コメント  
  **sp_check_subset_filter**はマージ レプリケーションで使用します。  
   
- **sp_check_subset_filter**テーブルがパブリッシュされていない場合でも、任意のテーブルに対して実行できます。 このストアド プロシージャを使用して、フィルター選択されたアーティクルを定義する前にフィルター句を検証することができます。  
+ **sp_check_subset_filter**テーブルがパブリッシュされていない場合でも、任意のテーブルに対して実行できます。 このストアド プロシージャは、フィルター選択されるアーティクルを定義する前にフィルター句をことを確認できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_check_subset_filter**します。  

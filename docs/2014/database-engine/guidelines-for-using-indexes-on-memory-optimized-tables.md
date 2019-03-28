@@ -12,17 +12,17 @@ ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 514b6c8fedb50417b8c4060cb45e73bfa88fdddb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094367"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527954"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルでのインデックス使用のガイドライン
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルのデータに効率的にアクセスするためにインデックスを使用します。 適切なインデックスを指定することにより、クエリのパフォーマンスが大幅に向上します。 たとえば、クエリを考えてみます。  
   
-```tsql  
+```sql  
 SELECT c1, c2 FROM t WHERE c1 = 1;  
 ```  
   
@@ -69,7 +69,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
 |操作|メモリ最適化された非クラスター化ハッシュ インデックス|メモリ最適化された非クラスター化インデックス|ディスク ベース インデックス|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
-|インデックス スキャン、すべてのテーブルの行を取得する。|はい|はい|はい|  
+|インデックス スキャン、すべてのテーブルの行を取得する。|はい|[はい]|はい|  
 |等値述語 (=) に対するインデックス シーク。|はい<br /><br /> (フル キーが必要)|はい <sup>1</sup>|はい|  
 |非等値述語に対するインデックス シーク (>、<、 \<=、> =, BETWEEN)。|不可 (インデックス スキャンの結果)|はい <sup>1</sup>|はい|  
 |インデックス定義に一致する並べ替え順序で行を取得する。|いいえ|はい|はい|  
@@ -90,10 +90,10 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      ガベージ コレクションは、テーブルのすべてのインデックスを頻繁に使用する場合に最適です。 ほとんど使用しないインデックスがある場合、ガベージ コレクション システムは古い行バージョンに対して適切に機能しないことがあります。  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>メモリ最適化インデックスの作成: コード サンプル  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>メモリ最適化インデックスの作成:コード サンプル  
  列レベルのハッシュ インデックス:  
   
-```tsql  
+```sql  
 CREATE TABLE t1   
    (c1 INT NOT NULL INDEX idx HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -101,7 +101,7 @@ CREATE TABLE t1
   
  テーブル レベルのハッシュ インデックス:  
   
-```tsql  
+```sql  
 CREATE TABLE t1_1   
    (c1 INT NOT NULL,   
    INDEX IDX HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -110,7 +110,7 @@ CREATE TABLE t1_1
   
  列レベルの主キーのハッシュ インデックス:  
   
-```tsql  
+```sql  
 CREATE TABLE t2   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -118,7 +118,7 @@ CREATE TABLE t2
   
  テーブル レベルの主キーのハッシュ インデックス:  
   
-```tsql  
+```sql  
 CREATE TABLE t2_2   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -127,7 +127,7 @@ CREATE TABLE t2_2
   
  列レベルの非クラスター化インデックス:  
   
-```tsql  
+```sql  
 CREATE TABLE t3   
    (c1 INT NOT NULL INDEX ID)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -135,7 +135,7 @@ CREATE TABLE t3
   
  テーブル レベルの非クラスター化インデックス:  
   
-```tsql  
+```sql  
 CREATE TABLE t3_3   
    (c1 INT NOT NULL,   
    INDEX IDX NONCLUSTERED (c1))   
@@ -144,7 +144,7 @@ CREATE TABLE t3_3
   
  列レベルの主キー非クラスター化インデックス:  
   
-```tsql  
+```sql  
 CREATE TABLE t4   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -152,7 +152,7 @@ CREATE TABLE t4
   
  テーブル レベルの主キー非クラスター化インデックス:  
   
-```tsql  
+```sql  
 CREATE TABLE t4_4   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED (c1))   
@@ -161,7 +161,7 @@ CREATE TABLE t4_4
   
  列を定義した後に定義される複数列のインデックス:  
   
-```tsql  
+```sql  
 create table t (  
        a int not null constraint ta primary key nonclustered,  
        b int not null,  

@@ -16,17 +16,17 @@ ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ddf4c57901682cb099dc0e92c09b763651e32f6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8a5463d23cca4f1fb9da549bb53706e8485ae439
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131712"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527834"
 ---
 # <a name="spvalidatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定のサブスクリプションに対して検証を実行します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  指定されたサブスクリプションの検証を実行します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +41,14 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@publication=**] **'***パブリケーション***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+ [**@publication=**] **'***publication***'**  
+ パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@subscriber=** ] **'***サブスクライバー***'**  
- サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。  
   
- [  **@subscriber_db=** ] **'***@subscriber_db***'**  
- サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値はありません。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値はありません。  
   
- [  **@level=** ]*レベル*  
- 実行する検証の種類を指定します。 *レベル*は**tinyint**、既定値はありません。 レベルには次のいずれかの値を指定できます。  
+`[ @level = ] level` 実行する検証の種類です。 *レベル*は**tinyint**、既定値はありません。 レベルには次のいずれかの値を指定できます。  
   
 |レベル値|説明|  
 |-----------------|-----------------|  

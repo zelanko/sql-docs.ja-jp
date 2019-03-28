@@ -18,12 +18,12 @@ ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18dde2c47f1da8c20457a9a0fbdd86c7adfe6e56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818084"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528144"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +53,14 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_id =**] *job_id*  
- ジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id` ジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [ **@job_name =**] **'***job_name***'**  
- ジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  か、特定のジョブを表示する*job_id*または*job_name*指定する必要があります。  どちらも省略*job_id*と*job_name*すべてのジョブに関する情報を返します。
   
- [ **@job_aspect =**] **'***job_aspect***'**  
- 表示するジョブ属性を指定します。 *job_aspect*は**varchar (9)**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @job_aspect = ] 'job_aspect'` 表示するジョブ属性。 *job_aspect*は**varchar (9)**、既定値は null の場合、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -73,23 +70,17 @@ sp_help_job { [ @job_id = ] job_id
 |**手順**|ジョブ ステップ情報|  
 |**ターゲット**|表示対象情報|  
   
- [ **@job_type =**] **'***job_type***'**  
- レポートに含めるジョブの種類を指定します。 *job_type*は**varchar (12)**、既定値は NULL です。 *job_type*できる**ローカル**または**MULTI-SERVER**します。  
+`[ @job_type = ] 'job_type'` レポートに含めるジョブの種類。 *job_type*は**varchar (12)**、既定値は NULL です。 *job_type*できる**ローカル**または**MULTI-SERVER**します。  
   
- [ **@owner_login_name =**] **'***login_name***'**  
- ジョブの所有者のログイン名を指定します。 *login_name*は**sysname**、既定値は NULL です。  
+`[ @owner_login_name = ] 'login_name'` ジョブの所有者のログイン名。 *login_name*は**sysname**、既定値は NULL です。  
   
- [  **@subsystem =**] **'***サブシステム***'**  
- サブシステムの名前です。 *サブシステム*は**nvarchar (40)**、既定値は NULL です。  
+`[ @subsystem = ] 'subsystem'` サブシステムの名前。 *サブシステム*は**nvarchar (40)**、既定値は NULL です。  
   
- [  **@category_name =**] **'***カテゴリ***'**  
- カテゴリの名前を指定します。 *カテゴリ*は**sysname**、既定値は NULL です。  
+`[ @category_name = ] 'category'` カテゴリの名前。 *カテゴリ*は**sysname**、既定値は NULL です。  
   
- [ **@enabled =**] *enabled*  
- 有効なジョブと無効なジョブのどちらの情報を表示するかを示す数値を指定します。 *有効になっている*は**tinyint**、既定値は NULL です。 **1**有効なジョブ、および**0**ジョブを無効になっていることを示します。  
+`[ @enabled = ] enabled` 情報を表示するかどうかを示す数には、ジョブと無効なジョブが有効になります。 *有効になっている*は**tinyint**、既定値は NULL です。 **1**有効なジョブ、および**0**ジョブを無効になっていることを示します。  
   
- [ **@execution_status =**] *status*  
- ジョブの実行状態を指定します。 *ステータス*は**int**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @execution_status = ] status` ジョブの実行状態です。 *ステータス*は**int**、既定値は null の場合、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -101,17 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|一時中断。|  
 |**7**|完了操作の実行中。|  
   
- [ **@date_comparator =**] **'***date_comparison***'**  
- 比較に使用する比較演算子*date_created*と*date_modified*します。 *date_comparison*は**char (1)**、できますが、=、 \<、または >。  
+`[ @date_comparator = ] 'date_comparison'` 比較に使用する比較演算子*date_created*と*date_modified*します。 *date_comparison*は**char (1)**、できますが、=、 \<、または >。  
   
- [ **@date_created =**] *date_created*  
- ジョブが作成された日付を指定します。 *date_created*は**datetime**、既定値は NULL です。  
+`[ @date_created = ] date_created` ジョブが作成された日付。 *date_created*は**datetime**、既定値は NULL です。  
   
- [ **@date_last_modified =**] *date_modified*  
- ジョブが最後に変更された日付を指定します。 *date_modified*は**datetime**、既定値は NULL です。  
+`[ @date_last_modified = ] date_modified` ジョブの最終変更日。 *date_modified*は**datetime**、既定値は NULL です。  
   
- [  **@description =**] **'***description_pattern***'**  
- ジョブの説明を指定します。 *description_pattern*は**nvarchar (512)**、既定値は NULL です。 *description_pattern*パターン マッチングの SQL Server のワイルドカード文字を含めることができます。  
+`[ @description = ] 'description_pattern'` ジョブの説明。 *description_pattern*は**nvarchar (512)**、既定値は NULL です。 *description_pattern*パターン マッチングの SQL Server のワイルドカード文字を含めることができます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

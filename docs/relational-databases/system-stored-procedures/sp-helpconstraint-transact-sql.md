@@ -19,17 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb4742d65ca25ecf656e442d03e1925cbe1bb518
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: bacf8f0c891e595a775a5e279c5341f3ca0944b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591783"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535254"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  すべての制約について、制約の種類、ユーザー定義名またはシステムから提供されている名前、制約が定義されている列、制約の定義式 (DEFAULT 制約と CHECK 制約の場合) などの一覧を返します。  
+  すべての制約の種類や、ユーザー定義またはシステム提供の名前、列が定義されている、(既定およびチェック制約のみ) の制約を定義する式の一覧を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,17 +42,15 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@objname=** ] **'**_テーブル_**'**  
- 制約情報が返されるテーブルの名前です。 指定したテーブルは現在のデータベースに対してローカルである必要があります。 *テーブル*は**nvarchar (776)**、既定値はありません。  
+`[ @objname = ] 'table'` テーブルの制約に関する情報が返されます。 指定したテーブルは現在のデータベースに対してローカルである必要があります。 *テーブル*は**nvarchar (776)**、既定値はありません。  
   
- [  **@nomsg=**] **'**_no_message_**'**  
- テーブル名を出力する省略可能なパラメーターです。 *no_message*は**varchar (5)**、既定値は**msg**します。**nomsg**印刷を抑制します。  
+`[ @nomsg = ] 'no_message'` テーブル名を出力する省略可能なパラメーターです。 *no_message*は**varchar (5)**、既定値は**msg**します。**nomsg**印刷を抑制します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- **sp_helpconstraint**これには、主キーに参加している場合は、降順のインデックス付き列を表示します。 降順のインデックス列は結果セットに表示され、列名の後にマイナス記号 (-) が付けられます。 既定の昇順のインデックス列の場合は、その名前だけが表示されます。  
+ **sp_helpconstraint**これには、主キーに参加している場合は、降順のインデックス付き列を表示します。 降順のインデックス付き列は、その名前の後にマイナス記号 (-) を使用して結果セットに表示されます。 昇順のインデックス列の既定値は、その名前だけが表示されます。  
   
 ## <a name="remarks"></a>コメント  
  実行**sp_help**_テーブル_指定されたテーブルに関するすべての情報を報告します。 制約情報だけを表示する**sp_helpconstraint**します。  

@@ -16,17 +16,17 @@ ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ff0ca57ba2e6e77854bab011fa83dc2001337a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 34bd2f98c00d6d481662235df9ba26016cc20468
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205931"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527054"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  基になるテーブルのすべての列を返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。 Oracle パブリッシャーの場合、このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  基になるテーブル内のすべての列を返します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。 Oracle パブリッシャーの場合、このストアド プロシージャは、任意のデータベース上のディストリビューター側で実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,14 +40,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication =**] **'***パブリケーション***'**  
- 目的のアーティクルを含むパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` アーティクルを含むパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@article=**] **'***記事***'**  
- 列を返すアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
+`[ @article = ] 'article'` 列を返すアーティクルの名前です。 *記事*は**sysname**、既定値はありません。  
   
- [ **@publisher**=] **'***パブリッシャー***'**  
- 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  *パブリッシャー*によって要求された記事が公開されると指定しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
@@ -62,8 +59,8 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |**列 id**|**int**|列の識別子です。|  
 |**column**|**sysname**|列の名前です。|  
 |**公開**|**bit**|列をパブリッシュしたかどうかを示します。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
-|**パブリッシャーの種類**|**sysname**|パブリッシャー側の列のデータ型です。|  
-|**サブスクライバーの種類**|**sysname**|サブスクライバー側の列のデータ型です。|  
+|**パブリッシャーの種類**|**sysname**|パブリッシャーの列のデータ型。|  
+|**サブスクライバーの種類**|**sysname**|サブスクライバー側で列のデータ型。|  
   
 ## <a name="remarks"></a>コメント  
  **sp_helparticlecolumns**スナップショットおよびトランザクション レプリケーションで使用されます。  

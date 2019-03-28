@@ -16,17 +16,17 @@ ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a480dbccb955875d9e4835ac0d6acadd26e6e06c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ae89e606633fc3555745dd56fc7703ef50685468
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773954"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535224"
 ---
-# <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
+# <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サブスクリプションが、フェールオーバーとしてキュー更新を使用する即時更新に対して有効になっている場合、このサブスクリプションのフェールオーバー操作モードを設定できます。 このストアド プロシージャは、サブスクライバー側でサブスクリプション データベースについて実行されます。 フェールオーバー モードの詳細については、次を参照してください。[更新可能な Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)します。  
+  即時更新フェールオーバーとしてキュー更新を有効にしたサブスクリプションのフェールオーバー操作モードを設定することができます。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。 フェールオーバー モードの詳細については、次を参照してください。[更新可能な Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,28 +42,24 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher=**] **'***publisher***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。 パブリケーションは既に存在している必要があります。  
+`[ @publisher = ] 'publisher'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。 パブリケーションは既に存在する必要があります。  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
- パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリケーション データベースの名前です。 *publisher_db* は **sysname** 、既定値はありません。  
   
- [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [**@failover_mode=**] **'***failover_mode***'**  
- サブスクリプションのフェールオーバー モードを指定します。 *failover_mode*は**nvarchar (10)** これらの値のいずれかを指定できます。  
+ サブスクリプションのフェールオーバー モードです。 *failover_mode*は**nvarchar (10)** これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**イミディ エイト**または**同期**|サブスクライバーで行われたデータ変更は、変更の発生時にパブリッシャーに一括コピーされます。|  
-|**キューに登録**|データの変更は、格納、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キュー。|  
+|**queued**|データの変更は、格納、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キュー。|  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージ キューは、非推奨とされましたし、現在サポートされていません。  
   
- [ **@override**=]*オーバーライド*  
- 内部使用のみです。  
+`[ @override = ] override` 内部でのみ使用します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

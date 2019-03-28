@@ -16,17 +16,17 @@ ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2836db0eef25c21861ec7b2d766f1195d250f20
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817734"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527432"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のサーバーと関連するディストリビューターから ODBC または OLE DB のデータ ソース情報を返します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  現在のサーバーと関連するディストリビューターから ODBC または OLE DB のデータ ソース情報を返します。 このストアド プロシージャは、ディストリビューターのすべてのデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,27 +42,22 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@dsn =**] **'***dsn***'**  
- ODBC DSN または OLE DB リンク サーバーの名前を指定します。 *dsn*は**varchar (128)**、既定値はありません。  
+`[ @dsn = ] 'dsn'` ODBC DSN または OLE DB リンク サーバーの名前です。 *dsn*は**varchar (128)**、既定値はありません。  
   
- [  **@infotype =**] **'***検査***'**  
- 返される情報の種類です。 場合*検査*が指定されていないか、NULL を指定すると、あらゆる種類の情報が返されます。 *検査*は**varchar (128)**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @infotype = ] 'info_type'` 返される情報の種類です。 場合*検査*が指定されていないか、NULL を指定すると、あらゆる種類の情報が返されます。 *検査*は**varchar (128)**、既定値は null の場合、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**DBMS_NAME**|データ ソースのベンダーの名前を指定します。|  
+|**DBMS_NAME**|データ ソースの仕入先名を指定します。|  
 |**DBMS_VERSION**|データ ソースのバージョンを指定します。|  
 |**DATABASE_NAME**|データベース名を指定します。|  
-|**SQL_SUBSCRIBER**|サブスクライバーにすることができるデータ ソースを指定します。|  
+|**SQL_SUBSCRIBER**|サブスクライバーに指定できるデータ ソースを指定します。|  
   
- [  **@login =**] **'***ログイン***'**  
- データ ソースのログインです。 データ ソースにログインが含まれる場合、NULL を指定するか、またはパラメーターを省略します。 *ログイン*は**varchar (128)**、既定値は NULL です。  
+`[ @login = ] 'login'` データ ソースのログインです。 データ ソースには、ログインが含まれている場合は、NULL を指定またはパラメーターを省略します。 *ログイン*は**varchar (128)**、既定値は NULL です。  
   
- [  **@password =**] **'***パスワード***'**  
- ログインのパスワードです。 データ ソースにログインが含まれる場合、NULL を指定するか、またはパラメーターを省略します。 *パスワード*は**varchar (128)**、既定値は NULL です。  
+`[ @password = ] 'password'` ログインのパスワードです。 データ ソースには、ログインが含まれている場合は、NULL を指定またはパラメーターを省略します。 *パスワード*は**varchar (128)**、既定値は NULL です。  
   
- [  **@dso_type=**]*ス*  
- データ ソースの種類を指定します。 *ス*は**int**、これらの値のいずれかを指定できます。  
+`[ @dso_type = ] dso_type` データ ソースの型です。 *ス*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -77,7 +72,7 @@ sp_dsninfo [ @dsn =] 'dsn'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**情報の種類**|**nvarchar(64)**|DBMS_NAME、DBMS_VERSION、DATABASE_NAME、SQL_SUBSCRIBER などの情報の種類です。|  
-|**[値]**|**nvarchar(512)**|関連する情報の種類の値です。|  
+|**[値]**|**nvarchar(512)**|関連付けられている情報の種類の値。|  
   
 ## <a name="remarks"></a>コメント  
  **sp_dsninfo**はあらゆる種類のレプリケーションで使用します。  

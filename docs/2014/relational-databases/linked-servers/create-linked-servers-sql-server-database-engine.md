@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766614"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527846"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>リンク サーバーの作成 (SQL Server データベース エンジン)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してリンク サーバーを作成し、別の [!INCLUDE[tsql](../../includes/tsql-md.md)]からデータにアクセスする方法について説明します。 リンク サーバーを作成すると、複数のソースのデータを操作できます。 リンク サーバーは別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスである必要はありませんが、そのようにするのが一般的です。  
@@ -199,7 +199,7 @@ ms.locfileid: "52766614"
   
 1.  クエリ エディターで、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを入力して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という名前の `SRVR002\ACCTG`インスタンスにリンクします。  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -211,7 +211,7 @@ ms.locfileid: "52766614"
   
 2.  次のコードを実行して、リンク サーバーを使用しているログインのドメイン資格情報を使用するようにリンク サーバーを構成します。  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -220,13 +220,13 @@ ms.locfileid: "52766614"
   
     ```  
   
-##  <a name="FollowUp"></a> フォローしてください：リンク サーバーの作成後に実行する手順  
+##  <a name="FollowUp"></a>補足情報: リンク サーバーの作成後に実行する手順  
   
 #### <a name="to-test-the-linked-server"></a>リンク サーバーをテストするには  
   
 -   次のコードを実行して、リンク サーバーへの接続をテストします。 この例は、リンク サーバーにあるデータベースの名前を返します。  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -236,7 +236,7 @@ ms.locfileid: "52766614"
   
 -   4 つの要素で構成される名前を使用して、リンク サーバー上のオブジェクトを参照します。 次のコードを実行して、ローカル サーバー上のすべてのログインとリンク サーバー上の対応するログインの一覧を取得します。  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  

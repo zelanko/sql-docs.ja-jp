@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0e620d178ae22a9572497b32f19348b5d027e30f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: def5041286ade754020a5c84e8d2ac91fc79afa3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703400"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535404"
 ---
-# <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
+# <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
@@ -42,8 +42,7 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@loginame =** ] **'***login***'**  
- Windows ユーザーまたはグループの名前を指定します。 Windows ユーザーまたはグループは、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ユーザー*。 たとえば、 **\joeb**します。 *ログイン*は**sysname**、既定値はありません。  
+`[ @loginame = ] 'login'` Windows ユーザーまたはグループの名前です。 Windows ユーザーまたはグループは、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ユーザー*。 たとえば、 **\joeb**します。 *ログイン*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
