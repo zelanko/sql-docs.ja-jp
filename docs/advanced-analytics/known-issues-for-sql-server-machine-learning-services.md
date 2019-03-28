@@ -4,20 +4,20 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fd6f67e3095af0f1a53ed533ea9b763d52547e39
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 19427de01c39dc4b4578fc31db1d610af829d770
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018068"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510740"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning サービスの既知の問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、既知の問題またはオプションとして提供される machine learning コンポーネントと制限事項について説明します[SQL Server 2016 R Services](install/sql-r-services-windows-install.md)と[SQL Server マシン 2017 Learning Services の R と Python](install/sql-machine-learning-services-windows-install.md).
+この記事では、既知の問題またはオプションとして提供される machine learning コンポーネントと制限事項について説明します[SQL Server 2016 R Services](install/sql-r-services-windows-install.md)と[SQL Server マシン 2017 Learning Services の R と Python](install/sql-machine-learning-services-windows-install.md)。
 
 ## <a name="setup-and-configuration-issues"></a>セットアップと構成の問題
 
@@ -214,7 +214,7 @@ Enterprise Edition では、外部スクリプト プロセスを管理するた
 
 ### <a name="1-access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>1.アクセスは、既定以外の位置での SQL Server で R スクリプトを実行するときに警告を拒否されました
 
-SQL Server のインスタンスがインストールされている場合、既定以外の場所になどの外部、`Program Files`フォルダー、ACCESS_DENIED は、パッケージをインストールするスクリプトを実行しようとするときに発生する警告。 以下に例を示します。
+SQL Server のインスタンスがインストールされている場合、既定以外の場所になどの外部、`Program Files`フォルダー、ACCESS_DENIED は、パッケージをインストールするスクリプトを実行しようとするときに発生する警告。 例 :
 
 > *`normalizePath(path.expand(path), winslash, mustWork)` : パス [2] ="~ExternalLibraries/R/8/1"。アクセスが拒否されました*
 
@@ -358,7 +358,7 @@ ASCII 以外の文字列データを送信[!INCLUDE[ssNoVersion](../includes/ssn
 
 この問題が発生した場合は、 `f` の定義内の、通常 `g`が `g` を呼び出す場所より前の任意の場所に、 `f`の定義を組み込むことで問題を回避できます。
 
-以下に例を示します。
+例 :
 
 ```R
 f <- function(x) { 2*x * 3 }
