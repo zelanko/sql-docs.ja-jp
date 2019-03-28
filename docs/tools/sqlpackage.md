@@ -2,19 +2,19 @@
 title: SqlPackage.exe |Microsoft Docs
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 06/27/2018
+ms.date: 06/28/2018
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: d9a3dc9088c833b3448927c1455052c40f185ec7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033606"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527594"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -36,7 +36,7 @@ ms.locfileid: "56033606"
   
 **SqlPackage.exe** コマンド ラインでは、これらの操作と共に、操作固有のパラメーターおよびプロパティを指定できます。  
 
-**[最新バージョンをダウンロード](sqlpackage-download.md)** します。 最新リリースに関する詳細については、次を参照してください。、[リリース ノート](sqlpackage-release-notes.md)します。
+**[最新バージョンをダウンロード](sqlpackage-download.md)** します。 最新リリースに関する詳細については、次を参照してください。、[リリース ノート](release-notes-sqlpackage.md)します。
   
 ## <a name="command-line-syntax"></a>コマンド ライン構文
 
@@ -211,7 +211,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|公開で、相違がある場合に ALTER ASSEMBLY ステートメントを発行するのではなく、常にアセンブリを削除して再作成することを指定します。|
 |**/p:**|PopulateFilesOnFileGroups (ブール値は ' True') を =|ターゲット データベースで新しい FileGroup が作成されたときに新しいファイルも作成するかどうかを指定します。|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|スキーマがデータベース サーバーに登録されるかどうかを指定します。|
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|その他の操作を実行するときに DeploymentPlanExecutor コントリビューターを実行する必要があるかどうかを指定します。|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|他の操作が実行されるときに DeploymentPlanExecutor コントリビューターを実行する必要があるかどうかを指定します。|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|データベースに公開するとき、データベース照合順序の相違を無視するか、更新するかを指定します。|
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|データベースに公開するとき、データベース互換性の相違を無視するか、更新するかを指定します。|
 |**/p:**|ScriptDatabaseOptions (ブール値は ' True') を =|ターゲット データベースのプロパティを公開操作の一部として設定するか、更新するかを指定します。|
@@ -428,7 +428,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
  |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|公開で、相違がある場合に ALTER ASSEMBLY ステートメントを発行するのではなく、常にアセンブリを削除して再作成することを指定します。 |
 |**/p:**|PopulateFilesOnFileGroups (ブール値は ' True') を =|ターゲット データベースで新しい FileGroup が作成されたときに新しいファイルも作成するかどうかを指定します。 |
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|スキーマがデータベース サーバーに登録されるかどうかを指定します。 
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|その他の操作を実行するときに DeploymentPlanExecutor コントリビューターを実行する必要があるかどうかを指定します。|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|他の操作が実行されるときに DeploymentPlanExecutor コントリビューターを実行する必要があるかどうかを指定します。|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|データベースに公開するとき、データベース照合順序の相違を無視するか、更新するかを指定します。 |
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|データベースに公開するとき、データベース互換性の相違を無視するか、更新するかを指定します。 |
 |**/p:**|ScriptDatabaseOptions (ブール値は ' True') を =|ターゲット データベースのプロパティを公開操作の一部として設定するか、更新するかを指定します。 |
@@ -589,7 +589,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|公開で、相違がある場合に ALTER ASSEMBLY ステートメントを発行するのではなく、常にアセンブリを削除して再作成することを指定します。|
 |**/p:**|PopulateFilesOnFileGroups (ブール値は ' True') を =|ターゲット データベースで新しい FileGroup が作成されたときに新しいファイルも作成するかどうかを指定します。|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|スキーマがデータベース サーバーに登録されるかどうかを指定します。|
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|その他の操作を実行するときに DeploymentPlanExecutor コントリビューターを実行する必要があるかどうかを指定します。|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|他の操作が実行されるときに DeploymentPlanExecutor コントリビューターを実行する必要があるかどうかを指定します。|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|データベースに公開するとき、データベース照合順序の相違を無視するか、更新するかを指定します。|
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|データベースに公開するとき、データベース互換性の相違を無視するか、更新するかを指定します。|
 |**/p:**|ScriptDatabaseOptions (ブール値は ' True') を =|ターゲット データベースのプロパティを公開操作の一部として設定するか、更新するかを指定します。|

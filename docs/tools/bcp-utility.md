@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5b1c1112e886c7874471c82b442e7583a8232dc8
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 90a5d458bcb7b1e90993a51ccfb4ebe217622f34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955993"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538654"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -552,7 +552,7 @@ bcp ユーティリティは、[Microsoft SQL Server 2016 Feature Pack](https://
 
 以下のスクリプトでは、`WideWorldImporters.Warehouse.StockItemTransactions` テーブルの空のコピーを作成し、主キー制約を追加します。  SQL Server Management Studio (SSMS) で、次の T-SQL スクリプトを実行します。
 
-```tsql  
+```sql  
 USE WideWorldImporters;  
 GO  
 

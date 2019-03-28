@@ -2,7 +2,7 @@
 title: ダウンロードしてインストール sqlpackage |Microsoft Docs
 description: ダウンロードし、Windows、macOS、または Linux の sqlpackage のインストール
 ms.custom: tools|sos
-ms.date: 06/18/2018
+ms.date: 06/19/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 7620050a28029010a4e0f0fd2e125a17a84721a0
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: 5a45803f4ce2a91962a5bba824a468ca436f7839
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737143"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527214"
 ---
 # <a name="download-and-install-sqlpackage"></a>ダウンロードしてインストール sqlpackage
 
@@ -29,7 +29,7 @@ sqlpackage は、Windows、macOS、Linux で実行されます。
 |macOS の .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2069126)|2019 年 2 月 1 日 | 18.1 |15.0.4316.1|
 |Linux の .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2069122)|2019 年 2 月 1 日 | 18.1 |15.0.4316.1|
 
-最新リリースに関する詳細については、次を参照してください。、[リリース ノート](sqlpackage-release-notes.md)します。
+最新リリースに関する詳細については、次を参照してください。、[リリース ノート](release-notes-sqlpackage.md)します。
 
 ## <a name="get-sqlpackage-for-windows"></a>Windows の sqlpackage を取得します。
 
