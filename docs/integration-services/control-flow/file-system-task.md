@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 07ec3a12ada376275ab4be5b40078d7ffc9aa469
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 47776933cee01725d19c74b571c63ad91342dd88
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639859"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272206"
 ---
 # <a name="file-system-task"></a>ファイル システム タスク
   ファイル システム タスクは、ファイル システム内のファイルとディレクトリの操作を実行します。 たとえば、ファイル システム タスクを使用すると、パッケージはディレクトリやファイルの作成、移動、または削除を実行できます。 また、ファイル システム タスクを使用して、ファイルやディレクトリの属性を設定することもできます。 たとえば、ファイル システム タスクを使用すると、ファイルを非表示にしたり読み取り専用にできます。  
@@ -141,7 +141,7 @@ ms.locfileid: "51639859"
   
 #### <a name="isdestinationpathvariable--true"></a>[IsDestinationPathVariable] = [True]  
  **[DestinationVariable]**  
- 一覧から変数名を選択するか、**[新しい変数...]** をクリックして新しい変数を作成します。  
+ 一覧から変数名を選択するか、\<**[新しい変数...]** をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -149,13 +149,13 @@ ms.locfileid: "51639859"
  **DestinationConnection**  
  ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 ### <a name="issourcepathvariable-dynamic-options"></a>[IsSourcePathVariable] の動的オプション  
   
 #### <a name="issourcepathvariable--true"></a>[IsSourcePathVariable] = [True]  
  **[SourceVariable]**  
- 一覧から変数名を選択するか、**[新しい変数...]** をクリックして新しい変数を作成します。  
+ 一覧から変数名を選択するか、\<**[新しい変数...]** をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -163,7 +163,7 @@ ms.locfileid: "51639859"
  **SourceConnection**  
  ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [[ファイル接続マネージャー エディター]](../../integration-services/connection-manager/file-connection-manager.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)  
   
 ### <a name="operation-dynamic-options"></a>[Operation] の動的オプション  
   

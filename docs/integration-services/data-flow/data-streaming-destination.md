@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a58fe80fe0d71cfb7d645df29d2fb06624ad66a8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638609"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278971"
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
-  **Data Streaming Destination** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Destination コンポーネントであり、 **OLE DB Provider for SSIS** で SSIS パッケージの出力を表形式の結果セットとして利用することを可能にします。 OLE DB Provider for SSIS を利用するリンク サーバーを作成し、そのリンク サーバーで SQL クエリを実行し、SSIS パッケージが返したデータを表示できます。  
+   **Data Streaming Destination** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Destination コンポーネントであり、 **OLE DB Provider for SSIS** で SSIS パッケージの出力を表形式の結果セットとして利用することを可能にします。 OLE DB Provider for SSIS を利用するリンク サーバーを作成し、そのリンク サーバーで SQL クエリを実行し、SSIS パッケージが返したデータを表示できます。  
   
  下の例のクエリは、SSIS カタログの Power BI フォルダーに SSISPackagePublishing プロジェクトの Package.dtsx パッケージからの出力を返します。 このクエリは [Default Linked Server for Integration Services] という名前のリンク サーバーを利用し、このリンク サーバーは新しい OLE DB Provider for SSIS を利用します。 クエリには、SSIS カタログのフォルダー名、プロジェクト名、パッケージ名が含まれています。 OLE DB Provider for SSIS はクエリに指定されたパッケージを実行し、表形式の結果セットを返します。  
   
@@ -31,7 +31,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ```  
   
 ## <a name="data-feed-publishing-components"></a>データ フィード パブリッシング コンポーネント  
- データ フィード パブリッシング コンポーネントには、コンポーネントとして、OLE DB Provider for SSIS、Data Streaming Destination、SSIS パッケージ パブリッシュ ウィザードが含まれています。 このウィザードでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース インスタンスで SSIS パッケージを SQL ビューとして公開できます。 このウィザードでは、OLE DB Provider for SSIS を利用するリンク サーバーとリンク サーバーでクエリを表示する SQL ビューを作成できます。 ビューを実行し、表形式のデータ セットとなっている SSIS パッケージからの結果にクエリを実行します。  
+ データ フィード パブリッシング コンポーネントにはコンポーネントとして、OLE DB Provider for SSIS、Data Streaming Destination、SSIS パッケージ パブリッシュ ウィザードが含まれています。 このウィザードでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース インスタンスで SSIS パッケージを SQL ビューとして公開できます。 このウィザードでは、OLE DB Provider for SSIS を利用するリンク サーバーとリンク サーバーでクエリを表示する SQL ビューを作成できます。 ビューを実行し、表形式のデータ セットとなっている SSIS パッケージからの結果にクエリを実行します。  
   
  SSISOLEDB プロバイダーがインストールされていることを確認するには、SQL Server Management Studio で、 **[サーバー オブジェクト]**、 **[リンク サーバー]**、 **[プロバイダー]** の順に展開し、 **SSISOLEDB** プロバイダーが表示されていることを確認します。 **[SSISOLEDB]** をダブルクリックし、有効になっていなければ、 **[InProcess 許可]** を有効にして **[OK]** をクリックします。  
   
@@ -42,12 +42,12 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 2.  C:\Program Files\Microsoft SQL Server\130\DTS\Binn から ISDataFeedPublishingWizard.exe を実行するか、[スタート] メニューからデータ フィード パブリッシング ウィザードを実行し、 **SSIS パッケージ パブリッシュ ウィザード** を実行します。  
   
-     このウィザードにより、OLE DB Provider for SSIS (SSISOLEDB) を利用するリンク サーバーが作成され、リンク サーバーのクエリを構成する SQL ビューが作成されます。 このクエリには、SSIS カタログのフォルダー名、プロジェクト名、パッケージ名が含まれています。  
+     このウィザードにより、OLE DB Provider for SSIS (SSISOLEDB) を利用するリンク サーバーが作成され、リンク サーバーのクエリを構成する SQL ビューが作成されます。 このクエリには、SSIS カタログのフォルダー名、プロジェクト名、およびパッケージ名が含まれます。  
   
 3.  SQL Server Management Studio で SQL ビューを実行し、SSIS パッケージからの結果を確認します。 このビューにより、作成したリンク サーバーを経由して OLE DB Provider for SSIS にクエリが送信されます。 OLE DB Provider for SSIS はクエリに指定されたパッケージを実行し、表形式の結果セットを返します。  
   
 > [!IMPORTANT]  
->  詳細な手順については、「 [チュートリアル: SSIS パッケージを SQL ビューとして公開する](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)」を参照してください。  
+>  詳細な手順については、「[チュートリアル: SQL ビューとして SSIS パッケージを公開する](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)」を参照してください。  
   
 ## <a name="expose-output-data-from-an-ssis-package-as-an-odata-feed-by-using-the-power-bi-admin-center"></a>Power BI Admin Center を利用し、SSIS パッケージからの出力データを OData フィードとして公開する  
  Power BI Admin Center を利用することで、IT 管理者はオンプレミス データ ソースからのデータを OData フィードとしてユーザーに公開できます。 Power BI Admin Center は既定で SQL Server データ ソースの登録のみを許可します。 ただし、 **Data Streaming Destination** と **Microsoft OLE DB Provider for SQL Server Integration Services (SSISOLEDB)** を利用し、ポータルで SSIS パッケージをデータ ソースとして登録し、SSIS パッケージからの結果データを OData フィードとしてユーザーに公開できます。  
@@ -58,12 +58,12 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [チュートリアル: SSIS パッケージを SQL ビューとして公開する](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
+-   [チュートリアル:SQL ビューとして SSIS パッケージを公開する](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
   
 ## <a name="configure-data-streaming-destination"></a>Data Streaming Destination を構成する
   **[Data Streaming Destination の詳細エディター]** ダイアログ ボックスを使用して、Data Streaming Destination を構成します。 このダイアログ ボックスを開くには、コンポーネントをダブルクリックするか、データ フロー デザイナーでコンポーネントを右クリックしてから **[編集]** をクリックします。  
   
- このダイアログ ボックスには、 **[コンポーネントのプロパティ]**、 **[入力列]**、 **[入力プロパティと出力プロパティ]** の 3 つのタブがあります。  
+ このダイアログ ボックスには、**[コンポーネントのプロパティ]**、**[入力列]**、**[入力プロパティと出力プロパティ]** という 3 つのタブがあります。  
   
 ## <a name="component-properties-tab"></a>[コンポーネントのプロパティ] タブ  
  このタブには、次の編集可能なフィールドがあります。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: babc48270415cdd4485dd75b43b052904824ebe5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2f1c260b97c60fd6b60a9a8c0ecf6e8fbd696fee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641779"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271061"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 処理タスク
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理タスクは、テーブル モデル、キューブ、ディメンション、マイニング モデルなどの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを処理します。  
@@ -60,7 +60,7 @@ ms.locfileid: "51641779"
   
  このタスクは、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに読み込む一括挿入タスク、またはデータをテーブルに読み込むデータ フローを実装するデータ フロー タスクと組み合わせて使用するのが一般的です。 たとえば、オンライン トランザクション処理 (OLTP) データベースからデータを抽出して、データ ウェアハウス内のファクト テーブルに読み込むデータ フローがデータ フロー タスク内にあり、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理タスクがこのタスクの処理後に呼び出され、データ ウェアハウスに構築されたキューブを処理する例などがあります。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理タスクは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続します。 詳しくは、「 [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理タスクは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続します。 詳しくは、「 [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
   
 ## <a name="error-handling"></a>エラー処理  
   
@@ -83,7 +83,7 @@ ms.locfileid: "51641779"
 ## <a name="analysis-services-processing-task-editor-general-page"></a>[Analysis Services 処理タスク エディター] ([全般] ページ)
   **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、Analysis Services 処理タスクの名前と説明を指定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **名前**  
  Analysis Services 処理タスクに一意の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -106,21 +106,21 @@ ms.locfileid: "51641779"
   
 4.  テーブル モデルでは、バッチ設定が無視されます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **Analysis Services 接続マネージャー**  
  既存の Analysis Services 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
  **[新規作成]**  
  新しい Analysis Services 接続マネージャーを作成します。  
   
- **関連トピック:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)、 [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **関連トピック:** [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)、[[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **[オブジェクト一覧]**  
  |プロパティ|[説明]|  
 |--------------|-----------------|  
 |**Object Name**|指定されたオブジェクト名を表示します。|  
 |**型**|指定されたオブジェクトの種類を表示します。|  
-|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック**: [多次元モデルの処理 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック:** [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
 |**[設定]**|指定されたオブジェクトの処理設定を表示します。|  
   
  **[追加]**  
@@ -132,7 +132,7 @@ ms.locfileid: "51641779"
  **[影響分析]**  
  選択したオブジェクトに対して影響分析を実行します。  
   
- **関連トピック:** [[影響分析] ダイアログ ボックス (Analysis Services - 多次元データ)](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **関連トピック:** [[影響分析] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **[バッチ設定の概要]**  
  |プロパティ|[説明]|  
@@ -146,5 +146,5 @@ ms.locfileid: "51641779"
  **[設定の変更]**  
  処理オプションおよびディメンション キー内のエラー処理を変更します。  
   
- **関連トピック:** [[設定の変更] ダイアログ ボックス (Analysis Services - 多次元データ)](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **関連トピック:** [[設定の変更] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   

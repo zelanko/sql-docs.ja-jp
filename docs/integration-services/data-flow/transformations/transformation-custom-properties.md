@@ -39,18 +39,18 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69dda6d5c0fbe7f8b66bf453b5f240588ad878ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7b9f8b3c7a4a4b6b2abf8cd0711ac0e6cec259c6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507708"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277451"
 ---
 # <a name="transformation-custom-properties"></a>変換のカスタム プロパティ
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、ほとんどのデータ フロー オブジェクトには共通するプロパティがありますが、それ以外にも、多くのデータ フロー オブジェクトにはオブジェクト固有のカスタム プロパティがあります。 カスタム プロパティにアクセスできるのは実行時のみで、このプロパティに関する説明は、『[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] マネージド プログラミング リファレンス マニュアル』には記載されていません。  
+   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、ほとんどのデータ フロー オブジェクトには共通するプロパティがありますが、それ以外にも、多くのデータ フロー オブジェクトにはオブジェクト固有のカスタム プロパティがあります。 カスタム プロパティにアクセスできるのは実行時のみで、このプロパティに関する説明は、『[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] マネージド プログラミング リファレンス マニュアル』には記載されていません。  
   
  ここでは、さまざまなデータ フローの変換のカスタム プロパティを一覧で示し、それぞれについて説明します。 データ フロー オブジェクトの大部分との共通プロパティについては、「 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)」を参照してください。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52507708"
 |[[派生列]](#derived)|[ピボット](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>カスタム プロパティを持たない変換  
- [Merge Transformation](../../../integration-services/data-flow/transformations/merge-transformation.md)、 [Multicast Transformation](../../../integration-services/data-flow/transformations/multicast-transformation.md)、および [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)の各変換には、コンポーネント、入力、または出力レベルのいずれにも、カスタム プロパティがありません。 これらの変換は、すべてのデータ フロー コンポーネントとの共通プロパティのみを使用します。  
+ コンポーネント、入力、出力といういずれのレベルでも、[マージ変換](../../../integration-services/data-flow/transformations/merge-transformation.md)、[マルチキャスト変換](../../../integration-services/data-flow/transformations/multicast-transformation.md)、[全体結合変換](../../../integration-services/data-flow/transformations/union-all-transformation.md)にはカスタム プロパティがありません。 これらの変換は、すべてのデータ フロー コンポーネントとの共通プロパティのみを使用します。  
   
 ##  <a name="aggregate"></a> 集計変換のカスタム プロパティ  
  集計変換には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
@@ -184,7 +184,7 @@ ms.locfileid: "52507708"
   
 |プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
-|FastParse|ブール値|列の解析に、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 このプロパティの既定値は **False**です。 詳細については、「 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 .<br /><br /> 注: このプロパティは、 **データ変換変換エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
+|FastParse|ブール値|列の解析に、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 このプロパティの既定値は **False**です。 詳細については、「 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 .<br /><br /> 注:このプロパティは、**データ変換変換エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
 |SourceInputColumnLineageId|Integer|出力列のソースである入力列の **LineageID** 。|  
   
  データ変換の変換の入力、入力列、および出力には、カスタム プロパティがありません。  
@@ -262,8 +262,8 @@ ms.locfileid: "52507708"
 |プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
 |[Delimiters]|String|変換が使用するトークン区切り記号。 既定の区切り記号には以下の文字が含まれます。スペース ( )、コンマ (,)、ピリオド (.)、セミコロン (;)、コロン (:)、ハイフン (-)、二重引用符 (")、単一引用符 (')、アンパサンド (&)、スラッシュ (/)、円記号 (\\)、アット マーク (@)、感嘆符 (!)、疑問符 (?)、左かっこ (()、右かっこ ())、小なり (\<)、大なり (>)、左角かっこ ([)、右角かっこ (])、左中かっこ ({)、右中かっこ (})、パイプ文字 (&#124;)、シャープ記号 (#)、アスタリスク (*)、キャレット (^)、およびパーセント (%)。|  
-|Exhaustive|ブール値|各入力レコードを、他のすべての入力レコードと比較するかどうかを指定する値。 値 **True** は、主としてデバッグ目的で設定されます。 このプロパティの既定値は **False**です。<br /><br /> 注: このプロパティは、 **あいまいグループ化変換エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
-|MaxMemoryUsage|Integer|変換で使用される最大メモリ容量。 このプロパティの既定値は **0**で、動的なメモリの使用が許可されることを示します。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。<br /><br /> 注: このプロパティは、 **あいまいグループ化変換エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
+|Exhaustive|ブール値|各入力レコードを、他のすべての入力レコードと比較するかどうかを指定する値。 値 **True** は、主としてデバッグ目的で設定されます。 このプロパティの既定値は **False**です。<br /><br /> 注:このプロパティは、**あいまいグループ化変換エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
+|MaxMemoryUsage|Integer|変換で使用される最大メモリ容量。 このプロパティの既定値は **0**で、動的なメモリの使用が許可されることを示します。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。<br /><br /> 注:このプロパティは、**あいまいグループ化変換エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
 |MinSimilarity|Double|重複部分を識別するために変換が使用する、類似性のしきい値。0 ～ 1 の間の値で表します。  このプロパティの既定値は 0.8 です。|  
   
  次の表は、あいまいグループ化変換の入力列のカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
@@ -297,11 +297,11 @@ ms.locfileid: "52507708"
 |CopyReferenceTable|ブール値|あいまい参照のインデックスの構築および以降の参照用に、参照テーブルのコピーを作成するかどうかを指定する値。 このプロパティの既定値は **True**です。|  
 |[Delimiters]|String|列の値をトークンにする際に使用される区切り記号。 既定の区切り記号には以下の文字が含まれます。スペース ( )、コンマ (,)、ピリオド (.)、セミコロン (;)、コロン (:)、ハイフン (-)、二重引用符 (")、単一引用符 (')、アンパサンド (&)、スラッシュ (/)、円記号 (\\)、アット マーク (@)、感嘆符 (!)、疑問符 (?)、左かっこ (()、右かっこ ())、小なり (\<)、大なり (>)、左角かっこ ([)、右角かっこ (])、左中かっこ ({)、右中かっこ (})、パイプ文字 (&#124;)。 シャープ記号 (#)、アスタリスク (*)、キャレット (^)、およびパーセント (%)。|  
 |DropExistingMatchIndex|ブール値|MatchIndexOptions の値が ReuseExistingIndex に設定されていない場合に、MatchIndexName で指定された一致インデックスを削除するかどうかを指定する値。 このプロパティの既定値は、 **True**です。|  
-|Exhaustive|ブール値|各入力レコードを、他のすべての入力レコードと比較するかどうかを指定する値。 値 **True** は、主としてデバッグ目的で設定されます。 このプロパティの既定値は **False**です。<br /><br /> 注: このプロパティは、 **あいまい参照変換エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
+|Exhaustive|ブール値|各入力レコードを、他のすべての入力レコードと比較するかどうかを指定する値。 値 **True** は、主としてデバッグ目的で設定されます。 このプロパティの既定値は **False**です。<br /><br /> 注:このプロパティは、**あいまい参照変換エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
 |MatchIndexName|String|一致インデックスの名前。 一致インデックスは、変換が使用するインデックスを作成して保存するテーブルです。 一致インデックスが再使用される場合、MatchIndexName は再使用するインデックスを示します。 MatchIndexName は、有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別子名である必要があります。 たとえば、名前にスペースが含まれる場合は、角かっこで囲む必要があります。|  
 |MatchIndexOptions|Integer (列挙)|変換が一致インデックスを管理する方法を指定する値。 このプロパティの値は、次のいずれか 1 つです。<br /><br /> **ReuseExistingIndex** (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
-|MaxMemoryUsage|Integer|参照テーブルの最大キャッシュ サイズ。 このプロパティの既定値は **0**で、これはキャッシュ サイズが無制限であることを示します。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。<br /><br /> 注: このプロパティは、 **あいまい参照変換エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
-|MaxOutputMatchesPerInput|Integer|変換で各入力行に対して返される一致結果の最大数。 このプロパティの既定値は **1**です。<br /><br /> 注: 100 より大きい値は、 **詳細エディター**を使用した場合にのみ指定できます。|  
+|MaxMemoryUsage|Integer|参照テーブルの最大キャッシュ サイズ。 このプロパティの既定値は **0**で、これはキャッシュ サイズが無制限であることを示します。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。<br /><br /> 注:このプロパティは、**あいまい参照変換エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
+|MaxOutputMatchesPerInput|Integer|変換で各入力行に対して返される一致結果の最大数。 このプロパティの既定値は **1**です。<br /><br /> 注:100 より大きい値は**詳細エディター**でのみ指定できます。|  
 |MinSimilarity|Integer|変換がコンポーネント レベルで使用する類似性のしきい値。0 ～ 1 の間の値で指定します。 しきい値より大きい行のみ、一致していると見なされます。|  
 |ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
 |ReferenceTableName|String|参照テーブルの名前。 名前は、有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別子名である必要があります。 たとえば、名前にスペースが含まれる場合は、角かっこで囲む必要があります。|  
@@ -524,7 +524,7 @@ ms.locfileid: "52507708"
   
 |プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
-|[列の型]|Integer (列挙)|列の更新の種類。 値は、 **Changing Attribute** (2)、 **Fixed Attribute** (4)、 **Historical Attribute** (3)、 **Key** (1)、 **Other** (0) です。|  
+|[列の型]|Integer (列挙)|列の更新の種類。 値は以下のとおりです。**Changing Attribute** (2)、**Fixed Attribute** (4)、**Historical Attribute** (3)、**Key** (1)、**Other** (0)。|  
   
  緩やかに変化するディメンション変換の入力、出力、および出力列には、カスタム プロパティがありません。  
   
@@ -570,7 +570,7 @@ ms.locfileid: "52507708"
 |NeedRefenceData|ブール値|参照テーブル内に格納された除外用語の一覧を使用するかどうかを指定する値。 このプロパティの既定値は **False**です。|  
 |OutTermColumn|String|除外用語を含む列の名前。|  
 |OutTermTable|String|除外用語を格納した列が含まれるテーブルの名前。|  
-|ScoreType|Integer|用語に関連付けられているスコアの種類を指定する値。 有効な値は、頻度を示す 0 と、TFIDF スコアを示す 1 です。 TFIDF スコアは、Term Frequency と Inverse Document Frequency の積です。"用語 T の TFIDF = (T の頻度) \* log( (入力の行数) / (T を含む行数) )" として定義されます。 このプロパティの既定値は **0**です。|  
+|ScoreType|Integer|用語に関連付けられているスコアの種類を指定する値。 有効な値は、頻度を示す 0 と、TFIDF スコアを示す 1 です。 TFIDF スコアは、Term Frequency と Inverse Document Frequency の積であり、次のように定義されます: 用語 T の TFIDF = (T の頻度) \* log( (入力の行数) / (T を含む行数) ) として定義されます。 このプロパティの既定値は **0**です。|  
 |WordOrPhrase|Integer|用語の種類を指定する値。 有効な値は、単語のみを示す 0、名詞句のみを示す 1、および単語と名詞句の両方を示す 2 です。 このプロパティの既定値は **0**です。|  
   
  用語抽出変換の入力、入力列、出力、および出力列には、カスタム プロパティがありません。  
