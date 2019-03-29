@@ -1,22 +1,21 @@
 ---
 title: 手順 6:参照変換を追加し、構成する | Microsoft Docs
 ms.custom: ''
-ms.date: 01/03/2019
+ms.date: 03/19/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82db40d3b3fd61129823b3e745d097b47bd6973b
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.reviewer: ''
+ms.openlocfilehash: b64cddbe6c786e488c1ba9b9d289e9e48f786cf3
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143378"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221963"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>レッスン 1-6:参照変換を追加し、構成する
 
@@ -98,7 +97,7 @@ ms.locfileid: "54143378"
   
 8.  **[列]** ページで、以下の選択を行います。  
   
-    1.  **[使用できる入力列]** パネルの **[CurrencyDate]** を **[使用できる参照列]** パネルにドラッグし、 **[FullDateAlternateKey]** の上にドロップします。  
+    1.  **[使用できる入力列]** パネルの **[CurrencyDate]** を **[使用できる参照列]** パネルにドラッグし、 **[FullDateAlternateKey]** の上にドロップします。  データ型の不一致を示すメッセージが表示された場合、CurrencyDate のデータ型を [DT_DBDATE] に変更してください。
   
     2.  **[使用できる参照列]** ボックスの一覧で、 **[DateKey]** の左側のチェック ボックスをオンにします。  
   
@@ -115,6 +114,3 @@ ms.locfileid: "54143378"
   
 ## <a name="see-also"></a>参照  
 [参照変換](../integration-services/data-flow/transformations/lookup-transformation.md)  
-  
-  
-  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],retrieving data
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c57c4c3d8b8fcc839c6cb7e1ee36606a0c798beb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c48817f8f24cdb9ab0055c3d46e1e9124bcdc9c6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733786"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277901"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>変更データを取得および理解する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにおいて、最初のタスクは、変更データを取得するクエリを実行することです。 このクエリは、データ フロー タスクの変換元コンポーネント内で実行します。 その後、下流にある変換や変換先を使用して、変更データを変換先に適用できます。  
@@ -58,6 +58,6 @@ ms.locfileid: "47733786"
 ## <a name="next-step"></a>次の手順  
  変更データを取得するように OLE DB ソースを構成したら、次の手順で、パッケージのデータ フローのデザインを開始します。  
   
- **次のトピック:** [挿入、更新、および削除を処理する](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
+ **次のトピック:**[挿入、更新、および削除を処理する](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
   

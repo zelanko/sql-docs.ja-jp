@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b187fb1d2e5595ef1ec75ed99c9a6e3f85029f3e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 87815205efb5598dd2901b46d4220092f76cde4a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640699"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283036"
 ---
 # <a name="cdc-control-task"></a>CDC 制御タスク
   CDC 制御タスクは、変更データ キャプチャ (CDC) パッケージのライフ サイクルの制御に使用します。 CDC 制御タスクは、初期読み込みパッケージと CDC パッケージとの同期処理を行い、CDC パッケージの実行で処理されるログ シーケンス番号 (LSN) 範囲を管理します。 また、エラー シナリオおよび復旧の処理も行います。  
@@ -42,7 +42,7 @@ ms.locfileid: "51640699"
 |演算|[説明]|  
 |---------------|-----------------|  
 |GetProcessingRange|この操作は、CDC ソース データ フローを使用するデータ フローを呼び出す前に使用されます。 この操作は、呼び出し時に CDC ソース データ フローが読み取る LSN の範囲を設定します。 範囲は、データ フローの処理中に CDC ソースによって使用される SSIS パッケージ変数に格納されます。<br /><br /> 格納される状態の詳細については、「 [状態変数の定義](../../integration-services/data-flow/define-a-state-variable.md)」を参照してください。|  
-|MarkProcessedRange|この操作は、CDC 実行で完全に処理された最後の LSN を記録するために、各 CDC の実行後 (CDC データ フローが正常に完了した後) に実行されます。 GetProcessingRange を次に実行する際、この位置が次の処理範囲の開始位置になります。|  
+|MarkProcessedRange|によってデコードされる文字を次に示します。この操作は、CDC 実行で完全に処理された最後の LSN を記録するために、各 CDC の実行後 (CDC データ フローが正常に完了した後) に実行されます。 GetProcessingRange を次に実行する際、この位置が次の処理範囲の開始位置になります。|  
   
 ## <a name="handling-cdc-state-persistency"></a>CDC 状態の永続性の処理  
  CDC 制御タスクは、アクティブ化のたびに永続的な状態を維持します。 CDC 状態に格納される情報を使用して CDC パッケージの処理範囲およびエラー条件を検出する処理範囲を決定し、管理します。 永続的な状態は文字列として格納されます。 詳細については、「 [状態変数の定義](../../integration-services/data-flow/define-a-state-variable.md)」を参照してください。  
@@ -95,7 +95,7 @@ ms.locfileid: "51640699"
   
 2.  **[制御フロー]** タブで、CDC 制御タスクをダブルクリックします。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[SQL Server CDC データベースの ADO.NET 接続マネージャー]**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。 選択した変更テーブルが存在する、CDC に対応した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続である必要があります。  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90144dc6169de000f94c2a07fa45893925ead915
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6068cb284bc0ff8d29f9a4c4da5b5bf3174ce5cd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659700"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274489"
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
 >  実行を起動できるのは 1 回のみです。 実行のインスタンスを起動するには、それが作成された状態である必要があります ([catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューの **status** 列の値が `1`)。  
   
 ## <a name="example"></a>例  
- 次の例では catalog.create_execution を呼び出して、Child1.dtsx パッケージの実行のインスタンスを作成します。 integration Services Project1 にはパッケージが含まれています。 例では catalog.set_execution_parameter_value を呼び出して、Parameter1、Parameter2、および LOGGING_LEVEL の各パラメーターの値を設定します。 例では catalog.start_execution を呼び出して、実行のインスタンスを起動します。  
+ 次の例では catalog.create_execution を呼び出して、Child1.dtsx パッケージの実行のインスタンスを作成します。 integration Services Project1 にはパッケージが含まれています。 例では catalog.set_execution_parameter_value を呼び出して、Parameter1、Parameter2、LOGGING_LEVEL の各パラメーターの値を設定します。 例では catalog.start_execution を呼び出して、実行のインスタンスを起動します。  
   
 ```sql
 Declare @execution_id bigint  

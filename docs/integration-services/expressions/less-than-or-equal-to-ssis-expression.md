@@ -11,15 +11,15 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - less than or equal to operator (<=)
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 514d9e976fc74d99aea555cc681f1dfc1fab4016
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54e4796f4a4c97dad255dd2e047f184fb8b0b879
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847840"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279296"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (以下) (SSIS 式)
   最初の式が 2 番目の式以下かどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  
@@ -59,7 +59,7 @@ expression1 <= expression2
     > [!NOTE]  
     >  文字列の比較では、大文字と小文字、アクセント、かな、および文字幅が区別されます。  
   
--   **日付、時刻、または日付/時刻** *expression1* と *expression2* は、どちらも DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、または DT_FILETIME のいずれかのデータ型に評価される必要があります。  
+-   **日付、時刻、または日付/時刻** *expression1* と *expression2* は、どちらも次のいずれかのデータ型に評価される必要があります。DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、DT_FILETIME。  
   
     > [!NOTE]  
     >  時刻データ型に評価される式と、日付データ型または日付/時刻データ型に評価される式との間の比較はサポートされていません。 システムによってエラーが生成されます。  
@@ -105,9 +105,9 @@ ListPrice <= 500
   
 ## <a name="see-also"></a>参照  
  [&#62; &#40;より大きい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
- [&#60; (より小さい) (SSIS 式)](../../integration-services/expressions/less-than-ssis-expression.md)   
+ [&#60; &#40;より小さい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
  [&#62;= &#40;以上&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

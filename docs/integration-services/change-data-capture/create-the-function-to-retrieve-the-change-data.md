@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc5fb2da6ab1d276ac4a5397b8ea9832878b1c5a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 49c4e75641056db17faabcc937ee1ec76fd470d5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418033"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280336"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>変更データを取得する関数を作成する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローが完了したので、次の作業では、変更データを取得するテーブル値関数を作成します。 この関数は、最初の増分読み込みの前に一度作成するだけで済みます。  
@@ -133,7 +133,7 @@ deallocate #hfunctions
   
 -   変更データの要求されたすべての列。  
   
--   行に関連付けられている操作を示すために 1 文字または 2 文字のフィールドを使用する、__CDC_OPERATION という名前の列。 このフィールドに有効な値は、'I' (挿入)、'D' (削除)、'UO' (古い値の更新)、および 'UN' (新しい値の更新) です。  
+-   行に関連付けられている操作を示すために 1 文字または 2 文字のフィールドを使用する、__CDC_OPERATION という名前の列。 このフィールドに有効な値は、'I' (挿入)、'D' (削除)、'UO' (古い値の更新)、'UN' (新しい値の更新) です。  
   
 -   操作コードの後に、 *@update_flag_list* パラメーターで指定された順にビット列として表示される更新フラグ (要求時)。 これらの列には、関連する列名に '_uflag' が追加された名前が付けられています。  
   
@@ -220,6 +220,6 @@ go
 ## <a name="next-step"></a>次の手順  
  変更データをクエリで取得するテーブル値関数を作成したら、次の手順で、パッケージのデータ フローのデザインを開始します。  
   
- **次のトピック:** [変更データを取得および理解する](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+ **次のトピック:**[変更データを取得および理解する](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   

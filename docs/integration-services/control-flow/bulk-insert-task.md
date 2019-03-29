@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bd16052afcb3acf9b0d5a45f6f57ab896fcdc1c1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 42e26d257b915aad5ffa457605fbb68c1b66fab9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531829"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290708"
 ---
 # <a name="bulk-insert-task"></a>一括挿入タスク
   一括挿入タスクは、大量のデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはビューにコピーするための効率的な方法です。 たとえば、会社で 100 万行の製品リストをメインフレーム システムに格納し、電子商取引システムで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して Web ページを構成しているとします。 また、メインフレームにあるマスター製品リストを使用して、夜間に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の製品テーブルを更新する必要があるものとします。 このテーブルを更新するには、製品リストをタブ区切り形式で保存し、一括挿入タスクを使用してデータを直接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルにコピーします。  
@@ -120,7 +120,7 @@ ms.locfileid: "52531829"
   
  一括挿入操作の詳細については、「[Bulk Insert Task](../../integration-services/control-flow/bulk-insert-task.md)」(一括挿入タスク) と「[データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[接続]**  
  OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...**>] をクリックして新しい接続を作成します。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "52531829"
 ## <a name="bulk-insert-task-editor-general-page"></a>[一括挿入タスク エディター] ([全般] ページ)
   **[一括挿入タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用して、一括挿入タスクの名前と説明を指定します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **名前**  
  一括挿入タスクに一意の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "52531829"
   
  一括挿入タスクについては、「[一括挿入タスク](../../integration-services/control-flow/bulk-insert-task.md)」および「[「BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **CodePage**  
  データ ファイル内のデータのコード ページを指定します。  
   

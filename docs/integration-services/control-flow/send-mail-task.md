@@ -18,15 +18,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2bb26e75401f7dfd93e23c197a8e1419ad21cb2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c50b86d2d5e96951b9bdeabf6750fbb8dd7a3d30
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528454"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271480"
 ---
 # <a name="send-mail-task"></a>メール送信タスク
   メール送信タスクは、電子メール メッセージを送信します。 メール送信タスクを使用すると、パッケージ ワークフロー内のタスクが成功または失敗した場合にパッケージからメッセージを送信したり、実行時にパッケージで発生するイベントに応答してメッセージを送信したりできます。 たとえば、データベースのバックアップ タスクが成功または失敗したことを、メール送信タスクからデータベース管理者に通知できます。  
@@ -88,7 +88,7 @@ ms.locfileid: "52528454"
 ## <a name="send-mail-task-editor-general-page"></a>[メール送信タスク エディター] ([全般] ページ)
   **[メール送信タスク エディター]** の **[全般]** ページを使用すると、メール送信タスクに名前を付けて説明を記述できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **名前**  
  メール送信タスクに一意の名前を提供します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -100,14 +100,14 @@ ms.locfileid: "52528454"
 ## <a name="send-mail-task-editor-mail-page"></a>[メール送信タスク エディター] ([メール] ページ)
   **[メール送信タスク エディター]** ダイアログ ボックスの **[メール]** ページを使用すると、受信者、メッセージの種類、メッセージの重要度を指定できます。 メッセージにファイルを添付することもできます。 メッセージ テキストは、入力した文字列、テキストが含まれるファイルへのファイル接続、またはテキストが含まれる変数の名前になります。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[SMTPConnection]**  
  一覧で SMTP 接続マネージャーを選択するか、[**\<新しい接続...>**] をクリックして新しい接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  SMTP 接続マネージャーでは、匿名認証と Windows 認証のみがサポートされています。 基本認証はサポートされていません。  
   
- **関連項目:** [SMTP 接続マネージャー](../../integration-services/connection-manager/smtp-connection-manager.md)  
+ **関連トピック:** [SMTP 接続マネージャー](../../integration-services/connection-manager/smtp-connection-manager.md)  
   
  **From**  
  送信者の電子メール アドレスを指定します。  
@@ -152,7 +152,7 @@ ms.locfileid: "52528454"
  **[MessageSource]**  
  ファイル接続マネージャーを一覧から選択するか、[\<**新しい接続...>**] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>[MessageSourceType] = [変数]  
  **[MessageSource]**  

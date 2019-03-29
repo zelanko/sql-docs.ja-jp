@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 37c720096cb27f19617744512c212c415373612b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b160f1a6aa71b612c80eb21daa8d2173376cee69
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639619"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272977"
 ---
 # <a name="ole-db-source"></a>OLE DB ソース
   OLE DB ソースは、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなリレーショナル データベースからデータを抽出します。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルからデータを抽出できます。  
@@ -146,7 +146,7 @@ ms.locfileid: "51639619"
 |オプション|[説明]|  
 |------------|-----------------|  
 |[テーブルまたはビュー]|OLE DB データベースのテーブルまたはビューからデータを取得します。|  
-|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報:**[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |[SQL コマンド]|SQL クエリを使用して、OLE DB データ ソースからデータを取得します。|  
 |[変数からの SQL コマンド]|SQL クエリ テキストを変数で指定します。|  
   
@@ -189,7 +189,7 @@ ms.locfileid: "51639619"
 ## <a name="ole-db-source-editor-columns-page"></a>[OLE DB ソース エディター] ([列] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "51639619"
 ## <a name="ole-db-source-editor-error-output-page"></a>[OLE DB ソース エディター] ([エラー出力] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "51639619"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連項目:**[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  

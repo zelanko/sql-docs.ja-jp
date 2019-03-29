@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9aeb16eff9632fe5a6859985f70e8aefddd0fea4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cbd69e8674d7e2672502bfafe6550b83bc4e0362
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414539"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271110"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換
   緩やかに変化するディメンション変換は、データ ウェアハウスのディメンション テーブル内にある、レコードの更新および挿入を調整します。 たとえば、この変換を使用すると、AdventureWorks OLTP データベースの Production.Products テーブルにあるデータを使って [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] データベースの DimProduct テーブルに挿入や更新を行う変換出力を構成できます。  
@@ -47,7 +47,7 @@ ms.locfileid: "52414539"
   
 -   変化する属性の変更は、既存のレコードを上書きします。 この変更の種類は、種類 1 の変更に相当します。 緩やかに変化するディメンション変換は、これらの行を **[変化する属性更新の出力]** という名前の出力に送信します。  
   
--   履歴属性の変更は、既存のレコードを更新するのではなく、新しいレコードを作成します。 既存のレコードに許可されている変更は、そのレコードが現在のレコードか、または有効期限が切れているかを示す列の更新のみです。 この変更の種類は、種類 2 の変更に相当します。 緩やかに変化するディメンション変換は、これらの列を、 **[履歴属性挿入の出力]** および **[新しい出力]** の 2 つの出力に送信します。  
+-   履歴属性の変更は、既存のレコードを更新するのではなく、新しいレコードを作成します。 既存のレコードに許可されている変更は、そのレコードが現在のレコードか、または有効期限が切れているかを示す列の更新のみです。 この変更の種類は、種類 2 の変更に相当します。 緩やかに変化するディメンション変換は、これらの列を **[履歴属性挿入の出力]** および **[新しい出力]** の 2 つの出力に送信します。  
   
 -   固定属性の変更は、列の値が変更できないことを示します。 緩やかに変化するディメンション変換は、変更を検出し、変更のあった行を **[固定属性の出力]** という名前の出力に送信します。  
   

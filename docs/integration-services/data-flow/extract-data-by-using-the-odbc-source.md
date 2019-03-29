@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 864e98d7f137a4d642f11e741bfac6d27c5ed55e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd4f4adc566a3bef283c1c8e5757279df64966a3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795990"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274553"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>ODBC 入力元を使用したデータ抽出
   この手順では、ODBC 入力元を使用してデータを抽出する方法について説明します。 ODBC 入力元を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクがあらかじめ含まれている必要があります。  
@@ -37,7 +37,7 @@ ms.locfileid: "47795990"
   
          この一覧には、最初の 1,000 個のテーブルのみが含まれます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (*) を使用すると、目的のテーブルが表示されます。  
   
-    -   **[SQLコマンド]**: SQLコマンドを入力するか、 **[参照]** をクリックしてテキスト ファイルから SQL クエリを読み込みます。  
+    -   **[SQL コマンド]**: SQL コマンドを入力するか、**[参照]** をクリックしてテキスト ファイルから SQL クエリを読み込みます。  
   
 6.  **[プレビュー]** をクリックすると、ODBC 入力元によって抽出されるデータを最大 200 行表示できます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47795990"
   
 ## <a name="see-also"></a>参照  
  [ODBC ソース エディター ([接続マネージャー] ページ)](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [[ODBC ソース エディター] &#40;[列] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
+ [ODBC ソース エディター ([列] ページ)](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
  [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

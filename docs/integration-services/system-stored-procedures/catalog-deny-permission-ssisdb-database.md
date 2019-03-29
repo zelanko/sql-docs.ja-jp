@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 53bd2104d0651734d1c65c9800859254f8345b1a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 55073736e89cd66d736805a0e029746b68c55adb
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127042"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280496"
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,15 +48,15 @@ catalog.deny_permission [ @object_type = ] object_type
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0 を返します。  
   
- 1 (object_class は有効ではありません)  
+ 1 (object_class が無効です)  
   
  2 (object_id が存在しない)  
   
  3 (プリンシパルが存在しない)  
   
- 4 (アクセス許可は、無効です)  
+ 4 (アクセス許可が無効です)  
   
- その他のエラーの場合は 5 を返します。  
+ 5 (その他のエラー)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -88,8 +88,8 @@ catalog.deny_permission [ @object_type = ] object_type
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  エラーまたは警告が発生する可能性がある条件を以下に示します。  
   
--   Permission_type が指定されている場合、プロシージャを指定したオブジェクトの指定したプリンシパルに明示的に割り当てられている、指定した権限を拒否します。 このようなインスタンスがない場合、プロシージャは成功コード値 (`0`) を返します。  
+-   permission_type が指定されている場合、プロシージャを指定したオブジェクトの指定したプリンシパルに明示的に割り当てられている、指定した権限を拒否します。 このようなインスタンスがない場合、プロシージャは成功コード値 (`0`) を返します。  
   
--   Permission_type を省略すると、プロシージャは、指定したオブジェクトの指定したプリンシパルのすべての権限を拒否します。  
+-   permission_type を省略すると、プロシージャは、指定したオブジェクトの指定したプリンシパルのすべての権限を拒否します。  
   
   

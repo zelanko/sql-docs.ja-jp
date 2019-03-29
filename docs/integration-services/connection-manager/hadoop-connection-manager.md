@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d7544f30f065b9acbef3efc55ac7165b58da2e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2aa8b928d9bfc7c8c76672b4de5387cad96c6b19
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417918"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281436"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 接続マネージャー
   Hadoop 接続マネージャーでは、プロパティに指定された値を使用して SQL Server Integration Services (SSIS) パッケージを Hadoop クラスターに接続できます。  
@@ -63,10 +63,10 @@ ms.locfileid: "52417918"
 
 ## <a name="connect-with-kerberos-authentication"></a>Kerberos 認証を使用した接続
 Hadoop 接続マネージャーで Kerberos 認証を使用できるようにオンプレミス環境を設定する方法は 2 つあります。 状況に合う方法を選択することができます。
--   方法 1: [SSIS コンピューターを Kerberos 領域に参加させる](#kerberos-join-realm)
--   方法 2: [Windows ドメインと Kerberos 領域の間の相互信頼関係を有効にする](#kerberos-mutual-trust)
+-   オプション 1: [SSIS コンピューターを Kerberos 領域に参加させる](#kerberos-join-realm)
+-   オプション 2:[Windows ドメインと Kerberos 領域の間の相互信頼関係を有効にする](#kerberos-mutual-trust)
 
-### <a name="kerberos-join-realm"></a>方法 1: SSIS コンピューターを Kerberos 領域に参加させる
+### <a name="kerberos-join-realm"></a>オプション 1: SSIS コンピューターを Kerberos 領域に参加させる
 
 #### <a name="requirements"></a>要件:
 
@@ -96,7 +96,7 @@ SSIS コンピューター:
         kdc = <your_kdc_server_address>
     ```
 
-### <a name="kerberos-mutual-trust"></a>方法 2: Windows ドメインと Kerberos 領域の間の相互信頼関係を有効にする
+### <a name="kerberos-mutual-trust"></a>オプション 2: Windows ドメインと Kerberos 領域の間の相互信頼関係を有効にする
 
 #### <a name="requirements"></a>要件:
 -   ゲートウェイ コンピューターは Windows ドメインに参加する必要があります。

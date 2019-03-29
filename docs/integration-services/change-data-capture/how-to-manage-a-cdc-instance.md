@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c7b2bf0b998edc8e3a3b1afdc679b0d9ccae9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a7f15a409168c55e18da3585042715ac4aef898
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693310"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270933"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   この手順では、CDC デザイナー コンソールを使用して CDC インスタンスの操作を実行時に管理する方法について説明します。  
@@ -41,11 +41,11 @@ ms.locfileid: "47693310"
   
     -   **[リセット]**: CDC インスタンスを初期 (空) の状態にリセットするには、 **[リセット]** をクリックします。 このオプションは、CDC インスタンスが停止しているときに使用できます。 変更テーブル内のすべての変更および CDC インスタンスの内部状態が削除されます。 CDC インスタンスが後から開始されると、変更キャプチャはその時点から開始され、CDC インスタンスの開始後に開始されたトランザクションのみがキャプチャの対象となります。  
   
-    -   **[削除]**: CDC インスタンスを削除します。  
+    -   **[削除]**:CDC インスタンスを削除します。  
   
-    -   **[Oracle ログ スクリプト]**: [Oracle ログ スクリプト] ダイアログ ボックスに Oracle 補足ログ スクリプトを表示するには、 **[Oracle ログ スクリプト]** をクリックします。 このダイアログ ボックスで実行できる操作の詳細については、「 [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)」を参照してください。  
+    -   **[Oracle ログ スクリプト]**: [Oracle ログ スクリプト] ダイアログ ボックスに Oracle 補足ログ スクリプトを表示するには、**[Oracle ログ スクリプト]** をクリックします。 このダイアログ ボックスで実行できる操作の詳細については、「 [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)」を参照してください。  
   
-         **注**: 補足ログ スクリプトを実行すると、[スクリプトを実行するための Oracle 資格情報] ダイアログ ボックスが表示されます。このダイアログ ボックスで、有効な Oracle ユーザー名とパスワードを指定します。 適切な Oracle 資格情報を指定する方法については、「 [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)」を参照してください。  
+         **注**:補足ログ スクリプトを実行すると、[スクリプトを実行するための Oracle 資格情報] ダイアログ ボックスが表示されます。このダイアログ ボックスで、有効な Oracle ユーザー名とパスワードを指定します。 適切な Oracle 資格情報を指定する方法については、「 [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)」を参照してください。  
   
     -   **[CDC インスタンスの配置]**: CDC インスタンスの配置スクリプトを生成します。 このダイアログ ボックスの詳細については、「 [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)」を参照してください。  
   

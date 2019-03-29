@@ -14,15 +14,15 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6cd923a8c89336d009633ef3a33b1d56048c345c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f1a8773a0c58b597f5a139346919c62d41968e79
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523768"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272142"
 ---
 # <a name="system-variables"></a>システム変数
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、実行中のパッケージとそのオブジェクトに関する情報を格納する、システム変数のセットが用意されています。 これらの変数は、式およびプロパティ式の内部で使用でき、パッケージ、コンテナー、タスク、およびイベント ハンドラーをカスタマイズできます。  
@@ -90,7 +90,7 @@ ms.locfileid: "52523768"
 |**ProgressCountHigh**|Int32|OnProgress イベントによって処理される操作の総数を示す、64 ビット値の上位部分です。|OnProgress イベント ハンドラー|  
 |**ProgressCountLow**|Int32|OnProgress イベントによって処理される操作の総数を示す、64 ビット値の下位部分です。|OnProgress イベント ハンドラー|  
 |**ProgressDescription**|String|進行状況の説明です。|OnProgress イベント ハンドラー|  
-|**Propagate**|ブール値|イベントが、上位レベルのイベント ハンドラーに反映されるかどうかを示します。<br /><br /> 注: 変数 **Propagate** の値は、パッケージの検証中は無視されます。 子パッケージ内で **Propagate** を **False** に設定しても、イベントは親パッケージに反映されます。|すべてのイベント ハンドラー|  
+|**Propagate**|ブール値|イベントが、上位レベルのイベント ハンドラーに反映されるかどうかを示します。<br /><br /> 注:変数 **Propagate** の値は、パッケージの検証中は無視されます。 子パッケージ内で **Propagate** を **False** に設定しても、イベントは親パッケージに反映されます。|すべてのイベント ハンドラー|  
 |**SourceDescription**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの説明です。|すべてのイベント ハンドラー|  
 |**[SourceID]**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの一意識別子です。|すべてのイベント ハンドラー|  
 |**[SourceName]**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの名前です。|すべてのイベント ハンドラー|  

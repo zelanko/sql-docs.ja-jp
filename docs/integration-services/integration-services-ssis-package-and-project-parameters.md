@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27af358d3d6fb5feb1bd5d10fb194beb52df011e
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 529bc6a4568ad9979da984607602c2a014b02743
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858702"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281316"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) パッケージおよびプロジェクト パラメーター
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) パラメーターを使用すると、パッケージの実行時にパッケージ内のプロパティに値を割り当てることができます。 " *プロジェクト パラメーター* " はプロジェクト レベル、" *パッケージ パラメーター* " はパッケージ レベルで作成できます。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。  
@@ -164,7 +164,7 @@ ms.locfileid: "51858702"
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
 **[パラメーター化]** ダイアログ ボックスでは、新規または既存のパラメーターをタスクのプロパティと関連付けることができます。 このダイアログ ボックスを開くには、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでタスクまたは [制御フロー] タブを右クリックし、**[パラメーター化]** をクリックします。 次の一覧では、このダイアログ ボックスの UI 要素について説明します。 パラメーターの詳細については、「 [Integration Services (SSIS) パラメーター](https://msdn.microsoft.com/library/hh213214.aspx)」を参照してください。
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **プロパティ**  
  パラメーターと関連付けるタスクのプロパティを選択します。 この一覧には、パラメーター化できるすべてのプロパティが表示されます。  
   
@@ -206,7 +206,7 @@ ms.locfileid: "51858702"
   
 3.  **[ページの選択]** の **[パラメーター]** をクリックして、パラメーター ページを開きます。  
   
-4.  **[パラメーター]** の一覧で目的のパラメーターを選択します。 注: **[コンテナー]** 列を使用すると、プロジェクト パラメーターとパッケージパラメーターを区別できます。  
+4.  **[パラメーター]** の一覧で目的のパラメーターを選択します。 注:**[コンテナー]** 列を使用すると、プロジェクト パラメーターとパッケージパラメーターを区別できます。  
   
 5.  **[値]** 列で、目的のサーバーの既定のパラメーター値を指定します。  
 
@@ -214,6 +214,6 @@ ms.locfileid: "51858702"
  Transact-SQL を使用してサーバーの既定値を設定するには、[catalog.set_object_parameter_value &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) ストアド プロシージャを使用します。 現在のサーバーの既定値を表示するには、[catalog.object_parameters &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) ビューをクエリします。 サーバーの既定値をクリアするには、[catalog.clear_object_parameter_value &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md) ストアド プロシージャを使用します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- mattmasson.com のブログ「 [SSIS 簡単なヒント: 必要なパラメーター](https://go.microsoft.com/fwlink/?LinkId=239781)」  
+ mattmasson.com のブログ記事、「[SSIS 簡単なヒント: 必要なパラメーター](https://go.microsoft.com/fwlink/?LinkId=239781)」  
   
   

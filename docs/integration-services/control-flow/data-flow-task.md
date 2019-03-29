@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27976be0f3b6091450650f2bf3a73d1afbe42d20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cca0fb51c67bf4cba471b10c30267d535d83d159
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518470"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274066"
 ---
 # <a name="data-flow-task"></a>[データ フロー タスク]
   データ フロー タスクは、変換元と変換先との間でデータを移動するデータ フロー エンジンをカプセル化して、データの移動時にユーザーがデータを変換、クリーンアップ、および変更できるようにします。 データ フロー タスクをパッケージの制御フローに追加すると、パッケージでデータの抽出、変換、および読み込みを行うことができます。  
@@ -89,7 +89,7 @@ ms.locfileid: "52518470"
   
  たとえば、次の表に含まれるメッセージ "行がデータ フロー コンポーネントに入力として指定されました。 :  : 1185 : OLE DB ソースの出力 : 1180 : 並べ替え : 1181 : 並べ替えの入力 : 76" は、列へと解析されています。 このメッセージは、OLE DB ソースから並べ替え変換に行が送信されるときに **OnPipelineRowsSent** イベントによって書き込まれました。  
   
-|[列]|[説明]|ReplTest1|  
+|[列]|[説明]|[値]|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB ソースと並べ替え変換の間のパスの **ID** プロパティの値です。|1185|  
 |**PathName**|パスの **Name** プロパティの値です。|OLE DB ソースの出力|  

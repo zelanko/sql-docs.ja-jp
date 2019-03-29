@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data flow task [Integration Services], adding
 - MainPipe object
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4336edfce81af47477df6eb89f45fe3bfc006215
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3651452faec19cfcddd74cba4736c7c9db10c5eb
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541998"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277046"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>プログラムによるデータ フロー タスクの追加
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] にはデータ フロー タスクというタスクがあります。これは、オブジェクト モデルでは <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper> 名前空間として表されます。 データ フロー タスクは、パッケージの実行時にデータを変換、移動する目的専用の、特殊で高性能なタスクです。 他のタスクと同様、データ フロー タスクは <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> オブジェクトによってラップされており、ランタイム エンジンはこれを単にパッケージ内のタスクの 1 つとして扱います。 ただし、データ フロー内には、別にデータ フロー コンポーネントというオブジェクトもあります。 これは変換元から変換先にデータを移動するコンポーネントで、その際に変換を経由する場合もあります。 コンポーネントには、移動の方向とデータの変換方法が定義されています。 データ フロー タスクを設定するには、タスクにコンポーネントを追加し、それを接続します。これにより、データ フローの確立と目的の変換を実行します。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 60ddc7dd6b9afc953017ed076fc9a57a713bc818
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dbbad401e6233478039786d24df0bd15ac21e805
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527636"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272611"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI イベント監視タスク
   WMI イベント監視タスクは、Windows Management Instrumentation Query Language (WQL) イベント クエリを使用して対象のイベントを指定することにより、Windows Management Instrumentation (WMI) イベントを監視します。 WMI イベント監視タスクは、次の目的で使用できます。  
@@ -110,7 +110,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  WQL (WMI Query Language) の詳細については、MSDN ライブラリにある Windows Management Instrumentation のトピック「 [WQL を使用したクエリ](https://go.microsoft.com/fwlink/?LinkId=79045)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **名前**  
  WMI イベント監視タスクに一意の名前を提供します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -129,7 +129,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
  **[WMIConnectionName]**  
  WMI 接続マネージャーを一覧から選択するか、[\<**新しい WMI 接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)、 [WMI 接続マネージャー エディター](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+ **関連トピック:** [WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 接続マネージャー エディター](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
  **[WQLQuerySourceType]**  
  タスクで実行する WQL クエリのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -168,7 +168,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
  **[WQLQuerySource]**  
  ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="wqlquerysource--variable"></a>[WQLQuerySource] = [変数]  
  **[WQLQuerySource]**  

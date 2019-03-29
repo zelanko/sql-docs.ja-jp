@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c89486bb4d33ba52d1e0516d51eede715ddd9987
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 58bd2e2dfa541dd4d4200f3b7518b1f6c2d4ad0b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405650"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277651"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  *object_type* パラメーターを 50 に設定します。  
   
-|ReplTest1|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |0|なし<br /><br /> ログ記録をオフにします。 パッケージの実行状態のみがログに記録されます。|  
 |1|Basic<br /><br /> カスタム イベントと診断イベントを除く、すべてのイベントをログに記録します。 これが既定値です。|  
@@ -85,7 +85,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  パッケージの実行中にエラーが発生した場合に、Integration Services サーバーによりダンプ ファイルが生成されるように指定するには、未実行の実行インスタンスに次のパラメーター値を設定します。  
   
-|パラメーター|ReplTest1|  
+|パラメーター|[値]|  
 |---------------|-----------|  
 |*execution_id*|実行のインスタンスの一意識別子|  
 |*object_type*|50|  
@@ -94,7 +94,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  パッケージの実行中にイベントが発生した場合に、Integration Services サーバーによりダンプ ファイルを生成されるように指定するには、未実行の実行インスタンスに次のパラメーター値を設定します。  
   
-|パラメーター|ReplTest1|  
+|パラメーター|[値]|  
 |---------------|-----------|  
 |*execution_id*|実行のインスタンスの一意識別子|  
 |*object_type*|50|  
@@ -103,7 +103,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  パッケージの実行中に、Integration Services サーバーによるダンプ ファイルの生成が行われる原因となるイベントを指定するには、未実行の実行インスタンスに次のパラメーター値を設定します。 複数のイベント コードは、セミコロンで区切ります。  
   
-|パラメーター|ReplTest1|  
+|パラメーター|[値]|  
 |---------------|-----------|  
 |*execution_id*|実行のインスタンスの一意識別子|  
 |*object_type*|50|  

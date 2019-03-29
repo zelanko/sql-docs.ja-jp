@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88c92298743eb9eec610b472f498186938d6b651
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 50775777118d9f276e744f2c8fd8aff06bf0f0fe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640459"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290628"
 ---
 # <a name="xml-source"></a>XML ソース
   XML ソースは XML データ ファイルを読み取り、ソース出力の列にデータを設定します。  
@@ -94,7 +94,7 @@ ms.locfileid: "51640459"
  **[データ アクセス モード]**  
  ソースからデータを選択する方法を指定します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |[XML ファイルの場所]|XML ファイルからデータを取得します。|  
 |[変数からの XML ファイル]|XML ファイルの名前を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -132,7 +132,7 @@ ms.locfileid: "51640459"
 ## <a name="xml-source-editor-columns-page"></a>[XML ソース エディター] ([列] ページ)
   **[XML ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用して、出力列を外部 (変換元) 列にマップします。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "51640459"
 ## <a name="xml-source-editor-error-output-page"></a>[XML ソース エディター] ([エラー出力] ページ)
   **[XML ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "51640459"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連項目:**[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  

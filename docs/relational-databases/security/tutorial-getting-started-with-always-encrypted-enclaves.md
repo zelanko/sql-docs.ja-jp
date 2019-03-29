@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072316"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417154"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -92,18 +92,19 @@ ms.locfileid: "58072316"
 >[!NOTE]
 >ホスト キーの構成証明はテスト環境でのみ使用することをお勧めします。 運用環境では、TPM 構成証明を使用してください。
 
-1. 管理者として SQL Server コンピューターにサインインし、管理者特権の Windows PowerShell コンソールを開いて、保護されたホスト機能をインストールします。これにより、Hyper-V もインストールされます (まだインストールされていない場合)。
+1. 管理者として SQL Server コンピューターにサインインし、管理者特権で Windows PowerShell コンソールを開き、computername 変数にアクセスしてコンピューターの名前を取得します。
+
+   ```powershell
+   $env:computername 
+   ```
+
+2. 保護されたホスト機能をインストールします。Hyper-V もインストールされます (まだインストールされていない)。
 
    ```powershell
    Enable-WindowsOptionalFeature -Online -FeatureName HostGuardian -All
    ```
 
-2. Hyper-V のインストールを完了するように求められたら、SQL Server コンピューターを再起動します。
-3. 以下の変数の値を取得して、SQL Server コンピューターの名前を確認します。
-
-   ```powershell
-   $env:computername 
-   ```
+3. Hyper-V のインストールを完了するように求められたら、SQL Server コンピューターを再起動します。
 
 4. もう一度 SQL Server コンピューターに管理者としてサインインし、管理者特権の Windows PowerShell コンソールを開きます。一意のホスト キーを生成し、結果の公開キーをファイルにエクスポートします。
 
@@ -112,14 +113,15 @@ ms.locfileid: "58072316"
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. 前の手順で生成されたホスト キー ファイルを HGS マシンにコピーします。 次の手順では、ファイル名が hostkey.cer で、これを HGS マシン上のデスクトップにコピーすることを想定しています。
+5. 前の手順で生成したホスト キー ファイルを HGS マシンに手動でコピーします。 次の手順では、ファイル名が hostkey.cer で、これを HGS マシン上のデスクトップにコピーすることを想定しています。
+
 6. HGS コンピューター上で、管理者特権の Windows PowerShell コンソールを開き、SQL Server コンピューターのホスト キーを HGS に登録します。
 
    ```powershell
    Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
    ```
 
-7. SQL Server コンピューター上で、管理者特権の Windows PowerShell コンソール内で次のコマンドを実行して、SQL Server コンピューターに証明する場所を指示します。 HGS コンピューターの IP アドレスまたは DNS 名を必ず指定します。 
+7. SQL Server コンピューター上で、管理者特権の Windows PowerShell コンソール内で次のコマンドを実行して、SQL Server コンピューターに証明する場所を指示します。 両方のアドレスの場所で HGS コンピューターの IP アドレスまたは DNS 名を必ず指定します。 
 
    ```powershell
    # use http, and not https
@@ -183,6 +185,9 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 3. 新規に作成したデータベースに接続していることを確認します。 Employees という名前の新しいテーブルを作成します。
 
     ```sql
+    USE [ContosoHR];
+    GO
+    
     CREATE TABLE [dbo].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
@@ -305,6 +310,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
+3. Always Encrypted が有効になっていないクエリ ウィンドウで同じクエリをもう一度試し、発生するエラーに注意します。
 
 ## <a name="next-steps"></a>Next Steps
 その他のユース ケースについては、「[Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md)」(セキュア エンクレーブを使用する Always Encrypted の構成) をご覧ください。 次のことを試すこともできます。

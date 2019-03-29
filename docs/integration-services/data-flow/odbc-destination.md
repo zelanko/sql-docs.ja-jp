@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: faa30c32aea774d51a901402ff57975f14207e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9594567f4412ddf72943a397c7fa3d425f8fb27
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808290"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273431"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
   ODBC 入力先は、ODBC でサポートされているデータベース テーブルにデータを一括で読み込みます。 ODBC 入力先は ODBC 接続マネージャーを使用してデータ ソースに接続します。  
@@ -35,7 +35,7 @@ ms.locfileid: "47808290"
   
 -   **バッチ**: このモードでは、ODBC 入力先は、把握した ODBC プロバイダーの機能に基づいて、最も効率的な挿入方法を使用します。 最新の ODBC プロバイダーの場合、これは、パラメーターを設定した INSERT ステートメントを準備し、行方向の配列パラメーター バインドを使用する方法です (このとき、配列のサイズは **BatchSize** プロパティによって制御します)。 **[バッチ]** を選択したが、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **[行ごと]** モードに切り替わります。  
   
--   **行ごと**: このモードでは、ODBC 入力先はパラメーターを設定した INSERT ステートメントを準備し、 **SQL の Execute** を使用して一度に 1 行ずつ行を挿入します。  
+-   **行ごと**: このモードでは、ODBC 入力先はパラメーターを設定した INSERT ステートメントを準備し、**SQL の Execute** を使用して一度に 1 行ずつ行を挿入します。  
   
 ## <a name="error-handling"></a>エラー処理  
  ODBC 入力先にはエラー出力があります。 コンポーネントのエラー出力には、次の出力列があります。  
@@ -96,7 +96,7 @@ ms.locfileid: "47808290"
   
 -   **[ODBC 入力先エディター]** で、 **[接続マネージャー]** をクリックします。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
   
 #### <a name="connection-manager"></a>[ODBC 入力元エディター]  
  既存の ODBC 接続マネージャーを一覧から選択するか、[新規作成] をクリックして新しい接続を作成します。 ODBC でサポートされているデータベースへの接続を選択または入力できます。  
@@ -120,7 +120,7 @@ ms.locfileid: "47808290"
 ## <a name="odbc-destination-editor-mappings-page"></a>[ODBC 変換先エディター]\([マッピング] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
   
 #### <a name="available-input-columns"></a>[使用できる入力列]  
  使用できる入力列の一覧です。 使用できる変換先列に入力列をドラッグ アンド ドロップして、列をマップできます。  
@@ -147,7 +147,7 @@ ms.locfileid: "47808290"
   
 -   **[ODBC 入力先エディター]** で、 **[エラー出力]** をクリックします。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
   
 #### <a name="inputoutput"></a>[入力または出力]  
  データ ソースの名前を表示します。  
@@ -155,7 +155,7 @@ ms.locfileid: "47808290"
 #### <a name="column"></a>[列]  
  使用されていません。  
   
-#### <a name="error"></a>[エラー]  
+#### <a name="error"></a>Error  
  ODBC 入力先でフローのエラーを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
 #### <a name="truncation"></a>切り捨て  

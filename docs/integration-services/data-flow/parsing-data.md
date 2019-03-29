@@ -11,21 +11,21 @@ helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2ec789b32bb23fbdc2ac48278b16a02588d2580
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e6122dd956c6e3e106e7fc6a450d9505c8fe7414
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638585"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282526"
 ---
 # <a name="parsing-data"></a>データの解析
   パッケージ内のデータ フローは、異種データ ストア間でデータの抽出や読み込みを行います。データ ストアでは、標準およびカスタムのさまざまなデータ型を使用します。 データ フローでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の変換元は、データの抽出、文字列データの解析、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型へのデータ変換を行います。 次に続く変換で、データを解析して別のデータ型に変換したり、列のコピーを別のデータ型で作成することもあります。 コンポーネントで使用する式で、引数やオペランドを別のデータ型にキャストする場合もあります。 さらに、データがデータ ストアに読み込まれるとき、変換先でデータを解析して、変換先が使用するデータ型に変換する場合もあります。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
 ## <a name="two-types-of-parsing"></a>解析の 2 つの種類  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、データ変換用に、高速解析と標準解析の、2 種類の解析が用意されています。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、データ変換用に次の 2 種類の解析が用意されています: 高速解析、標準解析。  
   
 -   高速解析は、高速で単純な解析ルーチンのセットで、ロケール固有のデータ型の変換はサポートされません。最も頻繁に使用される日付と時間の形式のみがサポートされます。 
   
@@ -87,7 +87,7 @@ ms.locfileid: "51638585"
   
 -   次の表に示す ISO 8601 形式。  
   
-    |[形式]|[説明]|  
+    |Format|[説明]|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> -YYYY-MM-DD|4 桁の年、2 桁の月、および 2 桁の日を表す、基本および拡張形式です。 拡張形式では、日付部分はハイフン (-) で区切られます。|  
     |YYYY-MM|4 桁の年および 2 桁の月を表す、有効桁数を減らした基本および拡張形式です。 拡張形式では、日付部分はハイフン (-) で区切られます。|  
@@ -118,7 +118,7 @@ ms.locfileid: "51638585"
   
 -   次の表に示す ISO 8601 時刻形式。  
   
-    |[形式]|[説明]|  
+    |Format|[説明]|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|2 桁の時、2 桁の分、および 2 桁の秒を表す、基本および拡張形式です。 拡張形式では、時刻の部分はコロン (:) で区切られます。|  
     |HHMI<br /><br /> HH:MI|2 桁の時と 2 桁の分を表す、基本および拡張の切り捨て形式です。 拡張形式では、時刻の部分はコロン (:) で区切られます。|  
@@ -127,7 +127,7 @@ ms.locfileid: "51638585"
   
 -   次の表に示す、タイム ゾーンを指定する時刻形式。  
   
-    |[形式]|[説明]|  
+    |Format|[説明]|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|ローカル時間を求めるために協定世界時 (UTC) に加算される時間数と分数を示す基本形式と拡張形式。|  
     |-HH:MI<br /><br /> -HHMI|ローカル時間を求めるために協定世界時 (UTC) から減算される時間数と分数を示す基本形式と拡張形式。|  
@@ -145,7 +145,7 @@ ms.locfileid: "51638585"
   
 -   次の表に示す、小数部を含む時刻形式。  
   
-    |[形式]|[説明]|  
+    |Format|[説明]|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n は、時間の端数を表す 0 ～ 9999999 の範囲の値です。 角かっこは、この値が省略可能であることを示しています。<br /><br /> たとえば、値 12.750 は 12:45 を示します。|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n は、分の端数を表す 0 ～ 9999999 の範囲の値です。 角かっこは、この値が省略可能であることを示しています。<br /><br /> たとえば、値 1220.500 は 12:20:30 を示します。|  

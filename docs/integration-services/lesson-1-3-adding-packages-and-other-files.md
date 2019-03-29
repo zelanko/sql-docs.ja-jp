@@ -1,5 +1,5 @@
 ---
-title: '手順 3: パッケージとその他のファイルの追加 | Microsoft Docs'
+title: 手順 3:パッケージとその他のファイルの追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9cca20997ed2bfe8b32d09376186691253d6e90
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2eb654217e05004dab02c97941171e0725af5715
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528598"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58288778"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>レッスン 1-3 - パッケージとその他のファイルの追加
 このタスクでは、既存のパッケージ、個々のパッケージをサポートする補助ファイル、および Readme を、前のタスクで作成した Deployment Tutorial プロジェクトに追加します。 たとえば、パッケージのデータを含んでいる XML データ ファイルや、プロジェクトのすべてのパッケージに関する Readme 情報を提供するテキスト ファイルを追加します。  
@@ -69,7 +69,7 @@ ms.locfileid: "52528598"
 4.  [ファイル] メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 4: パッケージ構成の追加](../integration-services/lesson-1-4-adding-package-configurations.md)  
+[手順 4:パッケージ構成の追加](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   
   

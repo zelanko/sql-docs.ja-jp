@@ -8,22 +8,22 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1ba5c332b775d379a1b27db5435c29bb84851c80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b4deab77c9ff3aec771b77ae9a9f6b7c7668fb3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634340"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276678"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC インスタンス
   Oracle CDC インスタンスは、単一の Oracle ソース データベースからキャプチャされた変更を処理するために、Oracle CDC Service によって作成されたプロセスです。 Oracle CDC インスタンスは、その構成を **cdc.xdbcdc_config** テーブルから取得し、その状態を **cdc.xdbcdc_state** テーブルで維持します。 これらのテーブルは、Oracle CDC インスタンスを定義する CDC データベースの一部です。 xdbcdc データベースおよびテーブルの詳細については、「 [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase)」を参照してください。  
   
  Oracle CDC インスタンスによって実行されるタスクを次に示します。  
   
--   **サービス開始時の検証の処理**: 起動した CDC インスタンスは、 **xdbcdc_config** テーブルから構成を読み込み、一連の状態検証を実行します。この検証で、CDC インスタンスの永続化された状態に一貫性があり、変更の処理を開始できることを確認します。  
+-   **サービス開始時の検証の処理**: 起動した CDC インスタンスは、**xdbcdc_config** テーブルから構成を読み込み、一連の状態検証を実行します。この検証で、CDC インスタンスの永続化された状態に一貫性があり、変更の処理を開始できることを確実にします。  
   
 -   **変更のキャプチャの準備**: 検証が正常に終了した場合、Oracle CDC インスタンスは現在定義されているすべてのキャプチャ インスタンスをスキャンし、変更のキャプチャに必要な Oracle LogMiner クエリおよびその他のサポート構造を準備します。 また、Oracle インスタンスは Oracle CDC インスタンスが最後に実行されたときに保存された内部キャプチャ状態を再度読み込みます。  
   

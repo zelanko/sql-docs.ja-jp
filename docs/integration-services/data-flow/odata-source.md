@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f5ba8afdf4acadd114363280501f29e1616349ae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638660"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290618"
 ---
 # <a name="odata-source"></a>OData ソース
 Open Data Protocol (OData) サービスからのデータを使用するには、SSIS パッケージの OData ソース コンポーネントを使用します。
@@ -102,12 +102,12 @@ OData ソースは、次の単純なデータ型をサポートしています: 
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>コレクションまたはリソースのパス = Resource Path を使用します。  
  **Resource path**  
- リソースのパスを入力します。 例: Employees  
+ リソースのパスを入力します。 例 :Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>[OData ソース エディター] ([列] ページ)
   出力に含める外部 (変換元) 列を選択し、それらを出力列にマップするには、**[OData ソース エディター]** ダイアログ ボックスの **[列]** ページを使用します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内にある使用可能なソース列の一覧を表示します。 ページの下部にあるテーブルに対して列を追加または削除するには、一覧にあるチェック ボックスを使用します。 選択した列が出力に追加されます。  
   
@@ -120,7 +120,7 @@ OData ソースは、次の単純なデータ型をサポートしています: 
 ## <a name="odata-source-editor-error-output-page"></a>[OData ソース エディター] ([エラー出力] ページ)
   **[OData ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   
@@ -130,7 +130,7 @@ OData ソースは、次の単純なデータ型をサポートしています: 
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連項目:**[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dbe9e655bff91e514c8157a1afb74504b9dc6717
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 043c99a06b42e1bc1fcbe76971c55d77fc2bd45f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502724"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290448"
 ---
 # <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク
   WMI データ リーダー タスクは、WQL (Windows Management Instrumentation Query Language) を使用してクエリを実行し、コンピューター システムに関する WMI から情報を返します。 WMI データ リーダー タスクは、次の目的で使用できます。  
@@ -103,7 +103,7 @@ Select * FROM Win32_QuickFixEngineering
   
   WQL (WMI Query Language) の詳細については、MSDN ライブラリにある Windows Management Instrumentation のトピック「 [WQL を使用したクエリ](https://go.microsoft.com/fwlink/?LinkId=79045)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **名前**  
  WMI データ リーダー タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -120,9 +120,9 @@ Select * FROM Win32_QuickFixEngineering
   
 ### <a name="static-options"></a>静的オプション  
  **[WMIConnectionName]**  
- WMI 接続マネージャーを一覧から選択するか、\<[**新しい WMI 接続…>]** をクリックして新しい接続マネージャーを作成します。  
+ WMI 接続マネージャーを一覧から選択するか、[\<**新しい WMI 接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)、 [WMI 接続マネージャー エディター](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+ **関連トピック:** [WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 接続マネージャー エディター](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
  **[WQLQuerySourceType]**  
  タスクで実行する WQL クエリのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -157,7 +157,7 @@ Select * FROM Win32_QuickFixEngineering
  **[WQLQuerySource]**  
  ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="wqlquerysourcetype--variable"></a>[WQLQuerySourceType] = [変数]  
  **[WQLQuerySource]**  
@@ -171,7 +171,7 @@ Select * FROM Win32_QuickFixEngineering
  **変換先**  
  ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="destinationtype--variable"></a>[DestinationType] = [変数]  
  **変換先**  

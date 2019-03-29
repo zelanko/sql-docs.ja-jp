@@ -16,15 +16,15 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 319f9b06605ab95dca6885fc08bbab6b7d5bf9c9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ab8a7da7e45d9d623fd436ac3b6c0e8b3d945536
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638459"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289828"
 ---
 # <a name="excel-destination"></a>Excel 変換先
   Excel 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブックのワークシートまたは範囲にデータを読み込みます。  
@@ -113,7 +113,7 @@ ms.locfileid: "51638459"
 ## <a name="excel-destination-editor-mappings-page"></a>[Excel 変換先エディター] ([マッピング] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "51638459"
 ## <a name="excel-destination-editor-error-output-page"></a>[Excel 変換先エディター] ([エラー出力] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理オプションを指定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **入力または出力**  
  データ ソースの名前を表示します。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "51638459"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連項目:**[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  

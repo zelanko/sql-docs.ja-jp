@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16801a8865260a1175fe4786869272774ed8b2c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c0ea69dd7aca4d8fea8499b59577dc3d507ad4a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596200"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272132"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>データの変更の準備ができているかどうかを判断する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、2 番目のタスクは、選択した間隔の変更データが準備できていることを確認することです。 選択したエンドポイントまでの変更が非同期キャプチャ プロセスでまだ一部処理されていない可能性があるため、この手順が必要となります。  
@@ -335,6 +335,6 @@ ms.locfileid: "47596200"
 ## <a name="next-step"></a>次の手順  
  変更データが準備できていると判断したら、次に変更データのクエリを準備します。  
   
- **次のトピック:** [変更データのクエリを準備する](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+ **次のトピック:**[変更データのクエリを準備する](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   

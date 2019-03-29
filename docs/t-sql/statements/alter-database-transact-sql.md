@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
-ms.date: 03/08/2019
+ms.date: 03/21/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f1ce25ad1f6ac2a84b391a50e1be6014dae23c5b
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: a9d870d766d7c2080b177270156cfa2428c21fc7
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683702"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417244"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -120,18 +120,22 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 変更するデータベースの名前です。
+*database_name*     
+変更するデータベースの名前です。
 
 > [!NOTE]
 > このオプションは、包含データベースでは使用できません。
 
-CURRENT **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+CURRENT     
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 使用中の現在のデータベースを変更することを指定します。
 
-MODIFY NAME **=**_new_database_name_: データベースの名前を、*new_database_name* で指定した名前に変更します。
+MODIFY NAME **=**_new_database_name_     
+データベースの名前を、*new_database_name* で指定した名前に変更します。
 
-COLLATE *collation_name*: データベースの照合順序を指定します。 *collation_name* には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの照合順序が割り当てられます。
+COLLATE *collation_name*    
+データベースの照合順序を指定します。 *collation_name* には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの照合順序が割り当てられます。
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でデータベースが作成された後は、照合順序を変更することはできません。
@@ -140,24 +144,24 @@ COLLATE *collation_name*: データベースの照合順序を指定します。
 
 Windows 照合順序名および SQL 照合順序名について詳しくは、「[COLLATE](~/t-sql/statements/collations.md)」をご覧ください。
 
-**\<delayed_durability_option> ::=**
-** 適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**\<delayed_durability_option> ::=**      
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 詳しくは、「[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)」および「[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)」をご覧ください。
 
-**\<file_and_filegroup_options>::=** 詳細については、[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)に関するページを参照してください。
+**\<file_and_filegroup_options>::=**     
+詳しくは、「[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
-
 データベースを削除するには、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) を使用します。
 
 データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。
 
-ALTER DATABASE ステートメントは自動コミット モード (既定のトランザクション管理モード) で実行する必要があり、明示的または暗黙的なトランザクションでは許可されません。
+`ALTER DATABASE` ステートメントは自動コミット モード (既定のトランザクション管理モード) で実行する必要があり、明示的または暗黙的なトランザクションでは許可されません。
 
-データベース ファイルの状態 (オンラインかオフラインかなど) は、データベースの状態とは別に保持されます。 詳しくは、「[ファイルの状態](../../relational-databases/databases/file-states.md)」をご覧ください。 ファイル グループ内のファイルの状態は、ファイル グループ全体の可用性を決定します。 ファイル グループを使用可能にするには、ファイル グループ内のすべてのファイルがオンラインである必要があります。 ファイル グループがオフラインの場合、SQL ステートメントでそのファイル グループにアクセスを試行するとエラーが発生します。 SELECT ステートメントのクエリ プランを作成する場合、クエリ オプティマイザーは、オフラインのファイル グループにある非クラスター化インデックスやインデックス付きビューを回避します。 これにより、これらのステートメントは正常に実行できます。 ただし、オフラインのファイル グループに、対象テーブルのヒープやクラスター化インデックスが含まれている場合には、SELECT ステートメントは失敗します。 また、オフラインのファイル グループ内にあるインデックス付きのテーブルを変更する INSERT、UPDATE、または DELETE ステートメントは失敗します。
+データベース ファイルの状態 (オンラインかオフラインかなど) は、データベースの状態とは別に保持されます。 詳しくは、「[ファイルの状態](../../relational-databases/databases/file-states.md)」をご覧ください。 ファイル グループ内のファイルの状態は、ファイル グループ全体の可用性を決定します。 ファイル グループを使用可能にするには、ファイル グループ内のすべてのファイルがオンラインである必要があります。 ファイル グループがオフラインの場合、SQL ステートメントでそのファイル グループにアクセスを試行するとエラーが発生します。 SELECT ステートメントのクエリ プランを作成する場合、クエリ オプティマイザーは、オフラインのファイル グループにある非クラスター化インデックスやインデックス付きビューを回避します。 これにより、これらのステートメントは正常に実行できます。 ただし、オフラインのファイル グループに、対象テーブルのヒープやクラスター化インデックスが含まれている場合には、SELECT ステートメントは失敗します。 また、オフラインのファイル グループ内にあるインデックス付きのテーブルを変更する `INSERT`、`UPDATE`、または `DELETE` ステートメントは失敗します。
 
-データベースが RESTORING 状態にある場合、大半の ALTER DATABASE ステートメントは失敗します。 ただし、データベース ミラーリング オプションの設定は例外です。 データベースが RESTORING 状態になるのは、アクティブな復元操作中や、バックアップ ファイルの破損によりデータベースまたはログ ファイルの復元操作が失敗した場合などです。
+データベースが RESTORING 状態にある場合、ほとんどの `ALTER DATABASE` ステートメントは失敗します。 ただし、データベース ミラーリング オプションの設定は例外です。 データベースが RESTORING 状態になるのは、アクティブな復元操作中や、バックアップ ファイルの破損によりデータベースまたはログ ファイルの復元操作が失敗した場合などです。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュは、次のいずれかのオプションを設定することにより消去されます。
 
@@ -169,11 +173,11 @@ ALTER DATABASE ステートメントは自動コミット モード (既定の�
 |COLLATE|MODIFY FILEGROUP READ_ONLY|
 |READ_ONLY|PAGE_VERIFY|
 
-プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
+プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに、以下の通知メッセージが記録されます。`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations` このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
 
-プロシージャ キャッシュは、次のシナリオでもフラッシュされます。
+プラン キャッシュは、次のシナリオでもフラッシュされます。
 
-- AUTO_CLOSE データベース オプションが ON に設定されている。 データベースを参照 (または使用) するユーザー接続が 1 つも存在しない場合、バックグラウンド タスクがデータベースを自動的に閉じてシャットダウンすることを試みます。
+- `AUTO_CLOSE` データベース オプションが ON に設定されている。 データベースを参照 (または使用) するユーザー接続が 1 つも存在しない場合、バックグラウンド タスクがデータベースを自動的に閉じてシャットダウンすることを試みます。
 - 既定のオプションが設定されているデータベースに対して複数のクエリを実行した。 データベースはその後削除されます。
 - ソース データベースのデータベース スナップショットが削除された。
 - データベースのトランザクション ログを正常に再構築した。
@@ -187,17 +191,16 @@ ALTER DATABASE ステートメントは自動コミット モード (既定の�
 - 現在データベースを使用しているのは、1 人だけである。
 - データベースの照合順序に依存するスキーマ バインド オブジェクトがない。
 
-  データベースの照合順序に依存する次のオブジェクトがデータベース内に存在する場合、ALTER DATABASE*database_name*COLLATE ステートメントは失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ALTER アクションをブロックしているオブジェクトごとにエラー メッセージを返します。
+データベースの照合順序に依存する次のオブジェクトがデータベース内に存在する場合、ALTER DATABASE*database_name*COLLATE ステートメントは失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、`ALTER` アクションをブロックしているオブジェクトごとにエラー メッセージを返します。
 
   - SCHEMABINDING を指定して作成されたユーザー定義関数およびビュー
   - 計算列
   - CHECK 制約
   - 既定のデータベース照合順序から継承した照合順序を持つ文字型列がテーブルにある場合に、そのテーブルを返すテーブル値関数
   
-    非スキーマ バインド エンティティの依存関係情報は、データベースの照合順序が変更されると自動的に更新されます。
+非スキーマ バインド エンティティの依存関係情報は、データベースの照合順序が変更されると自動的に更新されます。
 
 データベースの照合順序を変更しても、データベース オブジェクトのシステム名に重複は発生しません。 照合順序の変更によって名前が重複する場合、次の名前空間が原因でデータベースの照合順序の変更が失敗することがあります。
-
 - プロシージャ、テーブル、トリガー、ビューなどのオブジェクト名
 - スキーマ名
 - グループ、ロール、ユーザーなどのプリンシパル
@@ -214,7 +217,7 @@ ALTER DATABASE ステートメントは自動コミット モード (既定の�
 
 ## <a name="permissions"></a>アクセス許可
 
-データベースに対する ALTER 権限が必要です。
+データベースに対する `ALTER` 権限が必要です。
 
 ## <a name="examples"></a>使用例
 
@@ -282,11 +285,14 @@ Azure SQL Database では、このステートメントを使って単一デー�
 
 解説が長くなるため、ALTER DATABASE の構文は複数の記事に分けて説明します。
 
-ALTER DATABASE: この記事では、データベースの名前と照合順序を変更するための構文および関連情報について説明します。
+ALTER DATABASE     
+この記事では、データベースの名前と照合順序を変更するための構文および関連情報について説明します。
 
-「[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls)」では、ALTER DATABASE の SET オプションを使ってデータベースの属性を変更するための構文と関連情報について説明します。
+[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls)      
+ALTER DATABASE の SET オプションを使ってデータベースの属性を変更するための構文と関連情報について説明します。
 
-「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls)」では、ALTER DATABASE のデータベース互換レベルに関連した SET オプションの構文と関連情報について説明します。
+[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls)       
+ALTER DATABASE のデータベース互換レベルに関連した SET オプションの構文と関連情報について説明します。
 
 ## <a name="syntax"></a>構文
 
@@ -362,16 +368,13 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引数
 
-*database_name*
-
+*database_name*      
 変更するデータベースの名前です。
 
-CURRENT
-
+CURRENT        
 使用中の現在のデータベースを変更することを指定します。
 
-MODIFY NAME **=**_new_database_name_
-
+MODIFY NAME **=**_new_database_name_      
 データベースの名前を、*new_database_name* で指定した名前に変更します。 次の例では、`db1` データベースの名前を `db2` に変更します。
 
 ```sql
@@ -379,8 +382,7 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])
-
+MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])      
 データベースのサービス階層を変更します。
 
 次の例では、エディションを `premium` に変更します。
@@ -390,10 +392,10 @@ ALTER DATABASE current
     MODIFY (EDITION = 'premium');
 ```
 
-データベースの MAXSIZE プロパティがそのエディションでサポートされる有効な範囲内の値に設定されていない場合、EDITION の変更は失敗します。
+> [!IMPORTANT]
+> データベースの MAXSIZE プロパティがそのエディションでサポートされる有効な範囲内の値に設定されていない場合、EDITION の変更は失敗します。
 
-MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)
-
+MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)       
 データベースの最大サイズを指定します。 最大サイズは、データベースの EDITION プロパティの有効な値セットに準拠している必要があります。 データベースの最大サイズを変更すると、データベースの EDITION も変更される場合があります。
 
 > [!NOTE]
@@ -486,8 +488,7 @@ vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない
 - EDITION が指定され、MAXSIZE が指定されていない場合は、エディションの既定値が使用されます。 たとえば、EDITION が Standard に設定されていて、MAXSIZE が指定されていない場合、MAXSIZE は自動的に 500 MB に設定されます。
 - MAXSIZE も EDITION も指定されていない場合、EDITION は Standard (S0) に設定され、MAXSIZE は 250 GB に設定されます。
 
-MODIFY (SERVICE_OBJECTIVE = \<service-objective>)
-
+MODIFY (SERVICE_OBJECTIVE = \<service-objective>)      
 パフォーマンス レベルを指定します。 次の例では、Premium データベースのサービスの目標を `P6` に変更します。
 
 ```sql
@@ -505,8 +506,7 @@ ALTER DATABASE current
 
 サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、「[Azure SQL Database サービス レベル概要](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)」、「[DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(DTU に基づくリソースの制限)、「[vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(vCore に基づくリソースの制限) を参照してください。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。
 
-MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)
-
+MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)       
 エラスティック プールに既存のデータベースを追加するには、データベースの SERVICE_OBJECTIVE を ELASTIC_POOL に設定し、エラスティック プールの名前を指定します。 このオプションを使用して、データベースを同じサーバー内の別のエラスティック プールに変更することもできます。 詳しくは、[SQL Database エラスティック プールの作成と管理](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)に関するページをご覧ください。 エラスティック プールからデータベースを削除するには、ALTER DATABASE を使用して、SERVICE_OBJECTIVE を 1 つのデータベースのパフォーマンス レベルに設定します。
 
 > [!NOTE]
@@ -519,36 +519,30 @@ ADD SECONDARY ON SERVER \<partner_server_name>
 > [!IMPORTANT]
 > ハイパースケール サービス層では、geo レプリケーションは現在サポートされていません。
 
-WITH ALLOW_CONNECTIONS { **ALL** | NO }
-
+WITH ALLOW_CONNECTIONS { **ALL** | NO }     
 ALLOW_CONNECTIONS が指定されていない場合は、既定では ALL に設定されます。 ALL に設定されている場合は、適切なアクセス許可を持つすべてのログインに接続を許可する読み取り専用データベースになります。
 
 WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80` }
 
 SERVICE_OBJECTIVE が指定されていない場合、セカンダリ データベースがプライマリ データベースと同じサービス レベルで作成します。 SERVICE_OBJECTIVE を指定した場合は、指定したレベルでセカンダリ データベースが作成されます。 このオプションでは、サービス レベルのコストが比較的低い geo レプリケートされたセカンダリの作成がサポートされます。 指定する SERVICE_OBJECTIVE は、ソースと同じエディション内でなければなりません。 たとえば、エディションが Premium の場合、S0 を指定することはできません。
 
-ELASTIC_POOL (name = \<elastic_pool_name>)
-
+ELASTIC_POOL (name = \<elastic_pool_name>)      
 ELASTIC_POOL が指定されていない場合、セカンダリ データベースはエラスティック プールに作成されません。 ELASTIC_POOL が指定されている場合、セカンダリ データベースが指定されたプールに作成されます。
 
 > [!IMPORTANT]
 > ADD SECONDARY コマンドを実行するユーザーは、プライマリ サーバー上で DBManager であること、ローカル データベース内で db_owner メンバーシップを持っていること、およびセカンダリ サーバー上で DBManager であることが必要です。
 
-REMOVE SECONDARY ON SERVER \<partner_server_name>
-
+REMOVE SECONDARY ON SERVER \<partner_server_name>     
 指定されたサーバー上にある、指定された geo レプリケートされたセカンダリ データベースを削除します。 このコマンドは、プライマリ データベースをホストしているサーバー上の master データベース上で実行されます。
 
 > [!IMPORTANT]
 > REMOVE SECONDARY コマンドを実行するユーザーは、プライマリ サーバー上で DBManager でなければなりません。
 
-FAILOVER
-
+FAILOVER      
 コマンドを実行する geo レプリケーション パートナーシップ内のセカンダリ データベースのレベルを上げてプライマリにし、現在のプライマリのレベルを下げて新しいセカンダリにします。 このプロセスの一環として、geo レプリケーション モードは、非同期モードから同期モードへと一時的に切り替わります。 フェールオーバー プロセス時:
 
 1. プライマリでは、新しいトランザクションが処理が停止されます。
-
 2. すべての未処理のトランザクションは、セカンダリにフラッシュされます。
-
 3. セカンダリがプライマリになり、古いプライマリと新しいセカンダリを使用して、非同期の geo レプリケーションが開始されます。
 
 このシーケンスは、データの損失が発生しないことを保証します。 両方のデータベースが使用できない期間は、ロールを切り替えている間の 0 から 25 秒程度です。 操作全体を約 1 分以内に実行する必要があります。 このコマンドが実行されたときにプライマリ データベースが使用できない場合、プライマリ データベースが使用できないことを示すエラー メッセージで、コマンドは失敗します。 フェールオーバー プロセスが完了せず、スタックしているように見える場合は、まず、強制フェールオーバー コマンドを使用して、データの消失を許容します。次に、消失したデータを復旧する必要がある場合は、DevOps (CSS) に連絡して、消失したデータの復旧を依頼します。
@@ -556,46 +550,40 @@ FAILOVER
 > [!IMPORTANT]
 > FAILOVER コマンドを実行するユーザーは、プライマリ サーバーとセカンダリ サーバーの両方で DBManager になる必要があります。
 
-FORCE_FAILOVER_ALLOW_DATA_LOSS
-
+FORCE_FAILOVER_ALLOW_DATA_LOSS      
 コマンドを実行する geo レプリケーション パートナーシップ内のセカンダリ データベースのレベルを上げてプライマリにし、現在のプライマリのレベルを下げて新しいセカンダリにします。 現在のプライマリが使用できない場合にのみ、このコマンドを使用します。 これは、可用性の復元が不可欠で、一部のデータ消失が許容される場合のディザスター リカバリー専用に設計されています。
 
 強制フェールオーバー中:
-
 1. 指定したセカンダリ データベースはすぐに、プライマリ データベースになり、新しいトランザクションの受け入れを開始します。
 2. 元のプライマリが新しいプライマリに再接続できると、元のプライマリ上で増分バックアップが実行され、元のプライマリは新しいセカンダリになります。
 3. 古いプライマリのこの増分バックアップからデータを復旧するには、ユーザーは devops/CSS である必要があります。
 4. その他のセカンダリがある場合は、自動的に再構成されて新しいプライマリのセカンダリになります。 このプロセスは非同期で、このプロセスが完了するまで、遅延が発生することがあります。 再構成が完了するまで、セカンダリは古いプライマリのセカンダリであり続けます。
 
 > [!IMPORTANT]
-> FORCE_FAILOVER_ALLOW_DATA_LOSS コマンドを実行するユーザーは、プライマリ サーバーとセカンダリ サーバーの両方で DBManager になる必要があります。
+> `FORCE_FAILOVER_ALLOW_DATA_LOSS` コマンドを実行するユーザーは、プライマリ サーバーとセカンダリ サーバーの両方で `dbmanager` ロールに属する必要があります。
 
 ## <a name="remarks"></a>Remarks
-
 データベースを削除するには、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) を使用します。
 データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。
 
-ALTER DATABASE ステートメントは自動コミット モード (既定のトランザクション管理モード) で実行する必要があり、明示的または暗黙的なトランザクションでは許可されません。
+`ALTER DATABASE` ステートメントは自動コミット モード (既定のトランザクション管理モード) で実行する必要があり、明示的または暗黙的なトランザクションでは許可されません。
 
-プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
+プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに、以下の通知メッセージが記録されます。`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations` このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
 
 プロシージャ キャッシュは、次のシナリオでもフラッシュされます。既定のオプションが設定されているデータベースに対して複数のクエリを実行した。 データベースはその後削除されます。
 
 ## <a name="viewing-database-information"></a>データベース情報の表示
-
 カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。
 
 ## <a name="permissions"></a>アクセス許可
-
 データベースを変更できるのは、(準備プロセスによって作成される) サーバーレベルのプリンシパルのログイン、または `dbmanager` データベース ロールのメンバーだけです。
 
 > [!IMPORTANT]
 > データベースの所有者であっても `dbmanager` ロールのメンバーでない場合は、データベースを変更できません。
 
 ## <a name="examples"></a>使用例
-
 ### <a name="a-check-the-edition-options-and-change-them"></a>A. エディション オプションを確認して変更します。
-
+データベース db1 のエディションと最大サイズを設定します。
 ```sql
 SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
         ServiceObjective = DATABASEPROPERTYEX('db1', 'ServiceObjective'),
@@ -605,7 +593,6 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJ
 ```
 
 ### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. データベースを別のエラスティック プールに移動します。
-
 pool1 という名前のプールに既存のデータベースを移動します。
 
 ```sql
@@ -614,7 +601,6 @@ MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;
 ```
 
 ### <a name="c-add-a-geo-replication-secondary"></a>C. geo レプリケーションのセカンダリを追加します。
-
 ローカル サーバー上の db1 のサーバー `secondaryserver` に読み取り可能なセカンダリ データベース db1 を作成します。
 
 ```sql
@@ -624,7 +610,6 @@ WITH ( ALLOW_CONNECTIONS = ALL )
 ```
 
 ### <a name="d-remove-a-geo-replication-secondary"></a>D. geo レプリケーションのセカンダリを削除します。
-
 サーバー `secondaryserver` 上のセカンダリ データベース db1 を削除します。
 
 ```sql
@@ -633,7 +618,6 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 ```
 
 ### <a name="e-failover-to-a-geo-replication-secondary"></a>E. geo レプリケーションのセカンダリにフェールオーバーします。
-
 サーバー `secondaryserver` で実行されると、サーバー `secondaryserver` 上のセカンダリ データベース db1 を昇格させて新しいプライマリ データベースにします。
 
 ```sql
@@ -641,7 +625,6 @@ ALTER DATABASE db1 FAILOVER
 ```
 
 ### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. 単一データベースをサービス層 S0 (標準エディション、パフォーマンス レベル 0) に更新します。
-
 単一データベースをパフォーマンス レベルが S0、最大サイズが 250 GB の標準エディション (サービス層) に更新します。
 
 ```sql
@@ -681,14 +664,17 @@ Azure SQL Database マネージド インスタンスでは、このステート
 
 解説が長くなるため、ALTER DATABASE の構文は複数の記事に分けて説明します。
 
-ALTER DATABASE  
+ALTER DATABASE    
 この記事では、ファイルとファイル グループのオプションの設定、データベース オプションの設定、およびデータベースの互換性レベルの設定のための構文と関連情報を説明します。  
   
-「[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)」では、データベースのファイルおよびファイル グループを追加したり削除したりするための構文と関連情報のほか、ファイルおよびファイル グループの属性を変更するための構文について説明します。  
+[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)     
+データベースのファイルおよびファイル グループを追加したり削除したりするための構文と関連情報のほか、ファイルおよびファイル グループの属性を変更するための構文について説明します。  
   
-「[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)」では、ALTER DATABASE の SET オプションを使ってデータベースの属性を変更するための構文と関連情報について説明します。  
+[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)    
+ALTER DATABASE の SET オプションを使ってデータベースの属性を変更するための構文と関連情報について説明します。  
   
-「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)」では、ALTER DATABASE のデータベース互換レベルに関連した SET オプションの構文と関連情報について説明します。  
+[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)   
+ALTER DATABASE のデータベース互換レベルに関連した SET オプションの構文と関連情報について説明します。  
 
 ## <a name="syntax"></a>構文
 
@@ -730,38 +716,32 @@ ALTER DATABASE { database_name | CURRENT }
 ```
 ## <a name="arguments"></a>引数
 
-*database_name*
-
+*database_name*      
 変更するデータベースの名前です。
 
-CURRENT
-
+CURRENT     
 使用中の現在のデータベースを変更することを指定します。
 
 ## <a name="remarks"></a>Remarks
-
 データベースを削除するには、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) を使用します。
 データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。
 
-ALTER DATABASE ステートメントは自動コミット モード (既定のトランザクション管理モード) で実行する必要があり、明示的または暗黙的なトランザクションでは許可されません。
+`ALTER DATABASE` ステートメントは自動コミット モード (既定のトランザクション管理モード) で実行する必要があり、明示的または暗黙的なトランザクションでは許可されません。
 
 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
 
-プロシージャ キャッシュは、次のシナリオでもフラッシュされます。既定のオプションが設定されているデータベースに対して複数のクエリを実行した。 データベースはその後削除されます。
+既定オプションのデータベースに対して複数のクエリが実行されても、プラン キャッシュはフラッシュされます。 データベースはその後削除されます。
 
 ## <a name="viewing-database-information"></a>データベース情報の表示
-
 カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。
 
 ## <a name="permissions"></a>アクセス許可
-
 データベースを変更できるのは、(準備プロセスによって作成される) サーバーレベルのプリンシパルのログイン、または `dbcreator` データベース ロールのメンバーだけです。
 
 > [!IMPORTANT]
 > データベースの所有者であっても `dbcreator` ロールのメンバーでない場合は、データベースを変更できません。
 
 ## <a name="examples"></a>使用例
-
 自動チューニングを設定する方法と、マネージド インスタンスにファイルを追加する方法の例を次に示します。
 
 ```sql
@@ -819,29 +799,33 @@ ALTER DATABASE database_name
       | SERVICE_OBJECTIVE = {
             'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500'
           | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000'
-          | 'DW3000' | 'DW6000' | 'DW1000c' | 'DW1500c' | 'DW2000c'
-          | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c'
-          | 'DW10000c' | 'DW15000c' | 'DW30000c'
+          | 'DW3000' | 'DW6000' | 'DW500c' | 'DW1000c' | 'DW1500c'
+          | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c'
+          | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 変更するデータベースの名前を指定します。
+*database_name*     
+変更するデータベースの名前を指定します。
 
-MODIFY NAME = *new_database_name*: データベースの名前を、*new_database_name* で指定した名前に変更します。
+MODIFY NAME = *new_database_name*    
+データベースの名前を、*new_database_name* で指定した名前に変更します。
 
-MAXSIZE 既定値は 245,760 GB (240 TB) です。
+MAXSIZE    
+既定値は 245,760 GB (240 TB) です。
 
-**適用対象:** エラスティック用に最適化パフォーマンス レベル
+**適用対象:** Gen1 コンピューティングに最適化
 
 データベースの最大許容サイズ。 データベースは MAXSIZE を超えることはできません。
 
-**適用対象:** 計算用に最適化パフォーマンス レベル
+**適用対象:** Gen2 コンピューティングに最適化
 
-データベースの行ストア データの最大許容サイズ。 行ストア テーブル、列ストア インデックスのデルタストア、またはクラスター化列ストア インデックス上の非クラスター化インデックスに格納されたデータは、MAXSIZE を超えて大きくなることはできません。列ストア形式に圧縮されたデータは、サイズ制限がなく、MAXSIZE に制約されません。
+データベースの行ストア データの最大許容サイズ。 行ストア テーブル、列ストア インデックスのデルタストア、またはクラスター化列ストア インデックスの非クラスター化インデックスに格納されているデータは MAXSIZE を超えることはできません。 列ストア形式に圧縮されたデータにはサイズ制限はなく、MAXSIZE に制約されません。
 
-SERVICE_OBJECTIVE: パフォーマンス レベルを指定します。 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] のサービス目標の詳細については、[パフォーマンス レベル](https://azure.microsoft.com/documentation/articles/performance-tiers/)に関するページを参照してください。
+SERVICE_OBJECTIVE      
+パフォーマンス レベルを指定します。 SQL Data Warehouse のサービス目標の詳細については、「[Data Warehouse ユニット (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -858,15 +842,13 @@ SERVICE_OBJECTIVE: パフォーマンス レベルを指定します。 [!INCLUD
 
 SQL Data Warehouse は COMPATIBILITY_LEVEL 130 に設定されており、変更することはできません。 詳細については、「[ALTER DATABASE (TRANSACT-SQL) の互換性レベル](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)」を参照してください。
 
-データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。
-
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
-ALTER DATABASE を実行するには、データベースをオンラインにする必要があり、一時停止状態にすることはできません。
+`ALTER DATABASE` を実行するには、データベースをオンラインにする必要があり、一時停止状態にすることはできません。
 
-ALTER DATABASE ステートメントは、既定のトランザクション管理モードである自動コミット モードで実行する必要があります。 これは、接続の設定で設定されます。
+`ALTER DATABASE` ステートメントは、既定のトランザクション管理モードである自動コミット モードで実行する必要があります。 これは、接続の設定で設定されます。
 
-ALTER DATABASE ステートメントをユーザー定義のトランザクションに含めることはできません。
+`ALTER DATABASE` ステートメントをユーザー定義のトランザクションに含めることはできません。
 
 データベースの照合順序を変更することはできません。
 
@@ -943,50 +925,56 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 変更するデータベースの名前です。 アプライアンス上でデータベースの一覧を表示するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) を使用します。
+*database_name*        
+変更するデータベースの名前。 アプライアンス上でデータベースの一覧を表示するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) を使用します。
 
-AUTOGROW = { ON | OFF }: AUTOGROW オプションを更新します。 AUTOGROW が ON のとき、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、複製テーブル、分散テーブル、トランザクション ログの割り当て領域を必要に応じて自動的に増やし、記憶域要件の増加に対応します。 AUTOGROW が OFF のとき、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、複製テーブル、分散テーブル、トランザクション ログが最大サイズ設定を超過したときにエラーを返します。
+AUTOGROW = { ON | OFF }        
+AUTOGROW オプションを更新します。 AUTOGROW が ON のとき、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、複製テーブル、分散テーブル、トランザクション ログの割り当て領域を必要に応じて自動的に増やし、記憶域要件の増加に対応します。 AUTOGROW が OFF のとき、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、複製テーブル、分散テーブル、トランザクション ログが最大サイズ設定を超過したときにエラーを返します。
 
-REPLICATED_SIZE = *size* [GB]: 変更されているデータベースのすべての複製テーブルを格納するための新しい最大 GB を計算ノードごとに指定します。 アプライアンスの記憶域を計画している場合、アプライアンスの計算ノード数に REPLICATED_SIZE を掛ける必要があります。
+REPLICATED_SIZE = *size* [GB]         
+変更されているデータベースのすべての複製テーブルを格納するための新しい最大 GB を計算ノードごとに指定します。 アプライアンスの記憶域を計画している場合、アプライアンスの計算ノード数に REPLICATED_SIZE を掛ける必要があります。
 
-DISTRIBUTED_SIZE = *size* [GB]: 変更されているデータベースのすべての分散テーブルを格納するための新しい最大 GB をデータベースごとに指定します。 このサイズは、アプライアンスの計算ノード全体で分散されます。
+DISTRIBUTED_SIZE = *size* [GB]        
+変更されているデータベースのすべての分散テーブルを格納するための新しい最大 GB をデータベースごとに指定します。 このサイズは、アプライアンスの計算ノード全体で分散されます。
 
-LOG_SIZE = *size* [GB]: 変更されているデータベースのすべてのトランザクション ログを格納するための新しい最大 GB をデータベースごとに指定します。 このサイズは、アプライアンスの計算ノード全体で分散されます。
+LOG_SIZE = *size* [GB]         
+変更されているデータベースのすべてのトランザクション ログを格納するための新しい最大 GB をデータベースごとに指定します。 このサイズは、アプライアンスの計算ノード全体で分散されます。
 
-ENCRYPTION { ON | OFF }: データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の暗号化は、[sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) が **1** に設定されているときにのみ構成できます。 Transparent Data Encryption を構成するには、先にデータベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、「[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。
+ENCRYPTION { ON | OFF }         
+データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の暗号化は、[sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) が **1** に設定されているときにのみ構成できます。 Transparent Data Encryption を構成するには、先にデータベース暗号化キーを作成する必要があります。 データベース暗号化の詳細については、「[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。
 
-SET AUTO_CREATE_STATISTICS { ON | OFF } 統計の自動作成オプション AUTO_CREATE_STATISTICS がオンの場合、クエリ プランのカーディナリティの推定を向上させるために、クエリ オプティマイザーによってクエリ述語内の個々の列に関する統計が必要に応じて作成されます。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだヒストグラムがない列について作成されます。
+SET AUTO_CREATE_STATISTICS { ON | OFF }        
+統計の自動作成オプション AUTO_CREATE_STATISTICS が ON の場合、クエリ プランのカーディナリティの推定を向上させるために、クエリ オプティマイザーによってクエリ述語内の個々の列に関する統計が必要に応じて作成されます。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだヒストグラムがない列について作成されます。
 
 AU7 へのアップグレード後に作成された新しいデータベースの場合、既定値は ON です。 アップグレードの前に作成されたデータベースの場合、既定値は OFF です。
 
 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。
 
-SET AUTO_UPDATE_STATISTICS { ON | OFF } 統計の自動更新オプション AUTO_UPDATE_STATISTICS がオンの場合、古くなっている可能性がある統計がクエリ オプティマイザーによって判断され、それらがクエリで使用されると更新されます。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
+SET AUTO_UPDATE_STATISTICS { ON | OFF }       
+統計の自動更新オプション AUTO_UPDATE_STATISTICS が ON の場合、古くなっている可能性がある統計がクエリ オプティマイザーによって判断され、それらがクエリで使用されると更新されます。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
 
 AU7 へのアップグレード後に作成された新しいデータベースの場合、既定値は ON です。 アップグレードの前に作成されたデータベースの場合、既定値は OFF です。
 
 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。
 
-SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 統計の非同期更新オプション AUTO_UPDATE_STATISTICS_ASYNC によって、クエリ オプティマイザーで統計の同期更新と非同期更新のどちらを使用するかが決まります。 AUTO_UPDATE_STATISTICS_ASYNC オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。
+SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }        
+統計の非同期更新オプション AUTO_UPDATE_STATISTICS_ASYNC によって、クエリ オプティマイザーで統計の同期更新と非同期更新のどちらを使用するかが決まります。 AUTO_UPDATE_STATISTICS_ASYNC オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。
 
 AU7 へのアップグレード後に作成された新しいデータベースの場合、既定値は ON です。 アップグレードの前に作成されたデータベースの場合、既定値は OFF です。
 
 統計の詳細については、「[統計](/sql/relational-databases/statistics/statistics)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
-
-データベースに対する ALTER 権限が必要です。
+データベースに対する `ALTER` 権限が必要です。
 
 ## <a name="error-messages"></a>エラー メッセージ
 
-自動統計が無効になっている場合に、統計の設定を変更しようとすると、"このオプションは PDW でサポートされていません" というエラーが PDW から返されます。 システム管理者は、機能スイッチ [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) を有効にすることにより、自動統計を有効にすることができます。
+自動統計が無効になっている場合に、統計の設定を変更しようとすると、`This option is not supported in PDW` というエラーが PDW から出力されます。 システム管理者は、機能スイッチ [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) を有効にすることにより、自動統計を有効にすることができます。
 
 ## <a name="general-remarks"></a>全般的な解説
-
-REPLICATED_SIZE、DISTRIBUTED_SIZE、LOG_SIZE は、データベースの現在の値と同じ値か、それより大きい値か、それより小さい値に設定できます。
+`REPLICATED_SIZE`、`DISTRIBUTED_SIZE`、`LOG_SIZE` は、データベースの現在の値と同じ値か、それより大きい値か、それより小さい値に設定できます。
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
-
 増加と縮小はおおよそで行われます。 結果的に与えられる実際のサイズはサイズ パラメーターとは異なる場合があります。
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は ALTER DATABASE ステートメントを不可分操作として実行しません。 実行中、ステートメントが中止された場合、既に発生している変更はそのまま残ります。
@@ -994,15 +982,12 @@ REPLICATED_SIZE、DISTRIBUTED_SIZE、LOG_SIZE は、データベースの現在�
 統計の設定は、管理者によって自動統計が有効にされた場合にのみ機能します。管理者である場合は、機能スイッチ [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) を使用して自動統計を有効または無効にします。
 
 ## <a name="locking-behavior"></a>ロック動作
-
 DATABASE オブジェクトを共有ロックします。 別のユーザーが読み取りまたは書き込みをしているデータベースを変更することはできません。 データベースで [USE](../language-elements/use-transact-sql.md) ステートメントを発行しているセッションもこれに該当します。
 
 ## <a name="performance"></a>パフォーマンス
-
 データベース内の実際のデータ サイズとディスクの断片化の量によっては、データベースの縮小に多大な時間とシステム リソースが必要となります。 たとえば、データベースの縮小に数時間かかることがあります。
 
 ## <a name="determining-encryption-progress"></a>暗号化の進捗状況を見る
-
 次のクエリを使用すると、データベースの Transparent Data Encryption の進捗状況を割合で見ることができます。
 
 ```sql

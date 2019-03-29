@@ -12,15 +12,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b1954044626059e8a637aa41292839062269250
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 922a9abd267bec8b0400bc7d2c43d945d011d938
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640023"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274672"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>プログラムによるリモート パッケージの読み込みと実行
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされていないローカル コンピューターからリモート パッケージを実行するには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされているリモート コンピューター上でパッケージが実行されるように、パッケージを起動します。 この操作を行うには、ローカル コンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、Web サービス、またはリモート コンポーネントを使用して、リモート コンピューターでパッケージを起動します。 ローカル コンピューターから直接リモート パッケージを起動しようとすると、パッケージがローカル コンピューターに読み込まれ、ローカル コンピューターから実行されます。 ローカル コンピューターに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされていない場合、パッケージは実行されません。  
@@ -417,7 +417,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>外部リソース  
   
--   technet.microsoft.com のビデオ「[SQL Server エージェントを使用して SSIS パッケージ実行を自動化する方法 (SQL Server ビデオ)](https://technet.microsoft.com/sqlserver/ff686764.aspx)」  
+-   MSDN ライブラリのビデオ「[SQL Server エージェントを使用して SSIS パッケージ実行を自動化する方法 (SQL Server ビデオ)](https://technet.microsoft.com/sqlserver/ff686764.aspx)」 (technet.microsoft.com)  
   
 ## <a name="see-also"></a>参照  
  [ローカル実行とリモート実行の相違点について](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

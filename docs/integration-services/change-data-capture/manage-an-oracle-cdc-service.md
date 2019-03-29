@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 39235b99879ca5d49bc05dc3aabba71c37351e65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4d5bf2b8247d3ee7907f5a064f090c88344c18e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738346"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275579"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   CDC Service 構成コンソールを使用すると、特定の CDC Service を管理できます。  
@@ -47,7 +47,7 @@ ms.locfileid: "47738346"
   
  または、削除する CDC サービスを右クリックして **[削除]** を選択します。  
   
- **注**: 実行中のサービスを削除した場合、サービスは停止されてから削除されます。  
+ **注**:実行中のサービスを削除した場合、サービスは停止されてから削除されます。  
   
  Oracle CDC Windows Service の定義を削除するには、プログラムに、関連付けられている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の MSXDBCDC データベースに対する更新アクセスが必要です。 [OK] をクリックしてサービスを削除すると、MSXDBCDC データベース内にある Oracle CDC Service 登録の削除が試みられます。 プログラムが適切な権限を持っていないため Oracle CDC Service 登録を削除できない場合、ユーザーは、MSXDBCDC データベースに対する更新権限を持つ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを入力するよう求められます。  
   

@@ -10,15 +10,15 @@ ms.topic: language-reference
 helpviewer_keywords:
 - stored procedures [Integration Services]
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d5afc269f3f0d2fb3226cfb563e42eb2bbdba854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1065b6ce1d57bd52ed306a54b166334df998d6e8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793790"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280826"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>ストアド プロシージャ (Integration Services カタログ)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47793790"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ストアド プロシージャを呼び出して、**SSISDB** カタログに格納されているオブジェクトを追加、削除、変更、または実行します。  
   
- カタログの既定の名前は、SSISDB です。 カタログに格納されているオブジェクトには、プロジェクト、パッケージ、パラメーター、環境、および操作履歴があります。  
+ カタログの既定の名前は、SSISDB です。 カタログに格納されているオブジェクトには、プロジェクト、パッケージ、パラメーター、環境、操作履歴があります。  
   
  データベース ビューとストアド プロシージャを直接使用することも、マネージド API を呼び出すカスタム コードを記述することもできます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] およびマネージド API では、ビューに対してクエリを実行し、多くのタスクを実行するストアド プロシージャ (このセクションで説明) を呼び出します。  
   

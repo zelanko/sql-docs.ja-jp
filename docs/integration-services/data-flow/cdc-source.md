@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d99085d1f743177a24c7902daebf584455f38a79
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c487852af232224304e0d746f0ab32bf0fe90dbe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642241"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290538"
 ---
 # <a name="cdc-source"></a>CDC ソース
   CDC ソースは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブルから変更データの範囲を読み取り、変更内容を下流の他の SSIS コンポーネントに伝えます。  
@@ -135,7 +135,7 @@ use <cdc-enabled-database-name>
   
 3.  **[CDC ソース エディター]** で、 **[接続マネージャー]** をクリックします。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **ADO.NET 接続マネージャー**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。 選択した変更テーブルが存在する、CDC に対応した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続である必要があります。  
   
@@ -188,7 +188,7 @@ use <cdc-enabled-database-name>
   
 3.  **[CDC ソース エディター]** で、 **[列]** をクリックします。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧です。 このテーブルを使用して列を追加または削除することはできません。 ソースで使用する列を選択します。 選択した列は、選択した順序で **[外部列]** の一覧に追加されます。  
   
@@ -210,7 +210,7 @@ use <cdc-enabled-database-name>
   
 3.  **[CDC ソース エディター]** で、 **[エラー出力]** をクリックします。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   

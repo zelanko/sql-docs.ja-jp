@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dts.designer.afpstorageconn.f1
 - sql14.dts.designer.afpstorageconn.f1
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 31440d6479353467d687467466f9c838a49d5252
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a46945b7c7725d680fb303a451327dc2733642aa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724150"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277831"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage 接続マネージャー
   **Azure Storage 接続マネージャー** は、SSIS パッケージがストレージ アカウント名プロパティとアカウント キー プロパティに指定された値を使用して Azure Storage アカウントに接続することを可能にします。  

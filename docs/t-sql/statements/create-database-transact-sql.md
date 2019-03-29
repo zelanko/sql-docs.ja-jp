@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: SQL Server、Azure SQL Database、Azure SQL Data Warehouse、および Analytics Platform System のデータベース構文を作成します。
 ms.custom: ''
-ms.date: 03/08/2019
+ms.date: 03/18/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6283f95a8d3dc34964d13a21b75097ab5f51a56d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d63faad8a29853354e6187d963dc23ccd78b0252
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974551"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222146"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -1317,7 +1317,7 @@ Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-
 データベースの行ストア データの最大許容サイズ。 行ストア テーブル、列ストア インデックスのデルタストア、またはクラスター化列ストア インデックス上の非クラスター化インデックスに格納されたデータは、MAXSIZE を超えて大きくなることはできません。列ストア形式に圧縮されたデータは、サイズ制限がなく、MAXSIZE に制約されません。
 
 SERVICE_OBJECTIVE     
-パフォーマンス レベルを指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] のサービス目標の詳細については、[パフォーマンス レベル](https://azure.microsoft.com/documentation/articles/performance-tiers/)に関するページを参照してください。
+パフォーマンス レベルを指定します。 SQL Data Warehouse のサービス目標の詳細については、「[Data Warehouse ユニット (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)」を参照してください。
 
 ## <a name="general-remarks"></a>全般的な解説
 データベースのプロパティを参照するには、[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) を使用します。

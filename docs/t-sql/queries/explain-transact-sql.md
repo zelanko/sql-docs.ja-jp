@@ -11,12 +11,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b364a92732be8e12233faf51b03d92154c2a6d28
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 99edc393a8d831373fd3b7175af545f00655980c
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979498"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305910"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ EXPLAIN SQL_statement
 |\<sql>|*SQL_statement* をエコーします。|  
 |\<params>|このタグは、この時点では使用されません。|  
 |\<dsql_operations>|クエリの手順がまとめられて含まれ、クエリのコスト情報が含まれます。 すべての `<dsql_operation>` ブロックも含まれます。 このタグには、全体のクエリのカウント情報が含まれています。<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* は、クエリの実行にかかる推定合計時間 (ミリ秒) です。<br /><br /> *total_number_operations* は、クエリの操作の総数です。 並列化され複数のノードで実行される操作は、1 つの操作としてカウントされます。|  
-|\<dsql_operation>|クエリ プラン内の 1 つの操作について説明します。 \<dsql_operation> タグには、属性として操作の種類が含まれます。<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* は、[データのクエリ (SQL Server PDW)](https://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c) で見つかった値の 1 つです。<br /><br /> `\<dsql_operation>` ブロック内のコンテンツは、操作の種類によって異なります。<br /><br /> 次の表を参照してください。|  
+|\<dsql_operation>|クエリ プラン内の 1 つの操作について説明します。 \<dsql_operation> タグには、属性として操作の種類が含まれます。<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* は、[sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) で見つかった値の 1 つです。<br /><br /> `\<dsql_operation>` ブロック内のコンテンツは、操作の種類によって異なります。<br /><br /> 次の表を参照してください。|  
   
 |操作の種類|コンテンツ|例|  
 |--------------------|-------------|-------------|  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d2fceae5ca3eacd9d84faf86e034353cbc84368a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525324"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283086"
 ---
 # <a name="ole-db-destination"></a>OLE DB 変換先
   OLE DB 変換先は、データベースのテーブルやビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなデータベースにデータを読み込みます。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースのテーブルにデータを読み込むことができます。  
@@ -52,7 +52,7 @@ ms.locfileid: "52525324"
 > [!NOTE]  
 >  OLE DB 変換先ではパラメーターがサポートされません。 パラメーター化された INSERT ステートメントを実行する必要がある場合は、OLE DB コマンド変換を検討してください。 詳細については、「 [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md)」を参照してください。  
   
- OLE DB 変換先で 2 バイト文字セット (DBCS) を使用するデータを読み込む際に、データ アクセス モードで高速読み込みオプションを使用せず、OLE DB 接続マネージャーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB) を使用している場合、そのデータは破損する可能性があります。 DBCS データの整合性を保持するには、OLE DB 接続マネージャーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用するように構成するか、 **[テーブルまたはビュー - 高速読み込み]** または **[テーブル名またはビュー名の変数 - 高速読み込み]** のうちいずれかの高速読み込みモードを使用する必要があります。 どちらのオプションも、 **[OLE DB 変換先エディター]** ダイアログ ボックスから使用できます。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] オブジェクト モデルをプログラミングするときは、AccessMode プロパティを **[OpenRowset での FastLoad の使用]** または **[Variable から FastLoad を使用して OpenRowset]** に設定する必要があります。  
+ OLE DB 変換先で 2 バイト文字セット (DBCS) を使用するデータを読み込む際に、データ アクセス モードで高速読み込みオプションを使用せず、OLE DB 接続マネージャーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB) を使用している場合、そのデータは破損する可能性があります。 DBCS データの整合性を保持するには、OLE DB 接続マネージャーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用するように構成するか、次のどちらかの高速読み込みモードを使用する必要があります: **[テーブルまたはビュー - 高速読み込み]** または **[テーブル名またはビュー名の変数 - 高速読み込み]**。 どちらのオプションも、 **[OLE DB 変換先エディター]** ダイアログ ボックスから使用できます。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] オブジェクト モデルをプログラミングするときは、AccessMode プロパティを **[OpenRowset での FastLoad の使用]** または **[Variable から FastLoad を使用して OpenRowset]** に設定する必要があります。  
   
 > [!NOTE]  
 >  **デザイナーの** [OLE DB 変換先エディター] [!INCLUDE[ssIS](../../includes/ssis-md.md)] ダイアログ ボックスを使用して、OLE DB 変換先がデータを挿入する変換先テーブルを作成する際に、新しく作成したテーブルを手動で選択する必要がある場合があります。 手動で選択する必要があるのは、OLE DB provider for DB2 などの OLE DB プロバイダーが、スキーマの識別子を自動的にテーブル名に追加した場合です。  
@@ -94,7 +94,7 @@ ms.locfileid: "52525324"
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|挿入するサイズを KB 単位で指定します。 このオプションの形式は、**KILOBYTES_PER_BATCH** = \<正の整数**>** です。|  
 |FIRE_TRIGGERS|挿入テーブルでトリガーを起動するかどうかを指定します。 このオプションの形式は、 **FIRE_TRIGGERS**です。 このオプションが指定されている場合は、トリガーが起動されます。|  
-|ORDER|入力データの並べ替え方法を指定します。 このオプションの形式は、ORDER \<列名> ASC&#124;DESC です。 並べ替える列のリストには任意の数列を指定できます。並べ替え順序の指定は省略することもできます。 並べ替え順序を指定しなかった場合は、データを並べ替えないと見なして挿入操作が実行されます。<br /><br /> 注: ORDER オプションを使用してテーブル上のクラスター化インデックスに従って入力データを並べ替えると、パフォーマンスが向上する可能性があります。|  
+|ORDER|入力データの並べ替え方法を指定します。 このオプションの形式は、ORDER \<列名> ASC&#124;DESC です。 並べ替える列のリストには任意の数列を指定できます。並べ替え順序の指定は省略することもできます。 並べ替え順序を指定しなかった場合は、データを並べ替えないと見なして挿入操作が実行されます。<br /><br /> 注:ORDER オプションを使用してテーブル上のクラスター化インデックスに従って入力データを並べ替えると、パフォーマンスが向上する可能性があります。|  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードは慣例として通常は大文字で入力しますが、これらのキーワードの大文字小文字は区別されません。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "52525324"
 |------------|-----------------|  
 |[テーブルまたはビュー]|データを OLE DB 変換先のテーブルまたはビューに読み込みます。|  
 |[テーブルまたはビュー - 高速読み込み]|高速読み込みオプションを使用し、データを OLE DB 変換先のテーブルまたはビューに読み込みます。 一括挿入用に最適化された高速読み込みデータ アクセス モードの詳細については、「 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。|  
-|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報**:[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |[テーブル名またはビュー名の変数 - 高速読み込み]|高速読み込みオプションを使用し、テーブル名またはビュー名を変数で指定します。 一括挿入用に最適化された高速読み込みデータ アクセス モードの詳細については、「 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。|  
 |[SQL コマンド]|SQL クエリを使用し、データを OLE DB 変換先に読み込みます。|  
   
@@ -257,7 +257,7 @@ ms.locfileid: "52525324"
 ## <a name="ole-db-destination-editor-mappings-page"></a>[OLE DB 変換先エディター] ([マッピング] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
   
@@ -273,7 +273,7 @@ ms.locfileid: "52525324"
 ## <a name="ole-db-destination-editor-error-output-page"></a>[OLE DB 変換先エディター] ([エラー出力] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[入力または出力]**  
  入力の名前を表示します。  
   
@@ -283,7 +283,7 @@ ms.locfileid: "52525324"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連項目:**[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  使用されていません。  

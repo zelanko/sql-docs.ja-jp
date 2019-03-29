@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f6cb8c09525b998d5e864124eff0e5bb0aa509
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd23184f25ff8083bdfffbb46ef8c5b5f5f91eae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807380"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281236"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>OLE DB 変換先を使用してデータを読み込む
   OLE DB 変換先を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -37,13 +37,13 @@ ms.locfileid: "47807380"
   
 5.  OLE DB 変換先をダブルクリックします。  
   
-6.  **[OLE DB 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページで、既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+6.  **[OLE DB 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページで、既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 7.  データのアクセス方法を、次の中から選択します。  
   
     -   **[テーブルまたはビュー]** データが含まれるデータベース内のテーブルまたはビューを選択します。  
   
-    -   **[テーブルまたはビュー - 高速読み込み]** データが含まれるデータベース内のテーブルまたはビューを選択し、高速読み込みのオプションを設定します。高速読み込みのオプションには、 **[ID を保持する]**、 **[NULL を保持する]**、 **[テーブル ロック]**、 **[CHECK 制約]**、 **[バッチごとの行数]**、または **[挿入コミット サイズの最大値]** があります。  
+    -   **[テーブルまたはビュー - 高速読み込み]** データが含まれるデータベース内のテーブルまたはビューを選択し、高速読み込みのオプションを設定します。高速読み込みのオプションには、**[ID を保持する]**、**[NULL を保持する]**、**[テーブル ロック]**、**[CHECK 制約]**、**[バッチごとの行数]**、または **[挿入コミット サイズの最大値]** があります。  
   
     -   **[テーブル名またはビュー名の変数]** データベースのテーブルまたはビューの名前が含まれている、ユーザー定義変数を選択します。  
   
@@ -66,6 +66,6 @@ ms.locfileid: "47807380"
  [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)   
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md)   
- [データ フロー タスク](../../integration-services/control-flow/data-flow-task.md)  
+ [[データ フロー タスク]](../../integration-services/control-flow/data-flow-task.md)  
   
   

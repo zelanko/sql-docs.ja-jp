@@ -11,15 +11,15 @@ helpviewer_keywords:
 - dates [Integration Services], MONTH
 - MONTH function
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f80050f1b4b1fd3f41a68af5dfc04aa837f1007
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 908a65661cc0aa38a9d52cdf8fc365cd7a665d35
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811690"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270000"
 ---
 # <a name="month-ssis-expression"></a>MONTH (SSIS 式)
   ある日付の、月の日付要素を表す整数値を返します。  
@@ -44,7 +44,7 @@ MONTH(date)
  日付リテラルは、日付データ型のいずれかに明示的にキャストされる必要があります。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
 > [!NOTE]  
->  日付リテラルが DT_DBTIMESTAMPOFFSET と DT_DBTIMESTAMP2 のいずれかの日付データ型に明示的にキャストされると、式の検証は失敗します。  
+>  日付リテラルが次のいずれかの日付データ型に明示的にキャストされると、式の検証は失敗します。DT_DBTIMESTAMPOFFSET および DT_DBTIMESTAMP2。  
   
  MONTH 関数を使用すると、DATEPART("MONTH", date) 関数を使用する場合と同じ結果を、より簡単に取得できます。  
   

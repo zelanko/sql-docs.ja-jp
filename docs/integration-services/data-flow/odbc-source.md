@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e291d13b6fb9d7f83bef22783baebccf6b713ee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0518701a8f776fbe625fa77d35bfcc4f961973b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694511"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289838"
 ---
 # <a name="odbc-source"></a>ODBC 入力元
   ODBC 入力元は、データベース テーブル、ビュー、または SQL ステートメントを使用して、ODBC でサポートされているデータベースからデータを抽出します。  
@@ -55,7 +55,7 @@ ms.locfileid: "47694511"
 ## <a name="extract-options"></a>抽出オプション  
  ODBC 入力元は、 **バッチ** または **行ごと** のどちらかのモードで動作します。 使用するモードは、 **FetchMethod** プロパティによって決まります。 以下に、モードの説明を示します。  
   
--   **バッチ**: コンポーネントは、把握した ODBC プロバイダーの機能に基づいて、最も効率的なフェッチ方法を使用します。 最新の ODBC プロバイダーの場合、これは配列バインドを使用する SQLFetchScroll です (このとき、配列のサイズは **BatchSize** プロパティによって決定します)。 ユーザーが **バッチ** を選択し、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **行ごと** のモードに切り替わります。  
+-   **バッチ**: コンポーネントは、把握した ODBC プロバイダーの機能に基づいて、最も効率的なフェッチ方法を使用します。 最新の ODBC プロバイダーの場合、これは配列バインドを使用する SQLFetchScroll です (このとき、配列のサイズは **BatchSize** プロパティによって決定します)。 **[バッチ]** を選択したが、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **[行ごと]** モードに切り替わります。  
   
 -   **行ごと**: コンポーネントは SQLFetch を使用して、一度に 1 行ずつ取得します。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47694511"
   
 -   **[データ フロー]** タブで、ODBC 入力元をダブルクリックします。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
   
 #### <a name="connection-manager"></a>[ODBC 入力元エディター]  
  既存の ODBC 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。 ODBC でサポートされているデータベースへの接続を選択または入力できます。  
@@ -132,7 +132,7 @@ ms.locfileid: "47694511"
   
 3.  **[ODBC 入力元エディター]** で、 **[列]** をクリックします。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
   
 #### <a name="available-external-columns"></a>使用できる外部列  
  データ ソース内の使用できる外部列の一覧です。 このテーブルを使用して列を追加または削除することはできません。 入力元から使用する列を選択します。 選択した列は、選択した順序で **[外部列]** の一覧に追加されます。  
@@ -157,7 +157,7 @@ ms.locfileid: "47694511"
   
 -   **[ODBC 入力元エディター]** で、 **[エラー出力]** をクリックします。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
   
 #### <a name="inputoutput"></a>[入力または出力]  
  データ ソースの名前を表示します。  
@@ -165,7 +165,7 @@ ms.locfileid: "47694511"
 #### <a name="column"></a>[列]  
  使用されていません。  
   
-#### <a name="error"></a>[エラー]  
+#### <a name="error"></a>Error  
  ODBC 入力元でフローのエラーを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
 #### <a name="truncation"></a>切り捨て  

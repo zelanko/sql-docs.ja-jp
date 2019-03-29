@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4078dd31ec70008803149835276d22835f26424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 232837ed4d42fe7c61036bcb5e4b2a80ec688b64
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754000"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273297"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>変更をキャプチャするための Oracle テーブルの選択
   このダイアログ ボックスを使用すると、CDC インスタンスに含めるテーブルを選択できます。 選択したテーブルは、新しいインスタンス ウィザードの **[テーブルと列の選択]** ページの一覧に追加されます。 このダイアログ ボックスでは次の操作を実行できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "47754000"
 > [!NOTE]  
 >  これらのフィールドの一方または両方に条件を入力できます。  
   
--   **[一致するテーブルのうち最初の 1000 個を表示する]**: 既定ではこのチェック ボックスはオンになっています。 一致するテーブルのうち最初の 1000 個のみが表示されます。 このチェック ボックスをオフにすると、条件に一致するすべてのテーブルが表示されます。 テーブルが多数存在する場合、一覧の表示に時間がかかる場合があります。  
+-   **[一致するテーブルのうち最初の 1000 個を表示する]**: 既定では、このチェック ボックスはオンになっています。 一致するテーブルのうち最初の 1000 個のみが表示されます。 このチェック ボックスをオフにすると、条件に一致するすべてのテーブルが表示されます。 テーブルが多数存在する場合、一覧の表示に時間がかかる場合があります。  
   
  **CDC インスタンスに含めるテーブルを選択するには**  
  含めるテーブルの横のチェック ボックスをオンにして、 **[追加]** をクリックします。 新しいインスタンス ウィザードの **[テーブルと列の選択]** ページの一覧にテーブルが追加されます。  

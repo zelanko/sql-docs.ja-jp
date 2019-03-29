@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6d437fe81da2d8aefdba67f7a8501202ce79459c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e2b709c9e6de54b24da2b99668e85ed72a17651
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694640"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273662"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>CDC へのテーブルの追加
   [テーブル選択] ダイアログ ボックスを使用すると、Oracle ソースから CDC インスタンスに追加のテーブルを追加できます。 選択したテーブルは、プロパティ エディターの **[テーブル]** タブの一覧に追加されます。  
@@ -35,7 +35,7 @@ ms.locfileid: "47694640"
 > [!NOTE]  
 >  これらのフィールドの一方または両方に条件を入力できます。  
   
--   **[一致するテーブルのうち最初の 1000 個を表示する]**: 既定ではこのチェック ボックスはオンになっています。 一致するテーブルのうち最初の 1000 個のみが表示されます。 このチェック ボックスをオフにすると、条件に一致するすべてのテーブルが表示されます。 テーブルが多数存在する場合、一覧の表示に時間がかかる場合があります。  
+-   **[一致するテーブルのうち最初の 1000 個を表示する]**: 既定では、このチェック ボックスはオンになっています。 一致するテーブルのうち最初の 1000 個のみが表示されます。 このチェック ボックスをオフにすると、条件に一致するすべてのテーブルが表示されます。 テーブルが多数存在する場合、一覧の表示に時間がかかる場合があります。  
   
  **CDC インスタンスに含めるテーブルを選択するには**  
  含めるテーブルの横のチェック ボックスをオンにして、 **[追加]** をクリックします。 新しいインスタンス ウィザードの **[テーブルと列の選択]** ページの一覧にテーブルが追加されます。  
@@ -50,7 +50,7 @@ ms.locfileid: "47694640"
   
 ## <a name="see-also"></a>参照  
  [CDC インスタンスのプロパティを編集する方法](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [CDC インスタンスを管理する方法](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [変更をキャプチャするための Oracle テーブルの選択](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
   

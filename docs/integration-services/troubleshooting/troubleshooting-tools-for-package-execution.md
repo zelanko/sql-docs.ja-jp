@@ -14,15 +14,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e0ee84933cf0644ac4759639c5ce6e2b3f183f04
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639029"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290128"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>パッケージ実行のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージを完成して配置した後、そのパッケージの実行時のトラブルシューティングに使用できる機能とツールが含まれています。  
@@ -82,7 +82,7 @@ ms.locfileid: "51639029"
   
     3.  **行数データのキャプチャを検討する**。 行数情報用に別のテーブルを作成することを検討します。このテーブルでは、パッケージ実行の各インスタンスを ExecutionID で識別します。 行数変換を使用して、データ フロー内の重要な時点の行数を一連の変数に保存します。 データ フローの終了後、SQL 実行タスクを使用してこの一連の値をテーブルの行に挿入すると、後の分析やレポートに役立ちます。  
   
-     この方法の詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] のホワイト ペーパー「[プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法](https://go.microsoft.com/fwlink/?LinkId=96602)」の「ETL の監査とログ記録」を参照してください。  
+     この方法の詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] のホワイト ペーパー「[Project REAL: Business Intelligence ETL Design Practices (プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法)](https://go.microsoft.com/fwlink/?LinkId=96602)」の「ETL Auditing and Logging (ETL の監査とログ記録)」をご覧ください。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>デバッグ ダンプ ファイルを使ったパッケージ実行のトラブルシューティング  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、パッケージの実行に関する情報を提供するデバッグ ダンプ ファイルを作成できます。 詳細については、「[パッケージ実行用のダンプ ファイルを生成する](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。  

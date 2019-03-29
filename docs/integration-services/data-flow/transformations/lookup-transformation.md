@@ -21,15 +21,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639659"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273291"
 ---
 # <a name="lookup-transformation"></a>参照変換
   参照変換は、入力列のデータを参照データセットの列と結合することにより参照を実行します。 参照を使用すると、共通の列の値に基づいている関連テーブル内の追加情報にアクセスできます。  
@@ -131,11 +131,11 @@ ms.locfileid: "51639659"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   msdn.microsoft.com のビデオ「 [フル キャッシュ モードで参照変換を実装する方法](https://go.microsoft.com/fwlink/?LinkId=131031)」  
+-   MSDN ライブラリのビデオ「[フル キャッシュ モードで参照変換を実装する方法](https://go.microsoft.com/fwlink/?LinkId=131031)」 (msdn.microsoft.com)  
   
 -   blogs.msdn.com のブログ「 [参照変換のキャッシュ モードを使用する際の推奨事項](https://go.microsoft.com/fwlink/?LinkId=146623)」  
   
--   blogs.msdn.com のブログ「 [参照パターン : 大文字と小文字を区別しない](https://go.microsoft.com/fwlink/?LinkId=157782)」  
+-   blogs.msdn.com のブログ記事「[参照パターン: 大文字と小文字を区別しない](https://go.microsoft.com/fwlink/?LinkId=157782)」  
   
 -   msftisprodsamples.codeplex.com のサンプル「 [参照変換](https://go.microsoft.com/fwlink/?LinkId=267528)」  
   
@@ -144,7 +144,7 @@ ms.locfileid: "51639659"
 ## <a name="lookup-transformation-editor-general-page"></a>[参照変換エディター] ([全般] ページ)
   [参照変換エディター] ダイアログ ボックスの **[全般]** ページを使用して、キャッシュ モードや接続の種類を選択し、一致するエントリがない行の処理方法を指定します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[フル キャッシュ]**  
  参照変換を実行する前に、参照データセットを生成してキャッシュに読み込みます。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "51639659"
 ## <a name="lookup-transformation-editor-connection-page"></a>[参照変換エディター] ([接続] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[接続]** ページを使用して、接続マネージャーを選択します。 OLE DB 接続マネージャーを選択する場合は、参照データセットを生成するためのクエリ、テーブル、またはビューも選択します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[参照変換エディター]** ダイアログ ボックスの [全般] ページで **[フル キャッシュ]** および **[キャッシュ接続マネージャー]** を選択すると、次のオプションを使用できます。  
   
  **[フル キャッシュ]**  
@@ -220,7 +220,7 @@ ms.locfileid: "51639659"
 ## <a name="lookup-transformation-editor-columns-page"></a>[参照変換エディター] ([列] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、元のテーブルと参照テーブルの間に結合を指定したり、参照テーブルから参照列を選択したりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 入力列とは、データ フロー内の接続されているソースからの列です。 入力列と参照列のデータ型は一致している必要があります。  
   
@@ -249,7 +249,7 @@ ms.locfileid: "51639659"
 ## <a name="lookup-transformation-editor-advanced-page"></a>[参照変換エディター] ([詳細設定] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用して、部分キャッシュを構成し、参照変換用 SQL ステートメントを変更します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[キャッシュ サイズ (32 ビット)]**  
  32 ビット コンピューター用のキャッシュ サイズを MB 単位で調整します。 既定値は 5 MB です。  
   

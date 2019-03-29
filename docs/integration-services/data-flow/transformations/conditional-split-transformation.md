@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b6d56b9d109935db3adeafd4a3c11139109af8f7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3150d6a8c42a9e4cb0c4cb0cf17b581be61fd418
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640469"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280880"
 ---
 # <a name="conditional-split-transformation"></a>条件分割変換
   条件分割変換では、データ行をデータの内容に応じた別の出力にルートできます。 条件分割変換の実装は、プログラミング言語の CASE 決定構造と同様です。 この変換は式を評価し、その結果に基づいて、データ行を指定された出力に送信します。 この変換には既定の出力も用意されているため、行が式に一致しない場合は既定の出力に送信されます。  
@@ -75,7 +75,7 @@ ms.locfileid: "51640469"
 > [!NOTE]  
 >  条件分割変換は、1 つの出力に対してのみ各入力行を送信します。 複数の条件を入力した場合、変換によって、条件が True である最初の出力に各行が送信され、その行に対して後続する条件は無視されます。 複数の条件を継続して評価する必要がある場合、データ フローで複数の条件分割変換の連結が必要となることがあります。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **書**  
  行を選択し、右側の矢印キーを使用して、式を評価する順序を変更します。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "51640469"
   
  このプロパティの値は、プロパティ式を使用して指定することができます。  
   
- **:**   [Integration Services &#40;SSIS&#41; の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[ &#40;SSIS 式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)、および [ &#40;SSIS 式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **関連項目:**[Integration Services &#40;SSIS&#41; 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[演算子 &#40;SSIS 式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)、[関数 &#40;SSIS 式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **[既定の出力名]**  
  既定の出力の名前を入力するか、既定を使用します。  

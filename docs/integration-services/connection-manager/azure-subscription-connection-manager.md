@@ -11,18 +11,18 @@ f1_keywords:
 - sql13.dts.designer.afpsubscrconn.f1
 - sql14.dts.designer.afpsubscrconn.f1
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 36ded1687894433f5539e2b28f174729112407ec
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1256bec97be65752d63b9d05c78e068e7d83d420
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506680"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270568"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure サブスクリプション接続マネージャー
-  **Azure サブスクリプション接続マネージャー** を使用すると、Azure サブスクリプション ID と管理証明書のプロパティに指定した値を使用して、SSIS パッケージを Azure サブスクリプションに接続できます。  
+  **Azure サブスクリプション接続マネージャー**を使用すると、Azure サブスクリプション ID と管理証明書のプロパティに指定した値を使用して、SSIS パッケージを Azure サブスクリプションに接続できます。  
   
  **Azure サブスクリプション接続マネージャー**は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。
   

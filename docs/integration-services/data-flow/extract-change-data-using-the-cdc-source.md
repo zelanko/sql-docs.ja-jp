@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c1296ab84f5cf75013b68c72aba435c77ff129a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb9b3188669883b6f1d744185c4b643dffdface
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608420"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271116"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>CDC ソースを使用した変更データ抽出
   CDC ソースを追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの CDC 制御タスクがあらかじめ含まれている必要があります。  
@@ -74,6 +74,6 @@ ms.locfileid: "47608420"
 ## <a name="see-also"></a>参照  
  [[CDC ソース エディター] ([接続マネージャー] ページ)](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
  [[CDC ソース エディター] ([列] ページ)](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [[CDC ソース エディター] ([エラー出力] ページ)](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eb300ad961ded0b49ae8a9d36d3ccaeacf635e5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c57087e46ec596ae002ef00b802b62b97ee65e0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733750"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280536"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47733750"
 |end_time|**datetimeoffsset(7)**|操作が終了したときの日時。|  
 |ステータス|**int**|操作の状態。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
 |caller_sid|**varbinary(85)**|ログオンに Windows 認証が使用された場合はユーザーのセキュリティ ID (SID)。|  
-|させていただきたいと|**nvarchar(128)**|操作を実行したアカウントの名前。|  
+|caller_name|**nvarchar(128)**|操作を実行したアカウントの名前。|  
 |process_id|**int**|外部プロセスのプロセス ID (該当する場合)。|  
 |stopped_by_sid|**varbinary(85)**|操作を停止したユーザーの SID。|  
 |stopped_by_name|**nvarchar(128)**|操作を停止したユーザーの名前。|  

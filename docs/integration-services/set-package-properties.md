@@ -23,15 +23,15 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb7ed2c7f9989344a44a2ad2de9a59d2c4a2e1fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: edead99162483ab8721384a382d59bdaa1a262a8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525261"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277381"
 ---
 # <a name="set-package-properties"></a>パッケージのプロパティを設定する
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のグラフィカル インターフェイスを使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のパッケージを作成する場合、パッケージ オブジェクトのプロパティは [プロパティ] ウィンドウで設定します。  
@@ -50,7 +50,7 @@ ms.locfileid: "52525261"
   
 -   [その他](#Misc)  
   
--   [Security](#Security)  
+-   [セキュリティ](#Security)  
   
 -   [トランザクション](#Transactions)  
   
@@ -140,7 +140,7 @@ ms.locfileid: "52525261"
   
 |プロパティ|[説明]|  
 |--------------|-----------------|  
-|**IsolationLevel**|パッケージ トランザクションの分離レベルです。 値は、 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**、および **Snapshot**です。 このプロパティの既定値は **Serializable**です。<br /><br /> 注: **IsolationLevel** プロパティの値 **Snapshot** は、パッケージ トランザクションと互換性がありません。 したがって、 **IsolationLevel** プロパティを使用して、パッケージ トランザクションの分離レベルを **Shapshot**に設定することはできません。 SQL クエリを使用して、パッケージ トランザクションを **Snapshot**に設定してください。 詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。<br /><br /> **IsolationLevel** プロパティは、 **TransactionOption** プロパティの値が **Required**の場合にのみ、パッケージ トランザクションに適用されます。<br /><br /> 子コンテナーによって要求された **IsolationLevel** プロパティの値は、以下の場合には無視されます。<br />子コンテナーの **TransactionOption** プロパティの値が **Supported**である場合。<br />子コンテナーが親コンテナーのトランザクションに参加する場合。<br /><br /> コンテナーによって要求された **IsolationLevel** プロパティの値は、コンテナーが新しいトランザクションを開始する場合にのみ利用されます。 コンテナーは、次の場合に新しいトランザクションを開始します。<br />コンテナーの **TransactionOption** プロパティの値が **Required**である場合。<br />親がまだトランザクションを開始していない場合。<br /><br /> <br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>」を参照してください。|  
+|**IsolationLevel**|パッケージ トランザクションの分離レベルです。 値は、 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**、および **Snapshot**です。 このプロパティの既定値は **Serializable**です。<br /><br /> 注:**IsolationLevel** プロパティの値 **Snapshot** は、パッケージ トランザクションと互換性がありません。 したがって、 **IsolationLevel** プロパティを使用して、パッケージ トランザクションの分離レベルを **Shapshot**に設定することはできません。 SQL クエリを使用して、パッケージ トランザクションを **Snapshot**に設定してください。 詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。<br /><br /> **IsolationLevel** プロパティは、 **TransactionOption** プロパティの値が **Required**の場合にのみ、パッケージ トランザクションに適用されます。<br /><br /> 子コンテナーによって要求された **IsolationLevel** プロパティの値は、以下の場合には無視されます。<br />子コンテナーの **TransactionOption** プロパティの値が **Supported**である場合。<br />子コンテナーが親コンテナーのトランザクションに参加する場合。<br /><br /> コンテナーによって要求された **IsolationLevel** プロパティの値は、コンテナーが新しいトランザクションを開始する場合にのみ利用されます。 コンテナーは、次の場合に新しいトランザクションを開始します。<br />コンテナーの **TransactionOption** プロパティの値が **Required**である場合。<br />親がまだトランザクションを開始していない場合。<br /><br /> <br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>」を参照してください。|  
 |**TransactionOption**|パッケージに対するトランザクションの関与を示します。 値は、 **NotSupported**、 **Supported**、および **Required**です。 このプロパティの既定値は **Supported**です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>」を参照してください。|  
   
 ###  <a name="Version"></a> バージョン  

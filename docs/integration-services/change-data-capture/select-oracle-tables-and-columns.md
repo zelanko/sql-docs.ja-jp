@@ -10,20 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 830118141e849c2bde507686c1339f8cc73c1e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33ac9a5d6804e98685a0c16b5572848d5a575b00
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727630"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279226"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Oracle のテーブルおよび列の選択
   [Oracle のテーブルおよび列の選択] ページを使用すると、変更をキャプチャする Oracle ソース データベースからテーブルを選択できます。 このページには次の要素があります。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **テーブルの一覧**  
  テーブルの一覧には、次の 3 列が含まれています。  
   

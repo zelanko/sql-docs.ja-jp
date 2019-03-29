@@ -17,15 +17,15 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1d842af4f5e9245836e595c02a8adebfeaae3dba
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6b03494d1c74313eb6e0698e96062869b9e08cfa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639329"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270991"
 ---
 # <a name="derived-column-transformation"></a>派生列変換
   派生列変換では、式を変換入力列に適用することにより新しい列の値を作成します。 式には、変換入力からの列、変数、関数、および演算子の任意の組み合わせを含めることができます。 結果は、新しい列として追加するか、または既存の列の値を置き換える値として挿入できます。 派生列変換では複数の派生列を定義でき、任意の変数または入力列を複数の式に含めることができます。  
@@ -77,7 +77,7 @@ ms.locfileid: "51639329"
 ## <a name="derived-column-transformation-editor"></a>派生列変換エディター
   **[派生列変換エディター]** ダイアログ ボックスを使用すると、新しい列または置換列を作成する式を作成できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[変数] と [列]**  
  使用可能な変数と列の一覧から、下のペインにある既存のテーブル行または一覧の下の新しい行へドラッグすることによって、変数または入力列を使用する式を作成します。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "51639329"
   
  このプロパティの値は、プロパティ式を使用して指定することができます。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[ &#40;SSIS の式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)、[ &#40;SSIS の式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[演算子 &#40;SSIS 式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)、[関数 &#40;SSIS 式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **[データ型]**  
  新しい列にデータを追加すると、 **[派生列変換エディター]** ダイアログ ボックスによって自動的に式が評価され、データ型が適切に設定されます。 この列の値は読み取り専用です。 詳細については、「 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  

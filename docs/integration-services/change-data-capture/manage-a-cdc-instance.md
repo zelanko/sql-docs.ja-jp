@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c9edcbe27c015e4f63b2a0d66640dcca818d3eba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6964ac46f08a11aac9f3619acf181f11fd78960
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853890"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274778"
 ---
 # <a name="manage-a-cdc-instance"></a>CDC インスタンスの管理
   CDC デザイナー コンソールを使用して、作成したインスタンスに関する情報を表示し、インスタンスの操作を管理することができます。  
@@ -66,13 +66,13 @@ ms.locfileid: "47853890"
  **ステータス**  
  このタブには、CDC インスタンスの現在の状態に関する情報と統計が表示されます。 このタブには、次の情報が含まれています。  
   
--   **[状態]**: CDC インスタンスの現在の状態を示すアイコンです。 これらの状態を次に示します。  
+-   **状態**: CDC インスタンスの現在の状態を示すアイコンです。 これらの状態を次に示します。  
   
     |||  
     |-|-|  
     |![エラー](../../integration-services/change-data-capture/media/error.gif "エラー")|**エラー**: 再試行できないエラーが発生したため、Oracle CDC インスタンスは実行されていません。 次の副状態が利用できます。<br /><br /> **間違った構成**: 手動の介入を必要とする構成エラーが発生しました。<br /><br /> **パスワードが必要**: Oracle CDC インスタンスのパスワードが設定されていないか、パスワードが無効です。<br /><br /> **予期しないエラー**: その他すべての回復できないエラーです。|  
-    |![OK](../../integration-services/change-data-capture/media/okay.gif "OK")|**実行中**: CDC インスタンスが実行されていて、変更レコードが処理されています。 次の副状態が利用できます。<br /><br /> **アイドル状態**: すべての変更レコードが処理され、ターゲット変更テーブルに格納されました。 アクティブなトランザクションはこれ以上ありません。<br /><br /> **処理**: 変更テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  
-    |![[停止]](../../integration-services/change-data-capture/media/stop.gif "[停止]")|**停止**: CDC インスタンスが実行されていません。 停止状態は、CDC インスタンスが正常に停止したことを示します。|  
+    |![OK](../../integration-services/change-data-capture/media/okay.gif "OK")|**[実行中]**: CDC インスタンスが実行されていて、変更レコードが処理されています。 次の副状態が利用できます。<br /><br /> **アイドル状態**: すべての変更レコードが処理され、ターゲット変更テーブルに格納されました。 アクティブなトランザクションはこれ以上ありません。<br /><br /> **処理**: 変更テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  
+    |![[停止]](../../integration-services/change-data-capture/media/stop.gif "[停止]")|**[停止]**: CDC インスタンスが実行されていません。 停止状態は、CDC インスタンスが正常に停止したことを示します。|  
     |![一時停止](../../integration-services/change-data-capture/media/paused.gif "一時停止")|**一時停止**: CDC インスタンスが実行されていますが、再試行できないエラーにより処理が中断されています。 次の副状態が利用できます。<br /><br /> **接続解除**: ソース Oracle データベースへの接続を確立できません。 接続が回復すると処理が再開されます。<br /><br /> **ストレージ**: 記憶領域がいっぱいです。 追加の記憶領域に空きができると処理が再開されます。<br /><br /> **ロガー**: ロガーは Oracle に接続されていますが、必要なトランザクション ログが利用できないなどの一時的な問題が発生しており、Oracle トランザクション ログを読み取ることができません。|  
   
 -   **[詳細な状態]**: 現在の副状態です。  
@@ -81,7 +81,7 @@ ms.locfileid: "47853890"
   
 -   **[タイムスタンプ]**: CDC の状態が状態テーブルから最後に読み取られたときの UTC 時刻です。  
   
--   **[現在の処理]**: このセクションでは、次の情報を監視します。  
+-   **[カウンター]**: このセクションでは、次の情報を監視します。  
   
     -   **[最後のトランザクションのタイムスタンプ]**: 変更テーブルに最後のトランザクションが書き込まれたローカル時刻です。  
   
@@ -122,6 +122,6 @@ ms.locfileid: "47853890"
  [SQL Server 変更データベース インスタンスを作成する方法](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [CDC インスタンスのプロパティを表示する方法](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
  [CDC インスタンスのプロパティを編集する方法](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [新しいインスタンス ウィザードを使用する](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [新しいインスタンス ウィザードの使用](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

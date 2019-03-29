@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], comparing to Script component
 - Script component [Integration Services], comparing to Script task
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c58385a1e38c19ed25785cd2da472544af3be171
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b4c1d5abf0824e94d87fd5275ccb1b97a382a680
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407769"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283076"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>スクリプト タスクとスクリプト コンポーネントの比較
   スクリプト タスクは [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] デザイナーの [制御フロー] ウィンドウで使用でき、スクリプト コンポーネントは [データ フロー] ウィンドウで使用できます。これら 2 つのタスクは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内での目的がまったく異なります。 タスクは汎用の制御フロー ツールであるのに対し、コンポーネントはデータ フロー内で変換元、変換、または変換先としての役割を果たします。 ただし、目的は異なっても、コード作成に使用するツールや、開発者が使用できるパッケージ内のオブジェクトについては、スクリプト タスクとスクリプト コンポーネントには似通った点があります。 共通点と相違点を理解すると、このタスクとコンポーネントをより効率的に使用するために役立ちます。  
@@ -44,7 +44,7 @@ ms.locfileid: "52407769"
 |制御フローとデータ フロー|スクリプト タスクはデザイナーの [制御フロー] タブで設定され、パッケージのデータ フローの外で実行されます。|スクリプト コンポーネントはデザイナーの [データ フロー] ページで設定され、データ フロー タスク内で変換元、変換、または変換先のいずれかを表します。|  
 |用途|スクリプト タスクはほとんどの汎用タスクを実行できます。|スクリプト コンポーネントでは、変換元、変換、または変換先のどれを作成するかを指定する必要があります。|  
 |実行|スクリプト タスクは、パッケージ ワークフロー内のある時点でカスタム コードを実行します。 ループ コンテナーまたはイベント ハンドラー内に配置しない限り、実行されるのは 1 回のみです。|スクリプト コンポーネントも実行されるのは 1 回のみですが、通常、メイン処理ルーチンはデータ フロー内のデータ行ごとに 1 回ずつ実行されます。|  
-|エディター|**[スクリプト タスク エディター]** には、**[全般]**、**[スクリプト]**、**[式]** の 3 つのページがあります。 **ReadOnlyVariables** プロパティ、**ReadWriteVariables** プロパティ、および **ScriptLanguage** プロパティのみがユーザーが記述できるコードに直接影響を与えます。|**[スクリプト変換エディター]** には、**[入力列]**、**[入力および出力]**、**[スクリプト]**、**[接続マネージャー]** の、最大 4 つのページがあります。 この各ページで設定するメタデータやプロパティにより、コードを記述する際に使用できる、自動生成された基本クラスのメンバーが指定されます。|  
+|エディター|**[スクリプト タスク エディター]** には次の 3 つのページがあります: **[全般]**、**[スクリプト]**、**[式]**。 **ReadOnlyVariables** プロパティ、**ReadWriteVariables** プロパティ、および **ScriptLanguage** プロパティのみがユーザーが記述できるコードに直接影響を与えます。|**[スクリプト変換エディター]** には、最大で次の 4 つのページがあります: **[入力列]**、**[入力および出力]**、**[スクリプト]**、**[接続マネージャー]**。 この各ページで設定するメタデータやプロパティにより、コードを記述する際に使用できる、自動生成された基本クラスのメンバーが指定されます。|  
 |パッケージの操作|パッケージの他の機能にアクセスするには、スクリプト タスク用に記述するコードで **Dts** プロパティを使用します。 **Dts** プロパティは、**ScriptMain** クラスのメンバーです。|スクリプト コンポーネントのコードでは、型指定されたアクセサー プロパティを使用して、変数や接続マネージャーなど、特定のパッケージ機能にアクセスします。<br /><br /> **PreExecute** メソッドでは、読み取り専用変数にのみアクセスできます。 **PostExecute** メソッドでは、読み取り専用変数および読み取り/書き込み変数の両方にアクセスできます。<br /><br /> これらのメソッドの詳細については、「[スクリプト コンポーネントのコーディングおよびデバッグ](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)」を参照してください。|  
 |変数の使用|スクリプト タスクでは、**Dts** オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> プロパティを使用して、タスクの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> プロパティおよび <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> プロパティで使用できる変数にアクセスします。 例 :<br /><br /> [Visual Basic]<br /><br /> `Dim myVar as String` <br /> `myVar = Dts.Variables("MyStringVariable").Value.ToString`<br /><br /> [C#]<br /><br /> `string myVar;` <br /> `myVar = Dts.Variables["MyStringVariable"].Value.ToString();`|スクリプト コンポーネントでは、自動生成された基本クラスの型指定されたアクセサー プロパティを使用します。このプロパティは、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> プロパティおよび <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> プロパティから作成されます。 例 :<br /><br /> [Visual Basic]<br /><br /> `Dim myVar as String` <br /> `myVar = Me.Variables.MyStringVariable`<br /><br /> [C#]<br /><br /> `string myVar;` <br /> `myVar = this.Variables.MyStringVariable;`|  
 |接続の使用|スクリプト タスクでは、**Dts** オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> プロパティを使用して、パッケージで定義された接続マネージャーにアクセスします。 例 :<br /><br /> [Visual Basic]<br /><br /> `Dim myFlatFileConnection As String` <br /> `myFlatFileConnection = _     DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction), _     String)`<br /><br /> [C#]<br /><br /> `string myFlatFileConnection;` <br /> `myFlatFileConnection = (Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) as String);`|スクリプト コンポーネントでは、自動生成された基本クラスの型指定されたアクセサー プロパティを使用します。このプロパティは、エディターの [接続マネージャー] ページでユーザーが入力した、接続マネージャーの一覧から作成されます。 例 :<br /><br /> [Visual Basic]<br /><br /> `Dim connMgr As IDTSConnectionManager100` <br /> `connMgr = Me.Connections.MyADONETConnection`<br /><br /> [C#]<br /><br /> `IDTSConnectionManager100 connMgr;` <br /> `connMgr = this.Connections.MyADONETConnection;`|  

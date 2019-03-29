@@ -11,15 +11,15 @@ helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1cd45e4350bb09c215fb6f6104effbf5f3326973
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6dd9ed869034959484427c063e101fe12d8f3d39
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655350"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282216"
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47655350"
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|メッセージの一意識別子 (ID)。|  
 |operation_id|**bigint**|操作の一意の ID。|  
-|message_time|**datetimeoffset(7)**|メッセージが作成された時間。|  
+|message_time|**datetimeoffset(7)**|メッセージが作成された日時。|  
 |message_type|**smallint**|表示されるメッセージの種類。|  
 |message_source_type|**smallint**|メッセージ ソースの種類の ID。|  
 |message|**nvarchar(max)**|メッセージのテキストです。|  
@@ -44,14 +44,14 @@ ms.locfileid: "47655350"
 |**message_type** 値|[説明]|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
-|120|[エラー]|  
+|120|Error|  
 |110|警告|  
 |70|[情報]|  
 |10|検証前|  
 |20|検証後|  
 |30|実行前|  
 |40|実行後|  
-|60|進行状況|  
+|60|中|  
 |50|StatusChange|  
 |100|QueryCancel|  
 |130|TaskFailed|  

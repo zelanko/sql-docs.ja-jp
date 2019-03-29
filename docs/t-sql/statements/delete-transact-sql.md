@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e9090e92baba8f67ee7ad0303103f41c66ace9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532169"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306230"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -205,7 +205,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 -   行を削除する前に、ヒープにクラスター化インデックスを作成します。 作成したクラスター化インデックスは、行を削除した後、削除できます。 この方法は前の 2 つの方法より時間がかかり、一時リソースがより多く使用されます。  
   
 > [!NOTE]  
->  空のページはヒープからいつでもを使用して、 `ALTER TABLE <table_name> REBUILD` ステートメントです。  
+>  空のページは、いつでも `ALTER TABLE <table_name> REBUILD` ステートメントを使ってヒープから削除できます。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
  DELETE ステートメントは、常に完全にログに記録されます。  
@@ -221,7 +221,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  
-|[基本構文](#BasicSyntax)|Del|  
+|[基本構文](#BasicSyntax)|DELETE|  
 |[削除する行数を制限する](#LimitRows)|WHERE、FROM、カーソル|  
 |[リモート テーブルから行を削除する](#RemoteTables)|リンク サーバー、OPENQUERY 行セット関数、OPENDATASOURCE 行セット関数|  
 |[DELETE ステートメントの結果をキャプチャする](#CaptureResults)|OUTPUT 句|  
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. OUTPUT を DELETE ステートメント内で <from_table_name> と共に使用する  
- 次の例は、`ProductProductPhoto` ステートメントの `FROM` 句で定義された検索条件に基づいて、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `DELETE` テーブルの行を削除します。 `OUTPUT` 句では、削除されるテーブルの列 ( `DELETED.ProductID`、 `DELETED.ProductPhotoID`)、および `Product` テーブルの列を返します。 これは `FROM` 句で削除する行を指定するときに使用されます。  
+ 次の例は、`DELETE` ステートメントの `FROM` 句で定義された検索条件に基づいて、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `ProductProductPhoto` テーブルの行を削除します。 `OUTPUT` 句では、削除されるテーブルの列 ( `DELETED.ProductID`、 `DELETED.ProductPhotoID`)、および `Product` テーブルの列を返します。 これは `FROM` 句で削除する行を指定するときに使用されます。  
   
 ```sql
 DECLARE @MyTableVar table (  
@@ -458,7 +458,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. DELETE ステートメントでラベルとクエリ ヒントを使用する  
- このクエリでは、DELETE ステートメントでクエリ結合ヒントを使用する場合の基本構文を示します。 結合ヒントと OPTION 句の使用方法の詳細については、「[OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)」を参照してください。  
+ このクエリでは、DELETE ステートメントでクエリ結合ヒントを使用する場合の基本構文を示します。 結合ヒントと OPTION 句の使用方法の詳細については、「[OPTION 句 (Transact-SQL)](../queries/option-clause-transact-sql.md)」を参照してください。
   
 ```sql
 -- Uses AdventureWorks  

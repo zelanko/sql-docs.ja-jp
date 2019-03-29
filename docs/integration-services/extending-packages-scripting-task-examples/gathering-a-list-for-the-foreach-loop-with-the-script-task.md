@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: be748729eeb9a50a5e206a5778e20420f4137177
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 82856b272e4799fc06929fe4f2d153320f879f0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640049"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270779"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>スクリプト タスクによる ForEach ループの一覧の収集
   Foreach from Variable 列挙子は、変数で渡された一覧の項目を列挙し、各項目に対して同じタスクを実行します。 スクリプト タスクでカスタム コードを使用して、このための一覧を設定することができます。 この列挙子の詳細については、「[Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)」を参照してください。  
@@ -33,7 +33,7 @@ ms.locfileid: "51640049"
  次の例は、**System.IO** 名前空間のメソッドを使用して、ユーザーが変数で指定した日数より新しいまたは古い Excel ブックの一覧をコンピューターで収集します。 拡張子 .xls を持つファイルを探して C ドライブのディレクトリを再帰的に検索し、各ファイルの最終更新日を調べて、一覧に属するかどうかを判定します。 該当するファイルを **ArrayList** に追加した後、その **ArrayList** を変数に保存して、後に Foreach ループ コンテナーで使用できるようにします。 この Foreach ループ コンテナーは、Foreach from Variable 列挙子を使用するように構成されています。  
   
 > [!NOTE]  
->  Foreach From Variable 列挙子で使用する変数は、**Object** 型であることが必要です。 変数に配置するオブジェクトは、**System.Collections.IEnumerable**、**System.Runtime.InteropServices.ComTypes.IEnumVARIANT**、**System.ComponentModel IListSource**、または **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost** のいずれかのインターフェイスを実装する必要があります。 **Array** または **ArrayList** が一般に使用されます。 **ArrayList** は、**System.Collections** 名前空間に対する参照と **Imports** ステートメントを必要とします。  
+>  Foreach From Variable 列挙子で使用する変数は、**Object** 型であることが必要です。 変数内に格納するオブジェクトでは、次のいずれかのインターフェイスを実装する必要があります。**System.Collections.IEnumerable**、**System.Runtime.InteropServices.ComTypes.IEnumVARIANT**、**System.ComponentModel IListSource**、または **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**。 **Array** または **ArrayList** が一般に使用されます。 **ArrayList** は、**System.Collections** 名前空間に対する参照と **Imports** ステートメントを必要とします。  
   
  このタスクは、`FileAge` パッケージ変数に対して正および負のさまざまな値を使用することによってテストできます。 たとえば、この 5 日間に作成されたファイルを検索するには 5 を入力し、3 日前よりも前に作成されたファイルを検索するには -3 を入力します。 このタスクは、検索するフォルダーの数が多いドライブの場合、実行に 1 ～ 2 分かかることがあります。  
   

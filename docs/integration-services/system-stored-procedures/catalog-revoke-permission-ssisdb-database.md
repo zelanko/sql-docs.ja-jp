@@ -11,15 +11,15 @@ helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4853ade7b4888ae8471f05230672e097e87f3131
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b2ba95693f64cecdefc140e38f9ae048ca9945b5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132082"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274714"
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,15 +51,15 @@ catalog.revoke_permission [ @object_type = ] object_type
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0 を返します。  
   
- 1 (object_class は有効ではありません)  
+ 1 (object_class が無効です)  
   
  2 (object_id が存在しない)  
   
  3 (プリンシパルが存在しない)  
   
- 4 (アクセス許可は、無効です)  
+ 4 (アクセス許可が無効です)  
   
- その他のエラーの場合は 5 を返します。  
+ 5 (その他のエラー)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -77,7 +77,7 @@ catalog.revoke_permission [ @object_type = ] object_type
 -   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="remarks"></a>Remarks  
- Permission_type が指定されている場合、ストアド プロシージャは、オブジェクトのプリンシパルに明示的に割り当てられているアクセス許可を削除します。 このようなインスタンスがない場合でも、プロシージャは成功コード値 (`0`) を返します。 Permission_type を省略すると、ストアド プロシージャは、プリンシパル オブジェクトへのすべてのアクセス許可を削除します。  
+ permission_type が指定されている場合、ストアド プロシージャは、オブジェクトのプリンシパルに明示的に割り当てられているアクセス許可を削除します。 このようなインスタンスがない場合でも、プロシージャは成功コード値 (`0`) を返します。 permission_type を省略すると、ストアド プロシージャは、プリンシパル オブジェクトへのすべてのアクセス許可を削除します。  
   
 > [!NOTE]  
 >  プリンシパルが、指定したアクセス権限を持つロールのメンバーの場合、プリンシパルは、オブジェクトに対して指定した権限を持つ場合があります。  

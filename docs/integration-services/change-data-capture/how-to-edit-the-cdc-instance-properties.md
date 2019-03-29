@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5c1348023145749b6762327b6fc1ad9bc7483075
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42cc80b22f5daae0deeaa355b4c8d23d2c888455
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598964"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289848"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>CDC インスタンスのプロパティを編集する方法
   この手順では、CDC デザイナー コンソールを使用して CDC インスタンスの構成プロパティを編集する方法について説明します。  
@@ -43,11 +43,11 @@ ms.locfileid: "47598964"
   
          このタブで編集できる内容の詳細については、「 [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)」を参照してください。  
   
-    -   **[スクリプト]**: 補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、 **[スクリプト]** タブを使用します。  
+    -   **[ スクリプト]**: 補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、**[スクリプト]** タブを使用します。  
   
          このタブで実行できる内容の詳細については、「 [Review and Generate Supplemental Logging Scripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)」を参照してください。  
   
-    -   **[詳細設定]**: CDC インスタンスに特殊なプロパティを追加するには、 **[詳細設定]** タブを使用します。  
+    -   **[詳細設定]**:**[詳細設定]** タブを使用すると、CDC インスタンスに特殊なプロパティを追加できます。  
   
          このタブで実行できる内容の詳細については、「 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)」を参照してください。  
   

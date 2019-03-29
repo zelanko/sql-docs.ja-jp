@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa089bb523fd3fe6787dba911cb314aaf71a520f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5d03128cadec2ea746578b87adf5fbc94499f94
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749790"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289550"
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ catalog.create_execution [@folder_name = folder_name
  環境参照の一意識別子。 このパラメーターはオプションです。 *reference_id* は **bigint** です。  
   
  [@use32bitruntime =] *use32bitruntime*  
- 64 ビット オペレーティング システムで 32 ビットのランタイムを使用してパッケージを実行すべきかどうかを示します。 64 ビットのオペレーティング システムで実行されているときに、32 ビット ランタイムを使用してパッケージを実行するのにには、1 の値を使用します。 値 0 を使用すると、64 ビット オペレーティング システムで実行しているときに、64 ビット ランタイムでパッケージを実行します。 このパラメーターはオプションです。 *Use32bitruntime* は **bit** です。  
+ 64 ビット オペレーティング システムで 32 ビットのランタイムを使用してパッケージを実行すべきかどうかを示します。 値 1 を使用すると、64 ビット オペレーティング システムで実行しているときに、32 ビット ランタイムでパッケージを実行します。 値 0 を使用すると、64 ビット オペレーティング システムで実行しているときに、64 ビット ランタイムでパッケージを実行します。 このパラメーターはオプションです。 *Use32bitruntime* は **bit** です。  
  
  [@runinscaleout =] *runinscaleout*  
  実行が Scale Out であるかどうかを示します。パッケージを Scale Out で実行するには、値 1 を使用します。Scale Out を使用せずにパッケージを実行するには、値 0 を使用します。このパラメーターはオプションです。 指定しない場合、その値は [SSISDB].[catalog].[catalog_properties] で DEFAULT_EXECUTION_MODE に設定されます。 *runinscaleout* は **bit** です。 
@@ -78,7 +78,7 @@ catalog.create_execution [@folder_name = folder_name
  実行で指定できるのは、エントリ ポイントのパッケージとしてマークされたパッケージのみです。 エントリ ポイントではないパッケージを指定すると、実行が失敗します。  
   
 ## <a name="example"></a>例  
- 次の例では catalog.create_execution を呼び出して、Scale Out ではない、Child1.dtsx パッケージの実行のインスタンスを作成します。integration Services Project1 にはパッケージが含まれています。 例では catalog.set_execution_parameter_value を呼び出して、Parameter1、Parameter2、および LOGGING_LEVEL の各パラメーターの値を設定します。 例では catalog.start_execution を呼び出して、実行のインスタンスを起動します。  
+ 次の例では catalog.create_execution を呼び出して、Scale Out ではない、Child1.dtsx パッケージの実行のインスタンスを作成します。integration Services Project1 にはパッケージが含まれています。 例では catalog.set_execution_parameter_value を呼び出して、Parameter1、Parameter2、LOGGING_LEVEL の各パラメーターの値を設定します。 例では catalog.start_execution を呼び出して、実行のインスタンスを起動します。  
   
 ```sql  
 Declare @execution_id bigint  
@@ -120,7 +120,7 @@ GO
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  エラーまたは警告が発生する可能性がある条件を以下に示します。  
   
--   パッケージがありません。  
+-   パッケージが存在しない。  
   
 -   ユーザーに適切なアクセス許可がない。  
   

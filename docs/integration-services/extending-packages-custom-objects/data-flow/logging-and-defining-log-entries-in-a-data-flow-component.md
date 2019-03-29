@@ -13,15 +13,15 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], logging
 - data flow components [Integration Services], logging
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4bd559b5e69e8f20d7791ce0eeddb2021c1813d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59725d4638561346af3e7fbac08275e56dacb4f1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637570"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281306"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>データ フロー コンポーネントのログ エントリの記録と定義
   カスタム データ フロー コンポーネントは、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを使用して既存のログ エントリにメッセージを送信できます。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A> メソッドまたは <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスの同様のメソッドを使用して、ユーザーに情報を提供することもできます。 ただし、この方法では追加のイベントの発生と処理によるオーバーヘッドが発生し、ユーザーにとって意味のあるメッセージの詳細情報メッセージをユーザーが取捨選択する必要があります。 次に示す方法でカスタム ログ エントリを使用すると、明確にラベル付けされたカスタム ログ情報をコンポーネントのユーザーに提供できます。  
@@ -60,11 +60,11 @@ End Sub
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency> 列挙は、イベントのログが記録される頻度に関するヒントをランタイムに提供します。  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL> : 毎回実行時ではなく、不定期でイベントのログが記録されます。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>:毎回実行時ではなく、不定期でイベントのログが記録されます。  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT> : 毎回実行時に一定の回数でイベントのログが記録されます。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>:毎回実行時に一定の回数でイベントのログが記録されます。  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_PROPORTIONAL> : 完了した作業量に比例する回数だけイベントのログが記録されます。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_PROPORTIONAL>:完了した作業量に比例する回数だけイベントのログが記録されます。  
   
  上の例では、コンポーネントが実行ごとに 1 回エントリのログを記録するため、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT> を使用します。  
   

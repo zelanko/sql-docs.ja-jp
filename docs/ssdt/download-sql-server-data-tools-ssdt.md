@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c485156992dbb78157af56b7d5066ee40a92e36
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 596a32bc9942bde7a8301635150287f63a5fbeed
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58051921"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58431503"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,8 +49,7 @@ AS、IS、RS プロジェクト サポートをインストールするには、
 
 > [!IMPORTANT]
 > - SSDT for Visual Studio 2017 (15.9.0) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。
-> - Teradata のソース/変換先を含む SSIS パッケージを設計する場合は、SSDT for Visual Studio 2017 バージョン 15.8.0 以降を使用します。 VS 2017 (15.8.2) では、Teradata のソース/変換先を含む SSIS パッケージを設計することはできません。 
-
+> - Teradata のソース/変換先を含む SSIS パッケージを設計する場合は、Visual Studio 2017 (15.8.0) 以前のバージョン用の SSDT を使用してください。 15.8.0 より後の Visual Studio 2017 用の SSDT では、Attunity による Teradata のソース/変換先を含む SSIS パッケージを設計できません。
 
 
 **バージョン情報**  
@@ -59,7 +58,7 @@ AS、IS、RS プロジェクト サポートをインストールするには、
 ビルド番号:14.0.16186.0  
 リリース日:2019 年 1 月 28 日  
 
-詳細な変更一覧については、[変更ログ](changelog-for-sql-server-data-tools-ssdt.md)を参照してください。
+すべての変更の一覧については、「[SQL Server Data Tools (SSDT) リリース ノート](release-notes-ssdt.md)」をご覧ください。
 
 SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/visualstudio/productinfo/vs2017-system-requirements-vs)は Visual Studio と同じです。  
 

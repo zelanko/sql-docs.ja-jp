@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8498ac8bbcf8a053497c24fbe8bd7c529a2c4382
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 188dd47c28e0faae13e7b41ef09faca542f084bc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544709"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274147"
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ catalog.cleanup_server_log
   
      スコープまたはレベル (実行とプロジェクトの比較) および削除するキーの数を指定できます。 既定のバッチ サイズは 1000 です。 レベルを 2 に設定すると、関連するプロジェクトが削除されている場合にのみ、キーと証明書が削除されます。  
   
- 詳細については、次のサポート技術情報の記事を参照してください:[FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012](https://support.microsoft.com/kb/2972285) (修正: SQL Server 2012 で、SSISDB を展開ストアとして使用すると、パフォーマンスの問題が発生する)  
+ 詳細については、次のサポート技術情報の記事をご覧ください。[修正: SQL Server 2012 で、SSISDB を展開ストアとして使用すると、パフォーマンスの問題が発生する](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>例  
  次の例では、cleanup_server_log ストアド プロシージャを呼び出します。  

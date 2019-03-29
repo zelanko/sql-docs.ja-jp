@@ -14,15 +14,15 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7e6535428eefaf4e0f2a84d1de40c5d8c7f4989
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68902b0249fc40e8aa48a0bd6fc6f6eef47d4caa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669500"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274363"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>SQL Server 変換先を使用してデータの一括読み込みを行う
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つのデータ ソースがあらかじめ含まれている必要があります。  
@@ -39,7 +39,7 @@ ms.locfileid: "47669500"
   
 5.  変換先をダブルクリックします。  
   
-6.  **[SQL Server 変換先エディター]** の **[接続マネージャー]** ページで、既存の OLE DB 接続マネージャーを選択するか、または **[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+6.  **[SQL Server 変換先エディター]** の **[接続マネージャー]** ページで、既存の OLE DB 接続マネージャーを選択するか、または **[新規作成]** をクリックして新しい接続マネージャーを作成します。 詳細については、「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 7.  データの読み込み先となるテーブルまたはビューを指定するには、次のいずれかの操作を行います。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47669500"
     > [!NOTE]  
     >  この変換先では、同じ名前の列は自動的にマップされます。  
   
-9. **[詳細設定]** をクリックし、一括読み込みオプションの **[ID を保持する]**、 **[NULL を保持する]**、 **[テーブル ロック]**、 **[CHECK 制約]**、および **[トリガーを起動する]** を設定します。  
+9. **[詳細設定]** をクリックし、一括読み込みオプションの **[ID を保持する]**、**[NULL を保持する]**、**[テーブル ロック]**、**[CHECK 制約]**、**[トリガーを起動する]** を設定します。  
   
      必要に応じて、挿入する最初の入力行と最後の入力行、挿入操作が停止するまでに発生できるエラーの最大数、および挿入を並べ替える列を指定します。  
   
@@ -70,6 +70,6 @@ ms.locfileid: "47669500"
  [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)   
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md)   
- [データ フロー タスク](../../integration-services/control-flow/data-flow-task.md)  
+ [[データ フロー タスク]](../../integration-services/control-flow/data-flow-task.md)  
   
   

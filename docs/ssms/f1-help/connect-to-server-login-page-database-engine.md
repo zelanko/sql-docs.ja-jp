@@ -13,12 +13,12 @@ ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 164c5e51d28cc09bb2161d729812c8f74fb5f08f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 75ae49d16f9b6a2cb49e7d50da36a045d43a5354
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211001"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306190"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>[サーバーへの接続] \([ログイン] ページ) (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "53211001"
   
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] を通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのインスタンスに接続する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用し、**[サーバーへの接続]** ダイアログ ボックスの **[接続プロパティ]** タブでデータベースを指定する必要があります。**[暗号化接続]** チェック ボックスがオンになっていることを確認してください。  
   
-既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **master**に接続されます。 ユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master** に接続すると、すべてのデータベースを表示できるようになります。 詳しくは、「 [Windows Azure SQL Database Overview](https://go.microsoft.com/fwlink/?LinkId=163948)」(Microsoft Azure SQL Database の概要) をご覧ください。  
+既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **master**に接続されます。 ユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master** に接続すると、すべてのデータベースを表示できるようになります。 詳しくは、[Microsoft Azure SQL Database の概要](/azure/sql-database/sql-database-technical-overview/)に関する記事をご覧ください。
   
 **サーバー名**  
 接続するサーバー インスタンスを選択します。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
@@ -48,7 +48,7 @@ SSMS の現在のバージョンでは、[!INCLUDE[ssDE](../../includes/ssde_md.
   
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] を通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのインスタンスに接続する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用し、**[サーバーへの接続]** ダイアログ ボックスの **[接続プロパティ]** タブでデータベースを指定する必要があります。**[暗号化接続]** チェック ボックスがオンになっていることを確認してください。  
   
-既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **master**に接続されます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に接続する場合にユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master** に接続すると、すべてのデータベースを表示できるようになります。 詳しくは、「 [Windows Azure SQL Database Overview](https://go.microsoft.com/fwlink/?LinkId=163948)」(Microsoft Azure SQL Database の概要) をご覧ください。  
+既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **master**に接続されます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に接続する場合にユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master** に接続すると、すべてのデータベースを表示できるようになります。 詳しくは、[Microsoft Azure SQL Database の概要](/azure/sql-database/sql-database-technical-overview/)に関する記事をご覧ください。  
   
 > **[Windows 認証]**  
 > [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 認証モードを使用すると、ユーザーは Windows ユーザー アカウントを使用して接続できます。  

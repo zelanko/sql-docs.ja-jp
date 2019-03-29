@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec0f97e29154885d335f8e9073771817b710eefe
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 92752fa479852c2f0c17ded6fa2a047cfcff5dcb
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087851"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356475"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -173,7 +173,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してオプションを設定する方法の詳細については、「 [オプション管理](#OptionMgmt)」をご覧ください。  
   
 ## <a name="Related"></a> 関連するビュー、関数、プロシージャ  
- クエリのストアは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] か、次のビューとプロシージャを使用して表示および管理します。  
+ クエリのストアは、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] か、次のビューとプロシージャを使用して表示および管理します。  
 
 ### <a name="query-store-functions"></a>クエリ ストア関数  
  関数は、クエリ ストアの操作に役立ちます。 

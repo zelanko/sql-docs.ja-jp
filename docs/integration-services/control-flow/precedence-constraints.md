@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23753d15f1113b5a11a00e768c836f8860db96ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733660"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283063"
 ---
 # <a name="precedence-constraints"></a>優先順位制約
   優先順位制約は、パッケージ内の実行可能ファイル、コンテナー、およびタスクをリンクして制御フローを作成し、実行可能ファイルを実行するかどうかを決定する条件を指定します。 実行可能ファイルには、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナー、タスク、またはイベント ハンドラーを設定できます。 また、イベント ハンドラーは優先順位制約を使用して実行可能ファイルをリンクし、制御フローを作成します。  
@@ -109,12 +109,12 @@ ms.locfileid: "47733660"
 ## <a name="precedence-constraint-editor"></a>優先順位制約エディター
 **[優先順位制約エディター]** ダイアログ ボックスを使用すると、優先順位制約を構成できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[評価操作]**  
- 優先順位制約で使用する評価操作を指定します。 操作として、 **[制約]**、 **[式]**、 **[式と制約]**、および **[式または制約]** を指定できます。  
+ 優先順位制約で使用する評価操作を指定します。 操作は次のとおりです: **[制約]**、**[式]**、**[式と制約]**、**[式または制約]**。  
   
  **Value**  
- 制約値として、 **[成功]**、 **[失敗]**、または **[完了]** を指定します。  
+ 制約値として次の値を指定します: **[成功]**、**[失敗]**、**[完了]**。  
   
 > [!NOTE]  
 >  優先順位制約を表す線は、 **[成功]** の場合は緑色、 **[失敗]** の場合は強調表示、 **[完了]** の場合は青色です。  
@@ -155,7 +155,7 @@ ms.locfileid: "47733660"
     |LogicalAnd|**[論理 AND]** を設定し、複数の実行可能ファイルを先に実行して制約付き実行可能ファイルにリンクする場合、優先順位制約を他の優先順位制約と組み合わせて評価するかどうかを指定します。|  
     |[オブジェクト名]|優先順位制約の名前を更新します。|  
     |ShowAnnotation|使用する注釈の種類を指定します。 注釈を無効にするには **[Never]** 、要求時に注釈を有効にするには **[AsNeeded]** 、Name プロパティの値を使用して注釈を自動的に設定するには **[ConstraintName]** 、Description プロパティの値を使用して注釈を自動的に設定するには **[ConstraintDescription]** 、Value プロパティと Expression プロパティの値を使用して注釈を自動的に設定するには **[ConstraintOptions]** をそれぞれ選択します。|  
-    |ReplTest1|EvalOP プロパティで指定された評価操作に制約が含まれる場合は、制約付き実行可能ファイルの実行結果を選択します。|  
+    |[値]|EvalOP プロパティで指定された評価操作に制約が含まれる場合は、制約付き実行可能ファイルの実行結果を選択します。|  
   
 5.  [プロパティ] ウィンドウを閉じます。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "47733660"
   
  ![優先順位制約の式](../../integration-services/control-flow/media/mw-dts-04.gif "優先順位制約の式")  
   
- 式を追加または変更するには、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[優先順位制約エディター]** と [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で用意されている [プロパティ] ウィンドウを使用します。 ただし、[プロパティ] ウィンドウには、式の構文を検証する機能は用意されていません。  
+ 式を追加または変更するには、 **デザイナーの** [優先順位制約エディター] [!INCLUDE[ssIS](../../includes/ssis-md.md)] と [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で用意されている [プロパティ] ウィンドウを使用します。 ただし、[プロパティ] ウィンドウには、式の構文を検証する機能は用意されていません。  
   
  優先順位制約に式が含まれる場合、 **[制御フロー]** タブのデザイン画面で、優先順位制約の隣にアイコンが表示され、アイコン上のツールヒントには式が表示されます。  
 
@@ -237,7 +237,7 @@ ms.locfileid: "47733660"
 ### <a name="logicaland-property"></a>LogicalAnd プロパティ  
  タスクまたはコンテナーに複数の制約がある場合、 **LogicalAnd** プロパティにより、優先順位制約を単独で評価するか、別の制約と組み合わせて評価するかを指定します。  
   
- **LogicalAnd** プロパティを設定するには、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで用意されている **[優先順位制約エディター]**、または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の [プロパティ] ウィンドウを使用します。  
+ **LogicalAnd** プロパティを設定するには、 **デザイナーで用意されている** [優先順位制約エディター] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 、または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の [プロパティ] ウィンドウを使用します。  
 
 ## <a name="set-the-default-value-for-precedence-constraints"></a>優先順位制約の既定値を設定する  
 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーを初めて使用する場合、優先順位制約の既定値は **[成功]** です。 別の既定値を使用するように [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーを構成するには、次の手順に従います。

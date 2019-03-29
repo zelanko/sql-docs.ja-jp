@@ -15,15 +15,15 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bc033012e2bf0799902e1bd5bcc1a5f31471c5c2
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: a603dc915f05f55db4eac3c3ed0347dc2d5eaf32
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383307"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271125"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS ETL パッケージを作成する方法
 
@@ -53,22 +53,22 @@ ms.locfileid: "49383307"
     - サンプル パッケージでは、データ ファイルがフォルダー `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package` 内にあることが想定されています。 ダウンロードしたファイルを別の場所に解凍する場合は、サンプル パッケージの複数の場所でファイル パスを更新する必要がある場合があります。
 
 ## <a name="lessons-in-this-tutorial"></a>このチュートリアルで行うレッスン  
-[レッスン 1: SSIS によるプロジェクトと基本パッケージの作成](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
+[レッスン 1:SSIS によるプロジェクトと基本パッケージの作成](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
 このレッスンでは、簡単な ETL パッケージを作成します。パッケージの内容は、1 つのフラット ファイルからデータを抽出し、参照変換を使用してデータを変換し、最後に結果をファクト テーブルの変換先に読み込ませるというものです。  
   
-[レッスン 2: SSIS でのループの追加](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+[レッスン 2:SSIS でのループの追加](../integration-services/lesson-2-adding-looping-with-ssis.md)  
 このレッスンでは、レッスン 1 で作成したパッケージを拡張し、新しいループ機能を活用して、複数のフラット ファイルを単一のデータ フロー プロセスに抽出します。  
   
-[レッスン 3: SSIS でのログ記録の追加](../integration-services/lesson-3-add-logging-with-ssis.md)  
+[レッスン 3:SSIS でのログ記録の追加](../integration-services/lesson-3-add-logging-with-ssis.md)  
 このレッスンでは、レッスン 2 で作成したパッケージを拡張し、新しいログ機能を活用します。  
   
-[レッスン 4: SSIS でエラー フロー リダイレクションを追加する](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+[レッスン 4:SSIS でエラー フロー リダイレクションを追加する](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
 このレッスンでは、レッスン 3 で作成したパッケージを拡張し、新しいエラー出力構成を活用します。  
   
 [レッスン 5: パッケージ配置モデルの SSIS パッケージ構成を追加する](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
 このレッスンでは、レッスン 4 で作成したパッケージを拡張し、新しいパッケージ構成オプションを活用します。  
   
-[レッスン 6: SSIS でプロジェクト配置モデルを持つパラメーターを使用する](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+[レッスン 6:SSIS でプロジェクト配置モデルを持つパラメーターを使用する](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
 このレッスンでは、レッスン 5 で作成したパッケージを拡張し、プロジェクト配置モデルで新しいパラメーターを使用します。  
   
   

@@ -8,22 +8,22 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da169ff3be06b9617ddf5fc7929254bee91037ce
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: abb86d31c3d91736f951946f519de87250ebcec9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642309"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282056"
 ---
 # <a name="integration-services-language-reference"></a>Integration Services 言語リファレンス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  このセクションでは、[!INCLUDE[tsql](../includes/tsql-md.md)] のインスタンスに配置されている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを管理するための [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] API について説明します。  
+  このセクションでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに配置されている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを管理するための [!INCLUDE[tsql](../includes/tsql-md.md)] API について説明します。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログと呼ばれるデータベースにオブジェクト、設定、および業務データを格納します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログの既定の名前は、SSISDB です。 カタログに格納されているオブジェクトには、プロジェクト、パッケージ、パラメーター、環境、および操作履歴があります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログと呼ばれるデータベースにオブジェクト、設定、および業務データを格納します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログの既定の名前は、SSISDB です。 カタログに格納されているオブジェクトには、プロジェクト、パッケージ、パラメーター、環境、操作履歴があります。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログは、ユーザーに表示されない内部テーブルにデータを格納します。 ただし、必要な情報は、パブリック ビューに対してクエリを実行することで公開されます。 カタログの一般的なタスクを実行するために使用できる一連のストアド プロシージャも用意されています。  
   

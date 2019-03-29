@@ -11,15 +11,15 @@ helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe51d32dee641ddd465ba5c0674900be79a12460
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8f00f51ee6db4b93ba56211755e067c008898c4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847390"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271387"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (等しくない) (SSIS 式)
   互換性のあるデータ型の 2 つの式が等しくないかどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  
@@ -53,7 +53,7 @@ expression1 != expression2
     > [!NOTE]  
     >  文字列の比較では、大文字と小文字、アクセント、かな、および文字幅が区別されます。  
   
--   **日付、時刻、または日付/時刻** *expression1* と *expression2* は、どちらも DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、または DT_FILETIME のいずれかのデータ型に評価される必要があります。  
+-   **日付、時刻、または日付/時刻** *expression1* と *expression2* は、どちらも次のいずれかのデータ型に評価される必要があります。DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、DT_FILETIME。  
   
     > [!NOTE]  
     >  時刻データ型に評価される式と、日付データ型または日付/時刻データ型に評価される式との間の比較はサポートされていません。 システムによってエラーが生成されます。  
@@ -82,7 +82,7 @@ expression1 != expression2
   
 -   **バイナリ** *expression1* と *expression2* は、どちらも DT_BYTES データ型に評価される必要があります。  
   
--   **BLOB** *expression1* と *expression2* は、どちらも同じバイナリ ラージ オブジェクト ブロック (BLOB) データ型 (DT_TEXT、DT_NTEXT、または DT_IMAGE) に評価される必要があります。  
+-   **BLOB** *expression1* と *expression2* のいずれも評価された結果、値は次の内いずれかの同じバイナリ ラージ オブジェクト ブロック (BLOB) データ型になる必要があります。DT_TEXT、DT_NTEXT または DT_IMAGE。  
   
  データ型について詳しくは、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」をご覧ください。  
   
@@ -108,6 +108,6 @@ ListPrice != 500
 ## <a name="see-also"></a>参照  
  [== &#40;等しい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/equal-ssis-expression.md)   
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

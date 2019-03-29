@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4499ba0bc52e7c0d5cd052a8999737bf53337a50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9899756eb86e3f56ca90b6dc567146408a6588ee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686970"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278081"
 ---
 # <a name="edit-the-table-properties"></a>テーブルのプロパティの編集
   変更がキャプチャされている選択したテーブルの特定の列を編集するには、このダイアログ ボックスを使用します。 **[セキュリティ ロール]** と **[キャプチャ インスタンス]** の情報を編集することもできます。  
@@ -43,11 +43,11 @@ ms.locfileid: "47686970"
   
     -   **[新しいキャプチャ インスタンス]**: この場合、新しいキャプチャ インスタンスが保存され、古いキャプチャ インスタンスは削除されません。  
   
-         **注**: テーブルごとに 2 つまでのキャプチャ インスタンスを設定できます。 既に 2 つのキャプチャ インスタンスがある場合、このオプションは利用できません。  
+         **注**:テーブルごとに 2 つまでのキャプチャ インスタンスを設定できます。 既に 2 つのキャプチャ インスタンスがある場合、このオプションは利用できません。  
   
     -   **[既存のものを置換]**: この場合、現在のキャプチャ インスタンスが削除され、作成したキャプチャ インスタンスで置換されます。 このテーブルに 2 つのキャプチャ インスタンスが定義されている場合、置換するキャプチャ インスタンスを選択する必要があります。  
   
- **注**: **[テーブル]** タブのテーブルの一覧からキャプチャ インスタンスを削除できます。  
+ **注**:**[テーブル]** タブのテーブルの一覧からキャプチャ インスタンスを削除できます。  
   
  このダイアログ ボックスで情報の入力を終了したら、 **[OK]** をクリックして変更を受け入れます。  
   

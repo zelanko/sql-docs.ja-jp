@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d4b26ccd758bbd7d4a5cbe8959e7939848fd493
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 18b1fd7ce88d7b9be5dfa8440a9675945e99837c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639829"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280456"
 ---
 # <a name="flat-file-custom-properties"></a>フラット ファイルのカスタム プロパティ
   **変換元のカスタム プロパティ**  
@@ -27,7 +27,7 @@ ms.locfileid: "51639829"
   
 |プロパティ名|データ型|[説明]|  
 |-------------------|---------------|-----------------|  
-|FileNameColumnName|String|ファイル名を格納する出力列の名前。 名前が指定されていない場合、ファイル名を格納する出力列は生成されません。<br /><br /> 注: このプロパティは、 **フラット ファイル ソース エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
+|FileNameColumnName|String|ファイル名を格納する出力列の名前。 名前が指定されていない場合、ファイル名を格納する出力列は生成されません。<br /><br /> 注:このプロパティは、**フラット ファイル ソース エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
 |RetainNulls|ブール値|データ変換のパイプライン エンジンによってデータが処理される際に、ソース ファイルの NULL 値を NULL 値として保持するかどうかを示す値。 このプロパティの既定値は **False**です。|  
   
  フラット ファイル ソースの出力には、カスタム プロパティがありません。  
@@ -36,7 +36,7 @@ ms.locfileid: "51639829"
   
 |プロパティ名|データ型|[説明]|  
 |-------------------|---------------|-----------------|  
-|FastParse|ブール値|列の解析に、DTS が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 詳細については、「 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 このプロパティの既定値は **False**です。<br /><br /> 注: このプロパティは、 **フラット ファイル ソース エディター**では使用できませんが、 **詳細エディター**を使用して設定できます。|  
+|FastParse|ブール値|列の解析に、DTS が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 詳細については、「 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 このプロパティの既定値は **False**です。<br /><br /> 注:このプロパティは、**フラット ファイル ソース エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
   
  詳細については、「 [フラット ファイル ソース](../../integration-services/data-flow/flat-file-source.md)」を参照してください。  
   

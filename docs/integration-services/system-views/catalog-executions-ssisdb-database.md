@@ -11,15 +11,15 @@ helpviewer_keywords:
 - executions view [Integration Services]
 - catalog.executions view [Integration Services]
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b70f7bc5680c297572380a273ad2cff35691ffe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb9df4406312c8711c895489a09b647ebd126c9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729880"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275223"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB データベース)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47729880"
 |start_time|**datetimeoffset**|実行のインスタンスが起動された時間。|  
 |end_time|**datetimeoffsset**|実行のインスタンスが終了した時間。|  
 |caller_sid|**varbinary(85)**|ログオンに Windows 認証が使用された場合はユーザーのセキュリティ ID (SID)。|  
-|させていただきたいと|**nvarchar(128)**|操作を実行したアカウントの名前。|  
+|caller_name|**nvarchar(128)**|操作を実行したアカウントの名前。|  
 |process_id|**int**|外部プロセスのプロセス ID (該当する場合)。|  
 |stopped_by_sid|**varbinary(85)**|実行のインスタンスを停止したユーザーのセキュリティ ID (SID)。|  
 |stopped_by_name|**nvarchar(128)**|実行のインスタンスを停止したユーザーの名前。|  

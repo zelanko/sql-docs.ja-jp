@@ -1,5 +1,5 @@
 ---
-title: '手順 2: 配置プロジェクトの作成 | Microsoft Docs'
+title: 手順 2:配置プロジェクトの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f328c8f32e751476d643dffb7f9e0634cd6a947a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9d2fe8b249b56ec61196a2df36468f978857bc2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602250"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276780"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>レッスン 1-2 - 配置プロジェクトの作成
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]では、配置可能な単位は [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトになります。 パッケージを配置するには、まず新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、すべてのパッケージと、これらのパッケージと共に配置する補助ファイルをそのプロジェクトに追加する必要があります。  
@@ -40,7 +40,7 @@ ms.locfileid: "47602250"
 8.  既定では、Package.dtsx という名前の空のパッケージが作成され、プロジェクトに追加されます。 ただし、このパッケージはここでは使用しません。代わりに既存のパッケージをプロジェクトに追加します。 プロジェクト内のすべてのパッケージを配置に含めるので、Package.dtsx は削除してください。 削除するには、Package.dtsx を右クリックし、 **[削除]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 3: パッケージとその他のファイルの追加](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
+[ステップ 3:パッケージとその他のファイルの追加](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
 ## <a name="see-also"></a>参照  
 [Integration Services (SSIS) プロジェクト](~/integration-services/integration-services-ssis-projects-and-solutions.md)  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae626cfb67bbc2041a150940f2a03bb73dfb9b51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e8f03d8978056ecd0faefd247163d2806dc7988
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764463"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290488"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>[データ プロファイル タスク エディター] ([全般] ページ)
   **[データ プロファイル タスク エディター]** の **[全般]** ページを使用すると、次のオプションを構成できます。  
@@ -46,17 +46,17 @@ ms.locfileid: "47764463"
 ## <a name="destination-options"></a>転送先に関するオプション  
   
 > [!IMPORTANT]  
->  出力ファイルには、データベースに関する機密データやデータベースに格納されているデータが含まれる場合があります。 このファイルの安全性を高める方法の推奨事項については、「 [パッケージで使用されるファイルへのアクセス](../../integration-services/security/security-overview-integration-services.md#files)」を参照してください。  
+>  出力ファイルには、データベースに関する機密データやデータベースに格納されているデータが含まれる場合があります。 このファイルの安全性を高める方法の推奨事項については、「 [パッケージで使用されるファイルへのアクセス](../../integration-services/security/security-overview-integration-services.md#files)」をご覧ください。  
   
  **[DestinationType]**  
  データ プロファイル出力をファイルに保存するか変数に保存するかを指定します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
-|**[FileConnection]**|ファイル接続マネージャーで指定された場所にあるファイルにプロファイル出力を保存します。<br /><br /> 注: 使用するファイル接続マネージャーは **[Destination]** オプションで指定します。|  
-|**変数**|プロファイル出力をパッケージ変数に保存します。<br /><br /> 注: 使用するパッケージ変数は **[Destination]** オプションで指定します。|  
+|**[FileConnection]**|ファイル接続マネージャーで指定された場所にあるファイルにプロファイル出力を保存します。<br /><br /> 注:使用するファイル接続マネージャーは **[Destination]** オプションで指定します。|  
+|**変数**|プロファイル出力をパッケージ変数に保存します。<br /><br /> 注:使用するパッケージ変数は **[Destination]** オプションで指定します。|  
   
- **[Destination]**  
+ **変換先**  
  データ プロファイル出力を含むファイル接続マネージャーまたはパッケージ変数を指定します。  
   
 -   **[DestinationType]** オプションが **[FileConnection]** に設定されている場合、 **[Destination]** オプションには使用可能なファイル接続マネージャーが表示されます。 これらの接続マネージャーのいずれかを選択するか、[\<新しいファイル接続>] を選択して新しいファイル接続マネージャーを作成します。  

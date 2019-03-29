@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a115010220a9d98cf861b8e603fee69472f1e305
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7a249a9a155b64ff641197724e55129a6f2fc403
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640135"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278011"
 ---
 # <a name="specify-an-interval-of-change-data"></a>変更データの間隔を指定する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、最初のタスクは、変更間隔のエンドポイントを計算することです。 このエンドポイントは **datetime** 値で、パッケージで後から使用するためにパッケージ変数に格納されます。  
@@ -106,7 +106,7 @@ ms.locfileid: "51640135"
 ## <a name="next-step"></a>次の手順  
  変更の範囲の開始時点と終了時点を計算したら、次の手順で、変更データが準備できているかどうかを判断します。  
   
- **次のトピック:** [データの変更の準備ができているかどうかを判断する](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
+ **次のトピック:**[変更データの準備ができているかどうかを判断する](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>参照  
  [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   

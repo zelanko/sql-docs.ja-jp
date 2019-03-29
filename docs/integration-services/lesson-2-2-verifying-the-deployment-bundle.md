@@ -1,5 +1,5 @@
 ---
-title: '手順 2: 配置バンドルの確認 | Microsoft Docs'
+title: 手順 2:配置バンドルの確認 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b5f0799a26848f70bc67b24708a5d4352339d50
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c15564e665361caef562aa9add1c28b267a8a512
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532059"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283139"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>レッスン 2-2 - 配置バンドルの確認
 レッスン 1 では、Deployment Tutorial プロジェクトを作成し、パッケージと補助ファイルをプロジェクトに追加しました。前のタスクでプロジェクトの配置ユーティリティを構築しました。  
@@ -56,7 +56,7 @@ ms.locfileid: "52532059"
 5.  Internet Explorer またはテキスト エディターを終了します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 3: SSIS パッケージのインストール](../integration-services/lesson-3-install-ssis-packages.md)  
+[レッスン 3:SSIS パッケージのインストール](../integration-services/lesson-3-install-ssis-packages.md)  
   
   
   
