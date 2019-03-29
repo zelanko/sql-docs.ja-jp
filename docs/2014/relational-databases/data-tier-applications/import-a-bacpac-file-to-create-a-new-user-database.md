@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5b13d9d2095df5d464b7102e1527c21c36c4f5c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376184"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618169"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
   データ層アプリケーション (DAC) ファイル (.bacpac ファイル) をインポートすると、データを含んだ元のデータベースのコピーを、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の新しいインスタンス上または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に作成することができます。 エクスポートとインポートという操作を組み合わせることで、DAC またはデータベースをインスタンス間で移行したり論理バックアップを作成したりすることが可能です。たとえば、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に配置されているデータベースの社内用コピーを作成することもできます。  
@@ -43,8 +43,7 @@ ms.locfileid: "53376184"
   
 2.  エクスポート ファイルからデータを一括コピーします。  
   
- DAC およびデータベースのエクスポート/インポート テストに使用できるサンプル アプリケーションが [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ラボに用意されています。 このサンプルのダウンロードと使用方法については、「 [Windows Azure SQL データベースのインポートとエクスポート](https://go.microsoft.com/fwlink/?LinkId=219404)」を参照してください。  
-  
+ 
 ## <a name="sql-server-utility"></a>SQL Server ユーティリティ (SQL Server Utility)  
  データベース エンジンのマネージド インスタンスに DAC をインポートした場合、そのインポートした DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は、 **の** ユーティリティ エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **の** details page.  
   

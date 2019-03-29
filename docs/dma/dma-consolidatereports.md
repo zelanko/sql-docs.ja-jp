@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
-ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
+ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58198201"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618179"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>エンタープライズを評価し、DMA で評価レポートの統合
 
@@ -72,7 +72,11 @@ SQL Server を評価する PowerShell スクリプトを実行する前に評価
 
 ### <a name="if-using-a-csv-file"></a>CSV ファイルを使用する場合
 > [!IMPORTANT]
+>
 > インベントリ ファイルがコンマ区切り (CSV) ファイルとして保存されたことを確認します。
+>
+> 既定のインスタンスには、MSSQLServer にインスタンス名を設定します。
+>
 
 を、データをインポートする csv ファイルを使用する場合は、データの 2 つの列があることを確認**インスタンス名**と**データベース名**、および列ヘッダー行があるはありません。
  

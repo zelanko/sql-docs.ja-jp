@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ae8a8b2869a46a9157c805edcb8c6d74ca49e3d0
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ac8632c3966da750e9eb7d7053dad1d102760c8c
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017998"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618239"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイ用 Azure Kubernetes サービスを構成します。
 
@@ -39,9 +39,9 @@ AKS によって、作成、構成、およびコンテナー化されたアプ�
 - Kubernetes のサーバーの最小 1.10 バージョンです。 For AKS を使用する必要があります。 `--kubernetes-version` 、既定値以外のバージョンを指定するパラメーター。
 
 - AKS での基本的なシナリオの検証中に最適なエクスペリエンスを使用します。
-   - 3 つのエージェント Vm の最小値
-   - VM あたり 4 Vcpu
+   - すべてのノードで 8 個の Vcpu
    - VM あたりのメモリとして 32 GB
+   - すべてのノードで 24 またはアタッチされた複数のディスク
 
    > [!TIP]
    > Azure インフラストラクチャ Vm のサイズの複数のオプションを参照してください[ここ](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)の展開を計画しているリージョンの選択項目。
@@ -76,18 +76,18 @@ Azure リソース グループは、azure リソースのデプロイし、管�
 
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes クラスターを作成します。
 
-1. 使用して AKS で Kubernetes クラスターを作成、 [az aks 作成](https://docs.microsoft.com/cli/azure/aks)コマンド。 次の例では、という名前の Kubernetes クラスターを作成する*kubcluster* 3 つの Linux エージェント ノードを使用します。 前のセクションで使用したのと同じリソース グループで、AKS クラスターを作成することを確認します。
+1. 使用して AKS で Kubernetes クラスターを作成、 [az aks 作成](https://docs.microsoft.com/cli/azure/aks)コマンド。 次の例では、という名前の Kubernetes クラスターを作成する*kubcluster*サイズの Linux エージェント ノードが 1 つ**Standard_L8s**します。 前のセクションで使用したのと同じリソース グループで、AKS クラスターを作成することを確認します。
 
     ```azurecli
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_L4s \
-    --node-count 3 \
+    --node-vm-size Standard_L8s \
+    --node-count 1 \
     --kubernetes-version 1.10.9
     ```
 
-   大きくしたり、変更することで Kubernetes エージェント ノードの数を減らす、`--node-count <n>`場所`<n>`を使用するエージェント ノードの数です。 これは、AKS でバック グラウンドで管理されているマスターの Kubernetes ノードには含まれません。 上記の例では、 **3**サイズの Vm **Standard_L4s** AKS クラスターのエージェント ノードに使用します。
+   大きくしたり、変更することで Kubernetes エージェント ノードの数を減らす、`--node-count <n>`場所`<n>`を使用するエージェント ノードの数です。 これは、AKS でバック グラウンドで管理されているマスターの Kubernetes ノードには含まれません。 前の例では、のみ、評価の目的で 1 つのノードを使用します。
 
    数分後、コマンドが完了し、クラスターに関する情報を JSON 形式を返します。
 

@@ -5,17 +5,17 @@ description: この記事では、最新の更新プログラムと SQL Server 2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c7c80b69ac7120f2cd88500d3c276a313ef34390
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510339"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618309"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>ビッグ データ クラスターは、SQL Server のリリース ノート
 
@@ -31,8 +31,11 @@ ms.locfileid: "58510339"
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
-| GPU 上でのガイダンスは、ディープ ラーニングと Spark で TensorFlow を実行するためサポートします。 | [GPU サポートと共に、ビッグ データ クラスターをデプロイして TensorFlow の実行](spark-gpu-tensorflow.md) |
+| GPU 上でのガイダンスは、ディープ ラーニングと Spark で TensorFlow を実行するためサポートします。 | [GPU サポートと共にビッグ データ クラスターにデプロイし、実行 TensorFlow](spark-gpu-tensorflow.md)します。 |
 | **SqlDataPool**と**SqlStoragePool**データ ソースは、既定では作成されません。 | これらを必要に応じて手動で作成します。 参照してください、[既知の問題](#externaltablesctp24)します。 |
+| `INSERT INTO SELECT` データのプールをサポートします。 | 例については、次を参照してください。[チュートリアル。Transact SQL を使用した SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-sql.md)します。 |
+| `FORCE SCALEOUTEXECUTION` `DISABLE SCALEOUTEXECUTION`オプション。 | 強制的に有効または無効にコンピューティングの使用は、外部テーブルに対するクエリのプールです。 たとえば、`SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` のようにします。 |
+| 更新された AKS デプロイの推奨事項。 | AKS でのビッグ データ クラスターを評価するときに今すぐ使用が推奨サイズの 1 つのノード**Standard_L8s**します。 |
 | Spark 2.4 以前に Spark ランタイム アップグレードします。 | |
 
 ### <a name="known-issues"></a>既知の問題

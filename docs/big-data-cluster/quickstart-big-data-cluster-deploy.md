@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b89ec7cd24ed61f08cf44f934066a9b0fc619434
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 00810eb3f57fdaf8f87fc0db16744ab9e3334f70
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493555"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618149"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート: SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。
 
@@ -78,14 +78,14 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **Docker のユーザー名** | 限定パブリック プレビューの一部として提供されている Docker のユーザー名。 |
    | **Docker のパスワード** | 限定パブリック プレビューの一部として提供されている Docker のパスワードです。 |
    | **Azure リージョン** | 新しい AKS クラスターの Azure リージョン (既定**westus**)。 |
-   | **マシンのサイズ** | [マシンのサイズ](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)AKS クラスター内のノードを使用する (既定**Standard_L4s**)。 |
-   | **ワーカー ノード** | AKS クラスター内の worker ノードの数 (既定**3**)。 |
+   | **マシンのサイズ** | [マシンのサイズ](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)AKS クラスター内のノードを使用する (既定**Standard_L8s**)。 |
+   | **ワーカー ノード** | AKS クラスター内の worker ノードの数 (既定**1**)。 |
    | **クラスター名** | AKS クラスターとビッグ データ クラスターの両方の名前。 クラスターの名前は、小文字の英数字文字のみとスペースなしである必要があります。 (既定**sqlbigdata**)。 |
    | **Password** | コント ローラー、HDFS/Spark ゲートウェイ、およびマスター インスタンスのパスワード (デフォルト**MySQLBigData2019**)。 |
    | **コント ローラーのユーザー** | コント ローラーのユーザーのユーザー名 (既定:**管理者**)。 |
 
    > [!IMPORTANT]
-   > 既定の**Standard_L4s**マシンのサイズはすべての Azure リージョンでは使用できません。 別のマシン サイズを選択した場合、クラスター内のノード間で接続できるディスクの合計数が 24 以上であることを確認します。 クラスター内各永続ボリューム要求は、接続されたディスクが必要です。 現時点では、ビッグ データ クラスターには、24 の永続ボリューム要求が必要です。 たとえば、 [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)マシンのサイズは、3 つのノードでは、48 のディスクを接続できることを意味するため、16 の接続されたディスクをサポートしています。
+   > 既定の**Standard_L8s**マシンのサイズはすべての Azure リージョンでは使用できません。 別のマシン サイズを選択した場合、クラスター内のノード間で接続できるディスクの合計数が 24 以上であることを確認します。 クラスター内各永続ボリューム要求は、接続されたディスクが必要です。 現時点では、ビッグ データ クラスターには、24 の永続ボリューム要求が必要です。 たとえば、 [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)マシンのサイズは、このマシンのサイズの 1 つのノードでのビッグ データ クラスターを評価することのできる、32 個のアタッチされたディスクをサポートしています。
 
    > [!NOTE]
    > `sa`アカウントは、システム管理者は、セットアップ時に作成される SQL Server のマスター インスタンス。 展開を作成した後、`MSSQL_SA_PASSWORD`を実行して環境変数が探索可能な`echo $MSSQL_SA_PASSWORD`マスター インスタンス コンテナーにします。 セキュリティのため、変更、`sa`デプロイ後に、マスター インスタンス上のパスワード。 詳細については、次を参照してください。 [SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)します。
