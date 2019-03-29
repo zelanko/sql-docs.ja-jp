@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 68fe779dbdc99bd3eca1870a4e8ff1ee0fa7d95f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017848"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566521"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>チュートリアル:SQL Server 2019 のビッグ データ クラスターにサンプル データを読み込む
 
@@ -115,4 +115,18 @@ ms.locfileid: "57017848"
 
 ## <a name="next-steps"></a>次のステップ
 
-ブートス トラップ スクリプトを実行した後、ビッグ データ クラスターは、サンプル データベースと HDFS のデータを持ちます。 このデータとクラスターのビッグ データの探索を開始するを参照してください。、[チュートリアル](tutorial-query-hdfs-storage-pool.md)このセクションでします。
+ブートス トラップ スクリプトを実行した後、ビッグ データ クラスターは、サンプル データベースと HDFS のデータを持ちます。 次のチュートリアルでは、ビッグ データ クラスターの機能について説明するのにサンプル データを使用します。
+
+データの仮想化:
+
+- [チュートリアル: ビッグ データの SQL Server クラスターで HDFS のクエリ](tutorial-query-hdfs-storage-pool.md)
+- [チュートリアル: SQL Server のビッグ データ クラスターから Oracle クエリを実行します。](tutorial-query-oracle.md)
+
+データの取り込み:
+
+- [チュートリアル: Transact SQL を使用した SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-sql.md)
+- [チュートリアル: Spark ジョブの SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-spark.md)
+
+Notebooks:
+
+- [チュートリアル: SQL Server 2019 ビッグ データ クラスター上のサンプルの notebook を実行します。](tutorial-notebook-spark.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392720"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566381"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio で notebook を使用する方法
 
@@ -45,9 +45,9 @@ Azure データ Studio では、また、F1 キーを押して をクリック�
 
 ## <a name="supported-kernels-and-attach-to-context"></a>カーネルがサポートされているし、コンテキストにアタッチ
 
-Azure Data Studio で Notebook のインストールは、SQL のカーネルをネイティブでサポートします。 となり、選択したかどうかは、SQL 開発者して Notebook を使用するにはカーネルです。 
+Azure Data Studio で Notebook のインストールは、SQL のカーネルをネイティブでサポートします。 となり、選択したかどうかは、SQL 開発者し、Notebook を使用するにはカーネルです。 
 
-SQL カーネルが PostgreSQL のサーバー インスタンスに接続することもできます。 PostgreSQL 開発して、PostgreSQL サーバーに接続する場合、ダウンロード、 [ **PostgreSQL 拡張機能**](postgres-extension.md)で Azure Data Studio の拡張機能マーケットプ レースです。
+SQL カーネルが PostgreSQL のサーバー インスタンスに接続することもできます。 PostgreSQL 開発者あり、PostgreSQL サーバーに接続する場合は、ダウンロード、 [ **PostgreSQL 拡張機能**](postgres-extension.md)で Azure Data Studio の拡張機能マーケットプ レースです。
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
@@ -116,7 +116,7 @@ Python3 カーネルを使用している場合、`Attach to`は`localhost`し�
 
 Notebook を Azure Data Studio で開くには、既定**信頼済み**します。
 
-他のソースからノートブックを開く場合に開くは**信頼されていない**モードとしやすく**信頼済み**。
+開くが他のソースからノートブックを開く場合**信頼されていない**モードとしやすく**信頼済み**します。
 
 ### <a name="save"></a>保存 
 

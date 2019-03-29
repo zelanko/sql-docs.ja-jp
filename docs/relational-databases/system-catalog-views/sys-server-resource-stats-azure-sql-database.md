@@ -19,22 +19,23 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: b8a5aaa7d0aecd992905e0eaf53ef362f24b1485
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: =azuresqldb-current||=sqlallproducts-allversions
+ms.openlocfilehash: 2a0a1f82685cb107902c8065f2f696f615ad3930
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009654"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566511"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Azure SQL マネージ インスタンスの CPU 使用量、IO、およびストレージのデータを返します。 データは、5 分間隔で収集と集計が実行されます。 レポートは 15 秒ごとに 1 つの行があります。 返されるデータには、CPU 使用率、ストレージ サイズ、I/O 使用率、およびマネージ インスタンス SKU が含まれています。 履歴データは約 14 日間保持されます。
 
-**Sys.server_resource_stats**ビューでは、データベースが関連付けられている Azure SQL マネージ インスタンスのバージョンによって異なる定義します。 新しいサーバー バージョンにアップグレードする際は、それら定義の違いとアプリケーションに必要な変更を考慮してください。
+**Sys.server_resource_stats**ビューでは、データベースが関連付けられている Azure SQL マネージ インスタンスのバージョンによって異なる定義します。 アプリケーションには、新しいサーバー バージョンにアップグレードするときに必要な変更、およびこれらの相違点を検討してください。
  
   
- 次の表は、v12 サーバーで使用できる列について説明しています。  
+ 次の表では、v12 サーバーで使用できる列について説明します。  
   
 |[列]|データ型|説明|  
 |----------------------------|---------------|-----------------|  
@@ -42,7 +43,7 @@ Azure SQL マネージ インスタンスの CPU 使用量、IO、およびス�
 |end_time|**datetime**|15 秒のレポート期間の終了を示す UTC 時刻|
 |resource_type|nvarchar (128)|メトリックが提供されているリソースの種類|
 |resource_name|nvarchar (128)|リソースの名前。|
-|sku|nvarchar (128)|インスタンスのインスタンスのサービス階層を管理します。 使用できる値を次に示します。 <br><ul><li>General Purpose</li></ul><ul><li>Business Critical</li></ul>|
+|Sku|nvarchar (128)|インスタンスのインスタンスのサービス階層を管理します。 使用できる値を次に示します。 <br><ul><li>General Purpose</li></ul><ul><li>Business Critical</li></ul>|
 |hardware_generation|nvarchar (128)|ハードウェアの世代の識別子 Gen 4 など Gen 5。|
 |virtual_core_count|ssNoversion|(8、16 または 24 がパブリック プレビュー) のインスタンスあたりの仮想コアの数を表します|
 |avg_cpu_percent|decimal(5,2)|インスタンスで使用されるマネージ インスタンスのサービス層の制限の割合で表した平均コンピューティング使用率。 すべてのデータベース インスタンスですべてのリソース プールの CPU 時間の合計として計算は、指定した間隔でその層の使用可能な CPU 時間で割った値します。|
@@ -63,7 +64,7 @@ Azure SQL マネージ インスタンスの CPU 使用量、IO、およびス�
  によって返されるデータ**sys.server_resource_stats**は、サービスの制限が許容される最大の割合として表現された avg_cpu 以外 (バイト) またはメガバイト数 (列名に記載されている) のいずれかで使用される合計として表されます実行している階層/パフォーマンス レベル。  
  
 ## <a name="examples"></a>使用例  
- 次の例では、過去 1 週間で平均してコンピューティング使用率が 80% 以上になっているすべてのデータベースが返されます。  
+ 次の例は、平均はすべてのデータベースを返します、過去 1 週間コンピューティング使用率の 80% 以上です。  
   
 ```sql  
 DECLARE @s datetime;  
