@@ -19,12 +19,12 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 62ef99767be3f228702a06d89ba52f5c3a9821fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acb05f10772ebdf77355b78e1f4ce998cc6c8056
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664821"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657016"
 ---
 # <a name="migration-wizard-accesstosql"></a>移行ウィザード (AccessToSQL)
 移行ウィザードを 1 つまたは複数のデータベースの移行へのアクセスを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 ウィザードを使用すると、するはプロジェクトを作成、データベース プロジェクトを追加、移行、およびに接続するオブジェクトの選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 変換、読み込み、および Access スキーマとデータを移行もされます。 アクセス テーブルをリンクする必要に応じて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のテーブル。  
@@ -76,7 +76,7 @@ Access データベースの追加 ページでは、プロジェクトに 1 つ
 フィルターの詳細については、の [オプション] セクションを参照してください。[高度なオブジェクトの選択 (SSMA 一般的)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c)します。  
   
 ## <a name="connect-to-sql-server-page"></a>SQL Server のページへの接続します。  
-接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで、接続のプロパティを指定しに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください[SQL サーバーへの接続。](https://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで、接続のプロパティを指定しに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。 [SQL サーバーへの接続](connect-to-sql-server-accesstosql.md)します。
   
 > [!IMPORTANT]  
 > 発生した接続に成功するとすぐに**リンク テーブル**ページ、テーブルのリンクのオプションがあります。 をクリックして**次**し、移行を開始します。  

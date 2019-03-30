@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5df94dc555aead1225bcb791456e7dc87c0b7590
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 583059b93268f3652cf2e8f324574ec739d449dd
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214963"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658233"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 での PowerPivot データ更新
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -235,7 +235,7 @@ ms.locfileid: "53214963"
 ##  <a name="bkmk_moreinformation"></a> その他の情報  
  [PowerPivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   
- [Excel Services を SharePoint 2013 で](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\))(<http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>)。  
+ [Excel Services が SharePoint で](/sharepoint/dev/general-development/excel-services-in-sharepoint)します。  
   
 ## <a name="see-also"></a>参照  
  [Power Pivot モードでの Analysis Services のインストール](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  

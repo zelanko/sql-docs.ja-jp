@@ -10,12 +10,12 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 52a1bcb820d444e33ab034a09ee486592540e50c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9e1d315ca23b379238a19baf09ac2591d0085fad
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020143"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658086"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Data Quality Client で Integration Services プロジェクトを開く
   [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] では、クレンジング プロジェクトをバッチ モードで実行できます。 しかし、DQS のデータ品質プロジェクト内のクレンジング アクティビティの **[結果の管理と表示]** タブでクレンジング結果を確認するのと同様の方法で、Integration Services パッケージ内でクレンジング結果を確認したい場合があります。 DQS では、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] [プロジェクトを開く] **画面から他のデータ品質プロジェクトを開くのと同様に、** で Integration Services プロジェクトを開くことができ、Integration Services プロジェクト内のクレンジング結果について、インタラクティブなクレンジングを操作できます。  
@@ -38,8 +38,6 @@ ms.locfileid: "56020143"
 ####  <a name="Permissions"></a> Permissions  
  Integration Services プロジェクトを開くためには、DQS_MAIN データベースに対する dqs_kb_editor または dqs_kb_operator ロールが必要です。  
   
- ![上部のリンクに戻る で使用される矢印アイコン](../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[でこのトピック](#Intro)  
-  
 ##  <a name="Open"></a> Integration Services プロジェクトを開く  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../../2014/data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
@@ -60,10 +58,6 @@ ms.locfileid: "56020143"
   
 6.  データをエクスポートした後で **[完了]** をクリックして Integration Services プロジェクトを閉じます。  
   
- ![上部のリンクに戻る で使用される矢印アイコン](../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[でこのトピック](#Intro)  
-  
 ## <a name="see-also"></a>参照  
  [DQS クレンジング変換](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Integration Services (SSIS) プロジェクト](../integration-services/integration-services-ssis-projects-and-solutions.md)  
-  
-  

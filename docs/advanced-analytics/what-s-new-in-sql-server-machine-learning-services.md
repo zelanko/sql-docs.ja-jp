@@ -1,7 +1,7 @@
 ---
 title: SQL Server Machine Learning Services の新機能 - |Microsoft Docs
 description: 新しい機能のお知らせの各リリースの SQL Server 2016 R Services、R Server、SQL Server 2017 Machine Learning サービス。
-ms.date: 03/27/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a41844fb7cd9c7e638d42fe9edbbb05ef0b81be1
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 64fbf68f09f685223ba42d9d2b79d5a8454f7125
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509829"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645524"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の新機能新機能
 
@@ -47,7 +47,7 @@ ms.locfileid: "58509829"
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 
-このリリースで追加[Python のサポートと業界最先端の機械学習アルゴリズム](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)します。 新しいスコープを反映するように名前変更、SQL Server 2017 のマークの導入に伴い[SQL Server Machine Learning サービス (In-database)](what-is-sql-server-machine-learning.md)Python と R. の両方の言語サポート 
+このリリースで追加[Python のサポートと業界最先端の機械学習アルゴリズム](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)します。 新しいスコープを反映するように名前変更、SQL Server 2017 のマークの導入に伴い[SQL Server Machine Learning サービス (In-database)](what-is-sql-server-machine-learning.md)Python と R. の両方の言語サポート 
 
 機能のお知らせすべて時に、次を参照してください。 [SQL Server 2017 の新](../sql-server/what-s-new-in-sql-server-2017.md)します。
 

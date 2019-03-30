@@ -13,12 +13,12 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 38c4cdc0a777fe68d466854a9b2dd7cf1403d07f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: cfad36590bc36e604efb563390f4e50442080676
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757794"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658256"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web アプリケーションの要件 (マスター データ サービス)
 
@@ -52,9 +52,9 @@ ms.locfileid: "52757794"
   
 ||  
 |-|  
-|[インターネット インフォメーション サービス]<br /><br /> Web 管理ツール<br /><br /> IIS 管理コンソール<br /><br /> World Wide Web サービス<br /><br /> アプリケーション開発<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> HTTP 基本機能<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> 静的なコンテンツ<br /><br /> [注:WebDAV 発行はインストールしないでください]<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> パフォーマンス<br /><br /> 静的なコンテンツの圧縮<br /><br /> Security<br /><br /> 要求フィルター<br /><br /> [Windows 認証]|  
+|[インターネット インフォメーション サービス]<br /><br /> Web 管理ツール<br /><br /> IIS 管理コンソール<br /><br /> World Wide Web サービス<br /><br /> アプリケーション開発<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> HTTP 基本機能<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> 静的なコンテンツ<br /><br /> [注:WebDAV 発行はインストールしないでください]<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> パフォーマンス<br /><br /> 静的なコンテンツの圧縮<br /><br /> セキュリティ<br /><br /> 要求フィルター<br /><br /> [Windows 認証]|  
   
-### <a name="features"></a>[機能] 
+### <a name="features"></a>機能 
  Windows Server 2012 および Windows Server 2012 R2 では、 **サーバー マネージャー** を使用して、次に示す必要な機能をインストールできます。  
   
 ||  
@@ -69,11 +69,11 @@ Install-WindowsFeature Web-Mgmt-Console, AS-NET-Framework, Web-Asp-Net, Web-Asp-
 Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeature -Restart  
 ```  
   
- PowerShell コマンドの詳細については、「 [Install-WindowsFeature](https://technet.microsoft.com/library/jj205467)」を参照してください。  
+ PowerShell コマンドの詳細については、「[Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature)」を参照してください。  
   
 ### <a name="accounts-and-permissions"></a>アカウントと権限  
   
-|型|[説明]|  
+|型|説明|  
 |----------|-----------------|  
 |Windows アカウント|Windows のロール、ロール サービス、および機能を構成し、ローカル コンピューター上の IIS にあるアプリケーション プール、Web サイト、および Web アプリケーションを作成して管理する権限がある Windows アカウントを使用して Web サーバー コンピューターにログオンする必要があります。|  
 |サービス アカウント|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] で [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]Web アプリケーションを作成するときは、アプリケーションが実行されるアプリケーション プールの ID を指定する必要があります。 このアカウントは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの作成時に指定したサービス アカウントと異なっていてもかまいません。<br /><br /> この ID はドメイン ユーザー アカウントである必要があり、データベースにアクセスするために [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースの mds_exec データベース ロールに追加されます。 詳細については、「[データベース ログイン、ユーザー、およびロール](../../master-data-services/database-logins-users-and-roles-master-data-services.md)」を参照してください。 また、このアカウントは、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Windows グループ **MDS_ServiceAccounts**にも追加されます。このグループには、ファイル システムの一時コンパイル ディレクトリ **MDSTempDir**に対する権限が与えられています。 詳細については、「[フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)」を参照してください。|  

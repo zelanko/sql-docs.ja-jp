@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371054"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658342"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>SysPrep を使用した SQL Server 2014 のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep に関連するセットアップ操作には、インストール センターからアクセスできます。 **[インストール センター]** の **[詳細設定]** ページには、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** と **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [の準備済みスタンドアロン インスタンスのイメージの完了]** の 2 つのオプションがあります。 [準備](#prepare)のセクションと[完了](#complete)のセクションで、インストール プロセスについて詳しく説明します。 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。  
@@ -48,9 +48,9 @@ ms.locfileid: "53371054"
   
 -   [準備済み SQL Server インスタンスからの機能の削除](#RemoveFeatures)  
   
--   [準備済みインスタンスのアンインストール](install-sql-server-using-sysprep.md#uninstall)  
+-   [準備済みインスタンスのアンインストール](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [完了した SQL Server インスタンスの変更またはアンインストール](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
+-   [完了した SQL Server インスタンスの変更またはアンインストール](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep クラスター サポート  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降、SysPrep は、コマンド ラインからのインストールでクラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをサポートしています。 詳細については、「 [Sysprep とは](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)」を参照してください。  
@@ -325,5 +325,3 @@ ms.locfileid: "53371054"
 ## <a name="see-also"></a>参照  
  [Sysprep とは](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [Sysprep のしくみ](https://go.microsoft.com/fwlink/?LinkId=143547)  
-  
-  

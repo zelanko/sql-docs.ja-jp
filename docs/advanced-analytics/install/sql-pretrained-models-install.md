@@ -3,22 +3,22 @@ title: 事前トレーニング済みの機械学習モデルの SQL Server Mach
 description: センチメントの分析とイメージの特性付けの事前トレーニング済みモデルを SQL Server 2017 Machine Learning サービス (R または Python) または SQL Server 2016 R Services を追加します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/18/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 168898c08fb24af655ff5429e2a7fa028ea37405
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: fe0cfc855f1a231654c3e31ec3924d9754ef4970
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512299"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645574"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの machine learning のモデルでは、SQL Server をインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、Powershell を使用して無料事前トレーニング済みの機械学習モデルを追加する方法を説明します*感情分析*と*イメージ特性付け*R または Python を持つ SQL Server データベース エンジン インスタンスに。統合します。 事前トレーニング済みモデルは、Microsoft とすぐに使用して作成された、インストール後のタスクとして、データベース エンジンのインスタンスに追加します。 これらのモデルの詳細については、次を参照してください。、[リソース](#bkmk_resources)この記事の「します。
+この記事では、Powershell を使用して無料事前トレーニング済みの機械学習モデルを追加する方法を説明します。*感情分析*と*イメージ特性付け*R または Python の統合を持つ SQL Server インスタンスにします。 事前トレーニング済みモデルは、Microsoft とすぐに使用して作成されたインスタンスとしてインストール後のタスクに追加します。 これらのモデルの詳細については、次を参照してください。、[リソース](#bkmk_resources)この記事の「します。
 
 インストールされると、事前トレーニング済みモデルは MicrosoftML (R) および microsoftml (Python) ライブラリの特定の機能を実装の詳細と見なされます。 できますに処理するカスタム コードでは独立したリソースとしてもしていない必要があります (ことはできません) を表示したり、カスタマイズ、したり、モデルの再トレーニングまたはその他の関数をペアになっています。 
 
@@ -26,8 +26,8 @@ ms.locfileid: "58512299"
 
 | R 関数 (MicrosoftML) | Python 関数 (microsoftml) | 使用方法 |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | テキスト入力には、正、負のセンチメント スコアを生成します。 [詳細については](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)します。|
-| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | イメージ ファイルの入力からのテキスト情報を抽出します。 [詳細については](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/)します。 |
+| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | テキスト入力には、正、負のセンチメント スコアを生成します。 |
+| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | イメージ ファイルの入力からのテキスト情報を抽出します。 |
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -182,13 +182,7 @@ R および Python のモデルのインストール パスは次のとおりで
 
 ## <a name="examples-using-pre-trained-models"></a>事前トレーニング済みモデルの使用例
 
-次のリンクには、事前トレーニング済みモデルを呼び出すことのチュートリアルおよびサンプルのコードが含まれます。
-
-+ [SQL Server Machine Learning Services での Python の感情分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
-
-+ [事前トレーニング済みのディープ ニューラル ネットワーク モデルでのイメージの特性付け](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/)
-
-  イメージの事前トレーニング済みモデルでは、指定したイメージの特徴の生成をサポートします。 モデルを使用して、呼び出す、 **featurizeImage**変換します。 イメージが読み込まれるサイズ変更、トレーニング済みモデルを特徴とします。 DNN featurizer の出力は画像の分類の線形モデルのトレーニングに使用されます。 このモデルを使用するには、トレーニング済みモデルの要件を満たすすべてのイメージのサイズを変更する必要があります。 たとえば、AlexNet モデルを使用する場合、イメージ必要がありますを変更する場合 227 x 227 ピクセルです。
+次のリンクには、事前トレーニング済みモデルを呼び出すコード例にはが含まれます。
 
 + [コード サンプル:テキストの特徴抽出器を使った感情分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 

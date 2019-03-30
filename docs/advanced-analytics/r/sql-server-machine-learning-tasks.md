@@ -2,17 +2,17 @@
 title: 機械学習ライフ サイクルとチームのプロセス - SQL Server Machine Learning サービス
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4d19c103f2e90220bc7d80a1da65eb0352252ad6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c06155a433718a068bc914b071f0f738cd236613
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511289"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645434"
 ---
 # <a name="machine-learning-lifecycle-and-personas"></a>Machine learning のライフ サイクルとペルソナ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,7 +21,7 @@ Machine learning プロジェクト スキルとプロフェッショナル向�
 
 > [!TIP]
 > 
-> ツールとによって提供されるベスト プラクティスを確認することをお勧めの machine learning プロジェクトを開始する前に、 [Microsoft Team Data Science Process](https://blogs.technet.microsoft.com/machinelearning/2017/10/09/the-microsoft-team-data-science-process-tdsp-recent-updates/)、または TDSP します。 このプロセスは、machine learning の計画と機械学習のプロジェクトの反復処理に関するベスト プラクティスを統合するマイクロソフトのコンサルタントによって作成されました。 TDSP は CRISP-DM などの業界標準では、DevOps や視覚化などの最新のプラクティスが組み込まれています。
+> ツールとによって提供されるベスト プラクティスを確認することをお勧めの machine learning プロジェクトを開始する前に、 [Microsoft Team Data Science Process](https://docs.microsoft.com/azure/machine-learning/team-data-science-process/overview)、または TDSP します。 このプロセスは、machine learning の計画と機械学習のプロジェクトの反復処理に関するベスト プラクティスを統合するマイクロソフトのコンサルタントによって作成されました。 TDSP は CRISP-DM などの業界標準では、DevOps や視覚化などの最新のプラクティスが組み込まれています。
 
 ## <a name="machine-learning-life-cycle"></a>Machine learning のライフ サイクル
 

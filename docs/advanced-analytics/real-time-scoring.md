@@ -3,17 +3,17 @@ title: リアルタイムのスコアリング sp_rxPredict ストアド プロ�
 description: Sp_rxPredict、SQL Server で R で記述された事前トレーニング済みモデルに対するデータの入力をスコア付けを使用して予測を生成します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a7e55ac47fdb28a18c8a41b3535e67fc8886cfea
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 22f6c48aec0c9434b17ceda0a2b729f6e63bf136
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509629"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645474"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>リアルタイムのスコアリングでは、SQL Server machine learning で sp_rxPredict
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,9 +32,6 @@ SQL Server 2017 と SQL Server 2016 の両方で RevoScaleR または MicrosoftM
 2. バイナリ形式で事前トレーニング済みモデルを読み込みます。
 3. スコア付けする、表形式または 1 つのいずれかの行では、モデルへの入力として新しい入力データを入力します。
 4. スコアを生成するには、呼び出し、 [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)ストアド プロシージャ。
-
-> [!TIP]
-> リアルタイムのスコア付けの動作の例は、次を参照してください[エンド ツー エンド ローン償却予測ビルドを使用して Azure HDInsight Spark クラスターと SQL Server 2016 R サービス。](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -201,7 +198,5 @@ EXEC sp_rxPredict
 リアルタイムのスコア付け機能を無効にするには、管理者特権でコマンド プロンプトを開きし、次のコマンドを実行します。 `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="next-steps"></a>次のステップ
-
-RxPredict を使用して、スコア付け方法の例は、次を参照してください。[エンド ツー エンド ローン償却予測ビルドを使用して Azure HDInsight Spark クラスターと SQL Server 2016 R サービス](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)します。
 
 SQL Server でのスコア付けの詳細については、次を参照してください。 [SQL Server machine learning で予測を生成する方法](r/how-to-do-realtime-scoring.md)します。

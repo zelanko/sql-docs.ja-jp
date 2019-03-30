@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 72ca07a14495261d61601c4acd503790697ce6a4
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160630"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658096"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループの SLES クラスターを構成します。
 
@@ -221,7 +221,7 @@ Pacemaker クラスターのベンダーは、STONITH を有効にして、サ�
 
 ノード レベルのフェンス操作により、ノードがどのリソースも実行しないことが保証されます。 ノードをリセットすることでこれし、その Pacemaker 実装には、STONITH (これは「その他のノードを先頭に撮影」略) が呼び出されます。 Pacemaker は、さまざまな、無停電電源装置または管理インターフェイス カードのサーバーなどのデバイスをフェンスをサポートします。
 
-詳細については、次を参照してください。 [Pacemaker クラスターを最初から](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)、[フェンスと Stonith](https://clusterlabs.org/doc/crm_fencing.html)と[SUSE HA のドキュメント。フェンスと STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)します。
+詳細については、次を参照してください。 [Pacemaker クラスターを最初から](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)、[フェンスと Stonith](https://clusterlabs.org/doc/crm_fencing.html)と[SUSE HA のドキュメント。フェンスと STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)します。
 
 クラスターの初期化時に構成が検出されない場合は、STONITH が無効です。 次のコマンドを実行中で後で有効にできます。
 
@@ -335,6 +335,6 @@ crm crm configure \
 
 <!---[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]--->
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [HA の可用性グループを操作します。](sql-server-linux-availability-group-failover-ha.md)

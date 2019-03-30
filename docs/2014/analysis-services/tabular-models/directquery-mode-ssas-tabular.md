@@ -13,12 +13,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e092962430895f5398560cdd8f758e24477c2388
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9226a15351e8c6fcc938543d04fc95b0237f702b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511521"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657976"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery モード (SSAS テーブル)
   Analysis Services では、データを取得し、リレーショナル データベース システムから直接データと集計を取得することによって、表形式モデルからレポートを作成できます。 を使用して*DirectQuery モード*します。 ここでは、メモリにのみ存在する標準テーブル モデルと、リレーショナル データ ソースにクエリを実行できるテーブル モデルの違いを紹介し、DirectQuery モードで使用するモデルを作成および配置する方法について説明します。  
@@ -29,7 +29,7 @@ ms.locfileid: "52511521"
   
 -   [DirectQuery モードで使用するためのモデルの作成](#bkmk_Design)  
   
-    -   [DirectQuery モデルのデータ ソース](directquery-mode-ssas-tabular.md#bkmk_datasources)  
+    -   [DirectQuery モデルのデータ ソース](directquery-mode-ssas-tabular.md#bkmk_DataSources)  
   
     -   [検証と DirectQuery モードの設計上の制限](#bkmk_Validation)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52511521"
   
  この操作を行うと、モデル デザイナーは、キャッシュされたデータの操作を継続できるハイブリッド モードで実行するようにワークスペース データベースを自動的に構成します。 モデル デザイナーによって、モデル内の DirectQuery モードと互換性がない機能も通知されます。 考慮する必要のある主な要件を次の一覧にまとめます。  
   
--   **データ ソース:** DirectQuery モデルでは、1 つの SQL Server データ ソースからのみデータを使用できます。 モデルに対して DirectQuery モードがオンになると、コピーと貼り付け操作によって追加されたテーブルなど他の種類のデータをモデル デザイナーで使用できなくなります。 他のすべてのインポート オプションが無効になります。 クエリに含まれるテーブルは、SQL Server データ ソースに属している必要があります。 参照してください[DirectQuery モデルのデータ ソース](directquery-mode-ssas-tabular.md#bkmk_datasources)詳細についてはします。  
+-   **データ ソース:** DirectQuery モデルでは、1 つの SQL Server データ ソースからのみデータを使用できます。 モデルに対して DirectQuery モードがオンになると、コピーと貼り付け操作によって追加されたテーブルなど他の種類のデータをモデル デザイナーで使用できなくなります。 他のすべてのインポート オプションが無効になります。 クエリに含まれるテーブルは、SQL Server データ ソースに属している必要があります。 参照してください[DirectQuery モデルのデータ ソース](directquery-mode-ssas-tabular.md#bkmk_DataSources)詳細についてはします。  
   
 -   **計算列のサポート:** 計算列は、DirectQuery モデルではサポートされません。 ただし、データ セットを操作するメジャーと KPI を作成できます。 参照してください[検証](#bkmk_Validation)詳細についてはします。  
   
@@ -182,5 +182,3 @@ ms.locfileid: "52511521"
  [パーティション (SSAS テーブル)](partitions-ssas-tabular.md)   
  [テーブル モデル プロジェクト (SSAS テーブル)](tabular-model-projects-ssas-tabular.md)   
  [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)  
-  
-  

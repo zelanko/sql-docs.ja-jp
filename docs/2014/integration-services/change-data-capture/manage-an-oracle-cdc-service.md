@@ -12,12 +12,12 @@ ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a6257a4f99637fd3be8d11f2848741806c10f2a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9f9969630f8fe9f665a04575af8670ddb1af1b3c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387810"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657706"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   CDC Service 構成コンソールを使用すると、特定の CDC Service を管理できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "58387810"
   
 2.  操作する CDC サービスを選択します。  
   
-     操作する CDC サービスを右クリックして、目的のアクションをクリックすることもできます。 「 [CDC Service で可能な操作](manage-an-oracle-cdc-service.md#bkmk_whatcandowithcdcservice)」を参照してください。  
+     操作する CDC サービスを右クリックして、目的のアクションをクリックすることもできます。 「 [CDC Service で可能な操作](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)」を参照してください。  
   
  **OR**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "58387810"
   
 2.  CDC Service 構成コンソールの中央のセクションで、操作するサービスを選択します。  
   
-     操作する CDC サービスを右クリックして、目的のアクションをクリックすることもできます。 「 [CDC Service で可能な操作](manage-an-oracle-cdc-service.md#bkmk_whatcandowithcdcservice)」を参照してください。  
+     操作する CDC サービスを右クリックして、目的のアクションをクリックすることもできます。 「 [CDC Service で可能な操作](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)」を参照してください。  
   
 ##  <a name="BKMK_WhatcandowithCDCService"></a> CDC Service で可能な操作  
  CDC サービスの操作時には、以下のアクションを実行できます。  
@@ -46,7 +46,7 @@ ms.locfileid: "58387810"
   
  または、削除する CDC サービスを右クリックして **[削除]** を選択します。  
   
- **注**:サービスを削除するときに、サービスが実行されている場合は、削除する前に、サービスが停止しました。  
+ **注**:実行中のサービスを削除した場合、サービスは停止されてから削除されます。  
   
  Oracle CDC Windows Service の定義を削除するには、プログラムに、関連付けられている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の MSXDBCDC データベースに対する更新アクセスが必要です。 [OK] をクリックしてサービスを削除すると、MSXDBCDC データベース内にある Oracle CDC Service 登録の削除が試みられます。 プログラムが適切な権限を持っていないため Oracle CDC Service 登録を削除できない場合、ユーザーは、MSXDBCDC データベースに対する更新権限を持つ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを入力するよう求められます。  
   
@@ -59,5 +59,3 @@ ms.locfileid: "58387810"
   
 ## <a name="see-also"></a>参照  
  [ローカルの CDC Service を管理する方法](how-to-manage-a-local-cdc-service.md)  
-  
-  

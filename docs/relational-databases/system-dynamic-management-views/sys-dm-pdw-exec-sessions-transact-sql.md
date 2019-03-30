@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fac2105011440cbabd3ed7eedebdaeb5cba37346
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 331bb44faa2938241de98a6bff08f1e660583c4e
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417174"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657826"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "58417174"
 |app_name|**nvarchar (255)**|必要に応じて、接続プロセスの一部として設定するアプリケーション名の情報をキャプチャします。|任意の有効な文字列。|  
 |sql_spid|**int**|SPID の id 番号。 使用して、`session_id`このセッションです。 使用して、`sql_spid`に結合する列**sys.dm_pdw_nodes_exec_sessions**します。<br /><br /> **\*\* 警告\* \*** この列には、閉じている Spid が含まれています。||  
   
- このビューで保持される最大行数は、詳細については、メタデータ」セクションを参照してください、[容量制限](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)トピック。  
+ このビューで保持される最大行数は、詳細については、メタデータ」セクションを参照してください、[容量制限](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)トピック。  
   
 ## <a name="permissions"></a>アクセス許可  
  `VIEW SERVER STATE` アクセス許可が必要です。  

@@ -2,17 +2,17 @@
 title: SQL Server の構成 (R Services) - SQL Server Machine Learning サービス
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f5dd6ee267b7bac933e40f90282d1bf74aa57b62
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 9ad4d1a23a05db35e0c4b55473903dbf7e4265da
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511849"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645544"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R で使用するための SQL Server の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -165,10 +165,6 @@ FROM sys.dm_os_memory_clerks
 + [SQL Server でのソフト NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Cpu をソフト NUMA ノードをマップする方法
-
-+ [自動ソフト NUMA:高速化 (Bob Ward) を実行します。](https://blogs.msdn.microsoft.com/bobsql/2016/06/03/sql-2016-it-just-runs-faster-automatic-soft-numa/)
-
-   履歴をについて説明します。 以降のマルチコア サーバーでパフォーマンスの実装の詳細とします。
 
 ## <a name="task-specific-optimizations"></a>タスク固有の最適化
 

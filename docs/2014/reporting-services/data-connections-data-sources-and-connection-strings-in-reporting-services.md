@@ -20,12 +20,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da5fb3c4c5dec240a9148772c95bb357f981db1e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3323683075b99ce2ab8cbcb456240bc24323762f
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291771"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658123"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Reporting Services でのデータ接続、データ ソース、および接続文字列
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートにデータを含めるには、最初に *データ ソース* および *データセット*を作成する必要があります。 このトピックでは、データ ソースの種類、データ ソースの作成方法、およびデータ ソースの資格情報に関連する重要な情報について説明します。 データ ソースには、データ ソースの種類、接続情報、および使用する資格情報の種類が含まれています。 データ ソースには、埋め込みと共有の 2 種類があります。 埋め込みデータ ソースは、レポート内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、レポートとは別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、「[埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)」および「[埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
@@ -86,7 +86,7 @@ ms.locfileid: "56291771"
   
 -   **データ ソースの種類**接続型[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 この値は、接続の種類のドロップダウン リストから選択します。  
   
--   **接続情報** 接続情報には、データ ソースの名前と場所、および各データ プロバイダーに固有の接続プロパティが含まれます。 *接続文字列* は、接続情報のテキスト表現です。 たとえば、データ ソースが SQL Server データベースの場合は、データベースの名前を指定することができます。 埋め込みデータ ソースの場合は、実行時に評価される式に基づく接続文字列を記述することもできます。 詳細については、このトピックで後述する「 [式に基づく接続文字列](#Expressions) 」を参照してください。  
+-   **接続情報** 接続情報には、データ ソースの名前と場所、および各データ プロバイダーに固有の接続プロパティが含まれます。 *接続文字列* は、接続情報のテキスト表現です。 たとえば、データ ソースが SQL Server データベースの場合は、データベースの名前を指定することができます。 埋め込みデータ ソースの場合は、実行時に評価される式に基づく接続文字列を記述することもできます。 詳細については、このトピックで後述する「 [式に基づく接続文字列](#bkmk_Expressions_in_connection_strings) 」を参照してください。  
   
 -   **資格情報** データにアクセスするために必要な資格情報を指定します。 データ ソースおよびデータ ソースの特定のデータにアクセスするには、データ ソースの所有者から適切な権限を許可されていることが必要です。 たとえば、ネットワーク サーバーにインストールされた [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] サンプル データベースに接続するには、サーバーに接続する権限およびデータベースにアクセスする読み取り専用権限が必要です。  
   
@@ -185,5 +185,3 @@ ms.locfileid: "56291771"
  [配置プロパティを設定する (Reporting Services)](tools/set-deployment-properties-reporting-services.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
-  

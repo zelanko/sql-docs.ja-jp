@@ -3,17 +3,17 @@ title: SQL Server の R と Python のチュートリアル - SQL Server Machine
 description: 例と、R と Python の SQL Server Machine Learning Services でのスクリプト作成に関するチュートリアル。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b30daadd23cbea244576c461ec783e67b2189cf
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6d68d7f36ea6539142bab0ea0e4b50ef6dca8444
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511049"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645404"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>R および Python での SQL Server Machine Learning のチュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +72,6 @@ ms.locfileid: "58511049"
 | [顧客を実行する Python と SQL Server を使用してクラスタ リング](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | K-平均法アルゴリズムを使用して、顧客の教師なしのクラスタ リングを実行する方法について説明します。 この例では、Python 言語でのデータベースを使用します。| SQL Server 2017 |
 | [R と SQL Server を使用して予測モデルを構築します。](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | スキー レンタル ビジネスを予測する機械学習、今後のレンタルを今後の需要を満たすためには、ビジネスの計画と人員配置を一層使用方法について説明します。 この例では、Microsoft のアルゴリズムを使用して、ロジスティック回帰、デシジョン ツリー モデルを構築します。 | 
 | [Python と SQL Server を使用して予測モデルを構築します。](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | 今後の需要を計画するために、Python を使用して、スキー レンタル分析アプリケーションをビルドします。 この例は、新しい Python ライブラリを使用して**revoscalepy**、線形回帰モデルを作成します。 | 
-| [SQL Server Machine Learning Services で Tableau を使用する方法](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/) | ソーシャル メディアを分析し、SQL Server を R. Tableau グラフの作成 | 
 
 <a name="bkmk_solutions"></a>
 
@@ -86,6 +85,4 @@ Microsoft データ サイエンス チームは、一般的なシナリオ ソ�
 + [顧客離れ予測](https://gallery.cortanaanalytics.com/Tutorial/Customer-Churn-Prediction-Template-with-SQL-Server-R-Services-1)
 + [予測メンテナンス](https://gallery.cortanaanalytics.com/Tutorial/Predictive-Maintenance-Template-with-SQL-Server-R-Services-1)
 + [病院入院を予測します。](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
-
-詳細については、「[Machine Learning Templates with SQL Server 2016 R Services](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/)」 (SQL Server 2016 R Services の機械学習テンプレート) を参照してください。
 

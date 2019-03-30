@@ -2,17 +2,17 @@
 title: SQL Server R Services - 結果とリソース - SQL Server Machine Learning Services のパフォーマンス
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4b71afb8f373eed4f49bc2cf0ea1c6086b6f121d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510759"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645554"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services のパフォーマンス: 結果とリソース
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -337,10 +337,8 @@ CPU の結合は、R ジョブへの影響を評価するための再開に一�
 
 これらすべての理由からはこの最初の読み込み時間を短縮するための 1 つのソリューション タスクによってはパフォーマンスに与える影響が大幅に変化します。 単一行のバッチでのスコア付けのキャッシュの実行例そのため、一連のスコア付けの操作がはるかに高速と、モデルでも、R ランタイムが再度読み込まれます。 使用することも[ネイティブ スコアリング](../sql-native-scoring.md)R ランタイムを完全に読み込まれないようにします。
 
-大規模なモデルでのトレーニングや、大きなバッチでスコア付け、オーバーヘッドが最小データ移動を回避またはストリーミングと並列処理の向上と比べてなる可能性があります。 これらの最近のブログと追加のパフォーマンス ガイダンスのサンプルを参照してください。
+大規模なモデルでのトレーニングや、大きなバッチでスコア付け、オーバーヘッドが最小データ移動を回避またはストリーミングと並列処理の向上と比べてなる可能性があります。 追加のパフォーマンス ガイダンスに関するブログ投稿を参照してください。
 
-+ [SQL Server 2016 R Services を使用してローンの分類](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
-+ [初期の顧客のエクスペリエンスと R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
 + [R を使用して、1 秒あたり 100万トランザクションでの不正行為の検出](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>リソース

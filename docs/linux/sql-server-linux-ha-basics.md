@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 85ea90343ebf1cac9ba04a4b9252a6dd9fb748bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533072"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658408"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイの SQL Server 可用性の基礎
 
@@ -58,7 +58,7 @@ Linux では、多くのコマンドは、管理者として Windows Server で�
 1 つのサーバー間でファイルをコピーするタスクを使用してユーザーが[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]on Linux では操作を実行できます。 このタスクは、AG 構成の非常に重要です。
 
 Linux および Windows ベースのインストール、アクセス許可の問題のようなものが存在できます。 ただし、Windows のサーバーから別のサーバーにコピーする方法を使い慣れていないがあります on Linux での実行方法について熟知。 一般的なメソッドはコマンド ライン ユーティリティを使用して、 `scp`、セキュリティで保護されたコピーの略です。 バック グラウンドで`scp`OpenSSH を使用します。 SSH は、セキュリティで保護されたシェルの略です。 Linux ディストリビューションに応じて自体 OpenSSH をインストールしない可能性があります。 そうでない場合、OpenSSH を最初にインストールする必要があります。 OpenSSH の構成の詳細については、各ディストリビューションは、次のリンクで情報を参照してください。
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **ファイアウォールのドキュメント:**
--   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>インストール[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]可用性のためのパッケージ
@@ -200,7 +200,7 @@ Wsfc は、参加しているノードの状態を監視し、問題が発生し
 #### <a name="cluster-log-location"></a>クラスター ログの場所
 Pacemaker クラスターのログの場所は、ディストリビューションによって異なります。
 -   RHEL および SLES- `/var/log/cluster/corosync.log`
--   -Ubuntu `/var/log/corosync/corosync.log`
+-   Ubuntu - `/var/log/corosync/corosync.log`
 
 既定のログ ファイルの場所を変更する変更`corosync.conf`します。
 
@@ -245,5 +245,5 @@ STONITH は、Pacemaker クラスターのサポートされている必要が�
 #### <a name="other-linux-distributions"></a>他の Linux ディストリビューション
 Linux では、Pacemaker クラスターのすべてのノードは、同一のディストリビューションにある必要があります。 たとえば、RHEL ノードは SLES ノードを持つ Pacemaker クラスターの一部であることは。 この主な理由が前に示した: ディストリビューションが可能性がさまざまなバージョンと機能、処理が正しく動作しない可能性があります。 Wsfc と Linux の混在と同じストーリーがディストリビューションを混在させる: なし を使用するか、Ag を分散します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 [SQL Server on Linux のペース クラスターを展開します。](sql-server-linux-deploy-pacemaker-cluster.md)

@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f533591be751375ce5686b7c2998af6410fb311
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 13f6cb50604047e7c5f2aaaa60c3e3b77cae5913
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366284"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658476"
 ---
 # <a name="install-sql-server-2014-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server 2014 のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップを実行する前に、「[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」をご覧ください。  
@@ -142,7 +142,7 @@ ms.locfileid: "53366284"
   
 -   /INSTANCEDIR=c:\Path はサポートされています。  
   
--   /INSTANCEDIR ="c:\Path"がサポートされています  
+-   /INSTANCEDIR="c:\Path" is supported  
   
 > [!NOTE]
 >  -   リレーショナル サーバーの値では、1 つまたは 2 つの円記号を追加して終了する形式のパスがサポートされています。  
@@ -171,11 +171,11 @@ ms.locfileid: "53366284"
   
 -   [機能パラメーター](#Feature)  
   
--   [ロール パラメーター](install-sql-server-from-the-command-prompt.md#role)  
+-   [ロール パラメーター](install-sql-server-from-the-command-prompt.md#Role)  
   
--   [/FAILOVERCLUSTERROLLOWNERSHIP パラメーターを使用したフェールオーバーの動作の制御](install-sql-server-from-the-command-prompt.md#rollownership)  
+-   [/FAILOVERCLUSTERROLLOWNERSHIP パラメーターを使用したフェールオーバーの動作の制御](install-sql-server-from-the-command-prompt.md#RollOwnership)  
   
--   [インスタンス ID (InstanceID) の構成](install-sql-server-from-the-command-prompt.md#instanceid)  
+-   [インスタンス ID (InstanceID) の構成](install-sql-server-from-the-command-prompt.md#InstanceID)  
   
 ##  <a name="Install"></a> インストール パラメーター  
  次の表に示すパラメーターは、インストール用のコマンド ライン スクリプトを作成する場合に使用します。  
@@ -234,10 +234,10 @@ ms.locfileid: "53366284"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必須](#Accounts)|SQLSVCACCOUNT のパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **省略可**|[サービスの](#Accounts) スタートアップ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] モードを指定します。 サポートされる値:<br /><br /> 自動<br /><br /> Disabled<br /><br /> 手動|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必須**|sysadmin ロールのメンバーになるためにログインを準備するには、このパラメーターを使用します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外の [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの場合、/SQLSYSADMINACCOUNTS は必須です。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの場合、/SQLSYSADMINACCOUNTS の使用はオプションですが、/SQLSYSADMINACCOUNTS または /ADDCURRENTUSERASSQLADMIN のどちらかを指定する必要があります。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **省略可**|Tempdb データ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **省略可**|tempdb のログ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可**|ユーザー データベースのデータ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **省略可**|Tempdb データ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **省略可**|tempdb のログ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可**|ユーザー データベースのデータ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **省略可**|FILESTREAM 機能のアクセス レベルを指定します。 サポートされる値:<br /><br /> 0 = [このインスタンスに対する FILESTREAM サポートを無効にする] (既定値)<br /><br /> 1 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする]<br /><br /> 2 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスおよびファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする] (クラスター シナリオに対しては無効です)<br /><br /> 3 = [リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **省略可**<br /><br /> **FILESTREAMLEVEL が 1 より大きい場合は必須。**|FILESTREAM データを格納する Windows 共有の名前を指定します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] では無視されます。 ServiceSID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とフルテキスト フィルター デーモン間の通信を確立するのに使用されます。 この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コントロール マネージャーを使用する必要があります。 既定値:<br /><br /> ローカル サービス アカウント|  
@@ -327,10 +327,10 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必須](#Accounts)|SQLSVCACCOUNT のパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **省略可**|[サービスの](#Accounts) スタートアップ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] モードを指定します。 サポートされる値:<br /><br /> 自動<br /><br /> Disabled<br /><br /> 手動|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必須**|sysadmin ロールのメンバーになるためにログインを準備するには、このパラメーターを使用します。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **省略可**|Tempdb データ ファイルのディレクトリを指定します。<br /><br /> 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **省略可**|tempdb のログ ファイルのディレクトリを指定します。<br /><br /> 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可**|ユーザー データベースのデータ ファイルのディレクトリを指定します。<br /><br /> 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **省略可**|Tempdb データ ファイルのディレクトリを指定します。<br /><br /> 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **省略可**|tempdb のログ ファイルのディレクトリを指定します。<br /><br /> 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可**|ユーザー データベースのデータ ファイルのディレクトリを指定します。<br /><br /> 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **省略可**|FILESTREAM 機能のアクセス レベルを指定します。 サポートされる値:<br /><br /> 0 = [このインスタンスに対する FILESTREAM サポートを無効にする] (既定値)<br /><br /> 1 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする]<br /><br /> 2 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスおよびファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする] (クラスター シナリオに対しては無効です)<br /><br /> 3 = [リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **省略可**<br /><br /> **FILESTREAMLEVEL が 1 より大きい場合は必須。**|FILESTREAM データを格納する Windows 共有の名前を指定します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] では無視されます。 ServiceSID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とフルテキスト フィルター デーモン間の通信を確立するのに使用されます。 この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コントロール マネージャーを使用する必要があります。 既定値:<br /><br /> ローカル サービス アカウント|  
@@ -496,7 +496,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント|/AGTSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスのアカウントを指定します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント|/AGTSVCPASSWORD<br /><br /> [必須](#Accounts)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バックアップ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード用: %program files (x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Backup。<br /><br /> その他のすべてのインストール: %program Files % の\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Backup。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値:<br /><br /> -Latin1_General_CI_AS|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値:<br /><br /> -   Latin1_General_CI_AS|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 構成ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード用: %program files (x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Config。<br /><br /> その他のすべてのインストール用: %program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Config。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード用: %program files (x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Data。<br /><br /> その他のすべてのインストール用: %program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Data。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード用: %program files (x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Log。<br /><br /> その他のすべてのインストール用: %program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Log。|  
@@ -507,15 +507,15 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルのデータ ディレクトリを指定します。<br /><br /> データ ディレクトリは、共有クラスター ディスク上に指定する必要があります。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL の場合に必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。 このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。 サポートされる値:<br /><br /> SQL|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可**|バックアップ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Backup です。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可**|バックアップ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始アカウントを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必須](#Accounts)|SQLSVCACCOUNT のパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必須**|sysadmin ロールのメンバーになるためにログインを準備するには、このパラメーターを使用します。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **省略可**|Tempdb データ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **省略可**|tempdb のログ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可**|ユーザー データベースのデータ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **省略可**|Tempdb データ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **省略可**|tempdb のログ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可**|ユーザー データベースのデータ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **省略可**|FILESTREAM 機能のアクセス レベルを指定します。 サポートされる値:<br /><br /> 0 = [このインスタンスに対する FILESTREAM サポートを無効にする] (既定値)<br /><br /> 1 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする]<br /><br /> 2 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスおよびファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする] (クラスター シナリオに対しては無効です)<br /><br /> 3 = [リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **省略可**<br /><br /> **FILESTREAMLEVEL が 1 より大きい場合は必須。**|FILESTREAM データを格納する Windows 共有の名前を指定します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]では無視されます。 ServiceSID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とフルテキスト フィルター デーモン間の通信を確立するのに使用されます。<br /><br /> この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コントロール マネージャーを使用する必要があります。 既定値:<br /><br /> ローカル サービス アカウント|  
@@ -634,13 +634,13 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルのデータ ディレクトリを指定します。<br /><br /> データ ディレクトリは、共有クラスター ディスク上に指定する必要があります。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL の場合に必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。 サポートされる値:<br /><br /> SQL|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可**|バックアップ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Backup です。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可**|バックアップ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必須**|sysadmin ロールのメンバーになるためにログインを準備するには、このパラメーターを使用します。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **省略可**|Tempdb データ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data します。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **省略可**|Tempdb のログ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可**|ユーザー データベースのデータ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **省略可**|Tempdb データ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **省略可**|Tempdb のログ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可**|ユーザー データベースのデータ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。 既定値:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **ファイル専用モードのみで使用可**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインストール モードを指定します。|  
   
 ###### <a name="sample-syntax"></a>サンプル構文:  
@@ -774,7 +774,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |親機能パラメーター|機能パラメーター|説明|  
 |SQL||[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、レプリケーション、フルテキスト、および [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]をインストールします。|  
 ||SQLEngine|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のみをインストールします。|  
-||のレプリケーション|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]と共にレプリケーション コンポーネントをインストールします。|  
+||レプリケーション|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]と共にレプリケーション コンポーネントをインストールします。|  
 ||FullText|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]と共にフルテキスト コンポーネントをインストールします。|  
 ||DQ|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了するために必要なファイルをコピーします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールが完了したら、DQSInstaller.exe ファイルを実行して、[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了させる必要があります。 詳細については、「[Data Quality Server のインストールを完了するための DQSInstaller.exe の実行](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)」をご覧ください。 このパラメーターでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]もインストールされます。|  
 |AS||すべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コンポーネントをインストールします。|  
@@ -812,7 +812,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 |ロール|説明|インストールされる機能|  
 |----------|-----------------|---------------|  
-|SPI_AS_ExistingFarm|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 名前付きインスタンスとして、既存の [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームまたはスタンドアロン サーバーにインストールします。|メモリ内のデータの格納と処理用にあらかじめ構成された、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算エンジン。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージ<br /><br />  [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブック|  
+|SPI_AS_ExistingFarm|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 名前付きインスタンスとして、既存の [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームまたはスタンドアロン サーバーにインストールします。|メモリ内のデータの格納と処理用にあらかじめ構成された、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算エンジン。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージ<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] のインストーラー プログラム<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブック|  
 |SPI_AS_NewFarm|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] および [!INCLUDE[ssDE](../../includes/ssde-md.md)] を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 名前付きインスタンスとして、新しい未構成の Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームまたはスタンドアロン サーバーにインストールします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは、機能ロールのインストール時にファームを構成します。|メモリ内のデータの格納と処理用にあらかじめ構成された、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算エンジン。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージ<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブック<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 構成ツール (Configuration Tools)<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |AllFeatures_WithDefaults|現在のエディションで使用できるすべての機能をインストールします。<br /><br /> 現在のユーザーを追加、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sysadmin`固定サーバー ロール。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降を使用していて、そのオペレーティング システムがドメイン コントローラーでない場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は既定で NTAUTHORITY\NETWORK SERVICE アカウントを使用し、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は既定で NTAUTHORITY\NETWORK SERVICE アカウントを使用します。<br /><br /> このロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のエディションで、既定で有効になっています。 その他のエディションの場合、このロールは有効になっていませんが、UI またはコマンド ライン パラメーターを使用して指定できます。|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のエディションの場合は、そのエディションで使用できる機能のみがインストールされます。 その他のエディションの場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての機能がインストールされます。<br /><br /> **AllFeatures_WithDefaults** パラメーターは、**AllFeatures_WithDefaults** パラメーターの設定をオーバーライドする他のパラメーターと組み合わせて使用できます。 たとえば、 **AllFeatures_WithDefaults** パラメーターと **/Features=RS** パラメーターを組み合わせて使用すると、すべての機能をインストールするコマンドがオーバーライドされ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のみがインストールされますが、 **AllFeatures_WithDefaults** パラメーターを適用することで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に対して既定のサービス アカウントが使用されます。<br /><br /> **AllFeatures_WithDefaults** パラメーターを **/ADDCURRENTUSERASSQLADMIN=FALSE** と共に使用すると、準備ダイアログには現在のユーザーに関する情報が自動入力されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービス アカウントとパスワードを指定するには、**/AGTSVCACCOUNT** と **/AGTSVCPASSWORD** を追加します。|  
   
@@ -832,9 +832,9 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 -   SQL インスタンス ID:MSSQL12 します。\<INSTANCEID >  
   
--   AS インスタンス ID:MSAS12 です。\<INSTANCEID >  
+-   AS Instance ID:MSAS12.\<INSTANCEID>  
   
--   RS インスタンス ID:MSRS12 します。\<INSTANCEID >  
+-   RS Instance ID:MSRS12.\<INSTANCEID>  
   
  インスタンス対応のコンポーネントは次の場所に格納されます。  
   
@@ -842,7 +842,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< ASInstanceID\>  
   
- %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< RSInstanceID\>  
+ %Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<RSInstanceID\>  
   
 > [!NOTE]  
 >  INSTANCEID をコマンド ラインで指定しない場合、既定のセットアップでは、\<INSTANCEID> の代わりに \<INSTANCENAME> が使用されます。  
@@ -851,5 +851,3 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
  [SQL Server 2014 インストール ウィザードからインストール&#40;セットアップ&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
  [SQL Server フェールオーバー クラスターのインストール](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [SQL Server 2014 の BI 機能をインストールします。](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
-  
-  

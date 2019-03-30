@@ -3,17 +3,17 @@ title: R の開発 - SQL Server Machine Learning Services のデータ サイエ
 description: SQL Server へのリモート接続用の開発ワークステーションにローカルの R ライブラリとツールをインストールします。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/17/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 12fefddcc01caeb9705c823a4e7283169dda1cc3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510439"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645534"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server での R 開発用データ サイエンス クライアントのセットアップします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,6 @@ R 統合、SQL Server 2016 で使用可能な R 言語のオプションに含�
 ![クライアントとサーバー コンポーネント](media/sqlmls-r-client-revo.png "ローカルとリモートの R セッションとライブラリ")
 
 インストールを検証するには、組み込みを使用することができます**RGUI**ツールのように、この記事で説明されているまたは[、ライブラリをリンク](#install-ide)RStudio に通常使用する別の IDE です。
-
-> [!Tip]
-> これらの演習ビデオ デモについては、次を参照してください。 [R の実行と Jupyter Notebook から SQL Server にリモートで Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)します。
 
 > [!Note]
 > クライアント ライブラリをインストールする代わりを使用して、[スタンドアロン サーバー](../install/sql-machine-learning-standalone-windows-install.md)シナリオの詳細な作業を使用します。 一部のお客様のリッチ クライアントとして。 スタンドアロン サーバーは、SQL Server から切り離されます完全が同じ R ライブラリがあるため、使用できますがクライアントとしての SQL Server データベース内分析。 インポートおよびその他のデータ プラットフォームからのデータをモデル化する機能など、SQL に関連しない作業にも使用できます。 スタンドアロン サーバーをインストールする場合は、この場所に、R の実行可能ファイルを見つけることができます:`C:\Program Files\Microsoft SQL Server\140\R_SERVER`します。 インストールを検証する[R コンソール アプリを開く](#R-tools)R.exe をその場所で使用するコマンドを実行します。

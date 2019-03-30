@@ -2,17 +2,17 @@
 title: データ サイエンスのシナリオとソリューション テンプレート]、[SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c40d5d60d43739ccfa6fa326ba0ca1c2688543a6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509849"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645494"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>データ サイエンスのシナリオとソリューション テンプレート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,8 +24,6 @@ ms.locfileid: "58509849"
 > [!TIP]
 > 
 > テンプレートのほとんどは、オンプレミスでもサポートしている複数のバージョンので、機械学習のためのプラットフォームをクラウドします。 たとえば、SQL サーバーのみを使用してソリューションをビルドすることができます。 または Microsoft R Server、または Azure Machine Learning ソリューションをビルドすることができます。
-
-+ 詳細と更新プログラムは、このお知らせを参照してください。[Azure ML の魅力的な新しいテンプレート](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 + ダウンロードとセットアップ手順については、次を参照してください。[テンプレートを使用する方法](#bkmk_HowTo)します。
 
@@ -67,8 +65,6 @@ ms.locfileid: "58509849"
 [予測メンテナンス テンプレート (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **内容。** 予測的なメンテナンスでは、過去のエラーをキャプチャしてその情報を使用して、デバイスが失敗するタイミングと場所を予測するメンテナンス タスクの効率を向上させる目的としています。 デバイスの陳腐化を予測する機能は、分散データやセンサーに依存するアプリケーションに対して特に有効です。 このメソッドは、監視または IoT (モ ノのインターネット) デバイスでエラーを予測にも適用可能性があります。
-
-詳細については、このお知らせを参照してください。[新しい予測メンテナンス テンプレート](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 **方法:** このソリューションは、「は現在のマシンが失敗した場合ですか?」という質問の答えに重点を置いています 入力データは、航空機のエンジン用にシミュレートされているセンサーの測定値を示します。 現在の動作サイクル、設定、およびセンサーの測定値などのエンジンの現在の操作状態を監視から取得したデータを使用して、3 種類の予測モデルを作成します。
 

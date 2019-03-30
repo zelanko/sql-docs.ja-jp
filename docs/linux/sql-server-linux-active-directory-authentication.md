@@ -12,12 +12,12 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: d3b3aaf9688d3517127495fe4b963f5b6de56f0f
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 82f4df8607af55a4b50f0ecfaf7b66a8c088c43a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973591"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657936"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>チュートリアル:SQL Server on Linux で Active Directory 認証を使用します。
 
@@ -164,7 +164,7 @@ AD 認証を構成する前にする必要があります。
    
    > SQL Server は、ユーザー アカウントとグループをセキュリティ識別子 (SID) にマップするための SSSD と NSS を使用します。 SSSD 構成され、AD ログインを正常に作成する SQL Server の順序で実行されている必要があります。 Realmd は、ドメインへの参加の一環として自動的にこれは通常が、場合によってはこれを行うとは別にします。
    >
-   > チェック アウトを構成するには、次[SSSD 手動で](https://access.redhat.com/articles/3023951)、および[SSSD を使用する NSS を構成します。](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
+   > チェック アウトを構成するには、次[SSSD 手動で](https://access.redhat.com/articles/3023951)、および[SSSD を使用する NSS を構成します。](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/Configuring_Services#Configuration_Options-NSS_Configuration_Options)
 
 5. ドメインが構成されていることを確認します。 `/etc/krb5.conf`
     ```/etc/krb5.conf

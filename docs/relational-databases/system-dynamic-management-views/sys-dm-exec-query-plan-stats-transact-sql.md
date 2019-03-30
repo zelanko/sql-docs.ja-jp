@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0dd8b138c425adb47f0bb228848ca39361ffa87e
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 0bef01ab6b4ecf1a9f05b1c7b40e2767aaae0db3
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618607"
+ms.locfileid: "58645354"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -80,7 +80,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
     **AND**    
 -   クエリが単純で、通常は OLTP ワークロードの一部として分類します。
 
-<sup>1</sup>これはルート ノードの演算子 (選択) のみを含む実行プランを示します。 
+<sup>1</sup>これはルート ノードの演算子 (選択) のみを含む実行プランを示します。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 がこれだけは sys.dm_exec_cached_plans を通じて利用可能なキャッシュされたプランを指します。
 
 次の条件下で**出力は返されません**から**sys.dm_exec_query_plan_stats**:
 
@@ -135,5 +135,5 @@ GO
 ## <a name="see-also"></a>参照
   [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [データベース関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [実行関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

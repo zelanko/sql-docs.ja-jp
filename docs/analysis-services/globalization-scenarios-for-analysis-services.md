@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4cfbb4d3cfb62405546ef5ff955a52811ded41b5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202251"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658326"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services のグローバリゼーションのシナリオ
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "53202251"
 ## <a name="see-also"></a>参照  
  [Analysis Services での翻訳のサポート](../analysis-services/translation-support-in-analysis-services.md)   
  [Windows アプリケーションの国際化](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [グローバル デベロッパー センターを参照](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [グローバリゼーション](/globalization/)   
  [ロケールに基づくアダプティブ デザインを使用した Windows ストア アプリの作成](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [C# と XAML によるユニバーサル Windows アプリの開発](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

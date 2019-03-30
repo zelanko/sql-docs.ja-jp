@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 35ba90efe3233c34f710dda0e35b7108352df421
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305940"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658206"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS の参照データ サービス
 
@@ -35,7 +35,7 @@ ms.locfileid: "58305940"
 -   Windows Azure Marketplace から、またはサード パーティ参照データ プロバイダーから直接、参照データを使用することができます。  
   
 ##  <a name="Marketplace"></a> Windows Azure Marketplace から参照データを使用する  
- DQS では、Windows Azure Marketplace の参照データを使用して、Marketplace を通じたコンテンツ プロバイダーからの参照データ サービスの提供を有効化することができます。 Marketplace は、高品質データおよびアプリケーションの単一のマーケットプレイスと配信チャネルをクラウド サービスとして提供するマイクロソフトのサービスです。 Marketplace の詳細については、「[Windows Azure Marketplace について](https://go.microsoft.com/fwlink/?LinkId=211291)」(https://go.microsoft.com/fwlink/?LinkId=211291)) を参照してください。  
+ DQS では、Windows Azure Marketplace の参照データを使用して、Marketplace を通じたコンテンツ プロバイダーからの参照データ サービスの提供を有効化することができます。 Marketplace は、高品質データおよびアプリケーションの単一のマーケットプレイスと配信チャネルをクラウド サービスとして提供するマイクロソフトのサービスです。 Marketplace の詳細については、次を参照してください。 [Microsoft Azure Marketplace について](https://azuremarketplace.microsoft.com/about)(https://azuremarketplace.microsoft.com/about)します。
   
  Marketplace と DQS のシームレスな統合により、DQS 内からのデータ品質プロジェクトに関する情報の検出、検索、および取得に関連付けられている手順が簡素化されます。 このデータは DQS から使用され、DQS ユーザーはこのデータを使用して DQS、Marketplace、および参照データ サービス プロバイダーを革新的な方法で 1 つにまとめて、データの品質を高めることができます。  
   
