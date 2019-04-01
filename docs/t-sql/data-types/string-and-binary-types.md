@@ -32,6 +32,6 @@ ms.locfileid: "56014553"
 [binary と varbinary &#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)  
 [char および varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
 [nchar および nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
-[ntext 型、テキスト、およびイメージ & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
+[ntext、text および image &#40;Transact-SQL&#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
   
   
