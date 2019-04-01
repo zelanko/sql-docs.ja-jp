@@ -124,7 +124,7 @@ ms.locfileid: "57974301"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]:[sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) の **upgrade\_option** アクションを使用します  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:****[サーバーのプロパティ]** ダイアログ ボックスの **[フルテキスト アップグレード オプション]** を使用します。 詳細については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** **[サーバーのプロパティ]** ダイアログ ボックスの **[フルテキスト アップグレード オプション]** を使用します。 詳細については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。  
   
 ##  <a name="Considerations_for_Restore"></a>[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のフルテキスト カタログを復元する際の注意点: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースのフルテキスト データを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするには、データベースの完全バックアップを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に復元する方法があります。  

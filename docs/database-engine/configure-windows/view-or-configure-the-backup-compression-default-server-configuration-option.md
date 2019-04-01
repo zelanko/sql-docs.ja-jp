@@ -87,7 +87,7 @@ ms.locfileid: "57756707"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします****。 この例では、 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) カタログ ビューをクエリして、 `backup compression default`の値を判定しています。 値 0 はバックアップの圧縮がオフであることを示し、値 1 はバックアップの圧縮が有効であることを示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、[実行] をクリックします****。 この例では、 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) カタログ ビューをクエリして、 `backup compression default`の値を判定しています。 値 0 はバックアップの圧縮がオフであることを示し、値 1 はバックアップの圧縮が有効であることを示します。  
   
 ```sql  
 SELECT value   
@@ -102,7 +102,7 @@ GO
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします****。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、圧縮されたバックアップが既定で作成されるようにサーバー インスタンスを構成する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、[実行] をクリックします****。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、圧縮されたバックアップが既定で作成されるようにサーバー インスタンスを構成する方法を示します。  
   
 ```sql  
 EXEC sp_configure 'backup compression default', 1 ;  
