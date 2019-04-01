@@ -38,7 +38,7 @@ void Write( BinaryWriter w )
   
 ## <a name="arguments"></a>引数  
 *w*  
-wA **BinaryWriter** オブジェクトをこのバイナリ表現 **hierarchyid** ノードが書き出されます。
+**BinaryWriter** オブジェクトをこのバイナリ表現 **hierarchyid** ノードが書き出されます。
   
 ## <a name="return-types"></a>戻り値の型  
 **CLR の戻り値の型: void**
