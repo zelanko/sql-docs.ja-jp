@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71e72818b9ab5269d898f00a4110936478da35af
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: e3a4da06849b245ba72d3ac87d5db04309f10823
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802368"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658386"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -999,7 +999,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. INSERT ステートメントでラベルとクエリ ヒントを使用する  
- このクエリでは、INSERT ステートメントでラベルとクエリの結合ヒントを使用するための基本構文を示します。 クエリが、コントロール ノード に送信されたた後で、コンピューティング ノード上で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プランを生成するときにハッシュ結合の方法を適用します。 結合ヒントと OPTION 句の使用方法の詳細については、「[OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)」を参照してください。  
+ このクエリでは、INSERT ステートメントでラベルとクエリの結合ヒントを使用するための基本構文を示します。 クエリが、コントロール ノード に送信されたた後で、コンピューティング ノード上で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プランを生成するときにハッシュ結合の方法を適用します。 結合ヒントと OPTION 句の使用方法の詳細については、「[OPTION (SQL Server PDW)](../../t-sql/queries/option-clause-transact-sql.md)」を参照してください。  
   
 ```sql
 -- Uses AdventureWorks  
