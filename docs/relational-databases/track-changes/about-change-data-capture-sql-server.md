@@ -14,12 +14,12 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 02f99b295f653719231ff19d4dae0df0e82218b8
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: d4ab475b4829cf966777df9bb6524ac7167be091
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590487"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527244"
 ---
 # <a name="about-change-data-capture-sql-server"></a>変更データ キャプチャについて (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "56590487"
 
 たとえば、SQL_Latin1_General_CP1_CI_AS の照合順序を使用するデータベースがある場合について、次のようなテーブルを考えます。
 
-```tsql
+```sql
 CREATE TABLE T1( 
      C1 INT PRIMARY KEY, 
      C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
@@ -127,7 +127,7 @@ CREATE TABLE T1(
 
 列 C2 の照合順序が異なるので (Chinese_PRC_CI_AI)、この列に対するバイナリ データの CDC は失敗する可能性があります。 この問題を回避するには、NVARCHAR を使用します。
 
-```tsql
+```sql
 CREATE TABLE T1( 
      C1 INT PRIMARY KEY, 
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)

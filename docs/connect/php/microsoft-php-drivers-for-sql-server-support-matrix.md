@@ -1,33 +1,35 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server のサポート マトリックス |Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daveng
+ms.author: genemi
 manager: ''
-ms.openlocfilehash: ec5a151d79d9a66bfd65342336ad7aa3afcf567d
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: 0790d2cc0497ef2912f96cd4679e4541fc9b2262
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744402"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645504"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server のサポート マトリックス
+
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-  このページには、Microsoft SQL Server 用 PHP Driver のサポート表とサポート ライフサイクル ポリシーがあります。
+このページには、Microsoft SQL Server 用 PHP Driver のサポート表とサポート ライフサイクル ポリシーがあります。
 
 ## <a name="microsoft-php-drivers-support-lifecycle-matrix-and-policy"></a>Microsoft PHP ドライバーのサポート ライフ サイクルの表とポリシー
- マイクロソフト サポート ライフサイクル (MSL) ポリシーでは、マイクロソフト製品のサポート ライフサイクルを理解しやすくする、予測可能な情報を提供しています。 PHP ドライバーのバージョン 3.x、4.x、5.x には、ドライバーのリリース日から 5 年間のメインストリーム サポートが含まれています。 メインストリーム サポートについては、[マイクロソフト サポート ライフサイクルの Web サイト](https://support.microsoft.com/lifecycle)で定義されています。
 
- 延長サポートとカスタム サポートのオプションは、Microsoft PHP Driver では使用できません。
+マイクロソフト サポート ライフサイクル (MSL) ポリシーでは、マイクロソフト製品のサポート ライフサイクルを理解しやすくする、予測可能な情報を提供しています。 PHP ドライバーのバージョン 3.x、4.x、5.x には、ドライバーのリリース日から 5 年間のメインストリーム サポートが含まれています。 メインストリーム サポートについては、[マイクロソフト サポート ライフサイクルの Web サイト](https://support.microsoft.com/lifecycle)で定義されています。
 
- 次の Microsoft PHP Driver は、表示されているサポートの終了日までサポートされます。
+延長サポートとカスタム サポートのオプションは、Microsoft PHP Driver では使用できません。
+
+次の Microsoft PHP Driver は、表示されているサポートの終了日までサポートされます。
 
 |ドライバー名|ドライバー パッケージのバージョン|メイン ストリーム サポートの終了|
 |-|:-:|-|
@@ -38,14 +40,16 @@ ms.locfileid: "56744402"
 |SQL Server 用 Microsoft PHP ドライバー 4.0|4.0|2021 年 7 月 11 日|
 |Microsoft PHP Drivers 3.2 for SQL Server|3.2|2020 年 3 月 9日に|
 |Microsoft PHP Drivers 3.1 for SQL Server|3.1|2019 年 12 月 12日|
+| &nbsp; | &nbsp; | &nbsp; |
 
- 次の Microsoft PHP ドライバーはサポートされなくなりました。
+次の Microsoft PHP ドライバーはサポートされなくなりました。
 
 |ドライバー名|ドライバー パッケージのバージョン|メイン ストリーム サポートの終了|
 |-|:-:|-|
 |Microsoft PHP Drivers 3.0 for SQL Server|3.0|2017 年 3 月 6 日|
 |Microsoft PHP Drivers 2.0 for SQL Server|2.0|2015 年 8 月 10 日|
 |SQL Server 用 Microsoft PHP ドライバー 1.0|1.0|2014 年 4 月 28 日|
+| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>SQL Server のバージョンの互換性を認定
  次の表は、テストして、対応するバージョンのドライバーと互換性のあるものとして認定されている SQL Server のバージョンを一覧表示します。 以前のバージョンのドライバーとの下位互換性を維持するために努力しますが、最新サポートされているドライバーのみをテストして、SQL Server がリリースされると、新しい SQL Server のバージョンを認定します。
@@ -60,9 +64,11 @@ ms.locfileid: "56744402"
 |SQL Server 2012         |Y|Y|Y|Y|Y|Y|Y|Y| |
 |SQL Server 2008 R2      |Y|Y|Y|Y|Y|Y|Y|Y|Y|
 |SQL Server 2008:         | | | | |Y|Y|Y|Y|Y|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="php-version-support"></a>PHP バージョンのサポート
- Microsoft PHP ドライバーの一覧表示されているバージョンでは、次のバージョンの PHP がサポートされています。
+
+Microsoft PHP ドライバーの一覧表示されているバージョンでは、次のバージョンの PHP がサポートされています。
 
 |SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595; PHP バージョン|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |:---:|---|---|---|---|---|---|---|---|---|
@@ -75,11 +81,13 @@ ms.locfileid: "56744402"
 |5.4|                |                |                |       |       |5.4.32  |5.4.32  |5.4.32  |        |
 |5.3|                |                |                |       |       |        |        |5.3.0   |5.3.0   |
 |5.2|                |                |                |       |       |        |        |        |5.2.4<br />5.2.13|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 1. 7.2.1 のバージョン、Windows でバージョン 7.2.0 中に後でサポートされ、後で、Linux と macOS でサポートされます。
 
 ## <a name="supported-operating-systems"></a>サポートされるオペレーティング システム
- Microsoft PHP ドライバーの一覧表示されているバージョンでは、次の Windows オペレーティング システムのバージョンがサポートされています。
+
+Microsoft PHP ドライバーの一覧表示されているバージョンでは、次の Windows オペレーティング システムのバージョンがサポートされています。
 
 |SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595; オペレーティング システム|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -97,8 +105,9 @@ ms.locfileid: "56744402"
 |Windows 7 SP1                       |   |   |   |   |Y  |Y  |Y  |Y  |   |
 |Windows Vista SP2                   |   |   |   |   |Y  |Y  |Y  |Y  |Y  |
 |Windows XP SP3                      |   |   |   |   |   |   |   |   |Y  |
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
- Microsoft PHP ドライバーの一覧表示されているバージョンでは、次の Linux と Mac のオペレーティング システムのバージョン (64 ビットのみ) がサポートされています。
+Microsoft PHP ドライバーの一覧表示されているバージョンでは、次の Linux と Mac のオペレーティング システムのバージョン (64 ビットのみ) がサポートされています。
 
 |SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595; オペレーティング システム|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -117,9 +126,11 @@ ms.locfileid: "56744402"
 |macOS High Sierra (64 ビット)          |Y  |Y  |   |   |   |   |   |   |   |
 |macOS Sierra (64 ビット)               |Y  |Y  |Y  |Y  |   |   |   |   |   |
 |macOS El Capitan (64 ビット)           |   |Y  |Y  |Y  |   |   |   |   |   |
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>参照  
-[リリース ノート](../../connect/php/release-notes-for-the-php-sql-driver.md)
+## <a name="see-also"></a>参照
+
+[リリース ノート](../../connect/php/release-notes-php-sql-driver.md)
 
 [サポート リソース](../../connect/php/support-resources-for-the-php-sql-driver.md)
 

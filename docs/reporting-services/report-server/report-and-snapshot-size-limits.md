@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 582359e25e0eaec775deb1abbcb64af211d68350
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 2803e8d4ed2e0246c27dae775e864e81e10d91eb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021816"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658136"
 ---
 # <a name="report-and-snapshot-size-limits"></a>レポートとスナップショットのサイズ制限
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置を管理する管理者は、このトピックの情報を参照することにより、レポート サーバーへのパブリッシュ時、レンダリング時 (実行時)、ファイル システムへの保存時のレポート サイズ制限を理解できます。 このトピックでは、レポート サーバー データベースのサイズを測定する方法の具体的な指針とサーバーのパフォーマンスのスナップショット サイズの効果についても説明します。  
@@ -50,7 +50,7 @@ ms.locfileid: "50021816"
  レポート サイズのハード制限は、Excel 形式で表示する場合にのみ存在します。 ワークシートの大きさが、65536 行および 256 列を超えることはできません。 他の表示形式にはこれらの制限がないので、サーバーのリソース量によってのみサイズが制限されます。  
   
 > [!NOTE]  
->  レポートの処理とレンダリングは、メモリ内で行われます。 レポートが大きい場合またはユーザーが多い場合は、なんらかのキャパシティ プランニングを行い、ユーザーにとって満足のいくレベルのパフォーマンスを実現できるようにレポート サーバーを配置してください。 ツールとガイドラインの詳細については、MSDN の資料「 [Reporting Services のパフォーマンスの最適化](https://go.microsoft.com/fwlink/?LinkID=70650) 」および「 [Visual Studio 2005 を使用した SQL Server 2005 Reporting Services レポート サーバーのロード テスト](https://go.microsoft.com/fwlink/?LinkID=77519)」を参照してください。  
+>  レポートの処理とレンダリングは、メモリ内で行われます。 レポートが大きい場合またはユーザーが多い場合は、なんらかのキャパシティ プランニングを行い、ユーザーにとって満足のいくレベルのパフォーマンスを実現できるようにレポート サーバーを配置してください。 ツールとガイドラインの詳細については、MSDN の資料「 [Reporting Services のパフォーマンスの最適化](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) 」および「 [Visual Studio 2005 を使用した SQL Server 2005 Reporting Services レポート サーバーのロード テスト](https://go.microsoft.com/fwlink/?LinkID=77519)」を参照してください。  
   
 ## <a name="measuring-snapshot-storage"></a>スナップショット ストレージの測定  
  スナップショットのサイズは、レポートのデータ量に比例します。 通常、スナップショットは、レポート サーバーに格納されている他の項目よりはるかに大きくなります。 スナップショットの一般的なサイズの範囲は、数メガバイトから数十メガバイトです。 非常に大きいレポートを使用している場合、さらにスナップショットが大きくなる可能性があります。 スナップショットを使用する頻度およびレポート履歴の構成方法に応じて、レポート サーバー データベースに必要なディスク領域が短期間で急速に増える可能性があります。  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 799b1fbd201284ce9e485aba5ed395f76af0c692
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98250d8c070c8d7dfaff5c5b1dc490d1be3fcf3d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839230"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512559"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML データの取得および XML データに対するクエリの実行
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47839230"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML インスタンスの内容は保持されますが、XML データ モデルで重要と見なされない側面は保持されません。 つまり、取得した XML インスタンスは、サーバーに格納されたインスタンスと同一とは限りませんが、含まれている情報は同じです。  
   
 ### <a name="xml-declaration"></a>XML 宣言  
- インスタンスをデータベースに格納する場合は、そのインスタンスの XML 宣言は保持されません。 例 :  
+ インスタンスをデータベースに格納する場合は、そのインスタンスの XML 宣言は保持されません。 例:  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -81,7 +81,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- 結果の名前空間プレフィックスは、異なる可能性があります。 例 :  
+ 結果の名前空間プレフィックスは、異なる可能性があります。 例:  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  

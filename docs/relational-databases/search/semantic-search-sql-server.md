@@ -31,7 +31,7 @@ ms.locfileid: "57973491"
   
  以降の例に、セマンティック検索の機能を示します。 同時に、これらの例では、セマンティック インデックスに対してクエリを実行し、その結果を構造化データとして取得するために使用する 3 つの Transact-SQL 行セット関数を示します。  
   
-###  <a name="find1"></a> Find the key phrases in a document  
+###  <a name="find1"></a> ドキュメント内のキー フレーズを検索します。  
  次のクエリは、サンプル ドキュメントで識別されたキー フレーズを取得します。 結果は、各キー フレーズの統計的有意性を順位付けするスコアの降順で表されます。
  
  このクエリは、[semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) 関数を呼び出します。  
@@ -69,7 +69,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> 類似または関連ドキュメントを示すキー フレーズを検索します。  
  次のクエリは、2 つのサンプル ドキュメント間の類似性または関連性を示すキー フレーズを取得します。 結果は、各キー フレーズの重みを順位付けするスコアの降順で表されます。
  
  このクエリは、[semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) 関数を呼び出します。  

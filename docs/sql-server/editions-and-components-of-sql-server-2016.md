@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a5c0b2714637068f72aa9e8caf7f7213c865131f
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 12b7a440b8f100ff383deda7ad5c1dbc4c8a4578
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974481"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658436"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 の各エディションとサポートされている機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "57974481"
     
 > [![Evaluation Center からダウンロードする](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Evaluation Center から SQL Server 2016 をダウンロードする](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
 > 
-> ![Azure Virtual Machine のアイコン](../analysis-services/media/azure-virtual-machine-small.png) **[SQL Server 2016 がインストール済みの Virtual Machine をすぐにご利用いただけます](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
+> ![Azure Virtual Machine のアイコン](../analysis-services/media/azure-virtual-machine-small.png) **[SQL Server 2016 がインストール済みの Virtual Machine をすぐにご利用いただけます](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp2-ws2016)**   
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] のエディション  
  次の表で、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のエディションについて説明します。 
@@ -142,7 +142,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |データベース ミラーリング|はい|はい<br /><br /> FULL SAFETY のみ|ミラーリング監視のみ|ミラーリング監視のみ|ミラーリング監視のみ| 
 |バックアップ圧縮|はい|[はい]|いいえ|いいえ|いいえ| 
 |データベース スナップショット|はい|はい <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup>|可 <sup>3</sup>|
-|Always On フェールオーバー クラスター インスタンス|可<br /><br /> 16|可<br /><br /> 2 つのノードのサポート|いいえ|いいえ|いいえ|  
+|Always On フェールオーバー クラスター インスタンス|はい<br /><br /> 16|はい<br /><br /> 2 つのノードのサポート|いいえ|いいえ|いいえ|  
 |Always On 可用性グループ|はい<br /><br /> 2 個の同期セカンダリ レプリカを含む最大 8 個のセカンダリ レプリカ|いいえ|いいえ|いいえ|いいえ|
 |基本的な可用性グループ <sup>2</sup>|いいえ|はい<br /><br /> 2 つのノードのサポート|いいえ|いいえ|いいえ|
 |オンライン ページおよびファイルの復元|はい|いいえ|いいえ|いいえ|いいえ|
@@ -175,11 +175,11 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |[リソース ガバナー]|はい|いいえ|いいえ|いいえ|いいえ|  
 |パーティション テーブルの並列処理|はい|いいえ|いいえ|いいえ|いいえ|
 |複数の Filestream コンテナー|はい|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|はい <sup>2</sup>|
-|NUMA 対応のラージ ページ メモリとバッファー配列の割り当て|可|いいえ <sup>4</sup>|いいえ|いいえ|いいえ|
+|NUMA 対応のラージ ページ メモリとバッファー配列の割り当て|はい|いいえ <sup>4</sup>|いいえ|いいえ|いいえ|
 |バッファー プール拡張|はい|[はい]|いいえ|いいえ|いいえ|
 |IO リソース管理|はい|いいえ|いいえ|いいえ|いいえ|
-|先行読み取り|可|いいえ|いいえ|いいえ|いいえ|
-|拡張スキャン|可|いいえ|いいえ|いいえ|いいえ|
+|先行読み取り|はい|いいえ|いいえ|いいえ|いいえ|
+|拡張スキャン|はい|いいえ|いいえ|いいえ|いいえ|
 |遅延持続性|はい|[はい]|[はい]|[はい]|はい|
 
 <sup>1</sup> インメモリ OLTP データ サイズおよび列ストア セグメント キャッシュは、「スケールの制限」セクションでエディションごとに指定されているメモリ量に制限されます。 並列処理には最大限度があります。 インデックス構築のための並列処理の度合い (DOP) は、Standard Edition では 2 DOP に、Web および Express Edition では 1 DOP に制限されます。 これは、ディスク ベース テーブルとメモリ最適化テーブルで作成された列ストア インデックスに当てはまります。
@@ -282,7 +282,7 @@ Developer Edition は引き続き [SQL Server 分散再生](../tools/distributed
 |基本的な R 統合|はい|[はい]|[はい]|[はい]|いいえ|   
 |高度な R 統合|はい|いいえ|いいえ|いいえ|いいえ| 
 |R Server (スタンドアロン)|はい|いいえ|いいえ|いいえ|いいえ|   
-|PolyBase コンピューティング ノード|可|可 <sup>1</sup>|はい <sup>1</sup>、 <sup>2</sup>|はい <sup>1</sup>、 <sup>2</sup>|はい <sup>1</sup>、 <sup>2</sup>| 
+|PolyBase コンピューティング ノード|はい|可 <sup>1</sup>|はい <sup>1</sup>、 <sup>2</sup>|はい <sup>1</sup>、 <sup>2</sup>|はい <sup>1</sup>、 <sup>2</sup>| 
 |PolyBase ヘッド ノード|はい|いいえ|いいえ|いいえ|いいえ| 
 |JSON|はい|[はい]|[はい]|[はい]|はい|   
 |クエリ ストア|はい|[はい]|[はい]|[はい]|はい|   

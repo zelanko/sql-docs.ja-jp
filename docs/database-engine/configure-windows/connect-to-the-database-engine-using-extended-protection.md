@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3d911c26eee5893d6817fe98b7a982e2ce25316f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133212"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657806"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>拡張保護を使用したデータベース エンジンへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "54133212"
   
 -   [拡張保護付き統合 Windows 認証](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [マイクロソフト セキュリティ アドバイザリ (973811)、認証の拡張保護](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [マイクロソフト セキュリティ アドバイザリ (973811)、認証の拡張保護](/security-updates/SecurityAdvisories/2009/973811)
   
 ## <a name="settings"></a>[設定]  
  サービス バインドとチャネル バインドに影響する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続設定は 3 つあります。 これらの設定を構成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは WMI を使用します。これらの設定を表示するには、ポリシー ベースの管理の **[サーバー プロトコル設定]** ファセットを使用します。  

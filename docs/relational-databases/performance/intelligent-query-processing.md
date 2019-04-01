@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78e818a535c31e60e1b73b4a48f301e8d90b7430
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 57d96068af7120ef4ccf4da8882093fa26908089
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579742"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493983"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL データベースでのインテリジェントなクエリ処理
 
@@ -28,7 +28,7 @@ ms.locfileid: "57579742"
 
 ![インテリジェントなクエリ処理](./media/3_iqpfeaturefamily.png)
 
-データベースに対して適用可能なデータベース互換性レベルを有効にすることにより、自動的にワークロードをインテリジェントなクエリ処理の対象にすることができます。  これは Transact-SQL を使って設定できます。 例 :  
+データベースに対して適用可能なデータベース互換性レベルを有効にすることにより、自動的にワークロードをインテリジェントなクエリ処理の対象にすることができます。  これは Transact-SQL を使って設定できます。 例:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -147,7 +147,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
-[USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) クエリ ヒントとして `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` を指定することで、特定のクエリで適応型結合を無効にすることもできます。 例 :
+[USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) クエリ ヒントとして `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` を指定することで、特定のクエリで適応型結合を無効にすることもできます。 例:
 
 ```sql
 SELECT s.CustomerID,
@@ -213,7 +213,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
-`DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` を [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)として指定することで、特定のクエリのバッチ モード メモリ許可フィードバックを無効にすることもできます。 例 :
+`DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` を [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)として指定することで、特定のクエリのバッチ モード メモリ許可フィードバックを無効にすることもできます。 例:
 
 ```sql
 SELECT * FROM Person.Address  
@@ -263,7 +263,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-`DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` を [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)として指定することで、特定のクエリの行モード メモリ許可フィードバックを無効にすることもできます。 例 :
+`DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` を [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)として指定することで、特定のクエリの行モード メモリ許可フィードバックを無効にすることもできます。 例:
 
 ```sql
 SELECT * FROM Person.Address  
@@ -353,7 +353,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
-[USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) クエリ ヒントとして `DISABLE_INTERLEAVED_EXECUTION_TVF` を指定することで、特定のクエリでインターリーブ実行を無効にすることもできます。 例 :
+[USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) クエリ ヒントとして `DISABLE_INTERLEAVED_EXECUTION_TVF` を指定することで、特定のクエリでインターリーブ実行を無効にすることもできます。 例:
 
 ```sql
 SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
@@ -505,4 +505,4 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 [プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [結合](../../relational-databases/performance/joins.md)    
 [アダプティブ クエリ処理のデモンストレーション](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[インテリジェントな QP のデモ](https://github.com/joesackmsft/Conferences/blob/master/IQPDemos/IQP_Demo_ReadMe.md)   
+[インテリジェントな QP のデモ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

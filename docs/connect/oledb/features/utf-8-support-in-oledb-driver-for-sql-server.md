@@ -2,7 +2,7 @@
 title: OLE DB Driver for SQL Server の UTF-8 のサポート | Microsoft Docs
 description: OLE DB Driver for SQL Server の UTF-8 のサポート
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: f410ddf4e3843936da6f93f488f379feea863e59
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: b7f138438d522c9da1b7ef74acbaf963e17d6144
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744856"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492604"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server の UTF-8 のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "56744856"
 
 Microsoft OLE DB Driver for SQL Server (バージョン 18.2.1) は、utf-8 サーバー エンコードのサポートを追加します。 SQL Server の utf-8 サポートについてを参照してください。
 - [照合順序と Unicode のサポート](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [UTF-8 のサポート (CTP 2.2)](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-22)
+- [UTF-8 のサポート](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>エンコードされた CHAR または varchar 型の列を utf-8 へのデータの挿入
 配列を使用して、バッファーが説明されている挿入のため、入力パラメーターのバッファーを作成するときに[DBBINDING 構造体](https://go.microsoft.com/fwlink/?linkid=2071182)します。 各 DBBINDING 構造体は、コンシューマーのバッファーに 1 つのパラメーターの関連付けを長さとデータ値の型などの情報が含まれています。 CHAR、型の入力パラメーター バッファー、 *wType* DBTYPE_STR の DBBINDING 構造体を設定する必要があります。 WCHAR、型の入力パラメーター バッファー、 *wType* DBTYPE_WSTR の DBBINDING 構造体を設定する必要があります。

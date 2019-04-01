@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b9ae80895fa2cfd316e455e5084e5c1330365a62
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: b584c7fc3ffee49bf2d63fd95c8a8e23f0b09013
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504299"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657687"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モード用の PowerShell コマンドレット
 
@@ -34,7 +34,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
 
 ## <a name="cmdlet-summary"></a>コマンドレットの概要
 
- コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](https://technet.microsoft.com/library/hh847814.aspx)) を使用することもできます。 次のコマンドレット概要では、サービス アプリケーション "データベース" への参照は、Reporting Services サービス アプリケーションによって作成および使用されたすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
+ コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)) を使用することもできます。 次のコマンドレット概要では、サービス アプリケーション "データベース" への参照は、Reporting Services サービス アプリケーションによって作成および使用されたすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
   
  PowerShell の例を入力すると、次のようなエラー メッセージが表示されます。  
   
@@ -61,7 +61,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
   
 3.  **[SharePoint 管理シェル]** をクリックします。  
   
- コマンドレットのコマンド ライン ヘルプを表示するには、PowerShell のコマンド プロンプトで 'Get-Help' コマンドを使用します。 例 :  
+ コマンドレットのコマンド ライン ヘルプを表示するには、PowerShell のコマンド プロンプトで 'Get-Help' コマンドを使用します。 例:  
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
@@ -94,7 +94,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
 |Mount-SPRSDatabase|Reporting Services サービス アプリケーション用のデータベースをマウントします。|  
 |New-SPRSDatabase|指定した Reporting Services サービス アプリケーション用の新しいサービス アプリケーション データベースを作成します。|  
 |Get-SPRSDatabaseCreationScript|Reporting Services サービス アプリケーション用に、データベース作成スクリプトを画面に出力します。 その後、SQL Server Management Studio でスクリプトを実行できます。|  
-|Get-SPRSDatabase|1 つ以上の Reporting Services サービス アプリケーション データベースを取得します。 Set-SPRSDatabase コマンドレットを使用して `querytimeout`などのプロパティを変更できるように、コマンドを使用してサービス アプリケーション データベースの ID を取得します。 このトピックの例「 [Reporting Service アプリケーション データベースのプロパティの取得と設定](#bkmk_example_db_properties)」を参照してください。|  
+|Get-SPRSDatabase|1 つ以上の Reporting Services サービス アプリケーション データベースを取得します。 Set-SPRSDatabase コマンドレットを使用して `querytimeout`などのプロパティを変更できるように、コマンドを使用してサービス アプリケーション データベースの ID を取得します。 このトピックの例「 [Reporting Service アプリケーション データベースのプロパティの取得と設定](#get-and-set-properties-of-the-reporting-service-application-database)」を参照してください。|  
 |Get-SPRSDatabaseRightsScript|Reporting Services サービス アプリケーション用に、データベース権限スクリプトを画面に出力します。 これを実行すると、対象のユーザーとデータベースの入力を求めるプロンプトが表示され、権限を変更するための Transact-SQL が返されます。 その後、SQL Server Management Studio でこのスクリプトを実行できます。|  
 |Get-SPRSDatabaseUpgradeScript|データベース アップグレード スクリプトを画面に出力します。 このスクリプトは、Reporting Services サービス アプリケーション データベースを、現在の Reporting Services インストールのデータベース バージョンにアップグレードします。|  
   
@@ -193,7 +193,7 @@ $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'
 Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
- 上の例で、サービス アプリケーションの正確な名前がわからない場合は、最初のステートメントを書き換えて、サービス アプリケーションを部分名検索に基づいて取得することもできます。 例 :  
+ 上の例で、サービス アプリケーションの正確な名前がわからない場合は、最初のステートメントを書き換えて、サービス アプリケーションを部分名検索に基づいて取得することもできます。 例:  
   
 ```  
 $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  

@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe27d4c05978e39c6d8558fc273fc294a256b09f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f507e21cb04a479f6aa5e6905bd89b93f837d677
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666971"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657896"
 ---
 # <a name="sqlps-utility"></a>sqlps ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ sqlps
  **-**  
  **-Command-** は、 **sqlps** ユーティリティで入力を標準入力から読み取ることを指定します。  
   
- *script_block* [ **- args**_引数\_配列_]  
+ *script_block* [ **-args**_argument\_array_ ]  
  実行する PowerShell コマンドのブロックを指定します。ブロックは中かっこ {} で囲む必要があります。 *Script_block* を指定できるのは、 **sqlps** ユーティリティを **PowerShell** または他の **sqlps** ユーティリティ セッションから呼び出すときだけです。 *argument_array* は、 *script_block*内の PowerShell コマンドの引数を含む PowerShell 変数の配列です。  
   
  *string* [ *command_parameters* ]  
@@ -98,7 +98,7 @@ sqlps
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダー パスを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの階層内を移動する。  
   
- 既定では、 **sqlps** ユーティリティ実行時のスクリプト実行ポリシーは **Restricted**に設定されます。 これにより、PowerShell スクリプトの実行が防止されます。 **Set-ExecutionPolicy** コマンドレットを使用すると、署名されたスクリプトまたは任意のスクリプトの実行を有効にすることができます。 信頼できるソースからのスクリプト以外は実行しないでください。また、適切な NTFS 権限を使用して、すべての入力ファイルと出力ファイルのセキュリティを保護してください。 PowerShell スクリプトの有効化の詳細については、「 [Windows PowerShell スクリプトの実行](https://go.microsoft.com/fwlink/?LinkId=103166)」を参照してください。  
+ 既定では、 **sqlps** ユーティリティ実行時のスクリプト実行ポリシーは **Restricted**に設定されます。 これにより、PowerShell スクリプトの実行が防止されます。 **Set-ExecutionPolicy** コマンドレットを使用すると、署名されたスクリプトまたは任意のスクリプトの実行を有効にすることができます。 信頼できるソースからのスクリプト以外は実行しないでください。また、適切な NTFS 権限を使用して、すべての入力ファイルと出力ファイルのセキュリティを保護してください。 PowerShell スクリプトの有効化の詳細については、「 [Windows PowerShell スクリプトの実行](/previous-versions/system-center/virtual-machine-manager-2008-r2/cc917925(v=technet.10))」を参照してください。  
   
  **および** に採用されていたバージョンの [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] sqlps [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ユーティリティは、Windows PowerShell 1.0 のミニシェルとして実装されていました。 ミニシェルには特定の制限があります。たとえば、ミニシェルによって読み込まれているスナップイン以外、ユーザーは読み込むことができません。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降のバージョンのユーティリティは、 **sqlps** モジュールを使用するように変更されており、このような制限は適用されません。  
   
