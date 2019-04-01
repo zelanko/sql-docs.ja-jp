@@ -13,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2347dc6f1d18afb4f26dc137a1158ceb53663050
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: d53a3233d2e2af6aa9806cdea06b2a203e31bf89
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744512"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658415"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP のシステム要件
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "56744512"
 
 -   ドライバー ファイルのバージョンは、PHP 拡張機能ディレクトリにあります。 参照してください[ドライバー バージョン](#driver-versions)については、別のドライバー ファイル。  ドライバーをダウンロードするには、「[Download the Microsoft Drivers for PHP for SQL Server](../../connect/php/download-drivers-php-sql-server.md)」 (Microsoft SQL Server 用 Drivers for PHP をダウンロードする) を参照してください。 PHP のドライバーを構成する方法については、「[Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)」 (Microsoft SQL Server 用 Drivers for PHP を読み込む) を参照してください。
 
--   Web サーバーが必要です。 Web サーバーは、PHP を実行するように構成する必要があります。 IIS で PHP アプリケーションをホストする方法については、次を参照してください。、 [PHP の web サイトのチュートリアル](https://php.net/manual/fa/install.windows.iis.php)します。  
+-   Web サーバーが必要です。 Web サーバーは、PHP を実行するように構成する必要があります。 IIS で PHP アプリケーションをホストする方法については、次を参照してください。、 [PHP の web サイトのチュートリアル](http://docs.php.net/manual/da/install.windows.iis7.php)します。
 
     [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] は IIS 10 と FastCGI でテストされています。  
 

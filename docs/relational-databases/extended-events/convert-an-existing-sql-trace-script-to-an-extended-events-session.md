@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords:
 - SQL Trace, convert script to extended events
 - extended events [SQL Server], convert SQL Trace script
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 855a61fe37f6b5d347e050687e73c894c227d1b6
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: c95169a1be08b04be9b7cdb1b90fea243e99cf10
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321738"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478197"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>既存の SQL トレース スクリプトから拡張イベント セッションへの変換
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   拡張イベント セッションに変換する SQL トレース スクリプトが既に手元にある場合は、このトピックの手順を使用して、等価な拡張イベント セッションを作成できます。 変換を実行するために必要な情報は、trace_xe_action_map および trace_xe_event_map システム テーブル内の情報を使用して収集できます。  

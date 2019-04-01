@@ -11,12 +11,12 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3335e474819d43854bc3cf59158d04a78649c130
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 083eda191d51ec7043f24511d03c90beff9bfe84
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974361"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657737"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver のリリース ノート
 
@@ -213,7 +213,7 @@ Microsoft JDBC Driver 6.2 for SQL Server は 4.1 と 4.2 の JDBC 仕様に完�
 >
 > 機能の強化、1.0.0 に Azure Key Vault の依存するライブラリのバージョンをアップグレードして、新しい jar (版 6.2.2) は、2017 年 10 月 19 日にリリースされました。
 >
-> 最新の更新プログラムのダウンロードから JDBC Driver 6.2 for [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=852460)、 [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)と[Maven Central](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)します。 6.2.2 を使用するプロジェクトを更新してください jar をリリースします。 詳細については、表示のリリース ノート[6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)と[6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)します。
+> 最新の更新プログラムのダウンロードから JDBC Driver 6.2 for [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=852460)、 [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)と[Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver)します。 6.2.2 を使用するプロジェクトを更新してください jar をリリースします。 詳細については、表示のリリース ノート[6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)と[6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)します。
 
 ### <a name="azure-ad-support-for-linux"></a>Linux 用 azure AD のサポート
 

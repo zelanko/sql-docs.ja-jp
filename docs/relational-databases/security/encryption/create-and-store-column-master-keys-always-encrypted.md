@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7745fd3b583a1044e670487570bdf97f3a85673f
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.openlocfilehash: 464ad33fd322226d68c79b364a72bd55de0d62b2
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434456"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657956"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>列マスター キーを作成して保存する (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Always Encrypted が有効なクライアント ドライバーは Always Encryp
 
 ### <a name="create-a-self-signed-certificate-using-powershell"></a>PowerShell を使用して自己署名証明書を作成する
 
-[New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633.aspx) コマンドレットを使用して、自己署名証明書を作成します。 次の例は、Always Encrypted の列マスター キーとして使用できる証明書を生成する方法を示します。
+[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) コマンドレットを使用して、自己署名証明書を作成します。 次の例は、Always Encrypted の列マスター キーとして使用できる証明書を生成する方法を示します。
 
 ```
 # New-SelfSignedCertificate is a Windows PowerShell cmdlet that creates a self-signed certificate. The below examples show how to generate a certificate that can be used as a column master key for Always Encrypted.
@@ -94,7 +94,7 @@ SSMS を使用し、Windows 証明書ストアに Always Encrypted キーを格�
 列マスター キーが *現在のユーザー* の証明書ストアの場所に格納された証明書である場合、秘密キーを使用して証明書をエクスポートしてから、暗号化された列に格納されたデータの暗号化または暗号化解除を行うアプリケーション、または Always Encrypted の構成および Always Encrypted キーの管理を行うツールを実行しているすべてのユーザー アカウントの、(該当するアプリケーション/ツールを含むすべてのコンピューター上の) 現在のユーザーの証明書ストアの場所に、証明書をインポートする必要があります。 アクセス許可の構成は不要です。コンピューターにログオンしたら、ユーザーは現在のユーザーの証明書ストアの場所にあるすべての証明書にアクセスすることができます。
 
 #### <a name="using-powershell"></a>PowerShell の使用
-証明書のインポートとエクスポートには、 [Import-PfxCertificate](https://msdn.microsoft.com/library/hh848625.aspx) と [Export-PfxCertificate](https://msdn.microsoft.com/library/hh848635.aspx) コマンドレットを使用します。
+証明書のインポートとエクスポートには、 [Import-PfxCertificate](/powershell/module/pkiclient/import-pfxcertificate) と [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) コマンドレットを使用します。
 
 #### <a name="using-microsoft-management-console"></a>Microsoft 管理コンソールを使用する 
 

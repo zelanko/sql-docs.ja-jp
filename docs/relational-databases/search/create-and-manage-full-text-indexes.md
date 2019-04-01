@@ -14,12 +14,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54bf8caa434079a2b562a1c65d4d7c9dc83375ae
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 5798c0048d10e074f0aa64c3d50ce14027865e4a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973661"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657917"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>フルテキスト インデックスの作成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,8 +75,8 @@ ms.locfileid: "57973661"
   
     |ページ|[説明]|  
     |----------|-----------------|  
-    |**全般**|フルテキスト インデックスの基本的なプロパティが表示されます。 これには、いくつかの変更可能なプロパティと、データベース名、テーブル名、フルテキスト キー列の名前など多数の変更不可能なプロパティが含まれます。 変更可能なプロパティは次のとおりです。<br /><br /> **フルテキスト インデックス ストップリスト**<br /><br /> **フルテキスト インデックス有効**<br /><br /> **変更の追跡**<br /><br /> **検索プロパティ リスト**<br /><br />詳細については、「[フルテキスト インデックス プロパティ &#40;[全般] ページ&#41;](https://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f)」を参照してください。|  
-    |**[列]**|フルテキスト インデックスを作成できるテーブル列が表示されます。 選択した列にフルテキスト インデックスが作成されます。 フルテキスト インデックスに含める列はいくつでも選択できます。 詳細については、「[フルテキスト インデックス プロパティ &#40;[列] ページ&#41;](https://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)」を参照してください。|  
+    |**全般**|フルテキスト インデックスの基本的なプロパティが表示されます。 これには、いくつかの変更可能なプロパティと、データベース名、テーブル名、フルテキスト キー列の名前など多数の変更不可能なプロパティが含まれます。 変更可能なプロパティは次のとおりです。<br /><br /> **フルテキスト インデックス ストップリスト**<br /><br /> **フルテキスト インデックス有効**<br /><br /> **変更の追跡**<br /><br /> **検索プロパティ リスト**|  
+    |**[列]**|フルテキスト インデックスを作成できるテーブル列が表示されます。 選択した列にフルテキスト インデックスが作成されます。 フルテキスト インデックスに含める列はいくつでも選択できます。 詳細については、「[Populate Full-Text Indexes](populate-full-text-indexes.md)」 (フルテキスト インデックスの作成) を参照してください。|
     |**スケジュール**|このページでは、フルテキスト インデックスを作成するためのテーブルの増分作成を開始する SQL Server エージェント ジョブのスケジュールを作成または管理できます。 詳細については、「[Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)」 (フルテキスト インデックスの作成) を参照してください。<br /><br /> 注:**[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを閉じると、新規作成したスケジュールが SQL Server エージェント ジョブ (*database_name*.*table_name* でテーブルの増分作成を開始) に関連付けられます。|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] をクリックして変更を保存し、**[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを終了します。  

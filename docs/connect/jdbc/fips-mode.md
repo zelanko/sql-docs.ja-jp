@@ -1,7 +1,7 @@
 ---
 title: JDBC で FIPS モード |Microsoft Docs
 ms.custom: ''
-ms.date: 07/12/2018
+ms.date: 03/26/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: craigg
@@ -10,48 +10,39 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: b99aa6be170402b0e8f18dddd578c1fb6c615dd6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 8fb6ea7bf6abfb1f347d0541a01bae91aacf5f1c
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601872"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618279"
 ---
 # <a name="fips-mode"></a>FIPS モード
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver for SQL Server サポート*FIPS 140 準拠モード*します。 For Oracle を参照してください、Sun JVM/、 [FIPS 140 準拠モード SunJSSE](https://docs.oracle.com/javase/7/docs/technotes/guides/security/jsse/FIPS.html) FIPS 構成に Oracle によって提供されるセクションには、JVM が有効になっています。 
+Microsoft JDBC Driver for SQL Server のサポートとして構成されている Jvm で実行されている*FIPS 140 に準拠している*します。
 
 #### <a name="prerequisites"></a>Prerequisites
 
 - FIPS JVM を構成します。
-- 適切な SSL 証明書。
-- 適切なポリシー ファイルです。 
-- 適切な構成パラメーター。 
-
+- 適切な SSL 証明書
+- 適切なポリシー ファイル
+- 適切な構成パラメーター
 
 ## <a name="fips-configured-jvm"></a>FIPS JVM を構成します。
 
-FIPS 構成には、承認済みのモジュールを参照してくださいを参照してください、[検証 FIPS 140-1 と FIPS 140-2 暗号化モジュール](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm)します。 
+一般に、アプリケーションを構成することができます、 `java.security` FIPS 準拠の暗号化プロバイダーを使用するファイル。 FIPS 140 のコンプライアンスを構成するため、JVM に固有のドキュメントを参照してください。
 
-ベンダーは、FIPS JVM を構成する追加の手順があります。
+FIPS 構成には、承認済みのモジュールを参照してくださいを参照してください[暗号化モジュールの検証プログラムの検証モジュール](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules)します。
 
-### <a name="ensure-your-jvm-is-in-fips-mode"></a>JVM が FIPS モードを確認します。
-JVM が FIPS を有効になっていることを確認するには、次のスニペットを実行します。 
-
-```java
-public boolean isFIPS() throws Exception {
-    Provider jsse = Security.getProvider("SunJSSE");
-    return jsse != null && jsse.getInfo().contains("FIPS");
-}
-```
+ベンダーは、FIPS、JVM を構成する追加の手順があります。
 
 ## <a name="appropriate-ssl-certificate"></a>適切な SSL 証明書
-FIPS モードで SQL Server を接続するためには、有効な SSL 証明書が必要です。 インストールまたは FIPS が有効になっているクライアント マシン (JVM) での Java キー ストアにインポートします。
+FIPS モードでは、SQL Server に接続するためには、有効な SSL 証明書が必要です。 インストールまたは FIPS が有効になっているクライアント マシン (JVM) での Java キー ストアにインポートします。
 
 ### <a name="importing-ssl-certificate-in-java-keystore"></a>Java キーストアで SSL 証明書をインポートします。
-FIPS のほとんどの場合必要があります (.cert) 証明書をインポートするか PKCS またはプロバイダー固有の書式。 SSL 証明書をインポートし、適切なキーストア形式での作業ディレクトリに保存するには、次のスニペットを使用します。 _信頼\_ストア\_パスワード_は Java キーストアのパスワードです。 
-
+FIPS のほとんどの場合に必要 (.cert) 証明書をインポートする PKCS またはプロバイダー固有の書式のいずれか。
+SSL 証明書をインポートし、適切なキーストア形式での作業ディレクトリに保存するには、次のスニペットを使用します。 _信頼\_ストア\_パスワード_は Java キーストアのパスワードです。
 
 ```java
 public void saveGenericKeyStore(
@@ -81,7 +72,6 @@ private Certificate getCertificate(String pathName)
 }
 ```
 
-
 次の例は BouncyCastle プロバイダーと PKCS12 形式で Azure SSL 証明書をインポートしています。 という名前の作業ディレクトリに証明書をインポート_MyTrustStore\_PKCS12_次のスニペットを使用します。
 
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
@@ -92,7 +82,7 @@ FIPS プロバイダーによっては、無制限のポリシーの jar が必�
 ## <a name="appropriate-configuration-parameters"></a>適切な構成パラメーター
 FIPS 準拠モードでは、JDBC ドライバーを実行するには、次の表に示すように、接続のプロパティを構成します。 
 
-#### <a name="properties"></a>[プロパティ] 
+#### <a name="properties"></a>Properties 
 
 |プロパティ|型|既定|[説明]|注|
 |---|---|---|---|---|
@@ -104,4 +94,3 @@ FIPS 準拠モードでは、JDBC ドライバーを実行するには、次の�
 |fipsProvider|String|null|JVM で構成されている FIPS プロバイダー。 たとえば、BCFIPS または SunPKCS11 NSS |6.1.2 で追加 (安定した 6.2.2 をリリース)、詳細を参照してください - 6.4.0 で非推奨と[ここ](https://github.com/Microsoft/mssql-jdbc/pull/460)します。|
 |trustStoreType|String|JKS|FIPS モード セット信頼ストアの種類の PKCS12 または型プロバイダーによって定義された FIPS |6.1.2 で追加された (安定版 6.2.2 をリリース)||
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-
