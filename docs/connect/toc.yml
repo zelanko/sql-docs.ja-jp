@@ -2440,7 +2440,7 @@ items:
       href: ../connect/jdbc/tracing-driver-operation.md
     - name: 接続のトラブルシューティング
       href: ../connect/jdbc/troubleshooting-connectivity.md
-    - name: 拡張イベント ログの診断情報へのアクセス」を参照してください。
+    - name: 拡張イベント ログの診断情報へのアクセス
       href: ../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md
   - name: JDBC Driver アプリケーション コード サンプル
     href: ../connect/jdbc/sample-jdbc-driver-applications.md
@@ -2523,6 +2523,8 @@ items:
         href: ../connect/jdbc/using-parameter-metadata.md
       - name: 基本データ型の使用
         href: ../connect/jdbc/using-basic-data-types.md
+      - name: SQL_variant データ型の使用
+        href: ../connect/jdbc/using-sql-variant-datatype.md
       - name: 空間データ型の使用
         href: ../connect/jdbc/use-spatial-datatypes.md
       - name: トランザクションについて
@@ -2617,10 +2619,13 @@ items:
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: ストアド プロシージャでのステートメントの使用
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
-      - name: Azure Key Vault のサンプル版 6.0.0
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
-      - name: Azure Key Vault のサンプル版 6.2.2
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+      - name: 7.0 とその他用の Azure Key Vault サンプル
+        href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
+        items:
+        - name: Azure Key Vault のサンプル版 6.2.2
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+        - name: Azure Key Vault のサンプル版 6.0.0
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 - name: Node.js
   items:
   - name: Node.js Driver for SQL Server
@@ -4938,7 +4943,7 @@ items:
   - name: '[機能]'
     href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
     items:
-    - name: 拡張イベント ログの診断情報へのアクセス」を参照してください。
+    - name: 拡張イベント ログの診断情報へのアクセス
       href: ../connect/oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md
     - name: プログラムによるパスワードの変更
       href: ../connect/oledb/features/changing-passwords-programmatically.md
@@ -7644,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: ADO の用語集
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: 67cfc70b3bdd5744c91ace414dc04d4b9090f4d7
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f55c9266746f452d2592d7d0ded5993ebb4fab80
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478307"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566641"

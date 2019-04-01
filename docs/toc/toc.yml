@@ -44,7 +44,7 @@ items:
 - name: ビッグ データ クラスター
   href: ../toc/redirectfrom-big-data-cluster.md
   items:
-  - name: ビッグ データ クラスターの概要
+  - name: 概要
     items:
     - name: SQL Server ビッグ データ クラスターとは
       href: ../big-data-cluster/big-data-cluster-overview.md
@@ -52,6 +52,12 @@ items:
       href: ../big-data-cluster/release-notes-big-data-cluster.md
   - name: インストール
     items:
+    - name: 開始するには
+      items:
+      - name: ビッグ データ クラスターをデプロイする
+        href: ../big-data-cluster/deploy-get-started.md
+      - name: サンプル データを読み込む
+        href: ../big-data-cluster/tutorial-load-sample-data.md
     - name: ツールをインストールする
       items:
       - name: ビッグ データ ツールをインストールする
@@ -72,20 +78,6 @@ items:
         href: ../big-data-cluster/deploy-with-kubeadm.md
       - name: Minikube
         href: ../big-data-cluster/deploy-on-minikube.md
-  - name: チュートリアル
-    items:
-    - name: 1_サンプル データの読み込み
-      href: ../big-data-cluster/tutorial-load-sample-data.md
-    - name: 2_HDFS データのクエリ
-      href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
-    - name: 3_Oracle データのクエリ
-      href: ../big-data-cluster/tutorial-query-oracle.md
-    - name: 4_SQL を使用したデータ プールの読み込み
-      href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
-    - name: 5_Spark を使用したデータ プールの読み込み
-      href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
-    - name: 6_Spark ノートブックの実行
-      href: ../big-data-cluster/tutorial-notebook-spark.md
   - name: 概念
     items:
     - name: コントローラー
@@ -106,16 +98,28 @@ items:
     items:
     - name: データの仮想化
       items:
-      - name: リレーショナル データを仮想化する
-        href: ../relational-databases/polybase/data-virtualization.md
-      - name: CSV データを仮想化する
-        href: ../relational-databases/polybase/data-virtualization-csv.md
-      - name: HDFS の階層
-        href: ../big-data-cluster/hdfs-tiering.md
+      - name: リレーショナル データ
+        items:
+        - name: リレーショナル データを仮想化する
+          href: ../relational-databases/polybase/data-virtualization.md
+        - name: Oracle データのクエリ
+          href: ../big-data-cluster/tutorial-query-oracle.md
+      - name: HDFS データ
+        items:
+        - name: CSV データを仮想化する
+          href: ../relational-databases/polybase/data-virtualization-csv.md
+        - name: HDFS データのクエリ
+          href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
+        - name: HDFS の階層
+          href: ../big-data-cluster/hdfs-tiering.md
     - name: データ インジェスト
       items:
       - name: CURL を使用したデータの読み込み
         href: ../big-data-cluster/data-ingestion-curl.md
+      - name: SQL を使用したデータの読み込み
+        href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
+      - name: Spark を使用したデータの読み込み
+        href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
       - name: データベースを復元する
         href: ../big-data-cluster/data-ingestion-restore-database.md
     - name: 展開および使用するアプリ
@@ -150,6 +154,8 @@ items:
       items:
       - name: ノートブックの概要
         href: ../big-data-cluster/notebooks-guidance.md
+      - name: ノートブックのチュートリアル
+        href: ../big-data-cluster/tutorial-notebook-spark.md
       - name: 既存のノートブックを管理する
         href: ../big-data-cluster/notebooks-how-to-manage.md
     - name: Spark ジョブ
@@ -6757,132 +6763,135 @@ items:
       - name: Showplan XML Statistics Profile イベントを個別に保存する
         href: ../relational-databases/performance/save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
     - name: パフォーマンス モニター
-      href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
       items:
-      - name: システム モニターの実行
-        href: ../relational-databases/performance-monitor/run-system-monitor.md
-      - name: ディスクの使用量の監視
-        href: ../relational-databases/performance-monitor/monitor-disk-usage.md
-      - name: CPU 使用率の監視
-        href: ../relational-databases/performance-monitor/monitor-cpu-usage.md
-      - name: メモリ使用率の監視
-        href: ../relational-databases/performance-monitor/monitor-memory-usage.md
-      - name: SQL Server データベース警告の作成
-        href: ../relational-databases/performance-monitor/create-a-sql-server-database-alert.md
-      - name: グラフ、警告、ログ、およびレポートの作成
-        href: ../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md
-      - name: SQL Server XTP (インメモリ OLTP) パフォーマンス カウンター
-        href: ../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md
+      - name: 概要
+        href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
+      - name: 概念
         items:
-        - name: カーソル
-          href: ../relational-databases/performance-monitor/sql-server-xtp-cursors.md
-        - name: データベース
-          href: ../relational-databases/performance-monitor/sql-server-xtp-databases.md
-        - name: ガベージ コレクション
-          href: ../relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
-        - name: IO ガバナー
-          href: ../relational-databases/performance-monitor/sql-server-xtp-io-governor.md
-        - name: ファントム プロセッサ
-          href: ../relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
-        - name: ストレージ
-          href: ../relational-databases/performance-monitor/sql-server-xtp-storage.md
-        - name: トランザクション ログ
-          href: ../relational-databases/performance-monitor/sql-server-xtp-transaction-log.md
-        - name: トランザクション
-          href: ../relational-databases/performance-monitor/sql-server-xtp-transactions.md
-      - name: オブジェクトの使用
-        href: ../relational-databases/performance-monitor/use-sql-server-objects.md
-        items:
-        - name: SQL Server エージェント オブジェクト
+        - name: システム モニターの実行
+          href: ../relational-databases/performance-monitor/run-system-monitor.md
+        - name: ディスクの使用量の監視
+          href: ../relational-databases/performance-monitor/monitor-disk-usage.md
+        - name: CPU 使用率の監視
+          href: ../relational-databases/performance-monitor/monitor-cpu-usage.md
+        - name: メモリ使用率の監視
+          href: ../relational-databases/performance-monitor/monitor-memory-usage.md
+        - name: SQL Server データベース警告の作成
+          href: ../relational-databases/performance-monitor/create-a-sql-server-database-alert.md
+        - name: グラフ、警告、ログ、およびレポートの作成
+          href: ../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md
+        - name: SQL Server XTP (インメモリ OLTP) パフォーマンス カウンター
+          href: ../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md
           items:
-          - name: オブジェクト エクスプローラーには
-            href: ../relational-databases/performance-monitor/sql-server-agent-alerts-object.md
-          - name: の
-            href: ../relational-databases/performance-monitor/sql-server-agent-jobs-object.md
-          - name: ジョブ ステップ
-            href: ../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md
-          - name: 統計
-            href: ../relational-databases/performance-monitor/sql-server-agent-statistics-object.md
-        - name: SQL Server オブジェクト
-          items:
-          - name: Access Methods
-            href: ../relational-databases/performance-monitor/sql-server-access-methods-object.md
-          - name: 可用性レプリカ
-            href: ../relational-databases/performance-monitor/sql-server-availability-replica.md
-          - name: '[バックアップ デバイス]'
-            href: ../relational-databases/performance-monitor/sql-server-backup-device-object.md
-          - name: Batch Resp Statistics
-            href: ../relational-databases/performance-monitor/sql-server-batch-resp-statistics-object.md
-          - name: Broker Activation
-            href: ../relational-databases/performance-monitor/sql-server-broker-activation-object.md
-          - name: Broker 統計
-            href: ../relational-databases/performance-monitor/sql-server-broker-statistics-object.md
-          - name: Broker TO Statistics
-            href: ../relational-databases/performance-monitor/sql-server-broker-to-statistics-object.md
-          - name: Broker - DBM Transport
-            href: ../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md
-          - name: Buffer Manager
-            href: ../relational-databases/performance-monitor/sql-server-buffer-manager-object.md
-          - name: Buffer Node
-            href: ../relational-databases/performance-monitor/sql-server-buffer-node.md
-          - name: カタログ メタデータ
-            href: ../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md
-          - name: CLR オブジェクト
-            href: ../relational-databases/performance-monitor/sql-server-clr-object.md
-          - name: 列ストア
-            href: ../relational-databases/performance-monitor/sql-server-columnstore-object.md
-          - name: Cursor Manager by Type
-            href: ../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md
-          - name: Cursor Manager Total
-            href: ../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md
-          - name: データベース ミラーリング
-            href: ../relational-databases/performance-monitor/sql-server-database-mirroring-object.md
-          - name: データベース レプリカ
-            href: ../relational-databases/performance-monitor/sql-server-database-replica.md
+          - name: カーソル
+            href: ../relational-databases/performance-monitor/sql-server-xtp-cursors.md
           - name: データベース
-            href: ../relational-databases/performance-monitor/sql-server-databases-object.md
-          - name: 非推奨の機能
-            href: ../relational-databases/performance-monitor/sql-server-deprecated-features-object.md
-          - name: ExecStatistics
-            href: ../relational-databases/performance-monitor/sql-server-execstatistics-object.md
-          - name: External Scripts
-            href: ../relational-databases/performance-monitor/sql-server-external-scripts-object.md
-          - name: FileTable
-            href: ../relational-databases/performance-monitor/sql-server-filetable-object.md
-          - name: General Statistics
-            href: ../relational-databases/performance-monitor/sql-server-general-statistics-object.md
-          - name: HTTP ストレージ
-            href: ../relational-databases/performance-monitor/sql-server-http-storage-object.md
-          - name: ラッチ
-            href: ../relational-databases/performance-monitor/sql-server-latches-object.md
-          - name: Locks
-            href: ../relational-databases/performance-monitor/sql-server-locks-object.md
-          - name: LogPool FreePool
-            href: ../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md
-          - name: Memory Broker Clerks
-            href: ../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md
-          - name: Memory Manager
-            href: ../relational-databases/performance-monitor/sql-server-memory-manager-object.md
-          - name: Memory Node
-            href: ../relational-databases/performance-monitor/sql-server-memory-node.md
-          - name: '[プラン キャッシュ]'
-            href: ../relational-databases/performance-monitor/sql-server-plan-cache-object.md
-          - name: クエリ ストア
-            href: ../relational-databases/performance-monitor/sql-server-query-store-object.md
-          - name: Resource Pool Stats
-            href: ../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md
-          - name: SQL Errors
-            href: ../relational-databases/performance-monitor/sql-server-sql-errors-object.md
-          - name: SQL Statistics
-            href: ../relational-databases/performance-monitor/sql-server-sql-statistics-object.md
+            href: ../relational-databases/performance-monitor/sql-server-xtp-databases.md
+          - name: ガベージ コレクション
+            href: ../relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
+          - name: IO ガバナー
+            href: ../relational-databases/performance-monitor/sql-server-xtp-io-governor.md
+          - name: ファントム プロセッサ
+            href: ../relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
+          - name: ストレージ
+            href: ../relational-databases/performance-monitor/sql-server-xtp-storage.md
+          - name: トランザクション ログ
+            href: ../relational-databases/performance-monitor/sql-server-xtp-transaction-log.md
           - name: トランザクション
-            href: ../relational-databases/performance-monitor/sql-server-transactions-object.md
-          - name: User Settable
-            href: ../relational-databases/performance-monitor/sql-server-user-settable-object.md
-          - name: Wait Statistics
-            href: ../relational-databases/performance-monitor/sql-server-wait-statistics-object.md
-          - name: Workload Group Stats
-            href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
+            href: ../relational-databases/performance-monitor/sql-server-xtp-transactions.md
+        - name: オブジェクトの使用
+          href: ../relational-databases/performance-monitor/use-sql-server-objects.md
+          items:
+          - name: SQL Server エージェント オブジェクト
+            items:
+            - name: オブジェクト エクスプローラーには
+              href: ../relational-databases/performance-monitor/sql-server-agent-alerts-object.md
+            - name: の
+              href: ../relational-databases/performance-monitor/sql-server-agent-jobs-object.md
+            - name: ジョブ ステップ
+              href: ../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md
+            - name: 統計
+              href: ../relational-databases/performance-monitor/sql-server-agent-statistics-object.md
+          - name: SQL Server オブジェクト
+            items:
+            - name: Access Methods
+              href: ../relational-databases/performance-monitor/sql-server-access-methods-object.md
+            - name: 可用性レプリカ
+              href: ../relational-databases/performance-monitor/sql-server-availability-replica.md
+            - name: '[バックアップ デバイス]'
+              href: ../relational-databases/performance-monitor/sql-server-backup-device-object.md
+            - name: Batch Resp Statistics
+              href: ../relational-databases/performance-monitor/sql-server-batch-resp-statistics-object.md
+            - name: Broker Activation
+              href: ../relational-databases/performance-monitor/sql-server-broker-activation-object.md
+            - name: Broker 統計
+              href: ../relational-databases/performance-monitor/sql-server-broker-statistics-object.md
+            - name: Broker TO Statistics
+              href: ../relational-databases/performance-monitor/sql-server-broker-to-statistics-object.md
+            - name: Broker - DBM Transport
+              href: ../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md
+            - name: Buffer Manager
+              href: ../relational-databases/performance-monitor/sql-server-buffer-manager-object.md
+            - name: Buffer Node
+              href: ../relational-databases/performance-monitor/sql-server-buffer-node.md
+            - name: カタログ メタデータ
+              href: ../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md
+            - name: CLR オブジェクト
+              href: ../relational-databases/performance-monitor/sql-server-clr-object.md
+            - name: 列ストア
+              href: ../relational-databases/performance-monitor/sql-server-columnstore-object.md
+            - name: Cursor Manager by Type
+              href: ../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md
+            - name: Cursor Manager Total
+              href: ../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md
+            - name: データベース ミラーリング
+              href: ../relational-databases/performance-monitor/sql-server-database-mirroring-object.md
+            - name: データベース レプリカ
+              href: ../relational-databases/performance-monitor/sql-server-database-replica.md
+            - name: データベース
+              href: ../relational-databases/performance-monitor/sql-server-databases-object.md
+            - name: 非推奨の機能
+              href: ../relational-databases/performance-monitor/sql-server-deprecated-features-object.md
+            - name: ExecStatistics
+              href: ../relational-databases/performance-monitor/sql-server-execstatistics-object.md
+            - name: External Scripts
+              href: ../relational-databases/performance-monitor/sql-server-external-scripts-object.md
+            - name: FileTable
+              href: ../relational-databases/performance-monitor/sql-server-filetable-object.md
+            - name: General Statistics
+              href: ../relational-databases/performance-monitor/sql-server-general-statistics-object.md
+            - name: HTTP ストレージ
+              href: ../relational-databases/performance-monitor/sql-server-http-storage-object.md
+            - name: ラッチ
+              href: ../relational-databases/performance-monitor/sql-server-latches-object.md
+            - name: Locks
+              href: ../relational-databases/performance-monitor/sql-server-locks-object.md
+            - name: LogPool FreePool
+              href: ../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md
+            - name: Memory Broker Clerks
+              href: ../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md
+            - name: Memory Manager
+              href: ../relational-databases/performance-monitor/sql-server-memory-manager-object.md
+            - name: Memory Node
+              href: ../relational-databases/performance-monitor/sql-server-memory-node.md
+            - name: '[プラン キャッシュ]'
+              href: ../relational-databases/performance-monitor/sql-server-plan-cache-object.md
+            - name: クエリ ストア
+              href: ../relational-databases/performance-monitor/sql-server-query-store-object.md
+            - name: Resource Pool Stats
+              href: ../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md
+            - name: SQL Errors
+              href: ../relational-databases/performance-monitor/sql-server-sql-errors-object.md
+            - name: SQL Statistics
+              href: ../relational-databases/performance-monitor/sql-server-sql-statistics-object.md
+            - name: トランザクション
+              href: ../relational-databases/performance-monitor/sql-server-transactions-object.md
+            - name: User Settable
+              href: ../relational-databases/performance-monitor/sql-server-user-settable-object.md
+            - name: Wait Statistics
+              href: ../relational-databases/performance-monitor/sql-server-wait-statistics-object.md
+            - name: Workload Group Stats
+              href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: チューニング
     items:
     - name: 自動調整
@@ -7139,41 +7148,44 @@ items:
       - name: アップグレード後のプラン ガイドの検証
         href: ../relational-databases/performance/validate-plan-guides-after-upgrade.md
     - name: リソース ガバナー
-      href: ../relational-databases/resource-governor/resource-governor.md
       items:
-      - name: '[有効化]'
-        href: ../relational-databases/resource-governor/enable-resource-governor.md
-      - name: Disable
-        href: ../relational-databases/resource-governor/disable-resource-governor.md
-      - name: テンプレートを使用してリソース ガバナーを構成する
-        href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
-      - name: View Resource Governor Properties
-        href: ../relational-databases/resource-governor/view-resource-governor-properties.md
-      - name: リソース プール
-        href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
+      - name: 概要
+        href: ../relational-databases/resource-governor/resource-governor.md
+      - name: 操作方法
         items:
-        - name: 作成
-          href: ../relational-databases/resource-governor/create-a-resource-pool.md
-        - name: 設定の変更
-          href: ../relational-databases/resource-governor/change-resource-pool-settings.md
-        - name: 削除
-          href: ../relational-databases/resource-governor/delete-a-resource-pool.md
-      - name: '[ワークロード グループ]'
-        href: ../relational-databases/resource-governor/resource-governor-workload-group.md
-        items:
-        - name: 作成
-          href: ../relational-databases/resource-governor/create-a-workload-group.md
-        - name: 設定の変更
-          href: ../relational-databases/resource-governor/change-workload-group-settings.md
-        - name: '[詳細ビュー]'
-          href: ../relational-databases/resource-governor/move-a-workload-group.md
-        - name: 削除
-          href: ../relational-databases/resource-governor/delete-a-workload-group.md
-      - name: 分類子関数
-        href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
-        items:
-        - name: ユーザー定義の分類子関数の作成とテスト
-          href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
+        - name: '[有効化]'
+          href: ../relational-databases/resource-governor/enable-resource-governor.md
+        - name: Disable
+          href: ../relational-databases/resource-governor/disable-resource-governor.md
+        - name: テンプレートを使用してリソース ガバナーを構成する
+          href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
+        - name: View Resource Governor Properties
+          href: ../relational-databases/resource-governor/view-resource-governor-properties.md
+        - name: リソース プール
+          href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
+          items:
+          - name: 作成
+            href: ../relational-databases/resource-governor/create-a-resource-pool.md
+          - name: 設定の変更
+            href: ../relational-databases/resource-governor/change-resource-pool-settings.md
+          - name: 削除
+            href: ../relational-databases/resource-governor/delete-a-resource-pool.md
+        - name: '[ワークロード グループ]'
+          href: ../relational-databases/resource-governor/resource-governor-workload-group.md
+          items:
+          - name: 作成
+            href: ../relational-databases/resource-governor/create-a-workload-group.md
+          - name: 設定の変更
+            href: ../relational-databases/resource-governor/change-workload-group-settings.md
+          - name: '[詳細ビュー]'
+            href: ../relational-databases/resource-governor/move-a-workload-group.md
+          - name: 削除
+            href: ../relational-databases/resource-governor/delete-a-workload-group.md
+        - name: 分類子関数
+          href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
+          items:
+          - name: ユーザー定義の分類子関数の作成とテスト
+            href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
     - name: 統計
       href: ../relational-databases/statistics/statistics.md
       items:
@@ -9353,7 +9365,7 @@ items:
           href: ../ssms/object/browse-for-objects-object-explorer.md
         - name: '[オブジェクトの種類を選択] (オブジェクト エクスプローラー)'
           href: ../ssms/object/select-object-types-object-explorer.md
-        - name: '[オブジェクトの選択] (オブジェクト エクスプローラー)'
+        - name: '[オブジェクトの選択]\(オブジェクト エクスプローラー)'
           href: ../ssms/object/select-objects-object-explorer.md
         - name: オプション (SQL Server オブジェクト エクスプローラー - [スクリプト作成] ページ)
           href: ../ssms/object/options-sql-server-object-explorer-scripting-page.md
@@ -12260,6 +12272,8 @@ items:
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md
       - name: sys.dm_exec_query_plan
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md
+      - name: sys.dm_exec_query_plan_stats
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md
       - name: sys.dm_exec_query_profiles
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md
       - name: sys.dm_exec_query_resource_semaphores
@@ -12476,10 +12490,14 @@ items:
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md
       - name: sys.dm_resource_governor_resource_pools
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md
+      - name: sys.dm_resource_governor_pools_history_ex (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md
       - name: sys.dm_resource_governor_resource_pool_volumes
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-volumes-transact-sql.md
       - name: sys.dm_resource_governor_workload_groups
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md
+      - name: sys.dm_user_db_resource_governance (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database.md
     - name: セキュリティ関連
       href: ../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md
       items:
@@ -17227,9 +17245,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery での名前空間の処理
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a94ce2e407a2a01759189d0a1892847477961d94
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538684"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618329"
