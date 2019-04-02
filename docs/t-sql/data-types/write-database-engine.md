@@ -57,8 +57,8 @@ byte[] encoding = stream.ToArray();
 ```  
   
 ## <a name="see-also"></a>参照
-[Read &#40;データベース エンジン&#41;](../../t-sql/data-types/read-database-engine.md)  
-[ToString &#40;データベース エンジン&#41;](../../t-sql/data-types/tostring-database-engine.md)  
+[読み取りと #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/read-database-engine.md)  
+[ToString (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   
