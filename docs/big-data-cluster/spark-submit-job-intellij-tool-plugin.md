@@ -1,22 +1,26 @@
 ---
 title: Azure toolkit for IntelliJ を SQL Server のビッグ データ クラスターで Spark ジョブを実行します。
-titleSuffix: SQL Server Big Data Clusters
-description: For IntelliJ には、SQL Server ビッグ データ クラスター上で Azure toolkit、Spark ジョブを送信します。
+titleSuffix: SQL Server big data clusters
+description: For IntelliJ には、Azure Toolkit で SQL Server のビッグ データ クラスターで Spark ジョブを送信します。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
-ms.openlocfilehash: 672898e93331fdcf65b1fe978a5ebb47956fdb5b
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.openlocfilehash: e48aebbb15b9bd684b2ed3f5d4d314191a55ba42
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683622"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860324"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>SQL Server ビッグ データ クラスター上で IntelliJ での Spark ジョブを送信します。
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>IntelliJ での SQL Server のビッグ データ クラスターで Spark ジョブを送信します。
 
-SQL Server のビッグ データ クラスターの主なシナリオの 1 つは、Spark ジョブを送信する機能です。 Spark ジョブの送信機能では、SQL Server のビッグ データ クラスターへの参照をローカル Jar、Py ファイルを送信できます。 HDFS ファイル システムに既にあるは、Jar または Py のファイルを実行することもできます。 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+ビッグ データの SQL Server クラスターの主なシナリオの 1 つは、Spark ジョブを送信する機能です。 Spark ジョブの送信機能では、SQL Server のビッグ データ クラスターへの参照をローカル Jar、Py ファイルを送信できます。 HDFS ファイル システムに既にあるは、Jar または Py のファイルを実行することもできます。 
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -25,15 +29,15 @@ SQL Server のビッグ データ クラスターの主なシナリオの 1 つ�
 - IntelliJ IDEA。 インストールすることができます、 [JetBrains の web サイト](https://www.jetbrains.com/idea/download/)します。
 - Azure Toolkit for IntelliJ の拡張機能。 インストール手順については、次を参照してください。 [Azure Toolkit for IntelliJ のインストール](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation)します。
 
-## <a name="link-sql-server-big-data-cluster"></a>リンクの SQL Server のビッグ データ クラスター
+## <a name="link-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスターをリンク
 1. IntelliJ IDEA ツールを開きます。
 
 2. 自己署名証明書を使用している場合から SSL 証明書の検証を無効にする**ツール**メニューの  **Azure**、 **Spark クラスター SSL 証明書の検証**し、**無効にする**します。
 
-    ![SQL Server のビッグ データ クラスターをリンク - SSL を無効にします。](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![SQL Server のビッグ データ クラスター リンク - SSL を無効にします。](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Azure Explorer を開きます**ビュー**メニューの **ツール Windows**、し、 **Azure エクスプ ローラー**します。
-4. 右クリックして**SQL Server のビッグ データ クラスター**、**リンク SQL Server ビッグ データ クラスター**します。 入力、**サーバー**、**ユーザー名**と**パスワード**、順にクリックします**OK**します。
+4. 右クリックして**SQL Server のビッグ データ クラスター**を選択します**リンク SQL Server のビッグ データ クラスター**します。 入力、**サーバー**、**ユーザー名**と**パスワード**、順にクリックします**OK**します。
 
     ![ビッグ データ クラスターのリンク ダイアログ](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-dialog.png)
 
@@ -87,8 +91,8 @@ SQL Server のビッグ データ クラスターの主なシナリオの 1 つ�
       ![アーティファクト情報 ダイアログ ボックス](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
 
-## <a name="submit-application-to-sql-server-big-data-cluster"></a>アプリケーションを SQL Server のビッグ データ クラスターに送信します。
-SQL Server にビッグ データ クラスターのリンクの後にそこにアプリケーションを送信できます。
+## <a name="submit-application-to-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスターへのアプリケーションを送信します。
+ビッグ データの SQL Server クラスターのリンクの後にアプリケーションを送信できます。
 
 1. 構成を設定する**実行/デバッグ構成**ウィンドウで、[+]-> [**SQL Server での Apache Spark**を選択します] タブ**クラスターにリモートで実行**、としてパラメーターを設定[ok] をクリックし、します。
 
@@ -127,9 +131,9 @@ Spark ローカル Console(Scala) を実行したり、Spark Livy 対話型セ�
 ### <a name="spark-local-consolescala"></a>Spark ローカル Console(Scala)
 WINUTILS が満たされていることを確認します。EXE の前提条件です。
 
-1. メニュー バーに移動します**実行** > **構成の編集.。**
+1. メニュー バーに移動します**実行** > **構成の編集。**.
 
-2. **実行/デバッグ構成**に移動します ウィンドウの左側のウィンドウで、 **SQL Server のビッグ データ クラスター上の Apache Spark** > **[SQL での Spark] myApp**します。
+2. **実行/デバッグ構成**に移動します ウィンドウの左側のウィンドウで、**ビッグ データの SQL Server クラスターでの Apache Spark** > **[SQL での Spark] myApp**します。
 
 3. メイン ウィンドウで、選択、**ローカルで実行**タブ。
 
@@ -161,9 +165,9 @@ WINUTILS が満たされていることを確認します。EXE の前提条件�
 ### <a name="spark-livy-interactive-session-consolescala"></a>Livy 対話型セッション Console(Scala) を spark します。
 Spark Livy 対話型セッション Console(Scala) は IntelliJ 2018.2 と 2018.3 でのみサポートされます。
 
-1. メニュー バーに移動します**実行** > **構成の編集.。**
+1. メニュー バーに移動します**実行** > **構成の編集。**.
 
-2. **実行/デバッグ構成**に移動します ウィンドウの左側のウィンドウで、 **SQL Server のビッグ データ クラスター上の Apache Spark** > **[SQL での Spark] myApp**します。
+2. **実行/デバッグ構成**に移動します ウィンドウの左側のウィンドウで、**ビッグ データの SQL Server クラスターでの Apache Spark** > **[SQL での Spark] myApp**します。
 
 3. メイン ウィンドウで、選択、**クラスターにリモートで実行**タブ。
 

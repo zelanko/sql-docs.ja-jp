@@ -1,6 +1,6 @@
 ---
 title: HDFS の階層制御を構成します。
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: この記事では、HDFS の HDFS に SQL Server 2019 ビッグ データ クラスター (プレビュー) で外部の Azure Data Lake Storage ファイル システムをマウントする階層化を構成する方法について説明します。
 author: nelgson
 ms.author: negust
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2542c7c05b222517ae9f4a4c05152f21a5ba293b
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493776"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859644"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスター上での階層制御 HDFS を構成します。
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>HDFS のビッグ データの SQL Server クラスター上の階層制御の構成します。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 HDFS の階層制御では、HDFS ファイル システムの HDFS と互換性のある、外部にマウントする機能を提供します。 この記事では、HDFS の SQL Server 2019 ビッグ データ クラスター (プレビュー) の階層化を構成する方法について説明します。 この時点で、この記事の焦点である Azure Data Lake ストレージ Gen2 への接続を CTP 2.4 はのみサポートします。
 
@@ -134,4 +136,4 @@ mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか](big-data-cluster-overview.md)。
+SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか。](big-data-cluster-overview.md)。

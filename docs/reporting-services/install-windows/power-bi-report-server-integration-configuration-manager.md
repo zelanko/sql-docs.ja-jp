@@ -79,7 +79,7 @@ ms.locfileid: "57556244"
 
 レポート サーバーの構成を変更した場合は、 **[登録の更新]** を使用します。 たとえば、ユーザーが [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]を参照する際に使用する URL を追加または削除する場合は、次の手順を実行します。
 
--  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで、 **\[Web ポータルの URL\]** を選択します。
+- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで、 **Web ポータルの URL** を選択します。
 
      **[詳細設定]** を選択します。
 
