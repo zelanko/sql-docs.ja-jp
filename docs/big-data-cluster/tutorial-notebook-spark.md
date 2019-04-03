@@ -1,6 +1,6 @@
 ---
 title: サンプルの notebook の実行 |Microsoft Docs
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: このチュートリアルを読み込む方法、実行、SQL Server 2019 ビッグ データ クラスター (プレビュー) のサンプルの Spark notebook を示します。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 45845efe34c94f0c8f21c7e154dde673b0bfb889
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 274f33590282f36454e6cdb6041dac3484b9bcc4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241848"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860183"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>チュートリアル:SQL Server 2019 ビッグ データ クラスター上のサンプルの notebook を実行します。
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>チュートリアル:ビッグ データの SQL Server クラスターでのサンプルの notebook を実行します。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 このチュートリアルでは、読み込みを SQL Server 2019 ビッグ データ クラスター (プレビュー) で Azure Data Studio で、notebook を実行する方法について説明します。 これにより、データ サイエンティストやデータ エンジニアは、Python、R、または Scala コードをクラスターに対して実行できます。
 
@@ -71,7 +73,7 @@ ms.locfileid: "54241848"
 - [SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)
 - [Azure Data Studio でノートブックを管理する方法](notebooks-how-to-manage.md)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ノートブックについて説明します。
 > [!div class="nextstepaction"]

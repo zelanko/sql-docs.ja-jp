@@ -1,6 +1,6 @@
 ---
 title: Kubeadm で Kubernetes を構成します。
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 複数の Ubuntu 16.04 上の Kubernetes または 18.04 のマシン (物理または仮想) の SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイを構成する方法について説明します。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 56eb95042199298be2728c475d26cb52bea993e2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 0432f590af92befa845af819269b1111da28251c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017988"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860623"
 ---
-# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>複数のコンピューターの SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイでの Kubernetes を構成します。
+# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>複数のコンピューターの SQL Server のビッグ データ クラスターのデプロイでの Kubernetes を構成します。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、使用する方法の例を示します**kubeadm**を複数のコンピューターの SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイで Kubernetes を構成します。 この例では、複数の Ubuntu 16.04 または 18.04 LTS マシン (物理または仮想)、ターゲットとは。 さまざまな Linux プラットフォームに展開する場合、システムに一致するようにコマンドの一部を変更する必要があります。  
 

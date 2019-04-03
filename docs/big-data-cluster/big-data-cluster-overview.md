@@ -1,6 +1,6 @@
 ---
 title: ビッグ データ クラスターとは
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Kubernetes で実行して、リレーショナルの両方でスケール アウト オプションおよび HDFS データを提供する SQL Server 2019 ビッグ データ クラスター (プレビュー) について説明します。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: e9e9cdcd63873ade4d9d828309f8b2d4b5b874e0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477647"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860254"
 ---
-# <a name="what-are-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスターとは
+# <a name="what-are-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターとは
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 以降で[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]、ビッグ データの SQL Server クラスターでは、Kubernetes で実行されている SQL Server、Spark、および HDFS のコンテナーの拡張性の高いクラスターをデプロイできます。 これらのコンポーネントを使用すると、読み取り、書き込み、および TRANSACT-SQL または Spark からビッグ データの処理、結合および価値の高いリレーショナル データを大量のビッグ データ分析を簡単にすることができますを並行して実行されます。
 
@@ -76,8 +78,8 @@ Kubernetes は、ニーズに合わせてコンテナーのデプロイでスケ
 
 |||
 |:--|:--|
-| **Cluster** | Kubernetes クラスターは、一連のノードと呼ばれるマシンです。 1 つのノードがクラスターを制御し、マスター ノードが指定されます。残りのノードは、ワーカー ノードです。 Kubernetes マスターは、ワーカー間の作業を配布して、クラスターの正常性を監視します。 |
-| **[Node]** | ノードには、コンテナー化されたアプリケーションが実行されます。 物理マシンまたは仮想マシンのいずれかを指定できます。 Kubernetes クラスターには、物理マシンと仮想マシン ノードの組み合わせを含めることができます。 |
+| **クラスター** | Kubernetes クラスターは、一連のノードと呼ばれるマシンです。 1 つのノードがクラスターを制御し、マスター ノードが指定されます。残りのノードは、ワーカー ノードです。 Kubernetes マスターは、ワーカー間の作業を配布して、クラスターの正常性を監視します。 |
+| **ノード** | ノードには、コンテナー化されたアプリケーションが実行されます。 物理マシンまたは仮想マシンのいずれかを指定できます。 Kubernetes クラスターには、物理マシンと仮想マシン ノードの組み合わせを含めることができます。 |
 | **pod 型** | ポッドは、Kubernetes のデプロイのアトミック単位です。 ポッドは、1 つまたは複数のコンテナーの論理グループ-リソース必要なアプリケーションの実行に関連付けられているとします。 それぞれのポッドが; ノードで実行します。ノードには、1 つまたは複数のポッドを実行できます。 Kubernetes マスターは、クラスター内のノードにポッドを自動的に割り当てます。 |
 | &nbsp; ||
 

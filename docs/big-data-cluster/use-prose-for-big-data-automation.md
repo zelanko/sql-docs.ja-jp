@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4d13d200bf331771b0f2f8735bf2c76c1f227979
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241653"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860083"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>PROSE コード アクセラレータを使用してデータ Wrangling
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 PROSE コード アクセラレータは、データ処理タスクの読み取り可能な Python コードを生成します。 Azure Data Studio 内で、notebook での作業中に、シームレスな方法で手作業で記述されたコードで生成されたコードを複数使用できます。 この記事では、コードのアクセラレータを使用する方法の概要を示します。
 

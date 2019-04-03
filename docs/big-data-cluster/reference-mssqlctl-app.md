@@ -1,6 +1,6 @@
 ---
 title: mssqlctl アプリ リファレンス
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl アプリ コマンドに関する参照記事です。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fa2b43c352fbab39cd00112b9646a87a2b752f5b
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527255"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860653"
 ---
 # <a name="mssqlctl-app"></a>mssqlctl アプリ
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 次の記事への参照を提供する、**アプリ**コマンド、 **mssqlctl**ツール。 その他の詳細については**mssqlctl**コマンドを参照してください[mssqlctl 参照](reference-mssqlctl.md)します。
 
@@ -24,12 +26,12 @@ ms.locfileid: "57527255"
 
 |||
 |---|---|
-| [create](#create) | アプリケーションを作成します。 |
+| [作成](#create) | アプリケーションを作成します。 |
 | [delete](#delete) | アプリケーションを削除します。 |
 | [について説明します](#describe) | アプリケーションをについて説明します。 |
 | [Init](#init) | Kickstart の新しいアプリケーションのスケルトンです。 |
-| [list](#list) | アプリケーションの一覧を表示します。 |
-| [run](#run) | アプリケーションを実行します。 |
+| [一覧](#list) | アプリケーションの一覧を表示します。 |
+| [実行](#run) | アプリケーションを実行します。 |
 | [update](#update) | アプリケーションを更新します。 |
 | [テンプレート](reference-mssqlctl-app-template.md) | テンプレート コマンド。 |
 
@@ -56,14 +58,14 @@ mssqlctl app create
 
 | パラメーター | 説明 |
 |---|---|
-| **--assets -a** | 含まれる追加のアプリケーション ファイル資産の一覧。 |
+| **--資産-a** | 含まれる追加のアプリケーション ファイル資産の一覧。 |
 | **--code -c** | R または Python のコード ファイルへのパス。 |
 | **--description -d** | アプリケーションの説明。 |
 | **--entrypoint** |  |
 | **-入力** | 入力パラメーターのスキーマです。 |
 | **--name -n** | [アプリケーション名] |
-| **--outputs** | 出力パラメーターのスキーマです。 |
-| **-ランタイム r** | アプリケーション ランタイム。  有効な値:Mleap、Python、R では、SSIS します。 |
+| **-出力** | 出力パラメーターのスキーマです。 |
+| **--runtime -r** | アプリケーション ランタイム。  有効な値:Mleap、Python、R では、SSIS します。 |
 | **--s の仕様** | アプリケーションを記述する YAML spec ファイルのディレクトリへのパス。 |
 | **-バージョン v** | アプリケーションのバージョン。 |
 | **--y を [はい]** | 求めない確認 CWD の spec.yaml ファイルからアプリケーションを作成するときにします。 |

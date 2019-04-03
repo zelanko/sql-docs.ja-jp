@@ -1,6 +1,6 @@
 ---
 title: 作業開始
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 手順と SQL Server 2019 ビッグ データ クラスター (プレビュー) を展開するためのリソースについて説明します。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 05ba81fd45bc44db9c23530fb594c5d2e291e05d
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567648"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860433"
 ---
-# <a name="get-started-with-sql-server-2019-big-data-clusters"></a>SQL Server 2019 ビッグ データ クラスターの概要します。
+# <a name="get-started-with-sql-server-big-data-clusters"></a>ビッグ データの SQL Server クラスターを概要します。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、デプロイする方法の概要を示します、 [SQL Server 2019 ビッグ データ クラスター (プレビュー)](big-data-cluster-overview.md)します。 概念を理解し、このセクションでは、その他のデプロイに関する記事を理解するためのフレームワークを提供するものです。 特定の展開手順は、クライアントとサーバー向けプラットフォームの選択によって異なります。
 
@@ -49,7 +51,7 @@ ms.locfileid: "58567648"
 
 任意の配置スクリプトをカスタマイズするには、ビッグ データ クラスター環境変数が異なる方法で構成される、独自のバージョンを作成します。
 
-## <a name="deploy-a-big-data-cluster"></a>ビッグ データ クラスターをデプロイします。
+## <a name="deploy-a-big-data-cluster"></a>ビッグ データ クラスターをデプロイする
 
 1 つのスクリプトを使用して、AKS の Kubernetes とビッグ データ クラスターを展開するには、次の例を参照してください。
 

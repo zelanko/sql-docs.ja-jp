@@ -1,6 +1,6 @@
 ---
 title: Azure Kubernetes サービスを構成します。
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイ用 Azure Kubernetes Service (AKS) を構成する方法について説明します。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ac8632c3966da750e9eb7d7053dad1d102760c8c
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: b70b5672bff38c8c82dd9bfd837e267328bf6aa9
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618239"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860163"
 ---
-# <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイ用 Azure Kubernetes サービスを構成します。
+# <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server のビッグ データ クラスター デプロイ用 Azure Kubernetes サービスを構成します。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイ用 Azure Kubernetes Service (AKS) を構成する方法について説明します。
 
@@ -31,7 +33,7 @@ AKS によって、作成、構成、およびコンテナー化されたアプ�
 ## <a name="prerequisites"></a>前提条件
 
 - [SQL Server 2019 のビッグ データ ツールの展開](deploy-big-data-tools.md):
-   - **kubectl**
+   - **Kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 の拡張機能**
    - **Azure CLI**

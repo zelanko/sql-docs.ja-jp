@@ -1,6 +1,6 @@
 ---
 title: Spark アプリケーションのデバッグ/診断します。
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Spark History Server を使用して、デバッグおよび SQL Server 2019 ビッグ データ クラスター上で実行されている Spark アプリケーションを診断します。
 author: jejiang
 ms.author: jejiang
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6b3cac808386d2341e1c22b18999009f7d72a43f
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e7444a9f5bcdc480425ba02c8a068831c081b47a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241793"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860334"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>デバッグと Spark History Server の SQL Server のビッグ データ クラスター上で Spark アプリケーションの診断
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、Spark History Server の拡張を使用して、デバッグおよび SQL Server 2019 (プレビュー) のビッグ データ クラスターで Spark アプリケーションを診断する方法のガイダンスを提供します。 これらのデバッグと診断機能は、Spark History Server に組み込まれており、Microsoft を利用しました。 拡張機能には、データ タブと グラフ タブと診断 タブが含まれています。データ タブで、ユーザーは Spark ジョブの入力と出力データを確認できます。 グラフ タブでは、ユーザーは、データ フローをチェックして、ジョブ グラフを再生します。 [診断] タブは、ユーザーはデータ スキュー、時間のずれおよび Executor の利用状況の分析を参照できます。
 
@@ -201,7 +203,7 @@ Spark History Server では、次の既知の問題があります。
 
 + RDD を使用して入力/出力データは、[データ] タブでは表示されません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 * [HDInsight の Spark クラスターのリソースを管理します。](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-resource-manager)
 * [Spark の設定を構成します。](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

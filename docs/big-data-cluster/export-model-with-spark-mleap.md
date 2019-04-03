@@ -1,6 +1,6 @@
 ---
 title: MLeap と Spark ML モデルをエクスポートします。
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Spark の機械学習モデル MLeap をエクスポートする方法について説明します。
 author: lgongmsft
 ms.author: shivprashant
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ee858f66c99ff7b85e2e6c456ad509ec7deb0a6e
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a2a834ff8b841c515b9d3481a961306b721f194d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242133"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860153"
 ---
 # <a name="export-spark-machine-learning-models-with-mleap"></a>Spark の machine learning MLeap を使用したモデルをエクスポートします。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 一般的な機械学習シナリオには、モデルのトレーニングを Spark と Spark の外部でスコア付けが含まれます。 Spark 外部ために使用できるように、移植可能な形式でモデルをエクスポートします。 [MLeap](https://github.com/combust/mleap)はこのような 1 つのモデル交換形式です。 これにより、Spark は machine learning パイプラインと移植可能な形式としてエクスポートし、任意の JVM ベースのシステムで使用するモデル、`Mleap`ランタイム。
 

@@ -1,23 +1,26 @@
 ---
 title: セキュリティの概念
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のセキュリティの概念について説明します。 これには、クラスター エンドポイントとクラスターの認証の説明が含まれます。
 author: nelgson
 ms.author: negust
+ms.reviewer: jroth
 manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: ebe1ef0a9a0337af29a09018bcc2e0150d676879
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477987"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860113"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>ビッグ データの SQL Server クラスターのセキュリティの概念
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 ビッグ データをセキュリティで保護されたクラスターでは、SQL Server と HDFS/Spark の両方で認証と承認のシナリオを首尾一貫したサポートを意味します。 認証は、ユーザーまたはサービスの id を確認し、それらがあると主張するユーザーはことを確認するプロセスです。 承認は、許可または要求しているユーザーの id に基づいて特定のリソースへのアクセスを拒否するを参照します。 ユーザーが認証によって特定した後は、この手順を実行します。
 

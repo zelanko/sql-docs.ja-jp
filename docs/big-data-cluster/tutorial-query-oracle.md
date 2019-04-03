@@ -1,6 +1,6 @@
 ---
 title: Oracle の外部のデータを照会します。
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) から Oracle データを照会する方法を示します。 Oracle のデータに対して外部テーブルを作成してクエリを実行しています。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 27956603d3627f1d4a78e62fbf9c7aeaa1e55974
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 139c5dd5ade04c3d1a71412060f823d492843ecb
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241913"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859983"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server のビッグ データ クラスターから Oracle クエリを実行します。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 このチュートリアルでは、SQL Server 2019 のビッグ データ クラスターから Oracle データを照会する方法を示します。 このチュートリアルを実行するには、Oracle サーバーにアクセスする必要があります。 このチュートリアルがアクセスできない場合は、ビッグ データの SQL Server クラスター内の外部データ ソースのデータ仮想化のしくみを把握付与します。
 
@@ -131,7 +133,7 @@ DROP EXTERNAL DATA SOURCE [OracleSalesSrvr] ;
 DROP DATABASE SCOPED CREDENTIAL [OracleCredential];
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 データのプールにデータを取り込む方法について説明します。
 > [!div class="nextstepaction"]

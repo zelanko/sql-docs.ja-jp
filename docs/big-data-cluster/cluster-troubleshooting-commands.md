@@ -1,6 +1,6 @@
 ---
 title: Kubectl を使用してモニター/トラブルシューティング
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: この記事では、監視、および SQL Server 2019 ビッグ データ クラスター (プレビュー) のトラブルシューティングに役立ちます kubectl コマンドを提供します。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 624c4ad4f53c0ad78cf5b972c976aadc57fd35d3
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8b9be0566725822e0241c65c7f8324b153cca072
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017908"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860373"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>監視とトラブルシューティングのビッグ データの SQL Server クラスターの Kubectl コマンド
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、監視し、SQL Server 2019 ビッグ データ クラスター (プレビュー) のトラブルシューティングに使用できるいくつかの便利な Kubernetes コマンドについて説明します。 この記事では、SQL Server のビッグ データ クラスター サービスのいずれかの操作を実行しているコンテナーとの間にファイルをコピーするなどの一般的なタスクについて説明します。 ポッドのビッグ データ クラスターに配置されている Kubernetes の他の成果物の詳細を表示する方法も示します。
 

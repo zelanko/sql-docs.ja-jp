@@ -1,23 +1,26 @@
 ---
 title: コント ローラーとは何ですか。
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のコント ローラーについて説明します。
 author: mihaelablendea
 ms.author: mihaelab
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 25afe48d2191bf77301331ed30850bf0af0baff0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 3677a2a68799ab1cfa7b6101893fe2b799b5b04a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491795"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860073"
 ---
-# <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 のビッグ データ クラスター上のコント ローラーとは何ですか。
+# <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスター上のコント ローラーとは何ですか。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 コント ローラーは、展開、およびビッグ データ クラスターを管理するためのコア ロジックをホストします。 Kubernetes では、クラスターおよび Spark、HDFS などの他のコンポーネントの一部である SQL Server インスタンスのすべての通信が処理されます。 
 

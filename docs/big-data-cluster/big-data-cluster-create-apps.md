@@ -1,23 +1,26 @@
 ---
 title: Mssqlctl を使用してアプリケーションをデプロイします。
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリケーションとしては、Python または R スクリプトを展開します。
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: acd7bef7219827eb7a4666d33d6e8477a522e268
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492804"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872002"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリをデプロイする方法
+# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server のビッグ データ クラスター (プレビュー) でアプリをデプロイする方法
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、デプロイし、SQL Server 2019 ビッグ データ クラスター (プレビュー) 内でアプリケーションとして R と Python スクリプトを管理する方法について説明します。
 
@@ -46,7 +49,7 @@ SQL Server 2019 (プレビュー) CTP 2.4 作成、削除、説明、初期化�
 
 |コマンド |説明 |
 |:---|:---|
-|`mssqlctl login` | SQL Server のビッグ データ クラスターにログインします。 |
+|`mssqlctl login` | SQL Server のビッグ データ クラスターへのサインインします。 |
 |`mssqlctl app create` | アプリケーションを作成します。 |
 |`mssqlctl app delete` | アプリケーションを削除します。 |
 |`mssqlctl app describe` | アプリケーションをについて説明します。 |
@@ -63,9 +66,9 @@ mssqlctl app create --help
 
 次に、これらのコマンドについて詳しく説明します。
 
-## <a name="log-in"></a>ログイン
+## <a name="sign-in"></a>サインイン
 
-展開するアプリケーションとやり取りする前に、最初にログイン、SQL Server を使用したクラスターのビッグ データ、`mssqlctl login`コマンド。 外部 IP アドレスを指定、`endpoint-service-proxy`サービス (例: `https://ip-address:30777`) およびユーザー名とクラスターへのパスワード。
+展開するアプリケーションとやり取りする前に、最初にサインインを使用したクラスターのビッグ データの SQL Server、`mssqlctl login`コマンド。 外部 IP アドレスを指定、`endpoint-service-proxy`サービス (例: `https://ip-address:30777`) およびユーザー名とクラスターへのパスワード。
 
 ```bash
 mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
@@ -95,51 +98,49 @@ kubectl get node --selector='node-role.kubernetes.io/master'
 ビッグ データ クラスターで新しいアプリを作成するのにには、次の構文を使用します。
 
 ```bash
-mssqlctl app create -n <app_name> -v <version_number> --spec <directory containing spec file>
+mssqlctl app create --spec <directory containing spec file>
 ```
 
 次のコマンドは、このコマンドの例を示しています。
-
-これはという名前のファイルがあることを前提としています`spec.yaml`内、`addpy`フォルダー。
-`addpy`フォルダーが含まれています、`add.py`と`spec.yaml`、`spec.yaml`のファイルの仕様、`add.py`アプリ。
-
-
-`add.py` 次の python アプリを作成します。
-
-```py
-#add.py
-def add(x,y):
-        result = x+y
-        return result
-result=add(x,y)
-```
-
-次のスクリプトは、サンプルの内容の`spec.yaml`:
-
-```yaml
-#spec.yaml
-name: add-app #name of your python script
-version: v1  #version of the app
-runtime: Python #the language this app uses (R or Python)
-src: ./add.py #full path to the location of the app
-entrypoint: add #the function that will be called upon execution
-replicas: 1  #number of replicas needed
-poolsize: 1  #the pool size that you need your app to scale
-inputs:  #input parameters that the app expects and the type
-  x: int
-  y: int
-output: #output parameter the app expects and the type
-  result: int
-```
-
-これには、ディレクトリ内の 2 つのファイルに、上記のコード行をコピー`addpy`として`add.py`と`spec.yaml`し、次のコマンドを実行します。
 
 ```bash
 mssqlctl app create --spec ./addpy
 ```
 
-> [!NOTE]
-> `spec.yaml`ファイルでは、両方を指定します、`poolsize`と多数の`replicas`します。 数`replicas`サービスのコピーの数をデプロイする必要がありますを指定します。 `poolsize`レプリカごとに作成するプールの数を指定します。 これらの設定は、デプロイが並列で処理できる要求の量に影響を与えます。 1 つの特定の時点での要求の最大数は等しく`replicas`回`poolsize`、つまり、 5 つのレプリカと 2 つのプールあたりのレプリカがある場合、展開は、並列で 10 件の要求を処理できます。 グラフィカル表現は、以下のイメージを参照してください`replicas`と`poolsize`:。![Poolsize とレプリカ](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
+これに格納されているアプリケーションがあることを前提としています、`addpy`フォルダー。 このフォルダーは、呼び出されると呼ばれる、アプリケーションの仕様ファイルを含める必要があります`spec.yaml`します。 参照してください[アプリケーションの展開ページ](concept-application-deployment.md)の詳細については、`spec.yaml`ファイル。
+
+このアプリのサンプル アプリをデプロイするには、という名前のディレクトリで次のファイルを作成`addpy`:
+
+- `add.py`. このファイルに次の Python コードをコピーします。
+   ```py
+   #add.py
+   def add(x,y):
+        result = x+y
+        return result
+    result=add(x,y)
+   ```
+- `spec.yaml`. このファイルには、次のコードをコピーします。
+   ```yaml
+   #spec.yaml
+   name: add-app #name of your python script
+   version: v1  #version of the app
+   runtime: Python #the language this app uses (R or Python)
+   src: ./add.py #full path to the location of the app
+   entrypoint: add #the function that will be called upon execution
+   replicas: 1  #number of replicas needed
+   poolsize: 1  #the pool size that you need your app to scale
+   inputs:  #input parameters that the app expects and the type
+     x: int
+     y: int
+   output: #output parameter the app expects and the type
+     result: int
+   ```
+
+次に、次のコマンドを実行します。
+
+```bash
+mssqlctl app create --spec ./addpy
+```
 
 一覧のコマンドを使用して、アプリをデプロイするかどうかを確認できます。
 

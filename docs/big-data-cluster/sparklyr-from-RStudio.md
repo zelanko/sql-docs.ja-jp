@@ -1,6 +1,6 @@
 ---
 title: RStudio から sparklyr を使用して、
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: RStudio から sparklyr を使用してビッグ データ クラスターに接続します。
 author: jejiang
 ms.author: jejiang
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 83980f9d08a3894b0fbf7871cf899483e06702c4
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 30b8ddccd01c0e8d9a4eac34f2f504b0d8971af6
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018358"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860193"
 ---
-# <a name="use-sparklyr-in-sql-server-2019-big-data-cluster"></a>Sparklyr を使用して、SQL Server 2019 ビッグ データ クラスター
+# <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Sparklyr を使用して、SQL Server のビッグ データ クラスター内
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Sparklyr では、Apache Spark 用 R インターフェイスを提供します。 Sparklyr は、Spark を使用して、R 開発者に選択する方法です。 この記事では、RStudio を使用して SQL Server 2019 ビッグ データ クラスター (プレビュー) で、sparklyr を使用する方法について説明します。
 
@@ -27,7 +29,7 @@ Sparklyr では、Apache Spark 用 R インターフェイスを提供します�
 
 ## <a name="connect-to-spark-in-ss19-big-data-cluster"></a>SS19 ビッグ データ クラスターで spark に接続します。
 
-RStudio で、RScript を作成し、次のように、Spark に接続します。 Spark のビッグ データ クラスターが接続でアクセスできるようにする Livy を使用、 [HDFS/Spark ゲートウェイ](connect-to-big-data-cluster.md#hdfs)します。 認証の場合、ユーザー名と、デプロイ時に設定したパスワードを使用します。
+RStudio で、RScript を作成し、次のように、Spark に接続します。 ビッグ データの Spark クラスターの接続でアクセスできるようにする Livy を使用、 [HDFS/Spark ゲートウェイ](connect-to-big-data-cluster.md#hdfs)します。 認証の場合、ユーザー名と、デプロイ時に設定したパスワードを使用します。
 
 ```r
 library(sparklyr)

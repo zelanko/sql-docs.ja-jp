@@ -1,6 +1,6 @@
 ---
 title: mssqlctl クラスター構成の参照
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl クラスター コマンドに関する参照記事です。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 26e93151a1150bbbbd1798b38486ca5b01aaab1d
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 57b77e83994f8471e677ba2ba367acc48a66cddd
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527205"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860023"
 ---
-# <a name="mssqlctl-cluster-config"></a>mssqlctl cluster config
+# <a name="mssqlctl-cluster-config"></a>mssqlctl クラスターの構成
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 次の記事への参照を提供する、**クラスターの構成**コマンド、 **mssqlctl**ツール。 その他の詳細については**mssqlctl**コマンドを参照してください[mssqlctl 参照](reference-mssqlctl.md)します。
 
@@ -24,7 +26,7 @@ ms.locfileid: "57527205"
 
 |||
 |---|---|
-| [get](#get) | クラスターを取得します。 |
+| [取得](#get) | クラスターを取得します。 |
 
 ## <a id="get"></a> mssqlctl クラスター構成を取得します。
 
@@ -41,7 +43,7 @@ mssqlctl cluster config get
 | パラメーター | 説明 |
 |---|---|
 | **--name -n** | クラスター名 kubernetes 名前空間に使用をします。 必須。 |
-| **--output-file -f** | 結果を格納する出力ファイル。 必須。 |
+| **-出力ファイル f** | 結果を格納する出力ファイル。 必須。 |
 
 ## <a name="next-steps"></a>次のステップ
 

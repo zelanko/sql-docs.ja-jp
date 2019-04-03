@@ -1,6 +1,6 @@
 ---
 title: Azure Data Studio で notebook を管理します。
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Azure Data Studio でノートブックを管理する方法について説明します。 これは、保存、およびビッグ データ クラスター接続を変更するノートブックを開いてが含まれます。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 107a567da4727fa5786b0b913f1c75706a23a9b7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab731e3f657a629dbb1b4058bd94b32677c2def0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241927"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860513"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Azure Data Studio でノートブックを管理する方法
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事を開き、SQL Server 2019 プレビューで、Azure Data Studio でノートブック ファイルを保存する方法を示します。 SQL Server、ビッグ データ クラスターへの接続を変更する方法も示します。
 
@@ -77,6 +79,6 @@ ms.locfileid: "54241927"
 
    ![メニューにアタッチからサーバーを選択します。](./media/notebooks-how-to-manage/select-attach-to-2.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Data Studio で notebook の詳細については、次を参照してください。 [SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。

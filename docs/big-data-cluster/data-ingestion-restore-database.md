@@ -1,6 +1,6 @@
 ---
 title: データベースの復元
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のマスター インスタンスにデータベースを復元する方法を示します。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7b6f37f3e82b48a0c56e42cae63f898c3c1089fb
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: cc1fddfd7aa2e3400dda3d005eb365cde7364dd4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513209"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860314"
 ---
-# <a name="restore-a-database-into-the-sql-server-2019-big-data-cluster-master-instance"></a>SQL Server 2019 ビッグ データ クラスターのマスター インスタンスにデータベースを復元します。
+# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>SQL Server ビッグ データ クラスターのマスター インスタンスにデータベースを復元します。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のマスター インスタンスに既存のデータベースを復元する方法について説明します。 使用して、バックアップ、コピー、およびアプローチを復元することをお勧めします。
 

@@ -1,6 +1,6 @@
 ---
 title: マスターに接続し、HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: SQL Server のマスター インスタンスと SQL Server 2019 ビッグ データ クラスター (プレビュー) の HDFS/Spark ゲートウェイに接続する方法について説明します。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017708"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860173"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio での SQL Server のビッグ データ クラスターに接続します。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、Azure Data Studio から SQL Server 2019 ビッグ データ クラスター (プレビュー) に接続する方法について説明します。 これには、ビッグ データ クラスターとの対話に使用される 2 つのメイン エンドポイントがあります。
 

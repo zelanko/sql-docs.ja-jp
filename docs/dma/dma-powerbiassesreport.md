@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 786e86fb6f0326e2f8ea568f4c069828ff1ff4c6
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974121"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872073"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Data Migration Assistant を Power BI で作成された統合評価レポートを分析します。
 
@@ -34,23 +34,23 @@ Data Migration Assistant によって作成された移行評価を統合する�
 
 次のレポートが含まれます。 
 
-- [ダッシュ ボード](#dashboard--details)
+- [ダッシュボード](#dashboard-report)
 
   スナップショットの統計情報とドリル ダウン レポートが含まれています。
 
-- [オンプレミスでアップグレードの準備完了](#on-premises-upgrade-readiness--details)
+- [オンプレミスでアップグレードの準備完了](#on-premises-upgrade-readiness-report)
 
   データ ソースは UpgradeSuccessRanking 表示 DMAReporting データベースです。  このレポートは、評価した、データベースの割合のアップグレードの成功を示します。
 
-- [オンプレミスで機能パリティ](#on-premise-feature-parity--details)
+- [オンプレミスで機能パリティ](#on-premises-feature-parity-report)
 
   ターゲット SQL Server のバージョンの機能の推奨事項を示しています。
 
-- [Azure SQL DB アップグレードの準備完了](#azure-sql-db-upgrade-readiness--details)
+- [Azure SQL DB アップグレードの準備完了](#azure-sql-db-upgrade-readiness-report)
 
   データ ソースは UpgradeSuccessRanking 表示 DMAReporting データベースです。  このレポートは、データベースを Azure SQL DB の移行の評価の割合のアップグレードの成功を示します。
 
-- [Azure SQL DB がサポートされていない機能](#azure-sql-db-unsupported-features--details)
+- [Azure SQL DB がサポートされていない機能](#azure-sql-db-unsupported-features-report)
 
   Azure SQL DB (V12) でサポートされていない既存のデータベース機能を示します。
 

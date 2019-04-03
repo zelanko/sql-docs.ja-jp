@@ -13,12 +13,12 @@ author: HJToland3
 ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: f0ea70ded49d37d553f5de188a4a0735f521ee66
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7630aee7ab39f98f372af7c33f277e7272042f43
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987698"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872242"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>Database 実験 Assistant の概要します。
 
@@ -81,7 +81,7 @@ SQL サーバー A の 2 番目の手順/対象サーバーにキャプチャさ
 
    - **再生名前**:トレース再生のファイル名。
    - **コント ローラー マシン名**:分散再生コント ローラー コンピューターの名前。
-   - **コント ローラーでソース トレース ファイルのパスを**:ソース トレース ファイルからのファイル パス[キャプチャ](#Capture)します。
+   - **コント ローラーでソース トレース ファイルのパスを**:ソース トレース ファイルからのファイル パス[キャプチャ](#capture)します。
    - **SQL Server インスタンス名**:ソース トレースを再生する SQL Server インスタンスの名前。
    - **SQL Server マシンでのターゲットのトレース ファイルを格納するパス**:結果として得られる再生トレース ファイルのフォルダーのパス。
 

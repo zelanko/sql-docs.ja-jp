@@ -1,6 +1,6 @@
 ---
 title: サンプル データを読み込む
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: このチュートリアルでは、SQL Server のビッグ データ クラスターにサンプル データを読み込む方法を示します。 サンプル データには、SQL Server のマスター インスタンス内のリレーショナル データが含まれます。 記憶域プールでの HDFS データも含まれています。 このデータは、このセクションでは、他のチュートリアルをサポートします。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: faee29ed293c59752988760ea9ca27a4cf3e372a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566521"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859993"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>チュートリアル:SQL Server 2019 のビッグ データ クラスターにサンプル データを読み込む
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server のビッグ データ クラスターにサンプル データを読み込む
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) にサンプル データを読み込むスクリプトを使用する方法について説明します。 ドキュメント内の他のチュートリアルの多くは、次のサンプル データを使用します。
 
@@ -119,14 +121,14 @@ ms.locfileid: "58566521"
 
 データの仮想化:
 
-- [チュートリアル: ビッグ データの SQL Server クラスターで HDFS のクエリ](tutorial-query-hdfs-storage-pool.md)
-- [チュートリアル: SQL Server のビッグ データ クラスターから Oracle クエリを実行します。](tutorial-query-oracle.md)
+- [チュートリアル:ビッグ データの SQL Server クラスターで HDFS のクエリ](tutorial-query-hdfs-storage-pool.md)
+- [チュートリアル:SQL Server のビッグ データ クラスターから Oracle クエリを実行します。](tutorial-query-oracle.md)
 
 データの取り込み:
 
-- [チュートリアル: Transact SQL を使用した SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-sql.md)
-- [チュートリアル: Spark ジョブの SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-spark.md)
+- [チュートリアル:Transact SQL を使用した SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-sql.md)
+- [チュートリアル:Spark ジョブの SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-spark.md)
 
 Notebooks:
 
-- [チュートリアル: SQL Server 2019 ビッグ データ クラスター上のサンプルの notebook を実行します。](tutorial-notebook-spark.md)
+- [チュートリアル:SQL Server 2019 ビッグ データ クラスター上のサンプルの notebook を実行します。](tutorial-notebook-spark.md)

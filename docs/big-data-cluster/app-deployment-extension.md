@@ -1,22 +1,25 @@
 ---
 title: アプリ展開の拡張機能
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリケーションとしては、Python または R スクリプトを展開します。
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 10fcc71c69ecc138f78cd19c4661f917067ead7e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222026"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860413"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>VS Code を使用してビッグ データの SQL Server クラスターにアプリケーションを展開する方法
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、Visual Studio Code を使用して、アプリのデプロイの拡張機能で SQL Server のビッグ データ クラスターにアプリケーションを展開する方法について説明します。 この機能は、CTP 2.3 で導入されました。 
 

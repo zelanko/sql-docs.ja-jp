@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 9f88178450fb5ca19e52703ad02e29d107ca562a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201961"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872202"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>構成する SQL Server Always On 可用性グループの Linux での高可用性
 
@@ -132,6 +132,7 @@ Linux 上の高可用性のため、可用性グループを作成します。 �
    >[!IMPORTANT]
    >次の 3 つの同期レプリカを AG を作成する前のスクリプトを実行した後、次のスクリプトを実行できません。
 
+<a name="configOnly"></a>
 - 2 つの同期レプリカ構成のレプリカと AG を作成します。
 
    >[!IMPORTANT]
@@ -224,7 +225,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 >既知の問題が、可用性グループがクラスター リソースの場合は、非同期レプリカにデータ損失の強制フェールオーバーが機能しないという現在のリリースであります。 これは、今後のリリースで修正されます。 同期レプリカを手動または自動フェールオーバーは成功します。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server 可用性グループのクラスター リソースの Red Hat Enterprise Linux クラスターを構成します。](sql-server-linux-availability-group-cluster-rhel.md)
 

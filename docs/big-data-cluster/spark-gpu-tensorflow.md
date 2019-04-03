@@ -1,6 +1,6 @@
 ---
 title: GPU のサポートと TensorFlow
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: GPU サポートと共に、ビッグ データ クラスターを展開し、Azure データ Studio ノートブックで TensorFlow を使用します。
 author: lgongmsft
 ms.author: shivprashant
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0336c39a4afc235e29111dd78db128495a8b6e64
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494114"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860463"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>GPU サポートと共に、ビッグ データ クラスターをデプロイして TensorFlow の実行
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、ビッグ データ クラスター コンピューティング集中型ワークロードの GPU 対応ノード プールをサポートする Azure Kubernetes Service (AKS) でデプロイする方法を示します。 Gpu TensorFlow による画像の分類を実行する Azure Data Studio でのサンプル notebook を実行します。
 
@@ -142,7 +144,7 @@ Gpu をサポートする SQL Server 2019 ビッグ データ クラスター (�
       SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
       SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp23-8-0-61-gpu
+      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
       SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
       SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
       SET DOCKER_EMAIL=<your email address>
@@ -170,7 +172,7 @@ Gpu をサポートする SQL Server 2019 ビッグ データ クラスター (�
       export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
       export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp23-8-0-61-gpu"
+      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
       export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
       export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
       export DOCKER_EMAIL="<your email address>"
@@ -190,8 +192,8 @@ Gpu をサポートする SQL Server 2019 ビッグ データ クラスター (�
 
 | Notebook のダウンロード | 説明 |
 |---|---|
-| [**tf-cuda8.ipynb**](https://aka.ms/AA4jdgd) | 8 CUDA、CUDNN 6、および TensorFlow 1.4.0 を使用します。  |
-| [**tf-cuda9.ipynb**](https://aka.ms/AA4ixzr) | 9 CUDA、CUDNN 7、および 1.12.0 TensorFlow を使用します。 |
+| [**tf cuda8.ipynb**](https://aka.ms/AA4jdgd) | 8 CUDA、CUDNN 6、および TensorFlow 1.4.0 を使用します。  |
+| [**tf cuda9.ipynb**](https://aka.ms/AA4ixzr) | 9 CUDA、CUDNN 7、および 1.12.0 TensorFlow を使用します。 |
 
 ローカル コンピューターに適切なノートブック ファイルを配置し、開く PySpark3 カーネルを使用して Azure Data Studio で実行します。 CUDA や TensorFlow の古いバージョンの特別なニーズがない限り、CUDA 9/CUDNN 7/TensorFlow 1.12.0 を選択します。 ビッグ データ クラスターで notebook を使用する方法の詳細については、次を参照してください。 [SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。
 

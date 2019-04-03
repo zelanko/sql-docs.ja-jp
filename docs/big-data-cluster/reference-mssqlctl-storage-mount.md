@@ -1,6 +1,6 @@
 ---
 title: mssqlctl ストレージ マウント リファレンス
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl ストレージ コマンドに関する参照記事です。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f8336c59ffc11ff1a2b7842c393f3387298b832a
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 3ad8a97bac1f708dcf01612368c76d584fa39f5c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527185"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860293"
 ---
-# <a name="mssqlctl-storage-mount"></a>mssqlctl 記憶域のマウント
+# <a name="mssqlctl-storage-mount"></a>mssqlctl ストレージのマウント
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 次の記事への参照を提供します、**ストレージ マウント**コマンド、 **mssqlctl**ツール。 その他の詳細については**mssqlctl**コマンドを参照してください[mssqlctl 参照](reference-mssqlctl.md)します。
 
@@ -24,7 +26,7 @@ ms.locfileid: "57527185"
 
 |||
 |---|---|
-| [create](#create) | HDFS では、リモートのストアのマウントを作成します。 |
+| [作成](#create) | HDFS では、リモートのストアのマウントを作成します。 |
 | [delete](#delete) | HDFS 内の各店舗のマウントを削除します。 |
 | [status](#status) | Mount(s) の状態です。 |
 
@@ -97,7 +99,7 @@ mssqlctl storage mount status
 
 | パラメーター | 説明 |
 |---|---|
-| **--mount-path** | マウントのパス。 必須。 |
+| **-マウント パス** | マウントのパス。 必須。 |
 
 ### <a name="examples"></a>使用例
 

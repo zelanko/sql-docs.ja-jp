@@ -1,6 +1,6 @@
 ---
 title: mssqlctl クラスター デバッグ リファレンス
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl クラスター コマンドに関する参照記事です。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9312e972dfcb439f4ef19a4e72d8d66454622096
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b12b0421cf32a36cfd6d681bc90ad9ca7c3f9209
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527235"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860553"
 ---
-# <a name="mssqlctl-cluster-debug"></a>mssqlctl cluster debug
+# <a name="mssqlctl-cluster-debug"></a>mssqlctl クラスターのデバッグ
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 次の記事への参照を提供する、**クラスター デバッグ**コマンド、 **mssqlctl**ツール。 その他の詳細については**mssqlctl**コマンドを参照してください[mssqlctl 参照](reference-mssqlctl.md)します。
 
@@ -24,8 +26,8 @@ ms.locfileid: "57527235"
 
 |||
 |---|---|
-| [copy-logs](#copy-logs) | ログをコピーします。 |
-| [ダンプ](#dump) | トリガー ログのダンプします。 |
+| [コピー ログ](#copy-logs) | ログをコピーします。 |
+| [ダンプ (dump)](#dump) | トリガー ログのダンプします。 |
 
 ## <a id="copy-logs"></a> クラスターのデバッグのコピー ログ
 
@@ -47,8 +49,8 @@ mssqlctl cluster debug copy-logs
 | **--namespace -n** | クラスター名 kubernetes 名前空間に使用をします。 必須。 |
 | **--container -c** | ログのコピーのような名前のコンテナーでは、省略可能、既定ではコピーのすべてのコンテナーのログ。 複数回を指定できません。 複数回指定すると場合は、最後 1 つが使用されます。 |
 | **--pod -p** | 類似した名前のポッドのログをコピーします。 すべてのポッドの既定のコピー ログが省略可能です。 複数回を指定できません。 複数回指定すると場合は、最後 1 つが使用されます。 |
-| **--target-folder -d** | ログをコピーする対象のフォルダー パス。 省略可能で、既定では、ローカル フォルダーのまま、結果を作成します。  複数回を指定できません。 複数回指定すると場合は、最後 1 つが使用されます。 |
-| **--timeout-t** | コマンドが完了するまで待機する秒数。 既定値は、0 では制限されません。 |
+| **-ターゲット フォルダー-d** | ログをコピーする対象のフォルダー パス。 省略可能で、既定では、ローカル フォルダーのまま、結果を作成します。  複数回を指定できません。 複数回指定すると場合は、最後 1 つが使用されます。 |
+| **--timeout -t** | コマンドが完了するまで待機する秒数。 既定値は、0 では制限されません。 |
 
 ## <a id="dump"></a> クラスター デバッグ ダンプ
 
@@ -67,7 +69,7 @@ mssqlctl cluster debug dump
 |---|---|
 | **--container -c** | ログのコピーのような名前のコンテナーでは、省略可能、既定ではコピーのすべてのコンテナーのログ。 複数回を指定できません。 複数回指定すると場合は、最後 1 つが使用されます。  使用できる値: mssql コント ローラー。 |
 | **--namespace -n** | クラスター名 kubernetes 名前空間に使用をします。 必須。 |
-| **--target-folder -d** | ログをコピーする対象のフォルダー パス。 省略可能で、既定では、ローカル フォルダーのまま、結果を作成します。  複数回を指定できません。 複数回指定すると場合は、最後 1 つが使用されます。  既定値:`./output/dump`します。 必須。 |
+| **-ターゲット フォルダー-d** | ログをコピーする対象のフォルダー パス。 省略可能で、既定では、ローカル フォルダーのまま、結果を作成します。  複数回を指定できません。 複数回指定すると場合は、最後 1 つが使用されます。  既定値:`./output/dump`します。 必須。 |
 
 ## <a name="next-steps"></a>次のステップ
 

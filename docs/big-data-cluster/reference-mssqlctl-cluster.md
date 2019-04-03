@@ -1,6 +1,6 @@
 ---
 title: mssqlctl クラスターの参照
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl クラスター コマンドに関する参照記事です。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 130d3019d49deb7851696f6a1db2f77040734b31
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527215"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860473"
 ---
-# <a name="mssqlctl-cluster"></a>mssqlctl cluster
+# <a name="mssqlctl-cluster"></a>mssqlctl クラスター
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 次の記事への参照を提供する、**クラスター**コマンド、 **mssqlctl**ツール。 その他の詳細については**mssqlctl**コマンドを参照してください[mssqlctl 参照](reference-mssqlctl.md)します。
 
@@ -24,7 +26,7 @@ ms.locfileid: "57527215"
 
 |||
 |---|---|
-| [create](#create) | クラスターを作成します。 |
+| [作成](#create) | クラスターを作成します。 |
 | [delete](#delete) | クラスターを削除します。 |
 | [config](reference-mssqlctl-cluster-config.md) | クラスターの構成コマンド。 |
 | [debug](reference-mssqlctl-cluster-debug.md) | コマンドをデバッグします。 |

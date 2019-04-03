@@ -1,6 +1,6 @@
 ---
 title: デプロイ クイック スタート
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 ビッグ データ クラスター (プレビュー) Azure Kubernetes Service (AKS) でのデプロイのチュートリアルです。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 00810eb3f57fdaf8f87fc0db16744ab9e3334f70
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 7b8abf65b5c2e7abf8823ce98aede22bba14caad
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618149"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860529"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート: SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 このクイック スタートでは、サンプル デプロイ スクリプトを使用して Azure Kubernetes Service (AKS) を SQL Server 2019 ビッグ データ クラスター (プレビュー) をデプロイします。 
 
@@ -81,7 +83,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **マシンのサイズ** | [マシンのサイズ](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)AKS クラスター内のノードを使用する (既定**Standard_L8s**)。 |
    | **ワーカー ノード** | AKS クラスター内の worker ノードの数 (既定**1**)。 |
    | **クラスター名** | AKS クラスターとビッグ データ クラスターの両方の名前。 クラスターの名前は、小文字の英数字文字のみとスペースなしである必要があります。 (既定**sqlbigdata**)。 |
-   | **Password** | コント ローラー、HDFS/Spark ゲートウェイ、およびマスター インスタンスのパスワード (デフォルト**MySQLBigData2019**)。 |
+   | **パスワード** | コント ローラー、HDFS/Spark ゲートウェイ、およびマスター インスタンスのパスワード (デフォルト**MySQLBigData2019**)。 |
    | **コント ローラーのユーザー** | コント ローラーのユーザーのユーザー名 (既定:**管理者**)。 |
 
    > [!IMPORTANT]
@@ -193,4 +195,4 @@ az group delete -n <resource group name>
 これで、SQL Server のビッグ データ クラスターをデプロイすると、サンプル データを読み込むし、チュートリアルの確認できます。
 
 > [!div class="nextstepaction"]
-> [チュートリアル: SQL Server 2019 のビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
+> [チュートリアル:SQL Server 2019 のビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)

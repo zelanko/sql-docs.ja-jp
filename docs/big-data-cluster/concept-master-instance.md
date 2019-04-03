@@ -1,6 +1,6 @@
 ---
 title: マスター インスタンスとは何ですか。
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) で SQL Server のマスター インスタンスについて説明します。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9c3809e481e00c94f01c1968a82638df3e37f80f
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 68d412e3d4b8147a2e451ff2932aa79e6dbeca5e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477948"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860683"
 ---
-# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 ビッグ データ クラスター内のマスター インスタンスとは何ですか。
+# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスター内のマスター インスタンスとは何ですか。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、の役割を説明します、 *SQL Server のマスター インスタンス*で SQL Server 2019 のビッグ データ クラスター。 マスター インスタンスが SQL Server のビッグ データ クラスターで実行されている SQL Server インスタンス[コントロール プレーン](big-data-cluster-overview.md#controlplane)します。
 

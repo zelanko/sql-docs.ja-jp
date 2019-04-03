@@ -1,6 +1,6 @@
 ---
 title: 記憶域プールとは何ですか。
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: この記事では、SQL Server 2019 のビッグ データ クラスターで記憶域プールについて説明します。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7dfb89103bb83fc77c590e5c5b5984cbd96b197d
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: b0775ac479b45dcb0fc0df23460b0fda0b783545
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477927"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860573"
 ---
-# <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>記憶域プール (SQL Server 2019 ビッグ データ クラスター) とは何ですか。
+# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>記憶域プール (SQL Server のビッグ データ クラスター) とは何ですか。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、の役割を説明します、 *SQL Server の記憶域プール*で SQL Server 2019 ビッグ データ クラスター (プレビュー)。 次のセクションでは、アーキテクチャと SQL の記憶域プールの機能について説明します。
 

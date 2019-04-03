@@ -1,6 +1,6 @@
 ---
 title: Minikube を構成します。
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 1 台のコンピューターでのビッグ データ クラスター (プレビュー) のデプロイを SQL Server 2019 minikube を構成する方法について説明します。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: eb8cd26b903afff6c4ad7427a3d12f74c476205d
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: b091ec919c928f7c78eb37feca2543f06fe4f584
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017748"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860693"
 ---
-# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Minikube の SQL Server 2019 ビッグ データ クラスターのデプロイを構成します。
+# <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>SQL Server のビッグ データ クラスター展開 minikube を構成します。
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、構成する方法を説明**minikube**単一のコンピューターの SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイにします。 Minikube は、ラップトップやデスクトップなどの単一のコンピューター上で Kubernetes を実行しやすくツールです。 Minikube は実行 Kubernetes を試すか、それを使用した開発を検討しているユーザーのラップトップ コンピューターで、VM 内で単一ノードの Kubernetes クラスターを日常的なされます。 
 

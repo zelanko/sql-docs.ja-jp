@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: de46594a5de2bee6e50786de25826c96da01ae53
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 77d08db22ca7ff1b4b66620d277280f0c1ac314e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513069"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860583"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>ストアド プロシージャに埋め込まれた Python を使用して予測を実行します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -172,8 +172,8 @@ GO
 
 このセクションでは 2 つのストアド プロシージャを呼び出すことによって、1 つの予測を作成する方法について説明します。
 
-+ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy) scikit を使用して単一行のスコアリングのために設計されていますが、モデルを学習します。
-+ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy)は revoscalepy モデルを使用して単一行のスコアリングのために設計されています。
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) scikit を使用して単一行のスコアリングのために設計されていますが、モデルを学習します。
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy)は revoscalepy モデルを使用して単一行のスコアリングのために設計されています。
 + まだモデルをトレーニングしていない場合に戻って[手順 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 
 一連の乗客数、乗車距離などの 1 つの値を入力としてモデル take は両方です。 テーブル値関数の場合、 `fnEngineerFeatures`、新しい機能への入力からの緯度と経度の値の変換、直線距離に使用されます。 [レッスン 4](sqldev-py4-create-data-features-using-t-sql.md)このテーブル値関数の説明が含まれています。

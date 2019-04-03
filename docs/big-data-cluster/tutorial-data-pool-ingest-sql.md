@@ -1,6 +1,6 @@
 ---
 title: SQL Server のデータ プールにデータを取り込む
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) のデータ プールにデータを取り込む方法を示します。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5ae0777c2bc98e99c83bca35fa2aab8efc8b57a5
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 497dd1856a8847bbba9b05d3abc11836841f6e7c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509939"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860344"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>チュートリアル:Transact SQL を使用した SQL Server のデータ プールにデータを取り込む
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 このチュートリアルで TRANSACT-SQL を使用してデータを読み込む方法、[データ プール](concept-data-pool.md)の SQL Server 2019 ビッグ データ クラスター (プレビュー)。 ビッグ データの SQL Server クラスターでのさまざまなソースからデータを取り込み、データ プール インスタンスに分散します。
 

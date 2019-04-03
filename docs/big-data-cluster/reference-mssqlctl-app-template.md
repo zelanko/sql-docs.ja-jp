@@ -1,6 +1,6 @@
 ---
 title: mssqlctl アプリ テンプレート リファレンス
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl アプリ テンプレート コマンドに関する参照記事です。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16583ba970bfc13312864ea2e9d2571b04c20fcb
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527225"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860103"
 ---
 # <a name="mssqlctl-app-template"></a>mssqlctl アプリ テンプレート
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 次の記事への参照を提供する、**アプリ テンプレート**コマンド、 **mssqlctl**ツール。 その他の詳細については**mssqlctl**コマンドを参照してください[mssqlctl 参照](reference-mssqlctl.md)します。
 
@@ -24,8 +26,8 @@ ms.locfileid: "57527225"
 
 |||
 |---|---|
-| [list](#list) | サポートされているテンプレートをフェッチします。 |
-| [プル](#pull) | サポートされているテンプレートをダウンロードします。 |
+| [一覧](#list) | サポートされているテンプレートをフェッチします。 |
+| [プル (pull)](#pull) | サポートされているテンプレートをダウンロードします。 |
 
 ## <a id="list"></a> mssqlctl アプリ テンプレートの一覧
 
