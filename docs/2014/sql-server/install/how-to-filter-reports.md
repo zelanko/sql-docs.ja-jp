@@ -26,7 +26,7 @@ ms.locfileid: "48222142"
   
 ### <a name="to-filter-reports"></a>レポートに表示する問題を選択するには  
   
-1.  レポート ビューアーで、フィルター選択するレポートを表示します。 手順については、次を参照してください。[方法: アップグレード アドバイザーのレポート表示](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)します。  
+1.  レポート ビューアーで、フィルター選択するレポートを表示します。 手順については、[方法: アップグレード アドバイザーのレポート表示](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)を参照してください。  
   
 2.  **でフィルター処理**一覧を表示する問題の種類を選択します。  
   

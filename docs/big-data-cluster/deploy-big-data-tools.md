@@ -71,4 +71,4 @@ ms.locfileid: "58860483"
 - [クイック スタート: SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。](quickstart-big-data-cluster-deploy.md)
 - [Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法](deployment-guidance.md)
 
-ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)します。
+ビッグ データ クラスターに関する詳細については、[SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)を参照してください。
