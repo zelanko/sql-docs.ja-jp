@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f4758f443ebb5398ecc1e3b3d833d375b068c4a
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 87488f36a4b4b01181cd973a75d6e5c7f2e233d7
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080409"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860723"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -34,64 +34,60 @@ ms.locfileid: "58080409"
 クエリの実行中にリアルタイムでクエリの進行状況を監視します。 たとえば、この DMV を使用して、クエリのどの部分が低速に実行されているかを判断します。 この DMV をシステムの他の DMV と結合するには、説明フィールドで特定されている列を使用します。 または、タイムスタンプ列を使用してこの DMV を他のパフォーマンス カウンター (パフォーマンス モニター、xperf など) とを結合します。  
   
 ## <a name="table-returned"></a>返されるテーブル  
- 返されるカウンタでは、演算子別、スレッド別です。 結果は動的であり、クエリの終了時にのみ出力を作成する SET STATISTICS XML ON などの既存のオプションの結果が一致しません。  
+返されるカウンタでは、演算子別、スレッド別です。 結果は動的でありなど、既存のオプションの結果を一致しない`SET STATISTICS XML ON`クエリの終了時にのみ出力を作成します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|session_id|**smallint**|このクエリを実行するセッションを識別します。 dm_exec_sessions.session_id を参照します。|  
-|request_id|**int**|対象の要求を識別します。 Dm_exec_sessions.request_id を参照します。|  
-|sql_handle|**varbinary(64)**|バッチを一意に識別するトークンまたはクエリの一部であるストアド プロシージャです。 Dm_exec_query_stats.sql_handle を参照します。|  
-|plan_handle|**varbinary(64)**|実行されるバッチのクエリ実行プランを一意に識別するトークンと、そのプランがプラン キャッシュ内に存在または現在実行しています。 Dm_exec_query_stats.plan_handle を参照します。|  
+|session_id|**SMALLINT**|このクエリを実行するセッションを識別します。 dm_exec_sessions.session_id を参照します。|  
+|request_id|**ssNoversion**|対象の要求を識別します。 Dm_exec_sessions.request_id を参照します。|  
+|sql_handle|**varbinary (64)**|バッチを一意に識別するトークンまたはクエリの一部であるストアド プロシージャです。 Dm_exec_query_stats.sql_handle を参照します。|  
+|plan_handle|**varbinary (64)**|実行されるバッチのクエリ実行プランを一意に識別するトークンと、そのプランがプラン キャッシュ内に存在または現在実行しています。 Dm_exec_query_stats.plan_handle を参照します。|  
 |physical_operator_name|**nvarchar (256)**|物理演算子の名前。|  
-|node_id|**int**|クエリ ツリー内の演算子ノードを識別します。|  
-|thread_id|**int**|(並列クエリの場合) に対して、同じクエリ演算子のノードに属するスレッドを識別します。|  
-|task_address|**varbinary(8)**|このスレッドが使用している SQLOS タスクを識別します。 Dm_os_tasks.task_address を参照します。|  
-|row_count|**bigint**|これまでに演算子によって返される行の数。|  
-|rewind_count|**bigint**|これまでの巻き戻しの数。|  
-|rebind_count|**bigint**|これまでの再バインドの数。|  
-|end_of_scan_count|**bigint**|これまでのスキャンの終了の数。|  
-|estimate_row_count|**bigint**|行の推定数。 Estimated_row_count を実際の row_count と比較すると解決することができます。|  
-|first_active_time|**bigint**|演算子が最初に呼び出されたときに、ミリ秒単位の時間。|  
-|last_active_time|**bigint**|演算子が最後に呼び出された時刻 (ミリ秒単位)。|  
-|open_time|**bigint**|開いたときのタイムスタンプ (ミリ秒単位)。|  
-|first_row_time|**bigint**|ミリ秒単位で最初の行を開いたときのタイムスタンプ。|  
-|last_row_time|**bigint**|最後の行を開いたときのタイムスタンプ (ミリ秒単位)。|  
-|close_time|**bigint**|(ミリ秒) を閉じるときのタイムスタンプ。|  
-|elapsed_time_ms|**bigint**|経過時間の合計 (ミリ秒) をターゲット ノードの操作によってこれまでに使用します。|  
-|cpu_time_ms|**bigint**|これまでにターゲット ノードの操作によって CPU 使用率 (ミリ秒単位) の時間の合計数します。|  
-|database_id|**smallint**|読み取りおよび書き込みが実行されたオブジェクトを含むデータベースの ID。|  
-|object_id|**int**|読み取りおよび書き込みが実行されたオブジェクトの識別子。 sys.objects.object_id を参照します。|  
-|index_id|**int**|行セットが開かれている対象のインデックス (ある場合)。|  
-|scan_count|**bigint**|これまでのテーブル/インデックス スキャンの数。|  
-|logical_read_count|**bigint**|これまでの論理読み取りの数。|  
-|physical_read_count|**bigint**|これまでに物理の数を読み取ります。|  
-|read_ahead_count|**bigint**|これまでの先行読み取りの数。|  
-|write_page_count|**bigint**|これまでのスピルによるページ書き込みの数。|  
-|lob_logical_read_count|**bigint**|これまでに論理 LOB の数を読み取ります。|  
-|lob_physical_read_count|**bigint**|LOB 物理読み取りの数これまでにします。|  
-|lob_read_ahead_count|**bigint**|LOB 先行読み取りのこれまでに数です。|  
-|segment_read_count|**int**|これまでのセグメント先行読み取りの数。|  
-|segment_skip_count|**int**|セグメントの数は、これまでにスキップされます。| 
-|actual_read_row_count|**bigint**|残余述語が適用される前に、演算子によって読み取られた行の数。| 
-|estimated_read_row_count|**bigint**|**適用対象:** 以降で[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>残余述語が適用される前に、演算子によって読み取られる行の数が推定されます。|  
+|node_id|**ssNoversion**|クエリ ツリー内の演算子ノードを識別します。|  
+|thread_id|**ssNoversion**|(並列クエリの場合) に対して、同じクエリ演算子のノードに属するスレッドを識別します。|  
+|task_address|**varbinary (8)**|このスレッドが使用している SQLOS タスクを識別します。 Dm_os_tasks.task_address を参照します。|  
+|row_count|**BIGINT**|これまでに演算子によって返される行の数。|  
+|rewind_count|**BIGINT**|これまでの巻き戻しの数。|  
+|rebind_count|**BIGINT**|これまでの再バインドの数。|  
+|end_of_scan_count|**BIGINT**|これまでのスキャンの終了の数。|  
+|estimate_row_count|**BIGINT**|行の推定数。 Estimated_row_count を実際の row_count と比較すると解決することができます。|  
+|first_active_time|**BIGINT**|演算子が最初に呼び出されたときに、ミリ秒単位の時間。|  
+|last_active_time|**BIGINT**|演算子が最後に呼び出された時刻 (ミリ秒単位)。|  
+|open_time|**BIGINT**|開いたときのタイムスタンプ (ミリ秒単位)。|  
+|first_row_time|**BIGINT**|ミリ秒単位で最初の行を開いたときのタイムスタンプ。|  
+|last_row_time|**BIGINT**|最後の行を開いたときのタイムスタンプ (ミリ秒単位)。|  
+|close_time|**BIGINT**|(ミリ秒) を閉じるときのタイムスタンプ。|  
+|elapsed_time_ms|**BIGINT**|経過時間の合計 (ミリ秒) をターゲット ノードの操作によってこれまでに使用します。|  
+|cpu_time_ms|**BIGINT**|これまでにターゲット ノードの操作によって CPU 使用率 (ミリ秒単位) の時間の合計数します。|  
+|database_id|**SMALLINT**|読み取りおよび書き込みが実行されたオブジェクトを含むデータベースの ID。|  
+|object_id|**ssNoversion**|読み取りおよび書き込みが実行されたオブジェクトの識別子。 sys.objects.object_id を参照します。|  
+|index_id|**ssNoversion**|行セットが開かれている対象のインデックス (ある場合)。|  
+|scan_count|**BIGINT**|これまでのテーブル/インデックス スキャンの数。|  
+|logical_read_count|**BIGINT**|これまでの論理読み取りの数。|  
+|physical_read_count|**BIGINT**|これまでに物理の数を読み取ります。|  
+|read_ahead_count|**BIGINT**|これまでの先行読み取りの数。|  
+|write_page_count|**BIGINT**|これまでのスピルによるページ書き込みの数。|  
+|lob_logical_read_count|**BIGINT**|これまでに論理 LOB の数を読み取ります。|  
+|lob_physical_read_count|**BIGINT**|LOB 物理読み取りの数これまでにします。|  
+|lob_read_ahead_count|**BIGINT**|LOB 先行読み取りのこれまでに数です。|  
+|segment_read_count|**ssNoversion**|これまでのセグメント先行読み取りの数。|  
+|segment_skip_count|**ssNoversion**|セグメントの数は、これまでにスキップされます。| 
+|actual_read_row_count|**BIGINT**|残余述語が適用される前に、演算子によって読み取られた行の数。| 
+|estimated_read_row_count|**BIGINT**|**適用対象:** 以降で[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>残余述語が適用される前に、演算子によって読み取られる行の数が推定されます。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  クエリ プランのノードが、I/O を持たない場合、O 関連のすべてのカウンターは、NULL に設定されます。  
   
  この DMV によって報告された O 関連のカウンターがレポートされるものより細かい`SET STATISTICS IO`次の 2 つの方法で。  
   
--   `SET STATISTICS IO` すべての I/O をまとめて、特定のテーブルのカウンターをグループ化します。 この DMV では、テーブルに対する IO を実行するクエリ プランのそれぞれのノードについて、個別のカウンターを取得します。  
+-   `SET STATISTICS IO` すべての I/O をまとめて、特定のテーブルのカウンターをグループ化します。 この DMV でテーブルに I/O を実行するクエリ プランのノードごとに個別のカウンターが表示されます。  
   
 -   並列スキャンがある場合、この DMV では、スキャンで使用される並列スレッドごとにカウンターがレポートされます。
  
-以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 では、標準的なクエリの実行統計プロファイリング インフラストラクチャでは、軽量なクエリの実行統計プロファイリング インフラストラクチャのサイド バイ サイドでが存在します。 
-
-`SET STATISTICS XML ON` `SET STATISTICS PROFILE ON`常に標準的なクエリの実行統計プロファイリング インフラストラクチャを使用します。
-
-出力を有効にする`sys.dm_exec_query_profiles`プロファイリング インフラストラクチャ クエリを有効にします。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
+以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、SP1、*標準クエリ実行統計プロファイリング インフラストラクチャ*と並行して存在する、*軽量なクエリ実行統計プロファイリング インフラストラクチャ*. `SET STATISTICS XML ON` `SET STATISTICS PROFILE ON`常に使用して、*標準クエリ実行統計プロファイリング インフラストラクチャ*します。 `sys.dm_exec_query_profiles`値を入力するインフラストラクチャをプロファイリングするクエリの 1 つ有効にします。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
 
 >[!NOTE]
-> 調査中のクエリは、プロファイリング インフラストラクチャを有効になっている後に起動するがあります。 クエリが既に実行されている場合、拡張イベント セッションの開始と sys.dm_exec_query_profiles で結果が生成されません。
+> 調査中のクエリを開始する必要があります**後**プロファイリング インフラストラクチャ クエリが有効になって、クエリが開始された後に有効にするで結果が得られない`sys.dm_exec_query_profiles`します。 クエリのインフラストラクチャのプロファイリングを有効にする方法の詳細については、次を参照してください。[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)します。
 
 ## <a name="permissions"></a>アクセス許可  
 
@@ -130,8 +126,6 @@ ORDER BY node_id;
 ```  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
-  
-
+ 
