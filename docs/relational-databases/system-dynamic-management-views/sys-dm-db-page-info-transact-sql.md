@@ -20,39 +20,34 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 37c334f5c5107b2716601916517e888d90164226
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 2246abe2343622f2aece785a31e1e31f7166822b
+ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732079"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899718"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 データベース内のページに関する情報を返します。  ページで、ヘッダー情報を含む 1 つの行を返しますなど、 `object_id`、 `index_id`、および`partition_id`します。  この関数を使用すると、ほとんどの場合に `DBCC PAGE` を使用する必要がなくなります。
 
-## <a name="syntax"></a>構文  
-  
+## <a name="syntax"></a>構文   
 ```  
 sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )  
 ``` 
 
 ## <a name="arguments"></a>引数  
- *DatabaseId* |NULL |既定値  
-
- データベースの ID です。 *DatabaseId*は**smallint**します。 有効な入力は、データベースの ID 番号です。 既定では null の場合、ただし送信このパラメーターの NULL 値がエラーになります。
+*DatabaseId* | NULL | DEFAULT     
+データベースの ID です。 *DatabaseId*は**smallint**します。 有効な入力は、データベースの ID 番号です。 既定では null の場合、ただし送信このパラメーターの NULL 値がエラーになります。
  
-*FileId* |NULL |既定値
-
+*FileId* | NULL | DEFAULT   
 ファイルの ID を指定します。 *FileId*は**int**します。有効な入力で指定されたデータベース内のファイルの ID 番号は、 *DatabaseId*します。 既定では null の場合、ただし送信このパラメーターの NULL 値がエラーになります。
 
-*PageId* |NULL |既定値
-
+*PageId* | NULL | DEFAULT   
 ページの ID です。  *PageId*は**int**します。有効な入力で指定されたファイル内のページの ID 番号は、 *FileId*します。 既定では null の場合、ただし送信このパラメーターの NULL 値がエラーになります。
 
-*モード*|NULL |既定値
-
+*モード*|NULL |既定値   
 関数の出力の詳細のレベルを決定します。 '制限' はすべての説明列に NULL 値を返しますには、'詳細'、列の説明を入力します。  既定値は '制限されています '。
 
 ## <a name="table-returned"></a>返されるテーブル  
@@ -63,11 +58,11 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |file_id |ssNoversion |ファイル ID |
 |page_id |ssNoversion |ページ ID |
 |page_type |ssNoversion |ページの種類 |
-|page_type_desc |nvarchar(64) |ページの種類の説明 |
-|page_flag_bits |nvarchar(64) |ページ ヘッダー フラグのビット |
+|page_type_desc |Nvarchar(64) |ページの種類の説明 |
+|page_flag_bits |Nvarchar(64) |ページ ヘッダー フラグのビット |
 |page_flag_bits_desc |nvarchar (256) |ページ ヘッダー フラグ ビット説明 |
-|page_type_flag_bits |nvarchar(64) |ページ ヘッダーの型のフラグのビット |
-|page_type_flag_bits_desc |nvarchar(64) |ページ ヘッダー内の型フラグのビットの説明 |
+|page_type_flag_bits |Nvarchar(64) |ページ ヘッダーの型のフラグのビット |
+|page_type_flag_bits_desc |Nvarchar(64) |ページ ヘッダー内の型フラグのビットの説明 |
 |object_id |ssNoversion |ページを所有するオブジェクトの ID |
 |index_id |ssNoversion |インデックス (ヒープ データ ページの場合は 0) の ID |
 |partition_id |BIGINT |パーティションの ID |
@@ -81,35 +76,35 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |pfs_file_id |SMALLINT |対応する PFS ページのファイル ID |
 |pfs_page_id |ssNoversion |対応する PFS ページのページ ID |
 |pfs_alloc_percent |ssNoversion |PFS バイトで示されている割り当て % |
-|pfs_status |nvarchar(64) |PFS バイト |
-|pfs_status_desc |nvarchar(64) |PFS バイトの説明 |
+|pfs_status |Nvarchar(64) |PFS バイト |
+|pfs_status_desc |Nvarchar(64) |PFS バイトの説明 |
 |gam_file_id |SMALLINT |対応する GAM ページのファイル ID |
 |gam_page_id |ssNoversion |対応する GAM ページのページ ID |
 |gam_status |bit |GAM に割り当てられた指定する場合のビット |
-|gam_status_desc |nvarchar(64) |状態の GAM のビットの説明 |
+|gam_status_desc |Nvarchar(64) |状態の GAM のビットの説明 |
 |sgam_file_id |SMALLINT |ファイルの対応する SGAM ページの ID |
 |sgam_page_id |ssNoversion |対応する SGAM ページのページ ID |
 |sgam_status |bit |SGAM で割り当てを指定する場合にビット |
-|sgam_status_desc |nvarchar(64) |状態の SGAM のビットの説明 |
+|sgam_status_desc |Nvarchar(64) |状態の SGAM のビットの説明 |
 |diff_map_file_id |SMALLINT |対応する差分ビットマップ ページのファイル ID |
 |diff_map_page_id |ssNoversion |対応する差分ビットマップ ページのページ ID |
 |diff_status |bit |差分の状態が変更されたかどうかを示すビット |
-|diff_status_desc |nvarchar(64) |差分の状態のビットの説明 |
+|diff_status_desc |Nvarchar(64) |差分の状態のビットの説明 |
 |ml_file_id |SMALLINT |最小ログ記録ビットマップの該当するページのファイル ID |
 |ml_page_id |ssNoversion |最小ログ記録ビットマップの該当するページのページ ID |
 |ml_status |bit |ビットを示すかどうか、ページは、最小ログ記録 |
-|ml_status_desc |nvarchar(64) |ビットが最小ログ記録の状態の説明 |
+|ml_status_desc |Nvarchar(64) |ビットが最小ログ記録の状態の説明 |
 |free_bytes |SMALLINT |ページ上の空きバイト数 |
 |free_data_offset |ssNoversion |データ領域の最後に空き領域のオフセットします。 |
 |reserved_bytes |SMALLINT |すべてのトランザクションによって予約された空きバイト数 (場合ヒープ) <br> (インデックスのリーフ) の場合、非実体行の数 |
 |reserved_xdes_id |SMALLINT |M_xdesID m_reservedCnt に起因する領域 <br> デバッグの目的でのみ |
-|xdes_id |nvarchar(64) |M_reserved から提供された最新のトランザクション <br> デバッグの目的でのみ |
+|xdes_id |Nvarchar(64) |M_reserved から提供された最新のトランザクション <br> デバッグの目的でのみ |
 |prev_page_file_id |SMALLINT |前のページのファイル ID |
 |prev_page_page_id |ssNoversion |前のページのページ ID |
 |next_page_file_id |SMALLINT |次のページのファイル ID |
 |next_page_page_id |ssNoversion |次のページのページ ID |
 |min_len |SMALLINT |固定サイズの行の長さ |
-|lsn |nvarchar(64) |ログ シーケンス番号/タイムスタンプ |
+|lsn |Nvarchar(64) |ログ シーケンス番号/タイムスタンプ |
 |header_version |ssNoversion |ページ ヘッダーのバージョン |
 
 ## <a name="remarks"></a>コメント
@@ -147,8 +142,9 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ```
 
 ## <a name="see-also"></a>参照  
-[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [データベース関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_exec_requests (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+[sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+[sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 
