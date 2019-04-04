@@ -357,7 +357,7 @@ ms.locfileid: "56295370"
 4.  **[保存]** をクリックします。  
   
 ##  <a name="Export"></a> 7.レポートをエクスポートする  
- レポートは、Microsoft Excel や CSV (コンマ区切り) 形式など、別の形式にエクスポートすることができます。 詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)します。  
+ レポートは、Microsoft Excel や CSV (コンマ区切り) 形式など、別の形式にエクスポートすることができます。 詳細については、[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)を参照してください。  
   
  このチュートリアルでは、レポートを Excel にエクスポートします。また、レポートのプロパティを設定して、ブック見出しに独自の名前を指定します。  
   

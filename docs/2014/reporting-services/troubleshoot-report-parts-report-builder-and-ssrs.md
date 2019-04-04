@@ -27,7 +27,7 @@ ms.locfileid: "56288520"
  自分の権限と同僚の権限を確認するには、レポート サーバー管理者に問い合わせてください。  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>SharePoint サーバーにアップロードしたレポート パーツを検索しても、 表示されない  
- レポート ビルダーを使用してパブリッシュする代わりに、SharePoint ドキュメント ライブラリに手動でアップロードしたレポート パーツは、レポート パーツ ギャラリーに表示されない場合があります。 ギャラリー検索に使用されるレポート サーバーは、SharePoint ドキュメント ライブラリのコンテンツと同期することが必要な場合があります。 詳細については、次を参照してください。 [SharePoint サーバーの全体管理でレポート サーバー ファイル同期機能をアクティブ化](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com します。  
+ レポート ビルダーを使用してパブリッシュする代わりに、SharePoint ドキュメント ライブラリに手動でアップロードしたレポート パーツは、レポート パーツ ギャラリーに表示されない場合があります。 ギャラリー検索に使用されるレポート サーバーは、SharePoint ドキュメント ライブラリのコンテンツと同期することが必要な場合があります。 詳細については、[SharePoint サーバーの全体管理でレポート サーバー ファイル同期機能をアクティブ化](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com を参照してください。  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>他の人のレポートに画像が表示されない  
  画像ファイルのリンクとなるレポート パーツをパブリッシュした場合、このレポート パーツは単なるリンクになります。 他の人がレポートに画像レポート パーツを作成したときに画像が表示されない場合は、リンク先の画像に対する権限を持っていないことが考えられます。  

@@ -21,7 +21,7 @@ ms.locfileid: "56028283"
   ここでは、オブジェクト エクスプローラーを使用して、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の単一インスタンス上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に対して、ベスト プラクティス ポリシーの要求時評価を実行します。  
   
 > [!NOTE]  
->  単一インスタンス上のポリシーの評価は、登録済みサーバーを通じて行うこともできます。 詳細については、次を参照してください。[登録済みサーバーを使用して、オンデマンド評価の実行](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md)します。  
+>  単一インスタンス上のポリシーの評価は、登録済みサーバーを通じて行うこともできます。 詳細については、[登録済みサーバーを使用して、オンデマンド評価の実行](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md)を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
  このレッスンでは、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のバージョンを使用します。  

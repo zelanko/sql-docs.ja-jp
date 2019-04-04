@@ -24,7 +24,7 @@ ms.locfileid: "51661811"
 # <a name="unicode"></a>Unicode
 Unicode では、多くの言語での文字のエンコードを定義します。  
   
- Unicode 規格の詳細については、次を参照してください。 [、Unicode Consortium](https://www.unicode.org)します。  
+ Unicode 規格の詳細については、[、Unicode Consortium](https://www.unicode.org)を参照してください。  
   
  Unicode では、ユニバーサル文字セットを定義します。 Windows の ANSI コード ページは、通常 1 つの言語の文字を含む、文字セットを定義します。 異なるコード ページを使用するために必要なアプリケーションを記述するより難しい場合があります。  
   

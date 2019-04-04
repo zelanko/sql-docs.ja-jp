@@ -32,7 +32,7 @@ ms.locfileid: "51661881"
   
 -   [軸](../xquery/path-expressions-specifying-axis.md)します。  
   
--   ノード テスト。 詳細については、次を参照してください。[パス式のステップでノード テストを指定する](../xquery/path-expressions-specifying-node-test.md)します。  
+-   ノード テスト。 詳細については、[パス式のステップでノード テストを指定する](../xquery/path-expressions-specifying-node-test.md)を参照してください。  
   
 -   0 個以上の述語。 これは省略可能です。  
   

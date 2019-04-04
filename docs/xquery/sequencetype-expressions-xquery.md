@@ -139,7 +139,7 @@ where ProductModelID=19
  クエリから True が返されます。  
   
 ### <a name="example-c"></a>例 C  
- 共用体の型を使用する場合、`instance of`式[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]制限があります。具体的には、要素または属性の型が共用体型が場合`instance of`正確な型が判断されません。 したがって、SequenceType で使用されているアトミック型が、simpleType 階層内にある式の実際の型の最上位の親でない限り、クエリから False が返されます。 つまり、SequenceType に指定したアトミック型は、anySimpleType の直接の子である必要があります。 型階層については、次を参照してください。[型キャストの規則では、XQuery](../xquery/type-casting-rules-in-xquery.md)します。  
+ 共用体の型を使用する場合、`instance of`式[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]制限があります。具体的には、要素または属性の型が共用体型が場合`instance of`正確な型が判断されません。 したがって、SequenceType で使用されているアトミック型が、simpleType 階層内にある式の実際の型の最上位の親でない限り、クエリから False が返されます。 つまり、SequenceType に指定したアトミック型は、anySimpleType の直接の子である必要があります。 型階層については、[型キャストの規則では、XQuery](../xquery/type-casting-rules-in-xquery.md)を参照してください。  
   
  次のクエリの例では、以下の操作を実行します。  
   

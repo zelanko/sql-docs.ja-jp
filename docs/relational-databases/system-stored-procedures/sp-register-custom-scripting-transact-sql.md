@@ -67,7 +67,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="remarks"></a>コメント  
  **sp_register_custom_scripting**スナップショットおよびトランザクション レプリケーションで使用されます。  
   
- このストアド プロシージャは、スキーマのレプリケートされたテーブルに変更を行う前に実行する必要があります。 このストアド プロシージャの使用に関する詳細については、次を参照してください。[再生成カスタム トランザクション プロシージャのスキーマ変更の反映を](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)します。  
+ このストアド プロシージャは、スキーマのレプリケートされたテーブルに変更を行う前に実行する必要があります。 このストアド プロシージャの使用に関する詳細については、[再生成カスタム トランザクション プロシージャのスキーマ変更の反映を](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、または**db_ddladmin**固定データベース ロールが実行できる**sp _register_custom_scripting**します。  

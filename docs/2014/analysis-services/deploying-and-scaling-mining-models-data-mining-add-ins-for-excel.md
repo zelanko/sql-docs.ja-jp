@@ -30,29 +30,29 @@ ms.locfileid: "48103882"
 ### <a name="browse"></a>参照  
  使用して、**参照**ウィザードで既存のデータ マイニング モデルの選択を表示し、複数のグラフおよびツールを含むビューアーでモデルを調査します。  
   
- 詳細については、次を参照してください。 [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)します。  
+ 詳細については、[Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)を参照してください。  
   
 ### <a name="document-model"></a>モデルのドキュメント化  
  クリックして**ドキュメント モデル**のマイニング構造とマイニング モデルを作成したレポートを作成するウィザードを起動します。 基本レポートと、より詳細なレポートを作成できます。 レポートには列とモデルのメタデータが含まれているため、作業のドキュメント化とモデル内の変更の追跡に役立ちます。  
   
- 詳細については、次を参照してください。[マイニング モデルの文書化&#40;Excel 用データ マイニング アドインで&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)します。  
+ 詳細については、[マイニング モデルの文書化&#40;Excel 用データ マイニング アドインで&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)を参照してください。  
   
 ### <a name="query"></a>Query  
  クリックして**クエリ**を開始する、**クエリ**ウィザード。 このウィザードでは、既存のデータ マイニング モデルに対する予測クエリを対話形式で段階的に作成できます。  
   
  さらに、クエリをカスタマイズしたり、ウィザードに含まれていないクエリの作成をクリックして、**詳細**を開始するボタン、**データ マイニング詳細クエリ エディター**。  
   
- 詳細については、次を参照してください。[クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)します。  
+ 詳細については、[クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)を参照してください。  
   
 ### <a name="data-mining-advanced-query-editor"></a>データ マイニング詳細クエリ エディター  
  このエディターを使用してデータ マイニング拡張機能 (DMX) テンプレートを開いてクエリの作成をすぐに開始し、入力、出力、アルゴリズム、およびパラメーターを対話的に変更しながら、カスタム マイニング モデル、マイニング構造、または予測クエリを作成できます。  
   
- 詳細については、次を参照してください。[データ マイニングのクエリ エディターの高度な](advanced-data-mining-query-editor.md)します。  
+ 詳細については、[データ マイニングのクエリ エディターの高度な](advanced-data-mining-query-editor.md)を参照してください。  
   
 ## <a name="management"></a>管理  
  使用して、**モデルの管理**を現在の接続で既存のモデルを表示するウィザード。 また、マイニング モデルと構造の削除、名前の変更、処理、インポート、およびエクスポートを実行できます。  
   
- 詳細については、次を参照してください。[モデルの管理&#40;SQL Server データ マイニング アドイン&#41;](manage-models-sql-server-data-mining-add-ins.md)します。  
+ 詳細については、[モデルの管理&#40;SQL Server データ マイニング アドイン&#41;](manage-models-sql-server-data-mining-add-ins.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング モデルを作成します。](creating-a-data-mining-model.md)   

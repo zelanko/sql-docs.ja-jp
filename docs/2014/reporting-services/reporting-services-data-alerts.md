@@ -120,7 +120,7 @@ ms.locfileid: "56017273"
  SharePoint サーバーの全体管理の **[サブスクリプションと警告の準備]** ページでは、SQL Server エージェントが実行されているかどうかを確認し、SQL Server エージェントへのアクセス権を付与するために実行するカスタムの [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを作成およびダウンロードできます。 また、PowerShell を使用して [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを生成することもできます。 詳細については、「[SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)」を参照してください。  
   
 ##  <a name="ConfigAlert"></a> データ警告の構成  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降では、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールする場合は必ず、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能 (データ警告を含む) の設定が、レポート サーバー構成ファイル (rsreportserver.config) と SharePoint 構成データベースの間で分散されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のインストールおよび構成の 1 つの手順としてサービス アプリケーションを作成すると、SharePoint 構成データベースが自動的に作成されます。 詳細については、次を参照してください。 [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)と[Reporting Services 構成ファイル](report-server/reporting-services-configuration-files.md)します。  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降では、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールする場合は必ず、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能 (データ警告を含む) の設定が、レポート サーバー構成ファイル (rsreportserver.config) と SharePoint 構成データベースの間で分散されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のインストールおよび構成の 1 つの手順としてサービス アプリケーションを作成すると、SharePoint 構成データベースが自動的に作成されます。 詳細については、[RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)と[Reporting Services 構成ファイル](report-server/reporting-services-configuration-files.md)を参照してください。  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ警告の設定には、警告データおよびメタデータのクリーンアップ間隔と、データ警告メッセージを電子メールで送信する際の再試行回数が含まれます。 構成ファイルと構成データベースを更新して、データ警告設定に異なる値を使用することもできます。  
   
@@ -246,7 +246,7 @@ ms.locfileid: "56017273"
  SQL エージェントを使用すると、ストアド プロシージャをスケジュールに従って実行することができます。 詳しくは、「 [SQL Server Agent](../ssms/agent/sql-server-agent.md)」をご覧ください。  
   
 #### <a name="report-server-execution-log"></a>レポート サーバー実行ログ  
- レポートは、データ警告定義の作成対象であるデータ フィードを生成するために実行されます。 レポート サーバー データベース内のレポート サーバー実行ログは、レポートが実行されるたびに情報を取得します。 データベース内の ExecutionLog2 ビューに対してクエリを実行し、詳細な情報を取得することもできます。 詳細については、次を参照してください。[レポート サーバー実行ログと ExecutionLog3 ビュー](report-server/report-server-executionlog-and-the-executionlog3-view.md)します。  
+ レポートは、データ警告定義の作成対象であるデータ フィードを生成するために実行されます。 レポート サーバー データベース内のレポート サーバー実行ログは、レポートが実行されるたびに情報を取得します。 データベース内の ExecutionLog2 ビューに対してクエリを実行し、詳細な情報を取得することもできます。 詳細については、[レポート サーバー実行ログと ExecutionLog3 ビュー](report-server/report-server-executionlog-and-the-executionlog3-view.md)を参照してください。  
   
 #### <a name="report-server-trace-log"></a>レポート サーバー トレース ログ  
  レポート サーバーのトレース ログには、レポート サーバー Web サービスおよびバックグラウンド処理によって実行された操作を含め、レポート サーバー サービスの操作に関するきわめて詳細な情報が記録されます。 トレース ログ情報は、レポート サーバーを含むアプリケーションをデバッグしている場合、またはイベント ログや実行ログに書き込まれた特定の問題を調査している場合に役立ちます。 詳細については、「 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)」を参照してください。  

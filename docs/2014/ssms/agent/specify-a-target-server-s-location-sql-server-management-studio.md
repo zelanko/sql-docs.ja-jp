@@ -79,6 +79,6 @@ ms.locfileid: "52780514"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)します。  
+ 詳細については、[sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)を参照してください。  
   
   

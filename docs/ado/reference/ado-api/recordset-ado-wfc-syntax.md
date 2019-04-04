@@ -136,7 +136,7 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="events"></a>イベント  
- ADO と WFC イベントの詳細については、次を参照してください。[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)します。  
+ ADO と WFC イベントの詳細については、[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)を参照してください。  
   
 ```  
 public void addOnEndOfRecordset(RecordsetEventHandler handler)  

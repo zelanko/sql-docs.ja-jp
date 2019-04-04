@@ -163,7 +163,7 @@ ms.locfileid: "54136062"
   
     -   [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) または [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql) から **@job_login** パラメーターを変更することはできませんが、パスワードは変更できます。  
   
- レプリケーション セキュリティの詳細については、次を参照してください。 [SQL Server レプリケーションのセキュリティ](../security/view-and-modify-replication-security-settings.md)します。  
+ レプリケーション セキュリティの詳細については、[SQL Server レプリケーションのセキュリティ](../security/view-and-modify-replication-security-settings.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Oracle パブリッシャーの管理上の注意点](administrative-considerations-for-oracle-publishers.md)   

@@ -51,7 +51,7 @@ SQL Server Profiler の拡張機能 (プレビュー) は、XEvents を使用し
 
 ## <a name="next-steps"></a>次の手順
 
-Profiler と拡張イベントの詳細については、次を参照してください。[拡張イベント](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)します。
+Profiler と拡張イベントの詳細については、[拡張イベント](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)を参照してください。
 
 
 

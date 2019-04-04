@@ -37,7 +37,7 @@ ms.locfileid: "56036543"
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]: これを使用して、データの管理や新しいエンティティおよび属性の作成を行うことができます。  
   
- MDS のリソースの概要については、次を参照してください。、 [SQL Server マスター データ サービスのポータル](https://go.microsoft.com/fwlink/?LinkID=214272)します。  
+ MDS のリソースの概要については、、 [SQL Server マスター データ サービスのポータル](https://go.microsoft.com/fwlink/?LinkID=214272)を参照してください。  
   
 |||  
 |-|-|  

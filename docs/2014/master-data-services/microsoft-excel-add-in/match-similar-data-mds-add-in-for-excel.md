@@ -28,7 +28,7 @@ ms.locfileid: "52760404"
   
 ## <a name="prerequisites"></a>前提条件  
   
--   MDS によって管理されるデータが含まれているワークシートが必要です。 詳細については、次を参照してください。[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)します。  
+-   MDS によって管理されるデータが含まれているワークシートが必要です。 詳細については、[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)を参照してください。  
   
 -   任意。 類似性をチェックする前に、MDS によって管理されるデータとその他のデータを結合することができます。 詳細については、「 [データの結合 (Excel 用 MDS アドイン)](combine-data-mds-add-in-for-excel.md)」を参照してください。  
   

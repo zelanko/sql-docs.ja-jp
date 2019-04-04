@@ -86,7 +86,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  データ型の列**イメージ**、**テキスト**、および**ntext**常に NULL が割り当てられている値と **_ _ $操作**= 1 または **_ _ $操作**= 3。 データ型の列**varbinary (max)**、 **varchar (max)**、または**nvarchar (max)** NULL が割り当てられている値と **_ _ $操作**3 を =しない限り、列が更新中に変更します。 ときに **_ _ $操作**= 1、これらの列には、削除時にその値が割り当てられます。 キャプチャ インスタンスに含まれる計算列の値は、常に NULL になります。  
   
 ## <a name="examples"></a>使用例  
- いくつか[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]テンプレートは、変更データ キャプチャ クエリ関数を使用する方法を示します。 これらのテンプレートでは、**ビュー**メニュー[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 詳細については、次を参照してください。[テンプレート エクスプ ローラー](../../ssms/template/template-explorer.md)します。  
+ いくつか[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]テンプレートは、変更データ キャプチャ クエリ関数を使用する方法を示します。 これらのテンプレートでは、**ビュー**メニュー[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 詳細については、[テンプレート エクスプ ローラー](../../ssms/template/template-explorer.md)を参照してください。  
   
  この例は、`Enumerate All Changes for Valid Range Template` を示しています。 この例では、関数 `cdc.fn_cdc_get_all_changes_HR_Department` を使用して、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の HumanResources.Department ソース テーブルに対して定義されているキャプチャ インスタンス `HR_Department` で現在使用できる変更をすべてレポートします。  
   

@@ -76,7 +76,7 @@ WHERE  PD.ProductModelID=28
   
 -   CatalogDescription は、SELECT 句で、 **xml**型の列。 そのため、 [query() メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md)Instructions.query() を使用します。 query メソッドの引数には XQuery ステートメントを指定しています。  
   
--   クエリを実行する対象のドキュメントには名前空間を使用します。 そのため、**名前空間**キーワードの使用を名前空間のプレフィックスを定義します。 詳細については、次を参照してください。 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)します。  
+-   クエリを実行する対象のドキュメントには名前空間を使用します。 そのため、**名前空間**キーワードの使用を名前空間のプレフィックスを定義します。 詳細については、[XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)を参照してください。  
   
  結果を次に示します。  
   

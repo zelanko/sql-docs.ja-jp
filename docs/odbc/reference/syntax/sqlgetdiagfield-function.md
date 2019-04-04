@@ -62,7 +62,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_HANDLE_STMT  
   
- SQL_HANDLE_DBC_INFO_TOKEN ハンドルは、ドライバー マネージャーとドライバーでのみ使用されます。 アプリケーションでは、この種類のハンドルは使用しないでください。 SQL_HANDLE_DBC_INFO_TOKEN の詳細については、次を参照してください。 [ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)します。  
+ SQL_HANDLE_DBC_INFO_TOKEN ハンドルは、ドライバー マネージャーとドライバーでのみ使用されます。 アプリケーションでは、この種類のハンドルは使用しないでください。 SQL_HANDLE_DBC_INFO_TOKEN の詳細については、[ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)を参照してください。  
   
  *Handle*  
  [入力]診断データの構造で示される型のハンドルを*HandleType*します。 場合*HandleType* sql_handle_env としてでは、*処理*共有または共有されていない環境ハンドルのいずれかにすることができます。  
@@ -135,7 +135,7 @@ SQLRETURN SQLGetDiagField(
   
  アプリケーションが呼び出すことができます**SQLGetDiagField** SQL_DIAG_CURSOR_ROW_COUNT または SQL_DIAG_ROW_COUNT、SQL_ERROR が返されます場合を除き、いつでも任意の診断フィールドを返す*処理*されませんが、ステートメント ハンドルです。 その他の診断フィールドが定義されていない場合への呼び出し**SQLGetDiagField** (提供される他の診断が出現しない) に関係なく SQL_SUCCESS を返します、フィールド、未定義の値が返されます。  
   
- 詳細については、次を参照してください。[を使用して SQLGetDiagRec および SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md)と[実装 SQLGetDiagRec および SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md)します。  
+ 詳細については、[を使用して SQLGetDiagRec および SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md)と[実装 SQLGetDiagRec および SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md)を参照してください。  
   
  HY010 が生成されますが、非同期的に実行されているものと異なる API を呼び出す「関数のシーケンス エラーです」。 ただし、非同期操作が完了する前に、エラー レコードを取得できません。  
   
@@ -166,7 +166,7 @@ SQLRETURN SQLGetDiagField(
 |SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR *|これは、基になる関数が実行される SQL ステートメントを記述する文字列です。 (特定の値をこのセクションで後で「動的関数のフィールドの値」を参照してください)。ステートメント ハンドルとへの呼び出し後にのみ、このフィールドの内容が定義された**SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**します。 呼び出す**SQLGetDiagField**で、 *DiagIdentifier*ハンドルには、ステートメント以外で SQL_DIAG_DYNAMIC_FUNCTION の SQL_ERROR が返されます。 呼び出す前にこのフィールドの値は未定義**SQLExecute**または**SQLExecDirect**します。|  
 |SQL_DIAG_DYNAMIC_FUNCTION_CODE|SQLINTEGER|これは、基になる関数によって実行された SQL ステートメントを表す数値コードです。 (特定の値に対して「値の動的関数フィールドの」このセクションの後半を参照してください)。ステートメント ハンドルとへの呼び出し後にのみ、このフィールドの内容が定義された**SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**します。 呼び出す**SQLGetDiagField**で、 *DiagIdentifier*ハンドルには、ステートメント以外で SQL_DIAG_DYNAMIC_FUNCTION_CODE の SQL_ERROR が返されます。 呼び出す前にこのフィールドの値は未定義**SQLExecute**または**SQLExecDirect**します。|  
 |SQL_DIAG_NUMBER|SQLINTEGER|指定したハンドルの使用可能な状態レコードの数。|  
-|SQL_DIAG_RETURNCODE|SQLRETURN|関数によって返されるリターン コード。 リターン コードの一覧は、次を参照してください。[リターン コード](../../../odbc/reference/develop-app/return-codes-odbc.md)します。 ドライバーは SQL_DIAG_RETURNCODE; を実装する必要はありません。ドライバー マネージャーによって常に実装されます。 関数がまだ呼び出されていないの場合、*処理*、SQL_DIAG_RETURNCODE SQL_SUCCESS が返されます。|  
+|SQL_DIAG_RETURNCODE|SQLRETURN|関数によって返されるリターン コード。 リターン コードの一覧は、[リターン コード](../../../odbc/reference/develop-app/return-codes-odbc.md)を参照してください。 ドライバーは SQL_DIAG_RETURNCODE; を実装する必要はありません。ドライバー マネージャーによって常に実装されます。 関数がまだ呼び出されていないの場合、*処理*、SQL_DIAG_RETURNCODE SQL_SUCCESS が返されます。|  
 |SQL_DIAG_ROW_COUNT|SQLLEN|Insert、delete、またはによって実行された更新によって影響を受ける行の数**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**. ドライバー定義後に、*カーソル仕様*が実行されました。 このフィールドの内容は、ステートメント ハンドルに対してのみ定義されます。 呼び出す**SQLGetDiagField**で、 *DiagIdentifier*ハンドルには、ステートメント以外で SQL_DIAG_ROW_COUNT の SQL_ERROR が返されます。 このフィールドのデータが返されることも、 *RowCountPtr*の引数**SQLRowCount**します。 によって返される行の数は、このフィールドのデータがすべて nondiagnostic 関数の呼び出し後にリセットされます**SQLRowCount**ステートメントが準備済みまたは割り当て済みの状態に戻してまで同じままになります。|  
   
 ## <a name="record-fields"></a>レコードのフィールド  
@@ -181,7 +181,7 @@ SQLRETURN SQLGetDiagField(
 |SQL_DIAG_NATIVE|SQLINTEGER|ドライバー/データ ソース固有のネイティブ エラー コード。 ネイティブ エラー コードがない場合、ドライバーは、0 を返します。|  
 |SQL_DIAG_ROW_NUMBER|SQLLEN|このフィールドには、行セットの行番号または状態レコードが関連付けられているパラメーターのセット内のパラメーター数が含まれています。 行番号およびパラメーターの番号は、1 から始まります。 このフィールドは、この状態レコードは、行番号またはパラメーターの番号に関連付けられていない場合、SQL_NO_ROW_NUMBER 値を持ちます。 ドライバーが、行番号またはこのレコードが関連付けられているパラメーターの数を判別できない場合、このフィールドは SQL_ROW_NUMBER_UNKNOWN 値を持ちます。<br /><br /> このフィールドの内容は、ステートメント ハンドルに対してのみ定義されます。|  
 |SQL_DIAG_SERVER_NAME|SQLCHAR *|診断レコードに関連するサーバー名を示す文字列。 これはへの呼び出しに返される値と同じ**SQLGetInfo** SQL_DATA_SOURCE_NAME オプションを使用します。 環境ハンドルに関連付けられている診断データの構造と任意のサーバーに関係しない診断では、このフィールドは、長さ 0 の文字列です。|  
-|SQL_DIAG_SQLSTATE|SQLCHAR *|5 文字の SQLSTATE 診断コード。 詳細については、次を参照してください。 [SQLSTATEs](../../../odbc/reference/develop-app/sqlstates.md)します。|  
+|SQL_DIAG_SQLSTATE|SQLCHAR *|5 文字の SQLSTATE 診断コード。 詳細については、[SQLSTATEs](../../../odbc/reference/develop-app/sqlstates.md)を参照してください。|  
 |SQL_DIAG_SUBCLASS_ORIGIN|SQLCHAR *|SQL_DIAG_CLASS_ORIGIN、SQLSTATE コードのサブクラスの一部の定義の部分を識別すると同じ形式と有効な値を含む文字列。 "ODBC 3.0"が返される ODBC 固有について、次のとおりです。<br /><br /> 01S00、01S01、01S02、01S06、01S07、07S01、08S01、21S01、21S02、25S01、25S02、25S03、42S01、42S02、42S11、42S12、42S21、42S22、HY095、HY097、HY098、HY099、HY100、HY101、HY105、HY107、HY109、HY110、HY111、HYT00、HYT01、IM001、IM002、IM003、IM004、IM005、IM006、IM007、IM008、IM010、IM011、IM012 します。|  
   
 ## <a name="values-of-the-dynamic-function-fields"></a>動的関数のフィールドの値  

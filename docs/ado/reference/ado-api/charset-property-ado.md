@@ -36,7 +36,7 @@ ms.locfileid: "47752340"
   
  **Charset**はテキストでのみ使用**Stream**オブジェクト ([型](../../../ado/reference/ado-api/type-property-ado-stream.md)は**adTypeText**)。 場合、このプロパティは無視されます**型**は**adTypeBinary**します。  
   
- コード サンプルは、次を参照してください。[手順 4: Details テキスト ボックスに入力](../../../ado/guide/data/step-4-populate-the-details-text-box.md)します。  
+ コード サンプルは、[手順 4: Details テキスト ボックスに入力](../../../ado/guide/data/step-4-populate-the-details-text-box.md)を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

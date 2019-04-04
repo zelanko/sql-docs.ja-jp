@@ -28,7 +28,7 @@ ms.locfileid: "56042693"
   
 ||  
 |-|  
-|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] リリースでは、Google Chrome ブラウザーのサポートが追加されています。 サポートされているブラウザーの詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)します。|  
+|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] リリースでは、Google Chrome ブラウザーのサポートが追加されています。 サポートされているブラウザーの詳細については、[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)を参照してください。|  
   
  については、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]製品およびテクノロジでは、「 [SQL Server 2014 における新](../sql-server/what-s-new-in-sql-server-2016.md)します。  
   

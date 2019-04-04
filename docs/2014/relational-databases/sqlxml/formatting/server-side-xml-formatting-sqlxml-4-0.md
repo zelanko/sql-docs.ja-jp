@@ -50,7 +50,7 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- FOR XML 句の詳細については、次を参照してください。 [For を使用して XML](../../xml/for-xml-sql-server.md)します。  
+ FOR XML 句の詳細については、[For を使用して XML](../../xml/for-xml-sql-server.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [クライアント側とサーバー側の XML 書式設定のアーキテクチャ&#40;SQLXML 4.0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   

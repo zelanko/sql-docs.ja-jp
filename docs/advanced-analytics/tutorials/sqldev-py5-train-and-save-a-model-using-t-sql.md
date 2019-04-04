@@ -127,7 +127,7 @@ ms.locfileid: "58511249"
 
 このストアド プロシージャは、新しい**revoscalepy**パッケージは、Python 用の新しいパッケージです。 オブジェクト、変換、および R 言語の提供するものと同様のアルゴリズムが含まれている**RevoScaleR**パッケージ。 
 
-使用して**revoscalepy**、リモート計算コンテキストを作成することができます、コンピューティング コンテキスト、データを変換、ロジスティック回帰と線形回帰、デシジョン ツリーなどの人気のあるアルゴリズムを使用して予測モデルをトレーニングの間でデータを移動し、もっとその。 詳細については、次を参照してください。 [SQL Server で revoscalepy モジュール](../python/ref-py-revoscalepy.md)と[revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)します。
+使用して**revoscalepy**、リモート計算コンテキストを作成することができます、コンピューティング コンテキスト、データを変換、ロジスティック回帰と線形回帰、デシジョン ツリーなどの人気のあるアルゴリズムを使用して予測モデルをトレーニングの間でデータを移動し、もっとその。 詳細については、[SQL Server で revoscalepy モジュール](../python/ref-py-revoscalepy.md)と[revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)を参照してください。
 
 1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、新しく開きます**クエリ**ウィンドウとストアド プロシージャを作成する次のステートメントを実行_TrainTipPredictionModelRxPy_します。  ストアド プロシージャには、入力データの定義が既に含まれているために、入力クエリを提供する必要はありません。
 

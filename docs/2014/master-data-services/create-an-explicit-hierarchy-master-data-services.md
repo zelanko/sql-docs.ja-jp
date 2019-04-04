@@ -32,7 +32,7 @@ ms.locfileid: "52761604"
   
 -   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
--   エンティティは、明示的階層およびコレクションに対して有効化されている必要があります。 詳細については、次を参照してください。[明示的階層およびコレクションに対してエンティティを有効にする&#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)します。  
+-   エンティティは、明示的階層およびコレクションに対して有効化されている必要があります。 詳細については、[明示的階層およびコレクションに対してエンティティを有効にする&#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)を参照してください。  
   
 ### <a name="to-create-an-explicit-hierarchy"></a>明示的階層を作成するには  
   

@@ -30,7 +30,7 @@ ms.locfileid: "54134302"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Replication Monitor  
   
-     レプリケーションの監視を行うにあたり、最も重要なツールがレプリケーション モニターです。すべてのレプリケーションの利用状況がパブリッシャー関連のビューで表示されます。 詳細については、次を参照してください。[レプリケーション モニターでパフォーマンスを監視](monitor/monitor-performance-with-replication-monitor.md)します。  
+     レプリケーションの監視を行うにあたり、最も重要なツールがレプリケーション モニターです。すべてのレプリケーションの利用状況がパブリッシャー関連のビューで表示されます。 詳細については、[レプリケーション モニターでパフォーマンスを監視](monitor/monitor-performance-with-replication-monitor.md)を参照してください。  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   

@@ -20,7 +20,7 @@ ms.lasthandoff: 12/03/2018
 ms.locfileid: "52774424"
 ---
 # <a name="database-properties-options-page"></a>[データベースのプロパティ] \([オプション] ページ)
-  このページを使用すると、選択されているデータベースのオプションを表示または変更できます。 このページで使用できるオプションについては、次を参照してください。 [ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)します。  
+  このページを使用すると、選択されているデータベースのオプションを表示または変更できます。 このページで使用できるオプションについては、[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)を参照してください。  
   
 ## <a name="page-header"></a>ページ ヘッダー  
  **[照合順序]**  

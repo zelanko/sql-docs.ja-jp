@@ -27,7 +27,7 @@ ms.locfileid: "56022323"
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>ファイアウォール ルールのストアド プロシージャ (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  ここでは、ファイアウォール ルールを設定または削除する次のストアド プロシージャについて説明します。 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] ファイアウォール規則で使用できる[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]と[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]します。 詳細については、次を参照してください。[ファイアウォール規則を Azure SQL Database の構成 - 概要](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)します。
+  ここでは、ファイアウォール ルールを設定または削除する次のストアド プロシージャについて説明します。 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] ファイアウォール規則で使用できる[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]と[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]します。 詳細については、[ファイアウォール規則を Azure SQL Database の構成 - 概要](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)を参照してください。
   
  
   

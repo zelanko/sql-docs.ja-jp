@@ -42,7 +42,7 @@ ms.locfileid: "52521020"
   
 -   SELECT 句。MDX の SELECT ステートメントのクエリ軸を指定します。 SELECT 句でクエリ軸を作成する方法の詳細については、「[クエリ軸の内容の指定(MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)」を参照してください。  
   
--   FROM 句。クエリ対象のキューブを指定します。 FROM 句の詳細については、次を参照してください。[の SELECT ステートメント & #40 です。MDX と #41 です。](/sql/mdx/mdx-data-manipulation-select)  
+-   FROM 句。クエリ対象のキューブを指定します。 FROM 句の詳細については、[の SELECT ステートメント & #40 を参照してください。MDX と #41 です。](/sql/mdx/mdx-data-manipulation-select)  
   
 -   省略可能な WHERE 句。スライサー軸で使用するメンバーまたは組を指定して、返されるデータを限定します。 WHERE 句でスライサー軸を作成する方法の詳細については、「[スライサー軸の内容の指定 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)」を参照してください。  
   
@@ -61,7 +61,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- MDX の SELECT ステートメントでは、WITH キーワードを使用する構文、軸またはスライサー軸に含める計算されたメンバーを作成するための MDX 関数を使用する構文、クエリの一部として特定のセル プロパティの値を返すための構文など、省略可能な構文をいくつかサポートしています。 MDX の SELECT ステートメントの詳細については、次を参照してください。[の SELECT ステートメント & #40 です。MDX と #41 です。](/sql/mdx/mdx-data-manipulation-select)  
+ MDX の SELECT ステートメントでは、WITH キーワードを使用する構文、軸またはスライサー軸に含める計算されたメンバーを作成するための MDX 関数を使用する構文、クエリの一部として特定のセル プロパティの値を返すための構文など、省略可能な構文をいくつかサポートしています。 MDX の SELECT ステートメントの詳細については、[の SELECT ステートメント & #40 を参照してください。MDX と #41 です。](/sql/mdx/mdx-data-manipulation-select)  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>MDX の SELECT ステートメントと SQL の構文の比較  
  MDX の SELECT ステートメントの構文形式は、SQL の構文とよく似ています。 ただし、次のような基本的な違いもいくつかあります。  

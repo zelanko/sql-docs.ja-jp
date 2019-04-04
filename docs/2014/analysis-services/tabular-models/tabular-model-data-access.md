@@ -32,7 +32,7 @@ ms.locfileid: "53364104"
  また、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でテーブル モデルを参照する用途にも Excel は適しています。 このツールには、 **[Excel で分析]** というオプションがあります。このオプションを選択すると、新しい Excel インスタンスが起動して Excel ブックが作成され、そのブックからモデル ワークスペース データベースへのデータ接続が開きます。 Excel でテーブル モデル データを参照する際は、モデルに対するクエリが、Excel PivotTable クライアントを使用して実行される点に注意してください。 したがって、Excel ブック内の操作は、DAX クエリではなく、MDX クエリとしてワークスペース データベースに送信されます。 SQL Profiler などの監視ツールを使用してクエリを監視したとき、プロファイラー トレースに表示されるのは DAX ではなく MDX です。 "Excel で分析" 機能の詳細については、「[Excel で分析 (SSAS テーブル)](analyze-in-excel-ssas-tabular.md)」を参照してください。  
   
 ### <a name="power-view"></a>Power View  
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、Reporting Services のレポート クライアント アプリケーションであり、SharePoint 2010 環境で動作します。 データ探索、クエリ デザイン、プレゼンテーション レイアウトが、アドホック レポート環境に統合されています。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、テーブル モデルをデータ ソースとして使用することができます。そのモデルが、テーブル モードで動作する Analysis Services のインスタンスにホストされているか、DirectQuery モードを使用してリレーショナル データ ストアから取得されるかは関係ありません。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]でテーブル モデルに接続するには、サーバーの場所とデータベース名を格納する接続ファイルを作成する必要があります。 Reporting Services の共有データ ソースまたは BI Semantic Model の接続ファイルは SharePoint で作成することができます。 BI セマンティック モデル接続の詳細については、次を参照してください。 [PowerPivot BI セマンティック モデル接続&#40;.bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)します。  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、Reporting Services のレポート クライアント アプリケーションであり、SharePoint 2010 環境で動作します。 データ探索、クエリ デザイン、プレゼンテーション レイアウトが、アドホック レポート環境に統合されています。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、テーブル モデルをデータ ソースとして使用することができます。そのモデルが、テーブル モードで動作する Analysis Services のインスタンスにホストされているか、DirectQuery モードを使用してリレーショナル データ ストアから取得されるかは関係ありません。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]でテーブル モデルに接続するには、サーバーの場所とデータベース名を格納する接続ファイルを作成する必要があります。 Reporting Services の共有データ ソースまたは BI Semantic Model の接続ファイルは SharePoint で作成することができます。 BI セマンティック モデル接続の詳細については、[PowerPivot BI セマンティック モデル接続&#40;.bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)を参照してください。  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] クライアントは特定のモデルの構造を判断する際、指定されたデータ ソースに要求を送信し、データ ソースからスキーマを取得します。このスキーマを使用することで、データ ソースとしてのモデルに対するクエリを作成し、そのデータを基に処理を実行することができます。 以後、データのフィルター処理、計算や集計、関連付けられたデータの表示など、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ユーザー インターフェイスで実行される操作はクライアントによって制御され、プログラムから操作することはできません。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "53364104"
   
 -   CodePlex の AdventureWorks サンプル  
   
- PowerShell を使用して、Analysis Services のインスタンスを管理、監視できるほか、テーブル モデル アクセスに必要なセキュリティを形成、監視することができます。 詳細については、次を参照してください。 [Analysis Services PowerShell](../analysis-services-powershell.md)します。  
+ PowerShell を使用して、Analysis Services のインスタンスを管理、監視できるほか、テーブル モデル アクセスに必要なセキュリティを形成、監視することができます。 詳細については、[Analysis Services PowerShell](../analysis-services-powershell.md)を参照してください。  
   
 ### <a name="schema-rowsets"></a>スキーマ行セット  
  クライアント アプリケーションは、スキーマ行セットを使用してテーブル モデルのメタデータを分析し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーからサポート情報および監視情報を取得することができます。 このリリースの SQL Server では、テーブル モデルに関連した機能をサポートし、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]全体の監視とパフォーマンス分析を強化するために、新しいスキーマ行セットが追加され、既存のスキーマ行セットが拡張されています。  
@@ -116,7 +116,7 @@ ms.locfileid: "53364104"
   
 -   [DISCOVER_XEVENT_TRACE_DEFINITION 行セット](../dev-guide/discover-xevent-trace-definition-rowset.md)  
   
-     SQL Server 拡張イベントを監視するための新しいスキーマ行セット。 詳細については、次を参照してください。[使用して SQL Server 拡張イベント&#40;Xevent&#41; Analysis Services の監視に](../instances/monitor-analysis-services-with-sql-server-extended-events.md)します。  
+     SQL Server 拡張イベントを監視するための新しいスキーマ行セット。 詳細については、[使用して SQL Server 拡張イベント&#40;Xevent&#41; Analysis Services の監視に](../instances/monitor-analysis-services-with-sql-server-extended-events.md)を参照してください。  
   
 -   [DISCOVER_TRACES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)  
   

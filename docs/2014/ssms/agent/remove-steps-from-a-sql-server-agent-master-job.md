@@ -83,6 +83,6 @@ ms.locfileid: "54127812"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_delete_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)します。  
+ 詳細については、[sp_delete_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)を参照してください。  
   
   

@@ -83,7 +83,7 @@ ms.locfileid: "52508874"
   
     -   フルテキスト インデックスが、ファイル システム内ではなくデータベース ファイル グループ内に格納されます。 バックアップの作成など、データベースに対する管理操作は、自動的にフルテキスト インデックスにも影響します。  
   
-    -   フルテキスト カタログが、任意のファイル グループに属さない仮想オブジェクトフルテキスト インデックスのグループを指す論理的概念になります。 そのため、多くのカタログ管理機能が非推奨とされた結果、一部の機能に重大な変更が生じています。 詳細については、次を参照してください。 [SQL Server 2014 におけるデータベース エンジン機能を非推奨とされます](deprecated-database-engine-features-in-sql-server-2016.md)と[、フルテキスト検索の重大な変更](breaking-changes-to-full-text-search.md)します。  
+    -   フルテキスト カタログが、任意のファイル グループに属さない仮想オブジェクトフルテキスト インデックスのグループを指す論理的概念になります。 そのため、多くのカタログ管理機能が非推奨とされた結果、一部の機能に重大な変更が生じています。 詳細については、[SQL Server 2014 におけるデータベース エンジン機能を非推奨とされます](deprecated-database-engine-features-in-sql-server-2016.md)と[、フルテキスト検索の重大な変更](breaking-changes-to-full-text-search.md)を参照してください。  
   
         > [!NOTE]  
         >  フルテキスト カタログを指定する [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] の [!INCLUDE[tsql](../includes/tsql-md.md)] DDL ステートメントは、正しく動作します。  
@@ -94,9 +94,9 @@ ms.locfileid: "52508874"
   
 -   ノイズ ワードとノイズ ワード ファイルが、ストップワードとストップリストに置き換えられました。 ストップリストは、ストップワードの管理タスクを容易にし、異なるサーバー インスタンスや環境間の整合性を向上させるデータベース オブジェクトです。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
   
--   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 以降のバージョンには、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] に存在する言語のうち、多くの言語に対する新しいワード ブレーカーが含まれています。 変更がないのは、英語、韓国語、タイ語、中国語 (すべての形式) のワード ブレーカーだけです。 他の言語では、フルテキスト カタログをインポートした場合、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]にデータベースがアップグレードされた[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]または以降のバージョンが 1 つまたは複数の言語をフルテキスト カタログのフルテキスト インデックスで使用される可能性がある新しいワード ブレーカーに関連付けられています。インポートされたワード ブレーカーと若干異なる方法での動作可能性があります。 クエリとフルテキスト インデックスの内容との間の一貫性を確保する方法の詳細については、次を参照してください。 [、フルテキスト検索のアップグレード](../relational-databases/search/upgrade-full-text-search.md)します。  
+-   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 以降のバージョンには、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] に存在する言語のうち、多くの言語に対する新しいワード ブレーカーが含まれています。 変更がないのは、英語、韓国語、タイ語、中国語 (すべての形式) のワード ブレーカーだけです。 他の言語では、フルテキスト カタログをインポートした場合、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]にデータベースがアップグレードされた[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]または以降のバージョンが 1 つまたは複数の言語をフルテキスト カタログのフルテキスト インデックスで使用される可能性がある新しいワード ブレーカーに関連付けられています。インポートされたワード ブレーカーと若干異なる方法での動作可能性があります。 クエリとフルテキスト インデックスの内容との間の一貫性を確保する方法の詳細については、[、フルテキスト検索のアップグレード](../relational-databases/search/upgrade-full-text-search.md)を参照してください。  
   
--   新しい FDHOST ランチャー (MSSQLFDLauncher) サービスが追加されました。 詳細については、次を参照してください。 [、フルテキスト検索の概要](../relational-databases/search/get-started-with-full-text-search.md)します。  
+-   新しい FDHOST ランチャー (MSSQLFDLauncher) サービスが追加されました。 詳細については、[、フルテキスト検索の概要](../relational-databases/search/get-started-with-full-text-search.md)を参照してください。  
   
 -   連携して、フルテキスト インデックス作成、 [FILESTREAM](../relational-databases/blob/filestream-sql-server.md)列の場合と同様に、`varbinary(max)`列。 FILESTREAM テーブルに、各 FILESTREAM BLOB のファイル名拡張子を含む列が含まれている必要があります。 詳細については、次を参照してください[、フルテキスト検索でのクエリ](../relational-databases/search/query-with-full-text-search.md)、[検索用フィルターの管理と構成](../relational-databases/search/configure-and-manage-filters-for-search.md)、および[sys.fulltext_document_types &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
   

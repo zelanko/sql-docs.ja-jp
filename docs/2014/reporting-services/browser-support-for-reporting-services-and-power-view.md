@@ -47,9 +47,9 @@ ms.locfileid: "54100937"
   
 - この表は、SharePoint 2010 と SharePoint 2013 に適用されます。  
   
-- SharePoint 2013 のブラウザー サポートの詳細については、次を参照してください。 [SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com//library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)します。  
+- SharePoint 2013 のブラウザー サポートの詳細については、[SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com//library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)を参照してください。  
   
-- SharePoint 2010 のブラウザー サポートの詳細については、次を参照してください。 [(SharePoint Server 2010) のブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.14\).aspx)(https://technet.microsoft.com/library/cc263526(office.14).aspx)します。  
+- SharePoint 2010 のブラウザー サポートの詳細については、[(SharePoint Server 2010) のブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.14\).aspx)(https://technet.microsoft.com/library/cc263526(office.14).aspx)を参照してください。  
   
 |**ブラウザー**|**Windows 8 および 8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "54100937"
 
  次の表は、Excel Services を実行している SharePoint Server で、Power View シートが含まれた Excel 2013 ブックをユーザーが開く場合に、 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] でサポートされるブラウザーのバージョンをまとめたものです。  
   
--   SharePoint 2013 のブラウザー サポートの詳細については、次を参照してください。 [SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)します。  
+-   SharePoint 2013 のブラウザー サポートの詳細については、[SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)を参照してください。  
   
 |**ブラウザー**|**Windows 8 および 8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -117,7 +117,7 @@ ms.locfileid: "54100937"
   
 - iOS デバイスの Apple Safari で対話的にレポートを表示します。 サポートされる機能には、展開/折りたたみ、パラメーター ペイン、対話的な並べ替えなどがあります。  
   
-- 詳細については、次を参照してください。 [Microsoft Surface デバイスと Apple iOS デバイスでのビュー Reporting Services レポート](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md)します。  
+- 詳細については、[Microsoft Surface デバイスと Apple iOS デバイスでのビュー Reporting Services レポート](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md)を参照してください。  
   
  **注** Macintosh コンピューターからレポート サーバーにアクセスする場合は、Safari を使用することをお勧めします。 統合されている SharePoint 製品を使用しているかどうかは[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を参照してください[ブラウザー サポート (Windows SharePoint Services) を計画する](https://go.microsoft.com/fwlink/?LinkId=183583)します。  
   
@@ -191,9 +191,9 @@ ms.locfileid: "54100937"
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```
   
- Internet Explorer の互換モードの詳細については、次を参照してください。[ドキュメント互換性の定義](https://go.microsoft.com/fwlink/?LinkId=180380)(https://go.microsoft.com/fwlink/?LinkId=180380)します。  
+ Internet Explorer の互換モードの詳細については、[ドキュメント互換性の定義](https://go.microsoft.com/fwlink/?LinkId=180380)(https://go.microsoft.com/fwlink/?LinkId=180380)を参照してください。  
   
- ReportViewer コントロールの使用の詳細については、次を参照してください。[展開レポートと ReportViewer コントロール](https://msdn.microsoft.com/library/ms251723.aspx)(https://msdn.microsoft.com/library/ms251723.aspx)します。  
+ ReportViewer コントロールの使用の詳細については、[展開レポートと ReportViewer コントロール](https://msdn.microsoft.com/library/ms251723.aspx)(https://msdn.microsoft.com/library/ms251723.aspx)を参照してください。  
   
 ## <a name="next-steps"></a>次の手順
 

@@ -45,9 +45,9 @@ ms.locfileid: "53359925"
  クエリ通知要求のメッセージ テキストを返します。  
   
 ## <a name="sqlgetstmtattr-and-table-valued-parameters"></a>SQLGetStmtAttr とテーブル値パラメーター  
- SQLGetStmtAttr を呼び出すテーブル値パラメーターを使用する場合は、アプリケーション パラメーター記述子 (APD) の SQL_SOPT_SS_PARAM_FOCUS の値を取得することができます。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、次を参照してください。 [SQLSetStmtAttr](sqlsetstmtattr.md)します。  
+ SQLGetStmtAttr を呼び出すテーブル値パラメーターを使用する場合は、アプリケーション パラメーター記述子 (APD) の SQL_SOPT_SS_PARAM_FOCUS の値を取得することができます。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、[SQLSetStmtAttr](sqlsetstmtattr.md)を参照してください。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+ テーブル値パラメーターの詳細については、[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLSetStmtAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59370)   

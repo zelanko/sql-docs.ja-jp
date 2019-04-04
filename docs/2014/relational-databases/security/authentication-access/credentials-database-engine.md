@@ -35,7 +35,7 @@ ms.locfileid: "48144542"
   
  システム資格情報は、自動的に作成され、特定のエンドポイントに関連付けられます。 システム資格情報の名前は 2 つのシャープ記号 (##) で始まります。  
   
- 資格情報の詳細については、次を参照してください。、 [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)カタログ ビューです。  
+ 資格情報の詳細については、、 [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)カタログ ビューを参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [資格情報を作成](../authentication-access/create-a-credential.md) [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  

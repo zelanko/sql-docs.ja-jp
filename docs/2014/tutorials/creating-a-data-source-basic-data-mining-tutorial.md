@@ -40,7 +40,7 @@ ms.locfileid: "56042623"
 6.  **サーバーにログオン**グループで、 **Windows 認証を使用**します。  
   
     > [!IMPORTANT]  
-    >  Windows 認証は SQL Server 認証よりも安全性に優れているので、実装時はできる限り Windows 認証を使用してください。 SQL Server 認証は旧バージョンとの互換性を維持するために提供されています。 認証方法の詳細については、次を参照してください。[データベース エンジンの構成 - アカウントのプロビジョニング](../../2014/sql-server/install/database-engine-configuration-account-provisioning.md)します。  
+    >  Windows 認証は SQL Server 認証よりも安全性に優れているので、実装時はできる限り Windows 認証を使用してください。 SQL Server 認証は旧バージョンとの互換性を維持するために提供されています。 認証方法の詳細については、[データベース エンジンの構成 - アカウントのプロビジョニング](../../2014/sql-server/install/database-engine-configuration-account-provisioning.md)を参照してください。  
   
 7.  **を選択するか、データベース名を入力**一覧で、選択[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]順にクリックします**OK**します。  
   

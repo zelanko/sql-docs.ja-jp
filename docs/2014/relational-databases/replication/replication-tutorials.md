@@ -27,7 +27,7 @@ ms.locfileid: "54135402"
  レプリケーションのチュートリアルでは、"パブリッシャー" はレプリケート元のデータが配置されているサーバーを指し、"サブスクライバー" はレプリケート先のサーバーを指しています。 パブリッシャーとサブスクライバーが同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを共有することもできますが、これは必須条件ではありません。 詳細については、 [「レプリケーションのパブリッシング モデルの概要」](publish/replication-publishing-model-overview.md)を参照してください。  
   
 > [!NOTE]  
->  このチュートリアルで示すタスクのほとんどは、プログラムによって実行できます。 詳細については、次を参照してください。 [Developer's Guide&#40;レプリケーション&#41;](concepts/replication-developer-documentation.md)します。  
+>  このチュートリアルで示すタスクのほとんどは、プログラムによって実行できます。 詳細については、[Developer's Guide&#40;レプリケーション&#41;](concepts/replication-developer-documentation.md)を参照してください。  
   
 ## <a name="replication-tutorials"></a>レプリケーションのチュートリアル  
  [レプリケーションに備えたサーバーの準備](tutorial-preparing-the-server-for-replication.md)  

@@ -42,7 +42,7 @@ ms.locfileid: "56296460"
   
 -   レポートおよび関連アイテムを SharePoint ライブラリ、レポート サーバー、またはローカル コンピューターに保存します。  
   
- レポート ビルダーとレポート デザイナーは、多くの機能を共有します。 レポート ビルダーの詳細については、次を参照してください。[レポート ビルダーに関するドキュメント](https://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com します。  
+ レポート ビルダーとレポート デザイナーは、多くの機能を共有します。 レポート ビルダーの詳細については、[レポート ビルダーに関するドキュメント](https://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーへのアクセスの構成](../report-server/configure-report-builder-access.md)   

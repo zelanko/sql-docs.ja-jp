@@ -49,7 +49,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *lFetchOptions*  
  非同期のフェッチの種類を示します。  
   
- 詳細については、次を参照してください。 [FetchOptions プロパティ (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)します。  
+ 詳細については、[FetchOptions プロパティ (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)を参照してください。  
   
  *TableID*  
  A**バリアント**型の VT_EMPTY または VT_BSTR のいずれか。 この値が VT_EMPTY 型の場合は無視されます。 使用して、レコード セットが作成された VT_BSTR 型の場合、 **adCmdTableDirect**とここで指定した値と*QueryString*パラメーターは無視されます。  

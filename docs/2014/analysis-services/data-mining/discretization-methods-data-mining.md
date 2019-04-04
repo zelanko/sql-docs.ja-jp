@@ -29,7 +29,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48187054"
 ---
 # <a name="discretization-methods-data-mining"></a>分離メソッド (データ マイニング)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でデータ マイニング モデルを作成するための一部のアルゴリズムでは、正常に機能するために特定の種類のコンテンツが必要です。 たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、連続列を入力として使用したり、連続する値を予測したりすることはできません。 また、一部の列に含まれている値が多すぎるため、データ マイニング モデルの作成元となるデータ内の対象パターンをアルゴリズムで容易に識別できない場合があります。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でデータ マイニング モデルを作成するための一部のアルゴリズムでは、正常に機能するために特定の種類のコンテンツが必要です。 たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、連続列を入力として使用したり、連続する値を予測したりすることはできません。 また、一部の列に含まれている値が多すぎるため、データ マイニング モデルの作成元となるデータ内の対象パターンをアルゴリズムで容易に識別できない場合があります。  
   
  このような場合、アルゴリズムを使用してマイニング モデルを生成できるように、列内のデータを分離できます。 *分離* とは、値をバケットに分割して、限定された数の可能な状態を生成するプロセスです。 バケット自体は、順序付きの不連続の値として処理されます。 数値と文字列の両方の列を分離できます。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48187054"
   
 -   `CLUSTERS`メソッドでは、1000 個のレコードのランダムなサンプルを使用して、データを分離します。 アルゴリズムでデータをサンプリングしない場合は、`EQUAL_AREAS` メソッドを使用します。  
   
--   ニューラル ネットワーク マイニング モデルのチュートリアルには、分離をカスタマイズする例が示されています。 詳細については、次を参照してください。[レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデル&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)します。  
+-   ニューラル ネットワーク マイニング モデルのチュートリアルには、分離をカスタマイズする例が示されています。 詳細については、[レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデル&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [コンテンツの種類&#40;データ マイニング&#41;](content-types-data-mining.md)   

@@ -68,7 +68,7 @@ ms.locfileid: "51291528"
 ## <a name="service-components"></a>サービス コンポーネント
  [For OLE DB カーソル サービス](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)サービス コンポーネントがデータ プロバイダーのカーソル サポート機能を補完します。 また、キーワードを必要しは動的なプロパティがあります。
 
- OLE DB プロバイダーの詳細については、次を参照してください。 [Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)します。
+ OLE DB プロバイダーの詳細については、[Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)を参照してください。
 
 ## <a name="provider-commands"></a>プロバイダー コマンド
  プロバイダーごとに、アプリケーションがプロバイダーのコマンドとして、SQL ステートメントを入力するユーザーを許可する場合は、ここでは、一覧表示、常にユーザー入力を検証して、危険性のある SQL ステートメントを使用してハッカーの攻撃に備える`DROP TABLE t1`、ユーザー入力の一部として。

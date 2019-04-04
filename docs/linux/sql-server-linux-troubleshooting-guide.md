@@ -24,7 +24,7 @@ ms.locfileid: "53215458"
 このドキュメントでは、Linux または Docker コンテナーで実行されている Microsoft SQL Server のトラブルシューティングを行う方法について説明します。 SQL Server on Linux のトラブルシューティングを行うときにサポートされている機能と既知の制限事項を確認する注意してください、 [SQL Server on Linux リリース ノート](sql-server-linux-release-notes.md)します。
 
 > [!TIP]
-> よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)します。
+> よく寄せられる質問の回答は、、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)を参照してください。
 
 ## <a id="connection"></a> 接続エラーをトラブルシューティングします。
 Linux、SQL Server への接続に問題が発生した場合は、いくつかを確認します。 

@@ -49,7 +49,7 @@ ms.locfileid: "53202071"
   
 -   **ChangeCapture**:変更データ キャプチャ機能がデータベースで有効になっていることを示します。 変更データ キャプチャを削除するには、使用、 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)ストアド プロシージャ。 詳細については、「[変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)」を参照してください。  
   
--   **ColumnStoreIndex**:その 1 つ以上のテーブルが列ストア インデックスを示します。 エディションに移動するデータベースを有効にする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]この機能をサポートしていないを使用して、 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)または[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)列ストア インデックスを削除するステートメント。 詳細については、次を参照してください。[列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-overview.md)します。  
+-   **ColumnStoreIndex**:その 1 つ以上のテーブルが列ストア インデックスを示します。 エディションに移動するデータベースを有効にする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]この機能をサポートしていないを使用して、 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)または[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)列ストア インデックスを削除するステートメント。 詳細については、[列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-overview.md)を参照してください。  
   
     **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
   

@@ -67,7 +67,7 @@ ms.locfileid: "54880565"
 
  アプリケーションは、主にトランザクションの開始タイミングと終了タイミングを指定してトランザクションを制御します。 これについては、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントまたはデータベース アプリケーション プログラミング インターフェイス (API) 関数を使用して指定できます。 また、トランザクションが完了せずに終了した場合、その原因となったエラーがシステムによって正しく処理される必要があります。 詳細については、次を参照してください[トランザクション ステートメント&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql)、 [ODBC でのトランザクション](https://technet.microsoft.com/library/ms131281.aspx)と[トランザクション SQL Server Native Client (OLEDB)](https://msdn.microsoft.com/library/ms130918.aspx).  
   
- 既定では、トランザクションは接続レベルで管理されます。 接続時にトランザクションが開始すると、その接続で実行されるすべての [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントが、トランザクションが終了するまでそのトランザクションの一部になります。 ただし、複数のアクティブな結果セット (MARS) セッションでは、[!INCLUDE[tsql](../includes/tsql-md.md)] の明示的または暗黙的なトランザクションは、バッチ レベルで管理されるバッチスコープのトランザクションになります。 バッチの完了時にバッチスコープのトランザクションがコミットまたはロールバックされていない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により、トランザクションは自動的にロールバックされます。 詳細については、次を参照してください。[複数アクティブな結果セット (MARS) SQL Server で](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)します。  
+ 既定では、トランザクションは接続レベルで管理されます。 接続時にトランザクションが開始すると、その接続で実行されるすべての [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントが、トランザクションが終了するまでそのトランザクションの一部になります。 ただし、複数のアクティブな結果セット (MARS) セッションでは、[!INCLUDE[tsql](../includes/tsql-md.md)] の明示的または暗黙的なトランザクションは、バッチ レベルで管理されるバッチスコープのトランザクションになります。 バッチの完了時にバッチスコープのトランザクションがコミットまたはロールバックされていない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により、トランザクションは自動的にロールバックされます。 詳細については、[複数アクティブな結果セット (MARS) SQL Server で](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)を参照してください。  
   
 #### <a name="starting-transactions"></a>トランザクションの開始  
 
@@ -120,7 +120,7 @@ ms.locfileid: "54880565"
  コミット フェーズ  
  トランザクション マネージャーは、すべてのリソース マネージャーから準備の正常完了通知を受け取ると、リソース マネージャーにコミット コマンドを送ります。 これにより、リソース マネージャーはコミットを完了できます。 すべてのリソース マネージャーがコミットの正常完了を報告した場合、トランザクション マネージャーは、アプリケーションに成功通知を送ります。 準備できなかったことを報告するリソース マネージャーがあった場合、トランザクション マネージャーはすべてのリソース マネージャーにロールバック コマンドを送り、アプリケーションにコミットできなかったことを報告します。  
   
- [!INCLUDE[ssDE](../includes/ssde-md.md)] アプリケーションは分散トランザクションの管理に [!INCLUDE[tsql](../includes/tsql-md.md)] またはデータベース API のどちらも使用できます。 詳細については、次を参照してください。 [BEGIN DISTRIBUTED TRANSACTION & #40 です。TRANSACT-SQL と #41 です](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql)。  
+ [!INCLUDE[ssDE](../includes/ssde-md.md)] アプリケーションは分散トランザクションの管理に [!INCLUDE[tsql](../includes/tsql-md.md)] またはデータベース API のどちらも使用できます。 詳細については、[BEGIN DISTRIBUTED TRANSACTION & #40 を参照してください。TRANSACT-SQL と #41 です](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql)。  
   
 #### <a name="ending-transactions"></a>トランザクションの終了  
 
@@ -691,7 +691,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **並列クエリ実行関連のリソース**。交換ポートに関連付けられたコーディネーター、プロデューサー、またはコンシューマーのスレッドが互いをブロックし、デッドロックを発生させることがあります。通常、この現象は、並列クエリに含まれていない別のプロセスを 1 つ以上含めようとした場合に発生します。 また、並列クエリの実行が開始されると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、現在のワークロードに基づいて並列処理の次数やワーカー スレッドの数を決定します。 たとえば、サーバーで新しいクエリの実行が開始されたり、システムのワーカー スレッドが不足したりするなど、システムのワークロードが予期せず変更される場合は、デッドロックが発生する可能性があります。  
   
--   **複数のアクティブな結果セット (MARS) のリソース**。 これらのリソースは、MARS でアクティブな複数の要求のインターリーブを制御する際に使用します。 詳細については、次を参照してください。[複数アクティブな結果セット (MARS) SQL Server で](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)します。  
+-   **複数のアクティブな結果セット (MARS) のリソース**。 これらのリソースは、MARS でアクティブな複数の要求のインターリーブを制御する際に使用します。 詳細については、[複数アクティブな結果セット (MARS) SQL Server で](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)を参照してください。  
   
     -   **ユーザー リソース**。 ユーザー アプリケーションで制御されている可能性のあるリソースをスレッドが待機している場合、そのリソースは、外部リソースまたはユーザー リソースと見なされ、ロックと同様に処理されます。  
   
@@ -1250,7 +1250,7 @@ BEGIN TRANSACTION
   
  sys.dm_tran_top_version_generators。 バージョン ストア内で最も高いバージョンを生成しているオブジェクトの仮想テーブルを返します。 集計済みのレコード長について、長いものから順に 256 位までを database_id と rowset_id でグループ化しています。 この関数を使用して、バージョン ストアを最も多く使用しているレコードを見つけます。 詳しくは、「[sys.dm_tran_top_version_generators &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-top-version-generators-transact-sql)」をご覧ください。  
   
- sys.dm_tran_version_store。 共通バージョン ストア内のすべてのバージョン レコードを表す仮想テーブルを返します。 詳細については、次を参照してください。 [sys.dm_tran_version_store & #40 です。TRANSACT-SQL と #41 です](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql)。  
+ sys.dm_tran_version_store。 共通バージョン ストア内のすべてのバージョン レコードを表す仮想テーブルを返します。 詳細については、[sys.dm_tran_version_store & #40 を参照してください。TRANSACT-SQL と #41 です](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql)。  
   
 > [!NOTE]  
 >  sys.dm_tran_top_version_generators と sys.dm_tran_version_store では、非常に大きくなる可能性があるバージョン ストア全体に対してクエリが実行されるので、これらの関数を実行すると非常に多くのリソースが使用される可能性があります。  
@@ -1926,7 +1926,7 @@ GO
   
 -   その後の再起動の復旧フェーズで指定した時間よりもかなり長くかかる場合は、アクティブなトランザクションがコミットされていない多くの変更を実行した後、サーバー インスタンスをシャット ダウン、**復旧間隔**サーバー構成オプションまたは ALTER DATABASE.SET TARGET_RECOVERY_TIME オプションで指定した時間よりもかなり長くかかることがあります。 これらのオプションではそれぞれ、アクティブなチェックポイントと間接的なチェックポイントの生成頻度を制御します。 チェックポイントの種類について詳しくは、「[データベース チェックポイント &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)」をご覧ください。  
   
--   さらに重要な注意事項として、待機状態のトランザクション自体によって生成される可能性のあるログ量はわずかですが、ログの切り捨てが無期限に停止されるため、トランザクション ログが大きくなり、満杯になる可能性があります。 トランザクション ログが満杯になると、データベースでは以降の更新を実行できなくなります。 詳細については、次を参照してください。[満杯になったトランザクション ログのトラブルシューティングを行う&#40;SQL Server エラー 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)、および[トランザクション ログ&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)します。  
+-   さらに重要な注意事項として、待機状態のトランザクション自体によって生成される可能性のあるログ量はわずかですが、ログの切り捨てが無期限に停止されるため、トランザクション ログが大きくなり、満杯になる可能性があります。 トランザクション ログが満杯になると、データベースでは以降の更新を実行できなくなります。 詳細については、[満杯になったトランザクション ログのトラブルシューティングを行う&#40;SQL Server エラー 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)、および[トランザクション ログ&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)を参照してください。  
   
 #### <a name="discovering-long-running-transactions"></a>実行時間の長いトランザクションの検出  
 
@@ -1944,7 +1944,7 @@ GO
   
 #### <a name="stopping-a-transaction"></a>トランザクションの停止  
 
- KILL ステートメントの使用が必要になる場合もあります。 ただし、重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳細については、次を参照してください。 [KILL & #40 です。TRANSACT-SQL と #41 です](/sql/t-sql/language-elements/kill-transact-sql)。  
+ KILL ステートメントの使用が必要になる場合もあります。 ただし、重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳細については、[KILL & #40 を参照してください。TRANSACT-SQL と #41 です](/sql/t-sql/language-elements/kill-transact-sql)。  
   
  ![上部のリンクに戻る で使用される矢印アイコン](media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このガイドで](#Top)  
   

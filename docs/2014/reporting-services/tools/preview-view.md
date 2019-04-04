@@ -26,7 +26,7 @@ ms.locfileid: "56033263"
   **[プレビュー]** ビューを使用すると、表示レポートを表示できます。 レポートをプレビューすると、レポート デザイナーでは、レポートがローカルで実行され、[プレビュー] ビューに表示されます。 プレビュー モードでは、レポート全体が処理されます。 レポートに複雑なクエリや大量のデータが含まれている場合、初回のプレビューは、完了するまでに数分かかることがあります。 その後の変更内容が、レポートの形式に関するのみである場合、プレビュー時にはキャッシュされたデータが使用されます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を RemoteApp として実行すると、レポートを **の** [プレビュー] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ビューに表示することはできません。 RemoteApp プログラムは、リモート デスクトップ サービスを使用してリモートでアクセスされるプログラムです。 詳細については、次を参照してください。 [TS RemoteApp Step-by-Step Guide](https://technet.microsoft.com/library/cc730673\(WS.10\).aspx)します。  
+>  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を RemoteApp として実行すると、レポートを **の** [プレビュー] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ビューに表示することはできません。 RemoteApp プログラムは、リモート デスクトップ サービスを使用してリモートでアクセスされるプログラムです。 詳細については、[TS RemoteApp Step-by-Step Guide](https://technet.microsoft.com/library/cc730673\(WS.10\).aspx)を参照してください。  
   
 ## <a name="options"></a>および  
  ツール バーは、プレビュー機能を管理するために使用します。  

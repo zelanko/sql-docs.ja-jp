@@ -51,7 +51,7 @@ ms.locfileid: "53359824"
 |`WriteEnabled`|ディメンションの書き戻しを使用できるかどうかを示します (セキュリティ権限に依存)。|  
   
 > [!NOTE]  
->  Null 値やその他のデータ整合性の問題を使用する場合の ErrorConfiguration および UnknownMember プロパティの値を設定する方法についての詳細については、次を参照してください。 [Analysis Services 2005 でのデータの整合性問題の処理](https://go.microsoft.com/fwlink/?LinkId=81891)します。  
+>  Null 値やその他のデータ整合性の問題を使用する場合の ErrorConfiguration および UnknownMember プロパティの値を設定する方法についての詳細については、[Analysis Services 2005 でのデータの整合性問題の処理](https://go.microsoft.com/fwlink/?LinkId=81891)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](attributes-and-attribute-hierarchies.md)   

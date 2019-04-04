@@ -79,12 +79,12 @@ SQLRETURN SQLGetEnvAttr(
 |HY010|関数のシーケンス エラー|(DM) **SQL_ATTR_ODBC_VERSION**経由で設定されていない**SQLSetEnvAttr**します。 設定する必要はありません**SQL_ATTR_ODBC_VERSION**を使用する場合は明示的に**SQLAllocHandleStd**します。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY092|無効な属性またはオプション識別子|引数が指定された値*属性*ODBC ドライバーでサポートされているのバージョンには無効です。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYC00|省略可能な機能が実装されていません|引数が指定された値*属性*有効な ODBC 環境属性が ODBC のバージョンのドライバーでサポートされているが、ドライバーによってサポートされていませんでした。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に対応するドライバー、 *EnvironmentHandle*関数をサポートしていません。|  
   
 ## <a name="comments"></a>コメント  
- 属性の一覧は、次を参照してください。 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)します。 ドライバー固有の環境属性はありません。 場合*属性*、文字列を返す属性を指定します*ValuePtr*を文字列を返すバッファーへのポインターである必要があります。 Null 終了のバイトを含む文字列の最大長*BufferLength*バイト。  
+ 属性の一覧は、[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)を参照してください。 ドライバー固有の環境属性はありません。 場合*属性*、文字列を返す属性を指定します*ValuePtr*を文字列を返すバッファーへのポインターである必要があります。 Null 終了のバイトを含む文字列の最大長*BufferLength*バイト。  
   
  **SQLGetEnvAttr**割り当てと、環境ハンドルの解放の間でいつでも呼び出すことができます。 環境のアプリケーションの設定が正常にすべての環境属性がされるまで保持**SQLFreeHandle**で呼び出される、 *EnvironmentHandle*で、 *HandleType*sql_handle_env としての。 ODBC 3 では、複数の環境ハンドルを同時に割り当てることが *.x*します。 別の環境が割り当てられているときに、1 つの環境の環境属性は影響しません。  
   

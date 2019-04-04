@@ -52,7 +52,7 @@ ms.locfileid: "52617132"
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="remarks"></a>コメント  
- このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)します。  
+ このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、[統計](../../relational-databases/statistics/statistics.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可
 

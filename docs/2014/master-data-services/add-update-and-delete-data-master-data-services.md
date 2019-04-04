@@ -39,11 +39,11 @@ ms.locfileid: "56020093"
   
     -   明示的階層内のメンバーの位置を移動する場合、テーブルは stg.\<名前>_Relationship になります。 必須フィールドの詳細については、「[リレーションシップ ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)」を参照してください。  
   
-         明示的階層内のメンバーの移動の概要については、次を参照してください。[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)します。  
+         明示的階層内のメンバーの移動の概要については、[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)を参照してください。  
   
     -   **[ImportType]** フィールドの値を使用して、メンバーの新規作成、メンバーの非アクティブ化、またはメンバーの削除を行っていることを指定します。 値の詳細については、「[リーフ メンバー ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)」および「[統合メンバー ステージング テーブル (マスター データ サービス)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)」を参照してください。  
   
-         非アクティブ化とメンバーの削除の概要については、次を参照してください。[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)します。  
+         非アクティブ化とメンバーの削除の概要については、[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)を参照してください。  
   
 2.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのデータベース エンジン インスタンスに接続します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "56020093"
   
     -   データの移動先のステージング テーブルに対応するステージング ストアド プロシージャを実行します。  
   
-         ステージング ストアド プロシージャとステージング テーブルの概要については、次を参照してください。[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)します。 ステージング ストアド プロシージャのパラメーターの詳細およびコード例については、「[ステージング ストアド プロシージャ (マスター データ サービス)](../../2014/master-data-services/staging-stored-procedure-master-data-services.md)」を参照してください。  
+         ステージング ストアド プロシージャとステージング テーブルの概要については、[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)を参照してください。 ステージング ストアド プロシージャのパラメーターの詳細およびコード例については、「[ステージング ストアド プロシージャ (マスター データ サービス)](../../2014/master-data-services/staging-stored-procedure-master-data-services.md)」を参照してください。  
   
     -   マスター データ管理の **[統合管理]** 機能領域 を使用します。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "56020093"
   
          ステージング処理は、 **の** [ステージング バッチの間隔] [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]設定に定められた間隔で開始されます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../../2014/master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
-5.  ステージング中に発生したエラーを表示します。 詳細については、次を参照してください。[ステージング処理中に発生したエラーの表示&#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md)と[ステージング処理のエラー &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)します。  
+5.  ステージング中に発生したエラーを表示します。 詳細については、[ステージング処理中に発生したエラーの表示&#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md)と[ステージング処理のエラー &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)を参照してください。  
   
 6.  ビジネス ルールに対してデータを検証します。  
   

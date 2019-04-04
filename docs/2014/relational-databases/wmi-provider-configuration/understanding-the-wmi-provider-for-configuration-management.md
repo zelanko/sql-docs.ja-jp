@@ -41,7 +41,7 @@ ms.locfileid: "52794694"
  クエリ処理  
  フィルターに基づいたクラス型のインスタンスの列挙です。  
   
- 構成管理用 WMI プロバイダーを使用して管理アプリケーションの例については、次を参照してください。 [WQL を使用して、WMI Provider for Configuration Management でのスクリプト言語](using-wql-and-scripting-languages-with-the-wmi-provider.md)します。  
+ 構成管理用 WMI プロバイダーを使用して管理アプリケーションの例については、[WQL を使用して、WMI Provider for Configuration Management でのスクリプト言語](using-wql-and-scripting-languages-with-the-wmi-provider.md)を参照してください。  
   
  WMI プロバイダーを使用して管理アプリケーションのプログラミングの詳細については、WMI のドキュメントを参照してください、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK。  
   

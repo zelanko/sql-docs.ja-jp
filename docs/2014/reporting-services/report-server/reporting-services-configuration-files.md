@@ -29,7 +29,7 @@ ms.locfileid: "56025694"
  構成ファイルの変更が必要になるのは、詳細設定を追加したり構成したりする場合だけです。 構成設定は、XML 要素または XML 属性のいずれかとして指定されます。 XML ファイルおよび構成ファイルを理解している場合は、テキスト エディターまたはコード エディターを使用して、ユーザーが定義可能な設定を変更できます。 構成ファイルをどのように変更するか、または、レポート サーバーが最新の構成設定をどのように読み取るかの詳細については、「[Reporting Services の構成ファイル (rsreportserver.config) の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
   
 > [!NOTE]  
->  以前のリリースでは、RSWebApplication.config という名前の独自の構成ファイルが使用されていました。今後、このファイルは使用されません。 以前の環境からアップグレードした場合、このファイルは削除されませんが、レポート サーバーは、このファイルから一切設定を読み取りません。 このファイルがコンピューターに存在する場合は、削除してください。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、レポート マネージャーのすべての構成設定は RSReportServer.config ファイルに格納され、このファイルから読み取られます。 これの設定が削除または移動された一覧を確認するには、次を参照してください。 [SQL Server 2014 における SQL Server Reporting Services における重大な変更](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)します。  
+>  以前のリリースでは、RSWebApplication.config という名前の独自の構成ファイルが使用されていました。今後、このファイルは使用されません。 以前の環境からアップグレードした場合、このファイルは削除されませんが、レポート サーバーは、このファイルから一切設定を読み取りません。 このファイルがコンピューターに存在する場合は、削除してください。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、レポート マネージャーのすべての構成設定は RSReportServer.config ファイルに格納され、このファイルから読み取られます。 これの設定が削除または移動された一覧を確認するには、[SQL Server 2014 における SQL Server Reporting Services における重大な変更](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)を参照してください。  
   
  このトピックの内容  
   

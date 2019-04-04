@@ -29,7 +29,7 @@ ms.locfileid: "53360474"
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>CLR (共通言語ランタイム) 統合の使用シナリオと例
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、サンプル アプリケーション、パッケージ サンプル、およびさまざまなコーディング サンプルが含まれています。これらのサンプルを使用することで、CLR (共通言語ランタイム) 統合のプログラミング機能について理解することができます。  
   
- 完全な Visual Studio プロジェクトがこれらのサンプルと追加資料を実装する、次を参照してください。 [codeplex のサンプル (&)、Microsoft SQL Server コミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=193935)します。  
+ 完全な Visual Studio プロジェクトがこれらのサンプルと追加資料を実装する、[codeplex のサンプル (&)、Microsoft SQL Server コミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=193935)を参照してください。  
   
 |名前|説明|  
 |----------|-----------------|  

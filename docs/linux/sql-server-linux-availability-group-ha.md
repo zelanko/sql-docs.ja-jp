@@ -37,7 +37,7 @@ SQL Server 2017 CU 1 により、高可用性を持つ可用性グループの`C
 
 SQL Server 2017 で導入、`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`クラスター リソース設定します。 この設定は、指定した数のセカンダリ レプリカの書き込みのプライマリ レプリカは、各トランザクションをコミットする前にログに記録するトランザクション データを保証します。 外部のクラスター マネージャーを使用するときに、この設定は高可用性とデータ保護の両方に影響します。 設定の既定値は、クラスター リソースの作成時に、アーキテクチャとは異なります。 SQL Server リソース エージェントをインストールするときに`mssql-server-ha`- と可用性グループのクラスター リソースの作成、クラスター マネージャーには、可用性が検出されたグループの構成とセット`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`それに応じて。 
 
-構成、リソース エージェントのパラメーターでサポートされている場合`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`高可用性とデータ保護を提供する値に設定されます。 詳細については、次を参照してください。 [pacemaker の理解の SQL Server リソース エージェント](#pacemakerNotify)します。
+構成、リソース エージェントのパラメーターでサポートされている場合`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`高可用性とデータ保護を提供する値に設定されます。 詳細については、[pacemaker の理解の SQL Server リソース エージェント](#pacemakerNotify)を参照してください。
 
 次のセクションでは、クラスター リソースの既定の動作を説明します。 
 

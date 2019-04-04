@@ -50,7 +50,7 @@ ms.locfileid: "51601352"
   
  階層構造を移動する方法については**Recordset**を参照してください[階層レコード セットの行にアクセスする](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)します。  
   
- 構文的に正しい図形のコマンドに関する正確な情報は、次を参照してください。[図形の正式な文法](../../../ado/guide/data/formal-shape-grammar.md)します。  
+ 構文的に正しい図形のコマンドに関する正確な情報は、[図形の正式な文法](../../../ado/guide/data/formal-shape-grammar.md)を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -46,9 +46,9 @@ ms.locfileid: "52504690"
 8.  **[完了]** をクリックします。 **先の選択** ダイアログ ボックスで、結果を保存する場所を指定します。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
->  サーバーに送信された DMX ステートメントにも記録ステートメントが正常に実行された場合、**トレース**ウィンドウ。 トレース機能を使用する方法の詳細については、次を参照してください。[トレース&#40;Excel 用データ マイニング クライアント&#41;](trace-data-mining-client-for-excel.md)します。  
+>  サーバーに送信された DMX ステートメントにも記録ステートメントが正常に実行された場合、**トレース**ウィンドウ。 トレース機能を使用する方法の詳細については、[トレース&#40;Excel 用データ マイニング クライアント&#41;](trace-data-mining-client-for-excel.md)を参照してください。  
   
- データ マイニング詳細クエリ エディターを使用する方法の詳細については、次を参照してください。[クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)と[データ マイニングのクエリ エディターの高度な](advanced-data-mining-query-editor.md)します。  
+ データ マイニング詳細クエリ エディターを使用する方法の詳細については、[クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)と[データ マイニングのクエリ エディターの高度な](advanced-data-mining-query-editor.md)を参照してください。  
   
 ## <a name="list-of-dmx-templates"></a>DMX テンプレートの一覧  
  次の DMX テンプレートは、Excel 用のデータ マイニング クライアントに含まれています。  

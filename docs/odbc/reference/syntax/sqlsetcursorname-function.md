@@ -73,12 +73,12 @@ SQLRETURN SQLSetCursorName(
 |HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている、 **SQLSetCursorName**関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|(DM) 引数*NameLength* SQL_NTS 等しくもありませんが、0 より小さいをでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
   
 ## <a name="comments"></a>コメント  
- カーソル名が位置指定更新でのみ使用、および delete ステートメント (たとえば、**更新**_テーブル名_.**WHERE CURRENT OF** _カーソル名_)。 詳細については、次を参照してください。[配置の更新と削除ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)します。 アプリケーションが要求されていない場合**SQLSetCursorName**ドライバー SQL_CUR 文字で始まり、18 文字の長さを超えていない名前を生成するクエリ ステートメントの実行時に、カーソル名を定義します。  
+ カーソル名が位置指定更新でのみ使用、および delete ステートメント (たとえば、**更新**_テーブル名_.**WHERE CURRENT OF** _カーソル名_)。 詳細については、[配置の更新と削除ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)を参照してください。 アプリケーションが要求されていない場合**SQLSetCursorName**ドライバー SQL_CUR 文字で始まり、18 文字の長さを超えていない名前を生成するクエリ ステートメントの実行時に、カーソル名を定義します。  
   
  接続内のすべてのカーソル名は一意である必要があります。 カーソル名の最大長は、ドライバーによって定義されます。 相互運用性を最大に、アプリケーションは 18 個までの文字にカーソル名を制限することをお勧めします。 ODBC 3 *.x*カーソル名は引用符で囲まれた識別子かどうかは、大文字小文字を区別の方法で扱われ、SQL の構文について、ことを認めていないまたは空白などの特別な処理はまたは予約済みキーワードで、文字を含めることができます。 カーソル名は、大文字と小文字で扱う必要があるを場合は、引用符で囲まれた識別子として渡す必要があります。  
   
@@ -87,7 +87,7 @@ SQLRETURN SQLSetCursorName(
 ## <a name="code-example"></a>コード例  
  次の例では、アプリケーションを使用して**SQLSetCursorName**ステートメントのカーソル名を設定します。 そのステートメントを使用して、CUSTOMERS テーブルから結果を取得します。 最後に、John Smith の電話番号を変更する位置指定更新を実行します。 アプリケーションのさまざまなステートメント ハンドルを使用して、**選択**と**更新**ステートメント。  
   
- 別のコード例では、次を参照してください。 [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)します。  
+ 別のコード例では、[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)を参照してください。  
   
 ```  
 #define NAME_LEN 50  

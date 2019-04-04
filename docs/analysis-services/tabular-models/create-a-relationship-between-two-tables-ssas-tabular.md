@@ -18,7 +18,7 @@ ms.locfileid: "53072099"
 ---
 # <a name="create-a-relationship"></a>リレーションシップを作成します。 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  データ ソース内のテーブルに既存のリレーションシップがない場合、または新しいテーブルを追加する場合は、モデル デザイナーのツールを使用して新しいリレーションシップを作成できます。 表形式モデルでリレーションシップを使用する方法については、次を参照してください。[リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)します。  
+  データ ソース内のテーブルに既存のリレーションシップがない場合、または新しいテーブルを追加する場合は、モデル デザイナーのツールを使用して新しいリレーションシップを作成できます。 表形式モデルでリレーションシップを使用する方法については、[リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)を参照してください。  
   
 ## <a name="create-a-relationship-between-two-tables"></a>2 つのテーブル間のリレーションシップの作成  
   

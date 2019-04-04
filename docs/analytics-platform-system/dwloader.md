@@ -307,7 +307,7 @@ SalesID = 10
   
 前の例では、最初に読み込まれた行が SalesCode = '230' と SalesID = 'Shirts0056'。 読み込まれた 2 つ目の行になります SalesCode = '320' と SaleID = 'Towels1356'。  
   
-先頭および末尾の固定幅モードで、スペースやデータの型変換を処理する方法については、次を参照してください。[データ型の変換規則 dwloader の](dwloader-data-type-conversion-rules.md)します。  
+先頭および末尾の固定幅モードで、スペースやデータの型変換を処理する方法については、[データ型の変換規則 dwloader の](dwloader-data-type-conversion-rules.md)を参照してください。  
   
 **-e** *character_encoding*  
 データ ファイルから読み込まれるデータの文字エンコーディング型を指定します。 (既定値) の ASCII、UTF8、UTF16、または UTF16BE、UTF16 リトル エンディアンあり UTF16BE はビッグ エンディアンこともできます。 これらのオプションは、大文字小文字を区別します。  
@@ -372,7 +372,7 @@ dym
   
 たとえば、-d 年/月/日を指定すると dwloader のすべての日付の最初に、1 か月の注文を入力し、日、年 (mdy) し、期待しています。 2 文字の月、2 桁の日、およびカスタム日付形式で指定された 4 桁の年は適用されません。 日付形式は、-d 年/月/日の場合、入力ファイルで日付を形式指定できる方法の例をいくつか次に示します。01/02/2013、Jan.02.2013、2013 年 1 月 2  
   
-包括的な書式設定については、次を参照してください。[データ型の変換規則 dwloader の](dwloader-data-type-conversion-rules.md)します。  
+包括的な書式設定については、[データ型の変換規則 dwloader の](dwloader-data-type-conversion-rules.md)を参照してください。  
   
 **-dt** *datetime_format_file*  
 各 datetime 形式がという名前のファイルで指定された*datetime_format_file*します。 コマンドラインのパラメーターとは異なりスペースが含まれるファイルのパラメーターを二重引用符で囲んでいない必要があります。 データを読み込むよう、datetime 形式を変更することはできません。 ソース データ ファイルと、対応する列を変換先テーブルでは、同じ形式が必要です。  
@@ -386,7 +386,7 @@ dym
 `ModifiedDate=dym`  
   
 **-d** *staging_database_name*  
-ステージング テーブルを格納するデータベース名。 既定では、変換先テーブルのデータベースは-t オプションで指定されたデータベースです。 詳細については、ステージング データベースを使用して、次を参照してください。[ステージング データベース作成](staging-database.md)です。  
+ステージング テーブルを格納するデータベース名。 既定では、変換先テーブルのデータベースは-t オプションで指定されたデータベースです。 詳細については、ステージング データベースを使用して、[ステージング データベース作成](staging-database.md)を参照してください。  
   
 **-M** *load_mode_option*  
 追加、アップサート、またはデータを再読み込みするかどうかを指定します。 既定のモードを追加します。  
@@ -505,7 +505,7 @@ For more information, see [Grant permissions to load data](grant-permissions-to-
 -->
   
 ## <a name="general-remarks"></a>全般的な解説  
-Dwloader の読み込み時に、データ型変換については、次を参照してください。[データ型の変換規則 dwloader の](dwloader-data-type-conversion-rules.md)します。  
+Dwloader の読み込み時に、データ型変換については、[データ型の変換規則 dwloader の](dwloader-data-type-conversion-rules.md)を参照してください。  
   
 パラメーターには、1 つ以上のスペースが含まれている場合は、二重引用符でパラメーターを囲みます。  
   

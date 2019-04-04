@@ -104,9 +104,9 @@ BOOL SQLCreateDataSource(
   
  かどうか、ユーザーは、DSN を作成を続行するが、このプロセスは継続として、**この接続の確認**オプションが FALSE に設定されました。 FALSE が返されます場合は、ユーザーのキャンセルを選択**SQLCreateDataSource** ODBC_ERROR_CREATE_DSN_FAILED のエラー コードを使用します。  
   
- 場合**ファイル データ ソース**データ ソースの種類として選択された、**この接続の確認**オプションが FALSE で、ファイル DSN がで作成された、**ドライバー**キーワードとユーザーが指定した文字列の詳細ウィザードのページから (ある場合) に接続します。 ファイルの作成が成功した場合の TRUE が返されます。 **SQLCreateDataSource**します。 ファイルの作成に失敗した場合、エラー メッセージ ボックスは、ユーザーにどのようなエラーがオペレーティング システムから返されたを通知します。 FALSE が返されます**SQLCreateDataSource** ODBC_ERROR_CREATE_DSN_FAILED のエラー コードを使用します。 ファイル データ ソースの詳細については、次を参照してください。[を使用してファイル データ ソースの接続](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)、を参照してくださいまたは[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)します。  
+ 場合**ファイル データ ソース**データ ソースの種類として選択された、**この接続の確認**オプションが FALSE で、ファイル DSN がで作成された、**ドライバー**キーワードとユーザーが指定した文字列の詳細ウィザードのページから (ある場合) に接続します。 ファイルの作成が成功した場合の TRUE が返されます。 **SQLCreateDataSource**します。 ファイルの作成に失敗した場合、エラー メッセージ ボックスは、ユーザーにどのようなエラーがオペレーティング システムから返されたを通知します。 FALSE が返されます**SQLCreateDataSource** ODBC_ERROR_CREATE_DSN_FAILED のエラー コードを使用します。 ファイル データ ソースの詳細については、[を使用してファイル データ ソースの接続](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)、を参照してくださいまたは[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)を参照してください。  
   
- 場合**ユーザー**または**システム データ ソース**データ ソースの種類として選択された**ConfigDSN**ドライバーのセットアップでは、ライブラリ、ODBC_ADD_DSN で呼び出されます*起こり*します。 詳細については、次を参照してください。 [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)します。  
+ 場合**ユーザー**または**システム データ ソース**データ ソースの種類として選択された**ConfigDSN**ドライバーのセットアップでは、ライブラリ、ODBC_ADD_DSN で呼び出されます*起こり*します。 詳細については、[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)を参照してください。  
   
 ## <a name="related-functions"></a>関連する関数  
   

@@ -26,7 +26,7 @@ ms.locfileid: "54136022"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   マネージ ストアド プロシージャやその他のマネージ データベース オブジェクトを作成する際はコードのチェックが実行される特定の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を考慮する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初めてデータベースに登録されたときに、マネージ コード アセンブリのチェックを実行を使用して、 **CREATE ASSEMBLY**ステートメント、および実行時にもします。 マネージド コードが実行時にもチェックされるのは、実行時に決して到達しないコード パスがアセンブリに含まれる場合があるためです。  このチェックにより、サード パーティ アセンブリを柔軟に登録できます。特に、クライアント環境での実行を目的に作成され、ホストされた CLR では実行されない "安全でない" コードを含むアセンブリをブロックしないようにすることができるため、サード パーティ アセンブリに柔軟に対応できます。 マネージ コードが満たす必要のある要件として、アセンブリが登録されているかどうかで異なります**セーフ**、 **EXTERNAL_ACCESS**、または**UNSAFE**、 **SAFE** 、厳密にされていると、以下に示します。  
   
- マネージド コード アセンブリには、制限事項に加えてコード セキュリティ権限も付与されます。 共通言語ランタイム (CLR) では、マネージド コードに対してコード アクセス セキュリティ (CAS) というセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 **安全な**、 **EXTERNAL_ACCESS**、および**UNSAFE**アセンブリが別の CAS アクセス許可を持っています。 詳細については、次を参照してください。 [CLR 統合のコード アクセス セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)します。  
+ マネージド コード アセンブリには、制限事項に加えてコード セキュリティ権限も付与されます。 共通言語ランタイム (CLR) では、マネージド コードに対してコード アクセス セキュリティ (CAS) というセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 **安全な**、 **EXTERNAL_ACCESS**、および**UNSAFE**アセンブリが別の CAS アクセス許可を持っています。 詳細については、[CLR 統合のコード アクセス セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)を参照してください。  
   
 ## <a name="create-assembly-checks"></a>CREATE ASSEMBLY チェック  
  ときに、 **CREATE ASSEMBLY**ステートメントを実行する、セキュリティ レベルごとに、次のチェックが実行されます。  いずれかのチェックが失敗した場合**CREATE ASSEMBLY**はエラー メッセージで失敗します。  
@@ -36,7 +36,7 @@ ms.locfileid: "54136022"
   
 -   既にデータベースに登録されていること。  
   
--   サポートされているアセンブリの 1 つであること。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)します。  
+-   サポートされているアセンブリの 1 つであること。 詳細については、[サポートされている .NET Framework ライブラリ](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)を参照してください。  
   
 -   使用している**アセンブリから作成**_\<場所 >、_ で使用できるすべての参照アセンブリとその依存関係と*\<場所 >*.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54136022"
   
 -   UI  
   
- Hpa とサポートされているアセンブリの許可されない型およびメンバーの一覧の詳細については、次を参照してください。[ホスト保護属性と CLR 統合プログラミング](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)します。  
+ Hpa とサポートされているアセンブリの許可されない型およびメンバーの一覧の詳細については、[ホスト保護属性と CLR 統合プログラミング](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)を参照してください。  
   
 ### <a name="safe"></a>SAFE  
  すべて**EXTERNAL_ACCESS**条件がチェックされます。  

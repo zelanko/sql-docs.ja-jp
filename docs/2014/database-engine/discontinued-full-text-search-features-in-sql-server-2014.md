@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48101192"
 ---
 # <a name="discontinued-full-text-search-features-in-sql-server-2014"></a>SQL Server 2014 で廃止されたフルテキスト検索機能
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ではフルテキスト検索機能は廃止されていませんが、一部の機能が非推奨とされています。 詳細については、次を参照してください。 [SQL Server 2014 で非推奨のフルテキスト検索機能](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)します。  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ではフルテキスト検索機能は廃止されていませんが、一部の機能が非推奨とされています。 詳細については、[SQL Server 2014 で非推奨のフルテキスト検索機能](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [フルテキスト検索の重大な変更](breaking-changes-to-full-text-search.md)   

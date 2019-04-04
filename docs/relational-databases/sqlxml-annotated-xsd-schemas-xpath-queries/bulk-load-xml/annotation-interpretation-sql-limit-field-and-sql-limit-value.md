@@ -28,7 +28,7 @@ ms.locfileid: "56034485"
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>注釈の解釈 - sql:limit-field および sql:limit-value
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 一括読み込みの処理、 **sql:limit-フィールド**と**sql:limit-値**注釈が定義に従ってします。 詳細については、次を参照してください。 [sql:limit の値を使用してフィルター処理、および -値&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)します。  
+  XML 一括読み込みの処理、 **sql:limit-フィールド**と**sql:limit-値**注釈が定義に従ってします。 詳細については、[sql:limit の値を使用してフィルター処理、および -値&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)を参照してください。  
   
  たとえば、データベースに次のテーブルが含まれているとします。  
   

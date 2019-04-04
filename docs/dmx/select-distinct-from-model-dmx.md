@@ -103,7 +103,7 @@ FROM [TM Decision Tree]
  次のコード サンプルは、列 `Yearly Income]` のアルゴリズムで作成された各バケットの中間点、最大値、および最小値を返します。 この例の結果を再現するには、`[Targeted Mailing]` と同じマイニング構造を新しく作成する必要があります。 ウィザードで、コンテンツの種類を変更する、`Yearly Income`から列**Continuous**に**Discretized**します。  
   
 > [!NOTE]  
->  また、「基本的なデータ マイニング チュートリアル」で作成したマイニング モデルを変更して、マイニング構造列 `Yearly Income]` を分離できます。 これを行う方法については、次を参照してください。[マイニング モデル内の列の分離を変更](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)します。 ただし、列の分離を変更した場合は、マイニング構造が強制的に再処理され、その構造を使用して作成した他のモデルの結果が変更されます。  
+>  また、「基本的なデータ マイニング チュートリアル」で作成したマイニング モデルを変更して、マイニング構造列 `Yearly Income]` を分離できます。 これを行う方法については、[マイニング モデル内の列の分離を変更](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)を参照してください。 ただし、列の分離を変更した場合は、マイニング構造が強制的に再処理され、その構造を使用して作成した他のモデルの結果が変更されます。  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   

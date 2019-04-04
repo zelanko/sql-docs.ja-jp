@@ -24,13 +24,13 @@ ms.locfileid: "52754454"
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 紹介用の SQL Server レプリケーション Linux 上の SQL Server のインスタンス。
 
-レプリケーションの詳細については、次を参照してください。 [SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)します。
+レプリケーションの詳細については、[SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)を参照してください。
 
 SQL Server Management Studio (SSMS) または Transact SQL ストアド プロシージャのいずれかを使った Linux 上のレプリケーションを構成します。
 
 * SSMS を使用して、この記事の手順に従います。
 
-  Windows オペレーティング システム上の SSMS を使用して、SQL Server のインスタンスに接続します。 背景と手順については、次を参照してください。 [SSMS を使用した Linux 上の SQL Server の管理に](./sql-server-linux-manage-ssms.md)します。
+  Windows オペレーティング システム上の SSMS を使用して、SQL Server のインスタンスに接続します。 背景と手順については、[SSMS を使用した Linux 上の SQL Server の管理に](./sql-server-linux-manage-ssms.md)を参照してください。
   
 * 次のストアド プロシージャなど、 [Linux 上の SQL Server の構成のレプリケーション](sql-server-linux-replication-tutorial-tsql.md)チュートリアル。
 

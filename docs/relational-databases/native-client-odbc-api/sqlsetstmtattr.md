@@ -39,12 +39,12 @@ ms.locfileid: "51667783"
   
  SQLSetStmtAttr が SQL_SOPT_SS_NAME_SCOPE を設定することもできます。 詳細については、このトピックの後半の「SQL_SOPT_SS_NAME_SCOPE」のセクションを参照してください。  
   
- 詳細については、次を参照してください。[準備されたステートメントのテーブル値パラメーターのメタデータ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)します。  
+ 詳細については、[準備されたステートメントのテーブル値パラメーターのメタデータ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)を参照してください。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+ テーブル値パラメーターの詳細については、[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)を参照してください。  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>SQLSetStmtAttr によるスパース列のサポート  
- SQLSetStmtAttr sql_sopt_ss_name_scope を使用できます。 詳細については、このトピックの後半、SQL_SOPT_SS_NAME_SCOPE」のセクションを参照してください。スパース列の詳細については、次を参照してください。[スパース列のサポート&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)します。  
+ SQLSetStmtAttr sql_sopt_ss_name_scope を使用できます。 詳細については、このトピックの後半、SQL_SOPT_SS_NAME_SCOPE」のセクションを参照してください。スパース列の詳細については、[スパース列のサポート&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)を参照してください。  
   
 ## <a name="statement-attributes"></a>ステートメント属性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、次のドライバー固有のステートメント属性もサポートします。  

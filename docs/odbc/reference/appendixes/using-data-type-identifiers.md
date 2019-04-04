@@ -36,4 +36,4 @@ ms.locfileid: "52516611"
   
 -   **SQLGetTypeInfo** - サポートされるデータ型の一覧を取得するには  
   
- データ型識別子は、記述子の SQL_DESC_CONCISE_TYPE フィールドに格納されます。 記述子関数**SQLSetDescField**と**SQLSetDescRec**前の一覧に表示されているタスクを実行する適切な型で使用できます。 詳細については、次を参照してください。 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。
+ データ型識別子は、記述子の SQL_DESC_CONCISE_TYPE フィールドに格納されます。 記述子関数**SQLSetDescField**と**SQLSetDescRec**前の一覧に表示されているタスクを実行する適切な型で使用できます。 詳細については、[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)を参照してください。

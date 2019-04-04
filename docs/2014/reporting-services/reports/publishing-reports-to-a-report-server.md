@@ -43,10 +43,10 @@ ms.locfileid: "56021590"
   
  既定では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 3 つのプロジェクト構成を提供します。DebugLocal、Debug、およびリリースします。 既定の構成は DebugLocal です。 通常、DebugLocal 構成はローカル プレビュー ウィンドウでのレポートの表示に、Debug 構成はテスト サーバーへのレポートのパブリッシュに、Release 構成は実稼働サーバーへのレポートのパブリッシュに使用できます。 標準ツール バーの [ソリューション構成] ドロップダウン リストには、アクティブな構成が表示されます。 別の構成を使用するには、一覧からその構成を選択します。  
   
- ご使用のレポート環境に、複数のレポート サーバーが含まれる場合や異なるバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がインストールされている場合は、 複数の構成を作成し、配置シナリオに応じて異なる構成を使用できます。 詳細については、次を参照してください。[配置およびバージョン サポートでは、SQL Server Data Tools &#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)と[配置プロパティを設定&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)します。  
+ ご使用のレポート環境に、複数のレポート サーバーが含まれる場合や異なるバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がインストールされている場合は、 複数の構成を作成し、配置シナリオに応じて異なる構成を使用できます。 詳細については、[配置およびバージョン サポートでは、SQL Server Data Tools &#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)と[配置プロパティを設定&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)を参照してください。  
   
 ## <a name="publishing-reports"></a>レポートのパブリッシュ  
- 単一のレポートだけでなく、複数のレポートが含まれるレポート サーバー プロジェクトをパブリッシュできます。 レポートのパブリッシュ方法については、次を参照してください。[レポートのパブリッシュ](../publish-reports.md)します。  
+ 単一のレポートだけでなく、複数のレポートが含まれるレポート サーバー プロジェクトをパブリッシュできます。 レポートのパブリッシュ方法については、[レポートのパブリッシュ](../publish-reports.md)を参照してください。  
   
 ### <a name="publishing-a-single-report"></a>単一のレポートのパブリッシュ  
  プロジェクト内のすべてのレポートをパブリッシュしない場合、単一のレポートのみのパブリッシュを選択できます。 この操作を行うには、レポートを配置する構成 (たとえば、Release 構成など) を選択し、レポートを右クリックして、 **[配置]** をクリックします。  

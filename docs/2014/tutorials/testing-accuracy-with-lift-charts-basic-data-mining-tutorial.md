@@ -35,7 +35,7 @@ ms.locfileid: "56033923"
   
 2.  **精度チャートに使用するデータセットの選択**グループ ボックスで、**マイニング構造のテスト_ケースを使用して、** します。 これは、マイニング構造を作成したときに確保したテスト データです。  
   
-     その他のオプションの詳細については、次を参照してください。[精度チャートの種類とグラフのオプションの設定を選択](../../2014/analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)します。  
+     その他のオプションの詳細については、[精度チャートの種類とグラフのオプションの設定を選択](../../2014/analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)を参照してください。  
   
 ##  <a name="BKMK_Selecting"></a> 精度チャートのパラメーターの設定  
  精度チャートを作成するには、次の 3 つの事項を定義する必要があります。  
@@ -76,7 +76,7 @@ ms.locfileid: "56033923"
   
      わかります、`TM_Decision_Tree`モデル、クラスタ リングと Naive Bayes モデルを上回る、最もリフトを提供します。  
   
- このレッスンで作成されたもののようなリフト チャートの詳細については、次を参照してください。[リフト チャート&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)します。  
+ このレッスンで作成されたもののようなリフト チャートの詳細については、[リフト チャート&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)を参照してください。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [フィルター選択されたモデルのテスト&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  

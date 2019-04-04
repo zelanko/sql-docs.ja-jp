@@ -34,7 +34,7 @@ ms.locfileid: "53207131"
 
 - [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して、SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
 
-このチュートリアルでは、SQL Server データベースに接続する必要があります。 Azure SQL Database は、Azure Data Studio から Azure SQL Database のバックアップを実行して復元しないように自動バックアップ、います。 詳細については、次を参照してください。 [SQL Database 自動バックアップについての詳細情報](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups)します。
+このチュートリアルでは、SQL Server データベースに接続する必要があります。 Azure SQL Database は、Azure Data Studio から Azure SQL Database のバックアップを実行して復元しないように自動バックアップ、います。 詳細については、[SQL Database 自動バックアップについての詳細情報](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups)を参照してください。
 
 ## <a name="backup-a-database"></a>データベースのバックアップ
 

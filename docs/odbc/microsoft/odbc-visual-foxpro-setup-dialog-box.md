@@ -25,7 +25,7 @@ ms.locfileid: "52501750"
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro セットアップ ダイアログ ボックス
 **ODBC Visual FoxPro セットアップ**ダイアログ ボックスでは、Visual FoxPro データ ソースの変更を追加することができます。  
   
- ドライバーをダウンロードするには、次を参照してください。 [Visual FoxPro ODBC ドライバーのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)します。  
+ ドライバーをダウンロードするには、[Visual FoxPro ODBC ドライバーのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)を参照してください。  
   
 ## <a name="dialog-box-options"></a>ダイアログ ボックスのオプション  
  **データ ソース名**  
@@ -54,7 +54,7 @@ ms.locfileid: "52501750"
   
 ## <a name="driver"></a>Driver  
  **照合順序**  
- フィールドの並べ替えシーケンス。 既定の順序は、オペレーティング システムの言語バージョンでサポートされているシーケンスを反映します。 サポートされている照合順序の一覧は、次を参照してください。 [COLLATE 設定](../../odbc/microsoft/set-collate-command.md)します。  
+ フィールドの並べ替えシーケンス。 既定の順序は、オペレーティング システムの言語バージョンでサポートされているシーケンスを反映します。 サポートされている照合順序の一覧は、[COLLATE 設定](../../odbc/microsoft/set-collate-command.md)を参照してください。  
   
  **[Exclusive]**  
  このチェック ボックスがオンの場合、データ ソースを使用してデータにアクセスするときにのみ、ドライバー、Visual FoxPro データベースが開きます。 他のユーザーは、データベースが排他的に開かれたときに、データベースまたはデータベース内のテーブル アクセスできません。 排他的に開かれているデータベース内のテーブルは、共有として開かれます。 排他的にテーブルを開くには、使用、[排他設定](../../odbc/microsoft/set-exclusive-command.md)コマンド。 このチェック ボックスが無効になっているときに**データベースの種類**に設定されている**無料テーブル ディレクトリ**します。  

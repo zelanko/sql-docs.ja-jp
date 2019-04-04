@@ -19,7 +19,7 @@ ms.locfileid: "42792283"
 # <a name="lesson-13-deploy"></a>レッスン 13: 配置
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-このレッスンでは、展開のプロパティを構成しますオンプレミスまたは Azure のサーバー インスタンスと、モデルの名前を指定します。 モデルは、そのインスタンスにし、デプロイします。 モデルが配置されると、ユーザーはレポート クライアント アプリケーションに接続できます。 デプロイの詳細については、次を参照してください。[表形式モデル ソリューションの配置](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)と[Azure Analysis Services へのデプロイ](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy)します。  
+このレッスンでは、展開のプロパティを構成しますオンプレミスまたは Azure のサーバー インスタンスと、モデルの名前を指定します。 モデルは、そのインスタンスにし、デプロイします。 モデルが配置されると、ユーザーはレポート クライアント アプリケーションに接続できます。 デプロイの詳細については、[表形式モデル ソリューションの配置](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)と[Azure Analysis Services へのデプロイ](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy)を参照してください。  
   
 このレッスンの推定所要時間: **5 分**  
   

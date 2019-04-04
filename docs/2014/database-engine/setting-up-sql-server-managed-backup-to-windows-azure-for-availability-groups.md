@@ -40,7 +40,7 @@ ms.locfileid: "52416833"
   
  次に、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]で AlwaysOn 可用性グループを設定する基本的な手順を説明します。 詳細手順のチュートリアルについては、このトピックの後半で説明します。  
   
-1.  可用性グループを作成したら、優先されるバックアップ レプリカを構成します。 可用性グループに対するこの設定は、バックアップに使用するレプリカを決定するために [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]でも使用されます。 バックアップの設定を設定する方法についてステップ バイ ステップ手順については、次を参照してください。[可用性レプリカでバックアップの構成&#40;SQL Server&#41;](availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)します。  新しい AlwaysOn 可用性グループを作成する場合は、次を参照してください。 [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)します。  
+1.  可用性グループを作成したら、優先されるバックアップ レプリカを構成します。 可用性グループに対するこの設定は、バックアップに使用するレプリカを決定するために [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]でも使用されます。 バックアップの設定を設定する方法についてステップ バイ ステップ手順については、[可用性レプリカでバックアップの構成&#40;SQL Server&#41;](availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)を参照してください。  新しい AlwaysOn 可用性グループを作成する場合は、[AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)を参照してください。  
   
 2.  セカンダリ レプリカへの読み取り専用接続アクセスを構成します。 読み取り専用アクセスを構成する方法についてステップ バイ ステップの手順を参照してください[可用性レプリカの読み取り専用アクセスを構成する&#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "52416833"
 #### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>可用性データベースに対する [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の有効化と構成  
  このチュートリアルでは、有効にして構成する手順を説明します。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Node1 と Node2 コンピューター上のデータベース (AGTestDB)、続いて監視を有効にする手順、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]正常性状態。  
   
-1.  **Windows Azure ストレージ アカウントを作成します。** バックアップは、Microsoft Azure BLOB ストレージ サービスに格納されます。 Windows Azure ストレージ アカウントを持っていない場合は、最初にそのアカウントを作成する必要があります。 詳細については、次を参照してください。 [Windows Azure ストレージ アカウントを作成する](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)します。 ストレージ アカウントの名前、アクセス キー、および URL をメモしておきます。 ストレージ アカウント名およびアクセス キー情報は、SQL 資格情報の作成に使用します。 SQL 資格情報は、バックアップ操作中にストレージ アカウントへの認証を行うために [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]によって使用されます。  
+1.  **Windows Azure ストレージ アカウントを作成します。** バックアップは、Microsoft Azure BLOB ストレージ サービスに格納されます。 Windows Azure ストレージ アカウントを持っていない場合は、最初にそのアカウントを作成する必要があります。 詳細については、[Windows Azure ストレージ アカウントを作成する](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)を参照してください。 ストレージ アカウントの名前、アクセス キー、および URL をメモしておきます。 ストレージ アカウント名およびアクセス キー情報は、SQL 資格情報の作成に使用します。 SQL 資格情報は、バックアップ操作中にストレージ アカウントへの認証を行うために [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]によって使用されます。  
   
 2.  **SQL 資格情報を作成します。** Id、およびストレージ アクセス キーをパスワードとしてストレージ アカウントの名前を使用して SQL 資格情報を作成します。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "52416833"
   
     ```  
   
-     暗号化の証明書を作成する方法の詳細については、次を参照してください。、**バックアップ証明書を作成する**ステップ[Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md)します。  
+     暗号化の証明書を作成する方法の詳細については、、**バックアップ証明書を作成する**ステップ[Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md)を参照してください。  
   
 7.  **有効にして構成[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]Node2 で agtestdb に対しての。** SQL Server Management Studio を起動し、可用性データベースがインストールされている Node2 上のインスタンスに接続します。 要件に合わせて、データベース名、ストレージ URL、SQL 資格情報、および保有期間の値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "52416833"
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
-     管理、運用、および分析のチャネル イベントは既定で有効になっていて、無効にできないことに注意してください。 手動の介入を必要とするイベントを監視するには、これで十分です。  デバッグ イベントを有効にすることはできますが、これらのチャネルには、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が問題の検出および解決に使用する情報イベントとデバッグ イベントが含まれています。 詳細については、次を参照してください。[モニター SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)します。  
+     管理、運用、および分析のチャネル イベントは既定で有効になっていて、無効にできないことに注意してください。 手動の介入を必要とするイベントを監視するには、これで十分です。  デバッグ イベントを有効にすることはできますが、これらのチャネルには、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が問題の検出および解決に使用する情報イベントとデバッグ イベントが含まれています。 詳細については、[モニター SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)を参照してください。  
   
 9. **正常性状態の通知を有効化し、構成する:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] には、注意を要するエラーまたは警告の電子メール通知を送信するためにエージェント ジョブを作成するストアド プロシージャがあります。  このような通知を受信するには、SQL Server エージェント ジョブを作成するストアド プロシージャの実行を有効にする必要があります。 次の手順では、電子メール通知を有効にして構成するためのプロセスを示します。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "52416833"
   
     ```  
   
- このセクションで説明した手順は、データベースで初めて [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を構成するための特別な手順です。 同じシステム ストアド プロシージャを使用して既存の構成を変更する**smart_admin.sp_set_db_backup**新しい値を指定します。 詳細については、次を参照してください。 [SQL Server Managed Backup to Windows Azure - 保有期間とストレージ設定](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)します。  
+ このセクションで説明した手順は、データベースで初めて [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を構成するための特別な手順です。 同じシステム ストアド プロシージャを使用して既存の構成を変更する**smart_admin.sp_set_db_backup**新しい値を指定します。 詳細については、[SQL Server Managed Backup to Windows Azure - 保有期間とストレージ設定](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)を参照してください。  
   
 ### <a name="considerations-when-removing-a-database-from-alwayson-availability-group-configuration"></a>AlwaysOn 可用性グループの構成からデータベースを削除する際の注意点  
  使用したバックアップの実行をお勧めデータベースが AlwaysOn 可用性グループの構成から削除されますが、スタンドアロンのデータベース場合[smart_admin.sp_backup_on_demand &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)します。 データベースのバックアップをこのように作成すると、新しいバックアップ チェーンが確立され、データベースが可用性グループに含まれていたときにバックアップが格納された可用性コンテナーではなく、インスタンス固有のコンテナーにファイルが配置されます。  

@@ -72,7 +72,7 @@ SQLRETURN SQLCopyDesc(
 |HY016|実装行記述子は変更できません。|*TargetDescHandle* IRD に関連付けられていた。|  
 |HY021|不整合な記述子情報|整合性チェック中にチェックする記述子の情報は、一貫性のあるでした。 詳細についてを参照してください「整合性チェック」 **SQLSetDescField**します。|  
 |HY092|無効な属性またはオプション識別子|呼び出し**SQLCopyDesc**への呼び出しの入力を求め**SQLSetDescField**が *\*ValuePtr*は無効です、 *FieldIdentifier*引数*TargetDescHandle*します。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *SourceDescHandle*または*TargetDescHandle*関数をサポートしていません。|  
   
@@ -98,7 +98,7 @@ SQLRETURN SQLCopyDesc(
 > [!NOTE]  
 >  アプリケーションは、明示的に割り当てられた記述子ハンドルとを関連付けることができる可能性があります、 *StatementHandle*、呼び出し元ではなく**SQLCopyDesc**記述子が 1 つからフィールドをコピーします。 明示的に割り当てられた記述子を別に関連付けることができます*StatementHandle*同じ*ConnectionHandle* SQL_ATTR_APP_ROW_DESC または SQL_ATTR_APP_PARAM_DESC ステートメントの設定属性の明示的に割り当てられた記述子ハンドルをします。 これが完了したら、 **SQLCopyDesc**間の記述子が 1 つの記述子フィールドの値をコピーするために呼び出すことはありません。 記述子ハンドルが関連付けられることはできません、 *StatementHandle*別*ConnectionHandle*、ただし; で同じの記述子フィールドの値を使用する*StatementHandles*で異なる*ConnectionHandles*、 **SQLCopyDesc**呼び出す必要があります。  
   
- 記述子のヘッダーまたはレコードのフィールドの説明は、次を参照してください。 [SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。 記述子の詳細については、次を参照してください。[記述子](../../../odbc/reference/develop-app/descriptors.md)します。  
+ 記述子のヘッダーまたはレコードのフィールドの説明は、[SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)を参照してください。 記述子の詳細については、[記述子](../../../odbc/reference/develop-app/descriptors.md)を参照してください。  
   
 ## <a name="copying-rows-between-tables"></a>テーブル間の行のコピー  
  アプリケーションがからデータをコピー 1 つのテーブル間アプリケーション レベルでデータをコピーせず。 これを行うには、アプリケーションは、データをフェッチするステートメントとコピーにデータを挿入するステートメントに、同じデータ バッファーと記述子の情報をバインドします。 (を明示的に割り当てられた記述子を 1 つのステートメントに ARD と別の APD の両方としてバインディング) アプリケーション記述子を共有することで、またはを使用してこれを実現することができます**SQLCopyDesc** ARD 間のバインディングをコピーして2 つのステートメントの APD します。 場合、ステートメントは、異なる接続で**SQLCopyDesc**使用する必要があります。 さらに、 **SQLCopyDesc** IRD と IPD 2 つのステートメントの間のバインドのコピーを呼び出す必要があります。 SQL_ACTIVE_STATEMENTS 情報の種類がへの呼び出し用のドライバーによって返される、同じ接続でステートメントの間でデータをコピーするとき**SQLGetInfo**を成功させるのには、この操作を 1 より大きい必要があります。 (このそうでない接続間でコピーするときにします。)  

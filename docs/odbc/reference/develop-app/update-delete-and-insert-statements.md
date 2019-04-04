@@ -51,4 +51,4 @@ SQL ベースのアプリケーションでは、テーブルに変更を加え�
 INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- この効率性のパラメーター値の配列を渡すことによって増やすことができます。 ステートメントのパラメーターとパラメーター値の配列の詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)します。
+ この効率性のパラメーター値の配列を渡すことによって増やすことができます。 ステートメントのパラメーターとパラメーター値の配列の詳細については、[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)を参照してください。

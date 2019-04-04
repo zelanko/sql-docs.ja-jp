@@ -42,7 +42,7 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
 ### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. QName からの名前空間 URI の取得  
- 実際のサンプルでは、次を参照してください。 [QName のローカル名&#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md)します。  
+ 実際のサンプルでは、[QName のローカル名&#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md)を参照してください。  
   
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  

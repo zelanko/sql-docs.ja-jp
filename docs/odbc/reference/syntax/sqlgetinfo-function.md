@@ -89,13 +89,13 @@ SQLRETURN SQLGetInfo(
 |HY024|無効な属性値|(DM)、*情報の種類*引数が SQL_DRIVER_HSTMT、およびによって示される値*InfoValuePtr*が有効なステートメント ハンドル。<br /><br /> (DM)、*情報の種類*引数が SQL_DRIVER_HDESC、およびによって示される値*InfoValuePtr*が有効な記述子ハンドル。|  
 |HY090|文字列またはバッファーの長さが無効です。|引数に指定された (DM) 値*BufferLength*が 0 未満でした。<br /><br /> (DM) の指定された値*BufferLength* 、奇数と *\*InfoValuePtr*されましたが、Unicode データ型。|  
 |HY096|範囲外の情報の種類|引数が指定された値*情報の種類*ODBC ドライバーでサポートされているのバージョンには無効です。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYC00|省略可能なフィールドが実装されていません|引数が指定された値*情報の種類*がドライバーによってサポートされていないドライバー固有の値。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に対応するドライバー、 *ConnectionHandle*関数をサポートしていません。|  
   
 ## <a name="comments"></a>コメント  
- 現在定義されている情報の種類が「情報の種類、」このセクションの後半で示すように詳細は、さまざまなデータ ソースを活用するために定義することが期待されます。 さまざまな情報の種類が ODBC; によって予約されていますドライバー開発者向けには、Open Group から個々 のドライバーの使用するための値を予約する必要があります。 **SQLGetInfo** Unicode 変換は行われませんか*サンキング*(を参照してください[付録 a:ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)の*ODBC プログラマ リファレンス*) のドライバー定義*InfoTypes*します。 詳細については、次を参照してください。[ドライバー固有のデータ型、記述子の種類、情報の種類、診断型、および属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)します。 返される情報の形式\* *InfoValuePtr*によって異なります、*情報の種類*を要求します。 **SQLGetInfo**で 5 つの異なる形式のいずれかの情報が返されます。  
+ 現在定義されている情報の種類が「情報の種類、」このセクションの後半で示すように詳細は、さまざまなデータ ソースを活用するために定義することが期待されます。 さまざまな情報の種類が ODBC; によって予約されていますドライバー開発者向けには、Open Group から個々 のドライバーの使用するための値を予約する必要があります。 **SQLGetInfo** Unicode 変換は行われませんか*サンキング*(を参照してください[付録 a:ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)の*ODBC プログラマ リファレンス*) のドライバー定義*InfoTypes*します。 詳細については、[ドライバー固有のデータ型、記述子の種類、情報の種類、診断型、および属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)を参照してください。 返される情報の形式\* *InfoValuePtr*によって異なります、*情報の種類*を要求します。 **SQLGetInfo**で 5 つの異なる形式のいずれかの情報が返されます。  
   
 -   Null で終わる文字列  
   
@@ -729,7 +729,7 @@ SQLRETURN SQLGetInfo(
 >  ODBC 3 *.x*、この値が返されます*情報の種類*呼び出しによって返されることができますも**SQLGetConnectAttr**で、*属性*SQL_ATTR_CURRENT_CATALOG の引数です。  
   
  SQL_DATETIME_LITERALS (ODBC 3.0)  
- データ ソースでサポートされる SQL 92 datetime リテラルを列挙する SQLUINTEGER ビットマスク。 これらは、sql-92 規格に表示する日付時刻リテラルと、ODBC で定義されている datetime リテラルのエスケープ句とは別ことに注意してください。 ODBC datetime リテラルのエスケープ句の詳細については、次を参照してください。[日付、時刻、およびタイムスタンプのリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)します。  
+ データ ソースでサポートされる SQL 92 datetime リテラルを列挙する SQLUINTEGER ビットマスク。 これらは、sql-92 規格に表示する日付時刻リテラルと、ODBC で定義されている datetime リテラルのエスケープ句とは別ことに注意してください。 ODBC datetime リテラルのエスケープ句の詳細については、[日付、時刻、およびタイムスタンプのリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)を参照してください。  
   
  過渡期の FIPS 準拠レベル ドライバーは、次の一覧内のビットのビットマスクの「1」の値を常に返します。 「0」の場合は、sql-92 日付時刻リテラルがサポートされていないことの値。  
   
@@ -788,7 +788,7 @@ SQLRETURN SQLGetInfo(
  Windows 7 ドライバー マネージャーのバージョンは、03.80 です。 Windows 8 のドライバー マネージャーのバージョンは、03.81 です。  
   
  SQL_DRIVER_AWARE_POOLING_SUPPORTED (ODBC 3.8)  
- SQLUINTEGER 値を示す場合は、ドライバーがドライバー対応のプールをサポートします。 (詳細については、次を参照してください。[ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)します。  
+ SQLUINTEGER 値を示す場合は、ドライバーがドライバー対応のプールをサポートします。 (詳細については、[ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)を参照してください。  
   
  SQL_DRIVER_AWARE_POOLING_CAPABLE では、ドライバーがドライバー対応のプーリング メカニズムをサポートできることを示します。  
   
@@ -826,7 +826,7 @@ SQLRETURN SQLGetInfo(
  SQL_DRIVER_ODBC_VER (ODBC 2.0)  
  ドライバーがサポートする ODBC のバージョンと文字の文字列。 バージョンの形式は、##. ## 最初の 2 つの数字、メジャー バージョンとは、次の 2 つの数字はマイナー バージョン。 SQL_SPEC_MAJOR と SQL_SPEC_MINOR、メジャーおよびマイナー バージョン番号を定義します。 このマニュアルで説明されている ODBC のバージョンでは、これらは、3 と 0 の場合と、ドライバーは、「03.00」で返す必要があります。  
   
- ODBC ドライバー マネージャーでは、既存のアプリケーションとの下位互換性を維持するために SQLGetInfo(SQL_DRIVER_ODBC_VER) の戻り値は変更されません。 ドライバーは、返される値を指定します。 ただし、C データ型の拡張機能をサポートしているドライバーが 3.8 (またはそれ以降) の場合を返す必要があります、アプリケーションが呼び出す**SQLSetEnvAttr** 3.8 SQL_ATTR_ODBC_VERSION に設定します。 詳細については、次を参照してください。 [ODBC における C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)します。  
+ ODBC ドライバー マネージャーでは、既存のアプリケーションとの下位互換性を維持するために SQLGetInfo(SQL_DRIVER_ODBC_VER) の戻り値は変更されません。 ドライバーは、返される値を指定します。 ただし、C データ型の拡張機能をサポートしているドライバーが 3.8 (またはそれ以降) の場合を返す必要があります、アプリケーションが呼び出す**SQLSetEnvAttr** 3.8 SQL_ATTR_ODBC_VERSION に設定します。 詳細については、[ODBC における C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)を参照してください。  
   
  SQL_DRIVER_VER (ODBC 1.0)  
  ドライバーのバージョンと必要に応じて、ドライバーの説明文字列を返します。 形式は、バージョンには、少なくとも ##. ##. ### 最初の 2 つの数字は、メジャー バージョン、次の 2 つの数字は、マイナーのバージョン、最後の 4 桁の数字は、リリース バージョン。  
@@ -1034,7 +1034,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_GD_BOUND = **SQLGetData**連結された列の非バインド列だけでなく呼び出すことができます。 ドライバーは、SQL_GD_ANY_COLUMN を返す場合を除き、この値を返すことはできません。  
   
- SQL_GD_OUTPUT_PARAMS = **SQLGetData**出力パラメーターの値を返すを呼び出すことができます。 詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)します。  
+ SQL_GD_OUTPUT_PARAMS = **SQLGetData**出力パラメーターの値を返すを呼び出すことができます。 詳細については、[SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)を参照してください。  
   
  **SQLGetData**最後の列にバインドされた後に発生する非バインド列からのみデータが列の数を増やすことの順序で呼び出されます、行のブロック内の行にないを返すときに必要です。  
   
@@ -1291,7 +1291,7 @@ SQLRETURN SQLGetInfo(
  SQL_MULT_RESULT_SETS (ODBC 1.0)  
  文字の文字列。"Y"データ ソースは、そうでない場合、"N"、複数の結果セットをサポートしている場合。  
   
- 複数の結果セットの詳細については、次を参照してください。[複数結果](../../../odbc/reference/develop-app/multiple-results.md)します。  
+ 複数の結果セットの詳細については、[複数結果](../../../odbc/reference/develop-app/multiple-results.md)を参照してください。  
   
  SQL_MULTIPLE_ACTIVE_TXN (ODBC 1.0)  
  文字の文字列。"Y"、ドライバーは、いつでもアクティブにできる 1 つのトランザクションのみの場合、同時に、"N"は、複数のアクティブなトランザクションをサポートしている場合。  
@@ -1299,7 +1299,7 @@ SQLRETURN SQLGetInfo(
  この情報の種類に対して返される情報は、分散トランザクションの場合は適用されません。  
   
  SQL_NEED_LONG_DATA_LEN (ODBC 2.0)  
- 文字の文字列。"Y"(データ型は、SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型には) その値の前に長い形式のデータ値の長さがデータ ソースに必要がある場合は、そうでない場合、"N"のデータ ソースに送信されます。 詳細については、次を参照してください。 [SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)と[SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)します。  
+ 文字の文字列。"Y"(データ型は、SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型には) その値の前に長い形式のデータ値の長さがデータ ソースに必要がある場合は、そうでない場合、"N"のデータ ソースに送信されます。 詳細については、[SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)と[SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)を参照してください。  
   
  SQL_NON_NULLABLE_COLUMNS (ODBC 1.0)  
  データ ソースが列に NOT NULL をサポートするかどうかを指定する SQLUSMALLINT 値:  
@@ -1339,7 +1339,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_OIC_LEVEL2。さらに機密性の高いカーソルなどの高度な機能のレベル 1 標準コンプライアンス レベル機能を含むレベル更新、削除、およびブックマークを更新ストアド プロシージャのサポートカタログ関数の主キーと外部キーです。複数のカタログのサポート。などなど。  
   
- 詳細については、次を参照してください。[インターフェイスの適合性レベル](../../../odbc/reference/develop-app/interface-conformance-levels.md)します。  
+ 詳細については、[インターフェイスの適合性レベル](../../../odbc/reference/develop-app/interface-conformance-levels.md)を参照してください。  
   
  SQL_ODBC_VER (ODBC 1.0)  
  ODBC ドライバー マネージャーは、準拠しているのバージョンと文字の文字列。 バージョンの形式は、##. ##. 0000 で、最初の 2 つの数字は、メジャー バージョンと、次の 2 つの数字はマイナー バージョン。 これにより、ドライバー マネージャーでのみが実装されます。  
@@ -1456,14 +1456,14 @@ SQLRETURN SQLGetInfo(
   
  SQL_SO_MIXED = ドライバーにより、キー、keyset、およびキーセットのサイズのすべての行が行セットのサイズより大きい。 カーソルのキーセット ドリブンのキーセット内とキーセットの外側は動的です。 (ODBC 1.0)  
   
- スクロール可能なカーソルについては、次を参照してください。[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)します。  
+ スクロール可能なカーソルについては、[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)を参照してください。  
   
  SQL_SEARCH_PATTERN_ESCAPE (ODBC 1.0)  
  ドライバーのサポートの検索パターンで使用できる文字としてパターン一致のメタ文字のアンダー スコア (_)、パーセント記号 (%) の使用を許可するエスケープ文字として指定する文字列。 このエスケープ文字は、検索文字列をサポートするこれらのカタログ関数の引数に対してのみ適用されます。 この文字列が空の場合、ドライバーは、検索パターンのエスケープ文字をサポートしていません。  
   
  この情報の種類が内のエスケープ文字の一般的なサポートを示していないため、**など**述語、sql-92 含まないこの文字の文字列の要件。  
   
- これは、*情報の種類*カタログ関数に制限されています。 検索パターン文字列にエスケープ文字の使用については、次を参照してください。[パターン値の引数](../../../odbc/reference/develop-app/pattern-value-arguments.md)します。  
+ これは、*情報の種類*カタログ関数に制限されています。 検索パターン文字列にエスケープ文字の使用については、[パターン値の引数](../../../odbc/reference/develop-app/pattern-value-arguments.md)を参照してください。  
   
  SQL_SERVER_NAME (ODBC 1.0)  
  文字の文字列が実際のデータ ソースに固有のサーバー名データ ソース名を使用する際に便利です。 **SQLConnect**、 **SQLDriverConnect**、および**SQLBrowseConnect**します。  
@@ -1689,7 +1689,7 @@ SQLRETURN SQLGetInfo(
   
  これらの分離レベルの説明については、SQL_DEFAULT_TXN_ISOLATION の説明を参照してください。  
   
- トランザクション分離レベルを設定するアプリケーションを呼び出す**SQLSetConnectAttr** SQL_ATTR_TXN_ISOLATION 属性を設定します。 詳細については、次を参照してください。 [SQLSetConnectAttr 関数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)します。  
+ トランザクション分離レベルを設定するアプリケーションを呼び出す**SQLSetConnectAttr** SQL_ATTR_TXN_ISOLATION 属性を設定します。 詳細については、[SQLSetConnectAttr 関数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)を参照してください。  
   
  SQL 92 エントリのレベルに準拠ドライバーでは、サポートされている、SQL_TXN_SERIALIZABLE は常に返します。 サポートされている、FIPS 過渡期レベルに準拠ドライバーはこれらのオプションすべてを返します常にされます。  
   

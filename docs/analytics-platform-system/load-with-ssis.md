@@ -40,7 +40,7 @@ PDW 変換先アダプターとは、Integration Services の dtsx パッケー�
   
 このトピックで説明されているタスクだけでなくをフィルター処理、変換、分析、Integration Services の他の機能を使用し、data warehouse に読み込む前に、データのクレンジングできます。 SQL ステートメントの実行、子パッケージの実行、またはメールの送信によって、パッケージのワークフローを拡張することもできます。  
   
-Integration Services の完全なドキュメントについては、次を参照してください。 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)します。  
+Integration Services の完全なドキュメントについては、[SQL Server Integration Services](../integration-services/sql-server-integration-services.md)を参照してください。  
   
 ## <a name="HowToDeployPackage"></a>Integration Services パッケージを実行するためのメソッド  
 Integration Services パッケージを実行するのにには、これらのメソッドのいずれかを使用します。  

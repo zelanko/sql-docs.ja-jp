@@ -24,15 +24,15 @@ ms.locfileid: "52775824"
   
 |関数|説明|  
 |--------------|-----------------|  
-|IAccessor::CreateAccessor|アプリケーションで `datetime`、`datetime2`、および `smalldatetime` の各値を区別できるように、DBBINDING 構造体にフラグが用意されています。 詳細については、次を参照してください。[パラメーターと行セットのメタデータ](metadata-parameter-and-rowset.md)します。|  
-|IBCPSession::BCPColFmt|詳細については、次を参照してください。[強化された日付と時刻型向けの一括コピーの変更&#40;OLE DB および ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)します。|  
-|ICommandWithParameters::GetParameterInfo|詳細については、次を参照してください。[パラメーターと行セットのメタデータ](metadata-parameter-and-rowset.md)します。|  
-|ICommandWithParameters::SetParameterinfo|詳細については、次を参照してください。[パラメーターと行セットのメタデータ](metadata-parameter-and-rowset.md)します。|  
-|IColumnsRowset::GetColumnsRowset|詳細については、次を参照してください。[パラメーターと行セットのメタデータ](metadata-parameter-and-rowset.md)します。|  
-|IColumnsInfo::GetColumnInfo|詳細については、次を参照してください。[パラメーターと行セットのメタデータ](metadata-parameter-and-rowset.md)します。|  
-|IDBSchemaRowset::GetRowset|影響を受けるスキーマ行セットの詳細については、次を参照してください。[日付と時刻、およびスキーマ行セット](../native-client-ole-db-rowsets/rowsets.md)します。|  
+|IAccessor::CreateAccessor|アプリケーションで `datetime`、`datetime2`、および `smalldatetime` の各値を区別できるように、DBBINDING 構造体にフラグが用意されています。 詳細については、[パラメーターと行セットのメタデータ](metadata-parameter-and-rowset.md)を参照してください。|  
+|IBCPSession::BCPColFmt|詳細については、[強化された日付と時刻型向けの一括コピーの変更&#40;OLE DB および ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)を参照してください。|  
+|ICommandWithParameters::GetParameterInfo|詳細については、[パラメーターと行セットのメタデータ](metadata-parameter-and-rowset.md)を参照してください。|  
+|ICommandWithParameters::SetParameterinfo|詳細については、[パラメーターと行セットのメタデータ](metadata-parameter-and-rowset.md)を参照してください。|  
+|IColumnsRowset::GetColumnsRowset|詳細については、[パラメーターと行セットのメタデータ](metadata-parameter-and-rowset.md)を参照してください。|  
+|IColumnsInfo::GetColumnInfo|詳細については、[パラメーターと行セットのメタデータ](metadata-parameter-and-rowset.md)を参照してください。|  
+|IDBSchemaRowset::GetRowset|影響を受けるスキーマ行セットの詳細については、[日付と時刻、およびスキーマ行セット](../native-client-ole-db-rowsets/rowsets.md)を参照してください。|  
 |IRowsetFastLoad|このインターフェイスは新しい日付と時刻の型をサポートしますが、インターフェイスに変更はありません。|  
-|ITableDefinition::CreateTable|詳細については、次を参照してください。 [OLE DB の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-ole-db-date-and-time-improvements.md)します。|  
+|ITableDefinition::CreateTable|詳細については、[OLE DB の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-ole-db-date-and-time-improvements.md)を参照してください。|  
   
 ## <a name="see-also"></a>参照  
  [日付と時刻の強化機能 &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  

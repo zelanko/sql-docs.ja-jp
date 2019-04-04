@@ -33,7 +33,7 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
 
 この記事では、SQL Server の 2 つのノードの共有ディスク フェールオーバー クラスター インスタンス (FCI) を作成する方法について説明します。 この記事には Red Hat Enterprise Linux (RHEL) の手順とスクリプトの例が含まれています。 Ubuntu ディストリビューションは、スクリプトの例は、通常されます RHEL のような Ubuntu でも機能します。 
 
-概念については、次を参照してください。 [SQL Server フェールオーバー クラスター インスタンス (FCI) で Linux](sql-server-linux-shared-disk-cluster-concepts.md)します。
+概念については、[SQL Server フェールオーバー クラスター インスタンス (FCI) で Linux](sql-server-linux-shared-disk-cluster-concepts.md)を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -47,7 +47,7 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
 
 ## <a name="install-and-configure-sql-server"></a>インストールして SQL Server の構成
 
-1. インストールし、両方のノードで、SQL Server を設定します。  詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)します。
+1. インストールし、両方のノードで、SQL Server を設定します。  詳細については、[Linux 上の SQL Server のインストール](sql-server-linux-setup.md)を参照してください。
 1. 構成のために、1つのノードをプライマリとして指定し、もう片方をセカンダリとして指定します。 このガイドでは、これ以降これらの用語を使用します。  
 1. セカンダリ ノードでSQL Server を停止し無効にします。
     次の例では、SQL Server を停止して無効にします。 

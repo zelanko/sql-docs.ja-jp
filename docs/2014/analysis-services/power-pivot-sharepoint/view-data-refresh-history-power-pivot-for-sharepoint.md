@@ -56,7 +56,7 @@ ms.locfileid: "48118972"
  履歴ページが開き、現在の Excel ブック内の PowerPivot データに関するすべての更新操作の完全なレコードが表示されます。  
   
 ##  <a name="viewITOps"></a> すべてのブックのデータ更新履歴の表示  
- サーバーの全体管理で PowerPivot 管理ダッシュボードを使用すると、ファーム管理者およびサービス アプリケーション管理者は、すべての PowerPivot ブックに関するデータ更新の履歴と状態を一括して表示できます。 詳細については、次を参照してください。 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)します。  
+ サーバーの全体管理で PowerPivot 管理ダッシュボードを使用すると、ファーム管理者およびサービス アプリケーション管理者は、すべての PowerPivot ブックに関するデータ更新の履歴と状態を一括して表示できます。 詳細については、[PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)を参照してください。  
   
 ##  <a name="pageelements"></a> 履歴情報の使用  
  データ更新の履歴ページには、各更新操作に関する詳細な情報が表示されます。 このページの情報を使用すると、更新が行われたかどうかを確認したり、更新が失敗した理由を調べたりすることができます。  

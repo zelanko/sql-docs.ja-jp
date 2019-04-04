@@ -142,7 +142,7 @@ ms.locfileid: "53377604"
   
  `Provider=MSOLAP.5;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=Adventure Works DW 2008R2;Data Source=AW-SRV01;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error`  
   
- 詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../../reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)と[SharePoint Server 2013 の Excel Services 用のデータ認証](https://go.microsoft.com/fwlink/?LinkId=296350)します。  
+ 詳細については、[データ接続、データ ソース、および Reporting Services の接続文字列](../../reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)と[SharePoint Server 2013 の Excel Services 用のデータ認証](https://go.microsoft.com/fwlink/?LinkId=296350)を参照してください。  
   
 ##  <a name="bkmk_supportedstrings"></a> Analysis Services で使用される接続文字列の形式  
  このセクションでは、Analysis Services でサポートされている接続文字列の形式を箇条書きにして説明します。 PowerPivot データベースへの接続を除く、Analysis Services に接続するアプリケーションでこれらの接続文字列を指定できます。  

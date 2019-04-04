@@ -42,7 +42,7 @@ ms.locfileid: "52538775"
  データの変更とナビゲーション メソッド、**レコード**オブジェクトには、絶対 URL を使用してリソースを検索、相対 URL もそのまま使用または**接続**開始点として、オブジェクト コンテキスト。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
   
  A**接続**オブジェクトが互いに関連付けられている**レコード**オブジェクト。 そのため、**レコード**オブジェクトの操作を呼び出すことによって、トランザクションの一部をすることができます**接続**オブジェクトのトランザクション メソッドです。  
   

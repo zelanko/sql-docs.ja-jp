@@ -30,7 +30,7 @@ ms.lasthandoff: 02/15/2019
 ms.locfileid: "56290740"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル:Reporting Services ツールを検索および開始する方法 (SSRS)
-  このチュートリアルでは、レポート サーバーの設定、レポート サーバーのコンテンツと動作の管理、レポートの作成とパブリッシュに使用できるツールを紹介します。 このチュートリアルの目的は、ツールを初めて使用する場合にそれぞれのツールをすぐに見つけて起動できるようにすることです。 既にツールを使用している場合は、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]を使用するときの重要なスキルを学ぶことができるその他のチュートリアルへお進みください。 その他のチュートリアルの詳細については、次を参照してください。 [Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)します。  
+  このチュートリアルでは、レポート サーバーの設定、レポート サーバーのコンテンツと動作の管理、レポートの作成とパブリッシュに使用できるツールを紹介します。 このチュートリアルの目的は、ツールを初めて使用する場合にそれぞれのツールをすぐに見つけて起動できるようにすることです。 既にツールを使用している場合は、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]を使用するときの重要なスキルを学ぶことができるその他のチュートリアルへお進みください。 その他のチュートリアルの詳細については、[Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)を参照してください。  
   
  このトピックの内容  
   
@@ -96,13 +96,13 @@ ms.locfileid: "56290740"
   
 #### <a name="to-start-report-manager"></a>レポート マネージャーを起動するには  
   
-1.  ブラウザーを開きます。 サポートされているブラウザーおよびブラウザー バージョンについては、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)します。  
+1.  ブラウザーを開きます。 サポートされているブラウザーおよびブラウザー バージョンについては、[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)を参照してください。  
   
 2.  Web ブラウザーのアドレス バーに、レポート マネージャーの URL を入力します。 既定では、URL は**http://\<serverName >/reports**します。 Reporting Services 構成ツールを使用して、サーバー名と URL を確認できます。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] で使用される URL の詳細については、「[レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」を参照してください。  
   
 3.  レポート マネージャーがブラウザー ウィンドウ内に表示されます。 最初のページは [ホーム] フォルダーです。 アクセス許可に応じて、最初のページにその他のフォルダー、レポートへのハイパーリンク、リソース ファイルなどが表示される場合もあります。 ツール バーに追加のボタンやコマンドが表示される場合もあります。  
   
-4.  ローカル レポート サーバーでレポート マネージャーを実行する場合は、次を参照してください。[ローカル管理用のネイティブ モード レポート サーバーの構成&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)します。  
+4.  ローカル レポート サーバーでレポート マネージャーを実行する場合は、[ローカル管理用のネイティブ モード レポート サーバーの構成&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)を参照してください。  
   
  **次の手順:**[レポート マネージャーの構成&#40;ネイティブ モード&#41;](../report-server/configure-web-portal.md)します。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "56290740"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] で [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の開始ページが開きます。 ソリューション エクスプローラーには、レポートとデータ ソースがそれぞれカテゴリとして表示されます。 これらのカテゴリを使用して、新しいレポートとデータ ソースを作成できます。 タブ付きウィンドウは、レポート定義を作成すると表示されます。 このウィンドウは [データ]、[レイアウト]、[プレビュー] の 3 つのタブで構成されます。  
   
- 初めてレポートを作成する場合は、「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。 レポート デザイナーで使用できるクエリ デザイナーの詳細については、次を参照してください。[レポート デザイナーの SQL Server Data Tools でのクエリ デザイン ツール&#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)します。  
+ 初めてレポートを作成する場合は、「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。 レポート デザイナーで使用できるクエリ デザイナーの詳細については、[レポート デザイナーの SQL Server Data Tools でのクエリ デザイン ツール&#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)を参照してください。  
   
 ##  <a name="bkmk_report_builder"></a> レポート ビルダー  
  使用[レポート ビルダー &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md)でレポートを作成、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office と同様の環境を作成します。 レポート デザイナーで作成したレポートであっても、以前のバージョンのレポート ビルダーでデザインしたレポートであっても、あらゆる既存レポートのカスタマイズおよび更新が可能です。 レポート ビルダーをローカル コンピューターにインストールするために実行する ReportBuilder3.msi ファイルの場所については、管理者に問い合わせてください。  

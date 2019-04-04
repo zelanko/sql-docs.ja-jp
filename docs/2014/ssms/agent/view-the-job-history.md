@@ -77,7 +77,7 @@ ms.locfileid: "53364284"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_help_jobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql)します。  
+ 詳細については、[sp_help_jobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql)を参照してください。  
   
 ##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **ジョブ履歴ログを表示するには**  

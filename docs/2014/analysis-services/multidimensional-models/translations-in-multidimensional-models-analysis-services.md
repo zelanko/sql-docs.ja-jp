@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48218944"
 ---
 # <a name="translations-in-multidimensional-models"></a>多次元モデルの翻訳
-  複数の言語のサポートで[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]翻訳を使用して行われます。 翻訳には、複数の言語で表示可能な [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのプロパティの言語識別子およびバインドが含まれます。 たとえば、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの翻訳を、指定した言語でそのデータベースのキャプションと説明が表示されるように定義できます。 翻訳の詳細については、次を参照してください。[キューブの翻訳](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)します。  
+  複数の言語のサポートで[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]翻訳を使用して行われます。 翻訳には、複数の言語で表示可能な [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのプロパティの言語識別子およびバインドが含まれます。 たとえば、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの翻訳を、指定した言語でそのデータベースのキャプションと説明が表示されるように定義できます。 翻訳の詳細については、[キューブの翻訳](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)を参照してください。  
   
 ## <a name="defining-translations"></a>翻訳の定義  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で翻訳を定義するには、翻訳対象の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに適したデザイナーを使用します。 翻訳の定義を作成、`Translation`オブジェクトに関連付けられた、適切な[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトを関連付けられているプロパティの指定した言語で指定された明示的なリテラル値を持つ[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクト。  

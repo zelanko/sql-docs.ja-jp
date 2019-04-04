@@ -37,7 +37,7 @@ ms.locfileid: "56016753"
   
 -   データの列がモデルでどのように使用されるかを定義します。  
   
- 操作のケースと、入れ子になったテーブルと入れ子になったテーブル キーを選択する方法の詳細については、次を参照してください。[入れ子になったテーブル&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)します。  
+ 操作のケースと、入れ子になったテーブルと入れ子になったテーブル キーを選択する方法の詳細については、[入れ子になったテーブル&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)を参照してください。  
   
 ### <a name="to-add-a-data-source-view"></a>データ ソース ビューを追加するには  
   

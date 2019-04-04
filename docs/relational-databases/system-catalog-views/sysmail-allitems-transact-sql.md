@@ -52,7 +52,7 @@ ms.locfileid: "47824850"
 |**query_result_header**|**bit**|値が 1 の場合、クエリの結果に列のヘッダーが含まれていることを示します。 値が 0 の場合、クエリの結果に列のヘッダーが含まれていないことを示します。|  
 |**query_result_width**|**int**|**Query_result_width**メッセージのパラメーター。|  
 |**query_result_separator**|**char(1)**|クエリの出力で列の区切りに使用された文字。|  
-|**exclude_query_output**|**bit**|**Exclude_query_output**メッセージのパラメーター。 詳細については、次を参照してください。 [sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)します。|  
+|**exclude_query_output**|**bit**|**Exclude_query_output**メッセージのパラメーター。 詳細については、[sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)を参照してください。|  
 |**append_query_error**|**bit**|**Append_query_error**メッセージのパラメーター。 0 は、クエリにエラーがあった場合、データベース メールで電子メール メッセージが送信されないことを示します。|  
 |**send_request_date**|**datetime**|メッセージがメール キューに挿入された日時。|  
 |**send_request_user**|**sysname**|メッセージを送信したユーザー。 これはメッセージの [差出人] フィールドに表示されるユーザーではなく、データベース メール プロシージャのユーザー コンテキストです。|  
@@ -65,7 +65,7 @@ ms.locfileid: "47824850"
 ## <a name="remarks"></a>コメント  
  使用して、 **sysmail_allitems**をすべてのメッセージの状態を表示するビューは、データベース メールで処理します。 データベース メールのトラブルシューティングを行うとき、このビューでは送信済みとそれ以外のメッセージの属性を比較できるので、問題の性質を特定するのに役立ちます。  
   
- このビューによって公開されているシステム テーブルのすべてのメッセージを含むし、可能性があります、 **msdb**データベースを拡張します。 古いメッセージをビューから定期的に削除して、テーブルのサイズを縮小するようにしてください。 詳細については、次を参照してください。[アーカイブ データベース メール メッセージやイベント ログには、SQL Server エージェント ジョブを作成する](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)します。  
+ このビューによって公開されているシステム テーブルのすべてのメッセージを含むし、可能性があります、 **msdb**データベースを拡張します。 古いメッセージをビューから定期的に削除して、テーブルのサイズを縮小するようにしてください。 詳細については、[アーカイブ データベース メール メッセージやイベント ログには、SQL Server エージェント ジョブを作成する](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  与えられる**sysadmin**固定サーバー ロールと**DatabaseMailUserRole**データベース ロール。 メンバーによって実行されると、 **sysadmin**固定サーバー ロールに、このビューはすべてのメッセージを表示します。 その他のすべてのユーザーには、自分が送信したメッセージのみを参照してください。  

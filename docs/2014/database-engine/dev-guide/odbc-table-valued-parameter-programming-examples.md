@@ -22,7 +22,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48087882"
 ---
 # <a name="odbc-table-valued-parameter-programming-examples"></a>ODBC テーブル値パラメーターのプログラミング例
-  ここでは、ODBC およびテーブル値パラメーターを使用した一般的なタスクの実行方法について説明します。 テーブル値パラメーターを示す別のサンプルでは、次を参照してください。[テーブル値パラメーターの&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+  ここでは、ODBC およびテーブル値パラメーターを使用した一般的なタスクの実行方法について説明します。 テーブル値パラメーターを示す別のサンプルでは、[テーブル値パラメーターの&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

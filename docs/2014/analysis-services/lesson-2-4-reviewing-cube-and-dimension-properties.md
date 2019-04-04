@@ -35,7 +35,7 @@ ms.locfileid: "48196272"
   
 4.  **[キューブ構造]** タブの **[ディメンション]** ペインで **[Customer]** を展開し、 **[Customer の編集]** をクリックしてディメンション デザイナーでディメンションを開きます。  
   
-     ディメンション デザイナーには、 **[ディメンション構造]**、 **[属性リレーションシップ]**、 **[翻訳]**、 **[ブラウザー]** というタブがあります。 **[ディメンション構造]** タブには、 **[属性]**、 **[階層]**、 **[データ ソース ビュー]** の 3 つのペインがあります。 ディメンションに含まれている属性は **[属性]** ペインに表示されます。 詳細については、次を参照してください。 [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)、[ユーザー定義階層の](multidimensional-models/user-defined-hierarchies-create.md)します。  
+     ディメンション デザイナーには、 **[ディメンション構造]**、 **[属性リレーションシップ]**、 **[翻訳]**、 **[ブラウザー]** というタブがあります。 **[ディメンション構造]** タブには、 **[属性]**、 **[階層]**、 **[データ ソース ビュー]** の 3 つのペインがあります。 ディメンションに含まれている属性は **[属性]** ペインに表示されます。 詳細については、[Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)、[ユーザー定義階層の](multidimensional-models/user-defined-hierarchies-create.md)を参照してください。  
   
 5.  キューブ デザイナーに切り替えるには、ソリューション エクスプローラーの **[キューブ]** ノードで **[Analysis Services Tutorial]** キューブを右クリックし、 **[ビュー デザイナー]** をクリックします。  
   

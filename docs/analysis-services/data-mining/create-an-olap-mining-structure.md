@@ -124,7 +124,7 @@ ms.locfileid: "52408603"
   
 -   2 番目のフィルターには、現在の Customer ディメンションの選択し、Gender 属性を選択属性値の一覧から [Female] を選択します。  
   
- マイニング構造を作成した後は、キューブ データとフィルター条件の両方の定義を変更できます。 詳細については、次を参照してください。[マイニング モデルのフィルター選択](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
+ マイニング構造を作成した後は、キューブ データとフィルター条件の両方の定義を変更できます。 詳細については、[マイニング モデルのフィルター選択](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)を参照してください。  
   
  **[マイニング構造]** タブと **[マイニング モデル]** タブのどちらでも、 **[キューブ スライスの定義]** をクリックして既存のマイニング構造にフィルターを追加できます。 **[キューブのスライス]** ダイアログ ボックスでは、ドロップダウン リストから値を選択して有効な MDX フィルター式を作成できます。  
   

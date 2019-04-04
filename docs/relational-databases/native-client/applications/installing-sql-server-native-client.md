@@ -36,7 +36,7 @@ ms.locfileid: "51670981"
 
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 がインストールするときにインストールされている[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]します。 
  
- SQL Server 2016 Native Client はありません。 詳細については、次を参照してください。 [SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md)します。 
+ SQL Server 2016 Native Client はありません。 詳細については、[SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md)を参照してください。 
  
 SQL Server 2012 Feature Pack の web ページから sqlncli.msi を取得することもできます。 SQL Server Native Client の最新バージョンをダウンロードするには[Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/confirmation.aspx?id=29065)します。 以前のバージョンの場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネイティブ クライアント コンピューターで、SQL Server 2012 がインストールされてもよりも早く[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 11.0 は以前のバージョンと並列でインストールされます。  
   

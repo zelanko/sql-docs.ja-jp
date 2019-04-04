@@ -40,7 +40,7 @@ ms.locfileid: "47677840"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**openTape**|**nvarchar(64)**|開いているテープ デバイスの物理ファイル名。 開くおよびテープ デバイスを解放の詳細については、次を参照してください。[バックアップ&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/backup-transact-sql.md)と[復元&#40;TRANSACT-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)します。|  
+|**openTape**|**nvarchar(64)**|開いているテープ デバイスの物理ファイル名。 開くおよびテープ デバイスを解放の詳細については、[バックアップ&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/backup-transact-sql.md)と[復元&#40;TRANSACT-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)を参照してください。|  
   
 ## <a name="permissions"></a>アクセス許可  
  ユーザーには、サーバーに対する VIEW SERVER STATE 権限が必要があります。  

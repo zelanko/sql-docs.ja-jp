@@ -52,7 +52,7 @@ sp_unsetapprole @cookie
 ## <a name="remarks"></a>コメント  
  使用して、アプリケーション後ロールをアクティブ化**sp_setapprole**、ユーザーがサーバーから切断またはを実行するまで、ロールがアクティブなまま**sp_unsetapprole**します。  
   
- アプリケーション ロールの概要については、次を参照してください。[アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)します。  
+ アプリケーション ロールの概要については、[アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーシップが必要**パブリック**とアプリケーション ロールがアクティブ化時に保存する cookie の知識。  

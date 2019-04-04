@@ -25,7 +25,7 @@ ms.locfileid: "47727720"
 > [!IMPORTANT]  
 >  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックの使用、 **SQLSetDescField**と**SQLSetDescRec**カーソル ライブラリの関数。 これらの関数については、次を参照してください。 [SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)と[SQLSetDescRec 関数](../../../odbc/reference/syntax/sqlsetdescrec-function.md)します。  
+ このトピックの使用、 **SQLSetDescField**と**SQLSetDescRec**カーソル ライブラリの関数。 これらの関数については、[SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)と[SQLSetDescRec 関数](../../../odbc/reference/syntax/sqlsetdescrec-function.md)を参照してください。  
   
  カーソル ライブラリを実行します**SQLSetDescField**ブックマーク列の設定を呼び出す際、フィールドの値を返します。  
   

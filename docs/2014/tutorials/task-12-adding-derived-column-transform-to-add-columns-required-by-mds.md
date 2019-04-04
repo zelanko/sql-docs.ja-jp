@@ -36,7 +36,7 @@ ms.locfileid: "56036514"
   
      ![SSIS 変数 ウィンドウ](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "SSIS 変数 ウィンドウ")  
   
-7.  型**ImportType**の**名前**と**2**の**値**します。 MDS のエンティティに新しいメンバーを追加するため、値には 2 を指定します。 詳細については、このパラメーターは、次を参照してください。[リーフ メンバー ステージング テーブル](../master-data-services/leaf-member-staging-table-master-data-services.md)します。  
+7.  型**ImportType**の**名前**と**2**の**値**します。 MDS のエンティティに新しいメンバーを追加するため、値には 2 を指定します。 詳細については、このパラメーターは、[リーフ メンバー ステージング テーブル](../master-data-services/leaf-member-staging-table-master-data-services.md)を参照してください。  
   
 8.  クリックして**変数の追加**ツール バー ボタンをもう一度です。  
   

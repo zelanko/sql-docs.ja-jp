@@ -22,7 +22,7 @@ ms.locfileid: "50146267"
   
  このセクションでは、CSDLBI 表現と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ モデルをマップする方法 (テーブルと多次元の両方) を、各モデルの種類の例と共に説明します。  
   
- これらの概念を示すために、Codeplex から入手できる AdventureWorks サンプル データベースの例を使用しています。 サンプルの詳細については、次を参照してください。 [for SQL Server の Adventure Works サンプル](http://go.microsoft.com/fwlink/?linkID=220093)します。  
+ これらの概念を示すために、Codeplex から入手できる AdventureWorks サンプル データベースの例を使用しています。 サンプルの詳細については、[for SQL Server の Adventure Works サンプル](http://go.microsoft.com/fwlink/?linkID=220093)を参照してください。  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>CSDLBI のテーブル モデルの構造  
  レポート モデルとそのデータを記述する CSDLBI ドキュメントでは、最初に xsd ステートメントを記述し、その後にモデルの定義を記述します。  
@@ -129,7 +129,7 @@ ms.locfileid: "50146267"
   
  **ディメンション:** ディメンションは列とプロパティを持つエンティティ (テーブル) として CSDLBI で表現されます。 パースペクティブに含まれていない場合でも、モデルに含まれているディメンションとしてマークされて CSDL 出力で表現することに注意してください。 **Hidden**します。  
   
- **パースペクティブ:** クライアントは、個々 のパースペクティブに対する CSDL を要求できます。 詳細については、次を参照してください。 [DISCOVER_CSDL_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)します。  
+ **パースペクティブ:** クライアントは、個々 のパースペクティブに対する CSDL を要求できます。 詳細については、[DISCOVER_CSDL_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)を参照してください。  
   
  **階層:** 階層がサポートされているし、一連のレベルとして CSDLBI で表現されます。  
   

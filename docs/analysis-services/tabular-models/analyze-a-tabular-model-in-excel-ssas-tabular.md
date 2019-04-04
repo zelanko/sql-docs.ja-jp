@@ -39,11 +39,11 @@ ms.locfileid: "53072229"
   
     -   セキュリティ ロールを使用するには、 **[ロール]** を選択して、一覧から 1 つ以上のロールを選択します。  
   
-         セキュリティ ロールはロール マネージャーを使用して定義する必要があります。 詳細については、次を参照してください。[管理ロールの作成と](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)します。  
+         セキュリティ ロールはロール マネージャーを使用して定義する必要があります。 詳細については、[管理ロールの作成と](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)を参照してください。  
   
 3.  パースペクティブを使用するには、 **[パースペクティブ]** ボックスの一覧からパースペクティブを選択します。  
   
-     パースペクティブ (既定値以外) は [パースペクティブ] ダイアログ ボックスを使用して定義する必要があります。 詳細については、次を参照してください。[の作成と管理のパースペクティブ](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)します。  
+     パースペクティブ (既定値以外) は [パースペクティブ] ダイアログ ボックスを使用して定義する必要があります。 詳細については、[の作成と管理のパースペクティブ](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)を参照してください。  
   
 > [!NOTE]  
 >  Excel のピボットテーブルのフィールドの一覧は、モデル デザイナーでモデル プロジェクトに変更を加えても自動的に更新されません。 ピボットテーブルのフィールドの一覧を更新するには、Excel の **[オプション]** リボンで **[更新]** をクリックします。  

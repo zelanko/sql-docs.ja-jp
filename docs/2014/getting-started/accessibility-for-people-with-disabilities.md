@@ -76,7 +76,7 @@ ms.locfileid: "53360714"
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のマニュアルは、ユーザー補助機能を必要とする方のために、別の形式でも提供されています。  
   
 ### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマニュアルの入手  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマニュアルはオンラインで入手できます。 詳細については、次を参照してください。 [for SQL Server 製品ドキュメントを使用して](../2014-toc/books-online-for-sql-server-2014.md)します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマニュアルはオンラインで入手できます。 詳細については、[for SQL Server 製品ドキュメントを使用して](../2014-toc/books-online-for-sql-server-2014.md)を参照してください。  
   
 ## <a name="obtaining-documentation-for-additional-includemsconameincludesmsconame-mdmd-products"></a>その他の [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のマニュアルの入手  
  アクセス可能なドキュメントを取得する[!INCLUDE[msCoName](../includes/msconame-md.md)]から製品、 [Microsoft アクセシビリティ Web サイト](https://go.microsoft.com/fwlink/?LinkID=67164)します。  

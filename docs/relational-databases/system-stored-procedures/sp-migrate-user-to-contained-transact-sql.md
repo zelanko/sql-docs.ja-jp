@@ -70,7 +70,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 -   **sp_migrate_user_to_contained**システム データベースでは使用できません。  
   
 ## <a name="security"></a>セキュリティ  
- ユーザーを移行する場合は、無効にするか、またはのインスタンスからすべての管理者ログインを削除しないように注意する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 すべてのログインが削除された場合は、次を参照してください。 [SQL Server システム管理者がロックアウトされた場合に接続する](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)します。  
+ ユーザーを移行する場合は、無効にするか、またはのインスタンスからすべての管理者ログインを削除しないように注意する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 すべてのログインが削除された場合は、[SQL Server システム管理者がロックアウトされた場合に接続する](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)を参照してください。  
   
  場合、 **builtin \administrators**ログインが存在する、管理者を使用して、アプリケーションを起動して接続できる、**管理者として実行**オプション。  
   

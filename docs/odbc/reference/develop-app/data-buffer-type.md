@@ -34,7 +34,7 @@ ms.locfileid: "52528860"
     SQLBindCol(hstmt, 1, SQL_C_TYPE_DATE, &Date, 0, &DateInd);  
     ```  
   
-     型識別子の詳細については、次を参照してください。、 [ODBC のデータ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)セクションで、このセクションで後述します。  
+     型識別子の詳細については、、 [ODBC のデータ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)セクションで、このセクションで後述を参照してください。  
   
 -   **定義済みの型。** によって示されるバッファーを送信し、オプションや、バッファーなどの属性を取得するために使用、 *InfoValuePtr*引数**SQLGetInfo**、指定されたオプションに依存する型は固定であります。 ドライバーは、この型のデータ バッファーを前提としています。この型のバッファーを割り当て、アプリケーションの役目です。 たとえば、以下でを呼び出す**SQLGetInfo**ドライバーでは、バッファーは 32 ビット整数 SQL_STRING_FUNCTIONS オプションが必要とこれが前提としています。  
   

@@ -54,7 +54,7 @@ SQLRETURN SQLSetDescField(
  [入力]記述子レコードのフィールドを設定しようとするアプリケーションを含むことを示します。 記述子のレコードは、レコード番号 0 ブックマーク レコードの中で、0 から番号が付けられます。 *RecNumber*ヘッダー フィールドの引数は無視されます。  
   
  *FieldIdentifier*  
- [入力]値を設定するが、記述子フィールドを示します。 詳細については、次を参照してください。"*FieldIdentifier*引数"、"コメント"セクションでします。  
+ [入力]値を設定するが、記述子フィールドを示します。 詳細については、"*FieldIdentifier*引数"、"コメント"セクションでを参照してください。  
   
  *ValuePtr*  
  [入力]記述子の情報または整数値を格納するバッファーへのポインター。 データ型の値に依存*FieldIdentifier*します。 場合*ValuePtr*整数値です (SQLLEN) は 8 バイト、4 バイト (SQLINTEGER) またはの値に応じて 2 バイト (SQLSMALLINT) と見なすことが、 *FieldIdentifier*引数。  
@@ -97,7 +97,7 @@ SQLRETURN SQLSetDescField(
 |HY091|無効な記述子フィールドの識別子|指定された値、 *FieldIdentifier*引数が、ODBC で定義されたフィールドとしましたが、実装定義の値でした。<br /><br /> *FieldIdentifier*引数は有効ですが、 *DescriptorHandle*引数。<br /><br /> *FieldIdentifier*引数が ODBC で定義された、読み取り専用フィールド。|  
 |HY092|無効な属性またはオプション識別子|値 *\*ValuePtr*は無効です、 *FieldIdentifier*引数。<br /><br /> *FieldIdentifier*引数が SQL_DESC_UNNAMED、および*ValuePtr*できませんでした。|  
 |HY105|無効なパラメーターの型|(DM) SQL_DESC_PARAMETER_TYPE フィールドに指定された値が無効です。 (詳細については、次を参照してください、"*InputOutputType*引数"セクション**SQLBindParameter**。)。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。[で ODBC 3.8 新](../../../odbc/reference/what-s-new-in-odbc-3-8.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[で ODBC 3.8 新](../../../odbc/reference/what-s-new-in-odbc-3-8.md)を参照してください。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *DescriptorHandle*関数をサポートしていません。|  
   
@@ -388,7 +388,7 @@ SQLRETURN SQLSetDescField(
 |SQL_INTERVAL_YEAR/SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
 |SQL_INTERVAL_YEAR_TO_MONTH/SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
   
- データの間隔と、このフィールドの詳細については、次を参照してください。[データ型識別子と記述子](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)します。  
+ データの間隔と、このフィールドの詳細については、[データ型識別子と記述子](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)を参照してください。  
   
  **[すべて] SQL_DESC_DATETIME_INTERVAL_PRECISION**  
  この SQLINTEGER レコード フィールドには、先頭の有効桁数 SQL_DESC_TYPE フィールドが SQL_INTERVAL の場合、間隔が含まれています。 SQL_DESC_DATETIME_INTERVAL_CODE フィールドが間隔のデータ型に設定されている場合、このフィールドは、先頭の有効桁数の既定の間隔に設定されます。  

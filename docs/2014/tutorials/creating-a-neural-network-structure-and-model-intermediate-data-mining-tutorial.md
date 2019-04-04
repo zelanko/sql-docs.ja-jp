@@ -161,7 +161,7 @@ ms.locfileid: "56037723"
 |>= 0.12|36|  
   
 > [!NOTE]  
->  これらの統計は、すべてのデータが処理された後のモデルのマージナル統計ノードから取得できます。 マージナル統計ノードの詳細については、次を参照してください。[ニューラル ネットワーク モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)します。  
+>  これらの統計は、すべてのデータが処理された後のモデルのマージナル統計ノードから取得できます。 マージナル統計ノードの詳細については、[ニューラル ネットワーク モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)を参照してください。  
   
  この表の "値" 列には、ServiceGrade の数値がどのように処理されたかが示されています。 "サポート" 列には、その値またはその範囲に分類されたケースの数が示されています。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "56037723"
   
      この方法を選択した場合、等しいサイズのバケットに値が分配されてから、各範囲の上限と下限が変更されます。 バケットの数は指定できますが、それぞれのバケットに含まれる値の数が数個だけにならないようにしてください。  
   
- ビン分割オプションの詳細については、次を参照してください。[分離メソッド&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md)します。  
+ ビン分割オプションの詳細については、[分離メソッド&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md)を参照してください。  
   
  また、数値の値を使用するのではなくでした追加するなど、サービス グレードを定義済みの対象の範囲に分類する別の派生列**ベスト**(ServiceGrade \<= 0.05)、 **許容される**(0.10 > ServiceGrade > 0.05)、および**低下**(ServiceGrade > = 0.10)。  
   

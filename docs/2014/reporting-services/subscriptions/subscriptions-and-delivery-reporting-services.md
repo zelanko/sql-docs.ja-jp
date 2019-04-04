@@ -39,7 +39,7 @@ ms.locfileid: "56037973"
  サブスクリプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 > [!NOTE]
->  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以降では、サブスクリプションの所有権をプログラムによって転送できます。 サブスクリプションの所有権の転送に使用できるユーザー インターフェイスはありません。 詳細については、次を参照してください。<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>と[List Reporting Services Subscription Owners と Run a Subscription を変更し、PowerShell を使用して](manage-subscription-owners-and-run-subscription-powershell.md)します。  
+>  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以降では、サブスクリプションの所有権をプログラムによって転送できます。 サブスクリプションの所有権の転送に使用できるユーザー インターフェイスはありません。 詳細については、<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>と[List Reporting Services Subscription Owners と Run a Subscription を変更し、PowerShell を使用して](manage-subscription-owners-and-run-subscription-powershell.md)を参照してください。  
   
  **このトピックの内容:**  
   

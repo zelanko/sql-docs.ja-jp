@@ -75,7 +75,7 @@ Response.Write("Success!")
 </HTML>  
 ```  
   
- 具体的な VBScript 例については、ADO のドキュメントに含まれています。 詳細については、次を参照してください。 [ADO のコード例では、Microsoft Visual Basic Scripting Edition](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)します。  
+ 具体的な VBScript 例については、ADO のドキュメントに含まれています。 詳細については、[ADO のコード例では、Microsoft Visual Basic Scripting Edition](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)を参照してください。  
   
 ## <a name="differences-between-vbscript-and-visual-basic"></a>VBScript と Visual Basic の違い  
  ADO を使用して VBScript では、Visual Basic での構文を使用する方法など、さまざまな方法で ADO を使用してに似ています。 ただし、いくつかの重要な違いがあります。  

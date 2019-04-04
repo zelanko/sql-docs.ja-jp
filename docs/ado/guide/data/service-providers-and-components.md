@@ -29,4 +29,4 @@ ms.locfileid: "51602242"
   
  たとえば、カーソル エンジンをなど[for OLE DB、カーソル サービス](https://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44)はスクロール可能なデータを生成するために、シーケンシャルな前方参照専用のデータ ストアからデータを使用できるサービス コンポーネントです。 ADO でよく使用されるその他のサービス プロバイダーには、 [Microsoft OLE DB Persistence Provider (サービス プロバイダーの ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (ファイルにデータを保存します)、用、 [Microsoft Data Shaping Service for OLE DB (ADO サービス プロバイダー)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (の階層**レコード セット**)、および[Microsoft OLE DB リモート処理 Provider (サービス プロバイダーの ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (リモート コンピューター上のデータ プロバイダーの呼び出し) にします。  
   
- サービスおよびデータ プロバイダーの詳細については、次を参照してください。[付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)します。
+ サービスおよびデータ プロバイダーの詳細については、[付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)を参照してください。

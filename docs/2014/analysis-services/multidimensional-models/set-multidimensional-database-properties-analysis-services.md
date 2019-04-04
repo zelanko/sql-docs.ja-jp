@@ -21,7 +21,7 @@ ms.lasthandoff: 10/26/2018
 ms.locfileid: "50147977"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>多次元データベースのプロパティ設定 (Analysis Services)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース プロパティには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] データベース デザイナーで構成できるものが多数あります。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース プロパティには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] データベース デザイナーで構成できるものが多数あります。  
   
  このデザイナーでは、次の種類のタスクを実行できます。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "50147977"
   
 -   ユーザーに表示するデータベースの説明を入力できます。 また、データベースの名前も表示できますが、変更はできません。 データベース名を変更するには、プロジェクトのプロパティを編集する必要があります。  
   
--   1 つまたは複数の言語によるデータベース名と説明の翻訳を提供できます。 詳細については、次を参照してください。[キューブの翻訳](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)、[ディメンションの翻訳](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)、および[翻訳&#40;Analysis Services&#41;](../translations-analysis-services.md)します。  
+-   1 つまたは複数の言語によるデータベース名と説明の翻訳を提供できます。 詳細については、[キューブの翻訳](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)、[ディメンションの翻訳](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)、および[翻訳&#40;Analysis Services&#41;](../translations-analysis-services.md)を参照してください。  
   
 -   既定の勘定科目の種類のマッピングを表示し、必要に応じて変更できます。 勘定科目の種類のマッピングは、1 つまたは複数のメジャーで *ByAccount* 集計関数を使用する場合に使用します。 勘定科目の種類ごとに別名を指定し、その勘定科目の種類に関連する既存の集計関数を変更できます。 既定の集計を変更する方法の詳細については、「 [準加法の動作の定義](define-semiadditive-behavior.md)」を参照してください。  
   

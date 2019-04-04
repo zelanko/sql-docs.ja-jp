@@ -40,7 +40,7 @@ ms.locfileid: "48213902"
 ##  <a name="bkmk_prereq"></a> 前提条件の確認  
  BI セマンティック モデル接続ファイルを作成するには、投稿権限以上の権限が必要です。  
   
- BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、次を参照してください。 [BI セマンティック モデル接続のコンテンツ タイプをライブラリに追加&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)します。  
+ BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、[BI セマンティック モデル接続のコンテンツ タイプをライブラリに追加&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)を参照してください。  
   
  BI セマンティック モデル接続を設定するサーバーおよびデータベース名を確認しておく必要があります。 Analysis Services は、テーブル モード用に構成する必要があります。 サーバーで実行しているデータベースは、テーブル モデル データベースである必要があります。 サーバー モードを確認する方法については、「 [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)」を参照してください。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48213902"
   
  Management Studio で管理者権限を付与するには、Analysis Services のシステム管理者である必要があります。  
   
- PowerPivot for SharePoint は、クラシック モード認証を使用する Web アプリケーションからアクセスする必要があります。 外部データ ソースへの BI セマンティック モデル接続は、クラシック モード サインインに依存します。 詳細については、次を参照してください。 [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md)します。  
+ PowerPivot for SharePoint は、クラシック モード認証を使用する Web アプリケーションからアクセスする必要があります。 外部データ ソースへの BI セマンティック モデル接続は、クラシック モード サインインに依存します。 詳細については、[PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md)を参照してください。  
   
  接続シーケンスに参加しているすべてのコンピューターとユーザーは、同じドメインまたは信頼されたドメイン (双方向の信頼関係) に属している必要があります。  
   

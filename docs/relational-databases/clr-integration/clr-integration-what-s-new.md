@@ -25,9 +25,9 @@ ms.locfileid: "51677981"
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] には厳しいセキュリティ要件があるため、CLR データベース コンポーネントには、今後も CLR バージョン 2.0 で定義されたコード アクセス セキュリティ モデルが使用されます。  
   
--   CLR バージョン 4 の形式エラーで、 **System.TimeSpan**値が生成されます、 **System.FormatExceptions**します。 形式エラーは、CLR の version 4 より前、 **System.TimeSpan**値は無視されました。 CLR の version 4 より前の動作に依存するデータベース アプリケーションは、データベースの互換性レベルで実行する必要があります (**ALTER DATABASE 互換性レベル**) を 100 以下。 詳細については、次を参照してください。 [< TimeSpan_LegacyFormatMode > 要素](https://go.microsoft.com/fwlink/?LinkId=205109)します。  
+-   CLR バージョン 4 の形式エラーで、 **System.TimeSpan**値が生成されます、 **System.FormatExceptions**します。 形式エラーは、CLR の version 4 より前、 **System.TimeSpan**値は無視されました。 CLR の version 4 より前の動作に依存するデータベース アプリケーションは、データベースの互換性レベルで実行する必要があります (**ALTER DATABASE 互換性レベル**) を 100 以下。 詳細については、[< TimeSpan_LegacyFormatMode > 要素](https://go.microsoft.com/fwlink/?LinkId=205109)を参照してください。  
   
--   CLR のバージョン 4 は、Unicode 5.1 をサポートします。 アクセントや記号を含んだ並べ替えの処理が改善されます。 従来の並べ替え動作に依存したアプリケーションでは、互換性の問題が生じる場合があります。 従来のデータベースの互換性レベルの並べ替え動作を有効にする (**ALTER DATABASE 互換性レベル**) を 100 以下に設定する必要があります。 この点をサポートするために、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、.NET Framework 4 ディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.30319) に sort00001000.dll がインストールされます。 詳細については、次を参照してください。 [ \<CompatSortNLSVersion > 要素](https://go.microsoft.com/fwlink/?LinkId=205110)します。  
+-   CLR のバージョン 4 は、Unicode 5.1 をサポートします。 アクセントや記号を含んだ並べ替えの処理が改善されます。 従来の並べ替え動作に依存したアプリケーションでは、互換性の問題が生じる場合があります。 従来のデータベースの互換性レベルの並べ替え動作を有効にする (**ALTER DATABASE 互換性レベル**) を 100 以下に設定する必要があります。 この点をサポートするために、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、.NET Framework 4 ディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.30319) に sort00001000.dll がインストールされます。 詳細については、[ \<CompatSortNLSVersion > 要素](https://go.microsoft.com/fwlink/?LinkId=205110)を参照してください。  
   
 -   次の列が追加されている[sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md): **total_processor_time_ms**、 **total_allocated_memory_kb**、および**survived_memory_kb**します。  
   

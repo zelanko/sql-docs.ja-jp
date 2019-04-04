@@ -25,7 +25,7 @@ ms.locfileid: "56029553"
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services の電子メール配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、個別のユーザーまたはグループに電子メールでレポートを送信するための電子メール配信拡張機能があります。 電子メール配信拡張機能を構成するには、Reporting Services 構成マネージャーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ファイルを編集します。  
   
- 電子メールでレポートを配信または受信するには、標準のサブスクリプションまたはデータ ドリブン サブスクリプションのいずれかを定義します。 サブスクライブまたは配信は、一度に 1 つのレポートに対してのみ実行できます。 1 通の電子メール メッセージで複数のレポートを配信するサブスクリプションを作成することはできません。 サブスクリプションの詳細については、次を参照してください。 [Create, Modify, and 標準サブスクリプションの削除&#40;Reporting Services ネイティブ モードの&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)します。  
+ 電子メールでレポートを配信または受信するには、標準のサブスクリプションまたはデータ ドリブン サブスクリプションのいずれかを定義します。 サブスクライブまたは配信は、一度に 1 つのレポートに対してのみ実行できます。 1 通の電子メール メッセージで複数のレポートを配信するサブスクリプションを作成することはできません。 サブスクリプションの詳細については、[Create, Modify, and 標準サブスクリプションの削除&#40;Reporting Services ネイティブ モードの&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)を参照してください。  
   
 ||  
 |-|  

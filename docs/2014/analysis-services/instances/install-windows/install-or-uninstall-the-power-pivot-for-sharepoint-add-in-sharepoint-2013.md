@@ -23,7 +23,7 @@ ms.locfileid: "53350404"
   
 -   このアドインは、SharePoint 2010 の配置に必須ではありません。  
   
--   このアドインは、SharePoint 2013 と SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が含まれるシングル サーバー配置では必須ではありません。 アドインによってインストールされたコンポーネントは、SharePoint モードで [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーをインストールするときに含まれます。 アドインを使用した配置例の図は、次を参照してください。 [SharePoint での SQL Server BI 機能の配置トポロジ](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)します。  
+-   このアドインは、SharePoint 2013 と SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が含まれるシングル サーバー配置では必須ではありません。 アドインによってインストールされたコンポーネントは、SharePoint モードで [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーをインストールするときに含まれます。 アドインを使用した配置例の図は、[SharePoint での SQL Server BI 機能の配置トポロジ](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)を参照してください。  
   
  **注:** このトピックでは、インストールについて説明します、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ソリューション ファイルと[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 2013 構成ツール。 インストール後、構成ツールと追加の機能には、次のトピックを参照してください。 [PowerPivot の構成とソリューションの配置&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)します。  
   

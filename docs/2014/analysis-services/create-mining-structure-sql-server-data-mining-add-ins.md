@@ -113,7 +113,7 @@ ms.locfileid: "52542968"
 -   すべてのアルゴリズムが必要です、**キー**列。 Key 列の値は一意でなければなりません。 A **Key Time**列が予測のみに必要またはタイム シリーズ モデル。 .  
   
 ### <a name="requirements"></a>必要条件  
- データ マイニング構造を作成するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに接続する必要があります。 一時的な構造を操作する場合も同様です。 作成または接続を変更する方法の詳細については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)します。  
+ データ マイニング構造を作成するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに接続する必要があります。 一時的な構造を操作する場合も同様です。 作成または接続を変更する方法の詳細については、[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング モデルの作成](creating-a-data-mining-model.md)  

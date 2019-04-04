@@ -33,7 +33,7 @@ ms.locfileid: "48179782"
   
 3.  Visual Studio を使用して、ストアド プロシージャ DLL のデバッグ ビルドを作成します。  
   
-4.  DLL をサーバーに配置します。 DLL をサーバーに展開する方法の詳細については、次を参照してください。[ストアド プロシージャの作成](creating-stored-procedures.md)です。  
+4.  DLL をサーバーに配置します。 DLL をサーバーに展開する方法の詳細については、[ストアド プロシージャの作成](creating-stored-procedures.md)を参照してください。  
   
 5.  テストするストアド プロシージャを呼び出すアプリケーションが必要です。 このようなアプリケーションを用意していない場合は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の MDX クエリ エディターを使用して、テストするストアド プロシージャを呼び出す MDX クエリを作成できます。  
   

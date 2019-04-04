@@ -23,7 +23,7 @@ ms.lasthandoff: 11/28/2018
 ms.locfileid: "52535200"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS のチュートリアル (VBScript)
-これは、RDS チュートリアルでは、Microsoft Visual Basic Scripting Edition で書き込まれます。 このチュートリアルの目的については、次を参照してください。、 [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)します。  
+これは、RDS チュートリアルでは、Microsoft Visual Basic Scripting Edition で書き込まれます。 このチュートリアルの目的については、、 [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)を参照してください。  
   
 > [!IMPORTANT]
 >  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  

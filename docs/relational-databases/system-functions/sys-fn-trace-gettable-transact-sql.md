@@ -51,7 +51,7 @@ fn_trace_gettable ( 'filename' , number_files )
  読み取るロールオーバー ファイルの数を指定します。 この数にはで指定された最初のファイルが含まれています*filename*します。 *number_files*は、 **int**します。  
   
 ## <a name="remarks"></a>コメント  
- 場合*number_files*として指定されて**既定**、 **fn_trace_gettable**トレースの最後に達するまで、すべてのロール オーバー ファイルを読み取ります。 **fn_trace_gettable**指定したトレースの有効なすべての列を含むテーブルを返します。 詳細については、次を参照してください。 [sp_trace_setevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)します。  
+ 場合*number_files*として指定されて**既定**、 **fn_trace_gettable**トレースの最後に達するまで、すべてのロール オーバー ファイルを読み取ります。 **fn_trace_gettable**指定したトレースの有効なすべての列を含むテーブルを返します。 詳細については、[sp_trace_setevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)を参照してください。  
   
  Fn_trace_gettable 関数はロール オーバー ファイルを読み取らないことに注意してください (を使用して、このオプションが指定されている場合、 *number_files*引数) 元のトレース ファイル名がアンダー スコアと数値が終了します。 ただし、この状況は、ファイルがロールオーバーされるときに自動的に追加されたアンダースコアおよび数値については該当しません。この問題に対処するには、元のファイル名のアンダースコアを削除してトレース ファイルの名前を変更します。 たとえば、元のファイルの名前は**Trace_Oct_5.trc**ロール オーバー ファイルの名前は**Trace_Oct_5_1.trc**、ファイルの名前を変更することができます**TraceOct5.trc**と**TraceOct5_1.trc**します。  
   

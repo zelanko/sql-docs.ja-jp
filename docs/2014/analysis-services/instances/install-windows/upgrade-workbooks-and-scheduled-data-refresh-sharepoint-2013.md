@@ -19,7 +19,7 @@ ms.lasthandoff: 12/13/2018
 ms.locfileid: "53373947"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>ブックのアップグレードと定期データ更新 (SharePoint 2013)
-  このトピックでは、以前の PowerPivot 環境で作成されたブックのユーザー エクスペリエンスについて、およびこのリリースで導入された新機能を利用できるよう、PowerPivot ブックをアップグレードする方法について説明します。 新しい機能の詳細については、次を参照してください。 [PowerPivot で新](https://go.microsoft.com/fwlink/?LinkID=203917)します。  
+  このトピックでは、以前の PowerPivot 環境で作成されたブックのユーザー エクスペリエンスについて、およびこのリリースで導入された新機能を利用できるよう、PowerPivot ブックをアップグレードする方法について説明します。 新しい機能の詳細については、[PowerPivot で新](https://go.microsoft.com/fwlink/?LinkID=203917)を参照してください。  
   
 > [!WARNING]  
 >  サーバーで自動的にアップグレードされるブックのアップグレードをロールバックすることはできません。 ブックのアップグレードが完了すると、アップグレードされた状態のままになります。 以前のバージョンを使用するには、以前のブックを SharePoint に再パブリッシュするか、以前のバージョンを復元するか、ブックを再利用します。 SharePoint でのドキュメントの復元または再利用の詳細については、「 [ごみ箱とバージョン管理を使用したコンテンツ保護を計画する](https://go.microsoft.com/fwlink/?LinkId=238669)」を参照してください。  
@@ -86,7 +86,7 @@ ms.locfileid: "53373947"
   
  Analysis Services 機能の変更の詳細については、次を参照してください[SQL Server 2014 Analysis Services 機能の動作の変更。](../../behavior-changes-to-analysis-services-features-in-sql-server-2014.md)  
   
- 更新の履歴の詳細については、次を参照してください。[データ更新履歴の表示&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)します。  
+ 更新の履歴の詳細については、[データ更新履歴の表示&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)を参照してください。  
   
 ##  <a name="bkmk_to_2012sp1_from_2012"></a> Office 2013 ブックへのアップグレード、2012 を使用して作成したブックから PowerPivot アドインの Excel  
  このセクションには、アップグレードがについて説明します**に**Excel 2013 では、SQL Server 2012 SP1 PowerPivot**から**for Excel 2010 ブックの SQL Server 2012 PowerPivot です。  

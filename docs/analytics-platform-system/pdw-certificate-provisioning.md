@@ -48,7 +48,7 @@ Analytics Platform System を使用して、**Configuration Manager**を追加�
   
 ### <a name="to-import-the-certificate"></a>証明書をインポートするには  
   
-1.  起動、 **Configuration Manager**します。 詳細については、次を参照してください。 [Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)します。  
+1.  起動、 **Configuration Manager**します。 詳細については、[Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)を参照してください。  
   
 2.  左側のウィンドウで、 **Configuration Manager**、展開**並列データ ウェアハウスのトポロジ**、 をクリックし、**証明書**します。  
   
@@ -62,7 +62,7 @@ SQL Server PDW では、インポートした証明書を使用して現在の�
   
 ### <a name="to-remove-the-previously-imported-certificate"></a>以前にインポートした証明書を削除するには  
   
-1.  起動、 **Configuration Manager**します。 詳細については、次を参照してください。 [Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)します。  
+1.  起動、 **Configuration Manager**します。 詳細については、[Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)を参照してください。  
   
 2.  左側のウィンドウで、 **Configuration Manager**、展開**並列データ ウェアハウスのトポロジ**、 をクリックし、**証明書**します。  
   

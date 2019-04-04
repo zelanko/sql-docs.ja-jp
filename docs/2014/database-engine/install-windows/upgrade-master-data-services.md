@@ -67,7 +67,7 @@ ms.locfileid: "53365494"
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
         > [!IMPORTANT]  
-        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
+        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)を参照してください。  
   
     2.  左ペインで **[データベース構成]** をクリックします。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "53365494"
   
  この作業を実行するには、次の手順を実行します。  
   
-1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のみ**:開いている**コントロール パネルの** > **プログラムと機能**と Microsoft のアンインストール[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]します。  
+1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のみ**:開いている**コントロール パネルの [** > **プログラムと機能**と Microsoft のアンインストール[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]します。  
   
 2.  データベース エンジンを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードします。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "53365494"
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
         > [!IMPORTANT]  
-        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
+        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)を参照してください。  
   
     2.  左ペインで **[データベース構成]** をクリックします。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "53365494"
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
         > [!IMPORTANT]  
-        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
+        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)を参照してください。  
   
     2.  左ペインで **[データベース構成]** をクリックします。  
   
@@ -264,7 +264,7 @@ ms.locfileid: "53365494"
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
         > [!IMPORTANT]  
-        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
+        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)を参照してください。  
   
     2.  左ペインで **[データベース構成]** をクリックします。  
   

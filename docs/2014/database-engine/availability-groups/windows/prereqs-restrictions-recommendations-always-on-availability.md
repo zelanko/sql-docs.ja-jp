@@ -56,7 +56,7 @@ ms.locfileid: "53355611"
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|すべての適用可能な Windows 修正プログラムが WSFC クラスター内のすべてのノードにインストールされていることを確認します。|**\*\* 重要な\* \*** さまざまな修正プログラムが必要なまたはクラスターの WSFC ノードの推奨[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]が配置されています。 詳細については、後の「[AlwaysOn 可用性グループをサポートする Windows 修正プログラム (Windows システム)](#WinHotfixes)」を参照してください。|  
   
 > [!IMPORTANT]  
->  可用性グループへの接続に必要な構成が環境に対して正しく実施されていることも確認します。 詳細については、次を参照してください。 [AlwaysOn クライアント接続 (SQL Server)](always-on-client-connectivity-sql-server.md)します。  
+>  可用性グループへの接続に必要な構成が環境に対して正しく実施されていることも確認します。 詳細については、[AlwaysOn クライアント接続 (SQL Server)](always-on-client-connectivity-sql-server.md)を参照してください。  
   
 ####  <a name="WinHotfixes"></a> AlwaysOn 可用性グループ (Windows システム) をサポートする Windows 修正プログラム  
  クラスター トポロジに応じて、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] をサポートするために Windows Server 2008 Service Pack 2 (SP2) または Windows Server 2008 R2 のいくつかの追加の修正プログラムを適用できます。 次の表で、これらの修正プログラムを示します。 これらの修正プログラムは任意の順序でインストールできます。  

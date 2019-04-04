@@ -50,14 +50,14 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  プレースホルダー アカウント値はすべて、有効なアカウントおよびパスワードに置き換える必要があります。  
   
- SQL Server Management Studio や [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] などのツールは、提供されているコマンド ライン構文の例ではインストールされません。 機能の追加に関する詳細については、次を参照してください。[コマンド プロンプトから SQL Server 2014 のインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)します。  
+ SQL Server Management Studio や [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] などのツールは、提供されているコマンド ライン構文の例ではインストールされません。 機能の追加に関する詳細については、[コマンド プロンプトから SQL Server 2014 のインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)を参照してください。  
   
  `ASSERVERMODE` 大文字小文字が区別されます。  値はすべて大文字で指定する必要があります。 次の表に、`ASSERVERMODE` の有効な値を示します。  
   
 |値|説明|  
 |-----------|-----------------|  
 |MULTIDIMENSIONAL|これが既定値です。 設定しない場合`ASSERVERMODE`サーバーは多次元サーバー モードでインストールします。|  
-|POWERPIVOT|この値は省略可能です。 実際には、`ROLE` パラメーターを設定した場合、サーバー モードは自動的に 1 に設定され、SharePoint のインストール時に PowerPivot の `ASSERVERMODE` が省略可能になります。 詳細については、次を参照してください。[コマンド プロンプトから PowerPivot をインストール](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)します。|  
+|POWERPIVOT|この値は省略可能です。 実際には、`ROLE` パラメーターを設定した場合、サーバー モードは自動的に 1 に設定され、SharePoint のインストール時に PowerPivot の `ASSERVERMODE` が省略可能になります。 詳細については、[コマンド プロンプトから PowerPivot をインストール](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)を参照してください。|  
 |TABULAR|コマンド ライン セットアップを使用して Analysis Services を表形式モードでインストールする場合、この値は必須です。|  
   
 ## <a name="see-also"></a>参照  

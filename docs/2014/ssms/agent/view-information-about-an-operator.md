@@ -97,6 +97,6 @@ ms.locfileid: "54100327"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_help_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql)します。  
+ 詳細については、[sp_help_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql)を参照してください。  
   
   

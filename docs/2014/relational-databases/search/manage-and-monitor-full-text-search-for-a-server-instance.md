@@ -62,7 +62,7 @@ ms.locfileid: "48906372"
          **リセット**  
          フルテキスト カタログがリセットされます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のフルテキスト カタログ ファイルは削除されますが、フルテキスト カタログのメタデータおよびフルテキスト インデックスは保持されます。 アップグレード後、すべてのフルテキスト インデックスで変更の追跡は無効化されており、クロールは自動的には開始されません。 アップグレードの完了後、手動で完全作成を実行するまで、カタログは空のままになります。  
   
-         フルテキスト アップグレード オプションを選択する方法の詳細については、次を参照してください。 [、フルテキスト検索のアップグレード](upgrade-full-text-search.md)します。  
+         フルテキスト アップグレード オプションを選択する方法の詳細については、[、フルテキスト検索のアップグレード](upgrade-full-text-search.md)を参照してください。  
   
         > [!NOTE]  
         >  フルテキスト アップグレード オプションは、[sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) の **upgrade_option** 操作を使用して設定することもできます。  

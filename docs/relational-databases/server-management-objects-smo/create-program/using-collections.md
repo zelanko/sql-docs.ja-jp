@@ -31,7 +31,7 @@ ms.locfileid: "47785090"
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **をしています.各**ステートメントまたは[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach**コレクションの各メンバーを反復処理するステートメントを使用できます。  
   
 ## <a name="examples"></a>使用例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-basic"></a>Visual Basic でのコレクションを使用したオブジェクトの参照  
  このコード例を使用して列のプロパティを設定する方法を示しています、 <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>、 <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>、および<xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>プロパティ。 これらのプロパティはコレクションを表現しており、オブジェクトの名前を指定するパラメーターと共に使用すれば、特定のオブジェクトを識別するために使用できます。 名前とスキーマが必要な<xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>コレクション オブジェクトのプロパティ。  

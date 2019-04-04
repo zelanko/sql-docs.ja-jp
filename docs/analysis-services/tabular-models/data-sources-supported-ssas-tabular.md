@@ -21,9 +21,9 @@ ms.locfileid: "51269685"
   
 この記事では、SQL Server Analysis Services 表形式モデル 1200 とより低い互換性レベルで使用できるデータ ソースの種類について説明します。 
 
-1400 互換性レベル モデルでは、次を参照してください。 [SQL Server Analysis Services 表形式 1400 モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular-1400.md)します。
+1400 互換性レベル モデルでは、[SQL Server Analysis Services 表形式 1400 モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular-1400.md)を参照してください。
 
-Azure Analysis Services では、次を参照してください。 [Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)します。
+Azure Analysis Services では、[Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)を参照してください。
   
 ##  <a name="bkmk_supported_ds"></a> メモリ内表形式モデルのサポートされるデータ ソース  
 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールする際のセットアップで、各データ ソースに対して挙げられているプロバイダーはインストールされません。 コンピューターに他のアプリケーションでは、一部のプロバイダーをインストールする可能性があります。 それ以外の場合は、ダウンロードして、プロバイダーをインストールする必要があります。  

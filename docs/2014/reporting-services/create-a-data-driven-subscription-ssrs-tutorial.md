@@ -50,7 +50,7 @@ ms.locfileid: "56017914"
   
  このチュートリアルを使用するには、システムに以下のコンポーネントがインストールされている必要があります。  
   
--   データ ドリブン サブスクリプションをサポートするエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネントの](../sql-server/editions-and-components-of-sql-server-2016.md)します。  
+-   データ ドリブン サブスクリプションをサポートするエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 詳細については、[エディションと SQL Server 2014 のコンポーネントの](../sql-server/editions-and-components-of-sql-server-2016.md)を参照してください。  
   
 -   レポート サーバー (ネイティブ モードで実行)。 このチュートリアルで説明するユーザー インターフェイスは、ネイティブ モードのレポート サーバーに基づいています。 サブスクリプションは SharePoint モードのレポート サーバーでサポートされていますが、ユーザー インターフェイスはこのチュートリアルで説明されているものとは異なります。  
   

@@ -45,7 +45,7 @@ ms.locfileid: "47779920"
 -   [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)  
   
 > [!NOTE]  
->  検索プロパティ リストについては、次を参照してください。[検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)します。  
+>  検索プロパティ リストについては、[検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)を参照してください。  
   
 ## <a name="syntax"></a>構文  
   

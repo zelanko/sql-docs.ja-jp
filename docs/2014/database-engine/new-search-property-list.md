@@ -48,7 +48,7 @@ ms.locfileid: "48195232"
  参照してください[CREATE SEARCH PROPERTY LIST &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)します。  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>SQL Server Management Studio を使用した検索プロパティ リストの管理  
- プロパティ検索用のフルテキスト インデックスを構成する方法の詳細と作成、表示、変更、または、検索プロパティ リストを削除する方法については、次を参照してください。[検索プロパティ リストを使用したドキュメント プロパティの検索](../relational-databases/search/search-document-properties-with-search-property-lists.md)します。  
+ プロパティ検索用のフルテキスト インデックスを構成する方法の詳細と作成、表示、変更、または、検索プロパティ リストを削除する方法については、[検索プロパティ リストを使用したドキュメント プロパティの検索](../relational-databases/search/search-document-properties-with-search-property-lists.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   

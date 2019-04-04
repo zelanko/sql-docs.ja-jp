@@ -76,7 +76,7 @@ ms.locfileid: "48160904"
  元のデータ列に値が存在した場合、その値が、この新しい列にコピーされます。 ただし、元の列が空白セルであった場合、新しい列には、ウィザードによって予測された値が格納されます。  
   
 ## <a name="related-tools-and-information"></a>関連ツールと情報  
- 使用することも、[データの探索](explore-data-sql-server-data-mining-add-ins.md)ウィザード、Excel の列の値の分布を調べるの Excel 用データ マイニング クライアントで使用できます。 詳細については、次を参照してください。[調査とデータのクリーニング](exploring-and-cleaning-data.md)します。  
+ 使用することも、[データの探索](explore-data-sql-server-data-mining-add-ins.md)ウィザード、Excel の列の値の分布を調べるの Excel 用データ マイニング クライアントで使用できます。 詳細については、[調査とデータのクリーニング](exploring-and-cleaning-data.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Excel 用テーブル分析ツール](table-analysis-tools-for-excel.md)  

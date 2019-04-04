@@ -60,7 +60,7 @@ ms.locfileid: "53358424"
  この例では、テーブル モデル データベースをデータ ソースとして使用することで、SQL Server Management Studio で MDX クエリを作成する方法を示しています。 お使いのコンピューターでこの例を繰り返すには、 [Adventureworks テーブル モデル サンプル プロジェクトをダウンロード](https://go.microsoft.com/fwlink/?LinkId=231183)してください。  
   
 > [!WARNING]  
->  直接クエリ モードで配置されているテーブル モデルに対して MDX クエリを使用することはできません。 ただし、EVALUATE コマンドと DAX テーブル クエリを使用して、同等のクエリを送信することができます。 詳細については、次を参照してください。 [DAX クエリのパラメーターを](https://msdn.microsoft.com/library/gg492200(v=sql.120).aspx)します。  
+>  直接クエリ モードで配置されているテーブル モデルに対して MDX クエリを使用することはできません。 ただし、EVALUATE コマンドと DAX テーブル クエリを使用して、同等のクエリを送信することができます。 詳細については、[DAX クエリのパラメーターを](https://msdn.microsoft.com/library/gg492200(v=sql.120).aspx)を参照してください。  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>MDX クエリをテンプレートから作成する  
   

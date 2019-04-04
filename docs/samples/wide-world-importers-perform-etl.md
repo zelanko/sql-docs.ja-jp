@@ -45,9 +45,9 @@ ms.locfileid: "51674111"
 
 ## <a name="download"></a>ダウンロード
 
-サンプルの最新リリースでは、次を参照してください。 [wide world importers リリース](https://go.microsoft.com/fwlink/?LinkID=800630)します。 ダウンロード、*毎日 ETL.ispac* Integration Services パッケージ ファイル。
+サンプルの最新リリースでは、[wide world importers リリース](https://go.microsoft.com/fwlink/?LinkID=800630)を参照してください。 ダウンロード、*毎日 ETL.ispac* Integration Services パッケージ ファイル。
 
-ソース コードをサンプル データベースを再作成をするには、次を参照してください。 [wide world-importers 社](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)します。
+ソース コードをサンプル データベースを再作成をするには、[wide world-importers 社](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)を参照してください。
 
 ## <a name="install"></a>インストール
 

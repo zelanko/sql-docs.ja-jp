@@ -143,7 +143,7 @@ FROM [Call Center EQ4].CONTENT
 WHERE NODE_NAME = '10000000000000000'  
 ```  
   
- ノード階層と、NODE_DISTRIBUTION テーブル内の詳細情報を使用して、ニューラル ネットワーク内のパスを個別にたどり、非表示になっているレイヤーの統計を閲覧することもできます。 詳細については、次を参照してください。[ニューラル ネットワーク モデルのクエリ例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)します。  
+ ノード階層と、NODE_DISTRIBUTION テーブル内の詳細情報を使用して、ニューラル ネットワーク内のパスを個別にたどり、非表示になっているレイヤーの統計を閲覧することもできます。 詳細については、[ニューラル ネットワーク モデルのクエリ例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)を参照してください。  
   
  [トップに戻る](#bkmk_NNviewer)  
   

@@ -27,7 +27,7 @@ ms.locfileid: "47810540"
 
 現在の日付までのサンプル データを生成するには。
 
-1. これを完了していない場合は、WideWorldImporters データベースのクリーン バージョンをインストールします。 インストール手順については、次を参照してください。[インストールと構成](wide-world-importers-oltp-install-configure.md)します。
+1. これを完了していない場合は、WideWorldImporters データベースのクリーン バージョンをインストールします。 インストール手順については、[インストールと構成](wide-world-importers-oltp-install-configure.md)を参照してください。
 2. データベースでは、次のステートメントを実行します。
 
     ```
@@ -48,7 +48,7 @@ ms.locfileid: "47810540"
 WideWorldImportersDW OLAP データベースの現在の日付までのサンプル データをインポートするには。
 
 1. 前のセクションで手順を使用して、WideWorldImporters OLTP データベースのデータの生成ロジックを実行します。
-2. 場合は、まだ完了していない、WideWorldImportersDW のデータベースのクリーン バージョンをインストールします。 インストール手順については、次を参照してください。[インストールと構成](wide-world-importers-oltp-install-configure.md)します。
+2. 場合は、まだ完了していない、WideWorldImportersDW のデータベースのクリーン バージョンをインストールします。 インストール手順については、[インストールと構成](wide-world-importers-oltp-install-configure.md)を参照してください。
 3. データベースで、次のステートメントを実行することによって OLAP データベースを再作成します。
 
     ```sql

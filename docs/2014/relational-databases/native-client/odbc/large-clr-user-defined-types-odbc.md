@@ -23,9 +23,9 @@ ms.locfileid: "49072286"
 # <a name="large-clr-user-defined-types-odbc"></a>大きな CLR ユーザー定義型 (ODBC)
   このトピックでは、大きな共通言語ランタイム (CLR) ユーザー定義型 (UDT) をサポートするための、SQL Server Native Client の ODBC に対する変更について説明します。  
   
- ODBC による大きな CLR Udt のサポートを示すサンプルは、次を参照してください。[大きな Udt のサポート](../../native-client-odbc-how-to/support-for-large-udts.md)します。  
+ ODBC による大きな CLR Udt のサポートを示すサンプルは、[大きな Udt のサポート](../../native-client-odbc-how-to/support-for-large-udts.md)を参照してください。  
   
- SQL Server Native Client における大きな CLR Udt のサポートの詳細については、次を参照してください。 [Large CLR User-Defined 型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)します。  
+ SQL Server Native Client における大きな CLR Udt のサポートの詳細については、[Large CLR User-Defined 型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)を参照してください。  
   
 ## <a name="data-format"></a>データ形式  
  SQL Server Native Client では、大きなオブジェクト (LOB) の型について、列のサイズが 8,000 バイトを超えていることを示す場合に、SQL_SS_LENGTH_UNLIMITED が使用されます。 SQL Server 2008 以降では、サイズが 8,000 バイトを超えている CLR UDT にも同じ値が使用されるようになりました。  

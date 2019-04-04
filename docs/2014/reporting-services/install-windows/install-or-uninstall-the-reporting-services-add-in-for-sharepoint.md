@@ -58,7 +58,7 @@ ms.locfileid: "56033003"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 統合機能をアクティブ化するには、サイト コレクションの管理者である必要があります。  
   
--   アドインを使用した配置例の図は、次を参照してください。 [SharePoint での SQL Server BI 機能の配置トポロジ](../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)します。  
+-   アドインを使用した配置例の図は、[SharePoint での SQL Server BI 機能の配置トポロジ](../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)を参照してください。  
   
 ##  <a name="bkmk_whatinstalled"></a> アドインがインストールする内容  
  アドインのセットアップ プロセスは、2 つのフェーズで構成されます。標準インストールが完了すると、どちらのフェーズも自動的に完了します。  

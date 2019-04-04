@@ -53,7 +53,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
  エージェントの ID を指定します。 *agent_id*は**int**、既定値はありません。  
   
  [**@profile_id=**] *profile_id*  
- エージェントで使用する必要のあるプロファイルの ID を指定します。 *profile_id*は**int**、既定値はありません。 をエージェントごとに定義されているプロファイルの一覧を表示するには使用[sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)します。 システム プロファイルの詳細については、次を参照してください。[レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)します。  
+ エージェントで使用する必要のあるプロファイルの ID を指定します。 *profile_id*は**int**、既定値はありません。 をエージェントごとに定義されているプロファイルの一覧を表示するには使用[sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)します。 システム プロファイルの詳細については、[レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

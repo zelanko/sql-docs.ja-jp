@@ -37,7 +37,7 @@ ms.locfileid: "56290840"
  使用しているデータ ソースの種類を選択します。たとえば、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースを使用している場合は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を選択します。  
   
  **[接続文字列]**  
- データ ソースの接続文字列を入力します。 接続文字列の詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
+ データ ソースの接続文字列を入力します。 接続文字列の詳細については、[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)を参照してください。  
   
  **[編集]** をクリックし、 **[接続プロパティ]** ダイアログ ボックスを使用してデータ ソース サーバーを指定します。 ローカルまたはリモートのデータ ソースを指定できます。  
   

@@ -28,7 +28,7 @@ ms.locfileid: "54419957"
 
 - SQL_TYPE_TIMESTAMP  
 
-次の表は、ODBC C SQL のタイムスタンプ データを変換できるデータ型を示します。 列とテーブルの用語の詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)します。  
+次の表は、ODBC C SQL のタイムスタンプ データを変換できるデータ型を示します。 列とテーブルの用語の詳細については、[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)を参照してください。  
 
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  

@@ -55,7 +55,7 @@ ms.locfileid: "53355083"
   
 8.  クリックして**Default PowerPivot Service Application**をこのアプリケーションの PowerPivot 管理ダッシュ ボードを開きます。 最初に使用するときは、ダッシュボードの読み込みに数分かかります。  
   
-     代わりに、横に空白部分をクリックして**Default PowerPivot Service Application** 、行を選択して **プロパティ**このサービス アプリケーションの構成設定を表示します。 構成設定とアプリケーション プロパティの両方を修正して、サーバーの構成を変更できます。 これらの設定の詳細については、次を参照してください。[を作成し、サーバーの全体管理で PowerPivot サービス アプリケーションを構成する](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)します。  
+     代わりに、横に空白部分をクリックして**Default PowerPivot Service Application** 、行を選択して **プロパティ**このサービス アプリケーションの構成設定を表示します。 構成設定とアプリケーション プロパティの両方を修正して、サーバーの構成を変更できます。 これらの設定の詳細については、[を作成し、サーバーの全体管理で PowerPivot サービス アプリケーションを構成する](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)を参照してください。  
   
 ## <a name="verify-integration-at-the-site-level"></a>サイト レベルでの統合の確認  
  PowerPivot の SharePoint サイトとの統合を確認するには、次の操作を行います。  

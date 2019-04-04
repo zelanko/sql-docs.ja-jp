@@ -28,7 +28,7 @@ ms.locfileid: "56039933"
   
 -   保存されたアクセス ポリシーを使用して、コンテナーまたは BLOB の Shared Access Signature を管理します。 保存されたアクセス ポリシーは、Shared Access Signatures をコントロールするもう 1 つの手段となり、それを取り消す直接的な手段にもなります。  
   
- 詳細については、次を参照してください。 [Windows Azure ストレージ リソースへのアクセスの管理](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx)します。  
+ 詳細については、[Windows Azure ストレージ リソースへのアクセスの管理](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx)を参照してください。  
   
 ## <a name="create-storage-account"></a>ストレージ アカウントの作成  
  Windows Azure 管理ポータルにストレージ アカウントを作成するには、次の手順を実行します。  
@@ -42,7 +42,7 @@ ms.locfileid: "56039933"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   
 ## <a name="create-a-blob-container"></a>Blob コンテナーを作成します。  
- Windows Azure には、一連の BLOB をグループ化するコンテナーが用意されています。 すべての BLOB は 1 つのコンテナーに存在する必要があります。 ストレージ アカウントには、コンテナーを無制限に含めることができますが、少なくとも 1 つのコンテナーが必要です。 コンテナーには、BLOB を無制限に格納できます。 ストレージ サイズの制限に関する最新情報については、次を参照してください。 [.NET で Windows Azure Blob ストレージ サービスを使用する方法](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)します。  
+ Windows Azure には、一連の BLOB をグループ化するコンテナーが用意されています。 すべての BLOB は 1 つのコンテナーに存在する必要があります。 ストレージ アカウントには、コンテナーを無制限に含めることができますが、少なくとも 1 つのコンテナーが必要です。 コンテナーには、BLOB を無制限に格納できます。 ストレージ サイズの制限に関する最新情報については、[.NET で Windows Azure Blob ストレージ サービスを使用する方法](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)を参照してください。  
   
  Windows Azure でコンテナーを作成するには、次の手順を実行します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "56039933"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  コンテナーをプログラムで作成するために、REST API を使用することもできます。 詳細については、次を参照してください。[コンテナーの作成](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx)また[Windows Azure ストレージ サービス REST API リファレンス](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx)します。  
+>  コンテナーをプログラムで作成するために、REST API を使用することもできます。 詳細については、[コンテナーの作成](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx)また[Windows Azure ストレージ サービス REST API リファレンス](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx)を参照してください。  
   
  **次のレッスン:**  
   

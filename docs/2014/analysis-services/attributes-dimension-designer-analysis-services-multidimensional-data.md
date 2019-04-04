@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48229812"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>[属性] ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
-  このペインを使用すると、選択したディメンションに関連付けられている属性を管理できます。 属性をこのペインから **[階層]** ペインにドラッグすると、階層およびレベルを作成できます。 詳細については、次を参照してください。[階層&#40;ディメンション構造 タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)します。  
+  このペインを使用すると、選択したディメンションに関連付けられている属性を管理できます。 属性をこのペインから **[階層]** ペインにドラッグすると、階層およびレベルを作成できます。 詳細については、[階層&#40;ディメンション構造 タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)を参照してください。  
   
  属性を作成するには、一覧モード、ツリー モード、またはビュー モードで、 **[データ ソース ビュー]** ペインから **[属性]** ペインに列をドラッグします。 属性を削除するには、ショートカット メニューの **[削除]** をクリックします。  
   

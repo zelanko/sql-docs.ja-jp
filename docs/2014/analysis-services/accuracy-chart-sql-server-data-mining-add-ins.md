@@ -42,7 +42,7 @@ ms.locfileid: "48136802"
 ## <a name="using-the-accuracy-chart-wizard"></a>精度チャート ウィザードの使用  
  精度チャートを作成するには、既存のデータ マイニング構造を参照する必要があります。 モデルの予測対象が同じであれば、この構造に基づく複数のモデルの精度を測定できます。  
   
- 使用可能な構造がわからない場合は、サーバーを参照できます。 詳細については、次を参照してください。 [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)します。  
+ 使用可能な構造がわからない場合は、サーバーを参照できます。 詳細については、[Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)を参照してください。  
   
 #### <a name="to-create-an-accuracy-chart"></a>精度チャートを作成するには  
   

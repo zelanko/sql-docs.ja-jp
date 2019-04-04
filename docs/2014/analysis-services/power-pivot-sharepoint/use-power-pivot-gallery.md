@@ -52,7 +52,7 @@ ms.locfileid: "52416933"
 > 既定のビューを変更するには、 **[ライブラリ]** タブをクリックしてから、[ビューの変更] をクリックします。 [このビューを既定のビューにする] をクリックし、[OK] をクリックして既定のビューを保存します。  
 >  Edge のサポート対象の詳細については、Windows のブログを参照してください。[以前は、第 2 部からの離別。ActiveX、VBScript に別れを取得しています.](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
- 前提条件の一覧については、次を参照してください。 [PowerPivot ギャラリーのカスタマイズの作成と](create-and-customize-power-pivot-gallery.md)します。  
+ 前提条件の一覧については、[PowerPivot ギャラリーのカスタマイズの作成と](create-and-customize-power-pivot-gallery.md)を参照してください。  
   
 ##  <a name="icons"></a> PowerPivot ギャラリーのアイコン  
  アイコンは、コンテンツを使用できるかどうか、およびコンテンツの状態を視覚的に示すインジケーターです。  
@@ -124,7 +124,7 @@ ms.locfileid: "52416933"
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|接続されているデータ ソースから更新されたデータを取得するスケジュールを作成または表示するには、[データ更新の管理] ボタンをクリックします。 スケジュールを作成する方法の詳細については、次を参照してください。[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)します。|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|接続されているデータ ソースから更新されたデータを取得するスケジュールを作成または表示するには、[データ更新の管理] ボタンをクリックします。 スケジュールを作成する方法の詳細については、[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)を参照してください。|  
   
 ##  <a name="delete"></a> ブックまたは PowerPivot ギャラリーのレポートを削除します。  
  ライブラリからドキュメントを削除するには、最初に [すべてのドキュメント] ビューに切り替えます。  

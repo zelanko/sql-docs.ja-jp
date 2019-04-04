@@ -64,7 +64,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  ヒントで EAGER と STRICT を同時に使用することはできません。同じ IIF(,,) の別の式で使用することはできます。  
   
- 詳細については、次を参照してください。 [IIF 関数のクエリ ヒントでは、SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540)と[実行プランおよび MDX の IIF 関数と CASE ステートメントのプラン ヒント](https://go.microsoft.com/fwlink/?LinkId=269565)します。  
+ 詳細については、[IIF 関数のクエリ ヒントでは、SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540)と[実行プランおよび MDX の IIF 関数と CASE ステートメントのプラン ヒント](https://go.microsoft.com/fwlink/?LinkId=269565)を参照してください。  
   
 ## <a name="examples"></a>使用例  
  次のクエリの簡単な使用を示しています。 **IIF** Internet Sales Amount メジャーが大きい場合は、2 つの異なる文字列値または $10000 未満のいずれかを返す計算されるメジャー内で。  

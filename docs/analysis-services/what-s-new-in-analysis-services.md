@@ -76,7 +76,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
  ### <a name="administer-tabular-1200-models-in-ssms"></a>SSMS での表形式モデル 1200 の管理    
  このリリースでは、表形式サーバー モードの Analysis Services インスタンスが、表形式モデルを任意の互換性レベル (1100、1103、1200) で実行できます。 最新の [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) は、プロパティを表示し、互換性レベル 1200 の表形式モデルのデータベース モデル管理を提供するように更新されています。    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>表形式モデルでの複数のテーブル パーティションの並列処理    
- このリリースには、処理パフォーマンスを強化する、2 つ以上のパーティションを持つテーブルへの新しい並行処理機能が含まれます。 この機能には、構成設定はありません。 パーティションを構成して、テーブルの処理の詳細については、次を参照してください。[テーブル モデル パーティション](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)します。    
+ このリリースには、処理パフォーマンスを強化する、2 つ以上のパーティションを持つテーブルへの新しい並行処理機能が含まれます。 この機能には、構成設定はありません。 パーティションを構成して、テーブルの処理の詳細については、[テーブル モデル パーティション](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)を参照してください。    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>SSMS の管理者としてコンピューター アカウントを追加する    
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理者は、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理者グループのメンバーにするコンピューター アカウントを構成できるようになりました。 **[ユーザーまたはグループの選択]** ダイアログ ボックスで、コンピューター ドメインの **[場所]** を設定して、 **[コンピューター]** のオブジェクトの種類を追加します。 詳細については、「 [Analysis Services インスタンスにサーバー管理者権限を付与する](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)」を参照してください。    
  ### <a name="dbcc-for-analysis-services"></a>Analysis Services 用 DBCC    

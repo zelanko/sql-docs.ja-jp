@@ -68,7 +68,7 @@ The command(s) completed successfully.
   
  **xp_cmdshell**同期的に動作します。 制御は、コマンド シェルのコマンドが完了するまで呼び出し元に返されません。  
   
- **xp_cmdshell**有効になっているし、ポリシー ベースの管理を使用するか、実行することによって無効になっていることができます**sp_configure**します。 詳細については、次を参照してください。[セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)と[xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)します。  
+ **xp_cmdshell**有効になっているし、ポリシー ベースの管理を使用するか、実行することによって無効になっていることができます**sp_configure**します。 詳細については、[セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)と[xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)を参照してください。  
   
 > [!IMPORTANT]
 >  場合**xp_cmdshell**バッチ内で実行され、エラーが返されます、バッチは失敗します。 これは新しい動作です。 以前のバージョンの[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッチは実行を続行します。  
@@ -82,7 +82,7 @@ The command(s) completed successfully.
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
 ```  
   
- 詳細については、次を参照してください。 [sp_xp_cmdshell_proxy_account &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)します。  
+ 詳細については、[sp_xp_cmdshell_proxy_account &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  悪意のあるユーザーが場合がありますを使用して、特権の昇格を試みるため**xp_cmdshell**、 **xp_cmdshell**は既定で無効になります。 使用**sp_configure**または**ポリシー ベースの管理**を有効にします。 詳細については、「 [xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  

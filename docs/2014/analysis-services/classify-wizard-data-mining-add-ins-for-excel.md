@@ -50,7 +50,7 @@ ms.locfileid: "52419683"
   
 6.  **完了**ページで、データ セットと、モデルのわかりやすい名前を指定し、完成したモデルを使用する方法を制御する次のオプションを設定します。  
   
-    -   **モデルの参照**します。 このオプションを選択すると、ウィザードとすぐ、モデルの処理が完了すると表示されます、**参照** ウィンドウに結果を検証してください。 ビューアーの内容は、構築したモデルの種類によって異なります。 詳細については、次を参照してください。[デシジョン ツリー モデルの参照](browsing-a-decision-trees-model.md)と[ニューラル ネットワーク モデルの参照](browsing-a-neural-network-model.md)します。  
+    -   **モデルの参照**します。 このオプションを選択すると、ウィザードとすぐ、モデルの処理が完了すると表示されます、**参照** ウィンドウに結果を検証してください。 ビューアーの内容は、構築したモデルの種類によって異なります。 詳細については、[デシジョン ツリー モデルの参照](browsing-a-decision-trees-model.md)と[ニューラル ネットワーク モデルの参照](browsing-a-neural-network-model.md)を参照してください。  
   
     -   **ドリルスルーを有効にする**します。 このチェック ボックスをオンにすると、完成したモデルから基になるデータを表示できます。 このオプションは、デシジョン ツリー モデルを構築する場合にのみ使用できます。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "52419683"
  [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
 ### <a name="requirements"></a>必要条件  
- 使用する、**分類**ウィザード、する必要がありますに接続する、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベース。 接続を作成する方法については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)します。  
+ 使用する、**分類**ウィザード、する必要がありますに接続する、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベース。 接続を作成する方法については、[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング モデルの作成](creating-a-data-mining-model.md)  

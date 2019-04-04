@@ -48,7 +48,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- サイド バイ サイドでインストールの詳細については、次を参照してください。 [SQLXML 4.0 SP1 の新](../../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)します。  
+ サイド バイ サイドでインストールの詳細については、[SQLXML 4.0 SP1 の新](../../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)を参照してください。  
   
  スキーマをキャッシュすると、XPath クエリのパフォーマンスが大きく向上します。 マッピング スキーマに対して XPath クエリを実行すると、スキーマはメモリに格納され、必要なデータ構造がメモリ内で作成されます。 スキーマのキャッシュを設定している場合、スキーマはメモリに残るので、以降の XPath クエリのパフォーマンスが向上します。  
   

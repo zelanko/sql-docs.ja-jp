@@ -118,7 +118,7 @@ ms.locfileid: "53376644"
   
 3.  「Microsoft Analysis Services OLE DB プロバイダーの Microsoft SQL Server 2012 SP1」セクションを参照してください。 ファイルをダウンロードし、インストールを開始します。  
   
-4.  **機能の選択**] ページで、[ **Analysis Services OLE DB Provider for SQL Server**します。 他のコンポーネントの選択を解除して、インストールを完了します。 SpPowerPivot.msi の詳細については、次を参照してください。[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)します。  
+4.  **機能の選択**] ページで、[ **Analysis Services OLE DB Provider for SQL Server**します。 他のコンポーネントの選択を解除して、インストールを完了します。 SpPowerPivot.msi の詳細については、[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)を参照してください。  
   
 5.  MSOLAP.5 を信頼できるプロバイダーとして SharePoint Excel Services に登録します。 詳細については、「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](https://technet.microsoft.com/library/hh758436.aspx)」を参照してください。  
   

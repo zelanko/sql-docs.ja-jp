@@ -44,7 +44,7 @@ ms.locfileid: "55044998"
 |**is_dynamic**|**bit**|1 = RECONFIGURE ステートメントの実行時に影響を与える変数|  
 |**is_advanced**|**bit**|1 = 変数が表示される場合にのみ、 **advancedoption を表示する**設定されます。|  
   
- すべてのサーバー構成オプションの一覧は、次を参照してください。[サーバー構成オプションの&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)します。  
+ すべてのサーバー構成オプションの一覧は、[サーバー構成オプションの&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)を参照してください。  
   
 > [!NOTE]  
 >  データベース レベルの構成のオプションを参照してください[データベース スコープの構成の変更&#40;Transact SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 ソフト NUMA を構成するのにを参照してください[ソフト NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)。  

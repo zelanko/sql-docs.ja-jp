@@ -19,7 +19,7 @@ ms.locfileid: "37992441"
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  指定されたデータ マイニング オブジェクトを処理します。 マイニング モデルとマイニング構造の処理に関する詳細については、次を参照してください。[処理の要件と考慮事項&#40;データ マイニング&#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)します。  
+  指定されたデータ マイニング オブジェクトを処理します。 マイニング モデルとマイニング構造の処理に関する詳細については、[処理の要件と考慮事項&#40;データ マイニング&#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)を参照してください。  
   
  マイニング構造が指定された場合、ステートメントはマイニング構造とすべての関連するマイニング モデルを処理します。 マイニング モデルが指定された場合、ステートメントはマイニング モデルだけを処理します。  
   
@@ -91,7 +91,7 @@ INSERT INTO [MINING MODEL] <model>
   
 -   すべて[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]行セットを返すクエリ  
   
- データ ソースの種類の詳細については、次を参照してください。 [&#60;ソース データ クエリ&#62;](../dmx/source-data-query.md)します。  
+ データ ソースの種類の詳細については、[&#60;ソース データ クエリ&#62;](../dmx/source-data-query.md)を参照してください。  
   
 ## <a name="basic-example"></a>基本の例  
  次の例では**OPENQUERY**で対象となるマイニング データに基づいて Naive Bayes モデルのトレーニングに、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データベース。  

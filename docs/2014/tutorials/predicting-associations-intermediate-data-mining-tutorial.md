@@ -119,7 +119,7 @@ ms.locfileid: "56022364"
   
 8.  をクリックして、**結果**ボタンをクリックします。  
   
- 入れ子になったテーブル内の結果が変更され、予測がサポートおよび確率と共に表示されます。 これらの値を解釈する方法の詳細については、次を参照してください。[アソシエーション モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)します。  
+ 入れ子になったテーブル内の結果が変更され、予測がサポートおよび確率と共に表示されます。 これらの値を解釈する方法の詳細については、[アソシエーション モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)を参照してください。  
   
 |[モデル]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
@@ -205,7 +205,7 @@ ms.locfileid: "56022364"
   
 13. をクリックして、**結果**各顧客の予測を表示するボタンをクリックします。  
   
- 同様の予測クエリを複数のモデルに対して作成し、フィルター処理によって予測結果が変わるかどうかを確認してみてください。 予測やその他の種類のクエリを作成する方法の詳細については、次を参照してください。[アソシエーション モデルのクエリ例](../../2014/analysis-services/data-mining/association-model-query-examples.md)します。  
+ 同様の予測クエリを複数のモデルに対して作成し、フィルター処理によって予測結果が変わるかどうかを確認してみてください。 予測やその他の種類のクエリを作成する方法の詳細については、[アソシエーション モデルのクエリ例](../../2014/analysis-services/data-mining/association-model-query-examples.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   

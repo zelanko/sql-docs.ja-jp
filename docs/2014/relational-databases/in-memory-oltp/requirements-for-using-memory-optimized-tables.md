@@ -22,7 +22,7 @@ ms.locfileid: "53352421"
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の 64 ビット Enterprise Edition、Developer Edition、または Evaluation Edition。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、メモリ最適化テーブルおよびインデックスでデータを保持するために十分なメモリが必要です。 行バージョンも保持するためには、メモリ最適化テーブルおよびインデックスの予想サイズの 2 倍となるメモリ量を用意する必要があります。 ただし、必要なメモリの実際の容量はワークロードによって異なります。 メモリの使用量を監視し、必要に応じて調整を加える必要があります。 メモリ最適化テーブル データのサイズは、プールの容量のうち、許可されたパーセンテージを超えないようにする必要があります。 メモリ最適化テーブルのサイズを検出するには、次を参照してください。 [sys.dm_db_xtp_table_memory_stats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql)します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、メモリ最適化テーブルおよびインデックスでデータを保持するために十分なメモリが必要です。 行バージョンも保持するためには、メモリ最適化テーブルおよびインデックスの予想サイズの 2 倍となるメモリ量を用意する必要があります。 ただし、必要なメモリの実際の容量はワークロードによって異なります。 メモリの使用量を監視し、必要に応じて調整を加える必要があります。 メモリ最適化テーブル データのサイズは、プールの容量のうち、許可されたパーセンテージを超えないようにする必要があります。 メモリ最適化テーブルのサイズを検出するには、[sys.dm_db_xtp_table_memory_stats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql)を参照してください。  
   
      データベースにディスク ベース テーブルがある場合、それらのテーブルのバッファー プールとクエリ処理に十分なメモリを提供する必要があります。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "53352421"
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a> [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
--   データベース内の持続性のあるすべてのテーブルのメモリ内サイズの合計は 250 GB を超えないようにする必要があります。 詳細については、次を参照してください。[メモリ最適化テーブルの持続性](durability-for-memory-optimized-tables.md)します。  
+-   データベース内の持続性のあるすべてのテーブルのメモリ内サイズの合計は 250 GB を超えないようにする必要があります。 詳細については、[メモリ最適化テーブルの持続性](durability-for-memory-optimized-tables.md)を参照してください。  
   
 -   このリリースの [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] は、2 または 4 ソケットおよび 60 未満のコアを備えたシステムで適切に機能するように設定されています。  
   

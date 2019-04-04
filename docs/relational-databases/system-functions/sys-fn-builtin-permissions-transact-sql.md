@@ -38,7 +38,7 @@ ms.locfileid: "51660751"
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  サーバーの組み込み権限の階層に関する説明を返します。 `sys.fn_builtin_permissions` 呼び出すことができますのみ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、し、現在のプラットフォームでサポートされているかどうかに関係なくすべてのアクセス許可を返します。 ほとんどの権限はすべてのプラットフォームに適用されますがが、一部は適用されません。 たとえば SQL Database のサーバー レベルの権限を付与できません。 各アクセス許可をサポートしているプラットフォームについては、次を参照してください。[権限&#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)します。  
+  サーバーの組み込み権限の階層に関する説明を返します。 `sys.fn_builtin_permissions` 呼び出すことができますのみ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、し、現在のプラットフォームでサポートされているかどうかに関係なくすべてのアクセス許可を返します。 ほとんどの権限はすべてのプラットフォームに適用されますがが、一部は適用されません。 たとえば SQL Database のサーバー レベルの権限を付与できません。 各アクセス許可をサポートしているプラットフォームについては、[権限&#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

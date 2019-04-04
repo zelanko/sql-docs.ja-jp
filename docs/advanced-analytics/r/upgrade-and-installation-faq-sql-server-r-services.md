@@ -31,7 +31,7 @@ ms.locfileid: "58510419"
 
 - 以前のバージョンの SQL Server 2016 R Services では、8dot3 表記が作業ディレクトリを含むドライブに必要でした。 リリース前のバージョンをインストールした場合は、SQL Server 2016 Service Pack 1 にアップグレードするとこの問題を解決する必要があります。 SP1 以降後は、この要件はリリースに適用されません。
 
-- 現時点では、インストールすることはできません[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]フェイル オーバー クラスター。 ただし、SQL Server 2019 プレビューは、テスト環境では、この機能を評価したい場合、フェールオーバーのサポートを提供しています。 詳細については、次を参照してください。[新](../what-s-new-in-sql-server-machine-learning-services.md)します。
+- 現時点では、インストールすることはできません[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]フェイル オーバー クラスター。 ただし、SQL Server 2019 プレビューは、テスト環境では、この機能を評価したい場合、フェールオーバーのサポートを提供しています。 詳細については、[新](../what-s-new-in-sql-server-machine-learning-services.md)を参照してください。
 
 - Azure VM では、追加の構成が必要にあります。 たとえば、リモート アクセスをサポートするファイアウォール例外を作成する必要があります。
 

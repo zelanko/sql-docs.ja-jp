@@ -43,7 +43,7 @@ fn:string-length($arg as xs:string?) as xs:integer
 ## <a name="remarks"></a>コメント  
  場合の値 *$arg*は空のシーケンス、 **xs:integer** 0 の値が返されます。  
   
- XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。 互換性レベルが 110 以上の場合、各サロゲート ペアは 1 文字としてカウントされます。 互換性レベルがこれ未満の場合は、2 文字としてカウントされます。 詳細については、次を参照してください。 [ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)します。  
+ XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。 互換性レベルが 110 以上の場合、各サロゲート ペアは 1 文字としてカウントされます。 互換性レベルがこれ未満の場合は、2 文字としてカウントされます。 詳細については、[ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)を参照してください。  
   
  値にサロゲート文字 2 文字で表される 4 バイトの Unicode 文字が含まれている場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はサロゲート文字 1 つを 1 文字として計算します。  
   

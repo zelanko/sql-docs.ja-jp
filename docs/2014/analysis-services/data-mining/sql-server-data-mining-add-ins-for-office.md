@@ -82,7 +82,7 @@ ms.locfileid: "53357244"
   
 -   Standard  
   
- 接続先の SQL Server Analysis Services のエディションによっては、高度なアルゴリズムの一部を使用できない場合があります。 詳しくは、次を参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](https://msdn.microsoft.com/library/cc645993.aspx)します。  
+ 接続先の SQL Server Analysis Services のエディションによっては、高度なアルゴリズムの一部を使用できない場合があります。 詳しくは、[機能は、SQL Server 2014 の各エディションでサポートされている](https://msdn.microsoft.com/library/cc645993.aspx)を参照してください。  
   
  インストールの詳細については、ダウンロード センターからこのページを参照してください。 [https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
   

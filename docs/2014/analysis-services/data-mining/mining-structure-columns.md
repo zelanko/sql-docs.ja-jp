@@ -49,7 +49,7 @@ ms.locfileid: "48159794"
   
  サードパーティのアルゴリズムには、マイニング構造列で定義できるカスタム プロパティが含まれている場合があります。  
   
- データ マイニング構造とデータ マイニング モデルの詳細については、次を参照してください。[マイニング構造&#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)します。  
+ データ マイニング構造とデータ マイニング モデルの詳細については、[マイニング構造&#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)を参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  マイニング構造列を定義および使用する方法の詳細については、次のトピックを参照してください。  

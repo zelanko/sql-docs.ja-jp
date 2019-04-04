@@ -287,7 +287,7 @@ ms.locfileid: "52405317"
 
 ## <a name="see-also"></a>関連項目
 
-レプリケーションの詳細については、次を参照してください。 [SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)します。
+レプリケーションの詳細については、[SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 

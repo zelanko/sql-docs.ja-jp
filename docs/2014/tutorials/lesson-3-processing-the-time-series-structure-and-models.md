@@ -24,7 +24,7 @@ ms.locfileid: "56026273"
   
  処理済みのマイニング構造にマイニング モデルを追加する場合は、`INSERT INTO MINING MODEL` ステートメントを使用することにより、既存のデータを使用して新しいマイニング モデルのみを処理できます。  
   
- マイニング モデルの処理の詳細については、次を参照してください。[処理の要件と考慮事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)します。  
+ マイニング モデルの処理の詳細については、[処理の要件と考慮事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)を参照してください。  
   
 ## <a name="insert-into-statement"></a>INSERT INTO ステートメント  
  時系列マイニング構造とそのすべての関連するマイニング モデルをトレーニングするために使用して、 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)ステートメント。 ステートメントのコードは次の部分に分けることができます。  
@@ -65,7 +65,7 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY (<source data definition>)  
 ```  
   
- このレッスンでは、`OPENQUERY` を使用してソース データを定義します。 ソース データに対してクエリを定義するその他の方法の詳細については、次を参照してください。 [&#60;ソース データ クエリ&#62;](/sql/dmx/source-data-query)します。  
+ このレッスンでは、`OPENQUERY` を使用してソース データを定義します。 ソース データに対してクエリを定義するその他の方法の詳細については、[&#60;ソース データ クエリ&#62;](/sql/dmx/source-data-query)を参照してください。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
  このレッスンでは、次のタスクを実行します。  

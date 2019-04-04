@@ -32,7 +32,7 @@ ms.locfileid: "53351796"
 ## <a name="binding"></a>Binding  
  WMI Provider for Configuration Management は、COM オブジェクト モデルであり、事前バインドも遅延バインドもサポートしています。 遅延バインドを行う場合、VBScript などのスクリプト言語を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス、ネットワーク設定、別名をプログラムで操作することができます。  
   
- スクリプト言語を使用して WMI プロバイダーの実装のプログラミングの詳細については、次を参照してください。、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Web サイト](https://go.microsoft.com/fwlink/?linkid=15426)します。  
+ スクリプト言語を使用して WMI プロバイダーの実装のプログラミングの詳細については、、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Web サイト](https://go.microsoft.com/fwlink/?linkid=15426)を参照してください。  
   
 ## <a name="specifying-a-connection-string"></a>接続文字列を指定します。  
  アプリケーションは、プロバイダーによって定義された WMI 名前空間に接続することで、WMI Provider for Configuration Management を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにダイレクトします。 Windows WMI サービスは、この名前空間をプロバイダー DLL にマップし、これをメモリに読み込みます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはすべて、1 つの WMI 名前空間で表されます。 名前空間の既定値は次のとおりです。  
@@ -52,7 +52,7 @@ ms.locfileid: "53351796"
   
  WMI 管理スクリプトを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されるアカウントを更新することができます。  
   
- WMI Provider for Configuration Management では、セキュリティ証明書がサポートされています。 証明書の詳細については、次を参照してください。[暗号化階層](../security/encryption/encryption-hierarchy.md)します。  
+ WMI Provider for Configuration Management では、セキュリティ証明書がサポートされています。 証明書の詳細については、[暗号化階層](../security/encryption/encryption-hierarchy.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 構成マネージャー](../sql-server-configuration-manager.md)  

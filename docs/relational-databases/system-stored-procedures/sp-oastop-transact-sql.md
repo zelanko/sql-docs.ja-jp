@@ -42,7 +42,7 @@ sp_OAStop
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0、失敗した場合は OLE オートメーション オブジェクトによって返される HRESULT の 0 以外の整数値を返します。  
   
- HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
+ HRESULT のリターン コードの詳細については、[OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)を参照してください。  
   
 ## <a name="remarks"></a>コメント  
  OLE オートメーション ストアド プロシージャを使用しているすべてのクライアントで、1 つの実行環境が共有されます。 1 つのクライアントを呼び出す場合**sp_OAStop**共有実行環境がすべてのクライアントを停止します。 すべての呼び出しに、実行環境を停止すると後、 **sp_OACreate**実行環境を再起動します。  

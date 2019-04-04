@@ -52,7 +52,7 @@ ms.locfileid: "56030953"
   
 6.  SQL Server の現在のインスタンスから切断し、データベースを復元する SQL Server インスタンスに接続します。  
   
-7.  DQS_MAIN データベースを復元します。 SQL Server データベースを復元する手順については、次を参照してください。[データベース バックアップを復元&#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)します。  
+7.  DQS_MAIN データベースを復元します。 SQL Server データベースを復元する手順については、[データベース バックアップを復元&#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)を参照してください。  
   
 8.  DQS_PROJECTS データベースを復元します。  
   

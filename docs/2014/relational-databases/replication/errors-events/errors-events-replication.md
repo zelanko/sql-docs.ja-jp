@@ -17,5 +17,5 @@ ms.lasthandoff: 01/09/2019
 ms.locfileid: "54131792"
 ---
 # <a name="errors-and-events-replication"></a>エラーとイベント (レプリケーション)
-  さまざまなレプリケーションに関連するエラーの原因と解決方法については、次を参照してください。[エラーおよびイベント リファレンス (レプリケーション)](../errors-and-events-reference-replication.md)します。  
+  さまざまなレプリケーションに関連するエラーの原因と解決方法については、[エラーおよびイベント リファレンス (レプリケーション)](../errors-and-events-reference-replication.md)を参照してください。  
   

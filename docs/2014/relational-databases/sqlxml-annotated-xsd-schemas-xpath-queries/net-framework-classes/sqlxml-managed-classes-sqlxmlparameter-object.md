@@ -30,7 +30,7 @@ ms.locfileid: "52750294"
  パラメーターの名前。 コマンドをパラメーターとして渡すことができます。 SqlXmlCommand オブジェクトの CreateParameter メソッドを呼び出すと、パラメーター オブジェクトが作成されます。  
   
  値  
- パラメーターの値。 実際のサンプルでは、次を参照してください。 [SQL クエリの実行&#40;SQLXML マネージ クラス&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)します。  
+ パラメーターの値。 実際のサンプルでは、[SQL クエリの実行&#40;SQLXML マネージ クラス&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SqlXmlCommand オブジェクト&#40;SQLXML マネージ クラス&#41;](sqlxml-managed-classes-sqlxmlcommand-object.md)   

@@ -24,7 +24,7 @@ ms.lasthandoff: 02/11/2019
 ms.locfileid: "56039783"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>テキストとプレースホルダーの [配置] ダイアログ ボックス (レポート ビルダーおよび SSRS)
-  **[配置]** タブをクリックすると、選択したセルまたはデータ領域内で値の配置を調整できます。 テキスト ボックスでは、個々のテキストの横方向の配置の書式のみを設定できます。 テキスト ボックスに余白の値を設定する場合やテキストを縦方向に整列させる場合は、対応するテキスト ボックス プロパティを使用します。 詳細については、次を参照してください。[テキスト ボックスのプロパティ ダイアログ ボックスで、配置&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md)します。  
+  **[配置]** タブをクリックすると、選択したセルまたはデータ領域内で値の配置を調整できます。 テキスト ボックスでは、個々のテキストの横方向の配置の書式のみを設定できます。 テキスト ボックスに余白の値を設定する場合やテキストを縦方向に整列させる場合は、対応するテキスト ボックス プロパティを使用します。 詳細については、[テキスト ボックスのプロパティ ダイアログ ボックスで、配置&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md)を参照してください。  
   
 ## <a name="options"></a>および  
  **水平方向**  

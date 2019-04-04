@@ -28,7 +28,7 @@ ms.locfileid: "56014493"
   
  スクリプト タスクまたはスクリプト コンポーネント内のスクリプトでインターフェイスを参照している場合、パッケージをアップグレードする前にそれらの参照の変更が必要になる場合があります。 参照を変更しないと、使用するアップグレード方法によってはパッケージをアップグレードできないかスクリプトを検証できません。 これらの参照を変更するには、IDTS への参照を置き換える*xxx*90 インターフェイスを対応する IDTS 参照*xxx*100 インターフェイス。  
   
- スクリプトの移行し、パッケージをアップグレードする方法の詳細については、次を参照してください。 [Integration Services パッケージのアップグレード](../../integration-services/install-windows/upgrade-integration-services-packages.md)します。  
+ スクリプトの移行し、パッケージをアップグレードする方法の詳細については、[Integration Services パッケージのアップグレード](../../integration-services/install-windows/upgrade-integration-services-packages.md)を参照してください。  
   
 ## <a name="understanding-migration-failures"></a>移行エラーについて  
  スクリプトを移行する際、次の理由により移行が失敗することがあります。  

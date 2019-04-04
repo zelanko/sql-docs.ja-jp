@@ -24,7 +24,7 @@ ms.locfileid: "53369084"
 ## <a name="description"></a>説明  
  データベースの設定されていると互換性がある場合[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の動作、 [string-length 関数&#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length)と[substring 関数&#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring)Unicode 補助文字を扱うときの関数の変更。 U+FFFF より大きいコード ポイントで定義された各 Unicode 補助文字は、これらの関数では 1 文字としてカウントされます。前のバージョンでは 2 文字としてカウントされていました。  
   
- サロゲート文字の詳細については、次を参照してください。[サロゲートおよび補助文字](https://go.microsoft.com/fwlink/?LinkId=178317)します。  
+ サロゲート文字の詳細については、[サロゲートおよび補助文字](https://go.microsoft.com/fwlink/?LinkId=178317)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

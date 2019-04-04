@@ -39,7 +39,7 @@ ms.locfileid: "51695956"
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>ファイルの瞬時初期化を有効または無効にする  
   
-1.  Configuration Manager を起動します。 詳細については、次を参照してください。 [Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)します。  
+1.  Configuration Manager を起動します。 詳細については、[Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)を参照してください。  
   
 2.  Configuration Manager の左側のウィンドウで次のようにクリックします。**ファイルの瞬時初期化**します。  
   
@@ -48,11 +48,11 @@ ms.locfileid: "51695956"
     > [!WARNING]  
     > ファイルの瞬時初期化を無効にすると機能の前に説明したセキュリティの考慮事項もファイルの瞬時初期化が有効になっている削除されたファイルに適用されます。  
   
-4.  **[適用]** をクリックします。 変更は、アプライアンスのサービスが再起動したときに、SQL Server PDW に対する SQL Server のインスタンスを通じて伝達されます。 アプライアンスのサービスを今すぐ再起動するには、次を参照してください。 [PDW のサービス状態&#40;Analytics Platform System&#41;](pdw-services-status.md)します。  
+4.  **[適用]** をクリックします。 変更は、アプライアンスのサービスが再起動したときに、SQL Server PDW に対する SQL Server のインスタンスを通じて伝達されます。 アプライアンスのサービスを今すぐ再起動するには、[PDW のサービス状態&#40;Analytics Platform System&#41;](pdw-services-status.md)を参照してください。  
   
 5.  上記の手順を繰り返す場合**バックアップ アカウントのアクセス許可を追加**を削除する、**ボリュームの保守タスクを実行**権限。  
   
 ![DWConfig アプライアンス PDW のインスタント ファイル初期化](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
-ファイルの瞬時初期化の詳細については、次を参照してください。[ファイルの瞬時初期化](https://technet.microsoft.com/library/ms175935(v=SQL.105).aspx)します。  
+ファイルの瞬時初期化の詳細については、[ファイルの瞬時初期化](https://technet.microsoft.com/library/ms175935(v=SQL.105).aspx)を参照してください。  
   

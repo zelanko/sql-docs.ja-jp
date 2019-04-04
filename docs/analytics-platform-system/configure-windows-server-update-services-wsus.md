@@ -19,7 +19,7 @@ ms.locfileid: "54124712"
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Analytics Platform System での Windows Server Update Services (WSUS) の構成します。
 これらの手順では、Windows Server Update Services (WSUS) の構成ウィザードを使用して、Analytics Platform System のように WSUS を構成するための手順を説明します。 アプライアンスにソフトウェア更新プログラムを適用する前に、WSUS を構成する必要があります。 WSUS は、アプライアンスの VMM 仮想マシンに既にインストールされています。  
   
-WSUS を構成する方法の詳細については、次を参照してください。、 [WSUS ステップ バイ ステップ インストール ガイド](https://go.microsoft.com/fwlink/?LinkId=202417)、WSUS web サイト。 WSUS を構成した後、次を参照してください。[ダウンロードと Microsoft 更新プログラムの適用&#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md)更新を開始します。  
+WSUS を構成する方法の詳細については、次を参照してください。、 [WSUS ステップ バイ ステップ インストール ガイド](https://go.microsoft.com/fwlink/?LinkId=202417)、WSUS web サイト。 WSUS を構成した後、[ダウンロードと Microsoft 更新プログラムの適用&#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md)更新を開始を参照してください。  
   
 > [!WARNING]  
 > この構成プロセス中にエラーが発生した場合は、停止し、サポートにお問い合わせします。 エラーを無視したり、エラーが発生した後、プロセスの続行しないでください。  
@@ -35,7 +35,7 @@ WSUS を構成するには、する必要があります。
   
 -   アプライアンスが上流サーバーまたは Microsoft Update へのアクセスにプロキシ サーバーを使用する場合は、プロキシ サーバーの IP アドレスを把握します。  
   
--   ほとんどの場合、WSUS は、アプライアンスの外部にあるサーバーにアクセスする必要があります。 外部名を解決するのには、外部の DNS サーバーを使用するには、Analytics Platform System のホストと仮想マシン (Vm) を許可する外部名転送をサポートするために、分析プラットフォーム システム DNS を構成できますこの使用シナリオをサポートするために、アプライアンスです。 詳細については、次を参照してください。[非アプライアンス DNS 名の解決に DNS フォワーダーを使用して、 &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)します。  
+-   ほとんどの場合、WSUS は、アプライアンスの外部にあるサーバーにアクセスする必要があります。 外部名を解決するのには、外部の DNS サーバーを使用するには、Analytics Platform System のホストと仮想マシン (Vm) を許可する外部名転送をサポートするために、分析プラットフォーム システム DNS を構成できますこの使用シナリオをサポートするために、アプライアンスです。 詳細については、[非アプライアンス DNS 名の解決に DNS フォワーダーを使用して、 &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)を参照してください。  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS) を構成するには  
   

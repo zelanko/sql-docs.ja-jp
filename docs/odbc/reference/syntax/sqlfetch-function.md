@@ -80,7 +80,7 @@ SQLRETURN SQLFetch(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|SQL_ATTR_USE_BOOKMARK ステートメント属性は SQL_UB_VARIABLE に設定されており、列 0 がの長さはこの結果セットに対してブックマークの最大の長さと等しくありませんでした。 バッファーにバインドされました。 (この長さは、IRD の SQL_DESC_OCTET_LENGTH フィールドで使用できますし、呼び出すことによって取得できる**SQLDescribeCol**、 **SQLColAttribute**、または**SQLGetDescField**)。|  
 |HY107|行の値が範囲外|SQL_ATTR_CURSOR_TYPE ステートメント属性で指定された値が、SQL_CURSOR_KEYSET_DRIVEN が SQL_ATTR_KEYSET_SIZE ステートメント属性で指定された値が 0 より大きいと、SQL_ATTR_ROW_ARRAY_ で指定された値よりも小さいサイズのステートメント属性です。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースの組み合わせで指定された変換をサポートしていません、 *TargetType*で**SQLBindCol**と対応する列の SQL データ型。|  
 |HYT00|タイムアウトが発生しました|クエリのタイムアウト期間は、要求された結果セットが返されるデータ ソースの前に有効期限が切れました。 SQLSetStmtAttr、SQL_ATTR_QUERY_TIMEOUT を通じて、タイムアウト期間が設定されています。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -89,14 +89,14 @@ SQLRETURN SQLFetch(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- **SQLFetch**結果セット内の次の行セットを返します。 結果セットが存在する間だけ呼び出すことができます。 つまり、呼び出しの後に結果セットを作成すると、結果セット全体が閉じているカーソルの前に。 すべての列がバインドされている場合は、これらの列にデータを返します。 アプリケーションには、行の状態配列をフェッチされた行の数を返すバッファーへのポインターが指定した場合**SQLFetch**もこの情報を返します。 呼び出す**SQLFetch**への呼び出しに組み込むことができます**SQLFetchScroll**への呼び出しを混在させることはできませんが、 **SQLExtendedFetch**します。 詳細については、次を参照してください。[行のデータのフェッチ](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)します。  
+ **SQLFetch**結果セット内の次の行セットを返します。 結果セットが存在する間だけ呼び出すことができます。 つまり、呼び出しの後に結果セットを作成すると、結果セット全体が閉じているカーソルの前に。 すべての列がバインドされている場合は、これらの列にデータを返します。 アプリケーションには、行の状態配列をフェッチされた行の数を返すバッファーへのポインターが指定した場合**SQLFetch**もこの情報を返します。 呼び出す**SQLFetch**への呼び出しに組み込むことができます**SQLFetchScroll**への呼び出しを混在させることはできませんが、 **SQLExtendedFetch**します。 詳細については、[行のデータのフェッチ](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)を参照してください。  
   
  場合、ODBC 3 *.x*アプリケーションが動作する ODBC 2 *.x*ドライバー、ドライバー マネージャーは、マップ**SQLFetch**呼び出し**SQLExtendedFetch**のODBC 2 *.x*をサポートするドライバー **SQLExtendedFetch**します。 場合、ODBC 2 *.x*ドライバーがサポートしていない**SQLExtendedFetch**、ドライバー マネージャーは、マップ**SQLFetch**呼び出し**SQLFetch** ODBC 2 *.x*ドライバーで、1 つの行のみをフェッチすることができます。  
   
  詳細については、次を参照してください[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)で付録 g:。旧バージョンとの互換性のためのガイドラインをドライバーです。  
   
 ## <a name="positioning-the-cursor"></a>カーソルを配置します。  
- 結果セットが作成されると、カーソルは結果セットの開始前にします。 **SQLFetch**次の行セットをフェッチします。 呼び出すことと同じである**SQLFetchScroll**で*FetchOrientation* SQL_FETCH_NEXT に設定します。 カーソルの詳細については、次を参照してください。[カーソル](../../../odbc/reference/develop-app/cursors.md)と[ブロック カーソル](../../../odbc/reference/develop-app/block-cursors.md)します。  
+ 結果セットが作成されると、カーソルは結果セットの開始前にします。 **SQLFetch**次の行セットをフェッチします。 呼び出すことと同じである**SQLFetchScroll**で*FetchOrientation* SQL_FETCH_NEXT に設定します。 カーソルの詳細については、[カーソル](../../../odbc/reference/develop-app/cursors.md)と[ブロック カーソル](../../../odbc/reference/develop-app/block-cursors.md)を参照してください。  
   
  SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性は、行セット内の行の数を指定します。 によって、行セットをフェッチされている場合、 **SQLFetch** 、結果セットの末尾と重なる**SQLFetch**部分的な行セットを返します。 つまり、S + R - L より大きい、S は、開始行フェッチされる行セット、R の行セットのサイズは、あり L は、最後の 1 行の結果セットし、最初の左辺にのみ場合 S + 1 行の行セットは有効です。 残りの行は空であり、sql_row_norow であっての状態を持っています。  
   
@@ -201,7 +201,7 @@ SQLRETURN SQLFetch(
  フェッチされた行のバッファーの内容は定義されていない場合は**SQLFetch**または**SQLFetchScroll**返さない SQL_SUCCESS または SQL_SUCCESS_WITH_INFO、SQL_NO_DATA が返される場合、その場合を除く、バッファーをフェッチされた行の値は 0 に設定されます。  
   
 ### <a name="error-handling"></a>エラー処理  
- エラーと警告は、個々 の行にまたは関数全体を適用できます。 診断レコードの詳細については、次を参照してください。[診断](../../../odbc/reference/develop-app/diagnostics.md)と[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)します。  
+ エラーと警告は、個々 の行にまたは関数全体を適用できます。 診断レコードの詳細については、[診断](../../../odbc/reference/develop-app/diagnostics.md)と[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)を参照してください。  
   
 #### <a name="errors-and-warnings-on-the-entire-function"></a>関数全体に関するエラーと警告  
  かどうか、エラーは SQLSTATE HYT00 など、関数全体に適用されます。 (タイムアウトの期限切れ) または SQLSTATE 24000 (無効なカーソルの状態)、 **SQLFetch** SQL_ERROR と適切な SQLSTATE を返します。 行セットのバッファーの内容は定義されていないと、カーソル位置は変更されません。  

@@ -84,7 +84,7 @@ ms.locfileid: "54131082"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)します。  
+ 詳細については、[sp_update_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)を参照してください。  
   
 ##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **ジョブ カテゴリのメンバーシップを変更するには**  

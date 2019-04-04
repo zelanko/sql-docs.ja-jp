@@ -30,4 +30,4 @@ ms.locfileid: "47699930"
   
  SQL ステートメントのパラメーターの数を返します。 パラメーターの数が疑問符 (?) に渡された SQL ステートメント内の数と等しくなります[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)します。  
   
- SQL 文法の詳細については、次を参照してください。 [ODBC SQL 文法のサポートされている](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)します。 この関数の詳細については、次を参照してください。 [SQLNumParams](../../odbc/reference/syntax/sqlnumparams-function.md)で、 *ODBC プログラマ リファレンス*します。
+ SQL 文法の詳細については、[ODBC SQL 文法のサポートされている](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)を参照してください。 この関数の詳細については、[SQLNumParams](../../odbc/reference/syntax/sqlnumparams-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

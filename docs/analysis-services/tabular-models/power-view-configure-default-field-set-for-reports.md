@@ -41,6 +41,6 @@ ms.locfileid: "53072059"
 6.  ブックの他のテーブルについて、この手順を繰り返します。  
   
 ## <a name="next-step"></a>次の手順  
- 既定のフィールド セットを作成した後、既定のラベル、既定の画像、既定のグループ動作、または同じ値を含む行を 1 行にグループ化するか個別に表示するかを指定することによって、レポートのデザイン作業にさらに影響を与えることができます。 詳細については、次を参照してください。 [Power View レポート用のテーブル動作プロパティの構成](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)します。  
+ 既定のフィールド セットを作成した後、既定のラベル、既定の画像、既定のグループ動作、または同じ値を含む行を 1 行にグループ化するか個別に表示するかを指定することによって、レポートのデザイン作業にさらに影響を与えることができます。 詳細については、[Power View レポート用のテーブル動作プロパティの構成](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)を参照してください。  
   
   

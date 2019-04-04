@@ -37,7 +37,7 @@ ms.locfileid: "47842060"
   指定した SQL ハンドルに対して、SQL ステートメントのテキストを返します。  
   
 > [!IMPORTANT]  
->  この機能は、Microsoft SQL Server の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに sys.dm_exec_sql_text を使用してください。 詳細については、次を参照してください。 [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)します。  
+>  この機能は、Microsoft SQL Server の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに sys.dm_exec_sql_text を使用してください。 詳細については、[sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)を参照してください。  
   
  
   
@@ -71,7 +71,7 @@ sys.fn_get_sql ( SqlHandle )
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]一部をキャッシュできません[!INCLUDE[tsql](../../includes/tsql-md.md)]一括コピー ステートメントや文字列リテラルは、8 KB を超えるステートメントなどのステートメント。 このようなステートメントに対するハンドルは、fn_get_sql では取得できません。  
   
- **テキスト**パスワードを含む可能性のあるテキストに対して結果セットの列がフィルター処理します。 詳細については、セキュリティ関連ストアド プロシージャについて監視されませんが、次を参照してください。[トレースをフィルター処理](../../relational-databases/sql-trace/filter-a-trace.md)します。  
+ **テキスト**パスワードを含む可能性のあるテキストに対して結果セットの列がフィルター処理します。 詳細については、セキュリティ関連ストアド プロシージャについて監視されませんが、[トレースをフィルター処理](../../relational-databases/sql-trace/filter-a-trace.md)を参照してください。  
   
  Fn_get_sql 関数は、次のような情報を返します、 [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)コマンド。 次は、DBCC INPUTBUFFER を使用できず、fn_get_sql 関数を使用できる場合の例です。  
   

@@ -57,4 +57,4 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ## <a name="next-steps"></a>次の手順
 
-各ロールに含まれるアクセス許可の詳細については、次を参照してください。[データベース レベル ロール](../../relational-databases/security/authentication-access/database-level-roles.md)します。
+各ロールに含まれるアクセス許可の詳細については、[データベース レベル ロール](../../relational-databases/security/authentication-access/database-level-roles.md)を参照してください。

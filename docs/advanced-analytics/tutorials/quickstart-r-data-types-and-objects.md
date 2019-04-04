@@ -274,9 +274,9 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 + 予期しない動作を回避するために、入力データを準備する際に、必要に応じて明示的なキャストを実行します。
 + エラーが発生して、モデリングの役に立たない (GUID や rowguids) などのデータの列を渡すことを回避します。
 
-サポートされているとサポートされていないデータ型の詳細については、次を参照してください。 [R ライブラリとデータ型](../r/r-libraries-and-data-types.md)します。
+サポートされているとサポートされていないデータ型の詳細については、[R ライブラリとデータ型](../r/r-libraries-and-data-types.md)を参照してください。
 
-文字列数値因子からの実行時の変換のパフォーマンスに与える影響については、次を参照してください。 [SQL Server R Services のパフォーマンス チューニング](../r/sql-server-r-services-performance-tuning.md)します。
+文字列数値因子からの実行時の変換のパフォーマンスに与える影響については、[SQL Server R Services のパフォーマンス チューニング](../r/sql-server-r-services-performance-tuning.md)を参照してください。
 
 ## <a name="next-step"></a>次の手順
 

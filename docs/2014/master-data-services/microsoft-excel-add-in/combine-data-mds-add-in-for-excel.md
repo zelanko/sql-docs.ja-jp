@@ -22,7 +22,7 @@ ms.locfileid: "52792924"
   
 ## <a name="prerequisites"></a>前提条件  
   
--   MDS によって管理されるデータが含まれているワークシートが必要です。 詳細については、次を参照してください。[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)します。  
+-   MDS によって管理されるデータが含まれているワークシートが必要です。 詳細については、[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)を参照してください。  
   
 -   MDS によって管理されるデータに結合するデータが含まれているワークシートが必要です。 このシートには、ヘッダー行が必要です。  
   

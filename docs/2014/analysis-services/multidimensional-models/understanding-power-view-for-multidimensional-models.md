@@ -38,7 +38,7 @@ ms.locfileid: "53362984"
   
  **クライアントの要件**  
   
--   Power View クライアント機能には、Microsoft Silverlight 5 が必要です。 詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)します。  
+-   Power View クライアント機能には、Microsoft Silverlight 5 が必要です。 詳細については、[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)を参照してください。  
   
 ## <a name="features"></a>機能  
  **Power View のネイティブ サポート**  

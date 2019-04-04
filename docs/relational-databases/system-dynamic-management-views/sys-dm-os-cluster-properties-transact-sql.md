@@ -37,7 +37,7 @@ ms.locfileid: "52544126"
 
 |列名|プロパティ|説明|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|BIGINT|SQL Server フェールオーバー クラスターのログ記録レベルです。 詳細ログをオンにすると、トラブルシューティングを目的とした詳細情報をエラー ログに追加できます。 次のいずれかの値です。<br /><br /> 0: ログ記録はオフです (既定)<br /><br /> 1: エラーのみ。<br /><br /> 2: エラーおよび警告<br /><br /> 詳細については、次を参照してください。 [ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)します。|  
+|VerboseLogging|BIGINT|SQL Server フェールオーバー クラスターのログ記録レベルです。 詳細ログをオンにすると、トラブルシューティングを目的とした詳細情報をエラー ログに追加できます。 次のいずれかの値です。<br /><br /> 0: ログ記録はオフです (既定)<br /><br /> 1: エラーのみ。<br /><br /> 2: エラーおよび警告<br /><br /> 詳細については、[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)を参照してください。|  
 |SqlDumperDumpFlags|BIGINT|SQLDumper ダンプ フラグは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成されるダンプ ファイルの種類を決定します。 既定の設定は 0 です。|  
 |SqlDumperDumpPath|nvarchar (260)|SQLDumper ユーティリティがダンプ ファイルを生成する場所です。|  
 |SqlDumperDumpTimeOut|BIGINT|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でエラーが発生した場合の、SQLDumper ユーティリティによるダンプの生成のタイムアウト値 (ミリ秒単位) です。 既定値は 0 です。|  

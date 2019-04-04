@@ -49,7 +49,7 @@ ms.locfileid: "58072236"
 |user_id|**int**|要求を送信したユーザーの ID。 NULL 値は許可されません。|  
 |connection_id|**uniqueidentifier**|要求を受信した接続の ID。 NULL 値が許可されます。|  
 |blocking_session_id|**smallint**|要求をブロックしているセッションの ID です。 この列には NULL、要求がブロックされていない、またはブロックしているセッションのセッション情報が利用できない場合 (または識別することはできません)。<br /><br /> -2 = ブロックしているリソースは、孤立した分散トランザクションが所有しています。<br /><br /> -3 ブロック = 遅延復旧トランザクションが所有するリソースです。<br /><br /> -4 セッション ID を = ブロックしているラッチの所有者特定できませんでしたこの時点で内部ラッチの状態遷移のためです。|  
-|wait_type|**nvarchar(60)**|要求が現在ブロックされている場合、この列は、待機の種類を返します。 NULL 値が許可されます。<br /><br /> 待機の種類については、次を参照してください。 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)します。|  
+|wait_type|**nvarchar(60)**|要求が現在ブロックされている場合、この列は、待機の種類を返します。 NULL 値が許可されます。<br /><br /> 待機の種類については、[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)を参照してください。|  
 |wait_time|**int**|要求が現在ブロックされている場合の現時点での待機時間 (ミリ秒単位)。 NULL 値は許可されません。|  
 |last_wait_type|**nvarchar(60)**|この要求がブロックされていた場合、この列は、前回の待機の種類を返します。 NULL 値は許可されません。|  
 |wait_resource|**nvarchar (256)**|要求が現在ブロックされている場合の現在待機中のリソース。 NULL 値は許可されません。|  
@@ -100,7 +100,7 @@ ms.locfileid: "58072236"
 ## <a name="remarks"></a>コメント 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。 この動的管理ビューによって返される時刻値では、プリエンプティブ モードで費やされた時間は含まれません。
 
-並列要求の実行時に[行モード](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]担当タスクの割り当てを完了するためのワーカー スレッドを調整するワーカー スレッドを割り当てます。 この DMV には、コーディネーター スレッドのみ、要求に対して表示されます。 列**読み取り**、**書き込みます**、 **logical_reads**、および**row_count**は**は更新されません**のコーディネーター スレッドです。 列**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**、および**granted_query_memory**は**のみ更新**コーディネーター スレッド。 詳細については、次を参照してください。、[スレッドとタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)します。
+並列要求の実行時に[行モード](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]担当タスクの割り当てを完了するためのワーカー スレッドを調整するワーカー スレッドを割り当てます。 この DMV には、コーディネーター スレッドのみ、要求に対して表示されます。 列**読み取り**、**書き込みます**、 **logical_reads**、および**row_count**は**は更新されません**のコーディネーター スレッドです。 列**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**、および**granted_query_memory**は**のみ更新**コーディネーター スレッド。 詳細については、、[スレッドとタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 ある場合、ユーザーは`VIEW SERVER STATE`サーバーに対する権限を実行中のすべてのセッションを表示のインスタンスで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、それ以外のユーザーは、現在のセッションのみを参照してください。 `VIEW SERVER STATE` 付与することはできません[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]ように`sys.dm_exec_requests`現在の接続に制限は常にします。

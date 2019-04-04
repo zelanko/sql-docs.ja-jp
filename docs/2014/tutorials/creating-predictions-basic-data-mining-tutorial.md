@@ -94,7 +94,7 @@ ms.locfileid: "56035263"
   
      して、[tm_decision_tree]。[Bike Buyer] が表示されます、**条件と引数**セル。  
   
-     これにより、`PredictProbability` 関数の対象列を指定します。 関数の詳細については、次を参照してください。[データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](/sql/dmx/data-mining-extensions-dmx-function-reference)します。  
+     これにより、`PredictProbability` 関数の対象列を指定します。 関数の詳細については、[データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](/sql/dmx/data-mining-extensions-dmx-function-reference)を参照してください。  
   
 5.  次の空白行をクリックして、**ソース**列、および TM_Decision_Tree マイニング モデル**します。**  
   
@@ -164,7 +164,7 @@ ms.locfileid: "56035263"
   
              また、複数の列の名前が同じ場合 (たとえば、既定の列名**式**)、重複した名前の列の別名を作成する必要がありますまたはデザイナーには、SQL 結果を保存しようとするときに、エラーが発生します。サーバー。 SQL Server では、複数の列に同じ名前が含まれることが許可されないためです。  
   
-             詳細については、次を参照してください。[保存データ マイニング クエリ結果 ダイアログ ボックス&#40;マイニング モデル予測 ビュー&#41;](../../2014/analysis-services/save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)します。  
+             詳細については、[保存データ マイニング クエリ結果 ダイアログ ボックス&#40;マイニング モデル予測 ビュー&#41;](../../2014/analysis-services/save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)を参照してください。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [構造データにドリルスルーを使用して&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  

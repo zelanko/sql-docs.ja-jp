@@ -21,7 +21,7 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47693480"
 ---
 # <a name="setup-dll-function-summary"></a>セットアップ DLL 関数の概要
-次の表では、セットアップ DLL 関数について説明します。 構文とセマンティクスの各関数の詳細については、次を参照してください。[セットアップ DLL API リファレンス](../../../odbc/reference/syntax/setup-dll-api-reference.md)します。  
+次の表では、セットアップ DLL 関数について説明します。 構文とセマンティクスの各関数の詳細については、[セットアップ DLL API リファレンス](../../../odbc/reference/syntax/setup-dll-api-reference.md)を参照してください。  
   
 |タスク|関数名|用途|  
 |----------|-------------------|-------------|  

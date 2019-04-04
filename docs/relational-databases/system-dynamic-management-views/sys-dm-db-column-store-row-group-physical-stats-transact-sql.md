@@ -69,7 +69,7 @@ ms.locfileid: "52510851"
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-calculate-fragmentaton-to-decide-when-to-reorganize-or-rebuild-a-columnstore-index"></a>A. 再構成または列ストア インデックスを再構築するタイミングを決定する fragmentaton を計算します。  
- 列ストア インデックスでは、削除された行の割合は、行グループ内の断片化の効果的な手段です。 断片化が 20% 以上、削除された行を削除することをお勧めします。 場合です。  例については、次を参照してください。[列ストア インデックスの最適化](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)します。  
+ 列ストア インデックスでは、削除された行の割合は、行グループ内の断片化の効果的な手段です。 断片化が 20% 以上、削除された行を削除することをお勧めします。 場合です。  例については、[列ストア インデックスの最適化](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)を参照してください。  
   
  この例では結合**sys.dm_db_column_store_row_group_physical_stats**他のシステム テーブルし、計算、`Fragmentation`列として、現在のデータベース内の各の行グループの効率の推定値です。     コメントのハイフンの前後に 1 つのテーブルの削除に関する情報、**場所**句とテーブル名を指定します。  
   

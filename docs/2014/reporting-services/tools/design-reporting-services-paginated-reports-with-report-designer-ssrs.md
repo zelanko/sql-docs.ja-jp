@@ -163,7 +163,7 @@ ms.locfileid: "56292060"
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]では、レポートまたは他のプロジェクト アイテムを複数のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに配置できます。 対象レポート サーバーと互換性のあるスキーマ バージョンへのレポート定義のアップグレードを制御するには、プロジェクト構成を使用します。 プロジェクト構成で制御されるプロパティには、対象レポート サーバー、ビルド プロセスでプレビューと配置のためにレポートを一時的に保存するフォルダー、およびエラー レベルが含まれます。 詳細については、「[構成プロパティと配置プロパティ](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties)」および「[配置プロパティを設定する (Reporting Services)](set-deployment-properties-reporting-services.md)」を参照してください。  
   
 ### <a name="export-a-report-to-a-different-file-format"></a>別のファイル形式へのレポートのエクスポート  
- レポートは、さまざまな形式にエクスポートできますが、エクスポートすることによって、一部のレポート レイアウトや対話機能に影響が生じることがあります。 各種の出力形式の設計に関する考慮事項の詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)します。  
+ レポートは、さまざまな形式にエクスポートできますが、エクスポートすることによって、一部のレポート レイアウトや対話機能に影響が生じることがあります。 各種の出力形式の設計に関する考慮事項の詳細については、[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)を参照してください。  
   
   
 ##  <a name="bkmk_ReportValidationandErrorLevels"></a> レポートの検証とエラー レベル  

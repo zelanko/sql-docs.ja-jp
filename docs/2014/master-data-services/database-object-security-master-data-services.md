@@ -88,7 +88,7 @@ ms.locfileid: "52822236"
 |新しい管理者の SID を決定する|mdm.tblUser|SELECT|  
 |システム管理者アカウントを変更します。|mdm.udpSecuritySetAdministrator|EXECUTE|  
   
- 詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
+ 詳細については、[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)を参照してください。  
   
 ##  <a name="SysSettings"></a> システム設定を構成する  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]での動作を制御するために構成可能なシステム設定が用意されています。 これらの設定は [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] で調整できます。または、UPDATE アクセス権を持つ場合は、mdm.tblSystemSetting データベース テーブルで直接調整できます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../../2014/master-data-services/system-settings-master-data-services.md)」を参照してください。  

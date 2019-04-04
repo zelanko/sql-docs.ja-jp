@@ -69,7 +69,7 @@ SQLRETURN SQLParamData(
 |HY008|操作が取り消されました|非同期処理が有効に、 *StatementHandle*します。 関数が呼び出された、および前に、実行を完了**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*; で、関数が再度呼び出されましたし*StatementHandle*します。<br /><br /> 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*から別のスレッドで、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM) 前の関数呼び出しはへの呼び出しではない**SQLExecDirect**、 **SQLExecute**、 **SQLBulkOperations**、または**SQLSetPos**場所、コードは SQL_NEED_DATA、または前の関数呼び出しがへの呼び出しを返す**SQLPutData**します。<br /><br /> 前の関数呼び出しがへの呼び出し**SQLParamData**します。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている、 **SQLParamData**関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle*と返された SQL_NEED_DATA します。 **SQLCancel**すべての実行時データ パラメーターまたは列のデータが送信される前に呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に対応するドライバー、 *StatementHandle*関数をサポートしていません。|  
 |IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
@@ -101,7 +101,7 @@ SQLRETURN SQLParamData(
   
  方法の実行時データ パラメーターのデータの詳細については、ステートメントの実行時に渡されるを参照してください「パラメーターの値を渡す」で[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)と[長い形式のデータを送信する](../../../odbc/reference/develop-app/sending-long-data.md)します。 更新や追加方法 - 実行時データ列のデータに関する詳細についてを参照してください"を使用して SQLSetPos" [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)、「を実行する一括更新プログラムを使用してブックマーク」で[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、[長い形式のデータ、SQLSetPos および SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)します。  
   
- **SQLParamData**ストリーミングされる出力パラメーターを取得するということができます。 ときに**SQLMoreResults**、 **SQLExecute**、 **SQLGetData**、または**SQLExecDirect**返します SQL_PARAM_DATA_AVAILABLE、呼び出す**SQLParamData**パラメーターが使用可能な値を判別します。 SQL_PARAM_DATA_AVAILABLE とストリーミングされる出力パラメーターの詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)します。  
+ **SQLParamData**ストリーミングされる出力パラメーターを取得するということができます。 ときに**SQLMoreResults**、 **SQLExecute**、 **SQLGetData**、または**SQLExecDirect**返します SQL_PARAM_DATA_AVAILABLE、呼び出す**SQLParamData**パラメーターが使用可能な値を判別します。 SQL_PARAM_DATA_AVAILABLE とストリーミングされる出力パラメーターの詳細については、[SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)を参照してください。  
   
 ## <a name="code-example"></a>コード例  
  参照してください[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)します。  

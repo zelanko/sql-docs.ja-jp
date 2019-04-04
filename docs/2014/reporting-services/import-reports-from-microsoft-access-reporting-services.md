@@ -27,7 +27,7 @@ ms.locfileid: "56286350"
  インポート機能を使用すると、Access データベースまたはプロジェクト ファイルのすべてのレポートがインポートされます。 Access ファイルに多数のレポートが含まれている場合は、レポートのインポート先に別のレポート プロジェクトを作成し、その後各 RDL ファイルをメインのレポート プロジェクトで開くことをお勧めします。 レポートは、レポート デザイナーにインポートした後に、編集できます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Access のレポート オブジェクトがすべてサポートされているわけではありません。 変換されていない項目が表示される、**タスク一覧**ウィンドウ。 詳細については、次を参照してください。 [Access レポート機能のサポートされている&#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md)します。  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Access のレポート オブジェクトがすべてサポートされているわけではありません。 変換されていない項目が表示される、**タスク一覧**ウィンドウ。 詳細については、[Access レポート機能のサポートされている&#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md)を参照してください。  
   
 ### <a name="to-import-reports-from-microsoft-access"></a>Microsoft Access からレポートをインポートするには  
   

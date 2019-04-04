@@ -188,7 +188,7 @@ ms.locfileid: "56035303"
   
      ルールのノードの種類は 8 で、アイテムセットのノードの種類は 7 です。 ルールの NODE_DESCRIPTION の値は、ルールを構成する条件を表します。 アイテムセットの NODE_DESCRIPTION の値は、アイテムセットに含まれるアイテムを表します。  
   
- コンテンツ クエリを作成してルールの詳細な統計情報を取得することもできます。 マイニング モデルの内容とその解釈方法の詳細については、次を参照してください。[アソシエーション モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)します。  
+ コンテンツ クエリを作成してルールの詳細な統計情報を取得することもできます。 マイニング モデルの内容とその解釈方法の詳細については、[アソシエーション モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)を参照してください。  
   
  [トップに戻る](#bkmk_DepNet)  
   

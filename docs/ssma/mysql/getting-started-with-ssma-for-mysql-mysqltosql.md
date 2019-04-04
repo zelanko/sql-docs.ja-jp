@@ -52,7 +52,7 @@ SQL Server のインスタンスに接続することも必要があります。
   
 SQL Server または Azure SQL DB に変換されたスキーマを同期した後は、MySQL メタデータ エクスプ ローラーに戻るし、MySQL スキーマから SQL Server または Azure SQL DB データベースにデータを移行します。  
   
-これらのタスクとその実行方法の詳細については、次を参照してください。 [SQL Server - Azure SQL DB への MySQL データベースの移行&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)します。  
+これらのタスクとその実行方法の詳細については、[SQL Server - Azure SQL DB への MySQL データベースの移行&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)を参照してください。  
   
 次のセクションでは、SSMA ユーザー インターフェイスの機能について説明します。  
   

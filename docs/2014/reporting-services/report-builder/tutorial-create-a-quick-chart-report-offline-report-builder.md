@@ -28,7 +28,7 @@ ms.locfileid: "56291270"
  ![「マイ円グラフの最初のグラフ」実行の表示](../media/rs-my1stpierunview.gif "実行ビューでの My First Pie Chart")  
   
 ## <a name="prerequisites"></a>前提条件  
- XML データを使用するか [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用するかにかかわらず、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] レポート ビルダーにアクセスできることが必要です。 スタンドアロン バージョン、またはレポート マネージャーや SharePoint サイトから利用できる ClickOnce バージョンを実行できます。 最初の手順のみをレポート ビルダーを開く方法は ClickOnce バージョンの異なる。 詳細については、次を参照してください。[インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)します。  
+ XML データを使用するか [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用するかにかかわらず、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] レポート ビルダーにアクセスできることが必要です。 スタンドアロン バージョン、またはレポート マネージャーや SharePoint サイトから利用できる ClickOnce バージョンを実行できます。 最初の手順のみをレポート ビルダーを開く方法は ClickOnce バージョンの異なる。 詳細については、[インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)を参照してください。  
   
 ##  <a name="TwoWays"></a> このチュートリアルを実行する 2 つの方法  
   
@@ -216,7 +216,7 @@ ms.locfileid: "56291270"
   
  最後に、レポートをレポート サーバーまたはレポート サーバーと統合されている SharePoint サイトに保存するには、URL と権限が必要です。 作成したレポートは自分のコンピューターから直接実行できますが、レポート サーバーまたは SharePoint サイトから実行するとレポートの機能が増えます。 自分のレポートまたはその他のレポートをパブリッシュ元のレポート サーバーまたは SharePoint サイトから実行する権限が必要です。 アクセス権を取得するには、システム管理者に問い合わせてください。  
   
- 開始する前に、いくつかの概念や用語について確認しておくと役立つ場合があります。 詳細については、次を参照してください。[レポート作成の概念&#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)します。 また、レポートを初めて自分で作成する前に、計画の時間を取ってください。 時間を費やす価値があります。 詳細については、次を参照してください。[レポートの計画&#40;レポート ビルダー&#41;](../report-design/planning-a-report-report-builder.md)します。  
+ 開始する前に、いくつかの概念や用語について確認しておくと役立つ場合があります。 詳細については、[レポート作成の概念&#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)を参照してください。 また、レポートを初めて自分で作成する前に、計画の時間を取ってください。 時間を費やす価値があります。 詳細については、[レポートの計画&#40;レポート ビルダー&#41;](../report-design/planning-a-report-report-builder.md)を参照してください。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#TwoWays)  
   

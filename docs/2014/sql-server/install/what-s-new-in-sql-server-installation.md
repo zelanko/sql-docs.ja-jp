@@ -22,11 +22,11 @@ ms.lasthandoff: 12/03/2018
 ms.locfileid: "52752064"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server インストールの新機能
-  Windows Vista は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のサポート対象のオペレーティング システムではありません。 Service Pack 1 は、[!INCLUDE[win7](../../includes/win7-md.md)] および [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] の各オペレーティング システムの場合の最小要件として残されています。 オペレーティング システムの要件の詳細については、次を参照してください。 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)します。  
+  Windows Vista は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のサポート対象のオペレーティング システムではありません。 Service Pack 1 は、[!INCLUDE[win7](../../includes/win7-md.md)] および [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] の各オペレーティング システムの場合の最小要件として残されています。 オペレーティング システムの要件の詳細については、[Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)を参照してください。  
   
  [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] のインストール時には、抽出されたパッケージを保存するディレクトリを指定するように求められます。 場所が入力されていない場合、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、既定でコンピューターのシステム ドライブが使用されます。 抽出されたファイルは、 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] のインストールが完了した後も残ります。  
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、SysPrep は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのインストールでサポートされています。 現在、SysPrep はフェールオーバー クラスターのインストールをサポートしています。 詳細については、次を参照してください。 [SysPrep を使用して SQL Server のインストールに関する考慮事項](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)と[SQL Server 2014 を使用して SysPrep インストール](../../database-engine/install-windows/install-sql-server-using-sysprep.md)します。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、SysPrep は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのインストールでサポートされています。 現在、SysPrep はフェールオーバー クラスターのインストールをサポートしています。 詳細については、[SysPrep を使用して SQL Server のインストールに関する考慮事項](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)と[SQL Server 2014 を使用して SysPrep インストール](../../database-engine/install-windows/install-sql-server-using-sysprep.md)を参照してください。  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からのアップグレードはサポートされていますが、並列使用はサポートされていません。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]サポートに関する詳細については、「 [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。  
   

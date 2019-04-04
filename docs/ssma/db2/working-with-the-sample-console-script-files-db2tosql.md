@@ -39,11 +39,11 @@ ms.locfileid: "52394931"
   
     -   ユーザーは、必要なソースとターゲット サーバーの定義に値を変更するだけで、必要なデータベースに接続できます。 例ではすべての値が用意されています、変数の値にある、 **VariableValueFileSample.xml**します。  その他のすべての接続パラメーターは、ユーザーの作業サーバー接続ファイルから削除できます。  
   
-    -   ソースとターゲット サーバーに接続する方法の詳細については、次を参照してください。[サーバー接続ファイルを作成する&#40;DB2ToSQL&#41; ](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)します。  
+    -   ソースとターゲット サーバーに接続する方法の詳細については、[サーバー接続ファイルを作成する&#40;DB2ToSQL&#41; ](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)を参照してください。  
   
 2.  **VariableValueFileSample.xml:** スクリプト ファイルのサンプルのコンソールで使用されているすべての変数と`ServersConnectionFileSample.xml`このファイルで照合されています。 ユーザーがサンプルの変数を置き換えるだけです、サンプルのコンソール スクリプトを実行するには、ユーザーに値は定義されているものとスクリプト ファイルと共に追加のコマンドライン引数としてこのファイルを渡します。  
   
-    変数値ファイルの詳細については、次を参照してください。[変数値ファイルの作成&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)します。  
+    変数値ファイルの詳細については、[変数値ファイルの作成&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)を参照してください。  
   
 3.  **AssessmentReportGenerationSample.xml:** このサンプルで使用できるユーザー分析のために変換し、データの移行を始める前にこの xml 評価レポートを生成できます。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52394931"
   
     場合、ユーザーが複数のオブジェクトを評価する必要があります/データベースは複数を指定できます`metabase-object`ノードに示すように、`generate-assessment-report`サンプルのコンソール スクリプト ファイルのコマンドの例 4。  
   
-    レポートを生成する方法の詳細については、次を参照してください。[レポートを生成する&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)します。  
+    レポートを生成する方法の詳細については、[レポートを生成する&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)を参照してください。  
   
     **注**  
   

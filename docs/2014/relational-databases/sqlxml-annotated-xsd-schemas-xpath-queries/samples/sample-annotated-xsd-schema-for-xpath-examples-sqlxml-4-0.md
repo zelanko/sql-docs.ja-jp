@@ -22,13 +22,13 @@ ms.lasthandoff: 12/03/2018
 ms.locfileid: "52753815"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>XPath の例で使用する注釈付き XSD スキーマのサンプル (SQLXML 4.0)
-  ここで説明するサンプル XPath クエリは、マッピング スキーマを参照します。 マッピング スキーマは注釈付き XML スキーマ (XSD) ファイルです。 マッピング スキーマの詳細については、次を参照してください。[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)します。  
+  ここで説明するサンプル XPath クエリは、マッピング スキーマを参照します。 マッピング スキーマは注釈付き XML スキーマ (XSD) ファイルです。 マッピング スキーマの詳細については、[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)を参照してください。  
   
  注釈付き XSD スキーマに対して XPath クエリを実行するには、次の作業が必要です。  
   
 -   XPath クエリを含むテンプレートを作成し、 テンプレート内に、XPath クエリの実行対象となるマッピング スキーマを指定します。 このマッピング スキーマは、テンプレート ファイルに関連付けられているディレクトリまたはそのサブディレクトリに保存されている必要があります。サブディレクトリの場合は、テンプレート内に `mapping-schema` 属性の値として相対パスを指定します。  
   
--   クエリの実行に ADO 用 SQLXML 拡張を使用するテスト アプリケーションを作成します。 詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+-   クエリの実行に ADO 用 SQLXML 拡張を使用するテスト アプリケーションを作成します。 詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
  ここで紹介する例はあくまでも参考用です。これらの例では XPath クエリをテンプレート内に指定し、ADO を使用してテンプレートを実行するため、 次のマッピング スキーマ ファイル (SampleSchema1.xml) を使用する必要があります。 このファイルは、テンプレートと同じディレクトリに保存してください。  
   

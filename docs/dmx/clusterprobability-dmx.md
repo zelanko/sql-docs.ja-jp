@@ -41,7 +41,7 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- 詳細については、この構文を使用して、次を参照してください。 [SELECT FROM&#60;モデル&#62;します。コンテンツ&#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)します。 マイニング モデル コンテンツ スキーマ行セットの詳細については、次を参照してください。 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)します。  
+ 詳細については、この構文を使用して、[SELECT FROM&#60;モデル&#62;を参照してください。コンテンツ&#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)します。 マイニング モデル コンテンツ スキーマ行セットの詳細については、[DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)を参照してください。  
   
  場合、\<ノードのキャプション > が指定されていない、入力ケースが最も高いクラスターに属している確率を返します。 使用して、**クラスター**関数可能性が最も高いクラスターを返します。  
   

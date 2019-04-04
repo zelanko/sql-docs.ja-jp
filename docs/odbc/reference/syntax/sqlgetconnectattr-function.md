@@ -96,15 +96,15 @@ SQLRETURN SQLGetConnectAttr(
 |HY090|文字列またはバッファーの長さが無効です。|(DM)  *\*ValuePtr*文字の文字列し、BufferLength は SQL_NTS 等しくもありませんが、0 より小さいをでした。|  
 |HY092|無効な属性またはオプション識別子|引数が指定された値*属性*ODBC ドライバーでサポートされているのバージョンには無効です。|  
 |HY114|ドライバーは接続レベルの非同期関数の実行をサポートしていません|(DM) アプリケーションは、非同期接続の操作をサポートしていないドライバーの SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE を使用した非同期関数の実行を有効にしようとしました。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYC00|省略可能な機能が実装されていません|引数が指定された値*属性*有効な ODBC 接続属性が ODBC のバージョンのドライバーでサポートされていますが、ドライバーによってサポートされていませんでした。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に対応するドライバー、 *ConnectionHandle*関数をサポートしていません。|  
   
 ## <a name="comments"></a>コメント  
- 接続属性については、次を参照してください。[接続属性](../../../odbc/reference/develop-app/connection-attributes.md)します。  
+ 接続属性については、[接続属性](../../../odbc/reference/develop-app/connection-attributes.md)を参照してください。  
   
- 設定可能な属性の一覧は、次を参照してください。 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)します。 その場合に注意してください*属性*、文字列を返す属性を指定します*ValuePtr*の文字列バッファーへのポインターである必要があります。 Null 終了文字を含む、返される文字列の最大長*BufferLength*バイト。  
+ 設定可能な属性の一覧は、[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)を参照してください。 その場合に注意してください*属性*、文字列を返す属性を指定します*ValuePtr*の文字列バッファーへのポインターである必要があります。 Null 終了文字を含む、返される文字列の最大長*BufferLength*バイト。  
   
  属性によってアプリケーションが呼び出す前に接続を確立する**SQLGetConnectAttr**します。 ただし場合、 **SQLGetConnectAttr**と呼ばれる、指定した属性は、既定値はなく、前回の呼び出しが設定されていないと**SQLSetConnectAttr**、 **SQLGetConnectAttr**SQL_NO_DATA が返されます。  
   

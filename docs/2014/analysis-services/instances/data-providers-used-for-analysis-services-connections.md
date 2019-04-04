@@ -44,7 +44,7 @@ ms.locfileid: "53368514"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の初回リリースのメジャー ビルド番号は 12.0.2000.9 です。  
   
- バージョンおよびビルド情報の取得の詳細については、次を参照してください。[バージョンとエディションの SQL Server とそのコンポーネントを確認する方法](https://support.microsoft.com/kb/321185)します。  
+ バージョンおよびビルド情報の取得の詳細については、[バージョンとエディションの SQL Server とそのコンポーネントを確認する方法](https://support.microsoft.com/kb/321185)を参照してください。  
   
 ##  <a name="bkmk_LibUpdate"></a> Analysis Services データ プロバイダーのバージョンを確認する方法  
  データ プロバイダーは、Excel など、日常的に Analysis Services データベースに接続するクライアント アプリケーションによって、Analysis Services と共にインストールされます。  
@@ -67,7 +67,7 @@ ms.locfileid: "53368514"
   
      AMO の場合は、Microsoft.AnalysisServices を右クリックします。  
   
- リリース別のバージョンおよびビルド番号の詳細については、次を参照してください。 [blogspot の SQL Server ビルド](http://sqlserverbuilds.blogspot.com)します。  
+ リリース別のバージョンおよびビルド番号の詳細については、[blogspot の SQL Server ビルド](http://sqlserverbuilds.blogspot.com)を参照してください。  
   
 ##  <a name="bkmk_downloadsite"></a> 新しいバージョンのデータ プロバイダーを入手する方法  
  クライアント コンピューターにインストールされているバージョンは、データを提供しているサーバーのメジャー バージョンと一致する必要があります。 インストールされているサーバーが、ネットワーク内のワークステーションにインストールされているデータ プロバイダーより新しい場合は、新しいプロバイダーのインストールが必要になることがあります。  

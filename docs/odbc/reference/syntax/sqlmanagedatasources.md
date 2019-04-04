@@ -99,7 +99,7 @@ BOOL SQLManageDataSources(
 ## <a name="file-dsns"></a>ファイル Dsn  
  ファイル データ ソースをは、コンピューターのデータ ソースを行い、任意の 1 人のユーザーまたはコンピューターに登録されていないと、データ ソース名がありません。 そのデータ ソースの接続情報は、任意のコンピューターにコピーできる .dsn ファイルに含まれます。 ファイル データ ソースをでき、共有可能 .dsn ファイルをネットワークに存在する場合は同時に使用する、ネットワーク上の複数のユーザーが、ユーザーがある、適切なドライバーがインストールされている限り。 ファイルのデータ ソースもできます共有可能、それを使用して単一のコンピューターにのみ場合。  
   
- ファイル データ ソースの詳細については、次を参照してください。[を使用してファイル データ ソースの接続](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)、を参照してくださいまたは[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)します。  
+ ファイル データ ソースの詳細については、[を使用してファイル データ ソースの接続](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)、を参照してくださいまたは[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)を参照してください。  
   
 ## <a name="managing-drivers"></a>ドライバーの管理  
  ユーザーがクリックした場合、**ドライバー**  タブで、 **ODBC データ ソース アドミニストレーター**ダイアログ ボックスで、 **SQLManageDataSources**システムにインストールされている ODBC ドライバーの一覧を表示します。ドライバーに関する情報。 表示される日付は、次の図に示すように、ドライバーの作成日です。  
@@ -120,7 +120,7 @@ BOOL SQLManageDataSources(
   
  ユーザーがクリックした場合**Visual Studio Analyzer の開始**し、クリック **[ok]**、Visual Studio Analyzer を有効にします。 これまでは有効のままに**Visual Studio Analyzer の停止**をクリックします。  
   
- トレースの詳細については、次を参照してください。[トレース](../../../odbc/reference/develop-app/tracing.md)します。 詳細については、**トレース**と**TraceFile**キーワードを参照してください[ODBC サブキー](../../../odbc/reference/install/odbc-subkey.md)します。  
+ トレースの詳細については、[トレース](../../../odbc/reference/develop-app/tracing.md)を参照してください。 詳細については、**トレース**と**TraceFile**キーワードを参照してください[ODBC サブキー](../../../odbc/reference/install/odbc-subkey.md)します。  
   
 ## <a name="related-functions"></a>関連する関数  
   

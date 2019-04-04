@@ -23,7 +23,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48164112"
 ---
 # <a name="program-exception-message-box"></a>例外メッセージ ボックスのプログラミング
-  によって提供されるよりもはるかに多くのコントロールで、メッセージ エクスペリエンスを提供する、アプリケーションで例外メッセージ ボックスを使用することができます、<xref:System.Windows.Forms.MessageBox>クラス。 詳細については、次を参照してください。[例外メッセージ ボックスのプログラミング](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)します。 取得し、例外メッセージ ボックス .dll をデプロイする方法については、次を参照してください。[例外メッセージ ボックス アプリケーションを展開する](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)します。  
+  によって提供されるよりもはるかに多くのコントロールで、メッセージ エクスペリエンスを提供する、アプリケーションで例外メッセージ ボックスを使用することができます、<xref:System.Windows.Forms.MessageBox>クラス。 詳細については、[例外メッセージ ボックスのプログラミング](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)を参照してください。 取得し、例外メッセージ ボックス .dll をデプロイする方法については、[例外メッセージ ボックス アプリケーションを展開する](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)を参照してください。  
   
 ## <a name="procedure"></a>手順  
   

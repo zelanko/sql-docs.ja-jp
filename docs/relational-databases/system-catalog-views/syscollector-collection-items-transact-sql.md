@@ -38,7 +38,7 @@ ms.locfileid: "47714365"
 |**collector_type_uid**|**uniqueidentifier**|コレクター型の識別に使用する GUID です。 NULL 値は許可されません。|  
 |**name**|**nvarchar (4000)**|コレクション セットの名前です。 NULL 値が許可されます。|  
 |**frequency**|**int**|コレクション アイテムでデータを収集する頻度です。 NULL 値は許可されません。|  
-|**parameters**|**xml**|コレクション アイテムに関連付けられたコレクター型のパラメーター化を定義します。 このコレクション アイテムの XML スキーマが検証されると、XML スキーマ (XSD) に格納されている、 **parameter_schema**の特定のコレクター型。 NULL 値が許可されます。 詳細については、次を参照してください。 [syscollector_collector_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)します。|  
+|**parameters**|**xml**|コレクション アイテムに関連付けられたコレクター型のパラメーター化を定義します。 このコレクション アイテムの XML スキーマが検証されると、XML スキーマ (XSD) に格納されている、 **parameter_schema**の特定のコレクター型。 NULL 値が許可されます。 詳細については、[syscollector_collector_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)を参照してください。|  
   
 ## <a name="permissions"></a>アクセス許可  
  SELECT 権限が必要**dc_operator**、 **dc_proxy**します。  

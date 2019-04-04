@@ -22,4 +22,4 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47778600"
 ---
 # <a name="batch-processing"></a>バッチ処理
-SQL ステートメントのバッチのサポートは、広範囲にわたるはないため、アプリケーションの相互運用可能な条件付きで、またはまったく使用それらにする必要があります。 詳細については、次を参照してください。[を実行するバッチ](../../../odbc/reference/develop-app/executing-batches.md)します。
+SQL ステートメントのバッチのサポートは、広範囲にわたるはないため、アプリケーションの相互運用可能な条件付きで、またはまったく使用それらにする必要があります。 詳細については、[を実行するバッチ](../../../odbc/reference/develop-app/executing-batches.md)を参照してください。

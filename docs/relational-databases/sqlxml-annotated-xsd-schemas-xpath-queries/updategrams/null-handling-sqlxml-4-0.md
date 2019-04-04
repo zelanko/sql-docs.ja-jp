@@ -43,7 +43,7 @@ ms.locfileid: "56015593"
 </ROOT>  
 ```  
   
- パラメーターをアップデートグラムに渡すときには、パラメーター値として NULL を指定できます。 これは、指定することで、 **nullvalue**属性、  **\<updg:header >** ブロックします。 例については、次を参照してください。[アップデート グラムにパラメーターを渡す&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md)します。  
+ パラメーターをアップデートグラムに渡すときには、パラメーター値として NULL を指定できます。 これは、指定することで、 **nullvalue**属性、  **\<updg:header >** ブロックします。 例については、[アップデート グラムにパラメーターを渡す&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  

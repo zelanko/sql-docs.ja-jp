@@ -90,6 +90,6 @@ ms.locfileid: "54131213"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_proxy &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-proxy-transact-sql)します。  
+ 詳細については、[sp_update_proxy &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-proxy-transact-sql)を参照してください。  
   
   

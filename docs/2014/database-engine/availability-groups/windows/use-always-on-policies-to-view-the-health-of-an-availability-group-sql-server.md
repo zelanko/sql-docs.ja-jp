@@ -20,7 +20,7 @@ ms.lasthandoff: 01/22/2019
 ms.locfileid: "54420127"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>AlwaysOn ポリシーを使用した可用性グループの正常性の確認 (SQL Server)
-  このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の AlwaysOn ポリシーまたは [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の PowerShell を使用して、AlwaysOn 可用性グループの運用状態の正常性を確認する方法について説明します。 AlwaysOn ポリシー ベースの管理については、次を参照してください。[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)します。  
+  このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の AlwaysOn ポリシーまたは [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の PowerShell を使用して、AlwaysOn 可用性グループの運用状態の正常性を確認する方法について説明します。 AlwaysOn ポリシー ベースの管理については、[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)を参照してください。  
   
 > [!IMPORTANT]  
 >  AlwaysOn ポリシーでは、カテゴリの名前が ID として使用されます。 AlwaysOn カテゴリの名前を変更すると、正常性評価の機能を使用できなくなります。 このため、AlwaysOn カテゴリの名前は変更しないでください。  

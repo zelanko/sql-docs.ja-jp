@@ -34,4 +34,4 @@ ms.locfileid: "47765610"
   
 -   あるデータ ソースに対してのみ機能[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)します。 データ ソースのディレクトリは、する場合により、ドライバーにエラー「ドライバーはこの関数をサポートしていません」を返します[テーブルを無料](../../odbc/microsoft/visual-foxpro-terminology.md)します。  
   
- 詳細については、次を参照してください。 [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

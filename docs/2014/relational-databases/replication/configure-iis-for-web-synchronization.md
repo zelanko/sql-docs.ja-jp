@@ -108,7 +108,7 @@ ms.locfileid: "53372754"
   
 1.  IIS を実行しているコンピューターに管理者としてログオンします。  
   
-2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] インストール ディスクから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを起動します。 詳細については、このウィザードを使用して、次を参照してください。[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)します。  
+2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] インストール ディスクから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを起動します。 詳細については、このウィザードを使用して、[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)を参照してください。  
   
 3.  **[機能の選択]** ページで、 **[クライアント ツール接続]** を選択します。  
   

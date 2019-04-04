@@ -31,7 +31,7 @@ ms.locfileid: "52520372"
 ## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] での動作変更  
   
 ### <a name="metadata-discovery"></a>メタデータの検出  
- 機能強化、[!INCLUDE[ssDE](../includes/ssde-md.md)]以降[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以前のバージョンの SQLDescribeCol によって返されるよりも、期待される結果のより正確な記述を取得する SQLDescribeCol を許可する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。[メタデータ検出](../relational-databases/native-client/features/metadata-discovery.md)します。  
+ 機能強化、[!INCLUDE[ssDE](../includes/ssde-md.md)]以降[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以前のバージョンの SQLDescribeCol によって返されるよりも、期待される結果のより正確な記述を取得する SQLDescribeCol を許可する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 詳細については、[メタデータ検出](../relational-databases/native-client/features/metadata-discovery.md)を参照してください。  
   
  [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql)置き換えが実際にクエリを実行せずに、応答の形式を決定するためのオプション[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)、 [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)、 [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)、および[sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)します。  
   
@@ -75,7 +75,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  空間オブジェクトが空かどうかを確認するのには、呼び出し、 [STIsEmpty &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type)メソッド。  
   
 ### <a name="log-function-has-new-optional-parameter"></a>LOG 関数の省略可能なパラメーターの追加  
- `LOG`関数がここでは、省略可能な*基本*パラメーター。 詳細については、次を参照してください。[ログ&#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/log-transact-sql)します。  
+ `LOG`関数がここでは、省略可能な*基本*パラメーター。 詳細については、[ログ&#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/log-transact-sql)を参照してください。  
   
 ### <a name="statistics-computation-during-partitioned-index-operations-has-changed"></a>パーティション インデックス操作中の統計計算の変更  
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]、パーティション インデックスの作成または再構築時に、テーブル内のすべての行をスキャンして統計は作成されません。 代わりに、クエリ オプティマイザーが既定のサンプリング アルゴリズムを使用して統計を生成します。 パーティション インデックスでデータベースをアップグレードした後で、これらのインデックスのヒストグラム データに違いが見つかる場合があります。 この動作の変更はクエリ パフォーマンスに影響しない可能性があります。 テーブル内のすべての行をスキャンしてパーティション インデックスの統計を作成するには、FULLSCAN 句で CREATE STATISTICS または UPDATE STATISTICS を使用します。  

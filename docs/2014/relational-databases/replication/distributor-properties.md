@@ -90,7 +90,7 @@ ms.locfileid: "54135698"
 -   **[パブリッシャーのプロパティ]** ダイアログ ボックス。エージェントは、このダイアログ ボックスで指定された資格情報を使用してパブリッシャーに接続します。このダイアログ ボックスは、 **[ディストリビューターのプロパティ]** ダイアログ ボックスの **[パブリッシャー]** ページから開きます。    
 -   サブスクリプションの新規作成ウィザードの [ディストリビューション エージェント]。エージェントは、ここで指定された資格情報を使用してサブスクライバーに接続します。  
   
- 詳細については、次を参照してください。 \\ [Replication Agent Security Model](security/replication-agent-security-model.md)します。 
+ 詳細については、\\ [Replication Agent Security Model](security/replication-agent-security-model.md)を参照してください。 
 
   
 ## <a name="see-also"></a>参照  

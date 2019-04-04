@@ -36,4 +36,4 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
   
  引用符で囲まれた識別子は、Oracle では、ROWID など、同じ名前の擬似列の場合は true。 列名を区別するために使用されます。 "ROWID"カタログ関数の引数を渡された場合関数は、ROWID の擬似列が存在する場合。 擬似列が存在しない場合、関数は"ROWID"列で機能します。 ROWID カタログ関数の引数を渡された場合、関数は ROWID 列で機能します。  
   
- 引用符で囲まれた識別子の詳細については、次を参照してください。[引用符で囲まれた識別子](../../../odbc/reference/develop-app/quoted-identifiers.md)します。
+ 引用符で囲まれた識別子の詳細については、[引用符で囲まれた識別子](../../../odbc/reference/develop-app/quoted-identifiers.md)を参照してください。

@@ -58,7 +58,7 @@ ms.locfileid: "53206821"
 5.  **データベースを読み取り/書き込みに設定します。** 設定、**読み取り専用データベース**に**False**します。  
   
 ##  <a name="bkmk_prepare_mount_databases"></a>Web アプリケーションとマウント コンテンツ データベースを準備します。  
- 次の手順の詳細については、次を参照してください。 [SharePoint 2010 から SharePoint 2013 にデータベースをアップグレード](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690)します。  
+ 次の手順の詳細については、[SharePoint 2010 から SharePoint 2013 にデータベースをアップグレード](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690)を参照してください。  
   
 1.  **データベースをオフラインにする**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "53206821"
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     詳細については、次を参照してください。[アタッチまたはデタッチ コンテンツ データベース (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx)します。  
+     詳細については、[アタッチまたはデタッチ コンテンツ データベース (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx)を参照してください。  
   
      **ステップの完了時の状態:** マウント操作が完了したら、ユーザーは、古いコンテンツ データベースに含まれていたファイルを確認できます。 そのため、ユーザーはドキュメント ライブラリのブックを表示して開くことができます。  
   

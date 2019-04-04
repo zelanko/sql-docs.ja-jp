@@ -44,7 +44,7 @@ ms.locfileid: "53980208"
 |**io_pending**|**int**|I/O 要求が Windows で保留されているか、完了しているかを示します。 I/O 要求は、Windows で要求が完了していても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で I/O 要求を処理し、一覧から削除するコンテキスト切り替えがまだ実行されていない場合には、引き続き保留中になることがあります。 NULL 値は許可されません。|  
 |**io_completion_routine_address**|**varbinary(8)**|I/O 要求が完了したときに呼び出される内部関数。 NULL 値が許可されます。|  
 |**io_user_data_address**|**varbinary(8)**|内部使用のみです。 NULL 値が許可されます。|  
-|**scheduler_address**|**varbinary(8)**|I/O 要求が発行されたスケジューラ。 I/O 要求はスケジューラの保留中 I/O 一覧に表示されます。 詳細については、次を参照してください。 [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)します。 NULL 値は許可されません。|  
+|**scheduler_address**|**varbinary(8)**|I/O 要求が発行されたスケジューラ。 I/O 要求はスケジューラの保留中 I/O 一覧に表示されます。 詳細については、[sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)を参照してください。 NULL 値は許可されません。|  
 |**io_handle**|**varbinary(8)**|I/O 要求で使用されているファイルのファイル ハンドル。 NULL 値が許可されます。|  
 |**io_offset**|**bigint**|I/O 要求のオフセット。 NULL 値は許可されません。|  
 |**io_handle_path**|**nvarchar (256)**| I/O 要求で使用されているファイルのパス。 NULL 値が許可されます。|

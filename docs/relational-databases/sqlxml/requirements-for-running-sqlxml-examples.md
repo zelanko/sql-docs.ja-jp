@@ -30,12 +30,12 @@ ms.locfileid: "56020568"
   
  SQLXML 4.0 の例を使用して実際のサンプルを作成するには、次がインストールされている必要があります。  
   
--   AdventureWorks サンプル データベース。 詳細については、次を参照してください。 [AdventureWorks サンプル データベース](https://msftdbprodsamples.codeplex.com/)します。  
+-   AdventureWorks サンプル データベース。 詳細については、[AdventureWorks サンプル データベース](https://msftdbprodsamples.codeplex.com/)を参照してください。  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。 詳細については、「 [SQL Server Native Client のインストール](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
   
 -   MDAC 2.6 以降  
   
- 例の多くでは、テンプレートを使用して、マッピング XSD スキーマに対する XPath クエリを指定します。 詳細については、次を参照してください。[注釈付き XSD のスキーマでクエリを使用して&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)します。  
+ 例の多くでは、テンプレートを使用して、マッピング XSD スキーマに対する XPath クエリを指定します。 詳細については、[注釈付き XSD のスキーマでクエリを使用して&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)を参照してください。  
   
   

@@ -66,7 +66,7 @@ ms.locfileid: "52512631"
   
      ウィザードに従って、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーを選択し、マイニング モデルが格納されているデータベースを指定します。  
   
-     接続を作成する方法については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)します。  
+     接続を作成する方法については、[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)を参照してください。  
   
 -   テーブル分析ツールを使用している場合、モデルを保存する確認、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]サーバー、および一時的なモデルを使用しないでください。  
   

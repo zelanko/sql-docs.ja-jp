@@ -146,7 +146,7 @@ sudo zypper update mssql-server-fts
 
 ## <a id="filters"></a> フィルター
 
-フルテキスト検索は、バイナリ ファイルに格納されているテキストでも機能します。 インストール済みのフィルターがファイルを処理するために必要なこの場合。 フィルターの詳細については、次を参照してください。[検索用フィルターの管理と構成](../relational-databases/search/configure-and-manage-filters-for-search.md)します。
+フルテキスト検索は、バイナリ ファイルに格納されているテキストでも機能します。 インストール済みのフィルターがファイルを処理するために必要なこの場合。 フィルターの詳細については、[検索用フィルターの管理と構成](../relational-databases/search/configure-and-manage-filters-for-search.md)を参照してください。
 
 呼び出すことによって、インストールされているフィルターの一覧を確認できます**sp_help_fulltext_system_components 'filter'** します。 SQL Server では、次のフィルターがインストールされます。
 
@@ -284,4 +284,4 @@ sudo zypper update mssql-server-fts
 
 ## <a name="next-steps"></a>次の手順
 
-フルテキスト検索については、次を参照してください。 [SQL Server フルテキスト検索](../relational-databases/search/full-text-search.md)します。 
+フルテキスト検索については、[SQL Server フルテキスト検索](../relational-databases/search/full-text-search.md)を参照してください。 

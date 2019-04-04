@@ -54,7 +54,7 @@ GO
   
  この例では、`SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` は、プレフィックス `SQLWEP_` と GUID から構成される [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子です。 `SQLWEP` は、各識別子に対して新しい GUID を作成します。 値`A7E5521A-1CA6-4741-865D-826F804E5135`で、`TO SERVICE`句内の broker インスタンスを識別する GUID では、 **msdb**データベース。  
   
- WQL を使用する方法の詳細については、次を参照してください。 [WMI Provider for Server Events と WQL の使用](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)します。  
+ WQL を使用する方法の詳細については、[WMI Provider for Server Events と WQL の使用](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)を参照してください。  
   
  管理アプリケーションは、プロバイダーによって定義された WMI 名前空間に接続することで、WMI Provider for Server Events を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにダイレクトします。 Windows WMI サービスは、この名前空間をプロバイダー DLL である Sqlwep.dll にマップし、これをメモリに読み込みます。 各インスタンスについてプロバイダーがサーバー イベント用 WMI 名前空間を管理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、形式は次です: \\ \\.\\*ルート*\Microsoft\SqlServer\ServerEvents\\*instance_name*ここで、 *instance_name*既定では MSSQLSERVER です。 インスタンスの WMI 名前空間に接続する方法についての詳細は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[WMI Provider for Server Events と WQL の使用](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)します。  
   

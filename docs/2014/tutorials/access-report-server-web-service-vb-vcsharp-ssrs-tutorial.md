@@ -46,10 +46,10 @@ ms.locfileid: "56015623"
   
 -   レポート サーバーが配置されているコンピューター上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] レポート サーバー Web サービスにアクセスできる十分な権限。  
   
--   レポート サーバーにインストールされているレポート。 このチュートリアルでは、サンプル レポート Company Sales を使用します。 サンプル レポートの詳細については、次を参照してください。 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)します。  
+-   レポート サーバーにインストールされているレポート。 このチュートリアルでは、サンプル レポート Company Sales を使用します。 サンプル レポートの詳細については、[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)を参照してください。  
   
 > [!NOTE]  
->  サンプルはセットアップ中に自動的にインストールされませんが、いつでもインストールできます。 サンプルについては、次を参照してください。 [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887)します。  
+>  サンプルはセットアップ中に自動的にインストールされませんが、いつでもインストールできます。 サンプルについては、[SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887)を参照してください。  
   
  **このチュートリアルの推定所要時間:** 60 分  
   

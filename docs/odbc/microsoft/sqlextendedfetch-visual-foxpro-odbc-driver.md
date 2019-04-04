@@ -32,4 +32,4 @@ ms.locfileid: "47667156"
   
  既定では、Visual FoxPro ODBC ドライバーでは、FoxPro テーブルで削除済みとしてマークされている行は返されません。 結果セットのカーソルでは、削除対象としてマークが、テーブルから削除されていない行は含まれません。 使用してこの動作を変更することができます、[削除設定](../../odbc/microsoft/set-deleted-command.md)コマンド。  
   
- 詳細については、次を参照してください。 [SQLExtendedFetch](../../odbc/reference/syntax/sqlextendedfetch-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLExtendedFetch](../../odbc/reference/syntax/sqlextendedfetch-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

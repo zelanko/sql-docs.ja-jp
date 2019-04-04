@@ -28,7 +28,7 @@ ms.locfileid: "55087741"
 + ローカル ユーザー アカウント。 対象**SQL 制限されたユーザー グループ (SQLRUserGroup)** が不要になった作成または外部プロセスを実行するために使用します。 AppContainers を交換します。
 + **SQLRUserGroup**メンバーシップが変更されました。 複数のローカル ユーザー アカウントではなく、メンバーシップは、SQL Server スタート パッド サービス アカウントだけで構成されます。 AppContainers を通じて、分離、スタート パッドのサービス id で R、Python、Java プロセスを実行します。
 
-分離モデルが変更されていますが、インストール ウィザードとコマンド ライン パラメータが SQL Server 2019 で同じになります。 インストールについては、次を参照してください。 [SQL Server Machine Learning のサービスをインストール](sql-machine-learning-services-windows-install.md)します。
+分離モデルが変更されていますが、インストール ウィザードとコマンド ライン パラメータが SQL Server 2019 で同じになります。 インストールについては、[SQL Server Machine Learning のサービスをインストール](sql-machine-learning-services-windows-install.md)を参照してください。
 
 ## <a name="about-appcontainer-isolation"></a>AppContainer 分離について
 
@@ -53,7 +53,7 @@ AppContainer Sid に基づいて、新しいファイアウォール規則があ
 
 ## <a name="implied-authentication"></a>暗黙の認証
 
-前に、追加の構成は引き続き必要ですが、*暗黙の認証*内にスクリプトまたはコードが信頼済みの認証を使用して、データやリソースを取得する SQL Server に接続する場合。 追加の構成では、データベース ログインを作成する必要があります**SQLRUserGroup**、その唯一のメンバーは、複数のワーカー アカウントではなく、1 つの SQL Server スタート パッド サービス アカウントではようになりました。 このタスクの詳細については、次を参照してください。[データベース ユーザーとしての SQLRUserGroup の追加](../security/add-sqlrusergroup-to-database.md)します。
+前に、追加の構成は引き続き必要ですが、*暗黙の認証*内にスクリプトまたはコードが信頼済みの認証を使用して、データやリソースを取得する SQL Server に接続する場合。 追加の構成では、データベース ログインを作成する必要があります**SQLRUserGroup**、その唯一のメンバーは、複数のワーカー アカウントではなく、1 つの SQL Server スタート パッド サービス アカウントではようになりました。 このタスクの詳細については、[データベース ユーザーとしての SQLRUserGroup の追加](../security/add-sqlrusergroup-to-database.md)を参照してください。
 
 
 ## <a name="symbolic-link-created-by-setup"></a>セットアップによって作成されたシンボリック リンク

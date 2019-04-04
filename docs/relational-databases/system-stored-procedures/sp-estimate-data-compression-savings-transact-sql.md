@@ -36,7 +36,7 @@ ms.locfileid: "53213693"
   
  要求された圧縮設定を使用した場合のオブジェクト サイズを推定するために、このストアド プロシージャでは、ソース オブジェクトがサンプリングされ、そのデータが tempdb に作成された同等のテーブルとインデックスに読み込まれます。 さらに、tempdb に作成されたテーブルまたはインデックスが要求された設定に圧縮され、圧縮で削減される推定領域が計算されます。  
   
- テーブル、インデックス、またはパーティションの使用の圧縮状態を変更する、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)または[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)ステートメント。 圧縮の詳細については、次を参照してください。[データ圧縮](../../relational-databases/data-compression/data-compression.md)します。  
+ テーブル、インデックス、またはパーティションの使用の圧縮状態を変更する、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)または[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)ステートメント。 圧縮の詳細については、[データ圧縮](../../relational-databases/data-compression/data-compression.md)を参照してください。  
   
 > [!NOTE]  
 >  既存のデータが断片化されている場合は、インデックスを再構築することで、圧縮を使用しなくてもデータのサイズを削減できる可能性があります。 インデックスについては、再構築中に FILL FACTOR が適用されます。 これによってインデックスのサイズが増える可能性があります。  

@@ -32,7 +32,7 @@ ms.locfileid: "48164002"
   
  混合モデルを作成した場合は、ARIMA と ARTXP の分析が個別のツリーに作成され、モデルを表すルート ノードで結合されます。 ARIMA と ARTXP のツリーの構造は非常に異なります。 たとえば、ARTXP ツリーは実際にはデシジョン ツリーのようなツリー構造ですが、ARIMA ツリーは一連の移動平均を表します。 したがって、この 2 つの表現は、便宜上 1 つのモデルで提示されていますが、2 つの独立したモデルとして扱う必要があります。 式もまったく別のものであり、結合または比較することはできません。  
   
- 使用して、タイム シリーズ モデルを表示することも、 [Microsoft 汎用コンテンツ ツリー ビューアー](../microsoft-generic-content-tree-viewer-data-mining.md)します。 タイム シリーズ モデルのコンテンツに関する詳細については、次を参照してください。[タイム シリーズ モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)します。  
+ 使用して、タイム シリーズ モデルを表示することも、 [Microsoft 汎用コンテンツ ツリー ビューアー](../microsoft-generic-content-tree-viewer-data-mining.md)します。 タイム シリーズ モデルのコンテンツに関する詳細については、[タイム シリーズ モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)を参照してください。  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>タイム シリーズ モデルの ARTXP 回帰式を表示するには  
   

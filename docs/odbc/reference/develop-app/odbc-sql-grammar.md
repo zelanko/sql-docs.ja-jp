@@ -21,4 +21,4 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47797250"
 ---
 # <a name="odbc-sql-grammar"></a>ODBC SQL 文法
-相互運用可能なアプリケーションは、SQL ステートメントで ODBC SQL 文法を常に使用する必要があります。 ただし、多くのバリエーションは、この文法内でも可能です。 詳細については、次を参照してください。 [SQL ステートメントの相互運用性](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)します。
+相互運用可能なアプリケーションは、SQL ステートメントで ODBC SQL 文法を常に使用する必要があります。 ただし、多くのバリエーションは、この文法内でも可能です。 詳細については、[SQL ステートメントの相互運用性](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)を参照してください。

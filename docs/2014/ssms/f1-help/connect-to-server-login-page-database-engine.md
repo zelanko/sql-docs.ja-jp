@@ -23,7 +23,7 @@ ms.locfileid: "53362224"
   このタブを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に接続するときのオプションを表示または指定できます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証で接続するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モードで構成する必要があります。 認証モードの決定、認証モードを変更する方法の詳細については、次を参照してください。[サーバー認証モードの変更](../../database-engine/configure-windows/change-server-authentication-mode.md)します。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証で接続するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モードで構成する必要があります。 認証モードの決定、認証モードを変更する方法の詳細については、[サーバー認証モードの変更](../../database-engine/configure-windows/change-server-authentication-mode.md)を参照してください。  
   
 ## <a name="options"></a>および  
  **サーバーの種類**  

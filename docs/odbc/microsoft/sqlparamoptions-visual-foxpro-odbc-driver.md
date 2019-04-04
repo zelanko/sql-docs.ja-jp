@@ -30,4 +30,4 @@ ms.locfileid: "47806081"
   
  アプリケーションによって割り当てられたパラメーターのセットの複数の値を指定できるように[SQLBindParameter](../../odbc/microsoft/sqlbindparameter-visual-foxpro-odbc-driver.md)します。 パラメーターのセットに複数の値を指定する機能は、一括挿入し、さまざまなパラメーター値で複数回、同じ SQL ステートメントを処理するデータ ソースを必要とするその他の作業に適しています。 たとえば、アプリケーションが 3 つのパラメーターに関連付けられている一連の値を指定できます、**挿入**ステートメントし、実行、**挿入**3 つを実行するステートメントを 1 回の挿入操作です。  
   
- 詳細については、次を参照してください。 [SQLParamOptions](../../odbc/reference/syntax/sqlparamoptions-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLParamOptions](../../odbc/reference/syntax/sqlparamoptions-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

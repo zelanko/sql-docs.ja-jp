@@ -39,7 +39,7 @@ ms.locfileid: "56017954"
 |ReportingServices.css|レポート マネージャーのスタイルを定義します。|  
   
 > [!NOTE]  
->  次のスタイル シートは、レポート マネージャーのオンライン ドキュメントが使用され、変更しないでください。Sql.css および Mailto.css します。 その他のスタイル シートは、SharePoint Web パーツで開くレポートおよびレポート マネージャーのスタイルを定義します。 このようなスタイル シートには、Rswebparts.css、Sp_full.css、Sp_small.css などがあります。 SharePoint スタイル シートは変更しないようにしてください。 Web パーツの使用方法の詳細については、次を参照してください。[ビューと探索ネイティブ モードのレポートを使用して SharePoint Web パーツ&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)します。  
+>  次のスタイル シートは、レポート マネージャーのオンライン ドキュメントが使用され、変更しないでください。Sql.css および Mailto.css します。 その他のスタイル シートは、SharePoint Web パーツで開くレポートおよびレポート マネージャーのスタイルを定義します。 このようなスタイル シートには、Rswebparts.css、Sp_full.css、Sp_small.css などがあります。 SharePoint スタイル シートは変更しないようにしてください。 Web パーツの使用方法の詳細については、[ビューと探索ネイティブ モードのレポートを使用して SharePoint Web パーツ&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)を参照してください。  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>カスタム スタイル シートを使用するための Reporting Services の構成  
  スタイル シートは、有効なカスケード スタイル シート (.css) ファイルであり、Styles フォルダーに格納されていることが必要です。 既定では、Styles フォルダーにある\<*ドライブ*>: SQL server \mssql \Program Files\Microsoft *。n*\Reporting Services\ReportServer\Styles します。  
@@ -64,7 +64,7 @@ ms.locfileid: "56017954"
 ```  
   
 ### <a name="specifying-a-style-sheet-on-a-report-url"></a>レポートの URL でのスタイル シートの指定  
- `rc:StyleSheet` URL アクセス パラメーターを使用して、レポートの URL でカスタム スタイル シートを指定できます。 URL アクセス パラメーターを指定する方法の詳細については、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。  
+ `rc:StyleSheet` URL アクセス パラメーターを使用して、レポートの URL でカスタム スタイル シートを指定できます。 URL アクセス パラメーターを指定する方法の詳細については、[URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)を参照してください。  
   
  次の例は、カスタム スタイルを追加する方法を示しています。  
   

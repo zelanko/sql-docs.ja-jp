@@ -32,7 +32,7 @@ ms.locfileid: "47668670"
 このトピックでは、インストール プロセスについて説明し、SSMA ユーザー インターフェイスを理解するのに役立ちます。  
   
 ## <a name="installing-ssma"></a>SSMA のインストール  
-SSMA を使用するには、最初にする必要があります、プログラムのインストール SSMA クライアントを移行する、両方のデータベースにアクセスできるコンピューターとのターゲット インスタンスに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB します。 インストール手順については、次を参照してください。[をインストールする SQL Server Migration Assistant for Access &#40;AccessToSQL&#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md)します。  
+SSMA を使用するには、最初にする必要があります、プログラムのインストール SSMA クライアントを移行する、両方のデータベースにアクセスできるコンピューターとのターゲット インスタンスに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB します。 インストール手順については、[をインストールする SQL Server Migration Assistant for Access &#40;AccessToSQL&#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md)を参照してください。  
   
 SSMA を起動するには、クリックして**開始**、 をポイント**すべてのプログラム**、 をポイント**SQL Server Migration Assistant for Access**、し、 **SQL Server の移行Assistant for Access**します。  
   
@@ -74,9 +74,9 @@ SSMA は、参照、および操作へのアクセスを実行に使用できる
   
 -   各アクセス データベースのテーブルを参照します。  
   
--   変換のためのオブジェクトを選択し、オブジェクトを変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文。 詳細については、次を参照してください。 [Access データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)します。  
+-   変換のためのオブジェクトを選択し、オブジェクトを変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文。 詳細については、[Access データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)を参照してください。  
   
--   データ移行のオブジェクトを選択し、それらのオブジェクトからデータを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。 [SQL Server への Access データの移行](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md)します。  
+-   データ移行のオブジェクトを選択し、それらのオブジェクトからデータを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、[SQL Server への Access データの移行](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md)を参照してください。  
   
 -   リンクし、アクセスのリンクを解除し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。  
   
@@ -85,7 +85,7 @@ SSMA は、参照、および操作へのアクセスを実行に使用できる
   
 変換された Access データベース オブジェクトを選択して読み込むことは、SQL Server または Azure SQL DB メタデータ エクスプ ローラーを使用できます (同期) これらのオブジェクトのインスタンスに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB します。  
   
-詳細については、次を参照してください。[を SQL Server に変換されたデータベース オブジェクトの読み込み](loading-converted-database-objects-into-sql-server-accesstosql.md)します。  
+詳細については、[を SQL Server に変換されたデータベース オブジェクトの読み込み](loading-converted-database-objects-into-sql-server-accesstosql.md)を参照してください。  
   
 ### <a name="metadata"></a>メタデータ  
 各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、アクセス メタデータ エクスプ ローラーでテーブルを選択する場合は、4 つのタブが表示されます:**テーブル**、**型マッピングの**、**プロパティ**、および**データ**. 内のテーブルを選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーで、次の 3 つのタブが表示されます:**テーブル**、 **SQL**、および**データ**します。  
@@ -94,7 +94,7 @@ SSMA は、参照、および操作へのアクセスを実行に使用できる
   
 -   アクセス メタデータ エクスプ ローラーでは、型のマッピングを変更できます。 レポートを作成したり、スキーマを変換したりする前に、これらの変更を作成してください。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーでテーブルとインデックスのプロパティを変更することができます、**テーブル**タブ。スキーマを読み込む前に、これらの変更を加える[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。 [Access データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーでテーブルとインデックスのプロパティを変更することができます、**テーブル**タブ。スキーマを読み込む前に、これらの変更を加える[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、[Access データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)を参照してください。  
   
 ### <a name="toolbars"></a>[ツール バー]  
 SSMA は 2 つのツールバー: プロジェクト ツールバー、および移行ツールバー。  

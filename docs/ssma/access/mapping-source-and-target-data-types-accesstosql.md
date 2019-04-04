@@ -27,7 +27,7 @@ ms.locfileid: "51668261"
 Access データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースの型。 Access データベースのオブジェクトに変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトへのアクセスからのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次の手順で示すようにします。  
   
 ## <a name="default-mappings"></a>既定のマッピング  
-SSMA では、データ型マッピングの既定セットがあります。 既定のマッピングの一覧で、次を参照してください。[プロジェクトの設定 (型のマッピング)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)します。  
+SSMA では、データ型マッピングの既定セットがあります。 既定のマッピングの一覧で、[プロジェクトの設定 (型のマッピング)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)を参照してください。  
   
 ## <a name="customizing-data-type-mappings"></a>データ型マッピングのカスタマイズ  
 使用して、**プロジェクト設定**ダイアログ ボックスで、すべてのデータベースと、プロジェクト内のデータベース オブジェクトの型をマップする方法をカスタマイズすることができます。 プロジェクトの種類のマッピングは、すべてのデータベースとのカスタム型マッピングがないデータベース オブジェクトに適用されます。  

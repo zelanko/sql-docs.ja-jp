@@ -40,7 +40,7 @@ ms.locfileid: "56285710"
   
 3.  をクリックして、**挿入**リボンのタブし、[イメージ] アイコンをダブルクリックします。 **[画像のプロパティ]** ダイアログ ボックスが表示されます。  
   
-4.  画像をレポートに追加します。 詳細については、次を参照してください。[レポートに画像を埋め込む&#40;レポート ビルダーおよび SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)します。  
+4.  画像をレポートに追加します。 詳細については、[レポートに画像を埋め込む&#40;レポート ビルダーおよび SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)を参照してください。  
   
 5.  プロパティ ペインを開きます。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "56285710"
 8.  **ソース**、**埋め込み**ドロップダウン リストから。  
   
     > [!NOTE]  
-    >  画像がデータベースまたは Web に保存されている場合は、このプロパティに適切なオプションを指定できます。 詳細については、次を参照してください。[イメージのプロパティ ダイアログ ボックスの [全般]&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)します。  
+    >  画像がデータベースまたは Web に保存されている場合は、このプロパティに適切なオプションを指定できます。 詳細については、[イメージのプロパティ ダイアログ ボックスの [全般]&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)を参照してください。  
   
 9. **値**、ドロップダウン リストから、イメージの名前を選択します。  
   

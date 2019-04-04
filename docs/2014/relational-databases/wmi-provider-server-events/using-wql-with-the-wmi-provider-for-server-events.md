@@ -48,7 +48,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- WQL クエリ (`FROM`) の `DDL_DATABASE_LEVEL_EVENTS` 句の引数には、イベント通知を作成できる有効なイベントを指定することができます。 `SELECT` 句および `WHERE` 句の引数は、イベントまたはその親イベントに関連付けられたイベント プロパティを指定することができます。 有効なイベントおよびイベントのプロパティの一覧は、次を参照してください。[イベント通知 (データベース エンジン)](https://technet.microsoft.com/library/ms182602.aspx)します。  
+ WQL クエリ (`FROM`) の `DDL_DATABASE_LEVEL_EVENTS` 句の引数には、イベント通知を作成できる有効なイベントを指定することができます。 `SELECT` 句および `WHERE` 句の引数は、イベントまたはその親イベントに関連付けられたイベント プロパティを指定することができます。 有効なイベントおよびイベントのプロパティの一覧は、[イベント通知 (データベース エンジン)](https://technet.microsoft.com/library/ms182602.aspx)を参照してください。  
   
  次の WQL 構文は、WMI Provider for Server Events によって明示的にサポートされます。 追加の WQL 構文を指定することもできますが、このプロバイダーに特有ではないため、代わりに WMI ホスト サービスによって解析されます。 WMI Query Language の詳細については、Microsoft Developer Network (MSDN) の WQL のドキュメントを参照してください。  
   
@@ -72,10 +72,10 @@ WHERE where_condition
  イベントに関連付けられたすべてのプロパティを照会することを指定します。  
   
  *event_type*  
- イベント通知を作成できるイベント。 使用可能なイベントの一覧は、次を参照してください。 [WMI Provider for Server Events のクラスとプロパティ](https://technet.microsoft.com/library/ms186449.aspx)します。 なお*イベントの種類*名に同じ対応*event_type* | *event_group*イベント通知を手動で作成するときに指定できます。CREATE EVENT NOTIFICATION を使用します。 例の*イベントの種類*CREATE_TABLE、LOCK_DEADLOCK、DDL_USER_EVENTS、TRC_DATABASE が含まれます。  
+ イベント通知を作成できるイベント。 使用可能なイベントの一覧は、[WMI Provider for Server Events のクラスとプロパティ](https://technet.microsoft.com/library/ms186449.aspx)を参照してください。 なお*イベントの種類*名に同じ対応*event_type* | *event_group*イベント通知を手動で作成するときに指定できます。CREATE EVENT NOTIFICATION を使用します。 例の*イベントの種類*CREATE_TABLE、LOCK_DEADLOCK、DDL_USER_EVENTS、TRC_DATABASE が含まれます。  
   
 > [!NOTE]  
->  DDL に似た操作を実行する一部のシステム ストアド プロシージャもイベント通知を起動することができます。 イベント通知はテストして、実行されているシステム ストアド プロシージャに応答するかどうか、確認してください。 たとえば、CREATE TYPE ステートメントと**sp_addtype**両方のストアド プロシージャが、CREATE_TYPE イベントで作成されるイベント通知が起動されます。 ただし、 **sp_rename**ストアド プロシージャでは、すべてのイベント通知は発生しません。 詳細については、次を参照してください。[DDL イベント](../triggers/ddl-events.md)します。  
+>  DDL に似た操作を実行する一部のシステム ストアド プロシージャもイベント通知を起動することができます。 イベント通知はテストして、実行されているシステム ストアド プロシージャに応答するかどうか、確認してください。 たとえば、CREATE TYPE ステートメントと**sp_addtype**両方のストアド プロシージャが、CREATE_TYPE イベントで作成されるイベント通知が起動されます。 ただし、 **sp_rename**ストアド プロシージャでは、すべてのイベント通知は発生しません。 詳細については、[DDL イベント](../triggers/ddl-events.md)を参照してください。  
   
  *where_condition*  
  WHERE 句のクエリの述語から成るは*event_property*名と論理演算子および比較演算子。 *Where_condition*対応するイベント通知がターゲット データベースに登録されているスコープを決定します。 特定のスキーマまたはクエリを元のオブジェクトを対象にフィルターとしても機能できます*event_type します。* 詳細については、このトピックの後半の「解説」を参照してください。  
@@ -107,7 +107,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  場合`SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'`がすべてで指定されて、`WHERE`句では、しようとしましたが、イベント通知オブジェクトに直接登録`Z`スキーマ`X`します。 クライアントが権限を持っている場合、登録は正常に終了します。 現時点では、オブジェクト レベルのイベントはサポートされて、QUEUE_ACTIVATION のみと、キュー上でのみ*event_type*します。  
   
- ある特定のスコープでは、すべてのイベントを照会できるわけではないことに注意してください。 たとえば、Lock_Deadlock など、トレース イベント上の WQL クエリ、または TRC_LOCKS などのトレース イベント グループは、サーバー レベルでのみ登録できます。 同様に、CREATE_ENDPOINT イベントおよび DDL_ENDPOINT_EVENTS イベント グループも、サーバー レベルでのみ登録できます。 イベントを登録するための適切なスコープの詳細については、次を参照してください。[イベント通知のデザイン](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx)します。 WQL を登録しようとすると、クエリ*event_type*しか登録できないサーバーのレベルは常に、サーバー レベルで作成します。 WMI クライアントが権限を持っている場合、登録は正常に終了します。 それ以外の場合は、クライアントにエラーが返されます。 ただし、WHERE 句は、イベントに対応するプロパティに基づいたサーバー レベル イベントに対するフィルターとして使用できる場合もあります。 たとえば、多くのトレース イベントに含まれている `DatabaseName` プロパティは、WHERE 句でフィルターとして使用できます。  
+ ある特定のスコープでは、すべてのイベントを照会できるわけではないことに注意してください。 たとえば、Lock_Deadlock など、トレース イベント上の WQL クエリ、または TRC_LOCKS などのトレース イベント グループは、サーバー レベルでのみ登録できます。 同様に、CREATE_ENDPOINT イベントおよび DDL_ENDPOINT_EVENTS イベント グループも、サーバー レベルでのみ登録できます。 イベントを登録するための適切なスコープの詳細については、[イベント通知のデザイン](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx)を参照してください。 WQL を登録しようとすると、クエリ*event_type*しか登録できないサーバーのレベルは常に、サーバー レベルで作成します。 WMI クライアントが権限を持っている場合、登録は正常に終了します。 それ以外の場合は、クライアントにエラーが返されます。 ただし、WHERE 句は、イベントに対応するプロパティに基づいたサーバー レベル イベントに対するフィルターとして使用できる場合もあります。 たとえば、多くのトレース イベントに含まれている `DatabaseName` プロパティは、WHERE 句でフィルターとして使用できます。  
   
  サーバー スコープのイベント通知の作成、**マスター**データベースし、を使用して、メタデータを照会することができます、 [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql)カタログ ビューです。  
   

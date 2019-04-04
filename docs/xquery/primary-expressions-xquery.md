@@ -173,7 +173,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>関数の呼び出し  
- 組み込みの XQuery 関数を呼び出すことができます、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql:variable() と sql:column() 関数。 実装済み関数の一覧は、次を参照してください。 [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)します。  
+ 組み込みの XQuery 関数を呼び出すことができます、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql:variable() と sql:column() 関数。 実装済み関数の一覧は、[xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)を参照してください。  
   
 #### <a name="implementation-limitations"></a>実装の制限事項  
  次に、実装の制限事項を示します。  

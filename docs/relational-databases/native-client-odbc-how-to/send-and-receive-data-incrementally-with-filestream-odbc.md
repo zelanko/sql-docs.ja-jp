@@ -25,7 +25,7 @@ ms.locfileid: "53206641"
 
   このサンプルでは、FILESTREAM 機能を使用して、SQLPutData と SQLGetData でデータをインクリメンタル式に送受信する方法を紹介します。  
   
- FILESTREAM 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)します。  
+ FILESTREAM 機能の詳細については、[FILESTREAM のサポート&#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)を参照してください。  
   
 ## <a name="example"></a>例  
  コンパイルして、このサンプルを実行する前に、FILESTREAM のサポートを有効にする ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md))。  

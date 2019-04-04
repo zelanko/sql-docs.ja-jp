@@ -24,7 +24,7 @@ ms.locfileid: "51663668"
 
   データベース エンジンが以降の機能強化[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]期待どおりの結果のより正確な記述を取得する SQLNumParams を許可します。 これらのより正確な結果の以前のバージョンの SQLNumParams によって返される値が異なる場合があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
- 詳細については、次を参照してください。[メタデータ検出](../../relational-databases/native-client/features/metadata-discovery.md)します。  
+ 詳細については、[メタデータ検出](../../relational-databases/native-client/features/metadata-discovery.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLNumParams 関数](https://go.microsoft.com/fwlink/?LinkId=58404)   

@@ -45,7 +45,7 @@ ms.locfileid: "53365394"
 > -   DTS 2000 パッケージ実行タスク  
 > -   アップグレード アドバイザーによる DTS パッケージのスキャン  
 > 
->  その他の提供が中止された機能については、次を参照してください。[提供が中止された Integration Services の機能で SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md)します。  
+>  その他の提供が中止された機能については、[提供が中止された Integration Services の機能で SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md)を参照してください。  
   
 ## <a name="upgrading-integration-services"></a>Integration Services のアップグレード  
  次の方法のいずれかを使用してアップグレードできます。  

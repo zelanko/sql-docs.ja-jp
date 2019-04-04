@@ -109,7 +109,7 @@ SQLRETURN SQLGetDescRec(
 |HY007|関連付けられているステートメントが準備されていません|*DescriptorHandle*は、IRD の関連付けと関連付けられているステートメント ハンドルは、準備または実行された状態ではありませんでした。|  
 |HY010|関数のシーケンス エラー|(DM) *DescriptorHandle*に関連付けられているが、 *StatementHandle*に (このない) 非同期的に実行中の関数が呼び出されたこの関数が呼び出されたときに実行されています。<br /><br /> (DM) *DescriptorHandle*に関連付けられているが、 *StatementHandle*を**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**が呼び出され、SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *DescriptorHandle*します。 この非同期関数ではときに実行されている**SQLGetDescRec**が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている*DescriptorHandle*関数をサポートしていません。|  
   
@@ -138,7 +138,7 @@ SQLRETURN SQLGetDescRec(
   
  アプリケーションを呼び出すと**SQLGetDescRec**特定の記述子の型に対して定義されているが、既定値を持たないをまだ設定されていないフィールドの値を取得する関数が SQL_SUCCESS を返しますが、返される値フィールドが定義されていません。 詳細については、「記述子フィールドの初期化」を参照してください[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。  
   
- フィールドの値が呼び出しによって個別に取得することもできます**SQLGetDescField**します。 記述子のヘッダーまたはレコードのフィールドの説明は、次を参照してください。 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。 記述子の詳細については、次を参照してください。[記述子](../../../odbc/reference/develop-app/descriptors.md)します。  
+ フィールドの値が呼び出しによって個別に取得することもできます**SQLGetDescField**します。 記述子のヘッダーまたはレコードのフィールドの説明は、[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)を参照してください。 記述子の詳細については、[記述子](../../../odbc/reference/develop-app/descriptors.md)を参照してください。  
   
 ## <a name="related-functions"></a>関連する関数  
   

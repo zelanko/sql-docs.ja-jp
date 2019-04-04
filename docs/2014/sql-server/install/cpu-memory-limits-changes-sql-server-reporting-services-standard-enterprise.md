@@ -30,7 +30,7 @@ ms.locfileid: "53353869"
  その他のエディションの CPU とメモリの制限の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[Compute Capacity Limits by Edition の SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md)、および[メモリは、SQL Server の各エディションでサポートされている](https://go.microsoft.com/fwlink/?LinkId=212633)します。  
   
 ## <a name="corrective-action"></a>修正措置  
- 必要に応じて、新しい CPU およびメモリの制限に合うように現在のシステム設定を再構成してください。 詳細については、次を参照してください。 [ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)、および[サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)します。  
+ 必要に応じて、新しい CPU およびメモリの制限に合うように現在のシステム設定を再構成してください。 詳細については、[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)、および[サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 のエディションでサポートされる機能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

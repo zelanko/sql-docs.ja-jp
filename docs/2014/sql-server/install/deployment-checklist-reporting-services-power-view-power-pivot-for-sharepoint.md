@@ -55,7 +55,7 @@ ms.locfileid: "53369104"
   
  PowerPivot インスタンスの名前を使用できる必要があります。 PowerPivot の名前のインスタンスが既に存在するコンピューターに、PowerPivot for SharePoint をインストールすることはできません。  
   
- 既存のファームに PowerPivot for SharePoint をインストールする場合は、クラシック モード認証用に構成された SharePoint Web アプリケーションが 1 つ以上必要です。 PowerPivot データ アクセスは、Web アプリケーションがクラシック モード認証をサポートする場合にのみ機能します。 クラシック モードの要件の詳細については、次を参照してください。 [PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md)します。  
+ 既存のファームに PowerPivot for SharePoint をインストールする場合は、クラシック モード認証用に構成された SharePoint Web アプリケーションが 1 つ以上必要です。 PowerPivot データ アクセスは、Web アプリケーションがクラシック モード認証をサポートする場合にのみ機能します。 クラシック モードの要件の詳細については、[PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md)を参照してください。  
   
  次の追加トピックを確認し、システムとバージョンの要件を理解してください。  
   

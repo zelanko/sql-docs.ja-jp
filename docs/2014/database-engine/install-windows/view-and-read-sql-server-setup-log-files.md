@@ -155,7 +155,7 @@ ms.locfileid: "51858657"
 ## <a name="configurationfileini"></a>ConfigurationFile.ini  
   
 ### <a name="overview"></a>概要  
- 構成ファイルにはインストール時に使用される入力の設定が含まれています。 手動で設定を入力しなくてもインストールを再起動できるようにするときに使用できます。 ただし、パスワード、PID、およびパラメーターの一部は構成ファイルには保存されません。 設定はファイルに追加できますが、コマンドラインまたはセットアップのインターフェイスを使って供給することもできます。 詳細については、次を参照してください。 [SQL Server 2014 を使用したインストール、構成ファイル](install-sql-server-using-a-configuration-file.md)します。  
+ 構成ファイルにはインストール時に使用される入力の設定が含まれています。 手動で設定を入力しなくてもインストールを再起動できるようにするときに使用できます。 ただし、パスワード、PID、およびパラメーターの一部は構成ファイルには保存されません。 設定はファイルに追加できますが、コマンドラインまたはセットアップのインターフェイスを使って供給することもできます。 詳細については、[SQL Server 2014 を使用したインストール、構成ファイル](install-sql-server-using-a-configuration-file.md)を参照してください。  
   
 ### <a name="location"></a>場所  
  これは %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM >\\します。  

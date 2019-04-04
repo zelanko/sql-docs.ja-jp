@@ -49,7 +49,7 @@ ms.locfileid: "56290180"
     >   
     >  `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2012`  
     >   
-    >  接続文字列の詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](data-connections-data-sources-and-connection-strings-in-reporting-services.md)と[データ ソースのプロパティ ダイアログ ボックスの [全般]](data-source-properties-dialog-box-general.md)します。  
+    >  接続文字列の詳細については、[データ接続、データ ソース、および Reporting Services の接続文字列](data-connections-data-sources-and-connection-strings-in-reporting-services.md)と[データ ソースのプロパティ ダイアログ ボックスの [全般]](data-source-properties-dialog-box-general.md)を参照してください。  
   
 6.  左ペインで **[資格情報]** をクリックし、 **[Windows 認証 (統合セキュリティ) を使用する]** をクリックします。  
   

@@ -27,7 +27,7 @@ ms.locfileid: "47605110"
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC エラー コード (Visual FoxPro ODBC ドライバー)
 次の表では、ODBC エラー コードの SQLSTATE 値にマップされている Visual FoxPro のエラー コードを示します。 マップの SQLSTATE 値に由来[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)と[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)します。 その他の ODBC API の他の SQLSTATE 値がマップされていないため、 **SQLExecDirect**と**SQLPrepare** Visual FoxPro エンジンにアクセスする唯一の関数。  
   
- ODBC エラー コードの詳細については、次を参照してください。[付録 a: ODBC エラー コード](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)の、 *ODBC プログラマ リファレンス*します。  
+ ODBC エラー コードの詳細については、[付録 a: ODBC エラー コード](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)の、 *ODBC プログラマ リファレンス*を参照してください。  
   
 |SQLSTATE|Visual FoxPro のエラー コード|  
 |--------------|------------------------------|  

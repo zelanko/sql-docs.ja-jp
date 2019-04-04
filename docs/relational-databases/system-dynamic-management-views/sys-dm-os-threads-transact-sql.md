@@ -59,8 +59,8 @@ ms.locfileid: "53205831"
 |fiber_data|**varbinary(8)**|スレッドで実行されている現在の Win32 ファイバー。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が簡易プーリング用に構成されている場合にのみ該当します。|  
 |thread_handle|**varbinary(8)**|内部使用のみです。|  
 |event_handle|**varbinary(8)**|内部使用のみです。|  
-|scheduler_address|**varbinary(8)**|スレッドに関連付けられているスケジューラのメモリ アドレス。 詳細については、次を参照してください。 [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)します。|  
-|worker_address|**varbinary(8)**|スレッドにバインドしているワーカーのメモリ アドレス。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)します。|  
+|scheduler_address|**varbinary(8)**|スレッドに関連付けられているスケジューラのメモリ アドレス。 詳細については、[sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)を参照してください。|  
+|worker_address|**varbinary(8)**|スレッドにバインドしているワーカーのメモリ アドレス。 詳細については、[sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)を参照してください。|  
 |fiber_context_address|**varbinary(8)**|内部ファイバー コンテキスト アドレス。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が簡易プーリング用に構成されている場合にのみ該当します。|  
 |self_address|**varbinary(8)**|内部一貫性ポインター。|  
 |processor_group|**smallint**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> プロセッサ グループ ID。|  

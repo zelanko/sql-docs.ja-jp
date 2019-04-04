@@ -21,7 +21,7 @@ ms.locfileid: "55087631"
 
 Analysis Services は、監視し、サーバーのパフォーマンスを調整するのに役立つさまざまなツールです。 どのツールを選択するかは、実行する監視またはチューニングの種類や、監視するイベントによって異なります。
 
-SQL Server Analysis Services の監視の詳細については、次を参照してください。、 [SQL Server 2008 R2 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)します。  
+SQL Server Analysis Services の監視の詳細については、、 [SQL Server 2008 R2 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)を参照してください。  
   
 ## <a name="monitoring-tools"></a>監視ツール  
 

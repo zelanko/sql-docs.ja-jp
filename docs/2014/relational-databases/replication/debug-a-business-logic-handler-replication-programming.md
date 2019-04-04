@@ -31,7 +31,7 @@ ms.locfileid: "54128762"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>ローカル コンピューターでビジネス ロジック ハンドラーをデバッグするには  
   
-1.  パブリッシングとディストリビューションを構成し、パブリケーションを作成し、パブリケーションへのサブスクリプションを作成します。 詳細については、次を参照してください。 [Configure Publishing and Distribution](configure-publishing-and-distribution.md)と[Create a Publication](publish/create-a-publication.md)します。  
+1.  パブリッシングとディストリビューションを構成し、パブリケーションを作成し、パブリケーションへのサブスクリプションを作成します。 詳細については、[Configure Publishing and Distribution](configure-publishing-and-distribution.md)と[Create a Publication](publish/create-a-publication.md)を参照してください。  
   
 2.  ビジネス ロジック ハンドラーを作成して登録します。 詳細については、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。  
   

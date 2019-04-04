@@ -146,7 +146,7 @@ ms.locfileid: "54256877"
     SELECT @x.value('declare namespace x="myNS"; data(/x:Elem)[1]','varchar(20)')  
     ```  
   
-     詳細については、次を参照してください。 [XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)します。  
+     詳細については、[XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)を参照してください。  
   
 ### <a name="implementation-restrictions"></a>実装の制限  
  次に、静的コンテキストに関する制限事項を示します。  

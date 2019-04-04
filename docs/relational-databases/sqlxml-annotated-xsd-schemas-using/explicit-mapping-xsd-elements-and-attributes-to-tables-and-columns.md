@@ -58,7 +58,7 @@ ms.locfileid: "56028373"
  **Sql フィールド**注釈要素または属性をデータベース列にマップします。 **Sql:field**スキーマ内の XML ノードをデータベース列にマップする注釈を追加します。 指定することはできません**sql:field**で空のコンテンツ要素。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、[SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)を参照してください。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. sql:relation 注釈と sql:field 注釈を指定する  
  XSD スキーマから成る、この例では、 **\<連絡先 >** 複合型の要素 **\<FName >** と **\<LName >** 子要素および**ContactID**属性。  
@@ -109,7 +109,7 @@ ms.locfileid: "56028373"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
  次に結果セットの一部を示します。  
   

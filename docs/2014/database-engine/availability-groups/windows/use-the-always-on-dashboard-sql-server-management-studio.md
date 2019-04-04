@@ -93,7 +93,7 @@ ms.locfileid: "49120369"
 -   **[手動]**。 自動フェールオーバー モードのレプリカがないことを示します。  
   
  **問題**  
- **[問題]** リンクをクリックすると、問題のトラブルシューティングのドキュメントが表示されます。 AlwaysOn ポリシーのすべての問題の一覧は、次を参照してください。[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)します。  
+ **[問題]** リンクをクリックすると、問題のトラブルシューティングのドキュメントが表示されます。 AlwaysOn ポリシーのすべての問題の一覧は、[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)を参照してください。  
   
 > [!TIP]  
 >  列見出しをクリックすると、可用性グループの名前、プライマリ インスタンス、フェールオーバー モード、または問題で、可用性グループの情報を並べ替えることができます。  
@@ -148,7 +148,7 @@ ms.locfileid: "49120369"
 -   **NULL**。 不明な状態です。 この値は、ローカル サーバー インスタンスが WSFC フェールオーバー クラスターと通信できない (ローカル ノードが WSFC クォーラムの一部ではない) 場合に生じます。  
   
  **問題**  
- 問題の名前が一覧表示されます。 この値は既定で表示されます。 AlwaysOn ポリシーのすべての問題の一覧は、次を参照してください。[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)します。  
+ 問題の名前が一覧表示されます。 この値は既定で表示されます。 AlwaysOn ポリシーのすべての問題の一覧は、[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)を参照してください。  
   
  **可用性モード**  
  各可用性レプリカのために個別に設定したレプリカ プロパティを示します。 この値は既定で非表示になります。 可能な値は次のとおりです。  
@@ -277,7 +277,7 @@ ms.locfileid: "49120369"
   
 -   **[重大]**。 クリックすると、重大な問題が表示されます。  
   
- AlwaysOn ポリシーのすべての問題の一覧は、次を参照してください。[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)します。  
+ AlwaysOn ポリシーのすべての問題の一覧は、[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)を参照してください。  
   
  **中断**  
  データベースが **[中断状態]** であるか **[再開]** されたかを示します。 この値は既定で非表示になります。  

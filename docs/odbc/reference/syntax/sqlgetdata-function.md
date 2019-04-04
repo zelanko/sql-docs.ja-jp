@@ -61,7 +61,7 @@ SQLRETURN SQLGetData(
   
  場合*TargetType* SQL_ARD_TYPE、型識別子が、ARD の SQL_DESC_CONCISE_TYPE フィールドで指定されたドライバーの使用です。 場合*TargetType*は SQL_APD_TYPE、 **SQLGetData**で指定されている同じの C データ型を使用して、 **SQLBindParameter**します。 C データ型がで指定された場合は、 **SQLGetData**で指定された C データ型をオーバーライド**SQLBindParameter**します。 SQL_C_DEFAULT がの場合、ドライバーは、ソースの SQL データ型に基づいて既定の C データ型を選択します。  
   
- 拡張の C データ型を指定することもできます。 詳細については、次を参照してください。 [ODBC における C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)します。  
+ 拡張の C データ型を指定することもできます。 詳細については、[ODBC における C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)を参照してください。  
   
  *TargetValuePtr*  
  [出力]データを返すバッファーへのポインター。  
@@ -120,7 +120,7 @@ SQLRETURN SQLGetData(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|引数に指定された (DM) 値*BufferLength*が 0 未満でした。<br /><br /> 引数に指定された値*BufferLength*が 4 未満、 *Col_or_Param_Num*引数が 0 の場合に設定されており、ドライバーが、ODBC 2 *.x*ドライバー。|  
 |HY109|無効なカーソルの位置|カーソルの位置が (によって**SQLSetPos**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLBulkOperations**) が削除された行またはをフェッチできませんでした。<br /><br /> カーソルが順方向専用カーソルでは、および行セットのサイズが 1 より大きかった。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースは、の使用をサポートしていない**SQLGetData**で複数の行で**SQLFetchScroll**します。 この説明は、ドライバーの SQL_GETDATA_EXTENSIONS オプション SQL_GD_BLOCK ビットマスクを返すには適用されません**SQLGetInfo**します。<br /><br /> ドライバーまたはデータ ソースの組み合わせで指定された変換をサポートしていません、 *TargetType*引数と対応する列の SQL データ型。 このエラーは、列の SQL データ型は、ドライバー固有の SQL データ型にマップされていた場合にのみ適用されます。<br /><br /> ドライバーには、ODBC 2 のみがサポートしている *.x*、および引数*TargetType*が、次のいずれか。<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 間隔の C データ型のいずれかと[C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d:データ型。<br /><br /> ドライバーのみ、3.50 と引数の前に ODBC バージョンをサポートする*TargetType* SQL_C_GUID でした。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に対応するドライバー、 *StatementHandle*関数をサポートしていません。|  
@@ -128,16 +128,16 @@ SQLRETURN SQLGetData(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- **SQLGetData**指定された列のデータを返します。 **SQLGetData**ごとに結果セットから 1 つまたは複数の行がフェッチ後にのみ呼び出すことができます**SQLFetch**、 **SQLFetchScroll**、または**SQLExtendedFetch**します。 可変長のデータが大きすぎて単一の呼び出しで返される場合**SQLGetData** (の制限により、アプリケーションで)、 **SQLGetData**部分で取得できます。 行と呼び出しで一部の列をバインドすることは**SQLGetData**それ以外の場合がいくつかの制限を受けます。 詳細については、次を参照してください。[長い形式のデータを取得する](../../../odbc/reference/develop-app/getting-long-data.md)します。  
+ **SQLGetData**指定された列のデータを返します。 **SQLGetData**ごとに結果セットから 1 つまたは複数の行がフェッチ後にのみ呼び出すことができます**SQLFetch**、 **SQLFetchScroll**、または**SQLExtendedFetch**します。 可変長のデータが大きすぎて単一の呼び出しで返される場合**SQLGetData** (の制限により、アプリケーションで)、 **SQLGetData**部分で取得できます。 行と呼び出しで一部の列をバインドすることは**SQLGetData**それ以外の場合がいくつかの制限を受けます。 詳細については、[長い形式のデータを取得する](../../../odbc/reference/develop-app/getting-long-data.md)を参照してください。  
   
- 使用方法について**SQLGetData**ストリーミングされる出力パラメーターで、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)します。  
+ 使用方法について**SQLGetData**ストリーミングされる出力パラメーターで、[SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)を参照してください。  
   
 ## <a name="using-sqlgetdata"></a>SQLGetData を使用します。  
  ドライバーでの拡張機能がサポートされていない場合**SQLGetData**関数は、データを返す数がバインドされていない列に対してのみその最後のバインドされた列の値より大きい。 さらに、データの値の行内の*Col_or_Param_Num*への各呼び出しで引数**SQLGetData**の値以上にする必要があります*Col_or_Param_Num*; 前の呼び出しでつまり、列番号の昇順でデータを取得する必要があります。 最後に拡張機能がサポートされていない場合、 **SQLGetData**行セットのサイズが 1 より大きい場合に呼び出すことはできません。  
   
  ドライバーは、これらの制限のいずれかを緩和できます。 ドライバーの制限を緩和制限を確認するアプリケーションを呼び出す**SQLGetInfo** SQL_GETDATA_EXTENSIONS の次のオプションのいずれかで。  
   
--   SQL_GD_OUTPUT_PARAMS = **SQLGetData**出力パラメーターの値を返すを呼び出すことができます。 詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)します。  
+-   SQL_GD_OUTPUT_PARAMS = **SQLGetData**出力パラメーターの値を返すを呼び出すことができます。 詳細については、[SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)を参照してください。  
   
 -   SQL_GD_ANY_COLUMN します。 このオプションが返された場合**SQLGetData**最後の列をバインドする前に含めて、任意のバインドされていない列を呼び出すことができます。  
   
@@ -166,7 +166,7 @@ SQLRETURN SQLGetData(
  **SQLGetData**部分に固定長データを返すには使用できません。 場合**SQLGetData**は行内の 1 回以上呼び出されると、固定長のデータを含んでいる列の sql_no_data が返されるすべての呼び出しに対して、最初より後です。  
   
 ## <a name="retrieving-streamed-output-parameters"></a>ストリーミングされる出力パラメーターを取得します。  
- アプリケーションが呼び出すことができる場合、ドライバーは、ストリーミングされる出力パラメーターをサポートする**SQLGetData**小規模な大きなパラメーター値を取得する回数をバッファーします。 ストリーミングされる出力パラメーターの詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)します。  
+ アプリケーションが呼び出すことができる場合、ドライバーは、ストリーミングされる出力パラメーターをサポートする**SQLGetData**小規模な大きなパラメーター値を取得する回数をバッファーします。 ストリーミングされる出力パラメーターの詳細については、[SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)を参照してください。  
   
 ## <a name="retrieving-data-with-sqlgetdata"></a>SQLGetData によるデータの取得  
  指定した列のデータを返す**SQLGetData**は、次の一連の手順を実行します。  

@@ -31,7 +31,7 @@ ms.locfileid: "51675437"
 |診断レコードのフィールド|説明|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|ストアド プロシージャのエラーが発生した行番号を報告します。 SQL_DIAG_SS_LINE の値は、SQL_DIAG_SS_PROCNAME に値が返される場合にのみ意味があります。 この値は、16 ビットの符号なし整数で返されます。|  
-|SQL_DIAG_SS_MSGSTATE|エラー メッセージの状態。 エラー メッセージの状態については、次を参照してください。 [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)します。 この値は、32 ビットの符号付き整数で返されます。|  
+|SQL_DIAG_SS_MSGSTATE|エラー メッセージの状態。 エラー メッセージの状態については、[RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)を参照してください。 この値は、32 ビットの符号付き整数で返されます。|  
 |SQL_DIAG_SS_PROCNAME|エラーが発生したストアド プロシージャの名前 (該当する場合)。 この値は文字列で返されます。 この文字列の長さ (文字数) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なります。 呼び出すことによって判断できる[SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) SQL_MAX_PROCEDURE_NAME_LEN の値を要求します。|  
 |SQL_DIAG_SS_SEVERITY|関連付けられたエラー メッセージの重大度レベル。 この値は、32 ビットの符号付き整数で返されます。|  
 |SQL_DIAG_SS_SRVNAME|エラーが発生したサーバーの名前。 この値は文字列で返されます。 この文字列の長さ (文字列) は、sqlncli.h の SQL_MAX_SQLSERVERNAME マクロで定義されます。|  
@@ -101,7 +101,7 @@ ms.locfileid: "51675437"
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField とテーブル値パラメーター  
  SQLGetDiagField は、2 つの診断フィールドを取得するために使用できます: SQL_DIAG_SS_TABLE_COLUMN_NUMBER および SQL_DIAG_SS_TABLE_ROW_NUMBER します。 これらのフィールドは、診断レコードに関連するエラーまたは警告の原因となった値を特定するのに役立ちます。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+ テーブル値パラメーターの詳細については、[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLGetDiagField 関数](https://go.microsoft.com/fwlink/?LinkId=59352)   

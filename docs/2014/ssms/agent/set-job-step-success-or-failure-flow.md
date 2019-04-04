@@ -92,7 +92,7 @@ ms.locfileid: "53366624"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)します。  
+ 詳細については、[sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)を参照してください。  
   
 ##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **ジョブ ステップの成功時または失敗時の動作を設定するには**  

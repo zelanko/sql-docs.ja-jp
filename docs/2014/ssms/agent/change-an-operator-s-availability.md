@@ -88,6 +88,6 @@ ms.locfileid: "54135682"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)します。  
+ 詳細については、[sp_update_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)を参照してください。  
   
   

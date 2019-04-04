@@ -37,7 +37,7 @@ ms.locfileid: "48227502"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスを分析するには、アップグレード アドバイザーをレポート サーバーにインストールしておく必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はリモート分析をサポートしません。  
 >   
->  詳細については、次を参照してください。[アップグレード アドバイザーのインストール](../../../2014/sql-server/install/installing-upgrade-advisor.md)します。  
+>  詳細については、[アップグレード アドバイザーのインストール](../../../2014/sql-server/install/installing-upgrade-advisor.md)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

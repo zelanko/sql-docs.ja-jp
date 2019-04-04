@@ -25,7 +25,7 @@ ms.locfileid: "56019583"
   次の表は、HTML 形式で表示するデバイス情報設定を示しています。  
   
 > [!IMPORTANT]  
->  次の表に示す **(\*)** の付いたデバイス情報設定は非推奨になっているため、新しいアプリケーションでは使用できません。 詳細については、次を参照してください。 [SQL Server 2014 における SQL Server Reporting Services の非推奨機能](deprecated-features-in-sql-server-reporting-services-ssrs.md)します。  
+>  次の表に示す **(\*)** の付いたデバイス情報設定は非推奨になっているため、新しいアプリケーションでは使用できません。 詳細については、[SQL Server 2014 における SQL Server Reporting Services の非推奨機能](deprecated-features-in-sql-server-reporting-services-ssrs.md)を参照してください。  
   
 |設定|値|  
 |-------------|-----------|  

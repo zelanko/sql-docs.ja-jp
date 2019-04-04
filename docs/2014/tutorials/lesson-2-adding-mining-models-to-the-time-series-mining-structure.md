@@ -57,7 +57,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- DMX でオブジェクトの名前付け方法の詳細については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)します。  
+ DMX でオブジェクトの名前付け方法の詳細については、[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)を参照してください。  
   
  コードの次の数行では、マイニング モデルで使用するマイニング構造の列を定義します。  
   
@@ -75,7 +75,7 @@ USING <algorithm name>([<algorithm parameters>])
 WITH DRILLTHROUGH  
 ```  
   
- 調整できるアルゴリズム パラメーターの詳細については、次を参照してください。 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)します。  
+ 調整できるアルゴリズム パラメーターの詳細については、[Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)を参照してください。  
   
  次の構文で、マイニング モデルの列を予測に使用するよう指定できます。  
   

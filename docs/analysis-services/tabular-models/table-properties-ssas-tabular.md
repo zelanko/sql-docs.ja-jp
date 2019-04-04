@@ -40,7 +40,7 @@ ms.locfileid: "53072009"
   
  **レポートのプロパティ**  
   
- 詳細な説明とレポートのプロパティの構成情報は、次を参照してください。 [Power View レポート プロパティ](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)します。  
+ 詳細な説明とレポートのプロパティの構成情報は、[Power View レポート プロパティ](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)を参照してください。  
   
 |プロパティ|既定の設定|説明|  
 |--------------|---------------------|-----------------|  

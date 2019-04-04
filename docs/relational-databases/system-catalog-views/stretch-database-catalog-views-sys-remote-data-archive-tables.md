@@ -36,7 +36,7 @@ ms.locfileid: "47689192"
 |**object_id**|**int**|Stretch が有効なローカル テーブルのオブジェクトの ID。|  
 |**remote_database_id**|**int**|自動生成されたローカルの識別子、リモート データベース。|  
 |**remote_table_name**|**sysname**|Stretch が有効なローカル テーブルに対応するリモートのデータベース内のテーブルの名前です。|  
-|**filter_predicate**|**nvarchar(max)**|フィルター述語では、存在する場合、移行するテーブル内の行を識別します。 値が null の場合、テーブル全体が移行の対象になります。<br /><br /> 詳細については、次を参照してください。[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)と[フィルター述語を使用して移行する行を選択します。](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)します。|  
+|**filter_predicate**|**nvarchar(max)**|フィルター述語では、存在する場合、移行するテーブル内の行を識別します。 値が null の場合、テーブル全体が移行の対象になります。<br /><br /> 詳細については、[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)と[フィルター述語を使用して移行する行を選択を参照してください。](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)します。|  
 |**migration_direction**|**tinyint**|これでデータが現在移行中の方向。 使用可能な値、次に示します。<br/>1 (送信)<br/>2 (受信)|  
 |**migration_direction_desc**|**nvarchar(60)**|これでデータが現在移行中の方向の説明です。 使用可能な値、次に示します。<br/>送信 (1)<br/>受信 (2)|  
 |**is_migration_paused**|**bit**|移行が現在一時停止しているかどうかを示します。|  

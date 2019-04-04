@@ -146,7 +146,7 @@ ms.locfileid: "49119750"
 -   以下 (<=)  
   
 ### <a name="implementing-nullability"></a>NULL 値の許容属性の実装  
- アセンブリの属性を正しく指定することに加えて、クラスで NULL 値の許容属性をサポートする必要があります。 読み込まれる Udt[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は null に対応して、UDT に null 値を認識させるためには、クラスを実装する必要がありますが、 **INullable**インターフェイス。 UDT に null 値許容属性を実装する方法の例と詳細については、次を参照してください。 [Coding User-Defined 型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)します。  
+ アセンブリの属性を正しく指定することに加えて、クラスで NULL 値の許容属性をサポートする必要があります。 読み込まれる Udt[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は null に対応して、UDT に null 値を認識させるためには、クラスを実装する必要がありますが、 **INullable**インターフェイス。 UDT に null 値許容属性を実装する方法の例と詳細については、[Coding User-Defined 型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)を参照してください。  
   
 ### <a name="string-conversions"></a>文字列の変換  
  文字列変換との間の UDT をサポートするために指定する必要があります、**解析**メソッドと**ToString**クラスのメソッド。 **解析**メソッドにより UDT に変換する文字列。 として宣言する必要がある必要があります**静的**(または**Shared** Visual basic)、型のパラメーターを受け取ると**System.Data.SqlTypes.SqlString**します。 実装する方法の例と詳細について、**解析**と**ToString**メソッドを参照してください[Coding User-Defined 型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)します。  

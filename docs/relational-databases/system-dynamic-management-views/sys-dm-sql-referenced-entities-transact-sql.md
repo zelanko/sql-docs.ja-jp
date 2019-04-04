@@ -81,7 +81,7 @@ sys.dm_sql_referenced_entities (
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|参照元エンティティが列の場合は列 ID。それ以外の場合は 0。 NULL 値は許可されません。|  
-|referenced_server_name|**sysname**|参照先エンティティのサーバー名。<br /><br /> 有効な 4 部構成の名前を指定することによって作成されたサーバー間依存関係については、この列に値が格納されます。 マルチパート名については、次を参照してください。 [TRANSACT-SQL 構文表記規則&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)します。<br /><br /> 4 部構成の名前を指定せずにエンティティが参照される非スキーマ バインド依存関係の場合は NULL。<br /><br /> のみ定義できます 2 つの部分を使用して、同じデータベースである必要がありますのでスキーマ バインド エンティティの場合は NULL (*schema.object*) の名前。|  
+|referenced_server_name|**sysname**|参照先エンティティのサーバー名。<br /><br /> 有効な 4 部構成の名前を指定することによって作成されたサーバー間依存関係については、この列に値が格納されます。 マルチパート名については、[TRANSACT-SQL 構文表記規則&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)を参照してください。<br /><br /> 4 部構成の名前を指定せずにエンティティが参照される非スキーマ バインド依存関係の場合は NULL。<br /><br /> のみ定義できます 2 つの部分を使用して、同じデータベースである必要がありますのでスキーマ バインド エンティティの場合は NULL (*schema.object*) の名前。|  
 |referenced_database_name|**sysname**|参照先エンティティのデータベース名。<br /><br /> 有効な 3 部構成または 4 部構成の名前を指定することによって作成された複数データベースまたは複数サーバーにまたがる参照については、この列に値が格納されます。<br /><br /> 1 部構成または 2 部構成の名前を使って指定された非スキーマ バインド参照の場合は NULL。<br /><br /> のみ定義できます 2 つの部分を使用して、同じデータベースである必要がありますのでスキーマ バインド エンティティの場合は NULL (*schema.object*) の名前。|  
 |referenced_schema_name|**sysname**|参照先エンティティが属しているスキーマ。<br /><br /> スキーマ名を指定せずにエンティティが参照される非スキーマ バインド参照の場合は NULL。<br /><br /> スキーマ バインド参照の場合、NULL にすることはできません。|  
 |referenced_entity_name|**sysname**|参照先エンティティの名前。 NULL 値は許可されません。|  

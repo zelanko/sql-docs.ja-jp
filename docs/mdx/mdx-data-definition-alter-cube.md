@@ -162,7 +162,7 @@ CELL CALCULATION Calculation_Name
  計算されるメンバー プロパティの値を定義する有効な MDX スカラー式です。  
   
 ## <a name="creating-a-cell-calculation"></a>セル計算の作成  
- ALTER CUBE ステートメントを使用してセル計算の作成の詳細については、次を参照してください。 [DROP CELL CALCULATION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)します。  
+ ALTER CUBE ステートメントを使用してセル計算の作成の詳細については、[DROP CELL CALCULATION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

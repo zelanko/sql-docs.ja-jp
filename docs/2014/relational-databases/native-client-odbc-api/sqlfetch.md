@@ -22,10 +22,10 @@ ms.locfileid: "53375234"
 # <a name="sqlfetch"></a>SQLFetch
   SQLFetch サポートには、日付と時刻の機能が強化されています。  
   
- 日付/時刻型の結果列の値に変換する方法については、次を参照してください。 [SQL から C への変換](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)します。  
+ 日付/時刻型の結果列の値に変換する方法については、[SQL から C への変換](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)を参照してください。  
   
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>SQLFetch による大きな CLR UDT のサポート  
- `SQLFetch` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
+ `SQLFetch` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、[Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   

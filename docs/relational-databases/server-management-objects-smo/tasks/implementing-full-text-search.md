@@ -31,7 +31,7 @@ ms.locfileid: "53979550"
  まず、<xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> コンストラクターを呼び出し、カタログ名を指定して、データベースにフルテキスト カタログを作成します。 次に、コンストラクターを呼び出し、フルテキスト インデックスを作成するテーブルを指定して、フルテキスト インデックスを作成します。 次に、<xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> オブジェクトを使用して、テーブル内の列の名前を指定し、フルテキスト インデックスのインデックス列を追加します。 次に、<xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> プロパティを、作成したカタログに設定します。 最後に、<xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> メソッドを呼び出して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスにフルテキスト インデックスを作成します。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Visual Basic でのフルテキスト検索サービスの作成  
  このコード例では、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] サンプル データベースの `ProductCategory` テーブルに対してフルテキスト検索カタログを作成します。 次に、`ProductCategory` テーブル内の Name 列にフルテキスト検索インデックスを作成します。 フルテキスト検索インデックスを作成する列には、既に定義されている一意のインデックスが存在する必要があります。  

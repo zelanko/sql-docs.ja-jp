@@ -18,7 +18,7 @@ ms.locfileid: "58510539"
 
 この記事では、SQL Server の監視し、分析に使用できるジョブで使用する指定された、拡張イベントをについて説明します[PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) SQL Server でのリアルタイム スコアリングを実行します。
 
-リアルタイム スコアリングは、machine learning の SQL Server に格納されているモデルからスコアを生成します。 PREDICT 関数では、R や Python など、特定のバイナリ形式を使用して作成されたモデルのみなどに外部実行時は必要ありません。 詳細については、次を参照してください。[リアルタイム スコアリング](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)します。
+リアルタイム スコアリングは、machine learning の SQL Server に格納されているモデルからスコアを生成します。 PREDICT 関数では、R や Python など、特定のバイナリ形式を使用して作成されたモデルのみなどに外部実行時は必要ありません。 詳細については、[リアルタイム スコアリング](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 

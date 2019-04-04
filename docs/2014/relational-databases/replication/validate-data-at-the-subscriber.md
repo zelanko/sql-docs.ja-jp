@@ -79,7 +79,7 @@ ms.locfileid: "54131192"
   
  データ検証の問題に対処するために、次の点を検討してください。  
   
--   構成というレプリケーション警告**レプリケーション。サブスクライバーでは、データの検証が失敗した**エラーの場合に通知されるようにします。 詳細については、次を参照してください。 [構成の定義済みのレプリケーションの警告&#40;SQL Server Management Studio & #41 41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) します。  
+-   構成というレプリケーション警告**レプリケーション。サブスクライバーでは、データの検証が失敗した**エラーの場合に通知されるようにします。 詳細については、[構成の定義済みのレプリケーションの警告&#40;SQL Server Management Studio & #41 41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) を参照してください。  
   
 -   検証の失敗はアプリケーションにとって問題となりますか? 検証の失敗が問題となる場合、データを手動で更新して同期するか、サブスクリプションを再初期化してください。  
   

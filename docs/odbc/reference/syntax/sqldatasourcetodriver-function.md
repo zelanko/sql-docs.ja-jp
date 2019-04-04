@@ -101,7 +101,7 @@ BOOL SQLDataSourceToDriver(
   
  場合**SQLDataSourceToDriver**変換中にデータの切り捨てが発生したは、FALSE を返します。 場合*pcbValueOut* (出力バッファーに返される使用可能なバイト数) がより大きい*cbValueOutMax* (出力バッファーの長さ)、切り捨てが発生しました。 ドライバーは、切り捨てが許容されるかどうかを判断する必要があります。 切り捨てが発生しなかった場合、 **SQLDataSourceToDriver**別のエラーにより FALSE が返されます。 いずれの場合も、特定のエラー メッセージが返される*後*します。  
   
- データの翻訳の詳細については、次を参照してください。[翻訳の Dll](../../../odbc/reference/develop-app/translation-dlls.md)します。  
+ データの翻訳の詳細については、[翻訳の Dll](../../../odbc/reference/develop-app/translation-dlls.md)を参照してください。  
   
 ## <a name="related-functions"></a>関連する関数  
   

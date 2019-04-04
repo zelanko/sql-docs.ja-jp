@@ -323,7 +323,7 @@ sudo systemctl restart mssql-server
 
 2.  [概要] ダイアログで次のようにクリックします。**次**します。
 
-3.  可用性グループ オプションの指定] ダイアログ ボックスで、可用性グループの名前を入力し、[EXTERNAL または NONE、ドロップダウン リストでのクラスターの種類を選択します。 Pacemaker が配置されるときに、外部を使用する必要があります。 [なし] は、読み取りスケール アウトなどの特殊なシナリオ用です。データベース レベルの正常性検出オプションを選択するは省略可能です。 このオプションの詳細については、次を参照してください。[可用性グループのデータベース レベルの正常性検出フェールオーバー オプション](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)します。 **[次へ]** をクリックします。
+3.  可用性グループ オプションの指定] ダイアログ ボックスで、可用性グループの名前を入力し、[EXTERNAL または NONE、ドロップダウン リストでのクラスターの種類を選択します。 Pacemaker が配置されるときに、外部を使用する必要があります。 [なし] は、読み取りスケール アウトなどの特殊なシナリオ用です。データベース レベルの正常性検出オプションを選択するは省略可能です。 このオプションの詳細については、[可用性グループのデータベース レベルの正常性検出フェールオーバー オプション](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)を参照してください。 **[次へ]** をクリックします。
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
@@ -345,7 +345,7 @@ sudo systemctl restart mssql-server
 
     ![](./media/sql-server-linux-create-availability-group/image5.png)
 
-9.  バックアップの設定を変更する場合は、バックアップの設定 タブをクリックします。Ag でのバックアップの設定の詳細については、次を参照してください。[可用性レプリカでバックアップの構成](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)します。
+9.  バックアップの設定を変更する場合は、バックアップの設定 タブをクリックします。Ag でのバックアップの設定の詳細については、[可用性レプリカでバックアップの構成](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)を参照してください。
 
 10. 読み取りスケールなしの型読み取り可能なセカンダリを使用して、またはクラスターでの AG を作成する場合は、[リスナー] タブを選択してリスナーを作成できます。リスナーは、後でも追加できます。 リスナーを作成するオプションを選択**可用性グループ リスナーの作成**名前、TCP/IP ポート、および静的または自動的に割り当てられた DHCP IP アドレスを使用するかどうかを入力します。 静的および設定が None のクラスターの種類で、AG の ip アドレスがあることに注意してください。 プライマリの IP アドレスにします。
 

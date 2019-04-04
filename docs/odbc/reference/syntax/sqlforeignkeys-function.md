@@ -67,7 +67,7 @@ SQLRETURN SQLForeignKeys(
  *PKCatalogName*  
  [入力]主キー テーブルのカタログ名。 ドライバーは、いくつかのテーブルのドライバーをさまざまな Dbms、空の文字列からデータを取得した場合など、他ではなく、カタログをサポートしている場合 ("") のカタログはありません。 それらのテーブルを表します。 *PKCatalogName*文字列の検索パターンを含めることはできません。  
   
- SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*PKCatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *PKCatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。  
+ SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*PKCatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *PKCatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)を参照してください。  
   
  *NameLength1*  
  [入力]長さ **PKCatalogName*、文字数。  
@@ -133,7 +133,7 @@ SQLRETURN SQLForeignKeys(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|(DM) 名の長の引数のいずれかの値が 0 未満でしたが、SQL_NTS と等しくありません。|  
 |||名の長の引数のいずれかの値には、対応する名前の最大長の値を超えています。 (「コメントです」を参照してください)|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYC00|省略可能な機能が実装されていません|カタログ名が指定されました、およびドライバーまたはデータ ソースがカタログをサポートしていません。<br /><br /> スキーマ名を指定してから、およびドライバーまたはデータ ソースがスキーマをサポートしていません。|  
 |||SQL_ATTR_CURSOR_TYPE、SQL_ATTR_CONCURRENCY ステートメント属性の現在の設定の組み合わせが、ドライバーまたはデータ ソースでサポートされていません。<br /><br /> SQL_ATTR_USE_BOOKMARKS ステートメント属性は SQL_UB_VARIABLE に設定されており、SQL_ATTR_CURSOR_TYPE ステートメント属性は、ドライバーがブックマークをできません、カーソルの種類に設定されました。|  
 |HYT00|タイムアウトが発生しました|データ ソースには、結果セットが返される前に、クエリのタイムアウト期間が終了しました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT します。|  
@@ -143,7 +143,7 @@ SQLRETURN SQLForeignKeys(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- この関数によって返される情報の使用方法については、次を参照してください。[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)します。  
+ この関数によって返される情報の使用方法については、[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)を参照してください。  
   
  場合\* *PKTableName* 、テーブル名を含む**SQLForeignKeys**指定したテーブルの主キーとそれを参照するすべての外部キーを含む結果セットを返します。 その他のテーブルの外部キーの一覧では、指定したテーブルの unique 制約をポイントする外部キーは含まれません。  
   
@@ -152,7 +152,7 @@ SQLRETURN SQLForeignKeys(
  両方\* *PKTableName*と\* *FKTableName* 、テーブル名を含む**SQLForeignKeys**指定されたテーブルの外部キーを返します\* *FKTableName*で指定したテーブルの主キーを参照する **PKTableName*します。 1 つのキーは、最大でこのする必要があります。  
   
 > [!NOTE]  
->  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
+>  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)を参照してください。  
   
  **SQLForeignKeys**結果の標準的な結果セットとして返します。 主キーに関連付けられている外部キーが要求される場合、結果セットは FKTABLE_CAT や FKTABLE_SCHEM、FKTABLE_NAME、KEY_SEQ で並べ替えられます。 外部キーに関連付けられている主キーが要求される場合、結果セットは PKTABLE_CAT、PKTABLE_SCHEM、PKTABLE_NAME、および KEY_SEQ で並べ替えられます。 次の表には、結果セット内の列が一覧表示します。  
   
@@ -167,7 +167,7 @@ SQLRETURN SQLForeignKeys(
 |FKTABLE_QUALIFIER|FK_TABLE_CAT|  
 |FKTABLE_OWNER|FKTABLE_SCHEM|  
   
- 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、列 (注釈) の 14 を超える追加の列を定義できます。 アプリケーションでは、結果の明示的な位置を表す序数を指定する代わりにセットの末尾からカウント ダウンして、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、次を参照してください。[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)します。  
+ 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、列 (注釈) の 14 を超える追加の列を定義できます。 アプリケーションでは、結果の明示的な位置を表す序数を指定する代わりにセットの末尾からカウント ダウンして、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)を参照してください。  
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  

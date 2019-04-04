@@ -54,7 +54,7 @@ ms.locfileid: "52527751"
 6.  「 [SQL Server 2016 Release Notes](../../../sql-server/sql-server-2016-release-notes.md)」で、リリース ノートを確認します。  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server エディションの要件  
- ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、次を参照してください。 [SQL Server 2016 の各エディションでサポートされる Analysis Services 機能](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)と[エディションと SQL Server 2016 のコンポーネントの](../../../sql-server/editions-and-components-of-sql-server-2016.md)します。  
+ ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、[SQL Server 2016 の各エディションでサポートされる Analysis Services 機能](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)と[エディションと SQL Server 2016 のコンポーネントの](../../../sql-server/editions-and-components-of-sql-server-2016.md)を参照してください。  
   
 ##  <a name="InstallSQL"></a> 手順 1:Power Pivot for SharePoint をインストールします。  
  この手順では、SQL Server セットアップを実行して、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーをインストールします。 後の手順で、このサーバーをブックのデータ モデルで使用するように Excel Services を構成します。  

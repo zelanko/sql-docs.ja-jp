@@ -41,6 +41,6 @@ ms.locfileid: "48148672"
   
 -   例外に関連付けられたヘルプ リンクを使って、オンライン ヘルプ システムにアクセスできます。  
   
- 詳細については、次を参照してください。[プログラム例外メッセージ ボックス](../../../2014/database-engine/dev-guide/program-exception-message-box.md)します。  
+ 詳細については、[プログラム例外メッセージ ボックス](../../../2014/database-engine/dev-guide/program-exception-message-box.md)を参照してください。  
   
   

@@ -25,9 +25,9 @@ ms.locfileid: "47848030"
 # <a name="choosing-an-sql-grammar"></a>SQL 文法の選択
 使用するには、どの文法は、SQL ステートメントを構築するときに最初に決定します。 Open Group、ANSI、および ISO など、さまざまな標準化団体から使用可能な文法だけでなくは、ほぼすべての DBMS ベンダーは、標準と若干異なりますそれぞれの独自の文法を定義します。  
   
- [付録 c: SQL の文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)、すべての ODBC ドライバーのサポートが必要な SQL 文法について説明します。 この文法には、SQL 92 のエントリ レベルのサブセットです。 ドライバーは、中間、Full、または、sql-92 での FIPS 127-2 過渡期のレベルの定義に準拠するその他の文法をサポート可能性があります。 詳細については、次を参照してください。 [SQL 最小文法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)付録 c: SQL の文法と sql-92 にします。  
+ [付録 c: SQL の文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)、すべての ODBC ドライバーのサポートが必要な SQL 文法について説明します。 この文法には、SQL 92 のエントリ レベルのサブセットです。 ドライバーは、中間、Full、または、sql-92 での FIPS 127-2 過渡期のレベルの定義に準拠するその他の文法をサポート可能性があります。 詳細については、[SQL 最小文法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)付録 c: SQL の文法と sql-92 にを参照してください。  
   
- 付録 C も定義*エスケープ シーケンス*外部結合などの一般的な言語機能の標準的な文法を格納しているをでカバーされていない SQL 92 文法。 詳細については、次を参照してください。 [ODBC エスケープ シーケンス](../../../odbc/reference/appendixes/odbc-escape-sequences.md)付録 c: SQL の文法でと[エスケープ シーケンス](../../../odbc/reference/develop-app/escape-sequences.md)、このセクションで後述します。  
+ 付録 C も定義*エスケープ シーケンス*外部結合などの一般的な言語機能の標準的な文法を格納しているをでカバーされていない SQL 92 文法。 詳細については、[ODBC エスケープ シーケンス](../../../odbc/reference/appendixes/odbc-escape-sequences.md)付録 c: SQL の文法でと[エスケープ シーケンス](../../../odbc/reference/develop-app/escape-sequences.md)、このセクションで後述を参照してください。  
   
  選択されている文法では、ドライバーが、ステートメントを処理する方法に影響します。 ドライバーは、SQL 92 SQL と DBMS に固有の sql の ODBC で定義されたエスケープ シーケンスを変更する必要があります。 SQL 文法のほとんどは、1 つまたは複数のさまざまな標準に基づいているために、ほとんどのドライバーは、この要件を満たすためにほとんどまたはまったくの操作を行います。 多くの場合、定義されているエスケープ シーケンスの検索ののみで構成されます ODBC と DBMS に固有の文法に置き換えることができます。 ドライバーには、文法が認識しないが検出されると、文法は DBMS 固有であり実行のデータ ソースを変更しなくても、SQL ステートメントを渡すと仮定します。  
   

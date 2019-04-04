@@ -67,7 +67,7 @@ ms.locfileid: "56018913"
   
      **参照の追加** ダイアログ ボックスで、 **.NET** タブで **System.Web.Services**、順にクリックします**OK**します。  
   
-     レポート サーバー Web サービスに接続する方法の詳細については、次を参照してください。 [Web サービスと .NET Framework を使用してアプリケーションの構築](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)します。  
+     レポート サーバー Web サービスに接続する方法の詳細については、[Web サービスと .NET Framework を使用してアプリケーションの構築](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)を参照してください。  
   
 10. ソリューション エクスプ ローラーでプロジェクト ノードを展開します。 プロジェクトには、Program.cs ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] の場合は Module1.vb) という既定の名前のコード ファイルが追加されていることがわかります。  
   

@@ -70,7 +70,7 @@ ms.locfileid: "47841060"
   
     -   SSMA で ASE の構文を更新します。 ストアド プロシージャとトリガーのみに対して構文を更新することができます。 構文を更新するには、Sybase メタデータ エクスプ ローラー ペインで、オブジェクトを選択 をクリックして、 **SQL**タブをクリックし、SQL コードを編集します。 項目から移動するときに、更新された構文を保存するように求められます。 オブジェクトの報告されたエラーを表示、**レポート**タブ。  
   
-    -   ASE では、削除または問題のあるコードを変更するには ASE オブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [Sybase ASE への接続&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)します。  
+    -   ASE では、削除または問題のあるコードを変更するには ASE オブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、[Sybase ASE への接続&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)を参照してください。  
   
     -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL のメタデータ エクスプ ローラーと Sybase メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL と ASE からデータを移行します。
   

@@ -34,7 +34,7 @@ ms.locfileid: "51947656"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|構成オプションの ID。|  
-|**name**|**nvarchar(60)**|構成オプションの名前。 可能な構成については、次を参照してください。 [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)します。|  
+|**name**|**nvarchar(60)**|構成オプションの名前。 可能な構成については、[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を参照してください。|  
 |**value**|**sqlvariant**|プライマリ レプリカの場合は、この構成オプションの設定値です。|  
 |**value_for_secondary**|**sqlvariant**|セカンダリ レプリカの場合は、この構成オプションの設定値です。|  
 |**is_value_default**|**bit** |値のセットが既定値であるかどうかを指定します。|

@@ -55,7 +55,7 @@ szFormatFile
 ## <a name="remarks"></a>コメント  
  後`bcp_readfmt`形式の値を読み取り、適切な呼び出し[bcp_columns](bcp-columns.md)と[bcp_colfmt](bcp-colfmt.md)します。 ユーザーがフォーマット ファイルを解析し、このような呼び出しを行う必要はありません。  
   
- フォーマット ファイルを保持するためには、呼び出す[bcp_writefmt](bcp-writefmt.md)します。 呼び出す`bcp_readfmt`保存形式を参照できます。 詳細については、次を参照してください。 [bcp_init](bcp-init.md)します。  
+ フォーマット ファイルを保持するためには、呼び出す[bcp_writefmt](bcp-writefmt.md)します。 呼び出す`bcp_readfmt`保存形式を参照できます。 詳細については、[bcp_init](bcp-init.md)を参照してください。  
   
  または、一括コピー ユーティリティ (**bcp**) で参照できるファイルにユーザー定義のデータ形式を保存できます`bcp_readfmt`します。 詳細については、 **bcp**ユーティリティと構造の**bcp**データ形式のファイルを参照してください[一括インポートとエクスポートのデータ&#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)します。  
   

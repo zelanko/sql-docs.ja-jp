@@ -63,7 +63,7 @@ ms.locfileid: "56289017"
  レポート マネージャーでは、レポート サーバー フォルダーを参照したり、特定のレポートを検索することができます。 レポート、その全般プロパティ、およびレポート履歴にキャプチャされているレポートの過去のコピーを表示できます。 権限に応じて、レポートにサブスクライブし、電子メールの受信ボックスやファイル システム上の共有フォルダーに配信させることもできます。  
   
 > [!NOTE]  
->  サポートされるブラウザーとバージョンについては、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)します。  
+>  サポートされるブラウザーとバージョンについては、[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)を参照してください。  
   
  レポート マネージャーは、ネイティブ モードで実行されているレポート サーバーでのみ使用されます。 SharePoint 統合モード用に構成されたレポート サーバーでは使用できません。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "56289017"
  ロールの詳細については、「 [ネイティブ モードのレポート サーバーに対する権限の許可](security/granting-permissions-on-a-native-mode-report-server.md)」を参照してください。  
   
 > [!NOTE]  
->  Windows Vista または Windows Server 2008 を使用している場合、レポート マネージャーを使用してローカルのレポート サーバー インスタンスを管理するには、レポート サーバーをローカル管理用に構成する必要があります。 サーバーを構成する方法の詳細については、次を参照してください。[ローカル管理用のネイティブ モード レポート サーバーの構成&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)します。  
+>  Windows Vista または Windows Server 2008 を使用している場合、レポート マネージャーを使用してローカルのレポート サーバー インスタンスを管理するには、レポート サーバーをローカル管理用に構成する必要があります。 サーバーを構成する方法の詳細については、[ローカル管理用のネイティブ モード レポート サーバーの構成&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)を参照してください。  
   
 ## <a name="start-report-manager"></a>レポート マネージャーの起動  
   
@@ -99,7 +99,7 @@ ms.locfileid: "56289017"
  レポート マネージャーは、ごく限られた範囲でカスタマイズすることができます。 たとえば、[サイトの設定] ページで、アプリケーションのタイトルを変更できます。 Web 開発者は、レポート マネージャーで使用されるスタイル情報を含んだスタイル シートを変更できます。 レポート マネージャーは、カスタマイズをサポートするように特に設計されているわけではないため、変更は十分にテストする必要があります。 レポート マネージャーがニーズに合わない場合は、独自のレポート ビューアーを開発するか、SharePoint サイトでレポートを検索および表示できるように SharePoint Web パーツを構成することができます。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](report-server/configure-web-portal.md)」を参照してください。  
   
 ##  <a name="bkmk_icon_descriptions"></a> アイコンの説明  
- 次の表では、レポート マネージャーで使用されるアイコンについて説明します。 レポート ツールバーに表示されるアイコンの詳細については、次を参照してください。 [HTML ビューアーとレポート ツールバー](html-viewer-and-the-report-toolbar.md)します。  
+ 次の表では、レポート マネージャーで使用されるアイコンについて説明します。 レポート ツールバーに表示されるアイコンの詳細については、[HTML ビューアーとレポート ツールバー](html-viewer-and-the-report-toolbar.md)を参照してください。  
   
 |アイコン|説明|操作|  
 |----------|-----------------|------------|  

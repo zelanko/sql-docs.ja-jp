@@ -43,7 +43,7 @@ ms.locfileid: "48064682"
      [PowerShell](#PowerShellProcedure)  
   
 > [!NOTE]  
->  セカンダリ データベースをグループに参加した後の動作については、次を参照してください。 [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)します。  
+>  セカンダリ データベースをグループに参加した後の動作については、[AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)を参照してください。  
   
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   

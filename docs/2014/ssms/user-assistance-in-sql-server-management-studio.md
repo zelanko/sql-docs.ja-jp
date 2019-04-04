@@ -44,7 +44,7 @@ ms.locfileid: "52757644"
   
      後からアクセスしやすくするために、ユーザー トピックのブックマークを格納します。  
   
- [ヘルプに関するヘルプ] \([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を選択してください。 ヘルプ コレクションのトピックのオンライン ブック コレクションに、ヘルプを追加する方法の詳細については、次を参照してください。[の追加と SQL Server の製品ドキュメントを削除](../2014-toc/books-online-for-sql-server-2014.md)します。  
+ [ヘルプに関するヘルプ] \([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を選択してください。 ヘルプ コレクションのトピックのオンライン ブック コレクションに、ヘルプを追加する方法の詳細については、[の追加と SQL Server の製品ドキュメントを削除](../2014-toc/books-online-for-sql-server-2014.md)を参照してください。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN オンラインと SQL Server コミュニティ  
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コミュニティから情報を得るための方法も用意されています。 可能な代替手段としては以下の方法があります。  

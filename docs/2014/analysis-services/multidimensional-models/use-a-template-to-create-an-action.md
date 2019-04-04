@@ -22,7 +22,7 @@ ms.locfileid: "48154499"
   キューブ デザイナーの **[アクション]** ビューには、一般的なアクションの作成に使用する数多くのテンプレートが用意されています。 キューブ デザイナーには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。  
   
 > [!NOTE]  
->  アクションが作成された後、ユーザーがキューブを更新または再処理してからアクションが使用できるようになります。 詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)します。  
+>  アクションが作成された後、ユーザーがキューブを更新または再処理してからアクションが使用できるようになります。 詳細については、[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)を参照してください。  
   
 ### <a name="to-use-a-template-to-create-an-action"></a>テンプレートを使用してアクションを作成するには  
   

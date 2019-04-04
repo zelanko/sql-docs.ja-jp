@@ -30,4 +30,4 @@ ms.locfileid: "47818188"
   
  ステートメント ハンドルのメモリを割り当て、ステートメント ハンドルで指定された接続に関連付けます*hdbc*します。 ドライバー マネージャーは、ドライバーのメモリを割り当てるには、この呼び出しを渡す、 *hstmt*構造体。  
   
- 詳細については、次を参照してください。 [SQLAllocStmt](../../odbc/reference/syntax/sqlallocstmt-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLAllocStmt](../../odbc/reference/syntax/sqlallocstmt-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

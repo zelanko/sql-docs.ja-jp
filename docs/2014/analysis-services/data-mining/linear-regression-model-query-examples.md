@@ -113,7 +113,7 @@ FROM LR_PredictIncome.CONTENT
 |9 (Statistics: 統計)|  
 |11 (Intercept: 切片)|  
   
- 各値は、回帰モデルの種類の意味の詳細については、次を参照してください。[線形回帰モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)します。  
+ 各値は、回帰モデルの種類の意味の詳細については、[線形回帰モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)を参照してください。  
   
  [トップに戻る](#bkmk_top)  
   

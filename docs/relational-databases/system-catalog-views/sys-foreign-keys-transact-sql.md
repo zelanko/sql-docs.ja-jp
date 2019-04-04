@@ -35,7 +35,7 @@ ms.locfileid: "47604030"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
+|**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)を参照してください。|  
 |**referenced_object_id**|**int**|参照されるオブジェクトの ID。|  
 |**key_index_id**|**int**|参照されるオブジェクト内のキー インデックスの ID。|  
 |**is_disabled**|**bit**|FOREIGN KEY 制約が無効です。|  

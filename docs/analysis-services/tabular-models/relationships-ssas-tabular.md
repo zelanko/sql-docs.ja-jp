@@ -106,7 +106,7 @@ ms.locfileid: "53072529"
 ### <a name="one-relationship-for-each-source-column"></a>ソース列ごとに 1 つのリレーションシップ  
  ソース列は、複数のリレーションシップに参加できません。 既に 1 つのリレーションシップである列をソース列として使用している場合、別のテーブルの別の関連参照列に関連付けるためにその列を使用するには、その列のコピーを作成して新しいリレーションシップに使用します。  
   
- 計算列で DAX 数式を使用すると、値がまったく同じ列のコピーを簡単に作成できます。 詳細については、次を参照してください。[計算列を作成する](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)します。  
+ 計算列で DAX 数式を使用すると、値がまったく同じ列のコピーを簡単に作成できます。 詳細については、[計算列を作成する](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)を参照してください。  
   
 ### <a name="unique-identifier-for-each-table"></a>テーブルごとに一意の識別子  
  各テーブルには、各行を一意に識別する列を 1 つ含める必要があります。 この列は、通常、主キーと呼ばれます。  
@@ -115,7 +115,7 @@ ms.locfileid: "53072529"
  参照列のデータ値は一意である必要があります。 つまり、参照列に重複値を格納することはできません。 テーブル モデルの場合、null と空の文字列は、明確なデータ値である空白と同じものとして扱われます。 つまり、参照列には複数の null を格納できません。  
   
 ### <a name="compatible-data-types"></a>互換性のあるデータ型  
- ソース列と参照列のデータ型には互換性がある必要があります。 データの種類の詳細については、次を参照してください。[型でサポートされているデータ](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)します。  
+ ソース列と参照列のデータ型には互換性がある必要があります。 データの種類の詳細については、[型でサポートされているデータ](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)を参照してください。  
   
 ### <a name="composite-keys-and-lookup-columns"></a>複合キーと参照列  
  テーブル モデルでは複合キーを使用できません。テーブルの各行を一意に識別する列は常に 1 つである必要があります。 複合キーに基づく既存のリレーションシップを持つテーブルをインポートしようとすると、このリレーションシップはテーブル モデルで作成できないため、テーブルのインポート ウィザードでは無視されます。  

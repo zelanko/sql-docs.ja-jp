@@ -29,7 +29,7 @@ ms.locfileid: "54256707"
 
   [!INCLUDE[tsql](../includes/tsql-md.md)] クエリに使用される XQuery 言語のサブセットをサポート、 **xml**データ型。 この実装は、2004 年 7 月に公開された XQuery のワーキング ドラフトに従っています。 この言語は W3C (World Wide Web Consortium) によって開発が進められており、マイクロソフトをはじめとする主要なすべてのデータベース ベンダーが参加しています。 W3C 仕様は W3C 勧告になる前に改訂されることがあるので、この実装は最終的な勧告とは異なる可能性があります。 このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でサポートされる XQuery サブセットのセマンティクスと構文について概説します。  
   
- 詳細については、次を参照してください。、 [W3C XQuery 1.0 Language Specification](https://go.microsoft.com/fwlink/?LinkId=48846)します。  
+ 詳細については、、 [W3C XQuery 1.0 Language Specification](https://go.microsoft.com/fwlink/?LinkId=48846)を参照してください。  
   
  XQuery は構造化または半構造化された XML データに対するクエリ実行できる言語です。 **Xml**データ型のサポートされている、[!INCLUDE[ssDE](../includes/ssde-md.md)]ドキュメントをデータベースに格納されているし、XQuery を使用してクエリを実行します。  
   

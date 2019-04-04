@@ -21,7 +21,7 @@ ms.locfileid: "47819526"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
- [SQL Server エージェント](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)は SQL Server のスケジュールされたジョブを実行します。 SQL Server 2017 CU4 以降、SQL Server エージェントが付属、 **mssql server**パッケージ化し、既定で無効にします。 このリリースのバージョン情報と共に SQL Server エージェントのサポートされる機能については、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md)します。
+ [SQL Server エージェント](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)は SQL Server のスケジュールされたジョブを実行します。 SQL Server 2017 CU4 以降、SQL Server エージェントが付属、 **mssql server**パッケージ化し、既定で無効にします。 このリリースのバージョン情報と共に SQL Server エージェントのサポートされる機能については、、[リリース ノート](sql-server-linux-release-notes.md)を参照してください。
 
  SQL Server エージェントのインストール/有効化。
 - [バージョン 2017 CU4 以降では、SQL Server エージェントを有効にします。](#EnableAgentAfterCU4)
@@ -111,4 +111,4 @@ sudo systemctl restart mssql-server
 オフライン インストールが必要な場合に、SQL Server エージェント パッケージのダウンロードを検索、[リリース ノート](sql-server-linux-release-notes.md)します。 この記事で説明されている同じオフライン インストール手順を使用して[SQL Server のインストール](sql-server-linux-setup.md#offline)します。
 
 ## <a name="next-steps"></a>次の手順
-SQL Server エージェントを使用して、作成、スケジュール、およびジョブを実行する方法の詳細については、次を参照してください。 [Linux 上の SQL Server エージェント ジョブの実行](sql-server-linux-run-sql-server-agent-job.md)します。
+SQL Server エージェントを使用して、作成、スケジュール、およびジョブを実行する方法の詳細については、[Linux 上の SQL Server エージェント ジョブの実行](sql-server-linux-run-sql-server-agent-job.md)を参照してください。

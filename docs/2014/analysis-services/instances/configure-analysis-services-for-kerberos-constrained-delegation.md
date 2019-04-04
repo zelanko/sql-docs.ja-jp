@@ -108,7 +108,7 @@ ms.locfileid: "53350054"
   
 3.  リモート クライアント コンピューターから、アプリケーション サービス (SharePoint、Reporting Services など) を介して Analysis Services に接続します。 Audit Login イベントに、Analysis Services に接続しているユーザーの ID が表示されます。  
   
- 徹底的なテストを行うには、ネットワーク上の Kerberos 要求と応答を取得できるネットワーク監視ツールを使用する必要があります。 このタスクには、Kerberos 用にフィルター処理されたネットワーク モニター ユーティリティ (netmon.exe) を使用できます。 Netmon 3.4 などのツールを使用して、Kerberos 認証をテストの詳細については、次を参照してください。 [Kerberos 認証を構成します。コア構成 (SharePoint Server 2010)](https://technet.microsoft.com/library/gg502602\(v=office.14\).aspx)します。  
+ 徹底的なテストを行うには、ネットワーク上の Kerberos 要求と応答を取得できるネットワーク監視ツールを使用する必要があります。 このタスクには、Kerberos 用にフィルター処理されたネットワーク モニター ユーティリティ (netmon.exe) を使用できます。 Netmon 3.4 などのツールを使用して、Kerberos 認証をテストの詳細については、[Kerberos 認証を構成を参照してください。コア構成 (SharePoint Server 2010)](https://technet.microsoft.com/library/gg502602\(v=office.14\).aspx)します。  
   
  また、Active Directory オブジェクトの [プロパティ] ダイアログ ボックスにある [委任] タブの各オプションの詳細な説明については、「 [Active Directory 内で最も紛らわしいダイアログ ボックス](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) 」をご覧ください。 この記事ではまた、LDP を使ってテストし、テスト結果を解釈する方法を説明します。  
   

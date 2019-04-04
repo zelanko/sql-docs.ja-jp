@@ -68,7 +68,7 @@ ms.locfileid: "56020763"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] BIFF8 表示拡張機能[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]にレポートを[!INCLUDE[msCoName](../includes/msconame-md.md)]Word と[!INCLUDE[msCoName](../includes/msconame-md.md)]Excel 1997-2003 バイナリ交換ファイル形式。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 表示する拡張機能が含まれています、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 2007-2010 Open XML 形式。  
   
 #### <a name="report-definition-language-rdl-2005-and-earlier"></a>レポート定義言語 (RDL) 2005 以前  
- レポート定義言語 (RDL) 2005 およびそれ以前のバージョンは非推奨とされます。 RDL の詳細については、次を参照してください。[レポート定義言語&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)します。  
+ レポート定義言語 (RDL) 2005 およびそれ以前のバージョンは非推奨とされます。 RDL の詳細については、[レポート定義言語&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)を参照してください。  
   
  レポートのアップグレードの詳細については、「 [Upgrade Reports](install-windows/upgrade-reports.md)」を参照してください。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "56020763"
 #### <a name="report-models"></a>レポート モデル  
  セマンティック モデリング言語 (SMDL) レポート モデルは非推奨とされます。 内のデータ ソースとして既存のレポート モデルを使用する続行できますが、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート、レポートをレポート モデルへの依存関係を削除する更新を検討してください。  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート モデルの作成または更新のためのツールは含まれません。 詳細については、次を参照してください。 [SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)します。  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート モデルの作成または更新のためのツールは含まれません。 詳細については、[SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)を参照してください。  
   
 #### <a name="deprecated-methods-in-the-web-service-endpoint"></a>Web サービス エンドポイントで非推奨のメソッド  
  次の操作は、<xref:ReportService2010.ReportingService2010> Web サービス エンドポイントでは非推奨です：  
@@ -138,7 +138,7 @@ ms.locfileid: "56020763"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] BIFF8 表示拡張機能[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]にレポートを[!INCLUDE[msCoName](../includes/msconame-md.md)]Word と[!INCLUDE[msCoName](../includes/msconame-md.md)]Excel 1997-2003 バイナリ交換ファイル形式。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 表示する拡張機能が含まれています、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 2007-2010 Open XML 形式。  
   
 ### <a name="report-definition-language-rdl-2005-and-earlier"></a>レポート定義言語 (RDL) 2005 以前  
- レポート定義言語 (RDL) 2005 およびそれ以前のバージョンは非推奨とされます。 RDL の詳細については、次を参照してください。[レポート定義言語&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)します。  
+ レポート定義言語 (RDL) 2005 およびそれ以前のバージョンは非推奨とされます。 RDL の詳細については、[レポート定義言語&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)を参照してください。  
   
  レポートのアップグレードの詳細については、「 [Upgrade Reports](install-windows/upgrade-reports.md)」を参照してください。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "56020763"
 ### <a name="report-models"></a>レポート モデル  
  セマンティック モデリング言語 (SMDL) レポート モデルは非推奨とされます。 内のデータ ソースとして既存のレポート モデルを使用する続行できますが、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート、レポートをレポート モデルへの依存関係を削除する更新を検討してください。  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート モデルの作成または更新のためのツールは含まれません。 詳細については、次を参照してください。 [SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)します。  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート モデルの作成または更新のためのツールは含まれません。 詳細については、[SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)を参照してください。  
   
 ### <a name="deprecated-methods-in-the-web-service-endpoint"></a>Web サービス エンドポイントで非推奨のメソッド  
  次の操作は、<xref:ReportService2010.ReportingService2010> Web サービス エンドポイントでは非推奨です：  

@@ -68,7 +68,7 @@ ms.locfileid: "58290778"
 
 ## <a id="cuinstall"></a> 更新プログラムをインストールする方法
 
-CU リポジトリを構成している場合 (**mssql server-2017**) の最新の CU が表示されます[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]新規インストールを実行するときにパッケージ化します。 すべてのパッケージのインストールのアーティクルの既定値です CU リポジトリ[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux 上。 GDR のリポジトリを構成している場合 (**mssql server 2017 gdr**)、一般以降にリリースされた重要なセキュリティ更新プログラムのみが取得されます Docker コンテナー CU または GDR 更新プログラムが必要な場合の公式イメージを参照してください[Microsoft SQL Server on Linux 上の Docker エンジン](https://hub.docker.com/r/microsoft/mssql-server)します。 リポジトリの構成の詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
+CU リポジトリを構成している場合 (**mssql server-2017**) の最新の CU が表示されます[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]新規インストールを実行するときにパッケージ化します。 すべてのパッケージのインストールのアーティクルの既定値です CU リポジトリ[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux 上。 GDR のリポジトリを構成している場合 (**mssql server 2017 gdr**)、一般以降にリリースされた重要なセキュリティ更新プログラムのみが取得されます Docker コンテナー CU または GDR 更新プログラムが必要な場合の公式イメージを参照してください[Microsoft SQL Server on Linux 上の Docker エンジン](https://hub.docker.com/r/microsoft/mssql-server)します。 リポジトリの構成の詳細については、[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)を参照してください。
 
 既存の更新する場合は[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]パッケージが最新の CU を取得するには、各パッケージの適切な更新プログラムのコマンドを実行します。 各パッケージの特定の更新手順については、次のインストール ガイドを参照してください。
 
@@ -79,7 +79,7 @@ CU リポジトリを構成している場合 (**mssql server-2017**) の最新�
 
 ## <a id="CU13"></a> CU13 (12/2018)
 
-これは、累積的な更新プログラム 13 (CU13) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3048.4 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4466404](https://support.microsoft.com/help/4466404)します。
+これは、累積的な更新プログラム 13 (CU13) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3048.4 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4466404](https://support.microsoft.com/help/4466404)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -93,7 +93,7 @@ CU リポジトリを構成している場合 (**mssql server-2017**) の最新�
 
 ## <a id="CU12"></a> CU12 (Oct 2018)
 
-これは、Cumulative Update 12 (CU12) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3045.24 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4464082](https://support.microsoft.com/help/4464082)します。
+これは、Cumulative Update 12 (CU12) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3045.24 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4464082](https://support.microsoft.com/help/4464082)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -107,7 +107,7 @@ CU リポジトリを構成している場合 (**mssql server-2017**) の最新�
 
 ## <a id="CU11"></a> CU11 (2018年 9 月)
 
-これは、累積的な更新プログラム 11 (CU11) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3038.14 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4462262](https://support.microsoft.com/help/4462262)します。
+これは、累積的な更新プログラム 11 (CU11) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3038.14 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4462262](https://support.microsoft.com/help/4462262)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -121,7 +121,7 @@ CU リポジトリを構成している場合 (**mssql server-2017**) の最新�
 
 ## <a id="CU10"></a> CU10 (Aug 2018)
 
-これは、Cumulative Update 10 (CU10) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3037.1 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4342123](https://support.microsoft.com/help/4342123)します。
+これは、Cumulative Update 10 (CU10) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3037.1 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4342123](https://support.microsoft.com/help/4342123)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -135,7 +135,7 @@ CU リポジトリを構成している場合 (**mssql server-2017**) の最新�
 
 ## <a id="CU9-GDR2"></a> CU9 GDR2 (Aug 2018)
 
-以前にリリースされた CU (CU9) 含まれており、セキュリティ更新プログラムが、この[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3035.2 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4293805](https://support.microsoft.com/help/4293805)します。
+以前にリリースされた CU (CU9) 含まれており、セキュリティ更新プログラムが、この[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3035.2 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4293805](https://support.microsoft.com/help/4293805)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -149,7 +149,7 @@ CU リポジトリを構成している場合 (**mssql server-2017**) の最新�
 
 ## <a id="GDR2"></a> GDR2 (Aug 2018)
 
-これは、GDR2 (および GDR1) に対するセキュリティ更新プログラムのみを含むセキュリティ更新プログラム[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.2002.14 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4293803](https://support.microsoft.com/help/4293803)します。
+これは、GDR2 (および GDR1) に対するセキュリティ更新プログラムのみを含むセキュリティ更新プログラム[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.2002.14 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4293803](https://support.microsoft.com/help/4293803)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -163,7 +163,7 @@ CU リポジトリを構成している場合 (**mssql server-2017**) の最新�
 
 ## <a id="CU9"></a> CU9 (2018 年 7 月)
 
-これは、累積的な更新プログラム 9 (CU9) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3030.27 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4341265](https://support.microsoft.com/help/4341265)します。
+これは、累積的な更新プログラム 9 (CU9) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3030.27 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4341265](https://support.microsoft.com/help/4341265)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -177,7 +177,7 @@ CU リポジトリを構成している場合 (**mssql server-2017**) の最新�
 
 ## <a id="CU8"></a> CU8 (Jun 2018)
 
-これは、累積的な更新プログラム 8 (CU8) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3029.16 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4338363](https://support.microsoft.com/help/4338363)します。
+これは、累積的な更新プログラム 8 (CU8) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3029.16 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4338363](https://support.microsoft.com/help/4338363)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -191,7 +191,7 @@ CU リポジトリを構成している場合 (**mssql server-2017**) の最新�
 
 ## <a id="CU7"></a> CU7 (2018 年 5 月)
 
-これは、累積的な更新プログラム 7 (CU7) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3026.27 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4229789](https://support.microsoft.com/help/4229789)します。
+これは、累積的な更新プログラム 7 (CU7) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3026.27 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4229789](https://support.microsoft.com/help/4229789)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -205,7 +205,7 @@ CU リポジトリを構成している場合 (**mssql server-2017**) の最新�
 
 ## <a id="CU6"></a> CU6 (Apr 2018)
 
-これは、累積的な更新プログラム 6 (CU6) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3025.34 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4101464](https://support.microsoft.com/help/4101464)します。
+これは、累積的な更新プログラム 6 (CU6) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3025.34 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4101464](https://support.microsoft.com/help/4101464)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -219,7 +219,7 @@ CU リポジトリを構成している場合 (**mssql server-2017**) の最新�
 
 ## <a id="CU5"></a> CU5 (2018 の年 3 月)
 
-これは、累積的な更新プログラム 5 (CU5) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3023.8 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4092643](https://support.microsoft.com/help/4092643)します。
+これは、累積的な更新プログラム 5 (CU5) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3023.8 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4092643](https://support.microsoft.com/help/4092643)を参照してください。
 
 ### <a name="known-upgrade-issue"></a>アップグレードの既知の問題
 
@@ -251,7 +251,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU4"></a> CU4 (Feb 2018)
 
-これは、Cumulative Update 4 (CU4) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3022.28 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4056498](https://support.microsoft.com/help/4056498)します。
+これは、Cumulative Update 4 (CU4) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3022.28 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4056498](https://support.microsoft.com/help/4056498)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -268,7 +268,7 @@ sudo systemctl start mssql-server
 
 ## <a id="GDR1"></a> GDR1 (Jan 2018)
 
-これは、セキュリティ更新プログラムのセキュリティ修正プログラムを GDR1 のみを含む[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.2000.63 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4057122](https://support.microsoft.com/help/4057122)します。
+これは、セキュリティ更新プログラムのセキュリティ修正プログラムを GDR1 のみを含む[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.2000.63 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4057122](https://support.microsoft.com/help/4057122)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -282,7 +282,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU3"></a> CU3 (Jan 2018)
 
-これは、累積更新プログラム 3 (CU3) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3015.40 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4052987](https://support.microsoft.com/help/4052987)します。
+これは、累積更新プログラム 3 (CU3) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3015.40 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4052987](https://support.microsoft.com/help/4052987)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -296,7 +296,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU2"></a> CU2 (2017 年 11 月)
 
-これは、Cumulative Update 2 (CU2) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3008.27 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574)します。
+これは、Cumulative Update 2 (CU2) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3008.27 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -310,7 +310,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU1"></a> CU1 (Oct 2017)
 
-これは、Cumulative Update 1 (CU1) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3006.16 します。 このリリースの機能強化と修正については、次を参照してください。 [ https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634)します。
+これは、Cumulative Update 1 (CU1) のリリースの[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]このリリースのバージョン番号は 14.0.3006.16 します。 このリリースの機能強化と修正については、[ https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634)を参照してください。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -407,7 +407,7 @@ sudo systemctl start mssql-server
 
 - バックアップされたデータベースを復元するときに[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Windows で使用する必要があります、 **WITH MOVE** TRANSACT-SQL ステートメントの句。
 
-- Microsoft 分散トランザクション コーディネーター サービスを必要とする分散トランザクションがサポートされていない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux で実行されています。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DTC が含まれる場合を除き、リンク サーバーがサポートされています。 詳細については、次を参照してください。 [Linux で実行されている SQL Server では、Microsoft 分散トランザクション コーディネーター サービスを必要とする分散トランザクションはサポートされません](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/)します。
+- Microsoft 分散トランザクション コーディネーター サービスを必要とする分散トランザクションがサポートされていない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux で実行されています。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DTC が含まれる場合を除き、リンク サーバーがサポートされています。 詳細については、[Linux で実行されている SQL Server では、Microsoft 分散トランザクション コーディネーター サービスを必要とする分散トランザクションはサポートされません](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/)を参照してください。
 
 - 特定のアルゴリズム (暗号スイート) トランスポート層セキュリティ (TLS) が正しく動作しない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux 上。 接続するときに、接続エラー結果[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、高可用性グループ レプリカ間の接続の確立に問題とします。
 
@@ -478,13 +478,13 @@ sudo systemctl start mssql-server
 
 #### <a name="full-text-search"></a>フルテキスト検索
 
-- すべてのフィルターなどの Office ドキュメントのフィルターは、このリリースで利用できます。 サポートされているフィルターの一覧は、次を参照してください。 [on Linux SQL Server フルテキスト検索のインストール](sql-server-linux-setup-full-text-search.md#filters)します。
+- すべてのフィルターなどの Office ドキュメントのフィルターは、このリリースで利用できます。 サポートされているフィルターの一覧は、[on Linux SQL Server フルテキスト検索のインストール](sql-server-linux-setup-full-text-search.md#filters)を参照してください。
 
 #### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
 - **Mssql server は**パッケージは SUSE にこのリリースではサポートされません。 Ubuntu、Red Hat Enterprise Linux (RHEL) でこれ現在サポートされています。
 
-- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Linux CTP 2.1 の更新に関する以降[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージは Linux で ODBC 接続を使用することができます。 この機能がテストされている、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]および MySQL ODBC ドライバーが、ODBC 仕様には任意の Unicode ODBC ドライバーを使用することも必要です。 デザイン時に、DSN または接続文字列は、ODBC データに接続するを指定することができます。Windows 認証を使用することもできます。 詳細については、次を参照してください。、[ブログ Linux に ODBC サポートのお知らせを投稿する](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)します。
+- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Linux CTP 2.1 の更新に関する以降[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージは Linux で ODBC 接続を使用することができます。 この機能がテストされている、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]および MySQL ODBC ドライバーが、ODBC 仕様には任意の Unicode ODBC ドライバーを使用することも必要です。 デザイン時に、DSN または接続文字列は、ODBC データに接続するを指定することができます。Windows 認証を使用することもできます。 詳細については、、[ブログ Linux に ODBC サポートのお知らせを投稿する](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)を参照してください。
 
 - Linux で SSIS パッケージを実行すると、このリリースでは、次の機能はサポートされていません。
   - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログ データベース
@@ -497,7 +497,7 @@ sudo systemctl start mssql-server
   - Hadoop と HDFS のサポート
   - Microsoft Connector for SAP BW
 
-現在サポートされていない、または制限付きサポートされている組み込みの SSIS コンポーネントの一覧は、次を参照してください。[制限事項と既知の問題を Linux 上の SSIS の](sql-server-linux-ssis-known-issues.md#components)します。
+現在サポートされていない、または制限付きサポートされている組み込みの SSIS コンポーネントの一覧は、[制限事項と既知の問題を Linux 上の SSIS の](sql-server-linux-ssis-known-issues.md#components)を参照してください。
 
 Linux 上の SSIS の詳細については、次の記事を参照してください。
 -   [Linux の SSIS サポート ブログの投稿のお知らせ](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)します。
@@ -527,4 +527,4 @@ Linux 上の SSIS の詳細については、次の記事を参照してくだ�
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 - [実行と接続 - クラウド](quickstart-install-connect-clouds.md)
 
-よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)します。
+よく寄せられる質問の回答は、、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)を参照してください。

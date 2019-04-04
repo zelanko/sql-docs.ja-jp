@@ -89,11 +89,11 @@ ms.locfileid: "53366644"
   
 -   インストール要件、システム構成チェック、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールに関するセキュリティ上の考慮事項を確認します。  詳細については、「[SQL Server のインストール計画](quick-start-installation-of-sql-server-2014.md#BKMK_BeforeYouInstall)」を参照してください。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既存のバージョンを [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードします。 詳細については、次を参照してください。 [SQL Server 2014 にアップグレードする](#BKMK_Upgrading)します。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既存のバージョンを [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードします。 詳細については、[SQL Server 2014 にアップグレードする](#BKMK_Upgrading)を参照してください。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行して、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の新しいインスタンスをインストールします。 詳細については、次を参照してください。 [Installing SQL Server 2014](#BKMK_Install)します。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行して、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の新しいインスタンスをインストールします。 詳細については、[Installing SQL Server 2014](#BKMK_Install)を参照してください。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールが完了したら、次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とそのコンポーネントを構成します。これは重要な手順です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を構成します。 詳細については、次を参照してください。[を構成する SQL Server 2014](#BKMK_Configure)します。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールが完了したら、次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とそのコンポーネントを構成します。これは重要な手順です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を構成します。 詳細については、[を構成する SQL Server 2014](#BKMK_Configure)を参照してください。  
   
  次のセクションでは、これらのタスクについて詳しく説明します。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "53366644"
 |ハードウェア構成を確認し、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールの準備について学習します。|[フェールオーバー クラスタリングをインストールする前に](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
   
 ###  <a name="BKMK_Upgrading"></a> アップグレード [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] の既存のインスタンスを [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードできます。 詳細については、次を参照してください。 [SQL Server 2014 にアップグレード](../database-engine/install-windows/upgrade-sql-server.md)します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行して [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードする前に、アップグレード プロセスに関する以下のトピックを参照してください。  
+ [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] の既存のインスタンスを [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードできます。 詳細については、[SQL Server 2014 にアップグレード](../database-engine/install-windows/upgrade-sql-server.md)を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行して [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードする前に、アップグレード プロセスに関する以下のトピックを参照してください。  
   
 |説明|トピック|  
 |-----------------|-----------|  

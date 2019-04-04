@@ -122,7 +122,7 @@ ms.locfileid: "53365844"
 ##  <a name="bkmk_modelsize"></a> モデルのサイズ  
  モデルのサイズ (オブジェクトの総数) は、ソリューションの種類によって変わりません。 ただし、各ソリューションを作成するためのデザイン ツールで、大量のオブジェクトの処理に対応する程度は異なります。 大規模なモデルは、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で作成すると比較的簡単です。オブジェクト エクスプローラーやソリューション エクスプローラーでオブジェクトを種類別にダイアグラム化したり一覧表示したりするための機能が豊富に揃っているからです。  
   
- 何百ものテーブルやディメンションから構成される非常に大きなモデルは、通常、デザイン ツールではなく Visual Studio でプログラムによって作成されます。 詳細については、モデル内のオブジェクトの最大数は、次を参照してください。[最大容量仕様&#40;Analysis Services&#41;](multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md)します。  
+ 何百ものテーブルやディメンションから構成される非常に大きなモデルは、通常、デザイン ツールではなく Visual Studio でプログラムによって作成されます。 詳細については、モデル内のオブジェクトの最大数は、[最大容量仕様&#40;Analysis Services&#41;](multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md)を参照してください。  
   
 ##  <a name="bkmk_ext"></a> プログラマビリティと開発者エクスペリエンス  
  テーブル モデルと多次元モデルについては、1 つのオブジェクト モデルが両方のモードで共有されます。 AMO と ADOMD.NET では、両方のモードがサポートされます。 どちらのクライアント ライブラリもテーブル構造用に変更されていないため、多次元モデルとテーブル モデルの構造と名前付け規則の間の相互関係を理解しておく必要があります。 手始めとして、AMO to Tabular プログラミング サンプルを確認して、テーブル モデルに対する AMO プログラミングについて学習します。 詳細についてからサンプルをダウンロード、 [codeplex web サイト](https://go.microsoft.com/fwlink/?LinkID=221036)します。  

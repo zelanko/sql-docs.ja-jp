@@ -43,6 +43,6 @@ Dbms 定義*長いデータ*として任意の文字または 254 文字など�
   
 7.  呼び出し**SQLParamData**をすべてのパラメーターのデータ、送信されたことを示すためにもう一度です。 ドライバーが SQL_NEED_DATA と次のパラメーターを識別する値を返すデータが送信されていないすべての実行時データ パラメーターがある場合アプリケーションは、手順 6 を返します。 すべての実行時データ パラメーターのデータを送信すると、ステートメントが実行されます。 **SQLParamData**返します SQL_SUCCESS、SQL_SUCCESS_WITH_INFO やことができますを返す任意の戻り値または診断を**SQLExecute**または**SQLExecDirect**返すことができます。  
   
- 後**SQLExecute**または**SQLExecDirect** SQL_NEED_DATA を返します、ステートメントが必要なデータの状態が最後の実行時データ パラメーターのデータが完全に送信されて、前にします。 ステートメントは、データの必要がある状態では、アプリケーションはのみ呼び出すことができます**SQLPutData**、 **SQLParamData**、 **SQLCancel**、 **SQLGetDiagField**、または**SQLGetDiagRec**; その他のすべての関数は、SQLSTATE HY010 を返す (関数のシーケンス エラーです)。 呼び出す**SQLCancel**ステートメントの実行をキャンセルし、前の状態に戻ります。 詳細については、次を参照してください。[付録 b: ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)します。  
+ 後**SQLExecute**または**SQLExecDirect** SQL_NEED_DATA を返します、ステートメントが必要なデータの状態が最後の実行時データ パラメーターのデータが完全に送信されて、前にします。 ステートメントは、データの必要がある状態では、アプリケーションはのみ呼び出すことができます**SQLPutData**、 **SQLParamData**、 **SQLCancel**、 **SQLGetDiagField**、または**SQLGetDiagRec**; その他のすべての関数は、SQLSTATE HY010 を返す (関数のシーケンス エラーです)。 呼び出す**SQLCancel**ステートメントの実行をキャンセルし、前の状態に戻ります。 詳細については、[付録 b: ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)を参照してください。  
   
  実行時にデータを送信することの例は、次を参照してください。、 [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)関数の説明。

@@ -51,7 +51,7 @@ ms.locfileid: "54254787"
 ## <a name="built-in-types-of-xml-schema"></a>XML スキーマの組み込み型  
  XML スキーマの組み込み型には、xs という定義済みの名前空間プレフィックスが付いています。 これらの種類のものが**xs:integer**と**xs:string**します。 これらの組み込み型はすべてサポートされます。 XML スキーマ コレクションを作成するときに、これらの型を使用できます。  
   
- 型指定された XML のクエリを実行するとき、ノードの静的および動的な型は、クエリの対象の列または変数に関連付けられた XML スキーマ コレクションによって決まります。 静的および動的な型の詳細については、次を参照してください。[式コンテキストとクエリの評価&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)します。 次のクエリを指定するなど、型指定されたに対して**xml**列 (`Instructions`)。 この式では `instance of` を使用して、返される `LotSize` 属性の型指定された値が `xs:decimal` 型であることを確認しています。  
+ 型指定された XML のクエリを実行するとき、ノードの静的および動的な型は、クエリの対象の列または変数に関連付けられた XML スキーマ コレクションによって決まります。 静的および動的な型の詳細については、[式コンテキストとクエリの評価&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)を参照してください。 次のクエリを指定するなど、型指定されたに対して**xml**列 (`Instructions`)。 この式では `instance of` を使用して、返される `LotSize` 属性の型指定された値が `xs:decimal` 型であることを確認しています。  
   
 ```  
 SELECT Instructions.query('  

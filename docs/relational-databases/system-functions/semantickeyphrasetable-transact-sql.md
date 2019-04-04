@@ -76,7 +76,7 @@ SEMANTICKEYPHRASETABLE
 |**score**|**REAL**|インデックスが作成された列の同じドキュメントに含まれる他のすべてのキー フレーズとの関係における、このキー フレーズの相対値です。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 詳細については、次を参照してください。[セマンティック検索を使用したドキュメント内のキー フレーズの検索](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)します。  
+ 詳細については、[セマンティック検索を使用したドキュメント内のキー フレーズの検索](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)を参照してください。  
   
 ## <a name="metadata"></a>メタデータ  
  セマンティックなキー フレーズの抽出および生成の詳細と状態については、次の動的管理ビューに対してクエリを実行してください。  

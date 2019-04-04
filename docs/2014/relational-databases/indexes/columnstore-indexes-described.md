@@ -196,7 +196,7 @@ ms.locfileid: "48109808"
 ##  <a name="related"></a> 関連タスクおよびトピック  
   
 ### <a name="nonclustered-columnstore-indexes"></a>非クラスター化列ストア インデックス  
- 一般的なタスクは、次を参照してください。 [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md)します。  
+ 一般的なタスクは、[Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md)を参照してください。  
   
 -   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
@@ -205,7 +205,7 @@ ms.locfileid: "48109808"
 -   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
 ### <a name="clustered-columnstore-indexes"></a>クラスター化列ストア インデックス  
- 一般的なタスクは、次を参照してください。 [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)します。  
+ 一般的なタスクは、[Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)を参照してください。  
   
 -   [クラスター化列ストア インデックスを作成する&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   

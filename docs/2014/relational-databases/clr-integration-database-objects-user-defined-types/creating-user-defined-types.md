@@ -42,7 +42,7 @@ Reconfigure
 ## <a name="example"></a>例  
  次のコード リストはで詳しく説明されている Point UDT の定義[Coding User-Defined 型](creating-user-defined-types-coding.md)します。  
   
- このセクションで説明している他の例の完全なコード リストは、CLR サンプルをインストールして入手できます。 これらのサンプルをインストールする方法の詳細については、次を参照してください。 [SQL Server データベース エンジン サンプル](http://msftengprodsamples.codeplex.com/)します。  
+ このセクションで説明している他の例の完全なコード リストは、CLR サンプルをインストールして入手できます。 これらのサンプルをインストールする方法の詳細については、[SQL Server データベース エンジン サンプル](http://msftengprodsamples.codeplex.com/)を参照してください。  
   
  C#  
   

@@ -177,7 +177,7 @@ SSMA コンソールのコマンド ライン オプションの表を参照し�
   
 -   パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)します。  
   
--   レポートを生成するため、次を参照してください。[レポートを生成する&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)します。  
+-   レポートを生成するため、[レポートを生成する&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)を参照してください。  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)します。  
+-   コンソールで問題をトラブルシューティングするには、[トラブルシューティング&#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)を参照してください。  
   

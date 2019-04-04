@@ -70,7 +70,7 @@ ms.locfileid: "56011143"
 8.  上記の手順では、今回の名前、モデルを繰り返して`TM_Decision_Tree_Female`と種類**F**で、**値**テキスト ボックス。  
   
 ## <a name="process-the-filtered-models"></a>フィルター選択されたモデルの処理  
- モデルを使用するには、事前にそのモデルを配置して処理する必要があります。 処理モデルの詳細については、次を参照してください。[メーリング対象となる構造の処理モデル&#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md)します。  
+ モデルを使用するには、事前にそのモデルを配置して処理する必要があります。 処理モデルの詳細については、[メーリング対象となる構造の処理モデル&#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md)を参照してください。  
   
 #### <a name="to-process-the-filtered-model"></a>フィルター選択されたモデルを処理するには  
   
@@ -124,9 +124,9 @@ ms.locfileid: "56011143"
      3 つすべてのデシジョン ツリー モデルでランダム推測モデルよりも大幅なリフトが見られ、クラスター モデルや Naive Bayes モデルより高精度であることがわかります。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- フィルターの詳細については、次を参照してください。[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
+ フィルターの詳細については、[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)を参照してください。  
   
- 入れ子になったテーブルにフィルターを適用する方法の例は、次を参照してください。[中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)します。  
+ 入れ子になったテーブルにフィルターを適用する方法の例は、[中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)を参照してください。  
   
 ## <a name="previous-task-in-lesson"></a>このレッスンの前の作業  
  [リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  

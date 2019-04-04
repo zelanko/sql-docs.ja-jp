@@ -20,9 +20,9 @@ ms.locfileid: "52502700"
 # <a name="using-clustered-columnstore-indexes"></a>クラスター化列ストア インデックスの使用
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクラスター化 columnstore インデックスを使用するタスクです。  
   
- 列ストア インデックスの概要については、次を参照してください。[列ストア インデックスの概念](../relational-databases/indexes/columnstore-indexes-described.md)します。  
+ 列ストア インデックスの概要については、[列ストア インデックスの概念](../relational-databases/indexes/columnstore-indexes-described.md)を参照してください。  
   
- クラスター化列ストア インデックスについては、次を参照してください。[クラスター化列ストア インデックスを使用して](../relational-databases/indexes/indexes.md)します。  
+ クラスター化列ストア インデックスについては、[クラスター化列ストア インデックスを使用して](../relational-databases/indexes/indexes.md)を参照してください。  
   
 ## <a name="contents"></a>目次  
   

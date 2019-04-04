@@ -34,7 +34,7 @@ ms.locfileid: "52527635"
   
  ADO では、保存および読み込みで**レコード セット**を使用して、 **Recordset.Save**と**Recordset.Open(,,,adCmdFile)** ADO 上のメソッド**Recordset**オブジェクト。  
   
- 使用することができます、**レコード セットの保存**、ADO を保持する**レコード セット**ディスク上のファイルにします。 (保存することも、 **Recordset** ADO に**Stream**オブジェクト。 **Stream**オブジェクトは、ガイドの後半で説明します)。後で、使用することができます、**オープン**メソッドを再度開く、**レコード セット**それを使用する準備ができたら。 既定では、ADO の保存、**レコード セット**専用の Microsoft 高度なデータ TableGram (adtg 形式) の形式にします。 使用してこのバイナリ形式を指定、 **adPersistADTG PersistFormatEnum**値。 また、保存を選択することができます、**レコード セット**を代わりに使用して XML として出力**adPersistXML**します。 レコード セットを XML として保存する方法の詳細については、次を参照してください。 [XML 形式で保持するレコード](../../../ado/guide/data/persisting-records-in-xml-format.md)します。  
+ 使用することができます、**レコード セットの保存**、ADO を保持する**レコード セット**ディスク上のファイルにします。 (保存することも、 **Recordset** ADO に**Stream**オブジェクト。 **Stream**オブジェクトは、ガイドの後半で説明します)。後で、使用することができます、**オープン**メソッドを再度開く、**レコード セット**それを使用する準備ができたら。 既定では、ADO の保存、**レコード セット**専用の Microsoft 高度なデータ TableGram (adtg 形式) の形式にします。 使用してこのバイナリ形式を指定、 **adPersistADTG PersistFormatEnum**値。 また、保存を選択することができます、**レコード セット**を代わりに使用して XML として出力**adPersistXML**します。 レコード セットを XML として保存する方法の詳細については、[XML 形式で保持するレコード](../../../ado/guide/data/persisting-records-in-xml-format.md)を参照してください。  
   
  構文、**保存**メソッドを次に示します。  
   

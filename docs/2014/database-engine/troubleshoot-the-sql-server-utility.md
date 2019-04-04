@@ -87,7 +87,7 @@ Get-WmiObject Win32_Volume -ErrorAction Stop | Out-Null
 Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null  
 ```  
   
- WMI のトラブルシューティングの詳細については、次を参照してください。 [WMI のトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=178250)します。 SQL Server ユーティリティのこれらの操作におけるクエリはローカルで実行されるので、DCOM およびリモート トラブルシューティングの内容は適用されません。  
+ WMI のトラブルシューティングの詳細については、[WMI のトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=178250)を参照してください。 SQL Server ユーティリティのこれらの操作におけるクエリはローカルで実行されるので、DCOM およびリモート トラブルシューティングの内容は適用されません。  
   
 ## <a name="failed-data-collection"></a>データ収集の失敗  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのデータ収集イベントが失敗した場合は、次の可能性を検討してください。  

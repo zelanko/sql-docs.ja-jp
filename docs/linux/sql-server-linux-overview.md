@@ -26,7 +26,7 @@ SQL Server は SQL Server 2017 以降では、Linux で実行されます。 同
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-SQL Server 2019 プレビューは、Linux で実行されます。 同じ SQL Server データベース エンジンのような多くの機能と、オペレーティング システムに関係なくサービスにすることをお勧めします。 このリリースに関する詳細については、次を参照してください。[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)します。
+SQL Server 2019 プレビューは、Linux で実行されます。 同じ SQL Server データベース エンジンのような多くの機能と、オペレーティング システムに関係なくサービスにすることをお勧めします。 このリリースに関する詳細については、[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)を参照してください。
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"
@@ -104,7 +104,7 @@ SQL Server on Linux 理解している場合は、リリース ノートを確�
 ::: moniker-end
 
 > [!TIP]
-> よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)します。
+> よく寄せられる質問の回答は、、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)を参照してください。
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 

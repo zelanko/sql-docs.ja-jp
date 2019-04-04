@@ -25,7 +25,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48077252"
 ---
 # <a name="modify-or-delete-a-database-dimension-in-solution-explorer"></a>ソリューション エクスプローラーでのデータベース ディメンションの変更または削除
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーを使用して、ディメンションを変更または削除することができます。 ディメンションを変更した場合、そのディメンションを処理するまでユーザーは変更内容を利用できません。 詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)します。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーを使用して、ディメンションを変更または削除することができます。 ディメンションを変更した場合、そのディメンションを処理するまでユーザーは変更内容を利用できません。 詳細については、[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)を参照してください。  
   
 ### <a name="to-modify-a-dimension-in-sql-server-data-tools"></a>SQL Server データ ツールでディメンションを変更するには  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48077252"
   
 2.  **[ディメンション構造]** タブの **[属性]**、 **[階層]**、または **[データ ソース ビュー]** のいずれかのペインで、変更するアイテムをクリックして変更します。  
   
-     実行できる変更の種類の詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)します。  
+     実行できる変更の種類の詳細については、[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)を参照してください。  
   
 ### <a name="to-delete-a-dimension-in-sql-server-data-tools"></a>SQL Server データ ツールでディメンションを削除するには  
   

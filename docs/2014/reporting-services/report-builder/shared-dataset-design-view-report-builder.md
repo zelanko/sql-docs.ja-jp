@@ -23,7 +23,7 @@ ms.locfileid: "56292589"
   
  ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- レポート内のデータの使用方法の詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)します。  
+ レポート内のデータの使用方法の詳細については、[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)を参照してください。  
   
 ##  <a name="Ribbon"></a> リボン  
  リボンを使用すると、タスクの実行に必要なコマンドを簡単に見つけることができます。 コマンドは、接続、データセット、およびクエリ デザイナーの各論理グループに分類されています。  
@@ -32,7 +32,7 @@ ms.locfileid: "56292589"
  レポートで共有データ ソースを選択するか、レポート サーバーで共有データ ソースを参照するには、接続グループの **[選択]** ボタンを使用します。  
   
 > [!NOTE]  
->  共有データセットは共有データ ソースに基づく必要があります。 必要なデータ ソースを使用できない場合は、レポート サーバー上にデータ ソースを作成する必要があります。 詳細については、次を参照してください。[作成、削除、または共有データ ソースを変更&#40;レポート マネージャー&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)します。  
+>  共有データセットは共有データ ソースに基づく必要があります。 必要なデータ ソースを使用できない場合は、レポート サーバー上にデータ ソースを作成する必要があります。 詳細については、[作成、削除、または共有データ ソースを変更&#40;レポート マネージャー&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)を参照してください。  
   
  詳細については、「 [データ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)」を参照してください。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "56292589"
   
  詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   
- キャッシュ更新計画の詳細については、次を参照してください。[共有データセットのキャッシュ&#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)します。  
+ キャッシュ更新計画の詳細については、[共有データセットのキャッシュ&#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)を参照してください。  
   
 ### <a name="query-designer"></a>[クエリ デザイナー]  
  クエリ デザイナー ツール バーを使用すると、データ接続から取得するデータを指定するクエリを作成できます。 データ接続のデータ ソースの種類に関連付けられているクエリ デザイナーによって、表示されるツール バーが異なります。  

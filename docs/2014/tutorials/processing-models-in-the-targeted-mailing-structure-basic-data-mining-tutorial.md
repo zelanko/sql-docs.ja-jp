@@ -31,7 +31,7 @@ ms.locfileid: "56038983"
   
  この値は、トレーニング セット内に含まれるケースの数に影響しません。単純に、モデルを構築するたびに、同じ分割方法が使用されることを保証します。  
   
- 提示されたシードの詳細については、次を参照してください。[トレーニングとテスト データ セット](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md)します。  
+ 提示されたシードの詳細については、[トレーニングとテスト データ セット](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md)を参照してください。  
   
 #### <a name="to-set-the-holdout-seed"></a>提示されたシードを設定するには  
   

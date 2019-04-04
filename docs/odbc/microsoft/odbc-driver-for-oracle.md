@@ -34,7 +34,7 @@ ms.locfileid: "52515100"
   
  ![Oracle 用 ODBC ドライバー&#47;ドライバーのアーキテクチャ](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- ODBC Driver for Oracle は、API への準拠レベル 1 および SQL への準拠レベルのコアに準拠します。 API への準拠レベル 2 で、ほとんどのコアと拡張の SQL の適合性レベルで文法の一部の関数もサポートしています。 ドライバーは ODBC 2.5 に準拠し、32 ビット システムをサポートします。 Oracle 7.3 x が完全にはサポートされていますOracle8 には、サポートが制限されています。 Oracle の新しいリレーショナル オブジェクト モデルはサポートや ODBC Driver for Oracle は任意の Unicode データ型、Blob、Clob、およびなどの新しい Oracle8 データ型をサポートしません。 サポートされているデータの種類の詳細については、次を参照してください。 [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)このガイドでします。  
+ ODBC Driver for Oracle は、API への準拠レベル 1 および SQL への準拠レベルのコアに準拠します。 API への準拠レベル 2 で、ほとんどのコアと拡張の SQL の適合性レベルで文法の一部の関数もサポートしています。 ドライバーは ODBC 2.5 に準拠し、32 ビット システムをサポートします。 Oracle 7.3 x が完全にはサポートされていますOracle8 には、サポートが制限されています。 Oracle の新しいリレーショナル オブジェクト モデルはサポートや ODBC Driver for Oracle は任意の Unicode データ型、Blob、Clob、およびなどの新しい Oracle8 データ型をサポートしません。 サポートされているデータの種類の詳細については、[Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)このガイドでを参照してください。  
   
  Oracle のデータにアクセスするには、次のコンポーネントが必要です。  
   

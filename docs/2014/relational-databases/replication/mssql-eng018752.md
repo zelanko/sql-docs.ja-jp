@@ -48,7 +48,7 @@ ms.locfileid: "54133732"
 ## <a name="user-action"></a>ユーザーの操作  
  次の手順を実行して、この問題に対するトラブルシューティングに役立てることができます。 いずれかの手順によって、ログ リーダー エージェントをエラーを発生させないで起動できるようになった場合は、残りの手順を実行する必要はありません。  
   
--   このエラーの発生原因となる可能性があるその他のエラーについて、ログ リーダー エージェントの履歴を確認します。 レプリケーション モニターでエージェントの状態とエラーの詳細を表示する方法の詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
+-   このエラーの発生原因となる可能性があるその他のエラーについて、ログ リーダー エージェントの履歴を確認します。 レプリケーション モニターでエージェントの状態とエラーの詳細を表示する方法の詳細については、[情報を表示し、レプリケーション モニターを使用してタスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)を参照してください。  
   
 -   パブリッシュされたデータベースに接続されている特定のプロセス識別番号 (SPID) に対応する [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) の出力を確認します。 **sp_repldone**、 **sp_replcmds**、または **sp_replshowcmds**を実行していた可能性のある接続をすべて閉じます。  
   

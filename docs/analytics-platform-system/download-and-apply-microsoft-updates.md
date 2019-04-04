@@ -35,7 +35,7 @@ ms.locfileid: "52521477"
   
 -   Analytics Platform System の管理コンソールにアクセスし、アプライアンスの状態情報を表示する権限を持つログインがあります。  
   
--   ほとんどの場合、WSUS は、アプライアンスの外部にあるサーバーにアクセスする必要があります。 外部名を解決するのには、外部の DNS サーバーを使用するには、Analytics Platform System のホストと仮想マシン (Vm) を許可する外部名転送をサポートするために、分析プラットフォーム システム DNS を構成できますこの使用シナリオをサポートするために、アプライアンスです。 詳細については、次を参照してください。[非アプライアンス DNS 名の解決に DNS フォワーダーを使用して、 &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)します。  
+-   ほとんどの場合、WSUS は、アプライアンスの外部にあるサーバーにアクセスする必要があります。 外部名を解決するのには、外部の DNS サーバーを使用するには、Analytics Platform System のホストと仮想マシン (Vm) を許可する外部名転送をサポートするために、分析プラットフォーム システム DNS を構成できますこの使用シナリオをサポートするために、アプライアンスです。 詳細については、[非アプライアンス DNS 名の解決に DNS フォワーダーを使用して、 &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)を参照してください。  
   
 ## <a name="bkmk_ImportUpdates"></a>ダウンロードして、Microsoft 更新プログラムを適用するには  
   

@@ -40,7 +40,7 @@ ms.locfileid: "51670330"
   
 -   [(省略可能) 0 個以上のステップ修飾子](../xquery/path-expressions-specifying-predicates.md)  
   
- 詳細については、次を参照してください。[パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)します。  
+ 詳細については、[パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)を参照してください。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の XQuery 実装では、次の軸ステップがサポートされています。  
   
@@ -75,7 +75,7 @@ WHERE ProductModelID=19
   
 -   `query()`のメソッド、 **xml**データ型は、パス式を指定します。  
   
--   パス式の両方のステップが、`child` 軸およびノード名 (`ProductDescription`、`Features`) をノード テストとして指定しています。 ノード テストについては、次を参照してください。[パス式のステップでノード テストを指定する](../xquery/path-expressions-specifying-node-test.md)します。  
+-   パス式の両方のステップが、`child` 軸およびノード名 (`ProductDescription`、`Features`) をノード テストとして指定しています。 ノード テストについては、[パス式のステップでノード テストを指定する](../xquery/path-expressions-specifying-node-test.md)を参照してください。  
   
 ### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>B. descendant 軸と descendant-or-self 軸の指定  
  次の例では、descendant 軸と descendant-or-self 軸を使用します。 この例では、クエリがに対して指定されて、 **xml**型の変数。 XML インスタンスは、生成された結果の違いをわかりやすく示すために単純化してあります。  
@@ -187,7 +187,7 @@ WHERE  ProductModelID=19
 </ProductDescription>  
 ```  
   
- クエリでは、FLWOR ステートメントで反復子変数 `$f` を設定し、`<Features>` 要素の子要素を返します。 詳細については、次を参照してください。 [FLWOR ステートメントおよびイテレーション&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)します。 製品特徴ごとに、`return` 句によって次の形式で XML が構築されます。  
+ クエリでは、FLWOR ステートメントで反復子変数 `$f` を設定し、`<Features>` 要素の子要素を返します。 詳細については、[FLWOR ステートメントおよびイテレーション&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)を参照してください。 製品特徴ごとに、`return` 句によって次の形式で XML が構築されます。  
   
 ```  
 <Feature ProductModelID="...">...</Feature>  

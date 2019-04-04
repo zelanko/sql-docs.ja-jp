@@ -33,7 +33,7 @@ ms.locfileid: "56030803"
 4.  **データ マイニング構造の作成**] ページ [**を使用するデータ マイニング技法を指定しますか?** を選択します**Microsoft デシジョン ツリー**します。  
   
     > [!NOTE]  
-    >  データ マイニング アルゴリズムが見つからないという警告が発生する場合は、プロジェクトのプロパティが適切に構成されていない可能性があります。 この警告は、プロジェクトが [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーからデータ マイニング アルゴリズムの一覧を取得しようとして、サーバーが見つからない場合に発生します。 既定では、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]使用**localhost**サーバーとします。 別のインスタンスまたは名前付きインスタンスを使用している場合は、プロジェクトのプロパティを変更する必要があります。 詳細については、次を参照してください。 [Analysis Services プロジェクトを作成する&#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)します。  
+    >  データ マイニング アルゴリズムが見つからないという警告が発生する場合は、プロジェクトのプロパティが適切に構成されていない可能性があります。 この警告は、プロジェクトが [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーからデータ マイニング アルゴリズムの一覧を取得しようとして、サーバーが見つからない場合に発生します。 既定では、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]使用**localhost**サーバーとします。 別のインスタンスまたは名前付きインスタンスを使用している場合は、プロジェクトのプロパティを変更する必要があります。 詳細については、[Analysis Services プロジェクトを作成する&#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)を参照してください。  
   
 5.  **[次へ]** をクリックします。  
   

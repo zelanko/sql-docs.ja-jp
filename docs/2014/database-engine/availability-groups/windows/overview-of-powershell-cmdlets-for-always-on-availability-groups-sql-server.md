@@ -113,7 +113,7 @@ ms.locfileid: "49169202"
   
  * 可用性グループ内のすべての可用性レプリカについての情報を表示するには、プライマリ レプリカをホストするサーバー インスタンスを使用してください。  
   
- 詳細については、次を参照してください。 [AlwaysOn ポリシーを使用して、可用性グループの正常性を表示して&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)します。  
+ 詳細については、[AlwaysOn ポリシーを使用して、可用性グループの正常性を表示して&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

@@ -57,7 +57,7 @@ ms.locfileid: "53203452"
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="remarks"></a>コメント  
- 動的管理ビューの詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+ 動的管理ビューの詳細については、[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [管理者以外のユーザー インスタンス](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  

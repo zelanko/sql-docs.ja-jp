@@ -24,7 +24,7 @@ ms.locfileid: "48146652"
   SQL Server Management Studio の PowerPivot から復元機能を使って、テーブル モードで実行されている Analysis Services インスタンス上に新しいテーブル モデル データベースを作成したり、PowerPivot ブック (.xlsx) から既存のデータベースに復元したりできます。  
   
 > [!NOTE]  
->  SQL Server Data Tools の PowerPivot からのインポート プロジェクト テンプレートが同様の機能を提供します。 詳細については、次を参照してください。 [PowerPivot からインポート&#40;SSAS 表形式&#41;](import-from-power-pivot-ssas-tabular.md)します。  
+>  SQL Server Data Tools の PowerPivot からのインポート プロジェクト テンプレートが同様の機能を提供します。 詳細については、[PowerPivot からインポート&#40;SSAS 表形式&#41;](import-from-power-pivot-ssas-tabular.md)を参照してください。  
   
  PowerPivot から復元機能を使用する場合、次の点に注意してください。  
   

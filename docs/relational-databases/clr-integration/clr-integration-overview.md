@@ -41,11 +41,11 @@ ms.locfileid: "53208911"
  計算や複雑な実行ロジックには、[!INCLUDE[tsql](../../includes/tsql-md.md)] よりもマネージド コードが適しています。また、マネージド コードでは、文字列処理や正規表現など、多数の複雑なタスクが幅広くサポートされています。 .NET Framework ライブラリの機能を使用すると、数千もの事前にビルドされたクラスやルーチンにアクセスすることができます。 このようなクラスやルーチンには、任意のストアド プロシージャ、トリガー、またはユーザー定義関数から簡単にアクセスできます。 BCL (基本クラス ライブラリ) には、文字列操作、高度な算術演算、ファイル アクセス、暗号化などの機能を提供するクラスがあります。  
   
 > [!NOTE]  
->  これらのクラスの多くは、SQL Server の CLR コード内から使用できますが、サーバー側での使用が適していないクラス (ウィンドウ関連のクラスなど) にはアクセスできません。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)します。  
+>  これらのクラスの多くは、SQL Server の CLR コード内から使用できますが、サーバー側での使用が適していないクラス (ウィンドウ関連のクラスなど) にはアクセスできません。 詳細については、[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)を参照してください。  
   
  マネージド コードの利点の 1 つはタイプ セーフであることです。つまり、コードから各データ型へのアクセスは、正しく定義された許容される方法に限られます。 CLR は、マネージド コードが実行される前に、そのコードが安全であることを確認します。 たとえば、事前に書き込まれていないメモリからの読み取りが行われないように、コードがチェックされます。 また、CLR は、コードからアンマネージ メモリの操作が行われないようにする際にも役立ちます。  
   
- CLR 統合を使用すると、パフォーマンスが向上する可能性が高くなります。 詳しくは、次を参照してください。 [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)します。  
+ CLR 統合を使用すると、パフォーマンスが向上する可能性が高くなります。 詳しくは、[CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)を参照してください。  
  
 > [!WARNING]
 >  CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 詳しくは、「[CLR の厳密なセキュリティ](../../database-engine/configure-windows/clr-strict-security.md)」をご覧ください。 
@@ -57,7 +57,7 @@ ms.locfileid: "53208911"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] とマネージド コードのどちらを使用するかを判断する際には、コードをサーバー コンピューターで実行するか、またはクライアント コンピューターで実行するかを判断する必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)] とマネージド コードは、どちらもサーバー側で実行することができます。 サーバー側でコードを実行すると、コードとデータが近くにあるため、サーバーの処理能力を活用できます。 逆に、データベース サーバーでプロセッサを集中的に使用するタスクを実行することが好ましくない場合もあります。 現在、多くのクライアント コンピューターは高性能なので、できるだけ多くのコードをクライアント側で実行して、この処理能力を活用することもできます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] はクライアント側で実行することはできませんが、マネージド コードはクライアント側で実行することができます。  
   
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>拡張ストアド プロシージャとマネージド コードの選択  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャでは実行不可能な機能を実行するために、拡張ストアド プロシージャを構築できます。 ただし、拡張ストアド プロシージャでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性を侵害する可能性があります。一方、マネージド コードは、タイプ セーフなので、SQL Server プロセスの整合性を侵害することはありません。 さらに、CLR のマネージド コードと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間では、メモリ管理、スレッドやファイバーのスケジュール設定、同期サービスが、より密接に統合されます。 CLR 統合を使用すると、拡張ストアド プロシージャを使用するよりも安全に、[!INCLUDE[tsql](../../includes/tsql-md.md)] では記述できないタスクを実行するのに必要なストアド プロシージャを記述することができます。 CLR 統合と拡張ストアド プロシージャの詳細については、次を参照してください。 [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャでは実行不可能な機能を実行するために、拡張ストアド プロシージャを構築できます。 ただし、拡張ストアド プロシージャでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性を侵害する可能性があります。一方、マネージド コードは、タイプ セーフなので、SQL Server プロセスの整合性を侵害することはありません。 さらに、CLR のマネージド コードと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間では、メモリ管理、スレッドやファイバーのスケジュール設定、同期サービスが、より密接に統合されます。 CLR 統合を使用すると、拡張ストアド プロシージャを使用するよりも安全に、[!INCLUDE[tsql](../../includes/tsql-md.md)] では記述できないタスクを実行するのに必要なストアド プロシージャを記述することができます。 CLR 統合と拡張ストアド プロシージャの詳細については、[CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [.NET Framework のインストール](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   

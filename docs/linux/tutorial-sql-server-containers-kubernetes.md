@@ -214,7 +214,7 @@ Kubernetes クラスターでは、SA のパスワードを作成します。 Ku
    * MSSQL_PID `value: "Developer"`:SQL Server Developer エディションを実行するコンテナーを設定します。 Developer edition では、実稼働データのライセンスがありません。 展開が実稼働環境用の場合は、適切なエディションを設定します。 (`Enterprise`、 `Standard`、または`Express`)。 
 
       >[!NOTE]
-      >詳細については、次を参照してください。 [SQL Server のライセンス方法](https://www.microsoft.com/sql-server/sql-server-2017-pricing)します。
+      >詳細については、[SQL Server のライセンス方法](https://www.microsoft.com/sql-server/sql-server-2017-pricing)を参照してください。
 
    * `persistentVolumeClaim`:この値には、エントリが必要です。`claimName:`永続ボリューム要求に使用される名前にマップされます。 このチュートリアルでは`mssql-data`します。 
 

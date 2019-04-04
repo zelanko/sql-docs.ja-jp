@@ -57,7 +57,7 @@ ms.locfileid: "47815270"
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
   
 ## <a name="remarks"></a>コメント  
- このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)します。  
+ このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、[統計](../../relational-databases/statistics/statistics.md)を参照してください。  
   
  値**object_id1**を通じて**object_id4**ジョブ要求の種類によって異なります。 次の表は、それぞれのジョブの種類の列に関する説明です。  
   

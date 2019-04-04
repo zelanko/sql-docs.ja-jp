@@ -33,7 +33,7 @@ ms.locfileid: "56286680"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] データベース エンジン  
   
--   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベース。  詳細については、次を参照してください。 [Adventure Works for SQL Server 2012 (SQL Server 2012 用 Adventure Works)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).します。 サポートの詳細については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サンプル データベースとサンプル コードの[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]を参照してください[Databases and Samples Overview](https://go.microsoft.com/fwlink/?LinkId=110391) CodePlex Web サイト。  
+-   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベース。  詳細については、[Adventure Works for SQL Server 2012 (SQL Server 2012 用 Adventure Works)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).を参照してください。 サポートの詳細については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サンプル データベースとサンプル コードの[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]を参照してください[Databases and Samples Overview](https://go.microsoft.com/fwlink/?LinkId=110391) CodePlex Web サイト。  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 。  
   

@@ -25,7 +25,7 @@ ms.locfileid: "47811330"
 > [!NOTE]  
 >  ODBC は Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに含まれます。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  
   
- インストーラー DLL には、インストール、ODBC コンポーネントを削除して、これらのコンポーネントについては、レジストリを維持、およびデータ ソースについては、レジストリを維持関数が含まれています。 Microsoft によって書き込まれ、再配布できます。 インストーラー DLL 内の関数の詳細については、次を参照してください。 [Installer DLL API リファレンス](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)します。  
+ インストーラー DLL には、インストール、ODBC コンポーネントを削除して、これらのコンポーネントについては、レジストリを維持、およびデータ ソースについては、レジストリを維持関数が含まれています。 Microsoft によって書き込まれ、再配布できます。 インストーラー DLL 内の関数の詳細については、[Installer DLL API リファレンス](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ODBC コンポーネントのレジストリ エントリ](../../../odbc/reference/install/registry-entries-for-odbc-components.md)   

@@ -24,7 +24,7 @@ ms.locfileid: "56296930"
  レポート定義の各データ ソース定義では、名前および接続文字列のほか、統合セキュリティを使用するかどうかと、必要な資格情報が指定されなかった場合にどんなプロンプトを表示するかを指定します。 資格情報は、レポート定義に保存されません。 レポートがレポート サーバー上でパブリッシュされると、その後はデータ ソースをレポート定義とは別に管理できます。 データ ソースの所有者は、レポート サーバー上の埋め込みデータ ソースと共有データ ソースの両方に対して資格情報を指定できます。  
   
 > [!NOTE]  
->  レポート サーバーの管理者は、レポート サーバーを参照して共有データ ソースまたはモデルを選択する操作や、レポートを開く操作または保存する操作を実行するための適切な権限をユーザーに許可する必要があります。 詳細については、次を参照してください。[インストール、アンインストール、およびレポート ビルダーのサポート](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)します。  
+>  レポート サーバーの管理者は、レポート サーバーを参照して共有データ ソースまたはモデルを選択する操作や、レポートを開く操作または保存する操作を実行するための適切な権限をユーザーに許可する必要があります。 詳細については、[インストール、アンインストール、およびレポート ビルダーのサポート](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
@@ -72,7 +72,7 @@ ms.locfileid: "56296930"
  資格情報の要求を指定した場合、レポートにアクセスするユーザーがデータを取得するには、それぞれがユーザー名とパスワードを入力する必要があります。 機密データを含むレポートには、このオプションを使用することをお勧めします。 要求される資格情報は、Windows アカウントまたはデータベース ログインのいずれかです。 指定した資格情報がデータベース サーバーによって認識されない場合や、指定したユーザーにデータを取得するための権限が与えられていない場合、接続は失敗します。  
   
 ### <a name="no-credentials"></a>資格情報を使用しない  
- このデータ ソースでは資格情報が必要とされません。 レポート サーバー上でこのレポートを実行するには、自動実行用のアカウントを構成する必要があります。 詳細については、次を参照してください。[自動実行アカウントを構成する&#40;SSRS 構成マネージャー&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)で、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ドキュメント[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)します。  
+ このデータ ソースでは資格情報が必要とされません。 レポート サーバー上でこのレポートを実行するには、自動実行用のアカウントを構成する必要があります。 詳細については、[自動実行アカウントを構成する&#40;SSRS 構成マネージャー&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)で、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ドキュメント[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [インストール、アンインストール、およびレポート ビルダーのサポート](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   

@@ -41,7 +41,7 @@ ms.locfileid: "53369734"
  SQL Server Management Studio のプロパティ ページには、利用可能なプロパティのサブセットが含まれ、変更する可能性の高いプロパティのみが表示されます。 プロパティの完全なセットは msmdsrv.ini ファイルにあります。  
   
 > [!NOTE]  
->  このトピックには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の配置構成プロパティに関する情報は含まれていません。 展開構成の詳細については、次を参照してください。[ソリューションの配置に関する構成設定を指定する](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)します。  
+>  このトピックには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の配置構成プロパティに関する情報は含まれていません。 展開構成の詳細については、[ソリューションの配置に関する構成設定を指定する](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)を参照してください。  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Management Studio での構成プロパティの表示または設定  
   

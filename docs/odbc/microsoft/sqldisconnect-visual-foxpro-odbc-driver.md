@@ -30,4 +30,4 @@ ms.locfileid: "47828050"
   
  接続を閉じます。  
   
- 詳細については、次を参照してください。 [SQLDisconnect](../../odbc/reference/syntax/sqldisconnect-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLDisconnect](../../odbc/reference/syntax/sqldisconnect-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

@@ -88,7 +88,7 @@ ms.locfileid: "56287130"
   
  ドリルダウン トグルを含めて、最初は詳細データを非表示にすることもできます。ユーザーは、トグルをクリックすることにより、表示するデータの量を調整できます。  
   
- 詳細については、次を参照してください。[マトリックス&#40;レポート ビルダーおよび SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)します。  
+ 詳細については、[マトリックス&#40;レポート ビルダーおよび SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)を参照してください。  
   
 
   
@@ -97,7 +97,7 @@ ms.locfileid: "56287130"
   
  ![ツールボックスから追加された新しい一覧、選択](../media/rs-listtemplatenewselected.gif "ツールボックスから追加された新しい一覧、選択")  
   
- 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)します。  
+ 詳細については、[一覧&#40;レポート ビルダーおよび SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)を参照してください。  
   
 
   

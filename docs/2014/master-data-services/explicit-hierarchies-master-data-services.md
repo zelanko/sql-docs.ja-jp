@@ -30,7 +30,7 @@ ms.locfileid: "52809274"
  明示的階層は不規則で、階層は異なるレベルで同時に終了できます。 各統合メンバーの下位に統合メンバーとリーフ メンバーを無制限に含めることも、まったく含めないこともできます。 リーフ メンバーは、単一の統合メンバーの下位に含めることも、複数レベルの統合メンバーの下位に含めることもできます。  
   
 > [!NOTE]  
->  明示的階層を作成するには、明示的階層でエンティティを有効にしておく必要があります。 詳細については、次を参照してください。[明示的階層およびコレクションに対してエンティティを有効にする&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)します。  
+>  明示的階層を作成するには、明示的階層でエンティティを有効にしておく必要があります。 詳細については、[明示的階層およびコレクションに対してエンティティを有効にする&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)を参照してください。  
   
 ## <a name="types-of-explicit-hierarchies"></a>明示的階層の種類  
  明示的階層には、必須階層と任意階層の 2 種類があります。  

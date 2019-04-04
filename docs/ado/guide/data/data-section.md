@@ -38,7 +38,7 @@ ms.locfileid: "53207771"
 ## <a name="datetime"></a>DateTime  
  バリアントの VT_DATE 形式が XML データのデータ型によって直接サポートされていません。 データと時刻の両方のコンポーネントを含む日付の正しい形式は、yyyy、mm-ddThh:mm:ss します。  
   
- XML で指定された日付形式に関する詳細については、次を参照してください。、 [W3C の XML データの指定](https://go.microsoft.com/fwlink/?LinkId=5692)します。  
+ XML で指定された日付形式に関する詳細については、、 [W3C の XML データの指定](https://go.microsoft.com/fwlink/?LinkId=5692)を参照してください。  
   
  XML データの指定が 2 つの同等のデータ型を定義する場合 (たとえば、i4 int = =)、ADO には、フレンドリ名を書き込みますが、読み取りは両方が。  
   

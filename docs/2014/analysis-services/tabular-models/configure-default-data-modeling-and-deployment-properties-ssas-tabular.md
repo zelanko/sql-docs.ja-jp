@@ -36,7 +36,7 @@ ms.locfileid: "48189188"
   
     |プロパティ|既定の設定|説明|  
     |--------------|---------------------|-----------------|  
-    |**新しいプロジェクトの既定の互換性レベル**|SQL Server 2012 (1100)|この設定では、新しいテーブル モデル プロジェクトを作成するときに使用する既定の互換性レベルを指定します。 SP1 が適用されていない Analysis Services インスタンスに配置する場合は SQL Server 2012 RTM (1100) を、配置インスタンスに SP1 が適用されている場合は SQL Server 2012 SP1 または SQL Server 2014 を選択できます。 詳細については、次を参照してください。[互換性レベル&#40;SSAS テーブル SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)します。|  
+    |**新しいプロジェクトの既定の互換性レベル**|SQL Server 2012 (1100)|この設定では、新しいテーブル モデル プロジェクトを作成するときに使用する既定の互換性レベルを指定します。 SP1 が適用されていない Analysis Services インスタンスに配置する場合は SQL Server 2012 RTM (1100) を、配置インスタンスに SP1 が適用されている場合は SQL Server 2012 SP1 または SQL Server 2014 を選択できます。 詳細については、[互換性レベル&#40;SSAS テーブル SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)を参照してください。|  
     |**互換性レベルのオプション**|すべてをオン|新しいテーブル モデル プロジェクトと、別の Analysis Services インスタンスに配置するときの互換性レベル オプションを指定します。|  
   
 #### <a name="to-configure-the-default-deployment-server-property-setting-for-new-model-projects"></a>新しいモデル プロジェクトの既定の配置サーバー プロパティの設定を構成するには  

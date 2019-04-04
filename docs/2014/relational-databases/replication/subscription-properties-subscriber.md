@@ -84,7 +84,7 @@ ms.locfileid: "54134982"
  **[スナップショットの場所]**  
  初期化または再初期化の際にアクセスするスナップショット ファイルの場所を決定します。 場所は次の値のいずれかです。  
   
--   **[既定の場所]**: ディストリビューターの構成時に定義される既定の場所です。 詳細については、次を参照してください。 [、既定のスナップショットの場所を指定](snapshot-options.md#snapshot-folder-locations)します。    
+-   **[既定の場所]**: ディストリビューターの構成時に定義される既定の場所です。 詳細については、[、既定のスナップショットの場所を指定](snapshot-options.md#snapshot-folder-locations)を参照してください。    
 -   **[代替フォルダー]**: **[パブリケーションのプロパティ]** ダイアログ ボックスで指定することができる代替の場所です。 詳細については、「 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)」を参照してください。    
 -   **[動的スナップショット フォルダー]**: パラメーター化された行フィルターを使用するマージ パブリケーションのスナップショットの場所です。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)」をご覧ください。  
 -   **[FTP フォルダー]**: FTP (ファイル転送プロトコル) サーバーにアクセスできるフォルダーです。 詳細については、「[FTP によるスナップショットの転送](transfer-snapshots-through-ftp.md)」を参照してください。  

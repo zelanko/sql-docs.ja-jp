@@ -36,6 +36,6 @@ ms.locfileid: "53366824"
  切り捨て操作に失敗しました。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- エラーの原因を特定の Windows 状態コードを参照してください。 この状態コードの詳細については、次を参照してください。、[イベントとエラー メッセージ センター](https://go.microsoft.com/fwlink/?linkid=47660)します。  
+ エラーの原因を特定の Windows 状態コードを参照してください。 この状態コードの詳細については、、[イベントとエラー メッセージ センター](https://go.microsoft.com/fwlink/?linkid=47660)を参照してください。  
   
   

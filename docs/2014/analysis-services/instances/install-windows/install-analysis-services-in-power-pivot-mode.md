@@ -69,7 +69,7 @@ ms.locfileid: "53373974"
 6.  リリース ノートを確認して[SQL Server 2012 Service Pack 1 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=248389)(https://go.microsoft.com/fwlink/?LinkID=248389)します。  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server エディションの要件  
- ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、次を参照してください。 [SQL Server 2012 の各エディションでサポートされる機能 (https://go.microsoft.com/fwlink/?linkid=232473) ](https://go.microsoft.com/fwlink/?linkid=232473)と[エディションと SQL Server 2014 のコンポーネントの](../../../sql-server/editions-and-components-of-sql-server-2016.md)します。  
+ ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、[SQL Server 2012 の各エディションでサポートされる機能 (https://go.microsoft.com/fwlink/?linkid=232473) ](https://go.microsoft.com/fwlink/?linkid=232473)と[エディションと SQL Server 2014 のコンポーネントの](../../../sql-server/editions-and-components-of-sql-server-2016.md)を参照してください。  
   
  現在のリリース ノートをご覧[SQL Server 2012 SP1 リリース ノート](ttp://go.microsoft.com/fwlink/?LinkID=248389)(https://go.microsoft.com/fwlink/?LinkID=248389)します。  
   

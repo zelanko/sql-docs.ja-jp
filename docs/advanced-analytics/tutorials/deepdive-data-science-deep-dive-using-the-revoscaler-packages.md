@@ -41,7 +41,7 @@ ms.locfileid: "58511729"
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
-クライアントの構成については、次を参照してください。 [R 開発用のデータ サイエンス クライアント セットアップ](../r/set-up-a-data-science-client.md)します。
+クライアントの構成については、[R 開発用のデータ サイエンス クライアント セットアップ](../r/set-up-a-data-science-client.md)を参照してください。
 
 
 ## <a name="r-development-tools"></a>R 開発ツール
@@ -50,7 +50,7 @@ R 開発者は、通常記述および R コードをデバッグするための
 
 - **R Tools for Visual Studio** (RTVS) は、無料プラグインを Intellisense、デバッグを提供し、Microsoft R 向けサポートR Server と SQL Server Machine Learning サービスの両方で使用できます。 ダウンロードするには、「 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)」を参照してください。
 
-- **RStudio** は R 開発用の最も一般的な環境の 1 つです。 詳細については、次を参照してください。 [ https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)します。
+- **RStudio** は R 開発用の最も一般的な環境の 1 つです。 詳細については、[ https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)を参照してください。
 
 - 基本 R ツール (R.exe、RTerm.exe、RScripts.exe) は、SQL Server または R Client に R をインストールするときにも既定でインストールされます。 IDE をインストールしたくない場合は、このチュートリアルでは、コードを実行する組み込みの R ツールを使用できます。
 

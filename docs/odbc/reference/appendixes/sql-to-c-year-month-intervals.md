@@ -31,7 +31,7 @@ ms.locfileid: "54419937"
 - SQL_INTERVAL_YEAR
 - SQL_INTERVAL_YEAR_TO_MONTH
 
-次の表は、ODBC C データ型の年-月には、SQL データの間隔を変換することがありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)します。  
+次の表は、ODBC C データ型の年-月には、SQL データの間隔を変換することがありますを示します。 列とテーブルの用語の詳細については、[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)を参照してください。  
 
 |C 型識別子|テスト|TargetValuePtr|StrLen_or_IndPtr|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  

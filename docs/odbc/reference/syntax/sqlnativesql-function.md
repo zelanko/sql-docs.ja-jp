@@ -90,7 +90,7 @@ SQLRETURN SQLNativeSql(
 |HY090|文字列またはバッファーの長さが無効です。|(DM) 引数*TextLength1* SQL_NTS に等しくないが、0 より小さいをでした。|  
 |||(DM) 引数*BufferLength*が 0 との引数よりも小さい*OutStatementText*が null ポインターではありません。|  
 |HY109|無効なカーソルの位置|カーソルの現在の行に削除されたかがまだフェッチされていません。 このエラーをネイティブ DBMS カーソルの実装を持つドライバーによって返されないことができます。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *ConnectionHandle*関数をサポートしていません。|  
   
@@ -119,7 +119,7 @@ SELECT to_number (empid) FROM employee
 SELECT int2 (empid) FROM employee  
 ```  
   
- 詳細については、次を参照してください。[を直接実行](../../../odbc/reference/develop-app/direct-execution-odbc.md)と[準備された実行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)します。  
+ 詳細については、[を直接実行](../../../odbc/reference/develop-app/direct-execution-odbc.md)と[準備された実行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)を参照してください。  
   
 ## <a name="related-functions"></a>関連する関数  
  [なし] :  

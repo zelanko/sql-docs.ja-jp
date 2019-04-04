@@ -24,7 +24,7 @@ ms.locfileid: "52413859"
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]をインスタンス レベルで設定し、電子メール通知を有効にして、バックアップ処理を監視します。  
   
- 設定に関するチュートリアルについては[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]可用性グループの場合は、次を参照してください。[可用性グループを設定する SQL Server Managed Backup to Microsoft Azure](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)します。  
+ 設定に関するチュートリアルについては[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]可用性グループの場合は、[可用性グループを設定する SQL Server Managed Backup to Microsoft Azure](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)を参照してください。  
   
 ## <a name="setting-up-includesssmartbackupincludesss-smartbackup-mdmd"></a>[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の設定  
   
@@ -43,7 +43,7 @@ ms.locfileid: "52413859"
 
 
 1.  **Microsoft Azure ストレージ アカウントを作成します。** バックアップは、Microsoft Azure ストレージ サービスに格納されます。 アカウントを既に持っていない場合、Microsoft Azure ストレージ アカウントを作成する必要があります。
-    - SQL Server 2014 では、これは、ブロックとは異なる追加 blob、ページ blob を使用します。 そのため、汎用アカウントと blob のアカウントではなくを作成する必要があります。 詳細については、次を参照してください。 [Azure ストレージ アカウントについて](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)します。
+    - SQL Server 2014 では、これは、ブロックとは異なる追加 blob、ページ blob を使用します。 そのため、汎用アカウントと blob のアカウントではなくを作成する必要があります。 詳細については、[Azure ストレージ アカウントについて](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)を参照してください。
     - ストレージ アカウント名およびアクセス キーをメモしておきます。 ストレージ アカウント名およびアクセス キー情報は、SQL 資格情報の作成に使用します。 SQL 資格情報は、ストレージ アカウントへの認証に使用されます。  
  
 2.  **SQL 資格情報を作成します。** Id、およびストレージ アクセス キーをパスワードとしてストレージ アカウントの名前を使用して SQL 資格情報を作成します。  
@@ -54,7 +54,7 @@ ms.locfileid: "52413859"
   
 5.  **有効にして構成[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:** SQL Server Management Studio を起動し、データベースがインストールされているインスタンスに接続します。 要件に合わせて、データベース名、SQL 資格情報、保有期間、および暗号化オプションの値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
   
-     暗号化の証明書を作成する方法の詳細については、次を参照してください。、**バックアップ証明書を作成する**ステップ[Create an Encrypted Backup](create-an-encrypted-backup.md)します。  
+     暗号化の証明書を作成する方法の詳細については、、**バックアップ証明書を作成する**ステップ[Create an Encrypted Backup](create-an-encrypted-backup.md)を参照してください。  
   
     ```  
     Use msdb;  
@@ -79,7 +79,7 @@ ms.locfileid: "52413859"
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
-     管理、運用、および分析のチャネル イベントは既定で有効になっていて、無効にできないことに注意してください。 手動の介入を必要とするイベントを監視するには、これで十分です。  デバッグ イベントを有効にすることはできますが、デバッグ チャネルには、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] が問題の検出および解決に使用する情報イベントとデバッグ イベントが含まれています。 詳細については、次を参照してください。[モニター SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)します。  
+     管理、運用、および分析のチャネル イベントは既定で有効になっていて、無効にできないことに注意してください。 手動の介入を必要とするイベントを監視するには、これで十分です。  デバッグ イベントを有効にすることはできますが、デバッグ チャネルには、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] が問題の検出および解決に使用する情報イベントとデバッグ イベントが含まれています。 詳細については、[モニター SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)を参照してください。  
   
 7.  **正常性状態の通知を有効化し、構成する:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] には、注意を要するエラーまたは警告の電子メール通知を送信するためにエージェント ジョブを作成するストアド プロシージャがあります。 次の手順では、電子メール通知を有効にして構成するためのプロセスを示します。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "52413859"
   
     ```  
   
- このセクションで説明した手順は、データベースで初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を構成するための特別な手順です。 同じシステム ストアド プロシージャを使用して既存の構成を変更する**smart_admin.sp_set_db_backup**新しい値を指定します。 詳細については、次を参照してください。 [SQL Server Managed Backup to Microsoft Azure - 保有期間とストレージ設定](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)します。  
+ このセクションで説明した手順は、データベースで初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を構成するための特別な手順です。 同じシステム ストアド プロシージャを使用して既存の構成を変更する**smart_admin.sp_set_db_backup**新しい値を指定します。 詳細については、[SQL Server Managed Backup to Microsoft Azure - 保有期間とストレージ設定](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)を参照してください。  
   
 ### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd-for-the-instance-with-default-settings"></a>既定の設定を使用してインスタンスの [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にする  
  このチュートリアルでは、有効にして構成する手順を説明します。[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]インスタンスについて、"MyInstance"\\します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の正常性状態の監視を有効にするための手順も含まれています。  
@@ -162,7 +162,7 @@ ms.locfileid: "52413859"
 
 
 1.  **Microsoft Azure ストレージ アカウントを作成します。** バックアップは、Microsoft Azure ストレージ サービスに格納されます。 アカウントを既に持っていない場合、Microsoft Azure ストレージ アカウントを作成する必要があります。
-    - SQL Server 2014 では、これは、ブロックとは異なる追加 blob、ページ blob を使用します。 そのため、汎用アカウントと blob のアカウントではなくを作成する必要があります。 詳細については、次を参照してください。 [Azure ストレージ アカウントについて](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)します。
+    - SQL Server 2014 では、これは、ブロックとは異なる追加 blob、ページ blob を使用します。 そのため、汎用アカウントと blob のアカウントではなくを作成する必要があります。 詳細については、[Azure ストレージ アカウントについて](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)を参照してください。
     - ストレージ アカウント名およびアクセス キーをメモしておきます。 ストレージ アカウント名およびアクセス キー情報は、SQL 資格情報の作成に使用します。 SQL 資格情報は、ストレージ アカウントへの認証に使用されます。  
   
 2.  **SQL 資格情報を作成します。** Id、およびストレージ アクセス キーをパスワードとしてストレージ アカウントの名前を使用して SQL 資格情報を作成します。  
@@ -173,7 +173,7 @@ ms.locfileid: "52413859"
   
 5.  **有効にして構成[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:** SQL Server Management Studio を起動し、SQL Server のインスタンスに接続します。 クエリ ウィンドウからは、要件に合わせて、データベース名、SQL 資格情報、保有期間、および暗号化のオプションの値を変更した後、次のステートメントを実行します。  
   
-     暗号化の証明書を作成する方法の詳細については、次を参照してください。、**バックアップ証明書を作成する**ステップ[Create an Encrypted Backup](create-an-encrypted-backup.md)します。  
+     暗号化の証明書を作成する方法の詳細については、、**バックアップ証明書を作成する**ステップ[Create an Encrypted Backup](create-an-encrypted-backup.md)を参照してください。  
   
     ```  
     Use msdb;  
@@ -225,7 +225,7 @@ ms.locfileid: "52413859"
   
         ```  
   
-         完全なサンプル スクリプトとを監視する方法の詳細については、次を参照してください。[モニター SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)します。  
+         完全なサンプル スクリプトとを監視する方法の詳細については、[モニター SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)を参照してください。  
   
 9. **Microsoft Azure のストレージ アカウントでバックアップ ファイルを表示します。** SQL Server Management Studio または Azure 管理ポータルから、ストレージ アカウントに接続します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を使用するように構成したデータベースをホストする SQL Server インスタンスのコンテナーが表示されます。 また、新しいデータベースを作成してから 15 分以内のデータベースとログ バックアップも表示される場合があります。  
   

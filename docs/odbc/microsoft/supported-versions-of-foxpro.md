@@ -37,6 +37,6 @@ FoxPro テーブルに格納されているデータにアクセスする Micros
   
  Visual FoxPro に格納されたデータにアクセスするときに接続することができます、[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)0 個以上含む[テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)またはディレクトリの[テーブルを無料](../../odbc/microsoft/visual-foxpro-terminology.md)します。  
   
- データ ソースに接続する方法の詳細については、次を参照してください。 [Visual FoxPro データ ソースを追加する](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)します。  
+ データ ソースに接続する方法の詳細については、[Visual FoxPro データ ソースを追加する](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)を参照してください。  
   
- ドライバーをダウンロードするには、次を参照してください。 [Visual FoxPro ODBC ドライバーのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)します。
+ ドライバーをダウンロードするには、[Visual FoxPro ODBC ドライバーのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)を参照してください。

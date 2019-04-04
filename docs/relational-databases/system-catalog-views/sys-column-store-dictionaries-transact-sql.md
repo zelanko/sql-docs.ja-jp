@@ -38,7 +38,7 @@ ms.locfileid: "52518813"
 |**column_id**|**int**|1 から始まる列ストア列の ID。 最初の列が ID = 1、2 番目の列が ID = 2 など。|  
 |**dictionary_id**|**int**|グローバルとローカルの列セグメントに関連付けられている辞書の 2 種類があります。 0 の dictionary_id では、すべての列セグメント (行グループごとに 1 つ) その列の間で共有されているグローバル辞書を表します。|  
 |**version**|**int**|ディクショナリの形式のバージョン。|  
-|**type**|**int**|ディクショナリの種類:<br /><br /> 1-ハッシュ ディクショナリを格納している**int**値<br /><br /> 2-非使用<br /><br /> 3-ハッシュ ディクショナリの文字列値を含む<br /><br /> 4-ハッシュ ディクショナリを格納している**float**値<br /><br /> ディクショナリの詳細については、次を参照してください。[列ストア インデックス ガイド](~/relational-databases/indexes/columnstore-indexes-overview.md)します。|  
+|**type**|**int**|ディクショナリの種類:<br /><br /> 1-ハッシュ ディクショナリを格納している**int**値<br /><br /> 2-非使用<br /><br /> 3-ハッシュ ディクショナリの文字列値を含む<br /><br /> 4-ハッシュ ディクショナリを格納している**float**値<br /><br /> ディクショナリの詳細については、[列ストア インデックス ガイド](~/relational-databases/indexes/columnstore-indexes-overview.md)を参照してください。|  
 |**last_id**|**int**|ディクショナリ内の最後のデータ ID。|  
 |**entry_count**|**bigint**|ディクショナリ内のエントリの数。|  
 |**on_disc_size**|**bigint**|ディクショナリのサイズ (バイト単位)。|  

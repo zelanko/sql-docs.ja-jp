@@ -31,7 +31,7 @@ ms.locfileid: "47729160"
   
 -   SQL_NULL_DATA します。 データ値が NULL の場合と、ドライバーは、バインドされた変数の値を無視します。  
   
--   SQL_DATA_AT_EXEC または SQL_LEN_DATA_AT_EXEC マクロの結果。 送信されるパラメーターの値は、 **SQLPutData**します。 詳細については、次を参照してください。[長い形式のデータを送信する](../../../odbc/reference/develop-app/sending-long-data.md)、このセクションで後述します。  
+-   SQL_DATA_AT_EXEC または SQL_LEN_DATA_AT_EXEC マクロの結果。 送信されるパラメーターの値は、 **SQLPutData**します。 詳細については、[長い形式のデータを送信する](../../../odbc/reference/develop-app/sending-long-data.md)、このセクションで後述を参照してください。  
   
  次の表では、バインドされた変数とパラメーター値のさまざまなアプリケーションを設定する長さ/インジケーター バッファーの値を示します。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47729160"
   
  [この一覧に b] の数値は、TIME_STRUCT 構造体のフィールドに格納されている番号です。  
   
- [c]、文字列は、ODBC の日付のエスケープ句を使用します。 詳細については、次を参照してください。[日付、時刻、およびタイムスタンプのリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)します。  
+ [c]、文字列は、ODBC の日付のエスケープ句を使用します。 詳細については、[日付、時刻、およびタイムスタンプのリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)を参照してください。  
   
  [d] ドライバーでは、SQL_NULL_DATA などの特殊な値であるかどうかを確認するには、この値を常に確認する必要があります。  
   

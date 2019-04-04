@@ -22,4 +22,4 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47753260"
 ---
 # <a name="supported-data-types"></a>サポートされるデータ型
-Dbms でサポートされるデータ型は大きく異なります。 アプリケーションが呼び出すことによって、名前とサポートされるデータ型の特性を確認できます**SQLGetTypeInfo**します。 データ型の名前で、広範のため、アプリケーションがによって返されるデータ型の名前を使用する必要があります**SQLGetTypeInfo**で**CREATE TABLE**ステートメント。 詳細については、次を参照してください。 [ODBC のデータ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)します。
+Dbms でサポートされるデータ型は大きく異なります。 アプリケーションが呼び出すことによって、名前とサポートされるデータ型の特性を確認できます**SQLGetTypeInfo**します。 データ型の名前で、広範のため、アプリケーションがによって返されるデータ型の名前を使用する必要があります**SQLGetTypeInfo**で**CREATE TABLE**ステートメント。 詳細については、[ODBC のデータ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)を参照してください。

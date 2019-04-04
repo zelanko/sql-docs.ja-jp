@@ -58,7 +58,7 @@ ms.locfileid: "51947576"
 
     手順については、[サーバーの認証モードの変更](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure) を参照してください。
 
-1. Linux で SQL Server 2017 をインストールします。 手順については、次を参照してください。 [SQL Server のインストール](sql-server-linux-setup.md)します。 mssql-conf を使用して `hadr` を有効にします。
+1. Linux で SQL Server 2017 をインストールします。 手順については、[SQL Server のインストール](sql-server-linux-setup.md)を参照してください。 mssql-conf を使用して `hadr` を有効にします。
 
    シェル プロンプトから mssql-conf を使用して `hadr` を有効にするには、次のコマンドを発行します。
 

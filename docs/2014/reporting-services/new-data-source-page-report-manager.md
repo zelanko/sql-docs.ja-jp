@@ -57,7 +57,7 @@ ms.locfileid: "56029103"
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
 ```  
   
- 詳細の例と接続文字列を指定するさまざまな方法については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
+ 詳細の例と接続文字列を指定するさまざまな方法については、[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)を参照してください。  
   
  **使用して接続します。**  
  資格情報の取得方法を決定するオプションを指定します。  
@@ -87,7 +87,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **資格情報は必要ありません (を使用して接続)**  
  データ ソースへのアクセスに、資格情報が必要でないことを指定します。 データ ソースがユーザーのログインを必要とする場合、このオプションを選択しても効果がありません。 このオプションは、データ ソース接続にユーザーの資格情報を必要としない場合にのみ選択してください。  
   
- このオプションを使用するには、レポート サーバーの配置用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報のソースがない状況で外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、次を参照してください。[自動実行アカウントを構成する&#40;SSRS 構成マネージャー&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)します。  
+ このオプションを使用するには、レポート サーバーの配置用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報のソースがない状況で外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、[自動実行アカウントを構成する&#40;SSRS 構成マネージャー&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)を参照してください。  
   
  **[OK]**  
  変更を保存する場合にクリックします。  

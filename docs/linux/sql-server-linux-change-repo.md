@@ -237,4 +237,4 @@ SQL Server のインストールとアップグレードのために使用する
 > 使用する場合、この時点で、 [Ubuntu のクイック スタート](quickstart-install-connect-ubuntu.md)ターゲットのリポジトリが既に構成されていることに注意してください。 チュートリアルでは、そのステップを繰り返さないでください。 これは、クイック スタートは、CU リポジトリを使用するために、GDR リポジトリを構成する場合に特に当てはまります。
 ::: zone-end
 
-Linux 上の SQL Server 2017 をインストールする方法の詳細については、次を参照してください。 [Linux 上の SQL Server のインストールのガイダンスについて](sql-server-linux-setup.md)します。
+Linux 上の SQL Server 2017 をインストールする方法の詳細については、[Linux 上の SQL Server のインストールのガイダンスについて](sql-server-linux-setup.md)を参照してください。

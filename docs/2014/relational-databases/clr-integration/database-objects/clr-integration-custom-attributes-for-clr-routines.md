@@ -35,37 +35,37 @@ ms.locfileid: "53358774"
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 属性  
  `SqlUserDefinedAggregate` 属性は、ユーザー定義集計として登録する必要のあるメソッドを示します。 すべてのユーザー定義集計にこのカスタム属性で注釈を付ける必要があります。  
   
- 詳細については、次を参照してください。 [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)します。  
+ 詳細については、[SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)を参照してください。  
   
 ## <a name="the-sqlfunction-attribute"></a>SqlFunction 属性  
  `SqlFunction` 属性は、関数として登録する必要のあるメソッドを示します。この属性を使用する場合は、適切な関数属性セットを指定します。  
   
- 詳細については、次を参照してください。 [SqlFunctionAttribute](https://go.microsoft.com/fwlink/?LinkId=128019)します。  
+ 詳細については、[SqlFunctionAttribute](https://go.microsoft.com/fwlink/?LinkId=128019)を参照してください。  
   
 ## <a name="the-sqlfacet-attribute"></a>SqlFacet 属性  
  `SqlFacet` 属性は、UDT (ユーザー定義型) 式の戻り値の型についての情報を返すために使用します。  
   
- 詳細については、次を参照してください。 [SqlFacetAttribute](https://go.microsoft.com/fwlink/?LinkId=128020)します。  
+ 詳細については、[SqlFacetAttribute](https://go.microsoft.com/fwlink/?LinkId=128020)を参照してください。  
   
 ## <a name="the-sqlprocedure-attribute"></a>SqlProcedure 属性  
  `SqlProcedure` 属性は、ストアド プロシージャとして登録する必要のあるメソッドを示します。 この属性は、Visual Studio だけで使用され、指定されたメソッドがストアド プロシージャとして自動的に登録されます。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では使用されません。  
   
- 詳細については、次を参照してください。 [SqlProcedureAttribute](https://go.microsoft.com/fwlink/?LinkId=128021)します。  
+ 詳細については、[SqlProcedureAttribute](https://go.microsoft.com/fwlink/?LinkId=128021)を参照してください。  
   
 ## <a name="the-sqltrigger-attribute"></a>SqlTrigger 属性  
  `SqlTrigger` 属性は、トリガーとして登録する必要のあるメソッドを示します。  
   
- 詳細については、次を参照してください。 [SqlTriggerContext](https://go.microsoft.com/fwlink/?LinkId=128022)と[SqlTriggerAttribute](https://go.microsoft.com/fwlink/?LinkId=203898)します。  
+ 詳細については、[SqlTriggerContext](https://go.microsoft.com/fwlink/?LinkId=128022)と[SqlTriggerAttribute](https://go.microsoft.com/fwlink/?LinkId=203898)を参照してください。  
   
 ## <a name="the-sqluserdefinedtypeattribute"></a>SqlUserDefinedTypeAttribute  
  SqlUserDefinedTypeAttribute をアセンブリのクラス定義に適用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、これにより、このカスタム属性を持つクラス定義にバインドされたユーザー定義型が作成されます。  
   
- 詳細については、次を参照してください。 [SqlUserDefinedTypeAttribute](https://go.microsoft.com/fwlink/?LinkId=128024)します。  
+ 詳細については、[SqlUserDefinedTypeAttribute](https://go.microsoft.com/fwlink/?LinkId=128024)を参照してください。  
   
 ## <a name="the-sqlmethod-attribute"></a>SqlMethod 属性  
  `SqlMethod` 属性は、UDT のメソッドまたはプロパティの決定性およびデータ アクセス プロパティを示すために使用します。  
   
- 詳細については、次を参照してください。 [SqlMethodAttribute](https://go.microsoft.com/fwlink/?LinkId=128025)します。  
+ 詳細については、[SqlMethodAttribute](https://go.microsoft.com/fwlink/?LinkId=128025)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CLR ユーザー定義集計](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   

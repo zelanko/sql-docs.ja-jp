@@ -20,7 +20,7 @@ ms.locfileid: "49071786"
 # <a name="project-settingssynchronization-oracletosql"></a>プロジェクトの設定 (同期) (OracleToSQL)
 [同期] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA をロードし、へのデータベース テーブルとストアド プロシージャなどのオブジェクトを更新する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
-既定のアクションのオプションは、Oracle データベースからオブジェクトを更新して、SQL Server データベースとオブジェクトを同期するために、既定の設定を指定します。 詳細については、次を参照してください。[データベース、Oracle からの更新](../../ssma/oracle/refresh-from-database-oracletosql.md)します。  
+既定のアクションのオプションは、Oracle データベースからオブジェクトを更新して、SQL Server データベースとオブジェクトを同期するために、既定の設定を指定します。 詳細については、[データベース、Oracle からの更新](../../ssma/oracle/refresh-from-database-oracletosql.md)を参照してください。  
   
 同じ設定が含まれている 2 つの異なる同期ページにアクセスできます。  
   

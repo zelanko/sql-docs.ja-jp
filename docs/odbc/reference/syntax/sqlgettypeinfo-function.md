@@ -73,7 +73,7 @@ SQLRETURN SQLGetTypeInfo(
 |HY008|操作が取り消されました|非同期処理が有効に、 *StatementHandle*関数が呼び出されたし、前に、実行を完了**SQLCancel**または**SQLCancelHandle**されました呼び出される、 *StatementHandle*します。 後でもう一度関数が呼び出された、 *StatementHandle*します。<br /><br /> 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*から別のスレッドで、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている、 **SQLGetTypeInfo**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYC00|省略可能な機能が実装されていません|SQL_ATTR_CURSOR_TYPE、SQL_ATTR_CONCURRENCY ステートメント属性の現在の設定の組み合わせが、ドライバーまたはデータ ソースでサポートされていません。<br /><br /> SQL_ATTR_USE_BOOKMARKS ステートメント属性は SQL_UB_VARIABLE に設定されており、SQL_ATTR_CURSOR_TYPE ステートメント属性は、ドライバーがブックマークをできません、カーソルの種類に設定されました。|  
 |HYT00|タイムアウトが発生しました|データ ソースには、結果セットが返される前に、クエリのタイムアウト期間が終了しました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -82,12 +82,12 @@ SQLRETURN SQLGetTypeInfo(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- **SQLGetTypeInfo** DATA_TYPE をしにどのデータ型が対応する ODBC SQL データ型にマップして順序付けられた、標準的な結果セットとして結果を返します。 データ ソースで定義されているデータ型は、ユーザー定義データ型よりも優先されます。 その結果、並べ替え順序は必ずしも一致しませんが、まず DATA_TYPE として一般化、TYPE_NAME、昇順のどちらに続きます。 たとえば、データ ソースに、カウンターは、自動インクリメントは、整数およびカウンターのデータ型が定義されていると、ユーザー定義データ型 WHOLENUM も定義されていること。 これらは、整数、WHOLENUM の順序で返されるであり、カウンター、ODBC SQL データに最も近い WHOLENUM マップ型 SQL_INTEGER、自動インクリメント データが入力と同時に、データ ソースでサポートされている場合でもにマップされない密接に ODBC SQL データ型を。 この情報の用途については、次を参照してください。 [DDL ステートメント](../../../odbc/reference/develop-app/ddl-statements.md)します。  
+ **SQLGetTypeInfo** DATA_TYPE をしにどのデータ型が対応する ODBC SQL データ型にマップして順序付けられた、標準的な結果セットとして結果を返します。 データ ソースで定義されているデータ型は、ユーザー定義データ型よりも優先されます。 その結果、並べ替え順序は必ずしも一致しませんが、まず DATA_TYPE として一般化、TYPE_NAME、昇順のどちらに続きます。 たとえば、データ ソースに、カウンターは、自動インクリメントは、整数およびカウンターのデータ型が定義されていると、ユーザー定義データ型 WHOLENUM も定義されていること。 これらは、整数、WHOLENUM の順序で返されるであり、カウンター、ODBC SQL データに最も近い WHOLENUM マップ型 SQL_INTEGER、自動インクリメント データが入力と同時に、データ ソースでサポートされている場合でもにマップされない密接に ODBC SQL データ型を。 この情報の用途については、[DDL ステートメント](../../../odbc/reference/develop-app/ddl-statements.md)を参照してください。  
   
  場合、 *DataType*引数は、ドライバーでサポートされている ODBC のバージョンの有効なデータ型を指定しますが、ドライバーではサポートされていませんし、空の結果セットが返されます。  
   
 > [!NOTE]  
->  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
+>  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)を参照してください。  
   
  次の列は、ODBC 3 の名前に変更されています。*x*します。 列名の変更では、アプリケーションは、列番号でバインドため、旧バージョンとの互換性は影響しません。  
   
@@ -107,7 +107,7 @@ SQLRETURN SQLGetTypeInfo(
   
 -   NUM_PREC_RADIX  
   
- 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、19 (INTERVAL_PRECISION) 列を超える追加の列を定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウント ダウンによって、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、次を参照してください。[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)します。  
+ 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、19 (INTERVAL_PRECISION) 列を超える追加の列を定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウント ダウンによって、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)を参照してください。  
   
 > [!NOTE]  
 >  **SQLGetTypeInfo**すべてのデータ型を返さない可能性があります。 たとえば、ドライバーはユーザー定義データ型を返さない可能性があります。 アプリケーションがによって返されるかどうかに関係なく、任意の有効なデータ型を使用できます**SQLGetTypeInfo**します。 によって返されるデータ型**SQLGetTypeInfo**はデータ ソースでサポートされています。 データ定義言語 (DDL) ステートメントで使用することは想定されています。 ドライバーがによって返される型以外のデータ型を使用してデータを結果セットを返す**SQLGetTypeInfo**します。 カタログ関数の結果セットを作成するで、ドライバーは、データ ソースでサポートされていないデータ型を使用する場合があります。  

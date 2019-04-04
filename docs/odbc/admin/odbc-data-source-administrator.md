@@ -26,7 +26,7 @@ Microsoft® ODBC データ ソース アドミニストレーターは、デー�
   
  Odbc データ ソース アドミニストレーターの詳細な手順については、開く、 [ODBC データ ソース アドミニストレーター](https://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333)  ダイアログ ボックスをクリックします**ヘルプ**します。  
   
- ドライバーとデータ ソースを管理するのに PowerShell コマンドを使用することができます。 これらの PowerShell コマンドの詳細については、次を参照してください。 [Windows データ アクセス コンポーネントの PowerShell コマンド](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)します。  
+ ドライバーとデータ ソースを管理するのに PowerShell コマンドを使用することができます。 これらの PowerShell コマンドの詳細については、[Windows データ アクセス コンポーネントの PowerShell コマンド](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

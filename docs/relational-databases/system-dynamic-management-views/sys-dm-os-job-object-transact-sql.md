@@ -32,7 +32,7 @@ ms.locfileid: "56022203"
 
 ジョブのオブジェクト レベルで特定リソース消費量の統計と同様に、SQL Server プロセスを管理するジョブ オブジェクトの構成を記述する 1 つの行を返します。 SQL Server はジョブ オブジェクトで実行されていない場合は、空のセットを返します。 
 
-ジョブ オブジェクトは、オペレーティング システム レベルでの CPU、メモリ、および IO リソース ガバナンスを実装する Windows コンストラクトです。 ジョブ オブジェクトの詳細については、次を参照してください。[ジョブ オブジェクト](/windows/desktop/ProcThread/job-objects)します。 
+ジョブ オブジェクトは、オペレーティング システム レベルでの CPU、メモリ、および IO リソース ガバナンスを実装する Windows コンストラクトです。 ジョブ オブジェクトの詳細については、[ジョブ オブジェクト](/windows/desktop/ProcThread/job-objects)を参照してください。 
   
 |[列]|データ型|説明|  
 |-------------|---------------|-----------------|  
@@ -56,5 +56,5 @@ SQL Database マネージ インスタンスが必要です。`VIEW SERVER STATE
  
 ## <a name="see-also"></a>参照  
 
-マネージ インスタンスについては、次を参照してください。 [SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)します。
+マネージ インスタンスについては、[SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)を参照してください。
   

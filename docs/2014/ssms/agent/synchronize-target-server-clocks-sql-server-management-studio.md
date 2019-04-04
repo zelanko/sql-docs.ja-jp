@@ -84,6 +84,6 @@ ms.locfileid: "52773634"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_resync_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)します。  
+ 詳細については、[sp_resync_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)を参照してください。  
   
   

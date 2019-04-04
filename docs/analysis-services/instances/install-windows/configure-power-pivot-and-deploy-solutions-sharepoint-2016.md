@@ -26,7 +26,7 @@ ms.locfileid: "52400016"
   
 -   バックエンド サービスと、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーをインストールする方法の詳細については、「 [Power Pivot モードでの Analysis Services のインストール](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)」を参照してください。  
   
- 詳細については、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 2016 構成ツールでは、次を参照してください。[インストールまたは for SharePoint アドイン (SharePoint 2016) Power Pivot をアンインストール](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)します。  
+ 詳細については、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 2016 構成ツールでは、[インストールまたは for SharePoint アドイン (SharePoint 2016) Power Pivot をアンインストール](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)を参照してください。  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Power Pivot for SharePoint 2016 の構成の実行  
  **注:** 次の手順を完了するには、ファーム管理者があります。 次のようなエラー メッセージが表示される場合があります。  
@@ -117,7 +117,7 @@ ms.locfileid: "52400016"
   
 5.  **[OK]** を選択します。  
   
- データのトラブルシューティングの更新の詳細については、次を参照してください。 [Power Pivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)します。  
+ データのトラブルシューティングの更新の詳細については、[Power Pivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)を参照してください。  
   
  構成ツールの詳細については、「 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   

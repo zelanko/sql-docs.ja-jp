@@ -52,7 +52,7 @@ BOOL SQLInstallTranslatorEx(
   
 ## <a name="arguments"></a>引数  
  *lpszTranslator*  
- [入力]これは、二重の null で終わる変換プログラムを記述するキーワードと値のペアの一覧を含める必要があります。 キーワードと値のペアの構文の詳細については、次を参照してください。[仕様のサブキー](../../../odbc/reference/install/translator-specification-subkeys.md)します。  
+ [入力]これは、二重の null で終わる変換プログラムを記述するキーワードと値のペアの一覧を含める必要があります。 キーワードと値のペアの構文の詳細については、[仕様のサブキー](../../../odbc/reference/install/translator-specification-subkeys.md)を参照してください。  
   
  **Translator**と**セットアップ**でキーワードを含める必要がある、 *lpszTranslator*文字列。 DLL が記載されている翻訳、 **Translator**キーワード、およびトランスレーター セットアップ DLL が記載されている、**セットアップ**キーワード。 各ペアは、NULL バイトで終了し、全体の一覧は NULL バイトで終了します。 (つまり、2 つの NULL バイトの末尾を示す一覧。)形式*lpszTranslator*のとおりです。  
   

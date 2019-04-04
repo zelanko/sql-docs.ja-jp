@@ -127,7 +127,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = UNSAFE;  
 ```  
   
- 各設定のアクセス許可の詳細については、次を参照してください。 [CLR 統合セキュリティ](../security/clr-integration-security.md)します。  
+ 各設定のアクセス許可の詳細については、[CLR 統合セキュリティ](../security/clr-integration-security.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CLR 統合アセンブリの管理](managing-clr-integration-assemblies.md)   

@@ -30,4 +30,4 @@ ms.locfileid: "47782120"
   
  環境ハンドルのメモリを割り当てます*henv*、し、アプリケーションで使用する ODBC の呼び出しレベルのインターフェイスを初期化します。  
   
- 詳細については、次を参照してください。 [SQLAllocEnv](../../odbc/reference/syntax/sqlallocenv-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLAllocEnv](../../odbc/reference/syntax/sqlallocenv-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

@@ -26,4 +26,4 @@ ms.locfileid: "52523831"
   
  カタログ関数を実行するには、アプリケーションはでは、関数を呼び出します。  
   
- カタログ関数の詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。
+ カタログ関数の詳細については、[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)を参照してください。

@@ -52,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  次の表に、マイニング モデル コンテンツに含まれる列を示します。  
   
 > [!NOTE]  
->  アルゴリズムでは、コンテンツを適切に表すため、列の解釈が異なる場合があります。 マイニング モデル コンテンツの各アルゴリズム、および解釈および各種類のモデル コンテンツのマイニング モデルをクエリする方法に関するヒントについては、次を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)します。  
+>  アルゴリズムでは、コンテンツを適切に表すため、列の解釈が異なる場合があります。 マイニング モデル コンテンツの各アルゴリズム、および解釈および各種類のモデル コンテンツのマイニング モデルをクエリする方法に関するヒントについては、[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)を参照してください。  
   
 |CONTENT 行セット列|説明|  
 |---------------------------|-----------------|  

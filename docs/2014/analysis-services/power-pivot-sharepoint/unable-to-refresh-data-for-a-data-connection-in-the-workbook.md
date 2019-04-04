@@ -35,7 +35,7 @@ ms.locfileid: "53371004"
   
  **シナリオ 1:サービスが開始されていません。**  
   
- SQL Server Analysis Services (PowerPivot) インスタンスが開始されていません。 パスワードの期限が切れると、サービスの実行が停止します。 パスワードを変更する方法についての詳細については、次を参照してください。 [PowerPivot サービス アカウントの構成](configure-power-pivot-service-accounts.md)と[開始または PowerPivot を SharePoint サーバーの停止](start-or-stop-a-power-pivot-for-sharepoint-server.md)します。  
+ SQL Server Analysis Services (PowerPivot) インスタンスが開始されていません。 パスワードの期限が切れると、サービスの実行が停止します。 パスワードを変更する方法についての詳細については、[PowerPivot サービス アカウントの構成](configure-power-pivot-service-accounts.md)と[開始または PowerPivot を SharePoint サーバーの停止](start-or-stop-a-power-pivot-for-sharepoint-server.md)を参照してください。  
   
  **シナリオ 2 a:以前のバージョンのブック n、サーバーを開く**  
   

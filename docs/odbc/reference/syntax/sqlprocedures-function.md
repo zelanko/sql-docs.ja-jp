@@ -32,7 +32,7 @@ ms.locfileid: "53204671"
  バージョンが導入されました。ODBC 1.0 規格に準拠します。ODBC  
   
  **まとめ**  
- **SQLProcedures**特定のデータ ソースに格納されているプロシージャ名の一覧を返します。 *プロシージャ*記述に使用される一般的な用語には、*実行可能オブジェクト*、または入力と出力パラメーターを使用して呼び出すことができる名前付きエンティティ。 手順の詳細については、次を参照してください。、[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)します。  
+ **SQLProcedures**特定のデータ ソースに格納されているプロシージャ名の一覧を返します。 *プロシージャ*記述に使用される一般的な用語には、*実行可能オブジェクト*、または入力と出力パラメーターを使用して呼び出すことができる名前付きエンティティ。 手順の詳細については、、[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,7 +55,7 @@ SQLRETURN SQLProcedures(
  *カタログ名*  
  [入力]プロシージャのカタログです。 ドライバーは、いくつかのテーブルのドライバーをさまざまな Dbms、空の文字列からデータを取得した場合など、他ではなく、カタログをサポートしている場合 ("") のカタログはありません。 それらのテーブルを表します。 *CatalogName*文字列の検索パターンを含めることはできません。  
   
- SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。  
+ SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)を参照してください。  
   
  *NameLength1*  
  [入力]文字の長さ **CatalogName*します。  
@@ -96,7 +96,7 @@ SQLRETURN SQLProcedures(
 |HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数は、この関数が呼び出されたときにまだ実行中だった。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|(DM) 名の長の引数のいずれかの値が 0 未満でしたが、SQL_NTS と等しくありません。<br /><br /> 名の長の引数のいずれかの値には、対応する名前の最大長の値を超えています。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYC00|省略可能な機能が実装されていません|プロシージャのカタログが指定されていると、ドライバーまたはデータ ソースがカタログをサポートしていません。<br /><br /> プロシージャのスキーマが指定されていると、ドライバーまたはデータ ソース スキーマはサポートしません。<br /><br /> プロシージャのスキーマまたはプロシージャ名、文字列の検索パターンが指定されて、データ ソースがこれらの引数の 1 つ以上の検索パターンをサポートしていません。<br /><br /> SQL_ATTR_CURSOR_TYPE、SQL_ATTR_CONCURRENCY ステートメント属性の現在の設定の組み合わせが、ドライバーまたはデータ ソースでサポートされていません。<br /><br /> SQL_ATTR_USE_BOOKMARKS ステートメント属性は SQL_UB_VARIABLE に設定されており、SQL_ATTR_CURSOR_TYPE ステートメント属性は、ドライバーがブックマークをできません、カーソルの種類に設定されました。|  
 |HYT00|タイムアウトが発生しました|クエリのタイムアウト期間は、要求された結果セットが返されるデータ ソースの前に有効期限が切れました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -105,10 +105,10 @@ SQLRETURN SQLProcedures(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- **SQLProcedures**要求された範囲内のすべての手順を示します。 ユーザーにもこれらの手順を実行する権限がない可能性があります。 アクセシビリティを確認するアプリケーションを呼び出すことができます**SQLGetInfo** SQL_ACCESSIBLE_PROCEDURES 情報の値を確認します。 それ以外の場合、アプリケーションは、ユーザーが、プロシージャが実行できないことを選択した状況に対処できる必要があります。 この情報の用途については、次を参照してください。[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)します。  
+ **SQLProcedures**要求された範囲内のすべての手順を示します。 ユーザーにもこれらの手順を実行する権限がない可能性があります。 アクセシビリティを確認するアプリケーションを呼び出すことができます**SQLGetInfo** SQL_ACCESSIBLE_PROCEDURES 情報の値を確認します。 それ以外の場合、アプリケーションは、ユーザーが、プロシージャが実行できないことを選択した状況に対処できる必要があります。 この情報の用途については、[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)を参照してください。  
   
 > [!NOTE]  
->  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
+>  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)を参照してください。  
   
  **SQLProcedures** PROCEDURE_CAT、PROCEDURE_SCHEMA、PROCEDURE_NAME、順序付けられた、標準的な結果セットとして結果を返します。  
   
@@ -124,7 +124,7 @@ SQLRETURN SQLProcedures(
   
  アプリケーションが呼び出すことができますを PROCEDURE_CAT、PROCEDURE_SCHEM、PROCEDURE_NAME 列の実際の長さを判断する**SQLGetInfo** SQL_MAX_CATALOG_NAME_LEN、SQL_MAX_SCHEMA_NAME_LEN、SQL_MAX_PROCEDURE_ とNAME_LEN オプション。  
   
- 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、8 (PROCEDURE_TYPE) 列を超える追加の列を定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウント ダウンによって、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、次を参照してください。[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)します。  
+ 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、8 (PROCEDURE_TYPE) 列を超える追加の列を定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウント ダウンによって、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)を参照してください。  
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
@@ -137,7 +137,7 @@ SQLRETURN SQLProcedures(
 |「解説」(ODBC 2.0)|7|Varchar|プロシージャの説明です。|  
 |PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|プロシージャの種類を定義します。<br /><br /> SQL_PT_UNKNOWN:プロシージャが値を返すかどうかを特定できません。<br /><br /> SQL_PT_PROCEDURE:返されるオブジェクトはプロシージャです。つまり、戻り値はありません。<br /><br /> :返されるオブジェクトが関数です。つまり、戻り値があります。|  
   
- *SchemaName*と*ProcName*引数は、検索パターンをそのまま使用します。 有効な検索パターンの詳細については、次を参照してください。[パターン値の引数](../../../odbc/reference/develop-app/pattern-value-arguments.md)します。  
+ *SchemaName*と*ProcName*引数は、検索パターンをそのまま使用します。 有効な検索パターンの詳細については、[パターン値の引数](../../../odbc/reference/develop-app/pattern-value-arguments.md)を参照してください。  
   
 ## <a name="code-example"></a>コード例  
  参照してください[プロシージャ呼び出し](../../../odbc/reference/develop-app/procedure-calls.md)します。  

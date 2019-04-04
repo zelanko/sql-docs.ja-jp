@@ -46,25 +46,25 @@ ms.locfileid: "47763210"
   
 -   パーティション構成にデータを格納するためのテーブルおよびインデックスのパーティション分割。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
--   SOAP 要求を管理するための HTTP エンドポイント。 詳細については、次を参照してください。[を実装するエンドポイント](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)します。  
+-   SOAP 要求を管理するための HTTP エンドポイント。 詳細については、[を実装するエンドポイント](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)を参照してください。  
   
 -   コンカレンシーを高めるためのスナップショット分離と行レベルのバージョニング。 詳細については、「[スナップショット分離を使用した作業](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)」を参照してください。  
   
--   XML データの検証と格納を可能にする、XML スキーマ コレクション、XML インデックス、および XML データ型。 詳細については、次を参照してください。 [XML スキーマ コレクション&#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md)と[を使用して XML スキーマ](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)します。  
+-   XML データの検証と格納を可能にする、XML スキーマ コレクション、XML インデックス、および XML データ型。 詳細については、[XML スキーマ コレクション&#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md)と[を使用して XML スキーマ](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)を参照してください。  
   
 -   データベースの読み取り専用コピーを作成するためのスナップショット データベース。  
   
--   メッセージ ベースの通信に対する [!INCLUDE[ssSB](../../includes/sssb-md.md)] サポート。 詳細については、次を参照してください。 [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)します。  
+-   メッセージ ベースの通信に対する [!INCLUDE[ssSB](../../includes/sssb-md.md)] サポート。 詳細については、[SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)を参照してください。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの複数の名前に対するシノニム サポート。 詳細については、次を参照してください。[シノニム&#40;データベース エンジン&#41;](../../relational-databases/synonyms/synonyms-database-engine.md)します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの複数の名前に対するシノニム サポート。 詳細については、[シノニム&#40;データベース エンジン&#41;](../../relational-databases/synonyms/synonyms-database-engine.md)を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での電子メール サービス、電子メール プロファイル、および電子メール アカウントの作成を可能にするデータベース メールの管理。 詳細については、「 [Database Mail](../../relational-databases/database-mail/database-mail.md)」を参照してください。  
   
--   接続情報登録のための登録サーバーのサポート。 詳細については、次を参照してください。[サーバーの登録](../../tools/sql-server-management-studio/register-servers.md)します。  
+-   接続情報登録のための登録サーバーのサポート。 詳細については、[サーバーの登録](../../tools/sql-server-management-studio/register-servers.md)を参照してください。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントのトレースおよび再生。 詳細については、次を参照してください。 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)、 [SQL トレース](../../relational-databases/sql-trace/sql-trace.md)、 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)、および[拡張イベント](../../relational-databases/extended-events/extended-events.md)します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントのトレースおよび再生。 詳細については、[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)、 [SQL トレース](../../relational-databases/sql-trace/sql-trace.md)、 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)、および[拡張イベント](../../relational-databases/extended-events/extended-events.md)を参照してください。  
   
--   セキュリティ コントロールのための証明書およびキーのサポート。 詳細については、次を参照してください。[暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)します。  
+-   セキュリティ コントロールのための証明書およびキーのサポート。 詳細については、[暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)を参照してください。  
   
 -   DDL イベント発生時に機能を追加するための DDL トリガー。 詳細については、「 [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)」を参照してください。  
   

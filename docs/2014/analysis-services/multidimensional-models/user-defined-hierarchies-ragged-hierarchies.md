@@ -42,7 +42,7 @@ ms.locfileid: "52502891"
   
 -   標準階層を使用します。ただし、各レベルの `HideMemberIf` プロパティを設定し、ユーザーに対して欠落しているレベルを表示するかどうかを指定します。 `HideMemberIf` を設定するとき、接続文字列で `MDXCompatibility` も設定し、既定のナビゲーション動作をオーバーライドします。 これらのプロパティの設定手順をこのトピックで説明します。  
   
--   レベル メンバーを明示的に管理する親子階層を作成します。 この技法の図解については、「 [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)」(SSAS での不規則階層 (ブログ投稿)) をご覧ください。 オンライン ブックの「詳細については、次を参照してください。 [、親子階層](parent-child-dimension.md)します。 親子階層を作成する際の問題点は、ディメンションごとに 1 つの階層があるので、中間レベルのメンバーを集計する場合のパフォーマンスが一般的に低下することです。  
+-   レベル メンバーを明示的に管理する親子階層を作成します。 この技法の図解については、「 [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)」(SSAS での不規則階層 (ブログ投稿)) をご覧ください。 オンライン ブックの「詳細については、[、親子階層](parent-child-dimension.md)を参照してください。 親子階層を作成する際の問題点は、ディメンションごとに 1 つの階層があるので、中間レベルのメンバーを集計する場合のパフォーマンスが一般的に低下することです。  
   
  ディメンションに複数の不規則階層が含まれている場合は、第 1 の方法である、`HideMemberIf` の設定を使用してください。 不規則階層の操作について実践的な経験がある BI 開発者であれば、さらに、物理データ テーブルへの追加の変更を提案したり、レベルごとの個別のテーブルを作成したりすることができます。 参照してください[Martin Mason の SSAS 財務キューブ パート 1a 不規則階層 (ブログ)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/)この方法の詳細について。  
   

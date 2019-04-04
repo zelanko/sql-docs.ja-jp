@@ -35,4 +35,4 @@ ms.locfileid: "47829000"
 > [!NOTE]  
 >  Visual FoxPro ODBC ドライバーが区別[データベース テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)と[テーブルを無料](../../odbc/microsoft/visual-foxpro-terminology.md)テーブルの両方の種類は、システム上の同じディレクトリに格納されている場合でも、します。 場合は、データ ソースは、無料のテーブルのディレクトリは、Visual FoxPro ODBC ドライバーはないカタログまたはデータベースに関連付けられているすべてのテーブルの名前を取得します。  
   
- 詳細については、次を参照してください。 [SQLTables](../../odbc/reference/syntax/sqltables-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLTables](../../odbc/reference/syntax/sqltables-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

@@ -34,7 +34,7 @@ ms.locfileid: "50147717"
 |**[スキーマの最終更新]**|アセンブリ参照のメタデータが最後に更新された日時を表示します。|  
 |**型**|アセンブリ参照の種類を表示します。 次の値が表示されます。<br /><br /> **.NET アセンブリ**: アセンブリ参照を参照、 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework アセンブリ。<br /><br /> **COM DLL**: アセンブリ参照は COM ライブラリを表します。|  
 |**Source**|アセンブリ参照のソースを表示します。 このプロパティは通常、アセンブリ参照が参照するアセンブリの完全なパスおよびファイル名を含んでいます。|  
-|**アクセス許可セット**|アセンブリ参照へのアクセスの決定に使用される権限セットを選択します。 このプロパティの使用可能な値の詳細については、次を参照してください。<xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>します。|  
+|**アクセス許可セット**|アセンブリ参照へのアクセスの決定に使用される権限セットを選択します。 このプロパティの使用可能な値の詳細については、<xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>を参照してください。|  
 |**[権限借用情報]**|アセンブリ参照へのアクセス時に使用する権限借用情報を選択します。 このプロパティで使用可能な値の詳細については、「[ImpersonationInfo 要素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)」をご覧ください。|  
   
 ## <a name="see-also"></a>参照  

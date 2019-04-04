@@ -69,14 +69,14 @@ ms.locfileid: "56013913"
  親の parent-key を参照する子の、子キーを指定します。 子キーが複数の属性 (列) で構成される場合、child-key の値は、スペースで区切って指定します。 複数列キーに指定される値と、それに対応する親キーに指定される値の間では、位置的なマッピングが行われます。  
   
  **逆関数**  
- この属性で指定された **\<sql:relationship >** アップデート グラムで使用されます。 詳細については、次を参照してください。 [sql:relationship での sql:inverse 属性指定](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)します。  
+ この属性で指定された **\<sql:relationship >** アップデート グラムで使用されます。 詳細については、[sql:relationship での sql:inverse 属性指定](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)を参照してください。  
   
- **Sql:key-フィールド**を持つ子要素を含む要素に注釈を指定する必要があります、  **\<sql:relationship >** 要素と子要素の間で定義されているし、は親要素で指定したテーブルのプライマリ キーを指定します。 スキーマで指定されていない場合でも **\<sql:relationship >** を指定する必要があります**sql:key-フィールド**適切な階層を生成するためにします。 詳細については、次を参照してください。 [sql:key を使用して、キー列を識別する-フィールド](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)します。  
+ **Sql:key-フィールド**を持つ子要素を含む要素に注釈を指定する必要があります、  **\<sql:relationship >** 要素と子要素の間で定義されているし、は親要素で指定したテーブルのプライマリ キーを指定します。 スキーマで指定されていない場合でも **\<sql:relationship >** を指定する必要があります**sql:key-フィールド**適切な階層を生成するためにします。 詳細については、[sql:key を使用して、キー列を識別する-フィールド](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)を参照してください。  
   
  結果内の適切な入れ子を生成することが推奨されます**sql:key-フィールド**はすべてのスキーマで指定します。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、[SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)を参照してください。  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. 要素に sql:relationship 注釈を指定する  
  次の注釈付き XSD スキーマを含む**\<顧客 >** と**\<順序 >** 要素。 **\<順序 >** 要素が子要素の**\<顧客 >** 要素。  
@@ -172,7 +172,7 @@ ms.locfileid: "56013913"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
  Here is the result set:  
   
@@ -301,7 +301,7 @@ ms.locfileid: "56013913"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
  Here is the result set:  
   
@@ -372,7 +372,7 @@ ms.locfileid: "56013913"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
  Here is the result set:  
   
@@ -462,7 +462,7 @@ ms.locfileid: "56013913"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
  Here is the result set:  
   
@@ -581,7 +581,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
   
 5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
  結果セットの一部を次に示します。  
   

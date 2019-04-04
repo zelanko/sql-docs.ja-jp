@@ -90,7 +90,7 @@ ms.locfileid: "56010630"
   
  パスワード変更の試行が予期せず失敗すると、サーバーからエラー コード 18468 が返されます。 接続試行からは標準の OLE DB エラーが返されます。  
   
- DBPROPSET_SQLSERVERDBINIT プロパティ セットの詳細については、次を参照してください。[初期化プロパティと承認プロパティ](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)します。  
+ DBPROPSET_SQLSERVERDBINIT プロパティ セットの詳細については、[初期化プロパティと承認プロパティ](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)を参照してください。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがユーザー インターフェイスのパスワードの有効期限をサポートしていると、プログラムを使用します。  

@@ -108,7 +108,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```
 
 ## <a name="sql-server-features"></a>SQL Server の機能
- ADO SQL server での XML を使用できます**コマンド**の入力や結果ではなく XML ストリームの形式で取得**Recordset**オブジェクト。 詳細については、次を参照してください。[コマンド入力を使用してストリーム](../../../ado/guide/data/command-streams.md)と[ストリームに結果セットを取得する](../../../ado/guide/data/retrieving-resultsets-into-streams.md)します。
+ ADO SQL server での XML を使用できます**コマンド**の入力や結果ではなく XML ストリームの形式で取得**Recordset**オブジェクト。 詳細については、[コマンド入力を使用してストリーム](../../../ado/guide/data/command-streams.md)と[ストリームに結果セットを取得する](../../../ado/guide/data/retrieving-resultsets-into-streams.md)を参照してください。
 
 ### <a name="accessing-sqlvariant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>MDAC 2.7、MDAC 2.8、または Windows DAC 6.0 を使用して、sql_variant データにアクセスします。
  Microsoft SQL Server がというデータ型を**sql_variant**します。 OLE DB のような**DBTYPE_VARIANT**、 **sql_variant**データ型は、さまざまな種類のデータを格納できます。 ただしのいくつかの主な違いがある**DBTYPE_VARIANT**と**sql_variant**します。 ADO として格納されているデータも処理を**sql_variant**値の他のデータ型を処理する方法とは異なります。 次のとおりに、型の列に格納されている SQL Server データにアクセスするときに考慮すべき問題**sql_variant**します。
@@ -355,7 +355,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |XML のルート|SSPROP_STREAM_XMLROOT|
 |XSL (XSL)|SSPROP_STREAM_XSL|
 
- 特定の実装の詳細と、Microsoft SQL Server OLE DB プロバイダーの機能については、次を参照してください。、 [SQL Server プロバイダー](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635)します。
+ 特定の実装の詳細と、Microsoft SQL Server OLE DB プロバイダーの機能については、、 [SQL Server プロバイダー](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635)を参照してください。
 
 ## <a name="see-also"></a>参照
  [ConnectionString プロパティ (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [プロバイダー プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

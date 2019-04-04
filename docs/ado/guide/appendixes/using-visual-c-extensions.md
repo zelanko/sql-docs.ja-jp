@@ -55,7 +55,7 @@ ms.locfileid: "52544185"
 
 3.  派生したクラスのインスタンスを作成、アプリケーションで**CADORecordBinding**です。 取得、 **IADORecordBinding**からインターフェイス、 **Recordset**です。 まず、 **BindToRecordset**にバインドするメソッド、**Recordset**C と C++ の変数へのフィールドです。
 
- 詳細については、次を参照してください。、 [C++ 拡張機能の例を Visual](../../../ado/guide/appendixes/visual-c-extensions-example.md)します。
+ 詳細については、、 [C++ 拡張機能の例を Visual](../../../ado/guide/appendixes/visual-c-extensions-example.md)を参照してください。
 
 ## <a name="interface-methods"></a>インターフェイス メソッド
  **IADORecordBinding**インターフェイスが 3 つのメソッドには。**BindToRecordset**、 **AddNew**、および**Update**します。 各メソッドに唯一の引数から派生したクラスのインスタンスへのポインターは、 **CADORecordBinding**です。 したがって、 **AddNew**と**Update**メソッドは、ADO メソッド namesakes のパラメーターのいずれかを指定できません。

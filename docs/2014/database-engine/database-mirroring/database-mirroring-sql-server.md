@@ -57,7 +57,7 @@ ms.locfileid: "48154942"
   
 -   アップグレード中の実稼働データベースの可用性が向上します。  
   
-     ミラー化されたデータベースのダウンタイムを最小限に抑えるために、フェールオーバー パートナーをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを順次アップグレードできます。 これにより、ダウンタイムはフェールオーバー 1 回分のみになります。 このようなアップグレード形態を *ローリング アップグレード*と呼びます。 詳細については、次を参照してください。[最小限のダウンタイムでのシステム上でミラー化データベースの Service Pack をインストール](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)します。  
+     ミラー化されたデータベースのダウンタイムを最小限に抑えるために、フェールオーバー パートナーをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを順次アップグレードできます。 これにより、ダウンタイムはフェールオーバー 1 回分のみになります。 このようなアップグレード形態を *ローリング アップグレード*と呼びます。 詳細については、[最小限のダウンタイムでのシステム上でミラー化データベースの Service Pack をインストール](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)を参照してください。  
   
 ##  <a name="TermsAndDefinitions"></a> データベース ミラーリングの用語と定義  
  自動フェールオーバー (automatic failover)  

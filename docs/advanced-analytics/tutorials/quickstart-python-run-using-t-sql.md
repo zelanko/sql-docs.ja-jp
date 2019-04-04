@@ -64,7 +64,7 @@ SQL Server での Python コードを実行する 2 つの方法はあります�
 + 内のすべて、`@script`引数は有効な Python コードである必要があります。 
 + コードは、インデント、変数名、およびなどに関するすべての Python ルールに従う必要があります。 エラーが発生したときに、ホワイト スペースと大文字小文字の区別を確認します。
 + Python では、プログラミング言語間で、最も柔軟性が高いの 1 つ単一引用符と二重引用符に関してほぼ同義です。 ただし、T-SQL では、特定の情報のみに対して単一引用符を使用し、`@script`引数では、単一引用符を使用して、Unicode 文字列としての Python コードを囲みます。 そのため、Python コードを確認し、いくつかの単一引用符を二重引用符に変更する必要があります。
-+ 既定で読み込まれていないすべてのライブラリを使用している場合は、読み込みに、スクリプトの先頭に import ステートメントを使用する必要があります。 SQL Server では、いくつかの製品に固有のライブラリを追加します。 詳細については、次を参照してください。 [Python ライブラリ](../python/python-libraries-and-data-types.md)します。
++ 既定で読み込まれていないすべてのライブラリを使用している場合は、読み込みに、スクリプトの先頭に import ステートメントを使用する必要があります。 SQL Server では、いくつかの製品に固有のライブラリを追加します。 詳細については、[Python ライブラリ](../python/python-libraries-and-data-types.md)を参照してください。
 + ライブラリがインストールされていない停止および」の説明に従って、SQL Server の外部での Python パッケージをインストールします。[SQL Server に新しい Python パッケージをインストールする](../python/install-additional-python-packages-on-sql-server.md)
 
 ## <a name="run-a-hello-world-script"></a>Hello World スクリプトを実行します。

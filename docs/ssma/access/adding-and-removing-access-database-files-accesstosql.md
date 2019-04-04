@@ -46,7 +46,7 @@ SSMA プロジェクトに Access データベースを追加して SSMA は、�
 > Access データベースは、複数のファイルに分割することができます。 テーブルを含むバックエンド データベースとクエリ、フォーム、レポート、マクロ、モジュール、およびショートカットが含まれているフロント エンドのデータベース。 分割データベースを移行する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、SSMA をフロント エンドのデータベースを追加します。  
   
 ## <a name="permissions-that-are-required-by-ssma"></a>SSMA で必要なアクセス許可  
-Access データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、ユーザー グループと管理者のユーザーには、管理のアクセス許可が必要です。 ワークグループの保護を持つデータベースを移行する方法については、次を参照してください。 [Access データベースを移行の準備](preparing-access-databases-for-migration-accesstosql.md)します。  
+Access データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、ユーザー グループと管理者のユーザーには、管理のアクセス許可が必要です。 ワークグループの保護を持つデータベースを移行する方法については、[Access データベースを移行の準備](preparing-access-databases-for-migration-accesstosql.md)を参照してください。  
   
 ## <a name="selecting-databases-to-add"></a>追加するデータベースの選択  
 SSMA プロジェクトでは、1 つまたは複数のデータベースを追加して、ファイルはすべて 1 つの既知の場所に場合、は、次の手順を使用して、ファイルを追加できます。  

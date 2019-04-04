@@ -92,7 +92,7 @@ ms.locfileid: "53371234"
 >  SQLXML 4.0 には、下位の SQLXML 3.0 との完全な互換性はありません。 SQLXML 4.0 では不具合の修正とその他の機能変更が行われており、特に SQLXML ISAPI のサポートが削除されているため、IIS 仮想ディレクトリは使用できなくなりました。 大半のアプリケーションは少し変更すれば使用できますが、SQLXML 4.0 で運用する前には必ずテストを行ってください。  
   
 ## <a name="support-for-data-types-introduced-in-sql-server-2005-and-sql-server-2008"></a>SQL Server 2005 および SQL Server 2008 で導入されたデータ型のサポート  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では `xml` データ型が導入され、SQLXML 4.0 では `xml` データ型がサポートされます。 詳細については、次を参照してください。 [xml SQLXML 4.0 でのデータ型のサポート](xml-data-type-support-in-sqlxml-4-0.md)します。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では `xml` データ型が導入され、SQLXML 4.0 では `xml` データ型がサポートされます。 詳細については、[xml SQLXML 4.0 でのデータ型のサポート](xml-data-type-support-in-sqlxml-4-0.md)を参照してください。  
   
  SQLXML で XML ビューをマッピングするとき、XML の一括読み込みを行うとき、または XML アップデートグラムを実行するときの `xml` データ型の使用方法については、次で提供される例をご覧ください。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "53371234"
   
 ## <a name="xml-bulk-load-changes-for-sqlxml-40-sp1"></a>SQLXML 4.0 SP1 での XML 一括読み込みの変更点  
   
--   使用して SQLXML 4.0 では、SchemaGen オーバーフロー フィールドが作成されて、`xml`データ型。 詳細については、次を参照してください。 [SQL Server XML 一括読み込みオブジェクト モデル](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)します。  
+-   使用して SQLXML 4.0 では、SchemaGen オーバーフロー フィールドが作成されて、`xml`データ型。 詳細については、[SQL Server XML 一括読み込みオブジェクト モデル](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)を参照してください。  
   
 -   以前に [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic アプリケーションを作成済みで、SQLXML 4.0 を使用する場合は、Xblkld4.dll を参照するようアプリケーションを再コンパイルする必要があります。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "53371234"
   
  代わりに、Microsoft Data Access Components (MDAC) 2.6 以降で最初に導入された ADO (ActiveX Data Objects) の SQLXML 拡張を使用して、SQLXML クエリ、テンプレート、アップデートグラムを実行できます。  
   
- 詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+ 詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
 ### <a name="supportability-for-sqlxml-30-isapi-and-data-types-introduced-in-sql-server-2005"></a>SQLXML 3.0 ISAPI のサポートと SQL Server 2005 で導入されたデータ型  
  導入された機能が強化されたデータの入力を必要とするソリューションから SQLXML 4.0 では、ISAPI のサポートが削除されたため[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]など、 [xml データ型](/sql/t-sql/xml/xml-transact-sql)または[ユーザー定義データ型 (Udt)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)Web ベースのアクセスなど、別のソリューションを使用する必要が[SQLXML マネージ クラス](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)または別の種類の SQL Server 2005 用のネイティブ XML Web サービスなどの HTTP ハンドラー。  

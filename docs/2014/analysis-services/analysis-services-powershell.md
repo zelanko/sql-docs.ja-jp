@@ -38,7 +38,7 @@ ms.locfileid: "53355917"
   
  [Analysis Services PowerShell タスク](#bkmk_tasks)  
 
-構文と例については、次を参照してください。 [Analysis Services PowerShell Reference](/sql/analysis-services/powershell/analysis-services-powershell-reference)します。
+構文と例については、[Analysis Services PowerShell Reference](/sql/analysis-services/powershell/analysis-services-powershell-reference)を参照してください。
 
 ##  <a name="bkmk_prereq"></a> 前提条件  
  Windows PowerShell 2.0 がインストールされている必要があります。 新しいバージョンの Windows オペレーティング システムでは、既定でインストールされます。 詳細については、次を参照してください[Windows PowerShell 2.0 のインストール。](https://msdn.microsoft.com/library/ff637750.aspx)
@@ -49,7 +49,7 @@ ms.locfileid: "53355917"
   
  インポートする必要があります、 **SQLPS**モジュールを使用する前に、`SQLAS`プロバイダーおよびコマンドレット。 SQLAS プロバイダーの拡張機能は、`SQLServer`プロバイダー。 SQLPS モジュールをインポートするには、いくつかの方法があります。 詳細については、「 [SQLPS モジュールのインポート](../../2014/database-engine/import-the-sqlps-module.md)」を参照してください。  
   
- Analysis Services インスタンスにリモート アクセスするには、リモート管理とファイル共有を有効にしておく必要があります。 詳細については、次を参照してください。[リモート管理を有効にする](#bkmk_remote)このトピックの「します。  
+ Analysis Services インスタンスにリモート アクセスするには、リモート管理とファイル共有を有効にしておく必要があります。 詳細については、[リモート管理を有効にする](#bkmk_remote)このトピックの「を参照してください。  
   
 ##  <a name="bkmk_vers"></a> サポートされている Analysis Services のバージョンとモード  
  現在、Analysis Services PowerShell は、Windows Server 2008 R2、Windows Server 2008 SP1、または Windows 7 で動作する [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Analysis Services のすべてのエディションでサポートされています。  
@@ -60,7 +60,7 @@ ms.locfileid: "53355917"
 |-------------|-------------------------------------|  
 |多次元のインスタンスとデータベース|ローカルおよびリモート管理でサポートされます。<br /><br /> Merge-partition にはローカル接続が必要です。|  
 |表形式のインスタンスとデータベース|ローカルおよびリモート管理でサポートされます。<br /><br /> 詳細については、、2011 年 8 月のブログを参照してください。[表形式モデルを使用して PowerShell の管理](https://go.microsoft.com/fwlink/?linkID=227685)します。|  
-|PowerPivot for SharePoint のインスタンスとデータベース|制限付きでサポートされます。 HTTP 接続と SQLAS プロバイダーを使用して、インスタンスとデータベースの情報を表示できます。<br /><br /> ただし、コマンドレットの使用はサポートされていません。 インメモリ PowerPivot データベースのバックアップと復元に Analysis Services PowerShell は使用しないでください。また、ロールの追加や削除、データの処理、任意の XMLA スクリプトの実行にも使用しないでください。<br /><br /> PowerPivot for SharePoint には、構成のために個別に提供される組み込みの PowerShell サポートがあります。 詳細については、次を参照してください。 [PowerPivot for SharePoint 用 PowerShell リファレンス](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)します。|  
+|PowerPivot for SharePoint のインスタンスとデータベース|制限付きでサポートされます。 HTTP 接続と SQLAS プロバイダーを使用して、インスタンスとデータベースの情報を表示できます。<br /><br /> ただし、コマンドレットの使用はサポートされていません。 インメモリ PowerPivot データベースのバックアップと復元に Analysis Services PowerShell は使用しないでください。また、ロールの追加や削除、データの処理、任意の XMLA スクリプトの実行にも使用しないでください。<br /><br /> PowerPivot for SharePoint には、構成のために個別に提供される組み込みの PowerShell サポートがあります。 詳細については、[PowerPivot for SharePoint 用 PowerShell リファレンス](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)を参照してください。|  
 |ローカル キューブへのネイティブ接続<br /><br /> "データ Source=c:\backup\test.cub"|サポートされていません。|  
 |SharePoint 内の BI セマンティック モデル (.bism) 接続ファイルへの HTTP 接続<br /><br /> "データ ソース =http://server/shared_docs/name.bism"|サポートされていません。|  
 |PowerPivot データベースへの埋め込み接続<br /><br /> "データ ソース = $embedded$"|サポートされていません。|  
@@ -90,7 +90,7 @@ PS SQLSERVER:\SQLAS\HTTP_DS> $cred = Get-credential adventureworks\dbadmin
 PS SQLSERVER:\SQLAS\HTTP_DS> Invoke-ASCmd -Inputfile:"c:\discoverconnections.xmla" -Credential:$cred  
 ```  
   
- 基本認証を使用する際は、暗号化された接続を介してユーザー名とパスワードが送信されるように、必ず HTTPS と SSL を使用してください。 詳細については、次を参照してください。 [IIS 7.0 で Secure Sockets Layer の構成](https://go.microsoft.com/fwlink/?linkID=184299)と[基本認証を構成する (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=230776)します。  
+ 基本認証を使用する際は、暗号化された接続を介してユーザー名とパスワードが送信されるように、必ず HTTPS と SSL を使用してください。 詳細については、[IIS 7.0 で Secure Sockets Layer の構成](https://go.microsoft.com/fwlink/?linkID=184299)と[基本認証を構成する (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=230776)を参照してください。  
   
  PowerShell で指定した資格情報、クエリ、およびコマンドは、そのままトランスポート層に渡されることに注意してください。 機密性の高いコンテンツがスクリプトに含まれていると、悪質なインジェクション攻撃のリスクが増大します。  
   

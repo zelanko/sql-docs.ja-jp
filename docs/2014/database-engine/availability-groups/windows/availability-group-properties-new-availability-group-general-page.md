@@ -65,7 +65,7 @@ ms.locfileid: "48105192"
  **[同期コミット]**  
  プライマリ レプリカは、セカンダリ レプリカがトランザクションをディスクに書き込むまで、特定のトランザクションのコミットを待機します。  
   
- 詳細については、次を参照してください。[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)します。  
+ 詳細については、[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)を参照してください。  
   
  **フェールオーバー モード**  
  レプリカのフェールオーバー モード。次のいずれかです。  

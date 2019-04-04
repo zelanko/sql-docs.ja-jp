@@ -23,7 +23,7 @@ ms.locfileid: "56288416"
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- このチュートリアルで作成するレポートの拡張のバージョンはサンプルとして提供[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]レポート ビルダーのレポート。 このサンプル レポートおよびその他のダウンロードの詳細については、次を参照してください。[レポート ビルダーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=184851)します。  
+ このチュートリアルで作成するレポートの拡張のバージョンはサンプルとして提供[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]レポート ビルダーのレポート。 このサンプル レポートおよびその他のダウンロードの詳細については、[レポート ビルダーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=184851)を参照してください。  
   
 ##  <a name="BackToTop"></a> 学習内容  
  このチュートリアルでは、次の内容を学習します。  

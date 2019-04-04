@@ -36,14 +36,14 @@ ms.locfileid: "56039354"
   
      **データ ソース ビューの選択**ページが表示されます。 **使用可能なデータ ソース ビュー**、`Orders`します。  
   
-     Orders は、マーケット バスケット シナリオで使用したものと同じデータ ソース ビューです。 このデータ ソース ビューを作成していない場合は、次を参照してください。[入れ子になったテーブルのデータ ソース ビューの追加&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md)します。  
+     Orders は、マーケット バスケット シナリオで使用したものと同じデータ ソース ビューです。 このデータ ソース ビューを作成していない場合は、[入れ子になったテーブルのデータ ソース ビューの追加&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md)を参照してください。  
   
 5.  **[次へ]** をクリックします。  
   
 6.  **テーブルの種類の指定** ページで、、**ケース** の隣にチェック ボックス、 **vAssocSeqOrders** 、テーブルを選択、**入れ子になった** チェック ボックス次に、 **vAssocSeqLineItems**テーブル。 **[次へ]** をクリックします。  
   
     > [!NOTE]  
-    >  選択すると、エラーが発生した場合、**ケース**または**入れ子になった**チェック ボックス、可能性があるデータ ソース ビューの結合が正しくないこと。 入れ子になったテーブル、 **vAssocSeqLineItems**、ケースのテーブルに接続する必要があります**vAssocSeqOrders**多対一結合でします。 結合線を右クリックして結合の方向を逆向きにすることによって、リレーションシップを編集できます。 詳細については、次を参照してください。[リレーションシップの編集 ダイアログ ボックスの作成または&#40;Analysis Services - 多次元データ&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md)します。  
+    >  選択すると、エラーが発生した場合、**ケース**または**入れ子になった**チェック ボックス、可能性があるデータ ソース ビューの結合が正しくないこと。 入れ子になったテーブル、 **vAssocSeqLineItems**、ケースのテーブルに接続する必要があります**vAssocSeqOrders**多対一結合でします。 結合線を右クリックして結合の方向を逆向きにすることによって、リレーションシップを編集できます。 詳細については、[リレーションシップの編集 ダイアログ ボックスの作成または&#40;Analysis Services - 多次元データ&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md)を参照してください。  
   
 7.  **トレーニング データの指定**ページで、チェック ボックスを次のように選択して、モデルで使用する列を選択します。  
   

@@ -27,7 +27,7 @@ ms.locfileid: "56011787"
   
  "SharePoint Web アプリケーション 80 にはルート サイト コレクションがありません"  
   
- メッセージは"rs_sp_#.log"# は、増分する番号をという名前のアドインのインストール ログに記載されています。 ログ ファイルは、現在のユーザーの Temp フォルダー (例: C:\Users\\[user name]\AppData\Local\Temp) にあります。追加のログ オプションの詳細については、次を参照してください。[インストールまたは SharePoint 用 Reporting Services アドインのアンインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)します。  
+ メッセージは"rs_sp_#.log"# は、増分する番号をという名前のアドインのインストール ログに記載されています。 ログ ファイルは、現在のユーザーの Temp フォルダー (例: C:\Users\\[user name]\AppData\Local\Temp) にあります。追加のログ オプションの詳細については、[インストールまたは SharePoint 用 Reporting Services アドインのアンインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)を参照してください。  
   
  このトピックの内容  
   

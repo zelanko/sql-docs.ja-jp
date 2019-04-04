@@ -26,7 +26,7 @@ ms.locfileid: "52507503"
 各 DBMS は、独自の SQL 型を定義します。 各 ODBC ドライバーでは、関連付けられている DBMS 定義 SQL データ型のみを公開します。 SQL の ODBC で定義された型の識別子にドライバーをマップする方法については DBMS SQL 型し、独自ドライバー固有の SQL 型識別子に、ドライバーが DBMS SQL 型をマップする方法を呼び出すことによって返される**SQLGetTypeInfo**します。 ドライバーは、列との呼び出しを通じてパラメーターのデータ型を記述するときにも、SQL データ型を返します**SQLColAttribute**、 **SQLColumns**、 **SQLDescribeCol**、**SQLDescribeParam**、 **SQLProcedureColumns**、および**SQLSpecialColumns**します。  
   
 > [!NOTE]  
->  SQL データ型の実装記述子 SQL_DESC_ CONCISE_TYPE、SQL_DESC_TYPE、および SQL_DESC_DATETIME_INTERVAL_CODE フィールドに格納されます。 SQL データ型の特性の実装記述子の SQL_DESC_PRECISION、SQL_DESC_SCALE、SQL_DESC_LENGTH、および SQL_DESC_OCTET_LENGTH フィールドに格納されます。 詳細については、次を参照してください。[データ型識別子と記述子](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)後の「します。  
+>  SQL データ型の実装記述子 SQL_DESC_ CONCISE_TYPE、SQL_DESC_TYPE、および SQL_DESC_DATETIME_INTERVAL_CODE フィールドに格納されます。 SQL データ型の特性の実装記述子の SQL_DESC_PRECISION、SQL_DESC_SCALE、SQL_DESC_LENGTH、および SQL_DESC_OCTET_LENGTH フィールドに格納されます。 詳細については、[データ型識別子と記述子](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)後の「を参照してください。  
   
  特定のドライバーとデータ ソースは、必ずしもこの付録で定義されているすべての SQL データ型をサポートできません。 SQL データ型に対するドライバーのサポートは、ドライバーに準拠している SQL 92 のレベルによって異なります。 ドライバーによってサポートされている SQL 92 文法のレベルを決定するには、アプリケーションが呼び出す**SQLGetInfo** SQL_SQL_CONFORMANCE 情報の種類にします。 また、特定のドライバーとデータ ソースは、追加のドライバー固有の SQL データ型をサポートする可能性があります。 サポートするデータ型、ドライバーを決定する、アプリケーションを呼び出す**SQLGetTypeInfo**します。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。 特定のデータ ソース内のデータ型については、そのデータ ソースのドキュメントを参照してください。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "52507503"
   
  [6] ODBC 3 *.x*、SQL の日付、時刻、および timestamp データ型は SQL_TYPE_DATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP、ODBC 2 にそれぞれ;.*x*データ型は、SQL_DATE、SQL_TIME、および SQL_TIMESTAMP です。  
   
- [7] の間隔の SQL データ型の詳細については、次を参照してください。、 [Interval データ型](../../../odbc/reference/appendixes/interval-data-types.md)セクションで、この付録の「します。  
+ [7] の間隔の SQL データ型の詳細については、、 [Interval データ型](../../../odbc/reference/appendixes/interval-data-types.md)セクションで、この付録の「を参照してください。  
   
  [8] SQL_BIT データ型では、SQL 92 BIT 型よりも異なる特性があります。  
   

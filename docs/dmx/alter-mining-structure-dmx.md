@@ -97,7 +97,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>列名と別名  
- 列定義リストで使用する列名は、マイニング構造で使用されている列の名前にする必要があります。 ただし、マイニング モデルの構造列を表すために、必要に応じて別名を定義できます。 同じ構造列に複数の列定義を作成し、列の各コピーに異なる別名と予測の使用方法を割り当てることもできます。 既定では、別名を定義しない場合、構造列の名前が使用されます。 詳細については、次を参照してください。[モデル列の別名を作成](../analysis-services/data-mining/create-an-alias-for-a-model-column.md)です。  
+ 列定義リストで使用する列名は、マイニング構造で使用されている列の名前にする必要があります。 ただし、マイニング モデルの構造列を表すために、必要に応じて別名を定義できます。 同じ構造列に複数の列定義を作成し、列の各コピーに異なる別名と予測の使用方法を割り当てることもできます。 既定では、別名を定義しない場合、構造列の名前が使用されます。 詳細については、[モデル列の別名を作成](../analysis-services/data-mining/create-an-alias-for-a-model-column.md)を参照してください。  
   
  入れ子になったテーブル列の場合、入れ子になったテーブルの名前を指定、データ型として指定**テーブル**、かっこで囲まれた、モデルに含める入れ子になった列の一覧を指定します。  
   
@@ -115,7 +115,7 @@ USING <algorithm> [(<parameter list>)]
 |**REGRESSOR**|アルゴリズムが、指定した列を回帰アルゴリズムの回帰式に使用できることを示します。|  
 |**MODEL_EXISTENCE_ONLY**|属性列の値が属性の有無ほど重要ではないことを示します。|  
   
- 列には複数のモデリング フラグを定義できます。 モデリング フラグを使用する方法の詳細については、次を参照してください。[モデリング フラグ&#40;DMX&#41;](../dmx/modeling-flags-dmx.md)します。  
+ 列には複数のモデリング フラグを定義できます。 モデリング フラグを使用する方法の詳細については、[モデリング フラグ&#40;DMX&#41;](../dmx/modeling-flags-dmx.md)を参照してください。  
   
 ### <a name="prediction-clause"></a>予測句  
  予測句では、予測列の使用方法を説明します。 次の表は、使用可能な句を示しています。  
@@ -130,15 +130,15 @@ USING <algorithm> [(<parameter list>)]
   
  フィルター条件式は、簡略化された DMX 述語で、WHERE 句に似ています。 フィルター式は、基本的な算術演算子、スカラー、および列名を使用する式に制限されます。 ただし、EXISTS 演算子は例外です。これは、サブクエリに対して少なくとも 1 行が返される場合は true に評価されます。 述語は、共通の論理演算子を使用して結合できます。AND、OR、および NOT です。  
   
- マイニング モデルで使用されるフィルターの詳細については、次を参照してください。[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
+ マイニング モデルで使用されるフィルターの詳細については、[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)を参照してください。  
   
 > [!NOTE]  
 >  フィルター内の列は、マイニング構造列である必要があります。 モデル列または別名の列に対してフィルターを作成することはできません。  
   
- DMX の演算子と構文の詳細については、次を参照してください。[マイニング モデル列](../analysis-services/data-mining/mining-model-columns.md)します。  
+ DMX の演算子と構文の詳細については、[マイニング モデル列](../analysis-services/data-mining/mining-model-columns.md)を参照してください。  
   
 ## <a name="parameter-definition-list"></a>パラメーター定義リスト  
- アルゴリズム パラメーターをパラメーター リストに追加して、モデルのパフォーマンスと機能を調整できます。 使用できるパラメーターは、USING 句で指定するアルゴリズムによって異なります。 各アルゴリズムに関連付けられているパラメーターの一覧は、次を参照してください。[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)します。  
+ アルゴリズム パラメーターをパラメーター リストに追加して、モデルのパフォーマンスと機能を調整できます。 使用できるパラメーターは、USING 句で指定するアルゴリズムによって異なります。 各アルゴリズムに関連付けられているパラメーターの一覧は、[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)を参照してください。  
   
  パラメーター リストの構文は次のとおりです。  
   

@@ -65,7 +65,7 @@ ms.locfileid: "53377664"
   
 -   FILESTREAM データは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの監視機能ではサポートされていません。  
   
- 詳細については、次を参照してください。 [SQL Server の最大容量仕様](../../sql-server/maximum-capacity-specifications-for-sql-server.md)と[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ 詳細については、[SQL Server の最大容量仕様](../../sql-server/maximum-capacity-specifications-for-sql-server.md)と[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)を参照してください。  
   
 ### <a name="remove-previous-utility-control-points-before-installing-a-new-one"></a>新しいユーティリティ コントロール ポイントをインストールする前に、以前のものを削除する  
  ユーティリティ コントロール ポイント (UCP) として構成されたことのある SQL Server インスタンスに UCP をインストールする場合、事前に SQL Server のすべてのマネージド インスタンスと UCP を削除しておく必要があります。 これには、 **sp_sysutility_ucp_remove** ストアド プロシージャを実行します。  

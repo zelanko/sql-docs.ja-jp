@@ -21,7 +21,7 @@ ms.locfileid: "56294730"
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル:レポート (レポート ビルダー) へのスパーク ラインを追加します。
   このチュートリアルでは、サンプルの売上データに基づいて基本的なテーブル レポートを作成してから、テーブルのセルにスパークライン グラフを追加します。  
   
- このチュートリアルで作成するレポートについては、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] レポート ビルダーのサンプル レポートに発展版が含まれています。 このサンプル レポートおよびその他のダウンロードの詳細については、次を参照してください。[レポート ビルダーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=184851)します。 次の図に、ここで作成するレポートと同様のサンプル レポートを示します。  
+ このチュートリアルで作成するレポートについては、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] レポート ビルダーのサンプル レポートに発展版が含まれています。 このサンプル レポートおよびその他のダウンロードの詳細については、[レポート ビルダーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=184851)を参照してください。 次の図に、ここで作成するレポートと同様のサンプル レポートを示します。  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   

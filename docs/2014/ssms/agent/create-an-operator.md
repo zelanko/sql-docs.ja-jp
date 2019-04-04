@@ -147,6 +147,6 @@ ms.locfileid: "52762924"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-operator-transact-sql)します。  
+ 詳細については、[sp_add_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-operator-transact-sql)を参照してください。  
   
   

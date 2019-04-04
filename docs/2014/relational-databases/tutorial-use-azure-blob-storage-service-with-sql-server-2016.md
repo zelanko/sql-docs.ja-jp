@@ -20,7 +20,7 @@ ms.locfileid: "52810974"
 # <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>チュートリアル:Windows Azure ストレージ サービスでは、SQL Server データ ファイル
   Windows Azure ストレージ サービス内の SQL Server データ ファイルのチュートリアルにようこそ。 このチュートリアルにより、Windows Azure BLOB ストレージ サービスに SQL Server データ ファイルを直接格納する方法について把握できます。  
   
- Windows Azure BLOB ストレージ サービスに対する SQL Server 統合のサポートは、SQL Server 2014 の拡張機能です。 この機能を使用する利点と機能の概要については、次を参照してください。 [Windows Azure での SQL Server データ ファイル](databases/sql-server-data-files-in-microsoft-azure.md)します。  
+ Windows Azure BLOB ストレージ サービスに対する SQL Server 統合のサポートは、SQL Server 2014 の拡張機能です。 この機能を使用する利点と機能の概要については、[Windows Azure での SQL Server データ ファイル](databases/sql-server-data-files-in-microsoft-azure.md)を参照してください。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
  このチュートリアルでは、複数のレッスンに分けて、Windows Azure ストレージ サービスに SQL Server データ ファイルを格納する方法を説明します。 各レッスンでは特定のタスクに重点を置きます。 まず、Windows Azure でストレージ アカウントおよびコンテナーを作成する方法を学習します。 次に、SQL Server を Windows Azure ストレージと統合できるようにするために SQL Server 資格情報を作成する方法を学習します。 その後、Windows Azure ストレージにデータベースを直接作成します。 さらに、暗号化、移行、およびバックアップと復元のシナリオを示します。  

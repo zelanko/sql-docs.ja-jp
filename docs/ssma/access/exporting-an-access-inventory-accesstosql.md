@@ -42,7 +42,7 @@ ms.locfileid: "47746450"
 これらの質問回答に使用されるクエリの例は、このトピックの最後で提供されます。  
   
 ## <a name="exported-metadata"></a>エクスポートされたメタデータ  
-SSMA は、Access データベース、テーブル、列、インデックス、外部キー、クエリ、レポート、フォーム、マクロ、およびモジュールに関するメタデータをエクスポートします。 これらの項目のカテゴリのそれぞれについてのメタデータは、別のテーブルにエクスポートされます。 これらのテーブルのスキーマは、次を参照してください。 [Access のインベントリ スキーマ](access-inventory-schemas-accesstosql.md)します。  
+SSMA は、Access データベース、テーブル、列、インデックス、外部キー、クエリ、レポート、フォーム、マクロ、およびモジュールに関するメタデータをエクスポートします。 これらの項目のカテゴリのそれぞれについてのメタデータは、別のテーブルにエクスポートされます。 これらのテーブルのスキーマは、[Access のインベントリ スキーマ](access-inventory-schemas-accesstosql.md)を参照してください。  
   
 ## <a name="exporting-inventory-data"></a>インベントリ データをエクスポートします。  
 Access インベントリをエクスポートするに最初に開くまたは SSMA プロジェクトを作成し分析する Access データベースを追加する必要があります。 指定したそれらのデータベースに関するメタデータをエクスポートする SSMA プロジェクトにデータベースを追加した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースおよびスキーマです。 必要に応じて、SSMA は、メタデータを格納するテーブルを作成します。 SSMA を Access データベースに関するメタデータを追加し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
@@ -66,7 +66,7 @@ Access インベントリをエクスポートするに最初に開くまたは 
   
 5.  **移行先**コンボ ボックスに、移行、およびクリックするターゲット バージョンを選択**OK**します。  
   
-プロジェクトの作成の詳細については、次を参照してください。 [Creating and Managing Projects](creating-and-managing-projects-accesstosql.md)します。  
+プロジェクトの作成の詳細については、[Creating and Managing Projects](creating-and-managing-projects-accesstosql.md)を参照してください。  
   
 **検索データベースを追加するには**  
   
@@ -95,7 +95,7 @@ Access インベントリをエクスポートするに最初に開くまたは 
   
 8.  確認してください ページで、次のようにクリックします。**完了**します。  
   
-データベースをプロジェクトに追加する方法の詳細については、次を参照してください。[の追加と削除の Access データベース ファイル](adding-and-removing-access-database-files-accesstosql.md)します。  
+データベースをプロジェクトに追加する方法の詳細については、[の追加と削除の Access データベース ファイル](adding-and-removing-access-database-files-accesstosql.md)を参照してください。  
   
 **SQL Server に接続するには**  
   

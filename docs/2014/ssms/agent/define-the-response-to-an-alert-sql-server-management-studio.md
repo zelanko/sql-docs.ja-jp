@@ -96,6 +96,6 @@ ms.locfileid: "52795864"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)します。  
+ 詳細については、[sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)を参照してください。  
   
   

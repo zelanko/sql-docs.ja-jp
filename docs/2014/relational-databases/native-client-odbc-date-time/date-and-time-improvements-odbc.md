@@ -21,9 +21,9 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48123628"
 ---
 # <a name="date-and-time-improvements-odbc"></a>日付と時刻の強化機能 (ODBC)
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、新しい日付と時刻のデータ型が導入されました。 このセクションでは、拡張機能としてこれらの新しい型を公開する方法について説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client。 概要については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、新しい日付と時刻のデータ型のサポートを参照してください[日付と時刻の強化](../native-client/features/date-and-time-improvements.md)します。 ODBC 日付/時刻のサポートを示すサンプルについては、次を参照してください。[使用日付と時刻型](../native-client-odbc-how-to/use-date-and-time-types.md)します。  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、新しい日付と時刻のデータ型が導入されました。 このセクションでは、拡張機能としてこれらの新しい型を公開する方法について説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client。 概要については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、新しい日付と時刻のデータ型のサポートを参照してください[日付と時刻の強化](../native-client/features/date-and-time-improvements.md)します。 ODBC 日付/時刻のサポートを示すサンプルについては、[使用日付と時刻型](../native-client-odbc-how-to/use-date-and-time-types.md)を参照してください。  
   
- 日付と時刻のデータ型についての一般的なは、次を参照してください。 [datetime &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)します。  
+ 日付と時刻のデータ型についての一般的なは、[datetime &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ODBC の日付/時刻の強化に対するデータ型のサポート](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  

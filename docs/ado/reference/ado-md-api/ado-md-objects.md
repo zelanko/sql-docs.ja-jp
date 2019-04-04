@@ -44,7 +44,7 @@ ms.locfileid: "55044918"
   
  これらのオブジェクト間のリレーションシップは、「、 [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)します。  
   
- ADO MD オブジェクトの多くは、対応するコレクションに格納することができます。 たとえば、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) オブジェクトは **Catalog** の [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) コレクションに格納できます。 詳細については、次を参照してください。 [ADO MD のコレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)します。  
+ ADO MD オブジェクトの多くは、対応するコレクションに格納することができます。 たとえば、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) オブジェクトは **Catalog** の [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) コレクションに格納できます。 詳細については、[ADO MD のコレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ADO MD の API リファレンス](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

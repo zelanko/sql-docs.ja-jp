@@ -38,9 +38,9 @@ ms.locfileid: "52775044"
   
 4.  2 つのテーブルの各主キー列を交差テーブルにコピーします。 他の列も、他のテーブルに追加するのと同様に交差テーブルに追加できます。  
   
-5.  交差テーブルで、他の 2 つのテーブルの主キーをすべて含めて主キーを設定します。 詳細については、次を参照してください。 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)します。  
+5.  交差テーブルで、他の 2 つのテーブルの主キーをすべて含めて主キーを設定します。 詳細については、[Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)を参照してください。  
   
-6.  2 つの各主テーブルと交差テーブルとの間に一対多リレーションシップを定義します。 交差テーブルは、作成するリレーションシップの "多" 側に配置します。 詳細については、次を参照してください。 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)します。  
+6.  2 つの各主テーブルと交差テーブルとの間に一対多リレーションシップを定義します。 交差テーブルは、作成するリレーションシップの "多" 側に配置します。 詳細については、[Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)を参照してください。  
   
     > [!NOTE]  
     >  データベース ダイアグラムで交差テーブルを作成しても、関連テーブルから交差テーブルにデータは挿入されません。 テーブルにデータを挿入する方法については、「[方法 : 複製挿入クエリを作成する (Visual Database Tools)](visual-database-tools.md)」を参照してください。  

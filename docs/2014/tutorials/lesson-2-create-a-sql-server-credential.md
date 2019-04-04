@@ -49,7 +49,7 @@ ms.locfileid: "56014083"
   
 5.  T-SQL ステートメントを確認し、クリックして**Execute**します。  
   
- バックアップの概念と要件の Windows Azure Blob ストレージ サービスの詳細については、次を参照してください。 [SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)します。  
+ バックアップの概念と要件の Windows Azure Blob ストレージ サービスの詳細については、[SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)を参照してください。  
   
 ### <a name="next-lesson"></a>次のレッスン  
  [レッスン 3:Windows Azure Blob ストレージ サービスに対するデータベースの完全バックアップの書き込み](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)します。  

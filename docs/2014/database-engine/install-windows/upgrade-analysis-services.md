@@ -67,7 +67,7 @@ ms.locfileid: "53363484"
  既存のインスタンスをアップグレードするには、セットアップを実行し、新しいインスタンスの名前として既存のインスタンス名を指定します。  
   
 ## <a name="upgrading-databases"></a>データベースのアップグレード  
- 以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で作成されたデータベースは、アップグレード後のサーバー上で、古いデータベース互換性レベル設定で実行されます。 次のバージョンで作成されたデータベースのデータベース互換性レベルは 105 になります。 新しいデータベースの互換性レベルを必要とする機能を使用する場合は、互換性レベルを変更できます。 それ以外の場合は、元の設定を使用して、アップグレード後のサーバー上でデータベースを実行できます。 詳細については、次を参照してください。[多次元データベースの互換性レベル設定&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)します。  
+ 以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で作成されたデータベースは、アップグレード後のサーバー上で、古いデータベース互換性レベル設定で実行されます。 次のバージョンで作成されたデータベースのデータベース互換性レベルは 105 になります。 新しいデータベースの互換性レベルを必要とする機能を使用する場合は、互換性レベルを変更できます。 それ以外の場合は、元の設定を使用して、アップグレード後のサーバー上でデータベースを実行できます。 詳細については、[多次元データベースの互換性レベル設定&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)を参照してください。  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
