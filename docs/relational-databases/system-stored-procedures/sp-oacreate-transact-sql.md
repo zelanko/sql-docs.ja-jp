@@ -76,10 +76,10 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0、失敗した場合は OLE オートメーション オブジェクトによって返される HRESULT の 0 以外の整数値を返します。  
   
- HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
+ HRESULT のリターン コードの詳細については、[OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)を参照してください。  
   
 ## <a name="remarks"></a>コメント  
- OLE オートメーション プロシージャが有効な場合に呼び出し**sp_OACreate** OLE オートメーションの共有実行環境が開始します。 OLE オートメーションを有効にする方法の詳細については、次を参照してください。 [Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)します。  
+ OLE オートメーション プロシージャが有効な場合に呼び出し**sp_OACreate** OLE オートメーションの共有実行環境が開始します。 OLE オートメーションを有効にする方法の詳細については、[Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)を参照してください。  
   
  作成された OLE オブジェクトは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント バッチの最後に自動的に破棄されます。  
   

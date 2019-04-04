@@ -68,7 +68,7 @@ ms.locfileid: "53207711"
 |[MSpublication_access](../../relational-databases/system-tables/mspublication-access-transact-sql.md)|[MStracer_history](../../relational-databases/system-tables/mstracer-history-transact-sql.md)|  
 |[MSpublications](../../relational-databases/system-tables/mspublications-transact-sql.md)|[MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)|  
   
- ディストリビューション データベース内のこれらのテーブルが以外からデータをレプリケートするため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 詳細については、次を参照してください。[非 SQL Server パブリッシャー](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)します。  
+ ディストリビューション データベース内のこれらのテーブルが以外からデータをレプリケートするため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 詳細については、[非 SQL Server パブリッシャー](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)を参照してください。  
   
 |||  
 |-|-|  

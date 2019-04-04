@@ -24,7 +24,7 @@ ms.locfileid: "47756820"
 # <a name="ado-collections"></a>ADO のコレクション
 これらのコレクションと ADO オブジェクト間のリレーションシップが表現されて、 [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)します。  
   
- 各コレクションは、その対応するオブジェクトを含めることができます。 たとえば、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトを含めることができます、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。 オブジェクトの詳細については、次を参照してください。 [ADO オブジェクト](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)または特定のオブジェクトのトピックです。  
+ 各コレクションは、その対応するオブジェクトを含めることができます。 たとえば、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトを含めることができます、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。 オブジェクトの詳細については、[ADO オブジェクト](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)または特定のオブジェクトのトピックを参照してください。  
   
 |||  
 |-|-|  

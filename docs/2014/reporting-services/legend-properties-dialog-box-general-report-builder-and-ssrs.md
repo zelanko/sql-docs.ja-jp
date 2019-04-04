@@ -22,7 +22,7 @@ ms.lasthandoff: 02/15/2019
 ms.locfileid: "56287900"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([凡例のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
-  **[凡例のプロパティ]** ダイアログ ボックスを使用すると、グラフ内の凡例の外観およびレイアウトを定義できます。 詳細については、次を参照してください。[グラフの凡例の書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)します。  
+  **[凡例のプロパティ]** ダイアログ ボックスを使用すると、グラフ内の凡例の外観およびレイアウトを定義できます。 詳細については、[グラフの凡例の書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)を参照してください。  
   
 ## <a name="options"></a>および  
  **名前**  

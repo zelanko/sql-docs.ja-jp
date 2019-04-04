@@ -19,7 +19,7 @@ ms.lasthandoff: 12/13/2018
 ms.locfileid: "53366294"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Excel または Reporting Services での BI セマンティック モデル接続の使用
-  このトピックでは、他のトピックの手順に従って作成した BI セマンティック モデル接続の使用方法について説明します。 BI セマンティック モデルを作成していない場合は、次を参照してください。 [PowerPivot ブックへの BI セマンティック モデル接続を作成する](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)と[表形式モデル データベースへの BI セマンティック モデル接続を作成する](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)します。  
+  このトピックでは、他のトピックの手順に従って作成した BI セマンティック モデル接続の使用方法について説明します。 BI セマンティック モデルを作成していない場合は、[PowerPivot ブックへの BI セマンティック モデル接続を作成する](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)と[表形式モデル データベースへの BI セマンティック モデル接続を作成する](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)を参照してください。  
   
 ##  <a name="bkmk_connect"></a> Excel からの接続  
  BI セマンティック モデル接続は、Analysis Services テーブル モデル データを使用する Excel などのビジネス アプリケーションでデータ ソースとして指定できます。 ここでは、Excel を使用して BI セマンティック モデル データに接続する 2 つの方法を説明します。  

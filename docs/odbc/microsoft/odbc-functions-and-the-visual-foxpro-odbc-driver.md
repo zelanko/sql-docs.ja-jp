@@ -32,7 +32,7 @@ ms.locfileid: "52512458"
 このセクションのトピックでは、ODBC API 関数の簡単な概要と、Visual FoxPro 固有の詳細情報を提供します。  
   
 > [!NOTE]  
->  ODBC 関数については、次を参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)"ODBC プログラマ ガイド 』 を参照します。  
+>  ODBC 関数については、[ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)"ODBC プログラマ ガイド 』 を参照を参照してください。  
   
  ODBC API 関数は、ここで次の 3 つの主なカテゴリに分けられています。コア レベル API 関数、レベル 1 API 関数、およびレベル 2 API 関数。  
   

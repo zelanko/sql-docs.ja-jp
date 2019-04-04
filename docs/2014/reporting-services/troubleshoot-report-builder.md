@@ -21,7 +21,7 @@ ms.locfileid: "56297170"
 # <a name="troubleshoot-report-builder"></a>レポート ビルダーのトラブルシューティング
   レポート ビルダーは、さまざまな種類のデータ ソースからレポートを作成する場合や、レポート サーバーまたは SharePoint サイトにレポートをパブリッシュする場合に使用できる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート作成ツールです。 Web ブラウザー、またはの一部として、レポート ビルダーで作成したレポートを表示できます、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows アプリケーションや SharePoint サイト。  
   
- レポート ビルダーを使用し、さまざまな基本タスクを実行する方法については、次を参照してください。、[チュートリアル](report-builder-tutorials.md)します。  
+ レポート ビルダーを使用し、さまざまな基本タスクを実行する方法については、、[チュートリアル](report-builder-tutorials.md)を参照してください。  
   
  次の各トピックは、レポートの作成者とレポート サーバー管理者にそれぞれ役立つ、レポートのトラブルシューティング方法を示しています。  
   

@@ -106,7 +106,7 @@ ms.locfileid: "52535191"
   
 -   unsuccessful_logons  
   
- このオプションが有効でない場合、これらの列は NULL 値を返します。 このサーバー構成オプションを設定する方法の詳細については、次を参照してください。 [enabled サーバー構成オプションの一般的な条件のコンプライアンス対応](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)します。  
+ このオプションが有効でない場合、これらの列は NULL 値を返します。 このサーバー構成オプションを設定する方法の詳細については、[enabled サーバー構成オプションの一般的な条件のコンプライアンス対応](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)を参照してください。  
  
  
  Azure SQL Database で管理者接続は、認証済みセッションごとに 1 行に表示されます。 結果セットに表示される"sa"セッションは、セッションのユーザーのクォータの影響を及ぼすがありません。 管理者以外の接続には、そのデータベースのユーザー セッションに関連する情報のみ表示されます。

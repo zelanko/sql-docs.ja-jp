@@ -44,7 +44,7 @@ ms.locfileid: "52778244"
   
 -   追加、削除、およびすべてのモデルのすべてのマスター データを更新、**エクスプ ローラー**機能領域。  
   
-  システム管理者として割り当てられているユーザーを変更できます。 詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
+  システム管理者として割り当てられているユーザーを変更できます。 詳細については、[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)を参照してください。  
   
 ## <a name="comparing-administrator-types"></a>管理者の種類の比較  
   

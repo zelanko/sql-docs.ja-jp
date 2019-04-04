@@ -46,4 +46,4 @@ ms.locfileid: "47820061"
 |SQL_COLUMN_SEARCHABLE|SQL_UNSEARCHABLE 全般; 型の列を返します。これらの列は、WHERE 句で使用できません。<br /><br /> 文字または NOCPTRANS とメモ型の列を返します SQL_SEARCHABLE 未設定。これらの列は、任意の比較演算子と共に WHERE 句で使用できます。<br /><br /> 返します SQL_ALL_EXCEPT_LIKE の他の列の型。これらの列は、似たを除くすべての比較演算子と共に WHERE 句で使用できます。|  
 |SQL_COLUMN_TABLE_NAME|常に空の文字列を返します。|  
   
- 詳細については、次を参照してください。 [SQLColAttributes](../../odbc/reference/syntax/sqlcolattributes-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLColAttributes](../../odbc/reference/syntax/sqlcolattributes-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

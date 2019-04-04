@@ -29,7 +29,7 @@ ms.locfileid: "48171542"
   
 3.  **[名前]** でプロジェクトの名前を入力し、場所とソリューション名を指定してから **[OK]** をクリックします。  
   
- 新しいプロジェクトを作成した後、プロジェクトとモデルのプロパティを設定することが重要です。 詳細については、次を参照してください。[プロジェクト プロパティ&#40;SSAS 表形式&#41;](properties-ssas-tabular.md)と[モデル プロパティ&#40;SSAS 表形式&#41;](model-properties-ssas-tabular.md)します。  
+ 新しいプロジェクトを作成した後、プロジェクトとモデルのプロパティを設定することが重要です。 詳細については、[プロジェクト プロパティ&#40;SSAS 表形式&#41;](properties-ssas-tabular.md)と[モデル プロパティ&#40;SSAS 表形式&#41;](model-properties-ssas-tabular.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [プロジェクト プロパティ&#40;SSAS 表形式&#41;](properties-ssas-tabular.md)   

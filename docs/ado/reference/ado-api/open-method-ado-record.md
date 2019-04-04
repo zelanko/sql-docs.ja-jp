@@ -72,7 +72,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  場合、**レコード**オブジェクトは、URL でアクセスできませんエンティティを表します (の行など、**レコード セット**データベースから派生)、両方の値、 [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)。プロパティとフィールドを使用してアクセス、 **adRecordURL**定数が null です。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  

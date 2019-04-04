@@ -26,7 +26,7 @@ ms.locfileid: "47786330"
 > [!NOTE]  
 >  ODBC は Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに含まれます。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  
   
- ドライバーのセットアップ DLL が含まれています、 **ConfigDriver**と**ConfigDSN**関数。 **ConfigDriver**レジストリにドライバー固有の情報を入力するなどの個々 のドライバーのインストール タスクを実行します。 **ConfigDSN**レジストリ内のデータ ソースのドライバー固有の情報を保持します。 これらの関数の詳細については、次を参照してください。[セットアップ DLL API リファレンス](../../../odbc/reference/syntax/setup-dll-api-reference.md)します。  
+ ドライバーのセットアップ DLL が含まれています、 **ConfigDriver**と**ConfigDSN**関数。 **ConfigDriver**レジストリにドライバー固有の情報を入力するなどの個々 のドライバーのインストール タスクを実行します。 **ConfigDSN**レジストリ内のデータ ソースのドライバー固有の情報を保持します。 これらの関数の詳細については、[セットアップ DLL API リファレンス](../../../odbc/reference/syntax/setup-dll-api-reference.md)を参照してください。  
   
  **ConfigDSN**インストーラー DLL レジストリ内のデータ ソース情報を維持するために、次の関数を呼び出します。  
   

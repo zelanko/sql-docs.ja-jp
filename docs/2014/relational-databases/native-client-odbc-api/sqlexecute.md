@@ -20,10 +20,10 @@ ms.lasthandoff: 12/13/2018
 ms.locfileid: "53377424"
 ---
 # <a name="sqlexecute"></a>SQLExecute
-  ステートメント属性 SQL_SOPT_SS_PARAM_FOCUS が 0、SQLExecute に設定されていないは sql_error が返さ sqlstate 診断レコードを生成する場合は、HY024 と「無効な属性値 SQL_SOPT_SS_PARAM_FOCUS が (実行時に 0 にする必要があります)」メッセージを = します。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、次を参照してください。 [SQLSetStmtAttr](sqlsetstmtattr.md)します。  
+  ステートメント属性 SQL_SOPT_SS_PARAM_FOCUS が 0、SQLExecute に設定されていないは sql_error が返さ sqlstate 診断レコードを生成する場合は、HY024 と「無効な属性値 SQL_SOPT_SS_PARAM_FOCUS が (実行時に 0 にする必要があります)」メッセージを = します。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、[SQLSetStmtAttr](sqlsetstmtattr.md)を参照してください。  
   
 ## <a name="remarks"></a>コメント  
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+ テーブル値パラメーターの詳細については、[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=80708)   

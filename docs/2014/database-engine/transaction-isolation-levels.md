@@ -30,9 +30,9 @@ ms.locfileid: "48213148"
   
  トランザクション分離レベルは、ネイティブ コンパイル ストアド プロシージャの ATOMIC ブロックの一部として指定できます。 詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)」を参照してください。 解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] からメモリ最適化テーブルにアクセスするときに、テーブル レベルのヒントを使用して分離レベルを指定することもできます。  
   
- ネイティブ コンパイル ストアド プロシージャを定義する際には、トランザクション分離レベルを指定する必要があります。 解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] のユーザー トランザクションからメモリ最適化テーブルにアクセスするときは、テーブル ヒントで分離レベルを指定する必要があります。 詳細については、次を参照してください。[メモリ最適化テーブルでのトランザクション分離レベルに関するガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)します。  
+ ネイティブ コンパイル ストアド プロシージャを定義する際には、トランザクション分離レベルを指定する必要があります。 解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] のユーザー トランザクションからメモリ最適化テーブルにアクセスするときは、テーブル ヒントで分離レベルを指定する必要があります。 詳細については、[メモリ最適化テーブルでのトランザクション分離レベルに関するガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)を参照してください。  
   
- 自動コミット トランザクションを使用するメモリ最適化テーブルでは、READ COMMITTED 分離レベルがサポートされます。 READ COMMITTED は、ユーザー トランザクションまたは ATOMIC ブロックでは無効です。 READ COMMITTED は、明示的または暗黙的なユーザー トランザクションではサポートされません。 自動コミット トランザクションを使用するメモリ最適化テーブルについては、クエリがどのディスク ベース テーブルにもアクセスできない場合にのみ、分離レベル READ_COMMITTED_SNAPSHOT がサポートされます。 また、解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] を使用して SNAPSHOT 分離で開始されるトランザクションでは、メモリ最適化テーブルにアクセスできません。 REPEATABLE READ 分離または SERIALIZABLE 分離が指定された、解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] を使用するトランザクションでは、SNAPSHOT 分離を使用してメモリ最適化テーブルにアクセスする必要があります。 このシナリオの詳細については、次を参照してください。[コンテナーにまたがるトランザクション](cross-container-transactions.md)です。  
+ 自動コミット トランザクションを使用するメモリ最適化テーブルでは、READ COMMITTED 分離レベルがサポートされます。 READ COMMITTED は、ユーザー トランザクションまたは ATOMIC ブロックでは無効です。 READ COMMITTED は、明示的または暗黙的なユーザー トランザクションではサポートされません。 自動コミット トランザクションを使用するメモリ最適化テーブルについては、クエリがどのディスク ベース テーブルにもアクセスできない場合にのみ、分離レベル READ_COMMITTED_SNAPSHOT がサポートされます。 また、解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] を使用して SNAPSHOT 分離で開始されるトランザクションでは、メモリ最適化テーブルにアクセスできません。 REPEATABLE READ 分離または SERIALIZABLE 分離が指定された、解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] を使用するトランザクションでは、SNAPSHOT 分離を使用してメモリ最適化テーブルにアクセスする必要があります。 このシナリオの詳細については、[コンテナーにまたがるトランザクション](cross-container-transactions.md)を参照してください。  
   
  READ COMMITTED は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定の分離レベルです。 セッションの分離レベルが READ COMMITED (またはそれ以下) の場合は、次のいずれかの操作を実行できます。  
   

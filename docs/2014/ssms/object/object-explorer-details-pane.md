@@ -87,7 +87,7 @@ ms.locfileid: "52779024"
 ## <a name="sql-server-object-search"></a>SQL Server オブジェクトの検索  
  ワイルドカード  
   
--   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、次を参照してください。[ワイルドカードを使用した検索テキスト](../../relational-databases/scripting/search-text-with-wildcards.md)します。  
+-   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、[ワイルドカードを使用した検索テキスト](../../relational-databases/scripting/search-text-with-wildcards.md)を参照してください。  
   
  検索範囲  
   

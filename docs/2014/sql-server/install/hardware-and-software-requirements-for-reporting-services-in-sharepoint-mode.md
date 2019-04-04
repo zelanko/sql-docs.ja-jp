@@ -68,7 +68,7 @@ ms.locfileid: "54206178"
   
 ##  <a name="bkmk_more_information"></a> その他の情報
 
- SharePoint の変更点については、次を参照してください。 [SharePoint 2010 から SharePoint 2013 への変更](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/library/ff607742(office.15).aspx)します。  
+ SharePoint の変更点については、[SharePoint 2010 から SharePoint 2013 への変更](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/library/ff607742(office.15).aspx)を参照してください。  
   
  [SQL Server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445).  
   

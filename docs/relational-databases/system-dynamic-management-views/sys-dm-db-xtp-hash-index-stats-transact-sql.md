@@ -44,7 +44,7 @@ ms.locfileid: "47766134"
 > [!WARNING]
 > **sys.dm_db_xtp_hash_index_stats**テーブル全体をスキャンします。 そのため、データベースの大規模なテーブルがある場合**sys.dm_db_xtp_hash_index_stats**実行時間がかかる場合があります。  
   
-詳細については、次を参照してください。[メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)します。  
+詳細については、[メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)を参照してください。  
   
 |列名|型|説明|  
 |-----------------|----------|-----------------|  
@@ -88,7 +88,7 @@ ms.locfileid: "47766134"
   ORDER BY [table], [index];  
 ``` 
 
-このクエリの結果を解釈する方法の詳細については、次を参照してください。[メモリ最適化テーブルのハッシュ インデックスのトラブルシューティング](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)します。  
+このクエリの結果を解釈する方法の詳細については、[メモリ最適化テーブルのハッシュ インデックスのトラブルシューティング](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)を参照してください。  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 内部テーブルのハッシュ インデックスの統計
 

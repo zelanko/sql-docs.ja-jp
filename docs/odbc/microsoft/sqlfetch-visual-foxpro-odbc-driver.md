@@ -30,4 +30,4 @@ ms.locfileid: "47682762"
   
  前の呼び出しで指定された場所に結果セットから 1 つの行を取得します。 [SQLBindCol](../../odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md)します。 呼び出すのため、ドライバーを準備します[SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md)バインドされていない列にします。  
   
- 詳細については、次を参照してください。 [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

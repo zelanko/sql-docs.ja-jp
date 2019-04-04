@@ -52,7 +52,7 @@ ms.locfileid: "56040173"
   
  次のステートメントは完全なインストール コマンドとパラメーター セットの例: **setup/ACTION = install/FEATURES = SQL, RS/InstanceName = denali_inst1… は.../RSSHPINSTALLMODE ="DefaultSharePointMode"**  
   
- コマンド ライン インストールの詳細については、次を参照してください。[コマンド プロンプト インストールの Reporting Services SharePoint モードとネイティブ モード](install-windows/install-reporting-services-at-the-command-prompt.md)します。  
+ コマンド ライン インストールの詳細については、[コマンド プロンプト インストールの Reporting Services SharePoint モードとネイティブ モード](install-windows/install-reporting-services-at-the-command-prompt.md)を参照してください。  
   
 ### <a name="the-reporting-services-wmi-provider-no-longer-supports-configuration-of-sharepoint-mode"></a>Reporting Services WMI プロバイダーでの SharePoint モードの構成操作の廃止  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint の構成は、PowerShell コマンドレットと SharePoint サーバーの全体管理を使用して行うようになりました。 新しい [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モード アーキテクチャでは、SharePoint サービス アーキテクチャが使用されます。 SharePoint では、WMI インターフェイスはサポートされません。  

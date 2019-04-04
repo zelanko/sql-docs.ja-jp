@@ -38,7 +38,7 @@ ms.locfileid: "51291338"
  実行時のキャスト エラーは空のシーケンスに変換されますが、明示的に正しい型にキャストすることで静的なエラーを回避できます。  
   
 ## <a name="static-errors"></a>静的なエラー  
- 静的エラーは [!INCLUDE[tsql](../includes/tsql-md.md)] エラー メカニズムを使用して返されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、XQuery の型エラーが静的に返されます。 詳細については、次を参照してください。 [XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)します。  
+ 静的エラーは [!INCLUDE[tsql](../includes/tsql-md.md)] エラー メカニズムを使用して返されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、XQuery の型エラーが静的に返されます。 詳細については、[XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)を参照してください。  
   
 ## <a name="dynamic-errors"></a>動的エラー  
  XQuery では、ほとんどの動的エラーが空のシーケンス ("()") にマップされます。 ただし、XQuery 集計関数でオーバーフローが発生する場合および XML-DML 検証エラーは例外です。 ほとんどの動的エラーは空のシーケンスにマップされることに注意してください。 動的エラーが空のシーケンスにマップされない場合、XML インデックスを利用するクエリの実行で予期しないエラーが発生する可能性があります。 そのため、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、予期しないエラーを発生させることなくクエリを効率的に実行するため、動的エラーが () にマップされます。  

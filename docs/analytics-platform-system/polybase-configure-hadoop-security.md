@@ -18,7 +18,7 @@ ms.locfileid: "54256437"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>PolyBase の構成と Hadoop 用のセキュリティ
 
-この記事から Hadoop への AP PolyBase 接続性に影響するさまざまな構成設定の参照を提供します。 チュートリアルについては、PolyBase は、次を参照してください。 [PolyBase は](configure-polybase-connectivity-to-external-data.md)します。
+この記事から Hadoop への AP PolyBase 接続性に影響するさまざまな構成設定の参照を提供します。 チュートリアルについては、PolyBase は、[PolyBase は](configure-polybase-connectivity-to-external-data.md)を参照してください。
 
 > [!NOTE]
 > AP のすべてのコンピューティング ノードと制御ノードでの XML ファイルに変更が必要です。

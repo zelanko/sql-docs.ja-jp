@@ -142,7 +142,7 @@ SSMA は、ASE のコードでの動的 SQL を見つけたときに出力また
 **フル モード:** NULL 値を検討してください。  
   
 **書式指定文字列**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure をサポートしていません、 *format_string* PRINT ステートメントおよび RAISERROR ステートメントの引数。 *Format_string*変数には、置き換え可能パラメーターを文字列に直接配置し、実行時にパラメーターがサポートされています。 代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字列リテラル、または変数を使用して構築された文字列を使用して完全な文字列が必要です。 詳細については、次を参照してください。、"印刷 ( [!INCLUDE[tsql](../../includes/tsql-md.md)])」のトピック[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure をサポートしていません、 *format_string* PRINT ステートメントおよび RAISERROR ステートメントの引数。 *Format_string*変数には、置き換え可能パラメーターを文字列に直接配置し、実行時にパラメーターがサポートされています。 代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字列リテラル、または変数を使用して構築された文字列を使用して完全な文字列が必要です。 詳細については、、"印刷 ( [!INCLUDE[tsql](../../includes/tsql-md.md)])」のトピック[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「を参照してください。  
   
 SSMA が検出した場合、 *format_string*引数、変数を使用してリテラル文字列を作成または新しい変数を作成してその変数を使用して文字列を作成します。  
   

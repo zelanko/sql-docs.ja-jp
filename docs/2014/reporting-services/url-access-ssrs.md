@@ -105,7 +105,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  使用しているパラメーターの値に対応する URL テキスト。  
   
- **注:** 使用可能な URL アクセス パラメーターの一覧は、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。 URL でレポート パラメーターを渡す例については、「 [URL 内でレポート パラメーターを渡す](pass-a-report-parameter-within-a-url.md)」を参照してください。  
+ **注:** 使用可能な URL アクセス パラメーターの一覧は、[URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)を参照してください。 URL でレポート パラメーターを渡す例については、「 [URL 内でレポート パラメーターを渡す](pass-a-report-parameter-within-a-url.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

@@ -34,7 +34,7 @@ ms.locfileid: "47800630"
  .Dbf ファイルが作成された FoxPro バージョン 2.x は、無料テーブル Visual FoxPro テーブルに変換して Visual FoxPro データベースに追加しない限り、します。 コントラスト**データベース テーブル**します。  
   
  **準備可能な SQL ステートメント**  
- 既に処理されていない SQL ステートメント、 **SQLPrepare**関数。 Visual FoxPro ODBC ドライバーでは、この関数の詳細については、次を参照してください。 [SQLPrepare (Visual FoxPro ODBC ドライバー)](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)します。  
+ 既に処理されていない SQL ステートメント、 **SQLPrepare**関数。 Visual FoxPro ODBC ドライバーでは、この関数の詳細については、[SQLPrepare (Visual FoxPro ODBC ドライバー)](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)を参照してください。  
   
  **テーブル**  
  Visual FoxPro、レコードがテーブルに格納されます。 テーブルの各行は、レコードを表し、テーブルの列は、レコードのフィールドを表します。 各 Visual FoxPro テーブルは .dbf 拡張子を持つ独自のファイルに格納されます。 Visual FoxPro テーブルは、データベースを関連付けることができます。  

@@ -24,7 +24,7 @@ ms.locfileid: "56035413"
   
 -   *確率*アソシエーションがどの程度必要がありますを定義する前に、有効と見なされます。 ここでは、確率が 10% 以上のアソシエーションを対象とします。  
   
- サポートと確率の増減による影響の詳細については、次を参照してください。 [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)します。  
+ サポートと確率の増減による影響の詳細については、[Microsoft アソシエーション アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)を参照してください。  
   
  構造とパラメーターを定義した後、**アソシエーション**マイニング モデル、モデルが処理されます。  
   

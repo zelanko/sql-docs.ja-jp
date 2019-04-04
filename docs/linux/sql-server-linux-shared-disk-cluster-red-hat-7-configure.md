@@ -49,7 +49,7 @@ ms.locfileid: "58306040"
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>各クラスター ノードで、SQL Server のインストールと構成をする
 
-1. 両方のノード上に SQL Server をインストールし、セットアップします。  詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)します。
+1. 両方のノード上に SQL Server をインストールし、セットアップします。  詳細については、[Linux 上の SQL Server のインストール](sql-server-linux-setup.md)を参照してください。
 
 1. 構成のために、1つのノードをプライマリとして指定し、もう片方をセカンダリとして指定します。 このガイドでは、これ以降これらの用語を使用します。  
 

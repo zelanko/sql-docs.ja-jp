@@ -250,7 +250,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
- その他の例では、次を参照してください。 [sp_executesql (TRANSACT-SQL)](https://msdn.microsoft.com/library/ms188001.aspx)します。  
+ その他の例では、[sp_executesql (TRANSACT-SQL)](https://msdn.microsoft.com/library/ms188001.aspx)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

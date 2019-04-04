@@ -117,7 +117,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  ビット フラグがパラメーターで指定されている各列の結果セットに追加し、@update_flag_listします。 **変更の net**あれば、ビット フラグは常に NULL にする場合、@row_filter_optionは 'all' または 'all with merge' は、ラッパー関数の呼び出しで使用します。 場合、 @row_filter_option 'all with mask'、かつ _ _cdc_operation に設定されている必要があるが ' または 'I'、フラグの値は NULL にもなります。 場合\__CDC_OPERATION が ' UN '、1 または 0 かどうかに応じて、フラグが設定されます、 **net**列への変更の原因となった操作を更新します。  
   
- 変更データ キャプチャの構成テンプレート 'Instantiate CDC Wrapper TVFs スキーマの' は、sp_cdc_generate_wrapper_function ストアド プロシージャを使用して、すべてのスキーマの定義済みクエリ関数のラッパー関数の CREATE スクリプトを取得する方法を示します。 このテンプレートで、それらのスクリプトが作成されます。 テンプレートの詳細については、次を参照してください。[テンプレート エクスプ ローラー](../../ssms/template/template-explorer.md)します。  
+ 変更データ キャプチャの構成テンプレート 'Instantiate CDC Wrapper TVFs スキーマの' は、sp_cdc_generate_wrapper_function ストアド プロシージャを使用して、すべてのスキーマの定義済みクエリ関数のラッパー関数の CREATE スクリプトを取得する方法を示します。 このテンプレートで、それらのスクリプトが作成されます。 テンプレートの詳細については、[テンプレート エクスプ ローラー](../../ssms/template/template-explorer.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [sys.sp_cdc_generate_wrapper_function &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

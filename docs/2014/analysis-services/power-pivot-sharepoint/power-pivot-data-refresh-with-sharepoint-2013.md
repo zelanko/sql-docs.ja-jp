@@ -127,12 +127,12 @@ ms.locfileid: "53352716"
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- 詳細については、次を参照してください。[オペレーティング システムの一部として機能](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx)(https://technet.microsoft.com/library/cc784323(WS.10).aspx)します。  
+ 詳細については、[オペレーティング システムの一部として機能](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx)(https://technet.microsoft.com/library/cc784323(WS.10).aspx)を参照してください。  
   
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **定期データ更新の要点**  
   
--   SharePoint アドイン用の PowerPivot の配置が必要です。 詳細については、次を参照してください。[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)します。  
+-   SharePoint アドイン用の PowerPivot の配置が必要です。 詳細については、[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)を参照してください。  
   
 -   ユーザーはブックの更新スケジュールを構成します。 予定の時間になると、PowerPivot System サービスから Excel Services に対し次の要求が送信されます。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "53352716"
  ![データ更新のコンテキスト メニューを管理](../media/as-manage-datarefresh-sharepoint2013.gif "データ更新のコンテキスト メニューの管理")  
   
 > [!TIP]  
->  SharePoint からオンライン ブックの更新方法の詳細については、次を参照してください。 [SharePoint Online (ホワイト ペーパー) からの埋め込み PowerPivot モデルを使用した更新の Excel ブック](https://technet.microsoft.com/library/jj992650.aspx)(https://technet.microsoft.com/library/jj992650.aspx)します。  
+>  SharePoint からオンライン ブックの更新方法の詳細については、[SharePoint Online (ホワイト ペーパー) からの埋め込み PowerPivot モデルを使用した更新の Excel ブック](https://technet.microsoft.com/library/jj992650.aspx)(https://technet.microsoft.com/library/jj992650.aspx)を参照してください。  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013 の定期データ更新のアーキテクチャ  
  次の図は、SharePoint 2013 および SQL Server 2012 SP1 のデータ更新のアーキテクチャをまとめたものです。  
@@ -193,7 +193,7 @@ ms.locfileid: "53352716"
   
 1.  SharePoint サーバーの全体管理の **[アプリケーションの全般設定]** グループで **[PowerPivot 管理ダッシュボード]** をクリックします。  
   
-2.  ダッシュ ボードの下部には、次を参照してください。、**データ更新 - 最近のアクティビティ**と**データ更新 - 最近のエラー**します。  
+2.  ダッシュ ボードの下部には、、**データ更新 - 最近のアクティビティ**と**データ更新 - 最近のエラー**を参照してください。  
   
 3.  使用状況データの詳細と使用状況データを有効にする方法については、「 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)」を参照してください。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "53352716"
   
 -   **[データ更新]** のカテゴリ。  
   
- **[診断ログの構成]** を確認します。 詳細については、次を参照してください。[構成し、SharePoint ログ ファイルの表示、および診断ログ&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)します。  
+ **[診断ログの構成]** を確認します。 詳細については、[構成し、SharePoint ログ ファイルの表示、および診断ログ&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)を参照してください。  
   
 ##  <a name="datarefresh_additional_authentication"></a> 認証に関するその他の注意点  
  Excel 2013 の **[Excel Services の認証設定]** ダイアログ ボックスの設定によって、Excel Services および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] がデータ更新に使用する Windows ID が決まります。  

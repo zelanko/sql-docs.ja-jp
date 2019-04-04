@@ -110,10 +110,10 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
  使用してオブジェクトをインスタンス化する、 **CreateObject**メソッドは、一般に使用するよりも低速、 **Dim**ステートメント。
 
 ## <a name="handling-events"></a>イベントの処理
- Microsoft Visual Basic での ADO イベントを処理するために、モジュール レベル変数を使用してを宣言する必要があります、 **WithEvents**キーワード。 変数は、クラス モジュールの一部としてのみ宣言することができます、モジュール レベルで宣言する必要があります。 ADO イベントの処理の詳細については、次を参照してください。 [ADO イベントの処理](../../../ado/guide/data/handling-ado-events.md)します。
+ Microsoft Visual Basic での ADO イベントを処理するために、モジュール レベル変数を使用してを宣言する必要があります、 **WithEvents**キーワード。 変数は、クラス モジュールの一部としてのみ宣言することができます、モジュール レベルで宣言する必要があります。 ADO イベントの処理の詳細については、[ADO イベントの処理](../../../ado/guide/data/handling-ado-events.md)を参照してください。
 
 ## <a name="visual-basic-examples"></a>Visual Basic の例
- 多くの Visual Basic の例は、ADO のドキュメントに含まれています。 詳細については、次を参照してください。 [ADO のコード例では、Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)します。
+ 多くの Visual Basic の例は、ADO のドキュメントに含まれています。 詳細については、[ADO のコード例では、Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [Microsoft Visual C で ADO を使用して](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [ADO スクリプト言語を使用します。](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

@@ -23,7 +23,7 @@ ms.locfileid: "47718040"
 # <a name="capture-ado-error-codes"></a>ADO エラー コードをキャプチャします。
 返される、プロバイダー エラーだけでなく、[エラー](../../../ado/reference/ado-api/error-object.md)のオブジェクト、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション、ADO 自体にエラーを返す、実行時環境の例外処理メカニズムです。 エラーのトラップ メカニズムを使用するプログラミング言語をなど、使用、 **On Error** Microsoft® Visual Basic では、ステートメント、または**try catch** Microsoft Visual C++®、ADO エラーをキャプチャするをブロックします。
 
- ADO エラー コードの一覧で、次を参照してください。 [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md)します。
+ ADO エラー コードの一覧で、[ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md)を参照してください。
 
 ## <a name="see-also"></a>参照
  [エラー オブジェクト](../../../ado/reference/ado-api/error-object.md) [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)

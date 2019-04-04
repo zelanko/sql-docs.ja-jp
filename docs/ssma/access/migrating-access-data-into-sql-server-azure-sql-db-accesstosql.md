@@ -30,7 +30,7 @@ ms.locfileid: "51666471"
 データベース オブジェクトを正常に作成した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアクセスからデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  
   
 ## <a name="setting-migration-options"></a>移行オプションの設定  
-データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、プロジェクトの移行オプションの確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスでは、移行のバッチ サイズ、テーブルのロック、制約チェック、挿入トリガーを起動、id および処理するには、null 値と日付のうちを処理する方法を設定できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範囲。 詳細については、次を参照してください。[プロジェクトの設定 (移行)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)します。  
+データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、プロジェクトの移行オプションの確認、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスでは、移行のバッチ サイズ、テーブルのロック、制約チェック、挿入トリガーを起動、id および処理するには、null 値と日付のうちを処理する方法を設定できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範囲。 詳細については、[プロジェクトの設定 (移行)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)を参照してください。  
   
 ## <a name="migrating-data"></a>データの移行  
 移行データは、一括読み込み操作へのデータの行を移動する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure でのトランザクション。 読み込まれる行の数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure の各トランザクションではプロジェクトの設定で構成されます。  
@@ -49,10 +49,10 @@ ms.locfileid: "51666471"
   
 3.  右クリック**データベース**選び**Migrate Data**。  
   
-移行することもできます SSMA 以外のデータを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bcp**コマンド ライン ユーティリティまたは[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]します。 これらのツールの詳細については、次を参照してください。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+移行することもできます SSMA 以外のデータを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bcp**コマンド ライン ユーティリティまたは[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]します。 これらのツールの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「を参照してください。  
   
 ## <a name="next-step"></a>次の手順  
-リンクする Access データベースのテーブルの移行後に使用を続行するデータベース アプリケーションにアクセスした場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure テーブル。 詳細については、次を参照してください。 [SQL Server への Access アプリケーションのリンク](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)します。  
+リンクする Access データベースのテーブルの移行後に使用を続行するデータベース アプリケーションにアクセスした場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure テーブル。 詳細については、[SQL Server への Access アプリケーションのリンク](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

@@ -80,7 +80,7 @@ ms.locfileid: "52762944"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_delete_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql)します。  
+ 詳細については、[sp_delete_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql)を参照してください。  
   
 
   

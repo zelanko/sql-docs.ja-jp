@@ -89,7 +89,7 @@ Alternativley、操作を行いますこの手動で。
 
 コンピューターが個別にデータベース内分析 (SQL Server 2017 Machine Learning Services および SQL Server 2016 R Services) だけでなく SQL Server 2017 Microsoft Machine Learning Server (スタンドアロン) または SQL Server 2016 R Server (スタンドアロン) をインストールした場合ごとに、重複をすべての R ツールとライブラリの R のインストール。
 
-R_SERVER ライブラリにインストールされているパッケージは、スタンドアロン サーバーでのみ使用され、SQL Server (In-database) のインスタンスではアクセスできません。 常に使用して、`R_SERVICES`ライブラリで SQL Server データベースでを使用するパッケージをインストールするときにします。 パスの詳細については、次を参照してください。[ライブラリの場所をパッケージ化](installing-and-managing-r-packages.md#package-library-location)します。
+R_SERVER ライブラリにインストールされているパッケージは、スタンドアロン サーバーでのみ使用され、SQL Server (In-database) のインスタンスではアクセスできません。 常に使用して、`R_SERVICES`ライブラリで SQL Server データベースでを使用するパッケージをインストールするときにします。 パスの詳細については、[ライブラリの場所をパッケージ化](installing-and-managing-r-packages.md#package-library-location)を参照してください。
 
 
 ## <a name="see-also"></a>関連項目

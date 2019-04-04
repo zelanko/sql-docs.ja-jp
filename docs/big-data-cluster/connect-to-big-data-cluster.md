@@ -106,4 +106,4 @@ Azure Data Studio の 2019年 2 月リリースでは、SQL Server のマスタ�
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターは](big-data-cluster-overview.md)します。
+SQL Server 2019 ビッグ データ クラスターに関する詳細については、[SQL Server 2019 ビッグ データ クラスターは](big-data-cluster-overview.md)を参照してください。

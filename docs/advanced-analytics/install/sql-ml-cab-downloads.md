@@ -19,7 +19,7 @@ ms.locfileid: "58872172"
 
 データベース内分析が構成されている SQL Server インスタンスには、R と Python の機能が含まれます。 これらの機能を出荷を CAB ファイル、インストールされているし、SQL Server セットアップでサービスを提供します。 インターネットに接続されたデバイスで、通常は Windows Update を通じてに CAB の更新が適用されます。 切断されたサーバーは、CAB ファイルをダウンロードして手動で適用する必要があります。 
 
-この記事では、各累積更新プログラム用の CAB ファイルのダウンロード リンクを提供します。 SQL Server 2017 Machine Learning サービス (R および Python) と SQL Server 2016 R Services の両方のリンクを示します。 オフライン インストールの詳細については、次を参照してください。 [SQL Server をインストールした機械学習のインターネット アクセスなしでコンポーネントを](sql-ml-component-install-without-internet-access.md#apply-cu)します。
+この記事では、各累積更新プログラム用の CAB ファイルのダウンロード リンクを提供します。 SQL Server 2017 Machine Learning サービス (R および Python) と SQL Server 2016 R Services の両方のリンクを示します。 オフライン インストールの詳細については、[SQL Server をインストールした機械学習のインターネット アクセスなしでコンポーネントを](sql-ml-component-install-without-internet-access.md#apply-cu)を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 

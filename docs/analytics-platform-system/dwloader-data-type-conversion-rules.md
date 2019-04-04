@@ -129,7 +129,7 @@ Dwloader のでは、SQL Server PDW に読み込むには、入力データの�
 |10 進数リテラル|fffnn.fffn<br /><br />例:1234.5678|1 より大きいまたは 0 未満の値は 1 に変換されます。 たとえば、123.45 と-123.45 の値は 1 に変換されます。|  
   
 ### <a name="decimal-data-type"></a>Decimal データ型  
-次の表は、型の列にリテラル値を読み込むための規則を定義します。 **decimal** (*p, s*)。 データ変換の規則は、SQL Server と同じです。 詳細については、次を参照してください。[データ型の変換 (データベース エンジン)](https://go.microsoft.com/fwlink/?LinkId=202128) msdn です。  
+次の表は、型の列にリテラル値を読み込むための規則を定義します。 **decimal** (*p, s*)。 データ変換の規則は、SQL Server と同じです。 詳細については、[データ型の変換 (データベース エンジン)](https://go.microsoft.com/fwlink/?LinkId=202128) msdn を参照してください。  
   
 |入力データ型|入力データの例|  
 |-------------------|-----------------------|  
@@ -137,7 +137,7 @@ Dwloader のでは、SQL Server PDW に読み込むには、入力データの�
 |10 進数リテラル|123344.34455|  
   
 ### <a name="float-and-real-data-types"></a>float と real データ型  
-次の表は、型の列にリテラル値を読み込むための規則を定義します。 **float**または**実際**します。 データ変換の規則は、SQL Server と同じです。 詳細については、次を参照してください。[データ型の変換 (データベース エンジン)](../t-sql/data-types/data-type-conversion-database-engine.md) msdn です。  
+次の表は、型の列にリテラル値を読み込むための規則を定義します。 **float**または**実際**します。 データ変換の規則は、SQL Server と同じです。 詳細については、[データ型の変換 (データベース エンジン)](../t-sql/data-types/data-type-conversion-database-engine.md) msdn を参照してください。  
   
 |入力データ型|入力データの例|  
 |-------------------|-----------------------|  

@@ -50,7 +50,7 @@ ms.locfileid: "52778384"
   
  ![スタイルの派生階層とメンバーのアクセス許可](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "スタイルの派生階層とメンバーの権限")  
   
- 階層を作成する方法については、次を参照してください。[明示的階層を作成&#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)と[派生階層を作成&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)します。  
+ 階層を作成する方法については、[明示的階層を作成&#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)と[派生階層を作成&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)を参照してください。  
   
  メンバー権限を割り当てる方法については、次を参照してください[階層メンバーの権限を割り当てる&#40;マスター データ サービス。&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   

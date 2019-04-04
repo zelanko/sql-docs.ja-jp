@@ -62,7 +62,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
 -   キュー スコープされるイベント通知を作成するには、少なくとも、キューの ALTER 権限が必要です。  
   
- WQL クエリがスコープ設定する方法については、次を参照してください。 [WMI Provider for Server Events と WQL の使用](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)します。  
+ WQL クエリがスコープ設定する方法については、[WMI Provider for Server Events と WQL の使用](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)を参照してください。  
   
  スコープの例として、次の WQL クエリを含む WMI プロバイダー アプリケーションを考えます。  
   

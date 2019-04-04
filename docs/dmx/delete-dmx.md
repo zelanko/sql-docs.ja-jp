@@ -47,7 +47,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
 |マイニング構造から削除*\<構造 >* します。場合|マイニング構造に対して ProcessClearStructureOnly を実行します。 関連するマイニング モデルは保存したまま、すべての内容がマイニング構造から削除されます。 マイニング構造が削除された後では、関連するマイニング モデルでのドリルスルーは失敗します。|  
 |マイニング モデルから削除*\<モデル >*<br /><br /> または<br /><br /> マイニング モデルから削除*\<モデル >* します。コンテンツ|マイニング モデルに ProcessClear を実行しますが、状態の値をそのまま残されます。 状態値は、その列で使用できる状態を表します。 たとえば、性別の列の状態値は、男性と女性です。|  
   
- 処理の種類の詳細については、次を参照してください。 [Type 要素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)します。  
+ 処理の種類の詳細については、[Type 要素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)を参照してください。  
   
 ## <a name="examples"></a>使用例  
  次の例では、すべての内容が NB_Sample モデルから削除されます。  

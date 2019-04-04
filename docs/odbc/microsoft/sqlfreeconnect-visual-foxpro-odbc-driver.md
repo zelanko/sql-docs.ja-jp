@@ -30,4 +30,4 @@ ms.locfileid: "47771620"
   
  接続ハンドルを解放し、ハンドルに割り当てられたすべてのメモリを解放します。  
   
- 詳細については、次を参照してください。 [SQLFreeConnect](../../odbc/reference/syntax/sqlfreeconnect-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLFreeConnect](../../odbc/reference/syntax/sqlfreeconnect-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

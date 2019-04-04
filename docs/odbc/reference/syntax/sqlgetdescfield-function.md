@@ -55,7 +55,7 @@ SQLRETURN SQLGetDescField(
  [入力]アプリケーションが情報をシークする記述子レコードを示します。 記述子のレコードは、レコード番号 0 ブックマーク レコードの中で、0 から番号が付けられます。 場合、 *FieldIdentifier*引数が、ヘッダー フィールドを示します*RecNumber*は無視されます。 場合*RecNumber* SQL_DESC_COUNT 小さいですが、行に列またはパラメーターへの呼び出しのデータが含まれていない**SQLGetDescField**はフィールドの既定値を返します。 (詳細については、「記述子フィールドの初期化」を参照してください[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md))。  
   
  *FieldIdentifier*  
- [入力]値が返される記述子フィールドを示します。 詳細については、次を参照してください。、"*FieldIdentifier*引数"セクション[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。  
+ [入力]値が返される記述子フィールドを示します。 詳細については、、"*FieldIdentifier*引数"セクション[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)を参照してください。  
   
  *ValuePtr*  
  [出力]記述子の情報を返すバッファーへのポインター。 データ型の値に依存*FieldIdentifier*します。  
@@ -104,7 +104,7 @@ SQLRETURN SQLGetDescField(
 |HY021|不整合な記述子情報|(Apd の標準) は、SQL_DESC_TYPE と SQL_DESC_DATETIME_INTERVAL_CODE フィールドは、有効な ODBC SQL 型、有効なドライバー固有 SQL 型 (Ipd)、または有効な ODBC C データ型は形成してしません。|  
 |HY090|文字列またはバッファーの長さが無効です。|(DM)  *\*ValuePtr*された文字の文字列と*BufferLength* 0 未満でした。|  
 |HY091|無効な記述子フィールドの識別子|*FieldIdentifier*でした、ODBC で定義されたフィールドとしましたが、実装定義の値でした。<br /><br /> *FieldIdentifier*が undefined を*DescriptorHandle*します。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *DescriptorHandle*関数をサポートしていません。|  
   
@@ -117,7 +117,7 @@ SQLRETURN SQLGetDescField(
   
  アプリケーションを呼び出すと**SQLGetDescField**は特定の記述子の型に対して定義されていないフィールドの値を取得する関数が SQL_SUCCESS を返しますが、フィールドに返される値は定義されません。 たとえば、呼び出し**SQLGetDescField** APD または ARD の SQL_DESC_NAME または SQL_DESC_NULLABLE フィールドについては、SQL_SUCCESS が未定義のフィールドの値は返します。  
   
- アプリケーションを呼び出すと**SQLGetDescField**関数は、値が SQL_SUCCESS が返されるを返します特定の記述子の型に対して定義されているが、既定値を持たないをまだ設定されていないフィールドの値を取得するにはフィールドは定義されません。 記述子フィールドとフィールドの説明の初期化の詳細については、「記述子フィールドの初期化」を参照してください[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。 記述子の詳細については、次を参照してください。[記述子](../../../odbc/reference/develop-app/descriptors.md)します。  
+ アプリケーションを呼び出すと**SQLGetDescField**関数は、値が SQL_SUCCESS が返されるを返します特定の記述子の型に対して定義されているが、既定値を持たないをまだ設定されていないフィールドの値を取得するにはフィールドは定義されません。 記述子フィールドとフィールドの説明の初期化の詳細については、「記述子フィールドの初期化」を参照してください[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。 記述子の詳細については、[記述子](../../../odbc/reference/develop-app/descriptors.md)を参照してください。  
   
 ## <a name="related-functions"></a>関連する関数  
   

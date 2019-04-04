@@ -83,7 +83,7 @@ ms.locfileid: "54130852"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql)します。  
+ 詳細については、[sp_add_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql)を参照してください。  
   
 
   

@@ -28,7 +28,7 @@ SQL Server PDW の高可用性の管理 ノードとコンピューティング 
   
 #### <a name="to-find-the-name-of-the-node-that-failed"></a>失敗したノードの名前を検索するには  
   
-1.  管理者コンソールを開きます。 管理コンソールの詳細については、次を参照してください。[アプライアンスの監視、管理コンソールを使用して&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)します。 アラートの数でフェールオーバー イベントが含まれるフェールオーバーが発生した後、**ヘルス**ページ。 **ヘルス**PDW リージョン、およびアプライアンスの fabric 領域のページ。 各正常性ページには、**アラート**タブ。アラートについての詳細については、正常性 ページの アラート タブをクリックし、アラートをクリックします。  
+1.  管理者コンソールを開きます。 管理コンソールの詳細については、[アプライアンスの監視、管理コンソールを使用して&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)を参照してください。 アラートの数でフェールオーバー イベントが含まれるフェールオーバーが発生した後、**ヘルス**ページ。 **ヘルス**PDW リージョン、およびアプライアンスの fabric 領域のページ。 各正常性ページには、**アラート**タブ。アラートについての詳細については、正常性 ページの アラート タブをクリックし、アラートをクリックします。  
   
 ## <a name="SystemView"></a>システム ビューのソリューション  
 次の SQL ステートメントを使用する方法を示しています、 [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)失敗したサーバーの名前を検索するシステム ビュー。  

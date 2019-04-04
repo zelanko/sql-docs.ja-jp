@@ -12,7 +12,7 @@ ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 127f39075a1b84b1250a27003efeb28083d1adbd
 ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/28/2018
 ms.locfileid: "52513189"
@@ -34,7 +34,7 @@ SQL Server 2019 には、mssql conf ユーティリティの 2 つの構成パ�
 | **network.rpcport** | RPC エンドポイント マッパーのプロセスがバインドされる TCP ポート。 |
 | **network.servertcpport** | MSDTC サーバーがリッスンするポート。 できない場合は、設定すると、MSDTC サービスを使用してランダムな一時的なポートでサービスが再起動し、ファイアウォールの例外は再 MSDTC サービスが通信を継続できるようにすることを確認するように構成する必要があります。 |
 
-これらの設定とその他の関連の MSDTC 設定の詳細については、次を参照してください。 [mssql-conf ツールを使った Linux 上の SQL Server の構成](sql-server-linux-configure-mssql-conf.md#msdtc)します。
+これらの設定とその他の関連の MSDTC 設定の詳細については、[mssql-conf ツールを使った Linux 上の SQL Server の構成](sql-server-linux-configure-mssql-conf.md#msdtc)を参照してください。
 
 ## <a name="supported-msdtc-configurations"></a>サポートされている MSDTC の構成
 
@@ -44,7 +44,7 @@ SQL Server 2019 には、mssql conf ユーティリティの 2 つの構成パ�
 - JDBC のプロバイダーを使用して Linux 上の SQL Server に対して XA 分散トランザクション。
 - リンク サーバー上の分散トランザクション。
 
-制限事項とプレビューの MSDTC の既知の問題は、次を参照してください。 [Linux 上の SQL Server 2019 プレビューのリリース ノート](sql-server-linux-release-notes-2019.md#msdtc)します。
+制限事項とプレビューの MSDTC の既知の問題は、[Linux 上の SQL Server 2019 プレビューのリリース ノート](sql-server-linux-release-notes-2019.md#msdtc)を参照してください。
 
 ## <a name="msdtc-configuration-steps"></a>MSDTC の構成手順
 
@@ -172,4 +172,4 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 ## <a name="next-steps"></a>次の手順
 
-Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux](sql-server-linux-overview.md)します。
+Linux 上の SQL Server に関する詳細については、[SQL Server on Linux](sql-server-linux-overview.md)を参照してください。

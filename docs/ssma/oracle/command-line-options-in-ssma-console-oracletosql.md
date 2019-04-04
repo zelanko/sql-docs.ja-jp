@@ -172,7 +172,7 @@ SSMA コンソールのコマンド ライン オプションの表を参照し�
   
 -   パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)します。  
   
--   レポートを生成するため、次を参照してください。[レポートを生成する&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)します。  
+-   レポートを生成するため、[レポートを生成する&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)を参照してください。  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)します。  
+-   コンソールで問題をトラブルシューティングするには、[トラブルシューティング&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)を参照してください。  
   

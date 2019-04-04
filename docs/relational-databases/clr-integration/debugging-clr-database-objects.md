@@ -27,7 +27,7 @@ ms.locfileid: "52502786"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベース内の [!INCLUDE[tsql](../../includes/tsql-md.md)] オブジェクトと CLR (共通言語ランタイム) オブジェクトのデバッグがサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのデバッグの重要な特徴は、セットアップと使用が容易になったことと、SQL Server デバッガーと Microsoft Visual Studio デバッガーが統合されたことです。 さらに、複数の言語にまたがったデバッグを実行できます。 ユーザーは [!INCLUDE[tsql](../../includes/tsql-md.md)] から CLR オブジェクト (またはその逆) にシームレスにステップインできます。 SQL Server Management Studio の Transact-SQL デバッガーを使用してマネージド データベース オブジェクトをデバッグすることはできませんが、Visual Studio のデバッガーを使用すると、このオブジェクトをデバッグすることができます。 Visual Studio でのマネージド データベース オブジェクトのデバッグでは、サーバーで実行するルーチン内の "step into" ステートメントや "step over" ステートメントなど、一般的なデバッグ機能すべてがサポートされます。 デバッグ中は、ブレークポイントの設定、呼び出し履歴の調査、変数の調査、変数値の変更を行うことができます。 Visual Studio .NET 2003 は、CLR 統合プログラミングまたはデバッグには使用できない点に注意してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には .NET Framework がプレインストールされていますが、Visual Studio .NET 2003 では .NET Framework 2.0 アセンブリを使用できません。  
   
- Visual Studio を使用してマネージ コードのデバッグの詳細については、次を参照してください。、"[Debugging Managed Code](https://go.microsoft.com/fwlink/?LinkId=120377)"Visual Studio ドキュメントのトピックです。  
+ Visual Studio を使用してマネージ コードのデバッグの詳細については、、"[Debugging Managed Code](https://go.microsoft.com/fwlink/?LinkId=120377)"Visual Studio ドキュメントのトピックを参照してください。  
   
 ## <a name="debugging-permissions-and-restrictions"></a>デバッグに関する権限と制限事項  
  デバッグは、高い特権を持つ操作のメンバーのみ、 **sysadmin**固定サーバー ロールに許可するよう[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -45,7 +45,7 @@ ms.locfileid: "52502786"
   
  詳細およびシナリオ マネージ ストアド プロシージャ、関数、トリガー、ユーザー定義型、および集計のデバッグの詳細については、次を参照してください、"[SQL Server CLR 統合データベース デバッグ](https://go.microsoft.com/fwlink/?LinkId=120378)"Visual Studio でのトピック。ドキュメントです。  
   
- Visual Studio を使用してリモートで開発およびデバッグを行うには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで TCP/IP ネットワーク プロトコルを有効にする必要があります。 サーバーの TCP/IP プロトコルを有効にする方法の詳細については、次を参照してください。 [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)します。  
+ Visual Studio を使用してリモートで開発およびデバッグを行うには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで TCP/IP ネットワーク プロトコルを有効にする必要があります。 サーバーの TCP/IP プロトコルを有効にする方法の詳細については、[Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)を参照してください。  
   
 #### <a name="to-debug-a-managed-database-object"></a>マネージド データベース オブジェクトをデバッグするには  
   

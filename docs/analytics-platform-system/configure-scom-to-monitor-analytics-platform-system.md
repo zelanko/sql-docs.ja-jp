@@ -112,7 +112,7 @@ System Center を設定するには、次の手順を実行しなければなり
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
 ## <a name="next-step"></a>次の手順  
-できたので、管理パックを構成しているアプライアンスの監視を開始する準備が整いました。 詳細については、次を参照してください。 [System Center Operations Manager を使用して、アプライアンスの監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)します。  
+できたので、管理パックを構成しているアプライアンスの監視を開始する準備が整いました。 詳細については、[System Center Operations Manager を使用して、アプライアンスの監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)を参照してください。  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

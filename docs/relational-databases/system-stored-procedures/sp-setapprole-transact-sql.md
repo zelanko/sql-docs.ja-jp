@@ -76,7 +76,7 @@ sp_setapprole [ @rolename = ] 'role',
 
  使用して、アプリケーション後ロールをアクティブ化**sp_setapprole**、ユーザーがサーバーから切断またはを実行するまで、ロールがアクティブなまま**sp_unsetapprole**します。 **sp_setapprole**直接でのみ実行できます[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 **sp_setapprole**またはユーザー定義のトランザクション内で別のストアド プロシージャ内で実行することはできません。  
   
- アプリケーション ロールの概要については、次を参照してください。[アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)します。  
+ アプリケーション ロールの概要については、[アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)を参照してください。  
   
 > [!IMPORTANT]  
 > ネットワーク経由で送信されるアプリケーション ロールのパスワード保護のため、アプリケーション ロールを有効にする場合に、暗号化された接続を常に使用する必要があります。

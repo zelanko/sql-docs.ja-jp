@@ -53,7 +53,7 @@ ms.locfileid: "52753164"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **パーティション構成を変更するには:**  
   
- この操作は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では実行できません。 パーティション構成を変更するには、最初にパーティション構成を削除し、パーティションの作成ウィザードを使用して必要なプロパティを持つ新しいパーティション構成を作成する必要があります。 詳細については、次を参照してください。[パーティション分割されてテーブルの作成と SQL Server Management Studio のインデックスを使用して](create-partitioned-tables-and-indexes.md#SSMSProcedure)**作成 Partitioned Tables and Indexes**します。  
+ この操作は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では実行できません。 パーティション構成を変更するには、最初にパーティション構成を削除し、パーティションの作成ウィザードを使用して必要なプロパティを持つ新しいパーティション構成を作成する必要があります。 詳細については、[パーティション分割されてテーブルの作成と SQL Server Management Studio のインデックスを使用して](create-partitioned-tables-and-indexes.md#SSMSProcedure)**作成 Partitioned Tables and Indexes**を参照してください。  
   
 #### <a name="to-delete-a-partition-scheme"></a>パーティション構成を削除するには  
   

@@ -41,7 +41,7 @@ ms.locfileid: "56021547"
 |[Windows アプリケーション ログ](windows-application-log.md)|Microsoft Windows アプリケーション ログには、レポート サーバーのイベントに関する情報が含まれます。|  
 |Windows パフォーマンス ログ|Windows パフォーマンス ログには、レポート サーバーのパフォーマンス データが含まれます。 パフォーマンス ログを作成してから、収集するデータを決定するカウンターを選択できます。 詳細については、「 [レポート サーバーのパフォーマンスの監視](monitoring-report-server-performance.md)」を参照してください。|  
 |セットアップ ログ ファイル|ログ ファイルはセットアップ中にも作成されます。 セットアップに失敗または成功した際に警告メッセージや他のメッセージが表示された場合、ログ ファイルを検証して問題のトラブルシューティングを行うことができます。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。|  
-|IIS ログ|Microsoft インターネット インフォメーション サービス (IIS) によって作成されたログ ファイル。 詳細については、次を参照してください。[インターネット インフォメーション サービス (IIS) のログ記録を有効にする方法](https://support.microsoft.com/kb/313437)します。|  
+|IIS ログ|Microsoft インターネット インフォメーション サービス (IIS) によって作成されたログ ファイル。 詳細については、[インターネット インフォメーション サービス (IIS) のログ記録を有効にする方法](https://support.microsoft.com/kb/313437)を参照してください。|  
 |ビデオ|Microsoft Power Query を使用して [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ログ ファイルを表示する方法を示す短いビデオを表示します。<br /><br /> ![Power Query および SSRS ログに関するビデオを表示](../media/generic-video-thumbnail.png "Power Query および SSRS ログに関するビデオを表示")|  
   
 ## <a name="see-also"></a>参照  

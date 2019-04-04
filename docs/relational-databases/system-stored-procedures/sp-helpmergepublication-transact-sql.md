@@ -93,7 +93,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar (255)**|スナップショットが FTP を使用して配布される場合に、マージ エージェントがスナップショット ファイルを取得する場所。|  
 |ftp_login|**sysname**|FTP サービスに接続するときに使用するユーザー名です。|  
 |conflict_retention|**int**|競合を保有する保有期間の日数。 指定の日数が経過すると、競合テーブルから競合行が削除されます。|  
-|keep_partition_changes|**int**|このパブリケーションの同期の最適化が行われているかどうかを指定します。 **keep_partition_changes**が既定値は**0**します。 値**0**同期は最適化されず、すべてのサブスクライバーに送信されるパーティションはパーティションにデータが変更されたときに検証されますを意味します。<br /><br /> **1**同期は最適化されていて、変更のあったパーティション内の行を保持するサブスクライバーだけが影響を受けることを意味します。<br /><br /> 注:既定では、マージ パブリケーションでは事前計算済みパーティションが使用され、このオプションより高いレベルの最適化が実施されます。 詳細については、次を参照してください。 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)と[事前計算済みパーティションによるパラメーター化されたフィルター パフォーマンスの最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)します。|  
+|keep_partition_changes|**int**|このパブリケーションの同期の最適化が行われているかどうかを指定します。 **keep_partition_changes**が既定値は**0**します。 値**0**同期は最適化されず、すべてのサブスクライバーに送信されるパーティションはパーティションにデータが変更されたときに検証されますを意味します。<br /><br /> **1**同期は最適化されていて、変更のあったパーティション内の行を保持するサブスクライバーだけが影響を受けることを意味します。<br /><br /> 注:既定では、マージ パブリケーションでは事前計算済みパーティションが使用され、このオプションより高いレベルの最適化が実施されます。 詳細については、[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)と[事前計算済みパーティションによるパラメーター化されたフィルター パフォーマンスの最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)を参照してください。|  
 |allow_subscription_copy|**int**|パブリケーションにサブスクライブするサブスクリプション データベースをコピーする機能が有効かどうかを示します。 値**0**コピーが許可されないことを意味します。|  
 |allow_synctoalternate|**int**|代替同期パートナーがこのパブリッシャーと同期できるかどうかを示します。 値**0**同期パートナーを使用できないことを意味します。|  
 |validate_subscriber_info|**nvarchar(500)**|サブスクライバー情報を取得し、サブスクライバー上でのパラメーター化された行フィルター条件を検証するときに使用される機能の一覧。 各マージで、情報に一貫性を持たせながらパーティション分割する場合に使用できます。|  
@@ -108,7 +108,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscriber_initiated_snapshot|**bit**|サブスクライバーが、フィルター選択されたデータのスナップショット生成プロセスを開始できるかどうかを示します。 値**1**サブスクライバーがスナップショット プロセスを開始できることを意味します。|  
 |allow_web_synchronization|**bit**|パブリケーションで Web 同期が有効かどうかを示します。 値**1** Web 同期が有効になっていることを意味します。|  
 |web_synchronization_url|**nvarchar(500)**|Web 同期に使用されるインターネット URL。|  
-|allow_partition_realignment|**bit**|パブリッシャー上の行の変更によってパーティションが変更される場合、削除がサブスクライバーに送信されるかどうかを示します。 値**1**削除がサブスクライバーに送信されることを意味します。  詳細については、次を参照してください。 [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)します。|  
+|allow_partition_realignment|**bit**|パブリッシャー上の行の変更によってパーティションが変更される場合、削除がサブスクライバーに送信されるかどうかを示します。 値**1**削除がサブスクライバーに送信されることを意味します。  詳細については、[sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)を参照してください。|  
 |retention_period_unit|**tinyint**|保有期間を定義するときに使用される単位を指定します。 次の値のいずれかを指定できます。<br /><br /> **0** = 日<br /><br /> **1** = 週<br /><br /> **2** = 月<br /><br /> **3** = 年|  
 |has_downloadonly_articles|**bit**|パブリケーションに属するアーティクルが、ダウンロードのみのアーティクルであるかどうかを示します。 値**1**ダウンロード専用アーティクルがあることを示します。|  
 |decentralized_conflicts|**int**|競合レコードが、競合の原因となったサブスクライバーで格納されるかどうかを示します。 値**0**競合レコードがサブスクライバーで格納されないことを示します。 値 1 は、競合レコードがサブスクライバーで格納されることを表します。|  

@@ -128,9 +128,9 @@ ms.locfileid: "56023563"
   
 -   **テーブル。** テーブルは、データを行ごとに表示するデータ領域です。 テーブルの列は静的です。列数はレポートのデザイン時に指定します。 テーブルの行は動的であり、データに応じて下方向に拡張されます。 テーブルにグループを追加すると、選択したフィールドまたは式ごとにデータを整理できます。 詳細については、「[テーブル &#40;レポート ビルダーおよび SSRS& #41;](report-design/tables-report-builder-and-ssrs.md)」を参照してください。  
   
--   **マトリックス。** マトリックスは、クロス集計ともいいます。 マトリックス データ領域では、動的な列と行の両方がデータに応じて拡張されます。 マトリックスには、動的な列と行、および静的な列と行を含めることができます。 列または行には、他の列または行を含めることができ、データのグループ化にも使用できます。 詳細については、次を参照してください。[マトリックス&#40;レポート ビルダーおよび SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)します。  
+-   **マトリックス。** マトリックスは、クロス集計ともいいます。 マトリックス データ領域では、動的な列と行の両方がデータに応じて拡張されます。 マトリックスには、動的な列と行、および静的な列と行を含めることができます。 列または行には、他の列または行を含めることができ、データのグループ化にも使用できます。 詳細については、[マトリックス&#40;レポート ビルダーおよび SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)を参照してください。  
   
--   **一覧。** 一覧は、任意の形式で配置されたデータを表すデータ領域です。 レポート アイテムを配置して、テキスト ボックス、画像、およびその他のデータ領域が一覧内の任意の場所に配置されたフォームを作成できます。 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)します。  
+-   **一覧。** 一覧は、任意の形式で配置されたデータを表すデータ領域です。 レポート アイテムを配置して、テキスト ボックス、画像、およびその他のデータ領域が一覧内の任意の場所に配置されたフォームを作成できます。 詳細については、[一覧&#40;レポート ビルダーおよび SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)を参照してください。  
   
 -   **グラフ。** グラフを使用すると、データをグラフィカルに表示できます。 グラフの例としては、棒グラフ、円グラフ、折れ線グラフなどがありますが、その他にも多くの形式がサポートされています。 グラフ要素の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "56023563"
   
 -   **クリックスルー レポート。** クリックスルー レポートとは、モデル ベースのレポートに含まれている対話的なデータをクリックしたときに、レポート モデルから関連するデータを表示するレポートです。 クリックスルー レポートは自動生成されます。 詳細については、「[ &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)」を参照してください。  
   
- SMDL モデルの詳細については、次を参照してください。 [SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)します。  
+ SMDL モデルの詳細については、[SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)を参照してください。  
   
  **保存されているレポート**  
  保存されたレポートはレポート定義 (.rdl) ファイルです。 レポート定義は、ローカルに保存するか、レポート サーバーにアップロードできます。 レポート定義をパブリッシュせずにアップロードすると、バージョンの検証も式の検証も行われません。 エラーは、レポートが実行されるまで表示されません。 詳細については、「 [Save and Deploy](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)」を参照してください。  
@@ -216,7 +216,7 @@ ms.locfileid: "56023563"
  完全に処理されたレポートは、レポート レンダラーに送信され、対象の表示形式の各ページ上のデータとレイアウトを結合します。 表示拡張機能は、カスタマイズおよび拡張できます。 レポートの既定の表示形式は HTML 4.0 です。 詳細については、「[ページ レイアウトとレンダリング &#40;レポート ビルダーおよび SSRS&#41;](report-design/page-layout-and-rendering-report-builder-and-ssrs.md)」と「[拡張機能 &#40;SSRS&#41;](extensions-ssrs.md)」を参照してください。  
   
  **エクスポートされたレポート**  
- エクスポートされたレポートは、特定のファイル形式で保存された、完全にページ分割されたレポートです。 エクスポート形式は、インストールされている表示拡張機能によって異なり、カスタマイズできます。 既定のエクスポート形式には、Excel、Word、XML、PDF、TIFF、CSV などがあります。 詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)します。  
+ エクスポートされたレポートは、特定のファイル形式で保存された、完全にページ分割されたレポートです。 エクスポート形式は、インストールされている表示拡張機能によって異なり、カスタマイズできます。 既定のエクスポート形式には、Excel、Word、XML、PDF、TIFF、CSV などがあります。 詳細については、[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services の機能とタスク &#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   

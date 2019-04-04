@@ -581,9 +581,9 @@ ms.locfileid: "56290920"
 ## <a name="next-steps"></a>次の手順  
  これで、レポートにマップを追加する方法のチュートリアルは終了です。  
   
- 詳細については、次を参照してください。[マップ&#40;レポート ビルダーおよび SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md)とブログ エントリ[地図的調整の空間データを SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com します。  
+ 詳細については、[マップ&#40;レポート ビルダーおよび SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md)とブログ エントリ[地図的調整の空間データを SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com を参照してください。  
   
- 詳細なチュートリアルについては、次を参照してください。[チュートリアル&#40;レポート ビルダー&#41;](report-builder-tutorials.md)します。  
+ 詳細なチュートリアルについては、[チュートリアル&#40;レポート ビルダー&#41;](report-builder-tutorials.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [チュートリアル&#40;レポート ビルダー&#41;](report-builder-tutorials.md)   

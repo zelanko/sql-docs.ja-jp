@@ -30,4 +30,4 @@ ms.locfileid: "47718700"
   
  Visual FoxPro ODBC ドライバーを終了し、ドライバーに関連付けられているすべてのメモリを解放します。  
   
- 詳細については、次を参照してください。 [SQLFreeEnv](../../odbc/reference/syntax/sqlfreeenv-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLFreeEnv](../../odbc/reference/syntax/sqlfreeenv-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

@@ -81,4 +81,4 @@ UPDATE alltypes
 ```  
   
 ## <a name="remarks"></a>コメント  
- エスケープ シーケンスの詳細については、次を参照してください。 [odbc エスケープ シーケンス](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)で、 *ODBC プログラマ リファレンス*します。
+ エスケープ シーケンスの詳細については、[odbc エスケープ シーケンス](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)で、 *ODBC プログラマ リファレンス*を参照してください。

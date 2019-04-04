@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  使用して、 [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md)で機能、**場所**句は、スキーマ行セットの NODE_UNIQUE_NAME 列で指定されているノードに関連付けられているケースのみを返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例はマイニング構造に基づく Targeted Mailing に基づいて、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データベースとその関連マイニング モデル。 詳細については、次を参照してください。 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。  
+ 次の例はマイニング構造に基づく Targeted Mailing に基づいて、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データベースとその関連マイニング モデル。 詳細については、[Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)を参照してください。  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>例 1 : モデル ケースと構造列にドリルスルーする  
  次の例は、Targeted Mailing モデルのテストに使用されたすべてのケースの列を返します。 モデルの基となるマイニング構造に、提示されたテスト データセットが含まれていない場合、このクエリはケースを返しません。 必要な列のみを返す式のリストを使用できます。  
@@ -85,7 +85,7 @@ AND IsInNode('002')
  構造列を返すには、マイニング モデルとマイニング構造の両方についてドリルスルー権限を有効にする必要があります。  
   
 > [!NOTE]  
->  すべての種類のマイニング モデルでドリルスルーがサポートされるわけではありません。 ドリルスルーをサポートするモデルについては、次を参照してください。[ドリルスルー クエリ&#40;データ マイニング&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)します。  
+>  すべての種類のマイニング モデルでドリルスルーがサポートされるわけではありません。 ドリルスルーをサポートするモデルについては、[ドリルスルー クエリ&#40;データ マイニング&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   

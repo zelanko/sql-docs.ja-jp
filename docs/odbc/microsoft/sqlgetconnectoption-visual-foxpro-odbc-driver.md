@@ -41,4 +41,4 @@ ms.locfileid: "47767260"
 |SQL_PACKET_SIZE|「ドライバーできない」エラーが返されます。|  
 |SQL_TXN_ISOLATION|ドライバーでは、SQL_TXN_READ_COMMITTED のみ使用できます。<br /><br /> 次*vParam*はサポートされていません。<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
   
- 詳細については、次を参照してください。 [SQLGetConnectOption](../../odbc/reference/syntax/sqlgetconnectoption-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLGetConnectOption](../../odbc/reference/syntax/sqlgetconnectoption-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

@@ -101,9 +101,9 @@ SQLRETURN SQLEndTran(
 > [!NOTE]  
 >  ドライバー マネージャーは、すべての接続はグローバル トランザクションをシミュレートせず、2 フェーズ コミット プロトコルを使用しません。  
   
- 場合*CompletionType*は指定して、 **SQLEndTran**影響を受ける接続に関連付けられた任意のステートメントですべてのアクティブな操作をコミット要求を発行します。 場合*CompletionType*は SQL_ROLLBACK、 **SQLEndTran**影響を受ける接続に関連付けられた任意のステートメントですべてのアクティブな操作のロールバック要求を発行します。 アクティブな場合は、トランザクションがない場合**SQLEndTran**で任意のデータ ソースに影響しない SQL_SUCCESS を返します。 詳細については、次を参照してください。 [Committing とトランザクションのロールバック](../../../odbc/reference/develop-app/committing-and-rolling-back-transactions.md)します。  
+ 場合*CompletionType*は指定して、 **SQLEndTran**影響を受ける接続に関連付けられた任意のステートメントですべてのアクティブな操作をコミット要求を発行します。 場合*CompletionType*は SQL_ROLLBACK、 **SQLEndTran**影響を受ける接続に関連付けられた任意のステートメントですべてのアクティブな操作のロールバック要求を発行します。 アクティブな場合は、トランザクションがない場合**SQLEndTran**で任意のデータ ソースに影響しない SQL_SUCCESS を返します。 詳細については、[Committing とトランザクションのロールバック](../../../odbc/reference/develop-app/committing-and-rolling-back-transactions.md)を参照してください。  
   
- ドライバーが手動コミット モードの場合 (呼び出して**SQLSetConnectAttr** SQL_ATTR_AUTOCOMMIT を SQL_AUTOCOMMIT_OFF にセットを属性) と内で格納できる SQL ステートメント、に暗黙的に、新しいトランザクションが開始します。トランザクションは、現在のデータ ソースに対して実行されます。 詳細については、次を参照してください。[コミット モード](../../../odbc/reference/develop-app/commit-mode.md)します。  
+ ドライバーが手動コミット モードの場合 (呼び出して**SQLSetConnectAttr** SQL_ATTR_AUTOCOMMIT を SQL_AUTOCOMMIT_OFF にセットを属性) と内で格納できる SQL ステートメント、に暗黙的に、新しいトランザクションが開始します。トランザクションは、現在のデータ ソースに対して実行されます。 詳細については、[コミット モード](../../../odbc/reference/develop-app/commit-mode.md)を参照してください。  
   
  カーソルのトランザクション操作の影響を確認するアプリケーションを呼び出す**SQLGetInfo** SQL_CURSOR_ROLLBACK_BEHAVIOR および SQL_CURSOR_COMMIT_BEHAVIOR のオプションを使用します。 詳細については、次の段落を参照してくださいし、も参照してください[カーソルと準備されたステートメントでトランザクションの効果](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)します。  
   

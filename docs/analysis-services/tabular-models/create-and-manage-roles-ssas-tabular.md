@@ -23,7 +23,7 @@ ms.locfileid: "53072219"
 > [!IMPORTANT]
 > Azure Analysis Services にプロジェクトをデプロイする場合は、使用**統合ワークスペース**ワークスペース データベースとします。 詳細についてを参照してください。[ワークスペース データベース](workspace-database-ssas-tabular.md)します。
   
- この記事のタスクを作成し、ロール マネージャー ダイアログ ボックスを使用してモデルの作成時にロールを管理する方法を説明する[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]します。 配置済みモデル データベース内のロールを管理する方法の詳細については、次を参照してください。[テーブル モデル ロール](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)します。  
+ この記事のタスクを作成し、ロール マネージャー ダイアログ ボックスを使用してモデルの作成時にロールを管理する方法を説明する[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]します。 配置済みモデル データベース内のロールを管理する方法の詳細については、[テーブル モデル ロール](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)を参照してください。  
   
 ## <a name="tasks"></a>処理手順  
  ロールの作成、編集、コピー、削除の各操作を実行するには、 **[ロール マネージャー]** ダイアログ ボックスを使用します。 **[ロール マネージャー]** ダイアログ ボックスを表示するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **[モデル]** メニューをクリックし、 **[ロール マネージャー]** をクリックします。  
@@ -57,7 +57,7 @@ ms.locfileid: "53072219"
 7.  このロールにメンバーを追加するには、 **[メンバー]** タブをクリックし、 **[追加]** をクリックします。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、配置済みモデルにロール メンバーを追加することもできます。 詳細については、次を参照してください。 [SSMS を使用してロールの管理](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)します。  
+    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、配置済みモデルにロール メンバーを追加することもできます。 詳細については、[SSMS を使用してロールの管理](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)を参照してください。  
   
 8.  **[ユーザーまたはグループの選択]** ダイアログ ボックスで、メンバーとして Windows ユーザーまたは Windows グループ オブジェクトを入力します。  
   

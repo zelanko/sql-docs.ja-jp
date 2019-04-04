@@ -43,7 +43,7 @@ ms.locfileid: "58377220"
   
  Excel ソースによって Excel 接続マネージャーが使用された場合は、抽出したデータに列名が含められます。 Excel 変換先によって使用された場合は、出力されたデータに列名が含められます。  
   
- Excel 接続マネージャーを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 とそのサポートの Excel ISAM (Indexed Sequential Access Method) ドライバーに接続し、読み取り、および Excel データ ソースにデータを書き込みます。 このプロバイダーとドライバーの Excel ソースおよび Excel 変換先で使用する場合の動作に関する詳細については、次を参照してください。 [Excel ソース](../data-flow/excel-source.md)と[Excel 変換先](../data-flow/excel-destination.md)します。  
+ Excel 接続マネージャーを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 とそのサポートの Excel ISAM (Indexed Sequential Access Method) ドライバーに接続し、読み取り、および Excel データ ソースにデータを書き込みます。 このプロバイダーとドライバーの Excel ソースおよび Excel 変換先で使用する場合の動作に関する詳細については、[Excel ソース](../data-flow/excel-source.md)と[Excel 変換先](../data-flow/excel-destination.md)を参照してください。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   

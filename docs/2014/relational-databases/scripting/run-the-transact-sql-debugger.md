@@ -34,7 +34,7 @@ ms.locfileid: "48124912"
 ## <a name="starting-and-stopping-the-debugger"></a>デバッガーの起動と停止  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを起動するための要件は次のとおりです。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが別のコンピューターの [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続されている場合、デバッガーはリモート デバッグ用に構成されています。 詳細については、次を参照してください。 [TRANSACT-SQL デバッガーを構成する](configure-firewall-rules-before-running-the-tsql-debugger.md)します。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが別のコンピューターの [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続されている場合、デバッガーはリモート デバッグ用に構成されています。 詳細については、[TRANSACT-SQL デバッガーを構成する](configure-firewall-rules-before-running-the-tsql-debugger.md)を参照してください。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] が、sysadmin 固定サーバー ロールのメンバーである Windows アカウントで実行されている必要があります。  
   

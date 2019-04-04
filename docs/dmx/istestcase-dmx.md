@@ -50,7 +50,7 @@ FROM [Targeted Mailing].CASES
 WHERE IsTestCase()  
 ```  
   
- データ マイニングで使用されるケースをクエリする方法の詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;します。ケース&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)と[SELECT FROM&#60;構造&#62;します。ケース](../dmx/select-from-structure-cases.md)します。  
+ データ マイニングで使用されるケースをクエリする方法の詳細については、[SELECT FROM&#60;モデル&#62;を参照してください。ケース&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)と[SELECT FROM&#60;構造&#62;します。ケース](../dmx/select-from-structure-cases.md)します。  
   
 ## <a name="see-also"></a>参照  
  [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   

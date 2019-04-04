@@ -138,7 +138,7 @@ ms.locfileid: "56037463"
      URL 構成要素は、配信拡張機能に選択できる多くの構成要素条件のうちの 1 つにすぎません。 [!INCLUDE[ssRS](../../../includes/ssrs.md)] のコード アクセス セキュリティの詳細については、「[セキュリティで保護された配置 &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)」を参照してください。  
   
 ## <a name="verifying-the-deployment"></a>配置の確認  
- 配信拡張機能が正常にレポート サーバーに配置されたかどうかを確認するには、Web サービスの <xref:ReportService2010.ReportingService2010.ListExtensions%2A> メソッドを使用します。 また、レポート マネージャーを開き、配信拡張機能がサブスクリプションに有効な配信拡張機能の一覧に含まれていることを確認する方法もあります。 レポート マネージャーとサブスクリプションの詳細については、次を参照してください。[サブスクリプションと配信&#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md)します。  
+ 配信拡張機能が正常にレポート サーバーに配置されたかどうかを確認するには、Web サービスの <xref:ReportService2010.ReportingService2010.ListExtensions%2A> メソッドを使用します。 また、レポート マネージャーを開き、配信拡張機能がサブスクリプションに有効な配信拡張機能の一覧に含まれていることを確認する方法もあります。 レポート マネージャーとサブスクリプションの詳細については、[サブスクリプションと配信&#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [配信拡張機能の実装](implementing-a-delivery-extension.md)   

@@ -52,4 +52,4 @@ ms.locfileid: "47628610"
 |SQL_API_SQLSETSCROLLOPTIONS|はい|  
 |SQL_API_SQLTABLEPRIVILEGES|いいえ|  
   
- 詳細については、次を参照してください。 [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

@@ -46,7 +46,7 @@ ms.locfileid: "53371444"
 > [!NOTE]  
 >  キューブの作成時に自動的に設定され、変更できないプロパティもあります。  
   
- キューブのプロパティを設定する方法の詳細については、次を参照してください。[キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](../cube-designer-analysis-services-multidimensional-data.md)します。  
+ キューブのプロパティを設定する方法の詳細については、[キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](../cube-designer-analysis-services-multidimensional-data.md)を参照してください。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
@@ -70,7 +70,7 @@ ms.locfileid: "53371444"
 |`Visible`|キューブを表示するかどうかを決定します。|  
   
 > [!NOTE]  
->  Null 値やその他のデータ整合性の問題を使用する場合は、ErrorConfiguration プロパティの値を設定する方法についての詳細については、次を参照してください。 [Analysis Services 2005 でのデータの整合性問題の処理](https://go.microsoft.com/fwlink/?LinkId=81891)します。  
+>  Null 値やその他のデータ整合性の問題を使用する場合は、ErrorConfiguration プロパティの値を設定する方法についての詳細については、[Analysis Services 2005 でのデータの整合性問題の処理](https://go.microsoft.com/fwlink/?LinkId=81891)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [プロアクティブ キャッシュ&#40;パーティション&#41;](partitions-proactive-caching.md)  

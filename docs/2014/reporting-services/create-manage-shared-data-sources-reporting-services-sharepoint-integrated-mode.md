@@ -37,13 +37,13 @@ ms.locfileid: "56295130"
 2.   **[新しいドキュメント]** メニューの **[レポート データ ソース]** をクリックします。  
   
     > [!NOTE]  
-    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、レポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)します。  
+    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、レポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)を参照してください。  
   
 3.  **[名前]** に、.rsds ファイルに付けるわかりやすい名前を入力します。  
   
 4.  **[データ ソースの種類]** で、一覧からデータ ソースの種類を選択します。 詳細については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)」をご覧ください。  
   
-5.  **[接続文字列]** で、外部データ ソースへの接続を確立するために必要な設定として、データ ソースへのポインターなどを指定します。 使用するデータ ソースの種類によって、接続文字列の構文が異なります。 詳細と例については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
+5.  **[接続文字列]** で、外部データ ソースへの接続を確立するために必要な設定として、データ ソースへのポインターなどを指定します。 使用するデータ ソースの種類によって、接続文字列の構文が異なります。 詳細と例については、[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)を参照してください。  
   
 6.  **[資格情報]** で、外部データ ソースにアクセスする際にレポート サーバーが資格情報を取得する方法を指定します。 資格情報は、自動レポート処理用に保存、要求、統合、または構成できます。  
   

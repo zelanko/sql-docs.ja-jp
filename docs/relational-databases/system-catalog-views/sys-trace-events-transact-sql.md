@@ -34,7 +34,7 @@ ms.locfileid: "47628300"
   
 > **重要:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 拡張イベント カタログ ビューを代わりに使用します。  
   
- これらのトレース イベントの詳細については、次を参照してください。 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)します。  
+ これらのトレース イベントの詳細については、[SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)を参照してください。  
   
   
 |列名|データ型|説明|  

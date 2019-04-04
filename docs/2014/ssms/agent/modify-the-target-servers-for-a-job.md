@@ -82,7 +82,7 @@ GO
   
 ```  
   
- 詳細については、次を参照してください。 [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)します。  
+ 詳細については、[sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [エンタープライズ全体の管理の自動化](automated-administration-across-an-enterprise.md)  

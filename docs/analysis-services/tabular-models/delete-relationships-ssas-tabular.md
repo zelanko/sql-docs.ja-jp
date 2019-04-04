@@ -18,7 +18,7 @@ ms.locfileid: "53072775"
 ---
 # <a name="delete-relationships"></a>リレーションシップを削除します。 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用して、既存のリレーションシップを削除できます。 表形式モデルでリレーションシップを使用する方法については、次を参照してください。[リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)します。  
+  ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用して、既存のリレーションシップを削除できます。 表形式モデルでリレーションシップを使用する方法については、[リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)を参照してください。  
   
 ## <a name="considerations-for-deleting-relationships"></a>リレーションシップの削除に関する考慮事項  
  リレーションシップを削除するかどうかを判断する際には、以下の点に注意してください。  

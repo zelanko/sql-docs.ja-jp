@@ -29,7 +29,7 @@ ms.locfileid: "52984073"
 |[Data Analysis Expressions (DAX) リファレンス](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)|このセクションでは、DAX の構文、演算子、および関数について詳しく説明します。|  
   
 > [!NOTE]  
->  計算の作成に伴うタスクの実行手順は、このセクションには記載されていません。 計算は、計算列、メジャー、および行フィルター (ロール単位) で指定されるため、DAX の数式の作成先についての説明も、これらの各機能に関連したタスクで説明します。 詳細については、次を参照してください。[計算列を作成する](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)、[の作成と管理のメジャー](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)、および[作成と管理の役割](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)します。  
+>  計算の作成に伴うタスクの実行手順は、このセクションには記載されていません。 計算は、計算列、メジャー、および行フィルター (ロール単位) で指定されるため、DAX の数式の作成先についての説明も、これらの各機能に関連したタスクで説明します。 詳細については、[計算列を作成する](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)、[の作成と管理のメジャー](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)、および[作成と管理の役割](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)を参照してください。  
   
 > [!NOTE]  
 >  テーブル モデルをクエリする際にも DAX は使用できますが、このセクションの各トピックでは、DAX の数式を使用した計算の作成に的を絞って説明します。  

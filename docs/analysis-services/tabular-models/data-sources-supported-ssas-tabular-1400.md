@@ -24,7 +24,7 @@ ms.locfileid: "56159757"
 
 SSAS 表形式モデル 1200 と下限の互換性レベルはを参照してください。 [SQL Server Analysis Services 表形式 1200 モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular.md)します。
 
-Azure Analysis Services では、次を参照してください。 [Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)します。
+Azure Analysis Services では、[Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)を参照してください。
 
 
 ## <a name="cloud-data-sources"></a>クラウドのデータ ソース

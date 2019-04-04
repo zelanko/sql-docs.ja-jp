@@ -60,7 +60,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |dbid|**int**|プランによって参照されるエンティティを含むデータベースの ID を指定します。<br /><br /> アドホック プランまたは準備されたプランでは、バッチの実行元となるデータベース ID です。|  
 |dbid_execute|**int**|格納されているシステム オブジェクトに対して、**リソース**データベース、キャッシュされたプランを実行するためのデータベース ID。 その他の場合は 0 になります。|  
 |user_id|**int**|値 -2 は、送られたバッチが暗黙的な名前解決に依存せず、複数ユーザー間での共有が可能であることを示します。 これは推奨される方法です。 他の値は、データベースのクエリを送っているユーザーのユーザー ID を示します。| 
-|language_id|**smallint**|キャッシュ オブジェクトを作成した接続の言語の ID です。 詳細については、次を参照してください。 [sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)します。|  
+|language_id|**smallint**|キャッシュ オブジェクトを作成した接続の言語の ID です。 詳細については、[sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)を参照してください。|  
 |date_format|**smallint**|キャッシュ オブジェクトを作成した接続の日付形式です。 詳しくは、「[SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)」をご覧ください。|  
 |date_first|**tinyint**|日付の最初の値です。 詳しくは、「[SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)」をご覧ください。|  
 |status|**int**|キャッシュ参照キーの一部である内部ステータス ビットです。|  

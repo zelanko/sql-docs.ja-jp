@@ -24,6 +24,6 @@ ms.locfileid: "47610130"
 > [!NOTE]  
 >  ODBC は Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに含まれます。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  
   
- トランスレーター セットアップ DLL が含まれています、 **ConfigTranslator**トランスレーターの既定のオプションを返す関数。 必要に応じて、ユーザーにこの情報メッセージが表示されます。 この関数の詳細については、次を参照してください。[セットアップ DLL API リファレンス](../../../odbc/reference/syntax/setup-dll-api-reference.md)します。  
+ トランスレーター セットアップ DLL が含まれています、 **ConfigTranslator**トランスレーターの既定のオプションを返す関数。 必要に応じて、ユーザーにこの情報メッセージが表示されます。 この関数の詳細については、[セットアップ DLL API リファレンス](../../../odbc/reference/syntax/setup-dll-api-reference.md)を参照してください。  
   
  トランスレーター セットアップ DLL は、変換プログラムの開発者によって書き込まれます。 トランスレーターの一部にすることができます、または別の DLL。

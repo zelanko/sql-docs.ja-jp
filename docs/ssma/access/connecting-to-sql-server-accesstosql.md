@@ -46,10 +46,10 @@ SQL Server のインスタンスに関するメタデータは、自動的に同
 ## <a name="establishing-a-sql-server-connection"></a>SQL Server の接続を確立します。  
 Access データベースのオブジェクトに変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文のインスタンスへの接続を確立する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を Access データベースを移行します。  
   
-接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 接続した後、データベース レベルのアクセスには、このマッピングをカスタマイズできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。[マッピング ソースとターゲット データベース](mapping-source-and-target-databases-accesstosql.md)します。  
+接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 接続した後、データベース レベルのアクセスには、このマッピングをカスタマイズできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、[マッピング ソースとターゲット データベース](mapping-source-and-target-databases-accesstosql.md)を参照してください。  
   
 > [!IMPORTANT]  
-> 接続する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ことを確認のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されていると、接続を受け入れることができます。 詳細については、次を参照してください。"への接続、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース エンジン"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+> 接続する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ことを確認のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されていると、接続を受け入れることができます。 詳細については、"への接続、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース エンジン"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「を参照してください。  
   
 **SQL Server に接続するには**  
   

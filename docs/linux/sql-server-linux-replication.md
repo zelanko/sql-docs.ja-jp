@@ -40,7 +40,7 @@ Linux 上の SQL Server インスタンスは、任意の種類のレプリケ�
 * Merge
 * スナップショット
 
-レプリケーションの詳細については、次を参照してください。 [SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)します。
+レプリケーションの詳細については、[SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)を参照してください。
 
 ## <a name="supported-features"></a>サポートされる機能
 

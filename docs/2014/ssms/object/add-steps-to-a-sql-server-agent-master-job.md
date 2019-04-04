@@ -56,7 +56,7 @@ ms.locfileid: "52822686"
   
 4.  ステップを追加するジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[ジョブのプロパティ -** _<ジョブ名>]_ ダイアログ ボックスで、**[ページの選択]** の **[ステップ]** を選択します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ: 新しいジョブ&#40;手順ページ&#41;](../agent/job-properties-new-job-steps-page.md)します。  
+5.  **[ジョブのプロパティ -** _<ジョブ名>]_ ダイアログ ボックスで、**[ページの選択]** の **[ステップ]** を選択します。 このページで使用可能なオプションの詳細については、[ジョブのプロパティ: 新しいジョブ&#40;手順ページ&#41;](../agent/job-properties-new-job-steps-page.md)を参照してください。  
 
 6.  完了したら、 **[OK]** をクリックします。  
   
@@ -86,6 +86,6 @@ ms.locfileid: "52822686"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)します。  
+ 詳細については、[sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)を参照してください。  
   
   

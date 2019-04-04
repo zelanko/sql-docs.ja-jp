@@ -44,7 +44,7 @@ StructureColumn('structure column name')
   
  使用してクエリから返された結果、 **StructureColumn**関数は、モデルに対するフィルターの存在を受けます。 つまり、モデル フィルターは、マイニング モデルに含まれるケースを制御します。 したがって、構造列上のクエリは、マイニング モデルに使用されたケースのみを返します。 ケース テーブルと入れ子になったテーブルの両方に対するマイニング モデル フィルターの影響を示すコード例については、このトピックの「例」のセクションを参照してください。  
   
- DMX SELECT ステートメントでこの関数を使用する方法の詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;します。ケース&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)または[SELECT FROM&#60;構造&#62;します。ケース](../dmx/select-from-structure-cases.md)します。  
+ DMX SELECT ステートメントでこの関数を使用する方法の詳細については、[SELECT FROM&#60;モデル&#62;を参照してください。ケース&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)または[SELECT FROM&#60;構造&#62;します。ケース](../dmx/select-from-structure-cases.md)します。  
   
 ## <a name="error-messages"></a>エラー メッセージ  
  次のセキュリティ エラーは、親のマイニング構造に対するドリルスルー権限がユーザーに与えられていない場合に発生します。  

@@ -99,7 +99,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
  子**Recordset**状態によってグループ化されたが、任意の順序でそれ以外の場合に、詳細行になります。 つまり、グループはアルファベットまたは数字の順序ではできません。 場合は、親**レコード セット**指定の順序を使用することができます、**レコード セットの並べ替え**親を順序付ける方法**Recordset**します。  
   
- 開かれている親を移動できるようになりました**Recordset**子詳細へのアクセスと**レコード セット**オブジェクト。 詳細については、次を参照してください。[階層レコード セットの行にアクセスする](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)します。  
+ 開かれている親を移動できるようになりました**Recordset**子詳細へのアクセスと**レコード セット**オブジェクト。 詳細については、[階層レコード セットの行にアクセスする](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)を参照してください。  
   
 ## <a name="resultant-parent-and-child-detail-recordsets"></a>結果の親と子詳細レコード セット  
   

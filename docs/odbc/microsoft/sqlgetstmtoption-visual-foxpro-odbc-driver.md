@@ -38,4 +38,4 @@ ms.locfileid: "47647000"
   
  Visual FoxPro ODBC ドライバーには、翻訳の Dll がありません。  
   
- 詳細については、次を参照してください。 [SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

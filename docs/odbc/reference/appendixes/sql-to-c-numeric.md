@@ -35,7 +35,7 @@ ms.locfileid: "54420007"
 - SQL_SMALLINT  
 - SQL_DOUBLE SQL_INTEGER  
 
-次の表は、ODBC C データ型が数値の SQL データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)します。  
+次の表は、ODBC C データ型が数値の SQL データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)を参照してください。  
 
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  

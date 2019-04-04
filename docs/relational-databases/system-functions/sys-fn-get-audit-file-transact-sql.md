@@ -124,7 +124,7 @@ fn_get_audit_file ( file_pattern,
 | target_server_principal_name | **sysname** | アクションの対象ログインします。 Null 値は。 該当しない場合は NULL を返します。 |  
 | target_server_principal_sid | **varbinary** | 対象ログインの SID。 Null 値は。 該当しない場合は NULL を返します。 |  
 | transaction_id | **bigint** | **適用対象**:SQL Server のみ (2016年以降)<br /><br /> 1 つのトランザクションで複数の監査イベントを識別するために一意識別子 |  
-| user_defined_event_id | **smallint** | **適用対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、Azure SQL DB およびマネージ インスタンス<br /><br /> 引数として渡されるユーザー定義済みのイベント id **sp_audit_write**します。 **NULL**システム イベント (既定値) のユーザー定義のイベントに対しては 0 以外。 詳細については、次を参照してください。 [sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)します。 |  
+| user_defined_event_id | **smallint** | **適用対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、Azure SQL DB およびマネージ インスタンス<br /><br /> 引数として渡されるユーザー定義済みのイベント id **sp_audit_write**します。 **NULL**システム イベント (既定値) のユーザー定義のイベントに対しては 0 以外。 詳細については、[sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)を参照してください。 |  
 | user_defined_information | **nvarchar (4000)** | **適用対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、Azure SQL DB およびマネージ インスタンス<br /><br /> ユーザーを使用して監査ログに記録する追加情報を記録するために使用、 **sp_audit_write**ストアド プロシージャ。 |  
 
   
@@ -177,7 +177,7 @@ fn_get_audit_file ( file_pattern,
 
 監査を作成する方法の完全な例については、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。
 
-Azure SQL Database 監査をセットアップする方法については、次を参照してください。 [SQL Database 監査の](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)します。
+Azure SQL Database 監査をセットアップする方法については、[SQL Database 監査の](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)を参照してください。
   
 ## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

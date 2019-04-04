@@ -76,12 +76,12 @@ SQLRETURN SQLGetCursorName(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY015|使用可能なカーソル名|(DM)、ドライバーが、ODBC 2 *.x*ドライバーは、ステートメントで開いているカーソルがなかったし、でカーソル名が設定されていません**SQLSetCursorName**します。|  
 |HY090|文字列またはバッファーの長さが無効です。|引数で指定された値 (DM) *BufferLength*が 0 未満でした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
   
 ## <a name="comments"></a>コメント  
- カーソル名が位置指定更新でのみ使用、および delete ステートメント (たとえば、**更新**_テーブル名_.**WHERE CURRENT OF** _カーソル名_)。 詳細については、次を参照してください。[配置の更新と削除ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)します。 アプリケーションが要求されていない場合**SQLSetCursorName**ドライバーをカーソル名を定義するには、名前を生成します。 この名前は文字 SQL_CUR で開始します。  
+ カーソル名が位置指定更新でのみ使用、および delete ステートメント (たとえば、**更新**_テーブル名_.**WHERE CURRENT OF** _カーソル名_)。 詳細については、[配置の更新と削除ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)を参照してください。 アプリケーションが要求されていない場合**SQLSetCursorName**ドライバーをカーソル名を定義するには、名前を生成します。 この名前は文字 SQL_CUR で開始します。  
   
 > [!NOTE]
 >  ODBC 2 *.x*開いているカーソルはありませんでしたしへの呼び出しで名前が設定されていないときに、 **SQLSetCursorName**への呼び出し**SQLGetCursorName** SQLSTATE HY015 が返されます (カーソル名がありません使用可能な) にします。 ODBC 3 *.x*、true 以外の場合に関係なくこれが不要になった**SQLGetCursorName**が呼び出されると、ドライバーは、カーソル名を返します。  

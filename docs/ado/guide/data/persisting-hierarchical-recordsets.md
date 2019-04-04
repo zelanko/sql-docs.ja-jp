@@ -25,7 +25,7 @@ ms.locfileid: "51599787"
 # <a name="persisting-hierarchical-recordsets"></a>階層レコードセットの保持
 階層構造を保存する**レコード セット**を呼び出すことによって、adtg 形式または XML 形式でファイルに、[保存](../../../ado/reference/ado-api/save-method.md)メソッド。 階層を保存するときに、2 つの制限を適用するただし、**レコード セット**XML 形式で s: 場合は、XML で保存することはできません、階層**レコード セット**保留中の更新プログラムが含まれていて、パラメーター化されたを保存することはできません階層**Recordset**します。  
   
- データ シェイプ プロバイダーの詳細については、次を参照してください。 [Microsoft Data Shaping Service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (ADO) と[for OLE DB Data Shaping Service の概要](https://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3)します。  
+ データ シェイプ プロバイダーの詳細については、[Microsoft Data Shaping Service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (ADO) と[for OLE DB Data Shaping Service の概要](https://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   

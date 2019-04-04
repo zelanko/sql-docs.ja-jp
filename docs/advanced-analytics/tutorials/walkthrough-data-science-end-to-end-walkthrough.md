@@ -38,7 +38,7 @@ R コードの組み合わせを使用する[!INCLUDE[ssNoVersion](../../include
 
 + RStudio などの R IDE または R に付属する組み込み RGUI ツール
 
-クライアント ワークステーションでは、このチュートリアルを実行することをお勧めします。 を、同じネットワーク上に接続できる必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server と R 言語を有効になっているコンピューター。 ワークステーションの構成については、次を参照してください。 [R 開発用のデータ サイエンス クライアント セットアップ](../r/set-up-a-data-science-client.md)します。
+クライアント ワークステーションでは、このチュートリアルを実行することをお勧めします。 を、同じネットワーク上に接続できる必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server と R 言語を有効になっているコンピューター。 ワークステーションの構成については、[R 開発用のデータ サイエンス クライアント セットアップ](../r/set-up-a-data-science-client.md)を参照してください。
 
 両方を備えたコンピューターでチュートリアルを実行する代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と R 開発環境では、ですが運用環境のためには、この構成は推奨されません。 同じコンピューターにクライアントとサーバーを配置する必要がある場合は、「リモート」のクライアントから R スクリプトを送信するための Microsoft R ライブラリの 2 番目のセットをインストールすることを確認します。 SQL Server インスタンスのプログラム ファイルにインストールされている R ライブラリを使用しません。 具体的には、1 台のコンピューターを使用している場合は、クライアントとサーバーの操作をサポートするためにこれらの場所の両方で RevoScaleR ライブラリ必要があります。
 
@@ -68,7 +68,7 @@ R 環境では、次の行をコピーし、(Rgui または IDE) は、コンソ
 SQL Server にパッケージをインストールするためのいくつかのオプションがあります。 たとえば、SQL Server は[R パッケージ管理](../r/install-additional-r-packages-on-sql-server.md)により、データベース管理者はパッケージ リポジトリを作成し、ユーザーが自分のパッケージをインストールする権限を割り当てる機能。 ただし、コンピューターの管理者の場合は、適切なライブラリをインストールする場合に限り、R を使用して新しいパッケージをインストールできます。
 
 > [!NOTE]
-> サーバーで、**しない**場合でも、入力を求め、ユーザー ライブラリにインストールします。 ユーザー ライブラリにインストールする場合、SQL Server インスタンスが見つからないか、パッケージを実行します。 詳細については、次を参照してください。 [SQL サーバーに新しい R パッケージをインストールする](../r/install-additional-r-packages-on-sql-server.md)します。
+> サーバーで、**しない**場合でも、入力を求め、ユーザー ライブラリにインストールします。 ユーザー ライブラリにインストールする場合、SQL Server インスタンスが見つからないか、パッケージを実行します。 詳細については、[SQL サーバーに新しい R パッケージをインストールする](../r/install-additional-r-packages-on-sql-server.md)を参照してください。
 
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターで、**管理者権限で** RGui.exe を開きます。  既定値を使用して SQL Server R Services をインストールした場合、Rgui.exe は C:\Program files \microsoft SQL Server\MSSQL13 で見つかんだことができます。MSSQLSERVER\R_SERVICES\bin\x64)。
 
@@ -80,7 +80,7 @@ SQL Server にパッケージをインストールするためのいくつかの
   install.packages("ROCR", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   ```
-  この例では、R grep 関数を使用して、使用可能なパスのベクトルを検索し、"Program Files"を含むパスを見つけます。 詳細については、次を参照してください。 [ https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)します。
+  この例では、R grep 関数を使用して、使用可能なパスのベクトルを検索し、"Program Files"を含むパスを見つけます。 詳細については、[ https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)を参照してください。
 
   パッケージが既にインストールされている場合を実行してインストールされているパッケージの一覧を確認してください。`installed.packages()`します。
 

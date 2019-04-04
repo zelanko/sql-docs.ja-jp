@@ -36,10 +36,10 @@ ms.locfileid: "53209551"
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar (256)** |オペレーティング システムの種類:Windows または Linux |
 |**host_distribution** |**nvarchar (256)** |オペレーティング システムの説明です。 |
-|**host_release**|**nvarchar (256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows オペレーティング システムのリリース (バージョン番号)。 値と説明の一覧は、次を参照してください。[オペレーティング システムのバージョン (Windows)](/windows/desktop/SysInfo/operating-system-version)します。 <br> Linux の場合は、空の文字列を返します。 |  
+|**host_release**|**nvarchar (256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows オペレーティング システムのリリース (バージョン番号)。 値と説明の一覧は、[オペレーティング システムのバージョン (Windows)](/windows/desktop/SysInfo/operating-system-version)を参照してください。 <br> Linux の場合は、空の文字列を返します。 |  
 |**host_service_pack_level**|**nvarchar (256)**|Windows オペレーティング システムの Service Pack のレベル。 <br> Linux の場合は、空の文字列を返します。 |  
-|**host_sku**|**int**|Windows 在庫商品識別番号 (SKU) ID。 SKU Id と説明の一覧は、次を参照してください。 [GetProductInfo 関数](https://msdn.microsoft.com/library/ms724358.aspx)します。 NULL 値が許可されます。 <br> Linux の場合は、NULL を返します。 |  
-|**os_language_version**|**int**|オペレーティング システムの Windows ロケール識別子 (LCID)。 LCID 値と説明の一覧は、次を参照してください。 [Microsoft によるロケール Id 割り当て](https://go.microsoft.com/fwlink/?LinkId=208080)します。 null にすることはできません。|  
+|**host_sku**|**int**|Windows 在庫商品識別番号 (SKU) ID。 SKU Id と説明の一覧は、[GetProductInfo 関数](https://msdn.microsoft.com/library/ms724358.aspx)を参照してください。 NULL 値が許可されます。 <br> Linux の場合は、NULL を返します。 |  
+|**os_language_version**|**int**|オペレーティング システムの Windows ロケール識別子 (LCID)。 LCID 値と説明の一覧は、[Microsoft によるロケール Id 割り当て](https://go.microsoft.com/fwlink/?LinkId=208080)を参照してください。 null にすることはできません。|  
 
 ## <a name="remarks"></a>コメント  
 このビューに似ています[sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)、Windows および Linux を区別する列を追加します。

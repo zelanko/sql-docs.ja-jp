@@ -36,10 +36,10 @@ ms.locfileid: "56290060"
  レポートで使用されている画像のセットを表します。 詳細については、「[画像 &#40;レポート ビルダーおよび SSRS& #41;](report-design/images-report-builder-and-ssrs.md)」を参照してください。  
   
  **[データ ソース]**  
- 埋め込みデータ ソースまたは共有データ ソースの参照を表します。 データ ソースは、レポートのデータのソースを表します。 データ ソースは、そのデータ ソースを使用するデータセットのコレクションの親ノードです。 詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41; ](report-data/report-datasets-ssrs.md)と[データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)します。  
+ 埋め込みデータ ソースまたは共有データ ソースの参照を表します。 データ ソースは、レポートのデータのソースを表します。 データ ソースは、そのデータ ソースを使用するデータセットのコレクションの親ノードです。 詳細については、[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41; ](report-data/report-datasets-ssrs.md)と[データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)を参照してください。  
   
  **データセット**  
- 1 つのコマンドを実行することによってデータ ソースから取得されるデータを表します。たとえば、[!INCLUDE[tsql](../includes/tsql-md.md)] データベースからデータを取得する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリなどがあります。 データセットは、クエリで指定されたフィールドのほか、計算フィールドも含むコレクションの親ノードです。 レポート ビルダーでは、クエリを指定できるようにクエリ デザイナーがサポートされています。 詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)します。  
+ 1 つのコマンドを実行することによってデータ ソースから取得されるデータを表します。たとえば、[!INCLUDE[tsql](../includes/tsql-md.md)] データベースからデータを取得する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリなどがあります。 データセットは、クエリで指定されたフィールドのほか、計算フィールドも含むコレクションの親ノードです。 レポート ビルダーでは、クエリを指定できるようにクエリ デザイナーがサポートされています。 詳細については、[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   

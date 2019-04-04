@@ -47,9 +47,9 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>マイニング モデルでのモデリング フラグの指定  
  構文の例についてを[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、マイニング構造列でフラグを指定するためのサポートを参照してください[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)します。  
   
- マイニング モデル列にモデリング フラグを指定する構文の例は、次を参照してください。 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)します。  
+ マイニング モデル列にモデリング フラグを指定する構文の例は、[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)を参照してください。  
   
- マイニング モデル列の使用の詳細については、次を参照してください。[マイニング モデル列](../analysis-services/data-mining/mining-model-columns.md)します。  
+ マイニング モデル列の使用の詳細については、[マイニング モデル列](../analysis-services/data-mining/mining-model-columns.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

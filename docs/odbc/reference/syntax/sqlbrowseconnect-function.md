@@ -123,7 +123,7 @@ SQLRETURN SQLBrowseConnect(
   
  参照要求の接続文字列では、一切のキーワードが繰り返される、ドライバーは、最初に見つかったキーワードの関連付けられた値を使用します。 場合、 **DSN**と**ドライバー**で同じ参照要求の接続文字列キーワードが含まれている、ドライバー マネージャーとドライバーを使用して最初にどちらのキーワードが表示されます。  
   
- アプリケーションがデータ ソースまたはドライバーを選択する方法については、次を参照してください。[データ ソースまたはドライバーを選択する](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)します。  
+ アプリケーションがデータ ソースまたはドライバーを選択する方法については、[データ ソースまたはドライバーを選択する](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)を参照してください。  
   
 ## <a name="outconnectionstring-argument"></a>OutConnectionString 引数  
  参照結果の接続文字列は、接続属性の一覧です。 接続属性は、属性のキーワードと対応する属性値で構成されます。 参照結果の接続文字列では、次の構文があります。  
@@ -178,7 +178,7 @@ SQLRETURN SQLBrowseConnect(
   
  非同期操作が、接続ハンドルの有効な場合**SQLBrowseConnect** SQL_STILL_EXECUTING が返すも可能性があります。 SQL_NEED_DATA が返されると、アプリケーションを使用する必要があります**SQLDisconnect**参照プロセスをキャンセルします。 場合**SQLBrowseConnect**返します SQL_STILL_EXECUTING、アプリケーションを使用する必要があります**SQLCancelHandle**進行中の操作をキャンセルします。 呼び出す**SQLCancelHandle**後、影響を与えません SQL_NEED_DATA を返します。  
   
- 詳細については、次を参照してください。 [SQLBrowseConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)します。  
+ 詳細については、[SQLBrowseConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)を参照してください。  
   
  ドライバーをサポートしている場合**SQLBrowseConnect**、キーワード」のドライバー、ドライバーのシステム情報を含める必要があります、 **ConnectFunctions**キーワードと 3 番目の文字"Y"に設定。  
   

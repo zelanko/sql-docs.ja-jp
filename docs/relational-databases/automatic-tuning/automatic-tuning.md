@@ -28,7 +28,7 @@ ms.locfileid: "54226619"
 自動チューニングは、潜在的なクエリ パフォーマンスの問題に関する洞察を提供し、解決策を推奨して、特定された問題を自動的に解決するデータベース機能です。
 
 自動チューニング[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]潜在的なパフォーマンスの問題が検出され、修正措置を適用することができますが常に通知することもできます、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]自動的にパフォーマンスの問題を修正します。
-自動チューニング[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]特定し、によるパフォーマンスの問題を修正することができます**クエリ実行プランの選択による後退**します。 自動チューニング[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]も必要なインデックスを作成し、未使用のインデックスを削除します。 クエリ実行プランの詳細については、次を参照してください。[実行プラン](../../relational-databases/performance/execution-plans.md)します。
+自動チューニング[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]特定し、によるパフォーマンスの問題を修正することができます**クエリ実行プランの選択による後退**します。 自動チューニング[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]も必要なインデックスを作成し、未使用のインデックスを削除します。 クエリ実行プランの詳細については、[実行プラン](../../relational-databases/performance/execution-plans.md)を参照してください。
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]モニター、データベースと自動的に実行されるクエリ ワークロードのパフォーマンスが向上します。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]組み込みのインテリジェンス メカニズムを自動的に調整して、ワークロードにデータベースを動的に適応することで、クエリのパフォーマンスを向上させることができます。 利用できる 2 つの自動チューニング機能があります。
 
@@ -49,7 +49,7 @@ ms.locfileid: "54226619"
 
 ## <a name="automatic-plan-correction"></a>自動プラン修正
 
-自動プラン修正は、自動チューニング機能を識別する**実行プランの選択の回帰**最後の既知の良好なプランを強制することで、問題を自動的に解決します。 詳細については、クエリ実行プランとクエリ オプティマイザーは、次を参照してください。、[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)します。
+自動プラン修正は、自動チューニング機能を識別する**実行プランの選択の回帰**最後の既知の良好なプランを強制することで、問題を自動的に解決します。 詳細については、クエリ実行プランとクエリ オプティマイザーは、、[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)を参照してください。
 
 ### <a name="what-is-execution-plan-choice-regression"></a>実行プランの選択の回帰とは何ですか。
 

@@ -57,7 +57,7 @@ SQLRETURN SQLColumnPrivileges(
  *カタログ名*  
  [入力]カタログの名前。 ドライバーは、ドライバーをさまざまな Dbms、空の文字列からデータを取得した場合など、他ではなく一部のカタログの名前をサポートしている場合 ("") の名前を持たないフルテキスト カタログを表します。 *CatalogName*文字列の検索パターンを含めることはできません。  
   
- SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。  
+ SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)を参照してください。  
   
  *NameLength1*  
  [入力]文字の長さ **CatalogName*します。  
@@ -107,7 +107,7 @@ SQLRETURN SQLColumnPrivileges(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|(DM) 名の長の引数のいずれかの値が 0 未満でしたが、SQL_NTS と等しくありません。|  
 |||名の長の引数のいずれかの値には、対応する名前の最大長の値を超えています。 (「コメントです」を参照してください)|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYC00|省略可能な機能が実装されていません|カタログ名が指定されました、およびドライバーまたはデータ ソースがカタログをサポートしていません。<br /><br /> スキーマ名を指定してから、およびドライバーまたはデータ ソースがスキーマをサポートしていません。<br /><br /> 文字列の検索パターンが、列名の指定され、データ ソースがその引数の検索パターンをサポートしていません。<br /><br /> SQL_CONCURRENCY と SQL_CURSOR_TYPE ステートメント属性の現在の設定の組み合わせが、ドライバーまたはデータ ソースでサポートされていません。<br /><br /> SQL_ATTR_USE_BOOKMARKS ステートメント属性は SQL_UB_VARIABLE に設定されており、SQL_ATTR_CURSOR_TYPE ステートメント属性は、ドライバーがブックマークをできません、カーソルの種類に設定されました。|  
 |HYT00|タイムアウトが発生しました|データ ソースには、結果セットが返される前に、クエリのタイムアウト期間が終了しました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -124,7 +124,7 @@ SQLRETURN SQLColumnPrivileges(
  VARCHAR 列の長さは、テーブルには表示されません。実際の長さは、データ ソースに依存します。 CATALOG_NAME、SCHEMA_NAME、TABLE_NAME、COLUMN_NAME、列の実際の長さを決定するには、アプリケーションを呼び出すことができます**SQLGetInfo** SQL_MAX_CATALOG_NAME_LEN、SQL_MAX_SCHEMA_NAME_LEN、SQL_MAX_TABLE_NAME_ でLEN、および SQL_MAX_COLUMN_NAME_LEN オプション。  
   
 > [!NOTE]  
->  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
+>  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)を参照してください。  
   
  次の列は、ODBC 3 の名前に変更されています。*x*します。 列名の変更では、アプリケーションは、列番号でバインドため、旧バージョンとの互換性は影響しません。  
   
@@ -133,7 +133,7 @@ SQLRETURN SQLColumnPrivileges(
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  
   
- 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、8 (IS_GRANTABLE) 列を超える追加の列を定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウント ダウンによって、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、次を参照してください。[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)します。  
+ 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、8 (IS_GRANTABLE) 列を超える追加の列を定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウント ダウンによって、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)を参照してください。  
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
@@ -147,7 +147,7 @@ SQLRETURN SQLColumnPrivileges(
 |IS_GRANTABLE (ODBC 1.0)|8|Varchar|他のユーザーに、特権を付与する権限が許可されたかどうかを示します"YES"、"NO"、または不明またはデータ ソースに適用されない場合は"NULL"です。<br /><br /> 特権はどちらかです付与できるまたは付与禁止両方は必要ありません。 によって返される結果セット**SQLColumnPrivileges** IS_GRANTABLE 列を除くすべての列が同じ値を含めることが 2 つの行が含まれません。|  
   
 ## <a name="code-example"></a>コード例  
- 同様の関数のコード例では、次を参照してください。 [SQLColumns 関数](../../../odbc/reference/syntax/sqlcolumns-function.md)します。  
+ 同様の関数のコード例では、[SQLColumns 関数](../../../odbc/reference/syntax/sqlcolumns-function.md)を参照してください。  
   
 ## <a name="related-functions"></a>関連する関数  
   

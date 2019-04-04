@@ -31,7 +31,7 @@ ms.locfileid: "47616240"
  外部キーを表す列が一覧表示、**列**オブジェクトのプロパティ、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>オブジェクト。 外部キーによって参照される主キーがで表される、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>プロパティで指定したテーブルにある、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>プロパティ。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Visual Basic での外部キーの作成、変更、および削除  
  このコード例では、あるテーブル内の 1 つまたは複数の列から、別のテーブル内の主キー列に対する外部キー リレーションシップを作成する方法を示します。  

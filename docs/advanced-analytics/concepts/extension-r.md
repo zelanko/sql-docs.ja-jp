@@ -26,7 +26,7 @@ R 統合は、SQL Server で SQL Server 2016 以降で使用できる[R Services
 
 SQL Server には、オープン ソースの独自のパッケージが含まれています。 基本の R ライブラリは、オープン ソース r: の Microsoft の配布によってインストールされます。Microsoft R Open (MRO)。 R の現在のユーザーは、R コードを移植して、ほとんどまたはまったく変更で SQL Server の外部プロセスとして実行できる必要があります。 MRO は、SQL ツールとは別にインストールされているし、機能拡張フレームワークのコア エンジン プロセスの外部で実行されます。 インストール中には、オープン ソース ライセンスの条項に同意する必要があります。 R です。 その他のオープン ソース ディストリビューションの場合と同様に、標準的な R パッケージを変更なしに実行するその後、 
 
-SQL Server では、基本の R 実行可能ファイルでは変更しませんが、そのバージョンが独自のパッケージをビルドしてテストする 1 つであるために、セットアップでインストールする R のバージョンを使用する必要があります。 CRAN から発生する可能性のある R のベース ディストリビューションにおける MRO の違いの詳細については、次を参照してください。 [R 言語と Microsoft R 製品、機能との相互運用](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)します。
+SQL Server では、基本の R 実行可能ファイルでは変更しませんが、そのバージョンが独自のパッケージをビルドしてテストする 1 つであるために、セットアップでインストールする R のバージョンを使用する必要があります。 CRAN から発生する可能性のある R のベース ディストリビューションにおける MRO の違いの詳細については、[R 言語と Microsoft R 製品、機能との相互運用](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)を参照してください。
 
 セットアップによってインストールされている R 基本パッケージ ディストリビューションは、インスタンスに関連付けられたフォルダーにあります。 たとえば、SQL Server 2016 既定のインスタンスに R Services をインストールした場合、R ライブラリ内にあるこのフォルダー既定で:`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`します。 同様に、既定のインスタンスに関連付けられている R ツールがフォルダーに配置するこの既定:`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`します。
 
@@ -35,7 +35,7 @@ SQL Server では、基本の R 実行可能ファイルでは変更しません
 | ライブラリ | 説明 |
 |---------|-------------|
 | [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | データ ソース オブジェクトとデータの探索、操作、変換、および視覚エフェクトをサポートしています。 など、さまざまなスケーラブルな機械学習モデルと同様に、リモート計算コンテキストの作成をサポート**rxLinMod**します。 これらの API は、大きすぎてメモリに収まらないデータ セットの分析と複数のコアまたはプロセッサでの分散計算を実行するように最適化されています。 RevoScaleR パッケージでは、高速移動と分析のために使用されるデータのストレージの XDF ファイルの形式もサポートします。 XDF 形式は、カラム型ストレージを使用する移植可能な形式であり、テキスト、SPSS、ODBC 接続などのさまざまなソースからデータを読み込んで操作するために使用できます。 |
-| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 場合の速度と精度、最適化されているだけでなく行のテキストとイメージを操作するための変換を機械学習アルゴリズムが含まれています。 詳細については、次を参照してください。 [SQL Server の MicrosoftML](../r/ref-r-microsoftml.md)します。 | 
+| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 場合の速度と精度、最適化されているだけでなく行のテキストとイメージを操作するための変換を機械学習アルゴリズムが含まれています。 詳細については、[SQL Server の MicrosoftML](../r/ref-r-microsoftml.md)を参照してください。 | 
 
 ## <a name="using-r-in-sql-server"></a>SQL Server で R を使用
 

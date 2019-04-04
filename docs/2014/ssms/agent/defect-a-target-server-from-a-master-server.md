@@ -71,7 +71,7 @@ ms.locfileid: "52795694"
 sp_msx_defect ;  
 ```  
   
- 詳細については、次を参照してください。 [sp_msx_defect &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql)します。  
+ 詳細については、[sp_msx_defect &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql)を参照してください。  
   
 ##  <a name="PowerShellProcedure"></a> SQL Server 管理オブジェクト (SMO) の使用  
  使用して、`MsxDefect Method`します。  

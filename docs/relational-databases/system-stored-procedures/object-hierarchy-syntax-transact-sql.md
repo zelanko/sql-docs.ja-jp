@@ -66,7 +66,7 @@ ms.locfileid: "47679650"
   
  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] OLE オブジェクト構文の詳細については、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のマニュアルを参照してください。  
   
- HRESULT のリターン コードの詳細については、次を参照してください。 [sp_OACreate &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)します。  
+ HRESULT のリターン コードの詳細については、[sp_OACreate &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)を参照してください。  
   
 ## <a name="examples"></a>使用例  
  SQL-DMO SQLServer オブジェクトを使用するオブジェクト階層構文の例を次に示します。  

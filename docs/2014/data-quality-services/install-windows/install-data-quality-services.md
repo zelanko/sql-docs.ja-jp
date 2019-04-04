@@ -47,7 +47,7 @@ ms.locfileid: "56019640"
   
 |DQS コンポーネント|最小システム要件|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|メモリ (RAM):<br />最小値:2 GB<br />-お勧めします。4 GB 以上<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース エンジン。 詳細については、次を参照してください。[に関する SQL Server データベース エンジンの](../../database-engine/sql-server-database-engine-overview.md)します。|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|メモリ (RAM):<br />最小値:2 GB<br />-お勧めします。4 GB 以上<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース エンジン。 詳細については、[に関する SQL Server データベース エンジンの](../../database-engine/sql-server-database-engine-overview.md)を参照してください。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (インストールされていない場合は、 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] のインストール時にインストールされます)<br /><br /> Internet Explorer 6.0 SP1 以降|  
   
 > [!IMPORTANT]

@@ -37,7 +37,7 @@ ms.locfileid: "48141642"
 |||  
 |-|-|  
 |**使用可能な列**|列名。|  
-|**ワード ブレーカーの言語**|すべてのフルテキスト インデックス データに対する言語分析を実行するワード ブレーカーおよびステミング機能を含む言語。<br /><br /> 詳細については、次を参照してください。[ワード ブレーカーの管理と検索のステミング機能の構成と](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)と[、フルテキスト インデックスを作成時の言語を選択](../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)します。|  
+|**ワード ブレーカーの言語**|すべてのフルテキスト インデックス データに対する言語分析を実行するワード ブレーカーおよびステミング機能を含む言語。<br /><br /> 詳細については、[ワード ブレーカーの管理と検索のステミング機能の構成と](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)と[、フルテキスト インデックスを作成時の言語を選択](../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)を参照してください。|  
 |**型**|選択された列のドキュメント型を保持するテーブル列の名前。 これは、読み取り専用プロパティです。|  
 |**[統計的セマンティクス]**|選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md)」を参照してください。<br /><br /> **[統計的セマンティクス]** を選択する前に **[言語]** を選択した場合、選択した言語にセマンティック言語モデルが関連付けられていなければ、**[統計的セマンティクス]** チェック ボックスは無効になります。 **[言語]** を選択する前に **[統計的セマンティクス]** を選択した場合、ドロップダウン コンボ ボックスで使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。|  
   

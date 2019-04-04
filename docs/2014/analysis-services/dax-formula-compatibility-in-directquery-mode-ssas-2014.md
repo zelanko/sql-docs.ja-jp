@@ -22,7 +22,7 @@ ms.locfileid: "53372664"
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery モードでの DAX 数式の互換性 (SSAS 2014)
 Analysis Services 表形式モデルでメジャーと使用するための他のカスタム式を作成する Data Analysis Expression (DAX) 言語を使用できます[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel ブックのデータ モデルと Power BI Desktop データ モデル。 多くの点では、これらの環境を作成するモデルが同じであり、同じメジャー、リレーションシップ、および Kpi を使用するなど。ただし、Analysis Services 表形式のモデルを作成して、DirectQuery モードで展開する場合は、使用できる数式に関していくつかの制限。 このトピックで、これらの違いの概要を説明します、互換性レベル 1100 または 1103 の SQL Server 2014 Analysis Services tabulars モデルおよび DirectQuery モードでは、サポートされていない関数を一覧表示およびサポートされている関数の一覧が可能性があります。異なる結果を返します。  
   
-このトピックでは、内でという用語を使用しました*インメモリ モデルで*ホストされている表形式モードで実行されている Analysis Services サーバー上のメモリ内キャッシュされたデータを完全には表形式モデルを参照します。 使用して*DirectQuery モデル*を作成または DirectQuery モードで配置された表形式モデルを参照してください。 DirectQuery モードの詳細については、次を参照してください。 [DirectQuery モード (SSAS テーブル)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)します。  
+このトピックでは、内でという用語を使用しました*インメモリ モデルで*ホストされている表形式モードで実行されている Analysis Services サーバー上のメモリ内キャッシュされたデータを完全には表形式モデルを参照します。 使用して*DirectQuery モデル*を作成または DirectQuery モードで配置された表形式モデルを参照してください。 DirectQuery モードの詳細については、[DirectQuery モード (SSAS テーブル)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)を参照してください。  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>インメモリと DirectQuery モードの違い  

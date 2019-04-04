@@ -29,7 +29,7 @@ ms.locfileid: "56020294"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   新しい管理者のユーザー名を[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]のユーザーの一覧に追加する必要があります。 詳細については、次を参照してください。[ユーザーを追加&#40;Master Data Services&#41;](add-a-user-master-data-services.md)します。  
+-   新しい管理者のユーザー名を[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]のユーザーの一覧に追加する必要があります。 詳細については、[ユーザーを追加&#40;Master Data Services&#41;](add-a-user-master-data-services.md)を参照してください。  
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースで mdm.tblUser を表示して mdm.udpSecurityMemberProcessRebuildModel ストアド プロシージャを実行するための権限が必要です。 詳細については、「[データベース オブジェクト セキュリティ (マスター データ サービス)](../../2014/master-data-services/database-object-security-master-data-services.md)」を参照してください。  
   

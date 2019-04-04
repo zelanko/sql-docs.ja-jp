@@ -71,7 +71,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
 ## <a name="default-field-set"></a>既定のフィールド セット  
 既定のフィールド セットは、列とテーブルは、レポート フィールド リスト内でクリックしたときに自動的にレポート キャンバスに追加されるテーブルのメジャーの定義済み一覧です。 基本的に、このテーブルが Power View レポート内で視覚化されたときにユーザーに表示される既定の列、メジャー、フィールドの順序を指定できます。  Internet Sales モデルでは、Customer、Geography、Product の各テーブルの既定のフィールド セットと順序を定義します。 含まれるのは、Power View レポートを使用して Adventure Works Internet Sales データを分析するときにユーザーが表示する必要がある、使用頻度の高いこれらの列のみです。  
   
-既定のフィールド セットの詳細については、次を参照してください。[を構成する既定のフィールド セット Power View レポートの](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md)SQL Server オンライン ブックの「します。  
+既定のフィールド セットの詳細については、[を構成する既定のフィールド セット Power View レポートの](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md)SQL Server オンライン ブックの「を参照してください。  
   
 #### <a name="to-set-default-field-set-for-tables"></a>テーブルの既定のフィールド セットを設定するには  
   
@@ -106,7 +106,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
 ## <a name="table-behavior"></a>テーブルの動作  
 [テーブルの動作] プロパティを使用すると、Power View レポートで使用するテーブルについて、さまざまな視覚エフェクトの種類の既定の動作およびグループ化動作を変更できます。 これにより、名前やイメージ、またはタイル、カード、グラフ レイアウトのタイトルなど、識別情報の適切な既定位置を設定できます。  
   
-テーブル動作プロパティの詳細については、次を参照してください。 [Power View レポート用のテーブル動作プロパティの構成](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)SQL Server オンライン ブックの「します。  
+テーブル動作プロパティの詳細については、[Power View レポート用のテーブル動作プロパティの構成](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)SQL Server オンライン ブックの「を参照してください。  
   
 #### <a name="to-set-table-behavior"></a>テーブルの動作を設定するには 
   
@@ -155,7 +155,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
     **Date**  
   
     > [!NOTE]  
-    > 日付テーブルが日付テーブルの設定として、マークを使用して、モデルの日付テーブルとして選択された、ためにレッスン 7 に。一意の識別子では、日付列の行識別子プロパティとして使用するには、日付テーブルとしてマークと、列と日付のテーブルに日付列は自動的に True に設定して、変更できません。 DAX 式でタイム インテリジェンス関数を使用するときは、日付テーブルを指定する必要があります。 このモデルでは、タイム インテリジェンス関数を使用していくつかのメジャーを作成して、さまざまな期間 (前四半期と現四半期など) の売上データを計算しました。これは KPI にも使用できます。 日付テーブルの指定に関する詳細については、次を参照してください。[タイム インテリジェンスで使用するための日付テーブルとしてマーク の指定](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)SQL Server オンライン ブックの「します。  
+    > 日付テーブルが日付テーブルの設定として、マークを使用して、モデルの日付テーブルとして選択された、ためにレッスン 7 に。一意の識別子では、日付列の行識別子プロパティとして使用するには、日付テーブルとしてマークと、列と日付のテーブルに日付列は自動的に True に設定して、変更できません。 DAX 式でタイム インテリジェンス関数を使用するときは、日付テーブルを指定する必要があります。 このモデルでは、タイム インテリジェンス関数を使用していくつかのメジャーを作成して、さまざまな期間 (前四半期と現四半期など) の売上データを計算しました。これは KPI にも使用できます。 日付テーブルの指定に関する詳細については、[タイム インテリジェンスで使用するための日付テーブルとしてマーク の指定](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)SQL Server オンライン ブックの「を参照してください。  
   
     |[列]|プロパティ|値|  
     |----------|------------|---------|  

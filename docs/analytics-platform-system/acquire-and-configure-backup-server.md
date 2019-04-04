@@ -74,7 +74,7 @@ Windows Server 2012 をお勧めまたは超えるには。
   
     -   Windows 用の InfiniBand ドライバーは、OpenFabrics Alliance、InfiniBand ベンダーに業界コンソーシアムによって開発されています。  適切なドライバーは、InfiniBand ネットワーク アダプターに配布されたことがあります。 それ以外の場合は、ドライバーは www.openfabrics.org からダウンロードできます。  
   
-5.  ネットワーク アダプターの InfiniBand と DNS の設定を構成します。 構成手順については、次を参照してください。 [InfiniBand ネットワーク アダプターの構成](configure-infiniband-network-adapters.md)します。  
+5.  ネットワーク アダプターの InfiniBand と DNS の設定を構成します。 構成手順については、[InfiniBand ネットワーク アダプターの構成](configure-infiniband-network-adapters.md)を参照してください。  
   
 ## <a name="Step4"></a>手順 4: バックアップのファイル共有を構成します。  
 PDW は、UNC ファイル共有のバックアップ サーバーにアクセスします。 ファイル共有を設定します。  

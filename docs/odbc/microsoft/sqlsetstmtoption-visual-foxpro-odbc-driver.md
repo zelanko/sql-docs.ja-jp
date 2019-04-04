@@ -46,4 +46,4 @@ ms.locfileid: "47854400"
 |SQL_SIMULATE_CURSOR|エラー:"Driver できません。"||  
 |SQL_USE_BOOKMARKS|SQL_UB_OFF<br /><br /> SQL_UB_ON||  
   
- 詳細については、次を参照してください。 [SQLSetStmtOption](../../odbc/reference/syntax/sqlsetstmtoption-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLSetStmtOption](../../odbc/reference/syntax/sqlsetstmtoption-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

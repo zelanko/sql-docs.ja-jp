@@ -39,7 +39,7 @@ ms.locfileid: "52393417"
   
  既存のファーム オプションでは、SharePoint ファームが既に存在することが想定されます。 新しいファーム オプションは、新しいファームでは; を作成することが前提としています。データベース エンジンのインスタンスをファームのデータベース サーバーとして使用できるように、コマンドラインの構文で、データベース エンジンのインスタンスの追加をサポートします。  
   
- 以前のリリースとは異なり、すべてのサーバー構成タスクはインストール後のタスクとして実行されます。 インストールと構成の手順を自動化している場合は、PowerShell を使用してサーバーを構成できます。 詳細については、次を参照してください。 [Windows PowerShell を使用して、PowerPivot 構成](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)します。  
+ 以前のリリースとは異なり、すべてのサーバー構成タスクはインストール後のタスクとして実行されます。 インストールと構成の手順を自動化している場合は、PowerShell を使用してサーバーを構成できます。 詳細については、[Windows PowerShell を使用して、PowerPivot 構成](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)を参照してください。  
   
 ## <a name="example-commands"></a>コマンドの例  
  次の例では、各オプションの使用方法を示します。 例 1 に示す`SPI_AS_ExistingFarm`します。  

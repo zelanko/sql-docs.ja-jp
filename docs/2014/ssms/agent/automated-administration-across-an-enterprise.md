@@ -35,7 +35,7 @@ ms.locfileid: "53210181"
 -   データ ウェアハウジングのために、企業サーバーの情報フローをスケジュールする場合  
   
 > [!NOTE]  
->  一部として[!INCLUDE[msCoName](../../includes/msconame-md.md)]、所有権の総コストを削減する継続的な取り組み[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]2 つの機能が導入されました: ポリシー ベースの管理と構成サーバーとサーバーを使用するマルチ サーバー クエリに呼び出されるサーバーを管理する方法グループ。 この 2 つの機能は、ここで説明する機能の一部と組み合わせたり、それらの代わりとして使用したりすることができます。 詳細については、次を参照してください。[でポリシー ベースの管理サーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)と[複数サーバーを使用して中央管理サーバーの管理](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)します。  
+>  一部として[!INCLUDE[msCoName](../../includes/msconame-md.md)]、所有権の総コストを削減する継続的な取り組み[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]2 つの機能が導入されました: ポリシー ベースの管理と構成サーバーとサーバーを使用するマルチ サーバー クエリに呼び出されるサーバーを管理する方法グループ。 この 2 つの機能は、ここで説明する機能の一部と組み合わせたり、それらの代わりとして使用したりすることができます。 詳細については、[でポリシー ベースの管理サーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)と[複数サーバーを使用して中央管理サーバーの管理](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)を参照してください。  
   
  マルチサーバー管理機能を活用するには、1 台以上のマスター サーバーと 1 台以上のターゲット サーバーが必要です。 マスター サーバーは、ターゲット サーバーに対してジョブを分散し、ターゲット サーバーからイベントを受け取ります。 また、マスター サーバーは、ターゲット サーバーで実行されるジョブについて、ジョブ定義の中央コピーも保存します。 ターゲット サーバーは、定期的にマスター サーバーに接続して、ジョブのスケジュールを更新します。 マスター サーバー上に新しいジョブがあれば、ターゲット サーバーはそのジョブをダウンロードします。 ターゲット サーバーは、ジョブを完了した後、マスター サーバーに再接続してジョブのステータスをレポートします。  
   

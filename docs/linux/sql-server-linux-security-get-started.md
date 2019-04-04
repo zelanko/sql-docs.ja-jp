@@ -78,7 +78,7 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-固定データベース ロールの一覧では、次を参照してください。[データベース レベル ロール](../relational-databases/security/authentication-access/database-level-roles.md)します。
+固定データベース ロールの一覧では、[データベース レベル ロール](../relational-databases/security/authentication-access/database-level-roles.md)を参照してください。
 
 後で、(強く推奨) データをより正確なアクセスを構成する準備ができたら、作成を使用して、独自のユーザー定義データベース ロール[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)ステートメント。 カスタム ロールに特定の詳細なアクセス許可を割り当てます。
 

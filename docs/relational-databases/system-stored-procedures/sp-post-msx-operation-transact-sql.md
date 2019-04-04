@@ -77,7 +77,7 @@ sp_post_msx_operation
   
  操作が通知されると後に、表示される、 **sysdownloadlist**テーブル。 ジョブを作成し通知した後でそのジョブに変更を加える場合は、対象サーバー (TSX) にその変更を伝える必要があります。 これを行うには、ダウンロードの一覧を使用します。  
   
- ダウンロードの一覧は、SQL Server Management Studio を使用して管理することを強くお勧めします。 詳細については、次を参照してください。[の表示または変更するジョブ](../../ssms/agent/view-or-modify-jobs.md)します。  
+ ダウンロードの一覧は、SQL Server Management Studio を使用して管理することを強くお勧めします。 詳細については、[の表示または変更するジョブ](../../ssms/agent/view-or-modify-jobs.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  

@@ -86,6 +86,6 @@ ms.locfileid: "52763974"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_delete_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql)します。  
+ 詳細については、[sp_delete_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql)を参照してください。  
   
   

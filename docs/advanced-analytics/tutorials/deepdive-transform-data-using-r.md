@@ -75,7 +75,7 @@ ms.locfileid: "58510379"
         overwrite = TRUE)
     ```
 
-    各列に適用される変換を定義するときは、変換の実行に必要な追加の R パッケージも指定できます。  実行できる変換の種類の詳細については、次を参照してください。 [RevoScaleR を使用してデータを変換およびサブセット方法](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform)します。
+    各列に適用される変換を定義するときは、変換の実行に必要な追加の R パッケージも指定できます。  実行できる変換の種類の詳細については、[RevoScaleR を使用してデータを変換およびサブセット方法](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform)を参照してください。
   
 6. **rxGetVarInfo** を呼び出して、新しいデータ セットの変数の概要を表示します。
   

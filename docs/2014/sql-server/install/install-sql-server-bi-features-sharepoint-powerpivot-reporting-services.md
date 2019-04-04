@@ -27,7 +27,7 @@ ms.locfileid: "53362694"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- ![注](../../../2014/reporting-services/media/rs-fyinote.png "注")現在のリリース ノートについては、次を参照してください。 [SQL server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445)します。  
+ ![注](../../../2014/reporting-services/media/rs-fyinote.png "注")現在のリリース ノートについては、[SQL server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445)を参照してください。  
   
 ##  <a name="bkmk_top"></a> このトピックの内容  
   

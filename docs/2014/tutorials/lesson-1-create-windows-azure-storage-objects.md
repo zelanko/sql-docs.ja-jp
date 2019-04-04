@@ -34,7 +34,7 @@ ms.locfileid: "56038343"
      ![Windows Azure ストレージ アカウント キーのスクリーン ショット](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Windows Azure ストレージ アカウント キーのスクリーン ショット")  
   
     > [!NOTE]  
-    >  ストレージ アカウントは、REST API を使用してプログラムで作成することもできます。 詳細については、次を参照してください。[ストレージ アカウントの作成](https://go.microsoft.com/fwlink/?LinkId=271928)です。  
+    >  ストレージ アカウントは、REST API を使用してプログラムで作成することもできます。 詳細については、[ストレージ アカウントの作成](https://go.microsoft.com/fwlink/?LinkId=271928)を参照してください。  
   
 ### <a name="create-a-blob-container"></a>BLOB コンテナーの作成  
  コンテナーには、一連の BLOB をグループ化するコンテナーが用意されています。 すべての BLOB は 1 つのコンテナーに存在する必要があります。 アカウントには、コンテナーを無制限に含めることができますが、少なくとも 1 つのコンテナーが必要です。 コンテナーには、BLOB を無制限に格納できます。  
@@ -54,7 +54,7 @@ ms.locfileid: "56038343"
     > [!NOTE]  
     >  ストレージ アカウントへの認証は、パブリック コンテナーの作成を選択した場合でも、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップと復元に必要です。  
     >   
-    >  コンテナーは、REST API を使用してプログラムで作成することもできます。 詳細については、次を参照してください。[コンテナーの作成](https://go.microsoft.com/fwlink/?LinkId=271946)です。  
+    >  コンテナーは、REST API を使用してプログラムで作成することもできます。 詳細については、[コンテナーの作成](https://go.microsoft.com/fwlink/?LinkId=271946)を参照してください。  
   
 ### <a name="next-lesson"></a>次のレッスン  
  [レッスン 2:SQL Server 資格情報を作成する](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md)します。  

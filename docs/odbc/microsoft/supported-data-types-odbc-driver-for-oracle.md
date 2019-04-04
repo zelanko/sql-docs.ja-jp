@@ -47,4 +47,4 @@ ms.locfileid: "47620460"
 |MLSLABEL|サポートされていません。|サポートされていません。|  
   
 > [!NOTE]  
->  VARCHAR 列の許容サイズの詳細については、次を参照してください。 [VARCHAR 列のサイズ](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md)このガイドでします。
+>  VARCHAR 列の許容サイズの詳細については、[VARCHAR 列のサイズ](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md)このガイドでを参照してください。

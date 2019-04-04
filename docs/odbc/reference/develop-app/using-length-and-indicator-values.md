@@ -63,9 +63,9 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
 -   SQL_NULL_DATA します。 データは、NULL データ値、および対応するデータ バッファー内の値は無視されます。 この値は、SQL データを送信、またはドライバーから取得に対してのみ有効です。  
   
--   SQL_DATA_AT_EXEC です。 データ バッファーにデータが含まれていません。 データを送信する代わりに、 **SQLPutData** 、ステートメントが実行されるとき、または**SQLBulkOperations**または**SQLSetPos**が呼び出されます。 この値は、ドライバーに送信される SQL データに対してのみ有効です。 詳細については、次を参照してください。 [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)、 [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、および[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)します。  
+-   SQL_DATA_AT_EXEC です。 データ バッファーにデータが含まれていません。 データを送信する代わりに、 **SQLPutData** 、ステートメントが実行されるとき、または**SQLBulkOperations**または**SQLSetPos**が呼び出されます。 この値は、ドライバーに送信される SQL データに対してのみ有効です。 詳細については、[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)、 [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、および[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)を参照してください。  
   
--   結果の SQL_LEN_DATA_AT_EXEC (*長さ*) マクロです。 この値は、SQL_DATA_AT_EXEC に似ています。 詳細については、次を参照してください。[長い形式のデータを送信する](../../../odbc/reference/develop-app/sending-long-data.md)します。  
+-   結果の SQL_LEN_DATA_AT_EXEC (*長さ*) マクロです。 この値は、SQL_DATA_AT_EXEC に似ています。 詳細については、[長い形式のデータを送信する](../../../odbc/reference/develop-app/sending-long-data.md)を参照してください。  
   
 -   SQL_NO_TOTAL します。 ドライバーは、まだ、出力バッファーに返される長い形式のデータのバイト数を判断できません。 この値は、ドライバーから取得した SQL データに対してのみ有効です。  
   

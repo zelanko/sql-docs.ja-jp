@@ -26,7 +26,7 @@ ms.locfileid: "47770890"
 # <a name="fabricating-hierarchical-recordsets"></a>階層レコードセットの作成
 次の例は、データのシェイプの親、子、および孫の列を定義する文法を使用して、基になるデータ ソースのない階層レコード セットを作成する方法を示しています。**レコード セット**します。  
   
- 階層構造を作成する**レコード セット**を指定する必要があります、 [OLE DB (ADO サービス プロバイダー) の Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) なしでのデータ プロバイダーの値を指定して、接続文字列パラメーター、[オープン](../../../ado/reference/ado-api/open-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 詳細については、次を参照してください。[データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)します。  
+ 階層構造を作成する**レコード セット**を指定する必要があります、 [OLE DB (ADO サービス プロバイダー) の Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) なしでのデータ プロバイダーの値を指定して、接続文字列パラメーター、[オープン](../../../ado/reference/ado-api/open-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 詳細については、[データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)を参照してください。  
   
 ```  
 Dim cn As New ADODB.Connection  

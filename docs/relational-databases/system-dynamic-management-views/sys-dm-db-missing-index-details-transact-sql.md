@@ -58,7 +58,7 @@ ms.locfileid: "52406659"
 ## <a name="using-missing-index-information-in-create-index-statements"></a>CREATE INDEX ステートメントでの欠落インデックス情報の使用  
  によって返される情報に変換する**sys.dm_db_missing_index_details**非等値の列の前に、とを組み合わせて両方メモリ最適化テーブルとディスク ベース インデックスの CREATE INDEX ステートメントに等号列を配置する必要がありますインデックスのキーをようにする必要があります。 付加列は、INCLUDE 句を使用して CREATE INDEX ステートメントに追加します。 等値の列の有効な順序を決定するには、選択度の最も高い列を左の先頭に指定し、選択度が高い順に並べます。  
   
- メモリ最適化インデックスに関する詳細については、次を参照してください。[メモリ最適化テーブルのインデックス](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)します。  
+ メモリ最適化インデックスに関する詳細については、[メモリ最適化テーブルのインデックス](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)を参照してください。  
   
 ## <a name="transaction-consistency"></a>トランザクションの一貫性  
  トランザクションでテーブルを作成または削除する場合、削除されたオブジェクトに関する欠落インデックス情報を含む行は、トランザクションの一貫性を保持するためこの動的管理オブジェクトから削除されます。  
