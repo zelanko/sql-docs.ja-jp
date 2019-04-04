@@ -62,7 +62,7 @@ ms.locfileid: "54132620"
 |接続プロトコル|VIA プロトコルのサポートは中止されました。|代わりに TCP を使用してください。|  
 |データベース オブジェクト|トリガーでの `WITH APPEND` 句の使用|トリガー全体を再作成してください。|  
 |データベース オプション|`sp_dboption`|`ALTER DATABASE`|  
-|メール|SQL Mail|データベース メールを使用してください。 詳細については、次を参照してください。[データベース メール](../relational-databases/database-mail/database-mail.md)と[Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md)します。|  
+|メール|SQL Mail|データベース メールを使用してください。 詳細については、[データベース メール](../relational-databases/database-mail/database-mail.md)と[Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md)を参照してください。|  
 |メモリ管理|32 ビットの AWE (Address Windowing Extensions) と 32 ビットのホット アド メモリ サポート。|64 ビットのオペレーティング システムを使用します。|  
 |メタデータ|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |プログラミング|SQL Server 分散管理オブジェクト (SQL-DMO)。|SQL Server 管理オブジェクト (SMO)|  
