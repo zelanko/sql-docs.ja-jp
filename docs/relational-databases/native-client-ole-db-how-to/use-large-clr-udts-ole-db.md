@@ -23,7 +23,7 @@ ms.locfileid: "53204411"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  このサンプルでは、大きなユーザー定義型を持つ行を結果セットからフェッチする方法を示します。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)します。 このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。  
+  このサンプルでは、大きなユーザー定義型を持つ行を結果セットからフェッチする方法を示します。 詳細については、[Large CLR User-Defined 型&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)を参照してください。 このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。  
   
 ## <a name="example"></a>例  
  このサンプルには 2 つのプロジェクトが含まれています。 1 つは、C# ソース コードからアセンブリ (DLL) を作成するプロジェクトです。 このアセンブリには、CLR 型が格納されます。 テーブルがデータベースに追加されます。 テーブルの列の型はアセンブリで定義されます。このサンプルでは、既定で master データベースを使用します。 もう 1 つのプロジェクトは、テーブルからデータを読み取るネイティブの C++ アプリケーションです。  

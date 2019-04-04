@@ -91,7 +91,7 @@ SQLRETURN SQLBulkOperations(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|*操作*SQL_DATA_AT_EXEC に等しくないが、引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK; データ値が null ポインターではありませんでした C データ型が SQL_C_BINARY または SQL_C_CHAR; と列の長さの値が 0 未満。、SQL_COLUMN_IGNORE、SQL_NTS、または SQL_NULL_DATA、SQL_LEN_DATA_AT_EXEC_OFFSET 未満。<br /><br /> 長さ/インジケーター バッファーの値が SQL_DATA_AT_EXEC です。SQL 型がいずれかの SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型。SQL_NEED_LONG_DATA_LEN 情報の種類と**SQLGetInfo** "Y"でした。<br /><br /> *操作*引数が SQL_ADD、SQL_ATTR_USE_BOOKMARK ステートメント属性は、SQL_UB_VARIABLE に設定されており、列 0 がの長さはこの結果セットに対してブックマークの最大の長さと等しくありませんでした。 バッファーにバインドされました。 (この長さは、IRD の SQL_DESC_OCTET_LENGTH フィールドで使用できますし、呼び出すことによって取得できる**SQLDescribeCol**、 **SQLColAttribute**、または**SQLGetDescField**)。|  
 |HY092|無効な属性の識別子|(DM) の指定された値、*操作*引数が無効です。<br /><br /> *操作*引数が SQL_ADD、SQL_UPDATE_BY_BOOKMARK、または SQL_DELETE_BY_BOOKMARK、および SQL_ATTR_CONCURRENCY のステートメント属性 SQL_CONCUR_READ_ONLY に設定されています。<br /><br /> *操作*引数が SQL_DELETE_BY_BOOKMARK、SQL_FETCH_BY_BOOKMARK、または SQL_UPDATE_BY_BOOKMARK、およびブックマーク列がバインドされていないまたは SQL_UB_OFF に SQL_ATTR_USE_BOOKMARKS ステートメントの属性が設定されました。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースがで要求された操作をサポートしていません、*操作*引数。|  
 |HYT00|タイムアウトが発生しました|データ ソースには、結果セットが返される前に、クエリのタイムアウト期間が終了しました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**で、*属性*SQL_ATTR_QUERY_TIMEOUT の引数。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -256,7 +256,7 @@ SQLRETURN SQLBulkOperations(
  アプリケーションを呼び出す場合**SQLCancel**ドライバーでは、実行時データ列のデータが引き続き必要があります、中にドライバーが操作をキャンセルします。 アプリケーションを呼び出して**SQLBulkOperations**もう一度; 取り消すには影響しません、カーソルの状態または現在のカーソル位置。  
   
 ## <a name="row-status-array"></a>行の状態の配列  
- 行の状態配列が呼び出しの後に、行セット内のデータの行ごとの状態の値を含む**SQLBulkOperations**します。 ドライバーは、呼び出しの後にこの配列の状態の値を設定**SQLFetch**、 **SQLFetchScroll**、 **SQLSetPos**、または**SQLBulkOperations**. この配列は、最初にへの呼び出しによって設定されます**SQLBulkOperations**場合**SQLFetch**または**SQLFetchScroll**が前に呼び出されていない**SQLBulkOperations。**. この配列は、し、SQL_ATTR_ROW_STATUS_PTR ステートメント属性を指しています。 行の状態配列内の要素の数は、(、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性で定義) された行セット内の行の数に等しくなければなりません。 この行の状態配列については、次を参照してください。 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)します。  
+ 行の状態配列が呼び出しの後に、行セット内のデータの行ごとの状態の値を含む**SQLBulkOperations**します。 ドライバーは、呼び出しの後にこの配列の状態の値を設定**SQLFetch**、 **SQLFetchScroll**、 **SQLSetPos**、または**SQLBulkOperations**. この配列は、最初にへの呼び出しによって設定されます**SQLBulkOperations**場合**SQLFetch**または**SQLFetchScroll**が前に呼び出されていない**SQLBulkOperations。**. この配列は、し、SQL_ATTR_ROW_STATUS_PTR ステートメント属性を指しています。 行の状態配列内の要素の数は、(、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性で定義) された行セット内の行の数に等しくなければなりません。 この行の状態配列については、[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)を参照してください。  
   
 ## <a name="code-example"></a>コード例  
  次の例では、Customers テーブルから、一度に 10 行のデータをフェッチします。 次にユーザーのアクションを実行するように求めます。 ネットワーク トラフィックを減らすためには、例のバッファーは更新、削除、およびローカル バインドの配列では、以前の行セットのデータのオフセット位置に挿入します。 コードがオフセットが適切にバインドを設定し、呼び出すユーザーは、更新、削除、送信することを選択し、データ ソースに挿入、 **SQLBulkOperations**します。 わかりやすくするため、ユーザーは、10 個を超える更新、削除、または挿入バッファーことはできません。  

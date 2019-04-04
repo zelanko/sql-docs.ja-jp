@@ -45,7 +45,7 @@ ms.locfileid: "47799981"
 ## <a name="modifying-assemblies"></a>アセンブリの変更  
  アセンブリの変更は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY ステートメントを使用し、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ではアセンブリ支援エディターを使用して行います。 次の操作を行うと、アセンブリを変更できます。  
   
--   アセンブリの新しいバージョンのバイナリをアップロードして、アセンブリの実装を変更します。 詳細については、次を参照してください。[アセンブリのバージョン管理](#_managing)このトピックで後述します。  
+-   アセンブリの新しいバージョンのバイナリをアップロードして、アセンブリの実装を変更します。 詳細については、[アセンブリのバージョン管理](#_managing)このトピックで後述を参照してください。  
   
 -   アセンブリの権限セットを変更します。 詳細については、「[アセンブリのデザイン](../../relational-databases/clr-integration/assemblies-designing.md)」を参照してください。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47799981"
   
 -   [オブジェクトの削除](../../ssms/object/delete-objects.md)  
   
- 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成されたアセンブリがすべて実行できない状態になっています。 使用することができます、 **clr を有効になっている**のオプション、 **sp_configure**システム ストアド プロシージャにアップロードされているすべてのアセンブリの実行を有効または無効に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 アセンブリの実行を無効にすると、CLR (共通言語ランタイム) 関数、ストアド プロシージャ、トリガー、集計、およびユーザー定義型を実行できなくなり、現在実行されている場合は停止されます。 アセンブリの実行を無効にしても、アセンブリを作成、変更、または削除する機能は無効になりません。 詳細については、次を参照してください。 [clr enabled サーバー構成オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)します。  
+ 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成されたアセンブリがすべて実行できない状態になっています。 使用することができます、 **clr を有効になっている**のオプション、 **sp_configure**システム ストアド プロシージャにアップロードされているすべてのアセンブリの実行を有効または無効に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 アセンブリの実行を無効にすると、CLR (共通言語ランタイム) 関数、ストアド プロシージャ、トリガー、集計、およびユーザー定義型を実行できなくなり、現在実行されている場合は停止されます。 アセンブリの実行を無効にしても、アセンブリを作成、変更、または削除する機能は無効になりません。 詳細については、[clr enabled サーバー構成オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)を参照してください。  
   
  **無効にし、アセンブリの実行を有効にします。**  
   

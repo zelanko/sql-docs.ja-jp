@@ -32,7 +32,7 @@ SSMA コンソール アプリケーションを起動するのにには、次�
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA コンソールを使用する手順  
 コンソールは、Windows システムに正常に起動した後は、作業を次の手順を使用できます。  
   
-1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの詳細については、次を参照してください。[スクリプト ファイルの作成&#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)します。  
+1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの詳細については、[スクリプト ファイルの作成&#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)を参照してください。  
   
 2.  [変数値ファイルを作成する&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

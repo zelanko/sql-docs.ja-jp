@@ -86,7 +86,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 -   クエリ プランを使用して指定されている*plan_handle*がプラン キャッシュから削除されています。     
     **OR**    
--   クエリ プランが最初にキャッシュ可能されません。 詳細については、次を参照してください。[実行プランのキャッシュと再利用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)します。
+-   クエリ プランが最初にキャッシュ可能されません。 詳細については、[実行プランのキャッシュと再利用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)を参照してください。
   
 > [!NOTE] 
 > 許可される入れ子のレベルの数の制限により、 **xml**データ型、 **sys.dm_exec_query_plan**を満たす、または入れ子になった要素のレベルが 128 を超えるクエリ プランを返すことはできません。 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この条件は、クエリ プランを返すことを禁止し、生成[エラー 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999)します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 および以降のバージョンで、 **query_plan**列は NULL を返します。  

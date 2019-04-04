@@ -27,7 +27,7 @@ ms.locfileid: "47697890"
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 詳細については、次を参照してください。[サービス プリンシパル名&#40;SPN&#41;クライアント接続でサポート](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)します。  
+ 詳細については、[サービス プリンシパル名&#40;SPN&#41;クライアント接続でサポート](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)を参照してください。  
   
 ## <a name="example"></a>例  
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  

@@ -18,7 +18,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48108682"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>クライアント接続 (OLE DB) でのサービス プリンシパル名 (SPN)
-  このトピックでは、クライアント アプリケーションでサービス プリンシパル名 (SPN) をサポートする OLE DB のプロパティとメンバー関数について説明します。 クライアント アプリケーションでの Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;SPN&#41;クライアント接続でサポート](../features/service-principal-name-spn-support-in-client-connections.md)します。 サンプルについては、次を参照してください。[統合 Kerberos 認証&#40;OLE DB&#41;](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)します。  
+  このトピックでは、クライアント アプリケーションでサービス プリンシパル名 (SPN) をサポートする OLE DB のプロパティとメンバー関数について説明します。 クライアント アプリケーションでの Spn の詳細については、[サービス プリンシパル名&#40;SPN&#41;クライアント接続でサポート](../features/service-principal-name-spn-support-in-client-connections.md)を参照してください。 サンプルについては、[統合 Kerberos 認証&#40;OLE DB&#41;](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)を参照してください。  
   
 ## <a name="provider-initialization-string-keywords"></a>プロバイダー初期化文字列のキーワード  
  次に示すプロバイダー初期化文字列のキーワードは、OLE DB アプリケーションで SPN をサポートします。 次の表の "キーワード" 列の値は、IDBInitialize::Initialize のプロバイダー文字列に使用されます。 "説明" 列の値は、ADO または IDataInitialize::GetDataSource を使用して接続するときに初期化文字列で使用されます。  

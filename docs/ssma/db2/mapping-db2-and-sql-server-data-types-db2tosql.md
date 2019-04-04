@@ -21,7 +21,7 @@ ms.locfileid: "47739310"
 DB2 データベース型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースの型。 DB2 データベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトの場合、DB2 からデータ型をマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次のセクションで示すようにします。  
   
 ## <a name="default-mappings"></a>既定のマッピング  
-SSMA では、データ型マッピングの既定セットがあります。 既定のマッピングの一覧で、次を参照してください。[プロジェクト設定&#40;型マッピングの&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)します。  
+SSMA では、データ型マッピングの既定セットがあります。 既定のマッピングの一覧で、[プロジェクト設定&#40;型マッピングの&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)を参照してください。  
   
 ## <a name="type-mapping-inheritance"></a>継承のマッピングの種類  
 プロジェクト レベル、オブジェクトのカテゴリ レベル (などすべてストアド プロシージャの場合)、またはオブジェクト レベルでは、型マッピングをカスタマイズすることができます。 設定は、下位のレベルでオーバーライドされない限りより高いレベルから継承されます。 たとえば、マップする**smallmoney**に**money**オブジェクトまたはカテゴリ レベルでマッピングをカスタマイズしない限り、このマッピング プロジェクト レベルでは、プロジェクト内のすべてのオブジェクトが使用されます。  

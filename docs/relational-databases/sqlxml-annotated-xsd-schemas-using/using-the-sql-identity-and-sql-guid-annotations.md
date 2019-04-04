@@ -34,7 +34,7 @@ ms.locfileid: "56021602"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>sql:identity 注釈と sql:guid 注釈の使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  指定することができます、 **sql:identity 注釈**と**sql:guid**でデータベース列にマップされる任意のノードの XSD スキーマで注釈[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 アップデート グラムの形式をサポートしていますが、 **updg: id で**と**updg:guid**属性、DiffGram 形式はありません。 **Updg: id で**属性、IDENTITY 型の列を更新中に、動作を定義します。 **Updg:guid**属性から GUID 値を取得できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップデート グラムで使用します。 詳細と実際のサンプルは、次を参照してください。[を挿入するデータを使用して XML アップデート グラム&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)します。  
+  指定することができます、 **sql:identity 注釈**と**sql:guid**でデータベース列にマップされる任意のノードの XSD スキーマで注釈[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 アップデート グラムの形式をサポートしていますが、 **updg: id で**と**updg:guid**属性、DiffGram 形式はありません。 **Updg: id で**属性、IDENTITY 型の列を更新中に、動作を定義します。 **Updg:guid**属性から GUID 値を取得できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップデート グラムで使用します。 詳細と実際のサンプルは、[を挿入するデータを使用して XML アップデート グラム&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)を参照してください。  
   
  **Sql:identity 注釈**と**sql:guid**注釈は Diffgram にこの機能を拡張します。  
   

@@ -43,7 +43,7 @@ ms.locfileid: "47627310"
 ## <a name="remarks"></a>コメント  
  データベース メールのトラブルシューティングでは、このビューを使用して、添付ファイルのプロパティを確認できます。  
   
- 添付ファイル、システム テーブルに格納されていることができますが、 **msdb**データベースを拡張します。 使用**sysmail_delete_mailitems_sp**メール アイテムと関連付けられている添付ファイルを削除します。 詳細については、次を参照してください。[アーカイブ データベース メール メッセージやイベント ログには、SQL Server エージェント ジョブを作成する](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)します。  
+ 添付ファイル、システム テーブルに格納されていることができますが、 **msdb**データベースを拡張します。 使用**sysmail_delete_mailitems_sp**メール アイテムと関連付けられている添付ファイルを削除します。 詳細については、[アーカイブ データベース メール メッセージやイベント ログには、SQL Server エージェント ジョブを作成する](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  与え、 **sysadmin**固定サーバー ロールおよび**DatabaseMailUserRole**データベース ロール。 メンバーによって実行されると、 **sysadmin**固定サーバー ロールに、このビューはすべての添付ファイルを表示します。 その他のユーザーの場合は、自分が送信したメッセージの添付ファイルだけを確認できます。  

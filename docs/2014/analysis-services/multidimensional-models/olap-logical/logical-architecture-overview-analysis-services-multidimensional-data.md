@@ -25,7 +25,7 @@ ms.locfileid: "52416493"
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>論理アーキテクチャの概要 (Analysis Services - 多次元データ)
   Analysis Services は、さまざまな種類の Analysis Services モデルで使用されるメモリ アーキテクチャとランタイム環境を指定する、サーバー配置モードで動作します。 サーバー モードは、インストール時に決定されます。 **多次元およびデータ マイニング モード**従来の OLAP およびデータ マイニングをサポートしています。 **表形式モード**表形式モデルをサポートしています。 **SharePoint 統合モード**の読み込みとブック内の Excel または PowerPivot のデータ モデルのクエリを使用して、SharePoint の PowerPivot としてインストールされた Analysis Services のインスタンスを参照します。  
   
- このトピックでは、多次元モードとデータ マイニング モードで動作する場合の Analysis Services の基本アーキテクチャについて説明します。 その他のモードの詳細については、次を参照してください。[テーブル モデリング&#40;SSAS 表形式&#41;](../../tabular-models/tabular-models-ssas.md)と[を比較する表形式と多次元ソリューション&#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)します。  
+ このトピックでは、多次元モードとデータ マイニング モードで動作する場合の Analysis Services の基本アーキテクチャについて説明します。 その他のモードの詳細については、[テーブル モデリング&#40;SSAS 表形式&#41;](../../tabular-models/tabular-models-ssas.md)と[を比較する表形式と多次元ソリューション&#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)を参照してください。  
   
 ## <a name="basic-architecture"></a>基本アーキテクチャ  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスには、複数のデータベースを含めることができます。また、1 つのデータベース内に OLAP オブジェクトとデータ マイニング オブジェクトを同時に格納できます。 アプリケーションは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の指定インスタンスおよび指定データベースに接続します。 サーバー コンピューターは [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の複数のインスタンスをホストできます。 インスタンス[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 名前は"\<ServerName >\\< InstanceName\>"。 次の図は、間のリレーションシップをすべて説明したように[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]オブジェクト。  

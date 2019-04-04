@@ -38,7 +38,7 @@ ms.locfileid: "47627480"
 |[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)||  
   
 > [!NOTE]  
->  参加している可用性データベースについては、次を参照してください。、 **replica_id**と**group_database_id**列[sys.databases (TRANSACT-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)します。  
+>  参加している可用性データベースについては、、 **replica_id**と**group_database_id**列[sys.databases (TRANSACT-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [sys.databases (TRANSACT-SQL)](sys-databases-transact-sql.md)   

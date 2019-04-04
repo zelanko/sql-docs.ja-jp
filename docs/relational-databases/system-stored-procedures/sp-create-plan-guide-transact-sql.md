@@ -70,7 +70,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  示す*statement_text*のスタンドアロンのステートメントまたはバッチを送信できるコンテキストでの表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]任意のメカニズムを通じてします。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 共通言語ランタイム (CLR) オブジェクトまたは拡張ストアド プロシージャ、または EXEC N を使用して送信されるステートメント '*sql_string*'、サーバー上のバッチとして処理され、そのため、として識別する必要があります、 \@の種類**=**  'SQL' です。 クエリがパラメーター化をヒント SQL が指定されている場合 {FORCED |単純な} を指定することはできません、\@パラメーターのヒントします。  
   
  TEMPLATE  
- 示されたフォームにパラメーター化されるクエリに対してプラン ガイドが適用されることを示します*statement_text*します。 テンプレートが指定されている場合のみ、PARAMETERIZATION {FORCED |単純な} クエリ ヒントで指定できます、\@パラメーターのヒントします。 TEMPLATE プラン ガイドの詳細については、次を参照してください。[クエリ パラメーター化動作の指定を使用してプラン ガイドによって](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)します。  
+ 示されたフォームにパラメーター化されるクエリに対してプラン ガイドが適用されることを示します*statement_text*します。 テンプレートが指定されている場合のみ、PARAMETERIZATION {FORCED |単純な} クエリ ヒントで指定できます、\@パラメーターのヒントします。 TEMPLATE プラン ガイドの詳細については、[クエリ パラメーター化動作の指定を使用してプラン ガイドによって](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)を参照してください。  
   
  [\@module_or_batch =] {N'[ *schema_name*します。 *object_name*' |N'*batch_text*' |NULL}  
  これで、オブジェクトの名前を指定します。 *statement_text*が表示されたら、またはバッチのテキストを*statement_text*が表示されます。 バッチのテキストは、使用を含めることはできません*データベース*ステートメント。  
@@ -98,7 +98,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  XML プラン表示を変数に割り当てることをお勧めします。XML プラン表示を変数に割り当てない場合は、XML プラン表示内の単一引用符をエスケープする必要があります。これを行うには、単一引用符の前にもう 1 つ単一引用符を追加します。 例 E を参照してください。  
   
  NULL  
- クエリの OPTION 句で指定した既存のヒントがクエリに適用されないことを示します。 詳細については、次を参照してください。 [OPTION 句&#40;TRANSACT-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)します。  
+ クエリの OPTION 句で指定した既存のヒントがクエリに適用されないことを示します。 詳細については、[OPTION 句&#40;TRANSACT-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)を参照してください。  
   
 ## <a name="remarks"></a>コメント  
  sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 **sp_create_plan_guide**のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば場合、 **\@名 =** が指定されると、  **\@stmt =** 、 **\@型 =** でも指定する必要があります。 同様に場合、 **\@名 =** を省略してのみパラメーターの値が指定されて、他のパラメーター名も省略する必要があり、値だけを指定します。 引数の名前は、構文を理解しやすくするための説明目的のものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
@@ -113,7 +113,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 >  プラン ガイドは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 プラン ガイドはどのエディションでも表示できます。 また、プラン ガイドを含むデータベースは、どのエディションに対してもアタッチできます。 アップグレード済みのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータベースを復元またはアタッチした場合、プラン ガイドはまったく影響を受けません。 サーバーのアップグレード後に、各データベース内のプラン ガイドが適切かどうかを確認する必要があります。  
   
 ## <a name="plan-guide-matching-requirements"></a>プラン ガイドの照合要件  
- 指定するプラン ガイドの\@型 = 'SQL' または\@型 = 'TEMPLATE' の値、クエリを正常に一致するように*batch_text*と *\@parameter_name data_type*[、*... .n* ]、アプリケーションによって送信される対応と完全に同じ形式を指定する必要があります。 つまり、バッチ テキストを、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンパイラが受信したときとまったく同じように指定する必要があります。 実際のバッチおよびパラメーター テキストをキャプチャするには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用する必要があります。 詳細については、次を参照してください。[を作成およびプラン ガイドをテストする SQL Server Profiler を使用して](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)します。  
+ 指定するプラン ガイドの\@型 = 'SQL' または\@型 = 'TEMPLATE' の値、クエリを正常に一致するように*batch_text*と *\@parameter_name data_type*[、*... .n* ]、アプリケーションによって送信される対応と完全に同じ形式を指定する必要があります。 つまり、バッチ テキストを、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンパイラが受信したときとまったく同じように指定する必要があります。 実際のバッチおよびパラメーター テキストをキャプチャするには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用する必要があります。 詳細については、[を作成およびプラン ガイドをテストする SQL Server Profiler を使用して](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)を参照してください。  
   
  ときに\@型 = 'SQL' と\@module_or_batch が null の場合の値に設定されている\@の値に設定されている module_or_batch \@stmt します。値は、これにより*statement_text*と完全に同じ形式を指定する必要がありますの文字を送信するときと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 この適合を容易にするために内部変換は実行されません。  
   

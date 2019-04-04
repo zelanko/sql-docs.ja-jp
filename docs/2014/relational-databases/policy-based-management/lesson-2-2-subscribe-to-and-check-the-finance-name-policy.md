@@ -71,7 +71,7 @@ ms.locfileid: "48137082"
 ## <a name="next"></a>Next  
  このチュートリアルはこれで終了です。 最初に戻るには、「 [チュートリアル: ポリシー ベースの管理を使用したサーバーの管理](tutorial-administering-servers-by-using-policy-based-management.md)」をクリックしてください。  
   
- チュートリアルの一覧は、次を参照してください。 [for SQL Server 2014 チュートリアル](../../tutorials/tutorials-for-sql-server-2014.md)します。  
+ チュートリアルの一覧は、[for SQL Server 2014 チュートリアル](../../tutorials/tutorials-for-sql-server-2014.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)  

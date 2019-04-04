@@ -24,7 +24,7 @@ ms.locfileid: "58860623"
 この記事では、使用する方法の例を示します**kubeadm**を複数のコンピューターの SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイで Kubernetes を構成します。 この例では、複数の Ubuntu 16.04 または 18.04 LTS マシン (物理または仮想)、ターゲットとは。 さまざまな Linux プラットフォームに展開する場合、システムに一致するようにコマンドの一部を変更する必要があります。  
 
 > [!TIP] 
-> Kubernetes を構成するサンプル スクリプトでは、次を参照してください。 [Kubeadm を Ubuntu 16.04 LTS または 18.04 LTS を使用して Kubernetes クラスターを作成する](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)します。
+> Kubernetes を構成するサンプル スクリプトでは、[Kubeadm を Ubuntu 16.04 LTS または 18.04 LTS を使用して Kubernetes クラスターを作成する](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 

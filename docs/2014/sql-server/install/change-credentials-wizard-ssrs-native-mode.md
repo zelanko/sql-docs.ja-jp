@@ -45,7 +45,7 @@ ms.locfileid: "48078498"
   
  レポート サーバーでは、アカウントの作成は行われません。 配置構成に対して有効な、既に存在するアカウントを指定する必要があります。 特に、データベースがリモート コンピューター上にある環境で、Windows アカウントを使用する場合は、そのコンピューターへのログオン権限のあるアカウントを指定する必要があります。  
   
- コンピューターが異なるか、または信頼されていないドメインにある場合は、使用を検討して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ログインします。 アカウントの選択の詳細については、次を参照してください。[レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)します。  
+ コンピューターが異なるか、または信頼されていないドメインにある場合は、使用を検討して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ログインします。 アカウントの選択の詳細については、[レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)を参照してください。  
   
  **概要**  
  ウィザードを実行する前に、設定を確認します。  

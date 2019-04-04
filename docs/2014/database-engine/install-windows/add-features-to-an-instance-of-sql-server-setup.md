@@ -24,7 +24,7 @@ ms.locfileid: "52542160"
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>SQL Server 2014 のインスタンスへの機能の追加 (セットアップ)
   ここでは、機能を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスに追加する手順について詳しく説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントまたはサービスには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに固有のものがあります。 これらは、インスタンス対応とも呼ばれます。 また、これらをホストしているインスタンスとバージョンが同じで、そのインスタンスにのみ使用されます。 インスタンス対応のコンポーネントがまだインストールされていない場合は、共有コンポーネントと共に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに追加できます。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
- インスタンスに機能を追加する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、コマンド プロンプトから次を参照してください。[コマンド プロンプトから SQL Server 2014 のインストール](install-sql-server-from-the-command-prompt.md)します。  
+ インスタンスに機能を追加する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、コマンド プロンプトから[コマンド プロンプトから SQL Server 2014 のインストール](install-sql-server-from-the-command-prompt.md)を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
  続行する前に、「 [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」のトピックを参照してください。  
@@ -53,7 +53,7 @@ ms.locfileid: "52542160"
   
 7.  [インストールの種類] ページで、**[既存の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスに機能を追加する]** オプションを選択し、更新するインスタンスを選択します。  
   
-8.  [機能の選択] ページで、インストールするコンポーネントを選択します。 機能名を選択すると、右側のウィンドウに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできます。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネントの](../../sql-server/editions-and-components-of-sql-server-2016.md)します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の特定のインスタンスに各コンポーネントをインストールできるのは、一度だけです。 複数のコンポーネントをインストールするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の追加のインスタンスをインストールする必要があります。  
+8.  [機能の選択] ページで、インストールするコンポーネントを選択します。 機能名を選択すると、右側のウィンドウに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできます。 詳細については、[エディションと SQL Server 2014 のコンポーネントの](../../sql-server/editions-and-components-of-sql-server-2016.md)を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の特定のインスタンスに各コンポーネントをインストールできるのは、一度だけです。 複数のコンポーネントをインストールするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の追加のインスタンスをインストールする必要があります。  
   
      選択した機能の必須コンポーネントが、右側のペインに表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、この手順の後半で説明するインストール手順の間に、まだインストールされていない必須コンポーネントをインストールします。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "52542160"
   
     -   [セキュリティ モード] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス用に Windows 認証または混合モード認証を選択します。 混合モード認証を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。  
   
-         デバイスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との接続を正常に確立した後のセキュリティ メカニズムは Windows 認証モード、混合モードのどちらの場合も同じです。 詳細については、次を参照してください。[データベース エンジンの構成 - アカウントのプロビジョニング](../../sql-server/install/database-engine-configuration-account-provisioning.md)します。  
+         デバイスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との接続を正常に確立した後のセキュリティ メカニズムは Windows 認証モード、混合モードのどちらの場合も同じです。 詳細については、[データベース エンジンの構成 - アカウントのプロビジョニング](../../sql-server/install/database-engine-configuration-account-provisioning.md)を参照してください。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [管理者] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの 1 人以上のシステム管理者を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** をクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。 詳細については、次を参照してください。[データベース エンジンの構成 - アカウントのプロビジョニング](../../sql-server/install/database-engine-configuration-account-provisioning.md)します。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [管理者] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの 1 人以上のシステム管理者を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** をクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。 詳細については、[データベース エンジンの構成 - アカウントのプロビジョニング](../../sql-server/install/database-engine-configuration-account-provisioning.md)を参照してください。  
   
      一覧の編集が完了したら、 **[OK]** をクリックします。 構成ダイアログ ボックスの管理者の一覧を確認します。 一覧が完成したら、 **[次へ]** をクリックします。  
   

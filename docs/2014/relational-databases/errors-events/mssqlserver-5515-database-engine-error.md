@@ -36,6 +36,6 @@ ms.locfileid: "53350142"
  FILESTREAM ファイルに対して指定されたコンテナー ディレクトリを開けません。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- エラーの原因については、特定の Windows 状態コードを参照してください。 詳細については、次を参照してください。、[イベントとエラー メッセージ センター](https://go.microsoft.com/fwlink/?linkid=47660)します。  
+ エラーの原因については、特定の Windows 状態コードを参照してください。 詳細については、、[イベントとエラー メッセージ センター](https://go.microsoft.com/fwlink/?linkid=47660)を参照してください。  
   
   

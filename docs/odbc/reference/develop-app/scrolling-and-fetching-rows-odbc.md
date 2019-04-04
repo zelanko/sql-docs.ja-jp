@@ -41,4 +41,4 @@ ms.locfileid: "47642750"
  アプリケーションを呼び出して、行セットの取得が完了したら**SQLSetPos**を行セットの行セットまたは更新の行にある特定の行に配置します。 使用しての詳細については**SQLSetPos**を参照してください[SQLSetPos によるデータの更新](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md)します。  
   
 > [!NOTE]  
->  ODBC 2 では、スクロールがサポートされています。*x*によってドライバー **SQLExtendedFetch**します。 詳細については、次を参照してください。[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)付録 g: ドライバーとの下位互換性のためのガイドラインにします。
+>  ODBC 2 では、スクロールがサポートされています。*x*によってドライバー **SQLExtendedFetch**します。 詳細については、[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)付録 g: ドライバーとの下位互換性のためのガイドラインにを参照してください。

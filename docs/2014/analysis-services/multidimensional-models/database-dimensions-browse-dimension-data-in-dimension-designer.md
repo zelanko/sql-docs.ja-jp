@@ -24,7 +24,7 @@ ms.locfileid: "48114188"
 # <a name="browse-dimension-data-in-dimension-designer"></a>ディメンション デザイナーでのディメンション データの参照
   ディメンションのデータを参照するには、ディメンション デザイナーの **[ブラウザー][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ビューを使用します。ディメンション デザイナーには、** からアクセスできます。  
   
- ディメンションのデータを **[ブラウザー]** ビューに表示するには、ディメンションが処理済みの状態でなければなりません。 詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)します。  
+ ディメンションのデータを **[ブラウザー]** ビューに表示するには、ディメンションが処理済みの状態でなければなりません。 詳細については、[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)を参照してください。  
   
 ### <a name="to-browse-a-dimension-in-sql-server-data-tools"></a>SQL Server データ ツールでディメンションを参照するには  
   

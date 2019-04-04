@@ -178,7 +178,7 @@ ms.locfileid: "56801756"
 
 ## <a id="macos"></a> MacOS でのツールをインストールします。
 
-プレビュー **sqlcmd**と**bcp** macOS で公開されています。 詳細については、次を参照してください。、[アナウンス](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)します。
+プレビュー **sqlcmd**と**bcp** macOS で公開されています。 詳細については、、[アナウンス](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)を参照してください。
 
 *インストール[Homebrew](https://brew.sh)まだ持っていない場合。*
 

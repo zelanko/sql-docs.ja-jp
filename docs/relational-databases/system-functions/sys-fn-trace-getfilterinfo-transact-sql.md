@@ -51,7 +51,7 @@ fn_trace_getfilterinfo ( trace_id )
  トレースの ID を指定します。 *trace_id*は**int**、既定値はありません。  
   
 ## <a name="tables-returned"></a>返されるテーブル  
- 次の情報を返します。 列に関する詳細については、次を参照してください。 [sp_trace_setfilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)します。  
+ 次の情報を返します。 列に関する詳細については、[sp_trace_setfilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

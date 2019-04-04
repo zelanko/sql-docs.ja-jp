@@ -38,7 +38,7 @@ SQLCHAR *BatchStmt =
 SQLExecDirect(hstmt, BatchStmt, SQL_NTS);  
 ```  
   
- バッチの結果を生成するときにステートメントが実行される、1 つを返しますまたは詳細行の数または結果を設定します。 これらを取得する方法については、次を参照してください。[複数結果](../../../odbc/reference/develop-app/multiple-results.md)します。  
+ バッチの結果を生成するときにステートメントが実行される、1 つを返しますまたは詳細行の数または結果を設定します。 これらを取得する方法については、[複数結果](../../../odbc/reference/develop-app/multiple-results.md)を参照してください。  
   
  ステートメントのバッチには、パラメーター マーカーが含まれている場合は、その他のステートメントでは、パラメーターの順序を増やすことでこれら番号が付けられます。 次のステートメントのバッチが 1 ~ 21 です。 番号付きのパラメーターを持ちなど最初にある**挿入**ステートメントは、番号付き 1 ~ 5 と最後の**挿入**ステートメントは番号付きの 18 ~ 21 です。  
   
@@ -51,4 +51,4 @@ INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);
 INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);  
 ```  
   
- パラメーターの詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述します。
+ パラメーターの詳細については、[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述を参照してください。

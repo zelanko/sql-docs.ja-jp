@@ -40,12 +40,12 @@ ms.locfileid: "47662680"
 |**is_expiration_checked**|**bit**|パスワードの期限が確認されるかどうかを示します。|  
 |**password_hash**|**varbinary(256)**|SQL ログイン パスワードのハッシュ。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。|  
   
- このビューが継承する列の一覧は、次を参照してください。 [sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)します。  
+ このビューが継承する列の一覧は、[sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)を参照してください。  
   
 ## <a name="remarks"></a>コメント  
  両方を表示する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証のログインと Windows 認証ログインを参照してください。 [sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)します。  
   
- 含まれる場合にデータベース ユーザーが有効で、ログインのない、接続を作成することができます。 これらのアカウントを識別するために、次を参照してください。 [sys.database_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)します。  
+ 含まれる場合にデータベース ユーザーが有効で、ログインのない、接続を作成することができます。 これらのアカウントを識別するために、[sys.database_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  すべて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログインは、独自のログイン名と sa ログインを参照できます。 他のログインを参照するには、ALTER ANY LOGIN、またはログインに対する権限が必要です。  

@@ -92,7 +92,7 @@ ms.locfileid: "53354512"
 5.  **[OK]** をクリックして変更を保存します。  
   
 ## <a name="next-steps"></a>次の手順  
- サーバーの状態、構成、または可用性の問題が検出された場合に修正措置を実行できるように、PowerPivot for SharePoint のインストールには正常性ルールが用意されています。 一部のルールでは、構成設定を使用して、正常性ルールがトリガーされる条件が決定されます。 サーバー パフォーマンスを積極的にチューニングしている場合は、これらの設定を確認して、既定値がシステムに最適であることを確認するようにします。 詳細については、次を参照してください。 [PowerPivot の正常性ルール - 構成](configure-power-pivot-health-rules.md)します。  
+ サーバーの状態、構成、または可用性の問題が検出された場合に修正措置を実行できるように、PowerPivot for SharePoint のインストールには正常性ルールが用意されています。 一部のルールでは、構成設定を使用して、正常性ルールがトリガーされる条件が決定されます。 サーバー パフォーマンスを積極的にチューニングしている場合は、これらの設定を確認して、既定値がシステムに最適であることを確認するようにします。 詳細については、[PowerPivot の正常性ルール - 構成](configure-power-pivot-health-rules.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [サーバーの全体管理での PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)  

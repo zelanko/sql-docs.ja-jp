@@ -32,7 +32,7 @@ ms.locfileid: "58527944"
 
   シーケンス オブジェクトからシーケンス値の範囲を返します。 シーケンス オブジェクトが生成されますが要求の値の数の問題し、範囲に関連するメタデータを持つアプリケーションを提供します。  
   
- シーケンス番号の詳細については、次を参照してください。[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)します。  
+ シーケンス番号の詳細については、[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

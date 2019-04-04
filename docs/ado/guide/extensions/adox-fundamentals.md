@@ -29,7 +29,7 @@ Microsoft® ActiveX® Data オブジェクトの拡張機能データ定義言�
   
  Microsoft OLE DB Provider for Microsoft Jet データベース エンジンは、ADOX を完全にサポートします。 データ プロバイダーによっては、ADOX の特定の機能がサポートされていない可能性があります。  
   
- このドキュメントには、Microsoft® Visual Basic® プログラミング言語と ADO の一般的な知識の実務知識を前提としています。 ADO の詳細については、次を参照してください。、 [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)します。 ADOX に関する概要については、次のトピックを参照してください。  
+ このドキュメントには、Microsoft® Visual Basic® プログラミング言語と ADO の一般的な知識の実務知識を前提としています。 ADO の詳細については、、 [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)を参照してください。 ADOX に関する概要については、次のトピックを参照してください。  
   
 -   [ADOX オブジェクト モデル](../../../ado/reference/adox-api/adox-object-model.md)  
   

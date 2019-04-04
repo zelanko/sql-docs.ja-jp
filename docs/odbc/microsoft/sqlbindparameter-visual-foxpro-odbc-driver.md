@@ -30,4 +30,4 @@ ms.locfileid: "47796120"
   
  SQL ステートメントでパラメーター マーカーをバッファーに関連付けます。 Visual FoxPro ODBC ドライバーで指定された入力パラメーターをサポートしている、 *fParamType*引数。  
   
- 詳細については、次を参照してください。 [SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

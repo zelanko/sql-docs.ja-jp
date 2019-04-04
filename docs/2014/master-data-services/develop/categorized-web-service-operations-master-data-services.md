@@ -137,7 +137,7 @@ ms.locfileid: "52814584"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>データ エクスポートの操作  
- これらの操作は、サブスクリプション ビューを使用してデータをエクスポートするために使用されます。 詳細については、次を参照してください。[データのエクスポート&#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)します。  
+ これらの操作は、サブスクリプション ビューを使用してデータをエクスポートするために使用されます。 詳細については、[データのエクスポート&#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)を参照してください。  
   
 ||  
 |-|  

@@ -129,7 +129,7 @@ SELECT @PointValue.ToString() AS PointValue;
  変数の代入に SELECT ステートメントを使用した場合と SET ステートメントを使用した場合には異なる点が 1 つあります。SELECT ステートメントでは 1 つのステートメントで複数の変数に代入できますが、SET 構文では、1 つ変数に代入するごとに 1 つの SET ステートメントが必要になります。  
   
 ## <a name="comparing-data"></a>データを比較します。  
- クラスを定義する際に、`IsByteOrdered` プロパティに `true` を設定すると、比較演算子を使用して、UDT の値を比較できます。 詳細については、次を参照してください。[ユーザー定義型を作成する](creating-user-defined-types.md)します。  
+ クラスを定義する際に、`IsByteOrdered` プロパティに `true` を設定すると、比較演算子を使用して、UDT の値を比較できます。 詳細については、[ユーザー定義型を作成する](creating-user-defined-types.md)を参照してください。  
   
 ```  
 SELECT ID, PointValue.ToString() AS Points   

@@ -47,9 +47,9 @@ SSMA をインストールする前に、コンピューターが、次の要件
   
 -   Oracle クライアント 9.0 または以降のバージョンと移行する Oracle データベースへの接続。 Oracle クライアントのバージョンと、同じバージョンまたは Oracle データベースのバージョンより新しいバージョンである必要があります。  
   
-    Oracle の製品メディアまたは Oracle の Web サイトから Oracle クライアントをインストールすることができます。 接続の詳細については、次を参照してください。 [Oracle データベースに接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)します。  
+    Oracle の製品メディアまたは Oracle の Web サイトから Oracle クライアントをインストールすることができます。 接続の詳細については、[Oracle データベースに接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)を参照してください。  
   
--   アクセスとのターゲット インスタンスをホストするコンピューターに十分なアクセス許可[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB が、移行するデータベース オブジェクトとデータ。 詳細については、次を参照してください。 [SQL Server に接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)します。  
+-   アクセスとのターゲット インスタンスをホストするコンピューターに十分なアクセス許可[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB が、移行するデータベース オブジェクトとデータ。 詳細については、[SQL Server に接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)を参照してください。  
   
 -   4 GB の RAM を推奨します。  
   
@@ -77,7 +77,7 @@ SSMA は、Web からダウンロードします。 最新バージョンをダ�
   
 既定のインストール場所は C:\Program files \microsoft SQL Server Migration Assistant for Oracle です。  
   
-SSMA のプログラム ファイルだけでなく必要がありますにもインストール SSMA for Oracle の拡張機能パック[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。 [SQL Server での SSMA コンポーネントのインストール&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)します。  
+SSMA のプログラム ファイルだけでなく必要がありますにもインストール SSMA for Oracle の拡張機能パック[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、[SQL Server での SSMA コンポーネントのインストール&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server での SSMA コンポーネントのインストール&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  

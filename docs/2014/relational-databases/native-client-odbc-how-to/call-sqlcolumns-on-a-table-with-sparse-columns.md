@@ -22,7 +22,7 @@ ms.locfileid: "48108572"
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- スパース列の機能の詳細については、次を参照してください。 [SQL Server Native Client におけるスパース列のサポート](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)します。  
+ スパース列の機能の詳細については、[SQL Server Native Client におけるスパース列のサポート](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)を参照してください。  
   
 ## <a name="example"></a>例  
  最初のリストは、C++ ソース コードです。 "MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  

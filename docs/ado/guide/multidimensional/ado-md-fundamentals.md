@@ -25,7 +25,7 @@ Microsoft® ActiveX® Data Objects (多次元) (ADO MD) により簡単にアク
   
  ADO と同様には、ADO MD は、データにアクセスするのに、基になる OLE DB プロバイダーを使用します。 ADO MD を使用するには、プロバイダーは OLE DB for OLAP 仕様で定義されている多次元データ プロバイダー (MDP) をある必要があります。 MDP は、表形式のデータ プロバイダー (TDP) がデータを表示する方法は、表形式のビューではなく多次元ビュー内のデータを表示します。 特定の構文と、プロバイダーでサポートされている動作の詳細については、OLAP OLE DB プロバイダーは、ドキュメントを参照してください。  
   
- このドキュメントでは、Visual Basic プログラミング言語の知識と ADO と OLAP の一般的な知識を前提としています。 詳細については、次を参照してください。、 [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)と[OLE DB のオンライン分析処理 (OLAP)](https://msdn.microsoft.com/library/windows/desktop/ms717005.aspx)します。  
+ このドキュメントでは、Visual Basic プログラミング言語の知識と ADO と OLAP の一般的な知識を前提としています。 詳細については、、 [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)と[OLE DB のオンライン分析処理 (OLAP)](https://msdn.microsoft.com/library/windows/desktop/ms717005.aspx)を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

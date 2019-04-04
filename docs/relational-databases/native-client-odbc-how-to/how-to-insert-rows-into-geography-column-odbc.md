@@ -29,7 +29,7 @@ ms.locfileid: "53206281"
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 空間ストレージの詳細については、次を参照してください。[空間データ&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)します。  
+ 空間ストレージの詳細については、[空間データ&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)を参照してください。  
   
 ## <a name="example"></a>例  
  最初の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用するテーブルを作成します。  

@@ -31,9 +31,9 @@ ms.locfileid: "51657461"
 
   サーバー内のアプリケーション ドメインごとに 1 行のデータを返します。 アプリケーション ドメイン (**AppDomain**) 内の構造では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]アプリケーションの分離の単位である共通言語ランタイム (CLR)。 このビューを使用するには理解やトラブルシューティングで実行されている CLR 統合オブジェクトに[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
- CLR 統合マネージド データベース オブジェクトにはいくつかの種類があります。 これらのオブジェクトについては、次を参照してください。[共通言語ランタイム (CLR) 統合によるデータベース オブジェクトの構築](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)します。 これらのオブジェクトが実行されるたびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作成、 **AppDomain**下をロードして、必要なコードを実行します。 分離レベル、 **AppDomain**は 1 つ**AppDomain**データベースごとに所有者。 ユーザーによって所有されているすべての CLR オブジェクトは常に同じ実行は、 **AppDomain**データベースごと (場合、ユーザーは、CLR データベース オブジェクトが別のアプリケーション ドメインで実行が別のデータベース内の CLR データベース オブジェクトを登録)。 **AppDomain**コードの実行が終了した後は破棄されません。 代わりに、以降の実行に備えて、メモリ内にキャッシュされます。 これにより、パフォーマンスが向上します。  
+ CLR 統合マネージド データベース オブジェクトにはいくつかの種類があります。 これらのオブジェクトについては、[共通言語ランタイム (CLR) 統合によるデータベース オブジェクトの構築](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)を参照してください。 これらのオブジェクトが実行されるたびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作成、 **AppDomain**下をロードして、必要なコードを実行します。 分離レベル、 **AppDomain**は 1 つ**AppDomain**データベースごとに所有者。 ユーザーによって所有されているすべての CLR オブジェクトは常に同じ実行は、 **AppDomain**データベースごと (場合、ユーザーは、CLR データベース オブジェクトが別のアプリケーション ドメインで実行が別のデータベース内の CLR データベース オブジェクトを登録)。 **AppDomain**コードの実行が終了した後は破棄されません。 代わりに、以降の実行に備えて、メモリ内にキャッシュされます。 これにより、パフォーマンスが向上します。  
   
- 詳細については、次を参照してください。[アプリケーション ドメイン](https://go.microsoft.com/fwlink/p/?LinkId=299658)します。  
+ 詳細については、[アプリケーション ドメイン](https://go.microsoft.com/fwlink/p/?LinkId=299658)を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

@@ -30,7 +30,7 @@ ms.locfileid: "47706181"
   
  データ ソースがシステムに存在する後、Visual FoxPro データにアクセスするたびに、同じデータ ソース再を利用できます。 いくつかの異なるデータベースまたはテーブルにアクセスする場合は、データベースまたはディレクトリごとに個別のデータ ソースを作成できます。  
   
- 次の手順では、コントロール パネルを使用してデータ ソースを作成します。 アプリケーションからデータ ソースを作成する方法の詳細については、次を参照してください。 [Visual FoxPro データから Microsoft Office へのアクセス](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)します。  
+ 次の手順では、コントロール パネルを使用してデータ ソースを作成します。 アプリケーションからデータ ソースを作成する方法の詳細については、[Visual FoxPro データから Microsoft Office へのアクセス](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)を参照してください。  
   
 ### <a name="to-add-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースを追加するには  
   

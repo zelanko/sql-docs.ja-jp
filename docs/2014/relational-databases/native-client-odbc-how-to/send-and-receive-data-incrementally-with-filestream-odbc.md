@@ -20,7 +20,7 @@ ms.locfileid: "48086442"
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>FILESTREAM を使用したデータのインクリメンタル式での送受信 (ODBC)
   このサンプルでは、FILESTREAM 機能を使用して、SQLPutData と SQLGetData でデータをインクリメンタル式に送受信する方法を紹介します。  
   
- FILESTREAM 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md)します。  
+ FILESTREAM 機能の詳細については、[FILESTREAM のサポート&#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md)を参照してください。  
   
 ## <a name="example"></a>例  
  コンパイルして、このサンプルを実行する前に、FILESTREAM のサポートを有効にする ([Enable and Configure FILESTREAM](../blob/enable-and-configure-filestream.md))。  

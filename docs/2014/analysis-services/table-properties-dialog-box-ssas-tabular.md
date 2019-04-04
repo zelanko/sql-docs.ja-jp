@@ -34,7 +34,7 @@ ms.locfileid: "48104492"
 |**[説明]**|テーブルの説明を表示します。|  
 |**[タイムスタンプの作成]**|テーブルが作成された日時を表示します。|  
 |**[スキーマの最終更新]**|テーブルのメタデータが最後に更新された日時を表示します。|  
-|**State**|テーブルの処理状態を表示します。 このプロパティの値の詳細については、次を参照してください。<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>します。|  
+|**State**|テーブルの処理状態を表示します。 このプロパティの値の詳細については、<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>を参照してください。|  
 |**最後に処理されました。**|テーブルが最後に処理された日時を表示します。|  
 |**現在のストレージ モード**|テーブルの現在のストレージ モードを表示します。 ストレージ モードはデータベース レベルで設定され、すべてのテーブルで継承されます。 テーブル レベルで異なるストレージ モードを使用することはできません。 有効な値は、InMemory (既定値)、InMemoryWithDirectQuery、DirectQuery、DirectQueryWithinMemory です。|  
   

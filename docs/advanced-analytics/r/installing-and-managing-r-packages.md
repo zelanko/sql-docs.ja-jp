@@ -71,7 +71,7 @@ Web 上の新しいバージョンに SQL Server セットアップによって�
 
 ## <a name="component-upgrades"></a>コンポーネントのアップグレード
 
-最初のインストール後、サービス パックと累積的更新プログラムは、R と Python のパッケージが更新されるが、完全なバージョンのアップグレードはのみによって可能*バインド*モダン ライフ サイクル サポート ポリシーにします。 バインディングは、サービス モデルを変更します。 既定では、最初のインストール後の R パッケージは更新サービス パックと累積的更新プログラムです。 追加のパッケージと R のコア コンポーネントの完全なバージョンのアップグレード (SQL Server 2017 への SQL Server 2016) から製品アップグレードによってのみ可能ですか、R をバインドすることによって、Microsoft Machine Learning Server をサポートします。 詳細については、次を参照してください。 [SQL Server のアップグレードの R と Python コンポーネント](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)します。
+最初のインストール後、サービス パックと累積的更新プログラムは、R と Python のパッケージが更新されるが、完全なバージョンのアップグレードはのみによって可能*バインド*モダン ライフ サイクル サポート ポリシーにします。 バインディングは、サービス モデルを変更します。 既定では、最初のインストール後の R パッケージは更新サービス パックと累積的更新プログラムです。 追加のパッケージと R のコア コンポーネントの完全なバージョンのアップグレード (SQL Server 2017 への SQL Server 2016) から製品アップグレードによってのみ可能ですか、R をバインドすることによって、Microsoft Machine Learning Server をサポートします。 詳細については、[SQL Server のアップグレードの R と Python コンポーネント](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)を参照してください。
 
 ## <a name="package-library-location"></a>パッケージ ライブラリの場所
 
@@ -105,7 +105,7 @@ SQL server machine learning をインストールするときに、各言語を�
 |SQL Server 2017|Machine Learning Server、Python の使用 |C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER|
 
 > [!NOTE]
-> Microsoft R Server のスタンドアロン インストール可能性があるようなサブフォルダー名とファイルを持つその他のフォルダーを検索する場合または[Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)します。 これらのサーバー製品では、別のインストーラーとパス (つまり、C:\Program Files\Microsoft\R Server\R_SERVER または C:\Program Files\Microsoft\ML SERVER\R_SERVER) があります。 詳細については、次を参照してください。 [Machine Learning Server を Windows にインストール](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)または[Windows のインストールの R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)します。
+> Microsoft R Server のスタンドアロン インストール可能性があるようなサブフォルダー名とファイルを持つその他のフォルダーを検索する場合または[Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)します。 これらのサーバー製品では、別のインストーラーとパス (つまり、C:\Program Files\Microsoft\R Server\R_SERVER または C:\Program Files\Microsoft\ML SERVER\R_SERVER) があります。 詳細については、[Machine Learning Server を Windows にインストール](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)または[Windows のインストールの R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

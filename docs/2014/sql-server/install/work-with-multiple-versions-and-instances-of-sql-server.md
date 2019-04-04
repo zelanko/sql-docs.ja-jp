@@ -78,7 +78,7 @@ ms.locfileid: "52762735"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep では、以前のバージョンの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] と同じコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスをサイド バイ サイドでインストールすることはサポートされていません。 たとえば、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスと共に [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の準備済みインスタンスをサイド バイ サイドで準備することはできません。 ただし、同じメジャー バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数の準備済みインスタンスを、同じコンピューターにサイド バイ サイドでインストールできます。 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。  
 >   
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Windows Server 2008 R2 Server Core SP1 を搭載するコンピューターに、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とサイド バイ サイドでインストールすることはできません。 Server Core インストールの詳細については、次を参照してください。 [Server Core での SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)します。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Windows Server 2008 R2 Server Core SP1 を搭載するコンピューターに、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とサイド バイ サイドでインストールすることはできません。 Server Core インストールの詳細については、[Server Core での SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)を参照してください。  
   
  次の表に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のサイド バイ サイドのサポートを示します。  
   

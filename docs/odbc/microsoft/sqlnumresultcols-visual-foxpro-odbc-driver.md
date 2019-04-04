@@ -30,4 +30,4 @@ ms.locfileid: "47801720"
   
  結果セットのカーソルでは、列の数を返します。  
   
- 詳細については、次を参照してください。 [SQLNumResultCols](../../odbc/reference/syntax/sqlnumresultcols-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLNumResultCols](../../odbc/reference/syntax/sqlnumresultcols-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

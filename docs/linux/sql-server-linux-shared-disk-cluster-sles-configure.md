@@ -23,7 +23,7 @@ ms.locfileid: "58527114"
 
 このガイドでは、SQL Server SUSE Linux Enterprise Server (SLES) 上の 2 ノードの共有ディスク クラスターを作成する手順を提供します。 クラスタ リングの階層は SUSE に基づいて[高可用性の拡張機能 (HAE)](https://www.suse.com/products/highavailability)上に構築された[Pacemaker](https://clusterlabs.org/)します。 
 
-クラスターの構成、リソース エージェントのオプション、管理、ベスト プラクティス、および推奨事項の詳細については、次を参照してください。 [SUSE Linux Enterprise 高可用性拡張子 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)します。
+クラスターの構成、リソース エージェントのオプション、管理、ベスト プラクティス、および推奨事項の詳細については、[SUSE Linux Enterprise 高可用性拡張子 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -35,7 +35,7 @@ ms.locfileid: "58527114"
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>各クラスター ノードで、SQL Server のインストールと構成をする
 
-1. 両方のノード上に SQL Server をインストールし、セットアップします。 詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)します。
+1. 両方のノード上に SQL Server をインストールし、セットアップします。 詳細については、[Linux 上の SQL Server のインストール](sql-server-linux-setup.md)を参照してください。
 2. 構成のために、1つのノードをプライマリとして指定し、もう片方をセカンダリとして指定します。 このガイドでは、これ以降これらの用語を使用します。 
 3. セカンダリ ノードでSQL Server を停止し無効にします。 次の例では、SQL Server を停止して無効にします。
 
@@ -223,7 +223,7 @@ exit
 
 構成がコミットされると、SQL Server は、仮想 IP リソースと同じノードで開始されます。 
 
-詳細については、次を参照してください。[構成とクラスター リソースを管理する」(コマンドライン)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)します。 
+詳細については、[構成とクラスター リソースを管理する」(コマンドライン)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)を参照してください。 
 
 ### <a name="verify-that-sql-server-is-started"></a>SQL Server が開始されたことを確認します。 
 

@@ -104,4 +104,4 @@ ms.locfileid: "53030266"
 
 ## <a name="additional-resources"></a>その他のリソース
 
-SQL エディターの詳細については、次を参照してください。[コード エディターのチュートリアル](tutorial-sql-editor.md)します。
+SQL エディターの詳細については、[コード エディターのチュートリアル](tutorial-sql-editor.md)を参照してください。

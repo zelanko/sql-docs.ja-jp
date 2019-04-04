@@ -56,7 +56,7 @@ ms.locfileid: "47683710"
   
 9. Access アプリケーションのデータを使用する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure を使用して[Access テーブル、SQL Server テーブルをリンク](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)します。  
   
-このプロセスを指示するのに、移行ウィザードを使用することもできます。 詳細については、次を参照してください。[移行ウィザード](migration-wizard-accesstosql.md)します。  
+このプロセスを指示するのに、移行ウィザードを使用することもできます。 詳細については、[移行ウィザード](migration-wizard-accesstosql.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
 [SQL Server Migration Assistant for Access の概要](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  

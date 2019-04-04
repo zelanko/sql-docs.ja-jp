@@ -59,7 +59,7 @@ Kubernetes で可用性グループを展開するには。
 
 1. データベースを作成し、可用性グループに関連付ける
 
-詳細については、次を参照してください。 [Always On 可用性グループの SQL Server のコンテナー](sql-server-ag-kubernetes.md)します。
+詳細については、[Always On 可用性グループの SQL Server のコンテナー](sql-server-ag-kubernetes.md)を参照してください。
 
 ## <a name="sql-server-kubernetes-operator"></a>SQL Server の Kubernetes 演算子
 

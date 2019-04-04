@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48067792"
 ---
 # <a name="filestream-support-ole-db"></a>FILESTREAM のサポート (OLE DB)
-  以降で[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]と[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0、OLE DB は、強化された FILESTREAM 機能をサポートしています。 この機能の詳細については、次を参照してください。 [FILESTREAM のサポート](../features/filestream-support.md)します。 サンプルについては、次を参照してください。 [Filestream と OLE DB](../../native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)します。  
+  以降で[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]と[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0、OLE DB は、強化された FILESTREAM 機能をサポートしています。 この機能の詳細については、[FILESTREAM のサポート](../features/filestream-support.md)を参照してください。 サンプルについては、[Filestream と OLE DB](../../native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)を参照してください。  
   
  アプリケーションで 2 GB より大きい `varbinary(max)` 値を送受信するには、パラメーターと結果のバインドで `DBTYPE_IUNKNOWN` を使用します。 パラメーターのプロバイダーは ISequentialStream と ISequentialStream を返す結果の iunknown::queryinterface を呼び出す必要があります。  
   

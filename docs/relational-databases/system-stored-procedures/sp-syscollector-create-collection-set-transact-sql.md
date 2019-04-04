@@ -72,7 +72,7 @@ sp_syscollector_create_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration` 管理データ ウェアハウスに収集されたデータが保存されている日の数です。 *days_until_expiration*は**smallint**で、既定値は 730 (2 年)。 *days_until_expiration* 0 または正の整数にする必要があります。  
   
-`[ @proxy_id = ] proxy_id` 一意の識別子には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウント。 *proxy_id*は**int**既定値は NULL です。 指定した場合*proxy_name* NULL にする必要があります。 取得する*proxy_id*、sysproxies システム テーブルをクエリします。 Dc_admin 固定データベース ロールは、プロキシにアクセスする権限が必要です。 詳細については、次を参照してください。 [SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md)です。  
+`[ @proxy_id = ] proxy_id` 一意の識別子には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウント。 *proxy_id*は**int**既定値は NULL です。 指定した場合*proxy_name* NULL にする必要があります。 取得する*proxy_id*、sysproxies システム テーブルをクエリします。 Dc_admin 固定データベース ロールは、プロキシにアクセスする権限が必要です。 詳細については、[SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md)を参照してください。  
   
 `[ @proxy_name = ] 'proxy_name'` プロキシ アカウントの名前です。 *proxy_name*は**sysname**既定値は NULL です。 指定した場合*proxy_id* NULL にする必要があります。 取得する*proxy_name*、sysproxies システム テーブルをクエリします。  
   

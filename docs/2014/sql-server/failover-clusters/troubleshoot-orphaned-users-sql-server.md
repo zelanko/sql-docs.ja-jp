@@ -43,7 +43,7 @@ ms.locfileid: "48167642"
  対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが未定義のデータベース ユーザー、またはサーバー インスタンスで適切に定義されていないデータベース ユーザーは、インスタンスにログインできません。 このようなユーザーは、そのサーバー インスタンスのデータベースの *孤立ユーザー* と呼ばれます。 データベース ユーザーは、対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが削除された場合に孤立状態になることがあります。 また、データベースを復元したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスにアタッチした場合も、孤立状態になることがあります。 孤立状態は、データベース ユーザーが新しいサーバー インスタンスに存在しない SID にマップされると発生する場合があります。  
   
 > [!NOTE]  
->  A[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインが欠けている対応するデータベース ユーザーしない限り、データベースにアクセスできない**ゲスト**でそのデータベースを有効にします。 データベース ユーザー アカウントを作成する方法の詳細については、次を参照してください。 [CREATE USER &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)します。  
+>  A[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインが欠けている対応するデータベース ユーザーしない限り、データベースにアクセスできない**ゲスト**でそのデータベースを有効にします。 データベース ユーザー アカウントを作成する方法の詳細については、[CREATE USER &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)を参照してください。  
   
 ## <a name="to-detect-orphaned-users"></a>孤立ユーザーを検出するには  
  孤立ユーザーを検出するには、次の Transact-SQL ステートメントを実行します。  
@@ -55,7 +55,7 @@ sp_change_users_login @Action='Report';
 GO;  
 ```  
   
- 現在のデータベース内で、どの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにもリンクされていないユーザーとそのセキュリティ識別子 (SID) が出力されます。 詳細については、次を参照してください。 [sp_change_users_login &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)します。  
+ 現在のデータベース内で、どの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにもリンクされていないユーザーとそのセキュリティ識別子 (SID) が出力されます。 詳細については、[sp_change_users_login &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)を参照してください。  
   
 > [!NOTE]  
 >  **sp_change_users_login**では使用できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows から作成されたログインします。  
@@ -73,7 +73,7 @@ GO;
   
     ```  
   
-     詳細については、次を参照してください。 [sp_change_users_login &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)します。  
+     詳細については、[sp_change_users_login &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)を参照してください。  
   
 2.  前の手順のコードを実行すると、ユーザーがデータベースにアクセスできるようになります。 ユーザーは、のパスワードを変更できる、 *< login_name >* ログイン アカウントを使用して、 **sp_password**ストアド プロシージャを次のようにします。  
   
@@ -90,7 +90,7 @@ GO;
     > [!NOTE]  
     >  **sp_password**は使用できません[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows アカウント。 Windows ネットワーク アカウントを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するユーザーは Windows によって認証されるので、このようなユーザーのパスワードは Windows でしか変更できません。  
   
-     詳細については、次を参照してください。 [sp_password &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)します。  
+     詳細については、[sp_password &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   

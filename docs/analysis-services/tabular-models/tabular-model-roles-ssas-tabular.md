@@ -18,7 +18,7 @@ ms.locfileid: "53071859"
 ---
 # <a name="tabular-model-roles"></a>テーブル モデル ロール 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  このトピックおよび関連するタスクで提供される情報は、配置されているテーブル モデルのロールを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して作成および管理するテーブル モデル データベース管理者向けです。 表形式モデルのロールの詳細については、次を参照してください。[ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)します。 作成して、ロール マネージャーを使用してテーブル モデル プロジェクトでのロールの管理について[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を参照してください[管理ロールの作成と](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)します。  
+  このトピックおよび関連するタスクで提供される情報は、配置されているテーブル モデルのロールを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して作成および管理するテーブル モデル データベース管理者向けです。 表形式モデルのロールの詳細については、[ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)を参照してください。 作成して、ロール マネージャーを使用してテーブル モデル プロジェクトでのロールの管理について[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を参照してください[管理ロールの作成と](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

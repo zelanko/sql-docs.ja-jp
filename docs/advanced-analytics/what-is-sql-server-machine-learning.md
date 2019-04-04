@@ -52,7 +52,7 @@ SQL Server 2017 では、R と Python がサポートされています。 次�
 | Python ツール | 組み込みの Python のコマンド ライン ツールは、アドホック テストとタスクに適しています。  |
 | Anaconda | Anaconda とは、Python と重要なパッケージのオープン ソース ディストリビューションです。 |
 | Python のサンプルとスクリプト | R と Python には、組み込みのデータ セットとスクリプトが含まれています。  |
-| R および Python で事前トレーニング済みモデル | 事前トレーニング済みモデルは特定のユース ケース用に作成し、microsoft データ サイエンスのエンジニア リング チームによって管理されます。 事前トレーニング済みモデルとして使用することができます-正、負のセンチメントをスコア付けで、テキストまたはイメージを提供する新しいデータの入力を使用して機能を検出します。 モデルでは、Machine Learning のサービスで実行しますが、SQL Server セットアップでインストールすることはできません。 詳細については、次を参照してください。[インストール事前トレーニング済みの機械学習では、SQL Server のモデル](install/sql-pretrained-models-install.md)します。 |
+| R および Python で事前トレーニング済みモデル | 事前トレーニング済みモデルは特定のユース ケース用に作成し、microsoft データ サイエンスのエンジニア リング チームによって管理されます。 事前トレーニング済みモデルとして使用することができます-正、負のセンチメントをスコア付けで、テキストまたはイメージを提供する新しいデータの入力を使用して機能を検出します。 モデルでは、Machine Learning のサービスで実行しますが、SQL Server セットアップでインストールすることはできません。 詳細については、[インストール事前トレーニング済みの機械学習では、SQL Server のモデル](install/sql-pretrained-models-install.md)を参照してください。 |
 
 ## <a name="using-sql-mls"></a>SQL MLS を使用します。
 
@@ -78,7 +78,7 @@ SQL Server 2017 では、R と Python がサポートされています。 次�
 
 ![rsql_keyscenario2](r/media/rsql-keyscenario2.png) 
 
-+ **必要に応じて IDE を使用して**します。 任意の開発ツールには、R と Python ライブラリをリンクできます。 詳細については、次を参照してください。 [R tools セットアップ](r/set-up-a-data-science-client.md)と[Python ツールのセットアップ](python/setup-python-client-tools-sql.md)します。  
++ **必要に応じて IDE を使用して**します。 任意の開発ツールには、R と Python ライブラリをリンクできます。 詳細については、[R tools セットアップ](r/set-up-a-data-science-client.md)と[Python ツールのセットアップ](python/setup-python-client-tools-sql.md)を参照してください。  
 
 + **リモートまたはローカルでの作業**します。 データ サイエンティストは、SQL Server に接続し、ローカルの分析のため、クライアントにデータを通常どおりさせます。 ただしより優れたソリューションは、使用する、 **RevoScaleR**または**revoscalepy** SQL Server コンピューターに計算をプッシュ Api にコストのかかる安全でないデータ移動を回避します。
 
@@ -127,7 +127,7 @@ SQL Server で、リソース管理とセキュリティ機能の活用、展開
 + セキュリティを設定して、特定のタスクで使用されるパッケージのロックダウン
 + リソース ガバナンスが (Enterprise edition が必要) を有効にします。
 
-詳細については、次を参照してください。 [R 用のリソース ガバナンス](r/resource-governance-for-r-services.md)と[SQL Server の R パッケージ管理](r/install-additional-r-packages-on-sql-server.md)します。
+詳細については、[R 用のリソース ガバナンス](r/resource-governance-for-r-services.md)と[SQL Server の R パッケージ管理](r/install-additional-r-packages-on-sql-server.md)を参照してください。
 
 ## <a name="version-history"></a>バージョン履歴
 

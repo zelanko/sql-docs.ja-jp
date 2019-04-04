@@ -59,10 +59,10 @@ CoType RowsetTVP
  DBTYPE_TABLE とその他の型との間の変換はサポートされません。 IConvertType::CanConvert は、DBTYPE_TABLE から DBTYPE_TABLE への変換以外の要求に対するサポートされない変換について、S_FALSE を返します。 これは、Command オブジェクトの DBCONVERTFLAGS_PARAMETER を想定します。  
   
 ## <a name="methods"></a>メソッド  
- テーブル値パラメーターをサポートする OLE DB メソッドについては、次を参照してください。 [OLE DB Table-Valued パラメーター型のサポート&#40;メソッド&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)します。  
+ テーブル値パラメーターをサポートする OLE DB メソッドについては、[OLE DB Table-Valued パラメーター型のサポート&#40;メソッド&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)を参照してください。  
   
 ## <a name="properties"></a>[プロパティ]  
- テーブル値パラメーターをサポートする OLE DB プロパティについては、次を参照してください。 [OLE DB Table-Valued パラメーター型のサポート&#40;プロパティ&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)します。  
+ テーブル値パラメーターをサポートする OLE DB プロパティについては、[OLE DB Table-Valued パラメーター型のサポート&#40;プロパティ&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

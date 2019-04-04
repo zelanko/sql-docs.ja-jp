@@ -34,7 +34,7 @@ ms.locfileid: "52784124"
   
  または、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスおよびネットワーク設定は、SMO で WMI マネージド オブジェクトを使用してプログラムで管理することもできます。 WMI のプログラミングの詳細については、オブジェクトをマネージを参照してください。[管理サービスとネットワーク設定を使用して WMI プロバイダーによって](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)します。  
   
- WMI provider for Configuration Management には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーおよび [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソールを使用してアクセスすることができます。 ユーザー インターフェイスから WMI プロバイダーへのアクセスの詳細については、次を参照してください。[管理サービスの操作方法に関するトピック&#40;SQL Server 構成マネージャー&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)します。  
+ WMI provider for Configuration Management には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーおよび [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソールを使用してアクセスすることができます。 ユーザー インターフェイスから WMI プロバイダーへのアクセスの詳細については、[管理サービスの操作方法に関するトピック&#40;SQL Server 構成マネージャー&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [WQL を使用して構成管理用 WMI プロバイダーにアクセス](access-wmi-provider-for-configuration-management-using-wql.md)   

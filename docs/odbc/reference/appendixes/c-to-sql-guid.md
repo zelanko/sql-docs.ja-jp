@@ -27,7 +27,7 @@ GUID の ODBC C データ型の識別子です。
   
  SQL_C_GUID  
   
- 次の表は、ODBC SQL データ型の GUID の C データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)します。  
+ 次の表は、ODBC SQL データ型の GUID の C データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、[C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)を参照してください。  
   
 |SQL 型識別子|テスト|SQLSTATE|  
 |-------------------------|----------|--------------|  

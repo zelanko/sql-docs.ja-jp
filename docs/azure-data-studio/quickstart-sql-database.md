@@ -152,7 +152,7 @@ Azure SQL サーバーを持っていない場合は、次の Azure SQL Database
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップします。
 
-それ以降のクイック スタートの記事では、ここで作成されたリソースに基づいて構築します。 これらの記事を使用する場合は、必ずこれらのリソースを削除します。 それ以外の場合、Azure portal のでは、不要になったリソースを削除します。 詳細については、次を参照してください。[リソースをクリーンアップする](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)します。
+それ以降のクイック スタートの記事では、ここで作成されたリソースに基づいて構築します。 これらの記事を使用する場合は、必ずこれらのリソースを削除します。 それ以外の場合、Azure portal のでは、不要になったリソースを削除します。 詳細については、[リソースをクリーンアップする](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 

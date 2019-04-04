@@ -25,7 +25,7 @@ ms.locfileid: "47648570"
 
   このサンプルでは、ICommandText インターフェイス内で ISequentialStream インターフェイスを使用して、Filestream 列から単一のレコードを取得する方法を示します。  
   
- Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)します。  
+ Filestream 機能の詳細については、[FILESTREAM のサポート&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)を参照してください。  
   
 ## <a name="example"></a>例  
  INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  

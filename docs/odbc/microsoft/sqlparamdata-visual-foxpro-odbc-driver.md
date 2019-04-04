@@ -30,4 +30,4 @@ ms.locfileid: "47771540"
   
  組み合わせて使用[SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md)ステートメントの実行時にパラメーターのデータを指定します。  
   
- 詳細については、次を参照してください。 [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

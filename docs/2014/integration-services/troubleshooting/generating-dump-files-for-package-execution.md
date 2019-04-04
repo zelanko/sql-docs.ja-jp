@@ -33,7 +33,7 @@ ms.locfileid: "58379220"
   
      実行中のパッケージを一時停止してダンプ ファイルを作成する場合に、このストアド プロシージャを呼び出します。  
   
- パッケージ配置モデルを使用してパッケージを配置する場合は、**dtexec** ユーティリティまたは **dtutil** ユーティリティを使用して、コマンド ラインでデバッグ ダンプ オプションを指定することによって、デバッグ ダンプ ファイルを作成します。 詳細については、「 [dtexec ユーティリティ](../packages/dtexec-utility.md) 」と「 [dtutil ユーティリティ](../dtutil-utility.md)」を参照してください。 パッケージ配置モデルの詳細については、次を参照してください。 [Deployment の Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)と[パッケージの配置&#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md)します。  
+ パッケージ配置モデルを使用してパッケージを配置する場合は、**dtexec** ユーティリティまたは **dtutil** ユーティリティを使用して、コマンド ラインでデバッグ ダンプ オプションを指定することによって、デバッグ ダンプ ファイルを作成します。 詳細については、「 [dtexec ユーティリティ](../packages/dtexec-utility.md) 」と「 [dtutil ユーティリティ](../dtutil-utility.md)」を参照してください。 パッケージ配置モデルの詳細については、[Deployment の Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)と[パッケージの配置&#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md)を参照してください。  
   
 ## <a name="debug-dump-file-format"></a>デバッグ ダンプ ファイルの形式  
  デバッグ ダンプ オプションを指定した場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって作成されるデバッグ ダンプ ファイルを次に示します。  

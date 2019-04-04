@@ -31,6 +31,6 @@ Visual FoxPro データ ソースに接続する接続文字列を使用する�
 DSN=TasTrade;Exclusive=Yes  
 ```  
   
- 一連の属性のキーワードと値、接続文字列に含めることができます、次を参照してください。 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)します。  
+ 一連の属性のキーワードと値、接続文字列に含めることができます、[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)を参照してください。  
   
- 接続文字列の構文の詳細については、次を参照してください。 [SQLBrowseConnect](../../odbc/reference/syntax/sqlbrowseconnect-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 接続文字列の構文の詳細については、[SQLBrowseConnect](../../odbc/reference/syntax/sqlbrowseconnect-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

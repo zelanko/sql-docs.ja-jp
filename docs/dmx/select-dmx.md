@@ -106,7 +106,7 @@ WHERE < condition expression >
 SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>  
 ```  
   
- 予測クエリの作成の詳細については、次を参照してください。[構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)します。  
+ 予測クエリの作成の詳細については、[構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)を参照してください。  
   
 ## <a name="clause-syntax"></a>句の構文  
  使用した参照の複雑なのため、**選択**ステートメント、詳細な構文要素と引数は、句で示されます。 それぞれの句の詳細については、次のリストのトピックをクリックしてください。  

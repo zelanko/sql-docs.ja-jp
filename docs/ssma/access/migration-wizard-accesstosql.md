@@ -76,7 +76,7 @@ Access データベースの追加 ページでは、プロジェクトに 1 つ
 フィルターの詳細については、の [オプション] セクションを参照してください。[高度なオブジェクトの選択 (SSMA 一般的)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c)します。  
   
 ## <a name="connect-to-sql-server-page"></a>SQL Server のページへの接続します。  
-接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで、接続のプロパティを指定しに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。 [SQL サーバーへの接続](connect-to-sql-server-accesstosql.md)します。
+接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで、接続のプロパティを指定しに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、[SQL サーバーへの接続](connect-to-sql-server-accesstosql.md)を参照してください。
   
 > [!IMPORTANT]  
 > 発生した接続に成功するとすぐに**リンク テーブル**ページ、テーブルのリンクのオプションがあります。 をクリックして**次**し、移行を開始します。  

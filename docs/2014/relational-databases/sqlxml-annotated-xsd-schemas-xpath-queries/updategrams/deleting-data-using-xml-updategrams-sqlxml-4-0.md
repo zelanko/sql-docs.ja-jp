@@ -46,7 +46,7 @@ ms.locfileid: "52788994"
  アップデート グラムではエラーが返され、全体を取り消します、アップデート グラムで指定される要素は、テーブル内 1 つ以上の行と一致するか、または任意の行と一致しません、 **\<同期 >** ブロックします。 アップデートグラム内の要素で削除できるのは、一度に 1 つのレコードだけです。  
   
 ## <a name="examples"></a>使用例  
- この例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)します。  
+ この例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)を参照してください。  
   
  次の例を使用して実際のサンプルを作成するで指定された要件を満たす必要があります[SQLXML の例を実行するための要件](../../sqlxml/requirements-for-running-sqlxml-examples.md)します。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "52788994"
   
 3.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してアップデートグラムを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  

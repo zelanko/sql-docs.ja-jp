@@ -22,7 +22,7 @@ ms.locfileid: "58391480"
   
  次に、CDC Service 構成コンソールを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを Oracle Change Data Capture 用に準備する方法について説明します。 このプロセスによって、MSXDBCDC データベースが作成され、必要なテーブル、ストアド プロシージャ、およびその他のアーティファクトが定義されます。  
   
- Oracle CDC 用の SQL Server の準備は、Oracle CDC Service の管理者が実行します。 CDC Service の管理者ロールの詳細については、次を参照してください。 [Change Data Capture Service for Oracle by Attunity のユーザー ロール](user-roles.md)します。  
+ Oracle CDC 用の SQL Server の準備は、Oracle CDC Service の管理者が実行します。 CDC Service の管理者ロールの詳細については、[Change Data Capture Service for Oracle by Attunity のユーザー ロール](user-roles.md)を参照してください。  
   
 ### <a name="to-enable-sql-server-for-cdc"></a>CDC 用に SQL Server を有効にするには  
   

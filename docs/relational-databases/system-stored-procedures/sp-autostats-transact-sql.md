@@ -31,7 +31,7 @@ ms.locfileid: "58492344"
 
   インデックス、統計オブジェクト、テーブル、またはインデックス付きビューの自動統計更新オプション (AUTO_UPDATE_STATISTICS) を表示または変更します。  
   
- AUTO_UPDATE_STATISTICS オプションの詳細については、次を参照してください。 [ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)と[統計](../../relational-databases/statistics/statistics.md)します。  
+ AUTO_UPDATE_STATISTICS オプションの詳細については、[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)と[統計](../../relational-databases/statistics/statistics.md)を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

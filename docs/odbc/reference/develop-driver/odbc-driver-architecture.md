@@ -41,7 +41,7 @@ ms.locfileid: "47788150"
   
  さまざまなデータ ソースを使用するドライバーが必要な場合は、ミドルウェアとして使用できます。 異種結合エンジンのアーキテクチャでは、ドライバーをドライバー マネージャーとして表示を作成できます。 ドライバーは、一連のクライアントで共有できる、サーバーにもインストールできます。  
   
- ドライバーのアーキテクチャの詳細については、次を参照してください。[ドライバー マネージャー](../../../odbc/reference/the-driver-manager.md)と[ドライバーのアーキテクチャ](../../../odbc/reference/driver-architecture.md)に関するセクションで[ODBC アーキテクチャ](../../../odbc/reference/odbc-architecture.md)します。  
+ ドライバーのアーキテクチャの詳細については、[ドライバー マネージャー](../../../odbc/reference/the-driver-manager.md)と[ドライバーのアーキテクチャ](../../../odbc/reference/driver-architecture.md)に関するセクションで[ODBC アーキテクチャ](../../../odbc/reference/odbc-architecture.md)を参照してください。  
   
  ドライバーの問題の詳細については、次の表で説明されている場所で見つかります。  
   

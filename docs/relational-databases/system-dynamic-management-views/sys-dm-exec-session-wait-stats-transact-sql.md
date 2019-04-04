@@ -43,7 +43,7 @@ ms.locfileid: "53206611"
 ## <a name="remarks"></a>コメント  
  この DMV は、セッションが開かれると、または、セッションがリセットされたときにセッションの情報をリセット (場合接続プール)、  
   
- 待機の種類については、次を参照してください。 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)します。  
+ 待機の種類については、[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  ある場合、ユーザーは**VIEW SERVER STATE**サーバーに対する権限を実行中のすべてのセッションを表示のインスタンスで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、それ以外のユーザーは、現在のセッションのみを参照してください。  

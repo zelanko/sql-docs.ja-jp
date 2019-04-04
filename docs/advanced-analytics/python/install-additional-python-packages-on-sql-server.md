@@ -20,7 +20,7 @@ ms.locfileid: "58510299"
 
 この記事では、SQL Server 2017 Machine Learning Services のインスタンスに新しい Python パッケージをインストールする方法について説明します。 一般に、新しいパッケージをインストールするプロセスは、標準的な Python 環境のと似ています。 ただし、サーバーには、インターネット接続がない場合は、追加の手順が必要です。
 
-パッケージの場所とインストール パスの詳細については、次を参照してください。[パッケージ情報を取得する R または Python](../r/determine-which-packages-are-installed-on-sql-server.md)します。
+パッケージの場所とインストール パスの詳細については、[パッケージ情報を取得する R または Python](../r/determine-which-packages-are-installed-on-sql-server.md)を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 

@@ -41,7 +41,7 @@ ms.locfileid: "53206751"
 >  ドライバー マネージャーがマップされます**SQLSetScrollOptions** 、ODBC 3 の操作、アプリケーションの *.x*がサポートされていないドライバー **SQLSetScrollOptions**、ドライバーマネージャーに SQL_ROWSET_SIZE ステートメントのオプション、not、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性を設定、*複合カーソル*引数**SQLSetScrollOption**します。 その結果、 **SQLSetScrollOptions**への呼び出しで複数の行をフェッチするときに、アプリケーションでは使用できません**SQLFetch**または**SQLFetchScroll**します。 フェッチの複数の行への呼び出しで場合にのみ使用できます**SQLExtendedFetch**します。  
   
 ## <a name="remarks"></a>コメント  
- アプリケーションは、64 ビットのオペレーティング システムで実行される場合は、次を参照してください。 [ODBC 64 ビットの情報](../../../odbc/reference/odbc-64-bit-information.md)します。  
+ アプリケーションは、64 ビットのオペレーティング システムで実行される場合は、[ODBC 64 ビットの情報](../../../odbc/reference/odbc-64-bit-information.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

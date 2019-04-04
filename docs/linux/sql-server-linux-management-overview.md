@@ -25,7 +25,7 @@ Linux 上の SQL Server を管理するいくつかの方法はあります。 �
 
 ## <a name="mssql-conf"></a>mssql-conf 
 
-**Mssql conf**ツール Linux 上の SQL Server を構成します。 詳細については、次を参照してください。 [mssql-conf での Linux 上の SQL Server の構成](sql-server-linux-configure-mssql-conf.md)します。
+**Mssql conf**ツール Linux 上の SQL Server を構成します。 詳細については、[mssql-conf での Linux 上の SQL Server の構成](sql-server-linux-configure-mssql-conf.md)を参照してください。
 
 ## <a name="transact-sql"></a>Transact-SQL
 
@@ -33,11 +33,11 @@ TRANSACT-SQL ステートメントでほとんどのクライアント ツール
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-新しい Azure Data Studio は、SQL Server を管理するためのクロスプラット フォーム ツールです。 詳細については、次を参照してください。 [Azure Data Studio](../azure-data-studio/what-is.md)します。
+新しい Azure Data Studio は、SQL Server を管理するためのクロスプラット フォーム ツールです。 詳細については、[Azure Data Studio](../azure-data-studio/what-is.md)を参照してください。
 
 ## <a name="sql-server-management-studio-on-windows"></a>Windows 上の SQL Server Management Studio
 
-SQL Server Management Studio (SSMS) は、SQL Server を管理するためのグラフィカル ユーザー インターフェイスを提供する Windows アプリケーションです。 現在 Windows でしか実行は、Linux の SQL Server インスタンスにリモート接続に使用できます。 SSMS を使用して、SQL Server を管理する方法については、次を参照してください。 [SSMS を使用した Linux 上の SQL Server の管理に](sql-server-linux-manage-ssms.md)します。
+SQL Server Management Studio (SSMS) は、SQL Server を管理するためのグラフィカル ユーザー インターフェイスを提供する Windows アプリケーションです。 現在 Windows でしか実行は、Linux の SQL Server インスタンスにリモート接続に使用できます。 SSMS を使用して、SQL Server を管理する方法については、[SSMS を使用した Linux 上の SQL Server の管理に](sql-server-linux-manage-ssms.md)を参照してください。
 
 ## <a name="mssql-cli-preview"></a>mssql cli (プレビュー)
 
@@ -45,8 +45,8 @@ SQL server の新しいクロスプラット フォームでのスクリプト �
 
 ## <a name="powershell"></a>PowerShell
 
-PowerShell では、SQL Server on Linux を管理する場合は、豊富なコマンドライン環境を提供します。 詳細については、次を参照してください。 [Linux 上の SQL Server の管理に PowerShell を使用して](sql-server-linux-manage-powershell.md)します。
+PowerShell では、SQL Server on Linux を管理する場合は、豊富なコマンドライン環境を提供します。 詳細については、[Linux 上の SQL Server の管理に PowerShell を使用して](sql-server-linux-manage-powershell.md)を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
-Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux](sql-server-linux-overview.md)します。
+Linux 上の SQL Server に関する詳細については、[SQL Server on Linux](sql-server-linux-overview.md)を参照してください。

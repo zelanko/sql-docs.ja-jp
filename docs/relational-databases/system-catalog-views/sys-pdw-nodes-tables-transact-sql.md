@@ -27,7 +27,7 @@ ms.locfileid: "58305930"
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|\<列を継承 >||このビューが継承する列の一覧は、次を参照してください。 [sys.objects](../system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)します。||  
+|\<列を継承 >||このビューが継承する列の一覧は、[sys.objects](../system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)を参照してください。||  
 |lob_data_space_id|**int**||常に 0 です。|  
 |filestream_data_space_id|**int**|データ領域の FILESTREAM ファイル グループの ID または [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|このテーブルで使用される列の最大の ID。||  

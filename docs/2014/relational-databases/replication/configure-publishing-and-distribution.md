@@ -28,7 +28,7 @@ ms.locfileid: "54135862"
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
- 詳細については、次を参照してください。[レプリケーションのデプロイをセキュリティで保護された](security/view-and-modify-replication-security-settings.md)します。  
+ 詳細については、[レプリケーションのデプロイをセキュリティで保護された](security/view-and-modify-replication-security-settings.md)を参照してください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  パブリケーションの新規作成ウィザードまたはディストリビューションの構成ウィザードを使用して、ディストリビューションを構成します。 ディストリビューターを構成したら、**[ディストリビューターのプロパティ - \<ディストリビューター>]** ダイアログ ボックスでプロパティを表示および変更します。 **db_owner** 固定データベース ロールのメンバーがパブリケーションを作成できるようにディストリビューターを構成する場合、またはパブリッシャーではないリモート ディストリビューターを構成する必要がある場合は、ディストリビューションの構成ウィザードを使用します。  

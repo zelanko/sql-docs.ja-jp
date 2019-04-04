@@ -87,7 +87,7 @@ DEA では、メニュー アイコンを選択します。 展開されたメ�
 
 ## <a name="next-steps"></a>次のステップ
 
-- コマンド プロンプトで、分析レポートを生成する方法については、次を参照してください。[コマンド プロンプトで実行](database-experimentation-assistant-run-command-prompt.md)します。
+- コマンド プロンプトで、分析レポートを生成する方法については、[コマンド プロンプトで実行](database-experimentation-assistant-run-command-prompt.md)を参照してください。
 
 - DEA とデモンストレーションを 19 分については、次のビデオをご覧ください。
 

@@ -39,7 +39,7 @@ SQL Server 2016 には R のみです。 SQL Server 2017 では、R と Python �
 | Python ツール | 組み込みの Python のコマンド ライン ツールは、アドホック テストとタスクに適しています。 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe でツールを検索します。 |
 | Anaconda | Anaconda とは、Python と重要なパッケージのオープン ソース ディストリビューションです。 |
 | Python のサンプルとスクリプト | R と Python には、組み込みのデータ セットとスクリプトが含まれています。 Revoscalepy データを掲載 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample データ。 |
-| R および Python で事前トレーニング済みモデル | 事前トレーニング済みモデルは特定のユース ケース用に作成し、microsoft データ サイエンスのエンジニア リング チームによって管理されます。 事前トレーニング済みモデルとして使用することができます-正、負のセンチメントをスコア付けで、テキストまたはイメージを提供する新しいデータの入力を使用して機能を検出します。 事前トレーニング済みモデルはサポートされていると、スタンドアロン サーバーで使用できますが、SQL Server セットアップでインストールすることはできません。 詳細については、次を参照してください。[インストールには、SQL Server で機械学習モデルが事前トレーニング済み](../install/sql-pretrained-models-install.md)します。 |
+| R および Python で事前トレーニング済みモデル | 事前トレーニング済みモデルは特定のユース ケース用に作成し、microsoft データ サイエンスのエンジニア リング チームによって管理されます。 事前トレーニング済みモデルとして使用することができます-正、負のセンチメントをスコア付けで、テキストまたはイメージを提供する新しいデータの入力を使用して機能を検出します。 事前トレーニング済みモデルはサポートされていると、スタンドアロン サーバーで使用できますが、SQL Server セットアップでインストールすることはできません。 詳細については、[インストールには、SQL Server で機械学習モデルが事前トレーニング済み](../install/sql-pretrained-models-install.md)を参照してください。 |
 
 ## <a name="using-a-standalone-server"></a>スタンドアロン サーバーを使用します。
 

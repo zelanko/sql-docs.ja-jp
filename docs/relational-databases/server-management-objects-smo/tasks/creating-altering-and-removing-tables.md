@@ -26,7 +26,7 @@ ms.locfileid: "47837560"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) では、テーブルは <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトによって表されます。 SMO オブジェクト階層では、<xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトは <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトの下位にあります。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、プログラミング環境、テンプレート、およびアプリケーションを作成するプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、プログラミング環境、テンプレート、およびアプリケーションを作成するプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Visual Basic でのテーブルの作成、変更、および削除  
  このコード例では、型や目的の異なるさまざまな列があるテーブルを作成します。 また、ID フィールドの作成方法、主キーの作成方法、およびテーブル プロパティの変更方法の例を示します。  

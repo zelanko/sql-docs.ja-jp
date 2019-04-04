@@ -30,4 +30,4 @@ ms.locfileid: "47793464"
   
  指定された結果セットの現在のレコードの 1 つのフィールドの値を取得します。  
   
- 詳細については、次を参照してください。 [SQLGetData](../../odbc/reference/syntax/sqlgetdata-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLGetData](../../odbc/reference/syntax/sqlgetdata-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

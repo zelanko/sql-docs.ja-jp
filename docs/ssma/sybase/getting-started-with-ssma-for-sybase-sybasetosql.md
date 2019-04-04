@@ -23,7 +23,7 @@ ms.locfileid: "47678370"
 このトピックでは、インストール プロセスを紹介し、SSMA ユーザー インターフェイスを理解し、支援します。  
   
 ## <a name="installing-and-licensing-ssma"></a>インストールして、SSMA をライセンス  
-SSMA を使用する最初にインストールする必要 SSMA クライアント プログラムのターゲット インスタンスと SAP ASE のソース インスタンスの両方にアクセスできるコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database。 サーバー側のデータの移行を使用する必要がありますにインストールする拡張機能パックと少なくとも 1 つの SAP ASE プロバイダー (OLE DB または ADO.NET) を実行しているコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 これらのコンポーネントは、データの移行と SAP ASE システム関数のエミュレーションをサポートします。 インストール手順については、次を参照してください。 [SAP ASE のインストールの SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)します。  
+SSMA を使用する最初にインストールする必要 SSMA クライアント プログラムのターゲット インスタンスと SAP ASE のソース インスタンスの両方にアクセスできるコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database。 サーバー側のデータの移行を使用する必要がありますにインストールする拡張機能パックと少なくとも 1 つの SAP ASE プロバイダー (OLE DB または ADO.NET) を実行しているコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 これらのコンポーネントは、データの移行と SAP ASE システム関数のエミュレーションをサポートします。 インストール手順については、[SAP ASE のインストールの SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)を参照してください。  
   
 SSMA を起動するには、クリックして**開始**、 をポイント**すべてのプログラム**、 をポイント **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase**、し、  **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase**です。 初めて、SSMA を起動するライセンスのダイアログ ボックスが表示されます。 SSMA を使用する前に、Windows Live ID を使用して、SSMA をライセンスする必要があります。 ライセンスの手順でインストール手順に記載されて、 [for Sybase クライアントのインストールの SSMA &#40;SybaseToSQL&#41; ](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)トピック。  
   
@@ -38,7 +38,7 @@ SSMA は、インストールして、ライセンス認証は後に、SAP ASE �
   
 変換されたスキーマの読み込み後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]か Azure SQL Database では、Sybase メタデータ エクスプ ローラーに戻ってに SAP ASE データベースからデータを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL データベース。  
   
-これらのタスクとその実行方法の詳細については、次を参照してください。 [SQL Server - Azure SQL Database への SAP ASE データベースの移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)します。  
+これらのタスクとその実行方法の詳細については、[SQL Server - Azure SQL Database への SAP ASE データベースの移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)を参照してください。  
   
 次のセクションでは、SSMA ユーザー インターフェイスの機能について説明します。  
   
@@ -52,16 +52,16 @@ Sybase メタデータ エクスプ ローラーを使用すると、次のタ�
   
 -   各データベース内のテーブルを参照します。  
   
--   変換でオブジェクトを選択し、オブジェクトを変換し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database の構文。 詳細については、次を参照してください。 [SAP ASE データベース オブジェクトの変換&#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)します。  
+-   変換でオブジェクトを選択し、オブジェクトを変換し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database の構文。 詳細については、[SAP ASE データベース オブジェクトの変換&#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)を参照してください。  
   
--   データ移行のためのオブジェクトを選択し、それらのオブジェクトからデータを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database。 詳細については、次を参照してください。 [SAP ASE データの移行 SQL Server - Azure SQL Database の&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md)します。  
+-   データ移行のためのオブジェクトを選択し、それらのオブジェクトからデータを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database。 詳細については、[SAP ASE データの移行 SQL Server - Azure SQL Database の&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md)を参照してください。  
   
 #### <a name="sql-server-or-sql-azure-metadata-explorer"></a>SQL Server または SQL Azure メタデータ エクスプ ローラー  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure メタデータ エクスプ ローラーのインスタンスに関する情報が表示または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database。 インスタンスに接続すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database、SSMA そのインスタンスに関するメタデータを取得し、プロジェクト ファイルに格納します。  
   
 使用することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または変換後の SAP ASE データベース オブジェクトを選択し、読み込む SQL Azure メタデータ エクスプ ローラー (同期) これらのオブジェクトのインスタンスに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database。  
   
-詳細については、次を参照してください。[を SQL Server に変換されたデータベース オブジェクトの読み込み&#40;SybaseToSQL&#41;](../../ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md)します。  
+詳細については、[を SQL Server に変換されたデータベース オブジェクトの読み込み&#40;SybaseToSQL&#41;](../../ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md)を参照してください。  
   
 ### <a name="metadata"></a>メタデータ  
 各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、Sybase メタデータ エクスプ ローラーでテーブルを選択する場合は、6 つのタブが表示されます:**テーブル**、 **SQL**、**型マッピングの**、**データ**、 。**プロパティ**、および**レポート**します。 **レポート** タブには、選択したオブジェクトを含むレポートを作成した後にのみ情報が含まれます。 内のテーブルを選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure メタデータ エクスプ ローラー、3 つのタブが表示されます:**テーブル**、 **SQL**、および**データ**します。  

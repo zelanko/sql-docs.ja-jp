@@ -33,7 +33,7 @@ Linux 上の SQL Server FCI を作成するを参照してください[Linux 上
 
 * SLES でのクラスタ リングの階層は SUSE Linux Enterprise に基づいて[高可用性の拡張機能 (HAE)](https://www.suse.com/products/highavailability)します。
 
-    クラスターの構成、リソース エージェントのオプション、管理、ベスト プラクティス、および推奨事項の詳細については、次を参照してください。 [SUSE Linux Enterprise 高可用性拡張子 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)します。
+    クラスターの構成、リソース エージェントのオプション、管理、ベスト プラクティス、および推奨事項の詳細については、[SUSE Linux Enterprise 高可用性拡張子 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)を参照してください。
 
 RHEL HA アドオンと SUSE HAE の両方が上に構築された[Pacemaker](https://clusterlabs.org/)します。
 

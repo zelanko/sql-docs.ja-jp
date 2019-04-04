@@ -72,7 +72,7 @@ AdventureWorks のダウンロード リンクとインストール手順につ�
 5. 必要に応じて、データのターゲットの場所を変更し、ログ ファイルで、**ファイル**ウィンドウ。 ベスト プラクティスとしてデータを配置し、ログ ファイルを別のドライブにあるに注意してください。
 6. **[OK]** をクリックします。 これにより、データベースの復元が開始されます。 完了した後、AdventureWorks データベースの SQL Server インスタンスにインストールされている必要があります。
 
-SQL Server データベースを復元する方法の詳細については、次を参照してください。 [SSMS を使用してデータベース バックアップを復元](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)します。
+SQL Server データベースを復元する方法の詳細については、[SSMS を使用してデータベース バックアップを復元](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)を参照してください。
 
 
 ### <a name="attach-a-datafile"></a>データ ファイルをアタッチします。
@@ -86,7 +86,7 @@ SQL Server データベースを復元する方法の詳細については、次
     1. データ ファイル (.mdf) とログ ファイル (.ldf) ではなくをしかない場合、下のウィンドウに、.ldf を強調表示して選択**削除**します。 これにより、新しいログ ファイルが作成されます。 
 1. 選択**OK**ファイルを添付します。 ファイルがアタッチされた後に、AdventureWorks データベースの SQL Server インスタンスにインストールされている必要があります。  
 
-データベース ファイルのアタッチの詳細については、次を参照してください。[データベースをアタッチする](../relational-databases/databases/attach-a-database.md)します。 
+データベース ファイルのアタッチの詳細については、[データベースをアタッチする](../relational-databases/databases/attach-a-database.md)を参照してください。 
 
 ## <a name="install-to-azure-sql-database"></a>Azure SQL Database へのインストールします。
 

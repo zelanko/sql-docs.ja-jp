@@ -105,7 +105,7 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-詳細と、R パッケージの説明フィールドの既定のフィールド オプションについては、次を参照してください。 [ https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)します。
+詳細と、R パッケージの説明フィールドの既定のフィールド オプションについては、[ https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)を参照してください。
 
 ### <a name="python"></a>Python
 

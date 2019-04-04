@@ -29,7 +29,7 @@ ms.locfileid: "48088062"
   マネージド コードが外部リソースにアクセスする際に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、そのルーチンを実行している現在の実行コンテキストの権限を自動的には借用しません。 `EXTERNAL_ACCESS` および `UNSAFE` アセンブリのコードは、現在の実行コンテキストの権限を明示的に借用することができます。  
   
 > [!NOTE]  
->  権限借用の動作の変更については、次を参照してください。 [SQL Server 2014 におけるデータベース エンジン機能の重大な変更](../breaking-changes-to-database-engine-features-in-sql-server-2016.md)します。  
+>  権限借用の動作の変更については、[SQL Server 2014 におけるデータベース エンジン機能の重大な変更](../breaking-changes-to-database-engine-features-in-sql-server-2016.md)を参照してください。  
   
  インプロセス データ アクセス プロバイダーには、`SqlContext.WindowsIdentity` というアプリケーション プログラミング インターフェイスが用意されています。これを使用して、現在のセキュリティ コンテキストに関連付けられたトークンを取得できます。 `EXTERNAL_ACCESS` アセンブリと `UNSAFE` アセンブリのマネージド コードでは、このメソッドを使用してコンテキストを取得し、.NET Framework `WindowsIdentity.Impersonate` メソッドを使用してそのコンテキストの権限を借用できます。 ユーザー コードから明示的に権限を借用するときは、次の制限事項が適用されます。  
   

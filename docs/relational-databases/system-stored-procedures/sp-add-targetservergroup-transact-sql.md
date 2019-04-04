@@ -49,7 +49,7 @@ sp_add_targetservergroup [ @name = ] 'name'
  なし  
   
 ## <a name="remarks"></a>コメント  
- ターゲット サーバー グループを使用すると、ターゲット サーバーの集合に対してジョブを簡単に実行できます。 詳細については、次を参照してください。 [sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)します。  
+ ターゲット サーバー グループを使用すると、ターゲット サーバーの集合に対してジョブを簡単に実行できます。 詳細については、[sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールは、このプロシージャを実行できます。  

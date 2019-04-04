@@ -167,7 +167,7 @@ SSMA コンソールのコマンド ライン オプションの表を参照し�
   
 1.  パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)します。  
   
-2.  レポートを生成するため、次を参照してください。[レポートを生成する&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)します。  
+2.  レポートを生成するため、[レポートを生成する&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)を参照してください。  
   
-3.  コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)します。  
+3.  コンソールで問題をトラブルシューティングするには、[トラブルシューティング&#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)を参照してください。  
   

@@ -34,4 +34,4 @@ SELECT ProductID, ProductName, UnitPrice
   
  使用することができます、 **Recordset.NextRecordset** 2 つのオブジェクトを列挙するメソッド。  
   
- 詳細については、次を参照してください。 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)します。
+ 詳細については、[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)を参照してください。

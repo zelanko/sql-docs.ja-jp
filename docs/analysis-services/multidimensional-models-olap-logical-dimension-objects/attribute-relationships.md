@@ -26,7 +26,7 @@ ms.locfileid: "52542760"
   
 -   セカンダリ テーブルの外部キーにバインドされた属性と、セカンダリ テーブルの列にバインドされた各非キー属性の間  
   
- ただし、さまざまな理由で、上記の既定の属性リレーションシップの変更が必要になる場合もあります。 たとえば、非キー属性に基づいて、自然階層、カスタムの並べ替え順、ディメンションの粒度などを定義できます。 詳細については、次を参照してください。 [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)します。  
+ ただし、さまざまな理由で、上記の既定の属性リレーションシップの変更が必要になる場合もあります。 たとえば、非キー属性に基づいて、自然階層、カスタムの並べ替え順、ディメンションの粒度などを定義できます。 詳細については、[Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)を参照してください。  
   
 > [!NOTE]  
 >  属性リレーションシップは、多次元式 (MDX) ではメンバーのプロパティと呼ばれます。  
@@ -68,7 +68,7 @@ ms.locfileid: "52542760"
   
  **SourceAttribute**レベルの説明にどの属性が使用されるレベルのプロパティを決定します。 **KeyColumns**属性のプロパティが、メンバーを提供するデータ ソース ビューの列を指定します。 **NameColumn**属性のプロパティは、メンバーに対して別の名前列を指定できます。  
   
- 使用して、ユーザー定義階層でレベルを定義する[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、**ディメンション デザイナー**のデータ ソース ビューに含まれる関連テーブルからディメンション属性、ディメンション テーブル内の列または列を選択することができますキューブです。 ユーザー定義階層の作成の詳細については、次を参照してください。[ユーザー定義階層の](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)します。  
+ 使用して、ユーザー定義階層でレベルを定義する[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、**ディメンション デザイナー**のデータ ソース ビューに含まれる関連テーブルからディメンション属性、ディメンション テーブル内の列または列を選択することができますキューブです。 ユーザー定義階層の作成の詳細については、[ユーザー定義階層の](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)を参照してください。  
   
  Analysis Services では通常、メンバーの内容が想定されています。 リーフ メンバーには子孫がなく、元のデータ ソースから派生したデータが含まれています。 非リーフ メンバーには子孫があり、子メンバーで実行した集計から派生したデータが含まれています。 集計レベルのメンバーは、下位レベルの集計が基になっています。 そのため、ときに、 **IsAggregatable**プロパティに設定されて**False**レベルの基になる属性の集計可能な属性として追加する必要ない上位のレベル。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52542760"
  属性リレーションシップを作成するときの主な制約は、属性リレーションシップによって参照される属性に、属性リレーションシップが所属する属性のメンバーの値が 2 つ以上含まれていないことを確認する必要があることです。 たとえば、City 属性と State 属性の間のリレーションシップを定義する場合、それぞれの市区町村は 1 つの都道府県にのみ関連付けることができます。  
   
 ## <a name="attribute-relationship-queries"></a>属性リレーションシップのクエリ  
- メンバーのプロパティの形式で、属性リレーションシップからデータを取得する MDX クエリを使用することができます、**プロパティ**MDX のキーワード**選択**ステートメント。 MDX を使用して、メンバー プロパティを取得する方法の詳細については、次を参照してください。[メンバー プロパティを使用して&#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)します。  
+ メンバーのプロパティの形式で、属性リレーションシップからデータを取得する MDX クエリを使用することができます、**プロパティ**MDX のキーワード**選択**ステートメント。 MDX を使用して、メンバー プロパティを取得する方法の詳細については、[メンバー プロパティを使用して&#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

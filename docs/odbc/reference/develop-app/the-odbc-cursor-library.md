@@ -31,4 +31,4 @@ ms.locfileid: "47727380"
   
  ブロックとスクロール可能なカーソルは、多くのアプリケーションに非常に便利な追加機能です。 ただし、必ずしもすべてのドライバーは、ブロックとスクロール可能なカーソルをサポートします。 同じ位置指定更新の場合は true、および delete ステートメントと**SQLSetPos**、データの更新についてはします。 そのため、以前に、Microsoft Data Access Components (MDAC)、SDK に含まれる、Windows SDK の ODBC コンポーネントには、カーソル ライブラリが含まれています。 ブロック、静的カーソル、位置指定の update および delete ステートメントの場合、カーソル ライブラリを実装して**SQLSetPos**開いているグループの標準的な CLI への準拠レベルを満たす任意のドライバー用です。 カーソル ライブラリは、ODBC アプリケーションと共に再配布できる可能性があります。詳細については、SDK のライセンス契約を参照してください。  
   
- カーソル ライブラリを使用するには、アプリケーションは、データ ソースに接続する前に SQL_ATTR_ODBC_CURSORS 接続属性を設定します。 カーソル ライブラリの詳細については、次を参照してください。[付録 f: ODBC カーソル ライブラリ](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)します。
+ カーソル ライブラリを使用するには、アプリケーションは、データ ソースに接続する前に SQL_ATTR_ODBC_CURSORS 接続属性を設定します。 カーソル ライブラリの詳細については、[付録 f: ODBC カーソル ライブラリ](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)を参照してください。

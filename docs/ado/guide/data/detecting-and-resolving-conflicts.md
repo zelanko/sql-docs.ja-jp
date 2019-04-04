@@ -114,7 +114,7 @@ ms.locfileid: "47625289"
   
  どのような競合が発生したかを判断するのに、または特定のフィールドの現在のレコードの Status プロパティを使用できます。  
   
- エラー処理の詳細については、次を参照してください。[エラー処理](../../../ado/guide/data/error-handling.md)します。  
+ エラー処理の詳細については、[エラー処理](../../../ado/guide/data/error-handling.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [バッチ モード](../../../ado/guide/data/batch-mode.md)

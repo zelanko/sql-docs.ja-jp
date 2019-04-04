@@ -26,7 +26,7 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47613310"
 ---
 # <a name="how-event-handlers-work-together"></a>複数のイベント ハンドラーの連携方法
-Visual Basic でのすべてのイベント ハンドラーでプログラミングしている場合を除き、**接続**と**Recordset**かどうか実際に処理するすべてのイベントに関係なく、イベントを実装する必要があります。 行う必要がある実装の作業の量は、使用するプログラミング言語に依存します。 詳細については、次を参照してください。[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)します。  
+Visual Basic でのすべてのイベント ハンドラーでプログラミングしている場合を除き、**接続**と**Recordset**かどうか実際に処理するすべてのイベントに関係なく、イベントを実装する必要があります。 行う必要がある実装の作業の量は、使用するプログラミング言語に依存します。 詳細については、[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)を参照してください。  
   
 ## <a name="paired-event-handlers"></a>1 対のイベント ハンドラー  
  各はイベント ハンドラーが関連付けられている**完了**イベント ハンドラー。 アプリケーションが、フィールドの値に変更されたときに、たとえば、 **WillChangeField**イベント ハンドラーが呼び出されます。 変更が許容される場合は、アプリケーションのまま、 **adStatus**パラメーターが変更されず、操作を実行します。 操作の完了時、 **FieldChangeComplete**イベントは、アプリケーション、操作が完了したことを通知します。 場合は、正常に完了した**adStatus**が含まれています**adStatusOK**、それ以外の**adStatus**を含む**adStatusErrorsOccurred**と確認する必要があります、**エラー**エラーの原因を特定するオブジェクト。  

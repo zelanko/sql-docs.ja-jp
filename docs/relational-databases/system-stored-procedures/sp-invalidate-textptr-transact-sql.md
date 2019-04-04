@@ -48,7 +48,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ## <a name="remarks"></a>コメント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、各データベースの各トランザクションに、アクティブで有効な行内テキスト ポインターを 1,024 個まで使用できます。ただし、複数のデータベースにまたがるトランザクションの場合は、各データベースに行内テキスト ポインターを 1,024 個まで使用できます。 **sp_invalidate_textptr**行内テキスト ポインターを無効にし、そのため、他の行内テキスト ポインター用に領域を解放するために使用できます。  
   
- Text in row オプションの詳細については、次を参照してください。 [sp_tableoption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)します。  
+ Text in row オプションの詳細については、[sp_tableoption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  

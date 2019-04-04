@@ -153,7 +153,7 @@ ms.locfileid: "52537185"
   
 -   **ルール:**[!INCLUDE[msCoName](../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、確率値を使用して、生成されるルールの数を制限します。 ルールの数を制御するには、`MINIMUM_PROBABILITY` パラメーターまたは `MINIMUM _IMPORTANCE` パラメーターを設定します。  
   
- 高度なパラメーターを構成する方法の詳細については、次を参照してください。[データ マイニング アルゴリズム&#40;SQL Server データ マイニング アドイン&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)します。  
+ 高度なパラメーターを構成する方法の詳細については、[データ マイニング アルゴリズム&#40;SQL Server データ マイニング アドイン&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  

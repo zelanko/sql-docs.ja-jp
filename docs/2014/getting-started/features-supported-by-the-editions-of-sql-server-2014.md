@@ -29,7 +29,7 @@ ms.locfileid: "56802656"
 
   このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のさまざまなエディションでサポートされる機能の詳細について説明します。 
 
- > **注:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の 180 日間の試用期間中は評価版で使用できます。 詳細については、次を参照してください。、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用版ソフトウェア Web サイト](https://go.microsoft.com/fwlink/?LinkId=190955)します。  
+ > **注:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の 180 日間の試用期間中は評価版で使用できます。 詳細については、、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用版ソフトウェア Web サイト](https://go.microsoft.com/fwlink/?LinkId=190955)を参照してください。  
 > 
 > **注:** SQL Server Evaluation Edition および SQL Server Developer Edition でサポートされている機能については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise の機能セットをご覧ください。  
   
@@ -426,7 +426,7 @@ ms.locfileid: "56802656"
   
  <sup>1</sup>でサポートされているデータ ソースの詳細については[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]を参照してください[Reporting Services でサポートされるデータ ソース&#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)します。  
   
- <sup>2</sup>必要[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint モードでします。 詳細については、次を参照してください。 [Reporting Services SharePoint モードのインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)します。  
+ <sup>2</sup>必要[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint モードでします。 詳細については、[Reporting Services SharePoint モードのインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)を参照してください。  
   
 ### <a name="report-server-database-server-edition-requirements"></a>レポート サーバー データベースのサーバー エディション  
  レポート サーバー データベースを作成するときは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 次の表に、 [!INCLUDE[ssDE](../includes/ssde-md.md)] の特定のエディションで使用できる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のエディションを示します。  

@@ -39,7 +39,7 @@ ms.locfileid: "57579042"
  詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入された、エンタープライズ レベルの高可用性およびディザスター リカバリー ソリューションです。このソリューションによって、1 つ以上のユーザー データベースの可用性が最大限に高まります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが Windows Server フェールオーバー クラスタリング (WSFC) ノードに存在している必要があります。 詳細については、次を参照してください。 [AlwaysOn 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)します。  
+ [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入された、エンタープライズ レベルの高可用性およびディザスター リカバリー ソリューションです。このソリューションによって、1 つ以上のユーザー データベースの可用性が最大限に高まります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが Windows Server フェールオーバー クラスタリング (WSFC) ノードに存在している必要があります。 詳細については、[AlwaysOn 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)を参照してください。  
   
 > [!NOTE]  
 >  FCI は、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]を活用して、データベース レベルでのリモートのディザスター リカバリーを実現します。 詳細については、「[フェールオーバー クラスタリングと AlwaysOn 可用性グループ #40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」を参照してください。  

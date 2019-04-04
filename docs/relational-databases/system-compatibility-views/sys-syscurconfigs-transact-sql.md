@@ -31,7 +31,7 @@ ms.locfileid: "47757698"
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在の構成オプションごとに 1 つのエントリを保持します。 また、このビューには、構成構造を表す 4 つのエントリも登録されます。 **syscurconfigs**は、ユーザーが照会時に動的に構築します。 詳細については、次を参照してください。 [sys.sysconfigures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md)します。  
+  現在の構成オプションごとに 1 つのエントリを保持します。 また、このビューには、構成構造を表す 4 つのエントリも登録されます。 **syscurconfigs**は、ユーザーが照会時に動的に構築します。 詳細については、[sys.sysconfigures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md)を参照してください。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  

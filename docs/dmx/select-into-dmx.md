@@ -41,7 +41,7 @@ FROM <existing model>
  任意。 アルゴリズムのプロバイダー定義パラメーターのコンマ区切りのリストです。  
   
  *式 (expression)*  
- トレーニング データに対する有効なフィルター条件に評価される式です。 フィルターとして使用できる式の詳細については、次を参照してください。[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
+ トレーニング データに対する有効なフィルター条件に評価される式です。 フィルターとして使用できる式の詳細については、[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)を参照してください。  
   
  *既存のモデル*  
  コピーする既存のモデルの名前です。  

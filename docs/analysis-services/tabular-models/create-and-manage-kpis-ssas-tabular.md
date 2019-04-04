@@ -42,7 +42,7 @@ ms.locfileid: "53072089"
 5.  **[説明]** をクリックして KPI、値、状態、および対象の説明を入力します。  
   
 > [!TIP]  
->  Excel で分析機能を使用して、KPI をテストできます。 詳細については、次を参照してください。 [Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)します。  
+>  Excel で分析機能を使用して、KPI をテストできます。 詳細については、[Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)を参照してください。  
   
 ###  <a name="bkmk_edit_KPI"></a> KPI を編集するには  
   

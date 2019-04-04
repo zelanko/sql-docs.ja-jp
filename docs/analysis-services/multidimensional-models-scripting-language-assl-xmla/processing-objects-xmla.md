@@ -62,7 +62,7 @@ ms.locfileid: "50145387"
   
  設定した場合、 **ProcessAffectedObjects**の属性、**プロセス**true の場合、指定したオブジェクトを処理することによって影響を受けるオブジェクトの処理も関連するすべてのコマンドします。 使用して、ディメンションの増分更新する場合など、 *ProcessUpdate*処理オプション、**プロセス**コマンドを任意のパーティションの集計はメンバーによって無効になる中追加または削除によって処理されることも[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]場合**ProcessAffectedObjects**設定を true にします。 この場合、1 つで**プロセス**コマンドで複数のオブジェクトを処理できる、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスが[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で指定された 1 つのオブジェクトだけでなくオブジェクトが決定、**プロセス**コマンドが処理することもあります。  
   
- ただし、同時に複数を使用して、ディメンションなど、複数のオブジェクトを処理できる**プロセス**コマンドの中で、**バッチ**コマンド。 バッチ操作オブジェクトの直列または並列処理のために、細かいレベルの制御を提供する、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスを使用するより、 **ProcessAffectedObjects**属性、およびの処理方法をチューニングできるより大きな[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。 バッチ操作の実行の詳細については、次を参照してください。[バッチ操作の実行&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)します。  
+ ただし、同時に複数を使用して、ディメンションなど、複数のオブジェクトを処理できる**プロセス**コマンドの中で、**バッチ**コマンド。 バッチ操作オブジェクトの直列または並列処理のために、細かいレベルの制御を提供する、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスを使用するより、 **ProcessAffectedObjects**属性、およびの処理方法をチューニングできるより大きな[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。 バッチ操作の実行の詳細については、[バッチ操作の実行&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)を参照してください。  
   
 ## <a name="specifying-out-of-line-bindings"></a>不一致バインドの指定  
  場合、**プロセス**コマンドが含まれていない、**バッチ**コマンド、アウトオブ ライン バインドで必要に応じて指定できます、[バインド](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/bindings-element-xmla)、 [DataSource](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/datasource-element-xmla)、および[DataSourceView](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/datasourceview-element-xmla)のプロパティ、**プロセス**コマンドを処理するオブジェクト。 アウトオブ ライン バインドがデータ ソース、データ ソース ビュー、およびその他のオブジェクトの実行時にのみ、バインドが存在するへの参照、**プロセス**コマンド、および関連付けられている既存のバインドを上書きします処理中のオブジェクト。 不一致バインドが指定されていない場合、処理対象のオブジェクトに現在関連付けられているバインドが使用されます。  
@@ -73,7 +73,7 @@ ms.locfileid: "50145387"
   
 -   データ フロー タスクを使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ディメンション、マイニング モデル、またはパーティションの処理中にデータを提供します。  
   
- 不一致バインドは、Analysis Services Scripting Language (ASSL) の一部として記述されます。 ASSL でのアウトオブ ライン バインドの詳細については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
+ 不一致バインドは、Analysis Services Scripting Language (ASSL) の一部として記述されます。 ASSL でのアウトオブ ライン バインドの詳細については、[データ ソースとバインド&#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)を参照してください。  
   
 ### <a name="incrementally-updating-partitions"></a>パーティションの増分更新  
  通常、既に処理されているパーティションを増分更新する場合は、不一致バインドが必要です。これは、パーティションに対して指定されているバインドが、既にパーティション内で集計されているファクト テーブル データを参照するためです。 使用して、既に処理されているパーティションを増分更新する場合、**プロセス**コマンド、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、次の操作を実行します。  
@@ -84,7 +84,7 @@ ms.locfileid: "50145387"
   
 -   一時パーティションを、選択された既存のパーティションにマージします。  
   
- XML for Analysis (XMLA) を使用してパーティションのマージの詳細については、次を参照してください。[パーティションのマージ&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)します。  
+ XML for Analysis (XMLA) を使用してパーティションのマージの詳細については、[パーティションのマージ&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)を参照してください。  
   
 ## <a name="handling-processing-errors"></a>処理エラーの処理  
  [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla)のプロパティ、**プロセス**コマンドを使用して、オブジェクトの処理中に発生したエラーを処理する方法を指定できます。 たとえば、ディメンションの処理時に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] がキー属性のキー列で重複した値を検出したとします。 属性キーは一意である必要があるため、重複するレコードは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって破棄されます。 に基づいて、 [KeyDuplicate](https://docs.microsoft.com/bi-reference/assl/properties/keyduplicate-element-assl)プロパティの**ErrorConfiguration**、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でした。  

@@ -30,4 +30,4 @@ ms.locfileid: "47655930"
   
  接続ハンドル用にメモリを割り当てます*hdbc*で識別される環境内で*henv*します。 ドライバー マネージャーは、この呼び出しを処理し、ドライバーの呼び出し**SQLAllocConnect**たびに[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)、 **SQLBrowseConnect**、または[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)が呼び出されます。  
   
- 詳細については、次を参照してください。 [SQLAllocConnect](../../odbc/reference/syntax/sqlallocconnect-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLAllocConnect](../../odbc/reference/syntax/sqlallocconnect-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

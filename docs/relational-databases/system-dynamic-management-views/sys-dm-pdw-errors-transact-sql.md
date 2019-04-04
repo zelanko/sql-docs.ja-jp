@@ -31,9 +31,9 @@ ms.locfileid: "58657126"
 |source|**nvarchar(64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |type|**nvarchar (4000)**|発生したエラーの種類です。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |create_time|**datetime**|エラーが発生した時刻。|小さいまたは現在の時刻に等しい。|  
-|pwd_node_id|**int**|特定のノードが存在する場合は、関連の識別子。 ノード id の詳細については、次を参照してください。 [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)します。||  
-|session_id|**nvarchar(32)**|存在する場合は、関連のセッションの識別子。 セッション id の詳細については、次を参照してください。 [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)します。||  
-|request_id|**nvarchar(32)**|存在する場合は、関連の要求の識別子。 要求 id の詳細については、次を参照してください。 [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)します。||  
+|pwd_node_id|**int**|特定のノードが存在する場合は、関連の識別子。 ノード id の詳細については、[sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)を参照してください。||  
+|session_id|**nvarchar(32)**|存在する場合は、関連のセッションの識別子。 セッション id の詳細については、[sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)を参照してください。||  
+|request_id|**nvarchar(32)**|存在する場合は、関連の要求の識別子。 要求 id の詳細については、[sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)を参照してください。||  
 |spid|**int**|存在する場合は、関連の SQL Server セッションの spid。||  
 |thread_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |詳細情報|**nvarchar (4000)**|完全なエラーの説明テキストを保持します。||  

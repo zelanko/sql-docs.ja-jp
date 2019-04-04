@@ -39,7 +39,7 @@ ms.locfileid: "47782860"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Agent> 名前空間にあります。  
   
 ## <a name="examples"></a>使用例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
   
 プログラムを使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]含める必要があります、エージェント、**を使用して**エージェント名前空間を修飾するステートメント。 他の後のステートメントを挿入**を使用して**アプリケーションでは、宣言の前に、ステートメントなど。
   

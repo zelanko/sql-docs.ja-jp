@@ -79,7 +79,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|データベースの ID。<br /><br /> アドホックおよび準備された SQL ステートメントのステートメントがコンパイルされたデータベースの ID。|  
 |**objectid**|**int**|オブジェクトの ID。<br /><br /> アドホックおよび準備された SQL ステートメントに NULL です。|  
-|**number**|**smallint**|番号付きストアド プロシージャでは、この列は、ストアド プロシージャの数を返します。 詳細については、次を参照してください。 [sys.numbered_procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)します。<br /><br /> アドホックおよび準備された SQL ステートメントに NULL です。|  
+|**number**|**smallint**|番号付きストアド プロシージャでは、この列は、ストアド プロシージャの数を返します。 詳細については、[sys.numbered_procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)を参照してください。<br /><br /> アドホックおよび準備された SQL ステートメントに NULL です。|  
 |**encrypted**|**bit**|1 = SQL テキストは暗号化されています。<br /><br /> 0 = SQL テキストは暗号化されません。|  
 |**text**|**nvarchar(max** **)**|SQL クエリのテキスト。<br /><br /> NULL 暗号化されたオブジェクトです。|  
   

@@ -36,7 +36,7 @@ ms.locfileid: "47720500"
   
 -   **値。** 結果セットの各行の値。  
   
- 更新、削除、およびデータを挿入する方法については、次を参照してください。[更新データの概要](../../../odbc/reference/develop-app/updating-data-overview.md)します。  
+ 更新、削除、およびデータを挿入する方法については、[更新データの概要](../../../odbc/reference/develop-app/updating-data-overview.md)を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

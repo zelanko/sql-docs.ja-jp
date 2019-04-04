@@ -132,7 +132,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>シーケンスのフィルター処理  
- 式に述語を追加することにより、式で返されるシーケンスをフィルター処理できます。 詳細については、次を参照してください。[パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)します。 たとえば次のクエリは、3 つの <`a`> 要素ノードのシーケンスを返します。  
+ 式に述語を追加することにより、式で返されるシーケンスをフィルター処理できます。 詳細については、[パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)を参照してください。 たとえば次のクエリは、3 つの <`a`> 要素ノードのシーケンスを返します。  
   
 ```  
 declare @x xml  
@@ -170,7 +170,7 @@ SELECT @x.query('/root/a[@attrA]')
 <a attrA="1">111</a>  
 ```  
   
- パス式で述語を指定する方法の詳細については、次を参照してください。[パス式のステップで述語を指定する](../xquery/path-expressions-specifying-predicates.md)します。  
+ パス式で述語を指定する方法の詳細については、[パス式のステップで述語を指定する](../xquery/path-expressions-specifying-predicates.md)を参照してください。  
   
  次の例では、サブツリーのシーケンス式を構築し、次にフィルターをシーケンスに適用します。  
   

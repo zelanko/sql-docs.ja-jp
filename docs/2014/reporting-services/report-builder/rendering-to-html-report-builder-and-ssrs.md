@@ -27,7 +27,7 @@ ms.locfileid: "58658026"
   
  状況によっては、レポート パラメーターを使用して、レポートが HTML で表示される際にスクリプト インジェクション攻撃を開始することも可能であることを意味します。 レポートのセキュリティ保護の詳細については、「 [レポートとリソースの保護](../security/secure-reports-and-resources.md)」を参照してください。  
   
- ブラウザーの詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)します。  
+ ブラウザーの詳細については、[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

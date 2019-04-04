@@ -36,7 +36,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  行セットを返すクエリ構文です。  
   
 ## <a name="remarks"></a>コメント  
- **OPENQUERY**データ ソースのアクセス許可をサポートすることによって外部データにアクセスするより安全な方法を提供します。 接続文字列はデータ ソースに格納されるので、管理者はデータ ソースのプロパティを使用して、データへのアクセスを管理することができます。 データ ソースの詳細については、次を参照してください。[サポートされるデータ ソース&#40;SSAS - 多次元&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)します。  
+ **OPENQUERY**データ ソースのアクセス許可をサポートすることによって外部データにアクセスするより安全な方法を提供します。 接続文字列はデータ ソースに格納されるので、管理者はデータ ソースのプロパティを使用して、データへのアクセスを管理することができます。 データ ソースの詳細については、[サポートされるデータ ソース&#40;SSAS - 多次元&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)を参照してください。  
   
  クエリを実行して、サーバーで使用できるデータ ソースの一覧を取得することができます、 **MDSCHEMA_INPUT_DATASOURCES**スキーマ行セット。 使用しての詳細については**MDSCHEMA_INPUT_DATASOURCES**を参照してください[MDSCHEMA_INPUT_DATASOURCES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)します。  
   

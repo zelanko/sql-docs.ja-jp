@@ -36,4 +36,4 @@ ms.locfileid: "47692180"
 SELECT * FROM `My Table`.`My Field`  
 ```  
   
- 詳細については、次を参照してください。 [SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

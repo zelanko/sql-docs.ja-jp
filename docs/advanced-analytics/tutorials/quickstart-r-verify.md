@@ -76,7 +76,7 @@ SQL Server インスタンスと R のバージョンがインストールされ
 
 このクエリからすべてのエラーが発生した場合のインストール問題を排除します。 インストール後の構成は、外部コード ライブラリの使用を有効にする必要があります。 参照してください[SQL Server 2017 の Machine Learning サービスをインストール](../install/sql-machine-learning-services-windows-install.md)または[SQL Server 2016 R Services のインストール](../install/sql-r-services-windows-install.md)します。 同様に、スタート パッド サービスが実行されていることを確認します。
 
-環境によっては、SQL Server に接続するための R ワーカー アカウントの有効化、追加のネットワーク ライブラリのインストール、リモートでのコード実行の有効化、すべてを構成した後のインスタンスの再起動が必要な場合があります。 詳細については、次を参照してください。 [R Services のインストールとアップグレードに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)します。
+環境によっては、SQL Server に接続するための R ワーカー アカウントの有効化、追加のネットワーク ライブラリのインストール、リモートでのコード実行の有効化、すべてを構成した後のインスタンスの再起動が必要な場合があります。 詳細については、[R Services のインストールとアップグレードに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)を参照してください。
 
 ## <a name="list-r-packages"></a>リストの R パッケージ
 

@@ -99,7 +99,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 -   カスタム ソースとターゲットのデータ型のマッピングを参照してください[マッピング Sybase ASE と SQL Server データ型&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)します。  
   
--   Sybase データベース オブジェクト定義を変換する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のオブジェクトの定義。 詳細については、次を参照してください。 [Sybase ASE データベース オブジェクトの変換&#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)します。  
+-   Sybase データベース オブジェクト定義を変換する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のオブジェクトの定義。 詳細については、[Sybase ASE データベース オブジェクトの変換&#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server - Azure SQL DB への Sybase ASE データベース移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

@@ -37,7 +37,7 @@ SQL Server PDW のワークロード管理機能は、ユーザーと管理者�
 リソース クラス  
 SQL Server PDW で、*リソース クラス*メモリおよび同時実行の事前割り当て済みの制限のある組み込みのサーバーの役割です。 SQL Server PDW は、要求を送信したログインのリソース クラスのサーバー ロール メンバーシップに基づいて要求にリソースを割り当てます。  
   
-コンピューティング ノードでは、リソース クラスの実装は、SQL Server でのリソース ガバナー機能を使用します。 リソース ガバナーに関する詳細については、次を参照してください。[リソース ガバナー](../relational-databases/resource-governor/resource-governor.md) msdn です。  
+コンピューティング ノードでは、リソース クラスの実装は、SQL Server でのリソース ガバナー機能を使用します。 リソース ガバナーに関する詳細については、[リソース ガバナー](../relational-databases/resource-governor/resource-governor.md) msdn を参照してください。  
   
 ### <a name="understand-current-resource-utilization"></a>現在のリソース使用率を理解します。  
 現在実行中の要求のシステム リソースの使用率を理解するには、SQL Server PDW の動的管理ビューを使用します。 たとえばより多くのメモリで実行速度の遅い大規模なハッシュ結合も役立つようなかどうかを理解するのに Dmv を使用することができます。  

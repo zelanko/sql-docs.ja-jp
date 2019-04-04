@@ -130,4 +130,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- 詳細については、パラメーター、準備されたステートメント、およびプロシージャは、次を参照してください。[ステートメントを実行して](../../../odbc/reference/develop-app/executing-a-statement.md)します。
+ 詳細については、パラメーター、準備されたステートメント、およびプロシージャは、[ステートメントを実行して](../../../odbc/reference/develop-app/executing-a-statement.md)を参照してください。

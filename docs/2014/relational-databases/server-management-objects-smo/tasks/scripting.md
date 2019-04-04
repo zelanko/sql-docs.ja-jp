@@ -40,7 +40,7 @@ ms.locfileid: "52822456"
  3 番目の最後のフェーズでは、指定されたリストとスクリプティング オプションを使用してスクリプトが生成されます。 結果は <xref:System.Collections.Specialized.StringCollection> システム オブジェクトとして返されます。 このフェーズで、<xref:Microsoft.SqlServer.Management.Smo.DependencyTree> オブジェクトの Items コレクションおよび <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> や <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A> などのプロパティから、依存オブジェクト名が抽出されます。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
   
  このコード例には、System.Collections.Specialized 名前空間の `Imports` ステートメントが必要です。 アプリケーションの宣言の前、かつ他の Imports ステートメントの後に、次のステートメントを挿入します。  
   

@@ -25,7 +25,7 @@ ms.locfileid: "47844420"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共通言語統合 (CLR) のプログラミングには、型またはメンバーを持つの使用が許可されない、 **HostProtectionAttribute**を指定する、 **System.Security.Permissions.HostProtectionResource**列挙体の値を持つ**ExternalProcessMgmt**、 **ExternalThreading**、 **MayLeakOnAbort**、 **SecurityInfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **SharedState**、**同期**、または**UI**します。 次の表は、メンバーよぶ型の**Microsoft.VisualBasic.dll**アセンブリがホスト保護属性 (HPA) の値は許可されません。  
   
 > [!NOTE]  
->  この一覧は、サポートされているアセンブリから作成されたものです。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)します。  
+>  この一覧は、サポートされているアセンブリから作成されたものです。 詳細については、[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)を参照してください。  
   
 |**型またはメンバー**|**HPA 値**|  
 |------------------------|------------------------|  

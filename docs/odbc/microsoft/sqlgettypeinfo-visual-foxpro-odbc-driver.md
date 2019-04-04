@@ -53,4 +53,4 @@ ms.locfileid: "47733060"
   
  * 既定の種類  
   
- Visual FoxPro データの種類の詳細については、次を参照してください。 [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)します。 この関数の詳細については、次を参照してください。 [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md)で、 *ODBC プログラマ リファレンス*します。
+ Visual FoxPro データの種類の詳細については、[CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)を参照してください。 この関数の詳細については、[SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

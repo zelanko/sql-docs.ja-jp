@@ -72,10 +72,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |コンカレンシー|**smallint**|1 = 読み取り専用<br /><br /> 2 = スクロール ロック<br /><br /> 3 = オプティミスティック|  
 |scrollable|**smallint**|0 = 順方向専用<br /><br /> 1 = スクロール可能|  
 |open_status|**smallint**|0 = 閉じた状態<br /><br /> 1 = 開いた状態|  
-|cursor_rows|**int**|結果セット内の条件を満たす行の数です。 詳細については、次を参照してください。 [@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)します。|  
+|cursor_rows|**int**|結果セット内の条件を満たす行の数です。 詳細については、[@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)を参照してください。|  
 |fetch_status|**smallint**|このカーソル上での最後のフェッチの状態です。 詳細については、次を参照してください[@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md):。<br /><br /> 0 = フェッチが成功しました。<br /><br /> -1 = フェッチが失敗したか、またはカーソルの境界を越えています。<br /><br /> -2 = 要求された行がありません。<br /><br /> -9 = カーソル上でフェッチは行われていません。|  
 |column_count|**smallint**|カーソル結果セットの列数です。|  
-|row_count|**smallint**|カーソルで実行された最後の操作で処理された行数です。 詳細については、次を参照してください。 [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)します。|  
+|row_count|**smallint**|カーソルで実行された最後の操作で処理された行数です。 詳細については、[@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)を参照してください。|  
 |last_operation|**smallint**|カーソル上で実行された最後の操作:<br /><br /> 0 = カーソル上で操作は実行されていません。<br /><br /> 1 = OPEN <br /><br /> 2 = FETCH <br /><br /> 3 = 挿入<br /><br /> 4 = UPDATE <br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE <br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|サーバーのスコープ内でカーソルを識別する一意の値です。|  
   

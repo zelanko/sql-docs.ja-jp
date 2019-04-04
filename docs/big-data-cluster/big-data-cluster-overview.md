@@ -23,7 +23,7 @@ ms.locfileid: "58860254"
 
 以降で[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]、ビッグ データの SQL Server クラスターでは、Kubernetes で実行されている SQL Server、Spark、および HDFS のコンテナーの拡張性の高いクラスターをデプロイできます。 これらのコンポーネントを使用すると、読み取り、書き込み、および TRANSACT-SQL または Spark からビッグ データの処理、結合および価値の高いリレーショナル データを大量のビッグ データ分析を簡単にすることができますを並行して実行されます。
 
-新機能と最新のリリースの既知の問題の詳細については、次を参照してください。、[リリース ノート](release-notes-big-data-cluster.md)します。
+新機能と最新のリリースの既知の問題の詳細については、、[リリース ノート](release-notes-big-data-cluster.md)を参照してください。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 

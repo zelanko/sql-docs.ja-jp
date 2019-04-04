@@ -29,7 +29,7 @@ ms.locfileid: "52525749"
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]で AlwaysOn 可用性グループのセカンダリ データベースを準備する方法について説明します。 セカンダリ データベースを準備するには、2 つの手順が必要です。(1)、プライマリ データベースの最新のデータベース バックアップとセカンダリ レプリカをホストする各サーバー インスタンスに後続のログ バックアップの復元、RESTORE WITH NORECOVERY を使用して、および (2)、復元されたデータベースを可用性グループに参加させます。  
   
 > [!TIP]  
->  既存のログ配布構成がある場合は、ログ配布プライマリ データベースとその 1 つ以上のセカンダリ データベースを、AlwaysOn プライマリ データベースと 1 つ以上の AlwaysOn セカンダリ データベースに変換できる場合があります。 詳細については、次を参照してください。[移行の前提条件のログ配布から AlwaysOn 可用性グループに&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)します。  
+>  既存のログ配布構成がある場合は、ログ配布プライマリ データベースとその 1 つ以上のセカンダリ データベースを、AlwaysOn プライマリ データベースと 1 つ以上の AlwaysOn セカンダリ データベースに変換できる場合があります。 詳細については、[移行の前提条件のログ配布から AlwaysOn 可用性グループに&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)を参照してください。  
   
 -   **作業を開始する準備:**  
   

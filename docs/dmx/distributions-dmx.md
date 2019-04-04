@@ -34,7 +34,7 @@ ms.locfileid: "37992034"
   
  詳細については[!INCLUDE[msCoName](../includes/msconame-md.md)]データ マイニング アルゴリズムを参照してください[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)します。 サードパーティのアルゴリズム プロバイダーは、追加の分布の種類をサポートしている場合があります。 サポートする分布の種類のアルゴリズムを決定するを使用して、 **SUPPORTED_DISTRIBUTION_FLAGS**スキーマ行セット。  
   
- 分布の種類の詳細については、次を参照してください。[列の分布&#40;データ マイニング&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)します。  
+ 分布の種類の詳細については、[列の分布&#40;データ マイニング&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [コンテンツの種類&#40;データ マイニング&#41;](../analysis-services/data-mining/content-types-data-mining.md)   

@@ -32,7 +32,7 @@ ms.locfileid: "48099222"
 |**[説明]**|マイニング構造の説明を表示します。|  
 |**[タイムスタンプの作成]**|マイニング構造が作成された日時を表示します。|  
 |**[スキーマの最終更新]**|マイニング構造のメタデータが最後に更新された日時を表示します。|  
-|**State**|マイニング構造の処理状態を表示します。 このプロパティの値の詳細については、次を参照してください。<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>します。|  
+|**State**|マイニング構造の処理状態を表示します。 このプロパティの値の詳細については、<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>を参照してください。|  
 |**最後に処理されました。**|マイニング構造が最後に処理された日時を表示します。|  
   
 ## <a name="see-also"></a>参照  

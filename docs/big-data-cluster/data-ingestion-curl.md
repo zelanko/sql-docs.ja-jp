@@ -70,4 +70,4 @@ curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP extern
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server のビッグ データ クラスターの詳細については、次を参照してください。[ビッグ データの SQL Server クラスターとは何ですか?](big-data-cluster-overview.md)します。
+SQL Server のビッグ データ クラスターの詳細については、[ビッグ データの SQL Server クラスターとは何ですか?](big-data-cluster-overview.md)を参照してください。

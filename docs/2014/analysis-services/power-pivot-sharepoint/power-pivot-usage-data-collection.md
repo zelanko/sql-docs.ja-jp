@@ -21,7 +21,7 @@ ms.locfileid: "48187482"
 # <a name="powerpivot-usage-data-collection"></a>PowerPivot 使用状況データ収集
   使用状況データ収集は、ファーム レベルの SharePoint 機能です。 PowerPivot for SharePoint では、このシステムを使用および拡張して、PowerPivot のデータやサービスがどのように使用されているかを示すレポートが PowerPivot 管理ダッシュボードに用意されています。 SharePoint のインストール方法によっては、使用状況データ収集がファームに対して無効になっていることがあります。 ファーム管理者は、使用状況のログ記録を有効にして、PowerPivot 管理ダッシュボードに表示される使用状況データを作成する必要があります。 イベントを有効にして、powerpivot 使用状況データ収集を構成する方法の詳細について参照してください[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。  
   
- PowerPivot 管理ダッシュ ボードの使用状況データについては、次を参照してください。 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)します。  
+ PowerPivot 管理ダッシュ ボードの使用状況データについては、[PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)を参照してください。  
   
  **このトピックの内容:**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48187482"
   
  使用状況データ収集システムでは、イベント情報が、アプリケーション サーバーまたは Web フロント エンド上の使用状況コレクション システムに入力されます。 使用状況データは、タイマー ジョブに応じてシステム内を移動します。タイマー ジョブにより、データは物理サーバー上の一時データ ファイルからデータベース サーバー上の永続的なストレージに移動します。 次の図に、使用状況データをデータ コレクションおよびレポート システム内で移動させるコンポーネントとプロセスを示します。  
   
- **注:** 使用状況データ収集が有効になっていることを確認してください。 確認するには、SharePoint サーバーの全体管理の **[監視]** に移動します。 詳細については、次を参照してください。[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。  
+ **注:** 使用状況データ収集が有効になっていることを確認してください。 確認するには、SharePoint サーバーの全体管理の **[監視]** に移動します。 詳細については、[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)を参照してください。  
   
  ![コンポーネントと使用状況データ収集のプロセス。](../media/gmni-usagedata.gif "コンポーネントと使用状況データ収集のプロセス。")  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48187482"
 |データ更新|スケジュール設定されたデータ更新に応じて PowerPivot サービスにより開始されるデータ更新操作。 データ更新の使用状況履歴は、運用レポート用にアプリケーション レベルで収集され、個々のブックの [データ更新の管理] ページに反映されます。<br /><br /> **注:**[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] および SharePoint 2013 の配置では、Analysis Services サーバーではなく Excel Services によってデータ更新が管理されます。|No. PowerPivot サービス アプリケーション用のデータ更新を有効にした場合、データ更新の使用状況データは常に収集されます。|  
   
 ##  <a name="servicesjobs"></a> サービスおよびタイマー ジョブ  
- 次の表に、使用状況データ収集システムのサービスとデータ コレクション ストアを示します。 PowerPivot 管理ダッシュ ボードのレポート サーバーの状態と使用状況データのデータ更新を強制するため、タイマー ジョブ スケジュールをオーバーライドする方法については、次を参照してください。 [SharePoint 2010 で PowerPivot データ更新](../powerpivot-data-refresh-with-sharepoint-2010.md)します。 タイマー ジョブは、SharePoint サーバーの全体管理で確認できます。 **[監視]** に移動し、 **[ジョブ状態の確認]** をクリックして、 **[ジョブ定義の確認]** をクリックします。  
+ 次の表に、使用状況データ収集システムのサービスとデータ コレクション ストアを示します。 PowerPivot 管理ダッシュ ボードのレポート サーバーの状態と使用状況データのデータ更新を強制するため、タイマー ジョブ スケジュールをオーバーライドする方法については、[SharePoint 2010 で PowerPivot データ更新](../powerpivot-data-refresh-with-sharepoint-2010.md)を参照してください。 タイマー ジョブは、SharePoint サーバーの全体管理で確認できます。 **[監視]** に移動し、 **[ジョブ状態の確認]** をクリックして、 **[ジョブ定義の確認]** をクリックします。  
   
 |コンポーネント|既定のスケジュール|説明|  
 |---------------|----------------------|-----------------|  

@@ -169,7 +169,7 @@ SSMA コンソールのコマンド ライン オプションの表を参照し�
   
 -   パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)します。  
   
--   レポートを生成するため、次を参照してください。[レポートを生成する&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)します。  
+-   レポートを生成するため、[レポートを生成する&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)を参照してください。  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)します。  
+-   コンソールで問題をトラブルシューティングするには、[トラブルシューティング&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)を参照してください。  
   

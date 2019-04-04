@@ -66,8 +66,8 @@ ms.locfileid: "52402857"
 |**backup_start_date**|**datetime**|バックアップ操作が開始された日付と時刻。 NULL にすることができます。|  
 |**backup_finish_date**|**datetime**|バックアップ操作が終了した日付と時刻。 NULL にすることができます。|  
 |**type**|**char(1)**|バックアップの種類。 次の値をとります。<br /><br /> D = データベース<br /><br /> I = データベースの差分<br /><br /> L = ログ<br /><br /> F = ファイルまたはファイル グループ<br /><br /> G = ファイルの差分<br /><br /> P = 部分的<br /><br /> Q = 部分的な差分<br /><br /> NULL にすることができます。|  
-|**sort_order**|**smallint**|バックアップ操作を実行するサーバーの並べ替え順。 NULL にすることができます。 並べ替え順序および照合順序の詳細については、次を参照してください。 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)します。|  
-|**code_page**|**smallint**|バックアップ操作を実行するサーバーのコード ページ。 NULL にすることができます。 コード ページに関する詳細については、次を参照してください。 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)します。|  
+|**sort_order**|**smallint**|バックアップ操作を実行するサーバーの並べ替え順。 NULL にすることができます。 並べ替え順序および照合順序の詳細については、[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)を参照してください。|  
+|**code_page**|**smallint**|バックアップ操作を実行するサーバーのコード ページ。 NULL にすることができます。 コード ページに関する詳細については、[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)を参照してください。|  
 |**compatibility_level**|**tinyint**|データベースに対する互換性レベルの設定。 次の値をとります。<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> NULL にすることができます。<br /><br /> 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|  
 |**database_version**|**int**|データベースのバージョン番号。 NULL にすることができます。|  
 |**backup_size**|**numeric(20,0)**|バックアップ セットのサイズ (バイト単位)。 NULL にすることができます。 VSS のバックアップの backup_size は、推定値です。|  

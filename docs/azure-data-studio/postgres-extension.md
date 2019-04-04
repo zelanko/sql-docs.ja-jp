@@ -35,7 +35,7 @@ PostgreSQL で使用できる Azure Data Studio 機能は次のとおりです�
 
 ## <a name="install-the-postgresql-extension-preview"></a>PostgreSQL 拡張機能 (プレビュー) のインストールします。
 
-Azure データ Studio がインストールされていない場合は、次を参照してください。 その[インストール手順](download.md)します。
+Azure データ Studio がインストールされていない場合は、その[インストール手順](download.md)を参照してください。
 
 1. Azure Data Studio のサイド バーから拡張機能アイコンを選択します。
    ![拡張機能のアイコン](media/extensions/postgresql-extension/extensions-icon.png)

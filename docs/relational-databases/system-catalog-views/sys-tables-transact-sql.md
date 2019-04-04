@@ -35,7 +35,7 @@ ms.locfileid: "47618020"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|\<列を継承 >||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
+|\<列を継承 >||このビューが継承する列の一覧は、[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)を参照してください。|  
 |lob_data_space_id|**int**|0 以外の値は、このテーブルのラージ オブジェクト バイナリ (LOB) データを格納するデータ領域 (ファイル グループまたはパーティション構成) の ID です。 LOB データ型の例として、 **varbinary (max)**、 **varchar (max)**、 **geography**、または**xml**します。<br /><br /> 0 = テーブルには LOB データが含まれません。|  
 |filestream_data_space_id|**int**|FILESTREAM ファイル グループまたは FILESTREAM ファイル グループから成るパーティション構成のデータ領域 ID です。<br /><br /> FILESTREAM ファイル グループの名前を報告するクエリを実行`SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`します。<br /><br /> sys.tables は、filestream_data_space_id = data_space_id で次のビューに結合できます。<br /><br /> -sys.filegroups<br /><br /> -sys.partition_schemes<br /><br /> -sys.indexes<br /><br /> -sys.allocation_units<br /><br /> -sys.fulltext_catalogs<br /><br /> -sys.data_spaces<br /><br /> -sys.destination_data_spaces<br /><br /> -sys.master_files<br /><br /> -sys.database_files<br /><br /> -backupfilegroup (filegroup_id で結合)|  
 |max_column_id_used|**int**|このテーブルで使用される列 ID の最大値です。|  
@@ -48,7 +48,7 @@ ms.locfileid: "47618020"
 |has_unchecked_assembly_data|**bit**|1 = テーブルに、前回の ALTER ASSEMBLY で定義が変更されたアセンブリに依存する、持続データが含まれています。 次の成功した DBCC CHECKDB または DBCC CHECKTABLE の後に 0 にリセットされます。|  
 |text_in_row_limit|**int**|text in row で許可される最大バイト数です。<br /><br /> 0 = text in row オプションは設定されていません。 詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)」を参照してください。|  
 |large_value_types_out_of_row|**bit**|1 = 大きい値の型は行外に格納されます。 詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)」を参照してください。|  
-|is_tracked_by_cdc|**bit**|1 = テーブルで変更データ キャプチャが有効になっています。 詳細については、次を参照してください。 [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)します。|  
+|is_tracked_by_cdc|**bit**|1 = テーブルで変更データ キャプチャが有効になっています。 詳細については、[sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)を参照してください。|  
 |lock_escalation|**tinyint**|テーブルの LOCK_ESCALATION オプションの値です。<br /><br /> 0 = TABLE<br /><br /> 1 = DISABLE<br /><br /> 2 = AUTO|  
 |lock_escalation_desc|**nvarchar(60)**|テーブルの lock_escalation オプションについての説明テキストです。 有効値は、TABLE、AUTO、および DISABLE です。|  
 |is_filetable|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1 = テーブルは FileTable です。<br /><br /> FileTables について詳しくは、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。|  

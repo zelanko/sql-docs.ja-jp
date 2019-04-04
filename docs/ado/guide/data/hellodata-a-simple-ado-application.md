@@ -26,7 +26,7 @@ ms.locfileid: "47624680"
   
 ### <a name="to-run-hellodata"></a>HelloData を実行するには  
   
-1.  ADO ライブラリを参照する新しい標準 EXE Visual Basic プロジェクトを作成します。 詳細については、次を参照してください。 [ADO ライブラリを参照する](../../../ado/guide/referencing-the-ado-libraries.md)します。  
+1.  ADO ライブラリを参照する新しい標準 EXE Visual Basic プロジェクトを作成します。 詳細については、[ADO ライブラリを参照する](../../../ado/guide/referencing-the-ado-libraries.md)を参照してください。  
   
 2.  フォームの上部にある 4 つのコマンド ボタンを作成、**名前**と**キャプション**プロパティの値をこのトピックの最後にある表に示すようにします。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47624680"
 > [!NOTE]
 >  次の例と、このガイドでは、ユーザー id"123 abc"のパスワードを使用して「MyId」が、サーバーに対する認証に使用されます。 サーバーの有効なログオンの資格情報でこれらの値を置き換える必要があります。 また、サーバーの名前を持つ"MySQLServer"値に置き換えてください。  
   
- コードの詳細については、次を参照してください。 [HelloData に関するコメント](../../../ado/guide/data/comments-on-hellodata.md)します。  
+ コードの詳細については、[HelloData に関するコメント](../../../ado/guide/data/comments-on-hellodata.md)を参照してください。  
   
  ![HelloData VB アプリケーションの Form1 を示しています](../../../ado/guide/data/media/hellodata.gif "HelloData。")  
   

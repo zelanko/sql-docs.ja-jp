@@ -46,7 +46,7 @@ ms.locfileid: "48079131"
  たとえば、ある Windows アカウントを別のアカウントで置き換えたり、ビルトイン アカウントを Windows ドメイン アカウントで置き換えたりするなどしてアカウントの種類を切り替えると、暗号化キーのバックアップ コピーを作成するように求めるプロンプトが表示されます。 新しいアカウントを選択すると、バックアップ コピーが自動的に復元されます。  
   
 > [!NOTE]  
->  サービス アカウントを変更するたびに、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーから暗号化キーのバックアップと復元を求められます。 この手順は、暗号化されたデータをレポート サーバーが使用できるようにするために必要です。 これらのアクションの詳細については、次を参照してください。[暗号化キー &#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)します。  
+>  サービス アカウントを変更するたびに、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーから暗号化キーのバックアップと復元を求められます。 この手順は、暗号化されたデータをレポート サーバーが使用できるようにするために必要です。 これらのアクションの詳細については、[暗号化キー &#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)を参照してください。  
   
  さらに、あるレポート サーバーがある場合を SharePoint 統合を実行するように構成モードして変更するサービス アカウントを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager では、SharePoint サーバーの全体管理も開く必要がありますを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**データベース アクセスの許可**ページ、レポート サーバーとインスタンスの設定を再適用します。 この手順は、新しいサービス アカウント アクセスを許可、SharePoint データベースに統合するために必要な[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 製品またはテクノロジとします。 SharePoint サーバーの全体管理でデータベースへのアクセスを付与する方法についての詳細については、次を参照してください[レポート サーバーの構成と管理&#40;Reporting Services SharePoint モード&#41;](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)と[。Reporting Services の SharePoint モード インストール&#40;SharePoint 2010 および SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)します。  
   

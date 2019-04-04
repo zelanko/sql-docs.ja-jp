@@ -110,7 +110,7 @@ TRANSACT-SQL (T-SQL) ステートメントの分析プラットフォーム Syst
 * [OPEN MASTER KEY](../t-sql/statements/open-master-key-transact-sql.md)
 
 ## <a name="next-steps"></a>次のステップ
-参照の詳細については、次を参照してください。 [T-SQL 言語要素](tsql-language-elements.md)と[T-SQL システム ビュー](tsql-system-views.md)します。
+参照の詳細については、[T-SQL 言語要素](tsql-language-elements.md)と[T-SQL システム ビュー](tsql-system-views.md)を参照してください。
 
 <!--Image references-->
 

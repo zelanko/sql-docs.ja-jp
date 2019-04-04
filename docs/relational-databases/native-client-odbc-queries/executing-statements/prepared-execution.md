@@ -34,7 +34,7 @@ ms.locfileid: "51662461"
   
  ほとんどのデータベースでは、直接実行されるステートメントが実行のたびにコンパイルされるのに対し、準備実行されるステートメントは 1 回だけコンパイルされるので、準備実行は主に 4、5 回以上実行されるステートメントの場合は直接実行よりも高速になります。 準備実行では、SQL ステートメントが実行されるたびに、ドライバーはステートメント全体ではなく、実行プランの識別子とパラメーター値だけをデータ ソースに送信できるので、ネットワーク トラフィックも削減できます。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パフォーマンスの差異を検出して、実行プランを再利用するアルゴリズムが強化されたダイレクトおよび準備された実行が少なくなります**SQLExecDirect**します。 そのため、直接実行されるステートメントでも、準備実行のパフォーマンス上の利点の一部を利用できるようになります。 詳細については、次を参照してください。[を直接実行](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md)します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パフォーマンスの差異を検出して、実行プランを再利用するアルゴリズムが強化されたダイレクトおよび準備された実行が少なくなります**SQLExecDirect**します。 そのため、直接実行されるステートメントでも、準備実行のパフォーマンス上の利点の一部を利用できるようになります。 詳細については、[を直接実行](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md)を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、準備実行がネイティブにサポートされます。 実行プランが上に構築された**SQLPrepare**し、後で実行すると実行に**SQLExecute**が呼び出されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一時ストアド プロシージャを構築する必要はありません**SQLPrepare**、内のシステム テーブルに余分なオーバーヘッドがない**tempdb**します。  
   

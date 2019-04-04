@@ -155,7 +155,7 @@ Linux 上の SQL Server エージェントを使用して、既に SQL Server �
 
 作成し、Windows 上の SQL Server Management Studio (SSMS) を使用してリモートでジョブを管理することができますも。
 
-1. Windows で SSMS を起動し、Linux の SQL Server インスタンスに接続します。 詳細については、次を参照してください。 [SSMS を使用した Linux 上の SQL Server の管理](sql-server-linux-manage-ssms.md)します。
+1. Windows で SSMS を起動し、Linux の SQL Server インスタンスに接続します。 詳細については、[SSMS を使用した Linux 上の SQL Server の管理](sql-server-linux-manage-ssms.md)を参照してください。
 
 1. という名前のサンプル データベースを作成することを確認**SampleDB**します。
 

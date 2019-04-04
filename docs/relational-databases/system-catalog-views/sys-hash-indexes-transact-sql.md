@@ -32,7 +32,7 @@ ms.locfileid: "47729620"
 
   現在のハッシュ インデックスとハッシュ インデックス プロパティを表示します。 ハッシュ インデックスがでのみサポートされている[、インメモリ OLTP&#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)します。  
   
- Sys.hash_indexes ビューには、sys.indexes ビューと同じ列およびという列を追加が含まれています。 **bucket_count**します。 Sys.hash_indexes ビュー内の他の列に関する詳細については、次を参照してください。 [sys.indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)します。  
+ Sys.hash_indexes ビューには、sys.indexes ビューと同じ列およびという列を追加が含まれています。 **bucket_count**します。 Sys.hash_indexes ビュー内の他の列に関する詳細については、[sys.indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

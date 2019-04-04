@@ -46,7 +46,7 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
 |データ ソースの変更|要件に応じて、する必要がありますをデータ ソースを再構成します。 オプションをリセットするをクリックして**構成**ドライバーのセットアップ ダイアログ ボックス。|  
 |データ ソースの削除|クリックして**削除**データ ソースを選択した後。|  
   
- ファイル データ ソースの詳細については、次を参照してください。[を使用してファイル データ ソースの接続](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)または[SQLDriverConnect 関数](../../odbc/reference/syntax/sqldriverconnect-function.md)します。  
+ ファイル データ ソースの詳細については、[を使用してファイル データ ソースの接続](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)または[SQLDriverConnect 関数](../../odbc/reference/syntax/sqldriverconnect-function.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ODBC データ ソース アドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)

@@ -30,4 +30,4 @@ ms.locfileid: "47729950"
   
  テーブルの場合は、指定したテーブルまたはテーブルの列の一覧を結果セットを作成します。  
   
- 詳細については、次を参照してください。 [SQLColumns](../../odbc/reference/syntax/sqlcolumns-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLColumns](../../odbc/reference/syntax/sqlcolumns-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

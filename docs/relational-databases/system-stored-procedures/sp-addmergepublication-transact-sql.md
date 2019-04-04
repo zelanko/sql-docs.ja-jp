@@ -142,7 +142,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 `[ @keep_partition_changes = ] 'keep_partition_changes'` 事前計算済みパーティションを使用できない場合は、パーティション変更の最適化を有効にするかどうかを指定します。 *keep_partition_changes*は**nvarchar (5)**、既定値は TRUE。 **false**変更をパーティション分割することを意味に最適化されていない、およびパーティションのデータが変更されたときに事前計算済みパーティションを使用しない場合のすべてのサブスクライバーに送信されるパーティションが検証されます。 **true**変更をパーティション分割の方法は最適化され、変更されたパーティションの行を持つサブスクライバーだけが影響を受けます。 事前計算済みパーティションを使用する場合は、設定*use_partition_groups*に**true**設定と*keep_partition_changes*に**false**します。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
   
 > [!NOTE]  
->  値を指定する場合**true**の*keep_partition_changes*の値を指定**1** 、スナップショット エージェント パラメーターの **-MaxNetworkOptimization**. このパラメーターの詳細については、次を参照してください。 [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)します。 エージェントのパラメーターを指定する方法については、次を参照してください。[レプリケーション エージェントの管理](../../relational-databases/replication/agents/replication-agent-administration.md)します。  
+>  値を指定する場合**true**の*keep_partition_changes*の値を指定**1** 、スナップショット エージェント パラメーターの **-MaxNetworkOptimization**. このパラメーターの詳細については、[Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)を参照してください。 エージェントのパラメーターを指定する方法については、[レプリケーション エージェントの管理](../../relational-databases/replication/agents/replication-agent-administration.md)を参照してください。  
   
  [!INCLUDE[ssEW](../../includes/ssew-md.md)]サブスクライバー、 *keep_partition_changes*削除を正しく反映する場合は true に設定する必要があります。 false に設定すると、サブスクライバーに予想よりも多くの行が含まれる場合があります。  
   
@@ -169,7 +169,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |**false**|パブリケーションは事前計算済みパーティションを使用しません。|  
 |NULL(default)|システムがパーティション分割ストラテジを決定します。|  
   
- 既定では、事前計算済みパーティションが使用されます。 事前計算済みパーティションを使用しないように*use_partition_groups*に設定する必要があります**false**します。 NULL の場合、システムは事前計算済みパーティションを使用するかどうかを決定します。 パーティションを使用することはできませんし、この値は実質的に事前計算済み場合**false**任意のエラーは生成されません。 このような場合、 *keep_partition_changes*に設定することができます**true**をある程度最適化を提供します。 詳細については、次を参照してください。 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)と[事前計算済みパーティションによるパラメーター化されたフィルター パフォーマンスの最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)します。  
+ 既定では、事前計算済みパーティションが使用されます。 事前計算済みパーティションを使用しないように*use_partition_groups*に設定する必要があります**false**します。 NULL の場合、システムは事前計算済みパーティションを使用するかどうかを決定します。 パーティションを使用することはできませんし、この値は実質的に事前計算済み場合**false**任意のエラーは生成されません。 このような場合、 *keep_partition_changes*に設定することができます**true**をある程度最適化を提供します。 詳細については、[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)と[事前計算済みパーティションによるパラメーター化されたフィルター パフォーマンスの最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)を参照してください。  
   
 `[ @publication_compatibility_level = ] backward_comp_level` パブリケーションの旧バージョンとの互換性を示します。 *backward_comp_level*は**nvarchar (6)**、これらの値のいずれかを指定できます。  
   

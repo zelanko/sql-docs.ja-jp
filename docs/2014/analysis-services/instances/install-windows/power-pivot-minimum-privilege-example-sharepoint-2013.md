@@ -22,7 +22,7 @@ ms.locfileid: "53368394"
   このトピックでは、最小限の特権を使用する PowerPivot for SharePoint 2013 構成の例について説明します。 この構成では、3 種類のコンポーネントごとに個別のアカウントを使用します。各アカウントには最小レベルの特権を指定します。  
   
 ## <a name="summary-of-accounts"></a>アカウントの概要  
- PowerPivot for SharePoint 2013 では、Analysis Services サービス アカウントに Network Service アカウントを使用できます。 Network Service アカウントは、SharePoint 2010 のシナリオではサポートされません。 サービス アカウントの詳細については、次を参照してください。 [Windows サービス アカウントの構成とアクセス許可](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)(https://msdn.microsoft.com/library/ms143504.aspx)します。  
+ PowerPivot for SharePoint 2013 では、Analysis Services サービス アカウントに Network Service アカウントを使用できます。 Network Service アカウントは、SharePoint 2010 のシナリオではサポートされません。 サービス アカウントの詳細については、[Windows サービス アカウントの構成とアクセス許可](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)(https://msdn.microsoft.com/library/ms143504.aspx)を参照してください。  
   
  次の表は、最小限の特権の構成の例で使用する 3 種類のアカウントをまとめたものです。  
   

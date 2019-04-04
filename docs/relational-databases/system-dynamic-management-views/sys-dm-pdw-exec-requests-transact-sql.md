@@ -41,7 +41,7 @@ ms.locfileid: "58657747"
 |database_id|**int**|コンテキストの明示的な (使用 DB_X など) によって使用されるデータベースの識別子。|内の ID を参照してください。 [sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)します。|  
 |command|**nvarchar (4000)**|ユーザーによって送信されると、要求の完全なテキストを保持します。|有効なクエリまたは要求テキスト。 4,000 バイトより長いクエリは、切り捨てられます。|  
 |resource_class|**nvarchar(20)**|この要求のリソース クラスです。 関連する参照**concurrency_slots_used**で[sys.dm_pdw_resource_waits &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)します。  リソース クラスの詳細については、次を参照してください[リソース クラスとワークロード管理。](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |静的リソース クラス</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>動的リソース クラス</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|重要度 (SQL DW Gen2 のプレビュー)|**nvarchar(32)**|要求を設定する重要度が送信されました。 重要度が低い要求は重要度の高い要求が送信された場合に、一時停止状態でキューに置かれます。  重要度の高い要求は、先に送信された下の重要度要求する前に実行されます。  重要度の詳細については、次を参照してください。[ワークロードの重要度](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)します。  |NULL</br>low</br>below_normal</br>標準 (既定値)</br>しなく</br>high|
+|重要度 (SQL DW Gen2 のプレビュー)|**nvarchar(32)**|要求を設定する重要度が送信されました。 重要度が低い要求は重要度の高い要求が送信された場合に、一時停止状態でキューに置かれます。  重要度の高い要求は、先に送信された下の重要度要求する前に実行されます。  重要度の詳細については、[ワークロードの重要度](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)を参照してください。  |NULL</br>low</br>below_normal</br>標準 (既定値)</br>しなく</br>high|
   
  このビューで保持される最大行数は、詳細については、メタデータ」セクションを参照してください、[容量制限](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)トピック。   
   

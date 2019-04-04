@@ -92,6 +92,6 @@ ms.locfileid: "52787994"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_delete_proxy &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql)します。  
+ 詳細については、[sp_delete_proxy &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql)を参照してください。  
   
   

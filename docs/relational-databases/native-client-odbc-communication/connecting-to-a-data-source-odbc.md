@@ -44,7 +44,7 @@ ms.locfileid: "47683024"
   
 -   **SQLBrowseConnect**  
   
- 使用可能なさまざまな接続文字列オプションを含む、データ ソースへの接続の詳細については、次を参照してください。[使用した Connection String Keywords with SQL Server Native Client を使用して](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)します。  
+ 使用可能なさまざまな接続文字列オプションを含む、データ ソースへの接続の詳細については、[使用した Connection String Keywords with SQL Server Native Client を使用して](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)を参照してください。  
   
 ## <a name="sqlconnect"></a>SQLConnect  
  **SQLConnect**は最も簡単な接続関数です。 この関数は、データ ソース名、ユーザー ID、パスワードの 3 つのパラメーターを受け取ります。 使用**SQLConnect**ときにこれら 3 つのパラメーターは、データベースへの接続に必要なすべての情報を含めることができます。 これを行うには、ビルドを使用してデータ ソースの一覧**SQLDataSources**; データ ソース、ユーザー ID、およびパスワードの入力を求めますを呼び出して**SQLConnect**します。  

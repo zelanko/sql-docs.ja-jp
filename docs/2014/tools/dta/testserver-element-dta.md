@@ -50,7 +50,7 @@ ms.locfileid: "52801884"
 |**子要素**|[なし] :|  
   
 ## <a name="example"></a>例  
- この要素の使用例では、次を参照してください。 [実稼働サーバーのチューニング負荷を軽減](../../relational-databases/performance/reduce-the-production-server-tuning-load.md)します。  
+ この要素の使用例では、[実稼働サーバーのチューニング負荷を軽減](../../relational-databases/performance/reduce-the-production-server-tuning-load.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

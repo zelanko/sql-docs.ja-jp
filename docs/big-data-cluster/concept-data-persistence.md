@@ -102,5 +102,5 @@ SQL Server のビッグ データ クラスターの永続的なストレージ�
 
 Kubernetes でのボリュームに関する詳細なドキュメントを参照してください、[ボリューム上の Kubernetes のドキュメント](https://kubernetes.io/docs/concepts/storage/volumes/)します。
 
-SQL Server のビッグ データ クラスターのデプロイの詳細については、次を参照してください。[を Kubernetes クラスターのビッグ データ、SQL Server をデプロイする方法](deployment-guidance.md)します。
+SQL Server のビッグ データ クラスターのデプロイの詳細については、[を Kubernetes クラスターのビッグ データ、SQL Server をデプロイする方法](deployment-guidance.md)を参照してください。
 

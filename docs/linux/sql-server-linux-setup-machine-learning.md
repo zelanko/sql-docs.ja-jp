@@ -312,9 +312,9 @@ sudo zypper install mssql-server-extensibility-java
    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
    ```
 
-   別のワークフローは、SQL Server データベース エンジンの使用許諾契約書を許可していない場合は、セットアップによって検出されたこと、mssql mlservices パッケージおよび EULA 同意のプロンプト時に`mssql-conf setup`を実行します。 使用許諾契約書パラメーターに関する詳細については、次を参照してください。 [mssql-conf ツールで SQL Server の構成](sql-server-linux-configure-mssql-conf.md#mlservices-eula)します。
+   別のワークフローは、SQL Server データベース エンジンの使用許諾契約書を許可していない場合は、セットアップによって検出されたこと、mssql mlservices パッケージおよび EULA 同意のプロンプト時に`mssql-conf setup`を実行します。 使用許諾契約書パラメーターに関する詳細については、[mssql-conf ツールで SQL Server の構成](sql-server-linux-configure-mssql-conf.md#mlservices-eula)を参照してください。
 
-3. 発信ネットワーク アクセスを有効にします。 既定では、発信ネットワーク アクセスが無効です。 送信要求を有効にするには、"outboundnetworkaccess"mssql-conf ツールを使用してブール型プロパティを設定します。 詳細については、次を参照してください。 [mssql-conf での Linux 上の SQL Server の構成](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access)します。
+3. 発信ネットワーク アクセスを有効にします。 既定では、発信ネットワーク アクセスが無効です。 送信要求を有効にするには、"outboundnetworkaccess"mssql-conf ツールを使用してブール型プロパティを設定します。 詳細については、[mssql-conf での Linux 上の SQL Server の構成](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access)を参照してください。
 
    ```bash
    # Run as SUDO or root

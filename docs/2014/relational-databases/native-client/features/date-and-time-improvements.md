@@ -20,7 +20,7 @@ ms.locfileid: "48063072"
 # <a name="date-and-time-improvements"></a>日付と時刻の強化機能
   このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に追加された日付と時刻のデータ型の [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client サポートについて説明します。  
   
- 日付/時刻の強化の詳細については、次を参照してください。[日付と時刻の強化&#40;OLE DB&#41; ](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)と[日付と時刻の強化&#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
+ 日付/時刻の強化の詳細については、[日付と時刻の強化&#40;OLE DB&#41; ](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)と[日付と時刻の強化&#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)を参照してください。  
   
  この機能を説明するサンプル アプリケーションについては、「[SQL Server データ プログラミング サンプル](http://msftdpprodsamples.codeplex.com/)」を参照してください。  
   

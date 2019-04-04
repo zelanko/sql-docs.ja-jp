@@ -78,7 +78,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 |**score**|**REAL**|類似した 2 つのドキュメントの関連性における、その他のすべてのキー フレーズとこのキー フレーズの相対値。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 詳細については、次を参照してください。[類似および関連ドキュメント セマンティック検索による](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)します。  
+ 詳細については、[類似および関連ドキュメント セマンティック検索による](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)を参照してください。  
   
 ## <a name="metadata"></a>メタデータ  
  セマンティックな類似性の抽出および作成の詳細と状態については、次の動的管理ビューに対してクエリを実行してください。  

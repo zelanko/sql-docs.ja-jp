@@ -180,6 +180,6 @@ ms.locfileid: "52531410"
   
  `</Dimension>`  
   
- 継承された既定値の詳細については、次を参照してください。 [ASSL オブジェクトとオブジェクトの特性](assl-objects-and-object-characteristics.md)します。  
+ 継承された既定値の詳細については、[ASSL オブジェクトとオブジェクトの特性](assl-objects-and-object-characteristics.md)を参照してください。  
   
   

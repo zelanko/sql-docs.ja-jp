@@ -31,7 +31,7 @@ ms.locfileid: "55087651"
   
 -   アプリケーション プール アカウントのパスワードが不要な場合、 **[SSRS アプリケーション プール アカウントのパスワード]** オプションは無効になります。 たとえば、"NT authority \networkservice"です。 アプリケーション プール アカウントのパスワードが必要な場合、正しいパスワードを入力するまでアップグレードは続行できません。  
   
- 詳細については、次を参照してください。 [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628)します。  
+ 詳細については、[Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services のアップグレードと移行](https://go.microsoft.com/fwlink/?LinkID=245628)  

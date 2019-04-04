@@ -51,7 +51,7 @@ R IDE を使用するか、 **Rgui**このレッスンでは、R スクリプト
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 言語には、多くの集計関数が用意されていますが、 **rxSummary**で**RevoScaleR**などのさまざまなリモート コンピューティング コンテキストで実行をサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 同様の機能については、次を参照してください。 [RevoScaleR を使用してデータを集計](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)します。
+    R 言語には、多くの集計関数が用意されていますが、 **rxSummary**で**RevoScaleR**などのさまざまなリモート コンピューティング コンテキストで実行をサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 同様の機能については、[RevoScaleR を使用してデータを集計](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)を参照してください。
   
 3. コンソールに sumOut の内容を印刷します。
   

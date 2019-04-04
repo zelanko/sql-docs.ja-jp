@@ -32,7 +32,7 @@ ms.locfileid: "49460634"
 
 最初に、Azure Blob storage を使用するアクセス ポイントを構成します。
 
-1. 実行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)で 'hadoop connectivity' を Azure Blob ストレージ プロバイダーに設定します。 プロバイダーの値を検索する、次を参照してください。 [PolyBase 接続構成](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)します。
+1. 実行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)で 'hadoop connectivity' を Azure Blob ストレージ プロバイダーに設定します。 プロバイダーの値を検索する、[PolyBase 接続構成](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)を参照してください。
 
    ```sql  
    -- Values map to various external data sources.  
@@ -179,5 +179,5 @@ SQL Server Data tools、外部テーブルが別のフォルダーに表示さ�
 
 ## <a name="next-steps"></a>次の手順
 
-PolyBase の詳細については、次を参照してください。、 [PolyBase とは何ですか?](../relational-databases/polybase/polybase-guide.md)します。 
+PolyBase の詳細については、、 [PolyBase とは何ですか?](../relational-databases/polybase/polybase-guide.md)を参照してください。 
 

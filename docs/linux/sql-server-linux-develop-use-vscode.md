@@ -32,7 +32,7 @@ Visual Studio Code は、Linux、macOS、および Windows 用のグラフィカ
 1. Visual Studio Code を起動します。
    
    >[!NOTE]
-   >Xrdp のリモート デスクトップ セッションを介して接続しているときに Visual Studio Code が起動しない場合は、次を参照してください。 [VS Code の XRDP の使い方を接続すると、Ubuntu 上で動作していない](https://github.com/Microsoft/vscode/issues/3451)します。
+   >Xrdp のリモート デスクトップ セッションを介して接続しているときに Visual Studio Code が起動しない場合は、[VS Code の XRDP の使い方を接続すると、Ubuntu 上で動作していない](https://github.com/Microsoft/vscode/issues/3451)を参照してください。
 
 ## <a name="install-the-mssql-extension"></a>Mssql 拡張機能をインストールします。
 
@@ -67,7 +67,7 @@ Mssql 拡張機能により、mssql コマンドと T-SQL IntelliSense、コー�
 接続プロファイルを作成し、SQL Server に接続するこれらの手順に従います。
 
 > [!TIP] 
-> 作成し、ユーザー設定ファイルで接続プロファイルを編集できます (*settings.json*)。 設定ファイルを開くには、次のように選択します。**ファイル** > **設定** > **設定**します。 詳細については、次を参照してください。[接続プロファイルの管理]します。
+> 作成し、ユーザー設定ファイルで接続プロファイルを編集できます (*settings.json*)。 設定ファイルを開くには、次のように選択します。**ファイル** > **設定** > **設定**します。 詳細については、[接続プロファイルの管理]を参照してください。
    
 1. キーを押して**Ctrl**+**Shift**+**P**または**F1**を開く、**コマンド パレット**. 
    
@@ -243,9 +243,9 @@ Mssql 拡張機能により、mssql コマンドと T-SQL IntelliSense、コー�
 
 T-SQL に慣れていない場合は、次を参照してください。[チュートリアル:TRANSACT-SQL ステートメントを記述します。]と[TRANSACT-SQL リファレンス (データベース エンジン)]します。
 
-またはを使用して、mssql 拡張機能に影響する詳細については、次を参照してください。、 [mssql 拡張機能プロジェクトの wiki]します。
+またはを使用して、mssql 拡張機能に影響する詳細については、、 [mssql 拡張機能プロジェクトの wiki]を参照してください。
 
-Visual Studio Code の使用に関する詳細については、次を参照してください。、 [Visual Studio Code のドキュメント](https://code.visualstudio.com/docs)します。
+Visual Studio Code の使用に関する詳細については、、 [Visual Studio Code のドキュメント](https://code.visualstudio.com/docs)を参照してください。
 
 [Visual Studio Code 用 mssql 拡張機能]:https://aka.ms/mssql-marketplace
 [ダウンロードして Visual Studio Code のインストール]:https://code.visualstudio.com/Download

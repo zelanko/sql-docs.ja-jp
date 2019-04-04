@@ -34,7 +34,7 @@ ms.locfileid: "51657967"
   
 -   [(省略可能) 0 個以上のステップ修飾子](../xquery/path-expressions-specifying-predicates.md)  
   
- 詳細については、次を参照してください。[パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)します。  
+ 詳細については、[パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)を参照してください。  
   
  ノード テストとは条件で、パス式の軸ステップの 2 番目のコンポーネントです。 ステップで選択されるすべてのノードは、この条件を満たす必要があります。 パス式 `/child::ProductDescription` の場合、ノード テストは `ProductDescription` です。 このステップでは、ProductDescription という名前の子要素ノードのみが取得されます。  
   
@@ -216,7 +216,7 @@ WHERE ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
--   XQuery プロローグ内の `namespace` キーワードにより、クエリ本文で使用するプレフィックスが定義されています。 XQuery プロローグの詳細については、次を参照してください。 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)します。  
+-   XQuery プロローグ内の `namespace` キーワードにより、クエリ本文で使用するプレフィックスが定義されています。 XQuery プロローグの詳細については、[XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)を参照してください。  
   
 -   パス式の中にある 3 つのすべてのステップで、child 軸とノード テストとしてのノード名が指定されています。  
   

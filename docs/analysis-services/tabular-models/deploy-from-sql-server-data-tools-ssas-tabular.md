@@ -21,7 +21,7 @@ ms.locfileid: "53072139"
   このトピックのタスクを使用して、SSDT で Deploy コマンドを使用して、表形式モデル ソリューションをデプロイします。  
   
 ##  <a name="bkmk_deploy"></a> 配置オプションおよび配置サーバー プロパティの構成  
- テーブル モデル ソリューションを配置する前に、まず、配置オプションと配置サーバーのプロパティを指定する必要があります。 展開のプロパティおよび設定に関する詳細については、次を参照してください。[表形式モデル ソリューションの配置](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)します。  
+ テーブル モデル ソリューションを配置する前に、まず、配置オプションと配置サーバーのプロパティを指定する必要があります。 展開のプロパティおよび設定に関する詳細については、[表形式モデル ソリューションの配置](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)を参照してください。  
   
 #### <a name="to-configure-options-and-properties"></a>オプションとプロパティを構成するには  
   
@@ -38,7 +38,7 @@ ms.locfileid: "53072139"
 3.  **[配置サーバー]** で、 **[サーバー]** (名前)、 **[エディション]**、 **[データベース]** (名前)、 **[キューブ名]** の各プロパティの設定を指定し (既定の設定と異なる場合)、 **[OK]** をクリックします。  
   
 > [!NOTE]  
->  作成した新しいプロジェクトが指定したサーバーに自動的に配置されるように、既定の配置サーバー プロパティの設定を指定することもできます。 詳細については、次を参照してください。[既定のデータ モデリングとデプロイのプロパティを構成する](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)します。  
+>  作成した新しいプロジェクトが指定したサーバーに自動的に配置されるように、既定の配置サーバー プロパティの設定を指定することもできます。 詳細については、[既定のデータ モデリングとデプロイのプロパティを構成する](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)を参照してください。  
   
 ##  <a name="bkmk_deploy_proc"></a> 表形式モデルをデプロイします。  
   

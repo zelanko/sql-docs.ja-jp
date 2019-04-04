@@ -52,7 +52,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- データベース メール プロファイルは、データベース メール アカウントの任意の数を保持します。 データベース メールのストアド プロシージャでは、このプロシージャで生成されたプロファイル名またはプロファイル ID によって、プロファイルを参照できます。 アカウントをプロファイルに追加する方法の詳細については、次を参照してください。 [sysmail_add_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)します。  
+ データベース メール プロファイルは、データベース メール アカウントの任意の数を保持します。 データベース メールのストアド プロシージャでは、このプロシージャで生成されたプロファイル名またはプロファイル ID によって、プロファイルを参照できます。 アカウントをプロファイルに追加する方法の詳細については、[sysmail_add_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)を参照してください。  
   
  プロファイルの名前と説明は、ストアド プロシージャで変更できます**sysmail_update_profile_sp**プロファイル id は変わらず、プロファイルの有効期間中に、します。  
   

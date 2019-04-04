@@ -44,7 +44,7 @@ Informatica コネクタの新しいバージョンをリリースしました A
 ### <a name="support-for-tls-12"></a>TLS 1.2 のサポート
 APS CU7.2 では、TLS 1.2 をサポートします。 クライアント マシン AP と AP にイントラ ノード通信できるようになりましたに設定する TLS1.2 経由でのみ通信します。 SSDT、SSIS、および TLS 1.2 経由でのみ通信するために設定されているクライアント コンピューターにインストールされている Dwloader などのツールは、TLS 1.2 を使用して AP に接続できます。 既定では、AP は旧バージョンとの互換性のため TLS (1.0、1.1、1.2) のすべてのバージョンをサポートします。 厳密に TLS 1.2 を使用する、APS アプライアンスを設定する場合は、レジストリ設定を変更することでこれを実行できます。 
 
-詳細については、次を参照してください。 [AP で TLS1.2 を構成する](configure-tls12-aps.md)します。
+詳細については、[AP で TLS1.2 を構成する](configure-tls12-aps.md)を参照してください。
 
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>PolyBase の Hadoop 暗号化ゾーンをサポートします。
 PolyBase は Hadoop 暗号化ゾーンを通信できるようになりました。 必要なアクセス ポイントの構成の変更を参照してください。 [Hadoop セキュリティの構成](polybase-configure-hadoop-security.md#encryptionzone)します。
@@ -118,7 +118,7 @@ APS 2016 を AU7 にアップグレードしてください。 以下は、AP AU
 APS AU7 は作成し、既定では、自動的に統計を更新します。 統計情報の設定を更新するには、管理者がの新しい機能のスイッチのメニュー項目を使用できます、 [Configuration Manager](appliance-configuration.md#CMTasks)します。 [機能スイッチ](appliance-feature-switch.md)られた、自動更新、および統計の非同期更新の動作を制御します。 統計情報の設定を更新することも、 [ALTER DATABASE (並列データ ウェアハウス)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)ステートメント。
 
 ### <a name="t-sql"></a>T-SQL
-選択@varがサポートされています。 詳細については、次を参照してください。[ローカル変数を選択します。](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
+選択@varがサポートされています。 詳細については、[ローカル変数を選択を参照してください。](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
 ハッシュと ORDER GROUP クエリ ヒントはサポートされています。 詳細については、次を参照してください[Hints(Transact-SQL) - クエリ。](/sql/t-sql/queries/hints-transact-sql-query)
 

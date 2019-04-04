@@ -301,7 +301,7 @@ SELECT * FROM [<mining model name>].CONTENT
   
  マイニング モデル コンテンツに対するクエリは、データ マイニング スキーマ行セットを使用して実行することもできます。 スキーマ行セットは、マイニング構造およびモデルに関する情報の検出、参照、およびクエリのためにクライアントで使用される標準の構造です。 スキーマ行セットに対するクエリは、XMLA、Transact-SQL、または DMX ステートメントを使用して実行することができます。  
   
- また、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を開き、システム テーブルにクエリを実行することにより、データ マイニング スキーマ行セットの情報にアクセスできます。 詳細については、次を参照してください。[データ マイニング スキーマ行セットのクエリを実行する&#40;Analysis Services - データ マイニング&#41;](data-mining-schema-rowsets-ssas.md)します。  
+ また、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を開き、システム テーブルにクエリを実行することにより、データ マイニング スキーマ行セットの情報にアクセスできます。 詳細については、[データ マイニング スキーマ行セットのクエリを実行する&#40;Analysis Services - データ マイニング&#41;](data-mining-schema-rowsets-ssas.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Microsoft 汎用コンテンツ ツリー ビューアー &#40;データ マイニング&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   

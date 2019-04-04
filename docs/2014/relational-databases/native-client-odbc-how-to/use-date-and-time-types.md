@@ -18,7 +18,7 @@ ms.lasthandoff: 11/01/2018
 ms.locfileid: "50753449"
 ---
 # <a name="use-date-and-time-types"></a>日付/時刻型の使用
-  このサンプルでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で追加された日付/時刻データ構造を初期化する方法を示します。 さらに、入力値を準備し、パラメーターをバインドして、クエリを実行します。 詳細については、これらの型を使用して、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
+  このサンプルでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で追加された日付/時刻データ構造を初期化する方法を示します。 さらに、入力値を準備し、パラメーターをバインドして、クエリを実行します。 詳細については、これらの型を使用して、[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)を参照してください。  
   
 ## <a name="example"></a>例  
  DateTime という名前の ODBC データ ソースが必要です。 DateTime の既定のデータベースは tempdb です。 このデータ ソースには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 用の ODBC ドライバーが使用されている必要があります。  

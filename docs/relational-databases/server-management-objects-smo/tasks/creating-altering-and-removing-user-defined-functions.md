@@ -32,7 +32,7 @@ ms.locfileid: "47730440"
  ときに、<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>オブジェクトは、.NET アセンブリを参照、作成して、アセンブリを登録する必要があります、<xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>オブジェクトとに追加すること、<xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection>オブジェクトに属する、<xref:Microsoft.SqlServer.Management.Smo.Database>オブジェクト。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Visual Basic でのユーザー定義スカラー関数の作成  
  このコード例は、作成および入力のあるスカラー ユーザー定義関数を削除する方法を示しています。<xref:System.DateTime>オブジェクト パラメーターおよび整数の型を返す[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]します。 ユーザー定義関数が作成された、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、日付引数を取得して ISO 週番号を計算するユーザー定義関数 ISOweek が作成されます。 この関数で正しい計算を行うためには、関数を呼び出す前に、データベースの DATEFIRST オプションが 1 に設定されている必要があります。  

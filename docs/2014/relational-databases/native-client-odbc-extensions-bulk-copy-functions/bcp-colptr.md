@@ -54,7 +54,7 @@ idxServerCol
   
  場合*pData* NULL と列に設定されている大きな値の型でない束縛のフィールドに対応する**bcp_colptr**が失敗します。  
   
- 大きな値の型の詳細については、次を参照してください。 [bcp_bind](bcp-bind.md)**します。**  
+ 大きな値の型の詳細については、[bcp_bind](bcp-bind.md)**を参照してください。**  
   
  *idxServerCol*  
  データベース テーブル内にある、データのコピー先となる列の序数位置です。 テーブル内の最初の列は列 1 です。 列の序数位置がによって報告された[SQLColumns](../native-client-odbc-api/sqlcolumns.md)します。  

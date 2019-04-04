@@ -43,7 +43,7 @@ ms.locfileid: "47806740"
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|セッション ID。|  
 |**request_id**|**int**|セッション内の要求 ID。<br /><br /> 要求はバッチとも呼ばれ、1 つ以上のクエリを含めることができます。 複数の要求を同時にアクティブなセッションがあります。 並列実行プランが使用されている場合、要求内の各クエリでは複数のスレッド (タスク) を開始できます。|  
-|**exec_context_id**|**int**|タスクの実行コンテキスト ID。 詳細については、次を参照してください。 [sys.dm_os_tasks と組み合わせます&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)します。|  
+|**exec_context_id**|**int**|タスクの実行コンテキスト ID。 詳細については、[sys.dm_os_tasks と組み合わせます&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)を参照してください。|  
 |**database_id**|**smallint**|データベース ID。|  
 |**user_objects_alloc_page_count**|**bigint**|タスクで、ユーザー オブジェクト用に予約された、または割り当てられたページの数。|  
 |**user_objects_dealloc_page_count**|**bigint**|タスクで、ユーザー オブジェクトへの割り当てが解除され、予約されなくなったページの数。|  
@@ -59,7 +59,7 @@ ms.locfileid: "47806740"
 ## <a name="remarks"></a>コメント  
  このビューでレポートされるページの数に、IAM ページは含まれません。  
   
- ページ カウンターは要求の開始時にゼロ (0) に初期化されます。 これらの値は要求が完了したときにセッション レベルで集計されます。 詳細については、次を参照してください。 [sys.dm_db_session_space_usage & #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)。  
+ ページ カウンターは要求の開始時にゼロ (0) に初期化されます。 これらの値は要求が完了したときにセッション レベルで集計されます。 詳細については、[sys.dm_db_session_space_usage & #40 を参照してください。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)。  
   
  指定したタスクで割り当てられるページ数と割り当て解除されるページ数は、作業テーブル キャッシュ、一時テーブル キャッシュ、および延期された削除操作によって影響を受けます。  
   

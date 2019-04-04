@@ -66,7 +66,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  したがって、機密データまたは個人情報保護のため、する必要がありますを構築、個人情報をマスクし、付与、するデータ ソース ビュー **AllowDrillthrough**マイニング構造またはマイニング モデルに対する権限場合にのみいる。  
   
 ## <a name="examples"></a>使用例  
- 次の例に基づく Targeted Mailing マイニング構造に基づいています、[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]データベース、および関連するマイニング モデルです。 詳細については、次を参照してください。 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。  
+ 次の例に基づく Targeted Mailing マイニング構造に基づいています、[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]データベース、および関連するマイニング モデルです。 詳細については、[Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)を参照してください。  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>例 1 : 構造ケースにドリルスルーする  
  次の例では、マイニング構造 Targeted Mailing で最も古い 500 人の顧客のリストが返されます。 このクエリではマイニング モデル内のすべての列が返されますが、行は自転車を購入した顧客に制限され、年齢順に並べ替えられます。 必要な列のみを返すように式のリストを編集することもできます。  

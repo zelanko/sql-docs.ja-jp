@@ -33,7 +33,7 @@ Microsoft® ODBC のテストは、ODBC ドライバーと ODBC ドライバー 
   
 -   Odbct32w.exe と Unicode のバージョンについては、Gtrts32w.dll します。  
   
- ODBC のテストを使用するには、ODBC API では、C 言語、および SQL を理解する必要があります。 ODBC API の詳細については、次を参照してください。、 [ODBC プログラマ リファレンス](../odbc/reference/odbc-programmer-s-reference.md)します。  
+ ODBC のテストを使用するには、ODBC API では、C 言語、および SQL を理解する必要があります。 ODBC API の詳細については、、 [ODBC プログラマ リファレンス](../odbc/reference/odbc-programmer-s-reference.md)を参照してください。  
   
  以前のドキュメントのこのセクション内に含まれていたヘルプ トピックは ODBC テスト プログラム内に含まれています。 開く Odbcte32.exe または Odbct32w.exe、オープン、**ヘルプ** メニューをクリック**ヘルプ トピック**します。  
   

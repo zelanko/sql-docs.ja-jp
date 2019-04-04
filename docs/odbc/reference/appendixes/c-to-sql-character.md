@@ -29,7 +29,7 @@ ODBC C データ型の文字の識別子は次のとおりです。
   
  SQL_C_WCHAR  
   
- 次の表は、ODBC SQL データ型が C の文字データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)します。  
+ 次の表は、ODBC SQL データ型が C の文字データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、[C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)を参照してください。  
   
 > [!NOTE]  
 >  文字データが Unicode SQL データに変換されると、Unicode データの長さは偶数である必要があります。  

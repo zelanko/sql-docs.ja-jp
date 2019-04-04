@@ -299,4 +299,4 @@ mssqlctl app delete --name add-app --version v1
 
 独自のアプリケーションでのクラスターのビッグ データ、SQL Server に展開されているアプリを統合する方法について説明[ビッグ データ クラスター上でアプリケーションを消費する](big-data-cluster-consume-apps.md)詳細についてはします。 その他のサンプルを確認することもできます。[アプリの展開サンプル](https://aka.ms/sql-app-deploy)します。
 
-ビッグ データの SQL Server クラスターの詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)します。
+ビッグ データの SQL Server クラスターの詳細については、[SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)を参照してください。

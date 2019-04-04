@@ -25,9 +25,9 @@ ms.locfileid: "51669941"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ステートメント属性 SQL_SOPT_SS_PARAM_FOCUS が 0 の場合、SQLExecDirect しない場合は、sql_error が返さし、sqlstate 診断レコードが生成 = HY024「無効な属性値 SQL_SOPT_SS_PARAM_FOCUS が (実行時に 0 にする必要があります)」メッセージ。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、次を参照してください。 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)します。  
+  ステートメント属性 SQL_SOPT_SS_PARAM_FOCUS が 0 の場合、SQLExecDirect しない場合は、sql_error が返さし、sqlstate 診断レコードが生成 = HY024「無効な属性値 SQL_SOPT_SS_PARAM_FOCUS が (実行時に 0 にする必要があります)」メッセージ。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を参照してください。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+ テーブル値パラメーターの詳細については、[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=80709)   

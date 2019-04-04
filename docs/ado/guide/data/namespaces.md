@@ -33,7 +33,7 @@ ADO での XML 永続化形式は、次の 4 つの名前空間を使用しま�
 |rs|親要素の名前空間と ADO レコード セットのプロパティに固有の属性と属性を表します。|  
 |z|現在の行セットのスキーマを参照します。|  
   
- クライアント、仕様で定義された、独自のタグをこれらの名前空間に追加する必要があります。 たとえば、クライアントと名前空間を定義する必要があります"urn: スキーマ-microsoft-com:rowset"out"rs: MyOwnTag"のような記述 名前空間の詳細については、次を参照してください。、 [W3C Namespaces in XML 』](http://www.w3.org/TR/REC-xml-names/)します。  
+ クライアント、仕様で定義された、独自のタグをこれらの名前空間に追加する必要があります。 たとえば、クライアントと名前空間を定義する必要があります"urn: スキーマ-microsoft-com:rowset"out"rs: MyOwnTag"のような記述 名前空間の詳細については、、 [W3C Namespaces in XML 』](http://www.w3.org/TR/REC-xml-names/)を参照してください。  
   
 > [!IMPORTANT]
 >  スキーマ タグの ID は"RowsetSchema、"である必要があり。、現在の行セットのスキーマを参照するために使用する名前空間が"#RowsetSchema" をポイントする必要があります。  

@@ -28,7 +28,7 @@ ms.locfileid: "58377483"
   
  `SSISDB`カタログと`SSISDB`データベースは Windows PowerShell をサポートします。 Windows PowerShell による SQL Server の使用の詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」をご覧ください。 Windows PowerShell を使用してプロジェクトの配置などのタスクを実行する方法の例については、blogs.msdn.com のブログ エントリ「 [SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」をご覧ください。  
   
- オペレーション データを表示する方法についての詳細については、次を参照してください。[パッケージの実行とその他の操作の監視を](../performance/monitor-running-packages-and-other-operations.md)します。  
+ オペレーション データを表示する方法についての詳細については、[パッケージの実行とその他の操作の監視を](../performance/monitor-running-packages-and-other-operations.md)を参照してください。  
   
  アクセスする、`SSISDB`のカタログに[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に接続して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース エンジンとし、展開、 **Integration Services カタログ**オブジェクト エクスプ ローラーでノード。 アクセスする、`SSISDB`データベース[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]オブジェクト エクスプ ローラーでデータベース ノードを展開します。  
   

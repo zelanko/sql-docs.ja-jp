@@ -23,7 +23,7 @@ ms.lasthandoff: 11/28/2018
 ms.locfileid: "52516896"
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>付録 G :旧バージョンとの互換性のためのドライバーのガイドライン
-この付録の内容は、ODBC 3 取り組んでドライバー作成者の情報を提供します。*x* ODBC 2 をサポートするために必要なドライバー *。x*アプリケーション。 旧バージョンと互換性の詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。  
+この付録の内容は、ODBC 3 取り組んでドライバー作成者の情報を提供します。*x* ODBC 2 をサポートするために必要なドライバー *。x*アプリケーション。 旧バージョンと互換性の詳細については、[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

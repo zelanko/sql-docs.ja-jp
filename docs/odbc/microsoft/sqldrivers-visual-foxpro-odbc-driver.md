@@ -30,4 +30,4 @@ ms.locfileid: "47695047"
   
  ドライバーの説明とドライバー属性のキーワードの一覧を表示します。  
   
- 詳細については、次を参照してください。 [SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

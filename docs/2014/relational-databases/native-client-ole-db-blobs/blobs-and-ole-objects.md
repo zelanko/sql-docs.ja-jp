@@ -26,7 +26,7 @@ ms.locfileid: "48180322"
 # <a name="blobs-and-ole-objects"></a>BLOB と OLE オブジェクト
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **ISequentialStream**コンシューマーへのアクセスをサポートするインターフェイス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**、**テキスト**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、し、xml データ型とバイナリ ラージ オブジェクト (Blob). **ISequentialStream** の **Read** メソッドを使用すると、扱いやすい単位で大量のデータを取得できます。  
   
- この機能を示すサンプルについては、次を参照してください。[大量のデータを設定&#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md)します。  
+ この機能を示すサンプルについては、[大量のデータを設定&#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md)を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用してコンシューマーに実装された**IStorage**データ変更のため、コンシューマーはアクセサーにインターフェイス ポインターを提供するときのインターフェイスにバインドされています。  
   

@@ -32,7 +32,7 @@ ms.locfileid: "47646860"
  バージョンで導入されました ODBC 1.0 標準準拠: 非推奨とされます。  
   
  **概要**  
- ODBC 3。*x*、ODBC 2 *.x*関数**SQLTransact**置き換わりました**SQLEndTran**します。 詳細については、次を参照してください。 [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)します。  
+ ODBC 3。*x*、ODBC 2 *.x*関数**SQLTransact**置き換わりました**SQLEndTran**します。 詳細については、[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。  
   
 > [!NOTE]  
 >  ODBC 3.8 にで導入された、SQL_ASYNC_DBC_FUNCTION_ENABLE 属性がサポートされていない**SQLTransact**します。 接続ハンドルでの非同期操作を使用してアプリケーションを使用する必要があります**SQLEndTran**します。  

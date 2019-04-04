@@ -62,7 +62,7 @@ ms.locfileid: "52762484"
   
 -   FILESTREAM データは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの監視機能ではサポートされていません。  
   
- 詳細については、次を参照してください。 [SQL Server の最大容量仕様](../../sql-server/maximum-capacity-specifications-for-sql-server.md)と[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ 詳細については、[SQL Server の最大容量仕様](../../sql-server/maximum-capacity-specifications-for-sql-server.md)と[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの概念の詳細については、「 [SQL Server ユーティリティの機能とタスク](sql-server-utility-features-and-tasks.md)」を参照してください。  
   

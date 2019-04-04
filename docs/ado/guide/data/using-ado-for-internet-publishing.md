@@ -29,10 +29,10 @@ ms.locfileid: "47779000"
 ## <a name="urls"></a>URL  
  Uniform Resource Locator (Url) は、データ ソースとファイルとディレクトリの場所を指定する接続文字列とコマンドのテキストの代替として使用できます。 Url を使用するには、既存の[接続](../../../ado/reference/ado-api/connection-object-ado.md)と**Recordset**オブジェクトを使用して、**レコード**と**Stream**オブジェクト。  
   
- Url を使用する方法の詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+ Url を使用する方法の詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
   
 ## <a name="record-fields"></a>レコードのフィールド  
- 異種データと同種のデータの主な違いは、前者は、データの各行または**レコード**、異なる一連の列を持つことができますまたは**フィールド**します。 同種のデータの各行は、同じ列のセットを持ちます。 インターネット公開プロバイダーに固有のフィールドの詳細については、次を参照してください。[レコードとプロバイダー提供の余分なフィールド](../../../ado/guide/data/records-and-provider-supplied-fields.md)します。  
+ 異種データと同種のデータの主な違いは、前者は、データの各行または**レコード**、異なる一連の列を持つことができますまたは**フィールド**します。 同種のデータの各行は、同じ列のセットを持ちます。 インターネット公開プロバイダーに固有のフィールドの詳細については、[レコードとプロバイダー提供の余分なフィールド](../../../ado/guide/data/records-and-provider-supplied-fields.md)を参照してください。  
   
 ### <a name="appending-new-fields"></a>新しいフィールドを追加します。  
  組み合わせて動作するいくつかの ADO のオブジェクトが強化されています**レコード**と**Stream**オブジェクト。  

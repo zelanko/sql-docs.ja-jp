@@ -24,7 +24,7 @@ ms.locfileid: "48187202"
 # <a name="set-usage-property"></a>使用法プロパティの設定
   属性の使用法を設定するには、ディメンション デザイナーの **[ディメンション構造]** ビューを使用します。ディメンション デザイナーには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からアクセスします。  
   
- 属性の使用法を設定した場合、ディメンションを処理するまで変更内容は有効になりません。 詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)します。  
+ 属性の使用法を設定した場合、ディメンションを処理するまで変更内容は有効になりません。 詳細については、[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)を参照してください。  
   
 ### <a name="to-set-usage-for-an-attribute"></a>属性の使用法を設定するには  
   

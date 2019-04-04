@@ -32,6 +32,6 @@ ms.locfileid: "47776630"
  バージョンが導入されています。 ODBC 2.5、非推奨とされます。  
   
  **概要**  
- ODBC 3.0 で**SQLInstallTranslator**置き換わりました[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)します。 呼び出す**SQLInstallTranslator**にマップされる**SQLInstallTranslatorEx**します。 詳細については、次を参照してください。 **SQLInstallTranslatorEx**します。  
+ ODBC 3.0 で**SQLInstallTranslator**置き換わりました[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)します。 呼び出す**SQLInstallTranslator**にマップされる**SQLInstallTranslatorEx**します。 詳細については、**SQLInstallTranslatorEx**を参照してください。  
   
  **SQLInstallTranslator**アプリケーションが ODBC 3 で呼び出す場合は FALSE を返します *.x*ドライバー マネージャーで、 *lpszInfFile*引数が NULL 以外の値に設定します。 ODBC 2 で使用される Odbc.inf ファイル。*x* ODBC 3 ではサポートされなく *.x*旧バージョンとの互換性のためであっても、します。

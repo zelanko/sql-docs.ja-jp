@@ -52,7 +52,7 @@ Distributed Replay では、マシン間で共通のアカウントを使用す�
 1. 再起動、 **SQL Server Distributed Replay Controller** Services.msc からサービス。 また、サービスを再起動するためのコマンドラインで次のコマンドを実行することができますも。<br/>
    `NET STOP "SQL Server Distributed Replay Controller"`<br/>
    `NET START "SQL Server Distributed Replay Controller"`
-1. 詳細構成オプションでは、次を参照してください。 [Distributed Replay の構成](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)します。
+1. 詳細構成オプションでは、[Distributed Replay の構成](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)を参照してください。
 
 ## <a name="configure-dcom"></a>DCOM を構成します。
 
@@ -87,7 +87,7 @@ Distributed Replay では、マシン間で共通のアカウントを使用す�
     `NET START "SQL Server Distributed Replay Client"`
 1. 分散再生コント ローラーのログは C:\Program Files (x86) \Microsoft SQL Server\<バージョン\>\Tools\DReplayClient\Log します。 ログに記録するかどうか、クライアントに登録するコント ローラー。
 1. ログの構成が成功したメッセージが表示されます"コント ローラーに登録されている < コント ローラー名\>"。
-1. 詳細構成オプションでは、次を参照してください。 [Distributed Replay の構成](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)します。
+1. 詳細構成オプションでは、[Distributed Replay の構成](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)を参照してください。
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>Distributed Replay 管理ツールをセットアップします。
 
@@ -121,7 +121,7 @@ Distributed Replay をリモートでアクセスするには、ドメインま�
 
 ## <a name="next-steps"></a>次のステップ
 
-- アップグレードされたテスト環境でキャプチャされたトレースを再生する方法については、次を参照してください。[トレースを再生](database-experimentation-assistant-replay-trace.md)します。
+- アップグレードされたテスト環境でキャプチャされたトレースを再生する方法については、[トレースを再生](database-experimentation-assistant-replay-trace.md)を参照してください。
 
 - DEA とデモンストレーションを 19 分については、次のビデオをご覧ください。
 

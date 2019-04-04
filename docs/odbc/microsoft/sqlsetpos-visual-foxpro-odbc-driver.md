@@ -30,4 +30,4 @@ ms.locfileid: "47669300"
   
  行セットのカーソル位置を設定します。 使用することができます**SQLSetPos**で[SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md)行セット内の特定の行にカーソルを配置した後、バインドされていない列から行を取得します。  
   
- 詳細については、次を参照してください。 [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

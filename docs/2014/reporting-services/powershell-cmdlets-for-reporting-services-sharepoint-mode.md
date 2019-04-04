@@ -73,7 +73,7 @@ ms.locfileid: "58658266"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 詳細については、次を参照してください。 [SharePoint 2013 を管理する Windows PowerShell を使用して](https://technet.microsoft.com/library/ee806878.aspx)(https://technet.microsoft.com/library/ee806878.aspx)します。  
+ 詳細については、[SharePoint 2013 を管理する Windows PowerShell を使用して](https://technet.microsoft.com/library/ee806878.aspx)(https://technet.microsoft.com/library/ee806878.aspx)を参照してください。  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 管理シェルを開いてコマンドレットを実行するには  
   

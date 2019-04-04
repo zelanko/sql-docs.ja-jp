@@ -28,7 +28,7 @@ ODBC では、すべてのドライバーが SQL_CHAR または SQL_VARCHAR デ�
 > [!NOTE]  
 >  Interval のリテラルの BNF 構文は、セクションに示した[Interval のリテラル構文](../../../odbc/reference/appendixes/interval-literal-syntax.md)付録 c: SQL の文法でします。  
   
- Interval のリテラルを渡す SQL ステートメントの一部として、interval のリテラルのエスケープ句の構文が定義されます。 詳細については、次を参照してください。[日付、時刻、およびタイムスタンプのリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)します。  
+ Interval のリテラルを渡す SQL ステートメントの一部として、interval のリテラルのエスケープ句の構文が定義されます。 詳細については、[日付、時刻、およびタイムスタンプのリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)を参照してください。  
   
  形式は、リテラル、間隔です。  
   

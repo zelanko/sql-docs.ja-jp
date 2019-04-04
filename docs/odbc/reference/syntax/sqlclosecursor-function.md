@@ -60,7 +60,7 @@ SQLRETURN SQLCloseCursor(
 |HY001|メモリの割り当てエラー|ドライバーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY010|関数のシーケンス エラー|(DM) に関連付けられている接続ハンドルの非同期的に実行中の関数が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
   
@@ -70,7 +70,7 @@ SQLRETURN SQLCloseCursor(
 > [!NOTE]  
 >  ODBC 3 場合。*x* ODBC 2 を使用するアプリケーション *。x*ドライバー呼び出し**SQLCloseCursor**カーソルが開いていないときに、ドライバー マネージャーがマップされるため、SQLSTATE 24000 (無効なカーソル状態) は返されませんが**SQLCloseCursor** に**SQLFreeStmt** SQL_CLOSE とします。  
   
- 詳細については、次を参照してください。[カーソルを閉じる](../../../odbc/reference/develop-app/closing-the-cursor.md)します。  
+ 詳細については、[カーソルを閉じる](../../../odbc/reference/develop-app/closing-the-cursor.md)を参照してください。  
   
 ## <a name="code-example"></a>コード例  
  参照してください[SQLBrowseConnect 関数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)と[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)します。  

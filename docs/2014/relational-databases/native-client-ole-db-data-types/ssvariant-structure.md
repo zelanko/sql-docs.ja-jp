@@ -24,7 +24,7 @@ ms.locfileid: "53351112"
 # <a name="ssvariant-structure"></a>SSVARIANT 構造体
   sqlncli.h で定義されている `SSVARIANT` 構造体は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB プロバイダーの DBTYPE_SQLVARIANT 値に対応します。  
   
- `SSVARIANT` は、識別共用体です。 vt メンバーの値に応じて、コンシューマーは読み取るメンバーを決めることができます。 vt 値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に対応します。 したがって、`SSVARIANT` 構造体には、任意の SQL Server 型を格納できます。 標準の OLE DB 型のデータ構造の詳細については、次を参照してください。[型インジケーター](https://go.microsoft.com/fwlink/?LinkId=122171)します。  
+ `SSVARIANT` は、識別共用体です。 vt メンバーの値に応じて、コンシューマーは読み取るメンバーを決めることができます。 vt 値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に対応します。 したがって、`SSVARIANT` 構造体には、任意の SQL Server 型を格納できます。 標準の OLE DB 型のデータ構造の詳細については、[型インジケーター](https://go.microsoft.com/fwlink/?LinkId=122171)を参照してください。  
   
 ## <a name="remarks"></a>コメント  
  DataTypeCompat==80 の場合、いくつかの `SSVARIANT` サブタイプが文字列になります。 たとえば、次の vt 値は `SSVARIANT` では VT_SS_WVARSTRING として表されます。  
@@ -39,7 +39,7 @@ ms.locfileid: "53351112"
   
  DateTypeCompat == 0 の場合、これらの型はネイティブ形式で表されます。  
   
- SSPROP_INIT_DATATYPECOMPATIBILITY の詳細については、次を参照してください。[使用した Connection String Keywords with SQL Server Native Client を使用して](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)します。  
+ SSPROP_INIT_DATATYPECOMPATIBILITY の詳細については、[使用した Connection String Keywords with SQL Server Native Client を使用して](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)を参照してください。  
   
  sqlncli.h ファイルには、`SSVARIANT` 構造体のメンバー型の逆参照を単純化するバリアント アクセス マクロが格納されています。 たとえば、V_SS_DATETIMEOFFSET を次のように使用できます。  
   

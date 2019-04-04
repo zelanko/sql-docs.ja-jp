@@ -53,13 +53,13 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|トレースの ID。|  
-|property|**int**|トレースのプロパティ。<br /><br /> 1 = トレース オプション。 詳細については、次を参照してください。@options で [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)です。<br /><br /> 2 = ファイル名。<br /><br /> 3 = 最大サイズ。<br /><br /> 4 = 停止時刻。<br /><br /> 5 = 現在のトレースの状態。 0 = 停止。 1 = 実行中。|  
+|property|**int**|トレースのプロパティ。<br /><br /> 1 = トレース オプション。 詳細については、@options で [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)を参照してください。<br /><br /> 2 = ファイル名。<br /><br /> 3 = 最大サイズ。<br /><br /> 4 = 停止時刻。<br /><br /> 5 = 現在のトレースの状態。 0 = 停止。 1 = 実行中。|  
 |value|**sql_variant**|指定したトレースのプロパティに関する情報。|  
   
 ## <a name="remarks"></a>コメント  
  特定のトレースの ID が渡された場合、fn_trace_getinfo ではそのトレースに関する情報が返されます。 無効な ID が渡された場合、空の行セットが返されます。  
   
- fn_trace_getinfo を実行すると、結果セットに含まれるトレース ファイルの名前には .trc 拡張子が付けられます。 トレースの定義方法の詳細については、次を参照してください。 [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)します。 トレース フィルターの詳細について、同様の情報を参照してください。 [sys.fn_trace_getfilterinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)します。  
+ fn_trace_getinfo を実行すると、結果セットに含まれるトレース ファイルの名前には .trc 拡張子が付けられます。 トレースの定義方法の詳細については、[sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)を参照してください。 トレース フィルターの詳細について、同様の情報を参照してください。 [sys.fn_trace_getfilterinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)します。  
   
  トレース ストアド プロシージャを使用した完全な例を参照してください。[トレースを作成する&#40;TRANSACT-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)します。  
   

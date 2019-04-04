@@ -67,7 +67,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)この操作の終了時にイベントが発行されます。  
   
 > [!NOTE]
->  自動的に起動は、http スキームを使用する Url を含むコマンドを発行するときに、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  自動的に起動は、http スキームを使用する Url を含むコマンドを発行するときに、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

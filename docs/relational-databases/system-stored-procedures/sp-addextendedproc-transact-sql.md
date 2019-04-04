@@ -55,7 +55,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  なし  
   
 ## <a name="remarks"></a>コメント  
- 拡張ストアド プロシージャが作成された後に追加する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して**sp_addextendedproc**します。 詳細については、次を参照してください。[拡張ストアド プロシージャを SQL Server に追加する](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)します。  
+ 拡張ストアド プロシージャが作成された後に追加する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して**sp_addextendedproc**します。 詳細については、[拡張ストアド プロシージャを SQL Server に追加する](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)を参照してください。  
   
  のみこの手順を実行することができます、**マスター**データベース。 以外のデータベースから拡張ストアド プロシージャを実行する**マスター**、拡張ストアド プロシージャの名前を修飾**マスター**します。  
   

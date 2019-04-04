@@ -32,7 +32,7 @@ ms.locfileid: "48054142"
 -   [配置状態](#bkmk_deploy_status)  
   
 ##  <a name="bkmk_deploy"></a> 配置オプションおよび配置サーバー プロパティの構成  
- テーブル モデル ソリューションを配置する前に、まず、配置オプションと配置サーバーのプロパティを指定する必要があります。 展開のプロパティおよび設定に関する詳細については、次を参照してください。[表形式モデル ソリューションの配置&#40;SSAS 表形式&#41;](tabular-model-solution-deployment-ssas-tabular.md)します。  
+ テーブル モデル ソリューションを配置する前に、まず、配置オプションと配置サーバーのプロパティを指定する必要があります。 展開のプロパティおよび設定に関する詳細については、[表形式モデル ソリューションの配置&#40;SSAS 表形式&#41;](tabular-model-solution-deployment-ssas-tabular.md)を参照してください。  
   
 #### <a name="to-configure-deployment-options-and-deployment-server-properties"></a>配置オプションおよび配置サーバー プロパティを構成するには  
   

@@ -45,13 +45,13 @@ ms.locfileid: "52754254"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_help_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql)します。  
+ 詳細については、[sp_help_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql)を参照してください。  
   
   
 ##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **ジョブ カテゴリ情報の一覧を表示するには**  
   
- Visual Basic、Visual C#、PowerShell などのプログラミング言語で `JobCategory` クラスを使用します。 詳細については、次を参照してください。 [SQL Server 管理オブジェクト&#40;SMO&#41;プログラミング ガイド](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)します。  
+ Visual Basic、Visual C#、PowerShell などのプログラミング言語で `JobCategory` クラスを使用します。 詳細については、[SQL Server 管理オブジェクト&#40;SMO&#41;プログラミング ガイド](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)を参照してください。  
   
   
   

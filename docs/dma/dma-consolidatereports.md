@@ -106,7 +106,7 @@ DmaDataCollector 関数に関連付けられているパラメーターは、次
 
 |パラメーター  |説明 |
 |---------|---------|
-|**getServerListFrom** | インベントリ。 指定できる値は**SqlServer**と**CSV**します。<br/>詳細については、次を参照してください。 [SQL サーバーのインベントリ作成](#create-inventory)です。 |
+|**getServerListFrom** | インベントリ。 指定できる値は**SqlServer**と**CSV**します。<br/>詳細については、[SQL サーバーのインベントリ作成](#create-inventory)を参照してください。 |
 |**csvPath** | CSV インベントリ ファイルへのパス。  場合にのみ使用**getServerListFrom**に設定されている**CSV**します。 |
 |**serverName** | SQL Server のインスタンス名を使用する場合は、在庫の**SqlServer**で、 **getServerListFrom**パラメーター。 |
 |**databaseName** | インベントリ テーブルをホストするデータベース。 |

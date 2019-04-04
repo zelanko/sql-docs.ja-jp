@@ -22,7 +22,7 @@ ms.locfileid: "53030466"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] の拡張機能はベース [!INCLUDE[name-sos](../includes/name-sos-short.md)] のインストールにより多くの機能を簡単に追加する方法を提供します。 
 
-拡張機能は、サード パーティ コミュニティ (する!) と (マイクロソフト)、Azure Data Studio チームによって提供されます。 拡張機能の作成方法の詳細については、次を参照してください。[拡張機能作成](extension-authoring.md)です。
+拡張機能は、サード パーティ コミュニティ (する!) と (マイクロソフト)、Azure Data Studio チームによって提供されます。 拡張機能の作成方法の詳細については、[拡張機能作成](extension-authoring.md)を参照してください。
 
 
 ## <a name="add-azure-data-studio-extensions"></a>Azure Data Studio の拡張機能を追加します。

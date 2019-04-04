@@ -82,7 +82,7 @@ sqlcmd -S localhost -U SA -Q "RESTORE LOG demodb FROM DISK = N'/var/opt/mssql/da
 Windows コンピューターから SSMS を使用して、Linux データベースに接続し、ユーザー インターフェイスからバックアップを実行することができます。
 
 >[!NOTE] 
-> 最新バージョンの SSMS を使用して、SQL Server に接続します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SSMS のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)します。 SSMS を使用する方法の詳細については、次を参照してください。 [Linux 上の SQL Server の管理を使用して SSMS](sql-server-linux-manage-ssms.md)します。
+> 最新バージョンの SSMS を使用して、SQL Server に接続します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SSMS のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)します。 SSMS を使用する方法の詳細については、[Linux 上の SQL Server の管理を使用して SSMS](sql-server-linux-manage-ssms.md)を参照してください。
 
 SSMS を使用したバックアップを利用して、次の手順が説明します。 
 

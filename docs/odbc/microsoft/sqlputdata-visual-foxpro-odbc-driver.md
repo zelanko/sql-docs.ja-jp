@@ -30,4 +30,4 @@ ms.locfileid: "47606540"
   
  ステートメントの実行時にドライバーをパラメーターまたは列のデータを送信するアプリケーションをできるようにします。  
   
- 詳細については、次を参照してください。 [SQLPutData](../../odbc/reference/syntax/sqlputdata-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLPutData](../../odbc/reference/syntax/sqlputdata-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

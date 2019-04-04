@@ -77,7 +77,7 @@ ms.locfileid: "52816614"
   
 -   拡張増分値で変更するには、FILEGROWTH オプションを使用します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 ログ ファイルの自動拡張の増分値が小さい場合も、パフォーマンスが低下することがあります。 ログ ファイルの拡張増分値は、拡張を頻繁に行わなくても済むように十分な大きさにする必要があります。 通常は、既定の拡張増分値 (10%) が適しています。  
   
-     ログ ファイルのファイル拡張プロパティを変更する方法の詳細については、次を参照してください。 [ALTER DATABASE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)します。  
+     ログ ファイルのファイル拡張プロパティを変更する方法の詳細については、[ALTER DATABASE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)を参照してください。  
   
 -   ログ ファイルの最大サイズを KB、MB、GB、および TB 単位で制御するか、拡張値を UNLIMITED に設定するには、MAXSIZE オプションを使用します。  
   

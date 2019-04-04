@@ -34,7 +34,7 @@ ms.locfileid: "48179931"
 |**[説明]**|マイニング モデルの説明を表示します。|  
 |**[タイムスタンプの作成]**|マイニング モデルが作成された日時を表示します。|  
 |**[スキーマの最終更新]**|マイニング モデルのメタデータが最後に更新された日時を表示します。|  
-|**State**|マイニング モデルの処理状態を表示します。 このプロパティの値の詳細については、次を参照してください。<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>します。|  
+|**State**|マイニング モデルの処理状態を表示します。 このプロパティの値の詳細については、<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>を参照してください。|  
 |**最後に処理されました。**|マイニング モデルが最後に処理された日時を表示します。|  
   
 ## <a name="see-also"></a>参照  

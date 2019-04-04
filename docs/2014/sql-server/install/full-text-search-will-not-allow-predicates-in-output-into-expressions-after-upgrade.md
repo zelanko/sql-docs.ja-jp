@@ -22,7 +22,7 @@ ms.locfileid: "48210742"
   データベースの互換性レベルが 100 以上に設定されている場合、OUTPUT 句でフルテキスト述語を使用することはできません。  
   
 ## <a name="description"></a>説明  
- OUTPUT 句の詳細については、次を参照してください。 [OUTPUT 句&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/output-clause-transact-sql)します。  
+ OUTPUT 句の詳細については、[OUTPUT 句&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/output-clause-transact-sql)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

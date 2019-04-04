@@ -22,7 +22,7 @@ ms.locfileid: "48114162"
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを削除すると、ギャラリーのアイテムもすべて削除されます。削除されるアイテムには、スケジュール設定されたデータ更新が構成されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックのデータ更新履歴が含まれます。  
   
 > [!NOTE]  
->  このトピックでは、SharePoint ライブラリを削除する手順について説明します。 ライブラリ内の個々 のドキュメントを削除する方法については、次を参照してください。 [PowerPivot ギャラリーを使用して](use-power-pivot-gallery.md)します。  
+>  このトピックでは、SharePoint ライブラリを削除する手順について説明します。 ライブラリ内の個々 のドキュメントを削除する方法については、[PowerPivot ギャラリーを使用して](use-power-pivot-gallery.md)を参照してください。  
   
  ライブラリを削除するには、サイト所有者である必要があります。  
   

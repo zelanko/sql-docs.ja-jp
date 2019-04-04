@@ -20,7 +20,7 @@ ms.locfileid: "48109282"
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>スパース列に対する列およびカタログ メタデータの表示 (OLE DB)
   このサンプルでは、スパース列、非スパース列、columnset 列の 3 つの列を持ったテーブルを作成します。 その後、非スパース列および columnset 列に対する列およびカタログ メタデータを示す OLE DB フラグを表示します。  
   
- このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。 スパース列の詳細については、次を参照してください。 [SQL Server Native Client におけるスパース列のサポート](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)します。  
+ このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。 スパース列の詳細については、[SQL Server Native Client におけるスパース列のサポート](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)を参照してください。  
   
 ## <a name="example"></a>例  
  INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  

@@ -22,7 +22,7 @@ ms.locfileid: "58380950"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーへのプロジェクトの配置の詳細については、「 [Integration Services サーバーへのプロジェクトの配置](../deploy-projects-to-integration-services-server.md)」を参照してください。  
   
- パッケージ配置モデルの詳細については、次を参照してください。[パッケージの配置&#40;SSIS&#41;](legacy-package-deployment-ssis.md)します。  
+ パッケージ配置モデルの詳細については、[パッケージの配置&#40;SSIS&#41;](legacy-package-deployment-ssis.md)を参照してください。  
   
 ## <a name="compare-project-deployment-and-package-deployment"></a>プロジェクト配置とパッケージ配置の比較  
  プロジェクトに対して選択する配置モデルの種類によって、そのプロジェクトに使用できる開発オプションと管理オプションが決まります。 次の表に、プロジェクト配置モデルを使用した場合とパッケージ配置モデルを使用した場合の相違点と共通点を示します。  

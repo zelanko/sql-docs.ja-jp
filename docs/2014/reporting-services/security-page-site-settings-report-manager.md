@@ -50,7 +50,7 @@ ms.locfileid: "56040653"
  既存のロールの割り当ての一部であるグループおよびユーザーが一覧表示されます。 この列には、現在のフォルダーに対する既存のロールの割り当てが定義されているグループおよびユーザーが表示されます。 ロールの割り当ての詳細を表示または編集するには、グループ名またはユーザー名の横にある **[編集]** をクリックします。  
   
  **Roles**  
- 既存のロールの割り当ての一部であるロールの定義が 1 つ以上表示されます。 1 つのグループ アカウントまたは 1 つのユーザー アカウントに複数のロールが割り当てられている場合、そのグループまたはユーザーは、すべてのロールに属するすべてのタスクを実行できます。 各ロールでサポートされている一連のタスクを表示するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用します。 レポート マネージャーでロールを表示、作成、変更、または削除することはできません。 手順については、次を参照してください。[作成、削除、またはロールを変更&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)します。  
+ 既存のロールの割り当ての一部であるロールの定義が 1 つ以上表示されます。 1 つのグループ アカウントまたは 1 つのユーザー アカウントに複数のロールが割り当てられている場合、そのグループまたはユーザーは、すべてのロールに属するすべてのタスクを実行できます。 各ロールでサポートされている一連のタスクを表示するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用します。 レポート マネージャーでロールを表示、作成、変更、または削除することはできません。 手順については、[作成、削除、またはロールを変更&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   

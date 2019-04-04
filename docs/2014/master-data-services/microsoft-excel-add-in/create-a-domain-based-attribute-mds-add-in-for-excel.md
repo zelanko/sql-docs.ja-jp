@@ -36,7 +36,7 @@ ms.locfileid: "52798085"
   
 ### <a name="to-perform-this-procedure"></a>この手順を実行するには  
   
-1.  Excel で、制約する列 (属性) を含むエンティティを読み込みます。 詳細については、次を参照してください。[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)します。  
+1.  Excel で、制約する列 (属性) を含むエンティティを読み込みます。 詳細については、[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)を参照してください。  
   
 2.  制約する列の任意のセルをクリックします。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52798085"
   
 ## <a name="next-steps"></a>次の手順  
   
--   制約された一覧の値を追加および削除するには、その属性が基づいているエンティティを読み込みます。 エンティティの読み込みの詳細については、次を参照してください。[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)します。  
+-   制約された一覧の値を追加および削除するには、その属性が基づいているエンティティを読み込みます。 エンティティの読み込みの詳細については、[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ドメインベースの属性 (マスター データ サービス)](../domain-based-attributes-master-data-services.md)   

@@ -31,7 +31,7 @@ ms.locfileid: "57334709"
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  サーバーによって管理されるパフォーマンス カウンターごとに 1 行を返します。 各パフォーマンス カウンターの詳細については、次を参照してください。 [SQL Server オブジェクトを使用して](../../relational-databases/performance-monitor/use-sql-server-objects.md)します。  
+  サーバーによって管理されるパフォーマンス カウンターごとに 1 行を返します。 各パフォーマンス カウンターの詳細については、[SQL Server オブジェクトを使用して](../../relational-databases/performance-monitor/use-sql-server-objects.md)を参照してください。  
   
 > [!NOTE]  
 >  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_performance_counters**します。  
@@ -52,7 +52,7 @@ ms.locfileid: "57334709"
 SELECT COUNT(*) FROM sys.dm_os_performance_counters;  
 ```  
   
- 戻り値が 0 行の場合、パフォーマンス カウンターが無効であることを意味します。 その場合は、セットアップ ログを参照して、エラー 3409 "このインスタンスの sqlctr.ini を再インストールし、インスタンス ログイン アカウントに適切なレジストリ権限が許可されていることを確認してください" を探す必要があります。  これは、パフォーマンス カウンターが無効であったことを示します。 3409 エラーの直前のエラーは、パフォーマンス カウンターを有効にする障害の根本原因を示す必要があります。 セットアップ ログ ファイルの詳細については、次を参照してください。[ビューと読み取り SQL Server セットアップ ログ ファイル](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)します。  
+ 戻り値が 0 行の場合、パフォーマンス カウンターが無効であることを意味します。 その場合は、セットアップ ログを参照して、エラー 3409 "このインスタンスの sqlctr.ini を再インストールし、インスタンス ログイン アカウントに適切なレジストリ権限が許可されていることを確認してください" を探す必要があります。  これは、パフォーマンス カウンターが無効であったことを示します。 3409 エラーの直前のエラーは、パフォーマンス カウンターを有効にする障害の根本原因を示す必要があります。 セットアップ ログ ファイルの詳細については、[ビューと読み取り SQL Server セットアップ ログ ファイル](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)を参照してください。  
   
 ## <a name="permission"></a>権限
 

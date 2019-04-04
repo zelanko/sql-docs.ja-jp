@@ -145,7 +145,7 @@ ms.locfileid: "49120099"
 -   以下 (<=)  
   
 ### <a name="implementing-nullability"></a>NULL 値の許容属性の実装  
- アセンブリの属性を正しく指定することに加えて、クラスで NULL 値の許容属性をサポートする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれる UDT では NULL 値が許容されますが、その UDT に NULL 値を認識させるには、クラスに `INullable` インターフェイスを実装する必要があります。 UDT に null 値許容属性を実装する方法の例と詳細については、次を参照してください。 [Coding User-Defined 型](creating-user-defined-types-coding.md)します。  
+ アセンブリの属性を正しく指定することに加えて、クラスで NULL 値の許容属性をサポートする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれる UDT では NULL 値が許容されますが、その UDT に NULL 値を認識させるには、クラスに `INullable` インターフェイスを実装する必要があります。 UDT に null 値許容属性を実装する方法の例と詳細については、[Coding User-Defined 型](creating-user-defined-types-coding.md)を参照してください。  
   
 ### <a name="string-conversions"></a>文字列の変換  
  UDT と文字列の間の変換をサポートするには、クラスに `Parse` メソッドと `ToString` メソッドを用意する必要があります。 `Parse` メソッドでは、文字列を UDT に変換できます。 このメソッドは `static` (Visual Basic では `Shared`) メソッドとして宣言され、`System.Data.SqlTypes.SqlString` 型のパラメーターを受け取る必要があります。 実装する方法の例と詳細について、`Parse`と`ToString`メソッドを参照してください[Coding User-Defined 型](creating-user-defined-types-coding.md)します。  

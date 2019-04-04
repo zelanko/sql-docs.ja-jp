@@ -43,9 +43,9 @@ ms.locfileid: "53591546"
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   _CatalogName_  **SQLTables 引数**します。 ODBC 2。*x*でワイルドカード文字 (「%」および「_」)、 *CatalogName*引数が文字どおり扱われます。 ODBC 3。*x*、ワイルドカード文字として扱われます。 したがって、ODBC 2 に依存するアプリケーション。*x*仕様ワイルドカード文字し、エスケープしないにそれらをリテラルとして使用する場合に使用これらにできません。 ODBC 3 に依存するアプリケーション。*x*仕様はまたはワイルドカード文字として使用して、エスケープする、およびリテラルとして使用します。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。  
+-   _CatalogName_  **SQLTables 引数**します。 ODBC 2。*x*でワイルドカード文字 (「%」および「_」)、 *CatalogName*引数が文字どおり扱われます。 ODBC 3。*x*、ワイルドカード文字として扱われます。 したがって、ODBC 2 に依存するアプリケーション。*x*仕様ワイルドカード文字し、エスケープしないにそれらをリテラルとして使用する場合に使用これらにできません。 ODBC 3 に依存するアプリケーション。*x*仕様はまたはワイルドカード文字として使用して、エスケープする、およびリテラルとして使用します。 詳細については、[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)を参照してください。  
   
- ODBC 3 *.x*ドライバー マネージャーと ODBC 3 *.x*ドライバーは、アプリケーションの書き込み先となる、ODBC 仕様のバージョンを確認し、適宜応答します。 たとえば、次のように、アプリケーションには、ODBC 2 が後ろにある場合です。*x*仕様と呼び出し**SQLExecute**呼び出す前に**SQLPrepare**、ODBC 3 *.x*ドライバー マネージャーは、SQLSTATE S1010 (を返します関数シーケンス エラー) です。 アプリケーションが ODBC 3 に従う場合 *.x*仕様、ドライバー マネージャーは、SQLSTATE HY010 を返します (関数のシーケンス エラーです)。 詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。  
+ ODBC 3 *.x*ドライバー マネージャーと ODBC 3 *.x*ドライバーは、アプリケーションの書き込み先となる、ODBC 仕様のバージョンを確認し、適宜応答します。 たとえば、次のように、アプリケーションには、ODBC 2 が後ろにある場合です。*x*仕様と呼び出し**SQLExecute**呼び出す前に**SQLPrepare**、ODBC 3 *.x*ドライバー マネージャーは、SQLSTATE S1010 (を返します関数シーケンス エラー) です。 アプリケーションが ODBC 3 に従う場合 *.x*仕様、ドライバー マネージャーは、SQLSTATE HY010 を返します (関数のシーケンス エラーです)。 詳細については、[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)を参照してください。  
   
 > [!IMPORTANT]  
 >  次の ODBC 3 アプリケーション。*x*仕様で条件付きのコードを使用して ODBC 3 に新しい機能を使用しないようにする必要があります *。x* ODBC 2 を使用する場合 *。x*ドライバー。 ODBC 2。*x*ドライバーは ODBC 3 に新しい機能をサポートしていません *。x*いって、アプリケーションが ODBC 3 に従っていることを宣言します *。x*仕様。 さらに、ODBC 3。*x*ドライバーは ODBC 3 に新しい機能をサポートするためを停止していません *。x*いって、アプリケーションは、ODBC 2 に従っていることを宣言します *。x*仕様。

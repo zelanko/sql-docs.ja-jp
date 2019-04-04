@@ -53,10 +53,10 @@ ms.locfileid: "56014043"
   
 -   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] のインスタンスにインストールされた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サンプル データベース。  
   
--   レポート サーバーにインストールされているレポート。 このチュートリアルでは、サンプル レポート Company Sales 2012 を使用します。 サンプル レポートの詳細については、次を参照してください。 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)します。  
+-   レポート サーバーにインストールされているレポート。 このチュートリアルでは、サンプル レポート Company Sales 2012 を使用します。 サンプル レポートの詳細については、[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)を参照してください。  
   
 > [!NOTE]  
->  サンプルはセットアップ中に自動的にインストールされませんが、いつでもインストールできます。 サンプルについては、次を参照してください。 [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887)します。  
+>  サンプルはセットアップ中に自動的にインストールされませんが、いつでもインストールできます。 サンプルについては、[SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887)を参照してください。  
   
  **このチュートリアルの推定所要時間:** 30 分  
   

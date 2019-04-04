@@ -160,7 +160,7 @@ ms.locfileid: "58381590"
 - 修正[発行 #2851](https://github.com/Microsoft/azuredatastudio/issues/2851):時系列のグラフが正しくレンダリングされません。
 - 修正[発行 #2996](https://github.com/Microsoft/azuredatastudio/issues/2996):セッションが突然変更による損失を一時テーブル
 
-詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)します。
+詳細については、、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)を参照してください。
 
 ## <a name="september-2018-ga-release"></a>9 月 2018 (一般公開リリース)
 
@@ -195,7 +195,7 @@ Azure Data Studio (SQL Operations Studio 以前) の一般的な可用性リリ�
 - 修正[発行 #2647](https://github.com/Microsoft/azuredatastudio/issues/143):グラフでは、大きな一歩を下位かかりました。
 - 修正[発行 #2648](https://github.com/Microsoft/azuredatastudio/issues/143):JSON ハイパーリンク列全体を返すことを選択します。
 
-詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)します。
+詳細については、、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)を参照してください。
 
 ## <a name="august-2018"></a>2018 の年 8 月
 
@@ -405,7 +405,7 @@ _0.32.8 には 0.32.7 で見つかったいくつかの回帰の修正プログ�
 
 詳細については、チェック アウト、 [Visual Studio Code 年 2 月のリリース ノート](https://code.visualstudio.com/updates/v1_21)、および[Visual Studio Code 年 1 月のリリース ノート](https://code.visualstudio.com/updates/v1_20)します。
 
-詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)します。
+詳細については、、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)を参照してください。
 
 ## <a name="march-2018"></a>2018 年 3 月
 

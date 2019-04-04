@@ -129,7 +129,7 @@ SQL Server 2019 のサポートが更新されました。 SQL Server にビッ�
 * サーバー ノードを右クリックし、クラスターに対して Spark ジョブを送信する*オブジェクト エクスプ ローラー*選択**Submit Spark Job**送信ダイアログ ボックスを表示します。
 * Notebook を開くには、次のセクションを参照してください。
 
-詳細については、次を参照してください。[ビッグ データ クラスター](../big-data-cluster/big-data-cluster-overview.md)します。
+詳細については、[ビッグ データ クラスター](../big-data-cluster/big-data-cluster-overview.md)を参照してください。
 
 
 ## <a name="azure-data-studio-notebooks"></a>Azure Data Studio Notebook

@@ -34,7 +34,7 @@ ms.locfileid: "52805539"
  <xref:Microsoft.SqlServer.Management.Smo.Backup> オブジェクトと同様、<xref:Microsoft.SqlServer.Management.Smo.Restore> オブジェクトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス上のオブジェクトを表現しているのではないので、`Create` メソッドを使用して作成する必要はありません。 <xref:Microsoft.SqlServer.Management.Smo.Restore> オブジェクトは、データベースの復元に使用されるプロパティとメソッドのセットです。  
   
 ## <a name="examples"></a>使用例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Visual Basic でのデータベースおよびトランザクション ログのバックアップ  
  このコード例では、既存のデータベースをファイルにバックアップする方法と復元する方法を示します。  

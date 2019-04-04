@@ -60,7 +60,7 @@ sp_dbmmonitorchangealert database_name
 |4|ミラー コミットのオーバーヘッド|許容可能な、トランザクションあたりの平均遅延時間 (ミリ秒単位) を指定します。この時間を経過すると、プリンシパル サーバーで警告が生成されます。 この遅延時間は、ミラー サーバー インスタンスによってトランザクションのログ レコードが再実行キューに書き込まれるのをプリンシパル サーバー インスタンスが待機している間、発生したオーバーヘッドの量になります。 この値は高安全モードにのみ関係します。|  
 |5|保有期間|データベース ミラーリングの状態テーブルにある行の保有期間を制御するメタデータです。|  
   
- 警告に対応するイベント Id については、次を参照してください。[使用量の警告しきい値とアラートをミラーリング パフォーマンス基準&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)します。  
+ 警告に対応するイベント Id については、[使用量の警告しきい値とアラートをミラーリング パフォーマンス基準&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)を参照してください。  
   
  *alert_threshold*  
  警告しきい値を指定します。 ミラーリングの状態が更新されたときに、このしきい値より大きな値が返されると、Windows のイベント ログにエントリが作成されます。 この値は、パフォーマンス基準に応じて、KB、分、またはミリ秒となります。  

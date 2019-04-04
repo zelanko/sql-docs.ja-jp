@@ -21,7 +21,7 @@ ms.locfileid: "37909842"
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>ポートとファイアウォールを管理するには、アプライアンス ノードのルールします。  
   
-1.  Configuration Manager を起動します。 詳細については、次を参照してください。 [Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)します。  
+1.  Configuration Manager を起動します。 詳細については、[Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)を参照してください。  
   
 2.  Configuration Manager の左側のウィンドウで展開**並列データ ウェアハウスのトポロジ**、 をクリックし、**ファイアウォール**します。  
   

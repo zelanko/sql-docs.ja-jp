@@ -30,4 +30,4 @@ ms.locfileid: "47609600"
   
  関連付けられた特定の処理を停止する*hstmt*に関連付けられている開いているカーソルを閉じ、 *hstmt*、保留中の結果を破棄し、必要に応じて、ステートメントに関連付けられたすべてのリソースを解放処理します。  
   
- 詳細については、次を参照してください。 [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

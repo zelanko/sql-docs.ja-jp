@@ -66,9 +66,9 @@ ms.locfileid: "56802448"
   
  電子メール配信用にレポート サーバーを構成するには、次の操作を行います。  
   
--   SMTP サーバーと、電子メールを送信する権限のあるユーザー アカウントを指定するだけの場合は、Reporting Services 構成マネージャーを使用します。 これらは、レポート サーバーの電子メール配信拡張機能を構成するために最低限必要な設定です。 詳細については、次を参照してください。[電子メールの設定 - Configuration Manager &#40;SSRS ネイティブ モード&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)と[Reporting Services での電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)します。  
+-   SMTP サーバーと、電子メールを送信する権限のあるユーザー アカウントを指定するだけの場合は、Reporting Services 構成マネージャーを使用します。 これらは、レポート サーバーの電子メール配信拡張機能を構成するために最低限必要な設定です。 詳細については、[電子メールの設定 - Configuration Manager &#40;SSRS ネイティブ モード&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)と[Reporting Services での電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)を参照してください。  
   
--   (省略可能) テキスト エディターを使用して、RSreportserver.config ファイルで追加の設定を指定します。 このファイルには、レポート サーバーの電子メール配信の構成設定がすべて含まれています。 ローカル SMTP サーバーを使用する場合や、電子メールの配信を特定のホストに限定する場合は、これらのファイルで追加の設定を指定する必要があります。 検索と構成ファイルの変更の詳細については、次を参照してください。 [Reporting Services の構成ファイルを変更&#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) SQL Server オンライン ブックの「します。  
+-   (省略可能) テキスト エディターを使用して、RSreportserver.config ファイルで追加の設定を指定します。 このファイルには、レポート サーバーの電子メール配信の構成設定がすべて含まれています。 ローカル SMTP サーバーを使用する場合や、電子メールの配信を特定のホストに限定する場合は、これらのファイルで追加の設定を指定する必要があります。 検索と構成ファイルの変更の詳細については、[Reporting Services の構成ファイルを変更&#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) SQL Server オンライン ブックの「を参照してください。  
   
 > [!NOTE]  
 >  レポート サーバーの電子メール設定は CDO に基づいています。 特定の設定に関する詳細については、CDO の製品マニュアルを参照してください。  

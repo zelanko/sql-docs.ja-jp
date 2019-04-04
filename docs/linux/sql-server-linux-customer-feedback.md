@@ -22,7 +22,7 @@ ms.locfileid: "58566371"
 
 Microsoft SQL Server は既定で、お客様のアプリケーションの使用状態に関する情報を収集します。 具体的には、SQL Server はインストール エクスペリエンス、利用状況、およびパフォーマンスに関する情報を収集します。 この情報は、Microsoft が製品の向上を図り、お客様のニーズをさらに満たすのに役立ちます。 たとえば Microsoft では、お客様が受け取るエラー コードの種類に関する情報を収集して、関連するバグの修正、SQL Server の使用方法に関するドキュメントの改善、より良いサービスのために製品に機能を追加すべきかどうかの判断を行います。
 
-このドキュメントではどのような種類の情報を収集および送信を収集する Linux 上の Microsoft SQL Server を構成する方法についての詳細情報を Microsoft にします。 SQL Server 2017 には、ユーザーから収集することはできませんし、どのような情報を説明するプライバシーに関する声明が含まれています。 詳細については、次を参照してください。、[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)します。
+このドキュメントではどのような種類の情報を収集および送信を収集する Linux 上の Microsoft SQL Server を構成する方法についての詳細情報を Microsoft にします。 SQL Server 2017 には、ユーザーから収集することはできませんし、どのような情報を説明するプライバシーに関する声明が含まれています。 詳細については、、[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)を参照してください。
 
 具体的には、Microsoft はこのメカニズムでは次の種類の情報は送信しません。
 
@@ -209,4 +209,4 @@ Docker で Local Audit を有効にするには Docker が必要[のデータを
 
 ## <a name="next-steps"></a>次のステップ
 
-Linux 上の SQL Server に関する詳細については、次を参照してください。、 [Linux に SQL Server の概要](sql-server-linux-overview.md)します。
+Linux 上の SQL Server に関する詳細については、、 [Linux に SQL Server の概要](sql-server-linux-overview.md)を参照してください。

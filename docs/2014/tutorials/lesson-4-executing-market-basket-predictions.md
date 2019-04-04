@@ -18,7 +18,7 @@ ms.lasthandoff: 02/11/2019
 ms.locfileid: "56041433"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>レッスン 4:マーケット バスケット予測の実行
-  このレッスンでは、DMX を使用して`SELECT`関連付けに基づく予測を作成するステートメントをモデル化で作成した[レッスン 2。Market Basket マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)します。 DMX の `SELECT` ステートメントを使用して、`PREDICTION JOIN` 句を追加することにより、予測クエリを作成します。 予測結合の構文の詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;予測結合&#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)します。  
+  このレッスンでは、DMX を使用して`SELECT`関連付けに基づく予測を作成するステートメントをモデル化で作成した[レッスン 2。Market Basket マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)します。 DMX の `SELECT` ステートメントを使用して、`PREDICTION JOIN` 句を追加することにより、予測クエリを作成します。 予測結合の構文の詳細については、[SELECT FROM&#60;モデル&#62;予測結合&#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)を参照してください。  
   
  **SELECT FROM \<model > PREDICTION JOIN**のフォーム、`SELECT`ステートメントには、3 つの部分が含まれています。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "56041433"
   
 -   マイニング モデル列とソース データ間のマッピング。 列の名前が同じ場合は、`NATURAL PREDICTION JOIN` 構文を使用して列マッピングを省略できます。  
   
- 予測関数を使用すると、クエリを改良できます。 予測関数では、予測が発生する可能性などの追加の情報や、トレーニング データセットでの予測サポートが提供されます。 予測関数の詳細については、次を参照してください。[関数&#40;DMX&#41;](/sql/dmx/functions-dmx)します。  
+ 予測関数を使用すると、クエリを改良できます。 予測関数では、予測が発生する可能性などの追加の情報や、トレーニング データセットでの予測サポートが提供されます。 予測関数の詳細については、[関数&#40;DMX&#41;](/sql/dmx/functions-dmx)を参照してください。  
   
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で予測クエリ ビルダーを使用して、予測クエリを作成することもできます。  
   
@@ -224,7 +224,7 @@ SELECT <select list> FROM [<mining model>]
   
  これで、マーケット バスケットのチュートリアルの最後の手順が終了します。 このチュートリアルでは、同時に購入される可能性がある製品を予測するときに使用できる、モデルのセットを作成しました。  
   
- もう 1 つの予測シナリオで DMX を使用する方法については、次を参照してください。 [Bike Buyer DMX のチュートリアル](../../2014/tutorials/bike-buyer-dmx-tutorial.md)します。  
+ もう 1 つの予測シナリオで DMX を使用する方法については、[Bike Buyer DMX のチュートリアル](../../2014/tutorials/bike-buyer-dmx-tutorial.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [結合モデルのクエリ例](../../2014/analysis-services/data-mining/association-model-query-examples.md)   

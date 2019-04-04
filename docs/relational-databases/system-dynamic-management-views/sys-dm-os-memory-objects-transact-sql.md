@@ -48,7 +48,7 @@ ms.locfileid: "47800650"
 |**max_pages_allocated_count**|**int**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /><br /> メモリ オブジェクトによって割り当てられている最大ページ数。 NULL 値は許可されません。|  
 |**page_size_in_bytes**|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> メモリ オブジェクトによって割り当てられているのページのサイズ (バイト単位)。 NULL 値は許可されません。|  
 |**max_pages_in_bytes**|**bigint**|メモリ オブジェクトによって使用されるメモリの最大量。 NULL 値は許可されません。|  
-|**page_allocator_address**|**varbinary(8)**|ページ アロケーターのメモリ アドレス。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)します。|  
+|**page_allocator_address**|**varbinary(8)**|ページ アロケーターのメモリ アドレス。 NULL 値は許可されません。 詳細については、[sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)を参照してください。|  
 |**creation_stack_address**|**varbinary(8)**|内部使用のみです。 NULL 値が許可されます。|  
 |**sequence_num**|**int**|内部使用のみです。 NULL 値が許可されます。|  
 |**partition_type**|**int**|パーティションの種類。<br /><br /> 0 - - 分割を可能なメモリ オブジェクト<br /><br /> 1-分割可能なメモリ オブジェクトを現在パーティション分割されていません。<br /><br /> 2-分割可能なメモリ オブジェクトの NUMA ノードでパーティション分割します。 1 つの NUMA ノードがある環境でこれは、1 と等価です。<br /><br /> 3-分割可能なメモリ オブジェクト。 CPU によってパーティションに分割します。|  

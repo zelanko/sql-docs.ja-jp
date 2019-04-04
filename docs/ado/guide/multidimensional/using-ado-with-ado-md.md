@@ -43,7 +43,7 @@ ADO および ADO MD は、関連するが、別のオブジェクト モデル�
   
  ADO の列挙値の ADO MD のプロパティまたはメソッドを使用するには、プロジェクトは、ADO MD と ADO ライブラリを参照する必要があります。 たとえば、ADO を使用することができます**adState** ADO md の列挙値[状態](../../../ado/reference/ado-md-api/state-property-ado-md.md)プロパティ。 ライブラリへの参照を確立する方法の詳細については、開発ツールのドキュメントを参照してください。  
   
- ADO オブジェクトやメソッドの詳細については、次を参照してください。、 [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)します。  
+ ADO オブジェクトやメソッドの詳細については、、 [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

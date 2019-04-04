@@ -57,7 +57,7 @@ SQLRETURN SQLProcedureColumns(
  *カタログ名*  
  [入力]プロシージャのカタログ名。 ドライバーをドライバーがさまざまな Dbms、空の文字列からデータを取得する場合など、他ではなく一部のプロシージャのカタログをサポートしている場合 ("") のカタログはありません。 それらの手順を示します。 *CatalogName*文字列の検索パターンを含めることはできません。  
   
- SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。  
+ SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)を参照してください。  
   
  *NameLength1*  
  [入力]文字の長さ **CatalogName*します。  
@@ -105,7 +105,7 @@ SQLRETURN SQLProcedureColumns(
 |HY009|無効な null ポインターの使用|SQL_ATTR_METADATA_ID のステートメント属性、SQL_TRUE に設定されて、 *CatalogName*引数が null ポインターの場合は、および、SQL_CATALOG_NAME*情報の種類*カタログ名を返しますがサポートされています。<br /><br /> (DM) SQL_ATTR_METADATA_ID ステートメント属性の SQL_TRUE に設定された、 *SchemaName*、 *ProcName*、または*ColumnName*引数が null ポインター。|  
 |HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 SQLProcedureColumns 関数が呼び出されたときにも、この aynschronous 関数が実行されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
 |HY090|文字列またはバッファーの長さが無効です。|(DM) 名の長の引数のいずれかの値が 0 未満でしたが、SQL_NTS と等しくありません。<br /><br /> 名の長の引数のいずれかの値には、対応するカタログ、スキーマ、プロシージャ、または列名の最大長の値を超えています。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYC00|省略可能な機能が実装されていません|プロシージャのカタログが指定されていると、ドライバーまたはデータ ソースがカタログをサポートしていません。<br /><br /> プロシージャのスキーマが指定されていると、ドライバーまたはデータ ソース スキーマはサポートしません。<br /><br /> プロシージャのスキーマ、プロシージャ名、または列名、文字列の検索パターンが指定されて、データ ソースがこれらの引数の 1 つ以上の検索パターンをサポートしていません。<br /><br /> SQL_ATTR_CURSOR_TYPE、SQL_ATTR_CONCURRENCY ステートメント属性の現在の設定の組み合わせが、ドライバーまたはデータ ソースでサポートされていません。<br /><br /> SQL_ATTR_USE_BOOKMARKS ステートメント属性は SQL_UB_VARIABLE に設定されており、SQL_ATTR_CURSOR_TYPE ステートメント属性は、ドライバーがブックマークをできません、カーソルの種類に設定されました。|  
 |HYT00|タイムアウトが発生しました|データ ソースには、結果セットが返される前に、タイムアウト期間が終了しました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -114,19 +114,19 @@ SQLRETURN SQLProcedureColumns(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- この関数は、プロシージャのパラメーターと存在する場合、結果セットまたはプロシージャによって返されたセットを構成する列についての情報を取得するステートメントを実行する前に通常使用されます。 詳細については、次を参照してください。[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)します。  
+ この関数は、プロシージャのパラメーターと存在する場合、結果セットまたはプロシージャによって返されたセットを構成する列についての情報を取得するステートメントを実行する前に通常使用されます。 詳細については、[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)を参照してください。  
   
 > [!NOTE]  
 >  **SQLProcedureColumns**プロシージャで使用されるすべての列が返されない可能性があります。 たとえば、ドライバーは、プロシージャ、および生成の結果セットの列によって使用されるパラメーターに関する情報だけを返す可能性があります。  
   
- *SchemaName*、 *ProcName*、および*ColumnName*引数は、検索パターンをそのまま使用します。 有効な検索パターンの詳細については、次を参照してください。[パターン値の引数](../../../odbc/reference/develop-app/pattern-value-arguments.md)します。  
+ *SchemaName*、 *ProcName*、および*ColumnName*引数は、検索パターンをそのまま使用します。 有効な検索パターンの詳細については、[パターン値の引数](../../../odbc/reference/develop-app/pattern-value-arguments.md)を参照してください。  
   
 > [!NOTE]  
->  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
+>  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)を参照してください。  
   
  **SQLProcedureColumns** PROCEDURE_CAT、PROCEDURE_SCHEM、PROCEDURE_NAME、および COLUMN_TYPE 順に並べ、標準的な結果セットとして結果を返します。 次の順序で各プロシージャの列名が返されます。 戻り値の名前、プロシージャの呼び出し (呼び出し順) での各パラメーターの名前、および (列の順序) で、プロシージャによって返される結果セット内の各列の名前。  
   
- アプリケーションでは、結果セットの末尾からの相対ドライバー固有の列をバインドする必要があります。 詳細については、次を参照してください。[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)します。  
+ アプリケーションでは、結果セットの末尾からの相対ドライバー固有の列をバインドする必要があります。 詳細については、[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)を参照してください。  
   
  アプリケーションが呼び出すことができますを PROCEDURE_CAT、PROCEDURE_SCHEM、PROCEDURE_NAME、および COLUMN_NAME 列の実際の長さを判断する**SQLGetInfo** SQL_MAX_CATALOG_NAME_LEN、SQL_MAX_SCHEMA_NAME_LEN、SQL_MAX_ でPROCEDURE_NAME_LEN、および SQL_MAX_COLUMN_NAME_LEN オプション。  
   
@@ -153,7 +153,7 @@ SQLRETURN SQLProcedureColumns(
   
 -   IS_NULLABLE  
   
- 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、19 (によって IS_NULLABLE) 列を超える追加の列を定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウント ダウンによって、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、次を参照してください。[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)します。  
+ 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、19 (によって IS_NULLABLE) 列を超える追加の列を定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウント ダウンによって、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)を参照してください。  
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  

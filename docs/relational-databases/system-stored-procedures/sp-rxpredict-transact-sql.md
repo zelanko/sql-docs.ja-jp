@@ -30,7 +30,7 @@ Machine learning モデルを SQL Server データベースにバイナリ形式
 
 R と Python の機械学習のモデルがほぼリアルタイムでのスコア付けを提供します。 `sp_rxPredict` ストアド プロシージャのラッパーとして提供されるは、`rxPredict`で R 関数[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)と[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)、および[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) でのPython関数[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)と[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)します。 C++ で記述され、専用の操作をスコア付けは最適化されています。
 
-シリアル化され、ターゲット データベース エンジンのインスタンスでバイナリ形式で格納すると、R や Python を使用して、モデルを作成する必要があります、R または Python の統合がインストールされていない場合でもデータベース エンジンのインスタンスから使用できます。 詳細については、次を参照してください。 [sp_rxPredict とリアルタイム スコアリング](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)します。
+シリアル化され、ターゲット データベース エンジンのインスタンスでバイナリ形式で格納すると、R や Python を使用して、モデルを作成する必要があります、R または Python の統合がインストールされていない場合でもデータベース エンジンのインスタンスから使用できます。 詳細については、[sp_rxPredict とリアルタイム スコアリング](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -139,5 +139,5 @@ EXEC sp_rxPredict @model = @model,
 
 `sp_rxPredict` 次の .NET の列型のみをサポートしています: float、short、ushort、double、long、ulong と文字列。 リアルタイム スコアリングのために使用する前に、入力データでサポートされていない型を除外する必要があります。 
 
-  対応する SQL 型については、次を参照してください。 [SQL-CLR 型マッピング](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)または[CLR パラメーター データのマッピング](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)します。
+  対応する SQL 型については、[SQL-CLR 型マッピング](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)または[CLR パラメーター データのマッピング](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)を参照してください。
 

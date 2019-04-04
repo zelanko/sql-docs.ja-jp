@@ -32,6 +32,6 @@ ms.locfileid: "47730650"
   
  アプリケーションの現在の呼び出し**SQLFetch**データの最初の行を取得し、その行からデータにバインドされた変数内に配置する**SQLBindCol**します。 行に、長い形式のデータがある場合を呼び出して**SQLGetData**データを取得します。 アプリケーションの継続を呼び出す**SQLFetch**と**SQLGetData**追加データを取得します。 これには、データのフェッチが完了したら、後に呼び出す**SQLCloseCursor**カーソルを閉じます。  
   
- 結果の取得の詳細については、次を参照してください。 [(Basic) を取得する結果](../../../odbc/reference/develop-app/retrieving-results-basic.md)と[(詳細) を取得する結果](../../../odbc/reference/develop-app/retrieving-results-advanced.md)します。  
+ 結果の取得の詳細については、[(Basic) を取得する結果](../../../odbc/reference/develop-app/retrieving-results-basic.md)と[(詳細) を取得する結果](../../../odbc/reference/develop-app/retrieving-results-advanced.md)を参照してください。  
   
  "手順 3:: ビルドと実行する SQL ステートメントに"同じトランザクションで別のステートメントを実行するアプリケーションを今すぐを返しますまたは、「手順 5::、トランザクションをコミット」にコミットまたはトランザクションをロールバックに進みます。

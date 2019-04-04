@@ -50,7 +50,7 @@ ms.locfileid: "48048532"
   
  同様に、同じ xevent の一致しない型の使用を検出できます`hekaton_slow_parameter_passing`で`reason=parameter_conversion`します。  
   
- メモリ最適化テーブルを使用するときは (多くのシナリオで) 再試行ロジックを実装する必要があり、特定の機能制限に対処する必要があるため、インタープリターによって処理されるラッパー形式の [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを作成する必要が生じることがあります。 例については、次を参照してください。 [Retry Logic for Transactions on Memory-Optimized Tables に関するガイドライン](memory-optimized-tables.md)します。  
+ メモリ最適化テーブルを使用するときは (多くのシナリオで) 再試行ロジックを実装する必要があり、特定の機能制限に対処する必要があるため、インタープリターによって処理されるラッパー形式の [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを作成する必要が生じることがあります。 例については、[Retry Logic for Transactions on Memory-Optimized Tables に関するガイドライン](memory-optimized-tables.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)  

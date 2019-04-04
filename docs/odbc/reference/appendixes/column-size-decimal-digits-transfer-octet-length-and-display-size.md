@@ -38,7 +38,7 @@ ms.locfileid: "47726810"
   
 -   カタログ関数**SQLColumns**、 **SQLProcedureColumns**、および**SQLGetTypeInfo**テーブル、結果セット、またはプロシージャのパラメーターの列の属性を返すとデータ ソース内のデータ型のカタログ属性。 **SQLColumns** (など、ベース テーブル、ビュー、またはシステム テーブル) の指定したテーブルに列のサイズ、10 進数字、および列の長さを返します。 **SQLProcedureColumns**プロシージャで列のサイズ、10 進数字、および列の長さを返します。 **SQLGetTypeInfo**データ ソースの列の最大サイズと SQL のデータ型の最小値と最大 10 進数字を返します。  
   
- 列のこれらの関数によって返される値またはパラメーターのサイズは"precision"として ODBC 2 で定義されているに対応します。*x*します。 ただし、値、必ずしも対応しません SQL_DESC_PRECISION またはその他の任意の 1 つの記述子フィールドで返される値。 "Scale"として ODBC 2 で定義されているに対応する 10 進数の数字も同様です。*x*します。 SQL_DESC_SCALE またはその他の 1 つ記述子フィールドで返される値は必ずしも対応しませんが、データ型に応じて異なる記述子フィールドから取得します。 詳細については、次を参照してください。[列サイズ](../../../odbc/reference/appendixes/column-size.md)と[10 進数字](../../../odbc/reference/appendixes/decimal-digits.md)します。  
+ 列のこれらの関数によって返される値またはパラメーターのサイズは"precision"として ODBC 2 で定義されているに対応します。*x*します。 ただし、値、必ずしも対応しません SQL_DESC_PRECISION またはその他の任意の 1 つの記述子フィールドで返される値。 "Scale"として ODBC 2 で定義されているに対応する 10 進数の数字も同様です。*x*します。 SQL_DESC_SCALE またはその他の 1 つ記述子フィールドで返される値は必ずしも対応しませんが、データ型に応じて異なる記述子フィールドから取得します。 詳細については、[列サイズ](../../../odbc/reference/appendixes/column-size.md)と[10 進数字](../../../odbc/reference/appendixes/decimal-digits.md)を参照してください。  
   
  同様に、転送オクテット長の値は、SQL_DESC_LENGTH からは提供されません。 すべての文字やバイナリ型の記述子フィールドの SQL_DESC_OCTET_LENGTH から取得します。 その他の種類には、この情報を保持する記述子フィールドはありません。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47726810"
   
  記述子フィールドは、結果セットの特性を記述します。 記述子フィールドには、ステートメントの実行前にデータの有効な値はありません。 列の値のサイズを 10 進数字とによって返されるサイズを表示**SQLColumns**、 **SQLProcedureColumns**、および**SQLGetTypeInfo**、他に戻り、渡すデータ ソースのカタログ内に存在するテーブルの列と、データ型などのデータベース オブジェクトの特性。 同様に、その結果セットで**SQLColAttribute**列のサイズ、10 進数字、およびデータ ソースの列の転送オクテット長を返しますこれらの値は必ずしも SQL_DESC_PRECISION、sql _ の値と同じです。DESC_SCALE、および SQL_DESC_OCTET_LENGTH 記述子フィールド。  
   
- これらの記述子フィールドの詳細については、次を参照してください。 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。  
+ これらの記述子フィールドの詳細については、[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)を参照してください。  
   
  関連項目:   
   

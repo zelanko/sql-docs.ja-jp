@@ -39,7 +39,7 @@ ms.locfileid: "52408629"
 |IN TRANSITION TO TOMBSTONE|ファイルのメタデータのみ|  
 |TOMBSTONE|ファイルのメタデータのみ|  
   
- データベースのバックアップと 1 つ以上のメモリ最適化テーブルのサイズはメモリ内のサイズより大きく、ディスク上ストレージよりも小さい。 追加のサイズは、削除された行の数と、ワークロードに間接的に依存する Merge source および REQUIRED FOR BACKUP/HA という状態にあるチェックポイント ファイル ペアの数によって異なります。 チェックポイント ファイル ペアの状態の説明については、次を参照してください。 [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)します。  
+ データベースのバックアップと 1 つ以上のメモリ最適化テーブルのサイズはメモリ内のサイズより大きく、ディスク上ストレージよりも小さい。 追加のサイズは、削除された行の数と、ワークロードに間接的に依存する Merge source および REQUIRED FOR BACKUP/HA という状態にあるチェックポイント ファイル ペアの数によって異なります。 チェックポイント ファイル ペアの状態の説明については、[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)を参照してください。  
   
 ### <a name="estimating-size-of-full-database-backup"></a>データベースの完全バックアップの推計サイズ  
   

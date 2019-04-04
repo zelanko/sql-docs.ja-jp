@@ -67,7 +67,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 >  使用して、 **adCopyOverWrite**慎重オプションします。 など、ファイルをディレクトリにコピーするときに、このオプションを指定する*削除*ディレクトリ、ファイルに置き換えます。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

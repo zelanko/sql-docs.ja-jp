@@ -124,4 +124,4 @@ GO
 ```
 
 ## <a name="next-steps"></a>次の手順
-SQL Server エージェントを使用して、作成、スケジュール、およびジョブを実行する方法の詳細については、次を参照してください。 [Linux 上の SQL Server エージェント ジョブの実行](sql-server-linux-run-sql-server-agent-job.md)します。
+SQL Server エージェントを使用して、作成、スケジュール、およびジョブを実行する方法の詳細については、[Linux 上の SQL Server エージェント ジョブの実行](sql-server-linux-run-sql-server-agent-job.md)を参照してください。

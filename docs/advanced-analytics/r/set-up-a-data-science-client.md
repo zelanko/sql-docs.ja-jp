@@ -98,7 +98,7 @@ R Client で R 処理は 2 つのスレッドとメモリ内のデータに制�
 + **db_owner**ストアド プロシージャなどのオブジェクトを作成するテーブル、関数。 
   必要もあります**db_owner** sample と test のデータベースを作成します。 
 
-コードは、既定では、SQL Server がインストールされていないパッケージを必要とする場合は、インスタンスにインストールされているパッケージを作成するデータベース管理者に配置します。 SQL Server は、セキュリティで保護された環境とはパッケージをインストールできる場所に制限があります。 詳細については、次を参照してください。 [SQL Server に新しい R パッケージをインストール](install-additional-r-packages-on-sql-server.md)します。
+コードは、既定では、SQL Server がインストールされていないパッケージを必要とする場合は、インスタンスにインストールされているパッケージを作成するデータベース管理者に配置します。 SQL Server は、セキュリティで保護された環境とはパッケージをインストールできる場所に制限があります。 詳細については、[SQL Server に新しい R パッケージをインストール](install-additional-r-packages-on-sql-server.md)を参照してください。
 
 ## <a name="5---test-connections"></a>5 - 接続をテストします。
 
@@ -199,7 +199,7 @@ R Client で R 処理は 2 つのスレッドとメモリ内のデータに制�
 
 使用する場合[RStudio](https://www.rstudio.com/)、R ライブラリとリモートの SQL Server 上に対応する実行可能ファイルを使用する環境を構成することができます。
 
-1. SQL Server にインストールされている R パッケージのバージョンを確認します。 詳細については、次を参照してください。[取得の R パッケージ情報](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)します。
+1. SQL Server にインストールされている R パッケージのバージョンを確認します。 詳細については、[取得の R パッケージ情報](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)を参照してください。
 
 1. Microsoft R Client または RevoScaleR と SQL Server インスタンスで使用される基本の R ディストリビューションを含め、その他の R パッケージを追加するスタンドアロン サーバー オプションのいずれかをインストールします。 レベル以下で、同じバージョンを選択します (パッケージは、旧バージョンと互換性のある) サーバー上と同じパッケージのバージョンを提供します。 バージョンについては、この記事ではマップのバージョンを参照してください。[R と Python のコンポーネントをアップグレード](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)します。
 

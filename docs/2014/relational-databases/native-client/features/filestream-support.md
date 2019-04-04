@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48068282"
 ---
 # <a name="filestream-support"></a>FILESTREAM のサポート
-  FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を経由するか、Windows ファイル システムに直接アクセスすることで、大きなバイナリ値の格納やアクセスが可能になります。 大きなバイナリ値とは、2 ギガバイト (GB) よりも大きい値です。 強化された FILESTREAM のサポートの詳細については、次を参照してください。 [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)します。  
+  FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を経由するか、Windows ファイル システムに直接アクセスすることで、大きなバイナリ値の格納やアクセスが可能になります。 大きなバイナリ値とは、2 ギガバイト (GB) よりも大きい値です。 強化された FILESTREAM のサポートの詳細については、[FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)を参照してください。  
   
  データベース接続を開くと、`@@TEXTSIZE` が既定で -1 (無制限) に設定されます。  
   

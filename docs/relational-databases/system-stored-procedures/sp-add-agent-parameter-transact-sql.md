@@ -52,7 +52,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|[マージ エージェント]|  
 |**9**|キュー リーダー エージェント (Queue Reader Agent)|  
   
-`[ @parameter_name = ] 'parameter_name'` パラメーターの名前です。 *parameter_name*は**sysname**、既定値はありません。 システム プロファイルで既に定義されているパラメーターの一覧は、次を参照してください。[レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)します。 各エージェントの有効なパラメーターの完全な一覧は、次のトピックを参照してください。  
+`[ @parameter_name = ] 'parameter_name'` パラメーターの名前です。 *parameter_name*は**sysname**、既定値はありません。 システム プロファイルで既に定義されているパラメーターの一覧は、[レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)を参照してください。 各エージェントの有効なパラメーターの完全な一覧は、次のトピックを参照してください。  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   

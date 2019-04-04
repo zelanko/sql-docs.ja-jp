@@ -38,7 +38,7 @@ ms.locfileid: "52533555"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、SQL Server 2017 on Linux の各種エディションでサポートされる機能の詳細を説明します。 エディションと Windows 上の SQL Server のサポートされる機能は、次を参照してください。 [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)します。  
+この記事では、SQL Server 2017 on Linux の各種エディションでサポートされる機能の詳細を説明します。 エディションと Windows 上の SQL Server のサポートされる機能は、[SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)を参照してください。  
   
 インストールの前提条件は、アプリケーションのニーズによって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にはさまざまなエディションがあり、組織や個人の独自のパフォーマンス、ランタイム、および価格に関する要件に対応できます。 インストールする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントは、ユーザーの特定の要件によっても異なります。 この後のセクションでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の最適なエディションおよびコンポーネントを選択する方法について説明します。  
 
@@ -46,7 +46,7 @@ ms.locfileid: "52533555"
 - [Linux 上の SQL Server のリリース ノート](sql-server-linux-release-notes.md)
 - [Linux 上の SQL Server の新機能新機能](sql-server-linux-whats-new.md)
 
-Linux で使用できない SQL Server 機能の一覧は、次を参照してください。[機能とサービスがサポートされていない](sql-server-linux-release-notes.md#Unsupported)します。
+Linux で使用できない SQL Server 機能の一覧は、[機能とサービスがサポートされていない](sql-server-linux-release-notes.md#Unsupported)を参照してください。
 
 ### <a name="try-sql-server"></a>SQL Server を試してください    
     
@@ -91,7 +91,7 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のデータベースごとの最大メモリ最適化データ サイズ|メモリ制限なし| 32 GB| 16 GB| 352 MB|
 |リレーショナル データベースの最大サイズ|524 PB|524 PB|524 PB|10 GB|  
   
-<sup>1</sup> Enterprise edition with Server およびクライアント アクセス ライセンス (CAL) に基づくライセンス (新しい使用許諾契約は利用できません) は SQL Server インスタンスあたり 20 コアの最大数に制限されます。 コアベースのサーバー ライセンス モデルでは、制限はありません。 詳細については、次を参照してください。[エディションの SQL Server での計算容量制限](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)します。  
+<sup>1</sup> Enterprise edition with Server およびクライアント アクセス ライセンス (CAL) に基づくライセンス (新しい使用許諾契約は利用できません) は SQL Server インスタンスあたり 20 コアの最大数に制限されます。 コアベースのサーバー ライセンス モデルでは、制限はありません。 詳細については、[エディションの SQL Server での計算容量制限](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)を参照してください。  
  
 ##  <a name="RDBMSHA"></a> RDBMS の高可用性  
   

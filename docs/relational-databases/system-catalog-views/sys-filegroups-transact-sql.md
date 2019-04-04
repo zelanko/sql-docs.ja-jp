@@ -35,7 +35,7 @@ ms.locfileid: "51666378"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<列を継承 >**|--|このビューが継承する列の一覧は、次を参照してください。 [sys.data_spaces &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)します。|  
+|**\<列を継承 >**|--|このビューが継承する列の一覧は、[sys.data_spaces &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)を参照してください。|  
 |**filegroup_guid**|**uniqueidentifier**|ファイル グループの GUID です。<br /><br /> NULL = PRIMARY ファイル グループ|  
 |**log_filegroup_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この値は NULL です。|  
 |**is_read_only**|**bit**|1 = ファイル グループは読み取り専用です。<br /><br /> 0 = ファイル グループは読み取り/書き込み可能です。|  

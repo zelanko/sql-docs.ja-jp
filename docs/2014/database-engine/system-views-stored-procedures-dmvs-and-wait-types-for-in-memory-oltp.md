@@ -54,7 +54,7 @@ ms.locfileid: "52406162"
 ## <a name="dynamic-management-views-dmvs"></a>動的管理ビュー (DMV)  
  メモリ最適化テーブルにはいくつかの DMV があります。  
   
- 詳細については、次を参照してください。[メモリ最適化テーブルの動的管理ビュー &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql)します。  
+ 詳細については、[メモリ最適化テーブルの動的管理ビュー &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql)を参照してください。  
   
 ## <a name="wait-types"></a>待機の種類  
  インメモリ OLTP をサポートする待機の種類がいくつかあります。  

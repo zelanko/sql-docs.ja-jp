@@ -64,8 +64,8 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x40**|サブスクライバーの DELETE ステートメントがパブリッシャーで適用される前に、パブリッシャー側でテーブル レベルのアクセス許可がチェックされます。|  
 |**column_tracking**|**true**|列レベルの追跡をオンにします。 テーブル アーティクルにのみ適用されます。<br /><br /> 注:パブリッシュが複数の 246 列を含むテーブルと列レベルの追跡を使用できません。|  
 ||**false**|列レベルの追跡をオフにして、行レベルで競合検出のままです。 テーブル アーティクルにのみ適用されます。|  
-|**compensate_for_errors**|**true**|同期中にエラーが発生したときに、補正操作が実行されます。 詳細については、次を参照してください。 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)します。|  
-||**false**|補正アクションは行われません、これは既定の動作。 詳細については、次を参照してください。 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)します。<br /><br /> **\*\* 重要な\* \*** エラーに対処するとすぐに収束に、影響を受けた行のデータが表示されますが変更を適用して、データが収束します。 アーティクルのソース テーブルが別のパブリケーションの値で既にパブリッシュされている場合*compensate_for_errors*の両方のアーティクルで同じである必要があります。|  
+|**compensate_for_errors**|**true**|同期中にエラーが発生したときに、補正操作が実行されます。 詳細については、[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を参照してください。|  
+||**false**|補正アクションは行われません、これは既定の動作。 詳細については、[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を参照してください。<br /><br /> **\*\* 重要な\* \*** エラーに対処するとすぐに収束に、影響を受けた行のデータが表示されますが変更を適用して、データが収束します。 アーティクルのソース テーブルが別のパブリケーションの値で既にパブリッシュされている場合*compensate_for_errors*の両方のアーティクルで同じである必要があります。|  
 |**creation_script**||パスとサブスクリプション データベースでアーティクルを作成するために使用、オプションのアーティクル スキーマ スクリプトの名前。|  
 |**delete_tracking**|**true**|DELETE ステートメントがレプリケートされます。これは既定の動作です。|  
 ||**false**|削除ステートメントはレプリケートされません。<br /><br /> **\*\* 重要な\* \*** 設定**delete_tracking**に**false**収束、および削除された行の結果を手動で削除する必要があります。|  
@@ -125,10 +125,10 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x100000000**|このオプションを使用して、指定されている場合は、FILESTREAM 属性をレプリケートする**varbinary (max)** 列。 テーブルをレプリケートする場合は、このオプションを指定しない[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]サブスクライバー。 FILESTREAM 列を持つテーブルをレプリケート[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サブスクライバーがサポートされていません、このスキーマ オプションを設定する方法に関係なく、します。 関連するオプションを参照してください。 **0x800000000**します。|  
 ||**0x200000000**|日付と時刻のデータ型に変換 (**日付**、**時間**、 **datetimeoffset**、および**datetime2**) で導かれ[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以前のバージョンでサポートされているデータ型に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 ||**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
-||**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合は、FILESTREAM データが既定のファイル グループに格納されます。 レプリケーションが; ファイル グループを作成できません。したがって、このオプションを設定する場合、サブスクライバーでスナップショットを適用する前に、ファイル グループを作成する必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、次を参照してください。[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)します。<br /><br /> 関連するオプションを参照してください。 **0x100000000**します。|  
+||**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合は、FILESTREAM データが既定のファイル グループに格納されます。 レプリケーションが; ファイル グループを作成できません。したがって、このオプションを設定する場合、サブスクライバーでスナップショットを適用する前に、ファイル グループを作成する必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)を参照してください。<br /><br /> 関連するオプションを参照してください。 **0x100000000**します。|  
 ||**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) に変換します**varbinary (max)** を実行しているサブスクライバーに UDT 型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]します。|  
 ||**0x2000000000**|変換、 **hierarchyid**のデータ型**varbinary (max)** ように型の列**hierarchyid**実行しているサブスクライバーにレプリケートできる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 使用する方法の詳細についての**hierarchyid**レプリケートされたテーブル内の列を参照してください[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)します。|  
-||**0x4000000000**|テーブルにフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、次を参照してください。 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)します。|  
+||**0x4000000000**|テーブルにフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、[Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)を参照してください。|  
 ||**0x8000000000**|変換、 **geography**と**geometry**データ型を**varbinary (max)** を実行しているサブスクライバーにこれらの型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|型の列にインデックスをレプリケート**geography**と**geometry**します。|  
 ||NULL|システムの自動生成されたアーティクルに対する有効なスキーマ オプション。|  

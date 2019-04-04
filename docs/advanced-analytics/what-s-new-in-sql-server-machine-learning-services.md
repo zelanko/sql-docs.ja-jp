@@ -26,7 +26,7 @@ ms.locfileid: "58645524"
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019-preview"></a>SQL Server 2019 プレビューの新機能
 
-このリリースでは、SQL Server で R と Python の machine learning 操作の要求の多い機能を追加します。 このリリースの機能のすべての詳細については、次を参照してください。[で SQL Server 2019 新](../sql-server/what-s-new-in-sql-server-ver15.md)と[Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)します。
+このリリースでは、SQL Server で R と Python の machine learning 操作の要求の多い機能を追加します。 このリリースの機能のすべての詳細については、[で SQL Server 2019 新](../sql-server/what-s-new-in-sql-server-ver15.md)と[Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)を参照してください。
 
 | リリース | 機能更新プログラム |
 |---------|----------------|
@@ -40,7 +40,7 @@ ms.locfileid: "58645524"
 | CTP 2.0 | R と Python の機械学習用の Linux プラットフォームのサポート。 概要[インストール SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md)します。 |
 |   | [Java 言語の拡張機能](java/extension-java.md)Windows と Linux の両方では、SQL Server 2019 プレビューの新機能です。 できるコードのコンパイル済みの Java 利用できるようにする SQL Server アクセス許可の割り当てをパスを設定します。 SQL Server のアクセス権を持つクライアント アプリはデータを使用でき、コードを呼び出すことによって実行[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)、SQL Server で R と Python の統合に使用する同じ手順です。 | 
 |  | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)簡単にパーティション分割されたデータから複数のモデルを生成するための 2 つの新しいパラメーターが導入されています。 このチュートリアルで詳しく[を R でのパーティションに基づくモデルを作成する](tutorials/r-tutorial-create-models-per-partition.md)します。 |
-|   | Windows と Linux、SQL Server スタート パッド サービスがすべてのノードで開始と仮定した場合に、フェールオーバー クラスターのサポートはサポートされています。 詳細については、次を参照してください。 [SQL Server フェールオーバー クラスター インストール](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)します。 |
+|   | Windows と Linux、SQL Server スタート パッド サービスがすべてのノードで開始と仮定した場合に、フェールオーバー クラスターのサポートはサポートされています。 詳細については、[SQL Server フェールオーバー クラスター インストール](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)を参照してください。 |
 
 ::: moniker-end
 
@@ -49,7 +49,7 @@ ms.locfileid: "58645524"
 
 このリリースで追加[Python のサポートと業界最先端の機械学習アルゴリズム](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)します。 新しいスコープを反映するように名前変更、SQL Server 2017 のマークの導入に伴い[SQL Server Machine Learning サービス (In-database)](what-is-sql-server-machine-learning.md)Python と R. の両方の言語サポート 
 
-機能のお知らせすべて時に、次を参照してください。 [SQL Server 2017 の新](../sql-server/what-s-new-in-sql-server-2017.md)します。
+機能のお知らせすべて時に、[SQL Server 2017 の新](../sql-server/what-s-new-in-sql-server-2017.md)を参照してください。
 
 ### <a name="r-enhancements"></a>R の機能強化
 
@@ -59,7 +59,7 @@ R 用の新しい機能が含まれます[**パッケージ管理**](r/install-a
 
 + データベース ロールは、パッケージの管理、およびパッケージのインストールのアクセス許可を割り当て、Dba を支援します。
 + [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)により Dba は、使い慣れた T-SQL 言語でパッケージを管理します。
-+ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)関数は、インストール、削除、またはパッケージの一覧は、ユーザーが所有するを支援します。 詳細については、次を参照してください。 [RevoScaleR 関数を使用して、見つからないか、R をインストールする方法は、SQL Server にパッケージ](r/use-revoscaler-to-manage-r-packages.md)します。
++ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)関数は、インストール、削除、またはパッケージの一覧は、ユーザーが所有するを支援します。 詳細については、[RevoScaleR 関数を使用して、見つからないか、R をインストールする方法は、SQL Server にパッケージ](r/use-revoscaler-to-manage-r-packages.md)を参照してください。
 
 ### <a name="r-libraries"></a>R ライブラリ
 
@@ -99,7 +99,7 @@ T-SQL を使用することができます[PREDICT](../t-sql/queries/predict-tra
 
 さらに、 **SQL Server 2016 R Server (スタンドアロン)** Windows サーバー上の R Server をインストールする方法としてリリースされました。 最初に、SQL Server セットアップでは、R Server for Windows をインストールする唯一の方法が用意されています。 以降のリリースの Windows での R Server を望むデータ サイエンティストと開発者は同じ目標を達成するために別のスタンドアロン インストーラーを使用できます。 SQL Server のスタンドアロン サーバーは機能的には、スタンドアロンのサーバー製品[Microsoft R Server の用 Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)します。
 
-機能のお知らせすべて時に、次を参照してください。 [SQL Server 2016 の新](../sql-server/what-s-new-in-sql-server-2016.md)します。
+機能のお知らせすべて時に、[SQL Server 2016 の新](../sql-server/what-s-new-in-sql-server-2016.md)を参照してください。
 
 | リリース |機能更新プログラム |
 |---------|----------------|
@@ -108,7 +108,7 @@ T-SQL を使用することができます[PREDICT](../t-sql/queries/predict-tra
 
 ## <a name="linux-support-roadmap"></a>Linux サポートのロードマップ
 
-SQL Server 2019 CTP 2.3 は、機械学習、データベース エンジンのインスタンスを使用してパッケージをインストールするときに、R、Python、および Java の Linux サポートを追加します。 詳細については、次を参照してください。[インストール SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md)します。
+SQL Server 2019 CTP 2.3 は、機械学習、データベース エンジンのインスタンスを使用してパッケージをインストールするときに、R、Python、および Java の Linux サポートを追加します。 詳細については、[インストール SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md)を参照してください。
 
 Linux では、SQL Server 2017 が R または Python の統合が使用できます[ネイティブ スコアリング](sql-native-scoring.md)on Linux でその機能は、T-SQL で使用できるため、 [PREDICT](../t-sql/queries/predict-transact-sql.md)、on Linux を実行します。 ネイティブ スコアリングを使用しなくても呼び出すことも、R ランタイムから事前トレーニング済みモデルでは、高パフォーマンスのスコア付けできます。
 

@@ -60,7 +60,7 @@ ms.locfileid: "38032728"
   
 -   使用して、データベースからマイニング モデルを完全に削除、 [DROP MINING MODEL](../dmx/drop-mining-model-dmx.md)ステートメント。 使用して、データベースからマイニング構造とそのすべての関連マイニング モデルを完全に削除、 [DROP MINING STRUCTURE](../dmx/drop-mining-structure-dmx.md)ステートメント。  
   
- DMX ステートメントを使用して実行できるデータ マイニング タスクの詳細については、次を参照してください。[データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)します。  
+ DMX ステートメントを使用して実行できるデータ マイニング タスクの詳細については、[データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)を参照してください。  
   
  [DMX ステートメントに戻る](#BKMK_DMXStatements)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "38032728"
   
 -   使用して、モデルまたは構造からトレーニング済みのすべてのデータを削除、[削除&#40;DMX&#41; ](../dmx/delete-dmx.md)ステートメント。  
   
- DMX ステートメントを使用して実行できるデータ マイニング タスクの詳細については、次を参照してください。[データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)します。  
+ DMX ステートメントを使用して実行できるデータ マイニング タスクの詳細については、[データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)を参照してください。  
   
  [DMX ステートメントに戻る](#BKMK_DMXStatements)  
   

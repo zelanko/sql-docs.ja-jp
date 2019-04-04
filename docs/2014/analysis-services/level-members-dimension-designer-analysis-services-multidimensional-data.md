@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48209708"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>レベルとメンバー ([ブラウザー] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
-  このペインを使用すると、現在選択している階層と言語のメンバーを参照できます。 参照する階層または言語を選択するには、 **ツール バー** ペインの **[階層]** および **[言語]** オプションを使用します。 ツール バー ペインの詳細については、次を参照してください。[ツールバー&#40;ブラウザー タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)します。  
+  このペインを使用すると、現在選択している階層と言語のメンバーを参照できます。 参照する階層または言語を選択するには、 **ツール バー** ペインの **[階層]** および **[言語]** オプションを使用します。 ツール バー ペインの詳細については、[ツールバー&#40;ブラウザー タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)を参照してください。  
   
 ## <a name="writeback-mode"></a>書き戻しモード  
  書き戻しモードが有効な場合、このペインの機能は変わります。 選択したディメンションが書き込みが有効にする必要があります (つまり、`WriteEnabled`ディメンションのプロパティを設定する必要がありますを true に) にディメンションを展開する必要があります、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]書き戻しモードを有効にするにはインスタンス。  

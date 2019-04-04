@@ -123,4 +123,4 @@ Web サービスを使用してアプリは正常に呼び出すようになり�
 
 その他のサンプルを確認することもできます。[アプリの展開サンプル](https://aka.ms/sql-app-deploy)します。
 
-ビッグ データの SQL Server クラスターの詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)します。
+ビッグ データの SQL Server クラスターの詳細については、[SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)を参照してください。

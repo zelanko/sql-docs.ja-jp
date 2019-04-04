@@ -214,4 +214,4 @@ print("loaded model from {}".format(model_fs))
 
 ## <a name="next-steps"></a>次のステップ
 
-PySpark ノートブックを使用する方法の詳細については、次を参照してください。 [notebook を使用する方法](notebooks-guidance.md)します。
+PySpark ノートブックを使用する方法の詳細については、[notebook を使用する方法](notebooks-guidance.md)を参照してください。

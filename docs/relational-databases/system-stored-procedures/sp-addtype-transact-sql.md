@@ -60,7 +60,7 @@ sp_addtype [ @typename = ] type,
 |**sql_variant**|**text**|**tinyint**|  
 |**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
   
- 空白や句読点が埋め込まれているすべてのパラメーターには、引用符が必要です。 使用可能なデータの種類の詳細については、次を参照してください。[データ型&#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)します。  
+ 空白や句読点が埋め込まれているすべてのパラメーターには、引用符が必要です。 使用可能なデータの種類の詳細については、[データ型&#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)を参照してください。  
   
  *n*  
  選択したデータ型の長さを示す負でない整数です。  
@@ -74,7 +74,7 @@ sp_addtype [ @typename = ] type,
 `[ @nulltype = ] 'null_type'` 別名データ型で null 値の処理方法を示します。 *null_type*は**varchar (** 8 **)** NULL の場合、既定値と、単一の引用符 ('NULL'、'NOT NULL' または 'NONULL') で囲む必要があります。 場合*null_type*によって明示的に定義されていない**sp_addtype**、現在の既定の null 値に設定されます。 現在の既定の null 値を確認するのにには、GETANSINULL システム関数を使用します。 これは、SET ステートメントまたは ALTER DATABASE を使用して調整できます。 NULL 値の許容属性は、明示的に定義してください。 場合**@phystype**は**ビット**、および**@nulltype**が指定されていない、既定値は NULL。  
   
 > [!NOTE]  
->  *Null_type*パラメーターには、このデータ型の既定の null 値のみを定義します。 Null 値許容属性は明示的に定義されている別名データ型を使用してテーブルを作成する際に場合よりも優先、定義済みの null 値。 詳細については、次を参照してください。 [ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)と[CREATE TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)します。  
+>  *Null_type*パラメーターには、このデータ型の既定の null 値のみを定義します。 Null 値許容属性は明示的に定義されている別名データ型を使用してテーブルを作成する際に場合よりも優先、定義済みの null 値。 詳細については、[ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)と[CREATE TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

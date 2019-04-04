@@ -48,4 +48,4 @@ ms.locfileid: "47811360"
   
 8.  [使用] をクリックします。  
   
- 開いているクエリにテーブルを追加できます。 クエリの作成の詳細については、次を参照してください。 [Visual FoxPro データベースから Microsoft Excel へのデータのインポート](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)します。
+ 開いているクエリにテーブルを追加できます。 クエリの作成の詳細については、[Visual FoxPro データベースから Microsoft Excel へのデータのインポート](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)を参照してください。

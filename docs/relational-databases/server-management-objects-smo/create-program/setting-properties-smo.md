@@ -33,7 +33,7 @@ ms.locfileid: "47790860"
  プロパティ値は、そのプロパティが読み取り/書き込みアクセスまたは読み取り専用アクセスのどちらであるかに応じて、変更または取得を行うことができます。 また、オブジェクトを作成する前に、特定のプロパティを設定する必要もあります。 詳細については、SMO 参考資料で特定のオブジェクトを参照してください。  
   
 > [!NOTE]  
->  子オブジェクトのコレクションは、オブジェクトのプロパティとして表現されます。 たとえば、 **Tables** コレクションは、 **Server** オブジェクトのプロパティとなります。 詳細については、次を参照してください。[を使用してコレクション](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)します。  
+>  子オブジェクトのコレクションは、オブジェクトのプロパティとして表現されます。 たとえば、 **Tables** コレクションは、 **Server** オブジェクトのプロパティとなります。 詳細については、[を使用してコレクション](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)を参照してください。  
   
  オブジェクトのプロパティは、Properties コレクションのメンバーです。 Properties コレクションを使用して、オブジェクトの各プロパティを反復処理することができます。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47790860"
  <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドでは、アプリケーションの残り部分に対して、またはリセットされるまでの、プロパティの読み込み動作を設定することができます。 使用して、元の動作を保存することができます、<xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A>メソッドと、必要に応じて復元されます。  
   
 ## <a name="examples"></a>使用例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Visual Basic でのプロパティの取得および設定  

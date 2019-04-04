@@ -29,7 +29,7 @@ ms.locfileid: "47775350"
   
  すべてのドライバーの接続文字列では、次のキーワードがサポートされて: **DSN**、 **DBQ**、および**FIL**します。  
   
- 次の表は、各ドライバーでは、接続に必要な最小のキーワードを示しています。 と併用キーワード/値ペアの例を示します**SQLDriverConnect**します。 DRIVERID 値の一覧については、次を参照してください。 [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)します。  
+ 次の表は、各ドライバーでは、接続に必要な最小のキーワードを示しています。 と併用キーワード/値ペアの例を示します**SQLDriverConnect**します。 DRIVERID 値の一覧については、[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)を参照してください。  
   
 > [!NOTE]  
 >  For Microsoft Excel 3.0 または 4.0 driver DBQ または DefaultDir を指定しない場合、ドライバーは、現在のディレクトリに接続します。  

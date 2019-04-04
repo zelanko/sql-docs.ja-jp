@@ -58,7 +58,7 @@ ms.locfileid: "48180412"
   
  式の詳細を調べる場合は、 [Microsoft 汎用コンテンツ ツリー ビューアー](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)で係数およびその他の詳細を参照することもできます。  
   
- 線形回帰モデルの場合、モデル コンテンツには、メタデータ、回帰式、および入力値の分布に関する統計が含まれます。 詳細については、次を参照してください。[線形回帰モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)します。  
+ 線形回帰モデルの場合、モデル コンテンツには、メタデータ、回帰式、および入力値の分布に関する統計が含まれます。 詳細については、[線形回帰モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)を参照してください。  
   
 ## <a name="creating-predictions"></a>予測の作成  
  モデルの処理後、結果が統計のセットとして線形回帰式と共に保存されます。これを使用して、将来の傾向を計算することができます。 線形回帰モデルで使用するクエリの例については、「 [線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)」を参照してください。  

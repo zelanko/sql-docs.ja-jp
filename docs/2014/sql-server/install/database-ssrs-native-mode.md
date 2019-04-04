@@ -39,13 +39,13 @@ ms.locfileid: "48102492"
  サーバー データを格納するレポート サーバー データベースの名前を指定します。  
   
  **レポート サーバー モード**  
- レポート サーバー データベースでネイティブ モードと SharePoint 統合モードのどちらをサポートするかを示します。 詳細については、次を参照してください。 [Reporting Services レポート サーバー](../../../2014/reporting-services/reporting-services-report-server.md)します。  
+ レポート サーバー データベースでネイティブ モードと SharePoint 統合モードのどちらをサポートするかを示します。 詳細については、[Reporting Services レポート サーバー](../../../2014/reporting-services/reporting-services-report-server.md)を参照してください。  
   
  **データベースの変更**  
  レポート サーバー データベースの作成または選択に必要なすべての手順を示すウィザードを起動します。  
   
  **資格情報の種類**  
- レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報を指定します。 資格情報の種類を指定できますが、サービス アカウント、Windows ドメイン ユーザー、Windows のローカル ユーザーを含めるまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ログインします。 資格情報の選択の詳細については、次を参照してください。[レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)します。  
+ レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報を指定します。 資格情報の種類を指定できますが、サービス アカウント、Windows ドメイン ユーザー、Windows のローカル ユーザーを含めるまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ログインします。 資格情報の選択の詳細については、[レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)を参照してください。  
   
  **[ユーザー名]**  
  Windows 資格情報を使用している場合は、ドメイン ユーザー アカウントを指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用する場合、ログイン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資格情報。 Windows 資格情報を使用している場合、この形式でそれらを指定: *\<ドメイン >\\< アカウント\>* します。  

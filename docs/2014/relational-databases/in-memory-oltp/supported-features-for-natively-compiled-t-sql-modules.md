@@ -167,7 +167,7 @@ ms.locfileid: "58527144"
   
 -   OPTIMIZE FOR  
   
- 詳細については、次を参照してください。[ヒント&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql)します。  
+ 詳細については、[ヒント&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql)を参照してください。  
   
 ##  <a name="los"></a> 並べ替えに関する制限事項  
  [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) および [ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用するクエリでは、8,000 を超える行の並べ替えを行うことができます。 ただし、[ORDER BY 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) を使用しない場合、[TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) で並べ替えができる行数は最大で 8,000 です (結合がある場合は、より少ない行数になります)。  

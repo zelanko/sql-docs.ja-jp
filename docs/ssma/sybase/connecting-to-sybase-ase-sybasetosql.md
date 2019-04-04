@@ -97,7 +97,7 @@ ASE への接続に使用されるアカウントが少なくとも必要**パ�
   
         `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`  
   
-    詳細については、次を参照してください。 [Sybase への接続&#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)します。  
+    詳細については、[Sybase への接続&#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)を参照してください。  
   
 ## <a name="reconnecting-to-sybase-ase"></a>Sybase ASE への再接続  
 プロジェクトを閉じるまで、データベース サーバーへの接続をアクティブに保ちます。 プロジェクトを再度開くと、アダプティブ サーバーにアクティブに接続する場合を再接続する必要があります。 メタデータを更新するには、データベース オブジェクトに読み込む必要になるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のデータを移行します。  

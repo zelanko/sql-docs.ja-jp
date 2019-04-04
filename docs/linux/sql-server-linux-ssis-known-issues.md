@@ -36,7 +36,7 @@ Linux 上の SSIS のこのリリースでは、次の機能はサポートさ�
   - Hadoop と HDFS のサポート
   - Microsoft Connector for SAP BW
 
-その他の制限事項と Linux での SSIS に関する既知の問題では、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md#ssis)します。
+その他の制限事項と Linux での SSIS に関する既知の問題では、、[リリース ノート](sql-server-linux-release-notes.md#ssis)を参照してください。
 
 ## <a name="components"></a> サポートされているとサポート非対象のコンポーネント
 

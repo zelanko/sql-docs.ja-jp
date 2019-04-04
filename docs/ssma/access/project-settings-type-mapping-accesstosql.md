@@ -25,7 +25,7 @@ ms.lasthandoff: 11/15/2018
 ms.locfileid: "51681250"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>プロジェクトの設定 (型のマッピング) (AccessToSQL)
-プロジェクトの型マッピングの設定では、SSMA プロジェクトの既定の型マッピングを設定できます。 個々 のデータベース オブジェクトの型のマッピングを指定することもできます。 詳細については、次を参照してください。[マッピング ソースとターゲットのデータ型](mapping-source-and-target-data-types-accesstosql.md)します。  
+プロジェクトの型マッピングの設定では、SSMA プロジェクトの既定の型マッピングを設定できます。 個々 のデータベース オブジェクトの型のマッピングを指定することもできます。 詳細については、[マッピング ソースとターゲットのデータ型](mapping-source-and-target-data-types-accesstosql.md)を参照してください。  
   
 型のマッピングが表示されます、**プロジェクト設定**と**プロジェクト設定の既定の** ダイアログ ボックス。  
   

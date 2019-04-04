@@ -22,7 +22,7 @@ ms.locfileid: "58493427"
 
 ## <a name="prerequisites"></a>前提条件
 
-+ Java 拡張機能のプログラミングと拡張性フレームワークでの SQL Server 2019 データベース エンジン インスタンス[Windows で](../install/sql-machine-learning-services-windows-install.md)または[on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup)します。 システム構成の詳細については、次を参照してください。 [Java 言語の拡張機能で SQL Server 2019](extension-java.md)します。 コーディングの要件の詳細については、次を参照してください。 [SQL Server で Java を呼び出す方法](howto-call-java-from-sql.md)します。
++ Java 拡張機能のプログラミングと拡張性フレームワークでの SQL Server 2019 データベース エンジン インスタンス[Windows で](../install/sql-machine-learning-services-windows-install.md)または[on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup)します。 システム構成の詳細については、[Java 言語の拡張機能で SQL Server 2019](extension-java.md)を参照してください。 コーディングの要件の詳細については、[SQL Server で Java を呼び出す方法](howto-call-java-from-sql.md)を参照してください。
 
 + SQL Server Management Studio または T-SQL を実行するための別のツール。
 
@@ -199,7 +199,7 @@ Classpath の場所に「パッケージ」をという名前のサブフォル�
 
 Windows での使用をお勧め比較的浅いフォルダー構造、1 つまたは 2 階のアクセス許可を簡略化します。 たとえば、クラスパスようになります 'C:\myJavaCode' コンパイル済みのクラスを含む ' \pkg' という名前のサブフォルダーにします。 
 
-Classpath の詳細については、次を参照してください。[クラスパスの設定](howto-call-java-from-sql.md#set-classpath)します。 
+Classpath の詳細については、[クラスパスの設定](howto-call-java-from-sql.md#set-classpath)を参照してください。 
 
 ### <a name="using-jar-files"></a>.Jar ファイルを使用します。
 

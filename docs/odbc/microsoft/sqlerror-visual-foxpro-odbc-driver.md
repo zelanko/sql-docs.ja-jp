@@ -39,4 +39,4 @@ ms.locfileid: "47634050"
 |*後*|ネイティブ エラーまたは ODBC エラーのテキスト。|  
 |*pcbErrorMsg*|メッセージ テキストと、識別子の長さの長さ。|  
   
- ドライバーのエラー メッセージの詳細については、次を参照してください。[エラー メッセージの概要](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md)します。 この関数の詳細については、次を参照してください。 [SQLError](../../odbc/reference/syntax/sqlerror-function.md)で、 *ODBC プログラマ リファレンス*します。
+ ドライバーのエラー メッセージの詳細については、[エラー メッセージの概要](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md)を参照してください。 この関数の詳細については、[SQLError](../../odbc/reference/syntax/sqlerror-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

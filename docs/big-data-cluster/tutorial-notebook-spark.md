@@ -24,7 +24,7 @@ ms.locfileid: "58860183"
 このチュートリアルでは、読み込みを SQL Server 2019 ビッグ データ クラスター (プレビュー) で Azure Data Studio で、notebook を実行する方法について説明します。 これにより、データ サイエンティストやデータ エンジニアは、Python、R、または Scala コードをクラスターに対して実行できます。
 
 > [!TIP]
-> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、次を参照してください。、[サンプルを Spark](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) GitHub でします。
+> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、、[サンプルを Spark](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) GitHub でを参照してください。
 
 ## <a id="prereqs"></a> 前提条件
 
@@ -52,7 +52,7 @@ ms.locfileid: "58860183"
 
 次の手順では、Azure Data Studio で、ノートブック ファイルを開く方法を示しています。
 
-1. Azure Data Studio、ビッグ データ クラスターの HDFS/Spark ゲートウェイに接続します。 詳細については、次を参照してください。 [HDFS/Spark ゲートウェイへの接続](connect-to-big-data-cluster.md#hdfs)します。
+1. Azure Data Studio、ビッグ データ クラスターの HDFS/Spark ゲートウェイに接続します。 詳細については、[HDFS/Spark ゲートウェイへの接続](connect-to-big-data-cluster.md#hdfs)を参照してください。
 
 1. HDFS/Spark ゲートウェイ接続をダブルクリックして、**サーバー**ウィンドウ。 選び**Notebook を開いて**します。
 

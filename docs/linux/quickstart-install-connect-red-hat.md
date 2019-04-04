@@ -44,7 +44,7 @@ RHEL 7.3、7.4、7.5、または 7.6 マシンがある必要があります**�
 
 自分のコンピューターで Red Hat Enterprise Linux をインストールするには[ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)します。 Azure で RHEL 仮想マシンを作成することもできます。 参照してください[の作成と Azure CLI を使用した Linux Vm の管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)、および使用`--image RHEL`への呼び出しで`az vm create`します。
 
-CTP または SQL Server 2017 の RC リリースをインストールした場合は、次の手順に従う前に、古いリポジトリを削除する必要があります。 詳細については、次を参照してください。 [Linux の構成リポジトリの SQL Server 2017 と 2019](sql-server-linux-change-repo.md)します。
+CTP または SQL Server 2017 の RC リリースをインストールした場合は、次の手順に従う前に、古いリポジトリを削除する必要があります。 詳細については、[Linux の構成リポジトリの SQL Server 2017 と 2019](sql-server-linux-change-repo.md)を参照してください。
 
 その他のシステム要件については、[Linux 上の SQL Server のシステム要件](sql-server-linux-setup.md#system) を参照してください。
 

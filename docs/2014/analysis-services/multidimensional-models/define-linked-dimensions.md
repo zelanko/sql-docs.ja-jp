@@ -32,7 +32,7 @@ ms.locfileid: "48114235"
 >  更新機能が利用できないため、ほとんどの Analysis Services 開発者は、ディメンションをリンクする代わりにディメンションをコピーします。 同じソリューション内にある複数のプロジェクトに対してソリューションをコピーできます。 詳細については、「 [SSAS 内でのリンク ディメンションの更新](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)」をご覧ください。  
   
 ## <a name="prerequisites"></a>前提条件  
- ディメンションを提供するソース データベースとそれを使用する現在のデータベースは、同じバージョンと互換性レベルとする必要があります。 詳細については、次を参照してください。[多次元データベースの互換性レベル設定&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)します。  
+ ディメンションを提供するソース データベースとそれを使用する現在のデータベースは、同じバージョンと互換性レベルとする必要があります。 詳細については、[多次元データベースの互換性レベル設定&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)を参照してください。  
   
  ソース データベースを配置してオンラインにする必要があります。 リンク オブジェクトをパブリッシュまたは使用するサーバーは、操作ができるように構成する必要があります (以下の説明を参照)。  
   

@@ -30,4 +30,4 @@ ms.locfileid: "47642820"
   
  ステートメント ハンドルでは、上の処理をキャンセル*hstmt*します。  
   
- 詳細については、次を参照してください。 [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

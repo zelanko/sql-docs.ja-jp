@@ -34,4 +34,4 @@ ms.locfileid: "47622500"
 |4.0|1998 年の終わり|Microsoft Jet エンジン Unicode 形式との互換性と以前のバージョンの ANSI 形式のサポートを提供します。|  
   
 > [!NOTE]  
->  Version3.5 ドライバーは、ODBC2 を使用する設計されました。*x*します。 ODBC 3.0 での動作も、ODBC 3.0 のすべての機能はサポートされません。 これらのドライバーが ODBC 3.0 を操作する方法についての詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。
+>  Version3.5 ドライバーは、ODBC2 を使用する設計されました。*x*します。 ODBC 3.0 での動作も、ODBC 3.0 のすべての機能はサポートされません。 これらのドライバーが ODBC 3.0 を操作する方法についての詳細については、[旧バージョンとの互換性と標準準拠](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)を参照してください。

@@ -126,7 +126,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**ORACLE**|標準の Oracle パブリッシャーを指定します。|  
 |**ORACLE GATEWAY**|Oracle ゲートウェイ パブリッシャーを指定します。|  
   
- Oracle パブリッシャーと Oracle ゲートウェイ パブリッシャーとの違いの詳細については、次を参照してください。 [Oracle 公開の概要](../../relational-databases/replication/non-sql/oracle-publishing-overview.md)します。  
+ Oracle パブリッシャーと Oracle ゲートウェイ パブリッシャーとの違いの詳細については、[Oracle 公開の概要](../../relational-databases/replication/non-sql/oracle-publishing-overview.md)を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

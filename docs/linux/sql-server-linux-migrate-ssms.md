@@ -82,4 +82,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## <a name="see-also"></a>関連項目
-SSMS を使用する方法の詳細については、次を参照してください。 [SQL Server Management Studio を使用して](https://msdn.microsoft.com/library/ms174173.aspx)します。 SqlPackage.exe の詳細については、次を参照してください。、 [SqlPackage のリファレンス ドキュメント](https://msdn.microsoft.com/library/hh550080.aspx)します。
+SSMS を使用する方法の詳細については、[SQL Server Management Studio を使用して](https://msdn.microsoft.com/library/ms174173.aspx)を参照してください。 SqlPackage.exe の詳細については、、 [SqlPackage のリファレンス ドキュメント](https://msdn.microsoft.com/library/hh550080.aspx)を参照してください。

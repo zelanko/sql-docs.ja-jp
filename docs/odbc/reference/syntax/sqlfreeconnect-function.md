@@ -32,7 +32,7 @@ ms.locfileid: "53203751"
  バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
   
  **まとめ**  
- ODBC 3 *.x*、ODBC 2.0 関数**SQLFreeConnect**置き換わりました**SQLFreeHandle**します。 詳細については、次を参照してください。 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)します。  
+ ODBC 3 *.x*、ODBC 2.0 関数**SQLFreeConnect**置き換わりました**SQLFreeHandle**します。 詳細については、[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)を参照してください。  
   
 > [!NOTE]
 >  どのようなドライバー マネージャーは、ときに、マッピングするには、この関数、ODBC 2 の詳細については *.x*アプリケーションの操作は、ODBC 3 *.x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)付録 g:旧バージョンとの互換性のためのガイドラインをドライバーです。  

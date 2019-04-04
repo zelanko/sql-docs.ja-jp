@@ -27,4 +27,4 @@ ODBC 標準の文法、日付、時刻、タイムスタンプ、および datet
   
  アプリケーションを呼び出すドライバーが、日付、時刻、タイムスタンプ、または datetime interval のリテラルのエスケープ シーケンスをサポートしているかを判断する**SQLGetTypeInfo**します。 データ ソースは、日付、時刻、タイムスタンプ、または datetime 間隔のデータ型をサポートする場合、対応するエスケープ シーケンスもサポートする必要があります。 アプリケーションを呼び出す他のエスケープ シーケンスはサポートされているかどうかを判断する**SQLGetInfo**します。  
   
- 詳細については、次を参照してください。 [odbc エスケープ シーケンス](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)、このセクションで後述します。
+ 詳細については、[odbc エスケープ シーケンス](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)、このセクションで後述を参照してください。

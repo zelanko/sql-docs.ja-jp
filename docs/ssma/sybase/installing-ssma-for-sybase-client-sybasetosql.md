@@ -33,9 +33,9 @@ SSMA をインストールする前に、コンピューターが、次の要件
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework バージョン 4.0 またはそれ以降のバージョン。 .NET Framework バージョン 4.0 で使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品メディア。 取得することも、 [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882)します。  
   
--   Sybase OLEDB/ADO.Net/ODBC プロバイダーと、データベースが含まれている Sybase ASE データベース サーバーへの接続を移行します。 プロバイダーは、Sybase ASE の製品メディアからインストールできます。 接続の詳細については、次を参照してください。 [Sybase ASE への接続&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)します。  
+-   Sybase OLEDB/ADO.Net/ODBC プロバイダーと、データベースが含まれている Sybase ASE データベース サーバーへの接続を移行します。 プロバイダーは、Sybase ASE の製品メディアからインストールできます。 接続の詳細については、[Sybase ASE への接続&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)を参照してください。  
   
--   アクセスとのターゲット インスタンスをホストするコンピューターに十分なアクセス許可[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB が、移行するデータベース オブジェクトとデータ。 詳細については、次を参照してください。 [SQL Server に接続する&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)/[Azure SQL DB に接続する&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)します。  
+-   アクセスとのターゲット インスタンスをホストするコンピューターに十分なアクセス許可[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB が、移行するデータベース オブジェクトとデータ。 詳細については、[SQL Server に接続する&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)/[Azure SQL DB に接続する&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)を参照してください。  
   
 -   4 GB の RAM を推奨します。  
   
@@ -63,7 +63,7 @@ SSMA は、Web からダウンロードします。 最新バージョンをダ�
   
 既定のインストール場所は C:\Program files \microsoft SQL Server Migration Assistant for Sybase します。  
   
-SSMA のプログラム ファイルだけでなくもにインストールする必要 SSMA for Sybase の拡張機能の Pack[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。 [SQL Server での SSMA コンポーネントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)します。  
+SSMA のプログラム ファイルだけでなくもにインストールする必要 SSMA for Sybase の拡張機能の Pack[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、[SQL Server での SSMA コンポーネントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server での SSMA コンポーネントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  

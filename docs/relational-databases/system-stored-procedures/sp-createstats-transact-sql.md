@@ -33,7 +33,7 @@ ms.locfileid: "58534012"
   
  sp_createstats は、クエリの実行時間は重要であり単一列統計を生成するクエリ オプティマイザーに待つことができない場合のベンチマークなどのアプリケーションに適しています。 ほとんどの場合、その必要はありません。 sp_createstats を使用するにはクエリ オプティマイザーでは、クエリを向上させるために必要に応じて単一列統計が生成されるプランの場合に、 **AUTO_CREATE_STATISTICS**オプションがオンにします。  
   
- 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。 単一列の統計情報の生成の詳細については、次を参照してください。、 **AUTO_CREATE_STATISTICS**オプション[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)します。  
+ 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。 単一列の統計情報の生成の詳細については、、 **AUTO_CREATE_STATISTICS**オプション[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,7 +66,7 @@ sp_createstats
 ## <a name="remarks"></a>コメント  
  sp_createstats が作成または、既存の統計オブジェクトの最初の列である列の統計を更新していません。 これには、インデックス、AUTO_CREATE_STATISTICS オプションを生成された単一列統計の列、および CREATE STATISTICS ステートメントを使用して作成された統計の最初の列に対して作成された統計の最初の列が含まれます。 その列が別の有効なインデックスで使用する場合を除き、sp_createstats は無効化されたインデックスの最初の列で統計を作成できません。 sp_createstats は無効になっているクラスター化インデックスを持つテーブルで統計を作成できません。  
   
- テーブルに列セットが含まれている場合、sp_createstats ではスパース列に対する統計は作成されません。 列セットとスパース列の詳細については、次を参照してください。[列セットの使用](../../relational-databases/tables/use-column-sets.md)と[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)します。  
+ テーブルに列セットが含まれている場合、sp_createstats ではスパース列に対する統計は作成されません。 列セットとスパース列の詳細については、[列セットの使用](../../relational-databases/tables/use-column-sets.md)と[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  

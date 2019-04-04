@@ -34,6 +34,6 @@ ms.locfileid: "47625386"
  インスタンス名に無効な文字が含まれているか、インスタンス名が長すぎます。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- Local Database Runtime API のドキュメントを参照して、Local Database Runtime インスタンスの有効な名前を確認してください。  詳細については、次を参照してください。 [SQL Server Express LocalDB インスタンス API リファレンス](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)します。
+ Local Database Runtime API のドキュメントを参照して、Local Database Runtime インスタンスの有効な名前を確認してください。  詳細については、[SQL Server Express LocalDB インスタンス API リファレンス](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)を参照してください。
   
   

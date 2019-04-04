@@ -62,7 +62,7 @@ ms.locfileid: "56041443"
   
  データベースがエラスティック プールのメンバーである場合は、割合の値として表示されるリソース統計は、エラスティック プールの構成で設定されているデータベースの最大制限の割合として表されます。  
   
- このデータの詳細なビューを使用して**sys.dm_db_resource_stats**ユーザー データベースでの動的管理ビュー。 このビューはデータを 15 秒ごとにキャプチャし、履歴データを 1 時間保持します。  詳細については、次を参照してください。 [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)します。  
+ このデータの詳細なビューを使用して**sys.dm_db_resource_stats**ユーザー データベースでの動的管理ビュー。 このビューはデータを 15 秒ごとにキャプチャし、履歴データを 1 時間保持します。  詳細については、[sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)を参照してください。  
 
 ## <a name="examples"></a>使用例  
  次の例では、過去 1 週間で平均してコンピューティング使用率が 80% 以上になっているすべてのデータベースが返されます。  

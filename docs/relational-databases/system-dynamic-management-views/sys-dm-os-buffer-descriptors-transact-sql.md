@@ -31,7 +31,7 @@ ms.locfileid: "47704710"
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在では、すべてのデータ ページに関する情報を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッファー プールです。 このビューの出力は、バッファー プール内のデータベース ページのディストリビューションをデータベース、オブジェクト、または種類に従って決定するために使用できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、この動的管理ビューは、バッファー プール拡張ファイルのデータ ページに関する情報も返します。 詳細については、次を参照してください。[バッファー プール拡張機能](../../database-engine/configure-windows/buffer-pool-extension.md)します。  
+  現在では、すべてのデータ ページに関する情報を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッファー プールです。 このビューの出力は、バッファー プール内のデータベース ページのディストリビューションをデータベース、オブジェクト、または種類に従って決定するために使用できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、この動的管理ビューは、バッファー プール拡張ファイルのデータ ページに関する情報も返します。 詳細については、[バッファー プール拡張機能](../../database-engine/configure-windows/buffer-pool-extension.md)を参照してください。  
   
  ディスクから読み込まれたデータ ページは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバッファー プールにコピーされ、再使用に備えてキャッシュされます。 キャッシュされたデータ ページには、それぞれ 1 つのバッファー記述子が割り当てられます。 このバッファー記述子により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに現在キャッシュされている各データ ページが一意に識別されます。 sys.dm_os_buffer_descriptors では、キャッシュされたページのすべてのユーザーとシステム データベースを返します。 これには、リソース データベースに関連付けられているページも含まれます。  
   

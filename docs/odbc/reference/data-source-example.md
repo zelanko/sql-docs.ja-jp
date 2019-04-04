@@ -21,7 +21,7 @@ ms.lasthandoff: 12/11/2018
 ms.locfileid: "53215721"
 ---
 # <a name="data-source-example"></a>データ ソースの例
-Microsoft® Windows NT® Server または Windows 2000 Server、Microsoft Windows NT のワークステーションと Windows 2000 Professional、または Microsoft Windows® 95/98、マシンのデータを実行するコンピューターでは、基になる情報がレジストリに格納されます。 によって、どのレジストリ キー情報が格納されている、データ ソースと呼ばれます、*ユーザー データ ソース*または*システム データ ソース*します。 ユーザー データ ソースは、HKEY_CURRENT_USER キーに格納され、現在のユーザーにのみ使用します。 システム データ ソースは、HKEY_LOCAL_MACHINE キーの下では保存され、1 台のコンピューターの 1 つ以上のユーザーが使用することができます。 また、システム全体のサービスは、コンピューターにユーザーがログインしていない場合でも、データ ソースへのアクセスを獲得しによっても使用できます。 ユーザーおよびシステム データ ソースの詳細については、次を参照してください。 [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)します。  
+Microsoft® Windows NT® Server または Windows 2000 Server、Microsoft Windows NT のワークステーションと Windows 2000 Professional、または Microsoft Windows® 95/98、マシンのデータを実行するコンピューターでは、基になる情報がレジストリに格納されます。 によって、どのレジストリ キー情報が格納されている、データ ソースと呼ばれます、*ユーザー データ ソース*または*システム データ ソース*します。 ユーザー データ ソースは、HKEY_CURRENT_USER キーに格納され、現在のユーザーにのみ使用します。 システム データ ソースは、HKEY_LOCAL_MACHINE キーの下では保存され、1 台のコンピューターの 1 つ以上のユーザーが使用することができます。 また、システム全体のサービスは、コンピューターにユーザーがログインしていない場合でも、データ ソースへのアクセスを獲得しによっても使用できます。 ユーザーおよびシステム データ ソースの詳細については、[SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)を参照してください。  
   
  ユーザーが次の 3 つのユーザー データ ソースを持っているとします。Oracle DBMS では; を使用して、担当者およびインベントリ給与支払、Microsoft SQL Server DBMS を使用します。 データ ソースのレジストリ値は次のようになります。  
   

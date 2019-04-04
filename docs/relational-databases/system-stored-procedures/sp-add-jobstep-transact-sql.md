@@ -95,7 +95,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >   
 >  `$(ESCAPE_` *マクロ名* `(DATE))`  
   
- これらのトークンと、新しいトークン構文を使用するジョブ ステップの更新の詳細については、次を参照してください。[ジョブ ステップでトークンを使用して](../../ssms/agent/use-tokens-in-job-steps.md)します。  
+ これらのトークンと、新しいトークン構文を使用するジョブ ステップの更新の詳細については、[ジョブ ステップでトークンを使用して](../../ssms/agent/use-tokens-in-job-steps.md)を参照してください。  
   
 > [!IMPORTANT]  
 >  Windows イベント ログに対して書き込みのアクセス許可を持っている Windows ユーザーであればだれでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告または WMI 警告によってアクティブ化されるジョブ ステップにアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント トークンは、既定で無効になっています。 このようなトークンには、**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG**、**WMI(**_property_**)** があります。 このリリースでは、トークンの使用はすべての警告に拡張されていることに注意してください。  

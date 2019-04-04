@@ -32,7 +32,7 @@ ms.locfileid: "47682800"
  バージョンで導入されました ODBC 1.0 標準準拠: 非推奨とされます。  
   
  **概要**  
- ODBC 2.0 では、ODBC 1.0 関数で**SQLSetParam**置き換わりました**SQLBindParameter**します。 詳細については、次を参照してください。 [SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)します。  
+ ODBC 2.0 では、ODBC 1.0 関数で**SQLSetParam**置き換わりました**SQLBindParameter**します。 詳細については、[SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)を参照してください。  
   
 > [!NOTE]  
 >  詳細についてはどのようなドライバー マネージャーのときに、ODBC 2 には、この関数にマップします。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)します。  

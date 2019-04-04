@@ -227,7 +227,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     この場合、 **int**と**smallint** 1 つの変換を生成します。 他のすべてのデータ型では、2 つ以上の変換が生成されます。 **Int**よりも優先**smallint**、 **int**使用\@p。 データ型の優先順位の詳細については、次を参照してください。[データ型の優先順位&#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)します。  
+     この場合、 **int**と**smallint** 1 つの変換を生成します。 他のすべてのデータ型では、2 つ以上の変換が生成されます。 **Int**よりも優先**smallint**、 **int**使用\@p。 データ型の優先順位の詳細については、[データ型の優先順位&#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)を参照してください。  
   
      このルールは、ルール 1 に該当するすべてのデータ型と、最高位の優先順位を持つデータ型との間に暗黙的な変換がある場合にのみ適用されます。 暗黙的な変換がない場合、データ型の推論はエラーで失敗します。 たとえば、クエリで`SELECT @p FROM t`、任意のデータの型のためのデータ型の推論は失敗\@p は同等になります。 たとえばからの暗黙的変換がない**int**に**xml**します。  
   

@@ -33,12 +33,12 @@ ms.locfileid: "47804420"
  呼び出すことによってこのエラーの情報にアクセスする[SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)します。  
   
 ## <a name="native-errors"></a>ネイティブ エラー  
- データ ソースで発生するエラーの場合は、Visual FoxPro ドライバーは、ネイティブ エラー番号とエラー メッセージ テキストを返します。 ネイティブ エラー番号の一覧は、次を参照してください。 [Visual FoxPro ODBC ドライバー ネイティブのエラー メッセージ](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md)します。  
+ データ ソースで発生するエラーの場合は、Visual FoxPro ドライバーは、ネイティブ エラー番号とエラー メッセージ テキストを返します。 ネイティブ エラー番号の一覧は、[Visual FoxPro ODBC ドライバー ネイティブのエラー メッセージ](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md)を参照してください。  
   
 ## <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (ODBC エラー コード)  
  検出され、Visual FoxPro ドライバーによって返されるエラーの場合は、ドライバーは、返されたネイティブ エラー番号を適切な SQLSTATE にマップします。 ネイティブ エラー番号にマップする ODBC エラー コードを持たない場合、Visual FoxPro ドライバーは SQLSTATE S1000 を返します (一般的なエラー)。  
   
- 対応する Visual FoxPro エラー Visual FoxPro ODBC ドライバーによって生成された、SQLSTATE 値の一覧は、次を参照してください。 [ODBC エラー コード](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md)します。  
+ 対応する Visual FoxPro エラー Visual FoxPro ODBC ドライバーによって生成された、SQLSTATE 値の一覧は、[ODBC エラー コード](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md)を参照してください。  
   
 ## <a name="syntax"></a>構文  
  エラー メッセージには、次の形式があります。  

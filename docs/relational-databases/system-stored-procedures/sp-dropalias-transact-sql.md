@@ -22,7 +22,7 @@ ms.locfileid: "47810420"
 # <a name="spdropalias-transact-sql"></a>sp_dropalias (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  **sp_dropalias**は削除されました[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]します。 構文については、次を参照してください。 [sp_dropalias (TRANSACT-SQL)](sp-dropalias-transact-sql.md)以前ドキュメントにします。  
+  **sp_dropalias**は削除されました[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]します。 構文については、[sp_dropalias (TRANSACT-SQL)](sp-dropalias-transact-sql.md)以前ドキュメントにを参照してください。  
   
 ## <a name="syntax"></a>構文  
   

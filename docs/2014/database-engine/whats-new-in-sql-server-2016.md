@@ -46,7 +46,7 @@ ms.locfileid: "53371554"
   
 -   **Windows Azure への SQL Server マネージ バックアップ**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Backup to URL を基盤とした [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] は、データベースとログのバックアップを管理およびスケジュール設定するために [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が提供するサービスです。 このリリースでは、Windows Azure ストレージへのバックアップのみがサポートされています。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] をデータベースとインスタンス レベルの両方で構成して、データベース レベルの詳細な制御とインスタンス レベルの自動化の両方を達成することもできます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を、内部設置型で実行されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスと、Windows Azure 仮想マシンで実行されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスで構成することができます。 このサービスは、Windows Azure 仮想マシンで実行されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスで使用することをお勧めします。 詳細については、次を参照してください。 [SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)します。  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Backup to URL を基盤とした [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] は、データベースとログのバックアップを管理およびスケジュール設定するために [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が提供するサービスです。 このリリースでは、Windows Azure ストレージへのバックアップのみがサポートされています。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] をデータベースとインスタンス レベルの両方で構成して、データベース レベルの詳細な制御とインスタンス レベルの自動化の両方を達成することもできます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を、内部設置型で実行されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスと、Windows Azure 仮想マシンで実行されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスで構成することができます。 このサービスは、Windows Azure 仮想マシンで実行されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスで使用することをお勧めします。 詳細については、[SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)を参照してください。  
   
 -   **バックアップの暗号化**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "53371554"
   
   
 ###  <a name="CE"></a> カーディナリティを推定するための新しいデザイン  
- カーディナリティ推定ロジックをカーディナリティ推定機能と呼びますが、クエリ プランの品質を向上させ、その結果、クエリのパフォーマンスを向上させる目的で、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] でこの機能を再設計しました。 新しいカーディナリティ推定機能には、現在の OLTP ワークロードとデータ ウェアハウス ワークロードで適切に機能する想定とアルゴリズムが組み込まれています。 この機能は、現在のワークロードを対象とするカーディナリティ推定に関する詳細な調査、および SQL Server のカーディナリティ推定機能を向上させるための過去 15 年にわたる研究を土台としています。 お客様からのフィードバックによると、大半のクエリは今回の変更によって性能が向上するか、何も変化しないこと、一方で、少数のクエリは以前のカーディナリティ推定機能と比較すると性能が低下する可能性があることが示されています。 パフォーマンスの推奨事項のテストとチューニングでは、次を参照してください。[カーディナリティ推定&#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md)します。  
+ カーディナリティ推定ロジックをカーディナリティ推定機能と呼びますが、クエリ プランの品質を向上させ、その結果、クエリのパフォーマンスを向上させる目的で、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] でこの機能を再設計しました。 新しいカーディナリティ推定機能には、現在の OLTP ワークロードとデータ ウェアハウス ワークロードで適切に機能する想定とアルゴリズムが組み込まれています。 この機能は、現在のワークロードを対象とするカーディナリティ推定に関する詳細な調査、および SQL Server のカーディナリティ推定機能を向上させるための過去 15 年にわたる研究を土台としています。 お客様からのフィードバックによると、大半のクエリは今回の変更によって性能が向上するか、何も変化しないこと、一方で、少数のクエリは以前のカーディナリティ推定機能と比較すると性能が低下する可能性があることが示されています。 パフォーマンスの推奨事項のテストとチューニングでは、[カーディナリティ推定&#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md)を参照してください。  
    
   
 ###  <a name="Durability"></a> 遅延持続性  
@@ -66,13 +66,13 @@ ms.locfileid: "53371554"
 ###  <a name="AlwaysOn"></a> AlwaysOn の機能強化  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] では、AlwaysOn フェールオーバー クラスター インスタンスと AlwaysOn 可用性グループが次のように強化されています。  
   
--   Azure のレプリカ追加ウィザードにより、AlwaysOn 可用性グループ用の複合ソリューションを容易に作成できます。 詳細については、次を参照してください。 [Azure レプリカの追加ウィザードを使用して&#40;SQL Server&#41;](availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md)します。  
+-   Azure のレプリカ追加ウィザードにより、AlwaysOn 可用性グループ用の複合ソリューションを容易に作成できます。 詳細については、[Azure レプリカの追加ウィザードを使用して&#40;SQL Server&#41;](availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md)を参照してください。  
   
 -   セカンダリ レプリカの最大数は、4 から 8 に増えています。  
   
 -   プライマリ レプリカから切断された場合やクラスター クォーラムが存在しない場合でも、読み取り可能なセカンダリ レプリカを、読み取りワークロードに対して引き続き使用できるようになりました。  
   
--   フェールオーバー クラスター インスタンス (FCI) では、クラスターの共有ボリューム (CSV) を、クラスターの共有ディスクとして使用できます。 詳細については、次を参照してください。 [Always On フェールオーバー クラスター インスタンス](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)します。  
+-   フェールオーバー クラスター インスタンス (FCI) では、クラスターの共有ボリューム (CSV) を、クラスターの共有ディスクとして使用できます。 詳細については、[Always On フェールオーバー クラスター インスタンス](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)を参照してください。  
   
 -   新しいシステム関数では、 [sys.fn_hadr_is_primary_replica](/sql/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql)、および新しい DMV で[sys.dm_io_cluster_valid_path_names](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql)は使用できます。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "53371554"
   
 -   **クラスター化列ストア インデックス**  
   
-     クラスター化列ストア インデックスは、主に一括読み込みと読み取り専用クエリを実行するデータ ウェアハウスのワークロードでデータ圧縮とクエリ パフォーマンスを向上させるために使用します。 クラスター化列ストア インデックスは更新可能であるため、ワークロードは多くの挿入、更新、および削除操作を実行できます。 詳細については、次を参照してください。[列ストア インデックスの概念](../relational-databases/indexes/columnstore-indexes-described.md)と[Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)します。  
+     クラスター化列ストア インデックスは、主に一括読み込みと読み取り専用クエリを実行するデータ ウェアハウスのワークロードでデータ圧縮とクエリ パフォーマンスを向上させるために使用します。 クラスター化列ストア インデックスは更新可能であるため、ワークロードは多くの挿入、更新、および削除操作を実行できます。 詳細については、[列ストア インデックスの概念](../relational-databases/indexes/columnstore-indexes-described.md)と[Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)を参照してください。  
   
 -   **プラン表示**  
   
@@ -112,7 +112,7 @@ ms.locfileid: "53371554"
   
   
 ###  <a name="RG"></a> 物理 IO を制御のリソース ガバナーの機能強化  
- リソース ガバナーを使用すると、着信アプリケーション要求がリソース プール内で使用できる CPU、物理 IO、およびメモリの量に制限を指定できます。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で、新しい MIN_IOPS_PER_VOLUME 設定と MAX_IOPS_PER_VOLUME 設定を使用すると、特定のリソース プールのユーザー スレッドに対して発行された物理 IO を制御できます。 詳細については、次を参照してください。[リソース ガバナー リソース プール](../relational-databases/resource-governor/resource-governor-resource-pool.md)と[CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)します。  
+ リソース ガバナーを使用すると、着信アプリケーション要求がリソース プール内で使用できる CPU、物理 IO、およびメモリの量に制限を指定できます。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で、新しい MIN_IOPS_PER_VOLUME 設定と MAX_IOPS_PER_VOLUME 設定を使用すると、特定のリソース プールのユーザー スレッドに対して発行された物理 IO を制御できます。 詳細については、[リソース ガバナー リソース プール](../relational-databases/resource-governor/resource-governor-resource-pool.md)と[CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)を参照してください。  
   
  ALTER RESOURCE GOVENOR の MAX_OUTSTANDING_IO_PER_VOLUME 設定は、ディスク ボリュームごとに未処理の I/O 操作の最大数を設定します。 この設定を使用して、ディスク ボリュームの IO の特性に合わせて IO リソース管理を調整することや、SQL Server インスタンスの境界で発行される IO の数を制限することができます。 詳細については、「[ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)」を参照してください。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "53371554"
  [sys.databases &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)は 3 つの新しい列があります: `is_auto_create_stats_incremental_on`、 `is_query_store_on`、および`resource_pool_id`します。  
   
 ### <a name="system-view-enhancements-for-in-memory-oltp"></a>インメモリ OLTP に関連するシステム ビューの強化  
- インメモリ OLTP をサポートするシステム ビューの機能強化については、次を参照してください。[システム ビュー、ストアド プロシージャ、Dmv とインメモリ OLTP での待機の種類](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)します。  
+ インメモリ OLTP をサポートするシステム ビューの機能強化については、[システム ビュー、ストアド プロシージャ、Dmv とインメモリ OLTP での待機の種類](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)を参照してください。  
    
   
 ##  <a name="Security"></a> セキュリティの強化  

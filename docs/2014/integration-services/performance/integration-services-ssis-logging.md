@@ -154,7 +154,7 @@ ms.locfileid: "58394311"
 ### <a name="configuration-of-log-provider"></a>ログ プロバイダーの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- ログ プロバイダーは、パッケージにログ記録を実装する手順の中で作成して構成します。 詳細については、次を参照してください。 [Integration Services のログ記録](integration-services-ssis-logging.md)します。  
+ ログ プロバイダーは、パッケージにログ記録を実装する手順の中で作成して構成します。 詳細については、[Integration Services のログ記録](integration-services-ssis-logging.md)を参照してください。  
   
  ログ プロバイダーを作成した後にプロパティを表示および変更するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のプロパティ ウィンドウを使用します。  
   

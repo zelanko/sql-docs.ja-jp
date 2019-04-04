@@ -95,7 +95,7 @@ eDirection
   
  データ ファイルに指定されたデータ形式値を変更するには、呼び出す[bcp_columns](bcp-columns.md)と[bcp_colfmt](bcp-colfmt.md)します。  
   
- インデックスを含まないテーブルの場合は、データベース復旧モデルを SIMPLE または BULK_LOGGED に設定することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への一括コピーを最適化できます。 詳細については、次を参照してください。[一括インポートで最小ログ記録の前提条件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)と[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql)します。  
+ インデックスを含まないテーブルの場合は、データベース復旧モデルを SIMPLE または BULK_LOGGED に設定することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への一括コピーを最適化できます。 詳細については、[一括インポートで最小ログ記録の前提条件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)と[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql)を参照してください。  
   
  呼び出す必要があるデータ ファイルを使用しない場合[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)を指定する形式と場所のデータとメモリ内の各列のデータ行をコピーし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して[bcp_sendrow](bcp-sendrow.md)します。  
   

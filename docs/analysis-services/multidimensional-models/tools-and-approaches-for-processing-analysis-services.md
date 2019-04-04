@@ -43,7 +43,7 @@ ms.locfileid: "50147737"
  処理は、柔軟に構成できる操作で、オブジェクト レベルで発生する完全処理や増分処理の一連の処理オプションを使用して制御します。 オプションとオブジェクトの処理に関する詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)」および「[Analysis Services オブジェクトの処理](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)」を参照してください。  
   
 > [!NOTE]  
->  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 表形式モデルの処理に関する詳細については、次を参照してください。[データベースの処理、テーブル、またはパーティション&#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)と[データを処理する](../../analysis-services/tabular-models/process-data-ssas-tabular.md)します。  
+>  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 表形式モデルの処理に関する詳細については、[データベースの処理、テーブル、またはパーティション&#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)と[データを処理する](../../analysis-services/tabular-models/process-data-ssas-tabular.md)を参照してください。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でのオブジェクトの処理  
   

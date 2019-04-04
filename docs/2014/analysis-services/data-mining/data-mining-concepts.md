@@ -109,7 +109,7 @@ ms.locfileid: "48067682"
   
 -   [Data Quality Services](../../data-quality-services/data-quality-services.md)  
   
- データ マイニングに使用するデータは、オンライン分析処理 (OLAP) キューブまたはリレーショナル データベースに格納されている必要はないという点に注意する必要があります。ただし、これらは両方ともデータ ソースとして使用できます。 データ マイニングは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースとして定義されている任意のデータ ソースを使用して行うことができます。 これには、テキスト ファイル、Excel ブック、他の外部プロバイダーからのデータなどが含まれます。 詳細については、次を参照してください。[サポートされるデータ ソース&#40;SSAS 多次元&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)します。  
+ データ マイニングに使用するデータは、オンライン分析処理 (OLAP) キューブまたはリレーショナル データベースに格納されている必要はないという点に注意する必要があります。ただし、これらは両方ともデータ ソースとして使用できます。 データ マイニングは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースとして定義されている任意のデータ ソースを使用して行うことができます。 これには、テキスト ファイル、Excel ブック、他の外部プロバイダーからのデータなどが含まれます。 詳細については、[サポートされるデータ ソース&#40;SSAS 多次元&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)を参照してください。  
   
 ##  <a name="ExploringData"></a> データの探索  
  次の図で強調されているように、データ マイニング プロセスの 3 番目の手順では、準備されたデータを探索します。  

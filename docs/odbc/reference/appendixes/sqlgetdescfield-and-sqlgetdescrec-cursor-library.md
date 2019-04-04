@@ -25,7 +25,7 @@ ms.locfileid: "47765020"
 > [!IMPORTANT]  
 >  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックの使用、 **SQLGetDescField**と**SQLGetDescRec**カーソル ライブラリの関数。 これらの関数については、次を参照してください。 [SQLGetDescField 関数](../../../odbc/reference/syntax/sqlgetdescfield-function.md)と[SQLGetDescRec 関数](../../../odbc/reference/syntax/sqlgetdescrec-function.md)します。  
+ このトピックの使用、 **SQLGetDescField**と**SQLGetDescRec**カーソル ライブラリの関数。 これらの関数については、[SQLGetDescField 関数](../../../odbc/reference/syntax/sqlgetdescfield-function.md)と[SQLGetDescRec 関数](../../../odbc/reference/syntax/sqlgetdescrec-function.md)を参照してください。  
   
  カーソル ライブラリを実行します**SQLGetDescRec**ブックマーク列のメタデータを返します。 カーソル ライブラリを実行します**SQLGetDescField**によって返されるのと同じフィールドを返す**SQLGetDescRec**は、SQL_DESC_NAME、SQL_DESC_TYPE、SQL_DESC_DATETIME_INTERVAL_CODE SQL_DESC_OCTET_長さ、SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_NULLABLE します。 一貫性を保つのため**SQLGetDescField**も SQL_DESC_UNNAMED を返します。  
   

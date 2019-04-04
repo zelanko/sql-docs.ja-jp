@@ -41,19 +41,19 @@ SSMA には、変換、データベース オブジェクトの読み込みと�
   
 3.  左側のウィンドウで次のようにクリックします。**変換**します。  
   
-4.  右側のウィンドウで確認し、必要に応じて設定を変更します。 これらの設定の詳細については、次を参照してください。[プロジェクト設定&#40;変換&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)します。  
+4.  右側のウィンドウで確認し、必要に応じて設定を変更します。 これらの設定の詳細については、[プロジェクト設定&#40;変換&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)を参照してください。  
   
 5.  移行、同期、システム オブジェクトの読み込み、GUI、およびマッピングの種類のページの手順 1. ~ 3. を繰り返します。  
   
-    -   移行の設定については、次を参照してください。[プロジェクト設定&#40;移行&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)します。  
+    -   移行の設定については、[プロジェクト設定&#40;移行&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)を参照してください。  
   
-    -   システム オブジェクトの設定については、次を参照してください。[プロジェクト設定&#40;システム オブジェクトの読み込み&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)します。  
+    -   システム オブジェクトの設定については、[プロジェクト設定&#40;システム オブジェクトの読み込み&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)を参照してください。  
   
     -   同期するための設定について[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[プロジェクト設定&#40;同期&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)します。  
   
-    -   GUI の設定については、次を参照してください。[プロジェクト設定&#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)します。  
+    -   GUI の設定については、[プロジェクト設定&#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)を参照してください。  
   
-    -   データ型マッピングの設定については、次を参照してください。[プロジェクト設定&#40;型マッピング&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)します。  
+    -   データ型マッピングの設定については、[プロジェクト設定&#40;型マッピング&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)を参照してください。  
   
 ## <a name="creating-new-projects"></a>新しいプロジェクトの作成  
 DB2 データベースからデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、まずプロジェクトを作成する必要があります。  
@@ -81,7 +81,7 @@ DB2 データベースからデータを移行する[!INCLUDE[ssNoVersion](../..
 ## <a name="customizing-project-settings"></a>プロジェクト設定のカスタマイズ  
 すべての新しい SSMA プロジェクトに適用される既定のプロジェクト設定を定義するだけでなく、各プロジェクトの設定をカスタマイズできます。 詳細については、次を参照してください。[プロジェクト オプションの設定&#40;OracleToSQL&#41; ](../../ssma/oracle/setting-project-options-oracletosql.md)および関連するセクション。  
   
-ソースとターゲット データベース間のデータ型マッピングをカスタマイズするときに、プロジェクト、データベース、またはオブジェクト レベルでは、マッピングを定義できます。 詳細については、次を参照してください。[マッピング DB2 と SQL Server データ型&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)します。  
+ソースとターゲット データベース間のデータ型マッピングをカスタマイズするときに、プロジェクト、データベース、またはオブジェクト レベルでは、マッピングを定義できます。 詳細については、[マッピング DB2 と SQL Server データ型&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)を参照してください。  
   
 ## <a name="saving-projects"></a>プロジェクトの保存  
 プロジェクトを保存するときに、SSMA は、プロジェクトの設定と、必要に応じて、プロジェクト ファイルに、データベースのメタデータを保持します。  

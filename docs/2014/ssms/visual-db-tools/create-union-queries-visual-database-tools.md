@@ -24,7 +24,7 @@ ms.lasthandoff: 12/03/2018
 ms.locfileid: "52815764"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>UNION クエリの作成 (Visual Database Tools)
-  UNION キーワードを使用すると、2 つの SELECT ステートメントの結果を、1 つのテーブルに表示できます。 いずれかの SELECT ステートメントから返された行がすべて組み合わされて、UNION 式の結果として表示されます。 例については、次を参照してください。 [SELECT の例&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql)します。  
+  UNION キーワードを使用すると、2 つの SELECT ステートメントの結果を、1 つのテーブルに表示できます。 いずれかの SELECT ステートメントから返された行がすべて組み合わされて、UNION 式の結果として表示されます。 例については、[SELECT の例&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql)を参照してください。  
   
 > [!NOTE]  
 >  ダイアグラム ペインに表示できるのは、1 つの SELECT 句だけです。 したがって、UNION クエリを使用している場合、クエリ デザイナーにはテーブル操作ペインは表示されません。  

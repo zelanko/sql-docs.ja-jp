@@ -71,7 +71,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
   
  実行時間の長い拡張ストアド プロシージャの場合は、srv_got_attention を定期的に呼び出すことにより、接続が強制的に切断された場合やバッチが中断された場合に、その拡張ストアド プロシージャが自身を終了できるようにすることをお勧めします。  
   
- 拡張ストアド プロシージャ DLL をデバッグするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn ディレクトリにその拡張ストアド プロシージャをコピーします。 デバッグ セッションの実行可能ファイルを指定するには、パスとファイル名を入力してください、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行可能ファイル (たとえば、C:\Program files \microsoft SQL Server\MSSQL12 します。MSSQLSERVER\MSSQL\Binn\Sqlservr.exe)。 Sqlservr 引数については、次を参照してください。 [sqlservr アプリケーション](../../tools/sqlservr-application.md)します。  
+ 拡張ストアド プロシージャ DLL をデバッグするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn ディレクトリにその拡張ストアド プロシージャをコピーします。 デバッグ セッションの実行可能ファイルを指定するには、パスとファイル名を入力してください、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行可能ファイル (たとえば、C:\Program files \microsoft SQL Server\MSSQL12 します。MSSQLSERVER\MSSQL\Binn\Sqlservr.exe)。 Sqlservr 引数については、[sqlservr アプリケーション](../../tools/sqlservr-application.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [srv_got_attention&#40;拡張ストアド プロシージャ API&#41;](../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  

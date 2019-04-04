@@ -43,7 +43,7 @@ ms.locfileid: "51018587"
   
 -   クロスプラットフォームのアップグレードはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 32 ビット インスタンスをネイティブ 64 ビットにアップグレードすることはできません。 ただし、データベースがレプリケーションでパブリッシュされていない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 32 ビット インスタンスのデータベースをバックアップまたはデタッチしてから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンス (64 ビット) に復元またはアタッチすることができます。 master、msdb、および model の各システム データベースにある、すべてのログインとその他のユーザー オブジェクトを再作成する必要があります。  
   
--   既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのアップグレード中は、新しい機能を追加できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードした後、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップを使用して機能を追加できます。 詳細については、次を参照してください。 [、インスタンスの SQL Server 2014 への機能の追加&#40;セットアップ&#41;](add-features-to-an-instance-of-sql-server-setup.md)します。  
+-   既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのアップグレード中は、新しい機能を追加できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードした後、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップを使用して機能を追加できます。 詳細については、[、インスタンスの SQL Server 2014 への機能の追加&#40;セットアップ&#41;](add-features-to-an-instance-of-sql-server-setup.md)を参照してください。  
   
 -   フェールオーバー クラスターは、WOW モードでサポートされていません。  
   

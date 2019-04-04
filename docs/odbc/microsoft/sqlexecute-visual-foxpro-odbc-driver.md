@@ -30,4 +30,4 @@ ms.locfileid: "47758850"
   
  準備された SQL ステートメントを実行します (既にによって準備ステートメント[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md))。 ドライバーでは、ステートメントにパラメーターが存在しない場合、パラメーター マーカーの変数の現在の値が使用されます。  
   
- 詳細については、次を参照してください。 [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

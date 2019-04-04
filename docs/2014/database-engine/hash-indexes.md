@@ -44,7 +44,7 @@ ms.locfileid: "48169472"
   
  図では、行を備えたバケットが 3 つ示されています。 上から 2 番目のバケットには、赤い行が 3 つあります。 4 番目のバケットには、青色の行が 1 つあります。 一番下のバケットには、緑色の行が 2 つあります。 ここに挙げた行はいずれも、同じ行が別のバージョンになったものである可能性があります。  
   
- メモリ最適化テーブルのインデックスの詳細については、次を参照してください。 [メモリ最適化テーブルでのインデックス使用のガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)します。  
+ メモリ最適化テーブルのインデックスの詳細については、[メモリ最適化テーブルでのインデックス使用のガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化テーブルのインデックス](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  

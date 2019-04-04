@@ -20,7 +20,7 @@ ms.locfileid: "52502145"
 読み込みまたは統合サービスを使用してデータを SQL Server 並列データ ウェアハウス (PDW) を挿入[bcp ユーティリティ](../tools/bcp-utility.md)、 **dwloader**コマンド ライン ローダー、または SQL の INSERT ステートメントです。  
 
 ## <a name="loading-environment"></a>環境の読み込み  
-データを読み込むには、1 つまたは複数のサーバーの読み込みする必要があります。 既存の ETL は、自分または他のサーバーを使用することができますか、新しいサーバーを購入することができます。 詳細については、次を参照してください。[の取得と構成を読み込むサーバー](acquire-and-configure-loading-server.md)します。 この手順では、[サーバー容量計画ワークシートの読み込み](loading-server-capacity-planning-worksheet.md)読み込みに最適なソリューションを計画します。  
+データを読み込むには、1 つまたは複数のサーバーの読み込みする必要があります。 既存の ETL は、自分または他のサーバーを使用することができますか、新しいサーバーを購入することができます。 詳細については、[の取得と構成を読み込むサーバー](acquire-and-configure-loading-server.md)を参照してください。 この手順では、[サーバー容量計画ワークシートの読み込み](loading-server-capacity-planning-worksheet.md)読み込みに最適なソリューションを計画します。  
   
 ## <a name="load-with-dwloader"></a>Dwloader を読み込み  
 使用して、 [dwloader のコマンドラインのローダー](dwloader.md) PDW にデータを読み込む最も速い方法です。  

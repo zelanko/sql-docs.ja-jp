@@ -87,7 +87,7 @@ ms.locfileid: "58860723"
 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、SP1、*標準クエリ実行統計プロファイリング インフラストラクチャ*と並行して存在する、*軽量なクエリ実行統計プロファイリング インフラストラクチャ*. `SET STATISTICS XML ON` `SET STATISTICS PROFILE ON`常に使用して、*標準クエリ実行統計プロファイリング インフラストラクチャ*します。 `sys.dm_exec_query_profiles`値を入力するインフラストラクチャをプロファイリングするクエリの 1 つ有効にします。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
 
 >[!NOTE]
-> 調査中のクエリを開始する必要があります**後**プロファイリング インフラストラクチャ クエリが有効になって、クエリが開始された後に有効にするで結果が得られない`sys.dm_exec_query_profiles`します。 クエリのインフラストラクチャのプロファイリングを有効にする方法の詳細については、次を参照してください。[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)します。
+> 調査中のクエリを開始する必要があります**後**プロファイリング インフラストラクチャ クエリが有効になって、クエリが開始された後に有効にするで結果が得られない`sys.dm_exec_query_profiles`します。 クエリのインフラストラクチャのプロファイリングを有効にする方法の詳細については、[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)を参照してください。
 
 ## <a name="permissions"></a>アクセス許可  
 

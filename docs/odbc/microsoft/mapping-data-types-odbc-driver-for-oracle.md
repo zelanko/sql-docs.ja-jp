@@ -28,7 +28,7 @@ ms.locfileid: "47775810"
   
  Oracle サーバーには、データ型のセットがサポートしています。 ODBC Driver for Oracle では、これらのデータ型を適切な ODBC SQL データ型にマップします。 次の表は、Oracle 7.3 のサーバーのデータ型とその対応する ODBC SQL データ型を示します。  
   
- ODBC Driver for Oracle では、Oracle 7.3、Oracle8 一部のデータ型をサポートします。 サポートされている Oracle8 データの種類の詳細については、次を参照してください。 [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)します。  
+ ODBC Driver for Oracle では、Oracle 7.3、Oracle8 一部のデータ型をサポートします。 サポートされている Oracle8 データの種類の詳細については、[Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)を参照してください。  
   
 |Oracle サーバーのデータ型|ODBC SQL データ型|  
 |-----------------------------|------------------------|  
@@ -43,4 +43,4 @@ ms.locfileid: "47775810"
 |VARCHAR2|SQL_VARCHAR|  
   
 > [!NOTE]  
->  VARCHAR 列の許容サイズの詳細については、次を参照してください。 [VARCHAR 列のサイズ](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md)このガイドでします。
+>  VARCHAR 列の許容サイズの詳細については、[VARCHAR 列のサイズ](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md)このガイドでを参照してください。

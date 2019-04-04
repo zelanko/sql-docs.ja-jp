@@ -30,7 +30,7 @@ ms.locfileid: "47855420"
   
  Visual FoxPro ODBC ドライバーと、接続ハンドルに関連付けられているデータ ソースに関する一般的な情報を返します*hdbc*します。 次の一覧には、各 Visual FoxPro ODBC ドライバーによって返される値が表示されます。 *fInfoType*引数と戻り値に関するコメント。  
   
- 詳細については、次を参照してください。 [SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md)で、 *ODBC プログラマ リファレンス*します。  
+ 詳細については、[SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。  
   
 ## <a name="a"></a>A  
  SQL_ACCESSIBLE_PROCEDURES 返します 'N' です。  

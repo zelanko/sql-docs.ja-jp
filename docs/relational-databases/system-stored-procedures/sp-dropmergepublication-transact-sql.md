@@ -55,7 +55,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="remarks"></a>コメント  
  **sp_dropmergepublication**はマージ レプリケーションで使用します。  
   
- **sp_dropmergepublication**再帰的には、パブリケーションに関連付けられているすべてのアーティクルを削除し、後、パブリケーション自体が削除されます。 1 つまたは複数のサブスクリプションがある場合、パブリケーションを削除できません。 サブスクリプションを削除する方法については、次を参照してください。 [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)と[Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)します。  
+ **sp_dropmergepublication**再帰的には、パブリケーションに関連付けられているすべてのアーティクルを削除し、後、パブリケーション自体が削除されます。 1 つまたは複数のサブスクリプションがある場合、パブリケーションを削除できません。 サブスクリプションを削除する方法については、[Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)と[Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)を参照してください。  
   
  実行**sp_dropmergepublication**パブリケーションを削除するオブジェクトは削除されませんパブリッシュされたパブリケーション データベースまたはサブスクリプション データベースから対応するオブジェクト。 ドロップを使用して\<オブジェクト > に必要な場合は、これらのオブジェクトを手動で削除します。  
   

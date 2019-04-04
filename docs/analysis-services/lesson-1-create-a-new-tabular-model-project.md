@@ -83,7 +83,7 @@ SSDT をインストールしたときに、いくつかの新しいメニュー
 
 
 ## <a name="additional-resources"></a>その他の技術情報
-テーブル モデル プロジェクトのさまざまな種類の詳細については、次を参照してください。[表形式モデル プロジェクト](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)します。 表形式モデル オーサリング環境についての詳細についてを参照してください。 [Tabular Model Designer](../analysis-services/tabular-models/tabular-model-designer-ssas.md)します。  
+テーブル モデル プロジェクトのさまざまな種類の詳細については、[表形式モデル プロジェクト](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)を参照してください。 表形式モデル オーサリング環境についての詳細についてを参照してください。 [Tabular Model Designer](../analysis-services/tabular-models/tabular-model-designer-ssas.md)します。  
   
 
 ## <a name="whats-next"></a>次の操作

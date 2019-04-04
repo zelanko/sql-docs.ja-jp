@@ -26,4 +26,4 @@ ms.locfileid: "47848190"
 # <a name="data-type-support"></a>データ型のサポート
 ODBC ドライバーは、SQL_CHAR、SQL_VARCHAR の少なくとも 1 つをサポートする必要があります。 その他のデータ型のサポートは、ドライバーのまたはデータ ソースの sql-92 準拠のレベルによって決定されます。 アプリケーションを呼び出す必要があります**SQLGetTypeInfo**ドライバーでサポートされるデータの種類を決定します。  
   
- データ型の詳細については、次を参照してください。[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。
+ データ型の詳細については、[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)を参照してください。

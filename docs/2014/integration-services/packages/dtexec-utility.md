@@ -179,7 +179,7 @@ dtexec /option [value] [/option [value]]...
   
      このオプションでは、接続マネージャーの名前または GUID を指定する *id_or_name* 引数と、有効な接続文字列を指定する *connection_string* 引数の両方のパラメーターが必須です。 詳細については、「[Integration Services (SSIS) の接続](../connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
-     実行時に **/Connection** オプションを使用すると、デザイン時に指定した場所とは別の場所からパッケージ構成を読み込むことができます。 デザイン時に指定した値は、それらの構成の値で置き換えられます。 ただし、 **/Connection** オプションを使用できるのは、接続マネージャーを使用する構成 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成など) だけです。 パッケージの構成を適用する方法については、次を参照してください。[パッケージ構成](../package-configurations.md)と[SQL Server 2014 Integration Services 機能の動作の変更](../behavior-changes-to-integration-services-features-in-sql-server-2014.md)します。  
+     実行時に **/Connection** オプションを使用すると、デザイン時に指定した場所とは別の場所からパッケージ構成を読み込むことができます。 デザイン時に指定した値は、それらの構成の値で置き換えられます。 ただし、 **/Connection** オプションを使用できるのは、接続マネージャーを使用する構成 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成など) だけです。 パッケージの構成を適用する方法については、[パッケージ構成](../package-configurations.md)と[SQL Server 2014 Integration Services 機能の動作の変更](../behavior-changes-to-integration-services-features-in-sql-server-2014.md)を参照してください。  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]:任意。 パッケージの実行中に、指定されたログ エントリをコンソールに表示します。 このオプションを省略した場合、ログ エントリはコンソールに表示されません。 表示を制限するパラメーターなしでオプションが指定された場合、すべてのログ エントリが表示されます。 コンソールに表示されるエントリを制限するには、 *displayoptions* パラメーターを使用して表示する列を指定し、 *list_options* パラメーターを使用してログ エントリの種類を制限します。  
   
@@ -427,7 +427,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     **/Set** オプションを使用すると、パッケージ構成を読み込む場所を変更することができます。 ただし、**/Set** オプションを使用しても、デザイン時の構成で指定した値をオーバーライドすることはできません。 パッケージの構成を適用する方法については、次を参照してください。[パッケージ構成](../package-configurations.md)と[SQL Server 2014 Integration Services 機能の動作の変更](../behavior-changes-to-integration-services-features-in-sql-server-2014.md)します。  
+     **/Set** オプションを使用すると、パッケージ構成を読み込む場所を変更することができます。 ただし、**/Set** オプションを使用しても、デザイン時の構成で指定した値をオーバーライドすることはできません。 パッケージの構成を適用する方法については、[パッケージ構成](../package-configurations.md)と[SQL Server 2014 Integration Services 機能の動作の変更](../behavior-changes-to-integration-services-features-in-sql-server-2014.md)を参照してください。  
   
 -   `/Ser[ver]` *server*:  
                   任意。 `/SQL` オプションまたは `/DTS` オプションが指定されている場合、このオプションにはパッケージを取得するサーバーの名前を指定します。 `/Server` オプションを省略して `/SQL` または `/DTS` オプションを指定した場合、ローカル サーバーに対してパッケージの実行が試行されます。 *server_instance* 値は引用符で囲むことができます。  

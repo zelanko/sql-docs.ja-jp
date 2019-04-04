@@ -55,7 +55,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力値として指定された値には単一引用符が含まれているため、この単一引用符の前にもう 1 つ単一引用符に追加してエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリ ビルダーを使用してクエリを作成できます。 ドロップダウン リストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、次を参照してください。[データ マイニング デザイナーで単一クエリの作成](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)です。  
+>  この例では、入力値として指定された値には単一引用符が含まれているため、この単一引用符の前にもう 1 つ単一引用符に追加してエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリ ビルダーを使用してクエリを作成できます。 ドロップダウン リストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、[データ マイニング デザイナーで単一クエリの作成](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)を参照してください。  
   
  例の結果を次に示します。  
   
@@ -109,7 +109,7 @@ NATURAL PREDICTION JOIN
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
 ```  
   
- 結果には、サポート値に基づいて並べ替えられた上位 3 件の予測が含まれます。 $SUPPORT を $PROBABILITY または $ADJUSTED_PROBABILITY に置き換えると、確率または調整済みの確率で順位付けされた予測を取得できます。 詳細については、次を参照してください。 **Predict (DMX)** します。  
+ 結果には、サポート値に基づいて並べ替えられた上位 3 件の予測が含まれます。 $SUPPORT を $PROBABILITY または $ADJUSTED_PROBABILITY に置き換えると、確率または調整済みの確率で順位付けされた予測を取得できます。 詳細については、**Predict (DMX)** を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   

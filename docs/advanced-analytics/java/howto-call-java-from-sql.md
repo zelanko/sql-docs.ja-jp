@@ -11,7 +11,7 @@ manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 36a949f4d046d4071ffd7d52d34233e993ee700f
 ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/27/2019
 ms.locfileid: "58493004"
@@ -116,7 +116,7 @@ EXEC sp_execute_external_script
 with result sets ((column1 int))
 ```
 
-詳細については、次を参照してください。 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)します。
+詳細については、[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)を参照してください。
 
 ## <a name="class-requirements"></a>クラスの要件
 

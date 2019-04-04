@@ -42,7 +42,7 @@ ms.locfileid: "58434493"
   
  ![2013 での powerpivot の可用性](../media/ssas-powerpivot-services-2013.png "2013年での powerpivot の可用性")  
   
--   **(1)** Web フロントエンド サーバー。 各サーバーにデータ プロバイダーをインストールするには、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 のアドインを使用します。 詳細については、次を参照してください。[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)します。  
+-   **(1)** Web フロントエンド サーバー。 各サーバーにデータ プロバイダーをインストールするには、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 のアドインを使用します。 詳細については、[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)を参照してください。  
   
 -   **(2)** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共有サービスは **各** アプリケーション サーバー上で動作し、サービス アプリケーションが複数のアプリケーション サーバーに **またがって** 動作できるようにします。 そのため、1 台のアプリケーション サーバーがオフラインになったときでも、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] アプリケーションは引き続き使用できます。  
   

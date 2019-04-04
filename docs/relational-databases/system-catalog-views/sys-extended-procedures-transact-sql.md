@@ -35,7 +35,7 @@ ms.locfileid: "47613683"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
+|**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)を参照してください。|  
 |**dll_name**|**nvarchar(260)**|この拡張ストアド プロシージャの DLL の名前です (パスを含む)。|  
   
 ## <a name="permissions"></a>アクセス許可  

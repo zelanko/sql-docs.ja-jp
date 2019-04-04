@@ -36,7 +36,7 @@ ms.locfileid: "47743270"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|セッションの ID を指定します。<br /><br /> 0 は、ログ スキャン セッション中にエラーが発生しなかったことを示します。|  
-|**phase_number**|**int**|エラー発生時のセッションのフェーズを示す数値です。 各フェーズについては、次を参照してください。 [sys.dm_cdc_log_scan_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)します。|  
+|**phase_number**|**int**|エラー発生時のセッションのフェーズを示す数値です。 各フェーズについては、[sys.dm_cdc_log_scan_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)を参照してください。|  
 |**entry_time**|**datetime**|エラーが記録された日時です。 この値は、SQL のエラー ログのタイムスタンプに対応します。|  
 |**error_number**|**int**|エラー メッセージの ID です。|  
 |**error_severity**|**int**|メッセージの重大度レベルです。有効値は 1 ～ 25 です。|  
@@ -50,7 +50,7 @@ ms.locfileid: "47743270"
  **sys.dm_cdc_errors**前の 32 セッションのエラー情報が含まれています。  
   
 ## <a name="permissions"></a>アクセス許可  
- クエリに対する VIEW DATABASE STATE 権限が必要です、 **sys.dm_cdc_errors**動的管理ビュー。 動的管理ビューに対する権限の詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)します。  
+ クエリに対する VIEW DATABASE STATE 権限が必要です、 **sys.dm_cdc_errors**動的管理ビュー。 動的管理ビューに対する権限の詳細については、[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [sys.dm_cdc_log_scan_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)   

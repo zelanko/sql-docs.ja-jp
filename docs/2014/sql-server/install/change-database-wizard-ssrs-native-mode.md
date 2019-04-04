@@ -46,7 +46,7 @@ ms.locfileid: "48066132"
  **[データベース]**  
  サーバー データを格納するレポート サーバー データベースの名前を指定します。 既存のデータベースを指定するか、新しいデータベースを作成できます。  
   
- [アクション] ページで **[新しいデータベースを作成する]** を選択すると、新しいデータベースの作成に使用されるプロパティがウィザードに表示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager は、名前でバインドされている 2 つのデータベースを作成します。 静的なデータとセッションおよび作業データを格納するための一時データベースに格納するデータベース。 詳細については、次を参照してください。[レポート サーバー データベース&#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+ [アクション] ページで **[新しいデータベースを作成する]** を選択すると、新しいデータベースの作成に使用されるプロパティがウィザードに表示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager は、名前でバインドされている 2 つのデータベースを作成します。 静的なデータとセッションおよび作業データを格納するための一時データベースに格納するデータベース。 詳細については、[レポート サーバー データベース&#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「を参照してください。  
   
  既存のレポート サーバー データベースを選択することもできます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーでは、無効なデータベースが除外されません。 有効なデータベースは、レポート サーバー データベース スキーマに基づきます (必要なテーブル、ビュー、またはストアド プロシージャが欠落しているデータベースは選択できません)。 以前のバージョンの用に作成されたデータベースを選択するかどうかは[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、現在の形式に、データベースがアップグレードされます。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48066132"
   
  レポート サーバーでは、アカウントの作成は行われません。 配置構成に対して有効な、既に存在するアカウントを指定する必要があります。 特に、データベースがリモート コンピューター上にある環境で、Windows アカウントを使用する場合は、そのコンピューターへのログオン権限のあるアカウントを指定する必要があります。  
   
- コンピューターが異なるか、または信頼されていないドメインにある場合は、使用を検討して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ログインします。 アカウントの選択の詳細については、次を参照してください。[レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)します。  
+ コンピューターが異なるか、または信頼されていないドメインにある場合は、使用を検討して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ログインします。 アカウントの選択の詳細については、[レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)を参照してください。  
   
  **概要**  
  セットアップで接続を構成する前に、設定を確認します。  

@@ -51,7 +51,7 @@ WHERE IsTrainingCase()
 AND [Age] <40  
 ```  
   
- 他のデータ マイニングで使用されるケースをクエリする方法の例では、次を参照してください。 [SELECT FROM&#60;モデル&#62;します。ケース&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)と[SELECT FROM&#60;構造&#62;します。ケース](../dmx/select-from-structure-cases.md)します。  
+ 他のデータ マイニングで使用されるケースをクエリする方法の例では、[SELECT FROM&#60;モデル&#62;を参照してください。ケース&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)と[SELECT FROM&#60;構造&#62;します。ケース](../dmx/select-from-structure-cases.md)します。  
   
 ## <a name="see-also"></a>参照  
  [トレーニング セットとテスト データ セット](../analysis-services/data-mining/training-and-testing-data-sets.md)   

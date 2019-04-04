@@ -47,7 +47,7 @@ ms.locfileid: "48075302"
   
  <sup>1</sup>制限では、1 行の合計、8,060 バイトの可変長型の (n) をカウントします。  
   
- サポートされる照合順序については、次を参照してください。 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)します。  
+ サポートされる照合順序については、[Collations and Code Pages](../../database-engine/collations-and-code-pages.md)を参照してください。  
   
  **日付および時刻のデータ型**  
   

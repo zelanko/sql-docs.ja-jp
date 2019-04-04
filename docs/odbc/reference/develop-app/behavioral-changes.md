@@ -27,7 +27,7 @@ ms.locfileid: "47757187"
   
  かどうかをアプリケーションには、ODBC 2 が発生します。*x*動作または ODBC 3 *。x* SQL_ATTR_ODBC_VERSION [環境] 属性で動作が決まります。 この 32 ビット値は、ODBC 2 が発生する SQL_OV_ODBC2 に設定されます。*x*動作、および ODBC 3 が発生する SQL_OV_ODBC3 *。x*動作します。  
   
- 呼び出して SQL_ATTR_ODBC_VERSION 環境属性が設定**SQLSetEnvAttr**します。 アプリケーションから**SQLAllocHandle**環境ハンドルを割り当てるを呼び出す必要があります**SQLSetEnvAttr**従来の動作を設定するには、すぐにします。 (その結果は、新しい環境の状態、割り当て済みで、versionless、環境ハンドルを記述する状態)。詳細については、次を参照してください。[付録 b: ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)します。  
+ 呼び出して SQL_ATTR_ODBC_VERSION 環境属性が設定**SQLSetEnvAttr**します。 アプリケーションから**SQLAllocHandle**環境ハンドルを割り当てるを呼び出す必要があります**SQLSetEnvAttr**従来の動作を設定するには、すぐにします。 (その結果は、新しい環境の状態、割り当て済みで、versionless、環境ハンドルを記述する状態)。詳細については、[付録 b: ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)を参照してください。  
   
  アプリケーションでは、従来の SQL_ATTR_ODBC_VERSION 環境属性が属性にどのような動作は、ODBC 2 とアプリケーションの接続に影響を与えませんを示しています。*x*または ODBC 3 *。x*ドライバー。 ODBC 3。*x*アプリケーションに、ODBC 2 との接続のことができます *。x*または 3 *。x*環境の属性の設定に関係なく、ドライバー。  
   

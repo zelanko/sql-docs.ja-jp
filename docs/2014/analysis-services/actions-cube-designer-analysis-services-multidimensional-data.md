@@ -25,22 +25,22 @@ ms.locfileid: "48067579"
   
 ## <a name="panes"></a>ペイン  
  **[ツール バー]**  
- ツール バーを使用して、一般的なアクションをこのタブで実行します。このペインの詳細については、次を参照してください。[ツールバー&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)します。  
+ ツール バーを使用して、一般的なアクションをこのタブで実行します。このペインの詳細については、[ツールバー&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)を参照してください。  
   
  **[アクション オーガナイザー]**  
- フォーム ビューの **[アクション オーガナイザー]** ペインでは、キューブに含まれるアクションを一定の順に並べ替えて表示できます。 このペインの詳細については、次を参照してください。[アクション オーガナイザー&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)します。  
+ フォーム ビューの **[アクション オーガナイザー]** ペインでは、キューブに含まれるアクションを一定の順に並べ替えて表示できます。 このペインの詳細については、[アクション オーガナイザー&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)を参照してください。  
   
  **計算ツール**  
- フォーム ビューの **[計算ツール]** ペインには、キューブで使用できるメタデータ、関数、およびツールが表示されます。 このペインの詳細については、次を参照してください。[計算ツール&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)します。  
+ フォーム ビューの **[計算ツール]** ペインには、キューブで使用できるメタデータ、関数、およびツールが表示されます。 このペインの詳細については、[計算ツール&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)を参照してください。  
   
  **アクション フォーム エディター**  
- フォーム ビューの **アクション フォーム エディター** ペインでは、キューブに含まれる標準アクションを編集できます。 このペインの詳細については、次を参照してください。[アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)します。  
+ フォーム ビューの **アクション フォーム エディター** ペインでは、キューブに含まれる標準アクションを編集できます。 このペインの詳細については、[アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)を参照してください。  
   
  **ドリルスルー アクション フォーム エディター**  
- **ドリルスルー アクション フォーム エディター** ペインでは、キューブに含まれるドリルスルー アクションを編集できます。 このペインの詳細については、次を参照してください。[ドリルスルー アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)します。  
+ **ドリルスルー アクション フォーム エディター** ペインでは、キューブに含まれるドリルスルー アクションを編集できます。 このペインの詳細については、[ドリルスルー アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)を参照してください。  
   
  **レポート アクション フォーム エディター**  
- **レポート アクション フォーム エディター** ペインでは、キューブに含まれるレポート アクションを編集できます。 このペインの詳細については、次を参照してください。[レポート アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)します。  
+ **レポート アクション フォーム エディター** ペインでは、キューブに含まれるレポート アクションを編集できます。 このペインの詳細については、[レポート アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [アクション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

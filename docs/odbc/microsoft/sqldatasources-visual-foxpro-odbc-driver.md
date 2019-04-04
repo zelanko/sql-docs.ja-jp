@@ -30,4 +30,4 @@ ms.locfileid: "47668120"
   
  データ ソース名を一覧表示します。  
   
- 詳細については、次を参照してください。 [SQLDataSources](../../odbc/reference/syntax/sqldatasources-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLDataSources](../../odbc/reference/syntax/sqldatasources-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

@@ -22,7 +22,7 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47607969"
 ---
 # <a name="translation-dll-function-summary"></a>トランスレーター DLL 関数の概要
-次の表では、翻訳の DLL の関数について説明します。 構文とセマンティクスの各関数の詳細については、次を参照してください。 [DLL 関数の参照を翻訳](../../../odbc/reference/syntax/translation-dll-api-reference.md)します。  
+次の表では、翻訳の DLL の関数について説明します。 構文とセマンティクスの各関数の詳細については、[DLL 関数の参照を翻訳](../../../odbc/reference/syntax/translation-dll-api-reference.md)を参照してください。  
   
 |タスク|関数名|用途|  
 |----------|-------------------|-------------|  

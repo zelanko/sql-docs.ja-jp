@@ -90,7 +90,7 @@ SQL server 2016 ののみ。SQL Server の前提条件としてインストー�
 
 6.  **[インストールの準備完了]** ページで、選択内容を確認し、**[インストール]** をクリックします。
 
-インストールが完了したらを参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)エラーまたは警告については、次を参照してください。[アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)します。
+インストールが完了したらを参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)エラーまたは警告については、[アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)を参照してください。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
@@ -125,7 +125,7 @@ SQL server 2016 ののみ。SQL Server の前提条件としてインストー�
 
 6.  **[インストールの準備完了]** ページで、選択内容を確認し、**[インストール]** をクリックします。
 
-インストールが完了したらを参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)エラーまたは警告については、次を参照してください。[アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)します。
+インストールが完了したらを参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)エラーまたは警告については、[アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)を参照してください。
 ::: moniker-end
 
 ## <a name="set-environment-variables"></a>環境変数な設定
@@ -187,7 +187,7 @@ R と Python の開発では、同じコンピューター上の複数のバー�
 
 7. インターネット接続のないサーバー。
 
-   + R と Python の対応する CAB ファイルを取得します。 ダウンロード リンクは、次を参照してください。[インスタンス SQL Server データベース内分析に累積的更新プログラム用 CAB のダウンロード](sql-ml-cab-downloads.md)します。
+   + R と Python の対応する CAB ファイルを取得します。 ダウンロード リンクは、[インスタンス SQL Server データベース内分析に累積的更新プログラム用 CAB のダウンロード](sql-ml-cab-downloads.md)を参照してください。
 
    + すべてのファイル、メイン実行可能ファイルと、オフラインのコンピューター上のフォルダーに、CAB ファイルを転送します。
 
@@ -202,11 +202,11 @@ R と Python の開発では、同じコンピューター上の複数のバー�
     }
     ```
 
-9. [管理者の CLI ユーティリティを実行して](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)web を再起動し、コンピューティング ノード。 手順と構文は、次を参照してください。[モニター、開始、および web およびコンピューティング ノードを停止](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)します。
+9. [管理者の CLI ユーティリティを実行して](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)web を再起動し、コンピューティング ノード。 手順と構文は、[モニター、開始、および web およびコンピューティング ノードを停止](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)を参照してください。
 
 ## <a name="development-tools"></a>開発ツール
 
-開発 IDE はセットアップの一部としてインストールされていません。 開発環境を構成する方法の詳細については、次を参照してください。 [R tools セットアップ](../r/set-up-a-data-science-client.md)と[Python ツールのセットアップ](../python/setup-python-client-tools-sql.md)します。
+開発 IDE はセットアップの一部としてインストールされていません。 開発環境を構成する方法の詳細については、[R tools セットアップ](../r/set-up-a-data-science-client.md)と[Python ツールのセットアップ](../python/setup-python-client-tools-sql.md)を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

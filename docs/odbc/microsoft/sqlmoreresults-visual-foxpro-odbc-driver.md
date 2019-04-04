@@ -30,4 +30,4 @@ ms.locfileid: "47612140"
   
  多くの結果が保留中かどうかを決定します。 あるステートメント ハンドルで*hstmt*SELECT、UPDATE、INSERT、または DELETE ステートメントを含む、および、そうである場合は、それらの結果の処理を初期化します。  
   
- 詳細については、次を参照してください。 [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

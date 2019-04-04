@@ -30,4 +30,4 @@ ms.locfileid: "47848948"
   
  1 つのテーブルとインデックス、またはテーブルに関連付けられているタグの名前に関する統計情報の一覧を取得します。 ドライバーは、その結果、情報を設定を返します。  
   
- 詳細については、次を参照してください。 [SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

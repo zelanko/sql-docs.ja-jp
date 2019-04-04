@@ -29,7 +29,7 @@ ms.locfileid: "47639850"
  標準への準拠: なし  
   
  **概要**  
- **SQLCompleteAsync**非同期関数のいずれかの通知またはポーリング ベースの処理を使用して完了時に決定するために使用できます。 非同期操作の詳細については、次を参照してください。[非同期実行](../../../odbc/reference/develop-app/asynchronous-execution.md)します。  
+ **SQLCompleteAsync**非同期関数のいずれかの通知またはポーリング ベースの処理を使用して完了時に決定するために使用できます。 非同期操作の詳細については、[非同期実行](../../../odbc/reference/develop-app/asynchronous-execution.md)を参照してください。  
   
  **SQLCompleteAsync**は、ODBC ドライバー マネージャーでのみ実装します。  
   

@@ -61,7 +61,7 @@ connection.Open ConnectionString, UserID, Password, Options
 >  **リモート データ サービスの使用状況**クライアント側で使用すると**接続**オブジェクト、**オープン**メソッドまで、サーバーへの接続を確立実際には、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)で開かれた、**接続**オブジェクト。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  

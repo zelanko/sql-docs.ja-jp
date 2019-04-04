@@ -173,7 +173,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 SQL Server 2016 R Services が Machine Learning Server 9.3 にバインドされている、R 基本パッケージ 3.4.3 をする必要があります、RevoScaleR が、9.3 にする必要がありますおよび MicrosoftML 9.3 必要もあります。 
 
-事前トレーニング済みモデルを追加した場合、モデルが MicrosoftML ライブラリに埋め込まれているし、MicrosoftML 関数を使用して、それらを呼び出すことができます。 詳細については、次を参照してください。 [MicrosoftML の R サンプル](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml)します。
+事前トレーニング済みモデルを追加した場合、モデルが MicrosoftML ライブラリに埋め込まれているし、MicrosoftML 関数を使用して、それらを呼び出すことができます。 詳細については、[MicrosoftML の R サンプル](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml)を参照してください。
 
 ## <a name="offline-binding-no-internet-access"></a>オフラインのバインド (インターネット アクセスなし)
 
@@ -267,7 +267,7 @@ R と Python の機能を持つデータベース エンジンのインスタン
 
 ### <a name="step-3-add-any-third-party-packages"></a>手順 3:すべてのサード パーティ製パッケージを追加します。
 
-パッケージ ライブラリに他のオープン ソースまたはサードパーティ製のパッケージを追加した可能性があります。 スイッチの既定のパッケージ ライブラリの場所を逆に、バインドすることがあるために、R と Python を使用して今すぐいるライブラリにパッケージを再インストールする必要があります。 詳細については、次を参照してください。[パッケージの既定](installing-and-managing-r-packages.md)、[新しい R パッケージをインストール](install-additional-r-packages-on-sql-server.md)、および[新しい Python パッケージをインストール](../python/install-additional-python-packages-on-sql-server.md)します。
+パッケージ ライブラリに他のオープン ソースまたはサードパーティ製のパッケージを追加した可能性があります。 スイッチの既定のパッケージ ライブラリの場所を逆に、バインドすることがあるために、R と Python を使用して今すぐいるライブラリにパッケージを再インストールする必要があります。 詳細については、[パッケージの既定](installing-and-managing-r-packages.md)、[新しい R パッケージをインストール](install-additional-r-packages-on-sql-server.md)、および[新しい Python パッケージをインストール](../python/install-additional-python-packages-on-sql-server.md)を参照してください。
 
 ## <a name="sqlbindrexe-command-syntax"></a>SqlBindR.exe コマンドの構文
 
@@ -312,7 +312,7 @@ SqlBindR.exe のバージョンのバージョンが元のパッケージの復�
 
 SqlBindR の以降のバージョンは自動的に R コンポーネントを再インストールする必要がないため、元の R 機能を復元またはサーバーの修正プログラムを再適用します。 ただし、初期インストール後に追加された R パッケージの更新をインストールする必要があります。
 
-このタスクははるかに簡単にインストールし、パッケージの共有パッケージの管理ロールを使用した場合: R コマンドを使用するには、データベースにレコードを使用してファイル システムにインストールされているパッケージを同期する、またはその逆です。 詳細については、次を参照してください。 [SQL Server の R パッケージ管理](install-additional-r-packages-on-sql-server.md)します。
+このタスクははるかに簡単にインストールし、パッケージの共有パッケージの管理ロールを使用した場合: R コマンドを使用するには、データベースにレコードを使用してファイル システムにインストールされているパッケージを同期する、またはその逆です。 詳細については、[SQL Server の R パッケージ管理](install-additional-r-packages-on-sql-server.md)を参照してください。
 
 ### <a name="problems-with-multiple-upgrades-from-sql-server"></a>複数の SQL Server からのアップグレードに関する問題
 

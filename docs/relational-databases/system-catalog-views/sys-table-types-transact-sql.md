@@ -38,7 +38,7 @@ ms.locfileid: "47642530"
  
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|*\<列を継承 >*||このビューが継承する列の一覧は、次を参照してください。 [sys.types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)します。|  
+|*\<列を継承 >*||このビューが継承する列の一覧は、[sys.types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)を参照してください。|  
 |**type_table_object_id**|**int**|オブジェクト ID 番号。 この番号はデータベース内で一意です。|  
 |**is_memory_optimized**|**bit**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 使用できる値を次に示します。<br /><br /> 0 = メモリ最適化ではありません<br /><br /> 1 = メモリ最適化です<br /><br /> 値 0 が既定の値です。<br /><br /> テーブル型は、常に DURABILITY = SCHEMA_ONLY で作成されます。 スキーマだけがディスクに保存されます。|  
   

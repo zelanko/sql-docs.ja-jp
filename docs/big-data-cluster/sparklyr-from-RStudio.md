@@ -60,4 +60,4 @@ iris_count
 
 ## <a name="next-steps"></a>次のステップ
 
-ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)します。
+ビッグ データ クラスターに関する詳細については、[SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)を参照してください。

@@ -69,7 +69,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  この場合**レコード**から取得された、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、移動したファイルまたはディレクトリの新しい場所がすぐに反映されません、**レコード セット**します。 更新、**レコード セット**を閉じてから再度開くことができます。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  

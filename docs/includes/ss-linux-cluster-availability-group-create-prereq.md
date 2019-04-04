@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 75f5280a90efd1eea1882da99ce125a94cde17a8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51716214"
+---
 ## <a name="prerequisites"></a>前提条件
 
 可用性グループを作成する前に、以下のことを行う必要があります。
@@ -77,7 +85,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-この XE セッションの詳細については、次を参照してください。 [AlwaysOn の拡張イベント](https://msdn.microsoft.com/library/dn135324.aspx)します。
+この XE セッションの詳細については、[AlwaysOn の拡張イベント](https://msdn.microsoft.com/library/dn135324.aspx)を参照してください。
 
 ## <a name="create-a-certificate"></a>証明書を作成する
 

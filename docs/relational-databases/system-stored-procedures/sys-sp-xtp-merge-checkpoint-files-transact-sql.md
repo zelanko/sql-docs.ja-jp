@@ -30,7 +30,7 @@ ms.locfileid: "47725410"
 
   **sys.sp_xtp_merge_checkpoint_files**指定トランザクション範囲内のすべてのデータとデルタ ファイルをマージします。  
   
- 詳細については、次を参照してください。[の作成とメモリ最適化オブジェクト用ストレージの管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)します。  
+ 詳細については、[の作成とメモリ最適化オブジェクト用ストレージの管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

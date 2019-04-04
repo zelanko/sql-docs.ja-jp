@@ -27,7 +27,7 @@ ms.locfileid: "53353149"
     > [!NOTE]  
     >  SQL Server 2014 より前の SQL Server バージョンでは、Windows Azure への SQL Server バックアップ ツール アドインを使用して、Windows Azure ストレージへのバックアップをすばやく簡単に作成できます。 詳細については、 [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=324399)を参照してください。  
   
--   **Windows Azure へのバックアップの SQL Server 管理できるようにします。** SQL Server の 1 つのデータベースまたは複数データベースのバックアップ方法やスケジュールを管理したり、インスタンス レベルで既定値の設定を構成します。 この機能と呼ばれます **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** します。 詳細については、次を参照してください。 [SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)します。 この機能は、SQL Server 2014 以降で使用できます。  
+-   **Windows Azure へのバックアップの SQL Server 管理できるようにします。** SQL Server の 1 つのデータベースまたは複数データベースのバックアップ方法やスケジュールを管理したり、インスタンス レベルで既定値の設定を構成します。 この機能と呼ばれます **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** します。 詳細については、[SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)を参照してください。 この機能は、SQL Server 2014 以降で使用できます。  
   
 ## <a name="benefits-of-using-the-windows-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップに Windows Azure BLOB サービスを使用する利点  
   

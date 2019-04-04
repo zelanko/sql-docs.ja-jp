@@ -81,7 +81,7 @@ ms.locfileid: "48209892"
 ## <a name="other-sampling-options"></a>その他のサンプリング オプション  
  このウィザードのサンプリング オプションが目的に合わない場合は、SQL Server Integration Services (SSIS) のサンプリング変換を使用して、複数のデータ ソースから行をサンプリングできます。  
   
- 詳細については、次を参照してください。[行サンプリング変換](../integration-services/data-flow/transformations/row-sampling-transformation.md)と[比率サンプリング変換](../integration-services/data-flow/transformations/percentage-sampling-transformation.md)します。  
+ 詳細については、[行サンプリング変換](../integration-services/data-flow/transformations/row-sampling-transformation.md)と[比率サンプリング変換](../integration-services/data-flow/transformations/percentage-sampling-transformation.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニングの準備のチェック リスト](checklist-of-preparation-for-data-mining.md)  

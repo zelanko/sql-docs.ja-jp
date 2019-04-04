@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 4c7cfdc33c6087373fd003dcd92a0703cf7fb0cf
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46714064"
+---
 ## <a name="connect-locally"></a>ローカル接続
 
 次の手順では、**sqlcmd** を使用して新しい SQL Server インスタンスにローカル接続します。
@@ -100,7 +108,7 @@ QUIT
 
 ## <a name="performance-best-practices"></a>パフォーマンスのベスト プラクティス
 
-Linux 上の SQL Server をインストールした後、運用環境のシナリオのパフォーマンスを向上させるには、Linux と SQL Server を構成するためのベスト プラクティスを確認します。 詳細については、次を参照してください。[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](../linux/sql-server-linux-performance-best-practices.md)します。
+Linux 上の SQL Server をインストールした後、運用環境のシナリオのパフォーマンスを向上させるには、Linux と SQL Server を構成するためのベスト プラクティスを確認します。 詳細については、[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](../linux/sql-server-linux-performance-best-practices.md)を参照してください。
 
 ## <a name="cross-platform-data-tools"></a>データのクロス プラットフォーム ツール
 
@@ -136,7 +144,7 @@ Windows で実行し、Linux 上の SQL Server に接続するその他のツー
 | [オフライン インストール](../linux/sql-server-linux-setup.md#offline) | オフライン インストール パッケージを手動でダウンロードする方法を説明する |
 
 > [!TIP]
-> よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](../linux/sql-server-linux-faq.md)します。
+> よく寄せられる質問の回答は、、 [SQL Server on Linux の FAQ](../linux/sql-server-linux-faq.md)を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -92,7 +92,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ。**PowerPivot:大量の接続では、現在の負荷を処理するより多くのサーバーをデプロイする必要がありますを示します。**  
   
      ディスク領域の不足 (既定値は 5%)  
-     ディスク領域は、データベースへの要求が行われるたびに、PowerPivot データをキャッシュするために使用されます。 このルールは、ディスク領域が不足している場合に、そのことを通知します。 既定では、バックアップ フォルダーが置かれているディスク ドライブ上のディスク領域が 5% 未満になると、この正常性ルールがトリガーされます。 ディスク使用量の詳細については、次を参照してください。[ディスク使用領域の構成&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)します。  
+     ディスク領域は、データベースへの要求が行われるたびに、PowerPivot データをキャッシュするために使用されます。 このルールは、ディスク領域が不足している場合に、そのことを通知します。 既定では、バックアップ フォルダーが置かれているディスク ドライブ上のディスク領域が 5% 未満になると、この正常性ルールがトリガーされます。 ディスク使用量の詳細については、[ディスク使用領域の構成&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)を参照してください。  
   
      この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ。**PowerPivot:ディスク領域の PowerPivot データがキャッシュされているドライブが不足しています。**  
   
@@ -124,7 +124,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      PowerPivot 管理ダッシュボード .xlsx の更新の確認 (既定値は 5 日)  
      PowerPivot 管理ダッシュボード .xlsx ファイルは、PowerPivot 管理ダッシュボードのレポートによって使用されるデータ ソースです。 既定のサーバー構成では、SharePoint および PowerPivot System サービスによって収集された使用状況データを使用して、.xlsx ファイルは毎日更新されます。 ファイルが更新されない場合は、正常性ルールによって問題として報告されます。 既定では、ファイルのタイムスタンプが 5 日間変更されない場合、ルールがトリガーされます。  
   
-     使用状況データ収集の詳細については、次を参照してください。[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。  
+     使用状況データ収集の詳細については、[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)を参照してください。  
   
      この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ。**PowerPivot:使用状況データが必要な頻度で更新されません。**  
   

@@ -25,7 +25,7 @@ ms.lasthandoff: 12/03/2018
 ms.locfileid: "52751114"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field と sql:limit-value (SQLXML 4.0)
-  XML 一括読み込みでは、`sql:limit-field` および `sql:limit-value` 注釈が定義に従って処理されます。 詳細については、次を参照してください。 [sql:limit の値を使用してフィルター処理、および -値&#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)します。  
+  XML 一括読み込みでは、`sql:limit-field` および `sql:limit-value` 注釈が定義に従って処理されます。 詳細については、[sql:limit の値を使用してフィルター処理、および -値&#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)を参照してください。  
   
  たとえば、データベースに次のテーブルが含まれているとします。  
   

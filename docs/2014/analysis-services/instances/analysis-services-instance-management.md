@@ -41,7 +41,7 @@ ms.locfileid: "48196223"
  原則として、実行する必要のある管理タスクの大部分はモードによって異なりません。 Analysis Services システム管理者は、インストール方法にかかわらず同じ手順とスクリプトを使用して、ネットワーク上で任意の Analysis Services インスタンスを管理できます。  
   
 > [!NOTE]  
->  PowerPivot for SharePoint は例外です。 PowerPivot の配置のサーバー管理は、常に SharePoint ファームのコンテキスト内で行われます。 PowerPivot は、常に単一インスタンスであり、常に SharePoint サーバーの全体管理または PowerPivot 構成ツールを使用して管理されるという点が他のサーバー モードと異なります。 PowerPivot for SharePoint SQL Server Management Studio を接続することはできますが、または[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、ことは望ましくありません。 SharePoint ファームには、サーバーの状態を同期し、サーバーの可用性を監視するインフラストラクチャが含まれます。 他のツールを使用すると、これらの操作と競合する可能性があります。 PowerPivot サーバーの管理の詳細については、次を参照してください。 [PowerPivot for SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)します。  
+>  PowerPivot for SharePoint は例外です。 PowerPivot の配置のサーバー管理は、常に SharePoint ファームのコンテキスト内で行われます。 PowerPivot は、常に単一インスタンスであり、常に SharePoint サーバーの全体管理または PowerPivot 構成ツールを使用して管理されるという点が他のサーバー モードと異なります。 PowerPivot for SharePoint SQL Server Management Studio を接続することはできますが、または[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、ことは望ましくありません。 SharePoint ファームには、サーバーの状態を同期し、サーバーの可用性を監視するインフラストラクチャが含まれます。 他のツールを使用すると、これらの操作と競合する可能性があります。 PowerPivot サーバーの管理の詳細については、[PowerPivot for SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

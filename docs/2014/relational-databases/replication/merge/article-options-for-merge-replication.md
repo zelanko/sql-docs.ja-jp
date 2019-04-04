@@ -29,7 +29,7 @@ ms.locfileid: "54133322"
   
 -   1 つまたは複数のアーティクルに対する削除をレプリケーション トリガーおよびシステム テーブルによって追跡しないように指定します。 このオプションは多くのアプリケーション シナリオで役に立ちます。 レプリケートする必要のないバッチ削除を使用するシナリオなどがあります。 詳細については、「[Optimize Merge Replication Performance with Conditional Delete Tracking](optimize-merge-replication-performance-with-conditional-delete-tracking.md)」 (条件付き削除の追跡によるマージ レプリケーションのパフォーマンスの最適化) を参照してください。  
   
--   アーティクルの処理順序を指定し、アプリケーションが要求する順序でアーティクルが処理されるようにします。 詳細については、次を参照してください。[マージ レプリケーションの指定プロパティ](../publish/specify-merge-replication-properties.md)します。  
+-   アーティクルの処理順序を指定し、アプリケーションが要求する順序でアーティクルが処理されるようにします。 詳細については、[マージ レプリケーションの指定プロパティ](../publish/specify-merge-replication-properties.md)を参照してください。  
   
 -   関連するレコードのセットを 1 つの単位として処理するように指定します (既定では、マージ レプリケーションはテーブルへの変更を行単位で処理します)。 詳細については、「[論理レコードによる関連行への変更のグループ化](group-changes-to-related-rows-with-logical-records.md)」を参照してください。  
   

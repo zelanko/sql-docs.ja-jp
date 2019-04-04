@@ -191,7 +191,7 @@ EXEC sp_rxPredict
 > 
 > そのため、リアルタイム スコアリングのために使用する前に、入力データでサポートされていない型を除外する必要があります。
 > 
-> 対応する SQL 型については、次を参照してください。 [SQL-CLR 型マッピング](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)または[CLR パラメーター データのマッピング](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)します。
+> 対応する SQL 型については、[SQL-CLR 型マッピング](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)または[CLR パラメーター データのマッピング](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)を参照してください。
 
 ## <a name="disable-real-time-scoring"></a>リアルタイム スコアリングを無効にします。
 
@@ -199,4 +199,4 @@ EXEC sp_rxPredict
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server でのスコア付けの詳細については、次を参照してください。 [SQL Server machine learning で予測を生成する方法](r/how-to-do-realtime-scoring.md)します。
+SQL Server でのスコア付けの詳細については、[SQL Server machine learning で予測を生成する方法](r/how-to-do-realtime-scoring.md)を参照してください。

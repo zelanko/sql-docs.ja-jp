@@ -28,7 +28,7 @@ ms.locfileid: "48091302"
  パーティションは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でモデルのデザイン時に作成するか、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または XMLA を使用してソリューションを配置した後に作成することができます。 方法を 1 つだけ選択することをお勧めします。 ツールを何度も切り替えると、後で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] からソリューションを再配置したときに、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で配置されたデータベースに対して行った変更が上書きされることがあります。  
   
 ## <a name="before-you-start"></a>開始前の準備  
- Business Intelligence Edition または Enterprise Edition を持っているかどうかを確認します。 Standard Edition では、複数のパーティションがサポートされていません。 エディションを確認するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でサーバー ノードを右クリックし、 **[レポート]** | **[全般]** を選択します。 利用可能な機能の詳細については、次を参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ Business Intelligence Edition または Enterprise Edition を持っているかどうかを確認します。 Standard Edition では、複数のパーティションがサポートされていません。 エディションを確認するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でサーバー ノードを右クリックし、 **[レポート]** | **[全般]** を選択します。 利用可能な機能の詳細については、[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)を参照してください。  
   
  パーティションを後でマージする場合は、パーティションで同じ集計デザインを共有する必要があることを最初に理解しておくことが重要です。 パーティションをマージできるのは、集計デザインとストレージ モードが同じ場合のみです。  
   

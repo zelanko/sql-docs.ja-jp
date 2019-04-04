@@ -60,7 +60,7 @@ WHERE ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   かっこ内の式は、評価結果に置き換えられます。 詳細については、次を参照してください。 [XML の構築&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)します。  
+-   かっこ内の式は、評価結果に置き換えられます。 詳細については、[XML の構築&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)を参照してください。  
   
 -   **@\*** 2 番目のワーク センター拠点のすべての属性を取得します。  
   

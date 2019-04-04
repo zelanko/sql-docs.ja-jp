@@ -53,7 +53,7 @@ ms.locfileid: "48134102"
   
  使用できるのは、現在のセッション中に作成されたデータ マイニング構造、または、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに保存されたマイニング構造に限定されています。  
   
- 詳細については、次を参照してください。[構造への追加モデル&#40;Excel 用データ マイニング アドインで&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)します。  
+ 詳細については、[構造への追加モデル&#40;Excel 用データ マイニング アドインで&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [モデルの管理&#40;SQL Server データ マイニング アドイン&#41;](manage-models-sql-server-data-mining-add-ins.md)   

@@ -79,7 +79,7 @@ local_repo <- "C:/mylocalrepo"
 
 後**miniCRAN**がインストールされ、読み込まれると、ダウンロードするその他のパッケージを指定するリストを作成します。
 
-**いない**依存関係をこの最初のリストに追加します。 **Igraph**によって使用されるパッケージ**miniCRAN**の依存関係の一覧が生成されます。 生成された依存関係グラフを使用する方法の詳細については、次を参照してください。 [miniCRAN を使用して、パッケージの依存関係を識別する](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)します。
+**いない**依存関係をこの最初のリストに追加します。 **Igraph**によって使用されるパッケージ**miniCRAN**の依存関係の一覧が生成されます。 生成された依存関係グラフを使用する方法の詳細については、[miniCRAN を使用して、パッケージの依存関係を識別する](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)を参照してください。
 
 1. ターゲット パッケージ、"zoo"と「予測」変数に追加します。
 
@@ -93,7 +93,7 @@ local_repo <- "C:/mylocalrepo"
     plot(makeDepGraph(pkgs_needed))
     ```
 
-3. ローカル リポジトリを作成します。 SQL Server インスタンスにインストールされているバージョンに必要な場合、R のバージョンを変更してください。 3.2.2 のバージョンが SQL Server 2016 では、バージョン 3.3 が SQL Server 2017 にします。 コンポーネントのアップグレードを実行した場合、バージョンが新しい場合があります。 詳細については、次を参照してください。[パッケージ情報の取得の R と Python](determine-which-packages-are-installed-on-sql-server.md)します。
+3. ローカル リポジトリを作成します。 SQL Server インスタンスにインストールされているバージョンに必要な場合、R のバージョンを変更してください。 3.2.2 のバージョンが SQL Server 2016 では、バージョン 3.3 が SQL Server 2017 にします。 コンポーネントのアップグレードを実行した場合、バージョンが新しい場合があります。 詳細については、[パッケージ情報の取得の R と Python](determine-which-packages-are-installed-on-sql-server.md)を参照してください。
 
     ```R
     pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);

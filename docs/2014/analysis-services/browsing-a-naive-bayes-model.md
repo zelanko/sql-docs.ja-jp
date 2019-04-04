@@ -108,7 +108,7 @@ ms.locfileid: "52419017"
   
 2.  低収入は、ヨーロッパ地域とも相関関係があります。  
   
-     Naïve Bayes モデルではドリルダウンはサポートされていません。ただし、この結果グループに関連付けられたケースを調査する場合は、クエリを使用できます。 この種類のモデルに対するクエリについては、次を参照してください。 [Naive Bayes モデルのクエリ例](data-mining/naive-bayes-model-query-examples.md)します。  
+     Naïve Bayes モデルではドリルダウンはサポートされていません。ただし、この結果グループに関連付けられたケースを調査する場合は、クエリを使用できます。 この種類のモデルに対するクエリについては、[Naive Bayes モデルのクエリ例](data-mining/naive-bayes-model-query-examples.md)を参照してください。  
   
  [ページのトップへ](#BKMK_Tabs)  
   

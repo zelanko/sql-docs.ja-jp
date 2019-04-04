@@ -34,7 +34,7 @@ ms.locfileid: "48190472"
  [テーブル (DeploymentMode = 2)](#bkmk_vertipaq)  
   
 ##  <a name="bkmk_OLAP"></a> 多次元およびデータ マイニング (DeploymentMode = 0)  
- データとメタデータの両方を格納する MOLAP ストレージ モードは、ファイル サイズに物理的な制限があります。 文字列ストア ファイルの既定の最大サイズは 4 GB です。 文字列を格納するためにより大きなファイルが必要な場合は、別の文字列ストレージ アーキテクチャを指定できます。 詳細については、次を参照してください。[ディメンションおよびパーティションの文字列ストレージを構成する](../configure-string-storage-for-dimensions-and-partitions.md)します。  
+ データとメタデータの両方を格納する MOLAP ストレージ モードは、ファイル サイズに物理的な制限があります。 文字列ストア ファイルの既定の最大サイズは 4 GB です。 文字列を格納するためにより大きなファイルが必要な場合は、別の文字列ストレージ アーキテクチャを指定できます。 詳細については、[ディメンションおよびパーティションの文字列ストレージを構成する](../configure-string-storage-for-dimensions-and-partitions.md)を参照してください。  
   
 |オブジェクト|最大サイズと最大数|  
 |------------|----------------------------|  
@@ -59,7 +59,7 @@ ms.locfileid: "48190472"
 |データ マイニング モデル属性列の個別状態の最大数|2^31-1 = 2,147,483,647|  
 |使用される属性の最大数 (機能選択)|2^31-1 = 2,147,483,647|  
   
- オブジェクトの名前付けのガイドラインの詳細については、次を参照してください。 [ASSL オブジェクトとオブジェクトの特性](../scripting-language-assl/assl-objects-and-object-characteristics.md)します。  
+ オブジェクトの名前付けのガイドラインの詳細については、[ASSL オブジェクトとオブジェクトの特性](../scripting-language-assl/assl-objects-and-object-characteristics.md)を参照してください。  
   
  オンライン分析処理 (OLAP) およびデータ マイニングのデータ ソース制限の詳細については、次を参照してください[サポートされるデータ ソース&#40;SSAS 多次元&#41;](../supported-data-sources-ssas-multidimensional.md)、[データ ソースに&#40;SSAS 多次元&#41;](../supported-data-sources-ssas-multidimensional.md)、および[ASSL オブジェクトとオブジェクトの特性](../scripting-language-assl/assl-objects-and-object-characteristics.md)します。  
   

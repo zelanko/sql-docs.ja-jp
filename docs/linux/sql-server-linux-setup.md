@@ -30,7 +30,7 @@ ms.locfileid: "58280626"
 > - [Ubuntu のクイック スタート](quickstart-install-connect-ubuntu.md)
 > - [Docker クイック スタート](quickstart-install-connect-docker.md)
 
-よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](../linux/sql-server-linux-faq.md)します。
+よく寄せられる質問の回答は、、 [SQL Server on Linux の FAQ](../linux/sql-server-linux-faq.md)を参照してください。
 
 ## <a id="supportedplatforms"></a> サポートされているプラットフォーム
 
@@ -69,10 +69,10 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 
 ## <a id="repositories"></a> ソース リポジトリを構成します。
 
-インストールまたは SQL Server をアップグレードするときは、構成済みの Microsoft リポジトリから最新バージョンの SQL Server を取得します。 クイック スタートを使用して、SQL Server 2017 Cumulative Update **CU**リポジトリ。 代わりに構成することができますが、 **GDR**リポジトリまたは**プレビュー (vNext)** リポジトリ。 リポジトリとその構成方法の詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
+インストールまたは SQL Server をアップグレードするときは、構成済みの Microsoft リポジトリから最新バージョンの SQL Server を取得します。 クイック スタートを使用して、SQL Server 2017 Cumulative Update **CU**リポジトリ。 代わりに構成することができますが、 **GDR**リポジトリまたは**プレビュー (vNext)** リポジトリ。 リポジトリとその構成方法の詳細については、[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)を参照してください。
 
 > [!IMPORTANT]
-> CTP または SQL Server 2017 の RC バージョンを以前インストールした場合は、プレビューのリポジトリを削除する必要があり、一般公開 (GA) 1 つを登録します。 詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
+> CTP または SQL Server 2017 の RC バージョンを以前インストールした場合は、プレビューのリポジトリを削除する必要があり、一般公開 (GA) 1 つを登録します。 詳細については、[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)を参照してください。
 
 ## <a id="platforms"></a> SQL Server 2017 をインストールします。
 
@@ -88,7 +88,7 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 
 SQL Server 2019 プレビューは、前のセクションで、同じのクイック スタートのリンクを使用して Linux にインストールできます。 ただし、登録する必要があります、**プレビュー (vNext)** リポジトリの代わりに、 **CU**リポジトリ。 クイック スタートでは、これを行う方法についてを説明します。  
 
-インストールした後、最適なパフォーマンスの追加の構成の変更を検討してください。 詳細については、次を参照してください。[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](sql-server-linux-performance-best-practices.md)します。
+インストールした後、最適なパフォーマンスの追加の構成の変更を検討してください。 詳細については、[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](sql-server-linux-performance-best-practices.md)を参照してください。
 
 ## <a id="upgrade"></a> SQL Server を更新します。
 
@@ -109,7 +109,7 @@ SQL Server 2019 プレビューは、前のセクションで、同じのクイ�
 
 ロールバックまたは SQL Server の以前のリリースにダウン グレードは、次の手順に従います。
 
-1. ダウン グレードする SQL Server パッケージのバージョン番号を特定します。 パッケージ番号の一覧は、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md)します。
+1. ダウン グレードする SQL Server パッケージのバージョン番号を特定します。 パッケージ番号の一覧は、、[リリース ノート](sql-server-linux-release-notes.md)を参照してください。
 
 1. SQL Server の以前のバージョンにダウン グレードします。 次のコマンドで置き換える`<version_number>`いずれかの手順で特定した SQL Server のバージョン番号。
 
@@ -225,4 +225,4 @@ SQL Server のライセンスは Linux と Windows で同じです。 SQL Server
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
 > [!TIP]
-> よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)します。
+> よく寄せられる質問の回答は、、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)を参照してください。

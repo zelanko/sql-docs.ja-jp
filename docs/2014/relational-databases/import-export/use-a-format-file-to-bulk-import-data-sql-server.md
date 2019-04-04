@@ -27,7 +27,7 @@ ms.locfileid: "53364084"
 >  Unicode 文字データ ファイルを操作するフォーマット ファイルの場合、すべての入力フィールドが Unicode テキスト文字列 (つまり、固定サイズの Unicode 文字列または終端文字が指定された Unicode 文字列) でなければなりません。  
   
 > [!NOTE]  
->  フォーマット ファイルに慣れていない場合は、次を参照してください。 [XML 以外のフォーマット ファイル&#40;SQL Server&#41; ](xml-format-files-sql-server.md)と[XML フォーマット ファイル&#40;SQL Server&#41;](xml-format-files-sql-server.md)します。  
+>  フォーマット ファイルに慣れていない場合は、[XML 以外のフォーマット ファイル&#40;SQL Server&#41; ](xml-format-files-sql-server.md)と[XML フォーマット ファイル&#40;SQL Server&#41;](xml-format-files-sql-server.md)を参照してください。  
   
 ## <a name="format-file-options-for-bulk-import-commands"></a>一括インポート コマンドのフォーマット ファイル オプション  
  次の表は、各一括インポート コマンドのフォーマット ファイル オプションを示しています。  

@@ -29,7 +29,7 @@ Python の統合での Python のオプションを追加するときに、SQL S
 この記事で説明に従って、インストールを検証するには、組み込みの Jupyter Notebook を使用することができますまたは[、ライブラリをリンク](#install-ide)PyCharm に通常使用する別の IDE です。
 
 > [!Tip]
-> これらの演習ビデオ デモについては、次を参照してください。 [R の実行と Jupyter Notebook から SQL Server にリモートで Python](https://youtu.be/D5erljpJDjE)します。
+> これらの演習ビデオ デモについては、[R の実行と Jupyter Notebook から SQL Server にリモートで Python](https://youtu.be/D5erljpJDjE)を参照してください。
 
 > [!Note]
 > クライアント ライブラリをインストールする代わりを使用して、[スタンドアロン サーバー](../install/sql-machine-learning-standalone-windows-install.md)シナリオの詳細な作業を使用します。 一部のお客様のリッチ クライアントとして。 スタンドアロン サーバーは、SQL Server から切り離されます完全が同じ Python ライブラリがあるため、使用できますがクライアントとしての SQL Server データベース内分析。 インポートおよびその他のデータ プラットフォームからのデータをモデル化する機能など、SQL に関連しない作業にも使用できます。 スタンドアロン サーバーをインストールする場合は、この場所に、Python の実行可能ファイルを見つけることができます:`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`します。 インストールを検証する[Jupyter notebook を開いて](#python-tools)Python.exe をその場所で使用するコマンドを実行します。
@@ -83,7 +83,7 @@ PowerShell でまだ Python.exe、スクリプト、およびその他のパッ�
 システムで Python の複数のバージョンをロードする場合は、この特定の Python.exe を使用する注意してください**revoscalepy**およびその他の Microsoft パッケージ。
 
 > [!Note] 
-> インストール スクリプトでは、新しい python インタープリターとモジュールをインストールしたが自動的にする必要があります、その他のツールを使用可能なしないことを意味する、コンピューターの PATH 環境変数は変更されません。 ツールに Python インタープリターとライブラリをリンクする方法の詳細については、次を参照してください。 [IDE をインストールする](#install-ide)します。
+> インストール スクリプトでは、新しい python インタープリターとモジュールをインストールしたが自動的にする必要があります、その他のツールを使用可能なしないことを意味する、コンピューターの PATH 環境変数は変更されません。 ツールに Python インタープリターとライブラリをリンクする方法の詳細については、[IDE をインストールする](#install-ide)を参照してください。
 
 <a name="python-tools"></a>
 
@@ -288,7 +288,7 @@ display.Image(data=image)
 | **インタープリターのパス** | C:\Program Files\Microsoft\PyForMLS\python.exe |
 | **ウィンドウのインタープリター** | C:\Program Files\Microsoft\PyForMLS\pythonw.exe |
 
-Python 環境の構成については、次を参照してください。 [Visual Studio での Python の管理環境](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio)します。
+Python 環境の構成については、[Visual Studio での Python の管理環境](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio)を参照してください。
 
 ### <a name="pycharm"></a>PyCharm
 

@@ -47,7 +47,7 @@ ms.locfileid: "48117242"
   
  ![サンプルの参照ディメンションの論理スキーマ](../../../2014/analysis-services/dev-guide/media/dimindirect.gif "サンプル参照ディメンションの論理スキーマ")  
   
- 前の図で、 **FactResellerSales**ファクト テーブルに外部キー リレーションシップがない、 **DimGeography**ディメンション テーブル。 ただし、 **FactResellerSales**ファクト テーブルに外部キー リレーションシップが、 **DimReseller**さらにディメンション テーブルが外部キー リレーションシップ、 **DimGeography**ディメンション テーブル。 各販売店に関する地理情報を含む Reseller ディメンションを定義する必要がありますからこれらの属性を取得する、 **DimGeography**と**DimReseller**ディメンション テーブル。 ただし [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で、2 つの異なるディメンションを作成し、その 2 つのディメンション間で参照ディメンション リレーションシップを定義することによりメジャー グループ内でこれらのディメンションをリンクしても、同じ結果を得られます。 参照ディメンション リレーションシップの詳細については、次を参照してください。[ディメンション リレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)します。  
+ 前の図で、 **FactResellerSales**ファクト テーブルに外部キー リレーションシップがない、 **DimGeography**ディメンション テーブル。 ただし、 **FactResellerSales**ファクト テーブルに外部キー リレーションシップが、 **DimReseller**さらにディメンション テーブルが外部キー リレーションシップ、 **DimGeography**ディメンション テーブル。 各販売店に関する地理情報を含む Reseller ディメンションを定義する必要がありますからこれらの属性を取得する、 **DimGeography**と**DimReseller**ディメンション テーブル。 ただし [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で、2 つの異なるディメンションを作成し、その 2 つのディメンション間で参照ディメンション リレーションシップを定義することによりメジャー グループ内でこれらのディメンションをリンクしても、同じ結果を得られます。 参照ディメンション リレーションシップの詳細については、[ディメンション リレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)を参照してください。  
   
  このシナリオで参照ディメンション リレーションシップを使用することの利点の 1 つとして、1 つの地理ディメンションを作成した後、追加のストレージ領域を必要とすることなく、この地理ディメンションに基づいて、複数のキューブ ディメンションを作成できることが挙げられます。 たとえば、地理キューブ ディメンションの 1 つを販売店ディメンションにリンクし、別の地理キューブ ディメンションを顧客ディメンションにリンクすることができます。 **関連トピック:**[ディメンション リレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)、[参照リレーションシップと参照リレーションシップのプロパティを定義します。](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48117242"
  ディメンションを作成した後、ディメンション内の属性および階層のメンバーを表示するには、あらかじめこのディメンションを処理しておく必要があります。 ディメンションの構造が変更されたり、その基になるテーブルの情報が更新された場合、ディメンションをもう一度処理しないと、変更内容を表示できません。 構造の変更後にディメンションを処理する際は、そのディメンションが含まれたキューブも処理する必要があります。これを行わないと、キューブを表示できません。  
   
 ## <a name="security"></a>セキュリティ  
- ディメンションの従属オブジェクトは、階層、レベル、メンバーを含め、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のロールを使用してすべてセキュリティで保護されています。 ディメンションのセキュリティは、そのディメンションを使用するデータベース内のすべてのキューブ、または特定のキューブにのみ適用できます。 ディメンション セキュリティの詳細については、次を参照してください。[ディメンションに対する権限を付与&#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)します。  
+ ディメンションの従属オブジェクトは、階層、レベル、メンバーを含め、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のロールを使用してすべてセキュリティで保護されています。 ディメンションのセキュリティは、そのディメンションを使用するデータベース内のすべてのキューブ、または特定のキューブにのみ適用できます。 ディメンション セキュリティの詳細については、[ディメンションに対する権限を付与&#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ディメンションのストレージ](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   

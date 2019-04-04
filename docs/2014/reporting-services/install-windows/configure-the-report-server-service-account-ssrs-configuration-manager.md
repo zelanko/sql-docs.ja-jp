@@ -44,7 +44,7 @@ ms.locfileid: "53328962"
     > [!NOTE]  
     > レポート サーバーがスケールアウト配置の一部である場合、更新するレポート サーバーのみが影響を受けます。 配置内の他のレポート サーバーの暗号化キーは、サービス アカウントを変更しても影響を受けません。  
   
- アカウントを設定する方法の詳細については、次を参照してください。[サービス アカウントを構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)します。  
+ アカウントを設定する方法の詳細については、[サービス アカウントを構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)を参照してください。  
   
 ## <a name="choosing-an-account"></a>アカウントの選択
 

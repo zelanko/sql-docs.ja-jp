@@ -35,7 +35,7 @@ ms.lasthandoff: 11/28/2018
 ms.locfileid: "52522888"
 ---
 # <a name="clr-triggers"></a>CLR トリガー
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (共通言語ランタイム) との統合により、任意の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 言語を使用して CLR トリガーを作成できるようになりました。 ここでは、CLR 統合によって実装されたトリガー固有の情報について説明します。 トリガーの詳細については、次を参照してください。 [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (共通言語ランタイム) との統合により、任意の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 言語を使用して CLR トリガーを作成できるようになりました。 ここでは、CLR 統合によって実装されたトリガー固有の情報について説明します。 トリガーの詳細については、[DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)を参照してください。  
   
 ## <a name="what-are-triggers"></a>トリガーとは  
  トリガーとは、言語イベントの実行時に自動的に実行される、特殊なストアド プロシージャです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、DML (データ操作言語) トリガーと DDL (データ定義言語) トリガーという 2 種類の一般的なトリガーがあります。 DML トリガーは、`INSERT` ステートメント、`UPDATE` ステートメント、または `DELETE` ステートメントにより、指定されたテーブルやビューのデータが変更されるときに使用できます。 DDL トリガーは、主に `CREATE`、`ALTER`、および `DROP` で始まるさまざまな DDL ステートメントに応じてストアド プロシージャを起動します。 DDL トリガーは、データベース操作の監査や管理などの管理作業に使用できます。  
@@ -58,7 +58,7 @@ ms.locfileid: "52522888"
   
  `SqlTriggerContext myTriggerContext = SqlContext.TriggerContext;`  
   
- `SqlTriggerContext` クラスでは、トリガーに関するコンテキスト情報が提供されます。 このコンテキスト情報には、トリガーを起動した動作の種類、UPDATE 操作で変更された列、および DDL トリガーの場合はトリガー操作が記述されている XML `EventData` 構造体が含まれます。 詳細については、次を参照してください。 [EVENTDATA &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)します。  
+ `SqlTriggerContext` クラスでは、トリガーに関するコンテキスト情報が提供されます。 このコンテキスト情報には、トリガーを起動した動作の種類、UPDATE 操作で変更された列、および DDL トリガーの場合はトリガー操作が記述されている XML `EventData` 構造体が含まれます。 詳細については、[EVENTDATA &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)を参照してください。  
   
 ### <a name="determining-the-trigger-action"></a>トリガー動作の判断  
  `SqlTriggerContext` を取得すると、これを使用してトリガーを起動した動作の種類を判断できます。 この情報は、`TriggerAction` クラスの `SqlTriggerContext` プロパティから入手できます。  

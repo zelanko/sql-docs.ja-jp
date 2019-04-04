@@ -26,7 +26,7 @@ ms.locfileid: "48136992"
 # <a name="link-to-programming-samples"></a>プログラミング サンプルへのリンク
   次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO ディレクトリにある、[!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理オブジェクト (SMO) のプログラミング サンプルを示します。 これらのサンプルは両方で使用できる[!INCLUDE[csprcs](../../includes/csprcs-md.md)]と[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET。  
   
- サンプルをインストールする方法の詳細については、次を参照してください。 [SQL Server 2012 用 AdventureWorks](http://msftdbprodsamples.codeplex.com/releases/view/55330)します。  
+ サンプルをインストールする方法の詳細については、[SQL Server 2012 用 AdventureWorks](http://msftdbprodsamples.codeplex.com/releases/view/55330)を参照してください。  
   
 |[タイトル]|説明|  
 |-----------|-----------------|  

@@ -21,7 +21,7 @@ ms.locfileid: "52412509"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-実行する、 `ssis-conf` Red Hat Enterprise Linux と Ubuntu 用 SQL Server Integration Services (SSIS) をインストールするときに、構成スクリプト。 SSIS をインストールする方法の詳細については、次を参照してください。[インストール SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)します。
+実行する、 `ssis-conf` Red Hat Enterprise Linux と Ubuntu 用 SQL Server Integration Services (SSIS) をインストールするときに、構成スクリプト。 SSIS をインストールする方法の詳細については、[インストール SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)を参照してください。
 
 使用することも、`ssis-conf`ユーティリティは、次のプロパティを構成します。
 

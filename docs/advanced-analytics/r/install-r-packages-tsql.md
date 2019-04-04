@@ -28,7 +28,7 @@ ms.locfileid: "58510277"
 
 + すべての依存関係の名前とバージョンで識別され、zip ファイルに含まれる必要があります。 パッケージが使用可能なダウン ストリームのパッケージの依存関係を含む必要な場合、ステートメントが失敗します。 
 
-+ 必要があります**db_owner**またはデータベース ロールの外部ライブラリの作成の権限があります。 詳細については、次を参照してください。 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)します。
++ 必要があります**db_owner**またはデータベース ロールの外部ライブラリの作成の権限があります。 詳細については、[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)を参照してください。
 
 ## <a name="download-packages-in-archive-format"></a>アーカイブ形式でパッケージをダウンロードします。
 
@@ -38,7 +38,7 @@ ms.locfileid: "58510277"
 
 ## <a name="copy-the-file-to-a-local-folder"></a>ファイルをローカル フォルダーにコピーします。
 
-サーバー上のローカル フォルダーにすべてのパッケージを含む zip 形式のファイルをコピーします。 サーバー上のファイル システムへのアクセスがない、渡すこともできます完全なパッケージ変数としてバイナリ形式を使用します。 詳細については、次を参照してください。 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)します。
+サーバー上のローカル フォルダーにすべてのパッケージを含む zip 形式のファイルをコピーします。 サーバー上のファイル システムへのアクセスがない、渡すこともできます完全なパッケージ変数としてバイナリ形式を使用します。 詳細については、[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)を参照してください。
 
 ## <a name="run-the-statement-to-upload-packages"></a>パッケージをアップロードするステートメントを実行します。
 

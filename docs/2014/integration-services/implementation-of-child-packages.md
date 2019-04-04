@@ -42,7 +42,7 @@ ms.locfileid: "58386773"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用してパッケージをエクスポートします。  
   
--   パッケージを配置します。パッケージを配置するには、配置するパッケージを含むプロジェクトの配置ユーティリティをビルドした後、パッケージ インストール ウィザードを実行し、パッケージをファイル システムまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスにインストールします。 詳細については、次を参照してください。[パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)します。  
+-   パッケージを配置します。パッケージを配置するには、配置するパッケージを含むプロジェクトの配置ユーティリティをビルドした後、パッケージ インストール ウィザードを実行し、パッケージをファイル システムまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスにインストールします。 詳細については、[パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)を参照してください。  
   
  この配置は、使用する各リモート サーバーに対してそれぞれ行う必要があります。  
   

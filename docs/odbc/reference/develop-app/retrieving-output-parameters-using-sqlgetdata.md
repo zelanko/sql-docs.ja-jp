@@ -27,7 +27,7 @@ ODBC 3.8、前に、アプリケーションは、バインドされた出力バ
   
  出力パラメーターまたはの部分で取得するには、入力/出力パラメーターをバインドするには、呼び出す**SQLBindParameter**で、 *InputOutputType*引数 SQL_PARAM_OUTPUT_STREAM または SQL_PARAM_INPUT_OUTPUT に設定_STREAM します。 SQL_PARAM_INPUT_OUTPUT_STREAM でアプリケーションを使用できます**SQLPutData**にデータをパラメーターを入力し、使用して**SQLGetData**出力パラメーターを取得します。 入力データは、実行時データ (DAE) である必要がありますを使用して、フォーム**SQLPutData**事前に割り当てられたバッファーへのバインドの代わりにします。  
   
- この機能は ODBC 3.8 アプリケーションで使用できるまたは ODBC を再コンパイル 3.x と ODBC 2.x アプリケーションでは、これらのアプリケーションに、ODBC 3.8 をサポートするドライバーを使用して出力パラメーターを取得する必要があります**SQLGetData**と ODBC 3.8 ドライバーマネージャー。 ODBC の新しい機能を使用する古いアプリケーションを有効にする方法については、次を参照してください。[の互換性対応表](../../../odbc/reference/develop-app/compatibility-matrix.md)します。  
+ この機能は ODBC 3.8 アプリケーションで使用できるまたは ODBC を再コンパイル 3.x と ODBC 2.x アプリケーションでは、これらのアプリケーションに、ODBC 3.8 をサポートするドライバーを使用して出力パラメーターを取得する必要があります**SQLGetData**と ODBC 3.8 ドライバーマネージャー。 ODBC の新しい機能を使用する古いアプリケーションを有効にする方法については、[の互換性対応表](../../../odbc/reference/develop-app/compatibility-matrix.md)を参照してください。  
   
 ## <a name="usage-example"></a>使用例  
  たとえば、ストアド プロシージャでは、実行する **{呼び出し sp_f(?,?)}**、場所として SQL_PARAM_OUTPUT_STREAM、両方のパラメーターがバインドされているし、ストアド プロシージャが結果セットを返さない (このトピックの後半が見つかったらより複雑なシナリオ)。  

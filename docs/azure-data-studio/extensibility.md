@@ -37,11 +37,11 @@ ms.locfileid: "53030016"
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>管理ダッシュ ボード タブのパネルの投稿
 
-詳細については、次を参照してください。[貢献ポイント](#contribution-points)と[コンテキスト変数](#context-variables)します。
+詳細については、[貢献ポイント](#contribution-points)と[コンテキスト変数](#context-variables)を参照してください。
 
 ## <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 機能拡張 Api
 
-詳細については、次を参照してください。[拡張性 Api](extensibility-apis.md)します。
+詳細については、[拡張性 Api](extensibility-apis.md)を参照してください。
 
 
 ## <a name="contribution-points"></a>貢献ポイント
@@ -264,7 +264,7 @@ Dashboard.insights を使用してインサイトを登録することができ�
 
 ## <a name="context-variables"></a>コンテキスト変数
 
-Visual Studio Code とその後に Azure Data Studio でのコンテキストについては、次を参照してください。 [Extensibility](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example)します。
+Visual Studio Code とその後に Azure Data Studio でのコンテキストについては、[Extensibility](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example)を参照してください。
 
 Azure データ studio では、拡張機能の使用可能なデータベース接続に関する特定のコンテキストがあります。
 

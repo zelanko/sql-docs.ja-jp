@@ -18,7 +18,7 @@ ms.locfileid: "40394955"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Parallel Data Warehouse に INSERT を使用してデータを読み込む
 
-Tsql の INSERT ステートメントを使用して、SQL Server Parallel Data Warehouse (PDW) 分散またはレプリケートされたテーブルにデータを読み込むことができます。 挿入の詳細については、次を参照してください。[挿入](../t-sql/statements/insert-transact-sql.md)します。 PDW はレプリケートされたテーブルと分散テーブル内のすべての非ディストリビューション列は、SQL Server を使用して、変換先列のデータ型に、ステートメントで指定されたデータ値を暗黙的に変換します。 SQL Server データの変換規則の詳細については、次を参照してください。[データ型の SQL の変換](../t-sql/data-types/data-type-conversion-database-engine.md)します。 ただし、PDW は、ディストリビューション列の場合は、SQL Server をサポートする暗黙的な変換のサブセットのみをサポートします。 そのため、ディストリビューション列にデータを読み込む、INSERT ステートメントを使用する場合、次の表に定義された形式のいずれかで、ソース データを指定してください。  
+Tsql の INSERT ステートメントを使用して、SQL Server Parallel Data Warehouse (PDW) 分散またはレプリケートされたテーブルにデータを読み込むことができます。 挿入の詳細については、[挿入](../t-sql/statements/insert-transact-sql.md)を参照してください。 PDW はレプリケートされたテーブルと分散テーブル内のすべての非ディストリビューション列は、SQL Server を使用して、変換先列のデータ型に、ステートメントで指定されたデータ値を暗黙的に変換します。 SQL Server データの変換規則の詳細については、[データ型の SQL の変換](../t-sql/data-types/data-type-conversion-database-engine.md)を参照してください。 ただし、PDW は、ディストリビューション列の場合は、SQL Server をサポートする暗黙的な変換のサブセットのみをサポートします。 そのため、ディストリビューション列にデータを読み込む、INSERT ステートメントを使用する場合、次の表に定義された形式のいずれかで、ソース データを指定してください。  
   
   
 ## <a name="InsertingLiteralsBinary"></a>バイナリ型にリテラルを挿入します。  
@@ -98,7 +98,7 @@ Tsql の INSERT ステートメントを使用して、SQL Server Parallel Data 
 |10 進数リテラル|nnnnn.nnnn<br /><br />例: 1234.5678|1 より大きいまたは 0 未満の値は 1 に変換されます。 たとえば、123.45 と-123.45 の値は 1 に変換されます。|  
   
 ### <a name="decimal-data-type"></a>decimal データ型  
-次の表は、許容される形式と型のディストリビューション列にリテラル値を挿入するための規則を定義します。 **decimal** (*p, s*)。 データ変換の規則は、SQL Server と同じです。 詳細については、次を参照してください。[データ型の変換](../t-sql/data-types/data-type-conversion-database-engine.md)msdn です。  
+次の表は、許容される形式と型のディストリビューション列にリテラル値を挿入するための規則を定義します。 **decimal** (*p, s*)。 データ変換の規則は、SQL Server と同じです。 詳細については、[データ型の変換](../t-sql/data-types/data-type-conversion-database-engine.md)msdn を参照してください。  
   
 |リテラルの型|[形式]|  
 |----------------|----------|  
@@ -108,7 +108,7 @@ Tsql の INSERT ステートメントを使用して、SQL Server Parallel Data 
 |10 進数リテラル|nnnnnn.nnnnn<br /><br />例: ' 123344.34455'|  
   
 ### <a name="float-and-real-data-types"></a>float と real データ型  
-次の表は、許容される形式と型のディストリビューション列にリテラル値を挿入するための規則を定義します。 **float**または**実際**します。 データ変換の規則は、SQL Server と同じです。 詳細については、次を参照してください。[データ型の変換](../t-sql/data-types/data-type-conversion-database-engine.md)msdn です。  
+次の表は、許容される形式と型のディストリビューション列にリテラル値を挿入するための規則を定義します。 **float**または**実際**します。 データ変換の規則は、SQL Server と同じです。 詳細については、[データ型の変換](../t-sql/data-types/data-type-conversion-database-engine.md)msdn を参照してください。  
   
 |リテラルの型|[形式]|  
 |----------------|----------|  

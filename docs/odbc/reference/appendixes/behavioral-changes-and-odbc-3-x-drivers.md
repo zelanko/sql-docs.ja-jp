@@ -26,7 +26,7 @@ ms.locfileid: "47740050"
 環境属性 ODBC 2 が発生する必要があるかどうか、ドライバーを SQL_ATTR_ODBC_VERSION を示します。*x*動作または ODBC 3 *.x*動作します。 SQL_ATTR_ODBC_VERSION 環境属性を設定する方法は、アプリケーションによって異なります。 ODBC 3 *.x*アプリケーションを呼び出す必要があります**SQLSetEnvAttr**を呼び出すことが後に、この属性を設定する**SQLAllocHandle**環境ハンドルの割り当てに呼び出しの前に、**SQLAllocHandle**接続ハンドルを割り当てられません。 これを行うよう、失敗した場合、ドライバー マネージャーは SQLSTATE HY010 を返します (関数のシーケンス エラーです)、後者の呼び出しで**SQLAllocHandle**します。  
   
 > [!NOTE]  
->  動作が変更されると、アプリケーションの機能の詳細については、次を参照してください。[動作が変更される](../../../odbc/reference/develop-app/behavioral-changes.md)します。  
+>  動作が変更されると、アプリケーションの機能の詳細については、[動作が変更される](../../../odbc/reference/develop-app/behavioral-changes.md)を参照してください。  
   
  ODBC 2。*x*アプリケーションや ODBC 2 *。x* ODBC 3 と再コンパイルされたアプリケーション *.x*ヘッダー ファイルは呼び出さないでください**SQLSetEnvAttr**します。 ただし、呼び出す**SQLAllocEnv**の代わりに**SQLAllocHandle**環境ハンドルを割り当てられません。 そのため、アプリケーションを呼び出すと**SQLAllocEnv**ドライバー マネージャーは、ドライバー マネージャーで、 **SQLAllocHandle**と**SQLSetEnvAttr**ドライバー。 したがって、ODBC 3 *.x*ドライバー常に信頼性のこの属性が設定されています。  
   

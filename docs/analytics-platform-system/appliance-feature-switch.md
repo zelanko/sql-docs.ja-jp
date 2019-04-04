@@ -28,7 +28,7 @@ ms.locfileid: "57578786"
 
 ## <a name="autostatsenabled"></a>AutoStatsEnabled
 
-自動統計機能を制御します。 この機能スイッチが 設定されている AU7 へのアップグレード後に既定では true。 アップグレード後に作成されたデータベースの自動作成し、統計の非同期更新を継承します。 既存のデータベースに対してデータベース管理者の自動統計をできるように[ALTER DATABASE (並列データ ウェアハウス)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)します。 統計の詳細については、次を参照してください。[統計](../relational-databases/statistics/statistics.md)します。
+自動統計機能を制御します。 この機能スイッチが 設定されている AU7 へのアップグレード後に既定では true。 アップグレード後に作成されたデータベースの自動作成し、統計の非同期更新を継承します。 既存のデータベースに対してデータベース管理者の自動統計をできるように[ALTER DATABASE (並列データ ウェアハウス)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)します。 統計の詳細については、[統計](../relational-databases/statistics/statistics.md)を参照してください。
 
 ## <a name="maxdopforinsertqueries"></a>MaxDOPForInsertQueries
 

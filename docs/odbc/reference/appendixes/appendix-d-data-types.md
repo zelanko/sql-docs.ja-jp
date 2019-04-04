@@ -59,4 +59,4 @@ ODBC では、2 つのデータ型のセットを定義します。SQL データ
   
 -   [C から SQL データ型へのデータ変換](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
- ODBC データ型の詳細については、次を参照してください。 [ODBC のデータ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)します。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。
+ ODBC データ型の詳細については、[ODBC のデータ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)を参照してください。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。

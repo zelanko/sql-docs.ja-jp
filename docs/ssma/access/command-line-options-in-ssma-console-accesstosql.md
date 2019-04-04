@@ -171,7 +171,7 @@ SSMA コンソールのコマンド ライン オプションの表を参照し�
   
 1.  パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)します。  
   
-2.  レポートを生成するため、次を参照してください。[レポートを生成する&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)します。  
+2.  レポートを生成するため、[レポートを生成する&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)を参照してください。  
   
-3.  コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)します。  
+3.  コンソールで問題をトラブルシューティングするには、[トラブルシューティング&#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)を参照してください。  
   

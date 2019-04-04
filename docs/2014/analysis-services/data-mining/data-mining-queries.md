@@ -83,7 +83,7 @@ ms.locfileid: "48197712"
   
  データ マイニング モデル、およびクエリのビルド方法を理解したら、データ マイニング拡張機能 (DMX) を使用してクエリを直接作成することもできます。 DMX は Transact-SQL に似たクエリ言語であり、多数のクライアントから使用できます。 DMX は、カスタムの予測と複雑なクエリの両方を作成するために選ばれるツールです。 DMX の概要については、「[DMX を使用したデータ マイニング モデルの作成とクエリ : チュートリアル &#40;Analysis Services - データ マイニング&#41;](../../tutorials/create-query-data-mining-models-dmx-tutorials.md)」を参照してください。  
   
- DMX エディターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で提供されます。 また、予測クエリ ビルダーを使用してクエリを開始してから、ビューをテキスト エディターに変更し、DMX ステートメントを別のクライアントにコピーすることもできます。 詳細については、次を参照してください。[データ マイニング クエリ インターフェイス](data-mining-query-tools.md)します。  
+ DMX エディターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の両方で提供されます。 また、予測クエリ ビルダーを使用してクエリを開始してから、ビューをテキスト エディターに変更し、DMX ステートメントを別のクライアントにコピーすることもできます。 詳細については、[データ マイニング クエリ インターフェイス](data-mining-query-tools.md)を参照してください。  
   
  DMX ステートメントをプログラムで作成し、AMO または XMLA を使用して、クライアントから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーに送信できます。 ただし、DMX は、マイニング モデルに対するクエリを作成するために使用する必要がある言語です。  
   

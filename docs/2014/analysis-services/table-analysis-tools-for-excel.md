@@ -76,7 +76,7 @@ ms.locfileid: "52391900"
  **買い物かご分析**ツールは、Microsoft アソシエーション アルゴリズムを使用します。  
   
 ## <a name="requirements-for-the-table-analysis-tools-for-excel"></a>Excel 用のテーブル分析ツールの要件  
- Excel 用のテーブル分析ツールを使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続を作成しておく必要があります。 データの分析に使用される Microsoft データ マイニング アルゴリズムには、この接続を介してアクセスします。 インスタンスにアクセスできない場合、データ マイニングを試すときに使用できるインスタンスを設定するよう管理者に依頼することをお勧めします。 詳細については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)します。  
+ Excel 用のテーブル分析ツールを使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続を作成しておく必要があります。 データの分析に使用される Microsoft データ マイニング アルゴリズムには、この接続を介してアクセスします。 インスタンスにアクセスできない場合、データ マイニングを試すときに使用できるインスタンスを設定するよう管理者に依頼することをお勧めします。 詳細については、[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)を参照してください。  
   
  テーブル分析ツールでデータを操作するには、使用する一連のデータを Excel テーブルに変換する必要があります。  
   

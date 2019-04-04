@@ -44,7 +44,7 @@ ms.locfileid: "47823391"
 'EndEditIntro  
 ```  
   
- コードに重要な変更は、設定、 **CursorLocation**のプロパティ、**接続**オブジェクトと等しい**adUseClient**で、 *GetNewConnection*クライアント カーソルの使用を示します (次の例で示すように) 関数。 クライアント側とサーバー側のカーソルの違いの詳細については、次を参照してください。[カーソルとロック](../../../ado/guide/data/understanding-cursors-and-locks.md)します。  
+ コードに重要な変更は、設定、 **CursorLocation**のプロパティ、**接続**オブジェクトと等しい**adUseClient**で、 *GetNewConnection*クライアント カーソルの使用を示します (次の例で示すように) 関数。 クライアント側とサーバー側のカーソルの違いの詳細については、[カーソルとロック](../../../ado/guide/data/understanding-cursors-and-locks.md)を参照してください。  
   
  **CursorLocation**プロパティの**adUseClient**設定は、データ ソース (この場合は SQL Server) から、カーソルの位置をクライアント コード (デスクトップ ワークステーション) の場所に移動します。 この設定が強制的に作成し、カーソルを管理するためにクライアントで OLE DB 用のクライアント カーソル エンジンを起動します。  
   

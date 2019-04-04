@@ -91,7 +91,7 @@ Oracle データベースへの接続に使用されるアカウントが少な�
   
     `Data Source=MyOracleDB;Integrated Security=yes;`  
   
-    詳細については、次を参照してください。 [Oracle に接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)します。  
+    詳細については、[Oracle に接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)を参照してください。  
   
 ## <a name="reconnecting-to-oracle"></a>Oracle への再接続  
 プロジェクトを閉じるまで、データベース サーバーへの接続をアクティブに保ちます。 プロジェクトを再度開くとする場合は、データベースにアクティブな接続を再接続する必要があります。 メタデータを更新するには、データベース オブジェクトに読み込む必要になるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行します。  

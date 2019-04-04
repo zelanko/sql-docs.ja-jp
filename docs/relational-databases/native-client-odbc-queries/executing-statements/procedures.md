@@ -35,7 +35,7 @@ ms.locfileid: "51669718"
   
  ODBC アプリケーションでは、ストアド プロシージャの実行時に ODBC CALL 構文を使用する必要があります。 ドライバーは、ODBC CALL 構文の使用時に、リモート プロシージャ コールのメカニズムを使用してプロシージャを呼び出すように最適化されます。 これは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE ステートメントをサーバーに送信するときに使用するメカニズムよりも効率的です。  
   
- 詳細については、次を参照してください。[ストアド プロシージャを実行している](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)します。  
+ 詳細については、[ストアド プロシージャを実行している](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ステートメントを実行する&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  

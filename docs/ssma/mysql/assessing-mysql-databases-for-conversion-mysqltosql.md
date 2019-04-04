@@ -75,7 +75,7 @@ SSMA が選択した MySQL データベース オブジェクトに変換しま�
   
 -   SSMA で MySQL の構文を更新します。 プロシージャと関数のみの構文を更新することができます。 構文を更新するには、MySQL メタデータ エクスプ ローラー ペインで、オブジェクトを選択 をクリックして、 **SQL**タブをクリックし、SQL コードを変更します。 項目から移動するときに、更新された構文を保存する促されます。 オブジェクトの報告されたエラーを表示することができます、**レポート**タブ。  
   
--   MySQL で削除または問題のあるコードを変更するには MySQL オブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [MySQL に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)します。  
+-   MySQL で削除または問題のあるコードを変更するには MySQL オブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、[MySQL に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)を参照してください。  
   
 -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure メタデータ エクスプ ローラーと MySQL メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure の MySQL からデータを移行します。  
   

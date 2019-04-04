@@ -58,7 +58,7 @@ Cron ジョブを作成する場合、ReplicaSet が作成され、ポッドを�
 - [コマンド ライン インターフェイス `mssqlctl`](big-data-cluster-create-apps.md)
 - [Visual Studio Code と Azure Data Studio の拡張機能](app-deployment-extension.md)
 
-アプリケーションが RESTful web サービスを使用して実行することもできます。 詳細については、次を参照してください。[ビッグ データ クラスター上でアプリケーションを消費する](big-data-cluster-consume-apps.md)します。
+アプリケーションが RESTful web サービスを使用して実行することもできます。 詳細については、[ビッグ データ クラスター上でアプリケーションを消費する](big-data-cluster-consume-apps.md)を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

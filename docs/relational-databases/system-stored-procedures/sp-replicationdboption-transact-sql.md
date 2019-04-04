@@ -53,7 +53,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**マージ パブリッシュします。**|データベースは、マージ パブリケーションで使用できます。|  
 |**発行**|データベースは、他の種類のパブリケーションで使用できます。|  
 |**サブスクライブ**|データベースは、サブスクリプション データベースです。|  
-|**バックアップと同期します。**|データベースは、連携バックアップに対して有効になっています。 詳細については、次を参照してください。[トランザクション レプリケーションの連携バックアップの有効化&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)します。|  
+|**バックアップと同期します。**|データベースは、連携バックアップに対して有効になっています。 詳細については、[トランザクション レプリケーションの連携バックアップの有効化&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)を参照してください。|  
   
 `[ @value = ] 'value'` 有効または、特定のレプリケーション データベース オプションを無効にするかどうかです。 *値*は**sysname**、でき、 **true**または**false**します。 この値が**false**と*optname*は**マージ パブリッシュ**、マージ パブリッシュされたデータベースへのサブスクリプションが削除されます。  
   

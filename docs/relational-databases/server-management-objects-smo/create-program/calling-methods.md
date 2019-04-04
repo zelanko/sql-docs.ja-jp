@@ -31,10 +31,10 @@ ms.locfileid: "47633290"
   
  メソッドはオブジェクトに対する操作を実行します。 メソッドはパラメーターを受け取ることができ、多くの場合は戻り値があります。 戻り値には、単純なデータ型、複雑なオブジェクト、複数のメンバーを含んでいる構造のいずれを使用することもできます。  
   
- メソッドが正常に実行されたかどうかを検出するには、例外処理を使用します。 詳細については、次を参照してください。 [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)します。  
+ メソッドが正常に実行されたかどうかを検出するには、例外処理を使用します。 詳細については、[Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)を参照してください。  
   
 ## <a name="examples"></a>使用例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
  
   
 ## <a name="using-a-simple-smo-method-in-visual-basic"></a>Visual Basic での簡単な SMO メソッドの使用  

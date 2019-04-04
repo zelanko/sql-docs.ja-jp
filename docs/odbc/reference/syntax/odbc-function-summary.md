@@ -21,7 +21,7 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47686520"
 ---
 # <a name="odbc-function-summary"></a>ODBC 関数の概要
-次の表では、タスクの種類別の ODBC 関数の一覧し、準拠指定し、各関数の目的の簡単な説明が含まれています。 準拠の指定の詳細については、次を参照してください。 [ODBC と標準の CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)します。 構文とセマンティクスの各関数の詳細については、次を参照してください。 [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)します。  
+次の表では、タスクの種類別の ODBC 関数の一覧し、準拠指定し、各関数の目的の簡単な説明が含まれています。 準拠の指定の詳細については、[ODBC と標準の CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)を参照してください。 構文とセマンティクスの各関数の詳細については、[ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)を参照してください。  
   
  アプリケーションが呼び出すことができます、 **SQLGetInfo**への準拠、ドライバーの情報を取得します。 ドライバーでは、特定の関数のサポートについての情報を取得するアプリケーションを呼び出すことができます**SQLGetFunctions**します。  
   

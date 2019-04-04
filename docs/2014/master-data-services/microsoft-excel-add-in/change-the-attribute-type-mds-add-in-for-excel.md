@@ -36,7 +36,7 @@ ms.locfileid: "52783944"
   
 ### <a name="to-change-the-attribute-type"></a>属性の型を変更するには  
   
-1.  Excel で、変更する列 (属性) を含むエンティティを読み込みます。 詳細については、次を参照してください。[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)します。  
+1.  Excel で、変更する列 (属性) を含むエンティティを読み込みます。 詳細については、[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)を参照してください。  
   
 2.  変更する列の任意のセルをクリックします。  
   

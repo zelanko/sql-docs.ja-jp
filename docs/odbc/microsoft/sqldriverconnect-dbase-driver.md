@@ -31,7 +31,7 @@ ms.locfileid: "47690882"
   
  Paradox ドライバーを使用すると、ユーザーがパスワードで保護されたファイルを開いた後、他のユーザーは同じファイルを開くには許可されません。  
   
- 次の表は、各ドライバーでは、接続に必要な最小のキーワードを示しています。 と併用キーワード/値ペアの例を示します**SQLDriverConnect**します。 DRIVERID 値の一覧については、次を参照してください。 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)します。  
+ 次の表は、各ドライバーでは、接続に必要な最小のキーワードを示しています。 と併用キーワード/値ペアの例を示します**SQLDriverConnect**します。 DRIVERID 値の一覧については、[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)を参照してください。  
   
 > [!NOTE]  
 >  DBASEdriver、DBQ または DefaultDir が指定されていない場合、ドライバーは、現在のディレクトリに接続します。  

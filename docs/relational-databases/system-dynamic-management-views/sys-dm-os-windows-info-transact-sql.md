@@ -35,10 +35,10 @@ ms.locfileid: "51663141"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**windows_release**|**nvarchar (256)**|Windows では、リリース番号を返します。 値と説明の一覧は、次を参照してください。[オペレーティング システムのバージョン (Windows)](/windows/desktop/SysInfo/operating-system-version)します。 NULL 値は許容されません。|  
+|**windows_release**|**nvarchar (256)**|Windows では、リリース番号を返します。 値と説明の一覧は、[オペレーティング システムのバージョン (Windows)](/windows/desktop/SysInfo/operating-system-version)を参照してください。 NULL 値は許容されません。|  
 |**windows_service_pack_level**|**nvarchar (256)**| Windows では、サービス パック番号を返します。 NULL 値は許容されません。 |  
-|**windows_sku**|**int**|Windows、Windows 在庫管理単位 (SKU) ID を返します SKU Id と説明の一覧は、次を参照してください。 [GetProductInfo 関数](https://msdn.microsoft.com/library/ms724358.aspx)します。 Null 値は。 |  
-|**os_language_version**|**int**| Windows では、オペレーティング システムの Windows ロケール識別子 (LCID) を返します。 LCID 値と説明の一覧は、次を参照してください。 [Microsoft によるロケール Id 割り当て](https://go.microsoft.com/fwlink/?LinkId=208080)します。 NULL 値は許容されません。|  
+|**windows_sku**|**int**|Windows、Windows 在庫管理単位 (SKU) ID を返します SKU Id と説明の一覧は、[GetProductInfo 関数](https://msdn.microsoft.com/library/ms724358.aspx)を参照してください。 Null 値は。 |  
+|**os_language_version**|**int**| Windows では、オペレーティング システムの Windows ロケール識別子 (LCID) を返します。 LCID 値と説明の一覧は、[Microsoft によるロケール Id 割り当て](https://go.microsoft.com/fwlink/?LinkId=208080)を参照してください。 NULL 値は許容されません。|  
   
   
 ## <a name="permissions"></a>アクセス許可  

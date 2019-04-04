@@ -24,7 +24,7 @@ ms.locfileid: "58386630"
  環境の詳細については、「 [サーバー環境の作成とマップ](../../2014/integration-services/create-and-map-a-server-environment.md)」を参照してください。  
   
 > [!NOTE]  
->  以前のバージョンの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]と同様に、現在のリリースでも、パッケージを SQL Server のインスタンスに配置し、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスを使用してパッケージを実行および管理できます。 パッケージ配置モデルを使用できます。 詳細については、次を参照してください。[パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)します。  
+>  以前のバージョンの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]と同様に、現在のリリースでも、パッケージを SQL Server のインスタンスに配置し、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスを使用してパッケージを実行および管理できます。 パッケージ配置モデルを使用できます。 詳細については、[パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)を参照してください。  
   
  プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置するには、次の作業を実行します。  
   

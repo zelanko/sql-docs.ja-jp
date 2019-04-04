@@ -30,7 +30,7 @@ ms.locfileid: "48184072"
  ここでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの修正バージョンを開き、内容を確認して、配置します。このプロジェクトには、複数のメジャー グループと追加ディメンションが含まれています。  
   
  [親子階層の親属性プロパティの定義](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
- ここでは、親子ディメンションのレベル名を定義し、親メンバーに関連付けられているデータの表示、または非表示を指定します。 詳細については、次を参照してください。 [、親子階層](multidimensional-models/parent-child-dimension.md)と[、親子階層の属性](multidimensional-models/parent-child-dimension-attributes.md)します。  
+ ここでは、親子ディメンションのレベル名を定義し、親メンバーに関連付けられているデータの表示、または非表示を指定します。 詳細については、[、親子階層](multidimensional-models/parent-child-dimension.md)と[、親子階層の属性](multidimensional-models/parent-child-dimension-attributes.md)を参照してください。  
   
  [属性メンバーの自動的なグループ化](lesson-4-3-automatically-grouping-attribute-members.md)  
  ここでは、属性階層内のメンバーの配置に基づいて、属性メンバーのグループを自動的に作成します。 詳細については、[「属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  

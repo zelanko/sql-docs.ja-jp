@@ -89,13 +89,13 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|ファイルでの I/O 完了をユーザーが待機した総時間 (ミリ秒単位)。|  
 |**size_on_disk_bytes**|**bigint**|ファイルに対して使用されているディスク上のバイト数。 スパース ファイルの場合、この数値は、データベース スナップショットに使用されているディスク上の実際のバイト数になります。|  
 |**file_handle**|**varbinary**|ファイルの Windows ファイル ハンドル。|  
-|**io_stall_queued_read_ms**|**bigint**|**適用されません。**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]します。<br /><br /> 読み取りの IO リソース管理によって発生した IO 待機時間の合計。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)します。|  
+|**io_stall_queued_read_ms**|**bigint**|**適用されません。**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]します。<br /><br /> 読み取りの IO リソース管理によって発生した IO 待機時間の合計。 NULL 値は許可されません。 詳細については、[sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)を参照してください。|  
 |**io_stall_queued_write_ms**|**bigint**|**適用されません。**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]します。<br /><br />  書き込みの IO リソース管理によって発生した IO 待機時間の合計。 NULL 値は許可されません。|
 |**pdw_node_id**|**int**|**適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布のノードの識別子。
  
   
 ## <a name="permissions"></a>アクセス許可  
- VIEW SERVER STATE 権限が必要です。 詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)します。  
+ VIEW SERVER STATE 権限が必要です。 詳細については、[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)を参照してください。  
   
 ## <a name="examples"></a>使用例  
 

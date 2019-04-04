@@ -24,7 +24,7 @@ ms.lasthandoff: 12/03/2018
 ms.locfileid: "52790144"
 ---
 # <a name="sqlxmladapter-object-sqlxml-managed-classes"></a>SqlXmlAdapter オブジェクト (SQLXML マネージド クラス)
-  このオブジェクトでは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework のデータセットとの対話を容易にするためのメソッドが提供されます。 実際のサンプルでは、次を参照してください。 [.NET 環境での SQLXML 機能へのアクセス](accessing-sqlxml-functionality-in-the-net-environment.md)します。  
+  このオブジェクトでは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework のデータセットとの対話を容易にするためのメソッドが提供されます。 実際のサンプルでは、[.NET 環境での SQLXML 機能へのアクセス](accessing-sqlxml-functionality-in-the-net-environment.md)を参照してください。  
   
  SqlXmlAdapter オブジェクトには、これらのメソッドがサポートされています。  
   

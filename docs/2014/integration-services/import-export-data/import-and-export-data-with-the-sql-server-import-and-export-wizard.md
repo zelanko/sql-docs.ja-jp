@@ -36,7 +36,7 @@ ms.locfileid: "58380961"
 > [!NOTE]  
 >  64 ビット コンピューターには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって 64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザード (DTSWizard.exe) がインストールされます。 ただし、Access や Excel など、一部のデータ ソースは、32 ビット プロバイダーでしか使用できません。 これらのデータ ソースを操作するには、32 ビット版のウィザードをインストールして実行することが必要になる場合があります。 32 ビット版のウィザードをインストールするには、セットアップ中に [クライアント ツール] または [[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]] を選択します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードは、[スタート] メニュー、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、またはコマンド プロンプトから起動できます。 詳細については、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードは、[スタート] メニュー、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、またはコマンド プロンプトから起動できます。 詳細については、[、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードでは、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] マネージド データ プロバイダーやネイティブ OLE DB プロバイダーを使用できる任意のデータ ソースとの間でデータをコピーできます。 使用できるプロバイダーの一覧には、次のデータ ソースが含まれます。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "58380961"
   
 -   開始する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードで[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を選択して、パッケージをすぐに実行する、**をすぐに実行**チェック ボックスをオンします。 既定では、このチェック ボックスがオンになり、パッケージはすぐに実行されます。  
   
-     パッケージを保存するかどうかを決定できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]またはファイル システムにします。 パッケージを保存するように選択した場合は、パッケージの保護レベルを指定する必要もあります。 パッケージの保護レベルの詳細については、次を参照してください。[パッケージ内の機密データのアクセス制御](../security/access-control-for-sensitive-data-in-packages.md)します。  
+     パッケージを保存するかどうかを決定できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]またはファイル システムにします。 パッケージを保存するように選択した場合は、パッケージの保護レベルを指定する必要もあります。 パッケージの保護レベルの詳細については、[パッケージ内の機密データのアクセス制御](../security/access-control-for-sensitive-data-in-packages.md)を参照してください。  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードでパッケージを作成してデータをコピーした後、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーを使用して保存したパッケージを開き、タスク、変換、イベント ドリブン ロジックを追加することでパッケージを変更できます。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "58380961"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] プロジェクトから起動する場合、ウィザードを完了する手順としてパッケージを実行することはできません。 代わりに、ウィザードを起動した [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトにパッケージが追加されます。 その後、パッケージを実行するか、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーを使用してタスク、変換、イベント ドリブン手法を追加することにより、パッケージを拡張できます。  
   
- 詳細については、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
+ 詳細については、[、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)を参照してください。  
   
 ## <a name="permissions-required-by-the-import-and-export-wizard"></a>インポートおよびエクスポート ウィザードに必要な権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを正常に完了するには、少なくとも次の権限が必要です。  

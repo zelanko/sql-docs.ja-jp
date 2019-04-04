@@ -59,7 +59,7 @@ cn.Properties("Data Provider") = "MSDASQL"
 > [!NOTE]
 >  動的なプロパティ、**データ プロバイダー**、開かれていないでのみ設定できる**接続**オブジェクト。 接続が開いたら、**データ プロバイダー**プロパティは読み取り専用になります。
 
- データ シェイプの詳細については、次を参照してください。[データ シェイプ](../../../ado/guide/data/data-shaping-overview.md)します。
+ データ シェイプの詳細については、[データ シェイプ](../../../ado/guide/data/data-shaping-overview.md)を参照してください。
 
 ## <a name="see-also"></a>参照
  [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

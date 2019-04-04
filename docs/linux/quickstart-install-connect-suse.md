@@ -44,7 +44,7 @@ SLES v12 SP2 コンピューターでする必要があります**に少なく�
 
 を、自分のマシンを SUSE Linux Enterprise Server をインストールするには[ https://www.suse.com/products/server](https://www.suse.com/products/server)します。 Azure SLES 仮想マシンを作成することもできます。 参照してください[の作成と Azure CLI を使用した Linux Vm の管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)、および使用`--image SLES`への呼び出しで`az vm create`します。
 
-CTP または SQL Server 2017 の RC リリースをインストールした場合は、次の手順に従う前に、古いリポジトリを削除する必要があります。 詳細については、次を参照してください。 [Linux の構成リポジトリの SQL Server 2017 と 2019](sql-server-linux-change-repo.md)します。
+CTP または SQL Server 2017 の RC リリースをインストールした場合は、次の手順に従う前に、古いリポジトリを削除する必要があります。 詳細については、[Linux の構成リポジトリの SQL Server 2017 と 2019](sql-server-linux-change-repo.md)を参照してください。
 
 > [!NOTE]
 > 現時点で、 Windows 10 の [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) は、インストール対象としてサポートされていません。

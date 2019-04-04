@@ -29,7 +29,7 @@ ms.locfileid: "47604145"
  作成、 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> smo オブジェクトの設定が必要、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>プロパティを[!INCLUDE[tsql](../../../includes/tsql-md.md)]ストアド プロシージャを定義するスクリプト。 パラメーターが必要な\@プレフィックスし、を使用して個別に作成する必要があります<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>オブジェクトとへの追加、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>のコレクション、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>オブジェクト。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Visual Basic でのストアド プロシージャの作成、変更、および削除  
  このコード例のストアド プロシージャを作成する方法を示しています、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベース。 この例では、従業員 ID 番号が指定されると、従業員の姓を返します。 このストアド プロシージャには、従業員 ID 番号を指定する 1 つの入力パラメーターと、従業員の姓を返す 1 つの出力パラメーターが必要です。  

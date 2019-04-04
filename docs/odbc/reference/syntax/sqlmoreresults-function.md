@@ -64,14 +64,14 @@ SQLRETURN SQLMoreResults(
 |HY008|操作が取り消されました|非同期処理が有効に、 *StatementHandle*します。 **SQLMoreResults**関数が呼び出された、前に、実行を完了**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*. 次に、 **SQLMoreResults**で関数が再度呼び出されました、 *StatementHandle*します。<br /><br /> **SQLMoreResults**関数が呼び出された、前に、実行を完了**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*マルチ スレッド アプリケーションで別のスレッドから。|  
 |HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている、 **SQLMoreResults**関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
 |IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- **選択**ステートメントの結果セットを返します。 **UPDATE**、**挿入**、および**削除**ステートメントが影響を受ける行の数を返します。 これらのステートメントのいずれかがバッチ処理されて、プロシージャ、または (昇順にバッチ内で出現する順序で、パラメーターの順序番号付き) パラメーターの配列で送信された場合は、複数の結果セットを返すことまたは行をカウントします。 ステートメントのバッチおよびパラメーターの配列については、次を参照してください。 [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)と[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)します。  
+ **選択**ステートメントの結果セットを返します。 **UPDATE**、**挿入**、および**削除**ステートメントが影響を受ける行の数を返します。 これらのステートメントのいずれかがバッチ処理されて、プロシージャ、または (昇順にバッチ内で出現する順序で、パラメーターの順序番号付き) パラメーターの配列で送信された場合は、複数の結果セットを返すことまたは行をカウントします。 ステートメントのバッチおよびパラメーターの配列については、[SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)と[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)を参照してください。  
   
  バッチを実行した後、アプリケーションは最初の結果セットに配置されます。 アプリケーションを呼び出して**SQLBindCol**、 **SQLBulkOperations**、 **SQLFetch**、 **SQLGetData**、 **SQLFetchScroll**、 **SQLSetPos**、および最初またはそれ以降の結果セットでは、1 つの結果セットだけがあった場合と同様に、すべてのメタデータ関数。 完了すると、最初の結果セットで、アプリケーションを呼び出す**SQLMoreResults**次の結果セットに移動します。 もう 1 つの結果セットまたは count が使用可能な場合**SQLMoreResults** SQL_SUCCESS を返し、結果セットまたは追加の処理の数を初期化します。 結果セットを生成するステートメント間にあるすべての行の数を生成するステートメントが表示されない場合は、キーを呼び出す場所を空けるステップを実行できる**SQLMoreResults**します。呼び出した後**SQLMoreResults**の**UPDATE**、**挿入**、または**削除**ステートメントでは、アプリケーションはを呼び出すことができます**SQLRowCount**します。  
   
@@ -85,13 +85,13 @@ SQLRETURN SQLMoreResults(
   
  ステートメントまたはプロシージャのバッチが他の SQL ステートメントとを混在かどうか**選択**、**更新**、**挿入**、および**削除**ステートメント、これらの他のステートメントには影響しません**SQLMoreResults**します。  
   
- 詳細については、次を参照してください。[複数結果](../../../odbc/reference/develop-app/multiple-results.md)します。  
+ 詳細については、[複数結果](../../../odbc/reference/develop-app/multiple-results.md)を参照してください。  
   
  ステートメントのバッチにデータ ソースで行が削除されない場合は、検索結果を更新、挿入、または delete ステートメントで**SQLMoreResults** SQL_SUCCESS を返します。 異なる検索の更新の場合、挿入、または delete ステートメントで実行される**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**をデータ ソースの行には影響しない場合は、SQL_NO_DATA を返します。 アプリケーションを呼び出す場合**SQLRowCount**呼び出しの後に行の数を取得する**SQLMoreResults** 、どの行が影響を受けません**SQLRowCount** SQL_NO_DATA が返されます。  
   
  結果の処理関数の有効なシーケンス処理に関する詳細については、次を参照してください[付録 b:。ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)します。  
   
- SQL_PARAM_DATA_AVAILABLE とストリーミングされる出力パラメーターの詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)します。  
+ SQL_PARAM_DATA_AVAILABLE とストリーミングされる出力パラメーターの詳細については、[SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)を参照してください。  
   
 ## <a name="availability-of-row-counts"></a>行の数の可用性  
  バッチに複数の連続する行の数を生成するステートメントが含まれている場合は、これらの行カウントが 1 つの行の数にロール アップすることができます。 たとえば、このバッチの場合は、特定のデータ ソースが 5 つの個別の行の数を返すことのできるステートメントの 5 つは挿入します。 その他の特定のデータ ソースは、5 つの個別の行の数の合計を表す 1 つだけの行の数を返します。  

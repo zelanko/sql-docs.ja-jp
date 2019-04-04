@@ -33,7 +33,7 @@ ms.locfileid: "51669951"
  たとえば、ALTER_DATABASE イベントを示しながら、学習をその親イベントが DDL_SERVER_LEVEL_EVENTS、そのプロパティが**TSQLCommand**と**DatabaseName**します。 イベントは、プロパティも継承**SQLInstance**、 **PostTime**、 **ComputerName**、 **SPID**、および**LoginName**. イベントには、子イベントはありません。  
   
 > [!NOTE]  
->  DDL と同様の操作を実行するシステム ストアド プロシージャもイベント通知を起動できます。 イベント通知はテストして、実行されているシステム ストアド プロシージャに応答するかどうか、確認してください。 たとえば、CREATE TYPE ステートメントと**sp_addtype**両方のストアド プロシージャが、CREATE_TYPE イベントで作成されるイベント通知が起動されます。 詳細については、次を参照してください。[DDL イベント](../../relational-databases/triggers/ddl-events.md)します。  
+>  DDL と同様の操作を実行するシステム ストアド プロシージャもイベント通知を起動できます。 イベント通知はテストして、実行されているシステム ストアド プロシージャに応答するかどうか、確認してください。 たとえば、CREATE TYPE ステートメントと**sp_addtype**両方のストアド プロシージャが、CREATE_TYPE イベントで作成されるイベント通知が起動されます。 詳細については、[DDL イベント](../../relational-databases/triggers/ddl-events.md)を参照してください。  
   
  **データ定義言語イベントおよびイベント グループ**  
   

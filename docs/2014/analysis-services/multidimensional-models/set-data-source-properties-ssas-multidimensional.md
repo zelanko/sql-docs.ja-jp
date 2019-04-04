@@ -29,7 +29,7 @@ ms.locfileid: "48082952"
   
 1.  ソリューション エクスプローラーでデータ ソースをダブルクリックして、データ ソース デザイナーを開きます。  
   
-2.  データ ソース デザイナーの **[権限借用情報]** タブをクリックします。 データ ソースの作成の詳細については、次を参照してください。[データ ソースを作成する&#40;SSAS 多次元&#41;](create-a-data-source-ssas-multidimensional.md)します。  
+2.  データ ソース デザイナーの **[権限借用情報]** タブをクリックします。 データ ソースの作成の詳細については、[データ ソースを作成する&#40;SSAS 多次元&#41;](create-a-data-source-ssas-multidimensional.md)を参照してください。  
   
 ## <a name="set-data-source-properties-in-management-studio"></a>Management Studio でのデータ ソース プロパティの設定  
   

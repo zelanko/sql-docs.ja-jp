@@ -88,7 +88,7 @@ RETCODE bcp_init (
   
  データ ファイルに指定されたデータ形式値を変更するには、呼び出す[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)と[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)します。  
   
- インデックスを含まないテーブルの場合は、データベース復旧モデルを SIMPLE または BULK_LOGGED に設定することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への一括コピーを最適化できます。 詳細については、次を参照してください。[一括インポートで最小ログ記録の前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)と[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)します。  
+ インデックスを含まないテーブルの場合は、データベース復旧モデルを SIMPLE または BULK_LOGGED に設定することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への一括コピーを最適化できます。 詳細については、[一括インポートで最小ログ記録の前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)と[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)を参照してください。  
   
  呼び出す必要があるデータ ファイルを使用しない場合[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)メモリ内の各列のデータ形式と場所を指定するデータ行をコピーし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)します。  
   

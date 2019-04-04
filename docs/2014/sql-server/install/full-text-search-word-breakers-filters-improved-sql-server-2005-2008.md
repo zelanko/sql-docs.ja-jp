@@ -27,7 +27,7 @@ ms.locfileid: "48210415"
 ## <a name="description"></a>説明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索で使用されるワード ブレーカーとフィルターは、機能性と信頼性を高めるために大幅に変更されています。 ある特定のケースでは、ワード ブレーカーへの変更が、データのトークンを作成する方法に影響を与える可能性があります。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で作成されたトークンは、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で作成された以前のトークンとは異なる場合があります。  
   
- ワード ブレーカーの詳細については、次を参照してください。[ワード ブレーカーの管理と検索のステミング機能の構成と](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)します。  
+ ワード ブレーカーの詳細については、[ワード ブレーカーの管理と検索のステミング機能の構成と](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

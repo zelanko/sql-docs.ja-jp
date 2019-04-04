@@ -93,7 +93,7 @@ ms.locfileid: "48182462"
 ### <a name="requirements"></a>要件  
  データ推定ウィザードを使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに接続する必要があります。  
   
- 接続を作成する方法については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)します。  
+ 接続を作成する方法については、[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)を参照してください。  
   
  推定アルゴリズムを使用するには、予測しようとしている結果を、通貨、売上高、日付、時刻などの数値で表す必要があります。  
   

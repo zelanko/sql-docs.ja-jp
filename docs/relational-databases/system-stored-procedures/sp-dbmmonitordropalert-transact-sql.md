@@ -59,7 +59,7 @@ sp_dbmmonitordropalert database_name
 > [!NOTE]  
 >  このプロシージャを使用して指定されているされたかどうかにかかわらず、警告のしきい値を削除する**sp_dbmmonitorchangealert**またはデータベース ミラーリング モニター。  
   
- 警告に対応するイベント Id については、次を参照してください。[使用量の警告しきい値とアラートをミラーリング パフォーマンス基準&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)します。  
+ 警告に対応するイベント Id については、[使用量の警告しきい値とアラートをミラーリング パフォーマンス基準&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  

@@ -50,7 +50,7 @@ ms.locfileid: "52530719"
 ## <a name="using-the-profit-chart-wizard"></a>利益チャート ウィザードの使用  
  利益チャートを作成するには、既存のデータ マイニング モデルを参照する必要があります。 クリックして、データに一致するモデルを検索するモデルを参照する**モデルの管理**または**参照**に使用されたアルゴリズムについての詳細と、マイニング モデル内の列を参照してください。  
   
- 詳細については、次を参照してください。 [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)と[モデルの管理&#40;SQL Server データ マイニング アドイン&#41;](manage-models-sql-server-data-mining-add-ins.md)します。  
+ 詳細については、[Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)と[モデルの管理&#40;SQL Server データ マイニング アドイン&#41;](manage-models-sql-server-data-mining-add-ins.md)を参照してください。  
   
 #### <a name="to-create-a-profit-chart"></a>利益チャートを作成するには  
   

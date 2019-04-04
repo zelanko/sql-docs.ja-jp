@@ -70,7 +70,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_dropmergearticle**はマージ レプリケーションで使用します。 アーティクルを削除する詳細については、次を参照してください。[記事を追加し、既存のパブリケーションからアーティクル](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)します。  
+ **sp_dropmergearticle**はマージ レプリケーションで使用します。 アーティクルを削除する詳細については、[記事を追加し、既存のパブリケーションからアーティクル](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)を参照してください。  
   
  実行**sp_dropmergearticle**パブリケーションからアーティクルを削除してから削除されません、オブジェクト、パブリケーション データベースまたはサブスクリプション データベースから対応するオブジェクト。 必要であれば `DROP <object>` を使用して、手動でこれらのオブジェクトを削除します。  
   

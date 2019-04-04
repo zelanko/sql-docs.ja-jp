@@ -45,7 +45,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
   
  CREATE MEASURE ステートメントは、MDX スクリプト定義; の内部でのみ使用できます。参照してください[MdxScript 要素&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/mdxscript-element-assl)します。  
   
- 1 つのクエリだけで使用する計算されるメンバーを定義することも可能です。 1 つのクエリに限定される計算されるメンバーを定義するには、SELECT ステートメントで WITH 句を使用します。 詳細については、次を参照してください。 [MDX でのメジャーの作成](../analysis-services/multidimensional-models/mdx/mdx-building-measures.md)です。  
+ 1 つのクエリだけで使用する計算されるメンバーを定義することも可能です。 1 つのクエリに限定される計算されるメンバーを定義するには、SELECT ステートメントで WITH 句を使用します。 詳細については、[MDX でのメジャーの作成](../analysis-services/multidimensional-models/mdx/mdx-building-measures.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

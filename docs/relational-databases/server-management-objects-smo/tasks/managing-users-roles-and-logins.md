@@ -35,7 +35,7 @@ ms.locfileid: "47731050"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースでは、ユーザーが特定のタスクを実行できるデータベース レベルの権限のセットを指定するロールもあります。 サーバー ロールと異なり、データベース ロールは固定されていません。 データベース ロールは、作成、変更、および削除を行うことができます。 権限およびユーザーは、データベースに割り当てて、一括管理することができます。  
   
 ## <a name="example"></a>例  
- 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Visual C# でのログインおよび関連付けられたユーザーの列挙  
  データベース内の各ユーザーは、ログオンに関連付けられています。 ログオンは 2 つ以上のデータベース内のユーザーに関連付けることもできます。 コード例では、<xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Login> メソッドを呼び出して、ログオンに関連付けられているすべてのデータベース ユーザーをリストする方法を示します。 例では、ログオンおよびユーザーの作成、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベースを列挙するマッピング情報があるかどうかを確認します。  

@@ -225,7 +225,7 @@ Parallel Data Warehouse は、SQL Server の動的管理ビュー (Dmv) の多�
 * [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
 ## <a name="next-steps"></a>次の手順
-参照の詳細については、次を参照してください。 [T-SQL 言語要素](tsql-language-elements.md)と[T-SQL ステートメント](tsql-statements.md)します。
+参照の詳細については、[T-SQL 言語要素](tsql-language-elements.md)と[T-SQL ステートメント](tsql-statements.md)を参照してください。
 
 <!--Image references-->
 

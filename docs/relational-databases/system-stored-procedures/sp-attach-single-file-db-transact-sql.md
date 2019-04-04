@@ -73,7 +73,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  レプリケートされたデータベースには、このプロシージャを使用しないでください。  
   
 ## <a name="permissions"></a>アクセス許可  
- データベースをアタッチするときにアクセス許可を処理する方法については、次を参照してください。 [CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)します。  
+ データベースをアタッチするときにアクセス許可を処理する方法については、[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)を参照してください。  
   
 ## <a name="examples"></a>使用例  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] をデタッチした後、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] から現在のサーバーに 1 つのファイルをアタッチします。  

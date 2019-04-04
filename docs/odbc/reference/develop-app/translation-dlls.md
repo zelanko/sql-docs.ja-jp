@@ -23,7 +23,7 @@ ms.locfileid: "47833860"
 # <a name="translation-dlls"></a>トランザクション DLL
 アプリケーションとデータ ソース多くの場合、異なる文字セットでデータを格納します。 ODBC では、1 つの文字セットを他のデータを変換するドライバーをできるようにする汎用メカニズムを提供します。 変換関数を実装する DLL から成る**SQLDriverToDataSource**と**SQLDataSourceToDriver**、すべてのデータ フロー、データ ソース間の変換に、ドライバーによって呼び出されドライバー。 この DLL は、アプリケーション開発者は、ドライバーの開発者を書き込んだまたはサード パーティの。  
   
- 特定のデータ ソースの翻訳の DLL は、そのデータ ソースのシステム情報で指定できます。詳細については、次を参照してください。[データ ソースの仕様のサブキー](../../../odbc/reference/install/data-source-specification-subkeys.md)します。 SQL_ATTR_TRANSLATE_DLL と SQL_ATTR_TRANSLATE_OPTION 接続属性を持つ実行時に設定することもできます。  
+ 特定のデータ ソースの翻訳の DLL は、そのデータ ソースのシステム情報で指定できます。詳細については、[データ ソースの仕様のサブキー](../../../odbc/reference/install/data-source-specification-subkeys.md)を参照してください。 SQL_ATTR_TRANSLATE_DLL と SQL_ATTR_TRANSLATE_OPTION 接続属性を持つ実行時に設定することもできます。  
   
  翻訳オプションは、特定の翻訳の DLL によってのみ解釈可能な値です。 たとえば、異なるコード ページ間 DLL の変換を平行移動、オプションは、アプリケーションとデータ ソースで使用されるコード ページの数を与える可能性があります。 翻訳オプションを使用する翻訳の DLL の要件はありません。  
   

@@ -29,7 +29,7 @@ ms.locfileid: "47685230"
 
   ポイントイン タイム リストアが必要な場合、リモート Azure データベースの完全復元をことを確認するためにステージング テーブルでは、SQL Server を保持する移行されたデータの時間数を設定します。    
     
- 詳細については、次を参照してください。 [Stretch Database は、移行済みの行を一時的に保持して、Azure のデータのデータ損失のリスクを軽減](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md#stretchRPO)します。  
+ 詳細については、[Stretch Database は、移行済みの行を一時的に保持して、Azure のデータのデータ損失のリスクを軽減](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md#stretchRPO)を参照してください。  
    
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
      

@@ -21,7 +21,7 @@ ms.locfileid: "48054048"
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>パーティションと DirectQuery モード (SSAS テーブル)
   ここでは、DirectQuery モデルでのパーティションの使用方法について説明します。 テーブル モデルでのパーティションに関する一般的な情報については、「[パーティション (SSAS テーブル)](partitions-ssas-tabular.md)」を参照してください。  
   
- パーティションに関する情報を表示または、使用されるパーティションを変更する方法については、次を参照してください。 [DirectQuery パーティションを変更する&#40;SSAS 表形式&#41;](../change-the-directquery-partition-ssas-tabular.md)します。  
+ パーティションに関する情報を表示または、使用されるパーティションを変更する方法については、[DirectQuery パーティションを変更する&#40;SSAS 表形式&#41;](../change-the-directquery-partition-ssas-tabular.md)を参照してください。  
   
 ## <a name="using-partitions-in-directquery-mode"></a>DirectQuery モードでのパーティションの使用  
  テーブルごとに、DirectQuery データ ソースとして使用する 1 つのパーティションを指定する必要があります。  複数のパーティションがある場合は、モデルを切り替えて DirectQuery モードを有効にすると、テーブル内に作成された最初のパーティションに DirectQuery パーティションのフラグが既定で設定されます。 この設定は、後で [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のパーティション マネージャーを使用して変更できます。  

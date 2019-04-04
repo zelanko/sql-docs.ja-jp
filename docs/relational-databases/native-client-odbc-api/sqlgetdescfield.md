@@ -26,29 +26,29 @@ ms.locfileid: "51669591"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのみ実装行記述子 (IRD) のドライバー固有の記述子フィールドを公開します。 IRD 内[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記述子フィールドは、ドライバー固有の列の属性によって参照されます。 使用可能なドライバー固有の記述子フィールドの完全な一覧については、次を参照してください。 [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのみ実装行記述子 (IRD) のドライバー固有の記述子フィールドを公開します。 IRD 内[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記述子フィールドは、ドライバー固有の列の属性によって参照されます。 使用可能なドライバー固有の記述子フィールドの完全な一覧については、[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)を参照してください。  
   
  列 ID 文字列を含む記述子フィールドは、多くの場合、長さが 0 の文字列になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のすべての記述子フィールドの値は読み取り専用です。  
   
  SQLColAttribute では属性のようがレポートの行レベルの属性 (SQL_CA_SS_COMPUTE_ID など) は報告される結果セット内のすべての列の記述子フィールドを取得します。  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField とテーブル値パラメーター  
- SQLGetDescField は、テーブル値パラメーターおよびテーブル値パラメーター列の拡張属性の値を取得できます。 テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+ SQLGetDescField は、テーブル値パラメーターおよびテーブル値パラメーター列の拡張属性の値を取得できます。 テーブル値パラメーターの詳細については、[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)を参照してください。  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>SQLGetDescField による機能強化された日付と時刻のサポート  
- 新しい日付/時刻型で使用できる記述子フィールドについては、次を参照してください。[パラメーターと結果のメタデータ](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)します。  
+ 新しい日付/時刻型で使用できる記述子フィールドについては、[パラメーターと結果のメタデータ](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)を参照してください。  
   
- 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
+ 詳細については、[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)を参照してください。  
   
  以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、SQLGetDescField を返すことができます**SQL_C_SS_TIME2** (の**時間**型) または**SQL_C_SS_TIMESTAMPOFFSET** (の**datetimeoffset**) の代わりに**SQL_C_BINARY**場合、アプリケーションで ODBC 3.8 が使用されます。  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField による大きな CLR UDT のサポート  
- **SQLGetDescField**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
+ **SQLGetDescField**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、[Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)を参照してください。  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>SQLGetDescField によるスパース列のサポート  
  SQLGetDescField は、新しい IRD フィールド SQL_CA_SS_IS_COLUMN_SET を決定する列がクエリに使用できる、 **column_set**列。  
   
- 詳細については、次を参照してください。[スパース列のサポート&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)します。  
+ 詳細については、[スパース列のサポート&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)を参照してください。  
   
 ## <a name="example"></a>例  
   

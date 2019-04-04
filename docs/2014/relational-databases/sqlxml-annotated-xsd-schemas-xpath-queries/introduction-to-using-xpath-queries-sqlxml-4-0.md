@@ -25,7 +25,7 @@ ms.locfileid: "52753374"
   XML パス言語 (XPath) クエリは、URL の一部として、またはテンプレート内で指定できます。 この結果のフラグメントの構造はマッピング スキーマによって決定され、値はデータベースから取得されます。 このプロセスは、CREATE VIEW ステートメントを使用してビューを作成し、そのビューに対して SQL クエリを記述するのと概念的には同じです。  
   
 > [!NOTE]  
->  SQLXML 4.0 の XPath クエリを理解するには、XML ビューと、それに関連するテンプレートやマッピング スキーマなどの概念について理解している必要があります。 詳細については、次を参照してください。[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)、World Wide Web Consortium (W3C) によって定義されている XPath 標準とします。  
+>  SQLXML 4.0 の XPath クエリを理解するには、XML ビューと、それに関連するテンプレートやマッピング スキーマなどの概念について理解している必要があります。 詳細については、[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)、World Wide Web Consortium (W3C) によって定義されている XPath 標準とを参照してください。  
   
  XML ドキュメントは、要素ノード、属性ノード、テキスト ノードなどのノードで構成されます。 たとえば、次の XML ドキュメントを考えてみます。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52753374"
   
 -   **データ型**  
   
-     SQLXML 4.0 には、XPath の `string`、`number`、および `boolean` 型の実装に関して制限があります。 詳細については、次を参照してください。 [XPath データ型&#40;SQLXML 4.0&#41;](xpath-data-types-sqlxml-4-0.md)します。  
+     SQLXML 4.0 には、XPath の `string`、`number`、および `boolean` 型の実装に関して制限があります。 詳細については、[XPath データ型&#40;SQLXML 4.0&#41;](xpath-data-types-sqlxml-4-0.md)を参照してください。  
   
 -   **クロス積クエリ**  
   

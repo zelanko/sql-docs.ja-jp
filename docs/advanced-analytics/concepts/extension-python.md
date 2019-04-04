@@ -36,8 +36,8 @@ SQL Server では、Python の実行可能ファイルは変更しませんが�
 
 | ライブラリ | 説明 |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | データ ソース オブジェクトとデータの探索、操作、変換、および視覚エフェクトをサポートしています。 など、さまざまなスケーラブルな機械学習モデルと同様に、リモート計算コンテキストの作成をサポート**rxLinMod**します。 詳細については、次を参照してください。 [revoscalepy モジュールは、SQL Server と](../python/ref-py-revoscalepy.md)します。  |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 場合の速度と精度、最適化されているだけでなく行のテキストとイメージを操作するための変換を機械学習アルゴリズムが含まれています。 詳細については、次を参照してください。 [microsoftml モジュールは、SQL Server と](../python/ref-py-microsoftml.md)します。 |
+| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | データ ソース オブジェクトとデータの探索、操作、変換、および視覚エフェクトをサポートしています。 など、さまざまなスケーラブルな機械学習モデルと同様に、リモート計算コンテキストの作成をサポート**rxLinMod**します。 詳細については、[revoscalepy モジュールは、SQL Server と](../python/ref-py-revoscalepy.md)を参照してください。  |
+| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 場合の速度と精度、最適化されているだけでなく行のテキストとイメージを操作するための変換を機械学習アルゴリズムが含まれています。 詳細については、[microsoftml モジュールは、SQL Server と](../python/ref-py-microsoftml.md)を参照してください。 |
 
 Microsoftml と revoscalepy を密に結合します。microsoftml で使用されるデータ ソースは、revoscalepy オブジェクトとして定義されます。 Microsoftml の revoscalepy 転送コンテキストの制限事項を計算します。 つまり、すべての機能はローカルの操作に使用できるが、RxInSqlServer リモート コンピューティング コンテキストへの切り替えが必要です。
 

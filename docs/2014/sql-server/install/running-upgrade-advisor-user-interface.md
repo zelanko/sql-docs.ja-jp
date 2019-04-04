@@ -48,7 +48,7 @@ ms.locfileid: "48176111"
   
 6.  アップグレードの問題に関するレポートを生成します。  
   
- アップグレード アドバイザー分析ウィザードの詳細については、次を参照してください。[方法: アップグレード アドバイザー分析ウィザードを実行](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)します。  
+ アップグレード アドバイザー分析ウィザードの詳細については、[方法: アップグレード アドバイザー分析ウィザードを実行](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)を参照してください。  
   
  各ステップに必要な特定の情報を参照してください。[アップグレード アドバイザーのユーザー インターフェイス リファレンス](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)します。  
   

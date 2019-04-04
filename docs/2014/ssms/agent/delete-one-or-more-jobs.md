@@ -78,7 +78,7 @@ ms.locfileid: "53367114"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_delete_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql)します。  
+ 詳細については、[sp_delete_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql)を参照してください。  
   
 
   

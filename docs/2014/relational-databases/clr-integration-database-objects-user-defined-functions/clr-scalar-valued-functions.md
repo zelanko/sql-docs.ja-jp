@@ -28,7 +28,7 @@ ms.locfileid: "48157362"
   スカラー値関数 (SVF) は、文字列値、整数値、ビット値などの単一値を返します。任意の .NET Framework プログラミング言語を使用し、マネージド コードでユーザー定義スカラー値関数を作成できます。 これらの関数からは、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードや他のマネージド コードにアクセスできます。 CLR 統合とマネージ コードの使い分けの利点については、[!INCLUDE[tsql](../../includes/tsql-md.md)]を参照してください[CLR 統合の概要](../clr-integration/clr-integration-overview.md)します。  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR スカラー値関数の要件  
- .NET Framework SVF は、.NET Framework アセンブリのクラスのメソッドとして実装されます。 入力パラメーターと SVF から返される型は任意のスカラー データ型でサポートされていることができる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、除く`varchar`、 `char`、 `rowversion`、 `text`、 `ntext`、 `image`、 `timestamp`、 `table`、または`cursor`します。 SVF では、実装メソッドの戻り値のデータ型が上記のいずれかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型になるようにする必要があります。 型変換の詳細については、次を参照してください。 [CLR パラメーター データのマッピング](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)します。  
+ .NET Framework SVF は、.NET Framework アセンブリのクラスのメソッドとして実装されます。 入力パラメーターと SVF から返される型は任意のスカラー データ型でサポートされていることができる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、除く`varchar`、 `char`、 `rowversion`、 `text`、 `ntext`、 `image`、 `timestamp`、 `table`、または`cursor`します。 SVF では、実装メソッドの戻り値のデータ型が上記のいずれかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型になるようにする必要があります。 型変換の詳細については、[CLR パラメーター データのマッピング](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)を参照してください。  
   
  .NET Framework 言語で .NET Framework SVF を実装する場合、`SqlFunction` カスタム属性を指定し、その関数に関する詳細情報を含めることができます。 `SqlFunction` 属性は、その関数がデータへのアクセスや変更を行うかどうか、決定的関数かどうか、浮動小数点演算を必要とするかどうかなどを示します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48157362"
 >  入力値とデータベースの状態が同じでも、関数が必ずしも常に同じ出力値を生成しない場合は、その関数を決定的関数としてマークしないでください。 完全に決定的ではない関数を決定的関数としてマークした場合、インデックス付きビューと計算列が破損する可能性があります。 関数を決定的関数としてマークするには、`IsDeterministic` プロパティを True に設定します。  
   
 ### <a name="table-valued-parameters"></a>テーブル値パラメーター  
- テーブル値パラメーター (TVP) とは、プロシージャや関数に渡されるユーザー定義のテーブル型です。TVP を使用すると、複数行のデータを効率的にサーバーに渡すことができます。 TVP の機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 また、サーバーへのラウンド トリップを減らすのにも役立ちます。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データを TVP としてサーバーに送信できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスで実行されているマネージド ストアド プロシージャやマネージド関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 Tvp の詳細については、次を参照してください。[テーブル値パラメーターの&#40;データベース エンジン&#41;](../tables/use-table-valued-parameters-database-engine.md)します。  
+ テーブル値パラメーター (TVP) とは、プロシージャや関数に渡されるユーザー定義のテーブル型です。TVP を使用すると、複数行のデータを効率的にサーバーに渡すことができます。 TVP の機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 また、サーバーへのラウンド トリップを減らすのにも役立ちます。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データを TVP としてサーバーに送信できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスで実行されているマネージド ストアド プロシージャやマネージド関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 Tvp の詳細については、[テーブル値パラメーターの&#40;データベース エンジン&#41;](../tables/use-table-valued-parameters-database-engine.md)を参照してください。  
   
 ## <a name="example-of-a-clr-scalar-valued-function"></a>CLR スカラー値関数の例  
  データにアクセスして整数値を返す簡単な SVF を次に示します。  

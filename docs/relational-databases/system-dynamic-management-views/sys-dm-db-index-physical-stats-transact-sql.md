@@ -37,7 +37,7 @@ ms.locfileid: "58618299"
 > [!IMPORTANT]
 > 照会する場合は**sys.dm_db_index_physical_stats** Always On をホストするサーバー インスタンスで[読み取り可能セカンダリ レプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)、再実行のブロック問題が発生する可能性があります。 これは、この動的管理ビューが、指定したユーザー テーブルまたはビューで IS ロックを獲得することが原因です。IS ロックは、そのユーザー テーブルまたはビューの X ロックに関して REDO スレッドの要求をブロックする可能性があります。  
   
- **sys.dm_db_index_physical_stats**メモリ最適化インデックスに関する情報は返されません。 メモリ最適化インデックスの使用方法については、次を参照してください。 [sys.dm_db_xtp_index_stats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)  
+ **sys.dm_db_index_physical_stats**メモリ最適化インデックスに関する情報は返されません。 メモリ最適化インデックスの使用方法については、[sys.dm_db_xtp_index_stats & #40 を参照してください。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -111,7 +111,7 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|平均レコード サイズ (バイト単位)。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルでの平均レコード サイズになります。<br /><br /> ヒープの場合、IN_ROW_DATA アロケーション ユニットの平均レコード サイズ。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニット ユニット、完了のアロケーション ユニットの平均レコード サイズ。<br /><br /> ときに、NULL*モード*LIMITED を = です。|  
 |forwarded_record_count|**bigint**|別のデータの場所への転送ポインターを持つ、ヒープ内の転送されたレコード数 (この状態は、更新中に、新しい行を格納できる十分なスペースが元の場所にない場合に発生します)。<br /><br /> ヒープの IN_ROW_DATA アロケーション ユニット以外のアロケーション ユニットでは NULL になります。<br /><br /> NULL の場合にヒープ*モード*= LIMITED。|  
 |compressed_page_count|**bigint**|圧縮されたページ数。<br /><br /> ヒープの場合、新しく割り当てられたページはページ圧縮されません。 ヒープは、2 つの特殊な条件、つまりデータを一括インポートする場合、またはヒープを再構築する場合に、ページ圧縮されます。 ページ割り当てが発生する通常の DML 操作では、ページ圧縮されません。 compressed_page_count の値が目標のしきい値を超えた場合は、ヒープを再構築してください。<br /><br /> クラスター化インデックスを含むテーブルの場合、compressed_page_count の値はページ圧縮の効果を示します。|  
-|hobt_id で|BIGINT|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 列ストア インデックスの場合のみ、これは、パーティションの内部列ストア データを追跡する行セットの ID です。 行セットには、データがヒープとしてストアドまたはバイナリ ツリー。 親の列ストア インデックスと同じインデックス ID があります。 詳細については、次を参照してください。 [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)します。<br /><br /> NULL の場合|  
+|hobt_id で|BIGINT|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 列ストア インデックスの場合のみ、これは、パーティションの内部列ストア データを追跡する行セットの ID です。 行セットには、データがヒープとしてストアドまたはバイナリ ツリー。 親の列ストア インデックスと同じインデックス ID があります。 詳細については、[sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)を参照してください。<br /><br /> NULL の場合|  
 |column_store_delete_buffer_state|TINYINT|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN <br /><br /> 2 = のドレイン<br /><br /> 3 = フラッシュ<br /><br /> 4 = インベントリから削除<br /><br /> 5 = 準備完了|  
 |column_store_delete_buff_state_desc||**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 無効です - 親インデックスは列ストア インデックスはありません。<br /><br /> Deleters を開くし、スキャナーは、これを使用します。<br /><br /> ドレイン中 - deleters ドレインが、スキャナーが引き続き使用します。<br /><br /> フラッシュのバッファーが閉じられ、バッファー内の行が削除のビットマップに書き込まれています。<br /><br /> 削除のビットマップに書き込まれた RETIRING - 閉じた削除バッファーの行が、バッファーが切り捨てられていないスキャナーによってまだ使用されています。 新しいスキャナーは、開いているバッファーが十分であるため、中止のバッファーを使用する必要はありません。<br /><br /> 準備ができたら、この削除バッファーが使用できるようにします。|  
   
@@ -184,7 +184,7 @@ GO
   
  これは、ヒープのリーフ ページでの順序不定なエクステントの割合です。 順序が無効なエクステントとは、ヒープの現在のページを含むエクステントの物理的な位置が、前のページを含むエクステントの直後でない状態のエクステントを指します。  
   
- 最大のパフォーマンスを得るには、avg_fragmentation_in_percent の値をできるだけ 0 に近くする必要があります。 ただし、0% から 10% から値許容される場合があります。 再構築、再構成、再作成など、断片化を解消するためのさまざまな手段を使用することによって、この値を下げることができます。 インデックスの断片化の程度を分析する方法の詳細については、次を参照してください。 [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)します。  
+ 最大のパフォーマンスを得るには、avg_fragmentation_in_percent の値をできるだけ 0 に近くする必要があります。 ただし、0% から 10% から値許容される場合があります。 再構築、再構成、再作成など、断片化を解消するためのさまざまな手段を使用することによって、この値を下げることができます。 インデックスの断片化の程度を分析する方法の詳細については、[Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)を参照してください。  
   
 ## <a name="reducing-fragmentation-in-an-index"></a>インデックスの断片化の解消  
  断片化がクエリのパフォーマンスの影響を与えることがある方法でインデックスが断片化されている場合は、断片化を削減するための 3 つの選択肢があります。  
@@ -203,7 +203,7 @@ GO
 >  DBCC SHRINKFILE または DBCC SHRINKDATABASE を実行している場合は、インデックスが部分的または完全に移動された場合、圧縮操作中に断片化が生じる可能性があります。 そのため場合、圧縮操作を実行する必要があります、行う必要があります、断片化が削除される前にします。  
   
 ## <a name="reducing-fragmentation-in-a-heap"></a>ヒープの断片化の解消  
- ヒープのエクステントの断片化を減らすためには、テーブルにクラスター化インデックスを作成し、インデックスを削除します。 これによって、クラスター化インデックスの作成中にデータが再分配されます。 この操作では、データベースの空き領域の分布を考慮に入れて、可能な限り最適化も行われます。 クラスター化インデックスがヒープを再作成し、削除されると、データは移動されませんし、最適位置のままになります。 これらの操作を実行する方法については、次を参照してください。 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)と[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)します。  
+ ヒープのエクステントの断片化を減らすためには、テーブルにクラスター化インデックスを作成し、インデックスを削除します。 これによって、クラスター化インデックスの作成中にデータが再分配されます。 この操作では、データベースの空き領域の分布を考慮に入れて、可能な限り最適化も行われます。 クラスター化インデックスがヒープを再作成し、削除されると、データは移動されませんし、最適位置のままになります。 これらの操作を実行する方法については、[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)と[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)を参照してください。  
   
 > [!CAUTION]  
 >  テーブルでクラスター化インデックスを作成して削除すると、そのテーブルのすべての非クラスター化インデックスが 2 回再構築されます。  
@@ -214,7 +214,7 @@ GO
  指定されたクラスター化インデックスを再構成するには、クラスター化インデックスに含まれているすべての LOB 列が圧縮されます。 非クラスター化インデックスを再構成すると、そのインデックス内で非キー列 (付加列) となっているすべての LOB 列が圧縮されます。 ステートメントで ALL を指定した場合は、指定したテーブルまたはビューに関連付けられているすべてのインデックスが再構成されます。 さらに、クラスター化インデックス、基になるテーブル、または付加列非クラスター化インデックスに関連付けられているすべての LOB 列が圧縮されます。  
   
 ## <a name="evaluating-disk-space-use"></a>ディスク領域の使用を評価します。  
- avg_page_space_used_in_percent 列には、ページのゆとりが示されます。 ディスク領域の使用を最適にするには、ランダムな挿入があまり行われないインデックスの場合はこの値を 100% に近づけます。 ただし、ランダムな挿入を備え、完全なページのインデックスは、ページ分割数の増加があります。 断片化が大きくなります。 そのため、ページ分割を軽減するために、値は 100% 未満を指定する必要があります。 FILLFACTOR オプションを指定してインデックスを再構築すると、ページのゆとりをインデックスのクエリ パターンに合わせて変更できます。 Fill factor の詳細については、次を参照してください。[インデックスの Fill Factor の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)します。 また、ALTER INDEX REORGANIZE は最後に指定された FILLFACTOR までページが埋まるよう、インデックスを圧縮します。 これにより、avg_space_used_in_percent の値は増加します。 ALTER INDEX REORGANIZE はページのゆとりを調整できないことに注意してください。 代わりに、インデックスの再構築を実行する必要があります。  
+ avg_page_space_used_in_percent 列には、ページのゆとりが示されます。 ディスク領域の使用を最適にするには、ランダムな挿入があまり行われないインデックスの場合はこの値を 100% に近づけます。 ただし、ランダムな挿入を備え、完全なページのインデックスは、ページ分割数の増加があります。 断片化が大きくなります。 そのため、ページ分割を軽減するために、値は 100% 未満を指定する必要があります。 FILLFACTOR オプションを指定してインデックスを再構築すると、ページのゆとりをインデックスのクエリ パターンに合わせて変更できます。 Fill factor の詳細については、[インデックスの Fill Factor の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)を参照してください。 また、ALTER INDEX REORGANIZE は最後に指定された FILLFACTOR までページが埋まるよう、インデックスを圧縮します。 これにより、avg_space_used_in_percent の値は増加します。 ALTER INDEX REORGANIZE はページのゆとりを調整できないことに注意してください。 代わりに、インデックスの再構築を実行する必要があります。  
   
 ## <a name="evaluating-index-fragments"></a>インデックスのフラグメントの評価  
  フラグメントは、アロケーション ユニットの同じファイル内の物理的に連続するリーフ ページの構成されます。 1 つのインデックスには少なくとも 1 つのフラグメントが含まれます。 インデックスが持つことのできるフラグメントの最大数は、インデックスのリーフ レベルのページ数と同じです。 フラグメントが大きいほど、同じ数のページの読み取りに必要なディスクの I/O が少なくなります。 したがって、avg_fragment_size_in_pages 値が大きいほど、範囲スキャンのパフォーマンスは向上します。 avg_fragment_size_in_pages と avg_fragmentation_in_percent の値は、互いに反比例します。 したがって、再構築またはインデックスを再構成する必要があります断片化の量を減らす、フラグメント サイズを増やします。  
@@ -235,7 +235,7 @@ GO
   
  VIEW DATABASE STATE 権限を拒否すると、特定のオブジェクトに対する CONTROL 権限が許可されていたとしても、そのデータベース内のどのオブジェクトも取得できません。 ときに、データベースのワイルドカード @*database_id*= NULL を指定すると、データベースを省略するとします。  
   
- 詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)します。  
+ 詳細については、[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -295,7 +295,7 @@ GO
 ```  
   
 ### <a name="d-using-sysdmdbindexphysicalstats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D. スクリプトで sys.dm_db_index_physical_stats を使用するインデックスの再構成または再構築  
- 次の例は、自動的に再構成またはを 10% で、平均断片化を持つ、データベース内のすべてのパーティションを再構築します。 このクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 この例では、データベース名を指定せずに `DB_ID` を 1 番目のパラメーターとして指定しています。 エラーが、現在のデータベースの互換性レベルが 80 以下の場合に生成されます。 このエラーを解決するには、`DB_ID()` を有効なデータベース名で置き換えます。 データベース互換性レベルの詳細については、次を参照してください。 [ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)します。  
+ 次の例は、自動的に再構成またはを 10% で、平均断片化を持つ、データベース内のすべてのパーティションを再構築します。 このクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 この例では、データベース名を指定せずに `DB_ID` を 1 番目のパラメーターとして指定しています。 エラーが、現在のデータベースの互換性レベルが 80 以下の場合に生成されます。 このエラーを解決するには、`DB_ID()` を有効なデータベース名で置き換えます。 データベース互換性レベルの詳細については、[ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)を参照してください。  
   
 ```  
 -- Ensure a USE <databasename> statement has been executed first.  

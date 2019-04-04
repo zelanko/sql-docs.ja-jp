@@ -112,7 +112,7 @@ ms.locfileid: "58385570"
  既存の参照データ プロバイダーから取得した追加データを出力するかどうかを示します。 詳細については、「 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)」をご覧ください。  
   
  **[追加されたデータ スキーマ]**  
- データ スキーマを出力するかどうかを示します。 詳細については、次を参照してください。[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)します。  
+ データ スキーマを出力するかどうかを示します。 詳細については、[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)を参照してください。  
   
 ##  <a name="manager"></a> [DQS クレンジング接続マネージャー] ダイアログ ボックスのオプションの設定  
  **サーバー名**  

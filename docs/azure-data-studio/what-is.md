@@ -29,7 +29,7 @@ SQL Operations Studio のプレビューの名前でリリースされていた�
 
 ## <a name="sql-code-editor-with-intellisense"></a>IntelliSense を備えた SQL コード エディター
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] コーディング エクスペリエンスを日常的なタスクの複数のタブ ウィンドウ、豊富な SQL エディター、IntelliSense、キーワード補完、コード スニペット、コード ナビゲーション、およびソース管理などの組み込み機能を簡単に、キーボード フォーカスされた最新の SQL を提供しています(Git) を統合します。 オンデマンドでの SQL クエリを実行、表示テキスト、JSON、または Excel として結果を保存します。 データの編集、お気に入りのデータベースの接続を整理し、使い慣れたオブジェクト ブラウジング操作でデータベース オブジェクトを参照します。 SQL エディターを使用する方法については、次を参照してください。[データベース オブジェクトを作成するには、SQL エディターを使用して](tutorial-sql-editor.md)します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] コーディング エクスペリエンスを日常的なタスクの複数のタブ ウィンドウ、豊富な SQL エディター、IntelliSense、キーワード補完、コード スニペット、コード ナビゲーション、およびソース管理などの組み込み機能を簡単に、キーボード フォーカスされた最新の SQL を提供しています(Git) を統合します。 オンデマンドでの SQL クエリを実行、表示テキスト、JSON、または Excel として結果を保存します。 データの編集、お気に入りのデータベースの接続を整理し、使い慣れたオブジェクト ブラウジング操作でデータベース オブジェクトを参照します。 SQL エディターを使用する方法については、[データベース オブジェクトを作成するには、SQL エディターを使用して](tutorial-sql-editor.md)を参照してください。
 
 ## <a name="smart-sql-code-snippets"></a>スマート SQL コード スニペット
 
@@ -40,22 +40,22 @@ SQL コード スニペットでは、データベース、テーブル、ビュ
 
 ## <a name="customizable-server-and-database-dashboards"></a>カスタマイズ可能なサーバーとデータベースのダッシュ ボード
 
-監視し、データベース パフォーマンスのボトルネックを迅速にトラブルシューティングの豊富なカスタマイズ可能なダッシュ ボードを作成します。 洞察のウィジェットとデータベース (およびサーバー) のダッシュ ボードの詳細については、次を参照してください。[サーバーと洞察のウィジェットでのデータベースの管理](insight-widgets.md)します。
+監視し、データベース パフォーマンスのボトルネックを迅速にトラブルシューティングの豊富なカスタマイズ可能なダッシュ ボードを作成します。 洞察のウィジェットとデータベース (およびサーバー) のダッシュ ボードの詳細については、[サーバーと洞察のウィジェットでのデータベースの管理](insight-widgets.md)を参照してください。
 
 ## <a name="connection-management-server-groups"></a>接続の管理 (サーバー グループ)
 
-サーバー グループは、サーバーおよびデータベースを使用する接続情報を整理する方法を提供します。 詳細については、次を参照してください。[サーバー グループ](server-groups.md)します。
+サーバー グループは、サーバーおよびデータベースを使用する接続情報を整理する方法を提供します。 詳細については、[サーバー グループ](server-groups.md)を参照してください。
 
 ## <a name="integrated-terminal"></a>統合ターミナル
 
-お気に入りのコマンド ライン ツールを使用して (たとえば、Bash、PowerShell、sqlcmd、bcp、ssh で接続) 内で適切な統合ターミナル ウィンドウで、[!INCLUDE[name-sos](../includes/name-sos-short.md)]ユーザー インターフェイス。 統合ターミナルの詳細については、次を参照してください。[統合ターミナル](integrated-terminal.md)します。
+お気に入りのコマンド ライン ツールを使用して (たとえば、Bash、PowerShell、sqlcmd、bcp、ssh で接続) 内で適切な統合ターミナル ウィンドウで、[!INCLUDE[name-sos](../includes/name-sos-short.md)]ユーザー インターフェイス。 統合ターミナルの詳細については、[統合ターミナル](integrated-terminal.md)を参照してください。
 
 ## <a name="extensibility-and-extension-authoring"></a>拡張機能と拡張機能の作成
 
 強化、[!INCLUDE[name-sos](../includes/name-sos-short.md)]基本インストールの機能を拡張することによって発生します。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 拡張機能を作成するためのサポートだけでなく、データの管理アクティビティの機能拡張ポイントを提供します。
 
 機能拡張の詳細については[!INCLUDE[name-sos](../includes/name-sos-short.md)]を参照してください[Extensibility](extensibility.md)します。
-拡張機能を作成する方法については、次を参照してください。[拡張機能作成](extension-authoring.md)です。
+拡張機能を作成する方法については、[拡張機能作成](extension-authoring.md)を参照してください。
 
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) での機能の比較
 

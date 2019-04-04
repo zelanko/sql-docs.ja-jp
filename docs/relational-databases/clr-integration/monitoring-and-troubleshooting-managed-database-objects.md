@@ -26,7 +26,7 @@ ms.locfileid: "58305980"
   ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行されるマネージド データベース オブジェクトとアセンブリの監視およびトラブルシューティングに使用できるツールに関する情報を提供します。  
   
 ## <a name="profiler-trace-events"></a>プロファイラー トレース イベント  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、データベース エンジンで発生するイベントを監視するための SQL トレースとイベント通知が用意されています。 SQL トレースは、指定したイベントを記録することによって、パフォーマンスのトラブルシューティング、データベースの利用状況の監査、テスト環境のサンプル データの収集、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとストアド プロシージャのデバッグ、およびパフォーマンス分析ツール用のデータの収集に役立ちます。 詳細については、次を参照してください。 [SQL トレース](../../relational-databases/sql-trace/sql-trace.md)と[拡張イベント](../../relational-databases/extended-events/extended-events.md)します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、データベース エンジンで発生するイベントを監視するための SQL トレースとイベント通知が用意されています。 SQL トレースは、指定したイベントを記録することによって、パフォーマンスのトラブルシューティング、データベースの利用状況の監査、テスト環境のサンプル データの収集、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとストアド プロシージャのデバッグ、およびパフォーマンス分析ツール用のデータの収集に役立ちます。 詳細については、[SQL トレース](../../relational-databases/sql-trace/sql-trace.md)と[拡張イベント](../../relational-databases/extended-events/extended-events.md)を参照してください。  
   
 |イベント|説明|  
 |-----------|-----------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "58305980"
 |[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|データベースに登録されているシステム定義型およびユーザー定義型を返します。|  
   
 ## <a name="dynamic-management-views"></a>動的管理ビュー  
- 動的管理ビューと動的管理関数では、サーバーの状態情報が返されます。返された情報は、サーバー インスタンスのヘルス状態の監視、問題の診断、パフォーマンスのチューニングに使用できます。 詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)します。  
+ 動的管理ビューと動的管理関数では、サーバーの状態情報が返されます。返された情報は、サーバー インスタンスのヘルス状態の監視、問題の診断、パフォーマンスのチューニングに使用できます。 詳細については、[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)を参照してください。  
   
 |DMV (DMV)|説明|  
 |---------|-----------------|  

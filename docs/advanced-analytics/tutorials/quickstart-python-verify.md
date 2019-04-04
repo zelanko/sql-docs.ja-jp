@@ -62,9 +62,9 @@ SQL クエリを実行するためのツールも必要です。 任意のデー
 
 最初に、インストールの問題を排除します。 インストール後の構成は、外部コード ライブラリの使用を有効にする必要があります。 参照してください[SQL Server 2017 の Machine Learning サービスをインストール](../install/sql-machine-learning-services-windows-install.md)します。 同様に、スタート パッド サービスが実行されていることを確認します。
 
-Windows ユーザー グループを追加することも必要があります。`SQLRUserGroup`スタート パッドで Python と SQL Server 間の通信を提供できることを確認する、インスタンス上のログインとして。 (同じグループが両方の R の使用し、Python コードの実行)。詳細については、次を参照してください。[暗黙の認証を有効](../security/add-sqlrusergroup-to-database.md)します。
+Windows ユーザー グループを追加することも必要があります。`SQLRUserGroup`スタート パッドで Python と SQL Server 間の通信を提供できることを確認する、インスタンス上のログインとして。 (同じグループが両方の R の使用し、Python コードの実行)。詳細については、[暗黙の認証を有効](../security/add-sqlrusergroup-to-database.md)を参照してください。
 
-さらに、無効になっているネットワーク プロトコルを有効にまたは SQL Server が外部クライアントと通信できるようにファイアウォールを開く必要があります。 詳細については、次を参照してください。[セットアップのトラブルシューティング](../common-issues-external-script-execution.md)します。
+さらに、無効になっているネットワーク プロトコルを有効にまたは SQL Server が外部クライアントと通信できるようにファイアウォールを開く必要があります。 詳細については、[セットアップのトラブルシューティング](../common-issues-external-script-execution.md)を参照してください。
 
 ## <a name="call-revoscalepy-functions"></a>Revoscalepy 関数を呼び出す
 

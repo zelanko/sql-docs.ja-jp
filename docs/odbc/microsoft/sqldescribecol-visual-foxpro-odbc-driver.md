@@ -30,4 +30,4 @@ ms.locfileid: "47706390"
   
  名前、型、有効桁数、スケール、および指定された結果の列の null 値を返します。  
   
- 詳細については、次を参照してください。 [SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

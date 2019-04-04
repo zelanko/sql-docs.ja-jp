@@ -27,7 +27,7 @@ ms.locfileid: "48078314"
   
 -   コマンド ライン値によって、構成ファイル内の値が上書きされます。  
   
- 構成ファイルを使用する方法の詳細については、次を参照してください。 [SQL Server 2014 を使用したインストール、構成ファイル](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)します。  
+ 構成ファイルを使用する方法の詳細については、[SQL Server 2014 を使用したインストール、構成ファイル](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)を参照してください。  
   
 > [!IMPORTANT]  
 >  分散再生をインストールした後、コントローラー コンピューターとクライアント コンピューターのファイアウォール ルールを作成し、ターゲット サーバー上で各クライアント コンピューターの権限を付与する必要があります。 詳細については、「 [インストール後の手順の実行](../../tools/distributed-replay/complete-the-post-installation-steps.md)」を参照してください。  

@@ -138,7 +138,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  次の例では、DMX を使用して、提示されたパラメーターによってマイニング構造を作成する方法について説明します。  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>例 1 : トレーニング セットを含まない構造を追加する  
- 次の例と呼ばれる新しいマイニング構造を作成する`New Mailing`および提示されたパラメーターを使用する必要とせず、関連するマイニング モデルを作成します。 構造にマイニング モデルを追加する方法については、次を参照してください。 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)します。  
+ 次の例と呼ばれる新しいマイニング構造を作成する`New Mailing`および提示されたパラメーターを使用する必要とせず、関連するマイニング モデルを作成します。 構造にマイニング モデルを追加する方法については、[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)を参照してください。  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  

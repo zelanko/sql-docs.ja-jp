@@ -38,7 +38,7 @@ SQL Server 2017 Machine Learning サービスには、RevoScaleR の新しいバ
 
 + [リモート SQL Server での R パッケージの管理を有効にします。](r-package-how-to-enable-or-disable.md)
 
-+ RevoScaleR のバージョンは、クライアントとサーバーの両方の環境で同じである必要があります。 詳細については、次を参照してください。[パッケージ情報を取得](determine-which-packages-are-installed-on-sql-server.md)します。
++ RevoScaleR のバージョンは、クライアントとサーバーの両方の環境で同じである必要があります。 詳細については、[パッケージ情報を取得](determine-which-packages-are-installed-on-sql-server.md)を参照してください。
 
 + R コマンドを実行して、サーバーおよびデータベースに接続するためのアクセス許可。 指定したインスタンスとデータベースにパッケージをインストールできるようにするデータベース ロールのメンバーがあります。
 
@@ -175,7 +175,7 @@ computeContext <- RxInSqlServer(connectionString = connectionString )
 rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 ```
 
-パッケージの同期のしくみ、データベースとユーザーごとのモデルごと。 詳細については、次を参照してください。 [for SQL Server の R パッケージの同期](../r/package-install-uninstall-and-sync.md)します。
+パッケージの同期のしくみ、データベースとユーザーごとのモデルごと。 詳細については、[for SQL Server の R パッケージの同期](../r/package-install-uninstall-and-sync.md)を参照してください。
 
 ### <a name="use-a-stored-procedure-to-list-packages-in-sql-server"></a>SQL Server でパッケージを一覧表示、ストアド プロシージャを使用します。
 

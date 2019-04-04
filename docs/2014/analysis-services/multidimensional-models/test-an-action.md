@@ -19,7 +19,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48173682"
 ---
 # <a name="test-an-action"></a>アクションのテスト
-  アクションのテストには、キューブ デザイナーの [ブラウザー] ビューを使用します。 キューブ デザイナーには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。 アクションを作成した後、キューブを処理すると、アクションをテストできるようになります。 詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)します。  
+  アクションのテストには、キューブ デザイナーの [ブラウザー] ビューを使用します。 キューブ デザイナーには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。 アクションを作成した後、キューブを処理すると、アクションをテストできるようになります。 詳細については、[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)を参照してください。  
   
 ### <a name="to-test-an-action"></a>アクションをテストするには  
   

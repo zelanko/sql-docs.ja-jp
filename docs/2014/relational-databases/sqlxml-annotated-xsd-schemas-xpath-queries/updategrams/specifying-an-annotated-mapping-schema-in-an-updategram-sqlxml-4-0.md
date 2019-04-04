@@ -33,7 +33,7 @@ ms.locfileid: "52772165"
  使用するマッピング スキーマを指定する、`mapping-schema`の属性、 **\<同期 >** 要素。 次の例では、単純なマッピング スキーマを使用するアップデートグラムと、より複雑なスキーマを使用するアップデートグラムの 2 つのアップデートグラムを示します。  
   
 > [!NOTE]  
->  このドキュメントは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされるテンプレートとマッピング スキーマについて理解していることを前提としています。 詳細については、次を参照してください。[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)します。 XDR を使用する従来のアプリケーションでは、次を参照してください。[注釈付き XDR スキーマ&#40;SQLXML 4.0 では非推奨&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)します。  
+>  このドキュメントは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされるテンプレートとマッピング スキーマについて理解していることを前提としています。 詳細については、[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)を参照してください。 XDR を使用する従来のアプリケーションでは、[注釈付き XDR スキーマ&#40;SQLXML 4.0 では非推奨&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)を参照してください。  
   
 ## <a name="dealing-with-data-types"></a>データ型の扱い  
  スキーマが指定されている場合、 `image`、 `binary`、または`varbinary`[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型 (を使用して`sql:datatype`)、XML データ型を指定しないと、アップデート グラムでは、XML データ型が`binary base 64`します。 データが `bin.base` 型の場合は、明示的に型 (`dt:type=bin.base` または `type="xsd:hexBinary"`) を指定する必要があります。  
@@ -93,7 +93,7 @@ ms.locfileid: "52772165"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
  これは、同等の XDR スキーマです。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "52772165"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
  これは、同等の XDR スキーマです。  
   
@@ -320,7 +320,7 @@ ms.locfileid: "52772165"
   
 4.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  

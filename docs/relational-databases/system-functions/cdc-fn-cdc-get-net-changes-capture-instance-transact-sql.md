@@ -35,7 +35,7 @@ ms.locfileid: "47804940"
   
  ソース行は、複数の変更を LSN 範囲の中には、以下で説明する列挙関数によって、行の最終的な内容を反映する 1 つの行が返されます。 たとえば、トランザクションは、ソース テーブルに行を挿入すると、LSN 範囲内の後続のトランザクションがその行の 1 つまたは複数の列を更新、関数のみを返します**1 つ**行で、更新された列の値が含まれています。  
   
- この列挙関数は、ソース テーブルに対して変更データ キャプチャを有効にし、かつ、差分追跡を指定した場合に作成されます。 差分追跡を有効にするには、ソース テーブルに主キーまたは一意のインデックスが必要です。 関数の名前は派生し、形式 cdc.fn_cdc_get_net_changes_*capture_instance*ここで、 *capture_instance*が値をソース テーブルが、キャプチャ インスタンスの指定変更データ キャプチャを有効にします。 詳細については、次を参照してください。 [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)します。  
+ この列挙関数は、ソース テーブルに対して変更データ キャプチャを有効にし、かつ、差分追跡を指定した場合に作成されます。 差分追跡を有効にするには、ソース テーブルに主キーまたは一意のインデックスが必要です。 関数の名前は派生し、形式 cdc.fn_cdc_get_net_changes_*capture_instance*ここで、 *capture_instance*が値をソース テーブルが、キャプチャ インスタンスの指定変更データ キャプチャを有効にします。 詳細については、[sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

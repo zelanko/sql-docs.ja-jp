@@ -25,7 +25,7 @@ ms.locfileid: "47713260"
 
   このサンプルでは、IBCPSession インターフェイスを使用して filestream 列をファイルに読み取り、フォーマット ファイルを作成します。  
   
- Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)します。  
+ Filestream 機能の詳細については、[FILESTREAM のサポート&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)を参照してください。  
   
 ## <a name="example"></a>例  
  INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  

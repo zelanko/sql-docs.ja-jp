@@ -33,7 +33,7 @@ ms.locfileid: "50743190"
   
 > [!NOTE] 
 >  
-> この動的管理ビュー (DMV) は、インストールして、外部スクリプトの実行をサポートする機能を有効になっている場合にのみ使用できます。 詳細については、次を参照してください。 [SQL Server 2016 R Services](../../advanced-analytics/r/sql-server-r-services.md)と[SQL Server 2017 での Machine Learning サービス (R、Python)](../../advanced-analytics/what-is-sql-server-machine-learning.md)します。  
+> この動的管理ビュー (DMV) は、インストールして、外部スクリプトの実行をサポートする機能を有効になっている場合にのみ使用できます。 詳細については、[SQL Server 2016 R Services](../../advanced-analytics/r/sql-server-r-services.md)と[SQL Server 2017 での Machine Learning サービス (R、Python)](../../advanced-analytics/what-is-sql-server-machine-learning.md)を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

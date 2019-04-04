@@ -36,8 +36,8 @@ ms.locfileid: "52710653"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**context_settings_id**|**bigint**|主キー。 この値は、クエリのプラン表示の XML で公開されます。|  
-|**set_options**|**varbinary(8)**|いくつかの SET オプションの状態を反映するビット マスクです。 詳細については、次を参照してください。 [sys.dm_exec_plan_attributes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)します。|  
-|**language_id**|**smallint**|言語の id です。 詳細については、次を参照してください。 [sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)します。|  
+|**set_options**|**varbinary(8)**|いくつかの SET オプションの状態を反映するビット マスクです。 詳細については、[sys.dm_exec_plan_attributes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)を参照してください。|  
+|**language_id**|**smallint**|言語の id です。 詳細については、[sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)を参照してください。|  
 |**date_format**|**smallint**|日付形式です。 詳しくは、「[SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)」をご覧ください。|  
 |**date_first**|**tinyint**|最初の日付の値。 詳しくは、「[SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)」をご覧ください。|  
 |**status**|**varbinary(2)**|クエリまたはクエリの実行に使用されるコンテキストの型を示すビットマスク フィールドです。 <br />列の値は、複数のフラグ (16 進数で表される) の組み合わせであることができます。<br /><br /> 0x0 - 標準のクエリ (特定のフラグがありません)<br /><br /> 0x1 -、カーソル Api が格納されている手順のいずれかで実行されたクエリ<br /><br /> 0x2 - クエリ通知<br /><br /> 0x4 - 内部クエリ<br /><br /> 0x8 - パラメーター化せず、自動パラメーター化クエリ<br /><br /> 0x10 - カーソルのフェッチがクエリを更新します。<br /><br /> 0x20 - カーソルの更新の要求で使用されているクエリ<br /><br /> 0x40 - カーソルを開いたときに最初の結果セットが返されます (カーソル自動のフェッチ)<br /><br /> 0x80 - 暗号化されたクエリ<br /><br /> 0x100 - 行レベル セキュリティの述語のコンテキストでのクエリ|  

@@ -23,7 +23,7 @@ ms.locfileid: "47595670"
 # <a name="configuring-data-sources"></a>データ ソースの構成
 データ ソースに関する情報は、システム レジストリに格納されます。 ユーザーは、管理プログラムによってデータ ソース情報を変更します。 ODBC アドミニストレーター、コントロール パネルの ODBC デバイス、または、アプリケーションまたはドライバーの開発者によって作成された管理プログラムを指定できます。  
   
- データ ソースを変更するのに PowerShell コマンドを使用することができます。 これらの PowerShell コマンドの詳細については、次を参照してください。 [Windows データ アクセス コンポーネントの PowerShell コマンド](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)します。  
+ データ ソースを変更するのに PowerShell コマンドを使用することができます。 これらの PowerShell コマンドの詳細については、[Windows データ アクセス コンポーネントの PowerShell コマンド](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)を参照してください。  
   
 > [!NOTE]  
 >  このセクションでは、Microsoft Windows® プラットフォームに固有です。 その他のプラットフォームでデータ ソースを構成する方法は、プラットフォーム固有です。  

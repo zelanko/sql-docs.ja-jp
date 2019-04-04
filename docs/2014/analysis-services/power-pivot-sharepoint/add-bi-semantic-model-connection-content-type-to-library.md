@@ -27,7 +27,7 @@ ms.locfileid: "48052972"
 ##  <a name="bkmk_addtype"></a> ドキュメント ライブラリへのコンテンツ タイプの追加  
  コンテンツ タイプを追加および構成するには、管理リスト権限以上の権限が必要です。 この権限は、デザイン権限レベル以上の権限に組み込まれています。  
   
- ドキュメント ライブラリがあるサイトでは、PowerPivot for SharePoint の機能のアクティブ化が必要です。 詳細については、次を参照してください。 [PowerPivot 機能の統合サーバーの全体管理のサイト コレクション用にアクティブ化](activate-power-pivot-integration-for-site-collections-in-ca.md)します。  
+ ドキュメント ライブラリがあるサイトでは、PowerPivot for SharePoint の機能のアクティブ化が必要です。 詳細については、[PowerPivot 機能の統合サーバーの全体管理のサイト コレクション用にアクティブ化](activate-power-pivot-integration-for-site-collections-in-ca.md)を参照してください。  
   
 1.  "BI セマンティック モデル接続" コンテンツ タイプを有効にする対象のドキュメント ライブラリを開きます。  
   

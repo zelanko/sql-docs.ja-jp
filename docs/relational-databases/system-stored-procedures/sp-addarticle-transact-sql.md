@@ -202,13 +202,13 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x100000000**|このオプションを使用して、指定されている場合は、FILESTREAM 属性をレプリケートする**varbinary (max)** 列。 テーブルをレプリケートする場合は、このオプションを指定しない[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]サブスクライバー。 FILESTREAM 列を持つテーブルをレプリケート[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サブスクライバーがサポートされていません、このスキーマ オプションを設定する方法に関係なく、します。<br /><br /> 関連するオプションを参照してください。 **0x800000000**します。|  
 |**0x200000000**|日付と時刻のデータ型に変換 (**日付**、**時間**、 **datetimeoffset**、および**datetime2**) で導入された[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]データ以前のバージョンでサポートされている種類[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
-|**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合は、FILESTREAM データが既定のファイル グループに格納されます。 レプリケーションが; ファイル グループを作成できません。したがって、このオプションを設定する場合、サブスクライバーでスナップショットを適用する前に、ファイル グループを作成する必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、次を参照してください。[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)します。<br /><br /> 関連するオプションを参照してください。 **0x100000000**します。|  
+|**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合は、FILESTREAM データが既定のファイル グループに格納されます。 レプリケーションが; ファイル グループを作成できません。したがって、このオプションを設定する場合、サブスクライバーでスナップショットを適用する前に、ファイル グループを作成する必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)を参照してください。<br /><br /> 関連するオプションを参照してください。 **0x100000000**します。|  
 |**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) 8000 バイトを超えるに変換します**varbinary (max)** を実行しているサブスクライバーに UDT 型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]します。|  
 |**0x2000000000**|変換、 **hierarchyid**のデータ型**varbinary (max)** ように型の列**hierarchyid**実行しているサブスクライバーにレプリケートできる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 使用する方法の詳細についての**hierarchyid**レプリケートされたテーブル内の列を参照してください[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)します。|  
-|**0x4000000000**|テーブルにフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、次を参照してください。 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)します。|  
+|**0x4000000000**|テーブルにフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、[Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)を参照してください。|  
 |**0x8000000000**|変換、 **geography**と**geometry**データ型を**varbinary (max)** を実行しているサブスクライバーにこれらの型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x10000000000**|型の列にインデックスをレプリケート**geography**と**geometry**します。|  
-|**0x20000000000**|列の SPARSE 属性をレプリケートします。 この属性の詳細については、次を参照してください。[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)します。|  
+|**0x20000000000**|列の SPARSE 属性をレプリケートします。 この属性の詳細については、[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)を参照してください。|  
 |**0x40000000000**|サブスクライバーのメモリ最適化テーブルを作成するスナップショット エージェントによるスクリプト作成を有効にします。|  
 |**0x80000000000**|アーティクルのメモリ最適化非クラスター化インデックスをクラスター化インデックスを変換します。|  
 |**0x400000000000**|テーブルの非クラスター化列ストア インデックスをレプリケートします。|  
@@ -245,7 +245,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @filter_owner = ] 'filter_owner'` フィルターの所有者です。 *filter_owner*は**sysname**、既定値は NULL です。  
   
-`[ @source_object = ] 'source_object'` パブリッシュするデータベース オブジェクトです。 *source_object*は**sysname**、既定値は NULL です。 場合*source_table*が null の場合、 *source_object* NULL にすることはできません *。source_object*の代わりに使用する必要があります*source_table*します。 スナップショット パブリケーションまたはトランザクション レプリケーションを使用してパブリッシュできるオブジェクトの種類の詳細については、次を参照してください。[発行データおよびデータベース オブジェクト](../../relational-databases/replication/publish/publish-data-and-database-objects.md)します。  
+`[ @source_object = ] 'source_object'` パブリッシュするデータベース オブジェクトです。 *source_object*は**sysname**、既定値は NULL です。 場合*source_table*が null の場合、 *source_object* NULL にすることはできません *。source_object*の代わりに使用する必要があります*source_table*します。 スナップショット パブリケーションまたはトランザクション レプリケーションを使用してパブリッシュできるオブジェクトの種類の詳細については、[発行データおよびデータベース オブジェクト](../../relational-databases/replication/publish/publish-data-and-database-objects.md)を参照してください。  
   
 `[ @artid = ] _article_ID_ OUTPUT` 新しいアーティクルのアーティクル ID です。 *コ*は**int**既定値は null には、出力パラメーター。  
   

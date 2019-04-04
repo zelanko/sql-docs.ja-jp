@@ -62,7 +62,7 @@ ms.locfileid: "58511020"
   
     *RxInSqlServer* に渡す **wait** 引数は、次のオプションをサポートします。
   
-    -   **TRUE**。 ジョブは、ブロッキングとして構成されているが失敗したかが完了するまでは返されません。  詳細については、次を参照してください。[分散し、Machine Learning Server での並列コンピューティング](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)します。
+    -   **TRUE**。 ジョブは、ブロッキングとして構成されているが失敗したかが完了するまでは返されません。  詳細については、[分散し、Machine Learning Server での並列コンピューティング](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)を参照してください。
   
     -   **FALSE**。 ジョブは、ブロック不可として構成されているし、その他の R コードの実行を継続することができますを即座に戻ります。 ただし、非ブロック モードであっても、ジョブの実行中は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とのクライアント接続を維持する必要があります。
 

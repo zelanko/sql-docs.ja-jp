@@ -52,7 +52,7 @@ ms.locfileid: "47725900"
 |**shared_memory_committed_kb**|**bigint**|メモリ クラークによってコミット済みの共有メモリの量を指定します。 NULL 値は許可されません。|  
 |**page_size_in_bytes**|**bigint**|このメモリ クラークのページ割り当ての粒度を指定します。 NULL 値は許可されません。|  
 |**page_allocator_address**|**varbinary(8)**|ページ アロケーターのアドレスを指定します。 このアドレスは、メモリ クラークの一意でありで使用できる**sys.dm_os_memory_objects**このクラークにバインドされているメモリ オブジェクトを検索します。 NULL 値は許可されません。|  
-|**host_address**|**varbinary(8)**|このメモリ クラークのホストのメモリ アドレスを指定します。 詳細については、次を参照してください。 [sys.dm_os_hosts &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)します。 コンポーネントなど[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、アクセス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリ リソース ホスト インターフェイスを使用します。<br /><br /> 0x00000000 = メモリ クラークは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に属します。<br /><br /> NULL 値は許可されません。|  
+|**host_address**|**varbinary(8)**|このメモリ クラークのホストのメモリ アドレスを指定します。 詳細については、[sys.dm_os_hosts &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)を参照してください。 コンポーネントなど[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、アクセス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリ リソース ホスト インターフェイスを使用します。<br /><br /> 0x00000000 = メモリ クラークは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に属します。<br /><br /> NULL 値は許可されません。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可 

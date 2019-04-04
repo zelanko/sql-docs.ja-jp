@@ -49,7 +49,7 @@ ms.locfileid: "58305631"
    >[!IMPORTANT]
    >運用環境では、高可用性の STONITH などのフェンス エージェントが必要です。 このドキュメントでは、フェンス エージェントを使用しないでください。 デモはテストおよび検証のみです。 
    
-   >Linux クラスターでは、フェンスを使用して、既知の状態、クラスターを返します。 フェンスを構成する方法は、ディストリビューションと、環境によって異なります。 現時点では、フェンス操作では、一部のクラウド環境で使用できません。 詳細については、次を参照してください。 [RHEL 高可用性クラスターの仮想化プラットフォームのサポート ポリシー](https://access.redhat.com/articles/29440)します。
+   >Linux クラスターでは、フェンスを使用して、既知の状態、クラスターを返します。 フェンスを構成する方法は、ディストリビューションと、環境によって異なります。 現時点では、フェンス操作では、一部のクラウド環境で使用できません。 詳細については、[RHEL 高可用性クラスターの仮想化プラットフォームのサポート ポリシー](https://access.redhat.com/articles/29440)を参照してください。
 
 5. [可用性グループ、クラスター内のリソースとして追加](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)します。  
 
@@ -89,7 +89,7 @@ RHEL の高可用性を構成するには、高可用性のサブスクリプシ
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-詳細については、次を参照してください。 [Pacemaker -、オープン ソースの高可用性クラスター](https://clusterlabs.org/pacemaker/)します。 
+詳細については、[Pacemaker -、オープン ソースの高可用性クラスター](https://clusterlabs.org/pacemaker/)を参照してください。 
 
 サブスクリプションを構成した後は、 Pacemaker を構成するため次の手順を実行します。
 
@@ -150,7 +150,7 @@ pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
 
-Pacemaker クラスターのプロパティについては、次を参照してください。 [Pacemaker クラスター プロパティ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)します。
+Pacemaker クラスターのプロパティについては、[Pacemaker クラスター プロパティ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)を参照してください。
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Pacemaker 用 SQL Server ログインを作成します。
 

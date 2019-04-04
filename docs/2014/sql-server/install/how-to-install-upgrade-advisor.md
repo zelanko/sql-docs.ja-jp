@@ -26,7 +26,7 @@ ms.locfileid: "48112934"
 # <a name="how-to-install-upgrade-advisor"></a>アップグレード アドバイザーをインストールする方法
   アップグレード アドバイザーでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以外のサポートされているすべてのコンポーネントをリモートで分析できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンしない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続できる任意のコンピューターにアップグレード アドバイザーをインストールできます。 コンピューターはアップグレード アドバイザーの前提条件を満たしている必要もあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンする場合は、アップグレード アドバイザーをレポート サーバーにインストールする必要があります。  
   
- 詳細については、次を参照してください。[アップグレード アドバイザーのインストール](../../../2014/sql-server/install/installing-upgrade-advisor.md)します。  
+ 詳細については、[アップグレード アドバイザーのインストール](../../../2014/sql-server/install/installing-upgrade-advisor.md)を参照してください。  
   
 ### <a name="to-install-upgrade-advisor"></a>アップグレード アドバイザーをインストールするには  
   

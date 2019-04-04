@@ -27,7 +27,7 @@ ms.locfileid: "58510289"
 
 この記事では、インストールしてマシン leaerning を具体的には提供されているカスタム レポートを使用する方法について説明します。 
 
-Management Studio でレポートを一般的な概要については、次を参照してください。 [Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)します。
+Management Studio でレポートを一般的な概要については、[Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)を参照してください。
 
 ## <a name="how-to-install-the-reports"></a>レポートのインストール方法
 

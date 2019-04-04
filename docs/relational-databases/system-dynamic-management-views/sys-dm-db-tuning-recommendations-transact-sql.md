@@ -172,7 +172,7 @@ INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
 INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
 ```
 
-推奨事項のビューでクエリの値に使用できる JSON 関数の詳細については、次を参照してください。[の JSON サポート](../../relational-databases/json/index.md)で[!INCLUDE[ssde_md](../../includes/ssde_md.md)]します。
+推奨事項のビューでクエリの値に使用できる JSON 関数の詳細については、[の JSON サポート](../../relational-databases/json/index.md)で[!INCLUDE[ssde_md](../../includes/ssde_md.md)]を参照してください。
   
 ## <a name="permissions"></a>アクセス許可  
 

@@ -97,7 +97,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 -   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング Oracle および SQL Server データ型&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)します。  
   
--   Oracle データベース オブジェクトの定義を変換する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義します。 詳細については、次を参照してください。 [Oracle スキーマの変換&#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)します。  
+-   Oracle データベース オブジェクトの定義を変換する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義します。 詳細については、[Oracle スキーマの変換&#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [Oracle と SQL Server データ型のマッピング&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  

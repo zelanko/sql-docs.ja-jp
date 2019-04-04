@@ -67,7 +67,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  データベースがデタッチされると、そのすべてのメタデータが削除されます。 データベースが、任意のログイン アカウントの既定のデータベースであった場合**マスター**既定のデータベースになります。  
   
 > [!NOTE]  
->  すべてのログイン アカウントの既定のデータベースを表示する方法については、次を参照してください。 [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)します。 使用することが必要なアクセス許可があれば、 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)に新しい既定のデータベースをログインに割り当てます。  
+>  すべてのログイン アカウントの既定のデータベースを表示する方法については、[sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)を参照してください。 使用することが必要なアクセス許可があれば、 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)に新しい既定のデータベースをログインに割り当てます。  
   
 ## <a name="restrictions"></a>制限  
  次のいずれかに該当する場合、データベースをデタッチできません。  

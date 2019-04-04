@@ -60,7 +60,7 @@ ms.locfileid: "48060392"
   
  ディメンションとパーティションは MOLAP ストレージを使用する必要があります。  
   
- データベース互換性レベルを 1100 に設定する必要があります。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以上のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用してデータベースを作成または配置した場合、データベース互換性レベルはあらかじめ 1100 に設定されています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の以前のバージョンで作成したデータベースを ssSQL11 以上に移動した場合、互換性レベルを更新する必要があります。 再配置ではなく、移動するデータベースには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して互換性レベルを設定できます。 詳細については、次を参照してください。[多次元データベースの互換性レベル設定&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)します。  
+ データベース互換性レベルを 1100 に設定する必要があります。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以上のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用してデータベースを作成または配置した場合、データベース互換性レベルはあらかじめ 1100 に設定されています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の以前のバージョンで作成したデータベースを ssSQL11 以上に移動した場合、互換性レベルを更新する必要があります。 再配置ではなく、移動するデータベースには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して互換性レベルを設定できます。 詳細については、[多次元データベースの互換性レベル設定&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)を参照してください。  
   
 ##  <a name="bkmk_step1"></a> 手順 1: SQL Server Data Tools で StringStoreCompatiblityLevel プロパティを設定する  
   

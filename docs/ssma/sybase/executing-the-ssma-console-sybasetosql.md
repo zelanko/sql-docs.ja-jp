@@ -111,7 +111,7 @@ Microsoft は、ファイルのコマンドを実行し、SSMA アクティビ�
   
 > [!NOTE]  
 > - **参照**コンソールで、UI の機能がサポートされていません。  
-> - スクリプト ファイルの作成 ' の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)します。  
+> - スクリプト ファイルの作成 ' の詳細については、[スクリプト ファイルの作成&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)を参照してください。  
   
 ### <a name="connect-source-database"></a>接続ソース データベース  
 このコマンドは、ソース データベースへの接続を実行し、ソース データベースはすべてのメタデータの高レベルのメタデータを読み込みます。
@@ -662,7 +662,7 @@ fail-script>" (optional)
 ```  
   
 ## <a name="next-steps"></a>次の手順  
-コマンド ライン オプションについては、次を参照してください。 [(AccessToSQL) SSMA コンソールのコマンド ライン オプション](../access/command-line-options-in-ssma-console-accesstosql.md)します。  
+コマンド ライン オプションについては、[(AccessToSQL) SSMA コンソールのコマンド ライン オプション](../access/command-line-options-in-ssma-console-accesstosql.md)を参照してください。  
   
 サンプルのコンソール スクリプト ファイルについては、次を参照してください[サンプルのコンソール スクリプト ファイルを扱う&#40;SybaseToSQL。&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
   
@@ -670,7 +670,7 @@ fail-script>" (optional)
   
 -   パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)します。  
   
--   レポートを生成するため、次を参照してください。[レポートを生成する&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)します。  
+-   レポートを生成するため、[レポートを生成する&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)を参照してください。  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)します。  
+-   コンソールで問題をトラブルシューティングするには、[トラブルシューティング&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)を参照してください。  
   

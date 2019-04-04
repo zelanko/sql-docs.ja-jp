@@ -62,7 +62,7 @@ SQLRETURN SQLCancel(
 |HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている、 **SQLCancel**関数が呼び出されました。<br /><br /> (DM) 操作に失敗しました、非同期操作が実行中に関連付けられている接続ハンドルをキャンセル*StatementHandle*します。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY018|キャンセル要求を拒否されたサーバー|サーバーは、キャンセル要求を拒否します。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
   
@@ -87,19 +87,19 @@ SQLRETURN SQLCancel(
 > [!NOTE]  
 >  ODBC 3.5 への呼び出しで**SQLCancel**と処理は行われません、ステートメントとして扱われません**SQLFreeStmt**が SQL_CLOSE のオプションで影響をまったくはありません。 カーソルを閉じるには、アプリケーションを呼び出す必要があります**SQLCloseCursor**ではなく、 **SQLCancel**します。  
   
- 非同期処理の詳細については、次を参照してください。[非同期実行](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)します。  
+ 非同期処理の詳細については、[非同期実行](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)を参照してください。  
   
 ## <a name="canceling-functions-that-need-data"></a>データを必要とする関数のキャンセル  
- 後**SQLExecute**または**SQLExecDirect** SQL_NEED_DATA を返しますのすべての実行時データ パラメーター データを送信すると、前に、アプリケーションを呼び出すことができます**SQLCancel**ステートメントの実行をキャンセルします。 ステートメントが取り消され、アプリケーションを呼び出すことが**SQLExecute**または**SQLExecDirect**もう一度です。 詳細については、次を参照してください。 [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)します。  
+ 後**SQLExecute**または**SQLExecDirect** SQL_NEED_DATA を返しますのすべての実行時データ パラメーター データを送信すると、前に、アプリケーションを呼び出すことができます**SQLCancel**ステートメントの実行をキャンセルします。 ステートメントが取り消され、アプリケーションを呼び出すことが**SQLExecute**または**SQLExecDirect**もう一度です。 詳細については、[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)を参照してください。  
   
- 後**SQLBulkOperations**または**SQLSetPos** SQL_NEED_DATA を返しますのすべての実行時データ列のデータが送信されたアプリケーションを呼び出すことができます、 **SQLCancel**操作をキャンセルします。 操作が取り消され、アプリケーションを呼び出すことが**SQLBulkOperations**または**SQLSetPos**もう一度; 取り消すには影響しません、カーソルの状態または現在のカーソル位置。 詳細については、次を参照してください。 [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)または[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)します。  
+ 後**SQLBulkOperations**または**SQLSetPos** SQL_NEED_DATA を返しますのすべての実行時データ列のデータが送信されたアプリケーションを呼び出すことができます、 **SQLCancel**操作をキャンセルします。 操作が取り消され、アプリケーションを呼び出すことが**SQLBulkOperations**または**SQLSetPos**もう一度; 取り消すには影響しません、カーソルの状態または現在のカーソル位置。 詳細については、[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)または[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)を参照してください。  
   
 ## <a name="canceling-functions-executing-on-another-thread"></a>別のスレッドで実行されている関数のキャンセル  
  マルチ スレッド アプリケーションでは、アプリケーションは、別のスレッドで実行されている関数をキャンセルできます。 関数では、アプリケーション呼び出しをキャンセルする**SQLCancel**対象の関数によって、別のスレッドで使用すると同じステートメント ハンドルを使用します。 関数の取り消し方法は、ドライバーとオペレーティング システムによって異なります。 キャンセルのリターン コードを非同期的に実行されている関数のように、 **SQLCancel**のみに、ドライバーが正常に要求を処理するかどうかを示します。 SQL_SUCCESS や SQL_ERROR のみが返されることができます。診断情報は返されません。 SQLSTATE HY008、SQL_ERROR を返しますが、元の関数が取り消された場合 (操作が取り消されました)。  
   
  SQL ステートメントの中の場合は実行すると実行**SQLCancel**はステートメントの実行をキャンセルする別のスレッドで呼び出されるを正常に実行可能であり、キャンセル中に戻り値に関係なく SQL_SUCCESS も成功します。 この場合、ドライバー マネージャーは、ため、アプリケーションは、カーソルを使用できない、キャンセル、ステートメントの実行によって開かれたカーソルが閉じられることを前提とします。  
   
- スレッド処理の詳細については、次を参照してください。[マルチ スレッド](../../../odbc/reference/develop-app/multithreading.md)します。  
+ スレッド処理の詳細については、[マルチ スレッド](../../../odbc/reference/develop-app/multithreading.md)を参照してください。  
   
 ## <a name="related-functions"></a>関連する関数  
   

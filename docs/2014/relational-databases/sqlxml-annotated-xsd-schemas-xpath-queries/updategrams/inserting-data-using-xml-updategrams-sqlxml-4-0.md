@@ -86,7 +86,7 @@ ms.locfileid: "53365854"
   
  アップデート グラムの例を使用する前に、次のことを確認してください。  
   
--   ほとんどの例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)します。  
+-   ほとんどの例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)を参照してください。  
   
 -   ほとんどの例では、[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] サンプル データベースを使用します。 すべての更新内容は、このデータベースのテーブルに適用されます。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "53365854"
   
 2.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
  要素中心のマッピングの場合、アップデートグラムは次のようになります。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "53365854"
   
 2.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
  この例の別のバージョンは 2 つの個別を使用するアップデート グラム**\<後 >** 2 人の従業員を挿入する 1 つのブロックではなくブロックします。 これは有効であり、次のようにエンコードできます。  
   
@@ -243,7 +243,7 @@ ms.locfileid: "53365854"
   
 2.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
 ### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. at-identity 属性を使用して、IDENTITY 型の列に挿入されている値を取得する  
  次のアップデートグラムでは、Sales.SalesOrderHeader テーブルと Sales.SalesOrderDetail テーブルに 1 つずつ、合計 2 つのレコードを挿入します。  
@@ -323,7 +323,7 @@ ms.locfileid: "53365854"
   
 2.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
 ### <a name="e-using-the-updgguid-attribute-to-generate-a-unique-value"></a>E. updg:guid 属性を使用して一意な値を生成する  
  この例のアップデートグラムでは、Cust および CustOrder テーブルにレコードを挿入します。 また、`updg:guid` 属性を使用して、CustomerID 属性に一意な値を生成します。  
@@ -371,7 +371,7 @@ ms.locfileid: "53365854"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
 ### <a name="f-specifying-a-schema-in-an-updategram"></a>F. アップデートグラムでスキーマを指定する  
  この例のアップデートグラムでは、レコードを次のテーブルに挿入します。  
@@ -410,7 +410,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- マッピング スキーマを指定するアップデート グラムの例については、次を参照してください。[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)します。  
+ マッピング スキーマを指定するアップデート グラムの例については、[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)を参照してください。  
   
 ##### <a name="to-test-the-updategram"></a>アップデートグラムをテストするには  
   
@@ -430,7 +430,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 4.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してアップデートグラムを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
  これは、同等の XDR スキーマです。  
   
@@ -524,7 +524,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 4.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してアップデートグラムを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
 ### <a name="h-specifying-namespaces-in-an-updategram"></a>H. アップデートグラムで名前空間を指定する  
  アップデートグラム内の要素で名前空間を宣言し、その名前空間に属する要素として、同じ要素を保持することができます。 この場合、対応するスキーマで同じ名前空間を宣言する必要があり、対象の名前空間に要素が属している必要があります。  
@@ -607,7 +607,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 3.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してアップデートグラムを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
 ### <a name="i-inserting-data-into-an-xml-data-type-column"></a>I. XML データ型列にデータを挿入する  
  `xml` データ型は、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されました。 アップデートグラムを使用して、`xml` データ型の列にデータを挿入したり、この列に格納されているデータを更新することができます。これには次の条件があります。  
@@ -723,7 +723,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 3.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してアップデートグラムを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  

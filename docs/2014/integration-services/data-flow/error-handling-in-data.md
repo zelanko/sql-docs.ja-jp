@@ -68,7 +68,7 @@ ms.locfileid: "58378569"
 ## <a name="adding-the-error-description"></a>エラーの説明の追加  
  既定では、エラー出力により数値エラー コードが提供され、通常、エラー出力にはエラーが発生した列の ID が含まれています。 スクリプト コンポーネントを使用して追加列にエラーの説明を含めることができます。この操作は、1 行のスクリプトを使用して、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを呼び出して行います。  
   
- このスクリプト コンポーネントは、エラーをキャプチャするデータ フロー コンポーネントよりデータ フローの下流にある任意のエラー セグメントに追加できますが、エラー行を出力先に書き込む直前の位置に配置するのが普通です。 これによりスクリプトは、書き込まれたエラー行についてのみ、説明を参照することができます。 たとえば、データ フロー内のエラー セグメントでエラーの一部が修正され、出力先にエラー行が書き込まれないこともあり得るからです。 詳細については、次を参照してください。[スクリプト コンポーネントによるエラー出力の強化](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)します。  
+ このスクリプト コンポーネントは、エラーをキャプチャするデータ フロー コンポーネントよりデータ フローの下流にある任意のエラー セグメントに追加できますが、エラー行を出力先に書き込む直前の位置に配置するのが普通です。 これによりスクリプトは、書き込まれたエラー行についてのみ、説明を参照することができます。 たとえば、データ フロー内のエラー セグメントでエラーの一部が修正され、出力先にエラー行が書き込まれないこともあり得るからです。 詳細については、[スクリプト コンポーネントによるエラー出力の強化](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)を参照してください。  
   
 ### <a name="to-configure-an-error-output"></a>エラー出力を構成するには  
   

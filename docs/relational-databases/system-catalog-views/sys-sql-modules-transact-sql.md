@@ -31,7 +31,7 @@ ms.locfileid: "52282024"
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SQL 言語定義モジュールであるオブジェクトごとに 1 行を返します [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 、ネイティブを含むユーザー定義のスカラー関数をコンパイルします。 種類が P、RF、V、TR、FN、IF、TF、および R のオブジェクトには、SQL モジュールが関連付けられています。 スタンドアロンの既定値である種類 D のオブジェクトにも、このビューで SQL モジュール定義が関連付けられています。 これらの型の説明は、次を参照してください。、**型**内の列、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログ ビューです。  
+  SQL 言語定義モジュールであるオブジェクトごとに 1 行を返します [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 、ネイティブを含むユーザー定義のスカラー関数をコンパイルします。 種類が P、RF、V、TR、FN、IF、TF、および R のオブジェクトには、SQL モジュールが関連付けられています。 スタンドアロンの既定値である種類 D のオブジェクトにも、このビューで SQL モジュール定義が関連付けられています。 これらの型の説明は、、**型**内の列、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログ ビューを参照してください。  
   
  詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
   

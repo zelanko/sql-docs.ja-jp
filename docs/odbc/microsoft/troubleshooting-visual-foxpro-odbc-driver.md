@@ -50,7 +50,7 @@ ms.locfileid: "47667970"
   
 -   接続文字列で BackgroundFetch 属性のキーワードを使用します。  
   
- 接続文字列キーワードの属性については、次を参照してください。[接続文字列を使用して](../../odbc/microsoft/using-connection-strings.md)します。  
+ 接続文字列キーワードの属性については、[接続文字列を使用して](../../odbc/microsoft/using-connection-strings.md)を参照してください。  
   
 ## <a name="updating-multitiered-views"></a>多階層ビューを更新しています  
  多階層ビューは、ベース テーブルではなく、1 つまたは複数のビューに基づいてビューです。 更新プログラムが最上位のビューの基になる; ビューに移動下のレベルを 1 つだけにするには、多層ビュー内のデータを更新するときにベース テーブルは更新されません。  
@@ -58,10 +58,10 @@ ms.locfileid: "47667970"
 ## <a name="using-data-definition-language-ddl-in-stored-procedures"></a>ストアド プロシージャでのデータ定義言語 (DDL) の使用  
  Visual FoxPro のストアド プロシージャで CREATE TABLE または ALTER TABLE などの DDL を使用することはできません。  
   
- ストアド プロシージャで使用できる言語については、次を参照してください。[ルール、トリガー、既定値、およびストアド プロシージャのサポート](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)します。  
+ ストアド プロシージャで使用できる言語については、[ルール、トリガー、既定値、およびストアド プロシージャのサポート](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)を参照してください。  
   
 ## <a name="using-positioned-updates"></a>位置指定更新を使用します。  
  ドライバーは、位置指定更新をサポートしていません。 SQL の WHERE 句を使用すると、更新する行を識別できます。  
   
 ## <a name="using-the-set-ansi-command"></a>SET ANSI コマンドの使用  
- Visual FoxPro 開発者がいる場合は、設定の ANSI の既定の設定にある、ドライバーは、Visual FoxPro の OFF の既定の設定とは対照的に注意する必要があります。 設定の ANSI の設定に既定では、通常、正確な比較を実行する他の ODBC データ ソースで一貫して動作する Visual FoxPro データ ソースをできます。 既定の設定を変更することができます。 詳細については、次を参照してください。[設定の ANSI](../../odbc/microsoft/set-ansi-command.md)します。
+ Visual FoxPro 開発者がいる場合は、設定の ANSI の既定の設定にある、ドライバーは、Visual FoxPro の OFF の既定の設定とは対照的に注意する必要があります。 設定の ANSI の設定に既定では、通常、正確な比較を実行する他の ODBC データ ソースで一貫して動作する Visual FoxPro データ ソースをできます。 既定の設定を変更することができます。 詳細については、[設定の ANSI](../../odbc/microsoft/set-ansi-command.md)を参照してください。

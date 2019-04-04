@@ -227,4 +227,4 @@ export SQL_INSTALL_AGENT='y'
 . ./my_script_name.sh
 ```
 
-Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux の概要](sql-server-linux-overview.md)します。
+Linux 上の SQL Server に関する詳細については、[SQL Server on Linux の概要](sql-server-linux-overview.md)を参照してください。

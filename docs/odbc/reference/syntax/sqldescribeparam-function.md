@@ -64,10 +64,10 @@ SQLRETURN SQLDescribeParam(
  詳細については、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。  
   
  *ParameterSizePtr*  
- [出力]データ ソースで定義されている対応するパラメーター マーカーの式または列の文字のサイズを返すバッファーへのポインター。 列のサイズの詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)します。  
+ [出力]データ ソースで定義されている対応するパラメーター マーカーの式または列の文字のサイズを返すバッファーへのポインター。 列のサイズの詳細については、[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)を参照してください。  
   
  *DecimalDigitsPtr*  
- [出力]データ ソースで定義されている列の 10 進数字または式の対応するパラメーターの数を返すバッファーへのポインター。 10 進数字の詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)します。  
+ [出力]データ ソースで定義されている列の 10 進数字または式の対応するパラメーターの数を返すバッファーへのポインター。 10 進数字の詳細については、[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)を参照してください。  
   
  *NullablePtr*  
  [出力]パラメーターが NULL 値を許容するかどうかを示す値を返すバッファーへのポインター。 この値は、IPD の SQL_DESC_NULLABLE フィールドから読み取られます。 次のいずれかです。  
@@ -95,7 +95,7 @@ SQLRETURN SQLDescribeParam(
 |HY008|操作が取り消されました|非同期処理が有効に、 *StatementHandle*します。 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*します。 後でもう一度関数が呼び出された、 *StatementHandle*します。<br /><br /> 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*から別のスレッドで、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM) 関数が呼び出す前に呼び出された**SQLPrepare**または**SQLExecDirect**の*StatementHandle*します。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている、 **SQLDescribeParam**関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
 |IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
@@ -106,7 +106,7 @@ SQLRETURN SQLDescribeParam(
   
  **SQLDescribeParam** SQL ステートメントのパラメーターの型 (入力、入力/出力、または出力) は返されません。 ただし、プロシージャの呼び出しでは、SQL ステートメントのすべてのパラメーターは、入力パラメーターが。 アプリケーションを呼び出すプロシージャへの呼び出し内の各パラメーターの種類を決定する**SQLProcedureColumns**します。  
   
- 詳細については、次を参照してください。[を記述するパラメーター](../../../odbc/reference/develop-app/describing-parameters.md)します。  
+ 詳細については、[を記述するパラメーター](../../../odbc/reference/develop-app/describing-parameters.md)を参照してください。  
   
 ## <a name="code-example"></a>コード例  
  次の例では、SQL ステートメントのユーザーを要求し、し、そのステートメントを準備します。 次に、呼び出す**SQLNumParams**ステートメントにパラメーターが含まれるかどうかを確認します。 呼び出し、ステートメントにパラメーターが含まれている場合**SQLDescribeParam**これらのパラメーターを記述して**SQLBindParameter**これらをバインドできます。 最後に、パラメーターの値はユーザー要求し、ステートメントを実行します。  

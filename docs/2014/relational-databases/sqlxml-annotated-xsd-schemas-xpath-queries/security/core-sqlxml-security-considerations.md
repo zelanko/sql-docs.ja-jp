@@ -22,7 +22,7 @@ ms.locfileid: "52812254"
 # <a name="core-sqlxml-security-considerations"></a>SQLXML のセキュリティに関する主な注意点
   次に、データ アクセスに SQLXML を使用するときのセキュリティ ガイドラインを示します。  
   
--   SQLXMLOLEDB プロバイダーでは、`StreamFlags` プロパティへのアクセスが提供されます。このプロパティでは、特定の各インスタンスに対して有効または無効にする SQLXML 機能を示すフラグを設定できます。 このプロパティを使用して、必要なコンポーネントだけが有効になるよう、SQLXML の使用をカスタマイズすることをお勧めします。 詳細については、次を参照してください。 [SQLXMLOLEDB プロバイダー &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)します。  
+-   SQLXMLOLEDB プロバイダーでは、`StreamFlags` プロパティへのアクセスが提供されます。このプロパティでは、特定の各インスタンスに対して有効または無効にする SQLXML 機能を示すフラグを設定できます。 このプロパティを使用して、必要なコンポーネントだけが有効になるよう、SQLXML の使用をカスタマイズすることをお勧めします。 詳細については、[SQLXMLOLEDB プロバイダー &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)を参照してください。  
   
 -   SQLXML エラーが発生した場合、返されるメッセージには、テーブル名、列名、種類の情報など、データベース スキーマに関する情報を含めることができます。 これらのエラーを扱うときには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールに関する情報が関係のないユーザーに伝わらないよう注意する必要があります。  
   

@@ -73,7 +73,7 @@ Windows Server 2012 または Windows Server 2012 R2 の InfiniBand 接続を準
   
     -   Windows 用の InfiniBand ドライバーは、OpenFabrics Alliance、InfiniBand ベンダーに業界コンソーシアムによって開発されています。  適切なドライバーは、InfiniBand ネットワーク アダプターに配布されたことがあります。 それ以外の場合は、ドライバーは www.openfabrics.org からダウンロードできます。  
   
-5.  ネットワーク アダプターの InfiniBand と DNS の設定を構成します。 構成手順については、次を参照してください。[構成の InfiniBand ネットワーク アダプター](configure-infiniband-network-adapters.md)します。  
+5.  ネットワーク アダプターの InfiniBand と DNS の設定を構成します。 構成手順については、[構成の InfiniBand ネットワーク アダプター](configure-infiniband-network-adapters.md)を参照してください。  
   
 ## <a name="Step4"></a>手順 4: 読み込みツールをインストールします。  
 クライアント ツールは、Microsoft ダウンロード センターからダウンロードできます。 

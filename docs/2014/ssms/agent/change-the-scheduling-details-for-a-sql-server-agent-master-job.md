@@ -83,6 +83,6 @@ ms.locfileid: "54127162"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)します。  
+ 詳細については、[sp_update_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)を参照してください。  
   
   

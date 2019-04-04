@@ -49,7 +49,7 @@ SSMA をインストールする前に、コンピューターが、次の要件
   
 -   アクセスと、移行するデータベース オブジェクトとデータの SQL Server のターゲット インスタンスをホストするコンピューターに十分なアクセス許可。 詳細については、次を参照してください[SQL Server に接続する&#40;MySQLToSQL。&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
--   SQL Azure のプロジェクトが発生した場合へのアクセスと、移行する Azure SQL DB のインスタンスに十分なアクセス許可はデータベース オブジェクトとデータになります。 詳細については、次を参照してください。 [Azure SQL DB に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)します。  
+-   SQL Azure のプロジェクトが発生した場合へのアクセスと、移行する Azure SQL DB のインスタンスに十分なアクセス許可はデータベース オブジェクトとデータになります。 詳細については、[Azure SQL DB に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)を参照してください。  
   
 -   4 GB の RAM を推奨します。  
   

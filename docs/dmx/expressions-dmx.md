@@ -35,7 +35,7 @@ ms.locfileid: "37992664"
  Object Identifier  
  オブジェクト識別子は、DMX の簡単な式と見なすことができます。  
   
- 複雑な式を作成するには、演算子を使用して、これらの式を組み合わせます。 演算子の詳細については、次を参照してください。[データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)します。  
+ 複雑な式を作成するには、演算子を使用して、これらの式を組み合わせます。 演算子の詳細については、[データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング拡張機能&#40;DMX&#41;リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   

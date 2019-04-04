@@ -54,7 +54,7 @@ RETCODE bcp_columns (
 ## <a name="remarks"></a>コメント  
  この関数は、後でのみ呼び出すことができます[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)は有効なファイル名で呼び出されました。  
   
- この関数を呼び出す必要があるのは、既定とは異なる形式のユーザー ファイルを使用する場合のみです。 既定のユーザー ファイル形式の説明の詳細については、次を参照してください。 **bcp_init**します。  
+ この関数を呼び出す必要があるのは、既定とは異なる形式のユーザー ファイルを使用する場合のみです。 既定のユーザー ファイル形式の説明の詳細については、**bcp_init**を参照してください。  
   
  呼び出した後**bcp_columns**、呼び出す必要があります[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)カスタム ファイル形式を完全に定義するユーザー ファイル内の各列にします。  
   

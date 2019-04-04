@@ -26,7 +26,7 @@ SQL Server 2017 の Anaconda 4.2 配布は、Python 3.6。
 
 RevoScaleR の機能のサブセット (rxLinMod、rxLogit、rxPredict、rxDTrees、rxBTrees、おそらく他のいくつか)、新しい Python パッケージを使用して、Python Api を使用して提供**revoscalepy**します。 このパッケージを使用して、Pandas データ フレーム、XDF ファイル、または SQL データのクエリを使用してデータを操作することができます。
 
-詳細については、次を参照してください。 [SQL Server で revoscalepy モジュール](ref-py-revoscalepy.md)と[revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)します。
+詳細については、[SQL Server で revoscalepy モジュール](ref-py-revoscalepy.md)と[revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)を参照してください。
 
 Python では、SQL Server とのデータ型の数に制限をサポートします。 その結果、SQL Server からデータを Python スクリプトを使用するたびにデータ可能性があります暗黙的に型に変換を互換性のあるデータ。 ただし、実際の変換を自動的に実行できない多くの場合、エラーが返されます。
 

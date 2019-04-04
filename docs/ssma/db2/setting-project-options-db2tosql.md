@@ -95,7 +95,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 -   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング DB2 と SQL Server データ型&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)します。  
   
--   DB2 データベース オブジェクト定義を変換する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義します。 詳細については、次を参照してください。 [DB2 スキーマの変換&#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)します。  
+-   DB2 データベース オブジェクト定義を変換する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義します。 詳細については、[DB2 スキーマの変換&#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [DB2 と SQL Server データ型のマッピング&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  

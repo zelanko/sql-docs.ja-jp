@@ -27,7 +27,7 @@ R のインストールに管理者として R パッケージの管理につい
 
 R パッケージは、頻繁に他のうちいくつか使用できないインスタンスによって使用される既定の R ライブラリに複数のパッケージに依存します。 場合があります、パッケージには、既にインストールされている依存パッケージの別のバージョンが必要です。 パッケージの依存関係は、パッケージに埋め込まれた記述ファイルに記録されますが不完全な場合があります。 という名前のパッケージを使用する[iGraph](https://igraph.org/r/)完全に依存関係グラフを明確にします。
 
-使用することをお勧めを確実に適切なパッケージの種類とバージョンを取得、組織内のすべてのユーザーを複数のパッケージをインストールする必要がある場合、 [miniCRAN](https://mran.microsoft.com/package/miniCRAN)完全な依存関係チェーンを分析するパッケージ。 minicRAN は、複数のユーザーまたはコンピューター間で共有できるローカル リポジトリを作成します。 詳細については、次を参照してください。 [miniCRAN を使用してローカル パッケージ リポジトリを作成する](create-a-local-package-repository-using-minicran.md)します。
+使用することをお勧めを確実に適切なパッケージの種類とバージョンを取得、組織内のすべてのユーザーを複数のパッケージをインストールする必要がある場合、 [miniCRAN](https://mran.microsoft.com/package/miniCRAN)完全な依存関係チェーンを分析するパッケージ。 minicRAN は、複数のユーザーまたはコンピューター間で共有できるローカル リポジトリを作成します。 詳細については、[miniCRAN を使用してローカル パッケージ リポジトリを作成する](create-a-local-package-repository-using-minicran.md)を参照してください。
 
 ### <a name="package-sources-versions-and-formats"></a>パッケージ ソース、バージョン、およびフォーマット
 
@@ -73,7 +73,7 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 + R パッケージまたは R ライブラリのパスへの直接参照を削除するコードを更新します。 
 
-+ パッケージ ライブラリは、インスタンスに関連付けられています。 詳細については、次を参照してください。 [SQL Server の既定の R と Python のパッケージ](installing-and-managing-r-packages.md)します。
++ パッケージ ライブラリは、インスタンスに関連付けられています。 詳細については、[SQL Server の既定の R と Python のパッケージ](installing-and-managing-r-packages.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

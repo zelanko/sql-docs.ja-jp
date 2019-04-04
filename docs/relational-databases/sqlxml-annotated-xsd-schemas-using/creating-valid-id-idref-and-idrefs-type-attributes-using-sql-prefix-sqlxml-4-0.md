@@ -52,7 +52,7 @@ ms.locfileid: "56033013"
  なお**sql:prefix** XSD 固定属性で注釈を使用することはできません。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、[SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)を参照してください。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. ID 型と IDREFS 型を指定する  
  次のスキーマで、 **\<顧客 >** 要素から成る、 **\<順序 >** 子要素。 **\<順序 >** 要素が子要素にも、  **\<OrderDetail >** 要素。  
@@ -133,7 +133,7 @@ ms.locfileid: "56033013"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、[SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
   
  結果の一部を次に示します。  
   

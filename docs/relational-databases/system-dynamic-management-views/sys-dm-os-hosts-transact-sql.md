@@ -44,7 +44,7 @@ ms.locfileid: "47837930"
 |**completed_ios_count**|**int**|ホスト経由で発行され、完了した I/O の合計数。|  
 |**completed_ios_in_bytes**|**bigint**|ホスト経由で完了した I/O の合計バイト数。|  
 |**active_ios_count**|**int**|現在完了を待機しているホストに関連する I/O 要求の合計数。|  
-|**default_memory_clerk_address**|**varbinary(8)**|ホストに関連付けられているメモリ クラーク オブジェクトのメモリ アドレス。 詳細については、次を参照してください。 [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)します。|  
+|**default_memory_clerk_address**|**varbinary(8)**|ホストに関連付けられているメモリ クラーク オブジェクトのメモリ アドレス。 詳細については、[sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)を参照してください。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可

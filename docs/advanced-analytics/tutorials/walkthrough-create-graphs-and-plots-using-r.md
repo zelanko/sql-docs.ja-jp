@@ -101,7 +101,7 @@ ms.locfileid: "58513169"
     + で始まる行`plot`R クライアントを表示できるように、実行、表示されたデータがローカルの R 環境にシリアル化します。
 
     > [!NOTE]
-    > Azure の仮想マシンで SQL Server を使用する場合は、この時点でエラーを取得可能性があります。 Azure での既定のファイアウォール規則は、R コードでネットワーク アクセスをブロックした場合、エラーが発生します。 このエラーを解決する方法の詳細については、次を参照してください。 [Azure VM での Machine Learning のインストール (R) サービス](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)します。
+    > Azure の仮想マシンで SQL Server を使用する場合は、この時点でエラーを取得可能性があります。 Azure での既定のファイアウォール規則は、R コードでネットワーク アクセスをブロックした場合、エラーが発生します。 このエラーを解決する方法の詳細については、[Azure VM での Machine Learning のインストール (R) サービス](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)を参照してください。
 
 4. 出力プロットは次の図のようになります。 乗車場所が赤い点でマップ上に追加されます。 イメージは異なる場所の数が使用したデータ ソースによってになります。
 

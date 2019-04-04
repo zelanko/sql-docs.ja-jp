@@ -42,7 +42,7 @@ Sybase Adaptive Server Enterprise (ASE) のデータベースを移行する[!IN
 ## <a name="establishing-a-sql-server-connection"></a>SQL Server の接続を確立します。  
 ASE データベース オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文のインスタンスへの接続を確立する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ASE データベースやデータベースを移行します。  
   
-接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 接続した後、ASE スキーマ レベルでは、このマッピングをカスタマイズできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。 [SQL Server スキーマへの Sybase ASE スキーマのマッピング&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)します。  
+接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 接続した後、ASE スキーマ レベルでは、このマッピングをカスタマイズできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、[SQL Server スキーマへの Sybase ASE スキーマのマッピング&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)を参照してください。  
   
 > [!IMPORTANT]  
 > 接続する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ことを確認のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されていると、接続を受け入れることができます。  
@@ -123,7 +123,7 @@ ASE データベース オブジェクトを変換する前に[!INCLUDE[ssNoVers
   
 -   カスタム ソースとターゲットのデータ型のマッピングを参照してください[マッピング Sybase ASE と SQL Server データ型&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)します。  
   
--   Sybase ASE データベース オブジェクトの定義を変換できる場合、これらのいずれかを実行する必要はありません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義します。 詳細については、次を参照してください。 [Sybase ASE データベース オブジェクトの変換&#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)します。  
+-   Sybase ASE データベース オブジェクトの定義を変換できる場合、これらのいずれかを実行する必要はありません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義します。 詳細については、[Sybase ASE データベース オブジェクトの変換&#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server - Azure SQL DB への Sybase ASE データベース移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

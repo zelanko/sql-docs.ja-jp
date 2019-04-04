@@ -56,7 +56,7 @@ sp_syscollector_start_collection_set
   
  このプロシージャをスケジュールがないコレクション セットに対して実行すると、失敗します。 場合、コレクション セットに (コレクション モード設定されているために非キャッシュなど)、スケジュールがないを使用して、 [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)ストアド プロシージャをコレクション セットを開始します。  
   
- このプロシージャは、コレクションを有効にし、指定されたコレクション セットのジョブをアップロードして、コレクション セットのコレクション モードがキャッシュ (0) に設定されている場合は、直ちにコレクション エージェント ジョブを開始します。 詳細については、次を参照してください。 [sp_syscollector_create_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)します。  
+ このプロシージャは、コレクションを有効にし、指定されたコレクション セットのジョブをアップロードして、コレクション セットのコレクション モードがキャッシュ (0) に設定されている場合は、直ちにコレクション エージェント ジョブを開始します。 詳細については、[sp_syscollector_create_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)を参照してください。  
   
  コレクション セットにコレクション アイテムが含まれていない場合、この操作には何も効果がありません。 警告としてエラー 14685 が返されます。  
   

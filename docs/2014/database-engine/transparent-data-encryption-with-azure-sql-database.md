@@ -26,7 +26,7 @@ ms.locfileid: "48049782"
   
  TDE では、データベース暗号化キーという対称キーを使用してデータベース全体のストレージを暗号化します。 [!INCLUDE[ssSDS](../includes/sssds-md.md)] では、データベース暗号化キーは、組み込みのサーバー証明書によって保護されます。 組み込みのサーバー証明書は、各 [!INCLUDE[ssSDS](../includes/sssds-md.md)] サーバーに対して一意です。 データベースが GeoDR リレーションシップの状態にある場合、データベースは各サーバーで異なるキーによって保護されます。 2 つのデータベースが同じサーバーに接続している場合は、同じ組み込みの証明書を共有します。 [!INCLUDE[msCoName](../includes/msconame-md.md)] は、少なくとも 90 日ごとにこれらの証明書を自動的に回転します。 TDE の一般的な説明については、「 [透過的なデータ暗号化 &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
   
- [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] は、Azure Key Vault と TDE との統合をサポートしていません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、Key Vault の非対称キーを使用できます。 詳細については、次を参照してください。[例 a: Transparent Data Encryption Key Vault からの非対称キーを使用して](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)します。  
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] は、Azure Key Vault と TDE との統合をサポートしていません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、Key Vault の非対称キーを使用できます。 詳細については、[例 a: Transparent Data Encryption Key Vault からの非対称キーを使用して](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)を参照してください。  
   
 ||  
 |-|  

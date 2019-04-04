@@ -27,7 +27,7 @@ ms.locfileid: "51600022"
 # <a name="the-ole-db-provider-for-internet-publishing"></a>OLE DB Provider for Internet Publishing
 ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトで使える Microsoft OLE DB Provider for Internet Publishing (インターネット発行プロバイダー) にアクセスして、リソースを操作する Web フォルダーやファイルなどMicrosoft FrontPage によって処理されます。 ADO では、ソースを指定することができます、**レコード**、 **Stream**、または[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) url。 ことができますし、アップロード、ダウンロード、移動、コピー、およびリソースを削除またはリソース プロパティを直接操作します。  
   
- 使用するコード例**レコード**と**ストリーム**公開インターネット プロバイダーは、次を参照してください。、[インターネットによる公開シナリオ](../../../ado/guide/data/internet-publishing-scenario.md)します。  
+ 使用するコード例**レコード**と**ストリーム**公開インターネット プロバイダーは、、[インターネットによる公開シナリオ](../../../ado/guide/data/internet-publishing-scenario.md)を参照してください。  
   
  インターネット公開プロバイダーは、Microsoft Windows 2000 と共にインストールされます。 以前のバージョンのインターネット発行プロバイダーでは、Microsoft Office 2000 および Microsoft Internet Explorer 5.0 で入手できます。  
   

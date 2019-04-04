@@ -71,7 +71,7 @@ ms.locfileid: "53367754"
 ## <a name="configuring-permissions-and-server-properties"></a>権限とサーバー プロパティの構成  
  データ マイニングには、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに対する追加の権限が必要です。 ほとんどのデータ マイニング プロパティは、[[分析サーバーのプロパティ] ダイアログ ボックス &#40;Analysis Services&#41;](../analysis-server-properties-dialog-box-analysis-services.md) を使用して設定できます。  
   
- 構成できるプロパティの詳細については、次を参照してください。 [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md)します。  
+ 構成できるプロパティの詳細については、[Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md)を参照してください。  
   
  データ マイニングに関連するサーバー プロパティを以下に示します。  
   

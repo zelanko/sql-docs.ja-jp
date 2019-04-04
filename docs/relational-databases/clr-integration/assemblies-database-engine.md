@@ -29,13 +29,13 @@ ms.locfileid: "51672818"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアセンブリは、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイムで作成されたマネージド アプリケーション モジュール (.dll ファイル) を参照するオブジェクトです。 アセンブリには、クラス メタデータとマネージド コードが含まれています。 SQL Server のインスタンスにアセンブリをアップロードすることが、次のいずれかのデータベース オブジェクトを作成するための最初の手順になります。  
   
--   CLR 関数。 詳細については、次を参照してください。 [CLR 関数の作成](../../relational-databases/user-defined-functions/create-clr-functions.md)です。  
+-   CLR 関数。 詳細については、[CLR 関数の作成](../../relational-databases/user-defined-functions/create-clr-functions.md)を参照してください。  
   
--   CLR ストアド プロシージャ。 詳細については、次を参照してください。 [CLR ストアド プロシージャ](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)します。  
+-   CLR ストアド プロシージャ。 詳細については、[CLR ストアド プロシージャ](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)を参照してください。  
   
--   CLR トリガー。 詳細については、次を参照してください。 [CLR トリガーを作成する](../../relational-databases/triggers/create-clr-triggers.md)します。  
+-   CLR トリガー。 詳細については、[CLR トリガーを作成する](../../relational-databases/triggers/create-clr-triggers.md)を参照してください。  
   
--   ユーザー定義集計関数。 詳細については、次を参照してください。[作成ユーザー定義集計](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)します。  
+-   ユーザー定義集計関数。 詳細については、[作成ユーザー定義集計](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)を参照してください。  
   
 -   ユーザー定義型。 詳細については、「[ユーザー定義型の使用](../../relational-databases/native-client/features/using-user-defined-types.md)」を参照してください。  
   

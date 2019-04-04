@@ -86,4 +86,4 @@ ndctl list
 
 ## <a name="next-steps"></a>次のステップ
 
-Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux](sql-server-linux-overview.md)します。
+Linux 上の SQL Server に関する詳細については、[SQL Server on Linux](sql-server-linux-overview.md)を参照してください。

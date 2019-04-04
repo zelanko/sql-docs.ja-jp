@@ -25,7 +25,7 @@ SAP ASE データベースからオブジェクトとデータを正常に移行
   
 1.  [新しい SSMA プロジェクト作成](working-with-ssma-projects-sybasetosql.md)です。  
   
-    プロジェクトを作成した後は、プロジェクトの変換、移行、およびオプションのマッピングの種類を設定できます。 プロジェクトの設定については、次を参照してください。[プロジェクト オプションの設定&#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)します。 データ型のマッピングをカスタマイズする方法については、次を参照してください。[マッピングの Sybase ASE と SQL Server データ型&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)します。  
+    プロジェクトを作成した後は、プロジェクトの変換、移行、およびオプションのマッピングの種類を設定できます。 プロジェクトの設定については、[プロジェクト オプションの設定&#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)を参照してください。 データ型のマッピングをカスタマイズする方法については、[マッピングの Sybase ASE と SQL Server データ型&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)を参照してください。  
   
 2.  [SAP ASE データベース サーバーに接続する](connecting-to-sybase-ase-sybasetosql.md)します。  
   

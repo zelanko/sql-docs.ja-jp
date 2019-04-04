@@ -25,7 +25,7 @@ Oracle データベースからオブジェクトとデータを正常に移行�
   
 1.  [新しい SSMA プロジェクト作成](working-with-ssma-projects-oracletosql.md)です。  
   
-    プロジェクトを作成した後は、プロジェクトの変換、移行、およびオプションのマッピングの種類を設定できます。 プロジェクトの設定については、次を参照してください。[プロジェクト オプションの設定&#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)します。 データ型のマッピングをカスタマイズする方法については、次を参照してください。[マッピング Oracle および SQL Server データ型&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)します。  
+    プロジェクトを作成した後は、プロジェクトの変換、移行、およびオプションのマッピングの種類を設定できます。 プロジェクトの設定については、[プロジェクト オプションの設定&#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)を参照してください。 データ型のマッピングをカスタマイズする方法については、[マッピング Oracle および SQL Server データ型&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)を参照してください。  
   
 2.  [Oracle データベース サーバーに接続する](connecting-to-oracle-database-oracletosql.md)します。  
   

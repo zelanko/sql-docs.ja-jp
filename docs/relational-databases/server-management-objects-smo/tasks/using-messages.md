@@ -29,7 +29,7 @@ ms.locfileid: "47635830"
  SMO では、プログラム上では <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> オブジェクトを使用してユーザー定義メッセージを表現します。 既存のユーザー定義メッセージは、コレクションを反復処理することで検索することができます。 新しいをインスタンス化して、新しいユーザー定義メッセージを作成できる**UserDefinedMessage**オブジェクトと適切なプロパティを設定します。  
   
 ## <a name="examples"></a>使用例  
- 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>Visual Basic での特定のシステム メッセージの検索  
  このコード例では、システム メッセージを ID 番号で識別してメッセージを表示する方法を示します。  

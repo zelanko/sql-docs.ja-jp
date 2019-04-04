@@ -68,10 +68,10 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_name**|**sysname**|スケジュールの名前。|  
 |**enabled**|**int**|スケジュールが有効かどうか (**1**) または有効になっていません (**0**)。|  
 |**freq_type**|**int**|ジョブが実行されることを示す値。<br /><br /> **1** = 1 回<br /><br /> **4** = 毎日<br /><br /> **8** = 毎週<br /><br /> **16**毎月を =<br /><br /> **32**を基準とする、毎月を =、 **freq_interval**<br /><br /> **64** = の場合に実行**SQLServerAgent**サービスの開始。|  
-|**freq_interval**|**int**|日のジョブを実行するとします。 値の値に依存**freq_type**します。 詳細については、次を参照してください。 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)します。|  
-|**freq_subday_type**|**int**|単位**freq_subday_interval**します。 詳細については、次を参照してください。 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)します。|  
-|**freq_subday_interval**|**int**|数**freq_subday_type**にジョブの各実行間に発生する期間。 詳細については、次を参照してください。 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)します。|  
-|**freq_relative_interval**|**int**|定期ジョブの**freq_interval**各月にします。 詳細については、次を参照してください。 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)します。|  
+|**freq_interval**|**int**|日のジョブを実行するとします。 値の値に依存**freq_type**します。 詳細については、[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)を参照してください。|  
+|**freq_subday_type**|**int**|単位**freq_subday_interval**します。 詳細については、[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)を参照してください。|  
+|**freq_subday_interval**|**int**|数**freq_subday_type**にジョブの各実行間に発生する期間。 詳細については、[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)を参照してください。|  
+|**freq_relative_interval**|**int**|定期ジョブの**freq_interval**各月にします。 詳細については、[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)を参照してください。|  
 |**freq_recurrence_factor**|**int**|定期ジョブの実行間隔 (月単位)。|  
 |**active_start_date**|**int**|スケジュールをアクティブにした日付。|  
 |**active_end_date**|**int**|スケジュールの終了日。|  

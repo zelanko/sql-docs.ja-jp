@@ -24,7 +24,7 @@ ms.locfileid: "52756814"
 # <a name="data-import-master-data-services"></a>データのインポート (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]内のデータのモデルを作成すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでデータの追加と変更ができるようになります。   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ステージング テーブル、ストアド プロシージャ、マスター データ マネージャーを使います。  
   
- 使用することも、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]、MDS リポジトリにデータを追加する ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース)。 詳細については、次を参照してください。[データのパブリッシュ&#40;MDS アドインの Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)します。  
+ 使用することも、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]、MDS リポジトリにデータを追加する ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース)。 詳細については、[データのパブリッシュ&#40;MDS アドインの Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)を参照してください。  
   
  データを追加して更新するときに、次の操作を行うことができます。  
   

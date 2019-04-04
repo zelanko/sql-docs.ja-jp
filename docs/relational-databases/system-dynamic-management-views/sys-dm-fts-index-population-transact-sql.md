@@ -44,7 +44,7 @@ ms.locfileid: "47618220"
 |**is_clustered_index_scan**|**bit**|設定では、クラスター化されたインデックスでのスキャンが行われるかどうかを示します。|  
 |**range_count**|**int**|インデックス設定が並列処理されたサブ範囲の数。|  
 |**completed_range_count**|**int**|処理が完了した範囲の数。|  
-|**outstanding_batch_count**|**int**|このインデックス設定で現在未解決のバッチの数。 詳細については、次を参照してください。 [sys.dm_fts_outstanding_batches &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)します。|  
+|**outstanding_batch_count**|**int**|このインデックス設定で現在未解決のバッチの数。 詳細については、[sys.dm_fts_outstanding_batches &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)を参照してください。|  
 |**status**|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 設定の状態。 注 : 状態によっては、一時的なものもあります。 次のいずれかです。<br /><br /> 3 = 開始<br /><br /> 5 = 正常に処理中<br /><br /> 7 = 処理を停止<br /><br /> たとえば、この状態は自動マージの進行中に発生します。<br /><br /> 11 = 作成が中止されました<br /><br /> 12 = セマンティックな類似性の抽出を実行中|  
 |**status_description**|**nvarchar(120)**|作成の状態の説明。|  
 |**completion_type**|**int**|設定の完了の状態。|  
@@ -56,7 +56,7 @@ ms.locfileid: "47618220"
 |**incremental_timestamp**|**timestamp**|完全設定の開始タイムスタンプ。 他の作成の種類の場合、この値は作成の進行状況を表す、最後にコミットされたチェックポイントの値になります。|  
   
 ## <a name="remarks"></a>コメント  
- フルテキスト インデックス作成に加えて統計的セマンティック インデックス作成が有効になっている場合は、キー フレーズのセマンティックな抽出と作成、およびドキュメントの類似性データの抽出が、フルテキスト インデックス作成と同時に実行されます。 ドキュメントの類似性に関するインデックスの作成は、2 番目のフェーズで実行されます。 詳細については、次を参照してください。[モニター セマンティック検索の管理と](../../relational-databases/search/manage-and-monitor-semantic-search.md)します。  
+ フルテキスト インデックス作成に加えて統計的セマンティック インデックス作成が有効になっている場合は、キー フレーズのセマンティックな抽出と作成、およびドキュメントの類似性データの抽出が、フルテキスト インデックス作成と同時に実行されます。 ドキュメントの類似性に関するインデックスの作成は、2 番目のフェーズで実行されます。 詳細については、[モニター セマンティック検索の管理と](../../relational-databases/search/manage-and-monitor-semantic-search.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
 

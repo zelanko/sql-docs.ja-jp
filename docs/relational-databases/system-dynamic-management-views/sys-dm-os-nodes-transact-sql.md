@@ -34,7 +34,7 @@ ms.locfileid: "47643490"
 SQLOS という内部コンポーネントは、ハードウェア プロセッサの局所性を疑似的に表現したノード構造を作成します。 使用してこれらの構造を変更できる[ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)カスタム ノード レイアウトを作成します。  
 
 > [!NOTE]
-> 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]特定のハードウェア構成のソフト NUMA が自動的に使用します。 詳細については、次を参照してください。[自動ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)します。
+> 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]特定のハードウェア構成のソフト NUMA が自動的に使用します。 詳細については、[自動ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)を参照してください。
   
 次の表では、これらのノードに関する情報を示します。  
   

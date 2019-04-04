@@ -34,7 +34,7 @@ WHERE o.object_type = 'event'
 AND p.name = 'SQLSatellite';
 ```
 
-拡張イベントの使用の詳細については、次を参照してください。[拡張のイベント ツール](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)します。
+拡張イベントの使用の詳細については、[拡張のイベント ツール](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)を参照してください。
 
 > [!TIP]
 > SQL Server によって生成される拡張イベントの新しいお試しください[SSMS XEvent profiler](https://docs.microsoft.com/sql/relational-databases/extended-events/use-the-ssms-xe-profiler)します。 Management Studio のこの新機能では、拡張のイベントのライブ ビューアーを表示しと同様の Profiler トレースよりも SQL Server に煩雑です。

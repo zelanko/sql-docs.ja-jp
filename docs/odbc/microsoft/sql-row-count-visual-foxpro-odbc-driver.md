@@ -30,4 +30,4 @@ ms.locfileid: "47834806"
   
  最後に影響を受ける行の数を返します[UPDATE](../../odbc/microsoft/update-sql-command.md)、[挿入](../../odbc/microsoft/insert-sql-command.md)、または[削除](../../odbc/microsoft/delete-sql-command.md)ステートメント。  
   
- 詳細については、次を参照してください。 [SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

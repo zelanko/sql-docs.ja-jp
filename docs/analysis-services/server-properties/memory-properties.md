@@ -23,7 +23,7 @@ ms.locfileid: "58072296"
   
   構成設定を指定すると、メモリが解放されるしきい値を制御することができます。 たとえば、 **HardMemoryLimit** 設定では、メモリ不足の条件を自分で指定します (既定では、このしきい値は有効ではありません)。ここでは、新しい要求は追加のリソースが有効になるまで完全に拒否されます。
 
-エディションの SQL Server Analysis Services インスタンスごとに使用される最大メモリの詳細については、次を参照してください。[エディションと SQL Server のサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)します。
+エディションの SQL Server Analysis Services インスタンスごとに使用される最大メモリの詳細については、[エディションと SQL Server のサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)を参照してください。
   
  次の設定は、それ以外の場合に記載されていない場合に、表形式と多次元の両方のサーバーに適用されます。  
  

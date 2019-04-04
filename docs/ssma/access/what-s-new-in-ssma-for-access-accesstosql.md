@@ -193,7 +193,7 @@ SSMA for Access の 2006 年 11 月リリースには、次の変更が含まれ
   
 -   新しいデータベースの移行ウィザードへのアクセスを 1 つのデータベースの移行をガイドする追加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
 -   新しい変換、読み込みを追加し、Access データベースに変換する移行コマンドに変換されたオブジェクトを読み込みます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのデータを移行したり[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]すべて 1 つの手順でします。  
--   強化されたクエリの移行。 移行をクエリに変換しますをビューにクエリをより選択するようになりました。 詳細については、次を参照してください。 [Access データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)します。  
+-   強化されたクエリの移行。 移行をクエリに変換しますをビューにクエリをより選択するようになりました。 詳細については、[Access データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)を参照してください。  
 -   テーブルとインデックスのプロパティを編集する機能を追加、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **テーブル**タブ。  
 -   新しいグローバル設定を追加するには。  
     -   エディターのウィンドウで行番号を表示できます。  

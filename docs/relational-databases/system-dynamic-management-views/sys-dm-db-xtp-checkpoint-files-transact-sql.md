@@ -39,7 +39,7 @@ ms.locfileid: "52510868"
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 新しいバージョンから大幅に異なるし、下位にあるトピックの説明は[SQL Server 2014](#bkmk_2014)します。  
   
- 詳細については、次を参照してください。[の作成とメモリ最適化オブジェクト用ストレージの管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)します。  
+ 詳細については、[の作成とメモリ最適化オブジェクト用ストレージの管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)を参照してください。  
   
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] およびそれ以降  
  次の表に、列の`sys.dm_db_xtp_checkpoint_files`以降 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** します。  

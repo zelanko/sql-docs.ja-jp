@@ -143,7 +143,7 @@ SQL データ ウェアハウスをもっていない場合は [SQL データ �
 ## <a name="clean-up-resources"></a>リソースをクリーンアップします。
 
 このコレクション内の他の記事では、このクイック スタートに基づいて構築します。 引き続きクイック スタートで作業する場合は、このクイック スタートで作成したリソースをクリーンアップしないでください。 続行する予定がない場合、次の手順を使用して、Azure portal でこのクイック スタートで作成したリソースを削除します。
-不要になったリソース グループを削除することによって、リソースをクリーンアップします。 詳細については、次を参照してください。[リソースをクリーンアップする](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)します。
+不要になったリソース グループを削除することによって、リソースをクリーンアップします。 詳細については、[リソースをクリーンアップする](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)を参照してください。
 
 
 ## <a name="next-steps"></a>次の手順

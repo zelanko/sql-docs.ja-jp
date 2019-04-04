@@ -38,7 +38,7 @@ ms.locfileid: "51291020"
   
  使用する場合に、これらの関数を使用することもできます、 **xml**データ型のメソッド**modify()**、 **value()**、 **query()**、および**exist()** XML 内部のリレーショナル値を公開します。  
   
- 詳細については、次を参照してください。 [sql:column() 関数 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)と[sql:variable() 関数 (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)します。  
+ 詳細については、[sql:column() 関数 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)と[sql:variable() 関数 (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   

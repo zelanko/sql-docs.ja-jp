@@ -70,7 +70,7 @@ ms.locfileid: "48135182"
 |||  
 |-|-|  
 |**DirectQuery のみ**|任意。 DirectQuery のみのモデルには、パーティションは必要ありません。<br /><br /> ただし、デザイン フェーズ中にモデルにパーティションを作成した場合は、1 つのパーティションだけをデータ ソースとして使用できることに注意してください。 既定では、最初に作成したパーティションが DirectQuery パーティションとして使用されます。<br /><br /> モデルに必要なすべてのデータが DirectQuery パーティションにあることを確認するには、DirectQuery パーティションを選択し、SQL ステートメントを編集してデータ セット全体を取得します。|  
-|**ハイブリッド モード**|モデル内のいずれかのテーブルに複数のパーティションがある場合は、1 つのパーティションを *DirectQuery パーティション*として選択する必要があります。 パーティションを割り当てない場合、既定では、最初に作成されたパーティションが DirectQuery パーティションとして使用されます。<br /><br /> DirectQuery 以外のすべてのパーティションの処理オプションを設定します。 通常、データはリレーショナル ソースから渡されるため、DirectQuery パーティションは処理されません。<br /><br /> 詳細については、次を参照してください。[パーティションと DirectQuery モード&#40;SSAS 表形式&#41;](tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)します。|  
+|**ハイブリッド モード**|モデル内のいずれかのテーブルに複数のパーティションがある場合は、1 つのパーティションを *DirectQuery パーティション*として選択する必要があります。 パーティションを割り当てない場合、既定では、最初に作成されたパーティションが DirectQuery パーティションとして使用されます。<br /><br /> DirectQuery 以外のすべてのパーティションの処理オプションを設定します。 通常、データはリレーショナル ソースから渡されるため、DirectQuery パーティションは処理されません。<br /><br /> 詳細については、[パーティションと DirectQuery モード&#40;SSAS 表形式&#41;](tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)を参照してください。|  
   
  **手順 6 です。権限借用を構成します。**  
   
@@ -85,11 +85,11 @@ ms.locfileid: "48135182"
   
  モデルをデプロイする準備ができたら、開く、**プロジェクト**クリックし、Visual Studio のメニュー**プロパティ**します。 **QueryMode** プロパティを、次の表で説明する値のいずれかに設定します。  
   
- 詳細については、次を参照してください。[デプロイから SQL Server Data Tools &#40;SSAS 表形式&#41;](tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)します。  
+ 詳細については、[デプロイから SQL Server Data Tools &#40;SSAS 表形式&#41;](tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)を参照してください。  
   
 |||  
 |-|-|  
-|**DirectQuery のみ**|**DirectQueryOnly**<br /><br /> DirectQuery のみを指定したため、モデルのメタデータはサーバーに配置されますが、モデルは処理されません。<br /><br /> ワークスペース データベースで使用されていたキャッシュは自動的には削除されません。 ユーザーがキャッシュされたデータを表示できないようにするには、デザイン時のキャッシュをクリアします。 詳細については、次を参照してください。 [Analysis Services のキャッシュをクリア](instances/clear-the-analysis-services-caches.md)します。|  
+|**DirectQuery のみ**|**DirectQueryOnly**<br /><br /> DirectQuery のみを指定したため、モデルのメタデータはサーバーに配置されますが、モデルは処理されません。<br /><br /> ワークスペース データベースで使用されていたキャッシュは自動的には削除されません。 ユーザーがキャッシュされたデータを表示できないようにするには、デザイン時のキャッシュをクリアします。 詳細については、[Analysis Services のキャッシュをクリア](instances/clear-the-analysis-services-caches.md)を参照してください。|  
 |**ハイブリッド モード**|**DirectQuery (インメモリあり)**<br /><br /> **インメモリと DirectQuery**<br /><br /> どちらの値でも、必要に応じてキャッシュまたはリレーショナル データ ソースを使用できます。 順序によって、モデルに対するクエリへの応答時に既定で使用されるデータ ソースが定義されます。<br /><br /> ハイブリッド モードでは、モデルのメタデータがサーバーに配置されると同時にキャッシュを処理する必要があります。<br /><br /> この設定は配置後に変更できます。|  
   
  **手順 8 です。配置済みモデルを確認します。**  

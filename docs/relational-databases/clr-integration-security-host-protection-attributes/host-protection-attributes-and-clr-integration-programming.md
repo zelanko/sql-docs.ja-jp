@@ -34,7 +34,7 @@ ms.locfileid: "47800770"
   
 -   **ExternalProcessMgmt**、ホスト プロセスを制御する方法が API で公開するかどうかを示します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、これらの属性が与えられると、CAS (コード アクセス セキュリティ) を使用して、ホストされた環境で許可されない HPA の一覧を指定します。 CAS 要件は、3 つのいずれかで指定された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセス許可セット。**セーフ**、 **EXTERNAL_ACCESS**、または**UNSAFE**します。 サーバーで、アセンブリが登録されているときにこれらの 3 つのセキュリティ レベルのいずれかが指定されてを使用して、 **CREATE ASSEMBLY**ステートメント。 内でコードが実行されて、**セーフ**または**EXTERNAL_ACCESS**特定の型またはメンバーを持つ、アクセス許可セットは避ける必要があります、 **System.Security.Permissions.HostProtectionAttribute**属性が適用されています。 詳細については、次を参照してください。[アセンブリを作成する](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)と[CLR 統合プログラミング モデルの制限事項](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、これらの属性が与えられると、CAS (コード アクセス セキュリティ) を使用して、ホストされた環境で許可されない HPA の一覧を指定します。 CAS 要件は、3 つのいずれかで指定された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセス許可セット。**セーフ**、 **EXTERNAL_ACCESS**、または**UNSAFE**します。 サーバーで、アセンブリが登録されているときにこれらの 3 つのセキュリティ レベルのいずれかが指定されてを使用して、 **CREATE ASSEMBLY**ステートメント。 内でコードが実行されて、**セーフ**または**EXTERNAL_ACCESS**特定の型またはメンバーを持つ、アクセス許可セットは避ける必要があります、 **System.Security.Permissions.HostProtectionAttribute**属性が適用されています。 詳細については、[アセンブリを作成する](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)と[CLR 統合プログラミング モデルの制限事項](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)を参照してください。  
   
  **HostProtectionAttribute**でないセキュリティ アクセス許可を固有のコードを識別することで、信頼性を向上させる方法を構築します、型またはメソッドでは、同じくらいこと、ホストを許可しない可能性があります。 使用、 **HostProtectionAttribute**プログラミング モデルにより、ホストの安定性の保護を適用します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47800770"
  次のトピックでは、特定の型とメンバーが**HostProtectionResource**によって値が許可されない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 > [!NOTE]  
->  各トピックに含まれる一覧は、サポートされているアセンブリから作成されたものです。  詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)します。  
+>  各トピックに含まれる一覧は、サポートされているアセンブリから作成されたものです。  詳細については、[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Microsoft.VisualBasic.dll の許可されない型およびメンバー](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  

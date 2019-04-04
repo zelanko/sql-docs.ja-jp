@@ -49,7 +49,7 @@ ms.locfileid: "57578540"
  
  **お試しください:**  
   
--   Azure アカウントをすでにお持ちですか?  やがて**[ここ](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 既にインストールされている SQL Server 2014 Service Pack 1 (SP1) の仮想マシンを作成します。 SQL Server 2014 (SP1) の詳細については、次を参照してください。 [SQL Server 2014 Service Pack 1 リリース情報](https://support.microsoft.com/en-us/kb/3058865)します。  
+-   Azure アカウントをすでにお持ちですか?  やがて**[ここ](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 既にインストールされている SQL Server 2014 Service Pack 1 (SP1) の仮想マシンを作成します。 SQL Server 2014 (SP1) の詳細については、[SQL Server 2014 Service Pack 1 リリース情報](https://support.microsoft.com/en-us/kb/3058865)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを使用する場合でも、コマンド プロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールする場合でも、セットアップ時には以下の手順を実行する必要があります。  

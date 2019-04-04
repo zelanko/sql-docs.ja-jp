@@ -45,7 +45,7 @@ ms.locfileid: "58528514"
 -   [Server Core インストールの管理](https://go.microsoft.com/fwlink/?LinkId=245963)(https://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="install-updates"></a>の更新プログラムをインストールする  
- ここでは、Windows Server Core コンピューターに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の更新プログラムをインストールする方法について説明します。 常に最新のセキュリティ更新プログラムがインストールされた状態になるように、適切なタイミングで最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを評価してインストールすることをお勧めします。 インストールの詳細については[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Windows Server Core コンピューターで、次を参照してください。 [Server Core での SQL Server 2014 のインストール](install-sql-server-on-server-core.md)します。  
+ ここでは、Windows Server Core コンピューターに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の更新プログラムをインストールする方法について説明します。 常に最新のセキュリティ更新プログラムがインストールされた状態になるように、適切なタイミングで最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを評価してインストールすることをお勧めします。 インストールの詳細については[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Windows Server Core コンピューターで、[Server Core での SQL Server 2014 のインストール](install-sql-server-on-server-core.md)を参照してください。  
   
  製品の更新プログラムをインストールするための 2 つのシナリオを次に示します。  
   

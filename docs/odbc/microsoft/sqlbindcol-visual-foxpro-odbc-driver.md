@@ -30,4 +30,4 @@ ms.locfileid: "47685740"
   
  結果列の記憶域スペースを割り当てるし、結果の型を指定します。 ときに[SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md)または[SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md)が呼び出されると、ドライバーを配置のデータ バインドされたすべての列を割り当てられている場所にします。 参照してください[SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md)の ODBC および Visual FoxPro データ型の間のマッピング。  
   
- 詳細については、次を参照してください。 [SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

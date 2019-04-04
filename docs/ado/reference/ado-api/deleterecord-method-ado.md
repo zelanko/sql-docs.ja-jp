@@ -47,7 +47,7 @@ Record.DeleteRecord Source, Async
  場合は、この**レコード**から取得された、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、この操作の結果はすぐに反映されませんし、**レコード セット**します。 更新、**レコード セット**を閉じてから再度開くこと、または実行することによって、**レコード セット** [Requery](../../../ado/reference/ado-api/requery-method.md)メソッド、 [Update](../../../ado/reference/ado-api/update-method.md)メソッド、または[再同期](../../../ado/reference/ado-api/resync-method.md)メソッド。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  

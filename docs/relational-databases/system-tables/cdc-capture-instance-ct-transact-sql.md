@@ -46,7 +46,7 @@ ms.locfileid: "49336251"
   
 ## <a name="remarks"></a>コメント  
 
-`__$command_id`列が列は、バージョン 2012 2016年からの累積的な更新で導入されました。 バージョンとダウンロードについては、サポート技術情報記事 3030352 を参照して[修正: 変更テーブルは注文が間違って更新の変更データを有効にした後の行は、Microsoft SQL Server データベースのキャプチャ](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)します。  詳細については、次を参照してください。 [for SQL Server 2012、2014、2016、最新の CU へのアップグレード後に CDC の機能が動作](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)します。
+`__$command_id`列が列は、バージョン 2012 2016年からの累積的な更新で導入されました。 バージョンとダウンロードについては、サポート技術情報記事 3030352 を参照して[修正: 変更テーブルは注文が間違って更新の変更データを有効にした後の行は、Microsoft SQL Server データベースのキャプチャ](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)します。  詳細については、[for SQL Server 2012、2014、2016、最新の CU へのアップグレード後に CDC の機能が動作](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)を参照してください。
 
 ## <a name="captured-column-data-types"></a>キャプチャ対象列のデータ型  
  このテーブルに含まれるキャプチャ対象列は、ソースの対応する列と同じデータ型および値を持ちます。ただし、次の例外があります。  

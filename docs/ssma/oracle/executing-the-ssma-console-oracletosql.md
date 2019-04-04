@@ -120,7 +120,7 @@ close-project
   
 -   **参照**コンソールで、UI の機能がサポートされていません。  
   
--   スクリプト ファイルの作成 ' の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)します。  
+-   スクリプト ファイルの作成 ' の詳細については、[スクリプト ファイルの作成&#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)を参照してください。  
   
 **Command**  
   
@@ -742,7 +742,7 @@ convert-sql-statement
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コマンド ライン オプションについては、次を参照してください。 [SSMA コンソールのコマンド ライン オプション&#40;OracleToSQL&#41; ](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)します。  
+コマンド ライン オプションについては、[SSMA コンソールのコマンド ライン オプション&#40;OracleToSQL&#41; ](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)を参照してください。  
   
 サンプルのコンソール スクリプト ファイルについては、次を参照してください[サンプルのコンソール スクリプト ファイルを扱う&#40;OracleToSQL。&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)  
   
@@ -750,7 +750,7 @@ convert-sql-statement
   
 -   パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)します。  
   
--   レポートを生成するため、次を参照してください。[レポートを生成する&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)します。  
+-   レポートを生成するため、[レポートを生成する&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)を参照してください。  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)します。  
+-   コンソールで問題をトラブルシューティングするには、[トラブルシューティング&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)を参照してください。  
   

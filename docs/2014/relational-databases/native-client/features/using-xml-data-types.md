@@ -63,7 +63,7 @@ ms.locfileid: "52406009"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、SAX リーダーは含まれませんが、 **ISequentialStream** msxml SAX、DOM オブジェクトに簡単に渡すことができます。  
   
- **ISequentialStream**大きな XML ドキュメントの取得のために使用をする必要があります。 他の大きな値の型で使用される方法と同じ方法を XML でも使用できます。 詳細については、次を参照してください。[大きな値の型を使用して](using-large-value-types.md)します。  
+ **ISequentialStream**大きな XML ドキュメントの取得のために使用をする必要があります。 他の大きな値の型で使用される方法と同じ方法を XML でも使用できます。 詳細については、[大きな値の型を使用して](using-large-value-types.md)を参照してください。  
   
  行セットの XML 型の列に格納されているデータは、アプリケーションで **IRow::GetColumns**、**IRowChange::SetColumns**、**ICommand::Execute** などの通常のインターフェイスを使用することにより、取得、挿入、または更新することもできます。 同様に取得の場合に、アプリケーション プログラムを渡すことができます、テキスト文字列または**ISequentialStream**を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダー。  
   

@@ -24,7 +24,7 @@ ms.locfileid: "53431945"
 
 既定では、SQL Server セットアップには、ファイアウォール ルールを作成して送信接続が無効にします。
 
-SQL Server 2016 および 2017 では、これらの規則はセットアップがの 1 つの送信規則を作成、ローカル ユーザー アカウントに基づいて**SQLRUserGroup**そのメンバーへのネットワーク アクセスを拒否する (各ワーカー アカウントとして表示されました対象にローカルの原則規則。 SQLRUserGroup の詳細については、次を参照してください。[は、SQL Server Machine Learning Services の機能拡張フレームワークのセキュリティの概要](../../advanced-analytics/concepts/security.md#sqlrusergroup)します。
+SQL Server 2016 および 2017 では、これらの規則はセットアップがの 1 つの送信規則を作成、ローカル ユーザー アカウントに基づいて**SQLRUserGroup**そのメンバーへのネットワーク アクセスを拒否する (各ワーカー アカウントとして表示されました対象にローカルの原則規則。 SQLRUserGroup の詳細については、[は、SQL Server Machine Learning Services の機能拡張フレームワークのセキュリティの概要](../../advanced-analytics/concepts/security.md#sqlrusergroup)を参照してください。
 
 SQL Server の 2019 AppContainers への移行の一部としていくつか AppContainer Sid に基づいて、新しいファイアウォール規則: SQL Server セットアップによって作成された 20 AppContainers ごとに 1 つ。 ファイアウォール規則の名前の名前付け規則は**AppContainer 00 の SQL Server インスタンス MSSQLSERVER でネットワーク アクセスをブロック**00 (00-20 既定)、AppContainer の数には、MSSQLSERVER が、SQL の名前サーバー インスタンスです。
 

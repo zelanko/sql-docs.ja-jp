@@ -30,4 +30,4 @@ ms.locfileid: "47636761"
   
  カーソル名をアクティブなステートメント ハンドルに関連付けます*hstmt*します。 **SQLSetCursorName**のため、Visual FoxPro ODBC ドライバー API には含まコア レベルの ODBC API の機能の一部である。 ドライバーが位置指定更新をサポートしていないためには、その他の API 関数と共に使用することはできません。  
   
- 詳細については、次を参照してください。 [SQLSetCursorName](../../odbc/reference/syntax/sqlsetcursorname-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLSetCursorName](../../odbc/reference/syntax/sqlsetcursorname-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

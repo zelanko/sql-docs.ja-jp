@@ -38,7 +38,7 @@ ms.locfileid: "58375180"
 ## <a name="ddl-statements"></a>DDL ステートメント  
  DDL ステートメントは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] スクリプト言語 (ASSL) のステートメントとして表され、XML for Analysis (XMLA) コマンドで構成されます。  
   
--   ASSL は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス、それに含まれるデータベースやデータベース オブジェクトの定義、および記述に使用されます。 詳細については、次を参照してください。 [Analysis Services スクリプト言語&#40;ASSL&#41;参照](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)します。  
+-   ASSL は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス、それに含まれるデータベースやデータベース オブジェクトの定義、および記述に使用されます。 詳細については、[Analysis Services スクリプト言語&#40;ASSL&#41;参照](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)を参照してください。  
   
 -   XMLA は、Create、Alter、Process などのアクション コマンドを、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに送信する場合に使用されるコマンド言語です。 詳細については、「[XML for Analysis (XMLA) リファレンス](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)」を参照してください。  
   

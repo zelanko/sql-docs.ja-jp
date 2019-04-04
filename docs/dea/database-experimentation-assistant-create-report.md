@@ -66,7 +66,7 @@ No.  現時点では、競合を防ぐには、一度に 1 つのレポートを
     
 ### <a name="can-i-generate-an-analysis-report-by-using-the-command-prompt"></a>コマンド プロンプトを使用して、分析レポートを生成できますか。
     
-可能。 コマンド プロンプトで、分析レポートを生成することができます。 UI で、レポートを表示できます。 詳細については、次を参照してください。[コマンド プロンプトで実行](database-experimentation-assistant-run-command-prompt.md)します。
+可能。 コマンド プロンプトで、分析レポートを生成することができます。 UI で、レポートを表示できます。 詳細については、[コマンド プロンプトで実行](database-experimentation-assistant-run-command-prompt.md)を参照してください。
     
 ## <a name="troubleshoot-analysis-reports"></a>分析レポートをトラブルシューティングします。
 
@@ -110,7 +110,7 @@ DEA にログインしたユーザーによっては、分析サーバーの sys
 
 ## <a name="next-steps"></a>次のステップ
 
-- 分析レポートを表示する方法については、次を参照してください。[レポートを表示する](database-experimentation-assistant-view-report.md)します。
+- 分析レポートを表示する方法については、[レポートを表示する](database-experimentation-assistant-view-report.md)を参照してください。
 
 - DEA とデモンストレーションを 19 分については、次のビデオをご覧ください。
 

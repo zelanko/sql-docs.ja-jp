@@ -34,10 +34,10 @@ ms.locfileid: "48101472"
 |**[説明]**|ディメンションの説明を表示します。|  
 |**[タイムスタンプの作成]**|ディメンションが作成された日時を表示します。|  
 |**[スキーマの最終更新]**|ディメンションのメタデータが最後に更新された日時を表示します。|  
-|**処理モード**|ディメンションに対して使用する処理モードを選択します。 このプロパティの値の詳細については、次を参照してください。<xref:Microsoft.AnalysisServices.Dimension.ProcessingMode%2A>します。|  
-|**State**|ディメンションの処理状態を表示します。 このプロパティの値の詳細については、次を参照してください。<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>します。|  
+|**処理モード**|ディメンションに対して使用する処理モードを選択します。 このプロパティの値の詳細については、<xref:Microsoft.AnalysisServices.Dimension.ProcessingMode%2A>を参照してください。|  
+|**State**|ディメンションの処理状態を表示します。 このプロパティの値の詳細については、<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>を参照してください。|  
 |**最後に処理されました。**|ディメンションが最後に処理された日時を表示します。|  
-|**現在のストレージ モード**|ディメンションの現在のストレージ モードを表示します。 このプロパティの値の詳細については、次を参照してください。<xref:Microsoft.AnalysisServices.Dimension.CurrentStorageMode%2A>します。|  
+|**現在のストレージ モード**|ディメンションの現在のストレージ モードを表示します。 このプロパティの値の詳細については、<xref:Microsoft.AnalysisServices.Dimension.CurrentStorageMode%2A>を参照してください。|  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

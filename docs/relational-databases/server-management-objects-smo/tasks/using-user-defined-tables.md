@@ -35,7 +35,7 @@ ms.locfileid: "47846300"
  <xref:Microsoft.SqlServer.Management.Smo.DataType> クラスは、列やパラメーターに関連付けられたデータ型を指定するために使用します。 この型を使用して、ユーザー定義テーブル型を、ユーザー定義の関数やストアド プロシージャのパラメーターとして指定できます。  
   
 ## <a name="examples"></a>使用例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Visual Basic でのユーザー定義テーブルの作成  

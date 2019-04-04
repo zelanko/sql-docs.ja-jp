@@ -27,7 +27,7 @@ ms.locfileid: "56042953"
 # <a name="xquery-functions-against-the-xml-data-type"></a>xml データ型に対する XQuery 関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  このトピックとサブトピックに対して XQuery を指定するときに使用できる関数を記述、 **xml**データ型。 W3C 仕様では、次を参照してください。 [ http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873)します。  
+  このトピックとサブトピックに対して XQuery を指定するときに使用できる関数を記述、 **xml**データ型。 W3C 仕様では、[ http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873)を参照してください。  
   
  属している XQuery 関数、 http://www.w3.org/2004/07/xpath-functions名前空間。 W3C 仕様では、これらの関数を表すために "fn:" という名前空間プレフィックスを使用しています。 この関数を使用するときに、"fn:" 名前空間プレフィックスを明示的に指定する必要はありません。 名前空間プレフィックスは明示的に指定する必要がないので、ここでは、読みやすさを考慮して名前空間プレフィックスは省略します。  
   

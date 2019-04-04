@@ -140,7 +140,7 @@ close-project
   
 2.  **Windows 認証**と**ポート**パラメーターは、SQL Azure に接続するときは適用されません。  
   
-3.  スクリプト ファイルの作成 ' の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)します。  
+3.  スクリプト ファイルの作成 ' の詳細については、[スクリプト ファイルの作成&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)を参照してください。  
   
 **Command**  
   
@@ -750,7 +750,7 @@ convert-sql-statement
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コマンド ライン オプションについては、次を参照してください。 [SSMA コンソールのコマンド ライン オプション&#40;MySQLToSQL&#41; ](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)します。  
+コマンド ライン オプションについては、[SSMA コンソールのコマンド ライン オプション&#40;MySQLToSQL&#41; ](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)を参照してください。  
   
 サンプルのコンソール スクリプト ファイルの詳細については、次を参照してください[サンプルのコンソール スクリプト ファイルを扱う&#40;MySQLToSQL。&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)  
   
@@ -758,7 +758,7 @@ convert-sql-statement
   
 1.  パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)します。  
   
-2.  レポートを生成するため、次を参照してください。[レポートを生成する&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)します。  
+2.  レポートを生成するため、[レポートを生成する&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)を参照してください。  
   
-3.  コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)します。  
+3.  コンソールで問題をトラブルシューティングするには、[トラブルシューティング&#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)を参照してください。  
   

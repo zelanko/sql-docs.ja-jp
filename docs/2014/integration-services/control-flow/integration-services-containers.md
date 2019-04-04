@@ -83,7 +83,7 @@ ms.locfileid: "58385445"
  コンテナーには実行可能ファイルおよび優先順位制約で構成される制御フローが含まれ、場合によってはイベント ハンドラーおよび変数が使用されています。 ただし、タスク ホスト コンテナーは単一タスクをカプセル化し、優先順位制約を使用しない、例外的なコンテナーです。  
   
 ### <a name="executables"></a>実行可能ファイル  
- 実行可能ファイルは、コンテナー レベルのタスクおよびコンテナー内の任意のコンテナーを参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供するタスクおよびコンテナーのいずれか、またはカスタム タスクを実行ファイルとすることができます。 詳細については、次を参照してください。 [Integration Services タスク](integration-services-tasks.md)と[Integration Services コンテナー](integration-services-containers.md)します。  
+ 実行可能ファイルは、コンテナー レベルのタスクおよびコンテナー内の任意のコンテナーを参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供するタスクおよびコンテナーのいずれか、またはカスタム タスクを実行ファイルとすることができます。 詳細については、[Integration Services タスク](integration-services-tasks.md)と[Integration Services コンテナー](integration-services-containers.md)を参照してください。  
   
 ### <a name="precedence-constraints"></a>優先順位制約  
  優先順位制約は、同じ親コンテナー内のコンテナーとタスクを連結して、順序付けられた制御フローを作成します。 詳細については、「 [優先順位制約](precedence-constraints.md)」を参照してください。  

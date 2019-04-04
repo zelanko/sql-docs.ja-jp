@@ -30,8 +30,8 @@ ms.locfileid: "47795130"
   
 |属性名|型|説明|  
 |--------------------|----------|-----------------|  
-|SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|SQL_SS_PARAM_FOCUS の詳細については、次を参照してください。 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)します。|  
-|SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|SQL_SS_NAME_SCOPE の詳細については、次を参照してください。 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)します。|  
+|SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|SQL_SS_PARAM_FOCUS の詳細については、[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を参照してください。|  
+|SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|SQL_SS_NAME_SCOPE の詳細については、[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を参照してください。|  
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  

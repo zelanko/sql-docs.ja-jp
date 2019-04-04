@@ -31,7 +31,7 @@ ms.locfileid: "47644240"
 
   関連付けられたセマンティック インデックスを持つ各テーブルの類似性インデックスごとに、ドキュメント類似性インデックスの作成に関する 1 行の状態情報を返します。  
   
- 作成の処理は、抽出の処理に続いて行われます。 類似性の抽出手順の状態については、次を参照してください。 [sys.dm_fts_index_population &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)します。  
+ 作成の処理は、抽出の処理に続いて行われます。 類似性の抽出手順の状態については、[sys.dm_fts_index_population &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)を参照してください。  
     
 ||||  
 |-|-|-|  
@@ -50,7 +50,7 @@ ms.locfileid: "47644240"
 |**incremental_timestamp**|**timestamp**|完全設定の開始タイムスタンプ。 他の作成の種類の場合、この値は作成の進行状況を表す、最後にコミットされたチェックポイントの値になります。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 詳細については、次を参照してください。[モニター セマンティック検索の管理と](../../relational-databases/search/manage-and-monitor-semantic-search.md)します。  
+ 詳細については、[モニター セマンティック検索の管理と](../../relational-databases/search/manage-and-monitor-semantic-search.md)を参照してください。  
   
 ## <a name="metadata"></a>メタデータ  
  セマンティック インデックス作成の状態に関する詳細については、クエリ[sys.dm_fts_index_population &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)します。  

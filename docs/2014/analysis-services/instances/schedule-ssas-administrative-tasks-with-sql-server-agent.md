@@ -28,7 +28,7 @@ ms.locfileid: "53350869"
 ## <a name="prerequisites"></a>前提条件  
  SQL Server エージェント サービスがインストールされている必要があります。  
   
- 既定では、ジョブはサービス アカウントで実行されます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、SQL Server エージェントの既定のアカウントは NT service \sqlagent$\<instancename > です。 バックアップまたは処理タスクを実行するには、このアカウントが Analysis Services インスタンスのシステム管理者である必要があります。 詳細については、次を参照してください。[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)します。  
+ 既定では、ジョブはサービス アカウントで実行されます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、SQL Server エージェントの既定のアカウントは NT service \sqlagent$\<instancename > です。 バックアップまたは処理タスクを実行するには、このアカウントが Analysis Services インスタンスのシステム管理者である必要があります。 詳細については、[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)を参照してください。  
   
  操作対象のテスト データベースも必要です。 AdventureWorks 多次元サンプル データベースまたはプロジェクトを Analysis Services 多次元チュートリアルから配置して、このチュートリアルで使用できます。 詳細については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../install-sample-data-and-projects.md)」を参照してください。  
   

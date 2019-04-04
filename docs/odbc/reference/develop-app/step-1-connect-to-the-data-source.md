@@ -27,10 +27,10 @@ ms.locfileid: "47600900"
   
  ![ODBC アプリケーションのデータ ソースに接続する](../../../odbc/reference/develop-app/media/pr11.gif "pr11")  
   
- ドライバー マネージャーの読み込みし、使用して、環境ハンドルを割り当てるには、まずデータ ソースへの接続で**SQLAllocHandle**します。 詳細については、次を参照してください。[環境ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)します。  
+ ドライバー マネージャーの読み込みし、使用して、環境ハンドルを割り当てるには、まずデータ ソースへの接続で**SQLAllocHandle**します。 詳細については、[環境ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)を参照してください。  
   
- その後、アプリケーションを呼び出すことによって、準拠している ODBC のバージョンを登録します**SQLSetEnvAttr** SQL_ATTR_APP_ODBC_VER 環境属性を持つ。 詳細については、次を参照してください。[アプリケーションの ODBC バージョンを宣言する](../../../odbc/reference/develop-app/declaring-the-application-s-odbc-version.md)と[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。  
+ その後、アプリケーションを呼び出すことによって、準拠している ODBC のバージョンを登録します**SQLSetEnvAttr** SQL_ATTR_APP_ODBC_VER 環境属性を持つ。 詳細については、[アプリケーションの ODBC バージョンを宣言する](../../../odbc/reference/develop-app/declaring-the-application-s-odbc-version.md)と[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)を参照してください。  
   
- 次に、アプリケーションと接続ハンドルを割り当てます**SQLAllocHandle**でデータ ソースに接続し、 **SQLConnect**、 **SQLDriverConnect**、または**SQLBrowseConnect**します。 詳細については、次を参照してください。[接続ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md)と[接続を確立する](../../../odbc/reference/develop-app/establishing-a-connection.md)します。  
+ 次に、アプリケーションと接続ハンドルを割り当てます**SQLAllocHandle**でデータ ソースに接続し、 **SQLConnect**、 **SQLDriverConnect**、または**SQLBrowseConnect**します。 詳細については、[接続ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md)と[接続を確立する](../../../odbc/reference/develop-app/establishing-a-connection.md)を参照してください。  
   
- その後、アプリケーションでは、手動でトランザクションをコミットするかどうかなど、任意の接続属性を設定します。 詳細については、次を参照してください。[接続属性](../../../odbc/reference/develop-app/connection-attributes.md)します。
+ その後、アプリケーションでは、手動でトランザクションをコミットするかどうかなど、任意の接続属性を設定します。 詳細については、[接続属性](../../../odbc/reference/develop-app/connection-attributes.md)を参照してください。

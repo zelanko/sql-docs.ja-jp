@@ -81,4 +81,4 @@ ms.locfileid: "58860513"
 
 ## <a name="next-steps"></a>次のステップ
 
-Azure Data Studio で notebook の詳細については、次を参照してください。 [SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。
+Azure Data Studio で notebook の詳細については、[SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)を参照してください。

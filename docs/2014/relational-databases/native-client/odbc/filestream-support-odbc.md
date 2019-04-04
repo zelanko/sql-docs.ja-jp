@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48111140"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM のサポート (ODBC)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC では、強化された FILESTREAM 機能がサポートされています。 この機能の詳細については、次を参照してください。 [FILESTREAM のサポート](../features/filestream-support.md)します。 FILESTREAM の ODB サポートを示すサンプルについては、次を参照してください。[送信し、FILESTREAM のときは、データの受信増分&#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)します。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC では、強化された FILESTREAM 機能がサポートされています。 この機能の詳細については、[FILESTREAM のサポート](../features/filestream-support.md)を参照してください。 FILESTREAM の ODB サポートを示すサンプルについては、[送信し、FILESTREAM のときは、データの受信増分&#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)を参照してください。  
   
  送受信`varbinary(max)`2 GB より大きい値では、アプリケーションする必要がありますパラメーターを使用してバインドを SQLBindParameter *ColumnSize*に設定`SQL_SS_LENGTH_UNLIMITED`のコンテンツを設定および*StrLen_or_IndPtr*に`SQL_DATA_AT_EXEC`SQLExecDirect または SQLExecute する前にします。  
   

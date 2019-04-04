@@ -45,9 +45,9 @@ ms.locfileid: "58512989"
 
 5. クエリを実行し、作成したプロシージャは、オブジェクトを使用します。
 
-チュートリアルについては、次を参照してください。[外部の R と Python スクリプト用のリソース プールを作成する方法](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)詳しい手順についてはします。
+チュートリアルについては、[外部の R と Python スクリプト用のリソース プールを作成する方法](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)詳しい手順についてはを参照してください。
 
-用語と一般的な概念の概要については、次を参照してください。[リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)します。
+用語と一般的な概念の概要については、[リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)を参照してください。
 
 ## <a name="processes-under-resource-governance"></a>プロセスでリソース ガバナンス
   

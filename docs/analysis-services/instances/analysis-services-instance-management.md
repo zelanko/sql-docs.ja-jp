@@ -19,7 +19,7 @@ ms.locfileid: "57579072"
 # <a name="sql-server-analysis-services-server-management"></a>SQL Server Analysis Services サーバーの管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
-Azure Analysis Services では、次を参照してください。 [Azure Analysis Services の管理](https://docs.microsoft.com/azure/analysis-services/analysis-services-manage)します。
+Azure Analysis Services では、[Azure Analysis Services の管理](https://docs.microsoft.com/azure/analysis-services/analysis-services-manage)を参照してください。
 
 ## <a name="instances"></a>インスタンス
 

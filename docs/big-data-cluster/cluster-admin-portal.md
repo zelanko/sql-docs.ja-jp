@@ -114,6 +114,6 @@ Spark のエンドポイント、Grafana ダッシュ ボードへのリンク�
 
 ## <a name="next-steps"></a>次のステップ
 
-だけでなく、クラスターの管理ポータルの状態や、クラスターの正常性を調べるいくつかの便利な Kubernetes コマンドを実行することもできます。 詳細については、次を参照してください。[監視とトラブルシューティングのビッグ データの SQL Server クラスターの Kubectl コマンド](cluster-troubleshooting-commands.md)します。
+だけでなく、クラスターの管理ポータルの状態や、クラスターの正常性を調べるいくつかの便利な Kubernetes コマンドを実行することもできます。 詳細については、[監視とトラブルシューティングのビッグ データの SQL Server クラスターの Kubectl コマンド](cluster-troubleshooting-commands.md)を参照してください。
 
 SQL Server 2019 ビッグ データ クラスターに関する詳細についてを参照してください。 [SQL Server 2019 ビッグ データ クラスターは?](big-data-cluster-overview.md)します。

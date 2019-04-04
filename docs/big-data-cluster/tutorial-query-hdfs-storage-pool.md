@@ -30,7 +30,7 @@ ms.locfileid: "58860053"
 > * マスター インスタンスで価値の高いデータを持つこのデータを結合します。
 
 > [!TIP]
-> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、次を参照してください。、[データ仮想化のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)GitHub でします。
+> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、、[データ仮想化のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)GitHub でを参照してください。
 
 ## <a id="prereqs"></a> 前提条件
 
@@ -44,7 +44,7 @@ ms.locfileid: "58860053"
 
 記憶域プールには、HDFS に格納されている CSV ファイルでは、web クリック ストリーム データが含まれています。 次の手順を使用すると、そのファイル内のデータにアクセスできる外部テーブルを定義します。
 
-1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、次を参照してください。 [master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)します。
+1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、[master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)を参照してください。
 
 1. 内の接続をダブルクリックして、**サーバー**ウィンドウに SQL Server のマスター インスタンスのサーバー ダッシュ ボードを表示します。 選択**新しいクエリ**します。
 

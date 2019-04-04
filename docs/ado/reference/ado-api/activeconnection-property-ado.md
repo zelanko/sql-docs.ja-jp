@@ -66,7 +66,7 @@ ms.locfileid: "47684340"
  A**接続**オブジェクトが暗黙的に作成されるときに、**レコード**オブジェクトは、URL から開きます。 開く、**レコード**開き、既存の**接続**オブジェクトを割り当てることによって、**接続**オブジェクトをこのプロパティは、またはを使用して、 **の接続**オブジェクト内のパラメーターとして、[オープン](../../../ado/reference/ado-api/open-method-ado-record.md)メソッドの呼び出し。 場合、**レコード**を既存の開いた**レコード**または[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)が自動的に関連付けられている**レコード**または**レコード セット**オブジェクトの**接続**オブジェクト。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
   

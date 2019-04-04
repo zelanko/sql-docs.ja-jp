@@ -29,7 +29,7 @@ ms.locfileid: "47784910"
   SMO では、<xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> プロパティによって参照される <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> オブジェクトで、データベース メール サブシステムを表現します。 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> オブジェクトを使用すると、データベース メール サブシステムを構成して、プロファイルおよびメール アカウントを管理することができます。 SMO<xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>オブジェクトに属している、 **Server**オブジェクト、つまり、メール アカウントのスコープがサーバー レベルであります。  
   
 ## <a name="examples"></a>使用例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
   
  プログラムを使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]含める必要があります、データベース メール、 **Imports** Mail 名前空間を修飾するステートメント。 アプリケーションの宣言の前、かつ他の **Imports** ステートメントの後に、次のようにステートメントを挿入します。  
   

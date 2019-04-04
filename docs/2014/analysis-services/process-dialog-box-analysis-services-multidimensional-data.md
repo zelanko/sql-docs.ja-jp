@@ -44,7 +44,7 @@ ms.locfileid: "48074542"
  処理するオブジェクトの種類を表示します。  
   
  **[処理オプション]**  
- 選択されたオブジェクトに対して実行する処理の種類を選択します。 使用可能な処理オプションの詳細については、次を参照してください。[多次元モデル オブジェクトの処理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)します。  
+ 選択されたオブジェクトに対して実行する処理の種類を選択します。 使用可能な処理オプションの詳細については、[多次元モデル オブジェクトの処理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)を参照してください。  
   
  **[設定]**  
  キューブ、メジャー グループ、またはパーティションの **[処理オプション]** で **[増分処理]** を選択するときに、 **[構成]** ハイパーリンクを表示します。 **[構成]** をクリックし、 **[増分更新]** ダイアログ ボックスを表示します。 **[増分更新]** ダイアログ ボックスの詳細については、[「[増分更新] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  

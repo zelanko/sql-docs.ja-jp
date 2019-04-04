@@ -27,6 +27,6 @@ ms.locfileid: "47763890"
   
  ![行の数のフェッチ](../../../odbc/reference/develop-app/media/pr15.gif "pr15")  
   
- 手順 3 で実行されるステートメントの場合、 **UPDATE**、**削除**、または**挿入**ステートメントでは、アプリケーションに影響を受けた行の数を取得します**SQLRowCount**します。 詳細については、次を参照してください。[の影響を受ける行の数を決定する](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md)します。  
+ 手順 3 で実行されるステートメントの場合、 **UPDATE**、**削除**、または**挿入**ステートメントでは、アプリケーションに影響を受けた行の数を取得します**SQLRowCount**します。 詳細については、[の影響を受ける行の数を決定する](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md)を参照してください。  
   
  アプリケーションは、同じトランザクション内で別のステートメントを実行する 3 ステップに戻るようになりましたかコミットするか、トランザクションをロールバックするために 5 のステップに進みます。

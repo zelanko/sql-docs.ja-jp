@@ -60,7 +60,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**article_resolver**|**nvarchar (255)**|アーティクルのカスタム競合回避モジュール。|  
 |**subset_filterclause**|**nvarchar(1000)**|水平方向のフィルター処理を指定する WHERE 句です。|  
 |**pre_creation_command**|**tinyint**|事前作成メソッドは、次のいずれかを指定できます。<br /><br /> **0** = なし<br /><br /> **1**ドロップを =<br /><br /> **2** = delete<br /><br /> **3** = truncate|  
-|**schema_option**|**binary(8)**|アーティクルに対するスキーマ生成オプションのビットマップです。 このビットマップ オプションについては、次を参照してください。 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)または[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)します。|  
+|**schema_option**|**binary(8)**|アーティクルに対するスキーマ生成オプションのビットマップです。 このビットマップ オプションについては、[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)または[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を参照してください。|  
 |**type**|**smallint**|アーティクルの種類。次のいずれかの値になります。<br /><br /> **10** = テーブル<br /><br /> **32**ストアド プロシージャを =<br /><br /> **64** = ビューまたはインデックス付きビュー<br /><br /> **128** = ユーザー定義関数<br /><br /> **160** = シノニム スキーマのみ|  
 |**column_tracking**|**int**|列レベルの追跡の設定場所**1**列レベルの追跡が、上にあることを意味し、 **0**列レベルの追跡がオフであることを意味します。|  
 |**resolver_info**|**nvarchar (255)**|アーティクルの競合回避モジュールの名前。|  
@@ -74,7 +74,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**destination_object**|**sysname**|対象オブジェクトの名前です。 ストアド プロシージャ、ビュー、および UDF スキーマ アーティクルをマージするときのみ適用されます。|  
 |**allow_interactive_resolver**|**int**|アーティクルで、インタラクティブ競合回避モジュールを使用する場合場所**1**この競合回避モジュールを使用することを意味し、 **0**使用しないことを意味します。|  
 |**fast_multicol_updateproc**|**int**|有効または、1 つの UPDATE ステートメントで同じ行で複数の列に変更を適用するマージ エージェントを無効にします。場所**1** 1 つのステートメントで複数の列が更新されることを意味し、 **0** UPDATE ステートメントを分離する手段が更新される各列の問題。|  
-|**check_permissions**|**int**|確認されるテーブル レベル権限のビットマップを表す整数値。 使用可能な値の一覧は、次を参照してください。 [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)します。|  
+|**check_permissions**|**int**|確認されるテーブル レベル権限のビットマップを表す整数値。 使用可能な値の一覧は、[sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を参照してください。|  
 |**processing_order**|**int**|データ変更は、パブリケーションのアーティクルに適用する順序。|  
 |**upload_options**|**tinyint**|次の値のいずれかのクライアント サブスクリプションを使用したサブスクライバーで行われる更新の制限を定義します。<br /><br /> **0** = クライアント サブスクリプションを使用したサブスクライバーで行われる更新に制限はありません。 すべての変更がパブリッシャーにアップロードされます。<br /><br /> **1** = 変更は、クライアント サブスクリプションを使用したサブスクライバーで許可されますが、パブリッシャーにはアップロードされません。<br /><br /> **2** = クライアント サブスクリプションを使用したサブスクライバーでの変更は許可されません。<br /><br /> 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。|  
 |**identityrangemanagementoption**|**int**|自動 id 範囲処理が有効の場合場所**1**を有効にし、 **0**は無効です。|  

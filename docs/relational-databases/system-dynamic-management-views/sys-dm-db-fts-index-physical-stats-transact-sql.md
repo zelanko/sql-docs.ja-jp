@@ -42,7 +42,7 @@ ms.locfileid: "47763720"
 |**similarity_index_page_count**|**bigint**|インデックス ページの数で表された、抽出の論理サイズ。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 詳細については、次を参照してください。[モニター セマンティック検索の管理と](../../relational-databases/search/manage-and-monitor-semantic-search.md)します。  
+ 詳細については、[モニター セマンティック検索の管理と](../../relational-databases/search/manage-and-monitor-semantic-search.md)を参照してください。  
   
 ## <a name="metadata"></a>メタデータ  
  セマンティック インデックス作成の状態の詳細については、次の動的管理ビューに対してクエリを実行してください。  

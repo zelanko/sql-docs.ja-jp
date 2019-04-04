@@ -38,4 +38,4 @@ ms.locfileid: "47716040"
 SELECT `My Table`.`Field1`, `My Table`.`Field2` FROM `My Table`  
 ```  
   
- 詳細については、次を参照してください。 [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

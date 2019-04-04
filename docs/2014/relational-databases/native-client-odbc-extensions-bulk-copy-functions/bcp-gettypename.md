@@ -113,7 +113,7 @@ fIsMaxType
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename による機能強化された日付と時刻のサポート  
  内のテーブルの「sqlncli.h の型」列の日付/時刻型のトークンのパラメーターの値が説明されている[強化された日付と時刻型向けの一括コピーの変更&#40;OLE DB および ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)します。 返される値は、対応する行の "ファイル ストレージ型" 列に示されています。  
   
- 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
+ 詳細については、[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](sql-server-driver-extensions-bulk-copy-functions.md)  

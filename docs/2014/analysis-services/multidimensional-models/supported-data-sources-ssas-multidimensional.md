@@ -47,7 +47,7 @@ ms.locfileid: "53349746"
   
  <sup>1</sup>多次元ソリューションの ODBC データ ソースはサポートされていません。 Analysis Services 自体が接続を処理しますが、MSDASQL ドライバーを使用している場合でも、ソリューションの作成に使用される [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] のデザイナーは ODBC データ ソースには接続できません。 ビジネス要件に ODBC データ ソースが含まれている場合は、代わりに表形式のソリューションを作成することを検討してください。  
   
- <sup>2</sup>詳細については、次を参照してください。[!INCLUDE[ssSDS](../../includes/sssds-md.md)]の[azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856)します。  
+ <sup>2</sup>詳細については、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]の[azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856)を参照してください。  
   
  <sup>3</sup>の詳細については[!INCLUDE[ssSDS](../../includes/sssds-md.md)]PDW を参照してください[SQL Server 並列データ ウェアハウス](https://go.microsoft.com/fwlink/?LinkId=150895)します。  
   

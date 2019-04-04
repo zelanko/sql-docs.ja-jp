@@ -23,14 +23,14 @@ ms.locfileid: "58657907"
 
 、可用性グループ (AG) のコンテキスト内でプライマリ ロールとセカンダリ ロールの可用性レプリカは通常、フェールオーバーと呼ばれるプロセスで交換されることです。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および " *強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータを保持します。 AG は、可用性レプリカのレベルでフェールオーバーします。 つまり、AG はそのセカンダリ レプリカ (現在のフェールオーバー ターゲット) のいずれかにフェールオーバーします。 
 
-フェールオーバーの背景については、次を参照してください。[フェールオーバーとフェールオーバー モード](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)します。
+フェールオーバーの背景については、[フェールオーバーとフェールオーバー モード](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)を参照してください。
 
 ## <a name="failover"></a>手動フェールオーバー
 
 クラスターの管理ツールを使用して、外部のクラスター マネージャーによって管理されている AG をフェールオーバーする場合します。 たとえば、ソリューションでは、Linux クラスターを管理する Pacemaker を使用している場合を使用して`pcs`RHEL または Ubuntu での手動フェールオーバーを実行します。 SLES を使用して`crm`します。 
 
 > [!IMPORTANT]
-> 通常の操作では、失敗しない経由で SSMS または PowerShell のような TRANSACT-SQL または SQL Server の管理ツールを使用します。 ときに`CLUSTER_TYPE = EXTERNAL`にのみ使用できる値`FAILOVER_MODE`は`EXTERNAL`します。 これらの設定では、すべての手動または自動フェールオーバー アクションは、外部のクラスター マネージャーで実行されます。 データ損失のフェールオーバーを強制する手順については、次を参照してください。[を強制的にフェールオーバー](#forceFailover)します。
+> 通常の操作では、失敗しない経由で SSMS または PowerShell のような TRANSACT-SQL または SQL Server の管理ツールを使用します。 ときに`CLUSTER_TYPE = EXTERNAL`にのみ使用できる値`FAILOVER_MODE`は`EXTERNAL`します。 これらの設定では、すべての手動または自動フェールオーバー アクションは、外部のクラスター マネージャーで実行されます。 データ損失のフェールオーバーを強制する手順については、[を強制的にフェールオーバー](#forceFailover)を参照してください。
 
 ### <a name="a-namemanualfailovermanual-failover-steps"></a><a name="manualFailover">手動のフェールオーバー手順
 

@@ -30,4 +30,4 @@ ms.locfileid: "47677270"
   
  いずれかのデータ ソースに接続を[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリまたは[テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)します。 Visual FoxPro ODBC ドライバーは無視されます、 *szUID*、 *cbUID*、 *szAuthStr*、および*cbAuthStr*引数。  
   
- 詳細については、次を参照してください。 [SQLConnect](../../odbc/reference/syntax/sqlconnect-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLConnect](../../odbc/reference/syntax/sqlconnect-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

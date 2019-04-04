@@ -210,7 +210,7 @@ GO
 次の例を使用するストアド プロシージャを作成する**sp_execute_external_script**を虹彩のモデルを生成し、モデルを返す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
 
 > [!NOTE]
->  この例では、e1071 パッケージの事前インストールが必要です。 詳細については、次を参照してください。 [SQL Server に追加の R パッケージをインストール](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md)します。
+>  この例では、e1071 パッケージの事前インストールが必要です。 詳細については、[SQL Server に追加の R パッケージをインストール](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md)を参照してください。
 
 ```sql
 DROP PROC IF EXISTS generate_iris_model;

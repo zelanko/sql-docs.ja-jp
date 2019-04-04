@@ -75,7 +75,7 @@ SSMA が選択されている Oracle データベースのオブジェクトを�
   
     -   SSMA で Oracle の構文を更新します。 プロシージャ、関数、トリガー、関数をパッケージおよびパッケージ化されたプロシージャの構文を更新することができます。 構文を更新するには、Oracle メタデータ エクスプ ローラー ペインで、オブジェクトを選択 をクリックして、 **SQL**タブをクリックし、SQL コードを変更します。 項目から移動するときに、更新された構文を保存する促されます。 オブジェクトの報告されたエラーを表示することができます、**レポート**タブ。  
   
-    -   Oracle では、削除または問題のあるコードを変更するには Oracle のオブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [Oracle データベースに接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)します。  
+    -   Oracle では、削除または問題のあるコードを変更するには Oracle のオブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、[Oracle データベースに接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)を参照してください。  
   
     -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーと Oracle メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と Oracle からデータを移行します。  
   

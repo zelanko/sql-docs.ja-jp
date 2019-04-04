@@ -31,7 +31,7 @@ ms.locfileid: "48054192"
   
  ネイティブ モードで実行されているレポート サーバーの場合、接続するレポート サーバー インスタンスを指定します。 既定のインスタンスを使用する場合、サーバー名はコンピューターの名前であるのが一般的です。 名前付きインスタンスをインストールする場合は、次の形式でサーバー名にインスタンス名を追加: \<servername >\\< InstanceName\>します。 Reporting Services では、円記号を使用してインスタンス名を区切ります。  
   
- SharePoint 統合モードで実行されているレポート サーバーの場合、SharePoint サイトを指定する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]と統合されているサイト コレクション内の任意のサイトを指定できます。 指定する URL には、HTTP プレフィックスまたは HTTPS プレフィックスを含める必要があります。 Management Studio で SharePoint サイトに接続するには、SharePoint サイトにアクセスする権限が必要です。 割り当てられている権限レベルによって、表示および管理できるアイテムが決まります。 詳細については、次を参照してください。 [Management Studio でのレポート サーバーへの接続](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)します。  
+ SharePoint 統合モードで実行されているレポート サーバーの場合、SharePoint サイトを指定する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]と統合されているサイト コレクション内の任意のサイトを指定できます。 指定する URL には、HTTP プレフィックスまたは HTTPS プレフィックスを含める必要があります。 Management Studio で SharePoint サイトに接続するには、SharePoint サイトにアクセスする権限が必要です。 割り当てられている権限レベルによって、表示および管理できるアイテムが決まります。 詳細については、[Management Studio でのレポート サーバーへの接続](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)を参照してください。  
   
  **[認証]**  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を、指定したカスタム認証拡張機能によって処理する Windows 認証要求またはフォーム認証要求を受け入れるように構成できます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]に接続する際に、次のいずれかの認証モードを選択します。  

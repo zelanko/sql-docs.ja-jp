@@ -27,7 +27,7 @@ ms.locfileid: "53369064"
   
 -   既定では、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]更新のログ ファイルは %program Files % に保存されます\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップでは、更新プログラムと元のメディアを統合して、元のメディアと更新プログラムを同時に実行できるようになりました。 詳細については、次を参照してください。 [SQL Server のインストールで新](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップでは、更新プログラムと元のメディアを統合して、元のメディアと更新プログラムを同時に実行できるようになりました。 詳細については、[SQL Server のインストールで新](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)を参照してください。  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サービス更新プログラムを適用する前に、データのバックアップを検討することをお勧めします。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "53369064"
   
 -   Lll の文字の省略形、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などの言語。英語の場合は LLL は ENU です。  
   
- フェールオーバー クラスターに含まれる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] コンポーネントに更新プログラムを適用するには、フェールオーバー クラスターのインストールに関するセクションを参照してください。 無人モードで更新プログラムのインストールを実行する方法の詳細については、次を参照してください。[コマンド プロンプトから SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)します。  
+ フェールオーバー クラスターに含まれる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] コンポーネントに更新プログラムを適用するには、フェールオーバー クラスターのインストールに関するセクションを参照してください。 無人モードで更新プログラムのインストールを実行する方法の詳細については、[コマンド プロンプトから SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)を参照してください。  
   
 ####  <a name="Slipstream"></a> 製品の更新プログラム[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インストール  
  製品の更新プログラムは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップの機能です。 セットアップでは、メインの製品と使用可能な更新プログラムが同時にインストールされるように、最新の製品の更新プログラムとメインの製品のインストールを統合できます。 製品の更新プログラムは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Update、Windows Server Update Services (WSUS)、ローカル フォルダー、またはネットワーク共有を検索して、適切な更新プログラムを探します。  セットアップで最新バージョンの適用可能な更新プログラムが検出されると、ダウンロードが実行されて、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ プロセスと統合されます。 製品の更新プログラムは、累積更新プログラム、サービス パック、またはサービス パックと累積更新プログラムに取り込むことができます。 製品の更新プログラム機能は、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1 で提供されていたスリップストリーム機能を拡張したものです。  

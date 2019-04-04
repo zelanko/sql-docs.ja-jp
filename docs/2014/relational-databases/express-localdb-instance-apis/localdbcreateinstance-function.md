@@ -102,7 +102,7 @@ HRESULT LocalDBCreateInstance(
   
  既存のインスタンスが破損した場合、`LocalDBCreateInstance` API メソッドのそれ以降の呼び出しは失敗します。 破損したインスタンスは、手動で修正するか明示的に削除しないと、再度使用できるようになりません。  
   
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
+ LocalDB API を使用するコード サンプルは、[SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

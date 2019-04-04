@@ -197,7 +197,7 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 
 ## <a id="customcontainer"></a> カスタマイズされたコンテナーを作成します。
 
-独自に作成することは[Dockerfile](https://docs.docker.com/engine/reference/builder/#usage)カスタマイズされた SQL Server のコンテナーを作成します。 詳細については、次を参照してください。[を SQL Server および Node アプリケーションを組み合わせたデモ](https://github.com/twright-msft/mssql-node-docker-demo-app)します。 独自の Dockerfile を作成する場合は、このプロセスは、コンテナーの有効期間を制御するため、フォア グラウンド プロセスでは、注意します。 セッションを終了する場合に、コンテナーはシャット ダウンします。 たとえば、スクリプトを実行し、SQL Server を起動する場合は、ことを SQL Server プロセスが、右端のコマンドであることを確認します。 その他のすべてのコマンドは、バック グラウンドで実行されます。 これは、Dockerfile 内の次のコマンドに示します。
+独自に作成することは[Dockerfile](https://docs.docker.com/engine/reference/builder/#usage)カスタマイズされた SQL Server のコンテナーを作成します。 詳細については、[を SQL Server および Node アプリケーションを組み合わせたデモ](https://github.com/twright-msft/mssql-node-docker-demo-app)を参照してください。 独自の Dockerfile を作成する場合は、このプロセスは、コンテナーの有効期間を制御するため、フォア グラウンド プロセスでは、注意します。 セッションを終了する場合に、コンテナーはシャット ダウンします。 たとえば、スクリプトを実行し、SQL Server を起動する場合は、ことを SQL Server プロセスが、右端のコマンドであることを確認します。 その他のすべてのコマンドは、バック グラウンドで実行されます。 これは、Dockerfile 内の次のコマンドに示します。
 
 ```bash
 /usr/src/app/do-my-sql-commands.sh & /opt/mssql/bin/sqlservr
@@ -292,7 +292,7 @@ docker volume ls
 
 ### <a name="backup-and-restore"></a>バックアップと復元
 
-これらのコンテナー テクノロジだけでなくも標準の SQL Server のバックアップを使用し、復元の手法ことができます。 または別の SQL Server インスタンスにデータを移動するデータを保護するバックアップ ファイルを使用することができます。 詳細については、次を参照してください。 [Linux 上のデータベースを SQL Server のバックアップと復元](sql-server-linux-backup-and-restore-database.md)します。
+これらのコンテナー テクノロジだけでなくも標準の SQL Server のバックアップを使用し、復元の手法ことができます。 または別の SQL Server インスタンスにデータを移動するデータを保護するバックアップ ファイルを使用することができます。 詳細については、[Linux 上のデータベースを SQL Server のバックアップと復元](sql-server-linux-backup-and-restore-database.md)を参照してください。
 
 > [!WARNING]
 > バックアップを作成する場合は、作成またはコンテナーの外部でバックアップ ファイルをコピーすることを確認してください。 それ以外の場合、コンテナーが削除された場合、バックアップ ファイルも削除されます。

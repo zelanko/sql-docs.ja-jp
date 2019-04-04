@@ -58,9 +58,9 @@ ms.locfileid: "47625850"
 |yield_count|**int**|スケジューラの進行状況を示すために使用される内部値。 この値は、スケジューラ モニターで、このスケジューラのワーカーが予定どおりに他のワーカーに変更されるかどうかを確認するために使用されます。 ワーカーまたはタスクが新しいワーカーに移行するわけではありません。 NULL 値は許可されません。|  
 |last_timer_activity|**bigint**|前回、スケジューラのタイマー キューがスケジューラにより確認された時間 (CPU ティック単位)。 NULL 値は許可されません。|  
 |failed_to_create_worker|**bit**|スケジューラで新しいワーカーを作成できなかった場合は 1 になります。 これは通常、メモリ制約が原因で発生します。 NULL 値が許可されます。|  
-|active_worker_address|**varbinary(8)**|現在アクティブなワーカーのメモリ アドレス。 NULL 値が許可されます。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)します。|  
+|active_worker_address|**varbinary(8)**|現在アクティブなワーカーのメモリ アドレス。 NULL 値が許可されます。 詳細については、[sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)を参照してください。|  
 |memory_object_address|**varbinary(8)**|スケジューラのメモリ オブジェクトのメモリ アドレス。 Null を許容しません。|  
-|task_memory_object_address|**varbinary(8)**|タスクのメモリ オブジェクトのメモリ アドレス。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)します。|  
+|task_memory_object_address|**varbinary(8)**|タスクのメモリ オブジェクトのメモリ アドレス。 NULL 値は許可されません。 詳細については、[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)を参照してください。|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]SQLOS によって使用されるスケジューラ クォンタムを公開します。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
@@ -143,7 +143,7 @@ active_workers_count work_queue_count
  次のクエリでは、負荷が高い表示スケジューラの状態を示します。このスケジューラでは、利用可能なワーカーの処理数を上回る要求が存在します。 この例では、256 のワーカーにタスクが割り当てられており、 一部のタスクはワーカーへの割り当てを待機中です。 実行可能なタスクの数が少ないということは、複数のタスクがリソースの待機中であることを意味します。  
   
 > [!NOTE]  
->  sys.dm_os_workers でクエリを実行すると、ワーカーの状態を確認できます。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)します。  
+>  sys.dm_os_workers でクエリを実行すると、ワーカーの状態を確認できます。 詳細については、[sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)を参照してください。  
   
  クエリを次に示します。  
   

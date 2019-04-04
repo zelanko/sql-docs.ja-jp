@@ -78,7 +78,7 @@ SEMANTICSIMILARITYTABLE
 |**score**|**REAL**|類似した他のすべてのドキュメントとの関係における、このドキュメントの類似性の相対値。<br /><br /> 値の範囲内の小数値は、[0.0, 1.0] より高いスコアより近い一致を表す、1.0 は完全なスコアです。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 詳細については、次を参照してください。[類似および関連ドキュメント セマンティック検索による](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)します。  
+ 詳細については、[類似および関連ドキュメント セマンティック検索による](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)を参照してください。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  複数の列にわたって類似したドキュメントに対するクエリを実行することはできません。 **SEMANTICSIMILARITYTABLE**関数により識別されるソース列と同じ列から類似したドキュメントのみを取得、 **source_key**引数。  

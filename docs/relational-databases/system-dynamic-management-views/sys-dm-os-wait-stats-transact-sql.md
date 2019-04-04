@@ -38,7 +38,7 @@ ms.locfileid: "52886887"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar(60)**|待機の種類の名前。 詳細については、次を参照してください。[待機の種類](#WaitTypes)、このトピックで後述します。|  
+|wait_type|**nvarchar(60)**|待機の種類の名前。 詳細については、[待機の種類](#WaitTypes)、このトピックで後述を参照してください。|  
 |waiting_tasks_count|**bigint**|この待機の種類における待機の数。 このカウンターは、待機が開始するたび増加します。|  
 |wait_time_ms|**bigint**|この待機の種類 (ミリ秒単位) の合計待機時間。 この時間には signal_wait_time_ms が含まれます。|  
 |max_wait_time_ms|**bigint**|この待機の種類における最大待機時間。|  
@@ -1011,7 +1011,7 @@ GO
 |XTPPROC_PARTITIONED_STACK_CREATE |特定のプロシージャ (する必要があります単一スレッド) ストアド プロシージャのキャッシュ構造 NUMA ノードごとの割り当てをネイティブでコンパイルされたときに発生します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|
 
   
- 次の Xevent は、パーティションに関連する**スイッチ**とオンライン インデックス再構築します。 構文については、次を参照してください。 [ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)と[ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)します。  
+ 次の Xevent は、パーティションに関連する**スイッチ**とオンライン インデックス再構築します。 構文については、[ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)と[ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)を参照してください。  
   
 -   lock_request_priority_state  
   

@@ -40,7 +40,7 @@ ms.locfileid: "47792720"
 |Visual FoxPro ODBC ドライバー属性のキーワード|属性値|  
 |-------------------------------------------------|---------------------|  
 |BackgroundFetch|"Yes"または"No"|  
-|[部単位で印刷]|「コンピューター」またはその他の照合順序。 サポートされている照合順序の一覧は、次を参照してください。 [COLLATE 設定](../../odbc/microsoft/set-collate-command.md)します。|  
+|[部単位で印刷]|「コンピューター」またはその他の照合順序。 サポートされている照合順序の一覧は、[COLLATE 設定](../../odbc/microsoft/set-collate-command.md)を参照してください。|  
 |説明||  
 |[Exclusive]|"Yes"または"No"|  
 |SourceDB|0 個以上完全修飾パスを含むディレクトリ[テーブルを無料](../../odbc/microsoft/visual-foxpro-terminology.md)、またはの絶対パスとファイル名、[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)します。|  
@@ -49,4 +49,4 @@ ms.locfileid: "47792720"
   
  ドライバー マネージャーをデータ ソース名が指定されていない場合については、ユーザー メッセージが表示されます (の設定に応じて、 *fDriverCompletion*引数) し続行します。 詳細については、必要なは、Visual FoxPro ODBC ドライバーはプロンプト ダイアログを表示します。  
   
- 詳細については、次を参照してください。 [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、[SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。

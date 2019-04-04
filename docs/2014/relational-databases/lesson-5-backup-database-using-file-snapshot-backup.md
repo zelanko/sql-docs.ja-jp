@@ -19,7 +19,7 @@ ms.lasthandoff: 03/27/2019
 ms.locfileid: "58534684"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>レッスン 6: ソースからデータベースの移行のターゲット コンピューターに Windows Azure にオンプレミスのマシン
-  このレッスンでは、別の内部設置型コンピューターまたは Windows Azure 仮想マシンに存在している別の SQL Server が既にあるものと仮定します。 Windows Azure で SQL Server の仮想マシンを作成する方法については、次を参照してください。 [Windows Azure で SQL Server 仮想マシンのプロビジョニング](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)します。 Windows Azure で SQL Server 仮想マシンを準備した後、別のコンピューターの SQL Server Management Studio 経由でこの仮想マシンの SQL Server インスタンスに接続できることを確認します。  
+  このレッスンでは、別の内部設置型コンピューターまたは Windows Azure 仮想マシンに存在している別の SQL Server が既にあるものと仮定します。 Windows Azure で SQL Server の仮想マシンを作成する方法については、[Windows Azure で SQL Server 仮想マシンのプロビジョニング](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)を参照してください。 Windows Azure で SQL Server 仮想マシンを準備した後、別のコンピューターの SQL Server Management Studio 経由でこの仮想マシンの SQL Server インスタンスに接続できることを確認します。  
   
  このレッスンは、次の手順を完了済みであることも前提としています。  
   

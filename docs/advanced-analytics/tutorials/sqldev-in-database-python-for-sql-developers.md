@@ -25,7 +25,7 @@ ms.locfileid: "58511689"
 このチュートリアルで使用する Python コードのすべては、作成して、Management Studio で実行するストアド プロシージャにラップされます。
 
 > [!NOTE]
-> このチュートリアルは、R と Python の両方で使用できます。 R のバージョンについては、次を参照してください。 [in-database analytics R 開発者向け](sqldev-in-database-r-for-sql-developers.md)します。
+> このチュートリアルは、R と Python の両方で使用できます。 R のバージョンについては、[in-database analytics R 開発者向け](sqldev-in-database-r-for-sql-developers.md)を参照してください。
 
 ## <a name="overview"></a>概要
 

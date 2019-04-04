@@ -55,7 +55,7 @@ ms.locfileid: "48135052"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] を使用しているときに DBPROPVAL_TI_SNAPSHOT を設定すると、エラー DB_S_ERRORSOCCURRED または DB_E_ERRORSOCCURRED が発生します。  
   
- トランザクションでスナップショット分離をサポートする方法については、次を参照してください。[ローカル トランザクションをサポートしている](../../native-client-ole-db-transactions/transactions.md)します。  
+ トランザクションでスナップショット分離をサポートする方法については、[ローカル トランザクションをサポートしている](../../native-client-ole-db-transactions/transactions.md)を参照してください。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーがただし強化に対するスナップショット分離のサポートを提供、 [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)と[SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md)関数。  
@@ -66,7 +66,7 @@ ms.locfileid: "48135052"
 ### <a name="sqlgetinfo"></a>SQLGetInfo  
  [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md)関数ようになりましたが、SQL_TXN_ISOLATION_OPTION 情報型に追加された SQL_TXN_SS_SNAPSHOT 値。  
   
- トランザクションでスナップショット分離をサポートする方法については、次を参照してください。[カーソルのトランザクション分離レベル](../../native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)します。  
+ トランザクションでスナップショット分離をサポートする方法については、[カーソルのトランザクション分離レベル](../../native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](sql-server-native-client-features.md)   

@@ -34,7 +34,7 @@ ms.locfileid: "47714900"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|\<列を継承 >||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
+|\<列を継承 >||このビューが継承する列の一覧は、[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)を参照してください。|  
 |**is_replicated**|**bit**|1 = ビューはレプリケートされます。|  
 |**has_replication_filter**|**bit**|1 = ビューにレプリケーション フィルターがあります。|  
 |**has_opaque_metadata**|**bit**|1 = ビューに VIEW_METADATA オプションが指定されています。 詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。|  

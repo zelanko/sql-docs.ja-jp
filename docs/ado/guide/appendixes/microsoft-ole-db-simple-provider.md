@@ -137,7 +137,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   XMLDSO を各 $Text のデータの追加の列を追加します**Recordset**階層にします。
 
- OLE DB 単純なプロバイダーの詳細については、次を参照してください。[単純なプロバイダーを構築](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)します。
+ OLE DB 単純なプロバイダーの詳細については、[単純なプロバイダーを構築](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)を参照してください。
 
 ## <a name="code-example"></a>コード例
  Visual Basic コードを次に示します、階層を構築する任意の XML ファイルを開く**レコード セット**、およびそれぞれの各レコードの書き込みを再帰的に**レコード セット**デバッグ ウィンドウにします。

@@ -118,7 +118,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  **Sp_trace_create**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントでは、トレース ファイル フォルダーに対する書き込み権限が必要です。 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントが管理者でないトレース ファイルが配置されているコンピューターでは、書き込みアクセス許可を明示的に付与する必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウント。  
   
 > [!NOTE]  
->  作成されたトレース ファイルを自動的に読み込むことができます**sp_trace_create**を使用してテーブルに、 **fn_trace_gettable**システム関数。 このシステム関数を使用する方法については、次を参照してください。 [sys.fn_trace_gettable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)します。  
+>  作成されたトレース ファイルを自動的に読み込むことができます**sp_trace_create**を使用してテーブルに、 **fn_trace_gettable**システム関数。 このシステム関数を使用する方法については、[sys.fn_trace_gettable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)を参照してください。  
   
  トレース ストアド プロシージャを使用した例については、「[トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)」を参照してください。  
   

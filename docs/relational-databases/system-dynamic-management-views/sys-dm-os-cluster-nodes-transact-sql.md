@@ -36,7 +36,7 @@ ms.locfileid: "51677192"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (仮想サーバー) 構成内のノードの名前。|  
-|status|**int**|内のノードの状態、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス: 0、1、2、3、-1。 詳細については、次を参照してください。 [GetClusterNodeState 関数](https://go.microsoft.com/fwlink/?LinkId=204794)します。|  
+|status|**int**|内のノードの状態、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス: 0、1、2、3、-1。 詳細については、[GetClusterNodeState 関数](https://go.microsoft.com/fwlink/?LinkId=204794)を参照してください。|  
 |status_description|**nvarchar(20)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター ノードの状態の説明。<br /><br /> 0 = up<br /><br /> 1 = down<br /><br /> 2 = 一時停止<br /><br /> 3 = joining<br /><br /> -1 = unknown|  
 |is_current_owner|bit|1 は、このノードが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター リソースの現在の所有者であることを意味します。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  

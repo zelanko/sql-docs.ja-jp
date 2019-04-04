@@ -44,7 +44,7 @@ ms.locfileid: "47836991"
  SMO では、証明書がによって表される、<xref:Microsoft.SqlServer.Management.Smo.Certificate>オブジェクト。 <xref:Microsoft.SqlServer.Management.Smo.Certificate>オブジェクトが、公開キー、サブジェクト名、有効期間、および発行者に関する情報を指定するプロパティ。 証明書にアクセスする権限は、 **Grant**メソッド、 **Revoke** メソッド、および **Deny** メソッドを使用して制御されます。  
   
 ## <a name="example"></a>例  
- 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>Visual C# での証明書の追加  
  コード例では、暗号化パスワードを持つ簡単な証明書を作成します。 その他のオブジェクトとは異なり、<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A>メソッドが複数のオーバー ロードします。 この例で使用するオーバーロードは、暗号化パスワードを持つ新しい証明書を作成しています。  

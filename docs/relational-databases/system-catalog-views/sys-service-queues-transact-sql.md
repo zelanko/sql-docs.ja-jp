@@ -34,7 +34,7 @@ ms.locfileid: "47762910"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<列を継承 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
+|**\<列を継承 >**||このビューが継承する列の一覧は、[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)を参照してください。|  
 |**max_readers**|**smallint**|キューで許可される同時読み取りの最大数です。|  
 |**activation_procedure**|**nvarchar(776)**|3 つの要素で構成されるアクティブ化プロシージャの名前です。|  
 |**execute_as_principal_id**|**int**|EXECUTE AS データベース プリンシパルの ID です。<br /><br /> 既定値または EXECUTE AS CALLER の場合は、NULL になります。<br /><br /> 指定したプリンシパルの ID AS SELF EXECUTE AS の実行\<プリンシパル >。<br /><br /> -2 = EXECUTE AS OWNER。|  

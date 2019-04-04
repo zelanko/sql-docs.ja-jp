@@ -84,7 +84,7 @@ BxlServer は、次のタスクに SQL サテライトを使用します。
 
 SQL サテライトは、SQL Server と外部スクリプト言語間の高速データ転送に最適化されたカスタム データ形式を使用します。 型変換を実行し、SQL Server と外部スクリプトのランタイム間の通信中に入力と出力データセットのスキーマを定義します。
 
-SQL サテライトは、windows の拡張イベント (Xevent) を使用して監視できます。 詳細については、次を参照してください。 [R の拡張イベント](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)と[Python の拡張イベント](../../advanced-analytics/python/extended-events-for-python.md)します。
+SQL サテライトは、windows の拡張イベント (Xevent) を使用して監視できます。 詳細については、[R の拡張イベント](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)と[Python の拡張イベント](../../advanced-analytics/python/extended-events-for-python.md)を参照してください。
 
 ## <a name="communication-channels-between-components"></a>コンポーネント間の通信チャネル
 

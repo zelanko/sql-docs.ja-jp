@@ -148,7 +148,7 @@ SQL Server のコンテキストでカスタム R 関数を実行するには、
 
 + SQL Server は、machine learning と R 統合用に構成する必要があります。[SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) R 機能を使用または[SQL Server 2016 R Services (In-database)](../install/sql-r-services-windows-install.md)します。
 
-+ 関数で、すべての依存関係を含む使用されるオープン ソースまたはサードパーティ製のライブラリは、SQL Server にインストールする必要があります。 詳細については、次を参照してください。[新しい R パッケージをインストール](../r/install-additional-r-packages-on-sql-server.md)します。
++ 関数で、すべての依存関係を含む使用されるオープン ソースまたはサードパーティ製のライブラリは、SQL Server にインストールする必要があります。 詳細については、[新しい R パッケージをインストール](../r/install-additional-r-packages-on-sql-server.md)を参照してください。
 
 + スクリプトを開発環境から運用環境のセキュリティを強化した環境に移行と、ファイアウォールとネットワークの制限が生じる場合があります。 スクリプトが期待どおりに実行できるかどうかを確認するには、慎重にテストします。
 

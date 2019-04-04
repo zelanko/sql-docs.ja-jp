@@ -28,6 +28,6 @@ Visual FoxPro ODBC ドライバーでは、スレッド セーフです。 環�
   
  マルチ スレッド アプリケーションで同期的に実行している関数を取り消すことができます、 *hstmt*呼び出して[SQLCancel](../../odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver.md)別のスレッドでします。  
   
- ドライバーは、プログレッシブのフェッチを使用する場合は、データをフェッチするのに別のスレッドを使用します。 データ ソースのプログレッシブ フェッチを使用する、**バック グラウンドでデータをフェッチ**チェック ボックスをオン、 [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)BackgroundFetch 属性キーワードを使用して、接続または文字列。 マルチ スレッド アプリケーションからドライバーを呼び出すときに background fetch を使用しないでください。 接続文字列キーワードの属性については、次を参照してください。[接続文字列を使用して](../../odbc/microsoft/using-connection-strings.md)します。  
+ ドライバーは、プログレッシブのフェッチを使用する場合は、データをフェッチするのに別のスレッドを使用します。 データ ソースのプログレッシブ フェッチを使用する、**バック グラウンドでデータをフェッチ**チェック ボックスをオン、 [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)BackgroundFetch 属性キーワードを使用して、接続または文字列。 マルチ スレッド アプリケーションからドライバーを呼び出すときに background fetch を使用しないでください。 接続文字列キーワードの属性については、[接続文字列を使用して](../../odbc/microsoft/using-connection-strings.md)を参照してください。  
   
  スレッドの詳細については、 **SQLCancel**を参照してください[SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md)で、 *ODBC プログラマ リファレンス*します。

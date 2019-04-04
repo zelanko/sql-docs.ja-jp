@@ -46,7 +46,7 @@ sp_OADestroy objecttoken
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0、失敗した場合は OLE オートメーション オブジェクトによって返される HRESULT の 0 以外の整数値を返します。  
   
- HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
+ HRESULT のリターン コードの詳細については、[OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)を参照してください。  
   
 ## <a name="remarks"></a>コメント  
  場合**sp_OADestroy**が呼び出されない、作成した OLE オブジェクトは、バッチの最後に自動的に破棄されます。  
