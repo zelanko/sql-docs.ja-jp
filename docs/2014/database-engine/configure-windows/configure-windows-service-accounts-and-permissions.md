@@ -272,7 +272,7 @@ ms.locfileid: "54131632"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー|DRU_CTLR、CTLRSVCACCOUNT、CTLRSVCPASSWORD、CTLRSTARTUPTYPE、CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアント|DRU_CLT、CLTSVCACCOUNT、CLTSVCPASSWORD、CLTSTARTUPTYPE、CLTCTLRNAME、CLTWORKINGDIR、CLTRESULTDIR|  
   
- <sup>1</sup>詳細および無人インストール用のサンプル構文については、次を参照してください。[コマンド プロンプトから SQL Server 2014 のインストール](../install-windows/install-sql-server-from-the-command-prompt.md)します。  
+ <sup>1</sup>詳細および無人インストール用のサンプル構文については、[コマンド プロンプトから SQL Server 2014 のインストール](../install-windows/install-sql-server-from-the-command-prompt.md)を参照してください。  
   
  <sup>2</sup>、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスでエージェント サービスが無効になっている[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]と[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]with Advanced Services。  
   

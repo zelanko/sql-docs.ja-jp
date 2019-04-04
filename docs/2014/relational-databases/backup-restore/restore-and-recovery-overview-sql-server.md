@@ -42,7 +42,7 @@ ms.locfileid: "53370194"
   
      完全復旧モデルまたは一括ログ復旧モデルでは、個々のデータベースを復元できます。 ページ復元は、ファイル グループの数に関係なく、どのデータベースでも実行できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元は、64 ビット システムか 32 ビット システムかに関係なく、サポートされるすべてのオペレーティング システムで機能します。 サポートされるオペレーティング システムについては、次を参照してください。 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)します。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのバックアップに対するサポートの情報については、「 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」の「互換性サポート」のセクションを参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元は、64 ビット システムか 32 ビット システムかに関係なく、サポートされるすべてのオペレーティング システムで機能します。 サポートされるオペレーティング システムについては、[Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)を参照してください。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのバックアップに対するサポートの情報については、「 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」の「互換性サポート」のセクションを参照してください。  
   
  **このトピックの内容**  
   

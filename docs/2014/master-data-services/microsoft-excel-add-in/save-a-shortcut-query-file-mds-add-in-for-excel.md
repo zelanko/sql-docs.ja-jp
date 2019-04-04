@@ -23,7 +23,7 @@ ms.locfileid: "52768174"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   アクティブなワークシートに、必要な形式の MDS によって管理されるデータが含まれている必要があります。 たとえば、列が必要な順序で、任意のフィルターが適用された状態で表示されている必要があります。 詳細については、次を参照してください。[読み込み前にデータのフィルター選択&#40;MDS アドインの Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md)と[列を並べ替える&#40;MDS アドインの Excel&#41;](reorder-columns-mds-add-in-for-excel.md)します。  
+-   アクティブなワークシートに、必要な形式の MDS によって管理されるデータが含まれている必要があります。 たとえば、列が必要な順序で、任意のフィルターが適用された状態で表示されている必要があります。 詳細については、[読み込み前にデータのフィルター選択&#40;MDS アドインの Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md)と[列を並べ替える&#40;MDS アドインの Excel&#41;](reorder-columns-mds-add-in-for-excel.md)を参照してください。  
   
 ### <a name="to-save-a-shortcut-query-file"></a>ショートカット クエリ ファイルを保存するには  
   

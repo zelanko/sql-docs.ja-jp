@@ -49,7 +49,7 @@ ODBC では、アプリケーション変数とその対応する型識別子で
   
  アプリケーションを呼び出す ODBC 3.8 のコンプライアンス レベルを指定する[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)属性を設定する、SQL_ATTR_ODBC_VERSION に**SQL_OV_ODBC3_80**します。 ドライバーのバージョンを確認するには、アプリケーションが呼び出す**SQLGetInfo** SQL_DRIVER_ODBC_VER とします。  
   
- ODBC 3.8 の詳細については、次を参照してください。[で ODBC 3.8 新](../../../odbc/reference/what-s-new-in-odbc-3-8.md)します。  
+ ODBC 3.8 の詳細については、[で ODBC 3.8 新](../../../odbc/reference/what-s-new-in-odbc-3-8.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [C データ型](../../../odbc/reference/appendixes/c-data-types.md)
