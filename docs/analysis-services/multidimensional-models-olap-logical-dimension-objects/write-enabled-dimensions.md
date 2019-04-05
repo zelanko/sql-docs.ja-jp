@@ -1,5 +1,5 @@
 ---
-title: 書き込み許可ディメンション |Microsoft ドキュメント
+title: 書き込み許可ディメンション |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23f2fff5a78be0dad52f674a8d23c1922a86391c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4baa8b1fa57acde99439584483381f84f7a8d5c4
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023324"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042261"
 ---
 # <a name="write-enabled-dimensions"></a>書き込み許可ディメンション
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34023324"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- ディメンション内のデータは通常、読み取り専用です。 ただし、シナリオによってはディメンションに書き込み許可を設定する必要が生じます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、書き込み許可ディメンションにより、ビジネス ユーザーが、ディメンションの内容を変更し、ディメンションの階層に対する変更の直接的な影響を参照してください。 1 つのテーブルに基づいているすべてのディメンションへの書き込みを許可できます。 書き込み許可ディメンションでは、ビジネス ユーザーと管理者は、ディメンション内の属性メンバーの変更、移動、追加、および削除を行うことができます。 これらの更新プログラムと呼びます*ディメンションの書き戻し*です。  
+ ディメンション内のデータは通常、読み取り専用です。 ただし、シナリオによってはディメンションに書き込み許可を設定する必要が生じます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、書き込み許可ディメンションにより、ビジネス ユーザーは、ディメンションの内容を変更し、ディメンションの階層の変更の即時の結果を参照してください。 1 つのテーブルに基づいているすべてのディメンションへの書き込みを許可できます。 書き込み許可ディメンションでは、ビジネス ユーザーと管理者は、ディメンション内の属性メンバーの変更、移動、追加、および削除を行うことができます。 これらの更新プログラムと総称*ディメンションの書き戻し*します。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、すべてのディメンション属性に対するディメンションの書き戻しがサポートされており、ディメンションのすべてのメンバーを変更できます。 書き込み許可キューブや書き込み許可パーティションでは、更新はキューブのソース テーブルとは別に、書き戻しテーブルに格納されます。 ただし、書き込み許可ディメンションでは、更新はディメンションのテーブルに直接記録されます。 また、書き込み許可ディメンションが複数パーティションのキューブに含まれており、そのデータ ソースの一部またはすべてにディメンション テーブルのコピーがあると、書き戻しプロセスでは元のディメンション テーブルだけが更新されます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サポート ディメンションの書き戻しをすべてのディメンション属性およびディメンションのメンバーを変更することがあります。 書き込み許可キューブや書き込み許可パーティションでは、更新はキューブのソース テーブルとは別に、書き戻しテーブルに格納されます。 ただし、書き込み許可ディメンションでは、更新はディメンションのテーブルに直接記録されます。 また、書き込み許可ディメンションが複数パーティションのキューブに含まれており、そのデータ ソースの一部またはすべてにディメンション テーブルのコピーがあると、書き戻しプロセスでは元のディメンション テーブルだけが更新されます。  
   
  書き込み許可ディメンションと書き込み許可キューブは、互いに異なりますが補完的な特徴を備えています。 書き込み許可ディメンションでは、ビジネス ユーザーはメンバーを更新できますが、書き込み許可キューブではセル値を更新できます。 これらの 2 つの機能は補完的なものですが、両方を組み合わせて使用する必要はありません。 ディメンションの書き戻しを行うために、ディメンションがキューブに含まれている必要はありません。 書き込み許可ディメンションは、書き込みが許可されていないキューブに含めることもできます。 ディメンションとキューブの書き込みを許可するときと、そのセキュリティをメンテナンスするときには、異なる手順を使用します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "34023324"
   
  書き戻しディメンションの既存のすべてのメンバーを変更または削除できます。 メンバーを削除すると、子のメンバーもすべて連鎖的に削除されます。 たとえば、CountryRegion、Province、City、および Customer 属性を含む Customer ディメンションで、国または地域を削除すると、その国または地域に属する都道府県、市町村、および顧客もすべて削除されます。 国または地域に都道府県が 1 つしか含まれていない場合、その都道府県を削除すると、国または地域も削除されます。  
   
- 書き戻しディメンションのメンバーは、同じレベル内でのみ移動できます。 たとえば、市町村は別の国または地域、あるいは都道府県の City レベルに移動できますが、Province レベルまたは CountryRegion レベルには移動できません。 親子階層のすべてのメンバーがリーフ メンバー、したがってメンバー可能性がありますに移動する任意のレベル以外の場合、 **(すべて)** レベル。  
+ 書き戻しディメンションのメンバーは、同じレベル内でのみ移動できます。 たとえば、市町村は別の国または地域、あるいは都道府県の City レベルに移動できますが、Province レベルまたは CountryRegion レベルには移動できません。 親子階層のすべてのメンバーがリーフ メンバー、したがってメンバー可能性がありますに移動する任意のレベル以外の **(すべて)** レベル。  
   
  親子階層のメンバーを削除すると、メンバーの子はメンバーの親に移動します。 削除するメンバーに対してはリレーショナル テーブルの更新権限が必要ですが、移動するメンバーに対しては権限は必要ありません。 アプリケーションで親子階層内のメンバーを移動するときは、メンバーの子孫をメンバーと共に移動するか、メンバーの親に移動するかを UPDATE 操作で指定できます。 親子階層内のメンバーを再帰的に削除するには、そのメンバーとメンバーのすべての子孫に対するリレーショナル テーブルの更新権限が必要です。  
   
@@ -54,8 +54,8 @@ ms.locfileid: "34023324"
  管理者ロールに含まれているユーザーとグループは、書き込み許可ディメンションがキューブに含まれていなくても、その書き込み許可ディメンションの属性メンバーを更新できます。  
   
 ## <a name="see-also"></a>参照  
- [データベース ディメンションのプロパティ](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
+ [データベース ディメンション プロパティ](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [書き込み許可パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [ディメンションと #40 です。Analysis Services - 多次元データ & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [ディメンション &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

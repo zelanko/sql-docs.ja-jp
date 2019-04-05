@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e84fc2a6032e5886c4d82d630dc36a5bde338ed1
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: d3db11a8ace49a206ffaff106814e87b64948cce
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044508"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042361"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux
 
@@ -31,8 +31,8 @@ Fci のフェールオーバーは、Windows Server フェールオーバー ク
 
 フェールオーバーする方法は、Linux ディストリビューションによって異なります。 Linux ディストリビューションの手順を実行します。
 
-- [RHEL または Ubuntu](#rhelFailover)
-- [SLES](#slesFailover)
+- [RHEL または Ubuntu](#-manual-failover-rhel-or-ubuntu)
+- [SLES](#-manual-failover-sles)
 
 ## <a name = "#rhelFailover"></a> 手動フェールオーバー (RHEL または Ubuntu)
 

@@ -3,19 +3,19 @@ title: T-SQL - SQL Server Machine Learning の"Hello World"基本的な R コー
 description: SQL Server で R スクリプトのクイック スタートです。 Hello world の演習では、sp_execute_external_script のシステム ストアド プロシージャを使用して R スクリプトを呼び出すことの基礎について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7517b9ab18c7448014e8c9113430b2c21047f972
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 1ec9580a533e51b7e99ea0ac34c1d322a27da452
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046909"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042281"
 ---
-# <a name="quickstart-hello-world-r-script-in-sql-server"></a>クイック スタート:SQL Server で R スクリプトの"hello world" 
+# <a name="quickstart-hello-world-r-script-in-sql-server"></a>クイック スタート: SQL Server で R スクリプトの"hello world" 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このクイック スタートでを"Hello World"R を実行して、主要な概念スクリプト inT SQL の概要を学習します、 **sp_execute_external_script**システム ストアド プロシージャ。 
@@ -43,12 +43,13 @@ SQL Database での R コードを実行する 2 つの方法はあります。
     b <- 2
     c <- a/b
     d <- a*b
-    print(c, d)'
+    print(c(c, d))'
+    '
     ```
 
 2. すべての正しい結果正しくセットアップがある場合が計算され、R と`print`関数に結果を返す、**メッセージ**ウィンドウ。
 
-    **結果**
+    **[結果]**
 
     ```text
     STDOUT message(s) from external script: 
@@ -79,15 +80,15 @@ GO
 + *@input_data_1* データ フレームとして SQL Server へデータを返す R ランタイムに渡される、クエリによってデータが返されます。
 + 句の結果セット列名として"Hello World"を追加する、SQL Server の返されたデータ テーブルのスキーマを定義します**int**データ型。
 
-**結果**
+**[結果]**
 
 | ハローワールド |
 |-------------|
 | 1 |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで、複数の単純な R スクリプトを実行すると、入力と出力の構成について詳しく見てを実行します。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:入力と出力を処理します。](quickstart-r-inputs-and-outputs.md)
+> [クイック スタート: 入力と出力の処理](quickstart-r-inputs-and-outputs.md)
