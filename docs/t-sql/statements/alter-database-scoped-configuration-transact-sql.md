@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 85e4ceb8c70d6aa11ac37a8b3e8fd28c997c03dc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974391"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493784"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -43,11 +43,12 @@ ms.locfileid: "57974391"
 - データベース レベルで ID キャッシュを有効または無効にします。
 - バッチが初めてコンパイルされるとき、コンパイルしたプラン スタブのキャッシュ保存を有効または無効にします。
 - ネイティブ コンパイル T-SQL モジュールの実行統計コレクションを有効または無効にします。
-- ONLINE= 構文に対応している DDL ステートメントの既定のオプションでオンラインの有効/無効を変更します。
-- RESUMABLE= 構文に対応している DDL ステートメントの既定のオプションで再開可能性の有効/無効を変更します。
-- グローバル一時テーブルの自動削除機能を有効または無効にします。 
+- `ONLINE =` 構文に対応している DDL ステートメントの既定のオプションでオンラインの有効/無効を変更します。
+- `RESUMABLE =` 構文に対応している DDL ステートメントの既定のオプションで再開可能の有効/無効を変更します。
+- グローバル一時テーブルの自動削除機能を有効または無効にします。
 - [インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の機能を有効または無効にします。
 - [軽量クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)を有効または無効にします。
+- 新しい `String or binary data would be truncated` のエラー メッセージを有効または無効にします。
 
 ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -83,6 +84,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | DEFERRED_COMPILATION_TV = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
+    | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
 }
 ```
 
@@ -185,11 +187,11 @@ BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
 
-データベースの互換性レベル 150 以上を維持しながら、データベース範囲で T-SQL スカラー UDF のインライン化を有効または無効にできます。 T-SQL スカラー UDF のインライン化は、[インテリジェント クエリの処理](../../relational-databases/performance/intelligent-query-processing.md)機能ファミリの一部の機能です。
+データベースの互換性レベル 150 以上を維持しながら、データベース範囲で T-SQL スカラー UDF のインライン化を有効または無効にできます。 T-SQL スカラー UDF のインライン化は、[インテリジェント クエリの処理](../../relational-databases/performance/intelligent-query-processing.md)機能ファミリの一部です。
 
-> [!NOTE] 
+> [!NOTE]
 > データベース互換性レベルが 140 以下である場合は、このデータベース スコープの構成に影響がありません。
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
@@ -291,6 +293,20 @@ LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
 [軽量クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)を有効または無効にできます。 軽量クエリ プロファイリング インフラストラクチャ (LWP) は、標準のプロファイリング メカニズムよりも効率的にクエリのパフォーマンス データを提供するもので、既定で有効になっています。
+
+VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
+
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+
+新しい `String or binary data would be truncated` のエラー メッセージの有効と無効が切り替えられるようになります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、次のシナリオに対してより具体的な新しいエラー メッセージ (2628) が導入されています。  
+
+`String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
+
+データベース互換性レベルが 150 の状態で ON に設定すると、切り捨てエラーにより、詳しいコンテキストを提供し、トラブルシューティングのプロセスを簡略化する新しいエラー メッセージ 2628 が発生します。
+
+データベース互換性レベルが 150 の状態で OFF に設定すると、切り捨てエラーにより前のエラー メッセージ 8152 が発生します。
+
+データベース互換性レベルが 140 以下の場合、エラー メッセージ 2628 はオプトインのエラー メッセージとして残ります。このエラー メッセージでは[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 を有効にする必要があり、このデータベース スコープ構成に影響がありません。
 
 ## <a name="Permissions"></a> Permissions
 

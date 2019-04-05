@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 684df573eba24e9e0337f33f17b8507523b199e3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 39be659b50c7cc068c3887a0c0139b312c46cf0b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699439"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657986"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -30,12 +30,12 @@ ms.locfileid: "51699439"
 
 このページでは、概要情報と、SQL Server 2016 の各 SQL Server コンポーネントの新機能に関する詳細情報へのリンクを提供します。 
 
-![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
+![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **SQL Server 2016 をお試しください。** 
 - **無料の** [**SQL Server 2016 Developer edition**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers) をダウンロードしてください。
 - 最新バージョンの [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) をダウンロードします。 
-- Azure アカウントをすでにお持ちですか? [SQL Server 2016 がインストール済みの仮想マシン](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)をすぐにご利用いただけます。
+- Azure アカウントをすでにお持ちですか? [SQL Server 2016 がインストール済みの仮想マシン](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)をすぐにご利用いただけます。
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 データベース エンジン
 - SQL Server のインストールおよびセットアップ時に、**複数の tempDB** データベース ファイルを構成できます。
@@ -49,9 +49,9 @@ ms.locfileid: "51699439"
     - 最大テーブル 2 TB をサポートしています (256 GB 以上)。 
     - 並べ替えと Always On 可用性グループのサポートに対する列ストア インデックスの機能強化があります。
 - 新しいセキュリティ機能
-    - **Always Encrypted:** 有効にすると、暗号化キーを持つアプリケーションのみが、SQL Server 2016 データベースの暗号化された機微なデータにアクセスにできます。 キーが SQL Server に渡されることはありません。
-    - **動的データ マスク:** テーブル定義で指定されている場合、マスクされたデータはほとんどのユーザーには非表示となり、UNMASK アクセス許可を持つユーザーのみがすべてのデータを参照できます。
-    - **行レベル セキュリティ:** データ アクセスをデータベース エンジン レベルで制限できるため、ユーザーは自分に関係するもののみを参照します。 
+    - **Always Encrypted:** 有効にすると、暗号化キーを持つアプリケーションのみが、SQL Server 2016 データベースの暗号化された機密データにアクセスにできます。 キーが SQL Server に渡されることはありません。
+    - **動的なデータ マスク:** テーブル定義で指定されている場合、マスクされたデータはほとんどのユーザーには非表示となり、UNMASK アクセス許可を持つユーザーのみがすべてのデータを参照できます。
+    - **行レベル セキュリティ:** データ アクセスをデータベース エンジン レベルで制限できるため、ユーザーは自分に関係するもののみを参照できます。 
 
 [データベース エンジン](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)に関する記事を参照してください。
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)

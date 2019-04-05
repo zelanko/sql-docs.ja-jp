@@ -12,14 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6f5eeb47852da17222c8c749bf7c83c1435ccf5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a34c835fe87edb3acf8e6bb64f262a090cc92806
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680260"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478137"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -38,7 +39,7 @@ ms.locfileid: "47680260"
 ### <a name="prerequisites"></a>Prerequisites
 
 
-- 「 [クイック スタート: SQL Server の拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」で説明されている拡張イベントの基本について一般的に理解していること。
+- 次に説明されている拡張イベントの基本について一般的に理解していること。「[クイック スタート: SQL Server 拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」を参照してください。
 
 
 - 頻繁に更新される SQL Server Management Studio (SSMS.exe) ユーティリティの最近のバージョンをインストールしてあること。 詳細については、次の項目を参照してください。

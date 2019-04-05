@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2017 の各エディションとサポートされている機能 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/11/2017
+ms.date: 03/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: db8b22746702fa0df86478dadee700938cd63c40
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: d43593a5c95a77ef6cbd692a07305a46c77e7e07
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974501"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566501"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 の各エディションとサポートされている機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -74,12 +74,14 @@ ms.locfileid: "57974501"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|定義|  
 |---------------------------------------|----------------|  
-|Enterprise|プレミアム製品である [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition は、非常に優れたパフォーマンス、無制限の仮想化、およびエンド ツー エンドのビジネス インテリジェンスを備えた包括的なハイエンド データセンター機能を提供することで、ミッション クリティカルなワークロードのための高水準のサービス レベルを実現し、エンド ユーザーがデータの意味を理解できるようにします。|  
+|Enterprise|プレミアム製品である [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition は、非常に優れたパフォーマンス、無制限の仮想化<sup>1</sup>、およびエンド ツー エンドのビジネス インテリジェンスを備えた包括的なハイエンド データセンター機能を提供することで、ミッション クリティカルなワークロードに高水準のサービス レベルを実現し、エンド ユーザーがデータの分析情報を入手できるようにしています。|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard Edition は、企業部門や小規模組織がアプリケーションを実行するための基本的なデータ管理/ビジネス インテリジェンス データベースを提供し、内部設置型およびクラウド用の一般的な開発ツールをサポートすることで、最小限の IT リソースでデータベースを効果的に管理することを可能にします。|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition は、大小さまざまな規模の Web 資産に対応できるスケーラビリティ、経済性、および管理性を備えた、Web ホスティング企業および Web VAP 向けの総保有コストの低いオプションです。|  
 |Developer|開発者は、[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上で動作するあらゆる種類のアプリケーションを開発できます。 このエディションには Enterprise Edition の機能がすべて含まれていますが、実稼動サーバーとして使用するのではなく、開発およびテスト システムとしての利用に対してライセンスが供与されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer は、アプリケーションを作成し、テストするユーザーに適しています。|  
 |Express Edition|Express Edition はエントリレベルの無料のデータベースで、学習や、デスクトップおよび小規模サーバー データ ドリブン アプリケーションの構築などに適しています。 このエディションは、独立系ソフトウェア ベンダー、開発者、クライアント アプリケーションを趣味で開発する開発者などに最適です。 さらに高度なデータベース機能が必要な場合には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の他の上位バージョンにシームレスにアップグレードできます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB は、Express の簡易バージョンです。Express のプログラミング機能をすべて備えており、ユーザー モードで実行され、前提条件が少なく構成不要の高速インストールが可能です。|  
-  
+
+<sup>1</sup> 無制限の仮想化は、[ソフトウェア アシュアランス](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default)がある Enterprise Edition のエンタープライズのお客様が利用できます。 デプロイは、[ライセンス ポリシー](https://www.microsoft.com/sql-server/sql-server-2017-pricing)に準拠している必要があります。  
+
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とインターネット サーバーの使用  
  インターネット インフォメーション サービス (IIS) を実行するサーバーなどのインターネット サーバーでは、一般に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クライアント ツールをインストールします。 クライアント ツールには、アプリケーションが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに接続する際に使用するクライアント接続コンポーネントが含まれています。  
   
@@ -195,8 +197,8 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |NUMA 対応のラージ ページ メモリとバッファー配列の割り当て|はい|いいえ|いいえ|いいえ|いいえ|
 |バッファー プール拡張|はい|[はい]|いいえ|いいえ|いいえ|
 |IO リソース管理|はい|いいえ|いいえ|いいえ|いいえ|  
-|先行読み取り|可|いいえ|いいえ|いいえ|いいえ|
-|拡張スキャン|可|いいえ|いいえ|いいえ|いいえ|
+|先行読み取り|はい|いいえ|いいえ|いいえ|いいえ|
+|拡張スキャン|はい|いいえ|いいえ|いいえ|いいえ|
 |遅延持続性|はい|[はい]|[はい]|[はい]|はい|
 |自動調整|はい|いいえ|いいえ|いいえ|いいえ|
 |バッチ モードの適応型結合|はい|いいえ|いいえ|いいえ|いいえ|

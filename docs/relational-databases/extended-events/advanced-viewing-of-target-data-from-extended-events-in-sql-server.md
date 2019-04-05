@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9ce1619d4ad2d61a784ace4ea16dc4064569e09
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d80831a3a152d29d8a2f608527105c9feb23b126
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658881"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478167"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server での拡張イベントからのターゲット データの詳細表示
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -36,7 +37,7 @@ ms.locfileid: "51658881"
 
 この記事では、イベント セッションを作成して開始する方法を既に知っていることを前提としています。 イベント セッションを作成する方法については、次の記事の初めの部分で説明されています。
 
-[クイック スタート: SQL Server 拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+[クイック スタート:SQL Server の拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
 
 
 また、この記事では、SSMS の最新の月次リリースがインストールされていることを前提としています。 インストールに関するヘルプは、次を参照してください。

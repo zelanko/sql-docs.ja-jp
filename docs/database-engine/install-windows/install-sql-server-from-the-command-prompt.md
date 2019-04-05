@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a0aa770bfbf3486dedf045b6a6da3f88c89bbade
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: bc2d05b54added3ac8ce57746eb89cbd9d1efd8d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57976436"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537424"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 
@@ -185,7 +185,7 @@ ms.locfileid: "57976436"
 -   [/FAILOVERCLUSTERROLLOWNERSHIP パラメーターを使用したフェールオーバーの動作の制御](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#RollOwnership)  
   
 -   [インスタンス ID (InstanceID) の構成](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#InstanceID) 
-  
+
 ##  <a name="Install"></a> インストール パラメーター  
  次の表に示すパラメーターは、インストール用のコマンド ライン スクリプトを作成する場合に使用します。  
   
@@ -263,8 +263,8 @@ ms.locfileid: "57976436"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **省略可**|FILESTREAM 機能のアクセス レベルを指定します。 サポートされる値:<br /><br /> 0 = [このインスタンスに対する FILESTREAM サポートを無効にする] (既定値)<br /><br /> 1 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする]<br /><br /> 2 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスおよびファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする] (クラスター シナリオに対しては無効です)<br /><br /> 3 = [リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **省略可**<br /><br /> **FILESTREAMLEVEL が 1 より大きい場合は必須。**|FILESTREAM データを格納する Windows 共有の名前を指定します。|  
-|SQL Server フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]では無視されます。 ServiceSID は、SQL Server と Full-text Filter Daemon 間の通信を確立するのに使用されます。 この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、SQL Server コントロール マネージャーを使用する必要があります。<br /><br /> 既定値:ローカル サービス アカウント|  
-|SQL Server フルテキスト|/FTSVCPASSWORD<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのパスワードを指定します。<br /><br /> このパラメーターは、 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]では無視されます。|  
+|SQL Server フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降では無視されます。 ServiceSID は、SQL Server と Full-text Filter Daemon 間の通信を確立するのに使用されます。 この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、SQL Server コントロール マネージャーを使用する必要があります。<br /><br /> 既定値:ローカル サービス アカウント|  
+|SQL Server フルテキスト|/FTSVCPASSWORD<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのパスワードを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降では無視されます。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のアカウントを指定します。<br /><br /> 既定値:NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必須](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のパスワードを指定します。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **省略可**|[サービスの](#Accounts) スタートアップ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] モードを指定します。|  
@@ -371,8 +371,8 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **省略可**|FILESTREAM 機能のアクセス レベルを指定します。 サポートされる値:<br /><br /> 0 = [このインスタンスに対する FILESTREAM サポートを無効にする] (既定値)<br /><br /> 1 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする]<br /><br /> 2 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスおよびファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする] (クラスター シナリオに対しては無効です)<br /><br /> 3 = [リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **省略可**<br /><br /> **FILESTREAMLEVEL が 1 より大きい場合は必須。**|FILESTREAM データを格納する Windows 共有の名前を指定します。|  
-|SQL Server フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]では無視されます。 ServiceSID は、SQL Server と Full-text Filter Daemon 間の通信を確立するのに使用されます。 この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、SQL Server コントロール マネージャーを使用する必要があります。<br /><br /> 既定値:ローカル サービス アカウント|  
-|SQL Server フルテキスト|/FTSVCPASSWORD<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのパスワードを指定します。<br /><br /> このパラメーターは、 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]では無視されます。|  
+|SQL Server フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降では無視されます。 ServiceSID は、SQL Server と Full-text Filter Daemon 間の通信を確立するのに使用されます。 この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、SQL Server コントロール マネージャーを使用する必要があります。<br /><br /> 既定値:ローカル サービス アカウント|  
+|SQL Server フルテキスト|/FTSVCPASSWORD<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのパスワードを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降では無視されます。|  
 |SQL Server のネットワーク構成|/NPENABLED<br /><br /> **省略可**|SQL Server サービスの名前付きパイプ プロトコルの状態を指定します。 サポートされる値:<br /><br /> 0 = [名前付きパイプ プロトコルを無効にする]<br /><br /> 1 = [名前付きパイプ プロトコルを有効にする]|  
 |SQL Server のネットワーク構成|/TCPENABLED<br /><br /> **省略可**|SQL Server サービスの TCP プロトコルの状態を指定します。 サポートされる値:<br /><br /> 0 = [TCP プロトコルを無効にする]<br /><br /> 1 = [TCP プロトコルを有効にする]|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **省略可**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインストール モードを指定します。|  
@@ -576,8 +576,8 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **省略可**|FILESTREAM 機能のアクセス レベルを指定します。 サポートされる値:<br /><br /> 0 = [このインスタンスに対する FILESTREAM サポートを無効にする] (既定値)<br /><br /> 1 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする]<br /><br /> 2 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスおよびファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする] (クラスター シナリオに対しては無効です)<br /><br /> 3 = [リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **省略可**<br /><br /> **FILESTREAMLEVEL が 1 より大きい場合は必須。**|FILESTREAM データを格納する Windows 共有の名前を指定します。|  
-|SQL Server フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]では無視されます。 ServiceSID は、SQL Server と Full-text Filter Daemon 間の通信を確立するのに使用されます。<br /><br /> この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、SQL Server コントロール マネージャーを使用する必要があります。<br /><br /> 既定値:ローカル サービス アカウント|  
-|SQL Server フルテキスト|/FTSVCPASSWORD<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのパスワードを指定します。<br /><br /> このパラメーターは、 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]では無視されます。|  
+|SQL Server フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降では無視されます。 ServiceSID は、SQL Server と Full-text Filter Daemon 間の通信を確立するのに使用されます。<br /><br /> この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、SQL Server コントロール マネージャーを使用する必要があります。<br /><br /> 既定値:ローカル サービス アカウント|  
+|SQL Server フルテキスト|/FTSVCPASSWORD<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのパスワードを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降では無視されます。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のアカウントを指定します。<br /><br /> 既定値:NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必須](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のパスワードを指定します。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **省略可**|[サービスの](#Accounts) スタートアップ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] モードを指定します。|  
@@ -636,8 +636,8 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必須](#Accounts)|SQLSVCACCOUNT のパスワードを指定します。|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **省略可**|FILESTREAM 機能のアクセス レベルを指定します。 サポートされる値:<br /><br /> 0 = [このインスタンスに対する FILESTREAM サポートを無効にする] (既定値)<br /><br /> 1 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする]<br /><br /> 2 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスおよびファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする] (クラスター シナリオに対しては無効です)<br /><br /> 3 = [リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **省略可**<br /><br /> FILESTREAMLEVEL が 1 より大きい場合は**必須** 。|FILESTREAM データを格納する Windows 共有の名前を指定します。|  
-|SQL Server フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]では無視されます。 ServiceSID は、SQL Server と Full-text Filter Daemon 間の通信を確立するのに使用されます。<br /><br /> この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、SQL Server コントロール マネージャーを使用する必要があります。<br /><br /> 既定値:ローカル サービス アカウント|  
-|SQL Server フルテキスト|/FTSVCPASSWORD<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのパスワードを指定します。<br /><br /> このパラメーターは、 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]では無視されます。|  
+|SQL Server フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降では無視されます。 ServiceSID は、SQL Server と Full-text Filter Daemon 間の通信を確立するのに使用されます。<br /><br /> この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、SQL Server コントロール マネージャーを使用する必要があります。<br /><br /> 既定値:ローカル サービス アカウント|  
+|SQL Server フルテキスト|/FTSVCPASSWORD<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのパスワードを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降では無視されます。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のアカウントを指定します。<br /><br /> 既定値:NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必須](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のパスワードを指定します。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **省略可**|[サービスの](#Accounts) スタートアップ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] モードを指定します。|  

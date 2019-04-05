@@ -1,5 +1,5 @@
 ---
-title: '例 : ID ディレクティブと IDREFS ディレクティブの指定 | Microsoft Docs'
+title: '例: ID ディレクティブと IDREFS ディレクティブの指定 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c26c82cdff4837293ec5a920696b556048cf4a05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc1f4514035e8fd340394185df1c1c4fc69093b8
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670500"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513369"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>例 : ID ディレクティブと IDREFS ディレクティブの指定
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>例:ID ディレクティブと IDREFS ディレクティブの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   要素の属性は、 **ID** 型の属性として指定することができます。さらに、この属性を参照する **IDREFS** 属性を使用できます。 これにより、ドキュメント内のリンク作成が可能になります。これは、リレーショナル データベースにおける主キーと外部キーのリレーションシップに似ています。  
   

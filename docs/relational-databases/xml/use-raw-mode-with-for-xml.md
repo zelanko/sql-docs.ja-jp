@@ -16,15 +16,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 249bee21bdddacc369a99efe8c31be511e2d305a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 961f1e06cb7ba194612cf4e87f40d356096149bb
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837960"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510179"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML での RAW モードの使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,19 @@ ms.locfileid: "47837960"
 ## <a name="in-this-section"></a>このセクションの内容  
  ここでは、次の例について説明します。  
   
--   [例 : XML での製品モデル情報の取得](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
+-   [例: XML での製品モデル情報の取得](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
--   [例 : ELEMENTS ディレクティブで XSINIL を指定する](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
+-   [例: ELEMENTS ディレクティブで XSINIL を指定する](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [例 : バイナリ データの取得](../../relational-databases/xml/example-retrieving-binary-data.md)  
+-   [例: バイナリ データの取得](../../relational-databases/xml/example-retrieving-binary-data.md)  
   
--   [例 : &#60;row&#62; 要素の名前を変更する](../../relational-databases/xml/example-renaming-the-row-element.md)  
+-   [例: &#60;row&#62; 要素の名前を変更する](../../relational-databases/xml/example-renaming-the-row-element.md)  
   
--   [例 : FOR XML で生成される XML のルート要素の指定](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [例: FOR XML で生成される XML のルート要素の指定](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [例 : XML 型の列のクエリ](../../relational-databases/xml/example-querying-xmltype-columns.md)  
+-   [例: XML 型の列のクエリ](../../relational-databases/xml/example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>参照  
  [WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

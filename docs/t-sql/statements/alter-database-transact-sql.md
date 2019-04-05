@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a9d870d766d7c2080b177270156cfa2428c21fc7
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417244"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538664"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -624,7 +624,15 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 ALTER DATABASE db1 FAILOVER
 ```
 
-### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. 単一データベースをサービス層 S0 (標準エディション、パフォーマンス レベル 0) に更新します。
+### <a name="e-force-failover-to-a-geo-replication-secondary-with-data-loss"></a>E. geo レプリケーションのセカンダリへのフェールオーバーを強制します (この場合、データが失われることがあります)。
+
+プライマリ データベースが使用不可能になった場合、サーバー `secondaryserver` で実行されると、サーバー `secondaryserver` 上のセカンダリ データベース db1 が新しいプライマリ データベースとして強制されます。 このオプションでは、データが失われる可能性があります。 
+
+```sql
+ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
+```
+
+### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. 単一データベースをサービス層 S0 (標準エディション、パフォーマンス レベル 0) に更新します。
 単一データベースをパフォーマンス レベルが S0、最大サイズが 250 GB の標準エディション (サービス層) に更新します。
 
 ```sql

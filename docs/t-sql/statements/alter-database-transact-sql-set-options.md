@@ -2,7 +2,7 @@
 title: ALTER DATABASE の SET オプション (Transact-SQL) | Microsoft Docs
 description: SQL Server および Azure SQL Database で、自動調整、暗号化、クエリ ストアなどのデータベースのオプションを設定する方法について説明します
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fabf89ea24461953089a3f7eb928878e600f3d6
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 37f2dc54498e98fc6d940a014dd8db4927b38027
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356525"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494434"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -149,7 +149,7 @@ SET
     DATE_CORRELATION_OPTIMIZATION { ON | OFF }
   
 <db_encryption_option> ::=
-    ENCRYPTION { ON | OFF }
+    ENCRYPTION { ON | OFF | SUSPEND | RESUME }
 
 <db_state_option> ::=
     { ONLINE | OFFLINE | EMERGENCY }
@@ -455,11 +455,13 @@ DATE_CORRELATION_OPTIMIZATION を ON に設定するには、データベース�
 
 データベース暗号化の状態を制御します。
 
-ENCRYPTION {ON | OFF}: データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」をご覧ください。
+ENCRYPTION {ON | OFF | SUSPEND | RESUME}: データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」をご覧ください。
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、TDE が有効化または無効化された後や暗号化キーが変更された後に SUSPEND と RESUME のオプションを使用して暗号化スキャンを一時停止したり再開したりできます。
 
 データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに **READ ONLY** に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
 
-データベースの暗号化の状態を確認するには、[sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動的管理ビューを使用します。
+データベースの暗号化の状態や暗号化スキャンの状態を確認するには、[sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動的管理ビューを使用します。
 
 **\<db_state_option> ::=**
 
@@ -977,25 +979,25 @@ NO_WAIT: 要求されたデータベースの状態またはオプションの�
 
 |オプションのカテゴリ|他のオプションとの組み合わせの可否|WITH \<termination> 句の使用の可否|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<db_state_option>|可|可|
-|\<db_user_access_option>|可|可|
-|\<db_update_option>|可|可|
-|\<delayed_durability_option>|可|可|
-|\<external_access_option>|可|いいえ|
-|\<cursor_option>|可|いいえ|
-|\<auto_option>|可|いいえ|
-|\<sql_option>|可|いいえ|
-|\<recovery_option>|可|いいえ|
-|\<target_recovery_time_option>|いいえ|可|
+|\<db_state_option>|はい|はい|
+|\<db_user_access_option>|はい|はい|
+|\<db_update_option>|はい|はい|
+|\<delayed_durability_option>|はい|はい|
+|\<external_access_option>|はい|いいえ|
+|\<cursor_option>|はい|いいえ|
+|\<auto_option>|はい|いいえ|
+|\<sql_option>|はい|いいえ|
+|\<recovery_option>|はい|いいえ|
+|\<target_recovery_time_option>|いいえ|はい|
 |\<database_mirroring_option>|いいえ|いいえ|
 |ALLOW_SNAPSHOT_ISOLATION|いいえ|いいえ|
-|READ_COMMITTED_SNAPSHOT|いいえ|可|
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|可|可|
-|\<service_broker_option>|可|いいえ|
-|DATE_CORRELATION_OPTIMIZATION|可|可|
-|\<parameterization_option>|可|可|
-|\<change_tracking_option>|可|可|
-|\<db_encryption_option>|可|いいえ|
+|READ_COMMITTED_SNAPSHOT|いいえ|はい|
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|はい|はい|
+|\<service_broker_option>|はい|いいえ|
+|DATE_CORRELATION_OPTIMIZATION|はい|はい|
+|\<parameterization_option>|はい|はい|
+|\<change_tracking_option>|はい|はい|
+|\<db_encryption_option>|はい|いいえ|
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュは、次のいずれかのオプションを設定することにより消去されます。
 
@@ -1709,20 +1711,20 @@ NO_WAIT: 要求されたデータベースの状態またはオプションの�
 
 |オプションのカテゴリ|他のオプションとの組み合わせの可否|WITH \<termination> 句の使用の可否|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<auto_option>|可|いいえ|
-|\<change_tracking_option>|可|可|
-|\<cursor_option>|可|いいえ|
-|\<db_encryption_option>|可|いいえ|
-|\<db_update_option>|可|可|
-|\<db_user_access_option>|可|可|
-|\<delayed_durability_option>|可|可|
-|\<parameterization_option>|可|可|
+|\<auto_option>|はい|いいえ|
+|\<change_tracking_option>|はい|はい|
+|\<cursor_option>|はい|いいえ|
+|\<db_encryption_option>|はい|いいえ|
+|\<db_update_option>|はい|はい|
+|\<db_user_access_option>|はい|はい|
+|\<delayed_durability_option>|はい|はい|
+|\<parameterization_option>|はい|はい|
 |ALLOW_SNAPSHOT_ISOLATION|いいえ|いいえ|
-|READ_COMMITTED_SNAPSHOT|いいえ|可|
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|可|可|
-|DATE_CORRELATION_OPTIMIZATION|可|可|
-|\<sql_option>|可|いいえ|
-|\<target_recovery_time_option>|いいえ|可|
+|READ_COMMITTED_SNAPSHOT|いいえ|はい|
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|はい|はい|
+|DATE_CORRELATION_OPTIMIZATION|はい|はい|
+|\<sql_option>|はい|いいえ|
+|\<target_recovery_time_option>|いいえ|はい|
 
 ## <a name="examples"></a>使用例
 

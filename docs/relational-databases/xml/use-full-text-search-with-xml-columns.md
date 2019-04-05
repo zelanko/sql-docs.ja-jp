@@ -11,15 +11,15 @@ helpviewer_keywords:
 - xml columns [full-text search]
 - indexes [full-text search]
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d144b8bcf9657c793f4d88b9ef875e88cf7bb38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b342fff66d5e3ec955566963a4a31d1540a2853e
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637839"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513029"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>XML 列でのフルテキスト検索の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47637839"
   
 2.  次に、XML 列の XML インデックスを使用する XML 値にクエリを実行します。  
   
-## <a name="example-combining-full-text-search-with-xml-querying"></a>例 : フルテキスト検索と XML クエリの組み合わせ  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>例: フルテキスト検索と XML クエリの組み合わせ  
  XML 列でフルテキスト インデックスを作成した後、XML 値が書名に語 "custom" を含んでいることを次のクエリで確認します。  
   
 ```  
@@ -51,7 +51,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  さらに、フルテキスト検索ではステマーが使用されますが、XQuery の **contains()** はリテラルの照合です。 両者の違いを次の例で示します。  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>例 : ステミングを使用した XML 値のフルテキスト検索  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>例: ステミングを使用した XML 値のフルテキスト検索  
  上記の例で行った XQuery **contains()** による確認は、通常は省略できません。 次のクエリについて考えてみます。  
   
 ```  

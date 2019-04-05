@@ -1,5 +1,5 @@
 ---
-title: '例 : ID ディレクティブと IDREF ディレクティブの指定 | Microsoft Docs'
+title: '例: ID ディレクティブと IDREF ディレクティブの指定 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20f5301d07d054800775b6cf624e30447950867d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b69385e2481d772da2777dfffde4907c8d18d3b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726090"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511169"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>例 : ID ディレクティブと IDREF ディレクティブの指定
+# <a name="example-specifying-the-id-and-idref-directives"></a>例:ID ディレクティブと IDREF ディレクティブの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   この例は、「 [ELEMENTXSINIL ディレクティブの指定](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) 」の例とほぼ同じで、 クエリで **ID** ディレクティブと **IDREF** ディレクティブを指定している点のみが異なります。 これらのディレクティブは、<`OrderHeader`> 要素と <`OrderDetail`> 要素の **SalesPersonID** 属性の型を上書きします。 これにより、ドキュメント内のリンクが形成されます。 上書きされた型を確認するには、スキーマが必要です。 そのため、このクエリでは、FOR XML 句に **XMLDATA** オプションを指定して、スキーマを取得しています。  
   

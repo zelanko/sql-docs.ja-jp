@@ -1,7 +1,7 @@
 ---
 title: TRIM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/20/2017
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: jrasnick
@@ -18,37 +18,40 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d576147eb72e5d86a8e11719e5aab43eb405f739
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: =azuresqldb-current||= azure-sqldw-latest ||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ae5abf48d2cdd2325c69df1c1f680594a7d8b3eb
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342912"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566401"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 文字列の先頭または末尾にあるスペース文字 `char(32)` または他の指定した文字を削除します。  
  
 ## <a name="syntax"></a>構文   
-```
+``` 
+-- Syntax for SQL Server and Azure SQL Database
 TRIM ( [ characters FROM ] string ) 
 ```
 [//]: # "[ BOTH | LEADING | TRAILING ] はまだ使用できません。"
 
-## <a name="arguments"></a>引数   
+```
+-- Syntax for Azure SQL Data Warehouse
+TRIM ( string )
+```
+## <a name="arguments"></a>引数
 
-characters   
-削除する必要がある文字を含む LOB 以外の任意の文字型 (`nvarchar`、`varchar`、`nchar`、または`char`) のリテラル、変数、または関数呼び出しです。 `nvarchar(max)` および `varchar(max)` 型は使用できません。
+characters: 削除する必要がある文字を含む LOB 以外の任意の文字型 (`nvarchar`、`varchar`、`nchar`、または`char`) のリテラル、変数、または関数呼び出しです。 `nvarchar(max)` および `varchar(max)` 型は使用できません。
 
-string   
-文字を削除する必要がある任意の文字型 (`nvarchar`、`varchar`、`nchar`、または`char`) の式です。
+string: 文字を削除する必要がある任意の文字型 (`nvarchar`、`varchar`、`nchar`、または`char`) の式です。
 
-## <a name="return-types"></a>戻り値の型   
+## <a name="return-types"></a>戻り値の型
 空白文字 `char(32)` または他の指定した文字が両側から削除される、文字列引数の型を持つ文字式を返します。 入力文字列が `NULL` の場合は `NULL` を返します。
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>Remarks
 `TRIM` 関数は、既定で、両側からスペース文字 `char(32)` を削除します。 この動作は `LTRIM(RTRIM(@string))` と同等です。 文字が指定された `TRIM` 関数の動作は、`REPLACE` 関数の動作 (先頭または末尾の文字が空白の文字列で置き換えられる) と同じです。
 
 
@@ -81,5 +84,4 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

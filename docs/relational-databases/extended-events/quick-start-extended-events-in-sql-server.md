@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658351"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478237"
 ---
-# <a name="quick-start-extended-events-in-sql-server"></a>クイック スタート: SQL Server 拡張イベント
+# <a name="quickstart-extended-events-in-sql-server"></a>クイック スタート: SQL Server の拡張イベント
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -426,7 +427,7 @@ SSMS **オブジェクト エクスプローラー**で、イベント セッシ
 
 | 項目 | [説明] |
 | :--- | :---------- |
-| イベント セッション | 1 つ以上のイベントを中心にしたコンストラクトと、アクションなどのサポート アイテムがターゲットです。 CREATE EVENT SESSION ステートメントは、各イベント セッションを構築します。 ALTER を使用してイベント セッションを任意に開始、停止できます。 <br/> <br/> イベント セッションは、文脈から *イベント セッション*を指していることが明らかな場合には、単に *セッション*と呼ばれることがあります。 <br/> <br/> イベント セッションの詳細は、「 [SQL Server 拡張イベント セッション](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)」で説明しています。 |
+| イベント セッション | 1 つ以上のイベントを中心にしたコンストラクトと、アクションなどのサポート アイテムがターゲットです。 CREATE EVENT SESSION ステートメントは、各イベント セッションを構築します。 ALTER を使用してイベント セッションを任意に開始、停止できます。 <br/> <br/> イベント セッションは、文脈から *イベント セッション*を指していることが明らかな場合には、単に *セッション*と呼ばれることがあります。 <br/> <br/> イベント セッションの詳細については、次で説明しています。[SQL Server 拡張イベント セッション](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。 |
 | イベント | アクティブなイベント セッションによって監視されるシステムでの内の特定の事象です。 <br/> <br/> たとえば、 *sql_statement_completed* イベントは、指定された T-SQL ステートメントが完了した時点を表します。 イベントは、その継続時間とその他のデータを報告できます。 |
 | ターゲット (target) | キャプチャしたイベントからの出力データを受信するアイテムです。 ターゲットはデータを表示します。 <br/> <br/> 例には、 *event_file*と、それに類似する便利な軽量メモリ *ring_buffer*が含まれています。 より魅力的な *ヒストグラム* ターゲットが、データを表示する前にいくつかの処理を実行します。 <br/> <br/> どのターゲットも任意のイベント セッションに使用できます。 詳細については、「 [Targets for Extended Events in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)」 (SQL Server の拡張イベントのターゲット) を参照してください。 |
 | アクション (action) | イベントにとって既知のフィールドです。 フィールドのデータは、ターゲットに送信されます。 アクション フィールドは *述語フィルター*に密接に関係しています。 |
@@ -485,7 +486,7 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 #### <a name="sql-trace-event-classes-with-extended-events"></a>SQL トレース イベント クラスと拡張イベント
 
 
-拡張イベントと SQL トレース イベント クラスおよび列の使用に関する説明は、「 [SQL トレースのイベント クラスと等価な拡張イベントを確認する](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)」をご覧ください。
+SQL トレースのイベント クラスと列で拡張されたイベントの使用に関する説明は次の場所で確認できます。[SQL トレースのイベント クラスと等価な拡張イベントを確認する](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
 
 
 
@@ -525,7 +526,7 @@ SQL Server には、作成済みの拡張イベントがいくつか付属しま
 ### <a name="powershell-provider-for-extended-events"></a>拡張イベントの PowerShell プロバイダー
 
 
-SQL Server PowerShell を使用して、SQL Server 拡張イベントを管理することができます。 詳細は、「 [拡張イベントへの PowerShell プロバイダーの使用](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)」をご覧ください。
+SQL Server PowerShell を使用して、SQL Server 拡張イベントを管理することができます。 詳細については、以下を参照してください。[拡張イベントへの PowerShell プロバイダーの使用](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
 
 
 ### <a name="system-views-for-extended-events"></a>拡張イベントのシステム ビュー

@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771348"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535854"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,17 +80,23 @@ Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](.
   
 1.  すべての同期コミット レプリカの自動フェールオーバーを削除する。  
   
-2.  非同期コミット セカンダリ レプリカを実行しているリモート セカンダリ サーバー インスタンスをすべてアップグレードする。  
+2.  すべての非同期コミット セカンダリ レプリカ インスタンスをアップグレードする。 
   
-3.  プライマリ レプリカを現在実行していないローカルのレプリカ セカンダリ インスタンスをすべてアップグレードする。  
+3.  すべてのリモート同期コミット セカンダリ レプリカ インスタンスをアップグレードする。 
+
+4.  すべてのローカル同期コミット セカンダリ レプリカ インスタンスをアップグレードする。 
   
-4.  AG を手動でローカルの同期コミット セカンダリ レプリカにフェールオーバーする  
+4.  AG を手動で (新規にアップグレードした) ローカルの同期コミット セカンダリ レプリカにフェールオーバーする。  
   
 5.  それまでプライマリ レプリカをホストしていたローカルのレプリカ インスタンスをアップグレードまたは更新する。  
   
-6.  必要に応じて自動フェールオーバー パートナーを構成する。  
+6.  必要に応じて自動フェールオーバー パートナーを構成する。
   
  必要であれば、さらに手動でフェールオーバーを実行して、AG を元の構成に戻すこともできます。  
+ 
+   > [!NOTE]
+   > - 同期コミット レプリカをアップグレードしてそれをオフラインにしても、プライマリのトランザクションは遅延しません。 セカンダリ レプリカを切断すると、セカンダリ レプリカにログが書き込まれるのを待たずに、トランザクションはプライマリにコミットされます。 
+   > - `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` が `1` または `2` に設定されている場合、更新処理中に対応する数の同期セカンダリ レプリカが使用できない場合、プライマリ レプリカから読み書きできない場合があります。 
   
 ## <a name="ag-with-one-remote-secondary-replica"></a>1 つのリモート セカンダリ レプリカを含む AG  
  ディザスター リカバリーのみを目的として AG を配置していた場合、AG を非同期コミット セカンダリ レプリカにフェールオーバーする必要がある場合があります。 次の図に、そのような構成の例を示します。  

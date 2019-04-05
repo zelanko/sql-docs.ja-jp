@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16541fbf8a927d072504d1e6c911614d1e3699b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 760d19dc87634a519030d064623dfcd743a566f5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720190"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513041"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>選択的 XML インデックスの作成、変更、および削除
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47720190"
   
 ##  <a name="create"></a> 選択的 XML インデックスの作成  
   
-### <a name="how-to-create-a-selective-xml-index"></a>方法: 選択的 XML インデックスを作成する  
+### <a name="how-to-create-a-selective-xml-index"></a>操作方法: 選択的 XML インデックスの作成  
  **Transact-SQL を使用して選択的 XML インデックスを作成する**  
  CREATE SELECTIVE XML INDEX ステートメントを呼び出して選択的 XML インデックスを作成します。 詳細については、「[CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md)」を参照してください。  
   
@@ -49,7 +49,7 @@ FOR(
   
 ##  <a name="alter"></a> 選択的 XML インデックスの変更  
   
-### <a name="how-to-alter-a-selective-xml-index"></a>方法: 選択的 XML インデックスを変更する  
+### <a name="how-to-alter-a-selective-xml-index"></a>操作方法: 選択的 XML インデックスの変更  
  **Transact-SQL を使用して選択的 XML インデックスを変更する**  
  ALTER INDEX ステートメントを呼び出して既存の選択的 XML インデックスを変更します。 詳細については、「[ALTER INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md)」を参照してください。  
   
@@ -70,7 +70,7 @@ FOR
   
 ##  <a name="drop"></a> 選択的 XML インデックスの削除  
   
-### <a name="how-to-drop-a-selective-xml-index"></a>方法: 選択的 XML インデックスを削除する  
+### <a name="how-to-drop-a-selective-xml-index"></a>操作方法: 選択的 XML インデックスのドロップ  
  **Transact-SQL を使用して選択的 XML インデックスを削除する**  
  DROP INDEX ステートメントを呼び出して選択的 XML インデックスを削除します。 詳細については、「[DROP INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/drop-index-selective-xml-indexes.md)」を参照してください。  
   

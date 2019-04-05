@@ -23,15 +23,15 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1a8113ba4f9df20fcf11a7f4662abb1f2a24b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8e4679cb4627f5366327c02f6b30db32d3b2610
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841286"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510919"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>型指定された XML と型指定されていない XML の比較
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,14 +69,14 @@ ms.locfileid: "47841286"
   
  次の例では、XML スキーマ コレクション名を指定する際に、2 つの要素で構成された名前付け規則が使用されます。 最初の要素はスキーマ名で、2 番目の要素は XML スキーマ コレクション名です。  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>例 : スキーマ コレクションと xml 型の変数の関連付け  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>例: スキーマ コレクションと xml 型の変数の関連付け  
  次の例では、**xml** 型の変数を作成し、それにスキーマ コレクションを関連付けます。 例で指定されているスキーマ コレクションは、 **AdventureWorks** のデータベースに既にインポートされています。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>例 : xml 型の列のスキーマの指定  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>例: xml 型の列のスキーマの指定  
  次の例では、 **xml** 型の列を持つテーブルを作成し、列のスキーマを指定します。  
   
 ```  
@@ -85,7 +85,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>例 : xml 型のパラメーターのストアド プロシージャへの受け渡し  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>例: xml 型のパラメーターのストアド プロシージャへの受け渡し  
  次の例では、 **xml** 型のパラメーターをストアド プロシージャに渡し、変数にスキーマを指定します。  
   
 ```  
@@ -107,7 +107,7 @@ AS
   
  データ型の階層では、 **xml** データ型は **sql_variant** やユーザー定義型の下、組み込み型の上に表示されます。  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>例 : 型指定された xml 列を制約するためのファセットの指定  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>例: 型指定された xml 列を制約するためのファセットの指定  
  型指定された **xml** 列では、格納されているインスタンスごとに、最上位要素を 1 つだけ許可するように、列を制約できます。 これを行うには、次の例で示すように、テーブルを作成するときに、オプションの `DOCUMENT` ファセットを指定します。  
   
 ```  
@@ -159,7 +159,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
 ## <a name="see-also"></a>参照  
  [XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)   
+ [xml データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md)   
  [XML データ変更言語 &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

@@ -3,22 +3,39 @@ title: SQL Server 2019 CTP 2.0 で外部データを仮想化する | Microsoft 
 description: このページでは、CSV ファイルに対して外部テーブルの作成ウィザードを使用する詳細な手順を説明します
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4529d31ab27f06b6a44b396dd6b20bd6e438dbef
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: dae0692bafd8c4de295a914c9da0ead5c6e3980b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405678"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512959"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>CSV ファイルで外部テーブル ウィザードを使用する
 
 SQL Server 2019 では、CSV ファイルからのデータを HDFS に仮想化することもできます。  このプロセスでは、データを元の場所に置いたまま、SQL Server インスタンスでデータを**仮想化**して、SQL Server 内の他のテーブルと同じようにクエリを行うことができます。 この機能により、ETL プロセスの必要性が最小になります。 これは、Polybase コネクタを使用することによって可能です。 データの仮想化について詳しくは、「[PolyBase の概要](polybase-guide.md)」をご覧ください。
+
+## <a name="prerequisite"></a>前提条件
+
+CTP 2.4 より、データ プールと記憶域プールの外部データ ソースは、ビッグ データ クラスターに既定で作成されなくなりました。 ウィザードを使用する前に、次の Transact-SQL クエリを使用してターゲット データベースに既定の **SqlStoragePool** 外部データ ソースを作成してください。 最初に、クエリのコンテキストをターゲット データベースに変更します。
+
+```sql
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+  BEGIN
+    IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+  END
+```
 
 ## <a name="launch-the-external-table-wizard"></a>外部テーブル ウィザードを起動する
 

@@ -13,20 +13,20 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fd75ed198aa454c25a1be027c9bbb68f15142730
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: be3b29da5db98d63426f790986c21a54b85159bf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407719"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528194"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>クラスター クォーラムの NodeWeight 設定を表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、Windows Server フェールオーバー クラスタリング (WSFC) クラスター内の各メンバー ノードの NodeWeight 設定を表示する方法について説明します。 NodeWeight 設定は、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのディザスター リカバリーとマルチサブネットのシナリオをサポートするためのクォーラムの投票時に使用されます。  
   
--   **開始前の準備:**  [前提条件](#Prerequisites)、 [セキュリティ](#Security)  
+-   **開始前の準備:** [前提条件](#Prerequisites)、[セキュリティ](#Security)  
   
--   **クォーラムの NodeWeight 設定を表示する方法:** [Transact-SQL の使用](#TsqlProcedure)、 [PowerShell の使用](#PowerShellProcedure)、 [cluster.exe の使用](#CommandPromptProcedure)  
+-   **クォーラムの NodeWeight 設定を表示する方法:** [Transact-SQL の使用](#TsqlProcedure)、[PowerShell の使用](#PowerShellProcedure)、[Cluster.exe の使用](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始前の準備  
   
@@ -36,7 +36,7 @@ ms.locfileid: "52407719"
 > [!IMPORTANT]  
 >  NodeWeight 設定を使用するには、次の修正プログラムが WSFC クラスターのすべてのサーバーに適用されている必要があります。  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): この修正プログラムを使用すると、クォーラムの投票のないクラスター ノードを [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] および [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036):この修正プログラムを使用すると、[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] および [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] でクォーラムの投票のないクラスター ノードを構成することができます。  
   
 > [!TIP]  
 >  この修正プログラムがインストールされていない場合、このトピックの例では、NodeWeight に対して空の値または NULL 値が返されます。  
@@ -55,7 +55,7 @@ ms.locfileid: "52407719"
 ### <a name="example-transact-sql"></a>例 (Transact-SQL)  
  次の例では、システム ビューに対するクエリを実行して、そのインスタンスのクラスター内のすべてのノードの値を返します。  
   
-```tsql  
+```sql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
  FROM   sys.dm_hadr_cluster_members;  
 ```  

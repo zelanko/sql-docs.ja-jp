@@ -1,5 +1,5 @@
 ---
-title: '例: OPENXML の使用 | Microsoft Docs'
+title: '例 : OPENXML の使用 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,17 +24,17 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f1b27a3889928365f727f4f85cc945f3561d8fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c072fc97536259b16938cc36dcbc21dbbbb97b57
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849850"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511269"
 ---
-# <a name="examples-using-openxml"></a>例: OPENXML の使用
+# <a name="examples-using-openxml"></a>例 :OPENXML の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   このトピックの例では、OPENXML を使用して XML ドキュメントの行セット ビューを作成する方法を示します。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)」を参照してください。 ここに示す例では、OPENXML でのメタプロパティの指定を除く OPENXML のすべての側面を示します。 OPENXML のメタプロパティの指定方法の詳細については、「 [OPENXML 内でのメタプロパティの指定](../../relational-databases/xml/specify-metaproperties-in-openxml.md)」を参照してください。  
   
@@ -444,7 +444,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 結果はエッジ テーブルとして返されます。 エッジ テーブルに対するクエリを作成して、情報を取得できます。 例 :  
+ 結果はエッジ テーブルとして返されます。 エッジ テーブルに対するクエリを作成して、情報を取得できます。 例:  
   
 -   次のクエリにより、ドキュメント内の **Customer** ノードの数が返されます。 WITH 句が指定されていないので、OPENXML からエッジ テーブルが返されます。 SELECT ステートメントにより、エッジ テーブルへのクエリが実行されます。  
   
@@ -525,7 +525,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 複数のテキスト ノードを含む XML ドキュメントの指定  
- XML ドキュメント内に複数のテキスト ノードがある場合、 *ColPattern*である **text()** が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 例 :  
+ XML ドキュメント内に複数のテキスト ノードがある場合、 *ColPattern*である **text()** が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 例:  
   
 ```  
 DECLARE @h int  

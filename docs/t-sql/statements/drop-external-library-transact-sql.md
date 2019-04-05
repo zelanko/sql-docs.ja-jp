@@ -1,7 +1,7 @@
 ---
 title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 129aafce2e270f85506d056d5d083d34176aa8a0
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 86609c0cb3e66397c4c8c8f3a09fba64b14089e4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018018"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492824"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "57018018"
 既存のパッケージ ライブラリを削除します。 パッケージ ライブラリは、R、Python、Java などのサポートされる外部ランタイムで使用されます。
 
 > [!NOTE]
-> SQL Server 2017 では、R 言語と Windows プラットフォームがサポートされています。 Windows プラットフォームの R、Python、Java は SQL Server 2019 CTP 2.3 でサポートされています。 Linux は今後のリリースでサポートされる予定です。
+> SQL Server 2017 では、R 言語と Windows プラットフォームがサポートされています。 Windows および Linux プラットフォームの R、Python、Java は SQL Server 2019 CTP 2.4 でサポートされています。 
 
 ## <a name="syntax"></a>構文
 

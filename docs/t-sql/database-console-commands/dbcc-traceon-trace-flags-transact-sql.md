@@ -1,7 +1,7 @@
 ---
 title: トレース フラグ (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/10/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e75de200f8a55b57ba417e2f08bf875eda88a88e
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.openlocfilehash: c6a6d5e92c6aa5ab2a88606e829acba3c765276f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736836"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494204"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "57736836"
 |**205**|統計の自動更新の結果として統計に依存するストアド プロシージャが再コンパイルされるときに、エラー ログにレポートします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/195565)をご覧ください。<br /><br />**スコープ**: グローバルのみ|
 |**260**|拡張ストアド プロシージャのダイナミックリンク ライブラリ (DLL) に関するバージョン情報を出力します。 **GetXpVersion()** について詳しくは、「[拡張ストアド プロシージャの作成](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md)」をご覧ください。<br /><br />**スコープ**: グローバル、セッション|
 |**272**|サーバーが突然再起動したか、セカンダリ サーバーにフェールオーバーしたときに ID 列の値に隔たりができることを回避するため、ID の事前割り当てを無効にします。 ID キャッシュは ID 列が含まれるテーブルでの INSERT パフォーマンスを改善するために使われることに注意してください。<br /><br />**注:**[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降において、データベース レベルでこれを行う方法については、「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」の IDENTITY_CACHE オプションを参照してください。<br /><br />**スコープ**: グローバルのみ|
-|**460**|データ切り捨てのメッセージ ID [8152](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-8000-to-8999) がメッセージ ID [2628](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-2000-to-2999) に置き換えられます。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/4468101)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU12 以降のビルドに適用されます。<br /><br />**スコープ**: グローバル、セッション|
+|**460**|データ切り捨てのメッセージ ID [8152](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-8000-to-8999) がメッセージ ID [2628](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-2000-to-2999) に置き換えられます。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/4468101)をご覧ください。<br /><br />[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 以降に、データベース レベルでこれを行う方法については、「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」の VERBOSE_TRUNCATION_WARNINGS オプションを参照してください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU12 以降のビルドに適用されます。<br /><br />**注:** データベース互換性レベル 150 からはメッセージ ID 2628 が既定値となり、このトレース フラグに影響がありません。<br /><br />**スコープ**: グローバル、セッション|
 |**610**|インデックスが作成されたテーブルへの最小ログ記録の挿入を制御します。 SQL Server 2016 以降では、インデックスが作成されたテーブルに対しては最小ログ記録が既定で有効になるため、このトレース フラグは必要ありません。 SQL Server 2016 では、一括読み込み操作により新しいページが割り当てられると、最小ログ記録の他のすべての前提条件が満たされている場合は、その新しいページに順番に入力されるすべての行が最小ログ記録されます。 インデックスの順序を維持するために (新しいページの割り当てなしで) 既存のページに挿入される行は、読み込み中のページ分割の結果として移動される行なので、完全ログ記録されます。 また、重要なこととして、割り当ての間にはページ ロックが取得されることによってページまたはエクステントの割り当てだけがログに記録されるので、最小ログ記録操作が機能するには、インデックスの ALLOW_PAGE_LOCKS を ON 荷する必要があります (既定値は ON)。詳しくは、「[データ ローディング パフォーマンス ガイド](https://msdn.microsoft.com/library/dd425070.aspx)」をご覧ください。<br /><br />**スコープ**: グローバル、セッション|
 |**634**|バックグラウンドの列ストア圧縮タスクを無効にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、圧縮されていないデータが含まれる列ストア インデックス行グループを圧縮する組ムーバー バックグラウンド タスクが定期的に実行されます。この行グループの圧縮処理は 1 つずつ実行されます。<br /><br />列ストアの圧縮によりクエリのパフォーマンスは向上しますが、この処理はシステム リソースを消費します。 列ストア圧縮のタイミングは手動で制御できます。それには、トレース フラグ 634 でバックグラウンド圧縮タスクを無効にし、好きなタイミングで ALTER INDEX...REORGANIZE または ALTER INDEX...REBUILD を明示的に呼び出します。<br /><br />**スコープ**: グローバルのみ|
 |**652**|ページのプリフェッチ スキャンを無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/920093)をご覧ください。<br /><br />**スコープ**: グローバル、セッション|
@@ -81,6 +81,7 @@ ms.locfileid: "57736836"
 |**2390**|昇順キーまたは不明キー (ヒストグラム修正) に対して、自動生成されたクイック統計情報を有効にします。 トレース フラグ 2390 を設定し、先頭の統計情報列を昇順または不明としてマークすると、カーディナリティの推定に使われるヒストグラムがクエリのコンパイル時に調整されます。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/2801413)をご覧ください。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**注:** このトレース フラグは CE バージョン 120 以上には適用されません。 トレース フラグ 4139 を代わりに使ってください。<br /><br />**スコープ**: グローバル、セッション、クエリ|
 |**2422**|Resource Governor の REQUEST_MAX_CPU_TIME_SEC の構成によって設定されている最大時間を超えたときに、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が要求を中止できるようにします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/help/4038419)をご覧ください。<br /><br />**注:** このトレース フラグは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降のビルドに適用されます。<br /><br />**スコープ**: グローバル|
 |**2430**|代替ロック クラスのクリーンアップを有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/2754301)をご覧ください。<br /><br />**スコープ**: グローバルのみ| 
+|**2451**|sys.dm_exec_query_plan_stats の、最後の実際の実行プランと同等のものが有効になります。<br /><br />**注:** このトレース フラグは、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ|  
 |**2453**|十分な数の行が変更されたときに、テーブル変数が再コンパイルをトリガーできるようにします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/2952444)をご覧ください。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**スコープ**: グローバル、セッション、クエリ|
 |**2467**|どのノードのスレッド割り当てが最も少ないかに基づいて、代替の並列ワーカー スレッド割り当てポリシーを有効にします。 詳細については、「[並列クエリ処理](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)」をご覧ください。 max worker threads サーバー オプションの構成に関する情報については、「[max worker threads サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)」を参照してください。<br /><br />**注:** この代替ポリシーを使用するには、クエリの並列処理の次数 (DOP) が 1 つのノードに収まる必要があります。そうでない場合は、既定のスレッド割り当てポリシーが代わりに使用されます。 このトレース フラグを使用する場合、1 つのノードのスケジューラの数を超える DOP を指定するクエリを実行することはお勧めしません。これは、1 つのノードのスケジューラの数以下の DOP を指定するクエリと競合するためです。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**スコープ**: グローバルのみ|
 |**2469**|パーティション分割されている列ストア インデックスで、`INSERT INTO ... SELECT` の代替交換を有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/3204769)をご覧ください。<br /><br />**スコープ**: グローバル、セッション、クエリ|
