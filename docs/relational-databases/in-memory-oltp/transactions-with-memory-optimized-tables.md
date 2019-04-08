@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7854ddbe4795a347b0a824f607c7206c0bc6b78c
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: dc51c4376f38d62f63969aaf3bba39715a9871ba
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421369"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872292"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクション
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "55421369"
   
 SQL Server のトランザクション分離レベルは、ディスク ベースのテーブルとは異なる方法でメモリ最適化テーブルに適用されます。基になるメカニズムも異なっています。 プログラマは、この違いを理解することで、高スループットのシステムを設計しやすくなります。 トランザクションの整合性という目標は、すべての状況で共有されます。  
 
-メモリ最適化テーブルでのトランザクションに固有のエラー条件については、「 [競合の検出と再試行ロジック](#confdetretry34ni)」のセクションに移動してください。
+メモリ最適化テーブルでのトランザクションに固有のエラー条件については、「 [競合の検出と再試行ロジック](#conflict-detection-and-retry-logic)」のセクションに移動してください。
   
 詳細については、「 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
@@ -97,7 +97,7 @@ READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は�
   
 ## <a name="isolation-levels"></a>分離レベル 
   
-次の表は、トランザクション分離のレベルを、分離が少ないものから順に示しています。 発生する可能性のある競合、およびこれらの競合を処理するための再試行ロジックの詳細については、「 [競合の検出と再試行ロジック](#confdetretry34ni)」を参照してください。 
+次の表は、トランザクション分離のレベルを、分離が少ないものから順に示しています。 発生する可能性のある競合、およびこれらの競合を処理するための再試行ロジックの詳細については、「 [競合の検出と再試行ロジック](#conflict-detection-and-retry-logic)」を参照してください。 
   
 | [分離レベル] | [説明] |   
 | :-- | :-- |   
@@ -123,7 +123,7 @@ READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は�
 #### <a name="validation-phase-2-of-3"></a>検証:フェーズ 2 (2/3)  
   
 - 終了時刻を割り当て、それによってトランザクションに論理的完了とマークすると、検証フェーズが始まります。 この完了により、このトランザクションと依存関係があるその他のトランザクションに、トランザクションのすべての変更内容が表示されます。 従属トランザクションは、このトランザクションが正常にコミットされるまではコミットできません。 さらに、このような依存関係を保持するトランザクションは、結果セットをクライアントに返すことはできません。データベースに正常にコミットされたデータのみ、クライアントが参照するようにするためです。  
-- このフェーズは、repeatable read と serializable の検証で構成されます。 repeatable read の検証では、トランザクションによって読み取られた行のいずれかが以降更新されたかどうかがチェックされます。 serializable の検証では、このトランザクションによってスキャンされたいずれかのデータ範囲に行が挿入されたかどうかがチェックされます。 スナップショット分離の使用時は、一意キー制約と外部キー制約の整合性を検証するために、「[分離レベルと競合](#confdegreeiso30ni)」の表に従って、repeatable read と serializable の両方の検証が行われることがあります。  
+- このフェーズは、repeatable read と serializable の検証で構成されます。 repeatable read の検証では、トランザクションによって読み取られた行のいずれかが以降更新されたかどうかがチェックされます。 serializable の検証では、このトランザクションによってスキャンされたいずれかのデータ範囲に行が挿入されたかどうかがチェックされます。 スナップショット分離の使用時は、一意キー制約と外部キー制約の整合性を検証するために、「[分離レベルと競合](#isolation-levels)」の表に従って、repeatable read と serializable の両方の検証が行われることがあります。  
   
 #### <a name="commit-processing-phase-3-of-3"></a>コミット処理:フェーズ 3 (3/3)  
   
@@ -143,7 +143,7 @@ READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は�
 | エラー コード | [説明] | 原因 |
 | :-- | :-- | :-- |
 | **41302** | 現在のトランザクションが開始されてから別のトランザクションで更新された行を更新しようとしました。 | このエラー条件は、2 つの同時実行トランザクションが同時に同じ行を更新または削除しようとした場合に発生します。 2 つのトランザクションのうちの 1 つがこのエラー メッセージを受け取り、そのトランザクションは再試行が必要になります。 <br/><br/>  | 
-| **41305**| REPEATABLE READ の検証の失敗。 このトランザクションがメモリ最適化テーブルから読み取った行が、このトランザクションのコミット前にコミットした別のトランザクションによって更新されました。 | このエラーは、REPEATABLE READ 分離または SERIALIZABLE 分離の使用時に発生することがあります。また、同時実行トランザクションのアクションが FOREIGN KEY 制約の違反を引き起こした場合も発生する可能性があります。 <br/><br/>外部キー制約のこのような同時違反はまれであり、一般的にはアプリケーション ロジックまたはデータ エントリの問題を示しています。 ただし、FOREIGN KEY 制約に関係する列のインデックスが存在しない場合も、このエラーが発行する可能性があります。 したがって、メモリ最適化テーブルでは、外部キー列のインデックスを必ず作成するようにしてください。 <br/><br/> 外部キー違反によって発生する検証エラーに関する考慮事項の詳細については、SQL Server Customer Advisory Team による [このブログ投稿](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) を参照してください。 |  
+| **41305**| REPEATABLE READ の検証の失敗。 このトランザクションがメモリ最適化テーブルから読み取った行が、このトランザクションのコミット前にコミットした別のトランザクションによって更新されました。 | このエラーは、REPEATABLE READ 分離または SERIALIZABLE 分離の使用時に発生することがあります。また、同時実行トランザクションのアクションが FOREIGN KEY 制約の違反を引き起こした場合も発生する可能性があります。 <br/><br/>外部キー制約のこのような同時違反はまれであり、一般的にはアプリケーション ロジックまたはデータ エントリの問題を示しています。 ただし、FOREIGN KEY 制約に関係する列のインデックスが存在しない場合も、このエラーが発行する可能性があります。 したがって、メモリ最適化テーブルでは、外部キー列のインデックスを必ず作成するようにしてください。 <br/><br/> 外部キー違反によって発生する検証エラーに関する考慮事項の詳細については、SQL Server Customer Advisory Team による[このブログ投稿](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/)を参照してください。 |  
 | **41325** | SERIALIZABLE の検証の失敗。 以前スキャンされた範囲に、現在のトランザクションによって新しい行が挿入されました。 これはファントム行と呼ばれます。 | このエラーは、SERIALIZABLE 分離の使用時に発生することがあります。また、同時実行トランザクションのアクションが PRIMARY KEY、UNIQUE、または FOREIGN KEY 制約の違反を引き起こした場合も発生する可能性があります。 <br/><br/> このような同時制約違反はまれであり、一般的にはアプリケーション ロジックまたはデータ エントリの問題を示しています。 ただし、repeatable read の検証エラーと同様に、関係する列のインデックスが指定されていない FOREIGN KEY 制約が存在する場合も、このエラーが発生する可能性があります。 |  
 | **41301** | 依存関係のエラー: 後でコミットに失敗した別のトランザクションに依存していました。 | このトランザクション (Tx1) は別のトランザクション (Tx2) が書き込んだデータを読み取ることによって、そのトランザクション (Tx2) への依存関係ができましたが、Tx2 は自身の検証またはコミット処理のフェーズでした。 Tx2 はその後コミットに失敗しました。 Tx2 がコミットに失敗する最も一般的な原因は、repeatable read (41305) および serializable (41325) 検証エラーです。まれな原因として、ログ IO エラーがあります。 |
 | **41823** と **41840** | メモリ最適化テーブルとテーブル変数のユーザー データ クォータに到達しました。 | エラー 41823 は SQL Server Express/Web/Standard Edition と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] の単一データベースに適用されます。 エラー 41840 は [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] のエラスティック プールに適用されます。 <br/><br/> ほとんどの場合、これらのエラーは、ユーザー データの最大サイズに到達したことを示します。エラーを解決する方法は、メモリ最適化テーブルからデータを削除することです。 ただし、このエラーが一時的なものに過ぎないことがまれにあります。 そのため、最初にエラーに遭遇したとき、再試行をお勧めします。<br/><br/> この一覧にある他のエラーと同様に、41823 と 41840 はアクティブなトランザクションを中止させます。 |

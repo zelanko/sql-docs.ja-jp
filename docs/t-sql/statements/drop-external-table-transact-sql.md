@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 047adc4654d4e0104aa0fab79ba2be7a002de738
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 3260abf50bf46a703a925f8ad0a7829d2d1c1315
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801046"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042351"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
   
 
 ## <a name="arguments"></a>引数  
- [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
+ `[ database_name . [schema_name] . | schema_name . ] table_name`  
  削除する外部テーブルの 1 つか 3 部構成の名前。 テーブル名には、オプションで、スキーマまたはデータベースとスキーマを含めることができます。  
   
 ## <a name="permissions"></a>アクセス許可  
