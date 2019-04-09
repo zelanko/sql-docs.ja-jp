@@ -11,12 +11,12 @@ ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 026ed516989bde6f2c0b305d6af159f13a82f156
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 89344537c53c4caf066536804557451c965e4596
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358454"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241620"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 ハイブリッド クラウドの概要
  ほとんどのアプリケーションは、高い効率、ビジネス価値、複雑なハードウェア構成、非常に高いピーク性能の要求などの重要な課題に直面しており、業界と企業の規制に準拠する必要があります。 これらすべての要因を考慮に入れ、エンタープライズ グレードのテクノロジを構築する作業は、非常に困難になる可能性があります。 Microsoft ハイブリッド クラウド戦略は、従来型のプライベート クラウド、パブリック クラウド、およびハイブリッド クラウド環境に対して、これらの主要な課題を克服するためのサポートを提供します。 
@@ -80,7 +80,7 @@ ms.locfileid: "53358454"
  
 -  [Azure レプリカの追加ウィザード](https://msdn.microsoft.com/library/dn463980\(v=sql.120\).aspx)ディザスター リカバリーのため、Azure の仮想マシンに、データベースの 1 つまたは複数のレプリカを配置することができます。 
  
--  AlwaysOn 可用性グループ、データベース ミラーリング、およびログ配布は、アプリケーションの高可用性の宛先を選択することができ、ディザスター リカバリーの必要がある最も一般的なテクノロジです。 詳しくは、[高可用性とディザスター リカバリーを Azure Virtual Machines における SQL Server](https://msdn.microsoft.com/library/azure/jj870962.aspx)を参照してください。 
+-  AlwaysOn 可用性グループ、データベース ミラーリング、およびログ配布は、アプリケーションの高可用性の宛先を選択することができ、ディザスター リカバリーの必要がある最も一般的なテクノロジです。 詳しくは、次を参照してください。[高可用性とディザスター リカバリーを Azure Virtual Machines における SQL Server](https://msdn.microsoft.com/library/azure/jj870962.aspx)します。 
  
 #### <a name="store"></a> SQL Server データ ファイルを Azure Storage に保存します。 
  Azure Storage に、オンプレミスの SQL Server データ ファイルを格納するデータベースの柔軟性と信頼性が高く、無制限のオフサイト ストレージを提供します。 使用できる SQL Server 2014 以降、 [Miceosoft Azure での SQL Server データ ファイル](https://docs.microsoft.com/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure)Azure ストレージに SQL Server データベース ファイルを格納します。 この機能により、データを移動し、オンプレミスで実行される SQL Server のコンピューティング ノードを維持しながらファイルをオンプレミス データベースから Azure Storage にログインできます。 この機能を使用する Azure Storage での無制限のストレージ容量です。 
@@ -104,14 +104,14 @@ ms.locfileid: "53358454"
  
    さらに、SQL Server 2014 以降で、新しいウィザードでは、 [Microsoft Azure 仮想マシンに SQL Server データベースのデプロイ](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)Azure 仮想マシンで実行されている別の SQL Server インスタンスにデータベースを配置することができます。 
  
--  **仮想マシン全体を移動するには。** SQL Server 仮想マシンを Azure に持ち込むまたはプラットフォーム イメージを使用して作成できます。 次に、既にデータを格納しているデータ ディスクをアップロードして仮想マシンにアタッチすること、または空のディスクを仮想マシンにアタッチすることができます。 SQL Server データのインスタンスで発生した Azure 仮想マシンに接続されたデータ ディスクは、データ ファイルとアプリケーション データの別の永続的なストレージを提供します。 包括的な情報と操作方法について、[Azure Virtual Machines における SQL Server の展開](https://msdn.microsoft.com/library/dn133141.aspx)を参照してください。 
+-  **仮想マシン全体を移動するには。** SQL Server 仮想マシンを Azure に持ち込むまたはプラットフォーム イメージを使用して作成できます。 次に、既にデータを格納しているデータ ディスクをアップロードして仮想マシンにアタッチすること、または空のディスクを仮想マシンにアタッチすることができます。 SQL Server データのインスタンスで発生した Azure 仮想マシンに接続されたデータ ディスクは、データ ファイルとアプリケーション データの別の永続的なストレージを提供します。 包括的な情報と操作方法について、次を参照してください。 [Azure Virtual Machines における SQL Server の展開](https://msdn.microsoft.com/library/dn133141.aspx)します。 
  
  指定された推奨事項を確認することをお勧め (プレゼンテーション層、ビジネス層、データベース層など) のアプリケーション層を Azure Virtual Machines を移動する場合、[アプリケーション パターンと開発Azure Virtual Machines における SQL Server の戦略](https://msdn.microsoft.com/library/dn574746.aspx)記事。 この記事の目的では、ソリューション設計者および開発者の基盤を提供優れたアプリケーション アーキテクチャと設計で、Azure と Azure で新しいアプリケーションを開発する既存のアプリケーションを移行するときに従うことができます。 アプリケーション パターンごとに、この記事では内部設置型のシナリオ、それに相当するクラウド対応ソリューション、および関連する技術的な推奨事項について説明します。 さらに、アプリケーションを正しく設計できるように、この記事は、Azure 固有の開発戦略について説明します。 
  
-## <a name="see-also"></a>関連項目 
+## <a name="see-also"></a>参照 
  [SQL Server 2014 CTP2 製品ガイド](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
- [Microsoft SQL Server ハイブリッド クラウドのブログ シリーズ](https://blogs.msdn.com/b/azure/archive/2013/10/16/microsoft-sql-server-hybrid-cloud-blog-series.aspx)  
- [データ中心のアプリケーションを Azure への移行](https://msdn.microsoft.com/library/jj156154.aspx) 
+ [Microsoft SQL Server ハイブリッド クラウドのブログ シリーズ](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
+ [データ中心のアプリケーションを Azure への移行](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
  
  

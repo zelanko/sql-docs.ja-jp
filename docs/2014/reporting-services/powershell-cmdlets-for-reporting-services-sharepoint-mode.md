@@ -11,12 +11,12 @@ ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e51aef3d9aa06790420cec9fab0d487a68563a4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 56973f01112b670727cc0ffa83ba6372c45a3faa
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241580"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モードの PowerShell コマンドレット
    [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードをインストールすると、SharePoint モードのレポート サーバーをサポートするために PowerShell コマンドレットがインストールされます。 コマンドレットは 3 つのカテゴリの機能をサポートしています。  
@@ -45,18 +45,20 @@ ms.locfileid: "58658266"
   
 -   [詳細なサンプル](#bkmk_detailedsamples)  
   
-    -   [Reporting Services サービス アプリケーションとプロキシを作成します。](#bkmk_example_create_service_application)  
+    -   [Reporting Services サービス アプリケーションとプロキシの作成](#bkmk_example_create_service_application)  
   
-    -   [確認し、Reporting Services 配信拡張機能の更新](#bkmk_example_delivery_extension)  
+    -   [Reporting Services 配信拡張機能の確認と更新](#bkmk_example_delivery_extension)  
   
-    -   [取得およびレポートというアプリケーションのデータベース、データベース タイムアウトなどのプロパティを設定します。](#bkmk_example_db_properties)  
+    -   [Reporting Services アプリケーション データベースのプロパティ (データベース タイムアウトなど) の取得と設定](#bkmk_example_db_properties)  
   
     -   [リストの reporting services データ拡張機能 - SharePoint モード](#bkmk_example_list_data_extensions)  
   
-    -   [変更し、サブスクリプションの所有者を一覧表示](#bkmk_change_subscription_owner)  
+    -   [サブスクリプションの所有者の変更と一覧表示](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> コマンドレットの概要  
+
  コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)) を使用することもできます。 サービス アプリケーション「データベース」への参照を次のコマンドレット概要では、すべてのデータベースによって作成および使用を参照してください、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。 これには、構成、警告、および一時データベースが含まれます。  
+
   
  PowerShell の例を入力すると、次のようなエラー メッセージが表示されます。  
   
@@ -73,7 +75,7 @@ ms.locfileid: "58658266"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 詳細については、[SharePoint 2013 を管理する Windows PowerShell を使用して](https://technet.microsoft.com/library/ee806878.aspx)(https://technet.microsoft.com/library/ee806878.aspx)を参照してください。  
+ 詳細については、次を参照してください。 [SharePoint 2013 を管理する Windows PowerShell を使用して](https://technet.microsoft.com/library/ee806878.aspx)(https://technet.microsoft.com/library/ee806878.aspx)します。  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 管理シェルを開いてコマンドレットを実行するには  
   
@@ -129,7 +131,7 @@ ms.locfileid: "58658266"
 |New-SPRSExtension|新しい拡張機能を Reporting Services サービス アプリケーションに登録します。|  
 |Set-SPRSExtension|既存の Reporting Services 拡張機能のプロパティを設定します。|  
 |Remove-SPRSExtension|Reporting Services サービス アプリケーションから拡張機能を削除します。|  
-|Get-SPRSExtension|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーション用の、1 つ以上の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 拡張機能を取得します。<br /><br /> 有効な値は、<br /><br /> **配信**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **Security**<br /><br /> **[認証]**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **Reportdefinitioncustomization です。**|  
+|Get-SPRSExtension|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーション用の、1 つ以上の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 拡張機能を取得します。<br /><br /> 有効な値は、<br /><br /> **Delivery**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **data**<br /><br /> **セキュリティ**<br /><br /> **認証**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **デザイナー**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|"ReportingService" 機能が有効になっているかどうかに基づいて SharePoint サイトを取得します。 既定では、"ReportingService" 機能が有効になっているサイトが返されます。|  
   
 ##  <a name="bkmk_basic_samples"></a> 基本的なサンプル  
@@ -273,7 +275,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 }  
 ```  
   
- **出力例:**  
+ **出力の例:**  
   
 -   `Name           ExtensionType`  
   
@@ -301,8 +303,8 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
  「 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [PowerShell を使用した Reporting Services サブスクリプション所有者の変更および一覧表示とサブスクリプションの実行](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [チェックリスト:PowerShell を使用して、SharePoint の PowerPivot を確認するには](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+ [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [チェック リスト: PowerShell を使用して、SharePoint の PowerPivot を確認するには](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
  [CodePlex SharePoint 管理 PowerShell スクリプト](http://sharepointpsscripts.codeplex.com/)   
  [PowerShell を使用して SSRS を管理する方法](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
   
