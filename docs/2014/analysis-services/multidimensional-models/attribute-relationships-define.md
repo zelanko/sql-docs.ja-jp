@@ -14,12 +14,12 @@ ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93e3ca09b1d1d20be103db8bbd92aa15e3a1ba5a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ecc6eefcf6fea5ee815190e1d4204a00cca60f0a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241240"
 ---
 # <a name="define-attribute-relationships"></a>属性リレーションシップの定義
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、属性はディメンションの基本的な要素です。 ディメンションには、属性リレーションシップに基づいて構成される一連の属性が含まれます。  
@@ -35,7 +35,7 @@ ms.locfileid: "53360434"
 -   ユーザー定義階層がリレーションシップのパスに沿って定義されている場合、集計デザイン アルゴリズムによってより効果的な集計が選択されます。  
   
     > [!NOTE]  
-    >  重要性および定義と構成の属性リレーションシップの影響の詳細についてを参照してください、セクション、「クエリ パフォーマンスの向上」、 [SQL Server 2005 Analysis Services パフォーマンス ガイド](https://go.microsoft.com/fwlink/?LinkId=81621)します。  
+    >  重要性および定義と構成の属性リレーションシップの影響の詳細についてを参照してください、セクション、「クエリ パフォーマンスの向上」、 [SQL Server 2005 Analysis Services パフォーマンス ガイド](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)します。  
   
 ## <a name="attribute-relationship-considerations"></a>属性リレーションシップに関する注意点  
  基になるデータで属性リレーションシップがサポートされる場合、属性間で一意の属性リレーションシップを定義することも必要です。 一意の属性リレーションシップを定義するには、ディメンション デザイナーの **[属性リレーションシップ]** タブを使用します。  
@@ -48,6 +48,6 @@ ms.locfileid: "53360434"
 >  属性リレーションシップを正しく定義しないと、クエリ結果が無効になる場合があります。  
   
 ## <a name="see-also"></a>参照  
- [のディメンション デザイナーの](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [[属性リレーションシップ]](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

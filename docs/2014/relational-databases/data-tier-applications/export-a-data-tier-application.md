@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40ecf3d032aaece172f7b3c456a9eef6c6cf1b30
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242300"
 ---
 # <a name="export-a-data-tier-application"></a>データ層アプリケーションのエクスポート
   配置されているデータ層アプリケーション (DAC) またはデータベースをエクスポートすると、エクスポート ファイルが作成されます。このファイルには、データベース内のオブジェクトの定義に加え、テーブルに格納されているすべてのデータが含まれています。 さらに、このエクスポート ファイルを[!INCLUDE[ssDE](../../includes/ssde-md.md)]の別のインスタンスまたは [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] にインポートすることもできます。 エクスポートとインポートという操作を組み合わせることで、DAC をインスタンス間で移行したり論理バックアップを作成したりすることが可能です。または、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] に配置されているデータベースの社内用コピーを作成することもできます。  
@@ -43,7 +43,7 @@ ms.locfileid: "58618139"
   
  エクスポート プロセスでは、DAC バージョンが 1.0.0.0 に設定され、エクスポート ファイル内の DAC の説明は空の文字列に設定されます。 データベースが DAC から配置された場合、エクスポート ファイル内の DAC 定義には、元の DAC に割り当てられた名前が格納されます。それ以外の場合、DAC 名はデータベース名に設定されます。  
   
- 
+
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  DAC またはデータベースをエクスポートできるのは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降のデータベースに限られます。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "58618139"
 ##  <a name="Introduction"></a> [説明] ページ  
  このページには、データ層アプリケーションのエクスポート ウィザードの手順が表示されます。  
   
- **[オプション]**  
+ **および**  
   
  **[次回からこのページを表示しない]** : 今後 [説明] ページを表示しないようにするには、このチェック ボックスをオンにします。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "58618139"
 3.  `Export` 型の `Microsoft.SqlServer.Management.Dac.DacStore` メソッドを使用して、DAC をエクスポートします。 エクスポートする DAC の名前と、エクスポート ファイルの出力先となるフォルダーのパスを指定します。  
   
 ## <a name="see-also"></a>参照  
- [[データ層アプリケーション]](data-tier-applications.md)   
+ [オブジェクト エクスプローラー](data-tier-applications.md)   
  [データベースからの DAC の抽出](extract-a-dac-from-a-database.md)  
   
   

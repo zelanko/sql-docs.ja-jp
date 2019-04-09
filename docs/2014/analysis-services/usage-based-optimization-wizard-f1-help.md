@@ -15,12 +15,12 @@ ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3800e9ed229491c4abe1746f6d0325ff1c63525d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240400"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>使用法に基づく最適化ウィザードの F1 ヘルプ
   使用法に基づく最適化ウィザードを使用するとパーティションの集計をデザインすることができ、その出力は集計のデザイン ウィザードに似ています。 ただし、使用法に基づく最適化ウィザードでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスのクエリ ログに記録されているクエリの特定の使用パターンに基づいて集計をデザインします。 集計を利用するとパフォーマンスが向上しますが、これは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が各クエリの基となるデータ ソースからデータを取得して再計算を行うのではなく、キューブのストレージから直接、事前に計算された合計を取得するためです。  
@@ -44,28 +44,28 @@ ms.locfileid: "53365264"
  通常、両方のウィザードを併用することで、配置後のパフォーマンスと長期的なパフォーマンスを向上させます。 パーティション (または、パーティションを含むキューブやメジャー グループ) を最初に配置するときに、まず集計のデザイン ウィザードを使用して全体的なパフォーマンスを向上させる必要があります。 その後、一定期間が経過してパーティションに対するビジネス ユーザーのクエリがクエリ ログに記録されたら、使用法に基づく最適化ウィザードを使用します。これにより、ビジネス ユーザーのクエリ要件に適応した、よりパフォーマンスの高い集計デザインを作成することができます。  
   
 > [!NOTE]  
->  クエリ ログの構成については、「 [Analysis Services クエリ ログの構成](https://www.microsoft.com/technet/prodtechnol/sql/2005/technologies/config_ssas_querylog.mspx)」をご覧ください。  
+>  クエリ ログの構成については、「 [Analysis Services クエリ ログの構成](instances/log-operations-in-analysis-services.md?view=sql-server-2014#bkmk_querylog)」をご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [変更するパーティションを選択します&#40;使用法に基づく最適化ウィザード。&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [[変更するパーティションの選択] &#40;使用法に基づく最適化ウィザード&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [クエリ条件の指定&#40;使用法に基づく最適化ウィザード&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [[クエリ条件の指定] &#40;使用法に基づく最適化ウィザード&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [最適化されたクエリを確認する&#40;使用法に基づく最適化ウィザード&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [[最適化するクエリの確認] &#40;使用法に基づく最適化ウィザード&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [集計使用法の確認&#40;Optimiation ウィザードの使用法に基づく&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [[集計使用法の確認] &#40;使用法に基づく最適化ウィザード&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [オブジェクト カウントの指定&#40;使用法に基づく最適化ウィザード&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [[オブジェクト カウントの指定] &#40;使用法に基づく最適化ウィザード&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [集計オプションの設定&#40;使用法に基づく最適化ウィザード&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [[集計オプションの設定] &#40;使用法に基づく最適化ウィザード&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [ウィザードの完了&#40;使用法に基づく最適化ウィザード&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [[ウィザードの完了] &#40;使用法に基づく最適化ウィザード&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>参照  
  [集計と集計デザイン](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
- [集計デザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   
- [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [集計のデザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   
+ [Analysis Services のウィザード &#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

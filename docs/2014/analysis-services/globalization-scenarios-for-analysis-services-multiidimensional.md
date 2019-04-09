@@ -19,12 +19,12 @@ ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45b0b733ccc6e42e1f4a63ba9c7a2f615d2b55eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241916"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 多次元のグローバル化のシナリオ
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、多言語のデータおよびメタデータを、表形式モデルと多次元データ モデルのどちらにも格納して操作できます。 データは Unicode (UTF-16) で格納され、Unicode エンコードの文字セットを使用します。 データ モデルに ANSI データを読み込むと、文字は Unicode の等価なコード ポイントを使用して格納されます。  
@@ -77,7 +77,7 @@ ms.locfileid: "53357873"
   
 ## <a name="see-also"></a>参照  
  [Windows アプリケーションの国際化](/windows/desktop/Intl/international-support)   
- [グローバル デベロッパー センターを参照](https://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Microsoft グローバリゼーションのドキュメント](/globalization/)   
  [ロケールに基づくアダプティブ デザインを使用した Windows ストア アプリの作成](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [C# と XAML によるユニバーサル Windows アプリの開発](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

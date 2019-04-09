@@ -16,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e18d8058519127108b2b23a6a798fe3d37c25c0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240380"
 ---
 # <a name="xml-source"></a>XML ソース
   XML ソースは XML データ ファイルを読み取り、ソース出力の列にデータを設定します。  
@@ -69,21 +69,21 @@ ms.locfileid: "58386640"
   
  XML ソースでは、複数の標準出力と複数のエラー出力がサポートされています。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、XML ソースを構成するための **[XML ソース エディター]** ダイアログ ボックスがあります。 このダイアログ ボックスは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから利用できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring には、XML ソースを構成する **[XML ソース エディター]** ダイアログ ボックスがあります。sこのダイアログ ボックスは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから利用できます。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
  **[XML ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[XML ソース エディター] &#40;[接続マネージャー] ページ&#41;](../xml-source-editor-connection-manager-page.md)  
+-   [[XML ソース エディター] ([接続マネージャー] ページ)](../xml-source-editor-connection-manager-page.md)  
   
--   [[XML ソース エディター] &#40;[列] ページ&#41;](../xml-source-editor-columns-page.md)  
+-   [[XML ソース エディター] ([列] ページ)](../xml-source-editor-columns-page.md)  
   
 -   [XML ソース エディター &#40;[エラー出力] ページ&#41;](../xml-source-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](../common-properties.md)  
+-   [共通プロパティ](../common-properties.md)  
   
 -   [XML 入力元のカスタム プロパティ](xml-source-custom-properties.md)  
   
@@ -95,6 +95,6 @@ ms.locfileid: "58386640"
  [XML ソースを使用してデータを抽出する](xml-source.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- curatedviews.cloudapp.net の Curated Answer 「[SSIS パッケージ用の XML 変換先を作成する](https://go.microsoft.com/fwlink/?LinkId=321993)」  
+ 技術記事「 [XML ファイルを使用して、SSIS パッケージを構成する](https://www.sqlshack.com/using-xml-file-configure-ssis-package/)します。  
   
   

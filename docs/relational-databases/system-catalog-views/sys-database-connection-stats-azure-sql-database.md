@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9d9e6f23d9e73295f34f23777c76253d27671ed8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012363"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242330"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL データベース)
 
@@ -38,19 +38,19 @@ ms.locfileid: "56012363"
 |**database_name**|**sysname**|データベースの名前です。|  
 |**start_time**|**datetime2**|集計の間隔の開始日時 (UTC)。 この時刻は常に 5 分の倍数です。 以下に例を示します。<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|集計の間隔の終了日時 (UTC)。 **End_time**は常に 5 分後に、対応するよりも**start_time**同じ行にします。|  
-|**success_count**|**int**|成功した接続の数。|  
-|**total_failure_count**|**int**|失敗した接続の合計数。 これは、合計の**connection_failure_count**、 **terminated_connection_count**、および**throttled_connection_count**、デッドロック イベントは含まれません。|  
-|**connection_failure_count**|**int**|失敗したログインの数。|  
-|**terminated_connection_count**|**int**|**_のみ適用[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11 します。_**<br /><br /> 終了された接続の数。|  
-|**throttled_connection_count**|**int**|**_のみ適用[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11 します。_**<br /><br /> スロットルされた接続の数。|  
+|**success_count**|**ssNoversion**|成功した接続の数。|  
+|**total_failure_count**|**ssNoversion**|失敗した接続の合計数。 これは、合計の**connection_failure_count**、 **terminated_connection_count**、および**throttled_connection_count**、デッドロック イベントは含まれません。|  
+|**connection_failure_count**|**ssNoversion**|ログインの失敗数。|  
+|**terminated_connection_count**|**ssNoversion**|**_のみ適用[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11 します。_**<br /><br /> 終了した接続の数。|  
+|**throttled_connection_count**|**ssNoversion**|**_のみ適用[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11 します。_**<br /><br /> スロットルされた接続の数。|  
   
 ## <a name="remarks"></a>コメント  
   
 ### <a name="event-aggregation"></a>イベント集計
 
- このビューのイベント情報は、5 分未満の間隔で収集および集計されます。 数の列は、特定の間隔において特定のデータベースで特定の接続イベントが発生した回数を表します。  
+ このビューのイベント情報は、5 分未満の間隔で収集および集計されます。 カウント列では、時刻を特定の接続イベントが発生した特定のデータベースで一定の時間間隔の数を表します。  
   
- たとえば、2012 年 2 月 5 日の 11:00 から 11:05 まで (UTC) の間に Database1 データベースへの接続が 7 回失敗した場合、この情報はこのビューの 1 つの行に表示されます。  
+ たとえば、ユーザーは、7 回間 11時 00分から 11:05 まで (UTC) の 2/5/2012 Database1 データベースへの接続に失敗した場合、この情報はこのビュー内の単一行で使用できます。  
   
 |**database_name**|**start_time**|**end_time**|**success_count**|**total_failure_count**|**connection_failure_count**|**terminated_connection_count**|**throttled_connection_count**|  
 |------------------------|---------------------|-------------------|------------------------|-------------------------------|------------------------------------|---------------------------------------|--------------------------------------|  
@@ -101,6 +101,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 
 ## <a name="see-also"></a>参照
 
- [Windows Azure SQL Database のトラブルシューティング](https://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+ [Azure SQL Database への接続に関する問題をトラブルシューティングします。](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

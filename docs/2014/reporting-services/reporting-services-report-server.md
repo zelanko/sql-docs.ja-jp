@@ -25,12 +25,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0b745a3d9cfd88bb65b60720903768672fbe1e88
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019093"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241630"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   このトピックでは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インストールの中心となるコンポーネントである [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーの概要を説明します。 処理エンジンのペアと、認証、データ処理、表示、配信の各操作を行う用途別拡張機能の集合で構成されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブ モードと SharePoint モードという 2 種類の配置モードのいずれかで動作します。 機能の比較については、「 [SharePoint モードとネイティブ モードの機能の比較](#bkmk_featuresupport) 」セクションを参照してください。  
@@ -53,19 +53,19 @@ ms.locfileid: "56019093"
   
 -   [SharePoint モードとネイティブ モードの機能の比較](#bkmk_featuresupport)  
   
--   [Native Mode](#bkmk_nativemode)  
+-   [ネイティブ モード](#bkmk_nativemode)  
   
 -   [SharePoint Web パーツ対応ネイティブ モード](#bkmk_nativewithwebparts)  
   
 -   [SharePoint モード](#bkmk_sharepointmode)  
   
--   [レポートのプロセスとスケジュールおよび配信処理](#bkmk_reportprocessor)  
+-   [レポートのプロセス、およびスケジュールと配信のプロセス](#bkmk_reportprocessor)  
   
 -   [レポート サーバー データベース](#bkmk_reportdatabase)  
   
--   [認証、レンダリング、データ、および配信拡張機能](#bkmk_authentication)  
+-   [認証、表示、データ、配信の各拡張機能](#bkmk_authentication)  
   
--   [関連タスク](#bkmk_relatedtasks)  
+-   [Related Tasks](#bkmk_relatedtasks)  
   
 ##  <a name="bkmk_overview"></a> レポート サーバー モードの概要  
  処理エンジン (プロセッサ) はレポート サーバーの中核となります。 プロセッサはレポート システムの整合性をサポートし、変更したり拡張したりすることはできません。 拡張機能もプロセッサですが、これらはきわめて限られた機能を実行します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、サポートされる拡張機能の種類ごとに、1 つ以上の既定の拡張機能が含まれます。 レポート サーバーにはカスタム拡張機能を追加できます。 これにより、レポート サーバーを拡張し、もともとサポートされていなかった機能を使用できるようにすることができます。たとえば、シングル サインオン テクノロジのサポート、既定の表示拡張機能では処理できないアプリケーション形式でのレポート出力、プリンターやアプリケーションへのレポート配信などのカスタム機能が考えられます。  
@@ -168,12 +168,12 @@ ms.locfileid: "56019093"
 |----------|----------|  
 |ハードウェアおよびソフトウェアの要件を確認します。|「[Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)」を参照してください。|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールします。|[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
-|Web 開発者、またはカスケード スタイル シート作成に関する専門知識を持つユーザーであれば、各自の責任で既定のスタイルを変更し、色、フォント、およびツール バーやレポート マネージャーのレイアウトを変えることができます。 このリリースでは、既定のスタイル シートについても、そのスタイル シートの変更手順についても説明していません。|[HTML ビューアーおよびレポート マネージャーのスタイル シートをカスタマイズする](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
+|Web 開発者、またはカスケード スタイル シート作成に関する専門知識を持つユーザーであれば、各自の責任で既定のスタイルを変更し、色、フォント、およびツール バーやレポート マネージャーのレイアウトを変えることができます。 このリリースでは、既定のスタイル シートについても、そのスタイル シートの変更手順についても説明していません。|[HTML ビューアーとレポート マネージャーのスタイル シートのカスタマイズに関する記事 (ページ、サイトなどの場合もあります)](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
 |HTML のスタイルやカスケード スタイル シート (CSS) の知識があれば、このトピックの情報を利用して、どのファイルを変更するとレポート マネージャーの外観をカスタマイズできるのかを判断できます。|[カスタム認証クッキーを送信するようにレポート マネージャーを構成する](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 |レポート サーバー Web サービスおよび Windows サービスに対するメモリ設定を調整する方法について説明します。|[レポート サーバー アプリケーションで利用可能なメモリの構成](report-server/configure-available-memory-for-report-server-applications.md)|  
 |リモート管理用にレポート サーバーを構成するための推奨されている手順について説明します。|[リモート管理用のレポート サーバーの構成](report-server/configure-a-report-server-for-remote-administration.md)|  
 |ネイティブのレポート サーバー インスタンスで **個人用レポート** を使用できるかどうかを構成する方法について説明します。|[個人用レポートの有効化と無効化](report-server/enable-and-disable-my-reports.md)|  
-|サポートされているブラウザーから、印刷機能を実現する RSClientPrint コントロールを設定する方法について説明します。 ブラウザーの要件の詳細については、[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)を参照してください。|[Reporting Services のクライアント側印刷機能の有効化と無効化](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
+|サポートされているブラウザーから、印刷機能を実現する RSClientPrint コントロールを設定する方法について説明します。 ブラウザーの要件の詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)します。|[Reporting Services のクライアント側印刷機能の有効化と無効化](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services の拡張機能](extensions/reporting-services-extensions.md)   
@@ -183,6 +183,6 @@ ms.locfileid: "56019093"
  [セキュリティ拡張機能の実装](extensions/security-extension/implementing-a-security-extension.md)   
  [データ処理拡張機能の実装](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [PowerShell (Curated Answer) を使用して SSRS を管理する方法](https://go.microsoft.com/fwlink/?LinkId=321992)  
+ [PowerShell を使用して SSRS を管理する方法](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  
   
   

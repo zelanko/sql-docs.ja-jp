@@ -13,12 +13,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 542225a31879c47e58893f438e3af0309a6eca88
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241720"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>レポート ビルダーのインストール、アンインストール、およびサポート
   レポート ビルダーは、レポート、レポート パーツ、および共有データセットの作成、更新、および共有に使用できるレポート作成ツールです。 レポート ビルダーには、スタンドアロン バージョンと [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]バージョンの 2 つがあります。 スタンドアロン バージョンは、ユーザーまたは管理者によってコンピューターにインストールされます。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] バージョンは、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] と共に自動的にインストールされ、レポート マネージャーから、または [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]と統合された SharePoint サイトからコンピューターにダウンロードされます。  
@@ -52,21 +52,21 @@ ms.locfileid: "56298320"
   
  また、コマンド ラインからインストールを実行して、サイレント インストールの実行、インストールのログ ファイルの書き込みなどのオプションを含めることもできます。 使用可能なオプションについては、.msi ファイルを実行する Windows インストーラーのマニュアルを参照してください。  
   
- 詳細については、[レポート ビルダーのスタンドアロン バージョンをインストール&#40;レポート ビルダー&#41;](install-windows/install-report-builder.md)を参照してください。  
+ 詳細については、次を参照してください。[レポート ビルダーのスタンドアロン バージョンをインストール&#40;レポート ビルダー&#41;](install-windows/install-report-builder.md)します。  
   
  管理者は、Microsoft Systems Management Server (SMS) などのソフトウェアを使用してユーザーのコンピューターにプログラムをプッシュすることもできます。 特定のソフトウェアを使用してレポート ビルダーをインストールする方法については、そのソフトウェアのマニュアルを参照してください。   
   
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>コンピューターへの ClickOnce バージョンのレポート ビルダーのインストール  
  レポート ビルダーの [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] バージョンは、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]と共にインストールされます。 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]のネイティブでのインストールと SharePoint 統合でのインストールの両方でインストールされます。  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] は、Windows アプリケーションを配置するための Microsoft テクノロジです。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] では、Web ページ上でリンクをクリックすることによって、レポート ビルダーのような Windows アプリケーションをインストールおよび実行することができます。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションの配置、 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーション セキュリティの適用、またはインターネット ゾーンでの [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションの実行の詳細については、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network Web サイト ( [www.microsoft.com/msdn](https://www.microsoft.com/msdn)) の「Windows フォーム アプリケーションの ClickOnce 配置」、「Windows フォームのセキュリティの概要」、または「信頼されたアプリケーションの配置の概要」を参照してください。  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] は、Windows アプリケーションを配置するための Microsoft テクノロジです。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] では、Web ページ上でリンクをクリックすることによって、レポート ビルダーのような Windows アプリケーションをインストールおよび実行することができます。 展開の詳細については[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]を適用するアプリケーション[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションのセキュリティ、または実行中の[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]インターネット ゾーン内のアプリケーションは、「ClickOnce 展開 Windows フォーム アプリケーションの」、"セキュリティを参照してください。Windows Forms Overview"または「Trusted Application Deployment Overview」の記事で、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network Web サイトで[ https://developer.microsoft.com/](https://developer.microsoft.com/)します。  
   
  レポート ビルダーの [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] バージョンはレポート サーバー上にあり、レポート マネージャーの **[レポート ビルダー]** ボタンをクリックするか、または SharePoint ライブラリの **[新しいドキュメント]** メニューの **[レポート ビルダー レポート]** オプションをクリックすると、コンピューターにインストールされます。  
   
 > [!NOTE]  
 >  **[新しいドキュメント]** メニューに **[レポート ビルダー レポート]** オプション、 **[レポート ビルダーのモデル]** オプション、および **[レポート データ ソース]** オプションが表示されない場合、それらのコンテンツの種類を SharePoint ライブラリに追加する必要があります。   
   
- レポート ビルダーは、レポート マネージャーまたは SharePoint ライブラリから開くことができます。 レポート ビルダーを開く方法の詳細については、[レポート ビルダーの起動&#40;レポート ビルダー&#41;](report-builder/start-report-builder.md)を参照してください。  
+ レポート ビルダーは、レポート マネージャーまたは SharePoint ライブラリから開くことができます。 レポート ビルダーを開く方法の詳細については、次を参照してください。[レポート ビルダーの起動&#40;レポート ビルダー&#41;](report-builder/start-report-builder.md)します。  
   
 ### <a name="report-builder-languages"></a>レポート ビルダーの言語  
  レポート ビルダーは、英語に加えて 21 か国語で使用できます。 レポート ビルダーのスタンドアロン バージョンをダウンロードする場合は、インストールする言語バージョンを選択します。 使用する言語バージョンごとにダウンロードを繰り返す必要があります。  
@@ -104,7 +104,7 @@ ms.locfileid: "56298320"
 ##  <a name="Uninstalling"></a> レポート ビルダーをアンインストールします。  
  スタンドアロン バージョンのレポート ビルダーは、コントロール パネルまたはコマンド ラインからアンインストールできます。 これは、スタンドアロン バージョンのレポート ビルダーのみです。 レポート ビルダーの [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] は、個別にアンインストールできません。 常に、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]と共にインストールおよびアンインストールされます。  
   
- 詳細については、[レポート ビルダーのスタンドアロン バージョンをアンインストール&#40;レポート ビルダー&#41;](install-windows/uninstall-report-builder.md)を参照してください。  
+ 詳細については、次を参照してください。[レポート ビルダーのスタンドアロン バージョンをアンインストール&#40;レポート ビルダー&#41;](install-windows/uninstall-report-builder.md)します。  
   
   
 ##  <a name="Supporting"></a> レポート ビルダーのサポート  
@@ -127,7 +127,7 @@ ms.locfileid: "56298320"
   
 -   背景画像やロゴなどの画像。複数のレポートで使用でき、簡単に管理できるようにレポートの外部に保存されます。  
   
- 詳細については、[レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](report-server/report-server-content-management-ssrs-native-mode.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com を参照してください。  
+ 詳細については、次を参照してください。[レポート サーバー コンテンツの管理&#40;SSRS ネイティブ モード&#41;](report-server/report-server-content-management-ssrs-native-mode.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com します。  
   
 ### <a name="permissions"></a>アクセス許可  
  レポート サーバーに対する権限は管理者が付与します。 レポート ビルダーのユーザーがレポート サーバーのコンテンツや機能にアクセスするには、レポート サーバーに対する権限が必要です。 たとえば、レポート サーバーに保存されているレポート パーツの使用、レポートの更新と更新したレポートのレポート サーバーへの再保存、レポート マネージャーでのレポートの実行などが必要になる場合があります。 ニーズや実行するタスクに応じて、低い権限または高い権限を許可します。 たとえば、共有レポートを開くことだけが必要なユーザーには、共有レポートを変更する必要があるユーザーに比べて低い特権が設定された権限を許可します。  

@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7d0273e166f715030da1ae2a984f4f744364ba4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241250"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
   パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
@@ -75,7 +75,7 @@ ms.locfileid: "58387140"
   
  次のいずれかの方法を使用して、子パッケージに値を渡すことができます。  
   
--   **パッケージ構成**  
+-   **[パッケージ構成]**  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、親パッケージ変数という種類の構成を使用して、親パッケージの値を子パッケージに渡すことができます。 この設定は子パッケージ上で構築され、親パッケージ内の変数を使用します。 構成は、子パッケージ内の変数、または子パッケージ内のオブジェクトのプロパティにマップされます。 また、スクリプト タスクまたはスクリプト コンポーネントで使用されるスクリプト内でも変数を使用できます。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "58387140"
  詳細については、「 [子パッケージでの変数およびパラメーターの値の使用](../use-the-values-of-variables-and-parameters-in-a-child-package.md)」を参照してください。  
   
 ### <a name="accessing-parent-package-variables"></a>親パッケージの変数へのアクセス  
- 子パッケージではスクリプト タスクを使用して、親パッケージの変数にアクセスできます。 **スクリプト タスク エディター**で **[スクリプト]** ページに親パッケージ変数の名前を入力するときは、変数名に **User:** を含めないでください。 そうしないと、親パッケージを実行したときに子パッケージで変数が見つかりません。 スクリプト タスクを使用して、親パッケージ変数にアクセスする方法の詳細については、このブログ記事を参照してください[SSIS:。親パッケージ変数にアクセスする](https://go.microsoft.com/fwlink/?LinkId=257729)、consultingblogs.emc.com します。  
+ 子パッケージではスクリプト タスクを使用して、親パッケージの変数にアクセスできます。 **スクリプト タスク エディター**で **[スクリプト]** ページに親パッケージ変数の名前を入力するときは、変数名に **User:** を含めないでください。 そうしないと、親パッケージを実行したときに子パッケージで変数が見つかりません。 スクリプト タスクを使用して、親パッケージ変数にアクセスする方法の詳細については、このブログ記事を参照してください[SSIS:。親パッケージ変数にアクセスする](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)します。  
   
 ## <a name="configuring-the-execute-package-task"></a>パッケージ実行タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
@@ -118,6 +118,6 @@ ms.locfileid: "58387140"
   
 -   ブログ エントリ「 [SSIS:インプロセスまたはアウト プロセスの子パッケージを実行する必要がありますか。](https://go.microsoft.com/fwlink/?LinkId=220819)、consultingblogs.emc.com します。  
   
--   ブログ エントリ「 [SSIS:親パッケージ変数にアクセスする](https://go.microsoft.com/fwlink/?LinkId=257729)、consultingblogs.emc.com します。  
+-   ブログ エントリ「 [SSIS:親パッケージ変数にアクセスする](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)andyleonard.blog にします。 
   
   

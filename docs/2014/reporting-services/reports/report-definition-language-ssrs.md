@@ -20,12 +20,12 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 32442fad5d3d6f265769927d291c3154ff362f38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 88c22eebf7a070628e72515fafc83591a8e34c64
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241153"
 ---
 # <a name="report-definition-language-ssrs"></a>レポート定義言語 (SSRS)
   レポート定義言語 (RDL) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート定義の XML 表現です。 レポート定義には、レポートのデータ取得とレイアウトの情報が含まれます。 RDL は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用に作成された XML 文法に準拠する XML 要素で構成されます。 レポート定義ファイル内のコード アセンブリにアクセスすることによって、レポート アイテムの値、スタイル、および書式設定を制御するために独自のカスタム機能を追加できます。  
@@ -71,7 +71,7 @@ ms.locfileid: "56010425"
 |`Language`|米国英語を表す "en-us" などの言語文化コードを含むテキスト値を持つプロパティです。 値は、特定の言語か、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]で既定の言語が定義されたニュートラル言語である必要があります。|  
 |`Name`|文字列テキストの値を持つプロパティです。 名前は、アイテムの名前空間内で一意である必要があります。 指定しない場合、名前を持つ最も内側のオブジェクトが、アイテムの名前空間となります。|  
 |`NormalizedString`|正規化された文字列テキストの値を持つプロパティです。|  
-|`Size`|サイズ要素には、数値が含まれている必要があります (小数点としてピリオドを使用)。 数値の後には、cm、mm、in、pt、pc など、CSS 長さ単位の指定子を入力する必要があります。 数値と指定子の間のスペースは省略可能です。 サイズ指定子の詳細については、「 [CSS の長さ単位リファレンス](https://go.microsoft.com/fwlink/?LinkId=9257)」を参照してください。<br /><br /> RDL では、`Size` の最大値は 160 インチで、 最小サイズは 0 インチです。|  
+|`Size`|サイズ要素には、数値が含まれている必要があります (小数点としてピリオドを使用)。 数値の後には、cm、mm、in、pt、pc など、CSS 長さ単位の指定子を入力する必要があります。 数値と指定子の間のスペースは省略可能です。 サイズ指定子の詳細については、「 [CSS の長さ単位リファレンス](https://www.w3schools.com/CSSref/css_units.asp)」を参照してください。<br /><br /> RDL では、`Size` の最大値は 160 インチで、 最小サイズは 0 インチです。|  
 |`String`|文字列テキストの値を持つプロパティです。|  
 |`UnsignedInt`|符号なし整数 (uint32) 値を持つプロパティです。|  
 |`Variant`|任意の単純な XML 型を持つプロパティです。|  

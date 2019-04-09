@@ -13,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99687b8168c16b0ad1ceef5f802b3345038524fe
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241032"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
   式エバリュエーターは、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型を使用します。 データが [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージのデータ フローに入力されると、データ フロー エンジンはすべての列データを [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型に変換します。このため、式が列データを使用するときには、既に [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型になっています。 条件分割変換および派生列変換で使用される式は、列データが含まれるデータ フローの一部であるため、列を参照できます。  
@@ -55,13 +55,13 @@ ms.locfileid: "58378270"
   
 -   [== &#40;等しい&#41; &#40;SSIS 式&#41;](equal-ssis-expression.md)  
   
--   [\!= &#40;等しくない&#41; &#40;SSIS 式&#41;](unequal-ssis-expression.md)  
+-   [!= &#40;等しくない&#41; &#40;SSIS 式&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;より大きい&#41; &#40;SSIS 式&#41;](greater-than-ssis-expression.md)  
   
 -   [&#60; &#40;より小さい&#41; &#40;SSIS 式&#41;](less-than-ssis-expression.md)  
   
--   [&#62;= &#40;以上&#41; &#40;SSIS 式&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= (以上) (SSIS 式)](greater-than-or-equal-to-ssis-expression.md)  
   
 -   [&#60;= &#40;以下&#41; &#40;SSIS 式&#41;](less-than-or-equal-to-ssis-expression.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "58378270"
   
 -   数学関数に渡される引数は、数値データ型に評価される必要があります。 関数または演算によっては、特定の数値データ型が必要となる場合があります。 たとえば HEX 関数では、符号付き整数または符号なし整数が必要です。  
   
--   文字列関数に渡される引数は、文字データ型に評価される必要があります。DT_STR または dt_wstr 型。 たとえば、UPPER("flower") などの場合です。 SUBSTRING などの一部の文字列関数では、さらに、文字列の開始位置や長さを指定するために整数の引数が必要となります。  
+-   文字列関数に渡される引数は、次の文字データ型に評価される必要があります。DT_STR または DT_WSTR。 たとえば、UPPER("flower") などの場合です。 SUBSTRING などの一部の文字列関数では、さらに、文字列の開始位置や長さを指定するために整数の引数が必要となります。  
   
 -   日付と時刻の関数に渡される引数は、有効な日付に評価される必要があります。 たとえば、DAY(GETDATE()) などの場合です。 DATEADD などの一部の関数では、さらに、関数が日付に追加する日数を指定するために整数の引数が必要となります。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "58378270"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://go.microsoft.com/fwlink/?LinkId=217683)」  
+-   pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet3)」  
   
 -   social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
   

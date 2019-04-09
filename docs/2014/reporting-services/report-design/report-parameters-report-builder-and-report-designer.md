@@ -18,17 +18,17 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 14d0f9f445717ed7744f5da14eba3e99b16127db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3115624895c45585101db4d5c02ea85509d68220
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286660"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241820"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>レポート パラメーター (レポート ビルダーおよびレポート デザイナー)
   このトピックでは、SSRS レポート パラメーターの一般的な使用方法、設定できるプロパティ、およびパラメーターの詳細について説明します。 レポート パラメーターを使用すると、レポート データの制御、他のレポートとの関連付け、およびレポートの表示方法の変更が可能になります。  
   
-[!INCLUDE[applies](../../includes/applies-md.md)] SharePoint モードおよび ネイティブ モード
+[!INCLUDE[applies](../../includes/applies-md.md)] SharePoint モードおよびネイティブ モード
   
  レポートにパラメーターを追加する方法のデモについては、次を参照してください。[チュートリアル。レポート (SSRS) へのパラメーターの追加](https://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
 
@@ -131,7 +131,7 @@ ms.locfileid: "56286660"
 |--------------|-----------------|  
 |名前|パラメーターの名前を入力します (大文字と小文字が区別されます)。 名前は文字で始まる必要があります。また、名前には、文字、数字、アンダースコア (_) を使用できます。 空白は使用しないでください。 自動的に生成されたパラメーターの名前は、データセット クエリのパラメーターと同じ名前になります。 既定では、手動で作成されたパラメーターの名前は、ReportParameter1 のようになります。|  
 |[プロンプト]|レポート ビューアー ツール バーでパラメーターの横に表示されるテキストです。|  
-|データ型|データ型が場合でも、ユーザーが、ドロップダウン リストから値を選択パラメーターの使用可能な値を定義したら、`DateTime`します。 レポート パラメーターのデータ型は、次のいずれかである必要があります。<br /><br /> `Boolean` 。 オプション ボタンから True または False を選択します。<br /><br /> `DateTime` 。 カレンダー コントロールから日付を選択します。<br /><br /> **[Integer]**。 テキスト ボックスに値を入力します。<br /><br /> **[Float]**。 テキスト ボックスに値を入力します。<br /><br /> `Text` 。 テキスト ボックスに値を入力します。<br /><br /> レポートのデータ型の詳細については、「 [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)」をご覧ください。|  
+|データ型|データ型が場合でも、ユーザーが、ドロップダウン リストから値を選択パラメーターの使用可能な値を定義したら、`DateTime`します。 レポート パラメーターのデータ型は、次のいずれかである必要があります。<br /><br /> `Boolean`. オプション ボタンから True または False を選択します。<br /><br /> `DateTime`. カレンダー コントロールから日付を選択します。<br /><br /> **[Integer]**。 テキスト ボックスに値を入力します。<br /><br /> **[Float]**。 テキスト ボックスに値を入力します。<br /><br /> `Text`. テキスト ボックスに値を入力します。<br /><br /> レポートのデータ型の詳細については、「 [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)」をご覧ください。|  
 |[空白の値を許可]|パラメーターの値に空の文字列 (空白) を許可する場合に選択します。<br /><br /> パラメーターの有効な値の一覧を指定する場合に空白を有効な値にするには、指定する値の中に含める必要があります。 このオプションを選択すると自動的に空白が有効な値に含まれるわけではありません。|  
 |[NULL 値を許可]|パラメーターの値に NULL 値を許可する場合に選択します。<br /><br /> パラメーターの有効な値の一覧を指定する場合に NULL を有効な値にするには、指定する値の中に含める必要があります。 このオプションを選択すると自動的に NULL が有効な値に含まれるわけではありません。|  
 |[複数の値を許可]|使用可能な値を指定して、ユーザーがドロップダウン リストから値を選択できるようにすると、 データセット クエリで有効な値のみが送信されるようにすることができます。<br /><br /> パラメーターの値に、ドロップダウン リストに表示される複数の値を指定できる場合に選択します。 NULL 値は許容されません。 このチェック ボックスがオンの場合、パラメーターのドロップダウン リストで、使用可能な値の一覧にチェック ボックスが追加されます。 一覧の一番上には、 **[すべて選択]** チェック ボックスが表示されます。 ユーザーは、必要な値のチェック ボックスをオンにすることができます。<br /><br /> 値を提供するデータが急速に変化する場合は、ユーザーに最新の一覧が表示されるとは限りません。|  
@@ -156,7 +156,7 @@ ms.locfileid: "56286660"
   
  パブリッシュ済みのレポートには、以下を使用できます。  
   
--   **レポート パラメーター プロパティ。** レポート パラメーターの値を (レポート定義とは関係なく) レポート サーバー上で直接変更する。  
+-   **レポート パラメーター プロパティ。** レポート パラメーターの値を (レポート定義とは関係なく) レポート サーバー上で直接変更します。  
   
 -   **キャッシュされたレポート。** レポートのキャッシュ計画を作成するには、各パラメーターに既定値が指定されている必要があります。 詳細については、「 [レポートのキャッシュ (SSRS)](../report-server/caching-reports-ssrs.md)でキャッシュを事前に読み込む唯一の方法でした。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "56286660"
   
 -   **リンク レポート。** さまざまな対象ユーザーのためにデータをフィルター処理するパラメーター値が事前に設定されたリンク レポートを作成できます。 詳細については、「 [リンク レポートを作成する](../reports/create-a-linked-report.md)」を参照してください。  
   
--   **レポート サブスクリプション。** データをフィルター処理してレポートをサブスクリプションで配信するためのパラメーター値を指定できます。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](../subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
+-   **レポート サブスクリプション。** データをフィルター処理してレポートをサブスクリプションで配信するためのパラメーター値を指定できます。 詳細については「[Subscriptions and Delivery (Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md)」(サブスクリプションと配信 (Reporting Services)) を参照してください。  
   
 -   **URL アクセス。** レポートへの URL でパラメーター値を指定できます。 URL アクセスを使用して、レポートを実行したりパラメーター値を指定したりすることもできます。 詳細については、「[URL アクセス (SSRS)](../url-access-ssrs.md)」を参照してください。  
   
@@ -205,13 +205,13 @@ ms.locfileid: "56286660"
 ##  <a name="bkmk_How_To_Topics"></a> 操作方法に関するトピック  
  パラメーターとフィルターを扱う際の詳細な手順を紹介しているトピックの一覧を次に示します。  
   
--   [レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+-   [レポート パラメーターの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
 -   [レポート パラメーターの値の追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-available-values-for-a-report-parameter.md)  
   
 -   [レポート パラメーターの既定値の追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-default-values-for-a-report-parameter.md)  
   
--   [レポート パラメーターの順序の変更 (レポート ビルダーおよび SSRS)](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+-   [レポート パラメーターの順序の変更 &#40;レポート ビルダーおよび SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 -   [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
   
@@ -219,17 +219,17 @@ ms.locfileid: "56286660"
   
 -   [サブレポートおよびパラメーターの追加 (レポート ビルダーおよび SSRS)](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
--   [ストアド プロシージャで SSRS パラメーターを使用する方法](https://go.microsoft.com/fwlink/p/?LinkId=396970)  
+-   [パラメーター化されたストアド プロシージャの SSRS レポート](https://www.c-sharpcorner.com/UploadFile/7d3362/ssrs-report-for-parameterize-stored-procedure/)  
   
 ## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? 待ちしています  
  どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツを向上させるためにお客様のフィードバックを受け付けています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page) にコメントをお送りください  
   
 ##  <a name="bkmk_Related_Topics"></a> 関連コンテンツ  
- [SSRS レポート パラメーターの構成 (クイズ)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [SSRS レポート パラメーターの構成 (クイズ)](https://www.trenovision.com/quiz/sql-server-reporting-services-ssrs-quiz/)  
   
- [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [チュートリアル:レポートにパラメーターを追加&#40;レポート ビルダー&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [レポート サービスの InvalidReportParameterException の謎の解明](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [Reporting Services の InvalidReportParameterException の謎の解明](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
  [レポート サンプル (レポート ビルダーおよび SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
@@ -241,7 +241,7 @@ ms.locfileid: "56286660"
   
  [セキュリティ (レポート ビルダー)](../report-builder/security-report-builder.md)  
   
- [対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS)](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
  [ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   

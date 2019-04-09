@@ -17,15 +17,15 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3883fdccb7f118ebd8954da670b968b745f36e27
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241360"
 ---
 # <a name="data-flow"></a>データ フロー
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが用意されています。 変換元は、リレーショナル データベース、ファイル、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのテーブルやビューなどのデータ ストアからデータを抽出します。 変換は、データを変更、集約、およびクリーンアップします。 変換先は、データをデータ ストアに読み込んだり、メモリ内のデータセットを作成します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが用意されています。n変換元は、リレーショナル データベース、ファイル、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのテーブルやビューなどのデータ ストアからデータを抽出します。l変換は、データを変更、集約、およびクリーンアップします。s変換先は、データをデータ ストアに読み込んだり、メモリ内のデータセットを作成します。  
   
 > [!NOTE]  
 >  カスタム プロバイダーを使用するときに、ProviderDescriptors.xml ファイルをメタデータ列の値で更新する必要があります。  
@@ -100,7 +100,7 @@ ms.locfileid: "58394400"
 |Source|Description|  
 |------------|-----------------|  
 |Oracle 変換元|Oracle 変換元は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity の変換元コンポーネントです。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity には、接続マネージャーおよび変換先も含まれます。 詳細については、 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)のダウンロード ページを参照してください。|  
-|SAP BI 変換元|SAP BI 変換元は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI の変換元コンポーネントです。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI には、接続マネージャーおよび変換先も含まれます。 詳細については、 [Microsoft SQL Server 2008 用 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393)のダウンロード ページを参照してください。|  
+|SAP BI 変換元|SAP BI 変換元は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI の変換元コンポーネントです。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI には、接続マネージャーおよび変換先も含まれます。 詳細については、 [Microsoft SQL Server 2008 用 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)のダウンロード ページを参照してください。|  
 |Teradata 変換元|Teradata 変換元は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity の変換元コンポーネントです。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity には、接続マネージャーおよび変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963) のダウンロード ページを参照してください。|  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity のパフォーマンス強化を活用する方法の例については、「 [Microsoft Connector for Oracle by Attunity のパフォーマンス (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkID=210369)」を参照してください。  
@@ -134,7 +134,7 @@ ms.locfileid: "58394400"
   
 -   [ピボット解除変換](transformations/unpivot-transformation.md)  
   
- 詳しくは、「 [Integration Services の変換](transformations/integration-services-transformations.md)」をご覧ください。  
+ 詳細については、「 [Integration Services の変換](transformations/integration-services-transformations.md)」を参照してください。  
   
 ## <a name="destinations"></a>変換先  
  変換先とは、データ フローのデータを特定のデータ ストアに書き込んだり、メモリ内のデータセットを作成したりする、データ フロー コンポーネントのことです。 フラット ファイルへのデータの読み込み、分析オブジェクトの処理、および他の処理へのデータの提供を行うことができます。 また、データベースのテーブルやビューにアクセスしたり、クエリを実行したりすることによっても、データを読み込むことができます。  
@@ -218,6 +218,6 @@ ms.locfileid: "58394400"
 ## <a name="related-content"></a>関連コンテンツ  
  technet.microsoft.com のビデオ「 [Microsoft Connector for Oracle by Attunity のパフォーマンス (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkID=210369)」  
   
- curatedviews.cloudapp.net の Curated Answer 「 [SSIS で動的接続文字列を作成する方法](https://go.microsoft.com/fwlink/?LinkId=321994)」  
+ Curated Answer「 [SSIS で動的な接続文字列を作成する方法](https://kevine323.blogspot.com/2012/04/dynamic-connection-strings-in-ssis.html)します。  
   
   

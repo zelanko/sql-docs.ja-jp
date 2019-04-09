@@ -19,12 +19,12 @@ ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db5d75d08fbcbbba4bb888af9a8b6cb640d6321a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9287cc028357c8db8e37242153e9815398b11858
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367744"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242270"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>MDX クエリの基礎 (Analysis Services)
   多次元式 (MDX) を使用すれば、多次元オブジェクト (たとえばキューブ) をクエリして、キューブ データが格納された多次元セル セットを返すことができます。 このトピックとサブトピックでは、MDX クエリの概要を説明します。  
@@ -32,7 +32,7 @@ ms.locfileid: "53367744"
  以下のトピックでは、MDX クエリとクエリが作成するセル セットについて、および基本的な MDX 構文の詳細について説明します。  
   
 > [!NOTE]  
->  MDX クエリおよび計算に関連するパフォーマンスの問題に関する詳細については、「効率的な MDX の記述」セクションを参照してください、 [SQL Server 2005 Analysis Services パフォーマンス ガイド](https://go.microsoft.com/fwlink/?LinkId=81621)します。  
+>  MDX クエリおよび計算に関連するパフォーマンスの問題に関する詳細については、「効率的な MDX の記述」セクションを参照してください、 [SQL Server 2005 Analysis Services パフォーマンス ガイド](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86582634958ded57db85c0f9e732927bb639cd6a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354012"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242480"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>多対多のリレーションシップと多対多のリレーションシップのプロパティの定義
   このトピックでは、多対多ディメンションを使用する状況と作成方法を含め、Analysis Services 内の多対多ディメンションについて説明します。  
@@ -180,7 +180,7 @@ ms.locfileid: "53354012"
 ##  <a name="bkmk_Learn"></a> Learn more  
  以下のリンクを使用して、この内容を習得するのに役立つ詳細情報を参照してください。  
   
- [Analysis Services で多対多ディメンションを定義する方法](https://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Analysis Services で多対多ディメンションを定義する方法](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [多対多の回転 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   

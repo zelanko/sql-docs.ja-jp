@@ -19,24 +19,24 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3aab23efecc139e4aaf4a4c3d6d0075cf02a7e7f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: c40d0003211c0446982f70a9c7a00c1f189808b6
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387460"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241917"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>SSIS サービスにアクセスするように Windows ファイアウォールを構成する
     
 > [!IMPORTANT]  
->  このトピックでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]との互換性を維持するために、このサービスをサポートしています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以降では、Integration Services サーバー上のパッケージなどのオブジェクトを管理できます。  
+>  このトピックでは、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]との互換性を維持するために、このサービスをサポートしています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以降では、Integration Services サーバー上のパッケージなどのオブジェクトを管理できます。  
   
  Windows ファイアウォール システムは、ネットワーク接続経由でコンピューター リソースに不正なアクセスが行われるのを防ぐのに役立ちます。 このファイアウォールを経由して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] にアクセスするには、アクセスを有効にするようにファイアウォールを構成する必要があります。  
   
 > [!IMPORTANT]  
 >  リモート サーバーに格納されるパッケージを管理するために、そのリモート サーバー上の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスのインスタンスに接続する必要はありません。 代わりに、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスの構成ファイルを編集し、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でリモート サーバーに格納されているパッケージが表示されるようにします。 詳細については、「 [Integration Services サービスの構成 (SSIS サービス)](configuring-the-integration-services-service-ssis-service.md)との互換性を維持するために、このサービスをサポートしています。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは、DCOM プロトコルを使用しています。 ファイアウォール経由で DCOM プロトコルがどのように動作するかについては、MSDN ライブラリの「[ファイアウォール経由での分散 COM の使用](https://go.microsoft.com/fwlink/?LinkId=12490)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは、DCOM プロトコルを使用しています。 ファイアウォールを介した DCOM プロトコルのしくみの詳細については、情報の記事を参照してください。"[ファイアウォールで分散 COM を使用して](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)"。  
   
  多くのファイアウォール システムが市販されています。 Windows ファイアウォール以外のファイアウォールを実行している場合、使用しているシステム固有の情報については、そのファイアウォールのマニュアルを参照してください。  
   

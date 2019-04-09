@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536694"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241960"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>ハッシュ インデックスの適切なバケット数の決定
   メモリ最適化テーブルを作成するときに `BUCKET_COUNT` パラメーターの値を指定する必要があります。 このトピックでは、`BUCKET_COUNT` パラメーターの適切な値を判断する際の推奨事項を示します。 適切なバケット数を決定できない場合は、代わりに非クラスター化インデックスを使用してください。  `BUCKET_COUNT` の値が不適切な場合 (特に小さすぎる場合)、ワークロードのパフォーマンス、およびデータベースの復旧時間に大きな影響を与えることがあります。 バケット数は大きめに設定することをお勧めします。  
@@ -26,7 +26,7 @@ ms.locfileid: "58536694"
   
  メモリ最適化テーブルの各ハッシュ インデックスに対して 1 個のハッシュ テーブルが割り当てられます。 インデックスがで指定された割り当てられるハッシュ テーブルのサイズ、`BUCKET_COUNT`パラメーター [CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql)または[CREATE TYPE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). バケット数は内部的に、最も近い 2 のべき乗に切り上げられます。 たとえば、バケット数に 300,000 を指定すると、実際のバケット数は 524,288 になります。  
   
- バケット数に関する記事とビデオへのリンクについては、「 [ハッシュ インデックス (インメモリ OLTP) に正しいバケット数を指定する方法](https://go.microsoft.com/fwlink/p/?LinkId=525853)」を参照してください。  
+ バケット数に関する記事とビデオへのリンクについては、「 [ハッシュ インデックス (インメモリ OLTP) に正しいバケット数を指定する方法](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/)」を参照してください。  
   
 ## <a name="recommendations"></a>推奨事項  
  ほとんどの場合、バケット数はインデックス キーにおける別個の値の数の 1 倍から 2 倍の範囲に設定する必要があります。 インデックス キーに重複する値が多数含まれている場合 (平均して各インデックス キー値に対して 10 を超える行がある場合) は、代わりに非クラスター化インデックスを使用します。  

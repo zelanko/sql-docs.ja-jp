@@ -20,12 +20,12 @@ ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240420"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>式を使って設定できるデータ フロー プロパティ
   データ フロー タスク コンテナーで使用できるプロパティ式を使用して、データ フロー オブジェクトの特定のプロパティの値を指定できます。  
@@ -71,15 +71,15 @@ ms.locfileid: "58378600"
 |----------------------|--------------|  
 |ADO NET 変換先|TableOrViewName プロパティ<br /><br /> BatchSize プロパティ<br /><br /> CommandTimeOut プロパティ|  
 |フラット ファイル変換先|Header プロパティ|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 変換先|TableName プロパティ|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 変換先|BulkInsertTableName プロパティ<br /><br /> BulkInsertFirstRow プロパティ<br /><br /> BulkInsertLastRow プロパティ<br /><br /> BulkInsertOrder プロパティ<br /><br /> Timeout プロパティ|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact, 変換先|TableName プロパティ|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 変換先 (destination)|BulkInsertTableName プロパティ<br /><br /> BulkInsertFirstRow プロパティ<br /><br /> BulkInsertLastRow プロパティ<br /><br /> BulkInsertOrder プロパティ<br /><br /> Timeout プロパティ|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 -   [プロパティ式を追加または変更する](expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- pragmaticworks.com の技術記事「 [SSIS 式チート シート](http://pragmaticworks.com/cheatsheet/)」  
+ pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)」  
   
 ## <a name="see-also"></a>参照  
  [パッケージでプロパティ式を使用する](expressions/use-property-expressions-in-packages.md)   

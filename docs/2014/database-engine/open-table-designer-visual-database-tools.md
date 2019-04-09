@@ -15,12 +15,12 @@ ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e0ceb2ef7e152829cbb6bd33cdcb3d0812a69bf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240720"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>テーブル デザイナーを開く方法 (Visual Database Tools)
   テーブル デザイナーは、接続しているデータベース テーブルをデザインしたりビジュアル化したりできるビジュアル ツールです。 テーブル デザイナーを使用すると、テーブル、列、キー、インデックス、リレーションシップ、および制約を作成、編集、または削除できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "53355657"
      メイン メニューに **[テーブル デザイナー]** メニューが追加され、デザイナー ペインが表示されます。  
   
 > [!NOTE]  
->  SQL Azure データベースに接続している場合は、[新しいテーブル] オプションを選択すると、テーブルの作成テンプレート スクリプトが起動します。 パラメーターを編集してから、このスクリプトを実行して新しいテーブルを作成してください。 詳細については、「 [SQL Azure の概要](https://go.microsoft.com/fwlink/?LinkId=163948)」を参照してください。  
+>  SQL Azure データベースに接続している場合は、[新しいテーブル] オプションを選択すると、テーブルの作成テンプレート スクリプトが起動します。 パラメーターを編集してから、このスクリプトを実行して新しいテーブルを作成してください。 詳細については、「 [SQL Azure の概要](/azure/sql-database/sql-database-technical-overview)」を参照してください。  
   
 ### <a name="open-an-existing-table"></a>既存のテーブルを開く  
   
@@ -43,7 +43,7 @@ ms.locfileid: "53355657"
      メイン メニューに **[テーブル デザイナー]** メニューが追加され、デザイナー ペインにテーブルが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [テーブルのデザイン&#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
+ [テーブルのデザイン (Visual Database Tools)](../ssms/visual-db-tools/visual-database-tools.md)   
  [テーブル](../relational-databases/tables/tables.md)  
   
   

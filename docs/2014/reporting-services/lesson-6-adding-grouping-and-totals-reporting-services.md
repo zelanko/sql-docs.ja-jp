@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 6: 追加のグループ化と集計 (Reporting Services) |Microsoft Docs'
+title: 'レッスン 6: グループと合計の追加 (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5409938a5e859d5df6a153cddf327129b2ca8878
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241740"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>レッスン 6: グループと合計の追加 (Reporting Services)
   レポートにグループと合計を追加すると、データを整理して要約できます。  
   
- レポートに集計途中経過を追加する方法の詳細については、curah.microsoft.com のキュレーション[Reporting Services (SSRS) レポートに合計を追加](https://go.microsoft.com/fwlink/p/?LinkId=403698)します。  
+ レポートを実行中の合計を追加する方法についてを参照してください。[Reporting Services (SSRS) レポートに合計を追加](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/)します。  
   
- **このトピックの内容:**  
+ **このトピックの内容**  
   
--   [レポートのデータをグループ化](#bkmk_groupdata)  
+-   [レポート内のデータをグループ化するには](#bkmk_groupdata)  
   
 -   [レポートに合計を追加するには](#bkmk_addtotals)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "56296900"
   
 -   [レポートに総計を追加するには](#bkmk_addgrandtotal)  
   
--   [(省略可能) レポート サーバーにレポートをパブリッシュするには](#bkmk_publishreport)  
+-   [レポートをレポート サーバーにパブリッシュするには (オプション)](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> レポートのデータをグループ化  
   
@@ -79,7 +79,7 @@ ms.locfileid: "56296900"
   
 6.  **[書式]** メニューの **[背景色]** をクリックし、 **[淡い灰色]** をクリックして、 **[OK]** をクリックします。  
   
-     ![デザイン ビュー:注文合計がある基本的なテーブル](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "デザイン ビュー。注文合計がある基本的なテーブル")  
+     ![デザイン ビュー:注文合計がある基本的なテーブル](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif ":デザイン ビュー:注文合計がある基本的なテーブル")  
   
 ##  <a name="bkmk_adddailytotal"></a> レポートに毎日の合計を追加するには  
   
@@ -107,13 +107,13 @@ ms.locfileid: "56296900"
   
 4.  **[書式]** メニューの **[背景色]** をクリックし、 **[薄い青]** をクリックして、 **[OK]** をクリックします。  
   
-     ![デザイン ビュー:基本的なテーブルの総計](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "デザイン ビュー。基本的なテーブルの総計")  
+     ![デザイン ビュー:基本的なテーブルの総計](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "デザイン ビュー:基本的なテーブルの総計")  
   
 5.  [プレビュー] をクリックします。  
   
      最終的なページは次のようになります。  
   
-     ![プレビュー：総計がある基本的なテーブル](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "プレビュー。総計がある基本的なテーブル")  
+     ![プレビュー:総計がある基本的なテーブル](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "プレビュー:総計がある基本的なテーブル")  
   
 ##  <a name="bkmk_publishreport"></a> (省略可能) レポート サーバーにレポートをパブリッシュするには  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56296900"
   
      出力ウィンドウに次のようなメッセージが表示されていれば、正常に展開されたことを示しています。  
   
-    > ---ビルド開始:プロジェクト: tutorial、構成:デバッグ---'Sales Orders.rdl' をスキップしています。 項目が最新の状態です。ビルド完了--0 個のエラー、警告 0-展開の開始。プロジェクト: tutorial、構成:デバッグ--- http:// へのデプロイ\<サーバー名 >]、[レポートの reportserverDeploying ' チュートリアル/Sales Orders'。配置完了--エラー 0、0 件の警告ステージ ビルドします。正常終了または最新の状態は 1、0 失敗、0 スキップ ステージの展開。1 正常終了、0 失敗、0 スキップ ステージ  
+    > ------ ビルド開始:プロジェクト: tutorial、構成:デバッグ---'Sales Orders.rdl' をスキップしています。 項目が最新の状態です。ビルド完了--0 個のエラー、警告 0-展開の開始。プロジェクト: tutorial、構成:デバッグ--- http:// へのデプロイ\<サーバー名 >]、[レポートの reportserverDeploying ' チュートリアル/Sales Orders'。配置完了--エラー 0、0 件の警告ステージ ビルドします。正常終了または最新の状態は 1、0 失敗、0 スキップ ステージの展開。1 正常終了、0 失敗、0 スキップ ==========  
   
      次のようなメッセージが表示されている場合は、レポート サーバーに対する権限があることと、管理者特権を使用して [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] を開始したことを確認してください。  
   

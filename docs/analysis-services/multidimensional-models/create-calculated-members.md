@@ -1,5 +1,5 @@
 ---
-title: 計算されるメンバーを作成 |Microsoft ドキュメント
+title: 計算されるメンバーの作成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a0cee9d01fb55ace4d7062f96b5d3ea16c026669
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241471"
 ---
 # <a name="create-calculated-members"></a>計算されるメンバーの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   キューブ データ、算術演算子、数値、関数などを組み合わせることによって、「計算されるメンバー」と呼ばれる、カスタマイズされたメジャーまたはディメンション メンバーを作成できます。 たとえば、既存のドル メジャーに換算率を掛けて、ドルをユーロに換算する、Euro という計算されるメンバーを作成できます。 Euro は、別個の行または列に表示されます。  
   
- 計算されるメンバーの定義は格納されますが、その値はメモリにしか存在しません。 上記の例では、Euro の値はエンド ユーザーに表示されますが、キューブ データとしては格納されません。  
+ 計算されるメンバーの定義は格納されますが、その値はメモリにしか存在しません。 前の例では、ユーロで値がエンドユーザーに表示されますが、キューブ データとしては格納されません。  
   
  計算されるメンバーはキューブで作成します。 計算されるメンバーを作成するには、キューブ デザイナーの **[計算]** タブで、ツール バーの **[新しい計算されるメンバー]** アイコンをクリックします。 このコマンドでは、計算されるメンバーの次のオプションを指定するためのフォームが表示されます。  
   
@@ -76,6 +76,6 @@ ms.locfileid: "34023179"
 -   計算されるメンバーがメジャー ディメンションで作成された場合、そのメンバーはそのディメンション内でアドレス指定可能です。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルでの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
+ [多次元モデルの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

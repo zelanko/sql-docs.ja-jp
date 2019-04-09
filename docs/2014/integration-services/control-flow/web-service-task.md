@@ -14,12 +14,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86b86039f3e308953d41f5a463b0716a76d5c361
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240811"
 ---
 # <a name="web-service-task"></a>Web サービス タスク
   Web サービス タスクは、Web サービス メソッドを実行します。 Web サービス タスクは、次の目的で使用できます。  
@@ -66,9 +66,9 @@ ms.locfileid: "58377310"
   
 -   [Web サービス タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Web サービス タスク エディター &#40;[入力] ページ&#41;](../web-service-task-editor-input-page.md)  
+-   [[Web サービス タスク エディター] ([入力] ページ)](../web-service-task-editor-input-page.md)  
   
--   [Web サービス タスク エディター &#40;[出力] ページ&#41;](../web-service-task-editor-output-page.md)  
+-   [[Web サービス タスク エディター] ([出力] ページ)](../web-service-task-editor-output-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
@@ -82,8 +82,8 @@ ms.locfileid: "58377310"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>関連コンテンツ  
- MSDN ライブラリのビデオ「[Web サービス タスク (SQL Server ビデオ) を使用して Web サービスを呼び出す](https://go.microsoft.com/fwlink/?LinkId=259642)、technet.microsoft.com します。  
+ MSDN ライブラリのビデオ「[Web サービス タスクを使用して Web サービスを呼び出す方法 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=259642) (technet.microsoft.com)  
   
- curatedviews.cloudapp.net の Curated Answer「 [Consume Web Services in SSIS using Scripts (Script を使用して SSIS で Web サービスを利用する)](https://go.microsoft.com/fwlink/?LinkId=321996)」  
+ [SSIS パッケージから Web サービスを使用する方法](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/)します。  
   
   

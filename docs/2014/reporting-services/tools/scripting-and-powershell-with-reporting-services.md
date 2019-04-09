@@ -15,12 +15,12 @@ ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7ea45b2b785666253405c579930d1f89417d4c58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9248c80830b6ebb432629bf47d73ad44fd832c3b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240700"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Reporting Services を使ったスクリプトの作成と PowerShell
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、スクリプトによる開発および管理のさまざまなシナリオをサポートしています。スクリプトには、rs.exe コマンド ライン ユーティリティや SharePoint モードのレポート サーバー用の PowerShell コマンドレットを含むもの、またネイティブ モードと SharePoint モードの両方の PowerShell からの [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] オブジェクト モデルを利用するものがあります。  
@@ -57,7 +57,7 @@ ms.locfileid: "56024523"
   
 -   「[Reporting Services WMI プロバイダーへのアクセス](access-the-reporting-services-wmi-provider.md)」の「PowerShell を使用した WMI クラスへのアクセス」セクションを参照してください。  
   
--   [PowerShell.scriptin を使用して SSRS を管理する方法](http://curah.microsoft.com/13107/how-to-administer-ssrs-using-powershell)  
+-   [PowerShell.scriptin を使用して SSRS を管理する方法](https://www.sqlshack.com/how-to-administer-sql-server-reporting-services-ssrs-subscriptions-using-powershell/)  
   
 ## <a name="rsexe-scripting-samples"></a>RS.exe スクリプトのサンプル  
   

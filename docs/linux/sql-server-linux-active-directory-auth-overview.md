@@ -3,7 +3,7 @@ title: Linux 上の SQL Server の active Directory 認証
 titleSuffix: SQL Server
 description: この記事では、Linux 上の SQL Server の Active Directory 認証の概要を示します。
 author: rothja
-ms.date: 02/23/2018
+ms.date: 04/01/2019
 ms.author: jroth
 manager: craigg
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: fcc2148119634c7114d72f67b2c7143fa7d47724
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: a4411f8ff8b1eae7fa7a28615e34d0711829d081
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241022"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上の SQL Server の active Directory 認証
 
@@ -42,9 +42,11 @@ Active Directory 認証を使用するには、ネットワーク上に AD ド�
 
 AD 認証を構成する方法の詳細については、チュートリアルでは提供されている[チュートリアル。SQL Server on Linux での Active Directory 認証の使用](sql-server-linux-active-directory-authentication.md)します。 このチュートリアルでの各セクションへのリンクの概要を次に示します。
 
-1. [SQL Server ホストを Active Directory ドメインに結合する](sql-server-linux-active-directory-authentication.md#join)
+1. [SQL Server ホストを Active Directory ドメインに結合する](sql-server-linux-active-directory-join-domain.md)
 1. [SQL Server の AD ユーザーを作成し、ServicePrincipalName を設定する](sql-server-linux-active-directory-authentication.md#createuser)
 1. [SQL Server サービス keytab を構成する](sql-server-linux-active-directory-authentication.md#configurekeytab)
+1. [Keytab ファイルをセキュリティで保護された](sql-server-linux-active-directory-authentication.md#securekeytab)します。
+1. [Kerberos 認証に keytab ファイルを使用する SQL Server 構成](sql-server-linux-active-directory-authentication.md#keytabkerberos)します。
 1. [TRANSACT-SQL での SQL Server の AD に基づくログインの作成](sql-server-linux-active-directory-authentication.md#createsqllogins)
 1. [AD 認証を使用して SQL Server に接続する](sql-server-linux-active-directory-authentication.md#connect)
 

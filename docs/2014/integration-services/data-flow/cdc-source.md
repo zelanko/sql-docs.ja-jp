@@ -12,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80e557d9d286040b1d145c852779a9eca5cd4e64
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241790"
 ---
 # <a name="cdc-source"></a>CDC ソース
   CDC ソースは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブルから変更データの範囲を読み取り、変更内容を下流の他の SSIS コンポーネントに伝えます。  
@@ -45,11 +45,11 @@ ms.locfileid: "58382728"
 ## <a name="error-handling"></a>エラー処理  
  CDC ソースにはエラー出力があります。 コンポーネントのエラー出力には、次の出力列があります。  
   
--   **エラー コード**:値は、常に-1 です。  
+-   **エラー コード**: 値は常に -1 です。  
   
--   **エラー列**:(変換エラー) エラーを原因となるソース列。  
+-   **エラー列**: (変換エラーの) エラーの原因となるソース列。  
   
--   **エラー行の列**:エラーが発生するレコード データ。  
+-   **エラー行の列**: エラーの原因となったレコード データ。  
   
  CDC ソースは、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「 [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)」を参照してください。  
   
@@ -88,7 +88,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>SQL Server エラー メッセージ  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって、次のメッセージが返されることがあります。  
   
- **プロシージャまたは関数 cdc.fn_cdc_get_net_changes_\<..> に指定された引数が不足しています。**  
+ **プロシージャまたは関数 cdc.fn_cdc_get_net_changes_ に指定された引数の数が少ない\<.>。**  
   
  このエラーは、引数が不足していることを示すものではありません。 CDC 状態変数の開始または終了 LSN 値が無効であることを示します。  
   
@@ -97,9 +97,9 @@ use <cdc-enabled-database-name>
   
  詳細については、次のいずれかのトピックを参照してください。  
   
--   [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [CDC ソース エディター &#40;[接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [[CDC ソース エディター] &#40;[列] ページ&#41;](../cdc-source-editor-columns-page.md)  
+-   [[CDC ソース エディター] ([列] ページ)](../cdc-source-editor-columns-page.md)  
   
 -   [CDC ソース エディター &#40;[エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)  
   
@@ -113,11 +113,11 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [CDC ソース エディター &#40;[接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [[CDC ソース エディター] &#40;[列] ページ&#41;](../cdc-source-editor-columns-page.md)  
+-   [[CDC ソース エディター] ([列] ページ)](../cdc-source-editor-columns-page.md)  
   
--   [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)  
+-   [CDC ソース エディター &#40;[エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)  
   
 -   [CDC ソースのカスタム プロパティ](cdc-source-custom-properties.md)  
   
@@ -125,6 +125,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   mattmasson.com のブログ「[CDC ソースの処理モード](https://go.microsoft.com/fwlink/?LinkId=242541)」  
+-   mattmasson.com のブログ「[CDC ソースの処理モード](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)」  
   
   

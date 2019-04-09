@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 46b6a89d5ce643aa67f3f514052c19ea77e6e72e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b43ad109b3b64927f2e4b03ef26fc0bc648a1ec7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240650"
 ---
 # <a name="report-and-snapshot-size-limits"></a>レポートとスナップショットのサイズ制限
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置を管理する管理者は、このトピックの情報を参照することにより、レポート サーバーへのパブリッシュ時、レンダリング時 (実行時)、ファイル システムへの保存時のレポート サイズ制限を理解できます。 このトピックでは、レポート サーバー データベースのサイズを測定する方法の具体的な指針とサーバーのパフォーマンスのスナップショット サイズの効果についても説明します。  
@@ -46,14 +46,14 @@ ms.locfileid: "56035643"
   
 -   PDF、Excel、TIFF、XML、および CSV では、ユーザーに対してレポートを表示する前に、メモリ内でレポート全体が処理されます。  
   
- 表示されているレポートのサイズを測定する場合は、レポート実行ログを参照できます。 詳細については、[レポート サーバー実行ログと ExecutionLog3 ビュー](report-server-executionlog-and-the-executionlog3-view.md)を参照してください。  
+ 表示されているレポートのサイズを測定する場合は、レポート実行ログを参照できます。 詳細については、次を参照してください。[レポート サーバー実行ログと ExecutionLog3 ビュー](report-server-executionlog-and-the-executionlog3-view.md)します。  
   
  ディスク上のレンダリング済みレポートのサイズを計算する場合は、レポートをファイル システムにエクスポートして保存できます (保存されるファイルには、データとレポート形式情報が含まれます)。  
   
- レポート サイズのハード制限は、Excel 形式で表示する場合にのみ存在します。 ワークシートの大きさが、65536 行および 256 列を超えることはできません。 他の表示形式にはこれらの制限がないので、サーバーのリソース量によってのみサイズが制限されます。 Excel ファイルの制限の詳細については、[別のファイルの種類としてレポートをエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)を参照してください。  
+ レポート サイズのハード制限は、Excel 形式で表示する場合にのみ存在します。 ワークシートの大きさが、65536 行および 256 列を超えることはできません。 他の表示形式にはこれらの制限がないので、サーバーのリソース量によってのみサイズが制限されます。 Excel ファイルの制限の詳細については、次を参照してください。[別のファイルの種類としてレポートをエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
->  レポートの処理とレンダリングは、メモリ内で行われます。 レポートが大きい場合またはユーザーが多い場合は、なんらかのキャパシティ プランニングを行い、ユーザーにとって満足のいくレベルのパフォーマンスを実現できるようにレポート サーバーを配置してください。 ツールとガイドラインの詳細については、MSDN の次の記事を参照してください。[Reporting Services でのスケーラビリティおよびパフォーマンス計画](https://go.microsoft.com/fwlink/?LinkID=70650)と[Visual Studio 2005 を使用して、SQL Server 2005 Reporting Services レポート サーバーのロード テストを実行する](https://go.microsoft.com/fwlink/?LinkID=77519)します。  
+>  レポートの処理とレンダリングは、メモリ内で行われます。 レポートが大きい場合またはユーザーが多い場合は、なんらかのキャパシティ プランニングを行い、ユーザーにとって満足のいくレベルのパフォーマンスを実現できるようにレポート サーバーを配置してください。 ツールとガイドラインの詳細については、MSDN の次の記事を参照してください。[Reporting Services でのスケーラビリティおよびパフォーマンス計画](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/)と[Visual Studio 2005 を使用して、SQL Server 2005 Reporting Services レポート サーバーのロード テストを実行する](https://go.microsoft.com/fwlink/?LinkID=77519)します。  
   
 ## <a name="measuring-snapshot-storage"></a>スナップショット ストレージの測定  
  スナップショットのサイズは、レポートのデータ量に比例します。 通常、スナップショットは、レポート サーバーに格納されている他の項目よりはるかに大きくなります。 スナップショットの一般的なサイズの範囲は、数メガバイトから数十メガバイトです。 非常に大きいレポートを使用している場合、さらにスナップショットが大きくなる可能性があります。 スナップショットを使用する頻度およびレポート履歴の構成方法に応じて、レポート サーバー データベースに必要なディスク領域が短期間で急速に増える可能性があります。  

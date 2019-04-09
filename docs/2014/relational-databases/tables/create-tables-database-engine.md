@@ -12,26 +12,26 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad54f13fbb939b9ac65f656f37bbba94560da829
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241670"
 ---
 # <a name="create-tables-database-engine"></a>テーブルの作成 (データベース エンジン)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して新しいテーブルを作成して名前を付け、それを既存のデータベースに追加できます。  
   
 > [!NOTE]  
->  SQL Azure データベースに接続している場合、[新しいテーブル] オプションを選択すると、テーブルの作成テンプレート スクリプトが実行されます。 パラメーターを編集してから、このスクリプトを実行して新しいテーブルを作成してください。 詳細については、「 [SQL Azure の概要](https://go.microsoft.com/fwlink/?LinkId=163948)」を参照してください。  
+>  SQL Azure データベースに接続している場合、[新しいテーブル] オプションを選択すると、テーブルの作成テンプレート スクリプトが実行されます。 パラメーターを編集してから、このスクリプトを実行して新しいテーブルを作成してください。 詳細については、「 [SQL Azure の概要](https://microsoft.sharepoint.com/sites/infopedia_g01/pages/cards/azure-sql-database.aspx)」を参照してください。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **テーブルを作成するを使用します。**  
+-   **テーブルを作成する方法:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "53377434"
   
      スキーマの詳細については、「 [Create a Database Schema](../security/authentication-access/create-a-database-schema.md)」を参照してください。  
   
-9.  **ファイル** メニューの **を保存** *を保存*をクリックします。  
+9. **[ファイル]** メニューの **[<*テーブル名*> を保存]** をクリックします。  
   
 10. **[名前の選択]** ダイアログ ボックスで、テーブルの名前を入力し、 **[OK]** をクリックします。  
   

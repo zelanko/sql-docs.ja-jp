@@ -14,12 +14,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 8a9018c43ace6ebbf0a905567bb806b616530a02
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1484a32eb808e6778896a498d5a6dee525b18aed
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242460"
 ---
 # <a name="sql-server-encryption"></a>SQL Server の暗号化
   暗号化は、キーまたはパスワードを使用してデータを難読化するプロセスです。 暗号化によって、データは対応する暗号化解除キーまたはパスワードがないと使用できなくなります。 暗号化では、アクセス コントロールの問題は解決されません。 ただし、暗号化を使用すると、アクセス コントロールがバイパスされる場合でもデータ損失のリスクが限定されるので、セキュリティが強化されます。 たとえば、データベース ホスト コンピューターの構成が適切でない場合に、機密データをハッカーが入手したとしても、その情報が暗号化されていれば、ハッカーはその情報を使用できません。  
@@ -40,7 +40,7 @@ ms.locfileid: "53352189"
  データを透過的に暗号化する方法に関する一般情報を提供します。  
   
  [SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の暗号化キーでは、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 このセクションでは、暗号化キーを実装および管理する方法について説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化キーでは、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 このセクションでは、暗号化キーを実装および管理する方法について説明します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [SQL Server の保護](../securing-sql-server.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "53352189"
  証明書を使用してデータを暗号化する方法について説明します。  
   
 ## <a name="external-resources"></a>外部リソース  
- [Microsoft TechNet:SQL Server TechCenter:SQL Server 2005 のセキュリティと保護](https://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
+ [SQL Server 2005 のセキュリティに関する 10 のポイント](https://www.itprotoday.com/sql-server/10-steps-sql-server-2005-security)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセキュリティに関する最新情報が掲載されています。  
   
 ## <a name="see-also"></a>参照  

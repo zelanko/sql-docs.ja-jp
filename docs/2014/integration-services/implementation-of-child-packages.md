@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea69aa9c04ce323b43e28d5426acd383d574a538
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 04ad145d23cfcd158cf68ac941606e1c3bd0114a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386773"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242170"
 ---
 # <a name="implementation-of-child-packages"></a>子パッケージの実装
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を使用して負荷分散を実装すると、子パッケージが他のサーバーにインストールされ、利用可能な CPU 時間またはサーバー時間を活用することができます。 子パッケージを作成および実行するには、次の手順を実行します。  
@@ -42,7 +42,7 @@ ms.locfileid: "58386773"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用してパッケージをエクスポートします。  
   
--   パッケージを配置します。パッケージを配置するには、配置するパッケージを含むプロジェクトの配置ユーティリティをビルドした後、パッケージ インストール ウィザードを実行し、パッケージをファイル システムまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスにインストールします。 詳細については、[パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)を参照してください。  
+-   パッケージを配置します。パッケージを配置するには、配置するパッケージを含むプロジェクトの配置ユーティリティをビルドした後、パッケージ インストール ウィザードを実行し、パッケージをファイル システムまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスにインストールします。 詳細については、次を参照してください。[パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)します。  
   
  この配置は、使用する各リモート サーバーに対してそれぞれ行う必要があります。  
   
@@ -68,8 +68,8 @@ ms.locfileid: "58386773"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   ブログ エントリ「 [SSIS:親パッケージ変数にアクセスする](https://go.microsoft.com/fwlink/?LinkId=257729)、consultingblogs.emc.com します。  
+-   ブログ エントリ「 [SSIS:親パッケージ変数にアクセスする](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)andyleonard.blog にします。  
   
--   ブログ エントリ「 [SSIS:インプロセスまたはアウト プロセスの子パッケージを実行する必要がありますか。](https://go.microsoft.com/fwlink/?LinkId=220819)、consultingblogs.emc.com します。  
+-   記事では、[パッケージ実行タスク](../integration-services/control-flow/execute-package-task.md)します。  
   
   
