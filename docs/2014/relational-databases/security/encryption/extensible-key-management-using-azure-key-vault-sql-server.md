@@ -18,7 +18,7 @@ ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: c2a6acd93bc711e4722f3ca437b17cba603dfcad
 ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/13/2018
 ms.locfileid: "53372764"
@@ -175,7 +175,7 @@ ms.locfileid: "53372764"
     ADD CREDENTIAL sysadmin_ekm_cred;  
     ```  
   
-     変数を使用する例については、`CREATE CREDENTIAL`引数と、クライアント ID からハイフンの削除をプログラムでは、次を参照してください。 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)します。  
+     変数を使用する例については、`CREATE CREDENTIAL`引数と、クライアント ID からハイフンの削除をプログラムでは、[CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)を参照してください。  
   
 3.  以前に手順 1 のセクション 3 で説明したように非対称キーをインポートした場合は、次の例のようにキー名を提供して、キーを開きます。  
   
@@ -299,7 +299,7 @@ FROM DISK = N'[PATH TO BACKUP FILE]' WITH FILE = 1, NOUNLOAD, REPLACE;
 GO  
 ```  
   
- バックアップ オプションの詳細については、次を参照してください。[バックアップ&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)します。  
+ バックアップ オプションの詳細については、[バックアップ&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)を参照してください。  
   
 ###  <a name="ExampleC"></a> 例 c:Key Vault からの非対称キーを使用した列レベルの暗号化  
  次の例では、資格情報コンテナー内の非対称キーによって保護された対称キーを作成します。 その後、その対称キーを使用してデータベース内のデータを暗号化します。  
