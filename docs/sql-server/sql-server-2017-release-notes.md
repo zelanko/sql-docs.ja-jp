@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b5e86d63ebfc5f842f2df8c090243fb5f311915b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9fd3ee0706e30d6a7077f22488a1f64084b5ae8a
+ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290258"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797012"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "58290258"
 
 - **回避策:** 
   - ツリー ビューのルート レベルではなくサブノードにアクセス許可を付与します。
-  - 内の複数の
-  - MDS チーム ブログの[エンティティ レベルでのアクセス許可適用時のエラー](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)に関する投稿に記されているスクリプトを実行します
 
 ### <a name="analysis-services"></a>Analysis Services
 - **問題およびユーザーへの影響:** 次のソースのデータ コネクタは、1400 互換性レベルの表形式モデルではまだ使用できません。
