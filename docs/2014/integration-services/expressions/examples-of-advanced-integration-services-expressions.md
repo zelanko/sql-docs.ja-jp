@@ -15,12 +15,12 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa1465b8efb8c2e2b0f35e7dc2c6ec5e7ef766f3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9272a6c11ce226f385c0b1f79f965a2a0f55835e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241131"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Integration Services 式の詳細の例
   このセクションでは、複数の演算子と関数を組み合わせた詳細な式の例について説明します。 式が優先順位制約または条件分割変換で使用される場合、式はブール型に評価される必要があります。 ただしこの制限は、プロパティ式、変数、派生列変換、または For ループ コンテナーで使用される式には適用されません。  
@@ -103,6 +103,6 @@ ms.locfileid: "58381670"
  [データ フロー コンポーネントで式を使用する](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- pragmaticworks.com の技術記事「 [SSIS 式チート シート](http://pragmaticworks.com/cheatsheet/)」  
+ pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)」  
   
   

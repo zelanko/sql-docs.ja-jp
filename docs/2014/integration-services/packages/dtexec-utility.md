@@ -10,12 +10,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f12fdd6e68b2e6d823ec32f88334804443a79555
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241905"
 ---
 # <a name="dtexec-utility"></a>dtexec ユーティリティ
   `dtexec`コマンド プロンプト ユーティリティを使用して、構成および実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージ。 `dtexec` ユーティリティを使用すると、パラメーター、接続、プロパティ、変数、ログ記録、進行状況インジケーターなど、パッケージの構成と実行に関するすべての機能にアクセスできます。 `dtexec`ユーティリティでは、これらのソースからパッケージを読み込むことができます。[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー、.ispac プロジェクト ファイルを[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データベース、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージ ストア、およびファイル システム。  
@@ -43,7 +43,7 @@ ms.locfileid: "58388566"
   
 -   [パラメーター](#parameter)  
   
--   [解説](#remark)  
+-   [コメント](#remark)  
   
 -   [使用例](#example)  
   
@@ -140,7 +140,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を新しくインストールした場合、 **xp_cmdshell** オプションは既定により無効になっています。 オプションを有効にするには、 **sp_configure** システム ストアド プロシージャを実行します。 詳細については、「 [xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を新しくインストールした場合、**xp_cmdshell** オプションは既定により無効になっています。 オプションを有効にするには、**sp_configure** システム ストアド プロシージャを実行します。 詳細については、「 [xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  
   
 ##  <a name="syntax"></a> 構文  
   
@@ -179,7 +179,7 @@ dtexec /option [value] [/option [value]]...
   
      このオプションでは、接続マネージャーの名前または GUID を指定する *id_or_name* 引数と、有効な接続文字列を指定する *connection_string* 引数の両方のパラメーターが必須です。 詳細については、「[Integration Services (SSIS) の接続](../connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
-     実行時に **/Connection** オプションを使用すると、デザイン時に指定した場所とは別の場所からパッケージ構成を読み込むことができます。 デザイン時に指定した値は、それらの構成の値で置き換えられます。 ただし、 **/Connection** オプションを使用できるのは、接続マネージャーを使用する構成 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成など) だけです。 パッケージの構成を適用する方法については、[パッケージ構成](../package-configurations.md)と[SQL Server 2014 Integration Services 機能の動作の変更](../behavior-changes-to-integration-services-features-in-sql-server-2014.md)を参照してください。  
+     実行時に **/Connection** オプションを使用すると、デザイン時に指定した場所とは別の場所からパッケージ構成を読み込むことができます。 デザイン時に指定した値は、それらの構成の値で置き換えられます。 ただし、 **/Connection** オプションを使用できるのは、接続マネージャーを使用する構成 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成など) だけです。 パッケージの構成を適用する方法については、次を参照してください。[パッケージ構成](../package-configurations.md)と[SQL Server 2014 Integration Services 機能の動作の変更](../behavior-changes-to-integration-services-features-in-sql-server-2014.md)します。  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]:任意。 パッケージの実行中に、指定されたログ エントリをコンソールに表示します。 このオプションを省略した場合、ログ エントリはコンソールに表示されません。 表示を制限するパラメーターなしでオプションが指定された場合、すべてのログ エントリが表示されます。 コンソールに表示されるエントリを制限するには、 *displayoptions* パラメーターを使用して表示する列を指定し、 *list_options* パラメーターを使用してログ エントリの種類を制限します。  
   
@@ -427,7 +427,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     **/Set** オプションを使用すると、パッケージ構成を読み込む場所を変更することができます。 ただし、**/Set** オプションを使用しても、デザイン時の構成で指定した値をオーバーライドすることはできません。 パッケージの構成を適用する方法については、[パッケージ構成](../package-configurations.md)と[SQL Server 2014 Integration Services 機能の動作の変更](../behavior-changes-to-integration-services-features-in-sql-server-2014.md)を参照してください。  
+     **/Set** オプションを使用すると、パッケージ構成を読み込む場所を変更することができます。 ただし、**/Set** オプションを使用しても、デザイン時の構成で指定した値をオーバーライドすることはできません。 パッケージの構成を適用する方法については、次を参照してください。[パッケージ構成](../package-configurations.md)と[SQL Server 2014 Integration Services 機能の動作の変更](../behavior-changes-to-integration-services-features-in-sql-server-2014.md)します。  
   
 -   `/Ser[ver]` *server*:  
                   任意。 `/SQL` オプションまたは `/DTS` オプションが指定されている場合、このオプションにはパッケージを取得するサーバーの名前を指定します。 `/Server` オプションを省略して `/SQL` または `/DTS` オプションを指定した場合、ローカル サーバーに対してパッケージの実行が試行されます。 *server_instance* 値は引用符で囲むことができます。  
@@ -669,6 +669,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  [SQL Server Data Tools でのパッケージの実行](../run-a-package-in-sql-server-data-tools.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [www.mattmasson.com](www.mattmasson.com) のブログ エントリ「 [終了コード、DTEXEC、および SSIS カタログ](https://go.microsoft.com/fwlink/?LinkId=251523)」  
+ [www.mattmasson.com](www.mattmasson.com) のブログ エントリ「 [終了コード、DTEXEC、および SSIS カタログ](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)」  
   
   

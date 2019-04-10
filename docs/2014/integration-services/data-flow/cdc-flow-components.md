@@ -10,12 +10,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73d071b0fc5724c23074c0d827f1c12466f47bab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380720"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241730"
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
   SSIS 開発者は、Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 用 Attunity 変更データ キャプチャ (CDC) コンポーネントを使用すると、CDC を操作し、CDC パッケージの複雑さを軽減できます。  
@@ -103,7 +103,7 @@ ms.locfileid: "58380720"
   
  [[CDC ソース エディター] ([接続マネージャー] ページ)](../cdc-source-editor-connection-manager-page.md)  
   
- [[CDC ソース エディター] &#40;[列] ページ&#41;](../cdc-source-editor-columns-page.md)  
+ [[CDC ソース エディター] ([列] ページ)](../cdc-source-editor-columns-page.md)  
   
  [[CDC ソース エディター] ([エラー出力] ページ)](../cdc-source-editor-error-output-page.md)  
   
@@ -204,7 +204,7 @@ ms.locfileid: "58380720"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   mattmasson.com のブログ「 [SQL Server 2012 用の SSIS の CDC](https://go.microsoft.com/fwlink/?LinkId=242543)」  
+-   mattmasson.com のブログ「 [SQL Server 2012 用の SSIS の CDC](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)」  
   
 -   blogs.msdn.com の CDC Service の設定に関するブログ エントリ「 [SQL Server 2012 の Oracle 用 CDC](https://go.microsoft.com/fwlink/?LinkId=247827)」  
   
