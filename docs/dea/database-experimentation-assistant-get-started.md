@@ -59,7 +59,7 @@ SQL サーバー A の最初のステップ/移行元サーバー上のトレー
 
 開始時刻、期間、および残り時間など、キャプチャの進行状況を表示することができます。 開始することもできます、新しいキャプチャこのキャプチャ完了するまでの間にします。 キャプチャが完了したら、出力トレース ファイルを使用して 2 番目のフェーズを開始する: ターゲット サーバー上のトレース ファイルを再生します。
 
-トレースのキャプチャに関する一般的な質問は、次を参照してください。、[よく寄せられる質問をキャプチャ](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)します。
+トレースのキャプチャに関する一般的な質問は、、[よく寄せられる質問をキャプチャ](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)を参照してください。
 
 ## <a name="replay"></a>再生
 
@@ -69,7 +69,7 @@ SQL サーバー A の 2 番目の手順/対象サーバーにキャプチャさ
 
 注意点 :
 
-- 再生を実行するには、Distributed Replay (DReplay) トレースの実行に、マシンを設定する必要があります。 詳細については、次を参照してください。[分散再生コント ローラーとクライアントのセットアップ](https://blogs.msdn.microsoft.com/datamigration/distributed-replay-controller-and-client-setup/)します。
+- 再生を実行するには、Distributed Replay (DReplay) トレースの実行に、マシンを設定する必要があります。 詳細については、[分散再生コント ローラーとクライアントのセットアップ](https://blogs.msdn.microsoft.com/datamigration/distributed-replay-controller-and-client-setup/)を参照してください。
 - 移行元サーバーからバックアップを使用して、対象サーバーでデータベースを復元することを確認します。
 - クエリの SQL Server でキャッシュと評価の結果に影響を与えることができます。 評価の結果の一貫性を向上させるために、サービス アプリケーション SQL Server (MSSQLSERVER) サービスを再起動することお勧めしましています。
 
@@ -91,7 +91,7 @@ SQL サーバー A の 2 番目の手順/対象サーバーにキャプチャさ
 
 再生の状態を表示することができます。 対象サーバーの両方でソースのトレースを再生すると後、は、分析レポートを生成する準備ができました。
 
-再生に関する一般的な質問は、次を参照してください。、[よく寄せられる質問を再生](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)します。
+再生に関する一般的な質問は、、[よく寄せられる質問を再生](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)を参照してください。
 
 ## <a name="analysis"></a>分析
 
@@ -116,7 +116,7 @@ SQL サーバー A の 2 番目の手順/対象サーバーにキャプチャさ
 
 ここで、A によって提供される洞察を得るための分析レポートを表示]、[B をテストします。
 
-分析レポートに関する一般的な質問は、次を参照してください。、[分析に関する FAQ](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)します。
+分析レポートに関する一般的な質問は、、[分析に関する FAQ](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)を参照してください。
 
 ### <a name="analysis-report"></a>分析レポート
 
@@ -158,7 +158,7 @@ SQL サーバー A の 2 番目の手順/対象サーバーにキャプチャさ
 
 ## <a name="next-steps"></a>次のステップ
 
-- サーバーで発生するイベントのログを含むトレース ファイルを生成する方法については、次を参照してください。[トレースをキャプチャ](database-experimentation-assistant-capture-trace.md)します。
+- サーバーで発生するイベントのログを含むトレース ファイルを生成する方法については、[トレースをキャプチャ](database-experimentation-assistant-capture-trace.md)を参照してください。
 
 - DEA とデモンストレーションを 19 分については、次のビデオをご覧ください。
 

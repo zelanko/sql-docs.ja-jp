@@ -18,7 +18,7 @@ ms.locfileid: "52505220"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>ブックのアップグレードと定期データ更新 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  このトピックでは、以前の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 環境で作成されたブックのユーザー エクスペリエンスについて、およびこのリリースで導入された新機能を利用できるよう、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックをアップグレードする方法について説明します。 新しい機能の詳細については、次を参照してください。 [Power Pivot で新](http://go.microsoft.com/fwlink/?LinkID=203917)します。  
+  このトピックでは、以前の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 環境で作成されたブックのユーザー エクスペリエンスについて、およびこのリリースで導入された新機能を利用できるよう、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックをアップグレードする方法について説明します。 新しい機能の詳細については、[Power Pivot で新](http://go.microsoft.com/fwlink/?LinkID=203917)を参照してください。  
   
 > [!WARNING]  
 >  サーバーで自動的にアップグレードされるブックのアップグレードをロールバックすることはできません。 ブックのアップグレードが完了すると、アップグレードされた状態のままになります。 以前のバージョンを使用するには、以前のブックを SharePoint に再パブリッシュするか、以前のバージョンを復元するか、ブックを再利用します。 SharePoint でのドキュメントの復元または再利用の詳細については、「 [ごみ箱とバージョン管理を使用したコンテンツ保護を計画する](http://go.microsoft.com/fwlink/?LinkId=238669)」を参照してください。  
@@ -134,7 +134,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefres
 ##  <a name="bkmk_runold"></a> 新しいサーバーでの複数バージョンのブックの実行  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] インスタンスでは、古いバージョンと新しいバージョンの [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]ブックを同時に実行できます。  
   
- サーバーをインストールした方法によっては、1 つのサーバー上で古いブックと新しいブックにアクセスする前に、以前のバージョンの Analysis Services OLE DB プロバイダーのインストールが必要になる場合があります。 ****  
+ サーバーをインストールした方法によっては、つのサーバー上で古いブックと新しいブックにアクセスする前に、以前のバージョンの Analysis Services OLE DB プロバイダーのインストー**ルが必要になる場合があります**。  
   
  以前の [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] SQL Server インスタンスでの新しいバージョンのブックの発行はできません。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] のインスタンスでは、 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)]バージョンで作成したブックは読み込まれません。SQL Server 2012 のインスタンスでは、Excel で [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] バージョンを使用して作成した高度なデータ モデルが含まれる Office 2013 ブックは読み込まれません。  
   

@@ -57,7 +57,7 @@ ms.locfileid: "58860463"
    ```
 
    > [!NOTE]
-   > このクラスターを使用して、 **Standard_NC6** [GPU 最適化済み仮想マシンのサイズ](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu)、1 つまたは複数の NVIDIA Gpu で利用可能な特殊化された仮想マシンの 1 つです。 詳細については、次を参照してください。[コンピューティング集中型ワークロードを Azure Kubernetes Service (AKS) を使用して Gpu](https://docs.microsoft.com/azure/aks/gpu-cluster)します。
+   > このクラスターを使用して、 **Standard_NC6** [GPU 最適化済み仮想マシンのサイズ](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu)、1 つまたは複数の NVIDIA Gpu で利用可能な特殊化された仮想マシンの 1 つです。 詳細については、[コンピューティング集中型ワークロードを Azure Kubernetes Service (AKS) を使用して Gpu](https://docs.microsoft.com/azure/aks/gpu-cluster)を参照してください。
 
 1. Kubernetes クラスターに接続するように kubectl を構成するには、実行、 [az aks 資格情報の取得](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials)コマンド。
 
@@ -195,7 +195,7 @@ Gpu をサポートする SQL Server 2019 ビッグ データ クラスター (�
 | [**tf cuda8.ipynb**](https://aka.ms/AA4jdgd) | 8 CUDA、CUDNN 6、および TensorFlow 1.4.0 を使用します。  |
 | [**tf cuda9.ipynb**](https://aka.ms/AA4ixzr) | 9 CUDA、CUDNN 7、および 1.12.0 TensorFlow を使用します。 |
 
-ローカル コンピューターに適切なノートブック ファイルを配置し、開く PySpark3 カーネルを使用して Azure Data Studio で実行します。 CUDA や TensorFlow の古いバージョンの特別なニーズがない限り、CUDA 9/CUDNN 7/TensorFlow 1.12.0 を選択します。 ビッグ データ クラスターで notebook を使用する方法の詳細については、次を参照してください。 [SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。
+ローカル コンピューターに適切なノートブック ファイルを配置し、開く PySpark3 カーネルを使用して Azure Data Studio で実行します。 CUDA や TensorFlow の古いバージョンの特別なニーズがない限り、CUDA 9/CUDNN 7/TensorFlow 1.12.0 を選択します。 ビッグ データ クラスターで notebook を使用する方法の詳細については、[SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)を参照してください。
 
 > [!NOTE]
 > ノートブックがシステムの場所でソフトウェアをインストールすることに注意してください。 Notebook は、現在 CTP 2.4 でルート権限で実行されるため、可能です。

@@ -26,7 +26,7 @@ ms.locfileid: "58872073"
 
 この記事では、統合された移行評価を分析する Power BI レポートを作成する方法について説明します。
 
-Data Migration Assistant によって作成された移行評価を統合する方法の詳細については、次を参照してください。[評価レポートの統合](../dma/dma-consolidatereports.md)します。
+Data Migration Assistant によって作成された移行評価を統合する方法の詳細については、[評価レポートの統合](../dma/dma-consolidatereports.md)を参照してください。
 
 ## <a name="sample-power-bi-reports"></a>Power BI のサンプル レポート
 

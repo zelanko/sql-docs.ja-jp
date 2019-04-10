@@ -188,4 +188,4 @@ import <package-name>
 
 ## <a name="next-steps"></a>次のステップ
 
-既存のノートブックを使用する方法については、次を参照してください。 [notebook Azure Data Studio での管理方法](notebooks-how-to-manage.md)します。
+既存のノートブックを使用する方法については、[notebook Azure Data Studio での管理方法](notebooks-how-to-manage.md)を参照してください。
