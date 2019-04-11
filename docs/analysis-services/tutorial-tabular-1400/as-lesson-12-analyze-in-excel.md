@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685430"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476718"
 ---
 # <a name="analyze-in-excel"></a>[Excel で分析]
 
@@ -33,7 +33,7 @@ ms.locfileid: "57685430"
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>既定のパースペクティブと Internet Sales パースペクティブを使用した参照  
 
-これらの最初のタスクでモデルを参照するとも両方既定のパースペクティブを含むすべてのモデル オブジェクトを使用して、Internet Sales パースペクティブを使用して、前にします。 Internet Sales パースペクティブでは、Customer テーブル オブジェクトが除外されます。  
+これらの最初のタスクの両方、既定のパースペクティブを含むすべてのモデル オブジェクトを使用して、モデルを参照しても Internet Sales パースペクティブを使用して、先ほど作成しました。 Internet Sales パースペクティブでは、Customer テーブル オブジェクトが除外されます。  
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>既定のパースペクティブを使用して参照するには  
   

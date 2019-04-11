@@ -5,7 +5,7 @@ description: このクイック スタートでは、Docker を使用して、SQ
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 01/10/2019
+ms.date: 04/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 794fe2353767da890c6998e8d858555dbef1eb78
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: d9b00170520d4c0b7202f7d81d3427912d8725d1
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566421"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476688"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>クイック スタート: Docker を使用した SQL Server のコンテナー イメージを実行します。
 
@@ -74,9 +74,9 @@ any changes to one section should be duplicated in the other-->
    > [!TIP]
    > SQL Server 2019 のプレビュー イメージを試す場合を参照してください、[今回のプレビュー バージョンの SQL Server 2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019)します。
 
-   前のコマンドは、最新の SQL Server 2017 コンテナー イメージをプルします。 特定のイメージをプルするには、コロンとタグ名を追加します (たとえば、 `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`)。 すべての利用可能なイメージを表示するには、[mssql server の Docker hub ページ](https://hub.docker.com/r/microsoft/mssql-server)を参照してください。
+   前のコマンドは、最新の SQL Server 2017 コンテナー イメージをプルします。 特定のイメージをプルするには、コロンとタグ名を追加します (たとえば、 `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`)。 すべての利用可能なイメージを表示するには、次を参照してください。 [mssql server の Docker hub ページ](https://hub.docker.com/r/microsoft/mssql-server)します。
 
-   この記事での bash コマンドの`sudo`使用されます。 Macos で`sudo`は必要ないかもしれません。 Linux では、使用しない場合`sudo`Docker を実行するには、構成、 **docker**をグループ化し、そのグループにユーザーを追加します。 詳細については、[Linux のインストール後のステップ](https://docs.docker.com/install/linux/linux-postinstall/)を参照してください。
+   この記事での bash コマンドの`sudo`使用されます。 Macos で`sudo`は必要ないかもしれません。 Linux では、使用しない場合`sudo`Docker を実行するには、構成、 **docker**をグループ化し、そのグループにユーザーを追加します。 詳細については、次を参照してください。 [Linux のインストール後のステップ](https://docs.docker.com/install/linux/linux-postinstall/)します。
 
 2. Docker でコンテナー イメージを実行するには、bash シェル (Linux/macOS) または管理者特権の PowerShell コマンド プロンプトから次のコマンドを使用できます。
 
@@ -107,7 +107,7 @@ any changes to one section should be duplicated in the other-->
 
    | パラメーター | 説明 |
    |-----|-----|
-   | **-e 'ACCEPT_EULA=Y'** |  **ACCEPT_EULA** 変数を任意の値に設定し、[使用許諾契約書](https://go.microsoft.com/fwlink/?LinkId=746388)の承諾を確定します。 SQL Server イメージに必須の設定です。 |
+   | **-e ' ACCEPT_EULA = Y'** |  **ACCEPT_EULA** 変数を任意の値に設定し、[使用許諾契約書](https://go.microsoft.com/fwlink/?LinkId=746388)の承諾を確定します。 SQL Server イメージに必須の設定です。 |
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 8 文字以上で、 [SQL Server のパスワード要件](../relational-databases/security/password-policy.md) を満たす強力なパスワードを指定します。 SQL Server イメージに必須の設定です。 |
    | **-p 1433:1433** | ホスト環境の TCP ポート (最初の値) を コンテナーの TCP ポート (2 番目の値) にマップします。 この例では、SQL Server がコンテナー内の TCP 1433 でリッスンしていると、ホスト上の 1433 ポートにこの公開されます。 |
    | **--name sql1** | ランダムに生成されたものではなく、コンテナーのカスタム名を指定します。 2 つ以上のコンテナーを実行する場合、同じ名前を再利用することはできません。 |
@@ -170,9 +170,9 @@ SELECT @@SERVERNAME,
    > [!TIP]
    > このクイック スタートでは、SQL Server 2019 プレビュー Docker イメージを使用します。 SQL Server 2017 のイメージを実行する場合を参照してください、[この記事の SQL Server 2017 バージョン](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)します。
 
-   前のコマンドは、ubuntu ベースの最新の SQL Server 2019 プレビュー コンテナー イメージをプルします。 RedHat に基づいてコンテナー イメージを代わりに使用する、[実行 RHEL ベースのコンテナー イメージ](sql-server-linux-configure-docker.md#rhel)を参照してください。 特定のイメージをプルするには、コロンとタグ名を追加します (たとえば、 `mcr.microsoft.com/mssql/server:2017-GA`)。 利用可能なすべてのイメージを表示するには [mssql-server-linux Docker hub ページ](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/) を参照してください。
+   前のコマンドは、ubuntu ベースの最新の SQL Server 2019 プレビュー コンテナー イメージをプルします。 RedHat に基づいてコンテナー イメージを代わりに使用する、次を参照してください。[実行 RHEL ベースのコンテナー イメージ](sql-server-linux-configure-docker.md#rhel)します。 特定のイメージをプルするには、コロンとタグ名を追加します (たとえば、 `mcr.microsoft.com/mssql/server:2017-GA`)。 利用可能なすべてのイメージを表示するには [mssql-server-linux Docker hub ページ](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/) を参照してください。
 
-   この記事での bash コマンドの`sudo`使用されます。 Macos で`sudo`は必要ないかもしれません。 Linux では、使用しない場合`sudo`Docker を実行するには、構成、 **docker**をグループ化し、そのグループにユーザーを追加します。 詳細については、[Linux のインストール後のステップ](https://docs.docker.com/install/linux/linux-postinstall/)を参照してください。
+   この記事での bash コマンドの`sudo`使用されます。 Macos で`sudo`は必要ないかもしれません。 Linux では、使用しない場合`sudo`Docker を実行するには、構成、 **docker**をグループ化し、そのグループにユーザーを追加します。 詳細については、次を参照してください。 [Linux のインストール後のステップ](https://docs.docker.com/install/linux/linux-postinstall/)します。
 
 2. Docker でコンテナー イメージを実行するには、bash シェル (Linux/macOS) または管理者特権の PowerShell コマンド プロンプトから次のコマンドを使用できます。
 
@@ -202,7 +202,7 @@ SELECT @@SERVERNAME,
 
    | パラメーター | 説明 |
    |-----|-----|
-   | **-e 'ACCEPT_EULA=Y'** |  **ACCEPT_EULA** 変数を任意の値に設定し、[使用許諾契約書](https://go.microsoft.com/fwlink/?LinkId=746388)の承諾を確定します。 SQL Server イメージに必須の設定です。 |
+   | **-e ' ACCEPT_EULA = Y'** |  **ACCEPT_EULA** 変数を任意の値に設定し、[使用許諾契約書](https://go.microsoft.com/fwlink/?LinkId=746388)の承諾を確定します。 SQL Server イメージに必須の設定です。 |
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 8 文字以上で、 [SQL Server のパスワード要件](../relational-databases/security/password-policy.md) を満たす強力なパスワードを指定します。 SQL Server イメージに必須の設定です。 |
    | **-p 1433:1433** | ホスト環境の TCP ポート (最初の値) を コンテナーの TCP ポート (2 番目の値) にマップします。 この例では、SQL Server がコンテナー内の TCP 1433 でリッスンしていると、ホスト上の 1433 ポートにこの公開されます。 |
    | **--name sql1** | ランダムに生成されたものではなく、コンテナーのカスタム名を指定します。 2 つ以上のコンテナーを実行する場合、同じ名前を再利用することはできません。 |
@@ -288,11 +288,9 @@ SELECT @@SERVERNAME,
 
 2. コンテナー内では sqlcmd とローカル接続してください。 既定では sqlcmd はパスにないため、完全なパスを指定する必要があります。
 
-   ::: zone pivot="cs1-bash"
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
    ```
-   ::: zone-end
 
    > [!TIP]
    > コマンド ラインでパスワードを省略すると、入力を求められます。
@@ -406,9 +404,9 @@ SQL 接続をサポートする外部の Linux、Windows、macOS ツールから
 SQL Server に接続するその他の一般的なツールには次のものがあります。
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-- [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-manage-ssms.md)
+- [Windows で SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
-- [mssql-cli (プレビュー)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
+- [mssql cli (プレビュー)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>コンテナーを削除する
 

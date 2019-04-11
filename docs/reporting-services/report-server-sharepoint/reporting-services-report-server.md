@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 624d00d0c9cd27acbaa00fefa52f6880c7a69916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: f5f5a449fc3bf87ce6999f424957466bae49ee38
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400586"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872232"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services レポート サーバー
 
@@ -25,7 +25,7 @@ ms.locfileid: "52400586"
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
 
-Reporting Services レポート サーバーは、ネイティブ モードと SharePoint モードという 2 種類の配置モードのいずれかで動作します。 機能の比較については、「 [SharePoint モードとネイティブ モードの機能の比較](#bkmk_featuresupport) 」セクションを参照してください。  
+Reporting Services レポート サーバーは、ネイティブ モードと SharePoint モードという 2 種類の配置モードのいずれかで動作します。 機能の比較については、「 [SharePoint モードとネイティブ モードの機能の比較](#feature-comparison-of-sharepoint-and-native-mode) 」セクションを参照してください。  
   
  **インストール:** Reporting Services のインストールについては、「[Reporting Services のインストール](../install-windows/install-reporting-services.md)」を参照してください。
 
@@ -49,21 +49,21 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
   
 |機能またはコンポーネント|ネイティブ モード|SharePoint モード|  
 |--------------------------|-----------------|---------------------|  
-|**URL アドレス指定**|[ユーザー アカウント制御]|SharePoint 統合モードでは URL アドレスの利用が異なります。 レポート、レポート モデル、共有データ ソース、およびリソースの参照には SharePoint URL が使用されます。 レポート サーバーのフォルダー階層は使用されません。 ネイティブ モードのレポート サーバー上でサポートされる URL アクセスに依存するカスタム アプリケーションでは、レポート サーバーが SharePoint 統合用に構成されると、この機能が動作しなくなります。<br /><br /> URL アクセスの詳細については、「 [URL アクセス パラメーター リファレンス](../../reporting-services/url-access-parameter-reference.md)」を参照してください。|  
-|**カスタム セキュリティ拡張機能**|[ユーザー アカウント制御]|Reporting Services のカスタム セキュリティ拡張機能は、レポート サーバーに配置したり使用することはできません。 レポート サーバーには特別な用途のセキュリティ拡張機能が用意されており、SharePoint 統合モードで動作するようにレポート サーバーを構成するときは常に使用されます。 このセキュリティ拡張機能は内部コンポーネントで、統合操作に必要です。|  
-|**構成マネージャー**|[ユーザー アカウント制御]|**\*\* 重要 \*\*** 構成マネージャーは、SharePoint モードのレポート サーバーの管理には使用できません。 代わりに、SharePoint サーバーの全体管理を使用してください。|  
-|**レポート マネージャー**|[ユーザー アカウント制御]|レポート マネージャーは、SharePoint モードの管理には使用できません。 SharePoint アプリケーション ページを使用してください。 詳細については、「 [Reporting Services の SharePoint サービスとサービス アプリケーション](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)｣を参照してください。|  
-|**リンク レポート**|[ユーザー アカウント制御]|不可。|  
-|**個人用レポート**|[ユーザー アカウント制御]|いいえ|  
-|**個人用サブスクリプション** とバッチ処理方式|[ユーザー アカウント制御]|いいえ|  
-|**データ警告**|いいえ|[ユーザー アカウント制御]|  
-|**Power View**|いいえ|[ユーザー アカウント制御]<br /><br /> クライアント ブラウザーに Silverlight が必要です。 ブラウザーの要件の詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。|  
-|**.RDL レポート**|[ユーザー アカウント制御]|[ユーザー アカウント制御]<br /><br /> .RDL レポートは、ネイティブ モードまたは SharePoint モードの Reporting Services レポート サーバーで実行できます。|  
-|**.RDLX レポート**|いいえ|[ユーザー アカウント制御]<br /><br /> Power View .RDLX レポートは、SharePoint モードの Reporting Services レポート サーバーでのみ実行できます。|  
-|**SharePoint リストの拡張機能用の SharePoint ユーザー トークン資格情報**|いいえ|[ユーザー アカウント制御]|  
-|**インターネットに直接つながっている配置の AAM 領域**|いいえ|[ユーザー アカウント制御]|  
-|**SharePoint のバックアップと回復**|いいえ|[ユーザー アカウント制御]|  
-|**ULS ログのサポート**|いいえ|[ユーザー アカウント制御]|  
+|**URL アドレス指定**|はい|SharePoint 統合モードでは URL アドレスの利用が異なります。 レポート、レポート モデル、共有データ ソース、およびリソースの参照には SharePoint URL が使用されます。 レポート サーバーのフォルダー階層は使用されません。 ネイティブ モードのレポート サーバー上でサポートされる URL アクセスに依存するカスタム アプリケーションでは、レポート サーバーが SharePoint 統合用に構成されると、この機能が動作しなくなります。<br /><br /> URL アクセスの詳細については、「 [URL アクセス パラメーター リファレンス](../../reporting-services/url-access-parameter-reference.md)」を参照してください。|  
+|**カスタム セキュリティ拡張機能**|はい|Reporting Services のカスタム セキュリティ拡張機能は、レポート サーバーに配置したり使用することはできません。 レポート サーバーには特別な用途のセキュリティ拡張機能が用意されており、SharePoint 統合モードで動作するようにレポート サーバーを構成するときは常に使用されます。 このセキュリティ拡張機能は内部コンポーネントで、統合操作に必要です。|  
+|**構成マネージャー**|はい|**\*\* 重要 \*\*** 構成マネージャーは、SharePoint モードのレポート サーバーの管理には使用できません。 代わりに、SharePoint サーバーの全体管理を使用してください。|  
+|**レポート マネージャー**|はい|レポート マネージャーは、SharePoint モードの管理には使用できません。 SharePoint アプリケーション ページを使用してください。 詳細については、「 [Reporting Services の SharePoint サービスとサービス アプリケーション](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)｣を参照してください。|  
+|**リンク レポート**|はい|不可。|  
+|**個人用レポート**|はい|いいえ|  
+|**個人用サブスクリプション** とバッチ処理方式|はい|いいえ|  
+|**データ警告**|いいえ|はい|  
+|**Power View**|いいえ|はい<br /><br /> クライアント ブラウザーに Silverlight が必要です。 ブラウザーの要件の詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。|  
+|**.RDL レポート**|はい|はい<br /><br /> .RDL レポートは、ネイティブ モードまたは SharePoint モードの Reporting Services レポート サーバーで実行できます。|  
+|**.RDLX レポート**|いいえ|はい<br /><br /> Power View .RDLX レポートは、SharePoint モードの Reporting Services レポート サーバーでのみ実行できます。|  
+|**SharePoint リストの拡張機能用の SharePoint ユーザー トークン資格情報**|いいえ|はい|  
+|**インターネットに直接つながっている配置の AAM 領域**|いいえ|はい|  
+|**SharePoint のバックアップと回復**|いいえ|はい|  
+|**ULS ログのサポート**|いいえ|はい|  
   
 ## <a name="native-mode"></a>ネイティブ モード
 
@@ -138,7 +138,7 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
 |----------|----------|  
 |ハードウェアおよびソフトウェアの要件を確認します。|「[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)」を参照してください。|  
 |SharePoint モードで Reporting Services をインストールします。|[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
-|Web 開発者、またはカスケード スタイル シート作成に関する専門知識を持つユーザーであれば、各自の責任で既定のスタイルを変更し、色、フォント、およびツール バーやレポート マネージャーのレイアウトを変えることができます。 このリリースでは、既定のスタイル シートについても、そのスタイル シートの変更手順についても説明していません。|[HTML ビューアーおよびレポート マネージャーのスタイル シートをカスタマイズする](https://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
+|Web 開発者、またはカスケード スタイル シート作成に関する専門知識を持つユーザーであれば、各自の責任で既定のスタイルを変更し、色、フォント、およびツール バーやレポート マネージャーのレイアウトを変えることができます。 このリリースでは、既定のスタイル シートについても、そのスタイル シートの変更手順についても説明していません。|[HTML ビューアーとレポート マネージャーのスタイル シートのカスタマイズに関する記事 (ページ、サイトなどの場合もあります)](https://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
 |HTML のスタイルやカスケード スタイル シート (CSS) の知識があれば、このトピックの情報を利用して、どのファイルを変更するとレポート マネージャーの外観をカスタマイズできるのかを判断できます。|[カスタム認証クッキーを送信するように Web ポータルを構成する](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 |レポート サーバー Web サービスおよび Windows サービスに対するメモリ設定を調整する方法について説明します。|[レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |リモート管理用にレポート サーバーを構成するための推奨されている手順について説明します。|[リモート管理用のレポート サーバーの構成](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
@@ -153,6 +153,6 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
 [レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 [セキュリティ拡張機能の実装](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [データ処理拡張機能の実装](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
-[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)
