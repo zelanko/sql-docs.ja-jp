@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c2a6acd93bc711e4722f3ca437b17cba603dfcad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242208"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault を使用する拡張キー管理 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for[!INCLUDE[msCoName](../../../includes/msconame-md.md)]により、Azure Key Vault[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]として、Azure Key Vault サービスを利用する暗号化、[拡張キー管理&#40;EKM&#41; ](extensible-key-management-ekm.md)を保護するプロバイダー、暗号化キー。  
@@ -30,17 +30,17 @@ ms.locfileid: "53372764"
   
 -   [EKM の使用](#Uses)  
   
--   [ステップ 1: SQL Server で使用する Key Vault の設定](#Step1)  
+-   [手順 1:SQL Server で使用する Key Vault の設定](#Step1)  
   
 -   [手順 2:SQL Server コネクタをインストールします。](#Step2)  
   
--   [手順 3:Key Vault の EKM プロバイダーを使用する SQL Server の構成します。](#Step3)  
+-   [手順 3:EKM プロバイダーを Key Vault に使用する SQL Server の構成](#Step3)  
   
--   [例 a:Key Vault からの非対称キーを使用して transparent Data Encryption](#ExampleA)  
+-   [例 A:Key Vault からの非対称キーを使用した透過的データ暗号化](#ExampleA)  
   
--   [例 b:Key Vault からの非対称キーを使用したバックアップの暗号化](#ExampleB)  
+-   [例 B:Key Vault からの非対称キーを使用したバックアップの暗号化](#ExampleB)  
   
--   [例 c:Key Vault からの非対称キーを使用して列レベルの暗号化](#ExampleC)  
+-   [例 C:Key Vault からの非対称キーを使用した列レベルの暗号化](#ExampleC)  
   
 ##  <a name="Uses"></a> EKM の使用  
  組織では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化を使用して秘密データを保護できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 暗号化には、 [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)、[列レベルの暗号化](/sql/t-sql/functions/cryptographic-functions-transact-sql)(CLE) と[バックアップの暗号化](../../backup-restore/backup-encryption.md)します。 これらのすべてのケースでは、対称なデータ暗号化キーを使用してデータが暗号化されます。 対称なデータ暗号化キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納されたキーの階層で暗号化することにより、さらに保護されます。 それに対して、EKM プロバイダーのアーキテクチャでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の外側にある外部暗号化サービス プロバイダーに格納された非対称キーを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でデータの暗号化キーを保護できるようにします。 EKM プロバイダーのアーキテクチャを使用すると、さらにセキュリティ層を追加し、組織の中でキーとデータの管理を分離できます。  
@@ -51,8 +51,8 @@ ms.locfileid: "53372764"
   
  ![Azure Key Vault を使用した SQL Server EKM](../../../database-engine/media/ekm-using-azure-key-vault.png "Azure Key Vault を使用した SQL Server EKM")  
   
-##  <a name="Step1"></a> 手順 1:SQL Server で使用する Key Vault の設定  
- 次の手順では、暗号化キーを保護するために [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] で使用する資格情報コンテナーを設定する方法について説明します。 コンテナーは、組織内で既に使用中になっていることもあります。 資格情報コンテナーが存在しない場合は、暗号化キーを管理するように指名された組織内の Azure 管理者がコンテナーを作成し、コンテナー内に非対称キーを生成し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によるキー使用を許可します。 Key Vault サービスについて習熟するため、「 [Azure Key Vault の使用を開始する](https://go.microsoft.com/fwlink/?LinkId=521402)」と、PowerShell の「 [Azure Key Vault のコマンドレット](https://go.microsoft.com/fwlink/?LinkId=521403) 」をご確認ください。  
+##  <a name="Step1"></a> ステップ 1:SQL Server で使用する Key Vault の設定  
+ 次の手順では、暗号化キーを保護するために [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] で使用する資格情報コンテナーを設定する方法について説明します。 コンテナーは、組織内で既に使用中になっていることもあります。 資格情報コンテナーが存在しない場合は、暗号化キーを管理するように指名された組織内の Azure 管理者がコンテナーを作成し、コンテナー内に非対称キーを生成し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によるキー使用を許可します。 Key Vault サービスについて習熟するため、「 [Azure Key Vault の使用を開始する](https://go.microsoft.com/fwlink/?LinkId=521402)」と、PowerShell の「 [Azure Key Vault のコマンドレット](/powershell/module/azurerm.keyvault/) 」をご確認ください。  
   
 > [!IMPORTANT]  
 >  複数の Azure サブスクリプションがある場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を含むサブスクリプションを使用する必要があります。  
@@ -100,7 +100,7 @@ ms.locfileid: "53372764"
   
     -   PowerShell の [Azure Key Vault コマンドレット](https://go.microsoft.com/fwlink/?LinkId=521403) のリファレンス  
   
-##  <a name="Step2"></a> 手順 2:SQL Server コネクタのインストール  
+##  <a name="Step2"></a> ステップ 2:SQL Server コネクタのインストール  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのダウンロードとインストールは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者が行います。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタは、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=521700)からダウンロードして入手できます。  " **SQL Server Connector for Microsoft Azure Key Vault**" を検索して、詳細やシステム要件、インストール方法を確認し、コネクタのダウンロードを選択し、 **[実行]** を使用してインストールを開始します。 ライセンスを確認し、ライセンスに同意して続行します。  
   
  既定では、コネクタは **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**にインストールされています。 この場所は、セットアップ中に変更することができます。 (変更した場合は、以下のスクリプトを調整してください。)  
@@ -113,7 +113,7 @@ ms.locfileid: "53372764"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのインストールでは、必要に応じて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化で使用するサンプル スクリプトをダウンロードすることもできます。  
   
-##  <a name="Step3"></a> 手順 3:EKM プロバイダーを Key Vault に使用する SQL Server の構成  
+##  <a name="Step3"></a> ステップ 3:EKM プロバイダーを Key Vault に使用する SQL Server の構成  
   
 ###  <a name="Permissions"></a> Permissions  
  このプロセス全体を完了するには、CONTROL SERVER 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 特定のアクションで必要な権限は次のとおりです。  
@@ -175,7 +175,7 @@ ms.locfileid: "53372764"
     ADD CREDENTIAL sysadmin_ekm_cred;  
     ```  
   
-     変数を使用する例については、`CREATE CREDENTIAL`引数と、クライアント ID からハイフンの削除をプログラムでは、[CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)を参照してください。  
+     変数を使用する例については、`CREATE CREDENTIAL`引数と、クライアント ID からハイフンの削除をプログラムでは、次を参照してください。 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)します。  
   
 3.  以前に手順 1 のセクション 3 で説明したように非対称キーをインポートした場合は、次の例のようにキー名を提供して、キーを開きます。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "53372764"
     ```  
   
 > [!TIP]  
->  ユーザーが、エラーを受け取る**プロバイダーから公開キーをエクスポートすることはできません。プロバイダー エラー コード:2053。** 確認する必要があります、**取得**、**一覧**、 **wrapKey**、および**unwrapKey** key vault にアクセス許可。  
+>  ユーザーが、エラーを受け取る**プロバイダーから公開キーをエクスポートすることはできません。プロバイダー エラー コード:2053.** 確認する必要があります、**取得**、**一覧**、 **wrapKey**、および**unwrapKey** key vault にアクセス許可。  
   
  詳細については、以下を参照してください。  
   
@@ -299,7 +299,7 @@ FROM DISK = N'[PATH TO BACKUP FILE]' WITH FILE = 1, NOUNLOAD, REPLACE;
 GO  
 ```  
   
- バックアップ オプションの詳細については、[バックアップ&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)を参照してください。  
+ バックアップ オプションの詳細については、次を参照してください。[バックアップ&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)します。  
   
 ###  <a name="ExampleC"></a> 例 c:Key Vault からの非対称キーを使用した列レベルの暗号化  
  次の例では、資格情報コンテナー内の非対称キーによって保護された対称キーを作成します。 その後、その対称キーを使用してデータベース内のデータを暗号化します。  
@@ -347,7 +347,7 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [拡張キー管理 &#40;EKM&#41;](extensible-key-management-ekm.md)   
- [EKM を使用して TDE を有効にします。](enable-tde-on-sql-server-using-ekm.md)   
+ [EKM を使用して TDE を有効にする](enable-tde-on-sql-server-using-ekm.md)   
  [バックアップの暗号化](../../backup-restore/backup-encryption.md)   
  [暗号化されたバックアップの作成](../../backup-restore/create-an-encrypted-backup.md)  
   
