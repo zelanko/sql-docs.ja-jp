@@ -27,7 +27,7 @@ ms.locfileid: "58860324"
 - SQL Server のビッグ データ クラスター。
 - Oracle Java Development Kit。 インストールすることができます、 [Oracle の web サイト](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)します。
 - IntelliJ IDEA。 インストールすることができます、 [JetBrains の web サイト](https://www.jetbrains.com/idea/download/)します。
-- Azure Toolkit for IntelliJ の拡張機能。 インストール手順については、次を参照してください。 [Azure Toolkit for IntelliJ のインストール](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation)します。
+- Azure Toolkit for IntelliJ の拡張機能。 インストール手順については、[Azure Toolkit for IntelliJ のインストール](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation)を参照してください。
 
 ## <a name="link-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスターをリンク
 1. IntelliJ IDEA ツールを開きます。
@@ -131,7 +131,7 @@ Spark ローカル Console(Scala) を実行したり、Spark Livy 対話型セ�
 ### <a name="spark-local-consolescala"></a>Spark ローカル Console(Scala)
 WINUTILS が満たされていることを確認します。EXE の前提条件です。
 
-1. メニュー バーに移動します**実行** > **構成の編集。**.
+1. メニュー バーに移動します**実行** > **構成の編集...**。
 
 2. **実行/デバッグ構成**に移動します ウィンドウの左側のウィンドウで、**ビッグ データの SQL Server クラスターでの Apache Spark** > **[SQL での Spark] myApp**します。
 
@@ -165,7 +165,7 @@ WINUTILS が満たされていることを確認します。EXE の前提条件�
 ### <a name="spark-livy-interactive-session-consolescala"></a>Livy 対話型セッション Console(Scala) を spark します。
 Spark Livy 対話型セッション Console(Scala) は IntelliJ 2018.2 と 2018.3 でのみサポートされます。
 
-1. メニュー バーに移動します**実行** > **構成の編集。**.
+1. メニュー バーに移動します**実行** > **構成の編集...**。
 
 2. **実行/デバッグ構成**に移動します ウィンドウの左側のウィンドウで、**ビッグ データの SQL Server クラスターでの Apache Spark** > **[SQL での Spark] myApp**します。
 
