@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9e58af1c10322baae4321c62901a55000e631678
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 17819c4c2a1d74c8ca4cc5d4875a67c6fb236639
+ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240440"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480278"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>メモリ使用量の監視とトラブルシューティング
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] は、ディスク ベース テーブルとは異なるパターンでメモリを消費します。 メモリおよびガベージ コレクション サブシステムに提供される DMV またはパフォーマンス カウンターを使用して、データベース内のメモリ最適化テーブルとインデックス向けに割り当てられて使用されているメモリの量を監視できます。  これによって、システム レベルとデータベース レベルの両方で状況を表示でき、メモリの枯渇による問題を回避できます。  
@@ -157,7 +157,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- 詳細については、「[sys.dm_db_xtp_table_memory_stats](https://msdn.microsoft.com/99b8a95f-d04b-4edb-a764-17b95581d071)」 を参照してください。  
+ 詳細については、次を参照してください。 [sys.dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=sql-server-2016)します。  
   
 #### <a name="memory-consumption-by-internal-system-structures"></a>内部システム構造によるメモリ消費  
  メモリは、トランザクション構造、データ ファイルとデルタ ファイルのバッファー、ガベージ コレクション構造などのシステム オブジェクトによっても消費されます。 次に示すように、 `sys.dm_xtp_system_memory_consumers` にクエリを実行することで、これらのシステム オブジェクトに使用されるメモリを確認できます。  
@@ -195,8 +195,9 @@ PGPOOL:256K               768                  768                  3
 PGPOOL: 64K               0                    0                    0  
 PGPOOL:  4K               0                    0                    0  
 ```  
-  
+
  詳細については、「[sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)」を参照してください。  
+
   
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>メモリ最適化テーブルにアクセスするときの実行時のメモリ消費  
  次のクエリを使用して、プロシージャ キャッシュなどのランタイム構造で消費されたメモリを確認できます。このクエリを実行して、プロシージャ キャッシュ用などのランタイム構造で使用されたメモリの情報を取得します。 すべてのランタイム構造は XTP でタグ付けされます。  
@@ -229,7 +230,7 @@ memory_object_address pages_ in_bytes bytes_used type
 0x00000001F813E040    16842752            NULL       MEMOBJ_XTPBLOCKALLOC  
 ```  
   
- 詳細については、「 [sys.dm_os_memory_objects (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)」 を参照してください。  
+ 詳細については、次を参照してください。 [sys.dm_os_memory_objects (TRANSACT-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)します。  
   
 #### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>インスタンス全体で [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンによって消費されるメモリ  
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンとメモリ最適化オブジェクトに割り当てられたメモリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の他のメモリ コンシューマーと同様に管理されます。 MEMORYCLERK_XTP 型のクラークによって、 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンに割り当てられたすべてのメモリについて確認できます。 次のクエリを使用して、 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンによって使用されるすべてのメモリを確認します。  
@@ -255,7 +256,7 @@ MEMORYCLERK_XTP      DB_ID_5    0              1358
 MEMORYCLERK_XTP      Default    64             0  
 ```  
   
- 詳細については、「 [sys.dm_os_memory_clerks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)」を参照してください。  
+ 詳細については、次を参照してください。 [sys.dm_os_memory_clerks (TRANSACT-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)します。  
   
 ##   <a name="managing-memory-consumed-by-memory-optimized-objects"></a>メモリ最適化オブジェクトに消費されるメモリの管理  
  トピック「 [メモリ最適化テーブルを持つデータベースのリソース プールへのバインド](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)」で説明しているように、名前付きリソース プールにバインドすることでメモリ最適化テーブルによって消費されるメモリの合計を制御できます。  
@@ -267,7 +268,7 @@ MEMORYCLERK_XTP      Default    64             0
   
 2.  メモリ消費がどのように拡大し、どれぐらいの余裕が残されているかを確認します。 メモリ消費を定期的に監視することで、メモリの使用がどのように拡大しているかを確認できます。 たとえば、名前付きリソース プールにデータベースをマップしている場合は、パフォーマンス カウンターの Used Memory (KB) を監視して、メモリの使用量がどのように拡大しているかを確認することができます。  
   
-3.  発生する可能性があるメモリの問題を軽減するアクションを実行します。 詳細については、「 [メモリ不足の問題の解決](resolve-out-of-memory-issues.md)」を参照してください。  
+3.  発生する可能性があるメモリの問題を軽減するアクションを実行します。 詳細については、次を参照してください。[メモリ不足の問題を解決する](resolve-out-of-memory-issues.md)します。  
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化テーブルを持つデータベースのリソース プールへのバインド](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
