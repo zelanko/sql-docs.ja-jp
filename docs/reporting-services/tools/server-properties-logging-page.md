@@ -21,7 +21,7 @@ ms.locfileid: "47827026"
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] で、この [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] ページを使用すると、レポート サーバーで収集されるレポート実行データに制限を設定できます。 実行データはレポート サーバー データベースに内部的に格納されます。 ネイティブ モードまたは SharePoint 統合モードで実行されているレポート サーバーのレポート処理を追跡できます。 レポート サーバーがスケールアウト配置の一部である場合、レポート実行ログでは、配置全体に対するすべてのレポート処理のレコードが 1 つのログ ファイルで保持されます。  
   
  このページを開くには:
- 1) コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+ 1) [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開始します。
  2) レポート サーバーに接続します。
  3) レポート サーバー名を右クリックして、 **[プロパティ]** をクリックします。 
  4) **[ログ記録]** をクリックするとこのページが開きます。  
