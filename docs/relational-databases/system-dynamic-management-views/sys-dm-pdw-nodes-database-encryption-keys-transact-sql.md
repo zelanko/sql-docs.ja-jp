@@ -35,7 +35,7 @@ ms.locfileid: "58657068"
 |set_date|**datetime**|暗号化キーがデータベースに適用された日付を表示します。|  
 |opened_date|**datetime**|データベース キーが最後に開かれた日時を示します。|  
 |key_algorithm|**varchar(?)**|キーに使用されるアルゴリズムを表示します。|  
-|◆ セグ|**int**|キーの長さを表示します。|  
+|key_length|**int**|キーの長さを表示します。|  
 |encryptor_thumbprint|**varbin**|暗号化のサムプリントを表示します。|  
 |percent_complete|**real**|データベース暗号化の状態変更の完了率。 状態の変更がない場合は、0 になります。|  
 |node_id|**int**|ノードに関連付けられている一意の数値 id。|  
