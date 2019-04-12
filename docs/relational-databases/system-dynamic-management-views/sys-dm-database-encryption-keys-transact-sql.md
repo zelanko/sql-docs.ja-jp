@@ -43,7 +43,7 @@ ms.locfileid: "58494079"
 |set_date|**datetime**|日付を表示します (UTC) で暗号化キーがデータベースに適用されました。|  
 |opened_date|**datetime**|データベース キーが最後 (UTC) で開かれたときに表示されます。|  
 |key_algorithm|**nvarchar(32)**|キーに使用されるアルゴリズムを表示します。|  
-|◆ セグ|**int**|キーの長さを表示します。|  
+|key_length|**int**|キーの長さを表示します。|  
 |encryptor_thumbprint|**varbinary(20)**|暗号化のサムプリントを表示します。|  
 |encryptor_type|**nvarchar(32)**|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。<br /><br /> 暗号化機能をについて説明します。|  
 |percent_complete|**real**|データベース暗号化の状態変更の完了率。 状態の変更がない場合は、0 になります。|
