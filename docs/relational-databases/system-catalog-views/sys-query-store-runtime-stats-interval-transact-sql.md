@@ -21,24 +21,24 @@ ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9c494ab580d94f82587041c5c28ec60e2481e98
-ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 206ac65ab9a3b533cc80858feff2ffdfa2671ecf
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54838029"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542152"
 ---
 # <a name="sysquerystoreruntimestatsinterval-transact-sql"></a>sys.query_store_runtime_stats_interval (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  クエリの実行の統計情報が収集されたランタイムでは、各間隔の開始および終了時間について説明します。  
+  クエリの実行の統計情報の収集されたランタイムでは、各間隔の開始および終了時間について説明します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_interval_id**|**bigint**|主キー。|
-|**start_time**|**datetimeoffset**|間隔の時間を開始します。|
-|**end_time**|**datetimeoffset**|間隔の終了時刻です。|
+|**start_time**|**datetimeoffset**|間隔の開始時刻。|
+|**end_time**|**datetimeoffset**|間隔の終了時刻。|
 |**comment**|**nvarchar(32)**|常に NULL になります。|
   
 ## <a name="permissions"></a>アクセス許可  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9a9a3d18f1850b563882a2303db8dd28b2916ac4
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205751"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542232"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>作成し、SQL Server on Linux の可用性グループの構成
 
@@ -243,7 +243,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-10.  LinAGN1_Cert と LinAGN3_Cert LinAGN2 に復元します。 
+10. LinAGN1_Cert と LinAGN3_Cert LinAGN2 に復元します。
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -257,8 +257,9 @@ sudo systemctl restart mssql-server
     FROM FILE = '/var/opt/mssql/data/LinAGN3_Cert.cer';
     
     GO
+    ```
     
-11.  Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
+11. LinAGN2 上のエンドポイントに接続する権限を LinAG1 と LinAGN3 に関連付けられているログインを許可します。
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -270,7 +271,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-12.  インスタンス レベルのログインと LinAGN1 と LinAGN3 で LinAGN2 に関連付けられているユーザーを作成します。
+12. インスタンス レベルのログインと LinAGN1 と LinAGN3 で LinAGN2 に関連付けられているユーザーを作成します。
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -284,7 +285,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-13.  LinAGN1_Cert と LinAGN2_Cert LinAGN3 に復元します。 
+13. LinAGN1_Cert と LinAGN2_Cert LinAGN3 に復元します。 
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -298,8 +299,9 @@ sudo systemctl restart mssql-server
     FROM FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
     
     GO
+    ```
     
-14.  Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
+14. LinAGN3 上のエンドポイントに接続する権限を LinAG1 と LinAGN2 に関連付けられているログインを許可します。
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -323,7 +325,7 @@ sudo systemctl restart mssql-server
 
 2.  [概要] ダイアログで次のようにクリックします。**次**します。
 
-3.  可用性グループ オプションの指定] ダイアログ ボックスで、可用性グループの名前を入力し、[EXTERNAL または NONE、ドロップダウン リストでのクラスターの種類を選択します。 Pacemaker が配置されるときに、外部を使用する必要があります。 [なし] は、読み取りスケール アウトなどの特殊なシナリオ用です。データベース レベルの正常性検出オプションを選択するは省略可能です。 このオプションの詳細については、[可用性グループのデータベース レベルの正常性検出フェールオーバー オプション](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)を参照してください。 **[次へ]** をクリックします。
+3.  可用性グループ オプションの指定] ダイアログ ボックスで、可用性グループの名前を入力し、[EXTERNAL または NONE、ドロップダウン リストでのクラスターの種類を選択します。 Pacemaker が配置されるときに、外部を使用する必要があります。 [なし] は、読み取りスケール アウトなどの特殊なシナリオ用です。データベース レベルの正常性検出オプションを選択するは省略可能です。 このオプションの詳細については、次を参照してください。[可用性グループのデータベース レベルの正常性検出フェールオーバー オプション](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)します。 **[次へ]** をクリックします。
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
@@ -345,7 +347,7 @@ sudo systemctl restart mssql-server
 
     ![](./media/sql-server-linux-create-availability-group/image5.png)
 
-9.  バックアップの設定を変更する場合は、バックアップの設定 タブをクリックします。Ag でのバックアップの設定の詳細については、[可用性レプリカでバックアップの構成](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)を参照してください。
+9.  バックアップの設定を変更する場合は、バックアップの設定 タブをクリックします。Ag でのバックアップの設定の詳細については、次を参照してください。[可用性レプリカでバックアップの構成](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)します。
 
 10. 読み取りスケールなしの型読み取り可能なセカンダリを使用して、またはクラスターでの AG を作成する場合は、[リスナー] タブを選択してリスナーを作成できます。リスナーは、後でも追加できます。 リスナーを作成するオプションを選択**可用性グループ リスナーの作成**名前、TCP/IP ポート、および静的または自動的に割り当てられた DHCP IP アドレスを使用するかどうかを入力します。 静的および設定が None のクラスターの種類で、AG の ip アドレスがあることに注意してください。 プライマリの IP アドレスにします。
 
@@ -369,7 +371,7 @@ sudo systemctl restart mssql-server
 
 16. AG の作成が完了したら、クリックして**閉じる**結果にします。 SSMS の Always On 高可用性フォルダーの下や動的管理ビューでのレプリカで可用性グループがわかります。
 
-### <a name="use-transact-sql"></a>TRANSACT-SQL を使用します。
+### <a name="use-transact-sql"></a>Transact-SQL の使用
 
 このセクションでは、TRANSACT-SQL を使用して AG を作成する例を示します。 可用性グループを作成した後、リスナーと読み取り専用ルーティングを構成できます。 AG 自体を変更できますが`ALTER AVAILABILITY GROUP`、クラスターの種類の変更実行することはできませんが、[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]します。 AG を作成する外部のクラスターの種類でない場合は、削除し、None のクラスターの種類で再作成する必要があります。 詳細については、その他のオプションは、次のリンクで見つかります。
 
@@ -416,7 +418,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-3.  構成のみのレプリカに接続されているクエリ ウィンドウで、可用性グループに参加します。
+3. 構成のみのレプリカに接続されているクエリ ウィンドウで、可用性グループに参加します。
     
    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -539,7 +541,7 @@ Pacemaker の高可用性クラスター基[!INCLUDE[ssnoversion-md](../includes
 1.  最初のレプリカに接続されているクエリ ウィンドウで、次の手順を実行します。
 
     ```SQL
-    CREATE LOGIN PMLogin WITH PASSWORD '<StrongPassword>';
+    CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
     
     GO
     

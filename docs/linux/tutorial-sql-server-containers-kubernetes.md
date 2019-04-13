@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 13bd39a2d5334c2d343fdbc6c77a697a5d6a8403
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626322"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516608"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes サービス (AKS) での Kubernetes での SQL Server のコンテナーをデプロイします。
 
@@ -155,7 +155,7 @@ Kubernetes クラスターでは、SA のパスワードを作成します。 Ku
 
 この例では、SQL Server インスタンスをホストするコンテナーは Kubernetes デプロイ オブジェクトとしてについて説明します。 展開は、レプリカ セットを作成します。 レプリカ セットでは、ポッドを作成します。 
 
-この手順で SQL Server ベースのコンテナーを記述するマニフェストを作成[mssql server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker イメージです。 マニフェストの参照、`mssql-server`永続ボリューム要求、および`mssql`Kubernetes クラスターに既に適用したシークレットです。 マニフェストについても説明します、[サービス](https://kubernetes.io/docs/concepts/services-networking/service/)します。 このサービスは、ロード バランサーです。 ロード バランサーは、SQL Server インスタンスが回復後に、IP アドレスが解決しないことを保証します。 
+この手順で SQL Server ベースのコンテナーを記述するマニフェストを作成[mssql server-linux](https://hub.docker.com/_/microsoft-mssql-server) Docker イメージです。 マニフェストの参照、`mssql-server`永続ボリューム要求、および`mssql`Kubernetes クラスターに既に適用したシークレットです。 マニフェストについても説明します、[サービス](https://kubernetes.io/docs/concepts/services-networking/service/)します。 このサービスは、ロード バランサーです。 ロード バランサーは、SQL Server インスタンスが回復後に、IP アドレスが解決しないことを保証します。 
 
 1. 展開を記述するマニフェスト (YAML ファイル) を作成します。 次の例では、SQL Server のコンテナー イメージに基づくコンテナーなど、配置について説明します。
 
@@ -214,7 +214,7 @@ Kubernetes クラスターでは、SA のパスワードを作成します。 Ku
    * MSSQL_PID `value: "Developer"`:SQL Server Developer エディションを実行するコンテナーを設定します。 Developer edition では、実稼働データのライセンスがありません。 展開が実稼働環境用の場合は、適切なエディションを設定します。 (`Enterprise`、 `Standard`、または`Express`)。 
 
       >[!NOTE]
-      >詳細については、[SQL Server のライセンス方法](https://www.microsoft.com/sql-server/sql-server-2017-pricing)を参照してください。
+      >詳細については、次を参照してください。 [SQL Server のライセンス方法](https://www.microsoft.com/sql-server/sql-server-2017-pricing)します。
 
    * `persistentVolumeClaim`:この値には、エントリが必要です。`claimName:`永続ボリューム要求に使用される名前にマップされます。 このチュートリアルでは`mssql-data`します。 
 
@@ -253,7 +253,7 @@ Kubernetes クラスターでは、SA のパスワードを作成します。 Ku
    前のイメージで、ポッドには、ステータスの`Running`します。 この状態は、コンテナー準備ができていることを示します。 数分をかかります。
 
    >[!NOTE]
-   >展開が作成された後は、ポッドが表示されるまで数分かかります。 遅延は、クラスターをプルするため、 [mssql server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker hub からイメージ。 イメージの pull が最初に後、は、キャッシュされたイメージが既にノードへのデプロイが場合以降のデプロイが高速でしょう。 
+   >展開が作成された後は、ポッドが表示されるまで数分かかります。 遅延は、クラスターをプルするため、 [mssql server-linux](https://hub.docker.com/_/microsoft-mssql-server) Docker hub からイメージ。 イメージの pull が最初に後、は、キャッシュされたイメージが既にノードへのデプロイが場合以降のデプロイが高速でしょう。 
 
 1. サービスが実行されていることを確認します。 次のコマンドを実行します。
 

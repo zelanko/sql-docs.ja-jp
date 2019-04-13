@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e95110bdbbfbe0f5ca6ff453045cc4f759163036
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c8f202dd4f383d1ed2186e589b275afc0049fb50
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973681"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542212"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,20 @@ ms.locfileid: "57973681"
 ## <a name="syntax"></a>構文  
   
 ```  
-sp_filestream_force_garbage_collection  
-    [ @dbname = ]  'database_name',  
-    [ @filename = ] 'logical_file_name' ]  
+sp_filestream_force_garbage_collection
+    [ @dbname = ]  'database_name'
+    [ , [ @filename = ] 'logical_file_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- **@dbname** = *database_name*ガベージ コレクターを実行するデータベースの名前を示します。  
+ `[ @dbname = ]  'database_name'`  
+ ガベージ コレクターを実行するデータベースの名前を示します。  
   
 > [!NOTE]  
->  *dbname*は**sysname**します。 指定しない場合、指定すると、現在のデータベースが想定されます。  
+> `@dbname` **sysname**します。 指定しない場合、指定すると、現在のデータベースが想定されます。  
   
- **@filename** = *logical_file_name*  
- ガベージ コレクターを実行する FILESTREAM コンテナーの論理名を指定します。 **@filename** 省略可能です。 論理ファイル名が指定されていない場合、ガベージ コレクターは、指定されたデータベース内のすべての FILESTREAM コンテナーをクリーンアップします。  
+ `[ @filename = ] 'logical_file_name'`  
+ ガベージ コレクターを実行する FILESTREAM コンテナーの論理名を指定します。 `@filename` 省略可能です。 論理ファイル名が指定されていない場合、ガベージ コレクターは、指定されたデータベース内のすべての FILESTREAM コンテナーをクリーンアップします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
   

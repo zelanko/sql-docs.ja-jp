@@ -11,18 +11,18 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f45f667dc85ff3069d55fa3badb7c5c7f82f5929
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566631"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516518"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker で SQL Server のコンテナー イメージを構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、構成および使用する方法をについて説明します、 [mssql server-linux コンテナー イメージ](https://hub.docker.com/r/microsoft/mssql-server-linux/)Docker を使用します。 このイメージは、Ubuntu 16.04 の Linux で動作する SQL Server で構成されます。 Linux の Docker エンジン 1.8 + または Docker for Mac/Windows から使用できます。
+この記事では、構成および使用する方法をについて説明します、 [mssql server-linux コンテナー イメージ](https://hub.docker.com/_/microsoft-mssql-server)Docker を使用します。 このイメージは、Ubuntu 16.04 の Linux で動作する SQL Server で構成されます。 Linux の Docker エンジン 1.8 + または Docker for Mac/Windows から使用できます。
 
 > [!NOTE]
 > この記事では、具体的には、mssql のサーバーの linux イメージを使用してについて説明します。 Windows イメージは取り上げませんで詳細情報を入手することができます、 [mssql server-windows の Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)します。
@@ -197,7 +197,7 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 
 ## <a id="customcontainer"></a> カスタマイズされたコンテナーを作成します。
 
-独自に作成することは[Dockerfile](https://docs.docker.com/engine/reference/builder/#usage)カスタマイズされた SQL Server のコンテナーを作成します。 詳細については、[を SQL Server および Node アプリケーションを組み合わせたデモ](https://github.com/twright-msft/mssql-node-docker-demo-app)を参照してください。 独自の Dockerfile を作成する場合は、このプロセスは、コンテナーの有効期間を制御するため、フォア グラウンド プロセスでは、注意します。 セッションを終了する場合に、コンテナーはシャット ダウンします。 たとえば、スクリプトを実行し、SQL Server を起動する場合は、ことを SQL Server プロセスが、右端のコマンドであることを確認します。 その他のすべてのコマンドは、バック グラウンドで実行されます。 これは、Dockerfile 内の次のコマンドに示します。
+独自に作成することは[Dockerfile](https://docs.docker.com/engine/reference/builder/#usage)カスタマイズされた SQL Server のコンテナーを作成します。 詳細については、次を参照してください。[を SQL Server および Node アプリケーションを組み合わせたデモ](https://github.com/twright-msft/mssql-node-docker-demo-app)します。 独自の Dockerfile を作成する場合は、このプロセスは、コンテナーの有効期間を制御するため、フォア グラウンド プロセスでは、注意します。 セッションを終了する場合に、コンテナーはシャット ダウンします。 たとえば、スクリプトを実行し、SQL Server を起動する場合は、ことを SQL Server プロセスが、右端のコマンドであることを確認します。 その他のすべてのコマンドは、バック グラウンドで実行されます。 これは、Dockerfile 内の次のコマンドに示します。
 
 ```bash
 /usr/src/app/do-my-sql-commands.sh & /opt/mssql/bin/sqlservr
@@ -292,7 +292,7 @@ docker volume ls
 
 ### <a name="backup-and-restore"></a>バックアップと復元
 
-これらのコンテナー テクノロジだけでなくも標準の SQL Server のバックアップを使用し、復元の手法ことができます。 または別の SQL Server インスタンスにデータを移動するデータを保護するバックアップ ファイルを使用することができます。 詳細については、[Linux 上のデータベースを SQL Server のバックアップと復元](sql-server-linux-backup-and-restore-database.md)を参照してください。
+これらのコンテナー テクノロジだけでなくも標準の SQL Server のバックアップを使用し、復元の手法ことができます。 または別の SQL Server インスタンスにデータを移動するデータを保護するバックアップ ファイルを使用することができます。 詳細については、次を参照してください。 [Linux 上のデータベースを SQL Server のバックアップと復元](sql-server-linux-backup-and-restore-database.md)します。
 
 > [!WARNING]
 > バックアップを作成する場合は、作成またはコンテナーの外部でバックアップ ファイルをコピーすることを確認してください。 それ以外の場合、コンテナーが削除された場合、バックアップ ファイルも削除されます。
@@ -411,7 +411,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 
 最新の SQL Server のコンテナー イメージを使用する可能性がありますいないシナリオがあります。 特定の SQL Server のコンテナー イメージを実行するには、次の手順を使用します。
 
-1. Docker を識別する**タグ**リリースを使用します。 使用可能なタグを表示するを参照してください。 [mssql server-linux の Docker hub ページ](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)します。
+1. Docker を識別する**タグ**リリースを使用します。 使用可能なタグを表示するを参照してください。 [mssql server-linux の Docker hub ページ](https://hub.docker.com/_/microsoft-mssql-server)します。
 
 2. タグを持つ SQL Server のコンテナー イメージをプルします。 たとえば、RC1 のイメージをプルするには、次のように置換します。`<image_tag>`した次のコマンドで`rc1`します。
 

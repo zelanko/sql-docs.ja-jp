@@ -21,26 +21,26 @@ ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e41eca10cf5db5e34b5e9e9122eb56a1a236315e
-ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 05edd8c8b6d3e08038464fa74b5f4576f574c8fd
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54838079"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542074"
 ---
 # <a name="sysquerystorequerytext-transact-sql"></a>sys.query_store_query_text (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)] テキストと、クエリの SQL ハンドル。  
+  含まれています、[!INCLUDE[tsql](../../includes/tsql-md.md)]テキストとクエリの SQL ハンドル。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**query_text_id**|**bigint**|主キー。|  
-|**query_sql_text**|**nvarchar(max)**|ユーザーから提供されるため、クエリの SQL テキスト。 ある空白文字、ヒント、およびコメントが含まれています。|  
+|**query_sql_text**|**nvarchar(max)**|ユーザーによって提供されるため、クエリの SQL テキスト。 空白文字、ヒント、およびコメントが含まれています。|  
 |**statement_sql_handle**|**vabinary(64)**|個別のクエリの SQL ハンドル。|  
 |**is_part_of_encrypted_module**|**bit**|クエリ テキストは、暗号化されたモジュールの一部です。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
-|**has_restricted_text**|**bit**|クエリ テキストには、パスワードまたはその他の unmentionable 単語が含まれています。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
+|**has_restricted_text**|**bit**|クエリ テキストには、パスワードやその他の unmentionable 単語が含まれています。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
   
 ## <a name="permissions"></a>アクセス許可  
  必要があります、 **VIEW DATABASE STATE**権限。  

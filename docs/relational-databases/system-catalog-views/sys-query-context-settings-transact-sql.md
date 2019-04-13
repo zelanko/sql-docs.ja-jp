@@ -20,13 +20,13 @@ ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ccf638687f5022554abd6b3cf8e57445858ae4a
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6c7ab77981c329c334b22d6fd9735188882b385c
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710653"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542142"
 ---
 # <a name="sysquerycontextsettings-transact-sql"></a>sys.query_context_settings (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "52710653"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**context_settings_id**|**bigint**|主キー。 この値は、クエリのプラン表示の XML で公開されます。|  
-|**set_options**|**varbinary(8)**|いくつかの SET オプションの状態を反映するビット マスクです。 詳細については、[sys.dm_exec_plan_attributes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)を参照してください。|  
-|**language_id**|**smallint**|言語の id です。 詳細については、[sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)を参照してください。|  
+|**set_options**|**varbinary(8)**|いくつかの SET オプションの状態を反映するビット マスクです。 詳細については、次を参照してください。 [sys.dm_exec_plan_attributes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)します。|  
+|**language_id**|**smallint**|言語の id です。 詳細については、次を参照してください。 [sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)します。|  
 |**date_format**|**smallint**|日付形式です。 詳しくは、「[SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)」をご覧ください。|  
 |**date_first**|**tinyint**|最初の日付の値。 詳しくは、「[SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)」をご覧ください。|  
 |**status**|**varbinary(2)**|クエリまたはクエリの実行に使用されるコンテキストの型を示すビットマスク フィールドです。 <br />列の値は、複数のフラグ (16 進数で表される) の組み合わせであることができます。<br /><br /> 0x0 - 標準のクエリ (特定のフラグがありません)<br /><br /> 0x1 -、カーソル Api が格納されている手順のいずれかで実行されたクエリ<br /><br /> 0x2 - クエリ通知<br /><br /> 0x4 - 内部クエリ<br /><br /> 0x8 - パラメーター化せず、自動パラメーター化クエリ<br /><br /> 0x10 - カーソルのフェッチがクエリを更新します。<br /><br /> 0x20 - カーソルの更新の要求で使用されているクエリ<br /><br /> 0x40 - カーソルを開いたときに最初の結果セットが返されます (カーソル自動のフェッチ)<br /><br /> 0x80 - 暗号化されたクエリ<br /><br /> 0x100 - 行レベル セキュリティの述語のコンテキストでのクエリ|  
