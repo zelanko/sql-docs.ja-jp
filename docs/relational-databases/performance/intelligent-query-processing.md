@@ -13,18 +13,18 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3572af85861c2175638484e9e2097d43a65b63d
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 6bc44d24631454e792b150750508647019411631
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042231"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533360"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL データベースでのインテリジェントなクエリ処理
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-インテリジェントなクエリ処理 (QP) 機能ファミリには、実装の労力は最小限で既存のワークロードのパフォーマンスを改善する、広範な影響がある機能が含まれています。 
+インテリジェントなクエリ処理 (QP) 機能ファミリには、実装の労力は最小限で適応できる、既存のワークロードのパフォーマンスを改善する、広範な影響がある機能が含まれています。 
 
 ![インテリジェントなクエリ処理](./media/3_iqpfeaturefamily.png)
 
@@ -42,8 +42,8 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 | [個別の概算数](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | あり (パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、パブリック プレビュー)|高パフォーマンスと小さいメモリ占有領域の利点がある、ビッグ データシナリオに対して、おおよその COUNT DISTINCT を指定します。 |
 | [行ストアでのバッチ モード](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|列ストア インデックスを必要としない、CPU にバインドされたリレーショナル DW ワークロードに対してバッチ モードを指定します。  | 
 | [インターリーブ実行](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | あり (互換性レベル 140 未満)| あり (SQL Server 2017 以降、互換性レベル 140 未満)|固定推定値ではなく、最初のコンパイルで発生した複数ステートメントのテーブル値関数の実際のカーディナリティを使用します。|
-| [メモリ許可フィードバック (バッチ モード)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | あり (互換性レベル 140 未満)| あり (SQL Server 2017 以降、互換性レベル 140 未満)|バッチ モード クエリにディスクへの書き込み操作がある場合は、連続実行のためにさらにメモリを追加します。 クエリで 50% を超えるメモリが浪費される場合は、連続実行のためにメモリ許可側を減らします。|
-| [メモリ許可フィードバック (行モード)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|行モード クエリにディスクへの書き込み操作がある場合は、連続実行のためにさらにメモリを追加します。 クエリで 50% を超えるメモリが浪費される場合は、連続実行のためにメモリ許可側を減らします。|
+| [メモリ許可フィードバック (バッチ モード)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | あり (互換性レベル 140 未満)| あり (SQL Server 2017 以降、互換性レベル 140 未満)|バッチ モード クエリにディスクへの書き込み操作がある場合は、連続実行のためにさらにメモリを追加します。 クエリで 50% を超える、割り当てられたメモリが浪費される場合は、連続実行のためにメモリ許可側を減らします。|
+| [メモリ許可フィードバック (行モード)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|行モード クエリにディスクへの書き込み操作がある場合は、連続実行のためにさらにメモリを追加します。 クエリで 50% を超える、割り当てられたメモリが浪費される場合は、連続実行のためにメモリ許可側を減らします。|
 | [スカラー UDF のインライン化](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | いいえ | あり (SQL Server 2019 CTP 2.1 以降、互換性レベル 150 未満、パブリック プレビュー)|スカラー UDF は同等のリレーショナル式に変換され、この式は呼び出し側クエリに "インライン化" されます。これにより、多くの場合、パフォーマンスが大幅に向上します。|
 | [テーブル変数の遅延コンパイル](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|固定推定値ではなく、最初のコンパイルで発生したテーブル変数の実際のカーディナリティを使用します。|
 
