@@ -14,19 +14,19 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266083"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872312"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>データベース エンジンの新機能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]リリースで導入された機能強化の概要を示します。  新機能と機能拡張により、データ ストレージ システムを設計、開発、および管理する設計者、開発者、および管理者の能力や生産性が向上します。
 
-他の SQL Server コンポーネントの新機能を確認する場合は、「 [SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)」を参照してください。
+他の SQL Server コンポーネントの新機能を確認する場合は、「[SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)」を参照してください。
 
 > [!NOTE]
 >  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] は 64 ビット アプリケーションです。 32 ビット版のインストールは廃止されましたが、いくつかの要素が 32 ビット コンポーネントとして実行されます。
@@ -56,28 +56,28 @@ ms.locfileid: "53266083"
 ##  <a name="Feature"></a> SQL Server 2016 (RTM)
 このセクションには、次のサブセクションが含まれています。
 
--   [列ストア インデックス](#columnstore)
--   [データベース スコープ構成](#scopedconfiguration)
--   [インメモリ OLTP](#InMemory)
--   [クエリ オプティマイザー](#QueryOptimizer)
--   [ライブ クエリ統計](#LiveStats)
--   [クエリ ストア](#QueryStore)
--   [テンポラル テーブル](#TT)
--   [Microsoft Azure BLOB Storage へのストライプ バックアップ](#StripedBackupToAzure)
--   [Microsoft Azure BLOB Storage へのファイル スナップショット バックアップ](#FileSnapshotBackup)
--   [管理対象のバックアップ](#ManagedBackup)
--   [TempDB データベース](#multipleTempDB)
--   [組み込みの JSON サポート](#ForJson)
--   [PolyBase](#bkPolyBase)
--   [Stretch Database](#stretch)
--   [UTF-8 のサポート](#UTF8)
--   [新しい既定のデータベース サイズと自動拡張値](#DefaultDB)
--   [Transact-SQL の機能強化](#TSQL)
--   [システム ビューの機能強化](#SystemTable)
--   [セキュリティの強化](#Security)
--   [高可用性に関する機能強化](#HighAvailability)
--   [レプリケーションの機能強化](#Repl)
--   [ツールの機能強化](#Tools)
+-   [列ストア インデックス](#columnstore-indexes)
+-   [データベース スコープ構成](#database-scoped-configurations)
+-   [インメモリ OLTP](#in-memory-oltp)
+-   [クエリ オプティマイザー](#query-optimizer)
+-   [[ライブ クエリ統計]](#live-query-statistics)
+-   [クエリ ストア](#query-store)
+-   [テンポラル テーブル](#temporal-tables)
+-   [Microsoft Azure BLOB ストレージへのストライプ バックアップ](#striped-backups-to-microsoft-azure-blob-storage)
+-   [Microsoft Azure BLOB ストレージへのファイル スナップショット バックアップ](#file-snapshot-backups-to-microsoft-azure-blob-storage)
+-   [管理対象のバックアップ](#managed-backup)
+-   [TempDB データベース](#tempdb-database)
+-   [組み込みの JSON サポート](#built-in-json-support)
+-   [PolyBase](#polybase)
+-   [Stretch Database](#stretch-database)
+-   [UTF-8 のサポート](#support-for-utf-8)
+-   [新しい既定のデータベース サイズと自動拡張値](#new-default-database-size-and-autogrow-values)
+-   [Transact-SQL の機能強化](#transact-sql-enhancements)
+-   [システム ビューの機能強化](#system-view-enhancements)
+-   [セキュリティの強化](#security-enhancements)
+-   [高可用性に関する機能強化](#high-availability-enhancements)
+-   [レプリケーションの機能強化](#replication-enhancements)
+-   [ツールの機能強化](#tools-enhancements)
 
 ## <a name="columnstore-indexes"></a>列ストア インデックス
 
@@ -202,7 +202,7 @@ SQL Server 2014 と 2016 の間で、メモリ最適化テーブルのストレ�
 
 - インメモリ OLTP で一時的なシステム バージョン管理を使用できるようになりました。 詳細については、「[メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル](../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)」を参照してください。
 
-- インメモリ OLTP ワークロードからのネイティブ コンパイル コードでクエリ ストアがサポートされるようになりました。 詳細については、「 [インメモリ OLTP でのクエリ ストアの使用](../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)」を参照してください。
+- インメモリ OLTP ワークロードからのネイティブ コンパイル コードでクエリ ストアがサポートされるようになりました。 詳細については、「[インメモリ OLTP でのクエリ ストアの使用](../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)」を参照してください。
 
 - [メモリ最適化テーブルの行レベルのセキュリティ](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md#rls)
 
@@ -219,7 +219,7 @@ SQL Server 2014 と 2016 の間で、メモリ最適化テーブルのストレ�
 ### <a name="trace-flag-4199"></a>トレース フラグ 4199
 一般に、Server 2016 ではトレース フラグ 4199 を使用する必要はありません。このトレース フラグで制御されるほとんどのクエリ オプティマイザーの動作が、Server 2016 では最新の互換性レベル (130) で無条件で有効になるためです。
 ### <a name="new-referential-integrity-operator"></a>参照整合性の新しい演算子
-テーブルから、他のテーブルと列を最大 253 個まで外部キーとして参照 (発信参照) することができます。 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、1 つのテーブル内の列を参照 (着信参照) できる他のテーブルと列の数が 253 から 10,000 までに限られています。 制限については、「 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)」を参照してください。 参照整合性の新しい演算子が導入されました (互換性レベル 130)。この演算子は参照整合性チェックをインプレースで実行します。 これにより、大量の着信参照が含まれるテーブルで、UPDATE 操作と UPDATE 操作のパフォーマンスが全体的に改善されます。そのため、大量の着信参照を使用することが実行可能となります。 詳細設定については、「 [Query Optimizer Additions in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/23/query-optimizer-additions-in-sql-server/)」 (SQL Server 2016 のクエリ オプティマイザーの追加) を参照してください。
+テーブルから、他のテーブルと列を最大 253 個まで外部キーとして参照 (発信参照) することができます。 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、1 つのテーブル内の列を参照 (着信参照) できる他のテーブルと列の数の制限が 253 から 10,000 に増えました。 制限については、「 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)」を参照してください。 参照整合性の新しい演算子が導入されました (互換性レベル 130)。この演算子は参照整合性チェックをインプレースで実行します。 これにより、大量の着信参照が含まれるテーブルで、UPDATE 操作と UPDATE 操作のパフォーマンスが全体的に改善されます。そのため、大量の着信参照を使用することが実行可能となります。 詳細設定については、「 [Query Optimizer Additions in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/23/query-optimizer-additions-in-sql-server/)」 (SQL Server 2016 のクエリ オプティマイザーの追加) を参照してください。
 ### <a name="parallel-update-of-sampled-statistics"></a>サンプリング統計の並列更新
 データ サンプリングによる統計の作成が並列で実行できるようになりました (互換性レベル 130)。統計情報収集のパフォーマンスが上がります。 詳細については、「[Update Statistics](../t-sql/statements/update-statistics-transact-sql.md)」を参照してください。
 ### <a name="sublinear-threshold-for-update-of-statistics"></a>統計の更新の下位線形しきい値
@@ -235,7 +235,7 @@ Insert select ステートメントで挿入では、マルチ スレッドは�
 
 
 ## <a name="temporal-tables"></a>テンポラル テーブル
-[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] では、システム バージョン管理されたテンポラル テーブルがサポートされるようになりました。 テンポラル テーブルは新しい種類のテーブルです。このテーブルで、任意の時点でストアド ファクトに関する正しい情報が提供されます。 各テンポラル テーブルは実際には2 つのテーブルで構成されており、1 つは現在のデータ用で、もう1 つは履歴データ用です。 現在のデータを含むテーブルのデータが変更された場合、システムによって以前の値が履歴テーブルに格納されます。 クエリの構造は、この複雑さがユーザーにわからないようになっています。 詳細については、「 [Temporal Tables](../relational-databases/tables/temporal-tables.md)」を参照してください。
+[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] システム バージョン管理されたテンポラル テーブルがサポートされるようになりました。 テンポラル テーブルは新しい種類のテーブルです。このテーブルで、任意の時点でストアド ファクトに関する正しい情報が提供されます。 各テンポラル テーブルは実際には2 つのテーブルで構成されており、1 つは現在のデータ用で、もう1 つは履歴データ用です。 現在のデータを含むテーブルのデータが変更された場合、システムによって以前の値が履歴テーブルに格納されます。 クエリの構造は、この複雑さがユーザーにわからないようになっています。 詳細については、「 [Temporal Tables](../relational-databases/tables/temporal-tables.md)」を参照してください。
 
 ## <a name="backups"></a>バックアップ
 
@@ -414,7 +414,7 @@ SQL Server 2016 Standard Edition で、Always On の基本的な可用性グル�
 
  自動フェールオーバーをサポートするレプリカの数が 2 から 3 に増えました。
 
- Always On フェールオーバー クラスターでグループ管理サービス アカウントがサポートされるようになりました。 詳細については、「[グループの管理されたサービス アカウントの概要](https://technet.microsoft.com/library/hh831782.aspx)」を参照してください。 Windows Server 2012 R2 の場合は、パスワードの変更後の一時的なダウンタイムを回避するために更新プログラムが必要になります。 更新プログラムを取得する場合は、「 [gMSA ベースのサービスは、Windows Server 2012 R2 のドメインでパスワードを変更した後ログインできません](https://support.microsoft.com/kb/2998082/)」を参照してください。
+ Always On フェールオーバー クラスターでグループ管理サービス アカウントがサポートされるようになりました。 詳細については、「[グループの管理されたサービス アカウントの概要](https://technet.microsoft.com/library/hh831782.aspx)」を参照してください。 Windows Server 2012 R2 の場合は、パスワードの変更後の一時的なダウンタイムを回避するために更新プログラムが必要になります。 更新プログラムを取得する場合は、「[gMSA ベースのサービスは、Windows Server 2012 R2 のドメインでパスワードを変更した後ログインできません](https://support.microsoft.com/kb/2998082/)」を参照してください。
 
  [!INCLUDE[ssHADR](../includes/sshadr-md.md)] では、Windows Server 2016 での分散トランザクションおよび DTC がサポートされます。 詳細については、「[Support for distributed transactions (分散トランザクションのサポート)](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md#dtcsupport)」を参照してください。
 
@@ -435,7 +435,7 @@ Always On で、暗号化されたデータベースがサポートされるよ�
 ## <a name="tools-enhancements"></a>ツールの機能強化
 
 ### <a name="management-studio"></a>Management Studio
-最新の [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)をダウンロードしてください。
+最新の [SQL Server Management Studio (SSMS) ](../ssms/download-sql-server-management-studio-ssms.md) をダウンロードしてください。
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] では、Microsoft Azure への接続用に開発中の Active Directory 認証ライブラリ (ADAL) がサポートされます。 これは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] で使用される証明書ベース認証に代わるものです。
 - 新しいクエリ結果グリッド オプションでは、結果グリッドからのテキストのコピーまたは保存時に復帰/改行 (改行文字) を維持することができます。 [ツール] メニューの [オプション] からこのように設定します。

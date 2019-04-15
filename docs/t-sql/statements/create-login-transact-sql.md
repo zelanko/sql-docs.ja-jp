@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 410cd9444cec90f5d6357e2084bab47f5ab25d37
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
+ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828372"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797042"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -142,7 +142,7 @@ ASYMMETRIC KEY *asym_key_name*: ログインに関連付ける非対称キーの
 
 ## <a name="permissions"></a>アクセス許可
 
-- ログインを作成できるのは、サーバーに対する **ALTER ANY LOGIN** 権限、または **securityadmin** 固定サーバー ロールのメンバーシップを持つユーザーのみとなります。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) に関するページを参照してください。
+- ログインを作成できるのは、サーバーに対する **ALTER ANY LOGIN** 権限、または **securityadmin** 固定サーバー ロールのメンバーシップを持つユーザーのみとなります。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) に関するページを参照してください。
 - **CREDENTIAL** オプションを使用する場合は、サーバーに対する **ALTER ANY CREDENTIAL** 権限も必要です。
 
 ## <a name="after-creating-a-login"></a>ログインを作成した後
@@ -311,7 +311,7 @@ SQL Database ログインの詳細については、[Windows Azure SQL Database 
 
 ## <a name="permissions"></a>アクセス許可
 
-サーバーレベル プリンシパルのログイン (準備プロセスで作成) または master データベースの `loginmanager` データベース ロールのメンバーだけが新しいログインを作成できます。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>) に関するページを参照してください。
+サーバーレベル プリンシパルのログイン (準備プロセスで作成) または master データベースの `loginmanager` データベース ロールのメンバーだけが新しいログインを作成できます。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) に関するページを参照してください。
 
 ## <a name="logins"></a>Login
 
@@ -323,7 +323,7 @@ SQL Database ログインの詳細については、[Windows Azure SQL Database 
 ログインが作成されたら、ログインは SQL Database に接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。
 
 - データベースに接続するには、そのデータベースにログイン用のデータベース ユーザーを作成する必要があります。 詳細については、[CREATE USER](../../t-sql/statements/create-user-transact-sql.md) に関するページを参照してください。
-- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
+- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[追加のサーバー レベルの管理者ロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
 - サーバー全体の権限を付与するには、master データベースにデータベース ユーザーを作成し、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して、管理サーバー ロールのいずれかにユーザーを追加します。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)、および[サーバー ロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)に関するページを参照してください。
 - 新しいログインまたはログインを含むロールにサーバー レベルの権限を許可するには、**GRANT** ステートメントを使用します。 詳細については、「[GRANT](../../t-sql/statements/grant-transact-sql.md)」を参照してください。
 
@@ -418,7 +418,9 @@ SID **=** *sid*: ログインの再作成に使用されます。 SQL Server 認
 - Azure AD アカウントにマップされたサーバーレベルのプリンシパルを作成するための新しい構文が導入されました (**FROM EXTERNAL PROVIDER**)
 - **FROM EXTERNAL PROVIDER** を指定した場合:
 
-  - login_name は、現在の Azure SQL マネージド インスタンスによって Azure AD 内でアクセスできる既存の Azure AD アカウント (ユーザー、グループ、またはアプリケーション) を表す必要があります。
+  - login_name は、現在の Azure SQL マネージド インスタンスによって Azure AD 内でアクセスできる既存の Azure AD アカウント (ユーザー、グループ、またはアプリケーション) を表す必要があります。 Azure AD プリンシパルに対して、CREATE LOGIN 構文では次が要求されます。
+    - Azure AD ユーザー用の Azure AD オブジェクトの UserPrincipalName。
+    - Azure AD のグループと Azure AD アプリケーション用の Azure AD オブジェクトの DisplayName。
   - **PASSWORD** オプションは使用できません。
   - 現在、最初の Azure AD ログインは、上記の構文を使用して、`sysadmin` の標準 SQL Server アカウント (Azure AD 以外) で作成する必要があります。
   - SQL Database マネージド インスタンスの Azure AD 管理者を使用して Azure AD ログインを作成すると、次のエラーが発生します。</br>
@@ -448,7 +450,7 @@ SID **=** *sid*: ログインの再作成に使用されます。 SQL Server 認
 ログインが作成されたら、ログインは SQL Database マネージド インスタンスに接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。
 
 - Azure AD ログインから Azure AD ユーザーを作成するには、「[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)」を参照してください。
-- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
+- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](../../t-sql/statements/grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[追加のサーバー レベルの管理者ロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
 - サーバー全体の権限を付与するには、master データベースにデータベース ユーザーを作成し、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して、管理サーバー ロールのいずれかにユーザーを追加します。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)、および[サーバー ロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)に関するページを参照してください。
   - 次のコマンドを使用して、Azure AD ログインに `sysadmin` ロールを追加します。`ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - 新しいログインまたはログインを含むロールにサーバー レベルの権限を許可するには、**GRANT** ステートメントを使用します。 詳細については、「[GRANT](../../t-sql/statements/grant-transact-sql.md)」を参照してください。
@@ -608,14 +610,14 @@ SQL Data Warehouse ログインの詳細については、[Windows Azure SQL Dat
 
 ## <a name="permissions"></a>アクセス許可
 
-サーバーレベル プリンシパルのログイン (準備プロセスで作成) または master データベースの `loginmanager` データベース ロールのメンバーだけが新しいログインを作成できます。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>) に関するページを参照してください。
+サーバーレベル プリンシパルのログイン (準備プロセスで作成) または master データベースの `loginmanager` データベース ロールのメンバーだけが新しいログインを作成できます。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) に関するページを参照してください。
 
 ## <a name="after-creating-a-login"></a>ログインを作成した後
 
 ログインが作成されたら、ログインは SQL Data Warehouse に接続できますが、**public** ロールに与えられた権限しか持ちません。 次の操作のいくつかを実行することを検討してください。
 
 - データベースに接続するには、ログイン用のデータベース ユーザーを作成する必要があります。 詳細については、[CREATE USER](../../t-sql/statements/create-user-transact-sql.md) に関するページを参照してください。
-- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
+- データベースのユーザーに権限を付与するには、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して組み込みデータベース ロールのいずれか、またはカスタム ロールにユーザーを追加するか、[GRANT](grant-transact-sql.md) ステートメントを使用して直接ユーザーに権限を付与します。 詳細については、[管理者以外のロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[追加のサーバー レベルの管理者ロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)、および [GRANT](grant-transact-sql.md) ステートメントに関するページを参照してください。
 - サーバー全体の権限を付与するには、master データベースにデータベース ユーザーを作成し、**ALTER SERVER ROLE** ... **ADD MEMBER** ステートメントを使用して、管理サーバー ロールのいずれかにユーザーを追加します。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)、および[サーバー ロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)に関するページを参照してください。
 
 - 新しいログインまたはログインを含むロールにサーバー レベルの権限を許可するには、**GRANT** ステートメントを使用します。 詳細については、「[GRANT](../../t-sql/statements/grant-transact-sql.md)」を参照してください。
@@ -730,7 +732,7 @@ WINDOWS: ログインを Windows ログインにマップするよう指定し�
 
 ## <a name="permissions"></a>アクセス許可
 
-ログインを作成できるのは、サーバーに対する **ALTER ANY LOGIN** 権限、または **securityadmin** 固定サーバー ロールのメンバーシップを持つユーザーのみとなります。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>) に関するページを参照してください。
+ログインを作成できるのは、サーバーに対する **ALTER ANY LOGIN** 権限、または **securityadmin** 固定サーバー ロールのメンバーシップを持つユーザーのみとなります。 詳細については、[サーバー レベルのロール](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)と [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) に関するページを参照してください。
 
 ## <a name="after-creating-a-login"></a>ログインを作成した後
 

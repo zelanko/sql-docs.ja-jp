@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: bc0765e02958e6ec59a419933716e8485879add3
+ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617062"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899728"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,16 +49,16 @@ ERROR_PROCEDURE ( )
 **nvarchar(128)**  
   
 ## <a name="return-value"></a>戻り値  
-エラーが発生したストアド プロシージャの CATCH ブロック内で呼び出されると、`ERROR_PROCEDURE` はそのストアド プロシージャの名前を返します。  
+CATCH ブロックで呼び出された場合、`ERROR_PROCEDURE` はエラーが発生したストアド プロシージャまたはトリガーの名前を返します。
   
-ストアド プロシージャまたはトリガー内でエラーが発生しなかった場合、`ERROR_PROCEDURE` は NULL を返します。  
+`ERROR_PROCEDURE` は、ストアド プロシージャまたはトリガー内でエラーが発生しなかった場合に NULL を返します。  
   
 `ERROR_PROCEDURE` は、CATCH ブロックの範囲外で呼び出されると、NULL を返します。  
   
 ## <a name="remarks"></a>Remarks  
 `ERROR_PROCEDURE` は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
-実行された回数、または `CATCH` ブロックのスコープ内で実行される場所に関係なく、`ERROR_PROCEDURE` は、エラーが発生したストアド プロシージャまたはトリガーの名前を返します。 エラーが発生したステートメントの直後のステートメントのエラー番号のみを返す、@@ERROR などの関数とは対照的となります。  
+`ERROR_PROCEDURE` は、実行された回数、または `CATCH` ブロックのスコープ内で実行される場所に関係なく、エラーが発生したストアド プロシージャまたはトリガーの名前を返します。 エラーが発生したステートメントの直後のステートメントのエラー番号のみを返す、@@ERROR などの関数とは対照的となります。  
    
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   

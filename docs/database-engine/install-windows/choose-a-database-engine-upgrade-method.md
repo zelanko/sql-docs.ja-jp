@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 79337a1eb89de27f5522b5432e77f43f62d4489c
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306250"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872262"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
 > [!NOTE]  
 >  また、アップグレード計画の一環として、Azure SQL Database のアップグレードや SQL Server 環境の仮想化を考慮する場合もあります。 これらの記事はここでは範囲外ですが、いくつかのリンクを示します。
 >   - [Azure Virtual Machines における SQL Server の概要](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
+>   - [Azure SQL データベース](https://azure.microsoft.com/services/sql-database/) 
 >   - [Azure で SQL Server オプションを選択する](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
   
 ## <a name="upgrade-in-place"></a>インプレース アップグレード  
@@ -77,7 +77,7 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
  ユーザー データベースの移行後、多様な方法 (サーバー名の変更、DNS エントリの使用、接続文字列の変更など) のいずれかを使用して、新しいユーザーを新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに指示します。  新規インストール アプローチは、インプレース アップグレードと比較して、リスクとダウンタイムを減らし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアップグレードと同時のハードウェアとオペレーティング システムのアップグレードを容易にします。  
   
 > [!NOTE]  
->  既に高可用性 (HA) ソリューションを設置しているなど、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが複数ある環境の場合は、「 [ローリング アップグレード](#RollingUpgrade)」に進みます。 高可用性ソリューションを設定していない場合は、 [データベース ミラーリング](../database-mirroring/setting-up-database-mirroring-sql-server.md) を一時的に構成して、ダウンタイムを最小にして、このアップグレードを容易にするか、またはこの機会を利用して、永続的な HA ソリューションとして、 [Always On 可用性グループ](https://msdn.microsoft.com/library/hh510260.aspx) を構成することを考慮できます。  
+>  既に高可用性 (HA) ソリューションを設置しているなど、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが複数ある環境の場合は、「 [ローリング アップグレード](#rolling-upgrade)」に進みます。 高可用性ソリューションを設定していない場合は、 [データベース ミラーリング](../database-mirroring/setting-up-database-mirroring-sql-server.md) を一時的に構成して、ダウンタイムを最小にして、このアップグレードを容易にするか、またはこの機会を利用して、永続的な HA ソリューションとして、 [Always On 可用性グループ](https://msdn.microsoft.com/library/hh510260.aspx) を構成することを考慮できます。  
   
  たとえば、このアプローチは、次をアップグレードする場合に使用できます。  
   
@@ -111,5 +111,3 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
 ## <a name="next-steps"></a>次の手順
  [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [データベース エンジンのアップグレードの完了](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
-  
-  

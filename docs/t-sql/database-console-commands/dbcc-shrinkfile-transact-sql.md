@@ -30,12 +30,12 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 7e8d9952c99ed78e98be6664e091cc744445f5d5
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: eb1f7d9efbbf260395cff607d5f8aa3209c677c4
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685829"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872272"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ DBCC SHRINKFILE
 指定した場合、DBCC SHRINKFILE では、*target_size* までファイルの圧縮が試行されます。 解放対象のファイルの領域内にある使用ページは、ファイルの保持領域内の空き領域に移動されます。 たとえば、10 MB のデータ ファイルで、8 *target_size* を指定した DBCC SHRINKFILE 操作を実行すると、ファイルの末尾 2 MB 内にあるすべての使用ページがファイルの先頭 8 MB にある未割り当てページに移動されます。 DBCC SHRINKFILE では、格納されているデータ サイズ以下に、ファイルを圧縮することはできません。 たとえば、10 MB のデータ ファイルのうち 7 MB が使用されている場合、*target_size* を 6 にして DBCC SHRINKFILE ステートメントを実行しても、ファイルは 7 MB にまでしか圧縮できず、6 MB にはなりません。
   
 EMPTYFILE  
-指定したファイルから、**同じファイル グループ**内の他のファイルにすべてのデータを移動します。 つまり、EMPTYFILE は、指定したファイルから、同じファイル グループ内の他のファイルにデータを移動します。 ENPTYFILE を使用すると、このファイルが読み取り専用でなくても、ファイルに新しいデータが追加されません。 ファイルを削除するには [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用できます。 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用してファイル サイズを変更すると、読み取り専用フラグがリセットされ、データを追加することができます。
+指定したファイルから、**同じファイル グループ**内の他のファイルにすべてのデータを移動します。 つまり、EMPTYFILE は、指定したファイルから、同じファイル グループ内の他のファイルにデータを移動します。 EMPTYFILE を使用すると、このファイルが読み取り専用でなくても、ファイルに新しいデータが追加されません。 ファイルを削除するには [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用できます。 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用してファイル サイズを変更すると、読み取り専用フラグがリセットされ、データを追加することができます。
 
 FILESTREAM ファイル グループ コンテナーでは、FILESTREAM ガベージ コレクターが実行され、EMPTYFILE によって他のコンテナーにコピーされた不要なすべてのファイル グループ コンテナー ファイルが削除された後でなければ、ALTER DATABASE を使用してファイルを削除できません。 詳細については、「[sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)」を参照してください。
   

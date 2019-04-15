@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 6336e6ebc549d1be2787bb8a100efec1ea9b6836
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492854"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860063"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 プレビュー リリース ノート
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -26,10 +26,10 @@ ms.locfileid: "58492854"
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のプレビュー リリースは、次期リリースの機能を体験していただく目的で提供されるものです。 運用環境向けとしては、サポートもライセンスもされません。 次のシナリオは明示的に非サポートとなっています。
 >
-> - 古いバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とのサイド バイ サイド インストール
+> - 他のバージョンとのサイド バイ サイド インストール [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 > - SQL Server の既存のインスタンスを任意のバージョンからアップグレード
 
-**[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] をお試しください**
+**[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] をお試しください。**
 - [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] をダウンロードして Windows にインストールする](https://go.microsoft.com/fwlink/?LinkID=862101)
 - [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)、および [Ubuntu](../linux/quickstart-install-connect-ubuntu.md) の Linux にインストールする。
 - [Docker で SQL Server 2019 を実行する](../linux/quickstart-install-connect-docker.md)。
@@ -37,7 +37,7 @@ ms.locfileid: "58492854"
 ## <a name="ctp-24"></a>CTP 2.4
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 は [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] の最新のパブリック リリースです。
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 は評価版としてのみ使用可能です。 他のエディションは提供されません。 CTP のリリースのサポートの説明は、ご利用のインストール メディアの `license_Eval.rtf` にあります。
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 は評価版としてのみ使用可能です。 他のエディションは提供されません。 CTP のリリースのサポートの説明は、ご利用のインストール メディアの `license_Eval.rtf` にあります。
 
 限定的なサポートは、次のいずれかの場所で提供される場合があります。
 

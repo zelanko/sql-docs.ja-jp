@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: ff8380e286c40f479bbc9afaea48b12feeab1694
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 9bc678f69df60ec07e1cca6eddbb337aab8ed8ff
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566541"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042029"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,9 +44,9 @@ SSMS は無料です。
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1 は現在 SSMS の一般公開 (GA) バージョンである
 
-[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 のダウンロード](https://go.microsoft.com/fwlink/?linkid=2043154)
+[![download](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 のダウンロード](https://go.microsoft.com/fwlink/?linkid=2043154)
 
-[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 アップグレード パッケージのダウンロード (17.x から 17.9.1 へのアップグレード)](https://go.microsoft.com/fwlink/?linkid=2043430)
+[![download](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 アップグレード パッケージのダウンロード (17.x から 17.9.1 へのアップグレード)](https://go.microsoft.com/fwlink/?linkid=2043430)
 
 **バージョン情報**
 
@@ -61,7 +61,7 @@ SSMS は無料です。
 
 [中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-SSMS 17.9.1 について詳しくは、[SSMS 17.9.1 の変更ログ](sql-server-management-studio-changelog-ssms.md#ssms-1791-latest-ga-release)に関するページをご覧ください。
+SSMS 17.9.1 について詳しくは、[SSMS 17.9.1 の変更ログ](release-notes-ssms.md#1791-latest-ga-release)に関するページをご覧ください。
 
 ## <a name="ssms-installation-tips-and-issues-ssms-1791"></a>SSMS のインストールに関するヒントと問題 (SSMS 17.9.1)
 
@@ -78,7 +78,7 @@ SSMS 17.9.1 について詳しくは、[SSMS 17.9.1 の変更ログ](sql-server-
 
 **SSMS 18.0 リリース候補 1 (RC1) をご利用いただけるようになりました。これは *SQL Server Management Studio* の最新世代であり、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] をサポートしています。**
 
-**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 18.0 (RC1) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2085742)**
+**[![download](../ssdt/media/download.png) SQL Server Management Studio 18.0 (RC1) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2085742)**
 
 *RC1* は、SSMS 18.0 の最新のパブリック プレビューです。 以前の SSMS 18.0 プレビューがインストールされている場合は、それをアンインストールしてから SSMS 18.0 RC1 をインストールしてください。
 
@@ -111,7 +111,7 @@ SQL Server Management Studio 18.0 アップグレード パッケージ (18.0 �
 
 SSMS 18.0 (RC1) は SQL Server Management Studio の最新バージョンです。 SSMS の 18.x 世代は、SQL Server 2008 から SQL Server 2019 プレビューまでのほぼすべての機能領域をサポートしています。
 
-このリリースの新機能について詳しくは、[SSMS の変更ログ](sql-server-management-studio-changelog-ssms.md)に関するページをご覧ください。
+このリリースの新機能の詳細については、[SSMS のリリース ノート](release-notes-ssms.md)に関するページをご覧ください。
 
 ## <a name="supported-sql-offerings-ssms-180-rc1"></a>サポートされる SQL 製品 (SSMS 18.0 RC1)
 
@@ -140,7 +140,7 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 
 ## <a name="previous-releases"></a>以前のリリース
 
-[SQL Server Management Studio の以前のリリース](../ssms/sql-server-management-studio-changelog-ssms.md#previous-ssms-releases)
+[SQL Server Management Studio の以前のリリース](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
 ## <a name="feedback"></a>フィードバック
 

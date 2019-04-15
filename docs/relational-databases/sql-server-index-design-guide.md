@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4214bcf8d2dcd3c8b00d51580ea71eae0e40e96e
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880545"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872332"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server のインデックスのアーキテクチャとデザイン ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -277,7 +277,7 @@ ON Purchasing.PurchaseOrderDetail
     たとえば、従業員 ID は、従業員を一意に識別します。 `EmployeeID` 列にクラスター化インデックスまたは [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) 制約を設定すると、従業員 ID 番号に基づいて従業員情報を検索するクエリのパフォーマンスが向上します。 また、 `LastName`列、 `FirstName`列、 `MiddleName` 列を基にクラスター化インデックスを作成することもできます。従業員レコードは、これらの列でグループ化されたりクエリが実行されることが多く、これらの列を組み合わせると高い多様性が生まれます。 
 
     > [!TIP]
-    > 別の指定をしない場合、[PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) 制約を作成するときに、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってその制約をサポートする[クラスター化インデックス](#clustered_index)が作成されます。
+    > 別の指定をしない場合、[PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) 制約を作成するときに、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってその制約をサポートする[クラスター化インデックス](#Clustered)が作成されます。
     > PRIMARY KEY として一意性を適用するために *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* を使用できますが、これは効率的なクラスター化キーではありません。
     > PRIMARY KEY として *uniqueidentifier* を使用する場合は、非クラスター化インデックスとして作成し、`IDENTITY` などの別の列を使用してクラスター化インデックスを作成することをお勧めします。   
   
@@ -584,7 +584,7 @@ WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;
   
  場合によっては、フィルター選択されたインデックスは、その式の列をキー列または付加列としてフィルター選択されたインデックスの定義に含めなくても、クエリに対応します。 次のガイドラインでは、フィルター選択されたインデックスの式の列をフィルター選択されたインデックスの定義でキー列または付加列にする必要がある場合について説明します。 次の例では、以前に作成したフィルター選択されたインデックス `FIBillOfMaterialsWithEndDate` を使用します。  
   
- フィルター選択されたインデックスの式がクエリ述語と同じであり、フィルター選択されたインデックスの式の列がクエリ結果と共に返されない場合、その式の列を、フィルター選択されたインデックスの定義でキー列または付加列にする必要はありません。 たとえば、クエリ述語がフィルター式と同じであり、 `FIBillOfMaterialsWithEndDate` がクエリ結果と共に返されないため、 `EndDate` は次のクエリに対応します。 `FIBillOfMaterialsWithEndDate` は、フィルター選択されたインデックスの定義のキー列または付加列として `EndDate` を必要としません。  
+ フィルター選択されたインデックスの式がクエリ述語と同じであり、フィルター選択されたインデックスの式の列がクエリ結果と共に返されない場合、その式の列を、フィルター選択されたインデックスの定義でキー列または付加列にする必要はありません。 たとえば、クエリ述語がフィルター式と同じであり、`FIBillOfMaterialsWithEndDate` がクエリ結果と共に返されないため、`EndDate` は次のクエリに対応します。 `FIBillOfMaterialsWithEndDate` は、フィルター選択されたインデックスの定義のキー列または付加列として `EndDate` を必要としません。  
   
 ```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
@@ -895,7 +895,7 @@ Bw ツリーのインデックス ページは、1 行の格納から最大 8 KB
 [パーティション テーブルとパーティション インデックス](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [主キーを作成する](../relational-databases/tables/create-primary-keys.md)    
 [メモリ最適化テーブルのインデックス](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
-[列ストア インデックス - 概要](../relational-databases/indexes/columnstore-indexes-overview.md)  
+[列ストア インデックスの概要](../relational-databases/indexes/columnstore-indexes-overview.md)  
 [メモリ最適化テーブルのハッシュ インデックスのトラブルシューティング](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
 [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [インデックス関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       

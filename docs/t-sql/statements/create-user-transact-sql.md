@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421219"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042172"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -179,7 +179,7 @@ CREATE USER user_name
  LOGIN *login_name*  
  作成するデータベース ユーザーのログインを指定します。 *login_name* は、サーバーで有効なログインである必要があります。 Windows プリンシパルに基づくログイン (ユーザーまたはグループ) か、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用したログインを指定できます。 この SQL Server ログインをデータベースに対して入力すると、データベースでは、作成されるデータベース ユーザーの名前と ID が取得されます。 Windows プリンシパルからマップされたログインを作成する場合は、**[**_\<domainName\>_**\\**_\<loginName\>_**]** という形式を使用します。 例については、「[構文の概要](#SyntaxSummary)」を参照してください。  
   
- CREATE USER ステートメントが SQL のバッチ内の唯一のステートメントである場合、Windows Azure SQL データベースでは WITH LOGIN 句がサポートされます。 CREATE USER ステートメントが SQL のバッチ内の唯一のステートメントではない場合、または動的 SQL で実行されていない場合、WITH LOGIN 句はサポートされません。  
+ CREATE USER ステートメントが SQL のバッチ内の唯一のステートメントである場合、Windows Azure SQL Database では WITH LOGIN 句がサポートされます。 CREATE USER ステートメントが SQL のバッチ内の唯一のステートメントではない場合、または動的 SQL 内で実行される場合、WITH LOGIN 句はサポートされません。  
   
  WITH DEFAULT_SCHEMA = *schema_name*  
  このデータベース ユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。  
@@ -190,17 +190,18 @@ CREATE USER user_name
  '*Azure_Active_Directory_principal*'  
  **適用対象**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
   
- データベース ユーザーが作成される Azure Active Directory のプリンシパルを指定します。 *Azure_Active_Directory_principal* には、Azure Active Directory ユーザー、Azure Active Directory グループ、Azure Active Directory アプリケーションを指定できます。 (Azure Active Directory ユーザーは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] に Windows 認証ログインを持つことはできません。データベース ユーザーのみです)。接続文字列には、初期カタログとして、包含データベースを指定する必要があります。
+ データベース ユーザーが作成される Azure Active Directory のプリンシパルを指定します。 *Azure_Active_Directory_principal* には、Azure Active Directory ユーザー、Azure Active Directory グループ、Azure Active Directory アプリケーションを指定できます。 (Azure Active Directory ユーザーは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] に Windows 認証ログインを持つことはできません。データベース ユーザーのみです)。接続文字列では、初期カタログとして、包含データベースを指定する必要があります。
 
- ユーザーの場合は、ユーザーのドメイン プリンシパルの完全なエイリアスを使用します。   
- 
--   `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
-  
--   `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+ Azure AD プリンシパルに対して、CREATE USER 構文では次が要求されます。
 
- セキュリティ グループの場合は、セキュリティ グループの*表示名*を使用します。 "*看護師*" セキュリティ グループの場合は、次を使用します。  
+- Azure AD ユーザー用の Azure AD オブジェクトの UserPrincipalName。
+
+  - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+
+- Azure AD のグループと Azure AD アプリケーション用の Azure AD オブジェクトの DisplayName。 "*看護師*" セキュリティ グループがあった場合は、次を使用します。  
   
--   `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
  詳細については、「 [Azure Active Directory 認証を使用して SQL Database に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)」を参照してください。  
   
@@ -233,7 +234,7 @@ DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*
 SID = *sid*  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 包含データベースにパスワード ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証) を持つユーザーに対してのみ適用されます。 新しいデータベース ユーザーの SID を指定します。 このオプションを選択しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって SID が自動的に割り当てられます。 複数のデータベースで同じ ID (SID) を持つユーザーを作成するには SID パラメーターを使用します。 これは、Always On フェールオーバーの準備のために、複数のデータベースにユーザーを作成する場合に役立ちます。 ユーザーの SID を特定するのには、sys.database_principals をクエリします。  
+ 包含データベースにパスワード ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証) を持つユーザーに対してのみ適用されます。 新しいデータベース ユーザーの SID を指定します。 このオプションを選択しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって SID が自動的に割り当てられます。 複数のデータベースで同じ ID (SID) を持つユーザーを作成するには SID パラメーターを使用します。 これは、Always On フェールオーバーの準備のために、複数のデータベースにユーザーを作成する場合に役立ちます。 ユーザーの SID を特定するには、sys.database_principals でクエリを実行します。  
   
 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
@@ -303,7 +304,7 @@ SQL Database マネージド インスタンス データベースでユーザ�
 -   `CREATE USER [Domain1\WindowsGroupManagers]`  
 -   `CREATE USER Barry WITH PASSWORD = 'sdjklalie8rew8337!$d'`  
   
-**master にログインのない Windows プリンシパルに基づくユーザー**  
+**master 内のログインのない Windows プリンシパルに基づくユーザー**  
   
  Windows グループを介して [!INCLUDE[ssDE](../../includes/ssde-md.md)] にアクセスできる一方で、**master** にログインを持たないユーザーが使用できる構文を次に示します。 この構文は、あらゆる種類のデータベースで使用できます。 既定のスキーマおよび言語オプションは除外しています。  
   
@@ -468,7 +469,7 @@ WITH
 
  Azure AD ログインから Azure AD ユーザーを作成するには、次の構文を使用します。
 
- `sysadmin` ロールで付与された Azure AD ログインを使用してマネージド インスタンスにサインインします。 次の命令文ではログイン bob@contoso.com から Azure AD ユーザー bob@contoso.com が作成されます。 このログインは [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account) 例で作成されました。
+ `sysadmin` ロールで付与された Azure AD ログインを使用してマネージド インスタンスにサインインします。 次の命令文ではログイン bob@contoso.com から Azure AD ユーザー bob@contoso.com が作成されます。 このログインは [CREATE LOGIN](create-login-transact-sql.md#examples) 例で作成されました。
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -509,13 +510,9 @@ GO
  [データベース ユーザーの作成](../../relational-databases/security/authentication-access/create-a-database-user.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
- [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [包含データベース](../../relational-databases/databases/contained-databases.md)   
- [Azure Active Directory の認証を使用して、SQL データベースに接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
+ [Azure Active Directory の認証を使用して、SQL データベースに接続します。](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
-  
-  
-
-

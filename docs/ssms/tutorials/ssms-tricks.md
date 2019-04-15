@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Additional tips and tricks for using SQL Server Management Studio'
+Title: チュートリアル:SQL Server Management Studio の使用に関するその他のヒントとテクニック
 description: 'SSMS の使用に関するその他のヒントとテクニックについてのチュートリアルです。 '
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: 2b113d701bbcd5d385303e6a36fcc603d03c0cdf
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: ab394ef046d123b461dac813b2901dfcfd02b596
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663108"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872222"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>チュートリアル:SSMS を使用するための追加のヒントとテクニック
 このチュートリアルでは、SQL Server Management Studio (SSMS) の使用時に便利なその他のテクニックを紹介します。 この記事で取り上げるテクニック: 
@@ -216,7 +216,7 @@ SQL Server のエラー ログのパスは、構成設定によって異なる�
 SQL Server に接続する前に、あるいは接続した後に、いくつかの方法で SQL server の名前を検索できます。  
 
 ### <a name="before-you-connect-to-sql-server"></a>SQL Server に接続する前
-1. 次の手順で[ディスク上の SQL Server エラー ログ](#finding-your-error-log-if-you-cannot-connect-to-sql)を探します。 実際のパスは次の図のパスとは異なる場合があります。
+1. 次の手順で[ディスク上の SQL Server エラー ログ](#find-the-error-log-location-if-you-cant-connect-to-sql-server)を探します。 実際のパスは次の図のパスとは異なる場合があります。
 2. メモ帳で errorlog.log ファイルを開きます。  
 3. *Server name is* というテキストを探します。
     
@@ -253,5 +253,3 @@ SQL Server に接続しているとき、3 か所でサーバー名が見つか�
 4. クエリの結果を見て、接続している SQL Server インスタンスの名前を確認します。 
     
     ![SQL Server 名を問い合わせる](media/ssms-tricks/queryservername.png)
-
-

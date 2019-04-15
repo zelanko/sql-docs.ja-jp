@@ -10,12 +10,12 @@ ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa0b798027bbd5eb5d310e31d97378a7375d4d60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1227fdc2783207d9ab4ebfe7240884ab50f5ba1
+ms.sourcegitcommit: 403f07b335498ad577402fb432fefcdec700466e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632110"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58913307"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server フェールオーバー クラスターのインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,12 @@ ms.locfileid: "47632110"
     -   フェールオーバー クラスター内のすべてのノードは、32 ビットまたは 64 ビットのいずれかの同一プラットフォームで構成され、エディションおよびバージョンが同じオペレーティング システムを実行している必要があります。 また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の 64 ビット エディションは、64 ビット版の Windows オペレーティング システムを実行する 64 ビット ハードウェアにインストールする必要があります。 このリリースのフェールオーバー クラスタリングでは、WOW64 がサポートされません。  
   
 3.  フェールオーバー クラスター インスタンスごとに複数の IP アドレスを指定します。 各サブネットに複数の IP アドレスを指定することができます。 同じサブネットに複数の IP アドレスがある場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは依存関係を AND に設定します。 複数のサブネットにわたってノードをクラスター化している場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは依存関係を OR に設定します。  
-  
+
+4.  SQL Server フェールオーバー クラスター インスタンス (FCI) では、クラスター ノードをドメイン参加させる必要があります。 次の構成は**サポートされていません**。
+    - ワークグループ クラスター上の SQL FCI。 
+    - マルチドメイン クラスター上の SQL FCI。   
+    - ドメイン + ワークグループ クラスター上の SQL FCI。 
+
 ## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール オプション  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>オプション 1: ノードの追加を伴う統合インストール  
@@ -51,7 +56,7 @@ ms.locfileid: "47632110"
   
 2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターに追加する各ノードで、セットアップを実行し、ノードの追加機能を使用して、ノードを追加します。  
   
-##### <a name="option-2-advancedenterprise-installation"></a>オプション 2: 高度/エンタープライズ インストール  
+##### <a name="option-2-advancedenterprise-installation"></a>オプション 2:高度/エンタープライズ インストール  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 高度/エンタープライズ フェールオーバー クラスター インストールは、次の 2 つの手順で構成されています。  
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの一部となる各ノードで、セットアップを実行し、フェールオーバー クラスターの準備機能を使用します。 この手順ではノードのクラスター化の準備を行いますが、この手順が終了しても [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスは操作できません。  
@@ -67,7 +72,7 @@ ms.locfileid: "47632110"
 #### <a name="ip-address-configuration-during-setup"></a>セットアップ中の IP アドレスの構成  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでは、次の操作中に、IP リソースの依存関係の設定を指定したり、変更したりできます。  
   
--   統合インストール - [新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   統合インストール - [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
 -   CompleteFailoverCluster (詳細インストール) - [新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   

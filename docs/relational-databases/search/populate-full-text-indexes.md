@@ -25,12 +25,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3583a5a0a4f68304bdc4cc78eadbadf3fb14b20
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973651"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042274"
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
      既定では、あるいは `CHANGE_TRACKING AUTO` を指定した場合、Full-Text Engine によってフルテキスト インデックスに自動的にカタログが作成されます。 すべてのカタログの作成が最初に実行された後に、ベース テーブルでデータが変更されると変更が追跡され、追跡された変更が自動的に反映されます。 ただし、フルテキスト インデックスはバックグラウンドで更新されるため、変更が直ちにインデックスに反映されないこともあります。  
   
-     **自動でのカタログ作成を指定して変更の追跡を開始するには**  
+     **自動作成を使って変更の追跡を開始するには**  
   
     -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ...WITH CHANGE_TRACKING AUTO  
   
@@ -161,7 +161,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  増分作成では、インデックスが設定されたテーブルに **timestamp** データ型の列が存在する必要があります。 **timestamp** 型の列が存在しない場合には、増分作成を実行できません。   
 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**timestamp** 列を使用して前回の作成後に変更された行が識別されます。 増分作成では、前回のカタログ作成後、または作成中に追加、削除、または変更された行のフルテキスト インデックスが更新されます。 作成が終わると、Full-Text Engine は新しい **timestamp** 型の値を記録します。 この値は、SQL Gatherer が検出した **timestamp** 型の最大値です。 次回、増分作成を開始するとき、この値が使用されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** 列を使用して前回の作成後に変更された行が識別されます。 増分作成では、前回のカタログ作成後、または作成中に追加、削除、または変更された行のフルテキスト インデックスが更新されます。 作成が終わると、Full-Text Engine は新しい **timestamp** 型の値を記録します。 この値は、SQL Gatherer が検出した **timestamp** 型の最大値です。 次回、増分作成を開始するとき、この値が使用されます。  
  
 増分作成が要求された結果、完全作成が行われることもあります。
 -   **timestamp** 型の列を含んでいないテーブルで増分作成を要求すると、完全作成が実行されます。
@@ -217,8 +217,8 @@ ALTER FULLTEXT INDEX ON Production.Document
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 クロール ログ ファイルの可変部分は次のようになります。
--   <**DatabaseID**> - データベースの ID。 <**dbid**> は、ゼロで始まる 5 桁の数字です。  
--   <**FullTextCatalogID**> - フルテキスト カタログ ID。 <**catid**> は、ゼロで始まる 5 桁の数字です。  
+-   <**DatabaseID**> - データベースの ID。 \<**dbid**> は、ゼロで始まる 5 桁の数字です。  
+-   <**FullTextCatalogID**> - フルテキスト カタログ ID。 \<**catid**> は、ゼロで始まる 5 桁の数字です。  
 -   <**n**> - 同じフルテキスト カタログに 1 つ以上のクロール ログが存在することを示す整数です。  
   
  たとえば、`SQLFT0000500008.2` はデータベース ID が 5 で、フルテキスト カタログ ID が 8 のクロール ログ ファイルです。 ファイル名の最後の 2 は、このデータベースとカタログのペアに 2 つのクロール ログ ファイルが存在することを示しています。  

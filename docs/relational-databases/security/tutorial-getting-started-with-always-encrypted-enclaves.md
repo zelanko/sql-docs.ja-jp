@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417154"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042131"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -36,8 +36,16 @@ ms.locfileid: "58417154"
 
 ### <a name="sql-server-computer-requirements"></a>SQL Server コンピューターの要件
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 以降
-- Windows 10 Enterprise バージョン 1809、または Windows Server 2019 Datacenter
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 以降。
+- Windows 10 Enterprise バージョン 1809、または Windows Server 2019 Datacenter。
+- SQL Server コンピューターが物理マシンの場合は、[Hyper-V のハードウェア要件](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)を満たしている必要があります。
+   - 第 2 レベル アドレス変換 (SLAT) 付き 64 ビット プロセッサ
+   - VM モニター モード拡張機能 (Intel CPU 上の VT-c) の CPU サポート
+   - 仮想化のサポートが有効になりました (Intel VT-x または AMD-V)
+- 使用している SQL Server コンピューターが仮想マシンの場合は、入れ子にされた仮想化を許可するように VM を構成する必要があります。
+   - Hyper-V 2016 以降では、VM プロセッサ上で[入れ子にされた仮想化拡張機能](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)を有効にします。
+   - Azure で、Dv3 や Ev3 シリーズの VM など、入れ子にされた仮想化をサポートする VM サイズを実行していることを確認してください。 [入れ子対応の Azure VM の作成](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)に関するページを参照してください。
+   - VMWare vSphere 6.7 以降では、[VMware のドキュメント](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)の説明に従って、仮想化ベースのセキュリティによる VM のサポートを有効にします。
 - [SQL Server Management Studio (SSMS) 18.0 以降](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 代わりに、別のコンピューター上に SSMS をインストールすることができます。
@@ -105,6 +113,21 @@ ms.locfileid: "58417154"
    ```
 
 3. Hyper-V のインストールを完了するように求められたら、SQL Server コンピューターを再起動します。
+
+4. 使用している SQL Server コンピューターが仮想マシンの場合、または UEFI セキュア ブートをサポートしていないか IOMMU が搭載されていない従来の物理マシンの場合は、プラットフォームのセキュリティ機能に関する VBS 要件を削除する必要があります。
+    1. Windows レジストリの要件を削除します。
+
+        ```powershell
+       Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
+       ```
+
+    1. コンピューターを再起動し、要件を低くして VBS をオンラインにします。
+
+        ```powershell
+       Restart-Computer
+       ```
+
+
 
 4. もう一度 SQL Server コンピューターに管理者としてサインインし、管理者特権の Windows PowerShell コンソールを開きます。一意のホスト キーを生成し、結果の公開キーをファイルにエクスポートします。
 
@@ -236,7 +259,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     3. **[Windows 証明書ストア -現在のユーザー] または [Windows 証明書ストア - ローカル コンピューター]** か、**[Azure Key Vault]** を選択します。
     4. **[エンクレーブ計算を許可する]** を選択します。
     5. [Azure Key Vault] を選択した場合は、Azure にサインインし、キー コンテナーを選択します。 Always Encrypted のキー コンテナーを作成する方法について詳しくは、「[Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)」(Azure portal からキー コンテナーを管理する) を参照してください。
-    6. 既にキーが存在する場合はそれを選択します。または、フォームの指示に従って新しいキーを作成します。
+    6. 証明書または Azure Key Value キーが既に存在する場合はそれを選択します。または、**[証明書の生成]** ボタンをクリックして新しい証明書を作成します。
     7. **[OK]** を選択します。
 
         ![エンクレーブ計算を許可する](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
@@ -258,8 +281,8 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     3. [接続] \> [接続の変更] の順に選択します。
     4. **[オプション]** を選択します。 **[Always Encrypted]** タブに移動し、**[Always Encrypted を有効にする]** を選択し、エンクレーブ構成証明 URL (たとえば、ht<span>tp://</span>hgs.bastion.local/Attestation) を指定します。
     5. **[接続]** を選択します。
-    6. データベース コンテキストを ContosoHR データベースに変更します。
-1. SSMS 上で、データベース接続に対して Always Encrypted が無効になっている別のクエリ ウィンドウを構成します。
+    6. Always Encrypted クエリのパラメーター化を有効にすることの確認を求められたら、**[有効]** をクリックします。
+2. SSMS 上で、データベース接続に対して Always Encrypted が無効になっている別のクエリ ウィンドウを構成します。
     1. SSM で、新しいクエリ ウィンドウを開きます。
     2. 新しいクエリ ウィンドウ内の任意の場所を右クリックします。
     3. [接続] \> [接続の変更] の順に選択します。
@@ -296,12 +319,12 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 
 ここで、暗号化された列に対して高度なクエリを実行できます。 いくつかのクエリ処理は、サーバー側エンクレーブ内で実行されます。 
 
-1. Always Encrypted のパラメーター化を有効にします。
+1. Always Encrypted のパラメーター化が有効であることを確認します。
     1. SSMS のメイン メニューから **[クエリ]** を選択します。
     2. **[クエリ オプション...]** を選択します。
     3. **[実行]** > **[詳細]** の順に移動します。
-    4. **[Always Encrypted のパラメーター化を有効にする]** をオンにします。
-    5. **[OK]** を選択します。
+    4. [Always Encrypted のパラメーター化を有効にする] がオンであることを確認します。
+    5. [OK] を選択します。
 2. Always Encrypted を有効にしたクエリ ウィンドウで、次のクエリを貼り付けて実行します。 クエリでは、指定した検索条件を満たすプレーンテキスト値と行が返されます。
 
     ```sql
