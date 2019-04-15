@@ -13,13 +13,13 @@ ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2e84a286cb4fa59c25426e9b1e8e8506fb51d91
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5b74ad99ac0ade660e524241a0368cacc92e6852
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370544"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542202"
 ---
 # <a name="how-query-store-collects-data"></a>クエリ ストアがデータを収集するしくみ
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "53370544"
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- I/O のオーバーヘッドを最小限に抑えるため、新しいデータはメモリ内にキャプチャされます。 書き込み操作はキューに登録され、その後、ディスクにフラッシュされます。 クエリとプランの情報 (下図のプラン ストア) は最小の待機時間でフラッシュされます。 `DATA_FLUSH_INTERVAL_SECONDS` ステートメントの `SET QUERY_STORE` オプションで定義された一定期間、ランタイム統計 (Runtime Stats) がメモリに保存されます。 [SSMS Query Store (SSMS クエリ ストア)] ダイアログ ボックスで [ **データのフラッシュ間隔 (分)**] を入力できます。これは秒に変換されます。  
+ I/O のオーバーヘッドを最小限に抑えるため、新しいデータはメモリ内にキャプチャされます。 書き込み操作はキューに登録され、その後、ディスクにフラッシュされます。 クエリとプランの情報 (下図のプラン ストア) は最小の待機時間でフラッシュされます。 `DATA_FLUSH_INTERVAL_SECONDS` ステートメントの `SET QUERY_STORE` オプションで定義された一定期間、ランタイム統計 (Runtime Stats) がメモリに保存されます。 [SSMS Query Store (SSMS クエリ ストア)] ダイアログ ボックスで **[データのフラッシュ間隔 (分)]** を入力できます。これは秒に変換されます。  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   

@@ -1,7 +1,7 @@
 ---
 title: データベースの差分バックアップの作成 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7272df471f734d0813258897bb1e1a187efdfe6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 279047e483720f5d089325f9d9ed17467ea96804
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241413"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>データベースの差分バックアップの作成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47849896"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [前提条件](#Prerequisites)  
+     [Prerequisites](#Prerequisites)  
   
      [推奨事項](#Recommendations)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47849896"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> アンインストールの準備  
+##  <a name="BeforeYouBegin"></a> はじめる前に  
   
 ###  <a name="Restrictions"></a> Limitations and restrictions  
   
@@ -69,7 +69,9 @@ ms.locfileid: "47849896"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
 #### <a name="create-a-differential-database-backup"></a>データベースの差分バックアップの作成  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
 2.  **[データベース]** を展開し、目的のデータベースに応じて、任意のユーザー データベースを選択するか、または **[システム データベース]** を展開して任意のシステム データベースを選択します。  
@@ -128,7 +130,7 @@ ms.locfileid: "47849896"
     > [!NOTE]  
     >  **[全般]** ページの **[バックアップの種類]** で、トランザクション ログをバックアップするように指定しなかった場合、 **[トランザクション ログ]** セクションの各オプションは無効になっています。  
   
-15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、 **[バックアップ圧縮の既定]** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、 **[バックアップを圧縮する]** をオンにしてバックアップを圧縮することも、 **[バックアップを圧縮しない]** をオンにして圧縮しないようにすることもできます。  
+15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、 **backup-compression default** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、 **[バックアップを圧縮する]** をオンにしてバックアップを圧縮することも、 **[バックアップを圧縮しない]** をオンにして圧縮しないようにすることもできます。  
   
      **現在の backup compression default 値を表示するには**  
   

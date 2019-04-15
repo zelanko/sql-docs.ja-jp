@@ -2,7 +2,7 @@
 title: 可用性グループへのセカンダリ レプリカの追加
 description: TRANSACT-SQL (T-SQL)、PowerShell、または SQL Server Management Studio (SSMS) の可用性グループ ウィザードのいずれかを使用して、Always On 可用性グループにセカンダリ レプリカを追加する手順を説明します。
 ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 05/18/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ffebb3bc39d15f52aeda8e2deed54c49e011df4e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 423d9370285d3b5e7df89ee8cecb6d539b16eb47
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241860"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Always On 可用性グループへのセカンダリ レプリカの追加
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,18 +31,20 @@ ms.locfileid: "53213011"
 -   プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
  詳細については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。  
-  
+
 ##  <a name="Security"></a> セキュリティ  
   
 ###  <a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
-  
+
+[!INCLUDE[Freshness](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **レプリカを追加するには**  
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  [ **AlwaysOn 高可用性** ] ノードと [ **可用性グループ** ] ノードを展開します。  
+2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  可用性グループを右クリックし、次のコマンドのどちらかを選択します。  
   
@@ -77,7 +79,7 @@ ms.locfileid: "53213011"
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **レプリカを追加するには**  
   
-1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (**cd**) します 。  
+1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更します (**cd**)。  
   
 2.  **New-SqlAvailabilityReplica** コマンドレットを使用します。  
   
@@ -103,9 +105,9 @@ ms.locfileid: "53213011"
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
--   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 補足情報:セカンダリ レプリカを追加した後  
+##  <a name="FollowUp"></a>補足情報: セカンダリ レプリカを追加した後  
  既存の可用性グループのレプリカを追加するには、次の手順を実行する必要があります。  
   
 1.  新しいセカンダリ レプリカをホストする予定のサーバー インスタンスに接続します。  
@@ -134,8 +136,8 @@ ms.locfileid: "53213011"
 -   [可用性レプリカのセッション タイムアウト期間の変更 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [BACKUP_PRIORITY](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Always On ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  

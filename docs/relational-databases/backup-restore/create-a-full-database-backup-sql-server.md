@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 729464b51af6c9450f9166bd9a3c51d35541810f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801917"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533340"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>データベースの完全バックアップの作成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -211,19 +211,19 @@ ms.locfileid: "56801917"
 *
     5.  `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` [Azure ストレージ コンテナー:] **テキスト ボックスから** を選択します。
 
-    6.  **[バックアップ ファイル:]** テキスト ボックスに、「 `Sales_stripe1of2_20160601.bak`」と入力します。
+   6.  **[バックアップ ファイル:]** テキスト ボックスに、「 `Sales_stripe1of2_20160601.bak`」と入力します。
 
-    7.  **[OK]** をクリックします。
+   7.  **[OK]** をクリックします。
 
-    8.  手順 **4.** と **5.** を繰り返します。
+   8.  手順 **4.** と **5.** を繰り返します。
 
-    9.  **[バックアップ ファイル:]** テキスト ボックスに、「 `Sales_stripe2of2_20160601.bak`」と入力します。
+   9.  **[バックアップ ファイル:]** テキスト ボックスに、「 `Sales_stripe2of2_20160601.bak`」と入力します。
 
-    10.  **[OK]** をクリックします。
+   10.  **[OK]** をクリックします。
 
-    11.   **[OK]** をクリックします。
+   11.   **[OK]** をクリックします。
 
-    **D2.Shared Access Signature は存在し、SQL Server 資格情報は存在しない場合**
+   **D2.Shared Access Signature は存在し、SQL Server 資格情報は存在しない場合**
   5.    `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` [Azure ストレージ コンテナー:] **テキスト ボックスに「** 」と入力します。
   
   6.    **[共有アクセス ポリシー:]** テキスト ボックスに Shared Access Signature を入力します。

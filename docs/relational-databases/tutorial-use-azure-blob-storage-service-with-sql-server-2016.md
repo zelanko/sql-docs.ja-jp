@@ -1,7 +1,7 @@
 ---
 title: チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -15,12 +15,12 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d130177d51dc64e5eb1d0e763cc6068a61b7123
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: bcc5709a87939caf415f1b91b58e05a932aea14a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241870"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用
 
@@ -42,7 +42,9 @@ SQL Server による Microsoft Azure Blob Storage サービスの統合のサポ
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
 - [AdventureWorks2016 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
 - ユーザー アカウントを [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) のロールに割り当て、[alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 権限を付与する。 
- 
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 格納済みアクセス ポリシーと共有アクセス ストレージを作成する
 
 このセクションでは [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) スクリプトを使用して、Azure BLOB コンテナーに格納済みアクセス ポリシーを使用した Shared Access Signature を作成します。  
@@ -482,7 +484,7 @@ AdventureWorks2016 データベースにアクティビティを生成し、フ�
 ## <a name="see-also"></a>参照
 
 [Microsoft Azure 内の SQL Server データ ファイル](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
-[Azure でのデータベース ファイルのファイル スナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[Azure でのデータベース ファイルのスナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [Shared Access Signature, 第 1 部: SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [コンテナーの作成](https://msdn.microsoft.com/library/azure/dd179468.aspx)  

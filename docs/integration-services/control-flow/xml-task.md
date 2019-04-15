@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a399ee84e84f0c85e057b8eaf6294548e18f75ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 84711a5bdef0ce13f640b26b3973860b9b5a6f48
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291552"
 ---
 # <a name="xml-task"></a>XML タスク
   XML タスクは、XML データの処理に使用します。 このタスクを使用すると、パッケージは、XML ドキュメントの取得、Extensible Stylesheet Language Transformations (XSLT) スタイル シートや XPath 式の使用によるドキュメントへの操作の適用、複数ドキュメントのマージ、または更新したドキュメントの検証、比較、およびファイルや変数への保存を行うことができます。  
@@ -121,7 +121,7 @@ ms.locfileid: "58290568"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [XML タスクを使った XML の検証](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
@@ -164,7 +164,7 @@ ms.locfileid: "58290568"
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
- **ソース**  
+ **Source**  
  **[ソース]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **[...]** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
  **[ソース]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
@@ -183,10 +183,10 @@ ms.locfileid: "58290568"
  **[SaveOperationResult]**  
  XML タスクが Validate 操作の出力を保存するかどうかを指定します。  
   
- **[OverwriteDestination]**  
+ **OverwriteDestination**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **変換先**  
+ **[Destination]**  
  既存のファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -242,10 +242,10 @@ ms.locfileid: "58290568"
  **[SaveOperationResult]**  
  XML タスクが XSLT 操作の出力を保存するかどうかを指定します。  
   
- **[OverwriteDestination]**  
+ **OverwriteDestination**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **変換先**  
+ **[Destination]**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -288,10 +288,10 @@ ms.locfileid: "58290568"
  **[SaveOperationResult]**  
  XML タスクが XPath 操作の出力を保存するかどうかを指定します。  
   
- **[OverwriteDestination]**  
+ **OverwriteDestination**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **変換先**  
+ **[Destination]**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -368,10 +368,10 @@ ms.locfileid: "58290568"
  **[SaveOperationResult]**  
  XML タスクが Merge 操作の出力を保存するかどうかを指定します。  
   
- **[OverwriteDestination]**  
+ **OverwriteDestination**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **変換先**  
+ **[Destination]**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -446,7 +446,7 @@ ms.locfileid: "58290568"
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **変換先**  
+ **[Destination]**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -489,10 +489,10 @@ ms.locfileid: "58290568"
  **[SaveOperationResult]**  
  XML タスクが Patch 操作の出力を保存するかどうかを指定します。  
   
- **[OverwriteDestination]**  
+ **OverwriteDestination**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **変換先**  
+ **[Destination]**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -530,9 +530,7 @@ ms.locfileid: "58290568"
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>関連コンテンツ  
-  
--   agilebi.com のブログ「 [XML 変換先スクリプト コンポーネント](https://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)」  
-  
+
 -   www.codeplex.com に掲載されている CodePlex サンプル「 [Process XML Data パッケージ サンプル](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)」  
   
   

@@ -1,7 +1,7 @@
 ---
 title: コピーのみのバックアップ (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/08/2018
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 860d6d2d5f84f41d006cb10972b63ec6b93210f3
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 6649909f4d3a4bf6b95b657ef45f55c34f042f3a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658196"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240690"
 ---
 # <a name="copy-only-backups-sql-server"></a>コピーのみのバックアップ (SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,6 +49,8 @@ ms.locfileid: "58658196"
 ### <a name="examples"></a>使用例  
 ###  <a name="SSMSProcedure"></a> A.  SQL Server Management Studio の使用  
 次の例では、 `Sales` データベースのコピーのみのバックアップを既定のバックアップ場所にあるディスクにバックアップします。
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1.  **オブジェクト エクスプローラー**で、SQL Server データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。
 
@@ -95,7 +97,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
--   [SQL Server PowerShell プロバイダー](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
   
 ## <a name="see-also"></a>参照  

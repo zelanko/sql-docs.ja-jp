@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 1714cc67cae1d8f2b49117891fa5a5b060f14415
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191052"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533350"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52191052"
 > <sup>1</sup> 更新、削除、挿入操作など。   
   
 ###  <a name="Restrictions"></a> インデックス付きビューに必要な SET オプション  
-クエリの実行時、異なる SET オプションがアクティブになっている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は同じ式を評価しても異なる結果を生成することがあります。 たとえば、SET のオプション `CONCAT_NULL_YIELDS_NULL` を ON に設定すると、式 `'abc' + NULL` は値 `NULL` を返すようになります。 一方、`CONCAT_NULL_YIEDS_NULL` を OFF に設定すると、同じ式を実行が `'abc'` を生成するようになります。  
+クエリの実行時、異なる SET オプションがアクティブになっている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は同じ式を評価しても異なる結果を生成することがあります。 たとえば、SET のオプション `CONCAT_NULL_YIELDS_NULL` を ON に設定すると、式 `'abc' + NULL` は値 `NULL` を返すようになります。 一方、`CONCAT_NULL_YIELDS_NULL` を OFF に設定すると、同じ式を実行が `'abc'` を生成するようになります。  
   
 ビューが正しく維持され、一貫性のある結果が返されるようにするには、インデックス付きビューで、いくつかの SET オプションに固定値が必要となります。 固定値の設定が必要な SET オプションと、その値 ( **必要な値** の列を参照) を下の表に示します。この設定は次の条件に該当する場合に常に必要となります:  
   
@@ -171,7 +171,7 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、ビューとそのビューのインデックスを作成します。 ここでは、インデックス付きビューを使用する 2 つのクエリを実行します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、ビューとそのビューのインデックスを作成します。 ここでは、インデックス付きビューを使用する 2 つのクエリを実行します。  
   
     ```sql  
     USE AdventureWorks2012;  

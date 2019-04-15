@@ -1,7 +1,7 @@
 ---
 title: データベースが破損したときのトランザクション ログのバックアップ (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bbeb8a002a0b269a70039757338ecf7be82895ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be62f7dfe7cce25d6b4cd63767bdea211dacd1a5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699850"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242180"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>データベースが破損したときのトランザクション ログのバックアップ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47699850"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -62,7 +62,9 @@ ms.locfileid: "47699850"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-back-up-the-tail-of-the-transaction-log"></a>トランザクション ログの末尾をバックアップするには  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
 2.  **[データベース]** を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
@@ -132,7 +134,7 @@ ms.locfileid: "47699850"
   
 15. **[全般]** ページの **[バックアップ先]** セクションで、テープ ドライブにバックアップするように指定した場合は、 **[バックアップ後にテープをアンロードする]** チェック ボックスがアクティブになります。 このオプションをオンにすると、 **[アンロードの前にテープを巻き戻す]** オプションがアクティブになります。  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、 **[バックアップ圧縮の既定]** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、 **[バックアップを圧縮する]** をオンにしてバックアップを圧縮することも、 **[バックアップを圧縮しない]** をオンにして圧縮しないようにすることもできます。  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 既定では、バックアップが圧縮されるかどうかは、 **backup-compression default** サーバー構成オプションの値によって決まります。 ただし、現在のサーバー レベルの既定の設定にかかわらず、 **[バックアップを圧縮する]** をオンにしてバックアップを圧縮することも、 **[バックアップを圧縮しない]** をオンにして圧縮しないようにすることもできます。  
   
      **現在の backup compression default 値を表示するには**  
   

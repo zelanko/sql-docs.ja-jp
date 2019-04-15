@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e64827ba35236f120f296baaaff7d01833ed6f5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9c29a6baa8948168f4fa8bc8a8099941e8b91503
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291562"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services サービス (SSIS サービス)
   このセクションのトピックでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスについて説明します。 Integration Service パッケージの作成、保存、および実行には、このサービスは不要です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] との互換性を維持するために、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービスをサポートしています。  
@@ -381,7 +381,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 > [!IMPORTANT]  
 >  リモート サーバーに格納されるパッケージを管理するために、そのリモート サーバー上の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインスタンスに接続する必要はありません。 代わりに、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルを編集し、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でリモート サーバーに格納されているパッケージが表示されるようにします。
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、DCOM プロトコルを使用しています。 ファイアウォール経由で DCOM プロトコルがどのように動作するかについては、MSDN ライブラリの「[ファイアウォール経由での分散 COM の使用](https://go.microsoft.com/fwlink/?LinkId=12490)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、DCOM プロトコルを使用しています。
   
  多くのファイアウォール システムが市販されています。 Windows ファイアウォール以外のファイアウォールを実行している場合、使用しているシステム固有の情報については、そのファイアウォールのマニュアルを参照してください。  
   
