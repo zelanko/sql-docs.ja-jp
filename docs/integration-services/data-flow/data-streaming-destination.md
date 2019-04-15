@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a58fe80fe0d71cfb7d645df29d2fb06624ad66a8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f84f4e0e0e5b0529f3b79cd64cd9bb605737adf5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242500"
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
    **Data Streaming Destination** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Destination コンポーネントであり、 **OLE DB Provider for SSIS** で SSIS パッケージの出力を表形式の結果セットとして利用することを可能にします。 OLE DB Provider for SSIS を利用するリンク サーバーを作成し、そのリンク サーバーで SQL クエリを実行し、SSIS パッケージが返したデータを表示できます。  
@@ -48,18 +48,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 > [!IMPORTANT]  
 >  詳細な手順については、「[チュートリアル: SQL ビューとして SSIS パッケージを公開する](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)」を参照してください。  
-  
-## <a name="expose-output-data-from-an-ssis-package-as-an-odata-feed-by-using-the-power-bi-admin-center"></a>Power BI Admin Center を利用し、SSIS パッケージからの出力データを OData フィードとして公開する  
- Power BI Admin Center を利用することで、IT 管理者はオンプレミス データ ソースからのデータを OData フィードとしてユーザーに公開できます。 Power BI Admin Center は既定で SQL Server データ ソースの登録のみを許可します。 ただし、 **Data Streaming Destination** と **Microsoft OLE DB Provider for SQL Server Integration Services (SSISOLEDB)** を利用し、ポータルで SSIS パッケージをデータ ソースとして登録し、SSIS パッケージからの結果データを OData フィードとしてユーザーに公開できます。  
-  
- Admin Center では、SQL Server データベースでビューを公開できます。 結果として、SSIS Package Publish ウイザード を利用し、SSIS パッケージを SQL ビューとして公開できます。 その後、Power BI Admin Center で OData フィードに含めるビューを選択できます。 データ スチュワードは、Excel 用の Power Query アドインを利用し、SSIS パッケージからのフィードを利用できます。  
-  
- 詳しいチュートリアルが必要な場合、「 [Publish SSIS Packages as OData Feed Sources (OData フィード ソースとして SSIS パッケージを公開する)](https://go.microsoft.com/fwlink/?LinkID=317367)」を参照してください。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
-  
--   [チュートリアル:SQL ビューとして SSIS パッケージを公開する](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
-  
+
 ## <a name="configure-data-streaming-destination"></a>Data Streaming Destination を構成する
   **[Data Streaming Destination の詳細エディター]** ダイアログ ボックスを使用して、Data Streaming Destination を構成します。 このダイアログ ボックスを開くには、コンポーネントをダブルクリックするか、データ フロー デザイナーでコンポーネントを右クリックしてから **[編集]** をクリックします。  
   
@@ -78,9 +67,4 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  このタブの上部ペインに、使用可能な入力列がすべて表示されます。 このコンポーネントの出力に含める列を選択します。 選択した列は、下部ペインの一覧に表示されます。 この一覧の **[出力の別名]** フィールドに新しい名前を入力することにより、出力列の名前を変更できます。  
   
 ## <a name="input-output-properties-tab"></a>[入力プロパティと出力プロパティ] タブ  
- [入力列] タブと同様に、このタブの出力列の名前は変更できます。左側のツリー ビューで、 **[Data Streaming Destination の入力]** 、 **[入力列]** の順に展開します。 入力列の名前をクリックし、右ペインで出力列の名前を変更します。  
-  
-## <a name="see-also"></a>参照  
- [Publish SSIS Packages as OData Feed Sources (OData フィード ソースとして SSIS パッケージを公開する)](https://go.microsoft.com/fwlink/?LinkID=317367)  
-  
-  
+ [入力列] タブと同様に、このタブの出力列の名前は変更できます。左側のツリー ビューで、 **[Data Streaming Destination の入力]** 、 **[入力列]** の順に展開します。 入力列の名前をクリックし、右ペインで出力列の名前を変更します。
