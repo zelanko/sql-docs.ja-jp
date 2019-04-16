@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 56d2eb65ca95dd4f153f3c7a6ebb00e926465687
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046862"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582685"
 ---
-# <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>クイック スタート:入力と SQL Server で R を使用する出力を処理します。
+# <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>クイック スタート: 入力と SQL Server で R を使用する出力を処理します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このクイック スタートでは、入力を処理する方法について説明し、SQL Server Machine Learning Services での R または R Services を使用する場合に出力します。
@@ -88,8 +88,6 @@ SELECT * FROM RTestData
 
     R は大文字小文字が区別ことに注意してください。 ため、入力と出力の変数の大文字と小文字`@input_data_1_name`と`@output_data_1_name`で R コードで使用されていると一致する必要がある`@script`。 
 
-    また、パラメーターの順序が重要です。 省略可能なパラメーター "*@input_data_1_name*" と "*@output_data_1_name*" を使用するためには、まず必須パラメーター "*@input_data_1*" と "*@output_data_1*" を指定する必要があります。
-
     パラメーターとして渡すことができるのは、1 つの入力データセットのみです。また、1 つのデータセットのみを返すことができます。 ただし、R コード内から他のデータセットを呼び出し、データセットに加えて他の型の出力を返すことができます。 また、OUTPUT キーワードを任意のパラメーターに追加して、その結果を受け取ることもできます。 
 
     `WITH RESULT SETS`ステートメントは、SQL Server で使用されるデータのスキーマを定義します。 R. から返す列ごとに SQL 互換のデータ型を提供する必要があります。スキーマ定義を使用して、新しい列名を提供するので、R データ フレームから列名を使用する必要はありません。
@@ -109,7 +107,7 @@ SELECT * FROM RTestData
 
     ![使用してクエリ結果@script入力として](./media/r-data-generated-output.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 暗黙的な変換や表形式のデータで R と SQL の間の違いなど、R と SQL Server の間でデータを渡す場合に発生する可能性のある問題のいくつかを確認します。
 

@@ -5,17 +5,17 @@ description: Kubernetes での SQL Server 2019 ビッグ データ クラスタ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c991181fc79627aee1f2c2e397ad7d9b1aaf953f
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860594"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582415"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法
 
@@ -34,22 +34,22 @@ SQL Server のビッグ データ クラスターは、Kubernetes クラスタ�
 ビッグ データの SQL Server クラスターの最小 Kubernetes バージョンが少なくとも必要 v1.10 サーバーおよびクライアント (kubectl) の両方。
 
 > [!NOTE]
-> クライアントとサーバーの Kubernetes のバージョンで +1 または-1 のマイナー バージョンがあることに注意してください。 詳細については、[Kubernetes がサポートされるのは、リリースと傾斜コンポーネント](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)を参照してください。
+> クライアントとサーバーの Kubernetes のバージョンで +1 または-1 のマイナー バージョンがあることに注意してください。 詳細については、次を参照してください。 [Kubernetes がサポートされるのは、リリースと傾斜コンポーネント](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)します。
 
 ## <a id="kubernetes"></a> Kubernetes クラスターのセットアップ
 
-上記の前提条件を満たしている Kubernetes クラスターが既にある場合に直接進んで、[配置手順](#deploy)します。 このセクションでは、Kubernetes の概念の基本的な知識を前提とします。  Kubernetes の詳細については、、 [Kubernetes のドキュメント](https://kubernetes.io/docs/home)を参照してください。
+上記の前提条件を満たしている Kubernetes クラスターが既にある場合に直接進んで、[配置手順](#deploy)します。 このセクションでは、Kubernetes の概念の基本的な知識を前提とします。  Kubernetes の詳細については、次を参照してください。、 [Kubernetes のドキュメント](https://kubernetes.io/docs/home)します。
 
 3 つの方法のいずれかでの Kubernetes にデプロイすることができます。
 
 | Kubernetes をデプロイします。 | 説明 | リンク |
 |---|---|---|
-| **Minikube** | VM で単一ノードの Kubernetes クラスター。 | [Instructions](deploy-on-minikube.md) |
-| **Azure Kubernetes サービス (AKS)** | Azure の managed Kubernetes コンテナー サービスです。 | [Instructions](deploy-on-aks.md) |
-| **複数のマシン** | 物理マシンまたはを使用して仮想マシンにデプロイされる Kubernetes クラスター **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
+| **Minikube** | VM で単一ノードの Kubernetes クラスター。 | [手順](deploy-on-minikube.md) |
+| **Azure Kubernetes サービス (AKS)** | Azure の managed Kubernetes コンテナー サービスです。 | [手順](deploy-on-aks.md) |
+| **複数のマシン** | 物理マシンまたはを使用して仮想マシンにデプロイされる Kubernetes クラスター **kubeadm** | [手順](deploy-with-kubeadm.md) |
   
 > [!TIP]
-> AKS と SQL Server の両方のビッグ データ クラスターをデプロイするサンプル python スクリプトについては、[ビッグ データ クラスター Azure Kubernetes Service (AKS) で SQL Server 展開](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)を参照してください。
+> AKS と SQL Server の両方のビッグ データ クラスターをデプロイするサンプル python スクリプトについては、次を参照してください。[ビッグ データ クラスター Azure Kubernetes Service (AKS) で SQL Server 展開](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)します。
 
 ## <a name="deploy-sql-server-2019-big-data-tools"></a>SQL Server 2019 ビッグ データ ツールを展開します。
 
@@ -68,7 +68,7 @@ Kubernetes クラスターを構成した後は、SQL Server のビッグ デー
 
 開発/テスト環境のすべての既定の構成で Azure でビッグ データ クラスターをデプロイするには、この記事の手順に従います。
 
-[クイック スタート: Kubernetes での SQL Server ビッグ データ クラスターをデプロイします。](quickstart-big-data-cluster-deploy.md)
+[クイック スタート:Kubernetes での SQL Server ビッグ データ クラスターをデプロイします。](quickstart-big-data-cluster-deploy.md)
 
 場合、ワークロードに合わせて、ビッグ データ クラスターの展開をカスタマイズする必要が、この記事の残りの指示に従います。
 
@@ -187,7 +187,7 @@ export STORAGE_CLASS_NAME=standard
 
 ### <a name="kubadm-settings"></a>Kubadm 設定
 
-Kubernetes ストレージ クラスの事前プロビジョニングし、を使用して通過する必要があります、独自の物理または仮想マシンに kubeadm を展開している場合、`STORAGE_CLASS_NAME`します。 永続ボリュームを使用して設定を抑制する代わりに、`USE_PERSISTENT_VOLUME=false`します。 永続的なストレージの詳細については、[を Kubernetes クラスターのビッグ データ、SQL Server でのデータ永続化](concept-data-persistence.md)を参照してください。
+Kubernetes ストレージ クラスの事前プロビジョニングし、を使用して通過する必要があります、独自の物理または仮想マシンに kubeadm を展開している場合、`STORAGE_CLASS_NAME`します。 永続ボリュームを使用して設定を抑制する代わりに、`USE_PERSISTENT_VOLUME=false`します。 永続的なストレージの詳細については、次を参照してください。[を Kubernetes クラスターのビッグ データ、SQL Server でのデータ永続化](concept-data-persistence.md)します。
 
 ## <a name="deploy-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターを展開する
 
@@ -236,7 +236,7 @@ kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 
 クラスターのすべてのエンドポイントにも記載されている、**サービス エンドポイント** タブで、クラスターの管理ポータル。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `endpoint-service-proxy` (例: **https://\<ip-address-of-endpoint-service-proxy\>: 30777/ポータル**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。 展開の監視、クラスターの管理ポータルを使用することもできます。
 
-接続する方法の詳細については、[Azure データ Studio を使用した SQL Server クラスターのビッグ データへの接続](connect-to-big-data-cluster.md)を参照してください。
+接続する方法の詳細については、次を参照してください。 [Azure データ Studio を使用した SQL Server クラスターのビッグ データへの接続](connect-to-big-data-cluster.md)します。
 
 ### <a name="minikube"></a>Minikube
 
@@ -337,15 +337,15 @@ kubectl get svc -n <your-cluster-name>
 
    | サービス | 説明 |
    |---|---|
-   | **エンドポイントでマスター-プール** | マスター インスタンスへのアクセスを提供します。<br/>(**EXTERNAL-IP、31433**と**SA**ユーザー) |
-   | **コント ローラーのエンドポイント** | ツールと、クラスターを管理するクライアントをサポートしています。 |
-   | **エンドポイントのサービスのプロキシ** | アクセスできるように、[クラスター管理ポータル](cluster-admin-portal.md)します。<br/>(https://**EXTERNAL-IP**: 30777/ポータル)|
-   | **エンドポイントのセキュリティ** | HDFS/Spark ゲートウェイへのアクセスを提供します。<br/>(**EXTERNAL-IP**と**ルート**ユーザー) |
+   | **endpoint-master-pool** | マスター インスタンスへのアクセスを提供します。<br/>(**EXTERNAL-IP、31433**と**SA**ユーザー) |
+   | **endpoint-controller** | ツールと、クラスターを管理するクライアントをサポートしています。 |
+   | **endpoint-service-proxy** | アクセスできるように、[クラスター管理ポータル](cluster-admin-portal.md)します。<br/>(https://**EXTERNAL-IP**: 30777/ポータル)|
+   | **endpoint-security** | HDFS/Spark ゲートウェイへのアクセスを提供します。<br/>(**EXTERNAL-IP**と**ルート**ユーザー) |
 
 1. 使用して、[クラスター管理ポータル](cluster-admin-portal.md)で展開を監視するため、**展開**タブ。待機しなければ、**エンドポイント サービスのプロキシ**展開の開始時に利用できないようにするために、このポータルにアクセスする前に開始するサービス。
 
 > [!TIP]
-> クラスターのトラブルシューティングの詳細については、[監視とトラブルシューティングのビッグ データの SQL Server クラスターの Kubectl コマンド](cluster-troubleshooting-commands.md)を参照してください。
+> クラスターのトラブルシューティングの詳細については、次を参照してください。[監視とトラブルシューティングのビッグ データの SQL Server クラスターの Kubectl コマンド](cluster-troubleshooting-commands.md)します。
 
 ## <a name="next-steps"></a>次のステップ
 

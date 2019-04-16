@@ -12,16 +12,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: f3ce2327034a9c7197e754dac01dfb9e6f9dc3e5
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3b023654728375aee76bfb0c4434a8413dc81e7d
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509589"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582565"
 ---
 # <a name="sysworkloadmanagementworkloadclassifiers-transact-sql-preview"></a>sys.workload_management_workload_classifiers (TRANSACT-SQL) (プレビュー)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+
+> [!Note]
+> ワークロードの分類は、SQL Data Warehouse Gen2 のプレビューで使用できます。 ワークロード管理の分類と重要度のプレビューは 2019 年 4 月 9 日、またはそれ以降のリリース日でビルドです。  ユーザーは、ワークロード管理のテストの前にこの日付よりもビルドの使用を避ける必要があります。  ビルドがワークロードの管理ができるかどうかを決定、実行 select @@version SQL Data Warehouse インスタンスに接続されている場合。
 
  ワークロードの分類子の詳細を返します。  
   
@@ -42,4 +45,4 @@ VIEW SERVER STATE 権限が必要です。
 
 ## <a name="next-steps"></a>次のステップ
 
- SQL Data Warehouse と Parallel Data Warehouse のすべてのカタログ ビューの一覧は、[SQL Data Warehouse と並列データ ウェアハウスのカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)を参照してください。 ワークロードの分類器を作成するを参照してください。[ワークロードの分類器を作成する](../../t-sql/statements/create-workload-classifier-transact-sql.md)します。 ワークロードの分類の詳細については、次を参照してください[SQL データ ウェアハウス ワークロードの分類。](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+ SQL Data Warehouse と Parallel Data Warehouse のすべてのカタログ ビューの一覧は、次を参照してください。 [SQL Data Warehouse と並列データ ウェアハウスのカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)します。 ワークロードの分類器を作成するを参照してください。[ワークロードの分類器を作成する](../../t-sql/statements/create-workload-classifier-transact-sql.md)します。 ワークロードの分類の詳細については、次を参照してください[SQL データ ウェアハウス ワークロードの分類。](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

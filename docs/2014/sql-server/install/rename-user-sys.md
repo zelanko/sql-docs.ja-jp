@@ -13,12 +13,12 @@ ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ddcadb1fe32c61fbab45bbdcfbc18d60d1072d23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e227e4d382dac627626b977427aae05d0295744
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078222"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582335"
 ---
 # <a name="rename-user-sys"></a>ユーザー sys の名前変更が必要
   アップグレード アドバイザーには、ユーザー名が検出された**sys**データベースにします。 この名前は予約されています。 このユーザー名を変更した後、アップグレードしてください。 ユーザー名が変更されていないと、データベースはアップグレード処理後に問題ありの状態となり、データベースをオンラインにするまで使用できません。  
@@ -64,6 +64,6 @@ ms.locfileid: "48078222"
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a410a6f732baf79d419405e38e7e84aed86b38dd
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046895"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583225"
 ---
-# <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>クイック スタート:入力と出力を SQL Server での Python の使用を処理します。
+# <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>クイック スタート: 入力と出力を SQL Server での Python の使用を処理します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このクイック スタートでは、入力を処理する方法について説明し、SQL Server Machine Learning Services での Python を使用する場合に出力します。
@@ -88,8 +88,6 @@ SELECT * FROM PythonTestData
 
     入力と出力の変数の大文字と小文字`@input_data_1_name`と`@output_data_1_name`での Python コードで使用されているのと一致する必要がある`@script`Python は大文字小文字を区別します。
 
-    また、パラメーターの順序が重要です。 省略可能なパラメーター "*@input_data_1_name*" と "*@output_data_1_name*" を使用するためには、まず必須パラメーター "*@input_data_1*" と "*@output_data_1*" を指定する必要があります。
-
     パラメーターとして渡すことができるのは、1 つの入力データセットのみです。また、1 つのデータセットのみを返すことができます。 ただし、Python コード内から他のデータセットを呼び出すことができ、データセットに加え、他の型の出力を返すことができます。 また、OUTPUT キーワードを任意のパラメーターに追加して、その結果を受け取ることもできます。 
 
     `WITH RESULT SETS`ステートメントは、SQL Server で使用されるデータのスキーマを定義します。 Python から返す列ごとに SQL 互換のデータ型を提供する必要があります。 スキーマ定義を使用して、新しい列名を提供する Python data.frame の列名を使用する必要はありませんので。
@@ -111,7 +109,7 @@ SELECT * FROM PythonTestData
 
     ![使用してクエリ結果@script入力として](./media/python-data-generated-output.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Python と SQL Server の間で表形式のデータを渡すときに発生する可能性のある問題のいくつかを確認します。
 

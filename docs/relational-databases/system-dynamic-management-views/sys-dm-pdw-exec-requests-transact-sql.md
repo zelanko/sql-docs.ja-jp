@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d049833897685b7998fc1168ec09398860df233b
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 72c449ee83798a99109029fc2d0b91e2b8c1e2b6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657747"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583320"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (TRANSACT-SQL)
 
@@ -35,13 +35,13 @@ ms.locfileid: "58657747"
 |start_time|**datetime**|要求の実行が開始された時刻。|キューに置かれた要求の場合は NULLそれ以外の場合、有効な**datetime**小さいまたは現在の時刻と同じです。|  
 |end_compile_time|**datetime**|エンジンが、要求のコンパイルを完了した時刻。|まだコンパイルされていない要求の場合は NULLそれ以外の場合、有効な**datetime** start_time よりも小さいと、現在の時刻。|
 |end_time|**datetime**|時間を要求の実行完了、失敗、またはが取り消されました。|キューまたはアクティブな要求の場合は nullそれ以外の場合、有効な**datetime**小さいまたは現在の時刻と同じです。|  
-|total_elapsed_time|**int**|ミリ秒単位で、要求を開始からの実行で経過時間。|0 ~ start_time と end_time の違い範囲。</br></br> Total_elapsed_time では、整数の最大値を超えている場合、最大値になります total_elapsed_time では引き続きします。 この状態が"、最大値を超過しました"警告を生成します。</br></br> ミリ秒単位で最大の値は 24.8 日と同じです。|  
+|total_elapsed_time|**int**|ミリ秒単位で、要求を開始からの実行で経過時間。|0 ~ start_time と end_time の違い範囲。</br></br> Total_elapsed_time では、整数の最大値を超えると、total_elapsed_time 引き続き、最大値になります。 この状態が"、最大値を超過しました"警告を生成します。</br></br> ミリ秒単位で最大の値は 24.8 日と同じです。|  
 |ラベル●らべる○|**nvarchar (255)**|いくつかのクエリの SELECT ステートメントに関連付けられている省略可能なラベル文字列。|任意の文字列を含む ' a ~ z'、' A ~ Z'、' 0-9'、'_' です。|  
 |error_id|**nvarchar(36)**|存在する場合、要求に関連するエラーの一意の ID。|参照してください[sys.dm_pdw_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); エラーが発生していない場合は NULL に設定します。|  
 |database_id|**int**|コンテキストの明示的な (使用 DB_X など) によって使用されるデータベースの識別子。|内の ID を参照してください。 [sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)します。|  
 |command|**nvarchar (4000)**|ユーザーによって送信されると、要求の完全なテキストを保持します。|有効なクエリまたは要求テキスト。 4,000 バイトより長いクエリは、切り捨てられます。|  
 |resource_class|**nvarchar(20)**|この要求のリソース クラスです。 関連する参照**concurrency_slots_used**で[sys.dm_pdw_resource_waits &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)します。  リソース クラスの詳細については、次を参照してください[リソース クラスとワークロード管理。](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |静的リソース クラス</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>動的リソース クラス</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|重要度 (SQL DW Gen2 のプレビュー)|**nvarchar(32)**|要求を設定する重要度が送信されました。 重要度が低い要求は重要度の高い要求が送信された場合に、一時停止状態でキューに置かれます。  重要度の高い要求は、先に送信された下の重要度要求する前に実行されます。  重要度の詳細については、[ワークロードの重要度](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)を参照してください。  |NULL</br>low</br>below_normal</br>標準 (既定値)</br>しなく</br>high|
+|重要度 (ワークロードの分類は、SQL Data Warehouse Gen2 のプレビューで使用できます。 ワークロード管理の分類と重要度のプレビューは 2019 年 4 月 9 日、またはそれ以降のリリース日でビルドです。  ユーザーは、ワークロード管理のテストの前にこの日付よりもビルドの使用を避ける必要があります。  ビルドがワークロードの管理ができるかどうかを決定、実行 select @@version SQL Data Warehouse インスタンスに接続されている場合)。|**nvarchar(32)**|要求を設定する重要度が送信されました。 重要度が低い要求は重要度の高い要求が送信された場合に、一時停止状態でキューに置かれます。  重要度の高い要求は、先に送信された下の重要度要求する前に実行されます。  重要度の詳細については、次を参照してください。[ワークロードの重要度](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)します。  |NULL</br>low</br>below_normal</br>標準 (既定値)</br>しなく</br>high|
   
  このビューで保持される最大行数は、詳細については、メタデータ」セクションを参照してください、[容量制限](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)トピック。   
   

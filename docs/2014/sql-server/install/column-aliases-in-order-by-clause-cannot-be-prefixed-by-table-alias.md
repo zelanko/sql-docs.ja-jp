@@ -13,12 +13,12 @@ ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc1b7dc07b959a3ce1ff9ae4c1e82ece0c900431
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 815e4105ca65b6bcdaa36de0554b9f6e0d3b478a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175622"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583265"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>ORDER BY 句の列の別名をテーブル別名によってプレフィックス指定できない
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、ORDER BY 句の列の別名はテーブル別名によってプレフィックス指定できません。  
@@ -73,6 +73,6 @@ ORDER BY p.LastName
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -5,17 +5,17 @@ description: SQL Server 2019 のビッグ データ クラスター内のデー�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f8cddaeca6c6bcc7eb32c28fa852566bb7dcf331
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: f527aaa18994c1d0c50acc44e0ddba159857a60e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860278"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582285"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上の SQL Server のビッグ データ クラスターでのデータ永続化
 
@@ -102,5 +102,5 @@ SQL Server のビッグ データ クラスターの永続的なストレージ�
 
 Kubernetes でのボリュームに関する詳細なドキュメントを参照してください、[ボリューム上の Kubernetes のドキュメント](https://kubernetes.io/docs/concepts/storage/volumes/)します。
 
-SQL Server のビッグ データ クラスターのデプロイの詳細については、[を Kubernetes クラスターのビッグ データ、SQL Server をデプロイする方法](deployment-guidance.md)を参照してください。
+SQL Server のビッグ データ クラスターのデプロイの詳細については、次を参照してください。[を Kubernetes クラスターのビッグ データ、SQL Server をデプロイする方法](deployment-guidance.md)します。
 

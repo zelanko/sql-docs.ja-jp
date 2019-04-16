@@ -14,12 +14,12 @@ ms.assetid: 58c2199c-4fdf-4d43-ac1c-842703344b75
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d800001d2bf5ec663ad2c3651aae59baccca445b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad261d8d7680be7111e79a1b7a7f3291c2139308
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057852"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582815"
 ---
 # <a name="invalid-named-pipe-name-can-block-upgrade"></a>無効な名前付きパイプ名によってアップグレードがブロックされる
   アップグレードは、名前付きパイプのプロトコルの構成が正しくない場合は失敗します。  
@@ -35,6 +35,6 @@ ms.locfileid: "48057852"
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

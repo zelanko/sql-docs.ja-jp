@@ -3,18 +3,18 @@ title: Java サンプルとチュートリアルを SQL Server 2019 - SQL Server
 description: SQL Server のデータを Java 言語の拡張機能を使用するための手順については、SQL Server 2019 の Java サンプル コードを実行します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2fd078d0b9c61678a83cc1b3b5da70adbd69779
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 25deba880827cc7396082dac9a2c86cc4dd66cd8
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493427"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582575"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server の Java サンプルのチュートリアル
 
@@ -22,7 +22,7 @@ ms.locfileid: "58493427"
 
 ## <a name="prerequisites"></a>前提条件
 
-+ Java 拡張機能のプログラミングと拡張性フレームワークでの SQL Server 2019 データベース エンジン インスタンス[Windows で](../install/sql-machine-learning-services-windows-install.md)または[on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup)します。 システム構成の詳細については、[Java 言語の拡張機能で SQL Server 2019](extension-java.md)を参照してください。 コーディングの要件の詳細については、[SQL Server で Java を呼び出す方法](howto-call-java-from-sql.md)を参照してください。
++ Java 拡張機能のプログラミングと拡張性フレームワークでの SQL Server 2019 データベース エンジン インスタンス[Windows で](../install/sql-machine-learning-services-windows-install.md)または[on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup)します。 システム構成の詳細については、次を参照してください。 [Java 言語の拡張機能で SQL Server 2019](extension-java.md)します。 コーディングの要件の詳細については、次を参照してください。 [SQL Server で Java を呼び出す方法](howto-call-java-from-sql.md)します。
 
 + SQL Server Management Studio または T-SQL を実行するための別のツール。
 
@@ -199,7 +199,7 @@ Classpath の場所に「パッケージ」をという名前のサブフォル�
 
 Windows での使用をお勧め比較的浅いフォルダー構造、1 つまたは 2 階のアクセス許可を簡略化します。 たとえば、クラスパスようになります 'C:\myJavaCode' コンパイル済みのクラスを含む ' \pkg' という名前のサブフォルダーにします。 
 
-Classpath の詳細については、[クラスパスの設定](howto-call-java-from-sql.md#set-classpath)を参照してください。 
+Classpath の詳細については、次を参照してください。[クラスパスの設定](howto-call-java-from-sql.md#set-classpath)します。 
 
 ### <a name="using-jar-files"></a>.Jar ファイルを使用します。
 

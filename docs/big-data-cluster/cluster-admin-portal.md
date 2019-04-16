@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c83ad67b6d76ddf43762a814c26d2037594b78de
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: fbb43d39e28a8b99e49a4dcaf0b2b4f0fc83e670
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860503"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582237"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>クラスターの管理ポータルを使用してビッグ データの SQL Server クラスターを監視する方法
 
@@ -114,6 +114,6 @@ Spark のエンドポイント、Grafana ダッシュ ボードへのリンク�
 
 ## <a name="next-steps"></a>次のステップ
 
-だけでなく、クラスターの管理ポータルの状態や、クラスターの正常性を調べるいくつかの便利な Kubernetes コマンドを実行することもできます。 詳細については、[監視とトラブルシューティングのビッグ データの SQL Server クラスターの Kubectl コマンド](cluster-troubleshooting-commands.md)を参照してください。
+だけでなく、クラスターの管理ポータルの状態や、クラスターの正常性を調べるいくつかの便利な Kubernetes コマンドを実行することもできます。 詳細については、次を参照してください。[監視とトラブルシューティングのビッグ データの SQL Server クラスターの Kubectl コマンド](cluster-troubleshooting-commands.md)します。
 
 SQL Server 2019 ビッグ データ クラスターに関する詳細についてを参照してください。 [SQL Server 2019 ビッグ データ クラスターは?](big-data-cluster-overview.md)します。

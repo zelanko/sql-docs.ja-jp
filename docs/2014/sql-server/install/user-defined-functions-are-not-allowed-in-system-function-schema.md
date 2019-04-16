@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b7c21521fbdd4a4e80ed196c67c72f790341f020
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 35cc33df40c17e6dbc1935e205ed688615de0294
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254277"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583106"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema でユーザー定義関数が許可されない
   アップグレード アドバイザーは、文書化されていないユーザーによって所有されているユーザー定義関数を検出しました。 **system_function_schema**します。 このユーザーを指定してユーザー定義のシステム関数を作成することはできません。 **System_function_schema**ユーザー名が存在しないため、この名前に関連付けられているユーザー ID (UID = 4) に予約されている、 **sys**スキーマと、内部使用のみに制限されます。  
@@ -40,7 +40,7 @@ ms.locfileid: "54254277"
   
  これらの変更によって、ユーザー定義のシステム関数には次の影響があります。  
   
--   データ定義言語 (DDL) ステートメントを参照する**system_function_schema**は失敗します。 たとえば、ステートメント`CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... は成功しません。  
+-   データ定義言語 (DDL) ステートメントを参照する**system_function_schema**は失敗します。 たとえば、ステートメント`CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` .成功しません。  
   
 -   アップグレードした後[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、既存のオブジェクトによって所有されている**system_function_schema**でのみに含まれている、 **sys**のスキーマ、**マスター**データベース。 これらの関数を変更または削除するシステム オブジェクトが変更されることはできません、ためはことはありません、**マスター**データベース。 また、これらの関数は、1 つの要素だけで構成される関数名を指定して他のデータベースから呼び出すこともできません。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54254277"
 -   Resource データベース  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)   
+ [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)   
  [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [システム オブジェクトを変更するステートメントを削除します。](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   
  [システム オブジェクトを破棄するステートメントを削除する](../../../2014/sql-server/install/remove-statements-that-drop-system-objects.md)  

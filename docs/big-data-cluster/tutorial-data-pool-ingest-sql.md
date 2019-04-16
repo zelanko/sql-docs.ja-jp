@@ -5,17 +5,17 @@ description: このチュートリアルでは、SQL Server 2019 ビッグ デ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 497dd1856a8847bbba9b05d3abc11836841f6e7c
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: eb0bd2639dc2e2738215c51a18d87a3eb771c826
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860344"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583435"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>チュートリアル:Transact SQL を使用した SQL Server のデータ プールにデータを取り込む
 
@@ -31,7 +31,7 @@ ms.locfileid: "58860344"
 > * ローカル テーブルのデータ プール テーブル内のデータを結合します。
 
 > [!TIP]
-> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、、[データ プール サンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)GitHub でを参照してください。
+> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、次を参照してください。、[データ プール サンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)GitHub でします。
 
 ## <a id="prereqs"></a> 前提条件
 
@@ -45,7 +45,7 @@ ms.locfileid: "58860344"
 
 次の手順では、外部テーブルを作成という名前のデータ プールに**web_clickstream_clicks_data_pool**します。 このテーブルことができますし、場所としてのデータの取り込みに使用するビッグ データ クラスター。
 
-1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、[master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)を参照してください。
+1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、次を参照してください。 [master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)します。
 
 1. 内の接続をダブルクリックして、**サーバー**ウィンドウに SQL Server のマスター インスタンスのサーバー ダッシュ ボードを表示します。 選択**新しいクエリ**します。
 

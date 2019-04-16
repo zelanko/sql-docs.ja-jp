@@ -5,17 +5,17 @@ description: このチュートリアルでは、Azure Data Studio で Spark ジ
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c29b6b942b797b5a58679d9d7f5cb91e68561123
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 9d49cb6af93880fe1cec391e4464b813777f7109
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860673"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582755"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>チュートリアル:Spark ジョブの SQL Server のデータ プールにデータを取り込む
 
@@ -31,7 +31,7 @@ ms.locfileid: "58860673"
 > * 外部テーブルの結果をクエリします。
 
 > [!TIP]
-> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、、[データ プール サンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)GitHub でを参照してください。
+> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、次を参照してください。、[データ プール サンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)GitHub でします。
 
 ## <a id="prereqs"></a> 前提条件
 
@@ -45,7 +45,7 @@ ms.locfileid: "58860673"
 
 次の手順では、外部テーブルを作成という名前のデータ プールに**web_clickstreams_spark_results**します。 このテーブルことができますし、場所としてのデータの取り込みに使用するビッグ データ クラスター。
 
-1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、[master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)を参照してください。
+1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、次を参照してください。 [master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)します。
 
 1. 内の接続をダブルクリックして、**サーバー**ウィンドウに SQL Server のマスター インスタンスのサーバー ダッシュ ボードを表示します。 選択**新しいクエリ**します。
 
@@ -80,7 +80,7 @@ ms.locfileid: "58860673"
 
 次の手順は、データ プールで作成した外部テーブルに、Spark ストリーミング web クリック ストリーム データを読み込みます (HDFS) の記憶域プールからジョブを作成します。
 
-1. Azure のデータの Studio に接続、 **HDFS/Spark ゲートウェイ**ビッグ データ クラスター。 詳細については、[HDFS/Spark ゲートウェイへの接続](connect-to-big-data-cluster.md#hdfs)を参照してください。
+1. Azure のデータの Studio に接続、 **HDFS/Spark ゲートウェイ**ビッグ データ クラスター。 詳細については、次を参照してください。 [HDFS/Spark ゲートウェイへの接続](connect-to-big-data-cluster.md#hdfs)します。
 
 1. HDFS/Spark ゲートウェイ接続をダブルクリックして、**サーバー**ウィンドウ。 選び**Spark ジョブを新しい**します。
 

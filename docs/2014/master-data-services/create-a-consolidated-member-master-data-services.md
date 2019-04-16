@@ -14,12 +14,12 @@ ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8bef17d900fe9a823439a88b8e94eb78810e6627
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cf154f3437ed22be932fa37470f59049aea09850
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766944"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582585"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>統合メンバーを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で明示的階層の親ノードが必要な場合、統合メンバーを作成します。 統合メンバーには、独自の属性を含めることができます。 これはグループ化のために使用されます。 次の例に示すように、統合メンバーは、その下にアカウントを持つアカウント グループに使用できます。  
@@ -60,7 +60,7 @@ ms.locfileid: "52766944"
 ## <a name="see-also"></a>参照  
  [明示的階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [リーフ メンバーを作成する &#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)   
- [読み込むか、ステージング処理を使用してマスター データ サービス内のメンバーを更新します。](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [読み込むか、ステージング処理を使用してマスター データ サービス内のメンバーを更新します。](add-update-and-delete-data-master-data-services.md)   
  [メンバー (マスター データ サービス)](../../2014/master-data-services/members-master-data-services.md)   
  [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   

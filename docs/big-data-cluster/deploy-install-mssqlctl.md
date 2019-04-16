@@ -5,16 +5,16 @@ description: インストールして、SQL Server 2019 ビッグ データ ク�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c306ec99f0bd2aff89116e955283dd585f9d7cce
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: d9c35971c0c0acf69065734cdcdbe670710ef5e4
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860663"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582386"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>SQL Server のビッグ データ クラスターを管理する mssqlctl をインストールします。
 
@@ -22,10 +22,10 @@ ms.locfileid: "58860663"
 
 この記事は、インストールする方法を説明します、 **mssqlctl** Windows または Linux でのツール。
 
-**mssqlctl**は Python で記述された、により、クラスター管理者のブートス トラップし、REST Api を使用してビッグ データ クラスターを管理するコマンド ライン ユーティリティです。 必要な最小の Python バージョン v3.5 です。 必要がある`pip`をダウンロードしてインストールに使用される**mssqlctl**ツール。 以下の手順では、Windows および Ubuntu の例を紹介します。 他のプラットフォームで Python をインストールするため、、 [Python のドキュメント](https://wiki.python.org/moin/BeginnersGuide/Download)を参照してください。
+**mssqlctl**は Python で記述された、により、クラスター管理者のブートス トラップし、REST Api を使用してビッグ データ クラスターを管理するコマンド ライン ユーティリティです。 必要な最小の Python バージョン v3.5 です。 必要がある`pip`をダウンロードしてインストールに使用される**mssqlctl**ツール。 以下の手順では、Windows および Ubuntu の例を紹介します。 他のプラットフォームで Python をインストールするため、次を参照してください。、 [Python のドキュメント](https://wiki.python.org/moin/BeginnersGuide/Download)します。
 
 > [!IMPORTANT]
-> データをバックアップし、以前のクラスターを削除する必要がありますビッグ データ クラスターの新しいバージョンをインストールする場合*する前に*アップグレード**mssqlctl**と新しいリリースをインストールします。 詳細については、[新しいリリースにアップグレードする](deployment-guidance.md#upgrade)を参照してください。
+> データをバックアップし、以前のクラスターを削除する必要がありますビッグ データ クラスターの新しいバージョンをインストールする場合*する前に*アップグレード**mssqlctl**と新しいリリースをインストールします。 詳細については、次を参照してください。[新しいリリースにアップグレードする](deployment-guidance.md#upgrade)します。
 
 ## <a id="windows"></a> Windows mssqlctl インストール
 
@@ -58,7 +58,7 @@ ms.locfileid: "58860663"
 
 ## <a id="linux"></a> Linux mssqlctl のインストール
 
-Linux は、Python 3.5 をインストールしてから pip をアップグレードする必要があります。 次の例では、Ubuntu で使用するコマンドを示します。 その他の Linux プラットフォームでは、、 [Python のドキュメント](https://wiki.python.org/moin/BeginnersGuide/Download)を参照してください。
+Linux は、Python 3.5 をインストールしてから pip をアップグレードする必要があります。 次の例では、Ubuntu で使用するコマンドを示します。 その他の Linux プラットフォームでは、次を参照してください。、 [Python のドキュメント](https://wiki.python.org/moin/BeginnersGuide/Download)します。
 
 1. 必要な Python パッケージをインストールします。
 
@@ -99,4 +99,4 @@ Linux は、Python 3.5 をインストールしてから pip をアップグレ�
 
 ## <a name="next-steps"></a>次のステップ
 
-ビッグ データ クラスターに関する詳細については、[SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)を参照してください。
+ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)します。

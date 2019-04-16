@@ -3,18 +3,18 @@ title: SQL Server 2019 - SQL Server Machine Learning Services での Java 言語
 description: インストール、構成、および Linux と Windows の両方のシステムでは、SQL Server 2019 Java 言語拡張機能を検証します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b5d5fe9a3bf3b775c9d7afb1035e09120157aac
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 725aebbcd40adf0c571dd6b99b68cf1be389af8b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494264"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582091"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>SQL Server 2019 で Java 言語の拡張機能 
 
@@ -41,7 +41,7 @@ Java 8 がサポートされています。 Java ランタイム環境 (JRE) が
 
 Linux では、 **mssql server extensibility java**パッケージがインストールされていない場合は、自動的に JRE 8 をインストールします。 インストール スクリプトは、という JRE_HOME 環境変数に JVM パスを追加する必要があります。
 
-Windows、お勧めする既定の JDK をインストールする`/Program Files/`可能であればフォルダー。 それ以外の場合、実行可能ファイルへのアクセス許可を付与するには、追加の構成が必要です。 詳細については、、 [(Windows) のアクセス許可を付与](#perms-nonwindows)このドキュメントの「を参照してください。
+Windows、お勧めする既定の JDK をインストールする`/Program Files/`可能であればフォルダー。 それ以外の場合、実行可能ファイルへのアクセス許可を付与するには、追加の構成が必要です。 詳細については、次を参照してください。、 [(Windows) のアクセス許可を付与](#perms-nonwindows)このドキュメントの「します。
 
 > [!Note]
 > Java は、下位互換性があること、以前のバージョンは使えるかもしれませんが、この初期の CTP リリースのサポートされていると、テスト対象のバージョン番号は Java 8 を指定します。 
@@ -76,7 +76,7 @@ sudo zypper install mssql-server-extensibility-java
 
 外部ライブラリを使用していない場合は、jar で Java クラスを実行するアクセス許可を持つ SQL Server を指定する必要があります。
 
-読み取りを許可し、jar ファイルへのアクセスを実行するには、次を実行**chmod** jar ファイルをコマンド。 常に SQL Server を使用する場合、クラス ファイルを jar に配置することをお勧めします。 Jar の作成については、[jar ファイルを作成する方法](#create-jar)を参照してください。
+読み取りを許可し、jar ファイルへのアクセスを実行するには、次を実行**chmod** jar ファイルをコマンド。 常に SQL Server を使用する場合、クラス ファイルを jar に配置することをお勧めします。 Jar の作成については、次を参照してください。 [jar ファイルを作成する方法](#create-jar)します。
 
 ```cmd
 chmod ug+rx <MyJarFile.jar>
@@ -93,7 +93,7 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 ## <a name="install-on-windows"></a>Windows へのインストール
 
-1. サポートされているバージョンの Java がインストールされていることを確認します。 詳細については、、[の前提条件](#prerequisites)を参照してください。
+1. サポートされているバージョンの Java がインストールされていることを確認します。 詳細については、次を参照してください。、[の前提条件](#prerequisites)します。
 
 2. [セットアップを実行](../install/sql-machine-learning-services-windows-install.md)SQL Server 2019 をインストールします。
 
@@ -165,7 +165,7 @@ icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 ## <a name="differences-in-ctp-24"></a>CTP 2.4 の相違点
 
-Machine Learning サービス理解している場合は、拡張機能の承認および分離モデルがこのリリースで変更されました。 詳細については、[SQL Server Machine 2019 Learning サービスのインストールの違い](../install/sql-machine-learning-services-ver15.md)を参照してください。
+Machine Learning サービス理解している場合は、拡張機能の承認および分離モデルがこのリリースで変更されました。 詳細については、次を参照してください。 [SQL Server Machine 2019 Learning サービスのインストールの違い](../install/sql-machine-learning-services-ver15.md)します。
 
 ## <a name="limitations-in-ctp-24"></a>CTP 2.4 の制限事項
 

@@ -3,18 +3,18 @@ title: SQL - SQL Server Machine Learning サービスから Java を呼び出す
 description: Java のクラスを Java プログラミング言語の拡張機能で SQL Server 2019 を使用して SQL Server のストアド プロシージャから呼び出す方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a949f4d046d4071ffd7d52d34233e993ee700f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
-ms.translationtype: HT
+ms.openlocfilehash: 8913f471b127663f9f1be179d791a4f72a0ed6aa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493004"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581577"
 ---
 # <a name="how-to-call-java-from-sql-server-2019-preview"></a>SQL Server 2019 プレビューから Java を呼び出す方法
 
@@ -93,7 +93,7 @@ JDK の実行可能ファイルのシステム変数を作成したのと同様�
 
 ## <a name="external-library"></a>外部ライブラリ
 
-SQL Server 2019 CTP 2.4 では、Windows および Linux で Java 言語の外部ライブラリを使用できます。 同じ機能は今後の CTP での Linux で利用可能になります。 .Jar ファイルに、クラスをコンパイルして、.jar ファイルとその他の依存関係を使用して、データベースにアップロード、 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL。
+SQL Server 2019 CTP 2.4 では、Windows および Linux で Java 言語の外部ライブラリを使用できます。 .Jar ファイルに、クラスをコンパイルして、.jar ファイルとその他の依存関係を使用して、データベースにアップロード、 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL。
 
 外部ライブラリを使用した .jar ファイルをアップロードする方法の例:
 
@@ -116,7 +116,7 @@ EXEC sp_execute_external_script
 with result sets ((column1 int))
 ```
 
-詳細については、[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)を参照してください。
+詳細については、次を参照してください。 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)します。
 
 ## <a name="class-requirements"></a>クラスの要件
 

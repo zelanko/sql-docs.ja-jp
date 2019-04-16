@@ -1,7 +1,7 @@
 ---
 title: sys.external_libraries (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0c24f7a95a7146f4d67d655ec0ed5ec58a53ace
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: d56d0c69b9e3bae87dda9b55d241a1c040210ca9
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492366"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583055"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "58492366"
 R、Python、Java などの外部のランタイムに関連するパッケージ ライブラリの管理をサポートしています。
 
 > [!NOTE]
-> SQL Server 2017 では、R 言語と Windows プラットフォームがサポートされています。 SQL Server 2019 CTP 2.4 では、R、Python、および、Windows と Linux プラットフォーム上の Java がサポートされています。
+> SQL Server 2017 では、R 言語と Windows プラットフォームがサポートされています。 Windows および Linux プラットフォームの R、Python、Java は SQL Server 2019 CTP 2.4 でサポートされています。
 
 ## <a name="sysexternallibraries"></a>sys.external_libraries
 
@@ -47,7 +47,7 @@ R、Python、Java などの外部のランタイムに関連するパッケー�
 |スコープ (scope) |ssNoversion |パブリック スコープ以外の場合は 0プライベート スコープ 1 |  
 |scope_desc |varchar (7) |パッケージがパブリックかプライベートかどうかを示します|
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [外部ライブラリを作成します。](../../t-sql/statements/create-external-library-transact-sql.md)  

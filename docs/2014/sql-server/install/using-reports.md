@@ -36,12 +36,12 @@ ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d8ec04baf292807120ed5a26360878ac7e20442
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070902"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581927"
 ---
 # <a name="using-reports"></a>レポートの使用
   アップグレード アドバイザー分析ウィザードによってサーバー上で分析されたコンポーネントごとまたはインスタンスごとに、個別のレポートが生成されます。 レポートでは、アップグレードに影響する既知の問題の詳細を参照できます。 情報と特定された問題に対処するための推奨されるアクションへのリンクも提供します。  
@@ -85,8 +85,8 @@ ms.locfileid: "48070902"
 ## <a name="see-also"></a>参照  
  [方法: アップグレード アドバイザー レポートを表示します。](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
  [方法: レポートのエクスポート](../../../2014/sql-server/install/how-to-export-reports.md)   
- [方法: レポートをフィルター処理](../../../2014/sql-server/install/how-to-filter-reports.md)   
+ [方法: レポートのフィルター](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [アップグレードの問題を解決します。](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

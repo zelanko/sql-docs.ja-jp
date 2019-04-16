@@ -13,15 +13,15 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9cf8109d1faa9bcd75a6150aea3959f37b79f1cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 22460851ce3136301beaf5d94e7b0a3b39f8217c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136358"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582695"
 ---
 # <a name="specify-merge-replication-properties"></a>マージ レプリケーションのプロパティを指定します
-このトピックでは、マージ レプリケーション用のさまざまなプロパティを指定する方法について説明します。 
+このトピックでは、マージ レプリケーションのさまざまなプロパティを指定する方法について説明します。 
 
 
 ## <a name="download-only"></a>ダウンロード専用
@@ -72,7 +72,7 @@ ms.locfileid: "54136358"
         > [!NOTE]  
         >  アーティクルのソース テーブルが別のパブリケーションで既にパブリッシュされている場合、ダウンロード専用の動作は、両方のアーティクルで同じであることが必要です。  
  
-## <a name="interactive-conflict-resolution"></a>インタラクティブな競合解決
+## <a name="interactive-conflict-resolution">インタラクティブな競合解決</a>
 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションでは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同期マネージャーでの要求時同期中に、手動で競合を解決できるインタラクティブ競合回避モジュールを利用できます。 インタラクティブな競合解決を有効にすると、インタラクティブ競合回避モジュールを使用して、同期実行時に競合がインタラクティブに解決されます。 インタラクティブ競合回避モジュールは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同期マネージャーで利用できます。 詳細については、「[Windows 同期マネージャーを使用したサブスクリプションの同期 &#40;Windows 同期マネージャー&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md)」をご覧ください。  
   
     
@@ -82,7 +82,7 @@ ms.locfileid: "54136358"
   
 ###  <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用  
   
-#### <a name="enable-interactive-conflict-resolution-for-an-article"></a>アーティクルのインタラクティブな競合解決を有効にします。  
+#### <a name="enable-interactive-conflict-resolution-for-an-article"></a>アーティクルに対するインタラクティブな競合解決の有効化  
   
 1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、テーブルを選択します。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](create-a-publication.md)」および「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。    
 2.  **[アーティクルのプロパティ]** をクリックし、次に **[反転表示されたテーブル アーティクルのプロパティを設定]** または **[すべてのテーブル アーティクルのプロパティを設定]** をクリックします。    
@@ -93,13 +93,13 @@ ms.locfileid: "54136358"
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>サブスクリプションでインタラクティブな競合解決を使用するように指定するには  
   
-1.  **サブスクリプションのプロパティ -\<サブスクライバー >:\<SubscriptionDatabase >**  ダイアログ ボックスの値を指定**True**の**の競合を対話的に解決**オプション。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 」および「 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)」を参照してください。 
+1.  **[サブスクリプションのプロパティ - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、**[競合を対話的に解決]** オプションに **[True]** の値を指定します。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 」および「 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)」を参照してください。 
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="using-transact-sql"></a>Transact-SQL の使用  
  マージ パブリケーションに対するプル サブスクリプションが作成されるときに、サブスクライバーがこのグラフィカル インターフェイスを使用してアーティクルの競合を回避するように、プログラムで指定できます。 このオプションをサポートするアーティクル内の競合のみが、インタラクティブ競合回避モジュールに表示されます。  
   
-#### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>対話型の競合回避モジュールを使用するマージ プル サブスクリプションを作成します。  
+#### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>インタラクティブ競合回避モジュールを使用するマージ プル サブスクリプションの作成  
   
 1.  パブリッシャー側のパブリケーション データベースに対し、 [@publication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)を指定して **@publication**を使用して、マージ アーティクルにインタラクティブな競合回避を指定する方法について説明します。 インタラクティブ競合回避モジュールが使用される結果セット内の各アーティクルに対する **allow_interactive_resolver** の値を確認します。    
     -   この値が **1**の場合、インタラクティブ競合回避モジュールが使用されます。    
@@ -113,7 +113,7 @@ ms.locfileid: "54136358"
     -   マージ エージェントが必要とするセキュリティ アカウント情報。 詳細については、「 [Create a Pull Subscription](../create-a-pull-subscription.md)」を参照してください。    
 4.  パブリッシャー側のパブリケーション データベースに対し、 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)を実行します。  
   
-#### <a name="define-an-article-that-supports-the-interactive-resolver"></a>対話型の競合回避モジュールをサポートするアーティクルを定義します。  
+#### <a name="define-an-article-that-supports-the-interactive-resolver"></a>インタラクティブ競合回避モジュールをサポートするアーティクルの定義  
   
 パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)を実行します。 アーティクルが属しているパブリケーションの名前を **@publication** に、アーティクルの名前を **@article** に、パブリッシュされるデータベース オブジェクトを **@source_object** に、値 **true** を **@allow_interactive_resolver** に指定します。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
 
@@ -130,11 +130,11 @@ ms.locfileid: "54136358"
 ###  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **[アーティクルのプロパティ]** ダイアログ ボックスの **[プロパティ]** タブで、マージ アーティクルに対する行レベルまたは列レベルの追跡を指定します。このダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](create-a-publication.md)」および「[View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
-#### <a name="specify-row--or-column-level-tracking"></a>行レベルまたは列レベルの追跡を指定します。  
+#### <a name="specify-row--or-column-level-tracking"></a>行レベルまたは列レベルの追跡の指定  
   
 1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、テーブルを選択します。    
 2.  **[アーティクルのプロパティ]** をクリックし、次に **[反転表示されたテーブル アーティクルのプロパティを設定]** または **[すべてのテーブル アーティクルのプロパティを設定]** をクリックします。   
-3.  **プロパティ**のタブ、**アーティクルのプロパティ\<資料 >** ダイアログ ボックスで、次のいずれかの値を選択、**追跡レベル**プロパティ。**行レベルの追跡**または**列レベルの追跡**します。    
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブで、**[追跡レベル]** プロパティの値として **[行レベルの追跡]** または **[列レベルの追跡]** のいずれかを選択します。    
 4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、**[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
   
 ###  <a name="using-transact-sql"></a>Transact-SQL の使用  
@@ -146,7 +146,7 @@ ms.locfileid: "54136358"
     -   **true** - アーティクルに対して列レベルの追跡を使用します。    
     -   **false** - 既定の行レベルの追跡を使用します。  
   
-#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>マージ アーティクルの競合追跡オプションを変更します。  
+#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>マージ アーティクルの競合追跡オプションの変更  
   
 1.  マージ アーティクルの競合追跡オプションを定義するには、 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)を実行します。 アーティクルの結果セットの **column_tracking** オプションの値を調べます。 値 **1** は、列レベルの追跡が使用されていることを示します。値 **0** は、行レベルの追跡が使用されていることを示します。    
 2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 **@property** に **column_tracking** の値を指定し、**@value** に次のいずれかの値を指定します。
@@ -165,14 +165,14 @@ ms.locfileid: "54136358"
 > [!IMPORTANT]  
 >  この機能を有効にすると、データが収束しなくなります。つまり、サブスクライバーに存在するデータにパブリッシャーのデータが正確に反映されなくなります。 削除された行を手動で削除するためのメカニズムを独自に実装する必要があります。  
   
-### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>新しいマージ アーティクルの削除を無視することを指定します。  
+### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>新しいマージ アーティクルで削除を無視する指定  
   
 1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行します。 値を指定`false`の **@delete_tracking**します。 詳しくは、「 [アーティクルを定義](../publish/define-an-article.md)」をご覧ください。  
   
     > [!NOTE]  
     >  アーティクルのソース テーブルが別のパブリケーションで既にパブリッシュされている場合、両方のアーティクルで **delete_tracking** の値を同じにする必要があります。  
   
-### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>既存のマージ アーティクルに対して削除を無視することを指定します。  
+### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>既存のマージ アーティクルで削除を無視する指定  
   
 1.  アーティクルでエラー補正が有効になっているかどうかを確認するために、[sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) を実行して、結果セット内の **delete_tracking** の値を確認します。 値が **0**の場合、削除は既に無視されています。    
 2.  手順 1. で得た値が **1** だった場合、パブリッシャー側のパブリケーション データベースに対して [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行します。 値を指定**delete_tracking**の **@property**の値と`false`の **@value**します。  
@@ -181,7 +181,7 @@ ms.locfileid: "54136358"
     >  アーティクルのソース テーブルが別のパブリケーションで既にパブリッシュされている場合、両方のアーティクルで **delete_tracking** の値を同じにする必要があります。  
   
 ## <a name="processing-order"></a>処理順序
-  マージ レプリケーションでは、同期処理中にアーティクルをマージ エージェントで処理する順序を指定できます。 この順序は、レプリケーションのストアド プロシージャを使用して、アーティクル作成時に各アーティクルに対してプログラムから割り当てることができます。 アーティクルは、最も小さい値から最も大きい値の順序で処理されます。 2 つのアーティクルの値が同じ場合、それらは同時に処理されます。 詳細については、[マージ レプリケーションの指定プロパティ](../publish/specify-merge-replication-properties.md)を参照してください。  
+  マージ レプリケーションでは、同期処理中にアーティクルをマージ エージェントで処理する順序を指定できます。 この順序は、レプリケーションのストアド プロシージャを使用して、アーティクル作成時に各アーティクルに対してプログラムから割り当てることができます。 アーティクルは、最も小さい値から最も大きい値の順序で処理されます。 2 つのアーティクルの値が同じ場合、それらは同時に処理されます。 詳細については、「[Specify Merge Replication properties](../publish/specify-merge-replication-properties.md)」 (マージ レプリケーションのプロパティの指定) を参照してください。  
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以降では、マージ パブリケーションのアーティクルの既定の処理順序をオーバーライドすることができます。 これは、たとえば、トリガーを使用して参照整合性を定義し、これらのトリガーを特定の順序で起動する必要がある場合に便利です。 
 

@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 44d39a44597a789c031ee10b862bffa2af6da883
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: ac544f145ae5d571f8e4dac979738585b0c13c60
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305631"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581335"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループの RHEL のクラスターを構成します。
 
@@ -49,7 +49,7 @@ ms.locfileid: "58305631"
    >[!IMPORTANT]
    >運用環境では、高可用性の STONITH などのフェンス エージェントが必要です。 このドキュメントでは、フェンス エージェントを使用しないでください。 デモはテストおよび検証のみです。 
    
-   >Linux クラスターでは、フェンスを使用して、既知の状態、クラスターを返します。 フェンスを構成する方法は、ディストリビューションと、環境によって異なります。 現時点では、フェンス操作では、一部のクラウド環境で使用できません。 詳細については、[RHEL 高可用性クラスターの仮想化プラットフォームのサポート ポリシー](https://access.redhat.com/articles/29440)を参照してください。
+   >Linux クラスターでは、フェンスを使用して、既知の状態、クラスターを返します。 フェンスを構成する方法は、ディストリビューションと、環境によって異なります。 現時点では、フェンス操作では、一部のクラウド環境で使用できません。 詳細については、次を参照してください。 [RHEL 高可用性クラスターの仮想化プラットフォームのサポート ポリシー](https://access.redhat.com/articles/29440)します。
 
 5. [可用性グループ、クラスター内のリソースとして追加](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)します。  
 
@@ -89,7 +89,7 @@ RHEL の高可用性を構成するには、高可用性のサブスクリプシ
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-詳細については、[Pacemaker -、オープン ソースの高可用性クラスター](https://clusterlabs.org/pacemaker/)を参照してください。 
+詳細については、次を参照してください。 [Pacemaker -、オープン ソースの高可用性クラスター](https://clusterlabs.org/pacemaker/)します。 
 
 サブスクリプションを構成した後は、 Pacemaker を構成するため次の手順を実行します。
 
@@ -150,7 +150,7 @@ pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
 
-Pacemaker クラスターのプロパティについては、[Pacemaker クラスター プロパティ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)を参照してください。
+Pacemaker クラスターのプロパティについては、次を参照してください。 [Pacemaker クラスター プロパティ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)します。
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Pacemaker 用 SQL Server ログインを作成します。
 
@@ -161,7 +161,7 @@ Pacemaker クラスターのプロパティについては、[Pacemaker クラ�
 可用性グループ リソースを作成するには、`pcs resource create`コマンドを使用し、リソース プロパティを設定します。 次のコマンドで、`ag1`という名前を持つ可用性グループにマスター/スレーブ型のリソース`ocf:mssql:ag`を作成します。
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
 ``` 
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]

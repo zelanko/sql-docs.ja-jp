@@ -13,19 +13,19 @@ ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ac754d9c27afb277701342855107d973f3f625d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 217fc6d3d5a94fb443ea262563255c10bcfc2dda
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374114"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582735"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>レポート サーバーの状態 (SSRS ネイティブ モード)
   このページを使用すると、現在接続しているレポート サーバー インスタンスに関する情報を表示できます。 このページはレポート サーバー構成の開始ページです。 他のページでは、URL、サービス アカウント、レポート サーバーのデータベース、レポート サーバーの電子メール配信、スケールアウト配置、および暗号化キーを構成できます。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード。  
   
- このページを開くには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、レポート サーバー インスタンスに接続します。 詳細については、[Reporting Services 構成マネージャー &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)を参照してください。  
+ このページを開くには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、レポート サーバー インスタンスに接続します。 詳細については、次を参照してください。 [Reporting Services 構成マネージャー &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)します。  
   
 > [!TIP]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] "HighestAvailable"の特権レベルで構成マネージャー (RSConfigTool.exe) がインストールされています。 この動作は仕様による結果です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API と通信する必要があります。 一部の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通信には、高いレベルまたは管理者の特権が必要です。  
@@ -34,7 +34,7 @@ ms.locfileid: "53374114"
   
 ## <a name="options"></a>および  
  **SQL Server インスタンス**  
- 現在接続しているレポート サーバー インスタンスに関する情報が表示されます。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスに基づいています。 既定のインスタンスは MSSQLSERVER です。 名前付きインスタンスは、セットアップ中に指定した値になります。 インスタンスの詳細については、[複数のバージョンと SQL Server のインスタンスを操作](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「を参照してください。  
+ 現在接続しているレポート サーバー インスタンスに関する情報が表示されます。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスに基づいています。 既定のインスタンスは MSSQLSERVER です。 名前付きインスタンスは、セットアップ中に指定した値になります。 インスタンスの詳細については、次を参照してください。[複数のバージョンと SQL Server のインスタンスを操作](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 > [!NOTE]  
 >  SQL Server Express with Advanced Services の既定のインスタンスは SQLExpress です。  
@@ -65,11 +65,11 @@ ms.locfileid: "53374114"
  **サーバーの状態**  
  レポート サーバー サービスが実行中かどうかを示します。  
   
- **[開始]**  
+ **コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇**  
  レポート サーバー サービスを開始します。 たとえば、コンピューター名が変更された後でレポート サーバーを再度構成するときなど、構成を変更した後は、このサービスを再起動する必要があります。 URL 予約を再構成すると、サービスは自動的に再起動されます。 変更を取得するには、サービスを再起動する必要があります。  
   
  **[停止]**  
- レポート サーバー サービスを停止します。 サービスを停止すると、レポート サーバーの動作が停止します。 詳細については、[を起動し、レポート サーバー サービスを停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「を参照してください。  
+ レポート サーバー サービスを停止します。 サービスを停止すると、レポート サーバーの動作が停止します。 詳細については、次を参照してください。[を起動し、レポート サーバー サービスを停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャーの F1 ヘルプ トピック&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   

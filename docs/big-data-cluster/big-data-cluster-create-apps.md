@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.openlocfilehash: 40919c7b300ffed0bdc84f4214b28c8ea71b15b8
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872002"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582447"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server のビッグ データ クラスター (プレビュー) でアプリをデプロイする方法
 
@@ -111,7 +111,7 @@ mssqlctl app create --spec ./addpy
 
 このアプリのサンプル アプリをデプロイするには、という名前のディレクトリで次のファイルを作成`addpy`:
 
-- `add.py`. このファイルに次の Python コードをコピーします。
+- `add.py` 。 このファイルに次の Python コードをコピーします。
    ```py
    #add.py
    def add(x,y):
@@ -119,7 +119,7 @@ mssqlctl app create --spec ./addpy
         return result
     result=add(x,y)
    ```
-- `spec.yaml`. このファイルには、次のコードをコピーします。
+- `spec.yaml` 。 このファイルには、次のコードをコピーします。
    ```yaml
    #spec.yaml
    name: add-app #name of your python script
@@ -299,4 +299,4 @@ mssqlctl app delete --name add-app --version v1
 
 独自のアプリケーションでのクラスターのビッグ データ、SQL Server に展開されているアプリを統合する方法について説明[ビッグ データ クラスター上でアプリケーションを消費する](big-data-cluster-consume-apps.md)詳細についてはします。 その他のサンプルを確認することもできます。[アプリの展開サンプル](https://aka.ms/sql-app-deploy)します。
 
-ビッグ データの SQL Server クラスターの詳細については、[SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)を参照してください。
+ビッグ データの SQL Server クラスターの詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)します。

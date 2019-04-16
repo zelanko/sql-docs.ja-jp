@@ -5,17 +5,17 @@ description: このチュートリアルでは、SQL Server 2019 ビッグ デ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 57605d74e81a6c1c37263fc4088cb70fa3431dec
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: c1c2ccf548b5df91420821a1865120c27edd2c02
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860053"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581265"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>チュートリアル:ビッグ データの SQL Server クラスターで HDFS のクエリ
 
@@ -30,7 +30,7 @@ ms.locfileid: "58860053"
 > * マスター インスタンスで価値の高いデータを持つこのデータを結合します。
 
 > [!TIP]
-> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、、[データ仮想化のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)GitHub でを参照してください。
+> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、次を参照してください。、[データ仮想化のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)GitHub でします。
 
 ## <a id="prereqs"></a> 前提条件
 
@@ -44,7 +44,7 @@ ms.locfileid: "58860053"
 
 記憶域プールには、HDFS に格納されている CSV ファイルでは、web クリック ストリーム データが含まれています。 次の手順を使用すると、そのファイル内のデータにアクセスできる外部テーブルを定義します。
 
-1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、[master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)を参照してください。
+1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、次を参照してください。 [master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)します。
 
 1. 内の接続をダブルクリックして、**サーバー**ウィンドウに SQL Server のマスター インスタンスのサーバー ダッシュ ボードを表示します。 選択**新しいクエリ**します。
 
