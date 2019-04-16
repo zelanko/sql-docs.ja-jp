@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_plan_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0bef01ab6b4ecf1a9f05b1c7b40e2767aaae0db3
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: 62ddfda48429b99558b987cd06c95e96d62702fa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645354"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582099"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -55,7 +55,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|
-|**dbid**|**smallint**|このプランに対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがコンパイルされたときに有効であったコンテキスト データベースの ID。 アドホックおよび準備された SQL ステートメントのステートメントがコンパイルされたデータベースの ID。<br /><br /> 列が null 値を許容します。|  
+|**dbid**|**smallint**|このプランに対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがコンパイルされたときに有効であったコンテキスト データベースの ID。 アドホック SQL ステートメントおよび準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。<br /><br /> 列が null 値を許容します。|  
 |**objectid**|**int**|このクエリ プランのオブジェクト (たとえば、ストアド プロシージャまたはユーザー定義関数) の ID。 アドホックおよび準備されたバッチでは、この列は**null**します。<br /><br /> 列が null 値を許容します。|  
 |**number**|**smallint**|番号付きストアド プロシージャの整数。 ための手順のグループなど、**注文**アプリケーションが付けられて**orderproc; 1**、 **orderproc; 2**など。 アドホックおよび準備されたバッチでは、この列は**null**します。<br /><br /> 列が null 値を許容します。|  
 |**encrypted**|**bit**|対応するストアド プロシージャを暗号化するかどうかを示します。<br /><br /> 0 = 暗号化されていません。<br /><br /> 1 = 暗号化<br /><br /> 列値が許容されません。|  
@@ -64,7 +64,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 ## <a name="remarks"></a>コメント
 このシステム関数では、以降で利用できる[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.4 します。
 
-これはオプトイン機能である必要があります[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)2451 を有効にします。   
+これはオプトイン機能であり、有効にするには[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 が必要です。   
 
 このシステム関数は、の下で動作、**軽量**実行統計プロファイリング インフラストラクチャをクエリします。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。  
 
@@ -86,7 +86,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 -   クエリ プランを使用して指定されている*plan_handle*がプラン キャッシュから削除されています。     
     **OR**    
--   クエリ プランが最初にキャッシュ可能されません。 詳細については、[実行プランのキャッシュと再利用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)を参照してください。
+-   クエリ プランが最初にキャッシュ可能されません。 詳細については、次を参照してください。[実行プランのキャッシュと再利用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)します。
   
 > [!NOTE] 
 > 許可される入れ子のレベルの数の制限により、 **xml**データ型、 **sys.dm_exec_query_plan**を満たす、または入れ子になった要素のレベルが 128 を超えるクエリ プランを返すことはできません。 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この条件は、クエリ プランを返すことを禁止し、生成[エラー 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999)します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 および以降のバージョンで、 **query_plan**列は NULL を返します。  
