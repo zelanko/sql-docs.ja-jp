@@ -1,9 +1,6 @@
 ---
 title: Reporting Services のアップグレードと移行 | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
@@ -12,19 +9,22 @@ helpviewer_keywords:
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: 77bc8ae2bb029218d79025cb97d9fb1ed281fe6c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017183"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583075"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
-  このトピックは、アップグレードおよび移行オプションの概要[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]します。 配置された [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアップグレードするには、次の 2 つの一般的な方法があります。  
+
+このトピックは、アップグレードおよび移行オプションの概要[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]します。 配置された [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアップグレードするには、次の 2 つの一般的な方法があります。  
   
 -   **アップグレード:** サーバーと現在インストールされているインスタンスで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをアップグレードします。 これは一般に "インプレース" アップグレードと呼ばれます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーのモード間でのインプレース アップグレードはサポートされていません。 たとえば、ネイティブ モードのレポート サーバーを SharePoint モードのレポート サーバーにアップグレードすることはできません。 レポート アイテムはモード間で移行できます。 詳細については、このドキュメントと関連のトピックの後半 'Native から SharePoint への移行' セクションを参照してください。 [Sample Reporting Services rs.exe Script to Migrate Content between のレポート サーバー](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)します。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "56017183"
   
 -   IIS で既存の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 仮想ディレクトリに任意のカスタマイズをバックアップします。  
   
--   無効な SSL 証明書を削除します。  これには、有効期限が切れており、Reporting Services をアップグレードする前に更新する予定のない証明書が含まれます。  無効な証明書と、アップグレードが失敗して、次のようなエラー メッセージは、Reporting Services のログ ファイルに書き込みます。**Microsoft.ReportingServices.WmiProvider.WMIProviderException:Web サイトでは、Secure Sockets Layer (SSL) 証明書が構成されていません。**.  
+-   無効な SSL 証明書を削除します。  これには、有効期限が切れており、Reporting Services をアップグレードする前に更新する予定のない証明書が含まれます。  無効な証明書と、アップグレードが失敗して、次のようなエラー メッセージは、Reporting Services のログ ファイルに書き込みます。**Microsoft.ReportingServices.WmiProvider.WMIProviderException:Web サイトでは、Secure Sockets Layer (SSL) 証明書が構成されていません**。  
   
  実稼働環境をアップグレードする前に、必ず実稼働環境と同じ構成をしている実稼動前の環境でアップグレード テストを実行してください。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "56017183"
   
     3.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] やオンライン ブックなどのその他のクライアント ツールはアップグレードされません。 新しいバージョンのツールを取得する場合は、セットアップの実行時に追加できます。 以前のバージョンと [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンが共存します。 サンプルをインストールした場合は、以前のバージョンが残ります。 セットアップでは、SQL Server のサンプルのアップグレードはサポートされません。  
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は個別にダウンロードします。 詳細については、「 [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=325512)」を参照してください。  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は個別にダウンロードします。 詳細については、「 [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)」を参照してください。  
   
 6.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバー サービスのサービス コントロール マネージャーにあるサービス エントリが再利用されます。 このサービスのエントリには、レポート サーバー Windows サービス アカウントが含まれます。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "56017183"
     > [!TIP]  
     >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint コマンドレット `Get-SPRSServiceApplicationServers` を使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 共有サービスを現在実行しているためアップグレードが必要なサーバーを SharePoint ファームで特定します。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 製品用アドイン。 詳細については、[インストールまたは SharePoint 用 Reporting Services アドインのアンインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)を参照してください。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 製品用アドイン。 詳細については、次を参照してください。[インストールまたは SharePoint 用 Reporting Services アドインのアンインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)します。  
   
  SharePoint モードのインストールを移行する方法の詳細な手順は、次を参照してください[Reporting Services のインストール &#40; を移行しますSharePoint モード &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   

@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2542c7c05b222517ae9f4a4c05152f21a5ba293b
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 32648829c64143b4f31a5d27479bbc3d28076fa2
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58859644"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582425"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>HDFS のビッグ データの SQL Server クラスター上の階層制御の構成します。
 
@@ -28,7 +28,7 @@ HDFS の階層制御では、HDFS ファイル システムの HDFS と互換性
 階層化、アプリケーションのシームレスなアクセスさまざまな外部ストアでデータ HDFS にデータが存在する場合と同様。 マウントは、メタデータの操作では、HDFS に経由で外部のファイル システム上の名前空間を表すメタデータがコピーされる場所。 このメタデータには、外部のディレクトリとそのアクセス許可や Acl と共にファイルに関する情報が含まれます。 対応するデータは、データ自体にアクセスする場合にのみコピーした、オンデマンドでです。 外部のファイル システムのデータは、SQL Server のビッグ データ クラスターから今すぐアクセスできます。 行うことができます Spark ジョブと SQL クエリでこのデータ クラスター上の HDFS に格納されているすべてのローカル データで実行するのと同様にします。
 
 > [!NOTE]
-> Microsoft が開発した機能は、HDFS が階層化し、以前のバージョンには、Apache Hadoop 3.1 ディストリビューションの一部としてリリースされています。 詳細については、[ https://issues.apache.org/jira/browse/HDFS-9806 ](https://issues.apache.org/jira/browse/HDFS-9806)詳細についてはを参照してください。
+> Microsoft が開発した機能は、HDFS が階層化し、以前のバージョンには、Apache Hadoop 3.1 ディストリビューションの一部としてリリースされています。 詳細については、次を参照してください。 [ https://issues.apache.org/jira/browse/HDFS-9806 ](https://issues.apache.org/jira/browse/HDFS-9806)詳細についてはします。
 
 次のセクションでは、HDFS、Azure Data Lake ストレージ Gen2 データ ソースと階層化を構成する方法の例を提供します。
 
@@ -136,4 +136,4 @@ mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか。](big-data-cluster-overview.md)。
+SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか](big-data-cluster-overview.md)。

@@ -13,12 +13,12 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ecac95d4cad190133d54e73862d607a719ac9c1
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042201"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582365"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したサブスクリプションの同期 (Windows 同期マネージャー)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が同期マネージャーと同じコンピューターで実行されている場合には、サブスクリプションを Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションに同期させるためだけに使用できます (オフライン ファイルや Web ページを同期するためにも使用できます)。 同期マネージャーを使用するには、以下の手順を実行します。  
@@ -34,7 +34,7 @@ ms.locfileid: "59042201"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効化するには  
   
-1.  **[サブスクリプションのプロパティ - \<サブスクライバー>:\<SubscriptionDatabase>]** ダイアログ ボックスの **[全般]** ページで、**[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
+1.  **[サブスクリプションのプロパティ - \<サブスクライバー>:\<SubscriptionDatabase>]** ダイアログ ボックスの [全般] ページで、**[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -73,7 +73,7 @@ ms.locfileid: "59042201"
   
 2.  以下のタブのプロパティを参照および変更します。  
   
-    -   **Identification**  
+    -   **[識別]**  
   
     -   **[サブスクライバー ログイン]**、 **[ディストリビューター ログイン]**、および **[パブリッシャー ログイン]** (マージ レプリケーションの場合のみ)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "59042201"
   
 ### <a name="to-use-the-interactive-resolver"></a>インタラクティブ競合回避モジュールを使用するには  
   
-1.  アーティクルおよびサブスクリプションで、対話型の競合回避を有効にします。 詳細については、「[マージ アーティクルのインタラクティブな競合回避の指定](../../relational-databases/replication/publish/specify-merge-replication-properties.md#interactive-conflict-resolution)」を参照してください。  
+1.  アーティクルおよびサブスクリプションで、対話型の競合回避を有効にします。 詳細については、「[マージ アーティクルのインタラクティブな競合回避の指定](../../relational-databases/replication/publish/specify-merge-replication-properties.md#interactive-conflict-resolution)」を参照してください。
   
 2.  対話型の競合回避が有効になっており、1 つ以上のアーティクルで競合があると、同期マネージャーでサブスクリプションの同期が開始された後、インタラクティブ競合回避モジュールが自動的に起動されます。 インタラクティブ競合回避モジュールは、一度に 1 つずつ、競合および (パブリケーションとサブスクリプションの作成時に指定した回避モジュールに基づく) 推奨の回避方法を表示します。  
   
@@ -117,4 +117,5 @@ ms.locfileid: "59042201"
 >  編集した内容は、回避を選択した行の一部でなければ適用されません。 たとえば、 **[パブリッシャー]** の下を編集し、 **[サブスクライバーを優先]** をクリックしても、編集内容は破棄されます。  
   
 ## <a name="see-also"></a>参照  
- [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [インタラクティブな競合解決](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+  

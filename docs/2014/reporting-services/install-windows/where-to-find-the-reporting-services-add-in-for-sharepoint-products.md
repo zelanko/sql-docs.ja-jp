@@ -1,30 +1,30 @@
 ---
 title: SharePoint 製品用 Reporting Services アドインの検索場所 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/16/2015
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
-ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 818b927f403d5d58bef41ce1dac033549e106a4c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 11/16/2015
+ms.openlocfilehash: 7c7dc81f4599d6f532ade1914d5561d845dd193e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041033"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582535"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 製品用 Reporting Services アドインの検索場所
-  SharePoint 製品およびテクノロジ (rsSharePoint.msi) 用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) アドインは Web からダウンロードでき、SharePoint で構築した配置にレポート サーバーを統合する機能を提供します。  
+
+SharePoint 製品およびテクノロジ (rsSharePoint.msi) 用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) アドインは Web からダウンロードでき、SharePoint で構築した配置にレポート サーバーを統合する機能を提供します。  
   
 > [!IMPORTANT]  
->  サポートされる組み合わせの一覧については、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アドイン、レポート サーバー、および SharePoint の詳細についてを参照してくださいを参照してください[SharePoint の組み合わせをサポートし、Reporting Services サーバーとアドイン&#40;SQL Server 2014&#41; 。](supported-combinations-of-sharepoint-and-reporting-services-server.md).  
+>  サポートされる組み合わせの一覧については、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アドイン、レポート サーバー、および SharePoint の詳細についてを参照してくださいを参照してください[SharePoint の組み合わせをサポートし、Reporting Services サーバーとアドイン&#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md)。  
   
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SharePoint 製品用 Reporting Services アドイン  
  アドインをダウンロードしてインストールするには、以下の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターを参照してください。  
@@ -63,7 +63,7 @@ ms.locfileid: "56041033"
 ##  <a name="bkmk_sql2008"></a> SQL Server 2008 Reporting Services アドインを SharePoint 2007 製品およびテクノロジ  
  Microsoft SharePoint テクノロジ用 Microsoft SQL Server 2008 Reporting Services アドインは、Windows SharePoint Services 3.0 または Microsoft Office SharePoint Server 2007 で構築した配置内でレポート サーバーを実行するための機能を提供します。  
   
- このファイルの最新バージョンは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターの「 [Microsoft SharePoint テクノロジ用 Microsoft SQL Server 2008 Reporting Services アドイン](https://go.microsoft.com/fwlink/?LinkID=204813)」ページからオンラインで入手できます。  
+ このファイルの最新バージョンは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターの「 [Microsoft SharePoint テクノロジ用 Microsoft SQL Server 2008 Reporting Services アドイン](https://www.microsoft.com/download/details.aspx?id=622)」ページからオンラインで入手できます。  
   
 ## <a name="see-also"></a>参照  
  [インストールまたはアンインストール、Reporting Services アドイン、SharePoint の&#40;SharePoint 2010 および SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
