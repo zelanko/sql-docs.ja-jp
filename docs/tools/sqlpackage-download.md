@@ -1,8 +1,8 @@
 ---
-title: ダウンロードしてインストール sqlpackage |Microsoft Docs
-description: ダウンロードし、Windows、macOS、または Linux の sqlpackage のインストール
+title: sqlpackage をダウンロードしてインストールする | Microsoft Docs
+description: Windows、macOS、または Linux 用の sqlpackage をダウンロードしてインストールします
 ms.custom: tools|sos
-ms.date: 06/19/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.prod_service: sql-tools
@@ -10,40 +10,42 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 5a45803f4ce2a91962a5bba824a468ca436f7839
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7b909df2e97149019d70af49085cc5f1e212f5ee
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240410"
 ---
-# <a name="download-and-install-sqlpackage"></a>ダウンロードしてインストール sqlpackage
+# <a name="download-and-install-sqlpackage"></a>sqlpackage をダウンロードしてインストールする
 
-sqlpackage は、Windows、macOS、Linux で実行されます。
+sqlpackage は Windows、macOS、Linux 上で実行されます。
 
-ダウンロードして、最新の .NET Framework リリースおよび macOS と Linux のプレビューをインストールします。
+.NET Framework の最新リリースと、macOS および Linux のプレビューをダウンロードしてインストールします。
 
 |プラットフォーム|ダウンロード|リリース日|[バージョンのオプション]|ビルド
 |:---|:---|:---|:---|:---|
 |Windows|[MSI インストーラー](https://go.microsoft.com/fwlink/?linkid=2069405)|2019 年 2 月 1 日|18.1|15.0.4316.1|
-|macOS の .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2069126)|2019 年 2 月 1 日 | 18.1 |15.0.4316.1|
-|Linux の .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2069122)|2019 年 2 月 1 日 | 18.1 |15.0.4316.1|
+|macOS .NET Core (プレビュー)|[.zip ファイル](https://go.microsoft.com/fwlink/?linkid=2069126)|2019 年 2 月 1 日 | 18.1 |15.0.4316.1|
+|Linux .NET Core (プレビュー)|[.zip ファイル](https://go.microsoft.com/fwlink/?linkid=2069122)|2019 年 2 月 1 日 | 18.1 |15.0.4316.1|
 
-最新リリースに関する詳細については、次を参照してください。、[リリース ノート](release-notes-sqlpackage.md)します。
+最新リリースに関する詳細については、[リリース ノート](release-notes-sqlpackage.md)をご覧ください。
 
-## <a name="get-sqlpackage-for-windows"></a>Windows の sqlpackage を取得します。
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-Sqlpackage のこのリリースには、標準の Windows インストーラー エクスペリエンスと、.zip が含まれています。 
+## <a name="get-sqlpackage-for-windows"></a>Windows 用の sqlpackage を取得する
 
-1. ダウンロードし、実行、 [DacFramework.msi インストーラーは、Windows を](https://go.microsoft.com/fwlink/?linkid=2069405)します。
-2. 新しいコマンド プロンプト ウィンドウを開き、sqlpackage.exe の実行
-    - sqlpackage にインストールされている、```C:\Program Files\Microsoft SQL Server\150\DAC\bin```フォルダー
-    - X86 をインストールする、x64 バージョン sqlpackage がインストールされているコンピューター、```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin```フォルダー
+このリリースの sqlpackage には、標準の Windows インストーラーのエクスペリエンスと、.zip が含まれています。 
 
-## <a name="get-sqlpackage-preview-for-macos"></a>MacOS の sqlpackage (プレビュー) を取得します。
+1. [Windows 用の DacFramework.msi インストーラー](https://go.microsoft.com/fwlink/?linkid=2069405)をダウンロードして実行します。
+2. 新しいコマンド プロンプト ウィンドウを開き、sqlpackage.exe を実行します
+    - sqlpackage は ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` フォルダーにインストールされます
+    - x86 バージョンを x64 マシンにインストールする場合、sqlpackage は ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin``` フォルダーにインストールされます
 
-1. ダウンロード[macOS 用の sqlpackage](https://go.microsoft.com/fwlink/?linkid=2069126)します。
-2. ファイルを抽出して、sqlpackage の起動、新しいターミナル ウィンドウを開き、次のコマンドを入力します。
+## <a name="get-sqlpackage-preview-for-macos"></a>macOS 用の sqlpackage (プレビュー) を取得する
+
+1. [macOS 用の sqlpackage](https://go.microsoft.com/fwlink/?linkid=2069126) をダウンロードします。
+2. ファイルを抽出して sqlpackage を起動するには、新しいターミナル ウィンドウを開いて次のコマンドを入力します。
 
    **.zip のインストール:**
 
@@ -55,10 +57,10 @@ Sqlpackage のこのリリースには、標準の Windows インストーラー
    sqlpackage
    ```
 
-## <a name="get-sqlpackage-preview-for-linux"></a>Linux の sqlpackage (プレビュー) を取得します。
+## <a name="get-sqlpackage-preview-for-linux"></a>Linux 用の sqlpackage (プレビュー) を取得する
 
-1. ダウンロード[for Linux sqlpackage](https://go.microsoft.com/fwlink/?linkid=2069122)インストーラーまたは tar.gz アーカイブのいずれかを使用しています。
-2. ファイルを抽出して、sqlpackage の起動、新しいターミナル ウィンドウを開き、次のコマンドを入力します。
+1. インストーラーのいずれか、または tar.gz アーカイブを使って、[Linux 用の sqlpackage](https://go.microsoft.com/fwlink/?linkid=2069122) をダウンロードします。
+2. ファイルを抽出して sqlpackage を起動するには、新しいターミナル ウィンドウを開いて次のコマンドを入力します。
 
    **.zip のインストール:**
 
@@ -73,7 +75,7 @@ Sqlpackage のこのリリースには、標準の Windows インストーラー
    ```
 
    > [!NOTE]
-   > Debian、red Hat、Ubuntu では、依存関係が不足しているがあります。 Linux のバージョンによってこれらの依存関係をインストールするのにには、次のコマンドを使用します。
+   > Debian、Redhat、および Ubuntu では、依存関係が不足する場合があります。 ご自身の Linux のバージョンに応じて、次のコマンドを使ってこれらの依存関係をインストールします。
 
    **Debian:**
 
@@ -100,15 +102,15 @@ Sqlpackage のこのリリースには、標準の Windows インストーラー
    sudo apt-get install libicu60      # for 18.x
    ```
 
-## <a name="uninstall-sqlpackage-preview"></a>Sqlpackage (プレビュー) のアンインストールします。
+## <a name="uninstall-sqlpackage-preview"></a>sqlpackage のアンインストール (プレビュー)
 
-Sqlpackage の Windows インストーラーを使用してをインストールした場合は、任意の Windows アプリケーションを削除するのと同じ方法をアンインストールします。
+Windows インストーラーを使って sqlpackage をインストールした場合は、Windows アプリケーションを削除するのと同じ方法でアンインストールします。
 
-.Zip、またはその他のアーカイブを sqlpackage をインストールした場合は、ファイルを削除し、だけです。
+.zip やその他のアーカイブを使って sqlpackage をインストールした場合は、単にファイルを削除します。
 
 ## <a name="supported-operating-systems"></a>サポートされるオペレーティング システム
 
-sqlpackage は、Windows、macOS、および Linux で実行し、次のプラットフォームでサポートされています。
+sqlpackage は、Windows、macOS、および Linux 上で実行されます。また、次のプラットフォーム上でサポートされています。
 
 ### <a name="windows"></a>Windows
 
@@ -135,6 +137,6 @@ sqlpackage は、Windows、macOS、および Linux で実行し、次のプラ�
 
 ## <a name="next-steps"></a>Next Steps
 
-- 詳細については[sqlpackage](sqlpackage.md)
+- [sqlpackage](sqlpackage.md) について詳しく学習する
 
 [Microsoft プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=521839)

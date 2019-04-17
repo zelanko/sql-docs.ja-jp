@@ -32,7 +32,7 @@ ms.locfileid: "47672700"
  バージョンで導入されました ODBC 1.0 標準準拠: 非推奨とされます。  
   
  **概要**  
- ODBC 3。*x*、ODBC 2.0 関数**SQLGetStmtOption**置き換わりました**SQLGetStmtAttr**します。 詳細については、[SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)を参照してください。  
+ ODBC 3.*x* では、ODBC 2.0 の関数 **SQLGetStmtOption** が **SQLGetStmtAttr** に置き換えられました。 詳細については、[SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)を参照してください。  
   
 > [!NOTE]  
 >  詳細についてはどのようなドライバー マネージャーのときに、ODBC 2 には、この関数にマップします。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)付録 g: ドライバーとの下位互換性のためのガイドラインにします。  

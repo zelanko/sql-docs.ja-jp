@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556244"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506559"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI レポート サーバーの統合 (構成マネージャー)
 
@@ -34,15 +34,15 @@ ms.locfileid: "57556244"
 
 - ピン留めするレポートでは、保存された資格情報を使用する必要があります。 これは [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 統合自体の要件ではありませんが、ピン留めされたアイテムの更新プロセスの要件となっています。  レポート アイテムのピン留め操作により、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でのタイルの更新スケジュールを管理する [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]サブスクリプションが作成されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションでは、保存された資格情報が必要です。 レポートで保存された資格情報を使用していない場合、ユーザーは引き続きレポート アイテムをピン留めできますが、関連付けられたサブスクリプションが [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]でデータを更新しようとすると、 **[個人用サブスクリプション]** ページに次のようなエラー メッセージが表示されます。
 
-        PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
+    PowerBI 配信エラー: ダッシュ ボード: IT 支払い分析のサンプル、ビジュアル: Chart2、エラー: 現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報が.
 
 資格情報を保存する方法の詳細については、「 [Reporting Services データ ソースに資格情報を保存する](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)」の「レポート固有のデータ ソース用の保存された資格情報を構成する」を参照してください。
 
 管理者は、  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のログ ファイルで詳細を確認できます。  次のようなメッセージが表示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のログ ファイルを確認および監視する優れた方法として、ファイルに対して [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query を使用します。  詳細情報と短いビデオについては、「 [レポート サーバー サービスのトレース ログ](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。
 
-    subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI 配信エラー: ダッシュ ボード: IT 支払い分析のサンプル、ビジュアル: Chart2、エラー: 現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報がレポート サーバー データベースに格納されていないか、ユーザー データ ソースが、資格情報を要求しないように構成されているにもかかわらず、自動実行アカウントが指定されていません。
 
-    notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI 配信エラー: ダッシュ ボード: IT 支払い分析のサンプル、ビジュアル: Chart2、エラー: 現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報がレポート サーバー データベースに格納されていないか、ユーザー データ ソースが、資格情報を要求しないように構成されているにもかかわらず、自動実行アカウントが指定されていません。
 
 ## <a name="bkmk_steps2integrate"></a> レポート サーバーを統合および登録するには
 
@@ -149,12 +149,12 @@ ms.locfileid: "57556244"
 
 ## <a name="considerations-and-limitations"></a>注意点と制限事項
 
-* バイラルおよび政府のテナントがサポートされていません。
+* バイラルおよび政府用テナントはサポートされていません。
 
 ## <a name="next-steps"></a>次の手順
 
 [Power BI 統合の設定](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[Reporting Services のアイテムを Power BI ダッシュ ボードにピン留め](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
-[Power BI のダッシュ ボード](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
+[Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
+[Power BI のダッシュボード](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)
