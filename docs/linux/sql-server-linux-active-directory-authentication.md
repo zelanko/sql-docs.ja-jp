@@ -13,12 +13,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 5e75a0315c0e632e9637ad1f1467acc90dc586cf
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: e71c4c68a7f04e5f7f33b8635e660a84f501c263
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240780"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671298"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>チュートリアル:SQL Server on Linux で Active Directory 認証を使用します。
 
@@ -42,7 +42,7 @@ ms.locfileid: "59240780"
 AD 認証を構成する前にする必要があります。
 
 * AD ドメイン コント ローラー (Windows)、ネットワークの設定します。  
-* インストール [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストール
   * [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -315,11 +315,11 @@ systemctl restart mssql-server
 ドメイン コント ローラーは、LDAPS をサポートする場合は、LDAPS 経由にするドメイン コント ローラーに SQL Server からのすべての接続を強制することができます。 クライアントは、ドメイン コント ローラーを問い合わせてください ldaps では、次の bash コマンドの実行をチェックする`ldapsearch -H ldaps://contoso.com:3269`します。 のみ LDAPS を使用する SQL Server を設定するには次の手順を実行します。
 
 ```bash
-sudo mssql-conf set network.forceldaps true
+sudo mssql-conf set network.forcesecureldap true
 systemctl restart mssql-server
 ```
 
-AD ドメインに参加している場合、LDAPS を使用して、SSSD 経由ではこのホストが SSSD パッケージを使用して行われたと**disablesssd**が設定されていないを true にします。 場合**disablesssd**に設定されていると true **forceldaps** SQL Server によって行われた openldap ライブラリ呼び出し経由で LDAPS プロトコルを使って true に設定されています。
+AD ドメインに参加している場合、LDAPS を使用して、SSSD 経由ではこのホストが SSSD パッケージを使用して行われたと**disablesssd**が設定されていないを true にします。 場合**disablesssd**に設定されていると true **forcesecureldap** SQL Server によって行われた openldap ライブラリ呼び出し経由で LDAPS プロトコルを使って true に設定されています。
 
 ### <a name="post-sql-server-2017-cu14"></a>Post SQL Server 2017 CU14
 

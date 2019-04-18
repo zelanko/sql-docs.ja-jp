@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b7ca08d7ab73cc90e90717b23d2e5b293022bb1c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582415"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671378"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法
 
@@ -120,6 +120,29 @@ kubectl config view
 >1. 特殊文字が含まれている場合、二重引用符で囲まれた、パスワードをラップすることを確認します。 MSSQL_SA_PASSWORD を任意に設定できますが必ず、十分に複雑な使用しないでください、 `!`、`&`または`'`文字。 コマンドの bash でのみ二重引用符区切り記号の動作に注意してください。
 >1. クラスターの名前は小文字英数字文字、空白のみである必要があります。 すべての Kubernetes ・ アーティファクト (コンテナー、ポッド、ステートフルのセット、サービスなど)、クラスターのクラスターと同じ名前を持つ名前空間に作成されます名を指定します。
 >1. **SA**アカウントは、システム管理者は、セットアップ中に作成される SQL Server マスター インスタンス。 実行して探索可能なは、MSSQL_SA_PASSWORD 環境変数を指定した、SQL Server のコンテナーを作成した後は、コンテナー内の $MSSQL_SA_PASSWORD をエコーします。 セキュリティのために、文書化のベスト プラクティスに従って、SA のパスワードを変更する[ここ](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)します。
+
+YARN 構成オプションの次のセクションの詳細。 注:これらは、エキスパート レベルの構成です。 ユーザーがこれらの値のいずれかを指定する必要はありませんし、その場合、既定値が反映します。 Yarn は、Spark のリソース マネージャーです。 Spark は、記憶域のポッドで実行され、CLUSTER_STORAGE_POOL_REPLICAS を使用して制御できます。
+
+| Yarn の環境変数 | 必須 | 既定値 | 説明 |
+|---|---|---|---|
+| **HADOOP_HEAPSIZE** | いいえ | 2048  | HDFS の名前とデータ ノードのプロセスのヒープ サイズ |
+| **YARN_HEAPSIZE**   | いいえ | 2048  | Yarn RM および NM のプロセスのヒープ サイズ |
+| **YARN_NODEMANAGER_RESOURCE_MEMORY** | いいえ | 18432  | 最大メモリの合計 Yarn は K8 コンテナーごとに使用できます。  |
+| **YARN_NODEMANAGER_RESOURCE_VCORES** | いいえ | 6  | 最大仮想コア数、ノードで Yarn を使用できます。  |
+| **YARN_SCHEDULER_MAX_MEMORY** | いいえ | 18432  | Yarn コンテナーがノードで使用できる最大メモリ  |
+| **YARN_SCHEDULER_MAX_VCORES** | いいえ | 6  | 最大メモリをノードの Yarn コンテナーが使用できます。  |
+| **YARN_SCHEDULER_CAPACITY_MAX_AM_PERCENT** | いいえ | 0.3  | アプリケーションのマスターが使用できる合計メモリの比率   |
+
+このセクションでは、Spark の構成のオプションを示します。 注:これらは、エキスパート レベルの構成です。 ユーザーがこれらの値のいずれかを指定する必要はありませんし、その場合、既定値が反映します。 アプリケーションごとに実行時にユーザーを構成できます %% で spark のノートブックを構成します。
+
+| Spark 環境変数 | 必須 | 既定値 | 説明 |
+|---|---|---|---|
+| **SPARK_DRIVER_MEMORY** | いいえ | 2048  | メモリは、Spark ドライバーを使用します。  |
+| **SPARK_DRIVER_CORES** | いいえ | 1  | Spark ドライバーで使用されるコアの数  |
+| **SPARK_EXECUTOR_INSTANCES** | いいえ | 3  | メモリは、Spark ドライバーを使用します。  |
+| **SPARK_EXECUTOR_MEMORY** | いいえ | 1536  | Spark executor を使用するメモリ |
+| **SPARK_EXECUTOR_CORES** | いいえ | 1  | Spark executor で使用されるコアの数  |
+
 
 ビッグ データ クラスターを展開するために必要な環境変数の設定は、Windows または Linux クライアントを使用しているかどうかによって異なります。  使用しているオペレーティング システムに応じて次の手順を選択します。
 

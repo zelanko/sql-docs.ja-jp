@@ -3,19 +3,19 @@ title: R-SQL データ型の変換 - SQL Server Machine Learning サービス
 description: 明示的および暗黙的なデータ型 converstions を R と SQL Server の間でデータ サイエンスと機械学習ソリューションを確認します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/10/2018
+ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cf293c0efbc5b9da8fe5338b97cb10c30f45320b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 79570a1479078234328a17d4de2a12c821c76f3d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511539"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671118"
 ---
-# <a name="data-type-mappings-betweenr-and-sql-server"></a>データ型のマッピング betweenR および SQL Server
+# <a name="data-type-mappings-between-r-and-sql-server"></a>R と SQL Server 間のデータ型マッピング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server Machine Learning Services での R 統合機能で実行される R ソリューションでは、サポートされていないデータ型、および R ライブラリと SQL Server 間のデータが渡されるときに暗黙的に実行することがあるデータ型変換の一覧を確認してください。
@@ -179,5 +179,5 @@ columnList <- do.call(paste, c(as.list(columns$COLUMN_NAME), sep = ","))
 sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 

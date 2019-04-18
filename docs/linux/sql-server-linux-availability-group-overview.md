@@ -4,18 +4,18 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 11/27/2017
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cec05fbb83bf3b86babfa26df619ebc8f9a2a34d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206621"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671288"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux で可用性グループ
 
@@ -51,13 +51,13 @@ None のクラスターの種類は、要件がないことは、可用性グル
 
 ## <a name="requiredsynchronizedsecondariestocommit"></a>必要な\_同期\_セカンダリ\_に\_コミット
 
-初めて使用する[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]と呼ばれる Ag で使用される設定は、`required_synchronized_secondaries_to_commit`します。 これは、可用性グループに、現在プライマリである必要がありますセカンダリ レプリカの数を指示します。 これにより、自動フェールオーバー (外部のクラスターの種類で Pacemaker と統合) の場合のみなどと適切な数のセカンダリ レプリカがオンラインまたはオフラインの場合は、プライマリの可用性などの動作を制御します。 このしくみの詳細については、[可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)を参照してください。 `required_synchronized_secondaries_to_commit`値が既定で設定され、Pacemaker によって管理される/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]します。 この値を手動で上書きすることができます。
+初めて使用する[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]と呼ばれる Ag で使用される設定は、`required_synchronized_secondaries_to_commit`します。 これは、可用性グループに、現在プライマリである必要がありますセカンダリ レプリカの数を指示します。 これにより、自動フェールオーバー (外部のクラスターの種類で Pacemaker と統合) の場合のみなどと適切な数のセカンダリ レプリカがオンラインまたはオフラインの場合は、プライマリの可用性などの動作を制御します。 このしくみの詳細については、次を参照してください。[可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)します。 `required_synchronized_secondaries_to_commit`値が既定で設定され、Pacemaker によって管理される/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]します。 この値を手動で上書きすることができます。
 
 組み合わせ`required_synchronized_secondaries_to_commit`と新しいシーケンス番号 (に格納されている`sys.availability_groups`) Pacemaker 通知と[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]など、自動フェールオーバーの発生、します。 その場合は、セカンダリ レプリカでは、最新の構成情報がすべて最新であることを意味、プライマリと同じシーケンス番号があります。
 
 に対して設定できる 3 つの値がある`required_synchronized_secondaries_to_commit`:0、1、2 のいずれか。 これらは、レプリカが使用できなくなったときの動作の動作を制御します。 数値は、プライマリと同期する必要がありますセカンダリ レプリカの数に対応します。 動作は、Linux のとおりです。
 
--   0 - 自動フェールオーバーはありませんので、セカンダリ レプリカを同期する必要はありません。 プライマリ データベースは、常に使用できます。
+-   0 - セカンダリ レプリカはプライマリと同期された状態にする必要はありません。 ただし、セカンダリが同期されていない場合がありますいない自動フェールオーバーです。 
 -   1-1 つのセカンダリ レプリカは、プライマリと同期された状態である必要があります。自動フェールオーバーは、可能性があります。 セカンダリ同期レプリカが利用可能になるまで、プライマリ データベースは使用できません。
 -   2-両方のセカンダリ レプリカを 3 つ以上のノードの AG の構成では、プライマリと同期する必要があります。自動フェールオーバーは、可能性があります。
 
@@ -95,7 +95,7 @@ AG の自動フェールオーバーは、次の条件が満たされたとき�
 
 新しいも[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]CU1 の時点では構成専用レプリカ。 Pacemaker は、WSFC とは異なるため、クォーラム STONITH を必要とするときに特に 2 つのノード構成だけは機能しません、AG に。 Fci の場合、クォーラム メカニズム Pacemaker によって提供されるがあります。 問題ありませんが、クラスターの層ですべての FCI フェールオーバー調停が行われるためです。 AG の Linux での調停が行われます[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]すべてのメタデータが格納されます。 これは構成専用レプリカが関係します。
 
-それ以外の質問せず 3 番目のノードと同期されるレプリカの少なくとも 1 つ必要になります。 これには動作しません[!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)]、2 つのレプリカを AG に参加していることがあるできますのみであるためです。 構成のみのレプリカは、AG 構成の他のレプリカと同じで、master データベースで AG 構成を格納します。 構成のみのレプリカの可用性グループに参加しているユーザー データベースではありません。 構成データは、プライマリから同期的に送信されます。 この構成データは、自動または手動でかどうか、フェールオーバー時に使用されます。
+それ以外の質問せず 3 番目のノードと同期されるレプリカの少なくとも 1 つ必要になります。 構成のみのレプリカは、AG 構成の他のレプリカと同じで、master データベースで AG 構成を格納します。 構成のみのレプリカの可用性グループに参加しているユーザー データベースではありません。 構成データは、プライマリから同期的に送信されます。 この構成データは、自動または手動でかどうか、フェールオーバー時に使用されます。
 
 クォーラムを維持し、外部のクラスターの種類で自動フェールオーバーを有効にする可用性グループは、そのいずれかの必要があります。
 
@@ -126,7 +126,7 @@ Windows ベースの Ag の AG に参加しているユーザー データベー
 
 ## <a name="the-listener-under-linux"></a>Linux でリスナー
 
-リスナーは、AG の省略可能な機能です。 アプリケーションとエンドユーザーが、データをホストするサーバーを把握する必要はありませんように単一のエントリ ポイント (プライマリ レプリカまたは読み取り専用セカンダリ レプリカに読み取り/書き込み) のすべての接続を提供します。 Wsfc、これは、ネットワーク名リソースと (必要な) 場合、AD DS に登録された後、IP リソースの組み合わせを DNS と。 可用性グループ リソース自体と組み合わせて、その抽象化を提供します。 リスナーの詳細については、[リスナー、クライアント接続、およびアプリケーションのフェールオーバー](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)を参照してください。
+リスナーは、AG の省略可能な機能です。 アプリケーションとエンドユーザーが、データをホストするサーバーを把握する必要はありませんように単一のエントリ ポイント (プライマリ レプリカまたは読み取り専用セカンダリ レプリカに読み取り/書き込み) のすべての接続を提供します。 Wsfc、これは、ネットワーク名リソースと (必要な) 場合、AD DS に登録された後、IP リソースの組み合わせを DNS と。 可用性グループ リソース自体と組み合わせて、その抽象化を提供します。 リスナーの詳細については、次を参照してください。[リスナー、クライアント接続、およびアプリケーションのフェールオーバー](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)します。
 
 Linux でリスナーが異なる方法で構成されているが、その機能は同じです。 Pacemaker のネットワーク名リソースの概念がないも AD DS 以外のオブジェクトが作成されました。これは、任意のノードで実行できる Pacemaker で作成した IP アドレス リソースだけです。 「表示名」の dns リスナーの IP リソースに関連付けられているエントリを作成する必要があります。 リスナーの IP リソースはその可用性グループのプライマリ レプリカをホストするサーバー上でアクティブになります。
 

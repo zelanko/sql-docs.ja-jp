@@ -1,7 +1,7 @@
 ---
 title: SQL Server Always On 可用性グループ配置パターン |Microsoft Docs
 ms.custom: sql-linux
-ms.date: 10/16/2017
+ms.date: 04/17/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: linux
@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: b0b7e735b2897f8bc942f1d4e6c151f27f588e8c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044935"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671178"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性グループの構成の高可用性とデータの保護
 
@@ -37,7 +37,7 @@ SQL Server 2017 CU 1 により、高可用性を持つ可用性グループの`C
 
 SQL Server 2017 で導入、`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`クラスター リソース設定します。 この設定は、指定した数のセカンダリ レプリカの書き込みのプライマリ レプリカは、各トランザクションをコミットする前にログに記録するトランザクション データを保証します。 外部のクラスター マネージャーを使用するときに、この設定は高可用性とデータ保護の両方に影響します。 設定の既定値は、クラスター リソースの作成時に、アーキテクチャとは異なります。 SQL Server リソース エージェントをインストールするときに`mssql-server-ha`- と可用性グループのクラスター リソースの作成、クラスター マネージャーには、可用性が検出されたグループの構成とセット`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`それに応じて。 
 
-構成、リソース エージェントのパラメーターでサポートされている場合`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`高可用性とデータ保護を提供する値に設定されます。 詳細については、[pacemaker の理解の SQL Server リソース エージェント](#pacemakerNotify)を参照してください。
+構成、リソース エージェントのパラメーターでサポートされている場合`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`高可用性とデータ保護を提供する値に設定されます。 詳細については、次を参照してください。 [pacemaker の理解の SQL Server リソース エージェント](#pacemakerNotify)します。
 
 次のセクションでは、クラスター リソースの既定の動作を説明します。 
 
@@ -62,7 +62,7 @@ SQL Server 2017 で導入、`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`クラ�
 | |読み取りスケール|高可用性 (& a) </br> データの保護 | データ保護|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|プライマリ停止 | 手動フェールオーバー。 データが失われる可能性があります。 新しいプライマリは R/w です |自動フェールオーバー。 新しいプライマリは R/w です |自動フェールオーバー。 前のプライマリが回復し、セカンダリとして可用性グループに参加するまでにも、新しいプライマリはユーザー トランザクションでご利用いただけません。 |
+|プライマリ停止 |自動フェールオーバー。 新しいプライマリは R/w です |自動フェールオーバー。 新しいプライマリは R/w です |自動フェールオーバー。 前のプライマリが回復し、セカンダリとして可用性グループに参加するまでにも、新しいプライマリはユーザー トランザクションでご利用いただけません。 |
 |1 つのセカンダリ レプリカ停止  | R は、プライマリ/w です プライマリが失敗した場合のない自動フェールオーバー。 |R は、プライマリ/w です プライマリにも失敗した場合のない自動フェールオーバー。 | プライマリでは、ユーザー トランザクションで使用できません。 |
 
 <sup>\*</sup> 既定値
@@ -71,7 +71,7 @@ SQL Server 2017 で導入、`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`クラ�
 
 ## <a name="two-synchronous-replicas"></a>2 つの同期レプリカ
 
-この構成では、データの保護を実現します。 その他の可用性グループ構成のような読み取りスケールを有効にすることできます。 2 つの同期レプリカの構成では、自動高可用性は提供されません。 
+この構成では、データの保護を実現します。 その他の可用性グループ構成のような読み取りスケールを有効にすることできます。 2 つの同期レプリカの構成では、自動高可用性は提供されません。 2 つのレプリカの構成は、SQL Server 2017 RTM にのみ適用し、以降でサポートされなく (CU1 以降) のバージョンの SQL Server 2017.
 
 ![2 つの同期レプリカ][1]
 
@@ -84,9 +84,6 @@ SQL Server 2017 で導入、`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`クラ�
 |1 つのセカンダリ レプリカ停止  |プライマリは、データの損失に不安定な実行、読み取り/書き込みです。 |プライマリはセカンダリが復旧するまではユーザー トランザクションで使用できません。|
 
 <sup>\*</sup> 既定値
-
-> [!NOTE]
-> 上記のシナリオでは、SQL Server 2017 CU 1 より前の動作です。 
 
 <a name = "configOnly"></a>
 
