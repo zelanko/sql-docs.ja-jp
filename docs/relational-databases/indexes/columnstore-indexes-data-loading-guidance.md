@@ -1,7 +1,7 @@
 ---
 title: 列ストア インデックス - データ読み込みガイダンス | Microsoft Docs
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 12/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f41165b33bba2a04e3b8f4751377ae63b92309
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668931"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506499"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列ストア インデックス - データ読み込みガイダンス
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 標準的な SQL 一括読み込みとトリクル挿入メソッドを使用して、列ストア インデックスにデータを読み込むためのオプションと推奨事項です。 列ストア インデックスへのデータの読み込みは、分析に備えてデータをインデックスに移動するため、すべてのデータ ウェアハウスのプロセスにおいて不可欠な要素です。
@@ -33,18 +34,18 @@ ms.locfileid: "51668931"
 
 ![クラスター化列ストア インデックスへの読み込み](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
   
- 上記の図に示すように、一括読み込みでは、  
+上記の図に示すように、一括読み込みでは、
   
-* データは事前に並べ替えられません。 データは受信順に行グループに挿入されます。
-* バッチ サイズが 102400 以上の場合、行は圧縮された行グループに直接移動されます。 効率的に一括でインポートするために 102400 以上のバッチ サイズを選択することをお勧めします。バックグラウンド スレッドの組ムーバー (TM) により圧縮された行グループに最終的に行が移動される前に、データ行がデルタ行グループに移動されないようにすることができるためです。
-* バッチ サイズが 102,400 未満の場合、または残りの行が 102,400 未満の場合、行はデルタ行グループに読み込まれます。
+- データは事前に並べ替えられません。 データは受信順に行グループに挿入されます。
+- バッチ サイズが 102400 以上の場合、行は圧縮された行グループに直接移動されます。 効率的に一括でインポートするために 102,400 以上のバッチ サイズを選択することをお勧めします。これにより、バックグラウンド スレッドの組ムーバー (TM) により圧縮された行グループに最終的に行が移動される前に、データ行がデルタ行グループに移動されるのを回避できます。
+- バッチ サイズが 102,400 未満の場合、または残りの行が 102,400 未満の場合、行はデルタ行グループに読み込まれます。
 
 > [!NOTE]
 > 非クラスター化列ストア インデックス データを含む行ストア テーブルでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常にベース テーブルにデータを挿入します。 データが列ストア インデックスに直接挿入されることはありません。  
 
 一括読み込みには、次の組み込みのパフォーマンスの最適化があります。
 -   **並列読み込み:** それぞれ別のデータ ファイルを読み込む、複数の同時一括読み込み (bcp または一括インポート) を行うことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への行ストア一括読み込みとは異なり、各一括インポート スレッドでは排他的ロックを使用して排他的にデータを別の行グループに読み込むため、`TABLOCK` を指定する必要はありません。 `TABLOCK` を使用すると、テーブルで排他的ロックが適用され、データを並列でインポートすることはできません。  
--   **最小限のログ:** 一括読み込みでは、圧縮行グループに直接移動するデータに最小限のログを使用します。 デルタ行グループに移動するデータは、完全に記録されます。 これには、102,400 行未満のバッチ サイズがすべて含まれます。 ただし、一括読み込みの目的は、ほとんどのデータに対してデルタ行グループを使用しないことです。  
+-   **最小ログ記録:** 一括読み込みでは、圧縮行グループに直接移動するデータに最小ログ記録を使用します。 デルタ行グループに移動するデータは、完全に記録されます。 これには、102,400 行未満のバッチ サイズがすべて含まれます。 ただし、一括読み込みの目的は、ほとんどのデータに対してデルタ行グループを使用しないことです。  
 -   **ロックの最適化:** 圧縮された行グループに読み込む場合は、行グループに対する X ロックが獲得されます。 ただし、デルタ行グループへの一括読み込みの場合、X ロックは行グループで獲得されますが、X 行グループ ロックはロック階層の一部ではないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は引き続き PAGE/EXTENT のロックを行います。  
   
 列ストア インデックスに非クラスター化 B ツリー インデックスがある場合、インデックス自体のロックやログの最適化は行われませんが、前述のとおり、クラスター化列ストア インデックスの最適化は引き続き行われます。  
@@ -57,9 +58,10 @@ ms.locfileid: "51668931"
 |一括読み込みを行う行|圧縮された行グループに追加される行|デルタ行グループに追加される行|  
 |-----------------------|-------------------------------------------|--------------------------------------|  
 |102,000|0|102,000|  
-|145,000|145,000<br /><br /> 行グループのサイズ: 145,000|0|  
-|1,048,577|1,048,576<br /><br /> 行グループのサイズ: 1,048,576|1|  
-|2,252,152|2,252,152<br /><br /> 行グループのサイズ: 1,048,576、1,048,576、155,000|0|  
+|145,000|145,000<br /><br /> 行グループのサイズ:145,000|0|  
+|1,048,577|1,048,576<br /><br /> 行グループのサイズ:1,048,576|1|  
+|2,252,152|2,252,152<br /><br /> 行グループのサイズ:1,048,576、1,048,576、155,000|0|  
+| &nbsp; | &nbsp; | &nbsp; |
   
  次の例は、1,048,577 個の行をテーブルに読み込んだ結果を示しています。 この結果では、列ストアに 1 つの圧縮された行グループ (圧縮された列セグメントとして)、およびデルタストアに 1 行があります。  
   
@@ -120,5 +122,6 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
 ## <a name="how-loading-into-a-partitioned-table-works"></a>パーティション テーブルへの読み込みのしくみ  
  パーティション分割されたデータの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はまずパーティションに各行を割り当て、次にパーティション内のデータの columnstore 処理を実行します。 各パーティションには、独自の行グループと少なくとも 1 つのデルタ行グループがあります。  
   
- ## <a name="next-steps"></a>次の手順
- 読み込みの詳細については、こちらの[ブログの投稿](https://blogs.msdn.com/b/sqlcat/archive/2015/03/11/data-loading-performance-considerations-on-tables-with-clustered-columnstore-index.aspx)を参照してください。  
+## <a name="next-steps"></a>次の手順
+
+2015 年 3 月 11 日に記述されたブログが _techcommunity_ でホストされています。[Data Loading performance considerations with Clustered Columnstore indexes (クラスター化列ストア インデックスでのデータ読み込みのパフォーマンスに関する考慮事項)](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223)

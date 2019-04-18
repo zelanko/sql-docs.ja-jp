@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d7cc4c7aaf4dfc085bab1fbb3fd3335dda534a2f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: dd85274454db10b0bd3415ec41aa6cedcd629d0f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257107"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241840"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>PolyBase の構成と Hadoop 用のセキュリティ
 
@@ -33,6 +33,8 @@ Hadoop クラスターで通信を保護する一般的な方法は、hadoop.rpc
      <value></value>
    </property> 
 ```
+
+hadoop.rpc.protection で 'Privacy' または 'Integrity' を使用するには、SQL Server が少なくとも SQL Server 2016 SP1 CU7、SQL Server 2016 SP2、または SQL Server 2017 CU3 である必要があります。
 
 ## <a name="example-xml-files-for-cdh-5x-cluster"></a>CDH 5.X クラスター用のサンプル XML ファイル
 
@@ -156,14 +158,14 @@ MIT KDC を使用して、Kerberos でセキュリティ保護された Hadoop �
    
 3. これらの構成値を、SQL Server コンピューター上の対応するファイル内の値プロパティにコピーします。  
    
-   |**#**|**構成ファイル**|**構成キー**|**操作**|  
+   |**#**|**[構成ファイル]**|**構成キー**|**操作**|  
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|KDC のホスト名を指定します。 例: kerberos.your-realm.com.|  
-   |2|core-site.xml|polybase.kerberos.realm|Kerberos 領域を指定します。 例 :YOUR-REALM.COM|  
-   |3|core-site.xml|hadoop.security.authentication|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例 :KERBEROS<br></br>**セキュリティに関する注意:** KERBEROS は大文字で記述する必要があります。 小文字の場合、機能しない可能性があります。|   
+   |2|core-site.xml|polybase.kerberos.realm|Kerberos 領域を指定します。 例:YOUR-REALM.COM|  
+   |3|core-site.xml|hadoop.security.authentication|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例:KERBEROS<br></br>**セキュリティに関する注意:** KERBEROS は大文字で記述する必要があります。 小文字の場合、機能しない可能性があります。|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: hdfs/_HOST@YOUR-REALM.COM|  
    |5|mapred-site.xml|mapreduce.jobhistory.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: mapred/_HOST@YOUR-REALM.COM|  
-   |6|mapred-site.xml|mapreduce.jobhistory.address|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例 :10.193.26.174:10020|  
+   |6|mapred-site.xml|mapreduce.jobhistory.address|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例:10.193.26.174:10020|  
    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: yarn/_HOST@YOUR-REALM.COM|  
 
 4. 各 Hadoop ユーザーの認証情報を指定するデータベース スコープ資格情報オブジェクトを作成します。 「 [PolyBase T-SQL オブジェクト](../../relational-databases/polybase/polybase-t-sql-objects.md)」を参照してください。  

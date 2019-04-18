@@ -16,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375364"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671368"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>マージ アーティクルのカスタム競合回避モジュールの実装
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] または [COM ベースのカスタム競合回避モジュール](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)を使用して、マージ アーティクルのカスタム競合回避モジュールを実装する方法について説明します。  
@@ -118,7 +118,7 @@ ms.locfileid: "53375364"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>サンプルのカスタム競合回避モジュールの表示  
   
-1.  SQL Server 2000 サンプル ファイルにサンプルが提供されています。 「 **SQL Server 2000 Service Pack 3 用の更新されたサンプル** 」から [sql2000samples.cab](https://www.microsoft.com/download/details.aspx?id=8560)をダウンロードします。 これによって、合計 6.9 MB の 8 つのファイルがダウンロードされます。  
+1.  SQL Server 2000 サンプル ファイルにサンプルが提供されています。 ダウンロード、 [ **sql2000samples.zip**](https://github.com/Microsoft/sql-server-samples/blob/master/samples/tutorials/Miscellaneous/sql2000samples.zip)します。 これにより、6.9 MB に 3 つのファイルがダウンロードされます。  
   
 2.  ダウンロードされた圧縮済み .cab ファイルからファイルを抽出します。  
   

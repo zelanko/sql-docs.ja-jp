@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 43bfe4364543adee0e63e1d123680a82bb3bae39
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241466"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
 
@@ -43,7 +43,7 @@ Scale Out Master のプライマリ ノードに SQL Server データベース �
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 Scale Out Master サービスの DNS ホスト名を Scale Out Master 証明書の CN に含める
 
-このホスト名は、Scale Out Master エンドポイントで使用されます。 (サーバー名ではなく、DNS ホスト名を指定してください。)
+このホスト名は Scale Out Master エンドポイントであり、フェールオーバー クラスター内にクラスター化された汎用サービスとして作成されます (手順 7 を参照してください)。   (サーバー名ではなく、DNS ホスト名を指定してください。)
 
 ![HA マスターの構成](media/ha-master-config.PNG)
 

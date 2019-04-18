@@ -16,14 +16,15 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828022"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516458"
 ---
 # <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーは、コストベースのオプティマイザーです。 つまり、実行のための推定処理コストが最も低いクエリ プランが選択されます。 クエリ オプティマイザーでは、主に次の 2 つの要素に基づいてクエリ プランを実行する際のコストが決定されます。
@@ -53,9 +54,10 @@ ms.locfileid: "56828022"
 - OLTP (オンライン トランザクション処理) クエリ。頻繁に実行され、その複数のインスタンスがしばしば同時に実行されます。  
 - SELECT。OLTP 営業時間中に実行される大量の集計と一緒に実行されます。  
   
-新規の CE で低速で実行するクエリを識別するための手法があります。 そして、パフォーマンスの問題に対処する方法のオプションもあります。     
+新規の CE で低速で実行するクエリを識別するための手法があります。 そして、パフォーマンスの問題に対処する方法のオプションもあります。
   
-## <a name="versions-of-the-ce"></a>CE のバージョン  
+## <a name="versions-of-the-ce"></a>CE のバージョン
+
 1998 年には、CE の主要な更新プログラムは、互換性レベルが 70 の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 の一部でした。 このバージョンの CE モデルは、次の 4 つの基本的な前提条件で設定されています。
 
 -  **非依存性:** 異なる列のデータ分布は、相関関係情報があって使用可能な場合を除き、相互に独立しているものと想定されます。
@@ -106,7 +108,7 @@ GO
  ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
+WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
@@ -293,5 +295,6 @@ WHERE s.ticket = r.ticket AND
  [SQL Server 2014 のカーディナリティ推定機能によるクエリプランの最適化](https://msdn.microsoft.com/library/dn673537.aspx)  
  [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)     
  [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
+ [クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)   

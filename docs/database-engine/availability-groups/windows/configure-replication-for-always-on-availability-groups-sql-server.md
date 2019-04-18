@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be1de83c0b3fccab722933ef1c080d018c5b74c0
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: bbbc8122105df6a9911357734a00c7c633e63687
+ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044319"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59367240"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 可用性グループでレプリケーションを構成する
 
@@ -47,7 +47,7 @@ ms.locfileid: "55044319"
 ##  <a name="step1"></a> 1.データベースのパブリケーションとサブスクリプションを構成する  
  **ディストリビューターの構成**  
   
- ディストリビューション データベースを可用性グループに配置することはできません。  
+ SQL Server 2012 と SQL Server 2014 では、ディストリビューション データベースを可用性グループに配置することはできません。 SQL 2016 以降では、可用性グループへのディストリビューション データベースの配置がサポートされています。 詳しくは、[可用性グループ内のディストリビューション データベースの構成](../../../relational-databases/replication/configure-distribution-availability-group.md)に関する記事をご覧ください。
   
 1.  ディストリビューター側のディストリビューションを構成します。 ストアド プロシージャを使用して構成する場合は、 **sp_adddistributor**を実行します。 *@password* パラメーターを使用して、リモート パブリッシャーからディストリビューターに接続するときに使用するパスワードを指定します。 このパスワードは、各リモート パブリッシャーでリモート ディストリビューターを設定するときにも必要になります。  
   
@@ -214,7 +214,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [AlwaysOn パブリケーション データベースのメンテナンス &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
+-   [レプリケーション、変更の追跡、変更データ キャプチャ、および Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [レプリケーション管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
@@ -230,7 +230,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Always On 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -242,7 +242,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Always On 可用性グループ &#40;SQL Server&#41 の概要](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server のレプリケーション](../../../relational-databases/replication/sql-server-replication.md)  
   

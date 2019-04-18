@@ -10,12 +10,12 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c39fdb8cdb811efecbf84d41ce8778f022001a
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880565"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671428"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server トランザクションのロックおよび行のバージョン管理ガイド
 
@@ -67,7 +67,7 @@ ms.locfileid: "54880565"
 
  アプリケーションは、主にトランザクションの開始タイミングと終了タイミングを指定してトランザクションを制御します。 これについては、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントまたはデータベース アプリケーション プログラミング インターフェイス (API) 関数を使用して指定できます。 また、トランザクションが完了せずに終了した場合、その原因となったエラーがシステムによって正しく処理される必要があります。 詳細については、次を参照してください[トランザクション ステートメント&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql)、 [ODBC でのトランザクション](https://technet.microsoft.com/library/ms131281.aspx)と[トランザクション SQL Server Native Client (OLEDB)](https://msdn.microsoft.com/library/ms130918.aspx).  
   
- 既定では、トランザクションは接続レベルで管理されます。 接続時にトランザクションが開始すると、その接続で実行されるすべての [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントが、トランザクションが終了するまでそのトランザクションの一部になります。 ただし、複数のアクティブな結果セット (MARS) セッションでは、[!INCLUDE[tsql](../includes/tsql-md.md)] の明示的または暗黙的なトランザクションは、バッチ レベルで管理されるバッチスコープのトランザクションになります。 バッチの完了時にバッチスコープのトランザクションがコミットまたはロールバックされていない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により、トランザクションは自動的にロールバックされます。 詳細については、[複数アクティブな結果セット (MARS) SQL Server で](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)を参照してください。  
+ 既定では、トランザクションは接続レベルで管理されます。 接続時にトランザクションが開始すると、その接続で実行されるすべての [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントが、トランザクションが終了するまでそのトランザクションの一部になります。 ただし、複数のアクティブな結果セット (MARS) セッションでは、[!INCLUDE[tsql](../includes/tsql-md.md)] の明示的または暗黙的なトランザクションは、バッチ レベルで管理されるバッチスコープのトランザクションになります。 バッチの完了時にバッチスコープのトランザクションがコミットまたはロールバックされていない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により、トランザクションは自動的にロールバックされます。 詳細については、次を参照してください。[複数アクティブな結果セット (MARS) SQL Server で](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)します。  
   
 #### <a name="starting-transactions"></a>トランザクションの開始  
 
@@ -152,7 +152,7 @@ CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  
 INSERT INTO TestBatch VALUES (2, 'bbb');  
-INSERT INTO TestBatch VALUES (3, 'ccc');  -- Syntax error.  
+INSERT INTO TestBatch VALUSE (3, 'ccc');  -- Syntax error.  
 GO  
 SELECT * FROM TestBatch;  -- Returns no rows.  
 GO  
@@ -691,7 +691,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **並列クエリ実行関連のリソース**。交換ポートに関連付けられたコーディネーター、プロデューサー、またはコンシューマーのスレッドが互いをブロックし、デッドロックを発生させることがあります。通常、この現象は、並列クエリに含まれていない別のプロセスを 1 つ以上含めようとした場合に発生します。 また、並列クエリの実行が開始されると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、現在のワークロードに基づいて並列処理の次数やワーカー スレッドの数を決定します。 たとえば、サーバーで新しいクエリの実行が開始されたり、システムのワーカー スレッドが不足したりするなど、システムのワークロードが予期せず変更される場合は、デッドロックが発生する可能性があります。  
   
--   **複数のアクティブな結果セット (MARS) のリソース**。 これらのリソースは、MARS でアクティブな複数の要求のインターリーブを制御する際に使用します。 詳細については、[複数アクティブな結果セット (MARS) SQL Server で](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)を参照してください。  
+-   **複数のアクティブな結果セット (MARS) のリソース**。 これらのリソースは、MARS でアクティブな複数の要求のインターリーブを制御する際に使用します。 詳細については、次を参照してください。[複数アクティブな結果セット (MARS) SQL Server で](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)します。  
   
     -   **ユーザー リソース**。 ユーザー アプリケーションで制御されている可能性のあるリソースをスレッドが待機している場合、そのリソースは、外部リソースまたはユーザー リソースと見なされ、ロックと同様に処理されます。  
   
@@ -1926,7 +1926,7 @@ GO
   
 -   その後の再起動の復旧フェーズで指定した時間よりもかなり長くかかる場合は、アクティブなトランザクションがコミットされていない多くの変更を実行した後、サーバー インスタンスをシャット ダウン、**復旧間隔**サーバー構成オプションまたは ALTER DATABASE.SET TARGET_RECOVERY_TIME オプションで指定した時間よりもかなり長くかかることがあります。 これらのオプションではそれぞれ、アクティブなチェックポイントと間接的なチェックポイントの生成頻度を制御します。 チェックポイントの種類について詳しくは、「[データベース チェックポイント &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)」をご覧ください。  
   
--   さらに重要な注意事項として、待機状態のトランザクション自体によって生成される可能性のあるログ量はわずかですが、ログの切り捨てが無期限に停止されるため、トランザクション ログが大きくなり、満杯になる可能性があります。 トランザクション ログが満杯になると、データベースでは以降の更新を実行できなくなります。 詳細については、[満杯になったトランザクション ログのトラブルシューティングを行う&#40;SQL Server エラー 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)、および[トランザクション ログ&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)を参照してください。  
+-   さらに重要な注意事項として、待機状態のトランザクション自体によって生成される可能性のあるログ量はわずかですが、ログの切り捨てが無期限に停止されるため、トランザクション ログが大きくなり、満杯になる可能性があります。 トランザクション ログが満杯になると、データベースでは以降の更新を実行できなくなります。 詳細については、次を参照してください。[満杯になったトランザクション ログのトラブルシューティングを行う&#40;SQL Server エラー 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)、および[トランザクション ログ&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)します。  
   
 #### <a name="discovering-long-running-transactions"></a>実行時間の長いトランザクションの検出  
 

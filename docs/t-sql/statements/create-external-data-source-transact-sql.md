@@ -20,14 +20,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 986a658c315241e14efd6fd10b170aaf9fb17da0
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421199"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516528"
 ---
-# <a name="create-external-data-source-transact-sql"></a>外部データ ソース (TRANSACT-SQL) を作成します。
+# <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   PolyBase または Elastic Database クエリ用の外部データ ソースを作成します。 シナリオによっては、構文が大幅に異なります。 PolyBase 用に作成された外部データ ソースは、Elastic Database のクエリには使用できません。  同様に、Elastic Database のクエリ用に作成された外部データ ソースは、PolyBase などには使用できません。 
@@ -157,8 +157,8 @@ port:Namenode IPC ポートです。 これは、Hadoop では、fs.default.name
 
 Hadoop を使用する Azure Blob Storage の場合、Azure Blob Storage に接続するための URI を指定します。  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
-wasb[s]:Azure Blob Storage のプロトコルを指定します。 [S] は省略可能であり、セキュリティ保護された SSL 接続を指定します。SQL Server から送信されたデータは SSL プロトコルを使って安全に暗号化されます。 'Wasb' ではなく ' wasbs' を使用を強くお勧めします。 LOCATION は、wasb [s] の代わりに asv [s] を使用できます。 Asv [s] 構文は非推奨とされており、将来のリリースでは削除されます。  
-container:Azure Blob Storage コンテナーの名前を指定します。 ドメインのストレージ アカウントのルート コンテナーを指定するには、コンテナー名ではなく、ドメイン名を使用します。 ルート コンテナーは、データをバックアップ コンテナーに書き込むことはできませんのでは読み取り専用です。  
+wasb[s]:Azure Blob Storage のプロトコルを指定します。 [s] は省略可能であり、セキュリティ保護された SSL 接続 (SQL Server から送信されるデータが SSL プロトコルを使用して安全に暗号化されます) を指定します。 'wasb' ではなく 'wasbs' の使用を強くお勧めします。 LOCATION は、wasb [s] の代わりに asv [s] を使用できます。 asv[s] 構文は非推奨であり、将来のリリースでは削除されます。  
+container:Azure Blob Storage コンテナーの名前を指定します。 ドメインのストレージ アカウントのルート コンテナーを指定するには、コンテナー名ではなく、ドメイン名を使用します。 ルート コンテナーは読み取り専用なので、このコンテナーにデータを書き込むことはできません。  
 account_name:Azure ストレージ アカウントの完全修飾ドメイン名 (FQDN) です。  
 例: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 RDBMS のチュートリアルについては、[クロスデータベース クエリの概要 (列方向のパーティション分割)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/) のトピックを参照してください。  
 
 **BLOB_STORAGE**   
-この型は、一括操作にのみ使用されます。`LOCATION` は Azure Blob Storage とコンテナーの有効な URL にする必要があります。 `LOCATION` URL の末尾に、**/**、ファイル名、または Shared Access Signature パラメーターを配置しないでください。 `CREDENTIAL` は、BLOB オブジェクトがパブリックでない場合に必須です。 例 : 
+この型は、一括操作にのみ使用されます。`LOCATION` は Azure Blob Storage とコンテナーの有効な URL にする必要があります。 `LOCATION` URL の末尾に、**/**、ファイル名、または Shared Access Signature パラメーターを配置しないでください。 `CREDENTIAL` は、BLOB オブジェクトがパブリックでない場合に必須です。 例: 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -216,7 +216,7 @@ WITH (  TYPE = BLOB_STORAGE,
         CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
 );
 ```
-使用される資格情報は、`SHARED ACCESS SIGNATURE` を ID として使用して作成する必要があり、SASS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付が UTC 時刻です)。 例 :
+使用される資格情報は、`SHARED ACCESS SIGNATURE` を ID として使用して作成する必要があり、SASS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付が UTC 時刻です)。 例:
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
  WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
@@ -229,13 +229,13 @@ Shared Access Signature に関する詳細については、「[Shared Access Si
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
- Hadoop のリソース マネージャーの場所を指定します。 指定した場合、クエリ オプティマイザーは Hadoop の計算の機能と MapReduce を使用して、PolyBase クエリのデータを事前処理することをコストに基づいて決定できます。 述語のプッシュ ダウンが呼び出されると、この Hadoop と SQL の間で転送されるデータ量を大幅に削減し、クエリのパフォーマンス向上します。  
+ Hadoop のリソース マネージャーの場所を指定します。 指定した場合、クエリ オプティマイザーは Hadoop の計算の機能と MapReduce を使用して、PolyBase クエリのデータを事前処理することをコストに基づいて決定できます。 述語のプッシュダウンが呼び出されると、この Hadoop と SQL の間で転送されるデータ量が大幅に減少し、クエリのパフォーマンスが向上します。  
   
  これを指定しない場合、Hadoop への計算のプッシュが、PolyBase クエリに対して無効になります。  
  
 ポートが指定されていない場合、'hadoop connectivity' 構成の現在の設定を使用して、既定値が決まります。
 
-|Hadoop Connectivity|Resource Manager の既定のポート|
+|Hadoop 接続|Resource Manager の既定のポート|
 |-------------------|-----------------------------|
 |1|50300|
 |2|50300|
@@ -248,7 +248,7 @@ Shared Access Signature に関する詳細については、「[Shared Access Si
 各接続値でサポートされている Hadoop ディストリビューションとバージョンの一覧については、「[PolyBase 接続構成 (TRANSACT-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)」を参照してください。
   
 > [!IMPORTANT]  
->  RESOURCE_MANAGER_LOCATION 値は文字列であり、外部データ ソースを作成するときに検証されません。 正しくない値を入力すると、場所にアクセスするときに将来の遅延が発生することができます。  
+>  RESOURCE_MANAGER_LOCATION 値は文字列であり、外部データ ソースを作成するときに検証されません。 正しくない値を入力すると、今後この場所にアクセスするときに遅延が発生する可能性があります。  
   
  Hadoop の例:  
   
@@ -289,18 +289,18 @@ Shared Access Signature に関する詳細については、「[Shared Access Si
  Shard Map Manager (SHARD_MAP_MANAGER) またはリモート データベース (RDBMS) として機能するデータベースの名前です。  
   
  SHARD_MAP_NAME = *'ShardMapName'*  
- SHARD_MAP_MANAGER のみの場合。 シャードのマップの名前。 シャード マップ作成の詳細については、[Elastic Database クエリの概要](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/)に関するトピックを参照してください。  
+ SHARD_MAP_MANAGER のみの場合。 シャード マップの名前。 シャード マップ作成の詳細については、[Elastic Database クエリの概要](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/)に関するトピックを参照してください。  
   
 ## <a name="polybase-specific-notes"></a>PolyBase 固有の注意事項  
 サポートされている外部データ ソースの一覧については、「[PolyBase 接続構成 (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)」を参照してください。
 
- PolyBase を使用するのには、これら 3 つのオブジェクトを作成する必要があります。  
+ PolyBase を使用するには、次の 3 つのオブジェクトを作成する必要があります。  
   
--   外部データ ソースです。  
+-   外部データ ソース。  
   
--   形式は、外部のファイル形式と  
+-   外部ファイル形式。  
   
--   外部データ ソースと外部のファイル形式を参照する外部テーブルです。  
+-   外部データ ソースと外部ファイル形式を参照する外部テーブル。  
   
 ## <a name="permissions"></a>アクセス許可  
  SQL DW、SQL Server、APS 2016 および SQL DB 内のデータベースに対する CONTROL アクセス許可が必要です。
@@ -310,24 +310,28 @@ Shared Access Signature に関する詳細については、「[Shared Access Si
   
   
 ## <a name="error-handling"></a>エラー処理  
- 外部の Hadoop のデータ ソースは、一貫性のあるは、定義されている RESOURCE_MANAGER_LOCATION がない場合、実行時エラーが発生します。 つまり、同じ Hadoop クラスターとしのいずれかと、他のないリソース マネージャーの場所を提供することを参照する 2 つの外部データ ソースを指定できません。  
+ 外部 Hadoop データ ソースで、RESOURCE_MANAGER_LOCATION の定義に一貫性がない場合は実行時エラーが発生します。 つまり、2 つの外部データ ソースで同じ Hadoop クラスターを参照し、リソース マネージャーの場所を片方に提供し、他方には提供しないように指定することはできません。  
   
- SQL エンジンでは、外部データ ソースのオブジェクトの作成時に、外部データ ソースの存在は検証されません。 データ ソースが存在しない場合、クエリの実行中にエラーが発生します。  
+ SQL エンジンでは、外部データ ソースのオブジェクトの作成時に、外部データ ソースの存在は検証されません。 クエリの実行時にデータ ソースが存在しない場合は、エラーが発生します。  
   
 ## <a name="general-remarks"></a>全般的な解説  
 PolyBase の場合、外部データ ソースは SQL Server と SQL Data Warehouse のデータベース スコープです。 これは Parallel Data Warehouse のサーバー スコープです。
   
-PolyBase の場合、RESOURCE_MANAGER_LOCATION または JOB_TRACKER_LOCATION が定義されると、クエリ オプティマイザーは、外部の Hadoop ソース上で Map Reduce ジョブを開始して、計算をプッシュダウンすることで、各クエリの最適化を検討します。 これは、コストベースの判断ではまったくです。  
+PolyBase の場合、RESOURCE_MANAGER_LOCATION または JOB_TRACKER_LOCATION が定義されると、クエリ オプティマイザーは、外部の Hadoop ソース上で Map Reduce ジョブを開始して、計算をプッシュダウンすることで、各クエリの最適化を検討します。 これは、完全にコストベースの決定です。  
 
 Hadoop NameNode フェールオーバーが発生した場合に PolyBase クエリを確実に成功させるには、Hadoop クラスターの NameNode に仮想 IP アドレスを使用することを検討してください。 Hadoop NameNode に仮想 IP アドレスを使用しない場合、Hadoop NameNode フェールオーバーが発生したときに、ALTER EXTERNAL DATA SOURCE オブジェクトが新しい場所をポイントするようにする必要があります。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- Hadoop クラスターの同じ場所で定義されているすべてのデータ ソースが、RESOURCE_MANAGER_LOCATION または JOB_TRACKER_LOCATION の同じ設定を使用する必要があります。 不整合がある場合は、実行時エラーが発生します。  
+ Hadoop クラスターの同じ場所で定義されているすべてのデータ ソースが、RESOURCE_MANAGER_LOCATION または JOB_TRACKER_LOCATION の同じ設定を使用する必要があります。 食い違いがある場合は、実行時エラーが発生します。  
   
- Hadoop クラスターは、名前のセットアップ、外部データ ソースは、IP アドレスを使用してクラスターの場所の場合は、PolyBase をデータ ソースを使用する場合に、クラスター名を解決できないする必要があります。 名前を解決するのには、DNS フォワーダーを有効にする必要があります。  
+ Hadoop クラスターが名前を使用して設定され、外部データ ソースがクラスターの場所として IP アドレスを使用している場合でも、PolyBase では、データ ソースの使用時にクラスター名を解決できる必要があります。 名前を解決するには、DNS フォワーダーを有効にする必要があります。  
+ 
+現時点では、種類が `hadoop` の SAS トークンがサポートされ、ストレージ アカウントのアクセス キーの使用のみがサポートされています。 種類が `hadoop` の外部データ ソースを SAS 資格情報を使用して作成しようとすると、次のエラーで失敗します。
+
+`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   
 ## <a name="locking"></a>ロック  
- 外部データ ソース オブジェクト上には、共有ロックを取得します。  
+ EXTERNAL DATA SOURCE オブジェクトを共有ロックします。  
   
 ##  <a name="examples"></a> 例:SQL Server 2016  
   
@@ -382,7 +386,7 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 
 この例では、外部データ ソースは、myaccount という Azure ストレージ アカウントの下の dailylogs という名前の Azure Blob Storage コンテナーです。 Azure ストレージの外部データ ソースはデータ転送のみで、述語のプッシュダウンはサポートされません。
 
-この例では、Azure ストレージへの認証用にデータベース スコープ資格情報を作成する方法を示します。 データベースの資格情報シークレットで、Azure ストレージ アカウント キーを指定します。 Azure ストレージへの認証に使用しない、データベース スコープ資格情報 ID のすべての文字列を指定します。 次に、資格情報は、外部データ ソースを作成するステートメントで使用されます。
+この例では、Azure ストレージへの認証用にデータベース スコープ資格情報を作成する方法を示します。 データベースの資格情報シークレットに、Azure ストレージ アカウント キーを指定します。 Azure ストレージへの認証に使用しない、データベース スコープ資格情報 ID のすべての文字列を指定します。 その後、この資格情報が外部データ ソースを作成するステートメントで使用されます。
 
 ```
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.

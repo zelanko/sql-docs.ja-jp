@@ -1,7 +1,7 @@
 ---
 title: トランザクション ログ バックアップの適用 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/13/2016
+ms.date: 08/14/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1e4927c1eb0dba333091f231a624db3c8cb7e45
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 777b83d5021a61ea42610680d52345ad4ca001b5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240592"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>トランザクション ログ バックアップの適用 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,19 +61,21 @@ ms.locfileid: "54242173"
 |午後 8 時|トランザクション ログのバックアップ。|  
 |午後 9 時 45 分|障害が発生します。|  
   
-> **注:** この一連のバックアップの例の詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)」を参照してください。  
+> この一連のバックアップの例の詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)」を参照してください。  
   
  午後 9時 45分の状態にデータベースを復元するには (障害の時点)、次の代替手順のいずれかを使用します。  
-  
- **代替手順 1: データベースの最新の完全バックアップを使用したデータベースの復元**  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+ **代替手順 1:データベースの最新の完全バックアップを使用したデータベースの復元**  
   
 1.  障害発生時点にアクティブなトランザクション ログのログ末尾のバックアップを作成します。  
   
 2.  午前 8 時に作成した 復元よりも処理に時間がかかります。 代わりに、より近い時刻の午後 6 時の データベースの完全バックアップを復元してから、午後 8 時の ログ バックアップとログ末尾のバックアップを適用します。  
   
- **代替手順 2: データベースの以前の完全バックアップを使用したデータベースの復元**  
+ **代替手順 2:データベースの以前の完全バックアップを使用したデータベースの復元**  
   
-> **注:** この代替手順は、問題が生じて午後 6 時の 復元よりも処理に時間がかかります。 この方法では、午後 6 時のデータベースの完全バックアップからの 復元よりも処理に時間がかかります。  
+> この代替手順は、問題が生じて午後 6 時の 復元よりも処理に時間がかかります。 この方法では、午後 6 時のデータベースの完全バックアップからの 復元よりも処理に時間がかかります。  
   
 1.  障害発生時点にアクティブなトランザクション ログのログ末尾のバックアップを作成します。  
   
@@ -81,7 +83,7 @@ ms.locfileid: "54242173"
   
      この代替手順は、一連のデータベースの完全バックアップにまたがるトランザクション ログ バックアップのチェーンを保持することにより、冗長性を伴うセキュリティが提供されることになります。  
   
-> **注:** 場合によっては、トランザクション ログを使用して特定の時点までデータベースを復元することもできます。 詳細については、「 [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
+> 場合によっては、トランザクション ログを使用して特定の時点までデータベースを復元することもできます。 詳細については、「 [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **トランザクション ログのバックアップを適用するには**  

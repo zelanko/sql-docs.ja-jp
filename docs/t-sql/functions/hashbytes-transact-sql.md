@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee8626047df76aaf9186295c092623a7cee6d263
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: fb4a69420f4fc3ac7881b2798ef97fc0b202a31f
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570665"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429388"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ## <a name="arguments"></a>引数  
  **'**\<algorithm>**'**  
- 入力のハッシュに使用するハッシュ アルゴリズムを指定します。 これは必須の引数で、既定値はありません。 単一引用符で囲む必要があります。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、SHA2_256 と SHA2_512 以外のすべてのアルゴリズムは使用されなくなりました。 推奨されない古いアルゴリズムは引き続き機能しますが、Deprecation イベントが発生します。  
+ 入力のハッシュに使用するハッシュ アルゴリズムを指定します。 これは必須の引数で、既定値はありません。 単一引用符で囲む必要があります。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、SHA2_256 と SHA2_512 以外のすべてのアルゴリズムは非推奨とされました。  
   
  **@input**  
  ハッシュされるデータを含む変数を指定します。 **@input** は、**varchar**、**nvarchar**、または **varbinary** です。  
@@ -64,7 +64,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="remarks"></a>Remarks  
 ハッシュ値を計算するための別の方法として、`CHECKSUM` または `BINARY_CHECKSUM` の使用を検討してください。
 
-MD2、MD4、MD5、SHA、および SHA1 アルゴリズムは、互換性レベル 130 以上では使用できません。 代わりに SHA2_256 または SHA2_512 を使用してください。
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、MD2、MD4、MD5、SHA、SHA1 のアルゴリズムは非推奨です。 代わりに SHA2_256 または SHA2_512 を使用してください。 以前のアルゴリズムは引き続き機能しますが、Deprecation イベントが発生します。
 
 ## <a name="examples"></a>使用例  
 ### <a name="return-the-hash-of-a-variable"></a>変数のハッシュを返す  
@@ -99,6 +99,6 @@ SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;
 ## <a name="see-also"></a>参照  
 [暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
 [CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[チェックサム (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/checksum-transact-sql.md)  
-[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)  
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[BINARY_CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)  
   

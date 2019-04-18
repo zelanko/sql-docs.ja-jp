@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: ec8ac971776b9b069fa9fb74bea2ee6bc9a22be3
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685729"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429368"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -174,20 +174,20 @@ DBCC CHECKDB は、無効なインデックスについては検査しません�
 
 ユーザー定義型がバイト順としてマークされている場合、シリアル化されたユーザー定義型は 1 つだけ存在する必要があります。 シリアル化されたバイト順のユーザー定義型が一貫して存在していない場合、DBCC CHECKDB の実行中にエラー 2537 が発生します。 詳細については、「[ユーザー定義型の要件](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)」を参照してください。    
 
-[Resource データベース](../../relational-databases/databases/resource-database.md)はシングル ユーザー モードでしか修正できないため、このデータベースに対して DBCC CHECKDB コマンドを直接実行することはできません。 ただし、DBCC CHECKDB を [master データベース](../../relational-databases/databases/master-database.md)に対して実行すると、内部的に次の CHECKDB が Resource データベースに対して実行されます。 このため、DBCC CHECKDB が追加の結果を返す場合があります。 このコマンドでは、オプションが設定されていないか、PHYSICAL_ONLY または ESTIMATEONLY オプションが設定されている場合に、追加の結果セットが返されます。    
+[Resource データベース](../../relational-databases/databases/resource-database.md)はシングル ユーザー モードでしか修正できないため、このデータベースに対して DBCC CHECKDB コマンドを直接実行することはできません。 ただし、DBCC CHECKDB を [master データベース](../../relational-databases/databases/master-database.md)に対して実行すると、内部的に次の CHECKDB が Resource データベースに対して実行されます。 このため、DBCC CHECKDB が追加の結果を返す場合があります。 このコマンドでは、オプションが設定されていないか、`PHYSICAL_ONLY` または `ESTIMATEONLY` オプションが設定されている場合に、追加の結果セットが返されます。    
 
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 以降では、DBCC CHECKDB を実行しても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュは消去**されません**。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 より前のバージョンでは、DBCC CHECKDB を実行すると、プラン キャッシュが消去されます。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下する場合があります。 
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>インデックスに対する論理的な一貫性チェックの実行    
 インデックスに対する論理的な一貫性チェックは、データベースの互換性レベルによって次のように異なります。
 -   互換性レベルが 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 以上の場合:    
--   NOINDEX が指定されていない場合、DBCC CHECKDB は、1 つのテーブルとそのすべての非クラスター化インデックスについて、物理的な一貫性と論理的な一貫性の両方をチェックします。 ただし、XML インデックス、空間インデックス、およびインデックス付きビューでは、既定で物理的な一貫性のみがチェックされます。
--   WITH EXTENDED_LOGICAL_CHECKS が指定されている場合、インデックス付きビュー、XML インデックス、および空間インデックス (存在する場合) に対して論理チェックが実行されます。 既定では、論理的な一貫性のチェック前に物理的な一貫性がチェックされます。 NOINDEX も指定されている場合は、論理チェックのみが実行されます。
+-   `NOINDEX` が指定されていない場合、DBCC CHECKDB は、1 つのテーブルとそのすべての非クラスター化インデックスについて、物理的な整合性チェックと論理的な整合性チェックの両方を実行します。 ただし、XML インデックス、空間インデックス、およびインデックス付きビューでは、既定で物理的な一貫性のみがチェックされます。
+-   `WITH EXTENDED_LOGICAL_CHECKS` が指定されている場合、インデックス付きビュー、XML インデックス、および空間インデックス (存在する場合) に対して論理チェックが実行されます。 既定では、論理的な一貫性のチェック前に物理的な一貫性がチェックされます。 `NOINDEX` も指定されている場合は、論理チェックのみが実行されます。
     
-この論理的な一貫性のチェックでは、インデックス オブジェクトの内部インデックス テーブルが参照先のユーザー テーブルと照合されます。 行の不整合を検出するために、内部テーブルとユーザー テーブルの完全な積集合を実行する内部クエリが作成されます。 このクエリを実行するとパフォーマンスに多大な影響を及ぼす可能性があり、その進行状況は追跡できません。 したがって、物理的な破損とは無関係のインデックスの問題があると考えられる場合、またはページ レベルのチェックサムがオフになっており、列レベルのハードウェアの破損が考えられる場合にのみ、WITH EXTENDED_LOGICAL_CHECKS を指定することをお勧めします。
+この論理的な一貫性のチェックでは、インデックス オブジェクトの内部インデックス テーブルが参照先のユーザー テーブルと照合されます。 行の不整合を検出するために、内部テーブルとユーザー テーブルの完全な積集合を実行する内部クエリが作成されます。 このクエリを実行するとパフォーマンスに多大な影響を及ぼす可能性があり、その進行状況は追跡できません。 したがって、物理的な破損とは無関係のインデックスの問題があると考えられる場合、またはページ レベルのチェックサムがオフになっており、列レベルのハードウェアの破損が考えられる場合にのみ、`WITH EXTENDED_LOGICAL_CHECKS` を指定することをお勧めします。
 -   インデックスがフィルター選択されたインデックスである場合、DBCC CHECKDB は一貫性チェックを実行して、インデックス エントリがフィルター述語に適合していることを確認します。
--   互換性レベルが 90 以下で NOINDEX が指定されていない場合、DBCC CHECKDB は、1 つのテーブルまたはインデックス付きビューと、そのすべての非クラスター化インデックスおよび XML インデックスについて、物理的な一貫性と論理的な一貫性の両方をチェックします。 空間インデックスはサポートされません。  
-- SQL Server 2016 以降では、コストの高い式の評価を避けるため、既定では、保存される計算列、UDT 列、およびフィルター選択されたインデックスへの追加のチェックは実行されません。 この変更により、これらのオブジェクトを含むデータベースに対する CHECKDB の時間が大幅に短縮されます。 ただし、これらのオブジェクトの物理的な整合性チェックは常に実行されます。 EXTENDED_LOGICAL_CHECKS オプションが指定されている場合にのみ、既存の論理チェック (インデックス付きビュー、XML インデックス、および空間インデックス) に加え、EXTENDED_LOGICAL_CHECKS オプションの一部として式の評価が行われます。   
+-   互換性レベルが 90 以下で `NOINDEX` が指定されていない場合、DBCC CHECKDB は、1 つのテーブルまたはインデックス付きビューと、そのすべての非クラスター化インデックスおよび XML インデックスについて、物理的な整合性チェックと論理的な整合性チェックの両方を実行します。 空間インデックスはサポートされません。  
+- SQL Server 2016 以降では、コストの高い式の評価を避けるため、既定では、保存される計算列、UDT 列、およびフィルター選択されたインデックスへの追加のチェックは実行されません。 この変更により、これらのオブジェクトを含むデータベースに対する CHECKDB の時間が大幅に短縮されます。 ただし、これらのオブジェクトの物理的な整合性チェックは常に実行されます。 `EXTENDED_LOGICAL_CHECKS` オプションが指定されている場合にのみ、既存の論理チェック (インデックス付きビュー、XML インデックス、および空間インデックス) に加え、`EXTENDED_LOGICAL_CHECKS` オプションの一部として式の評価が行われます。   
     
 **データベースの互換性レベルを調べるには**
 -   [データベースの互換性レベルの表示または変更](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
@@ -203,7 +203,7 @@ Microsoft SQL Server 2012 または SQL Server の以前のバージョンでは
 たとえば、テーブルに FILESTREAM 属性を使用する **varbinary(max)** 列が含まれている場合、DBCC CHECKDB は、ファイル システムのディレクトリおよびファイルと、テーブルの行、列、および列の値とが一対一でマップされていることをチェックします。 REPAIR_ALLOW_DATA_LOSS オプションを指定すると、DBCC CHECKDB で破損を修復できます。 FILESTREAM の破損を修復するために、DBCC はファイル システム データが欠落しているテーブル行を削除します。
     
 ## <a name="best-practices"></a>ベスト プラクティス    
-運用システムで頻繁に使用する場合は、PHYSICAL_ONLY オプションを使用することをお勧めします。 PHYSICAL_ONLY を使用すると、大規模なデータベースでの DBCC CHECKDB の実行時間を大幅に短縮できます。 また、定期的に、オプションを指定せずに DBCC CHECKDB を実行することもお勧めします。 実行する頻度は、個々の業務とその運用環境によって変わります。
+運用システムで頻繁に使用する場合は、`PHYSICAL_ONLY` オプションを使用することをお勧めします。 PHYSICAL_ONLY を使用すると、大規模なデータベースでの DBCC CHECKDB の実行時間を大幅に短縮できます。 また、定期的に、オプションを指定せずに DBCC CHECKDB を実行することもお勧めします。 実行する頻度は、個々の業務とその運用環境によって変わります。
     
 ## <a name="checking-objects-in-parallel"></a>オブジェクトの並列チェック    
 既定では、DBCC CHECKDB はオブジェクトの並列チェックを実行します。 並列処理の次数は、クエリ プロセッサによって自動的に決定されます。 並列処理の次数の最大値は、並列クエリと同様に構成します。 DBCC チェックに利用できるプロセッサの最大数を制限するには、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用します。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列チェックはトレース フラグ 2528 を使用して無効にできます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。
@@ -394,5 +394,5 @@ GO
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
-[システム テーブル &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+[システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
 

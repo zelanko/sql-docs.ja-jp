@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 0923e52610d5fd0c7907d3edaa061073989d582e
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 44229bbe0bd0a4df65e9dfbfe213c6a14cee0f42
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241904"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) リリース ノート
 
@@ -57,11 +57,11 @@ _Visual Studio 2017 用 SSDT。_
 
 #### <a name="ssis"></a>SSIS
 
-| [新しい項目] | 詳細 |
+| 新しい項目 | 詳細 |
 | :------- | :------ |
 | ADF 2017 の SSIS 用の Power Query ソース (プレビュー) を追加します。 | &nbsp; |
 | SQL Server 2012 のサポートが再び追加されます。 | &nbsp; |
-| SQL Server 2019 用の Oracle ソース/ターゲットを追加します。 | &nbsp; |
+| SQL Server 2019 用の Oracle ソース/ターゲットを追加します。 | SQL Server 2019 をターゲットとする Oracle ソースとターゲットは、SSDT によって既にインストールされています。<br/><br/>2017 以前のバージョンのサーバーをターゲットとするパッケージを設計するには、Microsoft ダウンロード サイトから該当する Oracle コネクターのバージョンをダウンロードして SSDT マシン上にインストールします。 <br/>[Attunity による SQL Server 2017 をターゲットとする Microsoft Connector Version 5.0 for Oracle](https://www.microsoft.com/en-us/download/details.aspx?id=55179)<br/>[Attunity による SQL Server 2016 をターゲットとする Microsoft Connector Version 4.0 for Oracle](https://www.microsoft.com/en-us/download/details.aspx?id=52950)<br/>[Attunity による SQL Server 2014 をターゲットとする Microsoft Connector Version 3.0 for Oracle](https://www.microsoft.com/en-us/download/details.aspx?id=44582)<br/>[Attunity による SQL Server 2012 をターゲットとする Microsoft Connector Version 2.0 for Oracle](https://www.microsoft.com/en-us/download/details.aspx?id=29283)|
 | 以前のバージョンの SSIS から移行する際に、スクリプト タスク/コンポーネントを読み込みできないという問題を修正します。 | &nbsp; |
 | Windows 7 SP1 および Windows 8.1 でデータ ビューアーが機能しないという問題を修正します。 | &nbsp; |
 | パッケージの保存時に Visual Studio がクラッシュすることがあるという問題を修正します。 | &nbsp; |
@@ -397,7 +397,7 @@ _Visual Studio 2015 用 SSDT。_
 
 - プロジェクトを新しい MSBuild 形式にアップグレードした後に、次のようなメッセージで保存が失敗することがあります。
 
-   *"パラメーター '{0}' を NULL にすることはできません。"*
+   *"パラメーター "unevaluatedValue" を NULL にすることはできません。"*
 
    この問題を回避するには、*[プロジェクト構成]* を更新し、*[プラットフォーム]* プロパティを設定してください。
 
@@ -607,12 +607,12 @@ _SQL Server 2017 までのサポート。_
 - 表形式:DAX の解析と数式バーにさまざまな機能強化とパフォーマンス修正を行いました。
 - 表形式:SSAS 表形式プロジェクトが開いていない場合、表形式モデル エクスプローラーが表示されなくなりました。
 - 多次元:高 DPI コンピューターで処理中のダイアログを使用できない問題を修正しました。
-- 表形式:SSMS が既に開いている場合に BI プロジェクトを開くと SSDT で障害が発生する問題を修正しました。( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)を参照)。
-- 表形式:1103 モデルの bim ファイルに階層が正しく保存されない問題を修正しました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)を参照)。
+- 表形式:SSMS が既に開いている場合に BI プロジェクトを開くと SSDT で障害が発生する問題を修正しました。( [接続項目](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- 表形式: 1103 モデルの bim ファイルに階層が正しく保存されない問題を修正しました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)を参照)。
 - 表形式:32 ビット コンピューターで、サポートされていない統合ワークスペース モードが使用できる問題を修正しました。
 - 表形式:半選択モード (DAX 式は入力したが、メジャーをクリックしている場合など) の状態で何かをクリックするとクラッシュする可能性がある問題を修正しました。
-- 表形式:展開ウィザードでモデルの .Name プロパティが "Model" にリセットされる問題を修正しました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)を参照)。
-- 表形式:ダイアログ ビューが選択されていない場合でも、TME で階層を選択するとプロパティが表示される問題を修正しました。
+- 表形式:展開ウィザードでモデルの .Name プロパティが "Model" にリセットされる問題を修正しました ( [接続項目](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- 表形式: ダイアログ ビューが選択されていない場合でも、TME で階層を選択するとプロパティが表示される問題を修正しました。
 - 表形式:特定のアプリケーションから貼り付ける場合、DAX 数式バーに、テキストではなく、イメージまたは他のコンテンツが貼り付けられる問題を修正しました。
 - 表形式:特定の定義のメジャーが存在するため、1103 の一部の古いモデルが開けない問題を修正しました。
 - 表形式:XEvent セッションを削除できない問題を修正しました。
@@ -642,14 +642,14 @@ _SQL Server 2017 までのサポート。_
 - SSDT でレポートをデザインしているときに、大半を変更すると、パラメーターのツリー ビュー、データ ソース、およびデータセットが折りたたまれる問題を修正しました。 
 - 保存の操作で、最新バージョンではなく、RDL のバージョンが保存されるという問題が修正されました。
 - バックアップが無効になっているときに SSDT RS がファイルをバックアップするという問題と他のいくつかの問題が修正されました。
-- レポート ビルダーで [セルの分割] をクリックするとエラーが表示されるという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)を参照)。
-- キャッシュが原因でレポートに誤ったデータが表示される場合があるという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)を参照)。
+- レポート ビルダーで [セルの分割] をクリックするとエラーが表示されるという問題が修正されました ( [接続項目](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- キャッシュが原因でレポートに誤ったデータが表示される場合があるという問題が修正されました ( [接続項目](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
 
 **IS プロジェクト:**
 - run64bitruntime 設定が固定されないという問題が修正されました。
 - DataViewer で表示されている列が保存されないという問題が修正されました。
-- パッケージ パーツで注釈が非表示になるという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)を参照)。
-- パッケージ パーツでデータ フローのレイアウトと注釈が破棄されるという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)を参照)。
+- パッケージ パーツで注釈が非表示になるという問題が修正されました ( [接続項目](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
+- パッケージ パーツでデータ フローのレイアウトと注釈が破棄されるという問題が修正されました ( [接続項目](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
 - SQL Server からのプロジェクトのインポート時に SSDT がクラッシュするという問題が修正されました。
 - 保存されていた SSIS パッケージを開いた後の実行時に Hadoop ファイル システム タスクの TimeoutInMinutes が既定で 10 になる問題を修正しました。
 
@@ -764,7 +764,7 @@ _SQL Server 2016 の場合。_
 
 SqlPackage.exe および Data-Tier Application Framework (DacFx) API でスキーマ比較がサポートされるようになりました。 詳しくは、「 [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)」(SqlPackage および Data-Tier Application Framework におけるスキーマ比較) をご覧ください。
 
-**Analysis Services - SSDT テーブル (SSAS) 統合のワークスペース モード**
+**Analysis Services - SSDT テーブル (SSAS) の統合ワークスペース モード**
 
 SSDT テーブルに内部 SSAS インスタンスが含まれるようになりました。これにより、統合ワークスペース モードが有効な場合は、SSDT テーブルがバックグラウンドで自動的に起動するため、テーブル、列、データをモデル デザイナーで追加および表示できます。外部のワークスペース サーバー インスタンスを指定する必要はありません。 統合ワークスペース モードを使用しても、SSDT テーブルがワークスペース サーバーおよびデータベースと連動するしくみは変わりません。 変わるのは、SSDT テーブルがワークスペース データベースをホストする場所です。 統合ワークスペース モードを有効にするには、新しい表形式プロジェクトの作成時に表示される [テーブル モデル デザイナー] ダイアログ ボックスの [統合ワークスペース] オプションを選択します。 明示的なワークスペース サーバーを現在使用している既存の表形式プロジェクトの場合は、[プロパティ] ウィンドウで [統合ワークスペース モード] パラメーターを True に設定して統合ワークスペース モードに切り替えることができます。このパラメーターは、ソリューション エクスプローラーで Model.bim ファイルを選択すると表示されます。 詳しくは、[Analysis Services に関するブログ記事](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/)をご覧ください。
 
@@ -886,7 +886,7 @@ SSDT の一般提供 (GA) がリリースされました。 2016 年 6 月の SS
 ## <a name="additional-resources"></a>その他のリソース
   
 [SQL Server Data Tools &#40;SSDT&#41; のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)  
-[以前のリリースの SQL Server Data Tools (SSDT と SSDT-BI)](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
+[以前のリリースの SQL Server Data Tools &#40;SSDT と SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [データベース エンジンの新機能](https://msdn.microsoft.com/library/bb510411.aspx)  
 [Analysis Services の新機能](../analysis-services/what-s-new-in-analysis-services.md)  
 [Integration Services の新機能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
