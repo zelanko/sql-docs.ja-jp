@@ -18,16 +18,17 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 8c283fd85aedec31f8774145155fe3b1d7ac9c10
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 932d1a8be595bedf9ccdbddae854a17c4578e64a
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342939"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670838"
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   テキストの特殊文字をエスケープし、エスケープ文字付きのテキストを返します。 **STRING_ESCAPE** は決定的関数です。  
   
@@ -35,18 +36,20 @@ ms.locfileid: "58342939"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql
 STRING_ESCAPE( text , type )  
 ```  
   
-## <a name="arguments"></a>引数  
+## <a name="arguments"></a>引数
+
  *text*  
  エスケープする必要があるオブジェクトを表す **nvarchar**[expression](../../t-sql/language-elements/expressions-transact-sql.md) 式です。  
   
  *type*  
  適用される規則をエスケープします。 現在サポートされている値は `'json'` です。  
   
-## <a name="return-types"></a>戻り値の型  
+## <a name="return-types"></a>戻り値の型
+
  エスケープされた特殊文字と制御文字を含む **nvarchar (max)** テキスト。 現在、**STRING_ESCAPE** は次の表に示すように JSON 特殊文字のみをサポートします。  
   
 |特殊文字|エンコードされたシーケンス|  
@@ -71,31 +74,34 @@ STRING_ESCAPE( text , type )
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  JSON 形式の規則に従ってテキストをエスケープする  
+### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  JSON 形式の規則に従ってテキストをエスケープする
+
  次のクエリでは、JSON の規則を使用して特殊文字をエスケープし、エスケープされたテキストを返します。  
   
-```  
+```sql
 SELECT STRING_ESCAPE('\   /  
 \\    "     ', 'json') AS escapedText;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+```
 escapedText  
 -------------------------------------------------------------  
 \\\t\/\n\\\\\t\"\t
 ```  
   
-### <a name="b-format-json-object"></a>B. JSON オブジェクトの書式設定  
+### <a name="b-format-json-object"></a>B. JSON オブジェクトの書式設定
+
  次のクエリでは、数値変数と文字列変数から JSON テキストを作成し、変数内の任意の JSON 特殊文字をエスケープします。  
   
-```  
-SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',   
+```
+SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
     17, STRING_ESCAPE(@name,'json'), STRING_ESCAPE(@surname,'json') );  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -105,6 +111,4 @@ SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
  [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
-  
-  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

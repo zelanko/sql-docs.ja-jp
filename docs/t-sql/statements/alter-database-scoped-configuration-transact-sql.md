@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fddb5027da7d1b8e33ebcbc53ba403b866eadb8c
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.openlocfilehash: ccc25df3c3567907b50e37164d9090ca63fc58b6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506549"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582955"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -156,7 +156,7 @@ PRIMARY
 
 IDENTITY_CACHE **=** { **ON** | OFF }
 
-**適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 データベース レベルで ID キャッシュを有効または無効にします。 既定値は **ON** です。 ID キャッシュは、ID 列が含まれるテーブルでの INSERT パフォーマンスを改善するために使用されます。 サーバーが突然再起動したか、セカンダリ サーバーにフェールオーバーしたときに ID 列の値に隔たりができることを回避するには、IDENTITY_CACHE オプションを無効にします。 このオプションは、サーバー レベルのみならずデータベース レベルで設定可能という点を除き、既存の[トレース フラグ 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) と似ています。
 
@@ -165,7 +165,7 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 
 INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 複数ステートメントのテーブル値関数のインターリーブ実行は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で有効または無効にできます。 インターリーブ実行は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のアダプティブ クエリ処理の一部の機能です。 詳細については、[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)に関する記事をご覧ください。
 
@@ -174,7 +174,7 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
 バッチ モード メモリ許可フィードバックは、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モード メモリ許可フィードバックは、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です。
 
@@ -183,7 +183,7 @@ BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
 BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
 バッチ モードの適応結合は、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モードの適応結合は、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です。
 
@@ -295,13 +295,13 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
 [軽量クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)を有効または無効にできます。 軽量クエリ プロファイリング インフラストラクチャ (LWP) は、標準のプロファイリング メカニズムよりも効率的にクエリのパフォーマンス データを提供するもので、既定で有効になっています。
 
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
 新しい `String or binary data would be truncated` のエラー メッセージの有効と無効が切り替えられるようになります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、次のシナリオに対してより具体的な新しいエラー メッセージ (2628) が導入されています。  
 
@@ -490,12 +490,12 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION リソース
 
 - [カーディナリティ推定 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [SQL Server 2014 のカーディナリティ推定機能によるクエリ プランの最適化](https://msdn.microsoft.com/library/dn673537.aspx)
+- [SQL Server 2014 のカーディナリティ推定機能によるクエリプランの最適化](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING リソース
 
 - [パラメーター スニッフィング](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
-- ["I smell a parameter!" (パラメーターのにおいがする!)](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
+- ["I smell a parameter!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/) (パラメーターのにおいがする!)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES リソース
 

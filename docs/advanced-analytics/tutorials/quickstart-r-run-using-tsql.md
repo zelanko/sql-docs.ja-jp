@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 1c3ee703bca46bf46dba8225e1d28da3174dc932
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240170"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>クイック スタート: SQL Server で R スクリプトの"hello world" 
@@ -49,7 +49,7 @@ SQL Database での R コードを実行する 2 つの方法はあります。
 
 2. すべての正しい結果正しくセットアップがある場合が計算され、R と`print`関数に結果を返す、**メッセージ**ウィンドウ。
 
-    **[結果]**
+    **結果**
 
     ```text
     STDOUT message(s) from external script: 
@@ -80,7 +80,7 @@ GO
 + *@input_data_1* データ フレームとして SQL Server へデータを返す R ランタイムに渡される、クエリによってデータが返されます。
 + 句の結果セット列名として"Hello World"を追加する、SQL Server の返されたデータ テーブルのスキーマを定義します**int**データ型。
 
-**[結果]**
+**結果**
 
 | ハローワールド |
 |-------------|
@@ -91,4 +91,4 @@ GO
 これで、複数の単純な R スクリプトを実行すると、入力と出力の構成について詳しく見てを実行します。
 
 > [!div class="nextstepaction"]
-> [クイック スタート: 入力と出力の処理](quickstart-r-inputs-and-outputs.md)
+> [クイック スタート:入力と出力を処理します。](quickstart-r-inputs-and-outputs.md)

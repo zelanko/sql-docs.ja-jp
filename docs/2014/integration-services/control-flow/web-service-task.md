@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240811"
 ---
 # <a name="web-service-task"></a>Web サービス タスク
@@ -66,9 +66,9 @@ ms.locfileid: "59240811"
   
 -   [Web サービス タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [[Web サービス タスク エディター] ([入力] ページ)](../web-service-task-editor-input-page.md)  
+-   [Web サービス タスク エディター &#40;[入力] ページ&#41;](../web-service-task-editor-input-page.md)  
   
--   [[Web サービス タスク エディター] ([出力] ページ)](../web-service-task-editor-output-page.md)  
+-   [Web サービス タスク エディター &#40;[出力] ページ&#41;](../web-service-task-editor-output-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   

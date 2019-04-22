@@ -12,20 +12,20 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241740"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>レッスン 6: グループと合計の追加 (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>レッスン 6: グループ化と集計 (Reporting Services) を追加します。
   レポートにグループと合計を追加すると、データを整理して要約できます。  
   
  レポートを実行中の合計を追加する方法についてを参照してください。[Reporting Services (SSRS) レポートに合計を追加](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/)します。  
   
- **このトピックの内容**  
+ **このトピックの内容:**  
   
--   [レポート内のデータをグループ化するには](#bkmk_groupdata)  
+-   [レポートのデータをグループ化](#bkmk_groupdata)  
   
 -   [レポートに合計を追加するには](#bkmk_addtotals)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "59241740"
   
 -   [レポートに総計を追加するには](#bkmk_addgrandtotal)  
   
--   [レポートをレポート サーバーにパブリッシュするには (オプション)](#bkmk_publishreport)  
+-   [(省略可能) レポート サーバーにレポートをパブリッシュするには](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> レポートのデータをグループ化  
   

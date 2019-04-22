@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9c963256ce1d2d0fa37c34d7ea96df60834f125f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241970"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>多次元モデル内のメジャーおよびメジャー グループの作成
@@ -49,7 +49,7 @@ ms.locfileid: "59241970"
 |-|-|  
 |**source**|ほとんどのメジャーは、AdventureWorks データ ウェアハウス内の Internet Sales (インターネット売上) や Reseller Sales (販売店売上) テーブルにある Sales Amount 列など、外部データ ウェアハウス内のファクト テーブルの数値列に由来していますが、定義する計算全体に基づいてメジャーを新規作成することもできます。<br /><br /> ディメンション テーブルの属性列は、メジャーの定義に使用できますが、これらのメジャーの集計動作は、通常、準加法または非加法です。 準加法の動作の詳細については、「 [準加法の動作の定義](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)」を参照してください。|  
 |**集計 (aggregation)**|既定では、各ディメンションに従ってメジャーが集計されます。 ただし、 **AggregateFunction** プロパティを使用するとこの動作を変更できます。 一覧については [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) を参照してください。|  
-|**プロパティ**|プロパティの追加説明については [Configure Measure Properties](../../analysis-services/multidimensional-models/configure-measure-properties.md) を参照してください。|  
+|**Properties**|プロパティの追加説明については [Configure Measure Properties](../../analysis-services/multidimensional-models/configure-measure-properties.md) を参照してください。|  
   
 ##  <a name="bkmk_modeling"></a> ファクトとファクト テーブルでのメジャーとメジャー グループのモデリング  
  ウィザードを実行する前に、メジャーの定義の背後にあるモデリングの原則を理解するのに役立ちます。  

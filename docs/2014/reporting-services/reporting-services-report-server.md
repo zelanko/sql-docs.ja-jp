@@ -26,10 +26,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241630"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
@@ -53,19 +53,19 @@ ms.locfileid: "59241630"
   
 -   [SharePoint モードとネイティブ モードの機能の比較](#bkmk_featuresupport)  
   
--   [ネイティブ モード](#bkmk_nativemode)  
+-   [Native Mode](#bkmk_nativemode)  
   
 -   [SharePoint Web パーツ対応ネイティブ モード](#bkmk_nativewithwebparts)  
   
 -   [SharePoint モード](#bkmk_sharepointmode)  
   
--   [レポートのプロセス、およびスケジュールと配信のプロセス](#bkmk_reportprocessor)  
+-   [レポートのプロセスとスケジュールおよび配信処理](#bkmk_reportprocessor)  
   
 -   [レポート サーバー データベース](#bkmk_reportdatabase)  
   
--   [認証、表示、データ、配信の各拡張機能](#bkmk_authentication)  
+-   [認証、レンダリング、データ、および配信拡張機能](#bkmk_authentication)  
   
--   [Related Tasks](#bkmk_relatedtasks)  
+-   [関連タスク](#bkmk_relatedtasks)  
   
 ##  <a name="bkmk_overview"></a> レポート サーバー モードの概要  
  処理エンジン (プロセッサ) はレポート サーバーの中核となります。 プロセッサはレポート システムの整合性をサポートし、変更したり拡張したりすることはできません。 拡張機能もプロセッサですが、これらはきわめて限られた機能を実行します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、サポートされる拡張機能の種類ごとに、1 つ以上の既定の拡張機能が含まれます。 レポート サーバーにはカスタム拡張機能を追加できます。 これにより、レポート サーバーを拡張し、もともとサポートされていなかった機能を使用できるようにすることができます。たとえば、シングル サインオン テクノロジのサポート、既定の表示拡張機能では処理できないアプリケーション形式でのレポート出力、プリンターやアプリケーションへのレポート配信などのカスタム機能が考えられます。  
@@ -168,7 +168,7 @@ ms.locfileid: "59241630"
 |----------|----------|  
 |ハードウェアおよびソフトウェアの要件を確認します。|「[Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)」を参照してください。|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールします。|[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
-|Web 開発者、またはカスケード スタイル シート作成に関する専門知識を持つユーザーであれば、各自の責任で既定のスタイルを変更し、色、フォント、およびツール バーやレポート マネージャーのレイアウトを変えることができます。 このリリースでは、既定のスタイル シートについても、そのスタイル シートの変更手順についても説明していません。|[HTML ビューアーとレポート マネージャーのスタイル シートのカスタマイズに関する記事 (ページ、サイトなどの場合もあります)](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
+|Web 開発者、またはカスケード スタイル シート作成に関する専門知識を持つユーザーであれば、各自の責任で既定のスタイルを変更し、色、フォント、およびツール バーやレポート マネージャーのレイアウトを変えることができます。 このリリースでは、既定のスタイル シートについても、そのスタイル シートの変更手順についても説明していません。|[HTML ビューアーおよびレポート マネージャーのスタイル シートをカスタマイズする](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
 |HTML のスタイルやカスケード スタイル シート (CSS) の知識があれば、このトピックの情報を利用して、どのファイルを変更するとレポート マネージャーの外観をカスタマイズできるのかを判断できます。|[カスタム認証クッキーを送信するようにレポート マネージャーを構成する](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 |レポート サーバー Web サービスおよび Windows サービスに対するメモリ設定を調整する方法について説明します。|[レポート サーバー アプリケーションで利用可能なメモリの構成](report-server/configure-available-memory-for-report-server-applications.md)|  
 |リモート管理用にレポート サーバーを構成するための推奨されている手順について説明します。|[リモート管理用のレポート サーバーの構成](report-server/configure-a-report-server-for-remote-administration.md)|  

@@ -12,10 +12,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872262"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
@@ -34,7 +34,7 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
 > [!NOTE]  
 >  また、アップグレード計画の一環として、Azure SQL Database のアップグレードや SQL Server 環境の仮想化を考慮する場合もあります。 これらの記事はここでは範囲外ですが、いくつかのリンクを示します。
 >   - [Azure Virtual Machines における SQL Server の概要](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Azure SQL データベース](https://azure.microsoft.com/services/sql-database/) 
+>   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
 >   - [Azure で SQL Server オプションを選択する](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
   
 ## <a name="upgrade-in-place"></a>インプレース アップグレード  

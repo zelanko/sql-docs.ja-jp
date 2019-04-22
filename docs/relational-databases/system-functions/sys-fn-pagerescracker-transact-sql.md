@@ -26,10 +26,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 2fc7136b60dba47813b9942316ee6fdfbc64f307
-ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58899708"
 ---
 # <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker (TRANSACT-SQL)
@@ -52,9 +52,9 @@ sys.fn_PageResCracker ( page_resource )
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|db_id|**ssNoversion**|データベース ID|  
-|file_id|**ssNoversion**|ファイル ID|  
-|page_id|**ssNoversion**|ページ ID|  
+|db_id|**int**|データベース ID|  
+|file_id|**int**|ファイル ID|  
+|page_id|**int**|ページ ID|  
   
 ## <a name="remarks"></a>コメント  
 `sys.fn_PageResCracker` データベースの ID、ID と、ページのページ ID のファイルを含む行セットにデータベース ページの 8 バイトの 16 進形式を変換に使用されます。   
@@ -76,8 +76,8 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.dm_db_page_info &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
- [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+ [sys.dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
+ [sys.sysprocesses &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.dm_exec_requests (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

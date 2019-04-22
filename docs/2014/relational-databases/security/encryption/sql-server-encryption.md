@@ -15,10 +15,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 1484a32eb808e6778896a498d5a6dee525b18aed
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242460"
 ---
 # <a name="sql-server-encryption"></a>SQL Server の暗号化
@@ -40,7 +40,7 @@ ms.locfileid: "59242460"
  データを透過的に暗号化する方法に関する一般情報を提供します。  
   
  [SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化キーでは、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 このセクションでは、暗号化キーを実装および管理する方法について説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の暗号化キーでは、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 このセクションでは、暗号化キーを実装および管理する方法について説明します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [SQL Server の保護](../securing-sql-server.md)  

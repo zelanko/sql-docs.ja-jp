@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 6d8da3ce90e915344f2380d4cd5cc866db6715ef
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476637"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>クイック スタート: SQL Server での Python スクリプトの"hello world" 
@@ -50,7 +50,7 @@ SQL Server での Python コードを実行する 2 つの方法はあります�
 
 2. Python と SQL Server が互いに通信を正しく設定するすべてのものがあると仮定すると、正しい結果が計算される、および Python`print`関数に結果を返す、**メッセージ**windows。
 
-    **[結果]**
+    **結果**
 
     ```text
     STDOUT message(s) from external script: 
@@ -87,7 +87,7 @@ GO
 + *@input_data_1* データ フレームとして SQL Server へデータを返す Python ランタイムに渡される、クエリによってデータが返されます。
 + 句の結果セット列名として"Hello World"を追加する、SQL Server の返されたデータ テーブルのスキーマを定義します**int**データ型。
 
-**[結果]**
+**結果**
 
 | ハローワールド |
 |-------------|
@@ -98,4 +98,4 @@ GO
 これで、複数の単純な Python スクリプトを実行すると、入力と出力の構成について詳しく見てを実行します。
 
 > [!div class="nextstepaction"]
-> [クイック スタート: 入力と出力の処理](quickstart-python-inputs-and-outputs.md)
+> [クイック スタート:入力と出力を処理します。](quickstart-python-inputs-and-outputs.md)

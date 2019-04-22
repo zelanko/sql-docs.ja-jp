@@ -15,22 +15,22 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657806"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774547"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>拡張保護を使用したデータベース エンジンへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **で始まる** 拡張保護 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]がサポートされています。 **認証の拡張保護** とは、オペレーティング システムで実装されているネットワーク コンポーネントの機能です。 **拡張保護** は、Windows 7 および Windows Server 2008 R2 でサポートされており、 **以前のオペレーティング システムでは、** 拡張保護 [!INCLUDE[msCoName](../../includes/msconame-md.md)] がサービス パックに含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続を **拡張保護**を使用して確立することで、安全性を高めることができます。  
   
 > [!IMPORTANT]  
->  既定では、Windows の **拡張保護** は有効になっていません。 Windows で **拡張保護** を有効にする方法の詳細については、「 [認証に対する保護の強化](https://support.microsoft.com/kb/968389)」を参照してください。  
+> 既定では、Windows の **拡張保護** は有効になっていません。 Windows で **拡張保護** を有効にする方法の詳細については、「 [認証に対する保護の強化](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)」を参照してください。
   
 ## <a name="description-of-extended-protection"></a>拡張保護の説明  
  **拡張保護** では、認証リレー攻撃を防止するために、サービス バインドとチャネル バインドが使用されます。 認証リレー攻撃では、NTLM 認証を実行できるクライアント (Windows エクスプローラー、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook、.NET SqlClient アプリケーションなど) が攻撃者のサーバー (悪意のある CIFS ファイル サーバーなど) に接続します。 攻撃者は、そのクライアントの資格情報を使用してクライアントになりすまし、サービス ([!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスのインスタンスなど) への認証を行います。  

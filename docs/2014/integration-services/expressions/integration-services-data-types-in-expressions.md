@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241032"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
@@ -55,13 +55,13 @@ ms.locfileid: "59241032"
   
 -   [== &#40;等しい&#41; &#40;SSIS 式&#41;](equal-ssis-expression.md)  
   
--   [!= &#40;等しくない&#41; &#40;SSIS 式&#41;](unequal-ssis-expression.md)  
+-   [\!= &#40;等しくない&#41; &#40;SSIS 式&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;より大きい&#41; &#40;SSIS 式&#41;](greater-than-ssis-expression.md)  
   
 -   [&#60; &#40;より小さい&#41; &#40;SSIS 式&#41;](less-than-ssis-expression.md)  
   
--   [&#62;= (以上) (SSIS 式)](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= &#40;以上&#41; &#40;SSIS 式&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
 -   [&#60;= &#40;以下&#41; &#40;SSIS 式&#41;](less-than-or-equal-to-ssis-expression.md)  
   

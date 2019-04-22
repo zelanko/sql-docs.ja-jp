@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 629ab86b869e36ec816dc99070f11a88147a1ca8
-ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
+ms.openlocfilehash: 2bb8afe1e20e71245beea8f9482ff0aec4b047ba
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54443698"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671139"
 ---
 # <a name="set-or-change-the-server-collation"></a>サーバーの照合順序の設定または変更
 
@@ -30,7 +30,7 @@ ms.locfileid: "54443698"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>SQL Server でサーバー照合順序を設定する
 
-  サーバー照合順序は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に指定します。 サーバーレベルの既定の照合順序は **SQL_Latin1_General_CP1_CI_AS** です。 Unicode 専用の照合順序はサーバーレベルの照合順序として指定できません。 詳細については、「 [サーバー構成 - 照会順序](/sql/sql-server/install/server-configuration-collation.md)」を参照してください。
+  サーバー照合順序は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に指定します。 サーバーレベルの既定の照合順序は **SQL_Latin1_General_CP1_CI_AS** です。 Unicode 専用の照合順序はサーバーレベルの照合順序として指定できません。 詳細については、「 [Collation and Unicode Support](collation-and-unicode-support.md)」を参照してください。
   
 ## <a name="changing-the-server-collation-in-sql-server"></a>SQL Server でサーバー照合順序を変更する
 
@@ -42,7 +42,7 @@ ms.locfileid: "54443698"
   
 - すべてのユーザー データベースを削除します。  
   
-- **setup** コマンドの SQLCOLLATION プロパティで新しい照合順序を指定して、master データベースを再構築します。 例 :  
+- **setup** コマンドの SQLCOLLATION プロパティで新しい照合順序を指定して、master データベースを再構築します。 例:  
   
     ```sql  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName

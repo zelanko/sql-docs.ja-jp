@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241471"
 ---
 # <a name="create-calculated-members"></a>計算されるメンバーの作成
@@ -37,7 +37,7 @@ ms.locfileid: "59241471"
   
  階層はレベルに分割され、そこにメンバーが含まれています。 各メンバーによってヘッダーが作成されます。 キューブ内のデータを参照中、選択したヘッダーから、これまで表示されていなかった下位のヘッダーにドリル ダウンできます。 計算されるメンバーのヘッダーは、選択した親メンバーの直下に属するレベルに追加されます。  
   
- **式**  
+ **[式]**  
  計算されるメンバーの値を作成する式を指定します。 この式は、多次元式 (MDX) で記述できます。 式には、次の要素を含めることができます。  
   
 -   ディメンション、レベル、メジャーなどのキューブのコンポーネントを表すデータ式  

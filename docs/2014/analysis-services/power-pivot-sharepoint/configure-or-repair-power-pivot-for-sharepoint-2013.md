@@ -12,10 +12,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff7c6dba835d12ed8b05500f037ee0d4ed1361c3
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241810"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>PowerPivot for SharePoint 2013 の構成または修復 (PowerPivot 構成ツール)
@@ -23,17 +23,17 @@ ms.locfileid: "59241810"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
- **このトピックの内容**  
+ **このトピックの内容:**  
   
  [開始前の準備](#bkmk_before)  
   
- [PowerPivot for SharePoint 2013 構成ツールを使用するには](#bkmk_using)  
+ [For SharePoint 2013 構成ツール、PowerPivot を使用するには](#bkmk_using)  
   
  [構成手順](#bkmk_steps)  
   
  [サーバーの構成に使用する入力値](#bkmk_input)  
   
- [次のステップ](#bkmk_nextsteps)  
+ [次の手順](#bkmk_nextsteps)  
   
 ##  <a name="bkmk_before"></a> 開始前の準備  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 2013 構成ツールでは、プログラム ファイル、レジストリ設定、および使用可能なポートをスキャンします。 ツールを最も有効に利用するには、次をご確認ください。  
@@ -116,7 +116,7 @@ ms.locfileid: "59241810"
 ||SharePoint サーバーの全体管理のポート|既定 (必要な場合)|ファームを構成していない場合は、サーバーの全体管理への HTTP エンドポイントの作成など、ファームを作成するためのオプションが提供されます。 使用されていない、ランダムに生成されたポート番号がツールによって選択されます。|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel Services ([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|ユーザー入力|Excel Services で主要な PowerPivot 機能を有効にするには [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーが必須です。 このページで入力するサーバー名も、 **[PowerPivot サーバーの構成]** ページの一覧に追加されます。|  
 |**新しいファームの構成**|[データベース サーバー]<br /><br /> ファーム アカウント<br /><br /> パスフレーズ<br /><br /> SharePoint サーバーの全体管理のポート|既定 (必要な場合)|既定では、メイン ページで入力した設定になります。|  
-|**PowerPivot サービス アプリケーションの作成**|サービス アプリケーション名|既定|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション名。既定の名前は **[既定の PowerPivot サービス アプリケーション]** です。 ツールで別の値に置き換えることができます。|  
+|**PowerPivot サービス アプリケーションを作成します。**|サービス アプリケーション名|既定値|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション名の既定の名前は**Default PowerPivot Service Application**します。 ツールで別の値に置き換えることができます。|  
 ||[データベース サーバー]|既定値|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション データベースをホストするデータベース サーバー。 既定のサーバー名は、ファームに使用するのと同じデータベース サーバーです。 既定のサーバー名以外の値に置き換えることもできます。|  
 ||データベース名|既定値|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション データベース用に作成するデータベースの名前。 既定のデータベース名は、サービス アプリケーション名の後ろに GUID を付けて一意の名前にしたものです。 ツールで別の値に置き換えることができます。|  
 |**[既定の Web アプリケーションの作成]**|Web アプリケーション名|既定 (必要な場合)|Web アプリケーションが存在しない場合は、Web アプリケーションが 1 つ作成されます。 Web アプリケーションがクラシック モード認証用に構成され、ポート 80 でリッスンするようになります。 ファイルの最大アップロード サイズは、SharePoint で許容される最大値の 2047 に設定されます。 サイズの大きい [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ファイルがサーバーにアップロードされる場合は、これに対応するため、これより大きいファイル アップロード サイズが使用されます。|  
@@ -131,7 +131,7 @@ ms.locfileid: "59241810"
 ||連絡先の電子メール|既定 (必要な場合)|サーバーに Microsoft Outlook が構成されている場合は、現在のユーザーの電子メール アドレスが使用されます。 それ以外の場合は、プレースホルダー値が使用されます。|  
 ||サイト URL|既定 (必要な場合)|SharePoint と同じ URL 名前付け規則を使用して、サイト URL が作成されます。|  
 ||サイトのタイトル|既定 (必要な場合)|既定のタイトルとして **[PowerPivot サイト]** が追加されます。|  
-|**サイト コレクション内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能のアクティブ化**|サイトの URL||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能をアクティブにするサイト コレクションの URL。|  
+|**サイト コレクション内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能のアクティブ化**|サイト URL||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能をアクティブにするサイト コレクションの URL。|  
 ||このサイトのプレミアム機能を有効にします||SharePoint サイト機能"PremiumSite"を有効にします。|  
 |**Secure Store Service アプリケーションの作成**|サービス アプリケーション名|既定 (必要な場合)|Secure Store Service アプリケーションの名前を入力します。|  
 ||[データベース サーバー]|ユーザー入力|Secure Store Service アプリケーションに使用するデータベース サーバーの名前を入力します。|  
@@ -205,8 +205,8 @@ ms.locfileid: "59241810"
   
 ## <a name="see-also"></a>参照  
  [For SharePoint アドインの PowerPivot のアンインストールをインストールまたは&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)   
- [サーバーの全体管理での PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [PowerPivot 構成ツール](power-pivot-configuration-tools.md)   
+ [サーバーの全体管理で PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

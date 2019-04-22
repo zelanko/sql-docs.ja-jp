@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bc44d24631454e792b150750508647019411631
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: 230a3cb352dca689ee891eca6c6bfd6f516b6ebc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533360"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774577"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL データベースでのインテリジェントなクエリ処理
 
@@ -26,7 +26,7 @@ ms.locfileid: "59533360"
 
 インテリジェントなクエリ処理 (QP) 機能ファミリには、実装の労力は最小限で適応できる、既存のワークロードのパフォーマンスを改善する、広範な影響がある機能が含まれています。 
 
-![インテリジェントなクエリ処理](./media/3_iqpfeaturefamily.png)
+![インテリジェントなクエリ処理](./media/iqp-feature-family.png)
 
 データベースに対して適用可能なデータベース互換性レベルを有効にすることにより、自動的にワークロードをインテリジェントなクエリ処理の対象にすることができます。 これは Transact-SQL を使って設定できます。 例:  
 

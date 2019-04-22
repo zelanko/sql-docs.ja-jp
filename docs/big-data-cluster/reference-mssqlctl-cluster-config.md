@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 57b77e83994f8471e677ba2ba367acc48a66cddd
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860023"
 ---
 # <a name="mssqlctl-cluster-config"></a>mssqlctl クラスターの構成
@@ -26,7 +26,7 @@ ms.locfileid: "58860023"
 
 |||
 |---|---|
-| [取得](#get) | クラスターを取得します。 |
+| [get](#get) | クラスターを取得します。 |
 
 ## <a id="get"></a> mssqlctl クラスター構成を取得します。
 
@@ -43,7 +43,7 @@ mssqlctl cluster config get
 | パラメーター | 説明 |
 |---|---|
 | **--name -n** | クラスター名 kubernetes 名前空間に使用をします。 必須。 |
-| **-出力ファイル f** | 結果を格納する出力ファイル。 必須。 |
+| **--output-file -f** | 結果を格納する出力ファイル。 必須。 |
 
 ## <a name="next-steps"></a>次のステップ
 

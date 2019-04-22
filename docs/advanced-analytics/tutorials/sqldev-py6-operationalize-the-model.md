@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 77d08db22ca7ff1b4b66620d277280f0c1ac314e
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860583"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>ストアド プロシージャに埋め込まれた Python を使用して予測を実行します。
@@ -355,6 +355,6 @@ GO
 
 [トレーニングし、Python モデルの保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [SQL Server での Python 拡張機能](../concepts/extension-python.md)

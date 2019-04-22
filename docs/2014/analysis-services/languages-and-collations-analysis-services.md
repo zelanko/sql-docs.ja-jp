@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241830"
 ---
 # <a name="languages-and-collations-analysis-services"></a>言語および照合順序 (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows オペレーティング システムが提供する言語と照合順序をサポートします。 `Language` `Collation`プロパティは、インストール中に、最初に、インスタンス レベルで設定されますが、オブジェクト階層のさまざまなレベルで後で変更できます。  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows オペレーティング システムが提供する言語と照合順序をサポートします。 `Language` プロパティと `Collation` プロパティはインストール中、最初にインスタンス レベルで設定されますが、後でオブジェクト階層のさまざまなレベルで変更できます。  
   
  多次元モデルの場合 (のみ)、データベースまたはキューブのこれらのプロパティを設定することができます - キューブ内のオブジェクト用に作成した翻訳に設定することもできます。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "59241830"
   
  さらに、設定`Language`、単独での**翻訳**オブジェクト。  
   
- キューブまたはディメンションに翻訳を追加するときに、翻訳オブジェクトが作成されます。 `Language` 翻訳の定義の一部です。 `Collation`、その一方で、キューブまたは以降では、設定は、すべての翻訳で共有されます。 これは、翻訳を含むキューブの XMLA で、複数の言語プロパティが (各翻訳に 1 つ) 表示されるのに、照合順序は 1 つしか表示されないことから明らかです。 ディメンションの属性の翻訳には、1 つの例外があり、キューブの照合順序をオーバーライドして、ソース列と一致する属性の照合順序を指定できます (データベース エンジンは個々の列の照合順序の設定をサポートし、各翻訳が別のソース列からメンバー データを取得するよう構成することは一般的です)。 しかし、そうでない場合は、他のすべての翻訳で `Language` が単独で使用され、`Collation` の推論は使用されません。 詳細については、「[翻訳 &#40;Analysis Services&#41;](translations-analysis-services.md)」を参照してください。  
+ キューブまたはディメンションに翻訳を追加するときに、翻訳オブジェクトが作成されます。 `Language` は、翻訳定義の一部です。 対照的に、`Collation` はキューブ以上で設定され、すべての翻訳で共有されます。 これは、翻訳を含むキューブの XMLA で、複数の言語プロパティが (各翻訳に 1 つ) 表示されるのに、照合順序は 1 つしか表示されないことから明らかです。 ディメンションの属性の翻訳には、1 つの例外があり、キューブの照合順序をオーバーライドして、ソース列と一致する属性の照合順序を指定できます (データベース エンジンは個々の列の照合順序の設定をサポートし、各翻訳が別のソース列からメンバー データを取得するよう構成することは一般的です)。 しかし、そうでない場合は、他のすべての翻訳で `Language` が単独で使用され、`Collation` の推論は使用されません。 詳細については、「[翻訳 &#40;Analysis Services&#41;](translations-analysis-services.md)」を参照してください。  
   
 ##  <a name="bkmk_lang"></a> Analysis Services での言語サポート  
  `Language` プロパティは、処理中やクエリで、また `Captions` および `Translations` で多言語シナリオをサポートするために使用されるオブジェクトのロケールを設定します。 ロケールは、英語などの言語識別子、および米国やオーストラリアなどの地域に基づき、日付と時刻の表現をさらにきめ細かく調整します。  
@@ -185,7 +185,7 @@ ms.locfileid: "59241830"
  GB18030 は中華人民共和国が単独で中国語の文字のエンコードに使用している標準規格です。 GB18030 文字の長さは 1 バイト、2 バイト、4 バイトのいずれかです。 Analysis Services では、外部ソースからデータを処理する場合、データ変換はありません。 データは Unicode として格納されます。 クエリ時に、クライアント OS の設定に基づいてテキスト データがクエリの結果として返されると、Analysis Services クライアント ライブラリ (具体的には MSOLAP.dll OLE DB プロバイダー) を介して GB18030 変換が実行されます。 データベース エンジンは、GB18030 もサポートしています。 詳細については、「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services 多次元のグローバル化のシナリオ](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Analysis Services 多次元のグローバリゼーションのシナリオ](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   

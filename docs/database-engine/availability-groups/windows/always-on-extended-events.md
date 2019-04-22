@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860633"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 可用性グループの拡張イベントを構成する
@@ -81,7 +81,7 @@ alwayson_health でカバーされているイベントの一部については�
   
  [availability_replica_manager_state](#BKMK_availability_replica_manager_state)  
   
- [error_reported (1480):データベース レプリカのロールの変更](#BKMK_error_reported_1480)  
+ [error_reported (1480): データベース レプリカのロールの変更](#BKMK_error_reported_1480)  
   
 ###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  可用性レプリカの状態が変化したときに発生します。 このイベントは、可用性グループの作成または可用性レプリカの追加によってトリガーすることができます。 失敗した自動フェールオーバーを診断する場合に便利です。 フェールオーバーの各手順をトレースするためにも使用できます。  

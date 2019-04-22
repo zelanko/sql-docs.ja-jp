@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240380"
 ---
 # <a name="xml-source"></a>XML ソース
@@ -69,15 +69,15 @@ ms.locfileid: "59240380"
   
  XML ソースでは、複数の標準出力と複数のエラー出力がサポートされています。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring には、XML ソースを構成する **[XML ソース エディター]** ダイアログ ボックスがあります。sこのダイアログ ボックスは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから利用できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、XML ソースを構成するための **[XML ソース エディター]** ダイアログ ボックスがあります。 このダイアログ ボックスは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから利用できます。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
  **[XML ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[XML ソース エディター] ([接続マネージャー] ページ)](../xml-source-editor-connection-manager-page.md)  
+-   [[XML ソース エディター] &#40;[接続マネージャー] ページ&#41;](../xml-source-editor-connection-manager-page.md)  
   
--   [[XML ソース エディター] ([列] ページ)](../xml-source-editor-columns-page.md)  
+-   [[XML ソース エディター] &#40;[列] ページ&#41;](../xml-source-editor-columns-page.md)  
   
 -   [XML ソース エディター &#40;[エラー出力] ページ&#41;](../xml-source-editor-error-output-page.md)  
   

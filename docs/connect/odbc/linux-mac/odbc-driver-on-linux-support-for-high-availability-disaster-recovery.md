@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4f307efedd62a1fcc923a2e61da8636a89e40bb
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042381"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux と macOS の ODBC ドライバーでの高可用性とディザスター リカバリーのサポート
@@ -76,7 +76,7 @@ DNS サーバーから最初に返された IP アドレスに接続できない
 
 ## <a name="odbc-syntax"></a>ODBC 構文
 
-次の 2 つの ODBC 接続文字列キーワードは、 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]をサポートしています。  
+次の 2 つの ODBC 接続文字列キーワードは、[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]をサポートしています。  
   
 -   **ApplicationIntent**  
   

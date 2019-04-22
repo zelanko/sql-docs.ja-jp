@@ -17,15 +17,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d3e667f743b153b965e788d9d7485b311aec5bc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dd0d134e723a8ca45729933cbbf5b0d75bbde7e6
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034549"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774587"
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>アクティブ Geo レプリケーション - sp_wait_for_database_copy_sync
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   このプロシージャは、プライマリとセカンダリの間の[!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] リレーションシップを対象としています。 呼び出す、 **sp_wait_for_database_copy_sync**により、アプリケーションは、すべてのコミットされたトランザクションがレプリケートされ、アクティブなセカンダリ データベースによって確認されるまで待機します。 実行**sp_wait_for_database_copy_sync**プライマリ データベースだけにします。  
   
@@ -42,24 +42,24 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 ## <a name="arguments"></a>引数  
  [ @target_server = ] 'server_name'  
- アクティブなセカンダリ データベースをホストする SQL データベース サーバーの名前。 server_name のデータ型は sysname で、既定値はありません。  
+ アクティブなセカンダリ データベースをホストする SQL データベース サーバーの名前。 server_name が sysname で、既定値はありません。  
   
  [ @target_database = ] 'database_name'  
- アクティブなセカンダリ データベースの名前。 database_name のデータ型は sysname で、既定値はありません。  
+ アクティブなセカンダリ データベースの名前。 database_name が sysname で、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0 を、失敗した場合はエラー番号を返します。  
   
- 発生する可能性が高いエラー条件を次に示します。  
+ 最も可能性の高いエラー条件は次のとおりです。  
   
 -   サーバー名またはデータベース名がない。  
   
 -   指定されたサーバー名またはデータベースに対するリンクが見つからない。  
   
--   インターリンク接続が失われている。 **sp_wait_for_database_copy_sync**接続タイムアウトの後に戻ります。  
+-   インター リンク接続が失われます。 **sp_wait_for_database_copy_sync**接続タイムアウトの後に戻ります。  
   
 ## <a name="permissions"></a>アクセス許可  
- プライマリ データベース内のすべてのユーザーが、このシステム ストアド プロシージャを呼び出すことができます。 ログインは、プライマリ データベースとアクティブなセカンダリ データベースの両方のユーザーであることが必要です。  
+ プライマリ データベース内のすべてのユーザーが、このシステム ストアド プロシージャを呼び出すことができます。 ログインは、両方のプライマリ データベースとアクティブ セカンダリ データベース内のユーザーである必要があります。  
   
 ## <a name="remarks"></a>コメント  
  すべてのトランザクションをコミットする前に、 **sp_wait_for_database_copy_sync**呼び出しがアクティブなセカンダリ データベースに送信されます。  

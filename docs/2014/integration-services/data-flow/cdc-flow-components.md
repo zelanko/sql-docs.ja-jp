@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241730"
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
@@ -103,7 +103,7 @@ ms.locfileid: "59241730"
   
  [[CDC ソース エディター] ([接続マネージャー] ページ)](../cdc-source-editor-connection-manager-page.md)  
   
- [[CDC ソース エディター] ([列] ページ)](../cdc-source-editor-columns-page.md)  
+ [[CDC ソース エディター] &#40;[列] ページ&#41;](../cdc-source-editor-columns-page.md)  
   
  [[CDC ソース エディター] ([エラー出力] ページ)](../cdc-source-editor-error-output-page.md)  
   

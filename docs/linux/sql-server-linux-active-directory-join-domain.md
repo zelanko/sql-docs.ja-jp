@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 6ccc94acb42fa7043912099c4888834cf4ff3e71
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59243586"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>SQL Server を Linux ホストを Active Directory ドメインに参加します。
@@ -153,7 +153,7 @@ Active Directory ドメインに SQL Server ホストに参加するのにには
    sudo zypper install realmd krb5-client
    ```
 
-   **Ubuntu の場合:**
+   **Ubuntu:**
 
    ```bash
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit

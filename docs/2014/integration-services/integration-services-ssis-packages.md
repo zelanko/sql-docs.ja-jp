@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241660"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージ
@@ -45,7 +45,7 @@ ms.locfileid: "59241660"
   
  データ フローは、データの抽出や読み込みの実行元と実行先、データの変更や拡張を行う変換、および実行元、変換、実行先にリンクするパスで構成されます。 データ フローをパッケージに追加するには、データ フロー タスクを事前にパッケージ制御フローに含める必要があります。 データ フロー タスクは [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ内の実行可能ファイルで、データ フローの作成、順序付け、および実行を行います。 パッケージ内の各データ フロー タスクに対し、データ フロー エンジンのインスタンスが個別に開きます。 詳細については、「 [データ フロー タスク](control-flow/data-flow-task.md) 」と「 [データ フロー](data-flow/data-flow.md)」を参照してください。  
   
- パッケージには通常、1 つ以上の接続マネージャーが含まれます。 接続マネージャーは、パッケージとデータ ソース間のリンクであり、パッケージ内のタスク、変換、およびイベント ハンドラーによって使用されるデータにアクセスするための接続文字列が定義されています。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、テキストや XML ファイル、リレーショナル データベース、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータベースやプロジェクトなどのデータ ソースに対する接続の種類が用意されています。 詳細については、「[Integration Services (SSIS) の接続](connection-manager/integration-services-ssis-connections.md)」を参照してください。  
+ パッケージには通常、1 つ以上の接続マネージャーが含まれます。 接続マネージャーは、パッケージとデータ ソース間のリンクであり、パッケージ内のタスク、変換、およびイベント ハンドラーによって使用されるデータにアクセスするための接続文字列が定義されています。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、テキストや XML ファイル、リレーショナル データベース、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータベースやプロジェクトなどのデータ ソースに対する接続の種類が用意されています。 詳細については、「[Integration Services (SSIS) の接続](connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
 ## <a name="package-templates"></a>パッケージ テンプレート  
  パッケージは、基本的な共通した機能を持つパッケージを構築する際の基になるテンプレートとして使用されることがよくあります。 基本パッケージを構築してそれをコピーすることも、パッケージをテンプレートとして指定することもできます。 たとえば、ファイルをダウンロードおよびコピーしてからデータを抽出するパッケージでは、フォルダー内のファイルを列挙する ForEach ループに FTP タスクおよびファイル システム タスクを含めることができます。 また、データにアクセスするためのフラット ファイル接続マネージャーや、データを抽出するためのフラット ファイル ソースを含めることもできます。 データの抽出先はそれぞれ異なるので、基本パッケージからコピーした後、それぞれの新しいパッケージに抽出先を追加します。 パッケージを作成してから、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに追加する新しいパッケージのテンプレートとしてそれらのパッケージを使用することもできます。 詳細については、「 [SQL Server データ ツールでのパッケージの作成](create-packages-in-sql-server-data-tools.md)」を参照してください。  
@@ -66,7 +66,7 @@ ms.locfileid: "59241660"
  パッケージを別のコンピューターにインストールすると、パッケージと共に構成が保存され、配置されます。 パッケージのインストールの際、別の環境でパッケージがサポートされるように、構成の値を更新できます。 詳細については、「 [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)」を参照してください。  
   
 ### <a name="logging-and-log-providers"></a>ログ記録とログ プロバイダー  
- ログとは、パッケージの実行時に収集される、パッケージに関する情報の集まりのことです。 たとえば、ログにはパッケージの実行開始時刻と終了時刻を記録できます。 ログ プロバイダーとは、パッケージとそのコンテナーおよびタスクが実行時の情報を記録するために使用する、記録先の種類と形式を定義するものです。 ログはパッケージに関連付けられますが、パッケージ内のタスクとコンテナーの情報は、任意のパッケージ ログに記録できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、ログ記録用の各種のログ プロバイダーが組み込まれています。 たとえば [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] およびテキスト ファイル用のログ プロバイダーが含まれます。 また、カスタム ログ プロバイダーを作成してログ記録用に使用することもできます。 詳細については、「[Integration Services (SSIS) のログ記録](performance/integration-services-ssis-logging.md)」をご覧ください。  
+ ログとは、パッケージの実行時に収集される、パッケージに関する情報の集まりのことです。 たとえば、ログにはパッケージの実行開始時刻と終了時刻を記録できます。 ログ プロバイダーとは、パッケージとそのコンテナーおよびタスクが実行時の情報を記録するために使用する、記録先の種類と形式を定義するものです。 ログはパッケージに関連付けられますが、パッケージ内のタスクとコンテナーの情報は、任意のパッケージ ログに記録できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、ログ記録用の各種のログ プロバイダーが組み込まれています。 たとえば [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] およびテキスト ファイル用のログ プロバイダーが含まれます。 また、カスタム ログ プロバイダーを作成してログ記録用に使用することもできます。 詳細については、「[Integration Services (SSIS) のログ記録](performance/integration-services-ssis-logging.md)」をご覧ください。  
   
 ### <a name="variables"></a>変数:  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、システム変数とユーザー定義変数がサポートされます。 システム変数は、実行時のパッケージ オブジェクトに関する有益な情報を提供します。またユーザー定義変数を使用すると、パッケージのシナリオをユーザー独自でサポートできます。 どちらの種類の変数も、式、スクリプト、および構成の内部で使用できます。  
@@ -74,7 +74,7 @@ ms.locfileid: "59241660"
  パッケージ レベルの変数には、1 つのパッケージで使用できる定義済みのシステム変数と、パッケージの範囲を定めたユーザー定義変数が含まれます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)」を参照してください。  
   
 ### <a name="parameters"></a>パラメーター  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パラメーターを使用すると、パッケージの実行時にパッケージ内のプロパティに値を割り当てることができます。 "*プロジェクト パラメーター*" はプロジェクト レベル、"*パッケージ パラメーター*" はパッケージ レベルで作成できます。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。 詳細については、[Integration Services &#40;SSIS&#41; のパラメーター](integration-services-ssis-package-and-project-parameters.md)に関する記事を参照してください。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パラメーターを使用すると、パッケージの実行時にパッケージ内のプロパティに値を割り当てることができます。 " *プロジェクト パラメーター* " はプロジェクト レベル、" *パッケージ パラメーター* " はパッケージ レベルで作成できます。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。 詳細については、[Integration Services &#40;SSIS&#41; のパラメーター](integration-services-ssis-package-and-project-parameters.md)に関する記事を参照してください。  
   
 ## <a name="package-properties-that-support-extended-features"></a>拡張機能をサポートするパッケージのプロパティ  
  パッケージ オブジェクトを構成して、チェックポイントでのパッケージの再開、デジタル証明書を使用したパッケージの署名、パッケージの保護レベルの設定、およびトランザクションを使用したデータ整合性の検証などの機能をサポートできます。  
@@ -105,7 +105,7 @@ ms.locfileid: "59241660"
  これらのプロパティのプログラムでの設定については、「 <xref:Microsoft.SqlServer.Dts.Runtime.Package>」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージを作成するための [!INCLUDE[ssIS](../includes/ssis-md.md)] オブジェクト モデルのほかに、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードの、2 つのグラフィック ツールが含まれています。 詳細については、以下のトピックを参照してください。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージを作成するための [!INCLUDE[ssIS](../includes/ssis-md.md)] オブジェクト モデルのほかに、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] デザイナーと [!INCLUDE[ssIS](../includes/ssis-md.md)] インポートおよびエクスポート ウィザードの、2 つのグラフィック ツールが含まれています。 詳細については、以下のトピックを参照してください。  
   
 -   [SQL Server インポートおよびエクスポート ウィザードを実行する](import-export-data/start-the-sql-server-import-and-export-wizard.md)  
   

@@ -12,10 +12,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241940"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 での PowerPivot データ更新
@@ -25,19 +25,19 @@ ms.locfileid: "59241940"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
- **このトピックの内容**  
+ **このトピックの内容:**  
   
--   [対話型のデータ更新](#bkmk_interactive_refresh)  
+-   [Interactive Data Refresh](#bkmk_interactive_refresh)  
   
 -   [ブックのデータ接続と対話型のデータ更新による Windows 認証](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [定期データ更新](#bkmk_scheduled_refresh)  
+-   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
   
 -   [SharePoint 2013 の定期データ更新のアーキテクチャ](#bkmk_refresh_architecture)  
   
 -   [認証に関するその他の注意点](#datarefresh_additional_authentication)  
   
--   [詳細情報](#bkmk_moreinformation)  
+-   [その他の情報](#bkmk_moreinformation)  
   
 ## <a name="background"></a>背景情報  
  SharePoint Server 2013 の Excel Services は、Excel 2013 ブックのデータ更新を管理し、SharePoint モードで実行されている [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーでデータ モデル処理をトリガーします。 Excel 2010 ブックの場合、Excel Services はブックおよびデータ モデルの読み込みと保存も管理します。 ただし、Excel Services は PowerPivot System サービスを使用して処理コマンドをデータ モデルに送信します。 次の表は、データ更新の処理コマンドを送信するコンポーネントをブックのバージョンごとにまとめたものです。 想定した環境は、SharePoint モードで実行されている [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 分析サーバーを使用するように構成された SharePoint 2013 ファームです。  
@@ -236,7 +236,7 @@ ms.locfileid: "59241940"
  [Excel Services を SharePoint 2013 で](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/)します。 
   
 ## <a name="see-also"></a>参照  
- [ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
+ [ブックと定期データ更新のアップグレード&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
  [PowerPivot for SharePoint 2013 のインストール](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

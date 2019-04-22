@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 17819c4c2a1d74c8ca4cc5d4875a67c6fb236639
-ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480278"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>メモリ使用量の監視とトラブルシューティング
@@ -112,7 +112,7 @@ ms.locfileid: "59480278"
   
 ##  <a name="monitoring-memory-usage"></a>メモリ使用率の監視  
   
-###  <a name="using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の使用  
+###  <a name="using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>使用してください。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] には、インメモリ テーブルによって消費されるメモリを監視するための標準レポートが組み込まれています。 これらのレポートには、 [ここ](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)で説明しているようにオブジェクト エクスプローラーを使用してアクセスできます。 オブジェクト エクスプローラーを使用すると、個々のメモリ最適化テーブルで消費されるメモリも監視できます。  
   
 #### <a name="consumption-at-the-database-level"></a>データベース レベルでの消費量  

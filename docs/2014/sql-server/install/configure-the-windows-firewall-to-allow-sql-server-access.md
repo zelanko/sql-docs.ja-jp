@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 336cdd3d1b0de43a08cc4ea69dd072e5d0e09fe5
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860713"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
@@ -121,7 +121,7 @@ ms.locfileid: "58860713"
   
     -   [Netsh.exe ツールとコマンド ライン スイッチの使用方法](https://support.microsoft.com/kb/242468)  
   
-    -   [Windows Server 2008 および Windows Vista で Windows ファイアウォールの動作を制御する"netsh firewall"コンテキストの代わりに"netsh advfirewall firewall"コンテキストを使用する方法](https://support.microsoft.com/kb/947709)  
+    -   ["netsh firewall" コンテキストの代わりに "netsh advfirewall firewall" コンテキストを使用して、Windows Server 2008 および Windows Vista で Windows ファイアウォールの動作を制御する方法](https://support.microsoft.com/kb/947709)  
   
     -   ["profile=all" パラメーターと共に "netsh firewall" コマンドを使用しても、Windows Vista ベースのコンピューターでパブリック プロファイルが構成されない](https://support.microsoft.com/kb/947213)  
   
@@ -143,14 +143,14 @@ ms.locfileid: "58860713"
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP ポート 4022。 使用されるポートを確認するには、次のクエリを実行します。<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]の既定のポートはありませんが、これがオンライン ブックの例で使用される通常の構成です。|  
 |データベース ミラーリング|管理者が選択したポート。 ポートを特定するには、次のクエリを実行します。<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|データベース ミラーリング用の既定のポートはありませんが、オンライン ブックの例では TCP ポート 7022 が使用されています。 特に自動フェールオーバーを伴う高い安全性モードでは、使用中のミラーリング エンドポイントが中断しないようにすることはきわめて重要です。 ファイアウォール構成によりクォーラムが分割されないようにする必要があります。 詳細については、「[サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)」を参照してください。|  
 |レプリケーション|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのレプリケーション接続では、一般的な正規の [!INCLUDE[ssDE](../../includes/ssde-md.md)] ポートを使用します (既定のインスタンスに使用される TCP ポート 1433 など)。<br /><br /> レプリケーション スナップショットのための Web 同期と FTP/UNC アクセスには、ファイアウォール上で追加のポートを開く必要があります。 ある場所から別の場所に初期データおよびスキーマを転送するために、レプリケーションでは FTP (TCP ポート 21)、HTTP (TCP ポート 80) を使用した同期、またはファイル共有を使用できます。 ファイル共有では、NetBIOS を使用する場合、UDP ポート 137 と 138、および TCP ポート 139 を使用します。 ファイル共有は TCP ポート 445 を使用します。|HTTP を使用した同期のために、レプリケーションでは IIS エンドポイント (既定ではポート 80 だが構成可能) を使用しますが、IIS プロセスは標準のポート (既定のインスタンスの場合は 1433) を使用してバックエンドの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します。<br /><br /> FTP を使用した Web 同期時は、サブスクライバーと IIS の間ではなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 発行者と IIS の間で FTP 転送が行われます。|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガー|TCP ポート 135<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。<br /><br /> [IPsec](#BKMK_additional_ports) の例外が必要な場合もあります。|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ホスト コンピューターで [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を使用している場合は、 **Devenv.exe** を例外リストに追加し、TCP ポート 135 を開く必要もあります。<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ホスト コンピューターで [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用している場合は、 **ssms.exe** を例外リストに追加し、TCP ポート 135 を開く必要もあります。 詳細については、[TRANSACT-SQL デバッガーを構成する](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)を参照してください。|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガー|TCP ポート 135<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。<br /><br /> [IPsec](#BKMK_additional_ports) の例外が必要な場合もあります。|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ホスト コンピューターで [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を使用している場合は、 **Devenv.exe** を例外リストに追加し、TCP ポート 135 を開く必要もあります。<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ホスト コンピューターで [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用している場合は、 **ssms.exe** を例外リストに追加し、TCP ポート 135 を開く必要もあります。 詳細については、次を参照してください。 [TRANSACT-SQL デバッガーを構成する](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)します。|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]で Windows ファイアウォールを構成する詳細な手順については、「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。  
   
 ####  <a name="BKMK_dynamic_ports"></a> 動的ポート  
  既定では、名前付きインスタンス ( [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]を含む) では動的ポートを使用します。 したがって、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が起動するたびに使用可能なポートが特定され、そのポート番号が使用されます。 インストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスが名前付きインスタンスのみの場合、通常は TCP ポート 1433 が使用されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の他のインスタンスがインストールされている場合は、別の TCP ポートが使用される可能性が高くなります。 選択されたポートは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が起動するたびに変わる可能性があるので、正しいポート番号にアクセスできるようにファイアウォールを構成することは容易ではありません。 したがって、ファイアウォールを使用する場合は、毎回同じポート番号を使用するように [!INCLUDE[ssDE](../../includes/ssde-md.md)] を再構成することをお勧めします。 このポートを固定ポートまたは静的なポートと呼びます。 詳細については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)」を参照してください。  
   
- 固定ポートでリッスンするように名前付きインスタンスを構成する代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlservr.exe **(** ) などの [!INCLUDE[ssDE](../../includes/ssde-md.md)]プログラムを対象としてファイアウォールで例外を作成することもできます。 この方法が有効な場合もありますが、セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用しているときは、 **[受信の規則]** ページの **[ローカル ポート]** 列にポート番号が表示されません。 そのため、どのポートが開いているかを調べるのが難しくなる可能性があります。 もう 1 つの注意事項は、Service Pack または累積された更新によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行可能ファイルへのパスが変更され、ファイアウォールのルールが無効になる可能性があるということです。  
+ 固定ポートでリッスンするように名前付きインスタンスを構成する代わりに、**sqlservr.exe** ([!INCLUDE[ssDE](../../includes/ssde-md.md)]) などの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プログラムを対象としてファイアウォールで例外を作成することもできます。 この方法が有効な場合もありますが、セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用しているときは、 **[受信の規則]** ページの **[ローカル ポート]** 列にポート番号が表示されません。 そのため、どのポートが開いているかを調べるのが難しくなる可能性があります。 もう 1 つの注意事項は、Service Pack または累積された更新によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行可能ファイルへのパスが変更され、ファイアウォールのルールが無効になる可能性があるということです。  
   
 > [!NOTE]  
 >  次の手順では、コントロール パネルの **[Windows ファイアウォール]** を使用します。 セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用して、より複雑なルールを構成できます。 その場合は、サービスの例外の設定も行います。これは、多層防御を実装する場合に有効です。 後の「 [セキュリティが強化された Windows ファイアウォールのスナップインの使用](#BKMK_WF_msc) 」を参照してください。  

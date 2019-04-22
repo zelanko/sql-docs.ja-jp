@@ -42,10 +42,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042451"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -347,15 +347,15 @@ RETURNS return_data_type
  アセンブリおよび作成した関数名が参照するメソッドを指定します。  
   
 -   *assembly_name* - 次の `name` 列にある値と一致する必要があります   
-    `SELECT * FROM sys.assemblies;`。  
+    `SELECT * FROM sys.assemblies;`  
     これは、`CREATE ASSEMBLY` ステートメントで使用された名前です。  
   
 -   *class_name* - 次の `assembly_name` 列にある値と一致する必要があります  
-    `SELECT * FROM sys.assembly_modules;`。  
+    `SELECT * FROM sys.assembly_modules;`  
     多くの場合、値には、埋め込まれたピリオドまたはドット (.) が含まれています。 このような場合は、Transact-SQL 構文で、値を角かっこ ([]) または二重引用符 ("") で囲む必要があります。  
   
 -   *method_name* - 次の `method_name` 列にある値と一致する必要があります   
-    `SELECT * FROM sys.assembly_modules;`。  
+    `SELECT * FROM sys.assembly_modules;`  
     メソッドを静的にする必要があります。  
   
 一般的な例として、MyFood.DLL において、すべての型が MyFood 名前空間にあるため、`EXTERNAL NAME` 値は次のようになることがあります。   
@@ -430,7 +430,7 @@ EXECUTE AS 句
 ユーザー定義関数が実行されるセキュリティ コンテキストを指定します。 つまり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、関数で参照されているデータベース オブジェクトに対する権限を検証する際に使用するユーザー アカウントを制御できます。  
   
 > [!NOTE]  
-> `EXECUTE AS` は、インライン テーブル値関数に対して指定できません。
+> インライン テーブル値関数には `EXECUTE AS` を指定できません。
   
 詳細については、「[EXECUTE AS 句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)」を参照してください。  
 
@@ -456,7 +456,7 @@ INLINE = { ON | OFF }
  COLLATE 句を使用して照合順序を変更できるのは、**char**、**varchar**、**nchar**、**nvarchar** データ型の列だけです。  
   
  > [!NOTE]
- > `COLLATE` は、CLR テーブル値関数に対して指定できません。  
+ > CLR テーブル値関数には `COLLATE` を指定できません。  
   
  ROWGUIDCOL  
  新しい列が行グローバル一意識別子列であることを示します。 1 つのテーブルにつき、1 つの **uniqueidentifier** 列だけを ROWGUIDCOL 列に指定できます。 ROWGUIDCOL プロパティは **uniqueidentifier** 列にだけ割り当てることができます。  
@@ -567,15 +567,15 @@ INLINE = { ON | OFF }
 
 -   `TRY...CATCH` ステートメントを除く、フロー制御ステートメント。  
 
--   `DECLARE` ステートメント。ローカル データ変数とローカル カーソルを定義します。  
+-   ローカル データ変数およびローカル カーソルを定義する `DECLARE` ステートメント。  
 
--   `SELECT` ステートメント。ローカル変数に値を代入する式を持つ選択リストが含まれています。  
+-   ローカル変数に値を代入する式を持つ選択リストが含まれている `SELECT` ステートメント。  
 
 -   関数内で宣言、オープン、クローズ、割り当ての解除を実行するローカル カーソルを参照するカーソル操作。 `INTO` 句を使用してローカル変数に値を代入する `FETCH` ステートメントのみが許可され、クライアントにデータを返す `FETCH` ステートメントは許可されません。  
 
--   `INSERT`、`UPDATE`、および `DELETE` ステートメント。ローカルなテーブル変数を変更します。  
+-   ローカルなテーブル変数を変更する、`INSERT`、`UPDATE`、および `DELETE` ステートメント。  
 
--   `EXECUTE` ステートメント。拡張ストアド プロシージャを呼び出します。  
+-   拡張ストアド プロシージャを呼び出す `EXECUTE` ステートメント。  
 
 詳しくは、「[ユーザー定義関数の作成 &#40;データベース エンジン&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)」をご覧ください。  
   
@@ -645,11 +645,11 @@ CLR テーブル値関数で `ORDER` 句を使用する場合は、以下のガ�
   
     -   `ORDER` 句がインデックスと互換性のある挿入クエリ。  
   
-    -   `ORDER BY` 句。`ORDER` 句と互換性があります。  
+    -   `ORDER` 句と互換性のある `ORDER BY` 句。  
   
     -   `GROUP BY` が `ORDER` 句と互換性のある、集計。  
   
-    -   `DISTINCT` 集計。個別の列が `ORDER` 句と互換性があります。  
+    -   個別の列が `ORDER` 句と互換性のある `DISTINCT` 集計。  
   
 SELECT クエリを実行するときは、そのクエリで `ORDER BY` を一緒に指定しないと、`ORDER` 句で順序どおりの結果が得られるかどうかは保証されません。 テーブル値関数の並べ替え順に含まれる列に対してクエリを実行する方法については、「[sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md)」を参照してください。  
   

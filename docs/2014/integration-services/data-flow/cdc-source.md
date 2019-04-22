@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241790"
 ---
 # <a name="cdc-source"></a>CDC ソース
@@ -88,7 +88,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>SQL Server エラー メッセージ  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって、次のメッセージが返されることがあります。  
   
- **プロシージャまたは関数 cdc.fn_cdc_get_net_changes_ に指定された引数の数が少ない\<.>。**  
+ **プロシージャまたは関数 cdc.fn_cdc_get_net_changes_\<..> に指定された引数が不足しています。**  
   
  このエラーは、引数が不足していることを示すものではありません。 CDC 状態変数の開始または終了 LSN 値が無効であることを示します。  
   
@@ -97,9 +97,9 @@ use <cdc-enabled-database-name>
   
  詳細については、次のいずれかのトピックを参照してください。  
   
--   [CDC ソース エディター &#40;[接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [[CDC ソース エディター] ([列] ページ)](../cdc-source-editor-columns-page.md)  
+-   [[CDC ソース エディター] &#40;[列] ページ&#41;](../cdc-source-editor-columns-page.md)  
   
 -   [CDC ソース エディター &#40;[エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)  
   
@@ -113,11 +113,11 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [CDC ソース エディター &#40;[接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [[CDC ソース エディター] ([列] ページ)](../cdc-source-editor-columns-page.md)  
+-   [[CDC ソース エディター] &#40;[列] ページ&#41;](../cdc-source-editor-columns-page.md)  
   
--   [CDC ソース エディター &#40;[エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)  
+-   [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)  
   
 -   [CDC ソースのカスタム プロパティ](cdc-source-custom-properties.md)  
   

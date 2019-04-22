@@ -22,10 +22,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242450"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>障害がある方のためのユーザー補助機能
@@ -53,7 +53,7 @@ ms.locfileid: "59242450"
 ## <a name="assistive-technology-products-for-windows"></a>Windows 用補助テクノロジ製品  
  障碍がある方にコンピューターを簡単にお使いいただくためのさまざまな補助テクノロジ製品をご用意しています。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] では、Windows オペレーティング システムで実行する補助テクノロジ製品の検索機能付きカタログを [Microsoft アクセシビリティ Web サイト](https://go.microsoft.com/fwlink/?LinkID=67166)で提供しています。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows オペレーティング システムで実行する支援技術製品の検索機能付きカタログを提供します、 [Microsoft アクセシビリティ Web サイト](https://go.microsoft.com/fwlink/?LinkID=67166)します。  
   
  以下の製品が利用可能です。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "59242450"
  補助テクノロジ製品を使用する場合は、アップグレードする前に、コンピューターにインストールされている製品との互換性について補助テクノロジのベンダーにお問い合わせください。 また、お使いの Windows バージョンやその他の [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品との互換性を維持するために設定を調整する方法についても、補助テクノロジ ベンダーにご確認ください。  
   
 ## <a name="includemsconameincludesmsconame-mdmd-documentation-in-alternative-formats"></a>[!INCLUDE[msCoName](../includes/msconame-md.md)] マニュアルの他の形式  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品マニュアルは、アクセシビリティのニーズを持つ、お客様を支援する別の形式で使用できます。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のマニュアルは、ユーザー補助機能を必要とする方のために、別の形式でも提供されています。  
   
 ### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマニュアルの入手  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマニュアルはオンラインで入手できます。 詳細については、次を参照してください。 [for SQL Server 製品ドキュメントを使用して](../2014-toc/books-online-for-sql-server-2014.md)します。  
@@ -111,7 +111,7 @@ ms.locfileid: "59242450"
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のユーザー補助機能に関する最新情報をお届けする無料の月刊電子ニュースレターもあります。 定期受信をご希望の方は、 [Microsoft アクセシビリティ Web サイト](https://go.microsoft.com/fwlink/?LinkID=8287)を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server の製品ドキュメントの使い方](../2014-toc/books-online-for-sql-server-2014.md)   
+ [SQL Server の製品ドキュメントを概要します。](../2014-toc/books-online-for-sql-server-2014.md)   
  [SQL Server の参考資料の入手](getting-sql-server-assistance.md)  
   
   

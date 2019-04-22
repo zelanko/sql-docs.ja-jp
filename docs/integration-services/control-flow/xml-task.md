@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84711a5bdef0ce13f640b26b3973860b9b5a6f48
-ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59291552"
 ---
 # <a name="xml-task"></a>XML タスク
@@ -121,7 +121,7 @@ ms.locfileid: "59291552"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [XML タスクを使った XML の検証](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
@@ -164,7 +164,7 @@ ms.locfileid: "59291552"
 |**[ファイル接続]**|XML ドキュメントが含まれているファイルを選択します。|  
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
- **Source**  
+ **ソース**  
  **[ソース]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **[...]** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
  **[ソース]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
@@ -183,10 +183,10 @@ ms.locfileid: "59291552"
  **[SaveOperationResult]**  
  XML タスクが Validate 操作の出力を保存するかどうかを指定します。  
   
- **OverwriteDestination**  
+ **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **[Destination]**  
+ **変換先**  
  既存のファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -242,10 +242,10 @@ ms.locfileid: "59291552"
  **[SaveOperationResult]**  
  XML タスクが XSLT 操作の出力を保存するかどうかを指定します。  
   
- **OverwriteDestination**  
+ **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **[Destination]**  
+ **変換先**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -288,10 +288,10 @@ ms.locfileid: "59291552"
  **[SaveOperationResult]**  
  XML タスクが XPath 操作の出力を保存するかどうかを指定します。  
   
- **OverwriteDestination**  
+ **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **[Destination]**  
+ **変換先**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -368,10 +368,10 @@ ms.locfileid: "59291552"
  **[SaveOperationResult]**  
  XML タスクが Merge 操作の出力を保存するかどうかを指定します。  
   
- **OverwriteDestination**  
+ **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **[Destination]**  
+ **変換先**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -446,7 +446,7 @@ ms.locfileid: "59291552"
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **[Destination]**  
+ **変換先**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -489,10 +489,10 @@ ms.locfileid: "59291552"
  **[SaveOperationResult]**  
  XML タスクが Patch 操作の出力を保存するかどうかを指定します。  
   
- **OverwriteDestination**  
+ **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **[Destination]**  
+ **変換先**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  

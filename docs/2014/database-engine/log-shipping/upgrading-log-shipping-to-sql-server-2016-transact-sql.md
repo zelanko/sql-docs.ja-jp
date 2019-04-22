@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042431"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>SQL Server 2014 へのログ配布のアップグレード (Transact-SQL)
@@ -193,7 +193,7 @@ ms.locfileid: "59042431"
 > [!IMPORTANT]  
 >  常に、セカンダリ サーバー インスタンスをすべてアップグレードしてからプライマリ サーバーをアップグレードします。  
   
- **フェールオーバーを使用し、その後、元のプライマリ サーバーにスイッチ バックすることでアップグレードするには**  
+ **フェールオーバーの使用としをその後で元のプライマリ サーバーにバックアップをアップグレードするには**  
   
 1.  すべてのセカンダリ サーバー インスタンス (サーバー B およびサーバー C) をアップグレードします。  
   
@@ -224,4 +224,4 @@ ms.locfileid: "59042431"
 ## <a name="see-also"></a>参照  
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
+ [ログ配布テーブルとストアド プロシージャ](log-shipping-tables-and-stored-procedures.md)  

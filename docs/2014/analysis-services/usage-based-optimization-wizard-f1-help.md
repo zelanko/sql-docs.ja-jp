@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240400"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>使用法に基づく最適化ウィザードの F1 ヘルプ
@@ -48,24 +48,24 @@ ms.locfileid: "59240400"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [[変更するパーティションの選択] &#40;使用法に基づく最適化ウィザード&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [変更するパーティションを選択します&#40;使用法に基づく最適化ウィザード。&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [[クエリ条件の指定] &#40;使用法に基づく最適化ウィザード&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [クエリ条件の指定&#40;使用法に基づく最適化ウィザード&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [[最適化するクエリの確認] &#40;使用法に基づく最適化ウィザード&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [最適化されたクエリを確認する&#40;使用法に基づく最適化ウィザード&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [[集計使用法の確認] &#40;使用法に基づく最適化ウィザード&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [集計使用法の確認&#40;Optimiation ウィザードの使用法に基づく&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [[オブジェクト カウントの指定] &#40;使用法に基づく最適化ウィザード&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [オブジェクト カウントの指定&#40;使用法に基づく最適化ウィザード&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [[集計オプションの設定] &#40;使用法に基づく最適化ウィザード&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [集計オプションの設定&#40;使用法に基づく最適化ウィザード&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [[ウィザードの完了] &#40;使用法に基づく最適化ウィザード&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [ウィザードの完了&#40;使用法に基づく最適化ウィザード&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>参照  
  [集計と集計デザイン](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
- [集計のデザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   
- [Analysis Services のウィザード &#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [集計デザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   
+ [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

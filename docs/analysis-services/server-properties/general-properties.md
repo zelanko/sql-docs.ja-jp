@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042391"
 ---
 # <a name="general-properties"></a>全般プロパティ
@@ -46,7 +46,7 @@ ms.locfileid: "59042391"
  **CommitTimeout**  
  サーバーがトランザクションをコミットする目的で書き込みロックの取得を待機する時間 (ミリ秒単位) を指定する整数のプロパティです。 サーバーはトランザクションをコミットする書き込みロックを取得する前に他のロックが解放されるのを待機する必要があるため、待機期間が必要になることがあります。  
   
- このプロパティの既定値は 0 であり、サーバーで無限に待機することを示します。 ロックに関連したプロパティの詳細については、「[SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+ このプロパティの既定値は 0 であり、サーバーで無限に待機することを示します。 ロックに関連したプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  **CoordinatorBuildMaxThreads**  
  パーティション インデックスの作成に割り当てられるスレッドの最大数を定義する、符号付き 32 ビット整数のプロパティです。 パーティション インデックスの作成時間を短縮するには、この値を大きくしてください。ただし、メモリの使用量は増えます。 このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
@@ -63,7 +63,7 @@ ms.locfileid: "59042391"
  クエリ解決時のパーティション セグメントあたりの最大スレッド数を定義する、符号付き 32 ビット整数のプロパティです。 同時ユーザーの数が少なくなるほど大きい値を設定できますが、値を大きくするとメモリの使用量が増えます。 逆に、同時ユーザーが多い場合は、この値を小さくする必要があります。  
   
  **CoordinatorShutdownMode**  
- コーディネーターのシャットダウン モードを定義するブール型プロパティです。 これは詳細プロパティなので、[!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
+ コーディネーターのシャットダウン モードを定義するブール型プロパティです。 これは詳細プロパティなので、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
  **DataDir**  
  データを保存するディレクトリの名前を指定する文字列プロパティです。  
@@ -118,7 +118,7 @@ ms.locfileid: "59042391"
  **InstanceVisible**  
  SQL Server Browser サービスからのインスタンス要求を検出するためにサーバー インスタンスを表示するかどうかを指定するブール型プロパティです。 既定値は True です。 false に設定した場合、インスタンスは SQL Server Browser に表示されません。  
   
- **[言語]**  
+ **言語**  
  エラー メッセージや数値書式などの言語を定義する文字列プロパティです。 このプロパティは CollationName プロパティをオーバーライドします。  
   
  このプロパティの既定値は空白であり、CollationName プロパティによって言語が定義されることを示します。  
@@ -132,7 +132,7 @@ ms.locfileid: "59042391"
  **MinIdleSessionTimeout**  
  アイドル状態のセッションがタイムアウトになるまでの最短時間を秒単位で定義する整数のプロパティです。 既定値は 2700 秒です。 この時間を経過すると、メモリが必要な場合に限り、アイドル状態のセッションがサーバーによって終了されます。  
   
- **Port**  
+ **[ポート]**  
  サーバーがクライアント接続をリッスンするポート番号を定義する整数のプロパティです。 このプロパティを設定しない場合、サーバーは最初の未使用ポートを動的に検出します。  
   
  このプロパティの既定値は 0 であり、ポート 2383 が既定により使用されます。 ポートの構成の詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご覧ください。  

@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242300"
 ---
 # <a name="export-a-data-tier-application"></a>データ層アプリケーションのエクスポート
@@ -80,7 +80,7 @@ ms.locfileid: "59242300"
 ##  <a name="Introduction"></a> [説明] ページ  
  このページには、データ層アプリケーションのエクスポート ウィザードの手順が表示されます。  
   
- **および**  
+ **[オプション]**  
   
  **[次回からこのページを表示しない]** : 今後 [説明] ページを表示しないようにするには、このチェック ボックスをオンにします。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "59242300"
 3.  `Export` 型の `Microsoft.SqlServer.Management.Dac.DacStore` メソッドを使用して、DAC をエクスポートします。 エクスポートする DAC の名前と、エクスポート ファイルの出力先となるフォルダーのパスを指定します。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト エクスプローラー](data-tier-applications.md)   
+ [[データ層アプリケーション]](data-tier-applications.md)   
  [データベースからの DAC の抽出](extract-a-dac-from-a-database.md)  
   
   

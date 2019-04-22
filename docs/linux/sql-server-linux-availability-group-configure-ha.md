@@ -12,10 +12,10 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872202"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>構成する SQL Server Always On 可用性グループの Linux での高可用性
@@ -26,7 +26,7 @@ ms.locfileid: "58872202"
 
 作成することも、クラスターのない、AG のマネージャー*読み取りスケール*します。 読み取りスケール可用性グループでは、パフォーマンス スケール アウトのための読み取り専用レプリカを提供することだけです。高可用性は提供されません。 読み取りスケール用の AG を作成するを参照してください。 [on Linux で読み取りスケールの SQL Server 可用性グループを構成する](sql-server-linux-availability-group-configure-rs.md)します。
 
-高可用性とデータ保護を保証する構成では、2 つまたは 3 つの同期コミット レプリカが必要です。 次の 3 つの同期レプリカを可用性グループを 1 つのサーバーが利用できない場合でも自動的に回復できます。 詳細については、[可用性グループの構成の高可用性とデータの保護](sql-server-linux-availability-group-ha.md)を参照してください。 
+高可用性とデータ保護を保証する構成では、2 つまたは 3 つの同期コミット レプリカが必要です。 次の 3 つの同期レプリカを可用性グループを 1 つのサーバーが利用できない場合でも自動的に回復できます。 詳細については、次を参照してください。[可用性グループの構成の高可用性とデータの保護](sql-server-linux-availability-group-ha.md)します。 
 
 すべてのサーバーが物理または仮想にする必要があり、仮想サーバーが同じ仮想化プラットフォームである必要があります。 この要件は、フェンス エージェントはプラットフォーム固有であるためにです。 参照してください[ゲスト クラスター用のポリシー](https://access.redhat.com/articles/29440#guest_policies)します。
 
@@ -52,7 +52,7 @@ ms.locfileid: "58872202"
    >[!IMPORTANT]
    >運用環境では、高可用性の STONITH などのフェンス エージェントが必要です。 このドキュメントでは、フェンス エージェントを使用しないでください。 デモはテストおよび検証のみです。 
    
-   >Linux クラスターでは、フェンスを使用して、既知の状態、クラスターを返します。 フェンスを構成する方法は、ディストリビューションと、環境によって異なります。 現時点では、フェンス操作では、一部のクラウド環境で使用できません。 詳細については、[RHEL 高可用性クラスターの仮想化プラットフォームのサポート ポリシー](https://access.redhat.com/articles/29440)を参照してください。
+   >Linux クラスターでは、フェンスを使用して、既知の状態、クラスターを返します。 フェンスを構成する方法は、ディストリビューションと、環境によって異なります。 現時点では、フェンス操作では、一部のクラウド環境で使用できません。 詳細については、次を参照してください。 [RHEL 高可用性クラスターの仮想化プラットフォームのサポート ポリシー](https://access.redhat.com/articles/29440)します。
    
    >SLES を参照してください。 [SUSE Linux Enterprise 高可用性 Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing)します。
 
@@ -76,7 +76,7 @@ ms.locfileid: "58872202"
 
 - [2 つの同期レプリカと構成のレプリカ](sql-server-linux-availability-group-ha.md#twoSynch)
 
-詳しくは、[可用性グループの構成の高可用性とデータの保護](sql-server-linux-availability-group-ha.md)を参照してください。
+詳しくは、次を参照してください。[可用性グループの構成の高可用性とデータの保護](sql-server-linux-availability-group-ha.md)します。
 
 >[!NOTE]
 >可用性グループには、追加の同期または非同期レプリカを含めることができます。 

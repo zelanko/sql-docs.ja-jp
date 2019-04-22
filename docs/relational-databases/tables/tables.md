@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3498d05f32abac1a8ffccf408c4b4af30023ed8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c32afdaf39f924c8c734c12df2991dd29fad75d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664921"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774597"
 ---
 # <a name="tables"></a>テーブル
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -36,16 +36,16 @@ ms.locfileid: "51664921"
 ## <a name="types-of-tables"></a>テーブルの種類  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、標準的な役割を果たす基本的なユーザー定義のテーブル以外に、データベース内で特別な目的で使用される次のようなテーブルがあります。  
   
- パーティション テーブル  
+### <a name="partitioned-tables"></a>パーティション テーブル  
  パーティション テーブルはデータが行方向に分割されているテーブルで、パーティションがデータベースの複数のファイル グループに分散される場合もあります。 大きなテーブルやインデックスをパーティション分割すると、コレクション全体の整合性を維持しながら、データのサブセットに対するアクセスや管理を迅速かつ効率的に行うことができるので、大きなテーブルやインデックスを管理しやすくなります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、最大 15,000 個のパーティションを既定でサポートしています。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
- 一時テーブル  
+### <a name="temporary-tables"></a>一時テーブル  
  一時テーブルは **tempdb**に格納されます。 一時テーブルには、ローカル一時テーブルとグローバル一時テーブルの 2 種類があります。 この 2 種類の一時テーブルでは、名前、表示設定、および可用性が異なります。 ローカル一時テーブル名の先頭には、番号記号 (#) が 1 つ付いています。このテーブルは、作成したユーザーの現在の接続でのみ表示され、このユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスから切断すると削除されます。 グローバル一時テーブル名の先頭には、番号記号が 2 つ (##) 付いています。このテーブルは、作成されるとすべてのユーザーに表示され、このテーブルを参照するすべてのユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスから切断すると削除されます。  
   
- システム テーブル  
+### <a name="system-tables"></a>システム テーブル  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバーの構成とすべてのテーブルの構成を定義したデータが、システム テーブルという特殊なテーブル セットに格納されます。 ユーザーは、システム テーブルに対して直接クエリや更新を行うことはできません。 システム テーブル内の情報は、システム ビューから入手できます。 詳細については、「[システム ビュー &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)」を参照してください。  
   
- 幅の広いテーブル  
+### <a name="wide-tables"></a>幅の広いテーブル  
  幅の広いテーブルでは、 [スパース列](../../relational-databases/tables/use-sparse-columns.md) を使用して、テーブルに持たせることができる列の合計数が 30,000 まで増加します。 スパース列は、NULL 値用にストレージが最適化されている通常の列です。 スパース列によって、NULL 以外の値を取得するためのオーバーヘッドは増大しますが、NULL 値に必要となる領域は削減されます。 幅の広いテーブルでは [列セット](../../relational-databases/tables/use-column-sets.md)が定義されています。これは、型指定されていない XML 表記であり、テーブルのすべてのスパース列を 1 つにまとめて構造化した出力です。 インデックスと統計情報の数も、それぞれ 1,000 と 30,000 に増加します。 幅の広いテーブルの最大行サイズは 8,019 バイトです。 そのため、特定の行のデータの大部分を NULL にする必要があります。 幅の広いテーブルの非スパース列と計算列の最大数は合わせて 1,024 のままです。  
   
  幅の広いテーブルは、パフォーマンスに対して次のような影響を与えます。  

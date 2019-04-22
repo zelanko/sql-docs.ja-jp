@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 10fcc71c69ecc138f78cd19c4661f917067ead7e
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860413"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>VS Code を使用してビッグ データの SQL Server クラスターにアプリケーションを展開する方法
@@ -122,7 +122,7 @@ VS Code は、適切なエンドポイント、username、およびパスワー�
 
 サイド バーに次の情報で展開したすべてのアプリを表示することがあります。
 
-- 状態
+- state
 - version
 - 入力パラメーター
 - 出力パラメーター
@@ -180,7 +180,7 @@ VS Code は、適切なエンドポイント、username、およびパスワー�
 
 独自のアプリケーションでのクラスターのビッグ データ、SQL Server に展開されているアプリを統合する方法について説明[ビッグ データ クラスター上でアプリケーションを消費する](big-data-cluster-consume-apps.md)詳細についてはします。 その他のサンプルを参照することもできます。[アプリの展開サンプル](https://aka.ms/sql-app-deploy)に拡張機能でお試しください。
 
-ビッグ データの SQL Server クラスターの詳細については、[SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)を参照してください。
+ビッグ データの SQL Server クラスターの詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)します。
 
 
 当社の目標は、のこの拡張機能を有効に活用するしてフィードバックをいただければさいわいです。 お知らせください[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]チーム](https://aka.ms/sqlfeedback)します。

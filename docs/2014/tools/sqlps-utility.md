@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241512"
 ---
 # <a name="sqlps-utility"></a>sqlps ユーティリティ
   `sqlps` ユーティリティは、Windows PowerShell 2.0 セッションを起動し、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell プロバイダーおよびコマンドレットの読み込みと登録を行います。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell コンポーネントを使用する PowerShell コマンドやスクリプトを入力して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスとそのオブジェクトを操作できます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 使用して、 `sqlps` PowerShell モジュール代わりにします。 詳細については、`sqlps`モジュールを参照してください[SQLPS モジュールをインポート](../database-engine/import-the-sqlps-module.md)します。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]代わりに `sqlps` PowerShell モジュールを使用してください。 詳細については、`sqlps`モジュールを参照してください[SQLPS モジュールをインポート](../database-engine/import-the-sqlps-module.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -100,19 +100,19 @@ ms.locfileid: "59241512"
  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] に採用されていたバージョンの `sqlps` ユーティリティは、Windows PowerShell 1.0 のミニシェルとして実装されていました。 ミニシェルには特定の制限があります。たとえば、ミニシェルによって読み込まれているスナップイン以外、ユーザーは読み込むことができません。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降のバージョンのユーティリティは、`sqlps` モジュールを使用するように変更されており、このような制限は適用されません。  
   
 ## <a name="examples"></a>使用例  
- **A. 既定の対話モードで著作権画面を表示せずに sqlps ユーティリティを実行する**  
+ **A.既定の対話モードで著作権画面を表示せずに sqlps ユーティリティを実行する**  
   
 ```  
 sqlps -NoLogo  
 ```  
   
- **B. コマンド プロンプトから SQL Server PowerShell スクリプトを実行する**  
+ **B.コマンド プロンプトから SQL Server PowerShell スクリプトを実行する**  
   
 ```  
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
- **C. コマンド プロンプトから SQL Server PowerShell スクリプトを実行し、スクリプト完了後も実行を続ける**  
+ **C.コマンド プロンプトから SQL Server PowerShell スクリプトを実行し、スクリプト完了後も実行を続ける**  
   
 ```  
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  

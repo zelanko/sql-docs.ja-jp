@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242231"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 (SQL Server)
@@ -65,12 +65,12 @@ ms.locfileid: "59242231"
 |------|---------------------------------|------------------------------------|------------------------------|-----------------|------------|----------|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|[はい]|はい|**最適な WSFC クォーラムの構成**|サポート技術情報の記事 2494036 に記載されている修正プログラムが、各 WSFC ノードにインストールされていることを確認します。<br /><br /> この修正プログラムは、非自動フェールオーバー ターゲットでの最適なクォーラム構成をサポートします。 投票するノードを自分で選択できるようにすることで、マルチサイト クラスターの改善を図ります。|KB 2494036:[修正プログラムが使用すると、Windows Server 2008 および Windows Server 2008 R2 の クォーラムの投票がないクラスター ノードを構成します。](https://support.microsoft.com/kb/2494036)<br /><br /> クォーラムの投票の詳細については、「[WSFC クォーラム モードと投票構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)」を参照してください。|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|[はい]|はい|**ネットワーク帯域幅の効率的な使用**|サポート技術情報の記事 2616514 に記載されている修正プログラムが、各 WSFC ノードにインストールされていることを確認します。<br /><br /> この修正プログラムがないと、クラスター サービスはクラスター ノード間で不要なレジストリ通知を送信します。 この動作によりネットワークの帯域幅が制限され、 [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]にとって深刻な問題となります。|KB 2616514:[Windows Server 2008 または Windows Server 2008 R2 で、クラスター サービスがクラスター ノード間で不要なレジストリ キーの変更通知を送信します](https://support.microsoft.com/kb/2616514)|  
-|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")||はい|適用なし|**一部の WSFC ノードから利用できないディスクに対する VPD ストレージ テスト**|WSFC ノードで Windows Server 2008 R2 Service Pack 1 (SP1) が実行されている場合に、オンラインの (なおかつ WSFC クラスター内の一部のノードから利用できない) ディスクに対して誤って Validate SCSI Device Vital Product Data (VPD) ストレージ テストを実行し、その結果不合格になった場合は、サポート技術情報の記事 2531907 に掲載されている修正プログラムをインストールします。<br /><br /> この修正プログラムは、ディスクがオンラインである場合に、誤った警告やエラーが検証レポートに出力されるのを防ぎます。|KB 2531907:[SCSI Device Vital Product Data (VPD) Windows Server 2008 R2 SP1 をインストールした後、テストが失敗した検証します。](https://support.microsoft.com/kb/2531907)|  
-|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")||はい|はい|**ローカル レプリカへのフェールオーバーの高速化**|WSFC ノードで Windows Server 2008 R2 Service Pack 1 (SP1) を実行している場合は、サポート技術情報の記事 2687741 に記載されている修正プログラムがインストールされていることを確認します。<br /><br /> この修正プログラムにより、ローカル レプリカへの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] フェールオーバーのパフォーマンスが向上します。|KB 2687741:[Windows Server 2008 R2 の SQL Server 2012 の「AlwaysOn 可用性グループ」機能のパフォーマンスを向上させる修正プログラムがあります。](https://support.microsoft.com/KB/2687741)|  
-|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|[はい]|はい|**非対称の記憶域のフェールオーバー クラスター インスタンス (Fci)**|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に対してフェールオーバー クラスター インスタンス (FCI) が有効になっている場合は、Windows Server 2008 修正プログラム 976097 をインストールします。<br /><br /> この修正プログラムは、一部の WSFC ノードのみで使用できる非対称の記憶域共有ディスクをサポートするために、フェールオーバー クラスター管理 Microsoft 管理コンソール (MMC) スナップイン、できます。|KB 976097:[Windows Server 2008 または Windows Server 2008 R2 を実行しているフェールオーバー クラスターのフェールオーバー クラスターの管理 MMC スナップインに非対称ストレージのサポートを追加する修正プログラム](https://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn アーキテクチャ ガイド:フェールオーバー クラスター インスタンスと可用性グループを使用して高可用性とディザスター リカバリー ソリューションを構築します。](https://technet.microsoft.com/library/jj215886.aspx)|  
-|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|はい|適用なし|**インターネット プロトコル セキュリティ (IPSec)**|環境で IPsec 接続を使用する場合、クライアント コンピューターが仮想ネットワーク名 (このコンテキストでは可用性グループ リスナー) への IPsec 接続を再確立するときに、長時間 (約 2 ～ 3 分) の遅延が発生する可能性があります。 IPsec 接続を使用する場合は、サポート技術情報の記事 (KB 980915) に詳細が記載されている特定のシナリオについてお読みになることをお勧めします。|KB 980915:[長時間の遅延は、Windows Server 2003、Windows Vista、Windows Server 2008、Windows 7、または Windows Server 2008 R2 を実行しているコンピューターからの IPSec 接続を再接続するときに発生します。](https://support.microsoft.com/kb/980915)|  
+|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")||はい|適用なし|**VPD ストレージ テストはすべての WSFC ノードに使用できないディスク**|WSFC ノードで Windows Server 2008 R2 Service Pack 1 (SP1) が実行されている場合に、オンラインの (なおかつ WSFC クラスター内の一部のノードから利用できない) ディスクに対して誤って Validate SCSI Device Vital Product Data (VPD) ストレージ テストを実行し、その結果不合格になった場合は、サポート技術情報の記事 2531907 に掲載されている修正プログラムをインストールします。<br /><br /> この修正プログラムは、ディスクがオンラインである場合に、誤った警告やエラーが検証レポートに出力されるのを防ぎます。|KB 2531907:[SCSI Device Vital Product Data (VPD) Windows Server 2008 R2 SP1 をインストールした後、テストが失敗した検証します。](https://support.microsoft.com/kb/2531907)|  
+|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")||はい|はい|**ローカル レプリカへのフェールオーバーを高速化**|WSFC ノードで Windows Server 2008 R2 Service Pack 1 (SP1) を実行している場合は、サポート技術情報の記事 2687741 に記載されている修正プログラムがインストールされていることを確認します。<br /><br /> この修正プログラムにより、ローカル レプリカへの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] フェールオーバーのパフォーマンスが向上します。|KB 2687741:[Windows Server 2008 R2 の SQL Server 2012 の「AlwaysOn 可用性グループ」機能のパフォーマンスを向上させる修正プログラムがあります。](https://support.microsoft.com/KB/2687741)|  
+|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|[はい]|はい|**非対称の記憶域のフェールオーバー クラスター インスタンス (Fci)**|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に対してフェールオーバー クラスター インスタンス (FCI) が有効になっている場合は、Windows Server 2008 修正プログラム 976097 をインストールします。<br /><br /> この修正プログラムは、一部の WSFC ノードのみで使用できる非対称の記憶域共有ディスクをサポートするために、フェールオーバー クラスター管理 Microsoft 管理コンソール (MMC) スナップイン、できます。|KB 976097:[Windows Server 2008 または Windows Server 2008 R2 を実行しているフェールオーバー クラスターのフェールオーバー クラスターの管理 MMC スナップインに非対称ストレージのサポートを追加する修正プログラム](https://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn アーキテクチャ ガイド:フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性およびディザスター リカバリー ソリューションの構築](https://technet.microsoft.com/library/jj215886.aspx)|  
+|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|はい|適用なし|**インターネット プロトコル セキュリティ (IPsec)**|環境で IPsec 接続を使用する場合、クライアント コンピューターが仮想ネットワーク名 (このコンテキストでは可用性グループ リスナー) への IPsec 接続を再確立するときに、長時間 (約 2 ～ 3 分) の遅延が発生する可能性があります。 IPsec 接続を使用する場合は、サポート技術情報の記事 (KB 980915) に詳細が記載されている特定のシナリオについてお読みになることをお勧めします。|KB 980915:[長時間の遅延は、Windows Server 2003、Windows Vista、Windows Server 2008、Windows 7、または Windows Server 2008 R2 を実行しているコンピューターからの IPSec 接続を再接続するときに発生します。](https://support.microsoft.com/kb/980915)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|[はい]|はい|**IPv6**|IPv6 を使用する場合は、Windows Server オペレーティング システムに応じて、サポート技術情報の記事 2578103 または 2578113 に詳細が記載されている特定のシナリオについてお読みになることをお勧めします。<br /><br /> Windows Server トポロジが IP version 6 (IPv6) を使用する場合、WSFC クラスター サービスが IPv6 IP アドレスのフェールオーバーに約 30 秒かかります。 このため、クライアントは IPv6 IP アドレスに再接続するまでに、約 30 秒待機することになります。|KB 2578103 (Windows Server 2008):[クラスター サービスは、Windows Server 2008 で IPv6 IP アドレスのフェールオーバーに約 30 秒](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2): **Windows Server 2008 R2:**[クラスター サービスは、Windows Server 2008 R2 で IPv6 IP アドレスのフェールオーバーに約 30 秒](https://support.microsoft.com/kb/2578113)|  
-|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|[はい]|はい|**クラスターとアプリケーション サーバー間にルーターが存在しない**|フェールオーバー クラスターとアプリケーション サーバー間にルーターがない場合に、クラスター サービスのネットワーク関連リソースのフェールオーバー操作が遅くなります。 これにより、可用性グループがフェールオーバーした後でクライアントの再接続が遅延します。 ルーターがない場合は、サポート技術情報の記事 2582281 に詳細が記載されている特定のシナリオについてお読みになり、環境に該当する場合は修正プログラムをインストールすることをお勧めします。|KB 2582281:[クラスターとアプリケーション サーバー間にルーターがない場合にフェールオーバー操作が遅い](https://support.microsoft.com/kb/2582281)|  
+|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|[はい]|はい|**いない間にルーターがクラスターとアプリケーション サーバー**|フェールオーバー クラスターとアプリケーション サーバー間にルーターがない場合に、クラスター サービスのネットワーク関連リソースのフェールオーバー操作が遅くなります。 これにより、可用性グループがフェールオーバーした後でクライアントの再接続が遅延します。 ルーターがない場合は、サポート技術情報の記事 2582281 に詳細が記載されている特定のシナリオについてお読みになり、環境に該当する場合は修正プログラムをインストールすることをお勧めします。|KB 2582281:[クラスターとアプリケーション サーバー間にルーターがない場合にフェールオーバー操作が遅い](https://support.microsoft.com/kb/2582281)|  
   
 ###  <a name="ComputerRecommendations"></a> 可用性レプリカをホストするコンピューターに関する推奨事項 (Windows システム)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "59242231"
   
 -   [ネットワーク名リソースを使用した DNS 登録](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
--   [Windows 2008 R2 フェールオーバー マルチサイト クラスタリング](https://kiruba4u.blogspot.com/2012/03/failover-clustering-in-windows-server.html)  
+-   [Windows 2008 R2 フェールオーバー マルチサイト クラスタ リング](https://kiruba4u.blogspot.com/2012/03/failover-clustering-in-windows-server.html)  
   
 ##  <a name="ServerInstance"></a> SQL Server インスタンスの前提条件と制限  
  可用性グループにはそれぞれ、 *のインスタンスによってホストされる一連のフェールオーバー パートナー (* 可用性レプリカ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) が必要です。 サーバー インスタンスには、 *スタンドアロン インスタンス* または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*フェールオーバー クラスター インスタンス* (FCI) を使用できます。  
@@ -138,13 +138,13 @@ ms.locfileid: "59242231"
   
 ||前提条件|リンク|  
 |-|------------------|-----------|  
-|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|ホスト コンピューターは、Windows Server フェールオーバー クラスタリング (WSFC) ノードであることが必要です。 可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは、同じ WSFC クラスターの別のノードに存在する必要があります。 唯一の例外は、別の WSFC クラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。|[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [フェールオーバー クラスタリングと AlwaysOn 可用性グループ &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)|  
+|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|ホスト コンピューターは、Windows Server フェールオーバー クラスタリング (WSFC) ノードであることが必要です。 可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは、同じ WSFC クラスターの別のノードに存在する必要があります。 唯一の例外は、別の WSFC クラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。|[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|可用性グループで Kerberos を操作するには:<br /><br /> 可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで、同じ SQL Server サービス アカウントを使用する必要があります。<br /><br /> ドメイン管理者は、可用性グループ リスナーの仮想ネットワーク名 (VNN) の SQL Server サービス アカウントに、Active Directory でサーバー プリンシパル名 (SPN) を手動で登録する必要があります。 SQL Server サービス アカウント以外のアカウントに SPN が登録されている場合は、認証が失敗します。<br /><br /> **\*\* 重要 \*\*** SQL Server サービス アカウントを変更した場合は、ドメイン管理者が SPN を手動で再登録する必要があります。|[Kerberos 接続用のサービス プリンシパル名の登録](../../configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **簡単な説明:**<br /><br /> Kerberos と SPN は相互認証を行います。 SPN は、SQL Server サービスを起動する Windows アカウントにマップされます。 SPN が正常に登録されていないか登録に失敗した場合、Windows セキュリティ レイヤーは、SPN に関連するアカウントを決定することができず、Kerberos 認証は使用できません。<br /><br /> 注:NTLM には、この要件はありません。|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストする予定がある場合は、FCI の制限を確実に理解し、FCI の要件が満たされていることを確認してください。|[SQL Server のフェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストするための前提条件と要件](#FciArLimitations) (このトピックの後半)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|すべてのサーバー インスタンスで Enterprise Edition の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]が実行されている必要があります。|[SQL Server 2014 の各エディションがサポートする機能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|特定の可用性グループの可用性レプリカをホストするすべてのサーバー インスタンス間で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の照合順序を統一する必要があります。|[サーバーの照合順序の設定または変更](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を有効にします。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のサーバー インスタンスは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 環境がサポートする範囲内であれば、1 台のコンピューターでいくつでも有効にすることができます。|[AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> **\*\* 重要 \*\*** WSFC クラスターを削除してから再作成した場合は、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を有効にしていた、元の WSFC クラスター上の各サーバー インスタンスについて、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を無効にしてからもう一度有効にする必要があります。|  
-|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|すべてのサーバー インスタンスには、データベース ミラーリング エンドポイントが必要です。 このエンドポイントは、サーバー インスタンス上のミラーリング監視サーバーとデータベース ミラーリング パートナー、および可用性レプリカすべてによって共有されます。<br /><br /> 可用性レプリカのホストとして選んだサーバー インスタンスがドメイン ユーザー アカウントで実行されていて、まだデータベース ミラーリング エンドポイントが存在しない場合、 [新しい可用性グループ ウィザード](use-the-availability-group-wizard-sql-server-management-studio.md) (または [可用性グループへのレプリカの追加ウィザード](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) でエンドポイントを作成し、サーバー インスタンス サービス アカウントに CONNECT 権限を許可することができます。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがビルトイン アカウント (Local System、Local Service、Network Service など) で実行されている場合または非ドメイン アカウントで実行されている場合は、エンドポイント認証に証明書を使用する必要があります。ウィザードは、サーバー インスタンス上でデータベース ミラーリング エンドポイントを作成できなくなります。 この場合は、データベース ミラーリング エンドポイントを手動で作成してからウィザードを起動することをお勧めします。<br /><br /> **\*\* セキュリティに関する注意 \*\*** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のトランスポート セキュリティは、データベース ミラーリングと同じです。|[データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
+|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|すべてのサーバー インスタンスには、データベース ミラーリング エンドポイントが必要です。 このエンドポイントは、サーバー インスタンス上のミラーリング監視サーバーとデータベース ミラーリング パートナー、および可用性レプリカすべてによって共有されます。<br /><br /> 可用性レプリカのホストとして選んだサーバー インスタンスがドメイン ユーザー アカウントで実行されていて、まだデータベース ミラーリング エンドポイントが存在しない場合、 [新しい可用性グループ ウィザード](use-the-availability-group-wizard-sql-server-management-studio.md) (または [可用性グループへのレプリカの追加ウィザード](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) でエンドポイントを作成し、サーバー インスタンス サービス アカウントに CONNECT 権限を許可することができます。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがビルトイン アカウント (Local System、Local Service、Network Service など) で実行されている場合または非ドメイン アカウントで実行されている場合は、エンドポイント認証に証明書を使用する必要があります。ウィザードは、サーバー インスタンス上でデータベース ミラーリング エンドポイントを作成できなくなります。 この場合は、データベース ミラーリング エンドポイントを手動で作成してからウィザードを起動することをお勧めします。<br /><br /> **\*\* セキュリティに関する注意 \*\*** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のトランスポート セキュリティは、データベース ミラーリングと同じです。|[データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ&#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|FILESTREAM を使用するデータベースを可用性グループに追加する場合は、その可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで FILESTREAM が有効になっていることを確認してください。|[FILESTREAM の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|包含データベースを可用性グループに追加する場合は、その可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで `contained database authentication` サーバー オプションが `1` に設定されていることを確認してください。|[contained database authentication サーバー構成オプション](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [サーバー構成オプション &#40;SQL Server&#41;](../../configure-windows/server-configuration-options-sql-server.md)|  
   
@@ -177,7 +177,7 @@ ms.locfileid: "59242231"
   
 |タスク|必要な権限|  
 |----------|--------------------------|  
-|データベース ミラーリング エンドポイントを作成する|CREATE ENDPOINT 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  また、CONTROL ON ENDPOINT 権限も必要です。 詳細については、「[GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)」を参照してください。|  
+|データベース ミラーリング エンドポイントを作成する|CREATE ENDPOINT 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  また、CONTROL ON ENDPOINT 権限も必要です。 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)」を参照してください。|  
 |有効にする [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|ローカル コンピューターの **Administrator** グループのメンバーシップおよび WSFC クラスターに対するフル コントロール権限が必要です。|  
   
 ###  <a name="RelatedTasksSI"></a> 関連タスク (サーバー インスタンス)  
@@ -185,7 +185,7 @@ ms.locfileid: "59242231"
 |タスク|トピック|  
 |----------|-----------|  
 |データベース ミラーリング エンドポイントが存在するかどうかを確認する|[sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)|  
-|データベース ミラーリング エンドポイントを作成する (まだ存在しない場合)|[Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)|  
+|データベース ミラーリング エンドポイントを作成する (まだ存在しない場合)|[Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [データベース ミラーリング エンドポイントの AlwaysOn 可用性グループの作成&#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)|  
 |AlwaysOn 可用性グループを有効にする|[AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)|  
   
 ###  <a name="RelatedContentSI"></a> 関連コンテンツ (サーバー インスタンス)  
@@ -233,9 +233,9 @@ ms.locfileid: "59242231"
   
 ###  <a name="RelatedContentFCIs"></a> 関連コンテンツ (FCI)  
   
--   [フェールオーバー クラスタリングと AlwaysOn 可用性グループ &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)  
+-   [フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [AlwaysOn アーキテクチャ ガイド:フェールオーバー クラスター インスタンスと可用性グループを使用して高可用性とディザスター リカバリー ソリューションを構築します。](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [AlwaysOn アーキテクチャ ガイド:フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性およびディザスター リカバリー ソリューションの構築](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> 可用性グループの前提条件と制限  
 
@@ -276,7 +276,7 @@ ms.locfileid: "59242231"
   
     -   フル コントロール  
   
-         [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] はフル コントロールを必要とします。また、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を有効にした [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスには、WSFC クラスターのフル コントロール権限が (サービス SID を介して) 与えられます。  
+         [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] はフル コントロールを必要とします。また、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を有効にした [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスには、WSFC クラスターのフル コントロール権限が (サービス SID を介して) 与えられます。  
   
          サーバー インスタンスのセキュリティを WSFC フェールオーバー クラスター マネージャーで直接追加したり削除したりすることはできません。 WSFC セキュリティ セッションを管理するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーまたはそれに相当する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の WMI を使用します。  
   
@@ -357,15 +357,15 @@ ms.locfileid: "59242231"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn チーム ブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
 -   [AlwaysON - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [フェールオーバー クラスタリングと AlwaysOn 可用性グループ &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [AlwaysOn クライアント接続 (SQL Server)](always-on-client-connectivity-sql-server.md)  
   
   

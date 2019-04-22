@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6d647fc2a1a4d5f88a85ec5917125527004570c
-ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58788059"
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (TRANSACT-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "58788059"
 | :---------- | :-------- | :---------- |
 |path|**nvarchar**(256)|バッファー プール拡張キャッシュのパスとファイル名。 Null 値を許容します。|  
 |file_id|**int**|バッファー プール拡張ファイルの ID。 NULL 値は許可されません。|  
-|状態|**int**|バッファー プール拡張機能の状態。 NULL 値は許可されません。<br /><br /> 0 - バッファー プール拡張機能が無効<br /><br /> 1 - バッファー プール拡張機能の無効化<br /><br /> 2 - 将来使用するため予約されています<br /><br /> 3 - バッファー プール拡張機能の有効化<br /><br /> 4 - 将来使用するため予約されています<br /><br /> 5 - バッファー プール拡張機能が有効|  
+|state|**int**|バッファー プール拡張機能の状態。 NULL 値は許可されません。<br /><br /> 0 - バッファー プール拡張機能が無効<br /><br /> 1 - バッファー プール拡張機能の無効化<br /><br /> 2 - 将来使用するため予約されています<br /><br /> 3 - バッファー プール拡張機能の有効化<br /><br /> 4 - 将来使用するため予約されています<br /><br /> 5 - バッファー プール拡張機能が有効|  
 |state_description|**nvarchar**(60)|バッファー プール拡張機能の状態を説明します。 NULL 値が許可されます。<br /><br /> 0 = バッファー プール拡張機能が無効<br /><br /> 5 = バッファー プール拡張機能が有効になっています。|
 |current_size_in_kb|**bigint**|現在、バッファー プール拡張ファイルのサイズ。 NULL 値は許可されません。|
 | &nbsp; | &nbsp; | &nbsp; |

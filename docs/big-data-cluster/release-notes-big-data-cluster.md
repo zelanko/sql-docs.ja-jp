@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 3c999d82df4e8b73e290456ad5d3601712747ef9
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860530"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>ビッグ データ クラスターは、SQL Server のリリース ノート
@@ -33,12 +33,12 @@ ms.locfileid: "58860530"
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
-| GPU 上でのガイダンスは、ディープ ラーニングと Spark で TensorFlow を実行するためサポートします。 | [GPU サポートと共にビッグ データ クラスターにデプロイし、実行 TensorFlow](spark-gpu-tensorflow.md)します。 |
+| Spark で TensorFlow を使用しディープ ラーニングを実行する場合の GPU でのサポートに関するガイダンス。 | [GPU サポートと共にビッグ データ クラスターにデプロイし、実行 TensorFlow](spark-gpu-tensorflow.md)します。 |
 | **SqlDataPool**と**SqlStoragePool**データ ソースは、既定では作成されません。 | これらを必要に応じて手動で作成します。 参照してください、[既知の問題](#externaltablesctp24)します。 |
-| `INSERT INTO SELECT` データのプールをサポートします。 | 例については、次を参照してください。[チュートリアル。Transact SQL を使用した SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-sql.md)します。 |
+| データ プール用の `INSERT INTO SELECT` のサポート。 | 例については、次を参照してください。[チュートリアル。Transact SQL を使用した SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-sql.md)します。 |
 | `FORCE SCALEOUTEXECUTION` `DISABLE SCALEOUTEXECUTION`オプション。 | 強制的に有効または無効にコンピューティングの使用は、外部テーブルに対するクエリのプールです。 たとえば、`SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` のようにします。 |
 | 更新された AKS デプロイの推奨事項。 | AKS でのビッグ データ クラスターを評価するときに今すぐ使用が推奨サイズの 1 つのノード**Standard_L8s**します。 |
-| Spark 2.4 以前に Spark ランタイム アップグレードします。 | |
+| Spark 2.4 への Spark のランタイムのアップグレード。 | |
 
 ### <a name="known-issues"></a>既知の問題
 
@@ -49,7 +49,7 @@ ms.locfileid: "58860530"
 - 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。
 
    > [!IMPORTANT]
-   > データをバックアップし、既存のビッグ データ クラスターを削除する必要があります (の以前のバージョンを使用して**mssqlctl**) 最新リリースを展開する前にします。 詳細については、[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)を参照してください。
+   > データをバックアップし、既存のビッグ データ クラスターを削除する必要があります (の以前のバージョンを使用して**mssqlctl**) 最新リリースを展開する前にします。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)します。
 
 - を AKS にデプロイした後、展開から、次の 2 つの警告イベントを表示があります。 2 つのイベントには既知の問題が、それらが妨げられないして AKS でビッグ データ クラスターを正常に展開します。
 
@@ -159,7 +159,7 @@ make: *** [deploy-clean] Error 2
 
 #### <a name="security"></a>セキュリティ
 
-- SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)を参照してください。
+- SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、次を参照してください。 [SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)します。
 
 - AKS のログは、ビッグ データ クラスターのデプロイの SA パスワードを含めることができます。
 
@@ -176,7 +176,7 @@ make: *** [deploy-clean] Error 2
 | VS Code の拡張機能、ビッグ データ クラスターにアプリケーションを展開します。 | [VS Code を使用してビッグ データの SQL Server クラスターにアプリケーションを展開する方法](app-deployment-extension.md) |
 | 変更、 **mssqlctl**ツールのコマンドの使用方法。 | 詳細についてを参照してください、 [mssqlctl の既知の問題](#mssqlctlctp23)します。 |
 | Sparklyr を使用して、ビッグ データ クラスター | [SQL Server 2019 ビッグ データ クラスターで Sparklyr を使用します。](sparklyr-from-RStudio.md) |
-| ビッグ データ クラスター外部の HDFS と互換性のあるストレージにマウント**HDFS が階層化**します。 | 参照してください[HDFS が階層化](hdfs-tiering.md)します。 |
+| **HDFS 階層**を使用した、外部の HDFS 互換ストレージのビッグ データ クラスターへのマウント。 | 参照してください[HDFS が階層化](hdfs-tiering.md)します。 |
 | SQL Server のマスター インスタンスと HDFS/Spark ゲートウェイの新しい統一された接続エクスペリエンス。 | 参照してください[master の SQL Server インスタンスと HDFS/Spark ゲートウェイ](connect-to-big-data-cluster.md)します。 |
 | クラスターを削除して**mssqlctl クラスター削除**これで、名前空間内のビッグ データ クラスターの一部であったオブジェクトのみを削除します。 | 名前空間は削除されません。 ただし、以前のリリースでこのコマンドは、名前空間の全体を削除しました。 |
 | _セキュリティ_エンドポイントの名前が変更され、統合します。 | **サービス-セキュリティ-lb**と**サービス-セキュリティ-nodeport**に統合されています、**エンドポイント セキュリティ**エンドポイント。 |
@@ -193,7 +193,7 @@ make: *** [deploy-clean] Error 2
 - 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。
 
    > [!IMPORTANT]
-   > データをバックアップし、既存のビッグ データ クラスターを削除する必要があります (の以前のバージョンを使用して**mssqlctl**) 最新リリースを展開する前にします。 詳細については、[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)を参照してください。
+   > データをバックアップし、既存のビッグ データ クラスターを削除する必要があります (の以前のバージョンを使用して**mssqlctl**) 最新リリースを展開する前にします。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)します。
 
 - **ACCEPT_EULA**環境変数が、EULA に同意するには、"Yes"または"yes"にする必要があります。 以前のリリースには、"y"と"Y"が許可されているが、これらは受け入れられないと、展開に失敗すると、します。
 
@@ -281,7 +281,7 @@ make: *** [deploy-clean] Error 2
 
 #### <a name="security"></a>セキュリティ
 
-- SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)を参照してください。
+- SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、次を参照してください。 [SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)します。
 
 - AKS のログは、ビッグ データ クラスターのデプロイの SA パスワードを含めることができます。
 
@@ -302,7 +302,7 @@ make: *** [deploy-clean] Error 2
 
 #### <a name="deployment"></a>展開
 
-- 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。 バックアップし、最新のリリースを展開する前に、既存のビッグ データ クラスターを削除する必要があります。 詳細については、[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)を参照してください。
+- 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。 バックアップし、最新のリリースを展開する前に、既存のビッグ データ クラスターを削除する必要があります。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)します。
 
 - を AKS にデプロイした後、展開から、次の 2 つの警告イベントを表示があります。 2 つのイベントには既知の問題が、それらが妨げられないして AKS でビッグ データ クラスターを正常に展開します。
 
@@ -350,7 +350,7 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 
 #### <a name="security"></a>セキュリティ
 
-- SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)を参照してください。
+- SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、次を参照してください。 [SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)します。
 
 - AKS のログは、ビッグ データ クラスターのデプロイの SA パスワードを含めることができます。
 
@@ -370,7 +370,7 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 
 #### <a name="deployment"></a>展開
 
-- 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。 バックアップし、最新のリリースを展開する前に、既存のビッグ データ クラスターを削除する必要があります。 詳細については、[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)を参照してください。
+- 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。 バックアップし、最新のリリースを展開する前に、既存のビッグ データ クラスターを削除する必要があります。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)します。
 
 - を AKS にデプロイした後、展開から、次の 2 つの警告イベントを表示があります。 2 つのイベントには既知の問題が、それらが妨げられないして AKS でビッグ データ クラスターを正常に展開します。
 
@@ -414,7 +414,7 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 
 #### <a name="security"></a>セキュリティ
 
-- SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)を参照してください。
+- SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、次を参照してください。 [SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)します。
 
 - AKS のログは、ビッグ データ クラスターのデプロイの SA パスワードを含めることができます。
 
@@ -485,10 +485,10 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 
 #### <a name="security"></a>セキュリティ
 
-- SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)を参照してください。
+- SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、次を参照してください。 [SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)します。
 
 - AKS のログは、ビッグ データ クラスターのデプロイの SA パスワードを含めることができます。
 
 ## <a name="next-steps"></a>次のステップ
 
-ビッグ データの SQL Server クラスターの詳細については、[SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)を参照してください。
+ビッグ データの SQL Server クラスターの詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)します。

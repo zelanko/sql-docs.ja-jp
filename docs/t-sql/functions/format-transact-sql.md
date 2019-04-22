@@ -18,17 +18,17 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: c265582eb3cad857201fdde5f3671e46e370b00a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 87750e264f87b8244cb74b9d68276c85d92e5761
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342950"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670931"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、指定した形式とオプションのカルチャを使用して書式設定された値を返します。 文字列としての日付/時刻と数値のロケール依存の書式指定には FORMAT 関数を使用します。 一般的なデータ型変換では、引き続き CAST または CONVERT を使用します。  
   
@@ -36,11 +36,12 @@ ms.locfileid: "58342950"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql
 FORMAT ( value, format [, culture ] )  
 ```  
   
-## <a name="arguments"></a>引数  
+## <a name="arguments"></a>引数
+
  *value*  
  書式設定がサポートされているデータ型の式。 有効な型の一覧については、以下の「解説」のセクションにある表を参照してください。  
   
@@ -54,15 +55,17 @@ FORMAT ( value, format [, culture ] )
   
  *culture* 引数が指定されていない場合は、現在のセッションの言語が使用されます。 この言語は、SET LANGUAGE ステートメントを使用して、暗黙的または明示的に設定されます。 *culture* は、引数として .NET Framework でサポートされている任意のカルチャを受け入れます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で明示的にサポートされている言語に制限されません。 *culture* 引数が有効でない場合は、FORMAT でエラーが発生します。  
   
-## <a name="return-types"></a>戻り値の型  
+## <a name="return-types"></a>戻り値の型
+
  **nvarchar** または null  
   
  戻り値の長さは *format* によって決まります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  *valid* でない *culture* 以外のエラーの場合、FORMAT は NULL を返します。 たとえば、*format* に指定された値が無効な場合は NULL を返します。  
- 
- FORMAT 関数は非決定的です。   
+
+ FORMAT 関数は非決定的です。
   
  FORMAT は、.NET Framework の共通言語ランタイム (CLR) の存在に依存しています。  
   
@@ -93,7 +96,8 @@ FORMAT ( value, format [, culture ] )
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-simple-format-example"></a>A. シンプルな FORMAT 例  
+### <a name="a-simple-format-example"></a>A. シンプルな FORMAT 例
+
  次の例では、さまざまなカルチャ用にフォーマットされたシンプルな日付を返します。  
   
 ```sql  
@@ -101,7 +105,7 @@ DECLARE @d DATETIME = '10/01/2011';
 SELECT FORMAT ( @d, 'd', 'en-US' ) AS 'US English Result'  
       ,FORMAT ( @d, 'd', 'en-gb' ) AS 'Great Britain English Result'  
       ,FORMAT ( @d, 'd', 'de-de' ) AS 'German Result'  
-      ,FORMAT ( @d, 'd', 'zh-cn' ) AS 'Simplified Chinese (PRC) Result';   
+      ,FORMAT ( @d, 'd', 'zh-cn' ) AS 'Simplified Chinese (PRC) Result';
   
 SELECT FORMAT ( @d, 'D', 'en-US' ) AS 'US English Result'  
       ,FORMAT ( @d, 'D', 'en-gb' ) AS 'Great Britain English Result'  
@@ -111,7 +115,7 @@ SELECT FORMAT ( @d, 'D', 'en-US' ) AS 'US English Result'
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 US English Result Great Britain English Result  German Result Simplified Chinese (PRC) Result  
 ----------------  ----------------------------- ------------- -------------------------------------  
 10/1/2011         01/10/2011                    01.10.2011    2011/10/1  
@@ -125,7 +129,8 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-format-with-custom-formatting-strings"></a>B. カスタムの書式指定文字列を使用する FORMAT  
+### <a name="b-format-with-custom-formatting-strings"></a>B. カスタムの書式指定文字列を使用する FORMAT
+
  次の例では、カスタム書式を指定して数値を書式設定する方法を示します。 この例では、現在の日付が 2012 年 9 月 27 日であることを前提としています。 これらのカスタム書式およびその他のカスタム書式の詳細については、「[カスタム数値書式設定文字列](https://msdn.microsoft.com/library/0c899ak8.aspx)」を参照してください。  
   
 ```sql  
@@ -136,7 +141,7 @@ SELECT FORMAT( @d, 'dd/MM/yyyy', 'en-US' ) AS 'DateTime Result'
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 DateTime Result  Custom Number Result  
 --------------   --------------------  
 27/09/2012       123-45-6789  
@@ -144,7 +149,8 @@ DateTime Result  Custom Number Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-format-with-numeric-types"></a>C. 数値型を使用する FORMAT  
+### <a name="c-format-with-numeric-types"></a>C. 数値型を使用する FORMAT
+
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの **Sales.CurrencyRate** テーブルから 5 行を返します。 列 **EndOfDateRate** は、**money** 型としてテーブルに格納されます。 この例では、書式設定されずに返された列を、.NET の数値書式、一般書式、および通貨の書式の種類を指定して書式設定します。 これらの数値書式およびその他の数値書式の詳細については、「[標準数値書式設定文字列](https://msdn.microsoft.com/library/dwhawy9k.aspx)」を参照してください。  
   
 ```sql  
@@ -182,7 +188,7 @@ FROM Sales.CurrencyRate
 ORDER BY CurrencyRateID;  
 ```  
   
-```  
+```
 CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format  
 -------------- ------------  --------------  --------------  ---------------  
 1              1.0002        1,00            1,0002          1,00 €  
@@ -194,7 +200,8 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
  (5 row(s) affected)  
 ```  
   
-###  <a name="ExampleD"></a> D. 時刻データ型を使用する FORMAT  
+### <a name="ExampleD"></a> D. 時刻データ型を使用する FORMAT
+
  `.` と `:` がエスケープされていないため、FORMAT は NULL を返します。  
   
 ```sql  
@@ -209,9 +216,8 @@ SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
- [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
-  
-  
+ [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: faee29ed293c59752988760ea9ca27a4cf3e372a
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58859993"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server のビッグ データ クラスターにサンプル データを読み込む
@@ -121,14 +121,14 @@ ms.locfileid: "58859993"
 
 データの仮想化:
 
-- [チュートリアル:ビッグ データの SQL Server クラスターで HDFS のクエリ](tutorial-query-hdfs-storage-pool.md)
-- [チュートリアル:SQL Server のビッグ データ クラスターから Oracle クエリを実行します。](tutorial-query-oracle.md)
+- [チュートリアル: ビッグ データの SQL Server クラスターで HDFS のクエリ](tutorial-query-hdfs-storage-pool.md)
+- [チュートリアル: SQL Server のビッグ データ クラスターから Oracle クエリを実行します。](tutorial-query-oracle.md)
 
 データの取り込み:
 
-- [チュートリアル:Transact SQL を使用した SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-sql.md)
-- [チュートリアル:Spark ジョブの SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-spark.md)
+- [チュートリアル: Transact SQL を使用した SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-sql.md)
+- [チュートリアル: Spark ジョブの SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-spark.md)
 
 Notebooks:
 
-- [チュートリアル:SQL Server 2019 ビッグ データ クラスター上のサンプルの notebook を実行します。](tutorial-notebook-spark.md)
+- [チュートリアル: SQL Server 2019 ビッグ データ クラスター上のサンプルの notebook を実行します。](tutorial-notebook-spark.md)

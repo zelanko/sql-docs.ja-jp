@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241916"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 多次元のグローバル化のシナリオ
@@ -45,7 +45,7 @@ ms.locfileid: "59241916"
   
 -   Analysis Services が実行される Windows サーバーに言語パックをインストールした場合、ログ ファイルには英語とローカライズされたメッセージが混在します。  
   
--   ドキュメントとツール ([!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] や [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] など) は、次の言語に翻訳されています。中国語 (簡体字)、中国語 (繁体字)、フランス語、ドイツ語、イタリア語、日本語、韓国語、ポルトガル語 (ブラジル)、ロシア語、およびスペイン語。 言語固有のバージョンのツールを使用するには、言語固有のバージョンの SQL Server をインストールします (たとえば、SQL Server のドイツ語版をインストールし、ドイツ語で Management Studio を取得します)。または、 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]の対象言語でスタンドアロンのセットアップを実行します。  
+-   ドキュメントとツールなど[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]と[!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]、これらの言語に変換されます。簡体字、繁体字、フランス語、ドイツ語、イタリア語、日本語、韓国語、ポルトガル語 (ブラジル)、ロシア語、およびスペイン語。 言語固有のバージョンのツールを使用するには、言語固有のバージョンの SQL Server をインストールします (たとえば、SQL Server のドイツ語版をインストールし、ドイツ語で Management Studio を取得します)。または、 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]の対象言語でスタンドアロンのセットアップを実行します。  
   
  Analysis Services では、言語、照合順序、および翻訳をオブジェクト階層全体で独立して設定できます。  
   

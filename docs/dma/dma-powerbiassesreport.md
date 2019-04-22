@@ -16,17 +16,17 @@ author: HJToland3
 ms.author: rajpo
 manager: craigg
 ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872073"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Data Migration Assistant を Power BI で作成された統合評価レポートを分析します。
 
 この記事では、統合された移行評価を分析する Power BI レポートを作成する方法について説明します。
 
-Data Migration Assistant によって作成された移行評価を統合する方法の詳細については、[評価レポートの統合](../dma/dma-consolidatereports.md)を参照してください。
+Data Migration Assistant によって作成された移行評価を統合する方法の詳細については、次を参照してください。[評価レポートの統合](../dma/dma-consolidatereports.md)します。
 
 ## <a name="sample-power-bi-reports"></a>Power BI のサンプル レポート
 
@@ -34,7 +34,7 @@ Data Migration Assistant によって作成された移行評価を統合する�
 
 次のレポートが含まれます。 
 
-- [ダッシュボード](#dashboard-report)
+- [ダッシュ ボード](#dashboard-report)
 
   スナップショットの統計情報とドリル ダウン レポートが含まれています。
 
@@ -137,7 +137,7 @@ DTC データベースでフィルター処理など、**読み取り専用デ�
 
 ![読み取り専用データベースにすることはできませんアップグレードの問題](../dma/media/ReadOnlyDatabases.png)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Data Migration Assistant の概要](../dma/dma-overview.md)
 

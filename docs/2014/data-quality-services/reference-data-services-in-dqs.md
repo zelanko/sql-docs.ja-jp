@@ -11,10 +11,10 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d52c140a1a3b9bc4c329c8034918486f2fd3e01e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241760"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS の参照データ サービス
@@ -69,7 +69,7 @@ ms.locfileid: "59241760"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|Marketplace またはダイレクト オンライン サード パーティ データ プロバイダーの参照データ サービスを使用するように DQS を構成する方法を説明します。|[参照データを使用する DQS の構成](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)|  
+|Marketplace またはダイレクト オンライン サード パーティ データ プロバイダーの参照データ サービスを使用するように DQS を構成する方法を説明します。|[参照データを使用するように DQS を構成する](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |ナレッジ ベースのドメインまたは複合ドメインを参照データ サービスにマップする方法を説明します。|[参照データにドメインまたは複合ドメインをアタッチする](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
 |参照データ サービスを使用してデータをクレンジングする方法を説明します。|[参照データ &#40;外部&#41; のナレッジを使用したデータのクレンジング](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   

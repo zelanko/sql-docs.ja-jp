@@ -55,10 +55,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240731"
 ---
 # <a name="log-properties"></a>ログのプロパティ
@@ -88,9 +88,9 @@ ms.locfileid: "59240731"
  **ErrorLog\KeyErrorAction**  
  `KeyNotFound` エラーが発生した場合に、サーバーが実行するアクションを指定します。 このエラーへの有効な応答は次のとおりです。  
   
--   `ConvertToUnknown` 不明なメンバーにエラーのキー値を割り当てるようにサーバーに指示します。  
+-   `ConvertToUnknown` は、不明なメンバーにエラーのキー値を割り当てるようにサーバーに指示します。  
   
--   `DiscardRecord` レコードを除外するサーバーに指示します。  
+-   `DiscardRecord` は、レコードを除外するようにサーバーに指示します。  
   
  **ErrorLog\KeyErrorLogFile**  
  サービス アカウントが読み取り/書き込み権限を持つフォルダーにある、.log ファイル拡張子を持つ必要があるユーザー定義のファイル名です。 このログ ファイルには、処理中に生成されたエラーのみが含まれます。 詳細情報が必要な場合はフライト レコーダーを使用します。  
@@ -101,18 +101,18 @@ ms.locfileid: "59240731"
  **ErrorLog\KeyErrorLimitAction**  
  キー エラー数が上限に達した場合にサーバーが実行するアクションを指定します。 このアクションへの有効な応答は次のとおりです。  
   
--   `StopProcessing` エラーの上限に達したときに処理を停止するサーバーに指示します。  
+-   `StopProcessing` は、エラーの上限に到達した場合に処理を停止するようにサーバーに指示します。  
   
--   `StopLogging` エラーの上限に達するが処理を続行を許可するときにエラーのログ記録を停止するサーバーに指示します。  
+-   `StopLogging` は、エラーの上限に到達した場合にエラーの記録を停止するものの、処理を継続するようにサーバーに指示します。  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  `KeyNotFound` エラーが発生した場合に、サーバーが実行するアクションを指定します。 このエラーへの有効な応答は次のとおりです。  
   
--   `IgnoreError` 続行するサーバーに指示せず、エラーを記録するか、キー エラーの上限に達するまでカウントを処理します。 エラーを無視すると、エラー カウントに追加したり画面またはログ ファイルに記録することなく、処理を継続します。 レコードにデータの整合性の問題があり、データベースに追加できません。 レコードは、`KeyErrorAction` プロパティで指定されているとおりに、破棄されるか、不明なメンバーに集計されます。  
+-   `IgnoreError` は、エラーを記録せずに処理を継続するか、キー エラーの上限に達するまでカウントするようにサーバーに指示します。 エラーを無視すると、エラー カウントに追加したり画面またはログ ファイルに記録することなく、処理を継続します。 レコードにデータの整合性の問題があり、データベースに追加できません。 レコードは、`KeyErrorAction` プロパティで指定されているとおりに、破棄されるか、不明なメンバーに集計されます。  
   
--   `ReportAndContinue` エラーを記録するサーバーに指示し、キー エラーの上限にカウント、処理を続行します。 エラーをトリガーするレコードは、破棄されるか、不明メンバーに変換されます。  
+-   `ReportAndContinue` は、エラーを記録して、キー エラーの上限に達するまでカウントし、処理を継続するようにサーバーに指示します。 エラーをトリガーするレコードは、破棄されるか、不明メンバーに変換されます。  
   
--   `ReportAndStop` サーバーのエラーを記録し、キー エラーの上限に関係なく直ちに処理を停止するように指示します。 エラーをトリガーするレコードは、破棄されるか、不明メンバーに変換されます。  
+-   `ReportAndStop` は、エラーを記録し、キー エラーの上限に関係なく処理を直ちに停止するようにサーバーに指示します。 エラーをトリガーするレコードは、破棄されるか、不明メンバーに変換されます。  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
  重複したキーが見つかった場合に、サーバーが実行するアクションを指定します。 有効な値は、エラーが発生しなかったかのように処理を継続する `IgnoreError`、エラーを記録して処理を継続する `ReportAndContinue`、エラー数がエラーの上限に達していなくてもエラーを記録して直ちに処理を停止する `ReportAndStop` です。  
@@ -172,7 +172,7 @@ ms.locfileid: "59240731"
  このプロパティの既定値は空白です。その場合、既定で使用されるファイル名は FlightRecorderTraceDef.xml になります。  
   
 ## <a name="query-log"></a>クエリ ログ  
- **適用対象:** 多次元サーバー モードの場合のみ  
+ **適用対象:** 多次元サーバー モードのみ  
   
  **QueryLog\QueryLogFileName**  
  クエリ ログ ファイルの名前を指定する文字列プロパティです。 このプロパティは、データベース テーブル (既定の動作) ではなく、ディスク ファイルがログ記録に使用される場合にのみ適用されます。  
@@ -233,7 +233,7 @@ ms.locfileid: "59240731"
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services のサーバーのプロパティの構成](server-properties-in-analysis-services.md)   
+ [Analysis services サーバーのプロパティを構成します。](server-properties-in-analysis-services.md)   
  [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

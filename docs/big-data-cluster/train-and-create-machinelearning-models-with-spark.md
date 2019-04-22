@@ -12,10 +12,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: b9217b56da2e00ba50288f1643df809f482c2517
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860563"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>トレーニングし、Spark を使用した機械学習モデルを作成します。
@@ -214,4 +214,4 @@ print("loaded model from {}".format(model_fs))
 
 ## <a name="next-steps"></a>次のステップ
 
-PySpark ノートブックを使用する方法の詳細については、[notebook を使用する方法](notebooks-guidance.md)を参照してください。
+PySpark ノートブックを使用する方法の詳細については、次を参照してください。 [notebook を使用する方法](notebooks-guidance.md)します。

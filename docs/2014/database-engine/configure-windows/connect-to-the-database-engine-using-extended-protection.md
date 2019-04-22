@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241436"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>拡張保護を使用したデータベース エンジンへの接続
@@ -48,7 +48,7 @@ ms.locfileid: "59241436"
  チャネル バインドでは、クライアントと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス インスタンスとの間に、セキュリティで保護されたチャネル (Schannel) を確立します。 サービスでは、クライアントとサービス自身のチャネル固有のチャネル バインド トークン (CBT) を比較することにより、クライアントが本物かどうかが確認されます。 チャネル バインドでは、おびき寄せによる攻撃となりすましによる攻撃の両方に対処できますが、 すべてのセッション トラフィックのトランスポート層セキュリティ (TLS) 暗号化が必要になるため、実行時のコストが大きくなります。 チャネル バインドが発生するのは、暗号化がクライアントとサーバーのどちらで強制されているかにかかわらず、クライアント アプリケーションが暗号化を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続する場合です。  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[msCoName](../../includes/msconame-md.md)] 向けの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ プロバイダーでは、SSL 3.0、TLS 1.0 がサポートされています。 オペレーティング システムの SChannel 層を変更して別のプロトコル (TLS 1.1、TLS 1.2 など) を適用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続に失敗する可能性があります。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向けの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[msCoName](../../includes/msconame-md.md)] データ プロバイダーでは、SSL 3.0、TLS 1.0 がサポートされています。 オペレーティング システムの SChannel 層を変更して別のプロトコル (TLS 1.1、TLS 1.2 など) を適用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続に失敗する可能性があります。  
   
 ### <a name="operating-system-support"></a>オペレーティング システムのサポート  
  Windows による **拡張保護**のサポートの詳細については、以下のリンク先を参照してください。  
@@ -64,7 +64,7 @@ ms.locfileid: "59241436"
   
      選択できる値は、 **[オン]** と **[オフ]** です。 チャネル バインドを使用する場合は、 **[強制的に暗号化]** を **[オン]** に設定して、すべてのクライアントで暗号化が強制されるようにする必要があります。 この設定を **[オフ]** にした場合、保証されるのはサービス バインドだけになります。 **[強制的に暗号化]** は、 **構成マネージャーの** [MSSQLSERVER のプロトコルのプロパティ] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([フラグ] タブ) にあります。  
   
--   **で始まる**  
+-   **拡張保護**  
   
      選択できる値は、 **[オフ]**、 **[許可]**、および **[必須]** です。 **拡張保護** 変数を使用すると、各 **インスタンスの** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レベルを構成できます。 **[拡張保護]** は、 **構成マネージャーの** [MSSQLSERVER のプロトコルのプロパティ] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([詳細設定] タブ) にあります。  
   

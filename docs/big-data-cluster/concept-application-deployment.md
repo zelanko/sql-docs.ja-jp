@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 44e0be15c9b9cc3abb8af3e8f2e7fc8049d385df
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872365"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>アプリケーションの展開は、SQL Server 2019 ビッグ データ クラスター上で何ですか。
@@ -58,7 +58,7 @@ Cron ジョブを作成する場合、ReplicaSet が作成され、ポッドを�
 - [コマンド ライン インターフェイス `mssqlctl`](big-data-cluster-create-apps.md)
 - [Visual Studio Code と Azure Data Studio の拡張機能](app-deployment-extension.md)
 
-アプリケーションが RESTful web サービスを使用して実行することもできます。 詳細については、[ビッグ データ クラスター上でアプリケーションを消費する](big-data-cluster-consume-apps.md)を参照してください。
+アプリケーションが RESTful web サービスを使用して実行することもできます。 詳細については、次を参照してください。[ビッグ データ クラスター上でアプリケーションを消費する](big-data-cluster-consume-apps.md)します。
 
 ## <a name="next-steps"></a>次のステップ
 

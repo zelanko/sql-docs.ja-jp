@@ -12,18 +12,18 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 5a527e84535f62f9b0ef949a47001b85e71cbd2d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242246"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure の接続の種類 (SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is a cloud-based, hosted relational database built on  は、ホストされているクラウドベースのリレーショナル データベースで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テクノロジを利用して構築されています。s[!INCLUDE[ssSDS](../../includes/sssds-md.md)] からのデータをレポートに含めるには、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] の種類のレポート データ ソースに基づいたデータセットが必要です。Uこのビルトイン データ ソースの種類は、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データ拡張機能に基づいています。dこのデータ ソースの種類を使用して、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]からのデータに接続し、そのデータを取得します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] は、ホストされているクラウドベースのリレーショナル データベースで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テクノロジを利用して構築されています。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] からのデータをレポートに含めるには、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の種類のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データ拡張機能に基づいています。 このデータ ソースの種類を使用して、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]からのデータに接続し、そのデータを取得します。  
   
  このデータ拡張機能は、接続文字列とは個別に管理される、複数の値を持つパラメーター、サーバー集計、および資格情報をサポートしています。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  は、オンプレミスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスと似ています。[!INCLUDE[ssSDS](../../includes/sssds-md.md)] からは、一部の例外を除き、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同じようにデータを取得できます。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] は、オンプレミスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスと似ています。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] からは、一部の例外を除き、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と同じようにデータを取得できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]への接続を開くときに、接続タイムアウトを 30 秒に設定してください。  
@@ -46,7 +46,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
  詳細および接続文字列の例については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)」を参照してください。  
   
 ##  <a name="Credentials"></a> 資格情報  
- Windows 認証 (統合セキュリティ) はサポートされていません。 Windows 認証を使用して [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に接続しようとすると、エラーが発生します。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  でサポートされているのが SQL Server 認証 (ユーザー名とパスワード) のみであるため、ユーザーは [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に接続するたびに資格情報 (ログインとパスワード) を入力する必要があります。  
+ Windows 認証 (統合セキュリティ) はサポートされていません。 Windows 認証を使用して [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に接続しようとすると、エラーが発生します。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でサポートされているのが SQL Server 認証 (ユーザー名とパスワード) のみであるため、ユーザーは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に接続するたびに資格情報 (ログインとパスワード) を入力する必要があります。  
   
  データベースにアクセスするには、十分な資格情報が必要です。 クエリによっては、他の権限 (ストアド プロシージャを実行したり、テーブルやビューにアクセスしたりするために必要な権限) が必要な場合があります。 外部データ ソースの所有者は、十分な資格情報を構成して、ユーザーが必要とするデータベース オブジェクトに対する読み取り専用アクセスを提供する必要があります。  
   
@@ -158,9 +158,9 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  データ接続、データ ソース、およびデータセットを操作する手順について説明します。  
   
- [データ接続またはデータ ソースの追加および確認 &#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
- [共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
@@ -169,7 +169,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="Related"></a> 関連項目  
  次に示すセクションでは、レポート データの概念が詳細に説明されているほか、データに関連するレポートのパーツを定義しカスタマイズし使用する手順が説明されています。  
   
- [レポートへのデータの追加 &#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)  
+ [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)  
  レポートのデータへのアクセスの概要について説明します。  
   
  [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

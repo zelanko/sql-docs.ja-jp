@@ -25,10 +25,10 @@ author: dnethi
 ms.author: dinethi
 manager: craigg
 ms.openlocfilehash: 9bc678f69df60ec07e1cca6eddbb337aab8ed8ff
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042029"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
@@ -44,9 +44,9 @@ SSMS は無料です。
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1 は現在 SSMS の一般公開 (GA) バージョンである
 
-[![download](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 のダウンロード](https://go.microsoft.com/fwlink/?linkid=2043154)
+[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 のダウンロード](https://go.microsoft.com/fwlink/?linkid=2043154)
 
-[![download](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 アップグレード パッケージのダウンロード (17.x から 17.9.1 へのアップグレード)](https://go.microsoft.com/fwlink/?linkid=2043430)
+[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 アップグレード パッケージのダウンロード (17.x から 17.9.1 へのアップグレード)](https://go.microsoft.com/fwlink/?linkid=2043430)
 
 **バージョン情報**
 
@@ -78,7 +78,7 @@ SSMS 17.9.1 について詳しくは、[SSMS 17.9.1 の変更ログ](release-not
 
 **SSMS 18.0 リリース候補 1 (RC1) をご利用いただけるようになりました。これは *SQL Server Management Studio* の最新世代であり、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] をサポートしています。**
 
-**[![download](../ssdt/media/download.png) SQL Server Management Studio 18.0 (RC1) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2085742)**
+**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 18.0 (RC1) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2085742)**
 
 *RC1* は、SSMS 18.0 の最新のパブリック プレビューです。 以前の SSMS 18.0 プレビューがインストールされている場合は、それをアンインストールしてから SSMS 18.0 RC1 をインストールしてください。
 

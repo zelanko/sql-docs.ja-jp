@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 81d9914bee2661bfc3b679898c26a0f2ec3ed112
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212131"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506519"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services と Always On 可用性グループ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53212131"
     -   [フェールオーバー時のレポート サーバーの動作](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> Reporting Services と Always On 可用性グループを使用するための要件  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] と Power BI Report Server では .Net framework 4.0 を使用し、データ ソースでの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 接続文字列プロパティの使用をサポートします。  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  と Power BI Report Server では、.Net Framework 4.0 を使用して、データ ソースでの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 接続文字列プロパティの使用をサポートしています。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 2014 で  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を使用するためには、.Net 3.5 SP1 の修正プログラムをダウンロードしてインストールする必要があります。 この修正プログラムを適用すると、AG 機能を使う SQL クライアントが新たにサポートされ、さらに、接続文字列プロパティとして **ApplicationIntent** および **MultiSubnetFailover**がサポートされます。 レポート サーバーをホストする各コンピューターにこの修正プログラムがインストールされていない場合、ユーザーがレポートをプレビューしようとすると、以下のようなエラー メッセージが表示され、レポート サーバーのトレース ログに記録されます。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "53212131"
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のその他の要件については、「[Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の機能がサポートする範囲に、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の構成ファイル (**RSreportserver.config** など) は含まれません。 いずれかのレポート サーバーの構成ファイルに手動で変更を加えた場合は、そのレプリカを手動で更新する必要があります。  
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の機能がサポートする範囲に、 **の構成ファイル (** RSreportserver.config [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] など) は含まれません。 いずれかのレポート サーバーの構成ファイルに手動で変更を加えた場合は、そのレプリカを手動で更新する必要があります。  
   
 ##  <a name="bkmk_reportdatasources"></a> レポート データ ソースと可用性グループ  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を使用した [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] データ ソースの動作は、AG 環境の構成内容によって異なります。  
@@ -113,7 +113,7 @@ ms.locfileid: "53212131"
   
 -   **ローカル プレビュー:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] と [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 と support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の接続文字列プロパティがサポートされます。  
   
--   **リモートまたはサーバー モード プレビュー:**[!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]でレポートをプレビューするか、レポート サーバーに対してレポートをパブリッシュした後、次のようなエラーが表示された場合、プレビュー対象となるレポートのレポート サーバーに [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]用の .Net Framework 3.5 SP1 修正プログラムがインストールされていません。  
+-   **リモートまたはサーバー モード プレビュー:** レポート サーバーにレポートをパブリッシュするか [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] でレポートをプレビューしたときに、次のようなエラーが表示された場合、プレビュー対象となるレポートのレポート サーバーに [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用の .Net Framework 3.5 SP1 修正プログラムがインストールされていません。  
   
 > **エラー メッセージ:**"キーワードはサポートされていません:'applicationintent'"  
   
@@ -156,11 +156,11 @@ ms.locfileid: "53212131"
   
 -   可用性グループを作成し、 *リスナーの DNS 名*を構成します。  
   
--   **プライマリ レプリカ:** レポート サーバー データベースを 1 つの可用性グループにまとめ、そのすべてのレポート サーバー データベースを含んだプライマリ レプリカを作成します。  
+-   **プライマリ レプリカ:** レポート サーバー データベースが 1 つの可用性グループの一部になるように構成し、すべてのレポート サーバー データベースを含んだプライマリ レプリカを作成します。  
   
 -   **セカンダリ レプリカ:** 1 つまたは複数のセカンダリ レプリカを作成します。 プライマリ レプリカからセカンダリ レプリカへとデータベースをコピーする際は、'RESTORE WITH NORECOVERY' を使って、セカンダリ レプリカごとにデータベースを復元するのが一般的です。 セカンダリ レプリカの作成およびデータの同期動作の検証の詳細については、「[Always On セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
--   **レポート サーバーの資格情報:** プライマリ レプリカに対して作成したレポート サーバーの適切な資格情報をセカンダリ レプリカに対して作成する必要があります。 実際の手順は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境で使用する認証の種類 (Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アカウント、Windows ユーザー アカウント、SQL Server 認証) によって異なります。 詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
+-   **レポート サーバーの資格情報:** プライマリに対して作成したセカンダリ レプリカ上に、レポート サーバーの適切な資格情報を作成する必要があります。 実際の手順は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境で使用する認証の種類 (Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アカウント、Windows ユーザー アカウント、SQL Server 認証) によって異なります。 詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
 -   リスナーの DNS 名を使用するようにデータベース接続を更新します。 ネイティブ モードのレポート サーバーの場合、 **構成マネージャーで** [レポート サーバー データベース名] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を変更します。 SharePoint モードの場合、 **サービス アプリケーションの** データベース サーバー名 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を変更します。  
   

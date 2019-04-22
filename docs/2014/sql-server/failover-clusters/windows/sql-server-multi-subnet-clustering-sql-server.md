@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be4125f417b6333bfcb3002b15f1319f484d22a1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241610"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server マルチサブネット クラスタリング (SQL Server)
@@ -38,11 +38,11 @@ ms.locfileid: "59241610"
 ##  <a name="Configurations"></a> マルチサブネット フェールオーバー クラスター インスタンス構成  
  複数のサブネットを使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI の例を次に示します。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1 および Node2 が含まれます。 Node1 は Subnet1 に接続されています。 Node2 は Subnet2 に接続されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup ではこの構成をマルチサブネット クラスターと認識し、IP アドレス リソースの依存関係が **OR** に設定されます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1 および Node2 が含まれます。 Node1 は Subnet1 に接続されています。 Node2 は Subnet2 に接続されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup ではこの構成をマルチサブネット クラスターと認識し、IP アドレス リソースの依存関係が **OR**に設定されます。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1、Node2 および Node3 が含まれます。 Node1 および Node2 は Subnet1 に接続されています。 Node 3 は Subnet2 に接続されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup ではこの構成をマルチサブネット クラスターと認識し、IP アドレス リソースの依存関係が **OR** に設定されます。 Node1 と Node2 が同じサブネット上にあるため、この構成ではローカルでの可用性が強化されます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1、Node2 および Node3 が含まれます。 Node1 および Node2 は Subnet1 に接続されています。 Node 3 は Subnet2 に接続されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup ではこの構成をマルチサブネット クラスターと認識し、IP アドレス リソースの依存関係が **OR**に設定されます。 Node1 と Node2 が同じサブネット上にあるため、この構成ではローカルでの可用性が強化されます。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1 および Node2 が含まれます。 Node1 は Subnet1 に接続されています。 Node2 は Subnet1 および Subnet2 に接続されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup ではこの構成をマルチサブネット クラスターと認識し、IP アドレス リソースの依存関係が **OR** に設定されます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1 および Node2 が含まれます。 Node1 は Subnet1 に接続されています。 Node2 は Subnet1 および Subnet2 に接続されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup ではこの構成をマルチサブネット クラスターと認識し、IP アドレス リソースの依存関係が **OR**に設定されます。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1 および Node2 が含まれます。 Node1 は Subnet1 および Subnet2 に接続されています。 Node2 も Subnet1 および Subnet2 に接続されています。 IP アドレス リソースの依存関係は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup によって **AND** に設定されています。  
   

@@ -12,10 +12,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89344537c53c4caf066536804557451c965e4596
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241620"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 ハイブリッド クラウドの概要
@@ -108,7 +108,7 @@ ms.locfileid: "59241620"
  
  指定された推奨事項を確認することをお勧め (プレゼンテーション層、ビジネス層、データベース層など) のアプリケーション層を Azure Virtual Machines を移動する場合、[アプリケーション パターンと開発Azure Virtual Machines における SQL Server の戦略](https://msdn.microsoft.com/library/dn574746.aspx)記事。 この記事の目的では、ソリューション設計者および開発者の基盤を提供優れたアプリケーション アーキテクチャと設計で、Azure と Azure で新しいアプリケーションを開発する既存のアプリケーションを移行するときに従うことができます。 アプリケーション パターンごとに、この記事では内部設置型のシナリオ、それに相当するクラウド対応ソリューション、および関連する技術的な推奨事項について説明します。 さらに、アプリケーションを正しく設計できるように、この記事は、Azure 固有の開発戦略について説明します。 
  
-## <a name="see-also"></a>参照 
+## <a name="see-also"></a>関連項目 
  [SQL Server 2014 CTP2 製品ガイド](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
  [Microsoft SQL Server ハイブリッド クラウドのブログ シリーズ](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  

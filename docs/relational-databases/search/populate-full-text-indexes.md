@@ -26,10 +26,10 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042274"
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
@@ -97,7 +97,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
      既定では、あるいは `CHANGE_TRACKING AUTO` を指定した場合、Full-Text Engine によってフルテキスト インデックスに自動的にカタログが作成されます。 すべてのカタログの作成が最初に実行された後に、ベース テーブルでデータが変更されると変更が追跡され、追跡された変更が自動的に反映されます。 ただし、フルテキスト インデックスはバックグラウンドで更新されるため、変更が直ちにインデックスに反映されないこともあります。  
   
-     **自動作成を使って変更の追跡を開始するには**  
+     **自動でのカタログ作成を指定して変更の追跡を開始するには**  
   
     -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ...WITH CHANGE_TRACKING AUTO  
   
@@ -161,7 +161,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  増分作成では、インデックスが設定されたテーブルに **timestamp** データ型の列が存在する必要があります。 **timestamp** 型の列が存在しない場合には、増分作成を実行できません。   
 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** 列を使用して前回の作成後に変更された行が識別されます。 増分作成では、前回のカタログ作成後、または作成中に追加、削除、または変更された行のフルテキスト インデックスが更新されます。 作成が終わると、Full-Text Engine は新しい **timestamp** 型の値を記録します。 この値は、SQL Gatherer が検出した **timestamp** 型の最大値です。 次回、増分作成を開始するとき、この値が使用されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**timestamp** 列を使用して前回の作成後に変更された行が識別されます。 増分作成では、前回のカタログ作成後、または作成中に追加、削除、または変更された行のフルテキスト インデックスが更新されます。 作成が終わると、Full-Text Engine は新しい **timestamp** 型の値を記録します。 この値は、SQL Gatherer が検出した **timestamp** 型の最大値です。 次回、増分作成を開始するとき、この値が使用されます。  
  
 増分作成が要求された結果、完全作成が行われることもあります。
 -   **timestamp** 型の列を含んでいないテーブルで増分作成を要求すると、完全作成が実行されます。

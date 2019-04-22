@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860173"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio での SQL Server のビッグ データ クラスターに接続します。
@@ -106,4 +106,4 @@ Azure Data Studio の 2019年 2 月リリースでは、SQL Server のマスタ�
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server 2019 ビッグ データ クラスターに関する詳細については、[SQL Server 2019 ビッグ データ クラスターは](big-data-cluster-overview.md)を参照してください。
+SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターは](big-data-cluster-overview.md)します。

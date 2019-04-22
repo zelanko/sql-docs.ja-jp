@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241360"
 ---
 # <a name="data-flow"></a>データ フロー
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが用意されています。n変換元は、リレーショナル データベース、ファイル、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのテーブルやビューなどのデータ ストアからデータを抽出します。l変換は、データを変更、集約、およびクリーンアップします。s変換先は、データをデータ ストアに読み込んだり、メモリ内のデータセットを作成します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが用意されています。 変換元は、リレーショナル データベース、ファイル、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのテーブルやビューなどのデータ ストアからデータを抽出します。 変換は、データを変更、集約、およびクリーンアップします。 変換先は、データをデータ ストアに読み込んだり、メモリ内のデータセットを作成します。  
   
 > [!NOTE]  
 >  カスタム プロバイダーを使用するときに、ProviderDescriptors.xml ファイルをメタデータ列の値で更新する必要があります。  
@@ -134,7 +134,7 @@ ms.locfileid: "59241360"
   
 -   [ピボット解除変換](transformations/unpivot-transformation.md)  
   
- 詳細については、「 [Integration Services の変換](transformations/integration-services-transformations.md)」を参照してください。  
+ 詳しくは、「 [Integration Services の変換](transformations/integration-services-transformations.md)」をご覧ください。  
   
 ## <a name="destinations"></a>変換先  
  変換先とは、データ フローのデータを特定のデータ ストアに書き込んだり、メモリ内のデータセットを作成したりする、データ フロー コンポーネントのことです。 フラット ファイルへのデータの読み込み、分析オブジェクトの処理、および他の処理へのデータの提供を行うことができます。 また、データベースのテーブルやビューにアクセスしたり、クエリを実行したりすることによっても、データを読み込むことができます。  

@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b78f9e6a5493d3c06dfade34833cd69ddd56b58a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241560"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較
@@ -33,7 +33,7 @@ ms.locfileid: "59241560"
 |-|  
 |[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モード &#124; SharePoint 2010 と SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モード|  
   
- **このトピックの内容**  
+ **このトピックの内容:**  
   
 -   [権限ツールと用語の比較](#bkmk_compare_tools_terms)  
   
@@ -105,9 +105,9 @@ ms.locfileid: "59241560"
   
 ## <a name="see-also"></a>参照  
  [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [SharePoint Web アプリケーションのレポート サーバー操作に対するアクセス許可を設定する](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [ロールの定義](security/role-definitions.md)   
- [Predefined Roles](security/role-definitions-predefined-roles.md)  
+ [定義済みロール](security/role-definitions-predefined-roles.md)  
   
   

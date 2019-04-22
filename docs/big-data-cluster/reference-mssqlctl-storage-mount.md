@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 3ad8a97bac1f708dcf01612368c76d584fa39f5c
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860293"
 ---
 # <a name="mssqlctl-storage-mount"></a>mssqlctl ストレージのマウント
@@ -26,7 +26,7 @@ ms.locfileid: "58860293"
 
 |||
 |---|---|
-| [作成](#create) | HDFS では、リモートのストアのマウントを作成します。 |
+| [create](#create) | HDFS では、リモートのストアのマウントを作成します。 |
 | [delete](#delete) | HDFS 内の各店舗のマウントを削除します。 |
 | [status](#status) | Mount(s) の状態です。 |
 
@@ -99,7 +99,7 @@ mssqlctl storage mount status
 
 | パラメーター | 説明 |
 |---|---|
-| **-マウント パス** | マウントのパス。 必須。 |
+| **--mount-path** | マウントのパス。 必須。 |
 
 ### <a name="examples"></a>使用例
 

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241250"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
@@ -75,7 +75,7 @@ ms.locfileid: "59241250"
   
  次のいずれかの方法を使用して、子パッケージに値を渡すことができます。  
   
--   **[パッケージ構成]**  
+-   **パッケージ構成**  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、親パッケージ変数という種類の構成を使用して、親パッケージの値を子パッケージに渡すことができます。 この設定は子パッケージ上で構築され、親パッケージ内の変数を使用します。 構成は、子パッケージ内の変数、または子パッケージ内のオブジェクトのプロパティにマップされます。 また、スクリプト タスクまたはスクリプト コンポーネントで使用されるスクリプト内でも変数を使用できます。  
   

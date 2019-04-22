@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860103"
 ---
 # <a name="mssqlctl-app-template"></a>mssqlctl アプリ テンプレート
@@ -26,8 +26,8 @@ ms.locfileid: "58860103"
 
 |||
 |---|---|
-| [一覧](#list) | サポートされているテンプレートをフェッチします。 |
-| [プル (pull)](#pull) | サポートされているテンプレートをダウンロードします。 |
+| [list](#list) | サポートされているテンプレートをフェッチします。 |
+| [プル](#pull) | サポートされているテンプレートをダウンロードします。 |
 
 ## <a id="list"></a> mssqlctl アプリ テンプレートの一覧
 

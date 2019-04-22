@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241550"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>[サーバーへの接続] \([接続プロパティ] ページ) (データベース エンジン)
@@ -28,7 +28,7 @@ ms.locfileid: "59241550"
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] を通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのインスタンスに接続する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用し、**[サーバーへの接続]** ダイアログ ボックスの **[接続プロパティ]** タブでデータベースを指定する必要があります。**[暗号化接続]** チェック ボックスがオンになっていることを確認してください。  
   
- 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **master**に接続されます。 ユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master**に接続すると、すべてのデータベースを表示できるようになります。 詳しくは、「[Windows Azure SQL Database Overview](/azure/sql-database/sql-database-technical-overview)」(Microsoft Azure SQL Database の概要) をご覧ください。  
+ 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **master**に接続されます。 ユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master**に接続すると、すべてのデータベースを表示できるようになります。 詳しくは、「 [Windows Azure SQL Database Overview](/azure/sql-database/sql-database-technical-overview)」(Microsoft Azure SQL Database の概要) をご覧ください。  
   
  **[ネットワーク プロトコル]**  
  一覧からプロトコルを選択します。 使用できるクライアント プロトコルは、[コンピューターの管理] の [SQL Native Client の構成] を使用して設定されたプロトコルです。  
@@ -42,11 +42,11 @@ ms.locfileid: "59241550"
  **[実行タイムアウト]**  
  タスクの実行がサーバーで完了するまで待機する秒数を入力します。 既定値は 0 秒です。つまり、タイムアウトはありません。  
   
- **暗号化接続**  
+ **[暗号化接続]**  
  接続の暗号化を強制します。  
   
  **[作成した色を使用する]**  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]のクエリ エディター ウィンドウのステータス バーの背景色を指定します。 色を指定するには、 **[選択]** をクリックします。 **[色の設定]** ダイアログ ボックスで、 **[基本色]** グリッドから定義済みの色を選択するか、 **[色の作成]** をクリックし、カスタムの色を定義して使用します。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディター ウィンドウのステータス バーの背景色を指定します。 色を指定するには、 **[選択]** をクリックします。 **[色の設定]** ダイアログ ボックスで、 **[基本色]** グリッドから定義済みの色を選択するか、 **[色の作成]** をクリックし、カスタムの色を定義して使用します。  
   
 -   **[オブジェクト エクスプローラー]** ペインのサーバー エントリの色を指定すると、クエリ エディター ウィンドウを開いたときにその色が使用されます。 クエリ エディター ウィンドウを開くには、サーバー エントリを右クリックし、 **[新しいクエリ]** を選択します。または、 **[オブジェクト エクスプローラー]** ペインがアクティブで、このサーバーにフォーカスが置かれている場合は、ツール バーの **[新しいクエリ]** をクリックします。  
   

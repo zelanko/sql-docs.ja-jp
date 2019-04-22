@@ -1,7 +1,7 @@
 ---
 title: SQL Server Data Tools (SSDT) のダウンロード | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 04/05/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 596a32bc9942bde7a8301635150287f63a5fbeed
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: b336589f59bef9087392ff141a4bd64df1ed76c8
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58431503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59243506"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,11 +27,32 @@ ms.locfileid: "58431503"
 
 **SQL Server Data Tools** は、SQL Server リレーショナル データベース、Azure SQL データベース、Analysis Services (AS) データ モデル、Integration Services (IS) パッケージ、Reporting Services (RS) レポートをビルドするための最新の開発ツールです。 SSDT では、Visual Studio でアプリケーションを開発する場合と同じくらい簡単に、SQL Server のコンテンツの種類を設計および展開できます。
 
-*ほとんどのユーザーの場合、SQL Server Data Tools (SSDT) は Visual Studio インストール中にインストールされます。Visual Studio インストーラーを利用して SSDT をインストールすると、基本 SSDT 機能が追加されます。そのため、AS、IS、RS ツールを入手するには、[SSDT スタンドアロン インストーラー](#ssdt-for-vs-2017-standalone-installer)を実行する必要があります。*
+
+## <a name="changes-in-ssdt-for-visual-studio-2019"></a>SSDT for Visual Studio 2019 の変更点 ##
+
+Visual Studio 2019 では、Analysis Services、Integration Services、Reporting Services のプロジェクトを有効にするために必要な機能がそれぞれの Visual Studio 拡張機能に移行されました。 データベース プロジェクトを作成するためのコア SSDT 機能は、引き続き Visual Studio に不可欠です (インストール中に [データの保存と処理] ワークロードを選択する必要があります)。  スタンドアロン SSDT のインストールは不要になりました。 
+
+Visual Studio 2019 のライセンスが既にある場合:
+- SQL Database プロジェクトでは、Visual Studio の [データの保存と処理] ワークロードをインストールする
+- Analysis Services、Integration Services または Reporting Services のプロジェクトでは、マーケットプレースから適切な拡張機能をインストールする
+
+Visual Studio 2019 のライセンスがまだない場合:
+- [Visual Studio 2019 Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_campaign=tailored+install&utm_source=docs.microsoft.com&utm_medium=microsoft&utm_content=sqlssdt&rid=35007) をインストールする 
+- Analysis Services、Integration Services、Reporting Services を適宜インストールする
+
+## <a name="changes-in-ssdt-for-visual-studio-2017"></a>SSDT for Visual Studio 2017 の変更点 ##
+
+Visual Studio 2017 以降では、データベース プロジェクトの作成機能が Visual Studio のインストールに統合されています。 Core SSDT エクスペリエンス用の SSDT のスタンドアロン インストーラーをインストールする必要はありません。 Integration Services/Analysis Services/Reporting Services のプロジェクトを作成するには、依然として SSDT のスタンドアロン インストーラーが必要です。 
+
+- データベース プロジェクトでは、Visual Studio の [データの保存と処理] ワークロードをインストールする
+- Analysis Services、Integration Services または Reporting Services のプロジェクトでは、[SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017) をダウンロードしてインストールする
+
+
+
 
 ## <a name="install-ssdt-with-visual-studio-2017"></a>Visual Studio 2017 で SSDT をインストールする
 
-[Visual Studio インストール](https://docs.microsoft.com/visualstudio/install/install-visual-studio)中に SSDT をインストールするには、**[データの保存と処理]** ワークロードを選択し、**[SQL Server Data Tools]** を選択します。 Visual Studio が既にインストールされている場合、[ワークロードの一覧を編集し](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)、SSDT:![データの保存と処理ワークロード](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)を含めることができます。
+[Visual Studio インストール](https://docs.microsoft.com/visualstudio/install/install-visual-studio)中に SSDT をインストールするには、**[データの保存と処理]** ワークロードを選択し、**[SQL Server Data Tools]** を選択します。 Visual Studio が既にインストールされている場合、[ワークロードの一覧を編集し](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)、SSDT:![[データの保存と処理] ワークロード](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
 
 ## <a name="install-analysis-services-integration-services-and-reporting-services-tools"></a>Analysis Services、Integration Services、Reporting Services ツールをインストールする
 
@@ -45,7 +66,7 @@ AS、IS、RS プロジェクト サポートをインストールするには、
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (スタンドアロン インストーラー)
 
-[![ダウンロード](../ssdt/media/download.png) SSDT for Visual Studio 2017 (15.9.0) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2052454) 
+[![download](../ssdt/media/download.png) SSDT for Visual Studio 2017 (15.9.0) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2052454) 
 
 > [!IMPORTANT]
 > - SSDT for Visual Studio 2017 (15.9.0) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。
@@ -99,9 +120,9 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 1. `vs_setup.exe --NoWeb` を実行して、VS2017 Shell と SQL Server Data Project をインストールします。
 2. レイアウト フォルダーから `SSDT-Setup-ENU.exe /install` を実行し、SSIS/SSRS/SSAS を選択します。
 
-   - また、無人インストールを実行する場合は、`SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive` を実行します。  
+   - また、無人インストールを実行する場合は、次を実行します: `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
 
-利用可能なオプションについては、`SSDT-Setup-ENU.exe /help` を実行します。
+利用可能なオプションについては、次を実行します: `SSDT-Setup-ENU.exe /help`
 
 > [!NOTE]
 > Visual Studio 2017 の完全バージョンを使用する場合は、SSDT 専用のオフライン フォルダーを作成し、この新しく作成したフォルダーから `SSDT-Setup-ENU.exe` を実行します (別の Visual Studio 2017 のオフライン レイアウトに SSDT を追加しないでください)。 既存の Visual Studio のオフライン レイアウトに SSDT レイアウトを追加すると、必要なランタイム コンポーネント (.exe) がそこに作成されません。
@@ -127,7 +148,7 @@ Visual Studio 2015 の SSDT、または古いバージョンの SSDT をダウ�
 SSDT をインストールした後、次のチュートリアルを使用して、SSDT を使ったデータベース、パッケージ、データ モデル、およびレポートの作成方法を学ぶことができます。  
 
 - [プロジェクト指向のオフライン データベース開発](project-oriented-offline-database-development.md)  
-- [SSIS チュートリアル:シンプルな ETL パッケージの作成](../integration-services/ssis-how-to-create-an-etl-package.md)  
+- [SSIS チュートリアル:簡単な ETL パッケージの作成](../integration-services/ssis-how-to-create-an-etl-package.md)  
 - [Analysis Services チュートリアル](../analysis-services/analysis-services-tutorials-ssas.md)  
 - [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 

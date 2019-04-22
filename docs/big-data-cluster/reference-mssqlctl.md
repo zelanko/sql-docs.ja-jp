@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860354"
 ---
 # <a name="mssqlctl"></a>mssqlctl
@@ -26,11 +26,11 @@ ms.locfileid: "58860354"
 
 |||
 |---|---|
-| [app](reference-mssqlctl-app.md) | 作成、削除、実行、およびアプリケーションを管理します。 |
+| [アプリ](reference-mssqlctl-app.md) | 作成、削除、実行、およびアプリケーションを管理します。 |
 | [クラスター](reference-mssqlctl-cluster.md) | 選択、管理、およびクラスターを操作します。 |
-| [ログイン](#login) | クラスターにログインします。 |
-| [ログアウト](#logout) | クラスターからログアウトします。 |
-| [ストレージ](reference-mssqlctl-storage.md) | クラスター記憶域を管理します。 |
+| [login](#login) | クラスターにログインします。 |
+| [logout](#logout) | クラスターからログアウトします。 |
+| [storage](reference-mssqlctl-storage.md) | クラスター記憶域を管理します。 |
 
 ## <a id="login"></a> mssqlctl login
 
