@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e568d04a58ad13479f0e3a58254f8e409c46164d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8969e3202a9c58b46fac2116912e3d90474d7072
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010823"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932539"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>レポート サーバーでカスタム認証またはフォーム認証を構成する
   Reporting Services に用意されている拡張可能なアーキテクチャを使用すると、カスタム認証モジュールまたはフォームベースの認証モジュールを組み込むことができます。 配置の要件に Windows 統合セキュリティまたは基本認証が含まれていない場合は、カスタム認証拡張機能を実装することを検討してください。 カスタム認証を使用する最も一般的なシナリオは、インターネットまたはエクストラネットを介した Web アプリケーションへのアクセスをサポートすることです。 既定の Windows 認証拡張機能の代わりにカスタム認証拡張機能を使用することで、レポート サーバーへのアクセスを外部ユーザーに許可する方法をより細かく制御できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "56010823"
   
 1.  テキスト エディターで RSReportServer.config を開きます。  
   
-2.  <`Authentication`> を探します。  
+2.  検索 <`Authentication`>。  
   
 3.  次の XML 構造をコピーします。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "56010823"
     </Authentication>  
     ```  
   
-4.  これを <`Authentication`> の既存のエントリ上に貼り付けます。  
+4.  既存のエントリを貼り付けます <`Authentication`>。  
   
      `Custom` は他の認証の種類と併用できないので注意してください。  
   

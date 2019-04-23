@@ -16,15 +16,15 @@ helpviewer_keywords:
 - importing reports
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f50d98eaa44d3e323fb72097bc78e9969a30bad
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ae982257f0be29103803a7d036142f58a50f1a04
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294270"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933104"
 ---
 # <a name="supported-access-report-features-ssrs"></a>サポートされる Access レポート機能 (SSRS)
   レポート デザイナーにレポートをインポートすると、インポート処理の際に、[!INCLUDE[msCoName](../includes/msconame-md.md)] Access のレポートは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート定義言語 (RDL) ファイルに変換されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は Access のいくつかの機能をサポートしていますが、Access と [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の相違のため、アイテムの中には、若干変更されるものや、まったくサポートされないものがあります。 このトピックでは、Access のレポート機能を RDL に変換する方法を説明します。  
@@ -295,7 +295,7 @@ ms.locfileid: "56294270"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート定義では、四角形内に他のレポート アイテムを含めることができます。 レポート アイテムよりも大きく、レポート アイテムの領域のうち 90% を超える領域と重なっている四角形は、そのレポート アイテムのコンテナーになります。  
   
 ## <a name="bitmaps"></a>ビットマップ  
- レポート内に埋め込まれているビットマップはすべて、インポート時に .bmp 形式に変換されます。これらのビットマップの最初の形式は無視されます。 たとえば、レポートに .jpg ファイルおよび .gif ファイルが含まれていた場合、レポートと一緒にインポートされるリソースは .bmp ファイルになります。 ビットマップは、レポートの埋め込み画像として保存されます。 埋め込みイメージについては、[イメージ&#40;レポート ビルダーおよび SSRS&#41;](report-design/images-report-builder-and-ssrs.md)を参照してください。  
+ レポート内に埋め込まれているビットマップはすべて、インポート時に .bmp 形式に変換されます。これらのビットマップの最初の形式は無視されます。 たとえば、レポートに .jpg ファイルおよび .gif ファイルが含まれていた場合、レポートと一緒にインポートされるリソースは .bmp ファイルになります。 ビットマップは、レポートの埋め込み画像として保存されます。 埋め込みイメージについては、次を参照してください。[イメージ&#40;レポート ビルダーおよび SSRS&#41;](report-design/images-report-builder-and-ssrs.md)します。  
   
 ## <a name="other-considerations"></a>他の考慮事項  
  上記のほか、Access からインポートされるレポートについては以下の事項も適用されます。  

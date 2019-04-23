@@ -13,15 +13,15 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1c04e3d642b267660b8527502a248a386c8ba93d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bbe16cf43b546c0b4eb0c6f0c59c695dff6c7ad8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010673"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948138"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーのトレース ログは、レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理によって実行された操作を含め、レポート サーバー サービスの操作に関する詳細な情報が記録されている ASCII テキスト ファイルです。 トレース ログ ファイルには、他のログ ファイルに記録されている冗長な情報、およびトレース ログ以外からは入手できない追加情報が含まれています。 トレース ログ情報は、レポート サーバーを含むアプリケーションをデバッグしている場合、またはイベント ログや実行ログに書き込まれた特定の問題を調査している場合に役立ちます。  
@@ -89,7 +89,7 @@ ms.locfileid: "56010673"
 |`Components`|トレース ログ情報の生成対象となるコンポーネントおよびトレース レベルを次の形式で指定します。<br /><br /> \<component category>:\<tracelevel><br /><br /> コンポーネントのカテゴリには次の値を設定できます。<br />特定のカテゴリに分類されないすべてのプロセスに対する通常のレポート サーバーの利用状況を追跡するには、`All` を使用します。<br />実行中のレポートまたはサブスクリプションの操作を追跡するには、`RunningJobs` を使用します。<br />ユーザーがモデルベースのレポートでアドホック データ探索を実行する場合に処理されるセマンティック クエリを追跡するには、`SemanticQueryEngine` を使用します。<br />モデルの生成を追跡するには、`SemanticModelGenerator` を使用します。<br />レポート サーバーの HTTP ログ ファイルを有効にするには、`http` を使用します。 詳しくは、「 [Report Server HTTP Log](report-server-http-log.md)」をご覧ください。<br /><br /> <br /><br /> トレース レベルの有効な値は次のとおりです。<br /><br /> 0= トレースの無効化<br /><br /> 1= 例外および再起動<br /><br /> 2= 例外、再起動、警告<br /><br /> 3= 例外、再起動、警告、状態メッセージ (既定)<br /><br /> 4= 詳細モード<br /><br /> レポート サーバーの既定値は "all:3" です。<br /><br /> コンポーネント (`all`、`RunningJobs`、`SemanticQueryEngine`、`SemanticModelGenerator`) のすべてまたは一部を指定できます。 特定のコンポーネントに関する情報を生成しない場合は、そのコンポーネントのトレースを無効にできます (たとえば "SemanticModelGenerator:0")。 `all` の場合は、トレースを無効にしないでください。<br /><br /> コンポーネントにトレース レベルを追加しない場合は、`DefaultTraceSwitch` に指定された値が使用されます。 たとえば、"all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator" と指定すると、すべてのコンポーネントで既定のトレース レベルが使用されます。<br /><br /> 各セマンティック クエリに対して生成される Transact-SQL ステートメントを表示する場合は、"SemanticQueryEngine:4" を設定できます。 Transact-SQL ステートメントは、トレース ログに記録されます。 次の例では、Transact-SQL ステートメントをログに追加する構成設定を示しています。<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
   
 ##  <a name="bkmk_add_custom"></a> ダンプ ファイルの場所を指定するカスタム構成設定の追加  
- カスタム設定を追加して、Windows ワトソン博士ツールでダンプ ファイルを格納する際に使用する場所を設定できます。 カスタム設定は `Directory` です。 次の例では、この構成設定を `RStrace` セクションに指定する方法を示しています。  
+ カスタム設定を追加して、Watson の Windows ツールでは、ダンプ ファイルを格納します。 カスタム設定は `Directory` です。 次の例では、この構成設定を `RStrace` セクションに指定する方法を示しています。  
   
 ```  
 <add name="Directory" value="U:\logs\" />  

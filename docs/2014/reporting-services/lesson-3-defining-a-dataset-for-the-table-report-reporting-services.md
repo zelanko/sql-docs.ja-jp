@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: データセット テーブル レポート (Reporting Services) の定義 |Microsoft Docs'
+title: 'レッスン 3: テーブル レポートのデータセットの定義 (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ffc81b9f0d3ffe91e36e9a06711ce62443ab89c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294340"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932488"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>レッスン 3: データセット テーブル レポート (Reporting Services) の定義
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>レッスン 3: テーブル レポートのデータセットの定義 (Reporting Services)
   データ ソースを定義した後、データセットを定義する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、レポートで使用するデータは *データセット*に格納されます。 データセットには、データ ソースへのポインターと、レポートで使用されるクエリ、および計算フィールドと変数が含まれています。  
   
  レポート デザイナーでクエリ デザイナーを使用すると、クエリをデザインできます。 このチュートリアルから販売注文情報を取得するクエリを作成する、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008**データベース。  
@@ -69,7 +69,7 @@ ms.locfileid: "56294340"
      レポート データ ペインに **AdventureWorksDataset** データセットとフィールドが表示されます。  
   
 ## <a name="next-task"></a>次の作業  
- これで、レポートのデータを取得するクエリを指定できました。 次に、レポートのレイアウトを作成します。 参照してください[レッスン 4。レポートにテーブルを追加する&#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)します。  
+ これで、レポートのデータを取得するクエリを指定できました。 次に、レポートのレイアウトを作成します。 「[レッスン 4:レポートへのテーブルの追加 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [クエリ デザイン ツールでレポート デザイナーの SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   

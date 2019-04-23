@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:縦棒グラフの追加、レポート (レポート ビルダー) |Microsoft Docs
+title: チュートリアル:レポートへの縦棒グラフの追加 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: feff14049b3fa7a00d3d73bbe493aaded3748d2a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287090"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936858"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>チュートリアル:レポート (レポート ビルダー) への縦棒グラフを追加します。
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの縦棒グラフの追加 (レポート ビルダー)
   縦棒グラフでは、カテゴリ別にグループ化された縦棒のセットとして系列が表示されます。 縦棒グラフは次の場合に便利です。  
   
 -   時間の経過に伴うデータの変化を示す。  
@@ -53,9 +53,9 @@ ms.locfileid: "56287090"
 9. [レポートを保存します。](#Save)  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーを参照する方法の詳細については、データ ソースを選択し、データセットを作成するこのシリーズの最初のチュートリアルを参照してください。[チュートリアル: 基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
+>  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、およびデータセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
- このチュートリアルの推定所要時間:15 分です。  
+ このチュートリアルの推定所要時間:15 分。  
   
 ## <a name="requirements"></a>必要条件  
  要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/report-builder-tutorials.md) を参照してください。  
@@ -243,7 +243,7 @@ ms.locfileid: "56287090"
   
 12. **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="Average"></a> 7.移動平均を追加する  
+##  <a name="Average"></a> 7.移動平均を追加します。  
   
 #### <a name="to-add-a-moving-average"></a>移動平均を追加するには  
   

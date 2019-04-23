@@ -1,7 +1,7 @@
 ---
 title: レポート データ
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 56da8c0b57955735d1e796ad3de7ecb9817a9b99
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 8c0a6ef25f33b5396ecea36edfd57ac3c42e8f5b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553024"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951798"
 ---
-# <a name="report-data-in-sql-server-reporting-services-ssrs"></a>レポート データを SQL Server Reporting Services (SSRS)
+# <a name="report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) でのレポート データ
 
   レポート データは、組織の複数のデータ ソースから取得できます。 レポートをデザインする最初の手順は、基になるレポート データを表すデータ ソースとデータセットを作成することです。 各データ ソースには、データの接続情報が含まれます。 各データセットには、データ ソースのデータとして使用するフィールドのセットを定義するクエリ コマンドが含まれます。 各データセットのデータを視覚化するには、データ領域 (テーブル、マトリックス、グラフ、マップなど) を追加します。 レポートの処理時に、データ ソースに対してクエリが実行され、各データ領域は、データセットのクエリ結果を表示するために、必要に応じて拡張されます。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "53553024"
 
  次の情報を使用して、レポート データの戦略を計画します。  
   
-- **データ ソース** ： データ ソースは、レポート サーバーや SharePoint サイトから切り離してパブリッシュおよび管理できます。 データ ソースごとに、ユーザーまたはデータベース所有者が接続情報を 1 か所で管理できます。 データ ソースの資格情報は、レポート サーバーに安全に格納されます。接続文字列には、パスワードを含めないでください。 テスト サーバーから実稼動サーバーにデータ ソースをリダイレクトできます。 データ ソースを無効にして、そのデータ ソースを使用するすべてのレポートを中断できます。 サポートされるデータ ソースの一覧は、[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)を参照してください。  
+- **データ ソース** ： データ ソースは、レポート サーバーや SharePoint サイトから切り離してパブリッシュおよび管理できます。 データ ソースごとに、ユーザーまたはデータベース所有者が接続情報を 1 か所で管理できます。 データ ソースの資格情報は、レポート サーバーに安全に格納されます。接続文字列には、パスワードを含めないでください。 テスト サーバーから実稼動サーバーにデータ ソースをリダイレクトできます。 データ ソースを無効にして、そのデータ ソースを使用するすべてのレポートを中断できます。 サポートされるデータ ソースの一覧は、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
   
 - **データセット** : データセットは、レポートまたはレポートが依存する共有データ ソースから切り離してパブリッシュおよび管理できます。 ユーザーまたはデータベース所有者は、レポート作成者が使用する最適化されたクエリを提供できます。 クエリを変更すると、共有データセットを使用するすべてのレポートで更新されたクエリが使用されます。 データセットのキャッシュを有効にして、パフォーマンスを向上できます。 特定の時間にクエリ キャッシュをスケジュールすることも、共有スケジュールを使用することもできます。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "53553024"
   
 - [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のクライアントとサーバーのアーキテクチャおよびツールについて理解しておいてください。 たとえば、レポート デザイナーでは、組み込みのデータ ソースの種類を使用するクライアント コンピューターでレポートを作成します。 レポートをパブリッシュする場合は、データ ソースの種類がレポート サーバーまたは SharePoint サイトでサポートされている必要があります。  詳細については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)」をご覧ください。  
   
-- データ ソースとデータセットはレポートで作成され、クライアント作成ツールからレポート サーバーまたは SharePoint サイトにパブリッシュされます。 データ ソースは、レポート サーバーで直接作成できます。 データ ソースとデータセットがパブリッシュされたら、レポート サーバーで資格情報とその他のプロパティを構成できます。 詳細については、[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)と[Reporting Services ツール](../tools/reporting-services-tools.md)を参照してください。  
+- データ ソースとデータセットはレポートで作成され、クライアント作成ツールからレポート サーバーまたは SharePoint サイトにパブリッシュされます。 データ ソースは、レポート サーバーで直接作成できます。 データ ソースとデータセットがパブリッシュされたら、レポート サーバーで資格情報とその他のプロパティを構成できます。 詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)と[Reporting Services ツール](../tools/reporting-services-tools.md)します。  
   
 - 使用できるデータ ソースは、インストールされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のデータ拡張機能によって異なります。 データ ソースのサポートは、クライアント作成ツール、レポート サーバーのバージョン、およびレポート サーバーのプラットフォームによって異なる可能性があります。 詳細については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)」をご覧ください。  
   
