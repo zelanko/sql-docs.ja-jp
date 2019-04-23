@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f88222768c3194543ec2abd5821b53c67f3b04fe
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8595050b478743b7092787acf880425b24c5b1e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292980"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960808"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS)
   図形以外のグラフでは、新しい色は、グラフの系列のインデックスに基づいてパレットから選択されます。 たとえば、グラフの最初の系列は、パレット内の最初の色にマップされます。 しかし、この動作は図形グラフでは異なります。 図形グラフの場合、パレットの各色は、データセット内のデータ ポイントにマップされます。 たとえば、データ ポイント 1 はパレットの最初の色にマップされ、データ ポイント 2 は 2 番目の色にマップされます。  

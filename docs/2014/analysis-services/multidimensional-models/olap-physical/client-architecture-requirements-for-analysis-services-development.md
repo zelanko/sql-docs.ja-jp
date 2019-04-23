@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - local mining models [Analysis Services]
@@ -19,12 +17,12 @@ ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2fd3e4bb2804595db0bd219af0d116fee9192f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a372b5c0b89088a7054606e76138906f83598e5d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093679"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158878"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 開発に関するクライアント アーキテクチャの要件
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] シン クライアント アーキテクチャをサポートしています。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]計算エンジンは完全サーバーに基づくため、サーバーのすべてのクエリを解決します。 つまり、クエリごとにクライアントとサーバー間での単一ラウンド トリップが必要です。この結果、クエリの複雑さが増すにつれてパフォーマンスが変化します。  
@@ -63,7 +61,7 @@ ms.locfileid: "48093679"
 >  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックのデータ ソースとしてキューブを使用する場合、キューブから取得するデータは、MDX クエリとして定義されます。ただし、データはフラット化スナップショットとしてインポートされます。 キューブのデータは、対話的に操作したり、更新したりすることはできません。  
   
 ### <a name="interfaces-for-powerpivot-client"></a>PowerPivot Client インターフェイス  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Analysis Services 用に確立されたインターフェイスおよび言語を使用して、ブック内で xVelocity メモリ内分析エンジン (VertiPaq) ストレージ エンジンと対話します。 AMO と ADOMD.NET、および MDX と XMLA。 アドイン内では、メジャーは、Excel、Data Analysis Expressions (DAX) と同様の数式言語を使用して定義されます。 DAX の式は、インプロセス サーバーに送信される XMLA メッセージ内に埋め込まれます。  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Analysis Services 用に確立されたインターフェイスおよび言語を使用して、ブック内の (VertiPaq) ストレージ エンジンを xVelocity メモリ内分析エンジンと対話します。AMO と ADOMD.NET、および MDX と XMLA。 アドイン内では、メジャーは、Excel、Data Analysis Expressions (DAX) と同様の数式言語を使用して定義されます。 DAX の式は、インプロセス サーバーに送信される XMLA メッセージ内に埋め込まれます。  
   
 ### <a name="providers"></a>[プロバイダー]  
  間の通信[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]Excel MSOLAP OLEDB プロバイダー (バージョン 11.0) を使用するとします。 MSOLAP プロバイダー内には、4 つの異なるモジュールまたはトランスポートがあり、クライアントとサーバー間のメッセージの送信に使用できます。  
@@ -76,7 +74,7 @@ ms.locfileid: "48093679"
   
  **チャネル**SharePoint ファームで PowerPivot System サービスとの通信用に予約されています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [OLAP エンジンのサーバー コンポーネント](olap-engine-server-components.md)  
   
   

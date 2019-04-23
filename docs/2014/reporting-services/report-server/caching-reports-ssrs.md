@@ -20,15 +20,15 @@ helpviewer_keywords:
 - expiration [Reporting Services]
 - snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e0e063b662d83655eb9c8a99b8ec1317dfffa263
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ce09e2c607600273f5b5778251c3c58fdf57f9dc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029703"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935548"
 ---
 # <a name="caching-reports-ssrs"></a>複数のレポートのキャッシュ (SSRS)
   レポート サーバーでは、処理済みレポートのコピーをキャッシュして、ユーザーがレポートを開いたときにそのコピーを返すことができます。 レポートがキャッシュされたコピーかどうかをユーザーが判断できる唯一の方法は、レポートが実行された日時を確認することです。 その日時が現在の日時ではなく、レポートがスナップショットでない場合、そのレポートはキャッシュから取得されたレポートです。  

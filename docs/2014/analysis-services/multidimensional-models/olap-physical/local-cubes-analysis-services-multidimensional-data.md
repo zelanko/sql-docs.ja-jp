@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - cubes [Analysis Services], local
@@ -14,12 +12,12 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9b84fe6ed1b6b06eee783aef0f214017cca8bca
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145877"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158898"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>ローカル キューブ (Analysis Services - 多次元データ)
   ローカル キューブを作成、更新、または削除するには、ASSL スクリプトまたは AMO プログラムを作成して実行する必要があります。  
@@ -40,17 +38,17 @@ ms.locfileid: "50145877"
   
 |ローカル キューブ用データのソース|作成方法|  
 |------------------------------------|---------------------|  
-|サーバーベースのキューブ|CREATE GLOBAL CUBE ステートメントを使用するまたは[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]スクリプト言語 (ASSL) スクリプトを作成して、サーバー ベースのキューブからのキューブを設定します。 詳細については、[グローバル キューブの作成ステートメント&#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube)または[Analysis Services スクリプト言語&#40;ASSL&#41;参照](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)を参照してください。|  
-|リレーショナル データ ソース|ASSL スクリプトを使用して、OLE DB リレーショナル データベースからキューブを作成して設定します。 ASSL を使用してローカル キューブを作成するには、ローカル キューブ ファイル (*.cub) に接続して、サーバー キューブを作成するときに [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスで ASSL スクリプトを実行するのと同じ要領で ASSL スクリプトを実行するだけです。 詳細については、[Analysis Services スクリプト言語&#40;ASSL&#41;参照](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)を参照してください。|  
+|サーバーベースのキューブ|CREATE GLOBAL CUBE ステートメントを使用するまたは[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]スクリプト言語 (ASSL) スクリプトを作成して、サーバー ベースのキューブからのキューブを設定します。 詳細については、次を参照してください。[グローバル キューブの作成ステートメント&#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube)または[Analysis Services スクリプト言語&#40;ASSL&#41;参照](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)します。|  
+|リレーショナル データ ソース|ASSL スクリプトを使用して、OLE DB リレーショナル データベースからキューブを作成して設定します。 ASSL を使用してローカル キューブを作成するには、ローカル キューブ ファイル (*.cub) に接続して、サーバー キューブを作成するときに [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスで ASSL スクリプトを実行するのと同じ要領で ASSL スクリプトを実行するだけです。 詳細については、次を参照してください。 [Analysis Services スクリプト言語&#40;ASSL&#41;参照](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)します。|  
   
- ローカル キューブを再構築してデータを更新するには、REFRESH CUBE ステートメントを使用します。 詳細については、[CUBE ステートメントの更新&#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)を参照してください。  
+ ローカル キューブを再構築してデータを更新するには、REFRESH CUBE ステートメントを使用します。 詳細については、次を参照してください。 [CUBE ステートメントの更新&#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)します。  
   
 ### <a name="local-cubes-created-from-server-based-cubes"></a>サーバーベースのキューブから作成されたローカル キューブ  
  サーバーベースのキューブからローカル キューブを作成する場合は、次の点に注意してください。  
   
 -   個別のカウント メジャーはサポートされていません。  
   
--   メジャーを追加する場合は、追加するメジャーに関連するディメンションも最低 1 つ追加する必要があります。 メジャー グループにディメンションのリレーションシップの詳細については、[ディメンション リレーションシップ](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)を参照してください。  
+-   メジャーを追加する場合は、追加するメジャーに関連するディメンションも最低 1 つ追加する必要があります。 メジャー グループにディメンションのリレーションシップの詳細については、次を参照してください。[ディメンション リレーションシップ](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)します。  
   
 -   親子階層を追加すると、親子階層のレベルやフィルターは無視されて、親子階層全体が追加されます。  
   
@@ -71,7 +69,7 @@ ms.locfileid: "50145877"
 -   ローカル キューブに追加されたメジャーおよびディメンションに依存する計算されるメンバー、名前付きセット、および割り当てだけがローカル キューブに表示されます。 無効な計算されるメンバー、名前付きセット、および割り当ては自動的に除外されます。  
   
 ### <a name="security"></a>セキュリティ  
- ユーザーがサーバー キューブからローカル キューブを作成するためには、ユーザーに許可する必要があります**ドリルスルーとローカル キューブ**サーバー キューブに対する権限。 詳細については、[キューブまたはモデル アクセス許可を付与&#40;Analysis Services&#41;](../../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)を参照してください。  
+ ユーザーがサーバー キューブからローカル キューブを作成するためには、ユーザーに許可する必要があります**ドリルスルーとローカル キューブ**サーバー キューブに対する権限。 詳細については、次を参照してください。[キューブまたはモデル アクセス許可を付与&#40;Analysis Services&#41;](../../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)します。  
   
  ローカル キューブは、サーバー キューブのようにロールを使用してセキュリティで保護されていません。 ローカル キューブ ファイルへのファイル レベルのアクセス権を持っていれば、ローカル キューブ ファイル内のキューブに対してクエリを実行できます。 ローカル キューブ ファイルに対して `Encryption Password` 接続プロパティを使用すると、ローカル キューブ ファイルにパスワードを設定できます。 ローカル キューブ ファイルにパスワードを設定すると、以後クエリを実行するためにローカル キューブ ファイルに接続するときにそのパスワードが必要になります。  
   

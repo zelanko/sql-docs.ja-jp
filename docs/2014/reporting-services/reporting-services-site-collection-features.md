@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e05ae162-a4b2-489d-9853-d6b09414e632
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b9915a1071fa8b3ea0485c6a10790b2efd0a1e33
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43b45b7e1bd2d8a4ba10870cc442e73aecbbc618
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034399"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964788"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services サイト コレクション機能
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードには、SharePoint サイト コレクションの 3 つの機能が用意されています。 これらの機能は、一般的な [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードのレポート環境、 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Enterprise Edition 用の [!INCLUDE[SPS2010](../includes/sps2010-md.md)] アドインの機能、および SharePoint サーバーの全体管理での [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 用の管理操作をサポートします。  

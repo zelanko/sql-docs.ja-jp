@@ -11,15 +11,15 @@ helpviewer_keywords:
 - CSV [Reporting Services]
 - device information settings [Reporting Services], CSV rendering
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1273eed3bc53b5f23bd51430f1fd2fbe2b712d5d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 123afc28db147118d10a66199364ca8b73afb34c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019003"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951648"
 ---
 # <a name="csv-device-information-settings"></a>CSV デバイス情報設定
   CSV 表示拡張機能のデバイス情報設定では、区切り記号と修飾子を変更し、改行処理を指定できます。 ファイルの拡張子、エンコード、および出力にヘッダー行を含めることも指定できます。 区切り記号は通常特殊文字であるため、設定が XML として記述されている場合、CDATA セクションでエンコードしてください。  

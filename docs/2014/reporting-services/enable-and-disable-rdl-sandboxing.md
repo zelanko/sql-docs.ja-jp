@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2db60863c1ae8c21e391d62182cb27a52558a1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c4bbf82d1bea70659b839405141dc7194d99951e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013183"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956988"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>RDL サンドボックスの有効化と無効化
   RDL (レポート定義言語) サンドボックス機能を使用すると、複数のテナントが 1 つのレポート サーバー Web ファームを使用している環境で、個々のテナントによる特定の種類のリソースの使用を検出および制限できるようになります。 このような例として、複数のテナントまたは複数の企業によって使用される単一のレポート サーバー Web ファームを管理するホスティング サービスのシナリオがあります。 レポート サーバー管理者は、次の目的を達成するためにこの機能を有効にできます。  
@@ -35,10 +35,10 @@ ms.locfileid: "56013183"
   
 -   式での名前付きパラメーター。  
   
- このトピックでは、RSReportServer.Config ファイルの <`RDLSandboxing`> 要素内の各要素について説明します。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)」を参照してください。  
+ このトピックで説明内の各要素の <`RDLSandboxing`> RSReportServer.Config ファイル内の要素。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)」を参照してください。  
   
 ## <a name="example-configuration"></a>構成例  
- RSReportServer.Config ファイルの <`RDLSandboxing`> 要素の設定および値の例を次に示します。  
+ 設定および値の次の例を示しています、<`RDLSandboxing`> RSReportServer.Config ファイル内の要素。  
   
 ```  
 <RDLSandboxing>  

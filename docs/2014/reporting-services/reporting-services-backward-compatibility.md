@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, backward compatibility
 - backward compatibility [Reporting Services]
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b36b196f28bf029d68729c6c8e88116646829705
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b2a9e7d7600af11cbf9ab0cbb61f7049064b79e8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010543"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968134"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Reporting Services の旧バージョンとの互換性
   ここでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のバージョン間での動作の変更について説明します。 使用できなくなる機能や、将来のリリースで削除される予定の機能の情報を提供します。 また、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を含むカスタム アプリケーションを使用できなくなるような、製品の根本的な変更についても説明します。  
