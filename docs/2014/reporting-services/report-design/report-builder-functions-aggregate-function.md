@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4de1651cb33413f6629a12ce409004b1372a2a5e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 50a96884a5b97e0e4a287b0c731143dfa2d6e81f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296320"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969428"
 ---
 # <a name="aggregate-function-report-builder-and-ssrs"></a>集計関数 (レポート ビルダーおよび SSRS)
   データ プロバイダーの定義に従い、指定された式のカスタムの集計を返します。  

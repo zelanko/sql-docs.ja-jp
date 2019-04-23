@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 990e6b8f74eb2066175bcf92a22e2478ba4ef6de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040404"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964884"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>[全般] プロパティ ページ、共有データ ソース (レポート マネージャー)
   [全般] プロパティ ページでは、共有データ ソース アイテムのプロパティを表示または変更できます。 アイテムのプロパティに対して行った変更は、 **[適用]** をクリックしたときに、そのプロパティを参照するすべてのレポートに反映されます。  
@@ -85,7 +85,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **資格情報は必要ありません。**  
  データ ソースへのアクセスに、資格情報が必要でないことを指定します。 データ ソースがユーザーのログインを必要とする場合、このオプションを選択しても効果がありません。 このオプションは、データ ソース接続にユーザーの資格情報を必要としない場合にのみ選択してください。  
   
- このオプションを使用するには、レポート サーバーの配置用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報のソースがない状況で外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、[自動実行アカウントを構成する&#40;SSRS 構成マネージャー&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)を参照してください。  
+ このオプションを使用するには、レポート サーバーの配置用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報のソースがない状況で外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、次を参照してください。[自動実行アカウントを構成する&#40;SSRS 構成マネージャー&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)します。  
   
  **[適用]**  
  変更を保存する場合にクリックします。  

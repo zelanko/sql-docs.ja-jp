@@ -15,15 +15,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], URL access
 - hyperlinks [Reporting Services]
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 29f1c46cd926fec0a4908788da64cbb86bad8469
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 42f35641d8a346b5f4574953e4c5786618407620
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022043"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968799"
 ---
 # <a name="url-access-ssrs"></a>URL アクセス (SSRS)
   SQL Server Reporting Services (SSRS) のレポート サーバーの URL アクセスにより、URL 要求を使用してレポート サーバーにコマンドを送信できます。 たとえば、ネイティブ モードのレポート サーバーや SharePoint ライブラリのレポートの表示をカスタマイズすることができます。 特定のレポート パラメーター値のセットを使用してレポートを表示したり、レポートの関心のある特定ページを表示することがあります。 この情報を、事前に定義された URL アクセス パラメーターを使用して URL にカプセル化することができます。 表示形式またはレポート ビューアーのルック アンド フィールのパラメーターを埋め込むことで、レポート サーバーによるレポートの処理方法をさらにカスタマイズできます。 その後、この URL を電子メールまたは Web ページに直接貼り付けて、他のユーザーがブラウザーから同じ方法でレポートにアクセスできるようにすることができます。  
@@ -105,7 +105,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  使用しているパラメーターの値に対応する URL テキスト。  
   
- **注:** 使用可能な URL アクセス パラメーターの一覧は、[URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)を参照してください。 URL でレポート パラメーターを渡す例については、「 [URL 内でレポート パラメーターを渡す](pass-a-report-parameter-within-a-url.md)」を参照してください。  
+ **注:** 使用可能な URL アクセス パラメーターの一覧は、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。 URL でレポート パラメーターを渡す例については、「 [URL 内でレポート パラメーターを渡す](pass-a-report-parameter-within-a-url.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 68d6284f7b7b832b37806d2fb39e506689a3b031
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 41b44df5fd990927c7b5a2e2a71698086a2bce61
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040683"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953888"
 ---
 # <a name="pause-report-and-subscription-processing"></a>レポートとサブスクリプションの処理を一時停止する
   レポートまたはサブスクリプションを直接一時停止することはできません。 ただし、処理の開始前、またはデータ ソースへの接続時に、レポートおよびサブスクリプションの処理を中断できます。 また、レポートやサブスクリプションにユーザーがアクセスできないようにして、レポートやサブスクリプションが処理されないようにすることもできます。  
@@ -45,7 +45,7 @@ ms.locfileid: "56040683"
  データ ソースが使用できない場合でも、レポートは読み込まれることに注意してください。 レポートにはデータは含まれていませんが、適切な権限を持ったユーザーは、レポートに関連付けられたプロパティ ページ、セキュリティ設定、レポート履歴、およびサブスクリプション情報にアクセスできます。  
   
 ## <a name="pause-a-shared-schedule"></a>共有スケジュールの一時停止  
- レポートまたはサブスクリプションが共有スケジュールから実行される場合、スケジュールを一時停止して処理を中止できます。 すべてのレポートと、スケジュールによって駆動されるサブスクリプションの処理は、スケジュールが再開されるまで遅延されます。 詳細については、[一時停止と再開の共有スケジュール](schedules.md)を参照してください。  
+ レポートまたはサブスクリプションが共有スケジュールから実行される場合、スケジュールを一時停止して処理を中止できます。 すべてのレポートと、スケジュールによって駆動されるサブスクリプションの処理は、スケジュールが再開されるまで遅延されます。 詳細については、次を参照してください。[一時停止と再開の共有スケジュール](schedules.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services レポート サーバー (ネイティブ モード)](../report-server/reporting-services-report-server-native-mode.md)   

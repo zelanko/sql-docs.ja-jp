@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4f6402d68a1d6b2b62b5e4c2879f26c9ee917f2b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295207"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951708"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>レポート ページでの Tablix データ領域の表示の制御 (レポート ビルダーおよび SSRS)
   このトピックでは、レポートに表示されたときの Tablix データ領域の表示方法を変更するために使用する、Tablix データ領域のプロパティについて説明します。  

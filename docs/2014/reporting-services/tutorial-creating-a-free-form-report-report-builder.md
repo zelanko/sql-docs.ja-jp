@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eaf7f68cb2658b50bf21ea188324f5208acd488a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286802"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951248"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>チュートリアル:自由形式のレポートの作成 (レポート ビルダー)
   このチュートリアルでは、フォーム レターのような SSRS 自由形式レポートを作成する方法を説明します。 レポート アイテムを配置して、テキスト ボックス、画像、その他のデータ領域が含まれるフォームを作成できます。  
@@ -141,7 +141,7 @@ ms.locfileid: "56286802"
 ##  <a name="List"></a> 2.一覧を追加および構成する  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、テーブル、マトリックス、リストという 3 つのデータ領域テンプレートがあります。 これらのテンプレートはすべて、tablix データ領域に基づいています。  
   
- このチュートリアルでは、リストを使用して、ニュースレターのようなレポートに、販売区域の販売情報を表示します。 情報は、区域ごとにグループ化されます。 区域ごとのデータをグループ化する新しい行グループを追加し、組み込みの詳細行グループを削除します。 リスト テンプレートは、自由形式レポートを作成するのに最適です。 詳細については、[一覧&#40;レポート ビルダーおよび SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)を参照してください。  
+ このチュートリアルでは、リストを使用して、ニュースレターのようなレポートに、販売区域の販売情報を表示します。 情報は、区域ごとにグループ化されます。 区域ごとのデータをグループ化する新しい行グループを追加し、組み込みの詳細行グループを削除します。 リスト テンプレートは、自由形式レポートを作成するのに最適です。 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
 >  このレポートでは、用紙サイズを Letter (8.5 X11) にし、余白を 1 インチとします。 縦が 9 インチまたは横が 6 1/2 インチよりも大きいレポート ページでは、空のページが生成される可能性があります。  

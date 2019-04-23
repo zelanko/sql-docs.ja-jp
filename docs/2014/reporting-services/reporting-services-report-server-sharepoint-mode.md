@@ -4,18 +4,18 @@ ms.prod: sql-server-2014
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 411929fe3f5640d385a70c45f9526a4a372ee160
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 246b0be389857e002e5c9e30cb899826234a58b7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582208"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939488"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services レポート サーバー (SharePoint モード)
 
@@ -81,7 +81,7 @@ ms.locfileid: "59582208"
   
 -   *ローカル モード*:ローカル モードでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーと統合することなく、SharePoint ドキュメント ライブラリからレポートをローカルに表示できます。 SharePoint 製品では [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインは必須ですが、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーは必須ではありません。 アドインは、いくつかの異なる方法でインストールできます (SharePoint 2010 製品準備ツールなど)。 ローカル モードの詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポートをレポート ビューアーで&#40;Reporting Services SharePoint モードの&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)と[SharePoint 製品用 Reporting Services アドインの検索場所](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)します。  
   
--   *接続モード*:接続モードは、SharePoint サーバーの全体管理を使用して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーを SharePoint ファームに統合することによってサポートされます。 レポート サーバーとの統合により、完全なエンド ツー エンドのレポート、SharePoint 2010 のコラボレーション機能およびサーバー ベースのレポート サーバーなどの機能を提供することができます。サブスクリプション、スナップショット、およびサーバー ベースの処理。  
+-   *接続モード*:統合することによって接続モードがサポートされている、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバーを SharePoint サーバーの全体管理を使用して SharePoint ファームにします。 レポート サーバーとの統合により、完全なエンド ツー エンドのレポート、SharePoint 2010 のコラボレーション機能およびサーバー ベースのレポート サーバーなどの機能を提供することができます。サブスクリプション、スナップショット、およびサーバー ベースの処理。  
   
 ##  <a name="bkmk_unsupportedsharepoint"></a> サポートされていない SharePoint 機能
 

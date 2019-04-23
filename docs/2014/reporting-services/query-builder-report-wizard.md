@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 358a82555a2f0b3df8a7635cb3ff39a7b09f2e50
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6874f54f70e038cd7cafbb0c82a463513d9ed10d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290400"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969948"
 ---
 # <a name="query-builder-report-wizard"></a>クエリ ビルダー (レポート ウィザード)
   クエリ ビルダーを使用すると、レポートで使用する結果セットを取得するためのクエリを指定できます。 2 種類のクエリ ビルダーを選択できます。  

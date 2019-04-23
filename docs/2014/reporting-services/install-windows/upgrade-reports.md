@@ -17,15 +17,15 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 637b434a50aaa49c7d0f3ba87e8505368620d596
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2c8330266babdb260f80843213ddb892021eb8c8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015043"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954228"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
   レポート定義 (.rdl) ファイルは、次の方法で開いたときに自動的にアップグレードされます。  
@@ -205,7 +205,7 @@ ms.locfileid: "56015043"
  レポートをレポート サーバーにパブリッシュする代わりに、アップロードする場合、レポート プロセッサはそのレポートを最初の使用時にアップグレードできるかどうかを決定します。 アップグレードできないレポートは下位互換性モードで処理され、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の以前のバージョンと同じように表示されます。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services のアップグレードと移行](upgrade-and-migrate-reporting-services.md)   
+ [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [SQL Server 2014 における SQL Server Reporting Services における重大な変更](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
  [SQL Server 2014 における SQL Server Reporting Services の動作変更します。](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
  [SQL Server Reporting Services SQL Server 2014 で廃止された機能](../discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 07b8b29bd0d7a9008d702ee147087f8bc3554c0a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cfc294f1ae01241dbcabfff954aa42c242f6aad7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294060"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943388"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>グラフへのラベルの配置 (レポート ビルダーおよび SSRS)
   グラフはその種類によって形状が異なるので、グラフが見やすい位置にデータ ポイント ラベルを配置する必要があります。 ラベルの既定の位置は、グラフの種類によって異なります。  
@@ -54,7 +54,7 @@ ms.locfileid: "56294060"
   
 2.  デザイン画面で、グラフを右クリックし、 **[データ ラベルの表示]** をクリックします。  
   
-3.  プロパティ ペインを開きます。  **[表示]** タブの **[プロパティ]** をクリックします。  
+3.  プロパティ ペインを開きます。 **[表示]** タブの **[プロパティ]** をクリックします。  
   
 4.  デザイン画面で、グラフをクリックします。 グラフのプロパティが [プロパティ] ペインに表示されます。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "56294060"
   
 2.  デザイン画面で、グラフを右クリックし、 **[データ ラベルの表示]** をクリックします。  
   
-3.  プロパティ ペインを開きます。  **[表示]** タブの **[プロパティ]** をクリックします。  
+3.  プロパティ ペインを開きます。 **[表示]** タブの **[プロパティ]** をクリックします。  
   
 4.  デザイン画面で、グラフをクリックします。 グラフのプロパティが [プロパティ] ペインに表示されます。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "56294060"
   
 2.  デザイン画面で、グラフを右クリックし、 **[データ ラベルの表示]** をクリックします。  
   
-3.  プロパティ ペインを開きます。  **[表示]** タブの **[プロパティ]** をクリックします。  
+3.  プロパティ ペインを開きます。 **[表示]** タブの **[プロパティ]** をクリックします。  
   
 4.  デザイン画面で、系列をクリックします。 系列のプロパティが [プロパティ] ペインに表示されます。  
   

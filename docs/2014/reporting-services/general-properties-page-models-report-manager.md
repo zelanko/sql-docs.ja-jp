@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdc8abebbf713372caf31429082f9d3fda4cfc42
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2523909f2719fb8316acecf8ad0b56ddbe086a36
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018244"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947548"
 ---
 # <a name="general-properties-page-models-report-manager"></a>[全般] プロパティ ページ、モデル (レポート マネージャー)
   モデル定義 (.smdl) ファイルの名前変更、削除、移動、または置換を行うには、レポート モデルの [全般] プロパティ ページを使用します。 モデルの作成者または変更者、および変更日時の詳細がページの上部に表示されます。  
@@ -44,7 +44,7 @@ ms.locfileid: "56018244"
  モデルの説明を入力します。 この説明は、モデルへのアクセス権を持つユーザーの [コンテンツ] ページに表示されます。  
   
  **リスト ビューで非表示**  
- このチェック ボックスをオンにすると、フォルダーがリスト ビューに設定された場合にアイテムが非表示になります。 リスト ビューは、レポート マネージャーでサポートされているフォルダーの内容を表示するモードです。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] でこのオプションを設定することで、レポート マネージャーにおけるこのアイテムの表示方法を定義できます。 レポート マネージャーでの表示モードの詳細については、[コンテンツ ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)を参照してください。  
+ このチェック ボックスをオンにすると、フォルダーがリスト ビューに設定された場合にアイテムが非表示になります。 リスト ビューは、レポート マネージャーでサポートされているフォルダーの内容を表示するモードです。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] でこのオプションを設定することで、レポート マネージャーにおけるこのアイテムの表示方法を定義できます。 レポート マネージャーでの表示モードの詳細については、次を参照してください。[コンテンツ ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)します。  
   
  **[適用]**  
  変更を保存する場合にクリックします。  
@@ -53,7 +53,7 @@ ms.locfileid: "56018244"
  レポート サーバー データベースからモデルを削除する場合にクリックします。 モデルを削除しても、接続情報を提供している依存共有データ ソースは削除されません。また、そのモデルをデータ ソースとして使用しているレポートも削除されません。 ただし、モデルを削除した後は、そのモデルを使用するレポートを実行できなくなります。  
   
  **Move**  
- レポート サーバーのフォルダー階層内でモデルを再配置する場合にクリックします。 このボタンをクリックすると、アイテムの移動ページが表示され、フォルダーを参照して新しい場所を選択できます。 詳細については、[項目ページに移動&#40;レポート マネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)を参照してください。  
+ レポート サーバーのフォルダー階層内でモデルを再配置する場合にクリックします。 このボタンをクリックすると、アイテムの移動ページが表示され、フォルダーを参照して新しい場所を選択できます。 詳細については、次を参照してください。[項目ページに移動&#40;レポート マネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)します。  
   
  **および**  
  モデル定義の読み取り専用コピーを保存する場合にクリックします。 このファイルは、コンピューターに定義されているファイルの関連付けに応じて、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] または他のアプリケーションで開きます。 ほとんどの場合、モデルは XML ファイルとして開きます。  

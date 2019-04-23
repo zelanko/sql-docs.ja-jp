@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 5: レポート (Reporting Services) の書式設定 |Microsoft Docs'
+title: 'レッスン 5: レポートの書式設定 (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0d97e0b74455e9ff7788d96303f7499001f7f3f7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 37e5ff9cd40dd8c79efcde8c7cb072493a2ff95a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292570"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958108"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>レッスン 5: レポート (Reporting Services) の書式設定
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>レッスン 5: レポートの書式設定 (Reporting Services)
   Sales Orders レポートに 1 つのデータ領域といくつかのフィールドを追加した後、日付および通貨のフィールド、および列ヘッダーを書式設定できます。  
   
  このトピックの内容  
@@ -57,7 +57,7 @@ ms.locfileid: "56292570"
   
 3.  地域設定が英語 (米国) の場合、既定値は次のようになります。  
   
-    -   **小数点以下桁数。2**  
+    -   **小数点以下の桁数 :2**  
   
     -   **負の数値 : ($12345.00)**  
   
@@ -93,7 +93,7 @@ ms.locfileid: "56292570"
 5.  **[ファイル]** メニューの **[すべてを保存]** をクリックして、レポートを保存します。  
   
 ## <a name="next-steps"></a>次の手順  
- ここでは、列ヘッダー、日付値、および通貨値を書式設定しました。 次に、レポートにグループ化および合計を追加します。 参照してください[レッスン 6。グループ化と合計の追加&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)します。  
+ ここでは、列ヘッダー、日付値、および通貨値を書式設定しました。 次に、レポートにグループ化および合計を追加します。 「[レッスン 6:グループと合計の追加 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   

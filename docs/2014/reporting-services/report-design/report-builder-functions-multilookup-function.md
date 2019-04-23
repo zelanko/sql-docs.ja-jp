@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb175df8d775150bb8ec7ffbbaf26866b1c07629
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1350c25450dfae5ed02b9761ed79182ccac817d5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290930"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958218"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 関数 (レポート ビルダーおよび SSRS)
   名前と値のペアを含むデータセットから、指定された名前のセットに最初に一致した値のセットを返します。  
@@ -36,10 +36,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (`VariantArray`) 現在のスコープ内で評価される式。参照する名前またはキーのセットを指定します。 たとえば、複数値パラメーターの場合、 `=Parameters!IDs.value`のように指定します。  
   
  *destination_expression*  
- (`Variant`) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、`=Fields!ID.Value` のようにします。  
+ (`Variant`) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、 `=Fields!ID.Value`のようにします。  
   
  *result_expression*  
- (`Variant`) データセット内の行に対して評価される式を*source_expression* = *destination_expression*、取得する値を指定します。 たとえば、`=Fields!Name.Value` のようにします。  
+ (`Variant`) データセット内の行に対して評価される式を*source_expression* = *destination_expression*、取得する値を指定します。 たとえば、 `=Fields!Name.Value`のようにします。  
   
  *データセット (dataset)*  
  レポート内のデータセットの名前を指定する定数。 たとえば、"Colors" と指定します。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 775706be-41a7-4ae7-bad6-349f5ebd9e4d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4bbbdc167bac7457ed14415422bf4e362630b69
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cb40a0e2a41e638c4e7058f296badc4feeb9aa60
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285000"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936238"
 ---
 # <a name="report-f1-help"></a>レポートの F1 ヘルプ
   このセクションの各トピックでは、 **[レポートのプロパティ]** ダイアログ ボックスでレポートに対して設定できるオプションについて説明します。 **[レポートのプロパティ]** ダイアログ ボックスを表示するには、レポート デザイナーの背景を右クリックし、 **[レポートのプロパティ]** をクリックします。  

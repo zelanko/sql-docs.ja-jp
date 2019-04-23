@@ -11,15 +11,15 @@ f1_keywords:
 - "10153"
 - sql12.rtp.rptdesigner.calculatedseriesproperties.markers.f1
 ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61c60d08bd46693d58be08bb6508f5b9cf7c2662
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2fdc0a6ee75b2d08b06d440a4d9dd6da48a6b6b7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287270"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971948"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>[マーカー] ([計算系列のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[計算系列のプロパティ]** ダイアログ ボックスの **[マーカー]** を選択すると、系列の各データ ポイントでマーカーを表示する方法を定義できます。 マーカーは、特定の種類のグラフのみで使用できます。 次のグラフの種類は、マーカーをサポートします。領域で、バー、列、行、極座標グラフ、および散布図です。 グラフ機能の詳細については、「[グラフの種類 (レポート ビルダーおよび SSRS)](report-design/chart-types-report-builder-and-ssrs.md)」を参照してください。  

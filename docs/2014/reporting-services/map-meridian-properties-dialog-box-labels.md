@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4ecaf5c0ad58dcb3fbc60d9c6417ac969f85ca40
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 892b53a2f7179fce18844085fe2c0edcaafb4c04
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296111"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967738"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>[ラベル] ([マップの経線のプロパティ] ダイアログ ボックス)
   使用して、 **MapMeridian プロパティ**ダイアログ ボックスで、マップ ビューポートの垂直グリッドのラベルのオプションを変更します。 経線は、ビューポートに指定された座標系に応じて、次の値を表します。  

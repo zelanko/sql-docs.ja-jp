@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:円グラフの追加、レポート (レポート ビルダー) |Microsoft Docs
+title: チュートリアル:レポートへの円グラフの追加 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 65a0db21f0334c6782c7888e7484f91058424cd1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290450"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959508"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>チュートリアル:レポート (レポート ビルダー) への円グラフの追加します。
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)
   円グラフおよびドーナツ グラフは、データを全体に対する比率として表示します。 円グラフは、主に、グループ間の比較を示すために使用されます。 円グラフおよびドーナツ グラフ、ピラミッド、じょうごグラフでは、図形グラフと呼ばれるグラフのグループを構成します。 図形グラフには軸がありません。 図形グラフに数値フィールドをドロップすると、それぞれの値の全体に占める比率が計算されます。  
   
  円グラフのデータ ポイントが多すぎると、データ ポイント ラベルが過密状態になって見づらくなる場合があります。 その場合は、折れ線グラフの使用を検討してください。 円グラフは、データを少数のデータ ポイントに集計したうえで使用するようにします。  
@@ -45,7 +45,7 @@ ms.locfileid: "56290450"
 7.  [レポートを保存します。](#Save)  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する手順を 2 つにまとめて示します。 レポート サーバーを参照する方法の詳細については、データ ソースを追加し、データセットを追加、このシリーズの最初のチュートリアルを参照してください。[チュートリアル: 基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
+>  このチュートリアルでは、ウィザードに関する手順を 2 つにまとめて示します。 レポート サーバーの参照、データ ソースの追加、およびデータセットの追加に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
  このチュートリアルの推定所要時間:10 分  
   
@@ -173,7 +173,7 @@ ms.locfileid: "56290450"
   
  凡例に "その他" というカテゴリが追加されています。 この新しいスライスでは、5% 未満のすべてのスライスが 1 つにまとめられて、円グラフ全体の 6% を占めるスライスが作成されています。  
   
-##  <a name="DrawingEffect"></a> 5.描画効果をカスタマイズする  
+##  <a name="DrawingEffect"></a> 5.描画効果をカスタマイズします。  
  グラフ ウィザードの場合、円グラフの既定のスタイルは、凹型の描画効果が特徴的な [オーシャン] です。 スタイルは、ウィザードの実行後にも変更できます。  
   
 #### <a name="to-add-a-drawing-effect-to-the-pie-chart"></a>円グラフに描画効果を追加するには  

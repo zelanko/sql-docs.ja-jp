@@ -23,15 +23,15 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aacc2369857783043f2c114b9c0382895a118acb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3d3f42053a7bfe4c0a0d01b93a371b56321b1f7d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286621"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943088"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
   レポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
@@ -65,9 +65,9 @@ ms.locfileid: "56286621"
   
  単純型と複合型の式、式を使用できる場所、式に使用できる参照の種類など、レポート式の詳細については、「 [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)」を参照してください。 式が集計の計算のために評価されるコンテキストの詳細については、「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
   
- 多くの関数とも、このトピックでは、レポート作成のコンテキストで式の例で使用される演算子を使用する式を記述する方法については、次を参照してください。[チュートリアル。式の概要](../tutorial-introducing-expressions.md)します。  
+ 多数の関数および演算子がこのトピックでも式の例に使用されていますが、これらを使用して式を作成する方法をレポート作成のコンテキストで学習するには、「[チュートリアル:式の概要](../tutorial-introducing-expressions.md)」を参照してください。  
   
- 式エディターには、組み込み関数を階層形式で表示できるビューが用意されています。 特定の関数を選択すると、[値] ペインにコード例が表示されます。 詳細については、、[式 ダイアログ ボックス](../expression-dialog-box.md)または[式 ダイアログ ボックス&#40;レポート ビルダー&#41;](../expression-dialog-box-report-builder.md)を参照してください。  
+ 式エディターには、組み込み関数を階層形式で表示できるビューが用意されています。 特定の関数を選択すると、[値] ペインにコード例が表示されます。 詳細については、次を参照してください。、[式 ダイアログ ボックス](../expression-dialog-box.md)または[式 ダイアログ ボックス&#40;レポート ビルダー&#41;](../expression-dialog-box-report-builder.md)します。  
   
  レポート モデル クエリ デザイナーを使用して、データ ソースとしてレポート モデルを使用するデータセット クエリを設計する場合は、式の代わりに数式を使用します。 数式では、レポート モデル データ ソースから返すデータを指定するクエリにカスタム計算を統合することによって、レポート データを指定できます。 詳細については、「[レポート モデル クエリの数式 &#40;レポート ビルダーおよび SSRS&#41;](formulas-in-report-model-queries-report-builder-and-ssrs.md)」を参照してください。  
   

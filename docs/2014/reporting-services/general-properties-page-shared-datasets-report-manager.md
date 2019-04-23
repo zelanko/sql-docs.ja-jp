@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 72bd3d617fa14e785b29b9c89e3d53d7d5dd3da4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7ed5b54ea07249a69e6f599e53658e8aba10d656
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032753"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969624"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>[全般] プロパティ ページ、共有データセット (レポート マネージャー)
   共有データセット アイテムのプロパティを表示および管理するには、[共有データセット] ページを使用します。  
@@ -56,7 +56,7 @@ ms.locfileid: "56032753"
  レポート サーバー データベースから共有データセットを削除します。 共有データセットを削除すると、レポートまたはキャッシュされたバージョンすべてが非アクティブ化されます。 レポートを再びアクティブ化するには、レポート作成ツールでレポートを 1 つずつ開き、同じ名前および同じフィールド コレクションでデータセットを指定する必要があります。 別の方法として、各データ領域の参照を更新し、同じフィールド コレクションで異なるデータセットを使用することもできます。  
   
  **Move**  
- レポート サーバーのフォルダー階層内の共有データセットを再配置します。 このボタンをクリックすると、アイテムの移動ページが表示され、フォルダーを参照して新しい場所を選択できます。 詳細については、[項目ページに移動&#40;レポート マネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)を参照してください。  
+ レポート サーバーのフォルダー階層内の共有データセットを再配置します。 このボタンをクリックすると、アイテムの移動ページが表示され、フォルダーを参照して新しい場所を選択できます。 詳細については、次を参照してください。[項目ページに移動&#40;レポート マネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)します。  
   
  **ダウンロード**  
  共有データセット定義のコピーを抽出します。 このファイルは、コンピューターに定義されているファイルの関連付けに応じて、Visual Studio または他のアプリケーションで開きます。 ほとんどの場合、共有データセットは XML ファイルとして開きます。  

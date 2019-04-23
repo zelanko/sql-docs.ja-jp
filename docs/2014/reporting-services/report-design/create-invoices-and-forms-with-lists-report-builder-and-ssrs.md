@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c436b578bc1e277dbcb196e25a1a391fb74f5efc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290390"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950463"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>一覧 (レポート ビルダーおよび SSRS)
   一覧データ領域は、レポート データセットのグループまたは行ごとに繰り返されます。 一覧は、他のデータ領域と関連付けて自由形式レポートや、請求書などのフォームを作成するために使用できます。 任意の数のレポート アイテムを含んでいる一覧を定義できます。 一覧を他の一覧内に入れ子にして、複数のデータ グループを作成することもできます。  
@@ -24,7 +24,7 @@ ms.locfileid: "56290390"
 > [!NOTE]  
 >  一覧は、レポート パーツとしてレポートとは別にパブリッシュできます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- すぐにするリストを使用した、次を参照してください。[チュートリアル。自由形式レポートを作成する&#40;レポート ビルダー&#41;](../tutorial-creating-a-free-form-report-report-builder.md)します。  
+ 一覧をすぐに使用するには、「[チュートリアル:自由形式のレポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-a-free-form-report-report-builder.md)」を参照してください。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサンプル レポートには、一覧を使用したレポートが含まれています。 一覧に関する知識は、レポート ビルダーまたはレポート デザイナーでサンプル レポートのレポート定義を詳しく調べるか、表示されたレポートをレポート ビルダーまたはレポート デザイナーでプレビューすることによって身に付けることができます。 サンプル レポートのダウンロードの詳細については、「 [(SSRS) Reporting Services のサンプル](https://go.microsoft.com/fwlink/?LinkID=198283)」を参照してください。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "56290390"
 ##  <a name="DisplayingLayout"></a> 自由形式のレイアウトでのデータの表示  
  グリッドではなく自由形式のレイアウトでレポート データを編成するには、一覧をデザイン画面に追加します。 レポート データ ペインからセルにフィールドをドラッグします。 既定では、セルにはコンテナーとして機能する四角形が含まれています。 コンテナーで各フィールドを移動させ、目的のデザインを取得します。 四角形のコンテナーにテキスト ボックスをドラッグする際に表示されるスナップラインを使用して、垂直および水平方向の端を合わせます。 セルのサイズを調整して、不要な空白を削除します。 詳細については、「[行の高さまたは列の幅の変更 &#40;レポート ビルダーおよび SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)」を参照してください。  
   
- 次の図では、これらのフィールドを含む、注文に関する情報を表示する一覧が表示されます。日付、順序、Qty、Product、LineTotal、およびイメージ。  
+ 次の図に注文情報を表示する一覧を示します。一覧には、Date、Order、Qty、Product、LineTotal のフィールドおよび画像が含まれます。  
   
  ![デザイン ビューの一覧、4 つのフィールドと画像](../media/rs-basiclistformdesign.gif "デザイン ビューの一覧、4 つのフィールドと画像")  
   

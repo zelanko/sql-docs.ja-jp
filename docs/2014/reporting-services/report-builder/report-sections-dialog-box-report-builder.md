@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10009"
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3f52afcf99e1727e8de255ca62aa74c893a24273
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a24b4a4dd0ffe0c4b4ba988460e10f6bf832766e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015033"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944390"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>[レポート セクション] ダイアログ ボックス (レポート ビルダー)
   レポートを開くと、レポート ビルダーにより、レポートにレポート定義言語 (RDL) の **\<Section>** 要素が 1 つだけ含まれていることが確認されます。 複数の **\<Section>** 要素を含むレポートを開くことはサポートされていません。  

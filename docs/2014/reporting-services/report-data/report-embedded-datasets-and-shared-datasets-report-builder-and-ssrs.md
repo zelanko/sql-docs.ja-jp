@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3c1e16950a2092feb69159cdcad18c4b7d6f69fe
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ea3e991cc936aed41350347f095f8e69d5025450
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012693"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936131"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   データセットは、データ接続から使用するデータを指定します。 データセットは、埋め込みデータ ソースまたはレポート サーバーの共有データ ソースへの参照としてレポートに保存されているデータ接続に基づいています。 データセットには、一連のフィールドを指定するクエリが含まれています。 これらのフィールドをデザイン画面にドラッグすると、レポートの実行時に実際のデータを評価する式を作成できます。  
@@ -47,7 +47,7 @@ ms.locfileid: "56012693"
   
 7.  **スキーマのメタデータ** データ プロバイダーで、クエリとは別にスキーマのクエリ コマンドを実行し、データセット フィールド コレクションのメタデータを取得します。 たとえば、[!INCLUDE[tsql](../../../includes/tsql-md.md)] の `SELECT` ステートメントでは、データベース テーブルの列名が返されます。 データセット フィールド コレクションを表示するには、レポート データ ペインを使用してデータセットを展開します。  
   
- 事前定義済みの共有データセットとレポート パーツを使用して、データをレポートに含めることもできます。 これらのアイテムには、必要な接続情報は既に存在します。 詳細については、[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41; ](report-datasets-ssrs.md)と[レポート パーツ&#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)を参照してください。  
+ 事前定義済みの共有データセットとレポート パーツを使用して、データをレポートに含めることもできます。 これらのアイテムには、必要な接続情報は既に存在します。 詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41; ](report-datasets-ssrs.md)と[レポート パーツ&#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)します。  
   
  ビルトイン データ ソースの種類およびデータ拡張機能の詳細については、「[外部データ ソースのデータを追加する &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)」を参照してください。  
   

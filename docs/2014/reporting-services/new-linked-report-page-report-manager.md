@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11ccc376b2c325056acbe545f8ac7310b4386245
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9f55c1fb1b90f676f3e1867c6aefdd13889c2cce
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010873"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967978"
 ---
 # <a name="new-linked-report-page-report-manager"></a>[新しいリンク レポート] ページ (レポート マネージャー)
   [新しいリンク レポート] ページではリンク レポートを作成できます。 リンク レポートは、独自の設定やプロパティが含まれているレポートですが、別のレポートのレポート定義にリンクしています。 リンク レポートは、特定のグループまたはユーザーによって異なる基本レポート (たとえば、パラメーターとして指定された地域コードに基づいて別のデータを返す地域レポート) がある場合に役立ちます。 通常、リンク レポートは、各レポート インスタンスに異なるパラメーター値を設定して保存する場合に、パラメーター化されたレポートから作成します。 ただし、ユーザーがアクセスできる任意のレポートからリンク レポートを作成することもできます。  
@@ -51,7 +51,7 @@ ms.locfileid: "56010873"
  **[説明]**  
  レポートの内容の説明を入力します。 この説明は、レポートへのアクセス権を持っているユーザーの [コンテンツ] ページに表示されます。  
   
- **場所**  
+ **[場所]**  
  レポートを含むフォルダーのパスを指定します。 既定では、基本レポートの兄弟としてリンク レポートが作成されます。 **[場所の変更]** をクリックすると、別のフォルダーにリンク レポートを格納できます。  
   
  **[OK]**  

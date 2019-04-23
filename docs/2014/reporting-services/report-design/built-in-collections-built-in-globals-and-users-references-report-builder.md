@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e41b76481748175a68b4a0a0a4877c7c17147788
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 268deacf076f7ea79222dd441777f1ad16149750
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288570"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942288"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>組み込み Globals および Users 参照 (レポート ビルダーおよび SSRS)
   組み込みフィールドのコレクションには、レポートの処理時に Reporting Services によって提供されるグローバルな値を表す `Globals` コレクションと `User` コレクションの両方が含まれています。 `Globals` コレクションでは、レポート名、レポート処理の開始時刻、レポート ヘッダーまたはレポート フッターの現在のページ番号などの値が提供されます。 `User` コレクションでは、ユーザー ID と言語設定が提供されます。 これらの値は、レポート内の結果をフィルター処理する際に式で使用できます。  
@@ -75,7 +75,7 @@ ms.locfileid: "56288570"
   
 |**Member**|**型**|**[説明]**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|レポートを実行しているユーザーの言語です。 たとえば、`en-US` のようにします。|  
+|`Language`|`String`|レポートを実行しているユーザーの言語です。 たとえば、 `en-US`のようにします。|  
 |`UserID`|`String`|レポートを実行しているユーザーの ID です。 Windows 認証を使用している場合、この値は現在のユーザーのドメイン アカウントです。 値は、Windows 認証またはカスタム認証を使用できる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] セキュリティ拡張機能によって決まります。|  
   
  レポートにおける複数言語のサポートの詳細については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server オンライン ブック [にある](https://go.microsoft.com/fwlink/?LinkId=120955)のマニュアルの「多言語配置やグローバル配置のソリューション設計に関する考慮事項」を参照してください。  

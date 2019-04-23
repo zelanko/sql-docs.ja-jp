@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9c706bceb09d8637874bc82a5c23a1afa8380034
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0a71b4311dacf9ea08f12daff8b7610d8f6c49b5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292971"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964158"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
   縦棒グラフでは、カテゴリ別にグループ化された縦棒のセットとして系列が表示されます。 縦棒グラフは、時間の経過に伴うデータの変化を示す場合やアイテム間の比較を示す場合に便利です。 一般的な縦棒グラフは、横棒グラフおよび範囲縦棒グラフと密接な関係にあります。横棒グラフでは、横棒のセットとして系列が表示され、範囲縦棒グラフでは、始点と終点が異なる縦棒のセットとして系列が表示されます。 詳細については、「 [横棒グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md) 」と「 [範囲グラフ &#40;レポート ビルダーおよび SSRS&#41;](range-charts-report-builder-and-ssrs.md)」を参照してください。  
@@ -42,7 +42,7 @@ ms.locfileid: "56292971"
   
 ## <a name="data-considerations-for-a-column-chart"></a>縦棒グラフのデータに関する注意点  
   
--   横棒グラフおよび縦棒グラフは、主に、グループ間の比較を示すために使用されます。 グラフに 4 つ以上の系列が存在する場合は、積み上げ横棒グラフまたは積み上げ縦棒グラフの使用を検討してください。 また、グラフに複数の系列がある場合は、積み上げ横棒グラフまたは積み上げ縦棒グラフを複数のグループにまとめることもできます。 詳細については、[横棒グラフ&#40;レポート ビルダーおよび SSRS&#41; ](charts-report-builder-and-ssrs.md)と*縦棒グラフ*を参照してください。  
+-   横棒グラフおよび縦棒グラフは、主に、グループ間の比較を示すために使用されます。 グラフに 4 つ以上の系列が存在する場合は、積み上げ横棒グラフまたは積み上げ縦棒グラフの使用を検討してください。 また、グラフに複数の系列がある場合は、積み上げ横棒グラフまたは積み上げ縦棒グラフを複数のグループにまとめることもできます。 詳細については、次を参照してください。[横棒グラフ&#40;レポート ビルダーおよび SSRS&#41; ](charts-report-builder-and-ssrs.md)と*縦棒グラフ*します。  
   
 -   縦棒グラフでは、カテゴリ軸のラベルを横方向に表示するための十分な領域がありません。 カテゴリのラベルが長い場合は、横棒グラフを使用するか、ラベルの回転角度を変更することを検討してください。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "56292971"
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [横棒グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [範囲グラフ &#40;レポート ビルダーおよび SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
- [チュートリアル: レポートに横棒グラフの追加&#40;レポート ビルダー&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [チュートリアル: レポートへの横棒グラフの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

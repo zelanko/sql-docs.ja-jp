@@ -13,15 +13,15 @@ f1_keywords:
 - "10120"
 - sql12.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5136dd8086295135f72ee91dc50921adf1331c73
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296210"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949518"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>テキスト ボックス (レポート ビルダーおよび SSRS)
   テキスト ボックスといえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint のように領域にテキストを含むスタンド アロンのボックスを思い浮かべると思います。 レポート ビルダーでは、同じように、タイトル、説明、およびラベルのリテラル テキスト、または式に基づく動的なテキストを表示できます。 ただし、テーブルまたはマトリックス (Tablix データ領域) の各セルにはテキスト ボックスがあり、レポート内のスタンドアロン テキスト ボックスと同じ方法で書式設定することもできます。  
@@ -29,7 +29,7 @@ ms.locfileid: "56296210"
 > [!NOTE]  
 >  レポート デザイン画面またはレポート デザイン画面上のテキスト ボックスに、レポート データセットのフィールド値を直接ドラッグすると、レポートを実行する際に、結果セットの最初の値のみが表示されます。 フィールドのすべての値を表示するには、テーブルまたはマトリックスのセルにフィールドをドラッグする必要があります。 この状態でレポートを実行すると、そのフィールドにすべての値が表示されます。  
   
- 自由形式レイアウトでテキストを繰り返し表示するには、一覧データ領域にテキスト ボックスを配置します。 複数値に対し形式を繰り返す場合は、一覧を使用します。たとえば、各顧客につき 1 回繰り返される請求書フォームなどです。 詳細については、[一覧&#40;レポート ビルダーおよび SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)を参照してください。  
+ 自由形式レイアウトでテキストを繰り返し表示するには、一覧データ領域にテキスト ボックスを配置します。 複数値に対し形式を繰り返す場合は、一覧を使用します。たとえば、各顧客につき 1 回繰り返される請求書フォームなどです。 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)します。  
   
  テキスト ボックス レイアウト、および最後のテキスト ボックスの下の空白を制御するには、四角形のコンテナーを使用します。 詳細については、「[四角形と線 &#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "56296210"
   
  方向はテキスト ボックスに対して設定されるため、そのテキスト ボックス内のすべてのテキストにその方向が適用されます。 テキスト ボックスの一部のみに異なる方向を指定することはできません。  
   
- すばやくテキストの向きの変更を開始するには、テキストの回転に関するセクションを参照、[チュートリアル。テキストの書式設定 &#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)」をご覧ください。 詳細については、[設定のテキスト ボックスの方向&#40;レポート ビルダーおよび SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)を参照してください。  
+ すばやくテキストの向きの変更を開始するには、テキストの回転に関するセクションを参照、[チュートリアル。テキストの書式設定 &#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)」をご覧ください。 詳細については、次を参照してください。[設定のテキスト ボックスの方向&#40;レポート ビルダーおよび SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)します。  
   
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  [テキスト ボックスの追加、移動、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  

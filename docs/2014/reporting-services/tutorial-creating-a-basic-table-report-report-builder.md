@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:基本的なテーブル レポート (レポート ビルダー) を作成する |Microsoft Docs
+title: チュートリアル:基本的な表レポートの作成 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f6d835c7f600264f91303046cb35d52424978861
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295370"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959548"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>チュートリアル:基本的なテーブル レポート (レポート ビルダー) を作成します。
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>チュートリアル:基本的な表レポートの作成 (レポート ビルダー)
   このチュートリアルでは、サンプルの売上データに基づいて基本的な表レポートを作成する方法を説明します。 次の図に、ここで作成するレポートを示します。  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -229,7 +229,7 @@ ms.locfileid: "56295370"
   
 3.  **[完了]** をクリックします。  
   
- テーブルがデザイン画面に追加されます。 テーブルには 5 列および 5 行が含まれています。 行グループ ペインには、3 つの行グループが表示されます。SalesDate、Subcategory、および詳細。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+ テーブルがデザイン画面に追加されます。 テーブルには 5 列および 5 行が含まれています。 [行グループ] ペインには 3 つの行グループが表示されます。SalesDate、Subcategory、Details です。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
   
 ##  <a name="FormatCurrency"></a> 2.データに通貨の書式を設定する  
  既定では、Sales フィールドの集計データは通常の数値として表示されます。 このフィールドを書式設定して、数値を通貨として表示します。 書式設定したテキスト ボックスおよびプレースホルダー テキストのサンプル値を表示するには、 **[プレースホルダーのスタイル]** の設定を切り替えます。  
@@ -357,7 +357,7 @@ ms.locfileid: "56295370"
 4.  **[保存]** をクリックします。  
   
 ##  <a name="Export"></a> 7.レポートをエクスポートする  
- レポートは、Microsoft Excel や CSV (コンマ区切り) 形式など、別の形式にエクスポートすることができます。 詳細については、[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)を参照してください。  
+ レポートは、Microsoft Excel や CSV (コンマ区切り) 形式など、別の形式にエクスポートすることができます。 詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)します。  
   
  このチュートリアルでは、レポートを Excel にエクスポートします。また、レポートのプロパティを設定して、ブック見出しに独自の名前を指定します。  
   

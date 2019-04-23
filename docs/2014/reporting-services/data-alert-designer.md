@@ -15,15 +15,15 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61eaf801c3033200626c0a28294be2d3af66efb1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 26dfca58a3e5bcac89eb8ddac2ff8a0f98ba2071
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018074"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964268"
 ---
 # <a name="data-alert-designer"></a>データ警告デザイナー
   データ警告の定義は、データ警告デザイナーで作成および編集します。 警告定義は、メタデータのコレクションです (関心のあるレポート データ、データ警告インスタンスの作成とデータ警告メッセージの送信のためにレポート データが満たさなければならないルール、警告メッセージの受信者など)。  

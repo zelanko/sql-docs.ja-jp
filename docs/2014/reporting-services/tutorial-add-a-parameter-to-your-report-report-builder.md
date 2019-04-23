@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:パラメーターを追加、レポート (レポート ビルダー) |Microsoft Docs
+title: チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6545812b60732d07881a17dba57cc36066d2f8b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298660"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966518"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル:レポート (レポート ビルダー) にパラメーターを追加します。
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー)
   ユーザー フィルター レポート データ データ ソースからまたはレポートをレポートにパラメーターを追加します。 レポート パラメーターは、データセット クエリに追加したクエリ パラメーターごとに自動で作成されます。 パラメーターのデータ型により、パラメーターがレポート ビューアー ツール バーに表示される方法が決まります。  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
@@ -55,14 +55,14 @@ ms.locfileid: "56298660"
 10. [レポートを保存します。](#Save)  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーを参照する方法の詳細については、データ ソースを選択し、データセットを作成するこのシリーズの最初のチュートリアルを参照してください。[チュートリアル: 基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
+>  このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、およびデータセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
  このチュートリアルの推定所要時間:25 分。  
   
 ## <a name="requirements"></a>必要条件  
  要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/report-builder-tutorials.md) を参照してください。  
   
-##  <a name="Setup"></a> 1.テーブルまたはマトリックス ウィザードを使用してマトリックス レポートとデータセットを作成する  
+##  <a name="Setup"></a> 1.テーブルまたはマトリックス ウィザードからマトリックス レポートとデータセットを作成します。  
  マトリックス レポート、データ ソース、およびデータセットを作成します。  
   
 > [!NOTE]  
@@ -123,7 +123,7 @@ ms.locfileid: "56298660"
   
 12. **[次へ]** をクリックします。  
   
-##  <a name="CompleteWizard"></a> 2.テーブルまたはマトリックス ウィザードでデータを整理し、レイアウトとスタイルを選択する  
+##  <a name="CompleteWizard"></a> 2.データを整理し、レイアウトを選択して、テーブルまたはマトリックス ウィザードからスタイル  
  ウィザードを使用して、データを表示する最初のデザインを作成します。 ウィザードのプレビュー ペインでは、テーブルやマトリックスのデザインを完了する前にデータのグループ化の結果を表示できます。  
   
 #### <a name="to-organize-data-into-groups"></a>データをグループにまとめるには  
@@ -327,7 +327,7 @@ ms.locfileid: "56298660"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     店舗の列見出しには、複雑な式の表示テキストが含まれています。**<\<Expr >>** します。  
+     店舗の列見出しに、複合式の表示テキストとして次が示されます:**<\<Expr >>** します。  
   
 8.  レポートをプレビューします。  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a89e2e627b297d5d6dc9795217b727aeb20d7c74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 10aa1c7132126dd705986a55d5dc02d78a5263ef
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025793"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955548"
 ---
 # <a name="model-item-security-page-report-manager"></a>[モデル アイテムのセキュリティ] ページ (レポート マネージャー)
   このページでは、特定のアイテムに対する読み取り専用権限の許可や取り消しを行うことにより、モデルの各部をセキュリティで保護できます。 モデル アイテムのセキュリティは、実行時のアドホック データ探索や、レポート ビルダーでのレポート作成時に、パブリッシュされたモデルの各部分を使用できるかどうかに影響します。 この機能を使用するには、コンテンツ マネージャーの権限が必要です。  

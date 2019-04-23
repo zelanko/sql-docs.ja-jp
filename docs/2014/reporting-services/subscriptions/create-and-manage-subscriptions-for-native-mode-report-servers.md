@@ -11,15 +11,15 @@ helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 770cfbd68a2126bed6bbe024c93e1c5ae623bc59
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bd1404868213820d3ba3fc6d2715f7a8ae1c6716
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041043"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59972118"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>標準サブスクリプションを作成、変更、および削除する (ネイティブ モードの Reporting Services)
   標準のサブスクリプションは、電子メールまたは共有フォルダーを使用してレポートを配信する個々のユーザーによって作成されるサブスクリプションです。 標準のサブスクリプションは常に基になるレポートから定義されます。  
@@ -27,11 +27,11 @@ ms.locfileid: "56041043"
  サブスクリプションを作成するユーザーが、そのサブスクリプションを所有します。 各ユーザーは、自分が所有するサブスクリプションを変更または削除できます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降では、サブスクリプションの所有権をプログラムによって転送できます。 サブスクリプションの所有権の転送に使用できるユーザー インターフェイスはありません。 詳細については、次を参照してください。 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降では、サブスクリプションの所有権をプログラムによって転送できます。 サブスクリプションの所有権の転送に使用できるユーザー インターフェイスはありません。 詳細については、「<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>」を参照してください。  
   
- に応じて**RSReportServer.config**構成ファイルの設定、ユーザーがサブスクリプションにユーザーを追加することがあります (たとえば、マネージャーは自分の電子メール アドレスを追加しますまたは、直接レポートのコピーを受信した各している、レポートの場合)。 これがサポートされているかどうかは、個々のサブスクリプションを定義する際に、[宛先] フィールドが表示されるかどうかで決まります。 詳細については、[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)を参照してください。  
+ に応じて**RSReportServer.config**構成ファイルの設定、ユーザーがサブスクリプションにユーザーを追加することがあります (たとえば、マネージャーは自分の電子メール アドレスを追加しますまたは、直接レポートのコピーを受信した各している、レポートの場合)。 これがサポートされているかどうかは、個々のサブスクリプションを定義する際に、[宛先] フィールドが表示されるかどうかで決まります。 詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)します。  
   
- このトピックでは、個別のユーザーが作成および管理する標準のサブスクリプションに関する情報を記載しています。 データ ドリブン サブスクリプションについては、必要条件および手順が異なるため、別のトピックで説明します。 詳細については、[作成、変更、およびデータ ドリブン サブスクリプションを削除](data-driven-subscriptions.md)を参照してください。  
+ このトピックでは、個別のユーザーが作成および管理する標準のサブスクリプションに関する情報を記載しています。 データ ドリブン サブスクリプションについては、必要条件および手順が異なるため、別のトピックで説明します。 詳細については、次を参照してください。[作成、変更、およびデータ ドリブン サブスクリプションを削除](data-driven-subscriptions.md)します。  
   
  このトピックの内容  
   
@@ -56,7 +56,7 @@ ms.locfileid: "56041043"
   
 -   電子メール配信を使用する場合は、サブスクリプションを作成する前に、SMTP サーバーまたはゲートウェイ接続用にレポート サーバーを構成する必要があります。  
   
--   ファイル共有配信を使用するには、対象フォルダーを定義しておく必要があります。 詳細については、[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)を参照してください。  
+-   ファイル共有配信を使用するには、対象フォルダーを定義しておく必要があります。 詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)します。  
   
  レポートをサブスクライブするには、保存された資格情報を使用するか、資格情報を使用しないように、レポートのデータ ソースを構成しておく必要があります。 詳細については、「 [Reporting Services データ ソースに資格情報を保存する](../report-data/store-credentials-in-a-reporting-services-data-source.md)」を参照してください。 レポートのデータ ソースをそのように構成しない場合は、 **[新しいサブスクリプション]** ボタンが使用できない状態になります。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56041043"
   
 3.  **によって提供される**、**電子メール**します。 この配信の種類が選択できない場合、レポート サーバーが電子メール サブスクリプション用に構成されていません。  
   
-4.  **To**テキスト ボックスに、受信者の名前にするには: フィールドは、ドメイン ユーザー アカウントを使用して自動的に指定します。 レポート サーバーの構成設定を決定するかどうか、**に**フィールドは、ユーザー アカウントで自動的に指定します。 電子メール アドレスの構成設定を変更する方法についての詳細については、[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)を参照してください。  
+4.  **To**テキスト ボックスに、受信者の名前にするには: フィールドは、ドメイン ユーザー アカウントを使用して自動的に指定します。 レポート サーバーの構成設定を決定するかどうか、**に**フィールドは、ユーザー アカウントで自動的に指定します。 電子メール アドレスの構成設定を変更する方法についての詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)します。  
   
     > [!NOTE]  
     >  権限によっては、レポートの配信先の電子メール アドレスを入力できます。 電子メール アドレスを複数指定するには、セミコロン (;) で区切ります。 **[CC]**、 **[BCC]**、および **[返信先]** テキスト ボックスに、追加の電子メール アドレスを入力することもできます。 このためには、すべてのサブスクリプションを管理する権限が必要です。  

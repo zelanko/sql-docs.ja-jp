@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Report Viewer [Reporting Services]
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5bedfa3c06a760baccd460915f313bb1bc6dcd79
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1453d381b38d01cca5b531661714dbbce1693d1b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293130"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947969"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Microsoft Surface デバイスと Apple iOS デバイスでの Reporting Services レポートの表示
   このトピックでは、Microsoft Surface デバイス、Apple iOS 6 と Apple Safari を搭載したデバイス (iPad など) でサポートされる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の機能とワークフローについて説明します。  
@@ -49,16 +49,16 @@ iPad でレポートを表示する方法の例をご覧ください。
   
 2.  次のいずれかの手順に従って、レポートを開きます。  
   
-    -   **電子メールから開始します。**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって作成される電子メールから、レポートの URL をタップします。 レポートがブラウザーで開かれます。  
+    -   **電子メールから開始します。** によって作成される電子メールから、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サブスクリプション、レポートの URL をタップします。 レポートがブラウザーで開かれます。  
   
-    -   **レポート サーバーから開始します。**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーでディレクトリを参照し、レポート名をタップしてレポートを開きます。  
+    -   **レポート サーバーから開始します。** ディレクトリの参照、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバーとレポートを開くレポート名をタップします。  
   
-    -   **SharePoint ドキュメント ライブラリからの起動します。**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートを含む SharePoint ドキュメント ライブラリを参照して、レポート名をタップします。 レポートを表示および操作できます。  
+    -   **SharePoint ドキュメント ライブラリからの起動します。** 含む SharePoint ドキュメント ライブラリを参照[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート、およびレポート名をタップします。 レポートを表示および操作できます。  
   
         > [!IMPORTANT]  
         >  iPad の場合は、Safari の **[プライベート ブラウズ]** プロパティがオフになっていることを確認します。  
   
-    -   **SharePoint web パーツ:** Web パーツが SharePoint ページに追加されている場合は、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポートを表示できます。  
+    -   **SharePoint web パーツ:** Web パーツが SharePoint ページに追加されている場合は表示できます[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポートします。  
   
 3.  Microsoft Surface デバイスでは、レポート マネージャーを使用してレポートを開くこともできます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート マネージャーでディレクトリを参照し、レポート名をタップしてレポートを開きます。  
   

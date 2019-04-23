@@ -10,22 +10,22 @@ ms.topic: conceptual
 f1_keywords:
 - "10059"
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ce767793dc0994c30bba1301a193f0736c7e2e14
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e82aefb411f35e5eb8ad33cb16650e6963a461d1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030423"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949639"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>[Reporting Services ログイン] ダイアログ ボックス (レポート ビルダー)
   **[Reporting Services ログイン]** ダイアログ ボックスを使用すると、レポートをレポート サーバーにパブリッシュする際に使用する資格情報を指定できます。 これらの資格情報については、レポート サーバー管理者に問い合わせてください。  
   
 ## <a name="options"></a>および  
  **Server**  
- レポート サーバーの名前を表示します。 たとえば、 `http://localhost/reportserver`のようにします。 既定のポート 80 と異なるポートを使用するレポート サーバーの場合は、ポート番号を含めます。 たとえば、`http://localhost:8080/reportserver` のようにします。  
+ レポート サーバーの名前を表示します。 たとえば、 `http://localhost/reportserver`のようにします。 既定のポート 80 と異なるポートを使用するレポート サーバーの場合は、ポート番号を含めます。 たとえば、 `http://localhost:8080/reportserver`のようにします。  
   
  **ユーザー名**  
  Web サービスへのログインに使用するユーザー名を入力します。  

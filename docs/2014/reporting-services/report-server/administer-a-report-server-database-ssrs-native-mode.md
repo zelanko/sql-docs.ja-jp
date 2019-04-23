@@ -15,15 +15,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6870e52124d303b2e04e85158adb98872b78085f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bc152d3130d903f4b098a495451d2918abcd7329
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041253"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961138"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>レポート サーバー データベースを管理する (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の環境では、2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースが内部記憶域として使用されます。 既定では、データベース名がそれぞれ ReportServer と ReportServerTempdb になります。 ReportServerTempdb は、レポート サーバーのプライマリ データベースと共に作成され、一時データ、セッション情報、およびキャッシュされたレポートを格納する目的に使用されます。  
@@ -59,7 +59,7 @@ ms.locfileid: "56041253"
  ReportServerTempdb の名前は内部的に保存され、ストアド プロシージャが内部的な操作を実行するときに使用されるため、このエラーが発生します。 一時データベースの名前を変更すると、ストアド プロシージャが正しく機能しなくなります。  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>レポート サーバー データベースのスナップショット分離の有効化  
- レポート サーバー データベースのスナップショット分離を有効にすることはできません。 スナップショット分離を有効にした場合、"選択したレポートは、表示できる状態ではありません。 レポートが表示の準備中か、またはレポート スナップショットが利用できません" というエラーが発生します。  
+ レポート サーバー データベースのスナップショット分離を有効にすることはできません。 スナップショット分離が有効な場合は、次のエラーが発生するは。"選択したレポートが表示できていません。 レポートが表示の準備中か、またはレポート スナップショットが利用できません" というエラーが発生します。  
   
  スナップショット分離を意図的に有効にしなくても、他のアプリケーションによって属性が設定されたり、 **model** データベースのスナップショット分離が有効になっていたために、新しいデータベースがすべてその設定を引き継いでしまうことも考えられます。  
   

@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860083"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935344"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>PROSE コード アクセラレータを使用してデータ Wrangling
 
@@ -24,7 +24,7 @@ ms.locfileid: "58860083"
 PROSE コード アクセラレータは、データ処理タスクの読み取り可能な Python コードを生成します。 Azure Data Studio 内で、notebook での作業中に、シームレスな方法で手作業で記述されたコードで生成されたコードを複数使用できます。 この記事では、コードのアクセラレータを使用する方法の概要を示します。
 
  > [!NOTE]
- > プログラム Synthesis using Examples、PROSE とも呼ばれる、AI を使用して、人間が判読できるコードを生成する Microsoft テクノロジです。 これは、ユーザーの意図だけでなくデータの分析、いくつかの候補プログラムを生成および順位付けアルゴリズムを使用して最適なプログラムを選択します。 PROSE テクノロジについて詳しく知るには、、 [PROSE ホームページ](https://microsoft.github.io/prose/)を参照してください。
+ > プログラム Synthesis using Examples、PROSE とも呼ばれる、AI を使用して、人間が判読できるコードを生成する Microsoft テクノロジです。 これは、ユーザーの意図だけでなくデータの分析、いくつかの候補プログラムを生成および順位付けアルゴリズムを使用して最適なプログラムを選択します。 PROSE テクノロジについて詳しく知るには、次を参照してください。、 [PROSE ホームページ](https://microsoft.github.io/prose/)します。
 
 コードのアクセラレータは、Azure Data Studio プレインストールされています。 ノートブックの他の Python パッケージと同様にインポートできます。 慣例により、インポートします略して cx として。
 
@@ -144,4 +144,4 @@ builder.learn().regexes
 ^Unknown$
 ```
 
-正規表現を生成するとは別に`FindPatternsBuilder`生成された正規表現に基づく値をクラスター化するためのコードを生成することもできます。 列内のすべての値が生成された正規表現に準拠していることをアサートことできますも。 詳細およびその他の有用なシナリオを参照してください、、[ドキュメント](https://aka.ms/prose-codeaccelerator-findpatterns)を参照してください。
+正規表現を生成するとは別に`FindPatternsBuilder`生成された正規表現に基づく値をクラスター化するためのコードを生成することもできます。 列内のすべての値が生成された正規表現に準拠していることをアサートことできますも。 詳細およびその他の有用なシナリオを参照してください、次を参照してください。、[ドキュメント](https://aka.ms/prose-codeaccelerator-findpatterns)します。

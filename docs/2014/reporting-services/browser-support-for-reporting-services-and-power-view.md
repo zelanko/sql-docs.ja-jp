@@ -1,7 +1,7 @@
 ---
 title: Reporting Services と Power View ブラウザー サポートの計画 (Reporting Services 2014)
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 0f385bbdbec1072896c0b248257ef9b82d439ab2
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100937"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953958"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Reporting Services と Power View ブラウザー サポートの計画 (Reporting Services 2014)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] では、Web ブラウザーを使用して、レポートを表示したりレポート マネージャーを実行したりします。 すべてのブラウザーですべてのレポート機能がサポートされているわけではありません。 このトピックでは、レポート マネージャーの管理機能、レポートの表示、Visual Studio のレポート ビューアー コントロールのサポートと要件について説明します。 また、サポートされるブラウザーで使用できる機能、認証要件、およびスクリプトの要件の概要も示します。  
@@ -47,9 +47,9 @@ ms.locfileid: "54100937"
   
 - この表は、SharePoint 2010 と SharePoint 2013 に適用されます。  
   
-- SharePoint 2013 のブラウザー サポートの詳細については、[SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com//library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)を参照してください。  
+- SharePoint 2013 のブラウザー サポートの詳細については、次を参照してください。 [SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com//library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)します。  
   
-- SharePoint 2010 のブラウザー サポートの詳細については、[(SharePoint Server 2010) のブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.14\).aspx)(https://technet.microsoft.com/library/cc263526(office.14).aspx)を参照してください。  
+- SharePoint 2010 のブラウザー サポートの詳細については、次を参照してください。 [(SharePoint Server 2010) のブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.14\).aspx)(https://technet.microsoft.com/library/cc263526(office.14).aspx)します。  
   
 |**ブラウザー**|**Windows 8 および 8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "54100937"
 
  次の表は、Excel Services を実行している SharePoint Server で、Power View シートが含まれた Excel 2013 ブックをユーザーが開く場合に、 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] でサポートされるブラウザーのバージョンをまとめたものです。  
   
--   SharePoint 2013 のブラウザー サポートの詳細については、[SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)を参照してください。  
+-   SharePoint 2013 のブラウザー サポートの詳細については、次を参照してください。 [SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)します。  
   
 |**ブラウザー**|**Windows 8 および 8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -117,7 +117,7 @@ ms.locfileid: "54100937"
   
 - iOS デバイスの Apple Safari で対話的にレポートを表示します。 サポートされる機能には、展開/折りたたみ、パラメーター ペイン、対話的な並べ替えなどがあります。  
   
-- 詳細については、[Microsoft Surface デバイスと Apple iOS デバイスでのビュー Reporting Services レポート](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md)を参照してください。  
+- 詳細については、次を参照してください。 [Microsoft Surface デバイスと Apple iOS デバイスでのビュー Reporting Services レポート](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md)します。  
   
  **注** Macintosh コンピューターからレポート サーバーにアクセスする場合は、Safari を使用することをお勧めします。 統合されている SharePoint 製品を使用しているかどうかは[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を参照してください[ブラウザー サポート (Windows SharePoint Services) を計画する](https://go.microsoft.com/fwlink/?LinkId=183583)します。  
   
@@ -191,9 +191,9 @@ ms.locfileid: "54100937"
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```
   
- Internet Explorer の互換モードの詳細については、[ドキュメント互換性の定義](https://go.microsoft.com/fwlink/?LinkId=180380)(https://go.microsoft.com/fwlink/?LinkId=180380)を参照してください。  
+ Internet Explorer の互換モードの詳細については、次を参照してください。[ドキュメント互換性の定義](https://go.microsoft.com/fwlink/?LinkId=180380)(https://go.microsoft.com/fwlink/?LinkId=180380)します。  
   
- ReportViewer コントロールの使用の詳細については、[展開レポートと ReportViewer コントロール](https://msdn.microsoft.com/library/ms251723.aspx)(https://msdn.microsoft.com/library/ms251723.aspx)を参照してください。  
+ ReportViewer コントロールの使用の詳細については、次を参照してください。[展開レポートと ReportViewer コントロール](https://msdn.microsoft.com/library/ms251723.aspx)(https://msdn.microsoft.com/library/ms251723.aspx)します。  
   
 ## <a name="next-steps"></a>次の手順
 

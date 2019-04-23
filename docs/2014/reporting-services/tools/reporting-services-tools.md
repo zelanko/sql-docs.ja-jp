@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 144cce158e6b4f8814392a996699ddbe214ca628
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8cbe5a25ef6ca87c2ffa5fd83c8ff1ca0796fdae
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016033"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939848"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services ツール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、管理環境での機能豊富なレポートの開発と使用をサポートするグラフィカル ツールとスクリプト ツールのセットが用意されています。 このツール セットには、開発ツール、構成と管理ツール、およびレポート表示ツールが含まれています。 ここでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の各ツール、およびツールへのアクセス方法について簡単に説明します。  
@@ -41,7 +41,7 @@ ms.locfileid: "56016033"
 |----------|-----------------|-------------------|  
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表形式モデルに基づいてレポートを作成し、対話できるようにデザインされた、対話型データの探索およびビジュアル化が可能です。<br /><br /> 注:SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] が必要です。|Silverlight がインストールされているブラウザー|  
 |レポート デザイナー|レポートをデザインし、ネイティブ モードまたは SharePoint モードのレポート サーバーに配置するには、このツールを使用します。<br /><br /> でホストされる [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> レポートで使用されるデータを編成するためのレポート データ ペイン<br /><br /> 対話型のレポート デザインのデザインおよびプレビューに使用するタブ付きビュー<br /><br /> データ ソースから取得するデータを指定できるクエリ デザイナー、および [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)内のデータ ソースの種類に関連付けられているクエリ デザイナー<br /><br /> レポートのコンテンツと外観をカスタマイズする [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 式を作成するための IntelliSense 対応の式エディター<br /><br /> カスタム レポート アイテムとカスタム クエリ デザイナーをサポート<br /><br /> <br /><br /> 詳細については、「[SQL Server データ ツールの Reporting Services (SSDT)](reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
-|レポート ビルダー|レポートをデザインし、ネイティブ モードまたは SharePoint モードのレポート サーバーに配置するには、このツールを使用します。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office と同様の作成環境<br /><br /> レポート アイテムをレポート パーツとして保存する機能<br /><br /> マップを作成するウィザード<br /><br /> 集計の集計<br /><br /> 式のサポート強化<br /><br /> 選択した組み込みのデータ ソースの種類から取得するデータを指定できるクエリ デザイナー<br /><br /> <br /><br /> 詳細については、[レポート ビルダー &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)を参照してください。|MSI をダウンロードするか、レポート マネージャーまたは SharePoint から開く|  
+|レポート ビルダー|レポートをデザインし、ネイティブ モードまたは SharePoint モードのレポート サーバーに配置するには、このツールを使用します。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office と同様の作成環境<br /><br /> レポート アイテムをレポート パーツとして保存する機能<br /><br /> マップを作成するウィザード<br /><br /> 集計の集計<br /><br /> 式のサポート強化<br /><br /> 選択した組み込みのデータ ソースの種類から取得するデータを指定できるクエリ デザイナー<br /><br /> <br /><br /> 詳細については、次を参照してください。[レポート ビルダー &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)します。|MSI をダウンロードするか、レポート マネージャーまたは SharePoint から開く|  
   
 ## <a name="tools-for-report-server-administration"></a>レポート サーバー管理用のツール  
  グラフィカル ツールとスクリプト ツールのセットを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のレポート サーバーを管理できます。 使用するツールは、レポート サーバーの配置モードによって異なります。  

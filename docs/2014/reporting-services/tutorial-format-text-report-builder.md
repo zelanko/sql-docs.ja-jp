@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:書式を設定 (レポート ビルダー) |Microsoft Docs
+title: チュートリアル:書式文字列 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c4b9edce95b37417c031c8af06887f0933528038
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297289"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961338"
 ---
-# <a name="tutorial-format-text-report-builder"></a>チュートリアル:テキストの書式設定 (レポート ビルダー)
+# <a name="tutorial-format-text-report-builder"></a>チュートリアル:テキストを書式設定する (レポート ビルダー)
   このチュートリアルでは、さまざまな方法でテキストの書式設定を実習します。 空のレポートと、データ ソースおよびデータセットを設定した後、必要な手順を選んで進めることができます。  
   
  次の図に、ここで作成するレポートと同様のレポートを示します。  
@@ -27,7 +27,7 @@ ms.locfileid: "56297289"
   
  途中の手順で一度わざと正しくない方法を試し、それがなぜ問題なのかを確認します。 その後、必要な効果が得られるように問題を修正します。  
   
- このチュートリアルで作成するレポートについては、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] レポート ビルダーのサンプル レポートに発展版が含まれています。 このサンプル レポートおよびその他のダウンロードの詳細については、[レポート ビルダーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=184851)を参照してください。  
+ このチュートリアルで作成するレポートについては、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] レポート ビルダーのサンプル レポートに発展版が含まれています。 このサンプル レポートおよびその他のダウンロードの詳細については、次を参照してください。[レポート ビルダーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=184851)します。  
   
 ##  <a name="BackToTop"></a> 学習内容  
   
@@ -71,7 +71,7 @@ ms.locfileid: "56297289"
   
 1.  レポート データ ペインで、 **[新規作成]** をクリックし、 **[データ ソース]** をクリックします。  
   
-2.  **[名前]** ボックスに、**TextDataSource**  
+2.  **[名前]** ボックスに、「**TextDataSource**」と入力します。  
   
 3.  **[レポートに埋め込まれた接続を使用する]** をクリックします。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "56297289"
   
 2.  データ ソースが **TextDataSource**であることを確認します。  
   
-3.  **[名前]** ボックスに、**TextDataset します。**  
+3.  **[名前]** ボックスに、「**TextDataset**」と入力します。  
   
 4.  クエリの種類に **[テキスト]** が選択されていることを確認してから、 **[クエリ デザイナー]** をクリックします。  
   

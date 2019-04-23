@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10126"
 ms.assetid: 117fb20c-2fda-437e-bcc5-9010d6d4b53b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cf4ff717d5f772b8ef3d78c3cd307b9d923fea79
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7a18291f26e348851621a9f4321106a7793ab904
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291511"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953968"
 ---
 # <a name="row-visibility-dialog-box-report-builder"></a>[行表示] ダイアログ ボックス (レポート ビルダー)
   **[行表示]** ダイアログ ボックスを使用すると、選択した行をレポートの初回実行時に表示または非表示にすることも、別のレポート アイテムを使用して行の表示を切り替えることもできます。  
@@ -36,7 +36,7 @@ ms.locfileid: "56291511"
  **表示または非表示の式を基に**  
  式を使用して初期表示を変化させます。  
   
- アイテムを非表示にする場合は `Boolean`、アイテムを表示する場合は `True` と評価される `False` 値の式を入力します。 式を編集するには、 **[式]** (*[fx]*) ボタンをクリックします。  
+ アイテムを非表示にする場合は `Boolean`、アイテムを表示する場合は `True` と評価される `False` 値の式を入力します。 式を編集するには、 **式** (*[fx]*) ボタンをクリックします。  
   
  **このレポート アイテムが表示を切り替えることができます。**  
  ユーザーが HTML レポート ビューアーでこの行の表示/非表示を切り替えられるようにする切り替えイメージを表示します。  
