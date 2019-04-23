@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 19131187813523020923083daf0868bf970a7f83
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b566b27ca060f84fe976a3827e5f657ca43bf741
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295520"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960338"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>さまざまなレポート表示拡張機能の対話機能 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートを実行時に操作できるようにする対話的なレポート機能が用意されています。 すべてのレポート表示形式で、すべての対話機能をサポートしているわけではありません。 次の表を使用することで、それぞれの対話機能が特定の表示形式でどのように動作するのかを理解できます。  

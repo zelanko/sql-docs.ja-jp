@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], starting Report Builder
 - starting Report Builder
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 506a989494d3f69b5ca9873cc191487bb3b0b296
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 70ec1c794e86782551099b4fb5d8459c8bae6191
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290040"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966508"
 ---
 # <a name="start-report-builder-report-builder"></a>レポート ビルダーの起動 (レポート ビルダー)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] スタンドアロンが含まれていますと[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]レポート ビルダーのバージョン。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] バージョンは、ネイティブ モードまたは SharePoint 統合モードでインストールされた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と共に使用できます。  
@@ -33,7 +33,7 @@ ms.locfileid: "56290040"
   
  [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] バージョンのレポート ビルダーを使用して、SharePoint にパブリッシュされている [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ブックについてのレポートを作成することもできます。 レポート ビルダーの使用の詳細については[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]を参照してください[PowerPivot データを Reporting Services レポートの作成](https://go.microsoft.com/fwlink/?LinkId=185238)technet.microsoft.com します。  
   
- レポート ビルダー スタンドアロンを起動する、**開始**メニューで、ローカル コンピューター、ユーザーまたは管理者は、ツールを使用するには前に、コンピューターに直接のレポート ビルダーをインストールする必要があります。 スタンドアロン バージョンは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール時にインストールされません。別途ダウンロードして、インストールする必要があります。 レポート ビルダーをダウンロードするには、[Microsoft® SQL Server® 2012 レポート ビルダー](https://go.microsoft.com/fwlink/?LinkId=401502)を参照してください。  
+ レポート ビルダー スタンドアロンを起動する、**開始**メニューで、ローカル コンピューター、ユーザーまたは管理者は、ツールを使用するには前に、コンピューターに直接のレポート ビルダーをインストールする必要があります。 スタンドアロン バージョンは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール時にインストールされません。別途ダウンロードして、インストールする必要があります。 レポート ビルダーをダウンロードするには、次を参照してください。 [Microsoft® SQL Server® 2012 レポート ビルダー](https://go.microsoft.com/fwlink/?LinkId=401502)します。  
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>レポート マネージャーからレポート ビルダー ClickOnce を起動するには  
   

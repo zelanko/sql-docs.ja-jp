@@ -26,15 +26,15 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 52fac65fdc332f6c0868af84fbeb84c195e1b0f8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3eab390eb43d41d89bc5cf3b1cefe84c121ce9f5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039263"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945468"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>レポート データ ソースに関する資格情報と接続情報を指定する
   レポート サーバーは、資格情報を使用して、レポートにコンテンツを提供したり、データ ドリブン サブスクリプションに受信者の情報を提供する外部データ ソースに接続します。 Windows 認証、データベース認証、認証なし、またはカスタム認証を使用する資格情報を指定できます。 ネットワーク経由で接続要求を送信するときに、レポート サーバーはユーザー アカウントまたは自動実行アカウントのいずれかの権限を借用します。 接続要求の実行時に使用されるセキュリティ コンテキストの詳細については、このトピックの「 [データ ソースの構成とネットワーク接続](#DataSourceConfigurationConnections) 」をご覧ください。  
@@ -42,7 +42,7 @@ ms.locfileid: "56039263"
 > [!NOTE]  
 >  資格情報は、レポート サーバーにアクセスするユーザーを認証するためにも使用されます。 レポート サーバーへのユーザーの認証に関する情報については、別のトピックで説明します。  
   
- レポートを作成すると、外部データ ソースへの接続が定義されます。 レポートをパブリッシュした後は、この接続を個別に管理できます。 動的な一覧からデータ ソースを選択できるようになる静的な接続文字列または式を指定できます。 データ ソースの種類と接続文字列を指定する方法の詳細については、[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)を参照してください。  
+ レポートを作成すると、外部データ ソースへの接続が定義されます。 レポートをパブリッシュした後は、この接続を個別に管理できます。 動的な一覧からデータ ソースを選択できるようになる静的な接続文字列または式を指定できます。 データ ソースの種類と接続文字列を指定する方法の詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
   
 ## <a name="using-remote-data-sources"></a>リモート データ ソースの使用  
  リモートのデータベース サーバーのデータをレポートに取得する場合、次の点を確認します。  

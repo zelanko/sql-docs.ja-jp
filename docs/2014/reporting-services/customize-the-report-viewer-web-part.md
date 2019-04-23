@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Web Parts [Reporting Services]
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 46873ce2a5a8ad006fafb2c0311e895c6305cd6a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b9bbccd4abf5636cb777d69b64268ffea6632e65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017964"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947758"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>レポート ビューアー Web パーツのカスタマイズ
   レポート ビューアー Web パーツを使用することで、SharePoint 統合用に構成されているレポート サーバーで実行されるレポートを表示できます。 表示できるレポートは、レポート定義 (.rdl) ファイルやレポート ビルダーのレポートなどです。 レポートは自動的に新しいページのレポート ビューアー Web パーツに表示されますが、既存の Web ページや Web サイトにレポート ビューアー Web パーツを追加することで、そのページで特定のレポートが常に表示されるようにすることもできます。  

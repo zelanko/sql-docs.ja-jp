@@ -15,15 +15,15 @@ f1_keywords:
 - "10546"
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 301ed0986cdb9971e2b03bd1af76ab3d2a71d86f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 042a81dc4850c592542ca0764842b45a7756468d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293881"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948588"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>インジケーター (レポート ビルダーおよび SSRS)
   インジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 インジケーターとその状態を表すアイコンは単純で、小さなサイズでもわかりやすくなっています。  
@@ -44,7 +44,7 @@ ms.locfileid: "56293881"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、そのまま使用できるインジケーター セットとインジケーター アイコンが組み込まれていますが、必要に応じて、個々のインジケーター アイコンとインジケーター セットをカスタマイズできます。  
   
- インジケーターを Kpi として使用する方法の詳細については、次を参照してください。[チュートリアル。レポートへの KPI の追加&#40;レポート ビルダー&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)します。  
+ インジケーターを KPI として使用する方法の詳細については、「[チュートリアル:レポートへの KPI の追加 &#40;レポート ビルダー&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  インジケーターは、レポート パーツとしてレポートとは別にパブリッシュできます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  

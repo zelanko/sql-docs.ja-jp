@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 005c9fe0ff5ba3f998e80a93ea19d85c87331403
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8bea75455bca695baa949d70bcef3909ac729cb7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028584"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953258"
 ---
 # <a name="configure-report-manager-native-mode"></a>レポート マネージャーの構成 (ネイティブ モード)
   レポート マネージャーは、Web フロント エンド アプリケーションであり、レポートの表示、レポート サーバー コンテンツの管理、およびネイティブ モードのレポート サーバーへのアクセス権の付与に使用されます。 レポート マネージャーは、レポート サーバー Web サービスと共に、同じレポート サーバー インスタンス内にインストールされます。また、セットアップ時に **[ネイティブ モードの既存の構成をインストールする]** を選択した場合は、必要に応じて構成できます。 レポート マネージャーはインストール後のタスクとしても構成できます。 このトピックでは、次のレポート マネージャーの構成シナリオについて説明します。  
@@ -57,7 +57,7 @@ ms.locfileid: "56028584"
   
 -   レポート サーバーはネイティブ モードで動作する必要があります。 レポート マネージャーは、SharePoint 統合モード用に構成されているレポート サーバーと併用できません。 SQL Server 2012 では、レポート サーバーを別のモードに切り替えることはできません。 環境で使用しているレポート サーバーの種類を変更するには、目的のモードのレポート サーバーをインストールした後、新しいレポート サーバーにレポート アイテムをコピーまたは移動する必要があります。 このプロセスは、一般的には "移行" と呼ばれます。 移行に必要な手順は、移行先のモードと移行元のバージョンによって異なります。 詳細については、「 [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。  
   
--   また、Internet Explorer 7.0 以降 (スクリプト機能オン) も必要です。 詳細については、[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)を参照してください。  
+-   また、Internet Explorer 7.0 以降 (スクリプト機能オン) も必要です。 詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)します。  
   
 ##  <a name="ConfigureRMURL"></a> 既定の URL を使用するレポート マネージャーの構成  
  既定では、レポート マネージャーの URL は一意の仮想ディレクトリ名に加えて、同じインスタンスで実行されているレポート サーバー Web サービス用に定義されているポートとホスト名で構成されます。 ほとんどの場合、ホスト名はレポート サーバー コンピューターのネットワーク名ですが、そのコンピューターを解決する IP アドレスまたはホスト ヘッダーである場合もあります。 既定の URL を使用するようにレポート マネージャーを構成するには、 **構成ツールの** [レポート マネージャー URL] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用します。  
@@ -87,7 +87,7 @@ ms.locfileid: "56028584"
   
 4.  変更を保存してファイルを閉じます。  
   
- 構成ファイルの詳細については、[Reporting Services の構成ファイルを変更&#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md)と[RSReportServer Configuration File](rsreportserver-config-configuration-file.md)を参照してください。  
+ 構成ファイルの詳細については、次を参照してください。 [Reporting Services の構成ファイルを変更&#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md)と[RSReportServer Configuration File](rsreportserver-config-configuration-file.md)します。  
   
 ##  <a name="ConfigureRemoteRS"></a> リモート レポート サーバーを使用するレポート マネージャーの構成  
  レポート マネージャーとレポート サーバーを異なるコンピューターに配置する配置構成では、2 つの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を個別にインストールする必要があります。 レポート マネージャーは、レポート サーバー サービスに組み込まれているため、単独でインストールすることはできません。 レポート マネージャーを別のコンピューター上で独自のプロセス内で実行する場合は、2 番目のレポート サーバーをインストールする必要があります。 両方のサーバー インスタンスは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバーであることが必要です。  

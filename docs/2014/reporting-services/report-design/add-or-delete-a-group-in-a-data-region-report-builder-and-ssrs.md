@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a7b4f0a499ccbb41e185774cac687f8a8be3c2d5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 827221a60598a6a9f4179a86783c05512072f5b0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292600"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940838"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>データ領域でのグループの追加または削除 (レポート ビルダーおよび SSRS)
   計算や表示の対象として、特定の値または式のセットによってデータを整理する場合は、グループをデータ領域に追加します。 グループには、データセットのどのデータがそのグループに含まれるかを示す名前と式を割り当てます。 グループの詳細については、「 [グループについて (レポート ビルダーおよび SSRS)](understanding-groups-report-builder-and-ssrs.md)」を参照してください。  

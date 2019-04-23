@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6f6a205c6ec89ca1cf17699e6e5a4b8cfe7b6bf3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 119ed4044fa3613e0544f0c9ee60189342bd0a63
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295780"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953558"
 ---
 # <a name="expression-dialog-box-report-builder"></a>[式] ダイアログ ボックス (レポート ビルダー)
   使用して、**式**書き込む ダイアログ ボックス[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]の式のレポート アイテムのプロパティ。 式を使用して、色、フォント、罫線など多数のプロパティを設定できます。 実行時に、レポート プロセッサによって式が評価され、その結果がプロパティの値に置き換えられます。  

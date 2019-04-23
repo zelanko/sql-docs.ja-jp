@@ -11,15 +11,15 @@ f1_keywords:
 - "10157"
 - sql12.rtp.rptdesigner.chartareaproperties.alignment.f1
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6014bed70e71f376e6321664265c4359f5bf7021
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8578b33bb47a6bcf8c38ae091c4e959085c30b06
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288930"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971248"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>系列のグラフ領域の指定 (レポート ビルダーおよび SSRS)
   グラフは、外側の境界、グラフのタイトル、および凡例を含んでいる最上位レベルのコンテナーです。 既定では、グラフには既定のグラフ領域が 1 つ含まれています。 グラフ領域はグラフの表面上に見えませんが、グラフ領域を 1 つまたは複数の系列の軸ラベル、軸タイトル、およびプロット エリアのみを含んでいるコンテナーと考えることができます。 次の図は、1 つのグラフ内にあるグラフ領域の概念を示しています。  

@@ -3,7 +3,7 @@ title: SQL Server 2019 拡張機能 (プレビュー)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 用 SQL Server 2019 Preview の拡張機能
 ms.custom: seodec18
-ms.date: 03/18/2019
+ms.date: 04/19/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 11dee99f7d0648a4c7fc701234796e6d552d47a9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161550"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934128"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 拡張機能 (プレビュー)
 
@@ -30,9 +30,9 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 
    |プラットフォーム|ダウンロード|リリース日|バージョン
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|2019 年 3 月 18日 |0.11.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|2019 年 3 月 18日 |0.11.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|2019 年 3 月 18日 |0.11.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|2019 年 4 月 18日 |0.12.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|2019 年 4 月 18日 |0.12.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|2019 年 4 月 18日 |0.12.0
 
 1. Azure Data Studio で次のように選択します。 **VSIX パッケージからの拡張機能のインストール**から、**ファイル**メニューとダウンロードした .vsix ファイルを選択します。
 
@@ -44,12 +44,27 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 
 1. インストールが完了したら、依存関係、Azure Data Studio を閉じて。 **SQL Server のビッグ データ クラスター**接続の種類は、Azure Data Studio を再起動するまでは使用できません。
 
+## <a name="changes-in-release-012"></a>0.12 のリリースでの変更
+
+* **SQL Server のビッグ データ クラスター**接続の種類はこのリリースで削除されました。 SQL Server のビッグ データ クラスター接続から以前に使用可能なすべての機能は、SQL Server の接続でご利用いただけます。
+* HDFS の参照は、「、 **Data Services**フォルダー
+* Notebook は、PySpark カーネルとその他のビッグデータ カーネル機能、SQL Server のビッグ データ クラスター内の SQL Server のマスター インスタンスに接続されている場合。
+* ウィザードの外部テーブルを作成します。
+  * 既存の外部データ ソースを使用して外部テーブルを作成するためのサポート。
+  * ウィザードの間でパフォーマンスの向上。
+  * 特殊文字を含むオブジェクト名の処理の強化。 場合によってはこれらの原因と、ウィザードが失敗するには
+  * オブジェクトのマッピング ページの信頼性の向上。
+  * 削除されたシステム データベースの 'DWConfiguration'、'DWDiagnostics'、'DWQueue' のデータベースのドロップダウン リストから。
+  * 外部ファイル形式オブジェクトの名前を設定するためのサポート、 **CSV ファイルから、Create External Table**ウィザード。
+  * 最初のページに更新 ボタンを追加、 **CSV ファイルから、Create External Table**ウィザード。
+
 ## <a name="release-notes-v0110"></a>リリース ノート (v0.11.0)
-  * Jupyter Notebook のサポート、Python3 および Spark カーネルでは、具体的にはサポートは、Azure Data Studio に移動されました。 この拡張機能では、Notebook を使用するには必要なくなりました。
-  * 外部データ ウィザードでは、複数のバグ修正:
-    * Oracle 型のマッピングは、SQL Server 2019 CTP 2.3 で出荷された変更に合わせて更新されました。
-    * テーブルのマッピング コントロールに入力した新しいスキーマが失われるされる問題を修正しました。
-    * テーブルのマッピングでデータベース ノードのチェックになりませんでしたすべてのテーブルとビューがチェックされる問題を修正しました。
+
+* Jupyter Notebook のサポート、Python3 および Spark カーネルでは、具体的にはサポートは、Azure Data Studio に移動されました。 この拡張機能では、Notebook を使用するには必要なくなりました。
+* 外部データ ウィザードでは、複数のバグ修正:
+  * Oracle 型のマッピングは、SQL Server 2019 CTP 2.3 で出荷された変更に合わせて更新されました。
+  * テーブルのマッピング コントロールに入力した新しいスキーマが失われるされる問題を修正しました。
+  * テーブルのマッピングでデータベース ノードのチェックになりませんでしたすべてのテーブルとビューがチェックされる問題を修正しました。
 
 
 ## <a name="release-notes-v0102"></a>リリース ノート (v0.10.2)
@@ -129,7 +144,7 @@ SQL Server 2019 のサポートが更新されました。 SQL Server にビッ�
 * サーバー ノードを右クリックし、クラスターに対して Spark ジョブを送信する*オブジェクト エクスプ ローラー*選択**Submit Spark Job**送信ダイアログ ボックスを表示します。
 * Notebook を開くには、次のセクションを参照してください。
 
-詳細については、[ビッグ データ クラスター](../big-data-cluster/big-data-cluster-overview.md)を参照してください。
+詳細については、次を参照してください。[ビッグ データ クラスター](../big-data-cluster/big-data-cluster-overview.md)します。
 
 
 ## <a name="azure-data-studio-notebooks"></a>Azure Data Studio Notebook

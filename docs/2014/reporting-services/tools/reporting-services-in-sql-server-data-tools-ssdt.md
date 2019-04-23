@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dab79e4efec442a24eb9bb5d944cb52e5c9b5640
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: af8fd934206361e0abb43a84a9a036772e90fc52
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658343"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966001"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]が強化されたビジネス インテリジェンス ソリューションに固有の環境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に付属しています。  
@@ -64,7 +64,7 @@ ms.locfileid: "58658343"
   
 -   **画像** レポートに画像レポート アイテムとして含めることができる画像の一覧です。  
   
- [レポート データ] ペインのデータ ソースおよびデータセットは、レポート定義内の要素を表します。 [レポート データ] ペインは、複数のレポート作成環境でサポートされている機能です。 レポート ビルダーでは、データ ソースとデータセットの管理に使用できる唯一のペインです。 レポート デザイナーでは、[レポート データ] ペインはソリューション エクスプローラーと連携して動作します。ソリューション エクスプローラーでは、共有データ ソースと共有データセットがファイルとして表示されます。 [レポート データ] ペインの共有データ ソースと共有データセットは、ソリューション エクスプローラーの対応する共有データ ソースと共有データセットを参照する必要があります。 そのため、[レポート データ] ペインの要素には、ソリューション エクスプローラーのデータ ファイルへの参照が含まれます。 プロジェクト プロパティによって、共有データ ソースと共有データセットがレポート サーバーに配置されるか、SharePoint サイトに配置されるかが決まります。 詳細については、[埋め込みから共有にデータ ソースを変換する&#40;レポート ビルダーおよび SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md)を参照してください。  
+ [レポート データ] ペインのデータ ソースおよびデータセットは、レポート定義内の要素を表します。 [レポート データ] ペインは、複数のレポート作成環境でサポートされている機能です。 レポート ビルダーでは、データ ソースとデータセットの管理に使用できる唯一のペインです。 レポート デザイナーでは、[レポート データ] ペインはソリューション エクスプローラーと連携して動作します。ソリューション エクスプローラーでは、共有データ ソースと共有データセットがファイルとして表示されます。 [レポート データ] ペインの共有データ ソースと共有データセットは、ソリューション エクスプローラーの対応する共有データ ソースと共有データセットを参照する必要があります。 そのため、[レポート データ] ペインの要素には、ソリューション エクスプローラーのデータ ファイルへの参照が含まれます。 プロジェクト プロパティによって、共有データ ソースと共有データセットがレポート サーバーに配置されるか、SharePoint サイトに配置されるかが決まります。 詳細については、次を参照してください。[埋め込みから共有にデータ ソースを変換する&#40;レポート ビルダーおよび SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md)します。  
   
 > [!NOTE]  
 >  レポート データ ペインを表示されないかどうか、**ビュー**  メニューのをクリックして**レポート データ**します。 [レポート データ] ペインが固定されていない場合は、固定することができます。 詳細については、「[レポート デザイナーのレポート データ ペインをドッキングする (SSRS)](dock-the-report-data-pane-in-report-designer-ssrs.md)」を参照してください。  

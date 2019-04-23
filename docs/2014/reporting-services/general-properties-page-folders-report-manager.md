@@ -8,20 +8,20 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2181e4ab949eef70c5ba9cb06c4fc8cfe82435dc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0eb6f4a62eb9b6228f8aeb3715ea35dec2eec026
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031593"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938588"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>[全般] プロパティ ページ、フォルダー (レポート マネージャー)
   フォルダーの [全般] プロパティ ページでは、作成するフォルダーのプロパティを表示または設定できます。 フォルダーを作成または変更したユーザーおよびフォルダーの変更日時に関する情報が、[全般] プロパティ ページの上部に表示されます。  
   
- フォルダーのプロパティには、セキュリティ設定も含まれます。 フォルダーのセキュリティの詳細については、[フォルダーのセキュリティで保護された](security/secure-folders.md)を参照してください。  
+ フォルダーのプロパティには、セキュリティ設定も含まれます。 フォルダーのセキュリティの詳細については、次を参照してください。[フォルダーのセキュリティで保護された](security/secure-folders.md)します。  
   
  [ホーム] フォルダー、[個人用レポート] フォルダー、[Users] フォルダーなどの特別な用途に使用されるフォルダーは、名前を変更したり、レポート サーバーの名前空間内で移動できません。 これらのフォルダーの [全般] プロパティ ページはありません。  
   

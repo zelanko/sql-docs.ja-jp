@@ -3,7 +3,7 @@ title: ダウンロードしてインストールする
 titleSuffix: Azure Data Studio
 description: ダウンロードと Windows 用の Azure データ Studio のインストール、macOS、または Linux
 ms.custom: seodec18
-ms.date: 03/22/2019
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,28 +11,28 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b559beb71a06885160774ebba6afc835bb7b7fb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f352e47f95d6c530eea062505860fdab10cb25af
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388750"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966025"
 ---
 # <a name="download-and-install-azure-data-studio"></a>ダウンロードし、Azure Data Studio のインストール
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で動作します。
 
 
-ダウンロードして、最新のリリースでは、インストール、*年 3 月リリース*:
+ダウンロードして、最新のリリースでは、インストール、*年 4 月リリース*:
 
 > [!NOTE]
-> SQL Operations Studio から更新しているし、設定、キーボード ショートカット、またはコード スニペットを保持する場合は、[ユーザー設定の移動](#move-user-settings)を参照してください。
+> SQL Operations Studio から更新しているし、設定、キーボード ショートカット、またはコード スニペットを保持する場合は、次を参照してください。[ユーザー設定の移動](#move-user-settings)します。
 
 |プラットフォーム|ダウンロード|リリース日| バージョン |
 |:---|:---|:---|:---|
-|Windows|[ユーザーのインストーラー (推奨)](https://go.microsoft.com/fwlink/?linkid=2083322)<br>[システムのインストーラー](https://go.microsoft.com/fwlink/?linkid=2083323)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2083324)|2019 年 3 月 22日 |1.5.2|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2083325)|2019 年 3 月 22日 |1.5.2|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2083327)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2083326)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2083424)|2019 年 3 月 22日 |1.5.2|
+|Windows|[ユーザーのインストーラー (推奨)](https://go.microsoft.com/fwlink/?linkid=2087316)<br>[システムのインストーラー](https://go.microsoft.com/fwlink/?linkid=2087317)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2087318)|2019 年 4 月 18日 |1.6.0|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2087170)|2019 年 4 月 18日 |1.6.0|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2087415)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2087171)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2087414)|2019 年 4 月 18日 |1.6.0|
 
 最新のリリースに関する詳細は、次の [リリース ノート](release-notes.md) を参照してください。
 
@@ -40,30 +40,30 @@ ms.locfileid: "58388750"
 
 このリリースの[!INCLUDE[name-sos](../includes/name-sos-short.md)]標準の Windows インストーラー エクスペリエンスと、.zip ファイルが含まれています。
 
-*ユーザー インストーラー*は必要ありません、管理者特権がのインストールとアップグレードの両方を簡略化されますのでお勧めします。 ユーザーのインストーラーは、ユーザーのローカル AppData (%%LOCALAPPDATA%%) フォルダーの下の場所は、管理者特権は必要ありません。 ユーザーのインストーラーより滑らかなバック グラウンド更新プログラムのエクスペリエンスも提供します。 詳細については、[Windows のユーザー セットアップ](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows)を参照してください。
+*ユーザー インストーラー*は必要ありません、管理者特権がのインストールとアップグレードの両方を簡略化されますのでお勧めします。 ユーザーのインストーラーは、ユーザーのローカル AppData (%%LOCALAPPDATA%%) フォルダーの下の場所は、管理者特権は必要ありません。 ユーザーのインストーラーより滑らかなバック グラウンド更新プログラムのエクスペリエンスも提供します。 詳細については、次を参照してください。 [Windows のユーザー セットアップ](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows)します。
 
 
 **ユーザーのインストーラー** (推奨)
 
-1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *ユーザー* Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=2083322)します。
+1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *ユーザー* Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=2087316)します。
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]のアプリを開始します。
 
 **システムのインストーラー**
 
-1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *システム*Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=2083323)します。
+1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *システム*Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=2087317)します。
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]のアプリを開始します。
 
 
 **zip ファイル**
 
-1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Windows .zip](https://go.microsoft.com/fwlink/?linkid=2083324) をダウンロードします。
+1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Windows .zip](https://go.microsoft.com/fwlink/?linkid=2087318) をダウンロードします。
 2. ダウンロードしたファイルを参照し、展開します。
 3. `\azuredatastudio-windows\azuredatastudio.exe`を実行します。
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>MacOS 用の Azure データ Studio を入手します。
 
-1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2083325) をダウンロードします。
+1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2087170) をダウンロードします。
 2. zip のコンテンツを展開するには、ダブルクリックします。
 3. させる[!INCLUDE[name-sos](../includes/name-sos-short.md)]で使用できる、*スタート パッド*、ドラッグ*Azure データ Studio.app*を*アプリケーション*フォルダー。
 
@@ -71,9 +71,9 @@ ms.locfileid: "58388750"
 ## <a name="get-azure-data-studio-for-linux"></a>Linux 用 Azure Data Studio を入手します。
 
 1. ダウンロード[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Linux を使用して、インストーラーまたは tar.gz アーカイブのいずれかで。
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2083327)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2083326)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2083424)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2087415)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2087171)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2087414)
 1. ファイルを展開し、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を起動するため、新しいターミナル ウィンドウを開いて次のコマンドを入力します。
 
    **Debian のインストール:**

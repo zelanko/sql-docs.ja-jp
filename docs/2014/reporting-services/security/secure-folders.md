@@ -13,15 +13,15 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 055c0b60ae13f1933d0de753a3096f9b48786aa2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 338bd9ce47d0cc8ba323677af438793083337bc4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034823"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956578"
 ---
 # <a name="secure-folders"></a>フォルダーをセキュリティで保護する
   フォルダーのセキュリティは、レポート サーバーのすべてのコンテンツをセキュリティで保護するための基盤となります。 セキュリティはフォルダー階層全体に継承されるので、フォルダー階層の大きさにかかわらず、特定のアクセス権を許可することができます。  

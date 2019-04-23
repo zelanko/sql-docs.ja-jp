@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b2e6fb7ad7c50395aa40b31a98e9bd6bd8743875
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c10649c3dbe873464bcc52ca5bc54e5b948d547a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042733"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951278"
 ---
 # <a name="server-properties-history-page"></a>[サーバーのプロパティ]\([履歴] ページ)
   このページを使用すると、保持されるレポート履歴のコピー数の既定値を設定できます。 既定値には、すべてのレポートのレポート履歴の制限を規定する初期設定が用意されています。 これらの設定は、レポートごとに変えることができます。  

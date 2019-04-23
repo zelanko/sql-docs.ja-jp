@@ -21,15 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapgroupproperties.general.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2b2290b738a7433fa1cc67bfd08079790f3029d3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d3bd3ef7205591d0353d7e8ee75e2d0ec49a221d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289550"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954988"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS)
   ウィザードを使用してマップまたはマップ レイヤーをレポートに追加した後、必要に応じてレポート内のマップの体裁を変更することができます。 改善のヒントを次に示します。  
@@ -130,7 +130,7 @@ ms.locfileid: "56289550"
   
  グループ式は、空間データとの間にリレーションシップを持つ分析データをレイヤー上の各マップ要素に対してどのように集計するかを指定します。 既定では、グループ式は、空間データと分析データの間のリレーションシップに対して指定された対応フィールドのセットです。 たとえば、国または地域の市区町村の場所と人口規模を表示するバブル マップの場合、同じ名前を持つ複数の市区町村が存在する可能性があるため、対応フィールドには、市区町村名を示す [City] と地域名を示す [Region] が含まれます。 対応するグループ式には、[City] と [Region] の 2 つのフィールドが含まれます。  
   
- 詳細については、次を参照してください。[マップ ヒント。SQL Server と空間データの集計にシェープファイルをインポートする方法](https://go.microsoft.com/fwlink/?LinkID=214991)します。  
+ 詳細については、「[Map Tips:How To Import Shapefiles Into SQL Server and Aggregate Spatial Data (マップ ヒント: シェープファイルの SQL Server へのインポートと空間データの集計方法)](https://go.microsoft.com/fwlink/?LinkID=214991)」を参照してください。  
   
  
   

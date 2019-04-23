@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 98e98c3908735d53777ed425b26c2f229c830f92
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 9c89de031408d222caa030900cececb97d8aa2db
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658046"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941648"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>スパークラインとデータ バー (レポート ビルダーおよび SSRS)
   スパークラインとデータ バーは、小さい領域で多くの情報を伝達する小さい単純なグラフで、多くの場合、インライン テキストが含まれています。 スパークラインとデータ バーはテーブルやマトリックスでよく使用されます。 その効果は、それらを個々に表示するのではなく、同時に上下に表示して簡単に比較できることにあります。 この機能によって、他の値と動作の異なる行である外れ値を把握しやすくなります。 これらは小さいですが、各スパークラインは長期にわたる複数のデータ ポイントを表す場合が多く、 データ バーは複数のデータ ポイントを表すこともできますが、通常は 1 つのデータ ポイントのみを示します。 各スパークラインは通常 1 つの系列を表します。 スパークラインをテーブル内の詳細グループに追加することはできません。 スパークラインは集計データを表示するため、グループに関連付けられているセル内に含める必要があります。 スパークラインとデータ バーには、カテゴリ、系列、および値という同じ基本グラフ要素がありますが、凡例、軸線、ラベル、目盛りはありません。  

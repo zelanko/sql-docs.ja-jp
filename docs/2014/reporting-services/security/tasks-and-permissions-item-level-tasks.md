@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a22c255712aa3e5e6c93cd04a37f5c66d25ac140
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 62009c07a7b643a3a9d0a202588f64bded967acb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018114"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934258"
 ---
 # <a name="item-level-tasks"></a>アイテムレベルのタスク
   アイテムレベルのタスクとは、レポート、フォルダー、レポート モデル、リソース、共有データ ソースに関連する権限を集めたものです [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポート サーバー サイト全体に適用されるシステムレベル タスクもあります。 詳細については、「 [システムレベルのタスク](tasks-and-permissions-system-level-tasks.md)」を参照してください。 一般的なタスクおよび権限の詳細については、「 [タスクと権限](tasks-and-permissions.md)」を参照してください。  

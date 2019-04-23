@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - IsSharePointIntegrated property
 ms.assetid: c548fed8-5e04-4faf-8b10-b37c86178056
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 96c8db6fa6d21c0354047061d708250861f0b0c4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 08f27657e4ba0e586c5734d2575b5017e8bfc1ac
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016683"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950858"
 ---
 # <a name="issharepointintegrated-property-wmi"></a>IsSharePointIntegrated プロパティ (WMI)
   レポート サーバーが SharePoint 統合モードであるかどうかを示します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、このプロパティは常に `False` を返します。これは、SharePoint モードでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスは SharePoint 共有サービスであり、WMI プロバイダーによって制御されないためです。  

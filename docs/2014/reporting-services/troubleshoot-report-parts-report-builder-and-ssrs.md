@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 58de4bd8c12bf4ac9551260ac3ba27b5888dce90
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3e677d9923315acc27c2b2d96d5d4eddf2ba8b51
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288520"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960438"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>レポート パーツのトラブルシューティング (レポート ビルダーおよび SSRS)
   レポート パーツを使用するために役立つヒントを以下に示します。  
@@ -27,7 +27,7 @@ ms.locfileid: "56288520"
  自分の権限と同僚の権限を確認するには、レポート サーバー管理者に問い合わせてください。  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>SharePoint サーバーにアップロードしたレポート パーツを検索しても、 表示されない  
- レポート ビルダーを使用してパブリッシュする代わりに、SharePoint ドキュメント ライブラリに手動でアップロードしたレポート パーツは、レポート パーツ ギャラリーに表示されない場合があります。 ギャラリー検索に使用されるレポート サーバーは、SharePoint ドキュメント ライブラリのコンテンツと同期することが必要な場合があります。 詳細については、[SharePoint サーバーの全体管理でレポート サーバー ファイル同期機能をアクティブ化](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com を参照してください。  
+ レポート ビルダーを使用してパブリッシュする代わりに、SharePoint ドキュメント ライブラリに手動でアップロードしたレポート パーツは、レポート パーツ ギャラリーに表示されない場合があります。 ギャラリー検索に使用されるレポート サーバーは、SharePoint ドキュメント ライブラリのコンテンツと同期することが必要な場合があります。 詳細については、次を参照してください。 [SharePoint サーバーの全体管理でレポート サーバー ファイル同期機能をアクティブ化](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com します。  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>他の人のレポートに画像が表示されない  
  画像ファイルのリンクとなるレポート パーツをパブリッシュした場合、このレポート パーツは単なるリンクになります。 他の人がレポートに画像レポート パーツを作成したときに画像が表示されない場合は、リンク先の画像に対する権限を持っていないことが考えられます。  

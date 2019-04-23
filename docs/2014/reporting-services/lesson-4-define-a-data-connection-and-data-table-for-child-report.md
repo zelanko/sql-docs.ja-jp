@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c04fdad5e53e9d50f6d910f16c8f86b0218f35be
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bb9678f56bc261edbe8450dbcc03840f8d18fc8b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012783"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933629"
 ---
-# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>レッスン 4:子レポートのデータ接続とデータ テーブルを定義します。
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>レッスン 4:子レポートのデータ接続とデータ テーブルを定義する
   親レポートを設計した後は、子レポートのデータ接続とデータ テーブルを作成します。 このチュートリアルでは、データ接続先として AdventureWorks2008 データベースを使用しますが、 AdventureWorks2012 データベースに接続することもできます。  
   
 ### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>DataSet を追加してデータ接続と DataTable を定義するには (子レポート用)  

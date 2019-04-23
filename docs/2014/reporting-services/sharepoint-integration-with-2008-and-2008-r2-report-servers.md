@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9f51c37-b071-45d0-baec-f82fa6db366f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dc06dc9c708354e863c37d6067a2355492d4cddd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d5a4394a9fbbf9ff7daa54ed7ba6a8b28921bd5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024293"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945308"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>2008 および 2008 R2 レポート サーバーとの SharePoint 統合
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] リリースの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、新しいアーキテクチャが導入され、SharePoint モードが SharePoint 共有サービスに基づくようになりました。 SharePoint サーバーの全体管理での新しい機能の管理が完了した、**サービスの管理**と**マネージャー サービス アプリケーション**ページ。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]と SharePoint 統合用の以前のアーキテクチャがサポートされても、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]以前のバージョンのレポート サーバーと SharePoint 2010 を統合できるため、SharePoint 2010 製品用アドイン。  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 83046be3fc713768d4dffd8dc2ef22f37496858e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286680"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944909"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>基本的なテーブル レポートの作成 (SSRS チュートリアル)
   このチュートリアルはに基づいて基本的なテーブル レポートを作成するために設計されています、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースのレポート デザイナーを使用します。 レポートの作成には、レポート ビルダーまたはレポート ウィザードを使用することもできます。 ここでは、レポート プロジェクトの作成、接続情報の設定、クエリの定義、表のデータ領域、グループ フィールド、および合計フィールドの追加、レポートのプレビュー表示を行います。  
@@ -33,7 +33,7 @@ ms.locfileid: "56286680"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] データベース エンジン  
   
--   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベース。  詳細については、[Adventure Works for SQL Server 2012 (SQL Server 2012 用 Adventure Works)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).を参照してください。 サポートの詳細については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サンプル データベースとサンプル コードの[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]を参照してください[Databases and Samples Overview](https://go.microsoft.com/fwlink/?LinkId=110391) CodePlex Web サイト。  
+-   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベース。  詳細については、次を参照してください。 [Adventure Works for SQL Server 2012 (SQL Server 2012 用 Adventure Works)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).します。 サポートの詳細については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サンプル データベースとサンプル コードの[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]を参照してください[Databases and Samples Overview](https://go.microsoft.com/fwlink/?LinkId=110391) CodePlex Web サイト。  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 。  
   

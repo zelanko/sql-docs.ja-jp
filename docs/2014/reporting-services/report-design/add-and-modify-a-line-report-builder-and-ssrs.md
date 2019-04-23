@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 14a1c72d63381a3f93bf312cbdadde9874968d16
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 90e9a4ae2d0d119f8992cf89cb388075c264c042
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291810"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933738"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>罫線の追加および変更 (レポート ビルダーおよび SSRS)
   グラフィック要素を使用してレポートのセクションを区切る場合は、罫線をレポートに追加できます。 色やスタイルなどの罫線のプロパティを編集して、罫線の外観をカスタマイズできます。 たとえば、企業の色をレポートに組み込むことができます。  

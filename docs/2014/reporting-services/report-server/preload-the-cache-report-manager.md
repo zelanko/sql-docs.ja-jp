@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7813470269697b0df65715c6f114b5df635888c1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035083"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949108"
 ---
 # <a name="preload-the-cache-report-manager"></a>キャッシュの事前読み込み (レポート マネージャー)
   共有データセットのキャッシュ更新計画を作成することによって、共有データセットのキャッシュを事前に読み込むことができます。  
@@ -114,14 +114,14 @@ ms.locfileid: "56035083"
   
 17. 次の 2 つのキャッシュ オプションのいずれかを選択し、以下のように有効期限を構成します。  
   
-    -   キャッシュされたコピーが、特定の期間が過ぎた後で有効期限が切れるようにするには、**レポートの一時コピーをキャッシュします。レポートのコピーの有効期限は数分後に切れます** をクリックします。 レポートの有効期限を分単位で入力します。  
+    -   特定の期間後に期限切れのキャッシュされたコピーを作成するをクリックします。**レポートの一時コピーをキャッシュします。[レポートのコピーの有効期限は数分後に切れます]** をクリックします。 レポートの有効期限を分単位で入力します。  
   
     -   キャッシュされたコピーが、スケジュールに基づいて有効期限が切れるようにするには、**[レポートの一時コピーをキャッシュします。次のスケジュールでレポートのコピーの有効期限は切れます。]** をクリックします。 **[構成]** をクリックするか、共有スケジュールを選択して、レポートの有効期限をスケジュールします。  
   
 18. **[適用]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
+ [データ ドリブン サブスクリプション](../subscriptions/data-driven-subscriptions.md)   
  [データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [パフォーマンス、スナップショット、キャッシュ (Reporting Services)](performance-snapshots-caching-reporting-services.md)   
  [レポート処理プロパティの設定](set-report-processing-properties.md)   

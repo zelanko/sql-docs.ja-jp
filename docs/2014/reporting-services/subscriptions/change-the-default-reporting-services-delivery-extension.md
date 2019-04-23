@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1cba433f840f2e2284ed41ca4b87f0fd2bb1410f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 630ebd1ed531a15935fd71871608b300425feb56
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013683"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950978"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Reporting Services の既定の配信拡張機能を変更する
   サブスクリプション定義ページの [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [配信者] **リストに表示される既定の配信拡張機能は** の構成設定で変更できます。 たとえば、ユーザーが新しいサブスクリプションを作成したときに電子メール配信ではなくファイル共有配信が既定で選択されるように構成を変更することができます。 また、ユーザー インターフェイスにおける配信拡張機能の表示順を変更することもできます。  
@@ -88,7 +88,7 @@ ms.locfileid: "56013683"
   
      **イベント ID:** 109  
   
-     **ソース:** Report Server Windows Service (インスタンス名)  
+     **ソース:** レポート サーバー Windows サービス (インスタンス名)  
   
      RSReportServer.config ファイルが変更されました。  
   

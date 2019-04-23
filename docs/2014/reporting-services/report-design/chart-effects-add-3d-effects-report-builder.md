@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6d536ea97d7240c7f79fdb2447b32ada8e190817
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: de398500fb9511ae083277e1c23087a743f3d8e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288062"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940498"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>グラフへの 3D 効果の追加 (レポート ビルダーおよび SSRS)
   3 次元 (3D) 効果を使用すると、グラフに奥行を与え、グラフの視覚的な効果を高めることができます。 たとえば、分割円グラフの特定のスライスを強調する場合は、そのスライスが最初に目に留まるように、グラフのパースペクティブを回転および変更することができます。 グラフに 3D 効果を適用すると、グラデーションの色および陰影のスタイルはすべて無効になります。  

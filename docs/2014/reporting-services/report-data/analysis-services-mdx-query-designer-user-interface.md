@@ -14,15 +14,15 @@ helpviewer_keywords:
 - MDX [Reporting Services], creating datasets
 - query designers [Reporting Services]
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 490b81e30833a8572ff7ce8bd51c72b5314c3bf7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 624b18425a631f54b3de0aef85b48b8c6ec36a3d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030619"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969419"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに対する多次元式 (MDX) クエリやデータ マイニング式 (DMX) クエリを作成するためのグラフィカル クエリ デザイナーが用意されています。 このトピックでは、MDX クエリ デザイナーについて説明します。 DMX クエリ デザイナーの詳細については、「 [DMX のための Analysis Services の接続の種類 &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)」をご覧ください。  

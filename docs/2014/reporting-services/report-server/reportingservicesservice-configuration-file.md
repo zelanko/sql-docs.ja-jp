@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 15bac4bb872e1fb3fc42fb62cf355f53358442b9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 25972bd46bbf28a56a8a44bd5f8a49132eb93acf
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014573"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959298"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 構成ファイル
   ReportingServicesService.exe.config ファイルには、トレースを構成する設定が含まれています。  
@@ -82,7 +82,7 @@ ms.locfileid: "56014573"
 |`Prefix`|あるログのインスタンスを別のログのインスタンスと区別するために生成する値を指定します。 既定では、トレース ログ ファイル名にタイムスタンプの値が追加されます。 この値は、" tid, time " に設定されます。 この設定は変更しないでください。|  
 |**TraceListeners**|トレース ログ コンテンツの出力先を指定します。 複数の出力先を指定する場合、各出力先をコンマで区切ってください。 有効な値は次のとおりです。<br /><br /> DebugWindow (既定値)<br /><br /> File (既定値)<br /><br /> StdOut|  
 |**TraceFileMode**|トレース ログに 24 時間データを含めるかどうかを指定します。 コンポーネントごとに、毎日 1 つ、一意のトレース ログが必要です。 この値は、"Unique (既定値)" に設定されます。 この値は変更しないでください。|  
-|**コンポーネント**|トレース ログを作成するコンポーネントを指定します。 既定値は `all` です。 この設定に対する他の有効な値には、内部コンポーネントの名前があります。 この値は変更しないでください。|  
+|**Components**|トレース ログを作成するコンポーネントを指定します。 既定値は `all` です。 この設定に対する他の有効な値には、内部コンポーネントの名前があります。 この値は変更しないでください。|  
 |**ランタイム**|以前のバージョンとの下位互換性をサポートする構成設定を指定します。 Microsoft.ReportingServices.Interfaces の以前のバージョンを対象とする要求を新しいバージョンにリダイレクトするには、Runtime 設定を使用します。<br /><br /> このセクションの構成設定は、すべて [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の製品ドキュメントで説明されています。 詳細については、MSDN Web サイトまたは [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ドキュメントの「ランタイム設定スキーマ」を参照してください。|  
   
 ## <a name="see-also"></a>参照  

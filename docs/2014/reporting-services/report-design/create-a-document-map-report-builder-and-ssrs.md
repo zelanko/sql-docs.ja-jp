@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e898f33545364b5ad44d4c0cbf281555638ab2e2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6b65d798c2de3cfe4b1fd14f50ea0dbb68bd624a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286226"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941448"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
   ドキュメント マップは、表示レポート内のレポート アイテムへのナビゲーション リンクのセットを提供します。 ドキュメント マップを含むレポートを表示すると、別のサイド ペインがレポートの横に表示されます。 ドキュメント マップ内のリンクをクリックすると、そのアイテムが表示されているレポート ページに移動できます。 レポート セクションとグループは、リンクの階層として配置されます。 ドキュメント マップ内のアイテムをクリックすると、レポートが更新され、ドキュメント マップのアイテムに対応したレポートの領域が表示されます。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ae3948d019467590b885c706e6b2c8d1c186da2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: efa4c0758ed85008ccb04b30a8dcd8e24ed54208
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031543"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948898"
 ---
 # <a name="subscriptions-page-report-manager"></a>[サブスクリプション] ページ (レポート マネージャー)
   [サブスクリプション] ページは、現在のレポートまたは共有データ ソースのサブスクリプションをすべて表示するために使用します。 [すべてのサブスクリプションを管理] での指定により十分な権限を持っている場合、すべてのユーザーのサブスクリプションを表示できます。 それ以外の場合、このページには自分のサブスクリプションのみが表示されます。  
@@ -26,7 +26,7 @@ ms.locfileid: "56031543"
   
  一部のオプションは、既存のサブスクリプションを操作しているときにのみ表示されます。 サブスクリプションが定義されていない場合に、レポートからこのページを表示すると、 **[新しいサブスクリプション]** および **[新しいデータ ドリブン サブスクリプション]** 以外のオプションはこのページに表示されません。  
   
- 新しいサブスクリプションを作成するには、保存されている資格情報がレポートのデータ ソースで使用されていることを確認する必要があります。 資格情報を保存するには [データ ソース] プロパティ ページを使用します。 詳細については、[データ ソース プロパティ ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)を参照してください。  
+ 新しいサブスクリプションを作成するには、保存されている資格情報がレポートのデータ ソースで使用されていることを確認する必要があります。 資格情報を保存するには [データ ソース] プロパティ ページを使用します。 詳細については、次を参照してください。[データ ソース プロパティ ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)します。  
   
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  

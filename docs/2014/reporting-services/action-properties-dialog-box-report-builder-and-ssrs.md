@@ -31,15 +31,15 @@ f1_keywords:
 - "10244"
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 63c9b4e601faad155d6f843b6ccef2f1cac7698a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 125b40193edca5dc60fa86fe5818f7722f5af91c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017984"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956828"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>[アクション プロパティ] ダイアログ ボックス (レポート ビルダーおよび SSRS)
   **[アクション]** ダイアログ ボックスでは、グラフ、ゲージ、およびリンクをサポートするマップ要素に対してハイパーリンク オプションを有効にできます。 ユーザーがレポート上でクリックして、URL、同じレポート サーバーまたはレポート サーバーと統合されている SharePoint サイト上の他のレポート、または同じレポート内の他の場所にリンクできるようにアクションを定義します。  
@@ -82,7 +82,7 @@ ms.locfileid: "56017984"
  詳細レポートで定義されているパラメーターの名前のテキストを入力します。  
   
  **[値]**  
- 詳細レポート内の名前付きパラメーターに渡す値を入力または選択します。 式を編集するには、 **[式]** (*[fx]*) ボタンをクリックします。  
+ 詳細レポート内の名前付きパラメーターに渡す値を入力または選択します。 式を編集するには、 **式** (*[fx]*) ボタンをクリックします。  
   
  **省略します。**  
  パラメーターを実行しないようにする場合にオンにします。 既定では、このチェック ボックスはオフになっており、アクティブではありません。 このチェック ボックスをオンにするには、 **式** (*[fx]*) ボタンをクリックし、「 **True** 」と入力するか式を作成します。 このチェック ボックスは、 **[式]** ダイアログ ボックスで **[OK]** をクリックするとオンになります。  

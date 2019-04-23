@@ -14,15 +14,15 @@ helpviewer_keywords:
 - adding assembly references
 - assemblies [Reporting Services], references
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7dcbbefde640b6da854a47f0a1803298ccd676ac
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 71d2ef8ff61a8fba36ab4741cffc3c7b1ad9b551
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294020"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948618"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>レポートにアセンブリへの参照を追加する (SSRS)
   <xref:System.Math> または <xref:System.Convert> にない [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスへの参照を含むカスタム コードを埋め込む場合は、レポート プロセッサで名前を解決できるように、レポートへのアセンブリ参照を指定する必要があります。 詳細については、「[レポートにコードを追加する (SSRS)](add-code-to-a-report-ssrs.md)」を参照してください。  
@@ -38,7 +38,7 @@ ms.locfileid: "56294020"
 4.  **[クラスの追加または削除]** で **[追加]** をクリックしてから、クラスの名前を入力し、レポート内で使用するインスタンス名を指定します。  
   
     > [!NOTE]  
-    >  インスタンスベースのメンバーにのみ、クラスおよびインスタンスの名前を指定してください。 **[クラス]** の一覧に静的メンバーを指定しないでください。 詳細については、「 [レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)を表しています。  
+    >  インスタンスベースのメンバーにのみ、クラスおよびインスタンスの名前を指定してください。 **[クラス]** の一覧に静的メンバーを指定しないでください。 詳しくは、「[レポート デザイナーでカスタム コードやアセンブリを式から参照する &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)」をご覧ください。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

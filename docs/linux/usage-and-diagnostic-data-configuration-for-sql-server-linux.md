@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: c94023e89dbdfb784f2b1bc8db8c9842c4455fb1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243606"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944232"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Linux 上の使用量と SQL Server 用の診断データ コレクションを構成します。
 

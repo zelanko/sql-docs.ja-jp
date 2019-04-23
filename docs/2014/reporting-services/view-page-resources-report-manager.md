@@ -8,20 +8,20 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5360fefa-1362-4102-bfd1-81d3d313c2b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0a92fb78664e472ef65a5c9af9fca87e5b50fa1e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 64040ce6a938f2456d3d655aad6dfbcd4abf3e29
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027913"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948088"
 ---
 # <a name="view-page-resources-report-manager"></a>[表示] ページ、リソース (レポート マネージャー)
   リソースを表示するには、リソースの [表示] ページを使用します。 リソースはレポート サーバー上で格納および管理されるアイテムですが、レポート サーバー上で処理されるものではありません (レポート サーバーはレポートおよびモデルを処理します)。 リソースは、サーバーによって処理されない、任意のドキュメント、画像、その他のファイルを格納するために使用できます。 ほとんどの画像ファイル (JPG、GIF、PNG ファイルなど) は、レポート マネージャーの [表示] ページ内に表示できます。 その他のリソースは、別のアプリケーション ウィンドウで開かれます。  
   
- [表示] ページでは、リソースを表示する以外にリソースのプロパティおよびセキュリティを設定できます。 詳細については、[[全般] プロパティ ページ、リソース&#40;レポート マネージャー&#41; ](../../2014/reporting-services/general-properties-page-resources-report-manager.md)と[セキュリティ プロパティ ページ、項目&#40;レポート マネージャー&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)を参照してください。  
+ [表示] ページでは、リソースを表示する以外にリソースのプロパティおよびセキュリティを設定できます。 詳細については、次を参照してください。 [[全般] プロパティ ページ、リソース&#40;レポート マネージャー&#41; ](../../2014/reporting-services/general-properties-page-resources-report-manager.md)と[セキュリティ プロパティ ページ、項目&#40;レポート マネージャー&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)します。  
   
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   

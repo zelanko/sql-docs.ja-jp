@@ -15,15 +15,15 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b43ad109b3b64927f2e4b03ef26fc0bc648a1ec7
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 9ef488e088a9101e46b3c203ef6f3ca519dc3aec
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240650"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946458"
 ---
 # <a name="report-and-snapshot-size-limits"></a>レポートとスナップショットのサイズ制限
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置を管理する管理者は、このトピックの情報を参照することにより、レポート サーバーへのパブリッシュ時、レンダリング時 (実行時)、ファイル システムへの保存時のレポート サイズ制限を理解できます。 このトピックでは、レポート サーバー データベースのサイズを測定する方法の具体的な指針とサーバーのパフォーマンスのスナップショット サイズの効果についても説明します。  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - style sheets [Reporting Services]
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 45b7973dd7711f09b6bf187f7c2798e44e91c375
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d9c4a57413db37c8f93b1a311542398417bfeff0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017954"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969528"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>HTML ビューアーとレポート マネージャーのスタイル シートのカスタマイズに関する記事 (ページ、サイトなどの場合もあります)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 既定のカスケード スタイル シート (.css) ファイルがスタイルを定義する提供、**レポート**HTML ビューアーおよびレポート マネージャーのツールバー。 Web 開発者、またはカスケード スタイル シート作成に関する専門知識を持つユーザーであれば、各自の責任で既定のスタイルを変更し、色、フォント、およびツール バーやレポート マネージャーのレイアウトを変えることができます。 このリリースでは、既定のスタイル シートについても、そのスタイル シートの変更手順についても説明していません。  
@@ -39,7 +39,7 @@ ms.locfileid: "56017954"
 |ReportingServices.css|レポート マネージャーのスタイルを定義します。|  
   
 > [!NOTE]  
->  次のスタイル シートは、レポート マネージャーのオンライン ドキュメントが使用され、変更しないでください。Sql.css および Mailto.css します。 その他のスタイル シートは、SharePoint Web パーツで開くレポートおよびレポート マネージャーのスタイルを定義します。 このようなスタイル シートには、Rswebparts.css、Sp_full.css、Sp_small.css などがあります。 SharePoint スタイル シートは変更しないようにしてください。 Web パーツの使用方法の詳細については、[ビューと探索ネイティブ モードのレポートを使用して SharePoint Web パーツ&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)を参照してください。  
+>  次のスタイル シートは、レポート マネージャーのオンライン ドキュメントが使用され、変更しないでください。Sql.css および Mailto.css します。 その他のスタイル シートは、SharePoint Web パーツで開くレポートおよびレポート マネージャーのスタイルを定義します。 このようなスタイル シートには、Rswebparts.css、Sp_full.css、Sp_small.css などがあります。 SharePoint スタイル シートは変更しないようにしてください。 Web パーツの使用方法の詳細については、次を参照してください。[ビューと探索ネイティブ モードのレポートを使用して SharePoint Web パーツ&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)します。  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>カスタム スタイル シートを使用するための Reporting Services の構成  
  スタイル シートは、有効なカスケード スタイル シート (.css) ファイルであり、Styles フォルダーに格納されていることが必要です。 既定では、Styles フォルダーにある\<*ドライブ*>: SQL server \mssql \Program Files\Microsoft *。n*\Reporting Services\ReportServer\Styles します。  
@@ -64,7 +64,7 @@ ms.locfileid: "56017954"
 ```  
   
 ### <a name="specifying-a-style-sheet-on-a-report-url"></a>レポートの URL でのスタイル シートの指定  
- `rc:StyleSheet` URL アクセス パラメーターを使用して、レポートの URL でカスタム スタイル シートを指定できます。 URL アクセス パラメーターを指定する方法の詳細については、[URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)を参照してください。  
+ `rc:StyleSheet` URL アクセス パラメーターを使用して、レポートの URL でカスタム スタイル シートを指定できます。 URL アクセス パラメーターを指定する方法の詳細については、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。  
   
  次の例は、カスタム スタイルを追加する方法を示しています。  
   

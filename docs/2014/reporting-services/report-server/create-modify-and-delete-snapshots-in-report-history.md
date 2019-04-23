@@ -11,15 +11,15 @@ helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c607291cd2675e454861aa4c79da608d8bcaba1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8232f701a8702965b35277ffab4f92459f32c063
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010964"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947888"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>レポート履歴のスナップショットの作成、変更および削除
   レポート履歴は、一連のレポート スナップショットです。 スナップショットの追加と削除、またはレポート履歴の記憶域に影響するプロパティの変更を行うことで、レポート履歴を管理できます。 レポート履歴は手動で、またはスケジュールに従って作成できます。  

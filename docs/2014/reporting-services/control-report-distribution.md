@@ -16,21 +16,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], security
 - mail [Reporting Services]
 ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e3911bfcd923b26251c81809c9671981e0ff84e9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a72f9d943a883a70c7dcf0476b92c6cb5b678f21
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018044"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946448"
 ---
 # <a name="control-report-distribution"></a>レポートの配信を制御する
   電子メール配信およびファイル共有配信に関連するセキュリティ上のリスクを減らすように、レポート サーバーを構成できます。  
   
 ## <a name="securing-reports"></a>レポートの保護  
- レポートの配信を制御する際の最初の手順は、承認されていないアクセスからレポートをセキュリティで保護することです。 レポートでは、サブスクリプションで使用するために、配信ごとに変化しない格納済み資格情報セットを使用する必要があります。 レポート サーバー上のレポートにアクセスできるユーザーなら、だれでもレポートを実行でき、場合によってはレポートを配信することもできます。 このようなことが発生しないように、この操作を必要とするユーザーのみにレポート アクセスを制限する必要があります。 詳細については、[レポートのセキュリティ保護とリソース](security/secure-reports-and-resources.md)と[フォルダーのセキュリティで保護された](security/secure-folders.md)を参照してください。  
+ レポートの配信を制御する際の最初の手順は、承認されていないアクセスからレポートをセキュリティで保護することです。 レポートでは、サブスクリプションで使用するために、配信ごとに変化しない格納済み資格情報セットを使用する必要があります。 レポート サーバー上のレポートにアクセスできるユーザーなら、だれでもレポートを実行でき、場合によってはレポートを配信することもできます。 このようなことが発生しないように、この操作を必要とするユーザーのみにレポート アクセスを制限する必要があります。 詳細については、次を参照してください。[レポートのセキュリティ保護とリソース](security/secure-reports-and-resources.md)と[フォルダーのセキュリティで保護された](security/secure-folders.md)します。  
   
  データベース セキュリティを使用してアクセスを承認する、高い機密情報を含むレポートは、サブスクリプションとして配信することはできません。  
   

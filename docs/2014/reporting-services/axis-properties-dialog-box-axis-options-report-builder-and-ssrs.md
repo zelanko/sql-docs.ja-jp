@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb65c421d1e79a6bdd625ad627aca841dbc410bc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 553d1d4e2be366cc56ed37caad6a9db20850e856
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286501"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966538"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>[軸のオプション] ([軸のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   選択**軸のオプション**で、**水平**または **[縦軸のプロパティ**] ダイアログ ボックスで、グラフの指定された軸の外観を定義します。 以前のバージョンの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、既定でグラフの X 軸上にすべてのラベルが表示されていました。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 では、グラフ内の画像を見やすくし、ラベルの重なりを回避するために、ラベルは省略されます。 詳細については、「[グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  

@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.deleterows.f1
 - sql12.rtp.rptdesigner.deletecolumns.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdc452717be52dc857465e202771678f782d61f7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f55324123716289fec88b9d9bc531dccb22848d3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296440"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937408"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)
   レポートの Tablix データ領域の行および列にデータを表示する方法を制御するには、詳細データ、グループ データ、ラベル、および合計に対して行と列を指定する方法を理解する必要があります。 多くの場合、テーブル、マトリックス、または一覧の既定の構造を使用してデータを表示できます。 詳細については、次を参照してください[テーブル&#40;レポート ビルダーおよび SSRS&#41;](tables-report-builder-and-ssrs.md)、[マトリックス&#40;レポート ビルダーおよび SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)、または[一覧&#40;レポート ビルダーと。SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)します。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a2a6d21b49d22a5017eecb0b559be19a2844a8a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 17f63e9c4f6d1e560e6945a1ae6f01100d59703a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292260"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956595"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 表示拡張機能は、レポートから利用できるデータ フィードおよびレポート内のデータ領域からのデータ フィードを一覧表示する Atom サービス ドキュメントを生成します。 この拡張機能を使用すると、レポートから生成されたデータ フィードを使用できるアプリケーションで読み取りおよび交換が可能な、Atom に準拠したデータ フィードを生成できます。 たとえば、Atom 表示拡張機能を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアントで使用できるデータ フィードを生成できます。  
@@ -80,13 +80,13 @@ ms.locfileid: "56292260"
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>データ セクション  
- データ フィードのデータ セクションには、Atom 表示拡張機能によって生成されたフラット化された行セット内の行ごとに 1 つの <`entry`> 要素が含まれています。  
+ データ フィードのデータ セクションには、1 つが含まれます <`entry`> Atom 表示拡張機能によって生成されたフラットな行セットの各行の要素。  
   
  次の図に、グループと合計を使用するレポートを示します。  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 次の XML は、データ フィード内のレポートの <`entry`> 要素を示しています。 <`entry`> 要素には、グループの売上および注文の合計と、すべてのグループの売上および注文の合計が含まれています。 <`entry`> 要素には、レポート上のすべての値が含まれます。  
+ 次の XML に示す、<`entry`> データ フィード内のレポートからの要素。 なお、<`entry`> 要素には、売上および注文のすべてのグループの合計と売上および注文の合計が含まれています。 <`entry`> 要素には、レポート上のすべての値が含まれています。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - files-only installation [Reporting Services]
 - installation options [Reporting Services]
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 451141a1fdc5560faec3e82fedd10b772e79872f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c76e3e4f1f2e427d8f56c0b832475a22aee6648d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029623"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941929"
 ---
 # <a name="files-only-installation-reporting-services"></a>ファイルのみのインストール (Reporting Services)
   *ファイルのみのインストール* とは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストール形態の 1 つです。このインストールでは、セットアップで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] プログラム ファイルのフォルダー構造の作成、ディスクへのファイルのコピー、ローカル コンピューターへのレポート サーバー サービスの登録、サービス アカウントの構成、サービス アカウントへのファイル権限の付与、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI プロバイダーの登録を行います。  

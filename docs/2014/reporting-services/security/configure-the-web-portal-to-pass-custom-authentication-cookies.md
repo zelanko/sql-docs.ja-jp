@@ -11,21 +11,21 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - extensions [Reporting Services], custom security
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6787ec73d91b32e0bdb90f8a5f25499f0ac35620
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bff2f31eb321a24c184580a6b1565f4dbc76bb1d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034493"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955028"
 ---
 # <a name="configure-report-manager-to-pass-custom-authentication-cookies"></a>カスタム認証クッキーを送信するようにレポート マネージャーを構成する
   カスタム認証拡張機能を使用している場合、カスタム認証クッキーを送信するようにレポート マネージャーを構成してください。 構成しない場合、レポート マネージャーはレポート サーバー固有の HTTP 要求を使用してクッキーを送信するだけです。 追加のクッキーを送信するには、RSReportServer.Config ファイルを変更する必要があります。  
   
 ## <a name="modifying-the-rsreportserverconfig-file"></a>RSReportServer.Config ファイルの変更  
- レポート マネージャーの構成設定 (RSReportServer.config ファイル) に <`PassThroughCookies`> 要素を追加すると、レポート マネージャーからレポート サーバーに追加のクッキーが送信されます。 追加のクッキーの送信は、レポート サーバーの認証クッキーだけでなく、サード パーティの認証システムのクッキーも必要なシングル サインオン認証ソリューションで便利です。  
+ レポート マネージャーを追加して、レポート サーバーに追加のクッキーを送信できるように、<`PassThroughCookies`> 要素を RSReportServer.config ファイルでレポート マネージャーの構成設定。 追加のクッキーの送信は、レポート サーバーの認証クッキーだけでなく、サード パーティの認証システムのクッキーも必要なシングル サインオン認証ソリューションで便利です。  
   
  レポート マネージャーの使用時に HTTP 要求を使用した追加のクッキーの送信を有効にするには、RSReportServer.config ファイルに次の要素を設定してください。  
   

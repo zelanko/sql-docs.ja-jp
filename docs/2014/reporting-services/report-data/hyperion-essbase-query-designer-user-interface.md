@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 - Hyperion Essbase [Reporting Services], query designer
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 36577210d6279b859cd88423b436567951aef1b3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 53e262980046e01ccf7e366cdf8135c815fea1fe
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035363"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955138"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Hyperion Essbase クエリ デザイナーのユーザー インターフェイス
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、 [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] データ ソースに対する多次元式 (MDX) クエリを作成するためのグラフィカル クエリ デザイナーが用意されています。 MDX グラフィカル クエリ デザイナーには、2 つのモードがあります。デザイン モードとクエリ モード。 いずれのモードにもメタデータ ペインが表示されます。ここから、データ ソースで定義されているキューブのメンバーをドラッグすることによって、MDX クエリを作成できます。レポートの処理時には、このクエリに基づいてデータが取得されます。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ab37310aee6e00959645789773d7494b064799ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 41e26379dc21e4dd8bfd416009bf9ba333dbb448
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030633"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937284"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>外部データ ソースのデータを追加する (SSRS)
   外部データ ソースからデータを取得するには、データ接続を使用します。 データ接続情報は、通常は権限の付与と使用する資格情報の指定を担う外部データ ソースの所有者によって提供されます。 データ接続情報は、レポート データ ソースとして保存されます。 データ ソースの種類により、データの取得に使用するデータ拡張機能が決まります。  

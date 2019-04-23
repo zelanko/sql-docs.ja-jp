@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b56f8df139116691c2f4751bd5566b398b3a6e08
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 01fcf6ef333a9b7c8a5c99630e6e9573f70d8059
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296950"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955248"
 ---
 # <a name="saving-reports-report-builder"></a>レポートの保存 (レポート ビルダー)
   レポート ビルダーでは、自分が書き込み権限を持っているレポート サーバー、SharePoint ライブラリ、またはファイル共有、あるいは自分のコンピューターにレポートを保存できます。 レポートは、レポートを開いた場所に保存することも、別の場所に保存することもできます。また、新しい名前を付けてそれらの場所に保存することもできます。 既定では、レポートは、レポートを開いた場所に再保存されます。 レポートを保存する場合、実際に保存されるのは、レポート レイアウトを記述したレポート定義です。 データは保存されません。 レポートを実行するたびにレポート データは更新され、ほとんどの場合、前回の実行時とは異なります。  
@@ -53,7 +53,7 @@ ms.locfileid: "56296950"
 
   
 ##  <a name="ExportingAndSavingReports"></a> レポートのエクスポートと保存  
- アーカイブするレポートの数が少ない場合、レポートをエクスポートしてファイルとして保存することを検討してください。 レポートをアプリケーション (PDF や Excel など) にエクスポートしたら、そのレポートをファイルとして保存し、ネットワーク上の保護された共有ディレクトリに配置できます。 また、形式にかかわらず、レポート サーバー データベースにレポートのすべてのコピーを保存する場合、リソース アイテムとして保存した PDF または Excel ファイルをアップロードできます。 レポートのエクスポートの詳細については、[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41; ](export-reports-report-builder-and-ssrs.md)と[ファイルまたはレポートをアップロード&#40;レポート マネージャー&#41;](../reports/upload-a-file-or-report-report-manager.md)を参照してください。  
+ アーカイブするレポートの数が少ない場合、レポートをエクスポートしてファイルとして保存することを検討してください。 レポートをアプリケーション (PDF や Excel など) にエクスポートしたら、そのレポートをファイルとして保存し、ネットワーク上の保護された共有ディレクトリに配置できます。 また、形式にかかわらず、レポート サーバー データベースにレポートのすべてのコピーを保存する場合、リソース アイテムとして保存した PDF または Excel ファイルをアップロードできます。 レポートのエクスポートの詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41; ](export-reports-report-builder-and-ssrs.md)と[ファイルまたはレポートをアップロード&#40;レポート マネージャー&#41;](../reports/upload-a-file-or-report-report-manager.md)します。  
   
 
   

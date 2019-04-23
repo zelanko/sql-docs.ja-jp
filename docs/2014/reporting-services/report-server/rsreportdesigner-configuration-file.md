@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8c979e7ee3d3dcb2f4dba96e73b1d38c526bcb7a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b29e5020cbe552fac66f7bb4e621ce0eda6779a5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012893"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946078"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 構成ファイル
   RSReportDesigner.config ファイルには、レポート デザイナーに利用できる表示拡張機能およびデータ処理拡張機能に関する設定が保存されています。 データ処理拡張機能の情報は、`Data` 要素に保存されます。 表示拡張機能の情報は、`Render` 要素に保存されます。 `Designer` 要素には、レポート デザイナーで使用されるクエリ ビルダーが列挙されます。  
   
- レポート デザイナーでは、レポートをプレビューするために埋め込みのレポート サーバー機能を使用します。 サーバー関連の設定を指定すると、サーバー側のプレビュー処理をローカルでサポートできます。 レポート サーバーの構成設定の詳細については、[RSReportServer Configuration File](rsreportserver-config-configuration-file.md)を参照してください。  
+ レポート デザイナーでは、レポートをプレビューするために埋め込みのレポート サーバー機能を使用します。 サーバー関連の設定を指定すると、サーバー側のプレビュー処理をローカルでサポートできます。 レポート サーバーの構成設定の詳細については、次を参照してください。 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)します。  
   
 ## <a name="file-location"></a>ファイルの場所  
  このファイルは、\Program Files\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies にあります。  

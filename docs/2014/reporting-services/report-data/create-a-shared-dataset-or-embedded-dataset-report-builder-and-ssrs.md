@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 95772746d8f13993962f67bff863865dec519f70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dc91e50c96018e14066f6e6cc0ad4625c128b639
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011163"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953088"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)
   データセットを作成する際は、1 つのレポートに使用する埋め込みデータセットか、レポート サーバーに保存して複数のレポートに使用する共有データセットを作成することができます。 データセットを作成するには、埋め込みデータ ソースまたは共有データ ソースが存在する必要があります。  

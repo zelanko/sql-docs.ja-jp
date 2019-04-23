@@ -19,15 +19,15 @@ helpviewer_keywords:
 - external data sources [Reporting Services]
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ffebeccb4b024434edf54990229ea9f001f39704
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ec3ed5167ee020e892a8fc578ec0088419e24ae8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027653"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956628"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>カスタム データ処理拡張機能の接続を指定する
   サード パーティ製のカスタム データ処理拡張機能をレポート サーバー上で作成または使用して、サポートされているデータ ソースのデータ処理能力を向上したり、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定のインストールで使用できないその他の種類のデータ ソースをサポートしたりできます。 接続の処理方法は実装によって異なります。 データ処理拡張機能に使用できる実装は次のとおりです。  

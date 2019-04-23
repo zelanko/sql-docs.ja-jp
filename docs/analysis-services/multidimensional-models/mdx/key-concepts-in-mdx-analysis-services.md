@@ -1,6 +1,6 @@
 ---
 title: MDX (Analysis Services) での基本概念 |Microsoft Docs
-ms.date: 05/02/2018
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb527f78b886154372092c128e2c2a33e1eac75c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b00478a739796d27b44899aa72099583b1d9a113
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527822"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962168"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX の主な概念 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "52527822"
   
  ![呼び出されたすべてのメンバーを含むピボット テーブル](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "が呼び出されたすべてのメンバーを含むピボット テーブル")  
   
- 階層を展開すると、最終的に、最下位レベルに到達します。 これは **リーフ メンバー**と呼ばれます。 リーフ メンバーは、子が存在しない階層のメンバーです。 この例では、Australia がリーフ メンバーです。  
+ 階層を展開すると、最終的に、最下位レベルに到達します。 これは **リーフ メンバー**と呼ばれます。 リーフ メンバーは、子が存在しない階層のメンバーです。 この例では、リーフ メンバーが南西です。  
   
  ![リーフ メンバー呼び出されるれた PivotTable](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "リーフ メンバー呼び出されるれた PivotTable")  
   
- 上位にあるものは **親メンバー**と呼ばれます。 Pacific は Australia の親です。  
+ 上位にあるものは **親メンバー**と呼ばれます。 米国南西の親であります。  
   
  **属性階層の構成要素**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52527822"
 ## <a name="key-attributes"></a>キー属性  
  モデルは、キーとインデックスを使って関連付けを示す関連オブジェクトのコレクションです。 Analysis Services モデルについても違いはありません。 ディメンション (リレーショナル モデルのテーブルに相当することを思い出してください) ごとに、キー属性が存在します。 **キー属性** は、ファクト テーブル (メジャー グループ) に対する外部キー リレーションシップで使用されます。 ディメンション内のすべての非キー属性がキー属性に (直接的または間接的に) リンクされます。  
   
- 必ずではありませんが、キー属性の多くは **粒度属性**でもあります。 粒度は、データ内の詳細または精度のレベルを表します。 この場合も、一般的な例が理解の助けになります。 日付の値を考えてみましょう。日次売上の場合は、日付の値を日に設定する必要があります。売上予算の場合は、四半期ごとで十分ですが、分析データがスポーツ イベントのレース結果で構成されている場合は、粒度をミリ秒にする必要があります。 データ値の精度のレベルが粒度です。  
+ 必ずではありませんが、キー属性の多くは **粒度属性**でもあります。 粒度は、データ内の詳細または精度のレベルを表します。 この場合も、一般的な例が理解の助けになります。 日付の値を考慮してください。毎日の売上の日に指定された値を日付する必要があります。クォータは、四半期に 1 回あります十分ですが、分析データがスポーツ イベントのレース結果で構成される場合、粒度も非常にミリ秒にする必要があります。 データ値の精度のレベルが粒度です。  
   
  通貨は、別の例: 財務アプリケーションは、地方の学校の資金調達は、最も近いドルに値を必要がありますのみに、多くの小数点以下桁数の金銭的価値を追跡可能性があります。 粒度の理解は、不要なデータの保存を避けるという意味でも重要です。 詳細のレベルが分析に影響しない場合は、タイムスタンプからミリ秒を切り捨てる、または、売上高から少額を切り捨てることによって、ストレージと処理時間を節約することができます。  
   

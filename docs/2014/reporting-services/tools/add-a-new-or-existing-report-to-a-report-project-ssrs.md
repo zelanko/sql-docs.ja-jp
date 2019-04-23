@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bc714c2ffb7f4483823e7e49e9825c070a0b9672
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b150c7e42cf5389783706138c055c4a7fdea9b05
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021413"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960604"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>新規または既存のレポートをレポート プロジェクトに追加する (SSRS)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、レポート ウィザードを使用するか、新しい空のレポートをプロジェクトに追加することによって、新しいレポートを追加できます。 既存のレポートを追加することもできます。 レポートを追加すると、そのレポートの名前が、プロジェクトの **[レポート]** フォルダーに表示されます。  
   
 > [!NOTE]  
->  既存のデータ ソースを使ったレポートをプレビューするには、レポート作成クライアントから、そのデータ ソースにアクセスするための権限が必要です。 詳細については、[埋め込みまたは共有データ ソースを作成&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)を参照してください。  
+>  既存のデータ ソースを使ったレポートをプレビューするには、レポート作成クライアントから、そのデータ ソースにアクセスするための権限が必要です。 詳細については、次を参照してください。[埋め込みまたは共有データ ソースを作成&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)します。  
   
  レポートを追加した後、データ ソースやデータセットを定義したり、レポート レイアウトをデザインしたりできます。 開始するには、「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../create-a-basic-table-report-ssrs-tutorial.md)」または「[テーブル &#40;レポート ビルダーおよび SSRS&#41;](../report-design/tables-report-builder-and-ssrs.md)」を参照してください。  
   

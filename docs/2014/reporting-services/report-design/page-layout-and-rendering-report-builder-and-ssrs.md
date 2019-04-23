@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f14a144bcdfbfd65d7ea3e99d9ac03d7b2ee0f1d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294430"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945438"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS)
   ページ レイアウトや改ページなど、表示レポートに思いどおりの体裁を実現するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レンダラーの動作をよく理解したうえでレポートを作成することが大切です。 また、レンダリングされたレポートが、普段自分や組織が使用している用紙サイズに収まるかどうかを確認することも必要です。  
@@ -58,7 +58,7 @@ ms.locfileid: "56294430"
   
 -   **ハード改ページ レンダラー** : ハード改ページ レンダラーでは、レポートのレイアウトと書式設定が維持されます。 生成されたファイルは、一貫した印刷結果を提供すること、または、レポートを印刷物のような形でオンライン配信する際の見やすさを優先して最適化されます。 使用可能なハード改ページ レンダラーがサポートされています。TIFF と PDF。  
   
- レポートをレポート ビルダーまたはレポート デザイナーでプレビューする場合、またはレポート マネージャーで実行する場合、そのレポートは常に、まず HTML で表示されます。 レポートを実行した後、そのレポートを別のファイル形式にエクスポートすることができます。 詳細については、[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)を参照してください。  
+ レポートをレポート ビルダーまたはレポート デザイナーでプレビューする場合、またはレポート マネージャーで実行する場合、そのレポートは常に、まず HTML で表示されます。 レポートを実行した後、そのレポートを別のファイル形式にエクスポートすることができます。 詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)します。  
   
   
   

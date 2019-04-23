@@ -3,7 +3,7 @@ title: リリース ノート
 titleSuffix: Azure Data Studio
 description: Azure Data Studio リリース ノート
 ms.custom: seodec18
-ms.date: 03/22/2019
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,30 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 5497a2d70c32763d765888235f694b89dd0bb340
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381590"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963788"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新のリリースをインストールをダウンロードしてください。](download.md)**
+
+## <a name="april-2019"></a>2019 年 4 月
+
+2019 年 4 月 18日&nbsp;  /  &nbsp;バージョン。1.6.0 
+
+&nbsp;
+
+| [変更] | 詳細 |
+| :----- | :------ |
+| 名前が変更**サーバー**タブ**接続** | |
+| [接続] での Azure の viewlet としての Azure リソース エクスプ ローラーの移動 | ユーザーの接続ビューでの Azure viewlet を通じて、Azure SQL インスタンスの表示し、下にある各サーバーまたはデータベース オブジェクトの表示を拡張できますようになりました。|
+| SQL のノートブック機能強化 | &bull; &nbsp; すべてのセルの出力をクリアするにはツールバーに追加したボタン <br/>&bull; &nbsp; すべてのセルを実行するにはツールバーに追加したボタン <br/>&bull; &nbsp; サーバー名の代わりに固定接続名 (場合に設定) で、ドロップダウン リストにアタッチ <br/>&bull; &nbsp; イメージの相対パスを使用する場合は表示されません markdown でイメージの修正 <br/>&bull; &nbsp; 改善された機能を追加して notebook グリッド内では、列のサイズを自動サイズ変更をダブルクリックし、マウス ホイールのサポートを強化 <br/>&bull; &nbsp; Notebook から python をインストールする場合、エラー処理と python の機能強化が回復性をインストールします。 <br/>&bull; &nbsp; Notebook セルを選択するときにすべてを選択 機能を強化 <br/>&bull; &nbsp; ノートブックを閉じると、オブジェクト エクスプ ローラーの接続に影響を与えるを防止するノートブック接続の機能強化 <br/>&bull; &nbsp; 強化された notebook が発生するノートブックが切断され、セルを実行する接続が必要である場合、ユーザーにメッセージを表示するには<br/>&bull; &nbsp; 広告がもう一度開始されると、広告のリハイド レートするノートブックが保存されていないサポートの強化 |
+| 解決済みバグと問題。 | 参照してください[バグと github の問題](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1)します。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019-hotfix"></a>3 月 2019 (修正プログラム)
 
@@ -160,7 +174,7 @@ ms.locfileid: "58381590"
 - 修正[発行 #2851](https://github.com/Microsoft/azuredatastudio/issues/2851):時系列のグラフが正しくレンダリングされません。
 - 修正[発行 #2996](https://github.com/Microsoft/azuredatastudio/issues/2996):セッションが突然変更による損失を一時テーブル
 
-詳細については、、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)を参照してください。
+詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)します。
 
 ## <a name="september-2018-ga-release"></a>9 月 2018 (一般公開リリース)
 
@@ -195,7 +209,7 @@ Azure Data Studio (SQL Operations Studio 以前) の一般的な可用性リリ�
 - 修正[発行 #2647](https://github.com/Microsoft/azuredatastudio/issues/143):グラフでは、大きな一歩を下位かかりました。
 - 修正[発行 #2648](https://github.com/Microsoft/azuredatastudio/issues/143):JSON ハイパーリンク列全体を返すことを選択します。
 
-詳細については、、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)を参照してください。
+詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)します。
 
 ## <a name="august-2018"></a>2018 の年 8 月
 
@@ -405,7 +419,7 @@ _0.32.8 には 0.32.7 で見つかったいくつかの回帰の修正プログ�
 
 詳細については、チェック アウト、 [Visual Studio Code 年 2 月のリリース ノート](https://code.visualstudio.com/updates/v1_21)、および[Visual Studio Code 年 1 月のリリース ノート](https://code.visualstudio.com/updates/v1_20)します。
 
-詳細については、、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)を参照してください。
+詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)します。
 
 ## <a name="march-2018"></a>2018 年 3 月
 

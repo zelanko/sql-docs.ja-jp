@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc871b7dab0c3adb5aff9d2db71e90004132bc62
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fe230d9e3ed5259da9decc87e044005184b7d989
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295790"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948338"
 ---
 # <a name="grouping-pane"></a>グループ化ペイン
   グループ化ペインには、行グループと、現在選択されている Tablix データ領域の列グループが表示されます。 グラフおよびゲージのデータ領域では、グループ化ペインは使用できません。 グループ化ペインは、行グループ ペインと列グループ ペインで構成されています。 グループ化ペインには、既定モードと詳細設定モードの 2 つのモードがあります。 既定モードでは、行グループおよび列グループの動的メンバーの階層ビューが表示されます。 詳細設定モードでは、行グループと列グループの動的メンバーと静的メンバーの両方が表示されます。 グループは、データ領域に表示されるレポート データセットの名前付きセットです。 グループは、静的および動的なメンバーを含む階層で構成されます。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
@@ -70,7 +70,7 @@ ms.locfileid: "56295790"
   
 -   `Hidden` 。 Boolean です。 行または列を初期設定で非表示にしておくかどうかを示します。  
   
--   **ToggleItem。** 文字列。 切り替えイメージを追加するテキスト ボックスの名前。 テキスト ボックスは、同じグループのスコープまたはコンテナー スコープに存在する必要があります。  
+-   **ToggleItem。** [String]。 切り替えイメージを追加するテキスト ボックスの名前。 テキスト ボックスは、同じグループのスコープまたはコンテナー スコープに存在する必要があります。  
   
  Tablix データ領域でのこれらの動作を制御する方法の詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。  
   

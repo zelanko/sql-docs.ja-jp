@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7511a4b6a441d00ca51eb29daed29cef616e6473
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1b35399504c840d81573366401ea8f4978f47f58
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297410"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938838"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>入れ子になったデータ領域 (レポート ビルダーおよび SSRS)
   グラフなどのデータ領域をマトリックスなどの別のデータ領域に挿入して入れ子化することができます。この方法は通常、データの要約を簡潔に表示する場合や、視覚的な表示およびテーブルやマトリックスの表示を行う場合に使用します。  
@@ -90,7 +90,7 @@ ms.locfileid: "56297410"
  [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](formatting-report-items-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへの KPI の追加&#40;レポート ビルダー&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [チュートリアル: レポートへの KPI の追加 &#40;レポート ビルダー&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

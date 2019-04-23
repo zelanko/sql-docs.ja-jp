@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:クイック チャート オフライン レポートの作成 (レポート ビルダー) |Microsoft Docs
+title: チュートリアル:オフラインでのクイック グラフ レポートの作成 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7c817f68fce5fcf561e7aac46f3d809d2213aad7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fd22b4419b8300fdaf8db6e98a3eab9683fd226e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291270"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956838"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル:クイック チャート オフライン レポートの作成 (レポート ビルダー)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル:オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)
   このチュートリアルでは、ウィザードを使用して円グラフを作成し、少し変更して実行可能な操作を確認します。 このチュートリアルは 2 つの異なる方法で実行できます。 両方の方法では、同じ結果を円グラフでは、次の図のようながあります。  
   
  ![「マイ円グラフの最初のグラフ」実行の表示](../media/rs-my1stpierunview.gif "実行ビューでの My First Pie Chart")  
   
 ## <a name="prerequisites"></a>前提条件  
- XML データを使用するか [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用するかにかかわらず、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] レポート ビルダーにアクセスできることが必要です。 スタンドアロン バージョン、またはレポート マネージャーや SharePoint サイトから利用できる ClickOnce バージョンを実行できます。 最初の手順のみをレポート ビルダーを開く方法は ClickOnce バージョンの異なる。 詳細については、[インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)を参照してください。  
+ XML データを使用するか [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用するかにかかわらず、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] レポート ビルダーにアクセスできることが必要です。 スタンドアロン バージョン、またはレポート マネージャーや SharePoint サイトから利用できる ClickOnce バージョンを実行できます。 最初の手順のみをレポート ビルダーを開く方法は ClickOnce バージョンの異なる。 詳細については、次を参照してください。[インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)します。  
   
 ##  <a name="TwoWays"></a> このチュートリアルを実行する 2 つの方法  
   
@@ -216,7 +216,7 @@ ms.locfileid: "56291270"
   
  最後に、レポートをレポート サーバーまたはレポート サーバーと統合されている SharePoint サイトに保存するには、URL と権限が必要です。 作成したレポートは自分のコンピューターから直接実行できますが、レポート サーバーまたは SharePoint サイトから実行するとレポートの機能が増えます。 自分のレポートまたはその他のレポートをパブリッシュ元のレポート サーバーまたは SharePoint サイトから実行する権限が必要です。 アクセス権を取得するには、システム管理者に問い合わせてください。  
   
- 開始する前に、いくつかの概念や用語について確認しておくと役立つ場合があります。 詳細については、[レポート作成の概念&#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)を参照してください。 また、レポートを初めて自分で作成する前に、計画の時間を取ってください。 時間を費やす価値があります。 詳細については、[レポートの計画&#40;レポート ビルダー&#41;](../report-design/planning-a-report-report-builder.md)を参照してください。  
+ 開始する前に、いくつかの概念や用語について確認しておくと役立つ場合があります。 詳細については、次を参照してください。[レポート作成の概念&#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)します。 また、レポートを初めて自分で作成する前に、計画の時間を取ってください。 時間を費やす価値があります。 詳細については、次を参照してください。[レポートの計画&#40;レポート ビルダー&#41;](../report-design/planning-a-report-report-builder.md)します。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#TwoWays)  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - shared data sources
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e507d9fa5b57fe63c1540f4490a7b04d878199f0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: bf9b9bfd500c5ddb9e10fb1e2320bf0287114808
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288940"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934498"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)
   クエリが実行されるとき、またはレポートが処理されるとき、レポートはデータを取得するためにデータ接続を使用します。 ユーザーは、そのデータ接続を、リレーショナル データベース、多次元データベース、Web サービスなどのデータ ソースに接続する組み込みのデータ接続の種類の一覧から選択します。 データ接続の説明では、次の用語を使用します。  
@@ -66,7 +66,7 @@ ms.locfileid: "56288940"
 |コンポーネントに必要||![使用可能](media/greencheck.gif "使用可能")|  
   
 ## <a name="data-source-credentials"></a>データ ソースの資格情報  
- 資格情報は、埋め込みデータ ソースの作成、クエリの実行、またはレポート処理時のデータ取得のために使用されます。 データ ソースの所有者が、データへのアクセスに使用する必要がある資格情報の種類を決定します。 資格情報は、データ接続とは別に、レポート作成環境内のレポート サーバー、SharePoint サイト、またはローカル コンピューターで管理されます。 データ ソースの種類に応じて、資格情報を保存して各ユーザーに入力を求めないようにすることも、入力を求めるように設定することもできます。 必要とされる資格情報は、データ ソースへの接続に、自分のコンピューターを使用しているかレポート サーバーを使用しているかに応じて異なる場合があります。 詳細については、[レポート ビルダーでの資格情報の指定](../../2014/reporting-services/specify-credentials-in-report-builder.md)と[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)を参照してください。  
+ 資格情報は、埋め込みデータ ソースの作成、クエリの実行、またはレポート処理時のデータ取得のために使用されます。 データ ソースの所有者が、データへのアクセスに使用する必要がある資格情報の種類を決定します。 資格情報は、データ接続とは別に、レポート作成環境内のレポート サーバー、SharePoint サイト、またはローカル コンピューターで管理されます。 データ ソースの種類に応じて、資格情報を保存して各ユーザーに入力を求めないようにすることも、入力を求めるように設定することもできます。 必要とされる資格情報は、データ ソースへの接続に、自分のコンピューターを使用しているかレポート サーバーを使用しているかに応じて異なる場合があります。 詳細については、次を参照してください。[レポート ビルダーでの資格情報の指定](../../2014/reporting-services/specify-credentials-in-report-builder.md)と[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
   
 ## <a name="see-also"></a>参照  
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)   
