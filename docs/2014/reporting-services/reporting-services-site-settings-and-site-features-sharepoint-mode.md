@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e0040fec-e2b7-4099-ae01-3b9bb9128bbd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b2e6997afd52c8b999d981c5c15b782ad9a56407
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 14708d286ea11a872a3260f41cae44e05e7fb30c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031073"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967400"
 ---
 # <a name="reporting-services-site-settings-and-site-featuressharepoint-mode"></a>Reporting Services のサイト設定とサイト機能 (SharePoint モード)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の SharePoint モードには、SharePoint の [サイトの設定] ページから管理できるいくつかのサイト レベルのカスタム機能とサイト機能があります。 これらはサイト全体に対する設定で、すべての [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションに影響を与えます。 このページを表示するには、コンテンツ マネージャーとシステム管理者の権限が必要です。  

@@ -1,7 +1,7 @@
 ---
 title: レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: 19eca52c1686f218b2c59449b139d684700822b5
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328962"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970148"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
 
@@ -44,7 +44,7 @@ ms.locfileid: "53328962"
     > [!NOTE]  
     > レポート サーバーがスケールアウト配置の一部である場合、更新するレポート サーバーのみが影響を受けます。 配置内の他のレポート サーバーの暗号化キーは、サービス アカウントを変更しても影響を受けません。  
   
- アカウントを設定する方法の詳細については、[サービス アカウントを構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)を参照してください。  
+ アカウントを設定する方法の詳細については、次を参照してください。[サービス アカウントを構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)します。  
   
 ## <a name="choosing-an-account"></a>アカウントの選択
 
@@ -66,7 +66,7 @@ ms.locfileid: "53328962"
   
 - SQL Server のオンライン ブックの「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 」。  
   
-- [サービスと Service Accounts Security Planning Guide](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)します。  
+- [サービスおよびサービス アカウントのセキュリティ計画ガイド](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)。  
   
 ## <a name="updating-an-expired-password"></a>期限切れのパスワードの更新
 

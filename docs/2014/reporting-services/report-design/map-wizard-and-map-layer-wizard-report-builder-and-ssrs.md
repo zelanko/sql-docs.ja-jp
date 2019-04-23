@@ -12,15 +12,15 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f005ac1a727b375d7c0796a9f30bfed388dccfbd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290760"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962988"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
   マップ ウィザードおよびマップ レイヤー ウィザードは、マップの作成、マップ レイヤーの追加、既存のレイヤーのマップ レイヤー オプションの変更などのタスクを自動化します。  
@@ -53,7 +53,7 @@ ms.locfileid: "56290760"
   
  ウィザード ページのタイトルをクリックすると、対応するヘルプ コンテンツが表示されます。 表示されるページは、選択したマップの種類、空間データのソース、および分析データのソースによって異なります。  
   
-1.  [[空間データのソースを選択]](#SpatialDataSource): マップ ギャラリーの空間データ、Environmental Systems Research Institute, Inc. (ESRI) シェープファイル、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リレーショナル データベースの空間データを指定できます。  
+1.  [[空間データのソースを選択]](#SpatialDataSource): 空間データ、Environmental Systems Research Institute, Inc. で、マップ ギャラリーから取得できます。(ESRI) シェープファイル、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リレーショナル データベースの空間データを指定できます。  
   
     -   [空間データとは](#SpatialData)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56290760"
   
  マップまたはマップ レイヤーを追加してレポートをプレビューした後、ウィザードで設定したマップ オプションおよびマップ レイヤー オプションを変更できます。 詳細については、「[マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS)](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
- マップに関する詳細については、「 [マップ (レポート ビルダーおよび SSRS)](maps-report-builder-and-ssrs.md)をクリックします。 マップをレポートに追加する手順については、次を参照してください。[チュートリアル。マップ レポート&#40;レポート ビルダー&#41;](../tutorial-map-report-report-builder.md)します。  
+ マップに関する詳細については、「 [マップ (レポート ビルダーおよび SSRS)](maps-report-builder-and-ssrs.md)をクリックします。 マップをレポートに追加する手順については、「[チュートリアル:マップ レポート &#40;レポート ビルダー&#41;](../tutorial-map-report-report-builder.md)」を参照してください。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "56290760"
  マップ ギャラリーには、レポート作成環境のマップ ギャラリー フォルダー内にあるレポートで使用されているマップが含まれます。 ギャラリーのマップを使用することで、マップを簡単にレポートに追加できます。 ギャラリーにあらかじめ定義されているマップは、マップ プロバイダーによって提供されます。  
   
 > [!NOTE]  
->  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で入手できます。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルの詳細については、[http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) にアクセスしてください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
+>  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で入手できます。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 Tiger/line シェープファイルは、米国から無料で入手できます。国勢調査局です。 TIGER/Line シェープファイルの詳細については、[http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) にアクセスしてください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および Tiger/line は、米国の登録商標です。国勢調査局の登録商標です。  
   
  マップ ギャラリーを拡張するには、マップ ギャラリー ディレクトリのレポートを追加または削除したり、マップを整理するためのフォルダーを追加したりします。 詳細については、「 [マップ (レポート ビルダーおよび SSRS)](maps-report-builder-and-ssrs.md)をクリックします。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "56290760"
   
  タイルの詳細については、「 [Bing Maps のタイル システム](https://go.microsoft.com/fwlink/?LinkId=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371) 」および「 [プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=151372)」を参照してください。  
   
- デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、次を参照してください。[レポートのトラブルシューティング。マップ レポート&#40;レポート ビルダーおよび SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)と"マップの計画で、 [Reporting Services のドキュメント](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server オンライン ブックの「します。  
+ デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「[レポートのトラブルシューティング:マップ レポート&#40;レポート ビルダーおよび SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)と"マップの計画で、 [Reporting Services のドキュメント](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server オンライン ブックの「します。  
   
  タイル レイヤーをカスタマイズするためのその他の方法については、「[マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   

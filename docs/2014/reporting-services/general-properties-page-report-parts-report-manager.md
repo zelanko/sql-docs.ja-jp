@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a3872636fdfda37165bdf6cb83aa13aa51b230b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 25dc3a8eb075f212728796465fe2d95c460cbebf
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040483"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963318"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>[全般] プロパティ ページ、レポート パーツ (レポート マネージャー)
   レポート パーツの全般プロパティを表示および管理するには、[プロパティ] ページを使用します。  
@@ -69,7 +69,7 @@ ms.locfileid: "56040483"
  レポート サーバー データベースからレポート パーツを削除します。 サーバーからレポート パーツを削除しても、そのレポート パーツが追加された既存のレポートは表示されます。  
   
  **Move**  
- [移動] をクリックすると、[アイテムの移動] ページが開き、レポート サーバーのフォルダー階層内でレポート パーツを移動できます。 詳細については、[項目ページに移動&#40;レポート マネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)を参照してください。  
+ [移動] をクリックすると、[アイテムの移動] ページが開き、レポート サーバーのフォルダー階層内でレポート パーツを移動できます。 詳細については、次を参照してください。[項目ページに移動&#40;レポート マネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)します。  
   
  **ダウンロード**  
  レポート パーツ定義のコピーが抽出され、.rsc ファイルとして保存されます。 この .rsc ファイルは、レポート サーバー フォルダーにアップロードするか、またはレポート サーバー フォルダー内の既存のレポート パーツと置き換えるために使用することができます。  

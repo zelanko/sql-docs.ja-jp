@@ -8,18 +8,18 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 29824d30b1fdd96c2bc847b8908b49340a05aaf3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d2d29838c371559c54163eb8e5488d198cf28345
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026903"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943918"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>[個人用サブスクリプション] ページ (レポート マネージャー)
-  [個人用サブスクリプション] ページでは、各自のサブスクリプションをすべて参照できます。 このページから所有している任意のサブスクリプションにアクセスし、サブスクリプションを変更または削除できます。 所有できるサブスクリプションは、自分で作成したサブスクリプションだけです。 他のユーザーのサブスクリプションにはアクセスできません。また、使用していても所有していないサブスクリプション (たとえば、他のユーザーが定義して、自分の名前が追加されている既存のサブスクリプション) にもアクセスできません。 また、このページからサブスクリプションを作成することはできません。 サブスクリプションの作成についての詳細については、、[新しいサブスクリプションまたはサブスクリプションの編集 ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)を参照してください。  
+  [個人用サブスクリプション] ページでは、各自のサブスクリプションをすべて参照できます。 このページから所有している任意のサブスクリプションにアクセスし、サブスクリプションを変更または削除できます。 所有できるサブスクリプションは、自分で作成したサブスクリプションだけです。 他のユーザーのサブスクリプションにはアクセスできません。また、使用していても所有していないサブスクリプション (たとえば、他のユーザーが定義して、自分の名前が追加されている既存のサブスクリプション) にもアクセスできません。 また、このページからサブスクリプションを作成することはできません。 サブスクリプションの作成についての詳細については、次を参照してください。、[新しいサブスクリプションまたはサブスクリプションの編集 ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)します。  
   
  既定では、サブスクリプションはレポート名のアルファベット順に格納されます。 別の列見出しをクリックすると、サブスクリプションの格納方法を変更できます。 サブスクリプションが存在しない場合、またはサブスクリプションを作成または管理する権限が無効の場合、このページにサブスクリプションは表示されません。  
   

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 408d86a821d2596172570f513ee8398e43298f91
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c44bc306aaa1e55aa5005663ecfcfbf261576593
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030273"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940300"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>[全般] プロパティ ページ、レポート (レポート マネージャー)
   レポートの [全般] プロパティ ページでは、レポート定義の名前変更、削除、移動、または置換を行うことができます。 また、このページを使用して、リンク レポートを作成することもできます。 レポートの作成者または変更者、および変更日時の詳細がページの上部に表示されます。  
@@ -51,10 +51,10 @@ ms.locfileid: "56030273"
  レポート サーバー データベースからレポートを削除する場合にクリックします。 レポートを削除すると、関連するすべてのレポート履歴、およびレポート固有のスケジュールとサブスクリプションが削除されます。 レポートがリンク レポートに関連付けられると、リンク レポートは無効になります。  
   
  **Move**  
- レポート サーバーのフォルダー階層内でレポートを再配置する場合にクリックします。 このボタンをクリックすると、アイテムの移動ページが表示され、フォルダーを参照して新しい場所を選択できます。 詳細については、[項目ページに移動&#40;レポート マネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)を参照してください。  
+ レポート サーバーのフォルダー階層内でレポートを再配置する場合にクリックします。 このボタンをクリックすると、アイテムの移動ページが表示され、フォルダーを参照して新しい場所を選択できます。 詳細については、次を参照してください。[項目ページに移動&#40;レポート マネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)します。  
   
  **リンク レポートを作成します。**  
- クリックすると、[新しいリンク レポート] ページが開きます。 このページとリンク レポートの詳細については、[新しいリンク レポート ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)を参照してください。  
+ クリックすると、[新しいリンク レポート] ページが開きます。 このページとリンク レポートの詳細については、次を参照してください。[新しいリンク レポート ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)します。  
   
  **および**  
  レポート定義の読み取り専用コピーを抽出する場合にクリックします。 このファイルは、コンピューターに定義されているファイルの関連付けに応じて、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] または他のアプリケーションで開きます。 ほとんどの場合、レポートは XML ファイルとして開きます。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 7b909df2e97149019d70af49085cc5f1e212f5ee
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 809a78130c5bc015114138e678c55522fa556f01
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240410"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671168"
 ---
 # <a name="download-and-install-sqlpackage"></a>sqlpackage をダウンロードしてインストールする
 
@@ -23,11 +23,11 @@ sqlpackage は Windows、macOS、Linux 上で実行されます。
 
 .NET Framework の最新リリースと、macOS および Linux のプレビューをダウンロードしてインストールします。
 
-|プラットフォーム|ダウンロード|リリース日|[バージョンのオプション]|ビルド
+|プラットフォーム|ダウンロード|リリース日|バージョン|ビルド
 |:---|:---|:---|:---|:---|
-|Windows|[MSI インストーラー](https://go.microsoft.com/fwlink/?linkid=2069405)|2019 年 2 月 1 日|18.1|15.0.4316.1|
-|macOS .NET Core (プレビュー)|[.zip ファイル](https://go.microsoft.com/fwlink/?linkid=2069126)|2019 年 2 月 1 日 | 18.1 |15.0.4316.1|
-|Linux .NET Core (プレビュー)|[.zip ファイル](https://go.microsoft.com/fwlink/?linkid=2069122)|2019 年 2 月 1 日 | 18.1 |15.0.4316.1|
+|Windows|[MSI インストーラー](https://go.microsoft.com/fwlink/?linkid=2087429)|2019 年 4 月 15 日|18.2|15.0.4384.2|
+|macOS .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2087247)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
+|Linux .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2087431)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
 
 最新リリースに関する詳細については、[リリース ノート](release-notes-sqlpackage.md)をご覧ください。
 
@@ -37,14 +37,14 @@ sqlpackage は Windows、macOS、Linux 上で実行されます。
 
 このリリースの sqlpackage には、標準の Windows インストーラーのエクスペリエンスと、.zip が含まれています。 
 
-1. [Windows 用の DacFramework.msi インストーラー](https://go.microsoft.com/fwlink/?linkid=2069405)をダウンロードして実行します。
+1. [Windows 用の DacFramework.msi インストーラー](https://go.microsoft.com/fwlink/?linkid=2087429)をダウンロードして実行します。
 2. 新しいコマンド プロンプト ウィンドウを開き、sqlpackage.exe を実行します
     - sqlpackage は ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` フォルダーにインストールされます
     - x86 バージョンを x64 マシンにインストールする場合、sqlpackage は ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin``` フォルダーにインストールされます
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>macOS 用の sqlpackage (プレビュー) を取得する
 
-1. [macOS 用の sqlpackage](https://go.microsoft.com/fwlink/?linkid=2069126) をダウンロードします。
+1. [macOS 用の sqlpackage](https://go.microsoft.com/fwlink/?linkid=2087247) をダウンロードします。
 2. ファイルを抽出して sqlpackage を起動するには、新しいターミナル ウィンドウを開いて次のコマンドを入力します。
 
    **.zip のインストール:**
@@ -59,7 +59,7 @@ sqlpackage は Windows、macOS、Linux 上で実行されます。
 
 ## <a name="get-sqlpackage-preview-for-linux"></a>Linux 用の sqlpackage (プレビュー) を取得する
 
-1. インストーラーのいずれか、または tar.gz アーカイブを使って、[Linux 用の sqlpackage](https://go.microsoft.com/fwlink/?linkid=2069122) をダウンロードします。
+1. インストーラーのいずれか、または tar.gz アーカイブを使って、[Linux 用の sqlpackage](https://go.microsoft.com/fwlink/?linkid=2087431) をダウンロードします。
 2. ファイルを抽出して sqlpackage を起動するには、新しいターミナル ウィンドウを開いて次のコマンドを入力します。
 
    **.zip のインストール:**

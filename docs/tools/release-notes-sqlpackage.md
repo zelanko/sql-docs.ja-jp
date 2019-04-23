@@ -1,5 +1,5 @@
 ---
-title: DacFx と SqlPackage のリリース ノート |Microsoft Docs
+title: DacFx と SqlPackage のリリース ノート | Microsoft Docs
 description: Microsoft sqlpackage のリリース ノート。
 ms.custom: tools|sos
 ms.date: 02/02/2019
@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: de45add2b02686f990d68f7c1c23eec385848751
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 411a2cf4c9a3170e9fb3a3dc7709d8b3882f066b
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538778"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670868"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe のリリース ノート
 
 **[最新バージョンのダウンロード](sqlpackage-download.md)**
 
-この記事では、SqlPackage.exe のリリースのバージョンによって提供される修正プログラム、機能を示します。
+この記事では、SqlPackage.exe のリリースされたバージョンによって提供される機能と修正プログラムを示します。
 
 <!--
 TODO:
@@ -35,42 +35,66 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## <a name="182-sqlpackage"></a>18.2 sqlpackage
+
+リリース日: &nbsp; 2019 年 4 月 15 日  
+ビルド: &nbsp; 15.0.4384.2 
+
+### <a name="features"></a>機能
+
+| 機能 | 詳細 |
+| :------ | :------ |
+| グラフ テーブルのエッジ制約とエッジ制約句のサポートが追加されました。 | &nbsp; |
+| SQL Server 2016 以降のインデックス キーで 32 列をサポートするためのモデルの検証規則が有効になりました。 | &nbsp; |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>修正
+
+| 修正 | 詳細 |
+| :-- | :------ |
+| サポートされていないクエリ ヒントの使用に起因する SQL Server 2016 RTM データベースのリバース エンジニア リングが修正されました。 | &nbsp; |
+| filegroup ステートメントの作成前に発生するように auto close alter ステートメントの配置順序が修正されました。 | &nbsp; |
+| 'URL' 文字列が最上位レベルのトークンとして解釈されていた ScriptDom の回帰解析が修正されました。 | &nbsp; |
+| alter table add index ステートメントの解析時の null 参照例外が修正されました。 | &nbsp; |
+| null 許容の保存される計算列でのスキーマ比較で、常に一致しないとなっていた結果が修正されました。| &nbsp; |
+| &nbsp; | &nbsp; |
+
 ## <a name="181-sqlpackage"></a>18.1 sqlpackage
 
 リリース日: &nbsp; 2019 年 2 月 1 日  
 ビルド: &nbsp; 15.0.4316.1  
 プレビュー リリース。
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>機能
 
 | 機能 | 詳細 |
 | :------ | :------ |
-| UTF8 の照合順序のサポートが追加されました。 | &nbsp; |
-| インデックス付きビューの非クラスター化列ストア インデックスを有効になります。 | &nbsp; |
-| .NET Core 2.2 に移動します。 | &nbsp; |
-| .NET Core でのスキーマ比較のメモリ ストレージを使用します。 | &nbsp; |
+| UTF8 照合順序のサポートが追加されました。 | &nbsp; |
+| インデックス付きビューでの非クラスター化列ストア インデックスが有効になりました。 | &nbsp; |
+| .NET Core 2.2 に移動しました。 | &nbsp; |
+| .NET Core でのスキーマ比較でメモリ ストレージが使用されます。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>修正
 
-| Fix | 詳細 |
+| 修正 | 詳細 |
 | :-- | :------ |
-| リバース エンジニア リングのクエリのレガシ カーディナリティ推定機能を使用するパフォーマンスが改善されました。 | &nbsp; |
-| スクリプトを生成するときに、大幅なスキーマ比較のパフォーマンスの問題を修正しました。 | &nbsp; |
-| 特定の拡張イベント (xevent) セッションを無視するスキーマの誤差検出ロジックを修正しました。 | &nbsp; |
-| グラフ テーブルの順序を固定インポートします。 | &nbsp; |
-| オブジェクトのアクセス許可を持つ外部テーブルのエクスポートを修正しました。 | &nbsp; |
+| リバース エンジニアリング クエリでのレガシ カーディナリティ推定機能を使用するためのパフォーマンスが改善されました。 | &nbsp; |
+| スクリプトを生成する際のスキーマ比較での顕著なパフォーマンス問題が修正されました。 | &nbsp; |
+| 特定の拡張イベント (xevent) セッションを無視するスキーマのドリフト検出ロジックが修正されました。 | &nbsp; |
+| グラフ テーブルのインポート順序が修正されました。 | &nbsp; |
+| オブジェクトのアクセス許可による外部テーブルのエクスポートが修正されました。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>既知の問題
 
-このリリースには、.NET Core 2.2 を対象とする、sqlpackage のクロス プラットフォームのプレビュー ビルドが含まれています。 Sqlpackage は、macOS および Linux で実行できます。
+このリリースには、.NET Core 2.2 をターゲットとする sqlpackage のクロスプラットフォーム プレビュー ビルドが含まれています。 sqlpackage は、macOS および Linux で実行できます。
 
 | 既知の問題 | 詳細 |
 | :---------- | :------ |
-| ビルドと配置の共同作成者はサポートされていません。 | &nbsp; |
-| Json データのシリアル化を使用する古い .dacpac および .bacpac ファイルはサポートされていません。 | &nbsp; |
-| 参照先 .dacpacs (たとえば master.dacpac) 大文字小文字を区別するファイル システムに関する問題のため解決できません。 | (たとえばマスター参照ファイルの名前を大文字に変換を回避するには。BACPAC)。 |
+| ビルド共同作成者と展開共同作成者がサポートされません。 | &nbsp; |
+| json データ シリアル化を使用している古い .dacpac ファイルと .bacpac ファイルがサポートされません。 | &nbsp; |
+| 大文字と小文字を区別するファイル システムの問題により、参照された .dacpacs (master.dacpac など) が解決されない場合があります。 | 回避策は、参照ファイルの名前をすべて大文字にすることです (例: MASTER.BACPAC)。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="180-sqlpackage"></a>18.0 sqlpackage
@@ -78,26 +102,26 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 リリース日: &nbsp; 2018 年 10 月 24 日  
 ビルド: &nbsp; 15.0.4200.1
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>機能
 
 | 機能 | 詳細 |
 | :------ | :------ |
-| 150 のデータベース互換性レベルのサポートが追加されました。 | &nbsp; |
+| データベース互換性レベル 150 のサポートが追加されました。 | &nbsp; |
 | マネージ インスタンスのサポートが追加されました。 | &nbsp; |
-| データベース操作の並列処理の次数を指定する MaxParallelism コマンド ライン パラメーターに追加します。 | &nbsp; |
-| SQL Server に接続するときに認証トークンを指定する AccessToken コマンド ライン パラメーターに追加します。 | &nbsp; |
-| ストリームの BLOB/CLOB データ型をインポートするサポートが追加されました。 | &nbsp; |
-| スカラー UDF のサポートが追加されました 'INLINE' オプション。 | &nbsp; |
-| グラフ テーブル 'MERGE' 構文に関するサポートが追加されました。 | &nbsp; |
+| データベース操作の並列処理の程度を指定する MaxParallelism コマンドライン パラメーターが追加されました。 | &nbsp; |
+| SQL Server に接続するときの認証トークンを指定する AccessToken コマンドライン パラメーターが追加されました。 | &nbsp; |
+| インポートでの BLOB/CLOB データ型のストリーミングのサポートが追加されました。 | &nbsp; |
+| スカラー UDF 'INLINE' オプションのサポートが追加されました。 | &nbsp; |
+| グラフ テーブルの 'MERGE' 構文のサポートが追加されました。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>修正
 
-| Fix | 詳細 |
+| 修正 | 詳細 |
 | :-- | :------ |
-| 固定未解決擬似テーブルの列のグラフ。 | &nbsp; |
-| データベースを作成するときに、メモリ最適化テーブルのグループを使用してメモリ最適化されたファイルを修正しました。 | &nbsp; |
-| 外部テーブルの拡張プロパティを含むを修正しました。 | &nbsp; |
+| グラフ テーブルの解決されない擬似列が修正されました。 | &nbsp; |
+| メモリ最適化テーブル使用時のメモリ最適化されたファイル グループによるデータベースの作成が修正されました。 | &nbsp; |
+| 外部テーブルでの拡張プロパティの包含が修正されました。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="178-sqlpackage"></a>17.8 sqlpackage
@@ -105,42 +129,42 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 リリース日: &nbsp; 2018 年 6 月 22 日  
 ビルド: &nbsp; 14.0.4079.2
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>機能
 
 | 機能 | 詳細 |
 | :------ | :------ |
-| SqlClient の例外メッセージを含む、接続エラーのエラー メッセージの改善。 | &nbsp; |
-| インポート/エクスポートの 1 つのパーティション インデックスのインデックスの圧縮をサポートします。 | &nbsp; |
+| SqlClient の例外メッセージを含めて、接続エラーのエラー メッセージが改良されました。 | &nbsp; |
+| 単一パーティション インデックスのインポート/エクスポートで、インデックスの圧縮がサポートされます。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>修正
 
-| Fix | 詳細 |
+| 修正 | 詳細 |
 | :-- | :------ |
-| SQL 2017 以降のバージョンと、XML 列セットのリバース エンジニア リングの問題を修正しました。 | &nbsp; |
-| 場所は Azure SQL Database の無視されましたスクリプト データベース互換性レベル 140 問題を修正しました。 | &nbsp; |
+| SQL 2017 以降での XML 列セットのリバース エンジニアリング問題が修正されました。 | &nbsp; |
+| データベース互換性レベル 140 のスクリプトが Azure SQL Database で無視される問題が修正されました。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="1741-sqlpackage"></a>17.4.1 sqlpackage
 
-リリース日: &nbsp; 、2018 年 1 月 25 日  
+リリース日: &nbsp; 2018 年 1 月 25 日  
 ビルド: &nbsp; 14.0.3917.1
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>機能
 
 | 機能 | 詳細 |
 | :------ | :------ |
-| 入れ子になったステートメントの数が多い TRANSACT-SQL の解析に ThreadMaxStackSize コマンド ライン パラメーターに追加します。 | &nbsp; |
+| 入れ子になったステートメントの数が多い Transact-SQL を解析するための ThreadMaxStackSize コマンドライン パラメーターが追加されました。 | &nbsp; |
 | データベース カタログ照合順序のサポート。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>修正
 
-| Fix | 詳細 |
+| 修正 | 詳細 |
 | :-- | :------ |
-| オンプレミス インスタンスに、Azure SQL Database .bacpac をインポートするときに、原因のエラーを修正しました。_パスワードなしのデータベース マスター _ キーは、このバージョンの SQL Server でサポートされていない_します。 | &nbsp; |
-| グラフ テーブルでは、未解決の擬似列のエラーを修正しました。 | &nbsp; |
-| SQL 認証を使用した、SchemaCompareDataModel を使用してスキーマを比較するを修正しました。 | &nbsp; |
+| Azure SQL Database の .bacpac をオンプレミス インスタンスにインポートする際の "_このバージョンの SQL Server ではパスワードがないデータベース マスター キーはサポートされていない_" ことに起因するエラーが修正されました。 | &nbsp; |
+| グラフ テーブルの解決されない擬似列エラーが修正されました。 | &nbsp; |
+| SchemaCompareDataModel と SQL 認証を使用したスキーマ比較が修正されました。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="1740-sqlpackage"></a>17.4.0 sqlpackage
@@ -148,18 +172,18 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 リリース日: &nbsp; 2017 年 12 月 12 日  
 ビルド: &nbsp; 14.0.3881.1
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>機能
 
 | 機能 | 詳細 |
 | :------ | :------ |
-| サポートが追加されました_テンポラル リテンション期間ポリシー_ SQL 2017 + と Azure SQL Database でします。 | &nbsp; |
-| 診断情報を保存するファイル パスを指定するコマンド ライン パラメーターを/DiagnosticsFile:"C:\Temp\sqlpackage.log を追加するには"。 | &nbsp; |
-| 診断情報をコンソールにログインする/Diagnostics コマンド ライン パラメーターに追加します。 | &nbsp; |
+| SQL 2017 以降と Azure SQL Database での_テンポラル保持ポリシー_のサポートが追加されました。 | &nbsp; |
+| 診断情報を保存するファイル パスを指定する /DiagnosticsFile:"C:\Temp\sqlpackage.log" コマンドライン パラメーターが追加されました。 | &nbsp; |
+| 診断情報をコンソールにログ記録する /Diagnostics コマンドライン パラメーターが追加されました。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>修正
 
-| Fix | 詳細 |
+| 修正 | 詳細 |
 | :-- | :------ |
-| データベースの互換性レベルが認識しないが発生する場合はブロックしません。 | 代わりに、最新の Azure SQL Database またはオンプレミスのプラットフォームが想定されます。 |
+| 認識できないデータベース互換性レベルに遭遇してもブロックは行われません。 | 代わりに、最新の Azure SQL Database またはオンプレミスのプラットフォームであるとみなされます。 |
 | &nbsp; | &nbsp; |

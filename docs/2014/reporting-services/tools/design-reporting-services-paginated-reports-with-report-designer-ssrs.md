@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1c2f2fcb146be8e90a8b279920ea70cdcdc04300
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292060"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935798"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>レポート デザイナーを使用してレポートをデザインする (SSRS)
   レポート デザイナーを使用すると、フル機能の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートおよびレポート ソリューションを作成できます。 レポート デザイナーには、データ ソース、データセット、およびクエリ、データ領域とフィールドのレポート レイアウトの配置、連携するパラメーターとレポートのセットなどの対話機能を定義できるグラフィカル インターフェイスが用意されています。  
@@ -163,7 +163,7 @@ ms.locfileid: "56292060"
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]では、レポートまたは他のプロジェクト アイテムを複数のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに配置できます。 対象レポート サーバーと互換性のあるスキーマ バージョンへのレポート定義のアップグレードを制御するには、プロジェクト構成を使用します。 プロジェクト構成で制御されるプロパティには、対象レポート サーバー、ビルド プロセスでプレビューと配置のためにレポートを一時的に保存するフォルダー、およびエラー レベルが含まれます。 詳細については、「[構成プロパティと配置プロパティ](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties)」および「[配置プロパティを設定する (Reporting Services)](set-deployment-properties-reporting-services.md)」を参照してください。  
   
 ### <a name="export-a-report-to-a-different-file-format"></a>別のファイル形式へのレポートのエクスポート  
- レポートは、さまざまな形式にエクスポートできますが、エクスポートすることによって、一部のレポート レイアウトや対話機能に影響が生じることがあります。 各種の出力形式の設計に関する考慮事項の詳細については、[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)を参照してください。  
+ レポートは、さまざまな形式にエクスポートできますが、エクスポートすることによって、一部のレポート レイアウトや対話機能に影響が生じることがあります。 各種の出力形式の設計に関する考慮事項の詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)します。  
   
   
 ##  <a name="bkmk_ReportValidationandErrorLevels"></a> レポートの検証とエラー レベル  

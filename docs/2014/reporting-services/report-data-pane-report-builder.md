@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Report Data pane
 ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 369540d7d3c75a781c338cf5d172fa82b16df7c7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b5ba45fa4070a025101d9bf2c06bc69f8aa5d8b8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290060"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959790"
 ---
 # <a name="report-data-pane-report-builder"></a>[レポート データ] ペイン (レポート ビルダー)
   **[レポート データ]** ペインを使用すると、レポート内で現在定義されているパラメーター、データ ソース、データセット、フィールド コレクション、および画像が表示されます。 [レポート データ] では、レポート内のデータを表すアイテムの階層ビューが表示されます。 最上位のノードは、組み込みフィールド、パラメーター、画像、およびデータ ソース参照を表します。 データ アイテムを表示するには、各ノードを展開します。 たとえば、データ ソース ノードを展開すると、そのデータ ソース用に定義されたデータセットが表示されます。 データセットを展開すると、そのフィールド コレクションが表示されます。 データをレポート ページ上の選択したレポート アイテムにリンクするには、アイテムをレポート デザイン画面または [グループ化] ペインにドラッグします。 詳細については、「[レポート デザイン ビュー &#40;レポート ビルダー&#41;](report-builder/report-design-view-report-builder.md)」を参照してください。  
@@ -36,10 +36,10 @@ ms.locfileid: "56290060"
  レポートで使用されている画像のセットを表します。 詳細については、「[画像 &#40;レポート ビルダーおよび SSRS& #41;](report-design/images-report-builder-and-ssrs.md)」を参照してください。  
   
  **[データ ソース]**  
- 埋め込みデータ ソースまたは共有データ ソースの参照を表します。 データ ソースは、レポートのデータのソースを表します。 データ ソースは、そのデータ ソースを使用するデータセットのコレクションの親ノードです。 詳細については、[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41; ](report-data/report-datasets-ssrs.md)と[データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)を参照してください。  
+ 埋め込みデータ ソースまたは共有データ ソースの参照を表します。 データ ソースは、レポートのデータのソースを表します。 データ ソースは、そのデータ ソースを使用するデータセットのコレクションの親ノードです。 詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41; ](report-data/report-datasets-ssrs.md)と[データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)します。  
   
  **データセット**  
- 1 つのコマンドを実行することによってデータ ソースから取得されるデータを表します。たとえば、[!INCLUDE[tsql](../includes/tsql-md.md)] データベースからデータを取得する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリなどがあります。 データセットは、クエリで指定されたフィールドのほか、計算フィールドも含むコレクションの親ノードです。 レポート ビルダーでは、クエリを指定できるようにクエリ デザイナーがサポートされています。 詳細については、[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)を参照してください。  
+ 1 つのコマンドを実行することによってデータ ソースから取得されるデータを表します。たとえば、[!INCLUDE[tsql](../includes/tsql-md.md)] データベースからデータを取得する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリなどがあります。 データセットは、クエリで指定されたフィールドのほか、計算フィールドも含むコレクションの親ノードです。 レポート ビルダーでは、クエリを指定できるようにクエリ デザイナーがサポートされています。 詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)します。  
   
 ## <a name="see-also"></a>参照  
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   

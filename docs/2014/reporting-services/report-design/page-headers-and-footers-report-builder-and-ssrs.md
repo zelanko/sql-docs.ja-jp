@@ -21,15 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bc62428aafdb3d3ec252c0b10cbe5a7c2db515cd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9dfeb15d58f34759da6c340f66ce5935c0b71e41
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292301"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966988"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)
   レポートには、各ページの上部と下部にヘッダーとフッターを含めることができます。 ヘッダーとフッターには、静的テキスト、画像、線、四角形、罫線、背景色、背景画像、式などを含めることができます。 式には、データセットが 1 つしかないレポートでのデータセット フィールド参照と、スコープとしてデータセットを指定する集計関数呼び出しが含まれます。  
@@ -61,9 +61,9 @@ ms.locfileid: "56292301"
 |レポート本文のテキスト ボックス|はい|いいえ|  
 |&PageNumber|はい|いいえ|  
 |&TotalPages|はい|いいえ|  
-|集計関数|可能。 例を次に示します。<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|可能。 例えば以下のようにします。<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
-|ページ上のアイテムのフィールド コレクション|間接的。 例えば以下のようにします。<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|可能。 例えば以下のようにします。<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|データバインド画像|間接的。 例を次に示します。 `=ReportItems!TXT_Photo.Value`|可能。 例えば以下のようにします。<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|集計関数|可能。 例を次に示します。<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|可能。 例を次に示します。<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
+|ページ上のアイテムのフィールド コレクション|間接的。 例を次に示します。<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|可能。 例を次に示します。<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
+|データバインド画像|間接的。 例を次に示します。 `=ReportItems!TXT_Photo.Value`|可能。 例を次に示します。<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  このトピックの以下のセクションでは、ヘッダーおよびフッターで一般的に使用される変数データを取得するための、すぐに使用できる式を示します。 また、Excel 表示拡張機能でヘッダーおよびフッターが処理される方法についても説明します。 式の詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)」を参照してください。  
   

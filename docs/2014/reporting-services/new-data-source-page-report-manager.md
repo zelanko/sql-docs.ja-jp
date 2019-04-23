@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa144386222c489e9b682942873794669f5b31d6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3128dee728cbb2e9eda6e87232675558fe9413e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029103"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947089"
 ---
 # <a name="new-data-source-page-report-manager"></a>[新しいデータ ソース] ページ (レポート マネージャー)
   [新しいデータ ソース] ページを使用すると、共有データ ソース アイテムを作成できます。 共有データ ソースにより、外部のデータ ソースへの接続が定義されます。 共有データ ソースを使用すると、データ ソースの接続の設定を、そのデータ ソースを使用するレポート、モデル、およびデータ ドリブン サブスクリプションとは別に作成および保持できます。  
@@ -57,7 +57,7 @@ ms.locfileid: "56029103"
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
 ```  
   
- 詳細の例と接続文字列を指定するさまざまな方法については、[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)を参照してください。  
+ 詳細の例と接続文字列を指定するさまざまな方法については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
   
  **使用して接続します。**  
  資格情報の取得方法を決定するオプションを指定します。  
@@ -87,7 +87,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **資格情報は必要ありません (を使用して接続)**  
  データ ソースへのアクセスに、資格情報が必要でないことを指定します。 データ ソースがユーザーのログインを必要とする場合、このオプションを選択しても効果がありません。 このオプションは、データ ソース接続にユーザーの資格情報を必要としない場合にのみ選択してください。  
   
- このオプションを使用するには、レポート サーバーの配置用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報のソースがない状況で外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、[自動実行アカウントを構成する&#40;SSRS 構成マネージャー&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)を参照してください。  
+ このオプションを使用するには、レポート サーバーの配置用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報のソースがない状況で外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、次を参照してください。[自動実行アカウントを構成する&#40;SSRS 構成マネージャー&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)します。  
   
  **[OK]**  
  変更を保存する場合にクリックします。  

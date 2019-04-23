@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver for SQL Server の機能の依存関係 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/07/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,31 +11,31 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 820cc9f7faf3144852b761ac8b9ea3819935215f
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 1c96a896e6d42172400b4a326abdc99824c6ac52
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566411"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670920"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server の機能の依存関係
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-この記事では、Microsoft JDBC Driver for SQL Server が依存するライブラリを一覧表示します。 プロジェクトには、次の依存関係が含まれます。
+この記事では、Microsoft JDBC Driver for SQL Server が依存しているライブラリを示します。 プロジェクトには、次の依存関係があります。
 
-## <a name="compile-time"></a>コンパイル時間
+## <a name="compile-time"></a>コンパイル時
 
- - `com.microsoft.azure:azure-keyvault` : (省略可能) 常に暗号化された Azure Key Vault 機能 azure の Key Vault Provider
- - `com.microsoft.azure:azure-keyvault-webkey` : (省略可能) 常に暗号化された Azure Key Vault 機能 azure の Key Vault Provider
- - `com.microsoft.azure:adal4j` : Azure の Active Directory Library for Java 用 Azure Active Directory 認証の機能と Azure Key Vault 機能 (省略可能)
- - `com.microsoft.rest:client-runtime` : Azure の Active Directory Library for Java 用 Azure Active Directory 認証の機能と Azure Key Vault 機能 (省略可能)
-- `org.osgi:org.osgi.core`: OSGi フレームワークのサポート OSGi コア ライブラリです。
-- `org.osgi:org.osgi.compendium`: OSGi フレームワークのサポート OSGi Compendium ライブラリです。
+ - `com.microsoft.azure:azure-keyvault` : Always Encrypted Azure Key Vault 機能用 Azure Key Vault Provider (省略可能)
+ - `com.microsoft.azure:azure-keyvault-webkey` : Always Encrypted Azure Key Vault 機能用 Azure Key Vault Provider (省略可能)
+ - `com.microsoft.azure:adal4j` : Azure Active Directory 認証機能および Azure Key Vault 機能用 Azure Active Directory Library for Java (省略可能)
+ - `com.microsoft.rest:client-runtime` : Azure Active Directory 認証機能および Azure Key Vault 機能用 Azure Active Directory Library for Java (省略可能)
+- `org.osgi:org.osgi.core` : OSGi Framework をサポートするための OSGi Core ライブラリ
+- `org.osgi:org.osgi.compendium` : OSGi Framework をサポートするための OSGi Compendium ライブラリ
 
-## <a name="test-time"></a>テスト時間
+## <a name="test-time"></a>テスト時
 
-上述した機能のいずれかを必要とする特定のプロジェクトは、POM ファイルにそれぞれの依存関係を明示的に宣言する必要があります。
+前述の機能のいずれかを必要とするプロジェクトでは、該当する依存関係を POM ファイルに明示的に宣言する必要があります。
 
 **例:** を再宣言する必要があります、Azure Active Directory 認証機能を使用しているときに、`adal4j`プロジェクトの POM ファイルに依存関係。 次のスニペットを参照してください。
 
@@ -43,7 +43,7 @@ ms.locfileid: "58566411"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.1.jre11</version>
+    <version>7.2.2.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -66,7 +66,7 @@ ms.locfileid: "58566411"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.1.jre11</version>
+    <version>7.2.2.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -97,34 +97,34 @@ ms.locfileid: "58566411"
 
 ## <a name="dependency-requirements-for-the-jdbc-driver"></a>JDBC Driver の依存関係の要件
 
-### <a name="working-with-the-azure-key-vault-provider"></a>Azure Key Vault プロバイダーの操作。
+### <a name="working-with-the-azure-key-vault-provider"></a>Azure Key Vault Provider の操作:
 
-- JDBC Driver version 7.2.1 - 依存関係のバージョン: Azure-keyvault (バージョン 1.2.0)、Azure Keyvault Webkey (バージョン 1.2.0)、Adal4j (バージョン 1.6.3) クライアントのランタイム-の-AutoRest (1.6.5) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC Driver バージョン 7.0.0 - 依存関係のバージョン: Azure-keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.6.0) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC Driver version 6.4.0 - 依存関係のバージョン: Azure-keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.4.0) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC Driver version 6.2.2 - 依存関係のバージョン: Azure-keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.4.0) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC Driver version 6.0.0 - 依存関係のバージョン: Azure-keyvault (バージョン 0.9.7)、Adal4j (バージョン 1.3.0) とその依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
+- JDBC Driver バージョン 7.2.2 - 依存関係バージョン: Azure-Keyvault (バージョン 1.2.0)、Azure-Keyvault-Webkey (バージョン 1.2.0)、Adal4j (バージョン 1.6.3)、Client-Runtime-for-AutoRest (1.6.5)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- JDBC Driver バージョン 7.0.0 - 依存関係バージョン: Azure-Keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.6.0)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- JDBC Driver バージョン 6.4.0 - 依存関係バージョン: Azure-Keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.4.0)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- JDBC Driver バージョン 6.2.2 - 依存関係バージョン: Azure-Keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.4.0)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- JDBC Driver バージョン 6.0.0 - 依存関係バージョン: Azure-Keyvault (バージョン 0.9.7)、Adal4j (バージョン 1.3.0)、およびそれらの依存関係 ( [サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
-> 6.2.2 と 6.4.0 ドライバーのバージョンでは、バージョン 1.0.0 に azure key vault-java 依存関係が更新されました。 ただし、新しいバージョンでは、(0.9.7) 以前のバージョンと互換性がないと、ドライバーに既存の実装を中断します。 ドライバーの新しい実装には、さらに、Azure Key Vault プロバイダーを使用するクライアント プログラムを中断する API の変更が必要です。
+> ドライバーの 6.2.2 および 6.4.0 バージョンでは、azure-keyvault-java の依存関係がバージョン 1.0.0 に更新されています。 ただし、新しいバージョンは前のバージョン (0.9.7) と互換性がないため、ドライバー内の既存の実装は破壊されます。 ドライバーの新しい実装では API を変更する必要があり、これにより、Azure Key Vault Provider を使用しているクライアント プログラムが破壊されます。
 >
-> この問題は、最新バージョンのドライバー (7.0.0) に解決されます。 認証コールバックのメカニズムを使用する削除されたコンス トラクターは、旧バージョンとの互換性のための Azure Key Vault Provider に追加されます。
+> この問題は、最新バージョンのドライバー (7.0.0) では解決されています。 認証コールバック メカニズムを使用していた削除済みのコンストラクターは、下位互換性を保つために Azure Key Vault Provider に戻されています。
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Azure Active Directory 認証の操作:
 
-- JDBC Driver version 7.2.1 - 依存関係のバージョン: Adal4j (バージョン 1.6.3) クライアントのランタイム-の-AutoRest (1.6.5) とその依存関係
-- JDBC Driver バージョン 7.0.0 - 依存関係のバージョン: Adal4j (バージョン 1.6.0) とその依存関係
-- JDBC Driver version 6.4.0 - 依存関係のバージョン: Adal4j (バージョン 1.4.0) とその依存関係
-- JDBC Driver version 6.2.2 - 依存関係のバージョン: Adal4j (バージョン 1.4.0) とその依存関係
-- JDBC Driver version 6.0.0 - 依存関係のバージョン: Adal4j (バージョン 1.3.0) とその依存関係。 このバージョンのドライバーを使用して接続できる_ActiveDirectoryIntegrated_ sqljdbc_auth.dll と Active Directory 認証ライブラリの SQL Server (を使用して Windows オペレーティング システムにのみ、認証モードADALSQL します。DLL) です。
+- JDBC Driver バージョン 7.2.2 - 依存関係バージョン: Adal4j (バージョン 1.6.3)、Client-Runtime-for-AutoRest (1.6.5)、およびそれらの依存関係
+- JDBC Driver バージョン 7.0.0 - 依存関係バージョン: Adal4j (バージョン 1.6.0) およびそれらの依存関係
+- JDBC Driver バージョン 6.4.0 - 依存関係バージョン: Adal4j (バージョン 1.4.0) およびそれらの依存関係
+- JDBC Driver バージョン 6.2.2 - 依存関係バージョン: Adal4j (バージョン 1.4.0) およびそれらの依存関係
+- JDBC Driver バージョン 6.0.0 - 依存関係バージョン: Adal4j (バージョン 1.3.0) およびそれらの依存関係 このバージョンのドライバーでは、Windows オペレーティング システム上で _ActiveDirectoryIntegrated_ 認証モードのみで sqljdbc_auth.dll と SQL Server 用 Active Directory 認証ライブラリ (ADALSQL.DLL) を使用して接続できます。
 
-ドライバーのバージョン 6.4.0 から以降、アプリケーションとは限りませんを必要としない ADALSQL を使用します。Windows オペレーティング システムの DLL です。 *非 Windows オペレーティング システム*ドライバーが ActiveDirectoryIntegrated 認証を使用する Kerberos チケットが必要です。 Kerberos を使用して Active Directory に接続する方法の詳細については、次を参照してください。 [Windows、Linux、Mac 上の設定の Kerberos チケット](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)します。
+ドライバーのバージョン 6.4.0 以降、アプリケーションでは、Windows オペレーティング システム上で ADALSQL.DLL を必ず使用する必要はありません。 *Windows 以外のオペレーティング システム*では、ActiveDirectoryIntegrated 認証を機能させるには、ドライバーで Kerberos チケットが必要です。 Kerberos を使用して Active Directory に接続する方法の詳細については、「[Set Kerberos ticket on Windows, Linux, and Mac (Windows、Linux、および Mac で Kerberos チケットを設定する)](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)」を参照してください。
 
-*Windows オペレーティング システム*ドライバーは、既定で sqljdbc_auth.dll の外観し、Kerberos チケットのセットアップや Azure ライブラリの依存関係は必要ありません。 Sqljdbc_auth.dll を使用できない場合、ドライバーは、その他のオペレーティング システムとして Active Directory への認証用の Kerberos チケットを探します。
+*Windows オペレーティング システム*では、ドライバーは、既定で sqljdbc_auth.dll が検索され、Kerberos チケットの設定も Azure ライブラリの依存関係も必要ありません。 sqljdbc_auth.dll を使用できない場合、ドライバーでは、他のオペレーティング システムと同じように、Active Directory への認証用の Kerberos チケットが検索されます。
 
-取得することができます、[サンプル アプリケーション](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)この機能を使用します。
+この機能を使用している[サンプル アプリケーション](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)を取得できます。
 
 ## <a name="see-also"></a>参照
 
-[JDBC ドライバーの GitHub リポジトリ](https://github.com/microsoft/mssql-jdbc)  
+[JDBC Driver GitHub リポジトリ](https://github.com/microsoft/mssql-jdbc)  
 [JDBC Driver API リファレンス](../../connect/jdbc/reference/jdbc-driver-api-reference.md)

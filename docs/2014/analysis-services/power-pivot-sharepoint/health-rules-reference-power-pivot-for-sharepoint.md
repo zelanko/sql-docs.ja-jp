@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acf4484f9a868556ce998e39ff417c50b1ca3304
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241700"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955868"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>正常性ルールのリファレンス (PowerPivot for SharePoint)
   ここでは、PowerPivot for SharePoint のインストールによって追加される SharePoint の正常性ルールついて説明します。 正常性ルールは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] サービス アプリケーションまたはそれに関連する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー状態、可用性、または構成に関する問題をレポートするために使用されます。  

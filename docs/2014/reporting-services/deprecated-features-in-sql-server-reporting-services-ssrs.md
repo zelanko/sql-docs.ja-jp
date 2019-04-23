@@ -13,15 +13,15 @@ helpviewer_keywords:
 - HTML OWC rendering extension [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a4bcdd91fb11301de3f3f22fddbf8f4d6c27fbde
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5b2b832fbd7eb83fa26353750770894bfb6f2a8a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020763"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965708"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 における SQL Server Reporting Services の非推奨機能
   このトピックでは、非推奨とされた [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能について説明します。 非推奨とされたリリースで機能を引き続き使用できますが、これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
@@ -68,7 +68,7 @@ ms.locfileid: "56020763"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] BIFF8 表示拡張機能[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]にレポートを[!INCLUDE[msCoName](../includes/msconame-md.md)]Word と[!INCLUDE[msCoName](../includes/msconame-md.md)]Excel 1997-2003 バイナリ交換ファイル形式。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 表示する拡張機能が含まれています、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 2007-2010 Open XML 形式。  
   
 #### <a name="report-definition-language-rdl-2005-and-earlier"></a>レポート定義言語 (RDL) 2005 以前  
- レポート定義言語 (RDL) 2005 およびそれ以前のバージョンは非推奨とされます。 RDL の詳細については、[レポート定義言語&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)を参照してください。  
+ レポート定義言語 (RDL) 2005 およびそれ以前のバージョンは非推奨とされます。 RDL の詳細については、次を参照してください。[レポート定義言語&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)します。  
   
  レポートのアップグレードの詳細については、「 [Upgrade Reports](install-windows/upgrade-reports.md)」を参照してください。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "56020763"
 #### <a name="report-models"></a>レポート モデル  
  セマンティック モデリング言語 (SMDL) レポート モデルは非推奨とされます。 内のデータ ソースとして既存のレポート モデルを使用する続行できますが、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート、レポートをレポート モデルへの依存関係を削除する更新を検討してください。  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート モデルの作成または更新のためのツールは含まれません。 詳細については、[SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)を参照してください。  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート モデルの作成または更新のためのツールは含まれません。 詳細については、次を参照してください。 [SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)します。  
   
 #### <a name="deprecated-methods-in-the-web-service-endpoint"></a>Web サービス エンドポイントで非推奨のメソッド  
  次の操作は、<xref:ReportService2010.ReportingService2010> Web サービス エンドポイントでは非推奨です：  
@@ -138,7 +138,7 @@ ms.locfileid: "56020763"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] BIFF8 表示拡張機能[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]にレポートを[!INCLUDE[msCoName](../includes/msconame-md.md)]Word と[!INCLUDE[msCoName](../includes/msconame-md.md)]Excel 1997-2003 バイナリ交換ファイル形式。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 表示する拡張機能が含まれています、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 2007-2010 Open XML 形式。  
   
 ### <a name="report-definition-language-rdl-2005-and-earlier"></a>レポート定義言語 (RDL) 2005 以前  
- レポート定義言語 (RDL) 2005 およびそれ以前のバージョンは非推奨とされます。 RDL の詳細については、[レポート定義言語&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)を参照してください。  
+ レポート定義言語 (RDL) 2005 およびそれ以前のバージョンは非推奨とされます。 RDL の詳細については、次を参照してください。[レポート定義言語&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)します。  
   
  レポートのアップグレードの詳細については、「 [Upgrade Reports](install-windows/upgrade-reports.md)」を参照してください。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "56020763"
 ### <a name="report-models"></a>レポート モデル  
  セマンティック モデリング言語 (SMDL) レポート モデルは非推奨とされます。 内のデータ ソースとして既存のレポート モデルを使用する続行できますが、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート、レポートをレポート モデルへの依存関係を削除する更新を検討してください。  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート モデルの作成または更新のためのツールは含まれません。 詳細については、[SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)を参照してください。  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート モデルの作成または更新のためのツールは含まれません。 詳細については、次を参照してください。 [SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)します。  
   
 ### <a name="deprecated-methods-in-the-web-service-endpoint"></a>Web サービス エンドポイントで非推奨のメソッド  
  次の操作は、<xref:ReportService2010.ReportingService2010> Web サービス エンドポイントでは非推奨です：  

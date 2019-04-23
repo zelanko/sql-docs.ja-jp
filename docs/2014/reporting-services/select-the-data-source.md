@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6f849d34f22fe462353c0a26692cb0a4661ce753
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d2823ad2eefd8855ba5e6ebd706e99271d30da0a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290840"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970858"
 ---
 # <a name="select-the-data-source"></a>データ ソースを選択します
   レポート ウィザードのこのページでは、レポートのデータ ソースを定義できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "56290840"
  使用しているデータ ソースの種類を選択します。たとえば、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースを使用している場合は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を選択します。  
   
  **[接続文字列]**  
- データ ソースの接続文字列を入力します。 接続文字列の詳細については、[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)を参照してください。  
+ データ ソースの接続文字列を入力します。 接続文字列の詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
   
  **[編集]** をクリックし、 **[接続プロパティ]** ダイアログ ボックスを使用してデータ ソース サーバーを指定します。 ローカルまたはリモートのデータ ソースを指定できます。  
   

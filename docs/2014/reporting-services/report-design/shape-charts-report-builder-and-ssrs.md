@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f255edbf6d3da61032551144062247865409efaa
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c547558f98d514b73c4613d4e11f8694a6a7a91b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288680"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968828"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>図形グラフ (レポート ビルダーおよび SSRS)
   図形グラフでは、全体に占める割合 (パーセント) として値データが表示されます。 図形グラフは、通常、セット内の異なる値間での相対的な比較を示すために使用されます。 カテゴリは、図形の個々のセグメントによって表されます。 セグメントのサイズは、値によって決まります。 図形グラフは円グラフに用途が似ていますが、カテゴリは大きい方から順に並べられます。  
@@ -42,7 +42,7 @@ ms.locfileid: "56288680"
   
 -   図形グラフは、全体に占める比率を整然とした順序で表現したときに最も効果を発揮します。 ただし、一貫性を維持するために、既定では、データセット内の値の並べ替えが行われません。 じょうごグラフやピラミッド グラフでデータをできるだけ正確に表現するには、大きい方から順に値を並べ替えることを検討してください。 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
--   比率を計算する場合、NULL、空、負、および 0 の各値は無効です。 このため、これらの値は図形グラフに表示されません。 このような値をグラフ上に表示する必要がある場合は、グラフの種類を図形グラフ以外のグラフに変更してください。 図形以外のグラフに空のポイントを追加する方法の詳細については、[グラフに空のポイントを追加&#40;レポート ビルダーおよび SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)を参照してください。  
+-   比率を計算する場合、NULL、空、負、および 0 の各値は無効です。 このため、これらの値は図形グラフに表示されません。 このような値をグラフ上に表示する必要がある場合は、グラフの種類を図形グラフ以外のグラフに変更してください。 図形以外のグラフに空のポイントを追加する方法の詳細については、次を参照してください。[グラフに空のポイントを追加&#40;レポート ビルダーおよび SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)します。  
   
 -   図形グラフでカスタム パレットを使用して独自の色を定義している場合は、各データ ポイントを独自の色で強調表示するのに十分な色がパレットにあることを確認します。 詳細については、「 [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)をクリックします。  
   
