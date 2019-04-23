@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e991ad5b1b88798604f4c8ba6486af3d739c96c1
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041881"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft SQL Server 用 ODBC Driver
@@ -66,11 +66,11 @@ ODBC ドライバーには、[**sqlcmd**](../../tools/sqlcmd-utility.md) や [**
 ### <a name="windows"></a>Windows
 
 - [非同期実行 (通知方法) の例](../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)
-- [Windows ODBC ドライバーの接続レジリエンシー](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
+- [Windows ODBC ドライバーの接続の復元性](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
 - [ドライバー対応接続プール](../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
 - [機能と動作の変更](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
 - [Windows 上の SQL Server に対する ODBC のリリース ノート](windows/release-notes-odbc-sql-server-windows.md)
-- [インストール、ドライバー ファイルの基本的なシステム要件](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
+- [システム要件、インストール、およびドライバー ファイル](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
 
 

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f91f65dbe060eb11c3eeb049d069c665949dd350
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351033"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155886"
 ---
 # <a name="unused-assembly-cleanup"></a>未使用のアセンブリのクリーンアップ
   `AssemblyCleanup` サンプルには、メタデータ カタログに対してクエリを実行して現在のデータベース内で使用されていないアセンブリをクリーンアップする .NET ストアド プロシージャが含まれています。 唯一のパラメーターである `visible_assemblies` を使用して、表示される未使用のアセンブリを削除するかどうかを指定します。 既定値は false で、表示されない未使用のアセンブリのみが削除されます。それ以外の値の場合、未使用のアセンブリがすべて削除されます。 未使用のアセンブリとは、エントリ ポイントが定義されておらず (ルーチンまたは型と集計)、そのアセンブリを直接的または間接的に参照するアセンブリが使用されていないアセンブリです。  

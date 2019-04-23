@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 57ab374fb8ba0e5a75fc9a97300dace76452174b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7bf73822e8872397499bdfbc04bab6747035fbec
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377004"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155142"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI の概念
   BI 注釈付き概念スキーマ定義言語 (CSDLBI) は、さまざまなデータセットにプログラムでアクセスしてクエリやエクスポートを実行できるように各種のデータを抽象的に表す、Entity Data Framework に基づく言語です。 CSDLBI はリッチ形式でデータ ドリブンのレポートとアプリケーションをサポートしているため、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用して作成されたデータ モデルを表すために CSDLBI が使用されます。  
   
  このセクションでは、CSDLBI 表現と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ モデルをマップする方法 (テーブルと多次元の両方) を、各モデルの種類の例と共に説明します。  
   
- これらの概念を示すために、Codeplex から入手できる AdventureWorks サンプル データベースの例を使用しています。 サンプルの詳細については、[for SQL Server の Adventure Works サンプル](https://go.microsoft.com/fwlink/?linkID=220093)を参照してください。  
+ これらの概念を示すために、Codeplex から入手できる AdventureWorks サンプル データベースの例を使用しています。 サンプルの詳細については、次を参照してください。 [for SQL Server の Adventure Works サンプル](https://go.microsoft.com/fwlink/?linkID=220093)します。  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>CSDLBI のテーブル モデルの構造  
  レポート モデルとそのデータを記述する CSDLBI ドキュメントでは、最初に xsd ステートメントを記述し、その後にモデルの定義を記述します。  
@@ -114,7 +112,7 @@ ms.locfileid: "53377004"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ツールでモデルを生成すると、オブジェクトの名前付けと名前の一意性に関する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の規則に従ってオブジェクトの名前が作成されます。 ただし、CSDLBI は Entity Data Framework (EDF) に基づくため、C# の識別子に関する規則に従って名前を付ける必要があります。そのため、モデルの CSDLBI 出力をサーバーで作成するときに、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のスキーマ内で使用されている名前が取得され、EDF の要件を満たす新しいオブジェクト名が自動的に作成されます。 次の表に、新しい名前が生成されるときの処理を示します。  
   
-|Rule|アクション|  
+|Rule|操作|  
 |----------|------------|  
 |禁止されている文字を使用しない|禁止されている文字は、アンダースコアに置き換えられます。|  
 |名前は一意でなければならない|同じ文字列が 2 つある場合は、一意にするために、どちらかにアンダースコアと数値が追加されます。|  
@@ -131,7 +129,7 @@ ms.locfileid: "53377004"
   
  **ディメンション:** ディメンションは、列とプロパティを持つエンティティ (テーブル) として CSDLBI で表現されます。 パースペクティブに含まれていない場合でも、モデルに含まれるディメンションは、`Hidden` とマークされて CSDL 出力で表現されます。  
   
- **パースペクティブ:** クライアントは、個々 のパースペクティブに対する CSDL を要求することができます。 詳細については、[DISCOVER_CSDL_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)を参照してください。  
+ **パースペクティブ:** クライアントは、個々 のパースペクティブに対する CSDL を要求することができます。 詳細については、次を参照してください。 [DISCOVER_CSDL_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)します。  
   
  **階層:** 階層はサポートされており、一連のレベルとして CSDLBI で表現されます。  
   

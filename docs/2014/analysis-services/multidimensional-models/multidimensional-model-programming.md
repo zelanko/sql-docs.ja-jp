@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ffb254ded921b4300e0f948c4e6b645bdd18ff3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 668878e93d72c9c0b276b95ad090c8570f3fc936
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147767"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155508"
 ---
 # <a name="multidimensional-model-programming"></a>多次元モデルのプログラミング
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、Analysis Services インスタンスおよびそれによって提供される多次元データベースに対してプログラミングを行うために使用できる複数の API が提供されています。 ここでは、Analysis Services 多次元ソリューションを使用してカスタム アプリケーションを作成する際に使用できる方法について説明します。 この情報を使って、特定のプロジェクトの要件に最も適したプログラミング インターフェイスを選ぶことができます。 Analysis Services 開発プロジェクトは、Windows プラットフォームまたは HTTP アクセスをサポートする他のプラットフォーム上で実行されるマネージド コードまたは非マネージド コードをベースにすることができます。  

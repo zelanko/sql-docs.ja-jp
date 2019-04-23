@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - statistical information [XML for Analysis]
@@ -20,15 +18,15 @@ ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1128fccb209c38f4b33009b3045f0f3ad2aebb1
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148157"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156138"
 ---
 # <a name="designing-aggregations-xmla"></a>集計のデザイン (XMLA)
-  集計デザインは、集計の格納時に複数のパーティションで同じ構造を確実に使用するようにするため、特定のメジャー グループのパーティションに関連付けられるものです。 使用して後でマージできるパーティションを簡単に定義することができるパーティションに対して同じストレージ構造を使用して、 [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)コマンド。 集計デザインの詳細については、[集計と集計デザイン](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)を参照してください。  
+  集計デザインは、集計の格納時に複数のパーティションで同じ構造を確実に使用するようにするため、特定のメジャー グループのパーティションに関連付けられるものです。 使用して後でマージできるパーティションを簡単に定義することができるパーティションに対して同じストレージ構造を使用して、 [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)コマンド。 集計デザインの詳細については、次を参照してください。[集計と集計デザイン](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)します。  
   
  使用することができます、集計デザインの集計を定義する、 [DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla) XML for Analysis (XMLA) コマンド。 `DesignAggregations` コマンドには、参照として使用する集計デザインを識別し、その参照に基づいたデザイン プロセスを制御するためのプロパティがあります。 `DesignAggregations` コマンドとそのプロパティを使用すると、集計を反復処理またはバッチ処理でデザインし、その結果のデザイン統計を表示してデザイン プロセスを評価することができます。  
   
@@ -51,7 +49,7 @@ ms.locfileid: "50148157"
 ## <a name="specifying-queries"></a>クエリを指定します。  
  DesignAggregations コマンドは、1 つまたは複数を含めることによって最適化の使用量ベースのコマンドをサポートしている`Query`内の要素、[クエリ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/queries-element-xmla)プロパティ。 `Queries`プロパティは、1 つまたは複数含めることができます[クエリ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)要素。 `Queries` プロパティに `Query` 要素が含まれていない場合、`Object` 要素で指定された集計デザインでは、一般的な集計のセットを含む既定の構造が使用されます。 この一般的な集計のセットは、`Optimization` コマンドの `Storage` および `DesignAggregations` プロパティで指定される条件を満たすようにデザインされています。  
   
- 各 `Query` 要素は、最もよく使用するクエリを対象とする集計を定義するためにデザイン プロセスが使用する、目標クエリを表します。 ユーザー独自のクエリを指定することもできますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスによってクエリ ログに格納されている情報を使用して、最もよく使用されるクエリに関する情報を取得することもできます。 使用法に基づく最適化ウィザードでは、`DesignAggregations` コマンドの送信時にクエリ ログを使用して、時間、使用法、または指定されたユーザーに基づいて目標クエリを取得します。 詳細については、[使用法に基づく最適化ウィザードの F1 ヘルプ](../usage-based-optimization-wizard-f1-help.md)を参照してください。  
+ 各 `Query` 要素は、最もよく使用するクエリを対象とする集計を定義するためにデザイン プロセスが使用する、目標クエリを表します。 ユーザー独自のクエリを指定することもできますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスによってクエリ ログに格納されている情報を使用して、最もよく使用されるクエリに関する情報を取得することもできます。 使用法に基づく最適化ウィザードでは、`DesignAggregations` コマンドの送信時にクエリ ログを使用して、時間、使用法、または指定されたユーザーに基づいて目標クエリを取得します。 詳細については、次を参照してください。[使用法に基づく最適化ウィザードの F1 ヘルプ](../usage-based-optimization-wizard-f1-help.md)します。  
   
  集計を反復的にデザインする場合、目標クエリは最初の `DesignAggregations` コマンドで送信するだけで十分です。これは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスがこれらの目標クエリを保存し、後続の `DesignAggregations` コマンドでそれらのクエリを使用するためです。 反復処理の最初の `DesignAggregations` コマンドで目標クエリを渡した場合、後続の `DesignAggregations` コマンドの `Queries` プロパティに目標クエリが含まれていると、エラーが発生します。  
   
@@ -68,7 +66,7 @@ ms.locfileid: "50148157"
  たとえば文字列 "011" は、3 つの属性を持つディメンションを処理するクエリの中に、2 番目と 3 番目の属性が含まれることを示しています。  
   
 > [!NOTE]  
->  いくつかの属性は、データセットでの考慮の対象から除外されます。 除外された属性の詳細については、[Query 要素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)を参照してください。  
+>  いくつかの属性は、データセットでの考慮の対象から除外されます。 除外された属性の詳細については、次を参照してください。 [Query 要素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)します。  
   
  集計デザインを含むメジャー グループ内の各ディメンションがによって表される、*データセット*値、`Query`要素。 *Dataset* の値の順序は、メジャー グループに含まれるディメンションの順序と一致している必要があります。  
   
@@ -76,10 +74,10 @@ ms.locfileid: "50148157"
  `DesignAggregations` コマンドは、デザイン プロセスで必要な対話性に応じて、反復処理またはバッチ処理の一部として使用することができます。  
   
 ### <a name="designing-aggregations-using-an-iterative-process"></a>反復処理を使用した集計のデザイン  
- 集計を反復処理によってデザインするには、複数の `DesignAggregations` コマンドを送信して、デザイン プロセスを細かく制御します。 集計のデザイン ウィザードでも、同じアプローチを使用してデザイン プロセスを細かく制御します。 詳細については、[集計デザイン ウィザードの F1 ヘルプ](../aggregation-design-wizard-f1-help.md)を参照してください。  
+ 集計を反復処理によってデザインするには、複数の `DesignAggregations` コマンドを送信して、デザイン プロセスを細かく制御します。 集計のデザイン ウィザードでも、同じアプローチを使用してデザイン プロセスを細かく制御します。 詳細については、次を参照してください。[集計デザイン ウィザードの F1 ヘルプ](../aggregation-design-wizard-f1-help.md)します。  
   
 > [!NOTE]  
->  集計を反復処理によってデザインするには、明示的なセッションが必要です。 明示的なセッションの詳細については、[接続の管理とセッション&#40;XMLA&#41;](managing-connections-and-sessions-xmla.md)を参照してください。  
+>  集計を反復処理によってデザインするには、明示的なセッションが必要です。 明示的なセッションの詳細については、次を参照してください。[接続の管理とセッション&#40;XMLA&#41;](managing-connections-and-sessions-xmla.md)します。  
   
  反復処理を開始するには、最初に以下の情報を含む `DesignAggregations` コマンドを送信します。  
   
@@ -98,7 +96,7 @@ ms.locfileid: "50148157"
 ### <a name="designing-aggregations-using-a-batch-process"></a>バッチ処理を使用した集計のデザイン  
  集計のデザインは、単一の `DesignAggregations` コマンドを送信することにより、バッチ処理を使用して行うこともできます。そのコマンドには、デザイン プロセス全体の設定となり制限する `Steps`、`Time`、`Storage`、および `Optimization` プロパティの値を含めます。 使用法に基づく最適化を行う場合は、`Queries` プロパティに、デザイン プロセスの対象となる目標クエリを含める必要があります。 また、コマンドの終了時に、定義された集計がデザイン プロセスによって集計デザインに保存されるように、`Materialize` を true に設定します。  
   
- バッチ処理による集計のデザインは、暗黙のセッションまたは明示的なセッションのいずれでも行うことができます。 暗黙的および明示的なセッションの詳細については、[接続の管理とセッション&#40;XMLA&#41;](managing-connections-and-sessions-xmla.md)を参照してください。  
+ バッチ処理による集計のデザインは、暗黙のセッションまたは明示的なセッションのいずれでも行うことができます。 暗黙的および明示的なセッションの詳細については、次を参照してください。[接続の管理とセッション&#40;XMLA&#41;](managing-connections-and-sessions-xmla.md)します。  
   
 ## <a name="returning-design-statistics"></a>デザインの統計を返す処理  
  `DesignAggregations` コマンドは、クライアント アプリケーションに制御を返すときに、そのコマンドに関するデザインの統計を表す 1 つの行を含む行セットを返します。 行セットに含まれる列は、次の表のとおりです。  

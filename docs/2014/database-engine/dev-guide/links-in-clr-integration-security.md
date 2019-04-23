@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - table-access links [CLR integration]
@@ -17,12 +15,12 @@ ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32974fc138cb5bcd444af18d0854c7a07d8fdcad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067202"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156779"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 統合のセキュリティのリンク
   ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはいずれかのマネージド言語で、[!INCLUDE[tsql](../../includes/tsql-md.md)] 内のユーザー コードが相互に呼び出すしくみを説明します。 このようなオブジェクト間のリレーションシップをリンクと呼びます。  

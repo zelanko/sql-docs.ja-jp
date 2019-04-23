@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -23,12 +21,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 99fd0d558fccab09f0c73ddd47ef5b4b22d303c3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511496"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157908"
 ---
 # <a name="clr-stored-procedures"></a>CLR ストアド プロシージャ
   ストアド プロシージャはスカラー式では使用できないルーチンです。 ストアド プロシージャはスカラー関数とは異なり、表形式の結果やメッセージをクライアントに返す操作、DDL (データ定義言語) ステートメントや DML (データ操作言語) ステートメントを呼び出す操作、出力パラメーターを返す操作が行えます。 CLR 統合とマネージ コードの使い分けの利点については、[!INCLUDE[tsql](../../includes/tsql-md.md)]を参照してください[CLR 統合の概要](../../relational-databases/clr-integration/clr-integration-overview.md)します。  
@@ -42,10 +40,10 @@ ms.locfileid: "52511496"
   
  パラメーターを受け取るメソッドの場合、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 実装のパラメーター数は、このストアド プロシージャの [!INCLUDE[tsql](../../includes/tsql-md.md)] 宣言で使用したパラメーター数と同じにする必要があります。  
   
- CLR ストアド プロシージャに渡すパラメーターには、マネージド コード内に同等のパラメーターを持つネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型であればどの型でも使用できます。 プロシージャを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文では、これらの型には最も適切なネイティブ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同等の型を指定する必要があります。 型変換の詳細については、[CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)を参照してください。  
+ CLR ストアド プロシージャに渡すパラメーターには、マネージド コード内に同等のパラメーターを持つネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型であればどの型でも使用できます。 プロシージャを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文では、これらの型には最も適切なネイティブ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同等の型を指定する必要があります。 型変換の詳細については、次を参照してください。 [CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)します。  
   
 ### <a name="table-valued-parameters"></a>テーブル値パラメーター  
- テーブル値パラメーター (TVP) とは、プロシージャや関数に渡されるユーザー定義のテーブル型です。TVP を使用すると、複数行のデータを効率的にサーバーに渡すことができます。 TVP の機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 また、サーバーへのラウンド トリップを減らすのにも役立ちます。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データを TVP としてサーバーに送信できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスで実行されているマネージド ストアド プロシージャやマネージド関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 Tvp の詳細については、[テーブル値パラメーターの&#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)を参照してください。  
+ テーブル値パラメーター (TVP) とは、プロシージャや関数に渡されるユーザー定義のテーブル型です。TVP を使用すると、複数行のデータを効率的にサーバーに渡すことができます。 TVP の機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 また、サーバーへのラウンド トリップを減らすのにも役立ちます。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データを TVP としてサーバーに送信できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスで実行されているマネージド ストアド プロシージャやマネージド関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 Tvp の詳細については、次を参照してください。[テーブル値パラメーターの&#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)します。  
   
 ## <a name="returning-results-from-clr-stored-procedures"></a>CLR ストアド プロシージャから結果を返す  
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ストアド プロシージャからの情報はいくつかの形式で返すことができます。 出力パラメーター、表形式の結果、およびメッセージの形式を使用できます。  
@@ -139,7 +137,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 -- AS EXTERNAL NAME TestStoredProc.[MyNS.StoredProcedures].PriceSum  
 ```  
   
- なお*合計*として宣言されている、 `int` SQL Server データ型、および、*値*CLR ストアド プロシージャで定義されているパラメーターの指定が、 `SqlInt32` CLR データ型。 呼び出し元のプログラムが CLR ストアド プロシージャ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に自動的に変換、 `SqlInt32` CLR データ型、 `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  どの CLR に関するデータ型でき、変換することはできませんの詳細については、[CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)を参照してください。  
+ なお*合計*として宣言されている、 `int` SQL Server データ型、および、*値*CLR ストアド プロシージャで定義されているパラメーターの指定が、 `SqlInt32` CLR データ型。 呼び出し元のプログラムが CLR ストアド プロシージャ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に自動的に変換、 `SqlInt32` CLR データ型、 `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  どの CLR に関するデータ型でき、変換することはできませんの詳細については、次を参照してください。 [CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)します。  
   
 ### <a name="returning-tabular-results-and-messages"></a>表形式の結果とメッセージを返す  
  表形式の結果とメッセージは、`SqlPipe` クラスの `Pipe` プロパティを使用して取得した `SqlContext` オブジェクトを使用してクライアントに返されます。 `SqlPipe` オブジェクトには `Send` メソッドがあります。 `Send` メソッドを呼び出すことにより、パイプ経由で呼び出し側のアプリケーションにデータを送信できます。  

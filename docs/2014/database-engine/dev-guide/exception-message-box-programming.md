@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - ExceptionMessageBox class, about ExceptionMessageBox class
@@ -19,12 +17,12 @@ ms.assetid: 0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e2417978fa053d2d6cb030149993a54013faa75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 205638b82e8d0d71a3d674bd970e4bf8d2e3ea5f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148672"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155128"
 ---
 # <a name="exception-message-box-programming"></a>例外メッセージ ボックスのプログラミング
   例外メッセージ ボックス プログラム インターフェイスと共にインストールされで使用されるは[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]グラフィカルなコンポーネントです。 例外メッセージ ボックスは、サポートされるマネージド アセンブリです。アプリケーションで例外メッセージ ボックスを使用することで、メッセージ エクスペリエンスを高い柔軟性で制御し、ユーザーが後で参照できるようにエラー メッセージを保存したり、メッセージのヘルプを表示できるようにすることができます。 例外メッセージ ボックスのすべてのエディションでインストールされているため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を除く[!INCLUDE[ssEW](../../includes/ssew-md.md)]、コンピューターであれば追加構成なしで使用することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント コンポーネントがインストールされています。  
@@ -41,6 +39,6 @@ ms.locfileid: "48148672"
   
 -   例外に関連付けられたヘルプ リンクを使って、オンライン ヘルプ システムにアクセスできます。  
   
- 詳細については、[プログラム例外メッセージ ボックス](../../../2014/database-engine/dev-guide/program-exception-message-box.md)を参照してください。  
+ 詳細については、次を参照してください。[プログラム例外メッセージ ボックス](../../../2014/database-engine/dev-guide/program-exception-message-box.md)します。  
   
   

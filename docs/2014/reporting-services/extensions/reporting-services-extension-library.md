@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [Reporting Services]
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - extensions [Reporting Services], library
 - library [Reporting Services]
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a7c5191a5b2964d8dbf9f5611cc051cdae4ffe33
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d09464ce4a61903a3e9b74711482d2ce07bd0c4e
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036173"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157349"
 ---
 # <a name="reporting-services-extension-library"></a>Reporting Services 拡張機能ライブラリ
   Reporting Services 拡張機能ライブラリは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれているクラス、インターフェイス、および値の型のセットです。 このライブラリは、システムの機能にアクセスし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アプリケーションを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントを拡張するための土台となるように設計されています。  

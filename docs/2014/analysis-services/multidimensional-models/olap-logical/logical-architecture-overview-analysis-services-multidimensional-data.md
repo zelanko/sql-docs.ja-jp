@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - cubes [Analysis Services], examples
@@ -15,17 +13,17 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd2aad1cf57852c2b78db1128a972c0490a52a85
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416493"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157129"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>論理アーキテクチャの概要 (Analysis Services - 多次元データ)
   Analysis Services は、さまざまな種類の Analysis Services モデルで使用されるメモリ アーキテクチャとランタイム環境を指定する、サーバー配置モードで動作します。 サーバー モードは、インストール時に決定されます。 **多次元およびデータ マイニング モード**従来の OLAP およびデータ マイニングをサポートしています。 **表形式モード**表形式モデルをサポートしています。 **SharePoint 統合モード**の読み込みとブック内の Excel または PowerPivot のデータ モデルのクエリを使用して、SharePoint の PowerPivot としてインストールされた Analysis Services のインスタンスを参照します。  
   
- このトピックでは、多次元モードとデータ マイニング モードで動作する場合の Analysis Services の基本アーキテクチャについて説明します。 その他のモードの詳細については、[テーブル モデリング&#40;SSAS 表形式&#41;](../../tabular-models/tabular-models-ssas.md)と[を比較する表形式と多次元ソリューション&#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)を参照してください。  
+ このトピックでは、多次元モードとデータ マイニング モードで動作する場合の Analysis Services の基本アーキテクチャについて説明します。 その他のモードの詳細については、次を参照してください。[テーブル モデリング&#40;SSAS 表形式&#41;](../../tabular-models/tabular-models-ssas.md)と[を比較する表形式と多次元ソリューション&#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)します。  
   
 ## <a name="basic-architecture"></a>基本アーキテクチャ  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスには、複数のデータベースを含めることができます。また、1 つのデータベース内に OLAP オブジェクトとデータ マイニング オブジェクトを同時に格納できます。 アプリケーションは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の指定インスタンスおよび指定データベースに接続します。 サーバー コンピューターは [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の複数のインスタンスをホストできます。 インスタンス[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 名前は"\<ServerName >\\< InstanceName\>"。 次の図は、間のリレーションシップをすべて説明したように[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]オブジェクト。  

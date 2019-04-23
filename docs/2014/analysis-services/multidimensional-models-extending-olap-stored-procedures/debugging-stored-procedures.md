@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - debugging stored procedures [Analysis Services]
@@ -15,12 +13,12 @@ ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f02cd9ec48a961336bcddc96024106702525899f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179782"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155541"
 ---
 # <a name="debugging-stored-procedures"></a>デバッグ系のストアド プロシージャ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のストアド プロシージャは、実際には C# (あるいは他の CLR または COM 言語) で作成されている CLR または COM ライブラリ (通常は DLL) です。 このため、ストアド プロシージャのデバッグは、Visual Studio デバッグ環境で他のアプリケーションをデバッグする作業とほとんど同じになります。 Visual Studio 開発環境でのストアド プロシージャのデバッグは、統合されたデバッグ機能を使用します。 これらの機能を使用すると、プロシージャ内のさまざまな場所で停止し、メモリやレジスタの値を調査し、変数を変更し、メッセージ トラフィックを観察し、コードの動作を詳細にわたって確認することができます。  
@@ -33,7 +31,7 @@ ms.locfileid: "48179782"
   
 3.  Visual Studio を使用して、ストアド プロシージャ DLL のデバッグ ビルドを作成します。  
   
-4.  DLL をサーバーに配置します。 DLL をサーバーに展開する方法の詳細については、[ストアド プロシージャの作成](creating-stored-procedures.md)を参照してください。  
+4.  DLL をサーバーに配置します。 DLL をサーバーに展開する方法の詳細については、次を参照してください。[ストアド プロシージャの作成](creating-stored-procedures.md)です。  
   
 5.  テストするストアド プロシージャを呼び出すアプリケーションが必要です。 このようなアプリケーションを用意していない場合は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の MDX クエリ エディターを使用して、テストするストアド プロシージャを呼び出す MDX クエリを作成できます。  
   

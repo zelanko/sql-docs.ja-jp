@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e1dedaab57761c88487dbd3a61d359bcf0b3dd1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350276"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155668"
 ---
 # <a name="handling-large-objects-using-clr"></a>CLR を使用したラージ オブジェクトの処理
   SQL Server の `HandlingLOBUsingCLR` サンプルでは、共通言語ランタイム (CLR) ストアド プロシージャを使用して、サーバーで使用可能なファイル システムと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間でラージ オブジェクト (LOB) を転送する方法を示します。 このサンプルでは、サーバー側コード内のファイルへのアクセス方法を示し、CLR ベースのストアド プロシージャから動的クエリとストアド プロシージャの両方を呼び出します。 また、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用した、CLR メソッドとアセンブリの登録解除と登録を行う方法も示します。  

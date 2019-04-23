@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - sample applications [SMO]
@@ -16,17 +14,17 @@ ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 90dc94e906ff9b8e99e14bef4b6b0bd158d38f37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 933274c4e5084d50d530b1d90377648b793a6f86
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136992"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154010"
 ---
 # <a name="link-to-programming-samples"></a>プログラミング サンプルへのリンク
   次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO ディレクトリにある、[!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理オブジェクト (SMO) のプログラミング サンプルを示します。 これらのサンプルは両方で使用できる[!INCLUDE[csprcs](../../includes/csprcs-md.md)]と[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET。  
   
- サンプルをインストールする方法の詳細については、[SQL Server 2012 用 AdventureWorks](http://msftdbprodsamples.codeplex.com/releases/view/55330)を参照してください。  
+ サンプルをインストールする方法の詳細については、次を参照してください。 [SQL Server 2012 用 AdventureWorks](http://msftdbprodsamples.codeplex.com/releases/view/55330)します。  
   
 |[タイトル]|説明|  
 |-----------|-----------------|  
@@ -45,7 +43,7 @@ ms.locfileid: "48136992"
 |ServerConnect |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムへの接続方法を示します。|  
 |ServerInfo |選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバーと接続のプロパティのリストを表示します。|  
 |SMOPing |選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへ接続し、選択したプロパティをダンプするコンソール アプリケーションです。 確認に使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続します。|  
-|SQLServerList|使用可能なインスタンスの一覧を列挙します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
+|SQLServerList|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用可能なインスタンスの一覧を列挙します。|  
 |SQLService |開始、停止、一時停止、および再開が可能な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスを表示します。|  
 |Tracer|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからトレース情報の読み込みと表示を行います。|  
 |トリガー|データベース トリガーが表示されます。|  

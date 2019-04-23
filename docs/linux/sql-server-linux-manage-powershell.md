@@ -10,22 +10,22 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 18b0fec36a572893cb5150ef75973df674cf875d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 903d2d89ca0d551cbb78cfb69dd305f852f62313
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685830"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158768"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows で PowerShell を使用して、SQL Server on Linux を管理するには
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事で紹介[SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx)と SQL Server on Linux で使用する方法の例のいくつかについて説明します。 Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合に使用できるように、for SQL Server PowerShell のサポートは現在、Windows で使用できます。
+この記事で紹介[SQL Server PowerShell](../powershell/sql-server-powershell.md)と SQL Server on Linux で使用する方法の例のいくつかについて説明します。 Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合に使用できるように、for SQL Server PowerShell のサポートは現在、Windows で使用できます。
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Windows 上の SQL PowerShell の最新バージョンをインストールします。
 
-[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) Windows に含まれている[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)します。 SQL Server を使用する場合は、SSMS および SQL PowerShell の最新バージョンを常に使用する必要があります。 SSMS の最新バージョンを継続的に更新および最適化し、現在、SQL Server on Linux で動作します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SQL Server Management Studio のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)します。 最新の情報、ダウンロード可能な新しいバージョンがある場合にする最新バージョンの SSMS を求めます。
+[SQL PowerShell](../powershell/download-sql-server-ps-module.md) Windows では、PowerShell ギャラリーに格納されます。 SQL Server を使用する場合は、SqlServer PowerShell モジュールの最新バージョンを常に使用する必要があります。
 
 ## <a name="before-you-begin"></a>アンインストールの準備
 
@@ -58,8 +58,7 @@ PowerShell では、次の出力のような情報を表示する必要があり
 ```
 ModuleType Version    Name          ExportedCommands
 ---------- -------    ----          ----------------
-Script     0.0        SqlServer
-Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
+Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
 ```
 
 ## <a name="connect-to-sql-server-and-get-server-information"></a>SQL Server に接続し、サーバーの情報を取得します。
@@ -68,7 +67,6 @@ Linux 上の SQL Server インスタンスに接続し、いくつかのサー�
 
 コピーして、PowerShell プロンプトで次のコマンドを貼り付けます。 これらのコマンドを実行すると、PowerShell が行われます。
 - 表示、 *Windows PowerShell 資格情報要求*資格情報の入力を求めるダイアログ (*SQL ユーザー名*と*SQL パスワード*)、SQL Server に接続するにはLinux 上のインスタンス
-- SQL Server 管理オブジェクト (SMO) アセンブリを読み込み
 - インスタンスを作成、 [Server](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.server.aspx)オブジェクト
 - 接続、 **Server**といくつかのプロパティを表示
 
@@ -79,26 +77,17 @@ Linux 上の SQL Server インスタンスに接続し、いくつかのサー�
 $serverInstance = "<your_server_instance>"
 $credential = Get-Credential
 
-# Load the SMO assembly and create a Server object
-[System.Reflection.Assembly]::LoadWithPartialName('Microsoft.SqlServer.SMO') | out-null
-$server = New-Object ('Microsoft.SqlServer.Management.Smo.Server') $serverInstance
-
-# Set credentials
-$server.ConnectionContext.LoginSecure=$false
-$server.ConnectionContext.set_Login($credential.UserName)
-$server.ConnectionContext.set_SecurePassword($credential.Password)
-
 # Connect to the Server and get a few properties
-$server.Information | Select-Object Edition, HostPlatform, HostDistribution | Format-List
+Get-SqlInstance -ServerInstance $serverInstance -Credential $credential
 # done
 ```
 
 PowerShell では、次の出力のような情報を表示する必要があります。
 
 ```
-Edition          : Developer Edition (64-bit)
-HostPlatform     : Linux
-HostDistribution : Ubuntu
+Instance Name                   Version    ProductLevel UpdateLevel  HostPlatform HostDistribution                
+-------------                   -------    ------------ -----------  ------------ ----------------                
+your_server_instance            14.0.3048  RTM          CU13         Linux        Ubuntu 
 ```
 > [!NOTE]
 > これらの値は何も表示場合、ほとんどの場合、ターゲット SQL Server インスタンスに接続が失敗しました。 SQL Server Management Studio から接続する、同じ接続情報を使用することを確認します。 次に、[接続のトラブルシューティングに関する推奨事項](sql-server-linux-troubleshooting-guide.md#connection)を確認します。
@@ -123,5 +112,5 @@ $credential = Get-Credential
 Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Yesterday | Out-GridView
 # done
 ```
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)

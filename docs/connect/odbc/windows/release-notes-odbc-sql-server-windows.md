@@ -12,10 +12,10 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: f74d5a70325fdceb311bb3a45ba6824e64242ff0
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872012"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Windows 上の SQL Server に対する ODBC のリリース ノート
@@ -48,7 +48,7 @@ GeneMi (and CraigG).  2019/03/30.
 
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
-| Azure Active Directory マネージド サービス ID (システムおよびユーザー割り当て) 認証モード。 | 「[Using Azure Active Directory with the ODBC Driver (ODBC ドライバーでの Azure Active Directory の使用)](../using-azure-active-directory.md)」をご覧ください。 |
+| Azure Active Directory マネージド サービス ID (システムおよびユーザー割り当て) 認証モード。 | 「[ODBC ドライバーでの Azure Active Directory の使用](../using-azure-active-directory.md)」を参照してください。 |
 | Always Encrypted 列に対して入力パラメーターをストリーム配信する機能。 | 「[Limitations of the ODBC driver when using Always Encrypted (Always Encrypted を使用するときの ODBC ドライバーの制限事項)](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)」をご覧ください。 |
 | XA 分散トランザクション。 | 「[Using XA Transactions (XA トランザクションの使用)](../use-xa-with-dtc.md)」をご覧ください。 |
 | バグの修正。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
@@ -98,7 +98,7 @@ GeneMi (and CraigG).  2019/03/30.
 > - ローカル パスからの UDT の作成はサポートされていません。
 > - Windows 統合認証はサポートされていません。
 > - DTC はサポートされていません。
-> - `sa` アカウントは存在しません (既定のアカウントは `cloudSA` という名前です)。
+> - `sa` アカウントは存在しません (既定のアカウントは `cloudSA` と呼ばれます)。
 > - TDS トークン エラー (0xAA) では、正しくないサーバー名が返されます。
 > - データベース名の特殊文字はサポートされていません。
 > - ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] はサポートされていません。

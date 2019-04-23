@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4eead93b1c2254ee9634ef5a05b1cd5d60ce079f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375384"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158678"
 ---
 # <a name="array-parameter-sample"></a>Array パラメーター サンプル
   データベース内の行のセットを作成、更新、または削除すると便利な場合があります。 これを行うには、いくつかの方法があります。 1 つは、共通言語ランタイム (CLR) 統合ユーザー定義データ型を使用して、情報の配列をクライアントからサーバー上の CLR 統合ストアド プロシージャへ渡す方法です。 CLR 統合ユーザー定義データ型の性質によって、サーバーに提供されるデータの大きさは 8,000 バイトに制限されます。 したがって、この方法は、大規模なデータや複雑なデータを扱う場合には適切ではありません。 操作するデータが小規模で単純な場合、この方法は、行ごとにストアド プロシージャを呼び出す方法よりもはるかに効率的です。 データの順序が重要なアプリケーションでは、配列を渡すことでデータの順序を保持できます。このサンプルの内容は次のとおりです。  

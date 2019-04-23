@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96cac25e91c369b5069e4b91c72b99911f3e4d44
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 41115e764099540a5b4548986c7c4c912d562f5b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361324"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156964"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>カレンダー対応の日付と時刻 UDT サンプル
   使用されているカレンダー システムを把握していないと日付は意味を持たないため、日付を文字列として格納すると混乱が生じる可能性があります。`CADatetime` サンプルでは、日付と時刻のカレンダー対応処理を行う `CADatetime` と `CADate` という 2 つのユーザー定義データ型を定義しています。  

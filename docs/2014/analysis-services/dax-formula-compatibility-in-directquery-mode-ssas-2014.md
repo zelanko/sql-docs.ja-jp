@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8061cf30107a5bdfff6d8af53e70affb93ff9469
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372664"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154248"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery モードでの DAX 数式の互換性 (SSAS 2014)
 Analysis Services 表形式モデルでメジャーと使用するための他のカスタム式を作成する Data Analysis Expression (DAX) 言語を使用できます[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel ブックのデータ モデルと Power BI Desktop データ モデル。 多くの点では、これらの環境を作成するモデルが同じであり、同じメジャー、リレーションシップ、および Kpi を使用するなど。ただし、Analysis Services 表形式のモデルを作成して、DirectQuery モードで展開する場合は、使用できる数式に関していくつかの制限。 このトピックで、これらの違いの概要を説明します、互換性レベル 1100 または 1103 の SQL Server 2014 Analysis Services tabulars モデルおよび DirectQuery モードでは、サポートされていない関数を一覧表示およびサポートされている関数の一覧が可能性があります。異なる結果を返します。  
   
-このトピックでは、内でという用語を使用しました*インメモリ モデルで*ホストされている表形式モードで実行されている Analysis Services サーバー上のメモリ内キャッシュされたデータを完全には表形式モデルを参照します。 使用して*DirectQuery モデル*を作成または DirectQuery モードで配置された表形式モデルを参照してください。 DirectQuery モードの詳細については、[DirectQuery モード (SSAS テーブル)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)を参照してください。  
+このトピックでは、内でという用語を使用しました*インメモリ モデルで*ホストされている表形式モードで実行されている Analysis Services サーバー上のメモリ内キャッシュされたデータを完全には表形式モデルを参照します。 使用して*DirectQuery モデル*を作成または DirectQuery モードで配置された表形式モデルを参照してください。 DirectQuery モードの詳細については、次を参照してください。 [DirectQuery モード (SSAS テーブル)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)します。  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>インメモリと DirectQuery モードの違い  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e6b7555ce83cac4bba4c930965ec391ea82d457
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 824a722c527b600fd09c8f68725ad033ab1a1b8c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358934"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158788"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 文字列ユーザー定義データ型 (UDT)
   SQL Server の UTF8String サンプルでは、ユーザー定義データ型の実装について示しています。 このサンプルでは、データベースの型システムを拡張して UTF-8 でエンコードされた値のストレージを提供する UTF-8 ユーザー定義データ型の実装について示します。 このデータ型では、Unicode 文字列と UTF-8 との変換を行うコードの実装も行います。  

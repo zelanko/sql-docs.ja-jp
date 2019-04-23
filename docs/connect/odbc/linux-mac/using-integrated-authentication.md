@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042251"
 ---
 # <a name="using-integrated-authentication"></a>統合認証を使用する
@@ -81,9 +81,9 @@ DSN と接続するときに、`odbc.ini` の DSN エントリに **Trusted_Conn
   
 -   ユーザーは、クライアント コンピューターにログインし、アプリケーション サーバーに対して認証します。  
   
--   アプリケーション サーバーは異なるデータベースとして認証し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に接続します。  
+-   アプリケーション サーバーは異なるデータベースとして認証し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続します。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は別のデータベース ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) のデータベース ユーザーとして認証します。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、別のデータベース ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) に対するデータベース ユーザーとして認証を行います。  
   
 統合認証を構成すると、資格情報がリンク サーバーに渡されます。  
   

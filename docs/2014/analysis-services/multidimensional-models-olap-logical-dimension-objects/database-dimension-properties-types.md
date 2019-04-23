@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -29,12 +27,12 @@ ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61792f88c028ce1c011b91fb9a5ecbec97b50396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212512"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157998"
 ---
 # <a name="dimension-types"></a>ディメンションの種類
   `Type` プロパティの設定は、ディメンションの内容に関する情報をサーバーおよびクライアント アプリケーションに提供します。 `Type` の設定がクライアント アプリケーションへのガイダンスの提供のみを目的としている場合は、この設定を省略できます。 一方、`Accounts` ディメンションや `Time` ディメンションでは、ディメンションおよびその属性の `Type` プロパティの設定によって、サーバー ベースの具体的な動作が決まるため、キューブで特定の動作を実装する際に、この設定が必要になることがあります。 たとえば、ディメンションの `Type` プロパティを `Accounts` に設定すると、標準ディメンションに勘定科目属性が含まれていることがクライアント アプリケーションに示されます。 時間、アカウント、および通貨ディメンションの詳細については、次を参照してください[日付型ディメンションの作成](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md)、 [、親子型ディメンションの財務アカウントの作成](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)、および[、通貨の作成。ディメンションの入力](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)します。  
@@ -56,7 +54,7 @@ ms.locfileid: "48212512"
 |Products|属性が製品情報を表すディメンションです。|  
 |シナリオ|属性が計画的または戦略的な分析情報を表すディメンションです。|  
 |Quantitative|属性が量的な情報を表すディメンションです。|  
-|Utility|属性がその他の情報を表すディメンションです。|  
+|ユーティリティ|属性がその他の情報を表すディメンションです。|  
 |通貨|この種類のディメンションには、通貨のデータとメタデータが含まれています。|  
 |Rates|属性が通貨レート情報を表すディメンションです。|  
 |Channel|属性がチャネル情報を表すディメンションです。|  
@@ -64,6 +62,6 @@ ms.locfileid: "48212512"
   
 ## <a name="see-also"></a>参照  
  [既存のテーブルを使用したディメンションを作成します。](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [ディメンション&#40;Analysis Services - 多次元データ&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [ディメンション &#40;Analysis Services - 多次元データ&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

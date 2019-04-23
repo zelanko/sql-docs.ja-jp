@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- replication
+ms.technology: database-engine
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -20,12 +18,12 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58ea6e365d16e4487a1f24700a7731ed96e04914
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128052"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157113"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、レプリケーション トポロジでユーザーが構成可能なすべての機能に、システム ストアド プロシージャを使ってプログラムからアクセスできます。 ストアド プロシージャは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] や sqlcmd コマンド ライン ユーティリティを使って個別に実行することもできますが、一連のレプリケーション タスクを実行する [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプト ファイルを作成することで、その利点を最大限に活かすことができます。  

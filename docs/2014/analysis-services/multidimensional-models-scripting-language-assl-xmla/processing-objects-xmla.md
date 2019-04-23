@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - errors [XML for Analysis]
@@ -23,12 +21,12 @@ ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4bf1f7abd985c7ef3544a722351a2d049f6ea83
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ab38ea9b58e891d813a3ca73f43d20a364275da0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370904"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156130"
 ---
 # <a name="processing-objects-xmla"></a>オブジェクトの処理 (XMLA)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]処理は、手順、または、ビジネス分析のための情報に手順を有効にするデータを一連の。 処理内容はオブジェクトの種類によって異なりますが、データを情報に変換する処理の一部として必ず実行されます。  
@@ -76,7 +74,7 @@ ms.locfileid: "53370904"
   
  `ProcessAffectedObjects` コマンドの `Process` 属性を true に設定すると、指定されたオブジェクトを処理することによって影響を受ける関連オブジェクトもすべて処理されます。 たとえばを使用して、ディメンションの増分更新、 *ProcessUpdate*処理オプション、`Process`コマンドを任意のパーティションの集計はメンバーの追加、削除によって無効になるもによって処理される[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]場合`ProcessAffectedObjects`設定が true にします。 この場合、1 つの `Process` コマンドで [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの複数のオブジェクトを処理することができますが、`Process` コマンドで指定された単一のオブジェクトの他に処理する必要があるオブジェクトは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって決定されます。  
   
- しかし、`Process` コマンドの中で複数の `Batch` コマンドを使用することによって、ディメンションなどの複数のオブジェクトを同時に処理することもできます。 バッチ操作では、`ProcessAffectedObjects` 属性を使用する場合よりも詳細なレベルで、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのオブジェクトの直列または並列処理を制御することができ、大規模な [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの処理方法をチューニングすることができます。 バッチ操作の実行の詳細については、[バッチ操作の実行&#40;XMLA&#41;](performing-batch-operations-xmla.md)を参照してください。  
+ しかし、`Process` コマンドの中で複数の `Batch` コマンドを使用することによって、ディメンションなどの複数のオブジェクトを同時に処理することもできます。 バッチ操作では、`ProcessAffectedObjects` 属性を使用する場合よりも詳細なレベルで、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのオブジェクトの直列または並列処理を制御することができ、大規模な [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの処理方法をチューニングすることができます。 バッチ操作の実行の詳細については、次を参照してください。[バッチ操作の実行&#40;XMLA&#41;](performing-batch-operations-xmla.md)します。  
   
 ## <a name="specifying-out-of-line-bindings"></a>不一致バインドの指定  
  場合、`Process`コマンドが含まれていない、`Batch`コマンド、アウトオブ ライン バインドで必要に応じて指定できます、[バインド](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/bindings-element-xmla)、 [DataSource](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)、および[DataSourceView](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/datasourceview-element-xmla)のプロパティ、`Process`コマンドを処理するオブジェクト。 不一致バインドは、バインドが `Process` コマンドの実行時のみに存在する、データ ソース、データ ソース ビュー、および他のオブジェクトへの参照であり、処理中のオブジェクトに関連付けられている既存のバインドをオーバーライドします。 不一致バインドが指定されていない場合、処理対象のオブジェクトに現在関連付けられているバインドが使用されます。  
@@ -87,7 +85,7 @@ ms.locfileid: "53370904"
   
 -   データ フロー タスクを使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ディメンション、マイニング モデル、またはパーティションの処理中にデータを提供します。  
   
- 不一致バインドは、Analysis Services Scripting Language (ASSL) の一部として記述されます。 ASSL でのアウトオブ ライン バインドの詳細については、[データ ソースとバインド&#40;SSAS 多次元&#41;](../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)を参照してください。  
+ 不一致バインドは、Analysis Services Scripting Language (ASSL) の一部として記述されます。 ASSL でのアウトオブ ライン バインドの詳細については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)します。  
   
 ### <a name="incrementally-updating-partitions"></a>パーティションの増分更新  
  通常、既に処理されているパーティションを増分更新する場合は、不一致バインドが必要です。これは、パーティションに対して指定されているバインドが、既にパーティション内で集計されているファクト テーブル データを参照するためです。 既に処理されているパーティションを `Process` コマンドを使用して増分更新する場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は以下のアクションを実行します。  
@@ -98,7 +96,7 @@ ms.locfileid: "53370904"
   
 -   一時パーティションを、選択された既存のパーティションにマージします。  
   
- XML for Analysis (XMLA) を使用してパーティションのマージの詳細については、[パーティションのマージ&#40;XMLA&#41;](merging-partitions-xmla.md)を参照してください。  
+ XML for Analysis (XMLA) を使用してパーティションのマージの詳細については、次を参照してください。[パーティションのマージ&#40;XMLA&#41;](merging-partitions-xmla.md)します。  
   
 ## <a name="handling-processing-errors"></a>処理エラーの処理  
  [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla)のプロパティ、`Process`コマンドを使用して、オブジェクトの処理中に発生したエラーを処理する方法を指定できます。 たとえば、ディメンションの処理時に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] がキー属性のキー列で重複した値を検出したとします。 属性キーは一意である必要があるため、重複するレコードは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって破棄されます。 に基づいて、 [KeyDuplicate](https://docs.microsoft.com/bi-reference/assl/properties/keyduplicate-element-assl)プロパティの`ErrorConfiguration`、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でした。  

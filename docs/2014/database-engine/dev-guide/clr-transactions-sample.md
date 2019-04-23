@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f39555217bf847b6b8f29b8c4de0b5c349ee5e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 13d23977aeeb6f7643fc039c23b02267d47c106f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361374"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154688"
 ---
 # <a name="clr-transactions-sample"></a>CLR Transactions サンプル
   このサンプルでは、`System.Transactions` 名前空間にあるマネージド API を使用してトランザクションを制御する例を示します。 このサンプルで `System.Transactions.TransactionScope` クラスは、要求に応じるのに十分な在庫が存在する場合を除き、ある場所から別の場所への移動をアトミック レベルで行える程度の在庫が存在する場合に、在庫数が調整されないように、トランザクション境界を確立するために使用されています。 分散トランザクションにおける自動登録の例を、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに格納された監査データベースに在庫の変更を記録するという動作で示しています。  

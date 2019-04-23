@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -27,15 +25,15 @@ ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c755b605b834d5c31a7017358fb6e714cfde7964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522888"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158538"
 ---
 # <a name="clr-triggers"></a>CLR トリガー
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (共通言語ランタイム) との統合により、任意の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 言語を使用して CLR トリガーを作成できるようになりました。 ここでは、CLR 統合によって実装されたトリガー固有の情報について説明します。 トリガーの詳細については、[DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (共通言語ランタイム) との統合により、任意の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 言語を使用して CLR トリガーを作成できるようになりました。 ここでは、CLR 統合によって実装されたトリガー固有の情報について説明します。 トリガーの詳細については、次を参照してください。 [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)します。  
   
 ## <a name="what-are-triggers"></a>トリガーとは  
  トリガーとは、言語イベントの実行時に自動的に実行される、特殊なストアド プロシージャです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、DML (データ操作言語) トリガーと DDL (データ定義言語) トリガーという 2 種類の一般的なトリガーがあります。 DML トリガーは、`INSERT` ステートメント、`UPDATE` ステートメント、または `DELETE` ステートメントにより、指定されたテーブルやビューのデータが変更されるときに使用できます。 DDL トリガーは、主に `CREATE`、`ALTER`、および `DROP` で始まるさまざまな DDL ステートメントに応じてストアド プロシージャを起動します。 DDL トリガーは、データベース操作の監査や管理などの管理作業に使用できます。  
@@ -58,7 +56,7 @@ ms.locfileid: "52522888"
   
  `SqlTriggerContext myTriggerContext = SqlContext.TriggerContext;`  
   
- `SqlTriggerContext` クラスでは、トリガーに関するコンテキスト情報が提供されます。 このコンテキスト情報には、トリガーを起動した動作の種類、UPDATE 操作で変更された列、および DDL トリガーの場合はトリガー操作が記述されている XML `EventData` 構造体が含まれます。 詳細については、[EVENTDATA &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)を参照してください。  
+ `SqlTriggerContext` クラスでは、トリガーに関するコンテキスト情報が提供されます。 このコンテキスト情報には、トリガーを起動した動作の種類、UPDATE 操作で変更された列、および DDL トリガーの場合はトリガー操作が記述されている XML `EventData` 構造体が含まれます。 詳細については、次を参照してください。 [EVENTDATA &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)します。  
   
 ### <a name="determining-the-trigger-action"></a>トリガー動作の判断  
  `SqlTriggerContext` を取得すると、これを使用してトリガーを起動した動作の種類を判断できます。 この情報は、`TriggerAction` クラスの `SqlTriggerContext` プロパティから入手できます。  

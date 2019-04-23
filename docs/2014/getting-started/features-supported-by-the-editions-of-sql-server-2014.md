@@ -4,32 +4,25 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0652a2545f0b1e9d591777f0bcabe6395cf4feaa
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f23c3ff4d5bf55609e1dab2462b19a5fa273986f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802656"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158008"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 の各エディションがサポートする機能
 
 
   このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のさまざまなエディションでサポートされる機能の詳細について説明します。 
 
- > **注:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の 180 日間の試用期間中は評価版で使用できます。 詳細については、、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用版ソフトウェア Web サイト](https://go.microsoft.com/fwlink/?LinkId=190955)を参照してください。  
+ > **注:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の 180 日間の試用期間中は評価版で使用できます。 詳細については、次を参照してください。、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用版ソフトウェア Web サイト](https://go.microsoft.com/fwlink/?LinkId=190955)します。  
 > 
 > **注:** SQL Server Evaluation Edition および SQL Server Developer Edition でサポートされている機能については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise の機能セットをご覧ください。  
   
@@ -426,7 +419,7 @@ ms.locfileid: "56802656"
   
  <sup>1</sup>でサポートされているデータ ソースの詳細については[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]を参照してください[Reporting Services でサポートされるデータ ソース&#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)します。  
   
- <sup>2</sup>必要[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint モードでします。 詳細については、[Reporting Services SharePoint モードのインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)を参照してください。  
+ <sup>2</sup>必要[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint モードでします。 詳細については、次を参照してください。 [Reporting Services SharePoint モードのインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)します。  
   
 ### <a name="report-server-database-server-edition-requirements"></a>レポート サーバー データベースのサーバー エディション  
  レポート サーバー データベースを作成するときは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 次の表に、 [!INCLUDE[ssDE](../includes/ssde-md.md)] の特定のエディションで使用できる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のエディションを示します。  
