@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - RSPrintClient control
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0cddac844ac9603da32a4fabc47fa71a8ddcd226
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036603"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157714"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>カスタム アプリケーション内での RSClientPrint コントロールの使用
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX コントロールである **RSPrintClient** を使用すると、HTML ビューアーで表示されたレポートをクライアント側で印刷することができます。 このコントロールには **[印刷]** ダイアログ ボックスがあり、印刷ジョブの開始、レポートのプレビュー、印刷するページの指定、余白の変更を行うことができます。 クライアント側での印刷操作の間、レポート サーバーが画像 (EMF) 表示拡張機能でレポートを表示し、オペレーティング システムの印刷機能を使用して印刷ジョブを作成し、そのジョブをプリンターに送ります。  
@@ -67,7 +65,7 @@ ms.locfileid: "56036603"
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint プロパティ  
   
-|プロパティ|型|RW|既定値|説明|  
+|プロパティ|型|RW|既定|説明|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|レポートにより設定|左余白を取得または設定します。 開発者が設定せず、レポートにも指定がない場合の既定値は 12.2 mm です。|  
 |MarginRight|Double|RW|レポートにより設定|右余白を取得または設定します。 開発者が設定せず、レポートにも指定がない場合の既定値は 12.2 mm です。|  
@@ -107,7 +105,7 @@ ms.locfileid: "56036603"
 |引数|I/O|型|説明|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|In|String|レポート サーバーの仮想ディレクトリを指定します (たとえば、 https://adventure-works/reportserver)します。|  
-|ReportPathParameters|In|String|パラメーターを含む、レポート サーバー フォルダー名前空間内のレポートの完全な名前を指定します。 レポートは、URL にアクセスすることによって取得されます。 たとえば、「/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234」のように指定します。|  
+|ReportPathParameters|In|String|パラメーターを含む、レポート サーバー フォルダー名前空間内のレポートの完全な名前を指定します。 レポートは、URL にアクセスすることによって取得されます。 例:"/AdventureWorks サンプル レポート/Employee Sales Summary & EmpID = 1234」|  
 |ReportName|In|String|レポートの短縮名です (上の例では、短縮名は「Employee Sales Summary」です)。 ここで設定した内容は、[印刷] ダイアログ ボックスと印刷キューに表示されます。|  
   
 ### <a name="example"></a>例  

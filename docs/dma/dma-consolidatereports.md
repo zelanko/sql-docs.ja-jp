@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 15513348d4a747b0335bca8dd6345070e2c84ef0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618179"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60159008"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>エンタープライズを評価し、DMA で評価レポートの統合
 
@@ -71,18 +71,22 @@ SQL Server を評価する PowerShell スクリプトを実行する前に評価
 - SQL Server テーブル
 
 ### <a name="if-using-a-csv-file"></a>CSV ファイルを使用する場合
+
 > [!IMPORTANT]
->
 > インベントリ ファイルがコンマ区切り (CSV) ファイルとして保存されたことを確認します。
 >
 > 既定のインスタンスには、MSSQLServer にインスタンス名を設定します。
->
+
 
 を、データをインポートする csv ファイルを使用する場合は、データの 2 つの列があることを確認**インスタンス名**と**データベース名**、および列ヘッダー行があるはありません。
  
  ![csv ファイルの内容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
-### <a name="if-using-sql-server-table"></a>SQL Server テーブルを使用する場合
+### <a name="if-using-a-sql-server-table"></a>SQL Server テーブルを使用する場合
+
+> [!IMPORTANT]
+> 既定のインスタンスには、MSSQLServer にインスタンス名を設定します。
+
 という名前のデータベースを作成する**EstateInventory**テーブルと呼ばれる、 **DatabaseInventory**します。 このインベントリ データを含むテーブルは、次の 4 つの列が存在する限り、列の任意の数を持つことができます。
 - ServerName
 - InstanceName
@@ -106,7 +110,7 @@ DmaDataCollector 関数に関連付けられているパラメーターは、次
 
 |パラメーター  |説明 |
 |---------|---------|
-|**getServerListFrom** | インベントリ。 指定できる値は**SqlServer**と**CSV**します。<br/>詳細については、[SQL サーバーのインベントリ作成](#create-inventory)を参照してください。 |
+|**getServerListFrom** | インベントリ。 指定できる値は**SqlServer**と**CSV**します。<br/>詳細については、次を参照してください。 [SQL サーバーのインベントリ作成](#create-inventory)です。 |
 |**csvPath** | CSV インベントリ ファイルへのパス。  場合にのみ使用**getServerListFrom**に設定されている**CSV**します。 |
 |**serverName** | SQL Server のインスタンス名を使用する場合は、在庫の**SqlServer**で、 **getServerListFrom**パラメーター。 |
 |**databaseName** | インベントリ テーブルをホストするデータベース。 |
@@ -161,8 +165,8 @@ DmaProcessor は、評価ファイルの処理の完了をデータは DMAReport
 
 1. Power BI Desktop では、DMA レポートの Power BI テンプレートを開きます。
 2. をポイント サーバーの詳細を入力、 **DMAWarehouse**データベースし、**ロード**します。
-   
-      ![読み込まれた DMA レポートの Power BI テンプレート](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
+
+   ![読み込まれた DMA レポートの Power BI テンプレート](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    レポートがからデータを更新した後、 **DMAWarehouse**データベース、次のようなレポートに表示されます。
 

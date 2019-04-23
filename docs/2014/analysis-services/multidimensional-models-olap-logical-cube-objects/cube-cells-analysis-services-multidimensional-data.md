@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storing data [Analysis Services], cells
@@ -28,12 +26,12 @@ ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2fc955cda7ff4151992a1149ce2b732c18052ef0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca4be0cf2c9045ec47d8731830db99c87f32cf0b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141803"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158100"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>キューブ セル (Analysis Services - 多次元データ)
   キューブはメジャー グループとディメンションで編成されたセルで構成されています。 セルは、キューブ内の各ディメンションの 1 メンバーのキューブ内の論理的な一意の交差部分を表します。 たとえば、次のダイアグラムで示すキューブには、Source、Route、Time という 3 つのディメンションで編成された 2 つのメジャーを持つメジャー グループが 1 つ含まれています。  
@@ -69,7 +67,7 @@ ms.locfileid: "48141803"
   
  3rd quarter と 4th quarter の各メンバーの集計が合計であると仮定すると、指定したセルの値は、前のダイアグラムの影付きリーフ セルすべてを合計した 400 です。 指定したセルのセルの値は、他のセルの集計から派生するのでと見なされます、*非リーフ セル*します。  
   
- カスタム メンバーだけでなくカスタム ロールアップやメンバー グループも使用しているメンバーのセルの値も、同様に取得されます。 ただし、計算されるメンバーのセルの値は、計算されるメンバーの定義に使用した多次元式 (MDX) 式に完全に基づいて取得されるため、場合によっては、実際のセル データは関係しないこともあります。 詳細については、[、親子ディメンションのカスタム ロールアップ演算子](../multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)、[カスタム メンバー式の定義](../multidimensional-models/attribute-properties-define-custom-member-formulas.md)、および[計算](../multidimensional-models-olap-logical-cube-objects/calculations.md)を参照してください。  
+ カスタム メンバーだけでなくカスタム ロールアップやメンバー グループも使用しているメンバーのセルの値も、同様に取得されます。 ただし、計算されるメンバーのセルの値は、計算されるメンバーの定義に使用した多次元式 (MDX) 式に完全に基づいて取得されるため、場合によっては、実際のセル データは関係しないこともあります。 詳細については、次を参照してください。 [、親子ディメンションのカスタム ロールアップ演算子](../multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)、[カスタム メンバー式の定義](../multidimensional-models/attribute-properties-define-custom-member-formulas.md)、および[計算](../multidimensional-models-olap-logical-cube-objects/calculations.md)します。  
   
 ## <a name="empty-cells"></a>空のセル  
  キューブ内のすべてのセルに値が必要なわけではありません。キューブには、データのない交差部分もあります。 このような交差部分は空のセルと呼ばれ、キューブ内にしばしば発生します。これは、キューブ内にメジャーを持つディメンション属性のすべての交差部分に、ファクト テーブル内の対応するレコードが含まれているとは限らないからです。 キューブ内のセルの合計数に対するキューブ内の空のセルの比率として呼ば、*希薄*キューブの。  
@@ -78,10 +76,10 @@ ms.locfileid: "48141803"
   
  ![空のセルを示すキューブ図](../../../2014/analysis-services/dev-guide/media/as-cubeintro7.gif "空のセルを示すキューブ図")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、空のセルは特殊な品質を保持するセル。 空のセルは、相互結合、カウントなどの結果を非対称にできるため、多くの MDX 関数は、計算のために空のセルを無視する機能を提供しています。 詳細については、[多次元式&#40;MDX&#41;参照](/sql/mdx/multidimensional-expressions-mdx-reference)、および[MDX の主な概念&#40;Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、空のセルは特殊な品質を保持するセル。 空のセルは、相互結合、カウントなどの結果を非対称にできるため、多くの MDX 関数は、計算のために空のセルを無視する機能を提供しています。 詳細については、次を参照してください。[多次元式&#40;MDX&#41;参照](/sql/mdx/multidimensional-expressions-mdx-reference)、および[MDX の主な概念&#40;Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)します。  
   
 ## <a name="security"></a>セキュリティ  
- セル データへのアクセスは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のロール レベルで管理され、MDX 式を使用して細かく制御できます。 詳細については、[ディメンション データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)、および[セル データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)を参照してください。  
+ セル データへのアクセスは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のロール レベルで管理され、MDX 式を使用して細かく制御できます。 詳細については、次を参照してください。[ディメンション データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)、および[セル データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)します。  
   
 ## <a name="see-also"></a>参照  
  [キューブのストレージ&#40;Analysis Services - 多次元データ&#41;](../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   

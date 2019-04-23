@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - delivery extensions [Reporting Services], deploying
 - Extension element
 - deploying [Reporting Services], extensions
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a461f3dfa1dca66efb2708e15f56c7fa30c58dc6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037463"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156228"
 ---
 # <a name="deploying-a-delivery-extension"></a>配信拡張機能の配置
   配信拡張機能では、その構成情報を XML 構成ファイルの形式で指定します。 XML ファイルは、配信拡張機能に定義された XML スキーマに従います。 配信拡張機能により、構成ファイルを設定および変更するためのインフラストラクチャが提供されます。  
@@ -138,7 +136,7 @@ ms.locfileid: "56037463"
      URL 構成要素は、配信拡張機能に選択できる多くの構成要素条件のうちの 1 つにすぎません。 [!INCLUDE[ssRS](../../../includes/ssrs.md)] のコード アクセス セキュリティの詳細については、「[セキュリティで保護された配置 &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)」を参照してください。  
   
 ## <a name="verifying-the-deployment"></a>配置の確認  
- 配信拡張機能が正常にレポート サーバーに配置されたかどうかを確認するには、Web サービスの <xref:ReportService2010.ReportingService2010.ListExtensions%2A> メソッドを使用します。 また、レポート マネージャーを開き、配信拡張機能がサブスクリプションに有効な配信拡張機能の一覧に含まれていることを確認する方法もあります。 レポート マネージャーとサブスクリプションの詳細については、[サブスクリプションと配信&#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md)を参照してください。  
+ 配信拡張機能が正常にレポート サーバーに配置されたかどうかを確認するには、Web サービスの <xref:ReportService2010.ReportingService2010.ListExtensions%2A> メソッドを使用します。 また、レポート マネージャーを開き、配信拡張機能がサブスクリプションに有効な配信拡張機能の一覧に含まれていることを確認する方法もあります。 レポート マネージャーとサブスクリプションの詳細については、次を参照してください。[サブスクリプションと配信&#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md)します。  
   
 ## <a name="see-also"></a>参照  
  [配信拡張機能の実装](implementing-a-delivery-extension.md)   

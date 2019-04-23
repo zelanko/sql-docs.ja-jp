@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48e169ae33a80eec6d7c40c120713407da1ddb10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 860d2f03018abae2b27367a1f41f87268affb328
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355321"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156148"
 ---
 # <a name="user-defined-type"></a>ユーザー定義型
   User Defined Data Type サンプルでは、`System.Data.SqlClient` を使用して、Transact-SQL とクライアント アプリケーションの両方から単純なユーザー定義データ型の作成と使用を行う方法を示します。  

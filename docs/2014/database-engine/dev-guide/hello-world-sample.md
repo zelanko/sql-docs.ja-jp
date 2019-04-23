@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b679c93d8e946092518ca9bc020c3fbcfca834d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8a44e246bbf6af319c21fca93e57177688c8fa4a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366764"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158979"
 ---
 # <a name="hello-world-sample"></a>Hello World サンプル
   Hello World サンプルでは、共通言語ランタイム (CLR) 統合ベースの単純なストアド プロシージャの作成、展開、およびテストにかかわる基本的な操作について示します。 また、このサンプルでは、ストアド プロシージャによって動的に構築されて呼び出し元に返されるレコードを使用してデータを返す方法についても示します。  
