@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b46d985a4b43fc55fdbae3fa1012e77e4c2c0316
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: e4f622d5963ae9da107aba9d6674e804b0c859da
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285630"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935898"
 ---
 # <a name="reporting-services-query-designers"></a>Reporting Services クエリ デザイナー
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートで各データ ソースの種類のクエリを構築するためにはグラフィカルおよびテキスト ベースのクエリ デザイナーを提供します。  
   
  一部のデータ ソースでは、クエリを対話形式で作成できるグラフィカル デザイナーがサポートされています。 その他のデータ ソースでは、テキスト ベースのクエリ デザイナーを使用します。 グラフィカル クエリ デザイナーでは、データ ソースの基になるデータを表すメタデータ アイテムをクエリ デザイン画面にドラッグできます。 テキスト ベースのクエリ デザイナーでは、コマンド テキストをクエリ ペインに入力できます。 グラフィカル クエリ デザイナーからテキスト ベースのクエリ デザイナーに変更するには、ツール バーのテキスト ベースのクエリ デザイナー アイコンをクリックします。  
   
- レポートで使用できるデータ ソースの種類は、クライアントまたはレポート サーバーにインストールされている [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ拡張機能によって決まります。 詳細については、[RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md)と[RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)を参照してください。  
+ レポートで使用できるデータ ソースの種類は、クライアントまたはレポート サーバーにインストールされている [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ拡張機能によって決まります。 詳細については、次を参照してください。 [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md)と[RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)します。  
   
  データ処理拡張機能および関連するクエリ デザイナーは、次のようにデータ ソースのサポートにおいて異なる場合があります。  
   

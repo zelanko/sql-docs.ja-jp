@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e02d6bb985d7b18c7e1401882ad9bd926168c6a1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 543edca0cbe8fd376df75158a2c4c8c5aba1cdca
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040813"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950148"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)
   レポート ビルダーでは、レポート サーバーまたは SharePoint サイト上のフォルダーを参照して、レポート、共有データ ソース、モデル、その他の関連レポート アイテムを検索したり、自分のコンピューターを参照して、ローカル レポートを検索したりできます。 レポートを見つけやすくするため、レポート ビルダーでは最近使用されたサーバーとサイトの一覧を管理し、コンピューターのファイル システムの "デスクトップ"、"マイ ドキュメント"、および "マイ コンピューター" フォルダーに直接アクセスできるようにしています。  

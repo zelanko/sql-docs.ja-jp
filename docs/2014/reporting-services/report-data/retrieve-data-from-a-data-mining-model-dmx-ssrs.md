@@ -13,15 +13,15 @@ helpviewer_keywords:
 - datasets [Reporting Services], Analysis Services
 - queries [Reporting Services], data mining prediction
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1dbef5a6deb17a6b7cf570bbeb96d79a941b837f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: fc39cb2f4e6b5a5e296f623feea213374473e9a1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018853"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961378"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>データ マイニング モデル (DMX) からデータを取得する (SSRS)
    [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データ マイニング モデルのデータをレポートで使用するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データ ソースと 1 つ以上のレポート データセットを定義する必要があります。 データ ソース定義を作成する場合、クライアント コンピューターからデータ ソースにアクセスできるように接続文字列と資格情報を指定する必要があります。  

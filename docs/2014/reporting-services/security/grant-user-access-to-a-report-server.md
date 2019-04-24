@@ -14,20 +14,20 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1859d70c0ee0c10571897c4695eb64179b313168
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: ebb42ac44d26e9ad8a091795eb3f8ab7283f6bcb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024853"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935858"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、ロール ベースのセキュリティを使用して、レポート サーバーへのアクセス権がユーザーに付与されます。 新しいレポート サーバーをインストールした直後は、ローカル Administrators グループに属するユーザーにのみ、レポート サーバーのコンテンツと操作に対する権限が与えられます。 他のユーザーがレポート サーバーにアクセスできるようにするには、ロール割り当てを作成して、ユーザーまたはグループ アカウントを、一連のタスクが指定された定義済みのロールにマップする必要があります。  
   
- **SharePoint モードのレポート サーバー:** SharePoint 統合モード用に構成されたレポート サーバーの場合は、SharePoint サイトから、SharePoint の権限を使ってアクセスを構成します。 レポート サーバーのコンテンツや操作にアクセスできるかどうかは、SharePoint サイト上の権限レベルによって決まります。 SharePoint サイトでの権限を付与できるのはサイト管理者だけです。 詳細については、「 [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)」を参照してください。  
+ **SharePoint モードのレポート サーバー:** SharePoint 統合モード用に構成されているレポート サーバー、SharePoint の権限を使用して SharePoint サイトからのアクセスを構成できます。 レポート サーバーのコンテンツや操作にアクセスできるかどうかは、SharePoint サイト上の権限レベルによって決まります。 SharePoint サイトでの権限を付与できるのはサイト管理者だけです。 詳細については、「 [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)」を参照してください。  
   
  **ネイティブ モード レポート サーバー:** このトピックでは、ネイティブ モードと、ロールにユーザーを割り当てるレポート マネージャーの使用が構成されているレポート サーバーに重視されています。 ロールには次の 2 種類があります。  
   

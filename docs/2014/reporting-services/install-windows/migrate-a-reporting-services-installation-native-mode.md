@@ -1,7 +1,7 @@
 ---
 title: Reporting Services のインストールの移行 (ネイティブ モード) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.custom: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.date: 08/10/2017
-ms.openlocfilehash: 6993b1fa53bc6aa3d0b6de95ca9feff4eb34ad51
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: MT
+ms.openlocfilehash: c359f709b2c0a1ba779111a007843dd249b5d7b7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351852"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969374"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services のインストールの移行 (ネイティブ モード)
 
@@ -184,7 +184,7 @@ ms.locfileid: "53351852"
   
     1.  [カスタム アセンブリの配置](../custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2.  [操作方法：カスタム レポート アイテムを配置します。](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2.  [方法: カスタム レポート アイテムを配置する](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3.  [データ処理拡張機能の配置](../extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -219,7 +219,7 @@ ms.locfileid: "53351852"
   
 5.  レポート サーバーを新しいコンピューターにインストールし、Windows ファイアウォールを使用している場合は、レポート サーバーがリッスンする TCP ポートが開いていることを確認します。 既定のポート番号は 80 です。 詳細については、「[レポート サーバー アクセスに対するファイアウォールの構成](../report-server/configure-a-firewall-for-report-server-access.md)」をご覧ください。  
   
-6.  ネイティブ モードのレポート サーバーをローカルで管理する場合は、レポート マネージャーによるローカル管理を許可するようにオペレーティング システムを構成する必要があります。 詳細については、「 [ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」を参照してください。  
+6.  ネイティブ モードのレポート サーバーをローカルで管理する場合は、レポート マネージャーによるローカル管理を許可するようにオペレーティング システムを構成する必要があります。 詳細については、「 [ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 ##  <a name="bkmk_copy_custom_config"></a> RSReportServer.config ファイルへのカスタム構成設定のコピー  
  以前のインストールで RSReportServer.config ファイルまたは RSWebApplication.config ファイルを変更していた場合、新しい RSReportServer.config ファイルで同じ変更を行います。 以前の構成ファイルで変更された可能性があるいくつかの項目と、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で同じ設定を構成するための方法に関する追加情報へのリンクを次に示します。  
@@ -261,7 +261,7 @@ ms.locfileid: "53351852"
 ## <a name="see-also"></a>参照  
  [Reporting Services のインストールの移行 &#40;SharePoint モード&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
  [レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
- [Reporting Services のアップグレードと移行](upgrade-and-migrate-reporting-services.md)   
+ [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Reporting Services の旧バージョンとの互換性](../reporting-services-backward-compatibility.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   

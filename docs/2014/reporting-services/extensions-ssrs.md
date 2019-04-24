@@ -1,7 +1,7 @@
 ---
 title: 拡張機能
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 13c3ac54ba2c9713789c131a2bc1cee4ebe4c809
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: MT
+ms.openlocfilehash: 6a702f7a78c3377651e544757789e7a7034f2923
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553104"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938418"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の拡張機能
 
@@ -56,7 +56,7 @@ ms.locfileid: "53553104"
   
 ## <a name="rendering-extensions"></a>表示拡張機能
 
- 表示拡張機能は、レポート プロセッサのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 7 つの表示拡張機能が含まれています。HTML、Excel、CSV、XML、Image、PDF、および[!INCLUDE[msCoName](../includes/msconame-md.md)]単語。  
+ 表示拡張機能は、レポート プロセッサのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、次の 7 種類の表示拡張機能を備えています:HTML、Excel、CSV、XML、Image、PDF、[!INCLUDE[msCoName](../includes/msconame-md.md)] Word。  
   
 - **HTML 表示拡張機能** Web ブラウザーを使用してレポート サーバーのレポートを要求すると、レポート サーバーは HTML 表示拡張機能を使用してレポートを表示します。 HTML 表示拡張機能では、すべての HTML が UTF-8 エンコードを使用して生成されます。 詳細については、次を参照してください[HTML にレンダリング&#40;レポート ビルダーおよび SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md)と[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "53553104"
   
 - **XML 表示拡張機能** XML 表示拡張機能は、XML ファイル形式でレポートを表示します。 これらの XML ファイルは、他のプログラムで保存したり読み込んだりすることができます。 XSLT 変換を使用してレポートを別の XML スキーマに変換し、別のアプリケーションで使用できるようにすることも可能です。 XML 表示拡張機能によって生成された XML は、UTF-8 でエンコードされます。 詳細については、「 [XML へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](report-builder/exporting-to-xml-report-builder-and-ssrs.md)で操作できます。  
   
--   **画像表示拡張機能** 画像表示拡張機能は、レポートをビットマップまたはメタファイルとして表示します。 拡張機能は、次の形式でレポートを表示できます。BMP、EMF、GIF、JPEG、PNG、TIFF、および WMF。 既定では、画像は TIFF 形式で表示されます。TIFF 形式は、使用するオペレーティング システムの既定のイメージ ビューアー (たとえば、Windows 画像と FAX ビューアー) で表示できます。 ビューアーからプリンターに画像を送ることができます。 画像表示拡張機能を使用してレポートを表示することにより、すべてのクライアントで同じレポートが表示されます (ユーザーが HTML 形式でレポートを表示する場合、ユーザーが使用するブラウザー、ブラウザーの設定、および使用できるフォントによって、レポートの外観が異なります)。画像表示拡張機能はレポートをサーバー上で表示します。そのため、すべてのユーザーが同じ画像を見ることができます。 レポートはサーバー上で表示されるため、レポートで使用されるすべてのフォントがサーバーにインストールされている必要があります。 詳細については、「 [画像ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)で操作できます。  
+-   **画像表示拡張機能** 画像表示拡張機能は、レポートをビットマップまたはメタファイルとして表示します。 拡張機能は、次の形式でレポートを表示できます。BMP、EMF、GIF、JPEG、PNG、TIFF、および WMF。 既定では、画像は TIFF 形式で表示されます。TIFF 形式は、使用するオペレーティング システムの既定のイメージ ビューアー (たとえば、Windows 画像と FAX ビューアー) で表示できます。 ビューアーからプリンターに画像を送ることができます。 画像表示拡張機能を使用してレポートを表示することにより、すべてのクライアントで同じレポートが表示されます (ユーザーは、HTML でレポートを表示、ときにレポートの外観は異なります、ユーザーのブラウザー、ユーザーのブラウザーの設定、および利用できるフォントのバージョン。)画像表示拡張機能は、すべてのユーザーが同じイメージを表示するために、サーバー上のレポートをレンダリングします。 レポートはサーバー上で表示されるため、レポートで使用されるすべてのフォントがサーバーにインストールされている必要があります。 詳細については、「 [画像ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)で操作できます。  
   
 - **PDF 表示拡張機能** PDF 表示拡張機能は、Adobe Acrobat 6.0 以降のバージョンで開いたり表示したりすることができる PDF ファイル形式でレポートを表示します。 詳細については、「 [PDF ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)で操作できます。  
   

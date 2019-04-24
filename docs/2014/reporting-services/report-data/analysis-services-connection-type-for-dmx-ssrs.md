@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data mining [Reporting Services]
 - passing parameters [Reporting Services]
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 274676f9efcd209123ea859fb2a375a277ccf03b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 80e36518f44b55699289a8691527ee04df72e3f5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011873"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933758"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>DMX のための Analysis Services の接続の種類 (SSRS)
    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースを使用してデータセットを作成した場合、レポート デザイナーで有効なキューブが検出されると、多次元式 (MDX) クエリ デザイナーが表示されます。 キューブは検出されなくても、データ マイニング モデルが使用可能な場合、レポート デザイナーではデータ マイニング拡張機能 (DMX) クエリ デザイナーが表示されます。 MDX と DMX デザイナーを切り替えるには、ツール バーの **[コマンドの種類 DMX]** (![DMX クエリ言語ビューに変更](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")) ボタンをクリックします。 DMX クエリ デザイナーを使用すると、グラフィカルな要素を使用して対話的に DMX クエリを作成できます。 DMX クエリ デザイナーを使用するには、指定するデータ ソースが、データを提供するデータ マイニング モデルを既に備えている必要があります。 クエリ結果は、レポートで使用できるようにフラットな行セットに変換されます。  

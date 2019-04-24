@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13131359ddf4df667e18a674533954f95d8a6665
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: a190d82a18f88d38b7e41642a1dd598ebd91215c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023493"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956078"
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole を作成する
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、`RSExecRole` と呼ばれる定義済みのデータベース ロールを使用して、レポート サーバー データベースに対するレポート サーバーの権限が付与されます。 `RSExecRole`ロールは、レポート サーバー データベースで自動的に作成されます。 原則として、このロールを変更したり、他のユーザーをこのロールに割り当てたりすることはできません。 ただし、レポート サーバー データベースを新規または別の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]に移動した場合は、master および MSDB システム データベースでロールを再作成する必要があります。  

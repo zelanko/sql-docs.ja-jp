@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d3abebe357646aab1a09e3bc6a59130461d268bd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 625afedabdb376f913d3353e2bda343bba66e3e1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027043"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964818"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>[データ ドリブン サブスクリプションの作成] ページ (レポート マネージャー)
   [データ ドリブン サブスクリプションの作成] ページでは、実行するたびにサブスクライバー データベースにサブスクリプション情報をクエリするサブスクリプションを作成または変更できます。 データ ドリブン サブスクリプションはクエリ結果を使用して、サブスクリプションの受信先、配信設定、およびレポート パラメーターの値を決定します。 実行時に、レポート サーバーで、サブスクリプションの設定に使用されている値を取得するクエリが実行されます。 [データ ドリブン サブスクリプションの作成] ページを使用して、クエリを定義し、クエリの値をサブスクリプションの設定に割り当てることができます。 データドリブン サブスクリプションに指定する値およびオプションは、いくつかのウィザード形式になったページに分かれて表示されます。 ページは全部で 7 ページあります。  
@@ -171,7 +171,7 @@ ms.locfileid: "56027043"
   
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
+ [データ ドリブン サブスクリプション](subscriptions/data-driven-subscriptions.md)   
  [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   

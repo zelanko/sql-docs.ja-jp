@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ODBC data processing extension
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 54a32a3961336f22fed462cd955027f3387a1e70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 87cc2d927bc3a0786e935e2cd20c669a8bfac87a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032703"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955538"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services でサポートされるデータ ソース (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でレポート データをデータ ソースから取得する処理は、データ処理拡張機能を使用するモジュール式の拡張可能なデータ レイヤーを通して行われます。 レポート データをデータ ソースから取得するには、対象となるデータ ソースの種類 (データ ソースで動作しているバージョンのソフトウェア) およびデータ ソース プラットフォーム (32 ビットまたは 64 ビット [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) がサポートされているデータ処理拡張機能を選択する必要があります。  
@@ -75,7 +75,7 @@ ms.locfileid: "56032703"
  レポート ビルダーがサポートしているデータ処理拡張機能の詳細については、msdn.microsoft.com の [レポート ビルダーに関するドキュメント](../data-connections-data-sources-and-connection-strings-in-report-builder.md) の「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](https://go.microsoft.com/fwlink/?LinkId=154494) 」を参照してください。  
   
 ## <a name="platform-support-for-report-data-sources"></a>レポート データ ソースに対するプラットフォームのサポート  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置で使用できるデータ ソースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディション、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のバージョン、およびプラットフォームによって異なります。 機能の詳細については、[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)を参照してください。 このトピックでは、サポートされるデータ ソースに関する情報をバージョンおよびプラットフォームごとに表に示します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置で使用できるデータ ソースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディション、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のバージョン、およびプラットフォームによって異なります。 機能の詳細については、次を参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 このトピックでは、サポートされるデータ ソースに関する情報をバージョンおよびプラットフォームごとに表に示します。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ ソースに関するプラットフォームの考慮事項は、レポート作成クライアントの場合とレポート サーバーの場合で異なります。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "56032703"
 |汎用 OLE DB データ ソース|[OLEDB](#OLEDBStandard)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|OLE DB をサポートする任意のデータ ソース。<br /><br /> プラットフォームのサポートについては、データ ソースのマニュアルを参照してください。|Y|なし|OLE DB をサポートする任意のデータ ソース。 詳細については、「 [注意](#OLEDBStandard)」を参照してください。|Y|なし|  
 |汎用 ODBC データ ソース|[ODBC](#ODBCGeneric)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|ODBC をサポートする任意のデータ ソース。<br /><br /> プラットフォームのサポートについては、データ ソースのマニュアルを参照してください。|Y|なし|ODBC をサポートする任意のデータ ソース。 詳細については、「 [注意](#ODBCGeneric)」を参照してください。|Y|Y|  
   
- 表形式のデータ ソースを使用する方法の詳細については、[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)を参照してください。  
+ 表形式のデータ ソースを使用する方法の詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
   
  外部データ ソースの使用に関する詳細については、「[外部データ ソースのデータを追加する &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)」を参照してください。  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - high availability [Reporting Services]
 - Reporting Services, high availability
 ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 097a118a23bcec722710bc404e9e6452d6504b69
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 8bc05f1f669597229a3a07d6ce8487eb19a77201
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032463"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944988"
 ---
 # <a name="high-availability-reporting-services"></a>高可用性 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーは、アプリケーションのデータ、コンテンツ、プロパティ、およびセッション情報を 2 つの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] リレーショナル データベースに格納するステートレス サーバーです。 したがって、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の可用性を確保するには、次のことを検討する必要があります。  

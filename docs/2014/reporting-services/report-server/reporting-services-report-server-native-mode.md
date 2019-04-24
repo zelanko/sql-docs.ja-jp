@@ -12,15 +12,15 @@ helpviewer_keywords:
 - administering [Reporting Services]
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 52d0771d07efddd949961761d90f241f146c0af4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: df1d06a3d68485576673d8d793385be97dadac55
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025833"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943588"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   ネイティブ モード用に構成されたレポート サーバーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]コンポーネントのみを通じてすべての処理機能と管理機能を提供するアプリケーション サーバーとして実行されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "56025833"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、コンテンツ管理はレポート、モデル、フォルダー、リソース、および共有データ ソースの管理を指します。 これらのすべてのアイテムは、プロパティおよびセキュリティの設定をとおして、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。  
   
 > [!NOTE]  
->  コンテンツ管理はレポート サーバー管理とは異なります。 レポート サーバーを実行する環境を管理する方法の詳細については、[管理 (Reporting Services)](reporting-services-report-server-native-mode.md)を参照してください。  
+>  コンテンツ管理はレポート サーバー管理とは異なります。 レポート サーバーを実行する環境を管理する方法の詳細については、次を参照してください。[管理 (Reporting Services)](reporting-services-report-server-native-mode.md)します。  
   
  コンテンツ管理には、次のタスクが含まれます。  
   

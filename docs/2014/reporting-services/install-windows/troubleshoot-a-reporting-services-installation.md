@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9205097462a2c9bcc08334e4d83716a224d3b786
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: c923a239ad0eeb677b476665a4c99b45d430b421
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043333"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954208"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services インストール時の問題解決
   セットアップ中にエラーが発生して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールできない場合は、このトピックで示す手順に従って、インストール エラーの原因として最も可能性が高い状況に対処してください。  
@@ -84,16 +84,16 @@ ms.locfileid: "56043333"
 -   [RS_SHP は PREPAREIMAGE でサポートされないことを示すエラー メッセージが表示される](#bkmk_RS_SHP_notsupported)  
   
 ###  <a name="bkmk_configmanager_notstart"></a> Reporting Services 構成マネージャーが起動しない  
- **説明:** この問題は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の仕様です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は現在、SharePoint サービス アーキテクチャ用に設計されています。 SharePoint モードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を構成および管理するために、構成マネージャーを使用する必要はなくなりました。  
+ **説明 :** この問題は仕様で[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は現在、SharePoint サービス アーキテクチャ用に設計されています。 SharePoint モードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を構成および管理するために、構成マネージャーを使用する必要はなくなりました。  
   
  **回避策:** SharePoint モードでレポート サーバーを構成するには、SharePoint サーバーの全体管理を使用します。 詳細については、「 [Reporting Services SharePoint サービス アプリケーションの管理](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)｣を参照してください  
   
 ###  <a name="bkmk_no_ssrs_service"></a> SQL Server 2012 SSRS を SharePoint モードでインストールした後、SharePoint サーバーの全体管理で、SQL Server Reporting Services サービスが表示されません。  
- **説明:** 場合に正常にインストールした後[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードで、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アドイン、SharePoint 2010 の表示されない"SQL Server Reporting Services"次の 2 つのメニューで、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービスには登録されていません。  
+ **説明 :** 場合に正常にインストールした後[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードで、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アドイン、SharePoint 2010 の表示されない"SQL Server Reporting Services"次の 2 つのメニューで、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービスには登録されていません。  
   
--   [SharePoint 2010 サーバーの全体管理] -> [アプリケーション構成の管理] -> [サーバーのサービスの管理] ページ  
+-   SharePoint 2010 サーバーの全体管理には [アプリケーション管理]-> ["管理サービスのサーバー] ページ  
   
--   [SharePoint 2010 サーバーの全体管理] -> [アプリケーション構成の管理] -> [サービス アプリケーションの管理] -> [新規作成] メニュー  
+-   -> [アプリケーション管理] の SharePoint 2010 サーバーの全体管理]-> [->"新規作成] メニューの [サービス アプリケーションの管理"  
   
  **回避策:** 登録および起動する、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Services の場合、次の手順します。  
   
@@ -116,9 +116,9 @@ ms.locfileid: "56043333"
 2.  確認、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービスとしてのステータスを表示する"**開始**"、ページ。SharePoint 2010 サーバーの全体管理]-> ["**アプリケーション管理**"->"**サービス サーバーの管理**"  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Reporting Services の PowerShell コマンドレットが使用できず、コマンドが認識されない  
- **説明:** 実行しようとすると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell のコマンドレットには、次のようなエラー メッセージを表示します。  
+ **説明 :** 実行しようとすると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell のコマンドレットには、次のようなエラー メッセージを表示します。  
   
--   用語 'Install-SPRSServiceInstall-SPRSService' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として **認識されません** 。 名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してください。At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          :ObjectNotFound:(Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
+-   用語 'Install-SPRSServiceInstall-SPRSService' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として **認識されません** 。 名前のスペルを確認するか、パスが正しいことを確認し、もう一度お試しパスが含まれている場合。行: 1 文字: 39 + Install-sprsservice SPRSServiceInstall で <<<< + CategoryInfo:ObjectNotFound:(Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
   
  **回避策:** 次のいずれかの操作を行います。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "56043333"
 -   [For SharePoint 2013 の Reporting Services SharePoint モードをインストールします。](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)  
   
 ###  <a name="bkmk_URL_not_configured"></a> URL が構成されていないことを示すエラー メッセージが表示される  
- **説明:** 参照してくださいとエラーは、次のようなメッセージします。  
+ **説明 :** 参照してくださいとエラーは、次のようなメッセージします。  
   
  この SQL Server Reporting Services (SSRS) の機能はサポートされていません。 サーバーの全体管理を使用して、次の問題を確認し、修正してください: •レポート サーバーの URL が構成されていません。 SSRS の統合ページを使用して設定してください。•SSRS サービス アプリケーション プロキシが構成されていません。 SSRS サービス アプリケーションのページを使用してプロキシを構成してください。•SSRS サービス アプリケーションは、この Web アプリケーションにマップされていません。 SSRS サービス アプリケーションのページを使用して SSRS サービス アプリケーション プロキシをこの Web アプリケーションのアプリケーション プロキシ グループに関連付けてください。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "56043333"
 -   サービス アプリケーションを管理する。  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> SharePoint がインストールされているコンピューターが構成されていない場合にセットアップに失敗する  
- **説明:** 選択した場合は、SharePoint をあるコンピューター上で Reporting Services SharePoint モードをインストールするインストール、SharePoint が構成されていませんが、セットアップ、次のようなメッセージは停止が表示されます。  
+ **説明 :** 選択した場合は、SharePoint をあるコンピューター上で Reporting Services SharePoint モードをインストールするインストール、SharePoint が構成されていませんが、セットアップ、次のようなメッセージは停止が表示されます。  
   
  SQL Server セットアップは動作を停止しました  
   
@@ -161,29 +161,29 @@ ms.locfileid: "56043333"
  **詳細情報:** インストールするときに[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に既存の SharePoint のインストール、セットアップ プログラムをインストールして起動を試行し、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint サービス。 SharePoint が構成されていないと、このサービスのインストールは失敗し、セットアップがエラーを返します。  
   
 ###  <a name="bkmk_central_admin_blank"></a> SharePoint サーバーの全体管理ページが空白である  
- **説明:** 正常にインストール エラーなく、SharePoint 2010 をインストールできませんでした。 [サーバーの全体管理] を表示すると空白のページしか表示されないことがあります。  
+ **説明 :** 正常にインストール エラーなく、SharePoint 2010 をインストールできませんでした。 [サーバーの全体管理] を表示すると空白のページしか表示されないことがあります。  
   
  **回避策:** この問題に固有ではない[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]関連 SharePoint 環境全体における権限を構成するものです。 考えられる解決方法は次のとおりです。  
   
 -   開発環境に関する SharePoint トピックを参照します。 [Windows vista では、Windows 7、および Windows Server 2008 の SharePoint 2010 の開発環境を設定](https://msdn.microsoft.com/library/ee554869\(office.14\).aspx)  
   
--   フォーラムの投稿[サーバーの全体管理は、Windows 7 のインストール後に空白のページを返します](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   フォーラムの投稿を確認してください。[サーバーの全体管理は、Windows 7 のインストール後に空白のページを返します](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   SharePoint サービス (SharePoint 2010 サーバーの全体管理サービスなど) に使用しているサービス アカウントに、ローカル オペレーティング システムの管理者特権を付与します。  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> 新しいレポート ビルダー レポートを作成しようとすると、エラー メッセージが表示される  
- **説明:** 次のようなエラー メッセージが表示されるは、ドキュメント ライブラリ内でレポート ビルダーのレポートを作成しようとしたときに。  
+ **説明 :** 次のようなエラー メッセージが表示されるは、ドキュメント ライブラリ内でレポート ビルダーのレポートを作成しようとしたときに。  
   
  SQL Server Reporting Services サービス アプリケーションが存在しないか、またはレポート サーバーの URL がサーバーの全体管理で構成されていないため、この機能はサポートされません。  
   
  **回避策:** あることを確認、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービス アプリケーションとそれが正しく構成されています。 詳細については、「セクション 'Reporting Services サービス アプリケーション 'で作成[Install Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> RS_SHP は PREPAREIMAGE でサポートされないことを示すエラー メッセージが表示される  
- **説明:** に対して PREPAREIMAGE を実行しようとすると[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]次のようなエラー メッセージを参照してください。  
+ **説明 :** に対して PREPAREIMAGE を実行しようとすると[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]次のようなエラー メッセージを参照してください。  
   
  指定された機能 'RS_SHP' は、SysPrep をサポートしていないため、PREPAREIMAGE アクションの実行中にはサポートされません。 SysPrep と互換性のない機能を削除し、セットアップを再実行してください。  
   
- **回避策:** 解決方法はありません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SYSPREP (PREPAREIMAGE) をサポートしていません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは SYSPREP をサポートしています。  
+ **回避策:** 対応策はありません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SYSPREP (PREPAREIMAGE) をサポートしていません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは SYSPREP をサポートしています。  
   
 ##  <a name="bkmk_tshoot_native"></a> ネイティブ モードのインストールでのトラブルシューティング  
   

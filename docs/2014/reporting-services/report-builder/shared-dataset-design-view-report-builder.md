@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e949a8610c7320830b33d21674f0fda79d281073
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292589"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940408"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共有データセット デザイン ビュー (レポート ビルダー)
   共有データセット デザイン ウィンドウは、他のユーザーと共有できるデータセット クエリの作成に役立ちます。 このウィンドウで、共有データ ソースの選択、共有データセットのプロパティの指定、およびクエリ デザイナーによるクエリの作成を行います。  
   
  ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- レポート内のデータの使用方法の詳細については、[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)を参照してください。  
+ レポート内のデータの使用方法の詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)します。  
   
 ##  <a name="Ribbon"></a> リボン  
  リボンを使用すると、タスクの実行に必要なコマンドを簡単に見つけることができます。 コマンドは、接続、データセット、およびクエリ デザイナーの各論理グループに分類されています。  
@@ -32,7 +32,7 @@ ms.locfileid: "56292589"
  レポートで共有データ ソースを選択するか、レポート サーバーで共有データ ソースを参照するには、接続グループの **[選択]** ボタンを使用します。  
   
 > [!NOTE]  
->  共有データセットは共有データ ソースに基づく必要があります。 必要なデータ ソースを使用できない場合は、レポート サーバー上にデータ ソースを作成する必要があります。 詳細については、[作成、削除、または共有データ ソースを変更&#40;レポート マネージャー&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)を参照してください。  
+>  共有データセットは共有データ ソースに基づく必要があります。 必要なデータ ソースを使用できない場合は、レポート サーバー上にデータ ソースを作成する必要があります。 詳細については、次を参照してください。[作成、削除、または共有データ ソースを変更&#40;レポート マネージャー&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)します。  
   
  詳細については、「 [データ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)」を参照してください。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "56292589"
   
  詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   
- キャッシュ更新計画の詳細については、[共有データセットのキャッシュ&#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)を参照してください。  
+ キャッシュ更新計画の詳細については、次を参照してください。[共有データセットのキャッシュ&#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)します。  
   
 ### <a name="query-designer"></a>[クエリ デザイナー]  
  クエリ デザイナー ツール バーを使用すると、データ接続から取得するデータを指定するクエリを作成できます。 データ接続のデータ ソースの種類に関連付けられているクエリ デザイナーによって、表示されるツール バーが異なります。  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e6e98f8a1989193fba440ad7e8574d409c3a4996
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: dc84660b7ceea31aa7bebc774a07de7103e3dd9a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038253"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936708"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services での SharePoint ライブラリへの配信
   SharePoint 統合用に構成されているレポート サーバーでは、レポートを SharePoint ライブラリに送信する配信拡張機能を使用できます。  
@@ -71,10 +71,10 @@ ms.locfileid: "56038253"
  ファイル名と拡張子  
  対象ライブラリでレポートが表示されるときのファイル名と拡張子を指定します。 ファイル拡張子を指定しなければ、レポートの出力形式に基づいてレポート サーバーで拡張子が作成されます。 この値は必須です。 ファイル名に使用できない文字は、: \ / * ? " < > | # { } % です。 " \< > | # { } %  
   
- タイトル  
+ [タイトル]  
  対象ライブラリ内のレポートの `Title` プロパティ (オプション) を指定します。 これは、ライブラリに格納されているすべてのアイテムに対する標準プロパティです。 ユーザーは、SharePoint サイトでライブラリ コンテンツを表示するときに、このプロパティを表示するか非表示にするかを指定できます。  
   
- [パス]  
+ パス  
  SharePoint ライブラリへの完全修飾 URL (SharePoint Web アプリケーションおよびサイトを含む) を指定します。 例:<http://mySharePointWeb/MySite/MyDocLib>が"<http://mySharePointWeb>"は Web アプリケーションでは、"MySite"は、SharePoint サイトと、"MyDocLib"は、レポートを配信する SharePoint ライブラリです。  
   
  ページ、サイト、またはリストを指定することはできません。 対象コンテナーは、同じサイトまたはファームにあるライブラリであることが必要です。  

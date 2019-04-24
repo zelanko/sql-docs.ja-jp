@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fb3d7e60db2e5827c61ff2c80dbaf674262621f7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 46b689a3eee612bdeb5bac5e0706574e21493635
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030243"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952878"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services の移行 (SharePoint モード)
   このトピックでは、SharePoint モードで配置した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint 環境間で移行するために必要な手順の概要について説明します。 具体的な手順は、以降元の SharePoint のバージョンによって異なる場合があります。 SharePoint モードのアップグレードと移行のシナリオの詳細については、「 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。 1 つのサーバーから別のサーバーにのみレポート アイテムをコピーする場合は、「 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
@@ -40,7 +40,7 @@ ms.locfileid: "56030243"
  
   
 ##  <a name="bkmk_prior_versions"></a> SQL Server 2012 よりも前のバージョンの Reporting Services SharePoint モードからの移行  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード アーキテクチャは、サービス アプリケーション データベース スキーマを含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で変更されました。  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] より前のバージョンから [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint モードに移行する場合は、最初に、SharePoint と [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードをインストールして、新しい SharePoint 環境を作成してください。 詳細については、[Reporting Services SharePoint モードのインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード アーキテクチャは、サービス アプリケーション データベース スキーマを含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で変更されました。  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] より前のバージョンから [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint モードに移行する場合は、最初に、SharePoint と [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードをインストールして、新しい SharePoint 環境を作成してください。 詳細については、次を参照してください。 [Reporting Services SharePoint モードのインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)します。  
   
  新しい SharePoint 環境が実行されていると、コンテンツ データベースを含むデータベース レベルで、コンテンツのみの移行またはすべてのコンテンツの移行を選択できます。  
   

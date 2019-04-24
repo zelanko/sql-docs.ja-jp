@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ef4cfaec1b66c9840d0dcf08d788b66b7107190
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 91d702b8b5b3402783fb47819bdd18d552682931
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291907"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961828"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>レポートのエクスポート (レポート ビルダーおよび SSRS)
   レポートを実行した後は、Excel や PDF など、別の形式にレポートをエクスポートできます。また、レポートから利用できる Atom 準拠のデータ フィードを一覧表示する Atom サービス ドキュメントを生成してエクスポートすることもできます。  
@@ -74,7 +74,7 @@ ms.locfileid: "56291907"
 |Atom|データ|Atom 表示拡張機能では、Atom 準拠のデータ フィードがレポートから生成されます。 データ フィードは、Atom 準拠のデータ フィードを使用するアプリケーション ( [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クライアントなど) で読み取りと交換が可能です。<br /><br /> 出力は、レポートで使用可能なデータ フィードを一覧表示する Atom サービス ドキュメントです。 レポート内の各データ領域について、少なくとも 1 つのデータ フィードが作成されます。 データ領域の種類およびデータ領域に表示されるデータによっては、複数のデータ フィードが生成される場合があります。<br /><br /> 詳細については、「 [複数のレポートからのデータ フィードの生成 &#40;レポート ビルダーおよび SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)で操作できます。|  
   
 ##  <a name="ExportingReport"></a> レポートをエクスポートします。  
- レポートをエクスポートするには、レポート マネージャーまたはレポート ビルダーでレポートを実行した後、[エクスポート] ドロップダウン リストから形式を選択します。 ファイルを保存するか、開くかを選択するメッセージが表示されます。 **[開く]** を選択すると、選択した表示形式に関連付けられているアプリケーションでレポートが開きます。 たとえば、 **[Excel]** を選択した場合は、レポートが Excel で開きます。 **[保存]** を選択すると、レポートが保存されます。 たとえば、Excel にエクスポートする場合は、.xls ファイルとしてレポートが保存されます。 ローカル コンピューターで定義されているファイルの関連付けにより、特定の表示形式に使用されるアプリケーションが決まります。 詳細については、[別のファイルの種類としてレポートをエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)を参照してください。  
+ レポートをエクスポートするには、レポート マネージャーまたはレポート ビルダーでレポートを実行した後、[エクスポート] ドロップダウン リストから形式を選択します。 ファイルを保存するか、開くかを選択するメッセージが表示されます。 **[開く]** を選択すると、選択した表示形式に関連付けられているアプリケーションでレポートが開きます。 たとえば、 **[Excel]** を選択した場合は、レポートが Excel で開きます。 **[保存]** を選択すると、レポートが保存されます。 たとえば、Excel にエクスポートする場合は、.xls ファイルとしてレポートが保存されます。 ローカル コンピューターで定義されているファイルの関連付けにより、特定の表示形式に使用されるアプリケーションが決まります。 詳細については、次を参照してください。[別のファイルの種類としてレポートをエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)します。  
   
  レポート サーバーでは、現在のユーザー セッションに存在するレポートがエクスポートされます。 レポートが開いている間、またはレポートに表示されているデータが変更されている間に、更新されたバージョンがパブリッシュされても、エクスポート後のレポートは更新されません。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "56291907"
 ##  <a name="OtherWaysExportingReports"></a> レポートをエクスポートするその他の方法  
  レポートのエクスポートは、レポート マネージャーまたはレポート ビルダーでレポートを開くときに必要に応じて実行するタスクです。 エクスポート操作を自動化する場合は (レポートを、定期的なスケジュールで特定のファイルの種類として共有フォルダーにエクスポートする場合など)、レポートを共有フォルダーに配信するサブスクリプションを作成します。 詳細については、「 [File Share Delivery in Reporting Services](../subscriptions/file-share-delivery-in-reporting-services.md)」を参照してください。  
   
- レポート ツールでプレビューしたレポート、またはレポート マネージャーなどのブラウザー アプリケーションで開いたレポートは常に、まず HTML でレンダリングされます。 表示の既定として別の表示拡張機能を指定することはできません。 ただし、後から電子メールの受信ボックスや共有フォルダーに配信する際に必要な表示形式でレポートを生成するサブスクリプションを作成できます。 詳細については、[Create, Modify, and 標準サブスクリプションの削除&#40;Reporting Services ネイティブ モードの&#41;](../subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)と[作成、変更、およびデータ ドリブン サブスクリプションを削除](../subscriptions/data-driven-subscriptions.md)を参照してください。  
+ レポート ツールでプレビューしたレポート、またはレポート マネージャーなどのブラウザー アプリケーションで開いたレポートは常に、まず HTML でレンダリングされます。 表示の既定として別の表示拡張機能を指定することはできません。 ただし、後から電子メールの受信ボックスや共有フォルダーに配信する際に必要な表示形式でレポートを生成するサブスクリプションを作成できます。 詳細については、次を参照してください。 [Create, Modify, and 標準サブスクリプションの削除&#40;Reporting Services ネイティブ モードの&#41;](../subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)と[作成、変更、およびデータ ドリブン サブスクリプションを削除](../subscriptions/data-driven-subscriptions.md)します。  
   
  また、URL パラメーターとして表示拡張機能を指定する URL を使用してレポートにアクセスし、最初に HTML でレポートをレンダリングすることなく、指定した形式に直接レンダリングすることもできます。 次の例は、Excel 形式でレポートを表示します。  
   

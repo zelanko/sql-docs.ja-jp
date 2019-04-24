@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a505bb3f4647fa98e7cc2bccfbd64b5c3545c0e7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 31e64dfe871fa38daee266814006468a8ea32e65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289017"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940668"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>レポート マネージャー (SSRS ネイティブ モード)
   レポート マネージャーは、レポートへのアクセスと管理を行う Web ベースのツールです。HTTP 接続を使用して、リモート コンピューターから 1 つのレポート サーバー インスタンスを管理するために使用します。 また、レポート マネージャーでレポートの表示とナビゲーションを行うこともできます。 このトピックの内容  
@@ -63,7 +63,7 @@ ms.locfileid: "56289017"
  レポート マネージャーでは、レポート サーバー フォルダーを参照したり、特定のレポートを検索することができます。 レポート、その全般プロパティ、およびレポート履歴にキャプチャされているレポートの過去のコピーを表示できます。 権限に応じて、レポートにサブスクライブし、電子メールの受信ボックスやファイル システム上の共有フォルダーに配信させることもできます。  
   
 > [!NOTE]  
->  サポートされるブラウザーとバージョンについては、[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)を参照してください。  
+>  サポートされるブラウザーとバージョンについては、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)します。  
   
  レポート マネージャーは、ネイティブ モードで実行されているレポート サーバーでのみ使用されます。 SharePoint 統合モード用に構成されたレポート サーバーでは使用できません。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "56289017"
  ロールの詳細については、「 [ネイティブ モードのレポート サーバーに対する権限の許可](security/granting-permissions-on-a-native-mode-report-server.md)」を参照してください。  
   
 > [!NOTE]  
->  Windows Vista または Windows Server 2008 を使用している場合、レポート マネージャーを使用してローカルのレポート サーバー インスタンスを管理するには、レポート サーバーをローカル管理用に構成する必要があります。 サーバーを構成する方法の詳細については、[ローカル管理用のネイティブ モード レポート サーバーの構成&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)を参照してください。  
+>  Windows Vista または Windows Server 2008 を使用している場合、レポート マネージャーを使用してローカルのレポート サーバー インスタンスを管理するには、レポート サーバーをローカル管理用に構成する必要があります。 サーバーを構成する方法の詳細については、次を参照してください。[ローカル管理用のネイティブ モード レポート サーバーの構成&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)します。  
   
 ## <a name="start-report-manager"></a>レポート マネージャーの起動  
   
@@ -99,7 +99,7 @@ ms.locfileid: "56289017"
  レポート マネージャーは、ごく限られた範囲でカスタマイズすることができます。 たとえば、[サイトの設定] ページで、アプリケーションのタイトルを変更できます。 Web 開発者は、レポート マネージャーで使用されるスタイル情報を含んだスタイル シートを変更できます。 レポート マネージャーは、カスタマイズをサポートするように特に設計されているわけではないため、変更は十分にテストする必要があります。 レポート マネージャーがニーズに合わない場合は、独自のレポート ビューアーを開発するか、SharePoint サイトでレポートを検索および表示できるように SharePoint Web パーツを構成することができます。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](report-server/configure-web-portal.md)」を参照してください。  
   
 ##  <a name="bkmk_icon_descriptions"></a> アイコンの説明  
- 次の表では、レポート マネージャーで使用されるアイコンについて説明します。 レポート ツールバーに表示されるアイコンの詳細については、[HTML ビューアーとレポート ツールバー](html-viewer-and-the-report-toolbar.md)を参照してください。  
+ 次の表では、レポート マネージャーで使用されるアイコンについて説明します。 レポート ツールバーに表示されるアイコンの詳細については、次を参照してください。 [HTML ビューアーとレポート ツールバー](html-viewer-and-the-report-toolbar.md)します。  
   
 |アイコン|説明|操作|  
 |----------|-----------------|------------|  

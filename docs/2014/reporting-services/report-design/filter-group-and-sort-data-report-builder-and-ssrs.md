@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.general.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8cce8a0acf2104689c1862518f9e78703a9d02f8
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
-ms.translationtype: MT
+ms.openlocfilehash: c848ddd8d7234ab8286d5f25603704638ce26bfd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658356"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950998"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)
   レポートでは、式を使用してレポート データの制御、整理、および並べ替えを行うことができます。 既定では、データセットを作成してレポート レイアウトをデザインすると、データセット フィールドやパラメーターなど、レポート データ ペインに表示されるアイテムに基づいて、レポート アイテムのプロパティが式に自動的に設定されます。 グループまたはグループ内の行の並べ替え順序をユーザーが対話的に変更できるように、テーブルまたはマトリックスのセルに対話的な並べ替えボタンを追加することもできます。  

@@ -10,18 +10,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff7f9c94aded21d70ea4b6ef6b31d2f8094f2592
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: e464af6b057465aec03a611ac741549c10de0638
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289810"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960939"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>埋め込みデータ ソースまたは共有データ ソースを作成する (SSRS)
-  レポートのデータ ソースは名前と接続情報を指定します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、"埋め込み" と "共有" の 2 種類のデータ ソースをサポートしています。 埋め込みデータ ソースは、レポート定義内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、個別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、[埋め込みと共有のデータ接続またはデータ ソース&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)を参照してください。  
+  レポートのデータ ソースは名前と接続情報を指定します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、"埋め込み" と "共有" の 2 種類のデータ ソースをサポートしています。 埋め込みデータ ソースは、レポート定義内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、個別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、次を参照してください。[埋め込みと共有のデータ接続またはデータ ソース&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)します。  
   
  レポート ビルダーで、レポート サーバーまたは SharePoint サイト上の保存先を参照してデータ ソースを選択するか、または埋め込みデータ ソースを作成します。 共有データ ソースをレポート ビルダーで作成することはできません。  
   

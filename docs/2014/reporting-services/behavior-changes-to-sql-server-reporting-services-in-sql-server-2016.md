@@ -21,15 +21,15 @@ helpviewer_keywords:
 - initializing installations [Reporting Services]
 - behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b845480863facf66ff33c5d976531118edb2d4a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 6722c72c8d6ac152697c65b2c910e1f8d29139c9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033193"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937358"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>SQL Server 2014 における SQL Server Reporting Services の動作変更
   このトピックでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]における動作変更について説明します。 動作変更によって、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の以前のバージョンに比べて、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の機能の動作や操作方法が変わります。  
@@ -73,7 +73,7 @@ ms.locfileid: "56033193"
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>サーバーを別のモードに変更できない  
  **新しい動作:** サーバー モードを変更することはできません。 レポート サーバーをネイティブ モードとしてインストールした場合、それを変更または再構成して SharePoint モードにすることはできません。 SharePoint モードでインストールした場合は、レポート サーバーをネイティブ モードに変更できます。  
   
- **以前の動作:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーを SharePoint モードでインストールします。 レポート サーバーをネイティブ モードに切り替えたい場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーを開き、新しいネイティブ モード データベースを作成するか、または既存のネイティブ モード データベースに接続することで、ネイティブ モードに切り替えることができました。 また、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、SharePoint モードからネイティブ モードに切り替えることもできました。  
+ **以前の動作:** インストール、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードでレポート サーバー。 レポート サーバーをネイティブ モードに切り替えたい場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーを開き、新しいネイティブ モード データベースを作成するか、または既存のネイティブ モード データベースに接続することで、ネイティブ モードに切り替えることができました。 また、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、SharePoint モードからネイティブ モードに切り替えることもできました。  
   
 ##  <a name="bkmk_kj"></a> SQL Server 2008 R2 Reporting Services における動作変更  
  ここでは、 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の動作変更について説明します。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0b1c8e61d66dbbf2eeeaf6f23f031f27f46e5069
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: ceba0cdab54d825cfc28e1c156ca33767dfb8b8f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295661"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946648"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel 表示拡張機能は、レポートを [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010 のネイティブ形式で表示します。 Excel 表示拡張機能を使用すると、レポートの列の幅は、より正確に Excel の列の幅に反映されます。  
@@ -136,7 +136,7 @@ ms.locfileid: "56295661"
 ### <a name="excel-2003-renderer"></a>Excel 2003 レンダラー  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003 表示拡張機能は非推奨とされます。 詳細については、[SQL Server 2014 における SQL Server Reporting Services の非推奨機能](../deprecated-features-in-sql-server-reporting-services-ssrs.md)を参照してください。  
+>  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003 表示拡張機能は非推奨とされます。 詳細については、次を参照してください。 [SQL Server 2014 における SQL Server Reporting Services の非推奨機能](../deprecated-features-in-sql-server-reporting-services-ssrs.md)します。  
   
  Excel 2003 と互換性のある Excel レンダラーの以前のバージョンは、Excel 2003 という名前になり、この名前がメニューに表示されます。 このレンダラーで生成されるファイルのコンテンツ タイプは **application/vnd.ms-excel** で、ファイル名の拡張子は .xls です。  
   

@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:作成の詳細レポートとメイン レポート (レポート ビルダー) |Microsoft Docs
+title: チュートリアル:詳細レポートとメイン レポートの作成 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b150ff5fd1e69a9c6ac8ea7e2f2ef2b60d32ffb8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289870"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961238"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル:詳細レポートとメイン レポート (レポート ビルダー) を作成します。
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル:詳細レポートとメイン レポートの作成 (レポート ビルダー)
   このチュートリアルでは、詳細レポートとメイン レポートの 2 種類のレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 次の図は、レポートを作成します。  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
@@ -168,7 +168,7 @@ ms.locfileid: "56289870"
   
 5.  フィルター式の一覧で、 **[All Channel]** を展開し、 **[Online]** と **[Reseller]** をクリックして、 **[OK]** をクリックします。  
   
-     クエリをこれらのチャネルのみを含めるフィルターが含まれるようになりました。Online と Reseller のみに制限するフィルターがクエリに追加されます。  
+     これで、次のチャネルのみを含めるフィルターがクエリに追加されます:オンラインと再販業者経由します。  
   
 6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name**の下) にドラッグします。  
   
@@ -390,7 +390,7 @@ ms.locfileid: "56289870"
   
 7.  **[保存]** をクリックします。  
   
-##  <a name="MMatrixAndDataset"></a> 1.テーブルまたはマトリックス ウィザードを使用して新しいレポートを作成する  
+##  <a name="MMatrixAndDataset"></a> 1.テーブルまたはマトリックス ウィザードから新しいレポートを作成します。  
  **[作業の開始]** ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。  
   
 #### <a name="to-create-a-new-report"></a>新しいレポートを作成するには  
@@ -462,7 +462,7 @@ ms.locfileid: "56289870"
   
 5.  フィルター式の一覧で、 **[All Channel]** を展開し、 **[Online]** と **[Reseller]** をクリックして、 **[OK]** をクリックします。  
   
-     クエリをこれらのチャネルのみを含めるフィルターが含まれるようになりました。Online と Reseller のみに制限するフィルターがクエリに追加されます。  
+     これで、次のチャネルのみを含めるフィルターがクエリに追加されます:オンラインと再販業者経由します。  
   
 6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name**の下) にドラッグします。  
   
@@ -562,7 +562,7 @@ ms.locfileid: "56289870"
   
 1.  **[レイアウトの選択]** ページの **[オプション]** で、 **[小計と総計を表示]** が選択されていることを確認します。  
   
-     ウィザードのプレビュー ペインに、4 行を含むマトリックスが表示されます。  レポートを実行すると、各行は次のように表示されます。最初の行が列グループになり、2 行目に列見出し、3 行目に製品カテゴリのデータ (`[Sum(Net_ QTY)]` と `[Sum(Net_Sales)]`)、4 行目に合計が含まれます。  
+     ウィザードのプレビュー ペインに、4 行を含むマトリックスが表示されます。  レポートを実行すると、各行は次のように表示されます。最初の行が列グループ、2 番目の行が列見出しを含む、3 番目の行には、製品カテゴリのデータが含まれています (`[Sum(Net_ QTY)]`と`[Sum(Net_Sales)]`、4 番目の行には合計が含まれています。  
   
 2.  **[次へ]** をクリックします。  
   
@@ -685,7 +685,7 @@ ms.locfileid: "56289870"
   
 1.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-2.  型**2009 Product Category Sales:Online と Reseller Category:** します。  
+2.  「**2009 Product Category Sales:Online and Reseller Category:**」と入力します。  
   
 3.  入力したテキストを選択します。  
   

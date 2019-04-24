@@ -25,15 +25,15 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 84199b2bf01101a1bcc67b6e3d0870824a116860
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 12fa851a8f524bae83017042d01a7c7733225fd7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013593"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962518"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート サーバーで実行中のジョブの状態を監視します。 レポート サーバーは、一定の間隔で、実行中のジョブをスキャンし、レポート サーバー データベース (SharePoint モードの場合はサービス アプリケーション データベース) に状態情報を書き込みます。 リモートまたはローカル データベース サーバーでのクエリの実行、レポート処理、およびレポート表示のいずれかが行われている場合、ジョブは実行中です。  
@@ -54,7 +54,7 @@ ms.locfileid: "56013593"
   
 -   個々のユーザーが所有する標準サブスクリプション。  
   
- ジョブのキャンセルでは、レポート サーバーで実行中の処理だけが取り消されます。 レポート サーバーは、他のコンピューター上のデータ処理を管理しないため、他のシステム上で孤立したそれ以降のクエリ処理については、手動で取り消す必要があります。 実行に長時間かかるクエリが自動的にシャットダウンされるようなクエリのタイムアウト値を指定することを検討してください。 詳細については、「[レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)」を参照してください。 レポートの一時停止の詳細については、[Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md)を参照してください。  
+ ジョブのキャンセルでは、レポート サーバーで実行中の処理だけが取り消されます。 レポート サーバーは、他のコンピューター上のデータ処理を管理しないため、他のシステム上で孤立したそれ以降のクエリ処理については、手動で取り消す必要があります。 実行に長時間かかるクエリが自動的にシャットダウンされるようなクエリのタイムアウト値を指定することを検討してください。 詳細については、「[レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)」を参照してください。 レポートの一時停止の詳細については、次を参照してください。 [Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md)します。  
   
 > [!NOTE]  
 >  まれに、サーバーを再起動して処理を取り消す必要が生じる場合があります。 SharePoint モードの場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションをホストしているアプリケーション プールの再起動が必要になる場合があります。 詳細については、「 [レポート サーバー サービスの開始と停止](../report-server/start-and-stop-the-report-server-service.md)」を参照してください。  

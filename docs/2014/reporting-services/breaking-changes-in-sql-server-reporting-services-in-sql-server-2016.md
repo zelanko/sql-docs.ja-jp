@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Reporting Services, backward compatibility
 - breaking changes [Reporting Services]
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00b787d9fbeebd04b81ec608bf23745ddd733a0a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: e779a88940db2883846168535e7823c1723f4b4e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040173"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947658"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 における SQL Server Reporting Services の重大な変更
   このトピックでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]における重大な変更について説明します。 これらの変更によって、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に基づくアプリケーション、スクリプト、または機能が使用できなくなる場合があります。 この問題は、アップグレードするとき、またはカスタムのスクリプトやレポートで発生することがあります。 詳細については、「 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)」を参照してください。  
@@ -52,7 +52,7 @@ ms.locfileid: "56040173"
   
  次のステートメントは完全なインストール コマンドとパラメーター セットの例: **setup/ACTION = install/FEATURES = SQL, RS/InstanceName = denali_inst1… は.../RSSHPINSTALLMODE ="DefaultSharePointMode"**  
   
- コマンド ライン インストールの詳細については、[コマンド プロンプト インストールの Reporting Services SharePoint モードとネイティブ モード](install-windows/install-reporting-services-at-the-command-prompt.md)を参照してください。  
+ コマンド ライン インストールの詳細については、次を参照してください。[コマンド プロンプト インストールの Reporting Services SharePoint モードとネイティブ モード](install-windows/install-reporting-services-at-the-command-prompt.md)します。  
   
 ### <a name="the-reporting-services-wmi-provider-no-longer-supports-configuration-of-sharepoint-mode"></a>Reporting Services WMI プロバイダーでの SharePoint モードの構成操作の廃止  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint の構成は、PowerShell コマンドレットと SharePoint サーバーの全体管理を使用して行うようになりました。 新しい [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モード アーキテクチャでは、SharePoint サービス アーキテクチャが使用されます。 SharePoint では、WMI インターフェイスはサポートされません。  

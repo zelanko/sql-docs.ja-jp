@@ -13,15 +13,15 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ca90cb195ca7627dfc28808a2281293a0a2e278
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: c6314eb5a81d2384763b69dbc44296913f1ba49d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014543"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965378"
 ---
 # <a name="feature-reference-reporting-services"></a>機能リファレンス (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポートを作成、管理、表示できるツールとアプリケーションが数種類用意されています。 ここでは、これらのツールとアプリケーションのダイアログ ボックス、Web ページ、およびウィザードに関する特有のトピックを紹介します。  
