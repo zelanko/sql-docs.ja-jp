@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 互換性レベル (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 04/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbc27afcf47429d0c6a74b43244ba9a4f6f483a7
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828082"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583375"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 互換性レベル
 
@@ -175,6 +175,14 @@ SELECT name, compatibility_level FROM sys.databases;
 このセクションでは、互換性レベル 150 で導入された新しい動作について説明します。
 
 現在、データベース互換レベル 150 は [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] でパブリック プレビューとして提供されています。 このデータベース互換レベルは、データベース互換レベル 140 で導入されたものを超える、新世代のクエリ処理と関連付けられます。
+
+|互換性レベル設定 140 以下|互換性レベル設定 150|
+|--------------------------------------------------|-----------------------------------------|
+|OLTP のオーバーヘッドやベンダー サポートの欠如などの制限のため、リレーショナル データ ウェアハウスと分析ワークロードで列ストア インデックスを活用できない場合があります。  列ストア インデックスがないと、これらのワークロードでバッチ実行モードの利点が得られません。|列ストア インデックスがなくても、分析ワークロードでバッチ実行モードが使用できるようになりました。 詳細については、「[batch mode on rowstore (行ストアでのバッチ モード)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore)」を参照してください。|
+|ディスクへのスピルを引き起こす不十分なメモリ許可サイズを要求する行モード クエリでは、連続実行において引き続き問題が発生する可能性があります。|ディスクへのスピルを引き起こす不十分なメモリ許可サイズを要求する行モード クエリでは、連続実行でのパフォーマンスが改善されている可能性があります。 詳細については、「[row mode memory grant feedback (行モード メモリ許可フィードバック)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)」を参照してください。|
+|コンカレンシーの問題を引き起こす過度なメモリ許可サイズを要求する行モード クエリでは、連続実行において引き続き問題が発生する可能性があります。|コンカレンシーの問題を引き起こす過度なメモリ許可サイズを要求する行モード クエリでは、連続実行でのコンカレンシーが改善されている可能性があります。 詳細については、「[row mode memory grant feedback (行モード メモリ許可フィードバック)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)」を参照してください。|
+|T-SQL スカラー UDF を参照するクエリでは、反復呼び出しが使用され、コストが不足するため、シリアル実行が強制的に実施されます。 |T-SQL スカラー UDF は同等のリレーショナル式に変換され、この式は呼び出し側クエリに "インライン化" されます。これにより、多くの場合、パフォーマンスが大幅に向上します。 詳細については、「[T-SQL scalar UDF inlining (T-SQL スカラー UDF のインライン化)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining)」を参照してください。|
+|テーブル変数では、カーディナリティの推定で固定推定値が使用されます。  実際の行数が推定値よりはるかに大きい場合は、ダウン ストリーム操作のパフォーマンスが低下する場合があります。 |新しいプランでは、固定推定値ではなく、最初のコンパイルで発生したテーブル変数の実際のカーディナリティが使用されます。 詳細については、「[table variable deferred compilation (テーブル変数の遅延コンパイル)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation)」を参照してください。|
 
 データベース互換レベル 150 で使用できるクエリ処理機能の詳細については、「[What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md)」 (SQL Server 2019 の新機能) と「[SQL データベースでのインテリジェントなクエリ処理](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017)」を参照してください。
 

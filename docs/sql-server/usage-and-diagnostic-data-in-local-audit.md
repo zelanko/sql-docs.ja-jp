@@ -1,7 +1,7 @@
 ---
 title: SQL Server の使用状況と診断データの収集のローカル監査 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7ccb6e362bdf602c4df650d96ca22eac269c46f1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: a769ed13e8c95c3ae5a948f6a9bb1be577280e99
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243546"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582766"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection"></a>SQL Server の使用状況と診断データの収集のローカル監査
 
@@ -302,7 +302,7 @@ SQL Server CEIP が既に実行中の場合、ローカル監査設定は直ち�
 ```
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
-**DBA でローカル監査ログ ファイルを読み取るにはどうすればよいですか?**
+**DBA がローカル監査ログ ファイルを読み取るにはどうすればよいですか?**
 Local Audit ログ ファイルは JSON 形式で出力されます。 各行は、Microsoft にアップロードされた 1 件の使用状況/診断データを表す JSON オブジェクトになります。 フィールドには、わかりやすい名前を付けることをお勧めします。
 
 **DBA が使用状況と診断データの収集を無効にするとどうなりますか?**
@@ -369,4 +369,4 @@ WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
 ## <a name="see-also"></a>参照
-[SSMS の使用状況と診断データの収集のローカル監査](../ssms/sql-server-management-studio-telemetry-ssms.md)
+[Local audit for SSMS usage and diagnostic data collection (SSMS の使用状況および診断データの収集のローカル監査)](../ssms/sql-server-management-studio-telemetry-ssms.md)

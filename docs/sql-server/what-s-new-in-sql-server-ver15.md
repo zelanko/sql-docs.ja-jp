@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 の新機能 | Microsoft Docs
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,22 +9,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c36b85b210cf10a3d35e5708b123a30e85e3c39
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 4e2e29a3b473ca94ff203e99c9e4a76c803d69fc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042421"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774607"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] は以前のリリースに基づいて構築され、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムを選択できるプラットフォームとしての SQL Server がいっそう成長しています。 この記事では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]の新機能をまとめます。 最初のセクションでは、最新のプレビュー リリースに追加された機能について説明します。 この記事のその他のセクションでは、現在この [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対してリリースされているすべての機能の詳細を説明します。
+以前のリリースを基にして構築された [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムを選択できるプラットフォームとしての SQL Server がいっそう成長しています。 この記事では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]の新機能をまとめます。 最初のセクションでは、最新のプレビュー リリースに追加された機能について説明します。 この記事のその他のセクションでは、現在この [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対してリリースされているすべての機能の詳細を説明します。
 
 詳細および既知の問題については、「[[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース ノート](sql-server-ver15-release-notes.md)」 をご覧ください。
 
-**[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] をお試しください。**
+**[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] をお試しください**
 
 - [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] をダウンロードして Windows にインストールする](https://go.microsoft.com/fwlink/?LinkID=862101)。
 - [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)、および [Ubuntu](../linux/quickstart-install-connect-ubuntu.md) の Linux にインストールする。
@@ -39,15 +39,15 @@ Community Technology Preview (CTP) 2.4 は、[!INCLUDE[sql-server-2019](../inclu
 - [ビッグ データ クラスター](#bigdatacluster)
   - Spark で TensorFlow を使用しディープ ラーニングを実行する場合の GPU でのサポートに関するガイダンス。
   - Spark 2.4 への Spark のランタイムのアップグレード。
-  - `INSERT INTO SELECT` のデータ プール用サポート。
-  - `FORCE SCALEOUTEXECUTION` と `DISABLE SCALEOUTEXECUTION` の外部テーブル クエリ用のオプション句。
+  - データ プール用の `INSERT INTO SELECT` のサポート。
+  - 外部テーブル クエリ用の `FORCE SCALEOUTEXECUTION` と `DISABLE SCALEOUTEXECUTION` のオプション句。
 
 - [データベース エンジン](#databaseengine)
   - 切り捨てエラー メッセージに、テーブル名および列名と切り捨てられた値が既定で含まれる。 [切り捨て](#truncation)に関する説明を参照してください。
   - 新しい DMF `sys.dm_exec_query_plan_stats` では、ほとんどのクエリについて最後の既知の実際の実行プランと同等のものが返される。
   - Transparent Data Encryption (TDE) のスキャン: 一時停止と再開。
 
-- [SQL Server Analysis Services (SQL Server Analysis Services)](#ssas)
+- [SQL Server Analysis Services](#ssas)
   - 表形式モデルでの多対多リレーションシップ。
   - リソース ガバナンス用のプロパティ設定。
 
@@ -59,8 +59,8 @@ Community Technology Preview (CTP) 2.4 は、[!INCLUDE[sql-server-2019](../inclu
 
 - [Spark で TensorFlow を使用しディープ ラーニングを実行する場合の GPU でのサポート](../big-data-cluster/spark-gpu-tensorflow.md)。 (CTP 2.4)
 - Spark 2.4 への Spark のランタイムのアップグレード。 (CTP 2.4)
-- `INSERT INTO SELECT` のデータ プール用サポート。
-- `FORCE SCALEOUTEXECUTION` と `DISABLE SCALEOUTEXECUTION` の外部テーブル クエリ用のオプション句。
+- データ プール用の `INSERT INTO SELECT` のサポート。
+- 外部テーブル クエリ用の `FORCE SCALEOUTEXECUTION` と `DISABLE SCALEOUTEXECUTION` のオプション句。
 - [IntelliJ での [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ビッグ データ クラスターでの Spark ジョブの送信](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md)。 (CTP 2.3)
 - R と Python を使用した機械学習モデルの運用、SQL Server Integration Services (SSIS) のジョブの実行など、さまざまなデータ関連アプリに関する[アプリケーションのデプロイと管理のエクスペリエンス](../big-data-cluster/big-data-cluster-create-apps.md)。 (CTP 2.3)
 - [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ビッグ データ クラスター](../big-data-cluster/sparklyr-from-RStudio.md)での Sparklyr の使用。 (CTP 2.3)
@@ -152,7 +152,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> Azure SQL DB では、この機能は既定で有効になるので、利用するためにこの構文を使用する必要はありません。
+> 上記の構文を使用しなくても、Azure SQL DB でこの機能を使用できます。この機能は、[パブリック プレビュー中、要求に応じて有効にされます](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period)。 この機能は、有効にされた後は、既定でオンになります。
 
 大規模なトランザクションの多いクリティカルなデータベースがある場合は、プレビュー期間中にこの機能を試してください。 フィードバックを[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]チーム](<https://aka.ms/sqlfeedback>)にお送りください。
 
@@ -171,7 +171,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 ### <a name="improved-indirect-checkpoint-scalability-ctp-23"></a>間接チェックポイントのスケーラビリティの向上 (CTP 2.3)
 
-以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、tempdb のように多数のダーティ ページを生成するデータベースがあると、応答停止スケジューラ エラーが発生することがあります。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では間接チェックポイントのスケーラビリティが向上しており、UPDATE/INSERT のワークロードが大きいデータベースでのエラー回避に役立つはずです。
+以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、tempdb のように多数のダーティ ページを生成するデータベースがあると、応答停止スケジューラ エラーが発生することがあります。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]では間接チェックポイントのスケーラビリティが向上しており、UPDATE/INSERT のワークロードが大きいデータベースでのエラー回避に役立つはずです。
 
 ### <a name="utf-8-support-ctp-23"></a>UTF-8 のサポート (CTP 2.3)
 
@@ -220,7 +220,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 ### <a name="static-data-masking-ctp-21"></a>静的データ マスク (CTP 2.1)
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では静的データ マスキングが導入されています。 静的データ マスクを使用することで、SQL Server データベースのコピー内の機密データをサニタイズすることができます。 静的データ マスクは、データベースのサニタイズされたコピーを作成するのに役立ちます。このコピーでは、非運用環境のユーザーと共有可能なコピーが作成されるようにすべての機密情報が変更されています。 静的データ マスクは、開発、テスト、分析、ビジネス レポート、コンプライアンス、トラブルシューティングのほか、特定のデータを異なる環境にコピーしてはならないシナリオで使用することができます。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では静的データ マスクが導入されています。 静的データ マスクを使用することで、SQL Server データベースのコピー内の機密データをサニタイズすることができます。 静的データ マスクは、データベースのサニタイズされたコピーを作成するのに役立ちます。このコピーでは、非運用環境のユーザーと共有可能なコピーが作成されるようにすべての機密情報が変更されています。 静的データ マスクは、開発、テスト、分析、ビジネス レポート、コンプライアンス、トラブルシューティングのほか、特定のデータを異なる環境にコピーしてはならないシナリオで使用することができます。
 
 静的データ マスクは、列レベルで動作します。 マスクする列を選択し、選択した列ごとにマスク関数を指定します。 静的データ マスクでは、データベースがコピーされてから、指定したマスク関数が列に適用されます。
 
@@ -295,7 +295,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
    - 数百万行以上のデータ セットにアクセスする。
    - 多数の個別値を持つ 1 つまたは複数の列を集計する。
    - 絶対的な精度より応答性が重視される。
-      - `APPROX_COUNT_DISTINCT` は、通常は正確な答の 2% 以内の結果を返します。
+      - 通常、`APPROX_COUNT_DISTINCT` は正確な答の 2% 以内の結果を返します。
       - 正確な答に必要な時間より短い時間で、おおよその答を返します。
 
 - **行ストアのバッチ モード**では、バッチ モードでクエリを処理するのに列ストア インデックスが不要になりました。 バッチ モードのクエリ演算子は、一度に 1 行だけでなく、行のセットを処理できます。 この機能は、データベース互換性レベル 150 では既定で有効です。 次のすべてが当てはまる場合、行ストア テーブルにアクセスするクエリはバッチ モードによって速度が向上します。
@@ -377,15 +377,15 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
     - 永続メモリは、Microsoft 以外の Web サイトでは非公式に *pmem* と呼ばれることがあります。
 
 > [!NOTE]
-> このプレビュー リリースでは、永続メモリ デバイス上のファイルのエンライトメントは Linux でのみ利用できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (Windows 上) では、[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降で永続メモリ デバイスがサポートされています。
+> このプレビュー リリースでは、永続メモリ デバイス上のファイルのエンライトメントは Linux でのみ利用できます。 Windows 上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降で永続メモリ デバイスがサポートされています。
 
 ### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase-ctp-20"></a>DBCC CLONEDATABASE での列ストア統計のサポート (CTP 2.0)
 
-`DBCC CLONEDATABASE` では、データをコピーすることなくクエリのパフォーマンスに関する問題をトラブルシューティングするのに必要なすべての要素を含む、スキーマのみのデータベースのコピーが作成されます。 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコマンドでは、列ストア インデックスのクエリのトラブルシューティングを正確に行うために必要な統計情報がコピーされず、手作業でこの情報をキャプチャする必要がありました。 現在の [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の `DBCC CLONEDATABASE` では、列ストア インデックスの統計 BLOB が自動的にキャプチャされるので、手動で行う必要ありません。
+`DBCC CLONEDATABASE` では、データをコピーすることなく、クエリのパフォーマンスに関する問題のトラブルシューティングに必要なすべての要素を含むスキーマのみのデータベースのコピーが作成されます。 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコマンドでは、列ストア インデックスのクエリのトラブルシューティングを正確に行うために必要な統計情報がコピーされず、手作業でこの情報をキャプチャする必要がありました。 現在の [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の `DBCC CLONEDATABASE` では、列ストア インデックスの統計 BLOB が自動的にキャプチャされるので、手動で行う必要ありません。
 
 ### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>sp_estimate_data_compression_savings に追加された新しいオプション (CTP 2.0)
 
-`sp_estimate_data_compression_savings` は、要求されたオブジェクトの現在のサイズを返し、要求された圧縮状態でのオブジェクト サイズを推定します。 現在、このプロシージャでは、`NONE`、`ROW`、`PAGE` の 3 つのオプションがサポートされています。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、`COLUMNSTORE` と `COLUMNSTORE_ARCHIVE` の 2 つの新しいオプションが導入されています。 これらの新しいオプションを使用すると、標準またはアーカイブいずれかの列ストア圧縮を使用してテーブルに列ストア インデックスを作成した場合に節約される領域を見積もることができます。
+`sp_estimate_data_compression_savings` は、要求されたオブジェクトの現在のサイズ、および要求された圧縮状態での推定オブジェクト サイズを返します。 現在、このプロシージャでは、`NONE`、`ROW`、`PAGE` の 3 つのオプションがサポートされています。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、`COLUMNSTORE` と `COLUMNSTORE_ARCHIVE` の 2 つの新しいオプションが導入されています。 これらの新しいオプションを使用すると、標準またはアーカイブいずれかの列ストア圧縮を使用してテーブルに列ストア インデックスを作成した場合に節約される領域を見積もることができます。
 
 ### <a id="ml"></a> SQL Server Machine Learning Services フェールオーバー クラスターとパーティション ベースのモデリング (CTP 2.0)
 

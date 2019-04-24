@@ -12,10 +12,10 @@ ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: e6e0f7bc107ae731e3eb2e7f6685e6c02914d41d
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872152"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する
@@ -152,7 +152,7 @@ NuGet パッケージは、セキュリティで保護されたエンクレー�
 
 - エンクレーブ対応の**列マスター キーは、Windows 証明書ストアまたは Azure Key Vault** に格納する必要があります。 他の種類のキー ストア (ハードウェア セキュリティ モジュールまたはカスタム キー ストア) にエンクレーブ対応列マスター キーを格納することは現在サポートされていません。
 
-### **<a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用してエンクレーブ対応キーをプロビジョニングする**
+### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>**SQL Server Management Studio (SSMS) を使用してエンクレーブ対応キーをプロビジョニングする**
 
 次の手順では、エンクレーブ対応キーを作成します (SSMS 18.0 以降が必要です)。
 
@@ -177,7 +177,7 @@ NuGet パッケージは、セキュリティで保護されたエンクレー�
     3. **[列マスター キー]** ドロップダウンで、前の手順で作成した列マスター キーを選択します。
     4. **[OK]** をクリックします。
 
-### **<a name="provision-enclave-enabled-keys-using-powershell"></a>PowerShell を使用してエンクレーブ対応キーをプロビジョニングする**
+### <a name="provision-enclave-enabled-keys-using-powershell"></a>**PowerShell を使用してエンクレーブ対応キーをプロビジョニングする**
 
 以下のセクションでは、エンクレーブ対応キーをプロビジョニングするための PowerShell スクリプトの例を示します。 セキュリティで保護されたエンクレーブが設定された Always Encrypted に固有の (新しい) 手順が強調表示されます。 PowerShell を使用したプロビジョニング キーの (セキュリティで保護されたエンクレーブが設定された Always Encrypted に固有ではない) 詳細については、「[PowerShell を使用して Always Encrypted キーの構成](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell)」を参照してください。
 
@@ -218,7 +218,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 クライアント/開発用コンピューターで Windows PowerShell ISE を開き、次のスクリプトを実行します。
 
-**手順 1:Azure Key Vault に列マスター キーをプロビジョニングする**
+**ステップ 1:Azure Key Vault に列マスター キーをプロビジョニングする**
 
 これは、Azure portal を使用して行うこともできます。 詳細は、「[Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)」(Azure portal からキー コンテナーを管理する) を参照してください。
 
@@ -250,7 +250,7 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-**手順 2:データベースに列マスター キーのメタデータを作成し、列暗号化キーを作成し、データベースに列暗号化キーのメタデータを作成します。**
+**ステップ 2:データベースに列マスター キーのメタデータを作成し、列暗号化キーを作成し、データベースに列暗号化キーのメタデータを作成します。**
 
 
 ```powershell
@@ -441,8 +441,8 @@ ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL
 
 エンクレーブ対応ではないキーを使用して列を暗号化するには、SSMS の Always Encrypted ウィザードや SqlServer PowerShell モジュールの Set-SqlColumnEncryption コマンドレットなどのクライアント側ツールを使用する必要があります。 詳細については、次の情報を参照してください。
 
-- [Always Encrypted ウイザード](always-encrypted-wizard.md)
-- [PowerShell を使用して列の暗号化の構成](configure-column-encryption-using-powershell.md)
+- [Always Encrypted ウィザード](always-encrypted-wizard.md)
+- [PowerShell を使用した列の暗号化の構成](configure-column-encryption-using-powershell.md)
 
 
 ### <a name="prerequisites"></a>Prerequisites
@@ -503,7 +503,7 @@ GO
 
 既存の列のエンクレーブを有効にするには、次の 3 つの方法があります。
 
-#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>オプション 1: 列マスター キーを交換して、エンクレーブ対応列暗号化キーに置き換えます。
+#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>オプション 1:列マスター キーを交換して、エンクレーブ対応列暗号化キーに置き換えます。
   
 - 長所:
   - データを再暗号化する必要がないため、通常は最も速い方法です。 これは、大量のデータを含む列で、すべての列を指定し、高度な計算を有効にする必要があり、既に決定論的な暗号化を使用しているため、再暗号化する必要がない場合にお勧めの方法です。

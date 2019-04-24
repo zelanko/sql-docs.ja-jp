@@ -12,10 +12,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0bb422177cc0908a8cf5d274dc0b0d0332dcbc95
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042501"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
@@ -57,7 +57,7 @@ GeneMi. 2019/04/02.
 
 ### <a name="whats-new-in-rc1"></a>RC1 の新機能
 
-| [新しい項目] | 詳細 |
+| 新しい項目 | 詳細 |
 | :------- | :------ |
 | **SSMS:**&nbsp; &nbsp; PowerBI のデータセットに対して XMLA エンドポイントの接続が有効になりました。 | XML for Analysis (XMLA) エンドポイントでは、Power BI サービスの Analysis Services エンジンにアクセスできます。 これにより、監視、管理、デバッグなどのために Power BI のデータセットを SSMS や SQL Profiler などのツールに接続できます。<br/><br/> 拡張情報については、[XMLA エンドポイント接続性](https://go.microsoft.com/fwlink/?linkid=2085204)に関する 2019 年 3 月 28 日のブログ記事をご覧ください。 |
 | **SMO:**&nbsp; &nbsp; "_エッジ制約_" の連鎖削除のサポートを追加しました。 | SSMS と SQL Server 管理オブジェクト (SMO) の両方に追加しました。 |
@@ -190,7 +190,7 @@ GeneMi. 2019/04/02.
   - (プレビュー 5 の新機能) グラフの Y 軸に表示される数字に桁区切り記号を追加することで、一部のレポート (全体的なリソースの消費) の使いやすさを改善しました。
   - (プレビュー 5 の新機能) 新しいクエリ待機統計レポートが追加されました。
 
-- **データ マスキング**
+- **データ マスク**
   - (プレビュー 5 の新機能) 静的データ マスキングが追加されました。 静的データ マスクは、ユーザーが自身の SQL データベースをコピーして、コピー上の機密データをマスクできるようにするデータ保護ツールです。 この機能は、開発/テスト チームや分析チームなどの実稼働データベースを使用していないユーザーと実稼働データベースを共有するのに役立ちます。 詳細については、「[Static Data Masking for Azure SQL Database and SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/)」 (Azure SQL Database および SQL Server 用の静的データ マスク) を参照してください。
   - (プレビュー 7 の新機能) JSON 構成ファイルがサポートされるようになりました。
   - (プレビュー 7 の新機能) 今後さらに柔軟性を高めるため、XML 構成ファイルの形式が変更されました。  既存の構成ファイルは、再作成する必要があります。
@@ -230,7 +230,7 @@ GeneMi. 2019/04/02.
 - **Always Encrypted**
   - [サーバーに接続] ダイアログの新しい [Always Encrypted] タブにある [Always Encrypted を有効にする] チェックボックスで、データベース接続での Always Encrypted の有効化/無効化を簡単に切り替えられるようになりました。 
 
-- [**セキュア エンクレーブを使用する Always Encrypted**](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves)
+- [**セキュリティで保護されたエンクレーブが設定された Always Encrypted**](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves)
   - SQL Server 2019 プレビューでは、セキュリティで保護されたエンクレーブが設定された Always Encrypted をサポートするためにいくつかの機能強化が加えられました
     - [サーバーに接続] ダイアログ (新しい [Always Encrypted] タブ) にエンクレーブの構成証明の URL を指定するテキスト フィールド。
     - 新しい列マスター キーでエンクレーブ計算を許可するかどうかを制御する、[新しい列マスター キー] ダイアログの新しいチェックボックス。
@@ -300,7 +300,7 @@ GeneMi. 2019/04/02.
   - (プレビュー 6 の新機能) "ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)" の使用時に IntelliSense で警告が表示されていた問題が修正されました
   - (RC1 の新機能) いくつかのシステム ビューおよびテーブル値関数が正しく色付けされない問題を修正しました。
 
-- **オブジェクト エクスプローラー**
+- **[オブジェクト エクスプローラー]**
   - OE (誤って構成された DataCollector) の [管理] ノードを展開しようとすると、SSMS から "オブジェクトを DBNull から他のタイプにキャストすることはできません" のような例外がスローされる問題を修正しました。
   - ノードの名前を変更するときに、Del キーが機能しない問題を修正しました (詳細については、 https://feedback.azure.com/forums/908035/suggestions/32910247 と他の重複を参照)
   - [上位 N の編集] を呼び出す前に OE で引用符がエスケープ処理されず、混乱を引き起こしている問題を修正しました
@@ -382,7 +382,7 @@ GeneMi. 2019/04/02.
   - URL バックアップを復元しようとしたときの SSMS のクラッシュを修正しました (これは前のプレビューでの問題の再発です)
   - (プレビュー 5 の新機能) [データベースのアタッチ] ウィザードで名前が変更されたセカンダリ ファイルが表示されない問題を修正しました。 現在は、ファイルが表示され、そのファイルについてのコメント ("見つかりません" など) が追加されています。 詳細については、 https://feedback.azure.com/forums/908035/suggestions/32897434 を参照してください
 
-- **[ジョブの利用状況モニター]**
+- **ジョブの利用状況モニター**
   - ジョブの利用状況モニター (フィルターあり) を使用中にクラッシュする問題を修正しました
 
 - **Managed Instance のサポート**
@@ -404,7 +404,7 @@ GeneMi. 2019/04/02.
   - (プレビュー 7 の新機能) SMO で `ALTER DB ADD FILE` ステートメントをスクリプト作成すると、生成された T-SQL スクリプトが空になる問題を修正しました。
   - (RC1 の新機能) Managed Instance のサーバー固有のプロパティ (ハードウェア生成、サービス レベル、使用および予約されているストレージ) の表示を改善しました。
 
-- **Azure SQL データベース**
+- **Azure SQL Database**
   - Azure SQL DB でマスター データベースではなくユーザー データベースに接続したときに、Azure SQL DB クエリ ウィンドウにデータベース リストが正しく入力されない問題を修正しました。
   - SQL Azure DB に "テンポラル テーブル" を追加できない問題を修正しました。
   - (プレビュー 6 の新機能) Azure の [統計] メニューの下にある統計プロパティのサブメニュー オプションを有効にしました。これは、もうだいぶ前から完全にサポートされていたためです。
@@ -438,7 +438,7 @@ GeneMi. 2019/04/02.
   - (プレビュー 6 の新機能) SQL Server 2017 および SQL Server 2019 のデータベース転送タスク/データベース コピー ウィザードは壊れています
   - (プレビュー 6 の新機能) スクリプトの生成/転送/データベース コピー ウィザードでは、関連付けられている外部データ ソースが作成される前に、テーブルの作成がスクリプト化されます
 
-- **プロファイラー**
+- **Profiler**
   - (プレビュー 6 の新機能) Profiler イベントに "Aggregate Table Rewrite Query" イベントが追加されました。
   - (RC1 の新機能) Windows 7 SP1 で SQL Profiler が起動できない問題を修正しました。
 
@@ -446,7 +446,7 @@ GeneMi. 2019/04/02.
   - (プレビュー 6 の新機能) 複数のスレッドが存在する場合、新しい mem grant 演算子プロパティが正しく表示されません。
   - (RC1 の新機能) 実際の実行プラン xml の RunTimeCountersPerThread に、次の 4 つの属性を追加しました。HpcRowCount (hpc デバイスが処理した行数)、HpcKernelElapsedUs (使用中のカーネルの実行の待機の経過時間)、HpcHostToDeviceBytes (ホストからデバイスに転送されたバイト数)、および HpcDeviceToHostBytes (デバイスからホストに転送されたバイト数)。
 
-- **データ マスキング**
+- **データ マスク**
   - (プレビュー 7 の新機能) 複数のログと filestream のメモリ最適化テーブル ファイルを持つオンプレミスのデータベースを自動的にコピーできないバグを修正しました。
 
 - **データ層アプリケーションのウィザード**
@@ -481,7 +481,7 @@ GeneMi. 2019/04/02.
 
 ## <a name="1791-latest-ga-release"></a>17.9.1 (最新の GA リリース)
 
-![ダウンロード](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+[SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) ![のダウンロード](../ssdt/media/download.png)
 
 - リリース番号:17.9.1<br>
 - ビルド番号:14.0.17289.0<br>
@@ -502,7 +502,7 @@ GeneMi. 2019/04/02.
 
 ## <a name="179"></a>17.9
 
-![ダウンロード](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
+[SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) ![のダウンロード](../ssdt/media/download.png)
 
 ビルド番号:14.0.17285.0<br>
 リリース日:2018 年 9 月 4 日
@@ -592,7 +592,7 @@ Help:
 以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
-*17.8 では SQL データベースのプロビジョニングに関連するバグが検出されたため、17.8 は SSMS 17.8.1 に置き換えられます。*
+*17.8 では SQL データベースのプロビジョニングに関連するバグが検出されたため、17.8 は SSMS 17.8.1 に置き換えられました。*
 
 ビルド番号:14.0.17277.0<br>
 リリース日:2018 年 6 月 26 日
@@ -1266,7 +1266,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - SQL Server のグラフの強化。グラフ ノードとエッジ テーブルの新しいアイコン。グラフ ノードとエッジ テーブルが [グラフ テーブル] フォルダーに表示されます。グラフ ノードとエッジ テーブルを作成するためのテンプレートを使用できます。
 - プレゼンテーション モード: 3 つの新しいタスクがクイック起動 (Ctrl + Q) で使用できるようになりました。PresentOn: プレゼンテーション モードを有効にします。PresentEdit: プレゼンテーション モードのプレゼンテーションのフォント サイズを編集します。  クエリ エディター用の "テキスト エディター フォント"。  その他のコンポーネント用の "環境フォント"。
 RestoreDefaultFonts: 既定の設定に戻ります。
-*注: 現時点では、PresentOff コマンドは存在しません。  プレゼンテーション モードをオフにするには、RestoreDefaultFonts を使用します*
+*注: 現時点では、PresentOff コマンドは存在しません。プレゼンテーション モードをオフにするには、RestoreDefaultFonts を使用します。*
 
 ### <a name="bug-fixes"></a>バグの修正
 
@@ -1274,11 +1274,11 @@ RestoreDefaultFonts: 既定の設定に戻ります。
 - 復元中またはオフライン中のデータベースのプロパティを取得するときに SSMS が長時間ハングする問題を修正しました 
 - RC ビルドで "ヘルプ ビューアー" が開かない問題を修正しました
 - "メンテナンス プラン タスク ツールボックス" アイテムが SSMS にない問題を修正しました。
-- データベースの名前に中かっこが含まれている場合にデータベースを圧縮できない SSMS の問題を修正しました。 [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3122618)
-- SSMS が Azure データベースの削除をスクリプト化しようとして実際にはデータベース自体を削除していた問題を修正しました。 [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3131458/)
-- ユーザー定義テーブル型で既定値がスクリプト化されない問題を修正しました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3119027)
-- インデックスのコンテキスト メニューに関するパフォーマンスの改善を再度実行しました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3120783)
-- 実行プランで欠落インデックスの上にマウスを置いたときに過剰なちらつきを発生させる問題を修正しました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3118510)
+- データベースの名前に中かっこが含まれている場合にデータベースを圧縮できない SSMS の問題を修正しました。 [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3122618)を参照)。
+- SSMS が Azure データベースの削除をスクリプト化しようとして実際にはデータベース自体を削除していた問題を修正しました。 [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3131458/)を参照)。
+- ユーザー定義テーブル型で既定値がスクリプト化されない問題を修正しました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3119027)を参照)。
+- インデックスのコンテキスト メニューに関するパフォーマンスの改善を再度実行しました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3120783)を参照)。
+- 実行プランで欠落インデックスの上にマウスを置いたときに過剰なちらつきを発生させる問題を修正しました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3118510)を参照)。
 - スクリプト作成時に SSMS の DB オフラインがオンラインになる問題を修正しました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3118550)を参照)。
 - SSMS のローカライズされた (英語以外の) バージョンで、さまざまな UI の修正を実行しました。
 - SQL 2016 SP1 Standard Edition をターゲットとした場合に [Always Encrypted キー] ノードが欠落する問題を修正しました。
@@ -1297,33 +1297,33 @@ RestoreDefaultFonts: 既定の設定に戻ります。
 - Analysis Services 同期データベースのポップアップ ダイアログの文字の間違いを修正しました。
 - コンテナーのバックアップ/復元ダイアログが、複数のモニター セットアップで画面の表示領域を超えて表示される。 
 - ターゲット オブジェクトの名前に `]` が含まれている場合、SecurityPolicy を作成できない。
-- SSMS 2016 の [最近使用した項目を開く] メニューに、最近保存したファイルが表示されない ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+- SSMS 2016 の [最近使用した項目を開く] メニューに、最近保存したファイルが表示されない ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)を参照)。
 - VS Shell の更新時のユーザー設定のリセットが削除されました。
 - ユーザーが SQL Server 2017 のデータベースの互換性レベルを変更できないという問題を修正しました。
 - AAD ユニバーサル認証を使用するクエリ ウィンドウで、1 時間後にクエリを更新できなくなる。
 - SSMS からユーティリティ コントロール ポイントの UI が削除されました。
 - トークンの初期の有効期限が切れると、AD ユニバーサル認証接続でデータを照会できない。
 - Azure SQL DB 間のルールをスクリプト化できない。
-- SQL PowerShell が以前の SQL インスタンス (2014 以前) に接続できないという問題が修正されました。 [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/1138754/sql-server-sqlps-powershell-module-fails-connection-to-sql-2012-instance)
+- SQL PowerShell が以前の SQL インスタンス (2014 以前) に接続できないという問題が修正されました。 [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/1138754/sql-server-sqlps-powershell-module-fails-connection-to-sql-2012-instance)を参照)。
 - 登録済みサーバーのインポートに失敗すると SSMS がクラッシュする原因となる問題が修正されました。
 - ユーザーにデータベースに対する特定のアクセス許可がある場合に SSMS がクラッシュする原因となる問題が修正されました。
-- SSMS - ビューの確認時にデザイン画面にテーブルが表示されなくなる ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views) 
+- SSMS - ビューの確認時にデザイン画面にテーブルが表示されなくなる ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views)を参照)。 
 - テーブルのスクロール バーでテーブルの内容をスクロールできない。上下の方向キーでのみスクロールできる。 バグがあるスクロール バーを使用してスクロールを試した後で、テーブルの内容をスクロールできる場合もある ( [Connect アイテム](
-https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view) 
+https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view)を参照)。 
 - ルート ノードを更新した後、登録済みサーバーにアイコンが表示されない。
 - Azure v12 サーバーで [データベースの作成] のスクリプト ボタンを使用してスクリプトを実行すると、"スクリプトを作成するアクションはありません" というメッセージが表示される。
 - SSMS の [サーバーに接続] ダイアログで、新しい接続ごとの [追加のプロパティ] タブがクリアされない。
 - タスクの生成スクリプトで、Azure SQL DB のデータベースの生成スクリプトが生成されない。
 - ビュー デザイナーのスクロール バーが無効になっているように表示される。
 - Always Encrypted AVK キーのパスにバージョン ID が含まれていない。
-- クエリ ウィンドウ内のエンジン エディション クエリの数が削減されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3113387)
+- クエリ ウィンドウ内のエンジン エディション クエリの数が削減されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3113387)を参照)。
 - 暗号化が正しく処理されていない状態でモジュールを更新すると、Always Encrypted でエラーが発生する。
 - OLTP と OLAP の既定の接続タイムアウト値が 15 秒から 30 秒に変更され、無視された接続エラーのクラスが修正されました。 
-- カスタム レポートの起動時の SSMS のクラッシュが修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3118856)
+- カスタム レポートの起動時の SSMS のクラッシュが修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3118856)を参照)。
 - Azure SQL データベースに対する [スクリプトの生成...] が失敗する問題を修正しました。
-- [スクリプト化] と [スクリプトの生成] ウィザードが修正され、ストアド プロシージャなどのオブジェクトのスクリプト化の際に余分な改行が追加されないようになります ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3115850)
-- SQLAS PowerShell プロバイダー:Dimension および MeasureGroup フォルダーに LastProcessed プロパティが追加されます ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3111879)
-- ライブ クエリ統計: バッチの最初のクエリしか表示されないという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- [スクリプト化] と [スクリプトの生成] ウィザードが修正され、ストアド プロシージャなどのオブジェクトのスクリプト化の際に余分な改行が追加されないようになります ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3115850)を参照)。
+- SQLAS PowerShell プロバイダー:Dimension および MeasureGroup フォルダーに LastProcessed プロパティが追加されます ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3111879)を参照)。
+- ライブ クエリ統計: バッチの最初のクエリしか表示されないという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3114221)を参照)。  
 - プラン表示: プロパティ ウィンドウにスレッド全体の合計ではなく、最大値が表示される。
 - クエリ ストア: 豊富な実行バリエーションの新しいレポートがクエリに追加される。
 - オブジェクト エクスプローラーのパフォーマンスの問題:([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3114074)を参照)。テーブルのコンテキスト メニューがすぐにハングする。テーブルのインデックスを右クリックすると、SSMS の動作が遅くなる (リモート (インターネット) 接続経由の場合)。 サーバーでのテーブルの並べ替えクエリの発行を避ける。
@@ -1333,9 +1333,9 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 - オブジェクト エクスプローラーで、PolyBase|スケールアウト グループ ノードのコンテキスト メニューを表示したときにエラーが発生する問題が修正されました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3115128)を参照)
 - データベースに対するアクセス許可を表示しようとすると SSMS がクラッシュする場合があるという問題が修正されました。
 - クエリ ストア: クエリ ストア レポートの結果グリッドのコンテキスト メニュー項目が全体的に改善されました。
-- 関連付けられていないオブジェクトで既存のテーブルに対して Always Encrypted を構成すると、エラーが発生して実行できない ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3103181)
-- 複数のスキーマを持つ既存のデータベースに対して Always Encrypted を構成できない ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3109591)
-- データベースにシステム ビューを参照するビューが含まれているため、Always Encrypted の暗号化された列ウィザードでエラーが発生する ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- 関連付けられていないオブジェクトで既存のテーブルに対して Always Encrypted を構成すると、エラーが発生して実行できない ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3103181)を参照)。
+- 複数のスキーマを持つ既存のデータベースに対して Always Encrypted を構成できない ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3109591)を参照)。
+- データベースにシステム ビューを参照するビューが含まれているため、Always Encrypted の暗号化された列ウィザードでエラーが発生する ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3111925)を参照)。
 - Always Encrypted を使用して暗号化する場合、暗号化が正しく処理されていない状態でモジュールを更新するとエラーが発生する。
 - [新規サーバーの登録] ダイアログで UI が切り捨てられる問題が修正されました。
 - 引用符で囲まれた文字列定数値を含む式が DMF 条件 UI で正しく更新されない問題が修正されます。
@@ -1361,23 +1361,23 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 
 * ユーザーは、SSIS カタログに、Microsoft Dynamics AX/CRM Online のリソースに接続される OData 接続マネージャーを含む SSIS パッケージを展開できます。 詳細については、「[OData 接続マネージャー](../integration-services/connection-manager/odata-connection-manager.md)」を参照してください。
 
-* 関連付けられていないオブジェクトで既存のテーブルに対して Always Encrypted を構成すると、エラーが発生して実行できない ( [Connect ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
+* 関連付けられていないオブジェクトで既存のテーブルに対して Always Encrypted を構成すると、エラーが発生して実行できない ( [Connect ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects) を参照)。
 
-* 複数のスキーマを持つ既存のデータベースに対して Always Encrypted を構成できない ( [Connect ID 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work)
+* 複数のスキーマを持つ既存のデータベースに対して Always Encrypted を構成できない ( [Connect ID 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work) を参照)。
 
-* データベースにシステム ビューを参照するビューが含まれているため、Always Encrypted の暗号化された列ウィザードでエラーが発生する ( [Connect ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
+* データベースにシステム ビューを参照するビューが含まれているため、Always Encrypted の暗号化された列ウィザードでエラーが発生する ( [Connect ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors) を参照)。
 
 * Always Encrypted を使用して暗号化する場合、暗号化が正しく処理されていない状態でモジュールを更新するとエラーが発生する。
 
-* *[最近使用した項目を開く]* メニューに、最近保存したファイルが表示されない ( [Connect ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+* *[最近使用した項目を開く]* メニューに、最近保存したファイルが表示されない ( [Connect ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files) を参照)。
 
-* テーブルのインデックスを右クリックすると SSMS の動作が遅くなる (リモート (インターネット) 接続経由の場合)。 [Connect ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
+* テーブルのインデックスを右クリックすると SSMS の動作が遅くなる (リモート (インターネット) 接続経由の場合)。 [Connect ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection) を参照)。
  
-* SQL デザイナーのスクロール バーの問題が修正されました ( [Connect ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
+* SQL デザイナーのスクロール バーの問題が修正されました ( [Connect ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016) を参照)。
 
 * テーブルのコンテキスト メニューがすぐにハングする。 
  
-* SSMS で利用状況モニターの例外がスローされ、クラッシュする場合がある ( [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
+* SSMS で利用状況モニターの例外がスローされ、クラッシュする場合がある ( [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/) を参照)。
 
 * ".NET ランタイムの内部エラーにより、処理が中止されました。IP 71AF8579 (71AE0000)、終了コード 80131506" という内容のエラーで SSMS 2016 がクラッシュする。
 

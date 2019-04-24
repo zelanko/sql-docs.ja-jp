@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872252"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 クラスターで実行されている SQL Server インスタンスのアップグレード
@@ -46,7 +46,7 @@ ms.locfileid: "58872252"
 
 |                                   | すべてのサーバー オブジェクトと VNN が必要 | すべてのサーバー オブジェクトと VNN が必要 | サーバー オブジェクト/VNN は不要\* | サーバー オブジェクト/VNN は不要\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| **_可用性グループ (Y/N)_**                  | **_Y_**                              | **_×_**                                                            | **_Y_**    | **_×_**    |
+| **_可用性グループ(Y/N)_**                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
 | **クラスターで SQL FCI のみを使用**         | [シナリオ 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [シナリオ 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [シナリオ 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [シナリオ 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
 | **クラスターでスタンドアロン インスタンスを使用** | [シナリオ 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [シナリオ 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [シナリオ 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [シナリオ 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
@@ -123,7 +123,7 @@ SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../
 
 ## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>シナリオ 3: SQL FCI と SQL Server 可用性グループの両方を含む Windows クラスター
 
-1 つ以上の可用性グループに含まれる、SQL FCI のみを使用し、スタンドアロン [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを使用しない [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップがある場合、"可用性グループなし、スタンドアロン インスタンスなし" のシナリオと同様の方法を使用して、新しいクラスターにこれを移行することができます。 ターゲットの FCI 共有ディスクにシステム テーブルをコピーする前に、元の環境ですべての可用性グループを削除する必要があります。 すべてのデータベースがターゲット コンピューターに移行された後、同じスキーマとリスナーの名前で可用性グループを再作成します。 これにより、Windows Server フェールオーバー クラスター リソースがターゲット クラスターで正しく形成され、管理されます。 **Always On は、移行前にターゲット環境内の各コンピューターの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager で有効にする必要があります。**
+1 つ以上の可用性グループに含まれる、SQL FCI のみを使用し、スタンドアロン [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを使用しない [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップがある場合、"可用性グループなし、スタンドアロン インスタンスなし" のシナリオと同様の方法を使用して、新しいクラスターにこれを移行することができます。 ターゲットの FCI 共有ディスクにシステム テーブルをコピーする前に、元の環境ですべての可用性グループを削除する必要があります。 すべてのデータベースがターゲット コンピューターに移行された後、同じスキーマとリスナーの名前で可用性グループを再作成します。 これにより、Windows Server フェールオーバー クラスター リソースがターゲット クラスターで正しく形成され、管理されます。 **Always On は、移行前にターゲット環境内の各コンピューターの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで有効にする必要があります。**
 
 ### <a name="to-perform-the-upgrade"></a>アップグレードを実行するには
 
@@ -285,7 +285,7 @@ SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../
 
 ### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント
 
--   **の**
+-   **ジョブ**
 
     ジョブは、システム データベースと共に適切に移行されます。 SQL エージェント ジョブまたは SQL エージェント自体を実行するすべてのユーザーは、ターゲット コンピューターに対して、前提条件で指定されているものと同じアクセス許可を持つことになります。
 

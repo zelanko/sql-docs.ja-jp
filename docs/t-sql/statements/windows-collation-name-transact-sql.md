@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 089c6d25d7c899db03d67a6f7d1b8c9d495c94e6
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974351"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671388"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 照合順序名 (Transact-SQL)
 
@@ -37,7 +37,6 @@ ms.locfileid: "57974351"
 ## <a name="syntax"></a>構文
 
 ```
-
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -50,7 +49,8 @@ CollationDesignator_<ComparisonStyle>
 
 ## <a name="arguments"></a>引数
 
-*CollationDesignator* Windows 照合順序によって使用される基本照合順序規則を指定します。 基本照合順序規則には、次の要素が含まれます。
+*CollationDesignator*   
+Windows 照合順序で使用される基本照合順序規則を指定します。 基本照合順序規則には、次の要素が含まれます。
 
 - 辞書順での並べ替えを指定した場合に適用される並べ替えおよび比較規則。 並べ替え規則は、アルファベットまたは言語に基づきます。
 - **varchar** データを格納するために使用されるコード ページ。
@@ -67,20 +67,20 @@ CollationDesignator_<ComparisonStyle>
 **AI** を指定するとアクセントは区別されず、**AS** を指定するとアクセントが区別されます。
 
 *KanatypeSensitive*  
-**Omitted** を指定するとかなは区別されず、**KS** を指定するとかなが区別されます。
+このオプションを省略すると、かなが区別されません。**KS** を指定すると、かなが区別されます。
 
 *WidthSensitivity*  
-**Omitted** を指定すると文字幅は区別されず、**WS** を指定すると文字幅が区別されます。
+このオプションを省略すると、文字幅が区別されません。**WS** を指定すると、文字幅が区別されます。
 
 *VariationSelectorSensitivity*  
-**適用対象**:[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 以降 
+- **適用対象**:[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 以降 
 
-**Omitted** を指定すると異体字セレクターは区別されず、**VSS** を指定すると異体字セレクターが区別されます。
+- このオプションを省略すると、異体字セレクターが区別されません。**VSS** を指定すると、異体字セレクターが区別されます。
 
 **UTF8**  
-**適用対象**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降   
+- **適用対象**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降   
 
-UTF-8 のエンコードが対象となるデータ型で使用されるように指定します。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
+- UTF-8 のエンコードが対象となるデータ型で使用されるように指定します。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
 
 **BIN**  
 旧バージョンとの互換性のあるバイナリ並べ替え順を使用します。

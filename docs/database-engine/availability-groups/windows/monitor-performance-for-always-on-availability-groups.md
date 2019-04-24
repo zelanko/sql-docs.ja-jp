@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872322"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 可用性グループのパフォーマンスを監視する
@@ -62,7 +62,7 @@ ms.locfileid: "58872322"
 |-|-|-|-|  
 |**Level**|**ゲート数**|**メッセージ数**|**有用なメトリック**|  
 |[Transport]|可用性レプリカごとに 1 つ|8192|拡張イベント **database_transport_flow_control_action**|  
-|データベース|可用性データベースごとに 1 つ|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND ](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 拡張イベント **hadron_database_flow_control_action**|  
+|データベース|可用性データベースごとに 1 つ|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 拡張イベント **hadron_database_flow_control_action**|  
   
  いずれかのゲートのメッセージしきい値に達すると、ログ メッセージは特定のレプリカ、または特定のデータベースに送信されなくなります。 送信するメッセージに対して確認応答メッセージが受信され、結果として送信メッセージの数がしきい値を下回ると、メッセージを送信できるようになります。  
   
@@ -357,11 +357,11 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
 4.  次の仕様に基づいて[ポリシー ベースの管理条件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)を作成します。  
   
-    -   **[名前]**: `RTO`  
+    -   **名前**: `RTO`  
   
     -   **ファセット**: **データベース レプリカ状態**  
   
-    -   **フィールド**:  `Add(@EstimatedRecoveryTime, 60)`  
+    -   **フィールド**: `Add(@EstimatedRecoveryTime, 60)`  
   
     -   **演算子**: **<=**  
   
@@ -371,11 +371,11 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
 5.  次の仕様に基づいて 2 番目の[ポリシー ベースの管理条件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)を作成します。  
   
-    -   **[名前]**: `RPO`  
+    -   **名前**: `RPO`  
   
     -   **ファセット**: **データベース レプリカ状態**  
   
-    -   **フィールド**:  `@EstimatedDataLoss`  
+    -   **フィールド**: `@EstimatedDataLoss`  
   
     -   **演算子**: **<=**  
   
@@ -385,11 +385,11 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
 6.  次の仕様に基づいて 3 番目の[ポリシー ベースの管理条件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)を作成します。  
   
-    -   **[名前]**: `IsPrimaryReplica`  
+    -   **名前**: `IsPrimaryReplica`  
   
     -   **ファセット**: **可用性グループ**  
   
-    -   **フィールド**:  `@LocalReplicaRole`  
+    -   **フィールド**: `@LocalReplicaRole`  
   
     -   **演算子**: **=**  
   
@@ -401,7 +401,7 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
     -   **[全般]** ページ:  
   
-        -   **[名前]**: `CustomSecondaryDatabaseRTO`  
+        -   **名前**: `CustomSecondaryDatabaseRTO`  
   
         -   **条件の確認**: `RTO`  
   
@@ -429,7 +429,7 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
     -   **[全般]** ページ:  
   
-        -   **[名前]**: `CustomAvailabilityDatabaseRPO`  
+        -   **名前**: `CustomAvailabilityDatabaseRPO`  
   
         -   **条件の確認**: `RPO`  
   
@@ -458,9 +458,9 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
 |シナリオ|[説明]|  
 |--------------|-----------------|  
-|[トラブルシューティング:可用性グループ接続の超過 RTO](troubleshoot-availability-group-exceeded-rto.md)|データ損失のない自動フェールオーバーまたは計画的な手動フェールオーバーの後で、フェールオーバー時間が RTO を超過します。 または、同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。|  
-|[トラブルシューティング:可用性グループ接続の超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|強制的な手動フェールオーバーを実行した後で、データ損失が RPO より大きくなります。 または、非同期コミット セカンダリ レプリカのデータ損失の可能性を計算したとき、計算結果が RPO を超過していることが判明します。|  
-|[トラブルシューティング:プライマリ上の変更がセカンダリ レプリカに反映されない](troubleshoot-primary-changes-not-reflected-on-secondary.md)|クライアント アプリケーションは、プライマリ レプリカの更新を正常に完了しますが、セカンダリ レプリカのクエリを実行すると、変更が反映されていないことが示されます。|  
+|[トラブルシューティング: 可用性グループ接続の超過 RTO](troubleshoot-availability-group-exceeded-rto.md)|データ損失のない自動フェールオーバーまたは計画的な手動フェールオーバーの後で、フェールオーバー時間が RTO を超過します。 または、同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。|  
+|[トラブルシューティング: 可用性グループ接続の超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|強制的な手動フェールオーバーを実行した後で、データ損失が RPO より大きくなります。 または、非同期コミット セカンダリ レプリカのデータ損失の可能性を計算したとき、計算結果が RPO を超過していることが判明します。|  
+|[トラブルシューティング: プライマリ上の変更がセカンダリ レプリカに反映されない](troubleshoot-primary-changes-not-reflected-on-secondary.md)|クライアント アプリケーションは、プライマリ レプリカの更新を正常に完了しますが、セカンダリ レプリカのクエリを実行すると、変更が反映されていないことが示されます。|  
   
 ##  <a name="BKMK_XEVENTS"></a> 有用な拡張イベント  
  **同期中の**状態にあるレプリカのトラブルシューティングを行う場合は、次の拡張イベントは便利です。  

@@ -1,7 +1,7 @@
 ---
-title: SQL Server Management Studio - テレメトリ(SSMS) | Microsoft Docs
+title: SQL Server Management Studio - 使用状況および診断データ (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/20/2017
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,28 +11,29 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce4abde855b5fe6a65c3038e93eb8609f9736dc1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: d76b2cbcab3ad156e3a8a5054429198c542c602b
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240390"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670848"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS の使用状況および診断データの収集のローカル監査
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 SQL Server Management Studio (SSMS) には、機能使用状況および診断データを匿名で収集して Microsoft に送信する、インターネット対応機能が含まれています。 SSMS は、標準的なコンピューター情報、および使用とパフォーマンスに関する情報を収集する場合があります。これらの情報は Microsoft に送信され、SSMS の品質、セキュリティ、および信頼性を向上させる目的で分析されます。 お客様の名前、住所などの連絡先情報は収集されません。 詳細については、「[Microsoft プライバシーに関する声明](https://privacy.microsoft.com/privacystatement)」と「[SQL Server のプライバシーの補足情報](https://go.microsoft.com/fwlink/?LinkID=868444)」を参照してください。
 
-## <a name="audit-feature-usage-data"></a>Audit 機能の使用状況データ
+## <a name="audit-feature-usage-and-diagnostic-data"></a>監査機能の使用状況および診断データ
 
-SSMS で収集される機能の使用状況データを表示するには、次の操作を行います。
+SSMS で収集される機能の使用状況データを表示するには、次の手順を実行します。
+
 1.  SSMS を起動します。
 2.  メインメニューで **[ビュー]**、**[出力]** の順にクリックし、**[出力]** ウィンドウを表示します。 
 3.  **[出力]** ウィンドウが表示されたら、**[出力元の表示:]** メニューで **[テレメトリ]** を選択します。
 
 SSMS を使用してデータベースと対話している間に、収集されたデータが **[出力]** ウィンドウに表示されます。
 
-## <a name="enable-or-disable-usage-feedback-collection-in-ssms"></a>SSMS の使用状況のフィードバックの収集を有効または無効にする
+## <a name="enable-or-disable-usage-and-diagnostic-data-collection-in-ssms"></a>SSMS の使用状況および診断データの収集を有効または無効にする
 
 SSMS の使用状況データの収集をオプトインまたはオプトアウトするには:
 
@@ -40,13 +41,13 @@ SSMS の使用状況データの収集をオプトインまたはオプトアウ
 
   `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0`
 
-  RegEntry name = `UserFeedbackOptIn`
+  レジストリ エントリ名 = `UserFeedbackOptIn`
 
   エントリの種類 `DWORD`: `0` はオプトアウトです。`1` はオプトインです。
 
   また、SSMS 17.x は Visual Studio 2015 シェルを基盤とし、Visual Studio インストールによって、既定でカスタマー フィードバックが可能になります。  
 
-  個々のコンピューターでカスタマー フィードバックを無効にするように Visual Studio を構成するには、次のレジストリ サブキーの値を文字列 `0` に変更します。 `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn`
+  個々のコンピューターでカスタマー フィードバックを無効にするように Visual Studio を構成するには、次のレジストリ サブキーの値を文字列 `0`: `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn` に変更します。
 
   たとえば、次のサブキーを変更します。  
   `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn `=` 0`
@@ -57,11 +58,11 @@ SSMS の使用状況データの収集をオプトインまたはオプトアウ
 
   `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell`
 
-  RegEntry name = `UserFeedbackOptIn`
+  レジストリ エントリ名 = `UserFeedbackOptIn`
 
   エントリの種類 `DWORD`: `0` はオプトアウトです。`1` はオプトインです。
 
 ## <a name="see-also"></a>参照
 
-- [SQL Server の使用状況および診断データの収集を構成する](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
-- [SQL Server の使用状況および診断データの収集のローカル監査](http://msdn.microsoft.com/library/mt743085.aspx)
+- [Configure usage and diagnostic data collection for SQL Server (SQL Server の使用状況および診断データの収集を構成する)](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
+- [SQL Server の使用状況と診断データの収集のローカル監査](http://msdn.microsoft.com/library/mt743085.aspx)
