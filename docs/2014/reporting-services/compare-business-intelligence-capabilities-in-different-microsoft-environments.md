@@ -4,18 +4,18 @@ ms.prod: sql-server-2014
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
-ms.openlocfilehash: 60ea737f20ba48c6ba8d441d389a124e90444a76
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 13ae9380cc3f034ace5f43d83640eea665cb3b02
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582506"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944608"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>さまざまな Microsoft 環境での Business Intelligence 機能の比較
 
@@ -68,7 +68,7 @@ SharePoint Server と SharePoint Online の比較に関する詳細について�
   
 - シノニムを使用するための要件については、次を参照してください。[を最適化する Power BI Q & A シノニム & 言い回し](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling)pragmaticworks.com にします。  
   
-- [Office Online の「エンタープライズ ソーシャル ネットワークをを選択します。Yammer またはニュースフィードでしょうか](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US)。  
+- [Office Online の「エンタープライズ ソーシャル ネットワークをを選択します。Yammer またはニュースフィードでしょうか。](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
 - 「[Power BI for Office 365](https://www.microsoft.com/powerbi/default.aspx)」。  
   

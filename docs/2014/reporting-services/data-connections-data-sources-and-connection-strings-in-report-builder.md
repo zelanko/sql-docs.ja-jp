@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13edc28a739af6a40ab47766c1909be3a8105ee5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 5e5fe086d16728a95b9ee8f2a52878d5a2c4bad4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288870"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962128"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>レポート ビルダーでのデータ接続、データ ソース、および接続文字列
   データをレポートに含めるには、データ接続とデータセットを作成します。 データ接続には、外部データ ソースにアクセスする方法に関する情報が含まれています。 データセットには、データ接続を使用して取得するデータを指定するクエリ コマンドが含まれています。  
@@ -37,7 +37,7 @@ ms.locfileid: "56288870"
   
  詳細については、次を参照してください[埋め込みと共有のデータ接続またはデータ ソース&#40;レポート ビルダーおよび SSRS&#41; ](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)と[データ接続、データ ソース、および Reporting Services内の接続文字列。](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- 定義済みの共有データ ソース、共有データセット、およびレポート パーツを使用してデータをレポートに含めることもできます。 これらのアイテムには、必要な接続情報は既に存在します。 詳細については、[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)を参照してください。  
+ 定義済みの共有データ ソース、共有データセット、およびレポート パーツを使用してデータをレポートに含めることもできます。 これらのアイテムには、必要な接続情報は既に存在します。 詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
@@ -65,7 +65,7 @@ ms.locfileid: "56288870"
 |XML データ ソース、XML ドキュメント|`http://localhost/XML/Customers.xml`|データ ソースの種類を `XML` に設定します。 接続文字列は XML ドキュメントへの URL です。|  
 |XML データ ソース、埋め込み XML ドキュメント|*空*|データ ソースの種類を `XML` に設定します。 XML データはレポート定義に埋め込まれています。|  
   
- 各接続の種類の詳細については、[外部データ ソースからのデータの追加&#40;SSRS&#41; ](report-data/add-data-from-external-data-sources-ssrs.md)と[Reporting Services でサポートされるデータ ソース&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)を参照してください。  
+ 各接続の種類の詳細については、次を参照してください。[外部データ ソースからのデータの追加&#40;SSRS&#41; ](report-data/add-data-from-external-data-sources-ssrs.md)と[Reporting Services でサポートされるデータ ソース&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)します。  
   
 
   
@@ -75,7 +75,7 @@ ms.locfileid: "56288870"
 > [!NOTE]  
 >  資格情報によっては、レポート ビルダーが使用するすべてのシナリオをサポートしていない場合があります。レポート ビルダーが使用するシナリオには、クエリ デザイナーでのクエリの実行、コンピューターがレポート サーバーに接続していない場合のレポートのプレビュー、レポート サーバーからのレポートの実行があります。 可能な限り共有データ ソースを使用することをお勧めします。 レポート サーバー上の共有データ ソースごとに資格情報を保存できます。 詳細については、「 [レポート ビルダーでの資格情報の指定](../../2014/reporting-services/specify-credentials-in-report-builder.md)」を参照してください。  
   
- 共有データ ソースを作成するには必要がありますレポート マネージャーを使用して、レポート サーバー上に直接データ ソースを作成またはレポート デザイナーなどの作成環境を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]します。 詳細については、[埋め込みまたは共有データ ソースを作成&#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)を参照してください。  
+ 共有データ ソースを作成するには必要がありますレポート マネージャーを使用して、レポート サーバー上に直接データ ソースを作成またはレポート デザイナーなどの作成環境を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]します。 詳細については、次を参照してください。[埋め込みまたは共有データ ソースを作成&#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)します。  
   
 
   
