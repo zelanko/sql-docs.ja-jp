@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: release-landing
 ms.date: 12/15/2018
 ms.openlocfilehash: 2cafca919cc7592b9b7c6998b1f20910e9be7d4e
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206697"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -95,7 +95,7 @@ ms.locfileid: "57334759"
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>SQL Server on Windows</h3>
+                                              <h3>Windows 上の SQL Server</h3>
                                               <ul class="noBullet">
                                               <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?toc=..%2ftoc%2ftoc.json"><strong>オンプレミス</strong></a></li>
                                               <li><a class="barLink" href="/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/"> <strong>Azure VM 上</strong></a></li>
@@ -137,7 +137,7 @@ ms.locfileid: "57334759"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>SQL Server on Linux</h3>
+                                                <h3>Linux 上の SQL Server</h3>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/linux/sql-server-linux-overview/"><strong>オンプレミス</strong></a></li>
                                                     <li><a class="barLink" href="/sql/linux/quickstart-install-connect-clouds/"><strong>Azure VM 上</strong></a></li>
@@ -407,7 +407,7 @@ ms.locfileid: "57334759"
                                             <div class="cardPadding">
                                                 <div class="card">
                                                   <div class="cardText">
-                                                        <h3>AI および Machine Learning</h3>
+                                                        <h3>AI および機械学習</h3>
                                                         <ul class="noBullet">
                                                             <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Server Machine Learning Services (R および Python)</a></li>
                                                             <li><a class="barLink" href="/sql/advanced-analytics/r/sql-server-r-services">SQL Server R サービス</a></li>
