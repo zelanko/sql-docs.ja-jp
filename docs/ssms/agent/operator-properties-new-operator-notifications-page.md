@@ -54,5 +54,5 @@ ms.locfileid: "47650790"
 **net send**を使用してこのオペレーターに通知します。  
   
 ## <a name="see-also"></a>参照  
-[演算子](../../ssms/agent/operators.md)  
+[オペレーター](../../ssms/agent/operators.md)  
   

@@ -45,7 +45,7 @@ ms.locfileid: "47715066"
 [ユーザー定義イベントの作成](../../ssms/agent/create-a-user-defined-event.md)  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によってあらかじめ定義されているイベント以外のイベントを作成する方法について説明します。  
   
-[演算子](../../ssms/agent/operators.md)  
+[オペレーター](../../ssms/agent/operators.md)  
 ジョブが失敗または成功したときに通知を送信するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用できる、管理者の別名の作成について説明します。  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>イベントの監視と応答について  

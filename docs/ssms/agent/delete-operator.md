@@ -40,5 +40,5 @@ ms.locfileid: "47805350"
 通知を再割り当てする対象オペレーターのプロパティを表示します。  
   
 ## <a name="see-also"></a>参照  
-[演算子](../../ssms/agent/operators.md)  
+[オペレーター](../../ssms/agent/operators.md)  
   

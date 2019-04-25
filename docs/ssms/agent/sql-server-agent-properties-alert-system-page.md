@@ -93,7 +93,7 @@ ms.locfileid: "47790261"
 **[緊急時のオペレーターを有効にする]**  
 緊急時のオペレーターを指定します。  
   
-**[演算子]**  
+**[オペレーター]**  
 緊急時の通知を受け取るオペレーターを指定します。  
   
 **[通知方法]**  
@@ -111,7 +111,7 @@ ms.locfileid: "47790261"
 このチェック ボックスをオンにすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってアクティブになるジョブに対してトークンの置換が有効になります。  
   
 ## <a name="see-also"></a>参照  
-[演算子](../../ssms/agent/operators.md)  
+[オペレーター](../../ssms/agent/operators.md)  
 [データベース メールを使用するように SQL Server エージェント メールを構成する](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
 [データベース メール](../../relational-databases/database-mail/database-mail.md)  
   

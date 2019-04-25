@@ -40,5 +40,5 @@ ms.locfileid: "47743710"
 最新の通知は、Net Send によって試行されました。また、このオペレーターが Net Send による通知を受け取っていない場合は **[(Net Send 未通知)]** となります。  
   
 ## <a name="see-also"></a>参照  
-[演算子](../../ssms/agent/operators.md)  
+[オペレーター](../../ssms/agent/operators.md)  
   
