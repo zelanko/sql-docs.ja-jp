@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6445cffd5faa8b825c81ec729d7b28c90e14a7b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447824"
 ---
 # <a name="identifier-case"></a>識別子の大文字と小文字の区別
 SQL ステートメントとカタログ関数の引数では、識別子と引用符で囲まれた識別子できますか大文字か、アプリケーションを呼び出すことによって判断できますが、 **SQLGetInfo** SQL_IDENTIFIER_CASE SQL_QUOTED_ とIDENTIFIER_CASE オプション。  

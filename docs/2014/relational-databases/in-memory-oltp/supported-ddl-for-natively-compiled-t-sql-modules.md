@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467876"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ上でサポートされる構造
   このトピックでは、ネイティブ コンパイル ストアド プロシージャでサポートされる構造について説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "48113212"
 ## <a name="security"></a>セキュリティ  
  サポート対象は次のとおりです。  
   
--   プロシージャの場合: EXECUTE AS OWNER、SELF、およびユーザー。  
+-   プロシージャ。EXECUTE AS OWNER、SELF、およびユーザー。  
   
 -   テーブルおよびプロシージャに対する GRANT 権限および DENY 権限。  
   

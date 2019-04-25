@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14724a5cc863074344cfbb02615f0ccff228f04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447670"
 ---
 # <a name="setting-descriptor-fields"></a>記述子フィールドの設定
 記述子のフィールドを変更するには、アプリケーションを呼び出すことができます**SQLSetDescField**します。 一部のフィールドは読み取り専用と、設定することはできません。 (を参照してください、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)関数の説明です)。  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467418"
 ---
 # <a name="unique-particle-attribution-constraint"></a>一意のパーティクル属性の制約
   XSD では、UPA (一意のパーティクル属性) 制約の規則によって、複雑なコンテンツ モデルが制約を受けます。 この規則では、あいまいさを排除し、インスタンス ドキュメント内の各要素が、その親のコンテンツ モデル内の `<xsd:element>` パーティクルまたは `<xsd:any>` パーティクルの 1 つに正確に対応することが必要です。 あいまいなコンテンツ モデルになる可能性のある型を含むスキーマは拒否されます。  
@@ -80,11 +80,11 @@ ms.locfileid: "58538523"
 ## <a name="finding-more-information"></a>詳細情報  
  次のドキュメントは W3C (World Wide Web Consortium) が発行したもので、一意のパーティクル属性の制約に関する技術的な説明が含まれています。  
   
- 「XML Schema Part 1:Structures Second Edition, W3C Proposed Edited Recommendation」:  
+ "XML Schema Part 1。Structures Second Edition, W3C Proposed Edited Recommendation」。  
   
--   Section 3.8.6:Constraints on Model Group Schema Components  
+-   セクション 3.8.6:On Model Group Schema Components の制約  
   
--   Appendix H:Analysis of the Unique Particle Attribution Constraint (non-normative)  
+-   付録 h:Unique Particle Attribution Constraint (標準以外) の分析  
   
  ドキュメントを表示するには、[http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881) を参照してください。  
   

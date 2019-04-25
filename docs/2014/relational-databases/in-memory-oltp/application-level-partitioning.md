@@ -11,18 +11,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468338"
 ---
 # <a name="application-level-partitioning"></a>アプリケーション レベルのパーティション分割
   このサンプルでは、特定の日付の前か後どちらであるかによって、メモリ最適化テーブルかディスク ベース テーブルのいずれかにデータが保存される、アプリケーション レベルのパーティション分割を示します。 新しいまたはと等しいすべての注文、 *hotDate*は、メモリ最適化テーブルとすべての注文の前に、 *hotDate*ディスク ベース テーブルにします。 多くの同時トランザクションが含まれる極端な OLTP ワークロードを前提とします。 複数の同時実行トランザクションが *hotDate*を変更しようとしている場合でも、このビジネス ルール (メモリ最適化テーブルの最近の注文) を適用する必要があります。  
   
  このサンプルを使用しません[Partitioned Tables](../partitions/partitioned-tables-and-indexes.md)ディスク ベース テーブルが 2 つのテーブル間の明示的な分岐点がトラックを使用して、3 番目のテーブルします。 この分岐点を使用して、新しく挿入されるデータが日付に基づいて必ず適切なテーブルに挿入されることを保証できます。 また、どこでデータを検索するかを決定することもできます。 遅れて到着するデータも、引き続き適切なテーブルに配置されます。  
   
- 関連するサンプルには、パーティション分割されたテーブルを使用して、[テーブルのパーティション分割に関するアプリケーションのパターン](memory-optimized-tables.md)を参照してください。  
+ 関連するサンプルには、パーティション分割されたテーブルを使用して、次を参照してください。[テーブルのパーティション分割に関するアプリケーションのパターン](memory-optimized-tables.md)します。  
   
 ## <a name="code-listing"></a>コード リスト  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa80ff3359e3bbbed9e28044cce7514006c40f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446214"
 ---
 # <a name="optimistic-concurrency"></a>オプティミスティック コンカレンシー
 *オプティミスティック同時実行制御*オプティミスティックな仮定からその名前の派生元には、トランザクションの間に競合が発生することはほとんどありません別のトランザクションが更新または読み取られるまでの間のデータの行を削除するときに発生した競合といいます。現在のトランザクションが更新または削除します。 反対の*ペシミスティック同時実行性、* ロック、またはをアプリケーション開発者と考えています、このような競合当たり前にします。  

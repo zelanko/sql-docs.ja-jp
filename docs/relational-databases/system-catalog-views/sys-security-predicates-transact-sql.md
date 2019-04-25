@@ -23,11 +23,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 48505a7e33d8d691314216846ee054d6625b7cf4
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446230"
 ---
 # <a name="syssecuritypredicates-transact-sql"></a>sys.security_predicates (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "58161799"
 |object_id|**int**|この述語を含むセキュリティ ポリシーの ID。|  
 |security_predicate_id|**int**|このセキュリティ ポリシー内の述語 ID。|  
 |target_object_id|**int**|セキュリティ述語がバインドされるオブジェクトの ID。|  
-|predicate_definition|**nvarchar(max)**|引数を含む、セキュリティ述語として使用される関数の完全修飾名。 なお、`schema.function`名前可能性があります (つまりエスケープされた) の正規化にする場合と一貫性を保つのためのテキストで他の要素。 例 :<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
+|predicate_definition|**nvarchar(max)**|引数を含む、セキュリティ述語として使用される関数の完全修飾名。 なお、`schema.function`名前可能性があります (つまりエスケープされた) の正規化にする場合と一貫性を保つのためのテキストで他の要素。 以下に例を示します。<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|セキュリティ ポリシーによって使用される述語の種類:<br /><br /> 0 = FILTER PREDICATE<br /><br /> 1 ブロックの述語を =|  
 |predicate_type_desc|**nvarchar(60)**|セキュリティ ポリシーによって使用される述語の種類:<br /><br /> FILTER<br /><br /> ブロック|  
-|操作|**int**|述語で指定された操作の種類。<br /><br /> NULL = 適用可能なすべての操作<br /><br /> 1 = 挿入後<br /><br /> 2 = 更新の後<br /><br /> 3 = 更新する前に<br /><br /> 4 = 削除する前に|  
+|operation|**int**|述語で指定された操作の種類。<br /><br /> NULL = 適用可能なすべての操作<br /><br /> 1 = 挿入後<br /><br /> 2 = 更新の後<br /><br /> 3 = 更新する前に<br /><br /> 4 = 削除する前に|  
 |operation_desc|**nvarchar(60)**|述語で指定された操作の種類。<br /><br /> NULL<br /><br /> 挿入後<br /><br /> 更新後に<br /><br /> 更新する前に<br /><br /> 削除する前に|  
   
 ## <a name="permissions"></a>アクセス許可  
