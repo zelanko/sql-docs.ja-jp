@@ -23,7 +23,7 @@ ms.locfileid: "51699566"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>[オプション] ダイアログ ボックスの F1 ヘルプ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-ここでは、 **の** [ツール] **メニューの** [オプション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]をクリックして表示されるダイアログ ボックスの F1 ヘルプについて紹介します。  
+ここでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ツール]** メニューの **[オプション]** をクリックして表示されるダイアログ ボックスの F1 ヘルプについて紹介します。  
   
 [オプション (デザイナー - Analysis Services デザイナー - 全般)](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

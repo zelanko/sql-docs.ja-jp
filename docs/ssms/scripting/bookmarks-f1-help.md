@@ -25,7 +25,7 @@ ms.locfileid: "51643072"
 ---
 # <a name="bookmarks-f1-help"></a>[ブックマーク] の F1 ヘルプ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  ここでは、 **の** [ブックマーク] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ページの F1 ヘルプを紹介します。  
+  ここでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ブックマーク]** ページの F1 ヘルプを紹介します。  
   
  [ブックマークの管理](../../relational-databases/scripting/manage-bookmarks.md)  
   
