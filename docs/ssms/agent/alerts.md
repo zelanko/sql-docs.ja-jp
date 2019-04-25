@@ -31,7 +31,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51700880"
 ---
-# <a name="alerts"></a>オブジェクト エクスプローラーには
+# <a name="alerts"></a>警告
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
