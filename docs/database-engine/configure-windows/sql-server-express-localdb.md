@@ -49,9 +49,9 @@ LocalDB のインストールでは、[!INCLUDE[ssDEnoversion](../../includes/ss
 
 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB のインスタンスは、`SqlLocalDB.exe` ユーティリティを使用して管理されます。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] ユーザー インターフェイス機能は非推奨であるため、代わりに [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB を使用してください。
 
-## <a name="description"></a>[説明]
+## <a name="description"></a>説明
 
-LocalDB セットアップ プログラムでは、`SqlLocalDB.msi` プログラムを使用して、コンピューターに必要なファイルがインストールされます。 LocalDB はインストールされると [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスとなり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを作成して開くことができます。 データベースのシステム データベース ファイルは、通常は非表示になっているローカル AppData パスに格納されます。 たとえば、`C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\` のようにします。 ユーザー データベース ファイルは、ユーザーが指定する場所 (通常は `C:\Users\<user>\Documents\` フォルダー内の任意の場所) に格納されます。
+LocalDB セットアップ プログラムでは、`SqlLocalDB.msi` プログラムを使用して、コンピューターに必要なファイルがインストールされます。 LocalDB はインストールされると [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスとなり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを作成して開くことができます。 データベースのシステム データベース ファイルは、通常は非表示になっているローカル AppData パスに格納されます。 たとえば、`C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\` のようになります。 ユーザー データベース ファイルは、ユーザーが指定する場所 (通常は `C:\Users\<user>\Documents\` フォルダー内の任意の場所) に格納されます。
 
 LocalDB をアプリケーション内に組み込む手順の詳細については、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の「[ローカル データの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110))」、および「[Create a database and add tables in Visual Studio (Visual Studio でのデータベースの作成およびテーブルの追加)](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)」を参照してください。
 
@@ -113,10 +113,10 @@ REM Gather information about the instance of LocalDB
 
 |||
 |-|-|
-|[オブジェクト名]|`LocalDBApp1`|
-|[バージョンのオプション]|\<現在のバージョン>|
+|名前|`LocalDBApp1`|
+|バージョン|\<現在のバージョン>|
 |共有名|""|
-|[所有者]|"\<Windows ユーザー>"|
+|所有者|"\<Windows ユーザー>"|
 |自動作成|いいえ|
 |状態|実行|
 |前回の開始時刻|\<日付と時刻>|
