@@ -11,15 +11,15 @@ helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 03107ceb9c09cd3a48a0d547882b02b951d4d3c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: ed81395066cd25ed30b095d4e080019abc8c9b26
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020153"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958978"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>アイテムの移動または削除 (レポート マネージャー)
   レポート サーバーにパブリッシュしたレポートやレポート関連アイテムは、フォルダーに格納されます。 アイテムは異なるフォルダーに移動でき、それらのアイテムへの参照はレポート サーバーによって自動的に保持されます。 アイテムを削除する前に、そのアイテムに依存しているアイテムが他に存在しないか確認してください。  
@@ -42,7 +42,7 @@ ms.locfileid: "56020153"
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>[コンテンツ] ページでアイテムを移動するには  
   
-1.  開始 [レポート マネージャー &#40;SSRS ネイティブ モード&#41;]./レポートのマネージャーの ssrs-ネイティブ-mode.md) で変更します。  
+1.  開始 [レポート マネージャー &#40;SSRS ネイティブ モード&#41;]./[レポートのマネージャーの ssrs-ネイティブ-mode.md) で変更します。  
   
 2.  レポート マネージャーで、 **[コンテンツ]** ページに移動し、移動するアイテムを探します。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "56020153"
   
 #### <a name="to-delete-a-report-or-item"></a>レポートまたはアイテムを削除するには  
   
-1.  開始 [レポート マネージャー &#40;SSRS ネイティブ モード&#41;]./レポートのマネージャーの ssrs-ネイティブ-mode.md) で変更します。  
+1.  開始 [レポート マネージャー &#40;SSRS ネイティブ モード&#41;]./[レポートのマネージャーの ssrs-ネイティブ-mode.md) で変更します。  
   
 2.  レポート マネージャーで、 **[コンテンツ]** ページに移動し、削除するアイテムを探します。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "56020153"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [コンテンツ ページ&#40;レポート マネージャー&#41;]./コンテンツ ページ レポート manager.md)   
+ [コンテンツ] ページ&#40;レポート マネージャー&#41;]./コンテンツ ページ レポート manager.md)   
  [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1aed9ac46d81e57a47f1026e599a5e50818190a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742190"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>データ型 (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "51660271"
   
 |データ型|SQL Server データ型|[説明]|  
 |---------------|--------------------------|-----------------|  
-|SRVBIGBINARY|**[バイナリ]**|**binary** データ型。長さは 0 から 8,000 バイトです。|  
+|SRVBIGBINARY|**binary**|**binary** データ型。長さは 0 から 8,000 バイトです。|  
 |SRVBIGCHAR|**char**|**character** データ型。長さは 0 から 8,000 バイトです。|  
 |SRVBIGVARBINARY|**varbinary**|可変長 **binary** データ型。長さは 0 から 8,000 バイトです。|  
 |SRVBIGVARCHAR|**varchar**|可変長 **character** データ型。長さは 0 から 8,000 バイトです。|  
-|SRVBINARY|**[バイナリ]**|**binary** データ型。|  
+|SRVBINARY|**binary**|**binary** データ型。|  
 |SRVBIT|**Bit**|**bit** データ型。|  
 |SRVBITN|**bit null**|**bit** データ型。NULL 値を許容します。|  
 |SRVCHAR|**char**|**character** データ型。|  
