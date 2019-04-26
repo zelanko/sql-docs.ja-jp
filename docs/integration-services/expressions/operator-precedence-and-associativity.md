@@ -1,5 +1,5 @@
 ---
-title: :
+title: 演算子の優先順位と結合規則 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
