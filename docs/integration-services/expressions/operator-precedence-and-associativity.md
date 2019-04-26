@@ -1,5 +1,5 @@
 ---
-title: 演算子の優先順位と結合規則 | Microsoft Docs
+title: :
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -40,7 +40,7 @@ ms.locfileid: "58277441"
 |&#124;|ビット演算子包含的 OR|左から右|  
 |&&|論理積|左から右|  
 |&#124;&#124;|論理和|左から右|  
-|? によってデコードされる文字を次に示します。|条件式|右から左|  
+|? :|条件式|右から左|  
   
 ## <a name="see-also"></a>参照  
  [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  

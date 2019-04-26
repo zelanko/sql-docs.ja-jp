@@ -2146,7 +2146,7 @@
                       href: ../mdx/comment-mdx.md
                     - name: // (コメント)
                       href: ../mdx/comment-mdx-double-slash.md
-                    - name: によってデコードされる文字を次に示します。(範囲)
+                    - name: ': (範囲)'
                       href: ../mdx/range-mdx.md
                     - name: + (加算)"
                       href: ../mdx/add-mdx.md
