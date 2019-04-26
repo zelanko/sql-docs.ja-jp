@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8740e97d1c12cc0fc9198048ea58c12e01e6771c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998273"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +62,14 @@ n
   
 |新しいデータ型|入力データ長|  
 |--------------------|-----------------------|  
-|BITN|**NULL:** VP、NULL<br /><br /> **ZERO:** VP、NULL<br /><br /> **>=255:** N/A<br /><br /> **<255:** N/A|  
-|BIGVARCHAR|**NULL:** NULL、N/A<br /><br /> **ZERO:** VP、NULL<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ|  
-|BIGCHAR|**NULL:** NULL、N/A<br /><br /> **ZERO:** VP、255 個のスペース<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ + パディング (最大 255 文字)|  
-|BIGBINARY|**NULL:** NULL、N/A<br /><br /> **ZERO:** VP、255 0x00<br /><br /> **>=255:** VP、255 バイト<br /><br /> **<255:** VP、実際のデータ + パディング (最大 255 文字)|  
-|BIGVARBINARY|**NULL:** NULL、N/A<br /><br /> **ZERO:** VP、0x00<br /><br /> **>=255:** VP、255 バイト<br /><br /> **<255:** VP、実際のデータ|  
-|NCHAR|**NULL:** NULL、N/A<br /><br /> **ZERO:** VP、255 個のスペース<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ + パディング (最大 255 文字)|  
-|NVARCHAR|**NULL:** NULL、N/A<br /><br /> **ZERO:** VP、NULL<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ|  
-|NTEXT|**NULL:** N/A<br /><br /> **ZERO:** N/A<br /><br /> **>=255:** N/A<br /><br /> **\<255:** N/A|  
+|BITN|**NULL:** VP、NULL<br /><br /> **ZERO:** VP、NULL<br /><br /> **>=255:** なし<br /><br /> **<255:** なし|  
+|BIGVARCHAR|**NULL:** NULL、該当なし<br /><br /> **ZERO:** VP、NULL<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ|  
+|BIGCHAR|**NULL:** NULL、該当なし<br /><br /> **ZERO:** VP、255 個のスペース<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ + パディング (最大 255)|  
+|BIGBINARY|**NULL:** NULL、該当なし<br /><br /> **ZERO:** VP、255 0x00<br /><br /> **>=255:** VP、255 バイト<br /><br /> **<255:** VP、実際のデータ + パディング (最大 255)|  
+|BIGVARBINARY|**NULL:** NULL、該当なし<br /><br /> **ZERO:** VP、0x00<br /><br /> **>=255:** VP、255 バイト<br /><br /> **<255:** VP、実際のデータ|  
+|NCHAR|**NULL:** NULL、該当なし<br /><br /> **ZERO:** VP、255 個のスペース<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ + パディング (最大 255)|  
+|NVARCHAR|**NULL:** NULL、該当なし<br /><br /> **ZERO:** VP、NULL<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ|  
+|NTEXT|**NULL:** なし<br /><br /> **ZERO:** なし<br /><br /> **>=255:** なし<br /><br /> **\<255:** なし|  
   
  \*   データが NULL 終端ではないため、255 文字を超えるデータが切り捨てられても警告は発生しません。  
   
@@ -79,7 +79,7 @@ n
  パラメーターを指定してリモート ストアド プロシージャを呼び出す場合、パラメーターは名前で指定することも、名前を使用せずにその位置を指定して渡すこともできます。 名前によるパラメーター指定と位置によるパラメーター指定を混合してリモート ストアド プロシージャを呼び出すと、エラーが発生します。 エラーが発生しても SRV_RPC ハンドラーは呼び出されますが、パラメーターが存在しないと見なされ、**srv_rpcparams** は 0 を返します。  
   
 > [!IMPORTANT]  
->  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
+>  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [srv_rpcparams &#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
