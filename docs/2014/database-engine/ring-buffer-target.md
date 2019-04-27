@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d042ef49a82d16eb33cb27d80c8083a68ea69092
-ms.sourcegitcommit: 4b5ea5fa3253fea028e1adbd46bd18b89f0a115b
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773680"
 ---
 # <a name="ring-buffer-target"></a>リング バッファー ターゲット
   リング バッファー ターゲットは、メモリにイベント データを一時的に保持します。 このターゲットでは、2 種類のモードのいずれかでイベントを管理できます。  
@@ -75,7 +75,7 @@ WHERE xe.name = 'session_name'
 ```
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)
 - [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql?view=sql-server-2016)

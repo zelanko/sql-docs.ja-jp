@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ddeafaafd816e226edff764c8e273cde6df4eaad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748456"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>利益チャート (SQL Server データ マイニング アドイン)
   ![データ マイニング リボン利益チャート ボタン](media/dmc-profitchart.gif "データ マイニング リボンの利益チャート ボタン")  
@@ -50,7 +50,7 @@ ms.locfileid: "52530719"
 ## <a name="using-the-profit-chart-wizard"></a>利益チャート ウィザードの使用  
  利益チャートを作成するには、既存のデータ マイニング モデルを参照する必要があります。 クリックして、データに一致するモデルを検索するモデルを参照する**モデルの管理**または**参照**に使用されたアルゴリズムについての詳細と、マイニング モデル内の列を参照してください。  
   
- 詳細については、[Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)と[モデルの管理&#40;SQL Server データ マイニング アドイン&#41;](manage-models-sql-server-data-mining-add-ins.md)を参照してください。  
+ 詳細については、次を参照してください。 [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)と[モデルの管理&#40;SQL Server データ マイニング アドイン&#41;](manage-models-sql-server-data-mining-add-ins.md)します。  
   
 #### <a name="to-create-a-profit-chart"></a>利益チャートを作成するには  
   

@@ -1,5 +1,5 @@
 ---
-title: テーブルまたはデータ ソース ビュー (Analysis Services) の名前付きクエリを置換 |Microsoft ドキュメント
+title: テーブルまたはデータ ソース ビュー (Analysis Services) の名前付きクエリの置換 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a171eafc35446f588d64c74457792912dcebe75a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641116"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>データ ソース ビュー内のテーブルまたは名前付きクエリの置換 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34020809"
   
 6.  変更したデータ ソース ビューを保存します。  
   
-## <a name="see-also"></a>参照  
- [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+## <a name="see-also"></a>関連項目  
+ [「多次元モデルのデータ ソース ビュー」](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

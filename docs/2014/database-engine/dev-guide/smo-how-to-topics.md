@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b100c23c1600a9c5fe4af9a39e16f8bd861656f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781937"
 ---
 # <a name="smo-how-to-topics"></a>SMO の使用法に関するトピック
   SMO に関するトピックでは、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET プログラミング環境を設定して、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] または C# でプログラムを作成する方法について説明します。  

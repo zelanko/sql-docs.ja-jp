@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d81bb9f5ec54f3d66089205f5b5941119d365501
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652900"
 ---
 # <a name="setup-dll-api-reference"></a>セットアップ DLL API リファレンス
 このセクションは、ドライバーのセットアップ DLL API は、2 つの関数で構成の構文を説明します (**ConfigDriver**と**ConfigDSN**)。 **ConfigDriver**と**ConfigDSN**ドライバ DLL のいずれかを指定したり、別の DLL のセットアップします。  

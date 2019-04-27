@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 57a467de4cfe05232a73fd42a40b401c71c8c6fa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62751694"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Enabled プロパティ (ServerNetworkProtocolIpAddress クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ object.Enabled [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  IP アドレスが有効になっているかどうかを指定するブール値: **true** IP アドレスが有効になっている場合または**false** IP アドレスが無効になっている場合。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

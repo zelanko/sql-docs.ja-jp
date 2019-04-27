@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c139e5e9487dc703b3a24b159e17c7495fb88c3e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755786"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS データベースのバックアップと復元
   このトピックでは、DQS データベースのバックアップと復元を行う方法について説明します。  
@@ -52,7 +52,7 @@ ms.locfileid: "56030953"
   
 6.  SQL Server の現在のインスタンスから切断し、データベースを復元する SQL Server インスタンスに接続します。  
   
-7.  DQS_MAIN データベースを復元します。 SQL Server データベースを復元する手順については、[データベース バックアップを復元&#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)を参照してください。  
+7.  DQS_MAIN データベースを復元します。 SQL Server データベースを復元する手順については、次を参照してください。[データベース バックアップを復元&#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)します。  
   
 8.  DQS_PROJECTS データベースを復元します。  
   

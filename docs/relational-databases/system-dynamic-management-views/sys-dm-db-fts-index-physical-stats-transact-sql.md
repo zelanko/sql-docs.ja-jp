@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2e80aef6d8a0ee33aa7a9a0d9bb71abc3ddf1e15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742025"
 ---
 # <a name="sysdmdbftsindexphysicalstats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47763720"
 |**similarity_index_page_count**|**bigint**|インデックス ページの数で表された、抽出の論理サイズ。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 詳細については、[モニター セマンティック検索の管理と](../../relational-databases/search/manage-and-monitor-semantic-search.md)を参照してください。  
+ 詳細については、次を参照してください。[モニター セマンティック検索の管理と](../../relational-databases/search/manage-and-monitor-semantic-search.md)します。  
   
 ## <a name="metadata"></a>メタデータ  
  セマンティック インデックス作成の状態の詳細については、次の動的管理ビューに対してクエリを実行してください。  

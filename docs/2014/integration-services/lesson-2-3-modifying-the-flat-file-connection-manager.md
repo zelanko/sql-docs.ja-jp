@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767434"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>手順 3:フラット ファイル接続マネージャーの変更
   この実習では、レッスン 1 で作成、構成したフラット ファイル接続マネージャーを変更します。 フラット ファイル接続マネージャーを作成した当初は、1 つのファイルを静的に読み込むように構成しました。 フラット ファイル接続マネージャーで繰り返しファイルを読み込むには、接続マネージャーの ConnectionString プロパティを修正し、ユーザー定義変数 `User:varFileName`を使用できるようにする必要があります。この変数に、実行時に読み込むファイルのパスを定義します。  

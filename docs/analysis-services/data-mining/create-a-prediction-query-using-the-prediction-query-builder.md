@@ -1,5 +1,5 @@
 ---
-title: 予測クエリ ビルダーを使用して予測クエリを作成 |Microsoft ドキュメント
+title: 予測クエリ ビルダーを使用して予測クエリの作成 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,33 +10,33 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8a112efd8fdfe2b8108d2b6005028f10abf4a706
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740212"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>予測クエリ ビルダーを使用した予測クエリの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  予測クエリは、BI Development Studio でデータ マイニング ソリューションを構築しているときに作成できます。また、SQL Server Management Studio で既存のマイニング モデルを右クリックし、 **[予測クエリの作成]** オプションを選択して、作成することもできます。  
+  予測クエリは、BI Development Studio でデータ マイニング ソリューションを構築しているときに作成できます。また、SQL Server Management Studio で既存のマイニング モデルを右クリックし、**[予測クエリの作成]** オプションを選択して、作成することもできます。  
   
  **予測クエリ ビルダー** には、次の 3 種類のデザイン モードがあります。これらのモードを切り替えるには、左上隅のアイコンをクリックします。  
   
 -   **デザイン**  
   
--   **Query**  
+-   **クエリ**  
   
 -   **結果**  
   
  **[デザイン]** モードでは予測クエリを作成できます。それには、入力データを選択し、そのデータをモデルにマップし、グリッドを使用して作成したステートメントに予測関数を追加します。 デザイン グリッドには、次の構成要素があります。  
   
- **ソース**  
+ **Source**  
  新しい列のソースを選択します。 マイニング モデル、データ ソース ビューに含まれる入力テーブル、予測関数、またはカスタマイズされた式からの列を使用できます。  
   
  **フィールド**  
  **[ソース]** 列の選択に関連付けられている特定の列または関数を決定します。  
   
- **別名**  
+ **[エイリアス]**  
  結果セット内で列に付けられる名前を決定します。  
   
  **[表示]**  
@@ -87,8 +87,8 @@ ms.locfileid: "34014689"
   
 8.  **[マイニング モデル予測]** タブのツール バーにある最初のボタンをクリックし、 **[結果]** を選択して、クエリを実行します。  
   
-## <a name="see-also"></a>参照  
- [データ マイニング デザイナーで単一クエリを作成します。](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
+## <a name="see-also"></a>関連項目  
+ [データ マイニング デザイナーでの単一クエリの作成](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

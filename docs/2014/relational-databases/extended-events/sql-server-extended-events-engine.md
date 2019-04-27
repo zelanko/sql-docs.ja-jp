@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638239"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 拡張イベント エンジン
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント エンジンは、次の役割を持った各種のサービスおよびオブジェクトで構成されます。  
@@ -36,7 +36,7 @@ ms.locfileid: "52775694"
   
  ![拡張イベント アーキテクチャの詳細](../../database-engine/media/xearchitecturedetailed.gif "拡張イベント アーキテクチャの詳細")  
   
- 次の点に注意してください。  
+ 次のことを考慮してください。  
   
 -   各 Windows プロセスは、1 つまたは複数のモジュール (**Win32 プロセス**、 **Win32 モジュール**) を持つ場合があります。 これらは、 *バイナリ* または *実行可能モジュール*とも呼ばれます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52775694"
   
     -   バッファーがいっぱいになると、そのバッファーがターゲットにディスパッチされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](extended-events.md)  
   
   

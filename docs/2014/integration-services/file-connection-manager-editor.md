@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 24793c3edc681ac40ca37c36a1540f3c404b7191
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768338"
 ---
 # <a name="file-connection-manager-editor"></a>[ファイル接続マネージャー エディター] ダイアログ ボックス
   **[ファイル接続マネージャー エディター]** ダイアログ ボックスを使用すると、ファイルまたはフォルダーに接続するためのプロパティを指定できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "58374830"
  **[使用法の種類]**  
  **ファイル接続マネージャー** が既存のファイルまたはフォルダーに接続するか、新しいファイルまたはフォルダーを作成するかを指定します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |[ファイルの作成]|実行時に新しいファイルを作成します。|  
 |[既存のファイル]|既存のファイルを使用します。|  
@@ -49,7 +49,7 @@ ms.locfileid: "58374830"
  **[参照]**  
  **[ファイルの選択]** ダイアログ ボックスまたは **[フォルダーの参照]** ダイアログ ボックスを使用して、ファイルまたはフォルダーを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

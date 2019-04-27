@@ -10,18 +10,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3195007b4346c6010b416fae833643f3a80136fb
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639532"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Analytics Platform System の parallel Data Warehouse ファイアウォールの構成
 **ファイアウォール**の SQL Server PDW 構成マネージャー ページでは、有効にまたはを許可または Analytics Platform System appliance の特定のポートにアクセスできないようにするファイアウォール規則を無効にすることができます。  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>ポートとファイアウォールを管理するには、アプライアンス ノードのルールします。  
   
-1.  Configuration Manager を起動します。 詳細については、[Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)を参照してください。  
+1.  Configuration Manager を起動します。 詳細については、次を参照してください。 [Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)します。  
   
 2.  Configuration Manager の左側のウィンドウで展開**並列データ ウェアハウスのトポロジ**、 をクリックし、**ファイアウォール**します。  
   

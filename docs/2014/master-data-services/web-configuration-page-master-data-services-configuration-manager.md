@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f45eef12a81ada02a26a0f4c2318523de31cbf0d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765405"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>[Web の構成] ページ (マスター データ サービス構成マネージャー)
   **[Web の構成]** ページを使用すると、Web サイトまたは Web アプリケーションを新規作成できます。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションを選択すると、アプリケーションの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを指定して、Data Quality Services を有効にすることができます。  
@@ -44,7 +44,7 @@ ms.locfileid: "53357772"
 |------------------|-----------------|  
 |**[Data Quality Services との統合を有効化]**|このオプションを選択すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]で使用可能な Data Quality 機能が有効になります。 詳細については、「 [マスター データ サービスを使用した Data Quality Services 統合の有効化](install-windows/enable-data-quality-services-integration-with-master-data-services.md)」を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ サービスのデータベースと web サイトの設定します。](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Web アプリケーションの要件&#40;マスター データ サービス&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [マスター データ マネージャー Web アプリケーションの作成 &#40;マスター データ サービス&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a49884701445668aeb4f3785ed3f4a8ff13a1ee1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746536"
 ---
 # <a name="specify-a-sql-or-mdx-query-ssas"></a>SQL または MDX クエリの指定 (SSAS)
   **テーブルのインポート ウィザード**のこのページを使用すると、SQL クエリまたは MDX クエリでデータをインポートすることができます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

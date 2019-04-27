@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e615df2adea50f2ee6d0d0741d6d885b87311ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757832"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>テーブル バインドの詳細 ([パーティション ソース] ダイアログ ボックス) (Analysis Services - 多次元データ)
   **[パーティション ソース]** ダイアログ ボックスの **[テーブル バインド]** オプションを使用すると、パーティション用のデータを提供するファクト テーブルを指定できます。 このペインを表示するには、 **[パーティション ソース]** ダイアログ ボックスの **[バインドの種類]** オプションで **[テーブル バインド]** を選択します。  
@@ -43,7 +43,7 @@ ms.locfileid: "48093068"
   
  **[フィルター テーブル]** でフィルターが指定されている場合、その条件を満たすテーブル名と比較され、一覧がさらに限定されます。 **[フィルター テーブル]** で指定された文字列を含むテーブルのみが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パーティション ソース ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

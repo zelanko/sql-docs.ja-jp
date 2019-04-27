@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8136f43214ef966c7beb05501ca0b27d451f0451
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773660"
 ---
 # <a name="query-options-results-text-page"></a>[クエリ オプション] の [結果] ([テキスト] ページ)
   このページを使用すると、クエリ結果セットをテキスト形式で表示するオプションを指定できます。 このページの設定は、 **[結果をファイルに出力]** が選択されているときにも使用できます。  

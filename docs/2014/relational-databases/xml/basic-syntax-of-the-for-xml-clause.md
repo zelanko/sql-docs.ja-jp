@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637872"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 句の基本構文
   FOR XML モードには、RAW、AUTO、EXPLICIT、または PATH を使用できます。 このモードにより、結果の XML の構造が決まります。  
@@ -91,7 +91,7 @@ XML
  ROOT [('*RootName*')]  
  結果の XML に、1 つの最上位要素が追加されることを指定します。 必要に応じて、生成するルート要素名を指定することもできます。 既定値は "root" です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FOR XML での RAW モードの使用](use-raw-mode-with-for-xml.md)   
  [FOR XML での AUTO モードの使用](use-auto-mode-with-for-xml.md)   
  [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md)   

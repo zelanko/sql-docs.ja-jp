@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7dddb6aec8d55a2a0495900b87661a431f8de9d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643353"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services のチュートリアル シナリオ
   このチュートリアルには、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]という架空の会社が登場します。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、特殊合金自転車を北アメリカ、ヨーロッパ、およびアジアの市場に供給する大規模な多国籍製造会社です。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] はワシントン州のボセルに本社を置き、500 名の従業員を抱えています。 さらに、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の各市場には、その地域を担当する販売チームがいます。  
@@ -61,9 +61,9 @@ ms.locfileid: "48106752"
   
 -   米国外のビジネス ユーザーにローカライズされたサービスを提供する。  
   
- Analysis Services チュートリアルのレッスンには、これらのすべての目標に適したキューブ データベースを構築するためのガイダンスが用意されています。 まず、「 [レッスン 1: 新しいテーブル モデル プロジェクトの作成](lesson-1-create-a-new-tabular-model-project.md)」に進みます。  
+ Analysis Services チュートリアルのレッスンには、これらのすべての目標に適したキューブ データベースを構築するためのガイダンスが用意されています。 開始するには、最初のレッスンに進みます。[レッスン 1:新しいテーブル モデル プロジェクト作成](lesson-1-create-a-new-tabular-model-project.md)です。  
   
-## <a name="see-also"></a>参照  
- [多次元モデリング&#40;Adventure Works チュートリアル&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+## <a name="see-also"></a>関連項目  
+ [多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

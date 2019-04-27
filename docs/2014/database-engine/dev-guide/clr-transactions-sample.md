@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13d23977aeeb6f7643fc039c23b02267d47c106f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754070"
 ---
 # <a name="clr-transactions-sample"></a>CLR Transactions サンプル
   このサンプルでは、`System.Transactions` 名前空間にあるマネージド API を使用してトランザクションを制御する例を示します。 このサンプルで `System.Transactions.TransactionScope` クラスは、要求に応じるのに十分な在庫が存在する場合を除き、ある場所から別の場所への移動をアトミック レベルで行える程度の在庫が存在する場合に、在庫数が調整されないように、トランザクション境界を確立するために使用されています。 分散トランザクションにおける自動登録の例を、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに格納された監査データベースに在庫の変更を記録するという動作で示しています。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
@@ -620,7 +620,7 @@ USE AdventureWorks
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f96a4b976d338e7f005d0f731bac0b58f5798bb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749863"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot の正常性ルール - 構成
   PowerPivot for SharePoint には、サーバーの可用性と構成に関する問題を監視および解決するのに役立つ SharePoint 正常性ルールが含まれています。 PowerPivot for SharePoint に適用される正常性ルールは、[ルール定義の確認] ページに表示されます。  
@@ -92,7 +92,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ。**PowerPivot:大量の接続では、現在の負荷を処理するより多くのサーバーをデプロイする必要がありますを示します。**  
   
      ディスク領域の不足 (既定値は 5%)  
-     ディスク領域は、データベースへの要求が行われるたびに、PowerPivot データをキャッシュするために使用されます。 このルールは、ディスク領域が不足している場合に、そのことを通知します。 既定では、バックアップ フォルダーが置かれているディスク ドライブ上のディスク領域が 5% 未満になると、この正常性ルールがトリガーされます。 ディスク使用量の詳細については、[ディスク使用領域の構成&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)を参照してください。  
+     ディスク領域は、データベースへの要求が行われるたびに、PowerPivot データをキャッシュするために使用されます。 このルールは、ディスク領域が不足している場合に、そのことを通知します。 既定では、バックアップ フォルダーが置かれているディスク ドライブ上のディスク領域が 5% 未満になると、この正常性ルールがトリガーされます。 ディスク使用量の詳細については、次を参照してください。[ディスク使用領域の構成&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)します。  
   
      この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ。**PowerPivot:ディスク領域の PowerPivot データがキャッシュされているドライブが不足しています。**  
   
@@ -124,7 +124,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      PowerPivot 管理ダッシュボード .xlsx の更新の確認 (既定値は 5 日)  
      PowerPivot 管理ダッシュボード .xlsx ファイルは、PowerPivot 管理ダッシュボードのレポートによって使用されるデータ ソースです。 既定のサーバー構成では、SharePoint および PowerPivot System サービスによって収集された使用状況データを使用して、.xlsx ファイルは毎日更新されます。 ファイルが更新されない場合は、正常性ルールによって問題として報告されます。 既定では、ファイルのタイムスタンプが 5 日間変更されない場合、ルールがトリガーされます。  
   
-     使用状況データ収集の詳細については、[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)を参照してください。  
+     使用状況データ収集の詳細については、次を参照してください。[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。  
   
      この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ。**PowerPivot:使用状況データが必要な頻度で更新されません。**  
   

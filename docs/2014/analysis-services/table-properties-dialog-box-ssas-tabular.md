@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 783bd1ba103e97e442e61891138090198a5cdd0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757841"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>[テーブルのプロパティ] ダイアログ ボックス (SSAS - テーブル)
   テーブル モデル データベースでテーブルのプロパティを表示するには、 **の** [テーブルのプロパティ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用します。 すべてのプロパティは読み取り専用です。  
@@ -34,7 +34,7 @@ ms.locfileid: "48104492"
 |**[説明]**|テーブルの説明を表示します。|  
 |**[タイムスタンプの作成]**|テーブルが作成された日時を表示します。|  
 |**[スキーマの最終更新]**|テーブルのメタデータが最後に更新された日時を表示します。|  
-|**State**|テーブルの処理状態を表示します。 このプロパティの値の詳細については、<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>を参照してください。|  
+|**State**|テーブルの処理状態を表示します。 このプロパティの値の詳細については、「<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>」を参照してください。|  
 |**最後に処理されました。**|テーブルが最後に処理された日時を表示します。|  
 |**現在のストレージ モード**|テーブルの現在のストレージ モードを表示します。 ストレージ モードはデータベース レベルで設定され、すべてのテーブルで継承されます。 テーブル レベルで異なるストレージ モードを使用することはできません。 有効な値は、InMemory (既定値)、InMemoryWithDirectQuery、DirectQuery、DirectQueryWithinMemory です。|  
   

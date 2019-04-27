@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753734"
 ---
 # <a name="array-parameter-sample"></a>Array パラメーター サンプル
   データベース内の行のセットを作成、更新、または削除すると便利な場合があります。 これを行うには、いくつかの方法があります。 1 つは、共通言語ランタイム (CLR) 統合ユーザー定義データ型を使用して、情報の配列をクライアントからサーバー上の CLR 統合ストアド プロシージャへ渡す方法です。 CLR 統合ユーザー定義データ型の性質によって、サーバーに提供されるデータの大きさは 8,000 バイトに制限されます。 したがって、この方法は、大規模なデータや複雑なデータを扱う場合には適切ではありません。 操作するデータが小規模で単純な場合、この方法は、行ごとにストアド プロシージャを呼び出す方法よりもはるかに効率的です。 データの順序が重要なアプリケーションでは、配列を渡すことでデータの順序を保持できます。このサンプルの内容は次のとおりです。  
@@ -26,7 +26,7 @@ ms.locfileid: "60158678"
   
 3.  `TestArrayParameter` コンソール アプリケーション。 このアプリケーションは、渡されたコマンド ライン パラメーターに基づいて `ContactTypeNames` ユーザー定義データ型のインスタンスを作成し、`usp_EnsureContactTypeNames` ストアド プロシージャを呼び出して、このユーザー定義データ型インスタンスをパラメーターとして渡します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
@@ -714,7 +714,7 @@ DROP ASSEMBLY ContactTypeNames;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

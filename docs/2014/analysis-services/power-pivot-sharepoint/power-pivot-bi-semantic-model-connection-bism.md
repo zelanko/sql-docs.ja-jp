@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a527ad5c165ff7b155b04627a41062a2b553c62b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62750188"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>PowerPivot BI セマンティック モデル接続 (.bism)
   BI セマンティック モデル接続 (.bism) は、Excel または [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テーブル モデル データベースまたは多次元モードの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに接続する、移植可能な接続です。 Office データ接続 (.odc) ファイルに精通している場合は、.bism 接続ファイルの定義方法と使用方法が類似していることがわかります。  
@@ -78,7 +78,7 @@ ms.locfileid: "53362244"
   
  [Excel または Reporting Services での BI セマンティック モデル接続の使用](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Analysis Services への接続](../instances/connect-to-analysis-services.md)  
   

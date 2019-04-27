@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0771c953875e9871c53892bc14a3e2a537060833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743625"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>外れ値 (SQL Server データ マイニング アドイン)
   ![データ マイニング リボンの外れ値ウィザード](media/dmc-outliers.gif "データ マイニング リボンの外れ値ウィザード")  
@@ -95,7 +95,7 @@ ms.locfileid: "48224114"
 |**しきい値の処理方法を指定します。**|しきい値を使用して設定**最小**しきい値の値より少ない行に含まれる値を除外します。<br /><br /> 値では最初に**最小**は最小限の行を含む値と最小値をその値よりも低くすることはできません。|  
 |**外れ値の処理**|外れ値を削除する場合、現在のワークシート内のデータを変更することも、新しいワークシートにデータのコピーを作成することもできます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データの探索&#40;SQL Server データ マイニング アドイン&#41;](explore-data-sql-server-data-mining-add-ins.md)  
   
   

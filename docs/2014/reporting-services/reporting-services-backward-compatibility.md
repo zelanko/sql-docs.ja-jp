@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b2a9e7d7600af11cbf9ab0cbb61f7049064b79e8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642722"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Reporting Services の旧バージョンとの互換性
   ここでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のバージョン間での動作の変更について説明します。 使用できなくなる機能や、将来のリリースで削除される予定の機能の情報を提供します。 また、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を含むカスタム アプリケーションを使用できなくなるような、製品の根本的な変更についても説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "59968134"
 |[SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をアップグレードする場合に発生する可能性のある問題について説明します。|  
 |[SQL Server 2014 における SQL Server Reporting Services の動作変更](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]で変更されている機能について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [旧バージョンとの互換性](../../2014/getting-started/backward-compatibility.md)   
  [Analysis Services の旧バージョンとの互換性](../../2014/analysis-services/analysis-services-backward-compatibility.md)  
   

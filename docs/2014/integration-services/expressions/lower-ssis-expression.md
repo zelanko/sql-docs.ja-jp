@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e3f445260e7b5c4c1ed641fdf6b9f5cb509db709
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769058"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS 式)
   大文字が小文字に変換された状態の文字式を返します。  
@@ -63,7 +63,7 @@ LOWER(SUBSTRING(Color, 2, 15))
 LOWER(@CityName)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [UPPER (SSIS 式)](upper-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  
   

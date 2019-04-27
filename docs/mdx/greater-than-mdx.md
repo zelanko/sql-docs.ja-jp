@@ -1,5 +1,5 @@
 ---
-title: '&gt; (より大きい)(MDX) |Microsoft ドキュメント'
+title: '&gt; (より大きい)(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b7eb0cdcfbe6a22a18236362b4a2277eb42eb42
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653492"
 ---
 # <a name="gt-greater-than-mdx"></a>&gt; (より大きい)(MDX)
 
@@ -33,16 +33,16 @@ MDX_Expression > MDX_Expression
  有効な MDX 式です。  
   
 ## <a name="return-value"></a>戻り値  
- 以下の条件に基づくブール値です。  
+ 次の条件に基づくブール値。  
   
--   **true**かどうかは、両方のパラメーターが null 以外の場合、および最初のパラメーターが 2 番目のパラメーターの値より大きい値が含まれています。  
+-   **true**かどうかは、両方のパラメーターが null 以外の場合、および最初のパラメーターが 2 番目のパラメーターの値よりも大きい値です。  
   
--   **false**かどうかは、両方のパラメーターが null 以外の場合、および最初のパラメーターにはと等しいか、2 番目のパラメーターの値よりも小さい値が含まれています。  
+-   **false**かどうかは、両方のパラメーターが null 以外の場合、および最初のパラメーターが同じであるか、2 番目のパラメーターの値よりも小さい値です。  
   
 -   いずれか一方または両方のパラメーターが NULL 値に評価される場合は、NULL です。  
   
 ## <a name="examples"></a>使用例  
- 次のクエリでは、この演算子の使用例を示します。  
+ 次のクエリの例では、この演算子の使用を示します。  
   
 ```  
 -- This query returns the gross profit margin (GPM)  
@@ -62,7 +62,7 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

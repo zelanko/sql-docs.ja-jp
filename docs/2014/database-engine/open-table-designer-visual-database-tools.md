@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774188"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>テーブル デザイナーを開く方法 (Visual Database Tools)
   テーブル デザイナーは、接続しているデータベース テーブルをデザインしたりビジュアル化したりできるビジュアル ツールです。 テーブル デザイナーを使用すると、テーブル、列、キー、インデックス、リレーションシップ、および制約を作成、編集、または削除できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "59240720"
   
      メイン メニューに **[テーブル デザイナー]** メニューが追加され、デザイナー ペインにテーブルが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブルのデザイン&#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
  [テーブル](../relational-databases/tables/tables.md)  
   

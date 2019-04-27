@@ -15,17 +15,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754282"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>サーバー インスタンスのアップグレード時に、ミラー化されたデータベースのダウンタイムを最小化する方法
   サーバー インスタンスをアップグレードするときに[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、順次アップグレードを実行することによって、各ミラー化されたデータベースのダウンタイムを 1 つの手動フェールオーバーのみに抑えることができますと呼ばれる、*ローリング アップグレード*します。 ローリング アップグレードは複数の段階から成るプロセスです。最も単純な形式では、ミラーリング セッションで現在ミラー サーバーとして機能しているサーバー インスタンスをアップグレードした後、ミラー化されたデータベースを手動でフェールオーバーし、以前のプリンシパル サーバーをアップグレードして、ミラーリングを再開します。 実際に実行するプロセスは、動作モードと、アップグレードするサーバー インスタンスで実行しているミラーリング セッションの数やレイアウトによって異なります。  
   
 > [!NOTE]  
->  サービス パックまたは修正プログラムをインストールするローリング アップグレードを実行する方法の詳細については、[最小限のダウンタイムでのシステム上でミラー化データベースの Service Pack をインストール](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)を参照してください。  
+>  サービス パックまたは修正プログラムをインストールするローリング アップグレードを実行する方法の詳細については、次を参照してください。[最小限のダウンタイムでのシステム上でミラー化データベースの Service Pack をインストール](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)します。  
   
  **推奨される準備 (ベスト プラクティス)**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "52509425"
 1.  ミラーリング セッションにミラーリング監視サーバーが存在する場合は、ローリング アップグレードの実行前にミラーリング監視サーバーを削除しておくことをお勧めします。 そうしないと、ミラー サーバー インスタンスをアップグレードする際のデータベースの可用性が、プリンシパル サーバー インスタンスに接続されたミラーリング監視サーバーに依存することになります。 削除したミラーリング監視サーバーは、ローリング アップグレード プロセス中にいつでもアップグレードでき、また、そうすることでデータベースのダウンタイムを最小限に抑えることができます。  
   
     > [!NOTE]  
-    >  詳細については、次を参照してください。[クォーラム。ミラーリング監視サーバーがデータベースの可用性に与える影響&#40;データベース ミラーリング&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)します。  
+    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
     -   [データベース ミラーリング セッションからのミラーリング監視サーバーの削除 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   

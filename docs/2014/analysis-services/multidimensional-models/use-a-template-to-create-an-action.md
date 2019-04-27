@@ -12,17 +12,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43be2214ce811b8b0a0855221823fa6f1bdf5984
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740792"
 ---
 # <a name="use-a-template-to-create-an-action"></a>テンプレートを使用したアクションの作成
   キューブ デザイナーの **[アクション]** ビューには、一般的なアクションの作成に使用する数多くのテンプレートが用意されています。 キューブ デザイナーには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。  
   
 > [!NOTE]  
->  アクションが作成された後、ユーザーがキューブを更新または再処理してからアクションが使用できるようになります。 詳細については、[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)を参照してください。  
+>  アクションが作成された後、ユーザーがキューブを更新または再処理してからアクションが使用できるようになります。 詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)します。  
   
 ### <a name="to-use-a-template-to-create-an-action"></a>テンプレートを使用してアクションを作成するには  
   
@@ -33,6 +33,6 @@ ms.locfileid: "48154499"
 -   テンプレートに基づき、アクションの構築の完了に必要な情報を入力します。  
   
 ## <a name="see-also"></a>参照  
- [アクション&#40;Analysis Services - 多次元データ&#41;](actions-analysis-services-multidimensional-data.md)  
+ [アクション &#40;Analysis Services - 多次元データ&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

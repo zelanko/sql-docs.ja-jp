@@ -1,5 +1,5 @@
 ---
-title: '外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。 次の接続の更新に失敗しました: PowerPivot データ |Microsoft Docs'
+title: 外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。 次の接続の更新に失敗しました:PowerPivot データ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,23 +12,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c808e39a208e81e2869efd389044a70f1af9052a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743404"
 ---
-# <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。 次の接続は更新に失敗しました: PowerPivot データ
+# <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。 次の接続の更新に失敗しました:[PowerPivot データ]
   このエラーは、PowerPivot for SharePoint がインストールされていないサーバーで PowerPivot データのクエリを実行した場合に発生します。 また、SQL Server Analysis Services (PowerPivot) サービスが停止した場合や、PowerPivot データを以前のバージョンで表示しようとした場合にも発生します。  
   
 ## <a name="details"></a>詳細  
   
 |||  
 |-|-|  
-|適用対象|PowerPivot for SharePoint|  
+|対象|PowerPivot for SharePoint|  
 |製品バージョン|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|データ接続に失敗しました。|  
-|メッセージ テキスト|外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。 次の接続は更新に失敗しました: PowerPivot データ|  
+|メッセージ テキスト|外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。 次の接続の更新に失敗しました:[PowerPivot データ]|  
   
 ## <a name="explanation"></a>説明  
  SharePoint にパブリッシュされた Excel ブック内の PowerPivot データのクエリを実行するときに SharePoint 環境に PowerPivot for SharePoint サーバーがないか、SQL Server Analysis Services (PowerPivot) サービスが停止している場合は、Excel Services からこのエラーが返されます。  
@@ -42,7 +42,7 @@ ms.locfileid: "48198602"
   
  SQL Server 2008 R2 バージョンの PowerPivot for Excel で作成された PowerPivot ブックの場合、SQL Server 2008 R2 バージョンの Analysis Services OLE DB プロバイダーをインストールする必要があります。 プロバイダーをインストールし、Microsoft.AnalysisServices.ChannelTransport.dll ファイルを登録しなかった場合、このエラーが発生します。 ファイルの登録の詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。次の接続は更新に失敗しました: PowerPivot データ](the-data-connection-user-could-not-be-delegated.md)  
+## <a name="see-also"></a>関連項目  
+ [データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。次の接続の更新に失敗しました:PowerPivot データ](the-data-connection-user-could-not-be-delegated.md)  
   
   

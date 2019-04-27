@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 47710b89cdad74ac7e17a6091592af0d379ce2e6
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781402"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>ODBC データ ソース アドミニストレーターの起動
   このトピックでは、ODBC データ ソース アドミニストレーターを起動する方法について説明します。 ODBC データ ソース アドミニストレーターは Windows コンポーネントです。 ODBC データ ソース アドミニストレーターは、ODBC データ ソースの作成および管理に使用します。  
@@ -37,7 +37,7 @@ ms.locfileid: "52640263"
   
 3.  **[管理ツール]** ウィンドウの **[データ ソース (ODBC)]** をダブルクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC SQL Server のドライバーのバージョンを確認する方法 &#40;Windows&#41;](check-the-odbc-sql-server-driver-version-windows.md)  
   
   

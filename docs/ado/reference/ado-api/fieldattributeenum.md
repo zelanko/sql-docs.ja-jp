@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db3b72b7bdaf60febdeb41eb6f6e1e86c5064f63
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653558"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 1 つまたは複数の属性を指定します、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|プロバイダーは、フィールドの値をキャッシュし、キャッシュからそれ以降の読み取りが行われることを示します。|  
 |**adFldFixed**|0x10|フィールドが固定長のデータが含まれていることを示します。|  

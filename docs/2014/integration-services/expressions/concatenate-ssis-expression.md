@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 288e4aedc6112640aa511712ad90912b1d41b2fa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769371"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (連結) (SSIS 式)
   2 つの式を連結して 1 つの式にします。  
@@ -48,7 +48,7 @@ character_expression1 + character_expression2
   
  両方の式のデータ型は同じであるか、または一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 たとえば、文字列 "Order date is" と列 **OrderDate** を連結する場合、 **OrderDate** の値は暗黙的に文字列データ型に変換されます。 2 つの数値を連結するには、両方の数値を文字列データ型に明示的にキャストする必要があります。  
   
- 連結したものでは、1 つだけの BLOB データ型を使用できます。DT_TEXT、DT_NTEXT、または DT_IMAGE です。  
+ 連結は、1 つの BLOB データ型のみを使用できます。DT_TEXT、DT_NTEXT または DT_IMAGE。  
   
  要素のいずれかが NULL の場合、結果は NULL になります。  
   
@@ -67,7 +67,7 @@ FirstName + ' ' + LastName
 @ZIPCcode + "-" + @[ZipCode+4]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)  
   

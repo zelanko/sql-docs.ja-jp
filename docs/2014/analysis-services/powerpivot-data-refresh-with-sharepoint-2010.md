@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3d385ae733c44e403ba9de412c0c2a3e0eacd3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749295"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>SharePoint 2010 での PowerPivot データ更新
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] のデータ更新は、外部データ ソースにクエリを実行して、コンテンツ ライブラリに保存されている Excel 2010 ブック内の埋め込み [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] データを更新する、スケジュールされたサーバー側の操作です。  
@@ -30,7 +30,7 @@ ms.locfileid: "53365554"
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] および SharePoint Server 2013 の Excel Services では、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] データ モデルのデータ更新に新しいアーキテクチャを使用しています。 新しいアーキテクチャでは、PowerPivot データ モデルを読み込むための主要なコンポーネントとして Excel Services が使用されます。 以前に使用されていたデータ更新のアーキテクチャでは、データ モデルを読み込むために、SharePoint モードで PowerPivot System サービスおよび [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を実行しているサーバーが使用されていました。 詳細については、[SharePoint 2013 で PowerPivot データ更新](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)を参照してください。  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] および SharePoint Server 2013 の Excel Services では、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] データ モデルのデータ更新に新しいアーキテクチャを使用しています。 新しいアーキテクチャでは、PowerPivot データ モデルを読み込むための主要なコンポーネントとして Excel Services が使用されます。 以前に使用されていたデータ更新のアーキテクチャでは、データ モデルを読み込むために、SharePoint モードで PowerPivot System サービスおよび [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を実行しているサーバーが使用されていました。 詳細については、次を参照してください。 [SharePoint 2013 で PowerPivot データ更新](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)します。  
   
  **このトピックの内容:**  
   
@@ -56,9 +56,9 @@ ms.locfileid: "53365554"
   
  [データ更新タイマー ジョブを無効にします。](#bkmk_disableDR)  
   
- サーバー環境と権限が構成されていることを確認したら、データ更新を使用できる状態になります。 SharePoint ユーザーがデータ更新を使用するには、データ更新の実行頻度を指定したスケジュールを PowerPivot ブックに対して作成します。 スケジュールの作成は一般的に、ファイルを SharePoint にパブリッシュしたユーザーである、ブックの所有者または作成者が行います。 このユーザーが、自分が所有するブックのデータ更新スケジュールを作成し、管理します。 詳細については、[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)を参照してください。  
+ サーバー環境と権限が構成されていることを確認したら、データ更新を使用できる状態になります。 SharePoint ユーザーがデータ更新を使用するには、データ更新の実行頻度を指定したスケジュールを PowerPivot ブックに対して作成します。 スケジュールの作成は一般的に、ファイルを SharePoint にパブリッシュしたユーザーである、ブックの所有者または作成者が行います。 このユーザーが、自分が所有するブックのデータ更新スケジュールを作成し、管理します。 詳細については、次を参照してください。[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)します。  
   
-##  <a name="bkmk_services"></a> 手順 1:Secure Store Service の有効化とマスター キーの生成  
+##  <a name="bkmk_services"></a> ステップ 1:Secure Store Service の有効化とマスター キーの生成  
  PowerPivot のデータ更新は、Secure Store Service に依存して、データ更新ジョブの実行および保存された資格情報を使用する外部データ ソースへの接続に使用する資格情報を提供します。  
   
  [新しいサーバー] オプションを使用して PowerPivot for SharePoint をインストールした場合は、Secure Store Service が構成されています。 その他のすべてのインストール シナリオに対しては、サービス アプリケーションを作成して構成し、Secure Store Service 用のマスター暗号化キーを生成する必要があります。  
@@ -96,16 +96,16 @@ ms.locfileid: "53365554"
   
 15. **[OK]** をクリックします。  
   
- トラブルシューティングの目的に役立つ Store Service 操作の監査ログを使用可能にするには、事前にこの監査ログを有効にしておく必要があります。 詳細ログ記録を有効にする方法については、[Secure Store Service を構成する (SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294)を参照してください。  
+ トラブルシューティングの目的に役立つ Store Service 操作の監査ログを使用可能にするには、事前にこの監査ログを有効にしておく必要があります。 詳細ログ記録を有効にする方法については、次を参照してください。 [Secure Store Service を構成する (SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294)します。  
   
-##  <a name="bkmk_creds"></a> 手順 2:サポートしない資格情報オプションをオフにします。  
+##  <a name="bkmk_creds"></a> ステップ 2:サポートしない資格情報オプションをオフにします。  
  PowerPivot データ更新には、データ更新スケジュールに 3 つの資格情報オプションが用意されています。 ブックの所有者がデータ更新をスケジュールする際には、これらのオプションの 1 つを選択して、データ更新ジョブの実行に使用するアカウントを指定します。 管理者は、スケジュールの所有者がどの資格情報オプションを使用できるかを決定できます。  
   
  データ更新が動作するためには、少なくとも 1 つのオプションが使用可能になっている必要があります。  
   
  ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
- オプション 1、**データ更新アカウント、管理者が構成されている使用**スケジュールの定義 ページで、常に表示されますが、自動データ更新アカウントを構成する場合にのみ機能します。 アカウントを作成する方法の詳細については、[PowerPivot 自動データ更新アカウントを構成する&#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)を参照してください。  
+ オプション 1、**データ更新アカウント、管理者が構成されている使用**スケジュールの定義 ページで、常に表示されますが、自動データ更新アカウントを構成する場合にのみ機能します。 アカウントを作成する方法の詳細については、次を参照してください。 [PowerPivot 自動データ更新アカウントを構成する&#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)します。  
   
  オプション 2 の**次の windows 資格情報を使用して接続**、常に ページで、表示されますが、有効にした場合にのみ機能、**カスタムの Windows 資格情報を入力できるように**サービスのオプションアプリケーションの構成 ページ。 このオプションは既定で有効になりますが、これを使用するデメリットがメリットよりも大きい場合は無効にできます (下記を参照)。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "53365554"
   
      ![SSAS_PowerPivotDatarefreshOptions_AllowUser](media/ssas-powerpivotdatarefreshoptions-allowuser.gif "SSAS_PowerPivotDatarefreshOptions_AllowUser")  
   
-##  <a name="bkmk_stored"></a> 手順 3:データ更新で使用される資格情報を格納する対象のアプリケーションを作成します。  
+##  <a name="bkmk_stored"></a> ステップ 3:データ更新で使用される資格情報を格納する対象のアプリケーションを作成します。  
  Secure Store Service が構成されると、SharePoint 管理者は、保存された資格情報をデータ更新に使用できるようにする対象アプリケーションを作成できます。この資格情報には、PowerPivot 自動データ更新アカウントや、ジョブの実行または外部データ ソースへの接続に使用されるその他のアカウントが含まれます。  
   
  前のセクションで説明したように、特定の資格情報オプションを使用可能にするには対象アプリケーションを作成する必要があります。 具体的には、PowerPivot 自動データ更新アカウント用の対象アプリケーションに加えて、データ更新操作で使用する追加の保存された資格情報を作成する必要があります。  
@@ -153,7 +153,7 @@ ms.locfileid: "53365554"
   
  また、基になるハードウェアでサポートされている場合は、並列に実行するデータ更新ジョブの数を増やすことができます。 既定では、並列に実行できるジョブの数はシステム メモリに基づいて計算されますが、ワークロードをサポートする追加の CPU 容量がある場合はこの数を増やすことができます。  
   
- 詳細については、[専用のデータ更新の構成または Query-Only 処理&#40;PowerPivot for SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)を参照してください。  
+ 詳細については、次を参照してください。[専用のデータ更新の構成または Query-Only 処理&#40;PowerPivot for SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)します。  
   
 ##  <a name="bkmk_installdp"></a> 手順 5:PowerPivot データのインポートに使用されるデータ プロバイダーのインストール  
  データ更新操作は、基本的には元のデータを取得したインポート操作の繰り返しです。 つまり、PowerPivot クライアント アプリケーションでデータのインポートに使用されたデータ プロバイダーを、PowerPivot サーバーにもインストールする必要があるということです。  
@@ -209,7 +209,7 @@ ms.locfileid: "53365554"
   
  **接続文字列の資格情報を上書きする方法**  
   
- 資格情報のオーバーライドは、データ更新スケジュールでデータ ソース資格情報を指定することで行います。 管理者は、外部データへのアクセスに使用する資格情報をマップする対象アプリケーションを Secure Store Service で提供できます。 これにより、スケジュール所有者は、定義するデータ更新スケジュールに対象アプリケーション ID を入力することができます。 この対象アプリケーションを作成する方法の詳細については、[格納されている資格情報の構成の PowerPivot データ更新&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)を参照してください。  
+ 資格情報のオーバーライドは、データ更新スケジュールでデータ ソース資格情報を指定することで行います。 管理者は、外部データへのアクセスに使用する資格情報をマップする対象アプリケーションを Secure Store Service で提供できます。 これにより、スケジュール所有者は、定義するデータ更新スケジュールに対象アプリケーション ID を入力することができます。 この対象アプリケーションを作成する方法の詳細については、次を参照してください。[格納されている資格情報の構成の PowerPivot データ更新&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)します。  
   
  または、スケジュール所有者は、データ更新中にデータ ソースへの接続に使用される資格情報のセットを入力できます。 次の図に、スケジュール定義ページのこのデータ ソース オプションを示します。  
   
@@ -272,9 +272,9 @@ ms.locfileid: "53365554"
   
 5.  **[OK]** をクリックします。  
   
- 履歴情報は、データ更新の履歴があるブックで [データ更新の管理] オプションを選択すると使用できるようになります。 この情報は、ファームの管理者が PowerPivot サービスの操作を管理するために使用する PowerPivot 管理ダッシュボードでも使用されます。 詳細については、[データ更新履歴の表示&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)を参照してください。  
+ 履歴情報は、データ更新の履歴があるブックで [データ更新の管理] オプションを選択すると使用できるようになります。 この情報は、ファームの管理者が PowerPivot サービスの操作を管理するために使用する PowerPivot 管理ダッシュボードでも使用されます。 詳細については、次を参照してください。[データ更新履歴の表示&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)します。  
   
- 履歴データが長期間にわたって物理的に格納される場所は、PowerPivot サービス アプリケーションの PowerPivot サービス アプリケーション データベースです。 使用状況データの収集および保存する方法の詳細については、[PowerPivot 使用状況データ収集](power-pivot-sharepoint/power-pivot-usage-data-collection.md)を参照してください。  
+ 履歴データが長期間にわたって物理的に格納される場所は、PowerPivot サービス アプリケーションの PowerPivot サービス アプリケーション データベースです。 使用状況データの収集および保存する方法の詳細については、次を参照してください。 [PowerPivot 使用状況データ収集](power-pivot-sharepoint/power-pivot-usage-data-collection.md)します。  
   
 ##  <a name="configTimerJob"></a> PowerPivot データ更新タイマー ジョブのスケジュールを変更します。  
  スケジュールされたデータ更新は、PowerPivot サービス アプリケーション データベースのスケジュール情報を 1 分ごとにスキャンする PowerPivot データ更新タイマー ジョブによってトリガーされます。 データ更新の開始がスケジュールされていた場合、タイマー ジョブは、使用可能な PowerPivot サーバーの処理キューに要求を追加します。  
@@ -285,7 +285,7 @@ ms.locfileid: "53365554"
   
  スキャンの間隔を長くして、ごくたまにしかスキャンが行われないようにすると (1 日に 1 回、午前 0 時にスキャンが行われるようにするなど)、その間隔の間に実行するようにスケジュールされたすべてのデータ更新操作が一度に処理キューへ追加されます。この場合、サーバーに対する負荷が大きくなり、他のアプリケーション用のシステム リソースが不足する可能性があります。 スケジュールされていた更新数によっては、データ更新操作の処理キューが長くなりすぎて、完了できないジョブが生じる場合もあります。 その状態で次の処理間隔に入り、キューの末尾にあるデータ更新要求が削除される可能性があります。  
   
- 使用するハードウェアがサポートしている場合は、追加のプロセッサでより多くのデータ更新ジョブが並列実行されるように指定すると、この問題を緩和できます。 詳細については、[専用のデータ更新の構成または Query-Only 処理&#40;PowerPivot for SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)を参照してください。 データ更新要求を検出、キューに追加および処理する方法の詳細については、[PowerPivot データ更新](power-pivot-sharepoint/power-pivot-data-refresh.md)を参照してください。  
+ 使用するハードウェアがサポートしている場合は、追加のプロセッサでより多くのデータ更新ジョブが並列実行されるように指定すると、この問題を緩和できます。 詳細については、次を参照してください。[専用のデータ更新の構成または Query-Only 処理&#40;PowerPivot for SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)します。 データ更新要求を検出、キューに追加および処理する方法の詳細については、次を参照してください。 [PowerPivot データ更新](power-pivot-sharepoint/power-pivot-data-refresh.md)します。  
   
 1.  サーバーの全体管理で **[監視]** をクリックします。  
   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754710"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>[データベース ミラーリング モニター] ([状態] ページ)
   読み取り専用ページです。現在ナビゲーション ツリーで選択されているデータベースのプリンシパルおよびミラー サーバー インスタンスについて、最新のミラーリング状態が表示されます。 インスタンスに関する情報が利用できない場合、そのインスタンスに対応する **[状態]** グリッドのセルは " **不明**" とグレーで表示されます。  
@@ -97,7 +97,7 @@ ms.locfileid: "52539050"
   
  該当のジョブが存在しないか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが停止している場合、状態はしだいに古くなるため、ミラーリング セッションの構成が反映されない場合があります。 たとえば、フェールオーバー後、パートナーがプリンシパルまたはミラーなどの同じロールを共有しているように見えたり、現在のプリンシパル サーバーがミラー サーバーとして表示され、その一方で現在のミラー サーバーがプリンシパルとして表示されたりすることがあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

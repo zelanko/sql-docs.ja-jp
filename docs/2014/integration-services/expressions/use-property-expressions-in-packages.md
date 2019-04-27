@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768855"
 ---
 # <a name="use-property-expressions-in-packages"></a>パッケージでプロパティ式を使用する
   プロパティ式とは、実行時にプロパティの動的更新を可能にするためにプロパティに割り当てられた式のことです。 たとえば、プロパティ式を使用して、変数に格納された電子メール アドレスを挿入して、メール送信タスクで使用される [宛先] 行を更新できます。  
@@ -125,7 +125,7 @@ ms.locfileid: "58376042"
   
  パッケージの名前が EmailRowCountPP であり、3/4/2005 に実行され、実行された期間が 9 秒間であった場合、この式は次の文字列に評価されます。  
   
- PExpression には、パッケージが-->:(EmailRowCountPP)開始: 3/4/2005 11時 06分: 18 AM 期間: 9 秒。  
+ PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>電子メール メッセージのメッセージ用のプロパティ式  
  次のプロパティ式を使用すると、メール送信タスクの MessageSource プロパティを設定できます。 この式では、文字列リテラル、ユーザー定義変数、および連結演算子 (+) の組み合わせを使用しています。 ユーザー定義変数の名前は、 `nasdaqrawrows`、 `nyserawrows`、および `amexrawrows`です。 文字列 "\n" は、復帰を示します。  
@@ -171,7 +171,7 @@ ms.locfileid: "58376042"
   
 -   social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージで変数を使用する](../use-variables-in-packages.md)  
   
   

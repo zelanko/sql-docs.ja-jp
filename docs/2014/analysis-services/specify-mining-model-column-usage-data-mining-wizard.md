@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6761a6c8e028ed5c589608886f763aed6455c520
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746235"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>[マイニング モデル列の使用法の指定] (データ マイニング ウィザード)
   **[マイニング モデル列の使用法の指定]** ページを使用すると、マイニング モデル列の使用方法を指定したり、入れ子になったテーブルを追加したりできます。  
@@ -26,7 +26,7 @@ ms.locfileid: "48175632"
 > [!NOTE]  
 >  このページは、ウィザードの **[定義方法の選択]** ページで **[既存のキューブを使用する]** を選択した場合にのみ表示されます。  
   
- **詳細情報:** [データ マイニング ウィザード (Analysis Services - データ マイニング)](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
+ **詳細情報。**[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>および  
  **テーブル/列**  

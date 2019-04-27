@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32f384889a8d68bc4683bd8773ea4618329ea44a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743646"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>名前付きセット フォーム エディター (キューブ デザイナーの [計算] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[計算]** タブの **名前付きセット フォーム エディター** ペインを使用すると、名前付きセットを作成したり変更したりできます。  
@@ -38,7 +38,7 @@ ms.locfileid: "48119745"
 > [!NOTE]  
 >  このオプションには、有効なセット式を指定する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [名前付きセットを作成します。](multidimensional-models/create-named-sets.md)   
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   

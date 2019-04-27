@@ -1,5 +1,5 @@
 ---
-title: 名前付きセット (MDX) のクエリ スコープを作成 |Microsoft ドキュメント
+title: 名前付きセット (MDX) のクエリ スコープの作成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9b30ba12d229f0c045d7a08a71c97a98de67a2bd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739982"
 ---
-# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>名前付きセットの名前付きセットのクエリ スコープを作成する MDX
+# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>MDX 名前付きセット - クエリ スコープを作成する名前付きセット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   1 つの多次元式 (MDX) クエリでのみ名前付きセットが必要な場合は、WITH キーワードを使用してその名前付きセットを定義できます。 WITH キーワードを使用して作成した名前付きセットは、そのクエリの実行が終了した時点で存在しなくなります。  
   
@@ -89,8 +89,8 @@ FROM Sales
   
 ```  
   
-## <a name="see-also"></a>参照  
- [SELECT ステートメント & #40 です。MDX と #41 です。](../../../mdx/mdx-data-manipulation-select.md)   
- [名前付きセット & #40; のセッション スコープの作成MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
+## <a name="see-also"></a>関連項目  
+ [SELECT ステートメント (MDX)](../../../mdx/mdx-data-manipulation-select.md)   
+ [セッション スコープの名前付きセットの作成 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

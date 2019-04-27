@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bf5d6f0a92b18cc41f74d068686c3c8c9589228a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771633"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>[一括挿入タスク エディター] ([接続] ページ)
   **[一括挿入タスク エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、一括挿入操作の挿入元と挿入先、および使用するフォーマットを指定できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "58377250"
  一括挿入操作の詳細については、「[Bulk Insert Task](control-flow/bulk-insert-task.md)」(一括挿入タスク) と「[データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
   
 ## <a name="options"></a>および  
- **[接続]**  
+ **Connection**  
  OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...**>] をクリックして新しい接続を作成します。  
   
  **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、 [OLE DB 接続マネージャーの構成](../../2014/integration-services/configure-ole-db-connection-manager.md)  
@@ -69,7 +69,7 @@ ms.locfileid: "58377250"
  `ColumnDelimiter`  
  ソース ファイルの列区切り記号を指定します。 既定値は **[タブ]** です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[一括挿入タスク エディター] ([全般] ページ)](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
  [[一括挿入タスク エディター] ([オプション] ページ)](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   

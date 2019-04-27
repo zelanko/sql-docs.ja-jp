@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634164"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス - SMB - SQL Server on Linux の構成します。
 
@@ -33,7 +33,7 @@ Windows 以外の世界で、SMB が多くの場合、として、共通イン�
 
 ![05 smbsource][1]
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>手順
 
 1.  FCI の構成では、参加するサーバーのいずれかを選択します。 どれもかまいません。
 

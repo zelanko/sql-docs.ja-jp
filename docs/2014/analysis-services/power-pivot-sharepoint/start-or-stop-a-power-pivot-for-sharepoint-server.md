@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b75d3a772bfdb9b0d938691cd5bc92e3292a1e79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748999"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>PowerPivot for SharePoint サーバーの開始または停止
   PowerPivot System サービスおよび[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]インスタンスは、SharePoint ファーム内の連携要求とデータ処理をサポートするために、同じローカル アプリケーション サーバーで同時に動作します。  
@@ -41,7 +41,7 @@ ms.locfileid: "48096612"
   
  ファーム全体のすべての物理サービスを同時に開始または停止することはできません。 各サーバーを選択してから、特定のサービスを開始または停止する必要があります。  
   
- 特定の Web アプリケーションに対する PowerPivot System サービスを開始、一時停止、または停止することはできませんが、サービスを既定の接続リストから削除して使用できない状態にすることができます。 詳細については、[サーバーの全体管理で SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションの接続](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)を参照してください。  
+ 特定の Web アプリケーションに対する PowerPivot System サービスを開始、一時停止、または停止することはできませんが、サービスを既定の接続リストから削除して使用できない状態にすることができます。 詳細については、次を参照してください。[サーバーの全体管理で SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションの接続](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)します。  
   
 1.  サーバーの全体管理で、 **[システム設定]** の **[サーバーのサービスの管理]** をクリックします。  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b86baa47a755b52e99025a4a2fecc0922c80a08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740533"
 ---
 # <a name="source-property-example-vb"></a>Source プロパティの例 (VB)
 この例では、[ソース](../../../ado/reference/ado-api/source-property-ado-recordset.md)プロパティを 3 つを開いて[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトは、さまざまなデータ ソースに基づきます。  
@@ -127,6 +127,6 @@ End Sub
 'EndSourceVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source プロパティ (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

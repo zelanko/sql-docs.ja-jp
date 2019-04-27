@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7ec5f84d40c3ba0628ea111502dd2be41cc7d346
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635955"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Analysis Services インスタンスの名前変更
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "52393015"
   
      次に例を示します。 "Tabular"既定の仮想アカウントを使用してその結果、次の構成を名前付きインスタンスとして、表形式モードのサーバーをインストールしたとします。  
   
-    1.  インスタンス名 = \<server > \TABULAR  
+    1.  Instance name = \<server>\TABULAR  
   
     2.  サービス名 = MSOLAP$TABULAR  
   
@@ -62,7 +62,7 @@ ms.locfileid: "52393015"
   
      これで、"TAB2"インスタンスの名前を変更するとします。 名前を変更したことで、必要な構成も次のように変わります。  
   
-    1.  インスタンス名 = \<server > \TAB2  
+    1.  Instance name = \<server>\TAB2  
   
     2.  サービス名 = MSOLAP$TAB2  
   

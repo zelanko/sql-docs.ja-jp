@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95763dca9e5a617e3fdc1c4d1d69b45e6679a392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746784"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>シーケンス クラスターの [クラスター ダイアグラム] タブ (マイニング モデル ビューアー)
   **Microsoft シーケンス クラスター ビューアー**の **[クラスター ダイアグラム]** タブには、シーケンス クラスター モデルに含まれるすべてのクラスターのグラフィカル ビューが表示されます。  
   
  ドリルスルーが有効な場合に、各クラスターからサポートするケースをドリルスルーには、シーケンス クラスター モデルのこのビューを使用します。 クラスターにわかりやすい名前を割り当てておき、シェーディング変数を変更することで値の分布をひとめで評価することもできます。  
   
- **詳細:** [Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **詳細情報。**[Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -76,9 +76,9 @@ ms.locfileid: "48174202"
  **リンク**  
  図の線は、シーケンス クラスター間の関連付けを示します。 ビューアーに表示されるリンクの数は、クラスターの右側のスライダーを使用して調整できます。 スライダーを小さく設定すると、緊密なリンクのみが表示されます。  
   
-## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>関連項目  
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

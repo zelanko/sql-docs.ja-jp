@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f4a796b0ab746468ffef3cab5b3480e73b4cf637
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768828"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS 式)
   要求されたデータ型の NULL 値を返します。  
@@ -52,7 +52,7 @@ NULL(typespec)
 |DT_TEXT|*codepage*|(DT_TEXT,1252) は、1252 コード ページを使用して、値を DT_TEXT データ型にキャストします。|  
   
 ## <a name="expression-examples"></a>式の例  
- これらの例では、データ型の null 値が返されます。DT_STR、DT_DATE、および DT_BOOL します。  
+ これらの例は、DT_STR、DT_DATE、DT_BOOL データ型の NULL 値を返します。  
   
 ```  
 NULL(DT_STR,10,1252)  
@@ -60,7 +60,7 @@ NULL(DT_DATE)
 NULL(DT_BOOL)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ISNULL &#40;SSIS 式&#41;](null-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  
   

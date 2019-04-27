@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b86cfeedd76af51b5f9d8cc4633c73ed9cc17ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748234"
 ---
 # <a name="restrict-rows-partition-wizard"></a>[行の制限] (パーティション ウィザード)
   **[行の制限]** ページを使用すると、指定したテーブルから取得、集計されて、パーティションに含まれる行を制限できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "48131712"
  **[確認]**  
  **[クエリ]** のステートメントが有効な SQL ステートメントであることを確認します。  
   
-## <a name="see-also"></a>参照  
- [パーティション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>関連項目  
+ [パーティション (Analysis Services - 多次元データ)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

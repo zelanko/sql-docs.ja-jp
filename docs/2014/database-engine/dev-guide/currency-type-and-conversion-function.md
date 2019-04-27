@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a3a6a9c08672e489bd5b4939bd0899f2ebe46d5e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753246"
 ---
 # <a name="currency-type-and-conversion-function"></a>通貨型と変換関数
   この例では、C# を使用して Currency ユーザー定義データ型を定義します。 このユーザー定義データ型は、価格とカルチャをカプセル化し、そのカルチャの通貨の値で正しい価格を表示する方法を決定するために役立ちます。 この例ではさらに、Currency ユーザー定義データ型のインスタンスを返す通貨換算関数を提供します。 U.S. ドル (USD) を指定のカルチャに関連付けられている通貨に換算するための換算レートが AdventureWorks データベースに含まれている場合、通貨換算関数は、換算済みレートを格納した Currency ユーザー定義データ型と、要求されたカルチャに一致するカルチャを返します。 換算レートがデータベースに含まれていない場合は、USD で表される元の価格を格納した Currency ユーザー定義データ型と、`en-us` カルチャを返します。 この例は、Transact-SQL を使用した共通言語ランタイム (CLR) メソッドとアセンブリの登録解除と登録の方法も示しています。  
@@ -23,7 +23,7 @@ ms.locfileid: "60155158"
 > [!CAUTION]  
 >  このサンプルで使用する換算レートは架空のものです。実際の財務トランザクションには使用しないでください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
@@ -494,7 +494,7 @@ DROP PROCEDURE [dbo].[usp_LookupConversionRate]
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

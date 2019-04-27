@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45d9203a08b9c70809e81fb3d9cf84a521017068
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628603"
 ---
 # <a name="file-based-drivers"></a>ファイル ベースのドライバー
-ファイル ベースのドライバーがドライバーを使用するためのスタンドアロン データベース エンジンを提供しない dBASE などのデータ ソースで使用されます。 これらのドライバーでは、物理的なデータに直接アクセスし、プロセスの SQL ステートメントをデータベース エンジンを実装する必要があります。 ファイル ベースのドライバーでのデータベース エンジンが、最小 SQL への準拠レベルで定義されている ODBC SQL のサブセットを実装する標準的な方法では、この準拠レベル内の SQL ステートメントの一覧は、[付録 c: SQL の文法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)を参照してください。  
+ファイル ベースのドライバーがドライバーを使用するためのスタンドアロン データベース エンジンを提供しない dBASE などのデータ ソースで使用されます。 これらのドライバーでは、物理的なデータに直接アクセスし、プロセスの SQL ステートメントをデータベース エンジンを実装する必要があります。 ファイル ベースのドライバーでのデータベース エンジンが、最小 SQL への準拠レベルで定義されている ODBC SQL のサブセットを実装する標準的な方法では、この準拠レベル内の SQL ステートメントの一覧は、次を参照してください[付録 c:。SQL 文法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)します。  
   
  ファイルおよび DBMS ベースのドライバーを比較する、ファイル ベースのドライバーは、データベース エンジンのコンポーネント、ネットワークの部分がないため、構成する簡単なため作成が難しくと性能の低い数人のユーザーがデータベースに書き込む時間企業のデータベースによって生成されたものと、強力なエンジン。  
   

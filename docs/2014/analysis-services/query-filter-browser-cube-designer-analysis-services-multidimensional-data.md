@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1964b6562c34411201ce141c97c9df42103482ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748404"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>クエリとフィルター (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[ブラウザー]** タブのこの領域には、参照目的で使用するデータやクエリに使用するデータをキューブから簡単に選択できるクエリ/フィルター領域があります。 キューブ オブジェクトは必要に応じていくつでも追加でき、その結果をデータ領域で確認することができます。また、"Excel で分析" を使用して結果をレポートにエクスポートすることにより、エンド ユーザーから見たデータの体裁を視覚的に確認することができます。  
@@ -38,7 +38,7 @@ ms.locfileid: "48074902"
  **[演算子]**  
  **[フィルター式]** の式を、選択した階層に適用する方法を定義する演算子を選択します。 次の表では、使用可能な演算子について説明しています。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**等しい**|結果は **[フィルター式]** で定義された設定に制限されます。|  
 |**等しくないです。**|結果は **[フィルター式]** で定義された設定によって除外されたメンバーに制限されます。|  
@@ -48,7 +48,7 @@ ms.locfileid: "48074902"
 |**始まる**|結果は **[フィルター式]** にある文字列で始まるメンバー名を持つメンバーに制限されます。|  
 |**範囲 (包含)**|結果は **[フィルター式]** で選択された範囲に制限されます。|  
 |**範囲 (排他)**|結果は **[フィルター式]** で選択された範囲によって除外されたメンバーに制限されます。|  
-|**MDX**|結果は **[フィルター式]** で設定された多次元式 (MDX) に制限されます。|  
+|**MDX (MDX)**|結果は **[フィルター式]** で設定された多次元式 (MDX) に制限されます。|  
   
  **[フィルター式]**  
  **[演算子]** によって評価される式を入力します。この式により、参照される結果が制限されます。  
@@ -56,7 +56,7 @@ ms.locfileid: "48074902"
 > [!NOTE]  
 >  このフィールドは、動的データの入力要素であり、選択された演算子に必要なデータの型を反映して表示内容が変わります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [ブラウザー&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
  [ツールバー&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

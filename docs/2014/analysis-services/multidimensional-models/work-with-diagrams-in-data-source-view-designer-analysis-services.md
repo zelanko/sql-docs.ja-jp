@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0b127b3dac76663e77b7ce0fa4faa76a91628ccc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743658"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)
   データ ソース ビュー (DSV) ダイアグラムは、DSV でのオブジェクトの視覚的イメージです。 対話的な操作で特定のオブジェクトを追加、非表示、削除、または変更できます。 また、同じ DSV で複数のダイアグラムを作成して、オブジェクトのサブセットに焦点を絞ることができます。  
@@ -89,7 +89,7 @@ ms.locfileid: "52507769"
   
  この問題を回避するには、最終的な調整を行う前に、最初にすべてのテーブルを追加します。 この場合は、後でダイアグラムを再度開くときに、オブジェクトは自らの位置を保持しています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
  [データ ソース ビュー デザイナー (Analysis Services - 多次元データ)](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   

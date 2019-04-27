@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d45c83b0a8c7ce0884809c394ea35d21dbc42c75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639778"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));
 ```  
   
 ## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、[SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

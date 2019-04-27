@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775335"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>SQL Server をストレージ オプションとして SMB ファイル共有にインストールする
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、システム データベース (Master、Model、MSDB、および TempDB) と[!INCLUDE[ssDE](../../includes/ssde-md.md)] ユーザー データベースをストレージ オプションとしてサーバー メッセージ ブロック (SMB) ファイル サーバーにインストールできます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スタンドアロン インストールと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール (FCI) の両方に当てはまります。  
@@ -32,7 +32,7 @@ ms.locfileid: "54136052"
   
 -   \\\ServerName\ShareName  
   
- 汎用名前付け規則の詳細については、[UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534)を参照してください。  
+ 汎用名前付け規則の詳細については、次を参照してください。 [UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534)します。  
   
  ループバック UNC パス (サーバー名が localhost、127.0.0.1、またはローカル コンピューター名である UNC パス) はサポートされません。 特別なケースとして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同じノードでホストされたファイル サーバー クラスターを使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] もサポートされません。 この状況を避けるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とファイル サーバー クラスターは、別個の Windows クラスターに作成することをお勧めします。  
   
@@ -113,8 +113,8 @@ ms.locfileid: "54136052"
 -   ネットワークにアタッチされたストレージ上に存在する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースをデタッチした後で、その [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを再アタッチしようとすると、データベース権限の問題が発生する場合があります。 この問題は、[こちらのサポート技術情報の記事](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321) で定義されています。 この問題を回避するには、このサポート技術情報の「 **詳細** 」を参照してください。  
   
 -   NetApp デバイスなど、いくつかのサード パーティは、すべての SQL Server API 呼び出しをサポートしているわけではありません。 これらは、次の取得可能性があります。   
-    2015-06-04 13:14:19.97 spid9s エラー。17053、重大度:16、状態:1.  
-    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult():オペレーティング システム エラー (間違った関数)。 1 が発生しました。  
+    2015-06-04 13:14:19.97 spid9s エラー。17053、重大度:16、状態: 1.  
+    2015-06-04 13:14:19.97 spid9s      DoDevIoCtlOut() GetOverlappedResult() :オペレーティング システム エラー (間違った関数)。 1 が発生しました。  
   
      Ntfs では、エラーは問題ありません。  しかし ReFS の場合、パフォーマンスが大幅に低下する可能性があります。  
   

@@ -1,5 +1,5 @@
 ---
-title: クライアント アプリケーション (Analysis Services) からの接続 |Microsoft ドキュメント
+title: クライアント アプリケーション (Analysis Services) からの接続 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d71320fad55b9a0d052ad1bb9c9fd25ab861246c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748644"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>クライアント アプリケーションからの接続 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34019589"
   
 -   [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [オブジェクトと操作 & #40; への認証のアクセスAnalysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [オブジェクトと操作へのアクセスの承認 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> SQL Server Management Studio (SSMS) による接続  
  サーバー インスタンスとデータベースを対話操作で管理するには、SSMS で Analysis Services に接続します。 また、XMLA クエリや MDX クエリを実行して、管理タスクの実行またはデータの取得を行うこともできます。 クエリの送信時にのみデータベースを読み込むツールやアプリケーションとは異なり、SSMS では、ユーザーがサーバーに接続すると、すべてのデータベースが読み込まれます (データベースを表示する権限がユーザーにある場合)。 これは、サーバー上に多数のテーブル データベースがある場合、SSMS を使用して接続するとすべてのデータベースがシステム メモリに読み込まれることを表します。  
@@ -131,6 +131,6 @@ ms.locfileid: "34019589"
  [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services でサポートされる認証方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [権限借用](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [データ ソース & #40; を作成します。SSAS 多次元 & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [データ ソースの作成 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

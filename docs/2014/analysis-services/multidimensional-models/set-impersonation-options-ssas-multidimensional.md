@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 273cc75fdd09db548b8083c20a322e9ba9172c70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740905"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>権限借用オプションの設定 (SSAS - 多次元)
   Analysis Services モデルで`data source` オブジェクトを作成するときに構成する必要がある設定の 1 つに、権限借用オプションがあります。 このオプションでは、接続関連のローカルの操作 (OLE DB データ プロバイダーの読み込みや、移動プロファイルをサポートする環境でのユーザー プロファイル情報の解決など) を実行するときに、Analysis Services で特定の Windows ユーザー アカウントの ID を使用するかどうかを指定します。  
@@ -107,7 +107,7 @@ ms.locfileid: "53365744"
   
  多次元データベースの場合、 **[既定]** はサービス アカウントを使用し、データ マイニング操作に現在のユーザーを使用することを意味します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ ソースの作成 &#40;SSAS 多次元&#41;](create-a-data-source-ssas-multidimensional.md)   
  [データ ソースのプロパティを設定&#40;SSAS 多次元&#41;](set-data-source-properties-ssas-multidimensional.md)   
  [DirectQuery の配置シナリオ&#40;SSAS 表形式&#41;](../directquery-deployment-scenarios-ssas-tabular.md)  

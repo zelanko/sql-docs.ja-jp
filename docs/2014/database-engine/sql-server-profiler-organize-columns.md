@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7cf6f979058fd1003440e17fb5c479e136413bcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773444"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>[SQL Server Profiler] - [列の構成]
   大きなトレース ファイルまたはトレース テーブルの表示や分析を簡単に行えるように、トレースに表示されるイベントをグループ化または集計する場合は、 **[列の構成]** ダイアログ ボックスを使用してデータ列を選択します。  
@@ -48,10 +48,10 @@ ms.locfileid: "48218002"
  **[下へ]**  
  データ列を選択した後で、 **[下へ]** をクリックすると、データ列を下に移動して **[グループ]** から除外することができます。 また、 **[下へ]** をクリックして、トレース ウィンドウ表示内の列の表示を再構成することもできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トレースに表示される列を整理&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
- [トレースを作成する&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [トレース テンプレートを作成&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [トレースの作成 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [トレース ファイルを開く &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [トレース テーブルを開く &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   

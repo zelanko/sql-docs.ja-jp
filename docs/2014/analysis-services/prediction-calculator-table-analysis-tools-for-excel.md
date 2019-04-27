@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 330e302d1832f8ec5c3e76f961e4e68cf16726af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748874"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>予測計算 (Excel 用のテーブル分析ツール)
   ![予測計算ツール](media/tat-predcal.gif "予測計算ツール")  
@@ -132,7 +132,7 @@ ms.locfileid: "48060022"
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Gender|Male|0|  
-|Income|39050-71062|117|  
+|Income|39050 - 71062|117|  
 |Children|0|157|  
 |Education|Bachelors|22|  
 |Occupation|Skilled Manual|33|  
@@ -140,14 +140,14 @@ ms.locfileid: "48060022"
 |Cars|2|50|  
 |Commute Distance|0-1 Miles|99|  
 |Region|North America|0|  
-|Age|37 46|5|  
+|Age|37 - 46|5|  
 |Total||491|  
 |Prediction for 'Yes'||FALSE|  
   
  Prediction for Yes、セルに表示されるスコアが TRUE に変わり、新しい値を入力すると、**相対的影響**スコアのさまざまな属性がも更新されます。  
   
 > [!NOTE]  
->  1 つの値 (車の数など) のみを変更した場合でも、他の属性の値や影響が変わることもあります。 データ マイニング モデルではデータの間に複雑な関係が検出されることが多く、1 つの変数の変更が予期しない影響をもたらすこともあるからです。 このため、対話型の予測計算を使用してさまざまな値を試してみたり、マイニング モデルを参照してその詳細を調べてみたりすることをお勧めします。 詳細については、[参照モデル](prediction-calculator-table-analysis-tools-for-excel.md)を参照してください。  
+>  1 つの値 (車の数など) のみを変更した場合でも、他の属性の値や影響が変わることもあります。 データ マイニング モデルではデータの間に複雑な関係が検出されることが多く、1 つの変数の変更が予期しない影響をもたらすこともあるからです。 このため、対話型の予測計算を使用してさまざまな値を試してみたり、マイニング モデルを参照してその詳細を調べてみたりすることをお勧めします。 詳細については、次を参照してください。[参照モデル](prediction-calculator-table-analysis-tools-for-excel.md)します。  
   
 #### <a name="score-breakdown"></a>スコアの内訳  
  このテーブルには、入力列の各状態の個々のスコアと、そのスコアが結果に与える相対的影響が示されています。 これは、参照専用の静的なテーブルです。  
@@ -176,7 +176,7 @@ ms.locfileid: "48060022"
 8.  シートに印刷される条件を使用して、スコアを予測結果に変換した直後に、**合計**行。  
   
 ## <a name="related-tools"></a>関連ツール  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、この種類の分析に使用できる Microsoft ロジスティック回帰アルゴリズムが用意されています。 使用してロジスティック回帰モデルを簡単に作成したロジスティック回帰理解している場合、**詳細**Excel 用データ マイニング クライアントのオプション。 詳細については、[高度なモデリング&#40;Excel 用データ マイニング アドインで&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)を参照してください。 オプションおよびロジスティック回帰モデルのパラメーターの詳細については、トピックの「Microsoft ロジスティック回帰アルゴリズム」を参照してください[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、この種類の分析に使用できる Microsoft ロジスティック回帰アルゴリズムが用意されています。 使用してロジスティック回帰モデルを簡単に作成したロジスティック回帰理解している場合、**詳細**Excel 用データ マイニング クライアントのオプション。 詳細については、次を参照してください。[高度なモデリング&#40;Excel 用データ マイニング アドインで&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)します。 オプションおよびロジスティック回帰モデルのパラメーターの詳細については、トピックの「Microsoft ロジスティック回帰アルゴリズム」を参照してください[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 ## <a name="see-also"></a>参照  
  [Excel 用テーブル分析ツール](table-analysis-tools-for-excel.md)  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00ab80a10b2c7c411cee0fb6061467d67cfbd4a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740362"
 ---
 # <a name="sqlstate-property"></a>SQLState プロパティ
 SQL 状態を示す、指定された[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。  

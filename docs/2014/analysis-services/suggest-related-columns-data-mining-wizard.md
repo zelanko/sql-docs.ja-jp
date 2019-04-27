@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757820"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>[関連列の提示] (データ マイニング ウィザード)
   **[関連列の提示]** ページには、ウィザードの前のページで選択した **[候補検索]** 機能による推奨設定が表示されます。 選択した **[予測可能]** 列と関連している入力列が、あらかじめ選択されています。 このダイアログ ボックスで変更すると、**[トレーニング データの指定]** ページにその変更が反映されます。  
   
- **詳細情報:** [データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
+ **詳細情報。**[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>および  
  **列名**  
@@ -35,7 +35,7 @@ ms.locfileid: "48196892"
  **入力**  
  選択すると、この列が推奨設定の計算に使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [トレーニング データの指定&#40;データ マイニング ウィザード&#41;](specify-the-training-data-data-mining-wizard.md)  
   

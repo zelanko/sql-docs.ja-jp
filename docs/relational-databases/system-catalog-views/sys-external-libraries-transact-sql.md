@@ -20,11 +20,11 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d56d0c69b9e3bae87dda9b55d241a1c040210ca9
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637471"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ R、Python、Java などの外部のランタイムに関連するパッケー�
 |スコープ (scope) |ssNoversion |パブリック スコープ以外の場合は 0プライベート スコープ 1 |  
 |scope_desc |varchar (7) |パッケージがパブリックかプライベートかどうかを示します|
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [外部ライブラリを作成します。](../../t-sql/statements/create-external-library-transact-sql.md)  

@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 6a7cb7e8f93489bb52c1457fbf25bf7206026914
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642750"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Python と SQL Server 間のデータ型マッピング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ SQL Server 2017 の Anaconda 4.2 配布は、Python 3.6。
 
 RevoScaleR の機能のサブセット (rxLinMod、rxLogit、rxPredict、rxDTrees、rxBTrees、おそらく他のいくつか)、新しい Python パッケージを使用して、Python Api を使用して提供**revoscalepy**します。 このパッケージを使用して、Pandas データ フレーム、XDF ファイル、または SQL データのクエリを使用してデータを操作することができます。
 
-詳細については、[SQL Server で revoscalepy モジュール](ref-py-revoscalepy.md)と[revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)を参照してください。
+詳細については、次を参照してください。 [SQL Server で revoscalepy モジュール](ref-py-revoscalepy.md)と[revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)します。
 
 Python では、SQL Server とのデータ型の数に制限をサポートします。 その結果、SQL Server からデータを Python スクリプトを使用するたびにデータ可能性があります暗黙的に型に変換を互換性のあるデータ。 ただし、実際の変換を自動的に実行できない多くの場合、エラーが返されます。
 

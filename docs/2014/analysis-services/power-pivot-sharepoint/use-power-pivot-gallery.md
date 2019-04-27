@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 91cc8740dfaeddcf489f3274b6766cdb803b1321
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749143"
 ---
 # <a name="use-powerpivot-gallery"></a>PowerPivot ギャラリーの使用
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーは、特殊な用途の SharePoint ドキュメント ライブラリです。PowerPivot データを含むパブリッシュ済みの Excel ブックおよび Reporting Services レポートを対象とする、豊富なプレビュー機能とドキュメント管理機能を提供します。  
@@ -52,7 +52,7 @@ ms.locfileid: "52416933"
 > 既定のビューを変更するには、 **[ライブラリ]** タブをクリックしてから、[ビューの変更] をクリックします。 [このビューを既定のビューにする] をクリックし、[OK] をクリックして既定のビューを保存します。  
 >  Edge のサポート対象の詳細については、Windows のブログを参照してください。[以前は、第 2 部からの離別。ActiveX、VBScript に別れを取得しています.](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
- 前提条件の一覧については、[PowerPivot ギャラリーのカスタマイズの作成と](create-and-customize-power-pivot-gallery.md)を参照してください。  
+ 前提条件の一覧については、次を参照してください。 [PowerPivot ギャラリーのカスタマイズの作成と](create-and-customize-power-pivot-gallery.md)します。  
   
 ##  <a name="icons"></a> PowerPivot ギャラリーのアイコン  
  アイコンは、コンテンツを使用できるかどうか、およびコンテンツの状態を視覚的に示すインジケーターです。  
@@ -70,13 +70,13 @@ ms.locfileid: "52416933"
   
 1.  ファイルを保存します。  
   
-2.  1.  **Excel 2010 の場合:**[ファイル] メニューで、次のようにクリックします。**保存と送信**します。  
+2.  1.  **Excel 2010:**[ファイル] メニューで、次のようにクリックします。**保存と送信**します。  
   
     2.  **[SharePoint に保存]** をクリックします。  
   
     3.  パブリッシュする個々のシートまたはパラメーターを [Excel Services のオプション] を使用して選択する場合は、 **[発行オプション]** をクリックします。 たとえば、[Excel Services のオプション] の [パラメーター] タブでは、パブリッシュしたブックに表示するスライサーを選択できます。  
   
-    1.  **Excel 2013 の場合:**[ファイル] メニューで、次のようにクリックします。**保存**します。  
+    1.  **Excel 2013:**[ファイル] メニューで、次のようにクリックします。**保存**します。  
   
     2.  パブリッシュする個々のシートまたはパラメーターを [Excel Services のオプション] を使用して選択する場合は、 **[ブラウザー ビュー オプション]** をクリックします。 たとえば、[Excel Services のオプション] の [パラメーター] タブでは、パブリッシュしたブックに表示するスライサーを選択できます。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "52416933"
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|接続されているデータ ソースから更新されたデータを取得するスケジュールを作成または表示するには、[データ更新の管理] ボタンをクリックします。 スケジュールを作成する方法の詳細については、[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)を参照してください。|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|接続されているデータ ソースから更新されたデータを取得するスケジュールを作成または表示するには、[データ更新の管理] ボタンをクリックします。 スケジュールを作成する方法の詳細については、次を参照してください。[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)します。|  
   
 ##  <a name="delete"></a> ブックまたは PowerPivot ギャラリーのレポートを削除します。  
  ライブラリからドキュメントを削除するには、最初に [すべてのドキュメント] ビューに切り替えます。  

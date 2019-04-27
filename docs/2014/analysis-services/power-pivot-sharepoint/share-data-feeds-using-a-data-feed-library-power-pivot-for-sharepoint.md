@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1df9d79a6e7852e331edcb2b37396283aeedccb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749201"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>データ フィード ライブラリ (PowerPivot for SharePoint) を使用してデータ フィードの共有
   データ フィードとは、データを Atom ワイヤ形式で公開するサービスまたはアプリケーションから生成される XML データ ストリームです。 データをアプリケーション間で転送したり、クライアント側のビューアーに転送したりするために使用されることが増えています。 PowerPivot for SharePoint の配置では、データ フィードを使用して、設定する、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Atom 対応のアプリケーションまたはサービスからデータを持つデータ ソース。  
@@ -35,7 +35,7 @@ ms.locfileid: "48178552"
   
  [データ サービス ドキュメントの変更](#modifydsdoc)  
   
- [次の手順: データ サービス ドキュメントの使用](#usedsdoc)  
+ [次の手順:データ サービス ドキュメントを使用します。](#usedsdoc)  
   
 > [!NOTE]  
 >  データ フィードは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] で作成した [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]データ ソースに Web データを追加するために使用されますが、データ サービス ドキュメントの処理は、Atom フィードを読み取ることができる任意のクライアント アプリケーションで実行できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "48178552"
 ##  <a name="prereq"></a> 前提条件  
  展開する必要があります[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]PowerPivot for SharePoint を追加する[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]クエリ、SharePoint ファームに処理します。 データ フィードは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージによってサポートされます。  
   
- データ サービス ドキュメントのコンテンツ タイプをサポートする SharePoint ライブラリが必要です。 この場合は既定のデータ フィード ライブラリをお勧めしますが、コンテンツ タイプを任意のライブラリに手動で追加することもできます。 詳細については、[データ フィード ライブラリのカスタマイズを作成または&#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)を参照してください。  
+ データ サービス ドキュメントのコンテンツ タイプをサポートする SharePoint ライブラリが必要です。 この場合は既定のデータ フィード ライブラリをお勧めしますが、コンテンツ タイプを任意のライブラリに手動で追加することもできます。 詳細については、次を参照してください。[データ フィード ライブラリのカスタマイズを作成または&#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)します。  
   
  Atom 1.0 形式の XML 表形式データを提供するデータ サービスまたはオンライン データ ソースが必要です。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48178552"
   
 6.  ドキュメントを保存します。 データ サービス ドキュメントは、このコンテンツ タイプ用に構成されたコンテンツ ライブラリに物理ファイル (.atomsvc) として格納されます。  
   
- データ サービス ドキュメントを使用するには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] で [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ブックを開いて、データのインポート ウィザードで **[データ フィードから]** オプションを選択します。 指定画面が表示されたら、ユーザーがデータ サービス ドキュメントの SharePoint URL を指定して、データのインポート操作を開始します。 詳細については、[データ フィードの使用&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)を参照してください。  
+ データ サービス ドキュメントを使用するには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] で [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ブックを開いて、データのインポート ウィザードで **[データ フィードから]** オプションを選択します。 指定画面が表示されたら、ユーザーがデータ サービス ドキュメントの SharePoint URL を指定して、データのインポート操作を開始します。 詳細については、次を参照してください。[データ フィードの使用&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)します。  
   
 ##  <a name="securedsdoc"></a> データ サービス ドキュメントのセキュリティ保護  
  データ サービス ドキュメントは、そのドキュメントを格納するライブラリの権限を継承します。 アイテムに対して設定した権限によって、ユーザーがデータ サービス ドキュメントを表示、変更、または削除できるかどうかが決まります。  
@@ -108,10 +108,10 @@ ms.locfileid: "48178552"
  SharePoint サイトのデータ サービス ドキュメントとインポートされたフィードが含まれる [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの間に永続的なリンクがないので、データ サービス ドキュメントの一部を変更しても既存の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックには影響しません。  
   
 > [!IMPORTANT]  
->  データ サービス ドキュメントは一度しか読み取られませんが、実際のデータを提供するデータ サービスには、新しいフィードを取得するために定期的にアクセスできます。 データを更新する方法の詳細については、[PowerPivot データ更新](power-pivot-data-refresh.md)を参照してください。  
+>  データ サービス ドキュメントは一度しか読み取られませんが、実際のデータを提供するデータ サービスには、新しいフィードを取得するために定期的にアクセスできます。 データを更新する方法の詳細については、次を参照してください。 [PowerPivot データ更新](power-pivot-data-refresh.md)します。  
   
-##  <a name="usedsdoc"></a> 次の手順: データ サービス ドキュメントの使用  
- 使用する SharePoint ライブラリで作成したデータ サービス ドキュメントを使用する、**データ フィードから**オプションで PowerPivot データ ソースをインポートします。 手順については、[データ フィードの使用&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)を参照してください。  
+##  <a name="usedsdoc"></a> 次の手順:データ サービス ドキュメントを使用します。  
+ 使用する SharePoint ライブラリで作成したデータ サービス ドキュメントを使用する、**データ フィードから**オプションで PowerPivot データ ソースをインポートします。 手順については、次を参照してください。[データ フィードの使用&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)します。  
   
 ## <a name="see-also"></a>参照  
  [PowerPivot データ フィード](power-pivot-data-feeds.md)  

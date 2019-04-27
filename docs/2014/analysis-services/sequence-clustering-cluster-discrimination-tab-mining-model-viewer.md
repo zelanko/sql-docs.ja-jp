@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89d33663e520fdecdf6fc8548d4930a6ea642718
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747271"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>シーケンス クラスターの [クラスターの識別] タブ (マイニング モデル ビューアー)
   **Microsoft シーケンス クラスター ビューアー**の **[クラスターの識別]** タブでは、シーケンス クラスター モデルから選択した 2 つのクラスターを比較します。  
   
  2 つのクラスターを比較して、異なっている状態と遷移を確認するには、シーケンス クラスター モデルのこのビューを使用します。  
   
- **詳細:** [Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **詳細情報。**[Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -56,9 +56,9 @@ ms.locfileid: "48218308"
 |**値**|**[変数]** に一覧表示される属性の状態です。|  
 |**優先\<クラスター 1 >**|**[変数]** および **[値]** に示された属性および状態が、**[クラスター 1]** で選択されたクラスターでどの程度優位であるかを示す色つきのバーを表示します。|  
   
-## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>関連項目  
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

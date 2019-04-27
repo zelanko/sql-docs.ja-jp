@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdcc6285ba1a75827f91f856319d296c0cbbff5d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772268"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>パッケージの接続マネージャーを追加、削除、または共有する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、リレーショナル データベース、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース、CSV 形式のファイル、XML 形式のファイルなど、さまざまなデータ ソースに接続するための各種接続マネージャーがあります。 接続マネージャーは、パッケージ レベルまたはプロジェクト レベルで作成できます。 プロジェクト レベルで作成した接続マネージャーは、プロジェクト内のすべてのパッケージで使用できます。 一方、パッケージ レベルで作成した接続マネージャーは、特定のパッケージでのみ使用できます。  
@@ -170,7 +170,7 @@ ms.locfileid: "58391690"
     > [!NOTE]  
     >  プロジェクトのパッケージに対して開いた **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブから、プロジェクト レベルの接続マネージャーを削除することもできます。 そのためには、タブで接続マネージャーを右クリックし、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; の接続](connection-manager/integration-services-ssis-connections.md)   
  [接続マネージャーのプロパティを設定する](../../2014/integration-services/set-the-properties-of-a-connection-manager.md)  
   

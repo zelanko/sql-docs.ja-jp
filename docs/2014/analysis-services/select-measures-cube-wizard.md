@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e37d532bd669474e4e91cfcdb0942b691ba3234
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747301"
 ---
 # <a name="select-measures-cube-wizard"></a>[メジャーの選択] (キューブ ウィザード)
   **[メジャーの選択]** ページを使用すると、作成するメジャー グループおよびメジャーを選択できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "48197632"
   
  メジャー グループまたはメジャーの名前を変更するには、名前をクリックし、新しい名前を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キューブ ウィザードの F1 ヘルプ](cube-wizard-f1-help.md)   
  [キューブ オブジェクト&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   

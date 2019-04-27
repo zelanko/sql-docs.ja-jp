@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779757"
 ---
 # <a name="feature-reference-database-engine"></a>機能リファレンス (データベース エンジン)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] には、データベース オブジェクトとデータを作成、管理、表示できるツールとアプリケーションが数種類用意されています。 さらに、サーバーおよびデータベースのパフォーマンスの監視とトラブルシューティングに使用できるツールや、機能、サービス、ネットワーク プロトコルの有効化および無効化に使用できるツールがあります。 ここでは、これらのツールとアプリケーションのダイアログ ボックスに関するトピックを紹介します。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ded40a4ceca02e56f78207c35ff174f2d09feb07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746654"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>[集計オプションの設定] (集計のデザイン ウィザード)
   **[集計オプションの設定]** ページを使用すると、集計のデザイン プロセスを開始したり、生成する集計のストレージ制限やパフォーマンス制限を指定したりできます。  
@@ -36,7 +36,7 @@ ms.locfileid: "48067512"
  **(0%) の集計をデザインしません。**  
  集計のデザインに集計が含まれないように指定します。 このオプションを使用すると、パーティション、メジャー グループ、またはキューブに対する既存の集計デザインが消去されます。  
   
- **[開始]**  
+ **スタート**  
  集計のデザイン プロセスを開始します。  
   
  **[停止]**  
@@ -45,7 +45,7 @@ ms.locfileid: "48067512"
  **リセット**  
  このページにある集計のオプションをすべて既定値にリセットします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [集計デザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   
  [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   

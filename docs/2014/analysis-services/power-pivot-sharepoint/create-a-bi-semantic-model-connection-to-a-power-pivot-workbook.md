@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ad60799fa8590609cabd2e1e1fdfd8d7493c282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749564"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>PowerPivot ブックへの BI セマンティック モデル接続の作成
   このトピックでは、同一ファーム内の PowerPivot ブックにリダイレクトする BI セマンティック モデル接続を設定する方法について説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "48095798"
 ##  <a name="bkmk_prereq"></a> 前提条件の確認  
  BI セマンティック モデル接続ファイルを作成するには、投稿権限以上の権限が必要です。  
   
- BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、[BI セマンティック モデル接続のコンテンツ タイプをライブラリに追加&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)を参照してください。  
+ BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、次を参照してください。 [BI セマンティック モデル接続のコンテンツ タイプをライブラリに追加&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)します。  
   
  BI セマンティック モデル接続を設定する対象の PowerPivot ブックの URL を把握する必要があります (たとえば、 http://adventure-works/shared documents/myworkbook.xlsx)。 ブックは、同一ファーム内にある必要があります。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48095798"
   
 ## <a name="see-also"></a>参照  
  [PowerPivot BI セマンティック モデル接続&#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [Excel または Reporting Services での BI セマンティック モデル接続を使用します。](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Excel または Reporting Services での BI セマンティック モデル接続の使用](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [テーブル モデル データベースへの BI セマンティック モデル接続の作成](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

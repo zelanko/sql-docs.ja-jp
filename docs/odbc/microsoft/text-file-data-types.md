@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 23416cb067507d821701e57255fdc6f81ee607c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633007"
 ---
 # <a name="text-file-data-types"></a>テキスト ファイルのデータ型
 次の表では、テキスト データ型を ODBC SQL データ型にマップする方法を示します。 すべての ODBC SQL データ型は、テキストの ODBC ドライバーでサポートされていることに注意してください。  
@@ -45,7 +45,7 @@ ms.locfileid: "47622230"
 |CHAR|0 の char 型の列を作成または指定されていない長さが実際に 255 ビット列を返します。<br /><br /> 区切られたファイルは、char 型の列が可能性があります。 または先頭と末尾; 区切り記号を二重引用符がない可能性があります。固定長のファイルの区切り記号として二重引用符は使用されません。|  
 |DATETIME|MM DD の年 (たとえば、92-01-17)<br /><br /> MMM DD 年 (たとえば、年 1 月の 17-92)<br /><br /> DD-MMM-年 (たとえば、92-17-年 1 月)<br /><br /> -YYYY-MM-DD (たとえば、1992-01-17)<br /><br /> YYYY MMM--DD (たとえば、1992 年 1 月 17 日)<br /><br /> 混在した日付の区切り記号は、テーブル内では許可されません。<br /><br /> テキストの ISAM は、Windows コントロール パネルの 国際対応の設定に応じて、米国またはヨーロッパの形式で、DATETIME フィールドを書式設定します。|  
 |[FLOAT]|最大の幅には、符号および小数点が含まれます。 Schema.ini、幅が、次のように表されます。<br /><br /> 14.083 は FLOAT 幅 6 です。<br /><br /> -14.083 は FLOAT 幅 7 です。<br /><br /> +14.083 は FLOAT 幅 7 です。<br /><br /> 14083。 FLOAT 幅 6 は、します。<br /><br /> ODBC には、常に、float 型の列の 8 が返されます。<br /><br /> Float 型の列をたとえば配置科学的表記法でもできます。<br /><br /> -3.04E + 2 は Float 幅 8<br /><br /> 25E4 は Float 幅 4 です。<br /><br /> **注**列に 10 進数と科学的表記法を混在させることはできません。<br /><br /> NULL 値は、固定長ファイルで空白の埋め込み文字列で表されます、区切りファイルの省略しています。<br /><br /> Float データは、先行する空白が埋め込まれていることができます。|  
-|INTEGER|整数型の列の有効な値は、-32766 に 32767 です。<br /><br /> Schema.ini、幅が、次のように表されます。<br /><br /> 14083 は幅 5 の整数<br /><br /> 0 は幅 1 の整数<br /><br /> ODBC は、常に整数型の列に 4 を返します。<br /><br /> 最大の幅には、符号が含まれます。 整数型の列の最大の幅は、固定形式のテーブルで使用できる空白により大きくすることは、幅が 11 が。|  
+|INTEGER|整数型の列の有効な値は、-32766 に 32767 です。<br /><br /> Schema.ini、幅が、次のように表されます。<br /><br /> 14083 は幅 5 の整数<br /><br /> 0 is INTEGER Width 1<br /><br /> ODBC は、常に整数型の列に 4 を返します。<br /><br /> 最大の幅には、符号が含まれます。 整数型の列の最大の幅は、固定形式のテーブルで使用できる空白により大きくすることは、幅が 11 が。|  
 |LONGCHAR|固定長のいずれかで LONGCHAR 列の幅、理論的制限または区切り記号付きのテーブルが 65500 K。 テキストの ISAM は最大で約 32 K の信頼性の高いサポートを提供する可能性が高くなります。|  
   
  データ型の複数の制限事項が記載[データ型の制限事項](../../odbc/microsoft/data-type-limitations.md)します。

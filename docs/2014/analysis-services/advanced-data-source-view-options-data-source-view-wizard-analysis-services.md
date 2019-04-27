@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee7ee9cf4ba8b7caa0085f0f792173b1f2856857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635598"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>[データ ソース ビューの詳細オプション] ダイアログ ボックス (データ ソース ビュー ウィザード) (Analysis Services)
   **[データ ソース ビューの詳細オプション]** ダイアログ ボックスを使用すると、データ ソース ビューでビューを構築する際にスキーマとリレーションシップをデータ ソースからどのように取得するかについて細かく制御できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "48158082"
  **次のスキーマに制限します。**  
  データ ソースから取得されるスキーマを制限するスキーマ名の、コンマ区切りの一覧を指定するために使用します。 このオプションに対してスキーマ名が指定されてない場合は、使用できるスキーマに制限がないことを表します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのデータ ソース](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [サポートされるデータ ソース&#40;SSAS 多次元&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   

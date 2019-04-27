@@ -22,16 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b1386f34ad1ae82229729e9db696c95176c43aa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742078"
 ---
 # <a name="sysdmclrtasks-transact-sql"></a>sys.dm_clr_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在実行中のすべての共通言語ランタイム (CLR) タスクについて、1 行のデータを返します。 A [!INCLUDE[tsql](../../includes/tsql-md.md)] CLR ルーチンへの参照を含むバッチをそのバッチのすべてのマネージ コードを実行するための別のタスクを作成します。 バッチ内に、マネージド コードの実行を必要とするステートメントが複数ある場合は、それらのステートメントで同じ CLR タスクが使用されます。 CLR タスクがオブジェクトと関連するマネージ コードの実行だけでなく、インスタンスの間の遷移状態を維持する責任を負います[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と共通言語ランタイム。  
+  現在実行されているランタイム (CLR) タスクのすべての一般的な言語の行を返します。 A [!INCLUDE[tsql](../../includes/tsql-md.md)] CLR ルーチンへの参照を含むバッチをそのバッチのすべてのマネージ コードを実行するための別のタスクを作成します。 バッチ内に、マネージド コードの実行を必要とするステートメントが複数ある場合は、それらのステートメントで同じ CLR タスクが使用されます。 CLR タスクがオブジェクトと関連するマネージ コードの実行だけでなく、インスタンスの間の遷移状態を維持する責任を負います[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と共通言語ランタイム。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "47781090"
 |**sos_task_address**|**varbinary(8)**|基になるアドレス[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ タスクです。|  
 |**appdomain_address**|**varbinary(8)**|このタスクが実行されているアプリケーション ドメインのアドレス。|  
 |**state**|**nvarchar(128)**|タスクの現在の状態。|  
-|**abort_state**|**nvarchar(128)**|タスクが取り消された場合の、現在の中止の状態。中止には複数の状態があります。|  
+|**abort_state**|**nvarchar(128)**|Abort が現在の状態 (タスクが取り消された) 場合がある複数の状態関連するタスクを中止します。|  
 |**type**|**nvarchar(128)**|タスクの種類。|  
 |**affinity_count**|**int**|タスクの関係。|  
 |**forced_yield_count**|**int**|タスクが強制的に解放された回数。|  

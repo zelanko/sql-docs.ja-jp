@@ -25,18 +25,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747464"
 ---
 # <a name="memory-properties"></a>メモリのプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー メモリ プロパティがサポートされています。 これらのプロパティの設定方法については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  1 ～ 100 の値は、 **[物理メモリの合計]** または **[仮想アドレス領域]** のどちらか少ない方に対する割合を示します。 100 を超える値はメモリ制限を示します (単位: バイト)。  
   
- **適用対象:** 特に記載のない限り、多次元サーバー モードおよびテーブル サーバー モードが対象となります。  
+ **適用対象:** 多次元および表形式サーバー モードでは、それ以外の場合に記載されていない場合。  
   
 ## <a name="properties"></a>プロパティ  
  `LowMemoryLimit`  

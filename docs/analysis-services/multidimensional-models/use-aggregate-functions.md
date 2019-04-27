@@ -1,5 +1,5 @@
 ---
-title: 集計関数を使用して |Microsoft ドキュメント
+title: 集計関数を使用して、|Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4e30b5670e7a9a02fdfa9f3bbfad6889e83b562
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743088"
 ---
 # <a name="use-aggregate-functions"></a>集計関数の使用
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34026039"
 |**Min**|準加法|すべての子メンバーの最低値を取得します。|  
 |**Max**|準加法|すべての子メンバーの最高値を取得します。|  
 |**DistinctCount**|非加法|すべての一意の子メンバーの数を取得します。 詳細については、次のセクションの「 [個別のカウント メジャーの概要](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct) 」を参照してください。|  
-|**なし**|非加法|集計は行われず、ディメンションのリーフ メンバーおよび非リーフ メンバーのすべての値が、メジャーが含まれているメジャー グループのファクト テーブルから直接入力されます。 ファクト テーブルからメンバーの値を読み取ることができない場合は、そのメンバーの値は Null に設定されます。|  
+|**None**|非加法|集計は行われず、ディメンションのリーフ メンバーおよび非リーフ メンバーのすべての値が、メジャーが含まれているメジャー グループのファクト テーブルから直接入力されます。 ファクト テーブルからメンバーの値を読み取ることができない場合は、そのメンバーの値は Null に設定されます。|  
 |**[ByAccount]**|準加法|勘定科目ディメンションのメンバーの勘定科目の種類に割り当てられている集計関数に従って集計します。 勘定科目ディメンションがメジャー グループに存在しない場合は、 **None** 集計関数として扱われます。<br /><br /> 勘定科目ディメンションの詳細については、「 [親子型ディメンションの財務アカウントの作成](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)」を参照してください。|  
 |**AverageOfChildren**|準加法|空ではないすべての子メンバーの値の平均を計算します。|  
 |**FirstChild**|準加法|最初の子メンバーの値を取得します。|  
@@ -64,9 +64,9 @@ ms.locfileid: "34026039"
   
  メンバーをカウントする個別のカウント メジャーは、ファクト テーブル内の外部キー列に基づきます  (つまり、メジャーの **Source Column** プロパティでこの列を識別します)。この列は、個別のカウント メジャーによってカウントされたメンバーを識別するディメンション テーブル列と結合します。  
   
-## <a name="see-also"></a>参照  
- [メジャーとメジャー グループ](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [MDX 関数リファレンス & #40 です。MDX と #41 です。](../../mdx/mdx-function-reference-mdx.md)   
- [準加法の動作を定義します。](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+## <a name="see-also"></a>関連項目  
+ [メジャーおよびメジャー グループ](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
+ [MDX 関数リファレンス &#40;MDX&#41;](../../mdx/mdx-function-reference-mdx.md)   
+ [準加法の動作の定義](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

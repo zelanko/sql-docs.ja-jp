@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbeaebfc7eab6041bb547f18dacfc01aef3d5117
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756326"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>[翻訳の詳細] ([翻訳] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[翻訳]** タブの **[翻訳の詳細]** ペインを使用すると、現在選択しているディメンションの翻訳を定義および管理できます。  
@@ -38,18 +38,18 @@ ms.locfileid: "48179022"
   
 -   [ディメンション]  
   
-     `Caption` `AttributeAllMember`プロパティ  
+     `Caption` プロパティと `AttributeAllMember` プロパティ  
   
 -   属性  
   
-     `Caption`、 `AttributeHierarchyDisplayFolder`、および`NamingTemplate`プロパティ  
+     `Caption`、`AttributeHierarchyDisplayFolder`、および `NamingTemplate` プロパティ  
   
     > [!NOTE]  
     >  `NamingTemplate` プロパティは、親属性でのみ使用できます。  
   
 -   Hieararchy  
   
-     `Caption` `AllMemberName`プロパティ  
+     `Caption` プロパティと `AllMemberName` プロパティ  
   
 -   Level  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48179022"
   
      [&#91;レベル名前付けテンプレート&#93; ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md) を表示します。  
   
--   `Caption` (属性) のプロパティ  
+-   `Caption` プロパティ (属性の場合)  
   
      [&#91;属性データの翻訳&#93; ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md) を表示します。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48179022"
  **すべての属性を表示します。**  
  属性階層が無効になっている属性を含め、選択したディメンションに定義されている全属性が表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [翻訳&#40;ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

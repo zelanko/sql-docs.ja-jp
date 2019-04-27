@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771088"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service for Oracle by Attunity のユーザー ロール
   ここでは、Change Data Capture Service for Oracle by Attunity のユーザー ロールについて説明します。 ここで説明するロールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロール、Windows ロール、または Oracle データベース ロールです。  
@@ -23,7 +23,7 @@ ms.locfileid: "58394319"
 ## <a name="windows-user-roles"></a>Windows ユーザー ロール  
  ここでは、Oracle CDC Service によって使用される Windows ユーザー ロールについて説明します。  
   
-### <a name="computer-administrator-oracle-cdc-service"></a>コンピューター管理者:Oracle CDC Service  
+### <a name="computer-administrator-oracle-cdc-service"></a>コンピューターの管理者:Oracle CDC Service  
  コンピューターの管理者は、コンピューターでの CDC Service の作成とメンテナンスを担当する Windows ユーザーです。 このユーザーは、ローカル コンピューターの Administrators グループに属している必要があります。  
   
  Oracle CDC Service のコンピューターの管理者が実行するタスクには次のものがあります。  

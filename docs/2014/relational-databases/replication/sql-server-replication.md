@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626154"
 ---
 # <a name="sql-server-replication"></a>SQL Server のレプリケーション
   レプリケーションとは、あるデータベースから別のデータベースにデータやデータベース オブジェクトをコピーおよび配布し、それらのデータベースを同期させて一貫性を保つための一連のテクノロジです。 レプリケーションを使用すると、ローカル エリア ネットワーク、ワイド エリア ネットワーク、ダイヤルアップ接続、ワイヤレス接続、インターネットなどを経由して、別の場所や、リモート ユーザーまたはモバイル ユーザーにデータを配布することができます。  
@@ -51,7 +51,7 @@ ms.locfileid: "57578322"
 -   [パブリケーションの作成](publish/create-a-publication.md)    
 -   [アーティクルの定義](publish/define-an-article.md)   
 -   [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
--   [アーティクルのプロパティの表示と変更](publish/view-and-modify-article-properties.md)    
+-   [アーティクルのプロパティの表示および変更](publish/view-and-modify-article-properties.md)    
 -   [パブリケーションの削除](publish/delete-a-publication.md)   
 -   [アーティクルの削除](publish/delete-an-article.md)    
 -   [Oracle データベースからのパブリケーションの作成](publish/create-a-publication-from-an-oracle-database.md)   
@@ -128,7 +128,7 @@ ms.locfileid: "57578322"
 -   [Oracle パブリッシャーのトランザクション セット ジョブを構成します。](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
 -   [レプリケーション スクリプトをアップグレードします。](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>モニター
+## <a name="monitor"></a>監視
   
 -   [管理者以外のユーザーがレプリケーション モニターを使用できるようにする](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [プログラムによるレプリケーションの監視](monitor/programmatically-monitor-replication.md)    

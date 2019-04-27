@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770849"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>[SAP BW 変換先エディター] ([接続マネージャー] ページ)
   **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページを使用すると、SAP BW 変換先が使用する SAP BW 接続マネージャーを選択できます。 このページでは、SAP Netweaver BW システムにデータを読み込むためのパラメーターも選択します。  
@@ -109,7 +109,7 @@ ms.locfileid: "58378250"
 |**インフォソース**|**[インフォソースの作成]** ダイアログ ボックスを使用してから、 **[トランザクション データのインフォソースの作成]** または **[マスター データのインフォソースの作成]** ダイアログ ボックスを使用して、新しいインフォソースを作成します。 これらのダイアログ ボックスに関する詳細については、「 [インフォソースの作成](create-infosource.md)」、「 [トランザクション データのインフォソースの作成](create-infosource-for-transaction-data.md) 」、「 [マスター データのインフォソースの作成](create-infosource-for-master-data.md)」を参照してください。|  
 |**インフォパッケージ**|**[インフォパッケージの作成]** ダイアログ ボックスを使用して、新しいインフォパッケージを作成します。 このダイアログ ボックスの詳細については、「 [インフォパッケージの作成](create-infopackage.md)」を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SAP BW 変換先エディター ([マッピング] ページ)](sap-bw-destination-editor-mappings-page.md)   
  [SAP BW 変換先エディター ([エラー出力] ページ)](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 変換先エディター &#40;[詳細設定] ページ&#41;](sap-bw-destination-editor-advanced-page.md)   

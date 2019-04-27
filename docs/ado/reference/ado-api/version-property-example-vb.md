@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f256597bca47a6453dbefa21c528cf57fd245bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642929"
 ---
 # <a name="version-property-example-vb"></a>Version プロパティの例 (VB)
 この例では、[バージョン](../../../ado/reference/ado-api/version-property-ado.md)のプロパティを[接続](../../../ado/reference/ado-api/connection-object-ado.md)ADO の現在のバージョンを表示するオブジェクト。 表示するいくつかの動的プロパティを使用します。  
@@ -78,6 +78,6 @@ End Sub
 'EndVersionVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version プロパティ (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

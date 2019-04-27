@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f6251ac85fe76d775fd84b6463d20532615d28c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767413"
 ---
 # <a name="manage-the-integration-services-service"></a>Integration Services サービスを管理する
     
@@ -53,7 +53,7 @@ ms.locfileid: "58375130"
   
 -   [Integration Services サービスのイベントを表示する](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サービス (SSIS サービス)](service/integration-services-service-ssis-service.md)   
  [Integration Services サービスの構成 (SSIS サービス)](configuring-the-integration-services-service-ssis-service.md)   
  [SQL Server インポートおよびエクスポート ウィザード](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   

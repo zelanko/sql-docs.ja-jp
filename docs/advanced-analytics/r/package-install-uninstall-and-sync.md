@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 57677e8d7573411be2e77baa7ffd8564ec9cbeb4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642742"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server の R パッケージの同期
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,11 +46,11 @@ SQL Server 2017 に含まれる RevoScaleR のバージョンには、ファイ�
 
 この機能は、SQL Server 2017 CTP 2 で使用できる、またはそれ以降です。
 
-SQL Server 2016 のインスタンスには Microsoft r です。 最新バージョンを使用するインスタンスをアップグレードすることでこの機能を追加することができます。詳細については、[SQL Server R Services のアップグレードを使用して SqlBindR.exe](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)を参照してください。
+SQL Server 2016 のインスタンスには Microsoft r です。 最新バージョンを使用するインスタンスをアップグレードすることでこの機能を追加することができます。詳細については、次を参照してください。 [SQL Server R Services のアップグレードを使用して SqlBindR.exe](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)します。
 
 ### <a name="enable-the-package-management-feature"></a>パッケージの管理機能を有効にします。
 
-パッケージとの同期を使用するには、個々 のデータベースと、SQL Server インスタンスで、新しいパッケージ管理機能を有効にする必要があります。 詳細については、[を有効にするか、SQL Server のパッケージ管理を無効にする](r-package-how-to-enable-or-disable.md)を参照してください。
+パッケージとの同期を使用するには、個々 のデータベースと、SQL Server インスタンスで、新しいパッケージ管理機能を有効にする必要があります。 詳細については、次を参照してください。[を有効にするか、SQL Server のパッケージ管理を無効にする](r-package-how-to-enable-or-disable.md)します。
 
 1. サーバーの管理者では、SQL Server インスタンスの機能を有効します。
 2. データベースごとに管理者は、個々 のユーザーする権限を付与 R のパッケージ共有のインストールまたはデータベース ロールを使用します。

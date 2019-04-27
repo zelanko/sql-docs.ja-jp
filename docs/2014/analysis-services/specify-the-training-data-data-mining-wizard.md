@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c06fb99f8e2104e17d9f6d5f8016b3149ab62c76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745852"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>[トレーニング データの指定] (データ マイニング ウィザード)
   **[トレーニング データの指定]** ページを使用すると、マイニング構造に含める列を指定できます。 構造に含める列をすべてのモデルで使用するとは限らない場合でも、それらの列を選択できます。 たとえば、マイニング モデルから列にドリルスルーする場合は、それらの列をモデルには含めずに構造に含めることができます。  
@@ -28,7 +28,7 @@ ms.locfileid: "48149332"
 > [!NOTE]  
 >  マイニング アルゴリズムごとに、異なるキーが使用されます。 各種のキーの詳細については、「[コンテンツの種類 &#40;データ マイニング&#41;](data-mining/content-types-data-mining.md)」を参照してください。  
   
- **詳細:** [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](data-mining/mining-structures-analysis-services-data-mining.md)、[マイニング モデル列](data-mining/mining-model-columns.md)、[データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
+ **詳細情報。**[マイニング構造&#40;Analysis Services - データ マイニング&#41;](data-mining/mining-structures-analysis-services-data-mining.md)、[マイニング モデル列](data-mining/mining-model-columns.md)、[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、 [リレーショナル マイニング構造を作成します。](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>および  
  **テーブル/列**  
@@ -64,7 +64,7 @@ ms.locfileid: "48149332"
   
  **メモ** : この列を使用できるのは、マイニング モデルをマイニング構造と共に作成する場合のみです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [関連列の提示&#40;データ マイニング ウィザード&#41;](suggest-related-columns-data-mining-wizard.md)   
  [テーブル型を指定&#40;データ マイニング ウィザード&#41;](specify-table-types-data-mining-wizard.md)   

@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72579d679b0ced1fd3c260098bc68237f2980a3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748044"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>サンプル データ (SQL Server データ マイニング アドイン)
   ![データ マイニング リボンで、パーティション データ ウィザード](media/dmc-partition.gif "データ マイニング リボンで、データのパーティション分割ウィザード")  
@@ -81,7 +81,7 @@ ms.locfileid: "48209892"
 ## <a name="other-sampling-options"></a>その他のサンプリング オプション  
  このウィザードのサンプリング オプションが目的に合わない場合は、SQL Server Integration Services (SSIS) のサンプリング変換を使用して、複数のデータ ソースから行をサンプリングできます。  
   
- 詳細については、[行サンプリング変換](../integration-services/data-flow/transformations/row-sampling-transformation.md)と[比率サンプリング変換](../integration-services/data-flow/transformations/percentage-sampling-transformation.md)を参照してください。  
+ 詳細については、次を参照してください。[行サンプリング変換](../integration-services/data-flow/transformations/row-sampling-transformation.md)と[比率サンプリング変換](../integration-services/data-flow/transformations/percentage-sampling-transformation.md)します。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニングの準備のチェック リスト](checklist-of-preparation-for-data-mining.md)  

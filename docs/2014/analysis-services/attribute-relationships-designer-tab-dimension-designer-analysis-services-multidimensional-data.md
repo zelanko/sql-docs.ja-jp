@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 289ffeeb6158da7b2dce6d5be1ac0aa88ac029e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650593"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>[属性リレーションシップ] ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **[属性リレーションシップ]** の一覧を使用すると、属性リレーションシップ ダイアグラム内の特定の属性リレーションシップを探したり、そのリレーションシップを管理したりできます。 このペインは、属性リレーションシップ ダイアグラムを含むペインのすぐ下に表示されます。  
@@ -56,7 +56,7 @@ ms.locfileid: "48220633"
  **Properties**  
  属性のプロパティを **[プロパティ]** ウィンドウに表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性リレーションシップ&#40;ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
  [ツールバー&#40;属性リレーションシップ タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
  [属性&#40;属性リレーションシップ タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   

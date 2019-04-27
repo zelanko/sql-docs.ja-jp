@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5ec3264095ebdb34730f8112389b50aa6839836f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749026"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>サーバーの全体管理での PowerPivot サーバーの管理と構成
   PowerPivot サーバーの管理および構成は、SharePoint サービス アプリケーションの管理者が SharePoint サーバーの全体管理を使用して実行します。  
@@ -66,7 +66,7 @@ ms.locfileid: "53365355"
 |[PowerPivot ギャラリーの作成およびカスタマイズ](create-and-customize-power-pivot-gallery.md)|省略可|インストールを手動で構成している場合は、この手順で、格納している PowerPivot ブックのサムネイル画像を示す PowerPivot ギャラリー ライブラリの作成方法を説明します。|  
 |[BI セマンティック モデル接続のコンテンツ タイプをライブラリに追加&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|省略可|BI セマンティック モデル接続ファイルの作成をサポートするようにドキュメント ライブラリを拡張する方法について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [PowerPivot for SharePoint 2010 のインストール](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [構成設定のリファレンス&#40;PowerPivot for SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Powerpivot for SharePoint の災害復旧](https://go.microsoft.com/fwlink/p/?LinkId=389570)  

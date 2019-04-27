@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97ab8896d13bfb19790148fb6f01bb8e054ab270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748084"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>[換算の種類の選択] (ビジネス インテリジェンス ウィザード)
   **[換算の種類の選択]** ページを使用すると、複数の通貨で保存されているトランザクションに関して、現地通貨とレポート用通貨の間のリレーションシップを定義できます。 現地通貨とは、 **[メジャーの選択]** ページで選択されたメジャーのトランザクションが保存される通貨です。 レポート用通貨とは、 **[メジャーの選択]** ページで選択されたトランザクションが変換される通貨です。  
@@ -48,7 +48,7 @@ ms.locfileid: "48092325"
   
  たとえば、ピボット通貨を米国ドル (USD) に設定し、トランザクションを USD でファクト テーブルに格納するように設定できます。 このオプションを選択すると、これらのトランザクションは、ピボット通貨から指定されたレポート用通貨に換算されます。 その結果、トランザクションを指定のピボット通貨で格納して、指定のピボット通貨または **[レポート用通貨の指定]** ページで指定されたいずれかのレポート用通貨で表示できるようになります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス インテリジェンス ウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)   
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

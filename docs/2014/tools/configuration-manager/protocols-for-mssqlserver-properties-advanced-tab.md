@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9000dd2b7456036f4828640694aaf697036b71d7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645793"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER のプロトコルのプロパティ ([詳細設定] タブ)
   **[MSSQLSERVER のプロトコルのプロパティ]** ダイアログ ボックスの **[詳細設定]** タブを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]の**認証の拡張保護**を構成します。 **拡張保護** とは、オペレーティング システムで実装されているネットワーク コンポーネントの機能です。 **拡張保護** は、Windows 7 および Windows Server 2008 R2 で使用でき、それ以前のオペレーティング システムではサービス パックに含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続を **拡張保護**を使用して確立することで、安全性を高めることができます。 **拡張保護** の利点には、 **[フラグ]** タブで **[強制的に暗号化]** を選択していないと得られないものもあります。  
@@ -40,7 +40,7 @@ ms.locfileid: "53377832"
  **[承認された NTLM SPN]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが複数の NTLM サービス プリンシパル名 (SPN) で識別されると、ここに、SPN がセミコロンで区切られた一連の文字列として表示されます。 たとえば、値 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com**は、 **MSSQLSvc/HOST1.Contoso.com** および **MSSQLSvc/HOST2.Contoso.com** という名前の SPN への接続を試みているクライアントが許可されることを示します。 変数の最大長は 2048 文字です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services での認証の拡張保護](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   

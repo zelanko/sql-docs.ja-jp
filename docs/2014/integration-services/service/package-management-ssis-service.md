@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766630"
 ---
 # <a name="package-management-ssis-service"></a>パッケージの管理 (SSIS サービス)
   パッケージの管理には、次のタスクを含むいくつかのタスクを伴います。  
@@ -56,7 +56,7 @@ ms.locfileid: "58375350"
   
  **[実行中のパッケージ]** フォルダーにはサブフォルダーがなく、拡張もできません。  
   
- 既定で、**格納されたパッケージ**フォルダーには、2 つのフォルダーが含まれています。**ファイル システム**と**MSDB**します。 **[ファイル システム]** フォルダーには、ファイル システムに保存されるパッケージが一覧表示されます。 これらのファイルの場所は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルで指定されます。 既定のフォルダーは、%Program Files%\Microsoft SQL Server\100\DTS の Packages フォルダーです。 **[MSDB]** フォルダーには、サーバーの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb データベースに保存されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージが一覧表示されます。 sysssispackages テーブルには、msdb に保存されるパッケージが格納されています。  
+ 既定では、**[格納されたパッケージ]** フォルダーには、**[ファイル システム]** と **[MSDB]** の 2 つのフォルダーがあります。 **[ファイル システム]** フォルダーには、ファイル システムに保存されるパッケージが一覧表示されます。 これらのファイルの場所は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルで指定されます。 既定のフォルダーは、%Program Files%\Microsoft SQL Server\100\DTS の Packages フォルダーです。 **[MSDB]** フォルダーには、サーバーの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb データベースに保存されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージが一覧表示されます。 sysssispackages テーブルには、msdb に保存されるパッケージが格納されています。  
   
  パッケージ ストア内のパッケージの一覧を表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続する必要があります。 詳細については、「 [SQL Server Management Studio で Integration Services パッケージを表示する (SSIS サービス)](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)との互換性を維持するために、このサービスをサポートしています。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "58375350"
   
 -   [SQL Server Management Studio で Integration Services パッケージを表示する (SSIS サービス)](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サービス (SSIS サービス)](integration-services-service-ssis-service.md)  
   
   

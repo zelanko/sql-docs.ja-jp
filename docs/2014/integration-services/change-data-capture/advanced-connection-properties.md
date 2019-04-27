@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7a5744aa2adcaab74ca09bbb962c8c69d985b79
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771518"
 ---
 # <a name="advanced-connection-properties"></a>高度な接続プロパティ
   **[高度な接続プロパティ]** ダイアログ ボックスを使用すると、接続文字列に接続パラメーターをさらに追加できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "58379190"
 > [!IMPORTANT]  
 >  **[高度な接続プロパティ]** ダイアログ ボックスにはログイン資格情報を含めないでください。 このダイアログ ボックスで指定したパラメーターは、ネットワーク経由で渡されるときに暗号化されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC デザイナー コンソールへのアクセス](access-the-cdc-designer-console.md)   
  [インスタンスの作成のための SQL サーバー接続](sql-server-connection-for-instance-creation.md)  
   

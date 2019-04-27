@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e99a6db1198422f137e281ea52da6b135172fcd7
-ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52951584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752769"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>レッスン 4:高度な属性およびディメンションのプロパティを定義します。
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>レッスン 4:高度な属性およびディメンションのプロパティの定義
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 このレッスンでは、属性、属性階層、およびディメンションの高度なプロパティをいくつか取り上げ、その使用方法を学習します。  
@@ -48,9 +48,9 @@ ms.locfileid: "52951584"
 この実習では、UnknownMember プロパティと UnknownMemberName プロパティを構成し、null ディメンション メンバーによって発生するエラー状況を処理します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 5:ディメンションとメジャー グループ間のリレーションシップを定義します。](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[レッスン 5: ディメンションとメジャー グループ間のリレーションシップを定義します。](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Analysis Services のチュートリアル シナリオ](../analysis-services/analysis-services-tutorial-scenario.md)  
 [多次元モデリング (Adventure Works チュートリアル)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [多次元モデル内のディメンション](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  

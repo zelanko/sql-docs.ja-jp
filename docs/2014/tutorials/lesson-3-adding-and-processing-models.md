@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653704"
 ---
-# <a name="lesson-3-adding-and-processing-models"></a>レッスン 3: 追加して、モデルの処理
+# <a name="lesson-3-adding-and-processing-models"></a>レッスン 3: モデルの追加と処理
   前のレッスンで作成したマイニング構造には、[!INCLUDE[msCoName](../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づくマイニング モデルが 1 つ含まれています。 ターゲット メーリング キャンペーンの顧客を識別するために、このモデルを使用することができます。 ただし、徹底的な分析を行うには、異なるアルゴリズムを使用して関連モデルを作成し、それらの結果を比較する方が一般的です。 これにより、さまざまな洞察を得ることもできます。 このため、追加の 2 つのモデルを作成し、それらのモデルを処理および配置します。  
   
  このレッスンでは、見込み顧客のリストの中から、製品を購入する可能性の高い顧客を予測するマイニング モデルのセットを作成します。  
@@ -39,7 +39,7 @@ ms.locfileid: "56018933"
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 4:メーリング対象モデルの検証&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング モデルを構造に追加する (Analysis Services - データ マイニング)](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
   
   

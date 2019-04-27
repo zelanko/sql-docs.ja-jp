@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 485b9bd38754309602df8002bf651188d322d6d8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524590"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>空間インデックスの作成、変更、および削除
   空間インデックスは、の列で特定の操作をより効率的に実行できる、`geometry`または`geography`データ型 (、*列 spatial*)。 1 つの空間列に対して複数の空間インデックスを指定できます。 たとえば、1 つの列の異なるテセレーション パラメーターのインデックスを作成する場合などに便利です。  
@@ -152,7 +152,7 @@ ms.locfileid: "51018657"
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] で導入された空間テセレーションは、 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]にレプリケートできません。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] のデータベースとの下位互換性が必要条件である場合は、空間インデックスで [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] または [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 空間テセレーションを使用する必要があります。  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空間インデックスの概要](spatial-indexes-overview.md)  
   
   

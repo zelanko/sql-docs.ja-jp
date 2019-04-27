@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754452"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>データベース ミラーリングの設定 (SQL Server)
   ここでは、データベース ミラーリングを設定するための前提条件、推奨事項、および手順について説明します。 データベース ミラーリングの概要については、「 [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)」を参照してください。  
@@ -32,7 +32,7 @@ ms.locfileid: "48065992"
   
 1.  プリンシパル サーバー、ミラー サーバー、およびミラーリング監視サーバー (存在する場合) は、別々のホスト システムにある別々のサーバー インスタンスによってホストされる必要があります。 サーバー インスタンスは、それぞれがデータベース ミラーリング エンドポイントを必要とします。 データベース ミラーリング エンドポイントを作成する必要がある場合は、他のサーバー インスタンスもそのエンドポイントにアクセス可能であることを確認します。  
   
-     サーバー インスタンスによりデータベースのミラーリングに使用される認証の形式は、データベース ミラーリング エンドポイントのプロパティで指定します。 データベース ミラーリングのトランスポートには、Windows 認証と証明書ベースの認証の 2 種類のセキュリティを使用できます。 詳細については、[データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)を参照してください。  
+     サーバー インスタンスによりデータベースのミラーリングに使用される認証の形式は、データベース ミラーリング エンドポイントのプロパティで指定します。 データベース ミラーリングのトランスポートには、Windows 認証と証明書ベースの認証の 2 種類のセキュリティを使用できます。 詳細については、次を参照してください。[データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)します。  
   
      ネットワーク アクセスの要件は、次に示すように、認証の形式に固有です。  
   
@@ -44,11 +44,11 @@ ms.locfileid: "48065992"
   
          あるサーバー インスタンスのデータベース ミラーリングで証明書による認証を有効にするには、システム管理者は、各サーバー インスタンスが発信接続と着信接続の両方で証明書を使用するように構成する必要があります。 この場合、発信接続を最初に構成する必要があります。 詳細については、「[データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」を参照してください。  
   
-2.  すべてのデータベース ユーザーのログインが、ミラー サーバーに存在するようにします。 詳細については、[データベース ミラーリングまたは AlwaysOn 可用性グループには、ログイン アカウントを設定&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)を参照してください。  
+2.  すべてのデータベース ユーザーのログインが、ミラー サーバーに存在するようにします。 詳細については、次を参照してください。[データベース ミラーリングまたは AlwaysOn 可用性グループには、ログイン アカウントを設定&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)します。  
   
 3.  ミラー データベースをホストするサーバー インスタンスで、ミラー化されたデータベースで必要な残りの環境を設定します。 詳細については、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
   
-##  <a name="EstablishUsingWinAuthentication"></a> 概要: データベース ミラーリング セッションの確立  
+##  <a name="EstablishUsingWinAuthentication"></a> 概要:データベース ミラーリング セッションを確立します。  
  ミラーリング セッションを確立するための基本手順を次に示します。  
   
 1.  次のバックアップを復元することで、ミラー データベースを作成します。すべての復元操作で RESTORE WITH NORECOVERY を使用します。  
@@ -90,12 +90,12 @@ ms.locfileid: "48065992"
          自動フェールオーバーを行わず、高可用性よりパフォーマンスを重視する場合は、トランザクションの安全性を無効にします。 詳細については、「[データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)」を参照してください。  
   
         > [!NOTE]  
-        >  高パフォーマンス モードでは、WITNESS を OFF に設定する必要があります。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+        >  高パフォーマンス モードでは、WITNESS を OFF に設定する必要があります。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[tsql](../../includes/tsql-md.md)] での Microsoft Windows 認証を使用したデータベース ミラーリングの完全な設定例については、「[Windows 認証を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)」を参照してください。  
+>  使用する例については[!INCLUDE[tsql](../../includes/tsql-md.md)]Microsoft Windows 認証を使用してデータベース ミラーリングを設定するを参照してください。[例。Windows 認証を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)」を参照してください。  
 >   
->  [!INCLUDE[tsql](../../includes/tsql-md.md)] での証明書ベースのセキュリティを使用したデータベース ミラーリングの完全な設定例については、「[証明書を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)」を参照してください。  
+>  使用する例については[!INCLUDE[tsql](../../includes/tsql-md.md)]証明書ベースのセキュリティを使用してデータベース ミラーリングを設定するを参照してください。[例。データベース ミラーリングを使用して証明書設定&#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)します。  
   
  
   
@@ -112,10 +112,10 @@ ms.locfileid: "48065992"
  [Windows 認証を使用してデータベース ミラーリング セッションを確立する方法 &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
  データベース ミラーリングを設定するための [!INCLUDE[tsql](../../includes/tsql-md.md)] の手順について説明します。  
   
- [Windows 認証を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
+ [例:Windows 認証を使用してデータベース ミラーリングのセットアップ&#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
  Windows 認証を使用してミラーリング監視サーバーを利用するデータベース ミラーリング セッションを作成する場合に必要なすべての段階の例を示します。  
   
- [証明書を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+ [例:データベース ミラーリングを使用して証明書設定&#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  証明書ベースの認証を使用してミラーリング監視サーバーを利用するデータベース ミラーリング セッションを作成する場合に必要なすべての段階の例を示します。  
   
  [ログイン アカウントのデータベース ミラーリングまたは AlwaysOn 可用性グループ セットアップ&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
@@ -156,7 +156,7 @@ ms.locfileid: "48065992"
   
 ## <a name="see-also"></a>参照  
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [データベース ミラーリング: 相互運用性と共存 &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [データベース ミラーリング:相互運用性と共存 &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](specify-a-server-network-address-database-mirroring.md)  
   

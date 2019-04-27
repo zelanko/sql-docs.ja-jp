@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 75da2776f867ae89da049ba31a9180d21922cd84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749381"
 ---
 # <a name="powerpivot-data-access"></a>PowerPivot データ アクセス
   このトピックでは、SharePoint ライブラリにパブリッシュされる PowerPivot ブックからデータを取得する方法について説明します。  
@@ -41,7 +41,7 @@ ms.locfileid: "48164092"
  PowerPivot ブックのデータの一部は、PowerPivot for SharePoint によって処理されません。 ワークシートのテーブルおよびセル データは Excel Services によって処理されます。 PowerPivot for SharePoint によって処理されるのは、PowerPivot データに合わないピボットテーブル、ピボットグラフ、およびスライサーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [Analysis Services への接続します。](../instances/connect-to-analysis-services.md)   
+ [Analysis Services への接続](../instances/connect-to-analysis-services.md)   
  [テーブル モデル データ アクセス](../tabular-models/tabular-model-data-access.md)  
   
   

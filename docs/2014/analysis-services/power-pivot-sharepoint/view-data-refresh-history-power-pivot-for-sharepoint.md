@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 462dd89e60ef2e997ad35ec07fad4a5b767f5944
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749011"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>データ更新履歴の表示 (PowerPivot for SharePoint)
   データ更新の履歴とは、Excel ブックの PowerPivot データに対するすべてのデータ更新操作の記録です。 データ更新操作は、指定したスケジュールで SharePoint ファーム内の Analysis Services サーバー インスタンスで実行されます。 既定では、データ更新の履歴は 1 年間保持されます。 ただし、ファーム管理者は、データ更新記録を保持する期間を決定する、使用状況およびイベントの履歴に対する別の保有ポリシーを指定できます。  
@@ -56,7 +56,7 @@ ms.locfileid: "48118972"
  履歴ページが開き、現在の Excel ブック内の PowerPivot データに関するすべての更新操作の完全なレコードが表示されます。  
   
 ##  <a name="viewITOps"></a> すべてのブックのデータ更新履歴の表示  
- サーバーの全体管理で PowerPivot 管理ダッシュボードを使用すると、ファーム管理者およびサービス アプリケーション管理者は、すべての PowerPivot ブックに関するデータ更新の履歴と状態を一括して表示できます。 詳細については、[PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)を参照してください。  
+ サーバーの全体管理で PowerPivot 管理ダッシュボードを使用すると、ファーム管理者およびサービス アプリケーション管理者は、すべての PowerPivot ブックに関するデータ更新の履歴と状態を一括して表示できます。 詳細については、「 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)」をご参照ください。  
   
 ##  <a name="pageelements"></a> 履歴情報の使用  
  データ更新の履歴ページには、各更新操作に関する詳細な情報が表示されます。 このページの情報を使用すると、更新が行われたかどうかを確認したり、更新が失敗した理由を調べたりすることができます。  

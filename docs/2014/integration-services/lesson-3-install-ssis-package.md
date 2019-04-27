@@ -12,18 +12,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da763e2385c64a09279c9dd6ff537993c2cd6a30
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767574"
 ---
 # <a name="lesson-3-installing-packages"></a>レッスン 3: パッケージのインストール
-  [レッスン 2。配置バンドルを作成する](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)、配置ユーティリティの構築、および項目を格納するために、配置バンドルを作成することは、別のコンピューターにパッケージをインストールする必要があります。 また、配置バンドルのファイル リストを確認し、配置ユーティリティの構築時に作成されたマニフェスト ファイルの内容も調べました。  
+  「[レッスン 2: 配置バンドルを作成する](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)、配置ユーティリティの構築、および項目を格納するために、配置バンドルを作成することは、別のコンピューターにパッケージをインストールする必要があります。 また、配置バンドルのファイル リストを確認し、配置ユーティリティの構築時に作成されたマニフェスト ファイルの内容も調べました。  
   
  このレッスンでは、配置バンドルを目的のコンピューターにコピーし、パッケージ インストール ウィザードを実行して、そのコンピューターにパッケージ、パッケージの依存関係、および補助ファイルをインストールします。 パッケージは **msdb** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースにインストールされ、その他の項目はファイル システムにインストールされます。 パッケージのインストールが完了すると、パッケージ実行ユーティリティを使用して [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] からパッケージを実行し、配置をテストします。  
   
- **このレッスンを完了するまでに時間を推定するには。** 30 分  
+ **このレッスンの推定所要時間:** 30 分  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
  このレッスンの内容は次のとおりです。  
@@ -32,7 +32,7 @@ ms.locfileid: "58379076"
   
 -   [手順 2:パッケージ インストール ウィザードの実行](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
--   [ステップ 3:配置パッケージのテスト](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+-   [手順 3:配置したパッケージのテスト](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
  [ステップ 1: 配置バンドルのコピー](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  

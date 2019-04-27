@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774576"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>SQL Server 2014 の別のエディションへのアップグレード (セットアップ)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のさまざまなエディション間でのエディションのアップグレードをサポートしています。 各エディションでサポートされるアップグレード パスについては、「 [サポートされているバージョンとエディションのアップグレード](supported-version-and-edition-upgrades.md)」をご覧ください。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インスタンスのエディションのアップグレードを開始する前に、次のトピックを確認してください。  
@@ -29,7 +29,7 @@ ms.locfileid: "51019047"
 -   [SQL Server 2014 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クラスターのノードごとにエディションのアップグレードを実行するだけです。 このノードはアクティブとパッシブのいずれかになります。エディションのアップグレード中にリソースがオフラインになることはありません。 エディションをアップグレードした後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動するか、別のノードにフェールオーバーする必要があります。  
+>  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クラスター化された環境の場合。** ノードのいずれかのエディションのアップグレードを実行している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クラスターで十分です。 このノードはアクティブとパッシブのいずれかになります。エディションのアップグレード中にリソースがオフラインになることはありません。 エディションをアップグレードした後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動するか、別のノードにフェールオーバーする必要があります。  
   
 ## <a name="prerequisites"></a>前提条件  
  ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限を持つドメイン アカウントを使用する必要があります。  
@@ -49,7 +49,7 @@ ms.locfileid: "51019047"
   
 4.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]** をクリックします。  
   
-5.  [プロダクト キー] ページで、オプション ボタンをクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の無償のエディションにアップグレードするかどうか、または SQL Server の製品版の PID キーを持っているかどうかを指定します。 詳細については、[エディションと SQL Server 2014 のコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)と[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)を参照してください。  
+5.  [プロダクト キー] ページで、オプション ボタンをクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の無償のエディションにアップグレードするかどうか、または SQL Server の製品版の PID キーを持っているかどうかを指定します。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md)と[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)します。  
   
 6.  [ライセンス条項] ページで使用許諾契約書を読み、使用許諾条件に同意する場合は対応するチェック ボックスをオンにします。 続行するには、 **[次へ]** をクリックします。 セットアップを終了するには、 **[キャンセル]** をクリックします。  
   

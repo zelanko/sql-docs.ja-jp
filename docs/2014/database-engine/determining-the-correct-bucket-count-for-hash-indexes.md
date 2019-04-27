@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754244"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>ハッシュ インデックスの適切なバケット数の決定
   メモリ最適化テーブルを作成するときに `BUCKET_COUNT` パラメーターの値を指定する必要があります。 このトピックでは、`BUCKET_COUNT` パラメーターの適切な値を判断する際の推奨事項を示します。 適切なバケット数を決定できない場合は、代わりに非クラスター化インデックスを使用してください。  `BUCKET_COUNT` の値が不適切な場合 (特に小さすぎる場合)、ワークロードのパフォーマンス、およびデータベースの復旧時間に大きな影響を与えることがあります。 バケット数は大きめに設定することをお勧めします。  
@@ -185,7 +185,7 @@ GO
   
 -   ポイント参照のパフォーマンスを最適化する際は、一意のインデックス値の数の 2 ～ 3 倍のバケット数が適しています。 バケット数を大きくすると、メモリ使用量が増え、フル インデックス スキャンに必要な時間が増えます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メモリ最適化テーブルのインデックス](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

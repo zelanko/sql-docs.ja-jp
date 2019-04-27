@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8fc2fd14849661a3467bf1c7f401df2b19caf009
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774765"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>オプション (クエリ実行の分析サーバーの [全般] ページ)
   このページを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クエリを実行するためのオプションを指定できます。 これらの設定を表示するには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[クエリ実行]** の下で、 **[分析サーバー]** フォルダーを展開し、 **[全般]** をクリックします。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ffd00cde83f99f1147a85b06e93e3816fb6e376
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743248"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>ディスクの使用領域の構成 (PowerPivot for SharePoint)
   PowerPivot for SharePoint の配置では、再読み込みを高速化するために、ホスト コンピューターのディスク領域を使用して、PowerPivot データベースをキャッシュします。 後ですばやく再読み込みして新しい要求を処理できるように、メモリに読み込まれているすべての PowerPivot データベースが最初にディスクにキャッシュされます。 既定では、PowerPivot for SharePoint は、使用できるすべてのディスク領域を使用してデータベースをキャッシュします。ただし、この動作は、使用するディスク領域を制限するプロパティを設定することにより変更できます。  
@@ -92,7 +92,7 @@ ms.locfileid: "53354512"
 5.  **[OK]** をクリックして変更を保存します。  
   
 ## <a name="next-steps"></a>次の手順  
- サーバーの状態、構成、または可用性の問題が検出された場合に修正措置を実行できるように、PowerPivot for SharePoint のインストールには正常性ルールが用意されています。 一部のルールでは、構成設定を使用して、正常性ルールがトリガーされる条件が決定されます。 サーバー パフォーマンスを積極的にチューニングしている場合は、これらの設定を確認して、既定値がシステムに最適であることを確認するようにします。 詳細については、[PowerPivot の正常性ルール - 構成](configure-power-pivot-health-rules.md)を参照してください。  
+ サーバーの状態、構成、または可用性の問題が検出された場合に修正措置を実行できるように、PowerPivot for SharePoint のインストールには正常性ルールが用意されています。 一部のルールでは、構成設定を使用して、正常性ルールがトリガーされる条件が決定されます。 サーバー パフォーマンスを積極的にチューニングしている場合は、これらの設定を確認して、既定値がシステムに最適であることを確認するようにします。 詳細については、次を参照してください。 [PowerPivot の正常性ルール - 構成](configure-power-pivot-health-rules.md)します。  
   
 ## <a name="see-also"></a>参照  
  [サーバーの全体管理での PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)  

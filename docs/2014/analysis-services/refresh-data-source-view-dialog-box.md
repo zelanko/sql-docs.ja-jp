@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748486"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>[データ ソース ビューを最新状態に更新] ダイアログ ボックス
   **の** [データ ソース ビューを最新状態に更新] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、データ ソース ビューを最新状態に更新した結果として発生する変更を受け入れるか、取り消すことができます。 このダイアログ ボックスには、基になるデータ ソースを変更した結果として、データ ソース ビューに加えられる変更が表示されます。 変更を受け入れてデータ ソース ビューを最新状態に更新する場合は **[OK]** をクリックします。変更を無視してデータ ソース ビューを変更しないで維持する場合は **[キャンセル]** をクリックします。 **[データ ソース ビューを最新状態に更新]** ダイアログ ボックスは、次の方法で表示します。  
@@ -36,8 +36,8 @@ ms.locfileid: "48119622"
  **レポートを保存します。**  
  クリックすると、 **[名前を付けて保存]** ダイアログ ボックスが表示され、HTML レポートをファイルに保存できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [データ ソース ビュー デザイナー &#40;Analysis Services - 多次元データ&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [データ ソース ビュー デザイナー (Analysis Services - 多次元データ)](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

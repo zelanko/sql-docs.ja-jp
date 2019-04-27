@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c744d3f28bc27373f3dc9798ba591848d4b720e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769349"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 式)
   指定された日付要素に、日付または期間を示す数値を加算して、新しい DT_DBTIMESTAMP の値を返します。 数値のパラメーターは整数に、日付のパラメーターは有効な日付に評価される必要があります。  
@@ -90,7 +90,7 @@ DATEADD("day", 21, ModifiedDate)
 DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DATEDIFF &#40;SSIS 式&#41;](datediff-ssis-expression.md)   
  [DATEPART &#40;SSIS 式&#41;](datepart-ssis-expression.md)   
  [DAY &#40;SSIS 式&#41;](day-ssis-expression.md)   

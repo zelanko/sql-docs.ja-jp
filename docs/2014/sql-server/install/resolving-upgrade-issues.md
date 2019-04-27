@@ -32,11 +32,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bad975eb6b2b2645cb31b075089c02be735b1d88
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753324"
 ---
 # <a name="resolving-upgrade-issues"></a>アップグレードに関する問題とその対処方法
   このセクションのトピックでは、アップグレードに関連する検出可能な問題と、検出できずアップグレードまたはアップグレード後の動作に影響することが考えられる問題について説明します。 これらの問題は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントごとにまとめられています。  
@@ -69,7 +69,7 @@ ms.locfileid: "59582245"
   
 -   [sp_rename を使用して重複するインデックス名を変更する](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

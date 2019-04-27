@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a88d312d2764d04d1766371463a1735737973164
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740968"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>データ ソースのサポートの (SSAS 多次元)
   このトピックでは、多次元モデルで使用できるデータ ソースの種類について説明します。  
@@ -47,7 +47,7 @@ ms.locfileid: "53349746"
   
  <sup>1</sup>多次元ソリューションの ODBC データ ソースはサポートされていません。 Analysis Services 自体が接続を処理しますが、MSDASQL ドライバーを使用している場合でも、ソリューションの作成に使用される [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] のデザイナーは ODBC データ ソースには接続できません。 ビジネス要件に ODBC データ ソースが含まれている場合は、代わりに表形式のソリューションを作成することを検討してください。  
   
- <sup>2</sup>詳細については、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]の[azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856)を参照してください。  
+ <sup>2</sup>詳細については、次を参照してください。[!INCLUDE[ssSDS](../../includes/sssds-md.md)]の[azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856)します。  
   
  <sup>3</sup>の詳細については[!INCLUDE[ssSDS](../../includes/sssds-md.md)]PDW を参照してください[SQL Server 並列データ ウェアハウス](https://go.microsoft.com/fwlink/?LinkId=150895)します。  
   

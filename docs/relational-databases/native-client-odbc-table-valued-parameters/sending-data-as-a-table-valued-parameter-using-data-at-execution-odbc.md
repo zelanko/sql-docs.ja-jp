@@ -15,11 +15,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e208fbfe1205c09b51796628610f2def8798fea1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740482"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>実行時データを使用したテーブル値パラメーターとしてのデータの送信 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51678048"
 
   似ています、[すべてメモリ内](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)プロシージャ、テーブル値パラメーターの実行時のデータが使用しています。  
   
- テーブル値パラメーターを示す別のサンプルでは、[テーブル値パラメーターの&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)を参照してください。  
+ テーブル値パラメーターを示す別のサンプルでは、次を参照してください。[テーブル値パラメーターの&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)します。  
   
  この例では、SQLExecute または SQLExecDirect が呼び出されると、ドライバーは SQL_NEED_DATA を返します。 その後、アプリケーションは、ドライバーが SQL_NEED_DATA 以外の値を返すまで繰り返し SQLParamData を呼び出します。 ドライバーは返します*ParameterValuePtr*パラメーターのデータを要求しているアプリケーションに通知します。 アプリケーションでは、[次へ] SQLParamData 呼び出しの前にパラメーターのデータを提供する SQLPutData を呼び出します。 テーブル値パラメーターの場合は、SQLPutData への呼び出しは、(この例では、常に 1) でドライバーの準備ができた行の数を示します。 テーブル値のすべての行は、ドライバーに渡された、0 行が使用できることを示す SQLPutData が呼び出されます。  
   

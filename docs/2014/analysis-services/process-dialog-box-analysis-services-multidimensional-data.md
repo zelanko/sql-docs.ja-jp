@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2739af6b1fdb6630b44ae56d1ab0b83ef5fa4535
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748854"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>[処理] ダイアログ ボックス (Analysis Services - 多次元データ)
   **と** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [処理] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトを処理できます。 **で** [処理] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを表示するには、次の手順に従います。  
@@ -44,7 +44,7 @@ ms.locfileid: "48074542"
  処理するオブジェクトの種類を表示します。  
   
  **[処理オプション]**  
- 選択されたオブジェクトに対して実行する処理の種類を選択します。 使用可能な処理オプションの詳細については、[多次元モデル オブジェクトの処理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)を参照してください。  
+ 選択されたオブジェクトに対して実行する処理の種類を選択します。 使用可能な処理オプションの詳細については、次を参照してください。[多次元モデル オブジェクトの処理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)します。  
   
  **[設定]**  
  キューブ、メジャー グループ、またはパーティションの **[処理オプション]** で **[増分処理]** を選択するときに、 **[構成]** ハイパーリンクを表示します。 **[構成]** をクリックし、 **[増分更新]** ダイアログ ボックスを表示します。 **[増分更新]** ダイアログ ボックスの詳細については、[「[増分更新] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e73468de8edd2497409c37acb2c00bfaf79ebd2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749412"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>サーバーの全体管理での PowerPivot サイト用の信頼できる場所の作成
   Excel Services では、SharePoint サーバーで開いたブックの有効なリポジトリの場所を指定できます。 これは「信頼できる場所」と呼ばれ、作成したそれぞれの信頼できる場所について異なる構成設定を使用できます。 PowerPivot for SharePoint の配置の場合、PowerPivot ブックが含まれるサイト用に信頼できる場所を作成し、ファームのその他の部分に対する既定値を保持しながら PowerPivot データ アクセスに対しては最適な設定を適用することを検討してください。  
@@ -54,7 +54,7 @@ ms.locfileid: "48113522"
   
 7.  [セッションの管理]、[ブックのプロパティ]、および [計算動作] のプロパティの既定の設定をすべてそのまま使用します。  
   
-8.  [ブックのプロパティ] で、 **[ブックの最大サイズ]** を「 **50**」に設定します。 これにより、ブックのファイル サイズの上限が、親 Web アプリケーションへのファイル アップロードの上限と同じになります。 ブックのサイズが 50 MB を超える場合は、ファイル サイズの上限をさらに増やす必要があります。 詳細については、[構成ファイルの最大アップロード サイズ&#40;PowerPivot for SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)を参照してください。  
+8.  [ブックのプロパティ] で、 **[ブックの最大サイズ]** を「 **50**」に設定します。 これにより、ブックのファイル サイズの上限が、親 Web アプリケーションへのファイル アップロードの上限と同じになります。 ブックのサイズが 50 MB を超える場合は、ファイル サイズの上限をさらに増やす必要があります。 詳細については、次を参照してください。[構成ファイルの最大アップロード サイズ&#40;PowerPivot for SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)します。  
   
 9. [外部データ] で、[外部データの許可] が **[信頼できるデータ接続ライブラリと、埋め込まれている接続]** に設定されていることを確認します。 この設定は、ブックでの PowerPivot データ アクセスに必要です。  
   

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 20850dfb044fc39270644c0e52c8d35de0bdd4c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636915"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>明示的階層名を変更する (マスター データ サービス)
 
@@ -26,12 +26,12 @@ ms.locfileid: "52774154"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、明示的階層の名前を変更できます。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-change-the-name-of-an-explicit-hierarchy"></a>明示的階層の名前を変更するには  
   
@@ -49,7 +49,7 @@ ms.locfileid: "52774154"
   
 7.  **[保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [明示的階層を作成する (マスター データ サービス)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [明示的階層を削除する (マスター データ サービス)](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  

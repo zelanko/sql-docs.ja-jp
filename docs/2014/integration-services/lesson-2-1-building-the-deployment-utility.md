@@ -1,5 +1,5 @@
 ---
-title: 手順 1:配置ユーティリティの構築 |Microsoft Docs
+title: 手順 1:配置ユーティリティの構築 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767584"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>手順 1:配置ユーティリティの構築
   ここでは、Deployment Tutorial プロジェクト用の配置ユーティリティを構成し、構築します。  
@@ -48,7 +48,7 @@ ms.locfileid: "58381200"
   
 4.  出力ウィンドウに、次のような情報が表示されます。  
   
-     ビルドが開始されました。SQL Integration Services プロジェクト:増分しています.  
+     ビルド開始:SQL Integration Services プロジェクト:インクリメンタル...  
   
      配置ユーティリティを作成しています  
   
@@ -56,7 +56,7 @@ ms.locfileid: "58381200"
   
      ビルドの完了 -- エラー 0 個、警告 0 個  
   
-     ========== ビルド:0 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========  
+     ========== ビルド:0 正常終了、0 失敗、1 更新、0 スキップ ==========  
   
 5.  **[ファイル]** メニューの **[終了]** をクリックします。 Deployment Tutorial アイテムへの変更の保存を指示するメッセージが表示されたら、 **[はい]** をクリックします。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "58381200"
   
 ![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [配置ユーティリティを作成する](../../2014/integration-services/create-a-deployment-utility.md)  
   
   

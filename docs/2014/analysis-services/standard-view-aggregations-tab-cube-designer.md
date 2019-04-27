@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc09c5306d5c4fb9e63b1cba9b859f9633fcccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745842"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>標準ビュー ([集計] タブ、キューブ デザイナー)
   集計デザイナーの **標準ビュー** を使用すると、集計を表示できます。 このビューでは、 **集計のデザイン ウィザード** または **使用法に基づく最適化ウィザード**を使用して、集計デザインを作成および変更することもできます。  
@@ -33,7 +33,7 @@ ms.locfileid: "48100332"
 |**削除**|クリックすると、選択した集計デザインが削除されます。|  
 |**Properties**|クリックすると、集計のプロパティが表示されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [集計&#40;キューブのデザイン&#41;](aggregations-cube-design.md)  
   
   

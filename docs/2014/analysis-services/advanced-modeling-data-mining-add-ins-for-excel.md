@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bad97bf517bee9f8c2545d5a48acc02830dc5f58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637017"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>高度なモデリング (Excel 用データ マイニング アドイン)
   使用することができます、**詳細**データ モデリング オプションをカスタム データ マイニング構造とモデル パラメーターを作成するウィザードで作成したものと異なる。 このセクションで説明する 2 つのウィザードでは、まったく新しいデータ マイニング構造を作成したり、既存のデータ マイニング構造に適用する新しいマイニング モデルを作成したりできます。  
@@ -53,7 +53,7 @@ ms.locfileid: "48134102"
   
  使用できるのは、現在のセッション中に作成されたデータ マイニング構造、または、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに保存されたマイニング構造に限定されています。  
   
- 詳細については、[構造への追加モデル&#40;Excel 用データ マイニング アドインで&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)を参照してください。  
+ 詳細については、次を参照してください。[構造への追加モデル&#40;Excel 用データ マイニング アドインで&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)します。  
   
 ## <a name="see-also"></a>参照  
  [モデルの管理&#40;SQL Server データ マイニング アドイン&#41;](manage-models-sql-server-data-mining-add-ins.md)   

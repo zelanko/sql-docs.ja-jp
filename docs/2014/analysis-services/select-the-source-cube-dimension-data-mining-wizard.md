@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0f61dea4488e67c8b8c7ebd30920df2ef1774acd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746894"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>[ソース キューブ ディメンションの選択] (データ マイニング ウィザード)
   **[ソース キューブ ディメンションの選択]** ページを使用すると、分析する対象のケースを含んでいるキューブからディメンションを選択できます。 たとえば、人口統計に基づいて顧客の購入行動を分析するモデルを構築する場合は、Customer ディメンションを選択します。一般に、このディメンションには、顧客ごとに固有のレコードが含まれているほか、性別、居住地、所得など、人口統計の内訳を表す各種の属性が含まれます。 ウィザードの後半では、このケース テーブルに関連したテーブルを追加できます。たとえば、顧客が購入した製品を表す、入れ子になったテーブルを追加することも可能です。  
@@ -39,7 +39,7 @@ ms.locfileid: "48087921"
   
  データ マイニング モデルを構築するために必要な属性が、選択したディメンションにない場合は、ディメンションに対する変更が必要になることもあります。 詳細については、「 [データベース ディメンションの定義](multidimensional-models/define-database-dimensions.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [データ マイニング構造の作成&#40;データ マイニング ウィザード&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
  [ケース キーの選択&#40;データ マイニング ウィザード&#41;](select-the-case-key-data-mining-wizard.md)  

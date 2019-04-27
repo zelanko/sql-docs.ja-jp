@@ -20,17 +20,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633750"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>システム要件 (Visual FoxPro ODBC ドライバー)
 インストールのシステム要件は、最低限のオペレーティング システムとドライバーを正常にインストールするために必要なディスク領域を提供します。 ドライバーをインストールした後は、Visual FoxPro データへのアクセスに使用する特定のアプリケーション ソフトウェアを選択できます。  
   
 ## <a name="installation-requirements"></a>インストール要件  
- インストール要件とその他の情報は、[Visual FoxPro ODBC ドライバーのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)を参照してください。  
+ インストール要件とその他の情報は、次を参照してください。 [Visual FoxPro ODBC ドライバーのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)します。  
   
 ## <a name="accessing-visual-foxpro-data"></a>Visual FoxPro データへのアクセス  
  Microsoft Visual FoxPro または FoxPro 2 にアクセスします。*x*データを次があります。  
@@ -53,6 +53,6 @@ ms.locfileid: "51664098"
   
     -   FoxPro 2.0 では、2.5、2.6[テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
- Visual FoxPro ODBC ドライバーでは、2 バイト文字セット (DBCS) をサポートします。 詳細については、[インターナショナル サポート](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md)を参照してください。  
+ Visual FoxPro ODBC ドライバーでは、2 バイト文字セット (DBCS) をサポートします。 詳細については、次を参照してください。[インターナショナル サポート](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md)します。  
   
  ドライバーは、16 ビットの Microsoft Windows 3.1 アプリケーションをサポートしていません。

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: becc1bb290d37eec7e717d9400dc0f694188eeeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746644"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>[集計オプションの設定] (使用法に基づく最適化ウィザード)
   **[集計オプションの設定]** ページを使用すると、集計デザイン プロセスを開始し、使用法に基づく最適化ウィザードで生成された集計に対するストレージまたはパフォーマンスの制限を指定することができます。  
@@ -33,7 +33,7 @@ ms.locfileid: "48164102"
  **停止 をクリックします。**  
  デザイン プロセス中に **[停止]** をクリックすることにより、集計デザインを制限します。  
   
- **[開始]**  
+ **スタート**  
  集計デザイン プロセスを開始します。  
   
  **[停止]**  
@@ -42,7 +42,7 @@ ms.locfileid: "48164102"
  **リセット**  
  このページのすべての集計オプションを既定値に戻します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [使用法に基づく最適化ウィザードの F1 ヘルプ](usage-based-optimization-wizard-f1-help.md)   
  [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757429"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>サポートされているデータ ソース (SSAS テーブル)
   このトピックでは、テーブル モデルで使用できるデータ ソースの種類について説明します。  
@@ -34,7 +34,7 @@ ms.locfileid: "53371314"
   
 |||||  
 |-|-|-|-|  
-|ソース|バージョン|ファイルの種類|プロバイダー <sup>1</sup>|  
+|Source|バージョン|ファイルの種類|プロバイダー <sup>1</sup>|  
 |Access データベース|Microsoft Access 2003、2007、2010。|.accdb または .mdb|ACE 14 OLE DB プロバイダー|  
 |SQL Server リレーショナル データベース|Microsoft SQL Server2005、2008、2008 R2、SQL Server 2012、Microsoft SQL Azure データベース<sup>2</sup>|(該当なし)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB プロバイダー<br /><br /> SQL Server Native 10.0 Client OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for SQL Client|  
 |SQL Server 並列データ ウェアハウス (PDW) <sup>3</sup>|2008 R2|(該当なし)|OLE DB provider for SQL Server PDW|  
@@ -74,7 +74,7 @@ ms.locfileid: "53371314"
   
 4.  一般に、OLE DB プロバイダーは、大規模なデータに対して高いパフォーマンスを発揮します。 同じデータ ソースに対して数種類のプロバイダーの中から選択する場合は、最初に OLE DB プロバイダーを選択することをお勧めします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ ソース &#40;SSAS テーブル&#41;](../data-sources-ssas-tabular.md)   
  [データのインポート &#40;SSAS テーブル&#41;](../import-data-ssas-tabular.md)  
   

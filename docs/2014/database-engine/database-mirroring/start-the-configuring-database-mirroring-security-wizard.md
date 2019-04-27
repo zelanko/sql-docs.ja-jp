@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9f9d698496c05ca28d0d2a8b8341007bca13e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754442"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>データベース ミラーリング セキュリティ構成ウィザードの起動 (SQL Server Management Studio)
   データベース ミラーリング セキュリティ構成ウィザードを使用して、ミラーリングで使用されるすべてまたは一部のサーバー インスタンスでセキュリティ設定を初期構成できます。 このウィザードは、 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページから開きます。  
@@ -33,7 +33,7 @@ ms.locfileid: "48076738"
   
 4.  **[セキュリティの構成]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース プロパティ &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  

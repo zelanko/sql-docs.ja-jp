@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7f50c5e77e93fcddbf7eb6f1d16432dd54bc7625
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755805"
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client アプリケーション
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを使用すると、スタンドアロンのツールを使用してデータ品質に関する操作を実行できます。 このアプリケーションでは、ナレッジ ベースを作成し、データ品質プロジェクトを作成して実行し、管理タスクを実行できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "56043093"
 |DQS で照合を実行する方法について説明します。|[データ照合](../../2014/data-quality-services/data-matching.md)|  
 |DQS を管理する方法について説明します。|[DQS 管理](../../2014/data-quality-services/dqs-administration.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Data Quality Client のホーム画面](../../2014/data-quality-services/data-quality-client-home-screen.md)  
   
   

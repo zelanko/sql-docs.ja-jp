@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 014c0891fa3a887e781def415e68c38549bafe08
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755053"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>データベース ミラーリング モニター ([警告] ページ)
   データベース ミラーリングのイベントでサポートされている警告の読み取り専用の一覧と指定された警告しきい値 (存在する場合) を表示します。  
@@ -73,7 +73,7 @@ ms.locfileid: "54129042"
   
  **dbm_monitor** ロールのメンバーシップを使用して、 **[警告]** ページに最新の状態行のみを表示できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

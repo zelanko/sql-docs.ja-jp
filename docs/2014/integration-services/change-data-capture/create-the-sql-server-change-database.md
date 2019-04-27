@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771368"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 変更データベースの作成
   新しいインスタンス ウィザードを起動すると、[CDC データベースの作成] ページが表示されます。 [CDC データベースの作成] ページを使用して、新しい CDC インスタンスに関する情報を提供し、新しい変更データベースを作成します。  
@@ -37,20 +37,20 @@ ms.locfileid: "58391180"
   
 -   **[名前]**:新しいサービスの名前を入力します。 この名前は、新しい変更データベースの名前にもなります。  
   
--   **説明**:新しいインスタンスを識別するための説明を入力します。 これは省略可能です。  
+-   **説明**:新しいインスタンスを識別するのに役立つ説明を入力します。 これは省略可能です。  
   
  **[SQL Server 変更データベース]**  
  このセクションは、データベースの作成に使用されます。  
   
-1.  **データベースの変更**:新しい変更データベースの名前。 データベースの名前は、インスタンスに指定した名前と同じです。 この読み取り専用フィールドには、データベースへの完全なパスが表示されます。  
+1.  **[データベースの変更]**: 新しい変更データベースの名前です。 データベースの名前は、インスタンスに指定した名前と同じです。 この読み取り専用フィールドには、データベースへの完全なパスが表示されます。  
   
-2.  **データベース作成**:クリックして**Create Database**データベースを作成します。  
+2.  **[データベースの作成]**: データベースを作成するには、**[データベースの作成]** をクリックします。  
   
      データベースを作成するには、ログインに `sysasmin` サーバー ロールが必要です。 詳細については、上記のセキュリティに関する注意を参照してください。  
   
      データベースを作成したら、 **[次へ]** をクリックして「 [Connect to an Oracle Source Database](connect-to-an-oracle-source-database.md)」に進みます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 変更データベース インスタンスを作成する方法](how-to-create-the-sql-server-change-database-instance.md)   
  [Oracle CDC Service](the-oracle-cdc-service.md)  
   

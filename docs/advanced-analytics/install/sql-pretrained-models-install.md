@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: fe0cfc855f1a231654c3e31ec3924d9754ef4970
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745413"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの machine learning のモデルでは、SQL Server をインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、Powershell を使用して無料事前トレーニング済みの機械学習モデルを追加する方法を説明します。*感情分析*と*イメージ特性付け*R または Python の統合を持つ SQL Server インスタンスにします。 事前トレーニング済みモデルは、Microsoft とすぐに使用して作成されたインスタンスとしてインストール後のタスクに追加します。 これらのモデルの詳細については、、[リソース](#bkmk_resources)この記事の「を参照してください。
+この記事では、Powershell を使用して無料事前トレーニング済みの機械学習モデルを追加する方法を説明します。*感情分析*と*イメージ特性付け*R または Python の統合を持つ SQL Server インスタンスにします。 事前トレーニング済みモデルは、Microsoft とすぐに使用して作成されたインスタンスとしてインストール後のタスクに追加します。 これらのモデルの詳細については、次を参照してください。、[リソース](#bkmk_resources)この記事の「します。
 
 インストールされると、事前トレーニング済みモデルは MicrosoftML (R) および microsoftml (Python) ライブラリの特定の機能を実装の詳細と見なされます。 できますに処理するカスタム コードでは独立したリソースとしてもしていない必要があります (ことはできません) を表示したり、カスタマイズ、したり、モデルの再トレーニングまたはその他の関数をペアになっています。 
 

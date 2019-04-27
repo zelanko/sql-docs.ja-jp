@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e569dfba5470a6c8c13bb9caa0e36c9711119634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747284"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>[入れ子になったテーブル列の選択] (入れ子になっている新しいテーブルの追加ウィザード)
   **[入れ子になったテーブル列の選択]** ページを使用すると、入れ子になっているテーブルに含める属性とメジャーを選択でき、マイニング モデルでその属性とメジャーを使用する方法を定義できます。  
   
- **詳細情報:** 「[マイニング モデル列](data-mining/mining-model-columns.md)」、「[データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」、「[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)」  
+ **詳細情報。**[マイニング モデル列](data-mining/mining-model-columns.md)、[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>および  
  **[列]**  
@@ -35,7 +35,7 @@ ms.locfileid: "48099414"
  **予測可能です**  
  メジャーまたは属性をマイニング モデルの予測可能列として使用するかどうかを指定します。 1 つの列を同時に入力列および予測可能列として指定できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [入れ子になったテーブル キーの選択&#40;入れ子になったテーブルの新規作成ウィザードの追加&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
  [マイニング モデル列の使用法の指定&#40;データ マイニング ウィザード&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  

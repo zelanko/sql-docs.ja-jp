@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: a3348058b03ff1441256cc8298ddc1b5b2216b0d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642785"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>SQL Server (In-database) のインスタンスで実行される R コードを変換します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,7 +62,7 @@ R Studio または別の環境から SQL Server に R コードを移動する�
 
 + R: たとえば、rowid が使用できないデータへの依存関係を排除することを検討し、SQL Server からのデータ型の GUID は、R で使用されることはできませんし、エラーが発生します。
 
-    詳細については、[R ライブラリとデータ型](../r/r-libraries-and-data-types.md)を参照してください。
+    詳細については、次を参照してください。 [R ライブラリとデータ型](../r/r-libraries-and-data-types.md)します。
 
 ## <a name="step-2-convert-or-repackage-code"></a>手順 2. 変換するか、コードを再パッケージ化
 
@@ -116,7 +116,7 @@ R Studio または別の環境から SQL Server に R コードを移動する�
 
     この R ソリューションは、T-SQL 関数のユーザー定義方法を示しています。 して、R は、同じ機能エンジニア リング タスクを実行できます。[データ サイエンスのエンド ツー エンド チュートリアル](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)します。
 
-+ 可能であれば、従来の R 関数を置き換える**ScaleR**分散的実行をサポートする関数。 詳細については、[比較の基本 R と R の機能をスケール](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)を参照してください。
++ 可能であれば、従来の R 関数を置き換える**ScaleR**分散的実行をサポートする関数。 詳細については、次を参照してください。[比較の基本 R と R の機能をスケール](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)します。
 
 + SQL Server の機能を使用して、パフォーマンスを向上させる方法を決定する、データベース開発者にご相談[メモリ最適化テーブルで](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)、または Enterprise Edition がある場合[リソース ガバナー](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor))。
 
@@ -143,7 +143,7 @@ R Studio または別の環境から SQL Server に R コードを移動する�
 
     次に、使用、 **sqlrutils**正しい形式で入力と出力を生成するパッケージ。 **Sqlrutils**パッケージは、ストアド プロシージャの完全なコードを生成し、データベースでストアド プロシージャを登録することもできます。 
 
-    詳細と例については、[sqlrutils (SQL)](ref-r-sqlrutils.md)を参照してください。
+    詳細と例については、次を参照してください。 [sqlrutils (SQL)](ref-r-sqlrutils.md)します。
 
 **他のワークフローとの統合します。**
 

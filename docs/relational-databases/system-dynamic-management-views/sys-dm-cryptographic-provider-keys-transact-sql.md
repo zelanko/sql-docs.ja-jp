@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d83a1a60162ba0124b8ff379f241b6bd64e89675
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742024"
 ---
-# <a name="sysdmcryptographicproviderkeys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
+# <a name="sysdmcryptographicproviderkeys-transact-sql"></a>sys.dm_cryptographic_provider_keys (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   拡張キー管理 (EKM: Extensible Key Management) プロバイダーによって提供されるキーに関する情報を返します。  
@@ -48,16 +48,16 @@ dm_cryptographic_provider_keys ( provider_id )
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**key_id**|**int**|プロバイダーのキーの識別番号|  
-|**key_name**|**nvarchar(512)**|プロバイダーのキーの名前|  
-|**key_thumbprint**|**varbinary(32)**|キーのプロバイダーのサムプリント|  
-|**algorithm_id**|**int**|プロバイダーのアルゴリズムの識別番号|  
+|**key_id**|**int**|プロバイダーのキーの識別番号。|  
+|**key_name**|**nvarchar(512)**|プロバイダーのキーの名前。|  
+|**key_thumbprint**|**varbinary(32)**|キーのプロバイダーのサムプリント。|  
+|**algorithm_id**|**int**|プロバイダーのアルゴリズムの識別番号。|  
 |**algorithm_tag**|**int**|プロバイダーのアルゴリズムのタグ|  
-|**key_type**|**nchar(256)**|プロバイダーのキーの型|  
+|**key_type**|**nchar(256)**|プロバイダーのキーの型。|  
 |**key_length**|**int**|プロバイダーのキーの長さ|  
   
 ## <a name="permissions"></a>アクセス許可  
- このビューに対してクエリを実行すると、ユーザー コンテキストがプロバイダーで認証され、ユーザーに表示されるすべてのキーが列挙されます。  
+ このビューを照会すると、プロバイダーを使用して、ユーザー コンテキストの認証、ユーザーに表示されるすべてのキーの列挙されます。  
   
  ユーザーが EKM プロバイダーで認証できない場合、キー情報は返されません。  
   
@@ -69,7 +69,7 @@ SELECT * FROM sys.dm_cryptographic_provider_keys(1234567);
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

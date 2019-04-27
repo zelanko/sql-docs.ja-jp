@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99973fe28d18dc28a0d6690567eb3923e74eb812
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780515"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>SQLXML 4.0 の .NET Framework サポート
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから XML データへのアクセス、[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 環境へのデータの移動、データの処理、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への更新の適用を行うアプリケーションを作成するための機能がサポートされています。 ここでは、.NET Framework のサポート機能について説明し、使用例を示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "60158116"
  [.NET 環境での SQLXML 一括読み込みの使用](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/sqlxml-4-0-net-framework-support-using-bulk-load.md)  
  .NET Framework での SQLXML 一括読み込みの使用方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML データの一括読み込みを実行する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

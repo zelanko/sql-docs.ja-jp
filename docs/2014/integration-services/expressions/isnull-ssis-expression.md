@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: df3612392859a8b7ed6301587cf4d630b2fecf4a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769148"
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL (SSIS 式)
   式が NULL かどうかに基づいてブール型の結果を返します。  
@@ -56,7 +56,7 @@ ISNULL(LastName)? "Unknown last name":LastName
 ISNULL(DaysToManufacture + @AddDays)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [関数 &#40;SSIS 式&#41;](functions-ssis-expression.md)   
  [COALESCE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/coalesce-transact-sql)  
   

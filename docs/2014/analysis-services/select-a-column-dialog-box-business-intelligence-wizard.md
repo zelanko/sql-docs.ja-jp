@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7aa506c8faa0e86979da47dfafb7c8525cde6e7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747776"
 ---
 # <a name="select-a-column-dialog-box-business-intelligence-wizard"></a>[列の選択] ダイアログ ボックス (ビジネス インテリジェンス ウィザード)
   **[列の選択]** ダイアログ ボックスを使用すると、ツリー ビューに表されるテーブルの一覧から列を選択できます。 ビジネス インテリジェンス ウィザードで、このダイアログ ボックスが表示されます。  
@@ -27,7 +27,7 @@ ms.locfileid: "48126072"
  **ツリー ビュー**  
  ビジネス インテリジェンス ウィザードの列を選択するには、列をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス インテリジェンス ウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)   
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8692091715592e1c0b821339c805679940fb2972
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740152"
 ---
 # <a name="levelname-property-ado-md"></a>LevelName プロパティ (ADO MD)
 レベルの名前を示す、[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)します。  
@@ -36,6 +36,6 @@ ms.locfileid: "47732860"
 ## <a name="applies-to"></a>適用対象  
  [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レベル オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)   
  [Name プロパティ (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa72d2c9e2fcf953e8c34d7fdddd656c76b0685
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632942"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>構造へのモデルの追加 (Excel 用データ マイニング アドイン)
   ![モデル構造 ボタンを追加](media/dmc-addmodel.gif "モデル構造 ボタンの追加")  
@@ -35,7 +35,7 @@ ms.locfileid: "52521040"
   
 2.  **構造の選択** ダイアログ ボックスで、をクリックし、使用するデータが含まれている構造を選択**次**します。  
   
-     **ヒント:**:不明などのマイニング構造には、必要なデータ使用にはが含まれています場合、**ドキュメント モデル**ウィザード列とデータに関する基本的な統計情報を表示します。  
+     **ヒント**:不明などのマイニング構造には、必要なデータ使用にはが含まれています場合、**ドキュメント モデル**ウィザード列とデータに関する基本的な統計情報を表示します。  
   
      マイニング構造が見つからない場合を使用している現在の接続を確認します。 別のサーバーへの接続を開く必要がある場合もあります。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "52521040"
   
     -   モデルからソース データへのドリルスルーを使用します。  
   
-         詳細については、[マイニング モデルでのドリルスルー](data-mining/drillthrough-on-mining-models.md)を参照してください。  
+         詳細については、次を参照してください。[マイニング モデルでのドリルスルー](data-mining/drillthrough-on-mining-models.md)します。  
   
 10. クリックして**完了**変更を保存します。 これにより、新しいモデルはサーバーに配置され処理されます。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "52521040"
 |------------|--------------|  
 |**構造またはモデルの選択** ダイアログ ボックス|新しいモデルの作成の基礎として使用する既存のマイニング構造を選択します。  選択する構造は、現在の接続にある必要があります。 そうでない場合は、を使用して接続を変更、[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)ツール。|  
 |**マイニング アルゴリズムの選択** ダイアログ ボックス|接続先のサーバーに応じて、データ マイニング アルゴリズムの一覧は異なります。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の Standard Edition と Enterprise Edition には異なるアルゴリズムが用意されています。 管理者が、カスタム アルゴリズムを追加している場合もあります。<br /><br /> 任意のアルゴリズムが見つからない場合は、インスタンスに接続されていることを確認[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。|  
-|**アルゴリズム パラメーター**  ダイアログ ボックス|これらの設定では、分析メソッドに固有のパラメーターを使用して各アルゴリズムをカスタマイズできます。 また、モデルの結果を複数のトレーニング パス間で再現できるようにシードを設定することもできます。<br /><br /> 詳細については、[アルゴリズム パラメーター &#40;SQL Server データ マイニング アドイン&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)を参照してください。|  
+|**アルゴリズム パラメーター**  ダイアログ ボックス|これらの設定では、分析メソッドに固有のパラメーターを使用して各アルゴリズムをカスタマイズできます。 また、モデルの結果を複数のトレーニング パス間で再現できるようにシードを設定することもできます。<br /><br /> 詳細については、次を参照してください。[アルゴリズム パラメーター &#40;SQL Server データ マイニング アドイン&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)します。|  
 |**列モデル フラグの設定** ダイアログ ボックス|モデリング フラグを使用すると、欠落しているデータの処理方法を指定してモデルを改善できます。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](data-mining/modeling-flags-data-mining.md)」を参照してください。|  
   
 ###  <a name="Bkmk_mdlcolumn"></a> 列の使用法の設定  
@@ -114,9 +114,9 @@ ms.locfileid: "52521040"
      分析の種類によっては、一意の規則に従って慎重に構造化されたデータが必要です。 例として、予測モデル、アソシエーション モデルなどがあります。 たとえば、カスタマイズを行って同じ種類の新しいモデルを簡単に追加できますが、データが他のアルゴリズムでは動作しない場合があります。  
   
 ### <a name="requirements"></a>必要条件  
- データ マイニング モデルを作成するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに接続する必要があります。 作成または接続を変更する方法の詳細については、[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)を参照してください。  
+ データ マイニング モデルを作成するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに接続する必要があります。 作成または接続を変更する方法の詳細については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)します。  
   
- 必要なデータ マイニング構造が表示されない場合、その構造が別のインスタンスまたは別の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに保存されている可能性があります。 別のデータ マイニング接続に変更する方法については、[データ マイニング サーバーに接続する](connect-to-a-data-mining-server.md)を参照してください。  
+ 必要なデータ マイニング構造が表示されない場合、その構造が別のインスタンスまたは別の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに保存されている可能性があります。 別のデータ マイニング接続に変更する方法については、次を参照してください。[データ マイニング サーバーに接続する](connect-to-a-data-mining-server.md)します。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング モデルの作成](creating-a-data-mining-model.md)   

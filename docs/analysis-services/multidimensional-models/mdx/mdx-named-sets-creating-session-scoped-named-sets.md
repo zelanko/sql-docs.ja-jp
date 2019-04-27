@@ -1,5 +1,5 @@
 ---
-title: セッション スコープの作成の名前付きセット (MDX) |Microsoft ドキュメント
+title: 名前付きセット (MDX) のセッション スコープの作成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdf177cedcd73069e73c1ec7b4c7db5cfb497969
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739992"
 ---
-# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>名前付きセットの名前付きセット、セッション スコープの作成の MDX
+# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>MDX 名前付きセット - セッション スコープを作成する名前付きセット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  多次元式 (MDX) セッション全体で使用できる名前付きセットを作成するには、[CREATE SET](../../../mdx/mdx-data-definition-create-set.md) ステートメントを使用します。 CREATE SET ステートメントを使用して作成された名前付きセットは、MDX セッションが閉じるまで削除されません。  
+  多次元式 (MDX) セッション全体で使用できる名前付きセットを作成するには、 [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) ステートメントを使用します。 CREATE SET ステートメントを使用して作成された名前付きセットは、MDX セッションが閉じるまで削除されません。  
   
  このトピックで説明するように、WITH キーワードの構文は非常に単純で使いやすいものです。  
   
@@ -35,7 +35,7 @@ CREATE SESSION SET [CURRENTCUBE. | <cube name>.]<Set Identifier> AS <Set Express
  CREATE SET の構文において、 `cube name` パラメーターには、名前付きセットのメンバーを格納するキューブの名前が入ります。 `cube name` パラメーターが指定されなかった場合は、名前付きセットのメンバーを格納するキューブとして、現在のキューブが使用されます。 さらに、 `Set_Identifier` パラメーターには名前付きセットの別名が入り、 `Set_Expression` パラメーターには名前付きセットの別名の参照先であるセット式が入ります。  
   
 ## <a name="create-set-example"></a>CREATE SET の例  
- 次の例では、Store キューブに基づいて `SetCities_2_3` 名前付きセットを作成するために CREATE SET ステートメントを使用します。 `SetCities_2_3` 名前付きセットのメンバーは、City&nbsp;2 および City&nbsp;3 にあるストアです。  
+ 次の例では、Store キューブに基づいて `SetCities_2_3` 名前付きセットを作成するために CREATE SET ステートメントを使用します。 `SetCities_2_3` 名前付きセットのメンバーは、City&#xA0;2 および City&#xA0;3 にあるストアです。  
   
 ```  
 create Session set [Store].[SetCities_2_3] as  
@@ -43,13 +43,13 @@ create Session set [Store].[SetCities_2_3] as
 [Data Stores].[ByLocation].[State].&[NH].&[City 03]}  
 ```  
   
- CREATE SET ステートメントを使って `SetCities_2_3` 名前付きセットを定義しているので、この名前付きセットは現在の MDX セッションが続く限り使用可能です。 次の例は、City&nbsp;2 と City&nbsp;3 のメンバーを返す有効なクエリです。 `SetCities_2_3` 名前付きセットを作成した後、セッションが閉じる前の任意の時点でこのクエリを実行できます。  
+ CREATE SET ステートメントを使って `SetCities_2_3` 名前付きセットを定義しているので、この名前付きセットは現在の MDX セッションが続く限り使用可能です。 次の例は、City&#xA0;2 と City&#xA0;3 のメンバーを返す有効なクエリです。 `SetCities_2_3` 名前付きセットを作成した後、セッションが閉じる前の任意の時点でこのクエリを実行できます。  
   
 ```  
 select SetCities_2_3 on 0 from [Store]  
 ```  
   
-## <a name="see-also"></a>参照  
- [名前付きセット & #40; のクエリ スコープの作成MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
+## <a name="see-also"></a>関連項目  
+ [クエリ スコープの名前付きセットの作成 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

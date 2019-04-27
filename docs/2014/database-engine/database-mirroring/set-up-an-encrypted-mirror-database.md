@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a74adba783f1a52bdd404e11f0f747234c47f4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754379"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>暗号化されたミラー データベースの設定
 
@@ -33,7 +33,7 @@ ms.locfileid: "48164202"
 
 <!-- Note: We cannot append '?view=sql-server-2016' to these, even tho in theory we might want to. -->
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [sp_control_dbmasterkey_password &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql)
 

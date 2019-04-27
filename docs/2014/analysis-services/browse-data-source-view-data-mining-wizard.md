@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f42b418a2cc40b3e805e0129dc3414c3db5bbdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650352"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>データ ソース ビューの参照 (データ マイニング ウィザード)
   **[データ ソース ビューの参照]** ダイアログ ボックスを使用すると、ウィザードの **[データ ソース ビューの選択]** ページで選択したデータ ソース ビューを表示できます。  
@@ -26,13 +26,13 @@ ms.locfileid: "48187285"
 > [!NOTE]  
 >  このページは、ウィザードの **[定義方法の選択]** ページで **[既存のリレーショナル データベースまたはデータ ウェアハウスを使用する]** を選択した場合のみ表示されます。  
   
- **詳細情報:**「[多次元モデルのデータ ソース ビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)」、「[データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」、「[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)」  
+ **詳細情報。**[データ ソース ビューでは、多次元モデル](multidimensional-models/data-source-views-in-multidimensional-models.md)、[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>および  
  **[ズーム]**  
  ダイアグラムに表示される詳細のレベルを変更します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [データ ソース ビューを選択します&#40;データ マイニング ウィザード。&#41;](select-data-source-view-data-mining-wizard.md)  
   

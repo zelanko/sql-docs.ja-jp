@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 18f7ebab7d6463c419d31464c1343d6fd03d4cec
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62738824"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (ODBC エラー コード)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "51672981"
   
  状態エラー コードの詳細については、次のトピックを参照してください。  
   
--   [付録 A: ODBC のエラー コード](https://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [付録 a:ODBC エラー コード](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
 -   [SQLSTATE マッピング](https://go.microsoft.com/fwlink/?LinkId=89355)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーとメッセージの処理](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

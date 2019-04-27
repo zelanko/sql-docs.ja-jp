@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770638"
 ---
 # <a name="aggregate-transformation"></a>集計変換
   集計変換は Average などの集計関数を列の値に適用し、その結果を変換出力にコピーします。 集計変換では、集計関数の他に GROUP BY 句を使用して集計範囲のグループを指定できます。  
@@ -100,7 +100,7 @@ ms.locfileid: "58384876"
   
  集計変換は非同期です。つまり、行ごとにデータを使用またはパブリッシュしません。 集計変換は行セット全体を使用してグループ化と集計を実行し、その結果をパブリッシュします。  
   
- この変換では列をパススルーすることはなく、変換によりパブリッシュされるデータ用に、新しい列がデータ フロー内に作成されます。 集計関数が適用される入力列、または変換がグループ化用に使用する入力列のみが、変換出力にコピーされます。 たとえば、集計変換入力には、3 つの列があります。**CountryRegion**、**市区町村**、および**母集団**します。 集計変換は、 **CountryRegion** 列によりグループ化を行い、 関数を **Population** 列に適用します。 したがって、出力には **City** 列は含まれません。  
+ この変換では列をパススルーすることはなく、変換によりパブリッシュされるデータ用に、新しい列がデータ フロー内に作成されます。 集計関数が適用される入力列、または変換がグループ化用に使用する入力列のみが、変換出力にコピーされます。 たとえば、集計変換入力に次の 3 つの列があるものとします: **CountryRegion**、**City**、**Population**。 集計変換は、 **CountryRegion** 列によりグループ化を行い、 関数を **Population** 列に適用します。 したがって、出力には **City** 列は含まれません。  
   
  また、複数の出力を集計変換に追加し、各集計を別々の出力に送ることもできます。 たとえば、集計変換が Sum および Average 関数を適用する場合に、各集計をそれぞれ別の出力に送ることができます。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "58384876"
 ## <a name="related-tasks"></a>Related Tasks  
  [集計変換を使用してデータセットの値を集計する](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ フロー](../data-flow.md)   
  [Integration Services の変換](integration-services-transformations.md)  
   

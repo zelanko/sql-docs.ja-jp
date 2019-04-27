@@ -9,18 +9,18 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 787b26c401f825c6c74298a803a16d59f1a37d04
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748714"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services をインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事は、インストールして構成する方法を説明します**SQL Server 2016 R Services**します。 SQL Server 2016 をした場合は、SQL Server で R コードの実行を有効にするには、この機能をインストールします。
 
-SQL Server 2017 での R 統合が提供されています[Machine Learning サービス](../r/r-server-standalone.md)Python の加算を反映します。 R 統合し SQL Server 2017 インストール メディアがある場合は、[SQL Server 2017 Machine Learning Services のインストール](sql-machine-learning-services-windows-install.md)機能を追加を参照してください。 
+SQL Server 2017 での R 統合が提供されています[Machine Learning サービス](../r/r-server-standalone.md)Python の加算を反映します。 R 統合し SQL Server 2017 インストール メディアがある場合は、次を参照してください。 [SQL Server 2017 Machine Learning Services のインストール](sql-machine-learning-services-windows-install.md)機能を追加します。 
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -41,7 +41,7 @@ SQL Server 2017 での R 統合が提供されています[Machine Learning サ�
   + 別のライブラリと、さまざまな実行可能ファイルを使用して SQL Server で実行するときよりも、異なる結果を取得します。
   + リソースの競合をリードする、SQL Server が外部ライブラリで実行されている R と Python スクリプトを管理することはできません。
   
-以前のバージョンの Revolution Analytics 開発環境または RevoScaleR パッケージを使用した場合、または SQL Server 2016 のプレリリース版をインストールした場合は、それらをアンインストールする必要があります。 RevoScaleR とその他の独自のパッケージのバージョンを実行することはできません。 以前のバージョンを削除することについては、[アップグレードと SQL Server Machine Learning Services のインストールに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)を参照してください。
+以前のバージョンの Revolution Analytics 開発環境または RevoScaleR パッケージを使用した場合、または SQL Server 2016 のプレリリース版をインストールした場合は、それらをアンインストールする必要があります。 RevoScaleR とその他の独自のパッケージのバージョンを実行することはできません。 以前のバージョンを削除することについては、次を参照してください。[アップグレードと SQL Server Machine Learning Services のインストールに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)します。
 
 > [!IMPORTANT]
 > セットアップが完了したら、必ずこの記事で説明されている追加の構成後の手順を完了してください。 この手順では、外部スクリプトを使用する SQL Server を有効にして、あなたに代わって R ジョブを実行する SQL Server に必要なアカウントを追加します。 構成の変更は、一般に、インスタンスの再起動またはスタート パッド サービスの再起動が必要です。
@@ -153,7 +153,7 @@ R の機能統合のみに設定する必要があります、 **MKL_CBWR**環�
 
     この時点で、**run_value** が 1 に設定されている必要があります。
 
-2. 開く、**サービス**パネルまたは SQL Server 構成マネージャー、ことを確認および**SQL Server スタート パッド サービス**が実行されています。 R がデータベース エンジンのインスタンスごとに 1 つのサービスが必要または Python をインストールします。 サービスの詳細については、[Extensibility framework](../concepts/extensibility-framework.md)を参照してください。
+2. 開く、**サービス**パネルまたは SQL Server 構成マネージャー、ことを確認および**SQL Server スタート パッド サービス**が実行されています。 R がデータベース エンジンのインスタンスごとに 1 つのサービスが必要または Python をインストールします。 サービスの詳細については、次を参照してください。 [Extensibility framework](../concepts/extensibility-framework.md)します。
 
 7. スタート パッドが実行されている場合は、外部スクリプトのランタイムは、SQL Server と通信できることを確認する単純な R を実行できる必要があります。 
 
@@ -183,7 +183,7 @@ R の機能統合のみに設定する必要があります、 **MKL_CBWR**環�
 
 インターネットに接続されたデバイスは、累積的更新プログラムは、Windows update では、一般的に適用されますが、制御された更新プログラムの次の手順を使用することもできます。 データベース エンジンの更新プログラムを適用するときは、同じインスタンスにインストールされている R ライブラリの累積的更新プログラムのセットアップが引き出されます。 
 
-切断されたサーバーは、追加の手順が必要です。 詳細については、[インターネット アクセスなしでコンピューターにインストール > の累積更新プログラムを適用](sql-ml-component-install-without-internet-access.md#apply-cu)を参照してください。
+切断されたサーバーは、追加の手順が必要です。 詳細については、次を参照してください。[インターネット アクセスなしでコンピューターにインストール > の累積更新プログラムを適用](sql-ml-component-install-without-internet-access.md#apply-cu)します。
 
 1. 既にインストールされているベースライン インスタンスで開始します。最初のリリースの SQL Server 2016、SQL Server 2016 SP 1、または SQL Server 2016 SP 2。
 
@@ -226,7 +226,7 @@ R の機能統合のみに設定する必要があります、 **MKL_CBWR**環�
 
 ### <a name="add-more-worker-accounts"></a>複数のワーカー アカウントを追加します。
 
-頻度の高い、R を使用すると思われる場合、または実行中のスクリプトを同時に多くのユーザーが予想される場合は、スタート パッド サービスに割り当てられているワーカー アカウントの数を増やすことができます。 詳細については、[SQL Server Machine Learning Services のユーザー アカウント プールを変更](../administration/modify-user-account-pool.md)を参照してください。
+頻度の高い、R を使用すると思われる場合、または実行中のスクリプトを同時に多くのユーザーが予想される場合は、スタート パッド サービスに割り当てられているワーカー アカウントの数を増やすことができます。 詳細については、次を参照してください。 [SQL Server Machine Learning Services のユーザー アカウント プールを変更](../administration/modify-user-account-pool.md)します。
 
 <a name="bkmk_optimize"></a>
 
@@ -242,7 +242,7 @@ Machine learning ジョブは優先順位を設定しを適切にリソースを
   
 - によって開始できる R アカウントの数を変更する[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]を参照してください[machine learning のユーザー アカウント プールを変更する](../administration/modify-user-account-pool.md)します。
 
-Standard Edition を使用している、リソース ガバナーがない場合は、動的管理ビュー (Dmv) は、拡張イベントと監視には、R で使用されているサーバーのリソースを管理するために Windows イベントを使用することができます。詳細については、[の監視と R Services を管理](../r/managing-and-monitoring-r-solutions.md)を参照してください。
+Standard Edition を使用している、リソース ガバナーがない場合は、動的管理ビュー (Dmv) は、拡張イベントと監視には、R で使用されているサーバーのリソースを管理するために Windows イベントを使用することができます。詳細については、次を参照してください。[の監視と R Services を管理](../r/managing-and-monitoring-r-solutions.md)します。
 
 ### <a name="install-additional-r-packages"></a>追加の R パッケージをインストールします。
 
@@ -250,7 +250,7 @@ R ソリューションを SQL Server を作成する基本的な R 関数、SQL
 
 SQL Server で使用するパッケージは、インスタンスによって使用される既定のライブラリにインストールする必要があります。 コンピューターで、R の別のインストールがある場合、またはユーザー ライブラリにパッケージをインストールした場合は、T-SQL からそれらのパッケージを使用することはできません。
 
-インストールして、R パッケージを管理するためのプロセスでは、SQL Server 2016 および SQL Server 2017 で異なります。 SQL Server 2016 では、データベース管理者は、ユーザーが必要な R パッケージをインストールする必要があります。 SQL Server 2017 では、データベースごとのレベルでパッケージを共有するユーザー グループを設定するか、または独自のパッケージをインストールするユーザーを有効にするデータベース ロールを構成します。 詳細については、[新しい R パッケージをインストール](../r/install-additional-r-packages-on-sql-server.md)を参照してください。
+インストールして、R パッケージを管理するためのプロセスでは、SQL Server 2016 および SQL Server 2017 で異なります。 SQL Server 2016 では、データベース管理者は、ユーザーが必要な R パッケージをインストールする必要があります。 SQL Server 2017 では、データベースごとのレベルでパッケージを共有するユーザー グループを設定するか、または独自のパッケージをインストールするユーザーを有効にするデータベース ロールを構成します。 詳細については、次を参照してください。[新しい R パッケージをインストール](../r/install-additional-r-packages-on-sql-server.md)します。
 
 ## <a name="next-steps"></a>次のステップ
 

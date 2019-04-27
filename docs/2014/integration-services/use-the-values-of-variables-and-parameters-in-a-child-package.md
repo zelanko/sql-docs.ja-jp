@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766105"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>子パッケージでの変数およびパラメーターの値の使用
   この手順では、構成の種類として親変数を使用するパッケージ構成を作成する方法について説明します。 この構成の種類を使用すると、親パッケージから実行される子パッケージが親内の変数にアクセスできるようになります。  
@@ -104,7 +104,7 @@ ms.locfileid: "58374964"
   
 13. **[閉じる]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[パッケージ構成]](../../2014/integration-services/package-configurations.md)   
  [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)   
  [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)   

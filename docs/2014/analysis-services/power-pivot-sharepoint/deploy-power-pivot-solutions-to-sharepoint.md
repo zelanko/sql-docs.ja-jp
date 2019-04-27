@@ -12,22 +12,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749253"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>SharePoint への PowerPivot ソリューションの配置
-  SharePoint Server 2010 環境に PowerPivot 機能を追加する 2 つのソリューション パッケージを手動で配置するには、次の手順に従います。 ソリューションの配置は、SharePoint 2010 サーバー上で PowerPivot for SharePoint を構成するために必要な手順です。 必要な手順の完全な一覧を表示するには、[サーバーの全体管理で PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)を参照してください。  
+  SharePoint Server 2010 環境に PowerPivot 機能を追加する 2 つのソリューション パッケージを手動で配置するには、次の手順に従います。 ソリューションの配置は、SharePoint 2010 サーバー上で PowerPivot for SharePoint を構成するために必要な手順です。 必要な手順の完全な一覧を表示するには、次を参照してください。[サーバーの全体管理で PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)します。  
   
- ソリューションの配置には、PowerPivot 構成ツールを使用することもできます。 シングル サーバー インストールでは構成ツールを使用するのが簡単で効率的ですが、使い慣れたツールを使用したい場合や、複数の機能を同時に構成する場合は、サーバーの全体管理と PowerShell を使用することもできます。 詳細については、構成ツールを使用して、[PowerPivot 構成ツール](power-pivot-configuration-tools.md)を参照してください。  
+ ソリューションの配置には、PowerPivot 構成ツールを使用することもできます。 シングル サーバー インストールでは構成ツールを使用するのが簡単で効率的ですが、使い慣れたツールを使用したい場合や、複数の機能を同時に構成する場合は、サーバーの全体管理と PowerShell を使用することもできます。 詳細については、構成ツールを使用して、次を参照してください。 [PowerPivot 構成ツール](power-pivot-configuration-tools.md)します。  
   
  ソリューションを配置する前に、まず、SQL Server 2012 インストール メディアを使用して、PowerPivot for SharePoint をインストールする必要があります。 SQL Server セットアップでは、配置しようとしているソリューション パッケージがインストールされます。  
   
  このトピックには、次のセクションが含まれます。  
   
- [前提条件:Web アプリケーションがクラシック モード認証を使用することを確認します。](#bkmk_classic)  
+ [前提条件: Web アプリケーションがクラシック モード認証を使用することを確認します。](#bkmk_classic)  
   
  [ステップ 1: ファーム ソリューションを配置します。](#bkmk_farm)  
   
@@ -48,8 +48,8 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  戻り値が **false**になる必要があります。 場合は**true**、この web アプリケーションでの PowerPivot データにアクセスすることはできません。  
   
-##  <a name="bkmk_farm"></a> 手順 1:ファーム ソリューションを配置します。  
- このセクションでは、PowerShell を使用したソリューションの配置方法を紹介しますが、同じタスクを PowerPivot 構成ツールを使用して実行することもできます。 詳細については、[構成または修復の PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;](../configure-repair-powerpivot-sharepoint-2010.md)を参照してください。  
+##  <a name="bkmk_farm"></a> ステップ 1:ファーム ソリューションを配置します。  
+ このセクションでは、PowerShell を使用したソリューションの配置方法を紹介しますが、同じタスクを PowerPivot 構成ツールを使用して実行することもできます。 詳細については、次を参照してください。[構成または修復の PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;](../configure-repair-powerpivot-sharepoint-2010.md)します。  
   
  このタスクは、PowerPivot for SharePoint をインストールした後で、一度だけ実行する必要があります。  
   
@@ -69,7 +69,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> 手順 2:サーバーの全体管理の PowerPivot Web アプリケーション ソリューションを配置します。  
+##  <a name="deployCA"></a> ステップ 2:サーバーの全体管理の PowerPivot Web アプリケーション ソリューションを配置します。  
  ファーム ソリューションを配置した後で、サーバーの全体管理に Web アプリケーション ソリューションを配置する必要があります。 この手順によって、サーバーの全体管理に PowerPivot 管理ダッシュボードが追加されます。  
   
 1.  **[管理者として実行]** オプションを使用して SharePoint 2010 管理シェルを開きます。  
@@ -96,7 +96,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  これで Web アプリケーション ソリューションがサーバーの全体管理に配置されたので、残りのすべての構成手順は、サーバーの全体管理を使用して実行できます。  
   
-##  <a name="deployUI"></a> 手順 3:他の Web アプリケーションに PowerPivot Web アプリケーション ソリューションを配置します。  
+##  <a name="deployUI"></a> ステップ 3:他の Web アプリケーションに PowerPivot Web アプリケーション ソリューションを配置します。  
  前のタスクでは、Powerpivotwebapp.wsp をサーバーの全体管理に配置しました。 ここでは、PowerPivot データ アクセスをサポートする既存の各 Web アプリケーションに powerpivotwebapp.wsp を配置します。 後でさらに Web アプリケーションを追加する場合は、それらの追加の Web アプリケーションに対して、この手順を繰り返してください。  
   
 1.  サーバーの全体管理で、[システム設定] の **[ファーム ソリューションの管理]** をクリックします。  
@@ -120,7 +120,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  **[ソリューションの取り消し]** をクリックします。  
   
- ファーム ソリューションに起因するサーバー配置の問題が発生した場合はこれを再配置を実行して、**修復**PowerPivot 構成ツールのオプション。 手動の手順が少なくて済むため、修復操作を行うときはこのツールを使用することをお勧めします。 詳細については、[構成または修復の PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;](../configure-repair-powerpivot-sharepoint-2010.md)を参照してください。  
+ ファーム ソリューションに起因するサーバー配置の問題が発生した場合はこれを再配置を実行して、**修復**PowerPivot 構成ツールのオプション。 手動の手順が少なくて済むため、修復操作を行うときはこのツールを使用することをお勧めします。 詳細については、次を参照してください。[構成または修復の PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;](../configure-repair-powerpivot-sharepoint-2010.md)します。  
   
  すべてのソリューションを再配置する場合は、次の順序で実行してください。  
   

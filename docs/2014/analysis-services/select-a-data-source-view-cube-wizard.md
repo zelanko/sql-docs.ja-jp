@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a5f82386128c8b4cac8e8a68719d4ece3f3489ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747734"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>[データ ソース ビューの選択] (キューブ ウィザード)
   **[データ ソース ビューの選択]** ページを使用すると、空のキューブのデータ ソース ビューを選択できます。  
@@ -30,10 +30,10 @@ ms.locfileid: "48210022"
  **データ ソース ビュー**  
  空のキューブに対して使用するデータ ソース ビューを選択します。  
   
- **なし**  
+ **None**  
  データ ソース ビューを作成しない場合は、このオプションを選択します。 このオプションは、データ ソース ビューを後で生成する場合や、リンク メジャー グループのみが含まれるキューブを使用する予定である場合に適しています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キューブ オブジェクト&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  

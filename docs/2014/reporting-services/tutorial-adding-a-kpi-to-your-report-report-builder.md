@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648233"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>チュートリアル:レポートへの KPI の追加 (レポート ビルダー)
   主要業績評価指標 (KPI) は、ビジネス上重要な測定可能値です。 このチュートリアルでは、レポートに KPI を追加する方法を説明します。 このシナリオの KPI は、製品サブカテゴリ別の販売集計です。 この KPI の現在の状態を、色、ゲージ、およびインジケーターを使用して表示します。  
@@ -332,7 +332,7 @@ ms.locfileid: "59946022"
 ## <a name="next-steps"></a>次の手順  
  これで、「レポートへの KPI の追加」チュートリアルを終了します。 詳細については、ゲージ (レポート ビルダー) を参照してください。[インジケーター&#40;レポート ビルダーおよび SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル&#40;レポート ビルダー&#41;](report-builder-tutorials.md)   
  [SQL Server 2014 のレポート ビルダー](report-builder/report-builder-in-sql-server-2016.md)  
   

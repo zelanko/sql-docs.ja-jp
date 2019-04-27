@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740606"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>新しい SQL Server フェールオーバー クラスターの作成 (セットアップ)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールまたはアップグレードするには、フェールオーバー クラスターの各ノードでセットアップ プログラムを実行する必要があります。 既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに追加するノードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する必要があります。 他のノードを管理するアクティブなノードでは、セットアップを実行しないでください。  
@@ -49,7 +49,7 @@ ms.locfileid: "53359384"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 高度/エンタープライズ フェールオーバー クラスター インストールは、次の手順で構成されています。  
   
--   新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの実行可能な所有者となる各ノードで、「 [準備](#prepare)」セクションに記載されたフェールオーバー クラスター セットアップの準備手順を実行します。 1 つのノードでフェールオーバー クラスター セットアップの準備が完了すると、指定したすべての設定を含む Configuration.ini ファイルが作成されます。 他のノードで準備を行うときには、同じ手順を実行する代わりに、最初のノードから自動生成された Configuration.ini ファイルを、セットアップ コマンド 詳細については、[SQL Server 2014 を使用したインストール、構成ファイル](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)を参照してください。 この手順ではノードのクラスター化の準備を行いますが、この手順が終了しても [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは操作できません。  
+-   新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの実行可能な所有者となる各ノードで、「 [準備](#prepare)」セクションに記載されたフェールオーバー クラスター セットアップの準備手順を実行します。 1 つのノードでフェールオーバー クラスター セットアップの準備が完了すると、指定したすべての設定を含む Configuration.ini ファイルが作成されます。 他のノードで準備を行うときには、同じ手順を実行する代わりに、最初のノードから自動生成された Configuration.ini ファイルを、セットアップ コマンド 詳細については、次を参照してください。 [SQL Server 2014 を使用したインストール、構成ファイル](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)します。 この手順ではノードのクラスター化の準備を行いますが、この手順が終了しても [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは操作できません。  
   
 -   ノードをクラスタリング用に準備した後、準備されたいずれかのノードでセットアップを実行します。 この手順で、フェールオーバー クラスター インスタンスを構成し、完了します。 この手順が終了すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスが操作できるようになり、そのインスタンスに対して事前に準備されたすべてのノードが、新しく作成された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの実行可能な所有者となります。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "53359384"
   
 6.  セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 確認が完了したら、 **[次へ]** をクリックして続行します。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
-7.  [プロダクト キー] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の無償のエディションをインストールするかどうか、または SQL Server の製品版の PID キーを持っているかどうかを指定します。 詳細については、[エディションと SQL Server 2014 のコンポーネントの](../../editions-and-components-of-sql-server-2016.md)を参照してください。  
+7.  [プロダクト キー] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の無償のエディションをインストールするかどうか、または SQL Server の製品版の PID キーを持っているかどうかを指定します。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネントの](../../editions-and-components-of-sql-server-2016.md)します。  
   
 8.  [ライセンス条項] ページで使用許諾契約書を読み、使用許諾条件に同意する場合は対応するチェック ボックスをオンにします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の機能向上に役立てるため、機能の使用状況オプションを有効にしてレポートを [!INCLUDE[msCoName](../../../includes/msconame-md.md)]に送信することもできます。 **[次へ]** をクリックして次に進みます。 セットアップを終了するには、 **[キャンセル]** をクリックします。  
   
@@ -182,9 +182,9 @@ ms.locfileid: "53359384"
   
     -   [セキュリティ モード] : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス用に Windows 認証または混合モード認証を選択します。 混合モード認証を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。  
   
-         デバイスが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]との接続を正常に確立した後のセキュリティ メカニズムは Windows 認証モード、混合モードのどちらの場合も同じです。 詳細については、[データベース エンジンの構成 - アカウントのプロビジョニング](../../install/database-engine-configuration-account-provisioning.md)を参照してください。  
+         デバイスが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]との接続を正常に確立した後のセキュリティ メカニズムは Windows 認証モード、混合モードのどちらの場合も同じです。 詳細については、次を参照してください。[データベース エンジンの構成 - アカウントのプロビジョニング](../../install/database-engine-configuration-account-provisioning.md)します。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [管理者] - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの 1 人以上のシステム管理者を指定する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** をクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。 詳細については、[データベース エンジンの構成 - アカウントのプロビジョニング](../../install/database-engine-configuration-account-provisioning.md)を参照してください。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [管理者] - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの 1 人以上のシステム管理者を指定する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** をクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。 詳細については、次を参照してください。[データベース エンジンの構成 - アカウントのプロビジョニング](../../install/database-engine-configuration-account-provisioning.md)します。  
   
      一覧の編集が完了したら、 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 構成ダイアログ ボックスの管理者の一覧を確認します。 一覧が完成したら、 **[次へ]** をクリックします。  
   
@@ -228,7 +228,7 @@ ms.locfileid: "53359384"
 30. 作成した単一ノードのフェールオーバーにノードを追加するには、追加する各ノードでセットアップを実行し、AddNode 操作の手順に従います。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;Setup&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。  
   
     > [!NOTE]  
-    >  複数のノードを追加する場合には、構成ファイルを使用してインストールを配置できます。 詳細については、[SQL Server 2014 を使用したインストール、構成ファイル](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)を参照してください。  
+    >  複数のノードを追加する場合には、構成ファイルを使用してインストールを配置できます。 詳細については、次を参照してください。 [SQL Server 2014 を使用したインストール、構成ファイル](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)します。  
     >   
     >  インストールする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エディションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター内のすべてのノードで一致している必要があります。 既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターに新しいノードを追加する場合は、エディションが既存のフェールオーバー クラスターのエディションと一致するように指定してください。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "53359384"
   
      続行するには、 **[次へ]** をクリックします。  
   
-8.  [プロダクト キー] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の無償のエディションをインストールするかどうか、または SQL Server の製品版の PID キーを持っているかどうかをクリックして指定します。 詳細については、[エディションと SQL Server 2014 のコンポーネントの](../../editions-and-components-of-sql-server-2016.md)を参照してください。  
+8.  [プロダクト キー] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の無償のエディションをインストールするかどうか、または SQL Server の製品版の PID キーを持っているかどうかをクリックして指定します。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネントの](../../editions-and-components-of-sql-server-2016.md)します。  
   
     > [!NOTE]  
     >  同じフェールオーバー クラスターに対して準備するすべてのノードで、同じプロダクト キーを指定する必要があります。  
@@ -324,7 +324,7 @@ ms.locfileid: "53359384"
   
 23. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」をご覧ください。  
   
-24. 前の手順を繰り返して、フェールオーバー クラスターの他のノードを準備します。 自動生成された構成ファイルを使用して他のノードの準備を行うこともできます。 詳細については、[SQL Server 2014 を使用したインストール、構成ファイル](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)を参照してください。  
+24. 前の手順を繰り返して、フェールオーバー クラスターの他のノードを準備します。 自動生成された構成ファイルを使用して他のノードの準備を行うこともできます。 詳細については、次を参照してください。 [SQL Server 2014 を使用したインストール、構成ファイル](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)します。  
   
 ## <a name="complete"></a>[完了]  
   
@@ -372,9 +372,9 @@ ms.locfileid: "53359384"
   
     -   [セキュリティ モード] : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス用に Windows 認証または混合モード認証を選択します。 混合モード認証を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。  
   
-         デバイスが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]との接続を正常に確立した後のセキュリティ メカニズムは Windows 認証モード、混合モードのどちらの場合も同じです。 詳細については、[データベース エンジンの構成 - アカウントのプロビジョニング](../../install/database-engine-configuration-account-provisioning.md)を参照してください。  
+         デバイスが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]との接続を正常に確立した後のセキュリティ メカニズムは Windows 認証モード、混合モードのどちらの場合も同じです。 詳細については、次を参照してください。[データベース エンジンの構成 - アカウントのプロビジョニング](../../install/database-engine-configuration-account-provisioning.md)します。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [管理者] - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの 1 人以上のシステム管理者を指定する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** をクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。 詳細については、[データベース エンジンの構成 - アカウントのプロビジョニング](../../install/database-engine-configuration-account-provisioning.md)を参照してください。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [管理者] - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの 1 人以上のシステム管理者を指定する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** をクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。 詳細については、次を参照してください。[データベース エンジンの構成 - アカウントのプロビジョニング](../../install/database-engine-configuration-account-provisioning.md)します。  
   
      一覧の編集が完了したら、 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 構成ダイアログ ボックスの管理者の一覧を確認します。 一覧が完成したら、 **[次へ]** をクリックします。  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6f4bb5bcf2584cba8265fb175b7581b6b40ce08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746136"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>[オブジェクト カウントの指定] (使用法に基づく最適化ウィザード)
   **[オブジェクト カウントの指定]** ページを使用すると、キューブ内のオブジェクト数を自動的に計算したり、推定カウントを手動で入力したりできます。 使用法に基づく最適化ウィザードでは、オブジェクト カウントを使用してストレージ要件を推定します。  
@@ -36,7 +36,7 @@ ms.locfileid: "48154062"
  **Count**  
  空のすべてのフィールドに対する **[推定カウント]** 列の値を計算し、再作成します。 既にカウントが表示されているフィールドは更新されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [集計デザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   
  [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   

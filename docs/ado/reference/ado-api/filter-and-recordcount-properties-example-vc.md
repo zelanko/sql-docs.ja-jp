@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3aef01723a9682907ac20be42d04bb02773557e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631257"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter および RecordCount プロパティの例 (vc++)
 この例では、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを開き、新しい[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)既存に適用される指定した条件に基づいて**レコード セット**します。 使用して、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)プロパティを 2 つのレコードの数を表示する**レコード セット**します。 FilterField 関数は、この手順を実行する必要があります。  
@@ -303,7 +303,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティをフィルター処理します。](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount プロパティ (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

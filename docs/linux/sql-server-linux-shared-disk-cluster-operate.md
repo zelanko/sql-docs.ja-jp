@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: d3db11a8ace49a206ffaff106814e87b64948cce
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633999"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux
 
@@ -58,7 +58,7 @@ Fci のフェールオーバーは、Windows Server フェールオーバー ク
 ## <a name = "#slesFailover"></a> 手動フェールオーバー (SLES)
 
 
-Suse Linux Enterprise Server (SLES) で使用して、 `migrate` SQL Server FCI を手動でフェールオーバー コマンドします。 以下に例を示します。
+Suse Linux Enterprise Server (SLES) で使用して、 `migrate` SQL Server FCI を手動でフェールオーバー コマンドします。 例:
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>
