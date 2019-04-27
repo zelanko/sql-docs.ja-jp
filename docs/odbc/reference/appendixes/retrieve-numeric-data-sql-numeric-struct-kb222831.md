@@ -1,6 +1,6 @@
 ---
 title: SQL_NUMERIC_STRUCT で数値データの取得 |Microsoft Docs
-description: ODBC を使用した C/C++ では、SQL_C_NUMERIC に関連する SQL_NUMERIC_STRUCT を使用して SQL Server の数値データ型を取得します。
+description: C/C++ SQL_NUMERIC_STRUCT、SQL_C_NUMERIC に関連するを使用して、SQL Server の数値データ型を取得する ODBC を使用します。
 editor: ''
 ms.prod: sql
 ms.technology: ''
@@ -12,11 +12,11 @@ ms.author: genemi
 authors: MightyPen
 manager: craigg
 ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629520"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>SQL を使用した数値のデータの取得\_数値\_構造体
 

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 409a541929e27a8076f2ab56cb95d928915c6eb7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631287"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>[配置] ([テキスト ボックスのプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[テキスト ボックスのプロパティ]** ダイアログ ボックスの **[配置]** を選択すると、選択したセルまたはデータ領域内で値の配置を調整できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "59944308"
  **下部にあります。**  
  セルの下端とセル内に表示される値の間の余白 (スペース) を指定します。 既定値は 2 ポイントです。 式を編集するには、 **式** (*[fx]*) ボタンをクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   

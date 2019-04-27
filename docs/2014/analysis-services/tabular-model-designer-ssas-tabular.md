@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 091f6d49c4cccbcba47d50bbde3b395d8ce9d260
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758561"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>テーブル モデル デザイナー (SSAS テーブル)
   テーブル モデル デザイナーの一部は、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、Microsoft と統合された[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]2010 またはそれ以降、プロフェッショナルなテーブル モデル ソリューションを開発するには、具体的には追加のプロジェクトの種類のテンプレートとします。  
@@ -125,7 +125,7 @@ ms.locfileid: "53364274"
  **キーボード ショートカット**  
  Analysis Services のキーボード ショートカットは、[ツール]  > [オプション] > [キーボード] ダイアログで構成/再マップできます。 テーブル モデル デザイナーのコンテキストでは、ビルド、保存、デバッグ、新しいプロジェクトなど、一部のグローバル [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ショートカットがサポートされています。 その他のテーブル モデル デザイナーに固有のショートカットは Analysis Services コンテキストです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル モデル プロジェクト (SSAS テーブル)](tabular-models/tabular-model-projects-ssas-tabular.md)   
  [プロパティ (SSAS テーブル)](tabular-models/properties-ssas-tabular.md)  
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 271c97f635db61c0e66b7a22608272fde145387c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649283"
 ---
 # <a name="upload-file-page-report-manager"></a>[ファイルのアップロード] ページ (レポート マネージャー)
   ファイル システムからレポート サーバー データベースにファイルをパブリッシュするには、[ファイルのアップロード] ページを使用します。 アップロードされたファイルは、レポート サーバーのフォルダー階層に、アイテムとして表示されます。  
@@ -56,7 +56,7 @@ ms.locfileid: "59944108"
  **アイテムが存在する場合は上書き**  
  既存のアイテムを新しいバージョンと置き換える場合に、このチェック ボックスをオンにします。 既存のバージョンを上書きするには、新しいアイテムと既存のアイテムの名前が完全に一致している必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [[コンテンツ] ページ (レポート マネージャー)](../../2014/reporting-services/contents-page-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   

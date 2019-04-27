@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 883a4afa68571c18e6dcaffe96d12644f611f99a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641337"
 ---
 # <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>R (SQL Server と RevoScaleR チュートリアル) で概要統計情報を計算します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,7 +51,7 @@ R IDE を使用するか、 **Rgui**このレッスンでは、R スクリプト
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 言語には、多くの集計関数が用意されていますが、 **rxSummary**で**RevoScaleR**などのさまざまなリモート コンピューティング コンテキストで実行をサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 同様の機能については、[RevoScaleR を使用してデータを集計](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)を参照してください。
+    R 言語には、多くの集計関数が用意されていますが、 **rxSummary**で**RevoScaleR**などのさまざまなリモート コンピューティング コンテキストで実行をサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 同様の機能については、次を参照してください。 [RevoScaleR を使用してデータを集計](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)します。
   
 3. コンソールに sumOut の内容を印刷します。
   

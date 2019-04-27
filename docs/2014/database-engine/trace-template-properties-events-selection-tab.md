@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ac74d361758cda8ec0b345b93e542d96c709e586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773458"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>[トレース テンプレートのプロパティ] ([イベントの選択] タブ)
   **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブを使用すると、 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] トレース テンプレートに含めるイベント クラスとデータ列の表示、編集、指定ができます。  
@@ -29,7 +29,7 @@ ms.locfileid: "48227794"
  **[イベント]** 列  
  イベント列のチェック ボックスをオンまたはオフにして、トレースするイベントを指定します。 イベントは、イベント カテゴリ別に分類されます。  
   
- **[全般]** タブの **[既存のテンプレートを基に新しいテンプレートを作成する]** を選択した場合、指定したテンプレートに応じてイベントが自動的に選択されます。 イベント クラスの詳細については、「 [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。  
+ **[全般]** タブの **[既存のテンプレートを基に新しいテンプレートを作成する]** を選択した場合、指定したテンプレートに応じてイベントが自動的に選択されます。 イベント クラスの詳細については、「 [SQL Server イベント クラスの参照](../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。  
   
  データ列  
  トレースするデータ列を指定するには、必要なイベント列とデータ列に対応するチェック ボックスをオンにします。 トレースに含まれる各イベントに対応するチェック ボックスがオンになっている場合、そのイベントのイベント列は既定ですべてオンになります。 **[全般]** タブの **[既存のテンプレートを基に新しいテンプレートを作成する]** をオンにした場合、指定したテンプレートに応じてデータ列とフィルターが自動的に選択されます。  
@@ -48,8 +48,8 @@ ms.locfileid: "48227794"
  **[列の構成]**  
  トレースとグループ化の結果で、1 つ以上の列を使用して列の順序を変更します。  
   
-## <a name="see-also"></a>参照  
- [トレース ファイルのイベントとデータ列を指定&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+## <a name="see-also"></a>関連項目  
+ [トレース ファイルに含めるイベントとデータ列の指定 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [トレースに表示される列を整理&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [トレース内のイベントをフィルター処理&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [フィルター情報の表示 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   

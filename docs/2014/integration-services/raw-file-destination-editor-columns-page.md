@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9bd9b370dbe030a745eb36c475f806316a5ef270
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766974"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>[Raw ファイル変換先エディター] ([列] ページ)
   ファイルに RAW データを書き込むための RAW ファイル変換先を構成するには、RAW ファイル変換先エディターを使用します。  
@@ -62,7 +62,7 @@ ms.locfileid: "58377553"
  **[出力の別名]**  
  出力列に使用する代替名を指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RAW ファイル変換先](data-flow/raw-file-destination.md)  
   
   

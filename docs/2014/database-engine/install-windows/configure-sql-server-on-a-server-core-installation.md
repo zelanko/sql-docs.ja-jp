@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8134b7a69df7254ce3609ddce24a15293c47efd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779734"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core インストールでの SQL Server の構成
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 の Server Core インストールで [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] を構成する方法について詳しく説明します。 
@@ -45,7 +45,7 @@ ms.locfileid: "58528514"
 -   [Server Core インストールの管理](https://go.microsoft.com/fwlink/?LinkId=245963)(https://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="install-updates"></a>の更新プログラムをインストールする  
- ここでは、Windows Server Core コンピューターに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の更新プログラムをインストールする方法について説明します。 常に最新のセキュリティ更新プログラムがインストールされた状態になるように、適切なタイミングで最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを評価してインストールすることをお勧めします。 インストールの詳細については[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Windows Server Core コンピューターで、[Server Core での SQL Server 2014 のインストール](install-sql-server-on-server-core.md)を参照してください。  
+ ここでは、Windows Server Core コンピューターに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の更新プログラムをインストールする方法について説明します。 常に最新のセキュリティ更新プログラムがインストールされた状態になるように、適切なタイミングで最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを評価してインストールすることをお勧めします。 インストールの詳細については[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Windows Server Core コンピューターで、次を参照してください。 [Server Core での SQL Server 2014 のインストール](install-sql-server-on-server-core.md)します。  
   
  製品の更新プログラムをインストールするための 2 つのシナリオを次に示します。  
   

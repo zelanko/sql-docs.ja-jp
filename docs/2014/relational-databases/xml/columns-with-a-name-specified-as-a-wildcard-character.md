@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1ec180247a3df15af58f95e041a0c426a35cdb4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637742"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>名前をワイルドカード文字で指定した列
   列名にワイルドカード文字 (\*) を指定した場合は、列名が指定されていない場合のように、列の内容が挿入されます。 `xml` 型以外の列の場合は、次の例で示すように内容がテキスト ノードとして挿入されます。  
@@ -36,7 +36,7 @@ WHERE E.BusinessEntityID=1
 FOR XML PATH;  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<row EmpID="1">KenJS??nchez</row>`  
   
@@ -71,7 +71,7 @@ GO
   
  `</row>`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FOR XML での PATH モードの使用](use-path-mode-with-for-xml.md)  
   
   

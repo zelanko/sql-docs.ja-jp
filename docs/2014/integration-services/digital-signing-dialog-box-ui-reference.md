@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccb874a18fcc7c9ded489b758852ad24ea35c45f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769828"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>[デジタル署名] ダイアログ ボックスの UI リファレンス
   **[デジタル署名]** ダイアログ ボックスを使用すると、デジタル署名を使用してパッケージに署名したり、署名を削除したりできます。 **[デジタル署名]** ダイアログ ボックスは、 **の** [SSIS] **メニューの** [デジタル署名] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]から使用できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "58387390"
  **[削除]**  
  デジタル署名を削除します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティの概要 &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

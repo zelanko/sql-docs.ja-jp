@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 3745c6cd8c340ce4ad89cac84c5b6286126e3f89
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641932"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (SQL Server での R ライブラリ)
 
@@ -51,7 +51,7 @@ RevoScaleR は、分散したデータ サイエンス用のプラットフォ�
 
 **RevoScaleR**データ ソースの作成および、場所を設定するための関数が含まれますか*コンピューティング コンテキスト*の計算が実行されます。 データ ソース オブジェクトは、接続文字列と一緒に必要な一連のデータを指定するコンテナーです。テーブル、ビュー、またはクエリとして定義されます。 ストアド プロシージャの呼び出しはサポートされていません。 SQL Server のシナリオに関連する関数は、次の表に一覧表示されます。
 
-SQL Server と R は、場合によっては異なるデータ型を使用します。 SQL と R のデータ型の間のマッピングの一覧は、[R-SQL データ型](r-libraries-and-data-types.md)を参照してください。
+SQL Server と R は、場合によっては異なるデータ型を使用します。 SQL と R のデータ型の間のマッピングの一覧は、次を参照してください。 [R-SQL データ型](r-libraries-and-data-types.md)します。
 
 | 関数| 説明|
 | ------- | ---------- |

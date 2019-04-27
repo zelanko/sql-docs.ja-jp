@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: edcb36cc38ea1ca89ded11dd0ef4dadd3116c6a2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767004"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>[パーティション処理変換先エディター] ([マッピング] ページ)
   **[パーティション処理変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列をパーティション列にマップできます。  
@@ -43,7 +43,7 @@ ms.locfileid: "58379028"
  **変換先列**  
  マップされているかどうかに関係なく、使用できる変換先列を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[パーティション処理変換先エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
  [[パーティション処理変換先エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  

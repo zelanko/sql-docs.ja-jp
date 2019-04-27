@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781107"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 統合のカスタム属性の概要
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の CLR (共通言語ランタイム) では、属性という説明用のキーワードを使用できます。 これらの属性は、メソッドやクラスなどの多くの要素に関する追加情報を提供します。 属性はオブジェクトのメタデータと共にアセンブリに保存され、記述したコードを他の開発ツールに説明したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部での実行時の動作に影響することを説明するために使用できます。  
@@ -88,7 +88,7 @@ End Class
   
  CLR ルーチン、ユーザー定義型、およびユーザー定義集計に必要なカスタム属性は、`Microsoft.SqlServer.Server` 名前空間で定義します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR ルーチンのカスタム属性](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
   
   

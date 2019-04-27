@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760833"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Access インベントリ (AccessToSQL) のエクスポート
 複数の Access データベースがあるし、に移行するものがわからない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロジェクト内のすべての Access データベースのインベントリをエクスポートすることができます。 確認し、データベースと移行するには、そのデータベース内のオブジェクトを決定するインベントリのメタデータを照会します。 このインベントリすることができます簡単に、次の質問に対する回答を検索します。  
@@ -42,7 +42,7 @@ ms.locfileid: "47746450"
 これらの質問回答に使用されるクエリの例は、このトピックの最後で提供されます。  
   
 ## <a name="exported-metadata"></a>エクスポートされたメタデータ  
-SSMA は、Access データベース、テーブル、列、インデックス、外部キー、クエリ、レポート、フォーム、マクロ、およびモジュールに関するメタデータをエクスポートします。 これらの項目のカテゴリのそれぞれについてのメタデータは、別のテーブルにエクスポートされます。 これらのテーブルのスキーマは、[Access のインベントリ スキーマ](access-inventory-schemas-accesstosql.md)を参照してください。  
+SSMA は、Access データベース、テーブル、列、インデックス、外部キー、クエリ、レポート、フォーム、マクロ、およびモジュールに関するメタデータをエクスポートします。 これらの項目のカテゴリのそれぞれについてのメタデータは、別のテーブルにエクスポートされます。 これらのテーブルのスキーマは、次を参照してください。 [Access のインベントリ スキーマ](access-inventory-schemas-accesstosql.md)します。  
   
 ## <a name="exporting-inventory-data"></a>インベントリ データをエクスポートします。  
 Access インベントリをエクスポートするに最初に開くまたは SSMA プロジェクトを作成し分析する Access データベースを追加する必要があります。 指定したそれらのデータベースに関するメタデータをエクスポートする SSMA プロジェクトにデータベースを追加した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースおよびスキーマです。 必要に応じて、SSMA は、メタデータを格納するテーブルを作成します。 SSMA を Access データベースに関するメタデータを追加し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
@@ -66,7 +66,7 @@ Access インベントリをエクスポートするに最初に開くまたは 
   
 5.  **移行先**コンボ ボックスに、移行、およびクリックするターゲット バージョンを選択**OK**します。  
   
-プロジェクトの作成の詳細については、[Creating and Managing Projects](creating-and-managing-projects-accesstosql.md)を参照してください。  
+プロジェクトの作成の詳細については、次を参照してください。 [Creating and Managing Projects](creating-and-managing-projects-accesstosql.md)します。  
   
 **検索データベースを追加するには**  
   
@@ -95,7 +95,7 @@ Access インベントリをエクスポートするに最初に開くまたは 
   
 8.  確認してください ページで、次のようにクリックします。**完了**します。  
   
-データベースをプロジェクトに追加する方法の詳細については、[の追加と削除の Access データベース ファイル](adding-and-removing-access-database-files-accesstosql.md)を参照してください。  
+データベースをプロジェクトに追加する方法の詳細については、次を参照してください。[の追加と削除の Access データベース ファイル](adding-and-removing-access-database-files-accesstosql.md)します。  
   
 **SQL Server に接続するには**  
   
@@ -107,7 +107,7 @@ Access インベントリをエクスポートするに最初に開くまたは 
   
     -   別のコンピューターで既定のインスタンスに接続する場合は、コンピューターの名前を入力します。  
   
-    -   名前付きインスタンスに接続する場合は、コンピューター名、バック スラッシュ、およびインスタンス名を入力します。 例: \myinstance します。  
+    -   名前付きインスタンスに接続する場合は、コンピューター名、バック スラッシュ、およびインスタンス名を入力します。 以下に例を示します。\Myinstance します。  
   
 3.  **データベース**ボックスに、エクスポートされたメタデータのターゲット データベースの名前を入力します。  
   

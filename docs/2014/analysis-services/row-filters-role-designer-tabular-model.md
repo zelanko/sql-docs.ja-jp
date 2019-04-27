@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f67f8d818b38387aef5723b5c6d15dc1958e145c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748184"
 ---
 # <a name="row-filters-role-designertabular-model"></a>行フィルター (ロール デザイナー) (テーブル モデル)
   ロール デザイナーの **[行フィルター]** ページを使用して、関連付けられているロールの行レベル フィルターを定義します。 行フィルターを定義できるのは、読み取りおよび読み取りと処理の権限を持つロールに対してだけです。  
@@ -36,8 +36,8 @@ ms.locfileid: "48061222"
  **DAX フィルター - \<tablename >**  
  ブール条件に評価される DAX 式を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル モデル ロール&#40;SSAS 表形式&#41;](tabular-models/roles-ssas-tabular.md)   
- [SSMS を使用してロールの管理&#40;SSAS 表形式&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [SSMS を使用したロールの管理 (SSAS テーブル)](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

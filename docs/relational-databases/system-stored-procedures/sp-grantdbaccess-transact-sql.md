@@ -18,11 +18,11 @@ ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: cb77f5d8bda6b05794499faa6e6e04d1fafa53ea
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636446"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_grantdbaccess**呼び出しユーザーの作成、追加のオプションがサポートされます。 データベース ユーザーを作成する方法の詳細については、[CREATE USER &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)を参照してください。 データベースからデータベース ユーザーを削除するには使用[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)します。  
+ **sp_grantdbaccess**呼び出しユーザーの作成、追加のオプションがサポートされます。 データベース ユーザーを作成する方法の詳細については、次を参照してください。 [CREATE USER &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)します。 データベースからデータベース ユーザーを削除するには使用[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)します。  
   
  **sp_grantdbaccess**ユーザー定義のトランザクション内で実行することはできません。  
   

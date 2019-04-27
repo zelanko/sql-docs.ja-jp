@@ -1,5 +1,5 @@
 ---
-title: bcp_batch |Microsoft Docs
+title: bcp_batch | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631386"
 ---
 # <a name="bcpbatch"></a>bcp_batch
   コミットの行すべて以前一括コピー プログラム変数からに送信される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって[bcp_sendrow](bcp-sendrow.md)します。  
@@ -50,7 +50,7 @@ hdbc
   
  呼び出すことができます**bcp_batch**したらすべて*n*行 (製品利用統計情報のアプリケーション) のように、受信データ転送がある場合またはします。 アプリケーションが要求されていない場合**bcp_batch**一括コピーされた行がコミットされた場合にのみ**bcp_done**が呼び出されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一括コピー関数](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -11,16 +11,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c3bbbc189df4a004f18e8b23dba22a6a9469e3a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765695"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>読み込み前のデータのフィルター処理 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]、サイズまたは Excel に読み込むデータのスコープを制限する場合に、データをフィルター処理します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -50,7 +50,7 @@ ms.locfileid: "52793015"
 ## <a name="next-steps"></a>次の手順  
  [Excel からデータを MDS にパブリッシュ&#40;MDS アドインの Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データの読み込み&#40;MDS アドインの Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [[フィルター] ダイアログ ボックス (Excel 用 MDS アドイン)](filter-dialog-box-mds-add-in-for-excel.md)   
  [列の並べ替え (Excel 用 MDS アドイン)](reorder-columns-mds-add-in-for-excel.md)  

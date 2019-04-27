@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a3d8f15f159ea41590c67677c2d020f0a5dbc79a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774969"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>オプション (クエリ実行-SQL Server ANSI ページ)
   ユーザーのクエリや、トリガーやストアド プロシージャが実行されている間、これらの ANSI (ISO) 規格の SET オプションの組み合わせによってクエリ処理環境が定義されます。 ただし、これらの SET オプションに、ISO 規格に準拠するために必要なオプションがすべて含まれているとは限りません。 このページを使用すると、ISO 規格で指定されているすべての設定、または設定の一部が使用されたクエリを [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で実行するように指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、**[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ ウィンドウを右クリックして **[クエリ オプション]** をクリックします。 **[クエリ オプション]** ダイアログ ボックスで、**[実行]** の下にある **[ANSI]** をクリックします。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c657fc64bcc844d7c17153f83489a35594027ffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756541"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>テクニカル リファレンス (Excel 用データ マイニング アドイン)
   Office 用データ マイニング アドインには、プログラマおよび高度なデータ マイニング担当者に役立つ機能があります。  

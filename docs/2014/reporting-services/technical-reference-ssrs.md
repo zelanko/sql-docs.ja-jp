@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24e88abe61ef373cb93449d44d40c47742f95898
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631766"
 ---
 # <a name="technical-reference-ssrs"></a>テクニカル リファレンス (SSRS)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] には、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を使用または管理するためのツールおよび PowerShell のリファレンス ドキュメントがあります。  
@@ -53,7 +53,7 @@ ms.locfileid: "59936688"
  ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") **Reporting Services WMI プロバイダー クラス ライブラリ**  
  [Reporting Services WMI プロバイダー ライブラリ リファレンス &#40;SSRS&#41;](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services のトラブルシューティングに関する TechNet Wiki の記事](https://go.microsoft.com/fwlink/?LinkID=209153)   
  [Reporting Services SharePoint モードのトラブルシューティングに関する TechNet Wiki の記事](https://go.microsoft.com/fwlink/?LinkID=209158)  
   

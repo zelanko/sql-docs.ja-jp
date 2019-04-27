@@ -19,13 +19,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2157462ca1f9509034f33208cce7aed2983ae4f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62644788"
 ---
-# <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
+# <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   呼び出し、 **sqlmaint**ユーティリティを含む文字列**sqlmaint**スイッチ。 **Sqlmaint**ユーティリティは、1 つまたは複数のデータベースでメンテナンス操作のセットを実行します。  
@@ -49,7 +49,7 @@ xp_sqlmaint 'switch_string'
  **-でしょうか。** スイッチで有効でない**xp_sqlmaint**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- [なし] : エラーが返されます、 **sqlmaint**ユーティリティが失敗します。  
+ なし。 エラーが返されます、 **sqlmaint**ユーティリティが失敗します。  
   
 ## <a name="remarks"></a>コメント  
  この手順は、SQL Server の認証でログオンしたユーザーによって呼び出される場合、 **-u"***login_id***"** と **-p"***パスワード***"** スイッチ前に付加されます*switch_string*実行前にします。 Windows 認証では、ユーザーがログインしている場合*switch_string*への変更なしで渡される**sqlmaint**します。  
@@ -71,7 +71,7 @@ EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
 The command(s) executed successfully.  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sqlmaint ユーティリティ](../../tools/sqlmaint-utility.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

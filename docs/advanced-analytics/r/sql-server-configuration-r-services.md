@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 9ad4d1a23a05db35e0c4b55473903dbf7e4265da
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641949"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R で使用するための SQL Server の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,7 +65,7 @@ Windows オペレーティング システムでは、クラッシュ ダンプ�
 
 ページ ファイルが格納されるディスクの速度も、パフォーマンスに影響する可能性があります。 ページ ファイルを SSD に格納したり、複数の SSD 間で複数のページ ファイルを使用すると、パフォーマンスを改善できる可能性があります。
 
-ページファイルのサイズ調整方法の詳細については、[64 ビット バージョンの Windows の適切なページ ファイル サイズを決定する方法](https://support.microsoft.com/kb/2860880)を参照してください。
+ページファイルのサイズ調整方法の詳細については、次を参照してください。 [64 ビット バージョンの Windows の適切なページ ファイル サイズを決定する方法](https://support.microsoft.com/kb/2860880)します。
 
 ## <a name="optimizations-at-instance-or-database-level"></a>インスタンスまたはデータベース レベルでの最適化
 

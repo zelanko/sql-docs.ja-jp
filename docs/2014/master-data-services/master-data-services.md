@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 841f2383b47a40ffd4b8a5d5357b08a9504a30c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764934"
 ---
 # <a name="master-data-services"></a>マスター データ サービス
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) は、マスター データ管理のための [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ソリューションです。 マスター データ管理 (MDM) とは、メンテナンス可能な形でマスターのリストをまとめることを目標に、データの非トランザクション リストを探索および定義するために組織が必要とする作業を表します。 MDM プロジェクトには、一般に、MDM テクノロジの実装と共に内部ビジネス プロセスの評価および再構築が含まれます。 優れた MDM ソリューションをビジネスの現場に導入することで、信頼性が高く分析可能なデータを一元的に管理できるようになるため、結果として、より的確な意思決定を行うことが可能になります。  
@@ -37,7 +37,7 @@ ms.locfileid: "56036543"
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]: これを使用して、データの管理や新しいエンティティおよび属性の作成を行うことができます。  
   
- MDS のリソースの概要については、、 [SQL Server マスター データ サービスのポータル](https://go.microsoft.com/fwlink/?LinkID=214272)を参照してください。  
+ MDS のリソースの概要については、次を参照してください。、 [SQL Server マスター データ サービスのポータル](https://go.microsoft.com/fwlink/?LinkID=214272)します。  
   
 |||  
 |-|-|  

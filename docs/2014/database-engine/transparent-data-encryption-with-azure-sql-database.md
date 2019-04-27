@@ -15,27 +15,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3551cf4db3ab1b84f04ba13dea414943fbb2ef44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773890"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL Database での Transparent Data Encryption
-  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 透過的なデータ暗号化 (プレビュー) では、アプリケーションに変更することがなく、データベース、関連付けられたバックアップ、および静止したトランザクション ログ ファイルのリアルタイムの暗号化と解読を実行することによって、悪意のあるアクティビティの脅威から保護を支援します。  
+  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] の透過的なデータの暗号化 (プレビュー版) は、データベース、関連するバックアップ、および静止したトランザクション ログのリアルタイム暗号化および暗号化解除を実行して、悪意のあるアクティビティの脅威から保護するのに役立ちます。アプリケーションに変更を加える必要はありません。  
   
  TDE では、データベース暗号化キーという対称キーを使用してデータベース全体のストレージを暗号化します。 [!INCLUDE[ssSDS](../includes/sssds-md.md)] では、データベース暗号化キーは、組み込みのサーバー証明書によって保護されます。 組み込みのサーバー証明書は、各 [!INCLUDE[ssSDS](../includes/sssds-md.md)] サーバーに対して一意です。 データベースが GeoDR リレーションシップの状態にある場合、データベースは各サーバーで異なるキーによって保護されます。 2 つのデータベースが同じサーバーに接続している場合は、同じ組み込みの証明書を共有します。 [!INCLUDE[msCoName](../includes/msconame-md.md)] は、少なくとも 90 日ごとにこれらの証明書を自動的に回転します。 TDE の一般的な説明については、「 [透過的なデータ暗号化 &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
   
- [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] は、Azure Key Vault と TDE との統合をサポートしていません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、Key Vault の非対称キーを使用できます。 詳細については、[例 a: Transparent Data Encryption Key Vault からの非対称キーを使用して](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)を参照してください。  
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] は、Azure Key Vault と TDE との統合をサポートしていません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、Key Vault の非対称キーを使用できます。 詳細については、次を参照してください[例 a:。Key Vault からの非対称キーを使用して transparent Data Encryption](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)します。  
   
 ||  
 |-|  
-|**適用対象**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([一部の地域でプレビュー](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+|**適用対象**:[!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([一部の地域でプレビュー](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
   
 > [!IMPORTANT]  
->  現在、これはプレビュー機能です。 その実装に同意し、承認[!INCLUDE[ssSDS](../includes/sssds-md.md)]を私のデータベースの transparent data encryption がライセンス契約 (エンタープライズ契約、Microsoft Azure 契約、またはマイクロソフト オンライン サブスクリプションでは、プレビューの条項契約書にも適用されるあらゆる[の追加使用条件の Microsoft Azure プレビュー](http://azure.microsoft.com/support/legal/preview-supplemental-terms/)します。  
+>  現在、これはプレビュー機能です。 [!INCLUDE[ssSDS](../includes/sssds-md.md)] の透過的なデータ暗号化をデータベースに実装すると、使用許諾契約書 (マイクロソフト エンタープライズ契約、Microsoft Azure 契約、マイクロソフト オンライン サブスクリプション契約など) に規定されたプレビューに関する条件、ならびに適用されるあらゆる [Microsoft Azure プレビューの追加使用条件](http://azure.microsoft.com/support/legal/preview-supplemental-terms/)の対象となることを認め、それに同意したことになります。  
   
- TDE の状態のプレビューが地理的リージョンのサブセットであっても適用されますのバージョン ファミリ V12[!INCLUDE[ssSDS](../includes/sssds-md.md)]だとして一般に可用性の状態として発表されます。 用に TDE を[!INCLUDE[ssSDS](../includes/sssds-md.md)]までの実稼働データベースで使用するためのものではありません[!INCLUDE[msCoName](../includes/msconame-md.md)]一般に、TDE がプレビューから昇格を発表 詳細については[!INCLUDE[ssSDS](../includes/sssds-md.md)]V12 を参照してください[新機能については Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)します。  
+ TDE のプレビューの状態は、 [!INCLUDE[ssSDS](../includes/sssds-md.md)] のバージョンのファミリ V12 が現在一般的に提供されている地理的領域のサブセットにおいても適用されます。 TDE がプレビューから GA に昇格されたことを [!INCLUDE[ssSDS](../includes/sssds-md.md)] が発表するまで、 [!INCLUDE[msCoName](../includes/msconame-md.md)] 用の TDE の実稼働データベースでの使用は想定されていません。 [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12 の詳細については、「 [Azure SQL Database の新機能](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)」をご覧ください。  
   
 ##  <a name="Permissions"></a> Permissions  
  プレビュー版にサインアップして Azure ポータル経由で、REST API または PowerShell を使用して TDE を構成するには、Azure の所有者、共同作成者、または SQL セキュリティ マネージャーとして接続する必要があります。  
@@ -44,7 +44,7 @@ ms.locfileid: "48049782"
   
 -   TDE のプレビュー版に既にサインアップしている必要があります。  
   
--   必要があります、データベース暗号化キーを作成する、[!INCLUDE[ssSDS](../includes/sssds-md.md)]管理者またはのメンバーである必要があります、 **dbmanager**マスターの役割がデータベースにあり、**コントロール**データベースに対する権限。  
+-   データベースの暗号化キーを作成するには、 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 管理者であるか、またはマスター データベースの **dbmanager** ロールのメンバーでありかつデータベースに対する **CONTROL** 権限を持っている必要があります。  
   
 -   ALTER DATABASE ステートメントを SET オプション付きで実行するには、 **dbmanager** ロールのメンバーシップだけが必要です。  
   

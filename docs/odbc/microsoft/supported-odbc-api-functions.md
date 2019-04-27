@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 460b1cb00f68e9b1940a1680625a173bc92e6f84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633402"
 ---
 # <a name="supported-odbc-api-functions"></a>サポートされている ODBC API 関数
 平準化の目的は、どのような機能を利用して、ドライバーからアプリケーションに通知するためにです。 Microsoft ODBC のデスクトップ データベース ドライバーでは、コアとレベル 1 のすべての関数をサポートします。  
   
- 関数と文法の適合性レベルの詳細については、[適合性レベル](../../odbc/reference/develop-app/conformance-levels.md)で、 *ODBC プログラマ リファレンス*を参照してください。  
+ 関数と文法の適合性レベルの詳細については、次を参照してください。[適合性レベル](../../odbc/reference/develop-app/conformance-levels.md)で、 *ODBC プログラマ リファレンス*します。  
   
  ODBC API 関数のサポートは、使用するドライバーに依存することができます。 次の表では、関数のサポートをまとめたものです。 左端の列は、各関数の一般的なリファレンス ページへのリンクを提供します。 これらの参照ページがでアルファベット順に一覧表示、 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)セクションの[ODBC プログラマ リファレンス](../../odbc/reference/odbc-programmer-s-reference.md)します。 ドライバー固有の注意事項については、それぞれに適切な指定のリンクを列には、関数がサポートされています。 これらのドライバー固有のトピックは、各ドライバーの他のプログラミングの詳細」セクションに表示されます。 または、関数に関する同じ注釈は、すべての ODBC デスクトップ データベース ドライバーに適用される場合、右端の列はその関数のデスクトップ データベース ドライバーのサポートを要約したトピックへのリンクを提供します。 これらのトピックは、現在のセクションでは、("サポートされている ODBC API 関数") の最後に一覧表示されます。  
   

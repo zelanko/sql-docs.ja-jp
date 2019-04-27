@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a31fb2b1b4e158773e2f286ed5a3530d90c201c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766415"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>[SQL Server Compact Edition 接続マネージャー エディター] ([接続] ページ)
   **[SQL Server Compact Edition 接続マネージャー エディター]** ダイアログ ボックスでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact データベースに接続するためのプロパティを指定できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "58385471"
  **[データベースのパスワードを入力]**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact データベースのパスワードを入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[SQL Server Compact Edition 接続マネージャー エディター] &#40;[すべて] ページ&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
   

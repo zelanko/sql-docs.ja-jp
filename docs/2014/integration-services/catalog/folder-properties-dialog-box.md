@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771588"
 ---
 # <a name="folder-properties-dialog-box"></a>[フォルダーのプロパティ] ダイアログ ボックス
   フォルダーには、`SSISDB` カタログ内のプロジェクトおよび環境が含まれます。 フォルダーごとに、フォルダーの内容に適用される権限を定義します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の権限の詳細については、「[catalog.grant_permission &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)」をご覧ください。  
@@ -36,7 +36,7 @@ ms.locfileid: "58376000"
   
 5.  **[OK]** をクリックして変更を受け入れ、 **[フォルダーのプロパティ]** ダイアログ ボックスを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; サーバー](integration-services-ssis-server-and-catalog.md)   
  [catalog.grant_permission &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)  
   

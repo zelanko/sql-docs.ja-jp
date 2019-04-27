@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0772ab148c413d685f046a5a238761edf647641b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788686"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>可用性グループ ウィザードの使用 (SQL Server Management Studio)
   このトピックでは、"新しい可用性グループ" ウィザード ( [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) を使用して、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]で AlwaysOn 可用性グループを作成および構成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
@@ -36,7 +36,7 @@ ms.locfileid: "53363884"
   
      [Security](#Security)  
   
--   **作成して、可用性の構成を使用して、グループ化します。**[新しい可用性グループ ウィザード (SQL Server Management Studio)](#RunAGwiz)  
+-   **可用性グループを作成して構成するには、次に従います。**[新しい可用性グループ ウィザード (SQL Server Management Studio)](#RunAGwiz)  
   
 > [!NOTE]  
 >  新しい可用性グループ ウィザードの代わりに、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] や [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell コマンドレットを使用する方法もあります。 詳細については、「 [可用性グループの作成 &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md) や [可用性グループの作成 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)で Always On 可用性グループを作成および構成する方法について説明します。  
@@ -111,12 +111,12 @@ ms.locfileid: "53363884"
   
      要件を満たすようにデータベースを変更した場合は、 **[更新]** をクリックして、データベース グリッドを最新の情報に更新します。  
   
-7.  **[レプリカの指定]** ページで、新しい可用性グループの 1 つまたは複数のレプリカを指定し、構成します。 このページには、4 つのタブがあります。 次の表では、これらのタブについて説明します。 詳細については、次を参照してください。、[レプリカの指定 ページ&#40;新しい可用性グループ ウィザード。レプリカ追加ウィザード&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)トピック。  
+7.  **[レプリカの指定]** ページで、新しい可用性グループの 1 つまたは複数のレプリカを指定し、構成します。 このページには、4 つのタブがあります。 次の表では、これらのタブについて説明します。 詳細については、「[[レプリカの指定] ページ &#40;新しい可用性グループウィザード: レプリカの追加ウィザード&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)」のトピックを参照してください。  
   
     |タブ|簡単な説明|  
     |---------|-----------------------|  
     |**レプリカ**|このタブを使用して、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを指定します。 現在接続しているサーバー インスタンスでプライマリ レプリカをホストする必要があることに注意してください。|  
-    |**エンドポイント**|このタブを使用して、既存の任意のデータベース ミラーリング エンドポイントを検証します。また、サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合は、エンドポイントを自動的に作成します。 **注:** ドメイン以外のユーザー アカウントで実行されているサーバー インスタンスが 1 つでもある場合、ウィザードを続行するには、サーバー インスタンスに手動で変更を加える必要があります。 詳細については、このトピックの「 [前提条件](#PrerequisitesRestrictions)」をご覧ください。|  
+    |**エンドポイント**|このタブを使用して、既存の任意のデータベース ミラーリング エンドポイントを検証します。また、サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合は、エンドポイントを自動的に作成します。 **注:** 任意のサーバー インスタンスが非ドメイン ユーザー アカウントで実行している場合は、変更を加える手動、サーバー インスタンスに、ウィザードを続行する前にする必要があります。 詳細については、このトピックの「 [前提条件](#PrerequisitesRestrictions)」をご覧ください。|  
     |**バックアップの設定**|このタブを使用して、可用性グループ全体についてバックアップの設定を指定し、各可用性レプリカのバックアップ優先順位を指定します。|  
     |**リスナー**|このタブを使用して、可用性グループ リスナーを作成します。 既定では、ウィザードによってリスナーは作成されません。|  
   
@@ -196,7 +196,7 @@ ms.locfileid: "53363884"
   
 -   **ブログ:**  
   
-     [AlwaysON - HADRON 学習シリーズ:Worker Pool Usage for HADRON 対応データベース](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server AlwaysOn チームのブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -204,7 +204,7 @@ ms.locfileid: "53363884"
   
 -   **ビデオ:**  
   
-     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 1:次世代の高可用性ソリューションの概要](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 1:次世代高可用性ソリューションの概要](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 2:AlwaysOn を使用したミッション クリティカルな高可用性ソリューションの構築](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
@@ -216,7 +216,7 @@ ms.locfileid: "53363884"
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  

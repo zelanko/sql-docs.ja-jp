@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90b4ec97a3ab31c93e92219b96724b75d7f86425
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782257"
 ---
 # <a name="filestream-access-level-server-configuration-option"></a>filestream access level サーバー構成オプション
   この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対する FILESTREAM のアクセス レベルを変更するには、filestream_access_level オプションを使用します。  
@@ -26,13 +26,13 @@ ms.locfileid: "52639278"
 > [!NOTE]  
 >  このオプションを有効にする前に、FILESTREAM の Windows 管理者設定を有効にする必要があります。 これらの設定は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に有効にできます。また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して有効にすることもできます。  
   
-|値|定義|  
+|[値]|定義|  
 |-----------|----------------|  
 |0|このインスタンスに対する FILESTREAM サポートを無効にします。|  
 |1|[!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にします。|  
 |2|[!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスおよび Win32 ストリーム アクセスに対して FILESTREAM を有効にします。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジンの構成 - Filestream](../../sql-server/install/database-engine-configuration-filestream.md)   
  [FILESTREAM の有効化と構成](../../relational-databases/blob/enable-and-configure-filestream.md)  
   

@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e5cac4a24abcca8c6ae17b598ed3eba5ec9c1f4e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774755"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>[オプション] ([テキスト エディター]/[テキスト形式]/[全般] ページ)
   特定の開発言語に関連付けられていないドキュメントを編集するときには、テキスト エディターが使用されます。このダイアログ ボックスを使用すると、テキスト エディターの全般的な編集の動作を変更できます。 この設定を表示するには、 **[ツール]** メニューの **[オプション]** をクリックして、 **[テキスト エディター]** フォルダーを展開し、さらに **[テキスト形式]** を展開して、 **[全般]** をクリックします。  
@@ -34,7 +34,7 @@ ms.locfileid: "51030069"
  **パラメーター情報**  
  テキスト形式エディターはこの機能をサポートしていません。  
   
-## <a name="settings"></a>[設定]  
+## <a name="settings"></a>設定  
  **仮想空間を有効にします。**  
  テキストの各行末にスペースを挿入します。 テキストの横の一定の場所にコメントを記述する場合に、このチェック ボックスをオンにします。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51030069"
   
  行が空白でない場合、 **[コピー]** または **[切り取り]** の動作はこの設定の影響を受けません。 何も選択されていない場合、行全体がコピーまたは切り取られます。 その後で **[貼り付け]** をクリックすると、行全体のテキストと行末文字が貼り付けられます。  
   
-## <a name="display"></a>表示  
+## <a name="display"></a>ディスプレイ  
  **行番号**  
  テキストの各行の横に行番号を表示します。  
   

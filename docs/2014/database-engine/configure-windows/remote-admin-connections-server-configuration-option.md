@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4e4894fa7e05c863095fdca7b26f448efe176216
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781488"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>remote admin connections サーバー構成オプション
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には専用管理者接続 (DAC) があります。 管理者は、DAC により、実行中のサーバーにアクセスして、診断関数や [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行したり、サーバー上の問題のトラブルシューティングを行ったりすることができます。このことは、サーバーがロックされていたり、異常状態で実行されたりしていて、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 接続に応答していない場合も同じです。 既定では、DAC はそのサーバー上のクライアントからしか使用できません。 リモート コンピューター上のクライアント アプリケーションから DAC を使用できるようにするには、sp_configure の remote admin connections オプションを使用します。  
@@ -30,7 +30,7 @@ ms.locfileid: "52640223"
   
  次の表は、remote admin connections オプションの使用可能な値の一覧です。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |0|ローカル接続のみで DAC を使用できることを示します。|  
 |1|リモート接続で DAC を使用できることを示します。|  
@@ -45,7 +45,7 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース管理者用の診断接続](diagnostic-connection-for-database-administrators.md)  
   
   

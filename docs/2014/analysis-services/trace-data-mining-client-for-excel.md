@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 688357b2357cba8fa868eca18b5c100cfff1722d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756463"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>トレース (Excel 用のデータ マイニング クライアント)
   ![トレース ボタン](media/misc-trace.gif "トレース ボタン")  
@@ -64,7 +64,7 @@ ms.locfileid: "48161311"
 ## <a name="understanding-statements-in-the-tracer"></a>トレーサーのステートメントについて  
  DMX は、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータ マイニング モデルを作成および操作するための言語です。 DMX を使用して、新しいデータ マイニング モデルの構造の作成、これらのモデルのトレーニング、およびモデルの参照、管理、予測を行うことができます。 DMX は、データ定義言語 (DDL) ステートメント、データ操作言語 (DML) ステートメント、および関数と演算子で構成されています。  
   
- ここでは、DMX ステートメントとその構文を詳しく説明しません。 ただし、内の情報を使用することができます、**トレーサー** DMX ステートメントの動作に関する詳細情報を検索するウィンドウ。 また、Excel 用のデータ マイニング アドインを使用すると、複雑な DMX ステートメントを作成したり、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーを操作したりできるようになります。 詳細については、[クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)を参照してください。  
+ ここでは、DMX ステートメントとその構文を詳しく説明しません。 ただし、内の情報を使用することができます、**トレーサー** DMX ステートメントの動作に関する詳細情報を検索するウィンドウ。 また、Excel 用のデータ マイニング アドインを使用すると、複雑な DMX ステートメントを作成したり、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーを操作したりできるようになります。 詳細については、次を参照してください。[クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)します。  
   
 > [!NOTE]  
 >  多くの DMX ステートメントはパラメーター化されます。 単純型の場合、ステートメントの下にパラメーターの値が表示されます。 一方、複合型の場合は、パラメーターの型のみが表示されます。  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92624d18c0e8aae6a549f0769277e5fd4fdd0c34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727286"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>属性の KeyColumns プロパティの変更
   属性の **KeyColumns** プロパティは変更できます。 たとえば、単一キーではなく複合キーをその属性のキーとして指定する場合があります。  
@@ -54,7 +54,7 @@ ms.locfileid: "52524358"
   
 8.  キー列の順序を変更するには、列を選択し、 **[上へ]** または **[下へ]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディメンションの属性のプロパティの参照](dimension-attribute-properties-reference.md)  
   
   

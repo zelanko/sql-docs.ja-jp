@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70f96b0146dbb38827b028e55a241296a5443c1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774094"
 ---
 # <a name="trace-table-properties-general-tab"></a>[トレース テーブルのプロパティ] ([全般] タブ)
   使用して、**全般**のタブ、**トレース テーブルのプロパティ**トレース テーブルのプロパティを表示 ダイアログ ボックス。  
@@ -48,7 +48,7 @@ ms.locfileid: "48052361"
   
 ## <a name="see-also"></a>関連項目  
  [トレース テーブルを開く &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
- [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
- [SQL Server プロファイラーのテンプレートとアクセス許可](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
+ [[SQL Server Profiler]](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

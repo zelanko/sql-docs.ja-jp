@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774980"
 ---
 # <a name="upgrade-database-engine"></a>データベース エンジンのアップグレード
   ここでは、アップグレード プロセスの準備および理解に必要な情報を提供します。内容は以下のとおりです。  
@@ -43,7 +43,7 @@ ms.locfileid: "51018567"
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のいずれかのエディションから別のエディションへアップグレードする前に、現在使用している機能がアップグレード先のエディションでサポートされているかどうかを確認します。  
   
 > [!NOTE]  
->  以前のバージョンの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise Edition から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードする場合は、"Enterprise Edition: コアベースのライセンス" または "Enterprise Edition" を選択してください。 これらの Enterprise エディションは、ライセンス モードのみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
+>  アップグレードすると[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の以前のバージョンから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition、Enterprise Edition を選択します。コア ベース ライセンスと Enterprise Edition。 これらの Enterprise エディションは、ライセンス モードのみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
   
 ## <a name="pre-upgrade-checklist"></a>アップグレード前のチェック リスト  
  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアップグレードは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムでサポートされています。 また、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンのデータベースを移行することもできます。 移行は、同じコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で行うことも、別のコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから行うこともできます。 移行オプションには、データベース コピー ウィザードの使用、バックアップ機能と復元機能、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] インポート/エクスポート ウィザードの使用、一括エクスポート/一括インポート方式があります。  

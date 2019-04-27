@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b091518f61944b3eb62f8abdc02f0270e086538a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767764"
 ---
 # <a name="integration-services-deployment-wizard"></a>Integration Services 配置ウィザード
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 配置ウィザードでは、プロジェクト配置モデルを使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの SSISDB カタログにプロジェクトが配置されます。  
@@ -53,7 +53,7 @@ ms.locfileid: "58389140"
   
  **[閉じる]** をクリックしてウィザードを終了します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サーバーへのプロジェクトの配置](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [プロジェクトとパッケージの展開](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   

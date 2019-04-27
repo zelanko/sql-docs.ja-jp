@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781567"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Visual Basic .NET の概要
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET は、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET の共通ランタイム ライブラリによってサポートされる、マネージド プログラミング言語の 1 つです。 このドキュメント内のサンプルの多くは [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET で記述されています。 SMO アプリケーションを開発するには、[!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] および [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] を使用できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "60154518"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、SMO アセンブリは [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] フォルダーにあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio .NET での Visual Basic SMO プロジェクトの作成](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)  
   
   

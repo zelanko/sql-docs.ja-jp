@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4587dda82f8e6e3d02581ebcd5a13bf0005b14ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757626"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>互換性レベル (SSAS テーブル SP1)
   指定できる*互換性レベル*、表形式モデル データベースを展開して既存のアップグレード時に、既存のテーブル モデル プロジェクトをアップグレードするときに、新しい表形式モデル プロジェクトを作成するときに、または PowerPivot ブックをインポートするときにします。  

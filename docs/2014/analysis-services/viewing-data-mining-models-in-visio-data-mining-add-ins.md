@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7461464f1e55c9a762dd663e4c770663c10bb1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756022"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Visio でのデータ マイニング モデルの参照 (データ マイニング アドイン)
   データ マイニング用 Visio 図形は、サーバーに接続して、既存のデータ マイニング モデルを表すダイアグラムを作成します。 ダイアグラムは、Visio のコントロールを使用してカスタマイズできますが、データのドリル ダウン、基になる統計の公開、基になるモデルの操作もすることができます。  
@@ -40,7 +40,7 @@ ms.locfileid: "48050642"
 |Visio 図形|サポートされているモデル|  
 |-----------------|----------------------|  
 |[デシジョン ツリー]|この図形はデシジョン ツリー アルゴリズムまたは線形回帰アルゴリズムに基づくモデルに使用します。|  
-|依存関係ネットワーク|この図形は Naive Bayes、デシジョン ツリー、アソシエーション ルールのいずれかのアルゴリズムに基づくモデルに使用します。|  
+|依存関係ネットワーク|次のアルゴリズムに基づくモデルには、この図形を使用します。Naive Bayes、デシジョン ツリー、またはアソシエーション ルール。|  
 |クラスター|この図形はクラスタリング アルゴリズムに基づくモデルに使用します。|  
   
  マイニング モデルのデータの種類に応じて、ウィザードに表示されるオプションも異なります。 たとえば、連続する数値を含む列はカテゴリ変数とは異なる方法で視覚化されます。  
@@ -77,7 +77,7 @@ ms.locfileid: "48050642"
   
  [デシジョン ツリー ダイアグラムのチュートリアル](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

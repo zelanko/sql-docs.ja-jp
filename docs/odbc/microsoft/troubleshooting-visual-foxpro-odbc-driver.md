@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f0576d017068b8ab0694da798c5be458f115e56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632608"
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>トラブルシューティング (Visual FoxPro ODBC ドライバー)
 次のセクションでは、パフォーマンスが向上し、Visual FoxPro ODBC ドライバーを使用しているときに発生する可能性の問題を解決する方法について説明します。  
@@ -50,7 +50,7 @@ ms.locfileid: "47667970"
   
 -   接続文字列で BackgroundFetch 属性のキーワードを使用します。  
   
- 接続文字列キーワードの属性については、[接続文字列を使用して](../../odbc/microsoft/using-connection-strings.md)を参照してください。  
+ 接続文字列キーワードの属性については、次を参照してください。[接続文字列を使用して](../../odbc/microsoft/using-connection-strings.md)します。  
   
 ## <a name="updating-multitiered-views"></a>多階層ビューを更新しています  
  多階層ビューは、ベース テーブルではなく、1 つまたは複数のビューに基づいてビューです。 更新プログラムが最上位のビューの基になる; ビューに移動下のレベルを 1 つだけにするには、多層ビュー内のデータを更新するときにベース テーブルは更新されません。  
@@ -58,10 +58,10 @@ ms.locfileid: "47667970"
 ## <a name="using-data-definition-language-ddl-in-stored-procedures"></a>ストアド プロシージャでのデータ定義言語 (DDL) の使用  
  Visual FoxPro のストアド プロシージャで CREATE TABLE または ALTER TABLE などの DDL を使用することはできません。  
   
- ストアド プロシージャで使用できる言語については、[ルール、トリガー、既定値、およびストアド プロシージャのサポート](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)を参照してください。  
+ ストアド プロシージャで使用できる言語については、次を参照してください。[ルール、トリガー、既定値、およびストアド プロシージャのサポート](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)します。  
   
 ## <a name="using-positioned-updates"></a>位置指定更新を使用します。  
  ドライバーは、位置指定更新をサポートしていません。 SQL の WHERE 句を使用すると、更新する行を識別できます。  
   
 ## <a name="using-the-set-ansi-command"></a>SET ANSI コマンドの使用  
- Visual FoxPro 開発者がいる場合は、設定の ANSI の既定の設定にある、ドライバーは、Visual FoxPro の OFF の既定の設定とは対照的に注意する必要があります。 設定の ANSI の設定に既定では、通常、正確な比較を実行する他の ODBC データ ソースで一貫して動作する Visual FoxPro データ ソースをできます。 既定の設定を変更することができます。 詳細については、[設定の ANSI](../../odbc/microsoft/set-ansi-command.md)を参照してください。
+ Visual FoxPro 開発者がいる場合は、設定の ANSI の既定の設定にある、ドライバーは、Visual FoxPro の OFF の既定の設定とは対照的に注意する必要があります。 設定の ANSI の設定に既定では、通常、正確な比較を実行する他の ODBC データ ソースで一貫して動作する Visual FoxPro データ ソースをできます。 既定の設定を変更することができます。 詳細については、次を参照してください。[設定の ANSI](../../odbc/microsoft/set-ansi-command.md)します。

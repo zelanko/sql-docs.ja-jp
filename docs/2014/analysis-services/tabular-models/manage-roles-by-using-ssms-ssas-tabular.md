@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d437313d93871de4a8f7cdb21b3c0e18df8c1f8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756978"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>SSMS を使用したロールの管理 (SSAS テーブル)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、配置したテーブル モデルのロールの作成、編集、および管理を行うことができます。  
@@ -82,7 +82,7 @@ ms.locfileid: "48218932"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、削除するロールを含むテーブル モデル データベースを展開し、 **[ロール]** を展開してから、ロールを右クリックして **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [ロール&#40;SSAS 表形式&#41;](roles-ssas-tabular.md)  
+## <a name="see-also"></a>関連項目  
+ [ロール (SSAS テーブル)](roles-ssas-tabular.md)  
   
   

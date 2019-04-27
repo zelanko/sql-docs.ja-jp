@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a66d4665af9980822f5ce4c41ed0b94964fa8c5
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634927"
 ---
 # <a name="languages-and-collations-analysis-services"></a>言語および照合順序 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -167,7 +167,7 @@ ms.locfileid: "58305990"
 ##  <a name="bkmk_gb18030"></a> Analysis Services での GB18030 のサポート  
  GB18030 は中華人民共和国が単独で中国語の文字のエンコードに使用している標準規格です。 GB18030 文字の長さは 1 バイト、2 バイト、4 バイトのいずれかです。 Analysis Services では、外部ソースからデータを処理する場合、データ変換はありません。 データは Unicode として格納されます。 クエリ時に、クライアント OS の設定に基づいてテキスト データがクエリの結果として返されると、Analysis Services クライアント ライブラリ (具体的には MSOLAP.dll OLE DB プロバイダー) を介して GB18030 変換が実行されます。 データベース エンジンは、GB18030 もサポートしています。 詳細については、「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のグローバリゼーションのシナリオ](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  

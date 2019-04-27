@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: de293cd7caf481c51e4195a82ac036526c477739
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642015"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>データ探索と SQL Server で R を使用した予測モデリング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "58511399"
 
 ## <a name="whats-different-about-revoscaler"></a>RevoScaleR の違いは何ですか。
 
-**RevoScaleR** パッケージには、並列処理とスケール機能を提供するために再設計された、最も一般的ないくつかの R 関数の実装が含まれます。 詳細については、[分散 RevoScaleR を使用したコンピューティング](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)を参照してください。
+**RevoScaleR** パッケージには、並列処理とスケール機能を提供するために再設計された、最も一般的ないくつかの R 関数の実装が含まれます。 詳細については、次を参照してください。[分散 RevoScaleR を使用したコンピューティング](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)します。
 
 また、RevoScaleR パッケージでは *実行コンテキスト*の変更もサポートされます。 つまり、ソリューション全体または 1 つの関数のみの場合、ローカル ワークステーションではなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをホストするコンピューターのリソースを使用して計算を行う必要があることを示すことができます。 これを行う利点は複数あります。不要なデータ移動を回避し、サーバー コンピューター上のより多くの計算リソースを活用することができます。
 
@@ -60,9 +60,9 @@ ms.locfileid: "58511399"
   
      **RevoPemaR** パッケージでは、R で独自の並列外部メモリ アルゴリズムを開発できます。  
   
-     これらのパッケージとその使用方法の詳細については、[は RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-revoscaler)と[RevoPemaR の概要](https://docs.microsoft.com/machine-learning-server/r/how-to-developer-pemar)を参照してください。 
+     これらのパッケージとその使用方法の詳細については、次を参照してください。[は RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-revoscaler)と[RevoPemaR の概要](https://docs.microsoft.com/machine-learning-server/r/how-to-developer-pemar)します。 
 
-+ **MicrosoftML**大幅に最適化された機械学習アルゴリズムと Microsoft データ サイエンス チームからのデータ変換のコレクションが含まれています。 アルゴリズムの多くは Azure Machine Learning でも使用されます。 詳細については、[SQL Server の MicrosoftML](ref-r-microsoftml.md)を参照してください。
++ **MicrosoftML**大幅に最適化された機械学習アルゴリズムと Microsoft データ サイエンス チームからのデータ変換のコレクションが含まれています。 アルゴリズムの多くは Azure Machine Learning でも使用されます。 詳細については、次を参照してください。 [SQL Server の MicrosoftML](ref-r-microsoftml.md)します。
 
 ### <a name="r-development-tools"></a>R 開発ツール
 
@@ -82,7 +82,7 @@ RevoScaleR パッケージを使用して接続するときに[!INCLUDE[ssNoVers
   
      R コードでこの関数を使用して、 *データ ソース*を定義します。 データ ソース オブジェクトではデータがあるテーブルとサーバーを指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対するデータの読み取りおよび書き込みタスクを管理します。
   
--   **RxInSqlServer** 関数を使用して、*計算コンテキスト*を指定できます。  つまり、R コードを実行する必要がある場所 (ローカル ワークステーションや [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをホストするコンピューターなど) を示すことができます。  詳細については、[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を参照してください。
+-   **RxInSqlServer** 関数を使用して、*計算コンテキスト*を指定できます。  つまり、R コードを実行する必要がある場所 (ローカル ワークステーションや [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをホストするコンピューターなど) を示すことができます。  詳細については、次を参照してください。 [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)します。
   
      計算コンテキストを設定した場合、影響を受けるのはリモートの実行コンテキストをサポートする計算のみです。これは、R 演算が RevoScaleR パッケージと、関連する関数で提供されることを意味します。 一般に、CRAN の標準パッケージに基づく R ソリューションはリモートの計算コンテキストでは実行できませんが、T-SQL で開始した場合は [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] コンピューター上で実行できます。 ただし、`rxExec` 関数を使用して R 関数を個別に呼び出し、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] でリモートで実行できます。
 

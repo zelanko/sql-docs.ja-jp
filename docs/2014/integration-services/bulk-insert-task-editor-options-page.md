@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e8ef0cc4c24383abe3554b71cda7c462d54a924d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771764"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>[一括挿入タスク エディター] ([オプション] ページ)
   **[一括挿入タスク エディター]** ダイアログ ボックスの **[オプション]** ページを使用すると、一括挿入操作のプロパティを設定できます。 一括挿入タスクにより、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のテーブルまたはビューに大量のデータがコピーされます。  
@@ -61,7 +61,7 @@ ms.locfileid: "58381054"
 > [!NOTE]  
 >  一括読み込み操作でインポートできない行は、1 つのエラーとしてカウントされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [一括挿入タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [一括挿入タスク エディター &#40;[接続] ページ&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   

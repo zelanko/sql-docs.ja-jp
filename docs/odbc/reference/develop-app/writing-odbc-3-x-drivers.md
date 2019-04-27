@@ -17,21 +17,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636107"
 ---
 # <a name="writing-odbc-3x-drivers"></a>ODBC 3.x ドライバーの作成
 次の表は、ODBC 3 関数のサポートを示します。*x*ドライバーおよび ODBC アプリケーションでは、マッピング関数が、ODBC 3 に対して呼び出されたときに、ドライバー マネージャーによってを実行します *。x*ドライバー。  
   
-|関数|サポートされている<br /><br /> で、<br /><br /> ODBC 3。*x*<br /><br /> ドライバーですか。|サポートされている<br /><br /> で、<br /><br /> ODBC 3。*x*<br /><br /> アプリケーションか。|マップされている/サポートされています<br /><br /> ODBC 3。*x*<br /><br /> ドライバー マネージャー<br /><br /> ODBC 3 の場合。*x*ドライバーですか?|  
+|関数|Supported<br /><br /> で、<br /><br /> ODBC 3。*x*<br /><br /> ドライバーですか。|Supported<br /><br /> で、<br /><br /> ODBC 3。*x*<br /><br /> アプリケーションか。|マップされている/サポートされています<br /><br /> ODBC 3。*x*<br /><br /> ドライバー マネージャー<br /><br /> ODBC 3 の場合。*x*ドライバーですか?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|いいえ|[1]|はい|  
-|**SQLAllocEnv**|いいえ|[1]|はい|  
+|**SQLAllocConnect**|いいえ|No[1]|はい|  
+|**SQLAllocEnv**|いいえ|No[1]|はい|  
 |**SQLAllocHandle**|はい|[はい]|いいえ|  
-|**SQLAllocStmt**|いいえ|[1]|はい|  
+|**SQLAllocStmt**|いいえ|No[1]|はい|  
 |**SQLBindCol**|はい|[はい]|いいえ|  
 |**SQLBindParam**|いいえ|[はい] [2]|はい|  
 |**SQLBindParameter**|はい|[はい]|いいえ|  
@@ -40,7 +40,7 @@ ms.locfileid: "52518549"
 |**SQLCancel**|はい|[はい]|いいえ|  
 |**SQLCloseCursor**|はい|[はい]|いいえ|  
 |**SQLColAttribute**|はい|[はい]|いいえ|  
-|**SQLColAttributes**|[3]|いいえ|はい|  
+|**SQLColAttributes**|No[3]|いいえ|はい|  
 |**SQLColumnPrivileges**|はい|[はい]|いいえ|  
 |**SQLColumns**|はい|[はい]|いいえ|  
 |**SQLConnect**|はい|[はい]|いいえ|  
@@ -52,7 +52,7 @@ ms.locfileid: "52518549"
 |**SQLDriverConnect**|はい|[はい]|いいえ|  
 |**SQLDrivers**|いいえ|はい|はい|  
 |**SQLEndTran**|はい|[はい]|いいえ|  
-|**Sqlerror 関数**|いいえ|[1]|はい|  
+|**SQLError**|いいえ|No[1]|はい|  
 |**SQLExecDirect**|はい|[はい]|いいえ|  
 |**SQLExecute**|はい|[はい]|いいえ|  
 |**SQLExtendedFetch**|はい|いいえ|いいえ|  
@@ -64,7 +64,7 @@ ms.locfileid: "52518549"
 |**SQLFreeHandle**|はい|[はい]|いいえ|  
 |**SQLFreeStmt**|はい|[はい]|いいえ|  
 |**SQLGetConnectAttr**|はい|[はい]|いいえ|  
-|**SQLGetConnectOption**|[5]|[1]|はい|  
+|**SQLGetConnectOption**|No[5]|No[1]|はい|  
 |**SQLGetCursorName**|はい|[はい]|いいえ|  
 |**SQLGetData**|はい|[はい]|いいえ|  
 |**SQLGetDescField**|はい|[はい]|いいえ|  
@@ -72,10 +72,10 @@ ms.locfileid: "52518549"
 |**SQLGetDiagField**|はい|[はい]|いいえ|  
 |**SQLGetDiagRec**|はい|[はい]|いいえ|  
 |**SQLGetEnvAttr**|はい|[はい]|いいえ|  
-|**SQLGetFunctions**|[6]|はい|はい|  
+|**SQLGetFunctions**|No[6]|はい|はい|  
 |**SQLGetInfo**|はい|[はい]|いいえ|  
 |**SQLGetStmtAttr**|はい|[はい]|いいえ|  
-|**SQLGetStmtOption**|[5]|[1]|はい|  
+|**SQLGetStmtOption**|No[5]|No[1]|はい|  
 |**SQLGetTypeInfo**|はい|[はい]|いいえ|  
 |**SQLMoreResults**|はい|[はい]|いいえ|  
 |**SQLNativeSql**|はい|[はい]|いいえ|  
@@ -90,7 +90,7 @@ ms.locfileid: "52518549"
 |**SQLPutData**|はい|[はい]|いいえ|  
 |**SQLRowCount**|はい|[はい]|いいえ|  
 |**SQLSetConnectAttr**|はい|[はい]|いいえ|  
-|**SQLSetConnectOption**|[5]|[1]|はい|  
+|**SQLSetConnectOption**|No[5]|No[1]|はい|  
 |**SQLSetCursorName**|はい|[はい]|いいえ|  
 |**SQLSetDescField**|はい|[はい]|いいえ|  
 |**SQLSetDescRec**|はい|[はい]|いいえ|  
@@ -99,12 +99,12 @@ ms.locfileid: "52518549"
 |**SQLSetParam**|いいえ|いいえ|はい|  
 |**SQLSetScrollOption**|はい|[はい]|いいえ|  
 |**SQLSetStmtAttr**|はい|[はい]|いいえ|  
-|**SQLSetStmtOption**|[5]|[1]|はい|  
+|**SQLSetStmtOption**|No[5]|No[1]|はい|  
 |**SQLSpecialColumns**|はい|[はい]|いいえ|  
 |**SQLStatistics**|はい|[はい]|いいえ|  
 |**SQLTablePrivileges**|はい|[はい]|いいえ|  
 |**SQLTables**|はい|[はい]|いいえ|  
-|**SQLTransact**|いいえ|[1]|はい|  
+|**SQLTransact**|いいえ|No[1]|はい|  
   
  [1] この関数は、ODBC 3 で非推奨とされます。*x*します。 ODBC 3。*x*アプリケーションは、この関数を使用する必要があります。 ただし、Open Group、または CLI の ISO 準拠のアプリケーションは、この関数を呼び出すことができます。  
   

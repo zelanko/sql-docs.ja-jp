@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 214a633d438f4097ec08d7afdf53f62f48b6600f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766025"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>[WMI データ リーダー タスク エディター] ([全般] ページ)
   **[WMI データ リーダー タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、WMI データ リーダー タスクの名前と説明を入力できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "58393780"
  **[説明]**  
  WMI データ リーダー タスクの説明を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[WMI データ リーダー タスク エディター] ([WMI オプション] ページ)](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
  [[式] ページ](expressions/expressions-page.md)   

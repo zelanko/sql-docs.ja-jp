@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779193"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>[フルテキスト カタログのプロパティ] ([テーブルとビュー] ページ)
   このダイアログ ページを使用すると、フルテキスト カタログに割り当てられたテーブルおよびビューを表示したり、変更したりできます。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **このデータベース内のすべての対象となるテーブル/ビュー オブジェクト**  
- 一意のインデックスが定義されていて、まだフルテキスト カタログに割り当てられていないテーブルおよびビューを一覧表示します。 テーブルまたはビューを選択してカタログに割り当てるには、リスト ボックスの項目を選択してから [->] ボタンを押します。  
+ 一意のインデックスが定義されていて、まだフルテキスト カタログに割り当てられていないテーブルおよびビューを一覧表示します。 テーブルまたはビューを選択して、カタログに割り当てる、リスト ボックス項目を選択および"-> ボタンを押します。  
   
  **カタログに割り当てられたテーブル/ビュー オブジェクト**  
  現在フル テキスト カタログに割り当てられているテーブルおよびビューを一覧表示します。  
@@ -53,10 +53,10 @@ ms.locfileid: "48202092"
 |||  
 |-|-|  
 |**自動**|基になるテーブル内のデータが変更、追加、または削除されると、フルテキスト インデックスは自動的に更新されます。|  
-|**手動**|データの変更、追加、またはインデックス付きのデータの削除時に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]変更を追跡します。 **[手動]** による変更の追跡が選択されている場合、インデックスはこれらの変更によって自動的に更新されません。 代わりに、管理者は変更を手動で適用を使用して、 [ALTER FULLTEXT INDEX.START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql)ステートメント。|  
+|**手動**|インデックス付きデータのデータが変更、追加、または削除されると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は変更を追跡します。 **[手動]** による変更の追跡が選択されている場合、インデックスはこれらの変更によって自動的に更新されません。 代わりに、管理者は変更を手動で適用を使用して、 [ALTER FULLTEXT INDEX.START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql)ステートメント。|  
 |**変更を追跡しません。**|このオプションが有効になっていると、カタログ内のインデックス付きデータへの変更は記録されません。 管理者は、FULL POPULATION または INCREMENTAL POPULATION のいずれかで ALTER FULLTEXT INDEX を使用してインデックスを構築する必要があります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
  [フルテキスト インデックスの作成](../relational-databases/indexes/indexes.md)  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c8de19a7497a1caa8322f25632e22b875e4cbad
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767224"
 ---
 # <a name="merge-transformation-editor"></a>マージ変換エディター
   **[マージ変換エディター]** を使用すると、マージする 2 つの並べ替え済みデータのセットの列を指定できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "58377990"
  **[マージの入力 2]**  
  マージの入力の 2 つ目の列を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [マージ変換およびマージ結合変換用にデータを並べ替える](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [マージ結合変換](data-flow/transformations/merge-join-transformation.md)   

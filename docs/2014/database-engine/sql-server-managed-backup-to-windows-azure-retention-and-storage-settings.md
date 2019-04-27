@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773549"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Windows Azure への SQL Server マネージド バックアップ - 保有期間とストレージの設定
   このトピックでは、データベースの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を構成する基本手順と、インスタンスの既定の設定を構成する手順について説明します。 また、インスタンスの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] サービスを一時停止して再開するために必要な手順についても説明します。  
@@ -133,7 +133,7 @@ ms.locfileid: "52534481"
     ```  
   
 ##  <a name="InstanceConfigure"></a> 既定の構成の有効化と[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]インスタンスの設定  
- 2 とおりの方法により、インスタンス レベルで [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] の既定の設定を有効にし、構成することができます。システムを使用してストアド プロシージャ`smart_backup.set_instance_backup`または**SQL Server Management Studio**します。 これら 2 つの方法について以下で説明します。  
+ 有効にし、既定値を構成できる[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]2 つの方法で、インスタンス レベルで設定します。システムを使用してストアド プロシージャ`smart_backup.set_instance_backup`または**SQL Server Management Studio**します。 これら 2 つの方法について以下で説明します。  
   
  **smart_backup.set_instance_backup:** 値を指定して**1**の*@enable_backup*パラメーター、バックアップを有効にし、既定の構成を設定できます。 これらの既定の設定は、インスタンス レベルで適用すると、このインスタンスに追加されるすべての新しいデータベースに適用されます。  初めて [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を有効にする場合は、インスタンスでの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] の有効化に加えて、次の情報の指定が必要です。  
   

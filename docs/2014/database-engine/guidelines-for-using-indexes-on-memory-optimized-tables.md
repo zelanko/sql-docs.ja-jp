@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779226"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルでのインデックス使用のガイドライン
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルのデータに効率的にアクセスするためにインデックスを使用します。 適切なインデックスを指定することにより、クエリのパフォーマンスが大幅に向上します。 たとえば、クエリを考えてみます。  
@@ -40,7 +40,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  メモリ最適化インデックスには、次の 2 種類があります。  
   
--   ポイント参照用に作成された非クラスター化ハッシュ インデックス。 ハッシュ インデックスの詳細については、[ハッシュ インデックス](hash-indexes.md)を参照してください。  
+-   ポイント参照用に作成された非クラスター化ハッシュ インデックス。 ハッシュ インデックスの詳細については、次を参照してください。[ハッシュ インデックス](hash-indexes.md)します。  
   
 -   範囲スキャンと並べ替えられたスキャン用に作成された非クラスター化インデックス。  
   

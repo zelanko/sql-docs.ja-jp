@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0db222683d16a2347d6aefc8f2c54a80e10f611c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760746"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>サーバーの登録の変更 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のサーバーの登録を変更する方法について説明します。 登録済みサーバーの接続情報はいつでも変更できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "52763813"
   
 2.  **[サーバー登録プロパティの編集]** ダイアログ ボックスで、サーバー、ログイン情報、または接続プロパティを変更し、 **[保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバーの登録](register-servers.md)  
   
   

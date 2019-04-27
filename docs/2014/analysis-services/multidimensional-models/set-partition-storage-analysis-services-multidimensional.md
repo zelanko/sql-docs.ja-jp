@@ -27,11 +27,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0738c0968606ea4f618f4d527db8c99cfff19296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741908"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>パーティション ストレージの設定 (Analysis Services - 多次元)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、ストレージ モードおよびキャッシュ オプションの標準ストレージ構成がいくつか用意されています。 これにより、更新通知、待機時間、およびデータの再構築に一般的に使用される構成が提供されます。  
@@ -78,7 +78,7 @@ ms.locfileid: "48052212"
   
  **[設定をディメンションに適用する]** チェック ボックスをオンにした場合は、メジャー グループに関連するディメンションに同じストレージ設定が適用されます。 ディメンションの値は、最初はパーティション値と同じになります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデル内のパーティション](partitions-in-multidimensional-models.md)  
   
   

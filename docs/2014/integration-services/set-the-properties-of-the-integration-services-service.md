@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b9382a04977fae7db3442cb58caba1850cbcc14f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766631"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>Integration Services サービスのプロパティを設定する
     
@@ -77,7 +77,7 @@ ms.locfileid: "58387480"
   
 7.  **[ファイル]** メニューの **[終了]** をクリックして **[サービス]** スナップインを終了します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サービスを管理する](../../2014/integration-services/manage-the-integration-services-service.md)  
   
   

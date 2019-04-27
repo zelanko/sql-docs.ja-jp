@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 54702cd96ba9327fe8bba8e4c82275dbdaef1bf8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767728"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) のイベント ハンドラー
   実行可能ファイル (パッケージ、Foreach ループ コンテナー、For ループ コンテナー、シーケンス コンテナー、およびタスク ホスト コンテナー) は実行時にイベントを発生させます。 たとえば、エラーが発生すると、OnError イベントが発生します。 これらのイベントに対してカスタム イベント ハンドラーを作成し、パッケージ機能を拡張すると、実行時のパッケージを容易に管理できます。 イベント ハンドラーは、次のタスクを実行できます。  
@@ -64,7 +64,7 @@ ms.locfileid: "58384890"
 -   イベント ハンドラーが使用するログ モードを指定します。  
   
 ## <a name="event-handler-content"></a>イベント ハンドラーの内容  
- イベント ハンドラーの作成方法は、パッケージの構築方法と同様です。つまり、イベント ハンドラーには、制御フロー内で順序付けられたタスクとコンテナーがあります。また、イベント ハンドラーにデータ フローを含めることもできます。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーには **[イベント ハンドラー]** タブが含まれており、これを使用してカスタム イベント ハンドラーを作成します。 詳細については、[SSIS パッケージのイベント ハンドラー](integration-services-ssis-event-handlers.md)を参照してください。  
+ イベント ハンドラーの作成方法は、パッケージの構築方法と同様です。つまり、イベント ハンドラーには、制御フロー内で順序付けられたタスクとコンテナーがあります。また、イベント ハンドラーにデータ フローを含めることもできます。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーには **[イベント ハンドラー]** タブが含まれており、これを使用してカスタム イベント ハンドラーを作成します。 詳細については、次を参照してください。 [SSIS パッケージのイベント ハンドラー](integration-services-ssis-event-handlers.md)します。  
   
  イベント ハンドラーは、プログラムによって作成することもできます。 詳細については、「 [プログラムによるイベントの処理](building-packages-programmatically/handling-events-programmatically.md)」を参照してください。  
   

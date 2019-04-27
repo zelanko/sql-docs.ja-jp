@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773298"
 ---
 # <a name="view-file-history"></a>ファイル履歴の表示
   使用することができます、**履歴**ソース管理ファイルのバージョン履歴を表示するコマンド。 この履歴には、ソース管理にファイルが追加またはチェックインされた日付と時刻が含まれています。  
@@ -45,7 +45,7 @@ ms.locfileid: "48184792"
   
  これらのタスクを実行する方法についてをクリックして、**ヘルプ**ボタン、**ファイルの履歴** ダイアログ ボックス。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [設定し、バージョン情報の取得](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [プロジェクト履歴の表示](../../2014/database-engine/view-project-history.md)   
  [ファイルの状態の表示](../../2014/database-engine/view-file-status.md)   

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 986813601be89e201978e50b76085752e4f34356
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767154"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>[OLE DB 変換先エディター] ([接続マネージャー] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先の OLE DB 接続を選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -157,7 +157,7 @@ ms.locfileid: "58381170"
  **[クエリの解析]**  
  クエリ テキストの構文を検査します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[OLE DB 変換先エディター] &#40;[マッピング] ページ&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [[OLE DB 変換先エディター] &#40;[エラー出力] ページ&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   

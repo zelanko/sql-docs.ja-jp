@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0e64b60c027f7d6750a1afdb9988e1d6aac3ac1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770614"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>緩やかに変化するディメンション ウィザードを使用して出力を構成する
   緩やかに変化するディメンション ウィザードは、緩やかに変化するディメンションの変換用のエディターとして機能します。 緩やかに変化するディメンションのデータのデータ フローを構築および構成する作業は、複雑なタスクになる場合があります。 緩やかに変化するディメンション ウィザードを使用すると、列のマッピング、ビジネス キーの列の選択、列の変化する属性の設定、および推定ディメンション メンバー サポートの構成などの手順の指針が示され、これにより、最も簡単な方法で、緩やかに変化するディメンションの変換出力のデータ フローを構築できます。  
@@ -79,7 +79,7 @@ ms.locfileid: "58392850"
 ## <a name="updating-slowly-changing-dimension-outputs"></a>緩やかに変化するディメンションの出力の更新  
  緩やかに変化するディメンションの変換出力の構成を最も簡単に更新するには、緩やかに変化するディメンション ウィザードを再実行し、ウィザード ページからプロパティを変更します。 また、 **[詳細エディター]** ダイアログ ボックスまたはプログラムによっても、緩やかに変化するディメンションの変換を更新できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)  
   
   

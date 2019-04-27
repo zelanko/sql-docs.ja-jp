@@ -10,11 +10,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788801"
 ---
 # <a name="backup-checksum-default"></a>バックアップ チェックサムの既定
   バックアップと復元中にバックアップ チェックサムを有効または無効にするために、バックアップ チェックサムの既定の設定を使用します。  
@@ -29,7 +29,7 @@ ms.locfileid: "48126739"
   
  この設定はすぐに有効になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バックアップ中または復元中にバックアップ チェックサムを有効または無効にする &#40;SQL Server&#41;](../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
   

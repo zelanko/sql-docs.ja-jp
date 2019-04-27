@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757971"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Power View レポートのレポート プロパティの構成
   この補足のレッスンでは、Adventure Works Internet Sales Model プロジェクトのレポートのプロパティを設定します。 レポートのプロパティを使用すると、Power View 内のモデル データの選択や表示をエンド ユーザーが簡単にできるようになります。 また、プロパティを設定して、特定の列やテーブルの非表示や、グラフで使う新しいデータの作成を行います。  
@@ -222,6 +222,6 @@ ms.locfileid: "53363464"
 ## <a name="next-steps"></a>次の手順  
  これで、Power View を使用してモデルのデータを表示できるようになりました。 SharePoint サイトの Analysis Services と Reporting Services のアカウントが、モデルを配置した Analysis Services インスタンスに対する読み取り権限を持っていることを確認します。  
   
- モデルを参照する Reporting Services のレポート データ ソースを作成するには、「[データ モデルの共有データ ソースの作成 (SSRS)](https://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx)」を参照してください。  
+ モデルを参照する Reporting Services のレポート データ ソースを作成するには、「 [データ モデルの共有データ ソースの作成 (SSRS)](https://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx)」を参照してください。  
   
   

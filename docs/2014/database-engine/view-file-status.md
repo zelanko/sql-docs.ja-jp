@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773368"
 ---
 # <a name="view-file-status"></a>ファイルの状態の表示
   ソース管理では、ソース管理の対象であるすべての項目について、状態の詳細な情報が保持されます。 その情報に基づいて、ファイルの現在の状態を確認し、項目の状態レポートを作成できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "48067072"
   
 2.  **ファイル**メニューで、**ソース管理**、 をクリック**SourceSafe プロパティ**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [設定し、バージョン情報の取得](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [プロジェクト履歴の表示](../../2014/database-engine/view-project-history.md)   
  [ファイルを取得します。](../../2014/database-engine/retrieve-files.md)   

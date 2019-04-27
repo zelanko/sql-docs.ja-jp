@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84bb1214991c26880a75409783cf40157fce2449
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635235"
 ---
 # <a name="advanced-settings-ssas"></a>[詳細設定] (SSAS)
   **テーブルのインポート ウィザード** からこのダイアログ ボックスを開くと、接続先のフラット ファイルのエンコードおよびロケールを指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
@@ -28,7 +28,7 @@ ms.locfileid: "48054882"
 |||  
 |-|-|  
 |項目|定義|  
-|**[エンコード]**|使用するエンコードの種類として ANSI または Unicode を指定します。<br /><br /> **Unicode** 値は UTF-16 エンコードに対応します。|  
+|**[エンコード]**|使用するエンコードの種類を指定します。ANSI または Unicode です。<br /><br /> **Unicode** 値は UTF-16 エンコードに対応します。|  
 |**ロケール**|ロケールを指定して、順序付けおよび日時の形式に関する言語固有の情報を提供します。|  
   
   

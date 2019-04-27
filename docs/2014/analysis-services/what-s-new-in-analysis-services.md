@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33296b1b3d1935f0f716a6e411c23481ee0e2789
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755961"
 ---
 # <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>どのような&#39;s New in Analysis Services と Business Intelligence
   多次元のモデルに対する Power View レポートをサポートしている機能が追加の例外で[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]以前のリリースから変更されていません。  

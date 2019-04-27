@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca0ef50d40b1c4d4f481bef4de89b43ff4a275c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650415"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template イベント クラス
   QN:Template イベントでは、クエリ テンプレートの内部使用に関する情報が報告されます。 クエリ テンプレートは、通知用のクエリ定義を共有するために [!INCLUDE[ssDE](../../includes/ssde-md.md)] で使用されるメカニズムです。 これらのテンプレートは、パラメーター テーブルと共に作成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、クエリ テンプレートの作成時、使用時、または破棄時にこの型のイベントが作成されます。  
@@ -34,7 +34,7 @@ ms.locfileid: "53349510"
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |EventClass|`int`|イベントの種類 = 201。|27|いいえ|  
 |EventSequence|`int`|このイベントのシーケンス番号。|51|いいえ|  
-|EventSubClass|`nvarchar`|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> テンプレートを作成します。クエリ通知テンプレートがデータベースに作成されていることを示します。<br /><br /> 一致したテンプレート:クエリ通知テンプレートが再利用された日時を示します。<br /><br /> テンプレートを削除します。クエリ通知テンプレートがデータベースから削除された日時を示します。|21|はい|  
+|EventSubClass|`nvarchar`|イベント サブクラスの種類です。各イベント クラスについての詳細な情報を提供します。 この列には次の値が含まれます。<br /><br /> テンプレートを作成します。クエリ通知テンプレートがデータベースに作成されたことを示します。<br /><br /> 一致したテンプレート:クエリ通知テンプレートが再利用された日時を示します。<br /><br /> テンプレートを削除します。データベースからクエリ通知テンプレートを削除する場合を示します。|21|はい|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  

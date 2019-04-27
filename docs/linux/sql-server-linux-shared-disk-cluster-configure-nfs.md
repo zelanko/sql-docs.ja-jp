@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 672e6142ee7196115ba10309e6ac5ef7aa7d151f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634754"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>NFS - SQL Server on Linux を構成するには、フェールオーバー クラスター インスタンス。
 
@@ -38,7 +38,7 @@ NFS サーバーで共有するフォルダーを構成する場合は、これ�
 
 ![05 nfsacl][1]
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>手順
 
 1. FCI の構成では、参加するサーバーのいずれかを選択します。 どれもかまいません。 
 
@@ -228,7 +228,7 @@ NFS サーバーで共有するフォルダーを構成する場合は、これ�
 
    * テストするには、そのフォルダーで、データベースを作成します。 次の例では、sqlcmd を使用して、データベースを作成、コンテキストを切り替える、ファイルは、OS レベルで存在し、一時的な場所を削除し、確認します。 SSMS を使用することができます。
 
-    ![15 createtestdatabase][4]
+    ![15-createtestdatabase][4]
  
    * 共有のマウントを解除します。 
 

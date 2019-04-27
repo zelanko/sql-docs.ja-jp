@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2f442f665f6292c529b4d2360494869d9a0b2c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642574"
 ---
 # <a name="field-visual-c-syntax-index-with-import"></a>フィールド (Visual C 構文のインデックスで #import)
 ## <a name="methods"></a>メソッド  
@@ -32,7 +32,7 @@ HRESULT AppendChunk( const _variant_t & Data );
 _variant_t GetChunk( long Length );  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 ```  
 long GetActualSize( );  
@@ -80,5 +80,5 @@ void PutValue( const _variant_t & pvar );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)

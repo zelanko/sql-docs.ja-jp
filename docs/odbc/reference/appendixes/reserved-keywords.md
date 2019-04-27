@@ -15,111 +15,111 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628894"
 ---
 # <a name="reserved-keywords"></a>予約済みキーワード
-次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語 SQL 文法の制約はありません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保する、アプリケーションはこれらのキーワードのいずれかを使用を避ける必要があります。 #**定義**SQL_ODBC_KEYWORDS 値には、これらのキーワードのコンマ区切りの一覧が含まれています。  
+次の単語は、ODBC 関数呼び出しで使用するために予約されています。 これらの単語 SQL 文法の制約はありません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保する、アプリケーションはこれらのキーワードのいずれかを使用を避ける必要があります。 #**定義**SQL_ODBC_KEYWORDS 値には、これらのキーワードのコンマ区切りの一覧が含まれています。  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|ACTION|ISOLATION|  
+|ACTION|分離|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
-|ALLOCATE|LAST|  
+|ALLOCATE|前の|  
 |ALTER|LEADING|  
 |AND|[LEFT]|  
 |ANY|LEVEL|  
 |ARE|LIKE|  
 |AS|LOCAL|  
 |ASC|[LOWER]|  
-|ASSERTION|MATCH|  
+|アサーション|MATCH|  
 |AT|MAX|  
 |AUTHORIZATION|MIN|  
 |AVG|[MINUTE]|  
 |BEGIN|MODULE|  
 |BETWEEN|[MONTH]|  
-|BIT|NAMES|  
+|BIT|名|  
 |BIT_LENGTH|NATIONAL|  
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|いいえ|  
+|カスケード|NO|  
 |CASE|なし|  
 |CAST|NOT|  
-|CATALOG|NULL|  
+|カタログ|NULL|  
 |CHAR|NULLIF|  
 |CHAR_LENGTH|NUMERIC|  
 |CHARACTER|OCTET_LENGTH|  
-|CHARACTER_LENGTH|OF|  
+|CHARACTER_LENGTH|の|  
 |CHECK|ON|  
-|CLOSE|ONLY|  
+|CLOSE|のみ|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|OR|  
+|COLLATION|スイッチまたは|  
 |COLUMN|ORDER|  
-|COMMIT|OUTER|  
+|COMMIT|外側|  
 |CONNECT|OUTPUT|  
 |CONNECTION|重複|  
-|CONSTRAINT|PAD|  
+|CONSTRAINT|パッド|  
 |CONSTRAINTS|PARTIAL|  
 |CONTINUE|PASCAL 形式|  
 |CONVERT|位置|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
-|CROSS|PRIMARY|  
+|クロス|PRIMARY|  
 |CURRENT|PRIOR|  
-|CURRENT_DATE|PRIVILEGES|  
+|CURRENT_DATE|特権|  
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
 |CURSOR|real|  
 |[DATE]|REFERENCES|  
 |[DAY]|RELATIVE|  
-|DEALLOCATE|RESTRICT|  
-|DEC|REVOKE|  
+|DEALLOCATE|制限|  
+|12 月|REVOKE|  
 |[DECIMAL]|[RIGHT]|  
 |DECLARE|ROLLBACK|  
 |DEFAULT|ROWS|  
-|DEFERRABLE|SCHEMA|  
-|DEFERRED|SCROLL|  
+|遅延可能|SCHEMA|  
+|遅延|SCROLL|  
 |Del|[SECOND]|  
-|DESC|SECTION|  
-|DESCRIBE|SELECT|  
+|DESC|セクション|  
+|について説明します|SELECT|  
 |DESCRIPTOR|SESSION|  
-|DIAGNOSTICS|SESSION_USER|  
+|診断|SESSION_USER|  
 |DISCONNECT|SET|  
 |DISTINCT|SIZE|  
 |DOMAIN|SMALLINT|  
 |DOUBLE|SOME|  
-|DROP|Space|  
-|ELSE|SQL|  
+|DROP|SPACE|  
+|その他|SQL|  
 |END|SQLCA|  
 |END-EXEC|SQLCODE|  
-|ESCAPE|SQLERROR|  
+|ESCAPE|SQLERROR 関数|  
 |EXCEPT|SQLSTATE|  
-|EXCEPTION|SQLWARNING|  
+|例外|行いません|  
 |EXEC|[SUBSTRING]|  
 |EXECUTE|SUM|  
 |EXISTS|SYSTEM_USER|  
 |EXTERNAL|TABLE|  
-|EXTRACT|TEMPORARY|  
+|EXTRACT|一時|  
 |FALSE|THEN|  
 |FETCH|TIME|  
 |FIRST|timestamp|  
 |[FLOAT]|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
-|FORTRAN|TRAILING|  
-|FOUND|TRANSACTION|  
-|FROM|変換|  
-|FULL|TRANSLATION|  
+|FORTRAN|末尾|  
+|見つかりません|TRANSACTION|  
+|FROM|TRANSLATE|  
+|FULL|翻訳|  
 |GET|TRIM|  
 |GLOBAL|TRUE|  
 |GO|UNION|  
@@ -134,7 +134,7 @@ ms.locfileid: "47626340"
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  
-|INITIALLY|VIEW|  
+|最初に|VIEW|  
 |INNER|WHEN|  
 |INPUT|WHENEVER|  
 |INSENSITIVE|WHERE|  

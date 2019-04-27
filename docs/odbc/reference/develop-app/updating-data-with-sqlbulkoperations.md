@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 958514adc02452cdc75a05e7ad28cd31f4e8e0e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632445"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>SQLBulkOperations によるデータの更新
 アプリケーションへの呼び出しで、データ ソースの基になるテーブルでの一括更新、削除、fetch、または挿入操作を実行できます**SQLBulkOperations**します。 呼び出す**SQLBulkOperations**を構築して、SQL ステートメントの実行に代わる便利な方法です。 位置指定更新をサポートして、データ ソースが配置されている SQL ステートメントをサポートしていない場合にも ODBC ドライバーことができます。 関数呼び出しを使用してデータベースの完全なアクセスを実現するためのパラダイムの一部になります。  

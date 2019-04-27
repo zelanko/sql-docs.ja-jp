@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 647fa27d872829a60d32c0cdc7686938ae796f2a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770378"
 ---
 # <a name="create-relationships"></a>[リレーションシップの作成]
   **[リレーションシップの作成]** ダイアログ ボックスを使用すると、[あいまい参照変換エディター]、[参照変換エディター]、および [用語参照変換エディター] で設定したソース列と参照テーブル列の間のマッピングを編集できます。  
@@ -48,7 +48,7 @@ ms.locfileid: "58377650"
  **[類似出力の別名]**  
  選択された列の類似スコアを格納する、新しい出力列に付ける名前を指定します。 この値を空にした場合、出力列は作成されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services-error-and-message-reference.md)   
  [あいまい参照変換エディター ([列] タブ)](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [[参照変換エディター] &#40;[列] ページ&#41;](../../lookup-transformation-editor-columns-page.md)   

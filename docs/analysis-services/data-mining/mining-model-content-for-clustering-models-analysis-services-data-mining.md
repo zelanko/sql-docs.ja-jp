@@ -1,5 +1,5 @@
 ---
-title: クラスタ リング モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: クラスタ リング モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3344fbcd8a1a31f0bb98a8a1702f1535eb831b3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736232"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34019169"
   
  親ノードには、すべてのトレーニング ケースの実際の分布を表す便利な統計も含まれています。 これらの統計は、入れ子になったテーブル列である NODE_DISTRIBUTION に含まれています。 たとえば次の表は、「 `TM_Clustering`基本的なデータ マイニング チュートリアル [」で作成したクラスター モデル (](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)) の顧客の人口統計の分布を表す NODE_DISTRIBUTION テーブルのいくつかの行を示しています。  
   
-|ATTRIBUTE_NAME|ATRIBUTE_VALUE|[別名]|PROBABILITY|VARIANCE|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
 |Age|Missing|0|0|0|1 (Missing: 不足)|  
 |Age|44.9016152716593|12939|1|125.663453102554|3 (Continuous: 連続)|  
@@ -70,7 +70,7 @@ ms.locfileid: "34019169"
  NODE_TYPE  
  クラスター モデルでは次のノード型が出力されます。  
   
-|ノード ID とノード名|Description|  
+|ノード ID とノード名|説明|  
 |----------------------|-----------------|  
 |1 (モデル)|モデルのルート ノードです。|  
 |5 (クラスター)|クラスター内のケースの数および特性と、クラスター内の値を説明する統計が含まれます。|  
@@ -143,20 +143,20 @@ ms.locfileid: "34019169"
  MSOLAP_NODE_SHORT_CAPTION  
  表示目的で使用されるラベル。 変更することはできません。  
   
- **親ノード** モデルの種類 (クラスター モデル) です。  
+ **親ノード**モデルの種類。クラスター モデル  
   
- **クラスター ノード** クラスターの名前です (Cluster 1 など)。  
+ **クラスター ノード** クラスターの名前です 例:クラスター 1 です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、クラスター モデルを作成するための方法が複数用意されています。 使用しているモデルがどの方法で作成されたかわからない場合は、モデルのメタデータを取得します。モデルのメタデータは、ADOMD クライアントや AMO を使用してプログラムで取得することも、データ マイニング スキーマ行セットに対してクエリを実行して取得することもできます。 詳細については、「 [マイニング モデルの作成に使用されたパラメーターのクエリ](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)」を参照してください。  
   
 > [!NOTE]  
 >  使用するクラスタリング手法やパラメーターが違っても、モデルの構造とコンテンツは変わりません。  
   
-## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>関連項目  
+ [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Microsoft クラスタ リング アルゴリズム](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
+ [Microsoft クラスタリング アルゴリズム](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

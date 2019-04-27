@@ -19,35 +19,35 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632772"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>時刻および日付関数 (Visual FoxPro ODBC ドライバー)
 次の表に、Visual FoxPro ODBC ドライバーでサポートされている ODBC の日付と時刻関数ODBC 構文から同じ関数の場合、Visual FoxPro の文法が異なる場合は、Visual FoxPro のと同じですが一覧表示されます。  
   
 |ODBC の文法|Visual FoxPro の文法|  
 |------------------|---------------------------|  
-|CURDATE *)*|日付 *)*|  
-|CURTIME *)*|時間 *)*|  
+|CURDATE *( )*|DATE *( )*|  
+|CURTIME *( )*|TIME *( )*|  
 |DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|1 日 *)*|  
+|DAYOFMONTH(*date_exp)*|DAY *( )*|  
 |1 時間 *(time_exp)*||  
-|分 *(time_exp)*||  
-|1 か月 *(time_exp)*||  
+|MINUTE *(time_exp)*||  
+|MONTH *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
-|今すぐ *)*|DATETIME *)*|  
-|2 番目 *(time_exp)*|1 秒 *(time_exp)*|  
+|今すぐ *)*|DATETIME *( )*|  
+|SECOND *(time_exp)*|SEC *(time_exp)*|  
 |週 *(date_exp)*||  
-|年 *(date_exp)*||  
+|YEAR *(date_exp)*||  
   
  次の日付と時刻の関数がサポートされていません。  
   
  DAYOFYEAR *(date_exp)*  
   
- 四半期 *(date_exp)*  
+ QUARTER *(date_exp)*  
   
  TIMESTAMPADD *(間隔、integer_exp、timestamp_exp)*  
   
@@ -81,4 +81,4 @@ UPDATE alltypes
 ```  
   
 ## <a name="remarks"></a>コメント  
- エスケープ シーケンスの詳細については、[odbc エスケープ シーケンス](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)で、 *ODBC プログラマ リファレンス*を参照してください。
+ エスケープ シーケンスの詳細については、次を参照してください。 [odbc エスケープ シーケンス](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)で、 *ODBC プログラマ リファレンス*します。

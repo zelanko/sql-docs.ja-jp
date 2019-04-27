@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9addd13deb4dcf3c81a4975e0ed33783799ae2a7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769168"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (SSIS 式)
   数値式以下で最大の整数を返します。  
@@ -61,7 +61,7 @@ FLOOR(0.00)
   
  0.00 を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CEILING (SSIS 式)](ceiling-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  
   

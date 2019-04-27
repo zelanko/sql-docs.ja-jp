@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26981ad1cc1cfbf9b3a69cca49f9529c0b590b61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760816"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>階層的な手法を使用した階層テーブルのクエリ
   HumanResources.EmployeeOrg テーブルに完全にデータが設定されたので、ここでは階層的な手法のいくつかを使用して階層をクエリする方法を示します。  

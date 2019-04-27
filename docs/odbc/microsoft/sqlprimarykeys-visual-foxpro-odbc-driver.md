@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3eeafa338fea31741609e6f9a9b32a4128ebd87d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636331"
 ---
 # <a name="sqlprimarykeys-visual-foxpro-odbc-driver"></a>SQLPrimaryKeys (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: レベル 2  
+ ODBC API 準拠:レベル 2  
   
  テーブルの主キーを構成する列の名前を返します。 Visual FoxPro ODBC ドライバー実装**SQLPrimaryKeys**ように動作します。  
   
@@ -34,4 +34,4 @@ ms.locfileid: "47765610"
   
 -   あるデータ ソースに対してのみ機能[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)します。 データ ソースのディレクトリは、する場合により、ドライバーにエラー「ドライバーはこの関数をサポートしていません」を返します[テーブルを無料](../../odbc/microsoft/visual-foxpro-terminology.md)します。  
   
- 詳細については、[SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。
+ 詳細については、次を参照してください。 [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md)で、 *ODBC プログラマ リファレンス*します。

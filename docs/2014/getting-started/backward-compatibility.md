@@ -27,11 +27,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f112bc1a9928185fa5ecf15b953df8c982ff36f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774443"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   次の各セクションでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントの旧バージョンとの互換性について説明します。 この内容には、非推奨の機能、提供が中止された機能、重大な変更、および動作変更に関する情報が含まれています。  
@@ -48,7 +48,7 @@ ms.locfileid: "48156732"
 |[旧バージョンとの互換性&#40;マスター データ サービス&#41;](../master-data-services/backward-compatibility-master-data-services.md)|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ソリューションを修正する必要があります。|  
 |[レプリケーションの旧バージョンとの互換性](../../2014/relational-databases/replication/replication-backward-compatibility.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存のレプリケーション ソリューションを修正する必要があります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 2014 をインストールします。](../database-engine/install-windows/install-sql-server.md)   
  [SQL Server 2014 へのアップグレード](../database-engine/install-windows/upgrade-sql-server.md)  
   

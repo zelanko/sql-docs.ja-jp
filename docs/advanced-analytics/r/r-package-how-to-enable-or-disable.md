@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: ee52fd9b7a116156f794303b828a83e9b06de6ab
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641812"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>有効にするか、SQL Server のリモート パッケージの管理を無効にします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "58509819"
 
     このコマンドは、インスタンスからパッケージの管理機能を削除します。 手動で変更を表示するには、もう一度、スタート パッド サービスを再起動する必要があります。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 + [RevoScaleR を使用して、新しい R パッケージをインストールするには](use-revoscaler-to-manage-r-packages.md)
 + [R パッケージをインストールするためのヒント](packages-installed-in-user-libraries.md)

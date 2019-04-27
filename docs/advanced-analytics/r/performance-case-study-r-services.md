@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642670"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services のパフォーマンス: 結果とリソース
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +90,7 @@ metric time pct
 
 最初のテストでは、圧縮および単票形式データのサイズを縮小するテーブルの使用と比較します。
 
-| テーブル名            | [行]     | 予約済み。   | データ       | index_size | 未使用  | 節約率 (予約済み) |
+| テーブル名            | [行]     | 予約済み   | data       | index_size | 未使用  | 節約率 (予約済み) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |

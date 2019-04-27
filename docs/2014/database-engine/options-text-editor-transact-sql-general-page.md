@@ -16,11 +16,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 28559b6037fa6b0e95bb6748f85d3d0cecd2df8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774167"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>オプション (テキスト エディター - Transact SQL 全般 ページ)
   [オプション] の **[全般]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssDE](../includes/ssde-md.md)] スクリプトの編集に使用される [!INCLUDE[tsql](../includes/tsql-md.md)] クエリ エディターの全般的な編集の動作を変更できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックし、**[Transact-SQL]** サブフォルダーを展開して、**[全般]** をクリックします。  
@@ -38,7 +38,7 @@ ms.locfileid: "48155202"
  **パラメーター情報**  
  このチェック ボックスがオンの場合、挿入ポイント (カーソル) のすぐ左側にあるストアド プロシージャまたは関数のパラメーター情報が表示されます。 この情報には、使用可能なパラメーターの名前とデータ型の一覧が含まれます。  
   
-## <a name="settings"></a>[設定]  
+## <a name="settings"></a>設定  
  **仮想空間を有効にします。**  
  このチェック ボックスがオンの場合、コード行の末尾を越える任意の場所をクリックしてコメントを入力できます。 コードの横の一定の場所にコメントを記述する場合に、このチェック ボックスをオンにします。 このチェック ボックスをオンにすると、 **[右端で折り返す]** チェック ボックスが無効になります。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48155202"
   
  行が空白でない場合、 **[コピー]** または **[切り取り]** の動作はこの設定の影響を受けません。 何も選択されていない場合、行全体がコピーまたは切り取られます。 その後で **[貼り付け]** をクリックすると、行全体のテキストと行末文字が貼り付けられます。  
   
-## <a name="display"></a>表示  
+## <a name="display"></a>ディスプレイ  
  **行番号**  
  このチェック ボックスがオンの場合、各コード行の横に行番号が表示されます。  
   

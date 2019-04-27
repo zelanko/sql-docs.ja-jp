@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773431"
 ---
 # <a name="view-a-list-of-modified-files"></a>変更されたファイルの一覧表示
   使用することができます、**保留中のチェックイン**をまったく表示するウィンドウが、現在のソリューションでチェック アウトしたファイルの一覧と、チェックインする 1 つのボタンでこれらのファイル をクリックします。  
@@ -66,7 +66,7 @@ ms.locfileid: "48225059"
      **名前**  
      チェックインに利用可能なアイテムの一覧を表示します。 項目の横に、オン状態のチェック ボックスが表示されます。 チェックインしないアイテムがある場合は、対象アイテムの横のチェック ボックスをオフにしてください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チェックインを管理します。](../../2014/database-engine/manage-checkins.md)   
  [チェックアウトの管理](../../2014/database-engine/manage-checkouts.md)  
   

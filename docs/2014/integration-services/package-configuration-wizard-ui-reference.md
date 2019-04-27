@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 042f1146295d0a8358a7f89a38929a77e6f761a1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767134"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>パッケージ構成ウィザードの UI リファレンス
-  **パッケージ構成ウィザード**を使用すると、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。 このウィザードは、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスで新しい構成を追加するか既存の構成を変更するときに実行されます。 **[パッケージ構成オーガナイザー]** ダイアログ ボックスを開くには、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で **[SSIS]** メニューの **[パッケージ構成]** をクリックします。 詳細については、「 [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)」を参照してください。  
+  **パッケージ構成ウィザード**を使用すると、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。 このウィザードは、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスで新しい構成を追加するか既存の構成を変更するときに実行されます。 **[パッケージ構成オーガナイザー]** ダイアログ ボックスを開くには、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で **[SSIS]** メニューの **[パッケージ構成]** をクリックします。 詳細については、「[パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)」を参照してください。  
   
 > [!NOTE]  
 >  パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
@@ -67,7 +67,7 @@ ms.locfileid: "58376190"
  **[構成設定を直接指定する]**  
  設定を直接指定する場合に使用します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[構成ファイル名]**|ウィザードで生成する構成ファイルのパスを入力します。|  
 |**[参照]**|**[構成ファイルの場所の選択]** ダイアログ ボックスを使用して、ウィザードで生成する構成ファイルのパスを指定します。 指定したファイルが存在しない場合、ウィザードによってファイルが新しく作成されます。|  
@@ -75,7 +75,7 @@ ms.locfileid: "58376190"
  **[構成の場所を環境変数に格納する]**  
  構成を格納する環境変数を指定する場合に使用します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**環境変数**|一覧から環境変数を選択します。|  
   
@@ -102,14 +102,14 @@ ms.locfileid: "58376190"
  **[構成設定を直接指定する]**  
  設定を直接指定する場合に使用します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[親変数]**|構成情報を格納する親パッケージ内の変数を指定します。|  
   
  **[構成の場所を環境変数に格納する]**  
  構成を格納する環境変数を指定する場合に使用します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**環境変数**|一覧から環境変数を選択します。|  
   
@@ -119,7 +119,7 @@ ms.locfileid: "58376190"
   
 |値|説明|  
 |-----------|-----------------|  
-|**[接続]**|一覧から接続を選択するか、 **[新規作成]** をクリックし、新しい接続を作成します。|  
+|**Connection**|一覧から接続を選択するか、 **[新規作成]** をクリックし、新しい接続を作成します。|  
 |**[構成テーブル]**|既存のテーブルを選択するか、 **[新規作成]** をクリックし、新しいテーブルを作成する SQL ステートメントを記述します。|  
 |**[構成フィルター]**|既存の構成名を選択するか、新しい名前を入力します。<br /><br /> 多くの SQL Server の構成は同じテーブルに格納でき、各構成には複数の構成アイテムを含むことができます。<br /><br /> このユーザー定義の値はテーブルに格納され、特定の構成に属する構成アイテムの識別に使用されます。|  
   
@@ -156,7 +156,7 @@ ms.locfileid: "58376190"
  **[完了]**  
  構成を作成して **[パッケージ構成ウィザード]** を終了します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)  
   
   

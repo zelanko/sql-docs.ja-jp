@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14fcc55e8e50892ce2aa54326f9f82a195aa66e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640169"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>[データ ソース ビューの参照] ダイアログ ボックス (Analysis Services - 多次元データ)
   データ ソース ビューの参照ダイアログ ボックスには、選択したデータ ソース ビューの簡単なダイアグラムがグラフィカルに表示されます。 また、データ ソース ビューの名前がダイアログ ボックスのタイトルとして表示されます。  
@@ -32,7 +32,7 @@ ms.locfileid: "48163622"
  **[ズーム]**  
  ズーム比率を選択して、ダイアグラム上のオブジェクトのサイズを変更します。  
   
- **Close**  
+ **閉じる**  
  をクリックして、 ダイアログ ボックスを閉じます。  
   
   

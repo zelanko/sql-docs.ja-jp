@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35e9ee16ee50d5dc697e862b2777db7f0199970d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773804"
 ---
 # <a name="trace-properties-general-tab"></a>[トレースのプロパティ] ([全般] タブ)
   **[トレースのプロパティ]** ダイアログ ボックスの **[全般]** タブを使用すると、トレースのプロパティを表示したり指定したりできます。  
@@ -68,7 +68,7 @@ ms.locfileid: "48184782"
  **[トレース停止時刻を有効にする]**  
  トレースを終了して閉じる日時を設定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トレースの作成 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
   

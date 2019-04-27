@@ -1,5 +1,5 @@
 ---
-title: Microsoft タイム シリーズ アルゴリズム |Microsoft ドキュメント
+title: Microsoft タイム シリーズ アルゴリズム |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 390ff54485e92e28736424048e5aaedbbee31181
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758079"
 ---
-# <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series Algorithm
+# <a name="microsoft-time-series-algorithm"></a>Microsoft タイム シリーズ アルゴリズム
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、一定期間の製品売上などの連続値を予測するために最適化された複数のアルゴリズムが採用されています。 デシジョン ツリーなどの他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、傾向を予測するために新しい情報を含む列を追加する必要がありますが、タイム シリーズ モデルでは必要ありません。 タイム シリーズ モデルでは、モデルの作成に使用された元のデータセットのみを使用して傾向を予測できます。 予測を実行するときに新しいデータをモデルに追加することで、新しいデータを自動的に傾向分析に組み込むこともできます。  
   
@@ -89,10 +89,10 @@ ms.locfileid: "34018539"
   
  どちらの例でも、各製品の今後の売上と数量を新しく予測できます。 製品または時間について新しい値を予測することはできません。  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>例 1: 列値として表されるシリーズを含むタイム シリーズ データ セット  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>例 1 : 列の値として表されるシリーズでタイム シリーズ データ セット  
  この例では、次の入力ケースのテーブルを使用します。  
   
-|TimeID|Product|売上|Volume|  
+|TimeID|製品|売上|Volume|  
 |------------|-------------|-----------|------------|  
 |1/2001|A|1000|600|  
 |2/2001|A|1100|500|  
@@ -105,7 +105,7 @@ ms.locfileid: "34018539"
   
  Sales 列は 1 日の指定製品の総利益を示し、Volume 列は倉庫に残っている指定製品の数量を示します。 この 2 つの列に、モデルのトレーニングに使用されるデータが含まれます。 Sales と Volume の両方が、Product 列の各シリーズの予測可能な属性になります。  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>例 2: 各シリーズが別の列に含まれるタイム シリーズ データ セット  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>例 2:各系列を別の列にタイム シリーズ データ セット  
  この例では最初の例と基本的に同じ入力データを使用しますが、次の表に示すように、入力データの構成が異なります。  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -113,7 +113,7 @@ ms.locfileid: "34018539"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- このテーブルでも、TimeID 列にタイム シリーズ モデルのケース シリーズが含まれ、これを Key Time 列として指定します。 ただし、前の例での Sales 列と Volume 列がそれぞれ 2 つの列に分けられ、その各列の前に製品名が付けられています。 このため、TimeID 列の各日には 1 つのエントリしか存在しません。 これにより、タイム シリーズ モデルには、A_Sales、A_Volume、B_Sales、および B_Volume という 4 つの予測可能列が含まれます。  
+ このテーブルでも、TimeID 列にタイム シリーズ モデルのケース シリーズが含まれ、これを Key Time 列として指定します。 ただし、前の例での Sales 列と Volume 列がそれぞれ 2 つの列に分けられ、その各列の前に製品名が付けられています。 このため、TimeID 列の各日には 1 つのエントリしか存在しません。 これは、次の 4 つの予測可能列が含まれるタイム シリーズ モデルを作成します。A_Sales、A_Volume、B_Sales、および B_Volume します。  
   
  さらに、製品名が独立した列に分けられたため、シリーズ キー列を追加指定する必要がなくなります。 モデル内のすべての列が、ケース シリーズ列または予測可能列になります。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "34018539"
   
 -   タイム シリーズ モデルでは、サーバーで 64 ビットのオペレーティング システムが使用されているかどうかに応じて、予測が大きく変わる場合があります。 この違いが発生する原因は、 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]ベースのシステムにおける浮動小数点演算の数値の表示方法と処理方法が、 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]ベースのシステムにおける方法と異なるためです。 予測結果がオペレーティング システムによって変わる可能性があるため、運用時に使用するものと同じオペレーティング システムでモデルを評価することをお勧めします。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 -   Predictive Model Markup Language (PMML) を使用したマイニング モデルの作成はサポートされていません。  
   
@@ -143,11 +143,11 @@ ms.locfileid: "34018539"
   
 -   ドリルスルーがサポートされています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft タイム シリーズ ビューアーを使用してモデルを参照します。](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Microsoft タイム シリーズ ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [タイム シリーズ モデルのクエリ例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [タイム シリーズ モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [タイム シリーズ モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

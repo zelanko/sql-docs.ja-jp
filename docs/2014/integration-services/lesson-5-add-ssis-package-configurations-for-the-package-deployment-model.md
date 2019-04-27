@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 25922725e202bc7b38e2c6141a097df1af119ed2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767421"
 ---
 # <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>レッスン 5: パッケージ配置モデルのパッケージ構成の追加
   パッケージ構成を使用すれば、開発環境の外部からランタイムのプロパティと変数を設定できます。 この構成により、配置と配信が容易で柔軟なパッケージを開発できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、次の種類の構成が用意されています。  
@@ -42,7 +42,7 @@ ms.locfileid: "58378831"
   
 -   [手順 2:有効にして、パッケージの構成](lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
--   [ステップ 3:Directory プロパティの構成値の変更](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+-   [手順 3:Directory プロパティの構成値の変更](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
 -   [手順 4:レッスン 5 のチュートリアル パッケージのテスト](lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   

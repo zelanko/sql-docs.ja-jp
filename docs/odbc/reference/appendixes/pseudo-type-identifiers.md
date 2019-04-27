@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e197f6054e417a01f8d7e352cffb40328de69e9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640492"
 ---
 # <a name="pseudo-type-identifiers"></a>疑似型識別子
 アプリケーション プログラミングの便宜上は、ODBC は、さまざまな疑似型識別子を定義します。 これらの識別子は実際には、実際のデータ型に対応しないが、代わりに、状況によっては、既存のデータ型を解決します。  

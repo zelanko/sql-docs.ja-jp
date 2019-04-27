@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1ed0aa7fad822748bfab2426ef22071a72ba1774
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637129"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>ビジネス ルール条件 (マスター データ サービス)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52823254"
   
 ## <a name="business-rule-conditions"></a>ビジネス ルール条件  
   
-|条件名|[説明]|  
+|条件名|説明|  
 |--------------------|-----------------|  
 |**が次の値に等しい**|選択した属性が特定の属性または属性**値に等しいか**、空白であることを示します。<br /><br /> この条件は、文字列値、数値、データ値、およびリンク値に有効です。|  
 |**が次の値に等しくない**|選択した属性が特定の属性または属性**値に等しくないか**、空白であることを示します。<br /><br /> この条件は、文字列値、数値、データ値、およびリンク値に有効です。|  
@@ -55,7 +55,7 @@ ms.locfileid: "52823254"
 > [!NOTE]  
 >  ビジネス ルールに 2 つの値を比較する条件が含まれていて、そのルールが両方の値とも NULL であるメンバーに適用されている場合、そのメンバーは検証に失敗します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス ルール アクション (マスター データ サービス)](../master-data-services/business-rule-actions-master-data-services.md)   
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
  [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

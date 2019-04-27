@@ -12,14 +12,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d5f3c133b105c905b79589d86952658b6d39f0f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653389"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>ODBC サービス プロバイダー インターフェイスの概要
-次の表では、ODBC サービス プロバイダー インターフェイスの機能について説明します。 構文とセマンティクスの各関数の詳細については、[ODBC サービス プロバイダー インターフェイス (SPI) リファレンス](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)を参照してください。  
+次の表では、ODBC サービス プロバイダー インターフェイスの機能について説明します。 構文とセマンティクスの各関数の詳細については、次を参照してください。 [ODBC サービス プロバイダー インターフェイス (SPI) リファレンス](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)します。  
   
 |関数名|目的|  
 |-------------------|-------------|  

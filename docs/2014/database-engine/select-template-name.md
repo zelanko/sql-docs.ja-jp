@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a55b53cac59b387a2e52f5b1e5dc641471b1b28b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773772"
 ---
 # <a name="select-template-name"></a>[テンプレート名の選択]
   **[テンプレート名の選択]** ダイアログ ボックスを使用すると、既存の [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] トレース テンプレートを選択してオペレーティング システム上のファイルにエクスポートできます。 また、このダイアログ ボックスを使用すると、既存のトレース テンプレートを編集する場合に、別の名前を選択または入力してトレース テンプレートを保存できます。 テンプレートをエクスポートするときにこのダイアログ ボックスにアクセスする、 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **ファイル**メニューで、**テンプレート**、 をクリックし、**テンプレートのエクスポート**。 テンプレート名を変更する場合にこのダイアログ ボックスにアクセスするには、 **[ファイル]** メニューの **[テンプレート]** をポイントし、 **[テンプレートの編集]** をクリックします。次に、 **[名前を付けて保存]** をクリックします。  
@@ -32,7 +32,7 @@ ms.locfileid: "48170922"
  **テンプレート名**  
  新しいテンプレート名を入力するか、一覧からテンプレート名を選択します。 テンプレートをエクスポートする場合は、一覧からのみテンプレート名を選択できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トレース テンプレートの変更 &#40;SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
  [トレース テンプレートのエクスポート &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)  
   

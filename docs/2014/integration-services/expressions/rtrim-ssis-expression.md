@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53d9bfbb7418a3bc6727ccc7160a5364bac39f58
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768778"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (SSIS 式)
   末尾のスペースを削除した後の文字式を返します。  
@@ -64,7 +64,7 @@ RTRIM(FirstName + " " + LastName)
 RTRIM(@FirstName)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [LTRIM (SSIS 式)](trim-ssis-expression.md)   
  [TRIM (SSIS 式)](trim-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  

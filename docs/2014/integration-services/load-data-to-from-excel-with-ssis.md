@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767314"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする
 
@@ -49,7 +49,7 @@ Microsoft Access 2016 *ランタイム*ではなく、必ず Access データベ
 
 32 ビット バージョンの Office を既にインストールしている場合は、32 ビット バージョンのコンポーネントをインストールする必要があります。 また、SSIS パッケージを 32 ビット モードで実行していること、またはインポートおよびエクスポート ウィザードの 32 ビット バージョンを実行していることを確認する必要があります。
 
-Office 365 サブスクリプションをお持ちの場合は、インストーラーを実行するときにエラー メッセージが表示される場合があります。 このエラーは、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示します。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 例 :
+Office 365 サブスクリプションをお持ちの場合は、インストーラーを実行するときにエラー メッセージが表示される場合があります。 このエラーは、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示します。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 例:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

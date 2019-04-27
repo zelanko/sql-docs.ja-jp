@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ff63c6568f0a34a43caf6765e7e01ce8022e10f0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769838"
 ---
 # <a name="execute-package-task-editor"></a>パッケージ実行タスク エディター
   パッケージ実行タスクを構成するには、パッケージ実行タスク エディターを使用します。 パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
@@ -67,7 +67,7 @@ ms.locfileid: "58382260"
 ### <a name="referencetype-dynamic-options"></a>[ReferenceType] の動的オプション  
   
 #### <a name="referencetype--external-reference"></a>ReferenceType = 外部参照  
- **場所**  
+ **[場所]**  
  子パッケージの場所を選択します。 このプロパティのオプションを次の表に示します。  
   
 |ReplTest1|説明|  
@@ -75,7 +75,7 @@ ms.locfileid: "58382260"
 |**SQL Server**|場所を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに設定します。|  
 |**ファイル システム**|場所をファイル システムに設定します。|  
   
- **[接続]**  
+ **Connection**  
  子パッケージの格納場所の種類を選択します。  
   
  **PackageNameReadOnly**  
@@ -88,7 +88,7 @@ ms.locfileid: "58382260"
 ### <a name="location-dynamic-options"></a>[Location] の動的オプション  
   
 #### <a name="location--sql-server"></a>Location = SQL Server  
- **[接続]**  
+ **Connection**  
  OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...>**] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、 [OLE DB 接続マネージャーの構成](../../2014/integration-services/configure-ole-db-connection-manager.md)  
@@ -97,7 +97,7 @@ ms.locfileid: "58382260"
  子パッケージの名前を入力するか、[...] をクリックし、パッケージを指定します。  
   
 #### <a name="location--file-system"></a>Location = ファイル システム  
- **[接続]**  
+ **Connection**  
  ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  

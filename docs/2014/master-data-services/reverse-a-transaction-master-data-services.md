@@ -13,16 +13,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 24e1c1fea5404d984f05391624fd244960c0eec3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765285"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>トランザクションを破棄する (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、管理者は、アクションを元に戻す必要があるときにトランザクションを破棄できます。 トランザクションの例としては、属性値の変更、階層の移動、メンバーの削除などがあります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "52822996"
   
 7.  確認のダイアログ ボックスで **[OK]** をクリックします。 破棄されたトランザクションを記録するために、別のトランザクションがグリッドに追加されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクション (マスター データ サービス)](../../2014/master-data-services/transactions-master-data-services.md)   
  [メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   

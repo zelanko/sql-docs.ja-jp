@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e8480066485cf22c48cebbba738b2c604a50b23c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767704"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services プロジェクト変換ウィザード
   **Integration Services プロジェクト変換ウィザード** で、プロジェクトをプロジェクト配置モデルに変換します。  
@@ -113,7 +113,7 @@ ms.locfileid: "58384290"
  **[選択項目に適用]**  
  クリックすると、 **[パスワード]** ボックスのパスワードが選択したパッケージに適用されます。  
   
- **[更新]**  
+ **更新**  
  パッケージの一覧を更新します。  
   
 ##  <a name="destination"></a> [配置先の選択] ページのオプションの設定  
@@ -181,7 +181,7 @@ ms.locfileid: "58384290"
  **[構成の追加]**  
  他のプロジェクトに含まれているパッケージ構成を、パラメーターで置き換える (使用可能な) 構成の一覧に追加します。 ファイル システムまたは SQL Server に格納された構成を選択できます。  
   
- **[更新]**  
+ **更新**  
  構成の一覧を更新する場合にクリックします。  
   
  **[変換後にすべてのパッケージから構成を削除する]**  
@@ -242,7 +242,7 @@ ms.locfileid: "58384290"
  **[レポートの保存]**  
  プロジェクトの変換の概要を .xml ファイルに保存する場合にクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サーバーへのプロジェクトの配置](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

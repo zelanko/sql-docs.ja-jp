@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b711562d966e0a28349b666505dff9542098fd4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771968"
 ---
 # <a name="add-ssis-connection-manager"></a>[SSIS 接続マネージャーの追加] ダイアログ ボックス
   **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを使用すると、パッケージに追加する接続の種類を選択できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "58377260"
  **[追加]**  
  エディターを使用して、接続の種類に対応する接続プロパティを指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [パッケージの接続マネージャーを追加、削除、または共有する](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   

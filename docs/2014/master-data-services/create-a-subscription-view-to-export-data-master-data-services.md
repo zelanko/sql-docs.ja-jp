@@ -14,16 +14,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cf14f942857361256febd4329a116c2d349659a0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765822"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>サブスクリプション ビューを作成する (マスター データ サービス)
   サブスクリプション ビューを作成して、データのビューを作成するとき、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]サブスクライブ システムで使用するデータベース。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[統合管理]** 機能領域にアクセスする権限が必要です。  
@@ -55,7 +55,7 @@ ms.locfileid: "52747934"
   
 10. **[保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データのエクスポート&#40;マスター データ サービス&#41;](overview-exporting-data-master-data-services.md)   
  [サブスクリプション ビューを削除する &#40;マスター データ サービス&#41;](delete-a-subscription-view-master-data-services.md)   
  [バージョン フラグを作成する (マスター データ サービス)](create-a-version-flag-master-data-services.md)  

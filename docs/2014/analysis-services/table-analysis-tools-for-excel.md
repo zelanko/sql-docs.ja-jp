@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757901"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Excel 用テーブル分析ツール
   データ マイニング ツールで、**分析**ツールバーはデータ マイニングを開始する最も簡単な方法です。 これらのツールは、自動的にデータの分布と型を分析し、有効な結果を取得できるようパラメーターを設定します。 アルゴリズムを選択したり、複雑なパラメーターを構成したりする必要はありません。  
@@ -76,7 +76,7 @@ ms.locfileid: "52391900"
  **買い物かご分析**ツールは、Microsoft アソシエーション アルゴリズムを使用します。  
   
 ## <a name="requirements-for-the-table-analysis-tools-for-excel"></a>Excel 用のテーブル分析ツールの要件  
- Excel 用のテーブル分析ツールを使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続を作成しておく必要があります。 データの分析に使用される Microsoft データ マイニング アルゴリズムには、この接続を介してアクセスします。 インスタンスにアクセスできない場合、データ マイニングを試すときに使用できるインスタンスを設定するよう管理者に依頼することをお勧めします。 詳細については、[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)を参照してください。  
+ Excel 用のテーブル分析ツールを使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続を作成しておく必要があります。 データの分析に使用される Microsoft データ マイニング アルゴリズムには、この接続を介してアクセスします。 インスタンスにアクセスできない場合、データ マイニングを試すときに使用できるインスタンスを設定するよう管理者に依頼することをお勧めします。 詳細については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)します。  
   
  テーブル分析ツールでデータを操作するには、使用する一連のデータを Excel テーブルに変換する必要があります。  
   

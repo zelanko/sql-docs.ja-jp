@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cb955fe2779681f33cb1c4a7fc365b5249b5f39
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766668"
 ---
 # <a name="schema-restrictions-dialog-box"></a>[スキーマの制限] ダイアログ ボックス
   **[スキーマの制限]** ダイアログ ボックスを使用すると、Foreach ADO.NET Schema Rowset 列挙子に適用するスキーマの制限を設定できます。  
@@ -32,12 +32,12 @@ ms.locfileid: "58383271"
  **変数**  
  制限を定義するために変数を使用します。 変数を一覧から選択するか、**[新しい変数]** をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
  **Text**  
  制限を定義するテキストを入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Foreach ループ エディター&#40;コレクション ページ&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Foreach ループ コンテナー](control-flow/foreach-loop-container.md)  
   

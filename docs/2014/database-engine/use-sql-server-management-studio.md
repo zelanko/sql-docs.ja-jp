@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773901"
 ---
 # <a name="use-sql-server-management-studio"></a>SQL Server Management Studio の使用 [SQL Server]
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) はへのアクセス、構成、管理、管理、および開発するためのすべてのコンポーネントの統合環境[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 SSMS では、さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターが用意されており、これらを使用して、あらゆるスキル レベルの開発者や管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にアクセスできます。  
@@ -77,7 +77,7 @@ ms.locfileid: "53369154"
  [Visual Database Tools のデザイナー](../ssms/visual-db-tools/visual-database-tool-designers.md)  
  クエリの作成、データベース構造のデザインまたは変更、データの更新などのために使用できる Visual Database Tools について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー プロパティの表示または変更 &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

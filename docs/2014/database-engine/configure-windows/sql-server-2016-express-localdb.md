@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756992"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` 実行モードは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]プログラムの開発者を対象とします。 `LocalDB` インストールが開始に必要なファイルの最小限のセットをコピー、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 1 回`LocalDB`がインストールされている場合、開発者の接続を開始、特殊な接続文字列を使用しています。 接続時に、必要な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インフラストラクチャが自動的に作成および開始されるため、複雑な、または時間のかかる構成タスクを行わなくてもアプリケーションでデータベースを使用できます。 開発者ツールによって、開発者は [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを記述してテストすることができ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の完全なサーバー インスタンスを管理する必要はありません。 インスタンス[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB`を使用して管理されている場合は、`SqlLocalDB.exe`ユーティリティ。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` 代わりに使用する必要があります、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]ユーザー インスタンスの機能は非推奨とされます。  
@@ -50,7 +50,7 @@ ms.locfileid: "53368304"
  インスタンス`LocalDB`windows ファイル システム リダイレクト; のための管理状態に関する問題を持つことができます NT authority \system などのビルトイン アカウントによって所有されています。代わりに、所有者として通常の windows アカウントを使用します。  
   
 ### <a name="automatic-and-named-instances"></a>自動インスタンスと名前付きインスタンス  
- `LocalDB` 2 つの種類のインスタンスをサポートしています。自動インスタンスと名前付きインスタンスをサポートしています。  
+ `LocalDB` 2 つの種類のインスタンスをサポートしています。自動インスタンスと名前付きインスタンスがサポートされています。  
   
 -   自動インスタンス`LocalDB`はパブリックです。 ユーザーのために自動的に作成および管理され、任意のアプリケーションから使用できます。 自動インスタンスが 1 つ`LocalDB`のすべてのバージョンが存在する`LocalDB`ユーザーのコンピューターにインストールされています。 自動インスタンス`LocalDB`シームレスなインスタンス管理を提供します。 インスタンスを作成する必要はありません。それだけで動作します。 これにより、アプリケーションのインストールと別のコンピューターへの移行が簡単になります。 対象コンピューターに指定バージョンの `LocalDB` がインストールされている場合、その対象コンピューターでも同じバージョンの `LocalDB` の自動インスタンスを使用できます。 自動インスタンス`LocalDB`予約済み名前空間に属しているインスタンス名に特殊なパターンがあります。 こうことで名前付きインスタンスの名前の競合`LocalDB`します。 自動インスタンスの名前は **MSSQLLocalDB**です。  
   
@@ -90,7 +90,7 @@ REM Gather information about the instance of LocalDB
 |名前|"LocalDBApp1"|  
 |バージョン|\<現在のバージョン>|  
 |共有名|""|  
-|[所有者]|"\<Windows ユーザー>"|  
+|所有者|"\<Windows ユーザー>"|  
 |自動作成|いいえ|  
 |状態|実行|  
 |前回の開始時刻|\<日付と時刻>|  
@@ -111,7 +111,7 @@ REM Gather information about the instance of LocalDB
 > [!NOTE]  
 >  `LocalDB` ユーザーのセキュリティ コンテキストで常に実行されます。つまり、`LocalDB`ローカル管理者グループからの資格情報で実行されません。 つまり、すべてのデータベースで使用されるファイル、`LocalDB`インスタンスは、ローカルの Administrators グループのメンバーシップを考慮せず、所有するユーザーの Windows アカウントを使用してアクセス可能である必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SqlLocalDB ユーティリティ](../../tools/sqllocaldb-utility.md)  
   
   

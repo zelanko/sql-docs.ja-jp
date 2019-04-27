@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771200"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC データベース
   Oracle CDC インスタンスは、ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの同名の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連付けられます。 このデータベースは、Oracle CDC データベース (または CDC データベース) と呼ばれます。  
@@ -142,7 +142,7 @@ ms.locfileid: "58658396"
 |status|現在の Oracle CDC インスタンスの現在の状態コードです。 CDC の現在の状態を表します。|  
 |sub_status|現在の状態に関する追加情報を提供する二次的な状態です。|  
 |active|次のいずれかのブール値です。<br /><br /> **0**:Oracle CDC インスタンス プロセスはアクティブではありません。<br /><br /> **1**:Oracle CDC インスタンス プロセスはアクティブです。|  
-|error|次のいずれかのブール値です。<br /><br /> **0**:Oracle CDC インスタンス プロセスはエラー状態ではありません。<br /><br /> **1**:Oracle CDC インスタンスはエラー状態です。|  
+|error (エラー)|次のいずれかのブール値です。<br /><br /> **0**:Oracle CDC インスタンス プロセスはエラー状態ではありません。<br /><br /> **1**:Oracle CDC インスタンスはエラー状態です。|  
 |status_message|エラーまたは状態の説明を表す文字列です。|  
 |TIMESTAMP|キャプチャ状態が最後に更新された時刻 (UTC) のタイムスタンプです。|  
 |active_capture_node|現在 Oracle CDC Service と (Oracle トランザクション ログを処理している) Oracle CDC インスタンスを実行しているホストの名前です (クラスターのノードの場合があります)。|  
@@ -185,5 +185,5 @@ ms.locfileid: "58658396"
 |data_end_cn|この行のデータの最後の変更の変更番号 (CN) です。|  
 |data|トランザクションのステージングされた変更です (BLOB 形式)。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Attunity の Change Data Capture Designer for Oracle](change-data-capture-designer-for-oracle-by-attunity.md)  

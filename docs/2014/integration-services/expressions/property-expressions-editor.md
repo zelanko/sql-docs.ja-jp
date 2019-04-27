@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7539ae9426bfe480f7dbbe25ea1c3724815295e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768788"
 ---
 # <a name="property-expressions-editor"></a>[プロパティ式エディター]
   **[プロパティ式エディター]** ダイアログ ボックスを使用すると、プロパティ値を更新するプロパティ式の作成、編集、または削除ができます。  
@@ -40,7 +40,7 @@ ms.locfileid: "58384630"
  **削除**  
  プロパティを選択してから、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[式] ページ](expressions-page.md)   
  [Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)   
  [システム変数](../system-variables.md)   

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0ff095819fc4bdd985ebd083eb09056aa5259322
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768235"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>パッケージをインポートおよびエクスポートする (SSIS サービス)
     
@@ -51,7 +51,7 @@ ms.locfileid: "58375300"
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージは、次の場所からインポートしたり、次の場所にエクスポートしたりできます。  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージをインポートできます。 インポートしたパッケージは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、または [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア内のフォルダーに保存されます。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージをインポートできます。 インポートしたパッケージは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、または [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア内のフォルダーに保存されます。  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージを異なるストレージ形式および場所にエクスポートできます。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "58375300"
   
 8.  **[OK]** をクリックすると、エクスポートが完了します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージの管理 &#40;SSIS サービス&#41;](service/package-management-ssis-service.md)  
   
   

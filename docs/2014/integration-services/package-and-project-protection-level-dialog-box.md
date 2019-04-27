@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: effe6c8e07ea9303bb77842934afebb7c2e6bec1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767044"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>[パッケージの保護レベル] ダイアログ ボックス
   **[パッケージの保護レベル]** ダイアログ ボックスを使用すると、パッケージの保護レベルを更新できます。 保護レベルによって、パッケージ保護の方法、パスワードまたはユーザー キー、適用範囲が決定されます。 保護対象には、すべてのデータを含めることも機密データのみを含めることもできます。  
@@ -38,7 +38,7 @@ ms.locfileid: "58386775"
  **[パスワードの再入力]**  
  パスワードを再度入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services (SSIS) パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

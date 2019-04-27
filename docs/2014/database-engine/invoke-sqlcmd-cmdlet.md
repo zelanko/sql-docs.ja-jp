@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774596"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd コマンドレット
   **Invoke-Sqlcmd** は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コマンドレットであり、言語 ([!INCLUDE[tsql](../includes/tsql-md.md)] と XQuery) のステートメントと **sqlcmd** ユーティリティでサポートされているコマンドを含んだスクリプトを実行します。  
@@ -64,7 +64,7 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
 ## <a name="path-context-in-invoke-sqlcmd"></a>Invoke-Sqlcmd のパス コンテキスト  
  -Database パラメーターを使用しない場合、Invoke-Sqlcmd のデータベース コンテキストは、コマンドレットが呼び出されたときにアクティブなパスによって設定されます。  
   
-|[パス]|データベース コンテキスト|  
+|パス|データベース コンテキスト|  
 |----------|----------------------|  
 |SQLSERVER: 以外のドライブで始まります。|ローカル コンピューター上の既定のインスタンスのログイン ID の既定のデータベースです。|  
 |SQLSERVER:\SQL|ローカル コンピューター上の既定のインスタンスのログイン ID の既定のデータベースです。|  
@@ -96,7 +96,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  **Invoke-Sqlcmd** では **sqlcmd** 環境または SQLCMDDBNAME や SQLCMDWORKSTATION などのスクリプト変数が初期化されません。  
   
- **Invoke-Sqlcmd** では、Windows PowerShell の **-Verbose** 共通パラメーターを指定しない限り、PRINT ステートメントの出力などのメッセージが表示されません。 以下に例を示します。  
+ **Invoke-Sqlcmd** では、Windows PowerShell の **-Verbose** 共通パラメーターを指定しない限り、PRINT ステートメントの出力などのメッセージが表示されません。 例:  
   
 ```  
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
@@ -111,18 +111,18 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |指定したクエリの実行と終了|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証ログイン ID|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証パスワード|-P|-Password|  
-|変数の定義|-V|-Variable|  
+|変数の定義|-v|-Variable|  
 |クエリのタイムアウト間隔|-t|-QueryTimeout|  
 |エラー発生時の実行停止|-b|-AbortOnError|  
 |専用管理者接続|-A|-DedicatedAdministratorConnection|  
 |対話型コマンド、スタートアップ スクリプト、および環境変数の無効化|-X|-DisableCommands|  
 |変数の代入の無効化|-X|-DisableVariables|  
 |レポートする最小重大度レベル|-v|-SeverityLevel|  
-|レポートする最小エラー レベル|-m|-ErrorLevel|  
+|レポートする最小エラー レベル|-M|-ErrorLevel|  
 |ログインのタイムアウト間隔|-l|-ConnectionTimeout|  
 |ホスト名|-H|-HostName|  
 |パスワードの変更と終了|-Z|-NewPassword|  
-|クエリが含まれている入力ファイル|-i |-InputFile|  
+|クエリが含まれている入力ファイル|-i|-InputFile|  
 |文字出力の最大長|-w|-MaxCharLength|  
 |バイナリ出力の最大長|-w|-MaxBinaryLength|  
 |SSL 暗号化を使用した接続|パラメーターなし|-EncryptConnection|  
@@ -133,7 +133,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |出力データに使用するコード ページ|-f|パラメーターなし|  
 |パスワードの変更と実行の継続|-Z|パラメーターなし|  
 |パケット サイズ|-a|パラメーターなし|  
-|列の区切り|-s|パラメーターなし|  
+|列の区切り|-S|パラメーターなし|  
 |出力ヘッダーの制御|-H|パラメーターなし|  
 |制御文字の指定|-k|パラメーターなし|  
 |固定長表示幅|-Y|パラメーターなし|  
@@ -147,7 +147,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |コマンドの終了|-c|パラメーターなし|  
 |Windows 認証を使用した接続|-E|パラメーターなし|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン コマンドレットの使用](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
  [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)   
  [sqlcmd ユーティリティの使用](../relational-databases/scripting/sqlcmd-use-the-utility.md)  

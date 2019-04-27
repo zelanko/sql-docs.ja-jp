@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d83620c0c6463bd6e752f65a97b2fb14e1d1c03f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756006"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>[警告] (データベース デザイナー) (Analysis Services - 多次元データ)
-  **[警告]** タブを使用すると、ルールをグローバルに表示および消去したり、消去された警告の特定のインスタンスを表示して再度有効にしたりできます。 **[警告]** タブには、 **[デザイン警告ルール]** および **[消去された警告]** という 2 つのグリッドが表示されます。  
+  **[警告]** タブを使用すると、ルールをグローバルに表示および消去したり、消去された警告の特定のインスタンスを表示して再度有効にしたりできます。 **警告** タブには 2 つのグリッドが表示されます。**デザイン警告ルール**と**された警告**します。  
   
  **[警告] タブを表示するには**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48074382"
 > [!NOTE]  
 >  オブジェクトに警告が含まれていても、オブジェクトが無効な状態であったり、プロジェクトから手動で削除されたりすると、一覧にある警告の横にエラー アイコンが表示されます。 警告を消去するには、警告を選択し、 **[再有効化]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [警告ダイアログ ボックスを閉じます&#40;Analysis Services - 多次元データ&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
  [一般的な&#40;データベース デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
   

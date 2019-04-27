@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43c1c932565ae3df666be10a1b89794ecd720135
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766674"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services のロール (SSIS サービス)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 次の 3 つの固定データベース レベル ロールがあります`db_ssisadmin`、 **db_ssisltduser**、および**db_ssisoperator**パッケージへのアクセスを制御するためです。 保存されているパッケージにのみロールを実装することができます、`msdb`データベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 パッケージにロールを割り当てるには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。 ロールの割り当てを保存、`msdb`データベース。  

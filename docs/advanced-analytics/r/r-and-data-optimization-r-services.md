@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 4fdc699437ef44d32e944d810e9e38571d20472c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642280"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services - データの最適化のパフォーマンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -108,7 +108,7 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 確実に並列でデータを分析することができます、データベース エンジンが並列クエリ プランを作成できるように、データを取得するためのクエリを構成する必要があります。 コードやアルゴリズムは、大量のデータを使用している場合、以下のことを確認する指定されたクエリ`RxSqlServerData`は並列実行用に最適化されています。 並列実行プランにならないクエリは、計算の 1 つのプロセスになる可能性があります。
 
-大規模なデータセットを使用する必要がある場合は、Management Studio または R コードを実行する前に、別の SQL クエリ アナライザーを使用して、実行プランを分析します。 クエリのパフォーマンスを向上させるために推奨される手順を実行し、します。 たとえば、テーブルのインデックス不足は、クエリの実行時間に影響する可能性があります。 詳細については、[パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)を参照してください。
+大規模なデータセットを使用する必要がある場合は、Management Studio または R コードを実行する前に、別の SQL クエリ アナライザーを使用して、実行プランを分析します。 クエリのパフォーマンスを向上させるために推奨される手順を実行し、します。 たとえば、テーブルのインデックス不足は、クエリの実行時間に影響する可能性があります。 詳細については、次を参照してください。[パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)します。
 
 パフォーマンスに影響を与えるもう 1 つのよくある間違いは、クエリが必要な数より多い列を取得します。 たとえば、数式は、3 つだけの列に基づいていますが、ソース テーブル内の 30 個の列が、移動する場合はデータが不必要にします。
 

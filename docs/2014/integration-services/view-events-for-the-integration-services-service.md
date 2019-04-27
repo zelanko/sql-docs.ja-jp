@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c00739cefe457575e6b05dee368d8965775a387
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766065"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Integration Services サービスのイベントを表示する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスのイベントを表示できるツールには、次の 2 つがあります。  
@@ -63,7 +63,7 @@ ms.locfileid: "58389191"
   
 9. **[ファイル]** メニューの **[終了]** をクリックして、 **[イベント ビューアー]** ダイアログ ボックスを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サービスを管理する](../../2014/integration-services/manage-the-integration-services-service.md)   
  [データ フロー パフォーマンス カウンターのログを追加する](performance/performance-counters.md)  
   

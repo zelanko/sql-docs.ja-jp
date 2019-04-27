@@ -10,18 +10,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639858"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>System Center Operations Manager - Analytics Platform System で監視します。
 System Center Operations Manager (SCOM) を使用すると、Analytics Platform System (APS) アプライアンスを監視できます。
   
 ## <a name="before-you-begin"></a>はじめに  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>必須コンポーネント  
   
 1.  System Center Operations Manager 2007 R2、2012、または 2012 SP1 は、インストールして実行する必要があります。  
   
@@ -61,7 +61,7 @@ SCOM 管理パックを構成すると、SCOM の監視 ウィンドウをクリ
   
 ![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [Understanding 管理コンソールの警告&#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)  
   

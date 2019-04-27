@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47936b5c085514fca4ecc1c81057ef78a19f05c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628465"
 ---
 # <a name="embedded-sql"></a>埋め込み SQL
 DBMS に SQL ステートメントを送信するための最初の手法が埋め込まれた SQL です。 SQL は、変数とフロー制御ステートメントは使用しないので、多くの場合、C や COBOL などの従来のプログラミング言語で記述されたプログラムに追加できるデータベースのサブ言語として使用されます。 埋め込み SQL の中心になります。 ホスト プログラミング言語で記述されたプログラムで SQL ステートメントを配置することです。 簡単に、ホスト言語で SQL ステートメントを埋め込むには、次の手法が使用されます。  

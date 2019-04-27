@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 40fcb993ddc3894ec44a60c79db463611f4ab1f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764870"
 ---
 # <a name="master-data-services-database"></a>マスター データ サービス データベース
   データベースには、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システムに関するすべての情報が含まれています。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 配置の中心となる要素です。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの機能は次のとおりです。  
@@ -43,7 +43,7 @@ ms.locfileid: "52785804"
   
 -   [ステージング処理のエラー (マスター データ サービス)](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ サービス データベースの作成](install-windows/create-a-master-data-services-database.md)   
  [データベース オブジェクト セキュリティ (マスター データ サービス)](../../2014/master-data-services/database-object-security-master-data-services.md)   
  [データベース ログイン、ユーザー、およびロール &#40;マスター データ サービス&#41;](../../2014/master-data-services/database-logins-users-and-roles-master-data-services.md)  

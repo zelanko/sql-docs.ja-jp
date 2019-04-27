@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637762"
 ---
 # <a name="create-xml-indexes"></a>XML インデックスの作成
   このトピックでは、プライマリ XML インデックスとセカンダリ XML インデックスの作成方法について説明します。  
@@ -99,7 +99,7 @@ FROM    sys.xml_indexes;
   
  **secondary_type_desc** 列に返される値は、NULL、PATH、VALUE、または PROPERTY です。 プライマリ XML インデックスの場合、返される値は NULL です。  
   
-### <a name="example-creating-secondary-xml-indexes"></a>例:セカンダリ XML インデックスを作成します。  
+### <a name="example-creating-secondary-xml-indexes"></a>例: セカンダリ XML インデックスの作成  
  次の例では、セカンダリ XML インデックスの作成方法を示します。 また、作成した XML インデックスに関する情報も示します。  
   
 ```  
@@ -199,7 +199,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML インデックス &#40;SQL Server&#41;](xml-indexes-sql-server.md)   
  [XML データ &#40;SQL Server&#41;](xml-data-sql-server.md)  
   

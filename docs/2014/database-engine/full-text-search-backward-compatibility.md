@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779262"
 ---
 # <a name="full-text-search-backward-compatibility"></a>フルテキスト検索における旧バージョンとの互換性
   旧バージョンとの互換性のセクションの各トピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の以前のバージョンと [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]におけるフルテキスト検索の動作の違いについて説明します。  
@@ -31,7 +31,7 @@ ms.locfileid: "52544597"
 |[フルテキスト検索の重大な変更](breaking-changes-to-full-text-search.md)|アプリケーションの変更を必要とする場合があるフルテキスト検索の変更|  
 |[フルテキスト検索の動作の変更](../../2014/database-engine/behavior-changes-to-full-text-search.md)|フルテキスト検索の動作の変更|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server データベース エンジンの旧バージョンとの互換性](sql-server-database-engine-backward-compatibility.md)  
   
   

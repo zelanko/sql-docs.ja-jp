@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 065cec0c70d0b98131dc4cdc5b477b11115091f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757645"
 ---
 # <a name="add-a-table-ssas-tabular"></a>テーブルの追加 (SSAS テーブル)
   このトピックでは、以前にデータをモデルにインポートしたときのデータ ソースからテーブルを追加する方法について説明します。 同じデータ ソースからテーブルを追加するには、既存のデータ ソース接続を使用できます。 1 つのデータ ソースから任意の数のテーブルをインポートする場合は、常に 1 つの接続を使用することをお勧めします。  
@@ -39,8 +39,8 @@ ms.locfileid: "48146512"
 > [!NOTE]  
 >  1 つのデータ ソースから複数のテーブルを同時にインポートする場合、それらのテーブル間のソースでのリレーションシップがモデル内に自動的に作成されます。 ただし、後からテーブルを追加する場合は、新しく追加されたテーブルと以前にインポートされたテーブルの間のリレーションシップを、モデル内に手動で作成することが必要な場合があります。  
   
-## <a name="see-also"></a>参照  
- [データをインポート&#40;SSAS 表形式&#41;](../import-data-ssas-tabular.md)   
- [テーブルを削除する&#40;SSAS 表形式&#41;](delete-a-table-ssas-tabular.md)  
+## <a name="see-also"></a>関連項目  
+ [データのインポート &#40;SSAS テーブル&#41;](../import-data-ssas-tabular.md)   
+ [テーブルの削除 &#40;SSAS テーブル&#41;](delete-a-table-ssas-tabular.md)  
   
   

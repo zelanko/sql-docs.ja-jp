@@ -11,18 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773791"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>非クラスター化列ストア インデックスの使用
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルの非クラスター化 columnstore インデックスを使用するキー タスクについて説明します。  
   
- 列ストア インデックスの概要については、[列ストア インデックスの概念](../relational-databases/indexes/columnstore-indexes-described.md)を参照してください。  
+ 列ストア インデックスの概要については、次を参照してください。[列ストア インデックスの概念](../relational-databases/indexes/columnstore-indexes-described.md)します。  
   
- クラスター化列ストア インデックスについては、[クラスター化列ストア インデックスを使用して](../relational-databases/indexes/indexes.md)を参照してください。  
+ クラスター化列ストア インデックスについては、次を参照してください。[クラスター化列ストア インデックスを使用して](../relational-databases/indexes/indexes.md)します。  
   
 ## <a name="contents"></a>目次  
   

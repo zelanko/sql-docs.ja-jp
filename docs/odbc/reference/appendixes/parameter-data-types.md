@@ -16,11 +16,11 @@ ms.author: genemi
 ms.reviewer: ''
 manager: craigg
 ms.openlocfilehash: e1f1097927f61355cf4a50f4287397d823fd3177
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632415"
 ---
 # <a name="parameter-data-types"></a>パラメーターのデータ型
 各パラメーターが指定されている場合でも**SQLBindParameter**は、SQL データ型を SQL ステートメントのパラメーターを使用して定義されていない組み込みデータ型であります。 そのため、パラメーター マーカーはステートメントのもう 1 つのオペランドからそのデータ型を推論することができる場合にのみ、SQL ステートメントに含めることができます。 でなどの算術式でしょうか。 + COLUMN1、パラメーターのデータ型は、列 1 で表される名前付きの列のデータ型から推論することができます。 データ型を特定できない場合、アプリケーションでパラメーター マーカーを使用することはできません。  

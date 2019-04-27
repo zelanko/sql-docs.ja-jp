@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: db03da02344301043e144cdd5e1638c09000bb08
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745353"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>インスタンスの SQL Server データベース内分析の累積的更新プログラム用 CAB のダウンロードします。
 
@@ -133,7 +133,7 @@ SQL Server 2016 R Services では、ベースライン リリースは、RTM バ
 
 Microsoft R のソース コードを表示する場合は、使用可能になるダウンロード .tar 形式のアーカイブとして。[R Server のインストーラーをダウンロードします。](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [インターネットにアクセスできないコンピューターでの累積的更新プログラムを適用します。](sql-ml-component-install-without-internet-access.md#apply-cu)
 

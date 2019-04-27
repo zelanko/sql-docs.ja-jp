@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77660e19bed6781d73efdd36e6a752ae5c3cc1fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773468"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>[トレース テーブルのプロパティ] ([イベントの選択] タブ)
   **[トレース テーブルのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブを使用すると、トレースのイベントやデータ列プロパティを表示したり、トレースからイベントまたは列を削除したりできます。  
@@ -29,7 +29,7 @@ ms.locfileid: "48169142"
   
 ## <a name="options"></a>および  
  **[イベント]** 列  
- イベント カテゴリにより分類された、ビューによりトレースされるイベントです。 イベントのチェック ボックスをオンにするか、データ列をオンにすることでイベントを選択できます。 イベントのチェック ボックスをオンにすると、そのイベントで使用できるデータ列がすべて選択されます。 イベントのデータ列をオンにすると、イベントが選択されるだけでなく、そのほかに必要な列がすべて自動的に選択されます。 トレース ファイルまたはトレース テーブルを表示した場合、イベントのチェック ボックスやデータ列をオフにすることで、トレース ウィンドウに表示されるデータ量が減り、分析が容易になります。 列のフィルターを変更して、トレース ウィンドウに表示されるデータ量を減らすこともできます。 イベント クラスの詳細については、「 [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。  
+ イベント カテゴリにより分類された、ビューによりトレースされるイベントです。 イベントのチェック ボックスをオンにするか、データ列をオンにすることでイベントを選択できます。 イベントのチェック ボックスをオンにすると、そのイベントで使用できるデータ列がすべて選択されます。 イベントのデータ列をオンにすると、イベントが選択されるだけでなく、そのほかに必要な列がすべて自動的に選択されます。 トレース ファイルまたはトレース テーブルを表示した場合、イベントのチェック ボックスやデータ列をオフにすることで、トレース ウィンドウに表示されるデータ量が減り、分析が容易になります。 列のフィルターを変更して、トレース ウィンドウに表示されるデータ量を減らすこともできます。 イベント クラスの詳細については、「 [SQL Server イベント クラスの参照](../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。  
   
  その他のデータ列  
  トレースされるデータ列を表示します。 トレースに含まれる各イベントでは、トレースの関連するデータ列は既定ですべてオンになっています。  
@@ -48,7 +48,7 @@ ms.locfileid: "48169142"
  **[列の構成]**  
  **[イベント]** およびトレースするデータ列を選択した後、 **[列の構成]** をクリックすると、トレース結果のウィンドウの列が並べ替えられます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トレース テーブルを開く &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  

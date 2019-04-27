@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1273e282dab772b2bd59177de6bd24ad1d3e6d1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766035"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>[WMI イベント監視タスク エディター] ([全般] ページ)
   **[WMI イベント監視タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、WMI イベント監視タスクに名前を付けて説明を記述することができます。  
@@ -37,7 +37,7 @@ ms.locfileid: "58381100"
  **[説明]**  
  WMI イベント監視タスクの説明を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[WMI イベント監視タスク エディター] ([WMI オプション] ページ)](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
  [[式] ページ](expressions/expressions-page.md)   

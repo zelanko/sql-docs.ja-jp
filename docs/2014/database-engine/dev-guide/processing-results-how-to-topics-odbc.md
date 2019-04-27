@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: acd65a4dfc708c88dd30b6d2e15b189c0d340849
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780797"
 ---
 # <a name="processing-results-how-to-topics-odbc"></a>結果を処理する方法に関するトピック (ODBC)
   ODBC アプリケーションの結果の処理は、まず、結果セットの特性を確認し、いずれかを使用してプログラム変数にデータを取得する[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "60158668"
   
 -   [結果を処理&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC の使用法に関するトピック](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

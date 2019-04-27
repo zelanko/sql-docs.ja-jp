@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: cabebb91ecb7d276066cb0f1c6a2f09c633d0ba0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635670"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの SQL Server on Linux
 
@@ -33,7 +33,7 @@ Linux 上の SQL Server FCI を作成するを参照してください[Linux 上
 
 * SLES でのクラスタ リングの階層は SUSE Linux Enterprise に基づいて[高可用性の拡張機能 (HAE)](https://www.suse.com/products/highavailability)します。
 
-    クラスターの構成、リソース エージェントのオプション、管理、ベスト プラクティス、および推奨事項の詳細については、[SUSE Linux Enterprise 高可用性拡張子 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)を参照してください。
+    クラスターの構成、リソース エージェントのオプション、管理、ベスト プラクティス、および推奨事項の詳細については、次を参照してください。 [SUSE Linux Enterprise 高可用性拡張子 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)します。
 
 RHEL HA アドオンと SUSE HAE の両方が上に構築された[Pacemaker](https://clusterlabs.org/)します。
 

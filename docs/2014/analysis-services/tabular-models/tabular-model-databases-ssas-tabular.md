@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 763561a3b13917c290794db145c6309267f9dc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756585"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>表形式モデルのデータベース (SSAS 表形式)
   テーブル モデル データベースは、Analysis Services のテーブル モデル プロジェクト テンプレートを使用して [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成する Analysis Services データベースであり、テーブルおよびリレーションシップがデータを表すための主な構造です。  
@@ -25,20 +25,20 @@ ms.locfileid: "48190702"
  テーブル モデル データベースは多次元データベースよりも構築が容易であり、リレーショナル データベースのバックグラウンドがある場合は特に容易です。 バックグラウンドがない場合でも、管理タスクは多次元データベースのデータベース管理と同じではないものの類似しています。 同じツールとアプローチが適用されます。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [テーブル モデル ソリューション&#40;SSAS 表形式&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [テーブル モデル ソリューション (SSAS テーブル)](../tabular-model-solutions-ssas-tabular.md)  
   
  [テーブル モデル データ アクセス](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [データベース、テーブル、またはパーティションの処理](process-database-table-or-partition-analysis-services.md)  
   
- [テーブル モデル ロール&#40;SSAS 表形式&#41;](tabular-model-roles-ssas-tabular.md)  
+ [テーブル モデル ロール (SSAS テーブル)](tabular-model-roles-ssas-tabular.md)  
   
- [テーブル モデル パーティション&#40;SSAS 表形式&#41;](tabular-model-partitions-ssas-tabular.md)  
+ [テーブル モデル パーティション (SSAS テーブル)](tabular-model-partitions-ssas-tabular.md)  
   
  [テーブル モデルのデータベースの In-Memory または DirectQuery アクセスの構成](enable-directquery-mode-in-ssms.md)  
   
- [表形式モデル データベースへの接続&#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [テーブル モデル データベースへの接続 &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
  [PowerPivot から復元](restore-from-power-pivot.md)  
   

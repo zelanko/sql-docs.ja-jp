@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0c77323f6ae37e3543cf070817a9fee05943f3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760863"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>階層的な手法を使用した階層テーブルの作成
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] のマーケティング部門には 8 人の従業員が勤務しています。 従業員の階層は、次のようになります。  

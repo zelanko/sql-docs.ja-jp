@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773478"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>特定のバージョンを最新バージョンとして指定する
   ソース管理にファイルをチェックインすると、そのバージョンが最新バージョンになります。つまり、その最新バージョンをチェックアウト (取得) するユーザーは、その最新項目のローカル コピーを受け取ることになります。  
@@ -60,7 +60,7 @@ ms.locfileid: "48069462"
   
 6.  クリックして**はい**選択したバージョンにロールバックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チェックインを管理します。](../../2014/database-engine/manage-checkins.md)   
  [ファイルのチェックイン](../../2014/database-engine/check-in-files.md)  
   

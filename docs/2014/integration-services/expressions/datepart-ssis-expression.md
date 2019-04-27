@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22225f9a1791185ed78dfc75d92c3dbced7be3ff
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769339"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 式)
   ある日付の、特定の日付要素を整数で返します。  
@@ -80,7 +80,7 @@ DATEPART("dd", ModifiedDate)
 DATEPART("yy",GETDATE())  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DATEADD &#40;SSIS 式&#41;](dateadd-ssis-expression.md)   
  [DATEDIFF (SSIS 式)](datediff-ssis-expression.md)   
  [DAY (SSIS 式)](day-ssis-expression.md)   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b956a9f51e013ce03801ff870e27f337c738b3c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762067"
 ---
 # <a name="mssqlserver8712"></a>MSSQLSERVER_8712
     
@@ -38,7 +38,7 @@ ms.locfileid: "48202358"
 ## <a name="user-action"></a>ユーザーの操作  
  USE PLAN ヒントで指定したすべてのインデックスが存在することを確認します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリ ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [プラン ガイド](../performance/plan-guides.md)  
   

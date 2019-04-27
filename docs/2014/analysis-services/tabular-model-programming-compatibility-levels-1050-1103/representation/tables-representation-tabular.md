@@ -1,23 +1,23 @@
 ---
 title: テーブル表現 (テーブル) |Microsoft Docs
-ms.custom: ''
-ms.date: 04/27/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
+ms.date: 05/07/2018
+ms.prod: sql
 ms.technology: analysis-services
+ms.custom: tabular-models
 ms.topic: reference
-ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: c733fbf1e8a075d0d240f5cb69d888310fc6009f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757702"
 ---
 # <a name="tables-representation-tabular"></a>テーブル表現 (テーブル)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   テーブル モデルでは、テーブルがデータの基本表現です。  
   
 ## <a name="tables-representation"></a>テーブル表現  

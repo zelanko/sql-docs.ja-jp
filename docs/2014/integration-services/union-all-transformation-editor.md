@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: def728a5b32970553d8bf639f58d4cfba96fc31e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766085"
 ---
 # <a name="union-all-transformation-editor"></a>全体結合変換エディター
   **[全体結合変換エディター]** ダイアログ ボックスを使用すると、複数の入力行セットを 1 つの出力行セットにマージできます。 データ フローに全体結合変換を含めることで、複数のデータ フローのデータをマージしたり、全体結合変換を入れ子にして複雑なデータセットを作成したり、データ内のエラーを修正した後で行を再マージしたりできます。  
@@ -37,7 +37,7 @@ ms.locfileid: "58391110"
  **[全体結合 入力 n]**  
  2 番目およびその他の入力で使用可能な入力列を一覧から選択します。 マップされた列のメタデータが一致する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [全体結合変換を使用してデータをマージする](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
  [マージ変換](data-flow/transformations/merge-transformation.md)   

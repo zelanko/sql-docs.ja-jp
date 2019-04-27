@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a79e359fb941ed847d1dadbf2ae499e06b9e2e29
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767114"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>ODBC 接続マネージャーの UI リファレンス
   **[ODBC の接続マネージャーの構成]** ダイアログ ボックスを使用すると、接続を ODBC データ ソースに追加できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "58388690"
  **削除**  
  接続を選択し、 **[削除]** ボタンを使用して削除します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

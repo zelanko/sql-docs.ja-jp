@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c0bf5769d20d806944a3b312ce0e65bc71c42aa
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756939"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI (SSAS テーブル)
   *KPI* (主要業績評価指標) は、表形式モデルで、*対象*の値に対する*ベース* メジャーによって定義される、また、メジャーまたは絶対値によって定義される値のパフォーマンスの測定に使用されます。 このトピックは、テーブル モデル作成者が表形式モデルの KPI の基本を理解できることを目的としています。  
@@ -86,7 +86,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
 |-----------|-----------------|  
 |[KPI の作成および管理 &#40;SSAS テーブル&#41;](kpis-ssas-tabular.md)|ベース メジャー、対象のメジャー、および状態のしきい値と共に KPI を作成する方法について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メジャー &#40;SSAS テーブル&#41;](measures-ssas-tabular.md)   
  [パースペクティブ &#40;SSAS テーブル&#41;](perspectives-ssas-tabular.md)  
   

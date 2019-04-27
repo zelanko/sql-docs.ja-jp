@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 85ac46b918918f7e9dac715e11909ffeb9c46a29
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767144"
 ---
 # <a name="odata-source-editor-connection-page"></a>[OData ソース エディター] ([接続] ページ)
   **[ODBC ソース エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、OData ソースに対応する ODBC 接続マネージャーを選択できます。 また、このページで、コレクションまたはリソースのパスと、どのデータを OData ソースから取得する必要があるかを示すクエリ オプションを指定することができます。 OData ソースの詳細については、「 [OData ソース](data-flow/odata-source.md)」を参照してください。  
@@ -55,9 +55,9 @@ ms.locfileid: "58390471"
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>コレクションまたはリソースのパス = Resource Path を使用します。  
  **Resource path**  
- リソースのパスを入力します。 例 :Employees  
+ リソースのパスを入力します。 以下に例を示します。Employees  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OData ソース エディター ([列] ページ)](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [OData ソース エディター ([エラー出力] ページ)](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [OData Connection Manager](connection-manager/odata-connection-manager.md)  

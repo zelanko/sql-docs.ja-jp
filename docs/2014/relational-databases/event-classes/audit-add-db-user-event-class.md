@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36d9be6a759e2684602a20ed0c493818d5fe4cc4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761647"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User イベント クラス
   **Audit Add DB User** イベント クラスは、データベースにデータベース ユーザーとしてログインが追加または削除されるたびに発生します。 このイベント クラスは、 **sp_grantdbaccess**、 **sp_revokedbaccess**、 **sp_adduser**、および **sp_dropuser** プロシージャに対して使用します。  
@@ -59,7 +59,7 @@ ms.locfileid: "52775604"
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
 |**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql)   

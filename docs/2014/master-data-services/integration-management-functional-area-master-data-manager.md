@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 571f0bbd06c141173e7717e304722eb7d4bcd346
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765105"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>[統合管理] 機能領域 (マスター データ マネージャー)
   [統合管理] 機能領域では、管理者はステージング テーブルからデータをインポートして、システムをサブスクライブするためのサブスクリプション ビューを作成できます。 管理者の詳細については、「[管理者 (マスター データ サービス)](administrators-master-data-services.md)」を参照してください。  
@@ -38,7 +38,7 @@ ms.locfileid: "59582795"
   
  [サブスクリプション ビューを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ マネージャー Web アプリケーション](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

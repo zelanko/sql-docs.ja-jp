@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fc9cb98837d206d5279d1f14d4a57ce56782759
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633382"
 ---
 # <a name="unicode-applications"></a>Unicode アプリケーション
 2 つの方法のいずれかで Unicode アプリケーションとしてアプリケーションを再コンパイルすることができます。  
@@ -38,6 +38,6 @@ ms.locfileid: "47664200"
   
  Unicode アプリケーションまたは ANSI アプリケーションとしてにコンパイルできるように、アプリケーションを作成できます。 ここでは、SQL_C_TCHAR として文字データ型を宣言することができます。 これは、アプリケーションが Unicode アプリケーションとしてコンパイルされるまたは ANSI アプリケーションとしてコンパイルされている場合は、SQL_C_CHAR を挿入する場合は、SQL_C_WCHAR を挿入するマクロです。 Length 引数のサイズを変更する (文字列データ型) のため、アプリケーション プログラマをその引数としての SQLPOINTER を受け取る関数に注意してくださいにある必要があります、アプリケーションは、ANSI または Unicode かどうかによって異なります。  
   
- 関数は、3 つの方法のいずれかで呼び出すことができます: Unicode 専用の関数呼び出しと (で、 *W*サフィックス)、ANSI 専用の関数呼び出しとして (で、 *A*サフィックス)、またはサフィックスなしの ODBC 関数呼び出しとして。 関数の 3 つのフォームへの引数は同じです。 SQLCHAR 関数のみ\*引数または文字列の指す SQLPOINTER 引数が Unicode と ANSI のフォームが必要です。 などの文字型として宣言できる引数を持つ関数の**SQLBindCol**または**SQLGetData** (これがない Unicode と ANSI 形式)、引数は、Unicode 型として宣言できますANSI 型、または C の場合、SQL_C_TCHAR マクロの引数を入力します。 詳細については、[Unicode データ](../../../odbc/reference/develop-app/unicode-data.md)を参照してください。  
+ 関数は、3 つの方法のいずれかで呼び出すことができます: Unicode 専用の関数呼び出しと (で、 *W*サフィックス)、ANSI 専用の関数呼び出しとして (で、 *A*サフィックス)、またはサフィックスなしの ODBC 関数呼び出しとして。 関数の 3 つのフォームへの引数は同じです。 SQLCHAR 関数のみ\*引数または文字列の指す SQLPOINTER 引数が Unicode と ANSI のフォームが必要です。 などの文字型として宣言できる引数を持つ関数の**SQLBindCol**または**SQLGetData** (これがない Unicode と ANSI 形式)、引数は、Unicode 型として宣言できますANSI 型、または C の場合、SQL_C_TCHAR マクロの引数を入力します。 詳細については、次を参照してください。 [Unicode データ](../../../odbc/reference/develop-app/unicode-data.md)します。  
   
  連動するように使用できる Unicode ドライバーがない場合でも、Unicode アプリケーションとしてアプリケーションを作成できます。 ドライバー マネージャーは、Unicode 関数とデータ型を ANSI にマップされます。 Unicode から ANSI へのマッピングにいくつかの制限があります。 Unicode アプリケーションで動作するための Unicode ドライバーの存在を使用して、パフォーマンスを向上させると、Unicode ANSI へのマッピングからに固有の制限が削除されます。

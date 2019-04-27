@@ -1,5 +1,5 @@
 ---
-title: ユーザー定義メンバー プロパティ (MDX) |Microsoft ドキュメント
+title: ユーザー定義メンバー プロパティ (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ae7cf92c9384b2be79048c860ef6a8b0476535
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740230"
 ---
-# <a name="mdx-member-properties---user-defined-member-properties"></a>MDX メンバーのプロパティ - ユーザー定義メンバー プロパティ
+# <a name="mdx-member-properties---user-defined-member-properties"></a>MDX メンバー プロパティ - ユーザー定義メンバー プロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   属性リレーションシップとして、ディメンション内の指定されたレベルにユーザー定義メンバー プロパティを追加できます。 ユーザー定義メンバー プロパティは、階層の **(All)** レベル、または階層そのものには追加できません。  
   
@@ -64,8 +64,8 @@ FROM [Adventure Works]
   
  計算されるメンバーの作成方法の詳細については、「[MDX での計算されるメンバーの作成 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [メンバーのプロパティ & #40; を使用します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [プロパティ & #40 です。MDX と #41 です。](../../../mdx/properties-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [メンバー プロパティの使用 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [プロパティ &#40;MDX&#41;](../../../mdx/properties-mdx.md)  
   
   

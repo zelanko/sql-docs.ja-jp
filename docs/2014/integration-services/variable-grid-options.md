@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89828a105e04c54c1bfecda59670a273583998cb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766055"
 ---
 # <a name="variable-grid-options"></a>可変グリッドのオプション
   **[可変グリッドのオプション]** ダイアログ ボックスを使用して、 **[変数]** ウィンドウに表示される列を選択したり、変数の一覧に適用するフィルターを選択したりします。 対応する変数のプロパティの詳細については、「 [Integration Services (SSIS) の変数](integration-services-ssis-variables.md)」を参照してください。  
@@ -53,7 +53,7 @@ ms.locfileid: "58393907"
   
 -   **[式]**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[変数] ウィンドウ](../../2014/integration-services/variables-window.md)   
  [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)   
  [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)   

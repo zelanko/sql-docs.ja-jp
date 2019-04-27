@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfab3258ab8908c795e1c7d7e7719f1d0d4138bf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766994"
 ---
 # <a name="progress-tab"></a>[進行状況] タブ
   **デザイナーの** [進行状況] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]パッケージを実行するときに、その進行状況を表示できます。 **[進行状況]** タブには、1) パッケージおよび実行可能ファイルの検証と実行の開始時刻、終了時刻、および経過時間、2) パッケージの情報または警告、3) 進行状況通知、4) パッケージの成功または失敗、5) パッケージの実行中に生成されたエラー メッセージなどが表示されます。  
@@ -27,7 +27,7 @@ ms.locfileid: "58376480"
   
  パッケージの実行が停止した後は、 **[進行状況]** タブは **[実行結果]** タブになります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS デザイナー](ssis-designer.md)  
   
   

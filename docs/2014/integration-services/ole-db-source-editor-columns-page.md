@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c68996ab5c4aa204a8aa1139253dd946e558bba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767104"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>[OLE DB ソース エディター] ([列] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
@@ -37,7 +37,7 @@ ms.locfileid: "58390830"
  **出力列**  
  各出力列の一意な名前を表示します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 指定された名前は、SSIS デザイナーに表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB ソース エディター &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [OLE DB ソース エディター &#40;[エラー出力] ページ&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   

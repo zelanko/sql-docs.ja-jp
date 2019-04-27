@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762340"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>データベース スナップショットの作成 (Transact-SQL)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース スナップショットを作成する唯一の方法は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用することです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、データベース スナップショットの作成はサポートされません。  
@@ -53,7 +53,7 @@ ms.locfileid: "52768334"
   
 -   [ベスト プラクティス:データベース スナップショットの名前付け](#Naming)  
   
--   [ベスト プラクティス:データベース スナップショットの数を制限します。](#Limiting_Number)  
+-   [ベスト プラクティス:データベース スナップショット数の制限](#Limiting_Number)  
   
 -   [ベスト プラクティス:データベース スナップショットへのクライアント接続](#Client_Connections)  
   
@@ -82,7 +82,7 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-####  <a name="Limiting_Number"></a> ベスト プラクティス:データベース スナップショット数の制限  
+####  <a name="Limiting_Number"></a> ベスト プラクティス:データベース スナップショットの数を制限します。  
  一連のスナップショットを長期にわたって作成することで、ソース データベースのシーケンシャルなスナップショットがキャプチャされます。 各スナップショットは、明示的に削除されるまで保持されます。 元のページが更新されるにつれて、各スナップショットが継続的に拡張されるので、新しいスナップショットの作成後に古いスナップショットを削除するとディスク領域を節約できます。  
   
 > [!NOTE]  
@@ -180,7 +180,7 @@ GO
   
 -   [データベース スナップショットの削除 &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   

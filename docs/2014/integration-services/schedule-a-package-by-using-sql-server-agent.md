@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766884"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>SQL Server エージェントを使用してパッケージのスケジュールを設定する
   以下の手順は、パッケージを実行する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブ ステップを使用して、パッケージの実行を自動化する方法を示しています。  
@@ -56,7 +56,7 @@ ms.locfileid: "58388100"
     |--------------------|-----------------|  
     |**SSIS カタログ**|SSISDB データベースに格納されるパッケージ。 パッケージは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置される [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに含まれています。|  
     |**SQL Server**|MSDB データベースに格納されるパッケージ。 これらのパッケージを管理するには、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスを使用します。|  
-    |**[SSIS パッケージ ストア]**|コンピューターの既定のフォルダーに格納されるパッケージ。 既定のフォルダーは、*\<ドライブ>*:\Program Files\Microsoft SQL Server\110\DTS\Packages です。 これらのパッケージを管理するには、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスを使用します。<br /><br /> 注:[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の構成ファイルを変更することで、別のフォルダーを指定したり、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスによって管理されるファイル システムの追加のフォルダーを指定したりすることができます。 詳細については、「 [Integration Services サービスの構成 (SSIS サービス)](service/integration-services-service-ssis-service.md)との互換性を維持するために、このサービスをサポートしています。|  
+    |**[SSIS パッケージ ストア]**|コンピューターの既定のフォルダーに格納されるパッケージ。 既定のフォルダーは、*\<ドライブ>*:\Program Files\Microsoft SQL Server\110\DTS\Packages です。 これらのパッケージを管理するには、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスを使用します。<br /><br /> 注:別のフォルダーを指定するか、によって管理されるファイル システムで追加のフォルダーを指定することができます、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]サービスの構成ファイルを変更することによって、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]します。 詳細については、「 [Integration Services サービスの構成 (SSIS サービス)](service/integration-services-service-ssis-service.md)との互換性を維持するために、このサービスをサポートしています。|  
     |**[ファイル システム]**|ローカル コンピューターの任意のフォルダーに格納されるパッケージ。|  
   
      **次の表では、選択したパッケージ ソースに応じてジョブ ステップで使用できる構成オプションについて説明しています。**  
@@ -97,7 +97,7 @@ ms.locfileid: "58388100"
     |**ログ記録**|ログ プロバイダーをパッケージの実行に関連付けます。<br /><br /> **テキスト ファイルの SSIS ログ プロバイダー**<br /> ログ エントリを ASCII テキスト ファイルに書き込みます。<br /><br /> **SQL Server の SSIS ログ プロバイダー**<br /> ログ エントリを MSDB データベースの sysssislog テーブルに書き込みます。<br /><br /> **SQL Server Profiler の SSIS ログ プロバイダー**<br /> SQL Server Profiler を使用して表示できるトレースを書き込みます。<br /><br /> **Windows イベント ログの SSIS ログ プロバイダー**<br /> ログ エントリを Windows イベント ログのアプリケーション ログに書き込みます。<br /><br /> **XML ファイルの SSIS ログ プロバイダー**<br /> ログ ファイルを XML ファイルに書き込みます。<br /><br /> テキスト ファイル、XML ファイル、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler のログ プロバイダーには、パッケージに含まれているファイル接続マネージャーを選択しています。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログ プロバイダーには、パッケージに含まれている OLE DB 接続マネージャーを選択しています。<br /><br /> このオプションは、`/Logger` の `dtexec` オプションに対応しています。|  
     |**値の設定**|パッケージのプロパティ設定をオーバーライドします。 **[プロパティ]** ボックスで、 **[プロパティのパス]** および **[値]** 列に値を入力します。 1 つのプロパティに値を入力すると、 **[プロパティ]** ボックスに空の行が表示され、他のプロパティの値を入力できるようになります。<br /><br /> [プロパティ] ボックスからプロパティを削除するには、行をクリックし、 **[削除]** をクリックします。<br /><br /> 次のいずれかの方法でプロパティのパスが表示されます。<br /><br /> XML 構成ファイルからプロパティ パスをコピー (\*.dtsconfig) ファイル。 パスは、ファイルの Configuration セクションに PATH 属性の値として記述されています。 次に示すのは、MaximumErrorCount プロパティのパスの例です。<br /><br /> \Package.Properties[MaximumErrorCount]<br /><br /> 実行、**パッケージ構成ウィザード**最後からプロパティ パスをコピーおよび**ウィザードの完了**ページ。 その後、ウィザードの実行を取り消すことができます。|  
     |**検証**|**[署名付きパッケージのみ実行する]**<br /> パッケージの署名が確認されるかどうかを示します。 パッケージが署名されていないか、署名が有効でない場合、パッケージは失敗します。 このオプションは、`/VerifySigned` の `dtexec` オプションに対応しています。<br /><br /> **パッケージのビルドを検証する**<br /> パッケージのビルド番号を、このオプションの横にある **[ビルド]** ボックスに入力されたビルド番号と比較して検証するかどうかを示します。 不一致が発生した場合、パッケージは実行されません。 このオプションは、`/VerifyBuild` の `dtexec` オプションに対応しています。<br /><br /> **[パッケージ ID を確認する]**<br /> パッケージの GUID を、このオプションの横にある **[パッケージ ID]** ボックスに入力されたパッケージ ID と比較して検証するかどうかを示します。 このオプションは、`/VerifyPackageID` の `dtexec` オプションに対応しています。<br /><br /> **[バージョン ID を確認する]**<br /> パッケージのバージョン GUID を、このオプションの横にある **[バージョン ID]** ボックスに入力されたバージョン ID と比較して検証するかどうかを示します。 このオプションは、`/VerifyVersionID` の `dtexec` オプションに対応しています。|  
-    |**コマンド ライン**|dtexec のコマンド ライン オプションを変更します。 オプションの詳細については、「 [dtexec Utility](packages/dtexec-utility.md)」を参照してください。<br /><br /> ヒント:コマンド ラインをコマンド プロンプト ウィンドウにコピーし、`dtexec` を追加して、コマンド ラインからパッケージを実行できます。 これは、コマンド ライン テキストを生成する簡単な方法です。<br /><br /> **[元のオプションを復元する]**<br /> **[ジョブ ステップのプロパティ]** ダイアログ ボックスの **[パッケージ]**、 **[構成]**、 **[コマンド ファイル]**、 **[データ ソース]**、 **[実行オプション]**、 **[ログ記録]**、 **[値の設定]** 、 **[検証]** の各タブで設定したコマンド ライン オプションを使用します。<br /><br /> **コマンド ラインを手動で編集する**<br /> **[コマンド ライン]** ボックスに追加のコマンド ライン オプションを入力します。<br /><br /> **[OK]** をクリックして変更をジョブ ステップに保存する前に、**[元のオプションを復元する]** をクリックすると、**[コマンド ライン]** ボックスに入力したすべての追加のオプションを削除できます。|  
+    |**コマンド ライン**|dtexec のコマンド ライン オプションを変更します。 オプションの詳細については、「 [dtexec Utility](packages/dtexec-utility.md)」を参照してください。<br /><br /> ヒント:コマンドラインをコマンド プロンプト ウィンドウにコピーしたり、追加`dtexec`、コマンドラインからパッケージを実行します。 これは、コマンド ライン テキストを生成する簡単な方法です。<br /><br /> **[元のオプションを復元する]**<br /> **[ジョブ ステップのプロパティ]** ダイアログ ボックスの **[パッケージ]**、 **[構成]**、 **[コマンド ファイル]**、 **[データ ソース]**、 **[実行オプション]**、 **[ログ記録]**、 **[値の設定]** 、 **[検証]** の各タブで設定したコマンド ライン オプションを使用します。<br /><br /> **コマンド ラインを手動で編集する**<br /> **[コマンド ライン]** ボックスに追加のコマンド ライン オプションを入力します。<br /><br /> **[OK]** をクリックして変更をジョブ ステップに保存する前に、**[元のオプションを復元する]** をクリックすると、**[コマンド ライン]** ボックスに入力したすべての追加のオプションを削除できます。|  
   
 9. **[OK]** をクリックして設定を保存し、 **[新しいジョブ ステップ]** ダイアログ ボックスを閉じます。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "58388100"
     > [!TIP]  
     >  スケジュールに名前を付けるときには、他の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントのスケジュールとの区別がより簡単にできるように、一意でわかりやすい名前を使用してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクトとパッケージの実行](packages/run-integration-services-ssis-packages.md)  
   
   

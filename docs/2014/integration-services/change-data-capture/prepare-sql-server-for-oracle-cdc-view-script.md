@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bef06da3e6e1702a713aa2b4ca2e448e7ee461af
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771267"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Oracle CDC 表示スクリプト用の SQL Server の準備
   このダイアログ ボックスには、MSXDBCDC データベースを作成する SQL の準備スクリプトが表示されます。 Oracle CDC for SQL Server で使用するには、このデータベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上に配置する必要があります。  
@@ -25,10 +25,10 @@ ms.locfileid: "58382706"
  **[名前を付けて保存]**  
  任意の場所に保存できるテキスト ファイルにスクリプトを保存します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にスクリプトを貼り付けることによって、後でスクリプトを実行することができます。  
   
- **[コピー]**  
+ **コピー**  
  スクリプトをクリップボードにコピーします。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にスクリプトを貼り付けて実行し、MSXDBCDC データベースを作成することができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC 用の SQL Server の準備](prepare-sql-server-for-cdc.md)  
   
   

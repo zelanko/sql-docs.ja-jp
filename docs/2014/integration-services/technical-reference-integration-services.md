@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7134ae3080a4130a626ff79eb3c2df54745be4d7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766375"
 ---
 # <a name="technical-reference-integration-services"></a>テクニカル リファレンス (Integration Services)
   検索ツール、言語、およびプログラミング リファレンス ドキュメントを[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]で[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]します。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: deae929c1e01939d6caeb4d9fa49b3c7fe73fd0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756475"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>ツール バー (キューブ デザイナーの [計算] タブ) (Analysis Services - 多次元データ)
   **ツール バー** ペインを使用すると、キューブ デザイナーの **[計算]** タブで一般的な操作を実行できます。  
@@ -26,7 +26,7 @@ ms.locfileid: "48090862"
 |オプション|説明|  
 |------------|-----------------|  
 |**ビジネス インテリジェンスを追加します。**|クリックすると、 **ビジネス インテリジェンス ウィザード** が表示され、ビジネス インテリジェンス機能をキューブに追加できます。|  
-|**[処理]**|クリックすると、 **[処理]** ダイアログ ボックスを表示して、キューブを処理できます。|  
+|**プロセス**|クリックすると、 **[処理]** ダイアログ ボックスを表示して、キューブを処理できます。|  
 |**再接続**|接続の喪失やタイムアウトが原因で **[計算]** タブのセッションが切断されている場合にクリックすると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスとキューブを含むデータベースに **[計算]** タブが再接続されます。|  
 |**新しい計算されるメンバー**|**計算されるメンバー フォーム エディター** が表示され、新しい計算されるメンバーが作成されます。 このオプションはフォーム ビューでのみ表示されます。|  
 |**新しい名前付きセット**|**名前付きセット フォーム エディター** が表示され、新しい名前付きセットが作成されます。 このオプションはフォーム ビューでのみ表示されます。|  

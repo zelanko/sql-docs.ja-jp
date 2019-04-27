@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a51f3daa31b65901f916bf61a3a734c66390b12c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756396"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>ツール バー ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **ディメンション デザイナー** の **[ディメンション構造]** ページのツール バーを使用すると、一般的な操作を実行できます。  
@@ -25,7 +25,7 @@ ms.locfileid: "48146448"
  **ビジネス インテリジェンスを追加します。**  
  **ビジネス インテリジェンス ウィザード** を表示して、ビジネス インテリジェンス機能を追加します。  
   
- **[処理]**  
+ **プロセス**  
  **[処理]** ダイアログ ボックスを表示して、オブジェクトを処理します。  
   
  **属性として表示します**  

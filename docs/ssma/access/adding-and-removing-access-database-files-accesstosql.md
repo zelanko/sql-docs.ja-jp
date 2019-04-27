@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760621"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>追加および Access データベース ファイル (AccessToSQL) を削除します。
 アクセス データを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure では、SSMA プロジェクトに 1 つ以上の Access データベースを追加する必要があります。 これらのデータベースは、Access 97 または以降のバージョンである必要があります。 アクセスの以前のバージョンからのデータベースがある場合より新しいバージョンにデータベースを変換する必要があります。 これには開くして SSMA に追加する前に、Access 97 以降のバージョンでデータベースを保存します。  
@@ -46,7 +46,7 @@ SSMA プロジェクトに Access データベースを追加して SSMA は、�
 > Access データベースは、複数のファイルに分割することができます。 テーブルを含むバックエンド データベースとクエリ、フォーム、レポート、マクロ、モジュール、およびショートカットが含まれているフロント エンドのデータベース。 分割データベースを移行する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、SSMA をフロント エンドのデータベースを追加します。  
   
 ## <a name="permissions-that-are-required-by-ssma"></a>SSMA で必要なアクセス許可  
-Access データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、ユーザー グループと管理者のユーザーには、管理のアクセス許可が必要です。 ワークグループの保護を持つデータベースを移行する方法については、[Access データベースを移行の準備](preparing-access-databases-for-migration-accesstosql.md)を参照してください。  
+Access データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、ユーザー グループと管理者のユーザーには、管理のアクセス許可が必要です。 ワークグループの保護を持つデータベースを移行する方法については、次を参照してください。 [Access データベースを移行の準備](preparing-access-databases-for-migration-accesstosql.md)します。  
   
 ## <a name="selecting-databases-to-add"></a>追加するデータベースの選択  
 SSMA プロジェクトでは、1 つまたは複数のデータベースを追加して、ファイルはすべて 1 つの既知の場所に場合、は、次の手順を使用して、ファイルを追加できます。  
@@ -102,7 +102,7 @@ Access データベースをプロジェクトに追加すると、アクセス 
   
 3.  展開**テーブル**し、テーブルを選択します。  
   
-    4 つのタブが表示されることに注意してください:**テーブル**、**型マッピングの**、**プロパティ**、および**データ**します。  
+    4 つのタブが表示されることに注意してください。**テーブル**、**の種類のマッピング**、**プロパティ**、および**データ**します。  
   
 4.  テーブルを展開し、**キー**、キーを選択します。  
   

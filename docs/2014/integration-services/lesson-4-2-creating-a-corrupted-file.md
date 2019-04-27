@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767384"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>手順 2:破損ファイルの作成
   変換エラーの構成と処理を体験するために、コンポーネントの処理が失敗するサンプル フラット ファイルを作成します。  
@@ -61,6 +61,6 @@ ms.locfileid: "58393350"
     >  数値 27 はコンポーネントの ID です。 この値はデータ フローを構築したときに割り当てられるもので、パッケージの値とは異なることがあります。  
   
 ## <a name="next-steps"></a>次の手順  
- [ステップ 3:エラー フロー リダイレクションの追加](lesson-4-3-adding-error-flow-redirection.md)  
+ [手順 3:エラー フロー リダイレクションの追加](lesson-4-3-adding-error-flow-redirection.md)  
   
   

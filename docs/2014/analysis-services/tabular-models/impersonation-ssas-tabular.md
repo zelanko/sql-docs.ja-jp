@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757252"
 ---
 # <a name="impersonation-ssas-tabular"></a>権限借用 (SSAS テーブル)
   このトピックでは、データのインポートおよび処理 (更新) のためにデータ ソースに接続するときに、ログオン資格情報が Analysis Services によってどのように使用されるかについて、テーブル モデルの作成者を対象に説明しています。  
@@ -93,7 +93,7 @@ ms.locfileid: "52391865"
   
  省略記号 (...) をクリックして、Analysis Services サーバーに配置されているモデルの場合、権限借用情報を構成することができます、**データ ソース権限借用情報**プロパティ、 **データベースのプロパティ**  ダイアログ ボックスの[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DirectQuery モード &#40;SSAS テーブル&#41;](directquery-mode-ssas-tabular.md)   
  [データ ソース &#40;SSAS テーブル&#41;](../data-sources-ssas-tabular.md)   
  [テーブル モデル ソリューションの配置 &#40;SSAS テーブル&#41;](tabular-model-solution-deployment-ssas-tabular.md)  

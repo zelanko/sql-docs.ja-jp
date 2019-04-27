@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc2274fc3342c1a6cc11053c0f226232632bc225
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756782"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>テーブル モデルでの DAX について (SSAS テーブル)
   Data Analysis Expressions (DAX) は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel のブックおよび [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のテーブル モデル プロジェクトでカスタムの計算を作成するための数式言語です。 DAX の数式は、テーブル内や列内のデータに対して高度な計算を実行するための関数、演算子、値などで構成されます。  
@@ -125,7 +125,7 @@ ms.locfileid: "53374144"
   
 -   論理演算子: 複数の式を組み合わせて 1 つの結果を返します。  
   
- DAX の数式で使用される演算子の詳細については、[PowerPivot の DAX 演算子リファレンス](https://msdn.microsoft.com/library/ee634237(v=sql.120).aspx)を参照してください。  
+ DAX の数式で使用される演算子の詳細については、次を参照してください。 [PowerPivot の DAX 演算子リファレンス](https://msdn.microsoft.com/library/ee634237(v=sql.120).aspx)します。  
   
 ##  <a name="bkmk_DAX_Formulas"></a> DAX の数式  
  計算列やメジャーに使用する計算を作成したり、行レベルのフィルターを使用してデータのセキュリティを確保するうえで、DAX の数式は欠かすことができません。 計算列やメジャーに使用する数式を作成するには、モデル デザイナー ウィンドウの上部に配置されている数式バーを使用します。 行フィルターに使用する数式を作成するには、[ロール マネージャー] ダイアログ ボックスを使用します。 このセクションの情報は、DAX の数式に関する基礎知識を初めての方にわかりやすく伝えることを目的としています。  
@@ -219,28 +219,28 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   DAX 関数には、さまざまな *タイム インテリジェンス* 関数が含まれます。 これらの関数を使用すると、日付範囲を定義または選択して、それらの日付または範囲に基づく動的な計算を実行できます。 たとえば、並列期間の合計を比較できます。  
   
 ### <a name="date-and-time-functions"></a>日付と時刻の関数  
- DAX の日付と時刻の関数は、Microsoft Excel の日付と時刻の関数に似ています。 ただし、DAX 関数は、Microsoft SQL Server で使用される `datetime` データ型に基づいています。 詳細については、[日付と時刻関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx)を参照してください。  
+ DAX の日付と時刻の関数は、Microsoft Excel の日付と時刻の関数に似ています。 ただし、DAX 関数は、Microsoft SQL Server で使用される `datetime` データ型に基づいています。 詳細については、次を参照してください。[日付と時刻関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx)します。  
   
 ### <a name="filter-functions"></a>フィルター関数  
- DAX のフィルター関数を使用すると、特定のデータ型を返したり、関連テーブルで値を参照したり、関連する値によるフィルターを適用したりすることができます。 参照関数では、データベースと同様、テーブルおよびリレーションシップを使用します。 フィルター関数を使用すると、データ コンテキストを操作して、動的な計算を実行できます。 詳細については、[フィルター関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx)を参照してください。  
+ DAX のフィルター関数を使用すると、特定のデータ型を返したり、関連テーブルで値を参照したり、関連する値によるフィルターを適用したりすることができます。 参照関数では、データベースと同様、テーブルおよびリレーションシップを使用します。 フィルター関数を使用すると、データ コンテキストを操作して、動的な計算を実行できます。 詳細については、次を参照してください。[フィルター関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx)します。  
   
 ### <a name="information-functions"></a>情報関数  
- 情報関数は、引数として渡されたセルまたは行を参照し、値が必要な型と一致するかどうかを通知します。 たとえば、ISERROR 関数は、参照する値にエラーが含まれている場合に TRUE を返します。 詳細については、[情報関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634552(v=sql.120).aspx)を参照してください。  
+ 情報関数は、引数として渡されたセルまたは行を参照し、値が必要な型と一致するかどうかを通知します。 たとえば、ISERROR 関数は、参照する値にエラーが含まれている場合に TRUE を返します。 詳細については、次を参照してください。[情報関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634552(v=sql.120).aspx)します。  
   
 ### <a name="logical-functions"></a>論理関数  
- 論理関数は、式に対して操作を実行し、その式の値に関する情報を返します。 たとえば、TRUE 関数を使用すると、評価対象の式が TRUE 値を返すかどうかがわかります。 詳細については、[論理関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634365(v=sql.120).aspx)を参照してください。  
+ 論理関数は、式に対して操作を実行し、その式の値に関する情報を返します。 たとえば、TRUE 関数を使用すると、評価対象の式が TRUE 値を返すかどうかがわかります。 詳細については、次を参照してください。[論理関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634365(v=sql.120).aspx)します。  
   
 ### <a name="mathematical-and-trigonometric-functions"></a>数学関数と三角関数  
- DAX の数学関数は、Excel の数学関数や三角関数と非常によく似ています。 ただし DAX 関数で使用する数値データ型には、小さな違いがいくつかあります。 詳細については、[数学関数や三角関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634241(v=sql.120).aspx)を参照してください。  
+ DAX の数学関数は、Excel の数学関数や三角関数と非常によく似ています。 ただし DAX 関数で使用する数値データ型には、小さな違いがいくつかあります。 詳細については、次を参照してください。[数学関数や三角関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634241(v=sql.120).aspx)します。  
   
 ### <a name="statistical-functions"></a>統計関数  
- DAX には、集計を行う統計関数があります。 DAX では、集計と平均の作成や最小値と最大値の特定に加えて、集計前に列をフィルター処理したり、関連テーブルに基づき集計を作成したりすることができます。 詳細については、[統計関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634822(v=sql.120).aspx)を参照してください。  
+ DAX には、集計を行う統計関数があります。 DAX では、集計と平均の作成や最小値と最大値の特定に加えて、集計前に列をフィルター処理したり、関連テーブルに基づき集計を作成したりすることができます。 詳細については、次を参照してください。[統計関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634822(v=sql.120).aspx)します。  
   
 ### <a name="text-functions"></a>文字列関数  
- DAX の文字列関数は、Excel の文字列関数と非常によく似ています。 文字列の一部を返したり、文字列内のテキストを検索したり、文字列値を連結したりすることができます。 さらに、DAX には日付、時刻、数値の形式を制御する関数も用意されています。 詳細については、[テキスト関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634938(v=sql.120).aspx)を参照してください。  
+ DAX の文字列関数は、Excel の文字列関数と非常によく似ています。 文字列の一部を返したり、文字列内のテキストを検索したり、文字列値を連結したりすることができます。 さらに、DAX には日付、時刻、数値の形式を制御する関数も用意されています。 詳細については、次を参照してください。[テキスト関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634938(v=sql.120).aspx)します。  
   
 ### <a name="time-intelligence-functions"></a>タイム インテリジェンス関数  
- DAX に含まれるタイム インテリジェント関数を使用すると、カレンダーおよび日付に関して組み込まれた知識を使用する計算を作成できます。 時刻と日付の範囲を集計や計算と一緒に使用することで、比較可能な複数期間の売上、在庫などに関する有意な比較を構築できます。 詳細については、[タイム インテリジェンス関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)を参照してください。  
+ DAX に含まれるタイム インテリジェント関数を使用すると、カレンダーおよび日付に関して組み込まれた知識を使用する計算を作成できます。 時刻と日付の範囲を集計や計算と一緒に使用することで、比較可能な複数期間の売上、在庫などに関する有意な比較を構築できます。 詳細については、次を参照してください。[タイム インテリジェンス関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)します。  
   
 ###  <a name="bkmk_TableFunc"></a> テーブル値関数  
  DAX 関数には、テーブルを出力する関数、入力としてテーブルを受け取る関数、またはその両方を行う関数が存在します。 テーブルに含めることができるのは 1 列であるため、テーブル値関数も入力として 1 列を受け取ります。 DAX の数式を最大限に活用するには、このようなテーブル値関数の使い方を理解することが大切です。 DAX には、次の種類のテーブル値関数があります。  
@@ -315,11 +315,11 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  テーブル モデルには、フィルター コンテキストを作成する多くの方法があります。 モデルを使用できるクライアント ( [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートなど) のコンテキストでは、行ヘッダーや列ヘッダーにスライサーまたはレポート フィルターを追加して、即座にフィルターを作成できます。 数式にフィルター式を直接指定することもできます。それにより、関連する値を指定したり、入力として使用されるテーブルにフィルターを設定したり、計算で使用される値のコンテキストを動的に取得したりします。 また、フィルターを完全にクリアしたり、特定の列のフィルターを選択的にクリアしたりすることもできます。 これは、総計を計算する数式を作成するときに非常に便利です。  
   
- 数式内にフィルターを作成する方法の詳細については、、[フィルター関数](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx)を参照してください。  
+ 数式内にフィルターを作成する方法の詳細については、次を参照してください。、[フィルター関数](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx)します。  
   
  フィルターをクリアする方法の例については総計を作成するには、「、[すべて関数](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)します。  
   
- 選択的にクリアして、数式内にフィルターを適用する方法の例については、、 [ALLEXCEPT 関数](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx)を参照してください。  
+ 選択的にクリアして、数式内にフィルターを適用する方法の例については、次を参照してください。、 [ALLEXCEPT 関数](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx)します。  
   
 ####  <a name="bkmk_determine_context"></a> 数式のコンテキストの決定  
  DAX 数式を作成すると、構文が有効かどうかが最初にテストされます。次に、数式に含まれる列やテーブルの名前が現在のコンテキストで見つかるかどうかがテストされます。 数式に指定された列またはテーブルが見つからない場合は、エラーが返されます。  

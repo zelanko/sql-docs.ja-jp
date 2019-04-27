@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7907ec8b5fa2e450a1a9e3e73c82bf8511da64ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780413"
 ---
 # <a name="event-pairing-target"></a>イベント ペアリング ターゲット
   イベント ペアリング ターゲットは、各イベントに存在する単一列または複数列のデータを使って 2 つのイベントを照合します。 ロックの取得とロックの解放など、対で発生するイベントが数多く存在します。 イベント シーケンスが対で発生した後は、両方のイベントが破棄されます。 一対のイベントを破棄することによって、取得されたまま解放されていないロックを容易に検出できます。  
@@ -90,7 +90,7 @@ WHERE xe.name = 'session_name'
 </unpaired>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   

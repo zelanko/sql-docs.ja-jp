@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fca94c601dff429458fbde9d1614b078004f4d5a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770368"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>[緩やかに変化するディメンション ウィザードの完了]
   **[緩やかに変化するディメンション ウィザードの完了]** ダイアログ ボックスを使用すると、緩やかに変化するディメンションのサポートをウィザードで構築する前に選択内容を確認できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "58387310"
  **[次の出力を構成します]**  
  処理の目的に合った出力の一覧が得られることを確認します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [緩やかに変化するディメンション ウィザードを使用して出力を構成する](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

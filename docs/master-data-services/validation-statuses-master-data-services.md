@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9428a6462efac8643fcbb5343cb5cb3c8343aff9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629884"
 ---
 # <a name="validation-statuses-master-data-services"></a>検証状態 (マスター データ サービス)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52769754"
 
   **[バージョンの検証]** ページの **[バージョン管理]** 機能領域に表示される状態は次のとおりです。  
   
-|状態|[説明]|  
+|状態|説明|  
 |------------|-----------------|  
 |検証を待機しています|検証を待機している新しく作成されたすべてのメンバー|  
 |再検証を待機しています|検証を待機している既存のメンバー|  
@@ -32,7 +32,7 @@ ms.locfileid: "52769754"
 |検証に失敗しました|ビジネス ルールの検証に失敗したメンバー|  
 |依存メンバーの再検証を待機しています|子メンバーと共に検証を待機している更新済みの統合メンバー|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)  
   

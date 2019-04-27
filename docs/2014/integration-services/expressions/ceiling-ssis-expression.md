@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a8306fa98194fbf314796b199fea98ddd53cb1fb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769428"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (SSIS 式)
   数値式以上で最小の整数値を返します。  
@@ -61,7 +61,7 @@ CEILING(0.00)
   
  0.00 を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FLOOR &#40;SSIS 式&#41;](floor-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  
   

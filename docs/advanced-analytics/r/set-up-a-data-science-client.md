@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641879"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server での R 開発用データ サイエンス クライアントのセットアップします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -98,7 +98,7 @@ R Client で R 処理は 2 つのスレッドとメモリ内のデータに制�
 + **db_owner**ストアド プロシージャなどのオブジェクトを作成するテーブル、関数。 
   必要もあります**db_owner** sample と test のデータベースを作成します。 
 
-コードは、既定では、SQL Server がインストールされていないパッケージを必要とする場合は、インスタンスにインストールされているパッケージを作成するデータベース管理者に配置します。 SQL Server は、セキュリティで保護された環境とはパッケージをインストールできる場所に制限があります。 詳細については、[SQL Server に新しい R パッケージをインストール](install-additional-r-packages-on-sql-server.md)を参照してください。
+コードは、既定では、SQL Server がインストールされていないパッケージを必要とする場合は、インスタンスにインストールされているパッケージを作成するデータベース管理者に配置します。 SQL Server は、セキュリティで保護された環境とはパッケージをインストールできる場所に制限があります。 詳細については、次を参照してください。 [SQL Server に新しい R パッケージをインストール](install-additional-r-packages-on-sql-server.md)します。
 
 ## <a name="5---test-connections"></a>5 - 接続をテストします。
 
@@ -199,7 +199,7 @@ R Client で R 処理は 2 つのスレッドとメモリ内のデータに制�
 
 使用する場合[RStudio](https://www.rstudio.com/)、R ライブラリとリモートの SQL Server 上に対応する実行可能ファイルを使用する環境を構成することができます。
 
-1. SQL Server にインストールされている R パッケージのバージョンを確認します。 詳細については、[取得の R パッケージ情報](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)を参照してください。
+1. SQL Server にインストールされている R パッケージのバージョンを確認します。 詳細については、次を参照してください。[取得の R パッケージ情報](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)します。
 
 1. Microsoft R Client または RevoScaleR と SQL Server インスタンスで使用される基本の R ディストリビューションを含め、その他の R パッケージを追加するスタンドアロン サーバー オプションのいずれかをインストールします。 レベル以下で、同じバージョンを選択します (パッケージは、旧バージョンと互換性のある) サーバー上と同じパッケージのバージョンを提供します。 バージョンについては、この記事ではマップのバージョンを参照してください。[R と Python のコンポーネントをアップグレード](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)します。
 

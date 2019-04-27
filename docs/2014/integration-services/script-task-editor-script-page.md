@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18be600182e3ebef6a13e19fecd7af06be2c19ec
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766745"
 ---
 # <a name="script-task-editor-script-page"></a>[スクリプト タスク エディター] \([スクリプト] ページ)
   **[スクリプト タスク エディター]** ダイアログ ボックスの **[スクリプト]** ページを使用すると、スクリプト プロパティを設定し、スクリプトによってアクセスできる変数を指定できます。  
@@ -58,7 +58,7 @@ ms.locfileid: "58390120"
  **[スクリプトの編集]**  
  スクリプトを作成または変更できる VSTA IDE が開きます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [General Page](general-page-of-integration-services-designers-options.md)   
  [[スクリプト タスク エディター] &#40;[全般] ページ&#41;](../../2014/integration-services/script-task-editor-general-page.md)   

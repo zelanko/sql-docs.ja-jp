@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3b50db388151de1f5b99d8d9a3f48904e6d7c2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642947"
 ---
 # <a name="writetext-method"></a>WriteText メソッド
 指定したテキスト文字列を書き込みます、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -35,7 +35,7 @@ Stream.WriteText Data, Options
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *データ*  
+ *Data*  
  A**文字列**書き込まれる文字内のテキストを表す値です。  
   
  *[オプション]*  
@@ -54,5 +54,5 @@ Stream.WriteText Data, Options
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Write メソッド](../../../ado/reference/ado-api/write-method.md)

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765765"
 ---
 # <a name="database-object-security-master-data-services"></a>データベース オブジェクト セキュリティ (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでは、データは複数のデータベース テーブルに格納されており、ビューで表示できます。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで保護されている可能性がある情報は、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースにアクセスできるユーザーであれば参照できます。  
@@ -46,11 +46,11 @@ ms.locfileid: "52822236"
   
 |アクション|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
-|リーフ メンバーとその属性をステージング テーブルに読み込む|stg.name_Leaf|必須：INSERT<br /><br /> 省略可能:SELECT および UPDATE|  
+|リーフ メンバーとその属性をステージング テーブルに読み込む|stg.name_Leaf|必須:INSERT<br /><br /> 省略可能:SELECT と UPDATE|  
 |リーフ ステージング テーブルから MDS データベースの適切なテーブルにデータを読み込む|stg.udp_name_Leaf|EXECUTE|  
-|統合メンバーとその属性をステージング テーブルに読み込む|stg.name_Consolidated|必須：INSERT<br /><br /> 省略可能:SELECT および UPDATE|  
+|統合メンバーとその属性をステージング テーブルに読み込む|stg.name_Consolidated|必須:INSERT<br /><br /> 省略可能:SELECT と UPDATE|  
 |統合ステージング テーブルから MDS データベースの適切なテーブルにデータを読み込む|stg.udp_name_Consolidated|EXECUTE|  
-|リーフ メンバーと相互に明示的階層内の統合メンバーのリレーションシップをステージング テーブルに読み込みます。|stg.name_Relationship|必須：INSERT<br /><br /> 省略可能:SELECT および UPDATE|  
+|リーフ メンバーと相互に明示的階層内の統合メンバーのリレーションシップをステージング テーブルに読み込みます。|stg.name_Relationship|必須:INSERT<br /><br /> 省略可能:SELECT と UPDATE|  
 |リレーションシップ ステージング テーブルから MDS の適切なテーブルにデータを読み込む|stg.udp_name_Relationship|EXECUTE|  
 |ステージング テーブルのデータが MDS データベース テーブルに挿入されたときに発生したエラーを表示する|stg.udp_name_Relationship|SELECT|  
   
@@ -88,7 +88,7 @@ ms.locfileid: "52822236"
 |新しい管理者の SID を決定する|mdm.tblUser|SELECT|  
 |システム管理者アカウントを変更します。|mdm.udpSecuritySetAdministrator|EXECUTE|  
   
- 詳細については、[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)を参照してください。  
+ 詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
   
 ##  <a name="SysSettings"></a> システム設定を構成する  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]での動作を制御するために構成可能なシステム設定が用意されています。 これらの設定は [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] で調整できます。または、UPDATE アクセス権を持つ場合は、mdm.tblSystemSetting データベース テーブルで直接調整できます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../../2014/master-data-services/system-settings-master-data-services.md)」を参照してください。  

@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 31f3e298fb708d025bcbd3fccae5ada961a6ca0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765425"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>エンティティ名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、エンティティの名前を変更できます。  
@@ -25,7 +25,7 @@ ms.locfileid: "52814374"
 > [!NOTE]  
 >  関連付けられているステージング テーブルの名前は更新されません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -48,7 +48,7 @@ ms.locfileid: "52814374"
   
 7.  クリックして**エンティティの保存**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エンティティを作成する&#40;マスター データ サービス&#41;](create-an-entity-master-data-services.md)   
  [エンティティを削除する (マスター データ サービス)](delete-an-entity-master-data-services.md)   
  [エンティティ (マスター データ サービス)](entities-master-data-services.md)  

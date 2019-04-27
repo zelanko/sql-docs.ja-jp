@@ -11,20 +11,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767514"
 ---
-# <a name="lesson-2-creating-the-deployment-bundle"></a>レッスン 2:配置バンドルを作成します。
-  「[レッスン 1: 配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)、作成した、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]プロジェクトの Deployment Tutorial という名前、パッケージとサポート ファイルをプロジェクトに追加、およびパッケージ構成を実装しました。  
+# <a name="lesson-2-creating-the-deployment-bundle"></a>レッスン 2:配置バンドルの作成
+  「[レッスン 1: 配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)」では、Deployment Tutorial という名前の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとサポート ファイルをプロジェクトに追加して、パッケージに構成を実装しました。  
   
  このレッスンでは、配置バンドルを作成します。配置バンドルとは、他のコンピューターにパッケージをインストールするために必要なアイテムが含まれているフォルダーです。 配置バンドルには、Deployment Tutorial プロジェクトの配置マニフェスト、パッケージのコピー、サポート ファイルのコピーを含めます。 配置マニフェストとは、配置バンドルに含まれているパッケージ、その他のファイル、および構成の一覧です。  
   
  また、配置バンドルに含まれているファイルの一覧を確認し、マニフェストの内容を確認します。  
   
- **このレッスンを完了するまでに時間を推定するには。** 30 分  
+ **このレッスンの推定所要時間:** 30 分  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
  このレッスンの内容は次のとおりです。  

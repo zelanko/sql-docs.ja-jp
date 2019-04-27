@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dbab24f756498d7427f9961e4176249daac8dfb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770948"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>パーティション処理変換先のカスタム プロパティ
   パーティション処理変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
@@ -40,7 +40,7 @@ ms.locfileid: "58385060"
   
  詳細については、「 [パーティション処理変換先](partition-processing-destination.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+## <a name="see-also"></a>関連項目  
+ [共通プロパティ](../common-properties.md)  
   
   

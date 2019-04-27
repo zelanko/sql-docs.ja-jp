@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 313c56f6f5a9b5bfd2ecf5662b5862ee7b1265c1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770029"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>[データ マイニング クエリ変換エディター] ([マイニング モデル] タブ)
   **[データ マイニング クエリ変換エディター]** ダイアログ ボックスの **[マイニング モデル]** タブを使用すると、データ マイニング構造とそのマイニング モデルを選択できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "58381090"
  **[マイニング モデル]**  
  選択したデータ マイニング構造に関連付けられているマイニング モデルの一覧を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[データ マイニング クエリ変換エディター] ([クエリ] タブ)](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   

@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: e55093c83e9a306a06235d6bb613dac78d4677ce
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642306"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>R での OLAP キューブからのデータの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "58512969"
 
 ## <a name="what-is-an-olap-cube"></a>OLAP キューブとは何ですか。
 
-OLAP は省略形でオンライン分析処理です。 キャプチャおよび重要なビジネス データを格納する時間の経過と共に広くの OLAP ソリューションが使用されます。 OLAP データは、多様なツール、ダッシュボード、視覚エフェクトでビジネス分析に使用されます。 詳細については、[オンライン分析処理](https://en.wikipedia.org/wiki/Online_analytical_processing)を参照してください。
+OLAP は省略形でオンライン分析処理です。 キャプチャおよび重要なビジネス データを格納する時間の経過と共に広くの OLAP ソリューションが使用されます。 OLAP データは、多様なツール、ダッシュボード、視覚エフェクトでビジネス分析に使用されます。 詳細については、次を参照してください。[オンライン分析処理](https://en.wikipedia.org/wiki/Online_analytical_processing)します。
 
 Microsoft が提供[Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services)、設計、展開、および OLAP データの形式でクエリを実行することができます_キューブ_または_表形式モデル_します。 キューブは、多次元データベースです。 _ディメンション_ディメンションを使用して、集計または分析するデータの特定のサブセットを識別するためには、データ、または r の要因のファセットに似ています。 たとえば、時間は、します多くの OLAP ソリューションがスライス、データの集計時に使用する、既定で定義されている複数の予定表が含まれるようにほど重要なディメンション。 
 

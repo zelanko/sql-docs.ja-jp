@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6010c87de750c3c23fbd03564887624064286dbd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770778"
 ---
 # <a name="recordset-destination-custom-properties"></a>レコードセット変換先のカスタム プロパティ
   レコードセット変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
@@ -30,7 +30,7 @@ ms.locfileid: "58388870"
   
  詳細については、「 [レコードセット先](recordset-destination.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+## <a name="see-also"></a>関連項目  
+ [共通プロパティ](../common-properties.md)  
   
   

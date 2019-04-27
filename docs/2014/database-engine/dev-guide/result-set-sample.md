@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1dd5cec5623cfca499fcd4d1eb1ce93faec1dd36
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782145"
 ---
 # <a name="result-set-sample"></a>結果セットのサンプル
   新しい接続を開いたりすべての結果をメモリに読み取ったりせずに、クエリの結果を確認しながらコマンドを実行することができると便利な場合があります。 ADO.NET 2.0 の複数のアクティブな結果セット (MARS) 機能は、その実行を支援するテクノロジです。 現在、MARS は、サーバー側プログラミングに使用されるインプロセス プロバイダーには実装されていません。 この制限に対処するために、サーバー側カーソルを使用することができます。 このサンプルでは、サーバー側プログラミングで MARS がサポートされないことに対処するための、サーバー側カーソルの使用方法を示します。  
@@ -25,7 +25,7 @@ ms.locfileid: "60155311"
   
  このクラスの API は、結果セット内を前後に移動できる点を除いてデータ リーダーと同じであるため、結果セットが開かれている場合でも他のコマンドを接続上で実行することができます。この実装は非常に単純化されているため、このサンプルを簡単に理解することができます。 より効率的な実装を行うと、複数の行がフェッチされるため、データベースにかかるフェッチ行あたりの負荷を回避することができます。 このクラスを使用すると、クエリの結果すべてをデータセットに設定する場合に比べ、メモリの使用量を圧倒的に少なくすることができます。このことは、サーバー側プログラミングで非常に重要です。 また、このサンプルでは、AllowPartiallyTrustedCallers 属性を使用して、ResultSet アセンブリが他のアセンブリから安全に呼び出されるライブラリであることを指定する方法を示します。 この方法はやや複雑ですが、UNSAFE 権限を使用して呼び出し側のアセンブリを登録する方法よりはるかに安全性に優れています。 呼び出し側のアセンブリを safe として登録することで、そのアセンブリがサーバー外部のリソースに与える影響が制限されるため、サーバーの整合性が維持されます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
@@ -1411,7 +1411,7 @@ DROP ASSEMBLY ResultSet;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

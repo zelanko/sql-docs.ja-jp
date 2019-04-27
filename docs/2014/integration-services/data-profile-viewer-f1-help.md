@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4806d8117e2c28a18fe1ba3252334fd5fa495849
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769988"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Data Profile Viewer の F1 ヘルプ
   Data Profile Viewer を使用すると、データ プロファイル タスクの出力を表示できます。  
@@ -199,7 +199,7 @@ ms.locfileid: "58377520"
  **Count**  
  指定された列の値が最初の列に表示された値である行の数が表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Data Profile Viewer](control-flow/data-profile-viewer.md)   
  [データ プロファイル タスクとビューアー](control-flow/data-profiling-task-and-viewer.md)  
   

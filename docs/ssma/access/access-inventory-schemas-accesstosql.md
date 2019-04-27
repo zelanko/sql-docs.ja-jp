@@ -38,11 +38,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759708"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access インベントリ スキーマ (AccessToSQL)
 次のセクションでは、SSMA によってへのアクセスのスキーマをエクスポートするときに作成されるテーブルを記述する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -55,7 +55,7 @@ ms.locfileid: "47653727"
 |**DatabaseId**|**uniqueidentifier**|各データベースを一意に識別する GUID。 この列がテーブルの主キーもあります。|  
 |**DatabaseName**|**nvarchar (4000)**|Access データベースの名前。|  
 |**ExportTime**|**datetime**|このメタデータが SSMA によって作成された日付と時刻。|  
-|**ファイル パス**|**nvarchar (4000)**|Access データベースの完全パスとファイル名。|  
+|**FilePath**|**nvarchar (4000)**|Access データベースの完全パスとファイル名。|  
 |**FileSize**|**bigint**|サポート技術情報で Access データベースのサイズ。|  
 |**FileOwner**|**nvarchar (4000)**|Access データベースの所有者として指定されている Windows アカウント。|  
 |**DateCreated**|**datetime**|日付と、Access データベースが作成された時刻。|  
@@ -67,7 +67,7 @@ ms.locfileid: "47653727"
 |**ReportsCount**|**int**|Access データベースでのレポートの数。|  
 |**MacrosCount**|**int**|Access データベース内のマクロの数。|  
 |**AccessVersion**|**nvarchar (4000)**|データベースのアクセスのバージョン。|  
-|**[照合順序]**|**nvarchar (4000)**|Access データベースの照合順序です。 データベースの並べ替えし、文字列を比較、照合順序が決定します。|  
+|**照合順序**|**nvarchar (4000)**|Access データベースの照合順序です。 データベースの並べ替えし、文字列を比較、照合順序が決定します。|  
 |**JetVersion**|**nvarchar (4000)**|Jet データベース エンジンのバージョン。 Access データベースは、基になる Jet データベース エンジンを使用します。|  
 |**IsUpdatable**|**bit**|データベースを更新できるかどうかを示します。 値が 1 の場合は、データベースは更新可能にします。 値が 0 の場合、データベースは読み取り専用です。|  
 |**QueryTimeout**|**int**|構成されている ODBC クエリのタイムアウト値 (秒)、データベース。 既定値は 60 秒です。|  
@@ -98,7 +98,7 @@ ms.locfileid: "47653727"
 |**DataType**|**nvarchar (4000)**|データ アクセスなどの列の入力**テキスト**または**長い**します。|  
 |**IsAutoIncrement**|**bit**|列が整数値を自動的にインクリメントするかどうかを指定します。 値が 1 の場合、整数が自動的にインクリメントします。|  
 |**Ordinal**|**smallint**|0 から始まる、テーブル内の列の順序。|  
-|**DefaultValue**|**nvarchar (4000)**|列の既定値。|  
+|**DefaultValue**|**nvarchar (4000)**|列の既定値です。|  
 |**ValidationRule**|**nvarchar (4000)**|データの検証に使用する規則を追加または列で更新します。|  
   
 ## <a name="indexes"></a>インデックス  
@@ -180,6 +180,6 @@ ms.locfileid: "47653727"
 |**ModuleId**|**int**|モジュールを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
 |**ModuleName**|**nvarchar (4000)**|モジュールの名前。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Access インベントリのエクスポート](exporting-an-access-inventory-accesstosql.md)  
   

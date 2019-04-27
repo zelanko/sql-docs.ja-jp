@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 24ab4d509638b3195c7105602c663c04fb47a411
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771129"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>挿入、更新、および削除を処理する
   変更データの増分読み込みを実行する Integration Services パッケージのデータ フローにおいて、2 番目のタスクは、挿入、更新、および削除を分割することです。 その後、適切なコマンドを使用してそれらの変更を変換先に適用できるようになります。  
@@ -67,9 +67,9 @@ select
 ## <a name="next-step"></a>次の手順  
  処理用に行を分割したら、次に変更を変換先に適用します。  
   
- **次のトピック:**[変換先に変更を適用する](apply-the-changes-to-the-destination.md)  
+ **次のトピック:** [変換先に変更を適用する](apply-the-changes-to-the-destination.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [条件分割変換](../data-flow/transformations/conditional-split-transformation.md)   
  [条件分割変換を使用してデータセットを分割する](../data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   

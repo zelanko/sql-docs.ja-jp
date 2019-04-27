@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd7ac0496532ca0cd034d34fa44d922700c045a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630733"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>データベースのアップグレード ウィザード (Master Data Services 構成マネージャー)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52782184"
 ## <a name="upgrade-review"></a>[アップグレードの確認]  
  このページで指定した情報を確認します。 問題がなければ、 **[次へ]** をクリックして、指定したデータベースをアップグレードします。  
   
-|コントロール名|[説明]|  
+|コントロール名|説明|  
 |------------------|-----------------|  
 |**SQL Server インスタンス (SQL Server instance)**|現在選択されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスの名前です。|  
 |**[Master Data Services データベース]**|現在選択されている [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの名前です。|  
@@ -38,7 +38,7 @@ ms.locfileid: "52782184"
 ## <a name="progress-and-finish"></a>[続行して完了する]  
  アップグレード処理の進捗状況を表示します。 データベースのアップグレードが完了したら、ログ ファイルへのリンクをクリックしてアップグレードに関する詳細情報を表示するか、 **[完了]** をクリックしてデータベースのウィザードを終了し、 **[データベース]** ページに戻ります。 アップグレードされたデータベースが選択され、そのシステム設定を表示および変更できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [マスター データ サービスのイントールと構成](../master-data-services/master-data-services-installation-and-configuration.md)  
  [マスター データ サービスのアップグレード](../database-engine/install-windows/upgrade-master-data-services.md)  

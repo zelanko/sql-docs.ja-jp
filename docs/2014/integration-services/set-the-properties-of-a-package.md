@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0937c9edb1ebf2acf61119f5a34f81b1c1251b28
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766564"
 ---
 # <a name="set-the-properties-of-a-package"></a>パッケージのプロパティを設定する
   この手順では、**[プロパティ]** ウィンドウを使用してパッケージのプロパティを構成する方法について説明します。  
@@ -46,7 +46,7 @@ ms.locfileid: "58374550"
   
 5.  **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックし、更新したパッケージを保存します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)   
  [パッケージのプロパティを設定する](set-package-properties.md)  
   

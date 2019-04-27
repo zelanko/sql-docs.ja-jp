@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 72719595ac4a5de901c6a470f4639631cb08b10c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774355"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>サービスの管理方法に関するトピック (SQL Server 構成マネージャー)
   [!INCLUDE[ssDE](../includes/ssde-md.md)]および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントは、[!INCLUDE[msCoName](../includes/msconame-md.md)] Windows オペレーティング システムのサービスとして実行されます。 サービスの詳細については、「 [データベース エンジン サービスの管理](configure-windows/manage-the-database-engine-services.md)」を参照してください。  

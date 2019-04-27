@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92668088ce0f30f680d4198ad0c3348a21fbff6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781951"
 ---
 # <a name="system-requirements"></a>システム要件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient`オブジェクト用のドライバーに接続しのインスタンスと通信する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -29,7 +29,7 @@ ms.locfileid: "60156858"
   
  SMO を使用してアプリケーションを開発する必要[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008 をインストールします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server のインストールの概要](https://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
   
   

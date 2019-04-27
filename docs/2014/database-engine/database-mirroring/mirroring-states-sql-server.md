@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e3e3756f65baa7e1b62e3a84ff709a60b9c887b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754551"
 ---
 # <a name="mirroring-states-sql-server"></a>ミラーリング状態 (SQL Server)
   データベース ミラーリング セッション中、ミラー化されたデータベースは常に特定の状態 ( *ミラーリング状態*) にあります。 データベースの状態は、通信状態、データ フロー、およびパートナー間のデータの違いを反映します。 データベース ミラーリング セッションには、プリンシパル データベースと同じ状態が採用されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "48225902"
 |PENDING_FAILOVER|この状態は、フェールオーバーが開始された後、サーバーがまだミラーの役割に移行していない状態であり、プリンシパル サーバーだけで発生します。<br /><br /> フェールオーバーが開始されると、プリンシパル データベースはフェールオーバー保留中状態になり、すべてのユーザー接続をすばやく終了し、その後すぐにミラーの役割を引き継ぎます。|  
 |DISCONNECTED|パートナーが、他のパートナーと通信できなくなった状態です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

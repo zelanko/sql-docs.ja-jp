@@ -20,11 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a2c01750ac0cb1a743e6961cc693f9912857d8b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628212"
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client プログラミング
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51662291"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、常に、Windows DAC 付属の ODBC ドライバー マネージャーと共に使用します。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、Windows DAC 付属の OLE DB Core Services と共に使用できますが、必須ではありません。OLE DB Core Services を使用するかどうかは、個々のアプリケーションの要件 (たとえば、接続プールが必要であるかどうかなど) によって異なります。  
   
- ActiveX データ オブジェクト (ADO) のアプリケーションでも使用、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と組み合わせて、ADO を使用する、Native Client OLE DB プロバイダーがお勧め、 **DataTypeCompatibility**接続文字列キーワード (またはその対応する**DataSource**プロパティ)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用すると、接続文字列のキーワード、OLE DB プロパティ、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を経由することにより、[!INCLUDE[tsql](../../includes/tsql-md.md)] で導入された上記の新機能を ADO アプリケーションで利用できます。 ADO を使用したこれらの機能の使用に関する詳細については、[SQL Server Native Client と ADO を使用する](../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)を参照してください。  
+ ActiveX データ オブジェクト (ADO) のアプリケーションでも使用、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と組み合わせて、ADO を使用する、Native Client OLE DB プロバイダーがお勧め、 **DataTypeCompatibility**接続文字列キーワード (またはその対応する**DataSource**プロパティ)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用すると、接続文字列のキーワード、OLE DB プロパティ、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を経由することにより、[!INCLUDE[tsql](../../includes/tsql-md.md)] で導入された上記の新機能を ADO アプリケーションで利用できます。 ADO を使用したこれらの機能の使用に関する詳細については、次を参照してください。 [SQL Server Native Client と ADO を使用する](../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、OLE DB または ODBC のいずれかを使用して簡単に SQL Server へのネイティブ データ アクセスを実現できるように設計されています。 OLE DB と ODBC という 2 つのテクノロジを 1 つのライブラリに統合して簡素化しただけでなく、Microsoft Windows プラットフォームの一部になっている既存の Windows DAC コンポーネントを変更することなく新しいデータ アクセス機能を導入および展開できます。  
   
