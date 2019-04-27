@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2ae8636ce7f7dc25a99fde8ade52ca58c7786395
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509864"
 ---
 # <a name="feature-properties"></a>機能のプロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "53072345"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 多次元サーバー モードの場合のみ  
+ **適用対象:** 多次元サーバー モードのみ  
   
 ## <a name="properties"></a>プロパティ  
   
-|プロパティ|既定値|説明|  
+|プロパティ|既定|説明|  
 |--------------|-------------|-----------------|  
 |**ManagedCodeEnabled**|1|CLR ストレージ手順が有効かどうかを示す、ブール型プロパティです。|  
 |**LinkInsideInstanceEnabled**|1|リンク オブジェクトを同じサーバー インスタンス内で作成できるかどうかを示す、ブール型プロパティです。|  

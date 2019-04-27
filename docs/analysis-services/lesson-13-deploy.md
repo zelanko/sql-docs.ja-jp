@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 13: デプロイ |Microsoft Docs'
+title: レッスン 13:展開 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6b2ed8149cef9e9886398feebf43329f962b9537
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467644"
 ---
-# <a name="lesson-13-deploy"></a>レッスン 13: 配置
+# <a name="lesson-13-deploy"></a>レッスン 13:配置
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-このレッスンでは、展開のプロパティを構成しますオンプレミスまたは Azure のサーバー インスタンスと、モデルの名前を指定します。 モデルは、そのインスタンスにし、デプロイします。 モデルが配置されると、ユーザーはレポート クライアント アプリケーションに接続できます。 デプロイの詳細については、[表形式モデル ソリューションの配置](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)と[Azure Analysis Services へのデプロイ](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy)を参照してください。  
+このレッスンでは、展開のプロパティを構成しますオンプレミスまたは Azure のサーバー インスタンスと、モデルの名前を指定します。 モデルは、そのインスタンスにし、デプロイします。 モデルが配置されると、ユーザーはレポート クライアント アプリケーションに接続できます。 デプロイの詳細については、次を参照してください。[表形式モデル ソリューションの配置](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)と[Azure Analysis Services へのデプロイ](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy)します。  
   
-このレッスンの推定所要時間: **5 分**  
+このレッスンを完了するまでに時間を推定するには。**5 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
-このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 12: Excel で分析](../analysis-services/lesson-12-analyze-in-excel.md)します。  
+## <a name="prerequisites"></a>前提条件  
+このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 12:Excel で分析](../analysis-services/lesson-12-analyze-in-excel.md)します。  
   
 ## <a name="deploy-the-model"></a>モデルの配置  
   

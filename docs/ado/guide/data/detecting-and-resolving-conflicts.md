@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27a8ff70a995ab24dcf762d0ada731e0de6fa92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472284"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>競合の検出および解決
 イミディ エイト モードで、レコード セットを処理する場合は、同時実行の問題が発生する可能性ははるかに少ないです。 その一方で、アプリケーションでは、バッチ モードの更新を使用する場合があります良い機会が同じレコードを編集する別のユーザーによって加えられた変更が保存される前にその 1 つのユーザーが、レコードを変更します。 このような場合は、競合を適切に処理するアプリケーションを必要があります。 最後に変更をサーバーに更新を送信するユーザーが優先します"をお望みがある可能性があります。 または、どの更新プログラムの優先順位が競合する 2 つの値の間で選択 (英語) を提供することで決定する最新のユーザーに通知します。  
@@ -114,7 +114,7 @@ ms.locfileid: "47625289"
   
  どのような競合が発生したかを判断するのに、または特定のフィールドの現在のレコードの Status プロパティを使用できます。  
   
- エラー処理の詳細については、[エラー処理](../../../ado/guide/data/error-handling.md)を参照してください。  
+ エラー処理の詳細については、次を参照してください。[エラー処理](../../../ado/guide/data/error-handling.md)します。  
   
 ## <a name="see-also"></a>参照  
  [バッチ モード](../../../ado/guide/data/batch-mode.md)

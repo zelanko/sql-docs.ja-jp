@@ -1,5 +1,5 @@
 ---
-title: マイニング構造のタスクと操作方法 |Microsoft ドキュメント
+title: マイニング構造のタスクと操作方法 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f2b76018c66b1aa72aada859be2901e356c4ae34
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509860"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>マイニング構造のタスクと操作方法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,19 +22,19 @@ ms.locfileid: "34015789"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [新しいリレーショナル マイニング構造を作成します。](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
+-   [新しいリレーショナル マイニング構造の作成](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
   
--   [新規の OLAP マイニング構造を作成します。](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)  
+-   [新規の OLAP マイニング構造の作成](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)  
   
--   [マイニング構造に列を追加します。](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)  
+-   [マイニング構造への列の追加](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)  
   
--   [マイニング構造から列を削除します。](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)  
+-   [マイニング構造からの列の削除](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)  
   
--   [マイニング構造に入れ子になったテーブルを追加します。](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
+-   [マイニング構造への入れ子になったテーブルの追加](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
   
 -   [マイニング構造のプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
--   [マイニング構造に使用されるデータ ソース ビューの編集します。](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [マイニング構造に使用されるデータ ソース ビューの編集](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [マイニング構造の処理](../../analysis-services/data-mining/process-a-mining-structure.md)  
   

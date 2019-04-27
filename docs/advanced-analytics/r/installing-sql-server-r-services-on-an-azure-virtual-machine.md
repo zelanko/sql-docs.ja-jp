@@ -9,18 +9,18 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: c88d4929d40af2dc0e61d5d7261fddb3bac2e74d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506026"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>SQL Server Machine Learning サービスを Azure の仮想マシンで R と Python のインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Azure では、インストールおよび構成タスクを排除することで SQL Server 仮想マシンで、Machine Learning サービスで R と Python の統合をインストールできます。 仮想マシンをデプロイすると、機能が使用する準備ができます。
  
-ステップ バイ ステップの手順については、[、Azure portal で Windows SQL Server 仮想マシンのプロビジョニング方法](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)を参照してください。
+ステップ バイ ステップの手順については、次を参照してください。 [、Azure portal で Windows SQL Server 仮想マシンのプロビジョニング方法](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)します。
 
 [構成の SQL server の設定](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#4-configure-sql-server-settings)の手順では、インスタンスに machine learning を追加します。
 
@@ -44,7 +44,7 @@ Azure では、インストールおよび構成タスクを排除すること�
 
 サーバーを呼び出すクライアントが、機械学習ソリューションの一部として ODBC クエリを実行する必要があることを期待する場合は、スタート パッドがリモート クライアントの代理としての ODBC 呼び出しを実行できることを確認します必要があります。 
 
-これを行うには、スタート パッドによって使用される SQL ワーカー アカウントがインスタンスにログインするできるようにする必要があります。 詳細については、[データベース ユーザーとしての SQLRUserGroup の追加](../security/add-sqlrusergroup-to-database.md)を参照してください。
+これを行うには、スタート パッドによって使用される SQL ワーカー アカウントがインスタンスにログインするできるようにする必要があります。 詳細については、次を参照してください。[データベース ユーザーとしての SQLRUserGroup の追加](../security/add-sqlrusergroup-to-database.md)します。
 
 <a name="network"></a>
 

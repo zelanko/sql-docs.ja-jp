@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1186615ccd409ba34f65d3f63dd51c76dfa2fdb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518622"
 ---
 # <a name="ado-programming-task-table"></a>ADO プログラミング タスク テーブル
 次の表に含まれるタスクのプログラミング、 *ADO プログラマー ガイド*し、各タスクの参照を提供します。 これらの参照には、テキストの説明またはタスクを実行する ADO 機能についての情報を得られるコード例を指定できます。

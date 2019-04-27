@@ -16,11 +16,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62502499"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ SQL Server の格納とクエリのグラフ データを簡単にグラフの�
 
 
 ### <a name="create-graph-objects"></a>グラフのオブジェクトを作成します。
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 拡張機能により、ノードまたはエッジ テーブルを作成するユーザー。 ノードとエッジの両方が、それらに関連付けられているプロパティを持つことができます。 以降、ノードとエッジ テーブルとして格納されます、リレーショナル テーブルでサポートされているすべての操作ノードまたはエッジ テーブルでサポートされます。 次に例を示します。  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 拡張機能により、ノードまたはエッジ テーブルを作成するユーザー。 ノードとエッジの両方が、それらに関連付けられているプロパティを持つことができます。 以降、ノードとエッジ テーブルとして格納されます、リレーショナル テーブルでサポートされているすべての操作ノードまたはエッジ テーブルでサポートされます。 以下に例を示します。  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
@@ -85,7 +85,7 @@ AND Person1.Name = 'John';
 
 マージ DML での一致の使用方法の詳細を参照して[MERGE ステートメント](../../t-sql/statements/merge-transact-sql.md)
 
- ## <a name="next-steps"></a>次の手順  
+ ## <a name="next-steps"></a>次のステップ  
 読み取り、 [SQL グラフ データベース - アーキテクチャ](./sql-graph-architecture.md)
    
 

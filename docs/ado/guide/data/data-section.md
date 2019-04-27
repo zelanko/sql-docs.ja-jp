@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472549"
 ---
 # <a name="data-section"></a>データ セクション
 データ セクションでは、更新、挿入、または削除保留中のと共に、行セットのデータを定義します。 [データ] セクションでは、0 個以上の行を含めることができます。 行がスキーマによって定義されている 1 つの行セットからのデータのみを含めることができます。 また、前述したように、データを含まない列を省略できます。 データ セクションの属性またはサブ要素が使用され、その構成要素がスキーマのセクションで定義されていない場合は、暗黙的に無視されます。  
@@ -38,7 +38,7 @@ ms.locfileid: "53207771"
 ## <a name="datetime"></a>DateTime  
  バリアントの VT_DATE 形式が XML データのデータ型によって直接サポートされていません。 データと時刻の両方のコンポーネントを含む日付の正しい形式は、yyyy、mm-ddThh:mm:ss します。  
   
- XML で指定された日付形式に関する詳細については、、 [W3C の XML データの指定](https://go.microsoft.com/fwlink/?LinkId=5692)を参照してください。  
+ XML で指定された日付形式に関する詳細については、次を参照してください。、 [W3C の XML データの指定](https://go.microsoft.com/fwlink/?LinkId=5692)します。  
   
  XML データの指定が 2 つの同等のデータ型を定義する場合 (たとえば、i4 int = =)、ADO には、フレンドリ名を書き込みますが、読み取りは両方が。  
   

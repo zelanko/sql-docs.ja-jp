@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472932"
 ---
 # <a name="pick-schedule-for-job"></a>[ジョブのスケジュール選択]
   このダイアログを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの既存のスケジュールを選択できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "52809584"
  **名前**  
  スケジュールの名前を表示します。  
   
- **Enabled**  
+ **有効**  
  スケジュールが有効な場合に選択されます。  
   
  **[説明]**  

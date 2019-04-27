@@ -1,5 +1,5 @@
 - name: '[ようこそ]'
-  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: 概要
   items:
     - name: SQL Server の新機能
@@ -28,7 +28,7 @@
         - name: SQL Server 2019
           href: ../sql-server/sql-server-ver15-release-notes.md
         - name: SQL Server 2017
-          href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
+          href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
         - name: SQL Server 2016
           href: ../sql-server/sql-server-2016-release-notes.md
         - name: SQL Server 2014
@@ -61,20 +61,30 @@
               href: ../big-data-cluster/deploy-big-data-tools.md
             - name: mssqlctl をインストールする
               href: ../big-data-cluster/deploy-install-mssqlctl.md
-        - name: 展開スクリプト
-          items:
-            - name: Azure Kubernetes Service
-              href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
-        - name: 展開のガイダンス
+        - name: 配置
           items:
             - name: 展開のガイダンス
               href: ../big-data-cluster/deployment-guidance.md
-            - name: Azure Kubernetes Service
-              href: ../big-data-cluster/deploy-on-aks.md
-            - name: Kubeadm
-              href: ../big-data-cluster/deploy-with-kubeadm.md
-            - name: Minikube
-              href: ../big-data-cluster/deploy-on-minikube.md
+            - name: 新しいリリースにアップグレードする
+              href: ../big-data-cluster/deployment-upgrade.md
+            - name: 展開をカスタマイズする
+              href: ../big-data-cluster/deployment-custom-configuration.md
+            - name: 記憶域を構成する
+              href: ../big-data-cluster/concept-data-persistence.md
+            - name: オフライン展開
+              href: ../big-data-cluster/deploy-offline.md
+            - name: 展開ターゲット
+              items:
+                - name: Azure Kubernetes Service
+                  href: ../big-data-cluster/deploy-on-aks.md
+                - name: Kubeadm
+                  href: ../big-data-cluster/deploy-with-kubeadm.md
+                - name: Minikube
+                  href: ../big-data-cluster/deploy-on-minikube.md
+            - name: 展開スクリプト
+              items:
+                - name: Azure Kubernetes Service
+                  href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
     - name: 概念
       items:
         - name: アプリケーションの展開
@@ -89,8 +99,6 @@
           href: ../big-data-cluster/concept-storage-pool.md
         - name: 計算プール
           href: ../big-data-cluster/concept-compute-pool.md
-        - name: データ永続化
-          href: ../big-data-cluster/concept-data-persistence.md
         - name: Security
           href: ../big-data-cluster/concept-security.md
     - name: 操作方法ガイド
@@ -111,6 +119,10 @@
                   href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: HDFS の階層
                   href: ../big-data-cluster/hdfs-tiering.md
+                - name: HDFS の階層制御の ADLS Gen2 のマウント
+                  href: ../big-data-cluster/hdfs-tiering-mount-adlsgen2.md
+                - name: HDFS の階層制御の S3 のマウント
+                  href: ../big-data-cluster/hdfs-tiering-mount-s3.md
         - name: データ インジェスト
           items:
             - name: CURL を使用したデータの読み込み
@@ -141,6 +153,8 @@
               href: ../big-data-cluster/sparklyr-from-RStudio.md
             - name: GPU のサポートと TensorFlow
               href: ../big-data-cluster/spark-gpu-tensorflow.md
+            - name: SQL Server での Spark を統合する
+              href: ../big-data-cluster/spark-mssql-connector.md
         - name: SQL Server ビッグ データ クラスターを管理する
           items:
             - name: ビッグ データ クラスターに接続する
@@ -167,6 +181,10 @@
               href: ../big-data-cluster/spark-history-server.md
     - name: リファレンス
       items:
+        - name: 展開リファレンス
+          items:
+            - name: 展開構成フォーム
+              href: ../big-data-cluster/reference-deployment-config.md
         - name: mssqlctl リファレンス
           items:
             - name: mssqlctl
@@ -183,6 +201,8 @@
                   href: ../big-data-cluster/reference-mssqlctl-cluster.md
                 - name: mssqlctl クラスターの構成
                   href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+                - name: mssqlctl クラスターの構成セクション
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
                 - name: mssqlctl クラスターのデバッグ
                   href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
             - name: ストレージ
@@ -7247,6 +7267,8 @@
               items:
                 - name: Windows へのインストール
                   href: ../relational-databases/polybase/polybase-installation.md
+                - name: Linux をインストールする
+                  href: ../relational-databases/polybase/polybase-linux-setup.md
                 - name: 機能と制限事項
                   href: ../relational-databases/polybase/polybase-versioned-feature-summary.md
             - name: 外部データ ソースを構成する
@@ -7291,6 +7313,8 @@
           items:
             - name: T-SQL リファレンス
               href: ../relational-databases/polybase/polybase-t-sql-objects.md
+            - name: 型のマッピング
+              href: ../relational-databases/polybase/polybase-type-mapping.md
         - name: リソース
           items:
             - name: DBA Stack Exchange +

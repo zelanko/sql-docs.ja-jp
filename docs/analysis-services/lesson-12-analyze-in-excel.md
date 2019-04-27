@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 12: Excel で分析 |Microsoft Docs'
+title: レッスン 12:Excel で分析 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c42a45ec20edbde61a2f1b7c5b026f3467cd2371
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468446"
 ---
-# <a name="lesson-12-analyze-in-excel"></a>レッスン 12: Excel での分析
+# <a name="lesson-12-analyze-in-excel"></a>レッスン 12:[Excel で分析]
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このレッスンでは SSDT での Excel 機能で分析を使用して、Microsoft Excel を開き、モデル ワークスペースへのデータ ソース接続を自動的に作成し、ワークシートにピボット テーブルを自動的に追加します。 "Excel で分析" 機能を使用すると、モデルを配置する前に、モデル デザインの有効性をすばやく簡単にテストできます。 このレッスンでは、データの分析は行いません。 このレッスンの目的は、モデル作成者が、モデル デザインのテストに使用できるツールに慣れることです。 In Excel 機能は、モデル作成者向けのものが、分析を使用するとは異なりエンドユーザーはクライアント アプリケーションをデプロイされたモデル データを Excel または Power BI に接続し、参照するようにレポートを使用します。  
   
 このレッスンを完了するには ､ SSDT と同じコンピューターに Excel をインストールする必要があります。 詳細については、「 [[Excel で分析]](../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)と同じコンピューター上に Excel がインストールされている必要があります。  
   
-このレッスンの推定所要時間: **20 分**  
+このレッスンを完了するまでに時間を推定するには。**20 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
-このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 11: ロールの作成](../analysis-services/lesson-11-create-roles.md)です。  
+## <a name="prerequisites"></a>前提条件  
+このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 11:ロールを作成](../analysis-services/lesson-11-create-roles.md)です。  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>既定のパースペクティブと Internet Sales パースペクティブを使用した参照  
 これらの最初のタスクの両方、既定のパースペクティブを含むすべてのモデル オブジェクトを使用して、Internet Sales パースペクティブを使用しても、モデルを参照は前述しました。 Internet Sales パースペクティブでは、Customer テーブル オブジェクトが除外されます。  
@@ -71,7 +71,7 @@ ms.locfileid: "42795651"
 3.  ブックを保存せずに Excel を閉じます。  
   
 ## <a name="whats-next"></a>次の操作
-次のレッスンに移動:[レッスン 13: デプロイ](../analysis-services/lesson-13-deploy.md)します。
+次のレッスンに移動します。[レッスン 13:デプロイ](../analysis-services/lesson-13-deploy.md)します。
 
   
   

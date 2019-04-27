@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e93d397d10a99f844454494c4bf0d82b7fe6d660
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62502965"
 ---
 # <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -27,12 +27,12 @@ ms.locfileid: "56030683"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|この接続に関連付けられたセッションの識別子。 使用して `SESSION_ID()` を返す、 `session_id` の現在の接続。|  
+|session_id|**int**|この接続に関連付けられているセッションを識別します。 使用`SESSION_ID()`を返す、`session_id`の現在の接続。|  
 |connect_time|**datetime**|接続が確立されたタイムスタンプ。 NULL 値は許可されません。|  
-|encrypt_option|**nvarchar(40)**|TRUE のことを示します (接続が暗号化される) または FALSE (接続は enctypred ではありません)。|  
-|auth_scheme|**nvarchar(40)**|この接続で使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 認証方法を指定します。 NULL 値は許可されません。|  
+|encrypt_option|**nvarchar(40)**|TRUE のことを示します (接続が暗号化されています) または FALSE (接続は enctypred ではありません)。|  
+|auth_scheme|**nvarchar(40)**|指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 認証スキームがこの接続で使用します。 NULL 値は許可されません。|  
 |client_id|**varchar(48)**|このサーバーに接続するクライアントの IP アドレス。 NULL 値が許可されます。|  
-|sql_spid|**int**|接続のサーバー プロセス ID。 使用して `@@SPID` を返す、 `sql_spid` の現在の接続。最も終えたら、使用、 `session_id` 代わりにします。|  
+|sql_spid|**int**|接続のサーバー プロセス ID。 使用`@@SPID`を返す、`sql_spid`の現在の接続。最も終えたら、使用、`session_id`代わりにします。|  
   
 ## <a name="permissions"></a>アクセス許可  
  必要があります**VIEW SERVER STATE**サーバーに対する権限。  

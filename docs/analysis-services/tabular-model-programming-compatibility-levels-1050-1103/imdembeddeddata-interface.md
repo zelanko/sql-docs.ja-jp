@@ -1,5 +1,5 @@
 ---
-title: IMDEmbeddedData インターフェイス |Microsoft ドキュメント
+title: IMDEmbeddedData インターフェイス |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 203eae4b3660aaf5d1f2ed3a92ba844e88a518ff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467783"
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData インターフェイス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  IMDEmbeddedData インターフェイスは、埋め込みの管理に使用するパブリック インターフェイス[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データベースまたは表形式モデル データベース。 インターフェイスが継承、 **IPersistStream**インターフェイスです。 このインターフェイスでは、次の操作を実行できます。  
+  IMDEmbeddedData インターフェイスが埋め込みを管理するために使用するパブリック インターフェイス[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データベースまたは表形式モデル データベース。 インターフェイスの継承、 **IPersistStream**インターフェイス。 このインターフェイスでは、次の操作を実行できます。  
   
 -   コンテナー ドキュメント内の埋め込みストリームの識別子を取得します。  
   
@@ -30,18 +30,18 @@ ms.locfileid: "34044386"
   
 -   現在の埋め込み操作を取り消します。  
   
--   推定サイズ (バイト単位)、埋め込みオブジェクトを保存するためのストリームを取得します。 継承された**IPersistStream**です。  
+-   埋め込みオブジェクトを保存するストリームの推定サイズ (単位: バイト) を取得します。 継承された**IPersistStream**します。  
   
--   埋め込みデータベースが最後に保存されてから変更されていないことを確認します。 継承された**IPersistStream**です。  
+-   埋め込みデータベースが最後に保存されてから変更されていないことを確認します。 継承された**IPersistStream**します。  
   
--   ローカルまたはインプロセス エンジンに埋め込み型データベースを読み込みます。 継承された**IPersistStream**です。  
+-   ローカルまたはインプロセス エンジンに埋め込み型データベースを読み込みます。 継承された**IPersistStream**します。  
   
--   ローカルまたはインプロセス データベースをコンテナー ドキュメント内の埋め込みストリームに保存します。 継承された**IPersistStream**です。  
+-   ローカルまたはインプロセス データベースをコンテナー ドキュメント内の埋め込みストリームに保存します。 継承された**IPersistStream**します。  
   
 ## <a name="reference"></a>リファレンス  
- 次のドキュメントを参照する、 **IMDEmbeddedData**インターフェイスで提供されている**msmd.h**ヘッダー ファイルです。  
+ 次の参照、 **IMDEmbeddedData**インターフェイス**msmd.h**ヘッダー ファイル。  
   
-### <a name="source-file-pxoembeddeddataidl"></a>ソース ファイル: PXOEmbeddedData.idl  
+### <a name="source-file-pxoembeddeddataidl"></a>ソース ファイル:PXOEmbeddedData.idl  
   
 ```  
 [  
@@ -81,7 +81,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>説明  
  ホスト アプリケーションが使用するコンテナー ドキュメント内の埋め込みストリームの識別子を取得します。  
   
 #### <a name="parameters"></a>パラメーター  
@@ -98,7 +98,7 @@ HRESULT GetStreamIdentifier (
  **E_FAIL**  
  ストリーム識別子へのアクセス中にエラーが発生しました。  
   
-#### <a name="remarks"></a>解説  
+#### <a name="remarks"></a>コメント  
  現在の接続に埋め込みデータベースが含まれているかどうかを確認するには、OLE DB 接続プロパティから DBPROP_MSMD_EMBEDDED_DATA プロパティの値を確認してください。  
   
  DBPROP_MSMD_EMBEDDED_DATA は、次のいずれかの値をとります。  
@@ -125,7 +125,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>説明  
  埋め込みストリームが含まれているファイルの URL を設定します。  
   
 #### <a name="parameters"></a>パラメーター  
@@ -155,7 +155,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>説明  
  埋め込みアプリケーションがホスト環境にあるかどうかを示すフラグを設定します。  
   
 #### <a name="parameters"></a>パラメーター  
@@ -185,7 +185,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>説明  
  埋め込みアプリケーションが使用する一時ファイルのパスを設定します。  
   
 #### <a name="parameters"></a>パラメーター  
@@ -213,7 +213,7 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>説明  
  現在の埋め込みデータベース操作を取り消します。  
   
 #### <a name="parameters"></a>パラメーター  
@@ -244,8 +244,8 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>Description  
- ストリームの推定サイズ (バイト単位) を取得し、埋め込みオブジェクトを保存します。 継承された**IPersistStream**です。  
+#### <a name="description"></a>説明  
+ ストリームの推定サイズ (バイト単位) を取得し、埋め込みオブジェクトを保存します。 継承された**IPersistStream**します。  
   
 #### <a name="parameters"></a>パラメーター  
  *in_bstrPath*  
@@ -264,8 +264,8 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>Description  
- 埋め込みデータベースが最後に保存されてから変更されたかどうかを確認します。 継承された**IPersistStream**です。  
+#### <a name="description"></a>説明  
+ 埋め込みデータベースが最後に保存されてから変更されたかどうかを確認します。 継承された**IPersistStream**します。  
   
 #### <a name="parameters"></a>パラメーター  
  なし  
@@ -288,8 +288,8 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>Description  
- 埋め込みデータベースをローカルまたはインプロセス エンジンに読み込みます。 継承された**IPersistStream**です。  
+#### <a name="description"></a>説明  
+ 埋め込みデータベースをローカルまたはインプロセス エンジンに読み込みます。 継承された**IPersistStream**します。  
   
 #### <a name="parameters"></a>パラメーター  
  *in_pStm*  
@@ -303,7 +303,7 @@ HRESULT Load (
  データベースを読み込むためのメモリが不足しています。  
   
  **E_FAIL**  
- 異なるデータベースの読み込み中にエラーが発生しました。 **E_OUTOFMEMORY**です。  
+ 異なるデータベースの読み込み中にエラーが発生しました。 **E_OUTOFMEMORY**します。  
   
 ### <a name="imdembeddeddatasave-ipersiststreamsave"></a>IMDEmbeddedData::Save (IPersistStream::Save)  
   
@@ -314,8 +314,8 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>Description  
- ローカルまたはインプロセス データベースをコンテナー ドキュメント内の埋め込みストリームに保存します。 継承された**IPersistStream**です。  
+#### <a name="description"></a>説明  
+ ローカルまたはインプロセス データベースをコンテナー ドキュメント内の埋め込みストリームに保存します。 継承された**IPersistStream**します。  
   
 #### <a name="parameters"></a>パラメーター  
  *in_pStm*  
@@ -329,7 +329,7 @@ HRESULT Save (
  データベースは正常に保存されました。  
   
  **STG_E_CANTSAVE**  
- 異なるデータベースの保存中にエラーが発生しました。 **STG_E_MEDIUMFULL**です。  
+ 異なるデータベースの保存中にエラーが発生しました。 **STG_E_MEDIUMFULL**します。  
   
  **STG_E_MEDIUMFULL**  
  ストレージ デバイスに空き領域がないため、データベースを保存できませんでした。  

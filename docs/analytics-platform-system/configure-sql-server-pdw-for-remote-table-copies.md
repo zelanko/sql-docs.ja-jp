@@ -10,16 +10,16 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: fdac0b6ed211e223c3fad7ba15ac79a282c61303
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509524"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>リモート テーブル コピー用の並列データ ウェアハウスを構成します。
 リモート テーブル コピー機能を使用して非アプライアンス サーバー上の SMP SQL Server データベースにテーブルをコピーする SQL Server PDW を構成する方法について説明します。  
   
-このトピックでは、リモート テーブルのコピーを構成するための構成手順のいずれかについて説明します。 すべての構成手順の一覧は、[リモート テーブル コピー](remote-table-copy.md)を参照してください。  
+このトピックでは、リモート テーブルのコピーを構成するための構成手順のいずれかについて説明します。 すべての構成手順の一覧は、次を参照してください。[リモート テーブル コピー](remote-table-copy.md)します。  
   
 ## <a name="before-you-begin"></a>はじめに  
 リモート テーブル コピーを使用する SQL Server PDW を構成するには次の操作を行う必要があります。  

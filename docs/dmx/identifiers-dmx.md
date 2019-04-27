@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca1a3bd1754659548f6d1bc23764fd167006974a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507832"
 ---
 # <a name="identifiers-dmx"></a>識別子 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ SELECT * FROM Clustering.CONTENT;
   
     -   アンダースコア (_)。  
   
-3.  DMX 予約語を識別子として使用することはできません。 DMX では、予約語の大文字と小文字は区別されません。 詳細については、[予約済みキーワード&#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)を参照してください。  
+3.  DMX 予約語を識別子として使用することはできません。 DMX では、予約語の大文字と小文字は区別されません。 詳細については、次を参照してください。[予約済みキーワード&#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)します。  
   
 4.  埋め込まれたスペースや特殊文字を識別子に含めることはできません。  
   
@@ -97,7 +97,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  修飾されたオブジェクト名を使用する際、場合によってはオブジェクト名を構成している複数の識別子を区切る必要があります。 各識別子は個々に区切ってください。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能&#40;DMX&#41;リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   

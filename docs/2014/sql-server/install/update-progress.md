@@ -12,14 +12,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c6c8cceb9ed8c7dfdd2e1cacf908af0e722af2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62505945"
 ---
 # <a name="update-progress"></a>更新の進行状況
-  [インストールの進行状況] ページを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとそのコンポーネントに更新プログラムを適用する際にセットアップを監視します。  
+  [インストールの進行状況] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとそのコンポーネントに更新プログラムを適用する際にセットアップを監視します。  
   
 ## <a name="options"></a>および  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の製品名、インスタンス名、インストールの状態が表で示されます。  

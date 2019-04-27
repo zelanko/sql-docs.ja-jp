@@ -22,16 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 29449905da888d0f7c85b66d3731eed381dc582c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506052"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在では、すべてのデータ ページに関する情報を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッファー プールです。 このビューの出力は、バッファー プール内のデータベース ページのディストリビューションをデータベース、オブジェクト、または種類に従って決定するために使用できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、この動的管理ビューは、バッファー プール拡張ファイルのデータ ページに関する情報も返します。 詳細については、[バッファー プール拡張機能](../../database-engine/configure-windows/buffer-pool-extension.md)を参照してください。  
+  現在では、すべてのデータ ページに関する情報を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッファー プールです。 このビューの出力は、バッファー プール内のデータベース ページのディストリビューションをデータベース、オブジェクト、または種類に従って決定するために使用できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、この動的管理ビューは、バッファー プール拡張ファイルのデータ ページに関する情報も返します。 詳細については、次を参照してください。[バッファー プール拡張機能](../../database-engine/configure-windows/buffer-pool-extension.md)します。  
   
  ディスクから読み込まれたデータ ページは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバッファー プールにコピーされ、再使用に備えてキャッシュされます。 キャッシュされたデータ ページには、それぞれ 1 つのバッファー記述子が割り当てられます。 このバッファー記述子により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに現在キャッシュされている各データ ページが一意に識別されます。 sys.dm_os_buffer_descriptors では、キャッシュされたページのすべてのユーザーとシステム データベースを返します。 これには、リソース データベースに関連付けられているページも含まれます。  
   
@@ -44,14 +44,14 @@ ms.locfileid: "47704710"
 |page_id|**int**|ファイル内のページの ID。 NULL 値が許可されます。|  
 |page_level|**int**|ページのインデックス レベル。 NULL 値が許可されます。|  
 |allocation_unit_id|**bigint**|ページのアロケーション ユニットの ID。 この値は sys.allocation_units の結合に使用できます。 NULL 値が許可されます。|  
-|page_type|**nvarchar(60)**|ページの種類。データ ページ、インデックス ページなどがあります。 NULL 値が許可されます。|  
+|page_type|**nvarchar(60)**|など、ページを種類します。データ ページやインデックス ページです。 NULL 値が許可されます。|  
 |row_count|**int**|ページの行数。 NULL 値が許可されます。|  
 |free_space_in_bytes|**int**|使用できるページの空き領域 (バイト単位)。 NULL 値が許可されます。|  
 |is_modified|**bit**|1 = ディスクからの読み取り後にページが変更されました。 NULL 値が許可されます。|  
 |numa_node|**int**|バッファーの Nonuniform Memory Access ノード。 NULL 値が許可されます。|  
-|read_microsec|**bigint**|バッファーにページを読み込むために必要な実時間 (マイクロ秒)。 この数字では、バッファーを再利用するとリセットされます。 NULL 値が許可されます。|  
-|is_in_bpool_extension|**bit**|1 = ページがバッファー プール拡張機能。 NULL 値が許可されます。|  
-|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
+|read_microsec|**bigint**|バッファーにページを読み込むために必要な実時間 (マイクロ秒)。 この数字では、バッファーを再利用するとリセットされます。 NULL 値が許可されます。|  
+|is_in_bpool_extension|**bit**|1 = ページがバッファー プール拡張機能。 NULL 値が許可されます。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
 

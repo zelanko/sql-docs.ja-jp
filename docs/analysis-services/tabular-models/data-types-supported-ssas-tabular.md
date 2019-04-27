@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472201"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>表形式モデルでサポートされるデータ型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "52414839"
 > [!NOTE]  
 >  131,072 文字を超える文字列を含む **varchar(max)** 列からインポートすることはできません。  
   
-### <a name="table-data-type"></a>table データ型  
+### <a name="table-data-type"></a>テーブルのデータ型  
  また、DAX では *table* データ型を使用します。 このデータ型は、集計やタイム インテリジェンス計算など、DAX の多くの関数で使用されます。 一部の関数は、テーブルへの参照を受け取ります。また、他の関数の入力として使用できるテーブルを返す関数もあります。 入力としてテーブルを受け取る一部の関数では、テーブルに評価される式を指定できます。また、ベース テーブルへの参照を受け取る関数もあります。 特定の関数の要件については、「 [DAX 関数リファレンス](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)」を参照してください。  
   
 ##  <a name="bkmk_implicit"></a> DAX の数式で暗黙的および明示的なデータ型の変換

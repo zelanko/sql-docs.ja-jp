@@ -1,5 +1,5 @@
 ---
-title: ディメンションを定義する |Microsoft ドキュメント
+title: ディメンションの定義 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 38185df9928286acf184fbad21fd75839856d017
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467926"
 ---
-# <a name="lesson-2-1---defining-a-dimension"></a>レッスン 2-1-ディメンションを定義します。
+# <a name="lesson-2-1---defining-a-dimension"></a>レッスン 2-1-ディメンションの定義
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 この実習では、ディメンション ウィザードを使用して Date ディメンションを構築します。  
@@ -54,13 +54,13 @@ ms.locfileid: "34016479"
   
 8.  **Full Date Alternate Key** 属性の **[属性の型]** 列の設定を **Regular** から **Date**に変更します。 これを行うには、 **[属性の型]** 列で **[Regular]** をクリックします。 次に、矢印をクリックしてオプションを展開し、 **[Date]** > **[Calendar]** > **[Date]** の順にクリックします。 **[OK]** をクリックします。 次の属性について同じ手順を繰り返し、属性の型を次のように変更します。  
   
-    -   **English Month Name** to **Month**  
+    -   **English Month Name** から **Month**  
   
-    -   **Calendar Quarter** to **Quarter**  
+    -   **Calendar Quarter** から **Quarter**  
   
-    -   **Calendar Year** to **Year**  
+    -   **Calendar Year** から **Year**  
   
-    -   **Calendar Semester** to **Half Year**  
+    -   **Calendar Semester** から **Half Year**  
   
 9. **[次へ]** をクリックします。  
   

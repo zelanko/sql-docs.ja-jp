@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468799"
 ---
 # <a name="scalar-function-calls"></a>スカラー関数の呼び出し
 スカラー関数は、各行の値を返します。 たとえば、絶対値のスカラー関数は数値の列を引数として受け取りと、列の各値の絶対値を返します。 スカラー関数を呼び出すためのエスケープ シーケンスは、します。  
@@ -43,7 +43,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  相互運用性を最大に、アプリケーションを使用する必要があります、**変換**スカラー関数、スカラー関数の出力が必要な型であることを確認します。 **変換**関数は、1 つの SQL データ型のデータを指定した SQL データ型に変換します。 構文、**変換**関数  
   
- **変換 (** _value_exp_ **、** _data_type_**)**  
+ **CONVERT(** _value_exp_ **,** _data_type_**)**  
   
  場所*value_exp*列名、もう 1 つのスカラー関数、または、リテラル値の結果と*data_type*と一致するキーワード、 **#define**によって使用される名前、定義されている、SQL データ型識別子[付録 d:データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。 たとえば、次の SQL ステートメントを使用して、**変換**ことを確認する関数の出力、 **CURDATE**関数は、タイムスタンプ列または文字データではなく、日付。  
   

@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ad2ccc2505c3bb72b8d2efc02afbc5ef5aebaf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470561"
 ---
-# <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (Transact-SQL)
+# <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   毎回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントの起動、新しいセッションを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが予期せず再開または停止すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントではジョブの状態を保持するためセッションが使用されます。 行ごと、 **syssessions**テーブルに 1 つのセッションの情報が含まれています。 使用して、 **sysjobactivity**セッションごとの最後に、ジョブの状態を表示するテーブル。  

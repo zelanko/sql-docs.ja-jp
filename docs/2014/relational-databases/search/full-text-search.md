@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473629"
 ---
 # <a name="full-text-search"></a>フルテキスト検索
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のフルテキスト検索は、ユーザーおよびアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの文字ベースのデータに対してフルテキスト クエリを実行できるようにします。 フルテキスト クエリをテーブルに対して実行するには、まずデータベース管理者がテーブル上にフルテキスト インデックスを作成する必要があります。 フルテキスト インデックスには、テーブルの 1 つ以上の文字ベースの列が含まれます。 この列のデータ型は、`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary(max)`、FILESTREAM のいずれかになります。 各フルテキスト インデックスによってテーブルの 1 つ以上の列にインデックスが設定され、列ごとに特定の言語を使用できます。  
@@ -25,7 +25,7 @@ ms.locfileid: "52788644"
  フルテキスト クエリでは、英語や日本語などの特定の言語の規則に基づいて語や句を操作することにより、フルテキスト インデックス内のテキスト データに対して言語検索を実行できます。 フルテキスト クエリには、単純な語や句、または複数の形式の語や句を含めることができます。 フルテキスト クエリでは、1 つ以上の一致 ( *ヒット*とも呼ばれます) が含まれているすべてのドキュメントが返されます。 一致は、フルテキスト クエリに指定されたすべての語句が対象のドキュメントに含まれていて、その他の検索条件 (一致する語句間の距離など) を満たしているときに、発生します。  
   
 > [!NOTE]  
->  フルテキスト検索は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのオプションのコンポーネントです。 詳細については、[SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server.md)を参照してください。  
+>  フルテキスト検索は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのオプションのコンポーネントです。 詳細については、次を参照してください。 [SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server.md)します。  
   
 ##  <a name="benefits"></a> フルテキスト検索では、どうすればでしょうか。  
  フルテキスト検索はさまざまな e ビジネス-検索 web サイト上のアイテムのようなビジネス シナリオに適用されます。法律、有効なデータのリポジトリの履歴の企業検索または、人事部門に一致するジョブの説明ストアド再開します。 フルテキスト検索の基本的な管理タスクと開発タスクは、どのビジネス シナリオでも同じです。 ただし、特定のビジネス シナリオで、ビジネスの目標を達成できるようにフルテキスト インデックスおよびクエリを調整することができます。 たとえば e ビジネスでは、結果の順位、再呼び出しの精度 (既存の一致結果のうちフルテキスト クエリで実際に返される結果の数)、または複数言語のサポートよりも、パフォーマンスの最大化が重視されます。 法律事務所では、ヒットしたすべての結果 (情報の*総再呼び出し*) を返すことが最も重要な要素となります。  

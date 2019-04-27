@@ -1,5 +1,5 @@
 ---
-title: マイニング構造 (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: マイニング構造 (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2c5a71b864a1ec032112c2a73b965b82775e5b92
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509891"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>マイニング構造 (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   マイニング構造には、マイニング モデルの作成元となる、データ ソース ビュー、列の数と型、トレーニング セットとテスト セットに分ける省略可能なパーティションなどのデータを定義します。 1 つのマイニング構造は、同じドメインを共有する複数のマイニング モデルをサポートできます。 次の図は、データ マイニング構造とデータ ソースの関係、およびデータ マイニング構造とそれを構成するデータ マイニング モデルの関係を示しています。  
   
- ![データの処理: ソース モデルに構造を](../../analysis-services/data-mining/media/dmcon-modelarch.gif "データの処理: ソース、モデルの構造")  
+ ![データの処理: ソース、構造モデル、](../../analysis-services/data-mining/media/dmcon-modelarch.gif "データの処理: ソース、モデルの構造")  
   
  図内のマイニング構造は、CustomerID フィールドで結合された複数のテーブルまたはビューを含むデータ ソースを基にしています。 1 つのテーブルには顧客に関する情報 (地理的な領域、年齢、収入、性別など) が格納され、入れ子になった関連テーブルには各顧客の追加情報 (顧客が購入した製品など) を含む複数の行が格納されます。 この図は、同じマイニング構造から複数のモデルを作成し、それぞれのモデルに構造からさまざまな列を採用できることを示しています。  
   
@@ -98,19 +98,19 @@ ms.locfileid: "34019519"
   
  データ マイニング モデルのアーキテクチャの詳細については、「 [マイニング モデル (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)」を参照してください。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  マイニング構造の定義、管理、使用の詳細については、次のリンクを使用してください。  
   
 |処理手順|リンク|  
 |-----------|-----------|  
-|リレーショナル マイニング構造の操作|[新しいリレーショナル マイニング構造の作成](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [マイニング構造に入れ子になったテーブルを追加します。](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
+|リレーショナル マイニング構造の操作|[新しいリレーショナル マイニング構造の作成](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [マイニング構造への入れ子になったテーブルの追加](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
 |OLAP キューブに基づくマイニング構造の操作|[新規の OLAP マイニング構造の作成](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)|  
-|マイニング構造内の列の操作|[マイニング構造に列を追加します。](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [マイニング構造からの列の削除](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
+|マイニング構造内の列の操作|[マイニング構造への列の追加](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [マイニング構造からの列の削除](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
 |マイニング構造のプロパティおよびデータの変更またはクエリ|[マイニング構造のプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
-|基になるデータ ソースの操作とソース データの更新|[マイニング構造に使用されるデータ ソース ビューの編集します。](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [マイニング構造の処理](../../analysis-services/data-mining/process-a-mining-structure.md)|  
+|基になるデータ ソースの操作とソース データの更新|[マイニング構造に使用されるデータ ソース ビューの編集](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [マイニング構造の処理](../../analysis-services/data-mining/process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>参照  
  [データベース オブジェクト (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [マイニング モデルと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [マイニング モデル (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

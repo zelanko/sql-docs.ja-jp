@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00a3b3b53bcede7f43aad556465358b957331f45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470694"
 ---
-# <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-SQL)
+# <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   各 SQL Server エージェント プロキシ アカウントに関連付けられている、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインを記録します。 このテーブルに格納されます、 **msdb**データベース。  
@@ -36,7 +36,7 @@ ms.locfileid: "47770250"
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントの ID。 この値に対応、 **proxy_id**内の列、 **sysproxies**テーブル。|  
 |**sid**|**varbinary(85)**|Microsoft Windows *security_identifier*の SQL Server ログインします。|  
-|**principal_id**|**int**|指定したサブシステム ステップのプロキシ アカウントを使用する権限を持つユーザーまたはグループの ID。|  
+|**principal_id**|**int**|ユーザーまたは指定したサブシステム ステップのプロキシ アカウントを使用する権限を持つグループの ID。|  
 |**flags**|**int**|ログインの種類:<br /><br /> **0** = Windows ユーザーまたはグループ、および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定システム ロール<br /><br /> **2** = **msdb**データベース ロール|  
   
 ## <a name="remarks"></a>コメント  

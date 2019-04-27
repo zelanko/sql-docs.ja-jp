@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f07f835361fcf29143376fe468a55f0bf26e31e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471131"
 ---
 # <a name="data-buffer-address"></a>データ バッファーのアドレス
 アプリケーションでは、データ バッファーのアドレスを渡すという名前の多くの場合、引数にドライバー *ValuePtr*または類似する名前。 呼び出す次の場合など**SQLBindCol**、アプリケーションのアドレスを指定する、*日付*変数。  

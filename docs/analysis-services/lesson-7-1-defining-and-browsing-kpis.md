@@ -1,5 +1,5 @@
 ---
-title: 定義と Kpi を表示 |Microsoft ドキュメント
+title: 定義と Kpi を表示 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 51df180342f48ea9d8f620bb1abe61edb4dfa6a4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469686"
 ---
-# <a name="lesson-7-1---defining-and-browsing-kpis"></a>レッスン 7-1-の定義と Kpi を表示
+# <a name="lesson-7-1---defining-and-browsing-kpis"></a>レッスン 7-1-定義と Kpi を表示
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 主要業績評価指標 (KPI) を定義するには、まず、KPI の名前と、KPI に関連するメジャー グループを定義します。 すべてのメジャー グループ、または単一のメジャー グループを KPI に関連付けることができます。 その後、KPI の次のような要素を定義します。  
@@ -269,5 +269,5 @@ ms.locfileid: "34019279"
     Q3 CY 2007 の North America における小売店のバイクの売上総利益率が表示されます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 8: アクションの定義](../analysis-services/lesson-8-defining-actions.md)  
+[レッスン 8: アクションを定義します。](../analysis-services/lesson-8-defining-actions.md)  
   

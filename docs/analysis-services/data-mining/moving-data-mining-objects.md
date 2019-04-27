@@ -1,5 +1,5 @@
 ---
-title: データ マイニング オブジェクトの移動 |Microsoft ドキュメント
+title: データ マイニング オブジェクトの移動 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: edbceb50dd1532e427c3bf5738dfe183223afc2d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509874"
 ---
 # <a name="moving-data-mining-objects"></a>データ マイニング オブジェクトの移動
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "34016629"
 ### <a name="scripting"></a>スクリプトの作成  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]スクリプト オブジェクトに使用できるいくつかの言語を提供します。  
   
--   **XMLA:** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクトを右クリックして、XMLA を使用してオブジェクトのスクリプトを作成することができます。 作成したスクリプトを実行するには、ターゲット サーバーの **XMLA クエリ** ウィンドウでスクリプトを開きます。  
+-   **XMLA**:内のオブジェクトを右クリックして、XMLA を使用してオブジェクトをスクリプト化できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。 作成したスクリプトを実行するには、ターゲット サーバーの **XMLA クエリ** ウィンドウでスクリプトを開きます。  
   
--   **DMX:** [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で用意されているテンプレートまたはいずれかのクエリ ビルダーを使用して、スクリプトを作成できます。  
+-   **DMX**:テンプレートを使用してスクリプトを作成またはで提供されるいずれかのクエリ ビルダー[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]と[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
  ただし、スクリプト言語によって、実行できるタスクはそれぞれ異なります。  
   

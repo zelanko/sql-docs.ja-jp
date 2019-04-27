@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9f49b71a6e6774c83f1573ff7b0d5d20e169a83d
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466851"
 ---
 # <a name="master-data-services-and-data-quality-services-features-support"></a>マスター データ サービスとデータ品質サービス機能のサポート
 
@@ -27,9 +27,9 @@ ms.locfileid: "55044568"
 
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース|可||||||可|  
-|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーション|可||||||可|  
-|Data Quality Services|可||||||はい|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース|はい||||||はい|  
+|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーション|はい||||||はい|  
+|Data Quality Services|はい||||||はい|  
 
 
 
