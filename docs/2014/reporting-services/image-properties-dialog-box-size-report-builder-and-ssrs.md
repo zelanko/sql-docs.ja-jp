@@ -11,15 +11,15 @@ f1_keywords:
 - "10054"
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb37b9da0e0bd51d6fed187abfe870b26603f8e3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 450d800a474d00cf2ac5692d9994fce5d73861f2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287080"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938888"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>[サイズ] ([画像のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[画像のプロパティ]** ダイアログ ボックスの **[サイズ]** を選択すると、フィールドまたはデザイン領域に表示される画像のサイズを設定できます。また、セルまたはテキスト ボックスの外枠と、そのセルまたはテキスト ボックス内の画像や値との間の余白を変更できます。  
@@ -50,7 +50,7 @@ ms.locfileid: "56287080"
  セルまたはテキスト ボックスの下端とセル内に表示される値の間の余白 (スペース) を指定します。  
   
 ## <a name="see-also"></a>参照  
- [画像のプロパティ ダイアログ ボックス、[全般]&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [画像のプロパティ] ダイアログ ボックス、[全般]&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
  [画像 &#40;レポート ビルダーおよび SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  

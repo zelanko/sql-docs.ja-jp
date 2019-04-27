@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468609"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>解釈された Transact-SQL を使用したメモリ最適化テーブルへのアクセス
   いくつかの例外を除き、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリまたは DML 操作 (SELECT、INSERT、UPDATE、または DELETE)、アドホック バッチ、および SQL モジュール (ストアド プロシージャ、テーブル値関数、トリガー、ビューなど) を使用して、メモリ最適化テーブルにアクセスできます。  
@@ -53,7 +53,7 @@ ms.locfileid: "48124022"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用した明示的または暗黙的なトランザクションからメモリ最適化テーブルにアクセスする場合は、SNAPSHOT、REPEATABLEREAD、SERIALIZABLE などの分離レベルのテーブル ヒントを含める必要があります。あるいは、MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT を使用することもできます。 詳細については、[メモリ最適化テーブルでのトランザクション分離レベルに関するガイドライン](memory-optimized-tables.md)と[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)を参照してください。  
+ 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用した明示的または暗黙的なトランザクションからメモリ最適化テーブルにアクセスする場合は、SNAPSHOT、REPEATABLEREAD、SERIALIZABLE などの分離レベルのテーブル ヒントを含める必要があります。あるいは、MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT を使用することもできます。 詳細については、次を参照してください。[メモリ最適化テーブルでのトランザクション分離レベルに関するガイドライン](memory-optimized-tables.md)と[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)します。  
   
 > [!NOTE]  
 >  自動コミット モードで実行されるクエリでアクセスするメモリ最適化テーブルの場合、分離レベルのテーブル ヒントは必要ありません。  

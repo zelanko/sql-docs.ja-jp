@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 09805ab73af76bc55890222fc1ffd0e1857d0f33
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447390"
 ---
 # <a name="batches-of-sql-statements"></a>SQL ステートメントのバッチ
 SQL ステートメントのバッチは、2 つ以上の SQL ステートメントまたは 2 つ以上の SQL ステートメントのグループと同じ効果を 1 つの SQL ステートメントのグループです。 一部の実装で、結果は利用する前にバッチ全体ステートメントを実行します。 これは多くの場合、ネットワーク トラフィックが低下することができ、データ ソースは、SQL ステートメントのバッチの実行を最適化できる場合がありますので、ステートメントを個別に送信するよりも効率的です。 呼び出す他の実装で**SQLMoreResults**バッチの次のステートメントの実行をトリガーします。 ODBC では、次の種類のバッチがサポートされています。  
@@ -58,7 +58,7 @@ SQL ステートメントのバッチは、2 つ以上の SQL ステートメン
        VALUES (?, ?, ?, ?)  
     ```  
   
-     データ ソースがパラメーターの配列をサポートしていない場合、ドライバーをエミュレートできますそれらのパラメーターのセットごとに、SQL ステートメントを実行しています。 詳細については、[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)と[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)、このセクションで後述を参照してください。  
+     データ ソースがパラメーターの配列をサポートしていない場合、ドライバーをエミュレートできますそれらのパラメーターのセットごとに、SQL ステートメントを実行しています。 詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)と[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)、このセクションで後述します。  
   
  相互運用可能な方法でさまざまな種類のバッチを混在させることはできません。 つまり、パラメーターの配列を使用して、明示的なバッチを呼び出すアプリケーションでプロシージャが含まれますが、明示的なバッチの実行結果を決定する方法とパラメーターの配列を使用するプロシージャの呼び出しは、ドライバー固有です。  
   

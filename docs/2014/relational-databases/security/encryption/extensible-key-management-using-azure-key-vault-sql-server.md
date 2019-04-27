@@ -17,10 +17,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
-ms.translationtype: MT
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242208"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault を使用する拡張キー管理 (SQL Server)
@@ -30,17 +30,17 @@ ms.locfileid: "59242208"
   
 -   [EKM の使用](#Uses)  
   
--   [手順 1:SQL Server で使用する Key Vault の設定](#Step1)  
+-   [ステップ 1: SQL Server で使用する Key Vault の設定](#Step1)  
   
 -   [手順 2:SQL Server コネクタをインストールします。](#Step2)  
   
--   [手順 3:EKM プロバイダーを Key Vault に使用する SQL Server の構成](#Step3)  
+-   [ステップ 3:Key Vault の EKM プロバイダーを使用する SQL Server の構成します。](#Step3)  
   
--   [例 A:Key Vault からの非対称キーを使用した透過的データ暗号化](#ExampleA)  
+-   [例 a:Key Vault からの非対称キーを使用して transparent Data Encryption](#ExampleA)  
   
--   [例 B:Key Vault からの非対称キーを使用したバックアップの暗号化](#ExampleB)  
+-   [例 b:Key Vault からの非対称キーを使用したバックアップの暗号化](#ExampleB)  
   
--   [例 C:Key Vault からの非対称キーを使用した列レベルの暗号化](#ExampleC)  
+-   [例 c:Key Vault からの非対称キーを使用して列レベルの暗号化](#ExampleC)  
   
 ##  <a name="Uses"></a> EKM の使用  
  組織では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化を使用して秘密データを保護できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 暗号化には、 [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)、[列レベルの暗号化](/sql/t-sql/functions/cryptographic-functions-transact-sql)(CLE) と[バックアップの暗号化](../../backup-restore/backup-encryption.md)します。 これらのすべてのケースでは、対称なデータ暗号化キーを使用してデータが暗号化されます。 対称なデータ暗号化キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納されたキーの階層で暗号化することにより、さらに保護されます。 それに対して、EKM プロバイダーのアーキテクチャでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の外側にある外部暗号化サービス プロバイダーに格納された非対称キーを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でデータの暗号化キーを保護できるようにします。 EKM プロバイダーのアーキテクチャを使用すると、さらにセキュリティ層を追加し、組織の中でキーとデータの管理を分離できます。  
@@ -347,7 +347,7 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [拡張キー管理 &#40;EKM&#41;](extensible-key-management-ekm.md)   
- [EKM を使用して TDE を有効にする](enable-tde-on-sql-server-using-ekm.md)   
+ [EKM を使用して TDE を有効にします。](enable-tde-on-sql-server-using-ekm.md)   
  [バックアップの暗号化](../../backup-restore/backup-encryption.md)   
  [暗号化されたバックアップの作成](../../backup-restore/create-an-encrypted-backup.md)  
   

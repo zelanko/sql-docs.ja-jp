@@ -1,5 +1,5 @@
 ---
-title: リレーションシップ表現 (テーブル) |Microsoft ドキュメント
+title: リレーションシップ表現 (表形式) |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 59eedf95c9e8e8bd9ff4a44c88e2574efe0048e3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467866"
 ---
 # <a name="relationship-representation-tabular"></a>リレーションシップ表現 (テーブル)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

@@ -104,7 +104,7 @@ ms.locfileid: "47614888"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からオペレーターに警告を通知できます。  
   
--   電子メール
+-   電子メール  
   
 -   電子メール経由のポケットベル  
   

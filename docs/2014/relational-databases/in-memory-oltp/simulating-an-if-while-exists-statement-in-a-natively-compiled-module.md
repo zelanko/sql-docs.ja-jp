@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac041e19aeb5948a644a9fcf82b3e687472b7259
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468295"
 ---
 # <a name="simulating-an-exists-clause-in-a-natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャ内の EXISTS 句のシミュレーション
   ネイティブ コンパイル ストアド プロシージャでは `EXISTS` 句はサポートされませんが、対応策があります。  

@@ -42,7 +42,7 @@ ms.locfileid: "58283036"
 |演算|[説明]|  
 |---------------|-----------------|  
 |GetProcessingRange|この操作は、CDC ソース データ フローを使用するデータ フローを呼び出す前に使用されます。 この操作は、呼び出し時に CDC ソース データ フローが読み取る LSN の範囲を設定します。 範囲は、データ フローの処理中に CDC ソースによって使用される SSIS パッケージ変数に格納されます。<br /><br /> 格納される状態の詳細については、「 [状態変数の定義](../../integration-services/data-flow/define-a-state-variable.md)」を参照してください。|  
-|MarkProcessedRange|によってデコードされる文字を次に示します。この操作は、CDC 実行で完全に処理された最後の LSN を記録するために、各 CDC の実行後 (CDC データ フローが正常に完了した後) に実行されます。 GetProcessingRange を次に実行する際、この位置が次の処理範囲の開始位置になります。|  
+|MarkProcessedRange|:この操作は、CDC 実行で完全に処理された最後の LSN を記録するために、各 CDC の実行後 (CDC データ フローが正常に完了した後) に実行されます。 GetProcessingRange を次に実行する際、この位置が次の処理範囲の開始位置になります。|  
   
 ## <a name="handling-cdc-state-persistency"></a>CDC 状態の永続性の処理  
  CDC 制御タスクは、アクティブ化のたびに永続的な状態を維持します。 CDC 状態に格納される情報を使用して CDC パッケージの処理範囲およびエラー条件を検出する処理範囲を決定し、管理します。 永続的な状態は文字列として格納されます。 詳細については、「 [状態変数の定義](../../integration-services/data-flow/define-a-state-variable.md)」を参照してください。  

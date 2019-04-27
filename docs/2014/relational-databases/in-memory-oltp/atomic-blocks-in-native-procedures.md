@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467282"
 ---
 # <a name="atomic-blocks"></a>ATOMIC ブロック
   `BEGIN ATOMIC` は、ANSI SQL 標準の一部です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ネイティブ コンパイル ストアド プロシージャの最上位でのみ ATOMIC ブロックがサポートされます。  

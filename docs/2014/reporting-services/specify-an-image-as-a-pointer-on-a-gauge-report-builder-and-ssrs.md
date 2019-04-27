@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1929ed08c53d0ec1b979c26ba3a885d9623b4486
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 0bc4168d6e6cf786b3137713d44441be0bd3a13f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285710"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932608"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>画像をゲージのポインターとして指定する (レポート ビルダーおよび SSRS)
   ゲージには 3 つの組み込みスタイルが用意されており、これらを使用してポインターの外観をカスタマイズできます。 放射状ゲージには、組み込みのスタイルは。針、マーカー、およびバー。 線形ゲージには、マーカー、バー、および温度計の 3 種類の組み込みスタイルがあります。 独自のポインターが必要な場合は、自分で作成した画像をポインターとして使用できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "56285710"
   
 3.  をクリックして、**挿入**リボンのタブし、[イメージ] アイコンをダブルクリックします。 **[画像のプロパティ]** ダイアログ ボックスが表示されます。  
   
-4.  画像をレポートに追加します。 詳細については、[レポートに画像を埋め込む&#40;レポート ビルダーおよび SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)を参照してください。  
+4.  画像をレポートに追加します。 詳細については、次を参照してください。[レポートに画像を埋め込む&#40;レポート ビルダーおよび SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)します。  
   
 5.  プロパティ ペインを開きます。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "56285710"
 8.  **ソース**、**埋め込み**ドロップダウン リストから。  
   
     > [!NOTE]  
-    >  画像がデータベースまたは Web に保存されている場合は、このプロパティに適切なオプションを指定できます。 詳細については、[イメージのプロパティ ダイアログ ボックスの [全般]&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)を参照してください。  
+    >  画像がデータベースまたは Web に保存されている場合は、このプロパティに適切なオプションを指定できます。 詳細については、次を参照してください。[イメージのプロパティ] ダイアログ ボックスの [全般]&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)します。  
   
 9. **値**、ドロップダウン リストから、イメージの名前を選択します。  
   

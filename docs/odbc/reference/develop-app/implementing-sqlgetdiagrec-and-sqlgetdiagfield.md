@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab1f808b005afaa91ed93bf8f8ec7a8385c9c945
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447286"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec および SQLGetDiagField の実装
 **SQLGetDiagRec**と**SQLGetDiagField**ドライバー マネージャーと各ドライバーによって実装されます。 ドライバー マネージャーと各ドライバーは、環境、接続、ステートメント、および記述子ハンドルの診断レコードの管理し、ハンドルまたはハンドルが解放されることで別の関数が呼び出されたときにのみ、これらのレコードを解放します。  

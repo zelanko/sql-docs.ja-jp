@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468272"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server のインスタンスの登録 (SQL Server ユーティリティ)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンスとしてそのパフォーマンスおよび構成を監視します。 ユーティリティ コントロール ポイント (UCP) では、15 分ごとに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスから構成情報およびパフォーマンス情報を収集します。 情報は UCP のユーティリティ管理データ ウェアハウス (UMDW) に格納されます。UMDW ファイル名は sysutility_mdw です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス データはポリシーと比較され、リソース使用時のボトルネックおよび統合の可能性を特定するのに役立ちます。  
@@ -62,7 +62,7 @@ ms.locfileid: "52762484"
   
 -   FILESTREAM データは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの監視機能ではサポートされていません。  
   
- 詳細については、[SQL Server の最大容量仕様](../../sql-server/maximum-capacity-specifications-for-sql-server.md)と[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)を参照してください。  
+ 詳細については、次を参照してください。 [SQL Server の最大容量仕様](../../sql-server/maximum-capacity-specifications-for-sql-server.md)と[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの概念の詳細については、「 [SQL Server ユーティリティの機能とタスク](sql-server-utility-features-and-tasks.md)」を参照してください。  
   
@@ -145,9 +145,9 @@ ms.locfileid: "52762484"
   
  マネージド インスタンスの設定は次のとおりです。  
   
--   SQL Server インスタンス名:Computername \instancename  
+-   SQL Server インスタンス名:ComputerName\InstanceName  
   
--   ユーティリティ コレクション セットのアカウント。Domainname \username  
+-   ユーティリティ コレクション セットのアカウント。DomainName\UserName  
   
  続行するには、 **[次へ]** をクリックします。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "52762484"
 >   
 >  Transact-SQL ステートメントまたはバッチの実行中に例外が発生しました。 (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  追加情報:Windows NT グループ/ユーザーに関する情報を取得できませんでした '\<DomainName\AccountName >'、エラー コード 0x5。 (Microsoft SQL Server、エラー。15404)  
+>  追加情報:Windows NT グループ/ユーザーに関する情報を取得できませんでした '\<DomainName\AccountName >'、エラー コード 0x5。 (Microsoft SQL Server、エラー:15404)  
 >   
 >  このエラーのトラブルシューティングの詳細については、「 [SQL Server ユーティリティのトラブルシューティング](../../database-engine/troubleshoot-the-sql-server-utility.md)」を参照してください。  
   

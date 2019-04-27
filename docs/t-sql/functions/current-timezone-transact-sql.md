@@ -39,7 +39,7 @@ ms.locfileid: "59367388"
 この関数では、サーバーまたはインスタンスによって観測されるタイム ゾーンの名前が返されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`CURRENT_TIMEZONE` では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムから戻り値が引き出されます。 SQL Database Managed Instance の戻り値は、基盤となるオペレーティング システムのタイム ゾーンではなく、インスタンスの作成時に割り当てられたインスタンス自体のタイム ゾーンに基づきます。
   
 > [!NOTE]  
-> 単一およびプールされた SQL Database タイム ゾーンは常に UTC に設定され、`CURRENT_TIMEZONE` では UTC タイム ゾーンの名前が返されます。
+> 単一 SQL データベースおよびプール SQL データベースにおいて、タイム ゾーンは常に UTC に設定され、`CURRENT_TIMEZONE` では UTC タイム ゾーンの名前が返されます。
   
 ## <a name="syntax"></a>構文  
   

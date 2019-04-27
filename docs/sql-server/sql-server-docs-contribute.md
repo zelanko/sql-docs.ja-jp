@@ -53,7 +53,7 @@ ms.locfileid: "52439904"
 - [Git リポジトリをローカルに設定する](https://docs.microsoft.com/contribute/get-started-setup-local)
 - [ツールを使って投稿する](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
 
-ドキュメントを大幅に変更するプル要求を送信する場合は、オンライン**貢献者使用許諾契約書 (CLA)** の提出を求める GitHub のコメントを受け取ります。 オンライン フォームを提出してからでないと、プル要求は受け付けられません。
+ドキュメントを大幅に変更する pull request を送信する場合は、オンライン**貢献者使用許諾契約書 (CLA)** の提出を求める GitHub のコメントを受け取ります。 オンライン フォームを提出してからでないと、pull request は受け付けられません。
 
 ## <a name="recognition"></a>認識
 

@@ -83,8 +83,6 @@
               href: xml-query-syntax-for-xml-report-data-ssrs.md
             - name: XML レポート データの要素パス構文
               href: element-path-syntax-for-xml-report-data-ssrs.md
-        - name: レポート モデルの接続
-          href: report-model-connection-ssrs.md
         - name: DMX のための Analysis Services の接続の種類
           href: analysis-services-connection-type-for-dmx-ssrs.md
           items:

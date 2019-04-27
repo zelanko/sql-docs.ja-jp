@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: 5c70902f23c4f149e42a1ee04dd515aa32aa9d2e
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265452"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -97,7 +97,7 @@ ms.locfileid: "56319083"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>[照合順序]</h3>
+                                                    <h3>照合順序</h3>
                                                     <p>SQL Server の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 char や varchar などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 </p>
                                                 </div>
                                             </div>

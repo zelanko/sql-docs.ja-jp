@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447541"
 ---
 # <a name="c-data-types"></a>C データ型
 ODBC C データ型は、アプリケーションでデータの格納に使用される C バッファーのデータ型を示します。  
@@ -36,19 +36,19 @@ ODBC C データ型は、アプリケーションでデータの格納に使用�
 |-----------------------|--------------------|------------|  
 |SQL_C_CHAR|SQLCHAR *|unsigned char *|  
 |SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
-|SQL_C_SSHORT [j]|SQLSMALLINT|short int|  
-|SQL_C_USHORT [j]|SQLUSMALLINT|符号なし short int|  
-|SQL_C_SLONG [j]|SQLINTEGER|long int|  
-|SQL_C_ULONG [j]|SQLUINTEGER|符号なし long int|  
+|SQL_C_SSHORT[j]|SQLSMALLINT|short int|  
+|SQL_C_USHORT[j]|SQLUSMALLINT|unsigned short int|  
+|SQL_C_SLONG[j]|SQLINTEGER|long int|  
+|SQL_C_ULONG[j]|SQLUINTEGER|unsigned long int|  
 |SQL_C_FLOAT|SQLREAL|FLOAT|  
 |SQL_C_DOUBLE|SQLDOUBLE、SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|unsigned char|  
-|SQL_C_STINYINT [j]|SQLSCHAR|符号付き文字|  
-|SQL_C_UTINYINT [j]|SQLCHAR|unsigned char|  
+|SQL_C_STINYINT[j]|SQLSCHAR|符号付き文字|  
+|SQL_C_UTINYINT[j]|SQLCHAR|unsigned char|  
 |SQL_C_SBIGINT|SQLBIGINT|_ _int64 [h]|  
-|SQL_C_UBIGINT|SQLUBIGINT|符号なし _ _int64 [h]|  
+|SQL_C_UBIGINT|SQLUBIGINT|unsigned _int64[h]|  
 |SQL_C_BINARY|SQLCHAR *|unsigned char *|  
-|SQL_C_BOOKMARK [i]|ブックマーク|符号なし long int [d]|  
+|SQL_C_BOOKMARK[i]|ブックマーク|unsigned long int[d]|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
 |すべての C interval データ型|SQL_INTERVAL_STRUCT|参照してください、 [C Interval 構造体](../../../odbc/reference/appendixes/c-interval-structure.md)セクションで、この付録の「します。|  
   
@@ -82,7 +82,7 @@ struct tagTIME_STRUCT {
   
  **C 型識別子**SQL_C_TYPE_TIMESTAMP [c]  
   
- **ODBC C の typedef** SQL_TIMESTAMP_STRUCT  
+ **ODBC C typedef** SQL_TIMESTAMP_STRUCT  
   
  **C 型**  
   

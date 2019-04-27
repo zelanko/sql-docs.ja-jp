@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445993"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>行のスクロールとフェッチ (ODBC)
 スクロール可能なカーソルを使用して、アプリケーションが呼び出す**SQLFetchScroll** cursor および fetch の行を配置します。 **SQLFetchScroll**相対スクロールをサポートしています (次へ、prior、および相対*n*行)、絶対のスクロール (first、last、および行の*n*)、およびブックマークで位置指定します。 *FetchOrientation*と*FetchOffset*引数**SQLFetchScroll**次の図に示すように、フェッチする行セットを指定します。  
@@ -41,4 +41,4 @@ ms.locfileid: "47642750"
  アプリケーションを呼び出して、行セットの取得が完了したら**SQLSetPos**を行セットの行セットまたは更新の行にある特定の行に配置します。 使用しての詳細については**SQLSetPos**を参照してください[SQLSetPos によるデータの更新](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md)します。  
   
 > [!NOTE]  
->  ODBC 2 では、スクロールがサポートされています。*x*によってドライバー **SQLExtendedFetch**します。 詳細については、[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)付録 g: ドライバーとの下位互換性のためのガイドラインにを参照してください。
+>  ODBC 2 では、スクロールがサポートされています。*x*によってドライバー **SQLExtendedFetch**します。 詳細については、次を参照してください[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)で付録 g:。旧バージョンとの互換性のためのガイドラインをドライバーです。
