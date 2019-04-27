@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 646d15dc3091323e6e7db2af757640122fb2f0fd
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779781"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>CLR データベース オブジェクトからの XML シリアル化
   XML シリアル化は、次の 2 つのシナリオで必要になります。  
@@ -39,7 +39,7 @@ ms.locfileid: "60158478"
   
  XMLSerializer でサポートされないデータ型については、.NET Framework のドキュメントで、.NET Framework の XML スキーマ バインディング サポートに関する情報を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR データベース オブジェクトからのデータ アクセス](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   

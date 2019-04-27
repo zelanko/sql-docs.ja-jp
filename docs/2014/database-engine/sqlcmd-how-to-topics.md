@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b16eb8fdfaf18bac628bf902427fed0edb1962c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773508"
 ---
 # <a name="sqlcmd-how-to-topics"></a>sqlcmd 操作方法のトピック
   [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)を使用すると、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルを、コマンド プロンプト、SQLCMD モードのクエリ エディター、Windows スクリプト ファイル、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブのオペレーティング システム (Cmd.exe) ジョブ ステップで入力できます。  

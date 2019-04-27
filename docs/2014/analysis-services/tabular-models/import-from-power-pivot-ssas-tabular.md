@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 867d476c0132bedf39f709497e035b8264f2b022
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757215"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>PowerPivot からのインポート (SSAS テーブル)
   このトピックでは、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の PowerPivot からのインポート プロジェクト テンプレートを使用して PowerPivot ブックからメタデータおよびデータをインポートし、新しい表形式モデル プロジェクトを作成する方法を説明します。  
@@ -47,7 +47,7 @@ ms.locfileid: "52390607"
   
 4.  **[ファイルを開く]** ダイアログ ボックスで、インポートするモデル メタデータおよびデータを含む [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ファイルを選択し、 **[開く]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ワークスペース データベース &#40;SSAS テーブル&#41;](workspace-database-ssas-tabular.md)   
  [データのコピーと貼り付け &#40;SSAS テーブル&#41;](../copy-and-paste-data-ssas-tabular.md)  
   

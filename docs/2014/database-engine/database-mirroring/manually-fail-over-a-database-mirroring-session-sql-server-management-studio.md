@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b42fdb9d53a4aa0444a98ee311000fb1c2929ff1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756157"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>データベース ミラーリング セッションの手動フェールオーバー (SQL Server Management Studio)
   ミラー化されたデータベースが同期されている場合 (つまり、データベースが SYNCHRONIZED 状態である場合)、データベース所有者はミラー サーバーに対して手動フェールオーバーを開始できます。  

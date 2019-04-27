@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 65d762ffb798d6ec3826a41ff06c73c2011543ab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767204"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>[OLE DB ソース エディター] ([接続マネージャー] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、ソースの OLE DB 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -96,7 +96,7 @@ ms.locfileid: "58384489"
  **[変数名]**  
  SQL クエリのテキストを含む変数を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB ソース エディター ([列] ページ)](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [OLE DB ソース エディター ([エラー出力] ページ)](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a46cdfd73b7339f40cf92555e45c07d8d5dc482
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769728"
 ---
 # <a name="excel-source-editor-columns-page"></a>[Excel ソース エディター] ([列] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
@@ -37,7 +37,7 @@ ms.locfileid: "58390300"
  **出力列**  
  各出力列の一意な名前を表示します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 指定された名前は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[Excel ソース エディター] ([接続マネージャー] ページ)](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
  [[Excel ソース エディター] ([エラー出力] ページ)](../../2014/integration-services/excel-source-editor-error-output-page.md)   

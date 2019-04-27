@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0233f6c40e15fd4f612002854477d98068901b15
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786671"
 ---
 # <a name="c2-audit-mode-server-configuration-option"></a>c2 audit mode サーバー構成オプション
   C2 audit mode は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用するか、 **sp_configure** の **c2 audit mode**オプションを使用して構成できます。 このオプションを選択すると、ステートメントやオブジェクトへの失敗したアクセス試行と成功したアクセス試行の両方が記録されるようにサーバーが構成されます。 この情報は、システムの利用状況を把握し、発生する可能性のあるセキュリティ ポリシー違反を追跡するのに役立ちます。  
@@ -54,7 +54,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

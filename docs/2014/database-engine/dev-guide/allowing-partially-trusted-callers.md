@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754200"
 ---
 # <a name="allowing-partially-trusted-callers"></a>部分的に信頼される呼び出し元の許容
   コード ライブラリの共有は、共通言語ランタイム (CLR) 統合に関する共通のシナリオです。この場合、ユーザー定義型、ストアド プロシージャ、ユーザー定義関数、ユーザー定義集計、トリガー、またはユーティリティ クラスを含んだアセンブリは、しばしば別のアセンブリまたはアプリケーションによってアクセスされます。 複数のアプリケーションで共有されるコード ライブラリは、厳密な名前で署名する必要があります。  
@@ -1098,7 +1098,7 @@ DROP ASSEMBLY ResultSet;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

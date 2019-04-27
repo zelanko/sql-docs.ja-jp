@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3129be8603d31a26978a1789be59f4d649da1b06
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755845"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>複合ドメインでのデータのクレンジング
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) での複合ドメインのクレンジングについて説明します。 複合ドメインは 2 つ以上の単一ドメインで構成され、複数の関連用語で構成されるデータ フィールドにマップされます。 複合ドメイン内の個々のドメインには、ナレッジの共通領域が必要です。 複合ドメインの詳細については、「 [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md)」を参照してください。  
@@ -31,12 +31,12 @@ ms.locfileid: "56012723"
   
 -   ソース データを複数のフィールド ("名"、"ミドル ネーム"、"姓") で構成し、複合ドメイン内の個々のドメインにマップします。  
   
- ソース データを複合ドメインをマップする方法の例は、[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)を参照してください。  
+ ソース データを複合ドメインをマップする方法の例は、次を参照してください。[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)します。  
   
 ##  <a name="CDCorrection"></a> 明確なクロス ドメイン ルールを使用したデータの修正  
  複合ドメインのクロス ドメイン ルールを使用して、複合ドメイン内の個々のドメインの間のリレーションシップを示すルールを作成できます。 複合ドメインを含むソース データでクレンジング アクティビティを実行するときに、クロス ドメイン ルールが考慮されます。 明確な *Then* クロス ドメイン ルールの **"値が次の値と等しい"** では、単にクロス ドメイン ルールの有効性について知らせるだけでなく、データ クレンジング アクティビティ中にデータの修正も行います。  
   
- 次の例を検討してください: 複合ドメイン、製品、3 つの個々 のドメインには。ProductName、CompanyName、および ProductVersion。 次の明確なクロス ドメイン ルールを作成します。  
+ 次の例を考えてみます。ProductName、CompanyName、ProductVersion の 3 つの個別ドメインを含む複合ドメイン Product があります。 次の明確なクロス ドメイン ルールを作成します。  
   
  ドメイン 'CompanyName' 値に *Microsoft* が含まれ、ドメイン 'ProductName' 値が *Office* で 'ProductVersion' 値が *2010* の場合、ドメイン 'ProductName' 値は *Microsoft Office 2010* になる。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "56012723"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 明確な *Then* クロス ドメイン ルール **"値が次の値と等しい"** をテストするときは、 **[複合ドメイン ルールのテスト]** ダイアログ ボックスに、正しいデータを示す新しい列 **[次に修正]** が含まれます。 クレンジング データ品質プロジェクトでは、この明確なクロス ドメイン ルールが 100% 信頼度でデータを変更し、**理由**列には、次のメッセージが表示されます。ルールによって修正 '*\<クロス ドメイン ルール名 >*'。 クロス ドメイン ルールの詳細については、「 [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md)」を参照してください。  
+ 明確な *Then* クロス ドメイン ルール **"値が次の値と等しい"** をテストするときは、 **[複合ドメイン ルールのテスト]** ダイアログ ボックスに、正しいデータを示す新しい列 **[次に修正]** が含まれます。 クレンジング データ品質プロジェクトでは、この明確なクロス ドメイン ルールでデータが 100% の信頼度で変更され、**Reason** 列には、"ルール '*\<クロス ドメイン ルール名*>' によって修正" というメッセージが表示されます。 クロス ドメイン ルールの詳細については、「 [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md)」を参照してください。  
   
 > [!NOTE]  
 >  明確なクロス ドメイン ルールは、参照データ サービスにアタッチされている複合ドメインでは動作しません。  

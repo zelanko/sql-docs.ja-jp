@@ -1,5 +1,5 @@
 ---
-title: 扱う Analysis Services プロジェクトおよびデータベース開発で |Microsoft ドキュメント
+title: 使用 Analysis Services プロジェクトとデータベースの開発 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 018f937ed07c202aad17d5e7758f41a3082c4870
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743118"
 ---
-# <a name="work-with-analysis-services-projects-and-databases-in-development"></a>扱う Analysis Services プロジェクトおよびデータベース開発
+# <a name="work-with-analysis-services-projects-and-databases-in-development"></a>使用 Analysis Services プロジェクトおよびデータベース開発
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をプロジェクト モードまたはオンライン モードで使用すると、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] データベースを開発できます。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をプロジェクト モードまたはオンライン モードで使用すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] データベースを開発できます。  
   
 ## <a name="single-developer"></a>開発者が 1 人の場合  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース全体とそれを構成するすべてのオブジェクトを 1 人の開発者が開発する場合、この開発者はビジネス インテリジェンス ソリューションのライフサイクル中はいつでも、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] をプロジェクト モードまたはオンライン モードで使用できます。 開発者が 1 人しかいない場合、どのモードを選択するかは特に重要ではありません。 オフライン プロジェクト ファイルの管理をソース管理システムと統合すると、アーカイブやロールバックなどのメリットが多数あります。 ただし、開発者が 1 人の場合は、変更内容を他の開発者に伝達する際の問題が生じません。  

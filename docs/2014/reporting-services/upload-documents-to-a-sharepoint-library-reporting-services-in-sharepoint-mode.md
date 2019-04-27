@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 83d04d6f8bb5b9c0701df3e6ba0d2c498cd2d5ea
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647628"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード)
   レポート定義やレポート モデルを SharePoint ライブラリにアップロードすることができます。 レポート サーバー アイテムをアップロードするときには、ライブラリまたはライブラリ内のフォルダーを選択する必要があります。 レポート サーバー アイテムを一覧やページにアップロードすることはできません。  
@@ -48,7 +48,7 @@ ms.locfileid: "59960288"
   
  レポートにパラメーターを含めると、ユーザーがデータをフィルター選択できるようになります。 パラメーターは、特定の値を使用するように構成したり、表示方法を変更したりすることができます。 詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 &#40;Reporting Services の SharePoint 統合モード&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ライブラリへのレポートのパブリッシュ](reports/publish-a-report-to-a-sharepoint-library.md)   
  [SharePoint ライブラリへの共有データ ソースのパブリッシュ](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  

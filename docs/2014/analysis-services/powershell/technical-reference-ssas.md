@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ac8e3de76709f4ae8e4839d79d1f40aae9195ce
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748897"
 ---
 # <a name="technical-reference-ssas"></a>テクニカル リファレンス (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用および管理するためのツール、言語、および PowerShell のリファレンス ドキュメントがあります。  
@@ -46,7 +46,7 @@ ms.locfileid: "50147837"
  ![小さいファイル フォルダー アイコン](../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**ユーザー インターフェイス リファレンス**  
  [ユーザー インターフェイス リファレンス&#40;Analysis Services&#41;](../user-interface-reference-analysis-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
  [Analysis Services のスキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
  [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   

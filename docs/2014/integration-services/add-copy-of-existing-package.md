@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0611b37de9af37e5ae8442514ac0720e5eb89e01
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772248"
 ---
 # <a name="add-copy-of-existing-package"></a>[既存のパッケージのコピーを追加]
   **[既存のパッケージのコピーを追加]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のファイル システムまたは SSIS パッケージ ストアに格納されたパッケージのコピーを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに追加できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "58383995"
  **[パッケージのパス]**  
  パッケージのパスを入力するか、**[...]** をクリックしてコピーするパッケージを指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[パッケージのコピーの保存]](../../2014/integration-services/save-copy-of-package.md)   
  [[パッケージのインポート] ダイアログ ボックスの UI リファレンス](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [[パッケージのエクスポート] ダイアログ ボックスの UI リファレンス](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   

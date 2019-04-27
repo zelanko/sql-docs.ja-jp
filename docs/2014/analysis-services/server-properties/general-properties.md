@@ -40,11 +40,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b854692aa00d953ebd8de783104869b784115277
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746884"
 ---
 # <a name="general-properties"></a>全般プロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 このトピックでは、Security、Network、ThreadPool など、個別のセクションで取り上げることのできなかった、msmdsrv.ini ファイル内のサーバー プロパティについて説明しています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
@@ -100,7 +100,7 @@ ms.locfileid: "53369144"
   
  このプロパティの有効値を以下に示します。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |0|これが既定値です。 MOLAP、HOLAP、ROLAP の各ストレージ、およびデータ マイニング モデルを使用する多次元データベースの処理に使用される多次元モードを指定します。|  
 |1|PowerPivot for SharePoint 配置の一部としてインストールされた Analysis Services インスタンスを指定します。 PowerPivot for SharePoint インストールの一部である Analysis Services インスタンスの配置モード プロパティは変更しないでください。 モードを変更すると、PowerPivot データがサーバー上で実行されなくなります。|  

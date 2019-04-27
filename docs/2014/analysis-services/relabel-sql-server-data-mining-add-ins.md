@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74e2322416ec06c36a7834f35581ed611480b6e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748325"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>ラベルの変更 (SQL Server データ マイニング アドイン)
   ![ラベルの変更ツールの office 13 アイコン](media/dm13-relabel.gif "ラベルの変更ツールの Office 13 アイコン")  
@@ -67,7 +67,7 @@ ms.locfileid: "52414609"
   
          元データを新しい値に置き換える場合に選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データの探索とクリーニング](exploring-and-cleaning-data.md)  
   
   

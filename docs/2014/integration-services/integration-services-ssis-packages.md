@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767691"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージ
   パッケージは、接続、制御フロー要素、データ フロー要素、イベント ハンドラー、変数、パラメーター、および構成の組み合わせとして構成されています。パッケージは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に用意されているグラフィカル デザイン ツールを使用して作成するか、プログラムによって構築します。  完成したパッケージは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、またはファイル システムに保存します。または、ssISnoversion プロジェクトを [!INCLUDE[ssIS](../includes/ssis-md.md)] サーバーに配置することができます。 パッケージとは、取得、実行、および保存の対象となる作業単位のことです。  

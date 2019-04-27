@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771220"
 ---
 # <a name="specify-an-interval-of-change-data"></a>変更データの間隔を指定する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、最初のタスクは、変更間隔のエンドポイントを計算することです。 このエンドポイントは `datetime` 値で、パッケージで後から使用するためにパッケージ変数に格納されます。  
@@ -107,7 +107,7 @@ ms.locfileid: "58381150"
   
  **次のトピック:**[変更データの準備ができているかどうかを判断する](determine-whether-the-change-data-is-ready.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージで変数を使用する](../use-variables-in-packages.md)   
  [Integration Services (SSIS) 式](../expressions/integration-services-ssis-expressions.md)   
  [SQL 実行タスク](../control-flow/execute-sql-task.md)   

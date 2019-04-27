@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749041"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>定期データ更新と Windows 認証をサポートしないデータ ソース (PowerPivot for SharePoint)
   このトピックでは、Windows 認証を**サポートしない**データ ソースを使用できる PowerPivot for SharePoint 定期データ更新のワークフローについて説明します。 たとえば、Oracle データ ソースまたは IDM DB2 データ ソースが該当します。 このトピックにある図と手順では、Oracle データ ソースを参照していますが、他のデータ ソースにも同じワークフローが当てはまります。  
@@ -37,7 +37,7 @@ ms.locfileid: "53374864"
   
 -   **(4)** PowerPivot ブックでは Oracle データが使用されます。 ブックの更新設定では、データ ソースへの接続で、資格情報にターゲット アプリケーション **(2)** を使用するよう指定します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
   
 -   PowerPivot サービス アプリケーションがある。  
   
@@ -55,15 +55,15 @@ ms.locfileid: "53374864"
   
 4.  **[Secure Store のターゲット アプリケーションを新規に作成します]** ページで、次の値を構成します。  
   
-    -   **ターゲット アプリケーション ID:** PowerPivotDataRefresh  
+    -   **ターゲット アプリケーション ID:** PowerPivotDataRefresh します。  
   
-    -   **表示名:** PowerPivotDataRefresh  
+    -   **表示名:** PowerPivotDataRefresh します。  
   
     -   **連絡先の電子メール:** ?  
   
     -   **ターゲット アプリケーションの種類:** グループ。  
   
-    -   **ターゲット アプリケーション ページの URL:**[なし] :  
+    -   **ターゲット アプリケーション ページの URL:** なし。  
   
 5.  **[次へ]** をクリックします。  
   
@@ -89,15 +89,15 @@ ms.locfileid: "53374864"
   
 4.  **[Secure Store のターゲット アプリケーションを新規に作成します]** ページで、次の値を構成します。  
   
-    -   **ターゲット アプリケーション ID:** OracleAuthentication  
+    -   **ターゲット アプリケーション ID:** OracleAuthentication します。  
   
-    -   **表示名:** OracleAuthentication  
+    -   **表示名:** OracleAuthentication します。  
   
     -   **連絡先の電子メール:** ?  
   
     -   **ターゲット アプリケーションの種類:** グループ。  
   
-    -   **ターゲット アプリケーション ページの URL:**[なし] :  
+    -   **ターゲット アプリケーション ページの URL:** なし。  
   
 5.  **[次へ]** をクリックします。  
   

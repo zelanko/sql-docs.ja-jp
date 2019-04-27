@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: abdbf8215b782f5db4343365a26d479542fc2dad
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767074"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>[パッケージのロール] ダイアログ ボックスの UI リファレンス
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[パッケージのロール]** ダイアログ ボックスを使用すると、パッケージに対する読み取りアクセス権のあるデータベースレベル ロールおよびパッケージに対する書き込みアクセス権のあるデータベースレベル ロールを指定できます。 データベースレベル ロールは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** データベースに格納されたパッケージにのみ適用されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "58374580"
  **[ライター ロール]**  
  ロールを一覧から選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース レベルのロール](../relational-databases/security/authentication-access/database-level-roles.md)   
  [セキュリティの概要 (Integration Services)](security/security-overview-integration-services.md)  
   

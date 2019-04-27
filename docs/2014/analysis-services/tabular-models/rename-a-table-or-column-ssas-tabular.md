@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f9a869b4a280f8df44fce4c506c5f77afc7e8f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756630"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>テーブルまたは列名の変更 (SSAS テーブル)
   **テーブルのインポート ウィザード**の **[テーブルとビューの選択]** ページで**表示名**を入力することにより、インポート処理中にテーブルの名前を変更できます。 **テーブルのインポート ウィザード** の **[SQL クエリの指定]** ページでクエリを指定してデータをインポートした場合は、テーブルおよび列の名前を変更することもできます。  
@@ -56,9 +56,9 @@ ms.locfileid: "48085584"
   
  さらに名前を変更したテーブルを使用する計算、および名前を変更したテーブルの列を使用する計算を更新し、これらの計算から派生したデータも更新して再計算する必要があります。 影響を受けるテーブルと計算の数によっては、完了までに時間がかかることがあります。 このため、テーブル名を変更するタイミングとしては、インポート処理時か、複雑なリレーションシップや計算を構築する前が最適です。  
   
-## <a name="see-also"></a>参照  
- [テーブルと列&#40;SSAS 表形式&#41;](tables-and-columns-ssas-tabular.md)   
+## <a name="see-also"></a>関連項目  
+ [テーブルと列 &#40;SSAS テーブル&#41;](tables-and-columns-ssas-tabular.md)   
  [PowerPivot からインポート&#40;SSAS 表形式&#41;](import-from-power-pivot-ssas-tabular.md)   
- [Analysis Services からのインポート&#40;SSAS 表形式&#41;](import-from-analysis-services-ssas-tabular.md)  
+ [Analysis Services からのインポート (SSAS テーブル)](import-from-analysis-services-ssas-tabular.md)  
   
   

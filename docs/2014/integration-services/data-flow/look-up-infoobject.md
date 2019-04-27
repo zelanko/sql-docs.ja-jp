@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba2550b3d327d392d63aeacf4d6588457cd1aa79
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771118"
 ---
 # <a name="look-up-infoobject"></a>[インフォオブジェクトの参照]
   SAP Netweaver BW システムで定義されたインフォオブジェクトを参照する場合、 **[インフォオブジェクトの参照]** ダイアログ ボックスを使用します。 使用できるインフォオブジェクトの一覧が表示されたら目的のインフォオブジェクトを選択すると、SAP BW 変換先で関連するオプションに必要な値が設定されます。  
@@ -78,7 +78,7 @@ ms.locfileid: "58391750"
   
  使用できるインフォオブジェクトの一覧が表示されたら目的のインフォオブジェクトを選択すると、変換先で関連するオプションに必要な値が設定されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[トランザクション データのインフォキューブの作成]](create-infocube-for-transaction-data.md)   
  [[インフォソースの作成]](create-infosource.md)   
  [[トランザクション データのインフォソースの作成]](create-infosource-for-transaction-data.md)   

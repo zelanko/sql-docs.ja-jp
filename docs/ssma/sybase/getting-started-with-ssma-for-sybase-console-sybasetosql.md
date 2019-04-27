@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 608457b1732d2c1cc188b4b419903d20faa642c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631957"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>概要、SSMA for Sybase Console (SybaseToSQL)
 このセクションでは、起動、SSMA for Sybase のコンソール アプリケーションの概要と手順を説明します。 記載されている規則ウィンドウで使用される、一般的な SSMA コンソール出力。  
@@ -36,7 +36,7 @@ SSMA コンソール アプリケーションを起動するのにには、次�
 ## <a name="using-the-ssma-console"></a>SSMA コンソールの使用  
 コンソールは、Windows システムに正常に起動した後は、作業を次の手順を使用できます。  
   
-1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの詳細については、[スクリプト ファイルの作成&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)を参照してください。  
+1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの詳細については、次を参照してください。[スクリプト ファイルの作成&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)します。  
   
 2.  [変数値ファイルを作成する&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   

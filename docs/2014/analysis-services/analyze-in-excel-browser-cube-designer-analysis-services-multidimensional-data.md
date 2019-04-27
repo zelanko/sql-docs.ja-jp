@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd0c98a00b5643c73b1536b7449c855a444aea8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643518"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>[Excel で分析] (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
   キューブ開発者は、プロジェクトがエンド ユーザーにどのように表示されるかを **"Excel で分析"** で簡単に確認できます。 **"Excel で分析"** 機能によって Microsoft Excel が開き、モデル ワークスペース データベースへのデータ ソース接続が作成され、自動的にピボットテーブルがワークシートに追加されます。 この機能は、以前のリリースで [ブラウザー] タブに組み込みのピボットテーブルを提供していた Office Web コントロールに替わるものです。  
@@ -45,13 +45,13 @@ ms.locfileid: "48075092"
   
  **"Excel で分析"** 機能の詳細については、以下のリソースを参照してください。  
   
- [Excel で分析&#40;SSAS 表形式&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Excel で分析 &#40;SSAS テーブル&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Excel で表形式モデルの分析&#40;SSAS 表形式&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [Excel でのテーブル モデルの分析 (SSAS テーブル)](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [キューブ内のデータおよびメタデータの参照](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ブラウザー&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
  [ツールバー&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [メタデータ&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

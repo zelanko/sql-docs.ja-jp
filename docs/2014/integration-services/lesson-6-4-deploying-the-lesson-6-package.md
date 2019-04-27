@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e04a36ca687c57daae2f286025add57a32632c8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767334"
 ---
-# <a name="step-4-deploying-the-lesson-6-package"></a>手順 4:レッスン 6 パッケージの展開
+# <a name="step-4-deploying-the-lesson-6-package"></a>手順 4:レッスン 6 のパッケージの展開
   パッケージを配置するには、SQL Server インスタンスの Integration Services の SSISDB カタログにパッケージを追加する必要があります。 このレッスンでは、SSISDB カタログへのレッスン 6 パッケージの追加、パラメーターの設定、パッケージの実行を行います。 このレッスンでは、SQL Server Management Studio を使用して SSISDB カタログにレッスン 6 パッケージを追加し、パッケージを配置します。 パッケージを配置したら、新しい場所を指すようにパラメーターを変更し、パッケージを実行します。  
   
  このレッスンの内容  

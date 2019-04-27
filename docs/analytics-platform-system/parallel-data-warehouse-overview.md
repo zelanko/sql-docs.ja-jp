@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639886"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>並列データ ウェアハウスのコンポーネント - Analytics Platform System
 この記事では、アプライアンスのソフトウェアと Analytics Platform System の非アプライアンス ソフトウェア コンポーネントについて説明します。  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bb4422ea0b2ac93ec928bc8ae755f715cb4def44
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763368"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>[ユーザー/グループの権限] 機能領域 (マスター データ マネージャー)
   [ユーザー/グループの権限] 機能領域では、管理者は機能領域、属性 ([モデル] タブ)、およびメンバー ([階層メンバー] タブ) に権限を付与できます。 権限の重複を解決し、個々の属性値に対するユーザーの権限を決定します。  
@@ -46,7 +46,7 @@ ms.locfileid: "53353267"
   
  [マスター データ マネージャー セキュリティのトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ マネージャー Web アプリケーション](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

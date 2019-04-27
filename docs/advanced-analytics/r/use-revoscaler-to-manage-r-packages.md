@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 7eed38e54b0c4e77af8f7b3ede0af2d98b9c58b2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642339"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 関数を使用して、検索、または SQL Server に R パッケージをインストールする方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ SQL Server 2017 Machine Learning サービスには、RevoScaleR の新しいバ
 
 + [リモート SQL Server での R パッケージの管理を有効にします。](r-package-how-to-enable-or-disable.md)
 
-+ RevoScaleR のバージョンは、クライアントとサーバーの両方の環境で同じである必要があります。 詳細については、[パッケージ情報を取得](determine-which-packages-are-installed-on-sql-server.md)を参照してください。
++ RevoScaleR のバージョンは、クライアントとサーバーの両方の環境で同じである必要があります。 詳細については、次を参照してください。[パッケージ情報を取得](determine-which-packages-are-installed-on-sql-server.md)します。
 
 + R コマンドを実行して、サーバーおよびデータベースに接続するためのアクセス許可。 指定したインスタンスとデータベースにパッケージをインストールできるようにするデータベース ロールのメンバーがあります。
 
@@ -175,7 +175,7 @@ computeContext <- RxInSqlServer(connectionString = connectionString )
 rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 ```
 
-パッケージの同期のしくみ、データベースとユーザーごとのモデルごと。 詳細については、[for SQL Server の R パッケージの同期](../r/package-install-uninstall-and-sync.md)を参照してください。
+パッケージの同期のしくみ、データベースとユーザーごとのモデルごと。 詳細については、次を参照してください。 [for SQL Server の R パッケージの同期](../r/package-install-uninstall-and-sync.md)します。
 
 ### <a name="use-a-stored-procedure-to-list-packages-in-sql-server"></a>SQL Server でパッケージを一覧表示、ストアド プロシージャを使用します。
 

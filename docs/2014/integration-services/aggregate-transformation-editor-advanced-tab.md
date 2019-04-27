@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 605a92e00b21d64679076fabcb41068b94921779
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771938"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>[集計変換エディター] ([詳細設定] タブ)
   **[集計変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、コンポーネントのプロパティの設定、集計の指定、入力列と出力列のプロパティの設定を行うことができます。  
@@ -62,7 +62,7 @@ ms.locfileid: "58386150"
  **[自動拡張率]**  
  集計の際にメモリを拡張できる割合を 1 ～ 100% の範囲で指定します。 既定では、このオプションの値は **25%** です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[集計変換エディター] ([集計] タブ)](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
  [集計変換を使用してデータセットの値を集計する](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  

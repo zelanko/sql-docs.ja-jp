@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 844879c0e1b02bc9b6fd88ab153cb2a5dbd6ebe6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754784"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>ミラーリングのためのミラー データベースの準備 (SQL Server)
   データベース ミラーリング セッションを開始する前に、データベース所有者またはシステム管理者は、ミラー データベースを作成し、ミラーリング用に準備しておく必要があります。 新しいミラー データベースを作成するには、少なくとも、プリンシパル データベースの完全バックアップとそれ以降のログ バックアップを作成し、その両方をミラー サーバーのインスタンスに (WITH NORECOVERY を使用して) 復元する必要があります。  
@@ -27,7 +27,7 @@ ms.locfileid: "48130082"
  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でミラー データベースを準備する方法について説明します。  
   
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Requirements"></a> 必要条件  
   
@@ -218,7 +218,7 @@ ms.locfileid: "48130082"
   
  データベース ミラーリングの設定、セキュリティの設定、ミラー データベースの準備、パートナーの設定、およびミラーリング監視サーバーの追加をすべて含む例については、「 [データベース ミラーリングの設定 &#40;SQL Server&#41;](database-mirroring-sql-server.md)でミラー データベースを準備する方法について説明します。  
   
-##  <a name="FollowUp"></a> 補足情報: ミラー データベースを準備した後  
+##  <a name="FollowUp"></a>補足情報: ミラー データベースを準備した後  
   
 1.  最新の RESTORE LOG 操作の後、ログ バックアップを採取している場合は、ミラーリングを開始する前に、採取したすべてのログ バックアップを手動で適用する必要があります (WITH NORECOVERY を使用します。  
   
@@ -242,7 +242,7 @@ ms.locfileid: "48130082"
   
 -   [TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [データベース ミラーリングの設定 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   

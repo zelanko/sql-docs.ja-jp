@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761737"
 ---
 # <a name="optimizing-the-neworg-table"></a>NewOrg テーブルの最適化
   **NewOrd**で作成したテーブル、[テーブルの既存の階層データで設定](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)タスクを選択し、すべての従業員情報が含まれています、を使用して、階層構造を表します`hierarchyid`データ型。 ここでは、`hierarchyid` 列の検索をサポートする新しいインデックスを追加します。  
@@ -72,7 +72,7 @@ ms.locfileid: "48146982"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     深さ優先のインデックス : 従業員のレコードは、それぞれのマネージャーのレコードに隣接して格納されます。  
+     深さ優先のインデックス。従業員レコードは、隣接するそれぞれのマネージャーに格納されます。  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48146982"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **EmployeeID** 優先のインデックス: 行は **EmployeeID** の順に格納されます。  
+     **EmployeeID**-優先のインデックスします。行に格納される**EmployeeID**シーケンス。  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -160,6 +160,6 @@ ms.locfileid: "48146982"
     ```  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [まとめ : テーブルの階層構造への変換](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+ [概要:テーブルの階層構造への変換](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   

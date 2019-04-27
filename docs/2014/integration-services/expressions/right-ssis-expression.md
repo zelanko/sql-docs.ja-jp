@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae56e579e96db82d538189f832001b5a80b4f72e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768798"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS 式)
   指定された文字式の一番右の部分から指定された数の文字を返します。  
@@ -71,7 +71,7 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [LEFT &#40;SSIS 式&#41;](left-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  
   

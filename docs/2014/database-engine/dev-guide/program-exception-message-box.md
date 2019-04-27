@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780699"
 ---
 # <a name="program-exception-message-box"></a>例外メッセージ ボックスのプログラミング
   例外メッセージ ボックスをアプリケーションで使用すると、<xref:System.Windows.Forms.MessageBox> クラスを使用した場合よりも高い柔軟性で、メッセージ エクスペリエンスを制御することができます。 詳細については、次を参照してください。[例外メッセージ ボックスのプログラミング](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)します。 例外メッセージ ボックス .dll を取得および展開する方法の詳細については、「 [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)」をご覧ください。  

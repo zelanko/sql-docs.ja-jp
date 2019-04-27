@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d6e1b3a7b0be7e158ff2594a9d629cd82aaff95e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768217"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>[For Each Item 列] ダイアログ ボックスの UI リファレンス
   **[For Each Item 列]** ダイアログ ボックスを使用すると、Foreach Item 列挙子が列挙するアイテムの列を定義できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "58391370"
  **[削除]**  
  列を選択してから、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Foreach ループ エディター&#40;コレクション ページ&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Foreach ループ コンテナー](control-flow/foreach-loop-container.md)  
   

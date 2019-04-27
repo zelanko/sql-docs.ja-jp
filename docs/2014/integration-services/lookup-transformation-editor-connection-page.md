@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f5c2971b1d4da669cadc57f0a557b32bf2b1adde
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767324"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>[参照変換エディター] ([接続] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[接続]** ページを使用して、接続マネージャーを選択します。 OLE DB 接続マネージャーを選択する場合は、参照データセットを生成するためのクエリ、テーブル、またはビューも選択します。  
@@ -71,7 +71,7 @@ ms.locfileid: "58389820"
 ## <a name="external-resources"></a>外部リソース  
  blogs.msdn.com のブログ「 [キャッシュ モードの参照](https://go.microsoft.com/fwlink/?LinkId=219518) 」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[参照変換エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[参照変換エディター] &#40;[列] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [[参照変換エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   

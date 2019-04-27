@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648253"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの縦棒グラフの追加 (レポート ビルダー)
   縦棒グラフでは、カテゴリ別にグループ化された縦棒のセットとして系列が表示されます。 縦棒グラフは次の場合に便利です。  
@@ -306,7 +306,7 @@ ms.locfileid: "59936858"
 ## <a name="next-steps"></a>次の手順  
  これで、「レポートへの縦棒グラフの追加」チュートリアルを終了します。 グラフの詳細については、「[グラフ (レポート ビルダーおよび SSRS)](report-design/charts-report-builder-and-ssrs.md)」と「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル&#40;レポート ビルダー&#41;](report-builder-tutorials.md)   
  [SQL Server 2014 のレポート ビルダー](report-builder/report-builder-in-sql-server-2016.md)  
   

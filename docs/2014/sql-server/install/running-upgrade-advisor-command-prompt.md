@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753284"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>アップグレード アドバイザーの実行 (コマンド プロンプト)
   使用して、 **UpgradeAdvisorWizardCmd**ユーティリティをコマンド プロンプトからアップグレード アドバイザーを実行します。 結果を XML 形式で受け取るか、コンマ区切り値のファイルで受け取るかを選択できます。  
@@ -43,24 +43,24 @@ where <server_info> is any combination of the following:
  **-?**  
  コマンドの構文を表示します。  
   
- **-Configfile** _ファイル名_  
+ **-ConfigFile** _filename_  
  実行するときに使用する設定を含む XML ファイルのファイル名とパスの名前には、 **UpgradeAdvisorWizardCmd**ユーティリティ。  
   
- *< server_info >*  
+ *<server_info>*  
  分析するコンピューターとインスタンスを指定します。 構成ファイルを使用していない場合に、これらのオプションを使用します。  
   
  *< server_info >* 次の 4 つの引数の組み合わせにすることができます。  
   
- **-サーバー** _server_name_  
+ **-Server** _server_name_  
  分析するコンピューターの名前を指定します。 ローカル コンピューター (既定値) またはリモート コンピューターのどちらでも指定できます。  
   
- **-インスタンス** _instance_name_  
+ **-Instance** _instance_name_  
  分析するインスタンスの名前を指定します。 既定値はありません。 このパラメーターを指定しない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はスキャンされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスの値は MSSQLSERVER です。 名前付きインスタンスの場合は、インスタンス名を使用します。  
   
- **-ASInstance**_AS_instance_name_   
+ **-ASInstance**  _AS_instance_name_  
  分析する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスの名前を指定します。 既定値はありません。 この値を指定しない場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はスキャンされません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスの値は MSSQLServerOLAPService です。 名前付きインスタンスの場合は、インスタンス名を使用します。  
   
- **-RSInstance**_RS_instance_name_   
+ **-RSInstance**  _RS_instance_name_  
  分析する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスの名前を指定します。 既定値はありません。 この値を指定しない場合、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はスキャンされません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定のインスタンスの値は ReportServer です。 名前付きインスタンスの場合は、インスタンス名を使用します。  
   
  **-SqlUser** _login_id_  
@@ -75,7 +75,7 @@ where <server_info> is any combination of the following:
 ## <a name="return-values"></a>戻り値  
  次の表は、値を**UpgradeAdvisorWizardCmd**を返します。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |0|分析が正常に完了し、アップグレードの問題は見つかりませんでした。|  
 |正の整数|分析が正常に完了し、アップグレードの問題が見つかりました。|  
@@ -122,7 +122,7 @@ where <server_info> is any combination of the following:
   
 ## <a name="element-descriptions"></a>要素の説明  
   
-|タグ|定義|個数|  
+|Tag|定義|個数|  
 |---------|----------------|----------------|  
 |`Configuration`|アップグレード アドバイザー構成ファイルの親要素です。|必須。構成ファイルにつき 1 個。|  
 |`Server`|分析するサーバーの名前です。|省略可。構成ファイルにつき 1 個。 既定値はローカル コンピューターです。|  
@@ -169,7 +169,7 @@ UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"
     -SqlUser "MyUserName" -SqlPassword "QweRTy-55"  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アップグレードの問題を解決します。](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [アップグレード アドバイザーを実行している&#40;ユーザー インターフェイス&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)  

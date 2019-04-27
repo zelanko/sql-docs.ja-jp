@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5dd11fcb72496465685ce763f48518f7bcd0c2c6
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634577"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大きな CLR ユーザー定義型 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "49072216"
 
   このトピックでは、大きな共通言語ランタイム (CLR) ユーザー定義型 (UDT) をサポートするための、SQL Server Native Client の ODBC に対する変更について説明します。  
   
- ODBC による大きな CLR Udt のサポートを示すサンプルは、[大きな Udt のサポート](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)を参照してください。  
+ ODBC による大きな CLR Udt のサポートを示すサンプルは、次を参照してください。[大きな Udt のサポート](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)します。  
   
- SQL Server Native Client における大きな CLR Udt のサポートの詳細については、[Large CLR User-Defined 型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)を参照してください。  
+ SQL Server Native Client における大きな CLR Udt のサポートの詳細については、次を参照してください。 [Large CLR User-Defined 型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)します。  
   
 ## <a name="data-format"></a>データ形式  
  SQL Server Native Client では、大きなオブジェクト (LOB) の型について、列のサイズが 8,000 バイトを超えていることを示す場合に、SQL_SS_LENGTH_UNLIMITED が使用されます。 SQL Server 2008 以降では、サイズが 8,000 バイトを超えている CLR UDT にも同じ値が使用されるようになりました。  

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 714ede33a89a3ab4e44dae682887ee0c21c9f363
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766654"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>デジタル署名を使用してパッケージのソースを特定する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、そのソースを識別するために、デジタル証明書を使用して署名できます。 パッケージがデジタル証明書を使用して署名されたら、パッケージを読み込む前に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] でデジタル署名を確認できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で署名を確認するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または **dtexec** ユーティリティ (dtexec.exe) でオプションを設定するか、オプションのレジストリ値を設定します。  
@@ -34,7 +34,7 @@ ms.locfileid: "58375670"
   
 -   デザイン時にすべてのパッケージのデジタル署名を確認してからパッケージを読み込むには、 **で** [パッケージの読み込み時にデジタル署名を確認する] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]チェック ボックスをオンにします。 このオプションは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でのすべてのパッケージに対するグローバルな設定です。 詳細については、「 [General Page](../general-page-of-integration-services-designers-options.md)」を参照してください。  
   
--   個々 のパッケージのデジタル署名を確認するには、指定、`/VerifyS[igned]`オプションを使用する場合、 **dtexec**ユーティリティでパッケージを実行します。 詳細については、「 [dtexec Utility](../packages/dtexec-utility.md)」を参照してください。  
+-   個々 のパッケージのデジタル署名を確認するには、指定、`/VerifyS[igned]`オプションを使用する場合、 **dtexec**ユーティリティでパッケージを実行します。 詳しくは、「 [dtexec Utility](../packages/dtexec-utility.md)」をご覧ください。  
   
 ## <a name="setting-a-registry-value-to-check-the-package-signature"></a>パッケージの署名を確認するレジストリ値の設定  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、オプションのレジストリ値である **BlockedSignatureStates**もサポートされています。このレジストリ値を使用すると、署名付きパッケージと署名がないパッケージの読み込みに関する組織のポリシーを管理できます。 このレジストリ値により、パッケージが署名されていない場合、または無効な署名や信頼できない署名が含まれている場合に、パッケージが読み込まれないようにすることができます。 このレジストリ値を設定する方法の詳細については、「[レジストリ値を設定して署名ポリシーを実装する](../implement-a-signing-policy-by-setting-a-registry-value.md)」を参照してください。  
@@ -42,7 +42,7 @@ ms.locfileid: "58375670"
 > [!NOTE]  
 >  オプションの **BlockedSignatureStates** レジストリ値では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または **dtexec** コマンド ラインで設定されたデジタル署名オプションよりも制限が厳しい設定を指定できます。 この場合、制限が厳しい方のレジストリ設定が他の設定をオーバーライドします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; パッケージ](../integration-services-ssis-packages.md)   
  [セキュリティの概要 &#40;Integration Services&#41;](security-overview-integration-services.md)  
   

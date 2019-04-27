@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7b614f31292999dd5424935d57e4cd1412dee864
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764842"
 ---
 # <a name="master-data-services-features-and-tasks"></a>マスター データ サービスの機能とタスク
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] を使用して組織のマスター データを管理する方法について説明します。 データのコンテナーとなるモデル プロジェクトを作成し操作する方法を説明します。 マスター データ自体を編成して管理する方法を説明します。 マスター データおよび、テスト環境と運用環境間の共有モデルをインポートおよびエクスポートする方法を説明します。 最後に、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サービスにアクセスするカスタム アプリケーションを開発する方法を説明します。  

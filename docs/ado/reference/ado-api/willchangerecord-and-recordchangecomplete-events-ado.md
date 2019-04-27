@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd31a75a45bd38bda04655bbb47daca09714803c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642894"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord および RecordChangeComplete イベント (ADO)
 **WillChangeRecord**イベントが 1 つまたは複数のレコード (行) の前に呼び出されます、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を変更します。 **RecordChangeComplete**イベントが呼び出された後に 1 つまたは多くのレコードを変更します。  
@@ -61,8 +61,8 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  A **Recordset**オブジェクト。 **Recordset**のこのイベントが発生しました。  
   
-## <a name="remarks"></a>Remarks  
- A **WillChangeRecord**または**RecordChangeComplete** 、以下の理由により行の最初の変更されたフィールドのイベントが発生する**Recordset**操作: [Update](../../../ado/reference/ado-api/update-method.md)、[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、および[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)します。 値、 **Recordset** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)イベントが発生する操作を指定します。  
+## <a name="remarks"></a>コメント  
+ A **WillChangeRecord**または**RecordChangeComplete** 、以下の理由により行の最初の変更されたフィールドのイベントが発生する**Recordset**操作。[Update](../../../ado/reference/ado-api/update-method.md)、[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、および[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). 値、 **Recordset** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)イベントが発生する操作を指定します。  
   
  中に、 **WillChangeRecord** 、イベント、**レコード セット**[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティに設定されて**adFilterAffectedRecords**します。 イベントの処理中に、このプロパティを変更することはできません。  
   

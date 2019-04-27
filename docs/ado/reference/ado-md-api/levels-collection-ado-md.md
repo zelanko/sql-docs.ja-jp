@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de15d97098c61ae73ddade761ddad716947715f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740142"
 ---
 # <a name="levels-collection-ado-md"></a>Levels コレクション (ADO MD)
 含まれています、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)階層を構成するオブジェクト。  
@@ -40,7 +40,7 @@ ms.locfileid: "47659670"
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/levels-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログの例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Hierarchy オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
  [Level オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

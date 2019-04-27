@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746734"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>[ディメンションの種類を指定] (ディメンション ウィザード)
   **[ディメンションの種類を指定]** ページを使用すると、ディメンションの種類を定義し、選択したディメンションの種類に関連付けられている特殊な属性の型をディメンションに追加できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "50145587"
 |**料金**|レート ディメンションには、換算レートと通貨変換の情報を表すデータとメタデータが収められます。|  
 |**Regular**|標準ディメンションは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]で最も一般的に使用されるディメンションの種類です。<br /><br /> 標準ディメンションの詳細については、 [「ディメンションの種類」](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)を参照してください。|  
 |**Scenario**|シナリオ ディメンションは、計画的または戦略的な分析の情報を表すデータとメタデータが収められる標準ディメンションです。<br /><br /> 標準ディメンションの詳細については、 [「ディメンションの種類」](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)を参照してください。|  
-|**Time**|時間ディメンションには、時刻に関するデータとメタデータが収められます。<br /><br /> 時間ディメンションの詳細については、「 [日付型ディメンションの作成](multidimensional-models/database-dimensions-create-a-date-type-dimension.md)」を参照してください。|  
+|**[時刻]**|時間ディメンションには、時刻に関するデータとメタデータが収められます。<br /><br /> 時間ディメンションの詳細については、「 [日付型ディメンションの作成](multidimensional-models/database-dimensions-create-a-date-type-dimension.md)」を参照してください。|  
 |**Utility**|ユーティリティ ディメンションは、他のディメンションの種類に当てはまらない情報を表すデータとメタデータが収められる標準ディメンションです。<br /><br /> 標準ディメンションの詳細については、 [「ディメンションの種類」](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)を参照してください。|  
   
 ## <a name="dimension-attributes-options"></a>ディメンションの属性のオプション  
@@ -62,7 +62,7 @@ ms.locfileid: "50145587"
  **ディメンションの属性**  
  **[属性の型]** に表示された特殊な属性の型を、ディメンション ウィザードが割り当てるディメンションの属性を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディメンション ウィザードの F1 ヘルプ](dimension-wizard-f1-help.md)   
  [ディメンション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  

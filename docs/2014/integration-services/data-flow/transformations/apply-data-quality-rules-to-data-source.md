@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c420a52528662cecec1bae8e0e1718152279bc0e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770458"
 ---
 # <a name="apply-data-quality-rules-to-data-source"></a>データ ソースにデータ品質ルールを適用する
   Data Quality Services (DQS) を使用して、DQS クレンジング変換をデータ ソースに接続することで、パッケージ データ フロー内のデータを修正できます。 DQS の詳細については、「 [Data Quality Services の概念](../../../data-quality-services/data-quality-services-concepts.md)」を参照してください。 変換の詳細については、「[DQS クレンジング変換](dqs-cleansing-transformation.md)」を参照してください。  

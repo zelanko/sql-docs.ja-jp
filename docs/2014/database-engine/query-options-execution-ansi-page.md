@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: bfc25b918c9cca50af6ac7c57bfc0ce1c1b4c3c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773940"
 ---
 # <a name="query-options-execution-ansi-page"></a>[クエリ オプション] の [実行] ([ANSI] ページ)
   このページを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でクエリを実行する際に ISO (ANSI) 規格で指定されているすべての設定または設定の一部を使用するように指定できます。  

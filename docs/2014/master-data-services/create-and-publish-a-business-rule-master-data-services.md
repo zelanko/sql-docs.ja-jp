@@ -14,16 +14,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 65670b6958d2b0de36d1771d8c85bacfed1fa9a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765795"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>ビジネス ルールを作成しパブリッシュする (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、マスター データの精度を保証するためにビジネス ルールを作成します。 ルールを作成した後、データに適用する前に、そのルールをパブリッシュする必要があります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -92,7 +92,7 @@ ms.locfileid: "52821936"
   
     -   [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [ビジネス ルールの名前を変更する (マスター データ サービス)](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
  [ビジネス ルールに複数の条件を追加する (マスター データ サービス)](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  

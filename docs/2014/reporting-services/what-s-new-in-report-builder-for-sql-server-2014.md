@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5dfe30711f9504d1206b172adece266d7de573cb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649310"
 ---
 # <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>どのような&#39;s for SQL Server 2014 レポート ビルダーの新機能
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] では、いくつかの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能が導入されています。  
@@ -48,7 +48,7 @@ ms.locfileid: "59960198"
   
  詳細については、「 [Microsoft Word へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)で操作できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 2014 のレポート ビルダー](report-builder/report-builder-in-sql-server-2016.md)  
   
   

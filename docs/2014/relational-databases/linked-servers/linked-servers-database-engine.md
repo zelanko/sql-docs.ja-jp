@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c2909eeebde268b52ecaeff5a20a982831e7569
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743512"
 ---
 # <a name="linked-servers-database-engine"></a>リンク サーバー (データベース エンジン)
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスの外に存在する OLE DB データ ソースに対し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]からコマンドを実行できるようにするには、リンク サーバーを構成します。 通常、リンク サーバーを構成する目的は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の別のインスタンスまたは別のデータベース製品 (Oracle など) のテーブルを含んだ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]から実行できるようにすることです。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] の Access や Excel など、さまざまな種類の OLE DB データ ソースをリンク サーバーとして構成できます。 リンク サーバーには次の利点があります。  

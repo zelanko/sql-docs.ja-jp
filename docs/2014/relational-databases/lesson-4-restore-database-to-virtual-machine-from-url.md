@@ -12,14 +12,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0850fb7b6be85f8052781ca70f97477d5cb3e403
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743308"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>レッスン 5:  (省略可) TDE を使用してデータベースを暗号化する
-  省略可能な手順として、新しく作成したデータベースを暗号化できます。 透過的なデータ暗号化 (TDE) では、データとログ ファイルの暗号化と暗号化解除がリアルタイムの I/O で実行されます。 この種の暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 詳細については、[Transparent Data Encryption &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md)と[TDE で保護されたデータベースを別の SQL Server に移動](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)を参照してください。  
+  省略可能な手順として、新しく作成したデータベースを暗号化できます。 透過的なデータ暗号化 (TDE) では、データとログ ファイルの暗号化と暗号化解除がリアルタイムの I/O で実行されます。 この種の暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 詳細については、次を参照してください。 [Transparent Data Encryption &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md)と[TDE で保護されたデータベースを別の SQL Server に移動](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)します。  
   
  このレッスンは、次の手順を完了済みであることを前提としています。  
   
@@ -92,6 +92,6 @@ GO
   
  **次のレッスン:**  
   
- [レッスン 6: 内部設置型のソース コンピューターから Windows Azure のターゲット コンピューターにデータベースを移行する](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [レッスン 6:ソースからデータベースの移行のターゲット コンピューターに Windows Azure にオンプレミスのマシン](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

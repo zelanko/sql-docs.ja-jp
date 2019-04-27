@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831351"
 ---
 # <a name="integration-services-containers"></a>Integration Services コンテナー
   コンテナーとは、パッケージに構造を提供し、タスクにサービスを提供する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクトのことです。 コンテナーは、パッケージ内の制御フローの反復をサポートし、タスクおよびコンテナーを意味のある作業単位にグループ化します。 コンテナーには、タスクの他に別のコンテナーを含めることができます。  
@@ -83,7 +83,7 @@ ms.locfileid: "58385445"
  コンテナーには実行可能ファイルおよび優先順位制約で構成される制御フローが含まれ、場合によってはイベント ハンドラーおよび変数が使用されています。 ただし、タスク ホスト コンテナーは単一タスクをカプセル化し、優先順位制約を使用しない、例外的なコンテナーです。  
   
 ### <a name="executables"></a>実行可能ファイル  
- 実行可能ファイルは、コンテナー レベルのタスクおよびコンテナー内の任意のコンテナーを参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供するタスクおよびコンテナーのいずれか、またはカスタム タスクを実行ファイルとすることができます。 詳細については、[Integration Services タスク](integration-services-tasks.md)と[Integration Services コンテナー](integration-services-containers.md)を参照してください。  
+ 実行可能ファイルは、コンテナー レベルのタスクおよびコンテナー内の任意のコンテナーを参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供するタスクおよびコンテナーのいずれか、またはカスタム タスクを実行ファイルとすることができます。 詳細については、次を参照してください。 [Integration Services タスク](integration-services-tasks.md)と[Integration Services コンテナー](integration-services-containers.md)します。  
   
 ### <a name="precedence-constraints"></a>優先順位制約  
  優先順位制約は、同じ親コンテナー内のコンテナーとタスクを連結して、順序付けられた制御フローを作成します。 詳細については、「 [優先順位制約](precedence-constraints.md)」を参照してください。  

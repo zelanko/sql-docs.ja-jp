@@ -20,26 +20,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f8f497019dea80bbe79903c60531f506d7950371
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741985"
 ---
 # <a name="sysdmcryptographicproviderproperties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  登録された暗号化サービス プロバイダーの情報を返します。  
+  登録されている暗号化サービス プロバイダーに関する情報を返します。  
   
  
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|provider_id|**int**|暗号化サービス プロバイダーの ID 番号。|  
-|guid|**uniqueidentifier**|一意のプロバイダー GUID。|  
+|provider_id|**int**|暗号プロバイダーの id 番号。|  
+|guid|**uniqueidentifier**|固有のプロバイダーの GUID です。|  
 |provider_version|**nvarchar (256)**|形式でプロバイダーのバージョン '*aa.bb.cccc.dd*' です。|  
 |sqlcrypt_version|**nvarchar (256)**|メジャー バージョン、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]形式で Cryptographic API '*aa.bb.cccc.dd*'。|  
-|friendly_name|**nvarchar(2048)**|プロバイダーによって指定された名前。|  
-|authentication_type|**nvarchar (256)**|WINDOWS、BASIC、または OTHER。|  
+|friendly_name|**nvarchar(2048)**|プロバイダーによって提供される名前です。|  
+|authentication_type|**nvarchar (256)**|WINDOWS、BASIC、またはその他。|  
 |symmetric_key_support|**tinyint**|0 (サポートされていません)<br /><br /> 1 (サポートされています)|  
 |symmetric_key_export|**tinyint**|0 (サポートされていません)<br /><br /> 1 (サポートされています)|  
 |symmetric_key_import|**tinyint**|0 (サポートされていません)<br /><br /> 1 (サポートされています)|  
@@ -52,7 +52,7 @@ ms.locfileid: "47674140"
 ## <a name="remarks"></a>コメント  
  sys.dm_cryptographic_provider_properties ビューはパブリックに表示できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   

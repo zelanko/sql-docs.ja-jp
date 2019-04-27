@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c64d535e7e712dde5dd98e8b4c14b3319d5947db
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772236"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>パッケージにイベント ハンドラーを追加する
   コンテナーとタスクは実行時にイベントを発生させます。 こうしたイベントが発生したときにワークフローを実行して、イベントに応答するカスタム イベント ハンドラーを作成できます。 たとえば、タスクが失敗したときに電子メール メッセージを送信するイベント ハンドラーを作成できます。  
@@ -55,7 +55,7 @@ ms.locfileid: "58391008"
   
 9. **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックし、新しいパッケージを保存します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
  [Integration Services &#40;SSIS&#41; のログ記録](performance/integration-services-ssis-logging.md)  
   

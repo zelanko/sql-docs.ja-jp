@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770859"
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
   RAW ファイル変換先は、生データをファイルに書き込みます。 データは変換先に固有の形式であるため、データは変換の必要がなく、解析もほとんど必要ありません。 したがって、RAW ファイル変換先は、フラット ファイルや OLE DB 変換先などの他の変換先よりも、高速にデータを書き込むことができます。  
@@ -122,7 +122,7 @@ ms.locfileid: "58385560"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](../common-properties.md)  
+-   [共通プロパティ](../common-properties.md)  
   
 -   [RAW ファイルのカスタム プロパティ](raw-file-custom-properties.md)  
   
@@ -132,7 +132,7 @@ ms.locfileid: "58385560"
 ## <a name="related-content"></a>関連コンテンツ  
  sqlservercentral.com のブログ「 [RAW ファイルは最高](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RAW ファイル ソース](raw-file-source.md)   
  [データ フロー](data-flow.md)  
   

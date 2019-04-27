@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0adda8889f963ee1aaf2701abbbcc38b40ba50c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642550"
 ---
 # <a name="version-property-ado"></a>Version プロパティ (ADO)
 ADO のバージョン番号を示します。  
@@ -39,6 +39,6 @@ ADO のバージョン番号を示します。
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Version プロパティの例 (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
  [Version プロパティの例 (VC++)](../../../ado/reference/ado-api/version-property-example-vc.md)   

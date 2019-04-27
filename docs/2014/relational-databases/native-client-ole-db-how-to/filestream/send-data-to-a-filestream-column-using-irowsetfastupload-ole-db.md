@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f24786c95cde089c159945ecd58075139163e3c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643328"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload を使用した FILESTREAM 列へのデータの送信 (OLE DB)
   このサンプルでは、IRowsetFastUpload インターフェイスを使用して、4 MB ～ 4 GB のデータを filestream 列に送ります。  
   
- Filestream 機能の詳細については、[FILESTREAM のサポート&#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)を参照してください。  
+ Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)します。  
   
 ## <a name="example"></a>例  
  コンパイルして、このサンプルを実行する前に、FILESTREAM のサポートを有効にする ([Enable and Configure FILESTREAM](../../blob/enable-and-configure-filestream.md))。  

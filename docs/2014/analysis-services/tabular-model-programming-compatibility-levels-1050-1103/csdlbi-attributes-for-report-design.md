@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7d2a9f075879ce1bfa0c0e7257ea8a2495562c0
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757934"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>レポート デザインの CSDLBI 属性
   このセクションでは、テーブル モデリングについての CSDL に対する拡張機能の、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] クエリ デザインに影響のある属性について説明します。  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653399"
 ---
 # <a name="odbc-api-reference"></a>ODBC API リファレンス
 このセクションのトピックでは、アルファベット順では、各 ODBC 関数について説明します。 各関数は、C のプログラミング言語の関数として定義されます。 説明を以下に示します。  

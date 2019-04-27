@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779157"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>メモリ最適化テーブルのトランザクション分離レベルに関するガイドライン
   多くのシナリオでは、トランザクション分離レベルを指定する必要があります。 メモリ最適化テーブルのトランザクション分離は、ディスク ベース テーブルとは異なります。  
@@ -24,7 +24,7 @@ ms.locfileid: "58527794"
   
 -   トランザクション分離レベルは、ネイティブ コンパイル ストアド プロシージャの中身を構成する ATOMIC ブロックに必要なオプションです。  
   
--   複数のコンテナーにまたがるトランザクションで分離レベルを使用することには制約があるため、解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] でメモリ最適化テーブルを使用する場合には、そのテーブルへのアクセスに使用する分離レベルを指定するテーブル ヒントを併用するのが一般的です。 分離レベル ヒントとコンテナーにまたがるトランザクションの詳細については、[トランザクション分離レベル](../../2014/database-engine/transaction-isolation-levels.md)を参照してください。  
+-   複数のコンテナーにまたがるトランザクションで分離レベルを使用することには制約があるため、解釈された [!INCLUDE[tsql](../includes/tsql-md.md)] でメモリ最適化テーブルを使用する場合には、そのテーブルへのアクセスに使用する分離レベルを指定するテーブル ヒントを併用するのが一般的です。 分離レベル ヒントとコンテナーにまたがるトランザクションの詳細については、次を参照してください。[トランザクション分離レベル](../../2014/database-engine/transaction-isolation-levels.md)します。  
   
 -   必要なトランザクション分離レベルは、明示的に宣言する必要があります。 ロック ヒント (XLOCK など) を使用してトランザクションの特定の行またはテーブルの分離を保証することはできません。  
   

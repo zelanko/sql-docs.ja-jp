@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b19dce00f95559aec77c8d02c86631faadc466b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757572"
 ---
 # <a name="calculations-ssas-tabular"></a>計算 (SSAS テーブル)
   データをモデルにインポートした後、計算を追加して、データの拡張、結合、要約、およびセキュリティの確保を実行することができます。 テーブル モデルでは、カスタムの計算を作成するための Data Analysis Expressions (DAX) という数式言語を使用します。 テーブル モデルでは、 *計算列*、 *メジャー*、および *行フィルター*に使用される計算を DAX の数式を使用して作成します。  
@@ -25,7 +25,7 @@ ms.locfileid: "48100482"
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[テーブル モデルにおける DAX の理解&#40;SSAS 表形式&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|テーブル モデルの計算列、メジャー、および行フィルターに対して計算を作成する際に使用される Data Analysis Expressions (DAX) の数式言語について説明します。|  
+|[テーブル モデルでの DAX について (SSAS テーブル)](understanding-dax-in-tabular-models-ssas-tabular.md)|テーブル モデルの計算列、メジャー、および行フィルターに対して計算を作成する際に使用される Data Analysis Expressions (DAX) の数式言語について説明します。|  
 |[DirectQuery モードで数式の互換性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|相違点について説明し、DirectQuery モードではサポートされない関数、およびサポートはされるが異なる結果を返す可能性のある一連の関数を示します。|  
 |[Data Analysis Expressions &#40;DAX&#41;リファレンス](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)|このセクションでは、DAX の構文、演算子、および関数について詳しく説明します。|  
   

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 46d9b46698e4416f2ad9ab15b2fb8a223ab7b7c7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631723"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>テーブルおよび列に対するセマンティック検索の有効化
   ドキュメントまたはテキストが格納されている選択した列に対して統計的セマンティック インデックス作成を有効または無効にする方法について説明します。  
@@ -152,7 +152,7 @@ GO
   
 ##  <a name="dropping"></a> セマンティック インデックスの削除  
   
-###  <a name="drophow"></a> 操作方法：セマンティック インデックスを削除する  
+###  <a name="drophow"></a> 操作方法：セマンティック インデックスを削除します。  
  **ALTER FULLTEXT INDEX** ステートメントを使用して既存のフルテキスト インデックスを変更するとき、セマンティック インデックス作成を削除できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のさまざまなダイアログ ボックスを使用して、セマンティック インデックス作成を削除することもできます。  
   
  **TRANSACT-SQL を使用して、セマンティック インデックスを削除します。**  
@@ -191,7 +191,7 @@ GO
   
 ## <a name="checking-whether-semantic-search-is-enabled-on-database-objects"></a>データベース オブジェクトでセマンティック検索が有効かどうかの確認  
   
-###  <a name="HowToCheckEnabled"></a> 操作方法：データベース オブジェクトでセマンティック検索が有効かどうかの確認  
+###  <a name="HowToCheckEnabled"></a> 操作方法：データベース オブジェクトでセマンティック検索が有効になっているかどうかを確認します。  
  **データベースに対してセマンティック検索が有効でしょうか。**  
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql) メタデータ関数の **IsFullTextEnabled** プロパティのクエリを実行します。  
   
@@ -253,7 +253,7 @@ GO
   
  セマンティック インデックス作成でサポートされている言語は以下のとおりです。 この一覧は、LCID の順に並べ替えたカタログ ビュー [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql) の出力を表します。  
   
-|言語|LCID (LCID)|  
+|[言語]|LCID (LCID)|  
 |--------------|----------|  
 |ドイツ語|1031|  
 |英語 (米国)|1033|  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1450762e09481d4b8bfa5883c5c752d01216f29e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748114"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>[作成方法の選択] (ディメンション ウィザード)
   **[作成方法の選択]** ページを使用すると、ディメンションの作成方法を選択できます。  
@@ -62,7 +62,7 @@ ms.locfileid: "48132322"
 > [!NOTE]  
 >  このオプションは、 **[データ ソースに時間テーブル以外のテーブルを生成]** オプションが選択された場合のみ使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディメンション ウィザードの F1 ヘルプ](dimension-wizard-f1-help.md)   
  [ディメンション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  

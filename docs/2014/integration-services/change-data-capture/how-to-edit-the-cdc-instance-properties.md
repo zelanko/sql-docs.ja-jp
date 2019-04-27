@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96604a09811626a304502dc05ef4f7e9edcd0359
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771230"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>CDC インスタンスのプロパティを編集する方法
   この手順では、CDC デザイナー コンソールを使用して CDC インスタンスの構成プロパティを編集する方法について説明します。  
@@ -34,15 +34,15 @@ ms.locfileid: "58390850"
   
 5.  プロパティ エディターで、次のタブのプロパティを編集します。  
   
-    -   **Oracle**:使用して、 **Oracle**  タブで、新しいインスタンス ウィザードで作成する CDC データベース ページで指定した説明を変更して、Oracle ログ マイニング データベースの接続情報を変更するのには、プロパティ エディター。  
+    -   **[Oracle]**: プロパティ エディターの **[Oracle]** タブを使用して、新しいインスタンス ウィザードの [CDC データベースの作成] ページで指定した説明を変更し、Oracle ログ マイニング データベースの接続情報を変更します。  
   
          このタブで編集できる内容の詳細については、「 [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md)」を参照してください。  
   
-    -   **テーブル**:Oracle ソース データベースから選択したテーブルおよび列を変更するには、 **[テーブル]** タブを使用します。  
+    -   **[テーブル]**: Oracle ソース データベースから選択したテーブルおよび列を変更するには、 **[テーブル]** タブを使用します。  
   
          このタブで編集できる内容の詳細については、「 [Edit Tables](edit-tables.md)」を参照してください。  
   
-    -   **スクリプト**:使用して、**スクリプト**補足ログを設定する Oracle ソース データベースでスクリプトを再実行または実行するには、タブ。  
+    -   **[ スクリプト]**: 補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、**[スクリプト]** タブを使用します。  
   
          このタブで実行できる内容の詳細については、「 [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md)」を参照してください。  
   

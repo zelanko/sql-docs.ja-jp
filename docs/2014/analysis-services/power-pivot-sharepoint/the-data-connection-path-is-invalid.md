@@ -1,5 +1,5 @@
 ---
-title: 'ブックのデータ接続パスがローカル ドライブ上のファイルを指しているか、無効な URI です。 次の接続の更新に失敗しました: PowerPivot データ |Microsoft Docs'
+title: ブックのデータ接続パスがローカル ドライブ上のファイルを指しているか、無効な URI です。 次の接続の更新に失敗しました:PowerPivot データ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,23 +12,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6242e258c8516b4ebd6e46e9290dabe31cbaf168
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749096"
 ---
-# <a name="the-data-connection-path-in-the-workbook-points-to-a-file-on-the-local-drive-or-is-an-invalid-uri-the-following-connections-failed-to-refresh-powerpivot-data"></a>ブックのデータ接続パスがローカル ドライブ上のファイルを指しているか、無効な URI です。 次の接続は更新に失敗しました: PowerPivot データ
+# <a name="the-data-connection-path-in-the-workbook-points-to-a-file-on-the-local-drive-or-is-an-invalid-uri-the-following-connections-failed-to-refresh-powerpivot-data"></a>ブックのデータ接続パスがローカル ドライブ上のファイルを指しているか、無効な URI です。 次の接続の更新に失敗しました:[PowerPivot データ]
   PowerPivot データを含む Excel ブックで、Excel Services は、埋め込みデータ ソースに接続できない場合にこのエラーを返します。  
   
 ## <a name="details"></a>詳細  
   
 |||  
 |-|-|  
-|適用対象|PowerPivot for SharePoint|  
+|対象|PowerPivot for SharePoint|  
 |製品バージョン|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|信頼できるデータ接続ライブラリにある .odc ファイルからのデータ接続のみ許可するように Excel Services が構成されています。|  
-|メッセージ テキスト|ブックのデータ接続パスがローカル ドライブ上のファイルを指しているか、無効な URI です。 次の接続は更新に失敗しました: PowerPivot データ|  
+|メッセージ テキスト|ブックのデータ接続パスがローカル ドライブ上のファイルを指しているか、無効な URI です。 次の接続の更新に失敗しました:[PowerPivot データ]|  
   
 ## <a name="explanation"></a>説明  
  PowerPivot ブックには、埋め込みデータ接続が含まれています。 スライサーやフィルターを介したブックの操作をサポートするには、埋め込まれている接続情報を使用した外部データ アクセスを許可するように Excel Services を構成する必要があります。 外部データ アクセスは、ファームの PowerPivot サーバーに読み込まれる PowerPivot データを取得するのに必要です。  

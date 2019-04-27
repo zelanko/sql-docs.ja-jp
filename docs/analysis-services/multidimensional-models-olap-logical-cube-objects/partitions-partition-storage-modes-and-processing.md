@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57c73e3ae9661058277a377b7d17b6a4af393ba0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640462"
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>パーティション - パーティションのストレージ モードおよび処理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "52545653"
   
  HOLAP として格納されたパーティションのサイズは、ソース データを含まないため、同程度の MOLAP パーティションより小さく、要約データにアクセスするクエリの応答時間は ROLAP パーティションより高速です。 一般的に、要約データが大量のソース データで構成され、クエリに高速な応答が要求されるキューブのパーティションには、HOLAP ストレージ モードが適しています。 ただし、中央値の計算のようにリーフ レベル データを処理する必要のあるクエリをユーザーが生成する場合は、MOLAP の方が適しています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロアクティブ キャッシュ&#40;パーティション&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Analysis Services データベースの同期](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
  [パーティション (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  

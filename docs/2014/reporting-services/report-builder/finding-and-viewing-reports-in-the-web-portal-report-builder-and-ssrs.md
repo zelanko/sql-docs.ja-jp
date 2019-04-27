@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee87fc2c435701649a328d38d5b54c82c898b4f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62986986"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>レポート マネージャーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)
   レポート マネージャーは、レポートの表示機能および管理機能を備えた Web ベースのツールです。 これは、レポート サーバー インストールの一部です。 レポート マネージャーを開くとき、ブラウザー ウィンドウにレポート マネージャーの URL を入力します。 ブラウザーの要件については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)します。 レポート サーバーでのレポート マネージャー URL の構成方法の詳細については、システム管理者に問い合わせてください。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](../report-server/configure-web-portal.md)」を参照してください。  

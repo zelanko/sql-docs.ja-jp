@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 28d8279226469b8d7a39c5cf6ec802a393337087
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773616"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>可用性グループをオフラインにする (SQL Server)
   このトピックでは、 [!INCLUDE[tsql](../includes/tsql-md.md)] の [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 以降のバージョンを使用して、AlwaysOn 可用性グループを ONLINE 状態から OFFLINE 状態にする方法について説明します。 同期コミット レプリカが同期されていない場合は OFFLINE 操作でエラーが発生し、可用性グループは ONLINE を維持するため、同期コミット データベースのデータ損失はありません。 可用性グループをオンラインにしておくと、非同期コミット データベースで発生する可能性があるデータ損失が防止されます。 可用性グループがオフラインになると、クライアントはそのデータベースを使用できなくなりますが、可用性グループをオンラインに戻すことはできません。 したがって、可用性グループは、可用性グループのリソースを WSFC クラスター間で移行する場合のみオフラインにしてください。  
@@ -63,7 +63,7 @@ ms.locfileid: "53371374"
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
-##  <a name="FollowUp"></a> フォローしてください：可用性グループがオフラインになった後  
+##  <a name="FollowUp"></a>補足情報: 可用性グループがオフラインになった後  
   
 -   **オフラインの操作のログを記録するには:** オフラインの操作が開始された WSFC ノードの id は、WSFC クラスター ログと SQL ERRORLOG の両方に格納されます。  
   
@@ -81,7 +81,7 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 -   [SQL Server AlwaysOn チームのブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;](availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

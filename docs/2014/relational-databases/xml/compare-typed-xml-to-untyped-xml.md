@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637620"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>型指定された XML と型指定されていない XML の比較
   `xml` 型の変数、パラメーター、および列を作成できます。 必要に応じて、XML スキーマのコレクションを、`xml` 型の変数、パラメーター、または列に関連付けることができます。 ここで、`xml`データ型のインスタンスと呼びます*型指定された*します。 それ以外の場合は、XML インスタンスを *型指定されていない*と呼びます。  
@@ -67,14 +67,14 @@ ms.locfileid: "58538441"
   
  次の例では、XML スキーマ コレクション名を指定する際に、2 つの要素で構成された名前付け規則が使用されます。 最初の要素はスキーマ名で、2 番目の要素は XML スキーマ コレクション名です。  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>例:スキーマ コレクションを xml 型の変数に関連付ける  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>例: スキーマ コレクションと xml 型の変数の関連付け  
  次の例では、作成、`xml`型の変数と、それにスキーマ コレクションを関連付けます。 例で指定されているスキーマ コレクションは、 **AdventureWorks** のデータベースに既にインポートされています。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>例:Xml 型の列のスキーマを指定します。  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>例: xml 型の列のスキーマの指定  
  次の例では、`xml` 型の列を持つテーブルを作成し、列のスキーマを指定します。  
   
 ```  
@@ -83,7 +83,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>例:Xml 型のパラメーターをストアド プロシージャに渡す  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>例: xml 型のパラメーターのストアド プロシージャへの受け渡し  
  次の例では、`xml` 型のパラメーターをストアド プロシージャに渡し、変数にスキーマを指定します。  
   
 ```  
@@ -105,7 +105,7 @@ AS
   
  データ型の階層では、`xml` データ型は `sql_variant` やユーザー定義型の下、組み込み型の上に表示されます。  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>例:型指定された xml 列を制約するファセットを指定します。  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>例: 型指定された xml 列を制約するためのファセットの指定  
  型指定された `xml` 列では、格納されているインスタンスごとに、最上位要素を 1 つだけ許可するように、列を制約できます。 これを行うには、次の例で示すように、テーブルを作成するときに、オプションの `DOCUMENT` ファセットを指定します。  
   
 ```  
@@ -155,7 +155,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
  負の年が含まれていても、単純な SQL SELECT ステートメントを使用して XML データ型全体を取得することはできます。 負の年は、新たにサポートされた範囲内の年に置き換えるか、要素や属性の型を **xs:string**に変更することをお勧めします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML データのインスタンスの作成](create-instances-of-xml-data.md)   
  [xml データ型のメソッド](/sql/t-sql/xml/xml-data-type-methods)   
  [XML データ変更言語 &#40;XML DML&#41;](/sql/t-sql/xml/xml-data-modification-language-xml-dml)   

@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc051fc23e9efb25ae84b49697398a0b8cc1171a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772193"
 ---
 # <a name="add-a-source-using-source-assistant"></a>ソース アシスタントを使用してソースを追加する
   このトピックでは、変換元アシスタントを使用して新しい変換元を追加する手順について説明します。また、**[新しい変換元の追加]** ダイアログで使用できるオプションも示します。このダイアログは、変換元アシスタントを SSIS デザイナーにドラッグ アンド ドロップしたときに表示されます。  

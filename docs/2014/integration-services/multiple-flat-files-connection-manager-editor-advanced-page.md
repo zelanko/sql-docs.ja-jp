@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e67507aa23e29f7a0f6d675538f254fbf41f76d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767284"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、フラット ファイル接続マネージャーが接続するテキスト ファイルの各列のデータ型や区切り記号などのプロパティを設定できます。  
@@ -54,7 +54,7 @@ ms.locfileid: "58391737"
  **[新規作成]**  
  **[新規作成]** をクリックして新しい列を追加します。 既定では、 **[新規作成]** ボタンをクリックすると、新しい列がリストの末尾に追加されます。 さらにこのボタンのドロップダウン リストには、次のオプションがあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[列の追加]**|新しい列をリストの末尾に追加します。|  
 |**[前に挿入]**|選択した列の前に新しい列を追加します。|  
@@ -66,7 +66,7 @@ ms.locfileid: "58391737"
  **[型の推測]**  
  **[列の型の推測]** ダイアログ ボックスを使用して、最初に選択されたファイルのサンプル データを評価し、各列のデータ型と長さの推測を取得します。 詳細については、「 [[列の型の推測] ダイアログ ボックスの UI リファレンス](connection-manager/suggest-column-types-dialog-box-ui-reference.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[複数フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[複数フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   

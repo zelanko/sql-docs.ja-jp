@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643446"
 ---
 # <a name="granting-access-to-a-database-object"></a>データベース オブジェクトへのアクセス権の付与
   管理者は **Products** テーブルおよび **vw_Names** ビューから SELECT を実行し、**pr_Names** プロシージャを実行できますが、ユーザー Mary は実行できません。 Mary に必要な権限を付与するには、GRANT ステートメントを使用します。  
@@ -40,10 +40,10 @@ ms.locfileid: "48209512"
  ストアド プロシージャを実行するには、EXECUTE 権限が必要です。 データにアクセスしたり、データを変更するには、SELECT、INSERT、UPDATE、および DELETE 権限が必要です。 GRANT ステートメントは、テーブルを作成する権限など、他の権限にも使用されます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [概要 : データベース オブジェクトに対する権限の構成](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
+ [概要:データベース オブジェクトに対する権限の構成](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
- [取り消す&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
+ [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
   
   

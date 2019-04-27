@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7abb4560696dba21512066a7ff0ba3153ae2319a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748094"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>[ディメンション属性の選択] (ディメンション ウィザード)
   **[ディメンション属性の選択]** ページを使用すると、作成するディメンションの属性を選択したり変更したりできます。  
@@ -51,7 +51,7 @@ ms.locfileid: "52508010"
   
  ほとんどの場合、属性を参照できるようにするには `AttributeHierarchyEnabled` プロパティを `True`、参照できないようにするには `False` に設定します。 ただし、次の 3 つの例では、ウィザードで使用される設定が異なります。  
   
-|例|[設定]|  
+|例|設定|  
 |----------|--------------|  
 |ディメンションに親子階層が含まれており、 **[参照を有効にする]** が選択されていない場合|ウィザードでは、キー属性の `AttributeHierarchyEnabled` プロパティは `True` に設定されたままになり、`AttributeHierarchyVisible` プロパティを `False` に設定します。|  
 |ディメンション内のテーブルに、ディメンションに存在しないテーブルへの外部キーが含まれている場合|ウィザードでは、属性として含める外部キーが選択されますが、 **[参照を有効にする]** は選択されません。 これらの設定をそのまま使用すると、属性の `AttributeHiearchyEnabled` プロパティは `True` に設定され、`AttributeHieararchyVisible` プロパティは `False` に設定されます。|  
@@ -60,7 +60,7 @@ ms.locfileid: "52508010"
  **属性の型**  
  属性の型を設定します (省略可)。 既定値は **Regular**です。 属性の型によって、クライアント アプリケーションは、属性にどのような情報が含まれているかを判別できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディメンション ウィザードの F1 ヘルプ](dimension-wizard-f1-help.md)   
  [ディメンション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  

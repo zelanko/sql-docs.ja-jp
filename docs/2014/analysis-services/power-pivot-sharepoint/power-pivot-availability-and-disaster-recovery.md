@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f64fa8d79f3f44a1f7c62dfe13c931509408d42
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749763"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>PowerPivot の可用性と災害復旧 (SQL Server 2014)
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の可用性とディザスター リカバリー計画は主に、SharePoint ファームの設計、さまざまなコンポーネントで許容されるダウンタイムの長さ、SharePoint の可用性を高めるために実装するツールとベスト プラクティスに依存します。 このトピックでは、さまざまなテクノロジについて要約し、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置に関して可用性とディザスター リカバリーを計画するときに考慮する必要のあるトポロジ図の例を示します。  
@@ -42,7 +42,7 @@ ms.locfileid: "58434493"
   
  ![2013 での powerpivot の可用性](../media/ssas-powerpivot-services-2013.png "2013年での powerpivot の可用性")  
   
--   **(1)** Web フロントエンド サーバー。 各サーバーにデータ プロバイダーをインストールするには、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 のアドインを使用します。 詳細については、[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)を参照してください。  
+-   **(1)** Web フロントエンド サーバー。 各サーバーにデータ プロバイダーをインストールするには、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 のアドインを使用します。 詳細については、次を参照してください。[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)します。  
   
 -   **(2)** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共有サービスは **各** アプリケーション サーバー上で動作し、サービス アプリケーションが複数のアプリケーション サーバーに **またがって** 動作できるようにします。 そのため、1 台のアプリケーション サーバーがオフラインになったときでも、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] アプリケーションは引き続き使用できます。  
   

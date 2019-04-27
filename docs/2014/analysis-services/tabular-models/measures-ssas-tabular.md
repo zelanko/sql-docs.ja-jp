@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ebda5596422d8dd8964c9da1e042f266d3e23db
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756873"
 ---
 # <a name="measures-ssas-tabular"></a>メジャー (SSAS テーブル)
   テーブル モデルでは、メジャーとはレポート クライアントで使用するために DAX 数式を使用して作成される計算のことです。 メジャーの評価は、ユーザーがレポート クライアント アプリケーションで選択するフィールド、フィルター、またはスライサーに基づいて行われます。  
@@ -101,7 +101,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |-----------|-----------------|  
 |[メジャーを作成および管理する (SSAS テーブル)](measures-ssas-tabular.md)|モデル デザイナーのメジャー グリッドを使用してメジャーを作成および管理する方法について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [KPI (SSAS テーブル)](kpis-ssas-tabular.md)   
  [KPI を作成および管理する (SSAS テーブル)](create-and-manage-kpis-ssas-tabular.md)   
  [計算列 (SSAS テーブル)](ssas-calculated-columns.md)  

@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 17b4052b8842225d729bc8de996a7b0649f85a59
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782405"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>サーバー ネットワーク プロトコルの有効化または無効化
   すべてのネットワーク プロトコルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによってインストールされますが、必ずしも有効になっているとは限りません。 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは PowerShell を使用してサーバー ネットワーク プロトコルを有効または無効にする方法について説明します。 変更を有効にするために [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止し、再起動する必要があります。  

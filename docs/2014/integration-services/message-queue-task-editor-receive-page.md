@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f2eec4fbeb300ce2a43e1007245fad573f1c5a44
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767264"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>[メッセージ キュー タスク エディター] ([受信] ページ)
   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[受信]** ページを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) メッセージを受信するためのメッセージ キュー タスクを構成します。  
@@ -135,7 +135,7 @@ ms.locfileid: "58387110"
   
  **関連トピック:** [変数の追加](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[メッセージ キュー タスク エディター] ([全般] ページ)](general-page-of-integration-services-designers-options.md)   
  [[メッセージ キュー タスク エディター] ([送信] ページ)](../../2014/integration-services/message-queue-task-editor-send-page.md)   
