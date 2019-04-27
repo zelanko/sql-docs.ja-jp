@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5ffde063d94f0e08ea0e82e6b5998a6d23cfaac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473183"
 ---
 # <a name="other-replication-upgrade-issues"></a>レプリケーションのアップグレードに関するその他の問題
   このトピックでは、アップグレード アドバイザーによって報告されない多くのアップグレード問題について説明します。  
@@ -50,7 +50,7 @@ ms.locfileid: "48200732"
   
 -   すべての ActiveX コントロールに、スクリプトおよび初期化に対して安全でないことを示すマークが付けられます。  
   
--   スナップショット ActiveX コントロールはサポートされなくなりました。 スナップショットを作成および管理するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用するか、レプリケーション ストアド プロシージャを使用してプログラムによって実行します。 詳細については、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オンライン ブックの「初期スナップショットを作成および適用する方法 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])」および「初期スナップショットを作成する方法 (レプリケーション Transact-SQL プログラミング)」を参照してください。  
+-   スナップショット ActiveX コントロールはサポートされなくなりました。 スナップショットを作成および管理するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用するか、レプリケーション ストアド プロシージャを使用してプログラムによって実行します。 詳細については、トピックを参照してください。"する方法。作成し、Apply the Initial Snapshot ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])"と"する方法。初期スナップショット (レプリケーション TRANSACT-SQL プログラミング) の作成"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 -   ディストリビューション ActiveX コントロールおよびマージ ActiveX コントロールは非推奨とされます。 同様の機能は、レプリケーション管理オブジェクト (RMO) を使用したマネージド コード アプリケーションに提供されます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「サブスクリプションの同期 (RMO プログラミング)」を参照してください。  
   

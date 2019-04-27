@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a37300ad1bf16ac76fbcbd0c6e77870077f7f631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470601"
 ---
-# <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
+# <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   属性を定義、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウント。 このテーブルに格納されます、 **msdb**データベース。  
@@ -36,11 +36,11 @@ ms.locfileid: "47846410"
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|プロキシ アカウントの ID。|  
 |**name**|**sysname**|プロキシ アカウントの名前。|  
-|**credential_id**|**int**|プロキシ アカウントで使用される資格情報の ID。|  
+|**credential_id**|**int**|プロキシ アカウントが使用する資格情報の ID。|  
 |**enabled**|**tinyint**|プロキシ アカウントの状態。<br /><br /> **0** = 無効になっています。 **1** = 有効にします。|  
-|**description**|**nvarchar(512)**|プロキシ アカウントを作成したときにユーザーが入力した説明。|  
+|**description**|**nvarchar(512)**|プロキシ アカウントの作成時に、ユーザーが入力した説明。|  
 |**user_sid**|**varbinary(85)**|Microsoft Windows *security_identifier*ユーザーまたはグループがプロキシ資格情報に関連付けられているのです。|  
-|**credential_date_created**|**datetime**|資格情報を作成した日付と時刻。|  
+|**credential_date_created**|**datetime**|日付と、資格情報が作成された時刻。|  
   
 ## <a name="remarks"></a>コメント  
  メンバーのみ、 **sysadmin**固定サーバー ロールがアクセスできる、 **sysproxies**テーブル。  

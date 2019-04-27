@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0279d6c2850dff07b365e7543f387f6cf6e9f328
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516084"
 ---
 # <a name="sysassemblyfiles-transact-sql"></a>sys.assembly_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "47810230"
     
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**int**|このファイルが所属するアセンブリの ID です。|  
-|**name**|**nvarchar(260)**|アセンブリ ファイルの名前です。|  
+|**assembly_id**|**int**|このファイルが所属するアセンブリの ID。|  
+|**name**|**nvarchar(260)**|アセンブリ ファイルの名前。|  
 |**file_id**|**int**|ファイルの ID です。 アセンブリ内で一意です。 ファイル ID 1 は、アセンブリ DLL を表します。|  
-|**content**|**varbinary(max)**|ファイルのコンテンツです。|  
+|**content**|**varbinary(max)**|ファイルの内容。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

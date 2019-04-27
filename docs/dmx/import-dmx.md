@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4987701deb466148253c8418c88683d2dbfbc16b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506069"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Analysis Services Backup File (.abf) ファイルからサーバー上にマイニング モデルまたはマイニング構造を読み込みます。  
+  マイニング モデルまたはマイニング構造をサーバーに Analysis Services Backup File (.abf) ファイルから読み込みます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,12 +33,12 @@ IMPORT FROM <filename>
  インポートするファイルの名前と場所を表す文字列。  
   
 ## <a name="remarks"></a>コメント  
- オブジェクトが指定されない場合、.dmb ファイルのすべてのコンテンツが読み込まれます。 .dmb ファイルに、サーバー上に存在しないデータベースが含まれている場合、そのデータベースが作成されます。  
+ オブジェクトが指定されていない場合、.dmb ファイルの内容全体が読み込まれます。 .dmb ファイルに、サーバー上に存在しないデータベースが含まれている場合、そのデータベースが作成されます。  
   
  オブジェクトをエクスポートまたはインポートするには、データベースまたはサーバーの管理者である必要があります。  
   
 ## <a name="import-from-file-example"></a>ファイルからインポートする例  
- 次の例では、アソシエーションのモデルおよび構造を含んでいるファイルのコンテンツ全体を現在のサーバーにインポートします。  
+ 次の例では、アソシエーション モデルおよび構造体を現在のサーバーを含むファイルの内容全体をインポートします。  
   
 ```  
 IMPORT FROM 'C:\TEMP\Association_NEW.dmb'  

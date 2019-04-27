@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6737a995db78f2a5ba625ddf200a0171582026ae
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471097"
 ---
 # <a name="installing-the-software-odbc"></a>インストール (ODBC)
 > [!IMPORTANT]  
@@ -29,7 +29,7 @@ ms.locfileid: "54419737"
   
  ネットワーク ソフトウェアは、独自のドキュメントに従ってインストールする必要があります。 ネットワーク ソフトウェアがサポートされている限り、ODBC Driver for Oracle によって特殊なインストールに関する考慮事項は必要ありません。  
   
- 独自のドキュメントに従って、oracle ソフトウェアをインストールする必要があります。 ODBC Driver for Oracle 一般的には不要特別なインストールに関する注意点、ドライバー、バージョンをサポートしていればです。 ただし、製品の互換性を保持するには、最新バージョンのドライバーがあることを確認するには、最後の Oracle 用 ODBC ドライバーをインストールします。 Oracle では、場所、投稿記事、特に、修正プログラム、Oracle サーバー製品およびサーバー製品に付属するクライアント コンポーネントをパブリック FTP サイトを維持します。 これらの修正プログラムは、いくつかの Microsoft 製品とテクノロジの適切な機能の必要があります。 このサイトの詳細については、[Oracle ソフトウェアの修正プログラム](../../odbc/microsoft/oracle-software-patches.md)を参照してください。  
+ 独自のドキュメントに従って、oracle ソフトウェアをインストールする必要があります。 ODBC Driver for Oracle 一般的には不要特別なインストールに関する注意点、ドライバー、バージョンをサポートしていればです。 ただし、製品の互換性を保持するには、最新バージョンのドライバーがあることを確認するには、最後の Oracle 用 ODBC ドライバーをインストールします。 Oracle では、場所、投稿記事、特に、修正プログラム、Oracle サーバー製品およびサーバー製品に付属するクライアント コンポーネントをパブリック FTP サイトを維持します。 これらの修正プログラムは、いくつかの Microsoft 製品とテクノロジの適切な機能の必要があります。 このサイトの詳細については、次を参照してください。 [Oracle ソフトウェアの修正プログラム](../../odbc/microsoft/oracle-software-patches.md)します。  
   
 > [!CAUTION]  
 >  MDAC/Windows DAC 経由で Oracle ソフトウェアをインストールすると、現在のバージョンの MDAC が上書きされます。 ODBC コンポーネントを使用して問題が発生した場合は、MDAC を再インストールします。

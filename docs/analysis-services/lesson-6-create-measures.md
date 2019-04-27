@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 05855af1bf6809c6977b22bfdb3915e4e6dbbe03
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469822"
 ---
-# <a name="lesson-6-create-measures"></a>レッスン 6: メジャーを作成します。
+# <a name="lesson-6-create-measures"></a>レッスン 6: メジャーを作成する
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このレッスンでは、モデルに含められるメジャーを作成します。 同様に、前のレッスンで作成した計算列、メジャーとは、DAX の数式を使用して作成される計算です。 ただし、計算列とは違い、メジャーはユーザーが選択した " *フィルター*" に基づいて評価されます (たとえば、PivotTable 内の行ラベル フィールドに追加された特定の列やスライサーなど)。 フィルター内の各セルの値は、適用されたメジャーによって計算されます。 メジャーは、数値データに対して動的な計算を実行するほぼすべてのテーブル モデルに含める強力で柔軟な計算です。 詳細についてを参照してください。[メジャー](../analysis-services/tabular-models/measures-ssas-tabular.md)します。  
@@ -27,10 +27,10 @@ ms.locfileid: "42795621"
   
 このレッスンでは、数式バーに DAX 数式を入力する方法と、オート SUM 機能を使用する方法の両方でメジャーを作成します。  
   
-このレッスンの推定所要時間: **30 分**  
+このレッスンを完了するまでに時間を推定するには。**30 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
-このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 5: 計算列の作成](../analysis-services/lesson-5-create-calculated-columns.md)です。  
+## <a name="prerequisites"></a>前提条件  
+このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 5: 計算列を作成](../analysis-services/lesson-5-create-calculated-columns.md)です。  
   
 ## <a name="create-measures"></a>メジャーを作成する  
   
@@ -75,7 +75,7 @@ ms.locfileid: "42795621"
   
     オート SUM 機能が、DistinctCount 標準集計式を使用して、選択された列に対するメジャーを自動的に作成します。  
     
-       ![として-テーブル-lesson6-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
+       ![as-tabular-lesson6-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
   
 4.  メジャー グリッドで、新しいメジャー をクリックし、**プロパティ**ウィンドウで、**メジャー名**にメジャーの名前を変更**InternetDistinctCountSalesOrder**します。 
  
@@ -87,13 +87,13 @@ ms.locfileid: "42795621"
     |[メジャー名]|[列]|オート SUM (∑)|[数式]|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Margin|SUM|=SUM([Margin])|  
-    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Freight|SUM|=SUM([Freight])|  
+    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Margin|Sum|=SUM([Margin])|  
+    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|Sum|=SUM([Freight])|  
   
 2.  メジャー グリッドで空のセルをクリックし、数式バーを使用して作成し、順序で次のメジャーの名前します。  
   
@@ -124,6 +124,6 @@ ms.locfileid: "42795621"
 FactInternetSales テーブルに作成したメジャーは、売上、コスト、およびユーザーの選択したフィルターによって定義されている項目の利益率などの重要な財務データの分析に使用できます。  
   
 ## <a name="whats-next"></a>次の操作
-次のレッスンに移動:[レッスン 7: 主要業績評価指標の作成](../analysis-services/lesson-7-create-key-performance-indicators.md)です。  
+次のレッスンに移動します。[レッスン 7: 主要業績評価指標の作成](../analysis-services/lesson-7-create-key-performance-indicators.md)です。  
 
   

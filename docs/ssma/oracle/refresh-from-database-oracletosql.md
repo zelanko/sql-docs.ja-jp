@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: decc6e25cc8480dfaf041a79baa0972bdd78e569
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625862"
 ---
 # <a name="refresh-from-database-oracletosql"></a>データベースからの更新 (OracleToSQL)
 **データベースからの更新** ダイアログ ボックスを使用して Oracle データベースから更新するには、どのオブジェクトを選択できます。 ダイアログ ボックス内の行は色分け、メタデータの状態に基づいて。  
@@ -28,7 +28,7 @@ ms.locfileid: "47761500"
   
 -   オブジェクトが、Oracle データベースの新機能の場合は、その行はピンク色です。  
   
-オブジェクトの更新設定は既定値を指定することができます、**プロジェクト設定** ダイアログ ボックス。 詳細については、[プロジェクト設定&#40;同期&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)を参照してください。  
+オブジェクトの更新設定は既定値を指定することができます、**プロジェクト設定** ダイアログ ボックス。 詳細については、次を参照してください。[プロジェクト設定&#40;同期&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)します。  
   
 アクセスする、**データベースからの更新** ダイアログ ボックスで、Oracle メタデータ エクスプ ローラーでオブジェクトを右クリック**データベースからの更新**します。  
   

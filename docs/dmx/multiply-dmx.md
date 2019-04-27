@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f73e3e55045dd4ea9d4c2476540d2f7223d16eb0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62502076"
 ---
 # <a name="-multiply-dmx"></a>* (乗算) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  ある数値を別の数値で乗算する、算術演算を実行します。  
+  別の数がその倍数 1 つの数値の算術演算を実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -30,13 +30,13 @@ Numeric_Expression * Numeric_Expression
   
 #### <a name="parameters"></a>パラメーター  
  *Numeric_Expression*  
- 数値を返す有効なデータ マイニング拡張機能 (DMX) 式です。  
+ 数値の値を返す有効なデータ マイニング拡張機能 (DMX) 式。  
   
 ## <a name="return-value"></a>戻り値  
  優先順位の高いパラメーターのデータ型を持つ値です。  
   
 ## <a name="remarks"></a>コメント  
- 両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 1 つの式が NULL 値と評価される場合は、NULL 値が返されます。  
+ 1 つの式は、その他の式のデータ型に暗黙的に変換できる必要がありますか、同じデータ型の両方の式があります。 1 つの式が NULL 値と評価される場合は、NULL 値が返されます。  
   
 ## <a name="see-also"></a>参照  
  [算術演算子&#40;DMX&#41;](../dmx/operators-arithmetic.md)   

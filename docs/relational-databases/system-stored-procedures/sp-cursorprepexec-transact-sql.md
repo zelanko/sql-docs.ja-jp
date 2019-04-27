@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f09f33f4f153f21cfe7a3c8c538c2f272b3df77b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507346"
 ---
 # <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  送信済みのカーソル ステートメントまたはバッチに対応するプランをコンパイルしてカーソルを作成し、データを格納します。 sp_cursorprepexec は、sp_cursorprepare と sp_cursorexecute の機能を組み合わせたものです。 このプロシージャは、ID = 5 を指定した場合に表形式のデータ ストリーム (TDS) パケットで呼び出されます。  
+  送信済みのカーソル ステートメントまたはバッチのプランをコンパイルし、作成し、カーソルを作成します。 sp_cursorprepexec は、sp_cursorprepare と sp_cursorexecute の機能を組み合わせたものです。 このプロシージャは、ID = 5 を指定した場合に表形式のデータ ストリーム (TDS) パケットで呼び出されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *準備済みハンドル*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成される準備*処理*識別子。 *準備済みハンドル*が必要ですし、返します**int**します。  
   
- *カーソル (cursor)*  
+ *cursor*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カーソル識別子を生成します。 *カーソル*(sp_cursorfetch など) は、このカーソルに対して操作を実行するすべての後続プロシージャに渡す必要がある必須パラメーターです。  
   
  *params*  
@@ -60,7 +60,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 >  Stmt の値を指定するためのルールは sp_cursoropen 例外の場合と同じを*stmt*文字列データ型である必要があります**ntext**します。  
   
  *options*  
- カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション*、従う必要があります**int**値を入力します。  
+ カーソルの結果の説明を返すオプションのパラメーターは、列を設定します。 *オプション*、従う必要があります**int**値を入力します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -83,13 +83,13 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x10000|KEYSET_ACCEPTABLE|  
 |0x20000|DYNAMIC_ACCEPTABLE|  
 |0x40000|FORWARD_ONLY_ACCEPTABLE|  
-|0x80000|STATIC_ACCEPTABLE|  
+|これに対して、0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
  要求されたオプションがによって定義されたカーソルの不適切である可能性 *\<stmt >*、このパラメーターは両方として機能入力し、出力します。 このような場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって適切な型が割り当てられ、この値が変更されます。  
   
  *ccopt*  
- コンカレンシー制御オプションです。 *ccopt* 、省略可能なパラメーターが、次のいずれかを必要な**int**値を入力します。  
+ 同時実行制御オプションです。 *ccopt* 、省略可能なパラメーターが、次のいずれかを必要な**int**値を入力します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -103,14 +103,14 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x10000|READ_ONLY_ACCEPTABLE|  
 |0x20000|SCROLL_LOCKS_ACCEPTABLE|  
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
-|0x80000|OPTIMISITC_ACCEPTABLE|  
+|これに対して、0x80000|OPTIMISITC_ACCEPTABLE|  
   
  同様*scrollpt*、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要求された値とは異なる値を割り当てることができます。  
   
- *行数*  
- AUTO_FETCH で使用するフェッチ バッファー行の数を指定する省略可能なパラメーターです。 既定値は 20 行です。 *rowcount*と戻り値の入力値として割り当てられている場合に異なる動作です。  
+ *rowcount*  
+ AUTO_FETCH で使用するフェッチ バッファー行の数を示す省略可能なパラメーターです。 既定値は、20 行です。 *rowcount*と戻り値の入力値として割り当てられている場合に異なる動作です。  
   
-|入力値|戻り値として|  
+|入力値として|戻り値として|  
 |--------------------|---------------------|  
 |AUTO_FETCH が FAST_FORWARD カーソルと共に指定されている場合*rowcount*フェッチ バッファーに格納する行の数を表します。|結果セット内の行の数を表します。 ときに、 *scrollopt* AUTO_FETCH の値を指定すると、 *rowcount*フェッチ バッファーにフェッチされた行の数を返します。|  
   

@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d685f5e8837feebffeeeade95697f4f3bfea4c81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470502"
 ---
-# <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
+# <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   使用可能なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのプロキシ サブシステムに関する情報を格納します。 **Syssubsystems**でテーブルが格納されている、 **msdb**データベース。  
@@ -37,8 +37,8 @@ ms.locfileid: "47717180"
 |**subsystem_id**|**int**|サブシステムの ID。|  
 |**subsystem**|**nvarchar(40)**|サブシステムの名前。|  
 |**description_id**|**int**|メッセージ内の行の ID、 **sys.messages**カタログ サブシステムの説明を含むビュー。|  
-|**subsystem_dll**|**nvarchar (255)**|サブシステム DLL の場所。|  
-|**agent_exe**|**nvarchar (255)**|サブシステムを使用する実行可能ファイルのフル パス。|  
+|**subsystem_dll**|**nvarchar (255)**|サブシステム DLL の場所です。|  
+|**agent_exe**|**nvarchar (255)**|サブシステムを使用する実行可能ファイルの完全パスです。|  
 |**start_entry_point**|**nvarchar(30)**|サブシステムが初期化されるときに呼び出される関数。|  
 |**event_entry_point**|**nvarchar(30)**|サブシステム ステップが実行されるときに呼び出される関数。|  
 |**stop_entry_point**|**nvarchar(30)**|サブシステムが実行を終了するときに呼び出される関数。|  

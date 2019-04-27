@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8507be55ae84a3a03fd75871106bc39e0631d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472615"
 ---
 # <a name="cursor-and-lock-characteristics"></a>カーソルとロックの特性
 カーソルの特性は、プロバイダーの機能に依存して、次の長所と短所一般的に適用されますカーソルとロックのさまざまな種類。  
   
-|カーソルまたはロックの種類|利点があります。|欠点|  
+|カーソルまたはロックの種類|長所|欠点|  
 |-------------------------|----------------|-------------------|  
 |**adOpenForwardOnly**|-低のリソース要件|-逆方向にスクロールことはできません。<br />-データの同時実行|  
 |**adOpenStatic**|スクロール|-データの同時実行|  

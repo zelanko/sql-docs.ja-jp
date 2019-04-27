@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 66cee237e12729f494aa1ed0e915db145ff5d076
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62448165"
 ---
 # <a name="master-data-services-overview-mds"></a>マスター データ サービスの概要 (MDS)
 
@@ -52,12 +52,12 @@ ms.locfileid: "52786964"
   
  データの基本的な構造を定義したら、インポート機能を使用してデータ レコード (メンバー) の追加を開始できます。 ステージング テーブルにデータを読み込み、ビジネス ルールを使用してデータを検証して、MDS テーブルにデータを読み込みます。  また、属性の値を設定するのにビジネス ルールを使用することもできます。  
   
- 次の表に主要な [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] タスクの概要を示します。 特に指定がない限り、次のすべての手順を実行するにはモデル管理者であることが必要です。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+ 次の表に主要な [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] タスクの概要を示します。 特に指定がない限り、次のすべての手順を実行するにはモデル管理者であることが必要です。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 > [!NOTE]  
 >  テスト環境で次のタスクを実行し、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のインストール時に提供されたサンプル データを使用できます。 詳細については、「[モデルの配置 (マスター データ サービス)](../master-data-services/deploying-models-master-data-services.md)」を参照してください。  
   
-|操作|詳細|関連項目|  
+|操作|詳細|関連トピック|  
 |------------|-------------|--------------------|  
 |モデルを作成する|モデルを作成すると、そのモデルが VERSION_1 と見なされます。|[モデル (マスター データ サービス)](../master-data-services/models-master-data-services.md)<br /><br /> [モデルを作成する (マスター データ サービス)](../master-data-services/create-a-model-master-data-services.md)|  
 |エンティティを作成する|メンバーを含めるためにエンティティを必要な数だけ作成します。|[エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)<br /><br /> [エンティティを作成する (マスター データ サービス)](../master-data-services/create-an-entity-master-data-services.md)|  

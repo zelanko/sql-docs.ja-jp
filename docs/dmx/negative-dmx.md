@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fa7904ab168755a8258f0ad1d6dbb790646b552a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501886"
 ---
-# <a name="--negative-dmx"></a>- (負符号) (DMX)
+# <a name="--negative-dmx"></a>-(負号) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   数値式の負の値を返す単項演算を実行します。  
@@ -30,7 +30,7 @@ ms.locfileid: "38037920"
   
 #### <a name="parameters"></a>パラメーター  
  *Numeric_Expression*  
- 数値を返す有効なデータ マイニング拡張機能 (DMX) 式です。  
+ 数値の値を返す有効なデータ マイニング拡張機能 (DMX) 式。  
   
 ## <a name="return-value"></a>戻り値  
  指定されたパラメーターのデータ型を持つ値です。  

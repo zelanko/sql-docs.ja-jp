@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6290d18ec26fcfa6e2960c3a2c1c408938d9e0e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468579"
 ---
 # <a name="scrollable-cursor-types"></a>スクロール可能なカーソルの種類
 4 つの種類のスクロール可能なカーソルは、静的、動的、キーセット ドリブン、混合。 静的カーソルはほとんどまたはまったく変更を検出しますが、比較的負荷の実装には。 動的カーソルはすべての変更を検出しますが、実装にコストがかかります。 カーソルのキーセット ドリブン、混合は、動的カーソルよりも少ない費用でが、ほとんどの変更を検出する間にあります。  
@@ -36,7 +36,7 @@ ms.locfileid: "47720500"
   
 -   **値。** 結果セットの各行の値。  
   
- 更新、削除、およびデータを挿入する方法については、[更新データの概要](../../../odbc/reference/develop-app/updating-data-overview.md)を参照してください。  
+ 更新、削除、およびデータを挿入する方法については、次を参照してください。[更新データの概要](../../../odbc/reference/develop-app/updating-data-overview.md)します。  
   
  このセクションでは、次のトピックを扱います。  
   

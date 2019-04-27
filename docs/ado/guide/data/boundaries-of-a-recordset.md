@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c9e05a45b5f035a500e210c991a33216be318ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472827"
 ---
 # <a name="boundaries-of-a-recordset"></a>レコードセットの境界
 **レコード セット**サポート、 **BOF**と**EOF**プロパティに、データセットの先頭と末尾をそれぞれ含めます。 考えることができます**BOF**と**EOF**先頭と末尾の位置「ファントム」のレコードとして、 **Recordset**します。 カウント**BOF**と**EOF**、サンプル**レコード セット**ようになりますようになりました。  
@@ -70,4 +70,4 @@ else
   
  このスキームでは、すべての種類のカーソル動作し、は、基になるプロバイダーに依存しません。 空かどうかを判断しようとした場合、**レコード セット**オブジェクトをチェックすることでその**RecordCount**プロパティの値がゼロ (0) か、適切なカーソルとプロバイダーを使用する際に対策を行う必要がありますが結果内のレコードの数を返すをサポートします。  
   
- 最後の残りのレコードを削除する場合、 **Recordset**オブジェクト、カーソルが不確定な状態のままにします。 **BOF**と**EOF**プロパティが残る可能性がある**False**現在のレコードの位置を変更しようとするまでは、プロバイダーによって異なります。 詳細については、[Delete メソッドを使用して削除すると、レコード](../../../ado/guide/data/deleting-records-using-the-delete-method.md)を参照してください。
+ 最後の残りのレコードを削除する場合、 **Recordset**オブジェクト、カーソルが不確定な状態のままにします。 **BOF**と**EOF**プロパティが残る可能性がある**False**現在のレコードの位置を変更しようとするまでは、プロバイダーによって異なります。 詳細については、次を参照してください。 [Delete メソッドを使用して削除すると、レコード](../../../ado/guide/data/deleting-records-using-the-delete-method.md)します。

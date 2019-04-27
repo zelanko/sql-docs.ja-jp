@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8bb926515be3cd16a5ae1ce9dd1b2694f4bc55a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509534"
 ---
 # <a name="collection-permissions-master-data-services"></a>コレクション権限 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52759274"
 > [!NOTE]  
 >  これらの権限は、ユーザー インターフェイスの **[エクスプローラー]** 機能領域にのみ適用されます。  
   
-|権限|[説明]|  
+|権限|説明|  
 |----------------|-----------------|  
 |**読み取り**|ユーザーがコレクションのメンバーとメンバーの属性を読み取ることができます。|  
 |**作成**|ユーザーがコレクションのメンバーを作成して属性値を割り当てることができます。|  

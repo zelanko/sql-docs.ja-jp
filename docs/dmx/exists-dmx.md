@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 99f6db275fcddaff3e739311ed588fb0ec776aaf
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506102"
 ---
-# <a name="exists-dmx"></a>Exists (DMX)
+# <a name="exists-dmx"></a>(DMX) が存在します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   返します**true**場合は、指定されたサブクエリが少なくとも 1 つの行を返します。  
@@ -36,14 +36,14 @@ EXISTS(<subquery>)
  返します**true** 、サブクエリによって返される結果セットには少なくとも 1 つの行が含まれている場合を返しますそれ以外の場合、 **false**します。  
   
 ## <a name="remarks"></a>コメント  
- EXISTS の前にキーワード NOT を使用できます。たとえば、`WHERE NOT EXISTS (<subquery>)` のようにします。  
+ EXISTS の前にキーワード NOT を使用することができます。 たとえば、`WHERE NOT EXISTS (<subquery>)`します。  
   
- EXISTS のサブクエリの引数に追加する列の一覧は関係ありません。関数は条件に一致する行が存在するかどうかのみをチェックします。  
+ EXISTS のサブクエリの引数を追加する列の一覧が関連します。関数は、のみ条件を満たす行の存在を確認します。  
   
 ## <a name="examples"></a>使用例  
- 入れ子になったテーブル内の条件のチェックに EXISTS および NOT EXISTS を使用できます。 これは、データ マイニング モデルのトレーニングやテストに使用するデータを制御するフィルターを作成する場合に役立ちます。 詳細については、「[マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)」を参照してください。  
+ EXISTS および NOT EXISTS を使用して、入れ子になったテーブルで条件をチェックすることができます。 これは、機能は、トレーニングやデータ マイニング モデルのテストに使用されるデータを制御するフィルターを作成するときに便利です。 詳細については、「[マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)」を参照してください。  
   
- 次の例がに基づいて、`[Association]`マイニング構造とマイニング モデルで作成した、 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 このクエリでは、顧客が Patch Kit を少なくとも 1 つ購入したケースのみを返します。  
+ 次の例がに基づいて、`[Association]`マイニング構造とマイニング モデルで作成した、 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 クエリでは、顧客が少なくとも 1 つの修正プログラムのキットを購入したケースのみを返します。  
   
 ```  
 SELECT * FROM [Association].CASES  

@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: b59f15ace1dc96af537486336e76a209f1c85da7
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507028"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-SQL (CREATE EXTERNAL LIBRARY) を使用して、SQL Server に R パッケージをインストールするには
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "58510277"
 
 + すべての依存関係の名前とバージョンで識別され、zip ファイルに含まれる必要があります。 パッケージが使用可能なダウン ストリームのパッケージの依存関係を含む必要な場合、ステートメントが失敗します。 
 
-+ 必要があります**db_owner**またはデータベース ロールの外部ライブラリの作成の権限があります。 詳細については、[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)を参照してください。
++ 必要があります**db_owner**またはデータベース ロールの外部ライブラリの作成の権限があります。 詳細については、次を参照してください。 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)します。
 
 ## <a name="download-packages-in-archive-format"></a>アーカイブ形式でパッケージをダウンロードします。
 
@@ -38,7 +38,7 @@ ms.locfileid: "58510277"
 
 ## <a name="copy-the-file-to-a-local-folder"></a>ファイルをローカル フォルダーにコピーします。
 
-サーバー上のローカル フォルダーにすべてのパッケージを含む zip 形式のファイルをコピーします。 サーバー上のファイル システムへのアクセスがない、渡すこともできます完全なパッケージ変数としてバイナリ形式を使用します。 詳細については、[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)を参照してください。
+サーバー上のローカル フォルダーにすべてのパッケージを含む zip 形式のファイルをコピーします。 サーバー上のファイル システムへのアクセスがない、渡すこともできます完全なパッケージ変数としてバイナリ形式を使用します。 詳細については、次を参照してください。 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)します。
 
 ## <a name="run-the-statement-to-upload-packages"></a>パッケージをアップロードするステートメントを実行します。
 

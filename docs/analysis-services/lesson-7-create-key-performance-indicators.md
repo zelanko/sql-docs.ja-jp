@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ecfedbbc4b7e606f1589f2b5415c5355bb0d95e1
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42790103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523366"
 ---
 # <a name="lesson-7-create-key-performance-indicators"></a>レッスン 7: 主要業績評価指標の作成
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このレッスンでは、主要業績評価指標 (KPI) を作成します。 KPI は、値のパフォーマンスを測定するために使用されます。パフォーマンスは、 *"ベース"* メジャーと *"ターゲット"* 値の対比によって定義されます (メジャーまたは絶対値によっても定義できます)。 KPI を使用すると、ビジネス プロフェッショナルがレポート クライアント アプリケーションを通じて、ビジネスの成功度や傾向をすばやく簡単に把握できるようになります。 詳細についてを参照してください。 [Kpi](../analysis-services/tabular-models/kpis-ssas-tabular.md)します。  
   
-このレッスンの推定所要時間: **15 分**  
+このレッスンを完了するまでに時間を推定するには。**15 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
-このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 6: メジャーの作成](../analysis-services/lesson-6-create-measures.md)です。   
+## <a name="prerequisites"></a>前提条件  
+このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 6:メジャーを作成](../analysis-services/lesson-6-create-measures.md)です。   
   
 ## <a name="create-key-performance-indicators"></a>主要業績評価指標の作成  
   
@@ -50,7 +50,7 @@ ms.locfileid: "42790103"
   
 8.  **[アイコンのスタイルの選択]** で、ひし形 (赤)、三角形 (黄)、円 (緑) のアイコンの種類を選択します。
   
-    ![として-テーブル-lesson7 の kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
+    ![as-tabular-lesson7-kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
     
     > [!TIP]  
     > 展開に注目してください**説明**使用可能なアイコン スタイルの下のラベル。 これを使用して、クライアント アプリケーションでより特定できるようにする各種の KPI 要素の説明を入力します。  
@@ -78,6 +78,6 @@ ms.locfileid: "42790103"
 6.  **[アイコンのスタイルの選択]** で、ひし形 (赤)、三角形 (黄)、円 (緑) のアイコンの種類を選択し、**[OK]** をクリックします。  
   
 ## <a name="whats-next"></a>次の操作
-次のレッスンに移動:[レッスン 8: パースペクティブの作成」](../analysis-services/lesson-8-create-perspectives.md)します。
+次のレッスンに移動します。[レッスン 8: パースペクティブを作成する](../analysis-services/lesson-8-create-perspectives.md)します。
   
   

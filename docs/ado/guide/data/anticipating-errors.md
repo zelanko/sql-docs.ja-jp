@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91741ef8d6b0f7f984958837df3234b0bbc1e009
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472866"
 ---
 # <a name="anticipating-errors"></a>エラーの予測
 エラーの防止は、少なくともエラー処理と同程度に重要です。 この最後のセクションには、エラーが発生する可能性が低くするため、アプリケーションがかかるの予防措置の短い一覧が含まれています。  
@@ -29,7 +29,7 @@ ms.locfileid: "47727340"
   
 -   任意のプログラムをユーザーからのデータを受け入れるには、データ ストアに送信する前にそのデータを検証するコードを含める必要があります。 データ ストア、プロバイダー、ADO、または問題の通知も使用するプログラミング言語に依存できません。 データは、そのフィールドの種類が正しいことと、必要なフィールドが空ではないことを確認、ユーザーが入力したすべてのバイト数を確認する必要があります。  
   
- データ ストアにデータを記述する前に、データを確認します。 これを行う最も簡単な方法は、処理するためには、 **WillMove**イベントまたは**WillUpdateRecordset**イベント。 ADO イベントの処理の詳細については、[ADO イベントの処理](../../../ado/guide/data/handling-ado-events.md)を参照してください。  
+ データ ストアにデータを記述する前に、データを確認します。 これを行う最も簡単な方法は、処理するためには、 **WillMove**イベントまたは**WillUpdateRecordset**イベント。 ADO イベントの処理の詳細については、次を参照してください。 [ADO イベントの処理](../../../ado/guide/data/handling-ado-events.md)します。  
   
  確認します**Recordset**の境界外のオブジェクトが、**レコード セット**レコード ポインターを移動する前にします。 しようとする場合**MoveNext**とき**EOF** true または**MovePrev**とき**BOF** true の場合は、エラーが発生します。 いずれかを実行する場合、**移動**メソッドと両方**EOF**と**BOF** True は、エラーが生成されます。  
   

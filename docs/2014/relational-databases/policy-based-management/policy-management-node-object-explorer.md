@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: febf8ce34e93f4efffaea1d9a9925ab5c8206652
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625907"
 ---
 # <a name="policy-management-node-object-explorer"></a>[ポリシー管理] ノード (オブジェクト エクスプローラー)
   ここでは、 **のオブジェクト エクスプローラーの** PolicyManagement [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ノードに関する F1 ヘルプ トピックを紹介します。  

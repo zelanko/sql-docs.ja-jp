@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8059df4275a336d084144a73910cdef99abf9467
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472658"
 ---
 # <a name="controlling-transactions-ado"></a>トランザクションの制御 (ADO)
 ADO 接続のヘルプを内のトランザクション処理をサポートする、 **BeginTrans**、 **CommitTrans**、および**RollbackTrans**メソッド、 **接続**オブジェクト。 ADO のトランザクション処理を実装する一般的なという概念は、次の単純なコード スニペットに示します。  

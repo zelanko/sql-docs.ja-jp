@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 91d39b174a0febed1aa6fd57140412828adc843b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466180"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Naive Bayes モデルの参照
   使用して、単純ベイズ モデルを開くときに**参照**、4 つの異なるウィンドウの対話型ビューアーでモデルが表示されます。 ビューアーを使用して、相関関係を調査し、モデルと基になるデータに関する情報を取得します。  
@@ -108,7 +108,7 @@ ms.locfileid: "52419017"
   
 2.  低収入は、ヨーロッパ地域とも相関関係があります。  
   
-     Naïve Bayes モデルではドリルダウンはサポートされていません。ただし、この結果グループに関連付けられたケースを調査する場合は、クエリを使用できます。 この種類のモデルに対するクエリについては、[Naive Bayes モデルのクエリ例](data-mining/naive-bayes-model-query-examples.md)を参照してください。  
+     Naïve Bayes モデルではドリルダウンはサポートされていません。ただし、この結果グループに関連付けられたケースを調査する場合は、クエリを使用できます。 この種類のモデルに対するクエリについては、次を参照してください。 [Naive Bayes モデルのクエリ例](data-mining/naive-bayes-model-query-examples.md)します。  
   
  [ページのトップへ](#BKMK_Tabs)  
   

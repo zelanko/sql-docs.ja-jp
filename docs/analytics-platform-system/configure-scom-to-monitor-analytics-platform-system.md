@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2dae92263d7be76490a51ea7027f79ab5fcd6118
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509763"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>System Center Operations Manager (SCOM) Analytics Platform System を監視するための構成します。
 Analytics Platform System の System Center Operations Manager (SCOM) 管理パックを構成するこれらの手順に従います。 管理パックは、SCOM から Analytics Platform System を監視する必要があります。  
@@ -112,7 +112,7 @@ System Center を設定するには、次の手順を実行しなければなり
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
 ## <a name="next-step"></a>次の手順  
-できたので、管理パックを構成しているアプライアンスの監視を開始する準備が整いました。 詳細については、[System Center Operations Manager を使用して、アプライアンスの監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)を参照してください。  
+できたので、管理パックを構成しているアプライアンスの監視を開始する準備が整いました。 詳細については、次を参照してください。 [System Center Operations Manager を使用して、アプライアンスの監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)します。  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

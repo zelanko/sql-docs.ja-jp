@@ -19,27 +19,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b68bace89b49ba11fe7744229a5f7b9500ec6cdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471395"
 ---
-# <a name="cdcddlhistory-transact-sql"></a>cdc.ddl_history (Transact-SQL)
+# <a name="cdcddlhistory-transact-sql"></a>cdc.ddl_history (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  変更データ キャプチャが有効になっているテーブルに対して行われたデータ定義言語 (DDL) の変更について、各変更に対応する 1 行を返します。 このテーブルでは、ソース テーブルに対して、いつ、どのような DDL の変更が行われたかを確認できます。 このテーブルに含まれるのは、DDL が変更されているソース テーブルのエントリだけです。  
+  変更データ キャプチャが有効になっているテーブルに対して行われたデータ定義言語 (DDL) の変更について、各変更に対応する 1 行を返します。 このテーブルでは、ソース テーブルに対して、いつ、どのような DDL の変更が行われたかを確認できます。 DDL の変更されていないソース テーブルでは、このテーブル内のエントリは必要はありません。  
   
  システム テーブルに対して直接クエリを実行することは、できるだけ避けてください。 代わりに、実行、 [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)ストアド プロシージャ。  
    
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**source_object_id**|**int**|DDL の変更が適用されたソース テーブルの ID です。|  
-|**object_id**|**int**|ソース テーブルのキャプチャ インスタンスに関連付けられた変更テーブルの ID です。|  
-|**required_column_update**|**bit**|ソース テーブルのキャプチャ対象列のデータ型が変更されたことを示します。 この変更により、変更テーブル内の列が更新されています。|  
+|**source_object_id**|**int**|DDL の変更が適用された元のテーブルの ID。|  
+|**object_id**|**int**|ソース テーブルに対してキャプチャ インスタンスに関連付けられている変更テーブルの ID。|  
+|**required_column_update**|**bit**|ソース テーブルのキャプチャ対象列のデータ型が変更されたことを示します。 この変更は、変更テーブル内の列を変更します。|  
 |**ddl_command**|**nvarchar(max)**|DDL ステートメントは、ソース テーブルに適用します。|  
-|**ddl_lsn**|**binary(10)**|DDL 修正のコミットに関連付けられたログ シーケンス番号 (LSN) です。|  
-|**ddl_time**|**datetime**|ソース テーブルに対して DDL の変更が加えられた日時です。|  
+|**ddl_lsn**|**binary(10)**|ログ シーケンス番号 (LSN) の DDL 変更のコミットに関連付けられています。|  
+|**ddl_time**|**datetime**|DDL の変更された日付と時刻は、ソース テーブルにしました。|  
   
 ## <a name="see-also"></a>参照  
  [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   

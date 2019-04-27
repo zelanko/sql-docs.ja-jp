@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd852423ed285165b4d699b391807b9a748f9b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472231"
 ---
 # <a name="the-fields-collection"></a>Fields コレクション
-**フィールド**コレクションは、ADO の組み込みコレクションの 1 つです。 コレクションは、単位として参照される項目の順序付けされたセットです。 ADO のコレクションの詳細については、[、ADO オブジェクト モデル](../../../ado/guide/data/ado-objects-and-collections.md)を参照してください。  
+**フィールド**コレクションは、ADO の組み込みコレクションの 1 つです。 コレクションは、単位として参照される項目の順序付けされたセットです。 ADO のコレクションの詳細については、次を参照してください。 [、ADO オブジェクト モデル](../../../ado/guide/data/ado-objects-and-collections.md)します。  
   
  **フィールド**コレクションに含まれる、**フィールド**オブジェクトのすべてのフィールド (列)、**レコード セット**します。 すべての ADO のコレクションのような**カウント**と**項目**プロパティだけでなく**Append**と**更新**メソッド。 **CancelUpdate**、**削除**、**再同期**、および**Update**メソッドはその他の ADO のコレクションを使用できません。  
   

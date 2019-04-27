@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4d9714230ff13588e490ecdbb502c98bb8c2223d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465647"
 ---
 # <a name="sysfulltextindexcatalogusages-transact-sql"></a>sys.fulltext_index_catalog_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47617880"
  
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|フルテキスト インデックスが設定されたテーブルの ID。 データベース内で一意です。|  
+|**object_id**|**int**|フルテキスト インデックス付きテーブルの ID。 データベース内で一意です。|  
 |**index_id**|**int**|フルテキスト インデックスの ID。|  
 |**fulltext_catalog_id**|**int**|フルテキスト カタログの ID。|  
   

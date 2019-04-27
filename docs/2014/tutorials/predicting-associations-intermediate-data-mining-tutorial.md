@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472847"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>アソシエーションの予測 (中級者向けデータ マイニング チュートリアル)
   モデルの処理が完了したら、モデルに格納されているアソシエーションに関する情報を使用して予測を作成できます。 このレッスンの最後の作業では、作成したアソシエーション モデルに対して予測クエリを作成する方法について学習します。 このレッスンは、予測クエリ ビルダーの使用方法について理解していることを前提に、アソシエーション モデルに対する予測クエリの作成方法について説明します。 詳細については予測クエリ ビルダーを使用する方法[データ マイニング クエリ インターフェイス](../../2014/analysis-services/data-mining/data-mining-query-tools.md)します。  
@@ -119,7 +119,7 @@ ms.locfileid: "56022364"
   
 8.  をクリックして、**結果**ボタンをクリックします。  
   
- 入れ子になったテーブル内の結果が変更され、予測がサポートおよび確率と共に表示されます。 これらの値を解釈する方法の詳細については、[アソシエーション モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)を参照してください。  
+ 入れ子になったテーブル内の結果が変更され、予測がサポートおよび確率と共に表示されます。 これらの値を解釈する方法の詳細については、次を参照してください。[アソシエーション モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)します。  
   
 |[モデル]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
@@ -205,7 +205,7 @@ ms.locfileid: "56022364"
   
 13. をクリックして、**結果**各顧客の予測を表示するボタンをクリックします。  
   
- 同様の予測クエリを複数のモデルに対して作成し、フィルター処理によって予測結果が変わるかどうかを確認してみてください。 予測やその他の種類のクエリを作成する方法の詳細については、[アソシエーション モデルのクエリ例](../../2014/analysis-services/data-mining/association-model-query-examples.md)を参照してください。  
+ 同様の予測クエリを複数のモデルに対して作成し、フィルター処理によって予測結果が変わるかどうかを確認してみてください。 予測やその他の種類のクエリを作成する方法の詳細については、次を参照してください。[アソシエーション モデルのクエリ例](../../2014/analysis-services/data-mining/association-model-query-examples.md)します。  
   
 ## <a name="see-also"></a>参照  
  [アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   

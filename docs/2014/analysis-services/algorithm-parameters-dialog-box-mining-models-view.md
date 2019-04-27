@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc3d863889f7e5cb8ca1e79f78e920aedd79f979
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473494"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>[アルゴリズム パラメーター] ダイアログ ボックス ([マイニング モデル] ビュー)
   **[アルゴリズム パラメーター]** ダイアログ ボックスを使用すると、選択したモデルに固有のアルゴリズム パラメーターを調整できます。 アルゴリズム パラメーターを変更する場合、通常マイニング モデルの結果を変更します。 各パラメーターが結果にどのような影響を与えるかは、使用しているアルゴリズムおよびデータによって異なります。 詳細については、「[マイニング モデルとマイニング構造のカスタマイズ](data-mining/customize-mining-models-and-structure.md)」をご覧ください。  
@@ -50,7 +50,7 @@ ms.locfileid: "48173002"
  標準の Analysis Services アルゴリズム パラメーターのいずれかを一覧から削除しても、パラメーターはモデルでそのまま使用されますが、そのパラメーターの既定値が使用されます。 パラメーターは完全に削除されず、次にダイアログ ボックスを開いたときに表示されます。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング モデル ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-models-view-data-mining-model-designer.md)   
  [データ マイニング オブジェクトの移動](data-mining/moving-data-mining-objects.md)  
   

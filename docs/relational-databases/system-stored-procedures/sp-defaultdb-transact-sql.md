@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc9703b4310870105d3a0961c430699449da7ff3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506457"
 ---
 # <a name="spdefaultdb-transact-sql"></a>sp_defaultdb (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_defaultdb**は ALTER LOGIN を呼び出します。 このステートメントは、追加のオプションをサポートします。 既定のデータベースの変更方法の詳細については、[ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)を参照してください。  
+ **sp_defaultdb**は ALTER LOGIN を呼び出します。 このステートメントは、追加のオプションをサポートします。 既定のデータベースの変更方法の詳細については、次を参照してください。 [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)します。  
   
  **sp_defaultdb**ユーザー定義のトランザクション内で実行することはできません。  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19bdb9c165b5bfa6c8021fe596d9591e68d517ce
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469769"
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>レッスン 6-2 - 名前付きセットを定義します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "52507661"
     ![フィルター ペインの 2 つの名前を格納している設定](../analysis-services/media/l6-named-set-05.gif "という名前の 2 つを含むフィルター ウィンドウの設定")  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 7:主要業績評価指標を定義する&#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[レッスン 7: 主要業績評価指標を定義する&#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>参照  
 [[新しい名前付きセット]](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

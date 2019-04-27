@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 96bd1aa87dba90963588db74935294c0dcdd8f0b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506481"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
  場合*名前*なしで指定した*バージョン*、[!INCLUDE[ssDE](../../includes/ssde-md.md)]指定されたデータベースの現在の互換性レベルを表示するメッセージが返されます。  
   
 ## <a name="remarks"></a>コメント  
- 互換性レベルの説明では、[ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)を参照してください。  
+ 互換性レベルの説明では、次を参照してください。 [ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)します。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベース所有者のメンバーのみ、 **sysadmin**固定サーバー ロール、および**db_owner**固定データベース ロール (現在のデータベースを変更している) 場合は、このプロシージャを実行できます。  

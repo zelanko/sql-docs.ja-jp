@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd1440e5ce0649d31f0ae6c0577c61e9e081a800
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509925"
 ---
 # <a name="data-mining-properties"></a>データ マイニング プロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すデータ マイニング サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 多次元サーバー モードの場合のみ  
+ **適用対象:** 多次元サーバー モードのみ  
   
 ## <a name="non-specific-category"></a>不特定カテゴリ  
  **AllowSessionMiningModels**  

@@ -18,11 +18,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c466a2e928afb5239c738463a39e6fee8a1991fa
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62514562"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>WMI Provider for Server Events の概念
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51215036"
  [WMI Provider for Server Events と WQL の使用](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
  WQL (WMI Query Language) 構文について概要を示し、プロバイダーに対するプログラミングでこの構文を使用する方法について説明します。  
   
- [サンプル : WMI Provider for Server Events の使用による SQL Server エージェント警告の作成](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [サンプル: サーバー イベント用 WMI プロバイダーを使用して SQL Server エージェント警告の作成](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  WMI プロバイダーを使用してトレース イベント情報を返し、これに対して SQL Server エージェント警告を作成する例を示します。  
   
  [サンプル: .NET Framework で WMI イベント プロバイダーを使用します。](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  

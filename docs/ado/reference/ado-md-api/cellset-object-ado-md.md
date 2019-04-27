@@ -17,23 +17,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57b570b93d4e8a6cf10d879659f0886e1c6f0c8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469297"
 ---
 # <a name="cellset-object-ado-md"></a>CellSet オブジェクト (ADO MD)
 多次元クエリの結果を表します。 これは、キューブまたはその他のセルセットから選択したセルのコレクションです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  内のデータを**セルセット**、直接の配列に似たアクセスを使用して取得されます。 そのメンバーに関するデータを取得する特定のメンバーをドリルダウンすることができます。 たとえば、次のコード キャプションを返します最初のメンバーの最初の位置でセルセットという名前の最初の軸で`cst`:  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  セル セット内の現在のセルの概念はありません。 代わりに、[項目](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティ取得[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)セルセットからオブジェクト。 引数、**項目**プロパティを決定するセルを取得します。 セルの序数に基づく一意の値を指定することができます。 セルはセル セットの各軸の位置番号を使用して取得することもできます。 セルを取得する方法についての詳細については、次を参照してください。、[項目](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティ。  
   
  コレクション、メソッド、およびプロパティの使用、**セルセット**オブジェクトを次を行うことができます。  
@@ -60,7 +60,7 @@ cst.Axes(0).Positions(0).Members(0).Caption
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/cellset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セルセットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Axes コレクション (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   

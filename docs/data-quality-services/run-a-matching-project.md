@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 72d0d4c0af1b09c8cad4ab6ab5ab6636fd302e4f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469410"
 ---
 # <a name="run-a-matching-project"></a>照合プロジェクトの実行
 
@@ -185,9 +185,9 @@ ms.locfileid: "56015433"
   
 -   **新しい値**: 前回の実行以降の新しい値の総数と、全体に占める割合  
   
--   **一意の値**: フィールドの一意の値の総数と、全体に占める割合  
+-   **一意の値**:フィールドの一意の値の総数と、全体に占める割合  
   
--   **新しい一意の値**: フィールドの新しい一意の値の総数と、全体に占める割合  
+-   **新しい一意の値**:フィールドの新しい一意の値の総数と、全体に占める割合  
   
  フィールドの統計情報には、次の情報が含まれます。  
   

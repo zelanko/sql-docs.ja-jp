@@ -1,5 +1,5 @@
 ---
-title: キューブの定義 |Microsoft ドキュメント
+title: キューブの定義 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 80c877341fc4ad9a952d94081d99f5a9c121fb1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467368"
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>レッスン 2-2-キューブの定義
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34016899"
 15. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[属性をディメンションに追加する](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
+[ディメンションへの属性の追加](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
   
 ## <a name="see-also"></a>参照  
 [多次元モデルのキューブ](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  

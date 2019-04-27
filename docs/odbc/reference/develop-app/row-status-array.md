@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2a04f5052a0b686d3669c976ec7c4bee09e52b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468629"
 ---
 # <a name="row-status-array"></a>行の状態の配列
 データに加えて**SQLFetch**と**SQLFetchScroll**行セットの各行のステータスを提供している配列を返すことができます。 この配列を指定し、SQL_ATTR_ROW_STATUS_PTR のステートメント属性を使用します。 この配列は、アプリケーションが割り当てられる、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性で指定された数の要素を必要とします。 によって、配列内の値が設定されます**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**、および**SQLSetPos します。** 値には、行とその状態が最後にフェッチするために変更されたかどうかの状態について説明します。  

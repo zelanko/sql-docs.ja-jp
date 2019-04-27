@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472135"
 ---
 # <a name="roles"></a>ロール
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "53072169"
 > [!IMPORTANT]  
 >  ユーザーがレポート クライアント アプリケーションを使用して配置済みモデルへの接続に、作成する必要がで少なくとも 1 つのロールには少なくとも読み取りアクセス許可には、それらのユーザーがのメンバー。  
   
- このトピックの情報は、SSDT でロール マネージャー ダイアログ ボックスを使用してロールを定義するテーブル モデル作成者向けです。 モデル作成時に定義されたロールは、モデル ワークスペース データベースに適用されます。 Model データベースが配置された後モデル データベース管理者を管理できます (追加、編集、削除) SSMS を使用してロールのメンバー。 デプロイされたデータベース内のロールのメンバーの管理については、[テーブル モデル ロール](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)を参照してください。  
+ このトピックの情報は、SSDT でロール マネージャー ダイアログ ボックスを使用してロールを定義するテーブル モデル作成者向けです。 モデル作成時に定義されたロールは、モデル ワークスペース データベースに適用されます。 Model データベースが配置された後モデル データベース管理者を管理できます (追加、編集、削除) SSMS を使用してロールのメンバー。 デプロイされたデータベース内のロールのメンバーの管理については、次を参照してください。[テーブル モデル ロール](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)します。  
   
 ##  <a name="bkmk_underst"></a> Understanding roles  
  ロールは、Analysis Services でモデル データ アクセスの管理に使用されます。 ロールには次の 2 種類があります。  
@@ -69,8 +69,8 @@ ms.locfileid: "53072169"
   
 |テーブル|DAX 式|  
 |-----------|--------------------|  
-|Region|= リージョン [Country] ="USA"|  
-|ProductCategory|= ProductCategory [Name]「自転車」を =|  
+|Region|=Region[Country]="USA"|  
+|ProductCategory|=ProductCategory[Name]="Bicycles"|  
 |トランザクション|=Transactions[Year]=2008|  
   
  Transactions テーブルに対するこれらの権限の実質的な影響は、顧客が米国内に存在し、製品カテゴリが自転車で、しかも年度が 2008 であるデータ行をメンバーが照会できることです。 メンバーは、顧客が米国外にいるか、製品が自転車でないか、または年度が 2008 年でないトランザクションは照会できません。ただし、これらの権限を付与された別のロールのメンバーである場合を除きます。  

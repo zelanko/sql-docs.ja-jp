@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c477fcb56fd8eeea68e44497b46be807a434d536
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516511"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限 (マスター データ サービス)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52817920"
   
  階層メンバーの権限は、それらを割り当てたモデル バージョンと、そのバージョンの以降のコピーに適用されます。 割り当てたバージョンよりも前のバージョンには適用されません。  
   
-|権限|[説明]|  
+|権限|説明|  
 |----------------|-----------------|  
 |**Read**|メンバーが表示されます。<br /><br /> <br /><br /> 注:**読み取り** 権限を **ルート** に割り当てた場合、**ルート** の下のメンバーは読み取り専用になります。ただし、明示的階層およびコレクションでは、ユーザーはメンバーを **ルート** に移動したり、新しいメンバーを **ルート** に追加したりできます。|  
 |**作成**|作成権限は、階層メンバー権限では使用できません。|  

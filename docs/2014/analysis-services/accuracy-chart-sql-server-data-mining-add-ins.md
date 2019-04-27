@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 328ce6c6474beb68d14edd26779d868142a29fd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520255"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>精度チャート (SQL Server データ マイニング アドイン)
   ![データ マイニング リボンで精度チャート ボタン](media/dmc-accchart.gif "データ マイニング リボンで、精度チャート ボタン")  
@@ -42,7 +42,7 @@ ms.locfileid: "48136802"
 ## <a name="using-the-accuracy-chart-wizard"></a>精度チャート ウィザードの使用  
  精度チャートを作成するには、既存のデータ マイニング構造を参照する必要があります。 モデルの予測対象が同じであれば、この構造に基づく複数のモデルの精度を測定できます。  
   
- 使用可能な構造がわからない場合は、サーバーを参照できます。 詳細については、[Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)を参照してください。  
+ 使用可能な構造がわからない場合は、サーバーを参照できます。 詳細については、次を参照してください。 [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)します。  
   
 #### <a name="to-create-an-accuracy-chart"></a>精度チャートを作成するには  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48136802"
      ウィザードにより、リフト チャートおよび基になるデータを含んだレポートが作成されます。  
   
 ### <a name="requirements"></a>要件  
- 不連続の値を予測する場合は、予測対象のターゲット値を選択する必要があります。 たとえば、"Yes: Buy" という反応が 1 で、"No: Do Not Buy" という反応が 2 のようにデータが分類されている場合は、予測値として 1 または 2 を指定する必要があります。 これに対し、特定の範囲の値を予測する場合、一度に比較できる値は 2 つまでです。 たとえば、5 以上のスコアを予測する場合は、ソース データを再定義し、結果を 5 以上と 5 未満という 2 つのグループに分類する新しいモデルを作成する必要があります。 その上で、この 2 つのグループの精度を比較できます。  
+ 不連続の値を予測する場合は、予測対象のターゲット値を選択する必要があります。 たとえば、応答で、データが分類された"[はい]。Buy"と応答の 1 として"No:Do Not Buy"2 つとして、予測値として 1 または 2 のいずれかを指定する必要があります。 これに対し、特定の範囲の値を予測する場合、一度に比較できる値は 2 つまでです。 たとえば、5 以上のスコアを予測する場合は、ソース データを再定義し、結果を 5 以上と 5 未満という 2 つのグループに分類する新しいモデルを作成する必要があります。 その上で、この 2 つのグループの精度を比較できます。  
   
 ## <a name="understanding-accuracy"></a>精度について  
  作成できるチャートは 2 種類あります。1 つは予測可能な列の状態を指定するチャート、もう 1 つは状態を指定しないチャートです。  

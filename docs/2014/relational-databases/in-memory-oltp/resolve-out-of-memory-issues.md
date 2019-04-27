@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468355"
 ---
 # <a name="resolve-out-of-memory-issues"></a>メモリ不足の問題の解決
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] では、さまざまな形で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]より多くのメモリが使用されます。 インストールして [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 用に割り当てたメモリ量が、ニーズの拡大に合わなくなる場合があります。 その場合は、メモリが不足する可能性があります。 このトピックでは、OOM 状態から回復する方法について説明します。 多数の OOM 状態を回避するのに役立つガイドについては、「 [メモリ使用量の監視とトラブルシューティング](monitor-and-troubleshoot-memory-usage.md) 」を参照してください。  
@@ -29,7 +29,7 @@ ms.locfileid: "58527894"
 | [十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |"リソース プール '*\<resourcePoolName>*' のメモリが不足しているため、データベース '*\<databaseName>*' のページ割り当ては禁止されています" というエラー メッセージが表示された場合の対処方法。 ..." というエラー メッセージが発生した場合の対処方法。|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>OOM によるデータベース復元の障害を解決する  
- データベースを復元しようとすると次のエラー メッセージが表示されることがあります。"復元操作に失敗しました '*\<databaseName >*'により、リソース プールでメモリ不足'*\<resourcePoolName >*'."データベースを正しく復元するには、先に使用可能なメモリを増やして、メモリ不足の問題を解決する必要があります。  
+ データベースを復元しようとしたときに、エラー メッセージを表示する可能性があります。"復元操作に失敗しました '*\<databaseName >*'により、リソース プールでメモリ不足'*\<resourcePoolName >*'."データベースを正しく復元するには、先に使用可能なメモリを増やして、メモリ不足の問題を解決する必要があります。  
   
  OOM による復旧エラーを解決するには、次の方法のいずれかまたはすべてを使用して、復旧操作で使用できるメモリを一時的に増やします。  
   

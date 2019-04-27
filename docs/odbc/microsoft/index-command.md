@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 864f6fa78ab1ef23b7db3a0be4c85738b95ea72d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471260"
 ---
 # <a name="index-command"></a>INDEX コマンド
 インデックス ファイルを表示し、論理的な順序でテーブルのレコードへのアクセスを作成します。  
@@ -49,7 +49,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  *IDXFileName*  
  .Idx インデックス ファイルを作成します。 インデックス ファイルには、既定の拡張機能 .idx が与えられます。  
   
- タグ*TagName*[OF *CDXFileName*]  
+ TAG *TagName*[OF *CDXFileName*]  
  複合インデックス ファイルを作成します。 複合インデックスのファイルは、任意の数の個別のタグ (インデックス エントリ) で構成される 1 つのインデックス ファイルです。 各タグは、その一意のタグ名によって識別されます。 タグの名前は文字またはアンダー スコアで始める必要があり、最大 10 個の文字、数字、またはアンダー スコアの任意の組み合わせで構成できます。 複合インデックス ファイルのタグの数は、使用可能なメモリとディスク容量によってのみ制限されます。  
   
  複合インデックスを複数エントリ ファイルは、コンパクトでは常にです。 複合インデックス ファイルを作成するときに、最適化を含める必要はありません。 複合インデックス ファイルの名前には、.cdx 拡張機能が与えられます。  
@@ -62,7 +62,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  複合インデックスのファイルは既に作成されていて開く、発行のタグを持つインデックス*TagName*複合インデックスのファイルにタグを追加します。  
   
- *LExpression*  
+ FOR *lExpression*  
  これにより、条件を指定しますフィルター式を満たすレコードだけ*lExpression*表示とアクセスです。 使用可能なフィルター式に一致するには、これらのレコードのインデックス ファイルのインデックス キーが作成されます。  
   
  Visual FoxPro Rushmore テクノロジは、インデックスを最適化しています.*LExpression*コマンド*lExpression*最適化可能な式を指定します。 最適なパフォーマンスを最適化の式を使用して、FOR 句でします。  

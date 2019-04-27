@@ -10,11 +10,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 3e7dd580cd7d03235be704a7c46e5171a6526ae8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506221"
 ---
 #  <a name="get-r-and-python-package-information"></a>R と Python のパッケージ情報を取得します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -105,7 +105,7 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-詳細と、R パッケージの説明フィールドの既定のフィールド オプションについては、[ https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)を参照してください。
+詳細と、R パッケージの説明フィールドの既定のフィールド オプションについては、次を参照してください。 [ https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)します。
 
 ### <a name="python"></a>Python
 

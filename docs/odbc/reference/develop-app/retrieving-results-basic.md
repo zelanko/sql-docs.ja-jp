@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8eb98d7c17663894e1bacdc27e431d6a54f45d3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468667"
 ---
 # <a name="retrieving-results-basic"></a>結果の取得 (基本)
 A*結果セット*は特定の条件に一致するデータ ソースで行のセットです。 これは、クエリの実行結果し、するが表形式で、アプリケーションで使用できる概念テーブルです。 **選択**ステートメント、カタログ関数、およびいくつかの手順は、結果セットを作成します。 次の例では、最初の SQL ステートメントのすべての行と、Orders テーブルのすべての列を含む結果セットを作成して 2 番目の SQL ステートメントは、Orders テーブル内の行の OrderID、営業担当者、および状態の列を含む結果セットを作成します。状態の開く。  
@@ -38,7 +38,7 @@ SELECT * FROM Orders WHERE 1 = 2
   
  空の結果セットは、設定する点を除いて、行を持たないその他の結果と変わりません。 たとえば、アプリケーション、結果セットのメタデータを取得できます、行をフェッチしようとしてでき、結果セットに対して、カーソルを閉じる必要があります。  
   
- データ ソースから行を取得して、アプリケーションに戻すプロセスと呼ばれます*フェッチ*します。 このセクションでは、そのプロセスの基本的なパーツについて説明します。 スクロール可能なカーソルは、ブロックなどのより高度なトピックについては、[ブロック カーソル](../../../odbc/reference/develop-app/block-cursors.md)と[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)を参照してください。 更新方法の詳細については、削除、および行の挿入を参照してください[更新データの概要](../../../odbc/reference/develop-app/updating-data-overview.md)します。  
+ データ ソースから行を取得して、アプリケーションに戻すプロセスと呼ばれます*フェッチ*します。 このセクションでは、そのプロセスの基本的なパーツについて説明します。 スクロール可能なカーソルは、ブロックなどのより高度なトピックについては、次を参照してください。[ブロック カーソル](../../../odbc/reference/develop-app/block-cursors.md)と[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)します。 更新方法の詳細については、削除、および行の挿入を参照してください[更新データの概要](../../../odbc/reference/develop-app/updating-data-overview.md)します。  
   
  このセクションでは、次のトピックを扱います。  
   

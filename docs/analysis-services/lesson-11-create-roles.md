@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a2f507e9f22e4d090407b0b0849f69a8e7914e8d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469148"
 ---
 # <a name="lesson-11-create-roles"></a>レッスン 11:ロールの作成
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "52512929"
   
 4.  **[権限]** 列で、ドロップダウン リストをクリックし、 **[読み取り]** 権限を選択します。 
 
-    ![として表形式の lesson11-新しい-ロール](../analysis-services/media/as-tabular-lesson11-new-role.png) 
+    ![as-tabular-lesson11-new-role](../analysis-services/media/as-tabular-lesson11-new-role.png) 
   
 5.  省略可能:をクリックして、**メンバー**タブをクリックし、をクリックし、**追加**します。 **[ユーザーまたはグループの選択]** ダイアログ ボックスで、ロールに含める組織の Windows ユーザーまたはグループを入力します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52512929"
     ```
     
     行フィルター式は、ブール値 (TRUE/FALSE) に解決される必要があります。 この数式では、「米国」Country Region Code 値を持つ行のみがユーザーに表示されることを指定します。  
-    ![-テーブル-lesson11-ロール-フィルターとして](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
+    ![as-tabular-lesson11-role-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
   
 6.  省略可能:**[メンバー]** タブをクリックし、 **[追加]** をクリックします。 **[ユーザーまたはグループの選択]** ダイアログ ボックスで、ロールに含める組織の Windows ユーザーまたはグループを入力します。  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7a23407b546bcde2dd1fde81654da4fe861e0719
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501843"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
  オプション、 **PredictAssociation**関数には、EXCLUDE_、INCLUDE_、INCLUSIVE、EXCLUSIVE (既定)、INPUT_ONLY、INCLUDE_STATISTICS、および INCLUDE_NODE_ID が含まれます。  
   
 > [!NOTE]  
->  INCLUSIVE、EXCLUSIVE、INPUT_ONLY、および INCLUDE_STATISTICS はテーブル列の参照にのみ適用され、EXCLUDE_NULL および INCLUDE_NULL はスカラー列の参照にのみ適用されます。  
+>  包括的、EXCLUSIVE、INPUT_ONLY、および INCLUDE_STATISTICS のみテーブルの列の参照とに適用されます EXCLUDE_ および INCLUDE_ はスカラー列参照に対してのみ適用します。  
   
  INCLUDE_STATISTICS はのみ返します **$Probability**と **$AdjustedProbability**します。  
   

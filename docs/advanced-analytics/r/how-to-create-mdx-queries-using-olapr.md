@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 1bee5741d00e4043314c36800cd4fe5cf61aab48
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503738"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>OlapR を使って R で MDX クエリを作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "58510559"
 
 + これらの例で使用されるキューブを作成するには、次のレッスン 4 まで Analysis Services チュートリアル。[OLAP キューブを作成します。](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
-+ 既存のキューブをバックアップとしてをダウンロードして、Analysis Services のインスタンスに復元します。 たとえば、このサイトには、zip 形式で完全に処理されたキューブが用意されています。[Adventure Works 多次元モデル SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)します。 ファイルを抽出し、SSAS インスタンスに復元します。 詳細については、[バックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)、または[Restore-asdatabase コマンドレット](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)を参照してください。
++ 既存のキューブをバックアップとしてをダウンロードして、Analysis Services のインスタンスに復元します。 たとえば、このサイトには、zip 形式で完全に処理されたキューブが用意されています。[Adventure Works 多次元モデル SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)します。 ファイルを抽出し、SSAS インスタンスに復元します。 詳細については、次を参照してください。[バックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)、または[Restore-asdatabase コマンドレット](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)します。
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.スライサーを使う基本的な MDX
 

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5104eacafe60ab3fd1ea1ff29cc64b8453e4ff7
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471973"
 ---
 # <a name="table-properties"></a>テーブルのプロパティ 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "53072009"
   
  **レポートのプロパティ**  
   
- 詳細な説明とレポートのプロパティの構成情報は、[Power View レポート プロパティ](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)を参照してください。  
+ 詳細な説明とレポートのプロパティの構成情報は、次を参照してください。 [Power View レポート プロパティ](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)します。  
   
 |プロパティ|既定の設定|説明|  
 |--------------|---------------------|-----------------|  

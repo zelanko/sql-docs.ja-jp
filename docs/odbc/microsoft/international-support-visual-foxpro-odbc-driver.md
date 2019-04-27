@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50d65520e74a4e11bada88795fedc0b2f2e82628
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471045"
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>国際化サポート (Visual FoxPro ODBC ドライバー)
 Microsoft Visual FoxPro ODBC ドライバーがサポートされています。  
@@ -35,7 +35,7 @@ Microsoft Visual FoxPro ODBC ドライバーがサポートされています。
   
  照合順序を定義、*並べ替え順序*Visual FoxPro テーブルまたはデータベースに格納されています。 既定では、ドライバーは、オペレーティング システムの言語バージョンをサポートする照合順序を使用するよう構成します。  
   
- サポートされている照合順序の一覧は、[COLLATE 設定](../../odbc/microsoft/set-collate-command.md)を参照してください。  
+ サポートされている照合順序の一覧は、次を参照してください。 [COLLATE 設定](../../odbc/microsoft/set-collate-command.md)します。  
   
 ## <a name="locale"></a>ロケール (locale)  
  特定の言語と国/地域に対応する情報のセット。 ロケールでは、桁区切り記号、日付と時刻の形式、および文字の並べ替え順序などの特定の設定を示します。  

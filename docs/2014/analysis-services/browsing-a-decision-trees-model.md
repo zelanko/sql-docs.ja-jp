@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468759"
 ---
 # <a name="browsing-a-decision-trees-model"></a>デシジョン ツリー モデルの参照
   使用して分類モデルを開く**参照**は対話型デシジョン ツリー ビューアーでのようなモデルが表示されます、[!INCLUDE[msCoName](../includes/msconame-md.md)]デシジョン ツリー ビューアーに[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 ビューアーは、あるデータ グループを別のデータ グループから区別する条件を強調するグラフとして分類結果を表示します。 ツリーの個々のサブセットにドリルダウンして、基になるデータを取得することもできます。  
